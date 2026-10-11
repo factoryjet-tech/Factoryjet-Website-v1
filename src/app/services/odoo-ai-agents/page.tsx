@@ -29,7 +29,7 @@ import OdooRoutesDiagram from './OdooRoutesDiagram';
    connector" 90, "odoo 20" 70, "odoo mcp server" 70, "odoo quickbooks
    integration" 70, "odoo ai agent" 50 (KD 0), "odoo shopify integration" 40,
    "odoo automation" 30, "odoo woocommerce connector" 30, "odoo 19 ai" 20.
-   An AI Overview showed on 12 of 14 result pages. FactoryJet was in no top 20.
+   An AI Overview showed on 12 of 14 result pages.
 
    What we found that the brief did not have: Odoo 20.0 was released in
    September 2026 (Odoo's own support table). We compared the 19.0 and 20.0
@@ -52,9 +52,11 @@ import OdooRoutesDiagram from './OdooRoutesDiagram';
      wording he approved for /services/erp-ai-agents that day. Not in the hero,
      the meta description, the schema or the FAQ. The two QuickBooks projects
      in progress stay unnamed. No results are claimed for any of them.
-   - No FactoryJet prices. The only dollar figures are sourced market ranges
-     inside the two cost FAQ answers. The Odoo AI credit figure is Odoo's own
-     listed fee, shown to us in euros, and is labelled as such.
+   - No FactoryJet prices. The only dollar figure is the sourced market range
+     for a build, inside the build-cost FAQ answer. The monthly running-cost
+     range was removed on 2026-10-11 at Bhavesh's request. Do not add a figure
+     for running or upkeep. The Odoo AI credit figure is Odoo's own listed
+     fee, shown to us in euros, and is labelled as such.
    - The six "other names" restate each firm's own page as read that day. We
      have not worked with them and did not test their products.
    - Partner status is left out on purpose (Bhavesh, 2026-10-09). The page
@@ -75,7 +77,7 @@ const PAGE_TITLE = 'Odoo AI Agent Development for Odoo 19 and 20 | FactoryJet';
 const PAGE_DESC =
   'We design, build and support AI agents inside Odoo 19 and Odoo 20. They draft quotations, sales orders, purchase orders and bills for a person to approve.';
 const PAGE_PUBLISHED = '2026-10-09';
-const PAGE_MODIFIED = '2026-10-09';
+const PAGE_MODIFIED = '2026-10-11';
 const CHECKED_ON = '9 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -572,7 +574,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'What does it cost to run an Odoo AI agent each month?',
     answer:
-      "There are two bills for a custom agent. The AI model charges for each request, and the agent needs somewhere to run. ProductCrafters' 2026 breakdown puts monthly infrastructure for a custom-built agent at $500 to $10,000. If you prefer, both sit in your own accounts and you pay those bills directly, at cost. Whose account pays does not change who does the work. We keep managing the servers, the AI models, the API connections and the upkeep, so your team never has to. Odoo bills its own AI features separately, in Odoo credits.",
+      "There are two bills for a custom agent. The AI model charges for each request, and the agent needs somewhere to run. If you prefer, both sit in your own accounts and you pay those bills directly, at cost. Whose account pays does not change who does the work. We keep managing the servers, the AI models, the API connections and the upkeep, so your team never has to. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. Odoo bills its own AI features separately, in Odoo credits.",
   },
   {
     category: 'working',
@@ -1714,8 +1716,8 @@ export default function OdooAiAgentsPage() {
                   custom systems, so the route we recommend is not tied to one product.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  For a full Odoo rollout with accounting setup, or someone on site in your warehouse every week,
-                  an Odoo implementation firm near you is the right call. For the AI work on top of Odoo, talk to us.
+                  For a full Odoo rollout with accounting setup, an Odoo implementation firm is the right call. For
+                  the AI work on top of Odoo, talk to us.
                 </p>
               </div>
               <ol className="grid gap-4 lg:col-span-8">
@@ -1782,8 +1784,8 @@ export default function OdooAiAgentsPage() {
                   currency, so none is quoted. The price of an Odoo AI credit was shown in euros.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  The two cost ranges in the questions below are market figures from ProductCrafters&rsquo; 2026
-                  breakdown. They are not FactoryJet prices.
+                  The build cost range in the questions below is a market figure from ProductCrafters&rsquo; 2026
+                  breakdown. It is not a FactoryJet price.
                 </p>
                 <SourceLinks ids={['productCrafters']} />
                 <p className="mt-6 font-fj-mono text-xs leading-relaxed text-fj-neutral-600">

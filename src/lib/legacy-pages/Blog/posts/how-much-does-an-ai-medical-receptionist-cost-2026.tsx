@@ -8,7 +8,7 @@ export const post: BlogPost = {
   slug: 'how-much-does-an-ai-medical-receptionist-cost-2026',
   title: 'How Much Does an AI Medical Receptionist Cost in 2026? EHR Integration, HIPAA Compliance & ROI Breakdown',
   excerpt:
-    'A transparent engineering breakdown of medical AI voice receptionist costs in 2026. Model token compute, SIP telephony trunking, EHR API integration retainers, and clinical ROI.',
+    'Call volume, EHR integration and compliance scope drive what an AI medical receptionist costs in 2026. This guide covers each one, and when an off-the-shelf product is the better buy.',
   date: 'September 1, 2026',
   readTime: '14 min read',
   author: 'Bhavesh Barot',
@@ -17,12 +17,12 @@ export const post: BlogPost = {
   meta: {
     title: 'AI Medical Receptionist Cost in 2026',
     description:
-      'A transparent cost breakdown for AI medical receptionists in 2026: token compute, SIP telephony, and EHR integration retainers.',
+      'What drives AI medical receptionist cost in 2026: call volume, EHR integration and compliance scope, plus when an off-the-shelf product is the better buy.',
   },
   faqs: [
     {
       q: 'What is the average monthly operating cost of a medical AI receptionist?',
-      a: 'Ongoing infrastructure costs (telephony, speech-to-text, LLM tokens, and cloud hosting) are usage-based and scale with call volume rather than a flat subscription fee, so a practice handling more monthly calls pays proportionally more than a quieter one. Because calling patterns vary by practice, we size this cost during a technical discovery call and provide a fixed quote rather than a blanket rate.',
+      a: 'It depends on how many calls the practice takes and how long they run, so we do not publish one figure. We quote the build and the ongoing support as fixed prices, in writing, after a short scoping call. After launch we keep managing the servers, the AI services, the API connections and the maintenance, so your front-desk team does not have to.',
     },
     {
       q: 'How does an AI receptionist book appointments without human double-booking?',
@@ -106,7 +106,6 @@ export const post: BlogPost = {
     },
   ],
   keyTakeaways: [
-    'Cost is usage-based, not a flat subscription. Telephony, speech-to-text, model tokens and hosting all scale with call volume, so a busy practice pays more than a quiet one and any single advertised rate should be treated with suspicion.',
     'EHR integration scope, not call volume, is usually what moves the build price. Writing reliably into Epic, Cerner, AthenaHealth or Dentrix is the engineering, and it is where timelines slip.',
     'HIPAA is not a feature you switch on. Business Associate Agreements have to be executed across every telephony gateway, cloud host and speech pipeline that touches patient audio.',
     'Compliance pricing can invert the whole comparison. One popular developer platform lists HIPAA at $2,000 a month, which makes the cheapest per-minute option one of the most expensive for a small practice.',
@@ -185,7 +184,7 @@ export const post: BlogPost = {
         </table>
       </div>
 
-      <h3>1. Variable Telephony &amp; Voice Pipeline Costs: What Drives the Per-Minute Rate</h3>
+      <h3>1. Variable Telephony &amp; Voice Pipeline Costs: What Drives Them</h3>
       <p>
         When an AI voice receptionist answers an inbound phone call, four synchronized cloud services process the audio stream in real time:
       </p>
@@ -204,7 +203,7 @@ export const post: BlogPost = {
         </li>
       </ul>
       <p>
-        In aggregate, these four layers combine into a single per-minute infrastructure cost that scales directly with call volume and average call duration: busier practices see proportionally higher variable costs, quieter ones see proportionally lower costs, and there is no flat platform fee sitting underneath it. Because every practice's call volume, average handle time, and clinical complexity differ, we size this cost precisely during a technical discovery call rather than publishing a blanket per-minute rate.
+        Together, these four layers scale with call volume and average call length, so a busier practice uses more of each than a quieter one. We quote the build and the ongoing support as fixed prices, in writing, after a short scoping call. After launch we keep managing the servers, the AI services, the API connections and the maintenance, so your front-desk team does not have to.
       </p>
 
       <h3>2. Electronic Health Record (EHR) Integration Architecture: What Scopes the One-Time Build</h3>
@@ -326,12 +325,12 @@ export const post: BlogPost = {
 
       <h2>Before you build: should your practice just buy one?</h2>
       <p>
-        This guide has costed a custom build, so it is worth saying plainly that for many practices that is the wrong answer. Off-the-shelf AI receptionist products start around $79 a month flat, and if your intake is standard and your practice management software is mainstream, one of them will be live faster and cheaper than anything custom. We compared eight of them on published pricing in{' '}
+        This guide has covered what drives the cost of a custom build, so it is worth saying plainly that for many practices that is the wrong answer. Off-the-shelf AI receptionist products start around $79 a month flat, and if your intake is standard and your practice management software is mainstream, one of them will be live faster and cheaper than anything custom. We compared eight of them on published pricing in{' '}
         <Link href="/blog/best-ai-receptionist-small-business" className="text-[#F05A28] underline">the best AI receptionists for small business</Link>.
       </p>
       <p>
-        Healthcare is where that comparison can invert, though, and it is why this page exists separately. One popular developer platform lists HIPAA as a $2,000 a month add-on, which turns the cheapest per-minute option into one of the most expensive for a small practice. Price the compliance before you price the minutes. For the underlying economics against human answering services, see our{' '}
-        <Link href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026" className="text-[#F05A28] underline">AI voice agents versus human answering cost comparison</Link>, and if you have decided you need something built, the scope sits on our{' '}
+        Healthcare is where that comparison can invert, though, and it is why this page exists separately. One popular developer platform lists HIPAA as a $2,000 a month add-on, which turns the cheapest per-minute option into one of the most expensive for a small practice. Price the compliance before you price the minutes. To choose between a human answering service, an off-the-shelf AI receptionist product and a custom voice agent, see our{' '}
+        <Link href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026" className="text-[#F05A28] underline">guide to AI voice agents versus human answering services</Link>, and if you have decided you need something built, the scope sits on our{' '}
         <Link href="/services/ai-receptionist" className="text-[#F05A28] underline">AI receptionist service page</Link>.
       </p>
 

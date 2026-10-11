@@ -239,7 +239,7 @@ const CONSULTANCIES: Consultancy[] = [
     builds: 'Yes. We are implementation-led: we advise, then we build',
     what: 'We run the readiness assessment, pick the two or three use cases worth doing first, check your data and Privacy Act duties, and recommend whether to buy a tool or build one. If a build is the right call, the same team designs, builds and supports it, and you own the code. We do not resell any AI platform. The founder is involved in every engagement. We are not lawyers and do not give legal sign-off.',
     bestFor: 'A small or mid-size business that wants advice from the people who will build the system, and is happy to work over video.',
-    ask: 'Whether a remote team suits you. If you want advisers in the room, or advice from a firm that will never build, pick a local firm from this list.',
+    ask: 'What you hold in writing at the end of the readiness assessment.',
   },
 ];
 
@@ -251,7 +251,6 @@ const PUBLISHED: { firm: string; item: string; figure: string; time: string; sou
   { firm: 'Real Minds AI', item: 'Starter: two one-to-one sessions', figure: 'A$400 plus GST', time: 'Three hours in total', source: 'https://realmindsai.com.au/ai-consulting-services/' },
   { firm: 'Real Minds AI', item: 'AI Working Session with your team', figure: 'A$4,500, credited against a build. GST not stated for this item', time: 'Half a day to a full day', source: 'https://realmindsai.com.au/ai-consulting-services/' },
   { firm: 'Synap', item: 'AI Readiness Assessment', figure: 'From A$950 plus GST', time: 'Results in 7 days', source: 'https://www.synap.au/readiness-assessment' },
-  { firm: 'Synap', item: 'Fractional AI Advisor retainer', figure: 'A$1,200 to A$15,500 a month plus GST, by staff numbers and hours', time: '8 to 24 hours a month', source: 'https://www.synap.au/consulting' },
   { firm: 'AI Consulting by Yes AI', item: 'AI Opportunity Audit', figure: 'A$3,000 plus GST, fixed', time: 'Typically 2 to 3 weeks', source: 'https://ai-consulting.au/pricing' },
   { firm: 'JOURN3Y', item: 'AI Strategy Blueprint', figure: 'Not published', time: 'Typically 2 to 4 weeks', source: 'https://www.journ3y.com.au/products/blueprint' },
   { firm: 'RUBIX', item: 'AI governance framework', figure: 'Not published', time: 'Typically 8 to 12 weeks', source: 'https://www.rubix.com.au/ai-governance-consulting' },
@@ -326,11 +325,11 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "How much do AI consulting firms charge?",
-    a: "Three firms in this guide publish prices, read on 9 October 2026. Real Minds AI lists a A$400 Starter and a A$4,500 working session. Synap lists a readiness assessment from A$950 plus GST and adviser retainers from A$1,200 to A$15,500 a month plus GST. Yes AI lists a fixed A$3,000 plus GST audit. The other firms quote after a call. FactoryJet quotes a fixed price per stage after a free call.",
+    a: "Three firms in this guide publish prices, read on 9 October 2026. Real Minds AI lists a A$400 Starter and a A$4,500 working session. Synap lists a readiness assessment from A$950 plus GST. Yes AI lists a fixed A$3,000 plus GST audit. The other firms quote after a call. FactoryJet quotes a fixed price per stage after a free call.",
   },
   {
     q: "How much does an AI consultant cost?",
-    a: "It depends on the size of the job. Published entry points among the firms we checked run from A$400 plus GST at Real Minds AI for three hours of one-to-one sessions to A$3,000 plus GST at Yes AI for a two to three week audit. Synap publishes monthly adviser retainers from A$1,200 to A$15,500 plus GST. Hourly and day rates are covered in our AI cost guide for Australia.",
+    a: "It depends on the size of the job. Published entry points among the firms we checked run from A$400 plus GST at Real Minds AI for three hours of one-to-one sessions to A$3,000 plus GST at Yes AI for a two to three week audit. Hourly and day rates are covered in our AI cost guide for Australia.",
   },
   {
     q: "What does an AI consultant actually do?",
@@ -424,7 +423,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 9, 2026',
-  dateModified: 'Oct 9, 2026',
+  dateModified: 'Oct 11, 2026',
   readTime: '21 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageAlt:
@@ -459,7 +458,7 @@ export const post: BlogPost = {
                 'Fifteen AI consultancies in Sydney, Melbourne and Brisbane, plus remote, grouped by the buyer each suits. Each read on its own site on 9 October 2026.',
               inLanguage: 'en-AU',
               datePublished: '2026-10-09',
-              dateModified: '2026-10-09',
+              dateModified: '2026-10-11',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI consultancies in Australia' },
@@ -546,7 +545,7 @@ export const post: BlogPost = {
         <li><strong>Read the lists those answers cite.</strong> Assistants lean on lists. On our ten questions, list articles made up 73 percent of the small-firm pages Perplexity cited, 59 percent for the Gemini app, 36 percent for the ChatGPT app and 35 percent for Google. We read four of those lists. One covers Sydney only. One sorts firms by size tier. One is about firms that build agents. One national top seven never mentions Melbourne or Brisbane. Eleven of the 14 other firms on our list appear in none of the four.</li>
         <li><strong>Check Google as well.</strong> We ran 14 Australian searches about AI consulting through DataForSEO. Google showed an AI Overview on 11 of them. It showed none for either Brisbane search.</li>
         <li><strong>Advisory work only.</strong> A firm had to sell at least one of five things on its own site: a readiness assessment, a strategy or roadmap, governance and policy, training, or independent advice on tools and vendors.</li>
-        <li><strong>An Australian city on the firm&rsquo;s own site.</strong> Fourteen of the 15 show one. FactoryJet is the exception and says so in its entry.</li>
+        <li><strong>An Australian city on the firm&rsquo;s own site.</strong> Each of the 14 firms we researched shows one.</li>
         <li><strong>Read the source, not the summary.</strong> Every profile comes from the firm&rsquo;s own pages, opened on 9 October 2026 and linked under each entry. We give no star ratings because we have not been a client of these firms.</li>
         <li><strong>Prices only from the firm.</strong> Where a firm publishes a price, we quote it and link the page. We never guess another company&rsquo;s price.</li>
       </ol>
@@ -654,7 +653,7 @@ export const post: BlogPost = {
 
       <h2 id="remote" className="text-2xl font-bold mt-10 mb-4">Remote AI consulting for Australian businesses</h2>
       <p className="mb-4">
-        Remote advice works for most of this, because workshops and interviews run well over video. Advancer, a Brisbane firm, says on its own site that most of its delivery happens remotely, with on-site sessions where they add value. Remote is the wrong choice if you want advisers walking your site every week, or if a contract needs an Australian entity to handle your data.
+        Remote advice works for most of this, because workshops and interviews run well over video. Advancer, a Brisbane firm, says on its own site that most of its delivery happens remotely, with on-site sessions where they add value.
       </p>
       {renderFirms('Remote')}
       <p className="mb-6">
@@ -692,7 +691,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
-        <strong>How to read this.</strong> The A$400 Real Minds AI Starter buys three hours with a principal. The Synap assessment from A$950 buys a questionnaire-led report. The A$3,000 Yes AI audit and the A$4,500 Real Minds AI working session buy workshops with your team and a costed plan. Retainers buy an adviser&rsquo;s time each month. Synap&rsquo;s retainer table runs from A$1,200 a month for a business of up to 25 staff at 8 hours, to A$15,500 for 100 or more staff at 24 hours.
+        <strong>How to read this.</strong> The A$400 Real Minds AI Starter buys three hours with a principal. The Synap assessment from A$950 buys a questionnaire-led report. The A$3,000 Yes AI audit and the A$4,500 Real Minds AI working session buy workshops with your team and a costed plan.
       </p>
       <p className="mb-6">
         For hourly and day rates, see our <a href="/blog/ai-cost-australia-2026" className="text-[#B23E13] underline">AI cost guide for Australia (2026)</a>. If the advice points to a build, our guide to <a href="/blog/hire-ai-developers-australia-cost-2026" className="text-[#B23E13] underline">hiring AI developers in Australia and what they cost</a> covers the next step. FactoryJet does not publish a rate card. We quote a fixed price per stage after a free call.
@@ -764,12 +763,6 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200">Formal frameworks. KPMG cites ISO 42001 certification and PwC has AI Trust</td>
               <td className="p-3 border border-gray-200 bg-orange-50">An AI usage policy and a Privacy Act check inside the plan. No legal sign-off</td>
             </tr>
-            <tr className="odd:bg-white even:bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">Watch out for</td>
-              <td className="p-3 border border-gray-200">A small team has limited capacity</td>
-              <td className="p-3 border border-gray-200">Scope sized for large organisations</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">Not right if you want advisers on site every week</td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -838,15 +831,12 @@ export const post: BlogPost = {
         <figcaption className="text-sm text-gray-600 mt-2">Governance for a small business is usually a short written policy: which tools are allowed, what data can go in them and who checks the output.</figcaption>
       </figure>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">Where FactoryJet fits, and where it does not</h2>
+      <h2 className="text-2xl font-bold mt-10 mb-4">Where FactoryJet fits</h2>
       <p className="mb-4">
         We are FactoryJet. We have served 500+ businesses since 2014, most of that time in commerce: online stores, B2B ordering and the operations behind them. Our founder, Bhavesh Barot, is involved in every engagement. Before a contract, we show working software on your own data.
       </p>
       <p className="mb-4">
         <strong>Where we fit:</strong> a small or mid-size Australian business that wants the readiness assessment, the use case shortlist and the AI usage policy from the same team that will build the first system. Businesses that sell online or run order-heavy operations get the most from us, because that is where we have worked longest.
-      </p>
-      <p className="mb-4">
-        <strong>Where we do not:</strong> if you want advisers in your building every week, choose a local firm from your city list. If you want an advice-first firm, Melotti AI Ethics Consulting and Kinetic Consulting are the two on this list. If a regulator will read your governance framework, RUBIX and AI Consulting Group both sell that as a named service.
       </p>
       <p className="mb-6">
         We are not lawyers, and nothing we write is legal sign-off. You own the report and can take it to any builder.

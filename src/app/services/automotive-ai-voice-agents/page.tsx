@@ -14,7 +14,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/automotive-ai-voice-agent
 const PAGE_TITLE = 'Automotive AI Voice Agents & Dealership BDC | FactoryJet';
 const PAGE_DESC =
   'Custom automotive AI voice agents for US car dealerships, collision centers & parts counters. 24/7 service BDC booking with direct CDK, Reynolds & Tekion sync.';
-const PAGE_MODIFIED = '2026-09-03';
+const PAGE_MODIFIED = '2026-10-11';
 
 /** Single source for the breadcrumb trail. Feeds both the visible <Breadcrumbs>
  *  component and the BreadcrumbList JSON-LD below, so the two can never drift. */
@@ -1099,14 +1099,6 @@ export default function AutomotiveAiVoiceAgentsPage() {
                     <td className="p-4 sm:p-6 text-[#6E655F]">1 Caller at a Time.</td>
                   </tr>
                   <tr>
-                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Cost per Call / Minute.</td>
-                    <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
-                      ~$0.05 / min (Wholesale)
-                    </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$1.75 - $3.25 / minute.</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$4,500 / month / BDC seat.</td>
-                  </tr>
-                  <tr>
                     <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Software &amp; IP Ownership.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       100% Owned, $0 Per-Seat Fee
@@ -1119,9 +1111,9 @@ export default function AutomotiveAiVoiceAgentsPage() {
             </div>
 
             <p className="text-sm sm:text-base text-[#46403B] mt-8 max-w-3xl">
-              For the full math behind these numbers, see our{' '}
+              To weigh a human answering service against an off-the-shelf AI receptionist product and a custom voice agent, see our{' '}
               <Link href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026" className="text-[#F05A28] font-semibold hover:underline">
-                AI voice agent vs. human answering service cost comparison
+                guide to choosing between AI voice agents and human answering services
               </Link>
               . Or run your own numbers with the{' '}
               <Link href="/tools/ai-agent-roi-calculator" className="text-[#F05A28] font-semibold hover:underline">

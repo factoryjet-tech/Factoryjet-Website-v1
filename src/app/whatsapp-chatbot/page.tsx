@@ -89,7 +89,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-11';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -365,7 +365,7 @@ const WHATSAPP_FAQ_ITEMS = [
     category: 'process',
     question: 'How long does it take to build and launch a WhatsApp chatbot?',
     answer:
-      'FactoryJet delivers WhatsApp chatbots in 7 days. Day 1 is the discovery call. Days 2–3 cover API setup and architecture approval. Days 4–6 are build, integration, and testing. Day 7 is go-live. 30-day post-launch support is included in every project. No other India agency matches this delivery timeline at this quality level.',
+      'FactoryJet delivers WhatsApp chatbots in 7 days. Day 1 is the discovery call. Days 2–3 cover API setup and architecture approval. Days 4–6 are build, integration, and testing. Day 7 is go-live. 30-day post-launch support is included in every project.',
   },
   {
     category: 'process',
@@ -391,13 +391,13 @@ const WHATSAPP_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What are the ongoing costs after a WhatsApp chatbot is built?',
     answer:
-      'Two recurring costs go to third parties, not to us: your BSP subscription (Interakt, Wati, or AiSensy charge a monthly fee depending on plan and message volume) and Meta\'s per-conversation charges (marketing and utility messages carry a small per-conversation fee, while customer-initiated service conversations are free). FactoryJet charges nothing ongoing unless you choose an optional retainer.',
+      'Two recurring costs go to third parties, not to us: your BSP subscription (Interakt, Wati, or AiSensy charge a monthly fee depending on plan and message volume) and Meta\'s per-conversation charges (marketing and utility messages carry a per-conversation fee, while customer-initiated service conversations are free). FactoryJet charges nothing ongoing unless you choose an optional retainer.',
   },
   {
     category: 'pricing',
     question: 'What is the ROI of a WhatsApp chatbot for an Indian business?',
     answer:
-      'The clearest ROI: a chatbot handling 60–70% of WhatsApp queries replaces 1–2 support executives at a fraction of the cost, payback in 3–6 months for most businesses. Secondary ROI: leads getting an instant reply instead of waiting 6 hours convert at significantly higher rates. Indian D2C brands report 200–300% ROI on WhatsApp marketing vs. traditional channels, with chatbots amplifying that further.',
+      'The clearest ROI: a chatbot handling 60–70% of WhatsApp queries reaches payback in 3–6 months for most businesses. Secondary ROI: leads getting an instant reply instead of waiting 6 hours convert at significantly higher rates. Indian D2C brands report 200–300% ROI on WhatsApp marketing vs. traditional channels, with chatbots amplifying that further.',
   },
   {
     category: 'pricing',

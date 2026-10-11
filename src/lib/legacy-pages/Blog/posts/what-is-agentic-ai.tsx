@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     q: 'How much does agentic AI cost?',
-    a: 'As a market reference, development firm ProductCrafters puts 2026 custom AI agent builds at about $5,000 to more than $180,000, and hosting for a custom build at $500 to $10,000 a month. The price depends mostly on how many systems the agent reads and writes to and how many exceptions it must handle. FactoryJet quotes a fixed price in writing after a short scoping call.',
+    a: 'As a market reference, development firm ProductCrafters puts 2026 custom AI agent builds at about $5,000 to more than $180,000. The price depends mostly on how many systems the agent reads and writes to and how many exceptions it must handle. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.',
   },
   {
     q: 'How long does it take to build an agentic AI system?',
@@ -112,7 +112,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jul 11, 2026',
-  dateModified: 'Oct 10, 2026',
+  dateModified: 'Oct 11, 2026',
   readTime: '11 min read',
   imageUrl: '/blog-images/what-is-agentic-ai.webp',
   imageAlt: 'A team working together, illustrating agentic AI systems that plan and complete tasks',
@@ -163,7 +163,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-4">
         Bigger goals often use several agents. A planner breaks the goal into steps, specialists handle research or execution, and an orchestrator keeps them in sync. Whether it is one agent or a team, the shape is the same: reason, act, check, repeat. If you want the finer distinction between a single agent and a coordinated system, we cover{' '}
-        <a href="/blog/agentic-ai-vs-ai-agents" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic AI vs AI agents</a> separately, and the single agent gets its own definition and running costs in <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">what an AI agent is and what it costs</a>.
+        <a href="/blog/agentic-ai-vs-ai-agents" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic AI vs AI agents</a> separately, and the single agent gets its own definition and costs in <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">what an AI agent is and what it costs</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Workflow or agent: the difference that matters when you build</h2>

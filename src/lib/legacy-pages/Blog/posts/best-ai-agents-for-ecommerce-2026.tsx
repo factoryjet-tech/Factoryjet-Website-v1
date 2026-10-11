@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'best-ai-agents-for-ecommerce-2026',
   title: 'Best AI Agents for Ecommerce in 2026, and When a Custom Agent Wins',
   excerpt:
-    'There is no single best AI agent for ecommerce. There is a best agent for each job: customer support, shopping help, on-site search and running the store. We compared Gorgias, Fin, Zendesk, Klaviyo, Rep AI, Alhena, Algolia and Shopify Sidekick using their own pricing pages and docs, then did the math on when a custom agent costs less.',
+    'There is no single best AI agent for ecommerce. There is a best agent for each job: customer support, shopping help, on-site search and running the store. We compared Gorgias, Fin, Zendesk, Klaviyo, Rep AI, Alhena, Algolia and Shopify Sidekick using their own pricing pages and docs, then set out when a custom agent wins.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'September 17, 2026',
@@ -24,7 +24,7 @@ export const post: BlogPost = {
     'Vendors bill different units, so compare a month, not a rate card. Fin charges $0.99 per outcome, Gorgias $0.90 to $1.00 per automated interaction, Alhena counts AI conversations and Rep AI counts store visitors (vendor pages checked September 17, 2026).',
     'Read what counts as billable. A Fin outcome includes a handoff through a Procedure you set up, and every Gorgias automated interaction also counts as a helpdesk ticket.',
     "Shopify Sidekick works for the merchant, not the shopper. Shopify's own help center says it can't talk to your customers or handle support conversations.",
-    'In our hypothetical month of 6,000 conversations with 3,000 resolved by AI, Fin fees come to $2,970, while a custom agent on Claude Sonnet 5 uses about $378 in model calls. That gap has to pay for the build and upkeep.',
+    'In our hypothetical month of 6,000 conversations with 3,000 resolved by AI, Fin fees come to $2,970. Fees rise directly with volume, so price your busiest month.',
     'A custom agent wins when answers depend on your ERP, OMS or 3PL, when B2B pricing or warranty rules decide the reply, when you must own the data path, or when a year of per-resolution fees tops the cost of building and running your own.',
   ],
   faqs: [
@@ -126,11 +126,11 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does an AI agent for customer service cost?',
-      a: "Off-the-shelf support agents charge per result. Fin costs $0.99 per outcome, and Gorgias charges $0.90 to $1.00 per automated interaction plus its helpdesk plan. Zendesk bills per automated resolution but does not publish its rates. A custom agent's running cost is mostly model usage, about 6 cents a conversation on Claude Sonnet 5 in our hypothetical example, before the cost of building and maintaining it.",
+      a: "Off-the-shelf support agents charge per result. Fin costs $0.99 per outcome, and Gorgias charges $0.90 to $1.00 per automated interaction plus its helpdesk plan. Zendesk bills per automated resolution but does not publish its rates. For a custom agent, FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.",
     },
     {
       q: 'Can I build my own AI agent?',
-      a: "Yes. Model providers sell API access by the token, and Shopify's developer docs include a tutorial for a storefront AI agent that searches products, answers policy questions and manages carts. The hard part is not the prototype. It is connecting safely to your order, return and ERP systems, setting refund limits, logging every action and keeping it working as those systems change. That is most of the cost.",
+      a: "Yes. Model providers sell API access by the token, and Shopify's developer docs include a tutorial for a storefront AI agent that searches products, answers policy questions and manages carts. The hard part is not the prototype. It is connecting safely to your order, return and ERP systems, setting refund limits, logging every action and keeping it working as those systems change.",
     },
     {
       q: 'Is it better to build or buy an AI agent for an online store?',
@@ -321,7 +321,7 @@ export const post: BlogPost = {
               <td className="border p-3">Custom-built agent</td>
               <td className="border p-3">Any job your systems allow</td>
               <td className="border p-3">Anything with an API</td>
-              <td className="border p-3">Model usage per token, plus build and upkeep</td>
+              <td className="border p-3">A build price plus upkeep, quoted as a project</td>
               <td className="border p-3">High. An engineering project.</td>
               <td className="border p-3">Cross-system work, B2B rules, data control, high volume</td>
             </tr>
@@ -938,72 +938,16 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
-        Now a custom agent. Its main running cost is model usage, billed per token, a chunk of text
-        about the size of a short word. Assume each conversation takes three model calls that read
-        24,000 input tokens in total (instructions, policies, messages and order data) and write
-        1,500 output tokens. The agent reads all 6,000 conversations, not just the resolved ones. At{' '}
-        <a
-          href="https://claude.com/pricing"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#B23E13] hover:underline"
-        >
-          Anthropic&apos;s API prices
-        </a>{' '}
-        on September 17, 2026, with no caching discount:
+        These fees move directly with volume. At a tenth of the volume, 300 resolutions cost $297 a
+        month on Fin. At double the volume in November and December, Fin&apos;s line doubles to
+        $5,940 a month, so price your busiest month, not an average one.
       </p>
-      <div className="overflow-x-auto mb-4">
-        <table className="min-w-full border-collapse border border-gray-300 text-sm">
-          <thead className="bg-gray-800 text-white">
-            <tr>
-              <th className="p-3 border text-left">Model</th>
-              <th className="p-3 border text-left">Input / output per 1M tokens</th>
-              <th className="p-3 border text-left">Per conversation</th>
-              <th className="p-3 border text-left">6,000 conversations a month</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="bg-white">
-              <td className="border p-3">Claude Haiku 4.5</td>
-              <td className="border p-3">$1 / $5</td>
-              <td className="border p-3">$0.0315</td>
-              <td className="border p-3">$189</td>
-            </tr>
-            <tr className="bg-gray-50">
-              <td className="border p-3">Claude Sonnet 5</td>
-              <td className="border p-3">$2 / $10</td>
-              <td className="border p-3">$0.063</td>
-              <td className="border p-3">$378</td>
-            </tr>
-            <tr className="bg-white">
-              <td className="border p-3">Claude Opus 5</td>
-              <td className="border p-3">$5 / $25</td>
-              <td className="border p-3">$0.1575</td>
-              <td className="border p-3">$945</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p className="mb-4">
-        Sonnet 5 in full: 24,000 input tokens at $2 per million is $0.048, plus 1,500 output tokens
-        at $10 per million is $0.015. That makes $0.063 a conversation and $378 a month. Prompt
-        caching can cut the input part, since re-reading cached text costs a tenth of the input
-        price. Anthropic charges 1.1 times its standard token prices for US-only processing.
-      </p>
-      <p className="mb-4">
-        The gap between Fin&apos;s $2,970 and $378 is $2,592 a month, about $31,100 a year. That
-        gap has to pay for the build, hosting, monitoring, the helpdesk your team still uses for
-        handoffs, and the engineer who keeps order, return and ERP connections working. Our{' '}
+      <p className="mb-8">
+        A custom agent is quoted as a project, so it is not in this table. Our{' '}
         <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] hover:underline">
           guide to what an AI agent costs
         </a>{' '}
         covers build costs.
-      </p>
-      <p className="mb-8">
-        At a tenth of the volume, 300 resolutions cost $297 a month on Fin against a $37.80 model
-        bill. A gap of about $3,100 a year rarely pays for a build, so rent. At double the volume in
-        November and December, Fin&apos;s line doubles to $5,940 a month, so price your busiest
-        month, not an average one.
       </p>
 
       <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
@@ -1244,8 +1188,8 @@ export const post: BlogPost = {
 
       <p className="text-sm text-gray-500 italic">
         Checked on September 17, 2026 against vendor pages from Gorgias, Fin and Intercom, Zendesk,
-        Klaviyo, Rep AI, Alhena and Algolia, Shopify&apos;s help center and developer docs, and
-        Anthropic&apos;s API pricing, all linked above. Prices change often, so confirm on each
+        Klaviyo, Rep AI, Alhena and Algolia, and Shopify&apos;s help center and developer docs,
+        all linked above. Prices change often, so confirm on each
         vendor&apos;s site before you buy. Commerceflo details come from factoryjet.com/commerceflo and
         commerceflo.ai.
       </p>

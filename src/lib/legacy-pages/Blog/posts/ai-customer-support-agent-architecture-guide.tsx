@@ -10,7 +10,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Aug 21, 2026',
-  dateModified: 'Oct 05, 2026',
+  dateModified: 'Oct 11, 2026',
   readTime: '19 min read',
   imageUrl: '/blog-images/ai-customer-support-agent-architecture.webp',
   meta: {
@@ -62,7 +62,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does a custom AI customer support agent cost?',
-      a: 'As a market reference, CMARIX\'s 2026 pricing guide puts a basic FAQ chatbot at about $5,000 to $15,000 and a custom AI chatbot at $20,000 to $80,000. For an agent that also takes actions in Shopify or an ERP, development firm ProductCrafters puts custom AI agent builds at about $5,000 to more than $180,000. After launch, model calls are often the smallest cost. FactoryJet quotes a fixed price in writing after a short scoping call.',
+      a: 'As a market reference, CMARIX\'s 2026 pricing guide puts a basic FAQ chatbot at about $5,000 to $15,000 and a custom AI chatbot at $20,000 to $80,000. For an agent that also takes actions in Shopify or an ERP, development firm ProductCrafters puts custom AI agent builds at about $5,000 to more than $180,000. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.',
     },
     {
       q: 'How does the agent handle multilingual customer support inquiries?',
@@ -92,7 +92,7 @@ export const post: BlogPost = {
           <li>State and Conversation Memory</li>
           <li>Safety, Limits and Data Redaction</li>
           <li>Human Handoff</li>
-          <li>Resolution Quality and Operating Cost</li>
+          <li>Resolution Quality and Build Cost</li>
           <li>Implementation and Rollout</li>
         </ul>
       </div>
@@ -102,7 +102,7 @@ export const post: BlogPost = {
       </p>
 
       <p className="mb-6">
-        The first generation of AI chatbots frustrated customers. Built as static FAQ widgets, they trapped users in loops and offered policy links instead of solving problems. A modern AI customer support agent is built differently. It pairs a reasoning model with authenticated API tools, so it can check live warehouse queues, issue return authorizations, change delivery addresses and complete the other support tasks you have approved. If the term itself is new to you, <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">what an AI agent is and what it costs</a> covers the definition and the running costs before you read the architecture below.
+        The first generation of AI chatbots frustrated customers. Built as static FAQ widgets, they trapped users in loops and offered policy links instead of solving problems. A modern AI customer support agent is built differently. It pairs a reasoning model with authenticated API tools, so it can check live warehouse queues, issue return authorizations, change delivery addresses and complete the other support tasks you have approved. If the term itself is new to you, <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">what an AI agent is and what it costs</a> covers the definition and the costs before you read the architecture below.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">1. The 5-Layer Technical Support Agent Architecture</h2>
@@ -249,8 +249,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">7. Resolution Quality, Cost and What to Measure</h2>
       <p className="mb-4">Keep a baseline for each ticket category. During a supervised pilot, compare tickets resolved correctly, repeat contacts, customer feedback and handling time. Report a drafted answer, an automated reply and a completed resolution as three separate numbers. Ticket mixes differ too much between businesses for a published deflection percentage to be a safe planning input.</p>
-      <p className="mb-4">On build cost, the published 2026 market ranges are wide. <a href="https://www.cmarix.com/blog/ai-chatbot-development-cost/" className="text-[#B23E13] underline hover:text-[#F05A28]" target="_blank" rel="noopener noreferrer">CMARIX</a> puts a basic FAQ chatbot at about $5,000 to $15,000 and a custom AI chatbot at $20,000 to $80,000. For an agent that also takes actions in your systems, development firm <a href="https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent/" className="text-[#B23E13] underline hover:text-[#F05A28]" target="_blank" rel="noopener noreferrer">ProductCrafters</a> puts custom AI agent builds at about $5,000 to more than $180,000, with hosting at $500 to $10,000 a month. We read both pages on September 30, 2026. None of these is a FactoryJet price. FactoryJet quotes a fixed price in writing after a short scoping call.</p>
-      <p className="mb-4">Work out running cost from actual model calls, connector and helpdesk subscriptions, infrastructure, human review and engineering support. Include corrections and failed tasks. Model calls are often the smallest part: our <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">AI agent cost guide</a> works through a support agent handling 2,000 tickets a month and puts them at about $22 to $112 a month on Anthropic&apos;s September 2026 prices.</p>
+      <p className="mb-4">On build cost, the published 2026 market ranges are wide. <a href="https://www.cmarix.com/blog/ai-chatbot-development-cost/" className="text-[#B23E13] underline hover:text-[#F05A28]" target="_blank" rel="noopener noreferrer">CMARIX</a> puts a basic FAQ chatbot at about $5,000 to $15,000 and a custom AI chatbot at $20,000 to $80,000. For an agent that also takes actions in your systems, development firm <a href="https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent/" className="text-[#B23E13] underline hover:text-[#F05A28]" target="_blank" rel="noopener noreferrer">ProductCrafters</a> puts custom AI agent builds at about $5,000 to more than $180,000. We read both pages on September 30, 2026. None of these is a FactoryJet price. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to.</p>
       <p className="mb-6">Save representative tickets and expected actions as regression tests. Run them when a prompt, policy, connector or model changes, then check production feedback for errors the test set missed. Track unauthorised actions separately from response quality: a fluent answer does not establish that a transaction was safe.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">8. Implementation Blueprint: From Ticket Audit to Live Deployment</h2>

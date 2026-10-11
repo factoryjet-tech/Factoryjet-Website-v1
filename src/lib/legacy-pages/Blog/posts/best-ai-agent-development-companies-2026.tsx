@@ -17,12 +17,11 @@ export const AGENT_COMPANIES = [
 const COMPANY_NAMES = AGENT_COMPANIES.map(company => company.name);
 const NAME_LIST = `${COMPANY_NAMES.slice(0, -1).join(', ')} and ${COMPANY_NAMES[COMPANY_NAMES.length - 1]}`;
 
-// Market ranges only, never FactoryJet prices. VERIFIED rows 1, 2 and 9 in
+// Market ranges only, never FactoryJet prices. Build prices and hourly rates
+// only. VERIFIED rows 1 and 9 in
 // pipeline/research/MARKET-PRICE-RANGES-2026-09-30.md, read 2026-09-30.
 const COST_ROWS = [
   { item: 'One custom AI agent build', range: '$5,000 to $180,000+', source: 'ProductCrafters, 2026 cost breakdown', url: 'https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent/' },
-  { item: 'Hosting for a custom build', range: '$500 to $10,000 a month', source: 'ProductCrafters, 2026 cost breakdown', url: 'https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent/' },
-  { item: 'Maintenance for a custom build', range: '$10,000 to $50,000+ a year', source: 'ProductCrafters, 2026 cost breakdown', url: 'https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent/' },
   { item: 'Hourly rate, US AI development companies', range: '$50 to $99 an hour', source: 'Clutch, September 2026 pricing guide', url: 'https://clutch.co/developers/artificial-intelligence/pricing' },
 ];
 
@@ -63,7 +62,7 @@ export const post: BlogPost = {
   slug: 'best-ai-agent-development-companies-2026',
   title: `${AGENT_COMPANIES.length} AI Agent Development Companies Compared (2026)`,
   excerpt: 'Ten AI agent development companies compared by what each one publishes, with a link to every offer, 2026 market cost ranges from named sources and one question to ask each firm.',
-  category: 'Emerging Tech', author: 'Bhavesh Barot', date: 'Oct 04, 2026', dateModified: 'Oct 10, 2026', readTime: '13 min read',
+  category: 'Emerging Tech', author: 'Bhavesh Barot', date: 'Oct 04, 2026', dateModified: 'Oct 11, 2026', readTime: '13 min read',
   imageUrl: '/images/us/services/ai-agent-definition-workbench.webp',
   imageAlt: 'AI-generated illustration of documents, data, tools and human review connected to an agent workflow',
   meta: { title: `${AGENT_COMPANIES.length} AI Agent Development Companies Compared`, description: 'Ten AI agent development companies compared: each firm\'s published offer, sourced 2026 cost ranges, build timelines and the question to ask before you sign.' },
@@ -85,7 +84,7 @@ export const post: BlogPost = {
     <h2 className="text-2xl font-bold mt-10 mb-4">What AI agent development costs and how long it takes</h2>
     <p className="mb-4">These are market ranges published by firms that sell or list this work. They are in US dollars and none of them is a FactoryJet price. We read each source page on September 30, 2026.</p>
     <div className="overflow-x-auto mb-4"><table className="w-full text-sm border-collapse"><caption className="text-left mb-3">Published 2026 market ranges for AI agent development</caption><thead><tr>{['What you are paying for', 'Market range', 'Source'].map(t => <th className="border p-3 text-left" scope="col" key={t}>{t}</th>)}</tr></thead><tbody>{COST_ROWS.map(row => <tr key={row.item}><th scope="row" className="border p-3 text-left font-normal">{row.item}</th><td className="border p-3 font-semibold">{row.range}</td><td className="border p-3"><a href={row.url} className="text-[#B23E13] underline" target="_blank" rel="noopener noreferrer">{row.source}</a></td></tr>)}</tbody></table></div>
-    <p className="mb-4">The price moves with how many systems the agent reads and writes to and how many exceptions it must handle. The AI model is rarely the main cost. FactoryJet quotes a fixed price in writing after a short scoping call.</p>
+    <p className="mb-4">The price moves with how many systems the agent reads and writes to and how many exceptions it must handle. FactoryJet quotes a fixed price in writing after a short scoping call.</p>
     <p className="mb-6">On time, a pilot on one narrow workflow usually takes two to four weeks. A production agent with permissions, logging, approvals and monitoring usually takes six to twelve weeks. Ask every firm for both dates, and ask which one its quote covers.</p>
     <h2 className="text-2xl font-bold mt-10 mb-4">Case study: the agent we built for Washington Law Group</h2>
     <p className="mb-4">The firm is a personal injury practice that needs to hear quickly about serious commercial-vehicle crashes. We built an agent that reads news and police sources across all 50 states every two hours and emails the firm the crashes that qualify. An AI model pulls the facts out of each article. Fixed rules then decide whether the crash qualifies.</p>

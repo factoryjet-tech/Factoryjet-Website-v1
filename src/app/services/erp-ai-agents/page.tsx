@@ -29,7 +29,7 @@ import AgentLoopDiagram from './AgentLoopDiagram';
    "erp ai chatbot" 170 (KD 0), "erp integration services" 110 (KD 0),
    "purchase order automation" 110, "erp automation" 90 (KD 0), "netsuite ai
    agent" 70, "odoo ai agent" 50, "sales order automation" 30. An AI Overview
-   showed on 19 of the 19 SERPs that returned. FactoryJet was in no top 20.
+   showed on 19 of the 19 SERPs that returned.
 
    Scope is wide on purpose: Bhavesh asked on 2026-10-09 for one page covering
    Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs. Each system has
@@ -48,8 +48,10 @@ import AgentLoopDiagram from './AgentLoopDiagram';
      Entrance Automation. The two QuickBooks projects in progress stay unnamed.
      Each line restates the public case study or his own words. No results are
      claimed for any of them.
-   - No FactoryJet prices. The only dollar figures are sourced market ranges
-     inside the two cost FAQ answers.
+   - No FactoryJet prices. The only dollar figure is the sourced market range
+     for a build, inside the build-cost FAQ answer. The monthly running-cost
+     range was removed on 2026-10-11 at Bhavesh's request. Do not add a figure
+     for running or upkeep.
    - The six "other names" restate each firm's own page as read that day. We
      have not worked with them and did not test their products.
    - Partner status is left out on purpose (Bhavesh, 2026-10-09). FactoryJet is
@@ -72,7 +74,7 @@ const PAGE_TITLE = 'AI Agents for ERP: Odoo, NetSuite, SAP Business One | Factor
 const PAGE_DESC =
   'We design, build and support AI agents inside Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs. They draft quotes, orders and bookkeeping for approval.';
 const PAGE_PUBLISHED = '2026-10-09';
-const PAGE_MODIFIED = '2026-10-10';
+const PAGE_MODIFIED = '2026-10-11';
 const CHECKED_ON = '9 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -466,7 +468,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'What does it cost to run an ERP AI agent each month?',
     answer:
-      "There are two bills. The AI model charges for each request, and the agent needs somewhere to run. ProductCrafters' 2026 breakdown puts monthly infrastructure for a custom-built agent at $500 to $10,000. If you prefer, both sit in your own accounts and you pay those bills directly, at cost. Whose account pays does not change who does the work. We keep managing the servers, the AI models, the API connections and the upkeep, so your team never has to.",
+      "There are two bills. The AI model charges for each request, and the agent needs somewhere to run. If you prefer, both sit in your own accounts and you pay those bills directly, at cost. Whose account pays does not change who does the work. We keep managing the servers, the AI models, the API connections and the upkeep, so your team never has to. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.",
   },
   {
     category: 'working',

@@ -30,7 +30,7 @@ import ConnectorPathDiagram from './ConnectorPathDiagram';
    close-variant bucket, KD 0 to 6), "netsuite mcp connector" 210, "netsuite
    intelligent payment automation" 170, "netsuite mcp server" 140, "netsuite
    ai agent" and "netsuite ai agents" 70 each. An AI Overview showed on 13 of
-   the first 14 SERPs. FactoryJet was in no top 20.
+   the first 14 SERPs.
 
    Scope: NetSuite only, and deeper than the NetSuite card on the overview.
    /services/erp-ai-agents stays the page for "ERP AI" head terms, so those
@@ -56,9 +56,11 @@ import ConnectorPathDiagram from './ConnectorPathDiagram';
      partners implement AI agents for distributors?" is answered under the
      wording "Who implements AI agents inside NetSuite for distributors?" for
      that reason. Do not add a partner claim.
-   - No FactoryJet prices. The only dollar figures are the ProductCrafters
-     market ranges inside the two cost FAQ answers. Oracle's statement that
-     its connector is not a paid feature is quoted as Oracle's.
+   - No FactoryJet prices. The only dollar figure is the ProductCrafters
+     market range for a build, inside the build-cost FAQ answer. The monthly
+     running-cost range was removed on 2026-10-11 at Bhavesh's request. Do not
+     add a figure for running or upkeep. Oracle's statement that its connector
+     is not a paid feature is quoted as Oracle's.
    - He also confirmed that day: the AI and hosting bills may sit in the
      client's own accounts at cost, and FactoryJet keeps managing the servers,
      the AI models, the API connections and the upkeep either way.
@@ -77,7 +79,7 @@ const PAGE_TITLE = 'NetSuite AI Agents, AI Connector and MCP | FactoryJet';
 const PAGE_DESC =
   'We design, build and support AI agents inside Oracle NetSuite. What the free AI Connector Service and MCP tools do, and when a custom agent is the right call.';
 const PAGE_PUBLISHED = '2026-10-09';
-const PAGE_MODIFIED = '2026-10-09';
+const PAGE_MODIFIED = '2026-10-11';
 const CHECKED_ON = '9 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -603,7 +605,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'What does it cost to run a NetSuite AI agent each month?',
     answer:
-      "There are two bills. The AI model charges for each request, and the agent needs somewhere to run. ProductCrafters' 2026 breakdown puts monthly infrastructure for a custom-built agent at $500 to $10,000. If you prefer, both sit in your own accounts and you pay those bills directly, at cost. Whose account pays does not change who does the work. We keep managing the servers, the AI models, the API connections and the upkeep, so your team never has to.",
+      "There are two bills. The AI model charges for each request, and the agent needs somewhere to run. If you prefer, both sit in your own accounts and you pay those bills directly, at cost. Whose account pays does not change who does the work. We keep managing the servers, the AI models, the API connections and the upkeep, so your team never has to. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.",
   },
   {
     category: 'working',

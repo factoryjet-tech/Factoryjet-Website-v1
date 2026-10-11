@@ -47,7 +47,7 @@ const FIRMS: Firm[] = [
     tools: 'n8n, Make, OpenAI, Anthropic, Twilio, HubSpot',
     what: 'SuperDupr builds AI systems and custom websites for service businesses. Its services run from AI voice agents and receptionists to customer support agents, lead follow-up and workflow automation built on n8n, Make and custom integrations. It says most systems go live in 2 to 4 weeks, and it publishes a project price range (see the price table below). The founder is Justin McKelvey.',
     bestFor: 'Local service businesses that lose leads to missed calls and slow follow-up.',
-    ask: 'Which running costs, such as phone minutes and AI usage, sit on top of the project price, and whose accounts they are billed to.',
+    ask: 'How a call is handed from the AI agent to your staff, and which of your tools it has connected before.',
   },
   {
     name: 'AutomateNexus',
@@ -112,7 +112,7 @@ const FIRMS: Firm[] = [
     type: 'AI workflow consulting for mid-market operations',
     clients: 'Mid-market companies with $30 million to $300 million in revenue',
     tools: 'None named; it says it builds on the ERP, CRM, email and phone systems you already run',
-    what: 'Revere Advisory calls itself an operations consultancy. It runs a two-week operations audit, then builds and deploys AI workflows for a fixed fee in 60 to 90 days, with optional monthly optimization afterwards. Its site says you own everything it builds. It names manufacturing and distribution, healthcare groups, professional services, commercial real estate, financial services and home services operators. All three prices are published (see the table below).',
+    what: 'Revere Advisory calls itself an operations consultancy. It runs a two-week operations audit, then builds and deploys AI workflows for a fixed fee in 60 to 90 days, with optional monthly optimization afterwards. Its site says you own everything it builds. It names manufacturing and distribution, healthcare groups, professional services, commercial real estate, financial services and home services operators. Its audit and implementation prices are published (see the table below).',
     bestFor: 'Operations leaders at mid-size firms with no in-house AI team.',
     ask: 'Which named people run the audit and the build, and for a reference client in your industry.',
   },
@@ -195,9 +195,9 @@ const FIRMS: Firm[] = [
     type: 'White-label AI automations and agents for digital agencies',
     clients: 'Digital agencies only; it says it has served 1,100+ agencies',
     tools: 'Not listed by name; it says it integrates AI with the tools you already use',
-    what: 'E2M works only for agencies, in two ways. It automates the agency itself (proposals, reporting, onboarding and CRM updates), and it builds AI automations and agents that the agency sells to its own clients under its own brand. It says it has more than 350 full-time specialists across India, the USA and Latin America and 80+ in-house AI specialists, and that it works under strict NDAs. Its three monthly plans are priced on its site (see the table below).',
+    what: 'E2M works only for agencies, in two ways. It automates the agency itself (proposals, reporting, onboarding and CRM updates), and it builds AI automations and agents that the agency sells to its own clients under its own brand. It says it has more than 350 full-time specialists across India, the USA and Latin America and 80+ in-house AI specialists, and that it works under strict NDAs. Its work is sold as three monthly plans.',
     bestFor: 'Agencies that want an offshore AI team working under their own brand on a flat monthly plan.',
-    ask: 'How many build hours each plan includes, and which time zone your strategist works in.',
+    ask: 'Which time zone your strategist works in.',
   },
   {
     name: 'White Label IQ',
@@ -224,7 +224,7 @@ const FIRMS: Firm[] = [
     tools: 'n8n, Make, Zapier, HubSpot, Shopify',
     what: 'We map one workflow, then design, build and support it in n8n, Make or Zapier, with AI steps where someone would otherwise read and decide, and human approval steps. Work is fixed-price and paid by milestone, and you own every workflow. Our strongest ground is where automation meets online stores, order handling, accounting and ERP systems. We are a registered Shopify Partner. The founder is involved in every project.',
     bestFor: 'Online stores and order-heavy businesses that want one team for the store, the integrations and the automation.',
-    ask: 'Whether a remote team suits you. If you need people in your building every week, pick a firm above with an office near you.',
+    ask: 'Which of your tools we have connected before, and how the first workflow is scoped.',
   },
 ];
 
@@ -254,7 +254,7 @@ const GROUP_INTRO: Record<Group, string> = {
     'Firms that say they work with online sellers. One builds stores as well as automation; the other pairs automation with paid ads. FactoryJet, further down, also belongs in this group.',
   'White-label for digital agencies':
     'Firms that build automation for other agencies to sell under their own brand. Both have US addresses. E2M also has an office in Ahmedabad, India. Three of the buyer questions we tested asked for offshore, staffing or support help for agencies.',
-  Us: 'We build automation, so we are on this list. We put ourselves last and say where we do not fit.',
+  Us: 'We build automation, so we are on this list. We put ourselves last.',
 };
 
 // Published prices, copied from each firm's own page on 9 Oct 2026.
@@ -262,7 +262,7 @@ const GROUP_INTRO: Record<Group, string> = {
 const PRICES: { firm: string; figure: string; source: string }[] = [
   {
     firm: 'AutomateNexus',
-    figure: 'Fixed-price setup from $3,500; fixed-scope build from $7,500; optional care plan $350 a month',
+    figure: 'Fixed-price setup from $3,500; fixed-scope build from $7,500',
     source: 'https://automatenexus.com/pricing',
   },
   {
@@ -287,13 +287,8 @@ const PRICES: { firm: string; figure: string; source: string }[] = [
   },
   {
     firm: 'Revere Advisory',
-    figure: 'Audit $5,000; implementation $15,000 to $75,000 fixed fee; ongoing optimization $3,000 to $5,000 a month',
+    figure: 'Audit $5,000; implementation $15,000 to $75,000 fixed fee',
     source: 'https://revereadvisory.com/',
-  },
-  {
-    firm: 'E2M Solutions',
-    figure: 'White-label AI plans at $1,999, $3,999 and $9,999 a month',
-    source: 'https://www.e2msolutions.com/white-label-ai-solutions-for-agencies/',
   },
 ];
 
@@ -473,9 +468,9 @@ export const post: BlogPost = {
   keyTakeaways: [
     'There is no single best AI automation agency in the US. Match the firm to your size and the job: small business, mid-size workflow, online store or white-label work for an agency.',
     'Every fact about every firm was read on its own website on 9 October 2026. Nobody paid to be listed, and the order is not a ranking.',
-    'Six of the 13 other firms publish prices. They run from $1,000 for four hours with an engineer (XRAY) and $3,500 for a fixed-price setup (AutomateNexus) to $15,000 to $75,000 for a mid-market build (Revere Advisory).',
+    'Five of the 13 other firms publish project or hourly prices. They run from $1,000 for four hours with an engineer (XRAY) and $3,500 for a fixed-price setup (AutomateNexus) to $15,000 to $75,000 for a mid-market build (Revere Advisory).',
     'A freelancer is the right pick for one workflow between two or three common tools. An agency earns its fee when the workflow touches money, customer data or several systems.',
-    'FactoryJet is on this list. We work with US clients remotely; if you need people on site every week, choose a firm near you.',
+    'FactoryJet is on this list. We work with US clients remotely.',
   ],
   faqs: FAQS,
   content: (
@@ -493,7 +488,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-09',
-              dateModified: '2026-10-10',
+              dateModified: '2026-10-11',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI and workflow automation agencies in the United States' },
@@ -539,7 +534,7 @@ export const post: BlogPost = {
         The lists have other gaps. One &ldquo;USA small business&rdquo; list of ten gives six places to software you subscribe to and set up yourself, such as Zapier, Make and UiPath. Eight of the nine never mention white-label work for other agencies. Seven never mention freelancers. Buyers asked about both.
       </p>
       <p className="mb-4">
-        So we did the slow part. We picked US firms that build automation for small and mid-size buyers, opened each firm&rsquo;s own website, and wrote down only what the firm says about itself. Every profile links to its source. We confirmed a US base on every other firm&rsquo;s own site.
+        So we did the slow part. We picked US firms that build automation for small and mid-size buyers, opened each firm&rsquo;s own website, and wrote down only what the firm says about itself. Every profile links to its source. We confirmed a US base on each of those firms&rsquo; own sites.
       </p>
       <p className="mb-4">
         <strong>A note on honesty.</strong> FactoryJet designs, builds and supports workflow automation and AI agents, so we are on this list. We put ourselves last, and we tell you where another firm on this page will suit you better. Read every list with that in mind, including this one.
@@ -581,7 +576,7 @@ export const post: BlogPost = {
       <ol className="list-decimal pl-6 mb-6 space-y-2">
         <li><strong>Start with what buyers ask.</strong> The 21 questions came from our own Search Console data and from questions we wrote for US buyers. &ldquo;AI automation agency&rdquo; alone gets 4,400 US Google searches a month (DataForSEO, October 2026), and Google shows an AI answer for it.</li>
         <li><strong>Read the lists assistants cite.</strong> We read ten of the most-cited lists to see who gets named and what is missing. We did not copy them.</li>
-        <li><strong>Keep only US firms.</strong> Every other firm had to show a US address, a US base or a US legal home on its own site. Two names assistants give US buyers did not pass on their own pages: <a href="https://www.meticulosity.com/about-meticulosity" className={link} rel="noopener" target="_blank">Meticulosity</a> says its home is Vancouver, Canada, and <a href="https://goodish.agency/" className={link} rel="noopener" target="_blank">Goodish Agency</a> shows its clock in Slovenia, six hours ahead of New York, while saying most of its clients are American. Both may suit you; they are outside a US list.</li>
+        <li><strong>Check for a US base.</strong> Each of the 13 firms we researched had to show a US address, a US base or a US legal home on its own site. Two names assistants give US buyers did not pass on their own pages: <a href="https://www.meticulosity.com/about-meticulosity" className={link} rel="noopener" target="_blank">Meticulosity</a> says its home is Vancouver, Canada, and <a href="https://goodish.agency/" className={link} rel="noopener" target="_blank">Goodish Agency</a> shows its clock in Slovenia, six hours ahead of New York, while saying most of its clients are American. Both may suit you; they are outside a US list.</li>
         <li><strong>Keep only firms that build for small and mid-size buyers.</strong> Software products and global consultancies were left out. For consultancies, see our list of <a href="/blog/best-ai-consulting-firms-usa-2026" className={link}>AI consulting firms in the USA</a>.</li>
         <li><strong>Read the source, not the summary.</strong> Every description comes from the firm&rsquo;s own pages, opened on 9 October 2026. Numbers such as project counts are the firm&rsquo;s own claims, and we say so.</li>
         <li><strong>No scores we cannot prove.</strong> We have not hired these firms, so there are no star ratings. We tell you who each one suits and one question worth asking it.</li>
@@ -673,7 +668,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What these agencies publish about price</h2>
       <p className="mb-4">
-        Six of the 13 other firms on this list publish figures on their own sites. We copied them exactly on 9 October 2026. They are each firm&rsquo;s own figures, not FactoryJet prices and not a market survey. Check the source before you rely on them, because firms change prices.
+        Five of the 13 other firms on this list publish a project or hourly price on their own sites. We copied them exactly on 9 October 2026. They are each firm&rsquo;s own figures, not FactoryJet prices and not a market survey. Check the source before you rely on them, because firms change prices.
       </p>
       <div className="overflow-x-auto mb-4 not-prose">
         <table className="w-full border-collapse text-sm">
@@ -698,10 +693,10 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
-        <strong>How to read this.</strong> The low figures buy a few hours of an engineer or one scoped setup. The high figures buy a workflow that crosses several systems, with testing and handover. Epiphany Dynamics says on its pricing page that it does not publish a price list and quotes a fixed price after a free audit. The other six firms show no price for their work on the pages we read.
+        <strong>How to read this.</strong> The low figures buy a few hours of an engineer or one scoped setup. The high figures buy a workflow that crosses several systems, with testing and handover. Epiphany Dynamics says on its pricing page that it does not publish a price list and quotes a fixed price after a free audit. E2M Solutions sells monthly plans. The other six firms show no price for their work on the pages we read.
       </p>
       <p className="mb-6">
-        Two costs sit outside most of these figures: the subscription for the automation tool, and AI usage paid to the model provider. Ask whose account each one is billed to. For day rates, retainers and what consultants charge, read our <a href="/blog/ai-consultant-cost-2026" className={link}>AI consultant cost guide</a>. FactoryJet does not publish a rate card; we give a fixed quote in writing after a short scoping call.
+        Two costs sit outside most of these figures: the subscription for the automation tool, and AI usage paid to the model provider. For day rates and what consultants charge, read our <a href="/blog/ai-consultant-cost-2026" className={link}>AI consultant cost guide</a>. FactoryJet does not publish a rate card; we give a fixed quote in writing after a short scoping call.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">We want to add AI automation to our business. Which agency can help?</h2>
@@ -826,7 +821,7 @@ export const post: BlogPost = {
             </tr>
             <tr className="odd:bg-white even:bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">Ask first</td>
-              <td className="p-3 border border-gray-200">Who holds the tool accounts, what the NDA covers and how many hours the plan includes</td>
+              <td className="p-3 border border-gray-200">Who holds the tool accounts and what the NDA covers</td>
               <td className="p-3 border border-gray-200">Where data is stored, which hours overlap with yours and who checks the work</td>
               <td className="p-3 border border-gray-200">Whether they have built on your client&rsquo;s tools before</td>
             </tr>
@@ -918,7 +913,7 @@ export const post: BlogPost = {
             <tr className="odd:bg-white even:bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">After launch</td>
               <td className="p-3 border border-gray-200">You, unless you buy more hours</td>
-              <td className="p-3 border border-gray-200">A support window or an optional plan; ask what it covers</td>
+              <td className="p-3 border border-gray-200">A support window or an optional plan</td>
               <td className="p-3 border border-gray-200 bg-orange-50">Monitoring and thirty days of post-launch support with the build</td>
             </tr>
             <tr className="odd:bg-white even:bg-gray-50">
@@ -926,12 +921,6 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200">Rare</td>
               <td className="p-3 border border-gray-200">Possible near their city</td>
               <td className="p-3 border border-gray-200 bg-orange-50">Video calls in US business hours</td>
-            </tr>
-            <tr className="odd:bg-white even:bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">Watch out for</td>
-              <td className="p-3 border border-gray-200">Work stops when the person is ill, busy or gone</td>
-              <td className="p-3 border border-gray-200">Workflows kept in the agency account; unclear running costs</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">Not right if you need people on site every week</td>
             </tr>
           </tbody>
         </table>
@@ -960,7 +949,7 @@ export const post: BlogPost = {
         </table>
       </div>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">How to choose an AI automation agency: 7 steps</h2>
+      <h2 className="text-2xl font-bold mt-10 mb-4">How to choose an AI automation agency: 6 steps</h2>
       <p className="mb-4">Open each step for the detail.</p>
       <div className="space-y-3 mb-8 not-prose">
         <details className="rounded-xl border border-gray-200 p-4">
@@ -984,34 +973,26 @@ export const post: BlogPost = {
           <p className="mt-3 text-gray-700">The workflow, the tool subscription and the AI keys should sit in accounts your business owns. AutomateNexus, Epiphany Dynamics and XRAY all state this on their sites. If a firm wants to keep the workflow in its own account, ask what you receive if you leave.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
-          <summary className="font-semibold cursor-pointer">6. Get the running costs in writing</summary>
-          <p className="mt-3 text-gray-700">After the build you still pay for the automation tool and for AI usage. Ask for an estimate of both at your volume, and whether the firm adds a margin. Epiphany Dynamics says it bills third-party costs to your own accounts at cost. Use that as the standard to ask others to meet.</p>
-        </details>
-        <details className="rounded-xl border border-gray-200 p-4">
-          <summary className="font-semibold cursor-pointer">7. Plan for month three</summary>
-          <p className="mt-3 text-gray-700">The tools your workflow connects to will change, and automations fail quietly. Ask who watches for failed runs, how fast they respond and what that costs. The worst outcome is a firm that disappears after launch. Our page on <a href="/services/ai-agent-monitoring" className={link}>AI agent monitoring and support</a> shows what good looks like.</p>
+          <summary className="font-semibold cursor-pointer">6. Plan for month three</summary>
+          <p className="mt-3 text-gray-700">The tools your workflow connects to will change, and automations fail quietly. Ask who watches for failed runs and how fast they respond. The worst outcome is a firm that disappears after launch. Our page on <a href="/services/ai-agent-monitoring" className={link}>AI agent monitoring and support</a> shows what good looks like.</p>
         </details>
       </div>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">Six warning signs when you talk to an automation agency</h2>
+      <h2 className="text-2xl font-bold mt-10 mb-4">Five warning signs when you talk to an automation agency</h2>
       <ol className="list-decimal pl-6 mb-6 space-y-2">
         <li><strong>A demo before any questions.</strong> If they show a slick demo before asking how your work runs today, the demo is the product and your business is an afterthought.</li>
         <li><strong>The workflow lives in their account.</strong> Then you are renting your own operations. Ask for admin access from day one.</li>
-        <li><strong>A monthly fee with no list of what it covers.</strong> A care plan should name what is monitored, how fast fixes happen and how to cancel.</li>
         <li><strong>Big savings claims with no baseline.</strong> A headline number means little unless they measured the task before the build. Ask how they measured it.</li>
         <li><strong>No human approval step.</strong> Anything that sends money, gives advice or speaks to customers should have a person approving it, at least at first.</li>
         <li><strong>AI on a job that needs none.</strong> Some workflows are ordinary rules with a new label. Ask to test it on one of your own messy examples.</li>
       </ol>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">Where FactoryJet fits, and where it does not</h2>
+      <h2 className="text-2xl font-bold mt-10 mb-4">Where FactoryJet fits</h2>
       <p className="mb-4">
         We are FactoryJet. We have served 500+ businesses since 2014, most of that time in commerce: online stores, B2B ordering and the operations behind them. Our founder, Bhavesh Barot, is involved in every project. We design, build, integrate and support workflow automation and AI agents, and you own everything we build.
       </p>
       <p className="mb-4">
         <strong>Where we fit:</strong> US small and mid-size businesses that sell online or run order-heavy operations and want one team for the store, the integrations and the automation. Businesses that want a fixed price in writing and a team that stays after launch.
-      </p>
-      <p className="mb-4">
-        <strong>Where we do not:</strong> If you need people in your building every week, choose a firm above with an office near you. If you are a local service business whose main problem is missed calls, SuperDupr and Epiphany Dynamics are built for that. If your job is one small connection between two tools, a freelancer is the better buy.
       </p>
       <p className="mb-6">
         Still working out what you need? These explain the options in plain English: <a href="/blog/what-does-an-ai-automation-agency-do" className={link}>what an AI automation agency actually does</a>, our list of <a href="/blog/best-ai-agent-development-companies-2026" className={link}>AI agent development companies</a> for custom agent builds, and the shorter list of <a href="/blog/best-ai-agent-development-companies-small-business" className={link}>AI agent developers for small businesses</a>.

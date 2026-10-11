@@ -7,7 +7,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-receptionist';
-const UPDATED = '2026-10-10';
+const UPDATED = '2026-10-11';
 const TITLE = 'AI Receptionist UK | Built Into Your Systems | FactoryJet';
 const H1 = 'AI Receptionist UK: Answers Every Call, Books Into Your Diary, Hands Over When It Matters';
 const DESCRIPTION =
@@ -273,7 +273,7 @@ export default function AiReceptionistUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />10 October 2026</div>
+                  <div className="upd">Last updated<br />11 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -461,8 +461,8 @@ export default function AiReceptionistUKPage() {
               </table>
             </div>
             <p style={srcNote}>
-              Want the numbers behind this choice? See our guide:{' '}
-              <a href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026" style={srcLink}>AI voice agents vs human answering services, a cost comparison</a>.
+              For more on choosing between a human answering service, an off-the-shelf AI receptionist product and a custom voice agent, see our guide:{' '}
+              <a href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026" style={srcLink}>AI voice agents vs human answering services, how to choose</a>.
             </p>
           </div>
         </section>

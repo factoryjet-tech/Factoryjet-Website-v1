@@ -11,8 +11,8 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 const CANONICAL_URL = 'https://factoryjet.com/tools/ai-agent-roi-calculator';
 const PAGE_TITLE = 'AI Agent ROI Calculator & Cost Estimator | FactoryJet';
 const PAGE_DESC =
-  'Calculate custom AI agent development ROI, ticket deflection, team hours freed, and token compute payback periods for your US business. Try the calculator.';
-const PAGE_MODIFIED = '2026-09-01';
+  'Calculate custom AI agent development ROI, ticket deflection, team hours freed, and payback periods for your US business. Try the calculator.';
+const PAGE_MODIFIED = '2026-10-11';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 
 export const metadata: Metadata = {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Agent Cost & ROI Calculator 2026 | FactoryJet',
     description:
-      'Calculate custom AI agent development payback periods, team hours freed, and monthly run costs with our interactive model.',
+      'Calculate custom AI agent development payback periods and team hours freed with our interactive model.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: {
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
 
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
   { key: 'roi', label: 'ROI & Payback Formula' },
-  { key: 'costs', label: 'Development & Compute Costs' },
+  { key: 'costs', label: 'Development Costs' },
   { key: 'accuracy', label: 'Accuracy & Deflection Rates' },
   { key: 'ownership', label: 'Code Ownership & Infrastructure' },
   { key: 'usage', label: 'How This Calculator Works' },
@@ -81,7 +81,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'roi',
     question: 'How do you calculate the return on investment for an AI agent?',
     answer:
-      'AI agent ROI is calculated by multiplying monthly task volume by average minutes saved per task and your team\'s hourly cost, subtracting recurring LLM token compute and server hosting costs, and dividing net annual savings by initial one-time milestone development fees.',
+      'AI agent ROI is calculated by multiplying monthly task volume by average minutes saved per task and your team\'s hourly cost, subtracting recurring running costs, and dividing net annual savings by initial one-time milestone development fees.',
   },
   {
     category: 'roi',
@@ -93,19 +93,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'roi',
     question: 'What happens to cost when ticket volume grows?',
     answer:
-      'The agent\'s running cost is mostly tokens, so it rises roughly in line with the number of tasks it handles, not in big steps. During a seasonal surge, your team keeps working on the harder cases while the agent takes more of the routine ones, and your token bill goes up for that month. Edge cases still go to a person, so plan for review time as volume grows.',
+      'The agent\'s running cost rises roughly in line with the number of tasks it handles, not in big steps. During a seasonal surge, your team keeps working on the harder cases while the agent takes more of the routine ones. Edge cases still go to a person, so plan for review time as volume grows.',
   },
   {
     category: 'roi',
     question: 'What qualitative business benefits are excluded from this calculator?',
     answer:
       'This model deliberately excludes indirect revenue gains such as 24/7 sub-minute response times, reduced customer churn, higher conversion rates on instant lead follow-ups, and improved employee retention resulting from removing repetitive data entry. We keep the calculator conservative on purpose, so the payback figure it shows you is a floor built on hours-freed math, not an optimistic number inflated by soft benefits.',
-  },
-  {
-    category: 'costs',
-    question: 'What are the recurring token compute costs for running an AI agent in production?',
-    answer:
-      "For standard customer support and lead qualification workflows using frontier models behind semantic caching, token costs typically average between $0.02 and $0.07 per resolved conversation thread. Semantic caching reuses the model's reasoning for repeated question patterns instead of paying full token cost on every single conversation, which is what keeps per-ticket compute cost well under a dollar even at high volume.",
   },
   {
     category: 'costs',
@@ -183,13 +177,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'usage',
     question: 'How accurate is the number the calculator shows me?',
     answer:
-      'The output is a directional planning estimate, not a fixed quote. Deflection rates, average minutes saved, and development cost are set per workflow from benchmarks across projects we have shipped, and token compute is priced from real production usage. Your actual numbers depend on your specific ticket mix and system complexity, which is exactly what a scoping call with founder Bhavesh Barot validates before you get a firm price.',
+      'The output is a directional planning estimate, not a fixed quote. Deflection rates, average minutes saved, and development cost are set per workflow from benchmarks across projects we have shipped. Your actual numbers depend on your specific ticket mix and system complexity, which is exactly what a scoping call with founder Bhavesh Barot validates before you get a firm price.',
   },
   {
     category: 'usage',
     question: 'Are the dollar figures the calculator shows me a guaranteed price?',
     answer:
-      'No. The net savings and payback figures are a modeled estimate based on the workflow, volume, and rate you select, using a fixed per-workflow development cost benchmark and a flat token compute rate of $0.045 per resolved task plus base infrastructure. Your actual development fee is confirmed as a fixed milestone price only after we review your specific systems and ticket categories on a scoping call.',
+      'No. The net savings and payback figures are a modeled estimate based on the workflow, volume, and rate you select, using a fixed per-workflow development cost benchmark. Your actual development fee is confirmed as a fixed milestone price only after we review your specific systems and ticket categories on a scoping call.',
   },
   {
     category: 'usage',
@@ -199,9 +193,9 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
   {
     category: 'usage',
-    question: 'Where do the token compute and hourly cost numbers in this calculator come from?',
+    question: 'Where does the hourly cost number in this calculator come from?',
     answer:
-      "Token compute is modeled at $0.045 per resolved task plus a small fixed monthly infrastructure cost, reflecting real production frontier-model pricing behind semantic caching. The hourly cost starts at $28 as an example. Move the slider from $15 to $75 to match your own team's cost before reading the results.",
+      "The hourly cost starts at $28 as an example. Move the slider from $15 to $75 to match your own team's cost before reading the results.",
   },
 ];
 
@@ -231,7 +225,7 @@ export default function AiAgentRoiCalculatorPage() {
     operatingSystem: 'All',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     description:
-      'Interactive calculator modeling custom AI agent development costs, team hours freed, monthly token compute, ticket deflection rates, and net payback periods for US businesses.',
+      'Interactive calculator modeling custom AI agent development costs, team hours freed, ticket deflection rates, and net payback periods for US businesses.',
     dateModified: `${PAGE_MODIFIED}T00:00:00Z`,
     author: {
       '@type': 'Person',
@@ -561,14 +555,6 @@ export default function AiAgentRoiCalculatorPage() {
                     </td>
                     <td className="p-4 sm:p-6 text-[#6E655F]">Read-only FAQ retrieval</td>
                     <td className="p-4 sm:p-6 text-[#6E655F]">Manual Human Data Entry</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Token / Compute Cost</td>
-                    <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
-                      Wholesale At-Cost (~$0.04 / ticket)
-                    </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$0.99 per resolution surcharge</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$18 - $35 / hour of team time</td>
                   </tr>
                   <tr>
                     <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Data Privacy &amp; VPC</td>

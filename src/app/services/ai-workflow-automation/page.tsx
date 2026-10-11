@@ -76,7 +76,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-10-10';
+const PAGE_MODIFIED = '2026-10-11';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -283,7 +283,7 @@ const AUTOMATION_JOURNEY_STAGES: ServiceJourneyStage[] = [
 
 const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'US Automation Agency' },
+  { label: 'Traditional Agency' },
   { label: 'DIY (Zapier / Make.com)' },
   { label: 'Freelancer' },
 ] as const;
@@ -622,7 +622,7 @@ const FAQ_ITEMS = [
   },
   {
     category: 'trust',
-    question: 'How is FactoryJet different from a US automation consultant?',
+    question: 'How is FactoryJet different from an automation consultant?',
     answer:
       'Fixed pricing, senior engineers doing the work, and practical small-business experience since 2014. We also stay on after launch to support what we built, instead of handing over a workflow and disappearing when an API changes.',
   },

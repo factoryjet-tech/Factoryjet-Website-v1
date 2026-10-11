@@ -485,7 +485,7 @@ export default function AiConsultingSections() {
               <div className="agentdir-label"><h3>AI consulting by industry</h3><p>The first project looks different in every industry. These pages show the agents we build for each one.</p><span className="mono agentdir-count">{INDUSTRIES.length} industries</span></div>
               <DirectoryList items={INDUSTRIES} />
             </div>
-            <div className="plat-foot"><span>Want a rough payback number before a call? Try the calculator.</span><a href="/tools/ai-agent-roi-calculator">Run the AI Agent ROI Calculator ↗</a></div>
+            <div className="plat-foot"><span>For a rough estimate of the hours a task takes today, try the calculator before a call.</span><a href="/tools/ai-agent-roi-calculator">Run the AI Agent ROI Calculator ↗</a></div>
           </div>
         </section>
 

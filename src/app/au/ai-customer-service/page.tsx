@@ -14,7 +14,7 @@ import './page.css';
 import TicketFlowDiagram, { TicketJobDiagram } from './TicketDiagram';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-customer-service';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-11';
 const TITLE = 'AI Customer Service Australia | Chat & Email | FactoryJet';
 const H1 = 'AI Customer Service for Australian Support Teams: Faster Answers, After-Hours Cover, People on the Hard Cases';
 const DESCRIPTION =
@@ -441,7 +441,7 @@ export default function AiCustomerServiceAUPage() {
         <div className="wrap byline">
           <div className="av">BB</div>
           <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />26 September 2026</div>
+          <div className="upd">Last updated<br />11 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST DEFINITION (GEO) → Family A facts ═══ */}
@@ -959,7 +959,6 @@ export default function AiCustomerServiceAUPage() {
                 <li><span><b>What does it do when it does not know?</b> The right answer is hand over or draft, never guess.</span></li>
                 <li><span><b>How do customers reach a person?</b> Test it: type “agent” and see what happens.</span></li>
                 <li><span><b>Which AI providers see our data, where, and do they train on it?</b> Get names and locations in writing.</span></li>
-                <li><span><b>How is it priced as volume grows?</b> Per seat, per conversation and per resolution scale very differently.</span></li>
                 <li><span><b>What do we keep if we leave?</b> Prompts, approved answers, workflows and conversation history.</span></li>
               </ol>
             </div>

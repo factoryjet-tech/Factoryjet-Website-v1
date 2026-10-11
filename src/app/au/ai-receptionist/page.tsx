@@ -15,7 +15,7 @@ import './page.css';
 import CallRoutingDiagram from './CallRoutingDiagram';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-receptionist';
-const UPDATED = '2026-09-25';
+const UPDATED = '2026-10-11';
 const TITLE = 'AI Receptionist Australia | Custom, Supported | FactoryJet';
 /* Shortened 2026-09-26 so the hero form sits in the first desktop screen. The rest of the old H1
    ("Hands Over When It Matters") moved into the hero lead. */
@@ -53,8 +53,7 @@ const SRC_OAIC_SMALL = 'https://www.oaic.gov.au/privacy/privacy-for-organisation
 // number when you change from one telco to another"; current telco must port
 // if asked; new telco does not have to accept; local ports generally 8 to 15
 // days, multi-number ports up to 30 days. Verified from the search index copy
-// of the page; direct fetch timed out from our network (geo-blocked). Orchestrator
-// to re-check from an AU connection.
+// of the page; the direct fetch timed out. Re-check with a direct fetch.
 const SRC_ACMA = 'https://www.acma.gov.au/keep-or-port-your-phone-number';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
@@ -447,7 +446,7 @@ export default function AiReceptionistAUPage() {
         <div className="wrap byline">
           <div className="av">BB</div>
           <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />25 September 2026</div>
+          <div className="upd">Last updated<br />11 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST DEFINITION (GEO) → Family A facts ═══ */}
@@ -644,8 +643,8 @@ export default function AiReceptionistAUPage() {
               </table>
             </div>
             <p className="tablenote">
-              Want to see how the running costs compare? Read our guide:{' '}
-              <a href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026">AI voice agents vs human answering services, a cost comparison</a>.
+              For more on choosing between a human answering service, an off-the-shelf AI receptionist product and a custom voice agent, read our guide:{' '}
+              <a href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026">AI voice agents vs human answering services, how to choose</a>.
             </p>
           </div>
         </section>

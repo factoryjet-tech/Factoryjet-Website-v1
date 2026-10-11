@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/restaurant-ai-voice-agent
 const PAGE_TITLE = 'Restaurant AI Voice Agents & Phone Ordering | FactoryJet';
 const PAGE_DESC =
   'Custom 24/7 AI voice phone ordering for US restaurants, pizzerias & franchises. Direct Toast, Square & Clover POS order injection. Zero missed calls. Get audit.';
-const PAGE_MODIFIED = '2026-09-03';
+const PAGE_MODIFIED = '2026-10-11';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -174,7 +174,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'pricing',
     question: 'How is the restaurant AI voice agent priced compared to third-party call centers?',
     answer:
-      'A traditional human call center charges $1.50 to $2.50 a minute, and the quality varies call to call. FactoryJet builds you a custom AI voice system for a fixed setup fee instead. After that, phone and AI compute run close to wholesale rate, usually $0.05 to $0.08 a minute.',
+      'A traditional human call center bills by the minute, and the quality varies call to call. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. With ongoing support, we keep managing the servers, AI, APIs and maintenance, so your team does not have to.',
   },
   {
     category: 'pricing',
@@ -1012,7 +1012,7 @@ export default function RestaurantAiVoiceAgentsPage() {
                       FactoryJet Restaurant AI
                     </th>
                     <th className="p-4 sm:p-6 font-bold text-[#6E655F]">
-                      Offshore Call Center
+                      Third-Party Call Center
                     </th>
                     <th className="p-4 sm:p-6 font-bold text-[#6E655F]">
                       In-Store Host / Kitchen Staff
@@ -1043,14 +1043,6 @@ export default function RestaurantAiVoiceAgentsPage() {
                     </td>
                     <td className="p-4 sm:p-6 text-[#6E655F]">Delayed Daily Emails</td>
                     <td className="p-4 sm:p-6 text-[#6E655F]">Verbal Shouting in Kitchen</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Cost per Call Minute</td>
-                    <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
-                      $0.05 - $0.08 / min (Wholesale)
-                    </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$1.50 - $2.50 / min</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$15 - $20 / hr staff labor</td>
                   </tr>
                   <tr>
                     <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Source Code & IP Ownership</td>

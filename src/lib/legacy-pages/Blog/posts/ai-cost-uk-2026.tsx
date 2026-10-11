@@ -89,7 +89,7 @@ const faqs: FAQItem[] = [
   // AI agents: running
   {
     q: 'How much do AI agents cost to run each month?',
-    a: 'You pay for model usage, hosting, monitoring and upkeep. On the prices Anthropic publishes, our worked example of 2,000 conversations a month costs US$1.10 to US$44 in model usage, depending on the model. AI Agency Plus puts model usage for a typical UK small business at £5 to £100 a month. Fulminous budgets £150 to £5,000 or more a month for busier agents, plus 15 to 25 per cent of the build cost each year for maintenance.',
+    a: 'You pay for model usage, hosting, monitoring and upkeep, plus texts and phone calls if the agent uses them. The amount depends on how often the agent is used and how many systems it connects to, so ask any supplier to model your own monthly volume before the build starts. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to.',
   },
   // Custom LLM
   {
@@ -103,7 +103,7 @@ const faqs: FAQItem[] = [
   // Chatbots
   {
     q: 'How much does it cost to develop a chatbot?',
-    a: 'Ready-made chatbot software starts free. Tidio lists a free plan and paid plans from US$24.17 a month on annual billing. A custom AI chatbot connected to your own systems is a build. A1 Automation London, in a guide updated in July 2026, puts UK setup at £8,000 to £60,000 or more, with £100 to £2,000 or more a month to run. It puts a rule-based FAQ bot at £0 to £5,000 to set up.',
+    a: 'Ready-made chatbot software starts free. Tidio lists a free plan and paid plans from US$24.17 a month on annual billing. A custom AI chatbot connected to your own systems is a build. A1 Automation London, in a guide updated in July 2026, puts UK setup at £8,000 to £60,000 or more. It puts a rule-based FAQ bot at £0 to £5,000 to set up.',
   },
   {
     q: 'Which AI chatbot is totally free?',
@@ -170,7 +170,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'What is affordable automation software for small and mid-sized businesses?',
-    a: 'The common choices are workflow tools that connect the apps you already use. Zapier has a free plan and paid plans from US$19.99 a month. n8n starts at €20 a month hosted, and its Pro plan is €50 a month for 10,000 workflow runs. AI Agency Plus, a UK firm, says running costs for automation sit at £40 to £400 a month depending on volume, on top of the build.',
+    a: 'The common choices are workflow tools that connect the apps you already use. Zapier has a free plan and paid plans from US$19.99 a month. n8n starts at €20 a month hosted, and its Pro plan is €50 a month for 10,000 workflow runs.',
   },
   {
     q: 'Who offers fixed-price development for building AI prototypes in under 30 days?',
@@ -178,7 +178,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Can I build my own AI for free?',
-    a: 'You can test one for close to nothing. Zapier has a free plan with 100 tasks a month, Tidio has a free chatbot plan, and model usage for a small test costs cents. On the smallest current Claude model, 100 test conversations in our worked example cost under six US cents. What costs money is making it safe for customers: permissions, testing, data protection, monitoring and upkeep.',
+    a: 'You can test one for close to nothing. Zapier has a free plan with 100 tasks a month and Tidio has a free chatbot plan. What costs money is making it safe for customers: permissions, testing, data protection, monitoring and upkeep.',
   },
   // Overall and VAT
   {
@@ -196,11 +196,11 @@ export const post: BlogPost = {
   slug: 'ai-cost-uk-2026',
   title: 'AI Cost in the UK (2026): What AI Agents, Consultants, Developers, Chatbots and AI Receptionists Cost, in Pounds',
   excerpt:
-    'What UK businesses pay for AI in 2026, in pounds: custom AI agent builds, monthly running costs, AI consultant day rates, AI engineer and developer pay, chatbots, AI receptionists and the cost of a GP receptionist. Every figure is a published market range, vendor price or official rate with its source, date and VAT basis.',
+    'What UK businesses pay for AI in 2026, in pounds: custom AI agent builds, AI consultant day rates, AI engineer and developer pay, chatbots, AI receptionists and the cost of a GP receptionist. Every figure is a published market range, vendor price or official rate with its source, date and VAT basis.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 9, 2026',
-  dateModified: 'Oct 9, 2026',
+  dateModified: 'Oct 11, 2026',
   readTime: '21 min read',
   imageUrl: '/blog-images/ai-cost-uk-2026-hero.webp',
   imageAlt:
@@ -215,7 +215,6 @@ export const post: BlogPost = {
     'Contract AI consultants advertised £443 to £717 a day and AI engineers £422 to £881 a day on ITJobsWatch in the six months to 9 October 2026.',
     'An employed AI engineer was advertised at £52,000 to £112,500 a year, median £87,500. Employer National Insurance at 15 per cent above £5,000 adds £12,375 to the median.',
     'Published UK AI receptionist plans start at £30 to £39 a month before VAT. A GP receptionist on NHS band 2 or 3 is £25,272 to £27,476 a year before employer costs.',
-    'Model usage is usually the smallest running cost. Our worked example of 2,000 conversations a month costs US$1.10 to US$44 on the prices Anthropic publishes.',
     'Almost no small business should train its own LLM. Fine-tuning an open model runs £20,000 to £80,000 on OpenKit figures; training GPT-4 took an estimated US$78 million of computing.',
     'Most UK prices are quoted before VAT at 20 per cent. These are market ranges from named sources. FactoryJet quotes a fixed price in writing after a short scoping call.',
   ],
@@ -255,7 +254,7 @@ export const post: BlogPost = {
         VAT. This page is the pound version, with the source beside every number.
       </p>
       <p>
-        It covers the seven things UK buyers price: building a custom AI agent, running it each month, an AI consultant, an
+        It covers the six things UK buyers price: building a custom AI agent, an AI consultant, an
         AI engineer or developer (employee, contractor or agency), an AI chatbot, an AI receptionist set beside the cost of
         a human one, and a custom LLM. LLM stands for large language model, the kind of AI behind ChatGPT and Claude.
       </p>
@@ -268,7 +267,7 @@ export const post: BlogPost = {
 
       <h2 id="summary">AI cost in the UK at a glance (2026)</h2>
       <p>
-        One table, twelve rows. Each row shows the UK range, where it comes from, and whether the source includes VAT.
+        One table, eleven rows. Each row shows the UK range, where it comes from, and whether the source includes VAT.
       </p>
       <div className="overflow-x-auto my-6">
         <table className="w-full border-collapse text-sm">
@@ -288,66 +287,60 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200">Augustova and Fulminous exclude VAT; LeverX does not state it</td>
             </tr>
             <tr className="bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">AI agent running cost</td>
-              <td className="p-3 border border-gray-200">Model usage £5 to £100 a month for a small business (AI Agency Plus) or £150 to £5,000+ a month for busier agents (Fulminous); maintenance 15% to 25% of the build cost a year (Fulminous)</td>
-              <td className="p-3 border border-gray-200"><a href={SRC.aiAgencyPlus} target="_blank" rel="noopener noreferrer">AI Agency Plus</a>, 31 July 2026; <a href={SRC.fulminous} target="_blank" rel="noopener noreferrer">Fulminous</a></td>
-              <td className="p-3 border border-gray-200">AI Agency Plus does not state it; Fulminous excludes VAT</td>
-            </tr>
-            <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">AI consultant, contract day rate</td>
               <td className="p-3 border border-gray-200">£443 to £717 a day, median £564</td>
               <td className="p-3 border border-gray-200"><a href={SRC.ijwAiConsultantContract} target="_blank" rel="noopener noreferrer">ITJobsWatch</a>, six months to 9 October 2026</td>
               <td className="p-3 border border-gray-200">Not stated (advertised rates)</td>
             </tr>
-            <tr className="bg-gray-50">
+            <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">AI consultancy project</td>
               <td className="p-3 border border-gray-200">£3,000 to £8,500 for discovery workshops; £12,000 to £30,000 for a proof of concept</td>
               <td className="p-3 border border-gray-200"><a href={SRC.ronins} target="_blank" rel="noopener noreferrer">Ronins</a>, read 9 October 2026</td>
               <td className="p-3 border border-gray-200">Not stated</td>
             </tr>
-            <tr className="bg-white">
+            <tr className="bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">AI engineer, employee</td>
               <td className="p-3 border border-gray-200">£52,000 to £112,500 a year, median £87,500</td>
               <td className="p-3 border border-gray-200"><a href={SRC.ijwAiEngineerPerm} target="_blank" rel="noopener noreferrer">ITJobsWatch</a>, six months to 9 October 2026</td>
               <td className="p-3 border border-gray-200">Salary. Employer National Insurance is extra</td>
             </tr>
-            <tr className="bg-gray-50">
+            <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">AI engineer, contractor</td>
               <td className="p-3 border border-gray-200">£422 to £881 a day, median £600</td>
               <td className="p-3 border border-gray-200"><a href={SRC.ijwAiEngineerContract} target="_blank" rel="noopener noreferrer">ITJobsWatch</a>, six months to 9 October 2026</td>
               <td className="p-3 border border-gray-200">Not stated (advertised rates)</td>
             </tr>
-            <tr className="bg-white">
+            <tr className="bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">Software developer, contractor</td>
               <td className="p-3 border border-gray-200">£365 to £612 a day, median £525; median £50 an hour</td>
               <td className="p-3 border border-gray-200"><a href={SRC.ijwSoftwareDeveloperContract} target="_blank" rel="noopener noreferrer">ITJobsWatch</a>, six months to 9 October 2026</td>
               <td className="p-3 border border-gray-200">Not stated (advertised rates)</td>
             </tr>
-            <tr className="bg-gray-50">
+            <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">App built by a UK agency</td>
               <td className="p-3 border border-gray-200">£15,000 to £80,000 for most business apps</td>
               <td className="p-3 border border-gray-200"><a href={SRC.foresight} target="_blank" rel="noopener noreferrer">Foresight Mobile</a>, updated 6 October 2026</td>
               <td className="p-3 border border-gray-200">Not stated</td>
             </tr>
-            <tr className="bg-white">
+            <tr className="bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">AI chatbot</td>
               <td className="p-3 border border-gray-200">Free plans; paid software from US$24.17 a month; custom build £8,000 to £60,000+</td>
               <td className="p-3 border border-gray-200"><a href={SRC.tidio} target="_blank" rel="noopener noreferrer">Tidio pricing</a>; <a href={SRC.a1Chatbot} target="_blank" rel="noopener noreferrer">A1 Automation London</a>, updated 14 July 2026</td>
               <td className="p-3 border border-gray-200">US dollar list price; build range does not state it</td>
             </tr>
-            <tr className="bg-gray-50">
+            <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">AI receptionist subscription</td>
               <td className="p-3 border border-gray-200">£30 to £120 a month on plans with a call limit; market guides say £30 to £500+</td>
               <td className="p-3 border border-gray-200"><a href={SRC.fasthosts} target="_blank" rel="noopener noreferrer">Fasthosts</a> and <a href={SRC.voipShop} target="_blank" rel="noopener noreferrer">The VoIP Shop</a>, read 9 October 2026</td>
               <td className="p-3 border border-gray-200">Excluded</td>
             </tr>
-            <tr className="bg-white">
+            <tr className="bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">GP receptionist, employee</td>
               <td className="p-3 border border-gray-200">£25,272 to £27,476 a year on NHS bands 2 and 3</td>
               <td className="p-3 border border-gray-200"><a href={SRC.nhsEmployers} target="_blank" rel="noopener noreferrer">NHS Employers</a> pay scales for 2026/27</td>
               <td className="p-3 border border-gray-200">Salary. Employer National Insurance is extra</td>
             </tr>
-            <tr className="bg-gray-50">
+            <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">Custom LLM work</td>
               <td className="p-3 border border-gray-200">Fine-tuning £20,000 to £80,000; retrieval system £15,000 to £50,000</td>
               <td className="p-3 border border-gray-200"><a href={SRC.openkit} target="_blank" rel="noopener noreferrer">OpenKit</a>, read 9 October 2026</td>
@@ -501,63 +494,12 @@ export const post: BlogPost = {
         </p>
       </details>
 
-      <h2 id="ai-agent-running-cost">How much do AI agents cost to run each month?</h2>
+      <h2 id="ai-agent-running-cost">What happens after an AI agent goes live?</h2>
       <p>
         Once an agent is live you pay for four things: <strong>model usage</strong> (the AI provider bills per token, a
         token being roughly three quarters of a word), <strong>hosting</strong>, <strong>monitoring</strong> and{' '}
-        <strong>maintenance</strong>. If the agent sends texts or takes phone calls, those are billed too. Most buyers
-        overestimate the first line and forget the last.
-      </p>
-      <h3 id="model-usage">Model usage: a worked example on published prices</h3>
-      <p>
-        Anthropic publishes its Claude prices in US dollars per million tokens. We took a support agent handling{' '}
-        <strong>2,000 conversations a month</strong>, assumed each one reads about 3,000 tokens (the question, your
-        policies and the order details) and writes about 500, and worked out the bill. That is 6 million input tokens and
-        1 million output tokens a month.
-      </p>
-      <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="bg-gray-800 text-white">
-              <th className="p-3 text-left border border-gray-700">Model (Anthropic, read 9 October 2026)</th>
-              <th className="p-3 text-left border border-gray-700">Price per million tokens, input / output</th>
-              <th className="p-3 text-left border border-gray-700">Sum</th>
-              <th className="p-3 text-left border border-gray-700">2,000 conversations a month</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="bg-white">
-              <td className="p-3 border border-gray-200">Claude Haiku 5.5 (prompts up to 100,000 tokens)</td>
-              <td className="p-3 border border-gray-200">US$0.10 / US$0.50</td>
-              <td className="p-3 border border-gray-200">6 x 0.10 + 1 x 0.50</td>
-              <td className="p-3 border border-gray-200 font-semibold">US$1.10</td>
-            </tr>
-            <tr className="bg-gray-50">
-              <td className="p-3 border border-gray-200">Claude Sonnet 5.5</td>
-              <td className="p-3 border border-gray-200">US$2 / US$10</td>
-              <td className="p-3 border border-gray-200">6 x 2 + 1 x 10</td>
-              <td className="p-3 border border-gray-200 font-semibold">US$22</td>
-            </tr>
-            <tr className="bg-white">
-              <td className="p-3 border border-gray-200">Claude Opus 5.5</td>
-              <td className="p-3 border border-gray-200">US$4 / US$20</td>
-              <td className="p-3 border border-gray-200">6 x 4 + 1 x 20</td>
-              <td className="p-3 border border-gray-200 font-semibold">US$44</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p className="text-sm text-gray-600">
-        Arithmetic on the list prices at <a href={SRC.claude} target="_blank" rel="noopener noreferrer">claude.com/pricing</a>,
-        read 9 October 2026, and our stated assumptions. It is not a quote. The bill arrives in US dollars, so the pound
-        cost depends on the exchange rate on the day your card is charged.
-      </p>
-      <p>
-        UK guides give wider figures because they assume different volumes.{' '}
-        <a href={SRC.aiAgencyPlus} target="_blank" rel="noopener noreferrer">AI Agency Plus</a> says £5 to £100 a month is
-        the realistic range for a typical small business running a few automations. Fulminous says £150 to £5,000 or more
-        a month, because agents that reason over many steps use more tokens than a simple chatbot. Both can be true. Ask
-        any supplier to model your own monthly volume before the build starts.
+        <strong>maintenance</strong>. If the agent sends texts or takes phone calls, those are billed too. Ask any
+        supplier to model your own monthly volume before the build starts.
       </p>
 
       <figure className="my-8">
@@ -575,39 +517,9 @@ export const post: BlogPost = {
         </figcaption>
       </figure>
 
-      <h3 id="hosting-monitoring-maintenance">Hosting, monitoring and maintenance</h3>
-      <ul className="list-disc pl-6 space-y-2 mb-6">
-        <li>
-          <strong>Hosting.</strong> We found no UK guide that prices hosting for a custom agent on its own, so we give no
-          range for it. Two published data points for agents built on a workflow platform:{' '}
-          <a href={SRC.n8n} target="_blank" rel="noopener noreferrer">n8n</a> lists hosted plans at €20 a month for 2,500
-          workflow runs and €50 a month for 10,000, billed annually, and AI Agency Plus says the free self-hosted edition
-          runs on a small server for £5 to £15 a month.
-        </li>
-        <li>
-          <strong>Monitoring.</strong> No UK source we read prices monitoring by itself. It is sold inside a support
-          retainer. The <a href={SRC.augustovaAuto} target="_blank" rel="noopener noreferrer">Augustova survey of twelve UK agencies</a>{' '}
-          puts retainers at £350 to £2,000 a month before VAT. AI Agency Plus says £400 to £1,200 a month for a business
-          running several workflows in production.
-        </li>
-        <li>
-          <strong>Maintenance.</strong> Fulminous budgets <strong>15 to 25 per cent of the build cost each year</strong>{' '}
-          for prompt changes, test updates and keeping pace with new models.
-        </li>
-        <li>
-          <strong>Texts and calls.</strong> AI Agency Plus puts a UK text message at roughly 4p to 5p and a minute of AI
-          voice at 15p to 20p. The raw parts cost less:{' '}
-          <a href={SRC.openai} target="_blank" rel="noopener noreferrer">OpenAI</a> lists its gpt-live-1 voice sessions at
-          US$0.05 a minute with backend model and tool usage charged separately, and{' '}
-          <a href={SRC.twilio} target="_blank" rel="noopener noreferrer">Twilio</a> lists US$0.01 a minute to receive a
-          call on a UK local number plus US$3.50 a month for the number.
-        </li>
-      </ul>
       <p>
-        Augustova worked two examples at stated volumes and found the model was the smallest line in both. Its inbound
-        enquiry agent, at 400 written enquiries and 300 calls a month, came to about £187 to £232 a month, of which the
-        model was £5.91. Without the phone channel it was about £40. One design decision, whether the agent talks on the
-        phone, moved the bill more than the choice of model did.
+        FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and
+        keeps managing the servers, AI, APIs and maintenance so your team does not have to.
       </p>
 
       <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg my-8">
@@ -849,13 +761,13 @@ export const post: BlogPost = {
             </tr>
             <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">Rule-based FAQ chatbot, UK</td>
-              <td className="p-3 border border-gray-200">£0 to £5,000 to set up; £30 to £200 a month</td>
+              <td className="p-3 border border-gray-200">£0 to £5,000 to set up</td>
               <td className="p-3 border border-gray-200">Setup plus monthly</td>
               <td className="p-3 border border-gray-200"><a href={SRC.a1Chatbot} target="_blank" rel="noopener noreferrer">A1 Automation London</a>, updated 14 July 2026</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">Custom AI chatbot connected to your systems, UK</td>
-              <td className="p-3 border border-gray-200">£8,000 to £60,000+ to set up; £100 to £2,000+ a month</td>
+              <td className="p-3 border border-gray-200">£8,000 to £60,000+ to set up</td>
               <td className="p-3 border border-gray-200">Project fee plus monthly</td>
               <td className="p-3 border border-gray-200"><a href={SRC.a1Chatbot} target="_blank" rel="noopener noreferrer">A1 Automation London</a>, updated 14 July 2026</td>
             </tr>
@@ -1062,8 +974,8 @@ export const post: BlogPost = {
 
       <h2 id="twelve-month-total">What does AI cost over the first 12 months?</h2>
       <p>
-        The monthly price rarely tells you the real cost. These worked examples use only the published figures above. They
-        are arithmetic on public prices and ranges, not quotes.
+        The monthly price rarely tells you the real cost. These worked examples take the subscriptions and the salary from
+        the published figures above and add each one up over a year. They are arithmetic on public prices, not quotes.
       </p>
       <div className="overflow-x-auto my-6">
         <table className="w-full border-collapse text-sm">
@@ -1091,19 +1003,6 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200 font-semibold">£1,440 + VAT (£1,728 with VAT)</td>
             </tr>
             <tr className="bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">One workflow built by a small UK agency</td>
-              <td className="p-3 border border-gray-200">AI Agency Plus gives this figure itself: build, running costs and light support for one well-chosen workflow</td>
-              <td className="p-3 border border-gray-200 font-semibold">£5,000 to £8,000</td>
-            </tr>
-            <tr className="bg-white">
-              <td className="p-3 border border-gray-200 font-semibold">Simple custom agent from a development firm</td>
-              <td className="p-3 border border-gray-200">
-                Fulminous build of £8,000 to £25,000 + 15% to 25% maintenance (£1,200 to £6,250) + token usage at its lowest
-                figure of £150 a month (£1,800)
-              </td>
-              <td className="p-3 border border-gray-200 font-semibold">£11,000 to £33,050 + VAT</td>
-            </tr>
-            <tr className="bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">Employed AI engineer at the median</td>
               <td className="p-3 border border-gray-200">£87,500 salary + £12,375 employer National Insurance, before pension, equipment and recruitment</td>
               <td className="p-3 border border-gray-200 font-semibold">£99,875</td>
@@ -1111,10 +1010,6 @@ export const post: BlogPost = {
           </tbody>
         </table>
       </div>
-      <p>
-        From year two the custom agent drops to its running cost. On the same Fulminous figures that is maintenance plus
-        usage, or £3,000 to £8,050 a year before VAT. That is the number to weigh against what the agent does for you.
-      </p>
 
       <h2 id="build-buy-consult">Buy, consult, hire or build: which fits you?</h2>
       <div className="overflow-x-auto my-6">
@@ -1189,7 +1084,7 @@ export const post: BlogPost = {
           Ask every supplier to state the basis in writing, and ask your accountant how much you can reclaim.
         </li>
         <li>
-          <strong>US dollar and euro billing.</strong> Anthropic, OpenAI, Tidio, Intercom, Zapier and Twilio showed us
+          <strong>US dollar and euro billing.</strong> Tidio, Intercom and Zapier showed us
           prices in US dollars, and n8n in euros. Your pound cost moves with the exchange rate, and your bank may add a
           foreign transaction fee. Ask your accountant how VAT applies to services bought from overseas suppliers.
         </li>
@@ -1262,7 +1157,7 @@ export const post: BlogPost = {
         <li><a href={SRC.nhsEmployers} target="_blank" rel="noopener noreferrer">NHS Employers, Pay scales for 2026/27</a>, <a href={SRC.nhsCareers} target="_blank" rel="noopener noreferrer">NHS Health Careers, Receptionist</a>, <a href={SRC.parliament} target="_blank" rel="noopener noreferrer">UK Parliament, written question 159040, answered 9 March 2021</a></li>
         <li>GOV.UK: <a href={SRC.govWage} target="_blank" rel="noopener noreferrer">National Minimum Wage and National Living Wage rates</a>, <a href={SRC.govEmployer} target="_blank" rel="noopener noreferrer">Rates and thresholds for employers 2026 to 2027</a>, <a href={SRC.govPension} target="_blank" rel="noopener noreferrer">Workplace pensions</a>, <a href={SRC.govVat} target="_blank" rel="noopener noreferrer">VAT rates</a>, <a href={SRC.govVatThreshold} target="_blank" rel="noopener noreferrer">VAT thresholds</a></li>
         <li><a href={SRC.openkit} target="_blank" rel="noopener noreferrer">OpenKit, LLM development services and fine-tuning</a>, <a href={SRC.aiIndex} target="_blank" rel="noopener noreferrer">Stanford HAI, AI Index Report 2024</a></li>
-        <li><a href={SRC.claude} target="_blank" rel="noopener noreferrer">Anthropic, Claude pricing</a>, <a href={SRC.openai} target="_blank" rel="noopener noreferrer">OpenAI, API pricing</a>, <a href={SRC.twilio} target="_blank" rel="noopener noreferrer">Twilio, UK voice pricing</a>, <a href={SRC.zapier} target="_blank" rel="noopener noreferrer">Zapier pricing</a>, <a href={SRC.n8n} target="_blank" rel="noopener noreferrer">n8n pricing</a></li>
+        <li><a href={SRC.claude} target="_blank" rel="noopener noreferrer">Anthropic, Claude pricing</a>, <a href={SRC.openai} target="_blank" rel="noopener noreferrer">OpenAI, API pricing</a>, <a href={SRC.zapier} target="_blank" rel="noopener noreferrer">Zapier pricing</a>, <a href={SRC.n8n} target="_blank" rel="noopener noreferrer">n8n pricing</a></li>
         <li><a href={SRC.ico} target="_blank" rel="noopener noreferrer">Information Commissioner&apos;s Office, Guidance on AI and data protection</a></li>
       </ul>
 

@@ -35,7 +35,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much do AI consultants charge?',
-    a: 'Australian AI consultants usually charge in one of four ways: by the hour, by the day, a fixed fee for a scoped piece of work such as discovery, or a monthly retainer once something is live. Flowtivity\'s 2026 guide puts retainers at A$2,000 to A$8,000 a month. Fixed-scope work is easiest to budget because you know the number before work starts.',
+    a: 'Australian AI consultants usually charge in one of four ways: by the hour, by the day, a fixed fee for a scoped piece of work such as discovery, or a monthly retainer once something is live. Fixed-scope work is easiest to budget because you know the number before work starts.',
   },
   {
     q: 'How much does an AI consultant charge per hour?',
@@ -47,7 +47,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much do AI consulting firms charge?',
-    a: 'Firms tend to quote per project rather than per hour. Flowtivity\'s 2026 Australian guide lists discovery at A$3,000 to A$8,000, a proof of concept at A$5,000 to A$15,000, full implementation from A$15,000 to A$50,000 or more, and ongoing retainers at A$2,000 to A$8,000 a month. Larger firms with enterprise clients usually quote above these ranges.',
+    a: 'Firms tend to quote per project rather than per hour. Flowtivity\'s 2026 Australian guide lists discovery at A$3,000 to A$8,000, a proof of concept at A$5,000 to A$15,000 and full implementation from A$15,000 to A$50,000 or more. Larger firms with enterprise clients usually quote above these ranges.',
   },
   // AI agents
   {
@@ -56,11 +56,11 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does an AI agent cost per month?',
-    a: 'Running costs have three parts: model usage, hosting and upkeep. On Anthropic\'s published prices, our worked example of 2,000 conversations a month costs about A$16 to A$63 in model usage. Flowtivity puts hosting at A$20 to A$200 a month. Both Australian guides we read budget 15 to 25 percent of the build cost each year for maintenance, which is usually the biggest ongoing line.',
+    a: 'Running costs have three parts: model usage, hosting and upkeep. The amount depends on how often the agent is used and how many systems it connects to. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to.',
   },
   {
     q: 'Does it cost money to run an AI agent?',
-    a: 'Yes. Every time the agent reads or writes text, the model provider bills you per token, a token being roughly three quarters of a word. You also pay for hosting, monitoring and someone to update the agent when your tools, prices or policies change. The model bill is often the smallest of these for a small business. Upkeep is the line people forget.',
+    a: 'Yes. Every time the agent reads or writes text, the model provider bills you per token, a token being roughly three quarters of a word. You also pay for hosting, monitoring and someone to update the agent when your tools, prices or policies change.',
   },
   {
     q: 'Are AI agents free to use?',
@@ -72,7 +72,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much money does it cost to build an AI?',
-    a: 'Building on an existing model such as Claude or GPT is the practical route, and Australian 2026 guides put those builds at roughly A$5,000 to A$150,000 or more depending on scope. Web Video Digital notes that building on an existing model is far cheaper than training one from scratch. The biggest cost is connecting the AI to your systems and data, not the AI itself.',
+    a: 'Building on an existing model such as Claude or GPT is the practical route, and Australian 2026 guides put those builds at roughly A$5,000 to A$150,000 or more depending on scope. Web Video Digital notes that building on an existing model is far cheaper than training one from scratch. The biggest cost is connecting the AI to your systems and data.',
   },
   {
     q: 'How much does it cost to build a custom AI agent in Australia?',
@@ -80,7 +80,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Does it cost money to build an AI agent?',
-    a: 'Yes, when a firm builds it for you. Two Australian guides publish ranges for a custom build: Flowtivity (March 2026) at A$5,000 to A$50,000 or more, and Web Video Digital (August 2026) at A$15,000 to A$150,000, with most small and mid-size projects at A$30,000 to A$80,000. Most of that pays for connecting the agent to your systems and testing it. Model usage is usually the smallest line. If you would rather hire people than pay a project fee, our guide to hiring AI developers in Australia covers salaries and contractor day rates.',
+    a: 'Yes, when a firm builds it for you. Two Australian guides publish ranges for a custom build: Flowtivity (March 2026) at A$5,000 to A$50,000 or more, and Web Video Digital (August 2026) at A$15,000 to A$150,000, with most small and mid-size projects at A$30,000 to A$80,000. Most of that pays for connecting the agent to your systems and testing it. If you would rather hire people than pay a project fee, our guide to hiring AI developers in Australia covers salaries and contractor day rates.',
   },
   {
     q: 'How much does ChatGPT agents cost?',
@@ -105,7 +105,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does it cost to develop an AI chatbot?',
-    a: 'Developing a custom AI chatbot that connects to your own systems is a project. Flowtivity\'s March 2026 Australian guide puts customer service automation at A$10,000 to A$25,000, and both Australian guides we read add 15 to 25 percent of the build cost each year for maintenance. If the chatbot only needs to answer from your website content, you can set up software instead. Tidio lists a free plan and paid plans from US$24.17 a month on annual billing, about A$34. Once it has to check orders or change bookings, the AI agent ranges in this guide apply.',
+    a: 'Developing a custom AI chatbot that connects to your own systems is a project. Flowtivity\'s March 2026 Australian guide puts customer service automation at A$10,000 to A$25,000. If the chatbot only needs to answer from your website content, you can set up software instead. Tidio lists a free plan and paid plans from US$24.17 a month on annual billing, about A$34. Once it has to check orders or change bookings, the AI agent ranges in this guide apply.',
   },
   // Receptionists and voice
   {
@@ -134,7 +134,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much do AI voice agents cost?',
-    a: 'Two layers. The raw voice model is cheap: OpenAI lists its gpt-live-1 voice sessions at US$0.05 a minute, about 7 Australian cents, with backend model and tool usage charged separately. A packaged Australian voice agent service adds phone numbers, booking, transfers and support, which is why plans such as Vereo charge A$0.49 plus GST per extra minute. Custom voice agents are build projects.',
+    a: 'Packaged Australian voice agent services price by plan and by minute. They bundle the voice model with phone numbers, booking, transfers and support, and plans such as Vereo charge A$0.49 plus GST per extra minute. Custom voice agents are build projects.',
   },
   {
     q: 'How much does it cost to hire an AI call center agent?',
@@ -147,7 +147,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much do AI automation agencies charge?',
-    a: 'Most charge a project fee to build, then a monthly retainer to run and improve it. Flowtivity\'s 2026 Australian guide puts implementation at A$15,000 to A$50,000 or more and retainers at A$2,000 to A$8,000 a month, with typical per-integration costs of A$1,000 to A$3,000. Ask for the build and the running cost as two separate numbers so you can compare quotes.',
+    a: 'Most charge a project fee to build, then a monthly retainer to run and improve it. Flowtivity\'s 2026 Australian guide puts implementation at A$15,000 to A$50,000 or more, with typical per-integration costs of A$1,000 to A$3,000. Ask for the build and the running cost as two separate numbers so you can compare quotes.',
   },
   {
     q: 'How much does AI SEO cost?',
@@ -155,7 +155,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Can I build my own AI for free?',
-    a: 'You can prototype one for very little. Frameworks and no-code builders often have free tiers, and model usage for testing costs cents: on Anthropic\'s smallest current model, 100 test conversations in our worked example cost well under a dollar. What is not free is making it safe for customers: permissions, testing, privacy under Australian law, monitoring and upkeep.',
+    a: 'You can prototype one for close to nothing. Frameworks and no-code builders often have free tiers. What is not free is making it safe for customers: permissions, testing, privacy under Australian law, monitoring and upkeep.',
   },
   {
     q: 'Are AI receptionists worth it?',
@@ -163,7 +163,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'What ongoing costs should I budget for after an AI project goes live?',
-    a: 'Budget for four things: model usage billed per token or minute, hosting, monitoring, and maintenance. Both Australian 2026 guides we read put maintenance at 15 to 25 percent of the build cost each year. Web Video Digital puts hosting at A$200 to A$2,000 a month for a typical business agent; Flowtivity is lower at A$20 to A$200. Also budget time for someone on your team to review escalations.',
+    a: 'Budget for four things: model usage billed per token or minute, hosting, monitoring, and maintenance. Also budget time for someone on your team to review escalations. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to.',
   },
 ];
 
@@ -172,11 +172,11 @@ export const post: BlogPost = {
   slug: 'ai-cost-australia-2026',
   title: 'How Much Does AI Cost in Australia? 2026 Guide to AI Consultant, Agent, Chatbot and Receptionist Costs',
   excerpt:
-    'What Australian businesses actually pay for AI in 2026: AI consultant rates, custom AI agent builds, chatbots, AI receptionists and voice agents, with the running costs most quotes leave out. Every figure is a published market range or vendor price with its source, date and GST basis.',
+    'What Australian businesses actually pay for AI in 2026: AI consultant rates, custom AI agent builds, chatbots, AI receptionists and voice agents. Every figure is a published market range or vendor price with its source, date and GST basis.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 26, 2026',
-  dateModified: 'Oct 10, 2026',
+  dateModified: 'Oct 11, 2026',
   readTime: '18 min read',
   imageUrl: '/blog-images/ai-cost-australia-2026-hero.webp',
   imageAlt:
@@ -184,14 +184,12 @@ export const post: BlogPost = {
   meta: {
     title: 'AI Consultant & Agent Cost Australia 2026 | FactoryJet',
     description:
-      'AI cost in Australia for 2026: consultant rates, AI agent builds, chatbots and AI receptionists in AUD, with sources, GST notes and 12-month running totals.',
+      'AI cost in Australia for 2026: consultant rates, AI agent builds, chatbots and AI receptionists in AUD, with sources and GST notes.',
   },
   keyTakeaways: [
     'Australian AI consultants charge about A$150 to A$400 an hour or A$1,500 to A$3,000 a day, on Flowtivity\'s March 2026 figures.',
     'Custom AI agent builds range from about A$5,000 for a narrow single-task agent to A$150,000 or more. Web Video Digital puts most small and mid-size projects at A$30,000 to A$80,000.',
     'AI receptionist plans from Australian providers start at A$49 a month GST included (Giday) and A$79 plus GST (Vereo), with managed plans up to A$499 a month.',
-    'Model usage is usually the smallest cost. Our worked example of 2,000 conversations a month costs about A$16 to A$63 on Anthropic\'s published prices.',
-    'Maintenance is the line most quotes leave out. Both Australian guides we read budget 15 to 25 percent of the build cost each year.',
     'Check the GST basis on every quote. Some Australian vendors list prices ex-GST, some include it, and many overseas tools bill in US dollars.',
     'These are market ranges from named sources, not FactoryJet prices. We quote fixed scope after a short discovery call.',
   ],
@@ -224,7 +222,7 @@ export const post: BlogPost = {
       <p>
         Buyers price AI in four separate pieces, and many guides cover only one of them. This guide covers all four: AI
         consultants, custom AI agents, AI chatbots, and AI receptionists and voice agents. For each one we show what it costs
-        to build or buy, what it costs to run each month, and what a realistic first 12 months looks like. We also cover AI
+        to build or buy. We also cover AI
         automation and AI SEO briefly, and the Australian GST and privacy points that change the real number.
       </p>
       <p>
@@ -280,12 +278,6 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200">Vendor pricing pages, September 2026</td>
               <td className="p-3 border border-gray-200">Mixed: see the receptionist table</td>
             </tr>
-            <tr className="bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">Ongoing maintenance</td>
-              <td className="p-3 border border-gray-200">15% to 25% of the build cost each year</td>
-              <td className="p-3 border border-gray-200">Flowtivity and Web Video Digital, 2026</td>
-              <td className="p-3 border border-gray-200">Not stated</td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -301,7 +293,7 @@ export const post: BlogPost = {
         Digital&apos;s August 2026 guide puts senior AI developers in Australia at about <strong>A$180 to A$280 an
         hour</strong>. Neither source states whether GST is included, so ask.
       </p>
-      <h3 id="consultant-engagements">The four ways AI consultants charge</h3>
+      <h3 id="consultant-engagements">The three project stages AI consultants price</h3>
       <div className="overflow-x-auto my-6">
         <table className="w-full border-collapse text-sm">
           <thead>
@@ -326,11 +318,6 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200 font-semibold">Full implementation</td>
               <td className="p-3 border border-gray-200">A production build, testing, handover and team training</td>
               <td className="p-3 border border-gray-200">A$15,000 to A$50,000+</td>
-            </tr>
-            <tr className="bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">Ongoing retainer</td>
-              <td className="p-3 border border-gray-200">Monitoring, improvements and new use cases after launch</td>
-              <td className="p-3 border border-gray-200">A$2,000 to A$8,000 a month</td>
             </tr>
           </tbody>
         </table>
@@ -465,62 +452,11 @@ export const post: BlogPost = {
         </p>
       </details>
 
-      <h2 id="ai-agent-running-cost">What does an AI agent cost per month to run?</h2>
+      <h2 id="ai-agent-running-cost">What happens after an AI agent goes live?</h2>
       <p>
         Once an agent is live, you pay for three things: <strong>model usage</strong> (the AI provider bills per token, a
         token being roughly three quarters of a word), <strong>hosting and monitoring</strong>, and{' '}
-        <strong>maintenance</strong>. Most people overestimate the first and forget the third.
-      </p>
-      <h3 id="model-usage">Model usage: a worked example on published prices</h3>
-      <p>
-        Anthropic publishes its Claude API prices in US dollars per million tokens. We took a support agent handling{' '}
-        <strong>2,000 conversations a month</strong>, assumed each one reads about 3,000 tokens (the question, your policies
-        and order details) and writes about 500, and worked out the bill. That is 6 million input tokens and 1 million output
-        tokens a month.
-      </p>
-      <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="bg-gray-800 text-white">
-              <th className="p-3 text-left border border-gray-700">Model (Anthropic, September 2026)</th>
-              <th className="p-3 text-left border border-gray-700">Price per million tokens, input / output</th>
-              <th className="p-3 text-left border border-gray-700">2,000 conversations a month</th>
-              <th className="p-3 text-left border border-gray-700">In AUD</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="bg-white">
-              <td className="p-3 border border-gray-200">Claude Haiku 4.5</td>
-              <td className="p-3 border border-gray-200">US$1 / US$5</td>
-              <td className="p-3 border border-gray-200">US$11</td>
-              <td className="p-3 border border-gray-200 font-semibold">about A$16</td>
-            </tr>
-            <tr className="bg-gray-50">
-              <td className="p-3 border border-gray-200">Claude Sonnet 5</td>
-              <td className="p-3 border border-gray-200">US$2 / US$10</td>
-              <td className="p-3 border border-gray-200">US$22</td>
-              <td className="p-3 border border-gray-200 font-semibold">about A$31</td>
-            </tr>
-            <tr className="bg-white">
-              <td className="p-3 border border-gray-200">Claude Opus 5.5</td>
-              <td className="p-3 border border-gray-200">US$4 / US$20</td>
-              <td className="p-3 border border-gray-200">US$44</td>
-              <td className="p-3 border border-gray-200 font-semibold">about A$63</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p className="text-sm text-gray-600">
-        Arithmetic on Anthropic&apos;s published list prices (<a href={SRC.claude} target="_blank" rel="noopener noreferrer">claude.com/pricing</a>,
-        read 26 September 2026) and our stated assumptions, not a quote. Prompt caching can lower the input cost further.
-        Overseas API providers bill in US dollars, so your AUD cost moves with the exchange rate.
-      </p>
-      <p>
-        For phone agents, OpenAI lists its gpt-live-1 voice sessions at <strong>US$0.05 a minute</strong> (about 7 Australian
-        cents), billed per second, with backend model and tool usage charged separately (
-        <a href={SRC.openai} target="_blank" rel="noopener noreferrer">OpenAI pricing</a>, September 2026). The raw voice cost
-        is small. What you pay a receptionist provider for is the phone number, booking, transfers, reliability and support
-        around it.
+        <strong>maintenance</strong>.
       </p>
 
       <figure className="my-8">
@@ -538,23 +474,13 @@ export const post: BlogPost = {
         </figcaption>
       </figure>
 
-      <h3 id="hosting-maintenance">Hosting, monitoring and maintenance</h3>
-      <ul className="list-disc pl-6 space-y-2 mb-6">
-        <li>
-          <strong>Hosting and infrastructure:</strong> Flowtivity puts this at A$20 to A$200 a month; Web Video Digital, which
-          assumes a larger typical agent, puts it at A$200 to A$2,000 a month.
-        </li>
-        <li>
-          <strong>Monitoring:</strong> Flowtivity lists A$100 to A$500 a month for monitoring and maintenance.
-        </li>
-        <li>
-          <strong>Maintenance and improvement:</strong> both guides budget <strong>15 to 25 percent of the build cost each
-          year</strong>. On a A$50,000 agent, Web Video Digital estimates about A$8,000 to A$12,000 a year on top of usage.
-        </li>
-      </ul>
       <p>
         Maintenance is not optional padding. Agents break quietly when the tools around them change: a Shopify app updates its
         API, Xero changes a field, your returns policy changes and nobody tells the agent. Someone has to notice and fix it.
+      </p>
+      <p>
+        FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and
+        keeps managing the servers, AI, APIs and maintenance so your team does not have to.
       </p>
 
       <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg my-8">
@@ -717,7 +643,7 @@ export const post: BlogPost = {
         plans from US$19.99 a month (about A$28), and Flowtivity lists Make at A$15 to A$100 a month. Custom multi-system
         automation, for example linking your online store, Xero and CRM, is a build that Flowtivity puts at{' '}
         <strong>A$20,000 to A$50,000 or more</strong>. AI automation agencies usually charge a project fee plus a monthly
-        retainer, which Flowtivity puts at A$2,000 to A$8,000 a month.
+        retainer.
       </p>
 
       <h2 id="ai-seo-cost">How much does AI SEO cost?</h2>
@@ -731,8 +657,8 @@ export const post: BlogPost = {
 
       <h2 id="twelve-month-total">What does AI cost over the first 12 months?</h2>
       <p>
-        The monthly price rarely tells you the real cost. Here are three worked examples using only the published figures above.
-        They are arithmetic on public prices and ranges, not quotes.
+        The monthly price rarely tells you the real cost. Here are three worked examples for off-the-shelf subscriptions,
+        using only the published figures above. They are arithmetic on public prices, not quotes.
       </p>
       <div className="overflow-x-auto my-6">
         <table className="w-full border-collapse text-sm">
@@ -759,21 +685,9 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200">12 x US$32.50 at A$1.4224</td>
               <td className="p-3 border border-gray-200 font-semibold">about A$555</td>
             </tr>
-            <tr className="bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">Custom AI agent at the bottom of the typical SMB band</td>
-              <td className="p-3 border border-gray-200">
-                A$30,000 build (Web Video Digital&apos;s SMB band starts here) + 15 to 25% maintenance (A$4,500 to A$7,500)
-                + model usage from our Sonnet 5 example (about A$372) + hosting at A$20 to A$200 a month (A$240 to A$2,400)
-              </td>
-              <td className="p-3 border border-gray-200 font-semibold">about A$35,100 to A$40,300</td>
-            </tr>
           </tbody>
         </table>
       </div>
-      <p>
-        From year two, the custom agent drops to its running cost: maintenance, usage and hosting, which on these figures is
-        roughly A$5,100 to A$10,300 a year. That is the number to weigh against what the agent does for you.
-      </p>
 
       <h2 id="build-buy-consult">Build, buy or bring in a consultant: which fits you?</h2>
       <div className="overflow-x-auto my-6">
@@ -890,7 +804,6 @@ export const post: BlogPost = {
         <li><a href={SRC.flowtivity} target="_blank" rel="noopener noreferrer">Flowtivity, AI agent cost and pricing guide for Australia (March 2026)</a></li>
         <li><a href={SRC.wvd} target="_blank" rel="noopener noreferrer">Web Video Digital, Custom AI Agent Cost in Australia (August 2026)</a></li>
         <li><a href={SRC.claude} target="_blank" rel="noopener noreferrer">Anthropic, Claude pricing</a></li>
-        <li><a href={SRC.openai} target="_blank" rel="noopener noreferrer">OpenAI, API pricing</a></li>
         <li><a href={SRC.giday} target="_blank" rel="noopener noreferrer">Giday pricing</a>, <a href={SRC.vereo} target="_blank" rel="noopener noreferrer">Vereo pricing</a>, <a href={SRC.frontly} target="_blank" rel="noopener noreferrer">Frontly pricing</a>, <a href={SRC.valory} target="_blank" rel="noopener noreferrer">Valory AI receptionist cost guide</a></li>
         <li><a href={SRC.virtualAddress} target="_blank" rel="noopener noreferrer">Virtual Address receptionist pricing</a>, <a href={SRC.officehq} target="_blank" rel="noopener noreferrer">OfficeHQ live call answering</a></li>
         <li><a href={SRC.tidio} target="_blank" rel="noopener noreferrer">Tidio pricing</a>, <a href={SRC.intercom} target="_blank" rel="noopener noreferrer">Intercom pricing</a>, <a href={SRC.zapier} target="_blank" rel="noopener noreferrer">Zapier pricing</a></li>

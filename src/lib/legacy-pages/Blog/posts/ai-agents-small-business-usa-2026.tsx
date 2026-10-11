@@ -23,7 +23,7 @@ export const post: BlogPost = {
     'Real ROI examples from US SMBs: a Dallas HVAC company reduced customer support labor costs by $2,200/month; a Phoenix dental group reduced no-shows by 34% with automated AI appointment reminders and rebooking.',
     'AI agent implementation does not require a technical team. Platforms like Voiceflow, Botpress, and custom-built solutions can deploy a functional lead qualification agent in 5–7 days.',
     'The most valuable AI agent use cases for US SMBs in 2026: 24/7 website chat support, lead qualification and routing, appointment scheduling and reminders, post-purchase follow-up, and quote request processing.',
-    'Cost range: off-the-shelf AI chatbot platforms run $50–$500/month. Custom AI agents built by an agency typically cost $2,500–$8,000 to build and $100–$300/month to maintain.',
+    'Cost range: off-the-shelf AI chatbot platforms run $50–$500/month. Custom AI agents built by an agency typically cost $2,500–$8,000 to build.',
     'FactoryJet builds and deploys custom AI agents for US small businesses, integrated directly into your website, and quotes a fixed price in writing after a short scoping call.',
   ],
   faqs: [
@@ -37,7 +37,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does an AI agent cost for a US small business?',
-      a: "Cost ranges in 2026: off-the-shelf platforms (Intercom, Drift, Tidio, Freshchat), $50–$400/month with limited customization. Mid-tier custom configurations on Voiceflow or Botpress, $1,500–$3,500 to build, $75–$200/month to run. Fully custom AI agents built by an agency, $2,500–$8,000 to build, $100–$300/month to maintain. For most US SMBs, the custom agency-built route delivers the best ROI because it's trained on your specific business, integrated into your website and CRM, and tested against your actual customer conversations.",
+      a: "Cost ranges in 2026: off-the-shelf platforms (Intercom, Drift, Tidio, Freshchat), $50–$400/month with limited customization. Mid-tier custom configurations on Voiceflow or Botpress, $1,500–$3,500 to build. Fully custom AI agents built by an agency, $2,500–$8,000 to build. For most US SMBs, the custom agency-built route delivers the best ROI because it's trained on your specific business, integrated into your website and CRM, and tested against your actual customer conversations. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.",
     },
     {
       q: 'How long does it take to implement an AI agent for my small business?',
@@ -82,7 +82,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What AI Agents Actually Are (Plain English)</h2>
       <p className="mb-4">
-        An AI agent is software that can perceive a situation, reason about it, and take action, without a human approving each step. The full definition, the parts an agent is built from, and what one actually costs to run are covered in <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">what an AI agent is and what it costs</a>; this guide starts one step later, at which agents earn their keep in a US small business.
+        An AI agent is software that can perceive a situation, reason about it, and take action, without a human approving each step. The full definition, the parts an agent is built from, and what one costs are covered in <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">what an AI agent is and what it costs</a>; this guide starts one step later, at which agents earn their keep in a US small business.
       </p>
       <p className="mb-4">
         A practical example: a potential customer lands on your plumbing company website at 10 PM on a Saturday and types "my water heater stopped working, how much is a replacement?" A traditional contact form sends an email that gets read Monday morning. A chatbot might show a pre-written FAQ. An AI agent understands the urgency, asks follow-up questions about the water heater age and home size, qualifies the lead as high-priority, schedules a callback for 8 AM Sunday when your on-call technician starts, and sends a confirmation text: all automatically, with no one touching a keyboard.
@@ -162,7 +162,7 @@ export const post: BlogPost = {
         <strong>DIY platforms (Tidio, Freshchat, Intercom Fin):</strong> $50–$400/month. Pros: fast setup, no build cost, good for simple FAQ bots. Cons: limited customization, generic conversation quality, no integration with your specific CRM or booking system, no training on your business-specific context.
       </p>
       <p className="mb-4">
-        <strong>Agency-built custom AI agents:</strong> $2,500–$8,000 to build, $100–$300/month to maintain. Pros: trained on your business, integrated with your website and CRM, handles complex multi-step workflows, maintained and improved over time. Cons: higher upfront cost. ROI threshold for service businesses: typically 60–90 days.
+        <strong>Agency-built custom AI agents:</strong> $2,500–$8,000 to build. Pros: trained on your business, integrated with your website and CRM, handles complex multi-step workflows, maintained and improved over time. Cons: higher upfront cost. ROI threshold for service businesses: typically 60–90 days.
       </p>
       <p className="mb-4">
         FactoryJet builds custom AI agents for US small businesses, deployed and integrated into your website. We quote a fixed price in writing after a short scoping call, once we know what the agent has to do. ➡ <a href="/services/ai-agent-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our AI agent services</a>

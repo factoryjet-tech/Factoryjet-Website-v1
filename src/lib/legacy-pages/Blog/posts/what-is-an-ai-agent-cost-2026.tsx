@@ -4,15 +4,15 @@ import type { BlogPost } from '../data.types';
 const faqs = [
   {
     q: 'How much does an AI agent cost?',
-    a: 'It costs three different amounts. Running one: model calls are often tens of dollars a month, and our worked example of a support agent handling 2,000 tickets comes to about $22 to $112 a month on Anthropic\'s September 2026 prices. Renting one: Intercom charges $0.99 per Fin outcome and Salesforce Agentforce works out to $0.10 per action. Building one: development firm ProductCrafters puts builds at about $5,000 to $180,000+ in its 2026 breakdown, and integration is the biggest part.',
+    a: 'It depends on whether you rent one or have one built. Renting one: Intercom charges $0.99 per Fin outcome and Salesforce Agentforce works out to $0.10 per action. Building one: development firm ProductCrafters puts builds at about $5,000 to $180,000+ in its 2026 breakdown, and integration is the biggest part.',
   },
   {
     q: 'Does it cost money to have an AI agent?',
-    a: 'Yes, in three places. You pay for the model calls it makes, billed per token or per result. You pay once to build it and connect it to your systems, or every month to rent one from a vendor. And you pay for the person who reviews its escalations and keeps it working when your tools or policies change. The model calls are usually the smallest of the three.',
+    a: 'Yes. You either rent one from a vendor, usually billed per result, or you pay once to have one built and connected to your systems. A built agent also needs a person who reviews its escalations and keeps it working when your tools or policies change.',
   },
   {
     q: 'How much does an AI agent cost to run per month?',
-    a: 'The model calls are usually the small number. On the worked example in this article, a support agent handling 2,000 tickets a month lands roughly between $22 and $112 a month in model calls, depending on the model and on whether prompt caching is used. Those are arithmetic on published rates and stated assumptions, not a quote. The build is the real spend.',
+    a: 'A rented agent bills per result on the vendor\'s price list: Intercom charges $0.99 per Fin outcome, and Salesforce Agentforce works out to $0.10 per action. For an agent built for you there is no single monthly figure, because it depends on the work the agent handles and the systems it connects to. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to.',
   },
   {
     q: 'How much does it cost to build an AI agent?',
@@ -20,27 +20,23 @@ const faqs = [
   },
   {
     q: 'How much does a ChatGPT agent cost?',
-    a: 'OpenAI lists agent features as part of its ChatGPT subscription plans rather than selling agents one at a time, and which plan includes what changes often, so check OpenAI\'s pricing page before you budget. For a business, the bigger point is that a ChatGPT subscription does not connect an agent to your helpdesk, store or CRM with your permissions. For that you pay for model calls through an API, plus the build.',
+    a: 'OpenAI lists agent features as part of its ChatGPT subscription plans rather than selling agents one at a time, and which plan includes what changes often, so check OpenAI\'s pricing page before you budget. For a business, the bigger point is that a ChatGPT subscription does not connect an agent to your helpdesk, store or CRM with your permissions. For that you need an agent built and connected to those systems.',
   },
   {
     q: 'Can I build my own AI agent for free?',
-    a: 'You can prototype one for very little. Frameworks like LangChain are open source, and model providers bill per token: at our worked example\'s rate of about 1 to 6 cents a ticket, 100 test tickets cost roughly $1 to $6. What is not free is making it safe to act on real systems: permissions, logging, retries, testing and monitoring. That is where the real cost starts.',
+    a: 'You can prototype one for very little. Frameworks like LangChain are open source. What is not free is making it safe to act on real systems: permissions, logging, retries, testing and monitoring. That is where the real cost starts.',
   },
   {
     q: 'How much does an AI chatbot cost?',
-    a: 'Less than an agent, because a chatbot only answers questions and does not act on your systems, so there is no integration or permissions work to pay for. Its running cost is mostly model calls, priced per token like an agent\'s. Some off-the-shelf support AI is priced per result instead: Intercom charges $0.99 per Fin outcome. If you need it to issue refunds, change orders or book meetings, you are pricing an agent, not a chatbot.',
+    a: 'Less than an agent, because a chatbot only answers questions and does not act on your systems, so there is no integration or permissions work to pay for. Some off-the-shelf support AI is priced per result: Intercom charges $0.99 per Fin outcome. If you need it to issue refunds, change orders or book meetings, you are pricing an agent, not a chatbot.',
   },
   {
     q: 'How much does an AI agent cost per hour?',
-    a: 'Agents are not billed by the hour. You pay per token or per result, so the useful number is the cost per item of work: in our worked example, about 1 to 6 cents per support ticket in model calls. For an hourly comparison with a person, add up the agent\'s monthly cost, including the build spread over its life and the reviewer\'s time, and divide by the hours of work it replaces.',
+    a: 'Agents are not billed by the hour. A rented agent bills per result: Intercom charges $0.99 per Fin outcome, and Salesforce Agentforce works out to $0.10 per action. An agent built for you is priced as a project, and development firm ProductCrafters puts builds at about $5,000 to $180,000+ in its 2026 breakdown.',
   },
   {
     q: 'Is AI agent free?',
-    a: 'No, though the pieces look cheap in isolation. Model calls are billed by the token, frameworks like LangChain are open source and free to download, and several platforms run a free tier. What is not free is the integration work, the permissions, the logging, the monitoring, and the person who reviews escalations. Almost all of the cost sits there.',
-  },
-  {
-    q: 'How much does it cost to run an AI agent on 24/7?',
-    a: 'An agent does not bill for idle time the way a server does. It costs money when it does a unit of work, so the monthly number is driven by volume, not by hours online. The same support agent handling 2,000 tickets around the clock costs the same as one handling 2,000 tickets in business hours. Hosting and monitoring sit on top as a flat cost, and a small one.',
+    a: 'No. Frameworks like LangChain are open source and free to download, and several platforms run a free tier. What is not free is the integration work, the permissions, the logging, the monitoring, and the person who reviews escalations.',
   },
   {
     q: 'Can a small business afford an AI agent?',
@@ -100,7 +96,7 @@ const faqs = [
   },
   {
     q: 'What tools do AI agents connect to?',
-    a: 'Whatever has an API and permission to be written to. Common in US small businesses: Shopify, Zendesk, Gorgias, HubSpot, Salesforce, Slack, Google Workspace, QuickBooks, NetSuite and Stripe. The integration is the expensive part of the project. The model is the cheap part.',
+    a: 'Whatever has an API and permission to be written to. Common in US small businesses: Shopify, Zendesk, Gorgias, HubSpot, Salesforce, Slack, Google Workspace, QuickBooks, NetSuite and Stripe. The integration is the expensive part of the project.',
   },
   {
     q: 'Are AI agents safe to let act on their own?',
@@ -116,7 +112,7 @@ const faqs = [
   },
   {
     q: 'Which model should an AI agent use?',
-    a: 'Match the model to the decision. Routing, classification and extraction run fine on a small fast model. Anything requiring judgment across messy context wants a frontier model. Most production agents use two or three models at different steps, which is also how the cost stays low.',
+    a: 'Match the model to the decision. Routing, classification and extraction run fine on a small fast model. Anything requiring judgment across messy context wants a frontier model. Most production agents use two or three models at different steps.',
   },
   {
     q: 'What is an AI voice agent?',
@@ -151,26 +147,25 @@ const faqs = [
 export const post: BlogPost = {
   id: '427',
   slug: 'what-is-an-ai-agent-cost-2026',
-  title: 'How Much Does AI Agent Development Cost in 2026? Build, Run or Rent One',
+  title: 'How Much Does AI Agent Development Cost in 2026? Rent One or Build One',
   excerpt:
-    'Most AI agent price guides quote one number and hide the other two. Here are all three: what the model calls cost on published rates, what renting an agent costs per result, and why the build is where the money goes. Plus the one test that tells you whether you are buying an agent or a chatbot.',
+    'You can get an AI agent two ways: rent one from a vendor, or have one built. Here is what each route costs, with the source named: vendor list prices for renting per result, and a published range for a build with its phase breakdown. Plus the one test that tells you whether you are buying an agent or a chatbot.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 19, 2026',
   readTime: '17 min read',
   imageUrl: '/blog-images/what-is-an-ai-agent-cost-2026.webp',
   imageAlt:
-    'A desk with a laptop showing a support ticket queue beside a printed integration diagram and a calculator, representing the real cost of running an AI agent',
+    'A desk with a laptop showing a support ticket queue beside a printed integration diagram and a calculator, representing the cost of renting or building an AI agent',
   meta: {
-    title: 'AI Agent Development Cost in 2026: Build, Run or Rent',
+    title: 'AI Agent Development Cost in 2026: Rent or Build',
     description:
-      'AI agent development cost in 2026: model bills in the tens of dollars a month, rented agents at $0.99 per outcome, and builds from $5,000 to $180,000+.',
+      'AI agent development cost in 2026, with sources: rented agents at $0.99 per outcome, builds from $5,000 to $180,000+, and how to judge a proposal.',
   },
   keyTakeaways: [
-    'An AI agent has three costs: the model calls it makes, the build that connects it to your systems, and the people and monitoring that keep it working. Vendors tend to quote whichever one looks smallest.',
-    'The model bill is usually small. On Anthropic\'s published September 2026 prices, a support agent handling 2,000 tickets a month costs about $22 to $112 in model calls, depending on the model.',
-    'Renting is the other route. Intercom charges $0.99 per Fin outcome, so 1,200 resolved tickets a month costs $1,188 with no build. Salesforce Agentforce works out to $0.10 per action.',
-    'The build is where the money goes. Development firm ProductCrafters puts builds at about $5,000 to $180,000+, and integration with your systems is the biggest phase in its breakdown, not the AI model.',
+    'You can get an AI agent two ways: rent an off-the-shelf one from a vendor, or have one built and connected to your systems.',
+    'Renting is one route. Intercom charges $0.99 per Fin outcome, so 1,200 resolved tickets a month costs $1,188 with no build. Salesforce Agentforce works out to $0.10 per action.',
+    'Building is the other route. Development firm ProductCrafters puts builds at about $5,000 to $180,000+, and integration with your systems is the biggest phase in its breakdown, ahead of model setup.',
     'Gartner predicts over 40% of agentic AI projects will be canceled by the end of 2027 over escalating costs, unclear business value or weak risk controls. A two-to-four-week pilot on one queue is the cheap way to avoid being one of them.',
     'An AI agent takes a goal, not a script. If a human can write out every branch it can take, build automation instead: it is cheaper, faster and easier to audit.',
     'If you cannot name the queue and count what is in it today, do not build an agent. Build the report that counts it first.',
@@ -200,19 +195,14 @@ export const post: BlogPost = {
           Quick Answer
         </p>
         <p style={{ margin: '0 0 12px', fontSize: '17px', lineHeight: '1.65', color: '#1a1a1a' }}>
-          An AI agent costs three different amounts, and most quotes only show you one.
-        </p>
-        <p style={{ margin: '0 0 12px', fontSize: '17px', lineHeight: '1.65', color: '#1a1a1a' }}>
-          <strong>Running one:</strong> the model calls are often tens of dollars a month. Our worked
-          example, a support agent handling 2,000 tickets, comes to about $22 to $112 a month on
-          Anthropic's published prices.
+          You can get an AI agent two ways, and each one is priced differently.
         </p>
         <p style={{ margin: '0 0 12px', fontSize: '17px', lineHeight: '1.65', color: '#1a1a1a' }}>
           <strong>Renting one:</strong> off-the-shelf agents bill per result. Intercom charges $0.99
           per Fin outcome, and Salesforce Agentforce works out to $0.10 per action.
         </p>
         <p style={{ margin: '0 0 12px', fontSize: '17px', lineHeight: '1.65', color: '#1a1a1a' }}>
-          <strong>Building one:</strong> this is where the money goes, because the agent has to be
+          <strong>Building one:</strong> a build is priced as a project, because the agent has to be
           wired into your helpdesk, store or CRM with safe permissions. A 2026 breakdown from
           development firm ProductCrafters puts builds at about $5,000 to more than $180,000.
         </p>
@@ -233,93 +223,18 @@ export const post: BlogPost = {
         >
           estimates only about 130 of the thousands of agentic AI vendors are real
         </a>
-        . Below is what a real agent costs to run, rent and build, with the arithmetic shown. Then
-        the test that separates an agent from a chatbot, four agents that pay for themselves at
-        small-business scale, and when not to build one at all.
+        . Below is what a real agent costs to rent and to have built, with the source of each
+        price named. Then the test that separates an agent from a chatbot, four agents that pay for
+        themselves at small-business scale, and when not to build one at all.
       </p>
 
-      <h2 id="cost">How much does an AI agent cost? Three numbers, not one</h2>
+      <h2 id="cost">How much does an AI agent cost? Rent one or have one built</h2>
       <p>
-        Three separate numbers, and vendors love to quote you whichever one flatters them: what it
-        costs to run, what it costs to rent, and what it costs to build.
+        Two routes, priced in different ways. A rented agent bills per result on a vendor's price
+        list. A built agent is priced as a project, and the published range is wide.
       </p>
 
-      <h3 id="model-bill">1. Running it: the model bill is smaller than you expect</h3>
-      <p>
-        Worked example: a support agent handling <strong>2,000 tickets a month</strong>. Across
-        roughly two model calls per ticket it reads about 16,000 input tokens (system prompt, your
-        policy docs, product data, the ticket thread) and writes about 1,200 output tokens.
-      </p>
-      <p>
-        The lever that matters is <strong>prompt caching</strong>. Your system prompt and policy
-        documents are identical on every ticket, so they can be cached and re-read at roughly a
-        tenth of the input price. Say 12,000 of those 16,000 input tokens are cached and 4,000 are
-        fresh.
-      </p>
-      <p>
-        Run that against{' '}
-        <a href="https://www.anthropic.com/pricing" target="_blank" rel="noopener noreferrer">
-          Anthropic's published list prices
-        </a>{' '}
-        as of September 2026. Model prices move, so check the current published rates before you
-        build a budget on them.
-      </p>
-
-      <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="bg-gray-800 text-white">
-              <th className="p-3 text-left border border-gray-700">Model</th>
-              <th className="p-3 text-left border border-gray-700">
-                Input / output per 1M tokens
-              </th>
-              <th className="p-3 text-left border border-gray-700">Cost per ticket</th>
-              <th className="p-3 text-left border border-gray-700">2,000 tickets a month</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="bg-white">
-              <td className="p-3 border border-gray-200">Claude Haiku 4.5</td>
-              <td className="p-3 border border-gray-200">$1 / $5</td>
-              <td className="p-3 border border-gray-200">about $0.011</td>
-              <td className="p-3 border border-gray-200 font-semibold">about $22</td>
-            </tr>
-            <tr className="bg-gray-50">
-              <td className="p-3 border border-gray-200">Claude Sonnet 5</td>
-              <td className="p-3 border border-gray-200">$2 / $10</td>
-              <td className="p-3 border border-gray-200">about $0.022</td>
-              <td className="p-3 border border-gray-200 font-semibold">about $45</td>
-            </tr>
-            <tr className="bg-white">
-              <td className="p-3 border border-gray-200">Claude Opus 5</td>
-              <td className="p-3 border border-gray-200">$5 / $25</td>
-              <td className="p-3 border border-gray-200">about $0.056</td>
-              <td className="p-3 border border-gray-200 font-semibold">about $112</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p>
-        The Sonnet 5 row worked out in full, so you can check it: 12,000 cached input tokens at
-        roughly $0.20 per million is $0.0024, plus 4,000 fresh input tokens at $2 per million is
-        $0.008, plus 1,200 output tokens at $10 per million is $0.012. That is $0.0224 a ticket, and
-        $44.80 across 2,000 tickets. Those totals are arithmetic on the assumptions above, not a
-        measurement of your business. Change the token counts and the answer changes.
-      </p>
-      <p>
-        Read the table again anyway, because it reframes the whole decision.{' '}
-        <strong>The model bill in this example is tens of dollars a month.</strong> Anyone quoting
-        you a five-figure monthly fee "because of AI compute costs" is not describing this workload.
-        Ask what the number is per unit of work, and watch what happens.
-      </p>
-      <p>
-        Two things do move it. Skipping prompt caching roughly triples the input cost, and agents
-        that loop pay for a full round trip on every retry. This is the second reason for a hard
-        step limit. The first reason is safety. The second is your invoice.
-      </p>
-
-      <h3 id="rent">2. Renting one: pay per result instead of building</h3>
+      <h3 id="rent">1. Renting one: pay per result instead of building</h3>
       <p>
         You do not have to build at all. Helpdesk and CRM vendors now rent agents by the result,
         which turns the cost into a price per ticket you can hold up against a build quote:
@@ -349,19 +264,17 @@ export const post: BlogPost = {
         </li>
       </ul>
       <p>
-        Now run the same 2,000-ticket queue through it. Say the agent fully resolves 1,200 tickets
-        and the other 800 go to your team without a billable outcome. Fin's bill is 1,200 × $0.99 = <strong>$1,188 a month</strong>. The
-        self-built agent's model bill on all 2,000 tickets was about $45 on Sonnet 5. The gap,
-        roughly $1,143 a month, is what owning the agent saves before monitoring and maintenance, so
-        every $10,000 of build cost takes about nine months of that gap to pay back.
+        To see what that adds up to, say the agent fully resolves 1,200 tickets in a month. Fin's
+        bill is 1,200 × $0.99 = <strong>$1,188 a month</strong>, before seat prices or minimum
+        commitments.
       </p>
       <p>
-        That is the honest trade. Renting is faster, needs no build, and is the sensible way to
-        test whether a queue suits an agent at all. Owning wins at volume, and when the agent has
-        to act on systems a vendor's agent cannot reach.
+        Renting is faster, needs no build, and is the sensible way to test whether a queue suits an
+        agent at all. Having one built makes sense when the agent has to act on systems a vendor's
+        agent cannot reach.
       </p>
 
-      <h3 id="build">3. Building it: AI agent development cost</h3>
+      <h3 id="build">2. Building it: AI agent development cost</h3>
       <p>
         This is the number that decides whether the project makes sense, and nobody can give it to
         you honestly without looking at your systems first.
@@ -379,7 +292,7 @@ export const post: BlogPost = {
         17 Sep 2026, puts builds at $5,000 to $180,000+. The largest build phase in its breakdown is
         integration and workflow orchestration, at $20,000 to $50,000, ahead of model setup at
         $10,000 to $40,000. Treat those as a seller's ranges rather than a quote, but notice what
-        they say: connecting the agent to your systems costs more than the AI.
+        they say: connecting the agent to your systems is a bigger phase than setting up the model.
       </p>
       <p>
         <strong>Three tiers, in practice.</strong> The ProductCrafters range above is wide because
@@ -391,7 +304,7 @@ export const post: BlogPost = {
           <strong>Simple, single-workflow agent.</strong> One queue, one or two tools, systems with
           clean APIs (Shopify, Zendesk, HubSpot). A refund-and-reship agent on a single helpdesk is
           the standard example. Fewest integration points, the simplest permission model, and the
-          cheapest to build and to run.
+          cheapest to build.
         </li>
         <li>
           <strong>Mid-complexity agent.</strong> Connects to one or two core business systems
@@ -434,20 +347,16 @@ export const post: BlogPost = {
         which side of that prediction your project sits on.
       </p>
 
-      <h3 id="running">4. Keeping it running</h3>
       <p>
-        Model bill, plus monitoring, plus the human who reviews escalations, plus the maintenance
-        when a vendor changes an API or your policy changes and the agent needs to know. Budget for
-        the reviewer. An agent with nobody watching the escalation queue is an agent that quietly
-        stops working and nobody notices for six weeks. What that upkeep includes, and what drives
-        its monthly cost, is on our{' '}
+        A built agent also needs upkeep after launch. Someone has to review its escalations, and it
+        has to be updated when a vendor changes an API or your policy changes. An agent with nobody
+        watching the escalation queue is an agent that quietly stops working and nobody notices for
+        six weeks. What that upkeep includes is on our{' '}
         <a href="/services/ai-agent-monitoring">AI agent monitoring and support</a> page.
       </p>
       <p>
-        To run the payback math on your own numbers, use our{' '}
-        <a href="/tools/ai-agent-roi-calculator">AI agent cost and ROI calculator</a>. The full
-        comparison of doing it yourself against hiring it out, including what a competent internal
-        developer can realistically ship, is in{' '}
+        The full comparison of doing it yourself against hiring it out, including what a competent
+        internal developer can realistically ship, is in{' '}
         <a href="/blog/how-to-build-an-ai-agent-uk-2026">
           how to build an AI agent, step by step
         </a>
@@ -473,7 +382,7 @@ export const post: BlogPost = {
       <p>
         A chatbot that answers questions from your help docs costs less than an agent for one
         reason: it does not act on your systems. No integration, no permissions work, no refund tool
-        to make safe. The model calls are rarely the difference. The build is.
+        to make safe. The difference is in the build.
       </p>
       <p>
         If all you need is answers on your website, <a href="/services/ai-chatbot-development">a
@@ -581,7 +490,7 @@ export const post: BlogPost = {
       </p>
       <p>
         This is where the real engineering lives, and it is why agent projects cost what they cost.
-        The model is a commodity you rent by the token. The <code>issue_refund</code> function that
+        The <code>issue_refund</code> function that
         talks to your payment processor, respects your policy, writes to your ledger, is idempotent
         so a retry does not refund twice, and logs enough to survive a chargeback dispute: that is
         the product.
@@ -696,12 +605,10 @@ export const post: BlogPost = {
         saying, in public, that it could not find a source it trusted enough to lean on.
       </p>
       <p>
-        <strong>factoryjet.com appears in none of it, on either query.</strong> We are writing this
-        from outside the results, not from inside them. That gap is the entire reason the article
-        exists: the definition is over-served by companies selling infrastructure, and the price is
-        under-served by everybody. So this page leads with the arithmetic. When we checked the cost
-        query again on 17 Sep 2026, Reddit still ranked first, followed by SoftTeco, Retool and
-        TheCrunch, and factoryjet.com was still not on the first page.
+        The definition is over-served by companies selling infrastructure, and the price is
+        under-served by everybody. That gap is the reason this article exists, so this page leads
+        with the prices and where each one comes from. When we checked the cost query again on 17
+        Sep 2026, Reddit still ranked first, followed by SoftTeco, Retool and TheCrunch.
       </p>
       <p>
         One more detail from the same pull, because it tells you who is actually searching. The
@@ -746,7 +653,7 @@ export const post: BlogPost = {
       </p>
 
       <h2 id="proposal-test">How to tell whether an agent proposal is serious</h2>
-      <p>Six questions. The answers are diagnostic.</p>
+      <p>Five questions. The answers are diagnostic.</p>
       <ul className="list-disc pl-6 space-y-2 mb-6">
         <li>
           <strong>Which queue, and how many items are in it this month?</strong> No number means no
@@ -763,10 +670,6 @@ export const post: BlogPost = {
         <li>
           <strong>What happens when it is unsure?</strong> The answer has to be a named person and a
           route, not "it asks for clarification."
-        </li>
-        <li>
-          <strong>What does one unit of work cost in model calls?</strong> They should be able to do
-          the arithmetic above for your workload in about five minutes.
         </li>
         <li>
           <strong>Who reviews the escalation queue, and how often?</strong> If the answer is "you

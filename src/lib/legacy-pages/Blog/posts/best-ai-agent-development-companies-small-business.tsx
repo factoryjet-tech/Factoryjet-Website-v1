@@ -68,17 +68,15 @@ const listNames = (items: typeof PROVIDERS) => {
   return names.length > 1 ? `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}` : names.join('');
 };
 
-// Market ranges only, never FactoryJet prices. Every row is a VERIFIED row in
-// pipeline/research/MARKET-PRICE-RANGES-2026-09-30.md (rows 1, 2, 4, 5, 6),
+// Market ranges only, never FactoryJet prices. Build and project prices only.
+// Every row is a VERIFIED row in
+// pipeline/research/MARKET-PRICE-RANGES-2026-09-30.md (rows 1, 4, 6),
 // read on the source page on 2026-09-30.
 const COST_ROWS = [
   { item: 'One custom AI agent build', range: '$5,000 to $180,000+', source: 'ProductCrafters, 2026 cost breakdown', url: 'https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent/' },
   { item: 'One workflow automated by a US agency', range: '$5,000 to $15,000', source: 'Layer3 Labs, 2026 agency cost guide', url: 'https://www.layer3labs.io/roi/ai-automation-agency-cost' },
   { item: 'Several connected workflows', range: '$15,000 to $50,000', source: 'Layer3 Labs, 2026 agency cost guide', url: 'https://www.layer3labs.io/roi/ai-automation-agency-cost' },
   { item: 'First done-for-you AI install, owner-led business', range: '$4,500 to $25,000', source: 'Justin McKelvey, September 2026', url: 'https://justinmckelvey.com/blog/ai-integration-services' },
-  { item: 'Hosting for a custom build', range: '$500 to $10,000 a month', source: 'ProductCrafters, 2026 cost breakdown', url: 'https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent/' },
-  { item: 'Maintenance for a custom build', range: '$10,000 to $50,000+ a year', source: 'ProductCrafters, 2026 cost breakdown', url: 'https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent/' },
-  { item: 'Ongoing automation retainer', range: '$3,000 to $20,000 a month', source: 'Layer3 Labs, 2026 agency cost guide', url: 'https://www.layer3labs.io/roi/ai-automation-agency-cost' },
 ];
 
 // "Best" stays in the title: it is in the slug and in the searches this page
@@ -95,7 +93,7 @@ export const post: BlogPost = {
   category: "Emerging Tech",
   author: "Bhavesh Barot",
   date: "Jun 13, 2026",
-  dateModified: "Oct 10, 2026",
+  dateModified: "Oct 11, 2026",
   readTime: "14 min read",
   imageUrl: "/blog-images/best-ai-agent-development-companies-small-business-2026.webp",
   meta: {
@@ -121,7 +119,7 @@ export const post: BlogPost = {
     },
     {
       "q": "How much does AI agent development cost?",
-      "a": "As a market reference, development firm ProductCrafters puts 2026 custom AI agent builds at about $5,000 to more than $180,000. The price moves with how many systems the agent reads and writes to and how many exceptions it must handle. The AI model is rarely the main cost. FactoryJet quotes a fixed price in writing after a short scoping call."
+      "a": "As a market reference, development firm ProductCrafters puts 2026 custom AI agent builds at about $5,000 to more than $180,000. The price moves with how many systems the agent reads and writes to and how many exceptions it must handle. FactoryJet quotes a fixed price in writing after a short scoping call."
     },
     {
       "q": "How much does an AI agent cost for a small business?",
@@ -129,7 +127,7 @@ export const post: BlogPost = {
     },
     {
       "q": "What does it cost to run an AI agent each month?",
-      "a": "Running costs cover model usage, hosting and support. As a market reference, ProductCrafters puts hosting for a custom build at $500 to $10,000 a month and yearly maintenance at $10,000 to $50,000 or more. Model calls are often the smallest part. Our AI agent cost guide works through a support agent handling 2,000 tickets a month and puts them at about $22 to $112 a month on Anthropic's September 2026 prices."
+      "a": "It depends on what the agent does and how many systems it connects to, so there is no single figure. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. We keep managing the servers, AI, APIs and maintenance, so your team does not have to."
     },
     {
       "q": "How long does AI agent development take?",
@@ -266,8 +264,8 @@ export const post: BlogPost = {
           <tbody>{COST_ROWS.map(row => <tr key={row.item}><th scope="row" className="border p-3 text-left font-normal">{row.item}</th><td className="border p-3 font-semibold">{row.range}</td><td className="border p-3"><a href={row.url} className="text-[#B23E13] underline" target="_blank" rel="noopener noreferrer">{row.source}</a></td></tr>)}</tbody>
         </table>
       </div>
-      <p className="mb-4">The spread is wide because the work is. An agent that drafts a reply for a person to approve costs far less than one allowed to create orders in an ERP. The number of systems it connects to and the number of exceptions it must handle move the price more than the AI model does.</p>
-      <p className="mb-6">FactoryJet quotes a fixed price in writing after a short scoping call. For the running costs in detail, including a worked example of model usage, read our <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] underline">AI agent cost guide</a>.</p>
+      <p className="mb-4">The spread is wide because the work is. An agent that drafts a reply for a person to approve costs far less than one allowed to create orders in an ERP. The price moves with the number of systems it connects to and the number of exceptions it must handle.</p>
+      <p className="mb-6">FactoryJet quotes a fixed price in writing after a short scoping call. For more on how builds are priced, read our <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] underline">AI agent cost guide</a>.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">How long a build takes</h2>
       <p className="mb-6">A pilot on one narrow workflow usually takes two to four weeks. A production agent with permissions, logging, approvals and monitoring usually takes six to twelve weeks. Timelines stretch when the agent touches several systems, or when the rules have many edge cases that need testing on real examples. A prototype, a supervised pilot and a production rollout are three different milestones, so agree which one a quoted date refers to.</p>
@@ -283,7 +281,7 @@ export const post: BlogPost = {
       <p className="mb-6">The agent is live on a dedicated US server and the firm reviews every lead itself. <a href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline">Read the full case study</a> for the sources, the access controls and who owns the code.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Compare the full running plan as well as the build quote</h2>
-      <p className="mb-4">A proposal should list five costs separately: the build, recurring software and model usage, hosting, staff review time and support. Ask how retries, attachments and long conversations change usage. Ask what volume the estimate assumes and what happens when volume changes. Hourly work is fine when it has a cap and named deliverables.</p>
+      <p className="mb-4">A proposal should set out the build and the support after launch separately, each with a written scope and price. Hourly work is fine when it has a cap and named deliverables.</p>
       <p className="mb-4">Give every dependency an owner. Your team may need to provide a CRM sandbox, approved policies and access to a carrier or ERP API. The provider should write down what it will build, which write actions need approval and how it will test them. Late access and late policy decisions belong in the schedule where everyone can see them.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Ask for a failure demonstration</h2>

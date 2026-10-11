@@ -15,11 +15,13 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_MODIFIED = '2026-10-05';
+// datePublished keeps the value it already had. Only the modified date moves.
+const PAGE_PUBLISHED = '2026-10-05';
+const PAGE_MODIFIED = '2026-10-11';
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-agent-monitoring';
 const PAGE_TITLE = 'AI Agent Monitoring, Support & Maintenance | FactoryJet';
 const PAGE_DESCRIPTION =
-  'AI agent monitoring and support after launch: traces, evaluations, drift checks, model upgrades and fixes. What it includes and what drives monthly cost.';
+  'AI agent monitoring and support after launch: traces, evaluations, drift checks, model upgrades and fixes. What it includes, plan hours and first response times.';
 
 interface SupportPlan {
   name: string;
@@ -85,7 +87,6 @@ const SRC_OPENAI_DEPRECATIONS = 'https://developers.openai.com/api/docs/deprecat
 const SRC_ANTHROPIC_DEPRECATIONS = 'https://platform.claude.com/docs/en/about-claude/model-deprecations';
 const SRC_DRIFT_STUDY = 'https://arxiv.org/abs/2307.09009';
 const SRC_OWASP_LLM01 = 'https://genai.owasp.org/llmrisk/llm01-prompt-injection/';
-const SRC_DATADOG_PRICING = 'https://www.datadoghq.com/pricing/?product=llm-observability';
 
 const LINK_CLASS = 'underline underline-offset-2 text-[#B23E13] hover:text-[#14110F]';
 
@@ -323,49 +324,6 @@ const NORMAL_WEEK = [
   'Log hours and changes for the monthly report.',
 ];
 
-const COST_DRIVERS: { driver: string; why: ReactNode; lower: string }[] = [
-  {
-    driver: 'Model usage (tokens)',
-    why: 'OpenAI and Anthropic bill per million tokens and price input and output separately: output costs more, cached input costs less. Long prompts, big retrieved documents and multi-step tool loops add tokens to every conversation.',
-    lower: 'Cache repeated instructions, trim retrieved text and test a smaller model for simple steps.',
-  },
-  {
-    driver: 'Conversation or task volume',
-    why: 'Model spend and the volume of logs to store and review both rise with every conversation.',
-    lower: 'Review a sample (escalations, low scores, new topics) rather than every log, and fix the help content behind repeat questions.',
-  },
-  {
-    driver: 'Connected systems',
-    why: 'Each help desk, CRM, ERP or store connection has its own API versions, credentials and failure modes.',
-    lower: 'Connect only what the agent needs, pin API versions and grant the narrowest permissions.',
-  },
-  {
-    driver: 'Evaluation cadence',
-    why: 'Each run replays your test set through the model, and judge-model scoring adds calls. Testing before every change costs more than monthly testing and catches more.',
-    lower: 'Run a quick check on a handful of key questions for every change, and the full test set before model upgrades.',
-  },
-  {
-    driver: 'Observability tooling',
-    why: (
-      <>
-        Tools charge by traces, spans, data or seats. Datadog, for example, prices LLM Observability by LLM spans (model calls): free up to 40K spans a month, and Pro from $160 a month with 100K spans included plus $3.50 per extra 10K, on annual pricing (
-        <SourceLink href={SRC_DATADOG_PRICING}>Datadog pricing</SourceLink>, checked September 17, 2026).
-      </>
-    ),
-    lower: 'Keep only the retention you need. Running an open source tool such as Langfuse on your own servers trades a subscription for server costs and upkeep.',
-  },
-  {
-    driver: 'Compliance needs',
-    why: 'If the agent handles patient data for a healthcare provider or health plan, HIPAA (the US health privacy law) applies: every vendor that receives, stores or transmits those conversations, support team and monitoring tool included, needs a business associate agreement, a contract that commits it to protect that data.',
-    lower: 'Keep sensitive fields out of traces from day one and pick vendors that sign the agreements you need.',
-  },
-  {
-    driver: 'Required response times',
-    why: 'Faster first responses and round-the-clock coverage need engineers on call. It is the biggest difference between support plans.',
-    lower: 'Match coverage to risk: an internal agent drafting replies for staff may not need it, while a customer-facing agent issuing refunds might.',
-  },
-];
-
 const TOOL_ROWS = [
   {
     tool: 'LangSmith (LangChain)',
@@ -579,19 +537,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'cost',
     question: 'How much does AI agent maintenance cost?',
     answer:
-      'After launch, hosting for a custom-built AI agent typically runs $500 to $10,000 a month, and yearly maintenance $10,000 to $50,000 or more, according to development firm ProductCrafters. Where you land depends on seven things: model tokens, conversation or task volume, connected systems, evaluation cadence, your monitoring tool, compliance needs and required response times. An agent handling a few internal requests and one handling thousands of customer conversations need very different support, so we quote after an audit of your agent.',
-  },
-  {
-    category: 'cost',
-    question: 'How expensive are AI agents to run?',
-    answer:
-      'Running cost is mostly model usage. OpenAI and Anthropic bill per million tokens, price input and output separately, and charge more for output and less for cached input. Cost grows with volume, prompt length, retrieved text and steps per task. Add your monitoring tool and the people who review and fix the agent. Our AI agent cost guide has a worked example.',
-  },
-  {
-    category: 'cost',
-    question: 'What does it cost to maintain an AI agent each month?',
-    answer:
-      'Development firm ProductCrafters puts monthly hosting for a custom-built AI agent at $500 to $10,000, with yearly maintenance of $10,000 to $50,000 or more. To estimate your own month, add up four parts: model usage, your monitoring tool plan, the engineering hours to review, test and fix the agent, and compliance work such as HIPAA reviews. The engineering hours often decide the total, and they depend on how often the agent changes and how fast you need responses. That is why we scope support around hours.',
+      'FactoryJet quotes ongoing support as a fixed price in writing, after a short scoping call and an audit of your agent. An agent handling a few internal requests and one handling thousands of customer conversations need different amounts of support, so the quote depends on your agent. On a support plan, we manage the servers, AI, APIs and maintenance, so your team does not have to.',
   },
   {
     category: 'cost',
@@ -670,7 +616,7 @@ const WEBPAGE_SCHEMA = {
   url: CANONICAL_URL,
   name: PAGE_TITLE,
   description: PAGE_DESCRIPTION,
-  datePublished: PAGE_MODIFIED,
+  datePublished: PAGE_PUBLISHED,
   dateModified: PAGE_MODIFIED,
   inLanguage: 'en-US',
   author: {
@@ -757,13 +703,13 @@ export default function AiAgentMonitoringPage() {
           <div className="pp-container">
             <div className="pp-card p-6 md:p-8 bg-white border-l-4 border-[#F05A28] max-w-4xl">
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#B23E13] block mb-2">
-                Short answer: what AI agent support includes and what drives the cost
+                Short answer: what AI agent support includes
               </span>
               <p id="answer-first" className="text-base md:text-lg text-[#14110F] leading-relaxed font-medium">
-                Ongoing AI agent support means someone reads the agent&apos;s traces, tracks cost and escalation rates, reruns its test set when prompts or models change, and fixes integrations when vendors change them. The monthly cost depends on conversation volume, model usage, connected systems, how often you run evaluations, monitoring tools, compliance needs and how fast you need a response.
+                Ongoing AI agent support means someone reads the agent&apos;s traces, tracks cost and escalation rates, reruns its test set when prompts or models change, and fixes integrations when vendors change them.
               </p>
               <p className="mt-4 text-xs text-[#6E655F]">
-                Updated October 5, 2026. Written by Bhavesh Barot, Founder of FactoryJet.
+                Updated October 11, 2026. Written by Bhavesh Barot, Founder of FactoryJet.
               </p>
             </div>
           </div>
@@ -1053,6 +999,13 @@ export default function AiAgentMonitoringPage() {
             <p className="mt-8 max-w-4xl text-sm text-[#46403B] leading-relaxed">
               {BUSINESS_HOURS_NOTE} Critical means the agent is down, an integration is failing, or the agent gives wrong or unsafe answers at scale. Everything else is a standard request or a planned change.
             </p>
+            <p className="mt-4 max-w-4xl text-sm text-[#46403B] leading-relaxed">
+              Building the agent is a separate cost. Our{' '}
+              <Link href="/blog/what-is-an-ai-agent-cost-2026" className={LINK_CLASS}>
+                guide to what an AI agent costs
+              </Link>{' '}
+              covers it.
+            </p>
           </div>
         </section>
 
@@ -1087,55 +1040,6 @@ export default function AiAgentMonitoringPage() {
                 </ol>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* COST DRIVERS */}
-        <section className="pp-section pp-tint" id="cost">
-          <div className="pp-container">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 mb-10">
-              <div className="lg:col-span-5">
-                <p className="pp-eyebrow">{'// Cost'}</p>
-                <h2 className="pp-h2">What drives the monthly cost of maintaining an AI agent</h2>
-              </div>
-              <p className="lg:col-span-7 text-base text-[#46403B] leading-relaxed self-end">
-                There is no honest single number. Agents doing the same job differ in volume, integrations and risk, which is what you pay for. Here is what moves the bill and how to keep it down.
-              </p>
-            </div>
-
-            <div className="overflow-x-auto">
-              <table className="pp-table bg-white">
-                <caption className="sr-only">Monthly cost drivers for maintaining an AI agent, why each one matters and how to reduce it</caption>
-                <thead>
-                  <tr>
-                    <th scope="col">Cost driver</th>
-                    <th scope="col">Why it moves the cost</th>
-                    <th scope="col">How to keep it down</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {COST_DRIVERS.map((row) => (
-                    <tr key={row.driver}>
-                      <td className="font-bold text-[#14110F]">{row.driver}</td>
-                      <td>{row.why}</td>
-                      <td>{row.lower}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <p className="mt-8 max-w-4xl text-base text-[#46403B] leading-relaxed">
-              Building the agent is a separate cost. Our{' '}
-              <Link href="/blog/what-is-an-ai-agent-cost-2026" className={LINK_CLASS}>
-                guide to what an AI agent costs
-              </Link>{' '}
-              covers it, with a worked example of a monthly model bill. For agents that handle patient data, see how we build{' '}
-              <Link href="/services/healthcare-ai-agents" className={LINK_CLASS}>
-                healthcare AI agents
-              </Link>
-              .
-            </p>
           </div>
         </section>
 
@@ -1184,6 +1088,14 @@ export default function AiAgentMonitoringPage() {
                 Someone has to read the trace, find why the agent picked the wrong tool, change the prompt or connector, rerun the tests and ship. If the people who built your agent have time to own it, a tool may be enough. If nobody owns the agent after launch, a support team fills that gap.
               </p>
             </div>
+
+            <p className="mt-8 max-w-4xl text-base text-[#46403B] leading-relaxed">
+              If the agent handles patient data for a healthcare provider or health plan, HIPAA (the US health privacy law) applies: every vendor that receives, stores or transmits those conversations, support team and monitoring tool included, needs a business associate agreement, a contract that commits it to protect that data. Keep sensitive fields out of traces from day one and pick vendors that sign the agreements you need. For agents that handle patient data, see how we build{' '}
+              <Link href="/services/healthcare-ai-agents" className={LINK_CLASS}>
+                healthcare AI agents
+              </Link>
+              .
+            </p>
           </div>
         </section>
 

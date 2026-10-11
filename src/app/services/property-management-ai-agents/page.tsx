@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/property-management-ai-ag
 const PAGE_TITLE = 'AI Leasing Agents for Property Management | FactoryJet';
 const PAGE_DESC =
   'Custom AI leasing agents for property management companies. Answer prospect calls, texts, and web chats 24/7, qualify leads, and sync live with AppFolio, Yardi, and RealPage. Get an audit.';
-const PAGE_MODIFIED = '2026-10-10';
+const PAGE_MODIFIED = '2026-10-11';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -220,7 +220,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'deployment',
     question: 'How much do AI agents cost a month?',
     answer:
-      'Hosting a custom-built AI agent typically runs $500 to $10,000 a month after launch, with yearly maintenance of $10,000 to $50,000 or more, according to development firm ProductCrafters. Cost depends on how many units and properties the agent covers, how many systems it connects to (your PMS, tour-calendar or smart-lock platform, call and text lines), and how much fair housing guardrail configuration your portfolio needs. A small community on one PMS costs far less than a multi-state portfolio needing custom connectors and per-property pricing logic. Ask any vendor for a scoped quote based on your own unit count and systems.',
+      'Cost depends on how many units and properties the agent covers, how many systems it connects to (your PMS, tour-calendar or smart-lock platform, call and text lines), and how much fair housing guardrail configuration your portfolio needs. A small community on one PMS costs far less than a multi-state portfolio needing custom connectors and per-property pricing logic. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. After launch we keep managing the servers, the AI models, the API connections and the maintenance, so your team does not have to.',
   },
   {
     category: 'deployment',

@@ -75,7 +75,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-10-10';
+const PAGE_MODIFIED = '2026-10-11';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -290,7 +290,7 @@ const ROI_STATS = [
   {
     value: 'Fixed Price',
     label: 'milestone-paid chatbot builds with full code ownership',
-    microcopy: 'specialized engineers, US-caliber output, predictable from quote to launch',
+    microcopy: 'specialized engineers, predictable from quote to launch',
     categoryLabel: 'PRICING MODEL',
   },
 ];
@@ -318,7 +318,7 @@ const MARKET_STATS = [
 
 const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'US Chatbot Agency' },
+  { label: 'Traditional Agency' },
   { label: 'DIY Tool (Intercom, Drift)' },
   { label: 'Freelancer' },
 ] as const;
@@ -591,7 +591,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Are there ongoing costs after the chatbot is built?',
     answer:
-      'Ongoing expenses include direct model API usage billed at cost without markups. You can also choose an optional monthly retainer for continuous feature additions.',
+      'Yes. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. With ongoing support, we keep managing the servers, AI, APIs and maintenance, so your team does not have to. You can also choose an optional monthly retainer for continuous feature additions.',
   },
 
   /* ── Technical & Integrations ── */
@@ -659,7 +659,7 @@ const FAQ_ITEMS = [
   },
   {
     category: 'trust',
-    question: 'How is FactoryJet different from a US AI development agency?',
+    question: 'How is FactoryJet different from other AI development agencies?',
     answer:
       'We differ in three ways. First, our projects are fixed-price and milestone-paid. Second, you work directly with engineers without account manager delays. Third, we have delivered 500+ systems for real businesses.',
   },
@@ -692,7 +692,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much would it cost to build an AI chatbot?',
     answer:
-      'A focused build or proof of concept (a small first version) starts at a $1,000 to $10,000 minimum, and an enterprise-grade system runs $100,000 to $250,000 or more, according to the chatbot companies page on Clutch, read on 9 October 2026. Clutch names four cost drivers: generative AI versus a simpler scripted flow, the number of systems the bot connects to, how much of your own data it must learn from, and compliance needs. After launch, the 2026 pricing guide from CMARIX says to budget about 15% to 20% of the build cost each year for fixes and updates.',
+      'A focused build or proof of concept (a small first version) starts at a $1,000 to $10,000 minimum, and an enterprise-grade system runs $100,000 to $250,000 or more, according to the chatbot companies page on Clutch, read on 9 October 2026. Clutch names four cost drivers: generative AI versus a simpler scripted flow, the number of systems the bot connects to, how much of your own data it must learn from, and compliance needs.',
   },
   {
     category: 'pricing',
@@ -1227,13 +1227,13 @@ export default function AIChatbotDevelopmentPage() {
         {/* ── 12. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="We're not a US chatbot agency with a fancy website. That's the point."
+          headline="We design, build and support your chatbot, and you own what we build."
           lead="We've spent more than a decade building software, and have shipped 500+ production systems for real businesses. The chatbots we build don't live in a demo, they run in production and handle real customer conversations every day."
           pillars={[
             {
               icon: '⚡',
               title: 'Speed without cutting corners',
-              body: 'A US chatbot agency has account managers, project coordinators, and a sales team to keep fed. We don\'t. When you brief us, an engineer reads it, not an account manager. That\'s why our timelines are weeks, not quarters.',
+              body: 'A traditional agency has account managers, project coordinators, and a sales team to keep fed. We don\'t. When you brief us, an engineer reads it, not an account manager. That\'s why our timelines are weeks, not quarters.',
             },
             {
               icon: '💡',

@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/ai-receptionist';
 const PAGE_TITLE = 'AI Receptionist | Custom 24/7 AI Phone Answering | FactoryJet';
 const PAGE_DESC =
   'A custom AI receptionist that answers every call 24/7, qualifies the caller, and books the job straight into your CRM or scheduling software. Built for your business, not a template. Get a free call audit.';
-const PAGE_MODIFIED = '2026-10-10';
+const PAGE_MODIFIED = '2026-10-11';
 
 // Single source of truth for the breadcrumb trail. Feeds both the visible
 // <Breadcrumbs> component and the BreadcrumbList JSON-LD below so the two
@@ -202,22 +202,17 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   {
     category: 'roi',
     question: 'How much does an AI voice agent cost?',
-    answer: 'An AI voice agent costs between $0.06 and $0.31 a minute to run on a self-serve platform, per vendor pricing pages read on 9 Oct 2026. Telnyx estimates about $0.06, the Vapi calculator shows $82 to $129 for 1,000 minutes, Retell AI lists $0.07 to $0.31, and Bland Start is $0.14. Goodcall, a ready-made product, lists $79 to $299 a month with no per-minute charge. A custom build adds a one-off cost, which development firm Kanopy Labs put at $15,000 to $200,000 or more (April 2026). FactoryJet quotes a fixed price in writing after a short scoping call.',
+    answer: 'The price depends on how you buy it. Self-serve platforms such as Telnyx, Vapi, Retell AI and Bland bill by the minute, per their pricing pages read on 9 Oct 2026. Goodcall, a ready-made product, lists $79 to $299 a month with no per-minute charge. A custom build adds a one-off cost, which development firm Kanopy Labs put at $15,000 to $200,000 or more (April 2026). FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'roi',
     question: 'Which vendors offer pay-as-you-go pricing for AI voice agents suited for seasonal construction spikes?',
-    answer: 'Retell AI, Telnyx, Vapi and Bland offer pay-as-you-go pricing for AI voice agents, billed by the minute with no monthly minimum, per their pricing pages on 9 Oct 2026. For seasonal construction spikes, compare how many calls each runs at once. Telnyx lists 500, Retell AI 20 (more at $8 a line a month, removable anytime), the Bland Start plan 10 with a cap of 100 calls a day, and Vapi 4. All four are platforms you set up yourself. FactoryJet builds custom agents on Twilio or Telnyx, and usage can sit in your own account at cost.',
-  },
-  {
-    category: 'roi',
-    question: 'How quickly does an AI receptionist pay for itself?',
-    answer: 'It depends almost entirely on what one captured call is worth to you, so the honest answer is arithmetic rather than a promise. Work out your average value per booked customer, then how many calls a month currently reach voicemail. In home services that maths moves fast, because a single roof replacement ($12,000 to $25,000) or HVAC install ($8,000 to $18,000) caught after hours covers a year. A clinic filling recurring appointment slots or a firm capturing one extra matter gets there differently but on the same logic. Call volume and average customer value both move the payback window, so we run your real numbers during discovery rather than quoting a generic figure.',
+    answer: 'Retell AI, Telnyx, Vapi and Bland offer pay-as-you-go pricing for AI voice agents, billed by the minute with no monthly minimum, per their pricing pages on 9 Oct 2026. For seasonal construction spikes, compare how many calls each runs at once. Telnyx lists 500, Retell AI 20 (more can be added), the Bland Start plan 10 with a cap of 100 calls a day, and Vapi 4. All four are platforms you set up yourself. FactoryJet builds custom agents on Twilio or Telnyx, and usage can sit in your own account at cost.',
   },
   {
     category: 'roi',
     question: 'How does this compare to human answering services like Ruby or AnswerConnect?',
-    answer: 'Traditional answering services charge steep per-minute fees, often $800 to $2,500 or more a month. Callers still sit on hold. The service only takes basic messages anyway. Our AI agent actively books appointments inside your dispatch software. It answers technical trade questions and runs 24/7 with zero per-minute penalty.',
+    answer: 'Traditional answering services charge steep per-minute fees. Callers still sit on hold. The service only takes basic messages anyway. Our AI agent actively books appointments inside your dispatch software. It answers technical trade questions and runs 24/7.',
   },
   {
     category: 'roi',
@@ -567,13 +562,13 @@ export default function AiReceptionistPage() {
 
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
-                  One Job
+                  $45K to $120K
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
-                  Can Cover a Year of Call Coverage
+                  Yearly Cost of Missed Calls, Average HVAC Company
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Where the value of a single customer is high, one captured call can cover a year of phone coverage on its own. Missed calls alone cost the average HVAC company an estimated $45,000 to $120,000 a year in lost business. Run the same arithmetic on your own average customer value and the shape of the answer rarely changes.
+                  Missed calls alone cost the average HVAC company an estimated $45,000 to $120,000 a year in lost business. Run the same arithmetic on your own average customer value and the shape of the answer rarely changes.
                 </p>
                 <a
                   href="https://www.servicetitan.com/blog/ai-virtual-agents-in-hvac"
@@ -1330,9 +1325,9 @@ export default function AiReceptionistPage() {
                   <tr className="bg-[#FFF8F5]/30">
                     <td className="p-4 sm:p-6 font-bold text-[#14110F]">Pricing Model.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
-                      Fixed build fee, zero per-minute tax
+                      Fixed price, quoted in writing
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$1.50 - $2.50 per minute billing.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Billed by the minute.</td>
                     <td className="p-4 sm:p-6 text-[#6E655F]">Monthly recurring subscription.</td>
                   </tr>
                 </tbody>

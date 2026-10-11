@@ -62,7 +62,7 @@ const FIRMS: Firm[] = [
     clients: 'UK SMEs; its site quotes the managing directors of Scimitar Sports, Build Group and Hayward-Wright Accounts',
     what: "A three-step route: a fixed-fee AI Workshop, an AI Roadmap that says what to build and what it will cost, then implementation. It starts with a free two-minute AI Readiness Assessment and also offers training and AI policy help. It says it is an independent adviser and does not sell software.",
     bestFor: 'Owner-managed firms outside London that want a short paid workshop before they commit to anything bigger.',
-    ask: 'What the monthly implementation fee covers and how long a typical roadmap takes to deliver.',
+    ask: 'How long a typical roadmap takes to deliver.',
   },
   {
     name: 'Optimus Consulting',
@@ -101,7 +101,7 @@ const FIRMS: Firm[] = [
     clients: 'Schools, law firms, clinics, financial services firms and manufacturers; named work includes FW Thorpe',
     what: "Most work starts with a fixed-scope AI Audit that ends in a written report and a costed roadmap. Carrying on is a separate decision: an Embedded AI Lead then builds the agreed automations inside your business. It also writes AI governance rules checked against UK GDPR and offers private set-ups on infrastructure you control. It says it holds ISO 27001, ISO 9001 and Cyber Essentials.",
     bestFor: 'Companies that must pass a security or procurement review before any AI work starts.',
-    ask: 'What the monthly delivery allocation buys in days, and what the minimum commitment is.',
+    ask: 'Whether the audit fee counts towards a build, and where the system would be hosted.',
   },
   {
     name: 'Helium42',
@@ -141,7 +141,7 @@ const FIRMS: Firm[] = [
     clients: "Mid-market businesses, which it defines as about £5m to £250m in turnover; named work includes Heatable, Freddie's Flowers and Resi",
     what: "Senior people join your team and build AI agents, voice AI, data science models and data pipelines. It says a working proof of concept ships in two to four weeks. Its founders previously built the fintech Fluro and the credit risk consultancy 4most. It also offers a part-time AI officer.",
     bestFor: 'Mid-market companies, especially in financial services, that want models and agents built alongside their own analysts.',
-    ask: 'How knowledge passes to your data team, and what a retained engagement costs after the proof of concept.',
+    ask: 'How knowledge passes to your data team after the proof of concept.',
   },
   {
     name: 'Winder.AI',
@@ -221,7 +221,7 @@ const FIRMS: Firm[] = [
     clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
     what: 'We advise and then build. We map one process, check the data and the UK GDPR position, tell you whether to buy a tool or build one, and then design, build and support the AI agent or integration if a build is the right call. Our strongest ground is where AI meets online stores, B2B ordering, finance and operations. The founder is involved in every project, we can host on UK or EU cloud, and you own what we build.',
     bestFor: 'Ecommerce and operations-heavy small and mid-size companies that want the advice and the build from one team.',
-    ask: 'Whether a remote team suits you. If you need people in your office every week, security-cleared staff or a board paper from a known name, pick another firm from this list.',
+    ask: 'Which of your systems we have connected before, and what you hold at the end of each stage.',
   },
 ];
 
@@ -242,7 +242,7 @@ const GROUP_INTRO: Record<Group, string> = {
     'You already employ analysts or engineers. You need senior specialists who work next to them on something hard: predictive models, agents in production or a data platform. These three are set up for that.',
   'A regulated business':
     'Your data is sensitive, and a regulator, an auditor or a procurement team will ask how the AI was built. These three show public sector, defence, financial services or security credentials on their own sites.',
-  Us: 'We advise on AI and then build it, so we are on this list. We put ourselves last and say where we do not fit.',
+  Us: 'We advise on AI and then build it, so we are on this list. We put ourselves last.',
 };
 
 // Published prices, copied from each firm's own page on 9 Oct 2026.
@@ -256,7 +256,7 @@ const PRICES: { firm: string; figure: string; vat: string; source: string }[] = 
   },
   {
     firm: 'AI Expert UK',
-    figure: 'AI Workshop from £2,999; AI Roadmap from £4,999; AI Implementation from £5,499 a month',
+    figure: 'AI Workshop from £2,999; AI Roadmap from £4,999',
     vat: 'Not stated',
     source: 'https://www.ai-expert.co.uk/ai-consulting-services',
   },
@@ -268,13 +268,13 @@ const PRICES: { firm: string; figure: string; vat: string; source: string }[] = 
   },
   {
     firm: 'OpenKit',
-    figure: 'AI Audit £10,000 at standard scope; optional AI Charter adds £3,000; Embedded AI Lead from £5,000 a month',
+    figure: 'AI Audit £10,000 at standard scope; optional AI Charter adds £3,000',
     vat: 'Excludes VAT',
     source: 'https://openkit.co.uk/pricing',
   },
   {
     firm: 'Generativ',
-    figure: 'Indicative: discovery £3,500; builds £3,000 to £15,000 or more; maintenance £200 to £500 a month',
+    figure: 'Indicative: discovery £3,500; builds £3,000 to £15,000 or more',
     vat: 'Excludes VAT',
     source: 'https://www.generativ.co.uk/blog/ai-integration-cost-uk',
   },
@@ -286,7 +286,7 @@ const PRICES: { firm: string; figure: string; vat: string; source: string }[] = 
   },
   {
     firm: 'Winder.AI',
-    figure: '£150 to £300 an hour for most engineering work; £350 an hour with a £5,000 monthly minimum for specialist reinforcement learning consulting',
+    figure: '£150 to £300 an hour for most engineering work; £350 an hour for specialist reinforcement learning consulting',
     vat: 'Not stated',
     source: 'https://winder.ai/locations/uk/ai-consulting/',
   },
@@ -409,7 +409,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "How much does an AI consultant cost in the UK?",
-    a: "Seven of the 13 other firms in this guide publish figures. On 9 October 2026 a first step ran from £2,999 for a workshop at AI Expert UK and £3,500 for a two-week readiness review at The AI Consultancy to £10,000 for an audit at OpenKit. Published day rates were £950 to £1,500 at The AI Consultancy and £1,250 at Optimus Consulting. Most figures exclude VAT. Our UK AI cost guide covers builds and running costs.",
+    a: "Seven of the 13 other firms in this guide publish figures. On 9 October 2026 a first step ran from £2,999 for a workshop at AI Expert UK and £3,500 for a two-week readiness review at The AI Consultancy to £10,000 for an audit at OpenKit. Published day rates were £950 to £1,500 at The AI Consultancy and £1,250 at Optimus Consulting. Most figures exclude VAT. Our UK AI cost guide covers build costs.",
   },
   {
     q: "What does an AI consultant do?",
@@ -476,7 +476,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 9, 2026',
-  dateModified: 'Oct 10, 2026',
+  dateModified: 'Oct 11, 2026',
   readTime: '24 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageAlt:
@@ -490,7 +490,7 @@ export const post: BlogPost = {
     "Every fact below was read on each firm's own website on 9 October 2026. Nobody paid to be listed, and the order is not a ranking.",
     'Seven of the 13 other firms publish prices. A first step runs from £2,999 for a workshop (AI Expert UK) to £10,000 for an audit (OpenKit). Most figures exclude VAT.',
     'Seven of the 14 list a London address on their own sites. The London table gives each postcode and its source.',
-    'FactoryJet is on this list. We work remotely with UK clients, and we advise and then build. If you need people in your office every week, choose a firm near you.',
+    'FactoryJet is on this list. We work remotely with UK clients, and we advise and then build.',
   ],
   faqs: FAQS,
   content: (
@@ -508,7 +508,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-GB',
               datePublished: '2026-10-09',
-              dateModified: '2026-10-10',
+              dateModified: '2026-10-11',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI consultancies in the United Kingdom' },
@@ -551,7 +551,7 @@ export const post: BlogPost = {
         Ask an AI assistant for the best AI consultancy in the UK and the answer often leans on a ranking of global firms. We know because we checked. On 9 October 2026 we read 140 answers to 13 UK buyer questions from ChatGPT, Claude, Gemini, Perplexity and Google&rsquo;s AI results. Two sources tied as the most cited, with at least 21 citations each. One was The AI Consultancy&rsquo;s own website, across four questions. The other was <a href={SOURCES.ranking} className={link} rel="noopener" target="_blank">consultancy.uk&rsquo;s ranking of AI and GenAI consulting firms</a>, across three. The ranking&rsquo;s top level holds Accenture, McKinsey, Deloitte, Bain, PwC, IBM Consulting and Boston Consulting Group.
       </p>
       <p className="mb-4">
-        That helps if you run a bank. It is little help to a 10-person surveying practice or a 50-person distributor. So we did the slow part. We took the UK firms that came up in those answers and in UK search results, opened each firm&rsquo;s own website, and wrote down only what the firm says about itself. Every profile links to its source. If we could not find a UK base on another firm&rsquo;s own site, that firm is not here.
+        That helps if you run a bank. It is little help to a 10-person surveying practice or a 50-person distributor. So we did the slow part. We took the UK firms that came up in those answers and in UK search results, opened each firm&rsquo;s own website, and wrote down only what the firm says about itself. Every profile links to its source. If we could not find a UK base on one of those firms&rsquo; own sites, we left it out.
       </p>
       <p className="mb-4">
         <strong>A note on honesty.</strong> FactoryJet advises on AI and then builds it, so we are on this list. We put ourselves last, and we tell you where another firm on this page will suit you better. Three of the five rival lists we read place the author&rsquo;s own firm first or second, so read every list with that in mind, including this one.
@@ -599,7 +599,7 @@ export const post: BlogPost = {
       <ol className="list-decimal pl-6 mb-6 space-y-2">
         <li><strong>Start with what buyers ask.</strong> Ten of our 13 questions came from Google Search Console, where searchers had been shown our pages for them. Three we wrote ourselves, such as &ldquo;Best small business AI consultant UK&rdquo;. We read 140 AI answers to them on 9 October 2026.</li>
         <li><strong>Note what the assistants cite.</strong> Among the pages cited most for each question, comparison lists were cited 125 times, service pages 98 times, home pages 34 times and articles 22 times. The AI Consultancy&rsquo;s own site was cited at least 21 times across four questions, the most of any consultancy in our sample.</li>
-        <li><strong>Check each firm for a UK base.</strong> Each of the 13 other firms had to give a UK address or say it is UK-based on its own site. We also left out two names that older lists still carry: <a href={SOURCES.tomoro} className={link} rel="noopener" target="_blank">tomoro.ai</a> now redirects to deploy.co, a site titled The OpenAI Deployment Company, and the <a href={SOURCES.meshai} className={link} rel="noopener" target="_blank">Mesh-AI home page</a> says it is now part of Indicium AI.</li>
+        <li><strong>Check each firm for a UK base.</strong> Each of the 13 firms we researched had to give a UK address or say it is UK-based on its own site. We also left out two names that older lists still carry: <a href={SOURCES.tomoro} className={link} rel="noopener" target="_blank">tomoro.ai</a> now redirects to deploy.co, a site titled The OpenAI Deployment Company, and the <a href={SOURCES.meshai} className={link} rel="noopener" target="_blank">Mesh-AI home page</a> says it is now part of Indicium AI.</li>
         <li><strong>Group by buyer, with no ranking.</strong> A list that puts a 10-person boutique next to a firm with thousands of staff helps nobody. We sorted firms into four groups by the buyer they describe on their own sites.</li>
         <li><strong>Read the source and keep the quote.</strong> Every description comes from the firm&rsquo;s own pages, opened on 9 October 2026. For each fact we saved the line that supports it: 170 lines in all. Client names and counts are the firm&rsquo;s own claims, and we say so.</li>
         <li><strong>Prices only from the firm.</strong> Where a firm publishes a price, we quote it and link the page. We never guess another company&rsquo;s price, and we give no star ratings, because we have not hired these firms.</li>
@@ -828,12 +828,6 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200">Deep, with audit, risk and assurance teams in house</td>
               <td className="p-3 border border-gray-200 bg-orange-50">Human approval steps and logs built in</td>
             </tr>
-            <tr className="odd:bg-white even:bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">Watch out for</td>
-              <td className="p-3 border border-gray-200">Key-person risk in the smallest teams</td>
-              <td className="p-3 border border-gray-200">Programmes sized for large organisations</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">Not the right choice if you need people on site every week</td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -883,7 +877,7 @@ export const post: BlogPost = {
         <strong>How to read this.</strong> The low figures buy a diagnosis: a workshop, an audit or a two-week review. The high figures buy a working system connected to your software. Where VAT is not mentioned, ask. OpenKit and Generativ both say outside licences or usage charges sit on top of their fee, and that is common.
       </p>
       <p className="mb-6">
-        For build costs, running costs and day rates across the UK market, read our <a href="/blog/ai-cost-uk-2026" className={link}>AI cost guide for the UK (2026)</a>. FactoryJet does not publish a rate card; we give a fixed quote per stage after a free call.
+        For build costs and day rates across the UK market, read our <a href="/blog/ai-cost-uk-2026" className={link}>AI cost guide for the UK (2026)</a>. FactoryJet does not publish a rate card; we give a fixed quote per stage after a free call.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Which kind of AI consultancy fits your business?</h2>
@@ -940,7 +934,7 @@ export const post: BlogPost = {
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">7. Plan for month three and month twelve</summary>
-          <p className="mt-3 text-gray-700">Software your AI connects to will change, and automations quietly break. Ask who watches for failed runs and what support costs. Helium42 designs for your team to run the system alone by day 90; OpenKit plans a handover with documentation. Ask every firm for its version of that.</p>
+          <p className="mt-3 text-gray-700">Software your AI connects to will change, and automations quietly break. Ask who watches for failed runs. Helium42 designs for your team to run the system alone by day 90; OpenKit plans a handover with documentation. Ask every firm for its version of that.</p>
         </details>
       </div>
 
@@ -966,15 +960,12 @@ export const post: BlogPost = {
         <li><strong>No plan for month three.</strong> If support is missing from the proposal, expect to pay for surprises later.</li>
       </ol>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">Where FactoryJet fits, and where it does not</h2>
+      <h2 className="text-2xl font-bold mt-10 mb-4">Where FactoryJet fits</h2>
       <p className="mb-4">
         We are FactoryJet. We have served 500+ businesses since 2014, most of that time in commerce: online stores, B2B ordering and the operations behind them. Our founder, Bhavesh Barot, is involved in every project. For UK clients we run an AI readiness assessment, tell you whether to buy a tool or build one, and then design, build and support the AI agent or integration if a build is the right call. You own what we build.
       </p>
       <p className="mb-4">
         <strong>Where we fit:</strong> UK small and mid-size businesses that sell online or run order-heavy operations and want the advice and the build from one team. Buyers who want to see working software on their own data before they sign a contract, a fixed quote per stage and a team that stays after launch.
-      </p>
-      <p className="mb-4">
-        <strong>Where we do not:</strong> If you want workshops in your building, pick a firm near you. If you need security-cleared consultants, Aiimi says all of its are. If you buy through G-Cloud, Winder.AI can contract that way. For a Microsoft 365 Copilot roll-out, Transparity is the natural fit, and for Google Cloud data work, Datatonic. If your board wants a strategy paper from a known name, that is Big Four ground.
       </p>
       <p className="mb-6">
         Our services for UK businesses: <a href="/uk/ai-consulting" className={link}>AI consulting</a>, <a href="/uk/ai-agents" className={link}>AI agent development</a> and <a href="/uk/ai-development" className={link}>custom AI development</a>. If you are still working out what you need, read <a href="/blog/what-does-an-ai-automation-agency-do-uk" className={link}>what an AI automation agency does</a> and <a href="/blog/how-to-build-an-ai-agent-uk-2026" className={link}>how to build an AI agent in the UK</a>.

@@ -38,7 +38,7 @@ const FIRMS: Firm[] = [
     platforms: 'Email, CRM, accounting and job management tools (no brands named on the page we read)',
     what: 'Its AI page sells one job at a time: sort enquiries, prepare replies, route documents, chase quotes and update job records, with a person approving anything uncertain. It prints its prices: from £2,000 for one focused automation, with most businesses spending £5,000 to £15,000 across several workflows, all excluding VAT. It also sells its own AI receptionist.',
     bestFor: 'A small office buried in admin that wants one workflow fixed at a price it can see before the first call.',
-    ask: 'Which of your systems it has connected before, and what the optional monthly retainer covers.',
+    ask: 'Which of your systems it has connected before.',
   },
   {
     name: 'Augustova',
@@ -52,7 +52,7 @@ const FIRMS: Firm[] = [
     platforms: 'Custom builds; it runs two AI products of its own, GoRizzume and Onrolo',
     what: 'A fixed-price AI audit (£2,500 to £6,000), then a build. Its home page lists a first agent from £4,000, custom software from £8,000 to £30,000 with the code owned by the client from day one, and a startup MVP (a first working version of a product) from £10,000. It also offers AI training and adoption work.',
     bestFor: 'Small firms and founders who want an audit and a first agent from the same London team, with prices in the open.',
-    ask: 'What the £4,000 first agent includes, and what it costs to run each month after launch.',
+    ask: 'What the £4,000 first agent includes.',
   },
   {
     name: 'Softomate Solutions',
@@ -64,9 +64,9 @@ const FIRMS: Firm[] = [
     type: 'AI agents, chatbots, voice agents and business automation',
     clients: 'London businesses, with professional services firms named most often',
     platforms: 'LangGraph, CrewAI and OpenAI; it adds AI to Odoo, HubSpot, Salesforce and GoHighLevel',
-    what: 'Agent systems that research, draft and act across CRM, email and internal tools, with approval gates and a log of each decision. Its page prices a single-agent proof of concept from £6,500 and a multi-agent platform up to £45,000, as fixed fees after a discovery workshop, with care from £399 a month. Prices exclude VAT. It also builds voice agents and WhatsApp chatbots.',
+    what: 'Agent systems that research, draft and act across CRM, email and internal tools, with approval gates and a log of each decision. Its page prices a single-agent proof of concept from £6,500 and a multi-agent platform up to £45,000, as fixed fees after a discovery workshop, and it sells a monthly care plan. Prices exclude VAT. It also builds voice agents and WhatsApp chatbots.',
     bestFor: 'London professional services firms that want a fixed fee for a first agent and a named monthly care plan.',
-    ask: 'Which approval gates stay on after the first month, and which platform and usage costs sit outside the fee.',
+    ask: 'Which approval gates stay on after the first month.',
   },
   {
     name: 'Flowio',
@@ -108,7 +108,7 @@ const FIRMS: Firm[] = [
     platforms: 'Custom agents wired into client APIs; it runs its own agent, AgentWise, in production',
     what: 'Agent design, integration, guardrails and monitoring for agents that can change records or spend money. Irreversible actions go through human approval, and every agent ships with tracing and logs. Its page prices discovery from £5,000 and says production builds typically start around £30,000 and take six to ten weeks.',
     bestFor: 'Software companies and scale-ups adding an agent to a live product, where a mistake is expensive.',
-    ask: 'What the monthly monitoring retainer covers, and how handover to your own engineers works.',
+    ask: 'How handover to your own engineers works.',
   },
   {
     name: 'Magora',
@@ -122,7 +122,7 @@ const FIRMS: Firm[] = [
     platforms: 'OpenAI, Anthropic Claude, Google Gemini, open models, LangChain and LlamaIndex',
     what: 'Document agents, workflow agents that work across CRM and ERP, customer service agents and knowledge agents. It builds a free coded prototype in 5 to 10 working days before any paid work. Its page, dated 29 September 2026, prices a one-workflow agent from £20,000 and says adding AI to an existing application typically runs £20,000 to £80,000.',
     bestFor: 'Teams that want to see a working prototype on their own documents before they commit a budget.',
-    ask: 'Who owns the prototype if you stop there, and what the monthly support fee includes.',
+    ask: 'Who owns the prototype if you stop there.',
   },
   {
     name: 'Geeks Ltd',
@@ -176,9 +176,9 @@ const FIRMS: Firm[] = [
     type: 'Custom-coded AI software and private, on-premise AI',
     clients: 'SMBs to enterprises; it names healthcare, dental and other regulated firms',
     platforms: 'Custom code, with on-premise deployment where data is sensitive',
-    what: 'AI software written as code, with private set-ups on your own machines for firms that cannot send data to a cloud service. It is ISO 27001:2022 and Cyber Essentials certified. It sells on a 12-month retainer: its site says existing systems from £4,000 a month and new builds from £6,000. The client owns the code, and hosting and model costs are paid direct to the provider.',
+    what: 'AI software written as code, with private set-ups on your own machines for firms that cannot send data to a cloud service. It is ISO 27001:2022 and Cyber Essentials certified. It sells on a 12-month retainer. The client owns the code, and hosting and model costs are paid direct to the provider.',
     bestFor: 'North East firms and regulated businesses that want AI kept on their own machines and can commit to a 12-month term.',
-    ask: 'How many engineering hours the retainer buys each month, and what happens to the system if you leave after the term.',
+    ask: 'What happens to the system if you leave after the term.',
   },
   {
     name: 'Tom&Co',
@@ -234,7 +234,7 @@ const FIRMS: Firm[] = [
     platforms: 'Shopify, WooCommerce, Xero, Sage, HubSpot, Odoo, NetSuite, SAP Business One, ERPNext, and OpenAI, Anthropic and Google models',
     what: 'We map the process, then design, build and support custom AI agents, AI receptionists and customer service agents inside the tools you already use, with human approval steps. Our strongest ground is where AI meets online stores, order handling, finance and operations. The founder is involved in every project, you own what we build, and we show working software on your own data before a contract.',
     bestFor: 'Ecommerce and operations-heavy SMBs that want one team for the store, the integrations and the AI.',
-    ask: 'Whether a remote team suits you. If you need someone on site every week, pick a firm from this list with an office near you. Ask us, as you would any supplier, where your data is stored and how it is protected.',
+    ask: 'Ask us, as you would any supplier, where your data is stored and how it is protected.',
   },
 ];
 
@@ -264,7 +264,7 @@ const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
   {
     key: 'commerce',
     heading: 'Who provides reliable e-commerce AI agents for automation?',
-    intro: 'One entry here, and it is ours, so read it with that in mind. Two firms above also know online retail: Tom&Co built ecommerce platforms for over a decade, and Green Arrow names Shopify among the systems its agents work in. Both have UK offices. We do not.',
+    intro: 'One entry here, and it is ours, so read it with that in mind. Two firms above also know online retail: Tom&Co built ecommerce platforms for over a decade, and Green Arrow names Shopify among the systems its agents work in.',
   },
 ];
 
@@ -285,13 +285,12 @@ const REGIONS: { where: string; seen: string }[] = [
 // These are the firms' figures, not FactoryJet prices.
 const PRICES: { firm: string; figure: string; vat: string; source: string }[] = [
   { firm: 'Supersede AI', figure: '90-minute diagnostic with a follow-up report: £250', vat: 'Not stated', source: 'https://supersede.media/' },
-  { firm: 'Happy Webs', figure: 'Agent projects from £2,000 for one focused automation; most businesses £5,000 to £15,000; optional retainer from £500 a month', vat: 'Excludes VAT', source: 'https://happywebs.co.uk/services/ai-agents/' },
+  { firm: 'Happy Webs', figure: 'Agent projects from £2,000 for one focused automation; most businesses £5,000 to £15,000', vat: 'Excludes VAT', source: 'https://happywebs.co.uk/services/ai-agents/' },
   { firm: 'Augustova', figure: 'AI audit £2,500 to £6,000; first agent from £4,000; custom software £8,000 to £30,000', vat: 'Not stated', source: 'https://www.augustova.co.uk/' },
-  { firm: 'Softomate Solutions', figure: 'Single-agent proof of concept from £6,500; multi-agent platform up to £45,000; care from £399 a month', vat: 'Excludes VAT', source: 'https://www.softomatesolutions.com/agentic-ai-development-london/' },
+  { firm: 'Softomate Solutions', figure: 'Single-agent proof of concept from £6,500; multi-agent platform up to £45,000', vat: 'Excludes VAT', source: 'https://www.softomatesolutions.com/agentic-ai-development-london/' },
   { firm: 'Pixelfield', figure: 'Discovery from £5,000; production agent builds typically from around £30,000', vat: 'Not stated', source: 'https://pixelfield.co.uk/ai-development-services/ai-agents-development/' },
   { firm: 'OpenKit', figure: 'AI Audit from £10,000; the build is scoped and priced after the audit', vat: 'Not stated', source: 'https://openkit.co.uk/ai-services/ai-agents' },
-  { firm: 'Magora', figure: 'Free prototype, then a discovery sprint from £3,000; one-workflow agent from £20,000; adding AI to an existing application typically £20,000 to £80,000; support £3,500 to £9,000 a month', vat: 'Not stated', source: 'https://magora-systems.com/ai-agent-development-uk/' },
-  { firm: 'Ayoob AI', figure: '12-month retainer: existing systems from £4,000 a month, new builds from £6,000', vat: 'Not stated', source: 'https://ayoob.ai/' },
+  { firm: 'Magora', figure: 'Free prototype, then a discovery sprint from £3,000; one-workflow agent from £20,000; adding AI to an existing application typically £20,000 to £80,000', vat: 'Not stated', source: 'https://magora-systems.com/ai-agent-development-uk/' },
 ];
 
 const FAQS: FAQItem[] = [
@@ -357,7 +356,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Do UK AI agencies publish their prices?",
-    a: "Eight of the fourteen UK firms we profile publish at least one figure on their own site. They run from a £250 diagnostic (Supersede AI) and £2,000 for one automation (Happy Webs) to £20,000 to £80,000 for adding AI to an existing application (Magora). The other six quote after a call. The price table in this guide copies each figure with a link to its source and notes whether VAT is included.",
+    a: "Seven of the fourteen UK firms we profile publish at least one project price on their own site. They run from a £250 diagnostic (Supersede AI) and £2,000 for one automation (Happy Webs) to £20,000 to £80,000 for adding AI to an existing application (Magora). Ayoob AI sells on a 12-month retainer, and the other six quote after a call. The price table in this guide copies each project price with a link to its source and notes whether VAT is included.",
   },
   {
     q: "What is an AI automation agency?",
@@ -434,9 +433,9 @@ export const post: BlogPost = {
   keyTakeaways: [
     'There is no single best AI agent development company in the UK. Match the firm to your size, your systems and how sensitive your data is.',
     "Every fact below was read on each firm's own website on 9 October 2026. None of them paid to be here, and the order is not a ranking.",
-    'Eight of the fourteen UK firms publish a price on their own site. First steps run from a £250 diagnostic to a £10,000 audit, and build figures from £2,000 for one automation to £20,000 to £80,000 for adding AI to an existing application.',
+    'Seven of the fourteen UK firms publish a project price on their own site. First steps run from a £250 diagnostic to a £10,000 audit, and build figures from £2,000 for one automation to £20,000 to £80,000 for adding AI to an existing application.',
     'The ONS says AI use among UK businesses with 10 or more employees rose from around 12% to around 35% since late 2023.',
-    'FactoryJet is on this list. We work remotely with UK clients; if you need someone on site every week, choose a firm near you.',
+    'FactoryJet is on this list. We work remotely with UK clients.',
   ],
   faqs: FAQS,
   content: (
@@ -455,7 +454,7 @@ export const post: BlogPost = {
                 'Compare 15 UK AI agent development companies and AI automation agencies: where each is based, who it suits, published prices and how to choose.',
               inLanguage: 'en-GB',
               datePublished: '2026-10-09',
-              dateModified: '2026-10-09',
+              dateModified: '2026-10-11',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI agent development companies and AI automation agencies in the United Kingdom' },
@@ -547,7 +546,7 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-10 mb-4">How we built this list</h2>
       <ol className="list-decimal pl-6 mb-6 space-y-2">
         <li><strong>Start with what buyers ask.</strong> The questions came from our UK Search Console data, from the question boxes Google shows for searches such as &ldquo;ai automation agency&rdquo;, and from prompts we wrote for the UK market. We read the answers on 9 October 2026 and logged every company and page named.</li>
-        <li><strong>Keep firms that show a UK base on their own site.</strong> All 14 name a UK street, building or district. Overseas firms with a UK landing page were left out, with one disclosed exception: us.</li>
+        <li><strong>Keep firms that show a UK base on their own site.</strong> All 14 name a UK street, building or district.</li>
         <li><strong>Builders only.</strong> Every firm here writes or configures the agent itself. Firms that only advise are on our sister guide to <a href="/blog/best-ai-consultancies-uk-2026" className="text-[#B23E13] underline">the best AI consultancies in the UK</a>.</li>
         <li><strong>Read the source.</strong> Every description comes from the firm&rsquo;s own pages, opened on 9 October 2026 and linked on each profile. One site refused our script, so we read it in a browser.</li>
         <li><strong>No scores we cannot prove.</strong> We have not hired these firms, so there are no star ratings. We tell you who each one suits and a question worth asking it.</li>
@@ -648,7 +647,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How much does it cost to build a custom AI agent in the UK?</h2>
       <p className="mb-4">
-        Most firms quote after a call. Eight of the fourteen UK firms in this guide publish at least one figure on their own site. We copied them on 9 October 2026. These are each firm&rsquo;s own published figures. They are not FactoryJet prices and they are not a market survey. Check the source before you rely on one, because firms change their prices.
+        Most firms quote after a call. Seven of the fourteen UK firms in this guide publish at least one project price on their own site. We copied them on 9 October 2026. These are each firm&rsquo;s own published figures. They are not FactoryJet prices and they are not a market survey. Check the source before you rely on one, because firms change their prices.
       </p>
       <div className="overflow-x-auto mb-4 not-prose">
         <table className="w-full border-collapse text-sm">
@@ -675,7 +674,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
-        <strong>How to read this.</strong> The small figures buy a diagnostic, an audit or a single automation between two tools. The large ones buy custom software, several connected systems and support. Only two of the eight pages say their prices exclude VAT, so ask the other six. Two firms, Softomate and Ayoob AI, state that platform, hosting or model usage costs sit outside their fee. Assume the same of everyone until told otherwise.
+        <strong>How to read this.</strong> The small figures buy a diagnostic, an audit or a single automation between two tools. The large ones buy custom software, several connected systems and support. Only two of the seven pages say their prices exclude VAT, so ask the other five. Two firms, Softomate and Ayoob AI, state that platform, hosting or model usage costs sit outside their fee.
       </p>
       <p className="mb-6">
         For sourced market ranges covering agents, chatbots, receptionists and consulting day rates, read our <a href="/blog/ai-cost-uk-2026" className="text-[#B23E13] underline">AI cost guide for the UK (2026)</a>. FactoryJet does not publish a rate card. We quote a fixed price in writing after a short scoping call.
@@ -727,7 +726,7 @@ export const post: BlogPost = {
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">6. Plan for month three</summary>
-          <p className="mt-3 text-gray-700">The software your agent connects to will change, and automations break quietly. Published support fees on these sites run from £399 a month (Softomate) and £500 a month (Happy Webs) to £3,500 to £9,000 a month (Magora), which shows how far the scope can differ. Ask who watches for failed runs and how fast they respond.</p>
+          <p className="mt-3 text-gray-700">The software your agent connects to will change, and automations break quietly. Ask who watches for failed runs and how fast they respond.</p>
         </details>
       </div>
 
@@ -780,12 +779,6 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200">Formal frameworks and deep governance teams</td>
               <td className="p-3 border border-gray-200 bg-orange-50">UK or EU hosting on request</td>
             </tr>
-            <tr className="odd:bg-white even:bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">Watch out for</td>
-              <td className="p-3 border border-gray-200">Reliance on one or two people in a small team</td>
-              <td className="p-3 border border-gray-200">Budgets sized for large organisations</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">Not right if you need people on site every week</td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -813,15 +806,12 @@ export const post: BlogPost = {
         <li><strong>No UK base you can check.</strong> Every UK firm above names a street, building or district on its own site. If you cannot find one, or a company number, ask why.</li>
       </ol>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">Where FactoryJet fits, and where it does not</h2>
+      <h2 className="text-2xl font-bold mt-10 mb-4">Where FactoryJet fits</h2>
       <p className="mb-4">
         We are FactoryJet. We have served 500+ businesses since 2014, most of that time in commerce: online stores, B2B ordering and the operations behind them. Our founder, Bhavesh Barot, is involved in every project. We design, build, integrate and support AI agents, AI receptionists and customer service agents, and you own everything we build.
       </p>
       <p className="mb-4">
         <strong>Where we fit:</strong> UK SMBs that sell online or run order-heavy operations and want one team for the store, the integrations (Shopify, Xero, Sage, HubSpot, Odoo) and the AI. Before a contract, we show working software on your own data. We quote a fixed price in writing after a short scoping call, and we stay on after launch.
-      </p>
-      <p className="mb-4">
-        <strong>Where we do not:</strong> If you need people in your building every week, choose one of the firms above with an office near you. If your project is a Microsoft Copilot roll-out, BCN is a more natural fit. If your data must stay on your own machines, look at Ayoob AI or OpenKit. If your own engineers will maintain the agent inside your product, Pixelfield and Magora write for exactly that buyer.
       </p>
       <p className="mb-6">
         If you are still working out what you need, these explain the options in plain English: <a href="/blog/how-to-build-an-ai-agent-uk-2026" className="text-[#B23E13] underline">how to build an AI agent in the UK</a> and <a href="/blog/what-does-an-ai-automation-agency-do-uk" className="text-[#B23E13] underline">what an AI automation agency does</a>. For workflow automation, see the <a href="/blog/best-ai-automation-agencies-uk-2026" className="text-[#B23E13] underline">best AI automation agencies in the UK</a>, and for online stores see <a href="/blog/best-shopify-plus-agencies-uk-2026" className="text-[#B23E13] underline">Shopify Plus agencies for UK brands</a>.

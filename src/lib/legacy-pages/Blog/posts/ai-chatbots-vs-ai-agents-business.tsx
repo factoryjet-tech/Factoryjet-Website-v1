@@ -21,7 +21,7 @@ export const post: BlogPost = {
     'AI chatbots respond to questions in a single turn, like a smart FAQ widget. AI agents complete multi-step tasks across multiple tools, like a junior employee that finishes the job, not just answers the door.',
     'Use a chatbot when the task is transactional, single-step, and high-volume: support deflection, FAQ answering, lead capture forms, store hours, return policy lookups.',
     'Use an AI agent when the task requires judgment, multiple tool calls, or follow-through: qualifying a lead against your ICP, booking an appointment in your calendar, processing a quote request end-to-end.',
-    'Typical US SMB cost ranges in 2026: chatbots $2,000–$15,000 to build, $50–$400/month to run. AI agents $15,000–$75,000 to build, $200–$1,200/month to run.',
+    'Typical US SMB build cost ranges in 2026: chatbots $2,000–$15,000, AI agents $15,000–$75,000.',
     "Buy when an off-the-shelf product (Intercom, Drift, Zendesk Answer Bot) covers 80%+ of your needs. Build when you have specific workflows, proprietary data, or integrations no SaaS vendor handles.",
     'The hybrid setup is the most common 2026 SMB pattern: a chatbot handles tier-1 questions on the website, and an AI agent runs behind the scenes to qualify, route, and follow up on the conversations the bot captures.',
     'Compliance basics for US SMBs: SOC 2 Type II on your vendor, US data residency for regulated industries, and a documented PII handling policy, non-negotiable, even at the chatbot tier.',
@@ -37,7 +37,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much should a US small business expect to spend?',
-      a: "Realistic 2026 ranges. Chatbots: off-the-shelf SaaS like Intercom Fin, Drift, or Zendesk Answer Bot runs $50–$400/month with a 1–2 week setup. Custom-built chatbots run $2,000–$15,000 upfront plus $100–$300/month for hosting and LLM API calls. AI agents: production-grade builds for SMBs typically land between $15,000 and $75,000 depending on integration depth, with $200–$1,200/month in operating costs. Voice agents and multi-tool agents that touch your CRM, calendar, and email cost more than text-only ones.",
+      a: "Realistic 2026 ranges. Chatbots: off-the-shelf SaaS like Intercom Fin, Drift, or Zendesk Answer Bot runs $50–$400/month with a 1–2 week setup. Custom-built chatbots run $2,000–$15,000 upfront. AI agents: production-grade builds for SMBs typically land between $15,000 and $75,000 depending on integration depth. Voice agents and multi-tool agents that touch your CRM, calendar, and email cost more than text-only ones. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.",
     },
     {
       q: 'Do I need both a chatbot and an AI agent?',
@@ -125,7 +125,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What an AI Agent Actually Is</h2>
       <p className="mb-4">
-        An AI agent uses the same underlying LLM but adds a critical layer: <strong>tools</strong>. The agent can call your CRM API to check whether a prospect already exists. It can read your calendar to find an open slot. It can write a draft email to your inbox. It can update a HubSpot deal stage. It can pull a customer's order history before answering a refund request. And it decides, turn by turn, which tool to use and when. If you want the standalone definition rather than the comparison, along with what an agent costs to run, start with <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">what an AI agent is and what it costs</a>.
+        An AI agent uses the same underlying LLM but adds a critical layer: <strong>tools</strong>. The agent can call your CRM API to check whether a prospect already exists. It can read your calendar to find an open slot. It can write a draft email to your inbox. It can update a HubSpot deal stage. It can pull a customer's order history before answering a refund request. And it decides, turn by turn, which tool to use and when. If you want the standalone definition rather than the comparison, along with what an agent costs, start with <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">what an AI agent is and what it costs</a>.
       </p>
       <p className="mb-4">
         Four real US SMB agent deployments:
@@ -188,16 +188,11 @@ export const post: BlogPost = {
               <td className="border p-3">$15K–$75K</td>
             </tr>
             <tr className="bg-white">
-              <td className="border p-3"><strong>Monthly run cost</strong></td>
-              <td className="border p-3">$50–$400</td>
-              <td className="border p-3">$200–$1,200</td>
-            </tr>
-            <tr className="bg-gray-50">
               <td className="border p-3"><strong>Maintenance burden</strong></td>
               <td className="border p-3">Low, update FAQs occasionally</td>
               <td className="border p-3">Medium, workflows evolve, integrations break, prompts get tuned</td>
             </tr>
-            <tr className="bg-white">
+            <tr className="bg-gray-50">
               <td className="border p-3"><strong>Closest US comparables</strong></td>
               <td className="border p-3">Intercom Fin, Drift, Zendesk Answer Bot</td>
               <td className="border p-3">Custom builds (LangChain, OpenAI Assistants, Anthropic tool-use)</td>
@@ -268,13 +263,13 @@ export const post: BlogPost = {
         <strong>Chatbot, off-the-shelf SaaS.</strong> Intercom Fin, Drift, Zendesk Answer Bot, Tidio. $50–$400/month depending on volume. Setup time: 1–2 weeks. Best for: standard FAQ deflection, support handoff, simple lead capture. Limitation: generic, doesn't know your business deeply, no custom integrations beyond what the platform supports.
       </p>
       <p className="mb-4">
-        <strong>Chatbot, custom build.</strong> $2,000–$15,000 upfront, $100–$300/month in hosting and LLM API costs. Setup time: 2–3 weeks. Best for: SMBs with proprietary data, non-standard tone of voice, or specific integration needs the SaaS vendors don't cover. Limitation: more upfront work and more dependency on the team that built it.
+        <strong>Chatbot, custom build.</strong> $2,000–$15,000 upfront. Setup time: 2–3 weeks. Best for: SMBs with proprietary data, non-standard tone of voice, or specific integration needs the SaaS vendors don't cover. Limitation: more upfront work and more dependency on the team that built it.
       </p>
       <p className="mb-4">
-        <strong>AI agent, single workflow.</strong> $15,000–$30,000 upfront, $200–$600/month. Setup time: 3–5 weeks. Best for: solving one painful, repetitive multi-step process, lead qualification, appointment booking, refund handling.
+        <strong>AI agent, single workflow.</strong> $15,000–$30,000 upfront. Setup time: 3–5 weeks. Best for: solving one painful, repetitive multi-step process, lead qualification, appointment booking, refund handling.
       </p>
       <p className="mb-4">
-        <strong>AI agent, multi-workflow or multi-tool.</strong> $30,000–$75,000 upfront, $400–$1,200/month. Setup time: 6–12 weeks. Best for: SMBs that want one agent system handling several connected workflows across CRM, calendar, email, billing, and helpdesk.
+        <strong>AI agent, multi-workflow or multi-tool.</strong> $30,000–$75,000 upfront. Setup time: 6–12 weeks. Best for: SMBs that want one agent system handling several connected workflows across CRM, calendar, email, billing, and helpdesk.
       </p>
       <p className="mb-4">
         FactoryJet scopes AI agent work for US SMBs in tiers: <strong>Starter</strong> (single workflow, 7-day delivery), <strong>Growth</strong> (multi-step agent with CRM integration), <strong>Scale</strong> (multi-agent system with custom tooling), and an Enterprise tier for complex builds. Each one gets a fixed price in writing after a short scoping call. Custom chatbots typically fit inside the Starter or Growth tiers depending on integration depth.

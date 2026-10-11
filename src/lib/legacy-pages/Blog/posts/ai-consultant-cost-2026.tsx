@@ -51,11 +51,11 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does it cost to hire an AI consultant?',
-    a: 'Most small businesses start with a paid assessment, then one build. Layer3 Labs puts a discovery engagement at $2,000 to $5,000 and a first production workflow at $5,000 to $25,000. Justin McKelvey puts an assessment at about $2,000 to $10,000 and a first done-for-you install at about $4,500 to $25,000. So a first year with one workflow and no monthly retainer adds up to roughly $7,000 to $30,000 on the Layer3 Labs figures.',
+    a: 'Most small businesses start with a paid assessment, then one build. Layer3 Labs puts a discovery engagement at $2,000 to $5,000 and a first production workflow at $5,000 to $25,000. Justin McKelvey puts an assessment at about $2,000 to $10,000 and a first done-for-you install at about $4,500 to $25,000. So an assessment plus one workflow adds up to roughly $7,000 to $30,000 on the Layer3 Labs figures.',
   },
   {
     q: 'What is a reasonable consulting fee?',
-    a: 'A reasonable fee is one where the pricing model fits the job. Hourly is fair when nobody can define the scope yet. A fixed project fee is fair once the scope is written down, because the consultant carries the risk of running over. A retainer is fair when it buys a stated number of hours and you can leave with 30 days of notice. For AI work in the US, published hourly ranges run $75 to $400 for independents (Layer3 Labs and Justin McKelvey, read 9 October 2026).',
+    a: 'A reasonable fee is one where the pricing model fits the job. Hourly is fair when nobody can define the scope yet. A fixed project fee is fair once the scope is written down, because the consultant carries the risk of running over. For AI work in the US, published hourly ranges run $75 to $400 for independents (Layer3 Labs and Justin McKelvey, read 9 October 2026).',
   },
   {
     q: 'How much does it cost to hire AI?',
@@ -71,11 +71,11 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does AI consulting cost?',
-    a: 'Consultant Justin McKelvey splits AI consulting into four jobs: an assessment, an implementation, training, and a retainer to keep it working. Each has its own price. Layer3 Labs puts an assessment at $2,000 to $5,000, a first workflow at $5,000 to $25,000, a multi-workflow platform at $25,000 to $75,000 and an enterprise system at $50,000 to more than $200,000. Its retainers run $2,500 to $15,000 a month. Ask which of the four jobs a quote covers.',
+    a: 'Consultant Justin McKelvey splits AI consulting into four jobs: an assessment, an implementation, training, and a retainer to keep it working. Each has its own price. Layer3 Labs puts an assessment at $2,000 to $5,000, a first workflow at $5,000 to $25,000, a multi-workflow platform at $25,000 to $75,000 and an enterprise system at $50,000 to more than $200,000. Ask which of the four jobs a quote covers.',
   },
   {
     q: 'What is a fair consulting fee?',
-    a: 'Fair means you can check what you paid for. Ask for the fee as a fixed price against a written scope, with the systems, tests and handover listed. In a Consulting Success study of nearly 1,000 consultants in all fields, 30 percent price by the project and 29 percent by the hour, so both are normal. A quote with no written scope, or a retainer with no stated hours, is the unfair one, whatever the number on it.',
+    a: 'Fair means you can check what you paid for. Ask for the fee as a fixed price against a written scope, with the systems, tests and handover listed. In a Consulting Success study of nearly 1,000 consultants in all fields, 30 percent price by the project and 29 percent by the hour, so both are normal. A quote with no written scope is the unfair one, whatever the number on it.',
   },
   {
     q: 'Is consulting worth the money?',
@@ -100,7 +100,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does an AI consulting retainer cost per month?',
-    a: 'Layer3 Labs puts retainers at $2,500 to $15,000 a month: $2,500 to $4,000 to maintain one workflow, $4,000 to $8,000 for two to four, and $8,000 to $15,000 with active development. Justin McKelvey says post-install retainers for small businesses run around $1,500 a month. Layer3 Labs also says simple, stable workflows rarely need a retainer after a 30-day settling-in period. Ask for a stated number of hours and a 30-day exit.',
+    a: 'It depends on how many workflows the retainer covers and whether new development is included, which is how Layer3 Labs tiers its own. We print no market figure for retainers on this page. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to.',
   },
   {
     q: 'What does the US government pay for AI consultants?',
@@ -117,15 +117,15 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much do AI agencies charge?',
-    a: 'Clutch, in a pricing guide updated 21 September 2026, lists US AI development companies at $50 to $99 an hour and says projects reviewed on its site usually cost $10,000 to $49,999. Layer3 Labs puts agency projects at $5,000 to $75,000 and retainers at $3,000 to $20,000 a month. Second Talent puts US agencies and development shops at $180 to $490 an hour for AI agent work. The sources disagree widely, so ask each agency who builds the work and where.',
+    a: 'Clutch, in a pricing guide updated 21 September 2026, lists US AI development companies at $50 to $99 an hour and says projects reviewed on its site usually cost $10,000 to $49,999. Layer3 Labs puts agency projects at $5,000 to $75,000. Second Talent puts US agencies and development shops at $180 to $490 an hour for AI agent work. The sources disagree widely, so ask each agency who builds the work and where.',
   },
   {
     q: 'Is it cheaper to hire an AI engineer or use an AI consultant?',
-    a: 'For a first project, the consultant. One workflow with an assessment and ten months of light upkeep comes to $32,000 to $70,000 on Layer3 Labs figures. One employed developer for a year costs about $136,000 to $364,000 once benefits and a recruiter fee are added to Bureau of Labor Statistics wages. The hire starts to pay when you can fill the hours: at boutique rates of $125 to $250 an hour, the lowest-cost employee equals about 480 to 950 hours of consulting.',
+    a: 'For a first project, the consultant. An assessment plus one workflow comes to $7,000 to $30,000 on Layer3 Labs figures. One employed developer for a year costs about $136,000 to $364,000 once benefits and a recruiter fee are added to Bureau of Labor Statistics wages. The hire starts to pay when you can fill the hours: at boutique rates of $125 to $250 an hour, the lowest-cost employee equals about 480 to 950 hours of consulting.',
   },
   {
     q: 'How much does it cost to have your own AI agent?',
-    a: 'That is a build cost, and we cover it in a separate guide on this site. Development firm ProductCrafters puts custom AI agent builds at about $5,000 to more than $180,000 in its 2026 breakdown. The people cost on this page sits inside that figure, because someone has to scope, build and look after the agent. Our AI agent development cost guide works through the three numbers behind an agent: running it, renting one and building one.',
+    a: 'That is a build cost, and we cover it in a separate guide on this site. Development firm ProductCrafters puts custom AI agent builds at about $5,000 to more than $180,000 in its 2026 breakdown. The people cost on this page sits inside that figure, because someone has to scope, build and look after the agent. Our AI agent development cost guide covers the build in more detail.',
   },
   {
     q: 'Is a no-code AI agent platform cheaper than hiring developers?',
@@ -167,7 +167,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 9, 2026',
-  dateModified: 'Oct 9, 2026',
+  dateModified: 'Oct 11, 2026',
   readTime: '21 min read',
   imageUrl: '/blog-images/ai-consultant-cost-2026-hero.webp',
   imageAlt:
@@ -183,7 +183,7 @@ export const post: BlogPost = {
     'Day rates for independents run $600 to $1,200 (Dan Cumberland Labs). Divided by eight hours that is $75 to $150 an hour, the same as the Layer3 Labs freelance band.',
     'The US government publishes what it can be charged: 167 artificial intelligence labor rates from 50 contractors on 9 October 2026, with the middle half at $142.28 to $257.97 an hour.',
     'An employed software developer earns $82,460 to $214,670 (Bureau of Labor Statistics, middle 80 percent). With benefits and a recruiter fee, year one costs about $136,000 to $364,000.',
-    'Over 12 months, one workflow with a consultant and light upkeep comes to $32,000 to $70,000 on published figures. The monthly retainer is more than half of that.',
+    'An employee only costs less if the hours get used. The lowest employer cost, $119,162, buys 477 hours at $250 an hour and 953 hours at $125, the two ends of the Layer3 Labs boutique band.',
     'These are market ranges from named sources, not FactoryJet prices. FactoryJet quotes a fixed price in writing after a short scoping call.',
   ],
   faqs,
@@ -221,7 +221,7 @@ export const post: BlogPost = {
       <p>
         This guide covers the people cost of AI: consultants, engineers, developers and agencies. It gives hourly, day and
         project rates, what a first paid step costs, what an employee or a freelancer costs by comparison, and a 12-month
-        view for a small business with the arithmetic shown. What the software itself costs to build and run is in our{' '}
+        view for a small business with the arithmetic shown. What the software itself costs to build is in our{' '}
         <a href="/blog/what-is-an-ai-agent-cost-2026">AI agent development cost guide</a>.
       </p>
       <p>
@@ -289,32 +289,27 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200">Same two pages</td>
             </tr>
             <tr className="bg-white">
-              <td className="p-3 border border-gray-200 font-semibold">Monthly retainer</td>
-              <td className="p-3 border border-gray-200">$2,500 to $15,000</td>
-              <td className="p-3 border border-gray-200">Layer3 Labs</td>
-            </tr>
-            <tr className="bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">Freelance AI agent developer, per hour</td>
               <td className="p-3 border border-gray-200">$95 to $235</td>
               <td className="p-3 border border-gray-200">
                 <a href={SRC.secondTalent} target="_blank" rel="noopener noreferrer">Second Talent</a>, 24 Sep 2026
               </td>
             </tr>
-            <tr className="bg-white">
+            <tr className="bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">AI development company</td>
               <td className="p-3 border border-gray-200">$50 to $99 an hour; projects $10,000 to $49,999</td>
               <td className="p-3 border border-gray-200">
                 <a href={SRC.clutch} target="_blank" rel="noopener noreferrer">Clutch</a>, updated 21 Sep 2026
               </td>
             </tr>
-            <tr className="bg-gray-50">
+            <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">Employed software developer, per year</td>
               <td className="p-3 border border-gray-200">$82,460 to $214,670 in wages (middle 80 percent)</td>
               <td className="p-3 border border-gray-200">
                 <a href={SRC.blsDev} target="_blank" rel="noopener noreferrer">Bureau of Labor Statistics</a>, May 2025 data
               </td>
             </tr>
-            <tr className="bg-white">
+            <tr className="bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">Federal ceiling rates for AI labor, per hour</td>
               <td className="p-3 border border-gray-200">$55.60 to $485.47; middle half $142.28 to $257.97</td>
               <td className="p-3 border border-gray-200">
@@ -388,8 +383,7 @@ export const post: BlogPost = {
           $3,500, and that fee applies toward a later build.
         </li>
         <li>
-          <strong>Justin McKelvey</strong> charges $2,500 flat for a two-week assessment, from $4,500 for a setup, and
-          $1,500 a month for a retainer he only offers after an install.
+          <strong>Justin McKelvey</strong> charges $2,500 flat for a two-week assessment and from $4,500 for a setup.
         </li>
         <li>
           <strong><a href={SRC.doser} target="_blank" rel="noopener noreferrer">Ryan Doser</a></strong> charges $500 an
@@ -485,8 +479,8 @@ export const post: BlogPost = {
 
       <h2 id="first-project">How much does it cost to hire an AI consultant for a first project?</h2>
       <p>
-        Buyers rarely pay by the hour for long. A first engagement is normally sold as up to three steps, each with its
-        own price.
+        Buyers rarely pay by the hour for long. A first engagement is normally sold as two priced steps, with upkeep
+        (monitoring, fixes and small changes) following after launch.
       </p>
       <div className="overflow-x-auto my-6">
         <table className="w-full border-collapse text-sm">
@@ -511,12 +505,6 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200">$5,000 to $25,000</td>
               <td className="p-3 border border-gray-200">About $4,500 to $25,000</td>
             </tr>
-            <tr className="bg-white">
-              <td className="p-3 border border-gray-200 font-semibold">Upkeep after launch</td>
-              <td className="p-3 border border-gray-200">Monitoring, fixes and small changes</td>
-              <td className="p-3 border border-gray-200">$2,500 to $4,000 a month for one workflow</td>
-              <td className="p-3 border border-gray-200">Around $1,500 a month</td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -525,10 +513,8 @@ export const post: BlogPost = {
         Alice Labs, citing ClearForge, puts fixed-fee AI diagnostics at $10,000 to $25,000.
       </p>
       <p>
-        Two details on those pages matter as much as the ranges. Layer3 Labs and McKelvey both credit their own assessment
-        fee toward the build if you go ahead, so ask any consultant whether theirs does the same. And Layer3 Labs says a
-        simple workflow on well-maintained tools rarely needs a retainer after a 30-day settling-in period, so the third
-        row is optional for many small businesses.
+        One detail on those pages matters as much as the ranges. Layer3 Labs and McKelvey both credit their own assessment
+        fee toward the build if you go ahead, so ask any consultant whether theirs does the same.
       </p>
 
       <h3 id="assessment-deliverables">What a paid assessment should hand you</h3>
@@ -586,7 +572,8 @@ export const post: BlogPost = {
         <a href={SRC.consultingSuccess} target="_blank" rel="noopener noreferrer">Consulting Success study</a> of nearly
         1,000 consultants, 30 percent price by the project, 29 percent by the hour, 16 percent on a monthly retainer, 15
         percent on value and 10 percent by the day. That study covers consultants of every kind, so read it as how the
-        trade prices. The dollar ranges in the table below come from AI sources.
+        trade prices. The table below takes the hourly, day, project and value-based models, with dollar ranges from AI
+        sources.
       </p>
       <div className="overflow-x-auto my-6">
         <table className="w-full border-collapse text-sm">
@@ -618,12 +605,6 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200">A fixed fee with no written scope</td>
             </tr>
             <tr className="bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">Monthly retainer</td>
-              <td className="p-3 border border-gray-200">$2,500 to $15,000 (Layer3 Labs); around $1,500 after a small install (McKelvey)</td>
-              <td className="p-3 border border-gray-200">It buys a stated number of hours and you can leave on 30 days of notice</td>
-              <td className="p-3 border border-gray-200">Paying for idle months</td>
-            </tr>
-            <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">Value-based</td>
               <td className="p-3 border border-gray-200">A share of the gain, 10 to 40 percent on The Crunch rate card. We found no dollar range we could verify.</td>
               <td className="p-3 border border-gray-200">The result can be counted from a baseline you both sign before work starts</td>
@@ -734,7 +715,7 @@ export const post: BlogPost = {
       </p>
       <p>
         <a href={SRC.layer3Agency} target="_blank" rel="noopener noreferrer">Layer3 Labs</a> puts agency projects at
-        $5,000 to $75,000 and agency retainers at $3,000 to $20,000 a month. Second Talent puts US agencies and development
+        $5,000 to $75,000. Second Talent puts US agencies and development
         shops at $180 to $490 an hour for AI agent work. Clutch and Second Talent sit roughly four to five times apart on
         the hourly rate, and we could not find a sample size on either page. So ask every agency the question Layer3 Labs
         recommends: who will build this, and where are they based?
@@ -795,7 +776,7 @@ export const post: BlogPost = {
       </div>
       <p>
         At 160 hours a month, Second Talent puts a mid-level US freelancer at $19,040 to $29,600. That is the cost of the
-        person. What the agent costs to build, run or rent is a separate sum, and we work through it in{' '}
+        person. What the agent costs to build is a separate sum, and we cover it in{' '}
         <a href="/blog/what-is-an-ai-agent-cost-2026">AI agent development cost in 2026</a>, where development firm{' '}
         <a href={SRC.productCrafters} target="_blank" rel="noopener noreferrer">ProductCrafters</a> puts builds at about
         $5,000 to more than $180,000.
@@ -808,7 +789,7 @@ export const post: BlogPost = {
       </p>
 
       <h2 id="price-drivers">What moves an AI consulting price up or down</h2>
-      <p>Seven things, each with a number from a page we read.</p>
+      <p>Six things, each with a number from a page we read.</p>
       <ol className="list-decimal pl-6 space-y-3 mb-6">
         <li>
           <strong>How many systems it connects to, and how old they are.</strong> Layer3 Labs sizes a link between two
@@ -835,10 +816,6 @@ export const post: BlogPost = {
           <a href={SRC.bosio} target="_blank" rel="noopener noreferrer">Bosio Digital</a> suggests adding 20 to 40 percent
           on top of the consulting fee for the work your own team must do for the project to land.
         </li>
-        <li>
-          <strong>Upkeep.</strong> Dan Cumberland Labs budgets 15 to 25 percent of the implementation cost each year for
-          maintenance.
-        </li>
       </ol>
       <p>
         You control part of this before you ask for a quote. Write down the one process you want handled, list the systems
@@ -848,7 +825,7 @@ export const post: BlogPost = {
 
       <h2 id="twelve-month-view">What does an AI consultant cost over 12 months? A worked view for a small business</h2>
       <p>
-        Take a small business that wants one workflow handled, such as sorting inbound quote requests. Here are four ways
+        Take a small business that wants one workflow handled, such as sorting inbound quote requests. Here are three ways
         to staff it for a year, built only from the published figures above. This is arithmetic on public ranges, not a
         quote.
       </p>
@@ -863,21 +840,13 @@ export const post: BlogPost = {
           </thead>
           <tbody>
             <tr className="bg-white">
-              <td className="p-3 border border-gray-200 font-semibold">Consultant, no retainer</td>
+              <td className="p-3 border border-gray-200 font-semibold">Consultant for the assessment and the build</td>
               <td className="p-3 border border-gray-200">
                 Assessment $2,000 to $5,000 + one workflow $5,000 to $25,000 (Layer3 Labs)
               </td>
               <td className="p-3 border border-gray-200 font-semibold">$7,000 to $30,000</td>
             </tr>
             <tr className="bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">Consultant with upkeep</td>
-              <td className="p-3 border border-gray-200">
-                The row above + 10 months of an entry retainer at $2,500 to $4,000, which is $25,000 to $40,000 (Layer3
-                Labs)
-              </td>
-              <td className="p-3 border border-gray-200 font-semibold">$32,000 to $70,000</td>
-            </tr>
-            <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">Freelance developer for the build</td>
               <td className="p-3 border border-gray-200">
                 160 to 320 hours, the range Dan Cumberland Labs gives for a ChatGPT integration, x $119 to $185 an hour
@@ -885,7 +854,7 @@ export const post: BlogPost = {
               </td>
               <td className="p-3 border border-gray-200 font-semibold">$19,040 to $59,200</td>
             </tr>
-            <tr className="bg-gray-50">
+            <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">One employed developer</td>
               <td className="p-3 border border-gray-200">
                 Wages $82,460 to $214,670 (BLS), divided by 0.692 for benefits = $119,162 to $310,217, + a recruiter fee
@@ -897,19 +866,14 @@ export const post: BlogPost = {
         </table>
       </div>
       <p>
-        The retainer is the biggest line in the second row, between 57 and 78 percent of the year. So the monthly fee
-        deserves more of your attention than the build fee. The top of that row, $70,000, is also about half the bottom of
-        the employee row, $135,654.
-      </p>
-      <p>
         The employee only wins if the hours get used. The lowest employer cost, $119,162, buys 477 hours at $250 an hour
         and 953 hours at $125, the two ends of the Layer3 Labs boutique band. A full-time year is 2,080 hours. So with
         fewer than about 480 hours of AI work a year, buying hours costs less even at the top boutique rate. Past about
         950 hours, the hire starts to win. In between, it depends on the rate you are quoted.
       </p>
       <p className="text-sm text-gray-600">
-        What this view leaves out: software and model bills, which are in our AI agent cost guide; your own team&apos;s
-        time; and the higher all-in figure of $290,000 to $480,000 that KORE1 gives for a mid to senior AI engineer.
+        What this view leaves out: your own team&apos;s time, and the higher all-in figure of $290,000 to $480,000 that
+        KORE1 gives for a mid to senior AI engineer.
       </p>
 
       <figure className="my-8">
@@ -923,7 +887,7 @@ export const post: BlogPost = {
           className="w-full h-auto rounded-xl border border-gray-200"
         />
         <figcaption className="text-xs text-gray-500 mt-2">
-          Lay the year out before you sign. On these figures the monthly line outweighs the build line.
+          Lay the year out before you sign.
         </figcaption>
       </figure>
 

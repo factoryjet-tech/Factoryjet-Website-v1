@@ -5,7 +5,6 @@ import {
   Sparkles,
   CheckCircle2,
   ArrowRight,
-  ShieldCheck,
   Clock,
   DollarSign,
   Zap,
@@ -432,12 +431,12 @@ export default function AiAgentRoiCalculator({
               </div>
 
               <p className="text-xs sm:text-sm text-[#46403B]">
-                Estimated net savings of <strong>${calculations.netMonthlySavings.toLocaleString()}/month</strong> after deducting all token compute costs.
+                About <strong>${calculations.netMonthlySavings.toLocaleString()}/month</strong>.
               </p>
             </div>
 
-            {/* 4-Card Live Metric Bento Grid */}
-            <div className="grid grid-cols-2 gap-3 mb-6">
+            {/* 3-Card Live Metric Bento Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3 mb-6">
               <div className="p-3.5 rounded-xl bg-white border border-[#E7DED6] shadow-2xs">
                 <div className="flex items-center gap-1.5 text-[11px] font-mono text-[#6E655F] uppercase font-bold mb-1">
                   <Clock size={13} className="text-[#F05A28]" /> Hours Recovered
@@ -476,31 +475,10 @@ export default function AiAgentRoiCalculator({
                   Based on milestone build
                 </div>
               </div>
-
-              <div className="p-3.5 rounded-xl bg-white border border-[#E7DED6] shadow-2xs">
-                <div className="flex items-center gap-1.5 text-[11px] font-mono text-[#6E655F] uppercase font-bold mb-1">
-                  <ShieldCheck size={13} className="text-[#F05A28]" /> Token Cost
-                </div>
-                <div className="text-xl sm:text-2xl font-extrabold text-[#14110F] font-heading">
-                  ${calculations.monthlyTokenComputeCost.toLocaleString()}
-                  <span className="text-xs font-mono font-normal text-[#6E655F] ml-1">/mo</span>
-                </div>
-                <div className="text-[11px] text-[#6E655F] mt-0.5">
-                  Pass-through zero markup
-                </div>
-              </div>
             </div>
 
             {/* Financial Breakdown Bar */}
             <div className="p-4 rounded-xl bg-white border border-[#E7DED6] mb-6 text-xs font-mono">
-              <div className="flex justify-between text-[#46403B] mb-1.5">
-                <span>Value of Hours Freed:</span>
-                <span className="font-bold text-[#14110F]">${calculations.annualGrossLaborSavings.toLocaleString()}/yr</span>
-              </div>
-              <div className="flex justify-between text-[#46403B] mb-2 pb-2 border-b border-[#E7DED6]">
-                <span>Annual Token &amp; Cloud Infra:</span>
-                <span className="text-rose-600">-${calculations.annualTokenComputeCost.toLocaleString()}/yr</span>
-              </div>
               <div className="flex justify-between text-sm font-bold text-[#14110F]">
                 <span>5-Year Cumulative Value:</span>
                 <span className="text-[#F05A28]">${calculations.fiveYearNetValue.toLocaleString()}</span>

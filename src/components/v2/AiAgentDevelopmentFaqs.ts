@@ -98,13 +98,13 @@ export const AI_AGENT_FAQS = [
     "id": "Q12",
     "category": "faq-cost",
     "question": "How much does it cost to build a custom AI agent?",
-    "answer": "As a market reference, development firm ProductCrafters puts 2026 custom AI agent builds at about $5,000 to more than $180,000. The price depends mostly on how many systems the agent has to read and write to and how many edge cases it must handle. The AI model is a small part of it. FactoryJet quotes a fixed price after one call, and a narrow pilot is the cheapest way to learn what a full build needs."
+    "answer": "As a market reference, development firm ProductCrafters puts 2026 custom AI agent builds at about $5,000 to more than $180,000. The price depends mostly on how many systems the agent has to read and write to and how many edge cases it must handle. FactoryJet quotes a fixed price after one call, and a narrow pilot is the cheapest way to learn what a full build needs."
   },
   {
     "id": "Q13",
     "category": "faq-cost",
     "question": "What changes the cost of AI agent development services?",
-    "answer": "Four things move the price: the number of systems the agent connects to, whether it only reads or also writes, how many exceptions it must handle, and how much testing the risk calls for. An agent that drafts a quote for a person to approve costs far less than one allowed to create orders in your ERP. The AI model itself is rarely the main cost."
+    "answer": "Four things move the price: the number of systems the agent connects to, whether it only reads or also writes, how many exceptions it must handle, and how much testing the risk calls for. An agent that drafts a quote for a person to approve costs far less than one allowed to create orders in your ERP."
   },
   {
     "id": "Q14",
@@ -116,7 +116,7 @@ export const AI_AGENT_FAQS = [
     "id": "Q15",
     "category": "faq-cost",
     "question": "How much does it cost to run an AI agent each month?",
-    "answer": "Running costs cover model usage, hosting and any support plan. Model calls are often the smallest part. Our AI agent cost guide works through a support agent handling 2,000 tickets a month and puts them at about $22 to $112 a month on Anthropic's September 2026 prices. As a market reference, ProductCrafters puts hosting for a custom build at $500 to $10,000 a month. Support and monitoring are quoted separately."
+    "answer": "Running costs cover model usage, hosting and any support plan. The total depends on how much work the agent does, so we do not publish one figure. FactoryJet quotes the build and the ongoing support as fixed prices, in writing, after a short scoping call. After launch we keep managing the servers, the AI models, the API connections and the maintenance, so your team does not have to. AI and hosting bills can sit in your own accounts, at cost."
   },
   {
     "id": "Q16",
@@ -190,11 +190,12 @@ export const AI_AGENT_FAQS = [
     "question": "Do you build AI agents for B2B and wholesale ecommerce?",
     "answer": "Yes. The common ones read emailed RFQs and purchase orders, check customer price lists and stock in NetSuite or Odoo, and draft a quote or order for your team to approve. On Shopify Plus B2B stores they can also answer account and reorder questions from live data. A person approves anything that commits price, stock or credit."
   },
-  // Q28 to Q32 added 2026-10-10. Wording comes from open buyer questions in the
+  // Q28 to Q31 added 2026-10-10 (Q32, a hosting-price question, was removed on
+  // 2026-10-11). Wording comes from open buyer questions in the
   // 9 Oct 2026 assistant sweep (Search Console, US). Third-party prices and
   // figures were read on each source's own page on 2026-10-09 and will date:
-  // re-read Vultr, AWS Lightsail, DigitalOcean, Lindy, Intercom Fin,
-  // MentorCruise and ProductCrafters before changing or reusing them.
+  // re-read Lindy, Intercom Fin, MentorCruise and ProductCrafters before
+  // changing or reusing them.
   {
     "id": "Q28",
     "category": "faq-vendor",
@@ -218,11 +219,5 @@ export const AI_AGENT_FAQS = [
     "category": "faq-cost",
     "question": "What are affordable agentic AI systems for small and mid-sized businesses?",
     "answer": "The affordable ones are ready-made products you rent by the seat or by the outcome. On October 9, 2026, Lindy listed plans from $29.99 to $199.99 a user a month, and Intercom listed its Fin support agent at $0.99 per outcome. Development firm ProductCrafters puts per-seat agent products at $20 to $500 a user a month and custom builds at about $5,000 to more than $180,000. Rent first if a product already connects to your tools. Build when the work follows your own rules across several systems. Our guide to AI agent development companies for small business covers both routes."
-  },
-  {
-    "id": "Q32",
-    "category": "faq-cost",
-    "question": "What is the best AI agent hosting under $5 a month?",
-    "answer": "No host is best for every agent, and under $5 a month buys a small server. On their pricing pages on October 9, 2026, Vultr listed plans at $2.50 (IPv6 only) and $3.50 a month, AWS Lightsail at $3.50 (IPv6 only) and DigitalOcean at $4, each with half a gigabyte of memory. That runs a small script calling an AI model over an API, with model usage billed separately. A built agent starts where hosting stops: connections to your systems, permissions, testing and monitoring. On our builds, hosting can sit in your cloud account at cost while we manage it."
   }
 ] as const;

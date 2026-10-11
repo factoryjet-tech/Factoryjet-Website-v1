@@ -80,7 +80,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-10-10';
+const PAGE_MODIFIED = '2026-10-11';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -295,7 +295,7 @@ const US_AUTOMATION_STATS = [
 
 const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'US Automation Agency' },
+  { label: 'Traditional Agency' },
   { label: 'DIY (Zapier / Make)' },
   { label: 'Freelancer' },
 ] as const;
@@ -549,7 +549,7 @@ const FAQ_ITEMS = [
   },
   {
     category: 'trust',
-    question: 'How is FactoryJet different from a traditional US automation agency?',
+    question: 'How is FactoryJet different from a traditional automation agency?',
     answer:
       'We work on fixed pricing with milestone payments. There are no account manager layers inflating your budget. We start development in days rather than months. We build pragmatic solutions using proven tools rather than over-engineering simple workflows.',
   },
