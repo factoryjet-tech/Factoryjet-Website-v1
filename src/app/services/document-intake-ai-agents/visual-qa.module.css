@@ -1,6 +1,7 @@
 /* Page-local visual QA. Approved copy, surfaces and shared components stay intact. */
 .page h1, .page h2, .page h3 { text-wrap: balance; }
 .page p { text-wrap: pretty; }
+.page [class*="text-[9px]"] { font-size: 0.75rem; }
 .page :focus-visible { outline: 2px solid #B23E13; outline-offset: 4px; }
 .page [data-hero-inline-form] input:focus-visible { outline: 2px solid #B23E13; outline-offset: 2px; }
 .page [data-hero-inline-form] { margin-top: 0; }
@@ -12,7 +13,7 @@
 .heroDetails { order: 1; }
 .heroCopy > .heroDetails { margin-top: 0.75rem; }
 @media (min-width: 1024px) { .hero { padding-top: 2rem; } }
-.page div:has(> table) { border: 1px solid #E7DED6; border-radius: 0.75rem; }
+.page div:has(> table) { border: 1px solid #D9D9D2; border-radius: 0.75rem; }
 .page a[class*="inline-flex"] { min-height: 44px; min-width: 44px; }
 .page a[class*="decoration-fj-neutral-200"] { display: inline-flex; align-items: center; min-height: 44px; }
 .page p[class*="max-w-3xl"] { max-width: 72ch; }
