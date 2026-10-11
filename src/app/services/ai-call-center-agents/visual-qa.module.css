@@ -41,3 +41,9 @@
 .page table th:first-child { position: sticky; left: 0; z-index: 1; min-width: 160px; background: #FAFAF7; border-right: 1px solid #D9D9D2; }
 @media (max-width: 639px) { .heroCopy > .heroLead { order: 3; } .heroCopy > .heroForm { order: 2; } .page dd, .page li:not([class*="font-mono"]):not([class*="font-fj-mono"]) { font-size: 1rem; } }
 @media (max-width: 639px) { .page table tbody th { font-size: 1rem; } }
+
+@media (max-width: 639px) {
+  .page table { width: 640px; min-width: 640px; table-layout: fixed; }
+  .page table td:last-child { padding-inline: 0.5rem; }
+  .page table td a[class] { display: block; overflow-wrap: anywhere; }
+}
