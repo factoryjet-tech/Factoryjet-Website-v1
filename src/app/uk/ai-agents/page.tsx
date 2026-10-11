@@ -660,7 +660,8 @@ export default function AiAgentsUKPage() {
               Want to try it yourself first? Our step-by-step guide on{' '}
               <a href="/blog/how-to-build-an-ai-agent-uk-2026" style={{ textDecoration: 'underline' }}>how to build an AI agent</a>{' '}
               covers the tools, the steps and the UK GDPR checks. Comparing suppliers? See{' '}
-              <a href="/blog/best-ai-agent-development-companies-uk-2026" style={{ textDecoration: 'underline' }}>UK AI agent development companies compared</a>{' '}
+              <a href="/blog/best-ai-agent-development-companies-uk-2026" style={{ textDecoration: 'underline' }}>UK AI agent development companies compared</a>,{' '}
+              <a href="/blog/best-ai-automation-agencies-uk-2026" style={{ textDecoration: 'underline' }}>13 AI automation agencies in the UK compared</a>{' '}
               and our{' '}
               <a href="/blog/ai-cost-uk-2026" style={{ textDecoration: 'underline' }}>AI cost guide for the UK</a>.
             </p>

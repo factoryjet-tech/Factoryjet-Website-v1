@@ -1064,7 +1064,15 @@ export default function AIChatbotDevelopmentPage() {
               <a href="/services/ai-development" className="text-[#B23E13] underline font-medium">
                 AI development services
               </a>
-              {' '}page.
+              {' '}page. For vendor list prices and published build ranges, read{' '}
+              <a href="/blog/ai-chatbot-cost-2026" className="text-[#B23E13] underline font-medium">
+                what an AI chatbot costs in 2026
+              </a>
+              . If you run an online store, see our page on{' '}
+              <a href="/services/ecommerce-ai-agents" className="text-[#B23E13] underline font-medium">
+                ecommerce chatbot and store agents
+              </a>
+              .
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -43,7 +43,7 @@ const DEMAND = [
 
 /* ─── All tracked searches naming each city (analysis.json "cities") ─── */
 const CITIES = [
-  { city: 'Sydney', total: '10,430', seo: '7,270', web: '2,640', ecom: '310', href: '' },
+  { city: 'Sydney', total: '10,430', seo: '7,270', web: '2,640', ecom: '310', href: '/au/sydney' },
   { city: 'Melbourne', total: '10,330', seo: '6,630', web: '2,920', ecom: '430', href: '/au/melbourne' },
   { city: 'Perth', total: '7,900', seo: '4,940', web: '2,670', ecom: '240', href: '' },
   { city: 'Brisbane', total: '5,490', seo: '4,000', web: '1,380', ecom: '100', href: '' },
@@ -898,6 +898,7 @@ export default function BrisbanePage() {
             <div className="city-links">
               <p>Web design and SEO in other Australian cities:</p>
               <ul className="city-list">
+                <li><a href="/au/sydney">Web design Sydney</a></li>
                 <li><a href="/au/melbourne">Web design Melbourne</a></li>
                 <li><a href="/au/adelaide">Web design Adelaide</a></li>
                 <li><a href="/au/canberra">Web design Canberra</a></li>

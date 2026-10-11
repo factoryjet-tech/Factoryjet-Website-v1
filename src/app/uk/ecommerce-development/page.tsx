@@ -672,7 +672,8 @@ export default function EcommerceDevelopmentUKPage() {
             <p style={{ fontSize: 14, color: 'var(--n600)', marginTop: 14, maxWidth: 820 }}>
               Platform fees, app costs and developer time all differ between these, so the platform with the lowest
               starting fees is not always the least work to run. We compare total running effort for your catalogue
-              on the first call.
+              on the first call. For published build prices in pounds by platform, read{' '}
+              <a href="/blog/ecommerce-website-cost-uk-2026" style={linkStyle}>what an ecommerce website costs in the UK</a>.
             </p>
           </div>
         </section>
@@ -1012,7 +1013,8 @@ export default function EcommerceDevelopmentUKPage() {
               <p className="lead mt-4">
                 We would rather tell you the truth than pretend we are the only option. Here are ecommerce
                 agencies doing real build work for UK brands, including us. Talk to a few, use the eight questions above, and pick
-                the fit.
+                the fit. If Shopify Plus is on your shortlist, see{' '}
+                <a href="/blog/best-shopify-plus-agencies-uk-2026" style={linkStyle}>how to choose a Shopify Plus agency in the UK</a>.
               </p>
             </div>
             <ul className="stack mt-10" style={{ maxWidth: 900 }}>

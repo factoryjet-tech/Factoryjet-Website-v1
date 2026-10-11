@@ -322,7 +322,11 @@ export const post: BlogPost = {
           <a href="/uk/ai-agents" className="text-orange-400 underline">
             UK AI agent development and automation page
           </a>
-          , or book a free 30-minute call with Bhavesh to talk through your specific workflows.
+          , or book a free 30-minute call with Bhavesh to talk through your specific workflows. To see who else does this work, you can{' '}
+          <a href="/blog/best-ai-automation-agencies-uk-2026" className="text-orange-400 underline">
+            compare 13 AI automation agencies in the UK
+          </a>
+          .
         </p>
         <a
           href="https://calendly.com/bhavesh-factoryjet/30min"

@@ -285,7 +285,11 @@ export const post: BlogPost = {
         </ul>
       </div>
       <p className="mb-6 text-gray-700 leading-relaxed">
-        The tradeoff is real, though. You are renting the logic, not owning it, your customer data usually lives inside the vendor&apos;s systems, and your monthly cost can climb as your usage grows in ways that are hard to predict from the sales page.
+        The tradeoff is real, though. You are renting the logic, not owning it, your customer data usually lives inside the vendor&apos;s systems, and your monthly cost can climb as your usage grows in ways that are hard to predict from the sales page. For support desks, see{' '}
+        <a href="/blog/intercom-fin-vs-zendesk-ai-vs-custom-ai-agent-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">
+          Intercom Fin, Zendesk AI agents, Agentforce and Gorgias compared with a custom agent
+        </a>
+        .
       </p>
 
       {/* Section 4: When build makes sense */}
@@ -551,6 +555,7 @@ export const post: BlogPost = {
           <a href="/services/ai-agent-monitoring" className="text-[#B23E13] underline">AI Agent Monitoring and Support After Launch</a>
           <a href="/blog/how-to-build-an-ai-agent-uk-2026" className="text-[#B23E13] underline">How to Build an AI Agent, Step by Step</a>
           <a href="/blog/ai-chatbots-vs-ai-agents-business" className="text-[#B23E13] underline">AI Chatbots vs. AI Agents</a>
+          <a href="/blog/ai-chatbot-cost-2026" className="text-[#B23E13] underline">AI Chatbot Cost in 2026: Subscription or Custom Build</a>
         </div>
       </div>
 

@@ -145,9 +145,26 @@ import { post as bestAiAutomationAgenciesUsa2026Post } from './posts/best-ai-aut
 import { post as aiConsultantCost2026Post } from './posts/ai-consultant-cost-2026';
 import { post as hireAiDevelopersAustraliaCost2026Post } from './posts/hire-ai-developers-australia-cost-2026';
 import { post as bestAiConsultanciesAustralia2026Post } from './posts/best-ai-consultancies-australia-2026';
+import { post as intercomFinVsZendeskAiVsCustomAiAgent2026Post } from './posts/intercom-fin-vs-zendesk-ai-vs-custom-ai-agent-2026';
+import { post as bestShopifyPlusAgenciesUsa2026Post } from './posts/best-shopify-plus-agencies-usa-2026';
+import { post as aiChatbotCost2026Post } from './posts/ai-chatbot-cost-2026';
+import { post as bestAiAgentDevelopmentCompaniesForManufacturers2026Post } from './posts/best-ai-agent-development-companies-for-manufacturers-2026';
+import { post as shopifyPlusMigrationCost2026Post } from './posts/shopify-plus-migration-cost-2026';
+import { post as bestAiAutomationAgenciesUk2026Post } from './posts/best-ai-automation-agencies-uk-2026';
+import { post as bestShopifyPlusAgenciesUk2026Post } from './posts/best-shopify-plus-agencies-uk-2026';
+import { post as ecommerceWebsiteCostUk2026Post } from './posts/ecommerce-website-cost-uk-2026';
 
 export const POSTS: BlogPost[] = [
   bestAiAgentDevelopmentCompanies2026Post,
+  // --- BUYER QUESTION WAVE 2 (2026-10-11): comparisons, lists and cost guides for US and UK ---
+  intercomFinVsZendeskAiVsCustomAiAgent2026Post,
+  bestShopifyPlusAgenciesUsa2026Post,
+  aiChatbotCost2026Post,
+  bestAiAgentDevelopmentCompaniesForManufacturers2026Post,
+  shopifyPlusMigrationCost2026Post,
+  bestAiAutomationAgenciesUk2026Post,
+  bestShopifyPlusAgenciesUk2026Post,
+  ecommerceWebsiteCostUk2026Post,
   // --- BUYER QUESTION WAVE (2026-10-09): lists and cost guides for UK, US and AU ---
   bestAiAgentDevelopmentCompaniesUk2026Post,
   bestAiConsultanciesUk2026Post,

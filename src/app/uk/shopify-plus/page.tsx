@@ -901,7 +901,10 @@ export default function ShopifyPlusUKPage() {
               <p className="lead mt-4">
                 We would rather you compared than guessed. These Shopify Plus agencies show up again and again in
                 UK searches, including us. Several hold Shopify partner tiers and run large marketing teams. Talk
-                to a few and pick the fit.
+                to a few and pick the fit. For a longer list, read{' '}
+                <a href="/blog/best-shopify-plus-agencies-uk-2026">Shopify Plus agencies for UK brands, compared by buyer type</a>,
+                and for build prices in pounds see{' '}
+                <a href="/blog/ecommerce-website-cost-uk-2026">Shopify Plus cost in the UK</a>.
               </p>
             </div>
             <ul className="stack mt-10" style={{ maxWidth: 900 }}>

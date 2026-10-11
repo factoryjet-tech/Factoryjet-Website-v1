@@ -1130,6 +1130,17 @@ export default function ManufacturingAiAgentsPage() {
                 </p>
               </Link>
             </div>
+            <p className="mt-8 text-sm sm:text-base text-[#46403B] max-w-3xl">
+              If you are comparing suppliers, see{' '}
+              <Link href="/blog/best-ai-agent-development-companies-for-manufacturers-2026" className="font-semibold underline underline-offset-2 text-[#B23E13]">
+                AI agent development companies for manufacturers compared
+              </Link>
+              , a list that includes us. If you work in construction, see{' '}
+              <Link href="/services/construction-ai-agents" className="font-semibold underline underline-offset-2 text-[#B23E13]">
+                AI agents for contractors and building suppliers
+              </Link>
+              .
+            </p>
           </div>
         </section>
 

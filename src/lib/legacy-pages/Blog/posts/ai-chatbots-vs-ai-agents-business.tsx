@@ -120,7 +120,7 @@ export const post: BlogPost = {
         <strong>4. Local service business FAQ.</strong> A dental practice in Tampa runs a chatbot on their site that handles "do you accept my insurance?", "what are your hours?", and "how do I become a new patient?", questions that used to interrupt the front-desk staff dozens of times a day.
       </p>
       <p className="mb-4">
-        Notice the pattern: each chatbot answers questions. None of them <em>do</em> things. If you want to learn more about the chatbot category specifically, see our <a href="/services/ai-chatbot-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI chatbot development service</a>.
+        Notice the pattern: each chatbot answers questions. None of them <em>do</em> things. If you want to learn more about the chatbot category specifically, see our <a href="/services/ai-chatbot-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI chatbot development service</a>. For prices, read <a href="/blog/ai-chatbot-cost-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">what a chatbot costs to buy or build</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What an AI Agent Actually Is</h2>

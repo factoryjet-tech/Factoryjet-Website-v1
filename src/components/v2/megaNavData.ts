@@ -416,7 +416,10 @@ export const UK_SIMPLE_MENUS: SimpleMenu[] = [
         { label: 'AI cost in the UK', href: '/blog/ai-cost-uk-2026' },
         { label: 'Best AI agent companies in the UK', href: '/blog/best-ai-agent-development-companies-uk-2026' },
         { label: 'Best AI consultancies in the UK', href: '/blog/best-ai-consultancies-uk-2026' },
+        { label: 'Best AI automation agencies in the UK', href: '/blog/best-ai-automation-agencies-uk-2026' },
         { label: 'Top ecommerce agencies in the UK', href: '/blog/top-ecommerce-development-agencies-uk-2026' },
+        { label: 'Best Shopify Plus agencies for UK brands', href: '/blog/best-shopify-plus-agencies-uk-2026' },
+        { label: 'Ecommerce website cost in the UK', href: '/blog/ecommerce-website-cost-uk-2026' },
         { label: 'Shopify vs WooCommerce for UK stores', href: '/blog/ecommerce-development-uk-shopify-woocommerce-2026' },
         { label: 'How to choose a web design agency', href: '/blog/how-to-choose-web-design-agency-uk-2026' },
         { label: 'Website redesign cost in the UK', href: '/blog/website-redesign-cost-uk-2026-complete-pricing-guide' },
@@ -522,6 +525,7 @@ export const AU_SERVICE_HUBS: ServiceHub[] = [
         { label: 'Accounting firms', href: '/au/accountant-website-design' },
       ] },
       { heading: 'Australian cities', kind: 'compact', items: [
+        { label: 'Sydney', href: '/au/sydney' },
         { label: 'Melbourne', href: '/au/melbourne' },
         { label: 'Brisbane', href: '/au/brisbane' },
         { label: 'Adelaide', href: '/au/adelaide' },

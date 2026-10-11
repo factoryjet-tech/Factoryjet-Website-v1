@@ -1002,6 +1002,7 @@ export default function ShopifyDevelopmentAUPage() {
                   </p>
                   <ul className="city-list">
                     <li><a href="/au">FactoryJet Australia</a></li>
+                    <li><a href="/au/sydney">Shopify developers in Sydney</a></li>
                     <li><a href="/au/melbourne">Melbourne</a></li>
                     <li><a href="/au/brisbane">Brisbane</a></li>
                     <li><a href="/au/adelaide">Adelaide</a></li>

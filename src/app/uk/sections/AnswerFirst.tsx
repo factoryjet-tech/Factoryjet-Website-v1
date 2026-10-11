@@ -165,6 +165,21 @@ export default function AnswerFirst() {
                 </a>
                 .
               </p>
+              <p className="font-fj-body mt-3 text-[14px] leading-relaxed text-fj-neutral-600">
+                If you are still comparing, read our UK guides to{" "}
+                <a href="/blog/best-ai-automation-agencies-uk-2026" className="font-semibold text-fj-ink underline underline-offset-4">
+                  the best AI automation agencies
+                </a>
+                ,{" "}
+                <a href="/blog/best-shopify-plus-agencies-uk-2026" className="font-semibold text-fj-ink underline underline-offset-4">
+                  the best Shopify Plus agencies
+                </a>{" "}
+                and{" "}
+                <a href="/blog/ecommerce-website-cost-uk-2026" className="font-semibold text-fj-ink underline underline-offset-4">
+                  ecommerce website cost in the UK
+                </a>
+                .
+              </p>
             </div>
           </div>
         </div>

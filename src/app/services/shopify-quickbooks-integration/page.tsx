@@ -716,6 +716,7 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/shopify-maintenance-services', t: 'Shopify maintenance and support', b: 'Keeps the store and its connections current.' },
   { href: '/services/ai-integration-services', t: 'AI integration services', b: 'When the next system to connect is an AI agent.' },
   { href: '/services/erp-ai-agents', t: 'ERP AI agents', b: 'Agents that draft quotes, orders and bookkeeping batches inside your ERP.' },
+  { href: '/services/accounts-payable-automation', t: 'Accounts payable automation for QuickBooks', b: 'An agent that reads, matches, codes and routes vendor invoices on your own books.' },
 ];
 
 /** Small inline source links. Same visual pattern as the checkout page. Renders

@@ -1110,6 +1110,14 @@ export default function AiCustomerSupportAgentsPage() {
                 <Link href="/blog/best-ai-agents-for-ecommerce-2026" className="underline hover:text-[#F05A28]">
                   best AI agents for ecommerce in 2026
                 </Link>
+                . For billing units, channels and the systems each tool can act on, read{' '}
+                <Link href="/blog/intercom-fin-vs-zendesk-ai-vs-custom-ai-agent-2026" className="underline hover:text-[#F05A28]">
+                  how Fin, Zendesk AI agents, Agentforce and Gorgias compare with a custom support agent
+                </Link>
+                . If most of your contacts arrive by phone, see{' '}
+                <Link href="/services/ai-call-center-agents" className="underline hover:text-[#F05A28]">
+                  AI call center agents
+                </Link>
                 .
               </p>
             </div>

@@ -70,6 +70,7 @@ export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     heading: 'Australia',
     links: [
       { label: 'FactoryJet Australia',     href: '/au' },
+      { label: 'Sydney',                   href: '/au/sydney' },
       { label: 'Melbourne',                href: '/au/melbourne' },
       { label: 'Brisbane',                 href: '/au/brisbane' },
       { label: 'Adelaide',                 href: '/au/adelaide' },

@@ -530,7 +530,15 @@ export default function ShopifyPlusAgencyPage() {
                     <Link href="/blog/the-true-cost-of-shopify-plus-2026" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       the true cost of Shopify Plus
                     </Link>{' '}
-                    covers the plan fee, apps and build costs. For your own store, we send one fixed price after a free scoping call.
+                    covers the plan fee, apps and build costs. If you are moving from another platform, see{' '}
+                    <Link href="/blog/shopify-plus-migration-cost-2026" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                      how much a Shopify Plus migration costs
+                    </Link>
+                    , and if you are still choosing a firm, read{' '}
+                    <Link href="/blog/best-shopify-plus-agencies-usa-2026" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                      Shopify Plus agencies for US brands compared
+                    </Link>
+                    . For your own store, we send one fixed price after a free scoping call.
                   </p>
                 </div>
               </div>

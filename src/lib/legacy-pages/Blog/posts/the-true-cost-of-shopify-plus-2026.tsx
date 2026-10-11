@@ -386,7 +386,7 @@ export const post: BlogPost = {
         <li><strong>Extra stores:</strong> each store beyond the 9 included expansion stores costs $300 a month or a revenue share, and each live expansion store needs its own theme license.</li>
         <li><strong>Retail:</strong> POS Pro is included for the first 20 locations on Plus. On lower plans, Shopify lists POS Pro at $89 a month per location (<a href={SRC_POS_PRICING} target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>Shopify POS pricing</a>).</li>
         <li><strong>Currency conversion:</strong> 1.5% for US stores that accept other currencies through Shopify Payments (see section 9).</li>
-        <li><strong>Migration or build:</strong> a one-time project cost, covered in our <a href="/replatforming/magento-to-shopify#migration-cost" className={LINK_CLASS}>Magento to Shopify Plus migration cost guide</a>.</li>
+        <li><strong>Migration or build:</strong> a one-time project cost, covered in our <a href="/replatforming/magento-to-shopify#migration-cost" className={LINK_CLASS}>Magento to Shopify Plus migration cost guide</a> and, for other platforms, in <a href="/blog/shopify-plus-migration-cost-2026" className={LINK_CLASS}>the cost of migrating to Shopify Plus</a>. To choose who does the work, see <a href="/blog/best-shopify-plus-agencies-usa-2026" className={LINK_CLASS}>which Shopify Plus agency fits your brand</a>.</li>
       </ul>
 
       <h2 className="text-2xl font-bold mt-10 mb-4 text-gray-900">

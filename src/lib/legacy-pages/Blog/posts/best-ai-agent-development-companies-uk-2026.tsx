@@ -824,7 +824,7 @@ export const post: BlogPost = {
         <strong>Where we do not:</strong> If you need people in your building every week, choose one of the firms above with an office near you. If your project is a Microsoft Copilot roll-out, BCN is a more natural fit. If your data must stay on your own machines, look at Ayoob AI or OpenKit. If your own engineers will maintain the agent inside your product, Pixelfield and Magora write for exactly that buyer.
       </p>
       <p className="mb-6">
-        If you are still working out what you need, these explain the options in plain English: <a href="/blog/how-to-build-an-ai-agent-uk-2026" className="text-[#B23E13] underline">how to build an AI agent in the UK</a> and <a href="/blog/what-does-an-ai-automation-agency-do-uk" className="text-[#B23E13] underline">what an AI automation agency does</a>.
+        If you are still working out what you need, these explain the options in plain English: <a href="/blog/how-to-build-an-ai-agent-uk-2026" className="text-[#B23E13] underline">how to build an AI agent in the UK</a> and <a href="/blog/what-does-an-ai-automation-agency-do-uk" className="text-[#B23E13] underline">what an AI automation agency does</a>. For workflow automation, see the <a href="/blog/best-ai-automation-agencies-uk-2026" className="text-[#B23E13] underline">best AI automation agencies in the UK</a>, and for online stores see <a href="/blog/best-shopify-plus-agencies-uk-2026" className="text-[#B23E13] underline">Shopify Plus agencies for UK brands</a>.
       </p>
 
       <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 mb-8 not-prose">

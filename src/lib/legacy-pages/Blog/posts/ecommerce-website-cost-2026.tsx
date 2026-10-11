@@ -844,6 +844,18 @@ export const post: BlogPost = {
           : the Plus subscription, processing rates and total cost at scale.
         </li>
         <li>
+          <a href="/blog/shopify-plus-migration-cost-2026" className={LINK}>
+            Shopify Plus migration cost in 2026
+          </a>
+          : published project ranges and timelines for moving to Plus, by platform.
+        </li>
+        <li>
+          <a href="/blog/ecommerce-website-cost-uk-2026" className={LINK}>
+            Ecommerce website cost in the UK
+          </a>
+          : UK prices in pounds by platform and project size.
+        </li>
+        <li>
           <a href="/blog/shopify-vs-woocommerce-us-small-business-2026" className={LINK}>
             Shopify vs WooCommerce for US small businesses
           </a>

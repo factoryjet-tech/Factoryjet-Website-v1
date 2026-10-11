@@ -1190,6 +1190,7 @@ export default function EcommerceDevelopmentAUPage() {
             </p>
             <ul className="city-list">
               <li><a href="/au">FactoryJet Australia</a></li>
+              <li><a href="/au/sydney">Ecommerce website development in Sydney</a></li>
               <li><a href="/au/melbourne">Melbourne</a></li>
               <li><a href="/au/brisbane">Brisbane</a></li>
               <li><a href="/au/adelaide">Adelaide</a></li>

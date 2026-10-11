@@ -771,7 +771,11 @@ export default function AiReceptionistPage() {
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Every Industry Where a Missed Call Is a Missed Sale.</h2>
               <p className="text-lg text-[#46403B]">
-                The trades are where we started and where our deepest dispatch logic lives. The same AI receptionist architecture now answers phones in clinics, law firms, dealerships, and restaurants. What changes is the intake script, the compliance boundary, and the system it books into. What stays the same is that nobody reaches a voicemail.
+                The trades are where we started and where our deepest dispatch logic lives. The same AI receptionist architecture now answers phones in clinics, law firms, dealerships, and restaurants. What changes is the intake script, the compliance boundary, and the system it books into. What stays the same is that nobody reaches a voicemail. If you run a call center with a team of agents and a queue, that is a different build, covered on our page about{' '}
+                <Link href="/services/ai-call-center-agents" className="underline decoration-[#F05A28]/40 hover:text-[#F05A28]">
+                  AI voice agents for call centers
+                </Link>
+                .
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

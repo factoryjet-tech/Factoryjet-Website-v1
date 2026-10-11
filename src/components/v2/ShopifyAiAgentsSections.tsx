@@ -299,7 +299,7 @@ export default function ShopifyAiAgentsSections() {
                 </tbody>
               </table>
             </div>
-            <p className="tablenote">Most stores end up with a mix: Flow for fixed rules, a helpdesk agent for support, and one or two custom agents for the jobs no app covers. Comparing ready-made tools first? Read <a href="/blog/best-ai-agents-for-ecommerce-2026">the best AI agents for ecommerce</a>.</p>
+            <p className="tablenote">Most stores end up with a mix: Flow for fixed rules, a helpdesk agent for support, and one or two custom agents for the jobs no app covers. Comparing ready-made tools first? Read <a href="/blog/best-ai-agents-for-ecommerce-2026">the best AI agents for ecommerce</a>. If your store runs on another platform, see <a href="/services/ecommerce-ai-agents">AI agents for WooCommerce, BigCommerce and Adobe Commerce stores</a>.</p>
           </div>
         </section>
 
@@ -515,6 +515,7 @@ export default function ShopifyAiAgentsSections() {
             <div className="refs">
               <a href="/services/ai-agent-development">AI Agent Development</a>
               <a href="/services/ai-customer-support-agents">AI Customer Support Agents</a>
+              <a href="/services/ecommerce-ai-agents">Ecommerce AI Agents</a>
               <a href="/services/shopify-development">Shopify Development</a>
               <a href="/services/shopify-plus-b2b">Shopify Plus B2B</a>
               <a href="/services/ecommerce-development">Ecommerce Development</a>

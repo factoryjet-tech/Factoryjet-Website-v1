@@ -1312,6 +1312,16 @@ export default function ShopifyDevelopmentPage() {
         </a>
       </li>
       <li>
+        <a href="/blog/best-shopify-plus-agencies-uk-2026" className="blog-card">
+          <p>Best Shopify Plus agencies for UK brands, compared by buyer type</p>
+        </a>
+      </li>
+      <li>
+        <a href="/blog/ecommerce-website-cost-uk-2026" className="blog-card">
+          <p>Shopify website cost in the UK: build prices in pounds by platform</p>
+        </a>
+      </li>
+      <li>
         <a href="/contact" className="blog-card">
           <p>Ready to talk? Contact FactoryJet about your Shopify project &#8594;</p>
         </a>

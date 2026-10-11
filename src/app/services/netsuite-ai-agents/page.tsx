@@ -1461,7 +1461,12 @@ export default function NetSuiteAiAgentsPage() {
             <p className="mt-6 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
               These are the jobs searched for most. In US search data we pulled on {CHECKED_ON}, accounts payable
               automation for NetSuite drew about 260 searches a month, more than any other job on this page. The same
-              pattern fits the rest: read what arrives, look up NetSuite, draft, approve.
+              pattern fits the rest: read what arrives, look up NetSuite, draft, approve. If your books sit in QuickBooks,
+              Xero or another system, see{' '}
+              <Link href="/services/accounts-payable-automation" className="font-semibold text-fj-ink underline underline-offset-4">
+                accounts payable automation on any accounting system
+              </Link>
+              .
             </p>
             <p className="mt-3 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
               Oracle notes are as listed on {CHECKED_ON}.

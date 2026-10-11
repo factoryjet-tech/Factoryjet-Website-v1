@@ -1116,7 +1116,15 @@ export const post: BlogPost = {
         <a href="/services/ai-chatbot-development" className="text-[#B23E13] hover:underline">
           AI chatbot development
         </a>{' '}
-        is the lighter option. To see what a Shopify build involves, Shopify&apos;s docs show how to{' '}
+        is the lighter option. For stores on WooCommerce, BigCommerce or Adobe Commerce, see{' '}
+        <a href="/services/ecommerce-ai-agents" className="text-[#B23E13] hover:underline">
+          ecommerce AI agent development
+        </a>
+        , and for a closer look at the support tools read{' '}
+        <a href="/blog/intercom-fin-vs-zendesk-ai-vs-custom-ai-agent-2026" className="text-[#B23E13] hover:underline">
+          Fin vs Zendesk AI vs a custom agent
+        </a>
+        . To see what a Shopify build involves, Shopify&apos;s docs show how to{' '}
         <a
           href="https://shopify.dev/docs/apps/build/storefront-mcp/build-storefront-ai-agent"
           target="_blank"

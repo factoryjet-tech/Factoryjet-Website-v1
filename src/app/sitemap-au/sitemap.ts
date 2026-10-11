@@ -11,10 +11,13 @@ const SITE_URL = 'https://factoryjet.com'
  * Expanded 2026-08-25 from the hub alone to the hub plus the SEO service page and the four
  * city pages built against verified demand.
  *
- * Sydney, Perth and the Gold Coast are deliberately absent. They carry the largest AU
- * search volumes, but the August 2026 measurement put the weakest page-1 incumbent at 119,
- * 125 and 136 referring domains against our 28 earned, so pages aimed at them could not
- * rank. Add them here when link authority supports it, and to CityLinksAU at the same time.
+ * Perth and the Gold Coast are deliberately absent. They carry large AU search volumes,
+ * but the August 2026 measurement put the weakest page-1 incumbent for Sydney, Perth and
+ * the Gold Coast at 119, 125 and 136 referring domains against our 28 earned, so pages
+ * aimed at them could not rank. Add them here when link authority supports it, and to
+ * CityLinksAU at the same time.
+ *
+ * 2026-10-11: /au/sydney added (page built in the second buyer-question wave).
  *
  * There is no /au/web-design entry because /au itself targets the national web design term.
  * A second national web design page would compete with it, which is the cannibalisation
@@ -23,7 +26,7 @@ const SITE_URL = 'https://factoryjet.com'
  * the small business buying intent (small business web design, website design packages,
  * affordable websites for small business) while /au keeps "web design Australia".
  */
-const CITY_PAGES = ['brisbane', 'melbourne', 'adelaide', 'canberra'] as const
+const CITY_PAGES = ['sydney', 'brisbane', 'melbourne', 'adelaide', 'canberra'] as const
 
 // 2026-09-25: AU build from AU-MARKET-RESEARCH-2026-09-25.md (AI and ecommerce
 // searches that are winnable without a Maps pack).

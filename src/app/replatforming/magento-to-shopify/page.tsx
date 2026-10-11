@@ -1289,6 +1289,8 @@ export default function MagentoToShopifyPage() {
               <ul style={{ margin: 0, paddingLeft: '20px', display: 'grid', gap: '8px', fontSize: '15px', lineHeight: 1.55 }}>
                 <li><Link href="/blog/magento-to-shopify-plus-migration-checklist-2026" style={LINK_STYLE}>Magento to Shopify Plus migration checklist</Link></li>
                 <li><Link href="/blog/the-true-cost-of-shopify-plus-2026" style={LINK_STYLE}>The true cost of Shopify Plus in 2026</Link></li>
+                <li><Link href="/blog/shopify-plus-migration-cost-2026" style={LINK_STYLE}>Shopify Plus migration cost across four platforms</Link></li>
+                <li><Link href="/blog/ecommerce-website-cost-uk-2026" style={LINK_STYLE}>What UK firms publish for a Magento to Shopify move</Link></li>
                 <li><Link href="/tools/replatforming-cost-calculator" style={LINK_STYLE}>Replatforming cost calculator</Link></li>
                 <li><Link href="/comparisons/shopify-plus-vs-magento" style={LINK_STYLE}>Shopify Plus vs Magento</Link></li>
                 <li><Link href="/replatforming/salesforce-commerce-cloud-to-shopify-plus" style={LINK_STYLE}>Salesforce Commerce Cloud to Shopify Plus migration</Link></li>

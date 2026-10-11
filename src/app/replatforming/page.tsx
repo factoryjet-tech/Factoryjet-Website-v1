@@ -570,6 +570,13 @@ export default function ReplatformingHubPage() {
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
                 Explore dedicated engineering blueprints, database mapping strategies, and ROI models for your current e-commerce platform:
               </p>
+              <p style={{ marginTop: '10px', fontSize: '14.5px', lineHeight: 1.6, color: '#494852' }}>
+                For published price ranges and timelines, read{' '}
+                <Link href="/blog/shopify-plus-migration-cost-2026" style={{ color: '#B23E13', textDecoration: 'underline' }}>
+                  Shopify Plus migration cost by platform
+                </Link>
+                .
+              </p>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>

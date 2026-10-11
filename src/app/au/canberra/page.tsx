@@ -875,6 +875,7 @@ export default function CanberraPage() {
             <div className="city-links">
               <ul className="agentdir-grid">
                 {[
+                  { h: '/au/sydney', t: 'Web design and ecommerce in Sydney', d: 'New South Wales' },
                   { h: '/au/melbourne', t: 'Web design and SEO in Melbourne', d: 'Victoria' },
                   { h: '/au/brisbane', t: 'Web design and SEO in Brisbane', d: 'Queensland' },
                   { h: '/au/adelaide', t: 'Web design and SEO in Adelaide', d: 'South Australia' },

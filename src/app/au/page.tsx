@@ -111,9 +111,10 @@ const AU_MORE_PAGES = [
   { href: '/au/website-maintenance', name: 'Website Maintenance' },
 ];
 
-/* City pages that exist today. Sydney, Perth and the Gold Coast are served
-   remotely and deliberately have no page (see AU market research). */
+/* City pages that exist today. Sydney was added 2026-10-11. Perth and the
+   Gold Coast deliberately have no page (see AU market research). */
 const AU_CITIES = [
+  { href: '/au/sydney', name: 'Sydney', note: 'Ecommerce website development, Shopify builds, web design and AI consulting for Sydney businesses.' },
   { href: '/au/melbourne', name: 'Melbourne', note: 'Web design, ecommerce and SEO for Melbourne retail, hospitality and professional services.' },
   { href: '/au/brisbane', name: 'Brisbane', note: 'Websites, online stores and search for Brisbane and South East Queensland businesses.' },
   { href: '/au/adelaide', name: 'Adelaide', note: 'Website development and SEO for growing Adelaide and South Australian businesses.' },
@@ -996,12 +997,12 @@ export function AustraliaHubContent({ reviewConcept }: { reviewConcept?: Austral
             <div className="col-6040">
               <div className="cities-copy">
                 <span className="eyebrow">Where we work</span>
-                <h2>Serving businesses across Australia, with local pages for four cities</h2>
+                <h2>Serving businesses across Australia, with local pages for five cities</h2>
                 <div className="stack mt-6">
                   <p>
                     We work with Australian businesses in every state and territory, fully remote and in your hours. For
-                    four cities we have local pages covering web design, website development, ecommerce and SEO for that
-                    market. Businesses in Sydney, Perth, the Gold Coast, Hobart and regional Australia get exactly the
+                    five cities we have local pages covering web design, website development, ecommerce and SEO for that
+                    market. Businesses in Perth, the Gold Coast, Hobart and regional Australia get exactly the
                     same service and team; start with the service pages above.
                   </p>
                 </div>
