@@ -1,7 +1,7 @@
 /* Page-local visual QA. Approved copy, surfaces and shared components stay intact. */
 .page h1, .page h2, .page h3 { text-wrap: balance; }
 .page p { text-wrap: pretty; }
-.page [class*="text-[9px]"] { font-size: 0.75rem; }
+.page [class*="text-[9px]"], .page [class*="text-[0.5625rem]"], .page [class*="text-[0.6875rem]"] { font-size: 0.75rem; }
 .page :focus-visible { outline: 2px solid #B23E13; outline-offset: 4px; }
 .page [data-hero-inline-form] input:focus-visible { outline: 2px solid #B23E13; outline-offset: 2px; }
 .page [data-hero-inline-form] { margin-top: 0; }
@@ -27,9 +27,11 @@
   .heroCopy > .heroForm { margin-top: 1rem; margin-bottom: 0; }
   .page p:not([class*="font-fj-mono"]):not([class*="font-mono"]):not([class*="eyebrow"]),
   .page li[class*="font-fj-body"], .page span[class*="font-fj-body"], .page td,
+  .page div[class*="font-fj-body"][class*="text-[0.8125rem]"],
   .page [data-hero-inline-form] input, .page [data-hero-inline-form] button { font-size: 1rem; }
-  .page [class*="text-[11px]"], .page [class*="text-[9px]"] { font-size: 0.75rem; }
+  .page [class*="text-[11px]"], .page [class*="text-[9px]"], .page [class*="text-[0.5625rem]"], .page [class*="text-[0.6875rem]"] { font-size: 0.75rem; }
   .page a[class*="font-fj-mono"], .page a[class*="font-mono"] { min-height: 44px; }
   .page a[class*="rounded-full"] { min-height: 44px; }
   .page div:has(> table) { scrollbar-width: auto; }
+  .page p[class*="font-fj-body"][class*="text-slate-500"] { font-size: 1rem !important; }
 }
