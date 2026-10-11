@@ -523,7 +523,7 @@ export default function MagentoUKPage() {
               <h2>Stay on Magento or move to Shopify?</h2>
               <p className="lead mt-4">
                 We build on both, so we have no reason to push you either way. Here is how we actually decide.
-                If most of your answers sit in the right-hand column, a Magento to Shopify migration is probably
+                If most of your answers sit in the right-hand column, a <a href="/uk/shopify-migration" style={{ textDecoration: 'underline' }}>Magento to Shopify migration</a> is probably
                 worth scoping. If they sit in the middle, fix Magento and stay. If you do move, see our{' '}
                 <a href="/uk/shopify-plus" style={{ textDecoration: 'underline' }}>Shopify Plus agency</a> page for
                 how a migration to Plus runs, or our{' '}

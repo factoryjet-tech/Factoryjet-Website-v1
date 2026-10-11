@@ -1186,6 +1186,7 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/shopify-ai-agents', t: 'Shopify AI agents', b: 'The Shopify page: the GraphQL Admin API, draft orders, Flow and Sidekick in detail.' },
   { href: '/services/ai-customer-support-agents', t: 'AI customer support agents', b: 'Support tickets and helpdesk work, on any platform.' },
   { href: '/services/erp-ai-agents', t: 'AI agents for ERP systems', b: 'The system behind the store: Odoo, NetSuite, SAP Business One and ERPNext.' },
+  { href: '/services/ai-inventory-management-agents', t: 'Inventory agents for stores', b: 'Low-stock flags, draft purchase orders and one stock count across store, warehouse and ERP.' },
   { href: '/services/ai-agent-development', t: 'AI agent development', b: 'Custom agents for sales, support and operations beyond the store.' },
   { href: '/services/ai-agent-monitoring', t: 'AI agent monitoring and support', b: 'Watching, re-testing and fixing an agent after launch.' },
   { href: '/services/ecommerce-development', t: 'Ecommerce development', b: 'Building or rebuilding the store itself.' },

@@ -672,6 +672,7 @@ export default function AiConsultingUKPage() {
                 </div>
                 <div className="flex-wrap mt-6">
                   <a className="city-pill" href="/uk/ai-agents">AI agent development UK</a>
+                  <a className="city-pill" href="/uk/accounts-payable-automation">Accounts payable automation UK</a>
                   <a className="city-pill" href="/uk/ecommerce-development">Ecommerce development UK</a>
                   <a className="city-pill" href="/uk/ai-seo">AI SEO UK</a>
                   <a className="city-pill" href="/contact">Contact us</a>

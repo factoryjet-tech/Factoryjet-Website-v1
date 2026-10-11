@@ -552,11 +552,11 @@ export default function AiAgentsUKPage() {
               </li>
               <li className="svc-card">
                 <h3>AI customer service agents</h3>
-                <p className="mt-4">Agents that resolve routine questions in chat, email, and WhatsApp, look up orders and accounts, and hand the hard cases to your team with the full context attached, so nobody asks the customer to repeat themselves.</p>
+                <p className="mt-4">Agents that resolve routine questions in chat, email, and WhatsApp, look up orders and accounts, and hand the hard cases to your team with the full context attached, so nobody asks the customer to repeat themselves. See <a href="/uk/ai-customer-service" style={{ textDecoration: 'underline' }}>AI customer service for UK businesses</a> and <a href="/uk/whatsapp-ai-agents" style={{ textDecoration: 'underline' }}>WhatsApp AI agents for UK businesses</a>.</p>
               </li>
               <li className="svc-card">
                 <h3>Internal knowledge and operations agents</h3>
-                <p className="mt-4">Agents your own staff talk to: answering process questions from your handbook, preparing reports, matching invoices, or chasing suppliers. Less glamorous than a chatbot, and often the biggest time saving.</p>
+                <p className="mt-4">Agents your own staff talk to: answering process questions from your handbook, preparing reports, matching invoices, or chasing suppliers. Less glamorous than a chatbot, and often the biggest time saving. For supplier invoices, see <a href="/uk/accounts-payable-automation" style={{ textDecoration: 'underline' }}>accounts payable automation for UK finance teams</a>.</p>
               </li>
             </ul>
             <p className="mt-8" style={{ maxWidth: 760 }}>

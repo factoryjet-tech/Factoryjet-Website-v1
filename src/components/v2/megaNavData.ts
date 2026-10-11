@@ -295,7 +295,7 @@ export const UK_SERVICE_HUBS: ServiceHub[] = [
         { icon: Activity, label: 'AI Agent Monitoring', href: '/services/ai-agent-monitoring' },
       ] },
       { heading: 'By job', kind: 'compact', items: [
-        { label: 'AI Customer Support Agents', href: '/services/ai-customer-support-agents' },
+        { label: 'AI Customer Service Agents', href: '/uk/ai-customer-service' },
         { label: 'AI SDR & BDR Agents', href: '/services/ai-sdr' },
         { label: 'AI Scheduling Agent', href: '/services/ai-agent-development/ai-scheduling-agent' },
         { label: 'AI Marketing Agent', href: '/services/ai-agent-development/ai-marketing-agent' },

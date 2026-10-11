@@ -1090,6 +1090,8 @@ export default function ShopifyDevelopmentPage() {
               <li><a href="/uk/shopify-plus" style={inlineLink}>Shopify Plus agency UK</a></li>
               <li><a href="/uk/ecommerce-development" style={inlineLink}>Ecommerce development across platforms</a></li>
               <li><a href="/uk/woocommerce" style={inlineLink}>WooCommerce development</a></li>
+              <li><a href="/uk/shopify-migration" style={inlineLink}>Moving to Shopify from Magento or WooCommerce</a></li>
+              <li><a href="/uk/shopify-xero-integration" style={inlineLink}>Shopify Xero integration</a></li>
               <li><a href="/uk/b2b-ecommerce" style={inlineLink}>B2B ecommerce</a></li>
               <li><a href="/uk/ecommerce-consultant" style={inlineLink}>Ecommerce consultant, before you choose a platform</a></li>
               <li><a href="/uk/shopify-seo" style={inlineLink}>Shopify SEO</a></li>

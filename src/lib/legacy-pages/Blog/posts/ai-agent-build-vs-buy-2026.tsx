@@ -556,6 +556,7 @@ export const post: BlogPost = {
           <a href="/blog/how-to-build-an-ai-agent-uk-2026" className="text-[#B23E13] underline">How to Build an AI Agent, Step by Step</a>
           <a href="/blog/ai-chatbots-vs-ai-agents-business" className="text-[#B23E13] underline">AI Chatbots vs. AI Agents</a>
           <a href="/blog/ai-chatbot-cost-2026" className="text-[#B23E13] underline">AI Chatbot Cost in 2026: Subscription or Custom Build</a>
+          <a href="/services/document-intake-ai-agents" className="text-[#B23E13] underline">Rent or Build for Document Processing</a>
         </div>
       </div>
 

@@ -262,6 +262,9 @@ export default function EcommerceForManufacturersPage() {
                     </Link>. For Shopify wholesale setups, explore{' '}
                     <Link href="/services/shopify-plus-b2b" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       Shopify Plus B2B
+                    </Link>. For retailers that order by EDI, see{' '}
+                    <Link href="/services/shopify-edi-integration" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                      Shopify EDI integration
                     </Link>. For trade channels, see our{' '}
                     <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       B2B e-commerce

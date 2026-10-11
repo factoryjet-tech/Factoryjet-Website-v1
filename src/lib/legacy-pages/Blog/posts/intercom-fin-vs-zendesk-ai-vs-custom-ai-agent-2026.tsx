@@ -975,7 +975,8 @@ export const post: BlogPost = {
         <a href="/services/ai-customer-support-agents">AI customer support agents</a>,{' '}
         <a href="/services/shopify-ai-agents">Shopify AI agents</a> and{' '}
         <a href="/services/ai-agent-development">AI agent development</a>. For phone work, see{' '}
-        <a href="/services/ai-receptionist">our AI receptionist and phone answering service</a>.
+        <a href="/services/ai-receptionist">our AI receptionist and phone answering service</a>. For a UK business, see{' '}
+        <a href="/uk/ai-customer-service">renting or building AI customer service in the UK</a>.
       </p>
 
       <h2 id="sources">Sources</h2>

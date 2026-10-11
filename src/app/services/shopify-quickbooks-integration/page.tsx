@@ -717,6 +717,10 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/ai-integration-services', t: 'AI integration services', b: 'When the next system to connect is an AI agent.' },
   { href: '/services/erp-ai-agents', t: 'ERP AI agents', b: 'Agents that draft quotes, orders and bookkeeping batches inside your ERP.' },
   { href: '/services/accounts-payable-automation', t: 'Accounts payable automation for QuickBooks', b: 'An agent that reads, matches, codes and routes vendor invoices on your own books.' },
+  { href: '/services/ecommerce-erp-integration', t: 'Ecommerce ERP integration', b: 'The same link for NetSuite, Odoo, SAP Business One and ERPNext, on Shopify and other store platforms.' },
+  { href: '/services/shopify-edi-integration', t: 'Shopify EDI integration', b: 'Purchase orders from retailers brought into Shopify as orders.' },
+  { href: '/uk/shopify-xero-integration', t: 'Shopify Xero integration for UK sellers', b: 'The same job for UK stores that keep their books in Xero.' },
+  { href: '/services/ai-inventory-management-agents', t: 'AI agents for stock and reordering', b: 'Agents that flag low stock and draft purchase orders for approval.' },
 ];
 
 /** Small inline source links. Same visual pattern as the checkout page. Renders

@@ -614,8 +614,10 @@ export default function EcommerceDevelopmentUKPage() {
                 <div className="plat-top"><span className="plat-name">Shopify and Shopify Plus</span><span className="plat-pill">DTC &amp; SCALING</span></div>
                 <p>The fastest route to a reliable, well-supported store, and where most of our work happens.
                 Strong app ecosystem, solid checkout, and a straightforward path to Shopify Plus once you outgrow
-                the standard plan. See <a href="/uk/shopify-development" style={linkStyle}>Shopify development</a>{' '}
-                and <a href="/uk/shopify-plus" style={linkStyle}>Shopify Plus</a>.</p>
+                the standard plan. See <a href="/uk/shopify-development" style={linkStyle}>Shopify development</a>,{' '}
+                <a href="/uk/shopify-plus" style={linkStyle}>Shopify Plus</a>,{' '}
+                <a href="/uk/shopify-migration" style={linkStyle}>Shopify migration</a> and{' '}
+                <a href="/uk/shopify-xero-integration" style={linkStyle}>Shopify Xero integration</a>.</p>
                 <p className="plat-best"><b>Best for:</b> DTC brands, growing catalogues, teams who want less to maintain.</p>
               </li>
               <li className="plat-card">

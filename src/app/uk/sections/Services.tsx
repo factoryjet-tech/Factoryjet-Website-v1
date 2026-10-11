@@ -38,7 +38,7 @@ const SERVICES: Service[] = [
   },
   {
     id: "ecommerce",
-    links: [{ label: "Ecommerce agency UK", href: "/uk/ecommerce-development" }, { label: "Shopify", href: "/uk/shopify-development" }, { label: "Shopify Plus", href: "/uk/shopify-plus" }, { label: "B2B ecommerce", href: "/uk/b2b-ecommerce" }, { label: "Ecommerce consultant", href: "/uk/ecommerce-consultant" }, { label: "Magento", href: "/uk/magento" }],
+    links: [{ label: "Ecommerce agency UK", href: "/uk/ecommerce-development" }, { label: "Shopify", href: "/uk/shopify-development" }, { label: "Shopify Plus", href: "/uk/shopify-plus" }, { label: "B2B ecommerce", href: "/uk/b2b-ecommerce" }, { label: "Ecommerce consultant", href: "/uk/ecommerce-consultant" }, { label: "Magento", href: "/uk/magento" }, { label: "Shopify migration", href: "/uk/shopify-migration" }, { label: "Shopify Xero integration", href: "/uk/shopify-xero-integration" }],
     number: "02",
     name: "E-Commerce",
     heading: "E-Commerce Development for UK Retailers & Brands",
@@ -55,7 +55,7 @@ const SERVICES: Service[] = [
   },
   {
     id: "ai-agents",
-    links: [{ label: "AI agents UK", href: "/uk/ai-agents" }, { label: "AI development", href: "/uk/ai-development" }, { label: "AI consulting", href: "/uk/ai-consulting" }, { label: "AI receptionist", href: "/uk/ai-receptionist" }],
+    links: [{ label: "AI agents UK", href: "/uk/ai-agents" }, { label: "AI development", href: "/uk/ai-development" }, { label: "AI consulting", href: "/uk/ai-consulting" }, { label: "AI receptionist", href: "/uk/ai-receptionist" }, { label: "AI customer service", href: "/uk/ai-customer-service" }, { label: "WhatsApp AI agents", href: "/uk/whatsapp-ai-agents" }, { label: "Accounts payable automation", href: "/uk/accounts-payable-automation" }],
     number: "03",
     name: "AI Agents",
     heading: "AI Agent Development for UK Businesses",

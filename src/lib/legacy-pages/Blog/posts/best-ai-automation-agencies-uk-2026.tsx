@@ -603,7 +603,7 @@ export const post: BlogPost = {
       ))}
 
       <p className="mb-6">
-        FactoryJet services for UK businesses: <a href="/uk/ai-agents" className="text-[#B23E13] underline">AI automation and AI agents in the UK</a>, <a href="/uk/ai-receptionist" className="text-[#B23E13] underline">AI receptionists</a>, <a href="/uk/ai-development" className="text-[#B23E13] underline">custom AI development</a> and <a href="/uk/ai-consulting" className="text-[#B23E13] underline">AI consulting</a>.
+        FactoryJet services for UK businesses: <a href="/uk/ai-agents" className="text-[#B23E13] underline">AI automation and AI agents in the UK</a>, <a href="/uk/ai-receptionist" className="text-[#B23E13] underline">AI receptionists</a>, <a href="/uk/ai-development" className="text-[#B23E13] underline">custom AI development</a>, <a href="/uk/whatsapp-ai-agents" className="text-[#B23E13] underline">WhatsApp AI agents</a> and <a href="/uk/ai-consulting" className="text-[#B23E13] underline">AI consulting</a>.
       </p>
 
       <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 mb-8 not-prose">

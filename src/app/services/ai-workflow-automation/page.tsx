@@ -769,7 +769,8 @@ export default function AIWorkflowAutomationPage() {
                 <dt className="text-[1.0625rem] font-semibold text-[#0F0F12]">Workflow or agent?</dt>
                 <dd className="mt-1.5 text-[0.9375rem] leading-[1.6] text-[#4A4A45]">If the steps are the same every time, it is a workflow. If someone has to read, judge and choose between several actions, it is{' '}
                   <a href="/services/ai-agent-development" className="font-semibold underline underline-offset-2 text-[#B23E13]">AI agent development</a>. For single tasks in a small business, start with{' '}
-                  <a href="/services/ai-automation" className="font-semibold underline underline-offset-2 text-[#B23E13]">AI automation</a>.
+                  <a href="/services/ai-automation" className="font-semibold underline underline-offset-2 text-[#B23E13]">AI automation</a>. If the work starts with a PDF, a scan or an email attachment, see{' '}
+                  <a href="/services/document-intake-ai-agents" className="font-semibold underline underline-offset-2 text-[#B23E13]">AI document processing</a>.
                 </dd>
               </div>
             </dl>

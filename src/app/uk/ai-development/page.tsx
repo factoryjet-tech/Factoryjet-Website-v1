@@ -409,6 +409,9 @@ export default function AiDevelopmentUKPage() {
             <div className="flex-wrap mt-8">
               <a className="city-pill" href="/uk/ai-agents">AI agent development UK</a>
               <a className="city-pill" href="/uk/ai-receptionist">AI receptionist UK</a>
+              <a className="city-pill" href="/uk/ai-customer-service">AI customer service UK</a>
+              <a className="city-pill" href="/uk/accounts-payable-automation">Accounts payable automation UK</a>
+              <a className="city-pill" href="/uk/whatsapp-ai-agents">WhatsApp AI agents UK</a>
               <a className="city-pill" href="/uk/ecommerce-development">Ecommerce development UK</a>
               <a className="city-pill" href="/uk/magento">Magento UK</a>
             </div>

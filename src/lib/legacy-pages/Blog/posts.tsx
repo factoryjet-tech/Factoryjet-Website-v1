@@ -153,9 +153,12 @@ import { post as shopifyPlusMigrationCost2026Post } from './posts/shopify-plus-m
 import { post as bestAiAutomationAgenciesUk2026Post } from './posts/best-ai-automation-agencies-uk-2026';
 import { post as bestShopifyPlusAgenciesUk2026Post } from './posts/best-shopify-plus-agencies-uk-2026';
 import { post as ecommerceWebsiteCostUk2026Post } from './posts/ecommerce-website-cost-uk-2026';
+import { post as bestBigcommerceAgencies2026Post } from './posts/best-bigcommerce-agencies-2026';
 
 export const POSTS: BlogPost[] = [
   bestAiAgentDevelopmentCompanies2026Post,
+  // --- BUYER QUESTION WAVE 3 (2026-10-11): BigCommerce agency list for the US ---
+  bestBigcommerceAgencies2026Post,
   // --- BUYER QUESTION WAVE 2 (2026-10-11): comparisons, lists and cost guides for US and UK ---
   intercomFinVsZendeskAiVsCustomAiAgent2026Post,
   bestShopifyPlusAgenciesUsa2026Post,

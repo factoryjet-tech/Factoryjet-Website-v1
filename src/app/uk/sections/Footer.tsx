@@ -46,6 +46,10 @@ const SERVICES = [
   { name: "AI Development",      slug: "ai-development" },
   { name: "AI Consulting",       slug: "ai-consulting" },
   { name: "AI Receptionist",     slug: "ai-receptionist" },
+  // 2026-10-11: five pages from the third buyer-question wave (three here, two after Shopify Plus).
+  { name: "AI Customer Service", slug: "ai-customer-service" },
+  { name: "WhatsApp AI Agents",  slug: "whatsapp-ai-agents" },
+  { name: "Accounts Payable Automation", slug: "accounts-payable-automation" },
   // 2026-08-03: was `ecommerce`, which produced /uk/ecommerce. That URL has
   // never existed and returns 404 (verified live). The real hub slug is
   // ecommerce-development. This was a sitewide UK footer link, so it 404'd
@@ -55,6 +59,8 @@ const SERVICES = [
   { name: "Ecommerce Consultant", slug: "ecommerce-consultant" },
   { name: "Shopify Development", slug: "shopify-development" },
   { name: "Shopify Plus",        slug: "shopify-plus" },
+  { name: "Shopify Migration",   slug: "shopify-migration" },
+  { name: "Shopify Xero Integration", slug: "shopify-xero-integration" },
   { name: "WooCommerce",         slug: "woocommerce" },
   { name: "Magento",             slug: "magento" },
   { name: "Web Design",          slug: "web-design" },

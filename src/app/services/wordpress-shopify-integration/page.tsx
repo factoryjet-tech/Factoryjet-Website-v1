@@ -812,6 +812,7 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/wordpress-development', t: 'WordPress development', b: 'Work on the WordPress side of the join.' },
   { href: '/replatforming/woocommerce-to-shopify', t: 'WooCommerce to Shopify migration', b: 'When the WordPress site already runs a WooCommerce store.' },
   { href: '/services/shopify-quickbooks-integration', t: 'Shopify QuickBooks integration', b: 'Stock, prices and books kept in step with the store.' },
+  { href: '/services/ecommerce-erp-integration', t: 'Store to ERP integration', b: 'The store linked to QuickBooks, NetSuite, Odoo or another ERP.' },
   { href: '/headless-commerce', t: 'Headless commerce', b: 'Custom product pages on Shopify checkout, for when blocks are not enough.' },
 ];
 

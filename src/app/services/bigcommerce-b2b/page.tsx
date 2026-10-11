@@ -446,7 +446,8 @@ export default function BigCommerceB2BPage() {
               <p>
                 FactoryJet builds end-to-end BigCommerce B2B Edition portals. We configure complex price list matrices.
                 We deploy automated RFQ workflows and build custom self-service invoice payment hubs. We also engineer
-                bi-directional ERP connectors linking NetSuite, SAP, Epicor, or Dynamics 365.
+                bi-directional ERP connectors linking NetSuite, SAP, Epicor, or Dynamics 365. To compare firms, see{' '}
+                <a href="/blog/best-bigcommerce-agencies-2026" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>agencies that build on BigCommerce B2B Edition</a>.
               </p>
               <p>
                 Digitize manual order entry and phone quotes on BigCommerce B2B Edition. Manufacturers and distributors achieve a 40%+ cut in order costs. Quote turnaround drops from days to minutes.

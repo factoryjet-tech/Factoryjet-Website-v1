@@ -986,7 +986,11 @@ export default function AiCallCenterAgentsPage() {
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Centers With a Team of Agents, a Queue and Their Own Systems.</h2>
               <p className="text-lg text-[#46403B]">
-                A call center agent and a receptionist are different builds. This page is for centers with a team of human agents and a contact center platform. The cards show the setups we build for, and where another FactoryJet page is the better read.
+                A call center agent and a receptionist are different builds. This page is for centers with a team of human agents and a contact center platform. The cards show the setups we build for, and where another FactoryJet page is the better read. If you run the phone line of an insurance agency or carrier, see{' '}
+                <Link href="/services/insurance-ai-agents" className="underline decoration-[#F05A28]/40 hover:text-[#F05A28]">
+                  AI agents for insurance
+                </Link>
+                .
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

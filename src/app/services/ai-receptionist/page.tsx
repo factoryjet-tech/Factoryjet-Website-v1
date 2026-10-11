@@ -770,6 +770,10 @@ export default function AiReceptionistPage() {
                 <Link href="/services/ai-call-center-agents" className="underline decoration-[#F05A28]/40 hover:text-[#F05A28]">
                   AI voice agents for call centers
                 </Link>
+                . For claim, quote and service calls at an insurance agency, see{' '}
+                <Link href="/services/insurance-ai-agents" className="underline decoration-[#F05A28]/40 hover:text-[#F05A28]">
+                  AI agents for insurance agencies
+                </Link>
                 .
               </p>
             </div>

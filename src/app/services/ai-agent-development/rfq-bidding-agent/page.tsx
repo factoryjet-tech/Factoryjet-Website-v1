@@ -1085,6 +1085,10 @@ export default function RFQBiddingAgentPage() {
               <Link href="/services/construction-ai-agents" style={{ color: '#B23E13', textDecoration: 'underline' }}>
                 AI agents for construction and contractors
               </Link>
+              ,{' '}
+              <Link href="/services/document-intake-ai-agents" style={{ color: '#B23E13', textDecoration: 'underline' }}>
+                document intake AI agents
+              </Link>
               , our list of{' '}
               <Link href="/blog/best-ai-agent-development-companies-for-manufacturers-2026" style={{ color: '#B23E13', textDecoration: 'underline' }}>
                 who builds RFQ agents for manufacturers

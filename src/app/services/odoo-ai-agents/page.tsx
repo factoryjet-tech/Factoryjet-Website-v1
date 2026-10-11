@@ -1152,6 +1152,7 @@ const othersSchema = {
 const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/erp-ai-agents', t: 'ERP AI agents overview', b: 'The same work across Odoo, NetSuite, SAP Business One and ERPNext.' },
   { href: '/services/netsuite-ai-agents', t: 'NetSuite AI agents', b: 'The sister page for businesses on Oracle NetSuite.' },
+  { href: '/services/sales-order-automation-ai-agents', t: 'Sales and purchase order automation', b: 'Customer purchase orders turned into draft sales orders, and purchase orders drafted for suppliers.' },
   { href: '/services/ai-agent-development', t: 'AI agent development', b: 'Custom agents for support, sales and operations, beyond Odoo.' },
   { href: '/services/ai-agent-monitoring', t: 'AI agent monitoring and support', b: 'Watching, re-testing and fixing an agent after launch.' },
   { href: '/services/shopify-quickbooks-integration', t: 'Shopify QuickBooks integration', b: 'Stock, prices and books kept in step with the store.' },

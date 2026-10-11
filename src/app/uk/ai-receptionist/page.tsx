@@ -543,7 +543,9 @@ export default function AiReceptionistUKPage() {
                     can do and where your data goes. With a build, you decide, and the setup is yours to keep. For the
                     wider picture of AI systems that act across your business, see our{' '}
                     <a href="/uk/ai-agents">UK AI agent development service</a>. If you are still working out where AI
-                    fits at all, start with <a href="/uk/ai-consulting">AI consultancy</a>.
+                    fits at all, start with <a href="/uk/ai-consulting">AI consultancy</a>. For written channels, see{' '}
+                    <a href="/uk/ai-customer-service">AI customer service on chat and email</a> and{' '}
+                    <a href="/uk/whatsapp-ai-agents">an AI agent on your WhatsApp number</a>.
                   </p>
                 </div>
               </div>

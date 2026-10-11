@@ -461,7 +461,7 @@ export default function WooCommerceUKPage() {
                 <div className="mt-6">
                   <p style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.12em', textTransform: 'uppercase', color: '#B23E13', marginBottom: 4 }}>Accounts and VAT</p>
                   <ul className="int-group">
-                    <li><b>Xero.</b> Orders, invoices, payments and customers posted without re-typing.</li>
+                    <li><b>Xero.</b> Orders, invoices, payments and customers posted without re-typing. See <a href="/uk/shopify-xero-integration">WooCommerce and Shopify links to Xero</a>.</li>
                     <li><b>Sage.</b> For shops whose accountant works in Sage, with VAT codes mapped correctly.</li>
                   </ul>
                 </div>
@@ -564,8 +564,8 @@ export default function WooCommerceUKPage() {
               <h2>WooCommerce vs Shopify for UK stores</h2>
               <p className="lead mt-4">
                 We build on both, so we have no reason to push you either way. Here is how the two compare on the
-                things UK shop owners actually care about. If most of your answers sit in the Shopify column, a
-                WooCommerce to Shopify migration is worth scoping.
+                things UK shop owners actually care about. If most of your answers sit in the Shopify column, a{' '}
+                <a href="/uk/shopify-migration" style={{ textDecoration: 'underline' }}>WooCommerce to Shopify migration</a> is worth scoping.
               </p>
             </div>
             <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>

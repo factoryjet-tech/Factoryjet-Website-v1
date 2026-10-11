@@ -483,7 +483,11 @@ export const post: BlogPost = {
         >
           the Shopify vs WooCommerce breakdown
         </a>{' '}
-        covers how those two compare on total cost of ownership.
+        covers how those two compare on total cost of ownership. If you pick BigCommerce, see{' '}
+        <a href="/blog/best-bigcommerce-agencies-2026" className="text-[#B23E13] hover:underline">
+          which BigCommerce agency fits your store
+        </a>
+        .
       </p>
       <p className="mb-8">
         If you are choosing between platforms, or thinking about migrating, FactoryJet handles{' '}

@@ -1132,7 +1132,9 @@ export const post: BlogPost = {
         To see the work behind these numbers, read about our{' '}
         <a href="/uk/ai-agents">AI agent services in the UK</a>,{' '}
         <a href="/uk/ai-development">custom AI development</a>,{' '}
-        <a href="/uk/ai-consulting">AI consulting for UK businesses</a> and the{' '}
+        <a href="/uk/ai-consulting">AI consulting for UK businesses</a>,{' '}
+        <a href="/uk/accounts-payable-automation">accounts payable automation</a>,{' '}
+        <a href="/uk/whatsapp-ai-agents">WhatsApp AI agents</a> and the{' '}
         <a href="/uk/ai-receptionist">AI receptionist we build for UK practices and trades</a>. To compare us with other
         firms, see our lists of{' '}
         <a href="/blog/best-ai-agent-development-companies-uk-2026">AI agent development companies in the UK</a> and{' '}

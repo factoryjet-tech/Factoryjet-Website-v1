@@ -75,6 +75,12 @@ const NATIONAL_SERVICE_PAGE_SLUGS = [
   'ai-development',
   'shopify-plus',
   'woocommerce',
+  // 2026-10-11: buyer-question wave 3.
+  'shopify-migration',
+  'ai-customer-service',
+  'accounts-payable-automation',
+  'whatsapp-ai-agents',
+  'shopify-xero-integration',
 ] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {

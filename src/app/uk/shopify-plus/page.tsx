@@ -590,7 +590,8 @@ export default function ShopifyPlusUKPage() {
             <p className="mt-6" style={{ maxWidth: 820 }}>
               If you are on Magento and not yet sure about leaving, our <a href="/uk/magento">UK Magento agency</a> page
               explains how we decide between staying and moving. Many trade sellers weighing Plus B2B should also read
-              our <a href="/uk/b2b-ecommerce">UK B2B ecommerce</a> page.
+              our <a href="/uk/b2b-ecommerce">UK B2B ecommerce</a> page. For a move to standard Shopify or Plus, with UK
+              price ranges, see <a href="/uk/shopify-migration">Shopify migration for UK stores</a>.
             </p>
           </div>
         </section>
@@ -726,7 +727,7 @@ export default function ShopifyPlusUKPage() {
                   <ul className="int-group">
                     <li><b>NetSuite.</b> Orders, stock, pricing and trade accounts in one ERP.</li>
                     <li><b>Microsoft Dynamics 365 Business Central.</b> Stock and trade prices kept in step with the store.</li>
-                    <li><b>Sage and Xero.</b> Orders, refunds, fees and payouts reconciled without re-typing.</li>
+                    <li><b>Sage and Xero.</b> Orders, refunds, fees and payouts reconciled without re-typing. See <a href="/uk/shopify-xero-integration">Shopify Xero integration for UK stores</a>.</li>
                   </ul>
                 </div>
                 <div className="mt-6">
