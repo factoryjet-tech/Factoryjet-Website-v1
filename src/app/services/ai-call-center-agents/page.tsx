@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import styles from './visual-qa.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -548,16 +549,16 @@ export default function AiCallCenterAgentsPage() {
 
       <SiteHeader />
 
-      <main className="min-h-screen bg-white text-[#14110F]">
+      <main className={`${styles.page} min-h-screen bg-white text-[#14110F]`}>
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* HERO SECTION */}
-        <section className="relative pt-32 pb-20 border-b border-[#E7DED6] bg-[#FFFFFF] overflow-hidden">
+        <section className={`${styles.hero} relative pt-32 pb-20 border-b border-[#E7DED6] bg-[#FFFFFF] overflow-hidden`}>
           <div className="absolute inset-0 bg-[radial-gradient(#E7DED6_1px,transparent_1px)] [background-size:20px_20px] opacity-60 pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              <div className="lg:col-span-7">
+              <div className={`${styles.heroCopy} lg:col-span-7`}>
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFF8F5] border border-[#F05A28]/30 mb-6">
                   <span className="font-mono text-xs text-[#B23E13] font-bold tracking-wide">
                     // CUSTOM AI VOICE AGENTS FOR CALL CENTERS &amp; CONTACT CENTERS
@@ -567,17 +568,20 @@ export default function AiCallCenterAgentsPage() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">AI Call Center Agents, Built on{' '}
                   <span className="text-[#F05A28]">Your Phone System and CRM.</span></h1>
 
-                <p className="text-lg sm:text-xl text-[#46403B] font-normal leading-relaxed mb-8 max-w-2xl">
-                  Most searches for an AI call center lead to software. This page describes a service. FactoryJet designs, builds, implements and supports a custom AI voice agent inside the phone system and CRM your center already runs. It takes routine service calls, overflow and after-hours calls, places reminder calls, writes the call summary, and passes the caller to a person with the notes attached. Further down we say when a ready-made product is the better buy.
+                <p className={`${styles.heroLead} text-lg sm:text-xl text-[#46403B] font-normal leading-relaxed mb-8 max-w-2xl`}>
+                  Most searches for an AI call center lead to software.
                 </p>
 
-                <div className="mb-8">
+                <div className={`${styles.heroForm} mb-8`}>
                   <HeroInlineForm
                     source="ai-call-center-agents"
                     region="us"
                     submitLabel="Get a free call flow review"
                   />
                 </div>
+
+                <p className={`${styles.heroDetails} text-lg sm:text-xl text-[#46403B] font-normal leading-relaxed mb-8 max-w-2xl`}> This page describes a service. FactoryJet designs, builds, implements and supports a custom AI voice agent inside the phone system and CRM your center already runs. It takes routine service calls, overflow and after-hours calls, places reminder calls, writes the call summary, and passes the caller to a person with the notes attached. Further down we say when a ready-made product is the better buy.
+                </p>
 
                 <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-[#E7DED6] text-xs font-mono text-[#6E655F]">
                   <div className="flex items-center gap-2">
@@ -723,7 +727,7 @@ export default function AiCallCenterAgentsPage() {
               </p>
             </div>
 
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="When to Buy a Contact Center Product, and When to Have an Agent Built.">
               <table className="w-full text-left border-collapse bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E7DED6]">
                 <caption className="sr-only">
                   How a ready-made contact center AI product, a custom voice agent built by FactoryJet and an AI receptionist for a small office compare
@@ -756,7 +760,7 @@ export default function AiCallCenterAgentsPage() {
               </p>
             </div>
 
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="List Prices of Eight Contact Center Products.">
               <table className="w-full text-left border-collapse bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E7DED6]">
                 <caption className="sr-only">
                   List prices of eight contact center products, read on each vendor pricing page on 11 Oct 2026
