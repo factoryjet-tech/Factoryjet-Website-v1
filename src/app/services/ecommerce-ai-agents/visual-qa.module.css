@@ -1,0 +1,41 @@
+/* Page-local visual QA. Approved copy, surfaces and shared components stay intact. */
+.page h1, .page h2, .page h3 { text-wrap: balance; }
+.page p { text-wrap: pretty; }
+.page [class*="text-[9px]"], .page [class*="text-[0.5625rem]"], .page [class*="text-[0.6875rem]"] { font-size: 0.75rem; }
+.page :focus-visible { outline: 2px solid #B23E13; outline-offset: 4px; }
+.page [data-hero-inline-form] input:focus-visible { outline: 2px solid #B23E13; outline-offset: 2px; }
+.page [data-hero-inline-form] { margin-top: 0; }
+.heroCopy { display: flex; flex-direction: column; min-width: 0; }
+.heroCopy > * { order: 1; }
+.heroCopy > div:first-child { align-self: flex-start; }
+.heroCopy > div:not(:first-child):not(.heroForm) { order: 4; }
+.heroForm { order: 2; margin-top: 1.5rem; }
+.heroDetails { order: 1; }
+.heroCopy > .heroDetails { margin-top: 0.75rem; }
+@media (min-width: 1024px) { .hero { padding-top: 2rem; } }
+.page div:has(> table) { border: 1px solid #D9D9D2; border-radius: 0.75rem; }
+.page a[class*="inline-flex"] { min-height: 44px; min-width: 44px; }
+.page a[class*="decoration-fj-neutral-200"] { display: inline-flex; align-items: center; min-height: 44px; }
+.page p[class*="max-w-3xl"] { max-width: 72ch; }
+@media (max-width: 639px) {
+  .hero { padding-top: 1.5rem; padding-bottom: 3rem; }
+  .heroCopy > div:first-child { margin-bottom: 1rem; align-self: flex-start; }
+  .heroCopy h1 { font-size: clamp(1.75rem, 8vw, 2rem); line-height: 1.12; margin-bottom: 0; font-weight: 800; }
+  .heroLead { margin-top: 1rem; margin-bottom: 0; }
+  .heroCopy > .heroDetails { order: 3; margin-top: 1.5rem; }
+  .heroCopy > div:not(:first-child):not(.heroForm) { order: 4; }
+  .heroCopy > .heroForm { margin-top: 1rem; margin-bottom: 0; }
+  .page p:not([class*="font-fj-mono"]):not([class*="font-mono"]):not([class*="eyebrow"]),
+  .page li[class*="font-fj-body"], .page span[class*="font-fj-body"], .page td,
+  .page div[class*="font-fj-body"][class*="text-[0.8125rem]"],
+  .page [data-hero-inline-form] input, .page [data-hero-inline-form] button { font-size: 1rem; }
+  .page [class*="text-[11px]"], .page [class*="text-[9px]"], .page [class*="text-[0.5625rem]"], .page [class*="text-[0.6875rem]"] { font-size: 0.75rem; }
+  .page a[class*="font-fj-mono"], .page a[class*="font-mono"] { min-height: 44px; }
+  .page a[class*="rounded-full"] { min-height: 44px; }
+  .page div:has(> table) { scrollbar-width: auto; }
+  .page p[class*="font-fj-body"][class*="text-slate-500"] { font-size: 1rem !important; }
+}
+
+@media (max-width: 639px) { .hero > div { padding-inline: 1rem; } .heroCopy h1 { font-size: clamp(1.4375rem, 6.4vw, 1.5625rem); } }
+
+@media (min-width: 640px) { .page ul:has(> li > a > span) > li:last-child:nth-child(odd) { grid-column: 1 / -1; } }
