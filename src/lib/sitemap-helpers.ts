@@ -1,5 +1,5 @@
 import { execSync } from 'node:child_process'
-import { existsSync, statSync } from 'node:fs'
+import { existsSync, readFileSync, statSync } from 'node:fs'
 import path from 'node:path'
 
 /**
@@ -17,6 +17,38 @@ import path from 'node:path'
 const REPO_ROOT = process.cwd()
 const lastModCache = new Map<string, Date>()
 const FALLBACK_DATE = new Date()
+
+/**
+ * A one-commit clone (what Cloudflare Pages makes) has no history, so
+ * `git log -1 -- <file>` answers with the newest commit for every file.
+ * Measured live on 2026-10-11: 349 URLs in six sitemaps carried one
+ * identical lastmod that moved on every deploy.
+ * scripts/ensure-git-history.mjs fetches the history before the build.
+ * If the clone is still shallow, the dates come from the committed
+ * manifest written by scripts/update-sitemap-lastmod.mjs.
+ */
+const HAS_HISTORY = (() => {
+  try {
+    return (
+      execSync('git rev-parse --is-shallow-repository', {
+        encoding: 'utf-8',
+        cwd: REPO_ROOT,
+        stdio: ['pipe', 'pipe', 'ignore'],
+      }).trim() === 'false'
+    )
+  } catch {
+    return false
+  }
+})()
+
+const MANIFEST: Record<string, string> = (() => {
+  try {
+    const file = path.join(/* turbopackIgnore: true */ REPO_ROOT, 'src/data/sitemap-lastmod.json')
+    return JSON.parse(readFileSync(file, 'utf-8')).files ?? {}
+  } catch {
+    return {}
+  }
+})()
 
 /**
  * Returns the most recent git commit timestamp for a file.
@@ -38,6 +70,14 @@ export function getFileLastMod(relativePath: string): Date {
   if (!existsSync(absPath)) {
     lastModCache.set(relativePath, FALLBACK_DATE)
     return FALLBACK_DATE
+  }
+
+  if (!HAS_HISTORY && MANIFEST[relativePath]) {
+    const date = new Date(MANIFEST[relativePath])
+    if (!Number.isNaN(date.getTime())) {
+      lastModCache.set(relativePath, date)
+      return date
+    }
   }
 
   try {

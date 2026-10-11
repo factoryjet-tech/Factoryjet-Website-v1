@@ -77,3 +77,6 @@ tsconfig.tsbuildinfo
 pipeline/research/data/clarity/
 pipeline/research/data/weekly/
 pipeline/research/data/index-watch/
+
+# Written by scripts/ensure-git-history.mjs on each build
+public/build-info.json
