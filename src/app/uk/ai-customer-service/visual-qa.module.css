@@ -126,3 +126,6 @@
 
 /* Existing native FAQ topic counts: existing page ink token; root fresh contrast review required. */
 .page :global(#faq .faq-sidebar-nav .faq-nav-count) { color:var(--ink) !important; }
+
+/* Preserve native process circle/text separation against inherited numbered-list specificity. */
+.processFlow:global(.num-list) > li { padding-inline-start:52px !important; }
