@@ -9,7 +9,7 @@
     "validate": "node scripts/validate-build.mjs",
     "test:geo": "node scripts/test-geo-redirect.mjs",
     "prebuild": "node scripts/ensure-git-history.mjs && node scripts/check-tracked-imports.mjs && node scripts/check-watermarks.mjs && node scripts/validate-build.mjs && node scripts/test-geo-redirect.mjs",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start",
     "preview": "next start",
     "pages:build": "node scripts/check-tracked-imports.mjs && node scripts/check-watermarks.mjs && node scripts/validate-build.mjs && node scripts/test-geo-redirect.mjs && npx @cloudflare/next-on-pages",
