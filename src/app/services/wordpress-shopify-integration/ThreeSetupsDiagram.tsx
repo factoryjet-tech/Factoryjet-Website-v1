@@ -31,10 +31,10 @@ const LABEL_H = 22;
 const GAP = 16;
 
 /* Vertical layout, top to bottom. Each panel is a label line plus a drawing. */
-const P1 = { label: 0, top: LABEL_H, h: 58 };
+const P1 = { label: 0, top: LABEL_H, h: 136 };
 const P2 = { label: P1.top + P1.h + GAP, top: P1.top + P1.h + GAP + LABEL_H, h: 66, pillGap: 8, pillH: 22 };
 const P2_END = P2.top + P2.h + P2.pillGap + P2.pillH;
-const P3 = { label: P2_END + GAP, top: P2_END + GAP + LABEL_H, h: 58 };
+const P3 = { label: P2_END + GAP, top: P2_END + GAP + LABEL_H, h: 76 };
 const HEIGHT = P3.top + P3.h;
 
 function PanelLabel({ y, n, text }: { y: number; n: string; text: string }) {
@@ -63,26 +63,16 @@ export default function ThreeSetupsDiagram() {
 
       {/* 01 Two sites, two addresses */}
       <PanelLabel y={P1.label} n="01" text="TWO SITES, TWO ADDRESSES" />
-      <rect x={0} y={P1.top} width={128} height={P1.h} rx={10} fill="#FFFFFF" stroke={INK} strokeWidth={1.5} />
-      <text x={12} y={P1.top + 25} className="font-fj-body" fontSize="13" fontWeight={600} fill={INK}>
-        WordPress
-      </text>
-      <text x={12} y={P1.top + 42} className="font-fj-mono" fontSize="9.5" fill={MUTED}>
-        yourname.com
-      </text>
-      <line x1={133} y1={P1.top + 29} x2={167} y2={P1.top + 29} stroke={INK} strokeWidth={1.5} />
-      <path d={`M138 ${P1.top + 24.5}L133 ${P1.top + 29}L138 ${P1.top + 33.5}`} fill="none" stroke={INK} strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
-      <path d={`M162 ${P1.top + 24.5}L167 ${P1.top + 29}L162 ${P1.top + 33.5}`} fill="none" stroke={INK} strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
-      <text x={150} y={P1.top + 20} textAnchor="middle" className="font-fj-mono" fontSize="9.5" fontWeight={700} fill={INK}>
-        links
-      </text>
-      <rect x={172} y={P1.top} width={128} height={P1.h} rx={10} fill={ORANGE_TINT} stroke={ORANGE} strokeWidth={1.5} />
-      <text x={184} y={P1.top + 25} className="font-fj-body" fontSize="13" fontWeight={600} fill={INK}>
-        Shopify store
-      </text>
-      <text x={184} y={P1.top + 42} className="font-fj-mono" fontSize="9.5" fill={ORANGE_TEXT}>
-        shop.yourname.com
-      </text>
+      <rect x={0} y={P1.top} width={W} height={58} rx={10} fill="#FFFFFF" stroke={INK} strokeWidth={1.5} />
+      <text x={12} y={P1.top + 25} className="font-fj-body" fontSize="13" fontWeight={600} fill={INK}>WordPress</text>
+      <text x={12} y={P1.top + 42} className="font-fj-mono" fontSize="9.5" fill={MUTED}>yourname.com</text>
+      <line x1={272} y1={P1.top + 61} x2={272} y2={P1.top + 75} stroke={INK} strokeWidth={1.5} />
+      <path d={`M267.5 ${P1.top + 65.5}L272 ${P1.top + 61}L276.5 ${P1.top + 65.5}`} fill="none" stroke={INK} strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
+      <path d={`M267.5 ${P1.top + 70.5}L272 ${P1.top + 75}L276.5 ${P1.top + 70.5}`} fill="none" stroke={INK} strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
+      <text x={252} y={P1.top + 73} textAnchor="end" className="font-fj-mono" fontSize="9.5" fontWeight={700} fill={INK}>links</text>
+      <rect x={0} y={P1.top + 78} width={W} height={58} rx={10} fill={ORANGE_TINT} stroke={ORANGE} strokeWidth={1.5} />
+      <text x={12} y={P1.top + 103} className="font-fj-body" fontSize="13" fontWeight={600} fill={INK}>Shopify store</text>
+      <text x={12} y={P1.top + 120} className="font-fj-mono" fontSize="9.5" fill={ORANGE_TEXT}>shop.yourname.com</text>
 
       {/* 02 Products inside WordPress pages */}
       <PanelLabel y={P2.label} n="02" text="PRODUCTS INSIDE WORDPRESS PAGES" />
@@ -110,9 +100,9 @@ export default function ThreeSetupsDiagram() {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <rect x={138} y={P2.top + P2.h + P2.pillGap} width={162} height={P2.pillH} rx={11} fill={ORANGE_TEXT} />
+      <rect x={100} y={P2.top + P2.h + P2.pillGap} width={200} height={P2.pillH} rx={11} fill={ORANGE_TEXT} />
       <text
-        x={219}
+        x={200}
         y={P2.top + P2.h + P2.pillGap + 14.5}
         textAnchor="middle"
         className="font-fj-mono"
@@ -126,24 +116,25 @@ export default function ThreeSetupsDiagram() {
 
       {/* 03 Content moved into Shopify */}
       <PanelLabel y={P3.label} n="03" text="CONTENT MOVED INTO SHOPIFY" />
-      <rect x={0} y={P3.top} width={96} height={P3.h} rx={10} fill="#FFFFFF" stroke={INK} strokeWidth={1.5} strokeDasharray="5 4" />
+      <rect x={0} y={P3.top} width={120} height={P3.h} rx={10} fill="#FFFFFF" stroke={INK} strokeWidth={1.5} strokeDasharray="5 4" />
       <text x={12} y={P3.top + 25} className="font-fj-body" fontSize="13" fontWeight={600} fill={MUTED}>
         WordPress
       </text>
       <text x={12} y={P3.top + 42} className="font-fj-mono" fontSize="9.5" fill={MUTED}>
         switched off
       </text>
-      <line x1={101} y1={P3.top + 29} x2={135} y2={P3.top + 29} stroke={ORANGE_TEXT} strokeWidth={1.5} />
-      <path d={`M130 ${P3.top + 24.5}L135 ${P3.top + 29}L130 ${P3.top + 33.5}`} fill="none" stroke={ORANGE_TEXT} strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
-      <text x={118} y={P3.top + 20} textAnchor="middle" className="font-fj-mono" fontSize="9.5" fontWeight={700} fill={ORANGE_TEXT}>
+      <line x1={125} y1={P3.top + 29} x2={159} y2={P3.top + 29} stroke={ORANGE_TEXT} strokeWidth={1.5} />
+      <path d={`M154 ${P3.top + 24.5}L159 ${P3.top + 29}L154 ${P3.top + 33.5}`} fill="none" stroke={ORANGE_TEXT} strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
+      <text x={142} y={P3.top + 20} textAnchor="middle" className="font-fj-mono" fontSize="9.5" fontWeight={700} fill={ORANGE_TEXT}>
         moved
       </text>
-      <rect x={140} y={P3.top} width={160} height={P3.h} rx={10} fill={ORANGE_TINT} stroke={ORANGE} strokeWidth={1.5} />
-      <text x={152} y={P3.top + 25} className="font-fj-body" fontSize="13" fontWeight={600} fill={INK}>
+      <rect x={164} y={P3.top} width={136} height={P3.h} rx={10} fill={ORANGE_TINT} stroke={ORANGE} strokeWidth={1.5} />
+      <text x={176} y={P3.top + 25} className="font-fj-body" fontSize="13" fontWeight={600} fill={INK}>
         Shopify
       </text>
-      <text x={152} y={P3.top + 42} className="font-fj-mono" fontSize="9.5" fill={ORANGE_TEXT}>
-        pages, posts, products
+      <text x={176} y={P3.top + 42} className="font-fj-mono" fontSize="9.5" fill={ORANGE_TEXT}>
+        <tspan x={176}>pages, posts, </tspan>
+        <tspan x={176} dy={16}>products</tspan>
       </text>
     </svg>
   );
