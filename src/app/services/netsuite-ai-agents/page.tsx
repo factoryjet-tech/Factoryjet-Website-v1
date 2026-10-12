@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import styles from './visual-qa.module.css';
 import Link from 'next/link';
 
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -1175,7 +1176,7 @@ function SourceLinks({ ids }: { ids: ReadonlyArray<SrcKey> }) {
           href={SRC[id].url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 py-1 font-fj-mono text-[11px] font-semibold tracking-wide text-[#B23E13] hover:underline"
+          className="inline-flex min-h-11 min-w-11 items-center gap-1.5 py-2 font-fj-mono text-xs font-semibold tracking-wide text-[#B23E13] hover:underline"
         >
           <svg width="10" height="10" viewBox="0 0 9 9" fill="none" aria-hidden="true" className="flex-shrink-0">
             <path d="M1.5 7.5L7.5 1.5M7.5 1.5H3M7.5 1.5V6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
@@ -1200,14 +1201,14 @@ export default function NetSuiteAiAgentsPage() {
 
       <SiteHeader />
 
-      <main className="min-h-screen bg-fj-cream text-fj-ink">
+      <main className={`${styles.page} min-h-screen bg-fj-cream text-fj-ink`}>
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* 1. HERO */}
-        <section className="relative overflow-hidden border-b border-fj-neutral-200 bg-fj-cream pt-12 pb-14 md:pt-14 md:pb-16">
+        <section className={`${styles.hero} relative overflow-hidden border-b border-fj-neutral-200 bg-fj-cream pt-12 pb-14 md:pt-14 md:pb-16`}>
           <div className="mx-auto max-w-[1200px] px-6 md:px-8">
             <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-7">
+              <div className={`${styles.heroCopy} lg:col-span-7`}>
                 <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#F05A28]/30 bg-white px-3 py-1.5">
                   <span className="font-fj-mono text-xs font-bold tracking-wide text-[#B23E13]">
                     NETSUITE AI AGENTS &middot; UNITED STATES
@@ -1218,14 +1219,17 @@ export default function NetSuiteAiAgentsPage() {
                   NetSuite AI agents that draft the bills, quotes and orders your team approves.
                 </h1>
 
-                <p className="mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600">
-                  We design, build and support AI agents that work inside Oracle NetSuite. Some jobs need nothing
+                <p className={`${styles.heroLead} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}>
+                  We design, build and support AI agents that work inside Oracle NetSuite.
+                </p>
+
+                <p className={`${styles.heroDetails} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}> Some jobs need nothing
                   built, because Oracle&rsquo;s AI Connector Service already joins Claude or ChatGPT to your account
                   at no charge from Oracle. Where your rules go further, we build the agent, give it a NetSuite role
                   of its own and stay on after launch. You get a fixed quote in writing before work starts.
                 </p>
 
-                <div className="mt-6">
+                <div className={`${styles.heroForm} mt-6`}>
                   <HeroInlineForm
                     region="us"
                     source="services_netsuite_ai_agents_hero"
@@ -1258,7 +1262,7 @@ export default function NetSuiteAiAgentsPage() {
 
               <div className="lg:col-span-5">
                 <figure className="rounded-2xl border border-fj-neutral-200 bg-white p-5 sm:p-6">
-                  <figcaption className="font-fj-mono text-[11px] font-bold uppercase tracking-wider text-[#B23E13]">
+                  <figcaption className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">
                     How an agent reaches your NetSuite account
                   </figcaption>
                   <ConnectorPathDiagram />
@@ -1323,18 +1327,21 @@ export default function NetSuiteAiAgentsPage() {
               . Oracle keeps its own running list of the NetSuite features that use AI.
             </p>
             <SourceLinks ids={['nsAiFeatures']} />
-            <ul className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-12">
-              {SHIPS.map((c) => (
-                <li key={c.name} className={`rounded-2xl border border-fj-neutral-200 bg-white p-6 ${c.span}`}>
-                  <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{c.name}</h3>
-                  <div className="mt-1 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600">
+            <div className={`${styles.factsBox} mt-10`} tabIndex={0} data-visual-facts="SHIPS">
+<table className={`${styles.facts} bg-white`}><tbody>
+{SHIPS.map((c) => (
+<tr key={c.name}><th scope="row">
+<h3 className="font-fj-display text-lg font-semibold text-fj-ink">{c.name}</h3>
+<div className="mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
                     {c.kind}
                   </div>
-                  <p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-ink">{c.says}</p>
-                  <SourceLinks ids={c.sources} />
-                </li>
-              ))}
-            </ul>
+</th><td>
+<p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-ink">{c.says}</p>
+<SourceLinks ids={c.sources} />
+</td></tr>
+))}
+</tbody></table>
+</div>
 
             <div className="mt-8 rounded-2xl border-2 border-[#F05A28]/25 bg-white p-6 sm:p-8">
               <div className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">
@@ -1390,7 +1397,7 @@ export default function NetSuiteAiAgentsPage() {
                 </p>
                 <SourceLinks ids={['nsPerms', 'nsStdTools', 'nsConnect', 'nsFaq', 'claudeListing']} />
               </div>
-              <ol className="grid gap-4 lg:col-span-8">
+              <ol className={`grid gap-4 lg:col-span-8 ${styles.processFlow}`} data-visual-diagram>
                 {CONNECT_STEPS.map((p) => (
                   <li key={p.n} className="flex items-start gap-4 rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6">
                     <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
@@ -1438,15 +1445,17 @@ export default function NetSuiteAiAgentsPage() {
               .
             </p>
 
-            <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
-              {JOBS.map((s) => (
-                <div key={s.n} className={`rounded-2xl border border-fj-neutral-200 bg-fj-cream p-7 ${s.span}`}>
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
+            <div className={`${styles.factsBox} mt-12`} tabIndex={0} data-visual-facts="JOBS">
+<table className={`${styles.facts} bg-fj-cream`}><tbody>
+{JOBS.map((s) => (
+<tr key={s.n}><th scope="row">
+<div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
                     {s.n}
                   </div>
-                  <h3 className="font-fj-display text-xl font-semibold text-fj-ink">{s.title}</h3>
-                  <p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{s.body}</p>
-                  <ul className="mt-4 grid gap-2">
+<h3 className="font-fj-display text-xl font-semibold text-fj-ink">{s.title}</h3>
+</th><td>
+<p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{s.body}</p>
+<ul className="mt-4 grid gap-2">
                     {s.items.map((it) => (
                       <li key={it} className="flex items-start gap-2.5 font-fj-body text-[15px] leading-relaxed text-fj-ink">
                         <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
@@ -1454,13 +1463,14 @@ export default function NetSuiteAiAgentsPage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-4 rounded-xl border border-fj-neutral-200 bg-white px-4 py-3 font-fj-body text-sm leading-relaxed text-fj-ink">
+<p className="mt-4 rounded-xl border border-fj-neutral-200 bg-white px-4 py-3 font-fj-body text-sm leading-relaxed text-fj-ink">
                     <span className="font-semibold">Worth knowing.</span> {s.note}
                   </p>
-                  <SourceLinks ids={s.sources} />
-                </div>
-              ))}
-            </div>
+<SourceLinks ids={s.sources} />
+</td></tr>
+))}
+</tbody></table>
+</div>
             <p className="mt-6 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
               These are the jobs searched for most. In US search data we pulled on {CHECKED_ON}, accounts payable
               automation for NetSuite drew about 260 searches a month, more than any other job on this page. The same
@@ -1505,28 +1515,26 @@ export default function NetSuiteAiAgentsPage() {
                 <SourceLinks ids={['nsRisks', 'nsStdTools', 'nsBest', 'nsBillApprovals']} />
               </div>
 
-              <ul className="grid gap-3 lg:col-span-8">
-                {GUARDS.map((k) => (
-                  <li
-                    key={k.rule}
-                    className={`grid grid-cols-1 gap-2 rounded-2xl border bg-fj-cream px-5 py-4 sm:grid-cols-[190px_1fr] sm:gap-5 ${
-                      k.keeper === 'build' ? 'border-[#F05A28]/45' : 'border-fj-neutral-200'
-                    }`}
-                  >
-                    <div>
+              <div className={`${styles.factsBox} lg:col-span-8`} tabIndex={0} data-visual-facts="GUARDS">
+<table className={`${styles.facts} bg-fj-cream`}><tbody>
+{GUARDS.map((k) => (
+<tr key={k.rule}><th scope="row">
+<div>
                       <div className="font-fj-display text-base font-semibold text-fj-ink">{k.rule}</div>
                       <div
-                        className={`mt-1 font-fj-mono text-[11px] font-bold uppercase tracking-wider ${
+                        className={`mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider ${
                           k.keeper === 'build' ? 'text-[#B23E13]' : 'text-fj-neutral-600'
                         }`}
                       >
                         {KEEPER_LABEL[k.keeper]}
                       </div>
                     </div>
-                    <p className="font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{k.note}</p>
-                  </li>
-                ))}
-              </ul>
+</th><td>
+<p className="font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{k.note}</p>
+</td></tr>
+))}
+</tbody></table>
+</div>
             </div>
           </div>
         </section>
@@ -1541,15 +1549,18 @@ export default function NetSuiteAiAgentsPage() {
             <p className="mt-4 max-w-2xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
               Knowing these early saves a rebuild. All eight come straight from the linked Oracle pages.
             </p>
-            <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
-              {BREAKS.map((l) => (
-                <li key={l.t} className="rounded-xl border border-fj-neutral-200 border-l-[3px] border-l-[#F05A28] bg-white px-5 py-4">
-                  <div className="font-fj-display text-[15px] font-semibold text-fj-ink">{l.t}</div>
-                  <p className="mt-1 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{l.b}</p>
-                  <SourceLinks ids={l.sources} />
-                </li>
-              ))}
-            </ul>
+            <div className={`${styles.factsBox} mt-10`} tabIndex={0} data-visual-facts="BREAKS">
+<table className={`${styles.facts} bg-white`}><tbody>
+{BREAKS.map((l) => (
+<tr key={l.t}><th scope="row">
+<div className="font-fj-display text-[15px] font-semibold text-fj-ink">{l.t}</div>
+</th><td>
+<p className="mt-1 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{l.b}</p>
+<SourceLinks ids={l.sources} />
+</td></tr>
+))}
+</tbody></table>
+</div>
           </div>
         </section>
 
@@ -1564,26 +1575,29 @@ export default function NetSuiteAiAgentsPage() {
               Here is what we can say and what we leave out. No result is quoted on this page that we have not
               measured. FactoryJet was founded in 2014 and has served more than 500 businesses.
             </p>
-            <ul className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-12">
-              {EXPERIENCE.map((w) => (
-                <li key={w.t} className={`flex flex-col rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6 ${w.span}`}>
-                  <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{w.t}</h3>
-                  <div className="mt-1 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600">
+            <div className={`${styles.factsBox} mt-10`} tabIndex={0} data-visual-facts="EXPERIENCE">
+<table className={`${styles.facts} bg-fj-cream`}><tbody>
+{EXPERIENCE.map((w) => (
+<tr key={w.t}><th scope="row">
+<h3 className="font-fj-display text-lg font-semibold text-fj-ink">{w.t}</h3>
+<div className="mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
                     {w.kind}
                   </div>
-                  <p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-ink">{w.what}</p>
-                  <Link
+</th><td>
+<p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-ink">{w.what}</p>
+<Link
                     href={w.href}
-                    className="mt-4 inline-flex items-center gap-1.5 py-1 font-fj-body text-sm font-semibold text-[#B23E13] hover:underline"
+                    className="mt-4 inline-flex min-h-11 min-w-11 items-center gap-1.5 py-2 font-fj-body text-sm font-semibold text-[#B23E13] hover:underline"
                   >
                     {w.cta}
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="h-4 w-4">
                       <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </Link>
-                </li>
-              ))}
-            </ul>
+</td></tr>
+))}
+</tbody></table>
+</div>
           </div>
         </section>
 
@@ -1708,23 +1722,24 @@ export default function NetSuiteAiAgentsPage() {
                   systems, so the route we recommend is not tied to one vendor&rsquo;s product.
                 </p>
               </div>
-              <ol className="grid gap-4 lg:col-span-8">
-                {OTHERS.map((o, i) => (
-                  <li key={o.name} className="flex items-start gap-4 rounded-2xl border border-fj-neutral-200 bg-white p-6">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-fj-cream font-fj-mono text-sm font-bold text-[#B23E13]">
+              <div className={`${styles.factsBox} lg:col-span-8`} tabIndex={0} data-visual-facts="OTHERS">
+<table className={`${styles.facts} bg-white`}><tbody>
+{OTHERS.map((o, i) => (
+<tr key={o.name}><th scope="row">
+<div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-fj-cream font-fj-mono text-sm font-bold text-[#B23E13]">
                       {String(i + 1).padStart(2, '0')}
                     </div>
-                    <div>
-                      <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{o.name}</h3>
-                      <div className="mt-1 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600">
+<h3 className="font-fj-display text-lg font-semibold text-fj-ink">{o.name}</h3>
+<div className="mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
                         {o.focus}
                       </div>
-                      <p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-ink">{o.says}</p>
-                      <SourceLinks ids={[o.source]} />
-                    </div>
-                  </li>
-                ))}
-              </ol>
+</th><td>
+<p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-ink">{o.says}</p>
+<SourceLinks ids={[o.source]} />
+</td></tr>
+))}
+</tbody></table>
+</div>
             </div>
           </div>
         </section>
