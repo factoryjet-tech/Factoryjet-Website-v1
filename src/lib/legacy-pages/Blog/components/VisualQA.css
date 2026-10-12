@@ -80,3 +80,6 @@
 /* Small orange text uses the established dark-orange token on every screen. */
 .blog-post #author p[class*='text-[#F05A28]'] { color: var(--blog-link); }
 .blog-post #takeaways li > span:first-child { color: var(--blog-link); }
+
+/* Keep complete words in sticky row labels; long source URLs still wrap in prose. */
+.blog-post .blog-prose :is(th,td):first-child { overflow-wrap: normal; word-break: normal; }
