@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import styles from './visual-qa.module.css';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
@@ -433,15 +434,15 @@ export default function ShopifyMigrationUKPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="uk-aiagents">
-      <main>
+      <main className={styles.page}>
 
         <Breadcrumbs items={crumbs} />
 
         {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+        <section className={`sec-lg dot-grid ${styles.hero}`} style={{ position: 'relative' }}>
           <div className="wrap">
             <div className="col-6040">
-              <div>
+              <div className={styles.heroCopy}>
                 <div className="flex-wrap mb-6">
                   <span className="chip"><span className="dot dot-orange" />UK Shopify Migration</span>
                   <span className="chip">Magento &amp; WooCommerce</span>
@@ -462,9 +463,10 @@ export default function ShopifyMigrationUKPage() {
                   <div className="upd">Last updated<br />11 October 2026</div>
                 </div>
 
-                <div className="mt-6" style={{ maxWidth: 560 }}>
+                <div className={styles.heroForm} style={{ maxWidth: 560 }}>
                   <HeroInlineForm region="uk" source="uk_shopify_migration_hero" submitLabel="Get my free migration review" />
                 </div>
+                
               </div>
 
               <div>
@@ -539,20 +541,14 @@ export default function ShopifyMigrationUKPage() {
         {/* ═══ 3. FACTS BAND (each read on the source page, 2026-10-11) ═══ */}
         <section className="stats-band">
           <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout data-sourced-facts><tbody>{[
                 { v: '100,000', t: 'URL redirects a Shopify store can hold. A Shopify Plus store can hold 20,000,000', s: 'Shopify Help Centre', u: SRC_REDIRECTS },
                 { v: '2,048', t: 'variants one Shopify product can have, across up to three options. Bigger Magento products need a plan', s: 'Shopify Help Centre', u: SRC_VARIANTS },
                 { v: '6 years', t: 'the minimum time VAT records must be kept, so old order and invoice data has to stay readable after the switch', s: 'GOV.UK', u: SRC_VAT_RECORDS },
                 { v: '11 Aug 2026', t: 'the date Adobe lists as the end of standard support for Adobe Commerce 2.4.6', s: 'Adobe lifecycle policy', u: SRC_ADOBE_LIFECYCLE },
               ].map((r) => (
-                <li key={r.v} className="card" style={{ padding: '16px 18px' }}>
-                  <div style={{ fontFamily: 'var(--fd)', fontWeight: 800, fontSize: 24, color: 'var(--orange)' }}>{r.v}</div>
-                  <p style={{ fontSize: 13, color: 'var(--ink)', marginTop: 4 }}>{r.t}</p>
-                  <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', textDecoration: 'underline' }}>{r.s}</a>
-                </li>
-              ))}
-            </ul>
+                <tr key={r.t}><th scope="row"><div style={{ fontFamily: 'var(--fd)', fontWeight: 800, fontSize: 24, color: 'var(--orange)' }}>{r.v}</div></th><td><p style={{ fontSize: 13, color: 'var(--ink)', marginTop: 4 }}>{r.t}</p></td><td><a href={r.u} target="_blank" rel="noopener noreferrer nofollow" className={styles.citation} style={{ fontFamily: 'var(--fm)', fontSize: 12, color: 'var(--n400)', textDecoration: 'underline' }}>{r.s}</a></td></tr>
+              ))}</tbody></table></div>
           </div>
         </section>
 
@@ -568,8 +564,7 @@ export default function ShopifyMigrationUKPage() {
                 line. Every Shopify statement in it was read on Shopify’s own pages on 11 October 2026.
               </p>
             </div>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
-              <table className="cmp-table">
+            <div className={`card mt-8 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" data-columns={3}>
                 <thead>
                   <tr>
                     <th>Part of the store</th>
@@ -624,17 +619,17 @@ export default function ShopifyMigrationUKPage() {
                 own guide and launch checklist, and we say so where they do.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <figure className={styles.processFigure} data-process-flow aria-label="How a move to Shopify runs, in nine steps"><ol className={`stack mt-10 ${styles.processFlow}`} style={{ maxWidth: 900 }}>
               {MIGRATION_STEPS.map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: '#B23E13', minWidth: 34 }} className={styles.stageMarker}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
                   </div>
                 </li>
               ))}
-            </ol>
+            </ol></figure>
           </div>
         </section>
 
@@ -649,10 +644,7 @@ export default function ShopifyMigrationUKPage() {
                 documentation, read on 11 October 2026.
               </p>
             </div>
-            <ul className="col-2 mt-12" style={{ gap: 24 }}>
-              <li className="card">
-                <h3>Magento and Adobe Commerce</h3>
-                <p className="mt-4">
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="card"><th><h3>Magento and Adobe Commerce</h3></th><td><p className="mt-4">
                   <a href={SRC_ADOBE_CONFIGURABLE} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>Adobe’s documentation</a>{' '}
                   says each variation of a configurable product is a separate simple product with its own SKU.
                   Shopify holds the same thing as one product with variants, so the catalogue is reshaped, not
@@ -660,8 +652,7 @@ export default function ShopifyMigrationUKPage() {
                   <a href={SRC_ADOBE_GROUPS} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>Customer groups</a>,
                   which Adobe says control discounts and tax class, become companies and catalogues or custom
                   pricing rules.
-                </p>
-                <p className="mt-4">
+                </p><p className="mt-4">
                   The clock matters too.{' '}
                   <a href={SRC_ADOBE_LIFECYCLE} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>Adobe’s lifecycle page</a>,
                   last updated 18 September 2026, shows version 2.4.6 left standard support on 11 August 2026,
@@ -670,19 +661,14 @@ export default function ShopifyMigrationUKPage() {
                   <a href="/uk/magento">UK Magento</a> page covers staying, and our{' '}
                   <a href="/replatforming/magento-to-shopify">Magento to Shopify guide</a> goes deeper on this one
                   route.
-                </p>
-              </li>
-              <li className="card">
-                <h3>WooCommerce</h3>
-                <p className="mt-4">
+                </p></td></tr><tr className="card"><th><h3>WooCommerce</h3></th><td><p className="mt-4">
                   WooCommerce address patterns depend on settings.{' '}
                   <a href={SRC_WOO_PERMALINKS} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>Its documentation</a>{' '}
                   gives /product-category/ as the default category base and offers a Shop base option that puts
                   every product under the shop page’s name, which is /shop/ in WooCommerce’s own example.
                   Shopify refuses to redirect any address that starts with /shop, so a store using that option
                   needs a separate plan.
-                </p>
-                <p className="mt-4">
+                </p><p className="mt-4">
                   Shopify’s{' '}
                   <a href={SRC_WOO_GUIDE} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>WooCommerce guide</a>{' '}
                   adds two more points. Reviews cannot be exported or migrated and need a third-party app. And
@@ -690,35 +676,23 @@ export default function ShopifyMigrationUKPage() {
                   <a href={SRC_STORE_MIGRATION_APP} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>Store Migration app</a>{' '}
                   can import WooCommerce products but is in early access for certain stores. See our{' '}
                   <a href="/uk/woocommerce">UK WooCommerce</a> page if you are still deciding.
-                </p>
-              </li>
-              <li className="card">
-                <h3>BigCommerce</h3>
-                <p className="mt-4">
+                </p></td></tr><tr className="card"><th><h3>BigCommerce</h3></th><td><p className="mt-4">
                   <a href={SRC_BC_PRICE_LISTS} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>BigCommerce’s documentation</a>{' '}
                   describes price lists that hold prices at variant level and are assigned to customer groups.
                   On Shopify those trade prices become catalogues attached to companies, and the match is rarely
                   one to one.
-                </p>
-                <p className="mt-4">
+                </p><p className="mt-4">
                   Shopify’s Help Centre lists ten platform migration guides. BigCommerce, Magento and Adobe
                   Commerce are not among them, so the general guide applies and the mapping is planned by hand.
-                </p>
-              </li>
-              <li className="card">
-                <h3>Custom-built carts</h3>
-                <p className="mt-4">
+                </p></td></tr><tr className="card"><th><h3>Custom-built carts</h3></th><td><p className="mt-4">
                   A custom cart usually has no export tool and no migration app that understands its shape.
                   Shopify’s guide lists five ways to move content, from least to most technical, and this is
                   the last one: a custom migration built on the Shopify API.
-                </p>
-                <p className="mt-4">
+                </p><p className="mt-4">
                   We read the old database directly, write the scripts that load it, and run them against a test
                   store until the counts and samples match the live site. Address patterns on custom carts are
                   often one of a kind, so the redirect map is built from a crawl and your server logs.
-                </p>
-              </li>
-            </ul>
+                </p></td></tr></tbody></table></div>
           </div>
         </section>
 
@@ -881,7 +855,7 @@ export default function ShopifyMigrationUKPage() {
                 <div className="card mt-6">
                   <span className="eyebrow">What gets set up again on Shopify</span>
                   <div className="mt-6">
-                    <p style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.12em', textTransform: 'uppercase', color: '#B23E13', marginBottom: 4 }}>Couriers</p>
+                    <p style={{ fontFamily: 'var(--fm)', fontSize: 12, letterSpacing: '.12em', textTransform: 'uppercase', color: '#B23E13', marginBottom: 4 }}>Couriers</p>
                     <ul className="int-group">
                       <li><b><a href={SRC_ROYAL_MAIL} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>Royal Mail</a>.</b> Labels can be bought inside Shopify from a UK location, for UK destinations only.</li>
                       <li><b><a href={SRC_DPD} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>DPD</a>.</b> Labels can be bought inside Shopify from a UK location. Parcels are dropped off, with no collection.</li>
@@ -890,14 +864,14 @@ export default function ShopifyMigrationUKPage() {
                     </ul>
                   </div>
                   <div className="mt-6">
-                    <p style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.12em', textTransform: 'uppercase', color: '#B23E13', marginBottom: 4 }}>Pay later</p>
+                    <p style={{ fontFamily: 'var(--fm)', fontSize: 12, letterSpacing: '.12em', textTransform: 'uppercase', color: '#B23E13', marginBottom: 4 }}>Pay later</p>
                     <ul className="int-group">
                       <li><b><a href={SRC_KLARNA} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>Klarna</a>.</b> Switched on through Shopify Payments. The United Kingdom is on Shopify’s list of supported countries.</li>
                       <li><b><a href={SRC_CLEARPAY} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>Clearpay</a>.</b> Its UK retailer page shows Shopify among the platforms it connects to.</li>
                     </ul>
                   </div>
                   <div className="mt-6">
-                    <p style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.12em', textTransform: 'uppercase', color: '#B23E13', marginBottom: 4 }}>Accounts</p>
+                    <p style={{ fontFamily: 'var(--fm)', fontSize: 12, letterSpacing: '.12em', textTransform: 'uppercase', color: '#B23E13', marginBottom: 4 }}>Accounts</p>
                     <ul className="int-group">
                       <li><b><a href={SRC_XERO} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>Xero</a>.</b> Xero publishes its own Shopify integration, which it says syncs sales, payouts, fees and taxes.</li>
                       <li><b>Sage.</b> The audit records how orders, refunds and payouts reach Sage today, so the same figures keep arriving after the move.</li>
@@ -922,8 +896,7 @@ export default function ShopifyMigrationUKPage() {
                 figure to the highest.
               </p>
             </div>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
-              <table className="cmp-table">
+            <div className={`card mt-8 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" data-columns={4}>
                 <thead>
                   <tr>
                     <th>Source</th>
@@ -979,8 +952,7 @@ export default function ShopifyMigrationUKPage() {
                 what each one suits and what it leaves for you to do.
               </p>
             </div>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
-              <table className="cmp-table">
+            <div className={`card mt-8 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" data-columns={3}>
                 <thead>
                   <tr>
                     <th>Route</th>
