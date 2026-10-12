@@ -9,6 +9,7 @@ import { BlogHeroImage } from './BlogHeroImage';
 import BlogLeadCapture from '@/components/BlogLeadCapture';
 import { blogLeadOffer } from '../leadOffer';
 import './BlogPostPage.css';
+import './VisualQA.css';
 import './IndiaAgencyGuide.css';
 import { getAuthorByName } from '@/data/authors';
 import {
@@ -29,6 +30,18 @@ interface BlogPostPageProps {
   relatedPosts?: BlogPost[];
   /** Money pages this topic should feed. Computed in the route. */
   relatedServices?: RelatedService[];
+}
+
+/** Native table scrolling keeps each source table unchanged and keyboard reachable. */
+function keyboardReadableTables(content: React.ReactNode): React.ReactNode {
+  return React.Children.map(content, (child) => {
+    if (!React.isValidElement<{ children?: React.ReactNode }>(child)) return child;
+    const children = child.props.children === undefined ? undefined : keyboardReadableTables(child.props.children);
+    if (child.type === 'table') {
+      return React.cloneElement(child as React.ReactElement<React.HTMLAttributes<HTMLTableElement>>, { tabIndex: 0 }, children);
+    }
+    return children === undefined ? child : React.cloneElement(child, undefined, children);
+  });
 }
 
 const KeyTakeaways = ({ items }: { items: string[] }) => (
@@ -110,8 +123,8 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
 
       {/* Hero Header */}
       <header className="bg-white border-b border-gray-100 pt-8 pb-10 md:pt-16 md:pb-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-4 md:mb-6">
+        <div className="blog-hero-grid max-w-5xl mx-auto px-4 sm:px-6 text-center">
+          <div className="blog-hero-meta flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-4 md:mb-6">
             <span className="px-2.5 md:px-3 py-0.5 md:py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-[#FFF3EE] text-[#B23E13]">
               {post.category}
             </span>
@@ -126,6 +139,8 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
           </div>
 
           <h1
+            data-long-title={post.title.length > 90 || undefined}
+            data-very-long-title={post.title.length > 120 || undefined}
             className="font-fj-display font-extrabold tracking-[-0.03em] text-[32px] md:text-[42px] lg:text-[50px] xl:text-[56px] text-slate-900 leading-[1.08] [text-wrap:balance] mb-6 md:mb-8"
           >
             {post.title}
@@ -136,7 +151,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
             return (
               <Link
                 href={authorProfile ? `/author/${authorProfile.slug}` : '/blog'}
-                className="inline-flex items-center justify-center gap-3 md:gap-4 group/author"
+                className="blog-hero-author inline-flex items-center justify-center gap-3 md:gap-4 group/author"
               >
                 <div className="relative">
                   <img
@@ -157,11 +172,14 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
               </Link>
             );
           })()}
+          <div className="blog-hero-lead">
+            <BlogLeadCapture slug={post.slug} offer={leadOffer} />
+          </div>
         </div>
       </header>
 
       {/* Main Image */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 -mt-6 md:-mt-12 mb-10 md:mb-16 relative z-10">
+      <div data-hero-top={["best-bigcommerce-agencies-2026", "best-shopify-plus-agencies-usa-2026", "best-ai-agent-development-companies-for-manufacturers-2026", "best-ai-automation-agencies-usa-2026", "ai-chatbot-cost-2026", "shopify-plus-migration-cost-2026", "intercom-fin-vs-zendesk-ai-vs-custom-ai-agent-2026", "ai-consultant-cost-2026", "ai-voice-agents-vs-human-answering-services-cost-comparison-2026", "best-ai-automation-agencies-uk-2026", "best-shopify-plus-agencies-uk-2026", "best-ai-agent-development-companies-uk-2026", "best-ai-consultancies-uk-2026", "best-ai-consultancies-australia-2026", "hire-ai-developers-australia-cost-2026"].includes(post.slug) || undefined} className="max-w-6xl mx-auto px-4 sm:px-6 -mt-6 md:-mt-12 mb-10 md:mb-16 relative z-10">
         <div
           className="rounded-xl md:rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-900/5 aspect-[16/9] md:aspect-[21/9] bg-gray-100"
         >
@@ -197,11 +215,9 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
 
               {/* Main Content Body */}
               <div id="content" className="blog-prose prose prose-slate prose-sm md:prose-base lg:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-[#F05A28] prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg prose-p:leading-relaxed prose-li:text-gray-700">
-                {post.content}
+                {keyboardReadableTables(post.content)}
               </div>
 
-              {/* Lead form, end of article, before FAQ. source = blog_<slug>. */}
-              <BlogLeadCapture slug={post.slug} offer={leadOffer} />
 
               {/* AEO: FAQ Module */}
               {post.faqs && <FAQAccordion faqs={post.faqs} />}
