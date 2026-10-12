@@ -70,3 +70,17 @@
 .page .processFlow > li {position:relative;}
 .page .processFlow > li:not(:last-child)::after {content:""; position:absolute; left:43px; top:calc(100% + 1px); width:2px; height:13px; background:#F05A28;}
 .page .processFlow > li:not(:last-child)::before {content:""; position:absolute; left:40px; top:calc(100% + 8px); width:8px; height:8px; border-right:2px solid #F05A28; border-bottom:2px solid #F05A28; transform:rotate(45deg);}
+
+/* Proposed page-local desktop FAQ spacing with asymmetric 7:5 categories. Keep original native FAQ, labels, words and phone layout. */
+@media (min-width: 1024px) {
+  .page :global(section:has([data-faq-item])) :global(.space-y-10) {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: 28px;
+  }
+  .page :global(section:has([data-faq-item])) :global(.space-y-10) > * { margin: 0; }
+  .page :global(section:has([data-faq-item])) :global(.space-y-10) > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .page :global(section:has([data-faq-item])) :global([data-faq-question]) { padding-block: 12px; min-height: 48px; }
+  .page :global(section:has([data-faq-item])) :global([data-faq-question]) > span:first-child { max-width: 55ch; }
+  .page :global(section:has([data-faq-item])) :global([data-faq-answer]) { max-width: 55ch; }
+}
