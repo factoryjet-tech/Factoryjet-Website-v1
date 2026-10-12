@@ -205,12 +205,11 @@ export const post: BlogPost = {
         <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-3">
           The short answer
         </p>
-        <p className="text-lg leading-relaxed text-[#1F2937] mb-0">
-          <strong>Rent a support agent</strong> when your tickets sit in one help desk and the answers live in your help
+        <table className={visualQa.profileFacts} tabIndex={0}><tbody><tr><th scope="row"><strong>Rent a support agent</strong></th><td> when your tickets sit in one help desk and the answers live in your help
           center plus systems with a modern API. Intercom Fin, Zendesk AI agents, Salesforce Agentforce and Gorgias AI
-          Agent all do that job. <strong>Have an agent built</strong> when the work crosses systems their builders
+          Agent all do that job. </td></tr><tr><th scope="row"><strong>Have an agent built</strong></th><td> when the work crosses systems their builders
           cannot reach, or happens outside the help desk.
-        </p>
+        </td></tr></tbody></table>
       </div>
 
       <div className="bg-[#FAF8F5] border-l-4 border-[#B23E13] p-5 rounded-r-lg mb-10">
@@ -588,15 +587,12 @@ export const post: BlogPost = {
         such as Stripe or Shopify through Data Connectors. Intercom says Procedures need &quot;no engineering or custom
         builds&quot;. Its ecommerce example has Fin checking an order, confirming the change and issuing a refund.
       </p>
-      <p>
-        <strong>Where it fits.</strong> You want to keep your help desk, your help center content is in good shape, and
+      <table className={visualQa.profileFacts} tabIndex={0} aria-labelledby="intercom-fin"><tbody><tr><th scope="row"><strong>Where it fits.</strong></th><td> You want to keep your help desk, your help center content is in good shape, and
         the systems Fin must act on have an API or an MCP server (a standard way for AI tools to call other software).
-      </p>
-      <p>
-        <strong>Where it stops.</strong> Every connector goes through an API or MCP. The Fin integrations FAQ says,
+      </td></tr><tr><th scope="row"><strong>Where it stops.</strong></th><td> Every connector goes through an API or MCP. The Fin integrations FAQ says,
         &quot;If your tool has an API, you can connect it to Fin.&quot; A system with no API needs one built in front of
         it first. On a help desk other than Intercom, a minimum of 50 outcomes a month applies.
-      </p>
+      </td></tr></tbody></table>
       <p>
         Confirm phone pricing in writing. The Intercom pricing page lists Fin Voice at $1.99 per voice outcome through
         its sales team, while the Fin pricing page says voice is on a custom pricing plan for select customers.
@@ -621,15 +617,12 @@ export const post: BlogPost = {
         telephony charges, a charge for the time the agent is on the call and a recording charge, and can also use
         automated resolutions.
       </p>
-      <p>
-        <strong>Where it fits.</strong> Your team already works in Zendesk. The agent is in the plan, the allowance is
+      <table className={visualQa.profileFacts} tabIndex={0} aria-labelledby="zendesk-ai-agents"><tbody><tr><th scope="row"><strong>Where it fits.</strong></th><td> Your team already works in Zendesk. The agent is in the plan, the allowance is
         in the plan, and there is one vendor to deal with.
-      </p>
-      <p>
-        <strong>Where it stops.</strong> Seats are priced per human agent, and the systems the agent can reach are the
+      </td></tr><tr><th scope="row"><strong>Where it stops.</strong></th><td> Seats are priced per human agent, and the systems the agent can reach are the
         ones with a JSON API. For teams on another platform, Zendesk now sells Forethought AI agents, which its pricing
         page describes as working whether you use Zendesk or another service provider.
-      </p>
+      </td></tr></tbody></table>
 
       <figure className="my-8">
         <img
@@ -668,15 +661,12 @@ export const post: BlogPost = {
         first 1,000 Agentforce for Service conversations, is an add-on for &quot;Enterprise Edition and higher&quot;.
         Ask your account executive which editions qualify today.
       </p>
-      <p>
-        <strong>Where it fits.</strong> Your cases, customer records and automations already live in Salesforce, and you
+      <table className={visualQa.profileFacts} tabIndex={0} aria-labelledby="agentforce"><tbody><tr><th scope="row"><strong>Where it fits.</strong></th><td> Your cases, customer records and automations already live in Salesforce, and you
         have an admin or developer who knows flows.
-      </p>
-      <p>
-        <strong>Where it stops.</strong> Outside Salesforce. The agent reaches other systems through APIs and MuleSoft,
+      </td></tr><tr><th scope="row"><strong>Where it stops.</strong></th><td> Outside Salesforce. The agent reaches other systems through APIs and MuleSoft,
         which is integration work whichever tool does it. The pricing page also notes that its worked examples leave
         out Data 360 credits and other consumption services.
-      </p>
+      </td></tr></tbody></table>
 
       <h2 id="gorgias">Gorgias AI Agent: built around a Shopify store</h2>
       <p>
@@ -701,15 +691,12 @@ export const post: BlogPost = {
         Plan gating matters here. Actions and brand voice controls start on Basic. The help desk connects to Shopify and
         WooCommerce on every plan, to BigCommerce from Basic and to Magento from Pro.
       </p>
-      <p>
-        <strong>Where it fits.</strong> A Shopify brand whose tickets are about orders, with a support lead and no
+      <table className={visualQa.profileFacts} tabIndex={0} aria-labelledby="gorgias"><tbody><tr><th scope="row"><strong>Where it fits.</strong></th><td> A Shopify brand whose tickets are about orders, with a support lead and no
         developer.
-      </p>
-      <p>
-        <strong>Where it stops.</strong> When orders, stock or customer prices live outside Shopify, for example in an
+      </td></tr><tr><th scope="row"><strong>Where it stops.</strong></th><td> When orders, stock or customer prices live outside Shopify, for example in an
         ERP that serves wholesale accounts. Ask Gorgias what the AI Agent can act on in that case before you plan
         around it.
-      </p>
+      </td></tr></tbody></table>
 
       <h2 id="custom-build">A custom-built agent: for work that leaves the help desk</h2>
       <p>
@@ -937,7 +924,7 @@ export const post: BlogPost = {
 
       <h2 id="how-to-choose">How to choose in one afternoon</h2>
       <p>You can settle most of this with a ticket export and a spreadsheet.</p>
-      <ol className="list-decimal pl-6 space-y-2 mb-6">
+      <ol className={visualQa.decisionFlow} data-visual-diagram="">
         <li>Export the last 90 days of tickets and sort them by type.</li>
         <li>Take the five biggest types. Next to each, write the systems a person opens to resolve it.</li>
         <li>Mark each system one of three ways: listed connector, has an API, or neither.</li>
