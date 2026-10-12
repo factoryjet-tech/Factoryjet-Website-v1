@@ -26,6 +26,7 @@ const plusJakarta = Plus_Jakarta_Sans({
   preload: true,
   weight: ['400', '500', '600', '700', '800'],
   fallback: ['system-ui', 'sans-serif'],
+  adjustFontFallback: false,
 })
 
 const inter = Inter({
@@ -35,6 +36,7 @@ const inter = Inter({
   weight: ['400', '500', '600', '700'],
   preload: true,
   fallback: ['system-ui', 'arial'],
+  adjustFontFallback: false,
 })
 
 const geistMono = Geist_Mono({
