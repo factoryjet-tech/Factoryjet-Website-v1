@@ -48,3 +48,19 @@
 @media (min-width:1024px) { .page p:not([style]):not([class*="font-fj-mono"]):not([class*="font-mono"]):not([class*="eyebrow"]) { max-width:65ch; } }
 
 @media(min-width:1024px) { .page p:not([class*="font-fj-mono"]):not([class*="font-mono"]):not([class*="eyebrow"]) {max-width:55ch !important;} }
+
+.page .factsBox { overflow: hidden; border: 1px solid #D9D9D2; border-radius: 12px; }
+.page table.facts { width: 100%; table-layout: fixed; border-collapse: separate; border-spacing: 0; }
+.page table.facts :is(tbody,tr,th,td) { background: inherit; }
+.page table.facts th { width: 34%; vertical-align: top; text-align: left; font-weight: 400; padding: 24px; }
+.page table.facts td { width: 66%; vertical-align: top; padding: 24px; }
+.page table.facts tr + tr > * { border-top: 1px solid #D9D9D2; }
+.page table.facts th > :last-child { margin-bottom: 0; }
+@media(max-width:639px) {
+.page table.facts, .page table.facts :is(tbody,tr,th,td) { display:block; width:100% !important; min-width:0 !important; max-width:none !important; }
+.page table.facts th { position:static !important; border-right:0 !important; padding:20px 20px 4px; }
+.page table.facts td { padding:0 20px 20px; }
+.page table.facts tr + tr td { border-top:0; }
+.page table.facts :is(p,li,th,td) { font-size:16px !important; }
+}
+.page .factsBox table.facts :is(tbody,tr,th,td) { background:inherit !important; }

@@ -1126,15 +1126,11 @@ export default function ErpAiAgentsPage() {
                 <SourceLinks ids={['nsRisks', 'nsStdTools', 'frappeRest']} />
               </div>
 
-              <ul className="grid gap-3 lg:col-span-8">
-                {KEEPS.map((k) => (
-                  <li
-                    key={k.data}
-                    className={`grid grid-cols-1 gap-2 rounded-2xl border bg-white px-5 py-4 sm:grid-cols-[190px_1fr] sm:gap-5 ${
-                      k.keeper === 'agent' ? 'border-[#F05A28]/45' : 'border-fj-neutral-200'
-                    }`}
-                  >
-                    <div>
+              <div className={`${styles.factsBox} lg:col-span-8`} tabIndex={0}>
+<table className={`${styles.facts} bg-white`}><tbody>
+{KEEPS.map((k) => (
+<tr key={k.data}><th scope="row">
+<div>
                       <div className="font-fj-display text-base font-semibold text-fj-ink">{k.data}</div>
                       <div
                         className={`mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider ${
@@ -1144,10 +1140,12 @@ export default function ErpAiAgentsPage() {
                         {KEEPER_LABEL[k.keeper]}
                       </div>
                     </div>
-                    <p className="font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{k.note}</p>
-                  </li>
-                ))}
-              </ul>
+</th><td>
+<p className="font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{k.note}</p>
+</td></tr>
+))}
+</tbody></table>
+</div>
             </div>
           </div>
         </section>
@@ -1172,15 +1170,17 @@ export default function ErpAiAgentsPage() {
               .
             </p>
 
-            <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
-              {JOBS.map((s) => (
-                <div key={s.n} className={`rounded-2xl border border-fj-neutral-200 bg-fj-cream p-7 ${s.span}`}>
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
+            <div className={`${styles.factsBox} mt-12`} tabIndex={0}>
+<table className={`${styles.facts} bg-fj-cream`}><tbody>
+{JOBS.map((s) => (
+<tr key={s.n}><th scope="row">
+<div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
                     {s.n}
                   </div>
-                  <h3 className="font-fj-display text-xl font-semibold text-fj-ink">{s.title}</h3>
-                  <p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{s.body}</p>
-                  <ul className="mt-4 grid gap-2">
+<h3 className="font-fj-display text-xl font-semibold text-fj-ink">{s.title}</h3>
+</th><td>
+<p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{s.body}</p>
+<ul className="mt-4 grid gap-2">
                     {s.items.map((it) => (
                       <li key={it} className="flex items-start gap-2.5 font-fj-body text-[15px] leading-relaxed text-fj-ink">
                         <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
@@ -1188,13 +1188,14 @@ export default function ErpAiAgentsPage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-4 rounded-xl border border-fj-neutral-200 bg-white px-4 py-3 font-fj-body text-sm leading-relaxed text-fj-ink">
+<p className="mt-4 rounded-xl border border-fj-neutral-200 bg-white px-4 py-3 font-fj-body text-sm leading-relaxed text-fj-ink">
                     <span className="font-semibold">Worth knowing.</span> {s.note}
                   </p>
-                  <SourceLinks ids={s.sources} />
-                </div>
-              ))}
-            </div>
+<SourceLinks ids={s.sources} />
+</td></tr>
+))}
+</tbody></table>
+</div>
             <p className="mt-6 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
               These are the jobs we are asked for most. The same pattern fits others: read what arrives, look up the
               ERP, draft, approve, post. If your books sit in QuickBooks, see{' '}
@@ -1223,18 +1224,21 @@ export default function ErpAiAgentsPage() {
               An agent can only do what the ERP lets outside software do. Each card restates the maker&rsquo;s own
               documentation, as read on {CHECKED_ON}. We have built on all four, and on custom ERPs.
             </p>
-            <ul className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-12">
-              {SYSTEMS.map((c) => (
-                <li key={c.name} className={`rounded-2xl border border-fj-neutral-200 bg-white p-6 ${c.span}`}>
-                  <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{c.name}</h3>
-                  <div className="mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
+            <div className={`${styles.factsBox} mt-10`} tabIndex={0}>
+<table className={`${styles.facts} bg-white`}><tbody>
+{SYSTEMS.map((c) => (
+<tr key={c.name}><th scope="row">
+<h3 className="font-fj-display text-lg font-semibold text-fj-ink">{c.name}</h3>
+<div className="mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
                     Made by {c.maker} &middot; {c.door}
                   </div>
-                  <p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-ink">{c.says}</p>
-                  <SourceLinks ids={c.sources} />
-                </li>
-              ))}
-            </ul>
+</th><td>
+<p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-ink">{c.says}</p>
+<SourceLinks ids={c.sources} />
+</td></tr>
+))}
+</tbody></table>
+</div>
 
             <div className="mt-8 rounded-2xl border-2 border-[#F05A28]/25 bg-white p-6 sm:p-8">
               <div className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">
@@ -1276,15 +1280,18 @@ export default function ErpAiAgentsPage() {
             <p className="mt-4 max-w-2xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
               Knowing these early saves a rebuild. All eight come straight from the linked pages.
             </p>
-            <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
-              {BREAKS.map((l) => (
-                <li key={l.t} className="rounded-xl border border-fj-neutral-200 border-l-[3px] border-l-[#F05A28] bg-fj-cream px-5 py-4">
-                  <div className="font-fj-display text-[15px] font-semibold text-fj-ink">{l.t}</div>
-                  <p className="mt-1 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{l.b}</p>
-                  <SourceLinks ids={l.sources} />
-                </li>
-              ))}
-            </ul>
+            <div className={`${styles.factsBox} mt-10`} tabIndex={0}>
+<table className={`${styles.facts} bg-fj-cream`}><tbody>
+{BREAKS.map((l) => (
+<tr key={l.t}><th scope="row">
+<div className="font-fj-display text-[15px] font-semibold text-fj-ink">{l.t}</div>
+</th><td>
+<p className="mt-1 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{l.b}</p>
+<SourceLinks ids={l.sources} />
+</td></tr>
+))}
+</tbody></table>
+</div>
           </div>
         </section>
 
@@ -1305,15 +1312,17 @@ export default function ErpAiAgentsPage() {
               Each line says what the project covered and where it stands. No result is quoted here that we have not
               measured.
             </p>
-            <ul className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-12">
-              {WORK.map((w) => (
-                <li key={w.who} className={`flex flex-col rounded-2xl border border-fj-neutral-200 bg-white p-6 ${w.span}`}>
-                  <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{w.who}</h3>
-                  <div className="mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
+            <div className={`${styles.factsBox} mt-10`} tabIndex={0}>
+<table className={`${styles.facts} bg-white`}><tbody>
+{WORK.map((w) => (
+<tr key={w.who}><th scope="row">
+<h3 className="font-fj-display text-lg font-semibold text-fj-ink">{w.who}</h3>
+<div className="mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
                     {w.kind}
                   </div>
-                  <p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-ink">{w.what}</p>
-                  <Link
+</th><td>
+<p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-ink">{w.what}</p>
+<Link
                     href={w.href}
                     className="mt-4 inline-flex min-h-11 min-w-11 items-center gap-1.5 py-2 font-fj-body text-sm font-semibold text-[#B23E13] hover:underline"
                   >
@@ -1322,9 +1331,10 @@ export default function ErpAiAgentsPage() {
                       <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </Link>
-                </li>
-              ))}
-            </ul>
+</td></tr>
+))}
+</tbody></table>
+</div>
           </div>
         </section>
 
@@ -1452,23 +1462,24 @@ export default function ErpAiAgentsPage() {
                   custom systems, so the route we recommend is not tied to one vendor&rsquo;s product.
                 </p>
               </div>
-              <ol className="grid gap-4 lg:col-span-8">
-                {OTHERS.map((o, i) => (
-                  <li key={o.name} className="flex items-start gap-4 rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
+              <div className={`${styles.factsBox} lg:col-span-8`} tabIndex={0}>
+<table className={`${styles.facts} bg-fj-cream`}><tbody>
+{OTHERS.map((o, i) => (
+<tr key={o.name}><th scope="row">
+<div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
                       {String(i + 1).padStart(2, '0')}
                     </div>
-                    <div>
-                      <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{o.name}</h3>
-                      <div className="mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
+<h3 className="font-fj-display text-lg font-semibold text-fj-ink">{o.name}</h3>
+<div className="mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
                         {o.focus}
                       </div>
-                      <p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-ink">{o.says}</p>
-                      <SourceLinks ids={[o.source]} />
-                    </div>
-                  </li>
-                ))}
-              </ol>
+</th><td>
+<p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-ink">{o.says}</p>
+<SourceLinks ids={[o.source]} />
+</td></tr>
+))}
+</tbody></table>
+</div>
             </div>
           </div>
         </section>
