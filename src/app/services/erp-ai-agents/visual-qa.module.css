@@ -48,5 +48,3 @@
 @media (min-width:1024px) { .page p:not([style]):not([class*="font-fj-mono"]):not([class*="font-mono"]):not([class*="eyebrow"]) { max-width:65ch; } }
 
 @media(min-width:1024px) { .page p:not([class*="font-fj-mono"]):not([class*="font-mono"]):not([class*="eyebrow"]) {max-width:55ch !important;} }
-
-@media(min-width:640px) { .page div[class*="grid"][class*="lg:grid-cols-12"] > div:last-child:nth-child(odd) { grid-column:1 / -1; } }
