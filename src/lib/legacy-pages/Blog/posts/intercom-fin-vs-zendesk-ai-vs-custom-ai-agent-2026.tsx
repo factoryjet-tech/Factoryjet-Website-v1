@@ -1,3 +1,4 @@
+import visualQa from './intercom-fin-vs-zendesk-ai-vs-custom-ai-agent-2026.visual-qa.module.css';
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
 
@@ -843,20 +844,16 @@ export const post: BlogPost = {
       <p>
         Renting and building are not exclusive. Every vendor in this guide lets its agent call something you supply.
       </p>
-      <ul className="list-disc pl-6 space-y-2 mb-6">
-        <li>
-          <strong>Fin</strong> accepts a custom REST API Data Connector or a custom MCP server.
-        </li>
-        <li>
-          <strong>Zendesk AI agents</strong> call custom actions and API integrations.
-        </li>
-        <li>
-          <strong>Agentforce</strong> turns your APIs into agent actions.
-        </li>
-        <li>
-          <strong>Gorgias AI Agent</strong> lets you build a custom action to any API or app.
-        </li>
-      </ul>
+      <table className={visualQa.profileFacts} tabIndex={0}><tbody>
+        <tr><th scope="row"><strong>Fin</strong></th><td> accepts a custom REST API Data Connector or a custom MCP server.
+        </td></tr>
+        <tr><th scope="row"><strong>Zendesk AI agents</strong></th><td> call custom actions and API integrations.
+        </td></tr>
+        <tr><th scope="row"><strong>Agentforce</strong></th><td> turns your APIs into agent actions.
+        </td></tr>
+        <tr><th scope="row"><strong>Gorgias AI Agent</strong></th><td> lets you build a custom action to any API or app.
+        </td></tr>
+      </tbody></table>
       <p>
         So the build can be small. One API in front of the ERP that answers three questions (where is this order, can
         this item be returned, what price does this customer pay) and performs one action can be enough to start. The
