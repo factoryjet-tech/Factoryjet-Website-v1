@@ -25,7 +25,8 @@ export const shopholisticoCaseStudy: CaseStudy = {
   summary:
     'Shopholistico sells whole-food vitamin D and calcium supplements online in the US. FactoryJet designed and built a custom Shopify theme from scratch, added tiered subscriptions, a bundle and two ad landing pages, and moved the store onto the new theme in September 2026.',
   category: 'E-Comm',
-  clientUrl: 'https://www.shopholistico.com',
+  // Apex host: www.shopholistico.com answers 301 to this URL (checked 2026-10-12).
+  clientUrl: 'https://shopholistico.com/',
   location: 'United States',
   heroStats: [
     { value: 'Custom', label: 'Shopify theme, not a template' },
