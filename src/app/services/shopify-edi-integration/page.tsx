@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import styles from './visual-qa.module.css';
 import Link from 'next/link';
 
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -861,7 +862,7 @@ function SourceLinks({ ids }: { ids: ReadonlyArray<SrcKey> }) {
           href={SRC[id].url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 py-1 font-fj-mono text-[11px] font-semibold tracking-wide text-[#B23E13] hover:underline"
+          className="inline-flex min-h-11 min-w-11 items-center gap-1.5 py-2 font-fj-mono text-xs font-semibold tracking-wide text-[#B23E13] hover:underline"
         >
           <svg width="10" height="10" viewBox="0 0 9 9" fill="none" aria-hidden="true" className="flex-shrink-0">
             <path d="M1.5 7.5L7.5 1.5M7.5 1.5H3M7.5 1.5V6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
@@ -885,14 +886,14 @@ export default function ShopifyEdiIntegrationPage() {
 
       <SiteHeader />
 
-      <main className="min-h-screen bg-fj-cream text-fj-ink">
+      <main className={`${styles.page} min-h-screen bg-fj-cream text-fj-ink`}>
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* 1. HERO */}
-        <section className="relative overflow-hidden border-b border-fj-neutral-200 bg-fj-cream pt-12 pb-14 md:pt-14 md:pb-16">
+        <section className={`${styles.hero} relative overflow-hidden border-b border-fj-neutral-200 bg-fj-cream pt-12 pb-14 md:pt-14 md:pb-16`}>
           <div className="mx-auto max-w-[1200px] px-6 md:px-8">
             <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-7">
+              <div className={`${styles.heroCopy} lg:col-span-7`}>
                 <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#F05A28]/30 bg-white px-3 py-1.5">
                   <span className="font-fj-mono text-xs font-bold tracking-wide text-[#B23E13]">
                     SHOPIFY EDI INTEGRATION &middot; UNITED STATES
@@ -903,13 +904,16 @@ export default function ShopifyEdiIntegrationPage() {
                   Shopify EDI integration for retailer orders, ship notices and invoices.
                 </h1>
 
-                <p className="mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600">
+                <p className={`${styles.heroLead} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}>
                   EDI is the fixed-format messaging that large retailers and distributors use to send orders and
-                  receive invoices. We connect it to your Shopify store, with an EDI product when one fits and a
+                  receive invoices.
+                </p>
+
+                <p className={`${styles.heroDetails} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}> We connect it to your Shopify store, with an EDI product when one fits and a
                   custom link when your rules need one. The quote is a fixed price, in writing, before work starts.
                 </p>
 
-                <div className="mt-6">
+                <div className={`${styles.heroForm} mt-6`}>
                   <HeroInlineForm
                     region="us"
                     source="services_shopify_edi_integration_hero"
@@ -942,7 +946,7 @@ export default function ShopifyEdiIntegrationPage() {
 
               <div className="lg:col-span-5">
                 <figure className="rounded-2xl border border-fj-neutral-200 bg-white p-5 sm:p-6">
-                  <figcaption className="font-fj-mono text-[11px] font-bold uppercase tracking-wider text-[#B23E13]">
+                  <figcaption className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">
                     The first documents, and which way each one travels
                   </figcaption>
                   <EdiFlowDiagram />
@@ -1007,30 +1011,28 @@ export default function ShopifyEdiIntegrationPage() {
                 <SourceLinks ids={['x12', 'shopifyEdi', 'krogerCompliance']} />
               </div>
 
-              <ul className="grid gap-3 lg:col-span-8">
-                {DOCS.map((d) => (
-                  <li
-                    key={d.code}
-                    className={`grid grid-cols-1 gap-2 rounded-2xl border bg-white px-5 py-4 sm:grid-cols-[210px_1fr] sm:gap-5 ${
-                      d.flow === 'in' ? 'border-[#F05A28]/45' : 'border-fj-neutral-200'
-                    }`}
-                  >
-                    <div>
+              <div className={`${styles.factsBox} lg:col-span-8`} tabIndex={0} data-visual-facts="DOCS">
+<table className={`${styles.facts} bg-white`}><tbody>
+{DOCS.map((d) => (
+<tr key={d.code}><th scope="row">
+<div>
                       <div className="font-fj-display text-base font-semibold text-fj-ink">
                         {d.code} {d.name}
                       </div>
                       <div
-                        className={`mt-1 font-fj-mono text-[11px] font-bold uppercase tracking-wider ${
+                        className={`mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider ${
                           d.flow === 'in' ? 'text-[#B23E13]' : 'text-fj-neutral-600'
                         }`}
                       >
                         {FLOW_LABEL[d.flow]}
                       </div>
                     </div>
-                    <p className="font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{d.note}</p>
-                  </li>
-                ))}
-              </ul>
+</th><td>
+<p className="font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{d.note}</p>
+</td></tr>
+))}
+</tbody></table>
+</div>
             </div>
           </div>
         </section>
@@ -1058,15 +1060,17 @@ export default function ShopifyEdiIntegrationPage() {
               .
             </p>
 
-            <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
-              {CASES.map((c) => (
-                <div key={c.n} className={`rounded-2xl border border-fj-neutral-200 bg-fj-cream p-7 ${c.span}`}>
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
+            <div className={`${styles.factsBox} mt-12`} tabIndex={0} data-visual-facts="CASES">
+<table className={`${styles.facts} bg-fj-cream`}><tbody>
+{CASES.map((c) => (
+<tr key={c.n}><th scope="row">
+<div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
                     {c.n}
                   </div>
-                  <h3 className="font-fj-display text-xl font-semibold text-fj-ink">{c.title}</h3>
-                  <p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{c.body}</p>
-                  <ul className="mt-4 grid gap-2">
+<h3 className="font-fj-display text-xl font-semibold text-fj-ink">{c.title}</h3>
+</th><td>
+<p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{c.body}</p>
+<ul className="mt-4 grid gap-2">
                     {c.items.map((it) => (
                       <li key={it} className="flex items-start gap-2.5 font-fj-body text-[15px] leading-relaxed text-fj-ink">
                         <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
@@ -1074,13 +1078,14 @@ export default function ShopifyEdiIntegrationPage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-4 rounded-xl border border-fj-neutral-200 bg-white px-4 py-3 font-fj-body text-sm leading-relaxed text-fj-ink">
+<p className="mt-4 rounded-xl border border-fj-neutral-200 bg-white px-4 py-3 font-fj-body text-sm leading-relaxed text-fj-ink">
                     <span className="font-semibold">Before you start.</span> {c.note}
                   </p>
-                  <SourceLinks ids={c.sources} />
-                </div>
-              ))}
-            </div>
+<SourceLinks ids={c.sources} />
+</td></tr>
+))}
+</tbody></table>
+</div>
             <p className="mt-6 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
               Retailer rules are as published on {CHECKED_ON}. Your own buyer&rsquo;s guide is the one that counts.
             </p>
@@ -1099,21 +1104,24 @@ export default function ShopifyEdiIntegrationPage() {
               where the maker prints one. Two details matter most when you compare them: where the purchase order
               lands, and how the price grows as you add trading partners.
             </p>
-            <ul className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-12">
-              {PRODUCTS.map((p) => (
-                <li key={p.name} className={`rounded-2xl border border-fj-neutral-200 bg-white p-6 ${p.span}`}>
-                  <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{p.name}</h3>
-                  <div className="mt-1 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600">
+            <div className={`${styles.factsBox} mt-10`} tabIndex={0} data-visual-facts="PRODUCTS">
+<table className={`${styles.facts} bg-white`}><tbody>
+{PRODUCTS.map((p) => (
+<tr key={p.name}><th scope="row">
+<h3 className="font-fj-display text-lg font-semibold text-fj-ink">{p.name}</h3>
+<div className="mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
                     Read on {p.where}
                   </div>
-                  <p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-ink">{p.says}</p>
-                  <p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">
+</th><td>
+<p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-ink">{p.says}</p>
+<p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">
                     <span className="font-semibold text-fj-ink">List price.</span> {p.price}
                   </p>
-                  <SourceLinks ids={p.sources} />
-                </li>
-              ))}
-            </ul>
+<SourceLinks ids={p.sources} />
+</td></tr>
+))}
+</tbody></table>
+</div>
             <p className="mt-6 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
               Listing details and prices are as published on {CHECKED_ON}. A search for edi on the Shopify App Store
               that day returned the SPS Commerce and Crstl apps on its first page.
@@ -1134,16 +1142,13 @@ export default function ShopifyEdiIntegrationPage() {
               the buyer, and that is what the products above do. The custom part is the join between that network and
               your own systems.
             </p>
-            <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12">
-              {FITS.map((f) => (
-                <div
-                  key={f.title}
-                  className={`rounded-2xl border bg-fj-cream p-7 ${f.span} ${
-                    f.led ? 'border-[#F05A28]/45' : 'border-fj-neutral-200'
-                  }`}
-                >
-                  <h3 className="font-fj-display text-xl font-semibold text-fj-ink">{f.title}</h3>
-                  <ul className="mt-4 grid gap-2">
+            <div className={`${styles.factsBox} mt-10`} tabIndex={0} data-visual-facts="FITS">
+<table className={`${styles.facts} bg-fj-cream`}><tbody>
+{FITS.map((f) => (
+<tr key={f.title}><th scope="row">
+<h3 className="font-fj-display text-xl font-semibold text-fj-ink">{f.title}</h3>
+</th><td>
+<ul className="mt-4 grid gap-2">
                     {f.items.map((it) => (
                       <li key={it} className="flex items-start gap-2.5 font-fj-body text-[15px] leading-relaxed text-fj-ink">
                         <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
@@ -1151,9 +1156,10 @@ export default function ShopifyEdiIntegrationPage() {
                       </li>
                     ))}
                   </ul>
-                </div>
-              ))}
-            </div>
+</td></tr>
+))}
+</tbody></table>
+</div>
             <p className="mt-6 max-w-3xl font-fj-body text-base leading-relaxed text-fj-ink">
               The two can be combined: a product for the network, and a custom link on the Shopify side.
               Orderful&rsquo;s Integrated plan, for example, is sold as an API for EDI that other systems are built
@@ -1173,15 +1179,18 @@ export default function ShopifyEdiIntegrationPage() {
             <p className="mt-4 max-w-2xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
               Each one links to the page it comes from, except the fifth, which is our own rule.
             </p>
-            <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
-              {BREAKS.map((l) => (
-                <li key={l.t} className="rounded-xl border border-fj-neutral-200 border-l-[3px] border-l-[#F05A28] bg-white px-5 py-4">
-                  <h3 className="font-fj-display text-[15px] font-semibold text-fj-ink">{l.t}</h3>
-                  <p className="mt-1 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{l.b}</p>
-                  <SourceLinks ids={l.sources} />
-                </li>
-              ))}
-            </ul>
+            <div className={`${styles.factsBox} mt-10`} tabIndex={0} data-visual-facts="BREAKS">
+<table className={`${styles.facts} bg-white`}><tbody>
+{BREAKS.map((l) => (
+<tr key={l.t}><th scope="row">
+<h3 className="font-fj-display text-[15px] font-semibold text-fj-ink">{l.t}</h3>
+</th><td>
+<p className="mt-1 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{l.b}</p>
+<SourceLinks ids={l.sources} />
+</td></tr>
+))}
+</tbody></table>
+</div>
           </div>
         </section>
 
