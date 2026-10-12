@@ -108,7 +108,12 @@ export type CaseStudy = {
   headlineMetric?: CaseStudyMetric
   /** Results section — 5-6 supporting metric cards in 3x2 grid. */
   resultsMetrics?: CaseStudyMetric[]
-  /** ~200-300 word "Challenge" section body. */
+  /**
+   * ~200-300 word "Challenge" section body.
+   * The four body fields (challenge, approach, solution, results) are plain
+   * text. `\n` starts a new paragraph, and a link is written as
+   * `[anchor text](https://absolute-url)`. See ./inline-links.ts.
+   */
   challenge: string
   /** Optional pull quote rendered inside the Challenge section. */
   challengePullQuote?: string
@@ -812,6 +817,12 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
 
   // ─── 9. Yadav Entrance Automation — site build plus SEO and AI SEO ───────
+  // The three product links in `solution` were added 2026-10-12. Each target was
+  // fetched that day: HTTP 200, no redirect, canonical tag equal to the URL. Keep
+  // them exactly as written (apex host, no www, no trailing slash, no .html) so
+  // each stays a single hop. What the sentence says about those pages (a
+  // specifications section and a frequently asked questions section on each) was
+  // read from the pages' own headings on the same day.
   {
     slug: 'yadav-entrance-automation-website-seo',
     client: 'Yadav Entrance Automation',
@@ -865,7 +876,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'We built the site from scratch rather than dressing up a template, so the structure matches how the work is actually bought: what the systems are, what gets installed and serviced, and who it is for. Then we treated search as ongoing work rather than a launch task, covering both traditional SEO and AI SEO, because being quoted in an AI answer and ranking in results draw on the same foundations.',
     techStack: ['Custom Website'],
     solution:
-      'The site is structured so each section answers one question a buyer would actually ask, with content in real text that both search engines and AI assistants can extract. On top of that we run continuing SEO and AI SEO work rather than treating the launch as the finish line.',
+      'The site is structured so each section answers one question a buyer would actually ask, with content in real text that both search engines and AI assistants can extract. On top of that we run continuing SEO and AI SEO work rather than treating the launch as the finish line.\nThe product pages are built the same way. The pages for [high speed doors](https://yadaventranceautomation.com/high-speed-doors), the [motorized rolling shutter](https://yadaventranceautomation.com/motorized-rolling-shutter) and [dock levellers](https://yadaventranceautomation.com/dock-levelers) each set out the specifications and a list of frequently asked questions for that product.',
     results:
       'Yadav Entrance Automation has a website built for how the business is bought, and search work continuing on it. We are not publishing ranking or traffic figures here. The engagement is ongoing and we would rather report measured numbers later than estimated ones now.',
     imageUrl: '/images/case-studies/yadav-entrance-automation-website-seo-hero.jpg',
@@ -891,7 +902,7 @@ export const CASE_STUDIES: CaseStudy[] = [
         a: 'Branded searches for the company name tend to come first, usually within weeks of launch. Competitive service terms take longer, typically months, and depend on how contested the category is. Anyone promising a fixed timeline is guessing.',
       },
     ],
-    modifiedDate: '2026-09-14',
+    modifiedDate: '2026-10-12',
     clientUrl: 'https://yadaventranceautomation.com/',
     location: 'India',
   },

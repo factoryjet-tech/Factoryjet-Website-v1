@@ -28,6 +28,7 @@ import {
   type CaseStudyGlanceTile,
   type CaseStudyScreenshot,
 } from '@/data/case-studies'
+import { parseInlineLinks } from '@/data/case-studies/inline-links'
 
 /**
  * Case Study Visual Template — `/case-studies/{slug}/`.
@@ -46,6 +47,8 @@ import {
 
 const ORANGE = '#F05A28'
 const ORANGE_DEEP = '#C94A1A'
+// Body-size link text on white and cream. #C94A1A is 4.49:1 on cream, just under AA.
+const ORANGE_LINK = '#B23E13'
 const CHARCOAL = '#0F0F12'
 const CREAM = '#FAFAF7'
 
@@ -167,6 +170,35 @@ function Eyebrow({ children, dark = false }: { children: React.ReactNode; dark?:
     >
       {children}
     </p>
+  )
+}
+
+/** "https://www.example.com/" becomes "example.com". A path is kept when there is one. */
+function clientUrlLabel(url: string) {
+  const { hostname, pathname } = new URL(url)
+  return hostname.replace(/^www\./, '') + pathname.replace(/\/$/, '')
+}
+
+/**
+ * One paragraph of body copy with its inline links rendered as plain <a href>.
+ * Link syntax and its limits: src/data/case-studies/inline-links.ts.
+ */
+function renderInline(text: string, dark = false) {
+  return parseInlineLinks(text).map((segment, i) =>
+    typeof segment === 'string' ? (
+      segment
+    ) : (
+      <a
+        key={i}
+        href={segment.href}
+        target="_blank"
+        rel="noopener"
+        className="font-medium underline underline-offset-2"
+        style={{ color: dark ? ORANGE : ORANGE_LINK }}
+      >
+        {segment.text}
+      </a>
+    )
   )
 }
 
@@ -342,6 +374,24 @@ function HeroSection({ cs }: { cs: CaseStudy }) {
                     <dd className="mt-1 font-fj-body text-[0.9375rem] font-medium text-fj-ink">{cs.location}</dd>
                   </div>
                 )}
+                {cs.clientUrl && (
+                  <div className="col-span-2">
+                    <dt className="font-fj-mono text-[10px] font-bold uppercase text-fj-neutral-400" style={{ letterSpacing: '0.14em' }}>
+                      Website
+                    </dt>
+                    <dd className="mt-0.5 font-fj-body text-[0.9375rem] font-medium" style={{ overflowWrap: 'anywhere' }}>
+                      <a
+                        href={cs.clientUrl}
+                        target="_blank"
+                        rel="noopener"
+                        className="inline-block py-0.5 underline underline-offset-2"
+                        style={{ color: ORANGE_LINK }}
+                      >
+                        {clientUrlLabel(cs.clientUrl)}
+                      </a>
+                    </dd>
+                  </div>
+                )}
                 {cs.services?.length > 0 && (
                   <div className="col-span-2">
                     <dt className="font-fj-mono text-[10px] font-bold uppercase text-fj-neutral-400" style={{ letterSpacing: '0.14em' }}>
@@ -461,7 +511,7 @@ function ChallengeSection({ body, pullQuote }: { body: string; pullQuote?: strin
             >
               {body.split('\n').filter(Boolean).map((p, i) => (
                 <p key={i} className={i > 0 ? 'mt-5' : ''}>
-                  {p}
+                  {renderInline(p, true)}
                 </p>
               ))}
             </div>
@@ -525,7 +575,7 @@ function ApproachSection({ body, techStack }: { body: string; techStack?: string
             >
               {body.split('\n').filter(Boolean).map((p, i) => (
                 <p key={i} className={i > 0 ? 'mt-5' : ''}>
-                  {p}
+                  {renderInline(p)}
                 </p>
               ))}
             </div>
@@ -586,7 +636,7 @@ function SolutionSection({
           >
             {body.split('\n').filter(Boolean).map((p, i) => (
               <p key={i} className={i > 0 ? 'mt-5' : ''}>
-                {p}
+                {renderInline(p)}
               </p>
             ))}
           </div>
@@ -744,7 +794,7 @@ function ResultsSection({
           >
             {body.split('\n').filter(Boolean).map((p, i) => (
               <p key={i} className={i > 0 ? 'mt-5' : ''}>
-                {p}
+                {renderInline(p, true)}
               </p>
             ))}
           </div>
