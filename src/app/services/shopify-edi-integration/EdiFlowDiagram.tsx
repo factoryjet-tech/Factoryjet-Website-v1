@@ -41,9 +41,9 @@ const TRAILING_GAP = -ROW_GAP;
 /* Pill geometry is written out as plain numbers: x is the left edge, w the
    width, mid the centre used to anchor the label. Right edge is 288 for all. */
 const PILL: Record<Flow, { text: string; x: number; w: number; mid: number; fill: string }> = {
-  in: { text: '→ SHOPIFY', x: 210, w: 78, mid: 249, fill: ORANGE_TEXT },
-  out: { text: '→ BUYER', x: 220, w: 68, mid: 254, fill: INK },
-  both: { text: 'BOTH WAYS', x: 210, w: 78, mid: 249, fill: INK },
+  in: { text: '→ SHOPIFY', x: 194, w: 94, mid: 241, fill: ORANGE_TEXT },
+  out: { text: '→ BUYER', x: 206, w: 82, mid: 247, fill: INK },
+  both: { text: 'BOTH WAYS', x: 194, w: 94, mid: 241, fill: INK },
 };
 
 type Placed = { kind: 'label' | 'row'; y: number; text: string; flow: Flow };

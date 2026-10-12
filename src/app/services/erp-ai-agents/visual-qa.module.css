@@ -64,3 +64,17 @@
 .page table.facts :is(p,li,th,td) { font-size:16px !important; }
 }
 .page .factsBox table.facts :is(tbody,tr,th,td) { background:inherit !important; }
+
+/* Proposed page-local desktop FAQ spacing with asymmetric 7:5 categories. Keep original native FAQ, labels, words and phone layout. */
+@media (min-width: 1024px) {
+  .page :global(section:has([data-faq-item])) :global(.space-y-10) {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: 28px;
+  }
+  .page :global(section:has([data-faq-item])) :global(.space-y-10) > * { margin: 0; }
+  .page :global(section:has([data-faq-item])) :global(.space-y-10) > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .page :global(section:has([data-faq-item])) :global([data-faq-question]) { padding-block: 12px; min-height: 48px; }
+  .page :global(section:has([data-faq-item])) :global([data-faq-question]) > span:first-child { max-width: 55ch; }
+  .page :global(section:has([data-faq-item])) :global([data-faq-answer]) { max-width: 55ch; }
+}

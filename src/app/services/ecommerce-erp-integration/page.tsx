@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import styles from './visual-qa.module.css';
 import Link from 'next/link';
 
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -1084,7 +1085,7 @@ function SourceLinks({ ids }: { ids: ReadonlyArray<SrcKey> }) {
           href={SRC[id].url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 py-1 font-fj-mono text-[11px] font-semibold tracking-wide text-[#B23E13] hover:underline"
+          className="inline-flex min-h-11 min-w-11 items-center gap-1.5 py-2 font-fj-mono text-xs font-semibold tracking-wide text-[#B23E13] hover:underline"
         >
           <svg width="10" height="10" viewBox="0 0 9 9" fill="none" aria-hidden="true" className="flex-shrink-0">
             <path d="M1.5 7.5L7.5 1.5M7.5 1.5H3M7.5 1.5V6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
@@ -1108,14 +1109,14 @@ export default function EcommerceErpIntegrationPage() {
 
       <SiteHeader />
 
-      <main className="min-h-screen bg-fj-cream text-fj-ink">
+      <main className={`${styles.page} min-h-screen bg-fj-cream text-fj-ink`}>
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* 1. HERO */}
-        <section className="relative overflow-hidden border-b border-fj-neutral-200 bg-fj-cream pt-12 pb-14 md:pt-14 md:pb-16">
+        <section className={`${styles.hero} relative overflow-hidden border-b border-fj-neutral-200 bg-fj-cream pt-12 pb-14 md:pt-14 md:pb-16`}>
           <div className="mx-auto max-w-[1200px] px-6 md:px-8">
             <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-7">
+              <div className={`${styles.heroCopy} lg:col-span-7`}>
                 <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#F05A28]/30 bg-white px-3 py-1.5">
                   <span className="font-fj-mono text-xs font-bold tracking-wide text-[#B23E13]">
                     ECOMMERCE ERP INTEGRATION &middot; UNITED STATES
@@ -1126,9 +1127,12 @@ export default function EcommerceErpIntegrationPage() {
                   Ecommerce ERP integration with one owner for every record.
                 </h1>
 
-                <p className="mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600">
+                <p className={`${styles.heroLead} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}>
                   We design, build, implement and support the link between your online store and your ERP, the system
-                  that holds your stock, purchasing and accounts. Each record gets one owner, agreed in writing before
+                  that holds your stock, purchasing and accounts.
+                </p>
+
+                <p className={`${styles.heroDetails} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}> Each record gets one owner, agreed in writing before
                   anything is built. The price is fixed and in writing before work starts.
                 </p>
 
@@ -1138,7 +1142,7 @@ export default function EcommerceErpIntegrationPage() {
                   One, ERPNext, custom systems.
                 </p>
 
-                <div className="mt-6">
+                <div className={`${styles.heroForm} mt-6`}>
                   <HeroInlineForm
                     region="us"
                     source="services_ecommerce_erp_integration_hero"
@@ -1171,7 +1175,7 @@ export default function EcommerceErpIntegrationPage() {
 
               <div className="lg:col-span-5">
                 <figure className="rounded-2xl border border-fj-neutral-200 bg-white p-5 sm:p-6">
-                  <figcaption className="font-fj-mono text-[11px] font-bold uppercase tracking-wider text-[#B23E13]">
+                  <figcaption className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">
                     Who owns what, on the map we start from
                   </figcaption>
                   <OwnerMapDiagram />
@@ -1238,31 +1242,29 @@ export default function EcommerceErpIntegrationPage() {
                 <SourceLinks ids={['netsuiteConnector', 'odooShopify']} />
               </div>
 
-              <ul className="grid gap-3 lg:col-span-8">
-                {OWNERS.map((o) => (
-                  <li
-                    key={o.record}
-                    className={`grid grid-cols-1 gap-2 rounded-2xl border bg-white px-5 py-4 sm:grid-cols-[190px_1fr] sm:gap-5 ${
-                      o.owner === 'erp' ? 'border-[#F05A28]/45' : 'border-fj-neutral-200'
-                    }`}
-                  >
-                    <div>
+              <div className={`${styles.factsBox} lg:col-span-8`} tabIndex={0} data-visual-facts="OWNERS">
+<table className={`${styles.facts} bg-white`}><tbody>
+{OWNERS.map((o) => (
+<tr key={o.record}><th scope="row">
+<div>
                       <div className="font-fj-display text-base font-semibold text-fj-ink">{o.record}</div>
                       <div
-                        className={`mt-1 font-fj-mono text-[11px] font-bold uppercase tracking-wider ${
+                        className={`mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider ${
                           o.owner === 'erp' ? 'text-[#B23E13]' : 'text-fj-neutral-600'
                         }`}
                       >
                         {OWNER_LABEL[o.owner]}
                       </div>
                     </div>
-                    <div>
+</th><td>
+<div>
                       <p className="font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{o.note}</p>
                       <SourceLinks ids={o.sources} />
                     </div>
-                  </li>
-                ))}
-              </ul>
+</td></tr>
+))}
+</tbody></table>
+</div>
             </div>
           </div>
         </section>
@@ -1280,15 +1282,17 @@ export default function EcommerceErpIntegrationPage() {
               figure as a reading taken on that date.
             </p>
 
-            <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
-              {ERPS.map((e) => (
-                <div key={e.n} className={`rounded-2xl border border-fj-neutral-200 bg-fj-cream p-7 ${e.span}`}>
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
+            <div className={`${styles.factsBox} mt-12`} tabIndex={0} data-visual-facts="ERPS">
+<table className={`${styles.facts} bg-fj-cream`}><tbody>
+{ERPS.map((e) => (
+<tr key={e.n}><th scope="row">
+<div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
                     {e.n}
                   </div>
-                  <h3 className="font-fj-display text-xl font-semibold text-fj-ink">{e.title}</h3>
-                  <p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{e.body}</p>
-                  <ul className="mt-4 grid gap-2">
+<h3 className="font-fj-display text-xl font-semibold text-fj-ink">{e.title}</h3>
+</th><td>
+<p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{e.body}</p>
+<ul className="mt-4 grid gap-2">
                     {e.items.map((it) => (
                       <li key={it} className="flex items-start gap-2.5 font-fj-body text-[15px] leading-relaxed text-fj-ink">
                         <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
@@ -1296,11 +1300,11 @@ export default function EcommerceErpIntegrationPage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-4 rounded-xl border border-fj-neutral-200 bg-white px-4 py-3 font-fj-body text-sm leading-relaxed text-fj-ink">
+<p className="mt-4 rounded-xl border border-fj-neutral-200 bg-white px-4 py-3 font-fj-body text-sm leading-relaxed text-fj-ink">
                     <span className="font-semibold">Go custom when</span> {e.custom}
                   </p>
-                  <SourceLinks ids={e.sources} />
-                  {e.more && (
+<SourceLinks ids={e.sources} />
+{e.more && (
                     <p className="mt-3 font-fj-body text-sm text-fj-ink">
                       More on this:{' '}
                       <Link href={e.more.href} className="font-semibold underline underline-offset-4">
@@ -1308,9 +1312,10 @@ export default function EcommerceErpIntegrationPage() {
                       </Link>
                     </p>
                   )}
-                </div>
-              ))}
-            </div>
+</td></tr>
+))}
+</tbody></table>
+</div>
           </div>
         </section>
 
@@ -1326,11 +1331,13 @@ export default function EcommerceErpIntegrationPage() {
               developer documentation. They decide how a 5,000 SKU price update gets sent, and how quickly a new
               order can reach the ERP.
             </p>
-            <ul className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-12">
-              {STORES.map((s) => (
-                <li key={s.name} className={`rounded-2xl border border-fj-neutral-200 bg-white p-6 ${s.span}`}>
-                  <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{s.name}</h3>
-                  <ul className="mt-3 grid gap-2">
+            <div className={`${styles.factsBox} mt-10`} tabIndex={0} data-visual-facts="STORES">
+<table className={`${styles.facts} bg-white`}><tbody>
+{STORES.map((s) => (
+<tr key={s.name}><th scope="row">
+<h3 className="font-fj-display text-lg font-semibold text-fj-ink">{s.name}</h3>
+</th><td>
+<ul className="mt-3 grid gap-2">
                     {s.items.map((it) => (
                       <li key={it} className="flex items-start gap-2.5 font-fj-body text-[15px] leading-relaxed text-fj-ink">
                         <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
@@ -1338,8 +1345,8 @@ export default function EcommerceErpIntegrationPage() {
                       </li>
                     ))}
                   </ul>
-                  <SourceLinks ids={s.sources} />
-                  {s.more && (
+<SourceLinks ids={s.sources} />
+{s.more && (
                     <p className="mt-3 font-fj-body text-sm text-fj-ink">
                       Building on it:{' '}
                       <Link href={s.more.href} className="font-semibold underline underline-offset-4">
@@ -1347,9 +1354,10 @@ export default function EcommerceErpIntegrationPage() {
                       </Link>
                     </p>
                   )}
-                </li>
-              ))}
-            </ul>
+</td></tr>
+))}
+</tbody></table>
+</div>
           </div>
         </section>
 
@@ -1371,20 +1379,21 @@ export default function EcommerceErpIntegrationPage() {
                   for the one it does not.
                 </p>
               </div>
-              <ol className="grid gap-4 lg:col-span-8">
-                {CHECKS.map((c) => (
-                  <li key={c.n} className="flex items-start gap-4 rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
+              <div className={`${styles.factsBox} lg:col-span-8`} tabIndex={0} data-visual-facts="CHECKS">
+<table className={`${styles.facts} bg-fj-cream`}><tbody>
+{CHECKS.map((c) => (
+<tr key={c.n}><th scope="row">
+<div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
                       {c.n}
                     </div>
-                    <div>
-                      <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{c.t}</h3>
-                      <p className="mt-1.5 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{c.b}</p>
-                      <SourceLinks ids={c.sources} />
-                    </div>
-                  </li>
-                ))}
-              </ol>
+<h3 className="font-fj-display text-lg font-semibold text-fj-ink">{c.t}</h3>
+</th><td>
+<p className="mt-1.5 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{c.b}</p>
+<SourceLinks ids={c.sources} />
+</td></tr>
+))}
+</tbody></table>
+</div>
             </div>
           </div>
         </section>
@@ -1406,15 +1415,18 @@ export default function EcommerceErpIntegrationPage() {
               Nine failure points. The first is a rule of our own. The other eight are written on the makers&rsquo;
               own pages, and each one links to the page.
             </p>
-            <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
-              {BREAKS.map((l) => (
-                <li key={l.t} className="rounded-xl border border-fj-neutral-200 border-l-[3px] border-l-[#F05A28] bg-fj-cream px-5 py-4">
-                  <div className="font-fj-display text-[15px] font-semibold text-fj-ink">{l.t}</div>
-                  <p className="mt-1 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{l.b}</p>
-                  <SourceLinks ids={l.sources} />
-                </li>
-              ))}
-            </ul>
+            <div className={`${styles.factsBox} mt-10`} tabIndex={0} data-visual-facts="BREAKS">
+<table className={`${styles.facts} bg-fj-cream`}><tbody>
+{BREAKS.map((l) => (
+<tr key={l.t}><th scope="row">
+<div className="font-fj-display text-[15px] font-semibold text-fj-ink">{l.t}</div>
+</th><td>
+<p className="mt-1 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{l.b}</p>
+<SourceLinks ids={l.sources} />
+</td></tr>
+))}
+</tbody></table>
+</div>
           </div>
         </section>
 

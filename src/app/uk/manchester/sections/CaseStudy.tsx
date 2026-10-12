@@ -37,7 +37,7 @@ const WORK = [
       "A custom Shopify theme for a whole-food supplement brand selling across the US, with subscribe-and-save plans, bundles and two landing pages built for Meta ads.",
     desktop: "/images/work/shopholistico-desktop.webp",
     mobile: "/images/work/shopholistico-mobile.webp",
-    site: "https://www.shopholistico.com",
+    site: "https://shopholistico.com/",
     siteLabel: "shopholistico.com",
     caseStudy: "/case-studies/shopholistico-shopify-store",
   },

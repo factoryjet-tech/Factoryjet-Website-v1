@@ -11,3 +11,10 @@
   :global(.blog-post .blog-prose) table.profileFacts td { padding: 0 12px 12px; font-size: 16px; }
   :global(.blog-post .blog-prose) table.profileFacts tr + tr td { border-top: 0; }
 }
+
+/* Existing selection sequence, with native ordered markers and connecting rails. */
+:global(.blog-post .blog-prose) ol.decisionFlow { margin: 24px 0 24px 16px; padding: 0 0 0 32px; border-left: 1px solid #B23E13; list-style: decimal outside; }
+:global(.blog-post .blog-prose) ol.decisionFlow > li { position: relative; margin: 0 0 16px; padding: 16px; min-height: 64px; border: 1px solid #E5E7EB; border-radius: 8px; background: #FFFFFF; font-size: 16px; line-height: 1.6; }
+:global(.blog-post .blog-prose) ol.decisionFlow > li:last-child { margin-bottom: 0; }
+:global(.blog-post .blog-prose) ol.decisionFlow > li::marker { color: #B23E13; font-weight: 600; }
+@media(max-width:767px) { :global(.blog-post .blog-prose) ol.decisionFlow { margin-left: 0; padding-left: 28px; } }
