@@ -4,6 +4,30 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Offline fonts for the production build (2026-10-12).
+//   next/font/google downloads its stylesheets and font files from Google
+//   while `next build` runs. Google sometimes answers with font URLs that have
+//   no file extension, and Next's font loader crashes on them
+//   (vercel/next.js#99114). Measured 2026-10-12: 6 of 300 Inter responses and
+//   1 of 150 JetBrains Mono responses had that shape, and 2 of the last 57
+//   Cloudflare builds failed on it. This points the loader at the copies in
+//   vendor/google-fonts, so the build does not call Google. The output is the
+//   same: both font stylesheets came out byte-identical to the live ones.
+//   Limits, both from how Next's loader reads the copies:
+//   - it reads font files from disk only under webpack, so Turbopack
+//     (`next dev`, or `next build` without --webpack) still uses the network;
+//   - it reads them only from paths that start with "/", so Windows is skipped.
+//   After changing a family, weight or `display` in a next/font/google call,
+//   run `node scripts/vendor-google-fonts.mjs` and commit vendor/google-fonts.
+if (process.env.NODE_ENV === 'production' && process.platform !== 'win32') {
+  if (!process.env.TURBOPACK) {
+    process.env.NEXT_FONT_GOOGLE_MOCKED_RESPONSES ??= path.join(__dirname, 'vendor/google-fonts/responses.cjs');
+  } else if (!process.env.FJ_OFFLINE_FONTS_WARNED) {
+    process.env.FJ_OFFLINE_FONTS_WARNED = '1';
+    console.warn('⚠ vendor/google-fonts is not used under Turbopack. This build downloads fonts from Google and can fail on vercel/next.js#99114. Build with `next build --webpack`.');
+  }
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Enable React Strict Mode
