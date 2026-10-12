@@ -30,7 +30,7 @@ const ORANGE_TEXT = '#B23E13';
 const ORANGE_TINT = '#FFF4EE';
 
 function Pill({ x, y, plus }: { x: number; y: number; plus: boolean }) {
-  const w = plus ? 46 : 98;
+  const w = plus ? 46 : 128;
   return (
     <g>
       <rect x={x - w} y={y} width={w} height={20} rx={10} fill={plus ? ORANGE_TEXT : INK} />
@@ -77,8 +77,11 @@ export default function CheckoutMapDiagram() {
             stroke={r.plus ? ORANGE : INK}
             strokeWidth={1.5}
           />
-          <text x={14} y={r.y + 28} className="font-fj-body" fontSize="13" fontWeight={600} fill={INK}>
-            {r.label}
+          <text x={14} y={r.y + (r.plus ? 28 : 19)} className="font-fj-body" fontSize="13" fontWeight={600} fill={INK}>
+            {r.plus ? r.label : (<>
+              <tspan x={14}>{r.label.slice(0, r.label.indexOf(',') + 2)}</tspan>
+              <tspan x={14} dy={16}>{r.label.slice(r.label.indexOf(',') + 2)}</tspan>
+            </>)}
           </text>
           <Pill x={346} y={r.y + 13} plus={r.plus} />
         </g>
@@ -97,13 +100,13 @@ export default function CheckoutMapDiagram() {
       <text x={14} y={368} className="font-fj-body" fontSize="13" fontWeight={600} fill={INK}>
         Thank you page
       </text>
-      <Pill x={112} y={378} plus={false} />
+      <Pill x={142} y={378} plus={false} />
 
       <rect x={186} y={344} width={174} height={66} rx={10} fill="#FFFFFF" stroke={INK} strokeWidth={1.5} />
       <text x={200} y={368} className="font-fj-body" fontSize="13" fontWeight={600} fill={INK}>
         Order status page
       </text>
-      <Pill x={298} y={378} plus={false} />
+      <Pill x={328} y={378} plus={false} />
     </svg>
   );
 }

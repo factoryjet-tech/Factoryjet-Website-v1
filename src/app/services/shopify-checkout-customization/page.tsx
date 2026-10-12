@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import styles from './visual-qa.module.css';
 import Link from 'next/link';
 
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -799,7 +800,7 @@ function SourceLinks({ ids }: { ids: ReadonlyArray<SrcKey> }) {
           href={SRC[id].url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 py-1 font-fj-mono text-[11px] font-semibold tracking-wide text-[#B23E13] hover:underline"
+          className="inline-flex min-h-11 min-w-11 items-center gap-1.5 py-2 font-fj-mono text-xs font-semibold tracking-wide text-[#B23E13] hover:underline"
         >
           <svg width="10" height="10" viewBox="0 0 9 9" fill="none" aria-hidden="true" className="flex-shrink-0">
             <path d="M1.5 7.5L7.5 1.5M7.5 1.5H3M7.5 1.5V6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
@@ -823,14 +824,14 @@ export default function ShopifyCheckoutCustomizationPage() {
 
       <SiteHeader />
 
-      <main className="min-h-screen bg-fj-cream text-fj-ink">
+      <main className={`${styles.page} min-h-screen bg-fj-cream text-fj-ink`}>
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* 1. HERO */}
-        <section className="relative overflow-hidden border-b border-fj-neutral-200 bg-fj-cream pt-12 pb-14 md:pt-14 md:pb-16">
+        <section className={`${styles.hero} relative overflow-hidden border-b border-fj-neutral-200 bg-fj-cream pt-12 pb-14 md:pt-14 md:pb-16`}>
           <div className="mx-auto max-w-[1200px] px-6 md:px-8">
             <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-7">
+              <div className={`${styles.heroCopy} lg:col-span-7`}>
                 <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#F05A28]/30 bg-white px-3 py-1.5">
                   <span className="font-fj-mono text-xs font-bold tracking-wide text-[#B23E13]">
                     SHOPIFY CHECKOUT CUSTOMIZATION &middot; UNITED STATES
@@ -841,14 +842,17 @@ export default function ShopifyCheckoutCustomizationPage() {
                   Shopify checkout customization, built and tested in your store.
                 </h1>
 
-                <p className="mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600">
+                <p className={`${styles.heroLead} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}>
                   We plan, build, test and support changes to your Shopify checkout: custom fields, upsell offers,
-                  shipping and payment rules, branding, and Thank you page content. If something stopped working when
+                  shipping and payment rules, branding, and Thank you page content.
+                </p>
+
+                <p className={`${styles.heroDetails} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}> If something stopped working when
                   Shopify switched off checkout.liquid and Scripts, we rebuild it on the current system. You get a fixed
                   quote in writing before work starts.
                 </p>
 
-                <div className="mt-6">
+                <div className={`${styles.heroForm} mt-6`}>
                   <HeroInlineForm
                     region="us"
                     source="services_shopify_checkout_customization_hero"
@@ -881,7 +885,7 @@ export default function ShopifyCheckoutCustomizationPage() {
 
               <div className="lg:col-span-5">
                 <figure className="rounded-2xl border border-fj-neutral-200 bg-white p-5 sm:p-6">
-                  <figcaption className="font-fj-mono text-[11px] font-bold uppercase tracking-wider text-[#B23E13]">
+                  <figcaption className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">
                     What each part of checkout needs
                   </figcaption>
                   <CheckoutMapDiagram />
@@ -937,17 +941,20 @@ export default function ShopifyCheckoutCustomizationPage() {
               are what US shoppers told Baymard, with people who were only browsing left out. We treat them as a bar. A
               change that adds a field or a step needs a reason.
             </p>
-            <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {CITED_STATS.map((s) => (
-                <div key={s.value} className="rounded-2xl border border-fj-neutral-200 border-t-[3px] border-t-[#F05A28] bg-white p-6">
-                  <div className="font-fj-display text-3xl font-bold tracking-[-0.02em] text-[#F05A28] sm:text-4xl">
+            <div className={`${styles.factsBox} mt-10`} tabIndex={0} data-visual-facts="CITED_STATS">
+<table className={`${styles.facts} bg-white`}><tbody>
+{CITED_STATS.map((s) => (
+<tr key={s.value}><th scope="row">
+<div className="font-fj-display text-3xl font-bold tracking-[-0.02em] text-[#F05A28] sm:text-4xl">
                     {s.value}
                   </div>
-                  <p className="mt-3 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{s.label}</p>
-                  <SourceLinks ids={['baymard']} />
-                </div>
-              ))}
-            </div>
+</th><td>
+<p className="mt-3 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{s.label}</p>
+<SourceLinks ids={['baymard']} />
+</td></tr>
+))}
+</tbody></table>
+</div>
             <p className="mt-8 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
               Choosing which change to test first is conversion work, covered on our{' '}
               <Link href="/services/ecommerce-cro-agency" className="font-semibold text-fj-ink underline underline-offset-4">
@@ -980,15 +987,17 @@ export default function ShopifyCheckoutCustomizationPage() {
               .
             </p>
 
-            <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
-              {AREAS.map((a) => (
-                <div key={a.n} className={`rounded-2xl border border-fj-neutral-200 bg-fj-cream p-7 ${a.span}`}>
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
+            <div className={`${styles.factsBox} mt-12`} tabIndex={0} data-visual-facts="AREAS">
+<table className={`${styles.facts} bg-fj-cream`}><tbody>
+{AREAS.map((a) => (
+<tr key={a.n}><th scope="row">
+<div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
                     {a.n}
                   </div>
-                  <h3 className="font-fj-display text-xl font-semibold text-fj-ink">{a.title}</h3>
-                  <p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{a.body}</p>
-                  <ul className="mt-4 grid gap-2">
+<h3 className="font-fj-display text-xl font-semibold text-fj-ink">{a.title}</h3>
+</th><td>
+<p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{a.body}</p>
+<ul className="mt-4 grid gap-2">
                     {a.items.map((it) => (
                       <li key={it} className="flex items-start gap-2.5 font-fj-body text-[15px] leading-relaxed text-fj-ink">
                         <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
@@ -996,13 +1005,14 @@ export default function ShopifyCheckoutCustomizationPage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-4 rounded-xl border border-fj-neutral-200 bg-white px-4 py-3 font-fj-body text-sm leading-relaxed text-fj-ink">
+<p className="mt-4 rounded-xl border border-fj-neutral-200 bg-white px-4 py-3 font-fj-body text-sm leading-relaxed text-fj-ink">
                     <span className="font-semibold">Plan and limits.</span> {a.plan}
                   </p>
-                  <SourceLinks ids={a.sources} />
-                </div>
-              ))}
-            </div>
+<SourceLinks ids={a.sources} />
+</td></tr>
+))}
+</tbody></table>
+</div>
           </div>
         </section>
 
@@ -1030,20 +1040,20 @@ export default function ShopifyCheckoutCustomizationPage() {
               </div>
 
               <div className="lg:col-span-8">
-                <div className="overflow-x-auto rounded-2xl border border-fj-neutral-200 bg-white">
+                <div className="overflow-x-auto rounded-2xl border border-fj-neutral-200 bg-white" tabIndex={0} role="region" aria-label="Shopify checkout customization by plan">
                   <table className="w-full table-fixed border-collapse text-left">
                     <caption className="sr-only">
                       Shopify checkout customization by plan, as listed in Shopify documentation on {CHECKED_ON}
                     </caption>
                     <thead>
                       <tr className="border-b border-fj-neutral-200">
-                        <th scope="col" className="w-[50%] px-3 py-3 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600 sm:w-[56%] sm:px-5 sm:py-4">
+                        <th scope="col" className="w-[50%] px-3 py-3 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600 sm:w-[56%] sm:px-5 sm:py-4">
                           Checkout capability
                         </th>
-                        <th scope="col" className="px-3 py-3 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600 sm:px-5 sm:py-4">
+                        <th scope="col" className="px-3 py-3 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600 sm:px-5 sm:py-4">
                           Basic, Grow, Advanced
                         </th>
-                        <th scope="col" className="px-3 py-3 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-[#B23E13] sm:px-5 sm:py-4">
+                        <th scope="col" className="px-3 py-3 font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] sm:px-5 sm:py-4">
                           Shopify Plus
                         </th>
                       </tr>
@@ -1085,15 +1095,18 @@ export default function ShopifyCheckoutCustomizationPage() {
             <p className="mt-4 max-w-2xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
               Knowing the walls early saves a build. These eight are the ones we plan around most often.
             </p>
-            <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
-              {LIMITS.map((l) => (
-                <li key={l.t} className="rounded-xl border border-fj-neutral-200 border-l-[3px] border-l-[#F05A28] bg-fj-cream px-5 py-4">
-                  <div className="font-fj-display text-[15px] font-semibold text-fj-ink">{l.t}</div>
-                  <p className="mt-1 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{l.b}</p>
-                  <SourceLinks ids={l.sources} />
-                </li>
-              ))}
-            </ul>
+            <div className={`${styles.factsBox} mt-10`} tabIndex={0} data-visual-facts="LIMITS">
+<table className={`${styles.facts} bg-fj-cream`}><tbody>
+{LIMITS.map((l) => (
+<tr key={l.t}><th scope="row">
+<div className="font-fj-display text-[15px] font-semibold text-fj-ink">{l.t}</div>
+</th><td>
+<p className="mt-1 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{l.b}</p>
+<SourceLinks ids={l.sources} />
+</td></tr>
+))}
+</tbody></table>
+</div>
           </div>
         </section>
 
@@ -1135,19 +1148,22 @@ export default function ShopifyCheckoutCustomizationPage() {
                   <h3 className="font-fj-display text-xl font-semibold text-fj-ink">
                     The official dates, as listed on {CHECKED_ON}
                   </h3>
-                  <ol className="mt-6 grid gap-5">
-                    {TIMELINE.map((e) => (
-                      <li key={e.iso} className="grid grid-cols-1 gap-1 border-l-[3px] border-l-[#F05A28] pl-4 sm:grid-cols-[120px_1fr] sm:gap-4">
-                        <time dateTime={e.iso} className="font-fj-mono text-sm font-bold text-[#B23E13]">
+                  <div className={`${styles.factsBox} mt-6`} tabIndex={0} data-visual-facts="TIMELINE">
+<table className={`${styles.facts} bg-white`}><tbody>
+{TIMELINE.map((e) => (
+<tr key={e.iso}><th scope="row">
+<time dateTime={e.iso} className="font-fj-mono text-sm font-bold text-[#B23E13]">
                           {e.date}
                         </time>
-                        <div>
+</th><td>
+<div>
                           <p className="font-fj-body text-[15px] leading-relaxed text-fj-ink">{e.text}</p>
                           <SourceLinks ids={[e.src]} />
                         </div>
-                      </li>
-                    ))}
-                  </ol>
+</td></tr>
+))}
+</tbody></table>
+</div>
                 </div>
               </div>
             </div>
@@ -1155,20 +1171,23 @@ export default function ShopifyCheckoutCustomizationPage() {
             <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
               <div className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6 sm:p-8 lg:col-span-7">
                 <h3 className="font-fj-display text-xl font-semibold text-fj-ink">What replaces what</h3>
-                <ul className="mt-5 grid gap-3">
-                  {REPLACEMENTS.map((r) => (
-                    <li key={r.old} className="grid grid-cols-1 gap-1 rounded-xl border border-fj-neutral-200 bg-white px-4 py-3 sm:grid-cols-2 sm:gap-4">
-                      <span className="font-fj-body text-sm leading-relaxed text-fj-neutral-600">
-                        <span className="font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600">Was </span>
+                <div className={`${styles.factsBox} mt-5`} tabIndex={0} data-visual-facts="REPLACEMENTS">
+<table className={`${styles.facts} bg-white`}><tbody>
+{REPLACEMENTS.map((r) => (
+<tr key={r.old}><th scope="row">
+<span className="font-fj-body text-sm leading-relaxed text-fj-neutral-600">
+                        <span className="font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">Was </span>
                         {r.old}
                       </span>
-                      <span className="font-fj-body text-sm font-semibold leading-relaxed text-fj-ink">
-                        <span className="font-fj-mono text-[11px] font-bold uppercase tracking-wider text-[#B23E13]">Now </span>
+</th><td>
+<span className="font-fj-body text-sm font-semibold leading-relaxed text-fj-ink">
+                        <span className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">Now </span>
                         {r.now}
                       </span>
-                    </li>
-                  ))}
-                </ul>
+</td></tr>
+))}
+</tbody></table>
+</div>
                 <SourceLinks ids={['helpScripts', 'helpAdditionalScripts', 'devTech']} />
               </div>
 
@@ -1176,15 +1195,18 @@ export default function ShopifyCheckoutCustomizationPage() {
                 <h3 className="font-fj-display text-xl font-semibold text-fj-ink">
                   Where Shopify&rsquo;s own pages disagree
                 </h3>
-                <ul className="mt-5 grid gap-5">
-                  {DISAGREEMENTS.map((d) => (
-                    <li key={d.t}>
-                      <div className="font-fj-display text-[15px] font-semibold text-fj-ink">{d.t}</div>
-                      <p className="mt-1 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{d.b}</p>
-                      <SourceLinks ids={d.sources} />
-                    </li>
-                  ))}
-                </ul>
+                <div className={`${styles.factsBox} mt-5`} tabIndex={0} data-visual-facts="DISAGREEMENTS">
+<table className={`${styles.facts} bg-white`}><tbody>
+{DISAGREEMENTS.map((d) => (
+<tr key={d.t}><th scope="row">
+<div className="font-fj-display text-[15px] font-semibold text-fj-ink">{d.t}</div>
+</th><td>
+<p className="mt-1 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{d.b}</p>
+<SourceLinks ids={d.sources} />
+</td></tr>
+))}
+</tbody></table>
+</div>
               </div>
             </div>
           </div>
