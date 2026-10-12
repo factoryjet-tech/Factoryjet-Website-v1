@@ -1,3 +1,4 @@
+import visualQa from './ai-chatbot-cost-2026.visual-qa.module.css';
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
 
@@ -545,27 +546,23 @@ export const post: BlogPost = {
         Usage prices look comparable and are not, because each vendor counts a different event. These definitions are
         from the pricing pages themselves.
       </p>
-      <ul className="list-disc pl-6 space-y-2 mb-6">
-        <li>
-          <strong><a href={SRC.fin} target="_blank" rel="noopener noreferrer">Intercom Fin</a></strong> charges one
+      <table className={visualQa.profileFacts} tabIndex={0}><tbody>
+        <tr><th scope="row"><strong><a href={SRC.fin} target="_blank" rel="noopener noreferrer">Intercom Fin</a></strong></th><td> charges one
           outcome per conversation, even if Fin takes several actions. A resolution means the customer asks for no
           further help after Fin&apos;s last answer. A handoff Fin completes by following a procedure you set up also
           counts. A conversation simply passed to your team does not. A sales qualification is priced separately at
           $9.99.
-        </li>
-        <li>
-          <strong>Zendesk</strong> says you pay only for requests the AI agent resolved without any escalation to a
+        </td></tr>
+        <tr><th scope="row"><strong>Zendesk</strong></th><td> says you pay only for requests the AI agent resolved without any escalation to a
           human agent.
-        </li>
-        <li>
-          <strong>Freshdesk</strong> counts sessions. A session is one interaction between a customer and the AI Agent,
+        </td></tr>
+        <tr><th scope="row"><strong>Freshdesk</strong></th><td> counts sessions. A session is one interaction between a customer and the AI Agent,
           and for email it is a 72-hour window from the customer&apos;s first email, however many replies the AI sends.
-        </li>
-        <li>
-          <strong>Tidio</strong> bills a conversation only once your team replies or starts it. Unanswered spam does not
+        </td></tr>
+        <tr><th scope="row"><strong>Tidio</strong></th><td> bills a conversation only once your team replies or starts it. Unanswered spam does not
           count toward the limit.
-        </li>
-      </ul>
+        </td></tr>
+      </tbody></table>
 
       <figure className="my-8">
         <img
@@ -804,24 +801,19 @@ export const post: BlogPost = {
         We read five more guides than the table shows, and they sit far from it. All nine firms in the table start an AI
         chatbot between $10,000 and $35,000. The other five start the same tier at $75,000:
       </p>
-      <ul className="list-disc pl-6 space-y-2 mb-6">
-        <li>
-          <a href={SRC.elfsightGuide} target="_blank" rel="noopener noreferrer">Elfsight</a>: $75,000 to $150,000
-        </li>
-        <li>
-          <a href={SRC.masterOfCode} target="_blank" rel="noopener noreferrer">Master of Code</a>: $75,000 to $150,000 or
+      <table className={visualQa.profileFacts} tabIndex={0}><tbody>
+        <tr><th scope="row"><a href={SRC.elfsightGuide} target="_blank" rel="noopener noreferrer">Elfsight</a>: </th><td>$75,000 to $150,000
+        </td></tr>
+        <tr><th scope="row"><a href={SRC.masterOfCode} target="_blank" rel="noopener noreferrer">Master of Code</a>: </th><td>$75,000 to $150,000 or
           more
-        </li>
-        <li>
-          <a href={SRC.quickchatGuide} target="_blank" rel="noopener noreferrer">Quickchat AI</a>: $75,000 to $500,000
-        </li>
-        <li>
-          <a href={SRC.crescendo} target="_blank" rel="noopener noreferrer">Crescendo</a>: $75,000 to $500,000 or more
-        </li>
-        <li>
-          <a href={SRC.bland} target="_blank" rel="noopener noreferrer">Bland</a>: $75,000 to $500,000
-        </li>
-      </ul>
+        </td></tr>
+        <tr><th scope="row"><a href={SRC.quickchatGuide} target="_blank" rel="noopener noreferrer">Quickchat AI</a>: </th><td>$75,000 to $500,000
+        </td></tr>
+        <tr><th scope="row"><a href={SRC.crescendo} target="_blank" rel="noopener noreferrer">Crescendo</a>: </th><td>$75,000 to $500,000 or more
+        </td></tr>
+        <tr><th scope="row"><a href={SRC.bland} target="_blank" rel="noopener noreferrer">Bland</a>: </th><td>$75,000 to $500,000
+        </td></tr>
+      </tbody></table>
       <p>
         Two facts about that second camp. Four of the five (all but Master of Code) sell a ready-made chatbot or voice
         product, so a custom build is the alternative to what they sell. And the same four print an identical $5,000 to
