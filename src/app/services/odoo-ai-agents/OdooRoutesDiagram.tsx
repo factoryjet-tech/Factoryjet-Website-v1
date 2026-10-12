@@ -26,7 +26,7 @@ const ORANGE_TINT = '#FFF4EE';
 
 const W = 300;
 const LABEL_H = 22;
-const BOX_H = 54;
+const BOX_H = 70;
 const GAP = 8;
 const ARROW_GAP = 22;
 const STEP = LABEL_H + BOX_H + GAP;
@@ -78,7 +78,10 @@ function RouteBox({ r, y }: { r: Route; y: number }) {
         {r.title}
       </text>
       <text x={14} y={top + 40} className="font-fj-mono" fontSize="9.5" fill={r.agent ? ORANGE_TEXT : MUTED}>
-        {r.note}
+        {r.note.length > 32 ? (<>
+          <tspan x={14}>{r.note.slice(0, r.note.lastIndexOf(' ', 25) + 1)}</tspan>
+          <tspan x={14} dy={16}>{r.note.slice(r.note.lastIndexOf(' ', 25) + 1)}</tspan>
+        </>) : r.note}
       </text>
     </g>
   );
