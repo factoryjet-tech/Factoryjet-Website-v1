@@ -41,9 +41,9 @@ const ROW_GAP = 6;
 const GROUP_GAP = 10;
 
 const PILL: Record<Lead, { text: string; w: number; fill: string }> = {
-  quickbooks: { text: '→ SHOPIFY', w: 78, fill: ORANGE_TEXT },
-  shopify: { text: '→ QUICKBOOKS', w: 100, fill: INK },
-  both: { text: 'BOTH WAYS', w: 78, fill: INK },
+  quickbooks: { text: '→ SHOPIFY', w: 94, fill: ORANGE_TEXT },
+  shopify: { text: '→ QUICKBOOKS', w: 120, fill: INK },
+  both: { text: 'BOTH WAYS', w: 94, fill: INK },
 };
 
 type Placed = { kind: 'label'; y: number; text: string; lead: Lead } | { kind: 'row'; y: number; text: string; lead: Lead };
