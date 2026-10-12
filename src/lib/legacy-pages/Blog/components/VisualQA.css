@@ -21,10 +21,10 @@
 .blog-post .blog-prose table { max-width: 100%; display: block; overflow-x: auto; border: 1px solid #E5E7EB; border-radius: 12px; overscroll-behavior-x: contain; isolation: isolate; }
 .blog-post .blog-prose :is(div,section):has(> table) { overflow: visible; max-width: 100%; }
 .blog-post .blog-prose :is(th,td) { min-width: 140px; padding: 12px; }
-.blog-post .blog-prose table { background-color: #FFFFFF; }
-.blog-post .blog-prose :is(tbody,thead) { background-color: inherit; }
+.blog-post .blog-prose table:not([class*='bg-']) { background-color: #FFFFFF; }
+.blog-post .blog-prose :is(tbody,thead):not([class*='bg-']) { background-color: inherit; }
 .blog-post .blog-prose tr:not([class*='bg-']) { background-color: inherit; }
-.blog-post .blog-prose :is(th,td):first-child { position: sticky; left: 0; z-index: 1; background-color: inherit; min-width: 136px; max-width: 180px; box-shadow: inset -1px 0 #E5E7EB; }
+.blog-post .blog-prose :is(th,td):first-child { position: sticky; left: 0; z-index: 1; min-width: 136px; max-width: 180px; box-shadow: inset -1px 0 #E5E7EB; }
 
 .blog-post #author :is(a,span)[class*='inline-flex'],
 .blog-post > footer a { min-height: 44px; min-width: 44px; }
@@ -54,8 +54,6 @@
   .blog-post :is(p,span)[class*='uppercase'],
   .blog-post > footer p { font-size: 12px; }
   .blog-post #author p { font-size: 16px; }
-  .blog-post #author p[class*='text-[#F05A28]'] { color: var(--blog-link); }
-  .blog-post #takeaways li > span:first-child { color: var(--blog-link); }
 }
 .blog-post .blog-hero-author img,
 .blog-post #author img { object-fit: cover; object-position: center 25%; box-shadow: none; }
@@ -75,3 +73,10 @@
 }
 
 .blog-post > footer :is(a,button) { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+
+/* Keep sticky labels opaque without overriding their authored cell colors. */
+.blog-post .blog-prose :is(th,td):first-child:not([class*='bg-']) { background-color: inherit; }
+
+/* Small orange text uses the established dark-orange token on every screen. */
+.blog-post #author p[class*='text-[#F05A28]'] { color: var(--blog-link); }
+.blog-post #takeaways li > span:first-child { color: var(--blog-link); }
