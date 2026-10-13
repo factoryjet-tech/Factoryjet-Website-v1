@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './best-bigcommerce-agencies-2026.visual-qa.module.css';
 import type { BlogPost, FAQItem } from '../data.types';
 
 const SLUG = 'best-bigcommerce-agencies-2026';
@@ -713,12 +714,7 @@ export const post: BlogPost = {
                   )}
                 </p>
                 <p className="mb-3">{f.what}</p>
-                <ul className="list-disc pl-6 mb-3 space-y-1">
-                  <li><strong>Best for:</strong> {f.bestFor}</li>
-                  <li><strong>Typical client:</strong> {f.clients}.</li>
-                  <li><strong>Systems it names:</strong> {f.tools}.</li>
-                  <li><strong>Worth asking them:</strong> {f.ask}</li>
-                </ul>
+                <table className={styles.profileFacts}><tbody><tr><th scope="row"><strong>Best for:</strong></th><td>{f.bestFor}</td></tr><tr><th scope="row"><strong>Typical client:</strong></th><td>{f.clients}.</td></tr><tr><th scope="row"><strong>Systems it names:</strong></th><td>{f.tools}.</td></tr><tr><th scope="row"><strong>Worth asking them:</strong></th><td>{f.ask}</td></tr></tbody></table>
                 <p className="text-sm text-gray-600">
                   Source:{' '}
                   <a href={f.source} className={link} rel="noopener" target={f.source.startsWith('https://factoryjet.com') ? undefined : '_blank'}>
@@ -914,40 +910,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Which kind of BigCommerce agency you need</h2>
       <p className="mb-4">Each line below is something a buyer might say. Find yours, and it names the firms to call.</p>
-      <div className="grid gap-3 mb-8 not-prose">
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;Our dealers still phone and email their orders, and we make or distribute the goods.&rdquo;</p>
-          <p className="text-gray-700 text-sm">Silk Commerce, whose B2B page is written for that case. Jamersan if you sell auto parts or building materials.</p>
-        </div>
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We run NetSuite, and the store has to agree with it.&rdquo;</p>
-          <p className="text-gray-700 text-sm">Anchor Group, which works on NetSuite itself as well as BigCommerce.</p>
-        </div>
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We want to add wholesale to the store we have, and we are unsure about B2B Edition.&rdquo;</p>
-          <p className="text-gray-700 text-sm">IntuitSolutions, which says on its own page that B2B Edition is not always required.</p>
-        </div>
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We are a consumer brand and want the store and the marketing from one agency.&rdquo;</p>
-          <p className="text-gray-700 text-sm">Groove Commerce. EYStudios if brand design, photography and video matter most. DigitlHaus for a fully custom store with the scope agreed first.</p>
-        </div>
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We want a custom storefront that our marketing team can change without a developer.&rdquo;</p>
-          <p className="text-gray-700 text-sm">Americaneagle.com, which names Catalyst and Makeswift. Codal and MoJo Active also build headless storefronts.</p>
-        </div>
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We are leaving Magento, WooCommerce, Volusion or Shopify, and our search rankings have to survive the move.&rdquo;</p>
-          <p className="text-gray-700 text-sm">1Digital Agency or Forix. Classy Llama if the project has already stalled once.</p>
-        </div>
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We run several brands or regions and want one back end.&rdquo;</p>
-          <p className="text-gray-700 text-sm">Americaneagle.com and 1Digital Agency both name multi-storefront builds.</p>
-        </div>
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We need the store joined to our ERP, with quotes and orders flowing both ways.&rdquo;</p>
-          <p className="text-gray-700 text-sm">FactoryJet builds the store and the integration as one project. See <a href="/bigcommerce-development" className={link}>BigCommerce development</a>, <a href="/services/ecommerce-erp-integration" className={link}>ecommerce ERP integration</a> and <a href="/services/erp-ai-agents" className={link}>ERP AI agents</a>.</p>
-        </div>
-      </div>
+      <table className={[styles.profileFacts, styles.choiceFacts].join(' ')}><tbody><tr><th scope="row">&ldquo;Our dealers still phone and email their orders, and we make or distribute the goods.&rdquo;</th><td>Silk Commerce, whose B2B page is written for that case. Jamersan if you sell auto parts or building materials.</td></tr><tr><th scope="row">&ldquo;We run NetSuite, and the store has to agree with it.&rdquo;</th><td>Anchor Group, which works on NetSuite itself as well as BigCommerce.</td></tr><tr><th scope="row">&ldquo;We want to add wholesale to the store we have, and we are unsure about B2B Edition.&rdquo;</th><td>IntuitSolutions, which says on its own page that B2B Edition is not always required.</td></tr><tr><th scope="row">&ldquo;We are a consumer brand and want the store and the marketing from one agency.&rdquo;</th><td>Groove Commerce. EYStudios if brand design, photography and video matter most. DigitlHaus for a fully custom store with the scope agreed first.</td></tr><tr><th scope="row">&ldquo;We want a custom storefront that our marketing team can change without a developer.&rdquo;</th><td>Americaneagle.com, which names Catalyst and Makeswift. Codal and MoJo Active also build headless storefronts.</td></tr><tr><th scope="row">&ldquo;We are leaving Magento, WooCommerce, Volusion or Shopify, and our search rankings have to survive the move.&rdquo;</th><td>1Digital Agency or Forix. Classy Llama if the project has already stalled once.</td></tr><tr><th scope="row">&ldquo;We run several brands or regions and want one back end.&rdquo;</th><td>Americaneagle.com and 1Digital Agency both name multi-storefront builds.</td></tr><tr><th scope="row">&ldquo;We need the store joined to our ERP, with quotes and orders flowing both ways.&rdquo;</th><td>FactoryJet builds the store and the integration as one project. See <a href="/bigcommerce-development" className={link}>BigCommerce development</a>, <a href="/services/ecommerce-erp-integration" className={link}>ecommerce ERP integration</a> and <a href="/services/erp-ai-agents" className={link}>ERP AI agents</a>.</td></tr></tbody></table>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Choosing a BigCommerce developer in six steps</h2>
       <p className="mb-4">Each step opens to show the detail.</p>
@@ -979,7 +942,7 @@ export const post: BlogPost = {
       </div>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Questions to put to a BigCommerce agency before you sign</h2>
-      <ol className="list-decimal pl-6 mb-6 space-y-2">
+      <ol className={styles.checklist}>
         <li><strong>Which systems have you joined to BigCommerce, by name?</strong> Anchor Group names NetSuite on its site. Ask every firm about the system you run.</li>
         <li><strong>Do we need B2B Edition?</strong> IntuitSolutions says not always. A firm that says yes should be able to name the feature that decides it.</li>
         <li><strong>Stencil or Catalyst, and why?</strong> Americaneagle.com and MoJo Active both name the two. A good answer starts from your store and the team that will run it.</li>
@@ -993,13 +956,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         FactoryJet has built commerce systems since 2014 and has served 500+ businesses. Bhavesh Barot, the founder, takes the first call on every project himself. We work remotely with US clients and hold calls in US business hours.
       </p>
-      <ul className="list-disc pl-6 mb-4 space-y-2">
-        <li><strong>Stores.</strong> Custom themes, multi-storefront setups and headless storefronts on Next.js. See <a href="/bigcommerce-development" className={link}>BigCommerce development</a>.</li>
-        <li><strong>B2B Edition.</strong> Company accounts, price lists, quotes, payment terms and buyer portals. See <a href="/services/bigcommerce-b2b" className={link}>BigCommerce B2B Edition</a>.</li>
-        <li><strong>Integrations.</strong> NetSuite, Odoo, SAP Business One, ERPNext and custom ERPs, plus QuickBooks, Xero, HubSpot, EDI and punchout catalogs.</li>
-        <li><strong>Migrations.</strong> From Magento and WooCommerce, with products, customers, orders and content moved and a redirect for every old web address. See <a href="/replatforming" className={link}>replatforming</a>.</li>
-        <li><strong>AI agents.</strong> Agents that prepare quotes, purchase orders and sales orders in the store and the ERP, with a person approving before anything posts. See <a href="/services/erp-ai-agents" className={link}>ERP AI agents</a>.</li>
-      </ul>
+      <table className={styles.profileFacts}><tbody><tr><th scope="row"><strong>Stores.</strong></th><td> Custom themes, multi-storefront setups and headless storefronts on Next.js. See <a href="/bigcommerce-development" className={link}>BigCommerce development</a>.</td></tr><tr><th scope="row"><strong>B2B Edition.</strong></th><td> Company accounts, price lists, quotes, payment terms and buyer portals. See <a href="/services/bigcommerce-b2b" className={link}>BigCommerce B2B Edition</a>.</td></tr><tr><th scope="row"><strong>Integrations.</strong></th><td> NetSuite, Odoo, SAP Business One, ERPNext and custom ERPs, plus QuickBooks, Xero, HubSpot, EDI and punchout catalogs.</td></tr><tr><th scope="row"><strong>Migrations.</strong></th><td> From Magento and WooCommerce, with products, customers, orders and content moved and a redirect for every old web address. See <a href="/replatforming" className={link}>replatforming</a>.</td></tr><tr><th scope="row"><strong>AI agents.</strong></th><td> Agents that prepare quotes, purchase orders and sales orders in the store and the ERP, with a person approving before anything posts. See <a href="/services/erp-ai-agents" className={link}>ERP AI agents</a>.</td></tr></tbody></table>
       <p className="mb-4">
         A BigCommerce store on a custom theme usually takes 3 to 5 weeks. A B2B Edition build or a migration takes 5 to 8 weeks, and a headless build 8 to 14 weeks. You get two fixed prices in writing after a short scoping call, one for the build and one for ongoing support. Once the store is live, the integrations, the APIs, the AI and the routine maintenance stay our job, so they never land on your team. Everything we build belongs to you.
       </p>
