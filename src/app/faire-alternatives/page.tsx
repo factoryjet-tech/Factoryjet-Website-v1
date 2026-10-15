@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import styles from './visual-qa.module.css';
 import Link from 'next/link';
 
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -727,14 +728,14 @@ export default function FaireAlternativesPage() {
 
       <SiteHeader />
 
-      <main className="min-h-screen bg-fj-cream text-fj-ink">
+      <main className={`${styles.page} min-h-screen bg-fj-cream text-fj-ink`}>
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* 1. HERO */}
-        <section className="relative overflow-hidden border-b border-fj-neutral-200 bg-fj-cream pt-12 pb-14 md:pt-14 md:pb-16">
+        <section className={`${styles.hero} relative overflow-hidden border-b border-fj-neutral-200 bg-fj-cream pt-12 pb-14 md:pt-14 md:pb-16`}>
           <div className="mx-auto max-w-[1200px] px-6 md:px-8">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
-              <div className="lg:col-span-7">
+              <div className={`${styles.heroCopy} lg:col-span-7`}>
                 <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#F05A28]/30 bg-white px-3 py-1.5">
                   <span className="font-fj-mono text-xs font-bold tracking-wide text-[#B23E13]">
                     WHOLESALE &middot; CHECKED {CHECKED_SHORT}
@@ -745,13 +746,13 @@ export default function FaireAlternativesPage() {
                   Faire alternatives for US brands, including the one most lists skip.
                 </h1>
 
-                <p className="mt-6 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600">
+                <p className={`${styles.heroLead} mt-6 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}>
                   Wholesale means selling your products in bulk to shops that resell them. Faire does that online and
                   keeps a commission, a share of each order. We opened every alternative&rsquo;s own website on{' '}
                   {CHECKED_ON} to see who still takes brands and what they charge.
                 </p>
 
-                <div className="mt-8">
+                <div className={styles.heroForm}>
                   <HeroInlineForm region="us" source="faire_alternatives_hero" service="E-commerce" submitLabel="Plan my wholesale portal" />
                 </div>
 
@@ -782,7 +783,7 @@ export default function FaireAlternativesPage() {
                   Every number is derived from the arrays above. */}
               <div className="lg:col-span-5">
                 <div className="rounded-2xl border border-fj-neutral-200 border-t-[3px] border-t-[#F05A28] bg-white p-6 sm:p-8">
-                  <p className="font-fj-mono text-[11px] font-bold uppercase tracking-wider text-[#B23E13]">
+                  <p className="font-fj-mono text-[12px] font-bold uppercase tracking-wider text-[#B23E13]">
                     What the check found &middot; {CHECKED_SHORT}
                   </p>
                   <dl className="mt-4 divide-y divide-fj-neutral-200">
@@ -862,14 +863,13 @@ export default function FaireAlternativesPage() {
               Our arithmetic from Faire&rsquo;s listed rates, using the 30-day payout. Shipping and promotions are
               left out.
             </p>
-            <div className="mt-6 overflow-x-auto rounded-2xl border border-fj-neutral-200 bg-white">
-              <table className="w-full min-w-[640px] border-collapse text-left">
+            <div className={`mt-6 overflow-x-auto rounded-2xl border border-fj-neutral-200 bg-white ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table"><table className="w-full min-w-[640px] border-collapse text-left" data-columns={4}>
                 <thead>
                   <tr className="border-b border-fj-neutral-200">
-                    <th scope="col" className="px-5 py-4 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600">Order</th>
-                    <th scope="col" className="px-5 py-4 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600">The sum</th>
-                    <th scope="col" className="px-5 py-4 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600">Faire keeps</th>
-                    <th scope="col" className="px-5 py-4 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600">Share of order</th>
+                    <th scope="col" className="px-5 py-4 font-fj-mono text-[12px] font-bold uppercase tracking-wider text-fj-neutral-600">Order</th>
+                    <th scope="col" className="px-5 py-4 font-fj-mono text-[12px] font-bold uppercase tracking-wider text-fj-neutral-600">The sum</th>
+                    <th scope="col" className="px-5 py-4 font-fj-mono text-[12px] font-bold uppercase tracking-wider text-fj-neutral-600">Faire keeps</th>
+                    <th scope="col" className="px-5 py-4 font-fj-mono text-[12px] font-bold uppercase tracking-wider text-fj-neutral-600">Share of order</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -886,7 +886,7 @@ export default function FaireAlternativesPage() {
             </div>
 
             <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2">
-              <span className="font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600">
+              <span className="font-fj-mono text-[12px] font-bold uppercase tracking-wider text-fj-neutral-600">
                 Other Faire pages we read
               </span>
               {FAIRE_PAGES_READ.map((s) => (
@@ -964,7 +964,7 @@ export default function FaireAlternativesPage() {
                     </div>
                     <div className="min-w-0">
                       <h3 className="font-fj-display text-xl font-semibold text-fj-ink">{p.name}</h3>
-                      <p className="mt-1 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600">{p.kind}</p>
+                      <p className="mt-1 font-fj-mono text-[12px] font-bold uppercase tracking-wider text-fj-neutral-600">{p.kind}</p>
                     </div>
                   </div>
                   <p className="mt-4 font-fj-body text-[15px] leading-relaxed text-fj-ink">{p.summary}</p>
@@ -1003,7 +1003,7 @@ export default function FaireAlternativesPage() {
                 <li key={c.name} data-closed-item className="rounded-xl border border-fj-neutral-200 bg-white px-5 py-4">
                   <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                     <h3 className="font-fj-display text-[17px] font-semibold text-fj-ink">{c.name}</h3>
-                    <span className="font-fj-mono text-[11px] font-bold uppercase tracking-wider text-[#B23E13]">{c.status}</span>
+                    <span className="font-fj-mono text-[12px] font-bold uppercase tracking-wider text-[#B23E13]">{c.status}</span>
                   </div>
                   <p className="mt-2 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{c.detail}</p>
                   <a href={c.source.url} target="_blank" rel="noopener noreferrer" className={`mt-3 ${SOURCE_LINK_CLASS}`}>
