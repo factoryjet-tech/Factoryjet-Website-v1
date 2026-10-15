@@ -1,3 +1,4 @@
+import visualQa from './shopify-plus-migration-cost-2026.visual-qa.module.css';
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
 
@@ -935,41 +936,35 @@ export const post: BlogPost = {
         searches we ran on this topic, and six of the 12 guides were among the sources it cited. So what these pages say
         is what many buyers are told. Six things stood out.
       </p>
-      <ul className="list-disc pl-6 space-y-2 mb-6">
-        <li>
-          <strong>The spread is 120 to 1.</strong> The lowest starting figure for a Shopify Plus migration was $5,000 (
+      <table className={visualQa.profileFacts} tabIndex={0}><tbody>
+        <tr><th scope="row"><strong>The spread is 120 to 1.</strong></th><td> The lowest starting figure for a Shopify Plus migration was $5,000 (
           <a href={SRC.xpertshire} target="_blank" rel="noopener noreferrer">Xpertshire</a> and{' '}
           <a href={SRC.forgecro} target="_blank" rel="noopener noreferrer">ForgeCRO</a>). The highest top figure was
           $600,000 or more (Elogic).
-        </li>
-        <li>
-          <strong>The same bands repeat.</strong> Three guides print $50 to $500 for a migration tool. Three print
+        </td></tr>
+        <tr><th scope="row"><strong>The same bands repeat.</strong></th><td> Three guides print $50 to $500 for a migration tool. Three print
           $15,000 to $75,000 for a mid-size project: Soda Web Media,{' '}
           <a href={SRC.aqsa} target="_blank" rel="noopener noreferrer">Aqsa Shahzad</a> and ForgeCRO. Two print $30,000
           to $150,000 or more for a Plus migration. Matching numbers on separate sites are weaker evidence than they
           look, because a reader cannot tell who measured and who repeated.
-        </li>
-        <li>
-          <strong>Two guides say what their ranges rest on.</strong> Elogic cites more than 500 of its own projects and
+        </td></tr>
+        <tr><th scope="row"><strong>Two guides say what their ranges rest on.</strong></th><td> Elogic cites more than 500 of its own projects and
           names 12 agency benchmarks. Solo Media Group cites more than 75 replatforms. The other ten give ranges without
           saying how many projects sit behind them.
-        </li>
-        <li>
-          <strong>Three firms post their own prices.</strong> Tripster Developers lists Plus replatforming from Magento,
+        </td></tr>
+        <tr><th scope="row"><strong>Three firms post their own prices.</strong></th><td> Tripster Developers lists Plus replatforming from Magento,
           Salesforce or a custom platform from $15,000. Solo Media Group lists full replatforms from $20,000. Presta
           lists enterprise Shopify Plus work from 25,000 euros. A posted price is stronger evidence than a market range,
           because it is the number that firm will quote from.
-        </li>
-        <li>
-          <strong>Three guides carry an old platform limit.</strong> They give 100 variants per product. The Shopify
+        </td></tr>
+        <tr><th scope="row"><strong>Three guides carry an old platform limit.</strong></th><td> They give 100 variants per product. The Shopify
           Help Center says 2,048. Ask which limit an estimate was built on, because the old one can add catalog
           restructuring you no longer need.
-        </li>
-        <li>
-          <strong>Shopify prices the plan and leaves the project to partners.</strong> On the pages we read it prints the
+        </td></tr>
+        <tr><th scope="row"><strong>Shopify prices the plan and leaves the project to partners.</strong></th><td> On the pages we read it prints the
           plan fee, the card rates and timeline averages. It prints no project price range.
-        </li>
-      </ul>
+        </td></tr>
+      </tbody></table>
 
       <h2 id="factoryjet-pricing">How FactoryJet prices a Shopify Plus migration</h2>
       <p>
