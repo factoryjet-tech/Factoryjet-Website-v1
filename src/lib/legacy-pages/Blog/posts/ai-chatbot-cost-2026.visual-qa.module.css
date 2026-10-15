@@ -11,3 +11,13 @@
   :global(.blog-post .blog-prose) table.profileFacts td { padding: 0 12px 12px; font-size: 16px; }
   :global(.blog-post .blog-prose) table.profileFacts tr + tr td { border-top: 0; }
 }
+
+/* Standalone source links need a full touch target in comparison tables. */
+@media (max-width: 767px) {
+  .comparisonTable :is(th, td) a {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
