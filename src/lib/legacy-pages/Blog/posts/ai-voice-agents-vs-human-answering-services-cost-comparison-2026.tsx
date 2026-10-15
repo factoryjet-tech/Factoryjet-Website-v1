@@ -178,7 +178,7 @@ export const post: BlogPost = {
       </p>
 
       <div className="overflow-x-auto my-8 not-prose">
-        <table className="w-full text-left text-sm border border-[#E7DED6] bg-white rounded-xl shadow-sm">
+        <table className={`w-full text-left text-sm border border-[#E7DED6] bg-white rounded-xl shadow-sm ${visualQa.priceTable}`}>
           <thead className="bg-[#FFF8F5] border-b border-[#E7DED6]">
             <tr>
               <th className="p-4 font-bold text-[#14110F]">Product and source</th>
@@ -336,7 +336,7 @@ export const post: BlogPost = {
       </p>
 
       <div className="my-10 p-8 rounded-2xl bg-[#FFF8F5] border border-[#E7DED6] text-center not-prose">
-        <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
+        <div className="font-mono text-xs text-[#B23E13] font-bold uppercase mb-2">
           // SCHEDULE DIRECT VOICE ARCHITECTURE AUDIT
         </div>
         <h3 className="text-2xl font-bold text-[#14110F] mb-4">
@@ -349,7 +349,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#F05A28] text-white font-bold hover:bg-[#D8441A] transition-colors shadow-md text-sm"
+          className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#B23E13] text-white font-bold hover:bg-[#9A3510] transition-colors shadow-md text-sm"
         >
           Book 30-Min Architecture Discovery Call &rarr;
         </a>
