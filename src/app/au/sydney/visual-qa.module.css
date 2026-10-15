@@ -1,0 +1,117 @@
+.page :global(:is(h1,h2,h3)) { text-wrap: balance; }
+.page :global(p) { text-wrap: pretty; }
+.page :global(thead th) { font-size:12px !important; }
+.page :global(:is(a,button,input,summary,[tabindex]):focus-visible) { outline:2px solid #B23E13 !important; outline-offset:3px; }
+.page :global([data-hero-inline-form]) { margin-top:0 !important; }
+.heroCopy { display:flex; flex-direction:column; align-items:flex-start; }
+.heroCopy > * { width:100%; }
+.page .heroCopy > :global(h1) { order:1; }
+.heroCopy > :global(p.lead), .heroLead { order:2; }
+.heroForm { order:3; margin-top:20px !important; }
+.heroCopy > .heroContinuation { order:4 !important; margin-top:20px !important; }
+.heroCopy > :global(.byline) { order:5; margin-top:24px !important; }
+.tableBox { border:1px solid var(--n200,#D9D9D2); border-radius:12px; overflow-x:auto; }
+.tableBox :global(table) { width:100%; border-collapse:separate !important; border-spacing:0; }
+.tableBox :global(tr > :is(th,td):first-child) { position:sticky; left:0; z-index:1; background:#FFFFFF; border-right:1px solid var(--n200,#D9D9D2); }
+.tableBox :global(thead tr > th:first-child) { z-index:2; }
+@media(max-width:767px) {
+ .page :global(p:not(.eyebrow):not(.faq-cat-label):not(.faq-cat-label-v2):not(.fj-eyebrow)), .page :global(li), .page :global(td), .page :global(dd) { font-size:16px !important; }
+ .page :global(input), .page :global(button), .page :global(summary), .page :global(.q-text) { font-size:16px !important; }
+ .page :global(:is(.btn,.city-pill,.faq-pill-nav a)) { min-height:44px; min-width:44px; }
+ .page :global(nav[aria-label="Breadcrumb"] li) { font-size:12px !important; }
+ .tableBox :global(table) { min-width:760px !important; }
+ .tableBox :global(tr > :is(th,td):first-child) { min-width:150px; width:150px; max-width:180px; }
+ .tableBox :global(tbody th) { font-size:16px !important; }
+}
+
+.page :global(:is(.sys,.sys span,.idx,.specpanel-bar,.specpanel-bar span,.specpanel-foot,.specrow .tag,.specrow .title,.demand-sub,.demand-v,.demand-kd,.tableSubLabel,.ledgercell .t,.demand-bar b,small,.vtag,.faq-nav-count,.faq-category,.qid,.faqsrc)) { font-size:12px !important; }
+
+.heroCopy > :global(.eyebrow) { order:0; }
+.heroCopy > :global([data-hero-inline-form]) { order:3; margin-top:20px !important; }
+.page :global(:is(.eyebrow,.capid,.factlabel,.cap,.k,.tag,.cap-sub,.ref-id,.plat-flag,.upd,.specpanel .meta,.specpanel .st,.specpanel .note,.specpanel .pill)) { font-size:12px !important; }
+.page :global(.specpanel) :global([style*="font-size"]) { font-size:12px !important; }
+.page :global(.tablewrap) { border:1px solid var(--line); border-radius:12px; }
+@media(max-width:767px) {
+ .page :global(.hero) { padding-top:24px !important; }
+ .page .heroCopy > :global(h1) { font-size:clamp(28px,8vw,32px) !important; line-height:1.12; }
+ .heroCopy > :global(h1 .hero-emphasis) { display:inline !important; }
+ .heroCopy > :global(.lead), .heroContinuation { font-size:16px !important; margin-top:16px !important; line-height:1.65; }
+ .page :global(:is(.plat-fit,.plat-build,.chg-list li,.ref p,.figcap,.caplist p,.sub-note,.tablenote,.au-note,.pstep p,.faq-ans p,.ledgercell .t,.fact .sub,.fact p,.definition-copy p,.specpanel .rule)) { font-size:16px !important; }
+ .page :global(:is(.tag,.city-list a,.faq-pill-nav a)) { min-height:44px; }
+ .page :global(.tablewrap) :global(table) { min-width:760px; }
+}
+
+.page :global(.t), .page :global(.demand-head span), .page :global(.demand-head b) {font-size:12px !important}
+
+@media(max-width:767px){
+.tableBox :global(table[data-columns="2"]) {table-layout:fixed; width:320px !important; min-width:320px !important;}
+.tableBox :global(table[data-columns="3"]) {table-layout:fixed; width:500px !important; min-width:500px !important;}
+.tableBox :global(table[data-columns="4"]) {table-layout:fixed; width:680px !important; min-width:680px !important;}
+.tableBox :global(table[data-columns="5"]) {table-layout:fixed; width:860px !important; min-width:860px !important;}
+.tableBox :global(table[data-columns="6"]) {table-layout:fixed; width:1040px !important; min-width:1040px !important;}
+.tableBox :global(tr > :is(th,td):first-child) {width:140px !important; min-width:140px; max-width:140px;}
+}
+
+.page :global([data-visual-slot="sydney:facts"] img), .page :global([data-visual-slot="sydney:facts-2"] img) {object-position:top;}
+
+@media(max-width:767px){.page :global(p a) {font-size:inherit;} }
+
+@media(max-width:767px){.page :global(.qtext) {font-size:16px !important;} .page :global(.faq-catnav a), .page :global(.faqsrc) {min-height:44px;} .page :global(.faqsrc) {display:inline-flex;align-items:center;} }
+
+@media(min-width:768px){.page :global(p:not(.eyebrow):not(.lab):not(.faq-cat-label):not(.fj-eyebrow):not(.font-fj-mono)){max-inline-size:55ch !important;}}
+
+@media(max-width:767px){.page :global(span.font-fj-body), .page :global([data-hero-inline-form] > div > div:last-child){font-size:16px !important;line-height:1.5;}}
+
+/* Existing labelled records: native desktop comparison rows, stacked mobile records. */
+.comparisonBox { margin-block: 40px; border: 1px solid #E5E5E0; border-radius: 12px; overflow-x: auto; }
+.comparisonTable { inline-size: 100%; table-layout: fixed; border-collapse: collapse; }
+.comparisonTable tr { display: table-row !important; padding: 0 !important; border-radius: 0; }
+.comparisonTable th, .comparisonTable td { padding: 22px 24px; text-align: left; vertical-align: top; font-weight: inherit; border-bottom: 1px solid #E5E5E0; background: inherit; }
+.comparisonTable th:first-child { inline-size: 26%; }
+.comparisonTable tr:last-child > th, .comparisonTable tr:last-child > td { border-bottom: 0; }
+.comparisonTable h3 { margin: 0; }
+.comparisonTable ul { padding-inline-start: 18px; }
+.comparisonTable th p { font-weight: 400; }
+.comparisonTable :global(.scorecard-val) { text-align: left; }
+@media (max-width: 767px) {
+ .comparisonBox { overflow: visible; }
+ .comparisonTable, .comparisonTable tbody, .comparisonTable tr { display: block !important; inline-size: 100% !important; min-inline-size: 0 !important; }
+ .comparisonTable th, .comparisonTable td { display: block; position: static !important; inline-size: auto !important; min-inline-size: 0 !important; padding: 16px 18px; border: 0; }
+ .comparisonTable th { padding-block-end: 6px; }
+ .comparisonTable td { padding-block-start: 6px; }
+ .comparisonTable tr { border-bottom: 1px solid #E5E5E0; }
+ .comparisonTable tr:last-child { border-bottom: 0; }
+ .comparisonTable h3 { font-size: 18px; line-height: 1.4; }
+ .comparisonTable p, .comparisonTable li { font-size: 16px !important; line-height: 1.5; }
+}
+
+@media (max-width:767px) { .comparisonTable th { font-size:16px !important; } .comparisonTable :global(.scorecard-val) { font-size:16px !important; } }
+
+.adminLayout { display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:32px; align-items:start; }
+.adminPhoto { margin:0; }
+.adminPhoto img { display:block; inline-size:100%; block-size:auto; border-radius:12px; }
+.comparisonTable :global(.demand-bar) {max-inline-size:100%;}
+@media(max-width:767px){.adminLayout {grid-template-columns:minmax(0,1fr);} .comparisonTable :global(.demand-kw), .comparisonTable :global(.demand-v), .comparisonTable :global(.demand-kd) {font-size:16px !important;}}
+
+
+/* Sydney only: fit native comparison records to their existing containers. */
+@media (min-width: 768px) {
+  .page .comparisonTable {
+    min-width: 0 !important;
+    min-inline-size: 0 !important;
+    width: 100% !important;
+    inline-size: 100% !important;
+  }
+  .page .comparisonTable :global(tbody > tr > th[scope="row"]:first-child) {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: #FFFFFF;
+    border-right: 1px solid #E5E5E0;
+  }
+  /* Preserve section edges while removing the measured empty run. */
+  .page :global(#diagnosis) { padding-top: 32px; padding-bottom: 32px; }
+  .page :global(#who-we-build-for) { padding-bottom: 48px; }
+  .page :global(#ecommerce-development-sydney) { padding-top: 48px; padding-bottom: 48px; }
+  .page :global(#integrations) { margin-top: 40px; }
+}
