@@ -1,3 +1,4 @@
+import visualQa from './how-to-hire-an-ai-agent-developer-2026.visual-qa.module.css';
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
 
@@ -671,7 +672,7 @@ export const post: BlogPost = {
         your real systems. An agentic AI developer and an AI agent developer are the same hire, and
         the steps are the same on every route.
       </p>
-      <ol className="list-decimal pl-6 space-y-3 mb-6 text-gray-800">
+      <ol className={visualQa.flow}>
         <li>
           <strong>Write the task on one page.</strong> One task, the systems it touches, how often
           it happens each week and what &quot;done&quot; looks like.
@@ -1052,7 +1053,7 @@ export const post: BlogPost = {
         We show working software on your own data before a contract.
       </p>
       <p className="mb-4 text-gray-800">A fixed-scope build with us runs in four steps:</p>
-      <ol className="list-decimal pl-6 space-y-3 mb-6 text-gray-800">
+      <ol className={visualQa.flow}>
         <li>
           <strong>Scoping call.</strong> You describe one workflow. Bhavesh Barot, our founder,
           reads every enquiry himself and replies within one business day.
