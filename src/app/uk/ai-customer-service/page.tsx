@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import styles from './visual-qa.module.css';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
@@ -331,7 +332,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
+const srcNote = { fontFamily: T.fm, fontSize: 12, color: T.n400, marginTop: 12 } as const;
 const srcLink = { textDecoration: 'underline' } as const;
 
 export default function AiCustomerServiceUKPage() {
@@ -341,15 +342,15 @@ export default function AiCustomerServiceUKPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="uk-aiagents">
-      <main>
+      <main className={styles.page}>
 
         <Breadcrumbs items={crumbs} />
 
         {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+        <section className={`sec-lg dot-grid ${styles.hero}`} style={{ position: 'relative' }}>
           <div className="wrap">
             <div className="col-6040">
-              <div>
+              <div className={styles.heroCopy}>
                 <div className="flex-wrap mb-6">
                   <span className="chip"><span className="dot dot-orange" />UK AI Customer Service</span>
                   <span className="chip">Chat, Email, WhatsApp, Voice</span>
@@ -369,9 +370,10 @@ export default function AiCustomerServiceUKPage() {
                   <div className="upd">Last updated<br />11 October 2026</div>
                 </div>
 
-                <div className="mt-6" style={{ maxWidth: 560 }}>
+                <div className={styles.heroForm} style={{ maxWidth: 560 }}>
                   <HeroInlineForm region="uk" source="uk_ai_customer_service_hero" submitLabel="Plan my AI customer service" />
                 </div>
+                
               </div>
 
               <div className="card" style={{ padding: 8 }}>
@@ -435,20 +437,14 @@ export default function AiCustomerServiceUKPage() {
         {/* ═══ 3. FACTS BAND (each figure read on its source page, 11 Oct 2026) ═══ */}
         <section className="stats-band">
           <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout data-sourced-facts><tbody>{[
                 { v: '35%', t: 'of UK businesses with 10 or more employees report using at least one AI technology, up from about 12% in late 2023', s: 'ONS, 20 July 2026', u: SRC_ONS },
                 { v: 'Same rules', t: 'apply whether a customer deals with a person or an AI agent, and the business answers for both', s: 'CMA guidance, 9 March 2026', u: SRC_CMA },
                 { v: '$0.99', t: 'per outcome is the list price of Fin, the AI agent from Intercom, which says it bills in US dollars only', s: 'Fin pricing, read 11 Oct 2026', u: SRC_FIN },
                 { v: '£1.30', t: 'per committed automated resolution is the price on Zendesk’s UK page, on top of a plan per agent', s: 'Zendesk UK pricing, read 11 Oct 2026', u: SRC_ZENDESK },
               ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  <a href={r.u} {...(r.u.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer nofollow' } : {})} style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
-                </li>
-              ))}
-            </ul>
+                <tr key={r.t}><th scope="row"><div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div></th><td><p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p></td><td><a href={r.u} {...(r.u.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer nofollow' } : {})} className={styles.citation} style={{ fontFamily: T.fm, fontSize: 12, color: T.n400, textDecoration: 'underline' }}>{r.s}</a></td></tr>
+              ))}</tbody></table></div>
           </div>
         </section>
 
@@ -464,29 +460,20 @@ export default function AiCustomerServiceUKPage() {
                 this page fits.
               </p>
             </div>
-            <div className="col-6040 mt-12">
-              <div className="card card-top-orange">
-                <span className="eyebrow">Pile one: the agent answers alone</span>
-                <ul className="scope-list mt-4">
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="card card-top-orange"><th><span className="eyebrow">Pile one: the agent answers alone</span></th><td><ul className="scope-list mt-4">
                   <li><b>Order and delivery status.</b> Read live from your shop and courier data, so the customer gets a real tracking update at any hour.</li>
                   <li><b>Opening times, delivery areas and bank holiday cut-offs.</b> Facts you approved once and want repeated the same way every time.</li>
                   <li><b>Stock, sizes and lead times.</b> Looked up in your product data or your ERP, the system that holds your stock, orders and accounts.</li>
                   <li><b>Copy invoices and statements.</b> Sent to a verified trade customer from your accounts package, such as Xero.</li>
                   <li><b>Booking changes.</b> Moved or cancelled inside the notice rules you set.</li>
                   <li><b>How-to questions.</b> Answered from the help pages you already have.</li>
-                </ul>
-              </div>
-              <div className="card">
-                <span className="eyebrow">Pile three: straight to a person</span>
-                <ul className="scope-list mt-4">
+                </ul></td></tr><tr className="card"><th><span className="eyebrow">Pile three: straight to a person</span></th><td><ul className="scope-list mt-4">
                   <li><b>Complaints.</b> The agent recognises the complaint and passes it on. A person replies.</li>
                   <li><b>Refund disputes and faulty goods.</b> The agent gathers the order, the photos and the dates. A person decides.</li>
                   <li><b>Safety, or a vulnerable customer.</b> Routed at once, at any hour, to whoever you name.</li>
                   <li><b>Regulated advice.</b> Financial, legal and medical questions are outside what the agent may answer.</li>
                   <li><b>Your largest accounts.</b> Named customers can go to a named person every time.</li>
-                </ul>
-              </div>
-            </div>
+                </ul></td></tr></tbody></table></div>
             <div className="def mt-8" style={{ maxWidth: 940 }}>
               <span className="lab">Pile two: the agent drafts, a person sends</span>
               <p>
@@ -509,8 +496,7 @@ export default function AiCustomerServiceUKPage() {
               11 October 2026. FactoryJet wrote this page and sells the build option further down, so read the
               comparison with that in mind.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 820 }}>
+            <div className={`card mt-8 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={4}>
                 <thead>
                   <tr>
                     <th>Product</th>
@@ -579,8 +565,7 @@ export default function AiCustomerServiceUKPage() {
             </div>
 
             <h3 className="mt-12">Rent or build, point by point</h3>
-            <div className="card mt-6" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 760 }}>
+            <div className={`card mt-6 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 760 }} data-columns={3}>
                 <thead>
                   <tr>
                     <th>What changes</th>
@@ -656,9 +641,7 @@ export default function AiCustomerServiceUKPage() {
 
         {/* ═══ 7. EIGHT CHECKS (NUMBERED LIST) ═══ */}
         <section className="sec-lg" id="before-launch">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
+          <div className="wrap"><div className={`col-6040 ${styles.launchLayout}`}><div>
                 <span className="eyebrow">Before it answers a customer</span>
                 <h2>Eight things to settle before an AI agent answers a UK customer</h2>
                 <p className="lead mt-4" style={{ maxWidth: 560 }}>
@@ -669,8 +652,7 @@ export default function AiCustomerServiceUKPage() {
                 <p style={srcNote}>
                   Source: <a href={SRC_CMA} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>CMA, Complying with consumer law when using AI agents, 9 March 2026</a>.
                 </p>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
+              </div><div className="card" style={{ padding: 8 }}>
                 <img src="/images/uk/ai-customer-service/ai-customer-service-sorting.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A man presses an orange sticky note onto a wall beside columns of yellow and green notes while a woman holding a stack of yellow notes watches" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
@@ -679,19 +661,9 @@ export default function AiCustomerServiceUKPage() {
                   </p>
                 </div>
               </div>
-            </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
-              {CHECKS.map((s) => (
-                <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{s.t}</h3>
-                    <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
+              <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout data-launch-checks><tbody>{CHECKS.map((s) => (
+                <tr key={s.n}><th scope="row"><span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span><h3 style={{ fontSize: 18 }}>{s.t}</h3></th><td><p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p></td></tr>
+              ))}</tbody></table></div></div></div>
         </section>
 
         {/* ═══ 8. UK REGULATORS (what the buyer must check) ═══ */}
@@ -706,31 +678,20 @@ export default function AiCustomerServiceUKPage() {
                 your data protection adviser signs off your position.
               </p>
             </div>
-            <div className="stack mt-10" style={{ maxWidth: 940 }}>
-              <div className="def">
-                <span className="lab">CMA: consumer law</span>
-                <p>
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="def"><th><span className="lab">CMA: consumer law</span></th><td><p>
                   You are responsible for what an AI agent does in the same way you are responsible for what an
                   employee does. The CMA says this holds even if someone else designed or provides the agent. A
                   business that breaks consumer protection law could be fined up to 10% of its worldwide turnover,
                   and possibly made to compensate the customers affected.{' '}
                   <a href={SRC_CMA} target="_blank" rel="noopener noreferrer nofollow">Read the CMA guidance</a>.
-                </p>
-              </div>
-              <div className="def">
-                <span className="lab">ICO: telling people</span>
-                <p>
+                </p></td></tr><tr className="def"><th><span className="lab">ICO: telling people</span></th><td><p>
                   People must be given privacy information at the time you collect their data, in clear and plain
                   language. If you apply AI to personal data, the ICO says to be upfront about it and explain your
                   purposes. Its AI guidance adds that the information must be given before the model is applied to
                   the person.{' '}
                   <a href={SRC_ICO_INFORMED} target="_blank" rel="noopener noreferrer nofollow">ICO, right to be informed</a>;{' '}
                   <a href={SRC_ICO_AI} target="_blank" rel="noopener noreferrer nofollow">ICO, transparency in AI</a>.
-                </p>
-              </div>
-              <div className="def">
-                <span className="lab">ICO: risk check and where data goes</span>
-                <p>
+                </p></td></tr><tr className="def"><th><span className="lab">ICO: risk check and where data goes</span></th><td><p>
                   The ICO lists artificial intelligence among its examples of innovative technology. It says a DPIA,
                   a written check of the risk to people’s data, is required where that is combined with another
                   factor on its list, such as sensitive data. If personal information is sent to a separate
@@ -738,18 +699,12 @@ export default function AiCustomerServiceUKPage() {
                   responsible for following them.{' '}
                   <a href={SRC_ICO_DPIA} target="_blank" rel="noopener noreferrer nofollow">ICO, when do we need a DPIA</a>;{' '}
                   <a href={SRC_ICO_TRANSFERS} target="_blank" rel="noopener noreferrer nofollow">ICO, international transfers</a>.
-                </p>
-              </div>
-              <div className="def">
-                <span className="lab">FCA: regulated firms</span>
-                <p>
+                </p></td></tr><tr className="def"><th><span className="lab">FCA: regulated firms</span></th><td><p>
                   If the FCA regulates you, read the Consumer Duty with your compliance team before an agent answers
                   a customer. The FCA says the Duty sets high standards of consumer protection across financial
                   services and requires firms to put their customers’ needs first.{' '}
                   <a href={SRC_FCA} target="_blank" rel="noopener noreferrer nofollow">FCA, Consumer Duty</a>.
-                </p>
-              </div>
-            </div>
+                </p></td></tr></tbody></table></div>
             <p className="mt-8" style={{ maxWidth: 780 }}>
               The ICO’s pages on the right to be informed, transparency in AI and DPIAs each carry a notice that
               they are under review after the Data (Use and Access) Act, so check the live page. On our side, we
@@ -813,14 +768,7 @@ export default function AiCustomerServiceUKPage() {
                 and the ones to keep with people.
               </p>
             </div>
-            <ul className="col-3 mt-12">
-              <li className="svc-card"><h3>Online retailers</h3><p className="mt-4">Order status with Royal Mail, Evri or DPD tracking, returns inside your policy, sizes and stock. Black Friday and the Boxing Day sales are when an answer at any hour matters most.</p></li>
-              <li className="svc-card"><h3>Trade and wholesale distributors</h3><p className="mt-4">Stock and lead times from the ERP, copy invoices and statements from Xero, order status for account customers. Price questions go to the rep who owns the account.</p></li>
-              <li className="svc-card"><h3>Software and subscriptions</h3><p className="mt-4">How-to questions from your help centre, plan and billing questions, and bug reports sorted and passed to the right engineer with the details already gathered.</p></li>
-              <li className="svc-card"><h3>Lettings and property managers</h3><p className="mt-4">Repair reports logged with the address, the fault and photos, viewing requests and rent statement copies. Anything about safety goes to a person at once.</p></li>
-              <li className="svc-card"><h3>Travel, leisure and bookings</h3><p className="mt-4">Booking changes and cancellations inside your terms, opening times and what to bring. Group enquiries are passed to your team with the dates and numbers.</p></li>
-              <li className="svc-card"><h3>Financial services</h3><p className="mt-4">Sorting and drafting first, with a person approving every reply and an audit log of each action, so your compliance team can see what was sent and why.</p></li>
-            </ul>
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="svc-card"><th><h3>Online retailers</h3></th><td><p className="mt-4">Order status with Royal Mail, Evri or DPD tracking, returns inside your policy, sizes and stock. Black Friday and the Boxing Day sales are when an answer at any hour matters most.</p></td></tr><tr className="svc-card"><th><h3>Trade and wholesale distributors</h3></th><td><p className="mt-4">Stock and lead times from the ERP, copy invoices and statements from Xero, order status for account customers. Price questions go to the rep who owns the account.</p></td></tr><tr className="svc-card"><th><h3>Software and subscriptions</h3></th><td><p className="mt-4">How-to questions from your help centre, plan and billing questions, and bug reports sorted and passed to the right engineer with the details already gathered.</p></td></tr><tr className="svc-card"><th><h3>Lettings and property managers</h3></th><td><p className="mt-4">Repair reports logged with the address, the fault and photos, viewing requests and rent statement copies. Anything about safety goes to a person at once.</p></td></tr><tr className="svc-card"><th><h3>Travel, leisure and bookings</h3></th><td><p className="mt-4">Booking changes and cancellations inside your terms, opening times and what to bring. Group enquiries are passed to your team with the dates and numbers.</p></td></tr><tr className="svc-card"><th><h3>Financial services</h3></th><td><p className="mt-4">Sorting and drafting first, with a person approving every reply and an audit log of each action, so your compliance team can see what was sent and why.</p></td></tr></tbody></table></div>
             <p className="mt-8" style={{ maxWidth: 760 }}>
               If you have not yet decided that customer service is the right first project for AI, start with our{' '}
               <a href="/uk/ai-consulting">AI consultancy for UK businesses</a>. To compare firms, read{' '}
@@ -841,12 +789,12 @@ export default function AiCustomerServiceUKPage() {
                 <p className="lead mt-4" style={{ maxWidth: 560 }}>
                   We design, build and support the agent, and you own it. A first project runs in four stages.
                 </p>
-                <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
+                <figure className={styles.processFigure} data-process-flow aria-label="How FactoryJet builds and supports an AI customer service agent"><ul className={`scope-list num-list mt-6 ${styles.processFlow}`} style={{ maxWidth: 580 }}>
                   <li><b>Scoping call and demo.</b> You send a sample of real conversations. We show working software on your own data before a contract.</li>
                   <li><b>Draft mode.</b> Each reply is prepared by the agent in your helpdesk, and a person approves it before it goes.</li>
                   <li><b>Live on one channel.</b> The question types that passed in draft mode are answered by the agent alone, on one channel, with the handover rules switched on.</li>
                   <li><b>More channels and systems.</b> Email, WhatsApp, voice and further systems are added one at a time, each tested the same way.</li>
-                </ul>
+                </ul></figure>
                 <p className="mt-6" style={{ maxWidth: 560 }}>
                   Every action the agent takes is written to an audit log your team can read. Customer data stays in
                   your own accounts, in UK or EU cloud regions when you ask for that. FactoryJet quotes the build and
@@ -870,7 +818,7 @@ export default function AiCustomerServiceUKPage() {
                     <li key={q}><a href="#faq">{q}</a></li>
                   ))}
                 </ul>
-                <p style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: Google UK results pulled through DataForSEO, 11 October 2026</p>
+                <p style={{ fontFamily: T.fm, fontSize: 12, color: T.n400, marginTop: 10 }}>Source: Google UK results pulled through DataForSEO, 11 October 2026</p>
               </div>
             </div>
           </div>

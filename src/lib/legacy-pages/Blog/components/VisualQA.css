@@ -83,3 +83,8 @@
 
 /* Keep complete words in sticky row labels; long source URLs still wrap in prose. */
 .blog-post .blog-prose :is(th,td):first-child { overflow-wrap: normal; word-break: normal; }
+
+/* Desktop text-only prose measure; media, table and profile/FAQ containers retain their original width. */
+@media (min-width: 1024px) {
+  .blog-post #content.blog-prose :is(p, li):not(table *, [class*='profileFacts'], [class*='profileFacts'] *, #faqs *):not(:has(img, picture, svg, table)) { max-width: 54ch; }
+}

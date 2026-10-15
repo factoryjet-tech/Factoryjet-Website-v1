@@ -122,7 +122,7 @@ function ModernSiteHeader({
                 aria-expanded={mobileOpen}
                 aria-controls="mobile-drawer"
                 onClick={() => setMobileOpen((v) => !v)}
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-fj-ink transition-colors hover:bg-fj-neutral-100 md:hidden"
+                className="flex h-11 w-11 items-center justify-center rounded-lg text-fj-ink transition-colors hover:bg-fj-neutral-100 md:hidden"
               >
                 {mobileOpen ? <X size={20} strokeWidth={2} /> : <Menu size={20} strokeWidth={2} />}
               </button>
@@ -131,7 +131,7 @@ function ModernSiteHeader({
               <button
                 type="button"
                 onClick={handleCta}
-                className="hidden items-center justify-center rounded-full px-5 py-2.5 font-fj-body text-[14px] font-semibold text-white transition-opacity hover:opacity-90 md:inline-flex"
+                className="hidden min-h-11 items-center justify-center rounded-full px-5 py-2.5 font-fj-body text-[14px] font-semibold text-white transition-opacity hover:opacity-90 md:inline-flex"
                 style={{ background: '#C2440F' }}
               >
                 {cta?.label ?? cfg.defaultCtaLabel}
@@ -183,7 +183,7 @@ function ModernSiteHeader({
             type="button"
             aria-label="Close navigation menu"
             onClick={() => setMobileOpen(false)}
-            className="flex h-9 w-9 items-center justify-center rounded-lg text-fj-ink transition-colors hover:bg-fj-neutral-100"
+            className="flex h-11 w-11 items-center justify-center rounded-lg text-fj-ink transition-colors hover:bg-fj-neutral-100"
           >
             <X size={20} strokeWidth={2} />
           </button>

@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './best-ai-automation-agencies-usa-2026.visual-qa.module.css';
 import type { BlogPost, FAQItem } from '../data.types';
 
 const SLUG = 'best-ai-automation-agencies-usa-2026';
@@ -603,12 +604,7 @@ export const post: BlogPost = {
                     <strong>Based:</strong> {f.based}. <strong>Type:</strong> {f.type}.
                   </p>
                   <p className="mb-3">{f.what}</p>
-                  <ul className="list-disc pl-6 mb-3 space-y-1">
-                    <li><strong>Best for:</strong> {f.bestFor}</li>
-                    <li><strong>Typical client:</strong> {f.clients}.</li>
-                    <li><strong>Tools it names:</strong> {f.tools}.</li>
-                    <li><strong>Worth asking them:</strong> {f.ask}</li>
-                  </ul>
+                  <table className={styles.profileFacts}><tbody><tr><th scope="row"><strong>Best for:</strong></th><td>{f.bestFor}</td></tr><tr><th scope="row"><strong>Typical client:</strong></th><td>{f.clients}.</td></tr><tr><th scope="row"><strong>Tools it names:</strong></th><td>{f.tools}.</td></tr><tr><th scope="row"><strong>Worth asking them:</strong></th><td>{f.ask}</td></tr></tbody></table>
                   <p className="text-sm text-gray-600">
                     Source:{' '}
                     <a href={f.source} className={link} rel="noopener" target={f.source.startsWith('https://factoryjet.com') ? undefined : '_blank'}>

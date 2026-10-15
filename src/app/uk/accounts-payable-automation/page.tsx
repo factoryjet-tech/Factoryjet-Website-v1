@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import styles from './visual-qa.module.css';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
@@ -560,7 +561,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
+const srcNote = { fontFamily: T.fm, fontSize: 12, color: T.n400, marginTop: 12 } as const;
 const srcLink = { textDecoration: 'underline' } as const;
 const ext = { target: '_blank', rel: 'noopener noreferrer nofollow' } as const;
 
@@ -571,15 +572,15 @@ export default function AccountsPayableAutomationUKPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="uk-aiagents">
-      <main>
+      <main className={styles.page}>
 
         <Breadcrumbs items={crumbs} />
 
         {/* 1. HERO */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+        <section className={`sec-lg dot-grid ${styles.hero}`} style={{ position: 'relative' }}>
           <div className="wrap">
             <div className="col-6040">
-              <div>
+              <div className={styles.heroCopy}>
                 <div className="flex-wrap mb-6">
                   <span className="chip"><span className="dot dot-orange" />UK AP Automation</span>
                   <span className="chip">AI Invoice Processing</span>
@@ -599,9 +600,10 @@ export default function AccountsPayableAutomationUKPage() {
                   <div className="upd">Last updated<br />11 October 2026</div>
                 </div>
 
-                <div className="mt-6" style={{ maxWidth: 560 }}>
+                <div className={styles.heroForm} style={{ maxWidth: 560 }}>
                   <HeroInlineForm region="uk" source="uk_accounts_payable_automation_hero" submitLabel="Plan my AP automation" />
                 </div>
+                
               </div>
 
               <div className="card" style={{ padding: 8 }}>
@@ -662,20 +664,14 @@ export default function AccountsPayableAutomationUKPage() {
         {/* 3. FACTS BAND (each figure read on the linked page on 11 October 2026) */}
         <section className="stats-band">
           <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout data-sourced-facts><tbody>{[
                 { v: '11', t: 'details HMRC lists for a full VAT invoice, each one checked on every bill', s: 'HMRC, VAT Notice 700', u: SRC_VAT_NOTICE_700 },
                 { v: '6 years', t: 'is the least time you must keep VAT records, including invoices you receive', s: 'GOV.UK, keeping VAT records', u: SRC_VAT_RECORDS },
                 { v: '30 days', t: 'after the invoice arrives, a business payment is late if no date was agreed', s: 'GOV.UK, late commercial payments', u: SRC_LATE_PAYMENT },
                 { v: '2029', t: 'is when the UK will make e-invoicing mandatory for all VAT invoices', s: 'GOV.UK, e-invoicing outcome', u: SRC_EINVOICING },
               ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  <a href={r.u} {...(r.u.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer nofollow' } : {})} style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
-                </li>
-              ))}
-            </ul>
+                <tr key={r.t}><th scope="row"><div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div></th><td><p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p></td><td><a href={r.u} {...(r.u.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer nofollow' } : {})} className={styles.citation} style={{ fontFamily: T.fm, fontSize: 12, color: T.n400, textDecoration: 'underline' }}>{r.s}</a></td></tr>
+              ))}</tbody></table></div>
           </div>
         </section>
 
@@ -691,17 +687,17 @@ export default function AccountsPayableAutomationUKPage() {
               </p>
             </div>
             <div className="col-6040 mt-12">
-              <ol className="stack">
+              <figure className={styles.processFigure} data-process-flow aria-label="What the AP agent does with every supplier invoice, in seven steps"><ol className={`stack ${styles.processFlow}`}>
                 {INVOICE_STEPS.map((s) => (
                   <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                    <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
+                    <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }} className={styles.stageMarker}>{s.n}</span>
                     <div>
                       <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                       <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
                     </div>
                   </li>
                 ))}
-              </ol>
+              </ol></figure>
               <div className="card card-top-orange">
                 <span className="eyebrow">What stays with your people</span>
                 <ul className="scope-list mt-4">
@@ -784,13 +780,12 @@ export default function AccountsPayableAutomationUKPage() {
                   businesses should now be signed up. For each supply you receive, the notice asks for three things in
                   the digital record: the tax point, the value of the supply and the input tax you will claim.
                 </p>
-                <p>
-                  The notice also sets a rule on how figures move. Once data sits in the software that keeps your VAT
-                  account, any further transfer must be by a digital link. HMRC lists API transfer and CSV or XML
-                  import among the links it accepts, and says copy and paste is not one. An agent that posts each bill
-                  into your ledger through the ledger’s own API is a digital link by that definition. Which of your
+                <figure className={styles.processFigure} data-process-flow aria-label="Making Tax Digital for VAT"><p>The notice also sets a rule on how figures move.</p><div className={styles.modelFlow}><p className={styles.modelNode}> Once data sits in the software that keeps your VAT
+                  account, any further transfer must be by a digital link.</p><p className={styles.modelNode}> HMRC lists API transfer and CSV or XML
+                  import among the links it accepts, and says copy and paste is not one.</p><p className={styles.modelNode}> An agent that posts each bill
+                  into your ledger through the ledger’s own API is a digital link by that definition.</p></div><p> Which of your
                   systems count depends on where your VAT account is kept, so settle that point with your accountant.
-                </p>
+                </p></figure>
                 <p>
                   One example in the notice matters for paper. Where software scans an invoice and puts the figures in
                   the ledger, and the image is kept and holds all the detail needed for VAT, the business need not keep
@@ -832,8 +827,7 @@ export default function AccountsPayableAutomationUKPage() {
               it lists as the price. FactoryJet wrote this page and builds the custom route, so every row links to the
               vendor’s own page for you to check. Every figure excludes VAT, and plans change often.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 820 }}>
+            <div className={`card mt-8 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={3}>
                 <thead>
                   <tr>
                     <th>Product</th>
@@ -921,8 +915,7 @@ export default function AccountsPayableAutomationUKPage() {
               Your team keeps working in the ledger. The agent connects through each product’s published API. The
               middle column is what the vendor’s developer reference said on 11 October 2026.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 820 }}>
+            <div className={`card mt-8 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={3}>
                 <thead>
                   <tr>
                     <th>Ledger</th>
@@ -1133,17 +1126,17 @@ export default function AccountsPayableAutomationUKPage() {
                 </div>
               </div>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <figure className={styles.processFigure} data-process-flow aria-label="How FactoryJet builds your accounts payable agent, in six steps"><ol className={`stack mt-10 ${styles.processFlow}`} style={{ maxWidth: 900 }}>
               {BUILD_STEPS.map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }} className={styles.stageMarker}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
                   </div>
                 </li>
               ))}
-            </ol>
+            </ol></figure>
           </div>
         </section>
 
@@ -1157,14 +1150,7 @@ export default function AccountsPayableAutomationUKPage() {
                 The same seven steps, shaped by the invoices each kind of business receives.
               </p>
             </div>
-            <ul className="col-3 mt-12">
-              <li className="svc-card"><h3>Wholesalers and distributors</h3><p className="mt-4">Many supplier invoices against purchase orders, with part deliveries and price changes. Three-way matching against your stock system does most of the work here.</p></li>
-              <li className="svc-card"><h3>Construction and trades</h3><p className="mt-4">Subcontractor invoices under CIS, the reverse charge, retentions and invoices tied to a job number. The rules come from your accountant and the agent applies them to each invoice.</p></li>
-              <li className="svc-card"><h3>Multi-entity groups</h3><p className="mt-4">One shared inbox, several companies and a ledger for each. The agent works out which entity an invoice belongs to and follows that entity’s approvers.</p></li>
-              <li className="svc-card"><h3>Ecommerce and retail brands</h3><p className="mt-4">Stock purchases, carriers, marketplaces and software subscriptions. Recurring invoices are checked against the last one, so a price rise is seen on the day it lands.</p></li>
-              <li className="svc-card"><h3>Hospitality groups</h3><p className="mt-4">Daily deliveries from food and drink suppliers across several sites, often on paper. Delivery notes are matched to the weekly invoice by site.</p></li>
-              <li className="svc-card"><h3>Accountancy and bookkeeping practices</h3><p className="mt-4">The same build set up per client, each in the client’s own ledger, with the practice reviewing the exceptions queue.</p></li>
-            </ul>
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="svc-card"><th><h3>Wholesalers and distributors</h3></th><td><p className="mt-4">Many supplier invoices against purchase orders, with part deliveries and price changes. Three-way matching against your stock system does most of the work here.</p></td></tr><tr className="svc-card"><th><h3>Construction and trades</h3></th><td><p className="mt-4">Subcontractor invoices under CIS, the reverse charge, retentions and invoices tied to a job number. The rules come from your accountant and the agent applies them to each invoice.</p></td></tr><tr className="svc-card"><th><h3>Multi-entity groups</h3></th><td><p className="mt-4">One shared inbox, several companies and a ledger for each. The agent works out which entity an invoice belongs to and follows that entity’s approvers.</p></td></tr><tr className="svc-card"><th><h3>Ecommerce and retail brands</h3></th><td><p className="mt-4">Stock purchases, carriers, marketplaces and software subscriptions. Recurring invoices are checked against the last one, so a price rise is seen on the day it lands.</p></td></tr><tr className="svc-card"><th><h3>Hospitality groups</h3></th><td><p className="mt-4">Daily deliveries from food and drink suppliers across several sites, often on paper. Delivery notes are matched to the weekly invoice by site.</p></td></tr><tr className="svc-card"><th><h3>Accountancy and bookkeeping practices</h3></th><td><p className="mt-4">The same build set up per client, each in the client’s own ledger, with the practice reviewing the exceptions queue.</p></td></tr></tbody></table></div>
             <p className="mt-8" style={{ maxWidth: 760 }}>
               Accounts payable is one job an agent can take on. For the wider picture, see our{' '}
               <a href="/uk/ai-agents">UK AI agent development service</a> and{' '}
@@ -1201,8 +1187,8 @@ export default function AccountsPayableAutomationUKPage() {
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>UK · Monthly Search Demand</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
+                  <span style={{ fontFamily: T.fm, fontSize: 12, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>UK · Monthly Search Demand</span>
+                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 12, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
                 </div>
                 <div style={{ padding: '4px 18px 14px' }}>
                   <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
@@ -1214,13 +1200,13 @@ export default function AccountsPayableAutomationUKPage() {
                       { kw: 'ai accounts payable', v: '30', w: '8%', kd: 'The newest wording' },
                     ].map((r) => (
                       <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
+                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 12, color: T.n400 }}> searches</span></span></div>
                         <div className="demand-bar"><i style={{ width: r.w }} /></div>
                         <div className="demand-kd">{r.kd}</div>
                       </li>
                     ))}
                   </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, United Kingdom, read on 11 October 2026</p>
+                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 12, color: T.n400, marginTop: 10 }}>Source: DataForSEO, United Kingdom, read on 11 October 2026</p>
                 </div>
               </div>
             </div>

@@ -1,0 +1,117 @@
+.page :global(:is(h1,h2,h3)) { text-wrap: balance; }
+.page :global(p) { text-wrap: pretty; }
+.page :global(thead th) { font-size:12px !important; }
+.page :global(:is(a,button,input,summary,[tabindex]):focus-visible) { outline:2px solid #B23E13 !important; outline-offset:3px; }
+.page :global([data-hero-inline-form]) { margin-top:0 !important; }
+.heroCopy { display:flex; flex-direction:column; align-items:flex-start; }
+.heroCopy > * { width:100%; }
+.page .heroCopy > :global(h1) { order:1; }
+.heroCopy > :global(p.lead), .heroLead { order:2; }
+.heroForm { order:3; margin-top:20px !important; }
+.heroCopy > .heroContinuation { order:4 !important; margin-top:20px !important; }
+.heroCopy > :global(.byline) { order:5; margin-top:24px !important; }
+.tableBox { border:1px solid var(--n200,#D9D9D2); border-radius:12px; overflow-x:auto; }
+.tableBox :global(table) { width:100%; border-collapse:separate !important; border-spacing:0; }
+.tableBox :global(tr > :is(th,td):first-child) { position:sticky; left:0; z-index:1; background:#FFFFFF; border-right:1px solid var(--n200,#D9D9D2); }
+.tableBox :global(thead tr > th:first-child) { z-index:2; }
+@media(max-width:767px) {
+ .page :global(p:not(.eyebrow):not(.faq-cat-label):not(.faq-cat-label-v2):not(.fj-eyebrow)), .page :global(li), .page :global(td), .page :global(dd) { font-size:16px !important; }
+ .page :global(input), .page :global(button), .page :global(summary), .page :global(.q-text) { font-size:16px !important; }
+ .page :global(:is(.btn,.city-pill,.faq-pill-nav a)) { min-height:44px; min-width:44px; }
+ .page :global(nav[aria-label="Breadcrumb"] li) { font-size:12px !important; }
+ .tableBox :global(table) { min-width:760px !important; }
+ .tableBox :global(tr > :is(th,td):first-child) { min-width:150px; width:150px; max-width:180px; }
+ .tableBox :global(tbody th) { font-size:16px !important; }
+}
+
+.page .hero.hero { padding-top:32px !important; padding-bottom:48px !important; }
+.page .heroCopy > :global(h1) { font-size:42px; line-height:1.15; }
+.heroCopy > :global(.flex-wrap) { order:0; margin-bottom:20px; }
+.page :global(:is(.chip,.eyebrow,.lab,.scorecard-note,.stage-num,.faq-sidebar-topics,.faq-nav-count,.pill-count,.faq-cat-label,.plat-pill,.upd,.demand-kd,.faq-sidebar-cta p)) { font-size:12px !important; }
+.page :global(a[style*="font-family: var(--fm)"]) { display:inline-flex; align-items:center; min-height:44px; min-width:44px; font-size:12px !important; padding:4px 0; }
+.page :global(a[style*="font-family: var(--fm)"]:hover) { text-decoration:underline; }
+@media(max-width:767px) {
+ .page .hero.hero { padding-top:24px !important; }
+ .page .heroCopy > :global(h1) { font-size:clamp(23px,6.4vw,25px) !important; line-height:1.18; }
+ .heroCopy > :global(.lead), .heroContinuation { font-size:16px !important; line-height:1.65; margin-top:16px !important; }
+ .heroCopy > :global(.byline) { flex-wrap:wrap; }
+ .page :global(.scorecard-metric), .page :global(.scope-list), .page :global(.scope-list li), .page :global(.plat-best) { font-size:16px !important; }
+ .page :global(.scope-list li span), .page :global(.faq-ans p) { font-size:16px !important; }
+ .page :global(.faq-cat-label) { font-size:12px !important; }
+ .page :global(.faq-grid) { margin-top:32px; }
+}
+
+.page :global(.faq-cat-label), .page :global(.faq-item[open] .q-text) {color:#B23E13 !important;}
+.page :global(.dark-sec .eyebrow) {color:#FFFFFF !important;}
+
+.page :global(a[class*="bg-[#B23E13]"]) {color:#FFFFFF !important;}
+
+.citation {display:inline-flex; align-items:center; min-height:44px; min-width:44px; padding:4px 0;}
+
+@media(max-width:767px){
+.tableBox :global(table[data-columns="2"]) {table-layout:fixed; width:320px !important; min-width:320px !important;}
+.tableBox :global(table[data-columns="3"]) {table-layout:fixed; width:500px !important; min-width:500px !important;}
+.tableBox :global(table[data-columns="4"]) {table-layout:fixed; width:680px !important; min-width:680px !important;}
+.tableBox :global(table[data-columns="5"]) {table-layout:fixed; width:860px !important; min-width:860px !important;}
+.tableBox :global(table[data-columns="6"]) {table-layout:fixed; width:1040px !important; min-width:1040px !important;}
+.tableBox :global(tr > :is(th,td):first-child) {width:140px !important; min-width:140px; max-width:140px;}
+}
+
+@media(max-width:767px){.page :global(p a) {font-size:inherit;} }
+
+@media(min-width:768px){.page :global(p:not(.eyebrow):not(.lab):not(.faq-cat-label):not(.fj-eyebrow):not(.font-fj-mono)){max-inline-size:55ch !important;}}
+
+@media(max-width:767px){.page :global(span.font-fj-body), .page :global([data-hero-inline-form] > div > div:last-child){font-size:16px !important;line-height:1.5;}}
+
+/* Existing labelled records: native desktop comparison rows, stacked mobile records. */
+.comparisonBox { margin-block: 40px; border: 1px solid #E5E5E0; border-radius: 12px; overflow-x: auto; }
+.comparisonTable { inline-size: 100%; table-layout: fixed; border-collapse: collapse; }
+.comparisonTable tr { display: table-row !important; padding: 0 !important; border-radius: 0; }
+.comparisonTable th, .comparisonTable td { padding: 22px 24px; text-align: left; vertical-align: top; font-weight: inherit; border-bottom: 1px solid #E5E5E0; background: inherit; }
+.comparisonTable th:first-child { inline-size: 26%; }
+.comparisonTable tr:last-child > th, .comparisonTable tr:last-child > td { border-bottom: 0; }
+.comparisonTable h3 { margin: 0; }
+.comparisonTable ul { padding-inline-start: 18px; }
+.comparisonTable th p { font-weight: 400; }
+.comparisonTable :global(.scorecard-val) { text-align: left; }
+@media (max-width: 767px) {
+ .comparisonBox { overflow: visible; }
+ .comparisonTable, .comparisonTable tbody, .comparisonTable tr { display: block !important; inline-size: 100% !important; min-inline-size: 0 !important; }
+ .comparisonTable th, .comparisonTable td { display: block; position: static !important; inline-size: auto !important; min-inline-size: 0 !important; padding: 16px 18px; border: 0; }
+ .comparisonTable th { padding-block-end: 6px; }
+ .comparisonTable td { padding-block-start: 6px; }
+ .comparisonTable tr { border-bottom: 1px solid #E5E5E0; }
+ .comparisonTable tr:last-child { border-bottom: 0; }
+ .comparisonTable h3 { font-size: 18px; line-height: 1.4; }
+ .comparisonTable p, .comparisonTable li { font-size: 16px !important; line-height: 1.5; }
+}
+
+@media (min-width:768px) { .page :global(.card) > .comparisonBox .comparisonTable th:first-child { inline-size:68%; } .page :global(.card) > .comparisonBox .comparisonTable th, .page :global(.card) > .comparisonBox .comparisonTable td { padding:14px 12px; } }
+
+.page :global(.scope-list.num-list li::before) { font-size:12px !important; }
+
+/* Actual approved numbered sequences, connected visually without adding words. */
+.processFigure { margin:0; display:flow-root; max-inline-size:900px; }
+.processFlow { display:flex !important; flex-direction:column; gap:28px !important; }
+.processFlow > li { position:relative; }
+.processFlow > li:not(:last-child)::after { content:''; position:absolute; left:39px; bottom:-28px; inline-size:14px; block-size:28px; background:#B23E13; clip-path:polygon(42% 0,58% 0,58% 73%,90% 73%,50% 100%,10% 73%,42% 73%); pointer-events:none; }
+.stageMarker { inline-size:36px; min-inline-size:36px; block-size:36px; display:grid; place-items:center; flex:none; border:1px solid #E5E5E0; border-radius:50%; background:var(--white,#fff); }
+.processFlow:global(.num-list) > li { padding:20px 20px 20px 52px; border:1px solid #E5E5E0; border-radius:12px; background:var(--white,#fff); }
+.processFlow:global(.num-list) > li::before { left:18px !important; top:22px !important; inline-size:24px; block-size:24px; display:grid; place-items:center; border:1px solid #E5E5E0; border-radius:50%; font-size:12px !important; background:var(--white,#fff); }
+.processFlow:global(.num-list) > li:not(:last-child)::after { left:23px; }
+.modelFlow { display:flex; flex-direction:column; gap:28px; margin-block:18px; }
+.modelNode { display:block; position:relative; padding:14px 18px; border:1px solid #E5E5E0; border-radius:12px; font-size:inherit; line-height:inherit; background:inherit; }
+.modelNode:not(:last-child)::after { content:''; position:absolute; left:17px; bottom:-28px; inline-size:14px; block-size:28px; background:#B23E13; clip-path:polygon(42% 0,58% 0,58% 73%,90% 73%,50% 100%,10% 73%,42% 73%); pointer-events:none; }
+
+@media (max-width:767px) { .comparisonTable th { font-size:16px !important; } .comparisonTable :global(.scorecard-val) { font-size:16px !important; } }
+
+
+/* Whole original lead node/DOM order candidate; root three-size review required. */
+.page .heroCopy > :global(p.lead), .page .heroCopy > :global(p.font-fj-body) { order: 2; }
+@media (max-width: 767px) {
+  .page .heroCopy > :global(p.lead), .page .heroCopy > :global(p.font-fj-body) { font-size: 16px !important; line-height: 1.5 !important; margin-top: 16px !important; }
+  .page .heroCopy > .heroForm { margin-top: 12px !important; }
+}
+
+/* Existing native FAQ topic counts: existing page ink token; root fresh contrast review required. */
+.page :global(#faq .faq-sidebar-nav .faq-nav-count) { color:var(--ink) !important; }

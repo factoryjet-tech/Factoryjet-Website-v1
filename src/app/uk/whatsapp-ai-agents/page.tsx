@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import styles from './visual-qa.module.css';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
@@ -329,7 +330,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
+const srcNote = { fontFamily: T.fm, fontSize: 12, color: T.n400, marginTop: 12 } as const;
 const srcLink = { textDecoration: 'underline' } as const;
 
 export default function WhatsAppAiAgentsUKPage() {
@@ -339,15 +340,15 @@ export default function WhatsAppAiAgentsUKPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="uk-aiagents">
-      <main>
+      <main className={styles.page}>
 
         <Breadcrumbs items={crumbs} />
 
         {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+        <section className={`sec-lg dot-grid ${styles.hero}`} style={{ position: 'relative' }}>
           <div className="wrap">
             <div className="col-6040">
-              <div>
+              <div className={styles.heroCopy}>
                 <div className="flex-wrap mb-6">
                   <span className="chip"><span className="dot dot-orange" />UK WhatsApp AI Agents</span>
                   <span className="chip">Meta’s Rules Read 11 Oct 2026</span>
@@ -367,9 +368,10 @@ export default function WhatsAppAiAgentsUKPage() {
                   <div className="upd">Last updated<br />11 October 2026</div>
                 </div>
 
-                <div className="mt-6" style={{ maxWidth: 560 }}>
+                <div className={styles.heroForm} style={{ maxWidth: 560 }}>
                   <HeroInlineForm region="uk" source="uk_whatsapp_ai_agents_hero" submitLabel="Plan my WhatsApp agent" />
                 </div>
+                
               </div>
 
               <div className="card" style={{ padding: 8 }}>
@@ -429,20 +431,14 @@ export default function WhatsAppAiAgentsUKPage() {
         {/* ═══ 3. FACTS BAND (verified only) ═══ */}
         <section className="stats-band">
           <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout data-sourced-facts><tbody>{[
                 { v: '24 hours', t: 'is how long Meta’s customer service window stays open after a customer messages you. Each new message resets it', s: 'Meta, service messages', u: SRC_META_SERVICE },
                 { v: 'Opt-in', t: 'is required before a business messages people on WhatsApp, and it must name the business', s: 'Meta, get opt-in for WhatsApp', u: SRC_META_OPTIN },
                 { v: '250', t: 'different people is where a new business portfolio starts for messages outside that window, in a moving 24 hours', s: 'Meta, messaging limits', u: SRC_META_LIMITS },
                 { v: 'PECR', t: 'covers in-app messages and private messages on social media, in the ICO’s list of what counts as electronic mail', s: 'ICO, key concepts', u: SRC_ICO_KEY },
               ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  <a href={r.u} {...(r.u.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer nofollow' } : {})} style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
-                </li>
-              ))}
-            </ul>
+                <tr key={r.t}><th scope="row"><div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div></th><td><p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p></td><td><a href={r.u} {...(r.u.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer nofollow' } : {})} className={styles.citation} style={{ fontFamily: T.fm, fontSize: 12, color: T.n400, textDecoration: 'underline' }}>{r.s}</a></td></tr>
+              ))}</tbody></table></div>
           </div>
         </section>
 
@@ -495,8 +491,7 @@ export default function WhatsAppAiAgentsUKPage() {
             </p>
 
             <h3 className="mt-12" style={{ maxWidth: 820 }}>Four ways to answer customers on WhatsApp, side by side</h3>
-            <div className="card mt-6" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 820 }}>
+            <div className={`card mt-6 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={5}>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -573,8 +568,7 @@ export default function WhatsAppAiAgentsUKPage() {
                 <div className="scorecard-row"><div><div className="scorecard-metric">ICO, direct marketing using electronic mail</div><div className="scorecard-note">latest update</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>28 Apr 2026</div></div>
               </div>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
-              {[
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout><tbody>{[
                 { n: '01', t: 'Opt-in comes first', d: 'Meta’s policy says you may only contact people on WhatsApp if they gave you their number and you have their opt-in. The opt-in must say the person is agreeing to hear from you and must name your business. Meta lists a website form, SMS, a phone menu and a signed paper form as accepted methods, and adds that you must also follow the law that applies to you. In the UK that brings in PECR, covered further down.', s: 'Meta, get opt-in for WhatsApp', u: SRC_META_OPTIN },
                 { n: '02', t: 'Templates start conversations', d: 'Outside the service window you can only send a template, which is a message written in advance and submitted to Meta. Each one is filed as marketing, utility or authentication. Meta’s policy keeps the right to review, approve, pause and reject any template at any time, so reminders and order updates have to be written and approved before launch.', s: 'Meta, template fundamentals', u: SRC_META_TEMPLATES },
                 { n: '03', t: 'The 24-hour window sets when the agent can talk freely', d: 'When a customer messages or calls you, a 24-hour timer starts, and each new customer message resets it. Inside the window the agent can reply in free text, with reply buttons, list menus, pictures, documents and a request for the customer’s location. Once it closes, only approved templates go out.', s: 'Meta, service messages', u: SRC_META_SERVICE },
@@ -583,16 +577,8 @@ export default function WhatsAppAiAgentsUKPage() {
                 { n: '06', t: 'The AI has to serve your business', d: 'Section 4.7 of Meta’s Platform terms bars AI providers from using the Platform to offer AI where the AI is the primary thing on offer, such as a general-purpose assistant, outside the countries where Meta is legally required to allow it. Meta’s pricing page describes replies that can be powered by a third-party AI solution, so an agent answering your own customers is a different case. The same section says that where an AI provider acts as your Solution Provider, Platform data must not be used to create, develop, train or improve AI models, apart from fine-tuning a model for your exclusive use.', s: 'Meta Terms for WhatsApp Business Platform, section 4.7', u: SRC_META_TERMS },
                 { n: '07', t: 'Volume is earned', d: 'A new business portfolio can message 250 different people outside the service window in a moving 24 hours. Verifying your business is one of the routes to 2,000, and Meta then raises the limit automatically to 10,000, 100,000 and unlimited when its quality criteria are met. Repeated policy breaches bring a warning first, then sending blocks of 1 to 30 days, then an account lock.', s: 'Meta, messaging limits', u: SRC_META_LIMITS },
               ].map((s) => (
-                <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{s.t}</h3>
-                    <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
-                    <a href={s.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{s.s}</a>
-                  </div>
-                </li>
-              ))}
-            </ol>
+                <tr key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}><th><span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span><h3 style={{ fontSize: 18 }}>{s.t}</h3></th><td><p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p><a href={s.u} target="_blank" rel="noopener noreferrer nofollow" className={styles.citation} style={{ fontFamily: T.fm, fontSize: 12, color: T.n400, textDecoration: 'underline' }}>{s.s}</a></td></tr>
+              ))}</tbody></table></div>
             <p style={srcNote}>
               Also read for this list: <a href={SRC_META_CATEGORIES} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Meta, template categorisation</a>;{' '}
               <a href={SRC_META_ENFORCE} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Meta, policy and spam enforcement</a>;{' '}
@@ -624,8 +610,7 @@ export default function WhatsAppAiAgentsUKPage() {
                 </div>
               </div>
             </div>
-            <div className="card mt-10" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 820 }}>
+            <div className={`card mt-10 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={4}>
                 <thead>
                   <tr>
                     <th>Message</th>
@@ -794,7 +779,7 @@ export default function WhatsAppAiAgentsUKPage() {
                 the work runs in this order.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <figure className={styles.processFigure} data-process-flow aria-label="How FactoryJet builds a WhatsApp agent, in seven steps"><ol className={`stack mt-10 ${styles.processFlow}`} style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Sort your real chats', d: 'We read a sample of the messages, calls and emails you get now and sort them by type, such as bookings, order questions, quotes, complaints and emergencies. That tells us what the agent has to do well and what it should hand over.' },
                 { n: '02', t: 'Set up the Meta side in your name', d: 'Your business portfolio, WhatsApp account, number and display name sit in your own Meta account. We check whether your current number can move to the Platform, and whether you want to keep using the WhatsApp Business app beside it.' },
@@ -805,14 +790,14 @@ export default function WhatsAppAiAgentsUKPage() {
                 { n: '07', t: 'Go live in stages, then support it', d: 'Replies to incoming chats go live first. Outbound templates follow once the opt-in list is in order. After launch we review transcripts with you and keep the agent working as Meta’s rules, your systems and the AI models change.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }} className={styles.stageMarker}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
                   </div>
                 </li>
               ))}
-            </ol>
+            </ol></figure>
             <p style={srcNote}>
               On keeping your number and the app: <a href={SRC_META_NUMBERS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Meta, business phone numbers</a> and{' '}
               <a href={SRC_META_APP_ONBOARD} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Meta, onboarding WhatsApp Business app users</a>. On running more than one responder on a number:{' '}
@@ -827,33 +812,21 @@ export default function WhatsAppAiAgentsUKPage() {
             <div style={{ maxWidth: 800 }}>
               <span className="eyebrow">Cost</span>
               <h2>What a WhatsApp chatbot costs in the UK, and what Meta charges</h2>
-              <div className="stack mt-6">
-                <p>
-                  <b>The app.</b> The WhatsApp Business app is free to download and, in Meta’s words, free to use.
-                </p>
-                <p>
-                  <b>The build.</b> A custom AI chatbot connected to your own systems is a build.{' '}
-                  <a href={SRC_A1} target="_blank" rel="noopener noreferrer nofollow">A1 Automation London’s UK pricing guide</a>, last updated on 14 July 2026,
+              <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout ><tbody><tr><th scope="row"><b>The app.</b></th><td><p>The WhatsApp Business app is free to download and, in Meta’s words, free to use.
+                </p></td></tr><tr><th scope="row"><b>The build.</b></th><td><p>A custom AI chatbot connected to your own systems is a build.{' '}<a href={SRC_A1} target="_blank" rel="noopener noreferrer nofollow">A1 Automation London’s UK pricing guide</a>, last updated on 14 July 2026,
                   puts typical UK setup for a custom AI chatbot at £8,000 to £60,000 or more, and calls its figures
                   planning ranges. That range is for AI chatbots in general and is not specific to WhatsApp. FactoryJet
                   quotes the build as a fixed price in writing after a short scoping call.
-                </p>
-                <p>
-                  <b>Meta’s charges.</b> On the Platform, Meta charges the business for each message it delivers. The
-                  rate depends on the message category and the country of the person receiving it, and Meta publishes{' '}
-                  <a href={SRC_META_RATES} target="_blank" rel="noopener noreferrer nofollow">its rate card for every market</a>, with pounds among the
+                </p></td></tr><tr><th scope="row"><b>Meta’s charges.</b></th><td><p>On the Platform, Meta charges the business for each message it delivers. The
+                  rate depends on the message category and the country of the person receiving it, and Meta publishes{' '}<a href={SRC_META_RATES} target="_blank" rel="noopener noreferrer nofollow">its rate card for every market</a>, with pounds among the
                   currencies. We do not reprint the rates here because Meta changes them on a published calendar. The
                   latest change took effect on 1 October 2026, when Meta began charging again for replies inside the
                   service window, after a free allowance for each business phone number. If a guide tells you those
-                  replies are always free, check its date against{' '}
-                  <a href={SRC_META_PRICING} target="_blank" rel="noopener noreferrer nofollow">Meta’s pricing page</a>. Meta also needs a payment method on the
+                  replies are always free, check its date against{' '}<a href={SRC_META_PRICING} target="_blank" rel="noopener noreferrer nofollow">Meta’s pricing page</a>. Meta also needs a payment method on the
                   account, and says it stops delivering replies once the free allowance is used if there is none.
-                </p>
-                <p>
-                  <b>Support.</b> FactoryJet quotes ongoing support as a fixed price in writing too, and keeps managing
+                </p></td></tr><tr><th scope="row"><b>Support.</b></th><td><p>FactoryJet quotes ongoing support as a fixed price in writing too, and keeps managing
                   the servers, AI, APIs and maintenance so your team does not have to.
-                </p>
-              </div>
+                </p></td></tr></tbody></table></div>
             </div>
           </div>
         </section>
@@ -886,8 +859,8 @@ export default function WhatsAppAiAgentsUKPage() {
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>UK · Monthly Search Demand</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
+                  <span style={{ fontFamily: T.fm, fontSize: 12, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>UK · Monthly Search Demand</span>
+                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 12, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
                 </div>
                 <div style={{ padding: '4px 18px 14px' }}>
                   <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
@@ -899,13 +872,13 @@ export default function WhatsAppAiAgentsUKPage() {
                       { kw: 'whatsapp automation', v: '140', w: '14%', kd: 'Reminders and updates' },
                     ].map((r) => (
                       <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
+                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 12, color: T.n400 }}> searches</span></span></div>
                         <div className="demand-bar"><i style={{ width: r.w }} /></div>
                         <div className="demand-kd">{r.kd}</div>
                       </li>
                     ))}
                   </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, United Kingdom, October 2026</p>
+                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 12, color: T.n400, marginTop: 10 }}>Source: DataForSEO, United Kingdom, October 2026</p>
                 </div>
               </div>
             </div>

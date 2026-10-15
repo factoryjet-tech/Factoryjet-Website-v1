@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import styles from './visual-qa.module.css';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
@@ -525,7 +526,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
+const srcNote = { fontFamily: T.fm, fontSize: 12, color: T.n400, marginTop: 12 } as const;
 const srcLink = { textDecoration: 'underline' } as const;
 const inlineLink = { textDecoration: 'underline', color: T.ink, fontWeight: 600 } as const;
 
@@ -552,15 +553,15 @@ export default function ShopifyXeroIntegrationUKPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="uk-aiagents">
-      <main>
+      <main className={styles.page}>
 
         <Breadcrumbs items={crumbs} />
 
         {/* 1. HERO */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+        <section className={`sec-lg dot-grid ${styles.hero}`} style={{ position: 'relative' }}>
           <div className="wrap">
             <div className="col-6040">
-              <div>
+              <div className={styles.heroCopy}>
                 <div className="flex-wrap mb-6">
                   <span className="chip"><span className="dot dot-orange" />Shopify Xero Integration UK</span>
                   <span className="chip">Connector App or Custom Link</span>
@@ -579,9 +580,10 @@ export default function ShopifyXeroIntegrationUKPage() {
                   <div className="upd">Last updated<br />{READ_ON}</div>
                 </div>
 
-                <div className="mt-6" style={{ maxWidth: 560 }}>
+                <div className={styles.heroForm} style={{ maxWidth: 560 }}>
                   <HeroInlineForm region="uk" source="uk_shopify_xero_integration_hero" service="Shopify Xero Integration" submitLabel="Scope my Xero link" />
                 </div>
+                
               </div>
 
               <div className="card" style={{ padding: 8 }}>
@@ -654,7 +656,7 @@ export default function ShopifyXeroIntegrationUKPage() {
                 <li key={r.t}>
                   <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
                   <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  <a href={r.u} {...(r.u.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})} style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
+                  <a href={r.u} {...(r.u.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})} className={styles.citation} style={{ fontFamily: T.fm, fontSize: 12, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
                 </li>
               ))}
             </ul>
@@ -684,8 +686,7 @@ export default function ShopifyXeroIntegrationUKPage() {
                 </div>
               </div>
             </div>
-            <div className="card mt-10" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 820 }}>
+            <div className={`card mt-10 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={4}>
                 <thead>
                   <tr>
                     <th>Record</th>
@@ -773,9 +774,7 @@ export default function ShopifyXeroIntegrationUKPage() {
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">VAT, in plain English</span>
               <h2>VAT on sales, refunds, fees and exports: what the link has to carry</h2>
-              <div className="stack mt-6">
-                <p>
-                  <b>Sales.</b> GOV.UK lists three VAT rates: 20% standard, 5% reduced and 0% zero. A shop that
+              <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr><th><b>Sales.</b></th><td><p>GOV.UK lists three VAT rates: 20% standard, 5% reduced and 0% zero. A shop that
                   sells children’s clothes beside adult clothes has two of them in one basket. HMRC’s Making Tax
                   Digital notice says the digital record of each supply needs the time of supply, the value
                   before VAT and the rate charged. It also says supplies at the same rate on one invoice, in the
@@ -783,26 +782,19 @@ export default function ShopifyXeroIntegrationUKPage() {
                   keeps a digital record of its daily gross takings without listing each sale. Whether a daily
                   or per-payout summary is the right record for your shop is a question for your accountant. The
                   link then posts it that way, with one line for each rate.
-                </p>
-                <p>
-                  <b>Refunds.</b> GOV.UK says that when a customer returns goods you settle the balance with a
+                </p></td></tr><tr><th><b>Refunds.</b></th><td><p>GOV.UK says that when a customer returns goods you settle the balance with a
                   replacement invoice or a credit or debit note, and that you record these in your accounts. In
                   the link, a refund posts as a credit at the same VAT rate as the sale it reverses. It waits in
                   the clearing account until Shopify takes it out of a payout.
-                </p>
-                <p>
-                  <b>Fees.</b> Shopify’s help centre says that in the United Kingdom a 0% tax rate, which it
+                </p></td></tr><tr><th><b>Fees.</b></th><td><p>Shopify’s help centre says that in the United Kingdom a 0% tax rate, which it
                   calls a reverse charge, applies to Shopify Payments processing fees, and that you need to
                   maintain your own tax records for them. Which Xero tax rate that maps to is your accountant’s
                   call. The link keeps fees on their own line so the answer can be applied.
-                </p>
-                <p>
-                  <b>Exports.</b> GOV.UK says you can zero rate most exports from Great Britain to any
+                </p></td></tr><tr><th><b>Exports.</b></th><td><p>GOV.UK says you can zero rate most exports from Great Britain to any
                   destination outside the UK, as long as you get and keep evidence of the export within three
                   months of the sale. A link can split UK orders from the rest by delivery country. Keeping the
                   evidence stays with you.
-                </p>
-              </div>
+                </p></td></tr></tbody></table></div>
               <Sources ids={['govVatRates', 'govNotice', 'govVatRecords', 'shopifyFees', 'govExports']} />
             </div>
             <ul className="col-3 mt-10">
@@ -851,11 +843,7 @@ export default function ShopifyXeroIntegrationUKPage() {
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">What HMRC’s notice says about digital links</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">API transfer</div><div className="scorecard-note">how connector apps and custom links work</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Accepted</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">CSV import and export</div><div className="scorecard-note">download from one, upload to the other</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Accepted</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Emailing a spreadsheet of records</div><div className="scorecard-note">to be imported into other software</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Accepted</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Linked spreadsheet cells</div><div className="scorecard-note">a formula that mirrors another cell</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Accepted</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Copy and paste, or retyping</div><div className="scorecard-note">HMRC does not count it as a digital link</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Not a link</div></div>
+                <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="scorecard-row"><th><div><div className="scorecard-metric">API transfer</div><div className="scorecard-note">how connector apps and custom links work</div></div></th><td><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Accepted</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">CSV import and export</div><div className="scorecard-note">download from one, upload to the other</div></div></th><td><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Accepted</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Emailing a spreadsheet of records</div><div className="scorecard-note">to be imported into other software</div></div></th><td><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Accepted</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Linked spreadsheet cells</div><div className="scorecard-note">a formula that mirrors another cell</div></div></th><td><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Accepted</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Copy and paste, or retyping</div><div className="scorecard-note">HMRC does not count it as a digital link</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Not a link</div></td></tr></tbody></table></div>
               </div>
             </div>
           </div>
@@ -895,10 +883,7 @@ export default function ShopifyXeroIntegrationUKPage() {
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">Which plans carry more than one currency</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Shopify Basic, Grow and Shopify</div><div className="scorecard-note">sell in many, paid out in pounds</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Pounds only</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Shopify Advanced and Plus</div><div className="scorecard-note">one bank account per payout currency</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Several</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Xero Ignite and Grow</div><div className="scorecard-note">multiple currencies not listed</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Pounds only</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Xero’s two top plans</div><div className="scorecard-note">multiple currencies listed</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Several</div></div>
+                <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="scorecard-row"><th><div><div className="scorecard-metric">Shopify Basic, Grow and Shopify</div><div className="scorecard-note">sell in many, paid out in pounds</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Pounds only</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Shopify Advanced and Plus</div><div className="scorecard-note">one bank account per payout currency</div></div></th><td><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Several</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Xero Ignite and Grow</div><div className="scorecard-note">multiple currencies not listed</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Pounds only</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Xero’s two top plans</div><div className="scorecard-note">multiple currencies listed</div></div></th><td><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Several</div></td></tr></tbody></table></div>
               </div>
             </div>
           </div>
@@ -926,15 +911,14 @@ export default function ShopifyXeroIntegrationUKPage() {
                   <p style={{ fontSize: 14, color: T.ink }}><b>List price:</b> {c.price}.</p>
                   <p style={{ fontSize: 14, marginTop: 8 }}>{c.says}</p>
                   <p className="plat-best"><b>Suits:</b> {c.suits}</p>
-                  <p style={{ fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 8 }}>Xero App Store: {c.rating}</p>
+                  <p style={{ fontFamily: T.fm, fontSize: 12, color: T.n400, marginTop: 8 }}>Xero App Store: {c.rating}</p>
                   <Sources ids={c.sources} />
                 </li>
               ))}
             </ul>
 
             <h3 className="mt-12" style={{ maxWidth: 820 }}>Xero’s own integration, three connector apps and a custom link, side by side</h3>
-            <div className="card mt-6" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 980 }}>
+            <div className={`card mt-6 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 980 }} data-columns={6}>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -1020,12 +1004,7 @@ export default function ShopifyXeroIntegrationUKPage() {
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">A rule of thumb</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">One store, pounds, one or two VAT rates</div><div className="scorecard-note">Shopify leads and the books follow</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Free app</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Mixed VAT rates or sales outside the UK</div><div className="scorecard-note">payout summaries by rate and country</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Paid app</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">More than 5,000 orders a month</div><div className="scorecard-note">summaries, never one invoice an order</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Paid app</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Stock or prices led from Xero or an ERP</div><div className="scorecard-note">data has to flow into Shopify</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Custom</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Wholesale invoices on payment terms</div><div className="scorecard-note">paid status back to the store</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Custom</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Several companies, stores or systems</div><div className="scorecard-note">one map across all of them</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Custom</div></div>
+                <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="scorecard-row"><th><div><div className="scorecard-metric">One store, pounds, one or two VAT rates</div><div className="scorecard-note">Shopify leads and the books follow</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Free app</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Mixed VAT rates or sales outside the UK</div><div className="scorecard-note">payout summaries by rate and country</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Paid app</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">More than 5,000 orders a month</div><div className="scorecard-note">summaries, never one invoice an order</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Paid app</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Stock or prices led from Xero or an ERP</div><div className="scorecard-note">data has to flow into Shopify</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Custom</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Wholesale invoices on payment terms</div><div className="scorecard-note">paid status back to the store</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Custom</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Several companies, stores or systems</div><div className="scorecard-note">one map across all of them</div></div></th><td><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Custom</div></td></tr></tbody></table></div>
               </div>
             </div>
           </div>
@@ -1054,7 +1033,7 @@ export default function ShopifyXeroIntegrationUKPage() {
                 </div>
               </div>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <figure className={styles.processFigure} data-process-flow aria-label="How we build a Shopify to Xero link, in seven steps"><ol className={`stack mt-10 ${styles.processFlow}`} style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Read one month of payouts', d: 'We take a month of your Shopify payouts and the matching bank lines and list every kind of entry inside them: sales by VAT rate, refunds, fees, chargebacks, gift cards and currencies. That list is the brief.' },
                 { n: '02', t: 'Agree the posting rules with your accountant', d: 'For each kind of entry your accountant names the Xero account and the tax rate. We write it down as a one-page map, and both sides sign it before anything is built.' },
@@ -1065,14 +1044,14 @@ export default function ShopifyXeroIntegrationUKPage() {
                 { n: '07', t: 'Go live, match the first payouts, stay on', d: 'For the first weeks we compare every Shopify payout with the bank line and the clearing account balance. After that the same team supports the link, and you own the code and the map.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }} className={styles.stageMarker}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
                   </div>
                 </li>
               ))}
-            </ol>
+            </ol></figure>
           </div>
         </section>
 
@@ -1087,14 +1066,7 @@ export default function ShopifyXeroIntegrationUKPage() {
                 to the sales, refunds and fees behind it.
               </p>
             </div>
-            <ul className="col-3 mt-12">
-              <li className="svc-card"><h3>Shops doing their own books</h3><p className="mt-4">You sell on Shopify, keep Xero yourself and want the weekly bank matching to take minutes. Usually an app, set up properly once.</p></li>
-              <li className="svc-card"><h3>Brands with an accountant</h3><p className="mt-4">Your accountant wants clean payout summaries and VAT figures they can file from. We build to their rules and work with them directly.</p></li>
-              <li className="svc-card"><h3>Wholesale and trade sellers</h3><p className="mt-4">Trade customers on payment terms need named invoices in Xero and a paid status back in the store, beside the retail orders.</p></li>
-              <li className="svc-card"><h3>Sellers in several currencies</h3><p className="mt-4">Payouts in pounds, euros and dollars, each posted in its own currency and matched to its own bank account in Xero.</p></li>
-              <li className="svc-card"><h3>Larger and multi-store businesses</h3><p className="mt-4">Several stores, high order volumes or a warehouse partner in the chain, with one posting map across all of them.</p></li>
-              <li className="svc-card"><h3>WooCommerce stores on Xero</h3><p className="mt-4">The same questions with a different shop system: VAT by rate, gateway payouts and refunds. Apps exist, and we build custom links here too.</p></li>
-            </ul>
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="svc-card"><th><h3>Shops doing their own books</h3></th><td><p className="mt-4">You sell on Shopify, keep Xero yourself and want the weekly bank matching to take minutes. Usually an app, set up properly once.</p></td></tr><tr className="svc-card"><th><h3>Brands with an accountant</h3></th><td><p className="mt-4">Your accountant wants clean payout summaries and VAT figures they can file from. We build to their rules and work with them directly.</p></td></tr><tr className="svc-card"><th><h3>Wholesale and trade sellers</h3></th><td><p className="mt-4">Trade customers on payment terms need named invoices in Xero and a paid status back in the store, beside the retail orders.</p></td></tr><tr className="svc-card"><th><h3>Sellers in several currencies</h3></th><td><p className="mt-4">Payouts in pounds, euros and dollars, each posted in its own currency and matched to its own bank account in Xero.</p></td></tr><tr className="svc-card"><th><h3>Larger and multi-store businesses</h3></th><td><p className="mt-4">Several stores, high order volumes or a warehouse partner in the chain, with one posting map across all of them.</p></td></tr><tr className="svc-card"><th><h3>WooCommerce stores on Xero</h3></th><td><p className="mt-4">The same questions with a different shop system: VAT by rate, gateway payouts and refunds. Apps exist, and we build custom links here too.</p></td></tr></tbody></table></div>
             <p className="mt-8" style={{ maxWidth: 780 }}>
               If the store itself needs building or rebuilding, see{' '}
               <a href="/uk/ecommerce-development" style={inlineLink}>ecommerce development in the UK</a>,{' '}

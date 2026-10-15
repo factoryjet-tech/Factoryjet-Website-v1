@@ -1,0 +1,42 @@
+/* Preserve existing facts as labelled decision rows. */
+:global(.blog-post .blog-prose) table.profileFacts { width: 100%; margin: 16px 0; border-collapse: separate; border-spacing: 0; }
+:global(.blog-post .blog-prose) table.profileFacts tbody { display: table; width: 100%; table-layout: fixed; }
+:global(.blog-post .blog-prose) table.profileFacts tr + tr > * { border-top: 1px solid #E5E7EB; }
+:global(.blog-post .blog-prose) table.profileFacts th { width: 34%; min-width: 0; max-width: none; text-align: left; overflow-wrap: normal; word-break: normal; vertical-align: top; font-weight: 600; background: #FFFFFF; }
+:global(.blog-post .blog-prose) table.profileFacts td { width: 66%; min-width: 0; vertical-align: top; background: #FFFFFF; }
+:global(.blog-post .blog-prose) table.profileFacts th a { display: inline-flex; align-items: center; vertical-align: middle; min-height: 44px; min-width: 44px; }
+@media(max-width:767px) {
+  :global(.blog-post .blog-prose) table.profileFacts :is(tbody,tr,th,td) { display: block; width: 100%; min-width: 0; max-width: none; }
+  :global(.blog-post .blog-prose) table.profileFacts th { position: static; box-shadow: none; padding: 12px 12px 4px; font-size: 16px; }
+  :global(.blog-post .blog-prose) table.profileFacts td { padding: 0 12px 12px; font-size: 16px; }
+  :global(.blog-post .blog-prose) table.profileFacts tr + tr td { border-top: 0; }
+}
+
+/* Source-frozen AU-only desktop readability candidate; tables retain full width. */
+@media (min-width: 1024px) {
+:global(.blog-post .blog-prose:has(img[src="/blog-images/best-ai-consultancies-australia-2026-policy.webp"])):has(table.profileFacts) :is(p, li):not(table p, table li) { max-inline-size: 55ch; }
+:global(.blog-post .blog-prose:has(img[src="/blog-images/best-ai-consultancies-australia-2026-policy.webp"])):has(table.profileFacts) > h2 { margin-top: 28px; margin-bottom: 12px; }
+:global(.blog-post .blog-prose:has(img[src="/blog-images/best-ai-consultancies-australia-2026-policy.webp"])):has(table.profileFacts) > p { margin-bottom: 12px; line-height: 1.6; }
+:global(.blog-post .blog-prose:has(img[src="/blog-images/best-ai-consultancies-australia-2026-policy.webp"])):has(table.profileFacts) > :is(ul, ol) { margin-top: 8px; margin-bottom: 16px; }
+:global(.blog-post .blog-prose:has(img[src="/blog-images/best-ai-consultancies-australia-2026-policy.webp"])):has(table.profileFacts) > :is(ul, ol) > li { margin-top: 4px; margin-bottom: 4px; line-height: 1.6; }
+:global(.blog-post .blog-prose:has(img[src="/blog-images/best-ai-consultancies-australia-2026-policy.webp"])):has(table.profileFacts) > div[class~="space-y-3"]:has(> details) > details { padding-top: 12px; padding-bottom: 12px; }
+:global(.blog-post .blog-prose:has(img[src="/blog-images/best-ai-consultancies-australia-2026-policy.webp"])):has(table.profileFacts) > div[class~="space-y-3"]:has(> details) > details + details { margin-top: 8px; }
+}
+
+/* Optional AU-only desktop spacing for the seven existing native steps; no new visual or copied words. */
+@media (min-width: 1024px) {
+  :global(.blog-post .blog-prose:has(img[src="/blog-images/best-ai-consultancies-australia-2026-policy.webp"])):has(table.profileFacts) > :global(div.not-prose:has(> details:nth-child(7)):not(:has(> details:nth-child(8)))) {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    row-gap: 16px;
+    column-gap: 24px;
+    align-items: start;
+  }
+  :global(.blog-post .blog-prose:has(img[src="/blog-images/best-ai-consultancies-australia-2026-policy.webp"])):has(table.profileFacts) > :global(div.not-prose:has(> details:nth-child(7)):not(:has(> details:nth-child(8))) > details) { margin: 0; }
+  :global(.blog-post .blog-prose:has(img[src="/blog-images/best-ai-consultancies-australia-2026-policy.webp"])):has(table.profileFacts) > :global(div.not-prose:has(> details:nth-child(7)):not(:has(> details:nth-child(8))) > details:last-child:nth-child(odd)) { grid-column: 1 / -1; }
+}
+
+/* Equal native step row heights only while all seven steps rest closed. */
+@media (min-width: 1024px) {
+  :global(.blog-post .blog-prose:has(img[src="/blog-images/best-ai-consultancies-australia-2026-policy.webp"])):has(table.profileFacts) > :global(div.not-prose:has(> details:nth-child(7)):not(:has(> details:nth-child(8))):not(:has(> details[open]))) { align-items: stretch; }
+}

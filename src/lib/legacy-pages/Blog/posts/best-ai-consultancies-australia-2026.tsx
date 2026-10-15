@@ -1,3 +1,4 @@
+import visualQa from './best-ai-consultancies-australia-2026.visual-qa.module.css';
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
 
@@ -402,12 +403,12 @@ const renderFirms = (city: string): React.ReactNode =>
         <strong>Based:</strong> {c.based}. <strong>Advisory work:</strong> {c.type}.
       </p>
       <p className="mb-3">{c.what}</p>
-      <ul className="list-disc pl-6 mb-3 space-y-1">
-        <li><strong>Best for:</strong> {c.bestFor}</li>
-        <li><strong>Typical client:</strong> {c.clients}.</li>
-        <li><strong>Does it also build?</strong> {c.builds}.</li>
-        <li><strong>Worth asking them:</strong> {c.ask}</li>
-      </ul>
+      <table className={visualQa.profileFacts} tabIndex={0} aria-label={c.name}><tbody>
+        <tr><th scope="row"><strong>Best for:</strong></th><td> {c.bestFor}</td></tr>
+        <tr><th scope="row"><strong>Typical client:</strong></th><td> {c.clients}.</td></tr>
+        <tr><th scope="row"><strong>Does it also build?</strong></th><td> {c.builds}.</td></tr>
+        <tr><th scope="row"><strong>Worth asking them:</strong></th><td> {c.ask}</td></tr>
+      </tbody></table>
       <p className="text-sm text-gray-600">
         Source: <a href={c.source} className="text-[#B23E13] underline" rel="noopener" target={c.source.startsWith('https://factoryjet.com') ? undefined : '_blank'}>{c.source.replace('https://', '')}</a>
       </p>
@@ -804,13 +805,15 @@ export const post: BlogPost = {
       <p className="mb-4">
         A good adviser brings these up before you do. We read each source on 9 October 2026. We are not lawyers, and this is not legal advice.
       </p>
-      <ul className="list-disc pl-6 mb-4 space-y-2">
-        <li><strong>The Privacy Act 1988.</strong> The Office of the Australian Information Commissioner (OAIC) says the Privacy Act applies to all uses of AI involving personal information. Its <a href="https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products" className="text-[#B23E13] underline" rel="noopener" target="_blank">guidance on commercially available AI products</a> tells businesses to do due diligence before adopting a product, to take a privacy by design approach that includes a Privacy Impact Assessment, and to update privacy policies. As best practice, it recommends that organisations do not enter personal information, and particularly sensitive information, into publicly available generative AI tools.</li>
-        <li><strong>Automated decisions, from 10 December 2026.</strong> The OAIC&rsquo;s <a href="https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-1-app-1-open-and-transparent-management-of-personal-information" className="text-[#B23E13] underline" rel="noopener" target="_blank">guidelines on Australian Privacy Principle 1</a> say that from that date an organisation must add information to its privacy policy if it has arranged for a computer program to use personal information to make a decision, or to do something substantially and directly related to making one, that could reasonably be expected to significantly affect a person&rsquo;s rights or interests.</li>
-        <li><strong>The six essential practices.</strong> The National AI Centre&rsquo;s <a href="https://www.ai.gov.au/staying-safe-and-responsible/essential-ai-practices" className="text-[#B23E13] underline" rel="noopener" target="_blank">Guidance for AI adoption</a> sets out six: decide who is accountable, understand impacts and plan accordingly, measure and manage risks, share essential information, test and monitor, and maintain human control. It comes in a foundations version for early and low-risk use and an implementation version for complex and higher-risk use.</li>
-        <li><strong>If you sell to a Commonwealth agency.</strong> The <a href="https://www.digital.gov.au/ai/ai-in-government-policy" className="text-[#B23E13] underline" rel="noopener" target="_blank">Policy for the responsible use of AI in government</a>, version 2.0, took effect on 15 December 2025 and applies to non-corporate Commonwealth entities, with some exceptions. Its mandatory requirements include accountable officials, transparency statements, internal use case registers, staff training and AI use case impact assessments. Expect your buyer to ask you for what it needs to meet them.</li>
-        <li><strong>If you sell to a NSW agency.</strong> The <a href="https://digital.nsw.gov.au/policy/artificial-intelligence/ai-governance-assurance-and-frameworks/nsw-ai-assessment-framework" className="text-[#B23E13] underline" rel="noopener" target="_blank">NSW AI Assessment Framework</a> is mandatory for NSW Government agencies when they design, develop, deploy, procure or use systems with AI components. From 30 September 2026 agencies must register and assess new AI use cases on the framework&rsquo;s platform.</li>
-      </ul>
+      <div className="overflow-x-auto mb-4 not-prose">
+        <table className={visualQa.profileFacts}><tbody>
+          <tr><th scope="row"><strong>The Privacy Act 1988.</strong></th><td> The Office of the Australian Information Commissioner (OAIC) says the Privacy Act applies to all uses of AI involving personal information. Its <a href="https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products" className="text-[#B23E13] underline" rel="noopener" target="_blank">guidance on commercially available AI products</a> tells businesses to do due diligence before adopting a product, to take a privacy by design approach that includes a Privacy Impact Assessment, and to update privacy policies. As best practice, it recommends that organisations do not enter personal information, and particularly sensitive information, into publicly available generative AI tools.</td></tr>
+          <tr><th scope="row"><strong>Automated decisions, from 10 December 2026.</strong></th><td> The OAIC&rsquo;s <a href="https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-1-app-1-open-and-transparent-management-of-personal-information" className="text-[#B23E13] underline" rel="noopener" target="_blank">guidelines on Australian Privacy Principle 1</a> say that from that date an organisation must add information to its privacy policy if it has arranged for a computer program to use personal information to make a decision, or to do something substantially and directly related to making one, that could reasonably be expected to significantly affect a person&rsquo;s rights or interests.</td></tr>
+          <tr><th scope="row"><strong>The six essential practices.</strong></th><td> The National AI Centre&rsquo;s <a href="https://www.ai.gov.au/staying-safe-and-responsible/essential-ai-practices" className="text-[#B23E13] underline" rel="noopener" target="_blank">Guidance for AI adoption</a> sets out six: decide who is accountable, understand impacts and plan accordingly, measure and manage risks, share essential information, test and monitor, and maintain human control. It comes in a foundations version for early and low-risk use and an implementation version for complex and higher-risk use.</td></tr>
+          <tr><th scope="row"><strong>If you sell to a Commonwealth agency.</strong></th><td> The <a href="https://www.digital.gov.au/ai/ai-in-government-policy" className="text-[#B23E13] underline" rel="noopener" target="_blank">Policy for the responsible use of AI in government</a>, version 2.0, took effect on 15 December 2025 and applies to non-corporate Commonwealth entities, with some exceptions. Its mandatory requirements include accountable officials, transparency statements, internal use case registers, staff training and AI use case impact assessments. Expect your buyer to ask you for what it needs to meet them.</td></tr>
+          <tr><th scope="row"><strong>If you sell to a NSW agency.</strong></th><td> The <a href="https://digital.nsw.gov.au/policy/artificial-intelligence/ai-governance-assurance-and-frameworks/nsw-ai-assessment-framework" className="text-[#B23E13] underline" rel="noopener" target="_blank">NSW AI Assessment Framework</a> is mandatory for NSW Government agencies when they design, develop, deploy, procure or use systems with AI components. From 30 September 2026 agencies must register and assess new AI use cases on the framework&rsquo;s platform.</td></tr>
+        </tbody></table>
+      </div>
       <p className="mb-4">
         Firms name different documents. AI Consulting Group and RUBIX both cite the Voluntary AI Safety Standard and its 10 guardrails on their sites. The National AI Centre pages we read set out six essential practices. Ask your adviser which document your plan follows, and why.
       </p>

@@ -59,7 +59,7 @@ export function StickyCallToAction() {
           type="button"
           onClick={() => openModal('us')}
           className="font-fj-display shrink-0 inline-flex items-center gap-2 text-white font-bold text-sm rounded-full transition-transform hover:-translate-y-0.5"
-          style={{ background: '#B23E13', padding: '11px 20px', whiteSpace: 'nowrap' }}
+          style={{ background: '#B23E13', minHeight: 44, padding: '11px 20px', whiteSpace: 'nowrap' }}
         >
           Get my quote
           <svg width="11" height="11" viewBox="0 0 10 10" fill="none" aria-hidden="true">
@@ -69,7 +69,7 @@ export function StickyCallToAction() {
         <button
           onClick={dismiss}
           aria-label="Dismiss"
-          className="shrink-0 text-xl leading-none font-bold transition-colors"
+          className="inline-flex min-h-11 min-w-11 shrink-0 items-center justify-center text-xl leading-none font-bold transition-colors"
           style={{ color: 'rgba(255,255,255,0.55)' }}
         >
           &times;
