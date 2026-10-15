@@ -1,3 +1,4 @@
+import visualQa from './ecommerce-website-cost-uk-2026.visual-qa.module.css';
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
 
@@ -256,7 +257,7 @@ export const post: BlogPost = {
         whether VAT is stated.
       </p>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={"w-full border-collapse text-sm " + visualQa.costTable}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Platform</th>
@@ -318,7 +319,7 @@ export const post: BlogPost = {
         published or updated in 2026.
       </p>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={"w-full border-collapse text-sm " + visualQa.costTable}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Guide and date</th>
@@ -424,7 +425,7 @@ export const post: BlogPost = {
         pricing page showed these prices in pounds on 11 October 2026.
       </p>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={"w-full border-collapse text-sm " + visualQa.costTable}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Plan (<a href={SRC.shopifyPricing} target="_blank" rel="noopener noreferrer" className="text-white underline">Shopify UK</a>, read 11 October 2026)</th>
@@ -479,7 +480,7 @@ export const post: BlogPost = {
 
       <h3 id="shopify-build-cost">What a UK agency charges to build a Shopify store</h3>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={"w-full border-collapse text-sm " + visualQa.costTable}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Source</th>
@@ -580,7 +581,7 @@ export const post: BlogPost = {
       </p>
       <p>Because the software is free, the build is nearly the whole upfront cost. Four UK guides price it.</p>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={"w-full border-collapse text-sm " + visualQa.costTable}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Source</th>
@@ -663,7 +664,7 @@ export const post: BlogPost = {
         what it charges.
       </p>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={"w-full border-collapse text-sm " + visualQa.costTable}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Magento project type (Open eCommerce)</th>
@@ -715,7 +716,7 @@ export const post: BlogPost = {
         prices exclude VAT.
       </p>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={"w-full border-collapse text-sm " + visualQa.costTable}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Plan (<a href={SRC.bigcommercePricing} target="_blank" rel="noopener noreferrer" className="text-white underline">BigCommerce UK</a>, read 11 October 2026)</th>
@@ -776,7 +777,7 @@ export const post: BlogPost = {
         Published UK prices for this one job start at about £3,000 and run past £60,000. Here is who publishes what.
       </p>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={"w-full border-collapse text-sm " + visualQa.costTable}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Source</th>
@@ -932,7 +933,7 @@ export const post: BlogPost = {
 
       <h2 id="freelancer-or-agency">Freelancer or agency: what UK builders charge</h2>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={"w-full border-collapse text-sm " + visualQa.costTable}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Who and how they charge</th>
@@ -996,21 +997,19 @@ export const post: BlogPost = {
       </figure>
 
       <h2 id="vat-and-dollars">VAT and US dollars: two UK details that change the number</h2>
-      <ul className="list-disc pl-6 space-y-3 mb-6">
-        <li>
-          <strong>VAT.</strong> The <a href={SRC.govVat} target="_blank" rel="noopener noreferrer">standard UK rate is 20 per cent</a>.
+      <table className={visualQa.profileFacts} tabIndex={0}><tbody>
+        <tr><th scope="row"><strong>VAT.</strong></th><td> The <a href={SRC.govVat} target="_blank" rel="noopener noreferrer">standard UK rate is 20 per cent</a>.
           None of the nine UK build guides we cite says whether its ranges include it. On a £10,000 build that is a £2,000
           question. BigCommerce states that its plan prices exclude VAT, and Shopify&apos;s UK pricing page does not say.
           The VAT registration threshold is{' '}
           <a href={SRC.govVatThreshold} target="_blank" rel="noopener noreferrer">£90,000 of taxable turnover</a>. Ask
           every supplier to state the basis in writing, and ask your accountant how much you can reclaim.
-        </li>
-        <li>
-          <strong>US dollar prices.</strong> BigCommerce bills its plans in US dollars. The Shopify Theme Store prices
+        </td></tr>
+        <tr><th scope="row"><strong>US dollar prices.</strong></th><td> BigCommerce bills its plans in US dollars. The Shopify Theme Store prices
           themes in US dollars, and WooCommerce lists its extensions in US dollars. Your cost in pounds moves with the
           exchange rate on the day you are charged, which is why we have left those prices in dollars.
-        </li>
-      </ul>
+        </td></tr>
+      </tbody></table>
 
       <h2 id="accurate-quote">How to get an accurate ecommerce quote in 6 steps</h2>
       <ol className="list-decimal pl-6 space-y-3 mb-6">

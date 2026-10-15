@@ -1,0 +1,15 @@
+/* Preserve existing facts as labelled decision rows. */
+:global(.blog-post .blog-prose) table.profileFacts { width: 100%; margin: 16px 0; border-collapse: separate; border-spacing: 0; }
+:global(.blog-post .blog-prose) table.profileFacts tbody { display: table; width: 100%; table-layout: fixed; }
+:global(.blog-post .blog-prose) table.profileFacts tr + tr > * { border-top: 1px solid #E5E7EB; }
+:global(.blog-post .blog-prose) table.profileFacts th { width: 34%; min-width: 0; max-width: none; text-align: left; overflow-wrap: normal; word-break: normal; vertical-align: top; font-weight: 600; background: #FFFFFF; }
+:global(.blog-post .blog-prose) table.profileFacts td { width: 66%; min-width: 0; vertical-align: top; background: #FFFFFF; }
+:global(.blog-post .blog-prose) table.profileFacts th a { display: inline-flex; align-items: center; vertical-align: middle; min-height: 44px; min-width: 44px; }
+@media(max-width:767px) {
+  :global(.blog-post .blog-prose) table.profileFacts :is(tbody,tr,th,td) { display: block; width: 100%; min-width: 0; max-width: none; }
+  :global(.blog-post .blog-prose) table.profileFacts th { position: static; box-shadow: none; padding: 12px 12px 4px; font-size: 16px; }
+  :global(.blog-post .blog-prose) table.profileFacts td { padding: 0 12px 12px; font-size: 16px; }
+  :global(.blog-post .blog-prose) table.profileFacts tr + tr td { border-top: 0; }
+}
+
+@media(max-width:767px) { :global(.blog-post .blog-prose) table.costTable :is(th,td) { min-width: 144px; overflow-wrap: normal; word-break: normal; } }
