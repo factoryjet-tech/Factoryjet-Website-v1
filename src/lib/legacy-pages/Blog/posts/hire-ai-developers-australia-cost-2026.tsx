@@ -1,3 +1,4 @@
+import visualQa from './hire-ai-developers-australia-cost-2026.visual-qa.module.css';
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
 
@@ -972,27 +973,23 @@ export const post: BlogPost = {
         </li>
       </ol>
       <h3 id="where-to-look">Where can I hire AI chatbot developers and AI agent developers?</h3>
-      <ul className="list-disc pl-6 space-y-3 mb-6">
-        <li>
-          <strong>For an employee:</strong> a specialist recruiter or a job board. Re:Sourced&apos;s advice is to search
+      <table className={visualQa.profileFacts} tabIndex={0}><tbody>
+        <tr><th scope="row"><strong>For an employee:</strong></th><td> a specialist recruiter or a job board. Re:Sourced&apos;s advice is to search
           for backend and platform engineers who have shipped an agent in the past eighteen months, because few people
           carry the agentic title yet.
-        </li>
-        <li>
-          <strong>For a contractor in Australia:</strong> a contractor platform or a recruiter&apos;s contract desk.
+        </td></tr>
+        <tr><th scope="row"><strong>For a contractor in Australia:</strong></th><td> a contractor platform or a recruiter&apos;s contract desk.
           Expert360 describes itself as a local network of more than 40,000 vetted experts.
-        </li>
-        <li>
-          <strong>For a freelancer anywhere:</strong> global marketplaces. When we put &quot;Where can I hire AI chatbot
+        </td></tr>
+        <tr><th scope="row"><strong>For a freelancer anywhere:</strong></th><td> global marketplaces. When we put &quot;Where can I hire AI chatbot
           developers?&quot; to AI assistants on 9 October 2026, we read eight answers. The eight pages cited most often
           belonged to seven sites: Fiverr, Arc, Tecla, Braintrust, Freelancer, Lemon.io and Uplers. None had a .au
           address.
-        </li>
-        <li>
-          <strong>For a team:</strong> an agency. Australian firms are compared in the two guides linked above. Remote
+        </td></tr>
+        <tr><th scope="row"><strong>For a team:</strong></th><td> an agency. Australian firms are compared in the two guides linked above. Remote
           project teams, FactoryJet among them, sell the same work delivered over video.
-        </li>
-      </ul>
+        </td></tr>
+      </tbody></table>
       <h3 id="what-to-ask">What to ask before you hire</h3>
       <p>
         Re:Sourced argues against take-home tests for agent builders, because the visible part of an agent project is an
