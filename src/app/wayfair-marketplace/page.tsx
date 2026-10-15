@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import styles from './visual-qa.module.css';
 import Link from 'next/link';
 
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -545,14 +546,14 @@ export default function WayfairMarketplacePage() {
 
       <SiteHeader />
 
-      <main className="min-h-screen bg-fj-cream text-fj-ink">
+      <main className={`${styles.page} min-h-screen bg-fj-cream text-fj-ink`}>
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* 1. HERO */}
-        <section className="relative overflow-hidden border-b border-fj-neutral-200 bg-fj-cream pt-12 pb-14 md:pt-14 md:pb-16">
+        <section className={`${styles.hero} relative overflow-hidden border-b border-fj-neutral-200 bg-fj-cream pt-12 pb-14 md:pt-14 md:pb-16`}>
           <div className="mx-auto max-w-[1200px] px-6 md:px-8">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
-              <div className="lg:col-span-7">
+              <div className={`${styles.heroCopy} lg:col-span-7`}>
                 <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#F05A28]/30 bg-white px-3 py-1.5">
                   <span className="font-fj-mono text-xs font-bold tracking-wide text-[#B23E13]">
                     WAYFAIR SUPPLIER SETUP &middot; UNITED STATES
@@ -563,14 +564,14 @@ export default function WayfairMarketplacePage() {
                   Sell on Wayfair with a team that sets up and manages your supplier channel.
                 </h1>
 
-                <p className="mt-6 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600">
+                <p className={`${styles.heroLead} mt-6 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}>
                   Wayfair buys from you at a wholesale cost, sets the shopper price itself, and sends every order to
                   your warehouse to ship. FactoryJet handles the supplier application, your product data, the
                   inventory feed that tells Wayfair what is in stock, and the order link to your store or ERP (the
                   software that tracks your stock and orders). Then we stay on to manage the channel.
                 </p>
 
-                <div className="mt-8">
+                <div className={styles.heroForm}>
                   <HeroInlineForm region="us" source="wayfair_marketplace_hero" submitLabel="Check my Wayfair readiness" />
                 </div>
 
@@ -597,7 +598,7 @@ export default function WayfairMarketplacePage() {
                 </div>
               </div>
 
-              <div className="lg:col-span-5">
+              <div className={`${styles.diagramBox} lg:col-span-5`} tabIndex={0} role="region" aria-label="Wayfair order flow">
                 <WayfairOrderFlow />
               </div>
             </div>
@@ -637,18 +638,12 @@ export default function WayfairMarketplacePage() {
                   so you can check it.
                 </p>
               </div>
-              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:col-span-8">
-                {WAYFAIR_FACTS.map((f) => (
-                  <div key={f.value} className="rounded-2xl border border-fj-neutral-200 border-t-[3px] border-t-[#F05A28] bg-white p-6">
-                    <div className="font-fj-display text-3xl font-bold tracking-[-0.02em] text-[#F05A28]">{f.value}</div>
-                    <p className="mt-3 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{f.label}</p>
-                    <a href={f.sourceUrl} target="_blank" rel="noopener noreferrer" className={`mt-4 ${EXTERNAL_LINK_CLASS}`}>
+              <div className={`grid grid-cols-1 gap-5 sm:grid-cols-2 lg:col-span-8 ${styles.comparisonBox}`} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout><tbody>{WAYFAIR_FACTS.map((f) => (
+                  <tr key={f.value} className="rounded-2xl border border-fj-neutral-200 border-t-[3px] border-t-[#F05A28] bg-white p-6"><th><div className="font-fj-display text-3xl font-bold tracking-[-0.02em] text-[#F05A28]">{f.value}</div></th><td><p className="mt-3 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{f.label}</p></td><td><a href={f.sourceUrl} target="_blank" rel="noopener noreferrer" className={`mt-4 ${EXTERNAL_LINK_CLASS}`}>
                       <SourceArrow />
                       {f.sourceLabel}
-                    </a>
-                  </div>
-                ))}
-              </div>
+                    </a></td></tr>
+                ))}</tbody></table></div>
             </div>
           </div>
         </section>
@@ -670,9 +665,7 @@ export default function WayfairMarketplacePage() {
                   <h3 className="font-fj-display text-xl font-semibold text-fj-ink">The dropship model</h3>
                   <p className="mt-3 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                     Dropshipping means the supplier keeps the stock and ships each order straight to the shopper.
-                    Wayfair&rsquo;s Beginner&rsquo;s Guide calls it Wayfair&rsquo;s primary method of fulfillment. A
-                    shopper orders on Wayfair, Wayfair sends a purchase order (its formal request for that item) to
-                    your warehouse, and you pick, pack and ship. You need a warehouse or a 3PL (a third-party
+                    Wayfair&rsquo;s Beginner&rsquo;s Guide calls it Wayfair&rsquo;s primary method of fulfillment. <span className={styles.modelFlow} data-process-flow><span className={styles.modelNode}>A shopper orders on Wayfair,</span> <span className={styles.modelNode}>Wayfair sends a purchase order (its formal request for that item) to your warehouse,</span> <span className={styles.modelNode}>and you pick, pack and ship.</span></span> You need a warehouse or a 3PL (a third-party
                     logistics company that stores and ships for you) in North America.
                   </p>
                 </div>
@@ -755,25 +748,18 @@ export default function WayfairMarketplacePage() {
               service, so the same stock count can feed your other channels.
             </p>
 
-            <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
-              {SERVICES.map((s) => (
-                <div key={s.n} className={`rounded-2xl border border-fj-neutral-200 bg-white p-7 ${s.span}`}>
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-fj-cream font-fj-mono text-sm font-bold text-[#B23E13]">
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout data-work-components><tbody>{SERVICES.map((s) => (
+                <tr key={s.n}><th scope="row"><div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-fj-cream font-fj-mono text-sm font-bold text-[#B23E13]">
                     {s.n}
-                  </div>
-                  <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{s.title}</h3>
-                  <p className="mt-2 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{s.body}</p>
-                </div>
-              ))}
-              <div className="rounded-2xl border border-fj-neutral-200 border-l-[3px] border-l-[#F05A28] bg-white p-7 lg:col-span-5">
+                  </div><h3 className="font-fj-display text-lg font-semibold text-fj-ink">{s.title}</h3></th><td><p className="mt-2 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{s.body}</p></td></tr>
+              ))}</tbody></table></div><div className="mt-6"><div className="rounded-2xl border border-fj-neutral-200 border-l-[3px] border-l-[#F05A28] bg-white p-7 lg:col-span-5">
                 <h3 className="font-fj-display text-lg font-semibold text-fj-ink">What stays yours</h3>
                 <p className="mt-2 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
                   The Partner Home login, the drop-ship agreement, the payout account and the connector code are in
                   your company&rsquo;s name. We work through user access your admin grants. If you move the work
                   in-house later, nothing has to be rebuilt.
                 </p>
-              </div>
-            </div>
+              </div></div>
           </div>
         </section>
 
@@ -788,25 +774,13 @@ export default function WayfairMarketplacePage() {
               Each step names who does the work, so nothing sits waiting on the wrong desk.
             </p>
 
-            <ol className="mt-12 grid gap-4">
-              {PROCESS_STEPS.map((step, i) => (
-                <li
-                  key={step.title}
-                  className="flex items-start gap-5 rounded-xl border border-fj-neutral-200 border-l-[3px] border-l-[#F05A28] bg-fj-cream px-5 py-5 sm:px-6"
-                >
-                  <span className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout><tbody>{PROCESS_STEPS.map((step, i) => (
+                <tr key={step.title} className="flex items-start gap-5 rounded-xl border border-fj-neutral-200 border-l-[3px] border-l-[#F05A28] bg-fj-cream px-5 py-5 sm:px-6"><th><span className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
                     {i + 1}
-                  </span>
-                  <div>
-                    <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{step.title}</h3>
-                    <p className="mt-1 font-fj-mono text-[11px] font-semibold uppercase tracking-wider text-[#B23E13]">
+                  </span><h3 className="font-fj-display text-lg font-semibold text-fj-ink">{step.title}</h3></th><td><p className="mt-1 font-fj-mono text-[12px] font-semibold uppercase tracking-wider text-[#B23E13]">
                       Who does it: {step.who}
-                    </p>
-                    <p className="mt-2 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{step.body}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
+                    </p></td><td><p className="mt-2 font-fj-body text-sm leading-relaxed text-fj-neutral-600">{step.body}</p></td></tr>
+              ))}</tbody></table></div>
           </div>
         </section>
 
