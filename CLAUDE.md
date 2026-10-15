@@ -54,18 +54,17 @@ These five rules apply to every prompt, every component, every page. If a reques
 - Maximum 2 dark sections per page, both mid-page or near footer. Hero stays light.
 - See `factoryjet.DESIGN.md` Section 2 for full colour rules.
 
-### 2. Typography is Clash Display (display) + Inter (body) + Geist Mono (eyebrow/code). Period.
-> ⚠️ Typography pivot locked May 5–6 2026. Fraunces and Geist Sans are retired from v2. If you see them in new code, that is a bug.
-- No Roboto. No Poppins. No DM Sans. No Manrope. No Plus Jakarta Sans. No Open Sans. No Montserrat.
-- Headings, hero, stats, section titles → **Clash Display 700** (Fontshare, weight 700 only).
+### 2. Typography is Plus Jakarta Sans (display) + Inter (body) + Geist Mono (eyebrow/code). Period.
+> ⚠️ **Correction (2026-09-23):** this section previously said Clash Display. That was correct as of the May 5–6 2026 pivot, but Bhavesh shipped commit "Sprint 8: Replace Clash Display with Plus Jakarta Sans site-wide" on **13 May 2026**, days after this section was last edited, and this file was never updated to match. `DESIGN.md` (the authoritative file per the note above) has always said Plus Jakarta Sans. If you see Clash Display referenced anywhere as the current brand font, that reference is stale — verify against `DESIGN.md` and the live `src/app/layout.tsx` font imports before trusting either this file or your own memory of an earlier session.
+- No Roboto. No Poppins. No DM Sans. No Manrope. No Fraunces. No Open Sans. No Montserrat. No Clash Display.
+- Headings, hero, stats, section titles → **Plus Jakarta Sans 800** (`next/font/google`, weight 800, tracking `-0.03em`).
 - Body, navigation, buttons, microcopy → **Inter** (next/font/google).
-- Eyebrows, mono labels, code blocks → **Geist Mono** (geist/font/mono).
+- Eyebrows, mono labels, code blocks → **Geist Mono** (next/font/google).
 - Fraunces and Geist Sans remain loaded for v1 page parity — do NOT use them in any v2 component.
 
 ### 3. Headlines are confident statements. Italic-emphasis pattern is DROPPED.
 - The Fraunces-italic conviction-word pattern (e.g. "agents that *actually* ship") has been retired.
-- Clash Display does not render inline italic gracefully — do not add `<em>` or italic class to heading words.
-- Headlines are solid statements in Clash Display 700, no stylistic flourishes.
+- Headlines are solid statements in Plus Jakarta Sans 800, no stylistic flourishes — this rule is about voice, not a font-rendering limitation, so it still applies regardless of which display font is current.
 
 ### 4. Asymmetric grids over symmetric. Left-aligned over centred.
 - No symmetric three-column SaaS-template grids as primary layouts.
@@ -80,8 +79,8 @@ Forbidden, in every component, every page, every variant:
 - ❌ Particles, floating geometric shapes, abstract orbs
 - ❌ Dark hero on the homepage
 - ❌ Fraunces or Geist Sans in any v2 component (retired post May 5 pivot)
-- ❌ Roboto, Poppins, DM Sans, Manrope, Plus Jakarta Sans in any context
-- ❌ Italic-emphasis on heading conviction words (Clash Display does not support this pattern)
+- ❌ Roboto, Poppins, DM Sans, Manrope, Clash Display in any context (Clash Display was retired site-wide by the Sprint 8 commit, 13 May 2026 — see rule 2)
+- ❌ Italic-emphasis on heading conviction words
 - ❌ Spinning counters / count-up-on-scroll number animations
 - ❌ Glassmorphism over busy backgrounds
 - ❌ Full-bleed video hero backgrounds
@@ -151,12 +150,12 @@ When Bhavesh writes a Claude Code prompt for any FactoryJet work, this block goe
 PROJECT: FactoryJet — AI Services Company website rebuild
 CURRENT PHASE: [2A | 2B | 2C | 2D]
 DESIGN SYSTEM: Read /factoryjet/factoryjet.DESIGN.md before writing any code
-BRAND ANCHOR: Light backgrounds, Clash Display + Inter + Geist Mono typography, confident plain headlines, asymmetric grids, no AI slop
+BRAND ANCHOR: Light backgrounds, Plus Jakarta Sans + Inter + Geist Mono typography, confident plain headlines, asymmetric grids, no AI slop
 
 NON-NEGOTIABLES:
 - Background: #FAFAF7 (cream). Hero is NEVER dark.
-- Typography: Clash Display 700 (display/headings) + Inter (body) + Geist Mono (eyebrows/code). NO Fraunces, Geist Sans, Roboto, Poppins, DM Sans, Manrope.
-- Headlines are solid statements in Clash Display. NO italic-emphasis pattern (retired May 2026).
+- Typography: Plus Jakarta Sans 800 (display/headings) + Inter (body) + Geist Mono (eyebrows/code). NO Fraunces, Geist Sans, Roboto, Poppins, DM Sans, Manrope, Clash Display.
+- Headlines are solid statements in Plus Jakarta Sans. NO italic-emphasis pattern (retired May 2026).
 - Asymmetric grids, left-aligned content
 - No gradient text, no glow, no particles, no spinning counters
 
@@ -243,4 +242,4 @@ If your work doesn't pass this test, revise before committing.
 **Project:** FactoryJet Technologies
 **Lead:** Bhavesh Bhatt, Founder & CEO
 **Design system version:** 2.0
-**This file last updated:** May 8 2026 — typography pivot (Clash Display + Inter + Geist Mono) backported from factoryjet.DESIGN.md v2.0
+**This file last updated:** 23 Sept 2026 — typography correction (Plus Jakarta Sans + Inter + Geist Mono; Clash Display was retired site-wide by the 13 May 2026 "Sprint 8" commit, which postdated and superseded the May 8 entry this replaces)
