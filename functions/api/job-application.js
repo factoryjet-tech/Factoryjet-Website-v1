@@ -15,7 +15,8 @@
  *   3. Respond 200, then in waitUntil: save to ERPNext, attach the CV, send the
  *      candidate a receipt. If ERPNext fails or times out, the whole
  *      application, CV attached, is emailed to Bhavesh with an [ERP DOWN]
- *      subject, so an outage like the Contabo one on 2026-10-15 loses nobody.
+ *      subject ([CV NOT ATTACHED] when the record saved but the CV upload
+ *      failed), so an outage like the Contabo one on 2026-10-15 loses nobody.
  *
  * ERPNext names Job Applicant records by email address (checked 2026-10-15),
  * so one email holds one record across every opening. A repeat application is
@@ -441,21 +442,46 @@ export function receiptEmail(v) {
   };
 }
 
+/**
+ * Subject and opening line of the email Bhavesh gets when a save is incomplete.
+ * Two cases, because they need different action:
+ *   - the record was saved but the CV upload failed (result.applicant is set):
+ *     [CV NOT ATTACHED]. Seen live on 2026-10-15, when ERPNext rejected a PDF it
+ *     could not parse (PdfReadError, HTTP 500). Attach the CV from the email by hand.
+ *   - nothing was saved: [ERP DOWN]. Add the whole application by hand.
+ */
+export function fallbackEmail(v, result, verdict) {
+  const title = ROLES[v.role] ? ROLES[v.role].title : v.role;
+  const reason = escapeHtml(result.reason);
+  if (result.applicant) {
+    return {
+      subject: `[CV NOT ATTACHED] Job application: ${v.name} (${title})`,
+      intro:
+        `<p><b>The application was saved in ERPNext as ${escapeHtml(result.applicant)}, but the CV could not be ` +
+        `attached.</b> Reason: ${reason}. Attach the CV from this email to that record by hand.</p>`,
+    };
+  }
+  return {
+    subject: `[ERP DOWN] Job application: ${v.name} (${title})`,
+    intro:
+      `<p><b>This application did not reach ERPNext.</b> Reason: ${reason}. ` +
+      'Add it by hand or forward it once ERPNext is back. The CV is attached.</p>',
+  };
+}
+
 /** Background part: ERPNext save, fallback email when it fails, candidate receipt. */
 async function processApplication(env, v, turnstileVerdict, trapFilled, cv) {
   const verdict = trapFilled ? 'trap' : turnstileVerdict;
   const result = await saveToErp(env, v, verdict, cv);
 
   if (!result.saved) {
-    console.error('job-application: ERP save failed:', result.reason);
+    console.error('job-application: ERP save incomplete:', result.reason);
+    const mail = fallbackEmail(v, result, verdict);
     await sendEmail(env, {
       from: env.CAREERS_FROM || DEFAULT_FROM,
       to: [env.CAREERS_NOTIFY_TO || DEFAULT_NOTIFY_TO],
-      subject: `[ERP DOWN] Job application: ${v.name} (${ROLES[v.role].title})`,
-      html:
-        `<p><b>This application did not reach ERPNext.</b> Reason: ${escapeHtml(result.reason)}. ` +
-        'Add it by hand or forward it once ERPNext is back. The CV is attached.</p>' +
-        linesToHtml(applicationLines(v, verdict)),
+      subject: mail.subject,
+      html: mail.intro + linesToHtml(applicationLines(v, verdict)),
       attachments: [{ filename: `CV.${v.cvType === 'pdf' ? 'pdf' : 'docx'}`, content: toBase64(cv.bytes) }],
     });
   }

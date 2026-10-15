@@ -256,3 +256,33 @@ test('invalid form gets 400 with field errors and touches nothing', async () => 
   assert.ok(body.errors.email);
   assert.equal(calls.length, 0);
 });
+
+import { fallbackEmail } from '../functions/api/job-application.js';
+
+test('fallback subject: CV NOT ATTACHED when the record saved, ERP DOWN when nothing saved', () => {
+  const v = validateApplication(goodFields(), goodCv).value;
+  const partial = fallbackEmail(v, { saved: false, applicant: 'asha@example.com', reason: 'CV upload failed (HTTP 500)' }, 'verified');
+  assert.match(partial.subject, /^\[CV NOT ATTACHED\]/);
+  assert.match(partial.intro, /saved in ERPNext as asha@example\.com/);
+  const down = fallbackEmail(v, { saved: false, reason: 'ERPNext timed out' }, 'verified');
+  assert.match(down.subject, /^\[ERP DOWN\]/);
+  assert.match(down.intro, /did not reach ERPNext/);
+});
+
+test('live case from 2026-10-15: upload_file 500 sends CV NOT ATTACHED with the CV', async () => {
+  const { calls } = await run(onRequestPost, {
+    request: requestWith({}, PDF, { 'cf-turnstile-response': 'tok' }),
+    erp: (u, o) => {
+      if (u.includes('/api/resource/Job%20Applicant/') && (o.method || 'GET') === 'GET') return new Response('{}', { status: 404 });
+      if (u.endsWith('/api/resource/Job%20Applicant')) return new Response('{"data":{"name":"asha@example.com"}}');
+      if (u.endsWith('/upload_file')) return new Response('{"exc_type":"PdfReadError"}', { status: 500 });
+      return new Response('{}', { status: 500 });
+    },
+  });
+  const emails = calls.filter((c) => c.url.startsWith('https://api.resend.com')).map((c) => JSON.parse(c.body));
+  const fallback = emails.find((e) => e.to[0] === 'bhavesh@factoryjet.com');
+  assert.match(fallback.subject, /^\[CV NOT ATTACHED\]/);
+  assert.ok(!fallback.subject.includes('ERP DOWN'));
+  assert.equal(fallback.attachments.length, 1);
+  assert.ok(emails.some((e) => e.to[0] === 'asha@example.com'), 'candidate still gets the receipt');
+});

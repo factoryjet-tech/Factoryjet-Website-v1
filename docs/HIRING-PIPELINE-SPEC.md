@@ -236,6 +236,13 @@ Changes from the plan above:
 - **A repeat application** adds a Comment and attaches the new CV to the existing record without
   replacing `resume_attachment`.
 - Hiring steps on the page say "take-home task" and "trial day", not "paid", until Bhavesh decides.
+- **Live test 2026-10-15** (one application through the live form, then deleted): record, answers,
+  source, consent and retention fields saved correctly; receipt reached the inbox. The CV upload
+  returned HTTP 500 `PdfReadError` because the hand-made test PDF had no xref table; a valid PDF
+  attached as a private file. ERPNext parses every PDF, so a corrupt CV fails the same way: the
+  fallback email now says `[CV NOT ATTACHED]` for that case and `[ERP DOWN]` only when nothing saved.
+- **`TURNSTILE_SECRET_KEY` is not set on factoryjet-v2** (checked 2026-10-15), so every verdict is
+  `unchecked`, on this form and on the contact form. Bhavesh to add it in Cloudflare.
 
 Placeholders, all safe to deploy as they are:
 - `INCENTIVE_UP_TO` in `src/data/careers.ts` is `null`: the page shows the incentive with no amount.
