@@ -18,7 +18,6 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuthorCard from '@/components/v2/AuthorCard';
 import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
 import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import CityLinksUK from '@/components/v2/CityLinksUK';
 import Footer from '@/app/uk/sections/Footer';
 
@@ -309,11 +308,6 @@ export default function Page() {
         </section>
 
         {/* Regional performance benchmark for the SEO vertical */}
-        <section className="w-full bg-fj-cream">
-          <div className="mx-auto w-full max-w-[1120px] px-6 py-14 md:px-8">
-            <RegionalBenchmarkCard city="Liverpool" vertical="seo" />
-          </div>
-        </section>
 
         <div id="liverpool-local-seo-blueprint">
           <LocalSeoArchitectureBlueprint

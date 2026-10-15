@@ -3,7 +3,6 @@ import ManchesterPage from './ManchesterPage';
 import AuthorCard from '@/components/v2/AuthorCard';
 import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import CityLinksUK from '@/components/v2/CityLinksUK';
 import { CANONICAL } from './crumbs';
 
@@ -119,11 +118,6 @@ export default function Page() {
         */}
         <ManchesterPage>
           {/* Regional performance benchmark */}
-          <section className="bg-white py-12">
-            <div className="mx-auto max-w-[1120px] px-4 sm:px-6 lg:px-8">
-              <RegionalBenchmarkCard city="Manchester" vertical="web-design" />
-            </div>
-          </section>
 
           {/* Architecture blueprint */}
           <div id="manchester-architecture-blueprint">

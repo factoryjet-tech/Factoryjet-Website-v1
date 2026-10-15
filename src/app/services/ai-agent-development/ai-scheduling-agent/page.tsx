@@ -666,7 +666,7 @@ export default function AISchedulingAgentUSPage() {
           body={
             <>
               <p>
-                Every AI scheduling agent comprises five foundational layers. The first layer is a conversational model like Claude, GPT-4o, or Gemini. The second layer integrates Google Calendar, Microsoft Outlook, or Calendly. The third layer provides messaging via Twilio or transactional email. The fourth and fifth layers power automated reminders and CRM sync with HubSpot or Salesforce. Each interface features built-in error recovery to ensure zero dropped appointments.
+                Every AI scheduling agent comprises five foundational layers. The first layer is a conversational model like Claude, GPT-4o, or Gemini. The second layer integrates Google Calendar, Microsoft Outlook, or Calendly. The third layer provides messaging via Twilio or transactional email. The fourth and fifth layers power automated reminders and CRM sync with HubSpot or Salesforce. Each interface retries a failed sync instead of dropping the appointment.
               </p>
               <div className="overflow-hidden rounded-xl border border-fj-neutral-200 bg-white" aria-hidden>
                 <table className="w-full text-left">

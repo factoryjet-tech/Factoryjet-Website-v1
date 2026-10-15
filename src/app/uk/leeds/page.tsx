@@ -8,7 +8,6 @@ import Breadcrumbs from '@/components/v2/Breadcrumbs'
 import MidPageCTA from '@/components/v2/MidPageCTA'
 import ModalCTAButton from '@/components/v2/ModalCTAButton'
 import AuthorCard from '@/components/v2/AuthorCard'
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard'
 import CityLinksUK from '@/components/v2/CityLinksUK'
 import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint'
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator'
@@ -725,11 +724,6 @@ export default function Page() {
         />
 
         {/* ── Existing authority blocks, kept from the previous build. ─────── */}
-        <section className="border-t border-fj-neutral-200 bg-white px-6 py-14 md:px-8 md:py-16">
-          <div className="mx-auto max-w-[1160px]">
-            <RegionalBenchmarkCard city="Leeds" vertical="web-design" />
-          </div>
-        </section>
 
         <div id="leeds-architecture-blueprint">
           <WebDesignArchitectureBlueprint />

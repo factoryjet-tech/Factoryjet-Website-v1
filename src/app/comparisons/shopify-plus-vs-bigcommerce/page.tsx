@@ -587,7 +587,7 @@ export default function ShopifyVsBigCommercePage() {
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. High-Availability Cloud Infrastructure &amp; DDoS Protection</h3>
               <p>
                 Shopify operates on Google Cloud Platform (GCP) with Cloudflare edge routing, while BigCommerce runs on AWS cloud infrastructure.
-                Both platforms provide automated DDoS mitigation, global CDN asset caching, and guaranteed 99.99% uptime SLAs during high-volume sales events.
+                Both platforms provide automated DDoS mitigation, global CDN asset caching, and hosting built for high-volume sales events.
               </p>
             </div>
           </div>

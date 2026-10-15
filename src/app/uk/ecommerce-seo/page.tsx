@@ -8,7 +8,6 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import AuthorCard from '@/components/v2/AuthorCard';
 import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import CityLinksUK from '@/components/v2/CityLinksUK';
 import './ecommerce-seo.css';
 

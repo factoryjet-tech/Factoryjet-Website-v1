@@ -16,7 +16,6 @@ import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import CityLinksUK from '@/components/v2/CityLinksUK';
 
 import { ukMetadata } from "./metadata";
@@ -105,11 +104,6 @@ export default function UKPage() {
 
         <TechStack />
         <Pricing />
-        <section className="sec-lg" style={{ backgroundColor: "#FFFFFF", padding: "48px 0 16px" }}>
-          <div className="wrap" style={{ maxWidth: 1120, margin: "0 auto", padding: "0 16px" }}>
-            <RegionalBenchmarkCard city="United Kingdom" vertical="web-design" />
-          </div>
-        </section>
 
         <div id="uk-architecture-blueprint">
           <WebDesignArchitectureBlueprint />

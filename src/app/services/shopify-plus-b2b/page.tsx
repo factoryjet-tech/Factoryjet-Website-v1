@@ -12,7 +12,6 @@ import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import B2bWholesaleCalculator from '@/components/commerce/B2bWholesaleCalculator';
 import Net30PaymentComparison from '@/components/commerce/Net30PaymentComparison';
 import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
@@ -829,11 +828,6 @@ export default function ShopifyPlusB2BPage() {
           </div>
         </section>
 
-        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-          <div className="pp-wrap">
-            <RegionalBenchmarkCard city="Enterprise Replatforming" vertical="replatforming" />
-          </div>
-        </section>
 
         <EnterpriseArchitectureBlueprint
           badge="// UNIFIED B2B COMMERCE ARCHITECTURE."

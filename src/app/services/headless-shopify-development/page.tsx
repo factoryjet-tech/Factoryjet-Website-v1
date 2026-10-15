@@ -64,7 +64,7 @@ const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
 ];
 
 const PARTNERS = [
-  'Shopify Plus Certified.',
+  'Registered Shopify Partner.',
   'Next.js 15 App Router.',
   'React 19 Server Components.',
   'Cloudflare Edge Network.',

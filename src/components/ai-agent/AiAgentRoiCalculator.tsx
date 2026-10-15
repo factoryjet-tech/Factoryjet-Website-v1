@@ -186,7 +186,7 @@ export default function AiAgentRoiCalculator({
 - Loaded Rate: $${hourlyRate}/hr
 - Deflection Rate: ${activeDeflectionPercent}%
 - Projected Net Annual Savings: $${calculations.netAnnualSavings.toLocaleString()}/yr
-- Hours Recovered: ${calculations.monthlyHoursRecovered.toLocaleString()} hrs/mo (${calculations.fullTimeEquivalents} FTEs)
+- Hours Recovered: ${calculations.monthlyHoursRecovered.toLocaleString()} hrs/mo
 - Est Payback Period: ~${calculations.paybackMonths} months`,
         source,
         region: 'us',
@@ -446,7 +446,7 @@ export default function AiAgentRoiCalculator({
                   <span className="text-xs font-mono font-normal text-[#6E655F] ml-1">hrs/mo</span>
                 </div>
                 <div className="text-[11px] text-[#6E655F] mt-0.5">
-                  &asymp; {calculations.fullTimeEquivalents} full-time people's worth of time back
+                  hours your team can put into other work
                 </div>
               </div>
 

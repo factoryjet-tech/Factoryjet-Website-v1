@@ -482,7 +482,7 @@ export default function AiReceptionistPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#10B981]" />
-                    <span>Sub-500ms Voice Speed</span>
+                    <span>Natural Voice Speed</span>
                   </div>
                 </div>
               </div>
@@ -634,7 +634,7 @@ export default function AiReceptionistPage() {
                     <span className="text-[#F05A28]">&bull;</span> Zero voicemail hold times or abandoned rings
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Sub-500ms conversational voice response latency
+                    <span className="text-[#F05A28]">&bull;</span> Fast, natural conversational voice responses
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="text-[#F05A28]">&bull;</span> Urgent callers classified and prioritised instantly
@@ -985,7 +985,7 @@ export default function AiReceptionistPage() {
                     <li>&bull; Commercial Account Verification.</li>
                     <li>&bull; Authorized PO Limit Capture.</li>
                     <li>&bull; Building Lockbox &amp; Gate Code Intake.</li>
-                    <li>&bull; Guaranteed SLA Telemetry Logging.</li>
+                    <li>&bull; Call logs and transcripts for every call.</li>
                   </ul>
                 </div>
               </div>
@@ -1011,7 +1011,7 @@ export default function AiReceptionistPage() {
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">01 // TELEPHONY INGRESS &amp; OVERFLOW ROUTING</div>
                 <h3 className="text-lg font-bold text-[#14110F] mb-2">Dedicated SIP Trunking &amp; Smart Hunt Groups.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
-                  We configure carrier-grade SIP trunks through Twilio, wired directly into your existing business numbers. The same Twilio connection that carries the call also carries the SMS confirmations after it. That means one telephony vendor to manage, not three. The AI can run as your full-time 24/7 receptionist. Or it can just handle rollover calls during a morning peak, or take over after 5 PM and on weekends. Either way, zero dropped connections.
+                  We configure carrier-grade SIP trunks through Twilio, wired directly into your existing business numbers. The same Twilio connection that carries the call also carries the SMS confirmations after it. That means one telephony vendor to manage, not three. The AI can run as your full-time 24/7 receptionist. Or it can just handle rollover calls during a morning peak, or take over after 5 PM and on weekends.
                 </p>
               </li>
 
@@ -1321,7 +1321,7 @@ export default function AiReceptionistPage() {
                   <tr>
                     <td className="p-4 sm:p-6 font-bold text-[#14110F]">Response Latency & Conversational Speed.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
-                      Sub-500ms real-time voice
+                      Real-time voice
                     </td>
                     <td className="p-4 sm:p-6 text-[#6E655F]">Long hold times during surges.</td>
                     <td className="p-4 sm:p-6 text-[#6E655F]">1.5s - 3.0s robotic lag.</td>

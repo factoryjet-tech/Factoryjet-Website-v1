@@ -8,7 +8,6 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
@@ -816,11 +815,6 @@ export default function DallasWebDesignPage() {
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="web-design-blueprint">
-          <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-            <div className="pp-wrap">
-              <RegionalBenchmarkCard city="Dallas" vertical="web-design" />
-            </div>
-          </section>
 
           <WebDesignArchitectureBlueprint
             badge="// DALLAS WEB DESIGN &amp; NEXT.JS BLUEPRINT"

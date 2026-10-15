@@ -50,7 +50,7 @@ const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
 ];
 
 const PARTNERS = [
-  'Shopify Plus Certified.',
+  'Registered Shopify Partner.',
   'Online Store 2.0 Architecture.',
   'Shopify Functions & Extensibility.',
   'Custom Liquid & JSON Templates.',

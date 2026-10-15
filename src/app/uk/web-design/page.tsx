@@ -8,7 +8,6 @@ import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import AuthorCard from '@/components/v2/AuthorCard';
 import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import CityLinksUK from '@/components/v2/CityLinksUK';
 import './web-design.css';
 
@@ -886,11 +885,6 @@ export default function WebDesignUKPage() {
         </section>
 
         {/* ═══ 9c. REGIONAL PERFORMANCE BENCHMARK & ARCHITECTURE BLUEPRINT ═══ */}
-        <section className="sec-lg" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-          <div className="wrap">
-            <RegionalBenchmarkCard city="United Kingdom" vertical="web-design" />
-          </div>
-        </section>
 
         <div id="web-architecture-blueprint">
           <WebDesignArchitectureBlueprint />

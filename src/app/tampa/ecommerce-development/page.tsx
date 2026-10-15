@@ -9,7 +9,6 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
@@ -53,9 +52,9 @@ const PARTNERS = [
 ];
 
 const STAT_CARDS = [
-  { num: '540ms', title: 'Average Checkout Speed', desc: 'Sub-second mobile checkout latency engineered to maximize checkout completion rates.', icon: '⚡' },
-  { num: '3.4x', title: 'Average Conversion Lift', desc: 'Measured conversion rate surge after headless architecture and mobile UX replatforming.', icon: '📈' },
-  { num: '99.99%', title: 'Peak Uptime Reliability', desc: 'Zero downtime during Black Friday, Cyber Monday, and high-volume promotional flash sales.', icon: '🛡️' },
+  { num: 'Demo', title: 'Working Draft Before You Sign', desc: 'A working draft of your store, built with your own products, before a contract.', icon: '⚡' },
+  { num: 'Fixed', title: 'Price Agreed Up Front', desc: 'One fixed price for the agreed scope, paid in stages as milestones are met.', icon: '📈' },
+  { num: 'ERP', title: 'Stock and Order Sync', desc: 'Your store connected to QuickBooks, NetSuite or your ERP so stock and orders match.', icon: '🛡️' },
   { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean Next.js repository, custom API connectors, and hosting configurations.', icon: '💎' },
 ];
 
@@ -817,11 +816,6 @@ export default function TampaEcommercePage() {
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="ecommerce-blueprint">
-          <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-            <div className="pp-wrap">
-              <RegionalBenchmarkCard city="Tampa" vertical="ecommerce" />
-            </div>
-          </section>
 
           <EnterpriseArchitectureBlueprint
             badge="// TAMPA ENTERPRISE E-COMMERCE BLUEPRINT"

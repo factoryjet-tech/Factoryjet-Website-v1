@@ -148,7 +148,7 @@ const FAQ_ITEMS = [
     category: 'performance',
     question: 'Can headless architecture prevent site crashes during viral social traffic surges?',
     answer:
-      'Yes. Because static product pages are cached at the CDN edge, incoming traffic surges of 100,000+ simultaneous shoppers hit the edge cache rather than overwhelming your commerce database server, guaranteeing 99.99% uptime during celebrity flash drops.',
+      'Yes. Because static product pages are cached at the CDN edge, incoming traffic surges of 100,000+ simultaneous shoppers hit the edge cache rather than overwhelming your commerce database server, which keeps the store up during celebrity flash drops.',
   },
 
   // TCO & Maintenance Costs

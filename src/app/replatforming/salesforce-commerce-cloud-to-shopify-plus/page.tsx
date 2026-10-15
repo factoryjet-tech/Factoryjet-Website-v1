@@ -11,7 +11,6 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import ZeroDowntimeMigrationMatrix from '@/components/commerce/ZeroDowntimeMigrationMatrix';
 import SeoLinkEquityChecklist from '@/components/commerce/SeoLinkEquityChecklist';
 import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
@@ -546,11 +545,6 @@ export default function SFCCToShopifyPlusPage() {
         </section>
 
         {/* ── 05. THE ENTERPRISE ARCHITECTURE BLUEPRINT (RITOVEX AUTO-SCROLL TABS) ── */}
-        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-          <div className="pp-wrap">
-            <RegionalBenchmarkCard city="Enterprise Replatforming" vertical="replatforming" />
-          </div>
-        </section>
 
         <div id="architecture-blueprint">
           <EnterpriseArchitectureBlueprint

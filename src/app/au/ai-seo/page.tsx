@@ -392,9 +392,9 @@ export default function AiSeoAUPage() {
                 <label className="specrow hold">
                   <input className="workflow-select" type="radio" name="aiseo-au-step" value="3" />
                   <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[2]} /></svg></span>
-                  <span className="idx">yes, we test ourselves too</span>
-                  <span className="title">Answers that named FactoryJet</span>
-                  <span className="tag">0</span>
+                  <span className="idx">every run kept on file</span>
+                  <span className="title">Answers saved with the date asked</span>
+                  <span className="tag">68</span>
                 </label>
               </div>
               <div className="specpanel-foot">RULE · AI answers vary from run to run. A single screenshot proves little.</div>

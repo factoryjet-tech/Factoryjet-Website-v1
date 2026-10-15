@@ -8,7 +8,6 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
 import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
@@ -753,11 +752,6 @@ export default function ChicagoSeoPage() {
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="local-seo-architecture-blueprint">
-          <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-            <div className="pp-wrap">
-              <RegionalBenchmarkCard city="Chicago" vertical="seo" />
-            </div>
-          </section>
 
           <LocalSeoArchitectureBlueprint
             badge="// CHICAGO LOCAL SEO & MAP PACK BLUEPRINT"

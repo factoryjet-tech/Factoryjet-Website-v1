@@ -9,7 +9,6 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
@@ -53,7 +52,7 @@ const PARTNERS = [
 ];
 
 const STAT_CARDS = [
-  { num: '40%+', title: 'Checkout Conversion Lift', desc: 'Shop Pay one-tap acceleration eliminating mobile checkout abandonment.', icon: '⚡' },
+  { num: 'Shop Pay', title: 'Accelerated Checkout', desc: 'Shopify\'s one-tap checkout, set up and tested on your store.', icon: '⚡' },
   { num: '95+', title: 'Mobile Speed Score', desc: 'Sub-second product catalog browsing engineered for higher average order value.', icon: '🚀' },
   { num: '500+', title: 'Commerce Builds', desc: 'Storefronts and wholesale ordering portals deployed across DTC, CPG, and B2B.', icon: '🏢' },
   { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own your custom Liquid theme, product data, and payment gateways.', icon: '🛡️' },
@@ -196,7 +195,7 @@ const PAIN_POINTS = [
     num: '04',
     title: 'Replacing Slow, Vulnerable Legacy Platforms (Magento/Woo)',
     problem: 'Outdated self-hosted platforms require constant server maintenance, security patching, and crash during high-traffic promotional sales events.',
-    solution: 'We execute frictionless migrations to cloud-hosted Shopify Plus or headless architectures, guaranteeing 99.99% uptime during Black Friday and Cyber Monday spikes.',
+    solution: 'We execute frictionless migrations to cloud-hosted Shopify Plus or headless architectures, hosted on infrastructure built for Black Friday and Cyber Monday spikes.',
   },
 ];
 
@@ -823,11 +822,6 @@ export default function AustinEcommerceDevelopmentPage() {
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="ecommerce-blueprint">
-          <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-            <div className="pp-wrap">
-              <RegionalBenchmarkCard city="Austin" vertical="ecommerce" />
-            </div>
-          </section>
 
           <EnterpriseArchitectureBlueprint
             badge="// AUSTIN ENTERPRISE E-COMMERCE BLUEPRINT"

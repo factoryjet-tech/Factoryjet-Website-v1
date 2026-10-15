@@ -9,7 +9,6 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
@@ -52,9 +51,9 @@ const PARTNERS = [
 ];
 
 const STAT_CARDS = [
-  { num: '530ms', title: 'Average Checkout Speed', desc: 'Sub-second mobile checkout latency engineered to maximize checkout completion rates.', icon: '⚡' },
-  { num: '3.6x', title: 'Average Conversion Lift', desc: 'Measured conversion rate surge after headless architecture and mobile UX replatforming.', icon: '📈' },
-  { num: '99.99%', title: 'Peak Uptime Reliability', desc: 'Zero downtime during viral product drops, Black Friday, and high-volume flash sales.', icon: '🛡️' },
+  { num: 'Demo', title: 'Working Draft Before You Sign', desc: 'A working draft of your store, built with your own products, before a contract.', icon: '⚡' },
+  { num: 'Fixed', title: 'Price Agreed Up Front', desc: 'One fixed price for the agreed scope, paid in stages as milestones are met.', icon: '📈' },
+  { num: 'ERP', title: 'Stock and Order Sync', desc: 'Your store connected to QuickBooks, NetSuite or your ERP so stock and orders match.', icon: '🛡️' },
   { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean Next.js repository, custom API connectors, and hosting configurations.', icon: '💎' },
 ];
 
@@ -793,11 +792,6 @@ export default function PortlandEcommercePage() {
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="ecommerce-blueprint">
-          <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-          <div className="pp-wrap">
-            <RegionalBenchmarkCard city="Portland" vertical="ecommerce" />
-          </div>
-        </section>
 
         <EnterpriseArchitectureBlueprint
             badge="// PORTLAND ENTERPRISE E-COMMERCE BLUEPRINT"

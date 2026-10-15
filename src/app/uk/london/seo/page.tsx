@@ -12,7 +12,6 @@ import AICitationDemo from '@/components/v2/AICitationDemo';
 import AreaExplorer from '@/components/v2/AreaExplorer';
 import AuthorCard from '@/components/v2/AuthorCard';
 import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import CityLinksUK from '@/components/v2/CityLinksUK';
 import './london-seo.css';
 
@@ -1087,9 +1086,6 @@ export default function LondonSeoPage() {
                     milliseconds or less, and Cumulative Layout Shift of 0.1 or less. Most London
                     sites we audit fail at least one.
                   </p>
-                </div>
-                <div className="mt-8">
-                  <RegionalBenchmarkCard city="London" vertical="seo" />
                 </div>
               </MotionFadeUp>
             </div>

@@ -22,7 +22,6 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuthorCard from '@/components/v2/AuthorCard';
 import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import CityLinksUK from '@/components/v2/CityLinksUK';
 import Footer from '@/app/uk/sections/Footer';
 
@@ -170,15 +169,6 @@ export default function Page() {
           <Services />
           <SeoEngagement />
 
-          <section
-            className="w-full bg-fj-cream"
-            style={{ padding: '48px 0 16px' }}
-            aria-label="Regional benchmark"
-          >
-            <div className="mx-auto w-full max-w-[1120px] px-4">
-              <RegionalBenchmarkCard city="Birmingham" vertical="web-design" />
-            </div>
-          </section>
 
           {/* Mid-page CTA. Roughly 45% down, well clear of the hero and of the closing CTA. */}
           <MidPageCTA

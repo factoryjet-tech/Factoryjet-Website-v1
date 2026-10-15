@@ -5,7 +5,6 @@ import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import CityLinksUK from '@/components/v2/CityLinksUK';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import Footer from '@/app/uk/sections/Footer';
@@ -216,11 +215,6 @@ export default function Page() {
         </section>
 
         {/* ── REGIONAL BENCHMARK & ARCHITECTURE BLUEPRINT ── */}
-        <section className="py-16 bg-white border-t border-slate-100">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <RegionalBenchmarkCard city="Sheffield" vertical="web-design" />
-          </div>
-        </section>
 
         <div id="sheffield-architecture-blueprint">
           <WebDesignArchitectureBlueprint />

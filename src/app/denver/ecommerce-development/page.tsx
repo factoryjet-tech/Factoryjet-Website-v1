@@ -9,7 +9,6 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
@@ -53,8 +52,8 @@ const PARTNERS = [
 ];
 
 const STAT_CARDS = [
-  { num: '0.4s', title: 'Average Product Load Time', desc: 'Sub-second edge caching across global Cloudflare CDN endpoints for frictionless mobile shopping.', icon: '⚡' },
-  { num: '34%', title: 'Mobile Checkout Lift', desc: 'Average conversion rate increase following headless Next.js re-platforming and one-click checkout.', icon: '📈' },
+  { num: '< 2.5s', title: 'Mobile Load Target', desc: 'We build to pass Google\'s Core Web Vitals on phones.', icon: '⚡' },
+  { num: 'Shop Pay', title: 'Accelerated Checkout', desc: 'Shopify\'s one-tap checkout, set up and tested on your store.', icon: '📈' },
   { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own your custom theme repository, headless API connectors, and NetSuite sync pipelines.', icon: '🛡️' },
   { num: '0', title: 'Monolithic Slowdowns', desc: 'Zero bloated Liquid plugins, render-blocking scripts, or slow database queries choking checkout.', icon: '💎' },
 ];
@@ -825,11 +824,6 @@ export default function DenverEcommercePage() {
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="ecommerce-blueprint">
-          <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-          <div className="pp-wrap">
-            <RegionalBenchmarkCard city="Denver" vertical="ecommerce" />
-          </div>
-        </section>
 
         <EnterpriseArchitectureBlueprint
             badge="// DENVER ECOMMERCE &amp; ERP BLUEPRINT"
