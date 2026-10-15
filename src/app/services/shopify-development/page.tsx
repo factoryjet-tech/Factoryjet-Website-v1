@@ -220,7 +220,7 @@ const SHOPIFY_TIMELINES = [
 const PROOF_CASES = [
   {
     client: 'Belle Maison',
-    market: 'Wholesale distributor, Mumbai',
+    market: 'Wholesale distributor',
     platform: 'Built on Commerceflo',
     what: 'One storefront for retail shoppers and trade buyers. Trade accounts log in, see their own prices, and turn a quote into an order without anyone retyping it.',
     href: '/case-studies/belle-maison-ecommerce-success',
@@ -243,7 +243,7 @@ const SHOPIFY_STATS = [
   },
   {
     value: '500+',
-    label: 'Projects delivered for businesses in the US, the UK, the UAE and India.',
+    label: 'Projects delivered since 2014.',
     microcopy: 'Stores, websites and custom software, built and supported by one team.',
     categoryLabel: 'TRACK RECORD',
   },
@@ -602,7 +602,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'What are the top 10 Shopify development companies in USA?',
     answer:
-      'Many agency roundups focus solely on enterprise shops with massive retainers. FactoryJet focuses on agile mid-market and SMB brands needing top-tier engineering. We provide senior developers, fixed pricing, and rapid delivery. When reviewing agencies, verify who actually writes the code. Ensure they commit to fixed quotes and deliver sub-2s mobile load times.',
+      'Many agency roundups focus solely on enterprise shops with massive retainers. FactoryJet focuses on established and mid-market brands that need senior engineering. We provide senior developers, fixed pricing, and rapid delivery. When reviewing agencies, verify who actually writes the code. Ensure they commit to fixed quotes and deliver sub-2s mobile load times.',
   },
 ];
 
@@ -856,7 +856,7 @@ export default function ShopifyPage() {
                   ))}
                 </div>
                 <p className="mt-5 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
-                  500+ projects delivered for businesses in the US, the UK, the UAE and India.{' '}
+                  500+ projects delivered since 2014.{' '}
                   <Link href="/case-studies" className="font-medium text-[#B23E13] underline underline-offset-2">
                     See all case studies
                   </Link>
@@ -997,7 +997,7 @@ export default function ShopifyPage() {
             {
               icon: '💸',
               title: 'Most agencies disappear after launch day.',
-              body: 'The store goes live, the invoice clears, and the agency moves on. Then an app update breaks checkout and nobody who built it is around. We plan support into the project, and the team that built your store is the team that fixes it. Our engineering team is in India, which is also why a fixed-price build usually costs well under a comparable US agency quote.',
+              body: 'The store goes live, the invoice clears, and the agency moves on. Then an app update breaks checkout and nobody who built it is around. We plan support into the project, and the team that built your store is the team that fixes it.',
             },
           ]}
         />
@@ -1331,7 +1331,7 @@ export default function ShopifyPage() {
               We build the store, then we stay to look after it.
             </h2>
             <p className="mt-4 max-w-[62ch] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-              We are a registered Shopify Partner with 500+ projects delivered across the US, the UK, the UAE and India. Design, Liquid development, launch and support all come from one team, so nobody hands you off.
+              We are a registered Shopify Partner with 500+ projects delivered since 2014. Design, Liquid development, launch and support all come from one team, so nobody hands you off.
             </p>
             <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-12">
               {[

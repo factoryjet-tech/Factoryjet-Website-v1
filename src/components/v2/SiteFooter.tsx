@@ -193,7 +193,7 @@ const DEFAULT_BOTTOM_ROW = {
 export default function SiteFooter({
   locale = 'us',
   logoText = 'FactoryJet',
-  tagline = 'AI-native digital agency for SMBs.',
+  tagline = 'Ecommerce and AI agent development.',
   linkColumns,
   bottomRow = DEFAULT_BOTTOM_ROW,
   variant = 'light',

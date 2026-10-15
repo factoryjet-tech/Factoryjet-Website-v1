@@ -120,7 +120,7 @@ const LIVE_PROJECTS: LiveProject[] = [
 // Do NOT add a testimonial without a real client who actually said it.
 
 const US_STATS = [
-  { value: '523+', label: 'websites built across the US, UK & India' },
+  { value: '523+', label: 'websites built since 2014' },
   { value: '97%', label: 'delivered on time or early' },
   // Was '$50M+ client revenue', never verified. Replaced 2026-09-28 with a confirmed claim.
   { value: '7 days', label: 'website delivery, for sites up to 5 pages' },
@@ -317,7 +317,7 @@ export default function TestimonialsSection({
                         color: 'rgba(245,245,242,0.72)',
                       }}
                     >
-                      {t.role} · {t.city}
+                      {t.role}{isUS ? '' : ` · ${t.city}`}
                     </p>
                   </div>
                 </div>

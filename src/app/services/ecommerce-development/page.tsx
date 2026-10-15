@@ -239,7 +239,7 @@ const BUILD_TIMELINES = [
 const PROOF_CASES = [
   {
     client: 'Belle Maison',
-    market: 'Wholesale distributor, Mumbai',
+    market: 'Wholesale distributor',
     platform: 'Built on Commerceflo',
     what: 'One storefront for retail shoppers and trade buyers. Trade accounts log in, see their own prices, and turn a quote into an order without anyone retyping it.',
     href: '/case-studies/belle-maison-ecommerce-success',
@@ -257,7 +257,7 @@ const ECOMM_STATS = [
   {
     value: '500+',
     label: 'businesses served across web design, e-commerce, and custom software.',
-    microcopy: 'FactoryJet has been building for clients in India, the US, the UK and the UAE for 12+ years.',
+    microcopy: 'FactoryJet has been building for clients for 12+ years.',
     categoryLabel: 'TRACK RECORD',
   },
   {
@@ -529,7 +529,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from other e-commerce agencies?',
     answer:
-      'Four things: price, ownership, support and honesty. A fixed-price build from us usually costs well under a typical agency quote for the same scope. You own the full codebase on launch day, with no lock-in. We stay on after launch for fixes and improvements instead of handing you off. And we tell you when a simpler, cheaper setup fits better. We have delivered 500+ projects across the US, the UK, the UAE and India.',
+      'Four things: price, ownership, support and honesty. Every build has a fixed price, agreed before work starts. You own the full codebase on launch day, with no lock-in. We stay on after launch for fixes and improvements instead of handing you off. And we tell you when a simpler, cheaper setup fits better. We have delivered 500+ projects since 2014.',
   },
   {
     category: 'trust',
@@ -825,7 +825,7 @@ export default function EcommerceDevelopmentPage() {
                   ))}
                 </div>
                 <p className="mt-5 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
-                  500+ projects delivered for businesses in the US, the UK, the UAE and India.{' '}
+                  500+ projects delivered since 2014.{' '}
                   <Link href="/case-studies" className="font-medium text-[#B23E13] underline underline-offset-2">
                     See all case studies
                   </Link>
@@ -970,7 +970,7 @@ export default function EcommerceDevelopmentPage() {
             {
               icon: '💸',
               title: 'Most agencies disappear after launch day',
-              body: 'The store goes live, the invoice clears, and the agency moves on. Then an app update breaks checkout or a theme change slows every page, and nobody who built it is around. We quote support as part of the plan, not as an afterthought, and the team that built your store is the team that fixes it. A fixed-price build from us also usually costs well under a comparable agency quote.',
+              body: 'The store goes live, the invoice clears, and the agency moves on. Then an app update breaks checkout or a theme change slows every page, and nobody who built it is around. We quote support as part of the plan, not as an afterthought, and the team that built your store is the team that fixes it.',
             },
           ]}
         />
@@ -1177,7 +1177,7 @@ export default function EcommerceDevelopmentPage() {
         <div className="ec-growth-market">
         <CityContextSection
           eyebrow="THE US E-COMMERCE MARKET"
-          headline="US E-Commerce Is a $1.19 Trillion Market. Most Small Businesses Capture Almost None of It."
+          headline="US E-Commerce Is a $1.19 Trillion Market. Most Brands Capture Almost None of It."
           leadParagraphs={[
             "US e-commerce sales are projected to reach $1.19 trillion in 2025, 21% of all US retail. The businesses capturing the majority of that growth are not the largest brands. They're the mid-size DTC companies with fast, well-built stores that convert mobile traffic efficiently, run automated post-purchase email flows, and don't lose half their ad spend to slow load times.",
             "FactoryJet has served e-commerce businesses in Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and across the US. We understand what a 10-50 person brand needs from an e-commerce store: not enterprise complexity, but professional design, sub-2-second mobile performance, and a checkout flow that doesn't leak customers.",
@@ -1334,7 +1334,7 @@ export default function EcommerceDevelopmentPage() {
               We build the store, then we stay to look after it.
             </h2>
             <p className="mt-4 max-w-[62ch] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-              FactoryJet has delivered 500+ projects for businesses in the US, the UK, the UAE and India. Design, development, launch and support all come from one team, so nobody hands you off.
+              FactoryJet has delivered 500+ projects since 2014. Design, development, launch and support all come from one team, so nobody hands you off.
             </p>
             <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-12">
               {[

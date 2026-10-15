@@ -20,8 +20,8 @@ export const AUTHORS: Record<string, AuthorProfile> = {
   name: 'Bhavesh Barot',
   slug: 'bhavesh-barot',
   jobTitle: 'Founder & CEO',
-  bio: 'Bhavesh Barot is the Founder and CEO of FactoryJet, an ecommerce and AI services company that has served 500+ businesses across the US, UK, UAE, and India. He started FactoryJet in 2014 as a B2B marketplace for construction materials in India, and today leads the team that designs, builds, implements, and supports online stores, B2B portals, AI agents, AI search and SEO, and websites for DTC and B2B brands. He takes discovery calls himself and writes about ecommerce architecture, AI agents, and how buyers find vendors through Google and AI assistants.',
-  shortBio: 'Founder & CEO of FactoryJet, an ecommerce and AI services company that has served 500+ businesses across the US, UK, UAE, and India. Writes about ecommerce builds, AI agents, and AI search.',
+  bio: 'Bhavesh Barot is the Founder and CEO of FactoryJet, an ecommerce and AI services company that has served 500+ businesses since 2014. He started FactoryJet in 2014 as a B2B marketplace for construction materials in India, and today leads the team that designs, builds, implements, and supports online stores, B2B portals, AI agents, AI search and SEO, and websites for DTC and B2B brands. He takes discovery calls himself and writes about ecommerce architecture, AI agents, and how buyers find vendors through Google and AI assistants.',
+  shortBio: 'Founder & CEO of FactoryJet, an ecommerce and AI services company that has served 500+ businesses since 2014. Writes about ecommerce builds, AI agents, and AI search.',
   // "10+", not "25+". PRODUCT.md fixes the experience framing at decade-plus and
   // rules out 25 years explicitly. This value renders on the author page AND on
   // every blog post byline, so it was the widest-reaching instance of the claim.

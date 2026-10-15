@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Web Design & Development Services USA | FactoryJet',
     description:
-      '500+ websites built for businesses across the US, UK, UAE and India. Custom web design, Shopify development, AI agents, and web apps, delivered in 7 days, engineered for measurable outcomes.',
+      '500+ businesses served since 2014. Custom web design, Shopify development, AI agents, and web apps, delivered in 7 days, engineered for measurable outcomes.',
     url: 'https://factoryjet.com/services',
     siteName: 'FactoryJet',
     type: 'website',
@@ -297,10 +297,6 @@ const FAQS = [
   {
     q: 'Can you really deliver a website in 7 days?',
     a: 'Yes, for standard business websites up to 5 pages. We\'ve done it 500+ times. The 7-day clock starts the day you approve the Figma design. If we miss the deadline for any reason on our end, you don\'t pay.',
-  },
-  {
-    q: 'How do you keep pricing lower than typical agency quotes?',
-    a: 'We work fixed-price and milestone-paid, with 12+ years of experience specifically serving the US market and US-hour project management. Our lean operations let us scope accurately on the first call. The design quality, code quality, and communication are exactly what you\'d get from a traditional agency that charges several times more.',
   },
   {
     q: 'What\'s included in the fixed price?',
