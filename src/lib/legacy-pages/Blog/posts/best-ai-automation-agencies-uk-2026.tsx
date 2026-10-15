@@ -1,3 +1,4 @@
+import visualQa from './best-ai-automation-agencies-uk-2026.visual-qa.module.css';
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
 
@@ -555,12 +556,12 @@ export const post: BlogPost = {
                 <strong>Based:</strong> {a.based}. <strong>Type:</strong> {a.type}.
               </p>
               <p className="mb-3">{a.what}</p>
-              <ul className="list-disc pl-6 mb-3 space-y-1">
-                <li><strong>Best for:</strong> {a.bestFor}</li>
-                <li><strong>Typical client:</strong> {a.clients}.</li>
-                <li><strong>Tools and systems named:</strong> {a.platforms}.</li>
-                <li><strong>Worth asking them:</strong> {a.ask}</li>
-              </ul>
+              <table className={visualQa.profileFacts} tabIndex={0} aria-label={a.name}><tbody>
+                <tr><th scope="row"><strong>Best for:</strong></th><td> {a.bestFor}</td></tr>
+                <tr><th scope="row"><strong>Typical client:</strong></th><td> {a.clients}.</td></tr>
+                <tr><th scope="row"><strong>Tools and systems named:</strong></th><td> {a.platforms}.</td></tr>
+                <tr><th scope="row"><strong>Worth asking them:</strong></th><td> {a.ask}</td></tr>
+              </tbody></table>
               <p className="text-sm text-gray-600">
                 Source, read 11 October 2026: <a href={a.source} className="text-[#B23E13] underline" rel="noopener" target={a.source.startsWith('https://factoryjet.com') ? undefined : '_blank'}>{a.source.replace('https://', '')}</a>
                 {a.also && (
