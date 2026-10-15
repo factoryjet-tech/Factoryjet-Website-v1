@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { RECOGNITION_PROFILES } from '@/data/recognitionProfiles';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Link from 'next/link';
 import { Megaphone, Users, ShoppingCart, Mail, Film, Store, Target, Sparkles, Check } from 'lucide-react';
@@ -1125,10 +1126,11 @@ export default function EcommerceMarketingAgencyPage() {
                 </p>
                 <div className="mt-5 flex flex-wrap items-center gap-4 border-t border-[#EAEAE3] pt-4 font-fj-body text-[13px] text-[#6B6B62]">
                   <span>Recognized on</span>
-                  <b className="font-fj-display font-bold text-[#141414]">Clutch</b>
-                  <b className="font-fj-display font-bold text-[#141414]">GoodFirms</b>
-                  <b className="font-fj-display font-bold text-[#141414]">DesignRush</b>
-                  <b className="font-fj-display font-bold text-[#141414]">SoftwareSuggest</b>
+                  {RECOGNITION_PROFILES.slice(0, 4).map((p) => (
+                    <a key={p.href} href={p.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">
+                      <b className="font-fj-display font-bold text-[#141414]">{p.label}</b>
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>

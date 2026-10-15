@@ -297,7 +297,9 @@
 .uk-sseo .col-4 {display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 
 @media(max-width:960px) {
-.uk-sseo .col-6040, .uk-sseo .col-4060 {grid-template-columns:1fr}
+/* minmax(0,1fr), not 1fr: lets the 560px comparison table scroll inside its cell on a phone
+   instead of stretching the cell and making the whole page scroll sideways. */
+.uk-sseo .col-6040, .uk-sseo .col-4060 {grid-template-columns:minmax(0,1fr)}
 
 }
 @media(max-width:720px) {
@@ -407,7 +409,7 @@
 
   .uk-sseo h1 {font-size:clamp(1.75rem,6vw,2.5rem)!important}
 
-  .uk-sseo .col-6040, .uk-sseo .col-4060 {grid-template-columns:1fr!important}
+  .uk-sseo .col-6040, .uk-sseo .col-4060 {grid-template-columns:minmax(0,1fr)!important}
 
   .uk-sseo .col-3 {grid-template-columns:1fr!important}
 

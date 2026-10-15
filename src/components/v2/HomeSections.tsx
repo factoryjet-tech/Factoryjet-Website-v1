@@ -495,9 +495,13 @@ export default function HomeSections() {
             <div className="workgrid">
               {WORK.map((w) => (
                 <article className="workcard" key={w.client}>
-                  <div className={w.image ? 'workshot' : 'workshot flow'}>
+                  <div className={w.image ? 'workshot' : 'workshot workshot-steps'}>
                     {w.image ? (
-                      <img width="1200" height="750" src={w.image} alt={w.alt} loading="lazy" decoding="async" />
+                      // The section says "Open any of them", so the screenshot opens the live site.
+                      // Every card with a screenshot has a live site; the one without (WLG) shows steps.
+                      <a className="workshot-link" href={w.site} target="_blank" rel="noopener">
+                        <img width="1200" height="750" src={w.image} alt={w.alt} loading="lazy" decoding="async" />
+                      </a>
                     ) : (
                       <ol className="agentflow" aria-label="How the Washington Law Group agent works">
                         <li><span>01</span>Reads licensed news, police and highway patrol feeds every two hours</li>

@@ -216,7 +216,6 @@ const jsonLd = {
 export default function ShopifySeoPage() {
   return (
     <>
-      <link rel="preconnect" href="https://im.runware.ai" crossOrigin="" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -253,10 +252,9 @@ export default function ShopifySeoPage() {
 
       {/* Row 1: image card (4 wide) + scorecard (2 wide) */}
       <div className="bento-span4" style={{ position: 'relative', minHeight: '320px', borderRadius: '16px', overflow: 'hidden' }}>
-        <img width="1200" height="800" fetchPriority="high" loading="eager" src="https://im.runware.ai/image/os/a10dlim3/ws/3/ii/068f50f7-9c40-4fa7-8564-9797de4d375e.webp"
-          alt="Shopify SEO audit showing organic search improvements for a UK Shopify store; FactoryJet"
+        <img width="1400" height="933" fetchPriority="high" loading="eager" src="/images/uk/shopify-development/shopify-development-hero.webp"
+          alt="Two people at a desk reviewing a Shopify store product page on a desktop screen"
           style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block', minHeight: '320px' }} />
-<div style={{ display: 'none', width: '100%', height: '100%', minHeight: '320px', borderRadius: 'inherit', overflow: 'hidden' }}><img src="https://im.runware.ai/image/os/a07dlim3/ws/3/ii/3bf8c844-931e-4ecb-809d-42f6ab6e318a.webp" width="1344" height="600" alt="FactoryJet Shopify SEO UK" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} /></div>
         <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(to top,rgba(15,15,18,.8) 0%,transparent 50%)' }}></div>
         <div style={{ position: 'absolute', bottom: '24px', left: '24px', right: '24px' }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
@@ -803,15 +801,14 @@ export default function ShopifySeoPage() {
 ════════════════════════════════════════════════ */}
 <section style={{ background: 'var(--ink)', padding: '0' }}>
   <div style={{ maxWidth: '100%', position: 'relative' }}>
-    <img width="1200" height="600" loading="lazy" src="https://im.runware.ai/image/os/a07dlim3/ws/3/ii/3bf8c844-931e-4ecb-809d-42f6ab6e318a.webp"
-      alt="Shopify organic search performance results for FactoryJet UK client; GSC data showing ranking improvements"
+    <img width="1200" height="900" loading="lazy" src="/images/uk/service-ecommerce-order-packing-bench.webp"
+      alt="Two people packing online orders at a bench in a small stockroom"
       style={{ width: '100%', height: '340px', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
-<div style={{ display: 'none', width: '100%', height: '100%', minHeight: '320px', borderRadius: 'inherit', overflow: 'hidden' }}><img src="https://im.runware.ai/image/os/a10dlim3/ws/3/ii/068f50f7-9c40-4fa7-8564-9797de4d375e.webp" width="1344" height="600" alt="FactoryJet Shopify SEO UK" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} /></div>
     <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(to bottom,rgba(15,15,18,.7) 0%,rgba(15,15,18,.4) 50%,rgba(15,15,18,.85) 100%)' }}></div>
     <div style={{ position: 'absolute', inset: '0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div style={{ textAlign: 'center', maxWidth: '700px', padding: '0 24px' }}>
         <p style={{ fontFamily: 'var(--fd)', fontSize: 'clamp(1.5rem,4vw,2.5rem)', fontWeight: '700', lineHeight: '1.25', color: '#fff', letterSpacing: '-.025em' }}>"We'd had three other UK Shopify SEO agencies. FactoryJet was the first one that could actually edit our theme."</p>
-        <p style={{ fontFamily: 'var(--fm)', fontSize: '11px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)', marginTop: '16px' }}>UK Shopify store founder, home décor</p>
+        <p style={{ fontFamily: 'var(--fm)', fontSize: '11px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,.85)', marginTop: '16px' }}>UK Shopify store founder, home décor</p>
       </div>
     </div>
   </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { RECOGNITION_PROFILES } from '@/data/recognitionProfiles';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Link from 'next/link';
 import { Megaphone, Search, ClipboardList, LayoutTemplate, ShieldCheck, Workflow, Check } from 'lucide-react';
@@ -490,7 +491,7 @@ export default function AmazonAgencyPage() {
                 <div className="role">Led by the founder</div>
                 <h3 className="disp">Bhavesh Barot, Founder of FactoryJet</h3>
                 <p>Twelve years building and scaling commerce for 500+ businesses. Every engagement is run by FactoryJet&rsquo;s senior in-house team, not handed to subcontractors. You talk to the people doing the work.</p>
-                <div className="amz-reco"><span>Recognized on</span> <b>Clutch</b> <b>GoodFirms</b> <b>DesignRush</b> <b>SoftwareSuggest</b></div>
+                <div className="amz-reco"><span>Recognized on</span>{RECOGNITION_PROFILES.slice(0, 4).map((p) => (<a key={p.href} href={p.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4"><b>{p.label}</b></a>))}</div>
               </div>
             </div>
             <div className="amz-teamframe">

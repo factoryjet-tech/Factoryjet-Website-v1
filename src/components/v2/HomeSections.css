@@ -92,7 +92,19 @@
 .homePage .workcard { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
 .homePage .workshot { aspect-ratio: 16 / 10; background: var(--accent-wash); border-bottom: 1px solid var(--line); overflow: hidden; }
 .homePage .workshot img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
-.homePage .agentflow { list-style: none; margin: 0; padding: 22px 24px; height: 100%; display: grid; align-content: center; gap: 10px; }
+.homePage .workshot-link { display: block; height: 100%; }
+.homePage .workshot-link:focus-visible { outline-offset: -4px; }
+/* Steps panel for the card that has no screenshot. The modifier is workshot-steps, never
+   "flow": HomeExtraSections.css styles .homePage .flow (the integration rows) as a 168px
+   two-column grid, and that rule was matching this box and squeezing the list into 168px.
+   The 16:10 height comes from the ::before spacer (62.5% of the width, less the 1px bottom
+   border), and the list sits in the same grid cell. So the box matches the screenshot boxes
+   beside it and grows when the steps need more room, where overflow hidden used to clip
+   them. Do not put aspect-ratio back on the box: Safari then widens it past the card when
+   the list is taller than 16:10 (tested in WebKit 26, 12 Oct 2026). */
+.homePage .workshot-steps { aspect-ratio: auto; display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; overflow: visible; }
+.homePage .workshot-steps::before { content: ''; grid-area: 1 / 1; padding-top: calc(62.5% - 1px); }
+.homePage .agentflow { grid-area: 1 / 1; list-style: none; margin: 0; padding: 22px 24px; display: grid; gap: 10px; }
 .homePage .agentflow li { display: flex; gap: 12px; align-items: baseline; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; font-size: 13.5px; line-height: 1.45; color: var(--ink); }
 .homePage .agentflow li span { font-family: var(--mono); font-size: 10px; color: var(--accent-text); letter-spacing: .06em; }
 .homePage .workbody { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
@@ -102,9 +114,23 @@
 .homePage .worklinks { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 18px; font-family: var(--mono); font-size: 12px; font-weight: 600; }
 .homePage .worklinks a, .homePage .workmore a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 4px; }
 .homePage .workmore { margin-top: 26px; color: var(--body); font-size: 14.5px; line-height: 1.7; }
+/* The two-column cards get narrow below 1080px (470px wide at 1024), so the steps tighten
+   to stay inside the 16:10 box and line up with the screenshot beside them. */
+@media (max-width: 1080px) {
+  .homePage .agentflow { padding: 14px 16px; gap: 7px; }
+  .homePage .agentflow li { font-size: 12.5px; padding: 7px 12px; }
+}
+/* 761 to 820px: still two columns, but the page wrap is capped at 620px, so each card is
+   300px wide and its 16:10 box is 186px tall. Four bordered rows need about 239px there.
+   Hairline dividers in place of the row boxes bring the list to 184px, which fits. */
+@media (min-width: 761px) and (max-width: 820px) {
+  .homePage .agentflow { padding: 9px 14px; gap: 0; }
+  .homePage .agentflow li { gap: 9px; padding: 5px 0; line-height: 1.4; background: none; border: 0; border-bottom: 1px solid var(--line-strong); border-radius: 0; }
+  .homePage .agentflow li:last-child { border-bottom: 0; }
+}
 @media (max-width: 760px) {
   .homePage .workgrid { grid-template-columns: 1fr; gap: 16px; }
-  .homePage .workshot.flow { aspect-ratio: auto; }
+  .homePage .workshot-steps::before { display: none; }
   .homePage .agentflow { padding: 16px; gap: 8px; }
   .homePage .agentflow li { font-size: 12.5px; padding: 8px 12px; }
 }

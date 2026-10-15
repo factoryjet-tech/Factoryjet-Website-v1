@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { RECOGNITION_PROFILES } from '@/data/recognitionProfiles';
 import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
@@ -402,7 +403,7 @@ export default function AgenticCommercePage() {
                 <div className="role">Written by the founder</div>
                 <h3 className="disp">Bhavesh Barot, Founder of FactoryJet</h3>
                 <p>Twelve years building and scaling high-performance commerce systems for 500+ businesses. We build agent-ready architectures for US brands, ensuring clean data feeds, sub-second edge speeds, and full readiness for AI shopping agents.</p>
-                <div className="agc-reco"><span>Recognized on</span> <b>Clutch</b> <b>GoodFirms</b> <b>DesignRush</b> <b>SoftwareSuggest</b></div>
+                <div className="agc-reco"><span>Recognized on</span>{RECOGNITION_PROFILES.slice(0, 4).map((p) => (<a key={p.href} href={p.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4"><b>{p.label}</b></a>))}</div>
               </div>
             </div>
             <div className="agc-teamframe" style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', minHeight: '300px' }}>

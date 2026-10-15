@@ -163,7 +163,7 @@ const faqSchema = {
 const CHANNELS = [
   { Icon: Users, title: 'Affiliate & creator program', body: 'We find, vet, and manage the creators who sell your product for a commission you set. Creators are often the fastest way to reach new buyers on TikTok Shop.', link: '/blog/how-to-sell-on-tiktok-shop-2026', label: 'How TikTok Shop selling works', span: 'w3' },
   { Icon: Megaphone, title: 'TikTok Shop ads', body: 'GMV Max campaigns, TikTok’s default for Shop ads, plus Spark Ads that run a creator’s own post. Judged on sales and return on ad spend, not views.', link: '/services/ecommerce-growth-agency', label: 'Full-funnel growth', span: 'w3' },
-  { Icon: ClipboardList, title: 'Shop setup & management', body: 'Seller Center setup, catalog, orders, reviews, and policy checks, so daily operations never become the bottleneck.', link: '/contact', label: 'Talk to our team', span: 'cell' },
+  { Icon: ClipboardList, title: 'Shop setup & management', body: 'Seller Center setup, catalog, orders, reviews, and policy checks, so daily operations never become the bottleneck.', link: '/blog/tiktok-shop-fees-and-agency-cost-2026', label: 'Fees and agency cost guide', span: 'cell' },
   { Icon: Video, title: 'Content & LIVE selling', body: 'Short product videos and scheduled LIVE shopping streams that sell with demos, urgency, and real-time answers.', link: '/portfolio', label: 'See our work', span: 'cell' },
   { Icon: Search, title: 'Listing & catalog fixes', body: 'Titles, images, reviews, and pricing, so a buyer who taps through from a video actually checks out.', link: '/services/ecommerce-seo', label: 'Ecommerce SEO', span: 'cell' },
 ];
@@ -264,7 +264,9 @@ export default function TikTokShopAgencyPage() {
               <span className="tts-pill"><span className="d" /> TikTok Shop Agency · United States</span>
               <h1 className="tts-h1 disp">TikTok Shop agency for US brands, from setup to <span className="u">sales</span></h1>
               <p className="tts-lead">We set up your TikTok Shop, find creators who sell it for you, run your TikTok Shop ads and LIVE shopping streams, and handle the daily work. One senior in-house team with 12 years in commerce.</p>
-              <HeroInlineForm region="us" source="us_services_tiktok_shop_agency_hero" submitLabel="Get my free audit" />
+              <div id="tiktok-audit-form" className="scroll-mt-28">
+                <HeroInlineForm region="us" source="us_services_tiktok_shop_agency_hero" service="E-commerce" submitLabel="Get my free audit" />
+              </div>
               <div className="tts-trust">
                 <span className="tk"><Check size={15} strokeWidth={2.4} /> 500+ businesses served</span>
                 <span className="tk"><Check size={15} strokeWidth={2.4} /> 12 years in commerce</span>
@@ -412,9 +414,10 @@ export default function TikTokShopAgencyPage() {
 
         {/* MID-PAGE CTA (light band, real link, no client JS) */}
         <MidPageCTA
-          headline="Want a second opinion on your TikTok Shop?"
+          headline="Get a second opinion on your TikTok Shop."
           sub="Send us your brand or shop link. We will review your listings, creator program, and ads, and send back a plain-English 90-day plan you can keep."
           label="Get a free TikTok Shop audit"
+          href="#tiktok-audit-form"
         />
 
         {/* CONNECTED TO YOUR STORE */}
@@ -540,7 +543,7 @@ export default function TikTokShopAgencyPage() {
               <span className="tts-eyebrow">Get started</span>
               <h2 className="disp">See what your TikTok Shop is leaving on the table</h2>
               <p>Send us your brand and get a free, no-obligation TikTok Shop audit from FactoryJet&rsquo;s senior team.</p>
-              <Link href="/contact" className="tts-cta-btn">Get my free TikTok Shop audit</Link>
+              <a href="#tiktok-audit-form" className="tts-cta-btn">Get my free TikTok Shop audit</a>
               <div className="obj">No long contracts. Keep the audit either way.</div>
             </div>
           </div>

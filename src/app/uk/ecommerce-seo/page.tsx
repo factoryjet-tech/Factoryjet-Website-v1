@@ -369,8 +369,8 @@ export default function EcommerceSeoPage() {
       fetch here would compete with the real above-the-fold content for bandwidth. */}
   <div className="wrap band-split">
     <div style={{ position: 'relative', overflow: 'hidden' }}>
-      <img width="1200" height="800" loading="lazy" decoding="async" src="https://im.runware.ai/image/os/a02d21/ws/3/ii/cea4b179-9321-4a20-b849-4cae7995f000.webp"
-        alt="Ecommerce SEO dashboard showing organic traffic and revenue growth for a UK online store, FactoryJet"
+      <img width="900" height="672" loading="lazy" decoding="async" src="/images/uk/shared/uk-ecommerce-fulfilment.webp"
+        alt="A shop owner packing an online order beside shelves of boxed stock"
         style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
       <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(to right,transparent 62%,#FAFAF7 100%)' }}></div>
     </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { RECOGNITION_PROFILES } from '@/data/recognitionProfiles';
 import Link from 'next/link';
 
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
@@ -339,7 +340,7 @@ export default function AiVisibilityCheckerPage() {
                   A decade building and scaling commerce and search for 500-plus businesses. FactoryJet works at the front edge of
                   AI search, helping brands get recommended by ChatGPT, Perplexity, and Google AI Overviews, not just ranked on Google.
                 </p>
-                <p className="avc-reco">Recognized on <b>Clutch</b> · <b>GoodFirms</b> · <b>DesignRush</b> · <b>SoftwareSuggest</b></p>
+                <p className="avc-reco">Recognized on {RECOGNITION_PROFILES.slice(0, 4).map((p, i) => (<span key={p.href}>{i > 0 ? ' · ' : ''}<a href={p.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4"><b>{p.label}</b></a></span>))}</p>
               </div>
             </div>
             <div className="avc-trust-card">
