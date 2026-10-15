@@ -1,3 +1,4 @@
+import visualQa from './ai-voice-agents-vs-human-answering-services-cost-comparison-2026.visual-qa.module.css';
 import React from 'react';
 import Link from 'next/link';
 import type { BlogPost } from '../data.types';
@@ -177,7 +178,7 @@ export const post: BlogPost = {
       </p>
 
       <div className="overflow-x-auto my-8 not-prose">
-        <table className="w-full text-left text-sm border border-[#E7DED6] bg-white rounded-xl shadow-sm">
+        <table className={`w-full text-left text-sm border border-[#E7DED6] bg-white rounded-xl shadow-sm ${visualQa.priceTable}`}>
           <thead className="bg-[#FFF8F5] border-b border-[#E7DED6]">
             <tr>
               <th className="p-4 font-bold text-[#14110F]">Product and source</th>
@@ -217,7 +218,7 @@ export const post: BlogPost = {
         A business that wants every call answered can buy one of four services. Each suits a different kind of call, and each tells you a different amount on its price list.
       </p>
 
-      <h3>1. A Pay-As-You-Go Voice Agent Platform</h3>
+      <table className={visualQa.profileFacts} tabIndex={0}><tbody><tr><th scope="row"><h3>1. A Pay-As-You-Go Voice Agent Platform</h3></th><td>
       <p>
         Retell AI, Bland AI and Vapi sell the working parts of a voice agent and bill by the minute. Someone still has to design the conversation, connect the calendar or CRM and test it. That can be your own developer or a firm you hire. This route suits a business with technical help on hand, and one whose call volume swings through the year: Retell AI and Vapi state no minimums, and the Bland AI Start plan carries a $0 platform fee.
       </p>
@@ -225,7 +226,7 @@ export const post: BlogPost = {
         Read what the per-minute number covers. Every call uses four parts: a phone line, speech to text, a language model that decides what to say, and text to speech. Bland AI says its rate covers the language model, speech to text and text to speech, with telephony billed separately. Vapi says its $0.05 a minute is for the Vapi platform, with models passed through at cost. Retell AI publishes a range and a calculator that moves with the model, voice and telephony you pick. Two per-minute numbers compare only when they cover the same parts.
       </p>
 
-      <h3>2. A Ready-Made AI Receptionist Product</h3>
+      </td></tr><tr><th scope="row"><h3>2. A Ready-Made AI Receptionist Product</h3></th><td>
       <p>
         Dialzara, Goodcall, My AI Front Desk and Smith.ai sell a finished agent you subscribe to. Depending on the plan, it answers, takes messages, books appointments and transfers calls. If your calls are reasonably standard and your scheduling software is mainstream, one of these products will be live faster and cheaper than anything custom, and for many businesses it is the right answer.
       </p>
@@ -233,7 +234,7 @@ export const post: BlogPost = {
         Check the unit before you compare two of them. Dialzara and My AI Front Desk include an allowance of minutes. Smith.ai counts calls. Goodcall counts unique customers and says it never meters minutes. At the enterprise end, Synthflow lists contracts from $30,000 a year.
       </p>
 
-      <h3>3. A Human Answering Service</h3>
+      </td></tr><tr><th scope="row"><h3>3. A Human Answering Service</h3></th><td>
       <p>
         A person picks up. That counts most on the hard calls: a caller who is frustrated, a caller describing a serious injury, a caller asking for a specific specialist.
       </p>
@@ -251,7 +252,7 @@ export const post: BlogPost = {
         A shared service answers for many unrelated businesses, so the same operator may take a dental clinic call straight after a roofing inquiry. Before you sign, ask what its operators can do beyond taking a message, such as following your scheduling rules, checking live inventory or triaging a technical problem.
       </p>
 
-      <h3>4. A Custom-Built Voice Agent</h3>
+      </td></tr><tr><th scope="row"><h3>4. A Custom-Built Voice Agent</h3></th><td>
       <p>
         A custom build earns its cost when you hit a wall those products cannot pass: an intake process that does not fit their logic flows, a system they will not integrate with, a legal or industry requirement they cover only on a plan priced beyond your budget, or a workflow spanning several tools. On a custom build you own the repository, the telephony backend and the prompt state machines outright, with no per-seat licensing. The agent writes confirmed appointments and parsed intake straight into your practice management system, DMS or CRM.
       </p>
@@ -265,6 +266,7 @@ export const post: BlogPost = {
         <Link href="/blog/how-much-does-an-ai-medical-receptionist-cost-2026" className={linkClass}>what an AI medical receptionist costs</Link>.
       </p>
 
+      </td></tr></tbody></table>
       <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg my-8 not-prose">
         <h3 className="text-lg font-bold text-[#14110F] mb-3">Find out if a ready-made product covers your calls</h3>
         <p className="text-base text-[#46403B] mb-4">
@@ -298,11 +300,11 @@ export const post: BlogPost = {
       <p>
         Three of the lists we read have a plan that bills only for use. That suits a business whose calls rise and fall with the season, such as a construction or roofing contractor.
       </p>
-      <ul>
-        <li><strong>Retell AI:</strong> $0.07 to $0.31 a minute. It starts at $0, with no minimums or contracts, and includes 20 concurrent calls.</li>
-        <li><strong>Bland AI, Start plan:</strong> $0.14 a minute with a $0 platform fee. It includes 10 concurrent calls and up to 100 calls a day.</li>
-        <li><strong>Vapi, usage only:</strong> $0.05 a minute for the Vapi platform, with models passed through at cost. It starts at $0 with no minimum minutes and 4 concurrent calls, and lists extra lines at $10 a line a month.</li>
-      </ul>
+      <table className={visualQa.profileFacts} tabIndex={0}><tbody>
+        <tr><th scope="row"><strong>Retell AI:</strong></th><td> $0.07 to $0.31 a minute. It starts at $0, with no minimums or contracts, and includes 20 concurrent calls.</td></tr>
+        <tr><th scope="row"><strong>Bland AI, Start plan:</strong></th><td> $0.14 a minute with a $0 platform fee. It includes 10 concurrent calls and up to 100 calls a day.</td></tr>
+        <tr><th scope="row"><strong>Vapi, usage only:</strong></th><td> $0.05 a minute for the Vapi platform, with models passed through at cost. It starts at $0 with no minimum minutes and 4 concurrent calls, and lists extra lines at $10 a line a month.</td></tr>
+      </tbody></table>
       <p>
         In a spike, the number that decides who gets an answer is concurrent calls: how many callers the plan can talk to at the same moment. Goodcall handles peaks a different way. It lists no per-minute charge and bills by unique customer, so a long booking call counts the same as a short one.
       </p>
@@ -311,13 +313,13 @@ export const post: BlogPost = {
       <p>
         Most businesses get more than one kind of call, so the answer is often two services working together.
       </p>
-      <ul>
-        <li><strong>Routine bookings and standard questions:</strong> an off-the-shelf AI receptionist, when your scheduling software is mainstream.</li>
-        <li><strong>Calls that arrive all at once:</strong> an AI agent, bought or built, up to the concurrent call limit on your plan. On a product, check that limit on the plan you are buying.</li>
-        <li><strong>Calls where judgement counts:</strong> a person. When a caller is frustrated, describes a serious injury or asks for a specific specialist, the call should go to a human answering service or to your own on-call staff. A well-built agent transfers it with a summary of the conversation already captured.</li>
-        <li><strong>Calls that depend on your own systems:</strong> a custom-built voice agent, when your intake does not fit the logic flows of a product, the product will not integrate with a system you use, or one workflow spans several tools.</li>
-        <li><strong>After-hours calls:</strong> the place to start with any AI agent. Begin with after-hours only, listen to real recordings every week, and expand once you trust it.</li>
-      </ul>
+      <table className={visualQa.profileFacts} tabIndex={0}><tbody>
+        <tr><th scope="row"><strong>Routine bookings and standard questions:</strong></th><td> an off-the-shelf AI receptionist, when your scheduling software is mainstream.</td></tr>
+        <tr><th scope="row"><strong>Calls that arrive all at once:</strong></th><td> an AI agent, bought or built, up to the concurrent call limit on your plan. On a product, check that limit on the plan you are buying.</td></tr>
+        <tr><th scope="row"><strong>Calls where judgement counts:</strong></th><td> a person. When a caller is frustrated, describes a serious injury or asks for a specific specialist, the call should go to a human answering service or to your own on-call staff. A well-built agent transfers it with a summary of the conversation already captured.</td></tr>
+        <tr><th scope="row"><strong>Calls that depend on your own systems:</strong></th><td> a custom-built voice agent, when your intake does not fit the logic flows of a product, the product will not integrate with a system you use, or one workflow spans several tools.</td></tr>
+        <tr><th scope="row"><strong>After-hours calls:</strong></th><td> the place to start with any AI agent. Begin with after-hours only, listen to real recordings every week, and expand once you trust it.</td></tr>
+      </tbody></table>
 
       <h2 id="compare">How to Compare Two Price Lists in Five Steps</h2>
       <ol>
@@ -334,7 +336,7 @@ export const post: BlogPost = {
       </p>
 
       <div className="my-10 p-8 rounded-2xl bg-[#FFF8F5] border border-[#E7DED6] text-center not-prose">
-        <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
+        <div className="font-mono text-xs text-[#B23E13] font-bold uppercase mb-2">
           // SCHEDULE DIRECT VOICE ARCHITECTURE AUDIT
         </div>
         <h3 className="text-2xl font-bold text-[#14110F] mb-4">
@@ -347,7 +349,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#F05A28] text-white font-bold hover:bg-[#D8441A] transition-colors shadow-md text-sm"
+          className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#B23E13] text-white font-bold hover:bg-[#9A3510] transition-colors shadow-md text-sm"
         >
           Book 30-Min Architecture Discovery Call &rarr;
         </a>
