@@ -152,14 +152,15 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Sep 20, 2026',
+  dateModified: 'Oct 12, 2026',
   readTime: '16 min read',
   imageUrl: '/blog-images/how-to-choose-headless-commerce-agency-2026.webp',
   imageAlt:
     'An abstract technical illustration of a storefront interface connected by a single line to a cluster of backend server blocks, representing headless commerce architecture',
   meta: {
-    title: 'How to Choose an Agency for Headless Commerce (Shopify or Magento)',
+    title: 'Choosing a Headless Commerce Agency for Magento or Shopify',
     description:
-      'A platform-neutral guide to evaluating a headless commerce agency for Shopify or Adobe Commerce: architecture depth, Hydrogen vs. the Storefront API, PWA Studio and GraphQL, ownership, support, and 29 buyer FAQs.',
+      'How to vet a headless commerce agency for Adobe Commerce (Magento) or Shopify. Architecture depth, API experience, code ownership and support.',
   },
   keyTakeaways: [
     'Headless commerce splits the storefront shoppers see from the backend that runs orders and inventory, connected through an API. It is a real architecture decision, not a marketing term.',
@@ -189,7 +190,7 @@ export const post: BlogPost = {
                 'A platform-neutral guide to evaluating a headless commerce agency for Shopify or Adobe Commerce (Magento): architecture depth, Hydrogen vs. the Storefront API, PWA Studio and GraphQL, ownership, and support.',
               inLanguage: 'en-US',
               datePublished: '2026-09-20',
-              dateModified: '2026-09-20',
+              dateModified: '2026-10-12',
               author: { '@type': 'Person', name: 'Bhavesh Barot' },
               publisher: {
                 '@type': 'Organization',

@@ -97,7 +97,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // so content edits AND template edits both bump the timestamp.
   const cityHubs: MetadataRoute.Sitemap = cities.map((city) => {
     const isBespoke = BESPOKE_UK_CITY_SLUGS.has(city.slug)
-    const cityDataFile = `src/data/uk/cities/${city.slug}.json`
+    const cityDataFile = 'src/data/uk/index.ts'
     const pageSource = isBespoke
       ? `src/app/uk/${city.slug}/page.tsx`
       : DYNAMIC_CITY_PAGE
@@ -125,8 +125,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ({ city, service }) => ({
       url: `${SITE_URL}/uk/${city}/${service}`,
       lastModified: getMaxLastMod(
-        `src/data/uk/cities/${city}.json`,
-        `src/data/uk/services/${service}.json`,
+        'src/data/uk/index.ts',
         `src/app/uk/${city}/${service}/page.tsx`,
       ),
       changeFrequency: CHANGEFREQ.bespoke as ChangeFreq,

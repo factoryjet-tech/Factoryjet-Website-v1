@@ -10,6 +10,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'September 17, 2026',
+  dateModified: 'Oct 11, 2026',
   readTime: '17 min read',
   imageUrl: '/images/ai-support/support-ops-ticket-dashboard.jpg',
   imageAlt:

@@ -108,7 +108,14 @@ export function getFileLastMod(relativePath: string): Date {
  * lastmod should reflect the most recent change to any input.
  */
 export function getMaxLastMod(...relativePaths: string[]): Date {
-  return relativePaths
+  // A path that does not exist answers with the build time. Left in, it wins the
+  // max and gives the URL a new lastmod on every deploy (23 UK URLs did this until
+  // 2026-10-12), so only files that exist are compared.
+  const existing = relativePaths.filter((relativePath) =>
+    existsSync(path.join(/* turbopackIgnore: true */ REPO_ROOT, relativePath))
+  )
+  if (existing.length === 0) return FALLBACK_DATE
+  return existing
     .map(getFileLastMod)
     .reduce(
       (latest, current) => (current > latest ? current : latest),

@@ -1,12 +1,10 @@
 import React, { useState, useMemo } from 'react';
-import { useRouter } from 'next/navigation';
 import { POSTS } from './posts';
-import { Category, BlogPost } from './data.types';
+import { Category } from './data.types';
 import { CategoryFilter } from './components/CategoryFilter';
 import { BlogCard } from './components/BlogCard';
 
 const App: React.FC = () => {
-  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState<Category>('All');
 
   const sortedPosts = useMemo(() => {
@@ -18,10 +16,6 @@ const App: React.FC = () => {
     return sortedPosts.filter(post => post.category === activeCategory);
   }, [activeCategory, sortedPosts]);
 
-  const handlePostClick = (post: BlogPost) => {
-    router.push(`/blog/${post.slug}`);
-  };
-
   return (
     <div className="min-h-screen bg-[#FAFAF7] font-sans selection:bg-[#B23E13] selection:text-white">
 
@@ -31,7 +25,7 @@ const App: React.FC = () => {
           <p className="text-[#B23E13] font-semibold tracking-wide uppercase text-xs md:text-sm mb-2">
             The FactoryJet Journal
           </p>
-          <h1 className="font-display font-bold text-3xl md:text-5xl lg:text-6xl text-gray-900 mb-4 md:mb-6 leading-tight">
+          <h1 className="font-fj-display font-bold text-3xl md:text-5xl lg:text-6xl text-gray-900 mb-4 md:mb-6 leading-tight">
             Web &amp; Digital Insights for <span className="text-[#F05A28]">Growing Brands</span>
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl">
@@ -65,7 +59,7 @@ const App: React.FC = () => {
           {/* 2026-08-04: the article list had no heading of its own. The page's only H2 was
               the newsletter block, so nothing on the page announced what the list actually is. */}
           {filteredPosts.length > 0 && (
-            <h2 className="font-display font-bold text-2xl md:text-3xl text-gray-900 mb-6 md:mb-8">
+            <h2 className="font-fj-display font-bold text-2xl md:text-3xl text-gray-900 mb-6 md:mb-8">
               {activeCategory === 'All'
                 ? `All articles (${filteredPosts.length})`
                 : `${activeCategory} (${filteredPosts.length})`}
@@ -80,13 +74,9 @@ const App: React.FC = () => {
               already strips list markers and padding from <ul>, and the <li> carries the
               grid item's height, so this renders identically. */}
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr list-none p-0 m-0">
-            {filteredPosts.map((post, index) => (
+            {filteredPosts.map((post) => (
               <li key={post.id} className="h-full">
-                <BlogCard
-                  post={post}
-                  index={index}
-                  onClick={handlePostClick}
-                />
+                <BlogCard post={post} />
               </li>
             ))}
           </ul>
@@ -105,7 +95,7 @@ const App: React.FC = () => {
                     it was an invented figure aimed at the wrong audience, and it was the only
                     H2 on the page. No subscriber count replaces it, because there is no
                     confirmed number to use. */}
-                <h2 className="font-display font-bold text-2xl md:text-3xl text-white mb-3 md:mb-4">
+                <h2 className="font-fj-display font-bold text-2xl md:text-3xl text-white mb-3 md:mb-4">
                   Get new posts by email
                 </h2>
                 <p className="text-white/90 text-sm md:text-lg">

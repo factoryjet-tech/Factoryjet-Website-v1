@@ -97,12 +97,13 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 7, 2026',
+  dateModified: 'Oct 12, 2026',
   readTime: '10 min read',
   imageUrl: '/blog-images/seo-audit-cost-2026.webp',
   meta: {
-    title: 'How Much Does an SEO Audit Cost in 2026? Real Pricing Breakdown',
+    title: 'SEO Audit Cost in 2026: What Each Price Tier Covers',
     description:
-      'SEO audit costs range from free to $30,000+ in 2026. This guide breaks down what each price tier actually covers, what questions to ask, and what a small business really needs.',
+      'SEO audit prices run from free to $30,000+ in 2026. See what each price tier checks, what to ask for, and when a free audit is enough.',
   },
   keyTakeaways: [
     'SEO audit costs in 2026 range from $0 (automated tools) to $30,000+ (enterprise technical audits by specialized agencies).',
