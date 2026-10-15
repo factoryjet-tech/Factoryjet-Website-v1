@@ -1,3 +1,4 @@
+import visualQa from './ai-cost-uk-2026.visual-qa.module.css';
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
 
@@ -1075,36 +1076,31 @@ export const post: BlogPost = {
       </details>
 
       <h2 id="vat-dollars-data">VAT, US dollars and data protection: the UK details that change the number</h2>
-      <ul className="list-disc pl-6 space-y-3 mb-6">
-        <li>
-          <strong>VAT.</strong> The <a href={SRC.govVat} target="_blank" rel="noopener noreferrer">standard UK rate is 20 per cent</a>.
+      <table className={visualQa.profileFacts} tabIndex={0}><tbody>
+        <tr><th scope="row"><strong>VAT.</strong></th><td> The <a href={SRC.govVat} target="_blank" rel="noopener noreferrer">standard UK rate is 20 per cent</a>.
           Every UK subscription price on this page is quoted before VAT. Fulminous and Augustova state that their build
           ranges exclude it. LeverX, SpotDev, Foresight Mobile, Ronins and OpenKit do not say. The VAT registration
           threshold is <a href={SRC.govVatThreshold} target="_blank" rel="noopener noreferrer">£90,000 of taxable turnover</a>.
           Ask every supplier to state the basis in writing, and ask your accountant how much you can reclaim.
-        </li>
-        <li>
-          <strong>US dollar and euro billing.</strong> Tidio, Intercom and Zapier showed us
+        </td></tr>
+        <tr><th scope="row"><strong>US dollar and euro billing.</strong></th><td> Tidio, Intercom and Zapier showed us
           prices in US dollars, and n8n in euros. Your pound cost moves with the exchange rate, and your bank may add a
           foreign transaction fee. Ask your accountant how VAT applies to services bought from overseas suppliers.
-        </li>
-        <li>
-          <strong>Employer costs.</strong> A salary is not the full cost of a hire. Employer National Insurance is 15
+        </td></tr>
+        <tr><th scope="row"><strong>Employer costs.</strong></th><td> A salary is not the full cost of a hire. Employer National Insurance is 15
           per cent above £5,000 a year for 2026 to 2027, and the minimum employer pension contribution is 3 per cent.
-        </li>
-        <li>
-          <strong>Data protection.</strong> UK GDPR applies to how an AI tool handles personal data. The Information
+        </td></tr>
+        <tr><th scope="row"><strong>Data protection.</strong></th><td> UK GDPR applies to how an AI tool handles personal data. The Information
           Commissioner&apos;s Office publishes{' '}
           <a href={SRC.ico} target="_blank" rel="noopener noreferrer">guidance on AI and data protection</a>, and says on
           that page that it is under review because of the Data (Use and Access) Act. Building those protections into an
           agent is real work, and it is part of why regulated builds cost more. We can host AI builds in UK or EU cloud
           regions when a client needs that.
-        </li>
-        <li>
-          <strong>Call recording.</strong> AI receptionists transcribe calls, and a transcript is personal data. Tell
+        </td></tr>
+        <tr><th scope="row"><strong>Call recording.</strong></th><td> AI receptionists transcribe calls, and a transcript is personal data. Tell
           callers, and write down how long you keep recordings.
-        </li>
-      </ul>
+        </td></tr>
+      </tbody></table>
 
       <h2 id="accurate-quote">How to get an accurate AI quote in 5 steps</h2>
       <ol className="list-decimal pl-6 space-y-3 mb-6">
