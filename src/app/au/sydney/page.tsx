@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import styles from './visual-qa.module.css';
 import { Fragment } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -664,12 +665,12 @@ export default function SydneyPage() {
           ))}
         </div>
       </nav>
-      <main id="main-content">
+      <main id="main-content" className={styles.page}>
 
         {/* ═══ HERO (US web-design hub hero: copy + inline form left, spec panel right) ═══ */}
         <section className="hero" id="hero">
           <div className="wrap hero-grid">
-            <div className="hero-copy">
+            <div className={`hero-copy ${styles.heroCopy}`}>
               <div className="eyebrow">Sydney, New South Wales</div>
               <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
               <p className="lead">
@@ -887,15 +888,9 @@ export default function SydneyPage() {
               </div>
               <div className="demand">
                 <div className="demand-head"><span>Sydney · Monthly Searches</span><b>DataForSEO</b></div>
-                <ul>
-                  {DEMAND.map((r) => (
-                    <li key={r.kw} className="demand-row">
-                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
-                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                      <div className="demand-kd">{r.note}</div>
-                    </li>
-                  ))}
-                </ul>
+                <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout data-keyword-records><tbody>{DEMAND.map((r) => (
+                    <tr key={r.kw}><th scope="row"><span className="demand-kw">{r.kw}</span></th><td><span className="demand-v">{r.v}<small> searches</small></span><div className="demand-bar"><i style={{ width: r.w }} /></div></td><td><div className="demand-kd">{r.note}</div></td></tr>
+                  ))}</tbody></table></div>
                 <p className="demand-src">Google Australia. Web design terms fetched 24 September 2026, the rest 11 October 2026. Results-page notes are from 11 October 2026.</p>
               </div>
             </div>
@@ -907,8 +902,8 @@ export default function SydneyPage() {
                 Sydney leads on the total and on SEO. Melbourne is ahead on web design, ecommerce and AI agents.
               </p>
             </div>
-            <div className="tablewrap">
-              <table>
+            <div className={`tablewrap ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table">
+              <table data-columns={6}>
                 <thead>
                   <tr>
                     <th>City</th>
@@ -1161,8 +1156,8 @@ export default function SydneyPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
-              <table>
+            <div className={`tablewrap ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table">
+              <table data-columns={5}>
                 <thead>
                   <tr>
                     <th>What matters</th>
@@ -1205,8 +1200,8 @@ export default function SydneyPage() {
                 are the ones to listen for.
               </p>
             </div>
-            <div className="tablewrap">
-              <table>
+            <div className={`tablewrap ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table">
+              <table data-columns={3}>
                 <thead>
                   <tr><th>Ask this</th><th className="fj">A good answer sounds like</th><th>Walk away if you hear</th></tr>
                 </thead>
@@ -1257,19 +1252,12 @@ export default function SydneyPage() {
                 website, read on 11 October 2026. Talk to two or three and pick the fit.
               </p>
             </div>
-            <div className="platlist" role="list">
-              {FIRMS.map((f, i) => (
-                <div key={f.name} className={f.name === 'FactoryJet' ? 'plat plat-own' : 'plat'} role="listitem">
-                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
-                  <div className="plat-name"><h3>{f.name}</h3>{f.name === 'FactoryJet' && <span className="plat-flag">That is us</span>}</div>
-                  <p className="plat-fit">{f.suits}</p>
-                  <p className="plat-build">
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout><tbody>{FIRMS.map((f, i) => (
+                <tr key={f.name} className={f.name === 'FactoryJet' ? 'plat plat-own' : 'plat'}><th><span className="capid">{String(i + 1).padStart(2, '0')}</span><div className="plat-name"><h3>{f.name}</h3>{f.name === 'FactoryJet' && <span className="plat-flag">That is us</span>}</div></th><td><p className="plat-fit">{f.suits}</p></td><td><p className="plat-build">
                     {f.note}{' '}
                     {f.name === 'FactoryJet' ? null : <a href={f.url} {...extLink}>{f.name} website</a>}
-                  </p>
-                </div>
-              ))}
-            </div>
+                  </p></td></tr>
+              ))}</tbody></table></div>
             <p className="sub-note">
               Firms were taken from the results Google Australia showed for Sydney searches on 11 October 2026 and from
               pages AI assistants cited for the same questions. A listing is not an endorsement, and no firm asked to be
@@ -1295,11 +1283,9 @@ export default function SydneyPage() {
                   <div className="sec">§01</div>
                   <div>
                     <h3>The six rules, in the order a new store meets them</h3>
-                    <ol className="au-numlist">
-                      {RULES.map((r) => (
-                        <li key={r.t}><span><b>{r.t}.</b> {r.d} <a href={r.src.url} {...extLink}>{r.src.source}</a></span></li>
-                      ))}
-                    </ol>
+                    <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Comparison table"><table className={styles.comparisonTable} data-comparison-layout data-regulator-records><tbody>{RULES.map((r) => (
+                        <tr key={r.t}><th scope="row"><b>{r.t}.</b></th><td><p>{r.d}</p></td><td><a href={r.src.url} {...extLink}>{r.src.source}</a></td></tr>
+                      ))}</tbody></table></div>
                   </div>
                 </div>
                 <div className="fact">
@@ -1376,7 +1362,7 @@ export default function SydneyPage() {
               <h2>A quick check: what does your Sydney business need first?</h2>
               <p>Pick the line closest to your situation. Each one points to the page that covers it in full.</p>
             </div>
-            <div className="ventries">
+            <div className={styles.adminLayout}><div className="ventries">
               <details className="ventry">
                 <summary><h3>We want a new online store, or to move the one we have</h3><span className="chev" aria-hidden="true">+</span></summary>
                 <span className="vtag">This page is the right place.</span>
@@ -1412,7 +1398,7 @@ export default function SydneyPage() {
                 <span className="vtag">An AI receptionist.</span>
                 <p>A voice agent that answers calls and passes on messages. See <a href="/au/ai-receptionist">AI receptionist for Australian businesses</a>.</p>
               </details>
-            </div>
+            </div><figure className={styles.adminPhoto}><img src="/images/au/sydney/sydney-admin-scope.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An older woman in a blue shirt reads blank papers beside a plain laptop and an orange mug at a wooden desk" /></figure></div>
           </div>
         </section>
 
