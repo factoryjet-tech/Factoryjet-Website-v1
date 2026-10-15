@@ -260,7 +260,7 @@ export const post: BlogPost = {
         own.
       </p>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={`${visualQa.comparisonTable} w-full border-collapse text-sm`}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">What you are buying</th>
@@ -343,7 +343,7 @@ export const post: BlogPost = {
         third column matters as much as the second, because it tells you what makes the bill grow.
       </p>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={`${visualQa.comparisonTable} w-full border-collapse text-sm`}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Product</th>
@@ -614,7 +614,7 @@ export const post: BlogPost = {
         what your bill is tied to, which is a better thing to compare than the entry price.
       </p>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={`${visualQa.comparisonTable} w-full border-collapse text-sm`}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Pricing model</th>
@@ -699,7 +699,7 @@ export const post: BlogPost = {
         nine are development firms describing a build. None of these figures is a subscription.
       </p>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={`${visualQa.comparisonTable} w-full border-collapse text-sm`}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Source and page date</th>
@@ -841,7 +841,7 @@ export const post: BlogPost = {
         removed. Each firm states the smallest project it takes and an hourly rate band.
       </p>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={`${visualQa.comparisonTable} w-full border-collapse text-sm`}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Minimum project size</th>
@@ -1021,7 +1021,7 @@ export const post: BlogPost = {
         for many businesses, and that a build is for a bot that must understand your own processes, data or products.
       </p>
       <div className="overflow-x-auto my-6">
-        <table className="w-full border-collapse text-sm">
+        <table className={`${visualQa.comparisonTable} w-full border-collapse text-sm`}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Your situation</th>
