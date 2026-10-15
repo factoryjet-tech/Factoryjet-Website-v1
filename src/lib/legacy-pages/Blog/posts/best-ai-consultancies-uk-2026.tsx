@@ -1,3 +1,4 @@
+import visualQa from './best-ai-consultancies-uk-2026.visual-qa.module.css';
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
 
@@ -625,11 +626,11 @@ export const post: BlogPost = {
                     <strong>Based:</strong> {f.based}. <strong>Type:</strong> {f.type}.
                   </p>
                   <p className="mb-3">{f.what}</p>
-                  <ul className="list-disc pl-6 mb-3 space-y-1">
-                    <li><strong>Clients:</strong> {f.clients}</li>
-                    <li><strong>Best for:</strong> {f.bestFor}</li>
-                    <li><strong>Worth asking them:</strong> {f.ask}</li>
-                  </ul>
+                  <table className={visualQa.profileFacts} tabIndex={0} aria-label={f.name}><tbody>
+                    <tr><th scope="row"><strong>Clients:</strong></th><td> {f.clients}</td></tr>
+                    <tr><th scope="row"><strong>Best for:</strong></th><td> {f.bestFor}</td></tr>
+                    <tr><th scope="row"><strong>Worth asking them:</strong></th><td> {f.ask}</td></tr>
+                  </tbody></table>
                   <p className="text-sm text-gray-600">
                     Source:{' '}
                     <a href={f.source} className={link} rel="noopener" target={f.source.startsWith('https://factoryjet.com') ? undefined : '_blank'}>
