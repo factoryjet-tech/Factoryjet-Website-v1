@@ -1,0 +1,49 @@
+/* Existing profile facts, shown as an accessible label/value table. */
+:global(.blog-post .blog-prose) .profileFacts {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1rem 0 1.5rem;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  overflow: hidden;
+}
+:global(.blog-post .blog-prose) .profileFacts :is(th, td) {
+  min-width: 0;
+  max-width: none;
+  padding: 14px 16px;
+  vertical-align: top;
+  text-align: left;
+  line-height: 1.65;
+  font-weight: 400;
+  border-bottom: 1px solid #E5E7EB;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+:global(.blog-post .blog-prose) .profileFacts th:first-child {
+  position: static;
+  width: 31%;
+  font-weight: 700;
+}
+:global(.blog-post .blog-prose) .profileFacts tr:last-child :is(th, td) { border-bottom: 0; }
+:global(.blog-post .blog-prose) .profileFacts p:last-child { margin-bottom: 0; }
+@media (max-width: 639px) {
+  :global(.blog-post .blog-prose) .profileFacts,
+  :global(.blog-post .blog-prose) .profileFacts :is(tbody, tr, th, td) { display: block; width: 100%; }
+  :global(.blog-post .blog-prose) .profileFacts th:first-child { width: 100%; padding: 14px 16px 2px; border-bottom: 0; }
+  :global(.blog-post .blog-prose) .profileFacts td { padding: 2px 16px 14px; }
+}
+
+:global(.blog-post .blog-prose) .checklist { list-style-type: decimal; padding-left: 28px; display: grid; gap: 14px; margin: 16px 0 24px; }
+:global(.blog-post .blog-prose) .checklist li { margin: 0; padding: 14px 16px; border: 1px solid #E5E7EB; border-radius: 12px; background-color: #FFFFFF; }
+@media (min-width: 768px) { :global(.blog-post .blog-prose) .checklist { grid-template-columns: 1fr 1fr; gap: 16px 30px; } }
+
+/* Existing buyer need and named agency choices, compared without adding copy. */
+:global(.blog-post .blog-prose) .choiceFacts th:first-child { width: 40%; font-weight: 600; }
+/* Preserve the ordered-list markers on the same existing criteria. */
+:global(.blog-post .blog-prose) .orderedFacts tbody { counter-reset: existing-criterion; }
+:global(.blog-post .blog-prose) .orderedFacts tr { counter-increment: existing-criterion; }
+:global(.blog-post .blog-prose) .orderedFacts th:first-child::before { content: counter(existing-criterion) ". "; font-weight: 400; }
+@media (max-width: 639px) { :global(.blog-post .blog-prose) .choiceFacts th:first-child { width: 100%; } }

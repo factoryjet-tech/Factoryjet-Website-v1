@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './best-ai-receptionist-small-business.visual-qa.module.css';
 import type { BlogPost } from '../data.types';
 
 /**
@@ -113,18 +114,11 @@ export const post: BlogPost = {
       <p className="mb-4">PolyAI, NiCE Cognigy and Parloa also sell enterprise platforms. Their entries are in the companies section further down.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Three kinds of product share one name</h2>
-      <p className="mb-4"><strong>Ready-made products</strong> (Goodcall, RingCentral AI Receptionist, Smith.ai AI Receptionist) sell a working receptionist that you set up yourself for a flat monthly price.</p>
-      <p className="mb-4"><strong>Developer platforms</strong> (Retell AI, Vapi, Bland AI) sell minutes on a platform. The rate buys the building blocks. Someone on your side designs the conversation, connects your calendar and CRM, and tests what happens when a caller says something unexpected.</p>
-      <p className="mb-4"><strong>Live receptionist services</strong> (Ruby, and the human-first plans at Smith.ai) sell people answering your phone.</p>
+      <table className={styles.profileFacts}><tbody><tr><th scope="row"><strong>Ready-made products</strong></th><td>(Goodcall, RingCentral AI Receptionist, Smith.ai AI Receptionist) sell a working receptionist that you set up yourself for a flat monthly price.</td></tr><tr><th scope="row"><strong>Developer platforms</strong></th><td>(Retell AI, Vapi, Bland AI) sell minutes on a platform. The rate buys the building blocks. Someone on your side designs the conversation, connects your calendar and CRM, and tests what happens when a caller says something unexpected.</td></tr><tr><th scope="row"><strong>Live receptionist services</strong></th><td>(Ruby, and the human-first plans at Smith.ai) sell people answering your phone.</td></tr></tbody></table>
       <p className="mb-4">A per-minute platform rate set against a live answering service is a bag of flour set against a delivered cake. Decide which of the three you are buying before you compare prices.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Four things to check on a pricing page before you sign up</h2>
-      <ol className="list-decimal pl-6 mb-4 space-y-2">
-        <li><strong>Whether the entry price is an enterprise contract.</strong> Synthflow&apos;s pricing page states &quot;Enterprise contracts start at $30,000 annually&quot; and listed one plan, Enterprise, on 11 October 2026. Synthflow describes itself as a voice platform for enterprises, so a small office should start with the ready-made products.</li>
-        <li><strong>What a health data add-on costs.</strong> Vapi lists $0.05 a minute for its platform. It also lists a health data add-on, which includes a Business Associate Agreement, at <strong>$2,000 a month</strong>. A medical or dental practice should read the add-on list before the per-minute rate.</li>
-        <li><strong>What a platform fee does to the lower rate.</strong> Bland AI&apos;s Build plan lowers the rate from $0.14 to $0.12 a minute and adds a $299 a month platform fee. Match the plan to your call volume before you pick the lower rate.</li>
-        <li><strong>Whether the page has changed since the article you read.</strong> We first read these eight price pages on 7 September 2026. By 11 October 2026 at least three had changed. Goodcall&apos;s top plan moved from $249 to $299 a month. Bland AI&apos;s Scale plan at $0.11 a minute was no longer listed, and the third plan shown was a custom Enterprise plan. Vapi&apos;s entry plan listed 10 concurrent lines in September and lists 4 now. Read the vendor page on the day you buy.</li>
-      </ol>
+      <table className={[styles.profileFacts, styles.orderedFacts].join(' ')}><tbody><tr><th scope="row"><strong>Whether the entry price is an enterprise contract.</strong></th><td> Synthflow&apos;s pricing page states &quot;Enterprise contracts start at $30,000 annually&quot; and listed one plan, Enterprise, on 11 October 2026. Synthflow describes itself as a voice platform for enterprises, so a small office should start with the ready-made products.</td></tr><tr><th scope="row"><strong>What a health data add-on costs.</strong></th><td> Vapi lists $0.05 a minute for its platform. It also lists a health data add-on, which includes a Business Associate Agreement, at <strong>$2,000 a month</strong>. A medical or dental practice should read the add-on list before the per-minute rate.</td></tr><tr><th scope="row"><strong>What a platform fee does to the lower rate.</strong></th><td> Bland AI&apos;s Build plan lowers the rate from $0.14 to $0.12 a minute and adds a $299 a month platform fee. Match the plan to your call volume before you pick the lower rate.</td></tr><tr><th scope="row"><strong>Whether the page has changed since the article you read.</strong></th><td> We first read these eight price pages on 7 September 2026. By 11 October 2026 at least three had changed. Goodcall&apos;s top plan moved from $249 to $299 a month. Bland AI&apos;s Scale plan at $0.11 a minute was no longer listed, and the third plan shown was a custom Enterprise plan. Vapi&apos;s entry plan listed 10 concurrent lines in September and lists 4 now. Read the vendor page on the day you buy.</td></tr></tbody></table>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The eight products, one by one</h2>
 
@@ -143,6 +137,8 @@ export const post: BlogPost = {
       <h3 className="text-xl font-bold mt-6 mb-3">Ruby, for a person on every call</h3>
       <p className="mb-4">Ruby describes its service as &quot;100% live, personalized communication&quot;. Its plans are $250 a month for 50 minutes, $395 for 100, $720 for 200 and $1,725 for 500 minutes. Website chat is priced separately from $143 a month for 10 chats, with 20% off chat when it is added to a receptionist plan. Ruby states there are no additional fees for activation, onboarding, setup or customization.</p>
       <p className="mb-4">Ruby is on this page because it is the choice an AI voice agent is measured against. If every caller should reach a person, this is the kind of service to price first. See <a href="https://www.ruby.com/plans-and-pricing/" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">Ruby plans and pricing</a>.</p>
+
+      <figure className="my-8"><img src="/images/blog/best-ai-receptionist-small-business/headset-call-work.webp" alt="A man wearing a headset at a desk with a closed laptop." width={1200} height={800} loading="lazy" decoding="async" className="w-full h-auto rounded-xl" /></figure>
 
       <h3 className="text-xl font-bold mt-6 mb-3">Retell AI, a developer platform with pay-as-you-go pricing</h3>
       <p className="mb-4">Retell AI lists &quot;$0.07-$0.31 / min for AI Voice Agents&quot;, with $10 in free credits and 20 free concurrent calls. Extra concurrent calls are $8 each a month and Retell phone numbers are $2 a month. The rate depends on the voice and language options you pick, and the pricing page has an estimator that shows the rate for each choice. An Enterprise plan with custom pricing adds custom contract terms and single sign-on.</p>
@@ -212,6 +208,8 @@ export const post: BlogPost = {
       <h3 className="text-xl font-bold mt-6 mb-3">Ready-made products for small businesses</h3>
       <p className="mb-4">Goodcall, RingCentral AI Receptionist and Smith.ai are covered with their prices above. Each one is a product you can sign up for and set up yourself.</p>
 
+      <figure className="my-8"><img src="/images/blog/best-ai-receptionist-small-business/human-call-handoff.webp" alt="Two people talking at a desk with a headset and a closed laptop." width={1200} height={800} loading="lazy" decoding="async" className="w-full h-auto rounded-xl" /></figure>
+
       <h2 className="text-2xl font-bold mt-8 mb-4">Firms that build custom AI voice agents</h2>
       <p className="mb-4">A build firm designs the agent around your calls and connects it to your systems. You hire it for a project, where the companies above sell a product or a platform. The five firms below describe custom voice agent work on their own sites. They are grouped by the buyer each site addresses and listed in no ranked order.</p>
 
@@ -231,18 +229,13 @@ export const post: BlogPost = {
       </div>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Buy a product or have one built</h2>
-      <p className="mb-4"><strong>A ready-made product fits</strong> when your calls are standard and your booking software is mainstream. Goodcall or RingCentral AI Receptionist will be live sooner than a custom build.</p>
-      <p className="mb-4"><strong>A custom build fits</strong> when the calls depend on your own systems. The usual signs are an intake process a product cannot follow, software it does not connect to, a job that spans several tools and must stay consistent across them, or a call center queue with a team of agents behind it.</p>
+      <table className={styles.profileFacts}><tbody><tr><th scope="row"><strong>A ready-made product fits</strong></th><td> when your calls are standard and your booking software is mainstream. Goodcall or RingCentral AI Receptionist will be live sooner than a custom build.</td></tr><tr><th scope="row"><strong>A custom build fits</strong></th><td> when the calls depend on your own systems. The usual signs are an intake process a product cannot follow, software it does not connect to, a job that spans several tools and must stay consistent across them, or a call center queue with a team of agents behind it.</td></tr></tbody></table>
       <p className="mb-4">FactoryJet builds for that second case. We design, build, implement and support the agent, and you own it. We quote the build and the ongoing support as fixed prices in writing after a short scoping call, and we keep managing the servers, AI, APIs and maintenance so your team does not have to. We show working software on your own data before a contract. The scope for a small office is on our <a href="/services/ai-receptionist" className="text-orange-600 underline">AI receptionist page</a>. For a team of agents and a call queue, see <a href="/services/ai-call-center-agents" className="text-orange-600 underline">AI call center agents</a>.</p>
 
+      <figure className="my-8"><img src="/images/blog/best-ai-receptionist-small-business/office-phone-notes.webp" alt="A woman holding a telephone handset beside an open notebook." width={1200} height={800} loading="lazy" decoding="async" className="w-full h-auto rounded-xl" /></figure>
+
       <h2 className="text-2xl font-bold mt-8 mb-4">Five questions before you buy anything</h2>
-      <ol className="list-decimal pl-6 mb-4 space-y-2">
-        <li><strong>What is the published price at my call volume, in writing, including extra calls or minutes?</strong> The headline rate and the bill are often different numbers.</li>
-        <li><strong>What happens when the AI cannot handle the call?</strong> Ask to hear the handoff to a person.</li>
-        <li><strong>Which of my systems does it write into, and have you made that exact connection before?</strong> An agent that cannot write to your scheduler creates a second inbox.</li>
-        <li><strong>How long do you keep call records, and will you sign a business associate agreement if I need one?</strong> Ask before you need it.</li>
-        <li><strong>Can I hear a recording of it handling a call like mine?</strong> Two minutes of audio tells you more than a price table.</li>
-      </ol>
+      <table className={[styles.profileFacts, styles.orderedFacts].join(' ')}><tbody><tr><th scope="row"><strong>What is the published price at my call volume, in writing, including extra calls or minutes?</strong></th><td> The headline rate and the bill are often different numbers.</td></tr><tr><th scope="row"><strong>What happens when the AI cannot handle the call?</strong></th><td> Ask to hear the handoff to a person.</td></tr><tr><th scope="row"><strong>Which of my systems does it write into, and have you made that exact connection before?</strong></th><td> An agent that cannot write to your scheduler creates a second inbox.</td></tr><tr><th scope="row"><strong>How long do you keep call records, and will you sign a business associate agreement if I need one?</strong></th><td> Ask before you need it.</td></tr><tr><th scope="row"><strong>Can I hear a recording of it handling a call like mine?</strong></th><td> Two minutes of audio tells you more than a price table.</td></tr></tbody></table>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Related reading</h2>
       <p className="mb-4">For the wider choice between AI and people on the phone, read our <a href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026" className="text-orange-600 underline">guide to AI voice agents versus human answering services</a>. For medical and dental practices, where patient privacy rules and practice software change the choice, see <a href="/blog/how-much-does-an-ai-medical-receptionist-cost-2026" className="text-orange-600 underline">what an AI medical receptionist costs</a>.</p>
