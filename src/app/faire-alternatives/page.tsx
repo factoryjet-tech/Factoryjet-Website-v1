@@ -752,7 +752,7 @@ export default function FaireAlternativesPage() {
                 </p>
 
                 <div className="mt-8">
-                  <HeroInlineForm region="us" source="faire_alternatives_hero" submitLabel="Plan my wholesale portal" />
+                  <HeroInlineForm region="us" source="faire_alternatives_hero" service="E-commerce" submitLabel="Plan my wholesale portal" />
                 </div>
 
                 <div className="mt-5">
@@ -912,6 +912,43 @@ export default function FaireAlternativesPage() {
               read it. We could not see prices that only appear after sign-up, and buyer counts are each
               platform&rsquo;s own claim.
             </p>
+
+            {/* Lighter ask, added 2026-10-12. Clarity showed this page's ChatGPT readers click
+                the "join" links in the list within seconds: they are applying to marketplaces,
+                so the offer sits at the top of the list and speaks to that. It stays outside the
+                <ol> (the list is what gets cited), repeats no fee figure, and never claims we
+                have run shops or have results on a named marketplace. Leads: source
+                "faire_alternatives_compare". */}
+            <aside
+              data-compare-offer
+              aria-labelledby="compare-offer-title"
+              className="mt-8 grid grid-cols-1 border-y border-fj-neutral-200 py-6 lg:grid-cols-[1fr_500px] lg:items-center lg:gap-8"
+            >
+              <div>
+                <p className="font-fj-mono text-[11px] font-bold uppercase tracking-wider text-[#B23E13]">
+                  One email &middot; No call needed
+                </p>
+                <p id="compare-offer-title" className="mt-2.5 font-fj-display text-lg font-semibold leading-snug text-fj-ink">
+                  We will tell you which of these fit what you sell.
+                </p>
+                <p className="mt-2 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
+                  Bhavesh, our founder, replies within 24 hours. He covers what each marketplace asks of a new
+                  brand, from its own published rules, and how to keep stock and orders in step with your own
+                  store once you sell in more than one place.
+                </p>
+              </div>
+              {/* The shared form carries its own mt-6. Cancel it on desktop so the form
+                  centres against the copy. On a phone it is the gap under the copy. */}
+              <div className="lg:-mt-6">
+                <HeroInlineForm
+                  region="us"
+                  source="faire_alternatives_compare"
+                  service="E-commerce"
+                  submitLabel="Email me the answer"
+                  trustText="Name and email first. A box then opens for what you sell and where you are applying."
+                />
+              </div>
+            </aside>
 
             <ol className="mt-12 grid gap-5">
               {ALTERNATIVES.map((p, i) => (
