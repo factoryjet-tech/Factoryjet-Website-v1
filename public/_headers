@@ -13,6 +13,15 @@
 /.well-known/api-catalog
   Content-Type: application/linkset+json; charset=utf-8
 
+# Careers pages: noindex, belt and braces with the page metadata.
+# Spec docs/HIRING-PIPELINE-SPEC.md 4.2. Do NOT also Disallow /careers in robots.txt:
+# Google must crawl the page to see this header.
+/careers
+  X-Robots-Tag: noindex, nofollow
+
+/careers/*
+  X-Robots-Tag: noindex, nofollow
+
 # Disable Cloudflare's AI hints injection in robots.txt
 /robots.txt
   X-Robots-Tag: all
