@@ -1,0 +1,6 @@
+/* Existing routing and process words, organized for scanning. */
+.flow { list-style: decimal; color: #1F2937; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 16px; margin: 24px 0 32px; padding-left: 24px; }
+.flow > li { margin: 0 !important; min-width: 0; padding: 20px; border: 1px solid #E5E7EB; border-radius: 12px; background: #FFFFFF; line-height: 1.75; }
+.flow > li > strong:first-child { margin-right: 0.2em; }
+.flow > li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+@media(max-width: 767px) { .flow { grid-template-columns: minmax(0, 1fr); gap: 12px; padding-left: 20px; } .flow > li { padding: 16px; font-size: 16px; } }
