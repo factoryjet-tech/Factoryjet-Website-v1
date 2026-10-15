@@ -230,7 +230,8 @@ const ExitIntentLeadForm: React.FC<ExitIntentLeadFormProps> = ({
               )}
 
               <button
-                type="submit" disabled={isSubmitting || !canSubmit}
+                type="submit" disabled={isSubmitting}
+                onClick={() => { if (!canSubmit) trackFormError(source, 'validation_incomplete'); }}
                 className="w-full bg-[#B23E13] hover:bg-[#d44d1f] text-white font-bold text-[15px] py-3 rounded-xl shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSubmitting

@@ -58,7 +58,11 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [sent, setSent] = useState(false);
+  const [invalid, setInvalid] = useState<'name' | 'email' | null>(null);
   const startedRef = useRef(false);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const errorRef = useRef<HTMLParagraphElement>(null);
   const enrichment = useLeadEnrichment();
 
   const onFirstInteraction = () => {
@@ -85,7 +89,26 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
       if (!kept) setError('Something went wrong. Please try again.');
       return;
     }
-    if (!canSubmit) { setError('Please enter your name and a valid email.'); return; }
+    if (!canSubmit) {
+      // Button pressed with a field empty or the email mistyped. Say which field,
+      // put the cursor in it (on a phone this opens the keyboard and scrolls the
+      // field into view) and record it, so these presses are no longer invisible.
+      const nameMissing = name.trim() === '';
+      const emailMissing = email.trim() === '';
+      setInvalid(nameMissing ? 'name' : 'email');
+      setError(
+        nameMissing ? 'Add your name and work email, then press the button again.'
+          : emailMissing ? 'Add your work email, then press the button again.'
+            : 'That email address looks incomplete. Please check it.',
+      );
+      trackFormError(source, nameMissing ? 'validation_empty_name' : emailMissing ? 'validation_empty_email' : 'validation_bad_email');
+      // Focus without the browser's own scroll, then bring the message (just above the
+      // fields) into view, so it cannot end up under the sticky header.
+      (nameMissing ? nameRef : emailRef).current?.focus({ preventScroll: true });
+      requestAnimationFrame(() => errorRef.current?.scrollIntoView({ block: 'center' }));
+      return;
+    }
+    setInvalid(null);
     setIsSubmitting(true);
     setError(null);
     trackFormSubmit(source, { service: service || '' });
@@ -105,26 +128,32 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
   };
 
   const inputStyle: React.CSSProperties = { height: 46, border: '1px solid rgba(15,33,56,0.16)' };
+  const invalidStyle: React.CSSProperties = { height: 46, border: '1.5px solid #b3261e' };
 
   return (
     <>
-    <form id={formId} onSubmit={handleSubmit} onFocus={onFirstInteraction} className="mt-6 max-w-[540px]" data-hero-inline-form>
+    <form id={formId} onSubmit={handleSubmit} onFocus={onFirstInteraction} noValidate className="mt-6 max-w-[540px]" data-hero-inline-form>
       <div
         className="rounded-2xl bg-white p-3.5 sm:p-4"
         style={{ border: '1px solid rgba(15,33,56,0.10)', boxShadow: '0 10px 30px rgba(15,33,56,0.07)' }}
       >
+        {/* Above the fields, so it is on screen beside the field that takes focus. Under
+            the button it fell below the fold on a 390x664 phone. */}
+        {error && <p ref={errorRef} className="mb-2.5 font-fj-body text-[13.5px] font-semibold" role="alert" style={{ color: '#b3261e' }}>{error}</p>}
         <div className="flex flex-col gap-2.5 sm:flex-row">
           <input
             aria-label="Your name" type="text" autoComplete="name" placeholder="Your name"
-            value={name} onChange={(e) => setName(e.target.value)}
+            ref={nameRef} aria-invalid={invalid === 'name' || undefined}
+            value={name} onChange={(e) => { setName(e.target.value); if (invalid === 'name') { setInvalid(null); setError(null); } }}
             className="min-w-0 w-full sm:w-auto sm:flex-1 rounded-xl px-3.5 font-fj-body text-[15px] placeholder:text-[#6E635A] outline-none"
-            style={inputStyle}
+            style={invalid === 'name' ? invalidStyle : inputStyle}
           />
           <input
             aria-label="Work email" type="email" autoComplete="email" placeholder="Work email"
-            value={email} onChange={(e) => setEmail(e.target.value)}
+            ref={emailRef} aria-invalid={invalid === 'email' || undefined}
+            value={email} onChange={(e) => { setEmail(e.target.value); if (invalid === 'email') { setInvalid(null); setError(null); } }}
             className="min-w-0 w-full sm:w-auto sm:flex-1 rounded-xl px-3.5 font-fj-body text-[15px] placeholder:text-[#6E635A] outline-none"
-            style={inputStyle}
+            style={invalid === 'email' ? invalidStyle : inputStyle}
           />
           <button
             type="submit" disabled={isSubmitting}
@@ -162,7 +191,6 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
           )}
         </div>
 
-        {error && <p className="mt-2 font-fj-body text-[13px]" style={{ color: '#b3261e' }}>{error}</p>}
         {sent && <p className="mt-2 font-fj-body text-[13px]" role="status" style={{ color: '#0F2138' }}>Request sent. We reply within 24 hours.</p>}
       </div>
     </form>

@@ -65,8 +65,12 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [invalid, setInvalid] = useState<'name' | 'email' | null>(null);
 
   const startedRef = useRef(false);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const errorRef = useRef<HTMLDivElement>(null);
   const turnstileContainerRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<string | null>(null);
 
@@ -127,9 +131,28 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
       else setError('Something went wrong. Please try again.');
       return;
     }
-    if (!canSubmit) { setError('Please enter your name and a valid email.'); return; }
+    if (!canSubmit) {
+      // The button used to be disabled until both fields were valid, so an early
+      // press did nothing and showed nothing. Now it says which field is missing,
+      // puts the cursor in it and records the press.
+      const nameMissing = name.trim() === '';
+      const emailMissing = email.trim() === '';
+      setInvalid(nameMissing ? 'name' : 'email');
+      setError(
+        nameMissing ? 'Add your name and email, then press Send request again.'
+          : emailMissing ? 'Add your email, then press Send request again.'
+            : 'That email address looks incomplete. Please check it.',
+      );
+      trackFormError(source, nameMissing ? 'validation_empty_name' : emailMissing ? 'validation_empty_email' : 'validation_bad_email');
+      // Focus without the browser's own scroll, then centre the message, which sits
+      // just above the field. The default scroll could leave it under the sticky header.
+      (nameMissing ? nameRef : emailRef).current?.focus({ preventScroll: true });
+      requestAnimationFrame(() => errorRef.current?.scrollIntoView({ block: 'center' }));
+      return;
+    }
     setIsSubmitting(true);
     setError(null);
+    setInvalid(null);
     trackFormSubmit(source, { service });
     try {
       // Durable, server-first capture (writes via the edge function + emails),
@@ -175,13 +198,13 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 sm:p-8 md:p-10">
+    <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 sm:p-8 md:p-6 lg:p-10">
       <div className="text-center mb-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">{heading}</h2>
+        <h2 className="font-fj-display text-2xl sm:text-3xl font-bold text-slate-900">{heading}</h2>
         <p className="text-slate-500 mt-2">{subheading}</p>
       </div>
 
-      <form onSubmit={handleSubmit} onFocus={onFirstInteraction} className="space-y-5">
+      <form onSubmit={handleSubmit} onFocus={onFirstInteraction} noValidate className="space-y-5">
         <div>
           <label className="block text-sm font-medium text-slate-700 mb-2">What do you need?</label>
           <div className="flex flex-wrap gap-2">
@@ -204,16 +227,26 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
           </div>
         </div>
 
+        {/* Above the name and email fields, so it is on screen beside the field that
+            takes focus. Above the Send button it sat 554 px below that field on a phone. */}
+        {error && (
+          <div ref={errorRef} role="alert" className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{error}</div>
+        )}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1.5">Full name *</label>
-            <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)}
-              placeholder="John Doe" required autoComplete="name" className={inputCls} />
+            <input ref={nameRef} type="text" name="name" value={name}
+              onChange={(e) => { setName(e.target.value); if (invalid === 'name') { setInvalid(null); setError(null); } }}
+              placeholder="John Doe" required autoComplete="name" aria-invalid={invalid === 'name' || undefined}
+              className={`${inputCls} ${invalid === 'name' ? '!border-red-600' : ''}`} />
           </div>
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1.5">Email address *</label>
-            <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}
-              placeholder="john@company.com" required autoComplete="email" className={inputCls} />
+            <input ref={emailRef} type="email" name="email" value={email}
+              onChange={(e) => { setEmail(e.target.value); if (invalid === 'email') { setInvalid(null); setError(null); } }}
+              placeholder="john@company.com" required autoComplete="email" aria-invalid={invalid === 'email' || undefined}
+              className={`${inputCls} ${invalid === 'email' ? '!border-red-600' : ''}`} />
           </div>
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1.5">
@@ -252,11 +285,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
         {/* Invisible Turnstile (interaction-only) */}
         <div ref={turnstileContainerRef} className="empty:hidden" />
 
-        {error && (
-          <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{error}</div>
-        )}
-
-        <button type="submit" disabled={isSubmitting || !canSubmit}
+        <button type="submit" disabled={isSubmitting}
           className="w-full bg-[#B23E13] hover:bg-[#d44d1f] text-white font-bold text-base py-3.5 rounded-xl shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2">
           {isSubmitting ? (<><Loader2 className="w-5 h-5 animate-spin" />Sending…</>) : (<>Send request <Send className="w-5 h-5" /></>)}
         </button>

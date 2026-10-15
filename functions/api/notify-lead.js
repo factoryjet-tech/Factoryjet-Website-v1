@@ -79,6 +79,11 @@ async function writeLeadToFirestore(env, lead) {
       turnstileVerdict: s(lead.turnstileVerdict),
       // 'filled' when the form's hidden trap field had a value (see trapFilled).
       honeypot:   s(lead.honeypot),
+      // Buyer | Vendor pitch | Likely spam | Test (see leadTypeOf).
+      leadType:   s(lead.leadType),
+      // Two-letter country of the visitor's network, from Cloudflare. A country
+      // code only: the IP address itself is never stored.
+      ipCountry:  s(lead.ipCountry),
       status:     s('new'),
       capturedBy: s('server'),
       createdAt:  { timestampValue: new Date().toISOString() },
@@ -184,8 +189,15 @@ async function writeLeadToERPNext(env, lead) {
   }
 
   const category = lead.serviceCategory || 'Other';
-  const noteText = `Service: ${category}${lead.serviceInferred === 'yes' ? ' (guessed from the page, the form had no service picker)' : ''}\n${lead.service ? `Service picked on form: ${serviceLabel(lead.service)}\n` : ''}Came from: ${channelLabel(lead)}\n${lead.aiAssistant ? `AI assistant: yes (${lead.aiAssistant})\n` : ''}${attributionLines(lead)}Form: ${lead.source || 'Website'}\nForm page: https://factoryjet.com${lead.page || ''}\nWebsite region: ${lead.region ? String(lead.region).toUpperCase() : 'Not specified'}\nMessage: ${lead.message || 'N/A'}\nFirebase Doc ID: ${lead.docId || 'N/A'}`;
-  const country = countryFromPhone(lead.phone);
+  // Worked out once in onRequestPost; the fallback only covers a caller that
+  // forgot to pass it.
+  const leadType = LEAD_TYPES.includes(lead.leadType) ? lead.leadType : leadTypeOf(lead);
+  // "Lead type" is the first line on purpose: the note is shared by the new-Lead
+  // path and the returning-lead comment, so both open with the label.
+  const noteText = `Lead type: ${leadType}\nService: ${category}${lead.serviceInferred === 'yes' ? ' (guessed from the page, the form had no service picker)' : ''}\n${lead.service ? `Service picked on form: ${serviceLabel(lead.service)}\n` : ''}Came from: ${channelLabel(lead)}\n${lead.aiAssistant ? `AI assistant: yes (${lead.aiAssistant})\n` : ''}${attributionLines(lead)}Form: ${lead.source || 'Website'}\nForm page: https://factoryjet.com${lead.page || ''}\nWebsite region: ${lead.region ? String(lead.region).toUpperCase() : 'Not specified'}\nVisitor country (from network): ${lead.ipCountry || 'unknown'}\nMessage: ${lead.message || 'N/A'}\nFirebase Doc ID: ${lead.docId || 'N/A'}`;
+  // The phone prefix wins because the visitor typed it. The network country is
+  // the fallback for the many leads that leave no phone.
+  const country = countryFromPhone(lead.phone) || countryFromNetwork(lead.ipCountry);
 
   // 2. Returning prospect? ERPNext rejects a second Lead with the same email while
   // CRM Settings "Allow Lead Duplication based on Emails" is off (it was off on
@@ -252,29 +264,55 @@ async function writeLeadToERPNext(env, lead) {
       // Service category. ERPNext silently ignores this key until a Custom Field
       // named custom_service_interest exists on Lead; the note carries it either way.
       custom_service_interest: category,
-      // Only when the phone number says so. ERPNext otherwise fills its system
+      // Buyer | Vendor pitch | Likely spam | Test. A Select Custom Field on Lead
+      // (custom_lead_type, created 2026-10-12) whose options are exactly these
+      // four strings (LEAD_TYPES). Rename an option in ERPNext and ERPNext
+      // refuses every insert that sends the old name; the retry below then saves
+      // the Lead without the field. The first line of the note carries the label
+      // either way. It is a label only: status and custom_sequence_status are
+      // the same for every type.
+      custom_lead_type: leadType,
+      // From the phone prefix, else from the visitor's network (see
+      // NETWORK_COUNTRIES). When neither is known ERPNext fills its system
       // default (India), which is cleared right after the insert below.
       ...(country ? { country } : {}),
       notes: [{ note: noteText }],
     };
+    const postLead = (body) => fetchWithTimeout(`${erpUrl}/api/resource/Lead`, {
+      method: 'POST',
+      headers: {
+        ...ERP_HEADERS,
+        'Content-Type': 'application/json',
+        'Authorization': authHeader,
+      },
+      body: JSON.stringify(body),
+    }, erpTimeout(env));
 
     try {
-      const res = await fetchWithTimeout(`${erpUrl}/api/resource/Lead`, {
-        method: 'POST',
-        headers: {
-          ...ERP_HEADERS,
-          'Content-Type': 'application/json',
-          'Authorization': authHeader,
-        },
-        body: JSON.stringify(payload),
-      }, erpTimeout(env));
+      let res = await postLead(payload);
+      let countrySent = country;
+      // ERPNext refuses the whole Lead when a Link or Select value is not one it
+      // holds: a country name it does not list, or a lead type missing from the
+      // field's options. Both are labels, so try once more without them rather
+      // than lose the Lead; the note still carries both. Only on a 4xx, where
+      // ERPNext answered and saved nothing. A timeout or a 5xx may have saved the
+      // Lead, and a second insert there could duplicate it.
+      if (!res.ok && res.status >= 400 && res.status < 500) {
+        const firstErr = (await res.text()).slice(0, 300);
+        console.warn('ERPNext Lead write refused, retrying without lead type and country:', res.status, firstErr);
+        const bare = { ...payload };
+        delete bare.custom_lead_type;
+        delete bare.country;
+        res = await postLead(bare);
+        countrySent = '';
+      }
 
       if (res.ok) {
         const data = await res.json();
         leadId = data?.data?.name;
         // ERPNext applies its default country (India) to any Lead created without
         // one, which made every US/UK lead look Indian. Clear it when unknown.
-        if (leadId && !country && data?.data?.country) {
+        if (leadId && !countrySent && data?.data?.country) {
           try {
             const clr = await fetchWithTimeout(`${erpUrl}/api/resource/Lead/${encodeURIComponent(leadId)}`, {
               method: 'PUT',
@@ -304,7 +342,7 @@ async function writeLeadToERPNext(env, lead) {
     try {
       const serviceName = category;
       const todoPayload = {
-        description: `${returning ? 'Returning lead, new inquiry. ' : ''}Follow up with ${lead.name || 'Website Lead'} (${lead.company || 'Individual'})\nService: ${serviceName} · Page: ${lead.page || '/'}\nCame from: ${channelLabel(lead)}${lead.landingPage ? ` · Landed on: ${lead.landingPage}` : ''}\nPhone: ${lead.phone || 'N/A'} · Email: ${lead.email || 'N/A'}\nInquiry: ${lead.message || 'N/A'}`,
+        description: `${returning ? 'Returning lead, new inquiry. ' : ''}Follow up with ${lead.name || 'Website Lead'} (${lead.company || 'Individual'})\nLead type: ${leadType} · Service: ${serviceName} · Page: ${lead.page || '/'}\nCame from: ${channelLabel(lead)}${lead.landingPage ? ` · Landed on: ${lead.landingPage}` : ''}\nPhone: ${lead.phone || 'N/A'} · Email: ${lead.email || 'N/A'}\nInquiry: ${lead.message || 'N/A'}`,
         status: 'Open',
         priority: 'High',
         allocated_to: LEAD_OWNER,
@@ -356,6 +394,47 @@ export function countryFromPhone(phone) {
   const digits = m[1].replace(/\D/g, '');
   const hit = PHONE_COUNTRIES.find(([code]) => digits.startsWith(code));
   return hit ? hit[1] : '';
+}
+
+/**
+ * Country of the visitor's network, as Cloudflare reports it on every request
+ * (request.cf.country, an ISO two-letter code). Most leads leave no phone, so
+ * without this the CRM country was blank on all 9 leads in the week of
+ * 2026-10-05. It says where the request came from, which a VPN, a proxy or a
+ * trip abroad can move, so the CRM note always labels it "from network" and the
+ * phone prefix keeps priority.
+ *
+ * Returns '' when Cloudflare does not know: "XX" (unknown) and "T1" (Tor) are
+ * both dropped. Only the code is kept. The IP address is never read here.
+ */
+export function networkCountryCode(request) {
+  const code = String((request && request.cf && request.cf.country) || '').trim().toUpperCase();
+  return /^[A-Z]{2}$/.test(code) && code !== 'XX' ? code : '';
+}
+
+/**
+ * ISO code to the country NAME ERPNext stores. Lead.country is a Link field: a
+ * name ERPNext does not hold makes the whole Lead insert fail, and its spellings
+ * are not guessable ("Korea, Republic of", "Russian Federation"). Every name
+ * below was read from the live Country list on erp.factoryjet.com on 2026-10-12
+ * (250 records). Before adding a code, check its exact spelling there. A code
+ * that is not listed leaves country blank; the note still shows the code.
+ */
+export const NETWORK_COUNTRIES = Object.freeze({
+  US: 'United States', CA: 'Canada', GB: 'United Kingdom', IE: 'Ireland',
+  AU: 'Australia', NZ: 'New Zealand', IN: 'India', AE: 'United Arab Emirates',
+  SA: 'Saudi Arabia', QA: 'Qatar', KW: 'Kuwait', BH: 'Bahrain', OM: 'Oman', IL: 'Israel',
+  DE: 'Germany', FR: 'France', NL: 'Netherlands', BE: 'Belgium', ES: 'Spain',
+  IT: 'Italy', PT: 'Portugal', CH: 'Switzerland', AT: 'Austria', SE: 'Sweden',
+  NO: 'Norway', DK: 'Denmark', FI: 'Finland', PL: 'Poland',
+  SG: 'Singapore', MY: 'Malaysia', ID: 'Indonesia', PH: 'Philippines', TH: 'Thailand',
+  VN: 'Vietnam', JP: 'Japan', HK: 'Hong Kong',
+  PK: 'Pakistan', BD: 'Bangladesh', LK: 'Sri Lanka', NP: 'Nepal',
+  ZA: 'South Africa', NG: 'Nigeria', KE: 'Kenya', EG: 'Egypt', MX: 'Mexico', BR: 'Brazil',
+});
+export function countryFromNetwork(code) {
+  const key = String(code || '').trim().toUpperCase();
+  return Object.prototype.hasOwnProperty.call(NETWORK_COUNTRIES, key) ? NETWORK_COUNTRIES[key] : '';
 }
 
 // The five service categories (mirror of src/utils/leadService.ts, which the
@@ -572,16 +651,81 @@ function row(label, value) {
  * 2026-09-17 and 2026-09-29, the largest single group was link builders and SEO
  * freelancers pitching FactoryJet (e.g. "Quality Link-builders", "Linked Builder
  * Team", *seoconsultant@gmail.com). Turnstile cannot catch them because they are
- * real people. The tag only changes the email subject so real buyers stand out.
+ * real people. The tag feeds leadTypeOf, so it reaches the email subject, the
+ * Firestore doc and the CRM. A buyer wrongly tagged is the expensive mistake, so
+ * every pattern here is one a buyer would not write. When in doubt it is left out
+ * and the lead stays "Buyer".
+ *
+ * Checked on 2026-10-12 against all 61 leads saved since 2026-09-01: it fires on
+ * 9, all sellers, and on no buyer. Left out on purpose because a buyer could
+ * write the same words: "design partner", "partner with us", "we are building",
+ * bare "email list" or "contact list", "sponsorship packages" with no "your
+ * company" beside it. Still a risk: an SEO buyer who types "backlinks", "link
+ * building", "guest post" or "domain authority" is tagged, because link sellers
+ * (the largest group) use the same words.
  */
-function isVendorPitch({ email, company, message }) {
+// Fires on the email alone, and hero forms carry no message, so only role words.
+// Not a bare "seo" or "outreach": joseortiz@, jiwoo.seo@ and outreach@<charity>
+// are real people.
+const PITCH_EMAIL = /seo[._-]?(expert|specialist|consultant|executive|services?|agency|company|team|guru|freelancer|outreach)|(expert|specialist|consultant|executive|freelancer?|outreach)[._-]?seo|linkbuild|backlink|guest[._-]?post|(blogger|link)[._-]?outreach/;
+const PITCH_COMPANY = /link.?build|backlink|guest.?post|seo (expert|specialist|consultant|executive)/;
+const PITCH_MESSAGE = [
+  // Paid links and guest posts.
+  /backlink|link.?building|link insertion|link placements?|\bpaid links\b|\bdo-?follow\b|niche edits?|guest.?post|sponsored (post|article)|domain authority|\bda ?\d{2}\b|\bdr ?\d{2}\b|write for (you|us)|rank(ing)? your (website|site)|partnership opportunit/,
+  // SEO sold in the second person. A buyer writes "get US on the first page".
+  /(get|put|rank|bring|place|push|take) (you|your (website|site|business|store|brand|company))( \w+){0,3} (on|to|onto) (the )?(first page|page one|page 1|top) of google/,
+  // Agencies selling their own services to us. Narrow nouns: "we offer design and
+  // installation" and "we provide development finance" are buyers.
+  /\bwe (offer|provide) (seo|link|(web|website)( (and|&) \w+)? (design|development)|design (and|&) development|development (and|&) design|content (writing|marketing)|lead generation)/,
+  // "White label" and "outsource" are buyer words too (an agency that wants us
+  // as its white-label team; "do you outsource?"), so only the selling forms.
+  /white.?label( \w+){0,2} (for|to) your\b|\b(we|i) (offer|provide)( \w+){0,4} white.?label/,
+  /\boutsource (your|any|all|some|overflow|extra)( \w+){0,3} (to|with) us\b|\byou (can|could|may|might) outsource( \w+){0,3} (to|with) us\b|\byour outsourcing partner/,
+  // Events selling a stand or a sponsor slot, always aimed at "your company".
+  /(sponsorship|exhibition|exhibitor)s? (participation|opportunit(y|ies)|packages?|options?|slots?) (for|to) your (company|organi[sz]ation|business|brand|team|firm)/,
+  /invit\w* (you|your (company|organi[sz]ation|team|brand|firm)) to (sponsor|exhibit|participate as an? (sponsor|exhibitor))/,
+  /(connect|introduce|direct|point|refer)\w* (me|us) (to|with) (the |a |an )?((right|appropriate|relevant|concerned|best) )?(person|team|contact|someone|department)( or (person|team|department))? (responsible for|in charge of|who handles|that handles|handling) (the |your )?(exhibitions?|sponsorships?|trade shows?)/,
+  // Contact-list sellers. They ask about OUR targets; a buyer talks about theirs.
+  /are you (looking|planning|trying|hoping) to (connect with|reach( out to)?|target|market to)\b/,
+  /(share|send|tell|let) (me |us )?(know )?your target (countr(y|ies)|geograph(y|ies)|job titles|criteria)/,
+  /would you be interested in (acquiring|purchasing|buying)( \S+){0,6} (lists?|database|contacts)\b/,
+];
+export function isVendorPitch({ email, company, message }) {
   const local = String(email || '').toLowerCase().split('@')[0];
   const org = String(company || '').toLowerCase();
-  const msg = String(message || '').toLowerCase();
-  if (/(seo|outreach|linkbuild|backlink|guestpost|guest\.post)/.test(local)) return true;
-  if (/(link.?build|backlink|guest.?post|seo (expert|specialist|consultant|executive))/.test(org)) return true;
-  return /(backlink|link.?building|link insertion|guest.?post|sponsored (post|article)|domain authority|\bda ?\d{2}|\bdr ?\d{2}|white.?label|outsourc|write for (you|us)|we (offer|provide) (seo|web|development|design|link|content|lead)|rank(ing)? your (website|site)|first page of google|partnership opportunit)/.test(msg);
+  // One line, plain hyphens, so a line break or a typographic hyphen inside a
+  // phrase cannot hide it.
+  const msg = String(message || '').toLowerCase().replace(/[\u2010-\u2015]/g, '-').replace(/\s+/g, ' ');
+  if (PITCH_EMAIL.test(local)) return true;
+  if (PITCH_COMPANY.test(org)) return true;
+  return PITCH_MESSAGE.some((re) => re.test(msg));
 }
+
+/**
+ * One label per lead, worked out once per request and used everywhere (the
+ * Firestore doc, the CRM note and field, the email subject) so they cannot
+ * disagree. First match wins:
+ *   Test          name starts with "FactoryJet Test Lead" (our own checks)
+ *   Likely spam   hidden trap field filled, or Turnstile verification failed
+ *   Vendor pitch  reads like someone selling to us (isVendorPitch)
+ *   Buyer         everything else
+ * It labels and never blocks: every type is saved, emailed and sent to the CRM
+ * the same way. "Buyer" means nothing says otherwise. It does not mean qualified.
+ */
+export const LEAD_TYPES = ['Buyer', 'Vendor pitch', 'Likely spam', 'Test'];
+export function leadTypeOf({ name, email, company, message, trapFilled, turnstileVerdict }) {
+  if (/^\s*factoryjet test lead/i.test(String(name || ''))) return 'Test';
+  if (trapFilled || turnstileVerdict === 'failed') return 'Likely spam';
+  if (isVendorPitch({ email, company, message })) return 'Vendor pitch';
+  return 'Buyer';
+}
+// The three existing prefixes are unchanged: inbox searches match on them.
+const SUBJECT_PREFIX = {
+  'Likely spam': '⚠️ LIKELY SPAM — ',
+  'Vendor pitch': '🧾 Vendor pitch — ',
+  Test: '🧪 TEST · ',
+  Buyer: '🔥 ',
+};
 
 /**
  * Verify the Turnstile token with Cloudflare.
@@ -686,12 +830,15 @@ export function cleanEnrichInput(body) {
  * 2026-09-23), so the lead doc itself cannot be patched. exists=false also makes
  * a retried or replayed request fail instead of saving the details twice.
  */
-export function buildEnrichFirestoreRequest(env, docId, fields, source, nowIso = new Date().toISOString()) {
+export function buildEnrichFirestoreRequest(env, docId, fields, source, nowIso = new Date().toISOString(), leadType = '') {
   const project = (env && env.FIREBASE_PROJECT_ID) || FB_PROJECT;
   const apiKey  = (env && (env.FIREBASE_API_KEY || env.NEXT_PUBLIC_FIREBASE_API_KEY)) || FB_API_KEY;
   const s = (v) => ({ stringValue: v == null ? '' : String(v) });
   const out = { leadDocId: s(docId) };
   for (const k of ['phone', 'company', 'message']) if (fields[k]) out[k] = s(fields[k]);
+  // Present only when these details raise a flag (see handleEnrich). The lead doc
+  // keeps the label it got at step 1 and cannot be updated.
+  if (leadType && leadType !== 'Buyer') out.leadType = s(leadType);
   out.enrichedAt = { timestampValue: nowIso };
   out.enrichSource = s(source);
   const url = `https://firestore.googleapis.com/v1/projects/${project}/databases/(default)/documents/contactus/${encodeURIComponent(`${docId}_details`)}?currentDocument.exists=false&key=${apiKey}`;
@@ -754,8 +901,11 @@ export async function enrichLeadInERPNext(env, lead, sleep = (ms) => new Promise
     body: JSON.stringify(payload),
   }, erpTimeout(env));
 
+  // Set by handleEnrich only when these details read like a pitch (or a test).
+  const flagged = LEAD_TYPES.includes(lead.leadType) && lead.leadType !== 'Buyer';
   const text = [
     returning ? 'Details added on the website (returning lead)' : 'Details added on the website',
+    flagged && `Lead type: ${lead.leadType}`,
     lead.phone && `Phone: ${lead.phone}`,
     lead.company && `Company: ${lead.company}`,
     lead.message && `Message:\n${lead.message}`,
@@ -784,6 +934,23 @@ export async function enrichLeadInERPNext(env, lead, sleep = (ms) => new Promise
         if (!res.ok) console.warn('ERPNext enrich field update returned HTTP', res.status, 'fields', Object.keys(update).join(','));
       } catch (err) {
         console.warn('ERPNext enrich field update warning:', describeFetchError(err));
+      }
+    }
+    // A pitch typed into the details box: move the Lead's own label from Buyer to
+    // Vendor pitch. Its own request, after the comment and the phone/company
+    // update, so a refused value costs nothing. Read first: a Likely spam or Test
+    // label set at step 1 outranks Vendor pitch and is left alone.
+    if (lead.leadType === 'Vendor pitch') {
+      try {
+        const path = `/api/resource/Lead/${encodeURIComponent(leadId)}`;
+        const cur = await fetchWithTimeout(`${erpUrl}${path}`, { headers: { ...ERP_HEADERS, Authorization: authHeader } }, erpTimeout(env));
+        const current = cur.ok ? ((((await cur.json()) || {}).data || {}).custom_lead_type || '') : null;
+        if (current === '' || current === 'Buyer') {
+          const res = await send(path, 'PUT', { custom_lead_type: 'Vendor pitch' });
+          if (!res.ok) console.warn('ERPNext enrich lead type update returned HTTP', res.status);
+        }
+      } catch (err) {
+        console.warn('ERPNext enrich lead type update warning:', describeFetchError(err));
       }
     }
   }
@@ -850,11 +1017,16 @@ async function handleEnrich(context, body, corsHeaders) {
   const name = clipText(body.name, 120);
   const email = clipText(body.email, 200);
   const source = clipText(body.source, 80).replace(/[<>"'`]/g, '');
+  // What these details say on their own. Name-and-email forms have no message at
+  // step 1, so this is the first place a pitch from one of them can show. Step 2
+  // can raise the flag; it never clears a label set at step 1 ("Buyer" here
+  // writes nothing).
+  const detailsType = leadTypeOf({ name, email, company: fields.company, message: fields.message });
 
   // (1) AUTHORITATIVE: create contactus/<docId>_details (create-only).
   let saved = false;
   try {
-    const { url, body: fsBody } = buildEnrichFirestoreRequest(env, docId, fields, source);
+    const { url, body: fsBody } = buildEnrichFirestoreRequest(env, docId, fields, source, undefined, detailsType);
     const res = await fetch(url, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(fsBody) });
     saved = res.ok;
     if (!res.ok) {
@@ -869,7 +1041,7 @@ async function handleEnrich(context, body, corsHeaders) {
   }
 
   // (2) ERPNext in the background; wait briefly so the email can link the Lead.
-  const erpPromise = enrichLeadInERPNext(env, { docId, email, name, ...fields })
+  const erpPromise = enrichLeadInERPNext(env, { docId, email, name, leadType: detailsType, ...fields })
     .catch((err) => ({ saved: false, error: describeFetchError(err) }));
   if (typeof context.waitUntil === 'function') context.waitUntil(erpPromise);
   const erp = await Promise.race([
@@ -954,6 +1126,11 @@ export async function onRequestPost(context) {
   // fill that field for a real visitor (it is named company_website on three
   // forms). The lead is kept and marked; the trap value itself is never stored.
   const trapFilled = Boolean(body.honeypot && String(body.honeypot).trim());
+  // One label for this lead (Buyer, Vendor pitch, Likely spam or Test), worked out
+  // here once and handed to Firestore, the CRM and the email subject.
+  const leadType = leadTypeOf({ name, email, company, message, trapFilled, turnstileVerdict });
+  // Country of the visitor's network, per Cloudflare. A two-letter code only.
+  const ipCountry = networkCountryCode(request);
 
   // ── (1) AUTHORITATIVE: persist the lead to Firestore server-side ───────────
   // This is the reliable capture path; it runs regardless of email status.
@@ -962,6 +1139,7 @@ export async function onRequestPost(context) {
     ...attribution,
     turnstileToken: body.turnstileToken, turnstileVerdict,
     honeypot: trapFilled ? 'filled' : '',
+    leadType, ipCountry,
   });
 
   // ── (1b) Push lead to ERPNext CRM without ever blocking the visitor ────────
@@ -971,6 +1149,7 @@ export async function onRequestPost(context) {
     docId: fsResult.docId || docId,
     name, email, phone, company, service, serviceCategory, serviceInferred, message, region, source, page,
     ...attribution,
+    leadType, ipCountry,
   }).then((result) => {
     if (!result.saved) console.error('ERPNext lead sync did not save:', result.error || result.status || 'unknown');
     return result;
@@ -994,8 +1173,8 @@ export async function onRequestPost(context) {
     // Only an outright verification FAILURE is worth flagging in the subject.
     // 'absent' and 'unchecked' are normal for real people and stay unmarked, so
     // the warning keeps its meaning instead of appearing on half the leads.
-    const pitch = isVendorPitch({ email, company, message });
-    const subject = `${turnstileVerdict === 'failed' || trapFilled ? '⚠️ LIKELY SPAM — ' : pitch ? '🧾 Vendor pitch — ' : '🔥 '}New lead: ${name} — ${serviceStr}${region ? ` (${region.toUpperCase()})` : ''}`;
+    // The prefix comes from the same leadType the CRM and Firestore received.
+    const subject = `${SUBJECT_PREFIX[leadType]}New lead: ${name} — ${serviceStr}${region ? ` (${region.toUpperCase()})` : ''}`;
     try {
       const resendRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',

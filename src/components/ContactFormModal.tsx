@@ -507,7 +507,8 @@ const ContactFormModal: React.FC = () => {
           Back
         </button>
         <button
-          type="submit" disabled={isSubmitting || !canSubmit()}
+          type="submit" disabled={isSubmitting}
+          onClick={() => { if (!canSubmit()) trackFormError('contact_form', 'validation_incomplete'); }}
           className="flex-1 bg-[#B23E13] text-white py-3 rounded-xl font-bold transition-all hover:bg-[#d44d1f] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           {isSubmitting ? (
