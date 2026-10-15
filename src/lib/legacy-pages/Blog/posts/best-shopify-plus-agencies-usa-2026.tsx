@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './best-shopify-plus-agencies-usa-2026.visual-qa.module.css';
 import type { BlogPost, FAQItem } from '../data.types';
 
 const SLUG = 'best-shopify-plus-agencies-usa-2026';
@@ -707,12 +708,7 @@ export const post: BlogPost = {
                     <strong>Based:</strong> {f.based}. <strong>Type:</strong> {f.type}. <strong>Shopify partner tier:</strong> {f.tier}.
                   </p>
                   <p className="mb-3">{f.what}</p>
-                  <ul className="list-disc pl-6 mb-3 space-y-1">
-                    <li><strong>Best for:</strong> {f.bestFor}</li>
-                    <li><strong>Typical client:</strong> {f.clients}.</li>
-                    <li><strong>Systems it names:</strong> {f.tools}.</li>
-                    <li><strong>Worth asking them:</strong> {f.ask}</li>
-                  </ul>
+                  <table className={styles.profileFacts}><tbody><tr><th scope="row"><strong>Best for:</strong></th><td>{f.bestFor}</td></tr><tr><th scope="row"><strong>Typical client:</strong></th><td>{f.clients}.</td></tr><tr><th scope="row"><strong>Systems it names:</strong></th><td>{f.tools}.</td></tr><tr><th scope="row"><strong>Worth asking them:</strong></th><td>{f.ask}</td></tr></tbody></table>
                   <p className="text-sm text-gray-600">
                     Source:{' '}
                     <a href={f.source} className={link} rel="noopener" target={f.source.startsWith('https://factoryjet.com') ? undefined : '_blank'}>
@@ -830,40 +826,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Which Shopify Plus agency fits your brand</h2>
       <p className="mb-4">Find the line that sounds most like you. It points to a kind of firm first and a name second.</p>
-      <div className="grid gap-3 mb-8 not-prose">
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We are a food, drink or personal care brand and we sell in shops and on Amazon too.&rdquo;</p>
-          <p className="text-gray-700 text-sm">Barrel, which says it works only with packaged goods brands.</p>
-        </div>
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We are a fashion or lifestyle brand and design comes first.&rdquo;</p>
-          <p className="text-gray-700 text-sm">Avex. If you also run shops and wholesale from the same store, Solo Media Group.</p>
-        </div>
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We are a founder-led DTC brand doing a few million a year.&rdquo;</p>
-          <p className="text-gray-700 text-sm">Blackbelt Commerce names brands doing $1M to $5M and puts you in direct contact with its two founders.</p>
-        </div>
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We are leaving Magento or BigCommerce and cannot lose our search traffic.&rdquo;</p>
-          <p className="text-gray-700 text-sm">Netalico. Command C if you want a written diagnosis before any build. Domaine for a large move across several markets.</p>
-        </div>
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We are a large omnichannel brand and the move touches our ERP and order systems.&rdquo;</p>
-          <p className="text-gray-700 text-sm">Anatta or Domaine.</p>
-        </div>
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We are a manufacturer or distributor and need a wholesale portal.&rdquo;</p>
-          <p className="text-gray-700 text-sm">Uncap, which focuses on B2B. SDG at enterprise scale. BlueSwitch for ready-made B2B modules. ECommerce Partners for mid-sized wholesalers.</p>
-        </div>
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We sell wholesale and retail from one store.&rdquo;</p>
-          <p className="text-gray-700 text-sm">Shero Commerce or SDG. Both describe B2B and DTC run from a single Shopify store.</p>
-        </div>
-        <div className="rounded-xl border border-gray-200 p-4">
-          <p className="font-semibold mb-1">&ldquo;We need the store connected to QuickBooks or our ERP, with AI agents handling order work.&rdquo;</p>
-          <p className="text-gray-700 text-sm">FactoryJet builds the store, the integration and the agents as one project. See <a href="/services/shopify-quickbooks-integration" className={link}>Shopify and QuickBooks integration</a> and <a href="/services/shopify-ai-agents" className={link}>Shopify AI agents</a>.</p>
-        </div>
-      </div>
+      <table className={[styles.profileFacts, styles.choiceFacts].join(' ')}><tbody><tr><th scope="row">&ldquo;We are a food, drink or personal care brand and we sell in shops and on Amazon too.&rdquo;</th><td>Barrel, which says it works only with packaged goods brands.</td></tr><tr><th scope="row">&ldquo;We are a fashion or lifestyle brand and design comes first.&rdquo;</th><td>Avex. If you also run shops and wholesale from the same store, Solo Media Group.</td></tr><tr><th scope="row">&ldquo;We are a founder-led DTC brand doing a few million a year.&rdquo;</th><td>Blackbelt Commerce names brands doing $1M to $5M and puts you in direct contact with its two founders.</td></tr><tr><th scope="row">&ldquo;We are leaving Magento or BigCommerce and cannot lose our search traffic.&rdquo;</th><td>Netalico. Command C if you want a written diagnosis before any build. Domaine for a large move across several markets.</td></tr><tr><th scope="row">&ldquo;We are a large omnichannel brand and the move touches our ERP and order systems.&rdquo;</th><td>Anatta or Domaine.</td></tr><tr><th scope="row">&ldquo;We are a manufacturer or distributor and need a wholesale portal.&rdquo;</th><td>Uncap, which focuses on B2B. SDG at enterprise scale. BlueSwitch for ready-made B2B modules. ECommerce Partners for mid-sized wholesalers.</td></tr><tr><th scope="row">&ldquo;We sell wholesale and retail from one store.&rdquo;</th><td>Shero Commerce or SDG. Both describe B2B and DTC run from a single Shopify store.</td></tr><tr><th scope="row">&ldquo;We need the store connected to QuickBooks or our ERP, with AI agents handling order work.&rdquo;</th><td>FactoryJet builds the store, the integration and the agents as one project. See <a href="/services/shopify-quickbooks-integration" className={link}>Shopify and QuickBooks integration</a> and <a href="/services/shopify-ai-agents" className={link}>Shopify AI agents</a>.</td></tr></tbody></table>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Which agency can build a B2B wholesale portal on Shopify Plus?</h2>
       <p className="mb-4">
