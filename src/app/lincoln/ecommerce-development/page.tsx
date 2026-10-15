@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Downtown Lincoln & Historic Haymarket District',
-    query: 'lifestyle retail collegiate apparel boutique d2c ecommerce downtown lincoln',
     focus: 'Collegiate Apparel, Lifestyle Goods & D2C Commerce',
     desc: 'The historic entertainment and retail heart. Demands sub-second page loads, interactive lookbooks, and friction-free mobile checkout.',
   },
   {
     corridor: 'University of Nebraska Innovation Campus (NIC)',
-    query: 'agtech precision farming software digital licensing ecommerce lincoln nic',
     focus: 'AgTech Software, Precision Sensors & Digital Licensing',
     desc: 'High-growth agricultural research and technology cluster. Features recurring subscription billing, digital license provisioning, and global CDN delivery.',
   },
   {
     corridor: 'West O Street Commercial & Logistics Corridor',
-    query: 'heavy equipment parts freight logistics agricultural wholesale b2b west o lincoln',
     focus: 'Heavy Equipment, Ag Logistics & Wholesale Distribution',
     desc: 'Major industrial and freight artery. Features bulk matrix ordering, real-time ERP inventory sync, and automated LTL freight calculations.',
   },
   {
     corridor: 'South Lincoln & Pine Lake Commercial Enclave',
-    query: 'specialized home goods consumer health wellness ecommerce south lincoln',
     focus: 'Consumer Goods, Health & Wellness & High-Growth D2C',
     desc: 'Affluent and rapidly expanding residential corridor. Features dynamic bundle builders, subscription retention engines, and mobile checkouts.',
   },
   {
     corridor: 'North 27th Street Industrial Supply Spine',
-    query: 'sheet metal fabrication electrical supply manufacturing wholesale north 27th lincoln',
     focus: 'Sheet Metal, Industrial Electrical & Manufacturing Supplies',
     desc: 'Precision manufacturing and contractor fulfillment core. B2B wholesale portals with purchase order workflows, ERP integration, and volume tiered pricing.',
   },
   {
     corridor: 'Air Park Industrial & Manufacturing District',
-    query: 'aviation components warehousing tier 1 supplier wholesale b2b air park lincoln',
     focus: 'Aerospace Components, Industrial Storage & B2B Supply',
     desc: 'Heavy manufacturing park adjacent to Lincoln Airport. Demands custom customer group pricing tiers, Net terms, and multi-user corporate workflows.',
   },
@@ -664,7 +658,7 @@ export default function LincolnEcommerceDevelopmentPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -673,15 +667,11 @@ export default function LincolnEcommerceDevelopmentPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

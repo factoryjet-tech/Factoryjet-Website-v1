@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Research Triangle Park (RTP) BioTech Corridor',
-    query: 'laboratory consumables clinical biotech wholesale ecommerce rtp nc',
     focus: 'Clinical Supplies, Lab Consumables & BioTech Wholesale',
     desc: 'The global research and life sciences hub. Demands compliance-first wholesale portals, custom ERP inventory sync, and multi-tier pricing.',
   },
   {
     corridor: 'Downtown Raleigh & Warehouse District',
-    query: 'modern d2c lifestyle apparel retail ecommerce warehouse district raleigh',
     focus: 'Modern D2C Brands, Craft Retail & Lifestyle Flagships',
     desc: 'Vibrant design and creator enclave. Features tactile editorial layouts, interactive sizing calculators, and frictionless mobile checkout.',
   },
   {
     corridor: 'North Hills & Midtown Corporate Hub',
-    query: 'enterprise retail franchise distribution ecommerce north hills raleigh',
     focus: 'Enterprise Omnichannel Retail & Franchise Commerce',
     desc: 'Major corporate and retail distribution corridor. Features multi-warehouse inventory routing, complex POS synchronization, and automated checkout.',
   },
   {
     corridor: 'Cary Tech & Enterprise Campus Corridor',
-    query: 'software licensing digital subscriptions hardware ecommerce cary nc',
     focus: 'Software Licensing, Tech Hardware & Digital Subscriptions',
     desc: 'High-growth technology corridor. Features recurring subscription billing, digital license provisioning, and sub-second global edge performance.',
   },
   {
     corridor: 'Durham American Tobacco & Innovation Hub',
-    query: 'artisanal consumer goods specialty food beverage ecommerce durham nc',
     focus: 'Specialty Food & Beverage, Artisanal Goods & Direct-to-Consumer',
     desc: 'Historic innovation core. Features rich visual storytelling, subscription delivery management, and cold-chain shipping calculation.',
   },
   {
     corridor: 'Morrisville & I-40 Logistics Spine',
-    query: 'industrial electronics hardware b2b distribution ecommerce morrisville nc',
     focus: 'Industrial Electronics, B2B Supplies & Heavy Hardware',
     desc: 'Advanced manufacturing and freight fulfillment nexus. B2B wholesale portals with purchase order workflows, net-30 terms, and tiered pricing.',
   },
@@ -664,7 +658,7 @@ export default function RaleighEcommerceDevelopmentPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -673,15 +667,11 @@ export default function RaleighEcommerceDevelopmentPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

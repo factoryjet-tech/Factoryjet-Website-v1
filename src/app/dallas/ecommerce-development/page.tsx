@@ -62,37 +62,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Uptown Dallas & West Village',
-    query: 'shopify plus agency dallas',
     focus: 'Direct-to-Consumer Apparel, Luxury Lifestyle & Beauty',
     desc: 'Premier consumer brand headquarters in downtown Dallas. We build bespoke Shopify Plus flagships with custom cart drawers, personalized cross-sells, and frictionless Shop Pay checkout flows.',
   },
   {
     corridor: 'Fort Worth & Alliance Logistics Hub',
-    query: 'b2b ecommerce development fort worth',
     focus: 'Industrial Equipment, Replacement Parts & Machinery Wholesale',
     desc: 'The southwest’s largest manufacturing and distribution cluster. We architect B2B ordering portals featuring custom tier pricing, CAD spec sheet downloads, and automated RFQ quote workflows.',
   },
   {
     corridor: 'Plano & Telecom Corridor',
-    query: 'headless ecommerce development plano',
     focus: 'Consumer Tech, Hardware & Electronics Commerce',
     desc: 'Technology and hardware headquarters corridor. We build sub-second headless Next.js commerce storefronts supporting complex technical product configurators and international currencies.',
   },
   {
     corridor: 'Frisco & The Star Innovation District',
-    query: 'subscription ecommerce agency frisco',
     focus: 'Athletic Apparel, Sports Tech & Nutrition Subscriptions',
     desc: 'Fast-expanding sports lifestyle hub. We engineer recurring subscription bundles, custom replenishment funnels, and frictionless one-click mobile checkout experiences.',
   },
   {
     corridor: 'Irving & Las Colinas Corporate Center',
-    query: 'corporate merchandise portal irving',
     focus: 'Corporate Merchandising, Gated Portals & Supply Chains',
     desc: 'Major corporate campus cluster. We build enterprise B2B merchandise portals with company account hierarchies, purchase order terms (Net 30/60), and one-click repeat ordering tools.',
   },
   {
     corridor: 'Arlington & Great Southwest Industrial District',
-    query: 'wholesale portal development arlington tx',
     focus: 'Commercial Packaging, Industrial Tools & Bulk Distribution',
     desc: 'Dense logistics and bulk distribution center. We implement bulk tiered pricing matrices, freight carrier LTL rate calculators, and automated Net-30 invoice settlement portals.',
   },
@@ -664,7 +658,7 @@ export default function DallasEcommercePage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -673,15 +667,11 @@ export default function DallasEcommercePage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

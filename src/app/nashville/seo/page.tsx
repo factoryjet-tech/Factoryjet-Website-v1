@@ -15,38 +15,37 @@ const PAGE_MODIFIED = '2026-09-14';
 const CANONICAL = 'https://factoryjet.com/nashville/seo';
 
 export const metadata: Metadata = {
-  title: 'Best Nashville Local SEO Agency | Top Search & AI Visibility | FactoryJet',
+  title: 'SEO Agency for Nashville, TN Businesses | FactoryJet',
   description:
-    'Best Nashville local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Music Row, West End, and Brentwood.',
+    'We improve your Google Business Profile and service pages so Nashville, TN customers can find you. Reporting covers calls and inquiries.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Nashville Local SEO Agency | Top Search & AI Visibility | FactoryJet',
+    title: 'SEO Agency for Nashville, TN Businesses | FactoryJet',
     description:
-      'Premier Nashville local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Music Row, West End, and Brentwood.',
+      'We improve your Google Business Profile and service pages so Nashville, TN customers can find you. Reporting covers calls and inquiries.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Nashville Local SEO Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'SEO for Nashville, TN businesses by FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Nashville Local SEO Agency | Top Search & AI Visibility | FactoryJet',
-    description: 'Dominate Nashville local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    title: 'SEO Agency for Nashville, TN Businesses | FactoryJet',
+    description: 'We improve your Google Business Profile and service pages so Nashville, TN customers can find you. Reporting covers calls and inquiries.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const PARTNERS = [
-  'Google Business Profile API',
-  'Search Console Integration',
+// Plain names of tools and platforms this work uses. These are not partner,
+// certification or award claims. Add one only with a public directory listing to point to.
+const SEO_TOOLS = [
+  'Google Business Profile',
+  'Google Search Console',
   'Apple Business Connect',
   'Bing Places for Business',
-  'Schema.org Knowledge Graph',
-  'OpenAI SearchGPT Citations',
-  'Perplexity AI Citation Index',
-  'BrightLocal & Yext Multi-Sync',
+  'Schema.org structured data',
 ];
 
 const STAT_CARDS = [
@@ -59,37 +58,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Music Row & Midtown Entertainment District',
-    query: 'entertainment law seo music row nashville',
     focus: 'Entertainment Law, Artist Management & Recording Studios',
     desc: 'The global epicenter of music business and creative talent representation. High-intent local searches demand entertainment legal schemas, verified studio credentials, copyright litigation case studies, and top organic rankings across Davidson County.',
   },
   {
     corridor: 'Downtown Nashville & SoBro Hospitality Core',
-    query: 'hospitality seo downtown nashville',
     focus: 'Convention Hospitality, Real Estate Developers & Tourism',
     desc: 'Fast-growing urban core and convention center hub. Captures high-volume corporate event inquiries, private venue bookings, and commercial real estate development searches with structured local landing pages and high-authority event citations.',
   },
   {
     corridor: 'West End & Vanderbilt Medical Corridor',
-    query: 'specialty medical clinic seo west end nashville',
     focus: 'Hospital Networks, Specialized Clinics & Surgery Centers',
     desc: 'The healthcare management capital of America. Multi-location practice architectures, physician directories, HIPAA-compliant patient inquiry workflows, and structured patient review funnels designed for elective surgical and specialty medical centers.',
   },
   {
     corridor: 'The Gulch & Germantown Retail Enclave',
-    query: 'creative agency seo the gulch',
     focus: 'Culinary Brands, Boutique Retail & Creative Studios',
     desc: 'High-end culinary, residential, and creative studio district. High-intent local searches demand visual schema integration, localized service radius targeting, menu and product schemas, and prominent Google Maps 3-Pack rankings.',
   },
   {
     corridor: 'Brentwood & Cool Springs Corporate Gateway',
-    query: 'wealth advisory seo brentwood nashville',
     focus: 'Corporate Regional HQs, Healthcare Management & Financial Advisory',
     desc: 'Affluent corporate commercial hub in Williamson County. Captures high-net-worth wealth retainers, corporate consulting contracts, and B2B vendor inquiries through nested financial entity schemas and verified regional citations.',
   },
   {
     corridor: 'Murfreesboro & I-24 Logistics Manufacturing Corridor',
-    query: 'industrial manufacturing seo murfreesboro',
     focus: 'Automotive Manufacturing, Equipment Supply & Freight Hubs',
     desc: 'Dense industrial automotive and logistics supply chain corridor. B2B service inquiries require technical capability landing pages, equipment schemas, and sub-second edge performance across Middle Tennessee.',
   },
@@ -100,7 +93,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Healthcare Systems, Medical Specialists & Aesthetics',
     headline: 'Capturing High-Value Patients Across West End & Williamson County',
     description:
-      'In Middle Tennessee’s competitive healthcare capital, prospective patients research physician credentials thoroughly before scheduling procedures. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for competitive surgical and orthopedic queries.',
+      'In Middle Tennessee’s competitive healthcare capital, prospective patients research physician credentials thoroughly before scheduling procedures. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and target competitive surgical and orthopedic queries.',
     image: '/images/us/services/dental-seo/hero.webp',
     alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
@@ -124,9 +117,9 @@ const INDUSTRY_SHOWCASE = [
   },
   {
     sector: 'Corporate Law, Litigation & Intellectual Property',
-    headline: 'Dominating High-Stakes Search Corridors for Nashville Law Firms',
+    headline: 'Local Search Work for Nashville Law Firms',
     description:
-      'Legal search terms in Davidson and Williamson counties are fiercely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case settlement showcases, and localized citation dominance.',
+      'Legal search terms in Davidson and Williamson counties are fiercely contested. We build local SEO structures with practice area knowledge hubs, attorney bar admission schemas, verified case settlement showcases, and consistent local citations.',
     image: '/images/us/services/law-firm-seo/hero.webp',
     alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
@@ -188,7 +181,7 @@ const ROADMAP_STEPS = [
     phase: 'Phase 02',
     title: 'Google Business Profile & On-Page Geo-Optimization',
     desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
-    deliverables: ['GBP category and attribute optimization', 'LocalBusiness & ProfessionalService schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+    deliverables: ['GBP category and attribute optimization', 'LocalBusiness and Service schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
   },
   {
     phase: 'Phase 03',
@@ -207,7 +200,7 @@ const ROADMAP_STEPS = [
 const EVALUATION_CRITERIA = [
   {
     label: 'Ranking Target',
-    factoryjet: 'Qualified inquiries from searches for the services you actually sell. Rankings are tracked, never guaranteed.',
+    factoryjet: 'Qualified inquiries from searches for the services you actually sell. Rankings are tracked, never promised.',
     traditional: 'Ask which customer inquiries they measure and how they report them.',
   },
   {
@@ -240,7 +233,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does local SEO cost for a Nashville business?',
     answer:
-      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Nashville corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring county-wide rank dominance receive tailored scoping with clear milestone deliverables.',
+      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Nashville corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring county-wide coverage receive tailored scoping with clear milestone deliverables.',
   },
   {
     category: 'pricing',
@@ -258,7 +251,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'How quickly can our Nashville business expect to see Google Maps rank improvements?',
     answer:
-      'Timing depends on your starting point, competition, location, and the fixes needed. We establish a baseline and agree the first priorities after the audit. We report completed work alongside changes in visibility and inquiries. No agency can guarantee a top-three position or a fixed date for reaching it.',
+      'Timing depends on your starting point, competition, location, and the fixes needed. We establish a baseline and agree the first priorities after the audit. We report completed work alongside changes in visibility and inquiries. No agency can promise a top-three position or a fixed date for reaching it.',
   },
   {
     category: 'timeline',
@@ -270,7 +263,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'What happens to our local rankings if we pause or discontinue services?',
     answer:
-      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain 100% your permanent intellectual property and provide long-lasting organic value.',
+      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain your property after the engagement ends. Rankings can still change over time as competitors keep working.',
   },
   {
     category: 'technical',
@@ -282,11 +275,11 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What structured JSON-LD schemas do you implement on our website?',
     answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, ProfessionalService, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+      'We inject comprehensive server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
   },
   {
     category: 'technical',
-    question: 'How do you ensure our company is recommended by AI search engines like ChatGPT and Perplexity?',
+    question: 'How do you help our company get recommended by AI search engines like ChatGPT and Perplexity?',
     answer:
       'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
   },
@@ -306,7 +299,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Can you help our practice outrank entrenched competitors in West End and Green Hills?',
     answer:
-      'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
+      'We can help you compete with them. The work combines website speed, topical content, clean citations and a steady flow of reviews. No agency can promise a map position, so each month we report where you stand next to the work completed.',
   },
   {
     category: 'local',
@@ -360,13 +353,13 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What technical SEO factors are most critical for competitive Nashville enterprises?',
     answer:
-      'We check whether important pages can be crawled and indexed, whether mobile visitors can use them easily, and whether internal links and structured data describe the business accurately. Core Web Vitals help diagnose loading, responsiveness, and layout problems. There is no single speed score that guarantees a ranking.',
+      'We check whether important pages can be crawled and indexed, whether mobile visitors can use them easily, and whether internal links and structured data describe the business accurately. Core Web Vitals help diagnose loading, responsiveness, and layout problems. No single speed score decides a ranking.',
   },
   {
     category: 'citations',
     question: 'How do you clean up duplicate and incorrect NAP citations across Tennessee business directories?',
     answer:
-      'We run an exhaustive audit across 80+ top business directories, data aggregators, and mapping platforms, claiming unverified listings, removing spam duplicates, and enforcing 100% NAP consistency.',
+      'We run an exhaustive audit across 80+ top business directories, data aggregators, and mapping platforms, claiming unverified listings, removing spam duplicates, and correcting NAP details that do not match.',
   },
   {
     category: 'reviews',
@@ -436,15 +429,15 @@ const SERVICE_SCHEMA = {
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
   description:
-    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Nashville businesses.',
+    'We improve your Google Business Profile and service pages so Nashville, TN customers can find you. Reporting covers calls and inquiries.',
   areaServed: [{ '@type': 'City', name: 'Nashville' }, { '@type': 'State', name: 'Tennessee' }],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Nashville Local SEO Agency | Search & AI Visibility | FactoryJet',
-  description: 'Nashville local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Music Row, West End, and Brentwood.',
+  name: 'SEO Agency for Nashville, TN Businesses | FactoryJet',
+  description: 'We improve your Google Business Profile and service pages so Nashville, TN customers can find you. Reporting covers calls and inquiries.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
@@ -494,7 +487,7 @@ export default function NashvilleSeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Nashville Local SEO Agency for Service Businesses
+                  Local SEO for Nashville Service Businesses
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
@@ -529,18 +522,18 @@ export default function NashvilleSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / CITATION MARQUEE TICKER ── */}
+        {/* ── 02. TOOLS AND PLATFORMS MARQUEE TICKER (plain tool names, no partner or certification claims) ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Local Search &amp; AI Citation Infrastructure</div>
+              <div className="rv-ticker-label">Platforms and tools we work with</div>
               <div className="rv-ticker-line" />
             </div>
 
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
-                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                {SEO_TOOLS.concat(SEO_TOOLS).map((p, idx) => (
                   <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
                     <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
                       {p}
@@ -561,7 +554,7 @@ export default function NashvilleSeoPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/shared/factoryjet-audit-call.webp"
-                  alt="FactoryJet senior SEO strategists conducting local search audit for Nashville businesses"
+                  alt="A man in a blue shirt talking to the camera at a white desk, beside a laptop showing a dashboard with orange and green bar charts"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -631,7 +624,7 @@ export default function NashvilleSeoPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -640,15 +633,11 @@ export default function NashvilleSeoPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 
@@ -743,10 +732,10 @@ export default function NashvilleSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Nashville Companies Choose FactoryJet Local SEO
+                What FactoryJet Does Differently for Nashville Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace generic SEO reports with direct rank dominance and verified phone lead generation:
+                We replace generic SEO reports with reporting on completed work, calls and inquiries:
               </p>
             </div>
 
@@ -790,7 +779,7 @@ export default function NashvilleSeoPage() {
               FactoryJet built Yadav Entrance Automation’s website and continues its SEO and AI search work. The content explains the entrance systems the business installs and services, so buyers can understand their options before getting in touch.
             </p>
             <p className="pp-lead" style={{ maxWidth: '68ch', marginTop: '12px', fontSize: '15px' }}>
-              This is an example of our implementation work for an Indian client. Your Nashville audit starts with your services, your customers, and your local competitors.
+              This is an example of our implementation work for one client. Your Nashville audit starts with your services, your customers, and your local competitors.
             </p>
             <div className="rv-actions" style={{ marginTop: '24px' }}>
               <Link href="/case-studies/yadav-entrance-automation-website-seo" className="rv-btn-secondary">Read the client project →</Link>
@@ -803,7 +792,7 @@ export default function NashvilleSeoPage() {
         <LocalSeoArchitectureBlueprint
             badge="// NASHVILLE LOCAL SEARCH & AI RANKING BLUEPRINT"
             title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
-            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Nashville local search."
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together in Nashville local search."
             city="Nashville"
             ctaLabel="Get a Free Local SEO Audit"
             region="us"
@@ -818,13 +807,13 @@ export default function NashvilleSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Proven Local Ranking Engine</span>
+                <span>Four Stages of Work</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A systematic, engineering-first methodology for establishing market dominance across Middle Tennessee:
+                The four stages of work we follow for local search across Middle Tennessee:
               </p>
             </div>
 
@@ -960,15 +949,15 @@ export default function NashvilleSeoPage() {
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
-              <span>Verified Rank Dominance</span>
+              <span>Google Maps &amp; Local Search</span>
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Dominate Nashville Local Search?
+              Start With a Free Nashville Local SEO Audit
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Claim your complimentary local SEO audit and discover the exact ranking and citation gaps preventing your firm from capturing the Google Maps 3-Pack.
+              Ask for a free review of your Google Business Profile and local listings. We will show you what is missing or inconsistent, and what we would fix first.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>

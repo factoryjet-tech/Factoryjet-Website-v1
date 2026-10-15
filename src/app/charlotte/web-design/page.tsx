@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Uptown Charlotte Financial Center',
-    query: 'banking technology web design charlotte',
     focus: 'Banking, Capital Markets & Commercial Real Estate',
     desc: 'The nation’s second-largest banking center. Institutional financial firms demand executive polish, secure investor hubs, and sub-second page performance.',
   },
   {
     corridor: 'South End & LoSo Innovation District',
-    query: 'fintech website design south end charlotte',
     focus: 'Fintech, Digital Innovation & Creative Studios',
     desc: 'Rapidly growing tech and creative district. Tech companies require interactive component libraries, clear documentation portals, and high-converting product demo funnels.',
   },
   {
     corridor: 'Ballantyne & South Charlotte',
-    query: 'corporate headquarters web design ballantyne',
     focus: 'Corporate Regional HQs, Insurance & Wealth Advisory',
     desc: 'Premier master-planned corporate park. Demands enterprise-grade accessibility, partner credential directories, and sub-second edge hosting.',
   },
   {
     corridor: 'University City & Innovation Corridor',
-    query: 'energy engineering web design charlotte',
     focus: 'Energy Engineering, Research Labs & Clean Tech',
     desc: 'Major energy and technical research hub. High-speed spec sheet downloads, equipment capability matrices, and rapid RFQ calculators capture enterprise contracts.',
   },
   {
     corridor: 'Lake Norman & North Mecklenburg',
-    query: 'motorsports engineering web design lake norman',
     focus: 'Motorsports Engineering, Luxury Marine & Specialty Retail',
     desc: 'High-performance engineering corridor. Demands ultra-high-resolution project galleries, fluid grid transitions, and editorial typography that reflects luxury standards.',
   },
   {
     corridor: 'Charlotte Douglas Airport & Logistics Hub',
-    query: 'freight logistics web design charlotte',
     focus: 'Heavy Freight, Supply Chain Platforms & Industrial Services',
     desc: 'Critical Southeast logistics nexus. High-speed quote calculators, fleet capability matrices, and rapid RFQ workflows capture commercial freight supply contracts.',
   },
@@ -652,7 +646,7 @@ export default function CharlotteWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -661,15 +655,11 @@ export default function CharlotteWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

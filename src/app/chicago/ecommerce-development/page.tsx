@@ -62,37 +62,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'The Loop & West Loop Commercial District',
-    query: 'shopify plus agency chicago',
     focus: 'Direct-to-Consumer Brands, Luxury Lifestyle & Fashion',
     desc: 'Premier consumer brand headquarters in downtown Chicago. We build bespoke Shopify Plus flagships with custom cart drawers, personalized cross-sells, and frictionless Shop Pay checkout flows.',
   },
   {
     corridor: 'Elk Grove Village & O’Hare Industrial Hub',
-    query: 'b2b ecommerce development elk grove',
     focus: 'Industrial Equipment, Replacement Parts & Machinery Wholesale',
     desc: 'The nation’s largest manufacturing and distribution cluster. We architect B2B ordering portals featuring custom tier pricing, CAD spec sheet downloads, and automated RFQ quote workflows.',
   },
   {
     corridor: 'Fulton Market & River North',
-    query: 'food beverage ecommerce chicago',
     focus: 'Specialty Food, Craft Beverage & Cold-Chain Distribution',
     desc: 'Culinary and food-tech epicenter. We engineer temperature-controlled shipping rules, recurring subscription bundles, and real-time local delivery routing for Midwest specialty food producers.',
   },
   {
     corridor: 'Schaumburg & I-90 Tech Corridor',
-    query: 'headless ecommerce development schaumburg',
     focus: 'Consumer Electronics, Hardware & Scientific Instruments',
     desc: 'Technology and industrial hardware center. We build sub-second headless Next.js commerce storefronts supporting complex technical product configurators and international currencies.',
   },
   {
     corridor: 'Oak Brook & Central DuPage',
-    query: 'omnichannel retail ecommerce oak brook',
     focus: 'Multi-Location Retail Chains & Corporate Merchandising',
     desc: 'Suburban retail corporate corridor. We integrate POS inventory across brick-and-mortar stores, buy-online-pickup-in-store (BOPIS) workflows, and localized warehouse fulfillment routing.',
   },
   {
     corridor: 'Bedford Park & Southwest Logistics Hub',
-    query: 'wholesale portal development chicago',
     focus: 'Chemical Supply, Commercial Packaging & Freight Logistics',
     desc: 'Dense logistics and bulk chemical distribution center. We implement bulk tiered pricing matrices, freight carrier LTL rate calculators, and automated Net-30 invoice settlement portals.',
   },
@@ -676,7 +670,7 @@ export default function ChicagoEcommercePage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -685,15 +679,11 @@ export default function ChicagoEcommercePage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

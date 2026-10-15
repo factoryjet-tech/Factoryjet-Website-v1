@@ -62,37 +62,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Water Street & Downtown Tampa',
-    query: 'luxury ecommerce development water street tampa',
     focus: 'High-Rise Residential Merchandising, Luxury D2C & Creator Commerce',
     desc: 'The vibrant urban waterfront. Demands bespoke digital flagships, high-resolution lifestyle lookbooks, VIP client portals, and frictionless mobile checkouts.',
   },
   {
     corridor: 'Westshore Commercial District',
-    query: 'b2b corporate ecommerce westshore tampa',
     focus: 'Corporate Regional Retail, Executive Procurement & B2B Portals',
     desc: 'Dense corporate headquarters corridor. Features unified commerce engines connecting physical retail stores, warehouse inventory feeds, and regional distributor portals.',
   },
   {
     corridor: 'Ybor City & Historic Quarter',
-    query: 'craft beverage ecommerce ybor city',
     focus: 'Bespoke Apparel, Cigar Culture Products & Craft Beverages',
     desc: 'Historic maker and culinary district. Features custom box-builder funnels, recurring membership subscriptions, and state-by-state compliance integrations.',
   },
   {
     corridor: 'South Tampa & Hyde Park',
-    query: 'designer fashion ecommerce south tampa',
     focus: 'Luxury Fashion Flagships, Designer Goods & Private Client Portals',
     desc: 'Affluent shopping district. Features 3D product configurators, customized swatch selection funnels, and frictionless Shop Pay checkout.',
   },
   {
     corridor: 'Gateway & Mid-Pinellas Corridor',
-    query: 'medical device ecommerce gateway tampa',
     focus: 'Medical Device Sales, Clinical Technology & B2B Ordering',
     desc: 'High-tech medical manufacturing hub. Demands HIPAA-aware customer data handling, clinic reordering subscriptions, and verified provider discount tiers.',
   },
   {
     corridor: 'Port Tampa Bay Logistics Nexus',
-    query: 'wholesale industrial ecommerce port tampa bay',
     focus: 'Maritime Supply, Cold-Chain Seafood & Industrial Wholesale',
     desc: 'Major Gulf Coast trade hub. Features custom net-payment terms, volume-tiered pricing matrices, punchout catalogs, and real-time ERP inventory syncing.',
   },
@@ -676,7 +670,7 @@ export default function TampaEcommercePage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -685,15 +679,11 @@ export default function TampaEcommercePage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

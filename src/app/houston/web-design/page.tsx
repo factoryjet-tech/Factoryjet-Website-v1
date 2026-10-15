@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Energy Corridor & West Houston Core',
-    query: 'oilfield services cleantech energy web design houston energy corridor',
     focus: 'Upstream Oil & Gas, Renewable CleanTech & Energy Services',
     desc: 'The global epicenter of energy innovation. Demands technical service matrices, interactive asset maps, and sub-second edge hosting.',
   },
   {
     corridor: 'Texas Medical Center & Museum District',
-    query: 'biotech clinical practice life sciences web design tmc houston',
     focus: 'Specialized Clinical Practices, BioTech & Life Sciences',
     desc: 'The world largest medical complex. Demands clinical-grade UI/UX, physician credential silos, and HIPAA-compliant patient intake workflows.',
   },
   {
     corridor: 'Downtown Houston & CBD Financial Core',
-    query: 'corporate litigation wealth advisory commercial real estate web design downtown houston',
     focus: 'Commercial Litigation, Private Equity & Commercial Real Estate',
     desc: 'The executive financial and legal heart of Houston. Demands refined editorial typography, practice area silos, and secure portals.',
   },
   {
     corridor: 'The Woodlands & North Houston HQ',
-    query: 'corporate headquarters chemical engineering web design the woodlands',
     focus: 'Corporate Headquarters, Chemical Engineering & Tech Scale-Ups',
     desc: 'Major corporate campus corridor. Features multi-subsidiary architecture, executive bio directories, and enterprise recruitment portals.',
   },
   {
     corridor: 'Galleria & Uptown Commercial District',
-    query: 'luxury residential commercial architecture wealth management web design galleria houston',
     focus: 'Luxury Real Estate, Wealth Advisory & Architecture Studios',
     desc: 'Premier upscale commercial corridor. Demands high-resolution portfolio visualizers, interactive floor plans, and fluid transitions.',
   },
   {
     corridor: 'Houston Ship Channel & Industrial Port Corridor',
-    query: 'maritime logistics heavy fabrication chemical distribution web design ship channel',
     focus: 'Maritime Logistics, Heavy Fabrication & Port Infrastructure',
     desc: 'Heavy industrial and maritime freight nexus. Features equipment tolerance tables, freight RFQ workflows, and safety certification hubs.',
   },
@@ -688,7 +682,7 @@ export default function HoustonWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -697,15 +691,11 @@ export default function HoustonWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

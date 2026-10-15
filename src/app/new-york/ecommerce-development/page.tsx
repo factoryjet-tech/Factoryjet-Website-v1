@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'SoHo & Madison Avenue Luxury Corridor',
-    query: 'luxury retail haute couture headless ecommerce soho nyc',
     focus: 'Luxury Fashion, High-End Retail & Flagship Boutiques',
     desc: 'The global epicenter of luxury fashion. Demands ultra-responsive lookbooks, interactive sizing visualizers, and sub-second edge hosting.',
   },
   {
     corridor: 'Garment District & Midtown Fashion HQ',
-    query: 'apparel wholesale b2b private label ecommerce garment district',
     focus: 'Apparel Manufacturing, B2B Wholesale & Line Sheet Portals',
     desc: 'Historic apparel production core. B2B wholesale portals with purchase order workflows, net-30 terms, and tiered line sheet pricing.',
   },
   {
     corridor: 'DUMBO & Brooklyn Creative Commerce',
-    query: 'artisanal lifestyle home goods d2c ecommerce dumbo',
     focus: 'Modern D2C Brands, Artisanal Goods & Specialty Homeware',
     desc: 'Vibrant design and creator enclave. Features tactile editorial layouts, interactive 3D product configurators, and frictionless mobile checkout.',
   },
   {
     corridor: 'Flatiron & Chelsea D2C Tech Corridor',
-    query: 'health beauty subscription wellness ecommerce flatiron',
     focus: 'Beauty, Wellness & Subscription Commerce Scale-Ups',
     desc: 'High-growth direct-to-consumer hub. Features recurring subscription billing, dynamic bundle builders, and personalized quiz funnels.',
   },
   {
     corridor: 'Long Island City B2B Distribution Spine',
-    query: 'commercial food beverage cold storage ecommerce lic queens',
     focus: 'Gourmet Food Wholesale, Beverage & Cold-Chain Logistics',
     desc: 'Major multi-borough distribution nexus. Demands real-time ERP inventory syncing, dynamic freight calculations, and route scheduling.',
   },
   {
     corridor: 'Financial District FinTech & Digital Goods Hub',
-    query: 'digital subscriptions fintech micro transactions ecommerce fidi',
     focus: 'Digital Subscriptions, FinTech Commerce & Digital Assets',
     desc: 'High-velocity transaction epicenter. Demands multi-currency settlement, tokenized micro-billing, and high-concurrency payment routing.',
   },
@@ -664,7 +658,7 @@ export default function NewYorkEcommerceDevelopmentPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -673,15 +667,11 @@ export default function NewYorkEcommerceDevelopmentPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

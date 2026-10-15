@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Pearl District & Downtown Portland',
-    query: 'creative agency website design pearl district',
     focus: 'Creative Agencies, Architecture Studios & Specialty Retail',
     desc: 'Dense cultural and design epicenter. Demands ultra-high-resolution project portfolios, minimalist editorial typography, and fluid responsive layouts.',
   },
   {
     corridor: 'Silicon Forest & Hillsboro Tech Hub',
-    query: 'semiconductor web design hillsboro',
     focus: 'Semiconductor Manufacturing, Enterprise Software & Cloud',
     desc: 'High-density Pacific Northwest tech cluster. High-speed spec sheet downloads, technical capability matrices, and rapid RFQ calculators.',
   },
   {
     corridor: 'Central Eastside Industrial District',
-    query: 'sustainable apparel web design portland',
     focus: 'Craft Beverage, Specialty Coffee & Sustainable Apparel',
     desc: 'Vibrant maker and consumer brand district. Features high-resolution product lookbooks, interactive story timelines, and frictionless checkout flows.',
   },
   {
     corridor: 'South Waterfront & OHSU Medical District',
-    query: 'biomedical research website design portland',
     focus: 'Biomedical Research, Life Sciences & Specialized Care',
     desc: 'Premier Pacific Northwest clinical research center. Features searchable researcher directories, clinical trial portals, and sub-second edge hosting.',
   },
   {
     corridor: 'Beaverton & Sunset Corridor',
-    query: 'athletic apparel web design beaverton',
     focus: 'Athletic Footwear HQs, Outdoor Gear & Performance Apparel',
     desc: 'Global epicenter of performance apparel. High-speed interactive product configurators, global CDN image delivery, and sub-second page loads.',
   },
   {
     corridor: 'Columbia River Logistics Corridor',
-    query: 'maritime logistics web design portland',
     focus: 'River Port Maritime, Freight Transportation & Green Building',
     desc: 'Major Pacific Rim trade nexus. High-speed quote calculators, shipping schedule feeds, and rapid RFQ workflows capture commercial maritime contracts.',
   },
@@ -652,7 +646,7 @@ export default function PortlandWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -661,15 +655,11 @@ export default function PortlandWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

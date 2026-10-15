@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Downtown & Cortex Innovation District',
-    query: 'bioscience medtech web design cortex st louis',
     focus: 'Bioscience Core, MedTech & Health Systems',
     desc: 'The Midwest biotechnology and plant science hub. Demands clinical-grade scientific design systems, interactive pipeline visualizers, and sub-second edge hosting.',
   },
   {
     corridor: 'Clayton & Central Business District',
-    query: 'wealth management law firm web design clayton mo',
     focus: 'Wealth Advisory, Private Equity, Law & Fortune 500 HQ',
     desc: 'The executive financial seat of St. Louis County. Demands refined editorial typography, interactive portfolio calculators, and SOC2-compliant client portals.',
   },
   {
     corridor: 'Chesterfield & West County Tech',
-    query: 'enterprise healthcare b2b web design chesterfield',
     focus: 'Enterprise Tech, Healthcare Networks & Architectural Services',
     desc: 'High-growth corporate corridor. Features multi-practitioner clinic directories, patient intake forms, and enterprise service capability matrices.',
   },
   {
     corridor: 'St. Charles & 370 Industrial Corridor',
-    query: 'aerospace manufacturing web design st charles mo',
     focus: 'Precision Tooling, Advanced Manufacturing & Defense Supply',
     desc: 'Precision manufacturing and aerospace supplier heartland. Requires CAD blueprint upload portals, tolerance spec tables, and AS9100 quality cert showcases.',
   },
   {
     corridor: 'Midtown & Grand Center',
-    query: 'creative foundation agency web design grand center',
     focus: 'Cultural Foundations, Creative Agencies & Digital Media',
     desc: 'Historic arts and creative district. Features tactile editorial layouts, interactive video hero modules, and smooth micro-animations.',
   },
   {
     corridor: 'Earth City & Hazelwood Logistics Nexus',
-    query: 'multimodal logistics cold storage web design hazelwood',
     focus: 'Cold Storage, Multimodal Logistics & Wholesale Distribution',
     desc: 'Major Midwest freight and river distribution hub. Features freight rate estimation calculators, warehouse capability matrices, and RFQ workflows.',
   },
@@ -657,7 +651,7 @@ export default function StLouisWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -666,15 +660,11 @@ export default function StLouisWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

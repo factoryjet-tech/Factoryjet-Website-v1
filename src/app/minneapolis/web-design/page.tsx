@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'North Loop & Downtown Minneapolis',
-    query: 'fintech creative studio web design north loop minneapolis',
     focus: 'Fintech Platforms, Venture Capital & Creative Studios',
     desc: 'The vibrant design, tech, and urban innovation spine. Demands high-speed corporate flagships, interactive portfolio visualizers, and sub-second edge hosting.',
   },
   {
     corridor: 'Plymouth & West Metro MedTech Corridor',
-    query: 'medical device healthcare medtech web design plymouth mn',
     focus: 'Medical Device Innovators, Clinical Hardware & Healthcare Systems',
     desc: 'The global Medical Alley heartland. Demands clinical-grade scientific design systems, interactive 3D device visualizers, and sub-second edge hosting.',
   },
   {
     corridor: 'Bloomington & I-494 Corporate Spine',
-    query: 'fortune 500 corporate headquarters web design bloomington mn',
     focus: 'Fortune 500 Headquarters, Financial Services & Advisory',
     desc: 'Major corporate and financial headquarters corridor. Demands refined editorial typography, SOC2-compliant client portals, and enterprise security.',
   },
   {
     corridor: 'St. Paul Capital & Riverfront',
-    query: 'enterprise government higher education web design st paul',
     focus: 'Government Affairs, Higher Education & Enterprise Nonprofits',
     desc: 'Historic seat of Minnesota government and higher education. Features multi-department directory architectures, accessibility compliance, and public portals.',
   },
   {
     corridor: 'Eden Prairie & Southwest Tech Nexus',
-    query: 'enterprise cloud software logistics web design eden prairie',
     focus: 'Enterprise Cloud Software, Telematics & Logistics Platforms',
     desc: 'High-growth technology and supply chain software corridor. Demands developer documentation hubs, interactive demo environments, and sub-second edge speeds.',
   },
   {
     corridor: 'Northeast Arts & Commercial District',
-    query: 'architecture craft beverage d2c web design northeast minneapolis',
     focus: 'Architecture Firms, Craft Beverage & Direct-to-Consumer Brands',
     desc: 'Historic creative arts and craft industrial corridor. Features tactile editorial layouts, interactive video hero modules, and smooth micro-animations.',
   },
@@ -657,7 +651,7 @@ export default function MinneapolisWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -666,15 +660,11 @@ export default function MinneapolisWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

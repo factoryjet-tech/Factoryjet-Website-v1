@@ -16,81 +16,74 @@ const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/kansas-city/seo';
 
 export const metadata: Metadata = {
-  title: 'Best Kansas City SEO Company | Top Local SEO Agency MO KS | FactoryJet',
+  title: 'SEO Agency for Kansas City, MO & KS Businesses | FactoryJet',
   description:
-    'Best Kansas City SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Missouri & Kansas.',
+    'SEO for Kansas City law firms, clinics, animal health companies and contractors in Missouri and Kansas. No long-term contract.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Kansas City SEO Company | Top Local SEO Agency MO KS | FactoryJet',
+    title: 'SEO Agency for Kansas City, MO & KS Businesses | FactoryJet',
     description:
-      'Premier Kansas City SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across MO and KS.',
+      'SEO for Kansas City law firms, clinics, animal health companies and contractors in Missouri and Kansas. No long-term contract.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Kansas City Local SEO Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'SEO for Kansas City, MO & KS businesses by FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Kansas City SEO Company | Top Local SEO Agency MO KS | FactoryJet',
-    description: 'Dominate Kansas City local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization across Missouri and Kansas.',
+    title: 'SEO Agency for Kansas City, MO & KS Businesses | FactoryJet',
+    description: 'SEO for Kansas City law firms, clinics, animal health companies and contractors in Missouri and Kansas. No long-term contract.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const PARTNERS = [
-  'Google Business Profile API',
-  'Search Console Integration',
+// Plain names of tools and platforms this work uses. These are not partner,
+// certification or award claims. Add one only with a public directory listing to point to.
+const SEO_TOOLS = [
+  'Google Business Profile',
+  'Google Search Console',
   'Apple Business Connect',
   'Bing Places for Business',
-  'Schema.org Knowledge Graph',
-  'OpenAI SearchGPT Citations',
-  'Perplexity AI Citation Index',
-  'BrightLocal & Yext Multi-Sync',
+  'Schema.org structured data',
 ];
 
 const STAT_CARDS = [
-  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Kansas City commercial corridors.', icon: '📍' },
-  { num: '4.8x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
-  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
+  { num: 'Maps', title: 'Business Profile Review', desc: 'Check business details, categories, services, and the areas you actually serve.', icon: '📍' },
+  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Agree which calls, forms, and booked conversations count as useful inquiries.', icon: '📈' },
+  { num: 'Schema', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
   { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
   {
     corridor: 'Crossroads Arts District & Downtown KC',
-    query: 'creative agency corporate law seo crossroads kc',
     focus: 'Creative Agencies, Tech Startups & Corporate Law',
     desc: 'The vibrant design, technology, and legal core along Main Street and Broadway Boulevard. Captures high-ticket corporate litigation retainers, commercial office leasing inquiries, and tech venture advisory contracts.',
   },
   {
     corridor: 'Country Club Plaza & Midtown',
-    query: 'wealth management plastic surgery seo country club plaza',
     focus: 'Private Wealth Advisory, Aesthetic Medicine & Family Law',
     desc: 'Affluent executive and specialized medical enclave along Nichols Road and Ward Parkway. Intense search competition for high-net-worth estate planning, cosmetic surgery consultations, and wealth management retainers.',
   },
   {
     corridor: 'Overland Park & College Boulevard',
-    query: 'enterprise healthtech telecommunications seo overland park',
     focus: 'HealthTech, Telecommunications & Corporate Headquarters',
     desc: 'Major corporate and software campus corridor along College Boulevard in Johnson County, Kansas. B2B service queries demand enterprise capability schemas, localized authority, and sub-second edge speeds.',
   },
   {
     corridor: 'KC Animal Health Corridor',
-    query: 'animal health veterinary biotech seo kansas city',
     focus: 'Animal Science Research, Veterinary Tech & AgTech',
     desc: 'World-renowned animal health and bio-agricultural corridor spanning from Manhattan, Kansas to Columbia, Missouri. Multi-location practice architectures, research directories, and clinical credential schemas.',
   },
   {
     corridor: 'Northland & KCI Airport Logistics',
-    query: 'freight forwarding cold storage logistics seo northland kc',
     focus: 'Aviation Cargo, Cold Storage & Distribution',
     desc: 'Major Midwest freight, aviation, and cold storage fulfillment nexus surrounding Kansas City International Airport (MCI). Features logistics capability landing pages, equipment schemas, and RFQ workflows.',
   },
   {
     corridor: 'Lenexa & Olathe Industrial Corridor',
-    query: 'commercial contractor precision machining seo lenexa',
     focus: 'Commercial Construction, HVAC & Heavy Equipment',
     desc: 'Precision industrial, commercial fabrication, and trade contracting heartland across western Johnson County. Captures high-intent commercial HVAC, industrial roofing, and contractor project bidding inquiries.',
   },
@@ -99,9 +92,9 @@ const DISTRICTS = [
 const INDUSTRY_SHOWCASE = [
   {
     sector: 'Corporate Litigation, Estate Planning & Commercial Law',
-    headline: 'Dominating High-Stakes Search Corridors for Kansas City Law Firms',
+    headline: 'Local Search Work for Kansas City Law Firms',
     description:
-      'Legal search queries across Jackson, Johnson, and Clay counties are intensely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
+      'Legal search queries across Jackson, Johnson, and Clay counties are intensely contested. We build local SEO structures with practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and consistent local citations.',
     image: '/images/us/services/law-firm-seo/hero.webp',
     alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
@@ -146,7 +139,7 @@ const INDUSTRY_SHOWCASE = [
     points: [
       'Service area radius optimization covering Kansas City MO, Kansas City KS, Overland Park, and Olathe',
       'High-speed mobile performance ensuring immediate project bidding phone calls',
-      'Structured LocalBusiness and Contractor schema markup for local search dominance',
+      'Structured LocalBusiness and Contractor schema markup',
     ],
   },
 ];
@@ -189,7 +182,7 @@ const ROADMAP_STEPS = [
     phase: 'Phase 02',
     title: 'Google Business Profile & On-Page Geo-Optimization',
     desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
-    deliverables: ['GBP category and attribute optimization', 'LocalBusiness & ProfessionalService schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+    deliverables: ['GBP category and attribute optimization', 'LocalBusiness and Service schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
   },
   {
     phase: 'Phase 03',
@@ -208,7 +201,7 @@ const ROADMAP_STEPS = [
 const EVALUATION_CRITERIA = [
   {
     label: 'Ranking Target',
-    factoryjet: 'Top 3 Google Maps Local Pack & Organic Page 1 for high-intent local commercial terms.',
+    factoryjet: 'Qualified calls and inquiries from the local searches that matter to your business.',
     traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
   },
   {
@@ -241,7 +234,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does local SEO cost for a Kansas City business?',
     answer:
-      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Kansas City corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring bi-state metro-wide rank dominance receive tailored scoping with clear milestone deliverables.',
+      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Kansas City corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring bi-state metro-wide coverage receive tailored scoping with clear milestone deliverables.',
   },
   {
     category: 'pricing',
@@ -259,7 +252,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'How quickly can our Kansas City business expect to see Google Maps rank improvements?',
     answer:
-      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Country Club Plaza or Overland Park generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
+      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
   },
   {
     category: 'timeline',
@@ -271,7 +264,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'What happens to our local rankings if we pause or discontinue services?',
     answer:
-      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain 100% your permanent intellectual property and provide long-lasting organic value.',
+      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain your property after the engagement ends. Rankings can still change over time as competitors keep working.',
   },
   {
     category: 'technical',
@@ -283,11 +276,11 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What structured JSON-LD schemas do you implement on our website?',
     answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, ProfessionalService, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+      'We inject comprehensive server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
   },
   {
     category: 'technical',
-    question: 'How do you ensure our company is recommended by AI search engines like ChatGPT and Perplexity?',
+    question: 'How do you help our company get recommended by AI search engines like ChatGPT and Perplexity?',
     answer:
       'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
   },
@@ -307,7 +300,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Can you help our practice outrank entrenched competitors on the Plaza and in Overland Park?',
     answer:
-      'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
+      'We can help you compete with them. The work combines website speed, topical content, clean citations and a steady flow of reviews. No agency can promise a map position, so each month we report where you stand next to the work completed.',
   },
   {
     category: 'local',
@@ -349,7 +342,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'How do you optimize for animal health, veterinary biotech, and life sciences companies in the KC Animal Health Corridor?',
     answer:
-      'The KC Animal Health Corridor accounts for over 56% of global animal health revenue. We construct technical B2B catalog structures, veterinary specialist schemas, clinical research directories, and downloadable product specifications that capture institutional buyers and veterinary networks nationwide.',
+      'The KC Animal Health Corridor is home to a large cluster of animal health companies. We construct technical B2B catalog structures, veterinary specialist schemas, clinical research directories, and downloadable product specifications that capture institutional buyers and veterinary networks nationwide.',
   },
   {
     category: 'local',
@@ -373,13 +366,13 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'How do aesthetic surgery and wealth management practices capture high-net-worth clients in Country Club Plaza?',
     answer:
-      'We deploy granular MedicalBusiness, Physician, and FinancialService schemas, optimize provider credential authority, construct neighborhood landing pages for the Plaza, Mission Hills, and Brookside, and streamline verified Google review funnels to dominate high-intent procedural and advisory queries.',
+      'We deploy granular MedicalBusiness, Physician, and FinancialService schemas, optimize provider credential authority, construct neighborhood landing pages for the Plaza, Mission Hills, and Brookside, and streamline verified Google review funnels to compete for high-intent procedural and advisory queries.',
   },
   {
     category: 'reporting',
     question: 'What is NAP citation synchronization across Kansas City and regional business directories?',
     answer:
-      'We establish and synchronize verified business citations across essential regional directories, including the Greater Kansas City Chamber of Commerce, Overland Park Chamber, regional BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
+      'We establish and synchronize verified business citations across essential regional directories, including the Greater Kansas City Chamber of Commerce, Overland Park Chamber, regional BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, checking that your details match, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
   },
 ];
 
@@ -394,23 +387,6 @@ const FAQ_SCHEMA = {
       text: item.answer,
     },
   })),
-};
-
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Kansas City Local SEO Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$',
-  areaServed: [
-    { '@type': 'City', name: 'Kansas City' },
-    { '@type': 'City', name: 'Overland Park' },
-    { '@type': 'City', name: 'Olathe' },
-    { '@type': 'City', name: 'Lenexa' },
-    { '@type': 'City', name: 'Lee\'s Summit' },
-  ],
 };
 
 const SERVICE_SCHEMA = {
@@ -430,15 +406,23 @@ const SERVICE_SCHEMA = {
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
   description:
-    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Kansas City businesses.',
-  areaServed: [{ '@type': 'State', name: 'Missouri' }, { '@type': 'State', name: 'Kansas' }],
+    'SEO for Kansas City law firms, clinics, animal health companies and contractors in Missouri and Kansas. No long-term contract.',
+  areaServed: [
+    { '@type': 'City', name: 'Kansas City' },
+    { '@type': 'City', name: 'Overland Park' },
+    { '@type': 'City', name: 'Olathe' },
+    { '@type': 'City', name: 'Lenexa' },
+    { '@type': 'City', name: 'Lee\'s Summit' },
+    { '@type': 'State', name: 'Missouri' },
+    { '@type': 'State', name: 'Kansas' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Kansas City Local SEO Agency | Search & AI Visibility | FactoryJet',
-  description: 'Kansas City local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Country Club Plaza, Overland Park, and Downtown.',
+  name: 'SEO Agency for Kansas City, MO & KS Businesses | FactoryJet',
+  description: 'SEO for Kansas City law firms, clinics, animal health companies and contractors in Missouri and Kansas. No long-term contract.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
@@ -467,7 +451,6 @@ export default function KansasCitySeoPage() {
   return (
     <>
       <script id="kc-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="kc-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="kc-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="kc-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="kc-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -489,11 +472,11 @@ export default function KansasCitySeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Kansas City Local SEO Agency for Market Leaders
+                  SEO for Kansas City Businesses on Both Sides of the State Line
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Country Club Plaza, Overland Park, and Downtown Kansas City. Engineered for verified inbound calls and high-ticket consultations.
+                  We work on your Google Business Profile, your service pages and your listings so customers searching in Country Club Plaza, Overland Park, and Downtown Kansas City can find you. Monthly reporting covers calls and inquiries.
                 </p>
 
                 <div className="rv-actions">
@@ -524,18 +507,18 @@ export default function KansasCitySeoPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / CITATION MARQUEE TICKER ── */}
+        {/* ── 02. TOOLS AND PLATFORMS MARQUEE TICKER (plain tool names, no partner or certification claims) ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Local Search &amp; AI Citation Infrastructure</div>
+              <div className="rv-ticker-label">Platforms and tools we work with</div>
               <div className="rv-ticker-line" />
             </div>
 
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
-                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                {SEO_TOOLS.concat(SEO_TOOLS).map((p, idx) => (
                   <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
                     <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
                       {p}
@@ -556,7 +539,7 @@ export default function KansasCitySeoPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/b2b-website-design/sales-enablement.webp"
-                  alt="FactoryJet senior SEO strategists conducting local search audit for Kansas City businesses"
+                  alt="A woman holding a tablet that shows a tan handbag while a man at a desk takes notes in front of a monitor showing a product page"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -626,7 +609,7 @@ export default function KansasCitySeoPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -635,15 +618,11 @@ export default function KansasCitySeoPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 
@@ -738,10 +717,10 @@ export default function KansasCitySeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Kansas City Companies Choose FactoryJet Local SEO
+                What FactoryJet Does Differently for Kansas City Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace generic SEO reports with direct rank dominance and verified phone lead generation:
+                We replace generic SEO reports with reporting on completed work, calls and inquiries:
               </p>
             </div>
 
@@ -786,7 +765,7 @@ export default function KansasCitySeoPage() {
         <LocalSeoArchitectureBlueprint
             badge="// KANSAS CITY LOCAL SEARCH & AI RANKING BLUEPRINT"
             title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
-            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Kansas City local search."
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together in Kansas City local search."
             city="Kansas City"
             ctaLabel="Get a Free Local SEO Audit"
             region="us"
@@ -801,13 +780,13 @@ export default function KansasCitySeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Proven Local Ranking Engine</span>
+                <span>Four Stages of Work</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A systematic, engineering-first methodology for establishing market dominance across Greater Kansas City:
+                The four stages of work we follow for local search across Greater Kansas City:
               </p>
             </div>
 
@@ -943,15 +922,15 @@ export default function KansasCitySeoPage() {
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
-              <span>Verified Rank Dominance</span>
+              <span>Google Maps &amp; Local Search</span>
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Dominate Kansas City Local Search?
+              Start With a Free Kansas City Local SEO Audit
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Claim your complimentary local SEO audit and discover the exact ranking and citation gaps preventing your firm from capturing the Google Maps 3-Pack.
+              Ask for a free review of your Google Business Profile and local listings. We will show you what is missing or inconsistent, and what we would fix first.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>

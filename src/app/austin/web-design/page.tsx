@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Downtown Austin & Congress Avenue',
-    query: 'fintech web design austin',
     focus: 'Fintech, Venture Capital & Private Equity',
     desc: 'Dense financial center in central Austin. Institutional venture firms and private equity groups evaluate partner credentials, visual polish, and sub-second page performance before booking partner meetings.',
   },
   {
     corridor: 'The Domain & Silicon Hills',
-    query: 'saas website design the domain austin',
     focus: 'B2B SaaS, Cloud Infrastructure & Hardware',
     desc: 'Major corporate innovation cluster in North Austin. High-growth tech companies require interactive component libraries, clear documentation portals, and high-converting enterprise product demo funnels.',
   },
   {
     corridor: 'East Austin & Plaza Saltillo',
-    query: 'creative agency website design east austin',
     focus: 'Creative Studios, D2C Lifestyle & Craft Beverage',
     desc: 'Vibrant creative and consumer brand district. Demands ultra-high-resolution project galleries, fluid grid transitions, and editorial typography that reflects modern brand design standards.',
   },
   {
     corridor: 'South Congress & South Lamar',
-    query: 'luxury hospitality web design south congress',
     focus: 'Boutique Hospitality, Fashion & Luxury Services',
     desc: 'Iconic shopping and hospitality corridor along South Congress. Demands sophisticated brand aesthetics, private consultation booking workflows, and flawless high-speed mobile shopping experiences for national visitors.',
   },
   {
     corridor: 'Round Rock & North Tech Corridor',
-    query: 'managed it services web design round rock',
     focus: 'Enterprise Hardware, Managed IT Services & Semiconductor',
     desc: 'High-density tech manufacturing corridor anchored by major corporate campuses. High-speed spec sheet downloads, equipment capability matrices, and rapid RFQ calculators capture high-value commercial enterprise contracts.',
   },
   {
     corridor: 'Westlake Hills & Bee Cave',
-    query: 'medical aesthetics web design westlake hills',
     focus: 'Private Wealth, Medical Aesthetics & Specialty Healthcare',
     desc: 'Affluent residential and medical corridor in West Austin. Features searchable physician directories, private consultation intake forms, client privacy assurances, and enterprise-level accessibility compliance.',
   },
@@ -706,7 +700,7 @@ export default function AustinWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -715,15 +709,11 @@ export default function AustinWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

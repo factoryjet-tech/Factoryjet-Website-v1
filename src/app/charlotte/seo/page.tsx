@@ -16,83 +16,76 @@ const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/charlotte/seo';
 
 export const metadata: Metadata = {
-  title: 'Charlotte SEO Company & Local Agency NC | FactoryJet',
+  title: 'SEO Agency for Charlotte, NC Businesses | FactoryJet',
   description:
-    'Charlotte SEO company and agency. No-contract local SEO, Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Charlotte NC.',
+    'Local search and Google Maps work, technical SEO and AI answer visibility for Charlotte, NC businesses. No long-term contract.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Charlotte SEO Company & Local Agency NC | FactoryJet',
+    title: 'SEO Agency for Charlotte, NC Businesses | FactoryJet',
     description:
-      'Charlotte SEO company and agency. No-contract local SEO, Google Map Pack rankings, and technical SEO for Queen City businesses.',
+      'Local search and Google Maps work, technical SEO and AI answer visibility for Charlotte, NC businesses. No long-term contract.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Charlotte SEO Company & Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'SEO for Charlotte, NC businesses by FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Charlotte SEO Company & Local Agency NC | FactoryJet',
-    description: 'Local and technical SEO in Charlotte NC. Win the Google Map Pack and AI search citations.',
+    title: 'SEO Agency for Charlotte, NC Businesses | FactoryJet',
+    description: 'Local search and Google Maps work, technical SEO and AI answer visibility for Charlotte, NC businesses. No long-term contract.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const PARTNERS = [
+// Plain names of tools and platforms this work uses. These are not partner,
+// certification or award claims. Add one only with a public directory listing to point to.
+const SEO_TOOLS = [
   'Google Search Console',
   'DataForSEO API',
-  'Screaming Frog Enterprise',
-  'BrightLocal Certified',
-  'SEMrush Partner',
-  'Next.js 15 & React',
+  'Next.js & React',
   'Cloudflare Edge CDN',
   'Google Analytics 4',
 ];
 
 const STAT_CARDS = [
-  { num: '44%', title: 'Map Pack Clicks', desc: 'Direct phone calls and clicks won by the top 3 Google local business profiles.', icon: '📍' },
-  { num: '9,200+', title: 'Monthly Local Demand', desc: 'Verified monthly searches across Charlotte SEO company and agency queries.', icon: '📈' },
-  { num: '38,000+', title: 'Queen City Competitors', desc: 'Commercial entities competing for local visibility across Mecklenburg County.', icon: '🏢' },
-  { num: '100%', title: 'Direct Engineer Access', desc: 'Month-to-month terms with direct communication with senior technical engineers.', icon: '⚡' },
+  { num: 'Maps', title: 'Business Profile Review', desc: 'Review the categories, services, and business details customers see in local search.', icon: '📍' },
+  { num: 'Site', title: 'Technical SEO Review', desc: 'Find crawl, performance, and usability issues that get between a search and an inquiry.', icon: '📈' },
+  { num: '500+', title: 'Businesses Served', desc: 'Businesses FactoryJet has built for, across all services.', icon: '🏢' },
+  { num: 'Monthly', title: 'Month-to-Month Terms', desc: 'Month-to-month terms with direct communication with senior technical engineers.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
   {
     corridor: 'Uptown & Financial District',
-    query: 'corporate law firm charlotte nc',
     focus: 'Banking, Corporate Counsel & Commercial Real Estate',
     desc: 'Dense financial core surrounding Trade and Tryon anchored by Bank of America and Truist. Corporate decision-makers evaluate technical credentials, page speed, and practice area authority before initiating contact.',
   },
   {
     corridor: 'South End & Design District',
-    query: 'tech marketing agency charlotte',
     focus: 'Tech Scale-Ups, Creative Studios & Modern Retail',
     desc: 'High-growth urban corridor along the light rail packed with technology scale-ups, architectural firms, and modern dining. Mobile discovery and visual review proof dictate commercial conversions.',
   },
   {
     corridor: 'SouthPark & Sharon Road',
-    query: 'wealth management southpark charlotte',
     focus: 'Wealth Advisory, Private Clinics & Luxury Services',
     desc: 'Affluent commercial center where high-net-worth individuals and corporate executives research advisory credentials, certifications, and verified client testimonials before calling.',
   },
   {
     corridor: 'Ballantyne Corporate Park',
-    query: 'commercial insurance ballantyne nc',
     focus: 'Enterprise B2B, Insurance & Regional Headquarters',
     desc: 'Major corporate campus corridor along I-485. Deep B2B content silos, clear service offerings, and fast page loads capture corporate procurement teams across South Charlotte.',
   },
   {
     corridor: 'NoDa & Plaza Midwood',
-    query: 'best restaurant noda charlotte',
     focus: 'Hospitality, Dining, Craft Breweries & Arts',
     desc: 'Eclectic cultural districts along North Davidson. Fast mobile load times, updated business hours, structured menu schema, and steady review acquisition drive high foot traffic.',
   },
   {
     corridor: 'Lake Norman & North Mecklenburg',
-    query: 'hvac repair huntersville nc',
     focus: 'Home Services, Marine Contractors & Multi-Location',
-    desc: 'High-income northern suburbs including Huntersville, Cornelius, Davidson, and Mooresville. Multi-location service dominance requires distinct geographic landing pages.',
+    desc: 'High-income northern suburbs including Huntersville, Cornelius, Davidson, and Mooresville. Multi-location service coverage requires distinct geographic landing pages.',
   },
 ];
 
@@ -114,7 +107,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'High-Ticket Home Services, Roofing & Mechanical Contractors',
     headline: 'Capturing Emergency Search Demand Across Mecklenburg County',
     description:
-      'From humid summer air conditioning failures to severe Carolinas storm damage repairs, Charlotte homeowners search under urgent deadlines. We position your contracting business directly in the top 3 Google Map Pack with live call tracking, hyper-local neighborhood pages, and automated review collection systems.',
+      'From humid summer air conditioning failures to severe Carolinas storm damage repairs, Charlotte homeowners search under urgent deadlines. We work on your Google Maps listing with live call tracking, hyper-local neighborhood pages, and automated review collection systems.',
     image: '/images/us/services/roofing-seo/hero.webp',
     alt: 'Aerial view of suburban shingle rooftops at golden hour',
     points: [
@@ -127,18 +120,18 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Healthcare, Dental & Specialized Medical Practices',
     headline: 'Converting High-Intent Patients in Growing Residential Corridors',
     description:
-      'Private medical practices, orthodontic groups, and specialized surgical clinics face aggressive competition from Atrium Health and Novant Health. We build detailed provider profiles, clinical symptom content, and medical schema that win Google 3-Pack rankings and earn direct quotes in AI answer overviews.',
+      'Private medical practices, orthodontic groups, and specialized surgical clinics face aggressive competition from Atrium Health and Novant Health. We build detailed provider profiles, clinical symptom content, and medical schema that help the practice appear in Google Maps results and AI answer overviews.',
     image: '/images/us/charlotte/seo/card-eye-test-fitting.webp',
     alt: 'An optometrist sliding a lens into a metal trial frame worn by an older woman seated in an exam chair',
     points: [
       'Exhaustive nested schema for MedicalClinic, Physician, and MedicalSpecialty',
       'HIPAA-aware appointment scheduling and instant click-to-call mobile buttons',
-      'Post-visit SMS review workflows generating consistent 5-star patient feedback',
+      'Post-visit SMS review request workflows',
     ],
   },
   {
     sector: 'Industrial Manufacturing, Logistics & B2B Supply Chain',
-    headline: 'Dominating National Supplier Procurement Along I-85 & I-77',
+    headline: 'National Supplier Procurement Search Along I-85 & I-77',
     description:
       'Charlotte is the logistics and industrial crossroads of the Southeast. Precision fabricators, equipment distributors, and freight carriers need websites that communicate engineering credibility to procurement managers. We optimize technical spec sheets, capability matrices, and RFQ forms to secure national supplier shortlists.',
     image: '/images/us/charlotte/seo/card-pallet-strapping-dock.webp',
@@ -155,14 +148,14 @@ const PAIN_POINTS = [
   {
     num: '01',
     title: 'Breaking Through Map Pack Saturation Across the Charlotte Metro Area',
-    problem: 'Over 38,000 registered businesses across Mecklenburg County compete for the same top 3 Google Map Pack spots. Generic directory spam and neglected profiles sit invisible on page two.',
-    solution: 'We execute comprehensive Google Business Profile optimization, primary category audits, geotagged photo feeds, and automated review collection systems to secure permanent top-three placements.',
+    problem: 'Many businesses across Mecklenburg County compete for the same top 3 Google Map Pack spots. Generic directory spam and neglected profiles sit invisible on page two.',
+    solution: 'We execute comprehensive Google Business Profile optimization, primary category audits, geotagged photo feeds, and automated review collection systems.',
   },
   {
     num: '02',
     title: 'Fixing Slow Legacy WordPress Code That Destroys Mobile Search Rankings',
     problem: 'Websites bogged down by bloated plugins, slow server hosting, and missing schema markup fail Google Core Web Vitals tests, resulting in mobile ranking penalties.',
-    solution: 'We engineer sub-second page performance using modern Next.js static architecture, automated image compression, and edge caching on Cloudflare CDN to achieve flawless 95+ mobile Lighthouse scores.',
+    solution: 'We work on page speed using modern Next.js static architecture, automated image compression, and edge caching on Cloudflare CDN, then check the result with mobile Lighthouse tests.',
   },
   {
     num: '03',
@@ -270,7 +263,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does professional SEO cost in Charlotte NC?',
     answer:
-      'Professional SEO services in Charlotte generally range between $1,500 and $4,000 per month depending on sector competitiveness, the size of your geographic service area, and the technical condition of your existing website. A single-location dental practice in SouthPark requires a different scope than a regional roofing enterprise serving Mecklenburg, Union, and York counties. FactoryJet operates on month-to-month agreements with no long-term lock-ins and begins every partnership with a comprehensive free technical audit.',
+      'US small businesses typically pay $1,500 to $3,500 a month for SEO, according to WebFX pricing data updated in October 2026. WebFX puts local SEO retainers at $500 to $3,000 a month. What a Charlotte business pays depends on how competitive the sector is, how many locations it has and the condition of the website. FactoryJet quotes a fixed price in writing after a short scoping call and works on month-to-month terms.',
   },
   {
     category: 'pricing',
@@ -288,13 +281,13 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How do I compare quotes from different Charlotte SEO agencies?',
     answer:
-      'When reviewing proposals, ask three fundamental questions: First, who will actually perform the technical work on my website? Second, will you write and deploy code directly or just deliver a list of suggestions? Third, what specific commercial metrics will you report on each month? If an agency cannot guarantee senior technical execution and refuses to track qualified inbound phone calls, they are selling marketing reports rather than revenue engineering.',
+      'When reviewing proposals, ask three fundamental questions: First, who will actually perform the technical work on my website? Second, will you write and deploy code directly or just deliver a list of suggestions? Third, what specific commercial metrics will you report on each month? If an agency will not say who does the technical work and refuses to track qualified inbound phone calls, they are selling marketing reports rather than revenue engineering.',
   },
   {
     category: 'local',
     question: 'How do we get our Charlotte business into the top 3 Google Map Pack results?',
     answer:
-      'Securing a spot in the top 3 Google Map Pack requires four synchronized components: selecting the precise primary business category, ensuring absolute Name-Address-Phone consistency across major directories, maintaining a steady velocity of authentic five-star customer reviews with natural service keywords, and building localized domain authority through a fast website backed by structured LocalBusiness schema.',
+      'Securing a spot in the top 3 Google Map Pack requires four synchronized components: selecting the precise primary business category, ensuring absolute Name-Address-Phone consistency across major directories, maintaining a steady velocity of authentic customer reviews, and building localized domain authority through a fast website backed by structured LocalBusiness schema.',
   },
   {
     category: 'local',
@@ -330,19 +323,19 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'Why does website loading speed directly impact Google search rankings?',
     answer:
-      'Google utilizes Core Web Vitals as an official ranking metric. Fast-loading websites deliver superior user experiences, resulting in lower bounce rates and higher session engagement. If your site takes longer than two seconds to load on mobile networks, search algorithms demote your listings in favor of faster competitors.',
+      'Page experience and Core Web Vitals are among the signals Google can use, but speed alone does not determine rankings. A faster mobile experience also makes it easier for visitors to read, call, or submit a form. We improve performance because it supports both search visibility and conversion, without promising that one speed score will produce a particular position.',
   },
   {
     category: 'technical',
     question: 'What structured data schema do you implement on local Charlotte websites?',
     answer:
-      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, ProfessionalService, MedicalClinic, FinancialService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
+      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, MedicalClinic, FinancialService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
   },
   {
     category: 'timeline',
     question: 'How long does it take to see measurable SEO ranking improvements in Charlotte?',
     answer:
-      'Initial technical fixes, Google Business Profile corrections, and low-competition neighborhood keyword wins typically produce measurable visibility gains within 30 to 60 days. Highly competitive commercial terms and dominant top-three Map Pack placements generally mature within 3 to 6 months of continuous optimization.',
+      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
   },
   {
     category: 'timeline',
@@ -354,13 +347,13 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'Will algorithm updates from Google disrupt our search rankings?',
     answer:
-      'Google algorithm updates penalize websites that rely on manipulative shortcuts like artificial link networks and thin automated copy. Because our methodology is rooted in senior technical engineering, clean site architecture, authentic local citations, and deep original content, our client websites consistently gain ranking authority during core search updates.',
+      'They can. Google core updates move rankings for many sites, and no agency controls them. Our work stays inside Google guidelines. That means clean site architecture, authentic local citations and original content, with no link networks or thin automated copy. After each update we check your rankings and inquiries and tell you what changed.',
   },
   {
     category: 'timeline',
     question: 'Can SEO replace our paid Google Ads spend in Charlotte?',
     answer:
-      'Yes, over time. While Google Ads provide immediate visibility for a continuous pay-per-click fee, organic SEO builds permanent digital equity. As your organic rankings and Map Pack positions solidify, most Charlotte clients systematically reduce their paid advertising budgets while maintaining a steady flow of qualified inbound leads.',
+      'It can reduce how much you rely on ads, but it rarely replaces them outright. Google Ads buy visibility for as long as you pay per click. SEO work on your site and listings stays in place after it is done. We report calls and inquiries from organic search each month, so you can decide whether and when to move ad budget.',
   },
   {
     category: 'local',
@@ -401,23 +394,6 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Charlotte SEO Company & Local Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$',
-  areaServed: [
-    { '@type': 'City', name: 'Charlotte' },
-    { '@type': 'City', name: 'Huntersville' },
-    { '@type': 'City', name: 'Matthews' },
-    { '@type': 'City', name: 'Concord' },
-    { '@type': 'City', name: 'Fort Mill' },
-  ],
-};
-
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -435,15 +411,22 @@ const SERVICE_SCHEMA = {
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Local SEO, Technical SEO & Generative Engine Optimization',
   description:
-    'Senior engineering-led local SEO, Google Map Pack rankings, technical Core Web Vitals optimization, and AI answer citations for Charlotte businesses.',
-  areaServed: { '@type': 'State', name: 'North Carolina' },
+    'Local search and Google Maps work, technical SEO and AI answer visibility for Charlotte, NC businesses. No long-term contract.',
+  areaServed: [
+    { '@type': 'City', name: 'Charlotte' },
+    { '@type': 'City', name: 'Huntersville' },
+    { '@type': 'City', name: 'Matthews' },
+    { '@type': 'City', name: 'Concord' },
+    { '@type': 'City', name: 'Fort Mill' },
+    { '@type': 'State', name: 'North Carolina' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Charlotte SEO Company & Local Agency NC | FactoryJet',
-  description: 'No-contract local SEO, Google Map Pack rankings, and technical SEO for Charlotte NC businesses.',
+  name: 'SEO Agency for Charlotte, NC Businesses | FactoryJet',
+  description: 'Local search and Google Maps work, technical SEO and AI answer visibility for Charlotte, NC businesses. No long-term contract.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
@@ -472,7 +455,6 @@ export default function CharlotteSeoPage() {
   return (
     <>
       <script id="charlotte-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="charlotte-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="charlotte-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="charlotte-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="charlotte-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -496,11 +478,11 @@ export default function CharlotteSeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Charlotte SEO Company &amp; Local Search Marketing Agency
+                  SEO for Charlotte Businesses, With No Long-Term Contract
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Win the Google 3-Pack Map results, dominate high-intent Queen City search terms, and earn citations across AI answer engines. No long-term contracts. Talk directly with senior technical engineers.
+                  We work on your Google Business Profile, your service pages and your listings so customers searching in Charlotte can find you. No long-term contracts. Talk directly with senior technical engineers.
                 </p>
 
                 <div className="rv-actions">
@@ -532,18 +514,18 @@ export default function CharlotteSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        {/* ── 02. TOOLS AND PLATFORMS MARQUEE TICKER (plain tool names, no partner or certification claims) ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Enterprise Charlotte SEO &amp; Data Stack</div>
+              <div className="rv-ticker-label">Tools we use</div>
               <div className="rv-ticker-line" />
             </div>
             
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
-                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                {SEO_TOOLS.concat(SEO_TOOLS).map((p, idx) => (
                   <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
                     <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
                       {p}
@@ -565,7 +547,7 @@ export default function CharlotteSeoPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/boston-seo/boston-seo-consult.webp"
-                  alt="FactoryJet senior search architects reviewing Charlotte local search optimization"
+                  alt="A shopkeeper in a navy apron holding a phone that shows a map pin, talking with a woman carrying a tote bag at the shop door"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -586,7 +568,7 @@ export default function CharlotteSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  With over 38,000 active businesses competing across Mecklenburg County, standard generic agency tactics fail. We combine sub-second Core Web Vitals speed optimization, Google Business Profile dominance, and localized corridor authority to capture real commercial leads.
+                  With many businesses competing across Mecklenburg County, standard generic agency tactics fail. We combine sub-second Core Web Vitals speed optimization, Google Business Profile work, and localized corridor authority to capture real commercial leads.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -636,7 +618,7 @@ export default function CharlotteSeoPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -645,15 +627,11 @@ export default function CharlotteSeoPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 
@@ -748,7 +726,7 @@ export default function CharlotteSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Charlotte Businesses Switch to FactoryJet SEO
+                What FactoryJet Does Differently for Charlotte Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
                 We replace opaque agency retainers with transparent, engineering-driven search performance:
@@ -814,10 +792,10 @@ export default function CharlotteSeoPage() {
                 <span>Predictable Delivery</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Our 6-Month Charlotte Search Domination Roadmap
+                Our 6-Month Charlotte SEO Roadmap
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A transparent, step-by-step engineering roadmap delivering compounding search visibility from day one:
+                A step-by-step roadmap of the work, month by month:
               </p>
             </div>
 
@@ -956,7 +934,7 @@ export default function CharlotteSeoPage() {
             </div>
             
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Win the Google Map Pack in Charlotte?
+              Start With a Free Charlotte SEO Audit
             </h2>
             
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>

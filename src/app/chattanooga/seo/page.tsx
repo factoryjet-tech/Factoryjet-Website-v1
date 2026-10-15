@@ -16,81 +16,74 @@ const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/chattanooga/seo';
 
 export const metadata: Metadata = {
-  title: 'Best Chattanooga SEO Company | Top Local SEO Agency TN | FactoryJet',
+  title: 'SEO Agency for Chattanooga, TN Businesses | FactoryJet',
   description:
-    'Best Chattanooga SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Chattanooga & Hamilton County.',
+    'SEO for Chattanooga, TN logistics firms, clinics, contractors and tourism operators across Hamilton County. No long-term contract.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Chattanooga SEO Company | Top Local SEO Agency TN | FactoryJet',
+    title: 'SEO Agency for Chattanooga, TN Businesses | FactoryJet',
     description:
-      'Premier Chattanooga SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across Tennessee.',
+      'SEO for Chattanooga, TN logistics firms, clinics, contractors and tourism operators across Hamilton County. No long-term contract.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Chattanooga Local SEO Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'SEO for Chattanooga, TN businesses by FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Chattanooga SEO Company | Top Local SEO Agency TN | FactoryJet',
-    description: 'Dominate Chattanooga local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization across Tennessee.',
+    title: 'SEO Agency for Chattanooga, TN Businesses | FactoryJet',
+    description: 'SEO for Chattanooga, TN logistics firms, clinics, contractors and tourism operators across Hamilton County. No long-term contract.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const PARTNERS = [
-  'Google Business Profile API',
-  'Search Console Integration',
+// Plain names of tools and platforms this work uses. These are not partner,
+// certification or award claims. Add one only with a public directory listing to point to.
+const SEO_TOOLS = [
+  'Google Business Profile',
+  'Google Search Console',
   'Apple Business Connect',
   'Bing Places for Business',
-  'Schema.org Knowledge Graph',
-  'OpenAI SearchGPT Citations',
-  'Perplexity AI Citation Index',
-  'BrightLocal & Yext Multi-Sync',
+  'Schema.org structured data',
 ];
 
 const STAT_CARDS = [
-  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Chattanooga commercial corridors.', icon: '📍' },
-  { num: '4.9x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
-  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
+  { num: 'Maps', title: 'Business Profile Review', desc: 'Check business details, categories, services, and the areas you actually serve.', icon: '📍' },
+  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Agree which calls, forms, and booked conversations count as useful inquiries.', icon: '📈' },
+  { num: 'Schema', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
   { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
   {
     corridor: 'Downtown Chattanooga & Innovation District',
-    query: 'corporate law software consultancy commercial real estate private equity seo downtown chattanooga',
     focus: 'Corporate Law, Advisory & Innovation Tech',
     desc: 'The gigabit fiber commercial core along Market Street, Broad Street, and Georgia Avenue. Captures commercial litigation retainers, high-speed tech consulting contracts, and corporate office leasing inquiries.',
   },
   {
     corridor: 'Southside Historic & Dining Corridor',
-    query: 'hospitality private event venue catering boutique services seo southside chattanooga',
     focus: 'Event Hospitality, Fine Dining & Lifestyle Brands',
     desc: 'Vibrant urban culinary and cultural district along Main Street and Station Street. Captures high-intent private event bookings, tourist hospitality reservations, and boutique retail searches.',
   },
   {
     corridor: 'Northshore & Riverfront Commercial Enclave',
-    query: 'aesthetic medicine dental implants pediatric clinic boutique wellness seo northshore chattanooga',
     focus: 'Elective Healthcare, Aesthetic Clinics & Wellness',
     desc: 'Affluent riverfront commercial enclave along Frazier Avenue and Manufacturers Road. Intense local search competition for cosmetic dentistry, dental implants, plastic surgery, and specialized wellness consults.',
   },
   {
     corridor: 'Enterprise South Industrial & Logistics Hub',
-    query: 'freight warehousing automotive component supplier heavy contractor seo enterprise south',
     focus: 'Freight Logistics, Automotive Supply & Tooling',
     desc: 'Major manufacturing and logistics distribution park anchored by the Volkswagen Chattanooga assembly plant. B2B service queries demand technical capability schemas, ISO/IATF credentials, and RFP lead funnels.',
   },
   {
     corridor: 'Hamilton Place & East Brainerd Commercial Hub',
-    query: 'commercial roofing hvac general contracting collision repair seo hamilton place chattanooga',
     focus: 'Commercial Contracting, Trades & Home Services',
     desc: 'High-density commercial and retail corridor along Interstate 75. Drives steady inbound emergency trade calls, fleet maintenance contracts, and commercial project bids.',
   },
   {
     corridor: 'Lookout Mountain & St. Elmo Tourism District',
-    query: 'adventure tourism guest lodge outdoor outfitter wedding venue seo lookout mountain st elmo',
     focus: 'Adventure Tourism, Lodging & Event Venues',
     desc: 'Outdoor recreation and scenic tourism epicenter. Demands high-trust local proof signals, verified customer review funnels, and tourist attraction structured schema.',
   },
@@ -120,7 +113,7 @@ const INDUSTRY_SHOWCASE = [
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
-      'Automated patient review generation funnels ensuring continuous 5-star reputation growth',
+      'Automated patient review request funnels',
     ],
   },
   {
@@ -138,7 +131,7 @@ const INDUSTRY_SHOWCASE = [
   },
   {
     sector: 'Tourism, Adventure Guiding & Riverfront Hospitality',
-    headline: 'Local Map Pack Dominance for Scenic City Tourism Leaders',
+    headline: 'Google Maps Listings for Scenic City Tourism Leaders',
     description:
       'Outfitters, climbing gyms, riverboat tours, and boutique hospitality venues across Chattanooga rely on local search visibility to capture tourists and regional travelers. We optimize Google Maps profiles, build event-driven landing pages, and drive high-intent reservation volume.',
     image: '/images/us/chattanooga/seo/card-river-kayak-briefing.webp',
@@ -174,7 +167,7 @@ const PAIN_POINTS = [
     num: '04',
     title: 'Stopping Toxic Link Networks That Trigger Search Penalties',
     problem: 'Cheap SEO providers build spammy automated backlinks from private blog networks, risking sudden Google algorithmic penalties and ranking demotions.',
-    solution: 'We execute 100% white-hat local citation building, regional trade publication placements, and verified local press authority for permanent ranking gains.',
+    solution: 'We execute white-hat local citation building, regional trade publication placements, and verified local press authority, with no private blog networks.',
   },
 ];
 
@@ -218,7 +211,7 @@ const EVALUATION_CRITERIA = [
   },
   {
     label: 'Citation Integrity',
-    factoryjet: 'Manual 100% NAP synchronization across top-tier business directories and regional chambers.',
+    factoryjet: 'Manual NAP synchronization across top-tier business directories and regional chambers.',
     traditional: 'Automated spam submissions leading to duplicate listings and fragmented NAP data.',
   },
   {
@@ -265,7 +258,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'How quickly can a Chattanooga business rank in the Google Maps 3-Pack?',
     answer:
-      'Initial improvements in Google Maps visibility and citation consistency typically appear within 30 to 45 days. High-competition search terms in legal, medical, and commercial contracting generally reach Top-3 dominance within 90 to 120 days.',
+      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
   },
   {
     category: 'timeline',
@@ -301,19 +294,19 @@ const FAQ_ITEMS = [
     category: 'ai',
     question: 'How do you track whether AI search engines are citing our brand?',
     answer:
-      'We monitor citation appearances, brand mentions, and referral traffic originating from OpenAI SearchGPT, Perplexity AI, Claude, and Google AI Overviews to ensure continuous visibility.',
+      'We monitor citation appearances, brand mentions, and referral traffic originating from OpenAI SearchGPT, Perplexity AI, Claude, and Google AI Overviews, and report what we find.',
   },
   {
     category: 'ai',
     question: 'Can AI search engines replace traditional Google Maps for local queries?',
     answer:
-      'No. AI search engines synthesize and cite verified local data from Google Maps, Apple Maps, Yelp, and official websites. Dominating local foundational data ensures you capture both traditional and AI-driven searches.',
+      'No. AI search engines synthesize and cite verified local data from Google Maps, Apple Maps, Yelp, and official websites. Accurate local data helps you appear in both traditional and AI-driven searches.',
   },
   {
     category: 'local',
-    question: 'Do you have experience with Chattanooga medical and dental practices?',
+    question: 'What does local SEO involve for Chattanooga medical and dental practices?',
     answer:
-      'Yes. We optimize local search footprints for surgical practices, dental implant specialists, and wellness clinics operating across Downtown, Northshore, and Hamilton County.',
+      'For surgical practices, dental implant specialists, and wellness clinics across Downtown, Northshore, and Hamilton County, the work covers the Google Business Profile for the practice, a page for each procedure, and physician and procedure schema.',
   },
   {
     category: 'local',
@@ -367,7 +360,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'How do freight brokerage, 3PL logistics, and intermodal carriers capture high-volume shippers in Chattanooga?',
     answer:
-      'Chattanooga is known as Freight Alley. We build technical logistics hubs, intermodal lane capability matrices, real-time freight quoting endpoints, and structured LogisticsService schemas that dominate regional and national shipper search results.',
+      'Chattanooga is known as Freight Alley. We build technical logistics hubs, intermodal lane capability matrices, real-time freight quoting endpoints, and structured LogisticsService schemas that target regional and national shipper searches.',
   },
   {
     category: 'local',
@@ -391,7 +384,7 @@ const FAQ_ITEMS = [
     category: 'deliverables',
     question: 'What is NAP citation synchronization across Chattanooga and Tennessee business directories?',
     answer:
-      'We establish and synchronize verified business citations across essential regional directories, including the Chattanooga Area Chamber of Commerce, Tennessee BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
+      'We establish and synchronize verified business citations across essential regional directories, including the Chattanooga Area Chamber of Commerce, Tennessee BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, checking that your details match, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
   },
   {
     category: 'local',
@@ -414,23 +407,6 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Chattanooga Local SEO Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$$',
-  areaServed: [
-    { '@type': 'City', name: 'Chattanooga' },
-    { '@type': 'City', name: 'Cleveland' },
-    { '@type': 'City', name: 'East Ridge' },
-    { '@type': 'City', name: 'Red Bank' },
-    { '@type': 'City', name: 'Hixson' },
-  ],
-};
-
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -448,15 +424,22 @@ const SERVICE_SCHEMA = {
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Local SEO, Google Business Profile Optimization, Schema Markup & AI Citation Strategy',
   description:
-    'Chattanooga local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Northshore, Southside, and Hamilton County.',
-  areaServed: [{ '@type': 'State', name: 'Tennessee' }],
+    'SEO for Chattanooga, TN logistics firms, clinics, contractors and tourism operators across Hamilton County. No long-term contract.',
+  areaServed: [
+    { '@type': 'City', name: 'Chattanooga' },
+    { '@type': 'City', name: 'Cleveland' },
+    { '@type': 'City', name: 'East Ridge' },
+    { '@type': 'City', name: 'Red Bank' },
+    { '@type': 'City', name: 'Hixson' },
+    { '@type': 'State', name: 'Tennessee' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Chattanooga Local SEO Agency | Search & AI Visibility | FactoryJet',
-  description: 'Chattanooga local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Northshore, Southside, and Hamilton County.',
+  name: 'SEO Agency for Chattanooga, TN Businesses | FactoryJet',
+  description: 'SEO for Chattanooga, TN logistics firms, clinics, contractors and tourism operators across Hamilton County. No long-term contract.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
@@ -485,7 +468,6 @@ export default function ChattanoogaSeoPage() {
   return (
     <>
       <script id="chattanooga-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="chattanooga-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="chattanooga-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="chattanooga-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="chattanooga-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -507,11 +489,11 @@ export default function ChattanoogaSeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Chattanooga Local SEO Agency for Market Leaders
+                  SEO for Chattanooga and Hamilton County Businesses
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Dominate the Google Maps 3-Pack, capture high-intent search queries, and secure AI answer citations across Chattanooga and Hamilton County.
+                  We work on your Google Business Profile, your service pages and your listings so customers searching in Chattanooga and Hamilton County can find you.
                 </p>
 
                 <div className="rv-actions">
@@ -542,18 +524,18 @@ export default function ChattanoogaSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        {/* ── 02. TOOLS AND PLATFORMS MARQUEE TICKER (plain tool names, no partner or certification claims) ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Search Engines &amp; Knowledge Graph Networks</div>
+              <div className="rv-ticker-label">Platforms and tools we work with</div>
               <div className="rv-ticker-line" />
             </div>
 
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
-                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                {SEO_TOOLS.concat(SEO_TOOLS).map((p, idx) => (
                   <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
                     <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
                       {p}
@@ -574,7 +556,7 @@ export default function ChattanoogaSeoPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/chattanooga/seo/chattanooga-seo-2.webp"
-                  alt="FactoryJet senior SEO engineers optimizing Chattanooga local entity knowledge graph"
+                  alt="A dispatcher in a high-visibility vest holding a tablet in a truck yard at sunset, with rows of parked trailers"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -644,7 +626,7 @@ export default function ChattanoogaSeoPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -653,15 +635,11 @@ export default function ChattanoogaSeoPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 
@@ -756,10 +734,10 @@ export default function ChattanoogaSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Chattanooga Leaders Choose FactoryJet Local SEO
+                What FactoryJet Does Differently for Chattanooga Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace opaque monthly agency reports with technical local search and AI citation dominance:
+                We replace opaque monthly agency reports with reporting on completed work, calls and inquiries:
               </p>
             </div>
 
@@ -804,7 +782,7 @@ export default function ChattanoogaSeoPage() {
         <LocalSeoArchitectureBlueprint
             badge="// CHATTANOOGA LOCAL SEARCH &amp; AI RANKING BLUEPRINT"
             title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
-            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Chattanooga local search."
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together in Chattanooga local search."
             city="Chattanooga"
             ctaLabel="Get a Free Local SEO Audit"
             region="us"
@@ -819,13 +797,13 @@ export default function ChattanoogaSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Proven Local Ranking Engine</span>
+                <span>Four Stages of Work</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A disciplined engineering methodology for guaranteed Local 3-Pack capture and AI citation visibility:
+                The four stages of work we follow for Google Maps listings and AI answer visibility:
               </p>
             </div>
 
@@ -961,15 +939,15 @@ export default function ChattanoogaSeoPage() {
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
-              <span>Map Pack Dominance &amp; Real Growth</span>
+              <span>Google Maps &amp; Local Search</span>
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Dominate Chattanooga Local Search?
+              Start With a Free Chattanooga Local SEO Audit
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Claim your complimentary Google Business Profile and local entity audit. We will reveal exactly where you are losing leads to competitors and how to capture the Local 3-Pack.
+              Ask for a free review of your Google Business Profile and local listings. We will show you what is missing or inconsistent, and what we would fix first.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>

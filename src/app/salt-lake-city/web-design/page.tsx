@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Silicon Slopes & Lehi Tech Hub',
-    query: 'enterprise saas venture tech web design lehi utah',
     focus: 'Enterprise SaaS, Cloud Platforms & Unicorn Software Startups',
     desc: 'The beating heart of Utah tech. Demands high-speed corporate flagships, interactive SaaS visualizers, and sub-second edge hosting.',
   },
   {
     corridor: 'Downtown Salt Lake City & Main Street',
-    query: 'fintech corporate law firm web design downtown slc',
     focus: 'Fintech, Corporate Legal & Commercial Real Estate',
     desc: 'The executive financial and legal spine of Utah. Demands refined editorial typography, interactive portfolio calculators, and SOC2-compliant client portals.',
   },
   {
     corridor: 'Research Park & University of Utah',
-    query: 'biotech medtech innovation web design research park slc',
     focus: 'Biotech Innovations, Medical Devices & Deep Tech',
     desc: 'World-class scientific and biomedical research nexus. Features scientific pipeline visualizers, clinical trial portals, and investor hubs.',
   },
   {
     corridor: 'South Jordan & Daybreak',
-    query: 'healthcare consumer tech web design south jordan',
     focus: 'Healthcare Networks, Consumer Tech & Financial Services',
     desc: 'High-growth corporate and healthcare corridor. Features multi-practitioner clinic directories, patient intake forms, and enterprise service capability matrices.',
   },
   {
     corridor: 'Sandy & Draper Tech Corridor',
-    query: 'security software edtech web design draper ut',
     focus: 'Security Software, EdTech & Digital Marketing Platforms',
     desc: 'Major tech innovation corridor. Demands technical documentation hubs, interactive demo environments, and sub-second edge performance.',
   },
   {
     corridor: 'West Valley City & Airport Logistics',
-    query: 'precision tooling manufacturing logistics web design west valley',
     focus: 'Precision Tooling, Multimodal Logistics & Advanced Manufacturing',
     desc: 'Heavy manufacturing and logistics heartland. Features CAD blueprint upload portals, equipment tolerance matrices, and ERP quote integrations.',
   },
@@ -658,7 +652,7 @@ export default function SaltLakeCityWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -667,15 +661,11 @@ export default function SaltLakeCityWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

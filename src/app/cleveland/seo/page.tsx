@@ -16,81 +16,74 @@ const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/cleveland/seo';
 
 export const metadata: Metadata = {
-  title: 'Best Cleveland SEO Company | Top Local SEO Agency OH | FactoryJet',
+  title: 'SEO Agency for Cleveland, OH Businesses | FactoryJet',
   description:
-    'Best Cleveland SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Northeast Ohio businesses.',
+    'SEO for Cleveland, OH clinics, manufacturers, law firms and home service companies across Northeast Ohio. Month-to-month terms.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Cleveland SEO Company | Top Local SEO Agency OH | FactoryJet',
+    title: 'SEO Agency for Cleveland, OH Businesses | FactoryJet',
     description:
-      'Premier Cleveland SEO company and agency. Top Google Map Pack rankings, AI search citations, and technical SEO for Cleveland OH businesses.',
+      'SEO for Cleveland, OH clinics, manufacturers, law firms and home service companies across Northeast Ohio. Month-to-month terms.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Cleveland SEO Company & Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'SEO for Cleveland, OH businesses by FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Cleveland SEO Company | Top Local SEO Agency OH | FactoryJet',
-    description: 'Local and technical SEO in Cleveland OH. Win the Google Map Pack and AI search citations.',
+    title: 'SEO Agency for Cleveland, OH Businesses | FactoryJet',
+    description: 'SEO for Cleveland, OH clinics, manufacturers, law firms and home service companies across Northeast Ohio. Month-to-month terms.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const PARTNERS = [
+// Plain names of tools and platforms this work uses. These are not partner,
+// certification or award claims. Add one only with a public directory listing to point to.
+const SEO_TOOLS = [
   'Google Search Console',
   'DataForSEO API',
-  'Screaming Frog Enterprise',
-  'BrightLocal Certified',
-  'SEMrush Partner',
-  'Next.js 15 & React',
+  'Next.js & React',
   'Cloudflare Edge CDN',
   'Google Analytics 4',
 ];
 
 const STAT_CARDS = [
-  { num: '44%', title: 'Map Pack Clicks', desc: 'Direct phone calls and clicks won by the top 3 Google local profiles.', icon: '📍' },
-  { num: '320+', title: 'Monthly Head Demand', desc: 'Verified monthly searches across Cleveland SEO company and agency queries.', icon: '📈' },
-  { num: '500+', title: 'Client Deployments', desc: 'Websites and local profiles optimized across B2B, medical, and services.', icon: '🏢' },
-  { num: '100%', title: 'Direct Engineer Access', desc: 'Month-to-month terms with direct access to senior technical engineers.', icon: '⚡' },
+  { num: 'Maps', title: 'Business Profile Review', desc: 'Review the categories, services, and business details customers see in local search.', icon: '📍' },
+  { num: 'Site', title: 'Technical SEO Review', desc: 'Find crawl, performance, and usability issues that get between a search and an inquiry.', icon: '📈' },
+  { num: '500+', title: 'Businesses Served', desc: 'Businesses FactoryJet has built for, across all services.', icon: '🏢' },
+  { num: 'Monthly', title: 'Month-to-Month Terms', desc: 'Month-to-month terms with direct access to senior technical engineers.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
   {
     corridor: 'Downtown & The Flats',
-    query: 'cleveland corporate law firm',
     focus: 'Legal, Corporate Services & Commercial Real Estate',
     desc: 'High-density commercial center packed around Public Square and East 9th. B2B decision-makers evaluate technical credentials, page speed, and practice area depth before picking up the phone.',
   },
   {
     corridor: 'University Circle & Clinic Corridor',
-    query: 'medical specialist cleveland',
     focus: 'Healthcare, Dental & Private Practices',
     desc: 'Anchored by the world-renowned Cleveland Clinic and University Hospitals. Independent practices capture high-intent patient queries through verified reviews, accurate medical schema, and Map Pack optimization.',
   },
   {
     corridor: 'Ohio City, Tremont & Gordon Square',
-    query: 'best restaurant ohio city',
     focus: 'Hospitality, Dining & Creative Studios',
     desc: 'Fast-moving, visual discovery along West 25th and Professor Avenue. Fresh high-resolution photography, live menu schema, and steady review generation drive immediate foot traffic.',
   },
   {
     corridor: 'Lakewood & West Shore',
-    query: 'dentist lakewood ohio',
     focus: 'Local Professional Services & Home Contractors',
     desc: 'High-density residential and commercial zone along Detroit Avenue. Winning requires hyper-local Google Business Profile signals and neighborhood-level landing pages.',
   },
   {
     corridor: 'Beachwood & Chagrin Highlands',
-    query: 'wealth management beachwood oh',
     focus: 'Financial Advisory, Med Spas & Luxury Services',
     desc: 'Affluent eastern suburbs where high-ticket clients and patients research provider reputations and comprehensive credentials before booking consultations.',
   },
   {
     corridor: 'Independence, Solon & Industrial Corridors',
-    query: 'manufacturing suppliers cleveland',
     focus: 'Precision Manufacturing & B2B Supply Chain',
     desc: 'Heavy machinery, polymer fabrication, and industrial distribution across Cuyahoga County. Technical SEO and structured product specifications put your business on national procurement shortlists.',
   },
@@ -101,7 +94,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Healthcare, Dental & Specialized Clinical Practices',
     headline: 'Capturing Patient Searches in the Global Healthcare Capital',
     description:
-      'Operating in the backyard of the Cleveland Clinic and University Hospitals requires exceptional local authority. Independent medical groups, specialized surgical clinics, and orthodontic practices win patient bookings by building exhaustive medical schema, verifying physician credentials, and automating 5-star review collection workflows.',
+      'Operating in the backyard of the Cleveland Clinic and University Hospitals requires exceptional local authority. Independent medical groups, specialized surgical clinics, and orthodontic practices win patient bookings by building exhaustive medical schema, verifying physician credentials, and automating review request workflows.',
     image: '/images/us/cleveland/seo/card-clinic-stethoscope-exam.webp',
     alt: 'A doctor in a white coat listening to an older man with a stethoscope in a bright clinic exam room',
     points: [
@@ -127,7 +120,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Legal Practices, Corporate Counsel & Litigation',
     headline: 'Securing High-Value Cases Across Cuyahoga County Courts',
     description:
-      'Legal search terms in Downtown Cleveland and surrounding suburbs carry immense commercial value. We engineer deep practice-area content hubs for personal injury, corporate litigation, and estate planning that establish undeniable local authority and capture permanent top-three organic rankings.',
+      'Legal search terms in Downtown Cleveland and surrounding suburbs carry immense commercial value. We build deep practice-area content hubs for personal injury, corporate litigation, and estate planning, so searchers and Google can see what the firm handles and where.',
     image: '/images/us/services/law-firm-seo/hero.webp',
     alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
@@ -146,7 +139,7 @@ const INDUSTRY_SHOWCASE = [
     points: [
       'Neighborhood landing pages for Lakewood, Westlake, Beachwood, and Strongsville',
       'Live call recording and conversion attribution integrated into Google Analytics 4',
-      'Crawl-optimized review velocity systems to outrank multi-truck competitors',
+      'Steady review requests to compete with multi-truck competitors',
     ],
   },
 ];
@@ -162,7 +155,7 @@ const PAIN_POINTS = [
     num: '02',
     title: 'Fixing Slow Legacy Code and Technical Debt That Blocks Search Rankings',
     problem: 'Sluggish server response times, bloated WordPress plugins, and missing schema markup prevent search engine bots and AI assistants from indexing your pages.',
-    solution: 'We engineer sub-second page loads, clean JSON-LD entity schema, and single-hop crawl architecture to earn top organic ranks and Google AI Overview citations.',
+    solution: 'We work on page load speed, clean JSON-LD entity schema, and single-hop crawl architecture so search engines and AI assistants can crawl and read your pages.',
   },
   {
     num: '03',
@@ -270,7 +263,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does SEO cost in Cleveland OH?',
     answer:
-      'Cleveland SEO services typically range from $1,250 to $3,500 per month depending on sector competitiveness, number of business locations, and technical site condition. FactoryJet operates on month-to-month agreements with no long-term contract lock-ins and starts with a comprehensive free technical audit.',
+      'US small businesses typically pay $1,500 to $3,500 a month for SEO, according to WebFX pricing data updated in October 2026. WebFX puts local SEO retainers at $500 to $3,000 a month. What a Cleveland business pays depends on how competitive the sector is, how many locations it has and the condition of the website. FactoryJet quotes a fixed price in writing after a short scoping call and works on month-to-month terms.',
   },
   {
     category: 'pricing',
@@ -306,7 +299,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'How important are Google reviews for Cleveland local rankings?',
     answer:
-      'Google reviews are one of the strongest direct ranking factors for local search. We help your business implement frictionless post-service SMS and email review collection workflows that consistently generate verified 5-star customer feedback.',
+      'Google describes local results in terms of relevance, distance, and prominence. Reviews can help customers evaluate a business and contribute to prominence, but they do not remove the effect of distance. We help you request honest feedback consistently, without incentives or filtering customers by how positively they respond.',
   },
   {
     category: 'local',
@@ -330,19 +323,19 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'Why does website loading speed directly impact Google search rankings?',
     answer:
-      'Google utilizes Core Web Vitals as an official ranking metric. Fast-loading websites deliver superior user experiences, resulting in lower bounce rates and higher session engagement. If your site takes longer than two seconds to load on mobile networks, search algorithms demote your listings in favor of faster competitors.',
+      'Page experience and Core Web Vitals are among the signals Google can use, but speed alone does not determine rankings. A faster mobile experience also makes it easier for visitors to read, call, or submit a form. We improve performance because it supports both search visibility and conversion, without promising that one speed score will produce a particular position.',
   },
   {
     category: 'technical',
     question: 'What structured data schema do you implement on local Cleveland websites?',
     answer:
-      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, ProfessionalService, MedicalClinic, LegalService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
+      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, MedicalClinic, LegalService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
   },
   {
     category: 'timeline',
     question: 'How long does it take to see organic ranking improvements in Cleveland?',
     answer:
-      'Initial technical fixes and low-competition neighborhood keyword wins typically show results within 45 to 60 days. Competitive high-volume head terms and stable top-3 Map Pack placements generally mature within 3 to 6 months of continuous optimization.',
+      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
   },
   {
     category: 'timeline',
@@ -354,19 +347,19 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'Will algorithm updates from Google disrupt our search rankings?',
     answer:
-      'Google algorithm updates penalize websites that rely on manipulative shortcuts like artificial link networks and thin automated copy. Because our methodology is rooted in senior technical engineering, clean site architecture, authentic local citations, and deep original content, our client websites consistently gain ranking authority during core search updates.',
+      'They can. Google core updates move rankings for many sites, and no agency controls them. Our work stays inside Google guidelines. That means clean site architecture, authentic local citations and original content, with no link networks or thin automated copy. After each update we check your rankings and inquiries and tell you what changed.',
   },
   {
     category: 'timeline',
     question: 'Can SEO replace our paid Google Ads spend in Cleveland?',
     answer:
-      'Yes, over time. While Google Ads provide immediate visibility for a continuous pay-per-click fee, organic SEO builds permanent digital equity. As your organic rankings and Map Pack positions solidify, most Cleveland clients systematically reduce their paid advertising budgets while maintaining a steady flow of qualified inbound leads.',
+      'It can reduce how much you rely on ads, but it rarely replaces them outright. Google Ads buy visibility for as long as you pay per click. SEO work on your site and listings stays in place after it is done. We report calls and inquiries from organic search each month, so you can decide whether and when to move ad budget.',
   },
   {
     category: 'local',
     question: 'How do you optimize for healthcare practices competing with Cleveland Clinic and University Hospitals?',
     answer:
-      'While hospital hospital conglomerates dominate broad hospital terms, independent specialists, cosmetic surgeons, and dental clinics capture lucrative procedural searches (such as concierge cardiology, pediatric dentistry, and med spa aesthetics) through localized Schema.org MedicalBusiness markup, doctor profile authority, and sub-second mobile page speeds.',
+      'While hospital conglomerates lead on broad hospital terms, independent specialists, cosmetic surgeons, and dental clinics capture lucrative procedural searches (such as concierge cardiology, pediatric dentistry, and med spa aesthetics) through localized Schema.org MedicalBusiness markup, doctor profile authority, and sub-second mobile page speeds.',
   },
   {
     category: 'local',
@@ -390,7 +383,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What is NAP citation synchronization across Cleveland and Ohio business directories?',
     answer:
-      'We establish and synchronize verified business citations across essential regional directories, including the Greater Cleveland Partnership, Council of Smaller Enterprises (COSE), Better Business Bureau of Greater Cleveland, Apple Maps, and Bing Places, ensuring 100% data consistency and reinforcing Google Maps 3-Pack authority.',
+      'We establish and synchronize verified business citations across essential regional directories, including the Greater Cleveland Partnership, Council of Smaller Enterprises (COSE), Better Business Bureau of Greater Cleveland, Apple Maps, and Bing Places, checking that your details match and reinforcing Google Maps 3-Pack authority.',
   },
 ];
 
@@ -405,24 +398,6 @@ const FAQ_SCHEMA = {
       text: item.answer,
     },
   })),
-};
-
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Cleveland SEO Company & Local Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$',
-  areaServed: [
-    { '@type': 'City', name: 'Cleveland' },
-    { '@type': 'City', name: 'Lakewood' },
-    { '@type': 'City', name: 'Beachwood' },
-    { '@type': 'City', name: 'Westlake' },
-    { '@type': 'City', name: 'Solon' },
-    { '@type': 'City', name: 'Mentor' },
-  ],
 };
 
 const SERVICE_SCHEMA = {
@@ -442,15 +417,23 @@ const SERVICE_SCHEMA = {
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Local SEO, Technical SEO & Generative Engine Optimization',
   description:
-    'Senior engineering-led local SEO, Google Map Pack rankings, technical Core Web Vitals optimization, and AI answer citations for Cleveland businesses.',
-  areaServed: { '@type': 'State', name: 'Ohio' },
+    'SEO for Cleveland, OH clinics, manufacturers, law firms and home service companies across Northeast Ohio. Month-to-month terms.',
+  areaServed: [
+    { '@type': 'City', name: 'Cleveland' },
+    { '@type': 'City', name: 'Lakewood' },
+    { '@type': 'City', name: 'Beachwood' },
+    { '@type': 'City', name: 'Westlake' },
+    { '@type': 'City', name: 'Solon' },
+    { '@type': 'City', name: 'Mentor' },
+    { '@type': 'State', name: 'Ohio' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Cleveland SEO Company & Local SEO Agency OH | FactoryJet',
-  description: 'No-contract local SEO, Google Map Pack rankings, and technical SEO for Cleveland OH businesses.',
+  name: 'SEO Agency for Cleveland, OH Businesses | FactoryJet',
+  description: 'SEO for Cleveland, OH clinics, manufacturers, law firms and home service companies across Northeast Ohio. Month-to-month terms.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
@@ -479,7 +462,6 @@ export default function ClevelandSeoPage() {
   return (
     <>
       <script id="cleveland-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="cleveland-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="cleveland-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="cleveland-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="cleveland-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -503,11 +485,11 @@ export default function ClevelandSeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Cleveland SEO Company &amp; Local Search Marketing Agency
+                  Month-to-Month SEO for Cleveland Businesses
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Win the Google 3-Pack Map results, dominate high-intent Cleveland search terms, and earn citations across AI search engines. No long-term contracts. Talk directly with senior technical engineers.
+                  We work on your Google Business Profile, your service pages and your listings so customers searching in Cleveland can find you. No long-term contracts. Talk directly with senior technical engineers.
                 </p>
 
                 <div className="rv-actions">
@@ -539,18 +521,18 @@ export default function ClevelandSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        {/* ── 02. TOOLS AND PLATFORMS MARQUEE TICKER (plain tool names, no partner or certification claims) ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Local SEO &amp; Citation Footprint</div>
+              <div className="rv-ticker-label">Tools we use</div>
               <div className="rv-ticker-line" />
             </div>
             
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
-                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                {SEO_TOOLS.concat(SEO_TOOLS).map((p, idx) => (
                   <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
                     <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
                       {p}
@@ -572,7 +554,7 @@ export default function ClevelandSeoPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/boston-seo/boston-seo-workshop.webp"
-                  alt="FactoryJet senior SEO engineers auditing Cleveland Google Map Pack and local citations"
+                  alt="Three people standing around a table of printed page layouts, one pointing at a sheet, with brick townhouses outside the window"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -593,7 +575,7 @@ export default function ClevelandSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  Cleveland search competition moves fast across healthcare, manufacturing, and local services. We combine Core Web Vitals speed optimization, Google Business Profile dominance, and localized corridor authority to capture real commercial leads.
+                  Cleveland search competition moves fast across healthcare, manufacturing, and local services. We combine Core Web Vitals speed optimization, Google Business Profile work, and localized corridor authority to capture real commercial leads.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -643,7 +625,7 @@ export default function ClevelandSeoPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -652,15 +634,11 @@ export default function ClevelandSeoPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 
@@ -755,7 +733,7 @@ export default function ClevelandSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Cleveland Businesses Switch to FactoryJet SEO
+                What FactoryJet Does Differently for Cleveland Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
                 We replace opaque agency retainers with transparent, engineering-driven search performance:
@@ -821,10 +799,10 @@ export default function ClevelandSeoPage() {
                 <span>Predictable Delivery</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Our 6-Month Cleveland Search Domination Roadmap
+                Our 6-Month Cleveland SEO Roadmap
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A transparent, step-by-step engineering roadmap delivering compounding search visibility from day one:
+                A step-by-step roadmap of the work, month by month:
               </p>
             </div>
 
@@ -963,7 +941,7 @@ export default function ClevelandSeoPage() {
             </div>
             
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Win the Google Map Pack in Cleveland?
+              Start With a Free Cleveland SEO Audit
             </h2>
             
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>

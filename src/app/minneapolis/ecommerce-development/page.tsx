@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'North Loop & Downtown Minneapolis',
-    query: 'd2c lifestyle modern apparel ecommerce north loop minneapolis',
     focus: 'High-End D2C Brands, Modern Retail & Lifestyle Flagships',
     desc: 'The vibrant design and retail spine. Demands high-speed storefronts, interactive sizing visualizers, and sub-second edge hosting.',
   },
   {
     corridor: 'Plymouth & West Metro MedTech Corridor',
-    query: 'b2b medical device supplies clinical ecommerce plymouth mn',
     focus: 'B2B Medical Consumables, Clinical Supplies & Surgical Tooling',
     desc: 'The global Medical Alley heartland. Demands compliance-first wholesale portals, custom ERP inventory sync, and multi-tier pricing.',
   },
   {
     corridor: 'Bloomington & South Metro Retail Hub',
-    query: 'enterprise omnichannel retail franchise ecommerce bloomington mn',
     focus: 'Enterprise Omnichannel Brands, Departmental Wholesale & Franchise Distribution',
     desc: 'Major corporate and retail distribution corridor. Features multi-warehouse routing, complex POS synchronization, and automated checkout.',
   },
   {
     corridor: 'St. Paul & Midway Distribution Corridor',
-    query: 'industrial hardware b2b packaging supplies ecommerce st paul',
     focus: 'Industrial Hardware, B2B Commercial Supplies & Packaging',
     desc: 'Historic industrial and packaging distribution core. B2B wholesale portals with purchase order workflows, net-30 terms, and tiered catalog pricing.',
   },
   {
     corridor: 'Eden Prairie & Minnetonka Tech Corridor',
-    query: 'software licensing digital subscriptions accessories ecommerce eden prairie',
     focus: 'Software Licensing, Digital Subscriptions & Tech Accessories',
     desc: 'High-growth technology corridor. Features recurring subscription billing, digital license provisioning, and sub-second global edge performance.',
   },
   {
     corridor: 'Northeast Arts & Craft Commercial Enclave',
-    query: 'artisanal food beverage custom furniture d2c ecommerce northeast minneapolis',
     focus: 'Artisanal Food & Beverage, Custom Furniture & Direct-to-Consumer',
     desc: 'Historic craft creative district. Features tactile editorial layouts, interactive 3D product configurators, and frictionless mobile checkout.',
   },
@@ -652,7 +646,7 @@ export default function MinneapolisEcommercePage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -661,15 +655,11 @@ export default function MinneapolisEcommercePage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Midtown Atlanta & Tech Square',
-    query: 'saas website design midtown atlanta',
     focus: 'B2B SaaS, Cybersecurity & Enterprise Cloud',
     desc: 'The Southeast’s premier tech capital. Tech firms require interactive product demo components, clear developer documentation portals, and high-converting enterprise sales funnels.',
   },
   {
     corridor: 'Buckhead Financial District',
-    query: 'private wealth web design buckhead',
     focus: 'Private Wealth Management, Corporate Law & Commercial Real Estate',
     desc: 'Dense financial corridor along Peachtree Road. Demands institutional polish, partner credential directories, and sub-second page performance to convert high-net-worth clients.',
   },
   {
     corridor: 'Alpharetta & North Fulton Tech Corridor',
-    query: 'fintech website design alpharetta',
     focus: 'Fintech, Healthtech, Payments & Telecom',
     desc: 'Known as the Technology City of the South. Demands high-performance API documentation portals, interactive compliance matrices, and frictionless CRM integrations.',
   },
   {
     corridor: 'Downtown Atlanta & Logistics Hub',
-    query: 'logistics platform web design atlanta',
     focus: 'Logistics Technology, Freight Platforms & Supply Chain Systems',
     desc: 'Transportation and freight epicenter. High-speed quote calculators, equipment capability matrices, and rapid RFQ workflows capture commercial supply contracts.',
   },
   {
     corridor: 'West Midtown & Howell Mill',
-    query: 'architecture studio web design atlanta',
     focus: 'Creative Studios, Architecture, Film Production & Luxury Hospitality',
     desc: 'Vibrant design and entertainment district. Demands ultra-high-resolution project galleries, fluid grid transitions, and editorial typography that reflects luxury standards.',
   },
   {
     corridor: 'Perimeter Center & Sandy Springs',
-    query: 'healthcare system web design sandy springs',
     focus: 'Fortune 500 Regional HQs, Healthcare Systems & Medical Specialties',
     desc: 'Major corporate and medical cluster. Features searchable physician directories, HIPAA-aware patient intake forms, and enterprise-level accessibility compliance.',
   },
@@ -652,7 +646,7 @@ export default function AtlantaWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -661,15 +655,11 @@ export default function AtlantaWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

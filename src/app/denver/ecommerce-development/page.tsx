@@ -62,37 +62,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'RiNo & Five Points',
-    query: 'outdoor lifestyle d2c ecommerce rino denver',
     focus: 'Outdoor Lifestyle D2C, Technical Apparel & Craft Beverage Brands',
     desc: 'The creative lifestyle and active apparel heartland. Demands tactile editorial visual storytelling, interactive size finders, and instant mobile checkouts.',
   },
   {
     corridor: 'Lower Downtown (LoDo) & Central Core',
-    query: 'omnichannel luxury d2c ecommerce lodo denver',
     focus: 'Omnichannel Retail, Luxury Goods & Direct-to-Consumer HQ',
     desc: 'Flagship consumer brand and luxury retail corridor. Features headless Shopify architectures, POS omnichannel synchronizations, and VIP subscription flows.',
   },
   {
     corridor: 'Denver Tech Center (DTC) & South Metro',
-    query: 'b2b wholesale ecommerce portal greenwood village',
     focus: 'B2B Wholesale Portals, Electronic Components & Enterprise Supply',
     desc: 'Major enterprise and distributor corridor. Demands custom tier pricing matrices, NetSuite ERP synchronizations, and automated purchase order workflows.',
   },
   {
     corridor: 'Golden & West Metro Industrial',
-    query: 'technical gear manufacturing ecommerce golden co',
     focus: 'Technical Gear Manufacturing, Aerospace Parts & Precision Equipment',
     desc: 'Precision engineering and heavy equipment manufacturing. Requires CAD spec visualizers, bulk freight quoting, and custom B2B punchout catalogs.',
   },
   {
     corridor: 'Boulder & US-36 Corridor',
-    query: 'organic packaged goods cpg ecommerce boulder',
     focus: 'Health & Wellness, Organic Packaged Goods & Sustainable D2C',
     desc: 'National organic food and sustainable wellness capital. Features complex subscription billing matrices, cold chain fulfillment sync, and custom bundle builders.',
   },
   {
     corridor: 'Adams County & North Metro Logistics',
-    query: 'cold storage wholesale distribution ecommerce adams county',
     focus: 'Cold Storage, High-Volume Fulfillment & Wholesale Distribution',
     desc: 'Regional logistics and freight fulfillment corridor. Features automated 3PL warehouse sync, real-time freight estimation, and multi-warehouse routing.',
   },
@@ -684,7 +678,7 @@ export default function DenverEcommercePage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -693,15 +687,11 @@ export default function DenverEcommercePage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

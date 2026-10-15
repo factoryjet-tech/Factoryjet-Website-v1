@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Downtown Chattanooga & Innovation District',
-    query: 'freight logistics software transport tech ecommerce downtown chattanooga',
     focus: 'Freight Tech, Logistics Platforms & Digital Services',
     desc: 'The gigabit-powered innovation center of the Southeast. Demands high-throughput digital commerce, recurring API subscriptions, and automated client billing.',
   },
   {
     corridor: 'Southside Historic & Creative Arts Corridor',
-    query: 'lifestyle apparel handcrafted goods direct to consumer ecommerce southside chattanooga',
     focus: 'Lifestyle Apparel, Handcrafted Goods & Modern D2C',
     desc: 'Vibrant cultural and craft hub. Features tactile editorial layouts, interactive 3D product configurators, and frictionless mobile checkouts.',
   },
   {
     corridor: 'Northshore & Riverfront Retail Enclave',
-    query: 'outdoor recreation boutique lifestyle retail ecommerce northshore chattanooga',
     focus: 'Outdoor Recreation, Boutique Retail & Sporting Goods',
     desc: 'Premier outdoor lifestyle district. Features interactive visual lookbooks, dynamic sizing guides, and sub-second edge product filtering.',
   },
   {
     corridor: 'Enterprise South Industrial Park & VW Corridor',
-    query: 'automotive tier 1 supplier industrial equipment wholesale b2b ecommerce enterprise south',
     focus: 'Automotive Parts, Heavy Equipment & B2B Supply',
     desc: 'Major automotive and heavy manufacturing cluster. B2B wholesale portals with purchase order workflows, ERP integration, and volume tiered pricing.',
   },
   {
     corridor: 'Hamilton Place & East Brainerd Commercial Hub',
-    query: 'multi location retail omnichannel commerce pos sync hamilton place chattanooga',
     focus: 'Omnichannel Retail, Multi-Location POS & Consumer Brands',
     desc: 'High-density commercial and retail corridor. Demands real-time POS inventory synchronization, BOPIS workflows, and customer loyalty engines.',
   },
   {
     corridor: 'Lookout Mountain & St. Elmo Outdoor District',
-    query: 'climbing adventure gear custom outdoor equipment ecommerce st elmo chattanooga',
     focus: 'Climbing Gear, Adventure Outfitting & Technical Hardware',
     desc: 'Outdoor adventure epicenter. Demands custom bundle configurators, heavy technical specification sheets, and flexible financing checkouts.',
   },
@@ -664,7 +658,7 @@ export default function ChattanoogaEcommerceDevelopmentPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -673,15 +667,11 @@ export default function ChattanoogaEcommerceDevelopmentPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

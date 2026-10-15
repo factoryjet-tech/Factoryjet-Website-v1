@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Crossroads Arts District & Downtown KC',
-    query: 'creative studio fintech web design crossroads kc',
     focus: 'Creative Studios, Fintech Platforms & Urban Tech',
     desc: 'The vibrant design, arts, and urban innovation spine. Demands high-speed corporate flagships, interactive portfolio visualizers, and sub-second edge hosting.',
   },
   {
     corridor: 'Country Club Plaza & Midtown',
-    query: 'wealth management law firm web design country club plaza',
     focus: 'Wealth Advisory, Corporate Law & Commercial Real Estate',
     desc: 'The executive financial and legal seat of Kansas City. Demands refined editorial typography, interactive wealth calculators, and SOC2-compliant client portals.',
   },
   {
     corridor: 'Overland Park & College Boulevard',
-    query: 'healthtech telecom enterprise web design overland park',
     focus: 'HealthTech, Telecommunications & Corporate HQ',
     desc: 'Major corporate and telecommunications campus corridor. Features multi-practitioner clinic directories, patient intake forms, and enterprise service matrices.',
   },
   {
     corridor: 'KC Animal Health Corridor',
-    query: 'animal health veterinary bio tech web design kansas city',
     focus: 'Animal Sciences, Veterinary Tech & Bio-Agriculture',
     desc: 'The global animal health corridor. Demands clinical-grade scientific design systems, interactive pipeline visualizers, and sub-second edge performance.',
   },
   {
     corridor: 'Northland & KCI Logistics Corridor',
-    query: 'aviation logistics freight web design northland kc',
     focus: 'Aviation Logistics, Cold Storage & Distribution',
     desc: 'Major Midwest aviation and freight distribution hub. Features freight rate estimation calculators, warehouse capability matrices, and RFQ workflows.',
   },
   {
     corridor: 'Lenexa & Olathe Industrial Corridor',
-    query: 'precision manufacturing fabrication web design lenexa',
     focus: 'Precision Tooling, Heavy Manufacturing & Fabrication',
     desc: 'Heavy manufacturing and precision tooling heartland. Features CAD blueprint upload portals, equipment tolerance matrices, and ERP quote integrations.',
   },
@@ -657,7 +651,7 @@ export default function KansasCityWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -666,15 +660,11 @@ export default function KansasCityWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

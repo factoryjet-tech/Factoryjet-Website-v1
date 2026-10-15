@@ -17,81 +17,74 @@ const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/arlington/seo';
 
 export const metadata: Metadata = {
-  title: 'Best Arlington SEO Company | Top Local SEO Agency TX | FactoryJet',
+  title: 'SEO Agency for Arlington, TX Businesses | FactoryJet',
   description:
-    'Best Arlington SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Tarrant County & DFW businesses.',
+    'SEO for Arlington, TX venues, contractors, clinics and industrial suppliers. Google Maps listings and AI answer visibility. No long-term contract.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Arlington SEO Company | Top Local SEO Agency TX | FactoryJet',
+    title: 'SEO Agency for Arlington, TX Businesses | FactoryJet',
     description:
-      'Premier Arlington local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Entertainment District, Downtown, and DFW.',
+      'SEO for Arlington, TX venues, contractors, clinics and industrial suppliers. Google Maps listings and AI answer visibility. No long-term contract.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Arlington TX Local SEO Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'SEO for Arlington, TX businesses by FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Arlington SEO Company | Top Local SEO Agency TX | FactoryJet',
-    description: 'Dominate Arlington TX local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    title: 'SEO Agency for Arlington, TX Businesses | FactoryJet',
+    description: 'SEO for Arlington, TX venues, contractors, clinics and industrial suppliers. Google Maps listings and AI answer visibility. No long-term contract.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const PARTNERS = [
-  'Google Business Profile API',
-  'Search Console Integration',
+// Plain names of tools and platforms this work uses. These are not partner,
+// certification or award claims. Add one only with a public directory listing to point to.
+const SEO_TOOLS = [
+  'Google Business Profile',
+  'Google Search Console',
   'Apple Business Connect',
   'Bing Places for Business',
-  'Schema.org Knowledge Graph',
-  'OpenAI SearchGPT Citations',
-  'Perplexity AI Citation Index',
-  'BrightLocal & Yext Multi-Sync',
+  'Schema.org structured data',
 ];
 
 const STAT_CARDS = [
-  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Arlington commercial corridors.', icon: '📍' },
-  { num: '4.8x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
-  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
+  { num: 'Maps', title: 'Business Profile Review', desc: 'Check business details, categories, services, and the areas you actually serve.', icon: '📍' },
+  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Agree which calls, forms, and booked conversations count as useful inquiries.', icon: '📈' },
+  { num: 'Schema', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
   { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
   {
     corridor: 'Entertainment District & Stadium Corridor',
-    query: 'hospitality private event venue catering sports entertainment seo arlington tx',
     focus: 'Event Hospitality, Sports Tourism & Private Dining',
     desc: 'The vibrant heart of DFW entertainment anchored by AT&T Stadium, Globe Life Field, and Choctaw Stadium. Captures high-intent event dining, corporate VIP hospitality, luxury transport, and regional sports tourism queries.',
   },
   {
     corridor: 'Downtown Arlington & UTA Innovation Campus',
-    query: 'corporate law intellectual property private equity tech seo downtown arlington',
     focus: 'Legal Practices, Research Innovation & Venture Technology',
     desc: 'The urban academic and commercial core anchored by UT Arlington and the Levitt Pavilion. Captures high-stakes commercial litigation retainers, patent and IP law inquiries, and technical engineering advisory consultations.',
   },
   {
     corridor: 'Great Southwest Industrial District (GSW)',
-    query: 'freight warehousing advanced manufacturing tooling contractor seo gsw arlington',
     focus: 'Heavy Logistics, Precision Tooling & Industrial Supply',
     desc: 'One of the largest master-planned industrial distribution parks in the American Southwest. B2B service queries demand technical capability schemas, precision equipment matrices, ISO certifications, and streamlined commercial RFQ workflows.',
   },
   {
     corridor: 'South Arlington & Highlands Commercial Hub',
-    query: 'aesthetic medicine dental implants family law roofing seo south arlington',
     focus: 'Elective Healthcare, Home Services & Family Law',
     desc: 'High-density commercial and residential enclave along I-20 and Matlock Road. Intense local search competition for elective dental implants, medical aesthetics, roofing contractors, and family law client consultations.',
   },
   {
     corridor: 'Viridian & North Arlington Corridor',
-    query: 'wealth management pediatric dentistry remodeling contractor seo north arlington',
     focus: 'Wealth Advisory, Estate Planning & Luxury Remodeling',
     desc: 'Affluent master-planned residential corridor. Demands high-trust local proof signals, verified client reviews, and refined neighborhood entity silos.',
   },
   {
     corridor: 'I-20 & Cooper Street Commercial Spine',
-    query: 'commercial hvac general contracting collision repair commercial seo arlington',
     focus: 'Commercial Contracting, Automotive & Specialized Services',
     desc: 'Major multi-mile retail and service highway. Drives steady inbound emergency service calls, fleet maintenance contracts, and commercial project bids.',
   },
@@ -100,7 +93,7 @@ const DISTRICTS = [
 const INDUSTRY_SHOWCASE = [
   {
     sector: 'Sports Entertainment, Event Hospitality & Tourism',
-    headline: 'Local Map Pack Dominance for Arlington Entertainment Leaders',
+    headline: 'Google Maps Listings for Arlington Entertainment Leaders',
     description:
       'Hospitality groups, event venues, and upscale dining establishments in Arlington Entertainment District rely on local search visibility to capture massive stadium crowds. We optimize Google Maps profiles, build event-driven landing pages, implement structured menu schemas, and drive high-intent reservation volume.',
     image: '/images/us/arlington/seo/card-event-hall-table-setup.webp',
@@ -134,7 +127,7 @@ const INDUSTRY_SHOWCASE = [
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
-      'Automated patient review generation funnels ensuring continuous 5-star reputation growth',
+      'Automated patient review request funnels',
     ],
   },
   {
@@ -175,7 +168,7 @@ const PAIN_POINTS = [
     num: '04',
     title: 'Stopping Toxic Link Networks That Trigger Search Penalties',
     problem: 'Cheap SEO providers build spammy automated backlinks from private blog networks, risking sudden Google algorithmic penalties and ranking demotions.',
-    solution: 'We execute 100% white-hat local citation building, regional trade publication placements, and verified local press authority for permanent ranking gains.',
+    solution: 'We execute white-hat local citation building, regional trade publication placements, and verified local press authority, with no private blog networks.',
   },
 ];
 
@@ -219,7 +212,7 @@ const EVALUATION_CRITERIA = [
   },
   {
     label: 'Citation Integrity',
-    factoryjet: 'Manual 100% NAP synchronization across top-tier business directories and regional chambers.',
+    factoryjet: 'Manual NAP synchronization across top-tier business directories and regional chambers.',
     traditional: 'Automated spam submissions leading to duplicate listings and fragmented NAP data.',
   },
   {
@@ -266,7 +259,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'How quickly can an Arlington business rank in the Google Maps 3-Pack?',
     answer:
-      'Initial improvements in Google Maps visibility and citation consistency typically appear within 30 to 45 days. High-competition search terms in legal, medical, and commercial contracting generally reach Top-3 dominance within 90 to 120 days.',
+      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
   },
   {
     category: 'timeline',
@@ -302,19 +295,19 @@ const FAQ_ITEMS = [
     category: 'ai',
     question: 'How do you track whether AI search engines are citing our brand?',
     answer:
-      'We monitor citation appearances, brand mentions, and referral traffic originating from OpenAI SearchGPT, Perplexity AI, Claude, and Google AI Overviews to ensure continuous visibility.',
+      'We monitor citation appearances, brand mentions, and referral traffic originating from OpenAI SearchGPT, Perplexity AI, Claude, and Google AI Overviews, and report what we find.',
   },
   {
     category: 'ai',
     question: 'Can AI search engines replace traditional Google Maps for local queries?',
     answer:
-      'No. AI search engines synthesize and cite verified local data from Google Maps, Apple Maps, Yelp, and official websites. Dominating local foundational data ensures you capture both traditional and AI-driven searches.',
+      'No. AI search engines synthesize and cite verified local data from Google Maps, Apple Maps, Yelp, and official websites. Accurate local data helps you appear in both traditional and AI-driven searches.',
   },
   {
     category: 'local',
-    question: 'Do you have experience with Arlington entertainment and stadium hospitality venues?',
+    question: 'What does local SEO involve for Arlington entertainment and stadium hospitality venues?',
     answer:
-      'Yes. We optimize local search footprints for restaurants, private event spaces, catering providers, and hospitality brands operating across the Entertainment District and Downtown Arlington.',
+      'For restaurants, private event spaces, catering providers, and hospitality brands across the Entertainment District and Downtown Arlington, the work covers the Google Business Profile, event and menu pages, and structured data for menus and events.',
   },
   {
     category: 'local',
@@ -386,7 +379,7 @@ const FAQ_ITEMS = [
     category: 'deliverables',
     question: 'What is NAP citation synchronization across Arlington and North Texas business directories?',
     answer:
-      'We establish and synchronize verified business citations across essential regional directories, including the Greater Arlington Chamber of Commerce, North Texas BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicate listings, and reinforcing Google Maps 3-Pack authority across Tarrant, Dallas, and Johnson counties.',
+      'We establish and synchronize verified business citations across essential regional directories, including the Greater Arlington Chamber of Commerce, North Texas BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, checking that your details match, eliminating duplicate listings, and reinforcing Google Maps 3-Pack authority across Tarrant, Dallas, and Johnson counties.',
   },
 ];
 
@@ -401,22 +394,6 @@ const FAQ_SCHEMA = {
       text: item.answer,
     },
   })),
-};
-
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Arlington TX Local SEO Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  areaServed: [
-    { '@type': 'City', name: 'Arlington' },
-    { '@type': 'City', name: 'Grand Prairie' },
-    { '@type': 'City', name: 'Mansfield' },
-    { '@type': 'City', name: 'Pantego' },
-    { '@type': 'City', name: 'Dalworthington Gardens' },
-  ],
 };
 
 const SERVICE_SCHEMA = {
@@ -441,9 +418,13 @@ const SERVICE_SCHEMA = {
   },
   serviceType: 'Local SEO, Google Business Profile Optimization, Schema Markup & AI Citation Strategy',
   description:
-    'Arlington TX local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Entertainment District, Downtown, and DFW.',
+    'SEO for Arlington, TX venues, contractors, clinics and industrial suppliers. Google Maps listings and AI answer visibility. No long-term contract.',
   areaServed: [
     { '@type': 'City', name: 'Arlington' },
+    { '@type': 'City', name: 'Grand Prairie' },
+    { '@type': 'City', name: 'Mansfield' },
+    { '@type': 'City', name: 'Pantego' },
+    { '@type': 'City', name: 'Dalworthington Gardens' },
     { '@type': 'State', name: 'Texas' },
     { '@type': 'Country', name: 'United States' },
   ],
@@ -453,8 +434,8 @@ const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': 'https://factoryjet.com/arlington/seo#webpage',
-  name: 'Arlington TX Local SEO Services & Search Marketing Agency | FactoryJet',
-  description: 'Arlington TX local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Entertainment District, Downtown, and DFW.',
+  name: 'SEO Agency for Arlington, TX Businesses | FactoryJet',
+  description: 'SEO for Arlington, TX venues, contractors, clinics and industrial suppliers. Google Maps listings and AI answer visibility. No long-term contract.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
@@ -490,7 +471,6 @@ export default function ArlingtonSeoPage() {
   return (
     <>
       <script id="arlington-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="arlington-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="arlington-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="arlington-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="arlington-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -512,11 +492,11 @@ export default function ArlingtonSeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Arlington Local SEO Agency for Market Leaders
+                  SEO for Arlington Businesses Competing Across DFW
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Dominate the Google Maps 3-Pack, capture high-intent search queries, and secure AI answer citations across Arlington and the DFW Metroplex.
+                  We work on your Google Business Profile, your service pages and your listings so customers searching in Arlington and the DFW Metroplex can find you.
                 </p>
 
                 {/* Answer-First Brief */}
@@ -554,18 +534,18 @@ export default function ArlingtonSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. TECHNOLOGY MARQUEE TICKER ── */}
+        {/* ── 02. TOOLS AND PLATFORMS MARQUEE TICKER (plain tool names, no partner or certification claims) ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Search Engines &amp; Knowledge Graph Networks</div>
+              <div className="rv-ticker-label">Platforms and tools we work with</div>
               <div className="rv-ticker-line" />
             </div>
 
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
-                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                {SEO_TOOLS.concat(SEO_TOOLS).map((p, idx) => (
                   <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
                     <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
                       {p}
@@ -655,7 +635,7 @@ export default function ArlingtonSeoPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -664,15 +644,11 @@ export default function ArlingtonSeoPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 
@@ -767,10 +743,10 @@ export default function ArlingtonSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Arlington Leaders Choose FactoryJet Local SEO
+                What FactoryJet Does Differently for Arlington Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace opaque monthly agency reports with technical local search and AI citation dominance:
+                We replace opaque monthly agency reports with reporting on completed work, calls and inquiries:
               </p>
             </div>
 
@@ -815,7 +791,7 @@ export default function ArlingtonSeoPage() {
           <LocalSeoArchitectureBlueprint
             badge="// ARLINGTON LOCAL SEARCH &amp; AI RANKING BLUEPRINT"
             title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
-            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Arlington local search."
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together in Arlington local search."
             city="Arlington"
             ctaLabel="Get a Free Local SEO Audit"
             region="us"
@@ -830,13 +806,13 @@ export default function ArlingtonSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Proven Local Ranking Engine</span>
+                <span>Four Stages of Work</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A disciplined engineering methodology for guaranteed Local 3-Pack capture and AI citation visibility:
+                The four stages of work we follow for Google Maps listings and AI answer visibility:
               </p>
             </div>
 
@@ -972,15 +948,15 @@ export default function ArlingtonSeoPage() {
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
-              <span>Map Pack Dominance &amp; Real Growth</span>
+              <span>Google Maps &amp; Local Search</span>
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Dominate Arlington Local Search?
+              Start With a Free Arlington Local SEO Audit
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Claim your complimentary Google Business Profile and local entity audit. We will reveal exactly where you are losing leads to competitors and how to capture the Local 3-Pack.
+              Ask for a free review of your Google Business Profile and local listings. We will show you what is missing or inconsistent, and what we would fix first.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>

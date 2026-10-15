@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Music Row & Midtown',
-    query: 'artist merchandise ecommerce music row nashville',
     focus: 'Artist Merchandise, Tour Bundles & Vinyl Direct-to-Consumer',
     desc: 'The global heart of music merchandising. Demands high-concurrency flash drop architecture, dynamic tour bundling, VIP access gating, and global CDN delivery.',
   },
   {
     corridor: 'The Gulch & Downtown',
-    query: 'fashion apparel ecommerce the gulch nashville',
     focus: 'Bespoke Apparel, Southern Culinary Goods & Lifestyle Brands',
     desc: 'High-end retail and culinary district. Features rich visual lookbooks, custom bundle builders, interactive swatch selectors, and frictionless Shop Pay checkout.',
   },
   {
     corridor: 'West End & Medical Corridor',
-    query: 'medical supply ecommerce west end nashville',
     focus: 'Healthcare Equipment, Medical Supply & Clinic Ordering Portals',
     desc: 'The nation’s healthcare hub. Requires HIPAA-aware customer data handling, clinic reordering subscriptions, and verified provider discount tiers.',
   },
   {
     corridor: 'Germantown & North Nashville',
-    query: 'artisan spirits ecommerce germantown nashville',
     focus: 'Artisanal Leather, Crafted Distilleries & Subscription Goods',
     desc: 'Historic creative district. Features custom box-builder funnels, recurring membership subscriptions, and state-by-state alcohol compliance integrations.',
   },
   {
     corridor: 'Brentwood & Cool Springs',
-    query: 'b2b corporate procurement ecommerce brentwood',
     focus: 'Corporate B2B Purchasing, Franchise Supply & Office Procurement',
     desc: 'Dense corporate headquarters corridor. Features custom net-term customer portals, tiered price lists, punchout catalogs, and real-time ERP inventory syncing.',
   },
   {
     corridor: 'Murfreesboro & I-24 Logistics Nexus',
-    query: 'automotive parts wholesale ecommerce murfreesboro',
     focus: 'Automotive Aftermarket Parts, Industrial Equipment & Wholesale Distribution',
     desc: 'Major Southeast automotive manufacturing hub. Requires Year-Make-Model search filters, heavy freight shipping calculators, and bulk CSV ordering.',
   },
@@ -658,7 +652,7 @@ export default function NashvilleEcommercePage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -667,15 +661,11 @@ export default function NashvilleEcommercePage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

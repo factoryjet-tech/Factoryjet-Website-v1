@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Downtown Boise & 8th Street Retail Corridor',
-    query: 'outdoor lifestyle apparel d2c ecommerce downtown boise',
     focus: 'Outdoor Lifestyle, Modern Apparel & Boutique Retail',
     desc: 'The vibrant heart of Boise commerce. Demands high-speed storefronts, interactive sizing visualizers, and sub-second edge hosting.',
   },
   {
     corridor: 'Boise Tech Corridor & Micron Campus Nexus',
-    query: 'electronics hardware software licensing ecommerce boise tech',
     focus: 'Tech Hardware, Software Subscriptions & Digital Licensing',
     desc: 'High-growth technology corridor. Features recurring subscription billing, digital license provisioning, and global CDN delivery.',
   },
   {
     corridor: 'Meridian & Eagle High-Growth Commerce Hub',
-    query: 'specialized home goods consumer health wellness ecommerce meridian id',
     focus: 'Consumer Goods, Health & Wellness & High-Growth D2C',
     desc: 'Fastest-growing commercial corridor in Idaho. Features dynamic bundle builders, subscription retention engines, and mobile checkouts.',
   },
   {
     corridor: 'Treasure Valley AgTech & Specialty Food Spine',
-    query: 'specialty food beverage organic agricultural wholesale ecommerce treasure valley',
     focus: 'Specialty Food & Beverage, Organic Produce & B2B AgTech',
     desc: 'Agricultural heartland. B2B wholesale portals with purchase order workflows, cold-chain freight calculation, and tiered volume pricing.',
   },
   {
     corridor: 'Nampa & Caldwell Industrial Supply Corridor',
-    query: 'industrial equipment building materials wholesale b2b ecommerce nampa id',
     focus: 'Industrial Equipment, Building Supplies & Manufacturing',
     desc: 'Heavy manufacturing and logistics fulfillment core. Features bulk matrix ordering, real-time ERP inventory sync, and LTL shipping.',
   },
   {
     corridor: 'Hyde Park & North End Artisanal Enclave',
-    query: 'handcrafted goods specialty boutique lifestyle ecommerce hyde park boise',
     focus: 'Artisanal Goods, Handcrafted Decor & Direct-to-Consumer',
     desc: 'Historic craft creative district. Features tactile editorial layouts, interactive 3D product configurators, and frictionless mobile checkout.',
   },
@@ -664,7 +658,7 @@ export default function BoiseEcommerceDevelopmentPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -673,15 +667,11 @@ export default function BoiseEcommerceDevelopmentPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

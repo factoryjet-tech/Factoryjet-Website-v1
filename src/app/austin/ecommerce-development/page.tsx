@@ -62,37 +62,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'South Congress & Downtown Flagships',
-    query: 'fashion boutique ecommerce austin',
     focus: 'Apparel, Luxury Accessories & Lifestyle DTC',
     desc: 'Iconic consumer corridors where brick-and-mortar storefronts need flawless omnichannel synchronization with online Shopify stores. Point of sale inventory updates automatically in real time.',
   },
   {
     corridor: 'The Domain & Silicon Hills Tech Corridor',
-    query: 'hardware ecommerce store austin',
     focus: 'Consumer Electronics, Wearables & Tech Hardware',
     desc: 'High-growth tech hardware and IoT brands requiring rich interactive product pages, 3D model visualization, complex warranty options, and global multi-currency checkout.',
   },
   {
     corridor: 'East Austin & Artisan Studios',
-    query: 'specialty food ecommerce austin',
     focus: 'Specialty CPG, Craft Beverages & Subscription Goods',
     desc: 'Rapidly scaling food and beverage brands leveraging automated subscription billing workflows, bundled discount matrices, and Klaviyo lifecycle marketing automation.',
   },
   {
     corridor: 'Mueller & Central Austin Commercial',
-    query: 'home goods ecommerce developer austin',
     focus: 'Home Furnishings, Wellness & Family Brands',
     desc: 'High-ticket residential consumer brands where custom room visualizers, tiered financing via Affirm and Klarna, and white-glove shipping integrations drive high average order values.',
   },
   {
     corridor: 'North Austin & Industrial Logistics',
-    query: 'b2b ecommerce wholesale austin',
     focus: 'Wholesale Portals, Industrial Supply & B2B Parts',
     desc: 'Manufacturing suppliers and regional distributors modernizing phone, fax, and email ordering into self-service digital portals with custom dealer pricing tiers.',
   },
   {
     corridor: 'Round Rock & Williamson County Corridor',
-    query: 'multi store ecommerce builder austin',
     focus: 'Multi-Location Retail & Regional Distribution',
     desc: 'Regional commercial brands managing warehouse fulfillment across multiple Central Texas locations with automated routing to the closest distribution depot.',
   },
@@ -682,7 +676,7 @@ export default function AustinEcommerceDevelopmentPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -691,15 +685,11 @@ export default function AustinEcommerceDevelopmentPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

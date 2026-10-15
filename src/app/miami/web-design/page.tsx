@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Brickell Financial District',
-    query: 'private wealth web design brickell',
     focus: 'Cross-Border Banking, Wealth Management & Private Equity',
     desc: 'The Wall Street of the South. International financial executives evaluate partner credentials, visual polish, and sub-second page performance before booking private consultations.',
   },
   {
     corridor: 'Wynwood & Miami Design District',
-    query: 'luxury brand web design miami design district',
     focus: 'Luxury Fashion, Contemporary Art & Creative Agencies',
     desc: 'Global luxury retail and art hub. Demands ultra-high-resolution project galleries, fluid grid transitions, and editorial typography that reflects haute couture standards.',
   },
   {
     corridor: 'Downtown Miami & Biscayne Corridor',
-    query: 'real estate developer website design miami',
     focus: 'Real Estate Developments, Architecture & Hospitality',
     desc: 'High-density architectural epicenter. Features interactive 3D floorplan tours, multi-language buyer portals, and sub-second edge hosting.',
   },
   {
     corridor: 'Coral Gables & Coconut Grove',
-    query: 'corporate law firm web design coral gables',
     focus: 'Corporate Latin American HQs, Law Firms & Executive Consulting',
     desc: 'Affluent corporate headquarters hub. Features deep practice area knowledge graphs, partner biographical directories, and bilingual client intake funnels.',
   },
   {
     corridor: 'Miami Beach & South Beach',
-    query: 'boutique hotel web design miami beach',
     focus: 'Boutique Hospitality, Nightlife & Luxury Lifestyle',
     desc: 'World-renowned hospitality strip. Demands high-speed booking engine integrations, VIP reservation workflows, and flawless mobile experiences.',
   },
   {
     corridor: 'Doral & Airport Logistics Hub',
-    query: 'freight forwarding website design doral',
     focus: 'Import/Export, Freight Forwarding & Cold-Chain Logistics',
     desc: 'The gateway to Latin American commerce. High-speed quote calculators, container tracking interfaces, and rapid RFQ workflows capture international trade contracts.',
   },
@@ -652,7 +646,7 @@ export default function MiamiWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -661,15 +655,11 @@ export default function MiamiWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

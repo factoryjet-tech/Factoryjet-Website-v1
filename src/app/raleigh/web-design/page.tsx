@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Research Triangle Park & I-40 Tech Corridor',
-    query: 'biopharma web design rtp raleigh',
     focus: 'Biopharma, Clinical CROs & AgTech',
     desc: 'The largest dedicated research park in North America. Demands interactive clinical trial gateways, research paper libraries, and sub-second edge performance.',
   },
   {
     corridor: 'Downtown Raleigh & Warehouse District',
-    query: 'saas website design downtown raleigh',
     focus: 'Software SaaS, Clean Energy & Digital Startups',
     desc: 'High-growth tech and creative corridor. Tech companies require interactive component libraries, clear documentation portals, and high-converting product demo funnels.',
   },
   {
     corridor: 'North Hills & Midtown Raleigh',
-    query: 'corporate headquarters web design north hills',
     focus: 'Corporate Regional HQs, Private Equity & Commercial Real Estate',
     desc: 'High-density corporate commercial district. Features executive credential directories, transaction portfolios, and enterprise accessibility compliance.',
   },
   {
     corridor: 'Downtown Durham & American Tobacco Campus',
-    query: 'healthtech web design durham',
     focus: 'Healthtech, AI Analytics & Creative Studios',
     desc: 'Innovation and life science center. High-speed spec sheet downloads, platform capability matrices, and rapid RFQ calculators.',
   },
   {
     corridor: 'Cary & Western Wake Tech Park',
-    query: 'enterprise software web design cary',
     focus: 'Enterprise Software, Game Development & Fintech',
     desc: 'Global enterprise software corridor. High-speed interactive product configurators, global CDN image delivery, and sub-second page loads.',
   },
   {
     corridor: 'Chapel Hill & University Innovation Corridor',
-    query: 'university spinout web design chapel hill',
     focus: 'Biomedical Commercialization, Education Tech & Venture Spinouts',
     desc: 'Premier university research spinout cluster. Features scientific publication hubs, investor presentation decks, and sub-second edge hosting.',
   },
@@ -652,7 +646,7 @@ export default function RaleighWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -661,15 +655,11 @@ export default function RaleighWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

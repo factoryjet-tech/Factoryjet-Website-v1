@@ -16,81 +16,74 @@ const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/lincoln/seo';
 
 export const metadata: Metadata = {
-  title: 'Best Lincoln SEO Company | Top Local SEO Agency NE | FactoryJet',
+  title: 'SEO Agency for Lincoln, NE Businesses | FactoryJet',
   description:
-    'Best Lincoln SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Nebraska & Lancaster County.',
+    'SEO for Lincoln, NE ag businesses, contractors, clinics and law firms across Lancaster County. Google Maps listings and AI answers. No long-term contract.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Lincoln SEO Company | Top Local SEO Agency NE | FactoryJet',
+    title: 'SEO Agency for Lincoln, NE Businesses | FactoryJet',
     description:
-      'Premier Lincoln SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across Nebraska.',
+      'SEO for Lincoln, NE ag businesses, contractors, clinics and law firms across Lancaster County. Google Maps listings and AI answers. No long-term contract.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Lincoln Local SEO Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'SEO for Lincoln, NE businesses by FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Lincoln SEO Company | Top Local SEO Agency NE | FactoryJet',
-    description: 'Dominate Lincoln local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization across Nebraska.',
+    title: 'SEO Agency for Lincoln, NE Businesses | FactoryJet',
+    description: 'SEO for Lincoln, NE ag businesses, contractors, clinics and law firms across Lancaster County. Google Maps listings and AI answers. No long-term contract.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const PARTNERS = [
-  'Google Business Profile API',
-  'Search Console Integration',
+// Plain names of tools and platforms this work uses. These are not partner,
+// certification or award claims. Add one only with a public directory listing to point to.
+const SEO_TOOLS = [
+  'Google Business Profile',
+  'Google Search Console',
   'Apple Business Connect',
   'Bing Places for Business',
-  'Schema.org Knowledge Graph',
-  'OpenAI SearchGPT Citations',
-  'Perplexity AI Citation Index',
-  'BrightLocal & Yext Multi-Sync',
+  'Schema.org structured data',
 ];
 
 const STAT_CARDS = [
-  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Lincoln and Lancaster County corridors.', icon: '📍' },
-  { num: '5.2x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
-  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
+  { num: 'Maps', title: 'Business Profile Review', desc: 'Check business details, categories, services, and the areas you actually serve.', icon: '📍' },
+  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Agree which calls, forms, and booked conversations count as useful inquiries.', icon: '📈' },
+  { num: 'Schema', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
   { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
   {
     corridor: 'Downtown Lincoln & Historic Haymarket Core',
-    query: 'corporate law financial advisory commercial real estate private equity seo downtown lincoln',
     focus: 'Corporate Law, Advisory & Financial Services',
     desc: 'The political, legal, and banking core along K Street, O Street, and the Historic Haymarket. Captures high-ticket commercial litigation retainers, corporate accounting consults, and commercial real estate investment inquiries.',
   },
   {
     corridor: 'University of Nebraska & Innovation Campus',
-    query: 'agtech software consultancy it services engineering precision tech seo lincoln nic',
     focus: 'AgTech Consulting, Software Engineering & Research',
     desc: 'Silicon Prairie research and technology hub anchored by the Nebraska Innovation Campus (NIC). B2B service queries demand technical capability schemas, ISO accreditation data, and enterprise RFP submission funnels.',
   },
   {
     corridor: 'West O Street Commercial & Logistics Spine',
-    query: 'heavy equipment repair freight transport commercial electrical fleet maintenance seo west o lincoln',
     focus: 'Commercial Contracting, Heavy Machinery & Logistics',
     desc: 'Major industrial, transportation, and agricultural implement distribution artery along West O Street. Drives steady inbound emergency service calls, fleet maintenance contracts, and commercial construction bids.',
   },
   {
     corridor: 'South Lincoln & Pine Lake Commercial Hub',
-    query: 'cosmetic dentistry dental implants pediatric medicine luxury remodeling seo south lincoln',
     focus: 'Elective Healthcare, Dental Implants & Remodeling',
     desc: 'High-growth affluent residential corridor anchored by SouthPointe Pavilions and Pine Lake Road. Intense local search competition for cosmetic dentistry, dental implants, specialized pediatrics, and custom home remodeling.',
   },
   {
     corridor: 'North 27th Street Industrial & Contractor District',
-    query: 'commercial roofing hvac sheet metal fabrication mechanical contracting seo north 27th lincoln',
     focus: 'Commercial Roofing, HVAC & Sheet Metal Trades',
     desc: 'Precision manufacturing and trade contractor fulfillment core along North 27th Street and Superior Street. Demands multi-county ServiceAreaBusiness schemas, trade licensing disclosures, and commercial estimator funnels.',
   },
   {
     corridor: 'Air Park Industrial & Manufacturing District',
-    query: 'aerospace manufacturing warehousing tier 1 supplier industrial supply seo air park lincoln',
     focus: 'Aerospace Components, Industrial Storage & B2B Supply',
     desc: 'Heavy manufacturing and industrial aerospace park adjacent to Lincoln Airport (LNK). Demands technical capability schemas, AS9100/ISO quality credentials, and B2B RFQ procurement workflows.',
   },
@@ -133,12 +126,12 @@ const INDUSTRY_SHOWCASE = [
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
-      'Automated patient review generation funnels ensuring continuous 5-star reputation growth',
+      'Automated patient review request funnels',
     ],
   },
   {
     sector: 'Corporate Law, Agricultural Estate Planning & Litigation',
-    headline: 'Top-Rank Visibility for Lincoln Law Firms & Estate Planners',
+    headline: 'Local Search for Lincoln Law Firms & Estate Planners',
     description:
       'Downtown Lincoln law firms competing for agricultural estate planning, farm succession, and corporate litigation retainers must rank in the top positions on Google Maps and organic search. We engineer authoritative legal practice area pages, optimize attorney schema markup, and build high-quality local legal citations.',
     image: '/images/us/lincoln/seo/card-law-library-case-binders.webp',
@@ -174,7 +167,7 @@ const PAIN_POINTS = [
     num: '04',
     title: 'Stopping Toxic Link Networks That Trigger Search Penalties',
     problem: 'Cheap SEO providers build spammy automated backlinks from private blog networks, risking sudden Google algorithmic penalties and ranking demotions.',
-    solution: 'We execute 100% white-hat local citation building, regional trade publication placements, and verified local press authority for permanent ranking gains.',
+    solution: 'We execute white-hat local citation building, regional trade publication placements, and verified local press authority, with no private blog networks.',
   },
 ];
 
@@ -218,7 +211,7 @@ const EVALUATION_CRITERIA = [
   },
   {
     label: 'Citation Integrity',
-    factoryjet: 'Manual 100% NAP synchronization across top-tier business directories and regional chambers.',
+    factoryjet: 'Manual NAP synchronization across top-tier business directories and regional chambers.',
     traditional: 'Automated spam submissions leading to duplicate listings and fragmented NAP data.',
   },
   {
@@ -265,7 +258,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'How quickly can a Lincoln business rank in the Google Maps 3-Pack?',
     answer:
-      'Initial improvements in Google Maps visibility and citation consistency typically appear within 30 to 45 days. High-competition search terms in legal, medical, and commercial contracting generally reach Top-3 dominance within 90 to 120 days.',
+      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
   },
   {
     category: 'timeline',
@@ -301,19 +294,19 @@ const FAQ_ITEMS = [
     category: 'ai',
     question: 'How do you track whether AI search engines are citing our brand?',
     answer:
-      'We monitor citation appearances, brand mentions, and referral traffic originating from OpenAI SearchGPT, Perplexity AI, Claude, and Google AI Overviews to ensure continuous visibility.',
+      'We monitor citation appearances, brand mentions, and referral traffic originating from OpenAI SearchGPT, Perplexity AI, Claude, and Google AI Overviews, and report what we find.',
   },
   {
     category: 'ai',
     question: 'Can AI search engines replace traditional Google Maps for local queries?',
     answer:
-      'No. AI search engines synthesize and cite verified local data from Google Maps, Apple Maps, Yelp, and official websites. Dominating local foundational data ensures you capture both traditional and AI-driven searches.',
+      'No. AI search engines synthesize and cite verified local data from Google Maps, Apple Maps, Yelp, and official websites. Accurate local data helps you appear in both traditional and AI-driven searches.',
   },
   {
     category: 'local',
-    question: 'Do you have experience with Lincoln medical and dental practices?',
+    question: 'What does local SEO involve for Lincoln medical and dental practices?',
     answer:
-      'Yes. We optimize local search footprints for surgical practices, dental implant specialists, and wellness clinics operating across Downtown, South Lincoln, and Pine Lake.',
+      'For surgical practices, dental implant specialists, and wellness clinics across Downtown, South Lincoln, and Pine Lake, the work covers the Google Business Profile for the practice, a page for each procedure, and physician and procedure schema.',
   },
   {
     category: 'local',
@@ -365,7 +358,7 @@ const FAQ_ITEMS = [
   },
   {
     category: 'technical',
-    question: 'How do cosmetic dentists and private elective medical practices dominate search in South Lincoln and Pine Lake?',
+    question: 'How do cosmetic dentists and private elective medical practices compete in search in South Lincoln and Pine Lake?',
     answer:
       'We deploy granular MedicalBusiness and Physician schemas, optimize doctor profile authority with Nebraska Board of Dentistry credentials, construct neighborhood landing pages for SouthPointe, Yankee Hill, and Wilderness Ridge, and streamline verified Google review funnels to capture high-intent patients.',
   },
@@ -391,7 +384,7 @@ const FAQ_ITEMS = [
     category: 'deliverables',
     question: 'What is NAP citation synchronization across Lincoln and Nebraska business directories?',
     answer:
-      'We establish and synchronize verified business citations across essential regional directories, including the Lincoln Chamber of Commerce, Nebraska BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
+      'We establish and synchronize verified business citations across essential regional directories, including the Lincoln Chamber of Commerce, Nebraska BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, checking that your details match, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
   },
 ];
 
@@ -406,23 +399,6 @@ const FAQ_SCHEMA = {
       text: item.answer,
     },
   })),
-};
-
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Lincoln Local SEO Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$$',
-  areaServed: [
-    { '@type': 'City', name: 'Lincoln' },
-    { '@type': 'City', name: 'Waverly' },
-    { '@type': 'City', name: 'Hickman' },
-    { '@type': 'City', name: 'Seward' },
-    { '@type': 'City', name: 'Beatrice' },
-  ],
 };
 
 const SERVICE_SCHEMA = {
@@ -442,15 +418,22 @@ const SERVICE_SCHEMA = {
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Local SEO, Google Business Profile Optimization, Schema Markup & AI Citation Strategy',
   description:
-    'Lincoln local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Haymarket, South Lincoln, and Lancaster County.',
-  areaServed: [{ '@type': 'State', name: 'Nebraska' }],
+    'SEO for Lincoln, NE ag businesses, contractors, clinics and law firms across Lancaster County. Google Maps listings and AI answers. No long-term contract.',
+  areaServed: [
+    { '@type': 'City', name: 'Lincoln' },
+    { '@type': 'City', name: 'Waverly' },
+    { '@type': 'City', name: 'Hickman' },
+    { '@type': 'City', name: 'Seward' },
+    { '@type': 'City', name: 'Beatrice' },
+    { '@type': 'State', name: 'Nebraska' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Lincoln Local SEO Agency | Search & AI Visibility | FactoryJet',
-  description: 'Lincoln local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Haymarket, South Lincoln, and Lancaster County.',
+  name: 'SEO Agency for Lincoln, NE Businesses | FactoryJet',
+  description: 'SEO for Lincoln, NE ag businesses, contractors, clinics and law firms across Lancaster County. Google Maps listings and AI answers. No long-term contract.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
@@ -479,7 +462,6 @@ export default function LincolnSeoPage() {
   return (
     <>
       <script id="lincoln-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="lincoln-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="lincoln-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="lincoln-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="lincoln-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -501,11 +483,11 @@ export default function LincolnSeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Lincoln Local SEO Agency for Market Leaders
+                  SEO for Lincoln and Lancaster County Businesses
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Dominate the Google Maps 3-Pack, capture high-intent search queries, and secure AI answer citations across Lincoln and Lancaster County.
+                  We work on your Google Business Profile, your service pages and your listings so customers searching in Lincoln and Lancaster County can find you.
                 </p>
 
                 <div className="rv-actions">
@@ -536,18 +518,18 @@ export default function LincolnSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        {/* ── 02. TOOLS AND PLATFORMS MARQUEE TICKER (plain tool names, no partner or certification claims) ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Search Engines &amp; Knowledge Graph Networks</div>
+              <div className="rv-ticker-label">Platforms and tools we work with</div>
               <div className="rv-ticker-line" />
             </div>
 
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
-                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                {SEO_TOOLS.concat(SEO_TOOLS).map((p, idx) => (
                   <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
                     <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
                       {p}
@@ -568,7 +550,7 @@ export default function LincolnSeoPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/lincoln/seo/lincoln-seo-2.webp"
-                  alt="FactoryJet senior SEO engineers optimizing Lincoln local entity knowledge graph"
+                  alt="Four people around a table with laptops in a brick-walled office, one pointing at a whiteboard of flow diagrams and a to-do list"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -638,7 +620,7 @@ export default function LincolnSeoPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -647,15 +629,11 @@ export default function LincolnSeoPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 
@@ -750,10 +728,10 @@ export default function LincolnSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Lincoln Leaders Choose FactoryJet Local SEO
+                What FactoryJet Does Differently for Lincoln Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace opaque monthly agency reports with technical local search and AI citation dominance:
+                We replace opaque monthly agency reports with reporting on completed work, calls and inquiries:
               </p>
             </div>
 
@@ -798,7 +776,7 @@ export default function LincolnSeoPage() {
         <LocalSeoArchitectureBlueprint
             badge="// LINCOLN LOCAL SEARCH &amp; AI RANKING BLUEPRINT"
             title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
-            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Lincoln local search."
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together in Lincoln local search."
             city="Lincoln"
             ctaLabel="Get a Free Local SEO Audit"
             region="us"
@@ -813,13 +791,13 @@ export default function LincolnSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Proven Local Ranking Engine</span>
+                <span>Four Stages of Work</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A disciplined engineering methodology for guaranteed Local 3-Pack capture and AI citation visibility:
+                The four stages of work we follow for Google Maps listings and AI answer visibility:
               </p>
             </div>
 
@@ -955,15 +933,15 @@ export default function LincolnSeoPage() {
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
-              <span>Map Pack Dominance &amp; Real Growth</span>
+              <span>Google Maps &amp; Local Search</span>
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Dominate Lincoln Local Search?
+              Start With a Free Lincoln Local SEO Audit
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Claim your complimentary Google Business Profile and local entity audit. We will reveal exactly where you are losing leads to competitors and how to capture the Local 3-Pack.
+              Ask for a free review of your Google Business Profile and local listings. We will show you what is missing or inconsistent, and what we would fix first.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>

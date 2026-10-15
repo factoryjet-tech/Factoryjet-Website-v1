@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Camelback Corridor & Biltmore',
-    query: 'wealth management web design biltmore phoenix',
     focus: 'Wealth Advisory, Private Equity & Commercial Real Estate',
     desc: 'The prestigious financial and legal heart of the Valley. Demands refined editorial typography, interactive portfolio calculators, and SOC2-compliant client portals.',
   },
   {
     corridor: 'Scottsdale Airpark & North Scottsdale',
-    query: 'aesthetic medical clinic web design scottsdale',
     focus: 'Aesthetic Medicine, Luxury Hospitality & Defense Tech',
     desc: 'Bustling luxury medical, aviation, and technology nexus. Features high-resolution visual storytelling, patient intake flows, and sub-second edge hosting.',
   },
   {
     corridor: 'Downtown Phoenix & Roosevelt Row',
-    query: 'biotech healthcare web design downtown phoenix',
     focus: 'Bio-Science Core, FinTech & Healthcare Innovation',
     desc: 'Fast-growing urban innovation district. Demands clinical-grade scientific design systems, interactive pipeline visualizers, and modern accessibility compliance.',
   },
   {
     corridor: 'Tempe & Silicon Desert Nexus',
-    query: 'semiconductor enterprise web design tempe',
     focus: 'Semiconductor Supply, Enterprise SaaS & Microelectronics',
     desc: 'Major university and hardware technology hub. Features technical interactive capability matrices, developer documentation portals, and rapid mobile load times.',
   },
   {
     corridor: 'Chandler & Price Road Corridor',
-    query: 'aviation engineering web design chandler',
     focus: 'Autonomous Vehicle Testing, Precision Aviation & Engineering',
     desc: 'High-tech manufacturing center. Requires precision engineering spec tables, AS9100 quality cert showcases, and high-speed commercial RFQ intake forms.',
   },
   {
     corridor: 'Gilbert & East Valley Gateway',
-    query: 'clean tech manufacturing web design gilbert',
     focus: 'Advanced Manufacturing, Clean Tech & Regional Logistics',
     desc: 'Thriving East Valley commercial engine. Demands responsive B2B product catalogs, freight calculator integrations, and localized CRM routing.',
   },
@@ -669,7 +663,7 @@ export default function PhoenixWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -678,15 +672,11 @@ export default function PhoenixWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

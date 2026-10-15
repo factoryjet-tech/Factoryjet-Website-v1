@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Buckhead & Peachtree Corridor',
-    query: 'luxury ecommerce development buckhead atlanta',
     focus: 'Luxury D2C, Designer Fashion & Private Client Portals',
     desc: 'The luxury retail capital of the Southeast. Demands bespoke digital flagships, high-resolution lifestyle lookbooks, VIP client portals, and frictionless mobile checkouts.',
   },
   {
     corridor: 'Midtown & Tech Square',
-    query: 'creator commerce platform midtown atlanta',
     focus: 'Creator Commerce, Subscription Software & Digital Marketplaces',
     desc: 'Vibrant digital innovation corridor. Tech and creator brands require headless storefronts, custom subscription billing APIs, and instant global CDN distribution.',
   },
   {
     corridor: 'West Midtown & Design District',
-    query: 'custom furniture ecommerce west midtown atlanta',
     focus: 'Bespoke Furniture, Culinary Products & Lifestyle Brands',
     desc: 'High-end design and maker district. Features 3D product configurators, customized swatch selection funnels, and freight delivery scheduling integrations.',
   },
   {
     corridor: 'Perimeter Center & Central Perimeter',
-    query: 'omnichannel retail ecommerce perimeter center',
     focus: 'Omnichannel Retail, Franchise Supply & Corporate Procurement',
     desc: 'Dense corporate headquarters corridor. Requires unified commerce engines connecting physical retail stores, warehouse inventory feeds, and regional distributor portals.',
   },
   {
     corridor: 'Airport Cargo & South Metro Hub',
-    query: 'b2b wholesale ecommerce atlanta airport',
     focus: 'Wholesale Distribution, Freight Parts & B2B Portals',
     desc: 'Critical Southeast logistics nexus. Features custom net-payment terms, volume-tiered pricing matrices, punchout catalogs, and real-time ERP inventory syncing.',
   },
   {
     corridor: 'Alpharetta & North Fulton Corridor',
-    query: 'fintech ecommerce payments alpharetta',
     focus: 'Fintech Checkout Solutions, Payments Tech & High-Volume Retail',
     desc: 'Fintech transaction processing capital. Demands high-security multi-currency checkout gateways, fraud prevention algorithms, and sub-second payment settlement.',
   },
@@ -657,7 +651,7 @@ export default function AtlantaEcommercePage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -666,15 +660,11 @@ export default function AtlantaEcommercePage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

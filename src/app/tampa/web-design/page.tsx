@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Downtown Tampa & Water Street',
-    query: 'fintech web design water street tampa',
     focus: 'Fintech, Real Estate Development & Corporate HQs',
     desc: 'Premier waterfront urban development district. Institutional real estate firms demand executive polish, interactive 3D renderings, and sub-second page performance.',
   },
   {
     corridor: 'Westshore Business District',
-    query: 'corporate website design westshore tampa',
     focus: 'Commercial Real Estate, Insurance & IT Services',
     desc: 'Largest commercial office market in Florida. Features executive directories, transaction portfolios, and enterprise accessibility compliance.',
   },
   {
     corridor: 'Ybor City & Historic Innovation District',
-    query: 'creative studio web design ybor city',
     focus: 'Creative Studios, Breweries & Tech Incubators',
     desc: 'Vibrant historic and technology incubator district. Demands ultra-high-resolution project galleries, fluid grid transitions, and editorial typography.',
   },
   {
     corridor: 'St. Petersburg & Grand Central District',
-    query: 'marine science web design st petersburg',
     focus: 'Digital Marketing, Coastal Hospitality & Marine Science',
     desc: 'Fast-growing creative and oceanographic research center. Features fluid media players, research publication archives, and sub-second edge hosting.',
   },
   {
     corridor: 'Clearwater & Gateway Corridor',
-    query: 'medical device web design clearwater',
     focus: 'Medical Device Manufacturing, Specialty Clinics & Tourism',
     desc: 'Medical device and clinical care corridor. High-speed spec sheet downloads, equipment capability matrices, and rapid RFQ calculators.',
   },
   {
     corridor: 'Port Tampa Bay & Logistics Hub',
-    query: 'maritime logistics web design port tampa bay',
     focus: 'Maritime Logistics, Heavy Freight & Chemical Distribution',
     desc: 'Largest cargo port in Florida. High-speed freight quote calculators, vessel schedule tracking interfaces, and rapid RFQ workflows.',
   },
@@ -676,7 +670,7 @@ export default function TampaWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -685,15 +679,11 @@ export default function TampaWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

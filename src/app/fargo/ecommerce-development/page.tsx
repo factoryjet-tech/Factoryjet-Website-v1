@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Downtown Fargo & Broadway Innovation Corridor',
-    query: 'software tech direct to consumer lifestyle retail ecommerce downtown fargo',
     focus: 'Tech Innovation, Lifestyle Retail & Modern D2C',
     desc: 'The vibrant entrepreneurial core. Demands sub-second page loads, interactive lookbooks, and friction-free mobile checkout.',
   },
   {
     corridor: 'Red River Valley AgTech & Agriculture Hub',
-    query: 'agricultural equipment seeds fertilizer wholesale b2b ecommerce red river valley',
     focus: 'AgTech, Precision Farming, Seeds & Fertilizer',
     desc: 'The nation agricultural heartland. B2B wholesale portals with purchase order workflows, bulk freight calculation, and tiered dealer pricing.',
   },
   {
     corridor: 'West Fargo Commercial & Industrial Spine',
-    query: 'heavy machinery hydraulic equipment industrial supply wholesale west fargo',
     focus: 'Heavy Machinery, Industrial Tooling & Manufacturing',
     desc: 'Heavy equipment and logistics fulfillment hub. Features bulk matrix ordering, real-time ERP inventory sync, and LTL shipping.',
   },
   {
     corridor: 'NDSU Research & Tech Park Innovation District',
-    query: 'biomedical precision tech enterprise software licensing ecommerce ndsu park',
     focus: 'Precision Tech, Biomedical Sensors & Enterprise Software',
     desc: 'High-growth technology incubator. Features recurring subscription billing, digital license provisioning, and global CDN delivery.',
   },
   {
     corridor: '13th Avenue South & 45th Street Commercial Hub',
-    query: 'multi location retail pos sync consumer goods ecommerce fargo nd',
     focus: 'Omnichannel Retail, Multi-Location POS & Consumer Brands',
     desc: 'High-density commercial corridor. Demands real-time POS inventory synchronization, BOPIS workflows, and customer loyalty engines.',
   },
   {
     corridor: 'Moorhead Border Logistics & Manufacturing',
-    query: 'regional cold storage transportation equipment wholesale moorhead fargo',
     focus: 'Cold Storage Equipment, Logistics & Regional Supply',
     desc: 'Cross-border commerce artery. Demands multi-warehouse inventory visibility, automated freight rating, and custom invoicing.',
   },
@@ -664,7 +658,7 @@ export default function FargoEcommerceDevelopmentPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -673,15 +667,11 @@ export default function FargoEcommerceDevelopmentPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

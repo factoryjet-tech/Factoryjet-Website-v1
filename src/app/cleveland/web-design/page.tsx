@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Downtown & Public Square',
-    query: 'cleveland corporate law website',
     focus: 'Legal, Corporate Services & Commercial Real Estate',
     desc: 'Dense corporate center in central Cleveland. B2B buyers evaluate design polish, partner credentials, and sub-second page performance before picking up the phone.',
   },
   {
     corridor: 'University Circle & Health-Tech',
-    query: 'medical specialist website cleveland',
     focus: 'Healthcare, Life Sciences & Specialty Clinics',
     desc: 'Anchored by the Cleveland Clinic and Case Western Reserve. Healthcare websites require HIPAA compliance awareness, intuitive patient booking, and clear provider profiles.',
   },
   {
     corridor: 'Independence, Solon & Manufacturing',
-    query: 'manufacturing b2b website cleveland',
     focus: 'Industrial Equipment, Fabrication & Supply Chain',
     desc: 'Precision manufacturing hubs along Cuyahoga County. Technical capability matrices, downloadable spec sheets, and fast RFQ request forms drive corporate procurement.',
   },
   {
     corridor: 'Ohio City & Tremont Corridor',
-    query: 'hospitality web design cleveland',
     focus: 'Hospitality, Dining, Breweries & Boutiques',
     desc: 'Fast-moving food and beverage scene along West 25th. Visual storytelling, live reservation embeds, and rapid mobile load times capture high-volume weekend dining foot traffic.',
   },
   {
     corridor: 'Lakewood & West Shore',
-    query: 'local contractor web design cleveland',
     focus: 'Home Services, Contractors & Professional Practices',
     desc: 'High-density commercial artery along Detroit Avenue. Streamlined mobile quotes, verified customer reviews, and local service area landing pages capture residential demand.',
   },
   {
     corridor: 'Beachwood & Chagrin Highlands',
-    query: 'wealth management web design beachwood',
     focus: 'Financial Advisory, Med Spas & Private Wealth',
     desc: 'Affluent eastern suburbs where high-ticket clients research executive credentials, private advisory services, and brand trust before initiating consultations.',
   },
@@ -612,7 +606,7 @@ export default function ClevelandWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -621,15 +615,11 @@ export default function ClevelandWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

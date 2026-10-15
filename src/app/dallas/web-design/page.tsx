@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Uptown Dallas & Arts District',
-    query: 'dallas corporate law web design',
     focus: 'Corporate Legal, Private Wealth & Commercial Real Estate',
     desc: 'Dense financial and commercial district along McKinney Avenue. Corporate buyers evaluate visual polish, partner credentials, and sub-second page performance before booking consultations.',
   },
   {
     corridor: 'Plano & Legacy West Corridor',
-    query: 'saas website design plano',
     focus: 'Enterprise Software, Cloud Infrastructure & B2B Technology',
     desc: 'Major corporate innovation hub along the Dallas North Tollway. Tech companies require interactive component libraries, clear documentation portals, and high-converting trial funnels.',
   },
   {
     corridor: 'Irving & Las Colinas Urban Center',
-    query: 'corporate headquarters web design irving',
     focus: 'Fortune 500 Regional HQs, Insurance & Financial Services',
     desc: 'Premier master-planned corporate center. Demands enterprise-grade accessibility, multi-language support, secure investor relation hubs, and sub-second edge hosting.',
   },
   {
     corridor: 'Frisco & North Platinum Corridor',
-    query: 'healthcare clinic web design frisco',
     focus: 'Sports Medicine, Specialty Healthcare & Luxury Retail',
     desc: 'The nation’s fastest-growing sports and healthcare hub. Features frictionless online patient scheduling, mobile provider directories, and high-impact visual storytelling.',
   },
   {
     corridor: 'Design District & Oak Lawn',
-    query: 'architecture firm website design dallas',
     focus: 'Architecture Studios, Interior Design & Luxury Showrooms',
     desc: 'Creative hub along the Trinity River. Demands ultra-high-resolution project galleries, fluid grid transitions, and editorial typography that reflects luxury standards.',
   },
   {
     corridor: 'Fort Worth Stockyards & Alliance Logistics',
-    query: 'industrial logistics web design fort worth',
     focus: 'Aviation, Freight Logistics, Energy & Heavy Commercial Services',
     desc: 'Logistics and industrial powerhouse anchored by AllianceTexas. High-speed spec sheet downloads, equipment capability matrices, and rapid quote calculators capture high-value contracts.',
   },
@@ -675,7 +669,7 @@ export default function DallasWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -684,15 +678,11 @@ export default function DallasWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

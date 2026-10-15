@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Silicon Slopes & Lehi',
-    query: 'omnichannel consumer tech ecommerce lehi utah',
     focus: 'Omnichannel Activewear, Consumer Hardware & High-Growth D2C',
     desc: 'The beating heart of Utah consumer tech. Demands headless Shopify architectures, POS omnichannel synchronizations, and VIP subscription flows.',
   },
   {
     corridor: 'Downtown Salt Lake City & Central Core',
-    query: 'luxury d2c health wellness ecommerce downtown slc',
     focus: 'Luxury Consumer Brands, Health & Direct-to-Consumer HQ',
     desc: 'Flagship brand and wellness headquarters. Demands tactile editorial visual storytelling, interactive product selectors, and instant mobile checkouts.',
   },
   {
     corridor: 'South Jordan & Daybreak',
-    query: 'nutraceutical supplement subscription ecommerce south jordan',
     focus: 'Nutraceuticals, Supplement Subscriptions & Wellness D2C',
     desc: 'Major dietary supplement and health corridor. Features complex subscription billing matrices, custom bundle builders, and automated replenishment logic.',
   },
   {
     corridor: 'Sandy & Draper Corridor',
-    query: 'digital subscription direct sales modernization draper',
     focus: 'Direct Sales Modernization, Digital Subscriptions & Specialty Goods',
     desc: 'Consumer product and direct sales hub. Features multi-tier distributor portals, personalized cart flows, and custom reward programs.',
   },
   {
     corridor: 'West Valley City & Logistics Nexus',
-    query: 'b2b industrial wholesale ecommerce portal west valley',
     focus: 'B2B Industrial Wholesale, Electrical Components & Tooling Supply',
     desc: 'Major industrial distribution corridor. Demands custom tier pricing matrices, NetSuite ERP synchronizations, and automated purchase order workflows.',
   },
   {
     corridor: 'Ogden & Northern Utah Industrial',
-    query: 'outdoor action sports gear manufacturing ecommerce ogden',
     focus: 'Outdoor Action Sports Gear, Aerospace Parts & Composites',
     desc: 'Action sports and outdoor manufacturing heartland. Requires CAD spec visualizers, bulk freight quoting, and custom B2B punchout catalogs.',
   },
@@ -657,7 +651,7 @@ export default function SaltLakeCityEcommercePage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -666,15 +660,11 @@ export default function SaltLakeCityEcommercePage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Lower Downtown (LoDo) & Union Station',
-    query: 'fintech venture capital web design lodo denver',
     focus: 'Fintech Platforms, Venture Capital & High-Growth Tech',
     desc: 'The vibrant urban technology and startup spine. Demands high-speed corporate flagships, interactive fintech visualizers, and sub-second edge hosting.',
   },
   {
     corridor: 'Denver Tech Center (DTC) & Greenwood Village',
-    query: 'enterprise saas telecommunications web design dtc',
     focus: 'Enterprise SaaS, Telecommunications & Corporate HQ',
     desc: 'Major corporate and telecommunications campus corridor. Demands SOC2-compliant client portals, enterprise software capability matrices, and global edge CDN caching.',
   },
   {
     corridor: 'RiNo (River North Arts District)',
-    query: 'outdoor lifestyle creative agency web design rino',
     focus: 'Creative Agencies, Architecture Studios & Outdoor Lifestyle',
     desc: 'Renowned creative, architecture, and lifestyle core. Features tactile editorial typography, interactive video heroes, and smooth micro-animations.',
   },
   {
     corridor: 'Cherry Creek North',
-    query: 'wealth management aesthetic clinic web design cherry creek',
     focus: 'Private Wealth Advisory, Concierge Medicine & Luxury Real Estate',
     desc: 'Affluent executive and specialized medical enclave. Demands refined editorial typography, interactive wealth calculators, and frictionless consultation booking.',
   },
   {
     corridor: 'Boulder & US-36 Tech Corridor',
-    query: 'cleantech quantum computing web design boulder',
     focus: 'CleanTech, Quantum Computing & Aerospace Software',
     desc: 'World-class scientific and deep tech nexus. Features technical documentation hubs, research pipeline visualizers, and developer APIs.',
   },
   {
     corridor: 'Golden & West Metro Industrial',
-    query: 'advanced manufacturing engineering web design golden co',
     focus: 'Advanced Manufacturing, Engineering & Outdoor Gear',
     desc: 'Precision industrial and outdoor brand manufacturing. Features CAD blueprint upload portals, equipment tolerance matrices, and ERP quote integrations.',
   },
@@ -682,7 +676,7 @@ export default function DenverWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -691,15 +685,11 @@ export default function DenverWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

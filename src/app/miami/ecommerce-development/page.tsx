@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Brickell Financial District',
-    query: 'luxury ecommerce development brickell miami',
     focus: 'Luxury Creator Commerce, Private Wealth Merchandising & Fintech Portals',
     desc: 'The Wall Street of the South. Demands ultra-high-end digital flagships, encrypted private client checkout gateways, and multi-currency international payments.',
   },
   {
     corridor: 'Wynwood & Miami Design District',
-    query: 'fashion brand ecommerce miami design district',
     focus: 'Haute Couture Fashion, Designer Accessories & Art Collectibles',
     desc: 'Global luxury retail and contemporary design nexus. Features high-resolution visual lookbooks, dynamic bundle builders, and instant mobile checkouts.',
   },
   {
     corridor: 'Downtown Miami & Biscayne Corridor',
-    query: 'hospitality booking ecommerce downtown miami',
     focus: 'High-Rise Real Estate Sales Portals, Hospitality & VIP Booking',
     desc: 'Epicenter of luxury hospitality and residential commerce. Features customized deposit workflows, multi-language buyer funnels, and sub-second edge hosting.',
   },
   {
     corridor: 'Coral Gables & Coconut Grove',
-    query: 'latin america ecommerce coral gables',
     focus: 'Latin American Brand Headquarters, Executive Consulting & D2C Brands',
     desc: 'Corporate gateway to Latin American markets. Demands multi-language localization, cross-border customs tax calculation, and automated currency conversions.',
   },
   {
     corridor: 'Miami Beach & South Beach',
-    query: 'swimwear brand ecommerce miami beach',
     focus: 'Boutique Hospitality Merchandising, Swimwear & Luxury Lifestyle',
     desc: 'World-renowned lifestyle and resort wear capital. Features high-converting mobile product feeds, influencer cart integrations, and one-click Shop Pay checkout.',
   },
   {
     corridor: 'Doral & Airport Logistics Nexus',
-    query: 'b2b wholesale ecommerce doral',
     focus: 'Cross-Border Import/Export, Cold-Chain Freight & B2B Wholesale',
     desc: 'Massive international supply chain hub. Features custom net-term customer portals, container-tier pricing matrices, and real-time NetSuite or SAP inventory syncing.',
   },
@@ -658,7 +652,7 @@ export default function MiamiEcommercePage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -667,15 +661,11 @@ export default function MiamiEcommercePage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

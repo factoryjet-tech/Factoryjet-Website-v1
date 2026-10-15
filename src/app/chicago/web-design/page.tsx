@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'The Loop & Financial District',
-    query: 'chicago corporate law web design',
     focus: 'Corporate Legal, Private Equity & Commercial Real Estate',
     desc: 'Dense corporate center along LaSalle and Michigan Avenue. Executive decision makers evaluate typography polish, partner credentials, and instant page speeds before scheduling a consultation.',
   },
   {
     corridor: 'Fulton Market & West Loop',
-    query: 'tech startup website design chicago',
     focus: 'Technology Startups, Venture Capital & Modern Hospitality Flagships',
     desc: 'Rapidly expanding commercial innovation district. Tech firms and culinary flagships require custom interactive brand systems, sub-second asset rendering, and frictionless booking flows.',
   },
   {
     corridor: 'River North & Magnificent Mile',
-    query: 'architecture firm website river north',
     focus: 'Architecture Studios, Luxury Retail & Specialty Medical Practices',
     desc: 'Creative agency and design epicenter. High-resolution project portfolios, editorial typography, and smooth responsive animations project world-class design standards.',
   },
   {
     corridor: 'Schaumburg & Northwest Tech Corridor',
-    query: 'industrial automation web design schaumburg',
     focus: 'Industrial Automation, Software & Regional Insurance Headquarters',
     desc: 'Commercial technology hub along the I-90 corridor. B2B enterprise procurement demands structured product matrices, downloadable technical whitepapers, and clear RFQ routing.',
   },
   {
     corridor: 'Oak Brook & East-West Tollway',
-    query: 'b2b corporate website oak brook',
     focus: 'Enterprise Headquarters, Professional Services & Medical Centers',
     desc: 'Major corporate suburban campus corridor. Requires deep multi-departmental content architectures, secure client login portals, and enterprise-grade accessibility compliance.',
   },
   {
     corridor: 'O’Hare Logistics Corridor & Elk Grove Village',
-    query: 'freight logistics web design elk grove',
     focus: 'Freight Forwarding, Warehousing, Supply Chain & Precision Fabrication',
     desc: 'The nation’s largest consolidated industrial park. Fast load speeds, equipment spec sheets, carrier tracking integrations, and rapid quote calculators capture high-value contracts.',
   },
@@ -644,7 +638,7 @@ export default function ChicagoWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -653,15 +647,11 @@ export default function ChicagoWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

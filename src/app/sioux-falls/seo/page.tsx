@@ -15,36 +15,35 @@ const PAGE_MODIFIED = '2026-09-13';
 const CANONICAL = 'https://factoryjet.com/sioux-falls/seo';
 
 export const metadata: Metadata = {
-  title: 'Best Sioux Falls SEO Company | Top Local Agency SD | FactoryJet',
+  title: 'SEO Agency for Sioux Falls, SD Businesses | FactoryJet',
   description:
-    'Best Sioux Falls SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for South Dakota & Tri-State businesses.',
+    'SEO for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Sioux Falls SEO Company | Top Local Agency SD | FactoryJet',
+    title: 'SEO Agency for Sioux Falls, SD Businesses | FactoryJet',
     description:
-      'Premier Sioux Falls SEO company and agency. Top Google Map Pack rankings, AI search citations, and technical SEO for Sioux Falls businesses.',
+      'SEO for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Sioux Falls SEO Company & Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'SEO for Sioux Falls, SD businesses by FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Sioux Falls SEO Company | Top Local Agency SD | FactoryJet',
-    description: 'Local and technical SEO in Sioux Falls SD. Win the Google Map Pack and AI search citations.',
+    title: 'SEO Agency for Sioux Falls, SD Businesses | FactoryJet',
+    description: 'SEO for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const PARTNERS = [
+// Plain names of tools and platforms this work uses. These are not partner,
+// certification or award claims. Add one only with a public directory listing to point to.
+const SEO_TOOLS = [
   'Google Search Console',
   'DataForSEO API',
-  'Screaming Frog Enterprise',
-  'BrightLocal Certified',
-  'SEMrush Partner',
-  'Next.js 15 & React',
+  'Next.js & React',
   'Cloudflare Edge CDN',
   'Google Analytics 4',
 ];
@@ -59,37 +58,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Downtown & Phillips Avenue',
-    query: 'corporate law firm sioux falls',
     focus: 'Legal, Wealth Management & Corporate Trust',
     desc: 'Historic commercial center in Minnehaha County. Corporate decision-makers evaluate technical credentials, page speed, and practice area authority before initiating contact.',
   },
   {
     corridor: '57th & Louise Medical Corridor',
-    query: 'medical specialist sioux falls',
     focus: 'Healthcare, Dental & Private Practices',
     desc: 'Anchored by the massive regional footprints of Sanford Health and Avera Health. Independent practices capture high-intent patient queries through verified reviews and medical schema.',
   },
   {
     corridor: 'I-29 & I-90 Logistics Crossroads',
-    query: 'manufacturing suppliers sioux falls',
     focus: 'AgTech, Food Processing & Industrial Logistics',
     desc: 'Major Upper Midwest transportation nexus. Technical SEO and structured product specifications put regional equipment suppliers on national procurement shortlists.',
   },
   {
     corridor: 'Empire Mall & 41st Street',
-    query: 'best restaurant sioux falls',
     focus: 'Retail, Hospitality & High-Traffic Dining',
     desc: 'High-density retail and dining district along 41st Street. Mobile discoverability, live menu schema, and steady review acquisition drive high foot traffic.',
   },
   {
     corridor: 'East 10th & Dawley Farm Village',
-    query: 'family dentist east sioux falls',
     focus: 'Suburban Healthcare, Retail & Home Services',
     desc: 'Rapidly growing eastern residential communities. Localized Map Pack ranking signals and neighborhood landing pages capture family service demand.',
   },
   {
     corridor: 'Northern Industrial & Airport Corridor',
-    query: 'roofing contractor sioux falls',
     focus: 'Commercial Contracting, Roofing & HVAC',
     desc: 'Contracting hub servicing Minnehaha and Lincoln counties. Extreme weather shifts require urgent emergency search prominence and automated review collection.',
   },
@@ -100,13 +93,13 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Regional Healthcare Systems & Specialty Clinics',
     headline: 'Converting Patients in the Upper Midwest’s Medical Hub',
     description:
-      'Sioux Falls is the premier medical referral center for South Dakota, Iowa, and Minnesota. We build exhaustive medical schema, physician profile directories, and HIPAA-aware conversion flows that allow independent practices to win Google 3-Pack rankings and earn direct quotes in AI answer engines.',
+      'Sioux Falls is the premier medical referral center for South Dakota, Iowa, and Minnesota. We build exhaustive medical schema, physician profile directories, and HIPAA-aware conversion flows that help independent practices appear in Google Maps results and AI answer engines.',
     image: '/images/services/healthcare-seo.webp',
     alt: 'A clinician working on a laptop that shows charts in a clinic office',
     points: [
       'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
       'HIPAA-aware appointment scheduling and instant click-to-call mobile buttons',
-      'Post-visit SMS review workflows generating consistent 5-star patient feedback',
+      'Post-visit SMS review request workflows',
     ],
   },
   {
@@ -161,7 +154,7 @@ const PAIN_POINTS = [
     num: '02',
     title: 'Fixing Slow Legacy Code and Technical Debt That Blocks Search Rankings',
     problem: 'Sluggish server response times, bloated WordPress plugins, and missing schema markup prevent search engine bots and AI assistants from indexing your pages.',
-    solution: 'We engineer sub-second page loads, clean JSON-LD entity schema, and single-hop crawl architecture to earn top organic ranks and Google AI Overview citations.',
+    solution: 'We work on page load speed, clean JSON-LD entity schema, and single-hop crawl architecture so search engines and AI assistants can crawl and read your pages.',
   },
   {
     num: '03',
@@ -269,7 +262,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does SEO cost in Sioux Falls SD?',
     answer:
-      'Sioux Falls SEO services typically range from $1,200 to $3,000 per month depending on industry competitiveness, number of physical locations, and technical website condition. FactoryJet operates on flexible month-to-month agreements with no long-term contract lock-ins and begins with a comprehensive free technical audit.',
+      'US small businesses typically pay $1,500 to $3,500 a month for SEO, according to WebFX pricing data updated in October 2026. WebFX puts local SEO retainers at $500 to $3,000 a month. What a Sioux Falls business pays depends on how competitive the sector is, how many locations it has and the condition of the website. FactoryJet quotes a fixed price in writing after a short scoping call and works on month-to-month terms.',
   },
   {
     category: 'pricing',
@@ -305,7 +298,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'How important are Google reviews for Sioux Falls local rankings?',
     answer:
-      'Google reviews are one of the strongest direct ranking factors for local search. We help your business implement frictionless post-service SMS and email review collection workflows that consistently generate verified 5-star customer feedback.',
+      'Google describes local results in terms of relevance, distance, and prominence. Reviews can help customers evaluate a business and contribute to prominence, but they do not remove the effect of distance. We help you request honest feedback consistently, without incentives or filtering customers by how positively they respond.',
   },
   {
     category: 'local',
@@ -335,13 +328,13 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What structured data schema do you implement on local Sioux Falls websites?',
     answer:
-      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, ProfessionalService, MedicalClinic, FinancialService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
+      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, MedicalClinic, FinancialService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
   },
   {
     category: 'timeline',
     question: 'How long does it take to see organic ranking improvements in Sioux Falls?',
     answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not guarantee a specific Map Pack position or deadline.',
+      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
   },
   {
     category: 'timeline',
@@ -353,13 +346,13 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'Will algorithm updates from Google disrupt our search rankings?',
     answer:
-      'Google algorithm updates penalize websites that rely on manipulative shortcuts like artificial link networks and thin automated copy. Because our methodology is rooted in senior technical engineering, clean site architecture, authentic local citations, and deep original content, our client websites consistently gain ranking authority during core search updates.',
+      'They can. Google core updates move rankings for many sites, and no agency controls them. Our work stays inside Google guidelines. That means clean site architecture, authentic local citations and original content, with no link networks or thin automated copy. After each update we check your rankings and inquiries and tell you what changed.',
   },
   {
     category: 'timeline',
     question: 'Can SEO replace our paid Google Ads spend in Sioux Falls?',
     answer:
-      'Yes, over time. While Google Ads provide immediate visibility for a continuous pay-per-click fee, organic SEO builds permanent digital equity. As your organic rankings and Map Pack positions solidify, most Sioux Falls clients systematically reduce their paid advertising budgets while maintaining a steady flow of qualified inbound leads.',
+      'It can reduce how much you rely on ads, but it rarely replaces them outright. Google Ads buy visibility for as long as you pay per click. SEO work on your site and listings stays in place after it is done. We report calls and inquiries from organic search each month, so you can decide whether and when to move ad budget.',
   },
   {
     category: 'local',
@@ -371,7 +364,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'How can independent medical and dental practices compete with Sanford and Avera health systems?',
     answer:
-      'While hospital conglomerates dominate broad regional terms, independent medical specialists and dental clinics capture lucrative procedural queries (e.g. dental implants, pediatric orthodontics, private physical therapy) through hyper-targeted neighborhood landing pages, sub-second mobile page loads, and verified Google patient review funnels.',
+      'While hospital conglomerates lead on broad regional terms, independent medical specialists and dental clinics capture lucrative procedural queries (e.g. dental implants, pediatric orthodontics, private physical therapy) through hyper-targeted neighborhood landing pages, sub-second mobile page loads, and verified Google patient review funnels.',
   },
   {
     category: 'local',
@@ -389,7 +382,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What is NAP citation synchronization across Sioux Falls and regional directories?',
     answer:
-      'We establish and synchronize verified business listings across essential regional platforms, including the Greater Sioux Falls Chamber of Commerce, South Dakota Better Business Bureau, Apple Maps, Bing Places, and YellowPages, ensuring 100% data consistency and reinforcing Google Maps 3-Pack authority.',
+      'We establish and synchronize verified business listings across essential regional platforms, including the Greater Sioux Falls Chamber of Commerce, South Dakota Better Business Bureau, Apple Maps, Bing Places, and YellowPages, checking that your details match and reinforcing Google Maps 3-Pack authority.',
   },
 ];
 
@@ -423,15 +416,15 @@ const SERVICE_SCHEMA = {
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Local SEO, Technical SEO & Generative Engine Optimization',
   description:
-    'Senior engineering-led local SEO, Google Map Pack rankings, technical Core Web Vitals optimization, and AI answer citations for Sioux Falls businesses.',
+    'SEO for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
   areaServed: { '@type': 'State', name: 'South Dakota' },
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Sioux Falls SEO Company & Local Agency SD | FactoryJet',
-  description: 'No-contract local SEO, Google Map Pack rankings, and technical SEO for Sioux Falls SD businesses.',
+  name: 'SEO Agency for Sioux Falls, SD Businesses | FactoryJet',
+  description: 'SEO for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
@@ -483,7 +476,7 @@ export default function SiouxFallsSeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Sioux Falls SEO Company &amp; Local Search Marketing Agency
+                  SEO for Sioux Falls Businesses, Measured in Calls and Inquiries
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
@@ -519,18 +512,18 @@ export default function SiouxFallsSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        {/* ── 02. TOOLS AND PLATFORMS MARQUEE TICKER (plain tool names, no partner or certification claims) ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Local SEO &amp; Citation Footprint</div>
+              <div className="rv-ticker-label">Tools we use</div>
               <div className="rv-ticker-line" />
             </div>
             
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
-                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                {SEO_TOOLS.concat(SEO_TOOLS).map((p, idx) => (
                   <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
                     <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
                       {p}
@@ -552,7 +545,7 @@ export default function SiouxFallsSeoPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/sioux-falls/seo/sioux-falls-seo-2.webp"
-                  alt="FactoryJet senior SEO engineers auditing Sioux Falls Google Map Pack and local citations"
+                  alt="A receptionist in green scrubs shaking hands with an older woman across the front desk of a health clinic"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -573,7 +566,7 @@ export default function SiouxFallsSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  With regional medical networks, expanding banking institutions, and rapid residential growth in Minnehaha and Lincoln counties, standard generic agency tactics fail. We combine sub-second Core Web Vitals speed optimization, Google Business Profile dominance, and localized corridor authority.
+                  With regional medical networks, expanding banking institutions, and rapid residential growth in Minnehaha and Lincoln counties, standard generic agency tactics fail. We combine sub-second Core Web Vitals speed optimization, Google Business Profile work, and localized corridor authority.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -623,7 +616,7 @@ export default function SiouxFallsSeoPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -632,15 +625,11 @@ export default function SiouxFallsSeoPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 
@@ -735,7 +724,7 @@ export default function SiouxFallsSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Sioux Falls Businesses Switch to FactoryJet SEO
+                What FactoryJet Does Differently for Sioux Falls Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
                 We replace opaque agency retainers with transparent, engineering-driven search performance:
@@ -810,10 +799,10 @@ export default function SiouxFallsSeoPage() {
                 <span>Predictable Delivery</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Our 6-Month Sioux Falls Domination Roadmap
+                Our 6-Month Sioux Falls SEO Roadmap
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A transparent, step-by-step engineering roadmap delivering compounding search visibility from day one:
+                A step-by-step roadmap of the work, month by month:
               </p>
             </div>
 
@@ -952,7 +941,7 @@ export default function SiouxFallsSeoPage() {
             </div>
             
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Win the Google Map Pack in Sioux Falls?
+              Start With a Free Sioux Falls SEO Audit
             </h2>
             
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>

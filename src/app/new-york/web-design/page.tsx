@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Silicon Alley & Flatiron Tech Corridor',
-    query: 'venture tech enterprise saas web design flatiron nyc',
     focus: 'Enterprise SaaS, Venture Tech & High-Growth Startups',
     desc: 'The vibrant heart of Manhattan technology. Demands high-speed corporate flagships, interactive product demos, and sub-second edge hosting.',
   },
   {
     corridor: 'Midtown & Grand Central Corporate Core',
-    query: 'corporate legal management consulting web design midtown manhattan',
     focus: 'Management Consulting, Corporate Law & Global Headquarters',
     desc: 'The executive business capital of New York. Demands refined editorial typography, practice group silos, and SOC2-compliant client portals.',
   },
   {
     corridor: 'Financial District & Wall Street',
-    query: 'fintech private equity asset management web design fidi nyc',
     focus: 'FinTech, Private Equity, Hedge Funds & Capital Markets',
     desc: 'The global financial epicenter. Requires institutional data visualizations, real-time market API feeds, and uncompromising web security.',
   },
   {
     corridor: 'DUMBO & Brooklyn Navy Yard Creative Hub',
-    query: 'creative agency media studio architecture web design dumbo',
     focus: 'Creative Agencies, Media Studios & Modern Architecture',
     desc: 'Brooklyn premier innovation and creative corridor. Features tactile portfolio showcases, bespoke interaction design, and fluid motion.',
   },
   {
     corridor: 'Long Island City & Queens Innovation Spine',
-    query: 'advanced manufacturing biotech logistics web design lic queens',
     focus: 'Urban Manufacturing, Life Sciences & Commercial Logistics',
     desc: 'Rapidly expanding commercial and biotech hub. Features equipment specification matrices, facility showcases, and automated RFQ intake.',
   },
   {
     corridor: 'Meatpacking & SoHo Flagship District',
-    query: 'luxury retail direct to consumer fashion web design soho nyc',
     focus: 'Luxury Retail, Modern D2C & High-End Fashion Flagships',
     desc: 'The world luxury retail showcase. Demands ultra-responsive lookbooks, interactive styling visualizers, and frictionless digital commerce.',
   },
@@ -664,7 +658,7 @@ export default function NewYorkWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -673,15 +667,11 @@ export default function NewYorkWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

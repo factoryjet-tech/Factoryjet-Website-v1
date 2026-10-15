@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Fashion District & DTLA',
-    query: 'apparel wholesale ecommerce fashion district la',
     focus: 'High-Volume Apparel Wholesalers, Garment Showrooms & Sample Portals',
     desc: 'The nation’s apparel epicenter. Demands bulk pre-order matrices, line sheet downloads, dynamic swatch visualizers, and real-time ERP inventory syncing.',
   },
   {
     corridor: 'Culver City & Silicon Beach',
-    query: 'creator brand ecommerce culver city',
     focus: 'Creator Economy D2C, Influencer Brand Drops & Digital Subscriptions',
     desc: 'Vibrant creator and entertainment tech corridor. Features high-concurrency flash sale architectures, token-gated drops, and frictionless Apple Pay checkouts.',
   },
   {
     corridor: 'Beverly Hills & West Hollywood',
-    query: 'luxury beauty ecommerce beverly hills',
     focus: 'Haute Couture Flagships, Luxury Beauty & Private Client Portals',
     desc: 'World capital of luxury beauty and fashion. Features high-resolution interactive lookbooks, dynamic bundle builders, and VIP concierge checkout flows.',
   },
   {
     corridor: 'South Bay & Port of LA / Long Beach',
-    query: 'b2b import export ecommerce long beach',
     focus: 'Global Freight Logistics, Import Warehousing & B2B Portals',
     desc: 'Massive Pacific trade gateway. Requires container-load pricing matrices, customs tax calculations, punchout catalogs, and EDI/ERP connectors.',
   },
   {
     corridor: 'Pasadena & San Gabriel Valley',
-    query: 'specialty food import ecommerce pasadena',
     focus: 'Specialty Health Foods, Asian Imports & Multi-Currency Portals',
     desc: 'Specialty food and culinary import hub. Demands multi-language localization, dynamic regional shipping rules, and recurring subscription funnels.',
   },
   {
     corridor: 'San Fernando Valley',
-    query: 'automotive aftermarket ecommerce van nuys',
     focus: 'Specialty Automotive Aftermarket, Precision Electronics & Custom Supply',
     desc: 'High-performance manufacturing corridor. Features Year-Make-Model search finders, custom freight rate calculators, and bulk CSV ordering.',
   },
@@ -652,7 +646,7 @@ export default function LosAngelesEcommercePage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -661,15 +655,11 @@ export default function LosAngelesEcommercePage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

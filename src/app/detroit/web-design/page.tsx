@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Downtown Detroit & Woodward Corridor',
-    query: 'fintech mobility web design downtown detroit',
     focus: 'Fintech Innovation, Automotive Mobility & Urban Development',
     desc: 'The vibrant downtown commercial spine. Demands modern high-speed corporate flagships, interactive mobility visualizers, and sub-second edge hosting.',
   },
   {
     corridor: 'Midtown & New Center',
-    query: 'healthcare medical web design midtown detroit',
     focus: 'Medical Systems, Cultural Institutions & Digital Creative Studios',
     desc: 'Renowned healthcare, cultural, and design core. Features multi-practitioner directory architectures, patient booking integrations, and accessibility compliance.',
   },
   {
     corridor: 'Auburn Hills & Automation Alley',
-    query: 'tier 1 automotive supplier web design auburn hills',
     focus: 'Automotive Tier-1 Suppliers, Robotics & Autonomous Tech',
     desc: 'The global automotive engineering heartland. Requires precision engineering spec tables, IATF 16949 quality cert showcases, and high-speed commercial RFQ forms.',
   },
   {
     corridor: 'Troy & Big Beaver Road',
-    query: 'corporate headquarters web design troy mi',
     focus: 'Corporate Headquarters, Financial Services & Architectural Engineering',
     desc: 'Major corporate and professional services corridor. Demands refined editorial typography, interactive portfolio visualizers, and SOC2-compliant client portals.',
   },
   {
     corridor: 'Dearborn & Western Wayne Industrial',
-    query: 'precision tooling manufacturing web design dearborn',
     focus: 'Automotive Engineering, Precision Tooling & Advanced Materials',
     desc: 'Heavy manufacturing and industrial engineering hub. Features CAD blueprint upload portals, equipment capability matrices, and ERP quote integrations.',
   },
   {
     corridor: 'Ann Arbor & Tech Corridor',
-    query: 'ai biotech startup web design ann arbor',
     focus: 'AI Research, Biotech Platforms & Venture-Backed Software',
     desc: 'University research and high-tech software corridor. Demands developer documentation hubs, interactive SaaS demos, and sub-second edge performance.',
   },
@@ -663,7 +657,7 @@ export default function DetroitWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -672,15 +666,11 @@ export default function DetroitWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

@@ -16,81 +16,74 @@ const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/lakewood-ranch/seo';
 
 export const metadata: Metadata = {
-  title: 'Best Lakewood Ranch SEO Company | Top Local Agency FL | FactoryJet',
+  title: 'SEO Agency for Lakewood Ranch, FL Businesses | FactoryJet',
   description:
-    'Best Lakewood Ranch SEO company & local agency. Top Google Map Pack rankings, AI answer engine citations, and Core Web Vitals for Sarasota & Manatee County FL businesses.',
+    'SEO for Lakewood Ranch, FL clinics, wealth advisors, home builders and roofers in Sarasota and Manatee counties. Month-to-month terms.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Lakewood Ranch SEO Company | Top Local Agency FL | FactoryJet',
+    title: 'SEO Agency for Lakewood Ranch, FL Businesses | FactoryJet',
     description:
-      'Premier Lakewood Ranch SEO company and agency. Top Google Map Pack rankings, AI search citations, and technical Core Web Vitals for Lakewood Ranch FL businesses.',
+      'SEO for Lakewood Ranch, FL clinics, wealth advisors, home builders and roofers in Sarasota and Manatee counties. Month-to-month terms.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Lakewood Ranch SEO Company & Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'SEO for Lakewood Ranch, FL businesses by FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Lakewood Ranch SEO Company | Top Local Agency FL | FactoryJet',
-    description: 'Local and technical SEO in Lakewood Ranch FL. Win the Google Map Pack and AI search citations.',
+    title: 'SEO Agency for Lakewood Ranch, FL Businesses | FactoryJet',
+    description: 'SEO for Lakewood Ranch, FL clinics, wealth advisors, home builders and roofers in Sarasota and Manatee counties. Month-to-month terms.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const PARTNERS = [
+// Plain names of tools and platforms this work uses. These are not partner,
+// certification or award claims. Add one only with a public directory listing to point to.
+const SEO_TOOLS = [
   'Google Search Console',
   'DataForSEO API',
-  'Screaming Frog Enterprise',
-  'BrightLocal Certified',
-  'SEMrush Partner',
-  'Next.js 15 & React',
+  'Next.js & React',
   'Cloudflare Edge CDN',
   'Google Analytics 4',
 ];
 
 const STAT_CARDS = [
-  { num: '44%', title: 'Map Pack Clicks', desc: 'Direct phone calls and clicks won by the top 3 Google local profiles.', icon: '📍' },
-  { num: '140+', title: 'Monthly Head Demand', desc: 'Verified monthly searches across Lakewood Ranch SEO company and agency queries.', icon: '📈' },
-  { num: '500+', title: 'Client Deployments', desc: 'Websites and local profiles optimized across medical, wealth, and luxury services.', icon: '🏢' },
-  { num: '100%', title: 'Direct Engineer Access', desc: 'Month-to-month terms with direct access to senior technical engineers.', icon: '⚡' },
+  { num: 'Maps', title: 'Business Profile Review', desc: 'Review the categories, services, and business details customers see in local search.', icon: '📍' },
+  { num: 'Site', title: 'Technical SEO Review', desc: 'Find crawl, performance, and usability issues that get between a search and an inquiry.', icon: '📈' },
+  { num: '500+', title: 'Businesses Served', desc: 'Businesses FactoryJet has built for, across all services.', icon: '🏢' },
+  { num: 'Monthly', title: 'Month-to-Month Terms', desc: 'Month-to-month terms with direct access to senior technical engineers.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
   {
     corridor: 'Main Street & Town Center',
-    query: 'financial advisor lakewood ranch fl',
     focus: 'Wealth Advisory, Estate Law & Executive Services',
     desc: 'The original commercial core of Lakewood Ranch. High-net-worth residents research executive credentials, practice stability, and client reviews before booking consultations.',
   },
   {
     corridor: 'Waterside Place & Lakefront',
-    query: 'best restaurant waterside place lakewood ranch',
     focus: 'Hospitality, Dining, Wellness & Modern Retail',
     desc: 'Vibrant lakefront lifestyle hub. Mobile discoverability, live menu schema, and steady review acquisition drive high foot traffic and event bookings.',
   },
   {
     corridor: 'CORE at Lakewood Ranch',
-    query: 'biotech life sciences lakewood ranch',
     focus: 'Healthcare Innovation, Med Spas & Specialty Clinics',
     desc: 'Collaboration Opportunities for Research and Exploration park. Healthcare providers and medical specialists require comprehensive medical schema and physician authority.',
   },
   {
     corridor: 'University Parkway & UTC Corridor',
-    query: 'cosmetic dentist university parkway fl',
     focus: 'High-Ticket Dentistry, Orthopedics & Aesthetics',
-    desc: 'High-traffic border between Sarasota and Manatee counties. Capturing high-intent patient queries requires multi-county LocalBusiness schema and Google Map Pack dominance.',
+    desc: 'High-traffic border between Sarasota and Manatee counties. Capturing high-intent patient queries requires multi-county LocalBusiness schema and a strong Google Maps listing.',
   },
   {
     corridor: 'Lorraine Road & Eastern Villages',
-    query: 'custom home builder lakewood ranch',
     focus: 'Luxury Real Estate, Pool Builders & Home Improvement',
     desc: 'Affluent new residential villages where affluent homeowners search for verified contractors, architects, and high-end landscaping specialists.',
   },
   {
     corridor: 'Premier Sports Campus & SR-70',
-    query: 'roofing contractor lakewood ranch fl',
     focus: 'Commercial Services, Roofing & Hurricane Contractors',
     desc: 'Commercial artery servicing fast-growing master-planned communities. Rapid post-storm search spikes require prominent Map Pack placement and instant click-to-call buttons.',
   },
@@ -101,13 +94,13 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Healthcare, Med Spas & Concierge Longevity Practices',
     headline: 'Converting Affluent Patients in America’s Premier Master-Planned Community',
     description:
-      'Lakewood Ranch is home to high-income retirees and active families demanding premium healthcare, aesthetic medicine, and concierge longevity care. We build comprehensive medical schema, doctor profile directories, and HIPAA-aware conversion flows that allow practices to dominate the Google 3-Pack and earn direct quotes in AI answer engines.',
+      'Lakewood Ranch is home to high-income retirees and active families demanding premium healthcare, aesthetic medicine, and concierge longevity care. We build comprehensive medical schema, doctor profile directories, and HIPAA-aware conversion flows that help practices appear in Google Maps results and AI answer engines.',
     image: '/images/us/lakewood-ranch/seo/card-blood-pressure-check.webp',
     alt: 'A doctor wrapping a blood pressure cuff around the arm of an older woman in a lilac cardigan seated in an armchair in a bright room',
     points: [
       'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
       'HIPAA-aware appointment scheduling and instant click-to-call mobile buttons',
-      'Post-visit SMS review workflows generating consistent 5-star patient feedback',
+      'Post-visit SMS review request workflows',
     ],
   },
   {
@@ -138,7 +131,7 @@ const INDUSTRY_SHOWCASE = [
   },
   {
     sector: 'Hurricane Roofing, Impact Windows & Mechanical Contractors',
-    headline: 'Dominating Urgent Storm Preparation and Recovery Searches',
+    headline: 'Urgent Storm Preparation and Recovery Searches',
     description:
       'Gulf Coast tropical storms and humid subtropical heat create urgent homeowner repair and storm hardening demands. We position your contracting business directly in the Google Map Pack 3-Pack with live call recording and neighborhood service pages from Lakewood Ranch to Sarasota and Bradenton.',
     image: '/images/us/services/roofing-seo/hero.webp',
@@ -162,7 +155,7 @@ const PAIN_POINTS = [
     num: '02',
     title: 'Fixing Slow Legacy Code and Technical Debt That Blocks Search Rankings',
     problem: 'Sluggish server response times, bloated WordPress plugins, and missing schema markup prevent search engine bots and AI assistants from indexing your pages.',
-    solution: 'We engineer sub-second page loads, clean JSON-LD entity schema, and single-hop crawl architecture to earn top organic ranks and Google AI Overview citations.',
+    solution: 'We work on page load speed, clean JSON-LD entity schema, and single-hop crawl architecture so search engines and AI assistants can crawl and read your pages.',
   },
   {
     num: '03',
@@ -270,7 +263,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does SEO cost in Lakewood Ranch FL?',
     answer:
-      'Lakewood Ranch SEO services typically range from $1,250 to $3,500 per month depending on sector competitiveness, number of business locations, and technical site condition. FactoryJet operates on month-to-month agreements with no long-term contract lock-ins and starts with a comprehensive free technical audit.',
+      'US small businesses typically pay $1,500 to $3,500 a month for SEO, according to WebFX pricing data updated in October 2026. WebFX puts local SEO retainers at $500 to $3,000 a month. What a Lakewood Ranch business pays depends on how competitive the sector is, how many locations it has and the condition of the website. FactoryJet quotes a fixed price in writing after a short scoping call and works on month-to-month terms.',
   },
   {
     category: 'pricing',
@@ -294,7 +287,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'How do we rank our business across both Sarasota and Manatee counties?',
     answer:
-      'Lakewood Ranch sits on the border of Sarasota and Manatee counties. We configure multi-location service area schema, build dedicated landing pages for both counties, and align directory citations to ensure you capture searches in Lakewood Ranch, Sarasota, and Bradenton simultaneously.',
+      'Lakewood Ranch sits on the border of Sarasota and Manatee counties. We configure multi-location service area schema, build dedicated landing pages for both counties, and align directory citations so you can be found for searches in Lakewood Ranch, Sarasota, and Bradenton.',
   },
   {
     category: 'local',
@@ -306,7 +299,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'How important are Google reviews for Lakewood Ranch local rankings?',
     answer:
-      'Google reviews are one of the strongest direct ranking factors for local search. We help your business implement frictionless post-service SMS and email review collection workflows that consistently generate verified 5-star customer feedback.',
+      'Google describes local results in terms of relevance, distance, and prominence. Reviews can help customers evaluate a business and contribute to prominence, but they do not remove the effect of distance. We help you request honest feedback consistently, without incentives or filtering customers by how positively they respond.',
   },
   {
     category: 'local',
@@ -330,19 +323,19 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'Why does website loading speed directly impact Google search rankings?',
     answer:
-      'Google utilizes Core Web Vitals as an official ranking metric. Fast-loading websites deliver superior user experiences, resulting in lower bounce rates and higher session engagement. If your site takes longer than two seconds to load on mobile networks, search algorithms demote your listings in favor of faster competitors.',
+      'Page experience and Core Web Vitals are among the signals Google can use, but speed alone does not determine rankings. A faster mobile experience also makes it easier for visitors to read, call, or submit a form. We improve performance because it supports both search visibility and conversion, without promising that one speed score will produce a particular position.',
   },
   {
     category: 'technical',
     question: 'What structured data schema do you implement on local Lakewood Ranch websites?',
     answer:
-      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, ProfessionalService, MedicalClinic, FinancialService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
+      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, MedicalClinic, FinancialService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
   },
   {
     category: 'timeline',
     question: 'How long does it take to see organic ranking improvements in Lakewood Ranch?',
     answer:
-      'Initial technical fixes and low-competition neighborhood keyword wins typically show results within 30 to 60 days. Competitive high-volume head terms and stable top-3 Map Pack placements generally mature within 3 to 6 months of continuous optimization.',
+      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
   },
   {
     category: 'timeline',
@@ -354,19 +347,19 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'Will algorithm updates from Google disrupt our search rankings?',
     answer:
-      'Google algorithm updates penalize websites that rely on manipulative shortcuts like artificial link networks and thin automated copy. Because our methodology is rooted in senior technical engineering, clean site architecture, authentic local citations, and deep original content, our client websites consistently gain ranking authority during core search updates.',
+      'They can. Google core updates move rankings for many sites, and no agency controls them. Our work stays inside Google guidelines. That means clean site architecture, authentic local citations and original content, with no link networks or thin automated copy. After each update we check your rankings and inquiries and tell you what changed.',
   },
   {
     category: 'timeline',
     question: 'Can SEO replace our paid Google Ads spend in Lakewood Ranch?',
     answer:
-      'Yes, over time. While Google Ads provide immediate visibility for a continuous pay-per-click fee, organic SEO builds permanent digital equity. As your organic rankings and Map Pack positions solidify, most Lakewood Ranch clients systematically reduce their paid advertising budgets while maintaining a steady flow of qualified inbound leads.',
+      'It can reduce how much you rely on ads, but it rarely replaces them outright. Google Ads buy visibility for as long as you pay per click. SEO work on your site and listings stays in place after it is done. We report calls and inquiries from organic search each month, so you can decide whether and when to move ad budget.',
   },
   {
     category: 'local',
     question: 'How do you optimize for businesses straddling both Sarasota and Manatee counties?',
     answer:
-      'Because Lakewood Ranch spans both Sarasota and Manatee counties, businesses often struggle with geographic boundary confusion in Google Maps. We implement dual-county LocalBusiness schema with precise latitude/longitude geo-coordinates, multiple service area definitions, and targeted neighborhood pages (Waterside, Main Street, CORE) to dominate search results across both county lines.',
+      'Because Lakewood Ranch spans both Sarasota and Manatee counties, businesses often struggle with geographic boundary confusion in Google Maps. We implement dual-county LocalBusiness schema with precise latitude/longitude geo-coordinates, multiple service area definitions, and targeted neighborhood pages (Waterside, Main Street, CORE) to cover searches on both sides of the county line.',
   },
   {
     category: 'technical',
@@ -390,7 +383,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What is NAP citation verification across Florida regional directories and chambers?',
     answer:
-      'We establish and synchronize verified business citations across essential Gulf Coast platforms, including the Lakewood Ranch Business Alliance, Sarasota Chamber of Commerce, Manatee Chamber, Better Business Bureau West Florida, Apple Maps, and Bing Places, ensuring 100% data consistency.',
+      'We establish and synchronize verified business citations across essential Gulf Coast platforms, including the Lakewood Ranch Business Alliance, Sarasota Chamber of Commerce, Manatee Chamber, Better Business Bureau West Florida, Apple Maps, and Bing Places, checking that your details match.',
   },
 ];
 
@@ -405,22 +398,6 @@ const FAQ_SCHEMA = {
       text: item.answer,
     },
   })),
-};
-
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Lakewood Ranch SEO Company & Local Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$',
-  areaServed: [
-    { '@type': 'City', name: 'Lakewood Ranch' },
-    { '@type': 'City', name: 'Sarasota' },
-    { '@type': 'City', name: 'Bradenton' },
-    { '@type': 'City', name: 'University Park' },
-  ],
 };
 
 const SERVICE_SCHEMA = {
@@ -440,15 +417,21 @@ const SERVICE_SCHEMA = {
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Local SEO, Technical SEO & Generative Engine Optimization',
   description:
-    'Senior engineering-led local SEO, Google Map Pack rankings, technical Core Web Vitals optimization, and AI answer citations for Lakewood Ranch FL businesses.',
-  areaServed: { '@type': 'State', name: 'Florida' },
+    'SEO for Lakewood Ranch, FL clinics, wealth advisors, home builders and roofers in Sarasota and Manatee counties. Month-to-month terms.',
+  areaServed: [
+    { '@type': 'City', name: 'Lakewood Ranch' },
+    { '@type': 'City', name: 'Sarasota' },
+    { '@type': 'City', name: 'Bradenton' },
+    { '@type': 'City', name: 'University Park' },
+    { '@type': 'State', name: 'Florida' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Lakewood Ranch SEO Company & Local Agency FL | FactoryJet',
-  description: 'No-contract local SEO, Google Map Pack rankings, and technical SEO for Lakewood Ranch FL businesses.',
+  name: 'SEO Agency for Lakewood Ranch, FL Businesses | FactoryJet',
+  description: 'SEO for Lakewood Ranch, FL clinics, wealth advisors, home builders and roofers in Sarasota and Manatee counties. Month-to-month terms.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
@@ -477,7 +460,6 @@ export default function LakewoodRanchSeoPage() {
   return (
     <>
       <script id="lwr-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="lwr-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="lwr-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="lwr-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="lwr-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -501,11 +483,11 @@ export default function LakewoodRanchSeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Lakewood Ranch SEO Company &amp; Local Search Marketing Agency
+                  SEO for Lakewood Ranch Businesses in Sarasota and Manatee Counties
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Win the Google 3-Pack Map results across Sarasota and Manatee counties, dominate high-intent local search terms, and earn citations across AI search engines. No long-term contracts. Talk directly with senior technical engineers.
+                  We work on your Google Business Profile, your service pages and your listings so customers searching in Sarasota and Manatee counties can find you. No long-term contracts. Talk directly with senior technical engineers.
                 </p>
 
                 <div className="rv-actions">
@@ -537,18 +519,18 @@ export default function LakewoodRanchSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        {/* ── 02. TOOLS AND PLATFORMS MARQUEE TICKER (plain tool names, no partner or certification claims) ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Local SEO &amp; Citation Footprint</div>
+              <div className="rv-ticker-label">Tools we use</div>
               <div className="rv-ticker-line" />
             </div>
             
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
-                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                {SEO_TOOLS.concat(SEO_TOOLS).map((p, idx) => (
                   <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
                     <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
                       {p}
@@ -570,7 +552,7 @@ export default function LakewoodRanchSeoPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/lakewood-ranch/seo/lakewood-ranch-affluent-community.webp"
-                  alt="FactoryJet senior SEO engineers auditing Lakewood Ranch Google Map Pack and local citations"
+                  alt="People walking along a palm-lined shopping street past an outdoor cafe with orange awnings, one couple with a dog and another with a stroller"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -591,7 +573,7 @@ export default function LakewoodRanchSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  With high-income demographics, rapid medical and commercial expansion, and competition spanning two counties, generic agency tactics fail. We combine sub-second Core Web Vitals speed optimization, Google Business Profile dominance, and localized corridor authority.
+                  With high-income demographics, rapid medical and commercial expansion, and competition spanning two counties, generic agency tactics fail. We combine sub-second Core Web Vitals speed optimization, Google Business Profile work, and localized corridor authority.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -641,7 +623,7 @@ export default function LakewoodRanchSeoPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -650,15 +632,11 @@ export default function LakewoodRanchSeoPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 
@@ -753,7 +731,7 @@ export default function LakewoodRanchSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Lakewood Ranch Businesses Switch to FactoryJet SEO
+                What FactoryJet Does Differently for Lakewood Ranch Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
                 We replace opaque agency retainers with transparent, engineering-driven search performance:
@@ -819,10 +797,10 @@ export default function LakewoodRanchSeoPage() {
                 <span>Predictable Delivery</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Our 6-Month Lakewood Ranch Domination Roadmap
+                Our 6-Month Lakewood Ranch SEO Roadmap
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A transparent, step-by-step engineering roadmap delivering compounding search visibility from day one:
+                A step-by-step roadmap of the work, month by month:
               </p>
             </div>
 
@@ -961,7 +939,7 @@ export default function LakewoodRanchSeoPage() {
             </div>
             
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Win the Google Map Pack in Lakewood Ranch?
+              Start With a Free Lakewood Ranch SEO Audit
             </h2>
             
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>

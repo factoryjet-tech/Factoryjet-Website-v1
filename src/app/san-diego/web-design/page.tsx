@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Torrey Pines & University City',
-    query: 'biotech web design torrey pines san diego',
     focus: 'Biotech Research Portals, Genomics Platforms & Life Sciences',
     desc: 'The nation’s biotechnology epicenter. Demands clinical-grade scientific design systems, interactive pipeline diagrams, and high-security investor hubs.',
   },
   {
     corridor: 'Downtown San Diego & Little Italy',
-    query: 'law firm web design downtown san diego',
     focus: 'Maritime Law, Commercial Real Estate & Hospitality',
     desc: 'The dynamic waterfront urban core. Captures corporate law retainers, luxury commercial real estate developments, and boutique hospitality clients.',
   },
   {
     corridor: 'Sorrento Valley & UTC',
-    query: 'b2b tech website design sorrento valley',
     focus: 'Telecom Hardware, Defense Technology & Venture Portfolios',
     desc: 'Southern California high-tech corridor. Features deep technical interactive capability tools, enterprise whitepaper gates, and sub-second edge hosting.',
   },
   {
     corridor: 'La Jolla & Pacific Beach',
-    query: 'plastic surgery website design la jolla',
     focus: 'Wealth Management, Plastic Surgery & Luxury Estate Law',
     desc: 'Affluent coastal enclave. Demands elegant bespoke aesthetics, secure patient consultation intake funnels, and high-resolution visual storytelling.',
   },
   {
     corridor: 'Kearny Mesa & Central San Diego',
-    query: 'healthcare system website design kearny mesa',
     focus: 'Medical Systems, Specialized Healthcare & Asian Commerce',
     desc: 'Central commercial and medical hub. Features multi-practitioner directory architectures, patient booking integrations, and bilingual capabilities.',
   },
   {
     corridor: 'Otay Mesa & South County',
-    query: 'customs broker logistics web design otay mesa',
     focus: 'Cross-Border Logistics, Maquiladora Trade & Manufacturing',
     desc: 'Busiest commercial land port on the California border. Requires bilingual English and Spanish content architectures and real-time freight quote forms.',
   },
@@ -657,7 +651,7 @@ export default function SanDiegoWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -666,15 +660,11 @@ export default function SanDiegoWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

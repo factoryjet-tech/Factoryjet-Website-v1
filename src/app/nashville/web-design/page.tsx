@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Music Row & Midtown',
-    query: 'entertainment agency web design nashville',
     focus: 'Music Entertainment, Streaming Tech & Artist Management',
     desc: 'The global heart of music business. Demands ultra-high-resolution media galleries, fluid audio/video embeds, and editorial typography that reflects artistic excellence.',
   },
   {
     corridor: 'Downtown Nashville & SoBro',
-    query: 'hospitality web design downtown nashville',
     focus: 'Convention Hospitality, Real Estate Development & Tourism',
     desc: 'Fastest-growing urban core in the South. High-speed booking engine integrations, VIP event workflows, and interactive 3D floorplan tours.',
   },
   {
     corridor: 'West End & Vanderbilt Medical District',
-    query: 'healthcare system website design nashville',
     focus: 'Healthcare Systems, Clinical Research & Biotech',
     desc: 'The healthcare capital of the United States. Features searchable provider directories, HIPAA-aware intake forms, and sub-second edge hosting.',
   },
   {
     corridor: 'The Gulch & Germantown',
-    query: 'creative studio web design the gulch',
     focus: 'Boutique Creative Studios, Culinary Brands & Luxury Apparel',
     desc: 'High-end culinary and retail district. Features fluid grid transitions, private dining reservation workflows, and flawless mobile experiences.',
   },
   {
     corridor: 'Brentwood & Cool Springs',
-    query: 'corporate headquarters web design brentwood',
     focus: 'Corporate Regional HQs, Healthcare IT & Insurance Platforms',
     desc: 'Major corporate innovation cluster in Williamson County. High-speed spec sheet downloads, software capability matrices, and rapid RFQ calculators.',
   },
   {
     corridor: 'Murfreesboro & I-24 Logistics Corridor',
-    query: 'industrial manufacturing web design murfreesboro',
     focus: 'Automotive Manufacturing, Supply Chain Platforms & Industrial Parts',
     desc: 'Dense industrial manufacturing corridor. High-speed catalog downloads, equipment capability matrices, and rapid RFQ workflows capture B2B contracts.',
   },
@@ -652,7 +646,7 @@ export default function NashvilleWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -661,15 +655,11 @@ export default function NashvilleWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

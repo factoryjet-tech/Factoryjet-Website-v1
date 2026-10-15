@@ -16,81 +16,74 @@ const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/miami/seo';
 
 export const metadata: Metadata = {
-  title: 'Best Miami Local SEO Agency | Top Maps 3-Pack & AI Rankings | FactoryJet',
+  title: 'SEO Agency for Miami, FL Businesses | FactoryJet',
   description:
-    'Best Miami local SEO agency. Top Google Maps 3-Pack ranking, organic search capture, and bilingual AI engine citation engineering across Brickell, Coral Gables, and Wynwood.',
+    'SEO for Miami, FL clinics, wealth managers, law firms and freight companies, from Brickell to Doral. No long-term contract.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Miami Local SEO Agency | Top Maps 3-Pack & AI Rankings | FactoryJet',
+    title: 'SEO Agency for Miami, FL Businesses | FactoryJet',
     description:
-      'Premier Miami local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Brickell, Coral Gables, and Wynwood.',
+      'SEO for Miami, FL clinics, wealth managers, law firms and freight companies, from Brickell to Doral. No long-term contract.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Miami Local SEO Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'SEO for Miami, FL businesses by FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Miami Local SEO Agency | Top Maps 3-Pack & AI Rankings | FactoryJet',
-    description: 'Dominate Miami local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    title: 'SEO Agency for Miami, FL Businesses | FactoryJet',
+    description: 'SEO for Miami, FL clinics, wealth managers, law firms and freight companies, from Brickell to Doral. No long-term contract.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const PARTNERS = [
-  'Google Business Profile API',
-  'Search Console Integration',
+// Plain names of tools and platforms this work uses. These are not partner,
+// certification or award claims. Add one only with a public directory listing to point to.
+const SEO_TOOLS = [
+  'Google Business Profile',
+  'Google Search Console',
   'Apple Business Connect',
   'Bing Places for Business',
-  'Schema.org Knowledge Graph',
-  'OpenAI SearchGPT Citations',
-  'Perplexity AI Citation Index',
-  'BrightLocal & Yext Multi-Sync',
+  'Schema.org structured data',
 ];
 
 const STAT_CARDS = [
-  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Miami commercial corridors.', icon: '📍' },
-  { num: '4.9x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
-  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
+  { num: 'Maps', title: 'Business Profile Review', desc: 'Check business details, categories, services, and the areas you actually serve.', icon: '📍' },
+  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Agree which calls, forms, and booked conversations count as useful inquiries.', icon: '📈' },
+  { num: 'Schema', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
   { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
   {
     corridor: 'Brickell Financial District',
-    query: 'private wealth seo brickell miami',
     focus: 'Cross-Border Wealth Advisory, Private Equity & Corporate Law',
     desc: 'The Wall Street of the South along Brickell Avenue and Brickell Key. Fierce local competition for ultra-high-net-worth family office advisory, international cross-border arbitration, and private wealth management retainers.',
   },
   {
     corridor: 'Coral Gables & Downtown Gables',
-    query: 'corporate law firm seo coral gables',
     focus: 'Corporate Legal, Executive Healthcare & Financial Consulting',
     desc: 'Affluent corporate headquarters hub centered along Ponce de Leon Boulevard and Miracle Mile. Features deep practice area knowledge graphs, attorney bar schemas, and bilingual Spanish and English search optimization.',
   },
   {
     corridor: 'Wynwood & Miami Design District',
-    query: 'architecture studio seo miami design district',
     focus: 'Luxury Fashion Flagships, Architecture & Creative Agencies',
     desc: 'Global luxury retail and architectural epicenter along NE 2nd Avenue and NW 2nd Avenue. High-intent local searches demand visual schema integration, localized service radius targeting, and Google Maps prominence.',
   },
   {
     corridor: 'Miami Beach & South Beach',
-    query: 'cosmetic surgery seo miami beach',
     focus: 'Boutique Hospitality, Cosmetic Surgery & Luxury Real Estate',
     desc: 'World-renowned medical and luxury residential strip spanning Ocean Drive, Collins Avenue, and Lincoln Road. Captures high-ticket elective procedure consultations, private surgical inquiries, and luxury property showings.',
   },
   {
     corridor: 'Doral & Airport Logistics Hub',
-    query: 'freight forwarding seo doral',
     focus: 'Import/Export Logistics, Cold-Chain Transport & Industrial Trade',
     desc: 'The premier gateway to Latin American trade adjacent to Miami International Airport (MIA). B2B service inquiries require technical capability landing pages, freight quote calculators, and sub-second edge performance.',
   },
   {
     corridor: 'Aventura & Sunny Isles Beach',
-    query: 'private wealth management seo aventura',
     focus: 'High-Net-Worth Private Wealth, Aesthetic Clinics & Luxury Yachting',
     desc: 'Affluent coastal corridor spanning Biscayne Boulevard and Collins Avenue. Features structured medical and financial schema, neighborhood rank grid saturation, and multi-language patient intake flows.',
   },
@@ -101,7 +94,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Cosmetic Surgery, Medical Aesthetics & Specialty Clinics',
     headline: 'Capturing High-Value Patients Across Brickell, Coral Gables & Miami Beach',
     description:
-      'In South Florida’s competitive aesthetic and surgical markets, prospective patients research procedure credentials thoroughly before booking consultations. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for high-ticket elective queries.',
+      'In South Florida’s competitive aesthetic and surgical markets, prospective patients research procedure credentials thoroughly before booking consultations. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and target high-ticket elective queries.',
     image: '/images/us/services/dental-seo/hero.webp',
     alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
@@ -125,9 +118,9 @@ const INDUSTRY_SHOWCASE = [
   },
   {
     sector: 'Corporate Litigation, International Arbitration & Real Estate Law',
-    headline: 'Dominating High-Stakes Search Corridors for South Florida Law Firms',
+    headline: 'Local Search Work for South Florida Law Firms',
     description:
-      'Legal search terms in Miami-Dade County are intensely competitive. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case settlement showcases, and bilingual search dominance.',
+      'Legal search terms in Miami-Dade County are intensely competitive. We build local SEO structures with practice area knowledge hubs, attorney bar admission schemas, verified case settlement showcases, and bilingual search coverage.',
     image: '/images/us/services/law-firm-seo/hero.webp',
     alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
@@ -189,7 +182,7 @@ const ROADMAP_STEPS = [
     phase: 'Phase 02',
     title: 'Google Business Profile & On-Page Geo-Optimization',
     desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
-    deliverables: ['GBP category and attribute optimization', 'LocalBusiness & ProfessionalService schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+    deliverables: ['GBP category and attribute optimization', 'LocalBusiness and Service schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
   },
   {
     phase: 'Phase 03',
@@ -208,7 +201,7 @@ const ROADMAP_STEPS = [
 const EVALUATION_CRITERIA = [
   {
     label: 'Ranking Target',
-    factoryjet: 'Top 3 Google Maps Local Pack & Organic Page 1 for high-intent local commercial terms.',
+    factoryjet: 'Qualified calls and inquiries from the local searches that matter to your business.',
     traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
   },
   {
@@ -241,7 +234,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does local SEO cost for a Miami business?',
     answer:
-      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Miami corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring county-wide rank dominance receive tailored scoping with clear milestone deliverables.',
+      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Miami corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring county-wide coverage receive tailored scoping with clear milestone deliverables.',
   },
   {
     category: 'pricing',
@@ -259,7 +252,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'How quickly can our Miami business expect to see Google Maps rank improvements?',
     answer:
-      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Brickell or Coral Gables generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
+      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
   },
   {
     category: 'timeline',
@@ -271,7 +264,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'What happens to our local rankings if we pause or discontinue services?',
     answer:
-      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain 100% your permanent intellectual property and provide long-lasting organic value.',
+      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain your property after the engagement ends. Rankings can still change over time as competitors keep working.',
   },
   {
     category: 'technical',
@@ -283,11 +276,11 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What structured JSON-LD schemas do you implement on our website?',
     answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, ProfessionalService, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+      'We inject comprehensive server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
   },
   {
     category: 'technical',
-    question: 'How do you ensure our company is recommended by AI search engines like ChatGPT and Perplexity?',
+    question: 'How do you help our company get recommended by AI search engines like ChatGPT and Perplexity?',
     answer:
       'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
   },
@@ -307,7 +300,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Can you help our practice outrank entrenched competitors in Brickell and Coral Gables?',
     answer:
-      'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
+      'We can help you compete with them. The work combines website speed, topical content, clean citations and a steady flow of reviews. No agency can promise a map position, so each month we report where you stand next to the work completed.',
   },
   {
     category: 'local',
@@ -349,7 +342,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'How do you execute bilingual English and Spanish local SEO in Miami and South Florida?',
     answer:
-      'Over 65% of Miami-Dade residents speak Spanish at home. We implement bilingual Schema.org structured data, correct hreflang annotations, localized Spanish landing pages, and dual-language Google Business Profile optimization without machine-translation errors.',
+      'Many Miami-Dade residents speak Spanish at home. We implement bilingual Schema.org structured data, correct hreflang annotations, localized Spanish landing pages, and dual-language Google Business Profile optimization without machine-translation errors.',
   },
   {
     category: 'local',
@@ -365,7 +358,7 @@ const FAQ_ITEMS = [
   },
   {
     category: 'local',
-    question: 'How do cosmetic surgery and luxury aesthetic clinics in Miami Beach and Aventura dominate Google Maps 3-Pack rankings?',
+    question: 'How do cosmetic surgery and luxury aesthetic clinics in Miami Beach and Aventura compete in Google Maps results?',
     answer:
       'We engineer dedicated physician profile schemas, before-and-after procedure galleries with structured MedicalProcedure markup, verified board certification links, and geo-grid rank saturation across coastal corridors.',
   },
@@ -379,11 +372,11 @@ const FAQ_ITEMS = [
     category: 'deliverables',
     question: 'What is NAP citation synchronization across Miami and Florida business directories?',
     answer:
-      'We establish and synchronize verified business citations across essential regional directories, including the Greater Miami Chamber of Commerce, Florida BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
+      'We establish and synchronize verified business citations across essential regional directories, including the Greater Miami Chamber of Commerce, Florida BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, checking that your details match, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
   },
   {
     category: 'local',
-    question: 'How do luxury yacht charter companies and marine brokerages in Coconut Grove and Miami Beach dominate search?',
+    question: 'How do luxury yacht charter companies and marine brokerages in Coconut Grove and Miami Beach compete in search?',
     answer:
       'South Florida is the luxury yachting capital of the Americas. We construct vessel specification schemas, destination itinerary hubs, seasonal pricing tables, and localized harbor landing pages that capture affluent international charter and brokerage inquiries.',
   },
@@ -408,23 +401,6 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Miami Local SEO Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$',
-  areaServed: [
-    { '@type': 'City', name: 'Miami' },
-    { '@type': 'City', name: 'Miami Beach' },
-    { '@type': 'City', name: 'Coral Gables' },
-    { '@type': 'City', name: 'Doral' },
-    { '@type': 'City', name: 'Aventura' },
-  ],
-};
-
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -442,15 +418,22 @@ const SERVICE_SCHEMA = {
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
   description:
-    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Miami businesses.',
-  areaServed: { '@type': 'State', name: 'Florida' },
+    'SEO for Miami, FL clinics, wealth managers, law firms and freight companies, from Brickell to Doral. No long-term contract.',
+  areaServed: [
+    { '@type': 'City', name: 'Miami' },
+    { '@type': 'City', name: 'Miami Beach' },
+    { '@type': 'City', name: 'Coral Gables' },
+    { '@type': 'City', name: 'Doral' },
+    { '@type': 'City', name: 'Aventura' },
+    { '@type': 'State', name: 'Florida' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Miami Local SEO Agency | Search & AI Visibility | FactoryJet',
-  description: 'Miami local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Brickell, Coral Gables, and Wynwood.',
+  name: 'SEO Agency for Miami, FL Businesses | FactoryJet',
+  description: 'SEO for Miami, FL clinics, wealth managers, law firms and freight companies, from Brickell to Doral. No long-term contract.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
@@ -479,7 +462,6 @@ export default function MiamiSeoPage() {
   return (
     <>
       <script id="mia-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="mia-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="mia-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="mia-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="mia-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -501,11 +483,11 @@ export default function MiamiSeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Miami Local SEO Agency for Market Leaders
+                  SEO for Miami Businesses, From Brickell to Coral Gables
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Brickell, Coral Gables, and Wynwood. Engineered for verified inbound calls and high-ticket consultations.
+                  We work on your Google Business Profile, your service pages and your listings so customers searching in Brickell, Coral Gables, and Wynwood can find you. Monthly reporting covers calls and inquiries.
                 </p>
 
                 <div className="rv-actions">
@@ -536,18 +518,18 @@ export default function MiamiSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / CITATION MARQUEE TICKER ── */}
+        {/* ── 02. TOOLS AND PLATFORMS MARQUEE TICKER (plain tool names, no partner or certification claims) ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Local Search &amp; AI Citation Infrastructure</div>
+              <div className="rv-ticker-label">Platforms and tools we work with</div>
               <div className="rv-ticker-line" />
             </div>
 
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
-                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                {SEO_TOOLS.concat(SEO_TOOLS).map((p, idx) => (
                   <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
                     <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
                       {p}
@@ -568,7 +550,7 @@ export default function MiamiSeoPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/shared/factoryjet-audit-call.webp"
-                  alt="FactoryJet senior SEO strategists conducting local search audit for Miami businesses"
+                  alt="A man in a blue shirt talking to the camera at a white desk, beside a laptop showing a dashboard with orange and green bar charts"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -638,7 +620,7 @@ export default function MiamiSeoPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -647,15 +629,11 @@ export default function MiamiSeoPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 
@@ -750,10 +728,10 @@ export default function MiamiSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Miami Companies Choose FactoryJet Local SEO
+                What FactoryJet Does Differently for Miami Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace generic SEO reports with direct rank dominance and verified phone lead generation:
+                We replace generic SEO reports with reporting on completed work, calls and inquiries:
               </p>
             </div>
 
@@ -798,7 +776,7 @@ export default function MiamiSeoPage() {
         <LocalSeoArchitectureBlueprint
             badge="// MIAMI LOCAL SEARCH & AI RANKING BLUEPRINT"
             title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
-            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Miami local search."
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together in Miami local search."
             city="Miami"
             ctaLabel="Get a Free Local SEO Audit"
             region="us"
@@ -813,13 +791,13 @@ export default function MiamiSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Proven Local Ranking Engine</span>
+                <span>Four Stages of Work</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A systematic, engineering-first methodology for establishing market dominance across South Florida:
+                The four stages of work we follow for local search across South Florida:
               </p>
             </div>
 
@@ -955,15 +933,15 @@ export default function MiamiSeoPage() {
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
-              <span>Verified Rank Dominance</span>
+              <span>Google Maps &amp; Local Search</span>
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Dominate Miami Local Search?
+              Start With a Free Miami Local SEO Audit
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Claim your complimentary local SEO audit and discover the exact ranking and citation gaps preventing your firm from capturing the Google Maps 3-Pack.
+              Ask for a free review of your Google Business Profile and local listings. We will show you what is missing or inconsistent, and what we would fix first.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>

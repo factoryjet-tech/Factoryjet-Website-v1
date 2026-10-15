@@ -60,37 +60,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'South Lake Union & Downtown',
-    query: 'cloud tech web design south lake union seattle',
     focus: 'Cloud Infrastructure, Enterprise SaaS & AI Platforms',
     desc: 'The global cloud capital. Demands high-performance developer documentation hubs, interactive product visualizers, and sub-second edge hosting.',
   },
   {
     corridor: 'Bellevue & Eastside Tech Corridor',
-    query: 'enterprise b2b web design bellevue',
     focus: 'Fintech Engineering, Corporate Headquarters & Private Equity',
     desc: 'Bustling Eastside corporate nexus. Features bespoke financial data charts, executive portal integrations, and SOC2-compliant architectures.',
   },
   {
     corridor: 'Pioneer Square & SODO',
-    query: 'creative studio web design pioneer square seattle',
     focus: 'Creative Agencies, Architecture Studios & Industrial Logistics',
     desc: 'Historic creative and industrial hub. Features tactile editorial layouts, high-resolution visual project portfolios, and smooth micro-animations.',
   },
   {
     corridor: 'Ballard & Fremont',
-    query: 'maritime craft brewery web design ballard',
     focus: 'Maritime Engineering, Craft Beverage & Artisan Manufacturing',
     desc: 'Vibrant maritime and craft enclave. Demands dynamic event calendars, interactive equipment spec sheets, and instant mobile reservation funnels.',
   },
   {
     corridor: 'Redmond & Kirkland',
-    query: 'gaming interactive web design redmond',
     focus: 'Interactive Media, Gaming Studios & Enterprise Software',
     desc: 'Software and digital entertainment capital. Features WebGL interactive hero modules, rich media asset delivery, and sub-second asset streaming.',
   },
   {
     corridor: 'Kent Valley & Tacoma Gateway',
-    query: 'aerospace manufacturing web design kent valley',
     focus: 'Advanced Aerospace Supply, Cold Chain & Logistics',
     desc: 'Pacific Northwest manufacturing heartland. Requires precision engineering capability matrices, automated RFQ forms, and AS9100 compliance trust badges.',
   },
@@ -663,7 +657,7 @@ export default function SeattleWebDesignPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -672,15 +666,11 @@ export default function SeattleWebDesignPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 

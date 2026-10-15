@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Central Eastside & Pearl District',
-    query: 'sustainable apparel ecommerce central eastside portland',
     focus: 'Outdoor Apparel Design, Sustainable Footwear & Lifestyle D2C',
     desc: 'The nation’s athletic apparel and footwear design capital. Features dynamic product visualizers, sustainable material badges, and instant Apple Pay checkouts.',
   },
   {
     corridor: 'Silicon Forest & Hillsboro / Beaverton',
-    query: 'semiconductor hardware ecommerce hillsboro',
     focus: 'Hardware Tech, Semiconductor Supply & Enterprise Electronics',
     desc: 'Major Pacific Northwest semiconductor corridor. Demands technical spec sheet downloads, customer price tiers, and real-time NetSuite/SAP ERP inventory syncing.',
   },
   {
     corridor: 'Downtown Portland & Old Town',
-    query: 'specialty coffee food subscription ecommerce portland',
     focus: 'Specialty Roasters, Craft Food Brands & Subscription Boxes',
     desc: 'Celebrated culinary and craft roasting hub. Features recurring subscription billing engines, custom blend builders, and dynamic regional shipping rules.',
   },
   {
     corridor: 'Willamette Valley Wine Corridor',
-    query: 'winery direct to consumer ecommerce willamette valley',
     focus: 'Winery Direct-to-Consumer, Club Allocations & Custom Subscriptions',
     desc: 'World-renowned Pinot Noir region. Requires specialized allocation tiering, recurring wine club shipment selectors, and state-by-state compliance compliance.',
   },
   {
     corridor: 'Columbia River Gorge & Hood River Gateway',
-    query: 'outdoor action sports gear ecommerce hood river',
     focus: 'Action Sports Gear, Marine Tech & Outdoor Wholesalers',
     desc: 'Global outdoor adventure recreation nexus. Features interactive gear configurators, dealer locator maps, and heavy freight shipping calculators.',
   },
   {
     corridor: 'Clackamas & Industrial South',
-    query: 'machinery fabrication b2b ecommerce clackamas',
     focus: 'Precision Metal Fabrication, Machinery & Regional Distribution',
     desc: 'Precision manufacturing heartland. Features customer-contract pricing matrices, CSV bulk ordering, and purchase order net-payment terms.',
   },
@@ -652,7 +646,7 @@ export default function PortlandEcommercePage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -661,15 +655,11 @@ export default function PortlandEcommercePage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

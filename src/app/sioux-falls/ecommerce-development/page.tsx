@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Downtown & Phillips Avenue',
-    query: 'dtc brand developer sioux falls',
     focus: 'Apparel, Luxury Accessories & Lifestyle DTC',
     desc: 'Historic commercial core where specialty lifestyle and retail brands require omnichannel POS synchronization with online Shopify Plus storefronts.',
   },
   {
     corridor: 'I-29 & I-90 Logistics Crossroads',
-    query: 'wholesale b2b ecommerce sioux falls',
     focus: 'AgTech Parts, Heavy Machinery & Logistics',
     desc: 'Major Upper Midwest distribution nexus where agricultural and industrial suppliers modernize legacy order taking into self-service digital wholesale portals.',
   },
   {
     corridor: 'Northern Industrial & Airport Corridor',
-    query: 'ecommerce fulfillment integration sioux falls',
     focus: 'Multi-Warehouse Logistics & Wholesale Supply',
     desc: 'High-volume logistics corridor where automated ShipStation and multi-location inventory routing eliminate fulfillment bottlenecks.',
   },
   {
     corridor: 'Empire District & 41st Street',
-    query: 'retail ecommerce developer sioux falls',
     focus: 'High-Volume Consumer Retail & Omnichannel',
     desc: 'Commercial retail hub requiring fast mobile checkout, local in-store pickup options, and real-time inventory synchronization across physical locations.',
   },
   {
     corridor: 'Dawley Farm Village & East Side',
-    query: 'food subscription ecommerce sioux falls',
     focus: 'Specialty Food, Regional Meats & CPG',
     desc: 'High-growth suburban hub where regional food producers scale recurring subscription boxes and nationwide cold-chain delivery.',
   },
   {
     corridor: 'Tea & Harrisburg Growth Area',
-    query: 'manufacturing ecommerce sioux falls',
     focus: 'Light Manufacturing, Fabrication & Parts',
     desc: 'Expanding southern light-industrial zone where custom equipment fabricators require complex product customization calculators and RFQ tools.',
   },
@@ -691,7 +685,7 @@ export default function SiouxFallsEcommerceDevelopmentPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -700,15 +694,11 @@ export default function SiouxFallsEcommerceDevelopmentPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

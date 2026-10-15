@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'South Lake Union & Downtown',
-    query: 'enterprise retail ecommerce south lake union seattle',
     focus: 'Enterprise Marketplace Scale, Headless Edge & High-Concurrency Retail',
     desc: 'The Pacific Northwest retail and technology nerve center. Demands high-concurrency flash sale architectures, headless edge rendering, and sub-second global checkouts.',
   },
   {
     corridor: 'Bellevue & Eastside B2B Nexus',
-    query: 'b2b wholesale portal ecommerce bellevue',
     focus: 'Enterprise Wholesale B2B, Multi-Entity NetSuite ERP & Custom Portals',
     desc: 'Major corporate and enterprise headquarters hub. Features custom contract pricing, net-term credit approvals, quote requests, and real-time NetSuite/SAP sync.',
   },
   {
     corridor: 'Pioneer Square & SODO',
-    query: 'outdoor gear brand ecommerce pioneer square seattle',
     focus: 'Specialty Outdoor Equipment, Technical Apparel D2C & Creator Drops',
     desc: 'Epicenter of outdoor technical apparel and lifestyle commerce. Requires interactive lookbooks, smart product bundle configurators, and instant mobile checkouts.',
   },
   {
     corridor: 'Ballard & Fremont Craft District',
-    query: 'craft beverage food subscription ecommerce ballard',
     focus: 'Craft Beverage Distribution, Artisan Foods & Recurring Subscriptions',
     desc: 'Celebrated craft culinary and beverage district. Features recurring subscription billing engines, custom box builders, and localized shipping rules.',
   },
   {
     corridor: 'Redmond & Kirkland Tech Corridor',
-    query: 'gaming hardware merchandise ecommerce redmond',
     focus: 'Hardware Accessories, Gaming Merch & Digital Entitlement Commerce',
     desc: 'Interactive software and gaming hardware nexus. Features digital entitlement gating, token-backed rewards, and global multi-currency checkout gateways.',
   },
   {
     corridor: 'Kent Valley & Port Gateway',
-    query: 'aerospace industrial b2b ecommerce kent valley',
     focus: 'Industrial Cold Chain, Aerospace Hardware & Bulk Wholesale',
     desc: 'The Pacific Northwest logistics and supply chain engine. Demands freight rate calculators, EDI integrations, CSV bulk order uploads, and custom PO generation.',
   },
@@ -652,7 +646,7 @@ export default function SeattleEcommercePage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -661,15 +655,11 @@ export default function SeattleEcommercePage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

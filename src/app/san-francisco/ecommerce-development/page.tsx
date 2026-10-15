@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'SoMa & Financial District',
-    query: 'fintech ecommerce development soma san francisco',
     focus: 'Fintech Gateways, Token-Gated Commerce & Developer APIs',
     desc: 'The global heart of technology innovation. Demands high-security multi-currency checkouts, developer SDK integrations, and headless Next.js edge performance.',
   },
   {
     corridor: 'Silicon Valley & Palo Alto Corridor',
-    query: 'hardware tech ecommerce palo alto',
     focus: 'Hardware Tech D2C, Enterprise SaaS Subscriptions & IoT Portals',
     desc: 'Palo Alto and Mountain View tech hub. Features dynamic device configurators, subscription hardware billing APIs, and corporate volume purchasing tiers.',
   },
   {
     corridor: 'Mission District & Hayes Valley',
-    query: 'sustainable fashion ecommerce hayes valley',
     focus: 'Bespoke Apparel, Sustainable D2C & Artisan Lifestyle Brands',
     desc: 'Vibrant boutique design and culinary district. Demands high-resolution interactive lookbooks, transparent supply chain badges, and instant Apple Pay checkouts.',
   },
   {
     corridor: 'Oakland & East Bay Logistics Hub',
-    query: 'b2b wholesale food ecommerce oakland',
     focus: 'Wholesale Food Distribution, Clean Energy Tech & B2B Portals',
     desc: 'Major Northern California logistics nexus. Features custom net-term customer portals, container-tier pricing matrices, and real-time ERP inventory syncing.',
   },
   {
     corridor: 'Napa Valley & North Bay Wine Corridor',
-    query: 'winery direct to consumer ecommerce napa valley',
     focus: 'Winery Direct-to-Consumer, Club Allocations & Custom Subscriptions',
     desc: 'World-renowned wine and gourmet capital. Requires complex allocation tiering, recurring wine club billing engines, and state-by-state shipping compliance.',
   },
   {
     corridor: 'South Bay & San Jose Hardware Nexus',
-    query: 'semiconductor industrial ecommerce san jose',
     focus: 'Semiconductor Supply, Industrial Electronics & Custom Equipment',
     desc: 'Silicon Valley manufacturing corridor. Features Year-Make-Model or Spec-Sheet search filters, heavy freight shipping calculators, and bulk CSV ordering.',
   },
@@ -652,7 +646,7 @@ export default function SanFranciscoEcommercePage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -661,15 +655,11 @@ export default function SanFranciscoEcommercePage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

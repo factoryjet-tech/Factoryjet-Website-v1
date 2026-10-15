@@ -16,81 +16,74 @@ const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/minneapolis/seo';
 
 export const metadata: Metadata = {
-  title: 'Best Minneapolis SEO Company | Top Local SEO Agency MN | FactoryJet',
+  title: 'SEO Agency for Minneapolis, MN Businesses | FactoryJet',
   description:
-    'Best Minneapolis SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Twin Cities & Hennepin County.',
+    'SEO for Minneapolis, MN law firms, medical device makers, software companies and contractors across the Twin Cities. No long-term contract.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Minneapolis SEO Company | Top Local SEO Agency MN | FactoryJet',
+    title: 'SEO Agency for Minneapolis, MN Businesses | FactoryJet',
     description:
-      'Premier Minneapolis SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across the Twin Cities.',
+      'SEO for Minneapolis, MN law firms, medical device makers, software companies and contractors across the Twin Cities. No long-term contract.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Minneapolis Local SEO Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'SEO for Minneapolis, MN businesses by FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Minneapolis SEO Company | Top Local SEO Agency MN | FactoryJet',
-    description: 'Dominate Minneapolis local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    title: 'SEO Agency for Minneapolis, MN Businesses | FactoryJet',
+    description: 'SEO for Minneapolis, MN law firms, medical device makers, software companies and contractors across the Twin Cities. No long-term contract.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const PARTNERS = [
-  'Google Business Profile API',
-  'Search Console Integration',
+// Plain names of tools and platforms this work uses. These are not partner,
+// certification or award claims. Add one only with a public directory listing to point to.
+const SEO_TOOLS = [
+  'Google Business Profile',
+  'Google Search Console',
   'Apple Business Connect',
   'Bing Places for Business',
-  'Schema.org Knowledge Graph',
-  'OpenAI SearchGPT Citations',
-  'Perplexity AI Citation Index',
-  'BrightLocal & Yext Multi-Sync',
+  'Schema.org structured data',
 ];
 
 const STAT_CARDS = [
-  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Twin Cities commercial corridors.', icon: '📍' },
-  { num: '4.8x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
-  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
+  { num: 'Maps', title: 'Business Profile Review', desc: 'Check business details, categories, services, and the areas you actually serve.', icon: '📍' },
+  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Agree which calls, forms, and booked conversations count as useful inquiries.', icon: '📈' },
+  { num: 'Schema', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
   { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
   {
     corridor: 'Downtown Minneapolis & North Loop',
-    query: 'venture capital corporate legal seo north loop minneapolis',
     focus: 'Fintech Platforms, Venture Capital & Creative Agencies',
     desc: 'The vibrant financial, design, and legal core along Washington Avenue and Nicollet Mall. Captures high-ticket corporate legal retainers, commercial real estate leasing inquiries, and tech venture advisory contracts.',
   },
   {
     corridor: 'Plymouth & West Metro MedTech Corridor',
-    query: 'medical device healthcare clinic seo plymouth mn',
     focus: 'Medical Device Manufacturing, Clinical Diagnostics & Healthcare',
     desc: 'The global Medical Alley heartland spanning Plymouth, Maple Grove, and Minnetonka along Interstate 494. Multi-practitioner practice architectures, physician directories, and clinical credential schemas.',
   },
   {
     corridor: 'Bloomington & I-494 Corporate Spine',
-    query: 'corporate litigation wealth management seo bloomington mn',
     focus: 'Corporate Law, Private Equity & Commercial Real Estate',
     desc: 'Major corporate and financial headquarters corridor near Minneapolis-Saint Paul International Airport (MSP). B2B service queries demand enterprise capability schemas, localized authority, and sub-second edge speeds.',
   },
   {
     corridor: 'St. Paul Capital & Grand Avenue',
-    query: 'estate planning higher education seo st paul',
     focus: 'Estate Planning Law, Higher Education & Enterprise Nonprofits',
     desc: 'Historic seat of Minnesota government and law along Summit Avenue and Grand Avenue. Intense local search competition for high-net-worth estate planning, trust litigation, and wealth advisory retainers.',
   },
   {
     corridor: 'Eden Prairie & Minnetonka Tech Hub',
-    query: 'enterprise cloud software telematics seo eden prairie',
     focus: 'Enterprise Cloud Software, Telematics & Logistics Platforms',
     desc: 'Major enterprise and supply chain software corridor along Highway 212 and Highway 169. Features structured entity markup, executive leadership profiles, and high-converting consultation funnels.',
   },
   {
     corridor: 'Anoka & North Metro Industrial Hub',
-    query: 'precision machining commercial contractor seo anoka mn',
     focus: 'Precision Tooling, Commercial Contracting & Advanced Fabrication',
     desc: 'Precision industrial and heavy contracting heartland across the northern Twin Cities metro. Features technical capability landing pages, equipment schemas, and rapid RFQ quotation workflows.',
   },
@@ -99,9 +92,9 @@ const DISTRICTS = [
 const INDUSTRY_SHOWCASE = [
   {
     sector: 'Corporate Litigation, Commercial Real Estate & Financial Services',
-    headline: 'Dominating High-Stakes Search Corridors for Twin Cities Law Firms',
+    headline: 'Local Search Work for Twin Cities Law Firms',
     description:
-      'Legal search queries across Hennepin and Ramsey counties are intensely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
+      'Legal search queries across Hennepin and Ramsey counties are intensely contested. We build local SEO structures with practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and consistent local citations.',
     image: '/images/us/services/law-firm-seo/hero.webp',
     alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
@@ -146,7 +139,7 @@ const INDUSTRY_SHOWCASE = [
     points: [
       'Service area radius optimization covering Minneapolis, St. Paul, Bloomington, and Brooklyn Park',
       'High-speed mobile performance ensuring immediate project bidding phone calls',
-      'Structured LocalBusiness and Contractor schema markup for local search dominance',
+      'Structured LocalBusiness and Contractor schema markup',
     ],
   },
 ];
@@ -189,7 +182,7 @@ const ROADMAP_STEPS = [
     phase: 'Phase 02',
     title: 'Google Business Profile & On-Page Geo-Optimization',
     desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
-    deliverables: ['GBP category and attribute optimization', 'LocalBusiness & ProfessionalService schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+    deliverables: ['GBP category and attribute optimization', 'LocalBusiness and Service schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
   },
   {
     phase: 'Phase 03',
@@ -208,7 +201,7 @@ const ROADMAP_STEPS = [
 const EVALUATION_CRITERIA = [
   {
     label: 'Ranking Target',
-    factoryjet: 'Top 3 Google Maps Local Pack & Organic Page 1 for high-intent local commercial terms.',
+    factoryjet: 'Qualified calls and inquiries from the local searches that matter to your business.',
     traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
   },
   {
@@ -241,7 +234,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does local SEO cost for a Minneapolis business?',
     answer:
-      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Twin Cities corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring metro-wide rank dominance receive tailored scoping with clear milestone deliverables.',
+      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Twin Cities corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring metro-wide coverage receive tailored scoping with clear milestone deliverables.',
   },
   {
     category: 'pricing',
@@ -259,7 +252,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'How quickly can our Minneapolis business expect to see Google Maps rank improvements?',
     answer:
-      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Downtown Minneapolis or Plymouth generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
+      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
   },
   {
     category: 'timeline',
@@ -271,7 +264,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'What happens to our local rankings if we pause or discontinue services?',
     answer:
-      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain 100% your permanent intellectual property and provide long-lasting organic value.',
+      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain your property after the engagement ends. Rankings can still change over time as competitors keep working.',
   },
   {
     category: 'technical',
@@ -283,11 +276,11 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What structured JSON-LD schemas do you implement on our website?',
     answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, ProfessionalService, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+      'We inject comprehensive server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
   },
   {
     category: 'technical',
-    question: 'How do you ensure our company is recommended by AI search engines like ChatGPT and Perplexity?',
+    question: 'How do you help our company get recommended by AI search engines like ChatGPT and Perplexity?',
     answer:
       'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
   },
@@ -307,7 +300,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Can you help our practice outrank entrenched competitors in Downtown and Plymouth?',
     answer:
-      'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
+      'We can help you compete with them. The work combines website speed, topical content, clean citations and a steady flow of reviews. No agency can promise a map position, so each month we report where you stand next to the work completed.',
   },
   {
     category: 'local',
@@ -347,7 +340,7 @@ const FAQ_ITEMS = [
   },
   {
     category: 'local',
-    question: 'How do medical device manufacturers and biotech firms in Medical Alley dominate B2B search rankings?',
+    question: 'How do medical device manufacturers and biotech firms in Medical Alley compete in B2B search?',
     answer:
       'Minnesota is the global capital of medical device technology. We build technical B2B content hubs, FDA regulatory compliance schemas, ISO 13485 manufacturing capability pages, and clinical trial participant recruitment funnels that capture national procurement queries.',
   },
@@ -355,7 +348,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'How do Fortune 500 corporate headquarters and enterprise SaaS scale-ups in Eden Prairie and Minnetonka structure technical SEO?',
     answer:
-      'We build comprehensive B2B topical clusters, enterprise product documentation portals, software integration schemas, and developer-oriented landing pages that load in under 600ms across global edge networks.',
+      'We build comprehensive B2B topical clusters, enterprise product documentation portals, software integration schemas, and developer-oriented landing pages built to load fast on edge networks.',
   },
   {
     category: 'local',
@@ -379,7 +372,7 @@ const FAQ_ITEMS = [
     category: 'deliverables',
     question: 'What is NAP citation synchronization across Minneapolis and Minnesota business directories?',
     answer:
-      'We establish and synchronize verified business citations across essential regional directories, including the Minneapolis Regional Chamber, Minnesota BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
+      'We establish and synchronize verified business citations across essential regional directories, including the Minneapolis Regional Chamber, Minnesota BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, checking that your details match, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
   },
   {
     category: 'local',
@@ -402,23 +395,6 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Minneapolis Local SEO Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$',
-  areaServed: [
-    { '@type': 'City', name: 'Minneapolis' },
-    { '@type': 'City', name: 'St. Paul' },
-    { '@type': 'City', name: 'Bloomington' },
-    { '@type': 'City', name: 'Plymouth' },
-    { '@type': 'City', name: 'Eden Prairie' },
-  ],
-};
-
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -436,15 +412,22 @@ const SERVICE_SCHEMA = {
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
   description:
-    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Minnesota businesses.',
-  areaServed: { '@type': 'State', name: 'Minnesota' },
+    'SEO for Minneapolis, MN law firms, medical device makers, software companies and contractors across the Twin Cities. No long-term contract.',
+  areaServed: [
+    { '@type': 'City', name: 'Minneapolis' },
+    { '@type': 'City', name: 'St. Paul' },
+    { '@type': 'City', name: 'Bloomington' },
+    { '@type': 'City', name: 'Plymouth' },
+    { '@type': 'City', name: 'Eden Prairie' },
+    { '@type': 'State', name: 'Minnesota' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Minneapolis Local SEO Agency | Search & AI Visibility | FactoryJet',
-  description: 'Minneapolis local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, North Loop, and Plymouth.',
+  name: 'SEO Agency for Minneapolis, MN Businesses | FactoryJet',
+  description: 'SEO for Minneapolis, MN law firms, medical device makers, software companies and contractors across the Twin Cities. No long-term contract.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
@@ -473,7 +456,6 @@ export default function MinneapolisSeoPage() {
   return (
     <>
       <script id="mpls-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="mpls-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="mpls-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="mpls-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="mpls-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -495,11 +477,11 @@ export default function MinneapolisSeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Minneapolis Local SEO Agency for Market Leaders
+                  SEO for Minneapolis and Twin Cities Businesses
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Downtown Minneapolis, North Loop, and Plymouth. Engineered for verified inbound calls and high-ticket consultations.
+                  We work on your Google Business Profile, your service pages and your listings so customers searching in Downtown Minneapolis, North Loop, and Plymouth can find you. Monthly reporting covers calls and inquiries.
                 </p>
 
                 <div className="rv-actions">
@@ -530,18 +512,18 @@ export default function MinneapolisSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / CITATION MARQUEE TICKER ── */}
+        {/* ── 02. TOOLS AND PLATFORMS MARQUEE TICKER (plain tool names, no partner or certification claims) ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Local Search &amp; AI Citation Infrastructure</div>
+              <div className="rv-ticker-label">Platforms and tools we work with</div>
               <div className="rv-ticker-line" />
             </div>
 
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
-                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                {SEO_TOOLS.concat(SEO_TOOLS).map((p, idx) => (
                   <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
                     <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
                       {p}
@@ -562,7 +544,7 @@ export default function MinneapolisSeoPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/b2b-website-design/sales-enablement.webp"
-                  alt="FactoryJet senior SEO strategists conducting local search audit for Minneapolis businesses"
+                  alt="A woman holding a tablet that shows a tan handbag while a man at a desk takes notes in front of a monitor showing a product page"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -632,7 +614,7 @@ export default function MinneapolisSeoPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -641,15 +623,11 @@ export default function MinneapolisSeoPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 
@@ -744,10 +722,10 @@ export default function MinneapolisSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Minneapolis Companies Choose FactoryJet Local SEO
+                What FactoryJet Does Differently for Minneapolis Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace generic SEO reports with direct rank dominance and verified phone lead generation:
+                We replace generic SEO reports with reporting on completed work, calls and inquiries:
               </p>
             </div>
 
@@ -792,7 +770,7 @@ export default function MinneapolisSeoPage() {
         <LocalSeoArchitectureBlueprint
             badge="// MINNEAPOLIS LOCAL SEARCH & AI RANKING BLUEPRINT"
             title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
-            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Minneapolis local search."
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together in Minneapolis local search."
             city="Minneapolis"
             ctaLabel="Get a Free Local SEO Audit"
             region="us"
@@ -807,13 +785,13 @@ export default function MinneapolisSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Proven Local Ranking Engine</span>
+                <span>Four Stages of Work</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A systematic, engineering-first methodology for establishing market dominance across Greater Minneapolis:
+                The four stages of work we follow for local search across Greater Minneapolis:
               </p>
             </div>
 
@@ -949,15 +927,15 @@ export default function MinneapolisSeoPage() {
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
-              <span>Verified Rank Dominance</span>
+              <span>Google Maps &amp; Local Search</span>
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Dominate Minneapolis Local Search?
+              Start With a Free Minneapolis Local SEO Audit
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Claim your complimentary local SEO audit and discover the exact ranking and citation gaps preventing your firm from capturing the Google Maps 3-Pack.
+              Ask for a free review of your Google Business Profile and local listings. We will show you what is missing or inconsistent, and what we would fix first.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>

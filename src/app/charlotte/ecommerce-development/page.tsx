@@ -61,37 +61,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'South End & Design District',
-    query: 'dtc brand developer charlotte nc',
     focus: 'Apparel, Luxury Accessories & Lifestyle DTC',
     desc: 'High-energy urban retail corridor where emerging lifestyle and fashion brands require real-time omnichannel POS synchronization with online Shopify Plus storefronts.',
   },
   {
     corridor: 'I-85 & I-77 Industrial Crossroads',
-    query: 'wholesale b2b ecommerce charlotte',
     focus: 'Industrial Parts, Machinery & Supply Chain',
     desc: 'Major Southeastern manufacturing corridor where commercial suppliers modernize legacy phone and PDF order taking into self-service digital wholesale portals with custom dealer pricing.',
   },
   {
     corridor: 'SouthPark & Sharon Road',
-    query: 'luxury ecommerce designer charlotte',
     focus: 'High-Ticket Consumer Goods, Jewelry & Home Decor',
     desc: 'Affluent consumer market where white-glove shipping integrations, tiered financing options via Affirm, and high-resolution product photography drive higher average order values.',
   },
   {
     corridor: 'Uptown & Financial District',
-    query: 'enterprise ecommerce developer charlotte',
     focus: 'Corporate Merchandise & Enterprise Retail',
     desc: 'Corporate enterprise hubs requiring multi-brand management, single sign-on authentication, and complex enterprise resource planning data synchronization.',
   },
   {
     corridor: 'Lake Norman & North Mecklenburg',
-    query: 'marine equipment ecommerce charlotte',
     focus: 'Marine, Outdoor & Automotive Aftermarket',
     desc: 'Specialty outdoor, marine, and performance motorsports distributors requiring advanced year-make-model catalog filtering and oversized freight shipping calculators.',
   },
   {
     corridor: 'Cabarrus & Concord Logistics Hub',
-    query: 'ecommerce fulfillment integration charlotte',
     focus: 'Multi-Warehouse Logistics & Regional DTC',
     desc: 'High-volume logistics and fulfillment corridor where multi-location inventory routing and automated ShipStation workflows eliminate fulfillment bottlenecks.',
   },
@@ -691,7 +685,7 @@ export default function CharlotteEcommerceDevelopmentPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -700,15 +694,11 @@ export default function CharlotteEcommerceDevelopmentPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
-                      {d.query}
                     </span>
                   </div>
 

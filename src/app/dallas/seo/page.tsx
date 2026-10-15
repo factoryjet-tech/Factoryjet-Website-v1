@@ -17,81 +17,74 @@ const PAGE_MODIFIED = '2026-08-29';
 const CANONICAL = 'https://factoryjet.com/dallas/seo';
 
 export const metadata: Metadata = {
-  title: 'Dallas TX Local SEO Services & Search Marketing Agency | FactoryJet',
+  title: 'SEO Agency for Dallas, TX Businesses | FactoryJet',
   description:
-    'Dallas local SEO agency. Top Google Map Pack 3-pack rankings, local citation sync, GBP optimization, and organic search growth for Texas businesses. Free SEO audit.',
+    'Local SEO for Dallas, TX businesses, from Uptown to Frisco. Google Business Profile work, citations, reviews and call tracking. No long-term contract.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Dallas TX Local SEO Services & Search Marketing Agency | FactoryJet',
+    title: 'SEO Agency for Dallas, TX Businesses | FactoryJet',
     description:
-      'Dallas local SEO agency. Top Google Map Pack 3-pack rankings, local citation sync, and revenue-driven search growth for Texas businesses.',
+      'Local SEO for Dallas, TX businesses, from Uptown to Frisco. Google Business Profile work, citations, reviews and call tracking. No long-term contract.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Dallas Local SEO Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'SEO for Dallas, TX businesses by FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dallas TX Local SEO Services & Search Marketing Agency | FactoryJet',
-    description: 'Dominate Dallas Google 3-Pack map rankings and high-intent local search queries with FactoryJet.',
+    title: 'SEO Agency for Dallas, TX Businesses | FactoryJet',
+    description: 'Local SEO for Dallas, TX businesses, from Uptown to Frisco. Google Business Profile work, citations, reviews and call tracking. No long-term contract.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const PARTNERS = [
+// Plain names of tools and platforms this work uses. These are not partner,
+// certification or award claims. Add one only with a public directory listing to point to.
+const SEO_TOOLS = [
   'Google Search Console',
   'DataForSEO API',
-  'Screaming Frog Enterprise',
-  'BrightLocal Certified',
-  'SEMrush Partner',
-  'Next.js 15 & React',
+  'Next.js & React',
   'Cloudflare Edge CDN',
   'Google Analytics 4',
 ];
 
 const STAT_CARDS = [
-  { num: 'Top 3', title: 'Google Map Pack Targets', desc: 'Precision local grid rank optimization capturing high-value phone calls and direction requests.', icon: '📍' },
-  { num: '100%', title: 'NAP Citation Consistency', desc: 'Flawless name, address, and phone data syndicated across Apple Maps, Bing, Google, and Yelp.', icon: '🛡️' },
-  { num: '150+', title: 'Local Search Audits', desc: 'Detailed ranking factor inspections across on-page, entity schema, and local link profiles.', icon: '🔍' },
-  { num: '0%', title: 'Black Hat Risk', desc: 'White-hat entity engineering strictly compliant with Google Webmaster and Local Search guidelines.', icon: '⚖️' },
+  { num: 'Maps', title: 'Business Profile Review', desc: 'Review your categories, services, and business details against what customers need to find.', icon: '📍' },
+  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Identify the calls and website inquiries that matter to your business and plan how to measure them.', icon: '📈' },
+  { num: 'Data', title: 'Listing Consistency', desc: 'Check your business name, address, and phone number across your website and business listings.', icon: '🛡️' },
+  { num: 'Site', title: 'Technical SEO Review', desc: 'Find crawl issues, unclear service pages, and usability problems that get between a search and an inquiry.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
   {
     corridor: 'Uptown Dallas & Central Business District',
-    query: 'corporate litigation attorney dallas',
     focus: 'Commercial Law, Private Wealth & Executive Advisory',
     desc: 'Dense corporate center in downtown Dallas. We optimize localized legal knowledge graphs, partner practice area silos, and verified client review schemas to capture high-stakes legal inquiries.',
   },
   {
     corridor: 'Plano & Telecom Corridor',
-    query: 'it consulting company plano tx',
     focus: 'Enterprise Tech, Cloud Services & B2B Consulting',
     desc: 'High-density tech business district. We build deep service area silos, technical credential schemas, and local B2B directory citations that win regional IT procurement contracts.',
   },
   {
     corridor: 'Frisco & North Platinum Corridor',
-    query: 'sports medicine specialist frisco',
     focus: 'Specialty Healthcare, Orthopedics & Med Spas',
     desc: 'Fast-growing medical hub anchored by premier sports venues. We implement medical specialty schema, physician credentials, and local neighborhood landing pages that drive patient bookings.',
   },
   {
     corridor: 'Arlington & Mid-Cities',
-    query: 'commercial roofing contractor arlington tx',
     focus: 'Commercial Contractors, Roofing & Mechanical Trades',
-    desc: 'Central DFW contractor hub. We dominate high-intent emergency repair searches with verified service radius polygons, localized landing pages, and automated review capture.',
+    desc: 'Central DFW contractor hub. We target high-intent emergency repair searches with verified service radius polygons, localized landing pages, and automated review capture.',
   },
   {
     corridor: 'Irving & Las Colinas Urban Center',
-    query: 'corporate staffing agency irving',
     focus: 'Corporate Services, Commercial Real Estate & Staffing',
     desc: 'Major corporate campus cluster. We build localized trust signals, thought leadership content silos, and authoritative local citation networks capturing corporate inquiries.',
   },
   {
     corridor: 'Fort Worth Stockyards & Alliance Corridor',
-    query: 'industrial equipment supplier fort worth',
     focus: 'Industrial Tooling, Logistics, Freight & Fabrication',
     desc: 'Heavy industrial and aviation hub. We capture regional B2B supply chain procurement queries by optimizing technical capability pages, B2B service schemas, and local trade citations.',
   },
@@ -102,7 +95,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Commercial Contractors, Roofing & Mechanical Trades',
     headline: 'Capturing High-Value Commercial & Emergency Service Calls Across North Texas',
     description:
-      'Commercial property managers and facility directors across Dallas, Collin, and Tarrant counties do not browse pages of search results. When hail storms damage roofs or HVAC units fail, they call the top 3 verified businesses in the Google Map Pack. We structure your Google Business Profile, service radius coordinates, localized job photo geo-tagging, and high-authority local contractor citations to dominate high-ticket service queries.',
+      'Commercial property managers and facility directors across Dallas, Collin, and Tarrant counties do not browse pages of search results. When hail storms damage roofs or HVAC units fail, they call the top 3 verified businesses in the Google Map Pack. We structure your Google Business Profile, service radius coordinates, localized job photo geo-tagging, and high-authority local contractor citations to compete for high-ticket service queries.',
     image: '/images/us/services/roofing-seo/hero.webp',
     alt: 'Aerial view of suburban shingle rooftops at golden hour',
     points: [
@@ -115,7 +108,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Healthcare Practices, Specialty Dental & Medical Clinics',
     headline: 'Driving High-Value Patient Appointments in Dallas’s Premier Medical Corridors',
     description:
-      'From private practices in the Medical District to surgical centers in Frisco and Plano, local search visibility determines your patient acquisition costs. We optimize your medical entity profiles, connect provider NPI registries to local schema, optimize Google Maps categories, and ensure spotless citation consistency across healthcare directories.',
+      'From private practices in the Medical District to surgical centers in Frisco and Plano, local search visibility determines your patient acquisition costs. We optimize your medical entity profiles, connect provider NPI registries to local schema, optimize Google Maps categories, and check citation consistency across healthcare directories.',
     image: '/images/us/dallas/seo/card-blood-pressure-check.webp',
     alt: 'A nurse in burgundy scrubs wrapping a blood pressure cuff around the arm of a seated woman in an exam room',
     points: [
@@ -126,7 +119,7 @@ const INDUSTRY_SHOWCASE = [
   },
   {
     sector: 'Litigation Law Firms, Personal Injury & Defense Practices',
-    headline: 'Dominating High-Stakes Legal Search Queries in Uptown Dallas',
+    headline: 'Legal Search Work in Uptown Dallas',
     description:
       'Legal keywords in Dallas are among the most competitive in the United States. Ranking in the Map Pack and top organic positions requires deep entity authority. We build comprehensive legal practice area content silos, optimize attorney bar admission entities, earn high-tier legal directory citations, and structure verified case result knowledge panels.',
     image: '/images/us/dallas/seo/card-court-file-packing.webp',
@@ -163,7 +156,7 @@ const PAIN_POINTS = [
     num: '02',
     title: 'Resolving Inconsistent NAP Data & Corrupted Directory Citations',
     problem: 'Duplicate listings, old suite numbers, and mismatched phone formats across Yelp, Apple Maps, and Bing confuse search algorithms and suppress rankings.',
-    solution: 'We audit and direct-sync your business data across primary data aggregators (Data Axle, Neustar, Foursquare) to guarantee 100% NAP consistency.',
+    solution: 'We audit your business data across primary data aggregators (Data Axle, Neustar, Foursquare) and correct name, address and phone details that do not match.',
   },
   {
     num: '03',
@@ -195,7 +188,7 @@ const ROADMAP_STEPS = [
   {
     phase: 'Phase 03',
     title: 'Citation Syndication & Review Acceleration',
-    desc: 'We synchronize your business data across tier-1 directories and deploy automated review generation workflows to build verified 5-star ratings.',
+    desc: 'We synchronize your business data across tier-1 directories and deploy automated review generation workflows.',
     deliverables: ['Data aggregator API syndication', 'Tier-1 directory verification (60+ hubs)', 'Automated SMS/Email review request funnel', 'Local Chamber & industry citations'],
   },
   {
@@ -249,7 +242,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'How long does it take to rank in the Dallas Google Map Pack?',
     answer:
-      'Initial improvements in low-competition suburbs or niche service categories often appear within 30 to 60 days. In highly competitive Dallas corridors (such as personal injury law or commercial roofing), reaching the top 3 positions typically takes 90 to 180 days of systematic citation building, on-page entity optimization, and review velocity.',
+      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
   },
   {
     category: 'map-pack',
@@ -267,13 +260,13 @@ const FAQ_ITEMS = [
     category: 'citations',
     question: 'What is NAP consistency and why is it crucial for Dallas search rankings?',
     answer:
-      'NAP stands for Name, Address, and Phone number. Search engines compare your business data across hundreds of directories like Google, Apple Maps, Bing, Yelp, and Data Axle. If variations in spelling, suite numbers, or phone numbers exist, search engines lose confidence in your location data and suppress your map rankings. We audit and synchronize 100% of your citations.',
+      'NAP stands for Name, Address, and Phone number. Search engines compare your business data across hundreds of directories like Google, Apple Maps, Bing, Yelp, and Data Axle. If variations in spelling, suite numbers, or phone numbers exist, search engines lose confidence in your location data and suppress your map rankings. We audit your citations and correct the ones that do not match.',
   },
   {
     category: 'reviews',
     question: 'Can you help our business remove fake 1-star reviews or competitor spam?',
     answer:
-      'We systematically flag and appeal reviews that violate Google’s Prohibited and Restricted Content policies (such as hate speech, conflict of interest, or fake spam accounts). For legitimate negative feedback, we provide professional response frameworks and deploy automated review generation funnels to bury negative ratings with verified 5-star client testimonials.',
+      'We systematically flag and appeal reviews that violate Google’s Prohibited and Restricted Content policies (such as hate speech, conflict of interest, or fake spam accounts). For legitimate negative feedback, we provide professional response frameworks and set up review requests to every customer, so the profile reflects all of your customers.',
   },
   {
     category: 'local-seo',
@@ -291,7 +284,7 @@ const FAQ_ITEMS = [
     category: 'local-seo',
     question: 'How does local SEO help our business appear in AI search answers like ChatGPT and Perplexity?',
     answer:
-      'AI search engines synthesize local recommendations using structured web data, verified citation sources, and Google Business Profile information. By establishing spotless NAP consistency, rich FAQ schemas, and authoritative local business citations, we position your company as the authoritative recommendation when AI models process local queries.',
+      'AI search engines synthesize local recommendations using structured web data, verified citation sources, and Google Business Profile information. We keep your NAP details consistent, add FAQ schema and build local business citations, so AI models have accurate information about your company when they answer local queries.',
   },
   {
     category: 'map-pack',
@@ -309,7 +302,7 @@ const FAQ_ITEMS = [
     category: 'map-pack',
     question: 'Can a service-area business without a public storefront rank in the Dallas Map Pack?',
     answer:
-      'Yes. You can configure your Google Business Profile as a Service-Area Business (SAB) with a hidden residential address. We optimize your designated service radius and pair it with strong suburban landing pages to win map pack visibility without displaying your home address.',
+      'Yes. You can configure your Google Business Profile as a Service-Area Business (SAB) with a hidden residential address. We optimize your designated service radius and pair it with strong suburban landing pages to be visible in the map pack without displaying your home address.',
   },
   {
     category: 'citations',
@@ -351,13 +344,13 @@ const FAQ_ITEMS = [
     category: 'local-seo',
     question: 'Can local SEO help our B2B manufacturing or logistics business in Dallas?',
     answer:
-      'Yes. Corporate buyers and procurement officers frequently search for local suppliers, fabrication shops, and logistics providers. Local SEO ensures your facility appears at the top of commercial map queries and localized B2B industrial searches.',
+      'Yes. Corporate buyers and procurement officers frequently search for local suppliers, fabrication shops, and logistics providers. Local SEO helps your facility appear in commercial map queries and localized B2B industrial searches.',
   },
   {
     category: 'timeline',
     question: 'How do we begin our Dallas local SEO campaign with FactoryJet?',
     answer:
-      'Schedule a discovery consultation or request a complimentary 50-point Dallas Local SEO Audit. We will analyze your current Map Pack visibility, identify citation errors, evaluate your local competitors, and present an actionable growth plan within 24 hours.',
+      'Schedule a discovery consultation or request a complimentary 50-point Dallas Local SEO Audit. We will analyze your current Map Pack visibility, identify citation errors, evaluate your local competitors, and present a plan of what we would fix first.',
   },
 ];
 
@@ -372,22 +365,6 @@ const FAQ_SCHEMA = {
       text: item.answer,
     },
   })),
-};
-
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Dallas Local SEO Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  areaServed: [
-    { '@type': 'City', name: 'Dallas' },
-    { '@type': 'City', name: 'Plano' },
-    { '@type': 'City', name: 'Frisco' },
-    { '@type': 'City', name: 'Irving' },
-    { '@type': 'City', name: 'Fort Worth' },
-  ],
 };
 
 const SERVICE_SCHEMA = {
@@ -412,9 +389,13 @@ const SERVICE_SCHEMA = {
   },
   serviceType: 'Local SEO, Google Business Profile Optimization & Geo-Grid Defense',
   description:
-    'Senior engineering-led Google Business Profile optimization, local citation syndication, and geo-grid rank defense for Dallas businesses.',
+    'Local SEO for Dallas, TX businesses, from Uptown to Frisco. Google Business Profile work, citations, reviews and call tracking. No long-term contract.',
   areaServed: [
     { '@type': 'City', name: 'Dallas' },
+    { '@type': 'City', name: 'Plano' },
+    { '@type': 'City', name: 'Frisco' },
+    { '@type': 'City', name: 'Irving' },
+    { '@type': 'City', name: 'Fort Worth' },
     { '@type': 'State', name: 'Texas' },
     { '@type': 'Country', name: 'United States' },
   ],
@@ -424,8 +405,8 @@ const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': 'https://factoryjet.com/dallas/seo#webpage',
-  name: 'Dallas TX Local SEO Services & Search Marketing Agency | FactoryJet',
-  description: 'Top Google Map Pack 3-pack rankings, local citation sync, and revenue-driven search growth for Texas businesses.',
+  name: 'SEO Agency for Dallas, TX Businesses | FactoryJet',
+  description: 'Local SEO for Dallas, TX businesses, from Uptown to Frisco. Google Business Profile work, citations, reviews and call tracking. No long-term contract.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
@@ -461,7 +442,6 @@ export default function DallasSeoPage() {
   return (
     <>
       <script id="dal-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="dal-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="dal-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="dal-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="dal-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -479,21 +459,21 @@ export default function DallasSeoPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Dallas Local SEO &amp; Map Pack Dominance</span>
+                  <span>Dallas Local SEO &amp; Google Maps Listings</span>
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Dominate the Dallas Google Map Pack &amp; Local Search
+                  Local SEO for Dallas Businesses Across the DFW Metroplex
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Capture high-intent local phone calls, consultation inquiries, and foot traffic across the DFW Metroplex. Precision GBP optimization, 100% NAP citation sync, and no long-term contracts.
+                  Capture high-intent local phone calls, consultation inquiries, and foot traffic across the DFW Metroplex. Precision GBP optimization, NAP citation clean-up, and no long-term contracts.
                 </p>
 
                 {/* Answer-First Brief */}
                 <div style={{ background: '#F6F6F9', borderLeft: '3px solid #FF5622', padding: '14px 18px', borderRadius: '0 12px 12px 0', marginBottom: '28px', maxWidth: '52ch' }}>
                   <p style={{ fontSize: '13.5px', color: '#141414', lineHeight: 1.55, margin: 0, fontWeight: 500 }}>
-                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet delivers engineering-led Dallas local search optimization: Google Business Profile category calibration, multi-radius geo-grid proximity expansion, 100% NAP data aggregator sync, and transparent call tracking without locked retainers.
+                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet delivers engineering-led Dallas local search optimization: Google Business Profile category calibration, multi-radius geo-grid proximity expansion, NAP data aggregator sync, and transparent call tracking without locked retainers.
                   </p>
                 </div>
 
@@ -525,18 +505,18 @@ export default function DallasSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. TECHNOLOGY MARQUEE TICKER ── */}
+        {/* ── 02. TOOLS AND PLATFORMS MARQUEE TICKER (plain tool names, no partner or certification claims) ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Enterprise Local SEO &amp; Citation Stack</div>
+              <div className="rv-ticker-label">Tools we use</div>
               <div className="rv-ticker-line" />
             </div>
 
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
-                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                {SEO_TOOLS.concat(SEO_TOOLS).map((p, idx) => (
                   <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
                     <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
                       {p}
@@ -557,7 +537,7 @@ export default function DallasSeoPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/dallas-seo/dallas-local-seo-team.webp"
-                  alt="FactoryJet local SEO engineers reviewing Dallas geo-grid ranking signals"
+                  alt="Three people at a standing desk by a window with a city skyline, one pointing at a laptop that shows a tan handbag while another takes notes"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -578,7 +558,7 @@ export default function DallasSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From Uptown Dallas to Plano, Frisco, and Fort Worth, we help commercial contractors, law firms, healthcare providers, and industrial suppliers dominate local search.
+                  From Uptown Dallas to Plano, Frisco, and Fort Worth, we help commercial contractors, law firms, healthcare providers, and industrial suppliers get found in local search.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -626,7 +606,7 @@ export default function DallasSeoPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -635,15 +615,11 @@ export default function DallasSeoPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 
@@ -738,7 +714,7 @@ export default function DallasSeoPage() {
                 <span>The FactoryJet Advantage</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Dallas Businesses Choose FactoryJet Local SEO
+                What FactoryJet Does Differently for Dallas Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
                 We replace empty keyword promises with technical entity engineering and measurable ROI:
@@ -804,10 +780,10 @@ export default function DallasSeoPage() {
                 <span>90-Day Execution Plan</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Our 90-Day Local Ranking Acceleration Framework
+                Our 90-Day Local SEO Work Plan
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A systematic, milestone-driven protocol to establish 3-Pack Map dominance and grow verified phone inquiries:
+                The four stages of work we follow for Google Maps listings and phone inquiries:
               </p>
             </div>
 
@@ -947,7 +923,7 @@ export default function DallasSeoPage() {
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Win the Dallas Google Map Pack?
+              Start With a Free Dallas Local SEO Audit
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>

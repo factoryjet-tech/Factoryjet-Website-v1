@@ -16,36 +16,35 @@ const PAGE_MODIFIED = '2026-09-14';
 const CANONICAL = 'https://factoryjet.com/austin/seo';
 
 export const metadata: Metadata = {
-  title: 'Austin Local SEO Agency | Google Maps 3-Pack | FactoryJet',
+  title: 'SEO Agency for Austin, TX Businesses | FactoryJet',
   description:
-    'Austin local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, South Congress, and Domain. Free audit.',
+    'Google Business Profile and technical SEO work for Austin, TX businesses. Scope and terms are put in writing before work starts.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Austin Local SEO Agency | Google Maps 3-Pack | FactoryJet',
+    title: 'SEO Agency for Austin, TX Businesses | FactoryJet',
     description:
-      'Austin SEO company built for the most crowded market in Texas. Local SEO, technical website improvements, and clear engagement terms.',
+      'Google Business Profile and technical SEO work for Austin, TX businesses. Scope and terms are put in writing before work starts.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Austin SEO Company & Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'SEO for Austin, TX businesses by FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Austin Local SEO Agency | Google Maps 3-Pack | FactoryJet',
-    description: 'Local and technical SEO in Austin TX. Win the Google Map Pack and AI search citations.',
+    title: 'SEO Agency for Austin, TX Businesses | FactoryJet',
+    description: 'Google Business Profile and technical SEO work for Austin, TX businesses. Scope and terms are put in writing before work starts.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const PARTNERS = [
+// Plain names of tools and platforms this work uses. These are not partner,
+// certification or award claims. Add one only with a public directory listing to point to.
+const SEO_TOOLS = [
   'Google Search Console',
   'DataForSEO API',
-  'Screaming Frog Enterprise',
-  'BrightLocal Certified',
-  'SEMrush Partner',
-  'Next.js 15 & React',
+  'Next.js & React',
   'Cloudflare Edge CDN',
   'Google Analytics 4',
 ];
@@ -60,37 +59,31 @@ const STAT_CARDS = [
 const DISTRICTS = [
   {
     corridor: 'Downtown & The Capitol District',
-    query: 'personal injury lawyer austin',
     focus: 'Law Firms, Financial Advisory & Corporate Services',
     desc: 'Dense commercial core spanning Congress Avenue, West 6th, and Seaholm. Corporate buyers and legal clients evaluate technical credentials, page speed, and practice area depth before calling.',
   },
   {
     corridor: 'The Domain & Silicon Hills',
-    query: 'b2b saas marketing austin',
     focus: 'Tech Startups, Enterprise SaaS & Venture-Backed Firms',
     desc: 'The Silicon Hills tech artery along MoPac and 183 housing major regional campuses for Apple, Dell, and IBM. High-level decision-makers skip sponsored ads on reflex and evaluate documentation, sub-second performance, and clear architectural depth.',
   },
   {
     corridor: 'East Austin & Mueller Urban Village',
-    query: 'best restaurant east austin',
     focus: 'Creative Agencies, Hospitality, Dining & Boutiques',
     desc: 'Fast-moving, highly visual discovery along East Cesar Chavez, 11th Street, and the Mueller development. Fresh high-resolution photography, accurate business hours, structured menu schema, and consistent review velocity outperform standard generic copy.',
   },
   {
     corridor: 'South Congress & Zilker Park',
-    query: 'boutique hotel south congress',
     focus: 'Retail Flagships, Experiential Dining & Wellness',
     desc: 'High-traffic lifestyle and tourist corridors along South Congress Avenue and Barton Springs Road. Local search volumes surge during major annual events like South by Southwest in March, Austin City Limits in October, and Formula 1 at Circuit of the Americas.',
   },
   {
     corridor: 'Northwest Hills & The Arboretum',
-    query: 'dentist northwest hills austin',
     focus: 'Healthcare Clinics, Dental Specialists & Family Medicine',
     desc: 'Affluent residential and medical corridor along Loop 360 and US-183. High-income patients conduct deep research on provider credentials, clinical reviews, and Google Maps directions before booking appointments.',
   },
   {
     corridor: 'Round Rock & Williamson County',
-    query: 'ac repair round rock tx',
     focus: 'Home Services, Mechanical Contractors & Multi-Location',
     desc: 'Rapidly expanding northern submarket encompassing Round Rock, Cedar Park, and Georgetown. Capturing suburban market share requires dedicated geographic landing pages with distinct LocalBusiness schema rather than thin cookie-cutter templates.',
   },
@@ -101,7 +94,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Healthcare, Dental & Specialized Medical Clinics',
     headline: 'Converting High-Intent Patients Across Central Texas',
     description:
-      'Medical practices in Austin face intense competition from hospital networks and private groups. We build verified medical entity schema, optimize provider profiles on Google Maps, and write clinical service pages that answer patient symptoms with absolute accuracy. This establishes medical authority that ranks in the 3-Pack and earns citations in AI search overviews.',
+      'Medical practices in Austin face intense competition from hospital networks and private groups. We build verified medical entity schema, optimize provider profiles on Google Maps, and write clinical service pages that answer patient symptoms with absolute accuracy. This gives Google Maps and AI search overviews clear, accurate information about the practice.',
     image: '/images/us/services/dental-seo/hero.webp',
     alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
@@ -114,20 +107,20 @@ const INDUSTRY_SHOWCASE = [
     sector: 'High-Ticket Home Services, HVAC & Contractors',
     headline: 'Capturing Emergency Search Demand During Peak Texas Weather',
     description:
-      'Austin homeowners search under urgent pressure when air conditioners fail during triple-digit July heatwaves or winter freezes hit Travis County. We position your business directly in the Google Local Services and Map Pack 3-Pack with instant phone tracking, neighborhood-level service pages, and verified licensing credentials.',
+      'Austin homeowners search under urgent pressure when air conditioners fail during triple-digit July heatwaves or winter freezes hit Travis County. We work on your Google Maps listing with instant phone tracking, neighborhood-level service pages, and verified licensing credentials.',
     image: '/images/us/services/roofing-seo/hero.webp',
     alt: 'Aerial view of suburban shingle rooftops at golden hour',
     points: [
       'Neighborhood landing pages for Westlake, Circle C, Steiner Ranch, and Lakeway',
       'Live call recording and conversion tracking integrated into Google Analytics 4',
-      'Crawl-optimized review velocity systems to outrank multi-truck competitors',
+      'Steady review requests to compete with multi-truck competitors',
     ],
   },
   {
     sector: 'Legal Practices, Corporate Counsel & Litigation',
     headline: 'Winning High-Value Legal Retainers in Travis County',
     description:
-      'Legal queries in Austin are among the most expensive advertising keywords in the country, often exceeding one hundred dollars per click in Google Ads. We build deep, practice-area content hubs and technical backlink authority that secure permanent top-three organic rankings without paying pay-per-click tolls.',
+      'Legal keywords are some of the most expensive to advertise on in Google Ads. We build deep practice-area content hubs and earn relevant links, so the firm can be found in organic results as well as in paid ads.',
     image: '/images/us/austin/seo/card-law-office-document-review.webp',
     alt: 'Two lawyers at a meeting table, one reading a stapled document and the other writing on a yellow legal pad, with bookshelves behind them',
     points: [
@@ -138,9 +131,9 @@ const INDUSTRY_SHOWCASE = [
   },
   {
     sector: 'B2B Tech, SaaS & Precision Manufacturing',
-    headline: 'Engineering Shortlist Dominance for National Procurement',
+    headline: 'Search Visibility for National Procurement',
     description:
-      'Austin technology companies and advanced manufacturers sell to sophisticated enterprise buyers who conduct exhaustive due diligence before contacting sales. We optimize technical whitepapers, product capability matrices, and software solution pages to rank for technical comparison queries and earn automatic citations in generative AI search tools.',
+      'Austin technology companies and advanced manufacturers sell to sophisticated enterprise buyers who conduct exhaustive due diligence before contacting sales. We optimize technical whitepapers, product capability matrices, and software solution pages so they can be found for technical comparison queries and read by generative AI search tools.',
     image: '/images/us/austin/seo/card-precision-part-inspection.webp',
     alt: 'An engineer in a white lab coat measuring a small steel part with a caliper while a colleague views a 3D model of the part on a monitor',
     points: [
@@ -155,14 +148,14 @@ const PAIN_POINTS = [
   {
     num: '01',
     title: 'Breaking Through the Google 3-Pack Barrier in Crowded Austin Sectors',
-    problem: 'Over 42,000 registered businesses in Travis County compete for just three coveted spots in the Google Local Map Pack. Generic directory submissions and unoptimized Google Business Profiles languish invisibly on pages two and three.',
-    solution: 'We execute comprehensive Google Business Profile optimization, audit primary categories, inject localized photo feeds, and implement automated review acquisition systems to secure permanent top-three placements.',
+    problem: 'Many Travis County businesses compete for just three spots in the Google Local Map Pack. Generic directory submissions and unoptimized Google Business Profiles languish invisibly on pages two and three.',
+    solution: 'We execute comprehensive Google Business Profile optimization, audit primary categories, inject localized photo feeds, and implement automated review acquisition systems.',
   },
   {
     num: '02',
     title: 'Fixing Slow Legacy WordPress Code That Destroys Mobile Search Rankings',
     problem: 'Websites bogged down by 35 active plugins, heavy tracking scripts, and slow shared hosting fail Google Core Web Vitals tests. This causes high mobile bounce rates and algorithmic ranking penalties.',
-    solution: 'We engineer sub-second page performance using modern Next.js static architecture, automated image compression, and edge caching on Cloudflare CDN to achieve flawless 95+ mobile Lighthouse scores.',
+    solution: 'We work on page speed using modern Next.js static architecture, automated image compression, and edge caching on Cloudflare CDN, then check the result with mobile Lighthouse tests.',
   },
   {
     num: '03',
@@ -277,7 +270,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'contracts',
     question: 'How do I compare proposals from different Austin SEO agencies?',
     answer:
-      'Ask three fundamental questions: First, who will actually write and deploy the technical code on my website? Second, will you implement fixes directly or only hand over audit spreadsheets? Third, what specific business metrics will you track each month? If an agency cannot guarantee senior technical execution and refuses to track qualified inbound phone calls, they are selling marketing reports rather than revenue engineering.',
+      'Ask three fundamental questions: First, who will actually write and deploy the technical code on my website? Second, will you implement fixes directly or only hand over audit spreadsheets? Third, what specific business metrics will you track each month? If an agency will not say who does the technical work and refuses to track qualified inbound phone calls, they are selling marketing reports rather than revenue engineering.',
   },
   {
     category: 'contracts',
@@ -337,7 +330,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'technical',
     question: 'What structured data schema do you implement on local Austin websites?',
     answer:
-      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, ProfessionalService, MedicalClinic, LegalService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified entity relationships.',
+      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, MedicalClinic, LegalService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified entity relationships.',
   },
   {
     category: 'corridors',
@@ -373,13 +366,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'attribution',
     question: 'Will algorithm updates from Google disrupt our search rankings?',
     answer:
-      'Google algorithm updates penalize websites that rely on manipulative shortcuts like artificial link networks and thin automated copy. Because our methodology is rooted in senior technical engineering, clean site architecture, authentic local citations, and deep original content, our client websites consistently gain ranking authority during core search updates.',
+      'They can. Google core updates move rankings for many sites, and no agency controls them. Our work stays inside Google guidelines. That means clean site architecture, authentic local citations and original content, with no link networks or thin automated copy. After each update we check your rankings and inquiries and tell you what changed.',
   },
   {
     category: 'attribution',
     question: 'Can SEO replace our paid Google Ads spend in Austin?',
     answer:
-      'Yes, over time. While Google Ads provide immediate visibility for a continuous pay-per-click fee, organic SEO builds permanent digital equity. As your organic rankings and Map Pack positions solidify, most Austin clients systematically reduce their paid advertising budgets while maintaining a steady flow of qualified inbound leads.',
+      'It can reduce how much you rely on ads, but it rarely replaces them outright. Google Ads buy visibility for as long as you pay per click. SEO work on your site and listings stays in place after it is done. We report calls and inquiries from organic search each month, so you can decide whether and when to move ad budget.',
   },
   {
     category: 'attribution',
@@ -424,7 +417,7 @@ const SERVICE_SCHEMA = {
   },
   serviceType: 'Local SEO, Technical SEO & Generative Engine Optimization',
   description:
-    'Senior engineering-led local SEO, Google Map Pack rankings, technical Core Web Vitals optimization, and AI answer citations for Austin businesses.',
+    'Google Business Profile and technical SEO work for Austin, TX businesses. Scope and terms are put in writing before work starts.',
   areaServed: [
     { '@type': 'City', name: 'Austin' },
     { '@type': 'State', name: 'Texas' },
@@ -436,8 +429,8 @@ const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': 'https://factoryjet.com/austin/seo#webpage',
-  name: 'Austin Local SEO Agency | Google Maps 3-Pack | FactoryJet',
-  description: 'Austin local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, South Congress, and Domain. Free audit.',
+  name: 'SEO Agency for Austin, TX Businesses | FactoryJet',
+  description: 'Google Business Profile and technical SEO work for Austin, TX businesses. Scope and terms are put in writing before work starts.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
@@ -496,7 +489,7 @@ export default function AustinSeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Austin SEO Company &amp; Local Search Marketing Agency
+                  SEO for Austin Businesses, With Scope and Terms in Writing
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
@@ -550,7 +543,7 @@ export default function AustinSeoPage() {
                 </span>
               </div>
               <h2 style={{ fontSize: '19px', fontWeight: 800, color: '#141414', margin: '0 0 10px', letterSpacing: '-0.015em' }}>
-                How Central Texas Businesses Win the Google Map Pack and AI Search
+                How Local SEO Works for Central Texas Businesses
               </h2>
               <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.6, margin: 0 }}>
                 Local SEO helps nearby customers find and evaluate your business. We check your Google Business Profile, service pages, business listings, and inquiry paths. The audit identifies what is missing or inconsistent, then prioritizes fixes around the services you sell and the areas you genuinely serve.
@@ -559,18 +552,18 @@ export default function AustinSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        {/* ── 02. TOOLS AND PLATFORMS MARQUEE TICKER (plain tool names, no partner or certification claims) ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Enterprise Austin SEO &amp; Data Stack</div>
+              <div className="rv-ticker-label">Tools we use</div>
               <div className="rv-ticker-line" />
             </div>
             
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
-                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                {SEO_TOOLS.concat(SEO_TOOLS).map((p, idx) => (
                   <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
                     <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
                       {p}
@@ -663,7 +656,7 @@ export default function AustinSeoPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
               {DISTRICTS.map((d) => (
                 <div
                   key={d.corridor}
@@ -672,15 +665,11 @@ export default function AustinSeoPage() {
                     border: '1px solid #E6E6EC',
                     borderRadius: '16px',
                     padding: '28px',
-                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
-                    </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
-                      {d.query}
                     </span>
                   </div>
 
@@ -775,7 +764,7 @@ export default function AustinSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Austin Businesses Switch to FactoryJet SEO
+                What FactoryJet Does Differently for Austin Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
                 We replace opaque agency retainers with transparent, engineering-driven search performance:
@@ -821,7 +810,7 @@ export default function AustinSeoPage() {
               FactoryJet built Yadav Entrance Automation’s website and continues its SEO and AI search work. The content explains the entrance systems the business installs and services, so buyers can understand their options before getting in touch.
             </p>
             <p className="pp-lead" style={{ maxWidth: '68ch', marginTop: '12px', fontSize: '15px' }}>
-              This is an example of our implementation work for an Indian client. Your Austin audit starts with your services, your customers, and your local competitors.
+              This is an example of our implementation work for one client. Your Austin audit starts with your services, your customers, and your local competitors.
             </p>
             <div className="rv-actions" style={{ marginTop: '24px' }}>
               <Link href="/case-studies/yadav-entrance-automation-website-seo" className="rv-btn-secondary">Read the client project →</Link>
@@ -853,10 +842,10 @@ export default function AustinSeoPage() {
                 <span>Predictable Delivery</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Our 6-Month Austin Search Domination Roadmap
+                Our 6-Month Austin SEO Roadmap
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A transparent, step-by-step engineering roadmap delivering compounding search visibility from day one:
+                A step-by-step roadmap of the work, month by month:
               </p>
             </div>
 
@@ -995,7 +984,7 @@ export default function AustinSeoPage() {
             </div>
             
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Win the Google Map Pack in Austin?
+              Start With a Free Austin SEO Audit
             </h2>
             
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
