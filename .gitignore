@@ -80,3 +80,31 @@ pipeline/research/data/index-watch/
 
 # Written by scripts/ensure-git-history.mjs on each build
 public/build-info.json
+
+# Local-only working files (added 2026-10-15). This repository is PUBLIC on GitHub,
+# so internal research, lead and hiring data, agent reports and scratch files stay
+# on disk and out of git. Files already tracked under these paths stay tracked.
+.claude/settings.local.json
+.agents/
+AGENTS.md
+.playwright-mcp/
+brand/
+dfs_.json
+pjs.css
+mockup-*.html
+scripts/quarantine/
+pipeline/hiring/
+pipeline/research/data/
+pipeline/research/briefs/
+pipeline/research/linkedin/
+pipeline/research/*.md
+pipeline/research/*.html
+pipeline/research/*.py
+docs/reports/
+docs/audits/
+docs/linkedin/
+docs/listings/
+docs/ANTIGRAVITY-TASK-*.md
+docs/AU-HOMEPAGE-VISUAL-REDESIGN-REVIEW-*.md
+docs/CLIENT-FOOTER-LINKS-SHIP-*.md
+docs/CODEX-VISUAL-QA-PROMPT-*.md
