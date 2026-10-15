@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './best-ai-agent-development-companies-for-manufacturers-2026.visual-qa.module.css';
 import type { BlogPost, FAQItem } from '../data.types';
 
 const SLUG = 'best-ai-agent-development-companies-for-manufacturers-2026';
@@ -664,12 +665,7 @@ export const post: BlogPost = {
                     <strong>Company:</strong> {f.company}. <strong>What you buy:</strong> {f.type}.
                   </p>
                   <p className="mb-3">{f.what}</p>
-                  <ul className="list-disc pl-6 mb-3 space-y-1">
-                    <li><strong>Best for:</strong> {f.bestFor}</li>
-                    <li><strong>Typical client:</strong> {f.clients}.</li>
-                    <li><strong>Systems it names:</strong> {f.systems}.</li>
-                    <li><strong>Worth asking them:</strong> {f.ask}</li>
-                  </ul>
+                  <table className={styles.profileFacts}><tbody><tr><th scope="row"><strong>Best for:</strong></th><td>{f.bestFor}</td></tr><tr><th scope="row"><strong>Typical client:</strong></th><td>{f.clients}.</td></tr><tr><th scope="row"><strong>Systems it names:</strong></th><td>{f.systems}.</td></tr><tr><th scope="row"><strong>Worth asking them:</strong></th><td>{f.ask}</td></tr></tbody></table>
                   <p className="text-sm text-gray-600">
                     Sources:{' '}
                     <a href={f.source} className={link} rel="noopener" target={f.source.startsWith('https://factoryjet.com') ? undefined : '_blank'}>
@@ -880,13 +876,7 @@ export const post: BlogPost = {
       </div>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Five warning signs when you talk to an AI vendor</h2>
-      <ol className="list-decimal pl-6 mb-6 space-y-2">
-        <li><strong>A demo on someone else&rsquo;s data.</strong> A polished demo proves the demo. Ask to see your own RFQs, orders or machine data go through.</li>
-        <li><strong>Nobody asks about exceptions.</strong> Quoting and order entry are mostly exceptions. A company that does not ask about yours has not done this work.</li>
-        <li><strong>The agent sends or posts without approval.</strong> A quote or an order that reaches a customer or the ERP unchecked is a risk you carry.</li>
-        <li><strong>Vague answers about your ERP.</strong> &ldquo;We integrate with everything&rdquo; tells you nothing. Ask which version of your ERP they have connected before, and how.</li>
-        <li><strong>Big savings claims with no baseline.</strong> A headline number means little unless the task was measured before the build. Ask how many RFQs or orders they counted, and over how many weeks.</li>
-      </ol>
+      <table className={[styles.profileFacts, styles.orderedFacts].join(' ')}><tbody><tr><th scope="row"><strong>A demo on someone else&rsquo;s data.</strong></th><td> A polished demo proves the demo. Ask to see your own RFQs, orders or machine data go through.</td></tr><tr><th scope="row"><strong>Nobody asks about exceptions.</strong></th><td> Quoting and order entry are mostly exceptions. A company that does not ask about yours has not done this work.</td></tr><tr><th scope="row"><strong>The agent sends or posts without approval.</strong></th><td> A quote or an order that reaches a customer or the ERP unchecked is a risk you carry.</td></tr><tr><th scope="row"><strong>Vague answers about your ERP.</strong></th><td> &ldquo;We integrate with everything&rdquo; tells you nothing. Ask which version of your ERP they have connected before, and how.</td></tr><tr><th scope="row"><strong>Big savings claims with no baseline.</strong></th><td> A headline number means little unless the task was measured before the build. Ask how many RFQs or orders they counted, and over how many weeks.</td></tr></tbody></table>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Where FactoryJet fits</h2>
       <p className="mb-4">
