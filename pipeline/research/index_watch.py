@@ -8,17 +8,34 @@ What it does (built 2026-09-30):
      (service account factoryjet-gsc-reader, Owner on sc-domain:factoryjet.com).
   3. Sends every URL that is NOT "Submitted and indexed", plus every URL whose
      sitemap <lastmod> is within the last 3 days (new or updated pages), to IndexNow
-     (Bing, Yandex, Seznam, Naver share it) and to Bing's own SubmitUrlBatch.
+     and to Bing's own SubmitUrlBatch. IndexNow goes to the shared endpoint and
+     then to each engine's own endpoint (Bing, Yandex, Seznam, Naver, Yep,
+     Amazonbot), so one engine refusing the push shows up by name.
   4. Resubmits the sitemap index and every child sitemap to Bing Webmaster
      (SubmitFeed) and Google (sitemaps API), and records Bing's own sitemap
      report (status, URL count, last crawled) so a failing sitemap shows up.
-  5. Writes data/index-watch/<date>.json and prints a short list of the
-     highest-priority unindexed URLs, which still need "Request indexing"
-     clicked by hand in Search Console (Google has no API for that on
-     normal pages).
+  5. Writes data/index-watch/<date>.json with every unindexed URL in priority
+     order under "request_by_hand_in_gsc". Those still need "Request indexing"
+     clicked by hand in Search Console (Google has no API for that on normal
+     pages). The daily scheduled task takes the first 10 it has not requested
+     in the last 7 days, so the list must be complete: a 15-URL cap left that
+     task with 1 fresh URL on 2026-10-06 while 82 pages were unindexed.
+     URLs listed in data/index-watch/priority.txt (one per line, # for a
+     comment) go to the top of that list while they are still unindexed. Use
+     it for a page that has just gone live: the list is alphabetical inside
+     each group, so /services/w... would otherwise wait days for its turn.
+
+Engines with no push API (checked 2026-10-06): Brave has only a one-URL web
+form at search.brave.com/submit-url and no sitemap intake. DuckDuckGo and Yahoo
+read Bing's index. Naver took the 388-URL batch with a 200 but answered 422
+to a one-URL test of the homepage the same day, cause not found.
 
 Run:  python3 pipeline/research/index_watch.py            (full run)
       python3 pipeline/research/index_watch.py --dry-run  (inspect only)
+      python3 pipeline/research/index_watch.py --all      (full run, and send
+          EVERY sitemap URL to IndexNow, not only the unindexed and the new.
+          For the day a sitewide change ships, such as a footer link. Not for
+          daily use: IndexNow is meant for pages that changed.)
 Scheduled daily by ~/Library/LaunchAgents/com.factoryjet.index-watch.plist.
 
 Quotas: URL Inspection 2,000/day per property (we use ~510), Bing URL
@@ -44,6 +61,7 @@ SITE = 'sc-domain:factoryjet.com'
 HOST = 'factoryjet.com'
 INDEXNOW_KEY = 'b4a2f89c67d14e359a72e8105c3d4f9b'  # same key as scripts/submit-indexnow.mjs
 OUT_DIR = os.path.join(HERE, 'data', 'index-watch')
+PIN_FILE = os.path.join(OUT_DIR, 'priority.txt')
 
 # Order used for the "request by hand" list: money pages first.
 PRIORITY = [r'^/services/', r'^/website-cost', r'^/case-studies/', r'^/blog/', r'^/au/', r'^/uk/', r'^/']
@@ -96,11 +114,15 @@ def inspect_all(urls):
     s = AuthorizedSession(creds)
 
     def one(u):
-        for _ in range(3):
+        # Google refuses calls (429) when they arrive too fast. Retrying at once
+        # lost 187 of 553 URLs on 2026-10-12, so wait longer after each refusal.
+        for attempt in range(5):
             try:
                 r = s.post('https://searchconsole.googleapis.com/v1/urlInspection/index:inspect',
                            json={'inspectionUrl': u, 'siteUrl': SITE}, timeout=60).json()
                 if r.get('error', {}).get('code') == 429:
+                    err = 'quota'
+                    time.sleep(20 * (attempt + 1))
                     continue
                 ir = r.get('inspectionResult', {}).get('indexStatusResult', {})
                 return {'url': u, 'state': ir.get('coverageState') or 'ERROR',
@@ -109,15 +131,55 @@ def inspect_all(urls):
                 err = str(e)[:80]
         return {'url': u, 'state': 'ERROR', 'error': locals().get('err', 'quota')}
 
-    with cf.ThreadPoolExecutor(6) as ex:
+    with cf.ThreadPoolExecutor(3) as ex:
         return list(ex.map(one, urls))
 
 
-def indexnow(urls):
+def carry_over_errors(res, today):
+    """A URL Google would not answer for today keeps its state from the newest earlier
+    snapshot, marked `carried_from`, so one bad run cannot drop it from the request list."""
+    failed = [r for r in res if r['state'] == 'ERROR']
+    if not failed or not os.path.isdir(OUT_DIR):
+        return
+    days = sorted((f for f in os.listdir(OUT_DIR) if re.fullmatch(r'\d{4}-\d{2}-\d{2}\.json', f) and f[:10] < today), reverse=True)
+    wanted = {r['url'] for r in failed}
+    found = {}
+    for f in days[:7]:
+        try:
+            for old in json.load(open(os.path.join(OUT_DIR, f))).get('results', []):
+                if old.get('url') in wanted and old['url'] not in found and old.get('state') not in (None, 'ERROR'):
+                    found[old['url']] = (old['state'], f[:10])
+        except (ValueError, OSError):
+            continue
+        if len(found) == len(wanted):
+            break
+    for r in failed:
+        if r['url'] in found:
+            r['state'], r['carried_from'] = found[r['url']]
+
+
+# Every engine on https://www.indexnow.org/searchengines.json with a live
+# endpoint on 2026-10-06 (Internet Archive is listed there but its host did not
+# resolve). The protocol says one push is shared with all of them; we push to
+# each anyway because the shared endpoint answers 200 either way and a direct
+# push is the only way to see one engine say no.
+INDEXNOW_ENDPOINTS = {
+    'indexnow': 'https://api.indexnow.org/indexnow',
+    'indexnow_bing': 'https://www.bing.com/indexnow',
+    'indexnow_yandex': 'https://yandex.com/indexnow',
+    'indexnow_seznam': 'https://search.seznam.cz/indexnow',
+    'indexnow_naver': 'https://searchadvisor.naver.com/indexnow',
+    'indexnow_yep': 'https://indexnow.yep.com/indexnow',
+    'indexnow_amazonbot': 'https://indexnow.amazonbot.amazon/indexnow',
+}
+
+
+def indexnow(urls, endpoint=INDEXNOW_ENDPOINTS['indexnow']):
     body = json.dumps({'host': HOST, 'key': INDEXNOW_KEY,
                        'keyLocation': f'https://{HOST}/{INDEXNOW_KEY}.txt', 'urlList': urls}).encode()
-    req = urllib.request.Request('https://api.indexnow.org/indexnow', data=body,
-                                 headers={'Content-Type': 'application/json; charset=utf-8'})
+    req = urllib.request.Request(endpoint, data=body,
+                                 headers={'Content-Type': 'application/json; charset=utf-8',
+                                          'User-Agent': 'factoryjet-index-watch'})
     with urllib.request.urlopen(req, timeout=60) as r:
         return r.status
 
@@ -190,6 +252,15 @@ def bing_sitemap_report():
     return rows
 
 
+def pinned():
+    """URLs to request first, in file order, from data/index-watch/priority.txt. Missing file = none."""
+    try:
+        lines = [l.strip() for l in open(PIN_FILE) if l.strip() and not l.lstrip().startswith('#')]
+    except FileNotFoundError:
+        return []
+    return list(dict.fromkeys(lines))  # keep the first mention of each URL
+
+
 def rank(url):
     path = url.replace(f'https://{HOST}', '') or '/'
     for i, p in enumerate(PRIORITY):
@@ -200,26 +271,41 @@ def rank(url):
 
 def main():
     dry = '--dry-run' in sys.argv
+    send_all = '--all' in sys.argv
     today = datetime.date.today().isoformat()
     lastmod = sitemap_urls()
     urls = sorted(lastmod)
     res = inspect_all(urls)
-    todo = [r['url'] for r in res if r['state'] != 'Submitted and indexed' and r['state'] != 'ERROR']
+    carry_over_errors(res, today)
+    pins = pinned()
+    pin_pos = {u: i for i, u in enumerate(pins)}
+
+    def order(u):  # pinned first in file order, then money pages, then A to Z
+        return (0, pin_pos[u], u) if u in pin_pos else (1, rank(u), u)
+
+    todo = sorted((r['url'] for r in res if r['state'] != 'Submitted and indexed' and r['state'] != 'ERROR'), key=order)
     # New or updated pages go to IndexNow + Bing even when Google already has
     # them: Bing only learns about a page from its sitemap or IndexNow, and a
     # page Google indexed on day one was otherwise never pushed to Bing.
     since = (datetime.date.today() - datetime.timedelta(days=3)).isoformat()
     recent = [u for u, lm in lastmod.items() if lm and lm >= since]
-    push = sorted(set(todo) | set(recent))
+    # Unindexed first, then new or updated, then (with --all) everything else.
+    # Bing's batch takes only the first 300, and an A to Z list cut there dropped
+    # the pages late in the alphabet whenever more than 300 were waiting.
+    push = todo + sorted(set(recent) - set(todo), key=order)
+    if send_all:
+        push += sorted(set(urls) - set(push), key=order)
     summary = {}
     for r in res:
         summary[r['state']] = summary.get(r['state'], 0) + 1
 
     sent = {}
     if push and not dry:
-        # Bing's SubmitUrlBatch allows ~20,000 URLs a month; cap it at 300 a day.
-        # IndexNow has no practical cap at our volume.
-        for name, fn, cap in (('indexnow', indexnow, 5000), ('bing', bing_submit, 300)):
+        # Bing's SubmitUrlBatch: GetUrlSubmissionQuota answered 10,000 a day and
+        # 240,000 a month for this site on 2026-10-08. The daily run stays at 300;
+        # --all sends the whole list. IndexNow has no practical cap at our volume.
+        targets = [(name, (lambda u, ep=ep: indexnow(u, ep)), 5000) for name, ep in INDEXNOW_ENDPOINTS.items()]
+        for name, fn, cap in targets + [('bing', bing_submit, len(push) if send_all else 300)]:
             try:
                 sent[name] = fn(push[:cap])
             except Exception as e:
@@ -229,8 +315,9 @@ def main():
     feeds = bing_sitemap_report()
 
     os.makedirs(OUT_DIR, exist_ok=True)
-    manual = sorted(todo, key=rank)[:15]
+    manual = todo  # already in request order: pinned in file order, then by rank, then A to Z
     json.dump({'date': today, 'total': len(urls), 'summary': summary, 'submitted': sent,
+               'submitted_count': 0 if dry else len(push), 'sent_all': send_all, 'pinned': sorted(pins),
                'sitemaps_resubmitted': sitemaps, 'bing_sitemaps': feeds,
                'request_by_hand_in_gsc': manual, 'results': res},
               open(os.path.join(OUT_DIR, f'{today}.json'), 'w'), indent=1)
@@ -238,15 +325,16 @@ def main():
     print(f'{today}: {len(urls)} sitemap URLs')
     for k, v in sorted(summary.items(), key=lambda kv: -kv[1]):
         print(f'  {v:4}  {k}')
-    print(f'  submitted {len(push)} URLs ({len(todo)} unindexed in Google, {len(recent)} new or updated in the last 3 days): {sent or "dry run"}')
+    print(f'  submitted {len(push)} URLs ({len(todo)} unindexed in Google, {len(recent)} new or updated in the last 3 days'
+          f'{", plus every other sitemap URL (--all)" if send_all else ""}): {sent or "dry run"}')
     for engine, res_ in (sitemaps or {}).items():
         ok = sum(1 for v in res_.values() if v == 'ok')
         print(f'  sitemaps resubmitted to {engine}: {ok}/{len(res_)}')
     print('  Bing sitemap report:')
     for f in feeds:
         print(f"    {f.get('status')}  {f.get('urls')} URLs  last crawled {f.get('lastCrawled')}  {f.get('url') or f.get('error')}")
-    print('  request by hand in GSC (top 15):')
-    for u in manual:
+    print(f'  request by hand in GSC: {len(manual)} URLs in the JSON, first 15:')
+    for u in manual[:15]:
         print('   ', u)
 
 
