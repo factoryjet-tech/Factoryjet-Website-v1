@@ -15,7 +15,7 @@
  *                     CAREERS_RETENTION_DAYS variable) in functions/api/job-application.js.
  */
 
-export const INCENTIVE_UP_TO: number | null = null; // PLACEHOLDER
+export const INCENTIVE_UP_TO: number | null = 50000;
 export const CAREERS_EMAIL = 'careers@factoryjet.com'; // PLACEHOLDER, inbox not created yet
 export const RETENTION_DAYS = 180; // PLACEHOLDER
 
