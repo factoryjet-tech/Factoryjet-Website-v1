@@ -183,7 +183,7 @@ const DATA_WEBSITE: PricingTier[] = [
       },
       {
         category: "HOSTING",
-        features: ["99.99% Uptime", "High-Frequency Compute"],
+        features: ["Managed Hosting", "High-Frequency Compute"],
       },
     ],
   },

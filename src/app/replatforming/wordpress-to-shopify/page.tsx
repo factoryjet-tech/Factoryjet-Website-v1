@@ -121,10 +121,10 @@ const FAQ_ITEMS = [
 ];
 
 const STAT_CARDS = [
-  { num: '75%', title: 'Faster Page Speed', desc: 'Replace heavy WordPress page builder scripts with clean, native Shopify sections.', icon: '⚡' },
-  { num: 'Zero', title: 'Security Vulnerabilities', desc: 'No more malware scans, compromised PHP plugins, or manual security patching.', icon: '🛡️' },
-  { num: '$8k+', title: 'Annual Savings', desc: 'Eliminate managed hosting bills, premium plugin fees, and emergency PHP fixes.', icon: '💰' },
-  { num: '100%', title: 'SEO Equity Preserved', desc: 'Comprehensive 1-to-1 301 URL redirect mapping prevents traffic and ranking loss.', icon: '📈' },
+  { num: '< 2.5s', title: 'Mobile Load Target', desc: 'We build to pass Google\'s Core Web Vitals on phones.', icon: '⚡' },
+  { num: 'Hosted', title: 'No Plugin Patching', desc: 'Shopify runs platform security updates, so there are no WordPress plugins to patch.', icon: '🛡️' },
+  { num: 'Fixed', title: 'Price Agreed Up Front', desc: 'One fixed price for the migration scope, paid in stages as milestones are met.', icon: '💰' },
+  { num: '1-to-1', title: 'Redirect Map', desc: 'Every old URL mapped to its new page with a single-hop 301 redirect.', icon: '📈' },
 ];
 
 const PAIN_POINTS = [

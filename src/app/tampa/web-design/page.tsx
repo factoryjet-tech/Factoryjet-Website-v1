@@ -315,7 +315,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'How do you handle website hosting and security certificates?',
     answer:
-      'We deploy your website to Cloudflare Pages or Vercel, providing enterprise-grade DDoS protection, automated global SSL certificates, and 99.99% uptime with zero hosting maintenance fees for most small and mid-sized business applications.',
+      'We deploy your website to Cloudflare Pages or Vercel, providing enterprise-grade DDoS protection, automated global SSL certificates, and zero hosting maintenance fees for most small and mid-sized business applications.',
   },
   {
     category: 'local',

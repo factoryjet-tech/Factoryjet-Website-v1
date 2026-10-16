@@ -65,7 +65,7 @@ const MIGRATION_PLATFORMS = [
     link: '/replatforming/woocommerce-to-shopify',
     badge: 'DTC & High-Growth Brands',
     pain: 'High-volume flash sales trigger database deadlocks and cart crashes. Plugin updates frequently break checkout steps. Slow mobile speeds degrade user experience.',
-    solution: 'We migrate all products, order histories, and subscription tokens to Shopify Plus. Customers enjoy one-tap Shop Pay checkout backed by a 99.99% uptime SLA.',
+    solution: 'We migrate all products, order histories, and subscription tokens to Shopify Plus. Customers enjoy one-tap Shop Pay checkout on a platform Shopify reports at 99.99% average uptime during its biggest sales events.',
     keyStats: ['99.99% uptime.', '1-tap Shop Pay.', 'Automated tax & fraud.'],
   },
   {

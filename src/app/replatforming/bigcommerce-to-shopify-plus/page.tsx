@@ -133,10 +133,10 @@ const FAQ_ITEMS = [
 ];
 
 const STAT_CARDS = [
-  { num: '50%', title: 'Higher Checkout Speed', desc: 'Shop Pay 1-click accelerated checkout dramatically reduces cart abandonment on mobile.', icon: '⚡' },
+  { num: 'Shop Pay', title: 'Accelerated Checkout', desc: 'Shopify\'s one-tap checkout, set up and tested on your new store.', icon: '⚡' },
   { num: '10,000+', title: 'Ecosystem Apps', desc: 'Plug into the world’s most advanced e-commerce tools for marketing, reviews, and loyalty.', icon: '🛍️' },
   { num: '1 Unified', title: 'Omnichannel Admin', desc: 'Manage online D2C, B2B wholesale, and physical retail POS from a single dashboard.', icon: '🔄' },
-  { num: '100%', title: 'SEO Equity Preserved', desc: 'Comprehensive 1-to-1 URL crawl and single-hop 301 redirect mapping prevents traffic loss.', icon: '🛡️' },
+  { num: '1-to-1', title: 'Redirect Map', desc: 'Every old URL mapped to its new page with a single-hop 301 redirect.', icon: '🛡️' },
 ];
 
 const PAIN_POINTS = [

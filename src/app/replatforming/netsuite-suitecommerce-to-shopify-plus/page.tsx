@@ -133,10 +133,10 @@ const FAQ_ITEMS = [
 ];
 
 const STAT_CARDS = [
-  { num: '70%', title: 'Faster Page Speed', desc: 'Transform sluggish SuiteCommerce pages into sub-second Shopify Plus shopping experiences.', icon: '⚡' },
-  { num: '$50k+', title: 'Annual License Savings', desc: 'Eliminate expensive SuiteCommerce add-on modules and specialized SuiteScript retainers.', icon: '💰' },
-  { num: 'Sub-200ms', title: 'ERP Sync Latency', desc: 'Real-time bi-directional orders, inventory, and B2B pricing sync directly into NetSuite.', icon: '🔄' },
-  { num: '100%', title: 'Zero Downtime', desc: 'Complete 1-to-1 301 URL redirect mapping preserves all search rankings and customer links.', icon: '🛡️' },
+  { num: '< 2.5s', title: 'Mobile Load Target', desc: 'We build to pass Google\'s Core Web Vitals on phones.', icon: '⚡' },
+  { num: 'Fixed', title: 'Price Agreed Up Front', desc: 'One fixed price for the migration scope, paid in stages as milestones are met.', icon: '💰' },
+  { num: 'Two-Way', title: 'ERP Order and Stock Sync', desc: 'Real-time bi-directional orders, inventory, and B2B pricing sync directly into NetSuite.', icon: '🔄' },
+  { num: 'Staged', title: 'Cutover Plan', desc: 'A rehearsed, staged cutover so orders keep flowing during the switch.', icon: '🛡️' },
 ];
 
 const PAIN_POINTS = [

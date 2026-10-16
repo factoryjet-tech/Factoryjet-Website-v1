@@ -193,9 +193,9 @@ const SPOKES = [
 ];
 
 const STAT_CARDS = [
-  { num: '100%', title: 'Zero Downtime', desc: 'Staged cutover with real-time delta sync ensures continuous order processing.', icon: '🛡️' },
+  { num: 'Staged', title: 'Cutover Plan', desc: 'A rehearsed, staged cutover so orders keep flowing during the switch.', icon: '🛡️' },
   { num: 'Single-Hop', title: '301 Redirects', desc: 'Exhaustive 1-to-1 URL mapping protects 100% of your organic search equity.', icon: '🔗' },
-  { num: 'Sub-200ms', title: 'ERP Sync Latency', desc: 'Real-time bi-directional orders, inventory, and pricing sync into your ERP.', icon: '⚡' },
+  { num: 'Two-Way', title: 'ERP Order and Stock Sync', desc: 'Real-time bi-directional orders, inventory, and pricing sync into your ERP.', icon: '⚡' },
   { num: 'Fixed Price', title: 'Senior Delivery', desc: 'Guaranteed upfront pricing and timeline with zero surprise hourly billing.', icon: '💰' },
 ];
 

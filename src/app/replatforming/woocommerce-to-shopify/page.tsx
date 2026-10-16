@@ -92,7 +92,7 @@ const FAQ_ITEMS = [
     category: 'speed',
     question: 'Will our store crash during Black Friday or major flash sales on Shopify?',
     answer:
-      'No. Unlike self-hosted WordPress servers that require expensive caching and database scaling, Shopify handles over 40,000 checkout transactions per minute and sustained peak traffic during Black Friday Cyber Monday with 99.99% guaranteed uptime.',
+      'No. Unlike self-hosted WordPress servers that require expensive caching and database scaling, Shopify handles over 40,000 checkout transactions per minute and sustained peak traffic during Black Friday Cyber Monday, with 99.99% average uptime by Shopify\'s own report.',
   },
   {
     category: 'cost',
@@ -133,10 +133,10 @@ const FAQ_ITEMS = [
 ];
 
 const STAT_CARDS = [
-  { num: '99.99%', title: 'Guaranteed Uptime', desc: 'Eliminate server crashes during flash sales and peak marketing campaigns.', icon: '⚡' },
-  { num: '$15k+', title: 'Annual Savings', desc: 'Eliminate expensive managed hosting, security plugins, and emergency PHP bug fixes.', icon: '💰' },
-  { num: '50%', title: 'Higher Checkout Speed', desc: 'Shop Pay 1-click accelerated checkout reduces cart abandonment on mobile devices.', icon: '🛍️' },
-  { num: '100%', title: 'SEO Rankings Preserved', desc: 'Comprehensive 1-to-1 301 URL redirect mapping protects all organic search rankings.', icon: '🛡️' },
+  { num: 'Hosted', title: 'No Servers to Run', desc: 'Shopify hosts the store, so flash sales no longer depend on your own server.', icon: '⚡' },
+  { num: 'Fixed', title: 'Price Agreed Up Front', desc: 'One fixed price for the migration scope, paid in stages as milestones are met.', icon: '💰' },
+  { num: 'Shop Pay', title: 'Accelerated Checkout', desc: 'Shopify\'s one-tap checkout, set up and tested on your new store.', icon: '🛍️' },
+  { num: '1-to-1', title: 'Redirect Map', desc: 'Every old URL mapped to its new page with a single-hop 301 redirect.', icon: '🛡️' },
 ];
 
 const PAIN_POINTS = [

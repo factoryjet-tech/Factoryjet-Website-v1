@@ -94,7 +94,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'compliance',
     question: 'Is an AI receptionist for a dental support organization HIPAA compliant?',
     answer:
-      'It is built to support HIPAA compliance, which comes from contracts and controls rather than a label on the product. Every deployment runs under a signed Business Associate Agreement (BAA). Voice audio and patient data are encrypted in transit with TLS 1.3 and at rest with AES-256. We run zero data retention on every speech-to-text and language model endpoint, so patient information is never cached or used to train a public model.',
+      'It is built to support HIPAA compliance, which comes from contracts and controls rather than a label on the product. Every deployment we build runs under a signed Business Associate Agreement (BAA). Voice audio and patient data are encrypted in transit with TLS 1.3 and at rest with AES-256. We run zero data retention on every speech-to-text and language model endpoint, so patient information is never cached or used to train a public model.',
   },
   {
     category: 'compliance',
@@ -446,10 +446,10 @@ export default function DentalSupportOrganizationAiAgentsPage() {
                   <div className="p-4 bg-white rounded-xl border border-[#E7DED6] mt-3">
                     <div className="flex items-center justify-between text-xs font-mono text-[#6E655F] mb-1">
                       <span>PORTFOLIO-WIDE INTAKE.</span>
-                      <span className="text-[#10B981] font-bold">24/7 ACTIVE</span>
+                      <span className="text-[#10B981] font-bold">ILLUSTRATIVE</span>
                     </div>
                     <div className="text-sm font-bold text-[#14110F]">
-                      Denticon + Dentrix Ascend Multi-Location Sync Active.
+                      Example: Denticon + Dentrix Ascend multi-location sync.
                     </div>
                   </div>
                 </div>
@@ -576,7 +576,7 @@ export default function DentalSupportOrganizationAiAgentsPage() {
                     <span className="text-[#F05A28]">&bull;</span> Per-location operatory booking
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Zero call hold times, any location
+                    <span className="text-[#F05A28]">&bull;</span> No hold queue: calls answered in parallel, any location
                   </li>
                 </ul>
               </div>
@@ -870,7 +870,7 @@ export default function DentalSupportOrganizationAiAgentsPage() {
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">05 // ZERO-RETENTION HIPAA SHIELD FOR MULTI-ENTITY DSOS.</div>
                 <h3 className="text-lg font-bold text-[#14110F] mb-2">Encrypted Single-Tenant Cloud, Logically Separated Per Location.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
-                  All audio processing and database sync happen inside an isolated, single-tenant private cloud in a US healthcare-compliant region. Patient data stays logically separated by location and legal entity, and we hold zero-data-retention agreements with every AI provider in the pipeline.
+                  All audio processing and database sync happen inside an isolated, single-tenant private cloud in a US healthcare-compliant region. Patient data stays logically separated by location and legal entity, and we put zero-data-retention terms in place with every AI provider in the pipeline before go-live.
                 </p>
               </li>
 
@@ -1181,7 +1181,7 @@ export default function DentalSupportOrganizationAiAgentsPage() {
                   A portfolio-wide deployment leaves no room for guesswork. At FactoryJet, founder Bhavesh Barot runs every DSO discovery session himself. In the first meeting, we review your location count, which practice management systems your portfolio actually runs, and how your legal entities and BAA structure are set up.
                 </p>
                 <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-8">
-                  You work directly with senior systems architects who have already built high-scale voice pipelines and multi-tenant integrations. We never hand a portfolio-wide healthcare deployment to junior salespeople or outside contractors. The same senior-only approach runs across our broader{' '}
+                  You work directly with senior engineers who build the voice pipeline and the practice-system integrations themselves. We never hand a portfolio-wide healthcare deployment to junior salespeople or outside contractors. The same senior-only approach runs across our broader{' '}
                   <Link href="/services/healthcare-ai-agents" className="underline hover:text-[#F05A28]">
                     healthcare AI agents
                   </Link>{' '}

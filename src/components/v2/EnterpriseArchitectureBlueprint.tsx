@@ -398,16 +398,16 @@ export default function EnterpriseArchitectureBlueprint({
                       Layer 2: The Smart Event Bus (The Highway Between Systems)
                     </h3>
                     <p className="text-xs text-[#64748B]">
-                      Guarantees that every single purchase, stock change, and price update moves instantly without crashing your servers.
+                      Moves every purchase, stock change and price update between your systems without loading your servers.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 self-start md:self-auto">
                   <span className="font-fj-mono text-xs text-[#0369A1] bg-[#E0F2FE] px-3 py-1 rounded-full font-semibold">
-                    10,000+ evts/sec
+                    Event queue
                   </span>
                   <span className="font-fj-mono text-xs text-[#047857] bg-[#D1FAE5] px-3 py-1 rounded-full font-semibold">
-                    99.99% Uptime SLA
+                    Failed events retried
                   </span>
                 </div>
               </div>
@@ -514,7 +514,7 @@ export default function EnterpriseArchitectureBlueprint({
               <div className="flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-[#10B981] animate-ping" />
                 <span className="font-fj-mono text-xs text-[#047857] font-bold">
-                  Pipeline Active · Sub-150ms SLA
+                  Pipeline Active
                 </span>
               </div>
             </div>
@@ -596,7 +596,7 @@ export default function EnterpriseArchitectureBlueprint({
               <div className="w-full md:w-auto bg-white p-3 rounded-xl border border-[#E2D8CF] font-fj-mono text-xs text-[#475569]">
                 <span className="text-[#64748B] block text-[10px] uppercase font-bold mb-1">Payload Latency</span>
                 <span className="text-lg font-bold text-[#0F172A]">{activeEvent.latency}</span>
-                <span className="text-[#047857] block text-[11px]">99.99% reliability</span>
+                <span className="text-[#047857] block text-[11px]">illustrative timing</span>
               </div>
             </div>
           </div>
@@ -777,20 +777,20 @@ export default function EnterpriseArchitectureBlueprint({
         {/* ── BENTO ASSURANCE METRICS (LIGHT & CRISP) ── */}
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div className="bg-white border border-[#E8DFD8] p-5 rounded-2xl shadow-sm hover:border-[#F05A28]/40 transition-colors">
-            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#0F172A]">99.99%</p>
-            <p className="text-xs text-[#64748B] mt-1 font-medium">Uptime Guarantee SLA</p>
+            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#0F172A]">Staged</p>
+            <p className="text-xs text-[#64748B] mt-1 font-medium">Cutover Rehearsed First</p>
           </div>
           <div className="bg-white border border-[#E8DFD8] p-5 rounded-2xl shadow-sm hover:border-[#F05A28]/40 transition-colors">
-            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#F05A28]">0 Sec</p>
-            <p className="text-xs text-[#64748B] mt-1 font-medium">Cutover Downtime</p>
+            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#F05A28]">Planned</p>
+            <p className="text-xs text-[#64748B] mt-1 font-medium">Cutover Window Agreed With You</p>
           </div>
           <div className="bg-white border border-[#E8DFD8] p-5 rounded-2xl shadow-sm hover:border-[#F05A28]/40 transition-colors">
-            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#0F172A]">100%</p>
-            <p className="text-xs text-[#64748B] mt-1 font-medium">Preserved 301 URL Equity</p>
+            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#0F172A]">1-to-1</p>
+            <p className="text-xs text-[#64748B] mt-1 font-medium">301 Redirect Map</p>
           </div>
           <div className="bg-white border border-[#E8DFD8] p-5 rounded-2xl shadow-sm hover:border-[#F05A28]/40 transition-colors">
-            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#047857]">SOC2 &amp; PCI</p>
-            <p className="text-xs text-[#64748B] mt-1 font-medium">Level 1 Compliant Architecture</p>
+            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#047857]">Yours</p>
+            <p className="text-xs text-[#64748B] mt-1 font-medium">Code and Data Ownership</p>
           </div>
         </div>
 

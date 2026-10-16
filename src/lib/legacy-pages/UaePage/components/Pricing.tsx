@@ -217,7 +217,7 @@ const pricingData: Record<PricingCategory, PricingTier[]> = {
       features: [
         "25 Development Hours/Month",
         "24/7 SOC Security",
-        "99.99% Uptime SLA",
+        "Managed Hosting",
         "1-Hour Response Time",
         "Multi-Site Management",
         "Strategic Partnership"

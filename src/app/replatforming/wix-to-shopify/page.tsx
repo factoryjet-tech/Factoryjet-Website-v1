@@ -121,10 +121,10 @@ const FAQ_ITEMS = [
 ];
 
 const STAT_CARDS = [
-  { num: '50%', title: 'Higher Checkout Speed', desc: 'Shop Pay 1-click checkout dramatically lifts conversion over standard guest forms.', icon: '⚡' },
+  { num: 'Shop Pay', title: 'Accelerated Checkout', desc: 'Shopify\'s one-tap checkout, set up and tested on your new store.', icon: '⚡' },
   { num: '10,000+', title: 'Ecosystem Apps', desc: 'Connect best-in-class tools for marketing, subscriptions, reviews, and loyalty.', icon: '🛍️' },
   { num: 'Multi-Channel', title: 'Sales Sync', desc: 'Manage TikTok Shop, Instagram, Amazon, and physical retail POS in one admin.', icon: '🔄' },
-  { num: '100%', title: 'SEO Equity Preserved', desc: 'Comprehensive 1-to-1 301 URL redirect mapping prevents traffic and ranking loss.', icon: '🛡️' },
+  { num: '1-to-1', title: 'Redirect Map', desc: 'Every old URL mapped to its new page with a single-hop 301 redirect.', icon: '🛡️' },
 ];
 
 const PAIN_POINTS = [

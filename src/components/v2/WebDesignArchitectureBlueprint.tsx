@@ -611,13 +611,13 @@ export default function WebDesignArchitectureBlueprint({
                         Layer 3: Headless Content &amp; Global Edge Infrastructure
                       </h3>
                       <p className="text-xs text-[#64748B]">
-                        Easy visual content editing for your team, enterprise DDoS protection, and 99.99% serverless reliability.
+                        Easy visual content editing for your team, enterprise DDoS protection, and serverless hosting.
                       </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 self-start md:self-auto">
                     <span className="font-fj-mono text-xs text-[#92400E] bg-[#FEF3C7] px-3 py-1 rounded-full font-semibold">
-                      99.99% Global Uptime
+                      Global Edge Hosting
                     </span>
                   </div>
                 </div>
@@ -663,7 +663,7 @@ export default function WebDesignArchitectureBlueprint({
                 <div className="flex items-center gap-2">
                   <span className={`h-2.5 w-2.5 rounded-full bg-[#10B981] ${activeTab === 'dataflow' ? 'animate-ping' : ''}`} />
                   <span className="font-fj-mono text-xs text-[#047857] font-bold">
-                    Edge Network Active · Sub-100ms SLA
+                    Edge Network Active
                   </span>
                 </div>
               </div>
@@ -798,7 +798,7 @@ export default function WebDesignArchitectureBlueprint({
                     <h4 className="font-bold text-[#0F172A] text-sm">Cloudflare Global Edge CDN</h4>
                   </div>
                   <p className="text-xs text-[#475569] leading-relaxed">
-                    Global edge caching, automated SSL encryption, and unmetered DDoS mitigation for 99.99% uptime.
+                    Global edge caching, automated SSL encryption, and unmetered DDoS mitigation.
                   </p>
                   <div className="mt-3 flex gap-1.5">
                     <span className="font-fj-mono text-[10px] bg-white px-2 py-0.5 rounded border text-[#0369A1]">Edge CDN</span>
@@ -903,9 +903,9 @@ export default function WebDesignArchitectureBlueprint({
                     4
                   </span>
                   <div>
-                    <h4 className="font-bold text-[#0F172A] text-sm">Post-Launch: 30-Day Full Warranty &amp; Recorded Video Training</h4>
+                    <h4 className="font-bold text-[#0F172A] text-sm">Post-Launch: Defect Cover &amp; Recorded Video Training</h4>
                     <p className="text-xs text-[#475569] mt-1 leading-relaxed">
-                      We stand behind our code with a 30-day bug fix guarantee and deliver a personalized recorded video training session for your team.
+                      We fix defects found after launch, for a cover period agreed in the build price, and deliver a personalized recorded video training session for your team.
                     </p>
                   </div>
                 </div>
@@ -918,7 +918,7 @@ export default function WebDesignArchitectureBlueprint({
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div className="bg-white border border-[#E8DFD8] p-5 rounded-2xl shadow-sm hover:border-[#F05A28]/40 transition-colors">
             <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#0F172A]">7 Days</p>
-            <p className="text-xs text-[#64748B] mt-1 font-medium">Guaranteed Sprint Delivery SLA</p>
+            <p className="text-xs text-[#64748B] mt-1 font-medium">Delivery for Sites up to 5 Pages</p>
           </div>
           <div className="bg-white border border-[#E8DFD8] p-5 rounded-2xl shadow-sm hover:border-[#F05A28]/40 transition-colors">
             <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#F05A28]">95+</p>
@@ -929,8 +929,8 @@ export default function WebDesignArchitectureBlueprint({
             <p className="text-xs text-[#64748B] mt-1 font-medium">Full Code &amp; IP Ownership</p>
           </div>
           <div className="bg-white border border-[#E8DFD8] p-5 rounded-2xl shadow-sm hover:border-[#F05A28]/40 transition-colors">
-            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#047857]">30 Days</p>
-            <p className="text-xs text-[#64748B] mt-1 font-medium">Post-Launch Full Warranty</p>
+            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#047857]">Included</p>
+            <p className="text-xs text-[#64748B] mt-1 font-medium">Post-Launch Defect Cover</p>
           </div>
         </div>
 

@@ -503,7 +503,7 @@ export default function LocalSeoArchitectureBlueprint({
               <div className="flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-[#10B981] animate-ping" />
                 <span className="font-fj-mono text-xs text-[#047857] font-bold">
-                  Crawl Engine Active · Sub-100ms SLA
+                  Crawl Engine Active
                 </span>
               </div>
             </div>
