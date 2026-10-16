@@ -44,7 +44,6 @@ const AGENT_DIRECTORY: { group: string; lead: string; items: { title: string; hr
     { title: 'RFQ Automation Agent', href: '/services/ai-agent-development/rfq-bidding-agent', line: 'Reads RFQs and drafts quotes for approval' },
     { title: 'Procurement & Supply Chain Agent', href: '/services/ai-agent-development/procurement-supply-chain-agent', line: 'Supplier emails, PO acknowledgements, open-PO follow-up' },
     { title: 'Manufacturing Operations Agent', href: '/services/ai-agent-development/manufacturing-operations-agent', line: 'Answers from ERP, CMMS and shop-floor data' },
-    { title: 'AI Workflow Automation', href: '/services/ai-workflow-automation', line: 'Multi-step processes across your tools' },
     { title: 'AI Integration Services', href: '/services/ai-integration-services', line: 'Connect AI to your CRM, ERP and apps' },
     { title: 'AI Development Services', href: '/services/ai-development', line: 'Custom AI applications, retrieval and system integration' },
     { title: 'AI Automation', href: '/services/ai-automation', line: 'Lead follow-up, invoicing and reporting, automated' },

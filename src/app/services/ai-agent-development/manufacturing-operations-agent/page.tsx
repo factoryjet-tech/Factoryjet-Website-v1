@@ -1366,7 +1366,7 @@ export default function ManufacturingOperationsAgentPage() {
               </Link>
               ,{' '}
               <Link
-                href="/services/ai-workflow-automation"
+                href="/services/ai-automation"
                 className="font-semibold underline"
                 style={{ color: '#B23E13' }}
               >

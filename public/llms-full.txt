@@ -60,7 +60,6 @@ Updated: 17 Sep 2026.
 - https://factoryjet.com/services/ai-automation
 - https://factoryjet.com/services/ai-chatbot-development
 - https://factoryjet.com/services/ai-receptionist
-- https://factoryjet.com/services/ai-workflow-automation
 - [AI Agent Monitoring, Support and Maintenance](https://factoryjet.com/services/ai-agent-monitoring): Support for AI agents after launch: monitoring, evaluation runs, drift checks, model retirement planning and fixes.
 
 ## Supporting web

@@ -238,7 +238,7 @@ export const post: BlogPost = {
         <strong>The task has clear success criteria.</strong> "Meeting booked." "Refund processed." "Ticket resolved." Agents work best when the goal is unambiguous. If success is fuzzy, you're better off with human review.
       </p>
       <p className="mb-4">
-        Common US SMB agent use cases: lead qualification and routing for SaaS and B2B services, multi-step refund and return workflows for ecommerce, appointment scheduling for service businesses, quote generation for trades and B2B, post-purchase follow-up sequences, internal workflow automation across CRM and helpdesk. For workflow automation across multiple business tools, see our <a href="/services/ai-workflow-automation" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI workflow automation service</a>.
+        Common US SMB agent use cases: lead qualification and routing for SaaS and B2B services, multi-step refund and return workflows for ecommerce, appointment scheduling for service businesses, quote generation for trades and B2B, post-purchase follow-up sequences, internal workflow automation across CRM and helpdesk. For workflow automation across multiple business tools, see our <a href="/services/ai-automation" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI workflow automation service</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">When You Need Both: The Hybrid Setup</h2>

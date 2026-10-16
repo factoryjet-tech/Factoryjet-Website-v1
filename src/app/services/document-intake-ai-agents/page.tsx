@@ -1163,7 +1163,7 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/erp-ai-agents', t: 'AI agents for ERP systems', b: 'Quotes, orders and bookkeeping drafted inside Odoo, NetSuite, SAP Business One and ERPNext.' },
   { href: '/services/sales-order-automation-ai-agents', t: 'Sales order automation agents', b: 'Customer purchase orders turned into draft sales orders in your ERP.' },
   { href: '/services/insurance-ai-agents', t: 'AI agents for insurance', b: 'Claim calls, quote details and certificate requests for agencies, MGAs and small carriers.' },
-  { href: '/services/ai-workflow-automation', t: 'AI workflow automation', b: 'The steps before and after the document, joined into one process.' },
+  { href: '/services/ai-automation', t: 'AI workflow automation', b: 'The steps before and after the document, joined into one process.' },
   { href: '/services/ai-agent-development/rfq-bidding-agent', t: 'RFQ automation agent', b: 'Inbound requests for quote read, matched to your catalogue and drafted for approval.' },
   { href: '/blog/ai-agent-build-vs-buy-2026', t: 'Guide: build or buy an AI agent', b: 'The rent-or-build choice on this page, for agents of every kind.' },
 ];
@@ -1697,7 +1697,7 @@ export default function DocumentIntakeAiAgentsPage() {
                   </Link>{' '}
                   covers the watching and the re-testing. Document intake is often one step in a longer process, and{' '}
                   <Link
-                    href="/services/ai-workflow-automation"
+                    href="/services/ai-automation"
                     className="font-semibold text-fj-ink underline underline-offset-4"
                   >
                     AI workflow automation

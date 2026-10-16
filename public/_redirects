@@ -74,7 +74,8 @@
 # Perplexity cite), after its unique FAQs and sections were ported across. All
 # five destinations are live pages and none is a source of another rule in this
 # file, so each redirect is a single hop.
-/services/ai-agent-development/ai-workflow-automation /services/ai-workflow-automation 301
+/services/ai-agent-development/ai-workflow-automation /services/ai-automation 301
+/services/ai-workflow-automation /services/ai-automation 301
 /services/ai-agent-development/ai-chatbot /services/ai-chatbot-development 301
 /services/ai-agent-development/ai-customer-support /services/ai-customer-support-agents 301
 /services/ai-agents-for-healthcare /services/healthcare-ai-agents 301

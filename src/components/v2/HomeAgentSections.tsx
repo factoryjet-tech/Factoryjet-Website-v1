@@ -62,7 +62,7 @@ const AGENTS = [
   {
     id: 'AGT‑07',
     name: 'Workflow Automation Agent',
-    href: '/services/ai-workflow-automation',
+    href: '/services/ai-automation',
     reads: 'The documents, emails, and forms that arrive every day.',
     does: 'Pulls out the data and enters it into the right system.',
     approves: 'Fields it is not confident about go to a person.',

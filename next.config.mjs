@@ -121,7 +121,9 @@ const nextConfig = {
       // SEO hub merge (2026-09-23). Prod layer is /public/_redirects
       { source: '/services/seo',                             destination: '/services/ai-seo', permanent: true },
       // AI agent duplicate merge (2026-09-17). Prod layer is /public/_redirects
-      { source: '/services/ai-agent-development/ai-workflow-automation', destination: '/services/ai-workflow-automation',     permanent: true },
+      { source: '/services/ai-agent-development/ai-workflow-automation', destination: '/services/ai-automation',     permanent: true },
+      // AI workflow automation merged into AI automation (2026-10-16). Prod layer is /public/_redirects
+      { source: '/services/ai-workflow-automation', destination: '/services/ai-automation', permanent: true },
       { source: '/services/ai-agent-development/ai-chatbot',             destination: '/services/ai-chatbot-development',     permanent: true },
       { source: '/services/ai-agent-development/ai-customer-support',    destination: '/services/ai-customer-support-agents', permanent: true },
       { source: '/services/ai-agents-for-healthcare',                    destination: '/services/healthcare-ai-agents',       permanent: true },

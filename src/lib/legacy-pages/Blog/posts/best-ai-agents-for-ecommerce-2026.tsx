@@ -993,7 +993,7 @@ export const post: BlogPost = {
         other apps, Fin uses data connectors to update external systems, and Klaviyo has custom
         tools in open beta. If one missing action is the only problem, a small integration costs
         less than a new agent. Our{' '}
-        <a href="/services/ai-workflow-automation" className="text-[#B23E13] hover:underline">
+        <a href="/services/ai-automation" className="text-[#B23E13] hover:underline">
           AI workflow automation
         </a>{' '}
         team builds those connections.

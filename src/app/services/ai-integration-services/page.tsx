@@ -199,7 +199,7 @@ const INTEGRATION_TYPES = [
       'We add AI-powered workflows directly inside HubSpot, Salesforce, Pipedrive, or Zoho. Sales reps generate email drafts with one click based on contact history. AI handles lead scoring and summarizes call notes without leaving your CRM.',
     example: 'Sales reps cut email writing time from 45 min to 8 min per day.',
     linkLabel: 'See AI automation services',
-    linkHref: '/services/ai-workflow-automation',
+    linkHref: '/services/ai-automation',
   },
   {
     name: 'E-Commerce AI Integration',

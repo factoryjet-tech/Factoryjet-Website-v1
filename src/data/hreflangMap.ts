@@ -558,10 +558,6 @@ export const usServiceAlternates = {
     'en-US': 'https://factoryjet.com/services/ai-integration-services',
     'x-default': 'https://factoryjet.com/services/ai-integration-services',
   },
-  'ai-workflow-automation': {
-    'en-US': 'https://factoryjet.com/services/ai-workflow-automation',
-    'x-default': 'https://factoryjet.com/services/ai-workflow-automation',
-  },
   // US Tier 1 (2026-09-26). No UK/AU/IN twin exists for either topic.
   // /services/technical-seo is NOT paired with the India /seo/technical-seo page (different market).
   'technical-seo': {

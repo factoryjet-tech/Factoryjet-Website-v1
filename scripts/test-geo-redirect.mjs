@@ -48,8 +48,8 @@ expect('US human /services/ai-agent-development (hub) → NOT redirected (cluste
   decideNaRedirect({ path: '/services/ai-agent-development', country: 'US', userAgent: CHROME }), null)
 expect('US human /ai-seo → US ai-seo',
   decideNaRedirect({ path: '/ai-seo', country: 'US', userAgent: CHROME }), '/services/ai-seo')
-expect('US human /n8n-automation → US ai-workflow-automation',
-  decideNaRedirect({ path: '/n8n-automation', country: 'US', userAgent: CHROME }), '/services/ai-workflow-automation')
+expect('US human /n8n-automation → US ai-automation',
+  decideNaRedirect({ path: '/n8n-automation', country: 'US', userAgent: CHROME }), '/services/ai-automation')
 expect('US human /whatsapp-chatbot → US ai-chatbot-development',
   decideNaRedirect({ path: '/whatsapp-chatbot', country: 'US', userAgent: CHROME }), '/services/ai-chatbot-development')
 expect('US human /digital-marketing → US services hub',
@@ -167,8 +167,8 @@ expect('IN human /replatforming → NOT redirected (no India twin)',
 expect('IN human /b2b-ecommerce → NOT redirected (no India twin)',
   decideInRedirect({ path: '/b2b-ecommerce', country: 'IN', userAgent: CHROME }), null)
 // Deliberately NOT mirrored: the reverse would narrow the page. See US_TO_INDIA_RULES.
-expect('IN human /services/ai-workflow-automation → NOT redirected (reverse would narrow)',
-  decideInRedirect({ path: '/services/ai-workflow-automation', country: 'IN', userAgent: CHROME }), null)
+expect('IN human /services/ai-automation → NOT redirected (reverse would narrow)',
+  decideInRedirect({ path: '/services/ai-automation', country: 'IN', userAgent: CHROME }), null)
 expect('US human on a US page → NOT redirected',
   decideInRedirect({ path: '/services/ai-seo', country: 'US', userAgent: CHROME }), null)
 expect('unknown country → NOT redirected (fail open)',

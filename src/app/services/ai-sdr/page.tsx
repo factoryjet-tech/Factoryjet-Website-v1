@@ -670,7 +670,7 @@ export default function AiSdrPage() {
               <h2 className="pp-h2 text-center">How the AI SDR Actually Works</h2>
               <p className="text-base text-[#46403B] mt-3">
                 This is the same event-driven automation approach behind our{' '}
-                <Link href="/services/ai-workflow-automation" className="underline hover:text-[#F05A28]">
+                <Link href="/services/ai-automation" className="underline hover:text-[#F05A28]">
                   AI workflow automation
                 </Link>{' '}
                 builds. It is just aimed at your sales pipeline instead of back-office operations. Here is what runs under the hood.

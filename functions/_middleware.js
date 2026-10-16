@@ -72,7 +72,7 @@ export const INDIA_TO_US_RULES = [
   { match: (p) => p === '/ai-seo', target: '/services/ai-seo' },
   { match: (p) => p === '/shopify-development', target: '/services/shopify-development' },
   { match: (p) => p === '/wordpress-development', target: '/services/wordpress-development' },
-  { match: (p) => p === '/n8n-automation', target: '/services/ai-workflow-automation' },
+  { match: (p) => p === '/n8n-automation', target: '/services/ai-automation' },
   { match: (p) => p === '/whatsapp-chatbot', target: '/services/ai-chatbot-development' },
   // India digital-marketing hub → US services hub (no dedicated US DM page yet)
   { match: (p) => p === '/digital-marketing' || p.startsWith('/digital-marketing/'), target: '/services' },
@@ -90,7 +90,7 @@ export const IN_COUNTRIES = new Set(['IN'])
 //      /omnichannel-commerce, /ecommerce-for-manufacturers, /headless-commerce,
 //      /commerceflo, /agentic-commerce). There is nowhere better to send an India
 //      visitor, so they keep the US page. The footer region selector covers these.
-//   2. Reverses that NARROW the page. /services/ai-workflow-automation → /n8n-automation
+//   2. Reverses that NARROW the page. /services/ai-automation → /n8n-automation
 //      and /services/ai-chatbot-development → /whatsapp-chatbot exist as forward rules
 //      because a broad US page is a fine landing spot for a narrow India one. The
 //      reverse is not true: sending someone from "AI workflow automation" to a page

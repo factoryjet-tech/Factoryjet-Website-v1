@@ -194,7 +194,7 @@ const USE_CASES: ReadonlyArray<{ href: string; code: string; name: string; fit: 
   { href: '/services/ai-sdr', code: 'USE-02', name: 'Sales & lead follow-up', fit: 'Sales teams losing leads between form fill and first call', build: 'Lead research, qualification and first follow-up drafted from your CRM, with a rep approving before anything is sent.' },
   { href: '/services/ai-receptionist', code: 'USE-03', name: 'Front desk & phones', fit: 'Clinics, firms and service businesses that miss calls', build: 'An AI receptionist that answers, books into your calendar and hands urgent calls to a person.' },
   { href: '/services/ai-integration-services', code: 'USE-04', name: 'Operations & ERP', fit: 'Businesses rekeying orders, quotes or invoices between systems', build: 'AI that reads documents and emails, then writes clean records into your ERP, CRM or store.' },
-  { href: '/services/ai-workflow-automation', code: 'USE-05', name: 'Back-office workflows', fit: 'Finance, HR and admin tasks that follow a fixed pattern', build: 'Workflows that move data between tools and let AI handle the reading, sorting and drafting steps.' },
+  { href: '/services/ai-automation', code: 'USE-05', name: 'Back-office workflows', fit: 'Finance, HR and admin tasks that follow a fixed pattern', build: 'Workflows that move data between tools and let AI handle the reading, sorting and drafting steps.' },
   { href: '/services/ai-chatbot-development', code: 'USE-06', name: 'Website & store assistants', fit: 'Sites where buyers ask the same pre-sale questions', build: 'A website or store assistant trained on your catalog, policies and FAQs, with a clean hand-off to a person.' },
 ];
 

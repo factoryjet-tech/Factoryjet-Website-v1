@@ -799,7 +799,7 @@ log:          source file, extracted fields, API request, API response`}</pre>
           AI agent development
         </Link>{' '}
         team builds the agent itself, and{' '}
-        <Link href="/services/ai-workflow-automation" className="text-[#B23E13] hover:underline">
+        <Link href="/services/ai-automation" className="text-[#B23E13] hover:underline">
           AI workflow automation
         </Link>{' '}
         covers the rule-based flows around it. The service page for this work is{' '}

@@ -1186,7 +1186,7 @@ export default function AiAgentMonitoringPage() {
                     chatbots
                   </Link>
                   ,{' '}
-                  <Link href="/services/ai-workflow-automation" className={LINK_CLASS}>
+                  <Link href="/services/ai-automation" className={LINK_CLASS}>
                     workflow automations
                   </Link>
                   ,{' '}

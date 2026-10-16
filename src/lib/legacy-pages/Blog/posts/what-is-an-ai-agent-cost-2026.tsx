@@ -542,7 +542,7 @@ export const post: BlogPost = {
         receipts, flags the mismatches, and files the clean ones. Boring, unglamorous, and the one
         with the clearest payback, because you can count the hours it replaces. The plumbing under
         it is ordinary{' '}
-        <a href="/services/ai-workflow-automation">workflow automation</a> with
+        <a href="/services/ai-automation">workflow automation</a> with
         a judgment step in the middle.
       </p>
       <p>

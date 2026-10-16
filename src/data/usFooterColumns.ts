@@ -33,7 +33,7 @@ import type { SiteFooterColumn } from '@/components/v2/SiteFooter';
  * purpose (see point 1).
  *
  * 2026-09-17 (later): the duplicate workflow automation page under the AI agent
- * hub was merged by 301 into /services/ai-workflow-automation, so the "AI
+ * hub was merged by 301 into /services/ai-workflow-automation (itself merged into /services/ai-automation on 2026-10-16), so the "AI
  * Workflow Automation" link below now points at the kept page directly.
  *
  * 2026-09-20 (Tier 1 content swarm): added /services/ecommerce-audit (free
@@ -140,7 +140,6 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'AI SDR & BDR Agents',         href: '/services/ai-sdr' },
       { label: 'AI Agent Monitoring & Support', href: '/services/ai-agent-monitoring' },
       { label: 'AI Agent ROI Calculator',     href: '/tools/ai-agent-roi-calculator' },
-      { label: 'AI Workflow Automation',      href: '/services/ai-workflow-automation' },
       { label: 'n8n vs LangChain vs CrewAI',  href: '/comparisons/n8n-vs-langchain-vs-crewai-enterprise' },
       { label: 'n8n Automation',              href: '/n8n-automation' },
       { label: 'AI SEO & Visibility',         href: '/services/ai-seo' },
@@ -204,7 +203,7 @@ export const US_FOOTER_FEATURED_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     heading: 'AI Agents & Automation',
     links: featuredLinks([
       '/services/ai-consulting', '/services/ai-development', '/services/ai-agent-development',
-      '/services/ai-automation', '/services/ai-integration-services', '/services/ai-workflow-automation',
+      '/services/ai-automation', '/services/ai-integration-services', '/services/erp-ai-agents',
     ]),
   },
   {

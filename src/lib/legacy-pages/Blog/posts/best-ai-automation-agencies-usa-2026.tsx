@@ -716,7 +716,7 @@ export const post: BlogPost = {
         </div>
         <div className="rounded-xl border border-gray-200 p-4">
           <p className="font-semibold mb-1">&ldquo;We sell online and want orders, stock and support connected.&rdquo;</p>
-          <p className="text-gray-700 text-sm">A team that knows the store platform as well as the automation. That is FactoryJet&rsquo;s main ground; see <a href="/services/ai-workflow-automation" className={link}>AI workflow automation</a>. Bitcot also builds stores, and The Snow Media pairs automation with paid ads.</p>
+          <p className="text-gray-700 text-sm">A team that knows the store platform as well as the automation. That is FactoryJet&rsquo;s main ground; see <a href="/services/ai-automation" className={link}>AI workflow automation</a>. Bitcot also builds stores, and The Snow Media pairs automation with paid ads.</p>
         </div>
         <div className="rounded-xl border border-gray-200 p-4">
           <p className="font-semibold mb-1">&ldquo;We are an agency and our clients are asking for automation.&rdquo;</p>

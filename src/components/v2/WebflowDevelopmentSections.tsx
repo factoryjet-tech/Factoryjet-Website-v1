@@ -126,7 +126,7 @@ const INTEGRATIONS = [
   { title: 'Localization', line: 'Webflow Localize with subdirectory URLs and hreflang in the sitemap', href: WF_LOCALIZE, ext: true },
   { title: 'Code components & DevLink', line: 'React components shared between your codebase and Webflow', href: WF_DEVLINK, ext: true },
   { title: 'AI chatbots & agents', line: 'Built for you, trained on your content, embedded on the site', href: '/services/ai-chatbot-development', ext: false },
-  { title: 'Workflow automation', line: 'Form and CMS events that trigger follow-ups in your other tools', href: '/services/ai-workflow-automation', ext: false },
+  { title: 'Workflow automation', line: 'Form and CMS events that trigger follow-ups in your other tools', href: '/services/ai-automation', ext: false },
 ];
 
 function WebflowFaqAccordion() {

@@ -703,7 +703,7 @@ export default function ProcurementSupplyChainAgentPage() {
             <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--pp-muted)' }}>
               Related:{' '}
               <Link href="/services/ai-agent-development" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>AI agent development</Link>,{' '}
-              <Link href="/services/ai-workflow-automation" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>AI workflow automation</Link>,{' '}
+              <Link href="/services/ai-automation" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>AI workflow automation</Link>,{' '}
               <Link href="/services/sales-order-automation-ai-agents" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>purchase order automation</Link>,{' '}
               <Link href="/services/ai-inventory-management-agents" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>low-stock alerts and draft purchase orders</Link>,{' '}
               <Link href="/b2b-ecommerce" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce</Link>, and{' '}

@@ -148,7 +148,7 @@ const REMOVED_2026_08_03 = [
   '/services/shopify-seo', '/services/local-seo', '/services/small-business-seo',
   '/services/seo-audit', '/services/healthcare-seo', '/services/dental-seo',
   '/services/law-firm-seo', '/services/ai-chatbot-development', '/services/ai-automation',
-  '/services/ai-integration-services', '/services/ai-workflow-automation',
+  '/services/ai-integration-services',
   '/web-design/mumbai', '/web-design/delhi', '/web-design/bangalore', '/web-design/chennai',
   '/web-design/hyderabad', '/web-design/pune', '/web-design/ahmedabad', '/web-design/kolkata',
   '/web-design/jaipur', '/web-design/surat', '/web-design/indore', '/web-design/kochi',

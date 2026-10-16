@@ -78,7 +78,7 @@ const US_AI_SERVICES = [
   { icon: Bot,           label: 'AI Agents',      href: '/services/ai-agent-development',               desc: 'Autonomous task automation' },
   { icon: Zap,           label: 'AI Automation',  href: '/services/ai-automation',           desc: 'Eliminate repetitive work' },
   { icon: MessageSquare, label: 'AI Chatbot',     href: '/services/ai-chatbot-development',  desc: 'Smart customer support' },
-  { icon: Layers,        label: 'AI Workflow',    href: '/services/ai-workflow-automation',  desc: 'End-to-end process flows' },
+  { icon: Layers,        label: 'AI Workflow',    href: '/services/ai-automation',  desc: 'End-to-end process flows' },
   { icon: Link2,         label: 'AI Integration', href: '/services/ai-integration-services', desc: 'Connect AI to your stack' },
 ] as const;
 
@@ -95,7 +95,7 @@ const US_AI_AGENTS_NAV = [
   { icon: Headphones,    label: 'AI Customer Support',    href: '/services/ai-customer-support-agents',         desc: 'Deflect 70%+ of support tickets' },
   { icon: TrendingUp,    label: 'AI SDR & BDR Agents',    href: '/services/ai-sdr',                 desc: 'Inbound qualification & CRM booking' },
   { icon: RefreshCw,     label: 'AI Agent Monitoring',    href: '/services/ai-agent-monitoring',    desc: 'Support, evals & model upgrades' },
-  { icon: GitBranch,     label: 'Workflow Automation',    href: '/services/ai-workflow-automation', desc: 'Connect ERP, CRM & databases' },
+  { icon: GitBranch,     label: 'Workflow Automation',    href: '/services/ai-automation', desc: 'Connect ERP, CRM & databases' },
   { icon: Calculator,    label: 'AI Agent ROI Calculator',href: '/tools/ai-agent-roi-calculator',               desc: 'Calculate headcount & payback' },
 ] as const;
 
@@ -347,7 +347,7 @@ const IN_AI_AGENTS = [
   { icon: TrendingUp,    label: 'AI SDR Agent',           href: '/services/ai-sdr',                                      desc: 'Automated outreach' },
   { icon: Megaphone,     label: 'AI Marketing Agent',     href: '/services/ai-agent-development/ai-marketing-agent',     desc: 'Automate campaigns' },
   { icon: Mic,           label: 'AI Receptionist',        href: '/services/ai-receptionist',                      desc: 'Voice-based AI calls' },
-  { icon: GitBranch,     label: 'AI Workflow Automation', href: '/services/ai-workflow-automation',                      desc: 'End-to-end automation' },
+  { icon: GitBranch,     label: 'AI Workflow Automation', href: '/services/ai-automation',                      desc: 'End-to-end automation' },
   { icon: Headphones,    label: 'AI Customer Support',    href: '/services/ai-customer-support-agents',                  desc: 'Resolve tickets faster' },
   { icon: CalendarClock, label: 'AI Scheduling Agent',    href: '/services/ai-agent-development/ai-scheduling-agent',    desc: 'Smart bookings & calendar' },
 ] as const;
@@ -414,7 +414,7 @@ const UAE_WEB_SERVICES = [
 
 const UAE_AI_SERVICES = [
   { icon: MessageSquare, label: 'AI Chatbot',    href: '/services/ai-chatbot-development',                      desc: 'Smart customer support' },
-  { icon: Zap,           label: 'AI Workflow Automation', href: '/services/ai-workflow-automation',             desc: 'Automate repetitive work' },
+  { icon: Zap,           label: 'AI Workflow Automation', href: '/services/ai-automation',             desc: 'Automate repetitive work' },
   { icon: Bot,           label: 'AI Receptionist',href: '/services/ai-receptionist',                      desc: 'Voice-based AI assistants' },
 ] as const;
 
