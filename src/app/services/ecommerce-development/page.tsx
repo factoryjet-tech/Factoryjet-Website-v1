@@ -192,36 +192,39 @@ const ECOMM_SERVICES = [
   },
 ];
 
+/* Phased plan (2026-10-16). Same terms as /services and the AI agent page:
+   a working draft in your own store before you sign, each phase priced on its
+   own, defect cover inside the build price, optional support. */
 const ECOMM_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discover',
+    title: 'Scoping call',
     description:
-      'A 30-minute strategy session. We audit your current platform, catalog, traffic, and conversion data, then recommend the right tech stack before scoping a single hour of work.',
+      'Bhavesh runs it. What you sell, the platform you are on, the systems the store has to talk to, and what has to move over.',
   },
   {
     number: '02',
-    title: 'Design',
+    title: 'Working draft',
     description:
-      'Figma wireframes and full visual mockups for your homepage, product pages, collection pages, and cart. You approve desktop and mobile before any code is written.',
+      'Before you sign, a working draft of your theme in your own store, with your own products, so you judge the design on real data.',
   },
   {
     number: '03',
     title: 'Build',
     description:
-      'Engineering in your chosen platform: Liquid, WooCommerce PHP, BigCommerce Stencil, or Next.js. Daily commits to your GitHub repo. Staging store live within 48-72 hours.',
+      'Built on your chosen platform, with daily commits to your own repository. Paid at milestones, such as signing, go-live and the finished integration.',
   },
   {
     number: '04',
-    title: 'Test',
+    title: 'Launch',
     description:
-      'Full checkout flow tested across Stripe, PayPal, Shop Pay, and Affirm/Klarna. Cross-device testing on iOS, Android, Chrome, Safari, and Firefox. Lighthouse audit before sign-off.',
+      'Checkout tested end to end and every old URL mapped with a single-hop 301. Defects found after launch are fixed inside the build price for an agreed cover period.',
   },
   {
     number: '05',
-    title: 'Launch',
+    title: 'Next phase',
     description:
-      'DNS transfer, SSL, Google Analytics 4 + Meta Pixel configuration, Google Shopping feed setup, sitemap submission, and a recorded handover. Your codebase delivered to GitHub on day one.',
+      'B2B pricing, an ERP or QuickBooks sync, or a second brand, each scoped and priced on its own. Support after launch is optional, with no monthly minimum.',
   },
 ];
 
@@ -239,19 +242,41 @@ const BUILD_TIMELINES = [
 const PROOF_CASES = [
   {
     client: 'Belle Maison',
-    market: 'Wholesale distributor',
+    market: 'Retail and trade in one store',
     platform: 'Built on Commerceflo',
     what: 'One storefront for retail shoppers and trade buyers. Trade accounts log in, see their own prices, and turn a quote into an order without anyone retyping it.',
     href: '/case-studies/belle-maison-ecommerce-success',
   },
   {
     client: 'GPSUK',
-    market: 'Promotional products, United Kingdom',
+    market: 'Trade reordering, United Kingdom',
     platform: 'Built on Commerceflo',
     what: 'A B2B storefront for a supplier whose buyers reorder branded stock. Trade accounts browse the catalogue, get account pricing, and move from quote to order online.',
     href: '/case-studies/gpsuk-promotional-products',
   },
+  {
+    client: 'Sow Easy',
+    market: 'Store to ERP link · In progress',
+    platform: 'WooCommerce and Odoo',
+    what: 'Trade ordering on WooCommerce connected to Odoo, so orders and stock live in one place instead of two.',
+    href: '/case-studies/sow-easy-distributor-portal',
+  },
 ] as const;
+
+/* Forwardable summary for the person who signs (2026-10-16). Timelines are the
+   confirmed BUILD_TIMELINES ranges. Feeds the visible list and the mailto body. */
+const TEAM_SUMMARY = [
+  { k: 'What it is', v: 'A custom Shopify, WooCommerce, BigCommerce or headless store, with the links to your ERP, accounting and marketplaces it needs.' },
+  { k: 'What you see first', v: 'A working draft of your theme in your own store, with your own products, before any contract.' },
+  { k: 'How it is priced', v: 'One fixed price per phase, in writing, paid at milestones. A custom-theme store takes 3 to 5 weeks; subscriptions, B2B pricing or a migration 5 to 8; headless or custom 8 to 14.' },
+  { k: 'What you own', v: 'The code, the theme and the repository from day one. Your store, apps and accounts stay in your name.' },
+  { k: 'After launch', v: 'Defects fixed inside the build price for an agreed cover period. Support is optional, with no monthly minimum.' },
+  { k: 'Who you deal with', v: 'Bhavesh Barot, founder of FactoryJet. He replies within 24 hours.' },
+] as const;
+
+const TEAM_SUMMARY_MAILTO = `mailto:?subject=${encodeURIComponent('Ecommerce project: FactoryJet summary')}&body=${encodeURIComponent(
+  `${TEAM_SUMMARY.map((r) => `${r.k}: ${r.v}`).join('\n\n')}\n\nFull page: https://factoryjet.com/services/ecommerce-development#summary`,
+)}`;
 
 const ECOMM_STATS = [
   {
@@ -806,7 +831,7 @@ export default function EcommerceDevelopmentPage() {
               </div>
 
               <div className="lg:col-span-5">
-                <p className="fj-eyebrow">STORES WE HAVE BUILT</p>
+                <p className="fj-eyebrow">PROOF BY JOB</p>
                 <div className="mt-4 space-y-4">
                   {PROOF_CASES.map((c) => (
                     <Link
@@ -983,10 +1008,10 @@ export default function EcommerceDevelopmentPage() {
         <div className="ec-growth-process">
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Platform Decision to Live Store in 5 Stages"
-          lead="Discovery before we commit to a platform. Design approval before we commit to code. Full checkout testing before we commit to launch."
+          headline="How a Store Project Runs, Phase by Phase"
+          lead="Each phase is scoped, priced and signed on its own, in writing. You decide on the next phase after you have seen the last one work."
           stages={ECOMM_JOURNEY_STAGES}
-          closingNote="5 STAGES · 3-14 WEEKS TO LAUNCH · PLATFORM-AGNOSTIC · ZERO DOWNTIME LAUNCH DAY"
+          closingNote="5 PHASES · 3-14 WEEKS TO LAUNCH · EACH PHASE PRICED ON ITS OWN"
         />
         </div>
 
@@ -996,7 +1021,7 @@ export default function EcommerceDevelopmentPage() {
           headline="Get a fixed quote and a launch date for your store"
           sub="Tell us what you sell, how many products you have and which platform you are on today. We reply with a platform recommendation, a fixed price and a launch date. No hourly billing, no obligation."
           label="Get my store quote"
-          note="Bhavesh, our founder, reads every request and usually replies within 2 to 3 hours."
+          note="Bhavesh, our founder, reads every request and replies within 24 hours."
         />
         </div>
 
@@ -1428,6 +1453,36 @@ export default function EcommerceDevelopmentPage() {
                   Talk to the Founder →
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 13c. SUMMARY TO FORWARD ─────────────────────────────────────── */}
+        <section id="summary" className="border-y border-fj-neutral-200 bg-white py-14 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-4">
+                <p className="fj-eyebrow">FOR THE PERSON WHO SIGNS</p>
+                <h2 className="mt-3 font-fj-display text-[clamp(1.625rem,3vw,2.25rem)] font-bold leading-[1.15] tracking-[-0.03em] text-fj-ink">
+                  The short version to forward to your team
+                </h2>
+                <p className="mt-4 font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600">
+                  The person who finds us is rarely the one who signs. This is the page in six lines.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <a href={TEAM_SUMMARY_MAILTO} className="inline-flex min-h-12 items-center rounded-lg border border-fj-neutral-200 bg-white px-5 font-fj-body text-sm font-semibold text-fj-ink hover:border-fj-ink">
+                    Email this to a colleague
+                  </a>
+                </div>
+              </div>
+              <dl className="m-0 overflow-hidden rounded-2xl border border-fj-neutral-200 bg-fj-cream lg:col-span-8">
+                {TEAM_SUMMARY.map((row) => (
+                  <div key={row.k} className="grid grid-cols-1 gap-1.5 border-b border-fj-neutral-200 px-5 py-4 last:border-b-0 sm:grid-cols-[180px_minmax(0,1fr)] sm:gap-6 sm:px-6">
+                    <dt className="font-fj-mono text-[11px] font-semibold uppercase tracking-[0.1em] text-[#B23E13] sm:pt-1">{row.k}</dt>
+                    <dd className="m-0 font-fj-body text-[0.9375rem] leading-[1.7] text-fj-ink">{row.v}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
           </div>
         </section>
