@@ -1,5 +1,6 @@
 /**
- * enrichLead — sends the step-2 modal details (phone, company, message) to
+ * enrichLead — sends the step-2 modal details (project type, systems, timeline,
+ * brief file, message, company, phone) to
  * /api/notify-lead in `enrich` mode so they attach to the lead step 1 created.
  * Bounded like submitLead: 8s, then one 6s retry. Never throws.
  */
@@ -12,6 +13,11 @@ export interface EnrichInput {
   phone: string;
   company: string;
   message: string;
+  projectType: string;
+  systems: string[];
+  timeline: string;
+  /** base64 file from the modal, or null */
+  brief: { name: string; data: string } | null;
   source: string;
   honeypot?: string;
 }
@@ -39,6 +45,8 @@ async function post(payload: Record<string, unknown>, timeoutMs: number): Promis
 
 export async function enrichLead(input: EnrichInput): Promise<boolean> {
   const payload = { mode: 'enrich', ...input, message: input.message.slice(0, ENRICH_MESSAGE_MAX) };
-  if (await post(payload, 8000)) return true;
-  return post(payload, 6000);
+  // A 5 MB brief can take longer than 8s on a slow phone connection.
+  const first = input.brief ? 30000 : 8000;
+  if (await post(payload, first)) return true;
+  return post(payload, input.brief ? 30000 : 6000);
 }

@@ -23,7 +23,6 @@ import {
   Loader2,
   Monitor,
   ShoppingBag,
-  Wrench,
   Bot,
   Rocket,
   TrendingUp,
@@ -65,12 +64,15 @@ const defaultServices: {
 }[] = [
   /* SEO + AI SEO added 2026-06-06 (Bhavesh): the quote menu must offer the SEO
      services we now sell. 6 cards = clean 2x3 in the grid-cols-2 picker. */
-  { id: 'website',     label: 'Website Design',    icon: Monitor,    description: 'Custom high-performance websites' },
-  { id: 'ecommerce',   label: 'E-Commerce',         icon: ShoppingBag, description: 'Shopify & WooCommerce stores' },
-  { id: 'seo',         label: 'SEO / Local SEO',    icon: TrendingUp, description: 'Map Pack & organic growth' },
-  { id: 'ai-seo',      label: 'AI SEO / GEO',       icon: Sparkles,   description: 'Get cited by ChatGPT & AI search' },
-  { id: 'maintenance', label: 'AMC / Maintenance',  icon: Wrench,     description: 'Ongoing support & maintenance' },
-  { id: 'other',       label: 'Other / Custom',     icon: Rocket,     description: 'Custom development needs' },
+  /* 2026-10-16: E-Commerce and AI Agent Development lead, because those are the
+     $10K+ projects. Before this the default list had no AI agent option, so an
+     agent buyer pressing the header button could not say what they wanted. */
+  { id: 'ecommerce',   label: 'E-Commerce',           icon: ShoppingBag, description: 'Stores, B2B portals, ERP sync' },
+  { id: 'ai-agents',   label: 'AI Agent Development', icon: Bot,        description: 'Custom AI agents for business' },
+  { id: 'website',     label: 'Website Design',       icon: Monitor,    description: 'Custom high-performance websites' },
+  { id: 'ai-seo',      label: 'AI SEO / GEO',         icon: Sparkles,   description: 'Get cited by ChatGPT & AI search' },
+  { id: 'seo',         label: 'SEO / Local SEO',      icon: TrendingUp, description: 'Map Pack & organic growth' },
+  { id: 'other',       label: 'Other / Custom',       icon: Rocket,     description: 'Maintenance or custom work' },
 ];
 
 const aiServices: typeof defaultServices = [
@@ -79,7 +81,7 @@ const aiServices: typeof defaultServices = [
   { id: 'ai-agents',   label: 'AI Agent Development', icon: Bot,        description: 'Custom AI agents for business' },
   { id: 'ai-seo',      label: 'AI SEO / GEO',          icon: Sparkles,   description: 'Get cited by ChatGPT & AI search' },
   { id: 'website',     label: 'Website Design',       icon: Monitor,    description: 'Custom high-performance websites' },
-  { id: 'ecommerce',   label: 'E-Commerce',            icon: ShoppingBag, description: 'Shopify & WooCommerce stores' },
+  { id: 'ecommerce',   label: 'E-Commerce',            icon: ShoppingBag, description: 'Stores, B2B portals, ERP sync' },
   { id: 'seo',         label: 'SEO / Local SEO',       icon: TrendingUp, description: 'Map Pack & organic growth' },
   { id: 'other',       label: 'Other / Custom',        icon: Rocket,     description: 'Custom development needs' },
 ];

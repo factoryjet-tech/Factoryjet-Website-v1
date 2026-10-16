@@ -72,7 +72,11 @@ export function useLeadEnrichment() {
   const onSubmit = useCallback(async (f: EnrichFields) => {
     if (!active) return;
     const { ctx } = active;
-    const filled = (['phone', 'company', 'message'] as const).filter((k) => f[k].trim() !== '');
+    const filled = [
+      ...(['phone', 'company', 'message', 'projectType', 'timeline'] as const).filter((k) => f[k].trim() !== ''),
+      ...(f.systems.length ? ['systems'] : []),
+      ...(f.brief ? ['brief'] : []),
+    ];
     if (filled.length === 0 || f.honeypot.trim() !== '') {
       pushToDataLayer({ event: 'lead_enrich_skipped', form_name: ctx.source });
       finish(ctx);
@@ -87,6 +91,10 @@ export function useLeadEnrichment() {
       phone: f.phone.trim(),
       company: f.company.trim(),
       message: f.message.trim(),
+      projectType: f.projectType,
+      systems: f.systems,
+      timeline: f.timeline,
+      brief: f.brief,
       source: ctx.source,
     });
     finish(ctx);

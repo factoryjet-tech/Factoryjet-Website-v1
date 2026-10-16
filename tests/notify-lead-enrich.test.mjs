@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   signEnrichToken, verifyEnrichToken, sanitizeDocId, cleanEnrichInput, buildEnrichFirestoreRequest,
+  cleanBrief, ENRICH_PROJECT_TYPES, ENRICH_SYSTEMS, ENRICH_TIMELINES, MAX_BRIEF_BYTES,
 } from '../functions/api/notify-lead.js';
 
 const KEY = 'test-secret';
@@ -45,7 +46,7 @@ test('cleanEnrichInput trims and clips', () => {
   assert.equal(out.phone, '+1 555 0100');
   assert.equal(out.company.length, 100);
   assert.equal(out.message.length, 10_000);
-  assert.deepEqual(cleanEnrichInput({}), { phone: '', company: '', message: '' });
+  assert.deepEqual(cleanEnrichInput({}), { phone: '', company: '', message: '', projectType: '', systems: '', timeline: '' });
 });
 
 test('Firestore details go to a create-only sibling doc with only filled fields', () => {
@@ -238,4 +239,48 @@ test('enrich: details already saved (duplicate/retry) skip the CRM and email', a
     assert.deepEqual(await res.json(), { ok: true, duplicate: true });
     assert.equal(f.calls.length, 1);
   } finally { f.restore(); }
+});
+
+test('step-2 choices keep only the offered values', () => {
+  const out = cleanEnrichInput({ projectType: 'AI agent', systems: ['Shopify', 'QuickBooks', 'Shopify', '<script>'], timeline: 'Within 3 months' });
+  assert.equal(out.projectType, 'AI agent');
+  assert.equal(out.systems, 'Shopify, QuickBooks');
+  assert.equal(out.timeline, 'Within 3 months');
+  const bad = cleanEnrichInput({ projectType: 'Budget: $1M', systems: 'Shopify', timeline: 'yesterday' });
+  assert.deepEqual([bad.projectType, bad.systems, bad.timeline], ['', '', '']);
+});
+
+test('the modal offers exactly the server lists', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const src = await readFile(new URL('../src/components/lead/LeadEnrichModal.tsx', import.meta.url), 'utf8');
+  const listOf = (name) => JSON.parse(src.match(new RegExp(`export const ${name} = (\\[[^\\]]*\\])`))[1].replace(/'/g, '"'));
+  assert.deepEqual(listOf('PROJECT_TYPES'), ENRICH_PROJECT_TYPES);
+  assert.deepEqual(listOf('SYSTEMS'), ENRICH_SYSTEMS);
+  assert.deepEqual(listOf('TIMELINES'), ENRICH_TIMELINES);
+});
+
+const b64 = (bytes) => Buffer.from(bytes).toString('base64');
+
+test('cleanBrief accepts a PDF and a .docx by their first bytes', () => {
+  const pdf = cleanBrief({ name: 'Our RFP (v2).pdf', data: b64([0x25, 0x50, 0x44, 0x46, 0x2d, 0x31]) });
+  assert.equal(pdf.ext, 'pdf');
+  assert.equal(pdf.name, 'Our-RFP-v2.pdf');
+  const docx = cleanBrief({ name: 'spec.docx', data: b64([0x50, 0x4b, 0x03, 0x04, 0, 0]) });
+  assert.equal(docx.ext, 'docx');
+});
+
+test('cleanBrief refuses other files, renamed zips and oversize uploads', () => {
+  assert.deepEqual(cleanBrief({ name: 'x.pdf', data: b64([0x4d, 0x5a, 0x90, 0x00]) }), { error: 'bad_type' });
+  assert.deepEqual(cleanBrief({ name: 'x.zip', data: b64([0x50, 0x4b, 0x03, 0x04]) }), { error: 'bad_type' });
+  assert.deepEqual(cleanBrief({ name: 'big.pdf', data: 'A'.repeat(Math.ceil(MAX_BRIEF_BYTES / 3) * 4 + 100) }), { error: 'too_large' });
+  assert.equal(cleanBrief(null), null);
+  assert.equal(cleanBrief({ name: 'x.pdf', data: '' }), null);
+});
+
+test('Firestore details carry the new step-2 fields when filled', () => {
+  const { body } = buildEnrichFirestoreRequest({}, DOC, { phone: '', company: '', message: '', projectType: 'AI agent', systems: 'Salesforce', timeline: 'Just researching', briefName: 'rfp.pdf' }, 'us_hero_inline', '2026-10-16T10:00:00.000Z');
+  assert.equal(body.fields.projectType.stringValue, 'AI agent');
+  assert.equal(body.fields.systems.stringValue, 'Salesforce');
+  assert.equal(body.fields.timeline.stringValue, 'Just researching');
+  assert.equal(body.fields.briefName.stringValue, 'rfp.pdf');
 });

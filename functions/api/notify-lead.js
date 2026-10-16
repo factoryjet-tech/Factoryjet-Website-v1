@@ -815,14 +815,63 @@ export async function verifyEnrichToken(key, docId, token, now = Date.now()) {
   return diff === 0;
 }
 
+// Step-2 choices. The modal (src/components/lead/LeadEnrichModal.tsx) offers the
+// same strings; anything else is dropped, so the CRM and the inbox only ever see
+// these values. tests/notify-lead-enrich.test.mjs checks the two lists match.
+export const ENRICH_PROJECT_TYPES = ['New online store', 'Store rebuild or migration', 'B2B or wholesale portal', 'ERP or inventory integration', 'AI agent', 'Other'];
+export const ENRICH_SYSTEMS = ['Shopify', 'WooCommerce', 'BigCommerce', 'Magento', 'QuickBooks', 'NetSuite', 'Odoo', 'Salesforce', 'Faire', 'Amazon', 'Other'];
+export const ENRICH_TIMELINES = ['As soon as possible', 'Within 3 months', '3 to 6 months', 'Just researching'];
+export const MAX_BRIEF_BYTES = 5 * 1024 * 1024;
+
 export function cleanEnrichInput(body) {
   const b = body || {};
+  const pick = (v, list) => (list.includes(v) ? v : '');
+  const systems = Array.isArray(b.systems) ? b.systems.filter((x) => ENRICH_SYSTEMS.includes(x)) : [];
   return {
     phone: clipText(b.phone, 100),
     company: clipText(b.company, 100),
     message: clipText(b.message, 10000),
+    projectType: pick(b.projectType, ENRICH_PROJECT_TYPES),
+    systems: [...new Set(systems)].join(', '),
+    timeline: pick(b.timeline, ENRICH_TIMELINES),
   };
 }
+
+function base64ToBytes(b64) {
+  const bin = atob(b64);
+  const out = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+  return out;
+}
+
+/**
+ * The uploaded brief, checked by its first bytes (PDF, or a zip named .docx),
+ * not by the name or MIME type the browser sent. Returns { bytes, name, ext },
+ * { error } when a file was sent but is not acceptable, or null when none was.
+ */
+export function cleanBrief(brief) {
+  if (!brief || typeof brief !== 'object' || typeof brief.data !== 'string' || !brief.data) return null;
+  if (brief.data.length > Math.ceil(MAX_BRIEF_BYTES / 3) * 4 + 8) return { error: 'too_large' };
+  let bytes;
+  try { bytes = base64ToBytes(brief.data); } catch { return { error: 'bad_encoding' }; }
+  if (!bytes.length) return null;
+  if (bytes.length > MAX_BRIEF_BYTES) return { error: 'too_large' };
+  const name = String(brief.name || '').toLowerCase();
+  let ext = null;
+  if (bytes[0] === 0x25 && bytes[1] === 0x50 && bytes[2] === 0x44 && bytes[3] === 0x46) ext = 'pdf';
+  else if (bytes[0] === 0x50 && bytes[1] === 0x4b && bytes[2] === 0x03 && bytes[3] === 0x04 && name.endsWith('.docx')) ext = 'docx';
+  if (!ext) return { error: 'bad_type' };
+  const base = String(brief.name || 'brief').replace(/\.[^.]*$/, '').replace(/[^A-Za-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) || 'brief';
+  return { bytes, name: `${base}.${ext}`, ext };
+}
+
+function bytesToBase64(bytes) {
+  let bin = '';
+  for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+  return btoa(bin);
+}
+
+const BRIEF_MIME = { pdf: 'application/pdf', docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' };
 
 /**
  * Create-only write of the step-2 details to contactus/<docId>_details.
@@ -835,7 +884,7 @@ export function buildEnrichFirestoreRequest(env, docId, fields, source, nowIso =
   const apiKey  = (env && (env.FIREBASE_API_KEY || env.NEXT_PUBLIC_FIREBASE_API_KEY)) || FB_API_KEY;
   const s = (v) => ({ stringValue: v == null ? '' : String(v) });
   const out = { leadDocId: s(docId) };
-  for (const k of ['phone', 'company', 'message']) if (fields[k]) out[k] = s(fields[k]);
+  for (const k of ['phone', 'company', 'message', 'projectType', 'systems', 'timeline', 'briefName']) if (fields[k]) out[k] = s(fields[k]);
   // Present only when these details raise a flag (see handleEnrich). The lead doc
   // keeps the label it got at step 1 and cannot be updated.
   if (leadType && leadType !== 'Buyer') out.leadType = s(leadType);
@@ -906,6 +955,10 @@ export async function enrichLeadInERPNext(env, lead, sleep = (ms) => new Promise
   const text = [
     returning ? 'Details added on the website (returning lead)' : 'Details added on the website',
     flagged && `Lead type: ${lead.leadType}`,
+    lead.projectType && `Project type: ${lead.projectType}`,
+    lead.systems && `Systems: ${lead.systems}`,
+    lead.timeline && `Timeline: ${lead.timeline}`,
+    lead.brief && `Brief attached: ${lead.brief.name}`,
     lead.phone && `Phone: ${lead.phone}`,
     lead.company && `Company: ${lead.company}`,
     lead.message && `Message:\n${lead.message}`,
@@ -922,6 +975,26 @@ export async function enrichLeadInERPNext(env, lead, sleep = (ms) => new Promise
     if (!res.ok) console.warn('ERPNext enrich comment returned HTTP', res.status);
   } catch (err) {
     console.warn('ERPNext enrich comment warning:', describeFetchError(err));
+  }
+
+  // The uploaded brief, as a PRIVATE file on the Lead. Separate from the comment so
+  // a refused upload (ERPNext rejects files it cannot parse) costs nothing else.
+  if (lead.brief) {
+    try {
+      const form = new FormData();
+      form.append('file', new Blob([lead.brief.bytes], { type: BRIEF_MIME[lead.brief.ext] }), lead.brief.name);
+      form.append('is_private', '1');
+      form.append('doctype', 'Lead');
+      form.append('docname', leadId);
+      const res = await fetchWithTimeout(`${erpUrl}/api/method/upload_file`, {
+        method: 'POST',
+        headers: { ...ERP_HEADERS, Authorization: authHeader },
+        body: form,
+      }, erpTimeout(env));
+      if (!res.ok) console.warn('ERPNext enrich brief upload returned HTTP', res.status);
+    } catch (err) {
+      console.warn('ERPNext enrich brief upload warning:', describeFetchError(err));
+    }
   }
 
   if (!returning) {
@@ -957,7 +1030,7 @@ export async function enrichLeadInERPNext(env, lead, sleep = (ms) => new Promise
   return { saved: commented, leadId, returning };
 }
 
-function buildEnrichHtml({ name, email, phone, company, message, erpLeadId, returning }) {
+function buildEnrichHtml({ name, email, phone, company, message, projectType, systems, timeline, briefName, erpLeadId, returning }) {
   const erpLink = erpLeadId
     ? `<a href="${DEFAULT_ERPNEXT_URL}/app/lead/${encodeURIComponent(erpLeadId)}">${escapeHtml(erpLeadId)}</a>${returning ? ' (returning lead)' : ''}`
     : 'Updating in the background';
@@ -970,6 +1043,10 @@ function buildEnrichHtml({ name, email, phone, company, message, erpLeadId, retu
     <tr><td style="padding:8px 26px 22px;"><table width="100%" cellpadding="0" cellspacing="0">
       ${row('Name', escapeHtml(name || 'N/A'))}
       ${row('Email', escapeHtml(email || 'N/A'))}
+      ${row('Project type', escapeHtml(projectType || 'Not given'))}
+      ${row('Systems', escapeHtml(systems || 'Not given'))}
+      ${row('Timeline', escapeHtml(timeline || 'Not given'))}
+      ${row('Brief', briefName ? `${escapeHtml(briefName)} (attached)` : 'None')}
       ${row('Phone', escapeHtml(phone || 'Not given'))}
       ${row('Company', escapeHtml(company || 'Not given'))}
       ${row('Message', message ? escapeHtml(message).replace(/\n/g, '<br>') : 'Not given')}
@@ -988,8 +1065,9 @@ async function sendEnrichEmail(env, data) {
         from: NOTIFY_FROM,
         to: [NOTIFY_TO],
         subject: `📝 Details added: ${(data.name || data.email || 'website lead').replace(/[\r\n]+/g, ' ')}`,
-        html: buildEnrichHtml(data),
+        html: buildEnrichHtml({ ...data, briefName: data.brief ? data.brief.name : '' }),
         ...(EMAIL_SHAPE.test(data.email || '') ? { reply_to: data.email } : {}),
+        ...(data.brief ? { attachments: [{ filename: data.brief.name, content: bytesToBase64(data.brief.bytes) }] } : {}),
       }),
     });
     if (!res.ok) console.error('Resend enrich error:', res.status);
@@ -1012,7 +1090,11 @@ async function handleEnrich(context, body, corsHeaders) {
     return reply({ ok: false, error: 'invalid token' }, 403);
   }
   const fields = cleanEnrichInput(body);
-  if (!fields.phone && !fields.company && !fields.message) return reply({ ok: true, enriched: false });
+  const brief = cleanBrief(body.brief);
+  if (brief && brief.error) return reply({ ok: false, error: `brief_${brief.error}` }, 400);
+  const filled = Object.values(fields).some(Boolean) || Boolean(brief);
+  if (!filled) return reply({ ok: true, enriched: false });
+  if (brief) fields.briefName = brief.name;
 
   const name = clipText(body.name, 120);
   const email = clipText(body.email, 200);
@@ -1041,7 +1123,7 @@ async function handleEnrich(context, body, corsHeaders) {
   }
 
   // (2) ERPNext in the background; wait briefly so the email can link the Lead.
-  const erpPromise = enrichLeadInERPNext(env, { docId, email, name, leadType: detailsType, ...fields })
+  const erpPromise = enrichLeadInERPNext(env, { docId, email, name, leadType: detailsType, ...fields, brief })
     .catch((err) => ({ saved: false, error: describeFetchError(err) }));
   if (typeof context.waitUntil === 'function') context.waitUntil(erpPromise);
   const erp = await Promise.race([
@@ -1050,7 +1132,7 @@ async function handleEnrich(context, body, corsHeaders) {
   ]);
 
   // (3) Tell the inbox.
-  const emailed = await sendEnrichEmail(env, { name, email, ...fields, erpLeadId: erp.leadId, returning: erp.returning });
+  const emailed = await sendEnrichEmail(env, { name, email, ...fields, brief, erpLeadId: erp.leadId, returning: erp.returning });
 
   const ok = saved || emailed;
   return reply({ ok, saved, emailed }, ok ? 200 : 502);

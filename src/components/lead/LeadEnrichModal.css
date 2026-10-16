@@ -1,6 +1,7 @@
 /* Step-2 lead details modal. Tokens match the AI Agent Development page. */
 .lem-backdrop { position: fixed; inset: 0; z-index: 10000; display: grid; place-items: center; padding: 16px; background: rgba(20,17,15,.55); animation: lem-fade .18s ease-out; }
 .lem-card { position: relative; width: min(560px, 100%); max-height: calc(100dvh - 32px); overflow-y: auto; background: #FFFFFF; color: #14110F; border: 1px solid #E7DED6; border-radius: 14px; padding: 32px 32px 26px; box-shadow: 0 30px 60px -30px rgba(20,17,15,.45); font-family: var(--font-inter, 'Inter'), system-ui, sans-serif; font-size: 15px; line-height: 1.6; text-align: left; animation: lem-rise .22s ease-out; }
+.lem-card { min-width: 0; }
 .lem-card *, .lem-card *::before, .lem-card *::after { box-sizing: border-box; }
 .lem-card:focus { outline: none; }
 .lem-close { position: absolute; top: 14px; right: 14px; width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid #E7DED6; border-radius: 50%; background: #FFFFFF; color: #46403B; cursor: pointer; }
@@ -14,12 +15,27 @@
 .lem-founder p { margin: 0; font-size: 13.5px; color: #46403B; line-height: 1.45; }
 .lem-founder strong { display: block; color: #14110F; font-weight: 600; }
 .lem-form { display: grid; gap: 16px; margin-top: 22px; }
-.lem-field { display: grid; gap: 6px; }
+.lem-field { display: grid; gap: 6px; min-width: 0; }
 .lem-label { font-size: 13.5px; font-weight: 600; color: #14110F; }
 .lem-help { font-size: 12.5px; color: #6E635A; }
 .lem-input, .lem-textarea { width: 100%; min-height: 48px; border: 1px solid #D8CCC0; border-radius: 8px; padding: 12px 14px; background: #FFFFFF; color: #14110F; font: inherit; font-size: 16px; }
 .lem-textarea { min-height: 112px; resize: vertical; overflow: hidden; }
 .lem-input:focus-visible, .lem-textarea:focus-visible, .lem-send:focus-visible, .lem-skip:focus-visible, .lem-close:focus-visible { outline: 2px solid #B23E13; outline-offset: 2px; }
+.lem-set { margin: 0; padding: 0; border: 0; min-width: 0; }
+.lem-set > .lem-label { padding: 0; margin-bottom: 2px; }
+.lem-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.lem-chip { position: relative; display: inline-flex; }
+.lem-chip input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.lem-chip span { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 14px; border: 1px solid #D8CCC0; border-radius: 999px; background: #FFFFFF; color: #14110F; font-size: 14px; line-height: 1.2; cursor: pointer; transition: border-color .15s ease, background .15s ease; }
+.lem-chip span:hover { border-color: #14110F; }
+.lem-chip input:checked + span { border-color: #14110F; background: #14110F; color: #FFFFFF; }
+.lem-chip input:focus-visible + span { outline: 2px solid #B23E13; outline-offset: 2px; }
+.lem-select { appearance: auto; }
+.lem-file { width: 100%; min-height: 48px; padding: 2px 0; font: inherit; font-size: 15px; color: #46403B; }
+.lem-file::file-selector-button { min-height: 44px; margin-right: 12px; padding: 10px 16px; border: 1px solid #D8CCC0; border-radius: 8px; background: #FFFFFF; color: #14110F; font: 500 14px var(--font-inter, 'Inter'), system-ui, sans-serif; cursor: pointer; }
+.lem-file::file-selector-button:hover { border-color: #14110F; }
+.lem-file:focus-visible { outline: 2px solid #B23E13; outline-offset: 2px; }
+.lem-error { color: #9B1C1C; }
 .lem-trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .lem-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 4px; }
 .lem-send { display: inline-flex; align-items: center; gap: 12px; min-height: 50px; padding: 12px 22px; border: 0; border-radius: 8px; background: #14110F; color: #FFFFFF; font: 600 15px/1 var(--font-inter, 'Inter'), system-ui, sans-serif; cursor: pointer; transition: background .18s ease; }
