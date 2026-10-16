@@ -285,6 +285,15 @@ export default function AiQuotingSoftwarePage() {
               </div>
 
               <div className="lg:col-span-5">
+                <img
+                  src="/images/us/ai-quoting-software/hero-estimator-review.webp"
+                  alt="A woman reviews a quote on a monitor beside a technical drawing and an orange mug."
+                  width={1200}
+                  height={800}
+                  loading="eager"
+                  decoding="async"
+                  className="mt-0 mb-6 aspect-[3/2] w-full rounded-2xl object-cover"
+                />
                 <figure className="rounded-2xl border border-fj-neutral-200 bg-white p-5 sm:p-6">
                   <figcaption className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">
                     Example: one emailed RFQ to a draft quote
@@ -403,6 +412,15 @@ export default function AiQuotingSoftwarePage() {
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   AI does the reading. Fixed rules set the price. A person approves before anything leaves.
                 </p>
+                <img
+                  src="/images/us/ai-quoting-software/how-drawing-and-quote.webp"
+                  alt="A man reviews a part drawing beside a ruler, a laptop and an orange folder at a shop desk."
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                  decoding="async"
+                  className="mt-6 aspect-[3/2] w-full rounded-2xl object-cover"
+                />
               </div>
               <ol className="grid gap-3 lg:col-span-8">
                 {AGENT_STEPS.map((s, i) => (
@@ -425,9 +443,23 @@ export default function AiQuotingSoftwarePage() {
             <p className="fj-eyebrow">Who it fits</p>
             <h2 className="mt-4 max-w-3xl font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">Quoting agents by team.</h2>
             <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
-              {WHO.map((w) => (
+              {WHO.map((w, i) => (
                 <li key={w.t}>
                   <Link href={w.href} className="group flex h-full flex-col rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6 hover:border-[#F05A28]/50">
+                    <img
+                      src={`/images/us/ai-quoting-software/${['who-manufacturers', 'who-distributors', 'who-contractors', 'who-bid-teams'][i]}.webp`}
+                      alt={[
+                        'A machinist checks a metal part with calipers beside an orange shop rag and a CNC machine.',
+                        'A woman holds a tablet in a warehouse aisle with plain boxes and an orange pallet jack.',
+                        'Two people review a printed plan on a tailgate at a commercial job site, with one wearing an orange safety vest.',
+                        'Three colleagues review bid documents beside an open laptop and an orange binder.',
+                      ][i]}
+                      width={1200}
+                      height={800}
+                      loading="lazy"
+                      decoding="async"
+                      className="mb-4 aspect-[3/2] w-full rounded-xl object-cover"
+                    />
                     <span className="font-fj-display text-xl font-semibold text-fj-ink group-hover:text-[#B23E13]">{w.t}</span>
                     <span className="mt-2 flex-1 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{w.d}</span>
                     <span className="mt-4 text-fj-ink group-hover:text-[#B23E13]"><Arrow /></span>
