@@ -181,11 +181,11 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // ── Cost ──
   // question box
   { category: 'cost', question: 'How much do AI agents cost?',
-    answer: 'A rented customer service agent is priced by use. On 11 October 2026 Intercom listed Fin at $0.99 per outcome, Zendesk’s UK page listed committed automated resolutions at £1.30 each on top of plans from £15 to £89 per agent a month paid yearly, and Gorgias listed $0.85 to $1.00 per automated interaction. A custom agent is a one-off build. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.' },
+    answer: 'A rented customer service agent is priced by use. On 11 October 2026 Intercom listed Fin at $0.99 per outcome, Zendesk’s UK page listed committed automated resolutions at £1.30 each on top of plans from £15 to £89 per agent a month paid yearly, and Gorgias listed $0.85 to $1.00 per automated interaction. A custom agent is a one-off build. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.' },
   { category: 'cost', question: 'How much does it cost to build a custom AI chatbot in the UK?',
     answer: 'A1 Automation London, in a guide updated on 14 July 2026, puts the set-up cost of a custom AI chatbot in the UK at £8,000 to £60,000 or more, and of an enterprise chatbot at £60,000 to £250,000 or more. The spread comes from what the chatbot must do and how many systems it must connect to. Those are market figures from one named source. FactoryJet quotes a fixed price in writing after a short scoping call.' },
   { category: 'cost', question: 'What do we pay after the agent is live?',
-    answer: 'FactoryJet quotes the build and the ongoing support as two fixed prices, in writing, after a short scoping call, so you know both figures before you sign. After launch FactoryJet keeps managing the servers, the AI, the APIs and the maintenance, so your team does not have to. An API is the documented way one piece of software talks to another.' },
+    answer: 'FactoryJet quotes the build, and any support you choose, as two fixed prices, in writing, after a short scoping call, so you know both figures before you sign. After launch FactoryJet can keep managing the servers, the AI, the APIs and the maintenance, so your team does not have to. An API is the documented way one piece of software talks to another.' },
   { category: 'cost', question: 'How long does it take to set up AI customer service?',
     answer: 'Switching on the AI inside a helpdesk you already use is quick. Intercom says Fin can be set up in under an hour. A custom agent takes longer because it is connected to your own systems and tested on your past conversations first. Expect a first version on one channel a few weeks after the scoping call. It starts in draft mode, where a person approves each reply before it is sent.' },
 
@@ -215,7 +215,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'working', question: 'Can we see it working before we sign?',
     answer: 'Yes. We show working software on your own data before a contract. For a support agent that usually means a demo that answers a sample of your real past questions from your own help pages, so you can judge the answers and the handover for yourself. You then get the build and the ongoing support quoted as fixed prices in writing.' },
   { category: 'working', question: 'Who owns the AI agent you build?',
-    answer: 'You do. The prompts, the approved answers, the integration code and the documentation belong to you. Your helpdesk login and your AI provider account are registered to your business. FactoryJet designs, builds and supports the agent, and keeps managing the servers, AI, APIs and maintenance after launch so your team does not have to.' },
+    answer: 'You do. The prompts, the approved answers, the integration code and the documentation belong to you. Your helpdesk login and your AI provider account are registered to your business. FactoryJet designs, builds and supports the agent, and can keep managing the servers, AI, APIs and maintenance after launch so your team does not have to.' },
 ];
 
 /* Questions Google UK showed in its question boxes on 2026-10-11. Each one is
@@ -554,7 +554,7 @@ export default function AiCustomerServiceUKPage() {
                   or more. Those are one named source’s planning ranges for the build.
                 </p>
                 <p className="mt-4">
-                  FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short
+                  FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short
                   scoping call.
                 </p>
                 <p style={srcNote}>
@@ -797,8 +797,7 @@ export default function AiCustomerServiceUKPage() {
                 </ul></figure>
                 <p className="mt-6" style={{ maxWidth: 560 }}>
                   Every action the agent takes is written to an audit log your team can read. Customer data stays in
-                  your own accounts, in UK or EU cloud regions when you ask for that. FactoryJet quotes the build and
-                  the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the
+                  your own accounts, in UK or EU cloud regions when you ask for that. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and can keep managing the
                   servers, AI, APIs and maintenance after launch so your team does not have to. We work remotely with
                   UK clients and hold calls in UK business hours.
                 </p>

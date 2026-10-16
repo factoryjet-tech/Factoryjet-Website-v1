@@ -223,13 +223,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'systems',
     question: 'Do we own the AI agent FactoryJet builds?',
     answer:
-      'Yes. You own what we build: the call flows, the prompts, the connectors to your systems and the code. It is built for your center alone, and you do not rent it from us. FactoryJet stays on to support it, and we keep managing the servers, AI models, APIs and maintenance so your team does not have to. If you later want another firm to take it over, the work is yours to hand them.',
+      'Yes. You own what we build: the call flows, the prompts, the connectors to your systems and the code. It is built for your center alone, and you do not rent it from us. FactoryJet stays on to support it, and we can keep managing the servers, AI models, APIs and maintenance so your team does not have to. If you later want another firm to take it over, the work is yours to hand them.',
   },
   {
     category: 'cost',
     question: 'How much does an AI call center cost?',
     answer:
-      'It depends on whether you buy a product or have an agent built. Ready-made contact center products list seat prices: Genesys Cloud CX $75 to $240 per user a month, NiCE CXone $110 to $249 per agent, Talkdesk $85 to $225 per user, and Five9 $119 or $159 a seat with a 50-seat minimum (vendor pricing pages, 11 Oct 2026). A custom voice agent is a one-off build, which development firm Kanopy Labs puts at $15,000 to $200,000 or more (April 2026). FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.',
+      'It depends on whether you buy a product or have an agent built. Ready-made contact center products list seat prices: Genesys Cloud CX $75 to $240 per user a month, NiCE CXone $110 to $249 per agent, Talkdesk $85 to $225 per user, and Five9 $119 or $159 a seat with a 50-seat minimum (vendor pricing pages, 11 Oct 2026). A custom voice agent is a one-off build, which development firm Kanopy Labs puts at $15,000 to $200,000 or more (April 2026). FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.',
   },
   {
     category: 'cost',
@@ -241,7 +241,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'cost',
     question: 'Who looks after the AI agent after it goes live?',
     answer:
-      'FactoryJet does. We keep managing the servers, the AI models, the phone and API connections and the maintenance, so your team does not have to. That includes reviewing transcripts with your supervisors and adding call types when you are ready. We quote the build and the ongoing support as fixed prices in writing after a short scoping call, so you know both figures before you commit.',
+      'FactoryJet does. We can keep managing the servers, the AI models, the phone and API connections and the maintenance, so your team does not have to. That includes reviewing transcripts with your supervisors and adding call types when you are ready. We quote the build, and any support you choose, as fixed prices in writing after a short scoping call, so you know both figures before you commit.',
   },
   {
     category: 'cost',
@@ -419,7 +419,7 @@ const ROLLOUT_STEPS: ReadonlyArray<{ name: string; text: string }> = [
   },
   {
     name: 'Narrow Go-Live, Then Support',
-    text: 'The agent starts on overflow or after-hours calls for one call type and widens when your supervisors sign off. FactoryJet stays on and keeps managing the servers, AI models, APIs and maintenance.',
+    text: 'The agent starts on overflow or after-hours calls for one call type and widens when your supervisors sign off. FactoryJet stays on and can keep managing the servers, AI models, APIs and maintenance.',
   },
 ];
 
@@ -576,8 +576,9 @@ export default function AiCallCenterAgentsPage() {
                   <HeroInlineForm
                     source="ai-call-center-agents"
                     region="us"
-                    submitLabel="Get a free call flow review"
-                  />
+                    submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
                 </div>
 
                 <p className={`${styles.heroDetails} text-lg sm:text-xl text-[#46403B] font-normal leading-relaxed mb-8 max-w-2xl`}> This page describes a service. FactoryJet designs, builds, implements and supports a custom AI voice agent inside the phone system and CRM your center already runs. It takes routine service calls, overflow and after-hours calls, places reminder calls, writes the call summary, and passes the caller to a person with the notes attached. Further down we say when a ready-made product is the better buy.

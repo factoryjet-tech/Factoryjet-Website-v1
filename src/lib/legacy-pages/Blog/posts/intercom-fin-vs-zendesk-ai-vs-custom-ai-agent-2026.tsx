@@ -144,11 +144,11 @@ const faqs: FAQItem[] = [
   // Building one
   {
     q: 'How much does it cost to build a custom AI customer service agent?',
-    a: 'As a market reference, development firm ProductCrafters puts initial development of a customer service AI agent at $10,000 to $50,000, and at $25,000 to $50,000 for agents that handle refunds, access order data and escalate complex issues (page modified 20 May 2026, read 11 October 2026). Those are market figures and no FactoryJet price. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.',
+    a: 'As a market reference, development firm ProductCrafters puts initial development of a customer service AI agent at $10,000 to $50,000, and at $25,000 to $50,000 for agents that handle refunds, access order data and escalate complex issues (page modified 20 May 2026, read 11 October 2026). Those are market figures and no FactoryJet price. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.',
   },
   {
     q: 'What does it cost to run and maintain a custom AI agent?',
-    a: 'It depends on the systems, the channels and the volume in your scope, so we quote it for your case. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, so you see both numbers before you commit. After launch we keep managing the servers, the AI, the APIs and the maintenance, so your team does not have to.',
+    a: 'It depends on the systems, the channels and the volume in your scope, so we quote it for your case. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, so you see both numbers before you commit. After launch we can keep managing the servers, the AI, the APIs and the maintenance, so your team does not have to.',
   },
   {
     q: 'How long does a custom support agent take to build?',
@@ -164,7 +164,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How does FactoryJet price a custom support agent?',
-    a: 'We do not publish a price list, and nothing on this page is a FactoryJet price. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. After launch we keep managing the servers, the AI, the APIs and the maintenance. We work remotely with US clients and schedule calls in US business hours.',
+    a: 'We do not publish a price list, and nothing on this page is a FactoryJet price. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. After launch we can keep managing the servers, the AI, the APIs and the maintenance. We work remotely with US clients and schedule calls in US business hours.',
   },
 ];
 
@@ -195,7 +195,7 @@ export const post: BlogPost = {
     'Gorgias AI Agent lists at $0.85 to $1.00 per automated interaction and is set up per connected Shopify store. Its order actions need the Basic plan or higher.',
     'The four billing units are four different things, so the prices cannot be lined up as dollars per ticket. Read what each vendor counts before you compare.',
     'You can keep a rented agent and have only the missing piece built. All four accept custom actions or API connectors.',
-    'No figure on this page is a FactoryJet price. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.',
+    'No figure on this page is a FactoryJet price. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.',
   ],
   faqs,
   content: (
@@ -312,7 +312,7 @@ export const post: BlogPost = {
                 Inside your help desk through its API, or in a channel of your own
               </td>
               <td className="p-3 border border-gray-200">
-                A project price. FactoryJet quotes the build and the ongoing support as fixed prices in writing
+                A project price. FactoryJet quotes the build, and any support you choose, as fixed prices in writing
               </td>
               <td className="p-3 border border-gray-200">
                 The work crosses systems the rented builders cannot reach, or happens outside the help desk
@@ -459,8 +459,7 @@ export const post: BlogPost = {
         <a href={SRC.productCrafters} target="_blank" rel="noopener noreferrer">ProductCrafters</a> puts initial
         development of a customer service AI agent at $10,000 to $50,000, and at $25,000 to $50,000 for agents that
         handle refunds, access order data and escalate complex issues (page modified 20 May 2026). That is a market
-        range from a named firm and no FactoryJet price. FactoryJet quotes the build and the ongoing support as fixed
-        prices in writing after a short scoping call, and we keep managing the servers, the AI, the APIs and the
+        range from a named firm and no FactoryJet price. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and we can keep managing the servers, the AI, the APIs and the
         maintenance so your team does not have to.
       </p>
 
@@ -949,8 +948,7 @@ export const post: BlogPost = {
         and shipping policies, and a list of the systems the agent would need to check.
       </p>
       <p>
-        We can show working software on your own data before a contract. FactoryJet quotes the build and the ongoing
-        support as fixed prices in writing after a short scoping call. After launch we keep managing the servers, the
+        We can show working software on your own data before a contract. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. After launch we can keep managing the servers, the
         AI, the APIs and the maintenance, so your team does not have to. We work remotely with US clients and schedule
         calls in US business hours.
       </p>

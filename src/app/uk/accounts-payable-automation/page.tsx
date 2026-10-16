@@ -310,7 +310,7 @@ const FAQ_ITEMS: {
   {
     category: 'build',
     question: 'Who looks after the agent once it is live?',
-    answer: 'FactoryJet does. We quote the build and the ongoing support as fixed prices in writing after a short scoping call, and we keep managing the servers, AI, APIs and maintenance so your finance team does not have to. Support also covers the changes every AP process sees: new suppliers, new approvers, a change of ledger plan or a new entity. You own the agent throughout.',
+    answer: 'FactoryJet does. We quote the build, and any support you choose, as fixed prices in writing after a short scoping call, and we can keep managing the servers, AI, APIs and maintenance so your finance team does not have to. Support also covers the changes every AP process sees: new suppliers, new approvers, a change of ledger plan or a new entity. You own the agent throughout.',
   },
   {
     category: 'build',
@@ -468,7 +468,7 @@ const BUILD_STEPS: { n: string; t: string; d: string }[] = [
   { n: '03', t: 'Rules workshop', d: 'With whoever pays your bills, and your accountant if you wish, we write the checks, coding rules, matching tolerances, approval limits and hold rules. You sign them off.' },
   { n: '04', t: 'Build and connect', d: 'We connect the inbox, the ledger and your approval channel, each with the least access the step needs. The agent is given no access to release payments or change supplier bank details.' },
   { n: '05', t: 'Review mode', d: 'The agent starts by creating draft bills that a person checks one by one. A supplier moves to automatic routing only when your team is happy with its results.' },
-  { n: '06', t: 'Support', d: 'FactoryJet keeps managing the servers, AI, APIs and maintenance, and adds suppliers and rules as your business changes. You own the agent, the rules and the code.' },
+  { n: '06', t: 'Support', d: 'FactoryJet can keep managing the servers, AI, APIs and maintenance, and add suppliers and rules as your business changes. You own the agent, the rules and the code.' },
 ];
 
 /* JSON-LD. The Organization is referenced by @id only and is defined once,
@@ -889,7 +889,7 @@ export default function AccountsPayableAutomationUKPage() {
                 invoice processing at £30,000 to £90,000 before VAT. LeverX puts a single-workflow agent, with invoice
                 or document triage as one of its examples, at £10,000 to £30,000 over 5 to 9 weeks, and a multi-step
                 agent with integrations at £30,000 to £80,000. Neither figure is a FactoryJet price. FactoryJet quotes
-                the build and the ongoing support as fixed prices in writing after a short scoping call. Our guide to{' '}
+                the build, and any support you choose, as fixed prices in writing after a short scoping call. Our guide to{' '}
                 <a href="/blog/ai-cost-uk-2026">AI cost in the UK (2026)</a> sets out the wider market.
               </p>
             </div>

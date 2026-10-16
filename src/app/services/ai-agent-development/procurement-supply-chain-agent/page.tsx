@@ -370,7 +370,9 @@ export default function ProcurementSupplyChainAgentPage() {
                   the person who needed the part. We build agents that do the reading and the matching, and leave the
                   approving to your buyers.
                 </p>
-                <HeroInlineForm source="us_procurement_agent_hero" region="us" submitLabel="Scope a procurement agent" />
+                <HeroInlineForm source="us_procurement_agent_hero" region="us" submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
               </div>
               <div className="pp-stage" role="img" aria-label="A purchase order line showing the ERP promised date, the date extracted from a supplier acknowledgement, and the variance flagged for buyer approval.">
                 <div className="pp-store" aria-hidden="true">

@@ -408,8 +408,9 @@ export default function ShopifyMigrationPage() {
             <HeroInlineForm
               source="Shopify Migration Hero Lead"
               region="us"
-              submitLabel="Request Free Migration Audit →."
-            />
+              submitLabel="See a draft of my store"
+            trustText="A working draft built with your own products before you sign. Founder replies within 24 hours."
+          />
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
               <a
                 href="#migration-protocols"

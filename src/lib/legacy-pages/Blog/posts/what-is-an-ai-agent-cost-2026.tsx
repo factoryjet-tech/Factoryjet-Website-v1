@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: 'How much does an AI agent cost to run per month?',
-    a: 'A rented agent bills per result on the vendor\'s price list: Intercom charges $0.99 per Fin outcome, and Salesforce Agentforce works out to $0.10 per action. For an agent built for you there is no single monthly figure, because it depends on the work the agent handles and the systems it connects to. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to.',
+    a: 'A rented agent bills per result on the vendor\'s price list: Intercom charges $0.99 per Fin outcome, and Salesforce Agentforce works out to $0.10 per action. For an agent built for you there is no single monthly figure, because it depends on the work the agent handles and the systems it connects to. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and can keep managing the servers, AI, APIs and maintenance so your team does not have to.',
   },
   {
     q: 'How much does it cost to build an AI agent?',

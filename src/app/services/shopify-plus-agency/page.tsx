@@ -468,7 +468,9 @@ export default function ShopifyPlusAgencyPage() {
                 <p className="pp-lead" style={{ maxWidth: '50ch' }}>
                   We build the parts of a Plus store that sit below the theme: checkout extensions, Shopify Functions, native B2B wholesale, expansion stores and live ERP sync. A focused Plus build takes 5 to 8 weeks, a full replatform 8 to 14. You get a fixed quote before work starts, and we stay on after launch.
                 </p>
-                <HeroInlineForm source="us_shopify_plus_hero" region="us" submitLabel="Get a Shopify Plus scoping call" />
+                <HeroInlineForm source="us_shopify_plus_hero" region="us" submitLabel="See a draft of my store"
+            trustText="A working draft built with your own products before you sign. Founder replies within 24 hours."
+          />
               </div>
               <div style={{ borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 24px 48px -28px rgba(20,17,15,0.28)' }}>
                 <Image

@@ -63,7 +63,7 @@ import ConnectorPathDiagram from './ConnectorPathDiagram';
      add a figure for running or upkeep. Oracle's statement that its connector
      is not a paid feature is quoted as Oracle's.
    - He also confirmed that day: the AI and hosting bills may sit in the
-     client's own accounts at cost, and FactoryJet keeps managing the servers,
+     client's own accounts at cost, and FactoryJet can keep managing the servers,
      the AI models, the API connections and the upkeep either way.
    - The six "other names" restate each firm's own page as read that day. We
      have not worked with them and did not test their products.
@@ -606,7 +606,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'What does it cost to run a NetSuite AI agent each month?',
     answer:
-      "There are two bills. The AI model charges for each request, and the agent needs somewhere to run. If you prefer, both sit in your own accounts and you pay those bills directly, at cost. Whose account pays does not change who does the work. We keep managing the servers, the AI models, the API connections and the upkeep, so your team never has to. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.",
+      "There are two bills. The AI model charges for each request, and the agent needs somewhere to run. If you prefer, both sit in your own accounts and you pay those bills directly, at cost. Whose account pays does not change who does the work. We can keep managing the servers, the AI models, the API connections and the upkeep, so your team never has to. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.",
   },
   {
     category: 'working',
@@ -970,7 +970,7 @@ const EXPERIENCE: ReadonlyArray<{ t: string; kind: string; what: string; href: s
   {
     t: 'Who looks after it',
     kind: 'Managed after launch',
-    what: 'The AI usage and hosting bills may sit in your own accounts, at cost. Either way FactoryJet keeps managing the servers, the AI models, the API connections and the upkeep, so your team never has to.',
+    what: 'The AI usage and hosting bills may sit in your own accounts, at cost. Either way FactoryJet can keep managing the servers, the AI models, the API connections and the upkeep, so your team never has to.',
     href: '/services/ai-agent-monitoring',
     cta: 'See monitoring and support',
     span: 'lg:col-span-7',
@@ -1234,8 +1234,9 @@ export default function NetSuiteAiAgentsPage() {
                     region="us"
                     source="services_netsuite_ai_agents_hero"
                     service="NetSuite AI Agents"
-                    submitLabel="Scope my agent"
-                  />
+                    submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
                 </div>
 
                 <div className="mt-5">

@@ -418,8 +418,9 @@ export default function AiCustomerSupportAgentsPage() {
               <HeroInlineForm
                 source="services_ai_customer_support_agents"
                 region="us"
-                submitLabel="Request CX Automation Audit"
-              />
+                submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
             </div>
 
             <div className="pp-hero-card">

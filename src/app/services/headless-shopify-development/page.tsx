@@ -436,8 +436,9 @@ export default function HeadlessShopifyPage() {
             <HeroInlineForm
               source="Headless Shopify Hero Lead"
               region="us"
-              submitLabel="Request Architecture Review →."
-            />
+              submitLabel="See a draft of my store"
+            trustText="A working draft built with your own products before you sign. Founder replies within 24 hours."
+          />
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
               <a
                 href="#architecture-blueprint"

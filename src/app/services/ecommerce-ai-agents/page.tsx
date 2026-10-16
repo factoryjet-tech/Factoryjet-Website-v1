@@ -604,7 +604,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'What does it cost to run an ecommerce AI agent each month?',
     answer:
-      'We quote it with the build, so you see both numbers before you decide. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. After launch we keep managing the servers, the AI models, the API connections and the maintenance, so your team does not have to.',
+      'We quote it with the build, so you see both numbers before you decide. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. After launch we can keep managing the servers, the AI models, the API connections and the maintenance, so your team does not have to.',
   },
   {
     category: 'working',
@@ -1047,7 +1047,7 @@ const EXPERIENCE: ReadonlyArray<{ t: string; kind: string; what: string; href: s
   {
     t: 'Who looks after it',
     kind: 'Managed after launch',
-    what: 'We quote the build and the ongoing support as fixed prices in writing after a short scoping call. After launch FactoryJet keeps managing the servers, the AI models, the API connections and the maintenance, so your team does not have to. You own what we build.',
+    what: 'We quote the build, and any support you choose, as fixed prices in writing after a short scoping call. After launch FactoryJet can keep managing the servers, the AI models, the API connections and the maintenance, so your team does not have to. You own what we build.',
     href: '/services/ai-agent-monitoring',
     cta: 'See monitoring and support',
     span: 'lg:col-span-7',
@@ -1262,8 +1262,9 @@ export default function EcommerceAiAgentsPage() {
                     region="us"
                     source="services_ecommerce_ai_agents_hero"
                     service="Ecommerce AI Agents"
-                    submitLabel="Scope my agent"
-                  />
+                    submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
                 </div>
 
                 <p className={`${styles.heroDetails} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}> Some jobs need nothing built, because your

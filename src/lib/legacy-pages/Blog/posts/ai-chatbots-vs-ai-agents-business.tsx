@@ -37,7 +37,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much should a US small business expect to spend?',
-      a: "Realistic 2026 ranges. Chatbots: off-the-shelf SaaS like Intercom Fin, Drift, or Zendesk Answer Bot runs $50–$400/month with a 1–2 week setup. Custom-built chatbots run $2,000–$15,000 upfront. AI agents: production-grade builds for SMBs typically land between $15,000 and $75,000 depending on integration depth. Voice agents and multi-tool agents that touch your CRM, calendar, and email cost more than text-only ones. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.",
+      a: "Realistic 2026 ranges. Chatbots: off-the-shelf SaaS like Intercom Fin, Drift, or Zendesk Answer Bot runs $50–$400/month with a 1–2 week setup. Custom-built chatbots run $2,000–$15,000 upfront. AI agents: production-grade builds for SMBs typically land between $15,000 and $75,000 depending on integration depth. Voice agents and multi-tool agents that touch your CRM, calendar, and email cost more than text-only ones. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.",
     },
     {
       q: 'Do I need both a chatbot and an AI agent?',

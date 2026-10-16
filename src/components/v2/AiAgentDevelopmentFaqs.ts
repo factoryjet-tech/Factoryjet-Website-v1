@@ -116,7 +116,7 @@ export const AI_AGENT_FAQS = [
     "id": "Q15",
     "category": "faq-cost",
     "question": "How much does it cost to run an AI agent each month?",
-    "answer": "Running costs cover model usage, hosting and any support plan. The total depends on how much work the agent does, so we do not publish one figure. FactoryJet quotes the build and the ongoing support as fixed prices, in writing, after a short scoping call. After launch we keep managing the servers, the AI models, the API connections and the maintenance, so your team does not have to. AI and hosting bills can sit in your own accounts, at cost."
+    "answer": "Running costs cover model usage and hosting, plus support if you choose it. The total depends on how much work the agent does, so we do not publish one figure. You own the code and the repository from day one. AI and hosting can run in your own accounts, at cost, with no markup from us. FactoryJet quotes the build as a fixed price in writing after a short scoping call, and defects found after launch are fixed inside that price for a cover period we agree up front. Support after that is optional: each change is quoted and approved before we do it, and there is no monthly minimum."
   },
   {
     "id": "Q16",

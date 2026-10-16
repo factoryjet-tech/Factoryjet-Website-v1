@@ -556,7 +556,10 @@ export default function AIMarketingAgentUSPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
-        formSlot={<HeroInlineForm region="us" source="services_ai_agent_development_ai_marketing_agent_hero" />}
+        formSlot={<HeroInlineForm region="us" source="services_ai_agent_development_ai_marketing_agent_hero"
+            submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />}
           eyebrow="AI MARKETING AGENT · UNITED STATES"
           headline="AI That Plans, Writes and Sends Your Black Friday Campaign, While You Run Your Business"
           lead="Lifecycle email, SMS, and ad optimization. Automated with AI that writes in your brand voice. The system learns which messages drive revenue. Fixed price after a scoping call. No agency retainer."

@@ -710,7 +710,10 @@ export default function EcommerceDevelopmentPage() {
             using only the confirmed timelines. */}
         <div className="ec-growth-hero">
         <Hero
-          formSlot={<HeroInlineForm region="us" source="us_services_ecommerce_development_hero" />}
+          formSlot={<HeroInlineForm region="us" source="us_services_ecommerce_development_hero"
+            submitLabel="See a draft of my store"
+            trustText="A working draft built with your own products before you sign. Founder replies within 24 hours."
+          />}
           eyebrow="ECOMMERCE DEVELOPMENT COMPANY, USA"
           headline="We design, build and support online stores for US brands. Most go live in 3 to 5 weeks."
           lead="Shopify, WooCommerce, BigCommerce or a custom headless build. We move your products, customers and SEO over, connect payments, shipping and email, and stay on after launch. You get a fixed quote before work starts, and you own the code."

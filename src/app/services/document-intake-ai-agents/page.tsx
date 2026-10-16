@@ -44,7 +44,7 @@ import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
      custom agent appears here. The three cloud reading services are
      described by what they take and what they return, with no price. Care
      after launch is described only as: build and ongoing support quoted as
-     fixed prices in writing, and FactoryJet keeps managing the servers, the
+     fixed prices in writing, and FactoryJet can keep managing the servers, the
      AI models, the API connections and the maintenance.
    4. Nothing here says where the FactoryJet team is or is not.
    5. No delivery time is promised. The one timeline on the page is Layer3
@@ -929,7 +929,7 @@ const EXPERIENCE: ReadonlyArray<{ t: string; kind: string; what: string; href: s
   {
     t: 'After launch',
     kind: 'Managed by FactoryJet',
-    what: 'We quote the build and the ongoing support as two fixed prices, in writing, after a short scoping call. Once the agent is live, FactoryJet keeps managing the servers, the AI models, the API connections and the maintenance, so your operations team does not have to.',
+    what: 'We quote the build, and any support you choose, as two fixed prices, in writing, after a short scoping call. Once the agent is live, FactoryJet can keep managing the servers, the AI models, the API connections and the maintenance, so your operations team does not have to.',
     href: '/services/ai-agent-monitoring',
     cta: 'How monitoring and support works',
     span: 'lg:col-span-7',
@@ -1252,8 +1252,9 @@ export default function DocumentIntakeAiAgentsPage() {
                     region="us"
                     source="services_document_intake_ai_agents_hero"
                     service="Document Intake AI Agents"
-                    submitLabel="Scope my intake agent"
-                  />
+                    submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
                 </div>
 
                 <p className={`${styles.heroDetails} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}>

@@ -281,7 +281,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'working',
     question: 'Who owns the link, and who looks after it?',
     answer:
-      'You own it: the code, the posting map and the accounts it runs under. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. After launch the same team keeps managing the servers, APIs and maintenance, so your own team does not have to watch it.',
+      'You own it: the code, the posting map and the accounts it runs under. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. After launch the same team can keep managing the servers, APIs and maintenance, so your own team does not have to watch it.',
   },
   {
     category: 'working',
@@ -1096,8 +1096,8 @@ export default function ShopifyXeroIntegrationUKPage() {
                   <li><b>Link plus support.</b> Either of the above, with the same team on call after launch for new tax rates, new payment methods and changes to the Shopify or Xero APIs.</li>
                 </ul>
                 <p className="mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short
-                  scoping call. For a custom link we keep managing the servers, APIs and maintenance, so your
+                  FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short
+                  scoping call. For a custom link we can keep managing the servers, APIs and maintenance, so your
                   team does not have to.
                 </p>
                 <div className="mt-8">

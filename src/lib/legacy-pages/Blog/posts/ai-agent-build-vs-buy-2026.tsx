@@ -128,7 +128,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What ongoing costs does a custom-built AI agent have that a SaaS tool absorbs for you?',
-      a: 'A vendor normally bundles four jobs into your subscription: running the AI model, hosting and monitoring the servers, watching for the AI model provider changing or retiring the model you built on, and fixing the agent when a connected system (your CRM, your website, your inventory tool) changes its own software and breaks the connection. With a custom build, someone has to own those jobs after launch. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to.',
+      a: 'A vendor normally bundles four jobs into your subscription: running the AI model, hosting and monitoring the servers, watching for the AI model provider changing or retiring the model you built on, and fixing the agent when a connected system (your CRM, your website, your inventory tool) changes its own software and breaks the connection. With a custom build, someone has to own those jobs after launch. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and can keep managing the servers, AI, APIs and maintenance so your team does not have to.',
     },
     {
       q: 'What is vendor lock-in, and how does it apply to AI agents?',

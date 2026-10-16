@@ -333,11 +333,11 @@ const RULES: { t: string; d: string; src: Citation }[] = [
 const STEPS: { n: string; t: string; d: string; out: string }[] = [
   { n: '01', t: 'Free review of your store or site', d: 'Send the address. We read the site the way Google does, walk through the checkout on a phone, and look at your Search Console data if you share it.', out: 'A short written note on the biggest problems and what each one is costing you.' },
   { n: '02', t: 'A working demo before you sign', d: 'Where it helps you decide, we show working software on your own data before any contract: a draft theme in your own store, or an agent run against your own documents.', out: 'Something you can click, in place of a slide deck.' },
-  { n: '03', t: 'A written scope with a fixed price', d: 'Pages, products, integrations, who supplies what, and the date. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.', out: 'A scope and quote you can take to anyone. Nothing is charged before you have read it.' },
+  { n: '03', t: 'A written scope with a fixed price', d: 'Pages, products, integrations, who supplies what, and the date. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.', out: 'A scope and quote you can take to anyone. Nothing is charged before you have read it.' },
   { n: '04', t: 'Decide which system owns stock and price', d: 'A video workshop in Sydney business hours. We map products, variants, prices, GST, shipping rules and the system that holds each one, and agree a single owner for stock.', out: 'A one-page data map, and a sitemap named the way buyers search.' },
   { n: '05', t: 'Design, phone first', d: 'Product, category, cart and checkout layouts for the phone view first, using your real products.', out: 'Approved designs for every page template.' },
   { n: '06', t: 'Build, connect and test with real orders', d: 'The engineer who scoped the store builds it. Payments, shipping, stock and accounts are connected, old addresses are redirected, and real orders and refunds are run from end to end.', out: 'A staging store you can order from, with a speed report.' },
-  { n: '07', t: 'Launch, handover and support', d: 'We launch, watch the first days of orders, and hand over the domain, store and admin access in your name. After that FactoryJet keeps managing the servers, AI, APIs and maintenance, so your team does not have to.', out: 'A live store you own, and the same team still answering.' },
+  { n: '07', t: 'Launch, handover and support', d: 'We launch, watch the first days of orders, and hand over the domain, store and admin access in your name. After that FactoryJet can keep managing the servers, AI, APIs and maintenance, so your team does not have to.', out: 'A live store you own, and the same team still answering.' },
 ];
 
 /* ─── Six questions to put to any Sydney firm ─── */
@@ -490,7 +490,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     links: [{ href: '/au/ai-agents', label: 'AI agents for Australian businesses' }] },
   // OWN question: the only approved wording on upkeep, with no figure.
   { category: 'ai', question: 'Who looks after the store or the AI agent after launch?',
-    answer: 'FactoryJet does, if you want us to. We quote the build and the ongoing support as fixed prices in writing after a short scoping call. We then keep managing the servers, AI models, APIs and maintenance, so your team does not have to. You still own everything, with the domain, the store and every account in your name.' },
+    answer: 'FactoryJet does, if you want us to. We quote the build, and any support you choose, as fixed prices in writing after a short scoping call. We then can keep managing the servers, AI models, APIs and maintenance, so your team does not have to. You still own everything, with the domain, the store and every account in your name.' },
 
   // ---------- Local ----------
   { category: 'local', question: 'How can I get my business to show up on Google Maps?',
@@ -1339,8 +1339,8 @@ export default function SydneyPage() {
                 <div className="fact"><div className="sec">§03</div><div>
                   <h3>How it is quoted</h3>
                   <p>
-                    FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short
-                    scoping call. We keep managing the servers, AI models, APIs and maintenance, so your team does
+                    FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short
+                    scoping call. We can keep managing the servers, AI models, APIs and maintenance, so your team does
                     not have to.
                   </p>
                   <p className="au-note">

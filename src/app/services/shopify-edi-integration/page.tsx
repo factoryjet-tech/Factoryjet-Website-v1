@@ -446,7 +446,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'Who looks after the integration after launch?',
     answer:
-      'We do. FactoryJet quotes the build and the ongoing support as fixed prices, in writing, after a short scoping call. After launch we keep managing the servers, the APIs and the maintenance, so your team does not have to. When a trading partner changes its guide, the change comes to us. You own the code we write.',
+      'We do. FactoryJet quotes the build, and any support you choose, as fixed prices, in writing, after a short scoping call. After launch we can keep managing the servers, the APIs and the maintenance, so your team does not have to. When a trading partner changes its guide, the change comes to us. You own the code we write.',
   },
   {
     category: 'working',
@@ -743,7 +743,7 @@ const PROCESS: ReadonlyArray<{ n: string; t: string; b: string }> = [
   {
     n: '06',
     t: 'Go live and stay on',
-    b: "We check the first live documents against the trading partner's replies. After launch we keep managing the servers, the APIs and the maintenance, so your team does not have to.",
+    b: "We check the first live documents against the trading partner's replies. After launch we can keep managing the servers, the APIs and the maintenance, so your team does not have to.",
   },
 ];
 

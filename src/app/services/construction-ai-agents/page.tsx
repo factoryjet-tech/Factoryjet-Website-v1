@@ -362,7 +362,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'jobs',
     question: 'Which vendors offer pay-as-you-go pricing for AI voice agents suited for seasonal construction spikes?',
     answer:
-      "Retell AI, Bland and Vapi bill by the minute with no monthly minimum on their entry plans, per their pricing pages on 11 Oct 2026. For a seasonal spike, compare how many calls each runs at once. Retell AI lists 20 free concurrent calls, Bland's Start plan 10 with a cap of 100 calls a day, and Vapi 4 on its usage plan. Goodcall bills per caller served and Smith.ai per call. All five are products you set up yourself. For a custom voice agent, FactoryJet quotes the build and the ongoing support as fixed prices in writing.",
+      "Retell AI, Bland and Vapi bill by the minute with no monthly minimum on their entry plans, per their pricing pages on 11 Oct 2026. For a seasonal spike, compare how many calls each runs at once. Retell AI lists 20 free concurrent calls, Bland's Start plan 10 with a cap of 100 calls a day, and Vapi 4 on its usage plan. Goodcall bills per caller served and Smith.ai per call. All five are products you set up yourself. For a custom voice agent, FactoryJet quotes the build, and any support you choose, as fixed prices in writing.",
   },
   {
     category: 'jobs',
@@ -504,7 +504,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'How much does a custom AI agent for a construction company cost?',
     answer:
-      "It depends on how many systems the agent reads and whether it writes to them. Building a custom AI agent costs roughly $5,000 to more than $180,000, according to development firm ProductCrafters' 2026 breakdown. That range covers every kind of agent and is not specific to construction. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.",
+      "It depends on how many systems the agent reads and whether it writes to them. Building a custom AI agent costs roughly $5,000 to more than $180,000, according to development firm ProductCrafters' 2026 breakdown. That range covers every kind of agent and is not specific to construction. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.",
   },
   {
     category: 'working',
@@ -528,7 +528,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'Do you support the agent after launch?',
     answer:
-      "Yes. Software changes. Procore's own documentation says its rate limit values can change at any time. The same team that built the agent watches its logs, re-tests it when something changes and fixes what breaks. FactoryJet keeps managing the servers, the AI models, the API connections and the upkeep, so your office does not have to.",
+      "Yes. Software changes. Procore's own documentation says its rate limit values can change at any time. The same team that built the agent watches its logs, re-tests it when something changes and fixes what breaks. FactoryJet can keep managing the servers, the AI models, the API connections and the upkeep, so your office does not have to.",
   },
   {
     category: 'working',
@@ -871,7 +871,7 @@ const EXPERIENCE: ReadonlyArray<{ t: string; kind: string; what: string; href: s
   {
     t: 'Who looks after it',
     kind: 'Managed after launch',
-    what: 'FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. After launch we keep managing the servers, the AI models, the API connections and the upkeep, so your office does not have to.',
+    what: 'FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. After launch we can keep managing the servers, the AI models, the API connections and the upkeep, so your office does not have to.',
     href: '/services/ai-agent-monitoring',
     cta: 'See monitoring and support',
     span: 'lg:col-span-7',
@@ -1142,8 +1142,9 @@ export default function ConstructionAiAgentsPage() {
                     region="us"
                     source="services_construction_ai_agents_hero"
                     service="Construction AI Agents"
-                    submitLabel="Scope my agent"
-                  />
+                    submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
                 </div>
 
                 <p className={`${styles.heroDetails} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}> Some jobs need nothing built, because Procore, Autodesk and the takeoff products already

@@ -9,8 +9,8 @@ import type { BlogPost, FAQItem } from '../data.types';
  *   2. a published market range for having a custom chatbot BUILT, from a named source.
  * None of them is a FactoryJet price. The page gives no figure for running, hosting or
  * maintaining a custom chatbot (rule B, 11 Oct 2026): where upkeep comes up, the only lines
- * are that FactoryJet quotes the build and the ongoing support as fixed prices in writing and
- * keeps managing the servers, AI, APIs and maintenance.
+ * are that FactoryJet quotes the build, and any support you choose, as fixed prices in writing and
+ * can keep managing the servers, AI, APIs and maintenance.
  * Vendor prices were read twice (direct fetch and a second reader). Intercom's Essential seat
  * differed between the two readings ($29 and $19); the page says so. Re-read before changing a figure.
  * The Clutch tally is our own count of the first page of its US chatbot list (58 distinct firms).
@@ -112,7 +112,7 @@ const faqs: FAQItem[] = [
   // Searches this page covers
   {
     q: 'How much does an AI chatbot cost per month?',
-    a: 'For a ready-made product, the monthly plans we read on 11 October 2026 start at $5 to $200. Elfsight starts at $5, Tidio at $24.17, Chatbase at $40, Crisp at $45 and Botpress at $150. Helpdesks with an AI agent charge $19 to $132 per seat a month and bill AI usage on top. For a custom build there is no list price to quote. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to.',
+    a: 'For a ready-made product, the monthly plans we read on 11 October 2026 start at $5 to $200. Elfsight starts at $5, Tidio at $24.17, Chatbase at $40, Crisp at $45 and Botpress at $150. Helpdesks with an AI agent charge $19 to $132 per seat a month and bill AI usage on top. For a custom build there is no list price to quote. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and can keep managing the servers, AI, APIs and maintenance so your team does not have to.',
   },
   {
     q: 'How much does chatbot development cost in the US?',
@@ -152,7 +152,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Are there ongoing costs after a custom chatbot is built?',
-    a: 'Yes. A chatbot is software that keeps running, so someone has to look after it once it is live, and how that is charged differs from firm to firm. FactoryJet quotes the build and the ongoing support as two fixed prices in writing after a short scoping call. After launch we keep managing the servers, AI, APIs and maintenance, so your team does not have to.',
+    a: 'Yes. A chatbot is software that keeps running, so someone has to look after it once it is live, and how that is charged differs from firm to firm. FactoryJet quotes the build, and any support you choose, as two fixed prices in writing after a short scoping call. After launch we can keep managing the servers, AI, APIs and maintenance, so your team does not have to.',
   },
   {
     q: 'How much does a WhatsApp or Instagram chatbot cost?',
@@ -168,7 +168,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does FactoryJet charge for an AI chatbot?',
-    a: 'We do not publish a price list, and nothing on this page is a FactoryJet price. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. We can show working software on your own data before you sign a contract, and after launch we keep managing the servers, AI, APIs and maintenance so your team does not have to. You own what we build. We work remotely with US clients and schedule calls in US business hours.',
+    a: 'We do not publish a price list, and nothing on this page is a FactoryJet price. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. We can show working software on your own data before you sign a contract, and after launch we can keep managing the servers, AI, APIs and maintenance so your team does not have to. You own what we build. We work remotely with US clients and schedule calls in US business hours.',
   },
 ];
 
@@ -198,7 +198,7 @@ export const post: BlogPost = {
     'Across nine guides from firms that build chatbots, a rule-based bot costs $2,000 to $25,000 and an AI chatbot connected to your systems $10,000 to $150,000. Spaculus says most US businesses should budget $25,000 to $80,000.',
     'Five other guides start an AI chatbot at $75,000. Four of those five sell a ready-made chatbot or voice product, so check who is quoting before you rely on a build range.',
     'On the first page of the Clutch list of US chatbot firms, 35 of 58 set their minimum project at $10,000 or $25,000, and none listed a minimum under $5,000.',
-    'These are vendor list prices and published market ranges, not FactoryJet prices. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.',
+    'These are vendor list prices and published market ranges, not FactoryJet prices. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.',
   ],
   faqs,
   content: (
@@ -929,7 +929,7 @@ export const post: BlogPost = {
         <p className="mb-4">
           Bring the questions your customers ask most and the systems the answers live in. In a 30-minute call with
           founder Bhavesh Barot we will tell you whether a subscription product will do the job or whether it needs a
-          build. FactoryJet quotes the build and the ongoing support as fixed prices in writing after that call, and we
+          build. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after that call, and we
           can show working software on your own data before a contract.
         </p>
         <a
@@ -1101,12 +1101,11 @@ export const post: BlogPost = {
 
       <h2 id="factoryjet-pricing">How FactoryJet prices chatbot work</h2>
       <p>
-        We do not publish a price list, and nothing above is a FactoryJet price. FactoryJet quotes the build and the
-        ongoing support as fixed prices in writing after a short scoping call. We can also show working software on your
+        We do not publish a price list, and nothing above is a FactoryJet price. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. We can also show working software on your
         own data before a contract, so you can judge the chatbot before you judge the proposal.
       </p>
       <p>
-        After launch we keep managing the servers, AI, APIs and maintenance, so your team does not have to. We design,
+        After launch we can keep managing the servers, AI, APIs and maintenance, so your team does not have to. We design,
         build, implement and support the work, and you own what we build for you.
       </p>
       <p>
@@ -1199,8 +1198,7 @@ export const post: BlogPost = {
         </h3>
         <p className="text-[#4B5563] text-base leading-relaxed mb-6">
           Tell us what your customers ask and which systems hold the answers. We will tell you straight whether a
-          subscription product will do it or whether it needs a build, and FactoryJet quotes the build and the ongoing
-          support as fixed prices in writing after a short scoping call.
+          subscription product will do it or whether it needs a build, and FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.
         </p>
         <div className="flex flex-wrap items-center gap-4">
           <a

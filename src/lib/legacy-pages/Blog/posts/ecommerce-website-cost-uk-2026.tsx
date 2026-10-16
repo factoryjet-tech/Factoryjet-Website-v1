@@ -164,7 +164,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'What does it cost to run an ecommerce website after launch?',
-    a: 'The platform fee is public. Shopify lists £19 to £259 a month on yearly billing and Shopify Plus from £1,800 a month, with hosting included. WooCommerce and Magento Open Source are free software that you host yourself. Card fees are charged on each order by your payment provider. For support after launch, FactoryJet quotes the build and the ongoing support as two fixed prices in writing after a short scoping call, and keeps managing the servers, integrations and maintenance so your team does not have to.',
+    a: 'The platform fee is public. Shopify lists £19 to £259 a month on yearly billing and Shopify Plus from £1,800 a month, with hosting included. WooCommerce and Magento Open Source are free software that you host yourself. Card fees are charged on each order by your payment provider. For support after launch, FactoryJet quotes the build, and any support you choose, as two fixed prices in writing after a short scoping call, and can keep managing the servers, integrations and maintenance so your team does not have to.',
   },
 ];
 
@@ -1031,7 +1031,7 @@ export const post: BlogPost = {
       <p>
         A store with a custom theme takes us 3 to 5 weeks. An advanced store with subscriptions, B2B pricing or a
         migration takes 5 to 8 weeks, and a headless or custom build takes 8 to 14 weeks. After launch we stay on. We
-        quote the ongoing support as a fixed price in writing too, and we keep managing the servers, integrations and
+        quote any support you choose as a fixed price in writing too, and we can keep managing the servers, integrations and
         maintenance so your team does not have to.
       </p>
       <p>

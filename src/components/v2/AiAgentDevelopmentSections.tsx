@@ -236,8 +236,8 @@ function TellUsTheWorkflow() {
             region="us"
             source="services_ai_agent_development_tell_us"
             service="AI Agent Development"
-            submitLabel="Scope my agent"
-            trustText="Name and email is enough. We follow up with the three questions above."
+            submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
           />
         </div>
       </div>
@@ -748,8 +748,8 @@ export default function AiAgentDevelopmentSections() {
                 region="us"
                 source="services_ai_agent_development_final"
                 service="AI Agent Development"
-                submitLabel="Scope my agent"
-                trustText="No spam, no obligation. You get a straight build, buy or automate answer."
+                submitLabel="See a demo on my data"
+                trustText="Working software on your own data before you sign. Founder replies within 24 hours."
               />
             </div>
           </div>

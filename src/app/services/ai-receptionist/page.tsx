@@ -467,8 +467,9 @@ export default function AiReceptionistPage() {
                   <HeroInlineForm
                     source="ai-receptionist"
                     region="us"
-                    submitLabel="Get a free call audit"
-                  />
+                    submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-[#E7DED6] text-xs font-mono text-[#6E655F]">

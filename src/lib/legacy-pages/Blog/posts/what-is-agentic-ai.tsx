@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     q: 'How much does agentic AI cost?',
-    a: 'As a market reference, development firm ProductCrafters puts 2026 custom AI agent builds at about $5,000 to more than $180,000. The price depends mostly on how many systems the agent reads and writes to and how many exceptions it must handle. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.',
+    a: 'As a market reference, development firm ProductCrafters puts 2026 custom AI agent builds at about $5,000 to more than $180,000. The price depends mostly on how many systems the agent reads and writes to and how many exceptions it must handle. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.',
   },
   {
     q: 'How long does it take to build an agentic AI system?',

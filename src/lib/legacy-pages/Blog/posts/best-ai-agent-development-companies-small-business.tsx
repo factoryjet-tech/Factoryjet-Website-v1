@@ -127,7 +127,7 @@ export const post: BlogPost = {
     },
     {
       "q": "What does it cost to run an AI agent each month?",
-      "a": "It depends on what the agent does and how many systems it connects to, so there is no single figure. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. We keep managing the servers, AI, APIs and maintenance, so your team does not have to."
+      "a": "It depends on what the agent does and how many systems it connects to, so there is no single figure. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. We can keep managing the servers, AI, APIs and maintenance, so your team does not have to."
     },
     {
       "q": "How long does AI agent development take?",

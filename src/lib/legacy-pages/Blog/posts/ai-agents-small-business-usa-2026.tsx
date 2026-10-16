@@ -37,7 +37,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does an AI agent cost for a US small business?',
-      a: "Cost ranges in 2026: off-the-shelf platforms (Intercom, Drift, Tidio, Freshchat), $50–$400/month with limited customization. Mid-tier custom configurations on Voiceflow or Botpress, $1,500–$3,500 to build. Fully custom AI agents built by an agency, $2,500–$8,000 to build. For most US SMBs, the custom agency-built route delivers the best ROI because it's trained on your specific business, integrated into your website and CRM, and tested against your actual customer conversations. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.",
+      a: "Cost ranges in 2026: off-the-shelf platforms (Intercom, Drift, Tidio, Freshchat), $50–$400/month with limited customization. Mid-tier custom configurations on Voiceflow or Botpress, $1,500–$3,500 to build. Fully custom AI agents built by an agency, $2,500–$8,000 to build. For most US SMBs, the custom agency-built route delivers the best ROI because it's trained on your specific business, integrated into your website and CRM, and tested against your actual customer conversations. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.",
     },
     {
       q: 'How long does it take to implement an AI agent for my small business?',

@@ -821,7 +821,7 @@ export const post: BlogPost = {
         For a wider view, CartCoders, a Shopify agency, puts a typical Shopify Plus store build at $40,000 to $120,000 or more in its <a href={CARTCODERS_URL} className={link} rel="noopener" target="_blank">2026 cost guide</a>, and a full custom store on a standard plan at $8,000 to $35,000. The platform fee is separate. <a href={PLUS_HELP_URL} className={link} rel="noopener" target="_blank">Shopify&rsquo;s help page</a> lists Plus at $2,300 a month on a three-year term or $2,500 a month on a one-year term for standard setups.
       </p>
       <p className="mb-6">
-        FactoryJet does not publish a rate card. We quote the build and the ongoing support as fixed prices in writing after a short scoping call. For the platform costs line by line, read <a href="/blog/the-true-cost-of-shopify-plus-2026" className={link}>the true cost of Shopify Plus</a>.
+        FactoryJet does not publish a rate card. We quote the build, and any support you choose, as fixed prices in writing after a short scoping call. For the platform costs line by line, read <a href="/blog/the-true-cost-of-shopify-plus-2026" className={link}>the true cost of Shopify Plus</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Which Shopify Plus agency fits your brand</h2>
@@ -958,7 +958,7 @@ export const post: BlogPost = {
         <li><strong>AI agents.</strong> Agents that work on store operations, such as order exceptions, emailed wholesale purchase orders and returns, with approval steps. See <a href="/services/shopify-ai-agents" className={link}>Shopify AI agents</a> and <a href="/services/erp-ai-agents" className={link}>ERP AI agents</a>.</li>
       </ul>
       <p className="mb-4">
-        A focused Plus build, such as checkout, Functions, B2B or a migration, usually runs 5 to 8 weeks. A full replatform or headless build takes 8 to 14 weeks. We quote the build and the ongoing support as fixed prices in writing after a short scoping call, and we can show working software on your own data before you sign a contract. After launch we keep managing the servers, AI, APIs and maintenance so your team does not have to. You own everything we build.
+        A focused Plus build, such as checkout, Functions, B2B or a migration, usually runs 5 to 8 weeks. A full replatform or headless build takes 8 to 14 weeks. We quote the build, and any support you choose, as fixed prices in writing after a short scoping call, and we can show working software on your own data before you sign a contract. After launch we can keep managing the servers, AI, APIs and maintenance so your team does not have to. You own everything we build.
       </p>
       <p className="mb-6">
         If you are still working out what you need, these pages explain the options in plain English: <a href="/blog/best-ecommerce-development-agencies-usa" className={link}>ecommerce development agencies in the USA</a> for builds beyond Shopify, <a href="/blog/best-bigcommerce-agencies-2026" className={link}>the matching list of BigCommerce agencies</a>, <a href="/blog/how-to-choose-ecommerce-development-agency-2026" className={link}>how to choose an ecommerce development agency</a>, and <a href="/blog/top-b2b-ecommerce-development-agencies-portals-2026" className={link}>B2B ecommerce development agencies for portals</a>.

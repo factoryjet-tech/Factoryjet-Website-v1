@@ -63,7 +63,7 @@ import OdooRoutesDiagram from './OdooRoutesDiagram';
    - Partner status is left out on purpose (Bhavesh, 2026-10-09). The page
      raises no partner title, ours or another firm's. Do not add one.
    - He also confirmed that day: the AI and hosting bills may sit in the
-     client's own accounts at cost, and FactoryJet keeps managing the servers,
+     client's own accounts at cost, and FactoryJet can keep managing the servers,
      the AI models, the API connections and the upkeep either way.
    - Mirrors /services/erp-ai-agents for components and schema.
 
@@ -575,7 +575,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'What does it cost to run an Odoo AI agent each month?',
     answer:
-      "There are two bills for a custom agent. The AI model charges for each request, and the agent needs somewhere to run. If you prefer, both sit in your own accounts and you pay those bills directly, at cost. Whose account pays does not change who does the work. We keep managing the servers, the AI models, the API connections and the upkeep, so your team never has to. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. Odoo bills its own AI features separately, in Odoo credits.",
+      "There are two bills for a custom agent. The AI model charges for each request, and the agent needs somewhere to run. If you prefer, both sit in your own accounts and you pay those bills directly, at cost. Whose account pays does not change who does the work. We can keep managing the servers, the AI models, the API connections and the upkeep, so your team never has to. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. Odoo bills its own AI features separately, in Odoo credits.",
   },
   {
     category: 'working',
@@ -1232,8 +1232,9 @@ export default function OdooAiAgentsPage() {
                     region="us"
                     source="services_odoo_ai_agents_hero"
                     service="Odoo AI Agents"
-                    submitLabel="Scope my Odoo agent"
-                  />
+                    submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
                 </div>
 
                 <div className="mt-5">

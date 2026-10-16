@@ -90,7 +90,7 @@ const faqs: FAQItem[] = [
   // AI agents: running
   {
     q: 'How much do AI agents cost to run each month?',
-    a: 'You pay for model usage, hosting, monitoring and upkeep, plus texts and phone calls if the agent uses them. The amount depends on how often the agent is used and how many systems it connects to, so ask any supplier to model your own monthly volume before the build starts. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to.',
+    a: 'You pay for model usage, hosting, monitoring and upkeep, plus texts and phone calls if the agent uses them. The amount depends on how often the agent is used and how many systems it connects to, so ask any supplier to model your own monthly volume before the build starts. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and can keep managing the servers, AI, APIs and maintenance so your team does not have to.',
   },
   // Custom LLM
   {
@@ -519,8 +519,8 @@ export const post: BlogPost = {
       </figure>
 
       <p>
-        FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and
-        keeps managing the servers, AI, APIs and maintenance so your team does not have to.
+        FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and
+        can keep managing the servers, AI, APIs and maintenance so your team does not have to.
       </p>
 
       <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg my-8">
@@ -1119,7 +1119,7 @@ export const post: BlogPost = {
         the code, the prompts and the accounts.
       </p>
       <p>
-        Bills for AI usage and hosting can sit in your own accounts at cost. We keep managing the servers, AI models, APIs
+        Bills for AI usage and hosting can sit in your own accounts at cost. We can keep managing the servers, AI models, APIs
         and maintenance, so you do not have to. If an off-the-shelf tool from the tables above will do the job, we will
         tell you so. And a firm near you is the better choice if you
         need someone on site.

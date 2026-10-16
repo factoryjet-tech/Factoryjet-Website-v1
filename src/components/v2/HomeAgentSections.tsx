@@ -220,9 +220,9 @@ export function AgentMidCta() {
               region="us"
               source="us_home_mid_ai_agent"
               service="AI Agent Development"
-              submitLabel="Assess my task"
+              submitLabel="See a demo on my data"
               formId="home-agent-form"
-              trustText="Name and email is enough. We follow up with the three questions."
+              trustText="Working software on your own data before you sign. Founder replies within 24 hours."
             />
           </div>
         </div>

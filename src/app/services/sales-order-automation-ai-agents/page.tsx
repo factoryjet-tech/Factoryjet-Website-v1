@@ -46,7 +46,7 @@ import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
    3. Rule of 2026-10-11 (Bhavesh): nothing on this page says what a custom
      agent costs to run or look after. Ongoing support is described only as:
      build and ongoing support quoted as fixed prices in writing, and
-     FactoryJet keeps managing the servers, the AI models, the API connections
+     FactoryJet can keep managing the servers, the AI models, the API connections
      and the maintenance.
    4. Nothing here says where the FactoryJet team is or is not.
    5. The experience claim is Bhavesh's own statement of 2026-10-09 (Odoo,
@@ -590,7 +590,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'Who owns the agents and the code?',
     answer:
-      'You do. The agents are built for you, and the code, the written rules, the part-number list and the test orders are yours. You can have them run in a cloud account that belongs to you. Day to day, FactoryJet keeps managing the servers, the AI models, the API connections and the maintenance, so that work never lands on your team. Should you later bring the work in-house or hand it to another firm, all of it moves with you.',
+      'You do. The agents are built for you, and the code, the written rules, the part-number list and the test orders are yours. You can have them run in a cloud account that belongs to you. Day to day, FactoryJet can keep managing the servers, the AI models, the API connections and the maintenance, so that work never lands on your team. Should you later bring the work in-house or hand it to another firm, all of it moves with you.',
   },
   {
     category: 'working',
@@ -990,7 +990,7 @@ const EXPERIENCE: ReadonlyArray<{ t: string; kind: string; what: string; href: s
   {
     t: 'After launch',
     kind: 'Supported by the people who built it',
-    what: 'After a short scoping call you get two fixed prices in writing, one for the build and one for the ongoing support. Once the agents are live, FactoryJet keeps managing the servers, the AI models, the API connections and the maintenance, so your order desk and your buyers do not have to.',
+    what: 'After a short scoping call you get two fixed prices in writing, one for the build and one for the ongoing support. Once the agents are live, FactoryJet can keep managing the servers, the AI models, the API connections and the maintenance, so your order desk and your buyers do not have to.',
     href: '/services/ai-agent-monitoring',
     cta: 'How monitoring and support work',
     span: 'lg:col-span-7',
@@ -1321,8 +1321,9 @@ export default function SalesOrderAutomationAiAgentsPage() {
                     region="us"
                     source="services_sales_order_automation_ai_agents_hero"
                     service="Sales and Purchase Order Automation"
-                    submitLabel="Scope my order agent"
-                  />
+                    submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
                 </div>
 
                 <p className={`${styles.heroDetails} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}> Later someone else types your own purchase orders to suppliers.

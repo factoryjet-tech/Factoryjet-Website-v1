@@ -56,7 +56,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does an AI agent cost per month?',
-    a: 'Running costs have three parts: model usage, hosting and upkeep. The amount depends on how often the agent is used and how many systems it connects to. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to.',
+    a: 'Running costs have three parts: model usage, hosting and upkeep. The amount depends on how often the agent is used and how many systems it connects to. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and can keep managing the servers, AI, APIs and maintenance so your team does not have to.',
   },
   {
     q: 'Does it cost money to run an AI agent?',
@@ -163,7 +163,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'What ongoing costs should I budget for after an AI project goes live?',
-    a: 'Budget for four things: model usage billed per token or minute, hosting, monitoring, and maintenance. Also budget time for someone on your team to review escalations. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to.',
+    a: 'Budget for four things: model usage billed per token or minute, hosting, monitoring, and maintenance. Also budget time for someone on your team to review escalations. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and can keep managing the servers, AI, APIs and maintenance so your team does not have to.',
   },
 ];
 
@@ -479,8 +479,8 @@ export const post: BlogPost = {
         API, Xero changes a field, your returns policy changes and nobody tells the agent. Someone has to notice and fix it.
       </p>
       <p>
-        FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and
-        keeps managing the servers, AI, APIs and maintenance so your team does not have to.
+        FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and
+        can keep managing the servers, AI, APIs and maintenance so your team does not have to.
       </p>
 
       <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg my-8">

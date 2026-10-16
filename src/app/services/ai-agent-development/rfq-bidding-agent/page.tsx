@@ -705,7 +705,9 @@ export default function RFQBiddingAgentPage() {
           eyebrow="RFQ & BIDDING AGENT"
           headline="Every quote request read, matched and drafted before an estimator opens it"
           lead="Quote requests arrive as email, PDF drawings, spreadsheets and portal notifications. Someone reads every one, finds the part numbers, checks whether it is quotable, prices it and replies. We build agents that do the reading and the lookup, then hand a draft to your estimator."
-          formSlot={<HeroInlineForm region="us" source="us_rfq_bidding_agent_hero" submitLabel="Get a quoting workflow review" />}
+          formSlot={<HeroInlineForm region="us" source="us_rfq_bidding_agent_hero" submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />}
           trustItems={['Reads email, PDF, EDI 840 and portal requests', 'Prices from your ERP, not a copy', 'A human approves before anything is sent']}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">

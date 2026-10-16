@@ -1093,7 +1093,7 @@ export const post: BlogPost = {
       <p>
         We are the agency route. FactoryJet works as a remote project team on a fixed scope. We
         design, build, test and support AI agents and the systems around them, and you own what we build: the code, the
-        prompts and the accounts. Bills for AI usage and hosting can sit in your own accounts at cost while we keep
+        prompts and the accounts. Bills for AI usage and hosting can sit in your own accounts at cost while we can keep
         managing the servers, models and maintenance. We show working software on your own data before you sign a
         contract.
       </p>

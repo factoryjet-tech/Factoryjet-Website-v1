@@ -591,7 +591,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Are there ongoing costs after the chatbot is built?',
     answer:
-      'Yes. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. With ongoing support, we keep managing the servers, AI, APIs and maintenance, so your team does not have to. You can also choose an optional monthly retainer for continuous feature additions.',
+      'Yes. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. With ongoing support, we can keep managing the servers, AI, APIs and maintenance, so your team does not have to. You can also choose an optional monthly retainer for continuous feature additions.',
   },
 
   /* ── Technical & Integrations ── */

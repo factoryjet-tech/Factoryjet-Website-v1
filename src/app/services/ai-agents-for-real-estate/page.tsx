@@ -788,8 +788,9 @@ export default function AiAgentsForRealEstatePage() {
               <HeroInlineForm
                 region="us"
                 source="services_ai_agents_for_real_estate_hero"
-                submitLabel="Get a real estate agent scope"
-              />
+                submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
               <div className="mt-8 flex flex-wrap items-center gap-6">
                 <Link
                   href={CALENDLY}

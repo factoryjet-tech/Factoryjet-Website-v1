@@ -210,7 +210,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   {
     category: 'cost',
     question: 'Who looks after the WhatsApp agent after launch?',
-    answer: 'We do, with you. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to. Support covers reviewing transcripts with you, updating approved answers, submitting new templates, and adjusting the agent when Meta changes its rules, as it did in January and October 2026.',
+    answer: 'We do, with you. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and can keep managing the servers, AI, APIs and maintenance so your team does not have to. Support covers reviewing transcripts with you, updating approved answers, submitting new templates, and adjusting the agent when Meta changes its rules, as it did in January and October 2026.',
   },
   {
     category: 'cost',
@@ -824,7 +824,7 @@ export default function WhatsAppAiAgentsUKPage() {
                   service window, after a free allowance for each business phone number. If a guide tells you those
                   replies are always free, check its date against{' '}<a href={SRC_META_PRICING} target="_blank" rel="noopener noreferrer nofollow">Meta’s pricing page</a>. Meta also needs a payment method on the
                   account, and says it stops delivering replies once the free allowance is used if there is none.
-                </p></td></tr><tr><th scope="row"><b>Support.</b></th><td><p>FactoryJet quotes ongoing support as a fixed price in writing too, and keeps managing
+                </p></td></tr><tr><th scope="row"><b>Support.</b></th><td><p>FactoryJet quotes any support you choose as a fixed price in writing too, and can keep managing
                   the servers, AI, APIs and maintenance so your team does not have to.
                 </p></td></tr></tbody></table></div>
             </div>

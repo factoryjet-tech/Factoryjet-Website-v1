@@ -22,7 +22,7 @@ export const post: BlogPost = {
   faqs: [
     {
       q: 'What is the average monthly operating cost of a medical AI receptionist?',
-      a: 'It depends on how many calls the practice takes and how long they run, so we do not publish one figure. We quote the build and the ongoing support as fixed prices, in writing, after a short scoping call. After launch we keep managing the servers, the AI services, the API connections and the maintenance, so your front-desk team does not have to.',
+      a: 'It depends on how many calls the practice takes and how long they run, so we do not publish one figure. We quote the build, and any support you choose, as fixed prices, in writing, after a short scoping call. After launch we can keep managing the servers, the AI services, the API connections and the maintenance, so your front-desk team does not have to.',
     },
     {
       q: 'How does an AI receptionist book appointments without human double-booking?',
@@ -203,7 +203,7 @@ export const post: BlogPost = {
         </li>
       </ul>
       <p>
-        Together, these four layers scale with call volume and average call length, so a busier practice uses more of each than a quieter one. We quote the build and the ongoing support as fixed prices, in writing, after a short scoping call. After launch we keep managing the servers, the AI services, the API connections and the maintenance, so your front-desk team does not have to.
+        Together, these four layers scale with call volume and average call length, so a busier practice uses more of each than a quieter one. We quote the build, and any support you choose, as fixed prices, in writing, after a short scoping call. After launch we can keep managing the servers, the AI services, the API connections and the maintenance, so your front-desk team does not have to.
       </p>
 
       <h3>2. Electronic Health Record (EHR) Integration Architecture: What Scopes the One-Time Build</h3>

@@ -174,7 +174,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'pricing',
     question: 'How is the restaurant AI voice agent priced compared to third-party call centers?',
     answer:
-      'A traditional human call center bills by the minute, and the quality varies call to call. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. With ongoing support, we keep managing the servers, AI, APIs and maintenance, so your team does not have to.',
+      'A traditional human call center bills by the minute, and the quality varies call to call. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. With ongoing support, we can keep managing the servers, AI, APIs and maintenance, so your team does not have to.',
   },
   {
     category: 'pricing',
@@ -374,8 +374,9 @@ export default function RestaurantAiVoiceAgentsPage() {
                   <HeroInlineForm
                     source="restaurant-ai-voice-agents-hero"
                     region="us"
-                    submitLabel="Request Restaurant AI Audit"
-                  />
+                    submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-[#E7DED6] text-xs font-mono text-[#6E655F]">

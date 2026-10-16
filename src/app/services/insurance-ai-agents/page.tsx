@@ -1144,8 +1144,9 @@ export default function InsuranceAiAgentsPage() {
                     region="us"
                     source="services_insurance_ai_agents_hero"
                     service="Insurance AI Agents"
-                    submitLabel="Scope my agent"
-                  />
+                    submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
                 </div>
 
                 <p className={`${styles.heroDetails} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}> An agent answers the phone, takes a first notice of loss, collects quote

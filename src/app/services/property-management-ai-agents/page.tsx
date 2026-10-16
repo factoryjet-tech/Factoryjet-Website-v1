@@ -220,7 +220,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'deployment',
     question: 'How much do AI agents cost a month?',
     answer:
-      'Cost depends on how many units and properties the agent covers, how many systems it connects to (your PMS, tour-calendar or smart-lock platform, call and text lines), and how much fair housing guardrail configuration your portfolio needs. A small community on one PMS costs far less than a multi-state portfolio needing custom connectors and per-property pricing logic. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. After launch we keep managing the servers, the AI models, the API connections and the maintenance, so your team does not have to.',
+      'Cost depends on how many units and properties the agent covers, how many systems it connects to (your PMS, tour-calendar or smart-lock platform, call and text lines), and how much fair housing guardrail configuration your portfolio needs. A small community on one PMS costs far less than a multi-state portfolio needing custom connectors and per-property pricing logic. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. After launch we can keep managing the servers, the AI models, the API connections and the maintenance, so your team does not have to.',
   },
   {
     category: 'deployment',
@@ -421,8 +421,9 @@ export default function PropertyManagementAiAgentsPage() {
                   <HeroInlineForm
                     source="property-management-ai-agents"
                     region="us"
-                    submitLabel="Request Leasing AI Audit."
-                  />
+                    submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-[#E7DED6] text-xs font-mono text-[#6E655F]">

@@ -60,7 +60,7 @@ import AgentLoopDiagram from './AgentLoopDiagram';
      title, ours or another firm's, and leads on range across ERPs instead.
      Do not add a partner claim.
    - He also confirmed that day: the AI and hosting bills may sit in the
-     client's own accounts at cost, and FactoryJet keeps managing the servers,
+     client's own accounts at cost, and FactoryJet can keep managing the servers,
      the AI models, the API connections and the upkeep either way.
    - Mirrors /services/wordpress-shopify-integration for components and schema.
 
@@ -469,7 +469,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'What does it cost to run an ERP AI agent each month?',
     answer:
-      "There are two bills. The AI model charges for each request, and the agent needs somewhere to run. If you prefer, both sit in your own accounts and you pay those bills directly, at cost. Whose account pays does not change who does the work. We keep managing the servers, the AI models, the API connections and the upkeep, so your team never has to. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.",
+      "There are two bills. The AI model charges for each request, and the agent needs somewhere to run. If you prefer, both sit in your own accounts and you pay those bills directly, at cost. Whose account pays does not change who does the work. We can keep managing the servers, the AI models, the API connections and the upkeep, so your team never has to. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.",
   },
   {
     category: 'working',
@@ -1031,8 +1031,9 @@ export default function ErpAiAgentsPage() {
                     region="us"
                     source="services_erp_ai_agents_hero"
                     service="ERP AI Agents"
-                    submitLabel="Scope my agent"
-                  />
+                    submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
                 </div>
 
                 <div className="mt-5">

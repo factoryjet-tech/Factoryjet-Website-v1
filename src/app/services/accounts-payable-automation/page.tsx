@@ -48,7 +48,7 @@ import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
    - Rule of 2026-10-11 (Bhavesh): nothing on this page says what a custom
      agent costs to run or maintain. No model, hosting, per-invoice or
      retainer figure. Upkeep is described only as: build and ongoing support
-     quoted as fixed prices in writing, and FactoryJet keeps managing the
+     quoted as fixed prices in writing, and FactoryJet can keep managing the
      servers, the AI models, the API connections and the upkeep. Do not add
      a running-cost number, and do not import the monthly figure that older
      pages carry.
@@ -552,7 +552,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'Who looks after the agent after launch?',
     answer:
-      'We do. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. After launch, the team that built the agent keeps managing the servers, the AI models, the API connections and the upkeep, so your finance team does not have to. That includes re-testing on your sample invoices when your accounting system or the AI model changes. Our AI agent monitoring and support page describes the service.',
+      'We do. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. After launch, the team that built the agent can keep managing the servers, the AI models, the API connections and the upkeep, so your finance team does not have to. That includes re-testing on your sample invoices when your accounting system or the AI model changes. Our AI agent monitoring and support page describes the service.',
   },
   {
     category: 'working',
@@ -954,7 +954,7 @@ const EXPERIENCE: ReadonlyArray<{ t: string; kind: string; what: string; href: s
   {
     t: 'Who looks after it',
     kind: 'Managed after launch',
-    what: 'FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call. After launch we keep managing the servers, the AI models, the API connections and the upkeep, so your finance team does not have to.',
+    what: 'FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. After launch we can keep managing the servers, the AI models, the API connections and the upkeep, so your finance team does not have to.',
     href: '/services/ai-agent-monitoring',
     cta: 'See monitoring and support',
     span: 'lg:col-span-7',
@@ -1264,8 +1264,9 @@ export default function AccountsPayableAutomationPage() {
                     region="us"
                     source="services_accounts_payable_automation_hero"
                     service="Accounts Payable Automation"
-                    submitLabel="Scope my AP agent"
-                  />
+                    submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
                 </div>
 
                 <p className={`${styles.heroDetails} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}> We design, build and support an AI agent that reads your vendor

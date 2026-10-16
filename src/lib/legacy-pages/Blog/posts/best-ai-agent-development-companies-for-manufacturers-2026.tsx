@@ -390,7 +390,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Who looks after a manufacturing AI agent after it goes live?',
-    a: 'Someone has to, because ERPs get upgraded and customers change their order formats. Ask each company who watches the agent and who fixes it when an input changes. Intellectyx runs agents under a managed service it calls AgentOps. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to.',
+    a: 'Someone has to, because ERPs get upgraded and customers change their order formats. Ask each company who watches the agent and who fixes it when an input changes. Intellectyx runs agents under a managed service it calls AgentOps. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and can keep managing the servers, AI, APIs and maintenance so your team does not have to.',
   },
   {
     q: 'How long does it take to build an AI agent for a manufacturer?',
@@ -843,7 +843,7 @@ export const post: BlogPost = {
         Build prices vary with the number of systems the agent reads and writes, the document formats it must handle and how many exceptions your rules have. As a market reference, development firm <a href={BUILD_COST_URL} className={link} rel="noopener" target="_blank">ProductCrafters</a> puts 2026 custom AI agent builds at about $5,000 to more than $180,000. That is one firm&rsquo;s market range for a build.
       </p>
       <p className="mb-6">
-        The ready-made products on this list quote on request. Paperless Parts, for example, says its pricing is in tiers and asks you to request it. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.
+        The ready-made products on this list quote on request. Paperless Parts, for example, says its pricing is in tiers and asks you to request it. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How to choose an AI agent development company: 6 steps</h2>
@@ -889,7 +889,7 @@ export const post: BlogPost = {
         <strong>Who it suits:</strong> manufacturers and distributors whose quoting and order entry run on rules of their own, on an ERP they intend to keep, and who want one team for the agent, the integrations and the customer-facing portal. For AI on machines and sensors, start with the companies in the first group.
       </p>
       <p className="mb-4">
-        We show working software on your own data before a contract. We quote the build and the ongoing support as fixed prices in writing after a short scoping call, and we keep managing the servers, AI, APIs and maintenance so your team does not have to.
+        We show working software on your own data before a contract. We quote the build, and any support you choose, as fixed prices in writing after a short scoping call, and we can keep managing the servers, AI, APIs and maintenance so your team does not have to.
       </p>
       <p className="mb-6">
         More detail sits on these pages: <a href="/services/manufacturing-ai-agents" className={link}>manufacturing AI agents</a>, <a href="/services/erp-ai-agents" className={link}>ERP AI agents</a> for Odoo, NetSuite, SAP Business One and ERPNext, <a href="/ecommerce-for-manufacturers" className={link}>ecommerce for manufacturers</a>, and our wider list of <a href="/blog/best-ai-agent-development-companies-2026" className={link}>AI agent development companies</a> across all industries.

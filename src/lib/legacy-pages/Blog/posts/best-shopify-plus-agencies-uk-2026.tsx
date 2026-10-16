@@ -480,7 +480,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "What support do Shopify Plus agencies offer after launch?",
-    a: "Shopify supports the platform itself, and its pricing page lists priority support on Plus. Agencies support your store. blubolt runs a warranty sprint after launch and then a growth roadmap. Cake Agency gives every store a 90-day warranty after go-live. By Association Only offers two kinds of retainer. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps looking after the integrations and maintenance so your team does not have to.",
+    a: "Shopify supports the platform itself, and its pricing page lists priority support on Plus. Agencies support your store. blubolt runs a warranty sprint after launch and then a growth roadmap. Cake Agency gives every store a 90-day warranty after go-live. By Association Only offers two kinds of retainer. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and keeps looking after the integrations and maintenance so your team does not have to.",
   },
 ];
 
@@ -921,7 +921,7 @@ export const post: BlogPost = {
         We are FactoryJet. We have served 500+ businesses since 2014, most of that time in commerce: online stores, B2B ordering and the operations behind them. Our founder, Bhavesh Barot, is involved in every project. FactoryJet is a registered Shopify Partner. We design, build, migrate and support Shopify and Shopify Plus stores, and you own everything we build.
       </p>
       <p className="mb-4">
-        <strong>Where we fit:</strong> brands and B2B sellers that want one team for the store, the integrations (Xero, HubSpot, WhatsApp, EDI, punchout catalogues, and ERPs such as Odoo, NetSuite and SAP Business One) and AI agents in day-to-day operations. Before a contract, we show working software on your own data. We quote the build and the ongoing support as fixed prices in writing after a short scoping call, and we stay on after launch. We work remotely with UK clients and schedule calls in UK business hours.
+        <strong>Where we fit:</strong> brands and B2B sellers that want one team for the store, the integrations (Xero, HubSpot, WhatsApp, EDI, punchout catalogues, and ERPs such as Odoo, NetSuite and SAP Business One) and AI agents in day-to-day operations. Before a contract, we show working software on your own data. We quote the build, and any support you choose, as fixed prices in writing after a short scoping call, and we stay on after launch. We work remotely with UK clients and schedule calls in UK business hours.
       </p>
       <p className="mb-6">
         For more detail, read about <a href="/uk/shopify-plus" className="text-[#B23E13] underline">our Shopify Plus work for UK brands</a>, <a href="/uk/ecommerce-development" className="text-[#B23E13] underline">ecommerce development in the UK</a> and our <a href="/blog/magento-to-shopify-plus-migration-checklist-2026" className="text-[#B23E13] underline">Magento to Shopify Plus migration checklist</a>. If AI is on your list as well, see our guide to <a href="/blog/best-ai-agent-development-companies-uk-2026" className="text-[#B23E13] underline">AI agent development companies in the UK</a>.

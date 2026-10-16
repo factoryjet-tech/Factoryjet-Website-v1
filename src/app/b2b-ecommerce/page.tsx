@@ -301,7 +301,9 @@ export default function B2BEcommercePage() {
                   expect: account pricing, net terms, approvals, and one-click reordering, integrated with your ERP. Your
                   buyers self-serve, your team stops re-keying orders.
                 </p>
-                <HeroInlineForm source="us_b2b_hero" region="us" submitLabel="Get a B2B commerce audit" />
+                <HeroInlineForm source="us_b2b_hero" region="us" submitLabel="See a draft of my store"
+            trustText="A working draft built with your own products before you sign. Founder replies within 24 hours."
+          />
               </div>
               <div className="pp-stage" role="img" aria-label="A B2B storefront showing per-account price tiers, net terms, and a trade portal.">
                 <div className="pp-store" aria-hidden="true">

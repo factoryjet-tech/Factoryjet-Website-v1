@@ -537,7 +537,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'cost',
     question: 'How much does AI agent maintenance cost?',
     answer:
-      'FactoryJet quotes ongoing support as a fixed price in writing, after a short scoping call and an audit of your agent. An agent handling a few internal requests and one handling thousands of customer conversations need different amounts of support, so the quote depends on your agent. On a support plan, we manage the servers, AI, APIs and maintenance, so your team does not have to.',
+      'FactoryJet quotes any support you choose as a fixed price in writing, after a short scoping call and an audit of your agent. An agent handling a few internal requests and one handling thousands of customer conversations need different amounts of support, so the quote depends on your agent. On a support plan, we manage the servers, AI, APIs and maintenance, so your team does not have to.',
   },
   {
     category: 'cost',
@@ -656,8 +656,9 @@ export default function AiAgentMonitoringPage() {
               <HeroInlineForm
                 source="services_ai_agent_monitoring"
                 region="us"
-                submitLabel="Request an agent support audit"
-              />
+                submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
             </div>
 
             <div className="pp-hero-card">

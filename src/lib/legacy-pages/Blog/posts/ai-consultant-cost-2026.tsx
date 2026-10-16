@@ -100,7 +100,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does an AI consulting retainer cost per month?',
-    a: 'It depends on how many workflows the retainer covers and whether new development is included, which is how Layer3 Labs tiers its own. We print no market figure for retainers on this page. FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call, and keeps managing the servers, AI, APIs and maintenance so your team does not have to.',
+    a: 'It depends on how many workflows the retainer covers and whether new development is included, which is how Layer3 Labs tiers its own. We print no market figure for retainers on this page. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and can keep managing the servers, AI, APIs and maintenance so your team does not have to.',
   },
   {
     q: 'What does the US government pay for AI consultants?',
@@ -154,7 +154,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does FactoryJet charge for AI consulting?',
-    a: 'We do not publish a price list, and nothing on this page is a FactoryJet price. FactoryJet quotes a fixed price in writing after a short scoping call, and we can show working software on your own data before you sign a contract. Bills for AI usage and hosting can sit in your own accounts at cost, while we keep managing the servers, AI models, APIs and upkeep. We work remotely with US clients.',
+    a: 'We do not publish a price list, and nothing on this page is a FactoryJet price. FactoryJet quotes a fixed price in writing after a short scoping call, and we can show working software on your own data before you sign a contract. Bills for AI usage and hosting can sit in your own accounts at cost, while we can keep managing the servers, AI models, APIs and upkeep. We work remotely with US clients.',
   },
 ];
 
@@ -898,7 +898,7 @@ export const post: BlogPost = {
         can judge the work before you judge the proposal.
       </p>
       <p>
-        Bills for AI usage and hosting can sit in your own accounts at cost, and we keep managing the servers, AI models,
+        Bills for AI usage and hosting can sit in your own accounts at cost, and we can keep managing the servers, AI models,
         APIs and upkeep so you do not have to. We design, build, implement and support the work, and you own what we build
         for you.
       </p>

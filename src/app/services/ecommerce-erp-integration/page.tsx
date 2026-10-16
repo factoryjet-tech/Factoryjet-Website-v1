@@ -540,7 +540,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'Who looks after the integration after launch?',
     answer:
-      'FactoryJet does. We quote the build and the ongoing support as fixed prices in writing after a short scoping call. After launch we keep managing the servers, the APIs and the maintenance, so your team does not have to. We stay on after launch, and you own the code.',
+      'FactoryJet does. We quote the build, and any support you choose, as fixed prices in writing after a short scoping call. After launch we can keep managing the servers, the APIs and the maintenance, so your team does not have to. We stay on after launch, and you own the code.',
   },
   {
     category: 'working',
@@ -1147,8 +1147,9 @@ export default function EcommerceErpIntegrationPage() {
                     region="us"
                     source="services_ecommerce_erp_integration_hero"
                     service="Ecommerce ERP Integration"
-                    submitLabel="Map my integration"
-                  />
+                    submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
                 </div>
 
                 <div className="mt-5">

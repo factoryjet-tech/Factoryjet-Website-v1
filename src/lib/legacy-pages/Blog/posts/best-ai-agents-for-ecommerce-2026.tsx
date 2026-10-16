@@ -127,7 +127,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does an AI agent for customer service cost?',
-      a: "Off-the-shelf support agents charge per result. Fin costs $0.99 per outcome, and Gorgias charges $0.90 to $1.00 per automated interaction plus its helpdesk plan. Zendesk bills per automated resolution but does not publish its rates. For a custom agent, FactoryJet quotes the build and the ongoing support as fixed prices in writing after a short scoping call.",
+      a: "Off-the-shelf support agents charge per result. Fin costs $0.99 per outcome, and Gorgias charges $0.90 to $1.00 per automated interaction plus its helpdesk plan. Zendesk bills per automated resolution but does not publish its rates. For a custom agent, FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.",
     },
     {
       q: 'Can I build my own AI agent?',

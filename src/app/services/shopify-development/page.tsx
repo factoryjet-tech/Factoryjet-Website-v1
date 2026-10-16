@@ -739,7 +739,10 @@ export default function ShopifyPage() {
             It now states what we build, for whom and how long it takes, using only
             the confirmed timelines. */}
         <Hero
-          formSlot={<HeroInlineForm region="us" source="us_services_shopify_development_hero" />}
+          formSlot={<HeroInlineForm region="us" source="us_services_shopify_development_hero"
+            submitLabel="See a draft of my store"
+            trustText="A working draft built with your own products before you sign. Founder replies within 24 hours."
+          />}
           eyebrow="SHOPIFY DEVELOPMENT · USA"
           headline="Custom Shopify stores for US brands, designed, built and supported by one team."
           lead="We design your store in Figma, build it in clean Liquid, move your products, customers and SEO over, and stay on after launch. Most custom Shopify stores go live in 3 to 5 weeks. You get a fixed quote before work starts, and you own the theme code."

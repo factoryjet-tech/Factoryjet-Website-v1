@@ -507,7 +507,10 @@ export default function AISchedulingAgentUSPage() {
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         <Hero
-          formSlot={<HeroInlineForm region="us" source="services_ai_agent_development_ai_scheduling_agent_hero" />}
+          formSlot={<HeroInlineForm region="us" source="services_ai_agent_development_ai_scheduling_agent_hero"
+            submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />}
           eyebrow="AI SCHEDULING AGENT · USA."
           headline="AI That Books Demos, Showings, and Clinic Appointments by Text and Email, 24/7."
           lead="AI scheduling agents check live availability and write appointments to Google Calendar or Outlook. They send calendar invites, collect card deposits, and execute automated reminder sequences. Booking operates across English and Spanish in every US time zone. All builds feature fixed pricing."

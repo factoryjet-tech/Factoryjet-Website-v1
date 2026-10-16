@@ -692,8 +692,9 @@ export default function ManufacturingOperationsAgentPage() {
             <HeroInlineForm
               region="us"
               source="services_ai_agent_development_manufacturing_operations_agent_hero"
-              submitLabel="Get an operations agent scope"
-            />
+              submitLabel="See a demo on my data"
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+          />
           }
           trustItems={[
             'Read-only against production systems',

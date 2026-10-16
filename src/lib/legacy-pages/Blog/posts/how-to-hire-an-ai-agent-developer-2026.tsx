@@ -624,8 +624,7 @@ export const post: BlogPost = {
       <p className="mb-6 text-gray-800">
         This route suits a fixed-scope build that touches several of your systems and needs support
         after launch. You pay for a coordinated team and project management, and it is slower to
-        start than one freelancer. FactoryJet is a firm on this route. We quote the build and the
-        ongoing support as fixed prices in writing after a short scoping call, so you can set a
+        start than one freelancer. FactoryJet is a firm on this route. We quote the build, and any support you choose, as fixed prices in writing after a short scoping call, so you can set a
         written price against the ranges above.
       </p>
 

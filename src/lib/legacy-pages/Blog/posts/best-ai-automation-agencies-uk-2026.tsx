@@ -679,7 +679,7 @@ export const post: BlogPost = {
         <strong>How to read this.</strong> The small figures buy one workflow between two or three tools. The larger ones buy a discovery phase, a proof of concept on your own data or a system in production. Only two of the eight pages say where VAT stands: Antek Automation quotes prices excluding VAT, and OpScaling adds VAT to its hourly rate. GOV.UK gives the <a href="https://www.gov.uk/vat-rates" className="text-[#B23E13] underline" rel="noopener" target="_blank">standard VAT rate as 20%</a>, so ask the other six before you compare totals.
       </p>
       <p className="mb-6">
-        For sourced market ranges covering agents, chatbots, receptionists and consulting day rates, read our <a href="/blog/ai-cost-uk-2026" className="text-[#B23E13] underline">AI cost guide for the UK (2026)</a>. FactoryJet does not publish a rate card. We quote the build and the ongoing support as fixed prices in writing after a short scoping call.
+        For sourced market ranges covering agents, chatbots, receptionists and consulting day rates, read our <a href="/blog/ai-cost-uk-2026" className="text-[#B23E13] underline">AI cost guide for the UK (2026)</a>. FactoryJet does not publish a rate card. We quote the build, and any support you choose, as fixed prices in writing after a short scoping call.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Which kind of UK automation firm fits your business?</h2>
@@ -728,7 +728,7 @@ export const post: BlogPost = {
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">6. Agree who looks after it once it is live</summary>
-          <p className="mt-3 text-gray-700">The software an automation connects to will change, and a broken workflow can stop without telling anyone. Ask who watches for failed runs and who fixes them. BespokeWorks AI says every connection it builds logs what it sends, retries what fails and alerts a named owner. Robiquity offers its own managed service or helps you build an in-house team. FactoryJet keeps managing the servers, AI, APIs and maintenance after launch, so your team does not have to.</p>
+          <p className="mt-3 text-gray-700">The software an automation connects to will change, and a broken workflow can stop without telling anyone. Ask who watches for failed runs and who fixes them. BespokeWorks AI says every connection it builds logs what it sends, retries what fails and alerts a named owner. Robiquity offers its own managed service or helps you build an in-house team. FactoryJet can keep managing the servers, AI, APIs and maintenance after launch, so your team does not have to.</p>
         </details>
       </div>
 
@@ -825,7 +825,7 @@ export const post: BlogPost = {
         <strong>Where we fit:</strong> UK small and mid-size businesses that sell online or run order-heavy operations and want one team for the store, the integrations and the automation. We build in n8n, Make and Zapier, and connect Shopify, WooCommerce, Xero, HubSpot and WhatsApp. We have worked on Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs, on quoting and RFQs, purchase and sales orders, daily bookkeeping, EDI and punchout catalogues (your catalogue opened from inside a buyer&rsquo;s purchasing system). We also build AI voice agents, for small offices and for call centres.
       </p>
       <p className="mb-4">
-        <strong>How we work:</strong> before a contract, we show working software on your own data. We quote the build and the ongoing support as fixed prices in writing after a short scoping call. After launch we keep managing the servers, AI, APIs and maintenance, so your team does not have to. We work remotely with UK clients, schedule calls in UK business hours and can host AI builds in the UK or EU.
+        <strong>How we work:</strong> before a contract, we show working software on your own data. We quote the build, and any support you choose, as fixed prices in writing after a short scoping call. After launch we can keep managing the servers, AI, APIs and maintenance, so your team does not have to. We work remotely with UK clients, schedule calls in UK business hours and can host AI builds in the UK or EU.
       </p>
       <p className="mb-6">
         If you are still working out what you need, these explain the options in plain English: <a href="/blog/what-does-an-ai-automation-agency-do-uk" className="text-[#B23E13] underline">what an AI automation agency does</a>, <a href="/blog/best-ai-automation-tools-small-business-uk-2026" className="text-[#B23E13] underline">the best AI automation tools for small UK businesses</a> and <a href="/blog/ai-cost-uk-2026" className="text-[#B23E13] underline">what AI costs in the UK</a>.
