@@ -352,3 +352,21 @@
 @media (prefers-reduced-motion: reduce) {
   .aiAgentPage *, .aiAgentPage *::before, .aiAgentPage *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Phased plan intro, proof by job type and the forwardable summary (2026-10-16). */
+.aiAgentPage .process .section-head p,
+.aiAgentPage .proofByJob .section-head p,
+.aiAgentPage .teamSummary .section-head p { margin-top: 18px; color: var(--body); font-size: 16px; line-height: 1.75; }
+.aiAgentPage .proofByJob { background: var(--accent-wash); border-block: 1px solid var(--line); }
+.aiAgentPage .proofgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.aiAgentPage .prooflinks { margin-top: 14px; font-size: 14px; }
+.aiAgentPage .prooflinks a { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.aiAgentPage .summarycard { margin: 0; border: 1px solid var(--line); border-radius: 12px; background: white; }
+.aiAgentPage .summaryrow { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 24px; padding: 18px 24px; border-bottom: 1px solid var(--line); }
+.aiAgentPage .summaryrow:last-child { border-bottom: 0; }
+.aiAgentPage .summaryrow dt { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-text); padding-top: 3px; }
+.aiAgentPage .summaryrow dd { margin: 0; color: var(--ink); font-size: 15px; line-height: 1.7; }
+@media (max-width: 760px) {
+  .aiAgentPage .proofgrid { grid-template-columns: 1fr; }
+  .aiAgentPage .summaryrow { grid-template-columns: 1fr; gap: 6px; padding: 16px 18px; }
+}

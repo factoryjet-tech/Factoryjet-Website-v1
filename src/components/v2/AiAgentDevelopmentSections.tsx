@@ -9,6 +9,63 @@ export const breadcrumbs = [
   { name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' },
 ];
 
+/* Phased plan, proof by job type and the forwardable summary (added 2026-10-16).
+   Terms match /services and /services/ai-automation: working software on your
+   own data before you sign, fixed price per phase in writing, defect cover
+   inside the build price, optional support with no monthly minimum. */
+const PHASES = [
+  { title: 'Scoping call', body: 'Bhavesh runs it. What starts the work, which systems it touches, how often it happens, and where a person must approve.' },
+  { title: 'Demo on your data', body: 'Before you sign, the agent runs on a sample of your own documents, emails or calls, so you see what it gets right and where it hands off.' },
+  { title: 'Pilot', body: 'One workflow live in your systems, with every draft approved by your team. Paid at milestones.' },
+  { title: 'Production', body: 'More volume and the edge cases the pilot found, with monitoring and an alert when a step fails.' },
+  { title: 'Rollout', body: 'More workflows, locations or systems, each scoped and priced on its own. Support after launch is optional, with no monthly minimum.' },
+];
+
+const PROOF = [
+  {
+    tag: 'RESEARCH AND ALERTS · LIVE',
+    title: 'Washington Law Group',
+    body: 'Reads news and police sources across all 50 states every two hours and emails the firm each crash that qualifies. The code is assigned to the firm.',
+    links: [{ label: 'Read the case study', href: '/case-studies/washington-law-group-accident-detection-agent' }],
+  },
+  {
+    tag: 'B2B ORDERING AND ERP · IN PROGRESS',
+    title: 'Sow Easy',
+    body: 'WooCommerce trade ordering connected to Odoo, so orders and stock live in one place.',
+    links: [{ label: 'Read the case study', href: '/case-studies/sow-easy-distributor-portal' }],
+  },
+  {
+    tag: 'TRADE REORDERING',
+    title: 'GPSUK',
+    body: 'Online ordering for trade buyers of promotional products who reorder the same items again and again.',
+    links: [{ label: 'Read the case study', href: '/case-studies/gpsuk-promotional-products' }],
+  },
+  {
+    tag: 'ORDERS, INVOICES AND RFQS',
+    title: 'Your own workflow',
+    body: 'For sales orders, vendor invoices and RFQs, we show the agent working on a sample of your own documents before you sign, so you judge it on your data, not on someone else\u2019s logo.',
+    links: [
+      { label: 'Sales order agents', href: '/services/sales-order-automation-ai-agents' },
+      { label: 'Accounts payable', href: '/services/accounts-payable-automation' },
+      { label: 'RFQ agent', href: '/services/ai-agent-development/rfq-bidding-agent' },
+    ],
+  },
+];
+
+const SUMMARY = [
+  { k: 'What it is', v: 'An AI agent built for one job inside your systems, such as reading purchase orders or vendor invoices and drafting the record for your team to approve.' },
+  { k: 'What you see first', v: 'The agent working on a sample of your own data, before any contract.' },
+  { k: 'How it is priced', v: 'One fixed price per phase, in writing, paid at milestones. You decide on each next phase after seeing the last one work.' },
+  { k: 'What you own', v: 'The code and the repository from day one. AI and hosting can run in your own accounts, at cost.' },
+  { k: 'After launch', v: 'Defects fixed inside the build price for an agreed cover period. Support is optional, with no monthly minimum.' },
+  { k: 'Who you deal with', v: 'Bhavesh Barot, founder of FactoryJet. He replies within 24 hours.' },
+];
+
+const SUMMARY_MAILTO = `mailto:?subject=${encodeURIComponent('AI agent project: FactoryJet summary')}&body=${encodeURIComponent(
+  `${SUMMARY.map((r) => `${r.k}: ${r.v}`).join('\n\n')}\n\nFull page: https://factoryjet.com/services/ai-agent-development#summary`,
+)}`;
+
+
 function AiAgentFaqAccordion() {
   return (
     <div className="faqlist">
@@ -639,37 +696,50 @@ export default function AiAgentDevelopmentSections() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Process</div>
-              <h2>How We Build</h2>
+              <h2>How a Project Runs, Phase by Phase</h2>
+              <p>
+                Each phase is scoped, priced and signed on its own, in writing. You decide on the next phase after you
+                have seen the last one work. Defects found after launch are fixed inside the build price for a cover
+                period agreed before work starts.
+              </p>
             </div>
             <div className="timeline">
-              <div className="tnode">
-                <div className="idx">01</div>
-                <h3>Scope</h3>
-                <p>What the agent needs to decide, and where it stops to ask a person.</p>
-              </div>
-              <div className="tnode">
-                <div className="idx">02</div>
-                <h3>Architect</h3>
-                <p>Decision logic and every human-approval gate designed before code.</p>
-              </div>
-              <div className="tnode">
-                <div className="idx">03</div>
-                <h3>Build</h3>
-                <p>Engineering against real systems. Working software on a short cycle.</p>
-              </div>
-              <div className="tnode">
-                <div className="idx">04</div>
-                <h3>Verify</h3>
-                <p>Every fact the agent states gets checked against its source before launch.</p>
-              </div>
-              <div className="tnode">
-                <div className="idx">05</div>
-                <h3>Launch</h3>
-                <p>Deployed with monitoring, and a plan for when something fails.</p>
-              </div>
+              {PHASES.map((p, i) => (
+                <div className="tnode" key={p.title}>
+                  <div className="idx">{String(i + 1).padStart(2, '0')}</div>
+                  <h3>{p.title}</h3>
+                  <p>{p.body}</p>
+                </div>
+              ))}
             </div>
             <div className="timelineAction">
-              <a className="btn btn-primary" href="#tell-us">Scope your AI agent</a>
+              <a className="btn btn-primary" href="#tell-us">See a demo on my data</a>
+            </div>
+          </div>
+        </section>
+        <section className="section proofByJob" id="proof">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">Proof</div>
+              <h2>What We Have Built, by Job</h2>
+              <p>Clients are named only where they agreed. Each entry links to the full write-up.</p>
+            </div>
+            <div className="proofgrid">
+              {PROOF.map((p) => (
+                <div className="ventry" key={p.title}>
+                  <span className="vtag">{p.tag}</span>
+                  <h3>{p.title}</h3>
+                  <p>{p.body}</p>
+                  <p className="prooflinks">
+                    {p.links.map((l, i) => (
+                      <Fragment key={l.href}>
+                        {i > 0 && ' · '}
+                        <a href={l.href}>{l.label}</a>
+                      </Fragment>
+                    ))}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -699,6 +769,27 @@ export default function AiAgentDevelopmentSections() {
             </div>
             <div className="timelineAction">
               <a className="btn btn-primary" href="/case-studies/washington-law-group-accident-detection-agent">Read the full case study</a>
+            </div>
+          </div>
+        </section>
+        <section className="section teamSummary" id="summary">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">For the person who signs</div>
+              <h2>The Short Version to Forward to Your Team</h2>
+              <p>The person who finds us is rarely the one who signs. This is the page in six lines.</p>
+            </div>
+            <dl className="summarycard">
+              {SUMMARY.map((row) => (
+                <div className="summaryrow" key={row.k}>
+                  <dt>{row.k}</dt>
+                  <dd>{row.v}</dd>
+                </div>
+              ))}
+            </dl>
+            <div className="actions">
+              <a className="btn btn-ghost" href={SUMMARY_MAILTO}>Email this to a colleague</a>
+              <a className="btn btn-primary" href="#tell-us">See a demo on my data</a>
             </div>
           </div>
         </section>
