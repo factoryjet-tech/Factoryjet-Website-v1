@@ -125,6 +125,7 @@ const SERVICE_GROUPS: { label: string; items: { title: string; href: string }[] 
       { title: 'Document Intake AI Agents', href: '/services/document-intake-ai-agents' },
       { title: 'AI Inventory Management Agents', href: '/services/ai-inventory-management-agents' },
       { title: 'RFQ and Bidding Agent', href: '/services/ai-agent-development/rfq-bidding-agent' },
+      { title: 'AI Quoting Software', href: '/services/ai-quoting-software' },
       { title: 'ERP AI Agents', href: '/services/erp-ai-agents' },
       { title: 'NetSuite AI Agents', href: '/services/netsuite-ai-agents' },
       { title: 'Odoo AI Agents', href: '/services/odoo-ai-agents' },

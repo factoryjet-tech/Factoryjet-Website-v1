@@ -1084,6 +1084,10 @@ export default function RFQBiddingAgentPage() {
                 AI agent development
               </Link>
               ,{' '}
+              <Link href="/services/ai-quoting-software" style={{ color: '#B23E13', textDecoration: 'underline' }}>
+                AI quoting software compared with a custom quoting agent
+              </Link>
+              ,{' '}
               <Link href="/services/construction-ai-agents" style={{ color: '#B23E13', textDecoration: 'underline' }}>
                 AI agents for construction and contractors
               </Link>
