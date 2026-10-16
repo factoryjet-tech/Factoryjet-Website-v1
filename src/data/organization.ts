@@ -57,7 +57,6 @@ export const ORGANIZATION_SCHEMA = {
   description: ORG_DESCRIPTION,
   disambiguatingDescription: ORG_DISAMBIGUATION,
   foundingDate: '2014',
-  foundingLocation: { '@type': 'Place', name: 'Bengaluru, India' },
   founder: {
     '@type': 'Person',
     '@id': FOUNDER_ID,
@@ -67,14 +66,6 @@ export const ORGANIZATION_SCHEMA = {
     sameAs: ['https://www.linkedin.com/in/bhavesh-ai-gtm-expert/'],
   },
   email: ORG_EMAIL,
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '70/1, Willow Herbs, Tigalarpalya, Kundalahalli',
-    addressLocality: 'Bengaluru',
-    addressRegion: 'Karnataka',
-    postalCode: '560037',
-    addressCountry: 'IN',
-  },
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',

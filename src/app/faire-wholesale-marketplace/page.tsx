@@ -233,7 +233,7 @@ const SOURCED = [
 const BENEFITS = [
   { i: '◈', t: 'Automated Catalog & Inventory Sync', d: 'Eliminate manual CSV uploads. Product changes in Shopify or your ERP sync directly to Faire with real-time stock protection.' },
   { i: '◇', t: 'Faire Direct 0% Commission Funnel', d: 'Bring existing retail accounts and trade show leads in through your custom Faire Direct link, so those orders carry 0% commission.' },
-  { i: '↯', t: 'Top Shop Operational Management', d: 'We monitor fulfillment speed, lead times, and response rates to guarantee your brand maintains the prestigious Top Shop badge.' },
+  { i: '↯', t: 'Top Shop Operational Management', d: 'We monitor fulfillment speed, lead times, and response rates to help your brand keep the Top Shop badge.' },
   { i: '▤', t: 'B2B Case Packs & MOQ Optimization', d: 'Structure case packs, opening minimums, and volume breaks that maximize average order value (AOV) for boutique buyers.' },
   { i: '⛓', t: 'Faire Market & Promotion Strategy', d: 'Maximize wholesale sales during semi-annual Faire Markets with co-funded discounts, email announcements, and tiered promos.' },
   { i: '⤢', t: 'Cross-Border UK & European Expansion', d: 'Sell to independent retailers across the UK and 15+ European nations with automated currency conversion and VAT compliance.' },
@@ -277,7 +277,7 @@ export default function FaireWholesaleMarketplacePage() {
                   Connect your Shopify store or ERP directly to Faire Wholesale. Automate inventory, tiered B2B pricing,
                   and boutique reorders without manual order entry or channel conflict.
                 </p>
-                <HeroInlineForm source="us_faire_wholesale_hero" region="us" submitLabel="Get a Faire Wholesale Scope" />
+                <HeroInlineForm source="us_faire_wholesale_hero" region="us" submitLabel="Get a Faire Wholesale Scope" trustText="Want us to run Faire for you each month instead of a one-time build? Ask, and we will scope it. Founder replies within 24 hours." />
               </div>
 
               {/* Visual Hero Architecture Graphic */}

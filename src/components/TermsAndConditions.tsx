@@ -21,7 +21,6 @@ export default function TermsAndConditions() {
         name: 'FactoryJet Private Limited',
         cin: 'U74999KA2020PTC140850',
         gstin: '29AAECF3218J1ZK',
-        address: '70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka - 560037, India',
         email: 'connect@factoryjet.com',
         hours: 'Monday to Friday, 10:00 AM - 6:00 PM IST',
       },
@@ -270,7 +269,6 @@ export default function TermsAndConditions() {
                       <p><strong>Legal Entity:</strong> {section.company.name}</p>
                       <p><strong>CIN:</strong> <span className="font-mono">{section.company.cin}</span></p>
                       <p><strong>GSTIN:</strong> <span className="font-mono">{section.company.gstin}</span></p>
-                      <p><strong>Registered Address:</strong> {section.company.address}</p>
                       <p><strong>Official Email:</strong> <span className="font-mono">{section.company.email}</span></p>
                       <p><strong>Hours:</strong> {section.company.hours}</p>
                     </div>

@@ -21,7 +21,6 @@ export default function PrivacyPolicy() {
         name: 'FactoryJet Private Limited',
         cin: 'U74999KA2020PTC140850',
         gstin: '29AAECF3218J1ZK',
-        address: '70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka - 560037, India',
         hours: 'Monday to Friday, 10:00 AM - 6:00 PM IST',
         email: 'connect@factoryjet.com',
       },
@@ -134,7 +133,6 @@ export default function PrivacyPolicy() {
         name: 'Grievance Redressal Officer - FactoryJet Private Limited',
         cin: 'U74999KA2020PTC140850',
         gstin: '29AAECF3218J1ZK',
-        address: '70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka - 560037, India',
         hours: 'Monday to Friday, 10:00 AM - 6:00 PM IST',
         email: 'connect@factoryjet.com',
       },
@@ -235,7 +233,6 @@ export default function PrivacyPolicy() {
                       <p><strong>Entity:</strong> {section.company.name}</p>
                       <p><strong>CIN:</strong> <span className="font-mono">{section.company.cin}</span></p>
                       <p><strong>GSTIN:</strong> <span className="font-mono">{section.company.gstin}</span></p>
-                      <p><strong>Address:</strong> {section.company.address}</p>
                       <p><strong>Email:</strong> <a href={`mailto:${section.company.email}`} className="text-[#F05A28] font-mono hover:underline">{section.company.email}</a></p>
                       <p><strong>Hours:</strong> {section.company.hours}</p>
                     </div>

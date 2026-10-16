@@ -31,7 +31,7 @@ export default function RefundPolicy() {
       id: 'preamble',
       number: '01',
       title: 'Preamble & Legal Framework',
-      content: `This Cancellation and Refund Policy ("Policy") forms a legally binding agreement between you (the "Client", "Customer", or "You") and FactoryJet Private Limited ("FactoryJet", "Company", "We", "Our", or "Us"), a private limited company incorporated under the Indian Companies Act, 2013, bearing Corporate Identification Number (CIN) U74999KA2020PTC140850 and GSTIN 29AAECF3218J1ZK, having its registered office at 70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka - 560037, India.`,
+      content: `This Cancellation and Refund Policy ("Policy") forms a legally binding agreement between you (the "Client", "Customer", or "You") and FactoryJet Private Limited ("FactoryJet", "Company", "We", "Our", or "Us"), a private limited company incorporated under the Indian Companies Act, 2013, bearing Corporate Identification Number (CIN) U74999KA2020PTC140850 and GSTIN 29AAECF3218J1ZK.`,
       note: 'This Policy is formulated in strict compliance with the Indian Contract Act, 1872; the Information Technology Act, 2000 (and applicable Intermediary Guidelines); the Consumer Protection Act, 2019 (including the Consumer Protection [E-Commerce] Rules, 2020); the Central Goods and Services Tax (CGST) Act, 2017; and applicable international commercial standards for B2B Information Technology and software consulting services.',
     },
     {
@@ -258,7 +258,6 @@ export default function RefundPolicy() {
           content: `Name: Grievance Redressal Officer
 Company: FactoryJet Private Limited
 CIN: U74999KA2020PTC140850
-Address: 70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka - 560037, India
 Email: connect@factoryjet.com
 Working Hours: Monday to Friday, 10:00 AM - 6:00 PM IST
 Response SLA: Acknowledgment within 48 hours; resolution within 15 business days.`,
@@ -269,13 +268,12 @@ Response SLA: Acknowledgment within 48 hours; resolution within 15 business days
       id: 'contact-channels',
       number: '14',
       title: 'Official Communications & Support',
-      content: 'All formal cancellation notices, refund requests, and legal communications must be transmitted in writing via verifiable electronic mail or registered postal correspondence to:',
+      content: 'All formal cancellation notices, refund requests, and legal communications must be transmitted in writing by email to:',
       subsections: [
         {
           title: 'FactoryJet Private Limited',
           content: `Email: connect@factoryjet.com
 Founder Direct: bhavesh@factoryjet.com
-Corporate Address: 70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka - 560037, India
 Website: https://factoryjet.com`,
         },
       ],

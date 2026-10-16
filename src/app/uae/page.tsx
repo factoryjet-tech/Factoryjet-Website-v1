@@ -13,7 +13,6 @@ const localBusinessJsonLd = {
   "name": "FactoryJet",
   "url": "https://factoryjet.com/uae",
   "email": "connect@factoryjet.com",
-  "address": ORGANIZATION_SCHEMA.address,
   "areaServed": {
     "@type": "Place",
     "name": "Dubai"

@@ -897,7 +897,7 @@ export default function WayfairMarketplacePage() {
           variant="light"
           eyebrow="Sell on Wayfair"
           headline="Find out if your brand is ready for Wayfair."
-          sub="Send us your catalog and tell us where you ship from. We check both against Wayfair's onboarding checklist and tell you what to fix before you apply."
+          sub="Send us your catalog and tell us where you ship from. We check both against Wayfair's onboarding checklist and tell you what to fix before you apply. Want us to run the channel each month after launch? Ask, and we will scope it."
           primaryCta={{ label: 'Check my Wayfair readiness', modal: true, region: 'us' }}
           secondaryCta={{ label: 'Talk to the founder', href: '/contact' }}
           objectionHandler="No approval promises. Wayfair decides who it accepts. You keep the account, the agreement and the code."

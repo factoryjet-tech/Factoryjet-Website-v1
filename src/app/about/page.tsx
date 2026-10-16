@@ -170,10 +170,9 @@ export default function AboutPage() {
               we will map your channels, catalog, and B2B into one system you own.
             </p>
             <p className="mt-4 max-w-[60ch] text-[15px] leading-relaxed text-[#46403B]">
-              Bhavesh started FactoryJet in India in 2014 as a B2B marketplace for construction materials. The same
-              company now builds ecommerce, AI agents, AI search and SEO, and websites for brands. FactoryJet is run by
-              FactoryJet Private Limited, 70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka 560037,
-              India.
+              Bhavesh started FactoryJet in 2014 as a B2B marketplace for construction materials. The same company
+              now builds ecommerce, AI agents, AI search and SEO, and websites for brands. FactoryJet is run by
+              FactoryJet Private Limited.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
