@@ -343,7 +343,9 @@ export const post: BlogPost = {
         <li><strong>Check twice.</strong> The tool checks the request, and the target system refuses anything the account is not allowed to do.</li>
       </ol>
       <p>
-        We build custom MCP servers and API integrations for this layer. See{' '}
+        We build custom MCP servers and API integrations for this layer; our{' '}
+        <a href="/blog/custom-mcp-server-erp-crm-mid-sized-companies-2026">custom MCP server guide</a> lists the tools an ERP
+        server should expose. See{' '}
         <a href="/services/ai-integration-services">AI integration services</a> for the systems we connect.
       </p>
 

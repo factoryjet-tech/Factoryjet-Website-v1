@@ -160,9 +160,16 @@ import { post as aiProofOfConceptToProduction2026Post } from './posts/ai-proof-o
 import { post as enterpriseAiAgentsMidSizedCompaniesBuyOrBuild2026Post } from './posts/enterprise-ai-agents-mid-sized-companies-buy-or-build-2026';
 import { post as agentforcePricingVsCustomAiAgent2026Post } from './posts/agentforce-pricing-vs-custom-ai-agent-2026';
 import { post as aiAgentSecurityRisksControls2026Post } from './posts/ai-agent-security-risks-controls-2026';
+import { post as aiReadinessAssessmentChecklistMidSizedCompanies2026Post } from './posts/ai-readiness-assessment-checklist-mid-sized-companies-2026';
+import { post as aiAgentsForCustomerServiceMidSizedCompanies2026Post } from './posts/ai-agents-for-customer-service-mid-sized-companies-2026';
+import { post as customMcpServerErpCrmMidSizedCompanies2026Post } from './posts/custom-mcp-server-erp-crm-mid-sized-companies-2026';
 
 export const POSTS: BlogPost[] = [
   bestAiAgentDevelopmentCompanies2026Post,
+  // --- MID-MARKET AI AGENT WAVE 3 (2026-10-18): readiness scorecard, customer service agents, custom MCP servers ---
+  aiReadinessAssessmentChecklistMidSizedCompanies2026Post,
+  aiAgentsForCustomerServiceMidSizedCompanies2026Post,
+  customMcpServerErpCrmMidSizedCompanies2026Post,
   // --- MID-MARKET AI AGENT WAVE 2 (2026-10-18): enterprise agents, Agentforce pricing, agent security ---
   enterpriseAiAgentsMidSizedCompaniesBuyOrBuild2026Post,
   agentforcePricingVsCustomAiAgent2026Post,

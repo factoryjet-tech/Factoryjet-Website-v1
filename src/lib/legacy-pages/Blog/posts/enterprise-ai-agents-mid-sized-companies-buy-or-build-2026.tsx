@@ -304,7 +304,7 @@ export const post: BlogPost = {
       <Table
         head={['Department', 'Common first job', 'Usually rent when', 'Usually build when']}
         rows={[
-          ['Customer service', 'Order status, returns, routing', 'Tickets and answers live in one help desk', 'Answers need ERP, warehouse or billing data'],
+          [<a key="cs" href="/blog/ai-agents-for-customer-service-mid-sized-companies-2026">Customer service</a>, 'Order status, returns, routing', 'Tickets and answers live in one help desk', 'Answers need ERP, warehouse or billing data'],
           ['Sales', 'Call notes, CRM updates, lead research', 'Everything lives in the CRM', 'Quotes need your ERP price rules or stock'],
           ['Finance', 'Invoice matching, collections follow-up', 'Your accounting product sells the feature', 'Matching spans ERP, inbox and bank files'],
           ['Operations', 'Order entry from email or PDF', 'Rarely: orders arrive in too many formats', 'Orders come by email, EDI and portal'],

@@ -274,6 +274,10 @@ export const post: BlogPost = {
       </ol>
 
       <h2 id="first-use-case">Picking the first use case: five tests</h2>
+      <p>
+        If you are not sure the company is ready at all, start with our{' '}
+        <a href="/blog/ai-readiness-assessment-checklist-mid-sized-companies-2026">AI readiness assessment scorecard</a>.
+      </p>
       <Table
         head={['Test', 'Good sign', 'Warning sign']}
         rows={[
