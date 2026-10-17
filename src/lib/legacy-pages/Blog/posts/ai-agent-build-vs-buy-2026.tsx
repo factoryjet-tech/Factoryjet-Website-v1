@@ -552,6 +552,8 @@ export const post: BlogPost = {
           <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] underline">What Does an AI Agent Cost?</a>
           <a href="/blog/best-ai-agent-development-companies-2026" className="text-[#B23E13] underline">10 AI Agent Development Companies Compared</a>
           <a href="/blog/how-to-hire-an-ai-agent-developer-2026" className="text-[#B23E13] underline">How to Hire an AI Agent Developer</a>
+          <a href="/blog/ai-proof-of-concept-to-production-2026" className="text-[#B23E13] underline">How to Scope an AI Proof of Concept</a>
+          <a href="/blog/ai-agent-governance-policy-mid-sized-companies-2026" className="text-[#B23E13] underline">AI Agent Governance Policy and Template</a>
           <a href="/services/ai-agent-monitoring" className="text-[#B23E13] underline">AI Agent Monitoring and Support After Launch</a>
           <a href="/blog/how-to-build-an-ai-agent-uk-2026" className="text-[#B23E13] underline">How to Build an AI Agent, Step by Step</a>
           <a href="/blog/ai-chatbots-vs-ai-agents-business" className="text-[#B23E13] underline">AI Chatbots vs. AI Agents</a>

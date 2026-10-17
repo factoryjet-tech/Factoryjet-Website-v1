@@ -177,7 +177,8 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-8 mb-4">How is agentic AI different from generative AI?</h2>
       <p className="mb-4">
         Generative AI creates content: text, images, code, or answers to a prompt. Agentic AI takes action to complete a goal. Generative AI writes the answer, agentic AI goes and does the thing. They are layers of the same system, because an agentic system uses a generative model as its reasoning engine, then wraps it in memory, tools, and the ability to act. If that comparison is what brought you here, the full breakdown is in our{' '}
-        <a href="/blog/agentic-ai-vs-generative-ai" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic AI vs generative AI</a> guide.
+        <a href="/blog/agentic-ai-vs-generative-ai" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic AI vs generative AI</a> guide. For how the parts fit together inside a company that already runs an ERP and a CRM, see our{' '}
+        <a href="/blog/agentic-ai-architecture-mid-sized-companies-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic AI architecture guide for mid-sized companies</a>.
       </p>
 
       <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8 not-prose">

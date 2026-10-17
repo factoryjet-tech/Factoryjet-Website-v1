@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="t d">
+  <title id="t">Agentic AI reference architecture for a mid-sized company</title>
+  <desc id="d">Five layers from top to bottom: where work arrives, the agent, the tool layer, systems of record, and a control layer running down the right side with approval queue, logs, test set, monitoring and secrets.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#6B7280"/>
+    </marker>
+    <style>
+      .bg{fill:#FFFFFF}
+      .band{fill:#FAF8F5;stroke:#E5DFD7;stroke-width:2}
+      .box{fill:#FFFFFF;stroke:#D6CFC7;stroke-width:1.5}
+      .hot{fill:#FFF3EE;stroke:#B23E13;stroke-width:2}
+      .ctl{fill:#1F2937}
+      .ctlbox{fill:#374151;stroke:#4B5563;stroke-width:1}
+      .lab{font:700 13px Inter,Helvetica,Arial,sans-serif;fill:#B23E13;letter-spacing:1.2px}
+      .h{font:700 17px Inter,Helvetica,Arial,sans-serif;fill:#1F2937}
+      .s{font:400 13.5px Inter,Helvetica,Arial,sans-serif;fill:#4B5563}
+      .hw{font:700 16px Inter,Helvetica,Arial,sans-serif;fill:#FFFFFF}
+      .sw{font:400 13px Inter,Helvetica,Arial,sans-serif;fill:#D1D5DB}
+      .lw{font:700 13px Inter,Helvetica,Arial,sans-serif;fill:#F5A27F;letter-spacing:1.2px}
+      .ln{stroke:#6B7280;stroke-width:1.8;fill:none}
+      .dash{stroke:#B23E13;stroke-width:1.8;fill:none;stroke-dasharray:6 5}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="900"/>
+
+  <!-- Layer 1: triggers -->
+  <rect class="band" x="24" y="24" width="840" height="140" rx="14"/>
+  <text class="lab" x="44" y="54">1  WHERE WORK ARRIVES</text>
+  <rect class="box" x="44" y="70" width="150" height="74" rx="10"/><text class="h" x="60" y="100">Email inbox</text><text class="s" x="60" y="122">POs and invoices</text>
+  <rect class="box" x="208" y="70" width="150" height="74" rx="10"/><text class="h" x="224" y="100">Portal or form</text><text class="s" x="224" y="122">Customer requests</text>
+  <rect class="box" x="372" y="70" width="150" height="74" rx="10"/><text class="h" x="388" y="100">EDI or file drop</text><text class="s" x="388" y="122">850s, CSVs, PDFs</text>
+  <rect class="box" x="536" y="70" width="150" height="74" rx="10"/><text class="h" x="552" y="100">Teams or Slack</text><text class="s" x="552" y="122">Staff ask the agent</text>
+  <rect class="box" x="700" y="70" width="146" height="74" rx="10"/><text class="h" x="716" y="100">Schedule</text><text class="s" x="716" y="122">Nightly, hourly</text>
+
+  <path class="ln" d="M444 164 V198" marker-end="url(#a)"/>
+
+  <!-- Layer 2: the agent -->
+  <rect class="band" x="24" y="204" width="840" height="214" rx="14"/>
+  <text class="lab" x="44" y="234">2  THE AGENT</text>
+  <rect class="hot" x="44" y="250" width="248" height="148" rx="10"/>
+  <text class="h" x="62" y="280">Orchestrator</text>
+  <text class="s" x="62" y="304">Reads the request, picks the</text>
+  <text class="s" x="62" y="323">steps, calls tools in order,</text>
+  <text class="s" x="62" y="342">stops at a limit and hands</text>
+  <text class="s" x="62" y="361">the item to a person</text>
+  <rect class="box" x="312" y="250" width="168" height="66" rx="10"/><text class="h" x="328" y="278">Model (LLM)</text><text class="s" x="328" y="300">Claude, GPT, Gemini</text>
+  <rect class="box" x="496" y="250" width="168" height="66" rx="10"/><text class="h" x="512" y="278">Instructions</text><text class="s" x="512" y="300">The job, rules, limits</text>
+  <rect class="box" x="680" y="250" width="166" height="66" rx="10"/><text class="h" x="696" y="278">Context</text><text class="s" x="696" y="300">Policies, past cases</text>
+  <rect class="box" x="312" y="332" width="534" height="66" rx="10"/>
+  <text class="h" x="328" y="360">Optional specialist steps</text>
+  <text class="s" x="328" y="382">Read a PDF, check a price list, draft a reply. Split out only when needed.</text>
+  <path class="ln" d="M292 283 H306" marker-end="url(#a)"/>
+
+  <path class="ln" d="M444 418 V452" marker-end="url(#a)"/>
+
+  <!-- Layer 3: tools -->
+  <rect class="band" x="24" y="458" width="840" height="170" rx="14"/>
+  <text class="lab" x="44" y="488">3  TOOL LAYER (WHERE PERMISSIONS LIVE)</text>
+  <rect class="box" x="44" y="504" width="256" height="104" rx="10"/>
+  <text class="h" x="60" y="532">MCP servers</text><text class="s" x="60" y="554">One per system. Exposes only</text><text class="s" x="60" y="573">the actions the job needs:</text><text class="s" x="60" y="592">find order, create draft SO</text>
+  <rect class="box" x="316" y="504" width="256" height="104" rx="10"/>
+  <text class="h" x="332" y="532">API connectors</text><text class="s" x="332" y="554">REST or SOAP calls with a</text><text class="s" x="332" y="573">dedicated service account,</text><text class="s" x="332" y="592">read-only by default</text>
+  <rect class="box" x="588" y="504" width="258" height="104" rx="10"/>
+  <text class="h" x="604" y="532">Document tools</text><text class="s" x="604" y="554">PDF and spreadsheet reading,</text><text class="s" x="604" y="573">search over your policies</text><text class="s" x="604" y="592">and product data</text>
+
+  <path class="ln" d="M444 628 V662" marker-end="url(#a)"/>
+
+  <!-- Layer 4: systems of record -->
+  <rect class="band" x="24" y="668" width="840" height="140" rx="14"/>
+  <text class="lab" x="44" y="698">4  SYSTEMS OF RECORD (UNCHANGED)</text>
+  <rect class="box" x="44" y="714" width="196" height="74" rx="10"/><text class="h" x="60" y="744">ERP</text><text class="s" x="60" y="766">NetSuite, Odoo, SAP B1</text>
+  <rect class="box" x="254" y="714" width="196" height="74" rx="10"/><text class="h" x="270" y="744">CRM</text><text class="s" x="270" y="766">Salesforce, HubSpot</text>
+  <rect class="box" x="464" y="714" width="186" height="74" rx="10"/><text class="h" x="480" y="744">Help desk</text><text class="s" x="480" y="766">Zendesk, Service Cloud</text>
+  <rect class="box" x="664" y="714" width="182" height="74" rx="10"/><text class="h" x="680" y="744">Files and email</text><text class="s" x="680" y="766">SharePoint, Drive</text>
+
+  <!-- Layer 5: control (right column) -->
+  <rect class="ctl" x="888" y="24" width="288" height="784" rx="14"/>
+  <text class="lw" x="908" y="54">5  CONTROL LAYER</text>
+  <rect class="ctlbox" x="908" y="72" width="248" height="116" rx="10"/>
+  <text class="hw" x="924" y="100">Approval queue</text><text class="sw" x="924" y="122">Items over a limit wait here</text><text class="sw" x="924" y="141">for a named person. Nothing</text><text class="sw" x="924" y="160">reaches a system until approved.</text>
+  <rect class="ctlbox" x="908" y="204" width="248" height="116" rx="10"/>
+  <text class="hw" x="924" y="232">Logs and audit trail</text><text class="sw" x="924" y="254">Every tool call, input, result</text><text class="sw" x="924" y="273">and approval, searchable by</text><text class="sw" x="924" y="292">order or invoice number</text>
+  <rect class="ctlbox" x="908" y="336" width="248" height="116" rx="10"/>
+  <text class="hw" x="924" y="364">Test set</text><text class="sw" x="924" y="386">Your own past cases. Re-run</text><text class="sw" x="924" y="405">before every change to the</text><text class="sw" x="924" y="424">model, instructions or tools</text>
+  <rect class="ctlbox" x="908" y="468" width="248" height="116" rx="10"/>
+  <text class="hw" x="924" y="496">Monitoring and alerts</text><text class="sw" x="924" y="518">Handoff rate, approver edits,</text><text class="sw" x="924" y="537">failed calls, blocked actions</text>
+  <rect class="ctlbox" x="908" y="600" width="248" height="94" rx="10"/>
+  <text class="hw" x="924" y="628">Secrets manager</text><text class="sw" x="924" y="650">Keys never sit in prompts</text><text class="sw" x="924" y="669">or code</text>
+  <rect class="ctlbox" x="908" y="710" width="248" height="78" rx="10"/>
+  <text class="hw" x="924" y="738">Off switch</text><text class="sw" x="924" y="760">Named owner can stop it</text>
+
+  <path class="dash" d="M864 324 H900" marker-end="url(#a)"/>
+  <path class="dash" d="M864 556 H900" marker-end="url(#a)"/>
+
+  <text class="s" x="24" y="846">Arrows show the path of one request. The control layer watches layers 2 and 3. Systems of record keep their own permission checks.</text>
+  <text class="s" x="24" y="872" style="fill:#9CA3AF">FactoryJet, factoryjet.com. Reference architecture, October 2026.</text>
+</svg>

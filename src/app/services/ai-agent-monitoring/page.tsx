@@ -1005,7 +1005,11 @@ export default function AiAgentMonitoringPage() {
               <Link href="/blog/what-is-an-ai-agent-cost-2026" className={LINK_CLASS}>
                 guide to what an AI agent costs
               </Link>{' '}
-              covers it.
+              covers it. The rules to agree before an agent goes live, with a free policy template, are in our{' '}
+              <Link href="/blog/ai-agent-governance-policy-mid-sized-companies-2026" className={LINK_CLASS}>
+                AI agent governance guide
+              </Link>
+              .
             </p>
           </div>
         </section>
