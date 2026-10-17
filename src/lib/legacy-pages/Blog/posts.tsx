@@ -166,9 +166,24 @@ import { post as customMcpServerErpCrmMidSizedCompanies2026Post } from './posts/
 import { post as agenticAiInManufacturingUseCases2026Post } from './posts/agentic-ai-in-manufacturing-use-cases-2026';
 import { post as aiAgentsForProcurementSupplyChain2026Post } from './posts/ai-agents-for-procurement-supply-chain-2026';
 import { post as aiAgentsForFinanceAccountingTeams2026Post } from './posts/ai-agents-for-finance-accounting-teams-2026';
+import { post as aiMvpDevelopmentCost2026Post } from './posts/ai-mvp-development-cost-2026';
+import { post as aiAgencyVsInHouseVsFreelancer2026Post } from './posts/ai-agency-vs-in-house-vs-freelancer-2026';
+import { post as questionsToAskAiDevelopmentCompany2026Post } from './posts/questions-to-ask-ai-development-company-2026';
+import { post as aiAgentDevelopmentContractChecklist2026Post } from './posts/ai-agent-development-contract-checklist-2026';
+import { post as whyAiAgentProjectsFail2026Post } from './posts/why-ai-agent-projects-fail-2026';
+import { post as copilotStudioVsCustomAiAgents2026Post } from './posts/copilot-studio-vs-custom-ai-agents-2026';
+import { post as enterpriseAiAgentCost2026Post } from './posts/enterprise-ai-agent-cost-2026';
 
 export const POSTS: BlogPost[] = [
   bestAiAgentDevelopmentCompanies2026Post,
+  // --- AI BUYER DECISION WAVE (2026-10-18): Copilot Studio, project failure, enterprise cost, vetting questions, agency vs in-house, contract checklist, AI MVP cost ---
+  copilotStudioVsCustomAiAgents2026Post,
+  whyAiAgentProjectsFail2026Post,
+  enterpriseAiAgentCost2026Post,
+  questionsToAskAiDevelopmentCompany2026Post,
+  aiAgencyVsInHouseVsFreelancer2026Post,
+  aiAgentDevelopmentContractChecklist2026Post,
+  aiMvpDevelopmentCost2026Post,
   // --- MID-MARKET AI AGENT WAVE 4 (2026-10-18): manufacturing, procurement and supply chain, finance and accounting ---
   agenticAiInManufacturingUseCases2026Post,
   aiAgentsForProcurementSupplyChain2026Post,

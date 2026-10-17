@@ -96,6 +96,7 @@ scripts/quarantine/
 pipeline/hiring/
 pipeline/research/data/
 pipeline/research/briefs/
+pipeline/research/page-briefs/
 pipeline/research/linkedin/
 pipeline/research/*.md
 pipeline/research/*.html
