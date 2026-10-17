@@ -119,6 +119,7 @@ US is served from the root. There is no `/us/` prefix. Prefer these URLs; do not
 - https://factoryjet.com/b2b-ecommerce
 - https://factoryjet.com/ecommerce-consulting
 - https://factoryjet.com/services/shopify-development
+- [US Shopify stores for Korean beauty brands](https://factoryjet.com/services/shopify-development/korean-beauty-brands): Shopify stores for Korean skincare and cosmetics brands selling to US shoppers, with a 10-item US launch checklist (MoCRA filings, label contact, sales tax, duties after the de minimis suspension), Cafe24 migration and Amazon US alignment.
 - https://factoryjet.com/bigcommerce-development
 - https://factoryjet.com/headless-commerce
 - https://factoryjet.com/services/magento-development

@@ -104,6 +104,15 @@ const MIGRATION_PLATFORMS = [
     solution: 'We migrate catalogs and collections to custom Shopify themes. Stores gain multi-carrier shipping automation and higher conversions.',
     keyStats: ['Uncapped catalog scaling.', 'Multi-carrier shipping rules.', 'Advanced marketing integrations.'],
   },
+  {
+    name: 'Cafe24 (Korea)',
+    slug: 'cafe24-to-shopify',
+    link: '/services/shopify-development/korean-beauty-brands',
+    badge: 'Korean Brands Selling to the US',
+    pain: 'Korean stores built for Korean shoppers: prices in won, Korean payment methods, and product copy written in Korean for a Korean audience.',
+    solution: 'We build a separate US store on Shopify, move products, customers and order history, redirect old URLs, and rewrite the copy in English for US shoppers. The Korean store keeps running.',
+    keyStats: ['USD pricing and US checkout.', 'Korean store stays live.', 'English copy, not translation.'],
+  },
 ];
 
 const MIGRATION_DATA_PROTOCOLS = [

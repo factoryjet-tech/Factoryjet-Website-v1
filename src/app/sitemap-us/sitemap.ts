@@ -70,6 +70,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/shopify-plus-agency',                 source: 'src/app/services/shopify-plus-agency/page.tsx' },
   { path: '/services/headless-shopify-development',        source: 'src/app/services/headless-shopify-development/page.tsx' },
   { path: '/services/shopify-migration-agency',            source: 'src/app/services/shopify-migration-agency/page.tsx' },
+  { path: '/services/shopify-development/korean-beauty-brands', source: 'src/app/services/shopify-development/korean-beauty-brands/page.tsx' },
   // ── AI agent cluster, moved from sitemap-india 2026-08-06 ──────────────────
   // Retargeted to the US: measured demand 8,250/mo, median KD 6, vs 1,711
   // impressions and 9 clicks earned over the prior 90 days.
