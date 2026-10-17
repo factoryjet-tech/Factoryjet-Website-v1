@@ -10,6 +10,11 @@
  * Google or AI crawlers. Keep it that way: never render panels conditionally.
  *
  * Data lives in megaNavData.ts (one source for desktop and mobile).
+ *
+ * Every Link here is prefetch={false} (2026-10-17). The closed mobile drawer sits
+ * just off-screen, inside Next's viewport-prefetch margin, so default prefetch
+ * fetched ~12 pages (~50 requests, ~380 KB) on every page load, plus the
+ * high-priority hero photo of /services/shopify-maintenance-services.
  */
 
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -30,7 +35,7 @@ function Column({ col, onNavigate }: { col: NavColumn; onNavigate: () => void })
       <ul className={col.kind === 'rich' ? 'mn-rich' : 'mn-compact'}>
         {col.items.map((it) => (
           <li key={it.href + it.label}>
-            <Link href={it.href} onClick={onNavigate}>
+            <Link prefetch={false} href={it.href} onClick={onNavigate}>
               {col.kind === 'rich' && it.icon && (
                 <span className="mn-ic" aria-hidden="true"><it.icon size={15} strokeWidth={1.7} /></span>
               )}
@@ -40,7 +45,7 @@ function Column({ col, onNavigate }: { col: NavColumn; onNavigate: () => void })
           </li>
         ))}
       </ul>
-      {col.more && <Link className="mn-more" href={col.more.href} onClick={onNavigate}>{col.more.label} →</Link>}
+      {col.more && <Link prefetch={false} className="mn-more" href={col.more.href} onClick={onNavigate}>{col.more.label} →</Link>}
     </div>
   );
 }
@@ -48,7 +53,7 @@ function Column({ col, onNavigate }: { col: NavColumn; onNavigate: () => void })
 function Feature({ f, note, onNavigate }: { f: NavFeature; note?: { lead: string; label: string; href: string }; onNavigate: () => void }) {
   return (
     <>
-      <Link className="mn-fcard" href={f.href} onClick={onNavigate}>
+      <Link prefetch={false} className="mn-fcard" href={f.href} onClick={onNavigate}>
         <span className="mn-fimg">
           <img src={f.image} alt="" width={900} height={600} loading="lazy" decoding="async" />
         </span>
@@ -61,7 +66,7 @@ function Feature({ f, note, onNavigate }: { f: NavFeature; note?: { lead: string
       </Link>
       {note && (
         <p className="mn-fnote">
-          {note.lead} <Link href={note.href} onClick={onNavigate}>{note.label} →</Link>
+          {note.lead} <Link prefetch={false} href={note.href} onClick={onNavigate}>{note.label} →</Link>
         </p>
       )}
     </>
@@ -129,6 +134,7 @@ export function MegaNavDesktop({ hubs: SERVICE_HUBS = US_HUBS, menus: SIMPLE_MEN
             <p className="mn-rail-h">Services</p>
             {SERVICE_HUBS.map((s, i) => (
               <Link
+                prefetch={false}
                 key={s.key}
                 href={s.hub}
                 className="mn-rail-a"
@@ -153,7 +159,7 @@ export function MegaNavDesktop({ hubs: SERVICE_HUBS = US_HUBS, menus: SIMPLE_MEN
                   <p className="mn-h">{s.title}</p>
                   <p className="mn-sum">{s.summary}</p>
                 </div>
-                <Link className="mn-hub" href={s.hub} onClick={close}>
+                <Link prefetch={false} className="mn-hub" href={s.hub} onClick={close}>
                   <span className="mn-tag">HUB</span>{s.hubLabel}<ArrowRight size={14} strokeWidth={1.8} aria-hidden="true" />
                 </Link>
               </div>
@@ -197,7 +203,7 @@ export function MegaNavMobile({ onNavigate, hubs: SERVICE_HUBS = US_HUBS, menus:
     <div key={c.heading}>
       <p className="mnm-grp">{c.heading}</p>
       {c.items.map((it) => (
-        <Link key={it.href + it.label} className="mnm-it" href={it.href} onClick={onNavigate}>{it.label}</Link>
+        <Link prefetch={false} key={it.href + it.label} className="mnm-it" href={it.href} onClick={onNavigate}>{it.label}</Link>
       ))}
     </div>
   ));
@@ -218,7 +224,7 @@ export function MegaNavMobile({ onNavigate, hubs: SERVICE_HUBS = US_HUBS, menus:
                 <span className="mnm-d">{s.rail}</span>
               </button>
               <div className="mnm-list" hidden={cat !== s.key}>
-                <Link className="mnm-hub" href={s.hub} onClick={onNavigate}>{s.hubLabel}<ArrowRight size={15} strokeWidth={1.8} aria-hidden="true" /></Link>
+                <Link prefetch={false} className="mnm-hub" href={s.hub} onClick={onNavigate}>{s.hubLabel}<ArrowRight size={15} strokeWidth={1.8} aria-hidden="true" /></Link>
                 {flatItems(s.columns)}
               </div>
             </div>
