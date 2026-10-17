@@ -6,6 +6,8 @@ export interface AuthorProfile {
   shortBio: string
   yearsExperience: string
   image: string
+  /** Small copy for 48-80 px bylines; `image` stays the schema and author-page photo. */
+  avatar?: string
   linkedin?: string
   twitter?: string
   credentials: string[]
@@ -27,6 +29,7 @@ export const AUTHORS: Record<string, AuthorProfile> = {
   // every blog post byline, so it was the widest-reaching instance of the claim.
   yearsExperience: '10+',
   image: '/bhavesh_image.jpg',
+  avatar: '/bhavesh_avatar-240.webp',
   linkedin: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
   credentials: [
     '500+ websites delivered to US, UK, and UAE clients',

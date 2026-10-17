@@ -150,12 +150,13 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
             const authorProfile = getAuthorByName(post.author);
             return (
               <Link
+                prefetch={false}
                 href={authorProfile ? `/author/${authorProfile.slug}` : '/blog'}
                 className="blog-hero-author inline-flex items-center justify-center gap-3 md:gap-4 group/author"
               >
                 <div className="relative">
                   <img
-                    src={authorProfile?.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(post.author)}&background=F05A28&color=fff`}
+                    src={authorProfile?.avatar || authorProfile?.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(post.author)}&background=F05A28&color=fff`}
                     alt={`${post.author} - Author`}
                     width={48}
                     height={48}
@@ -229,9 +230,9 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
                 return (
                   <div className="mt-12 md:mt-16 bg-gradient-to-br from-[#FAFAF7] to-[#FFF3EE]/30 rounded-xl md:rounded-2xl p-5 md:p-8 border border-gray-100" id="author">
                     <div className="flex items-start gap-4 md:gap-5">
-                      <Link href={`/author/${authorProfile.slug}`} className="flex-shrink-0">
+                      <Link prefetch={false} href={`/author/${authorProfile.slug}`} className="flex-shrink-0">
                         <img
-                          src={authorProfile.image}
+                          src={authorProfile.avatar || authorProfile.image}
                           alt={`${authorProfile.name} - ${authorProfile.jobTitle}`}
                           width={80}
                           height={80}
@@ -242,7 +243,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
                         <div className="flex flex-wrap items-center gap-2 mb-1">
                           <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Written by</span>
                         </div>
-                        <Link href={`/author/${authorProfile.slug}`} className="group/name">
+                        <Link prefetch={false} href={`/author/${authorProfile.slug}`} className="group/name">
                           <h3 className="font-display font-bold text-lg md:text-xl text-gray-900 group-hover/name:text-[#F05A28] transition-colors">
                             {authorProfile.name}
                           </h3>
@@ -255,6 +256,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
                         </p>
                         <div className="flex flex-wrap items-center gap-2">
                           <Link
+                            prefetch={false}
                             href={`/author/${authorProfile.slug}`}
                             className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#B23E13] text-white text-xs font-semibold hover:bg-[#9A3510] transition-colors"
                           >
