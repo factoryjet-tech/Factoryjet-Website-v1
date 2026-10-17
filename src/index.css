@@ -266,3 +266,10 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Looping animations whose <section> is off-screen (PauseOffscreenLoops.tsx). */
+[data-loop-paused],
+[data-loop-paused]::before,
+[data-loop-paused]::after {
+  animation-play-state: paused !important;
+}

@@ -12,6 +12,7 @@ import { ContactModalProvider } from '../context/ContactModalContext'
 import Script from 'next/script'
 import ScrollToTop from '../components/ScrollToTop'
 import MobileStickyCTA from '../components/MobileStickyCTA'
+import PauseOffscreenLoops from '../components/PauseOffscreenLoops'
 import ConditionalContactModal from '../components/ConditionalContactModal'
 import ProductionAnalytics from '../components/ProductionAnalytics'
 import { ORGANIZATION_SCHEMA } from '@/data/organization';
@@ -195,6 +196,7 @@ export default function RootLayout({
           {children}
           <ConditionalContactModal />
           <MobileStickyCTA />
+          <PauseOffscreenLoops />
         </ContactModalProvider>
       </body>
     </html>
