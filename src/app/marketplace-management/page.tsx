@@ -726,7 +726,7 @@ export default function MarketplaceManagementPage() {
                     width={46}
                     height={46}
                     quality={95}
-                    style={{ borderRadius: '50%', objectFit: 'cover', border: '1.5px solid var(--pp-orange)' }}
+                    style={{ width: '46px', height: '46px', flexShrink: 0, borderRadius: '50%', objectFit: 'cover', border: '1.5px solid var(--pp-orange)' }}
                   />
                   <div>
                     <b>Bhavesh Barot</b>

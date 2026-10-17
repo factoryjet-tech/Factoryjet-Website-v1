@@ -332,7 +332,7 @@ export default function AiVisibilityCheckerPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap avc-eeat-grid">
             <div className="avc-eeat-card">
-              <img src="/bhavesh_avatar-240.webp" alt="Bhavesh Barot, Founder of FactoryJet" width={76} height={76} loading="lazy" decoding="async" />
+              <img src="/bhavesh_avatar-240.webp" alt="Bhavesh Barot, Founder of FactoryJet" width={76} height={76} loading="lazy" decoding="async" style={{ width: 76, height: 76, objectFit: 'cover', flexShrink: 0 }} />
               <div>
                 <p className="pp-mlabel">// built and reviewed by the founder</p>
                 <h3 style={{ marginTop: 6, fontSize: 19 }}>Bhavesh Barot, Founder of FactoryJet</h3>

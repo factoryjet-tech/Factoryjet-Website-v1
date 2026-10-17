@@ -791,7 +791,7 @@ export default function SFCCToShopifyPlusPage() {
                   alt="Bhavesh Barot, Founder of FactoryJet"
                   width={44}
                   height={44}
-                  style={{ borderRadius: '50%', objectFit: 'cover' }}
+                  style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover' }}
                 />
                 <span style={{ position: 'absolute', bottom: '0', right: '0', width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#10B981', border: '2px solid #141414' }} />
               </div>
