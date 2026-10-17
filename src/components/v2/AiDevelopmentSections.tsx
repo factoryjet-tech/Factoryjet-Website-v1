@@ -24,6 +24,8 @@ import './AiDevelopmentSections.css';
  *   - /services/ai-agent-development: agents that take actions
  *   - /services/ai-integration-services: connecting an AI tool to one existing app
  *   - /services/ai-consulting: strategy, readiness and roadmap
+ *   - /services/llm-development: the model work in depth (model choice, RAG, fine-tuning, evals);
+ *     the Model Choice capability card links there (added 2026-10-18)
  *
  * Static server component. The only client code is HeroInlineForm.
  * Arrays exported here (CAPABILITIES, AI_DEV_COMPANIES, aiDevBreadcrumbs) also feed the
@@ -150,7 +152,7 @@ export const CAPABILITIES: ReadonlyArray<{ href?: string; icon: string; title: s
   { href: '/services/ai-integration-services', icon: 'M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14', title: 'AI Integrated Into Existing Systems',
     body: 'AI that reads from and writes back to the software you already run: Shopify, BigCommerce, NetSuite, Salesforce, HubSpot, Zendesk, Microsoft 365. Drafts land where people work, and a person approves anything that matters.',
     tags: ['APIs', 'Webhooks', 'ERP', 'CRM'] },
-  { icon: 'M12 3v4M12 17v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M3 12h4M17 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8', title: 'Model Choice & Fine-Tuning',
+  { href: '/services/llm-development', icon: 'M12 3v4M12 17v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M3 12h4M17 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8', title: 'Model Choice & Fine-Tuning',
     body: 'We test models from OpenAI, Anthropic, Google and open-weight families on your cases, then pick on accuracy, cost and data terms. Fine-tuning only when prompting and RAG cannot hold the format or tone you need.',
     tags: ['OpenAI', 'Anthropic', 'Gemini', 'Open-weight'] },
   { href: '/services/ai-agent-monitoring', icon: 'M4 20V10m6 10V4m6 16v-8m4 8V7', title: 'Evaluation & Monitoring',

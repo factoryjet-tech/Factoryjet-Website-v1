@@ -1,380 +1,330 @@
 import React from 'react';
-import type { BlogPost } from '../data.types';
+import type { BlogPost, FAQItem } from '../data.types';
 
-const faqs = [
+/*
+ * How much does it cost to build an AI agent (US, 2026). First written 19 Sep 2026; refreshed 18 Oct 2026 (batch 5 of
+ * the mid-market plan, pipeline/research/BLOG-PLAN-MIDMARKET-AI-AGENTS-2026-10-17.md).
+ * Target terms (DataForSEO, US, 17 Oct 2026): how much does it cost to build an ai agent 90/mo KD 1 (+950% yoy,
+ * weakest page-one site 1 referring domain), ai agent cost 90 KD 13, how much does an ai agent cost 90 KD 1,
+ * ai implementation cost 40, cost of ai agent 30, cost of an ai agent 10, how much does it cost to create an ai agent 10.
+ * PAA and page one pulled 18 Oct 2026 (data/midmarket-agent-blog-2026-10-17/serp_paa_batch5.json).
+ * Outside figures read on the publisher's own page on 18 Oct 2026: Layer3 Labs pricing guide (updated 9 Sep 2026),
+ * ProductCrafters cost breakdown (dated 24 Feb 2026), Intercom Fin pricing, Salesforce Agentforce pricing.
+ * Market ranges and vendor list prices only: no FactoryJet prices, and no running, hosting, model or maintenance
+ * figures for a custom agent. The faqs array below is the single source for the visible FAQ and FAQPage JSON-LD.
+ */
+
+const SRC = {
+  layer3: 'https://www.layer3labs.io/guides/ai-consulting-rates-pricing',
+  productcrafters: 'https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent/',
+  fin: 'https://fin.ai/pricing',
+  agentforce: 'https://www.salesforce.com/agentforce/pricing/',
+  gartner40: 'https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027',
+};
+
+const ext = { target: '_blank', rel: 'noopener noreferrer' } as const;
+const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
+
+function Table({ head, rows }: { head: string[]; rows: React.ReactNode[][] }) {
+  return (
+    <div className="overflow-x-auto my-6">
+      <table className="w-full border-collapse text-sm">
+        <thead>
+          <tr className="bg-gray-800 text-white">
+            {head.map((h) => (
+              <th key={h} className="p-3 text-left border border-gray-700">{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r, i) => (
+            <tr key={i} className={i % 2 ? 'bg-gray-50' : 'bg-white'}>
+              {r.map((c, j) => (
+                <td key={j} className={`p-3 border border-gray-200 align-top${j === 0 ? ' font-semibold' : ''}`}>{c}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+const faqs: FAQItem[] = [
+  {
+    q: 'How much does it cost to build an AI agent?',
+    a: 'Published market ranges put a custom AI agent build at roughly $5,000 to $25,000 for a production MVP on one workflow and $50,000 to $200,000 or more for an enterprise system, per Layer3 Labs (updated 9 September 2026). ProductCrafters puts most mid-sized company projects at $15,000 to $100,000. Where yours lands depends on how many systems the agent connects to and how clean the data is.',
+  },
   {
     q: 'How much does an AI agent cost?',
-    a: 'It depends on whether you rent one or have one built. Renting one: Intercom charges $0.99 per Fin outcome and Salesforce Agentforce works out to $0.10 per action. Building one: development firm ProductCrafters puts builds at about $5,000 to $180,000+ in its 2026 breakdown, and integration is the biggest part.',
+    a: 'It depends on whether you rent one or have one built. Rented agents bill per result on the vendor price list: Intercom charges $0.99 per Fin outcome, and a standard Salesforce Agentforce action uses 20 Flex Credits, which is $0.10 at $500 per 100,000 credits. A custom build is priced as a project, from about $5,000 for a single-workflow MVP to $200,000 or more for an enterprise system.',
+  },
+  {
+    q: 'What is the cost of an AI agent for a mid-sized company?',
+    a: 'ProductCrafters, a development firm, says implementing AI agents costs $15,000 to $100,000 for most mid-sized companies, covering discovery, development, integration with the CRM or ERP, testing and deployment. Layer3 Labs puts a multi-workflow platform with four to eight connected workflows at $25,000 to $75,000. Both are market ranges published by sellers, so treat them as a guide and ask for a fixed quote after scoping.',
+  },
+  {
+    q: 'How much does it cost to create an AI agent from scratch?',
+    a: 'Creating an AI agent from scratch costs the same as building one: the price follows the work, not the word. A single workflow with two or three system connections sits at $5,000 to $15,000 in the Layer3 Labs guide, and a workflow wired into a legacy ERP through a custom API at $15,000 to $25,000. Training your own model is rarely needed; most agents run on an existing model from OpenAI, Anthropic or Google.',
+  },
+  {
+    q: 'What drives the cost of AI agent development?',
+    a: 'Four things: how many systems the agent reads from and writes to, how messy or scattered the data is, how much approval and safety logic the job needs, and how much testing it takes to trust the result. In the ProductCrafters breakdown, integration and workflow orchestration is the largest phase at $20,000 to $50,000, ahead of model setup at $10,000 to $40,000.',
+  },
+  {
+    q: 'Why is AI expensive to implement?',
+    a: 'Most AI implementation cost is integration and testing, not the model. The agent has to read your systems through their APIs, respect who may see what, log every action, retry safely and hand the hard cases to a person. ProductCrafters says each API integration adds $3,000 to $10,000 and data preparation adds 20 to 40% to the timeline. A narrow first job keeps those costs small.',
+  },
+  {
+    q: 'What does AI implementation cost for a business?',
+    a: 'AI implementation costs for a business run from a $2,000 to $5,000 discovery engagement up to $50,000 to $200,000 or more for a multi-system enterprise deployment, according to the Layer3 Labs pricing guide updated 9 September 2026. The same guide notes quotes for the same project can differ by more than 400% between a freelancer and a large consultancy, so compare scope line by line.',
+  },
+  {
+    q: 'Is an AI agent free?',
+    a: 'No. Open-source frameworks such as LangChain are free to download, and several platforms offer a free tier for testing. What is never free is the work that makes an agent safe on real systems: connecting it through APIs, setting permissions, logging every action, testing it on your past cases and having a person review its escalations. That work is what the build price pays for.',
   },
   {
     q: 'Does it cost money to have an AI agent?',
-    a: 'Yes. You either rent one from a vendor, usually billed per result, or you pay once to have one built and connected to your systems. A built agent also needs a person who reviews its escalations and keeps it working when your tools or policies change.',
+    a: 'Yes, one way or another. You either rent an agent from a vendor and pay per result, such as $0.99 per Fin outcome at Intercom, or pay once to have one built and connected to your systems. A built agent also uses an AI model and hosting; at FactoryJet those accounts sit in your name and you pay the providers at cost.',
   },
   {
-    q: 'How much does an AI agent cost to run per month?',
-    a: 'A rented agent bills per result on the vendor\'s price list: Intercom charges $0.99 per Fin outcome, and Salesforce Agentforce works out to $0.10 per action. For an agent built for you there is no single monthly figure, because it depends on the work the agent handles and the systems it connects to. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and can keep managing the servers, AI, APIs and maintenance so your team does not have to.',
-  },
-  {
-    q: 'How much does it cost to build an AI agent?',
-    a: 'Development firm ProductCrafters puts builds at about $5,000 to more than $180,000 in its 2026 breakdown. The largest build phase is integrating the agent with your systems, at $20,000 to $50,000, not setting up the AI model. Anything touching an ERP or messy data costs more and is hard to estimate before someone has looked at the data. A narrow pilot on one queue, two to four weeks long, is the sane way to find out.',
+    q: 'How much does an AI agent cost per month?',
+    a: 'A rented agent is billed monthly by usage on the vendor list price. For example, 1,200 resolved Fin conversations at $0.99 each is $1,188 before seat prices or minimum commitments. A custom agent has no standard monthly fee: the AI model and hosting are billed by the providers on your own accounts, and support is a choice you make, not a fixed minimum.',
   },
   {
     q: 'How much does a ChatGPT agent cost?',
-    a: 'OpenAI lists agent features as part of its ChatGPT subscription plans rather than selling agents one at a time, and which plan includes what changes often, so check OpenAI\'s pricing page before you budget. For a business, the bigger point is that a ChatGPT subscription does not connect an agent to your helpdesk, store or CRM with your permissions. For that you need an agent built and connected to those systems.',
+    a: 'OpenAI includes agent features in its ChatGPT subscription plans rather than selling agents one at a time, and the plan line-up changes often, so check OpenAI\'s pricing page on the day you budget. A ChatGPT subscription does not connect an agent to your helpdesk, ERP or CRM with your permissions. For that, the agent has to be built and connected to those systems.',
   },
   {
     q: 'Can I build my own AI agent for free?',
-    a: 'You can prototype one for very little. Frameworks like LangChain are open source. What is not free is making it safe to act on real systems: permissions, logging, retries, testing and monitoring. That is where the real cost starts.',
+    a: 'You can prototype one cheaply. A developer can wire a model to one tool with an open-source framework in a few days. What costs money is turning that prototype into something safe to run on real orders or invoices: permissions, retries that never repeat an action, logs, an evaluation set and someone watching the escalations. That gap is most of any build budget.',
   },
   {
-    q: 'How much does an AI chatbot cost?',
-    a: 'Less than an agent, because a chatbot only answers questions and does not act on your systems, so there is no integration or permissions work to pay for. Some off-the-shelf support AI is priced per result: Intercom charges $0.99 per Fin outcome. If you need it to issue refunds, change orders or book meetings, you are pricing an agent, not a chatbot.',
+    q: 'Are AI agents worth it?',
+    a: 'An AI agent is worth it when it owns a queue you can count: at least a few hundred similar items a month, a rule a person could write down, and data the agent can reach. Gartner predicts over 40% of agentic AI projects will be canceled by the end of 2027 over cost, unclear value or weak risk controls, so prove the value on one queue first.',
+  },
+  {
+    q: 'How much does an AI chatbot cost compared with an AI agent?',
+    a: 'A chatbot costs less because it only answers questions and does not act on your systems, so there is no integration or permissions work to pay for. Layer3 Labs prices a simple workflow on standard SaaS tools at $5,000 to $8,000. Once the software must issue a refund, change an order or book a meeting, you are pricing an agent and the integration work that comes with it.',
   },
   {
     q: 'How much does an AI agent cost per hour?',
-    a: 'Agents are not billed by the hour. A rented agent bills per result: Intercom charges $0.99 per Fin outcome, and Salesforce Agentforce works out to $0.10 per action. An agent built for you is priced as a project, and development firm ProductCrafters puts builds at about $5,000 to $180,000+ in its 2026 breakdown.',
+    a: 'AI agents are not billed by the hour. A rented agent bills per result, such as $0.99 per Fin outcome or $0.10 per Agentforce action. A custom build is priced as a project. Where hourly rates do appear is the people building it: Layer3 Labs lists AI consultants from $75 an hour for freelancers to $500 an hour at enterprise consulting firms.',
   },
   {
-    q: 'Is AI agent free?',
-    a: 'No. Frameworks like LangChain are open source and free to download, and several platforms run a free tier. What is not free is the integration work, the permissions, the logging, the monitoring, and the person who reviews escalations.',
+    q: 'Can a small or mid-sized business afford an AI agent?',
+    a: 'Yes, if it has a real queue. Volume matters more than company size: roughly 200 or more repetitive items a month with a decision rule a person could write down. Below that, a workflow tool or a part-time hire is usually the cheaper answer. Above it, a single-workflow MVP in the $5,000 to $25,000 market range is a sensible first step.',
   },
   {
-    q: 'Can a small business afford an AI agent?',
-    a: 'Yes, if it has a real queue. The test is volume, not company size: roughly 200 or more repetitive items a month with a decision rule a person could write down. Below that, a workflow tool or a part-time person is the cheaper answer, and a decent agency will tell you so.',
-  },
-  {
-    q: 'Do you need coding to build AI agents?',
-    a: 'Not for a simple one. No-code tools and assistant builders can set up an agent that answers questions or runs a short workflow. To let an agent act safely on your own systems, such as issuing refunds or updating orders, someone has to write and test the tools it calls, handle permissions and log every action. That part is software engineering, and it is most of the cost.',
-  },
-  {
-    q: 'What is an AI agent in simple terms?',
-    a: 'Software you give a goal to rather than a script. It decides its own steps, uses tools to act on real systems like your helpdesk, your store or your CRM, checks whether it worked, and keeps going until the job is done or it hits a limit you set. A chatbot replies. An agent finishes a task.',
-  },
-  {
-    q: 'What is the difference between an AI agent and a chatbot?',
-    a: 'A chatbot produces text. An agent produces a changed state in a system: a refund issued, a meeting booked, a quote drafted, a ticket closed. If the software cannot write to anything outside the conversation, it is a chatbot no matter what it is marketed as.',
-  },
-  {
-    q: 'Is an AI agent the same as a bot?',
-    a: '"Bot" covers everything from a scripted chat widget to a scraper. An AI agent is a narrower thing: it gets a goal instead of a script, chooses its own sequence, and can act on outside systems. Most things called bots follow a fixed path, and when the path is fixed, "bot" is the more honest word.',
-  },
-  {
-    q: 'Is ChatGPT an AI agent?',
-    a: 'The base chat product is an assistant. When it browses, runs code, or calls tools to finish a multi-step task, it is behaving agentically. For a business the distinction that matters is whether it is connected to your systems with your permissions. A general chat product is not, and cannot be held to your refund policy.',
-  },
-  {
-    q: 'What are the 5 types of agent in AI?',
-    a: 'That list comes from the standard textbook, Russell and Norvig\'s "Artificial Intelligence: A Modern Approach": simple reflex, model-based reflex, goal-based, utility-based, and learning agents. It is a useful academic taxonomy and close to useless for a buying decision. What you need to know is which queue the thing works on and what it is allowed to touch.',
-  },
-  {
-    q: 'What are the 7 types of AI agents?',
-    a: 'The count depends entirely on who wrote the list. The textbook taxonomy has five. Vendor blog posts reach seven or more by adding hierarchical agents and multi-agent systems, which are architectures rather than agent types. Treat any numbered list of agent types as content marketing, not a standard.',
-  },
-  {
-    q: 'What are the top 3 AI agents?',
-    a: 'There is no leaderboard, because there is no single product category. The question usually means one of two things: which model should the agent run on, or which off-the-shelf agent product should I buy. Those have different answers and both depend on the job. Anyone who names three without asking what you do is guessing.',
-  },
-  {
-    q: 'What is agentic AI, and is it different from an AI agent?',
-    a: '"Agentic AI" is the property. "AI agent" is the thing that has it. In practice the terms get used interchangeably and most of the difference is vendor positioning. We take the terminology apart in a separate post. For a buying decision the useful question is what it can do and what it costs, not what it is called.',
-  },
-  {
-    q: 'Can I hire an AI agent?',
-    a: 'You can buy one as a product, have one built, or rent one as a per-seat or per-resolution subscription from a helpdesk vendor. What you cannot do is hire one the way you hire a person, because somebody still has to connect it to your systems, decide what it may touch, and own the escalations. That somebody is the actual hire.',
-  },
-  {
-    q: 'How do I get my own personal AI agent?',
-    a: 'For personal use, the assistant products from the major model vendors already browse, run code and call tools, and that is as close as consumer software currently gets. For a business, "personal" is the wrong frame. An agent is only useful once it is connected to a shared system with defined permissions, which is a project rather than a download.',
-  },
-  {
-    q: 'What can AI agents actually do for a business today?',
-    a: 'Four shapes work reliably at small and mid-size scale: support ticket deflection, quote and RFQ processing, outbound lead follow-up, and back-office reconciliation such as matching purchase orders to invoices. All four share one property, a countable backlog and a decision rule.',
-  },
-  {
-    q: 'Do I need an AI agent or just automation?',
-    a: 'If a human can write down every branch the software should take, build the automation. It is cheaper, faster, auditable, and it cannot hallucinate. Reach for an agent when the input varies enough that enumerating the branches is the hard part: messy inbound email, unstructured PDFs, free-text tickets.',
-  },
-  {
-    q: 'What tools do AI agents connect to?',
-    a: 'Whatever has an API and permission to be written to. Common in US small businesses: Shopify, Zendesk, Gorgias, HubSpot, Salesforce, Slack, Google Workspace, QuickBooks, NetSuite and Stripe. The integration is the expensive part of the project.',
-  },
-  {
-    q: 'Are AI agents safe to let act on their own?',
-    a: 'Only with limits: a hard step cap, a spend cap, schema validation on every action, a permission gate on anything that moves money, and a named human who owns the escalation queue. Agents with all five are safe in production. Agents with none of them are the reason people distrust the category.',
-  },
-  {
-    q: 'What happens when an AI agent gets it wrong?',
-    a: 'In a well-built system it detects the failure, retries once, and escalates to a person with the full context attached. In a badly built one it retries forever, burns budget, and closes the ticket anyway. Which one you have is decided at build time, not at incident time.',
-  },
-  {
-    q: 'Do AI agents replace jobs?',
-    a: 'They replace queues, and queues are usually the part of a job nobody wanted. In the deployments we run, the person who used to clear the ticket backlog ends up reviewing escalations and handling the hard cases that genuinely needed a human. Headcount reduction is a business decision, not a technical outcome.',
-  },
-  {
-    q: 'Which model should an AI agent use?',
-    a: 'Match the model to the decision. Routing, classification and extraction run fine on a small fast model. Anything requiring judgment across messy context wants a frontier model. Most production agents use two or three models at different steps.',
-  },
-  {
-    q: 'What is an AI voice agent?',
-    a: 'The same architecture with speech in and speech out. It answers or places calls, understands the caller, acts on your systems, and hands to a human when needed. It has stricter latency requirements than a text agent, which changes both the model choices and the cost.',
+    q: 'Is it cheaper to rent an AI agent or build one?',
+    a: 'Renting is cheaper to start and faster to test, because there is no build. Building wins when the agent must act on systems a vendor agent cannot reach, such as your ERP, a supplier portal or a custom database, or when per-result fees at your volume would exceed a one-time build. Run the vendor price list against your monthly volume before deciding.',
   },
   {
     q: 'How long does it take to build an AI agent?',
-    a: 'A narrow pilot on one queue takes two to four weeks. A production agent with permissions, logging, escalation and monitoring typically takes six to twelve weeks, and most of that time goes on integration and edge cases, not on prompting. Anyone promising a production agent in a week is describing a demo.',
+    a: 'A narrow pilot on one queue takes two to four weeks. A production agent with permissions, logging, escalation and monitoring usually takes six to twelve weeks, and most of that time goes on integration and edge cases rather than prompting. ProductCrafters gives 6 to 16 weeks for custom-built agents. A promise of a production agent in one week describes a demo.',
   },
   {
-    q: 'Can I build an AI agent myself?',
-    a: 'A competent developer can build a working single-tool agent in a week using an SDK. The gap between that and production is permissions, idempotency, retries, logging, evaluation and monitoring, which is most of the work. Prototype internally, then decide honestly whether you want to own that surface.',
+    q: 'Do you need coding to build an AI agent?',
+    a: 'Not for a simple one. No-code builders can set up an agent that answers questions or runs a short workflow. Letting an agent act safely on your own systems, such as issuing refunds or updating orders in NetSuite, needs someone to write and test the tools it calls, handle permissions and log every action. That part is software engineering, and it is most of the cost.',
   },
   {
-    q: 'What is the difference between an AI agent and RPA?',
-    a: 'RPA scripts a fixed path through user interfaces and breaks when a screen changes. An agent works through APIs and adapts when the situation differs from expectation. RPA is more predictable on stable systems. Agents handle variation. Plenty of real deployments use both.',
+    q: 'What is an AI agent in simple terms?',
+    a: 'Software you give a goal rather than a script. It decides its own steps, uses tools to act on real systems such as your helpdesk, store or CRM, checks whether it worked and keeps going until the job is done or it hits a limit you set. A chatbot replies to a message. An agent finishes a task and leaves a record of what it changed.',
   },
   {
-    q: 'How do I measure whether an AI agent is working?',
-    a: 'Pick the numbers before you build: percentage of the queue resolved without a human, average handling time, escalation rate, and cost per resolved item. Compare them against the same four numbers from the month before launch. If nobody measured the baseline, the agent will be judged on vibes.',
+    q: 'Do I need an AI agent or just automation?',
+    a: 'If a person can write down every branch the software should take, build plain automation: it is cheaper, faster to audit and cannot make things up. Choose an agent when the input varies enough that listing every branch is the hard part, such as messy inbound email, unstructured PDFs or free-text support tickets. Many good projects combine both, with the agent reading and the code acting.',
   },
   {
-    q: 'What should I do first if I want an AI agent?',
-    a: 'Count one queue for two weeks. How many items, how long each takes, how many follow the same rule. That single spreadsheet decides whether you need an agent, a workflow, or a process fix, and it is worth more than any vendor demo you will sit through.',
+    q: 'What should I ask before paying for an AI agent build?',
+    a: 'Ask which queue it works on and how many items are in it, which systems it writes to and through which API, what the step limit and spend cap are per run, what happens when it is unsure, and who reviews the escalation queue. Also ask who owns the code and whose accounts the AI and hosting run in. Vague answers mean the vendor has not scoped your systems.',
   },
   {
-    q: 'What determines which cost tier my AI agent falls into?',
-    a: 'Four things push a build from simple to complex: how many systems it has to connect to, how much compliance or safety logic those systems require, how messy or large the data is, and how much ongoing monitoring the result needs. A single-workflow agent on one clean API, like a helpdesk, sits at the simple end. An agent touching an ERP with compliance requirements and an ongoing governance commitment sits at the complex end. See the build-cost tiers earlier in this article for the full breakdown, or "How much does it cost to build an AI agent?" above for the published dollar range.',
+    q: 'What is the cheapest way to start with an AI agent?',
+    a: 'Start with a paid discovery or a pilot on one queue. Layer3 Labs puts a workflow discovery engagement at $2,000 to $5,000. At FactoryJet, the first step is a short scoping call and working software on your own data before you sign anything, followed by a fixed price in writing. Either route tells you whether the agent pays back before the larger spend.',
+  },
+  {
+    q: 'Who owns an AI agent after it is built?',
+    a: 'That depends on the contract, so check it before signing. At FactoryJet you own the code from day one, and the AI and hosting accounts are in your name, billed by the providers at cost. Some platforms and agencies keep the code and license it back to you, which makes switching vendors expensive later. Ask for repository access and admin rights in writing.',
   },
 ];
 
 export const post: BlogPost = {
   id: '427',
   slug: 'what-is-an-ai-agent-cost-2026',
-  title: 'How Much Does AI Agent Development Cost in 2026? Rent One or Build One',
+  title: 'How Much Does It Cost to Build an AI Agent in 2026?',
   excerpt:
-    'You can get an AI agent two ways: rent one from a vendor, or have one built. Here is what each route costs, with the source named: vendor list prices for renting per result, and a published range for a build with its phase breakdown. Plus the one test that tells you whether you are buying an agent or a chatbot.',
+    'Published market ranges put a custom AI agent at $5,000 to $25,000 for a one-workflow MVP and $50,000 to $200,000+ for an enterprise system. Here is where each figure comes from, what pushes a build up a tier, what renting one costs instead, and how to judge a proposal.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 19, 2026',
-  readTime: '17 min read',
+  dateModified: 'Oct 18, 2026',
+  readTime: '16 min read',
   imageUrl: '/blog-images/what-is-an-ai-agent-cost-2026.webp',
   imageAlt:
     'A desk with a laptop showing a support ticket queue beside a printed integration diagram and a calculator, representing the cost of renting or building an AI agent',
   meta: {
-    title: 'AI Agent Development Cost in 2026: Rent or Build',
+    title: 'How Much Does It Cost to Build an AI Agent? (2026)',
     description:
-      'AI agent development cost in 2026, with sources: rented agents at $0.99 per outcome, builds from $5,000 to $180,000+, and how to judge a proposal.',
+      'AI agent cost in 2026 from published market ranges: $5,000 to $25,000 for a one-workflow MVP, $50,000 to $200,000+ for enterprise, plus rented agent prices.',
   },
   keyTakeaways: [
-    'You can get an AI agent two ways: rent an off-the-shelf one from a vendor, or have one built and connected to your systems.',
-    'Renting is one route. Intercom charges $0.99 per Fin outcome, so 1,200 resolved tickets a month costs $1,188 with no build. Salesforce Agentforce works out to $0.10 per action.',
-    'Building is the other route. Development firm ProductCrafters puts builds at about $5,000 to $180,000+, and integration with your systems is the biggest phase in its breakdown, ahead of model setup.',
-    'Gartner predicts over 40% of agentic AI projects will be canceled by the end of 2027 over escalating costs, unclear business value or weak risk controls. A two-to-four-week pilot on one queue is the cheap way to avoid being one of them.',
-    'An AI agent takes a goal, not a script. If a human can write out every branch it can take, build automation instead: it is cheaper, faster and easier to audit.',
-    'If you cannot name the queue and count what is in it today, do not build an agent. Build the report that counts it first.',
+    'Market ranges, not quotes: Layer3 Labs (updated 9 Sep 2026) puts a production MVP workflow at $5,000 to $25,000 and an enterprise AI system at $50,000 to $200,000+.',
+    'ProductCrafters puts AI agent implementation at $15,000 to $100,000 for most mid-sized companies, with integration the largest single phase.',
+    'Renting is the other route: Intercom charges $0.99 per Fin outcome, and a standard Agentforce action is $0.10 at Salesforce list price.',
+    'What moves a build up a tier: the number of systems it touches, messy data, approval and safety logic, and testing.',
+    'Gartner predicts over 40% of agentic AI projects will be canceled by the end of 2027. Prove one queue first.',
+    'If a person can write out every branch, build automation instead of an agent.',
   ],
   faqs,
   content: (
     <article>
-      <div
-        style={{
-          background: 'linear-gradient(135deg, #fff7f0 0%, #fff3e8 100%)',
-          border: '1.5px solid #FF6B0030',
-          borderRadius: '12px',
-          padding: '24px 28px',
-          marginBottom: '40px',
-        }}
-      >
-        <p
-          style={{
-            fontWeight: 700,
-            color: '#B23E13',
-            marginBottom: '8px',
-            fontSize: '13px',
-            textTransform: 'uppercase',
-            letterSpacing: '0.06em',
-          }}
-        >
-          Quick Answer
+      {/* Answer-first block */}
+      <div className="bg-white border-2 border-[#E5DFD7] rounded-xl p-6 sm:p-8 mb-10">
+        <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-3">The short answer</p>
+        <p className="text-lg leading-relaxed mb-0">
+          <strong>Building an AI agent costs roughly $5,000 to $25,000 for a production MVP on one workflow</strong> and
+          $50,000 to $200,000 or more for a multi-system enterprise agent, per the Layer3 Labs pricing guide updated 9
+          September 2026. Most of the money goes on connecting the agent to your systems and testing it. Renting an agent
+          instead bills per result, from $0.10 an action.
         </p>
-        <p style={{ margin: '0 0 12px', fontSize: '17px', lineHeight: '1.65', color: '#1a1a1a' }}>
-          You can get an AI agent two ways, and each one is priced differently.
-        </p>
-        <p style={{ margin: '0 0 12px', fontSize: '17px', lineHeight: '1.65', color: '#1a1a1a' }}>
-          <strong>Renting one:</strong> off-the-shelf agents bill per result. Intercom charges $0.99
-          per Fin outcome, and Salesforce Agentforce works out to $0.10 per action.
-        </p>
-        <p style={{ margin: '0 0 12px', fontSize: '17px', lineHeight: '1.65', color: '#1a1a1a' }}>
-          <strong>Building one:</strong> a build is priced as a project, because the agent has to be
-          wired into your helpdesk, store or CRM with safe permissions. A 2026 breakdown from
-          development firm ProductCrafters puts builds at about $5,000 to more than $180,000.
-        </p>
-        <p style={{ margin: 0, fontSize: '17px', lineHeight: '1.65', color: '#1a1a1a' }}>
-          And what you are paying for: an AI agent is software given a goal. It decides its own
-          steps, uses tools to act on real systems, and keeps going until the job is done or it hits
-          a limit you set. A chatbot answers a message and stops.
+      </div>
+
+      <div className="bg-[#FAF8F5] border-l-4 border-[#B23E13] p-5 rounded-r-lg mb-10">
+        <p className="text-sm text-[#1F2937] leading-relaxed mb-0">
+          <strong>We design, build and support custom AI agents, so weigh this page with that in mind.</strong> The build
+          ranges are other firms&apos; published market figures, not FactoryJet prices. Vendor prices and the market
+          ranges were read on the publishers&apos; own pages on 18 October 2026. Search figures are our own DataForSEO
+          measurement for the US on 17 and 18 October 2026.
         </p>
       </div>
 
       <p>
-        Every vendor in America now sells AI agents. Gartner doubts most of them: it calls the
-        rebranding of chatbots, assistants and automation tools as agents "agent washing," and{' '}
-        <a
-          href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          estimates only about 130 of the thousands of agentic AI vendors are real
-        </a>
-        . Below is what a real agent costs to rent and to have built, with the source of each
-        price named. Then the test that separates an agent from a chatbot, four agents that pay for
-        themselves at small-business scale, and when not to build one at all.
+        US searches for &quot;how much does it cost to build an ai agent&quot; rose 950% in a year, to about 90 a month
+        (DataForSEO, 17 October 2026), and the weakest site on Google&apos;s first page for it had one referring domain.
+        Plenty of people are asking and few sources answer with a number they can trace. Every figure below links to the
+        page it came from. Gartner adds a warning worth reading first: it{' '}
+        <a href={SRC.gartner40} {...ext}>predicts over 40% of agentic AI projects will be canceled by the end of 2027</a>{' '}
+        over escalating costs, unclear business value or inadequate risk controls, and it estimates only about 130 of the
+        thousands of agentic AI vendors are real, calling the rest &quot;agent washing&quot;.
       </p>
 
-      <h2 id="cost">How much does an AI agent cost? Rent one or have one built</h2>
+      <h2 id="market-ranges">How much does it cost to build an AI agent? The published market ranges</h2>
       <p>
-        Two routes, priced in different ways. A rented agent bills per result on a vendor's price
-        list. A built agent is priced as a project, and the published range is wide.
+        Two development firms publish ranges detailed enough to use. Both sell builds, so read them as a seller&apos;s
+        ranges rather than a quote. They agree on the shape: one workflow is a five-figure project, and the price climbs
+        with each system the agent has to reach.
+      </p>
+      <Table
+        head={['Project type', 'Market range', 'What it covers', 'Source']}
+        rows={[
+          ['Workflow discovery', '$2,000 to $5,000', 'Map the workflow, tool stack and compliance needs; a roadmap', 'Layer3 Labs, 9 Sep 2026'],
+          ['Single-workflow MVP', '$5,000 to $15,000', 'One automation with two or three system integrations', 'Layer3 Labs, 9 Sep 2026'],
+          ['Workflow on a legacy ERP via custom API', '$15,000 to $25,000', 'Same job, but the agent writes to an ERP or practice system', 'Layer3 Labs, 9 Sep 2026'],
+          ['Multi-workflow platform', '$25,000 to $75,000', 'Four to eight connected workflows plus staff training', 'Layer3 Labs, 9 Sep 2026'],
+          ['AI agents for a mid-sized company', '$15,000 to $100,000', 'Discovery, development, CRM or ERP integration, testing, deployment', 'ProductCrafters, 24 Feb 2026'],
+          ['Enterprise AI system', '$50,000 to $200,000+', 'Several systems, enterprise sign-on, governance, change management', 'Layer3 Labs, 9 Sep 2026'],
+        ]}
+      />
+      <p>
+        Layer3 Labs also found that quotes for the same project can differ by more than 400% between a freelancer and a
+        large consultancy. Its example: a workflow quoted at $5,000 by a freelancer is regularly quoted at $20,000 by a
+        large firm. The scope, not the label, is what you are comparing. If your first agent is also your first product,
+        our guide to <a href="/blog/ai-mvp-development-cost-2026">AI MVP development cost in 2026</a> compares six
+        published estimates.
       </p>
 
-      <h3 id="rent">1. Renting one: pay per result instead of building</h3>
+      <h3 id="phases">Where the money goes: the build phases</h3>
       <p>
-        You do not have to build at all. Helpdesk and CRM vendors now rent agents by the result,
-        which turns the cost into a price per ticket you can hold up against a build quote:
+        <a href={SRC.productcrafters} {...ext}>ProductCrafters</a> breaks a build into phases. The largest is not the AI
+        model. It is plugging the agent into everything else.
+      </p>
+      <Table
+        head={['Build phase (ProductCrafters)', 'Published range', 'Why it costs what it costs']}
+        rows={[
+          ['Model setup and training', '$10,000 to $40,000', 'Choosing a model, prompts, retrieval and any fine-tuning'],
+          ['Integration and workflow orchestration', '$20,000 to $50,000', 'APIs, databases, CRMs and ERPs; one rate-limited API can cost weeks'],
+          ['Testing and validation', '$5,000 to $15,000', 'Scoring the agent on real past cases before it touches live data'],
+          ['Each extra API integration', '$3,000 to $10,000', 'Every system added is more permissions, error handling and tests'],
+        ]}
+      />
+      <p>
+        The same breakdown says data preparation adds 20 to 40% to the timeline. A catalog where one part has four names,
+        or invoices that arrive as phone photos, is a data project before it is an AI project.
+      </p>
+
+      <h2 id="tiers">What pushes the cost of an AI agent up a tier</h2>
+      <p>
+        &quot;AI agent&quot; covers three different projects under one label, which is why the ranges are wide. Which
+        tier yours lands in decides where in the range it sits.
       </p>
       <ul className="list-disc pl-6 space-y-2 mb-6">
         <li>
-          <strong>Intercom Fin:</strong>{' '}
-          <a href="https://fin.ai/pricing" target="_blank" rel="noopener noreferrer">
-            $0.99 per outcome
-          </a>
-          . An outcome is a resolution, a handoff through a procedure you set up, or a disqualified
-          lead, and a qualified lead costs $9.99. Conversations passed to your team without an
-          outcome are not charged. Intercom seat prices, or minimum commitments if you run Fin on
-          another helpdesk, come on top.
+          <strong>Simple, single-workflow agent.</strong> One queue, one or two tools, systems with clean APIs (Shopify,
+          Zendesk, HubSpot). A refund-and-reship agent on a single helpdesk is the standard example: fewest integration
+          points, the simplest permission model, the cheapest build.
         </li>
         <li>
-          <strong>Salesforce Agentforce:</strong>{' '}
-          <a
-            href="https://www.salesforce.com/agentforce/pricing/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Flex Credits cost $500 per 100,000
-          </a>
-          , and a standard Agentforce action uses 20 credits, which is $0.10 per action. Voice
-          actions use 30 credits. Salesforce also lists a $2 per conversation option.
+          <strong>Mid-complexity agent.</strong> Connects to one or two core business systems, and at least one tool moves
+          money or changes a record, so it needs a permission gate, an audit log and idempotency (a retry cannot repeat the
+          action). A quote agent that reads the CRM, checks stock and drafts an order is typical.
+        </li>
+        <li>
+          <strong>Complex, multi-system agent.</strong> Several systems, usually including an ERP with messy or
+          undocumented data (NetSuite, SAP Business One, Odoo or an on-premises database), compliance logic beyond a simple
+          rule, and ongoing governance: monitoring, upkeep and re-testing whenever something changes. This tier fills the
+          top of every published range.
         </li>
       </ul>
       <p>
-        To see what that adds up to, say the agent fully resolves 1,200 tickets in a month. Fin's
-        bill is 1,200 × $0.99 = <strong>$1,188 a month</strong>, before seat prices or minimum
-        commitments.
-      </p>
-      <p>
-        Renting is faster, needs no build, and is the sensible way to test whether a queue suits an
-        agent at all. Having one built makes sense when the agent has to act on systems a vendor's
-        agent cannot reach.
+        One requirement applies to all three: before launch you need a set of real past tickets or transactions and a way
+        to score the agent&apos;s answers against them. Skipping it is how demos turn into incidents. The model choice
+        rarely moves the price much. The systems, the data and the approval rules do. For a larger company that needs
+        audit logs, approval steps and a security review, see our guide to{' '}
+        <a href="/blog/enterprise-ai-agent-cost-2026">enterprise AI agent cost</a> in 2026.
       </p>
 
-      <h3 id="build">2. Building it: AI agent development cost</h3>
+      <h2 id="rent">How much does an AI agent cost to rent instead?</h2>
       <p>
-        This is the number that decides whether the project makes sense, and nobody can give it to
-        you honestly without looking at your systems first.
-      </p>
-      <p>
-        Development firms do publish ranges.{' '}
-        <a
-          href="https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ProductCrafters
-        </a>
-        , which ranked second on Google in the US for "AI agent development cost" when we checked on
-        17 Sep 2026, puts builds at $5,000 to $180,000+. The largest build phase in its breakdown is
-        integration and workflow orchestration, at $20,000 to $50,000, ahead of model setup at
-        $10,000 to $40,000. Treat those as a seller's ranges rather than a quote, but notice what
-        they say: connecting the agent to your systems is a bigger phase than setting up the model.
-      </p>
-      <p>
-        <strong>Three tiers, in practice.</strong> The ProductCrafters range above is wide because
-        "AI agent" covers three different projects under one label, and which tier yours lands in
-        decides where in that range it sits.
+        You do not have to build at all. Helpdesk and CRM vendors rent agents by the result, which turns the cost into a
+        price per ticket you can hold up against a build quote. Both prices below were read on the vendors&apos; own
+        pricing pages on 18 October 2026.
       </p>
       <ul className="list-disc pl-6 space-y-2 mb-6">
         <li>
-          <strong>Simple, single-workflow agent.</strong> One queue, one or two tools, systems with
-          clean APIs (Shopify, Zendesk, HubSpot). A refund-and-reship agent on a single helpdesk is
-          the standard example. Fewest integration points, the simplest permission model, and the
-          cheapest to build.
+          <strong>Intercom Fin:</strong> <a href={SRC.fin} {...ext}>$0.99 per outcome</a>. An outcome is a resolution, a
+          procedure handoff, a disqualification or a self-serve routing; a qualification costs $9.99. Conversations passed
+          to your team without an outcome are not charged. Minimum commitments apply if you run Fin on another helpdesk.
         </li>
         <li>
-          <strong>Mid-complexity agent.</strong> Connects to one or two core business systems
-          instead of one, and at least one tool moves money or changes a record, so it needs a
-          permission gate, an audit log, and idempotency (a retry cannot repeat the action) on top
-          of the model work. A quote or RFQ agent that reads a CRM, checks inventory and drafts an
-          order is a typical example.
-        </li>
-        <li>
-          <strong>Complex, multi-system agent.</strong> Several systems, usually including one
-          legacy or ERP integration with messy or undocumented data (NetSuite, SAP, an on-prem
-          system, or a database somebody's cousin designed in 2009), compliance or safety logic
-          beyond a simple rule, and ongoing governance: continuous monitoring, a maintenance
-          commitment, and re-testing against real data every time something changes, not just
-          before launch. This is the tier that fills out the top of the ProductCrafters range.
+          <strong>Salesforce Agentforce:</strong> <a href={SRC.agentforce} {...ext}>Flex Credits cost $500 per 100,000</a>,
+          and a standard Agentforce action uses 20 credits, which is $0.10 an action. Voice actions use 30 credits. Salesforce
+          also lists per-conversation and per-user options; check the page on the day you budget, because they change.
         </li>
       </ul>
       <p>
-        One requirement applies to all three tiers: before launch you need a set of real past
-        tickets or transactions and a way to score the agent's answers against them. Skipping this
-        step is how demos turn into incidents, regardless of tier.
-      </p>
-      <p>
-        What moves a project up a tier is never the model. It is how many systems it has to touch,
-        how much compliance or safety logic those systems require, how messy the data is, and how
-        much ongoing monitoring the result needs.
-      </p>
-      <p>
-        What we recommend first, every time: <strong>a pilot on one narrow queue, two to four weeks
-        long, scoped to prove or kill the idea.</strong>{' '}
-        <a
-          href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Gartner predicts
-        </a>{' '}
-        over 40% of agentic AI projects will be canceled by the end of 2027 due to escalating costs,
-        unclear business value or inadequate risk controls. A pilot is the cheap way to find out
-        which side of that prediction your project sits on.
+        Say a rented agent fully resolves 1,200 tickets in a month. Fin&apos;s bill is 1,200 x $0.99 = $1,188 before
+        seats or minimums. Renting is faster, needs no build and is the sensible way to test whether a queue suits an
+        agent at all. A custom build makes sense when the agent has to act on systems a vendor&apos;s agent cannot reach,
+        or when per-result fees at your volume would pass the cost of a one-time build. Our{' '}
+        <a href="/blog/agentforce-pricing-vs-custom-ai-agent-2026">Agentforce pricing vs a custom agent</a> guide works
+        through that comparison for Salesforce shops.
       </p>
 
-      <p>
-        A built agent also needs upkeep after launch. Someone has to review its escalations, and it
-        has to be updated when a vendor changes an API or your policy changes. An agent with nobody
-        watching the escalation queue is an agent that quietly stops working and nobody notices for
-        six weeks. What that upkeep includes is on our{' '}
-        <a href="/services/ai-agent-monitoring">AI agent monitoring and support</a> page.
-      </p>
-      <p>
-        The full comparison of doing it yourself against hiring it out, including what a competent
-        internal developer can realistically ship, is in{' '}
-        <a href="/blog/how-to-build-an-ai-agent-uk-2026">
-          how to build an AI agent, step by step
-        </a>
-        .
-      </p>
-
-      <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
-        <h3 className="text-lg font-bold mb-3">Want a real number for your agent?</h3>
+      <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg my-8">
+        <h3 className="text-lg font-bold mb-3">Get a fixed number for your agent instead of a range</h3>
         <p className="mb-4">
-          The build figure is a range because the systems are what cost money. We scope AI agents
-          against your actual queue and the systems it has to touch, and put the build and running
-          costs in writing before any work starts.
+          Bring one queue and the systems it touches. In a 30-minute call with founder Bhavesh Barot we will tell you
+          whether it needs an agent, a workflow or a process fix, then show working software on your own data before you
+          sign anything. FactoryJet quotes a fixed price in writing after that call.
         </p>
         <a
-          href="/services/ai-agent-development"
+          href={CALENDLY}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors"
         >
-          See AI agent development &rarr;
+          Book a 30-minute scoping call
         </a>
       </div>
 
@@ -556,70 +506,6 @@ export const post: BlogPost = {
         unsure.
       </p>
 
-      <h2 id="who-google-quotes">Who Google quotes for this today</h2>
-      <p>
-        Pulled live from Google US, logged out, on 25 Aug 2026. The interesting finding is not the
-        ranking list. It is that the definitional query and the commercial query are two completely
-        different competitive situations, and almost nobody writing about AI agents seems to have
-        noticed.
-      </p>
-      <p>
-        Search "what is an ai agent" and an AI Overview fires. It cites six sources, in this order:
-        YouTube, IBM, Google Cloud, AWS, a Substack newsletter called The AI Engineer, and
-        Snowflake. Organic underneath is a similar cast:
-      </p>
-      <ul className="list-disc pl-6 space-y-2 mb-6">
-        <li>Reddit, a thread titled "What even is an AI agent?"</li>
-        <li>IBM.</li>
-        <li>McKinsey.</li>
-        <li>Google Cloud.</li>
-        <li>LangChain.</li>
-        <li>AWS.</li>
-        <li>The AI Engineer, on Substack.</li>
-        <li>Salesforce.</li>
-      </ul>
-      <p>
-        Look at who that is: a model and infrastructure vendor, three cloud platforms, a data
-        warehouse, a consultancy, an orchestration framework, and a CRM. Every one of them sells
-        something an agent runs on, is built with, or is bought through. The definition on page one
-        is therefore the definition that makes the seller look necessary. That is not a conspiracy,
-        it is just what happens when a dictionary term is also a product category. Reddit sits at
-        number one because it is the only result written by somebody with nothing to sell.
-      </p>
-      <p>
-        Now search "how much does an ai agent cost" the same day, in the same logged-out browser.
-        Completely different world. The AI Overview cites{' '}
-        <strong>seventeen sources</strong> and the first is Reddit, followed by bakedwith.com,
-        softteco.com, thecrunch.io, braincuber.com, a Medium engineering publication, appinventiv,
-        savibm, powercodegroup, aissist.io and several more in the same vein. The closest thing to a
-        recognized name anywhere in that list is CloudZero, a cloud cost-monitoring company.
-        Organic: Reddit again at number one ("Been running my businesses on AI agents for months"),
-        then softteco, Retool with a piece arguing for hourly pricing, bakedwith, an AWS builder
-        guide, YouTube, Medium, and azilen.
-      </p>
-      <p>
-        IBM is gone. McKinsey is gone. Google Cloud, AWS as a marketing site, Salesforce, all gone.
-        The moment the question turns into "what will this cost me," the platforms stop answering
-        and the field is left to one Reddit thread and a long tail of development shops with no
-        consistent authority between them. Seventeen citations in a single AI Overview is Google
-        saying, in public, that it could not find a source it trusted enough to lean on.
-      </p>
-      <p>
-        The definition is over-served by companies selling infrastructure, and the price is
-        under-served by everybody. That gap is the reason this article exists, so this page leads
-        with the prices and where each one comes from. When we checked the cost query again on 17
-        Sep 2026, Reddit still ranked first, followed by SoftTeco, Retool and TheCrunch.
-      </p>
-      <p>
-        One more detail from the same pull, because it tells you who is actually searching. The
-        People Also Ask box under "what is an ai agent" carries "Do AI agents get paid?", "How to
-        make $1000 a day using AI?" and "How much can I make selling AI agents?" Under the cost
-        query it carries "Can you really make money with AI agents?" A meaningful share of the
-        traffic on this term is not businesses trying to buy an agent. It is people trying to sell
-        one. Worth remembering the next time a cold email arrives from an agency that discovered the
-        category last month.
-      </p>
-
       <h2 id="when-not-to">When not to build one</h2>
       <p>Straight answers, because this is the part the category never says out loud.</p>
       <p>
@@ -627,7 +513,7 @@ export const post: BlogPost = {
         Hire a part-timer or fix the process.
       </p>
       <p>
-        <strong>The decision rule is genuinely fixed.</strong> If the answer is always "if X then
+        <strong>The decision rule is fixed.</strong> If the answer is always "if X then
         Y," that is an <code>if</code> statement. It is cheaper, it is faster, it never
         hallucinates, and it does not need a reviewer.{' '}
         <a href="/blog/n8n-vs-zapier-vs-make-ai-workflow-automation-2026">
@@ -690,6 +576,92 @@ export const post: BlogPost = {
         readiness assessment.
       </p>
 
+      <h2 id="what-else-ranks">What else ranks for &quot;how much does it cost to build an ai agent&quot;, and how this guide differs</h2>
+      <p>
+        These are the business sites on Google&apos;s first page for &quot;how much does it cost to build an ai agent&quot;
+        in the US when we checked on 18 October 2026 (DataForSEO), with the title Google showed for each. We list them so
+        you can compare; we have not reviewed their services, and the list leaves out forums and video sites.
+      </p>
+      <Table
+        head={['Site', 'Page title shown in Google']}
+        rows={[
+          ['ampcome.com', 'How Much Does It Cost to Build an AI Agent? [2025 Guide]'],
+          ['devcom.com', 'How Much Does It Cost to Build an AI Agent in 2026? - DevCom'],
+          ['nocodefinder.com', 'AI Agent Pricing 2026: Complete Cost Guide & Calculator'],
+          ['abhishekchauhan.it', 'How Much Does It Cost to Build an AI Agent? A Developer\'s ...'],
+          ['raftlabs.com', 'AI Agent Development Cost in 2026: Full Breakdown'],
+          ['ultimo-bots.com', 'AI Agent Cost: Plans, Usage & Your Monthly Budget'],
+        ]}
+      />
+      <p>
+        One of these titles still says 2025, and most come from firms quoting their own work. This guide uses two other
+        firms&apos; published ranges side by side, links each figure to its page, and adds the per-result price of renting
+        an agent so you can compare both routes on one page.
+      </p>
+      <p>
+        The neighbouring searches tell the same story. On &quot;how much does an ai agent cost&quot; a Reddit thread ranked
+        first on 18 October 2026, as it did when we first checked on 25 August, and the People Also Ask box carried
+        questions such as &quot;Is AI agent free?&quot; and &quot;Are AI agents worth it?&quot;. On the definition query
+        &quot;what is an ai agent&quot;, IBM, Google Cloud and AWS filled page one when we checked on 25 August. Once the question turns to price, the
+        platforms step back and the answers come from development shops, which is why this page leads with sourced
+        numbers.
+      </p>
+
+      <h2 id="how-factoryjet-scopes">How FactoryJet scopes an AI agent build</h2>
+      <ul className="list-disc pl-6 space-y-2 mb-6">
+        <li>
+          <strong>A short scoping call first.</strong> We ask for the queue, a rough monthly count and the systems
+          involved, and tell you if a rented agent or plain automation would do the job.
+        </li>
+        <li>
+          <strong>Working software on your own data before you sign.</strong> You see the agent handle real examples from
+          your queue before any contract.
+        </li>
+        <li>
+          <strong>A fixed price in writing.</strong> One number per phase after scoping, not an hourly estimate.
+        </li>
+        <li>
+          <strong>You own the code from day one.</strong> The AI and hosting accounts are in your name, billed by the
+          providers at cost.
+        </li>
+        <li>
+          <strong>Support only if you want it.</strong> No monthly minimum. Upkeep is described on our{' '}
+          <a href="/services/ai-agent-monitoring">AI agent monitoring and support</a> page.
+        </li>
+      </ul>
+      <p>
+        If your project is larger than one queue, our guide to{' '}
+        <a href="/blog/enterprise-ai-agents-mid-sized-companies-buy-or-build-2026">enterprise AI agents for mid-sized
+        companies</a> covers what to buy and what to build, and{' '}
+        <a href="/blog/ai-proof-of-concept-to-production-2026">AI proof of concept to production</a> covers how to scope
+        the first paid step.
+      </p>
+
+      <h2 id="sources">Sources</h2>
+      <ul className="list-disc pl-6 space-y-2 mb-6 text-sm">
+        <li>
+          <a href={SRC.layer3} {...ext}>Layer3 Labs, AI Consulting Rates and Pricing in 2026</a>, updated 9 September 2026,
+          read 18 October 2026: project ranges, the 400% quote spread and hourly rates.
+        </li>
+        <li>
+          <a href={SRC.productcrafters} {...ext}>ProductCrafters, AI Agent Development Cost: $5K to $180K+</a>, dated 24
+          February 2026, read 18 October 2026: build phases, per-integration range and the mid-sized company range.
+        </li>
+        <li>
+          <a href={SRC.fin} {...ext}>Intercom, Fin AI Agent pricing</a>, read 18 October 2026: $0.99 per outcome, $9.99 per
+          qualification.
+        </li>
+        <li>
+          <a href={SRC.agentforce} {...ext}>Salesforce, Agentforce pricing</a>, read 18 October 2026: $500 per 100,000
+          Flex Credits, 20 credits per standard action, 30 per voice action.
+        </li>
+        <li>
+          <a href={SRC.gartner40} {...ext}>Gartner, 25 June 2025</a>: over 40% of agentic AI projects predicted to be
+          canceled by the end of 2027; about 130 real agentic AI vendors.
+        </li>
+        <li>Search volumes and Google page one: our own DataForSEO measurement, US, 17 and 18 October 2026.</li>
+      </ul>
+
       <div className="bg-[#FAF8F5] border-2 border-[#E5DFD7] p-6 sm:p-8 rounded-xl my-10 shadow-sm">
         <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-2">
           AI agent scoping call
@@ -700,11 +672,11 @@ export const post: BlogPost = {
         <p className="text-[#4B5563] text-base leading-relaxed mb-6">
           Bring one queue and a rough count of what is in it. In a 30-minute call with founder
           Bhavesh Barot we will tell you straight whether it needs an agent, a workflow or a process
-          fix, and what building and running the agent would involve.
+          fix, and what a build would involve. You get a fixed price in writing after the call.
         </p>
         <div className="flex flex-wrap items-center gap-4">
           <a
-            href="https://calendly.com/bhavesh-factoryjet/30min"
+            href={CALENDLY}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors shadow-sm"

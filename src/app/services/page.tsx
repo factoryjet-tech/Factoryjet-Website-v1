@@ -135,6 +135,7 @@ const SERVICE_GROUPS: { label: string; items: { title: string; href: string }[] 
       { title: 'AI Marketing Agent', href: '/services/ai-agent-development/ai-marketing-agent' },
       { title: 'AI Automation', href: '/services/ai-automation' },
       { title: 'AI Development', href: '/services/ai-development' },
+      { title: 'LLM Development', href: '/services/llm-development' },
       { title: 'AI Consulting', href: '/services/ai-consulting' },
     ],
   },

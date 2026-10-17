@@ -88,6 +88,8 @@ const US_ROUTES: { path: string; source: string }[] = [
   // see pipeline/research/US-ONLY-REALITY-2026-08-17.md.
   { path: '/services/ai-agent-development',                source: 'src/app/services/ai-agent-development/page.tsx' },
   { path: '/services/ai-development',                       source: 'src/app/services/ai-development/page.tsx' },
+  // 2026-10-18: LLM development services (batch 5 of the mid-market plan); owns the model work.
+  { path: '/services/llm-development',                      source: 'src/app/services/llm-development/page.tsx' },
   // 2026-09-17: the chatbot, customer support, sales agent and workflow automation
   // children were merged by 301 into /services/ai-chatbot-development,
   // /services/ai-customer-support-agents, /services/ai-sdr and
