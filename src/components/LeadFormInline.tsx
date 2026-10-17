@@ -10,7 +10,7 @@
  * All GA4/GTM events match the modal so the conversion funnel stays unified.
  */
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { Send, CheckCircle, Loader2 } from 'lucide-react';
 import { submitLead } from '@/utils/submitLead';
 import { keepTrappedLead } from '@/utils/trappedLead';
@@ -74,14 +74,11 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
   const turnstileContainerRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<string | null>(null);
 
-  const onFirstInteraction = () => {
-    if (startedRef.current) return;
-    startedRef.current = true;
-    trackFormStart(source);
-  };
-
   // ── Invisible Turnstile (interaction-only) — never blocks submit ──────────
-  useEffect(() => {
+  // Loaded on the first focus inside the form, not on page open (2026-10-17):
+  // the challenge pulls ~730 KB from challenges.cloudflare.com, and a missing
+  // token is stored as 'absent' by notify-lead.js, never as spam.
+  const loadTurnstile = () => {
     const renderWidget = () => {
       const container = turnstileContainerRef.current;
       if (!container || !window.turnstile || turnstileWidgetId.current) return;
@@ -111,7 +108,14 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
         if (attempts > 50) clearInterval(poll);
       }, 100);
     }
-  }, []);
+  };
+
+  const onFirstInteraction = () => {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    trackFormStart(source);
+    loadTurnstile();
+  };
 
   const canSubmit = name.trim() !== '' && EMAIL_RE.test(email);
 
