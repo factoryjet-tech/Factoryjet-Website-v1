@@ -6,11 +6,12 @@ import type { ReactNode, CSSProperties } from 'react';
 /**
  * MotionFadeUp — v2.0 scroll-triggered fade-up wrapper.
  *
- * GSAP + ScrollTrigger are dynamically imported inside useEffect so they
- * are excluded from the initial JS bundle (saves ~314 KiB on first load).
- * The element starts visible (opacity:1) until GSAP hydrates, then the
- * animation plays. Elements already in the viewport at load time animate
- * immediately without waiting for a scroll trigger.
+ * Plain CSS transition + IntersectionObserver (2026-10-17). It used to import
+ * GSAP + ScrollTrigger (43 KB, 260-440 ms of mobile CPU in PageSpeed) for this
+ * one tween. Same motion: opacity 0 -> 1 and 28px rise over 0.55s, GSAP's
+ * power2.out curve (= cubic-bezier(0.33, 1, 0.68, 1)), starting when the top of
+ * the element reaches 88% of the viewport. The element stays visible in the SSR
+ * HTML until JS hydrates. Elements already in view animate immediately.
  *
  * Anti-slop rules: no bounce, no spring physics, no elastic. Simple
  * ease-out with 0.6s duration max.
@@ -24,16 +25,17 @@ export interface MotionFadeUpProps {
   className?: string;
   /** Inline styles forwarded to the wrapper div. */
   style?: CSSProperties;
-  /** If true (default), destroy trigger after first play. */
+  /** Kept for API compatibility. The fade plays once either way (as it did with GSAP). */
   once?: boolean;
 }
+
+const EASE = 'cubic-bezier(0.33, 1, 0.68, 1)';
 
 export default function MotionFadeUp({
   children,
   delay = 0,
   className = '',
   style,
-  once = true,
 }: MotionFadeUpProps) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -42,68 +44,41 @@ export default function MotionFadeUp({
     if (!el) return;
 
     // Respect user's motion preference — skip all animation if reduce is set.
-    // This also satisfies WCAG 2.1 SC 2.3.3 (AAA) and is a Core Web Vitals
-    // best-practice: avoids layout shifts on devices with the flag enabled.
+    // This also satisfies WCAG 2.1 SC 2.3.3 (AAA).
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (typeof IntersectionObserver === 'undefined') return;
 
-    let killed = false;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let tween: any = null;
-
-    // Dynamically import GSAP so it is excluded from the initial JS bundle.
-    // This alone saves ~314 KiB on first load (FCP / LCP improvement).
-    import('gsap').then(({ gsap }) => {
-      import('gsap/ScrollTrigger').then(({ ScrollTrigger }) => {
-        if (killed) return;
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Set initial invisible state only after GSAP loads (not before),
-        // so the element stays visible in the SSR HTML until JS hydrates.
-        gsap.set(el, { opacity: 0, y: 28 });
-
-        // Elements already in the viewport at load time won't receive a
-        // scroll event to trigger the animation — animate them immediately.
-        const rect = el.getBoundingClientRect();
-        const alreadyInView = rect.top < window.innerHeight * 0.88;
-
-        if (alreadyInView) {
-          tween = gsap.to(el, {
-            opacity: 1,
-            y: 0,
-            duration: 0.55,
-            delay,
-            ease: 'power2.out',
-          });
-        } else {
-          tween = gsap.to(el, {
-            opacity: 1,
-            y: 0,
-            duration: 0.55,
-            delay,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 88%',
-              once,
-            },
-          });
-        }
+    let raf = 0;
+    const play = () => {
+      el.style.transition = `opacity 0.55s ${EASE} ${delay}s, transform 0.55s ${EASE} ${delay}s`;
+      // Two frames so the hidden start state is painted before the transition.
+      raf = requestAnimationFrame(() => {
+        raf = requestAnimationFrame(() => {
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+        });
       });
-    });
+    };
+
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(28px)';
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          io.disconnect();
+          play();
+        }
+      },
+      { rootMargin: '0px 0px -12% 0px' },
+    );
+    io.observe(el);
 
     return () => {
-      killed = true;
-      if (tween) {
-        tween.kill();
-        // ScrollTrigger may not be loaded yet if cleanup runs very early
-        import('gsap/ScrollTrigger').then(({ ScrollTrigger }) => {
-          ScrollTrigger.getAll()
-            .filter((st) => st.vars.trigger === el)
-            .forEach((st) => st.kill());
-        });
-      }
+      io.disconnect();
+      cancelAnimationFrame(raf);
     };
-  }, [delay, once]);
+  }, [delay]);
 
   return (
     <div ref={ref} className={className} style={style}>
