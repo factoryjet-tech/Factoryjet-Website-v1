@@ -463,7 +463,9 @@ export const post: BlogPost = {
         We do Salesforce and Agentforce work as well as custom builds, so we are comfortable recommending either. Our
         comparison of{' '}
         <a href="/blog/intercom-fin-vs-zendesk-ai-vs-custom-ai-agent-2026">Intercom Fin, Zendesk AI, Agentforce and a custom agent</a>{' '}
-        covers the support-desk version of this choice.
+        covers the support-desk version of this choice, and{' '}
+        <a href="/blog/agentforce-pricing-vs-custom-ai-agent-2026">Agentforce pricing vs a custom AI agent</a> covers the
+        Salesforce one.
       </p>
 
       <h2 id="how-factoryjet-works">How FactoryJet builds agentic AI for mid-sized companies</h2>

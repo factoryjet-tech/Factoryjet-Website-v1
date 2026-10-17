@@ -86,7 +86,7 @@ export default function GatedDownload({ fileHref, fileName, source, eyebrow, hea
       aria-label={heading}
       className="not-prose my-10 rounded-2xl border-2 border-[#E5DFD7] bg-[#FAF8F5] p-6 sm:p-8"
     >
-      <div className="grid gap-8 md:grid-cols-[1.15fr_1fr]">
+      <div className="grid gap-8 md:grid-cols-[1.15fr_1fr] lg:grid-cols-1 xl:grid-cols-[1.15fr_1fr]">
         <div>
           <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-2">{eyebrow}</p>
           <h3 className="text-xl sm:text-2xl font-bold text-[#1F2937] mb-3">{heading}</h3>

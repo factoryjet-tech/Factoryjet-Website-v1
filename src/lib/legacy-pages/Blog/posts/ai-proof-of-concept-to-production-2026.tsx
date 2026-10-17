@@ -425,7 +425,9 @@ export const post: BlogPost = {
         <a href="/services/ai-consulting">AI consulting</a> and{' '}
         <a href="/services/erp-ai-agents">AI agents for ERP systems</a> for the work by system, or our{' '}
         <a href="/blog/ai-agent-build-vs-buy-2026">build versus buy guide</a> if you are still deciding whether to build
-        at all.
+        at all. Our guide to{' '}
+        <a href="/blog/enterprise-ai-agents-mid-sized-companies-buy-or-build-2026">enterprise AI agents for mid-sized companies</a>{' '}
+        covers which jobs to rent and which to build.
       </p>
 
       <h2 id="sources">Sources</h2>

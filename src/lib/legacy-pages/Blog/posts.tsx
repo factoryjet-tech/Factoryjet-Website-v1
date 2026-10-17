@@ -157,9 +157,16 @@ import { post as bestBigcommerceAgencies2026Post } from './posts/best-bigcommerc
 import { post as aiAgentGovernancePolicyMidSizedCompanies2026Post } from './posts/ai-agent-governance-policy-mid-sized-companies-2026';
 import { post as agenticAiArchitectureMidSizedCompanies2026Post } from './posts/agentic-ai-architecture-mid-sized-companies-2026';
 import { post as aiProofOfConceptToProduction2026Post } from './posts/ai-proof-of-concept-to-production-2026';
+import { post as enterpriseAiAgentsMidSizedCompaniesBuyOrBuild2026Post } from './posts/enterprise-ai-agents-mid-sized-companies-buy-or-build-2026';
+import { post as agentforcePricingVsCustomAiAgent2026Post } from './posts/agentforce-pricing-vs-custom-ai-agent-2026';
+import { post as aiAgentSecurityRisksControls2026Post } from './posts/ai-agent-security-risks-controls-2026';
 
 export const POSTS: BlogPost[] = [
   bestAiAgentDevelopmentCompanies2026Post,
+  // --- MID-MARKET AI AGENT WAVE 2 (2026-10-18): enterprise agents, Agentforce pricing, agent security ---
+  enterpriseAiAgentsMidSizedCompaniesBuyOrBuild2026Post,
+  agentforcePricingVsCustomAiAgent2026Post,
+  aiAgentSecurityRisksControls2026Post,
   // --- MID-MARKET AI AGENT WAVE (2026-10-17): governance, architecture, proof of concept ---
   aiAgentGovernancePolicyMidSizedCompanies2026Post,
   agenticAiArchitectureMidSizedCompanies2026Post,

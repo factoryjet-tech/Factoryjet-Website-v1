@@ -25,13 +25,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Integration Services: Connect AI to Tools | FactoryJet',
   description:
-    'Add AI to your existing business software: CRM, e-commerce, ERP & custom apps. Expert AI integration. Get a quote.',
+    'AI integration services for US businesses: connect Claude, GPT and Gemini to your CRM, ERP, help desk and store through APIs or custom MCP servers. Get a fixed quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'AI Integration Services USA | FactoryJet',
     description:
-      'Connect GPT-4o, Claude, and AI models to your CRM, e-commerce platform, ERP, and custom software. fixed-price, milestone-paid. Fast delivery.',
+      'Connect Claude, GPT and Gemini to your CRM, ERP, help desk and store through APIs or custom MCP servers. Fixed price, milestone-paid.',
     url: 'https://factoryjet.com/services/ai-integration-services',
     images: [
       {
@@ -103,7 +103,7 @@ const serviceSchema = {
   },
   serviceType: 'AI Integration Services',
   description:
-    'AI integration services for US small and medium businesses, connecting GPT-4o, Claude, and other AI models to existing CRM, e-commerce, support desk, and custom software platforms.',
+    'AI integration services for US small and medium businesses, connecting GPT, Claude and other AI models to existing CRM, e-commerce, support desk, and custom software platforms.',
   offers: [
     {
       '@type': 'Offer',
@@ -228,7 +228,7 @@ const INTEGRATION_TYPES = [
   {
     name: 'Custom App AI Integration',
     description:
-      'Embed GPT-4o, Claude, or custom fine-tuned models directly into your internal web app or admin panel via REST API. AI features appear as native parts of your existing interface. Your team requires no new logins.',
+      'Embed GPT, Claude or custom fine-tuned models directly into your internal web app or admin panel via REST API. AI features appear as native parts of your existing interface. Your team requires no new logins.',
     example: 'Most custom integrations go live in 2–3 weeks from kickoff.',
     linkLabel: 'See web app development',
     linkHref: '/services/web-application-development',
@@ -406,7 +406,7 @@ const PRICING_TIERS = [
       'A focused AI integration that adds one AI capability to one existing tool. Best for businesses testing AI with a clear, bounded first use case.',
     features: [
       'Single-system AI integration (CRM, e-commerce, support desk, or custom app).',
-      'GPT-4o or Claude as the underlying model.',
+      'GPT or Claude as the underlying model.',
       'Custom prompt engineering optimized for your data and tone.',
       'API integration with output validation.',
       'Lightweight monitoring for output quality.',
@@ -469,7 +469,7 @@ const FAQ_ITEMS = [
     category: 'what-is',
     question: 'What are AI integration services?',
     answer:
-      'AI integration services connect modern AI models like GPT-4o, Claude, and Gemini to your existing business software. This enables your current tools to generate text, classify requests, extract data, and summarize records with real intelligence. Rather than replacing your software, we add AI capabilities directly to what you already use. Your CRM drafts client follow-ups. Your e-commerce store generates product copy. Your help desk tags incoming tickets automatically.',
+      'AI integration services connect modern AI models like GPT, Claude and Gemini to your existing business software. This enables your current tools to generate text, classify requests, extract data, and summarize records with real intelligence. Rather than replacing your software, we add AI capabilities directly to what you already use. Your CRM drafts client follow-ups. Your e-commerce store generates product copy. Your help desk tags incoming tickets automatically.',
   },
   {
     category: 'what-is',
@@ -485,9 +485,9 @@ const FAQ_ITEMS = [
   },
   {
     category: 'what-is',
-    question: 'Which AI models can you integrate: GPT-4o, Claude, or others?',
+    question: 'Which AI models can you integrate: GPT, Claude, Gemini or others?',
     answer:
-      'We integrate GPT-4o from OpenAI, Claude 3.5 Sonnet from Anthropic, and Google Gemini. We also support open-source models like Mistral and LLaMA 3. Selection depends on your goals, budget, and privacy standards. For most businesses, GPT-4o or Claude provides the best mix of speed, accuracy, and value. For regulated environments, we deploy private models that keep all data on your own servers.',
+      'We integrate OpenAI GPT models, Anthropic Claude and Google Gemini, and open-weight models such as Mistral and Llama. We pick the model per task and keep it behind your own integration layer, so it can be swapped when a provider retires a version. Selection depends on your goals, budget, and privacy standards. For most businesses, GPT or Claude provides the best mix of speed, accuracy, and value. For regulated environments, we deploy private models that keep all data on your own servers.',
   },
 
   /* ── Process & Timeline ── */
@@ -677,8 +677,8 @@ export default function AIIntegrationServicesPage() {
         <Hero
         formSlot={<HeroInlineForm region="us" source="us_services_ai_integration_services_hero" />}
           eyebrow="AI INTEGRATION SERVICES · USA"
-          headline="Add AI to the Tools You Already Use, Without Replacing Them"
-          lead="Your CRM, e-commerce store, support desk, and internal apps can all be smarter without replacing your software stack. FactoryJet integrates GPT-4o and Claude directly into your existing tools. Your team gains advanced AI capabilities inside familiar workflows."
+          headline="AI Integration Services: Add AI to the Tools You Already Use"
+          lead="Your CRM, e-commerce store, support desk, and internal apps can all be smarter without replacing your software stack. FactoryJet connects models such as Claude, GPT and Gemini to your existing tools through their APIs or a custom MCP server that exposes only the actions you approve. Your team gains advanced AI capabilities inside familiar workflows."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -802,7 +802,7 @@ export default function AIIntegrationServicesPage() {
                 </p>
               </div>
               <p>
-                We connect GPT-4o, Claude, and specialized models using native APIs. A sales rep gets a personalized email draft with one click in HubSpot. A support agent opens Zendesk to find tickets pre-classified with drafted replies. A Shopify store creates optimized product descriptions upon adding a new SKU. Familiar workflows deliver AI-powered efficiency.
+                We connect GPT, Claude and specialized models using native APIs. A sales rep gets a personalized email draft with one click in HubSpot. A support agent opens Zendesk to find tickets pre-classified with drafted replies. A Shopify store creates optimized product descriptions upon adding a new SKU. Familiar workflows deliver AI-powered efficiency.
               </p>
 
               <div className="grid grid-cols-2 gap-2" aria-hidden>
@@ -855,7 +855,7 @@ export default function AIIntegrationServicesPage() {
                   {
                     step: '03',
                     title: 'AI model processes and generates.',
-                    desc: 'GPT-4o or Claude processes the context. It generates a draft, classification, or extraction using engineered prompts.',
+                    desc: 'GPT or Claude processes the context. It generates a draft, classification, or extraction using engineered prompts.',
                   },
                   {
                     step: '04',
@@ -1074,7 +1074,7 @@ export default function AIIntegrationServicesPage() {
             {
               icon: '⚡',
               title: 'Prompt engineering that actually performs',
-              body: 'A GPT-4o integration is only as good as the prompts behind it. Generic prompts give weak outputs your team will ignore. We invest heavily in prompt engineering. We build prompts that know your products, brand tone, and business rules. Every delivery includes a prompt library so you see how the AI is guided.',
+              body: 'An AI integration is only as good as the prompts behind it. Generic prompts give weak outputs your team will ignore. We invest heavily in prompt engineering. We build prompts that know your products, brand tone, and business rules. Every delivery includes a prompt library so you see how the AI is guided.',
             },
             {
               icon: '💡',

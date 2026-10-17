@@ -32,7 +32,7 @@ import { aiConsultingAlternates } from '@/data/hreflangMap';
 const PAGE_URL = 'https://factoryjet.com/services/ai-consulting';
 const TITLE = 'AI Consulting Services & AI Implementation | FactoryJet';
 const DESCRIPTION =
-  'AI consulting services for US small and mid-size businesses: an AI readiness assessment, a ranked roadmap, then the build and support from one team.';
+  'AI consulting services for US small and mid-size businesses: AI readiness assessment, AI implementation and automation consulting, then the build and support from one team.';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 
 export const metadata: Metadata = {

@@ -336,7 +336,9 @@ export const post: BlogPost = {
         OWASP&apos;s Agentic Security Initiative goes further in its{' '}
         <a href={SRC.owaspAgentic} {...ext}>Agentic AI Threats and Mitigations</a> guide (17 February 2025), which is
         worth a read for your technical owner. For a policy, the six rows above cover what most mid-sized companies
-        will meet in their first year.
+        will meet in their first year. Our{' '}
+        <a href="/blog/ai-agent-security-risks-controls-2026">AI agent security guide</a> walks through the full OWASP agentic
+        Top 10 with a control for each.
       </p>
 
       <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg my-8">
