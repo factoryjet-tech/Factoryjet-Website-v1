@@ -1115,6 +1115,10 @@ export default function AiCustomerSupportAgentsPage() {
                 <Link href="/blog/intercom-fin-vs-zendesk-ai-vs-custom-ai-agent-2026" className="underline hover:text-[#F05A28]">
                   how Fin, Zendesk AI agents, Agentforce and Gorgias compare with a custom support agent
                 </Link>
+                . For which ticket types an agent should resolve and which it should hand to a person, read{' '}
+                <Link href="/blog/ai-agents-for-customer-service-mid-sized-companies-2026" className="underline hover:text-[#F05A28]">
+                  AI agents for customer service: what they resolve
+                </Link>
                 . If most of your contacts arrive by phone, see{' '}
                 <Link href="/services/ai-call-center-agents" className="underline hover:text-[#F05A28]">
                   AI call center agents

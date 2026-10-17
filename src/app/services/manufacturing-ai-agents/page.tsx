@@ -1136,7 +1136,11 @@ export default function ManufacturingAiAgentsPage() {
               <Link href="/blog/best-ai-agent-development-companies-for-manufacturers-2026" className="font-semibold underline underline-offset-2 text-[#B23E13]">
                 AI agent development companies for manufacturers compared
               </Link>
-              , a list that includes us. If you work in construction, see{' '}
+              , a list that includes us. For nine use cases and the ERP data each needs, read{' '}
+              <Link href="/blog/agentic-ai-in-manufacturing-use-cases-2026" className="font-semibold underline underline-offset-2 text-[#B23E13]">
+                agentic AI in manufacturing
+              </Link>
+              . If you work in construction, see{' '}
               <Link href="/services/construction-ai-agents" className="font-semibold underline underline-offset-2 text-[#B23E13]">
                 AI agents for contractors and building suppliers
               </Link>

@@ -136,6 +136,14 @@ const faqs: FAQItem[] = [
     q: 'What skills does a team need to build and run agentic AI?',
     a: 'Integration engineering (APIs, data mapping, error handling) matters more than machine learning. You also need someone who can write and test instructions against real cases, someone who understands the business process well enough to set limits, and an owner who reviews results. Many mid-sized companies keep the process owner in-house and hire the engineering.',
   },
+  {
+    q: 'How do you build AI agent orchestration?',
+    a: 'Write down the steps of the job first, then decide which steps are fixed and which need the model\'s judgement. Put the fixed order in code or a workflow tool, call the model only where a decision is needed, give each step its own tool with narrow permissions, add a stop-and-hand-off rule, and log every step. Test the whole flow on past cases before going live.',
+  },
+  {
+    q: 'What are AI agent orchestration tools?',
+    a: 'They are the software that runs the steps of an agent: code frameworks such as LangGraph, workflow tools such as n8n, and vendor platforms such as Salesforce Agentforce or Microsoft Copilot Studio. They differ in how much control and testing they give you and which systems they reach. Pick based on where your work lives and who will maintain it.',
+  },
 ];
 
 export const post: BlogPost = {
@@ -261,6 +269,7 @@ export const post: BlogPost = {
         than a free agent deciding the whole route each time.
       </p>
       <h3 id="patterns">The five patterns, with a mid-sized company example for each</h3>
+      <p>Most agentic AI architectures in business combine two or three of these, with agentic AI orchestration deciding which step runs next.</p>
       <Table
         head={['Pattern (Anthropic\'s name)', 'What it does', 'Example in a mid-sized company']}
         rows={[
@@ -287,7 +296,7 @@ export const post: BlogPost = {
         </figcaption>
       </figure>
 
-      <h2 id="multi-agent">One agent or several: when a multi-agent system is worth it</h2>
+      <h2 id="multi-agent">One agent or several: when a multi-agent system architecture is worth it</h2>
       <Table
         head={['Signal', 'One agent', 'Split into several']}
         rows={[
@@ -310,7 +319,7 @@ export const post: BlogPost = {
         US searches for &quot;ai agent orchestration&quot; run about 590 a month, and &quot;what is ai agent
         orchestration&quot; rose about 1,500% in a year (DataForSEO, 17 October 2026). Orchestration is the
         logic that decides what happens next: which tool, in what order, what to do with the result, when to retry and
-        when to stop. You have three ways to build it.
+        when to stop. You have three ways to build it, and most AI agent orchestration frameworks, platforms and tools fall into one of them.
       </p>
       <Table
         head={['Option', 'Good for', 'Watch for']}
@@ -469,6 +478,25 @@ export const post: BlogPost = {
         <a href="/blog/agentforce-pricing-vs-custom-ai-agent-2026">Agentforce pricing vs a custom AI agent</a> covers the
         Salesforce one.
       </p>
+
+      <h2 id="what-else-ranks">What else ranks for &quot;agentic ai architecture&quot;, and how this guide differs</h2>
+      <p>
+        These are the business sites on Google&apos;s first page for &quot;agentic ai architecture&quot; in the US when we checked on 17
+        October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not
+        reviewed their services, and the list leaves out forums and video sites.
+      </p>
+      <Table
+        head={['Site', 'Page title shown in Google']}
+        rows={[
+          ['vectorize.io', 'Designing Agentic AI Systems, Part 1: Agent Architectures'],
+          ['tredence.com', 'Building Agentic AI Architectures: Blueprint for Autonomous ...'],
+          ['salesforce.com', 'What Is Agentic Architecture?'],
+          ['onereach.ai', 'Agentic AI Architecture: Building Business-Ready Systems ...'],
+          ['srajdev.com', 'Understanding Agentic AI Architecture - Swapan Rajdev'],
+          ['galileo.ai', 'AI Agent Architecture From Patterns to Governance'],
+        ]}
+      />
+      <p>Several of these describe architectures for building AI products. This guide draws the architecture for a company that already runs an ERP and a CRM, traces one real request through it, and lists the integration mistakes that sink projects.</p>
 
       <h2 id="how-factoryjet-works">How FactoryJet builds agentic AI for mid-sized companies</h2>
       <p>

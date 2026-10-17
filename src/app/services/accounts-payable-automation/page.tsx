@@ -1485,6 +1485,10 @@ export default function AccountsPayableAutomationPage() {
               <Link href="/services/erp-ai-agents" className="font-semibold text-fj-ink underline underline-offset-4">
                 AI agents for ERP systems
               </Link>
+              . For the wider finance picture, from cash application to close, read{' '}
+              <Link href="/blog/ai-agents-for-finance-accounting-teams-2026" className="font-semibold text-fj-ink underline underline-offset-4">
+                AI agents for finance and accounting teams
+              </Link>
               .
             </p>
 

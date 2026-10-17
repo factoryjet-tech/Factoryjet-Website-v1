@@ -131,6 +131,14 @@ const faqs: FAQItem[] = [
     q: 'Does FactoryJet build MCP servers?',
     a: 'Yes. We build custom MCP servers and API integrations for ERPs, CRMs and other business systems, with narrow business-level tools, scoped permissions and logging, hosted in your own cloud account if you want. You own the code. We show it working against your own systems before you sign.',
   },
+  {
+    q: 'Can you give me an example of an MCP server?',
+    a: 'HubSpot\'s is a good public example: its developer page describes an MCP server that gives MCP-compatible AI tools secure read and write access to HubSpot CRM data. The MCP project also publishes reference servers for learning. A company example is an ERP server exposing find_customer, check_stock and create_draft_sales_order and nothing else.',
+  },
+  {
+    q: 'Does Microsoft have an MCP server?',
+    a: 'Microsoft publishes MCP servers for some of its products; for example, a Microsoft Learn MCP Server overview appeared on Google\'s first page for "custom mcp server" when we checked on 17 October 2026. Check Microsoft\'s documentation for the specific product you use, and build a custom server only for what the official ones do not cover.',
+  },
 ];
 
 export const post: BlogPost = {
@@ -190,6 +198,11 @@ export const post: BlogPost = {
         and 390 for &quot;hubspot mcp server&quot; (DataForSEO, 17 October 2026). Behind those numbers is a simple
         request from staff at mid-sized companies: &quot;let me ask ChatGPT or Claude about our orders and customers,
         safely.&quot; An MCP server is how you answer it.
+      </p>
+
+      <p>
+        Searches also run for slack, snowflake and sap mcp server, and for how to build, create or start building an MCP
+        server (DataForSEO, 17 October 2026). This guide answers the company version of that question.
       </p>
 
       <h2 id="what-is-mcp">What MCP is, in one paragraph</h2>
@@ -306,7 +319,7 @@ export const post: BlogPost = {
         <a href="/blog/ai-agent-security-risks-controls-2026">AI agent security guide</a>.
       </p>
 
-      <h2 id="build-steps">How we approach a custom MCP server</h2>
+      <h2 id="build-steps">How to build an MCP server for company systems: seven steps</h2>
       <ol className="list-decimal pl-6 space-y-2 mb-6">
         <li>List the questions and actions staff and agents need, in their words.</li>
         <li>Check for an official server and what it already exposes.</li>
@@ -325,6 +338,23 @@ export const post: BlogPost = {
         backend through an API built alongside the server; see{' '}
         <a href="/blog/agentforce-pricing-vs-custom-ai-agent-2026">Agentforce pricing vs a custom AI agent</a>.
       </p>
+
+      <h2 id="what-else-ranks">What else ranks for &quot;custom mcp server&quot;, and how this guide differs</h2>
+      <p>
+        These are the business sites on Google&apos;s first page for &quot;custom mcp server&quot; in the US when we checked on 17
+        October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not
+        reviewed their services, and the list leaves out forums and video sites.
+      </p>
+      <Table
+        head={['Site', 'Page title shown in Google']}
+        rows={[
+          ['infracloud.io', 'How to Build Your Own MCP Server'],
+          ['learn.microsoft.com', 'Microsoft Learn MCP Server overview'],
+          ['blog.cloudflare.com', 'Build and deploy Remote Model Context Protocol (MCP) ...'],
+          ['builder.aws.com', 'Getting Started with MCP Servers: The Beginner\'s Guide'],
+        ]}
+      />
+      <p>Most of these are developer tutorials for a first server. This guide is for the company deciding whether it needs one: when an official server is enough, which tools an ERP server should expose, and the security rules a company server must follow.</p>
 
       <h2 id="how-factoryjet-works">How FactoryJet builds MCP servers</h2>
       <p>

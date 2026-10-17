@@ -130,6 +130,14 @@ const faqs: FAQItem[] = [
     q: 'What does FactoryJet do in an AI readiness assessment?',
     a: 'We go through the five pillars with your job owner, test API access to the systems involved, pull a sample of past cases, and tell you whether AI can do the job now, what to fix first, or whether a tool you can buy already does it. We show working software on your own data before you sign anything bigger.',
   },
+  {
+    q: 'What is an AI readiness audit?',
+    a: 'An AI readiness audit is a readiness assessment done with evidence rather than answers: someone checks API access, pulls sample data, reads the written rules and confirms who owns the job, instead of relying on a survey. It takes longer than a self-assessment but catches gaps such as a missing API permission before a project depends on it.',
+  },
+  {
+    q: 'Is a gen AI readiness assessment different from an AI readiness assessment?',
+    a: 'Mostly not. A generative AI readiness assessment puts more weight on unstructured data (documents, emails, tickets), on which model providers may receive that data, and on how outputs are reviewed. The five pillars still apply. For an agent that takes actions, add a check on permissions and approvals, which is covered here under systems and governance.',
+  },
 ];
 
 export const post: BlogPost = {
@@ -203,6 +211,10 @@ export const post: BlogPost = {
       </p>
 
       <h2 id="pillars">The five pillars of AI readiness</h2>
+      <p>
+        What is AI readiness? It is whether your data, systems, process, people and rules are in a state where AI can do
+        a specific job reliably now. Each pillar below tests one of those.
+      </p>
       <Table
         head={['Pillar', 'The question', 'A failing sign']}
         rows={[
@@ -350,6 +362,25 @@ export const post: BlogPost = {
         <li>Decide whether to rent the agent in software you already use or build one, using our guide to <a href="/blog/enterprise-ai-agents-mid-sized-companies-buy-or-build-2026">enterprise AI agents for mid-sized companies</a>.</li>
         <li>Sketch how it connects to your systems with our <a href="/blog/agentic-ai-architecture-mid-sized-companies-2026">agentic AI architecture guide</a>.</li>
       </ol>
+
+      <h2 id="what-else-ranks">What else ranks for &quot;ai readiness assessment&quot;, and how this guide differs</h2>
+      <p>
+        These are the business sites on Google&apos;s first page for &quot;ai readiness assessment&quot; in the US when we checked on 17
+        October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not
+        reviewed their services, and the list leaves out forums and video sites.
+      </p>
+      <Table
+        head={['Site', 'Page title shown in Google']}
+        rows={[
+          ['matillion.com', 'AI-Readiness Assessment: Is Your Data Infrastructure ...'],
+          ['deloitte.com', 'Transforming AI Outcomes with Effective Data Readiness'],
+          ['applytosupply.digitalmarketplace.service.gov.uk', 'AI Readiness Assessment'],
+          ['sketchdev.io', 'Assessment for AI readiness – 11 Questions to Ask'],
+          ['summittrails.com', 'Best AI Readiness Assessment Tools and Software (2026)'],
+          ['aws.amazon.com', 'AWS Marketplace: Gen AI Readiness Assessment'],
+        ]}
+      />
+      <p>Many of these assess data infrastructure or sell an assessment. This guide gives you the 25 scored statements, the result bands and what to fix first, free, for one specific job.</p>
 
       <h2 id="how-factoryjet-works">How FactoryJet runs an AI readiness assessment</h2>
       <p>

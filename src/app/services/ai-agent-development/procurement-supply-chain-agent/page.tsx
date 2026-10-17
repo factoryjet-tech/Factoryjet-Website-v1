@@ -707,7 +707,8 @@ export default function ProcurementSupplyChainAgentPage() {
               <Link href="/services/sales-order-automation-ai-agents" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>purchase order automation</Link>,{' '}
               <Link href="/services/ai-inventory-management-agents" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>low-stock alerts and draft purchase orders</Link>,{' '}
               <Link href="/b2b-ecommerce" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce</Link>, and{' '}
-              <Link href="/ecommerce-for-manufacturers" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>e-commerce for manufacturers</Link>.
+              <Link href="/ecommerce-for-manufacturers" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>e-commerce for manufacturers</Link>. Guide:{' '}
+              <Link href="/blog/ai-agents-for-procurement-supply-chain-2026" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>eight jobs AI agents take on in procurement and supply chain</Link>.
             </p>
           </div>
         </section>

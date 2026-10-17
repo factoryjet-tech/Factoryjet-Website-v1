@@ -77,7 +77,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'What does the Agentforce user license include?',
-    a: 'Salesforce lists the Agentforce User License at $5 per user per month. It gives an employee access to Agentforce agents and limited Salesforce CRM objects, with metered usage, so it requires Flex Credits for the actions those agents take. It suits employees who are not full Salesforce users but need to use an agent.',
+    a: 'Salesforce lists the Salesforce Agentforce license for employees, called the Agentforce User License, at $5 per user per month. It gives an employee access to Agentforce agents and limited Salesforce CRM objects, with metered usage, so it requires Flex Credits for the actions those agents take. It suits employees who are not full Salesforce users but need to use an agent.',
   },
   {
     q: 'Are Agentforce and Einstein the same?',
@@ -85,7 +85,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'What is the difference between Salesforce and Agentforce?',
-    a: 'Salesforce is the company and its CRM platform: Sales Cloud, Service Cloud and the rest. Agentforce is the AI agent layer that runs on that platform and acts on your Salesforce data. You need Salesforce to use Agentforce, and Agentforce pricing sits on top of your Salesforce licenses.',
+    a: 'Agentforce vs Salesforce is not a choice between two products. Salesforce is the company and its CRM platform: Sales Cloud, Service Cloud and the rest. Agentforce is the AI agent layer that runs on that platform and acts on your Salesforce data. You need Salesforce to use Agentforce, and Agentforce pricing sits on top of your Salesforce licenses.',
   },
   {
     q: 'Is there an Agentforce ROI calculator?',
@@ -130,6 +130,14 @@ const faqs: FAQItem[] = [
   {
     q: 'Does FactoryJet do Salesforce and Agentforce work?',
     a: 'Yes. We do Salesforce and Agentforce work as well as custom AI agents and integrations, so we can set up Agentforce, build the connection it needs to your ERP or other systems, or build a custom agent when that fits better. We show working software on your own data before you sign, and quote a fixed price in writing after a short scoping call.',
+  },
+  {
+    q: 'Is Salesforce still using Einstein?',
+    a: 'Salesforce now markets its AI under the Agentforce name, and its pricing page describes the Agentforce add-ons as Salesforce\'s full suite of predictive, generative and agentic AI. If your contract still lists Einstein features, ask your account executive which ones moved into Agentforce and how each is billed today, before comparing quotes.',
+  },
+  {
+    q: 'What are the different pricing models for Salesforce Agentforce?',
+    a: 'Salesforce lists three: consumption through Flex Credits ($500 per 100,000 credits, 20 per action) or Conversations (price on request as of 18 October 2026); per-user add-ons ($125 or $150 per user per month, Max Edition from $550); and the Agentforce license for employees at $5 per user per month plus Flex Credits. Flex Credits can be pre-purchased, pre-committed or pay-as-you-go.',
   },
 ];
 
@@ -208,7 +216,7 @@ export const post: BlogPost = {
         ]}
       />
       <p>
-        Flex Credits can be bought three ways: pre-purchase (pay up front for the term, which Salesforce says saves the
+        The Agentforce pricing model has three parts: consumption (Flex Credits or Conversations), per-user add-ons, and the $5 Agentforce license for employees. Flex Credits can be bought three ways: pre-purchase (pay up front for the term, which Salesforce says saves the
         most), pre-commit, or pay-as-you-go. All three work with Digital Wallet, Salesforce&apos;s usage tracker. Your
         Salesforce licenses are separate, and Salesforce notes its examples leave out Data 360 credits and other
         consumption services.
@@ -247,7 +255,7 @@ export const post: BlogPost = {
         </figcaption>
       </figure>
 
-      <h2 id="estimate">How to estimate your Agentforce bill in five steps</h2>
+      <h2 id="estimate">How to estimate your Agentforce bill: an Agentforce pricing calculator in five steps</h2>
       <ol className="list-decimal pl-6 space-y-2 mb-6">
         <li>List each job the agent will do: answer, look up, update, schedule.</li>
         <li>For each, count the actions per request. Every look-up or update is one.</li>
@@ -256,11 +264,11 @@ export const post: BlogPost = {
         <li>Run a pilot and compare your estimate with the Digital Wallet usage report before committing to a volume.</li>
       </ol>
       <p>
-        For the time-saved side of the sum, our <a href="/tools/ai-agent-roi-calculator">AI agent ROI calculator</a>{' '}
+        For the time-saved side, which is what any Salesforce Agentforce ROI calculator needs, our <a href="/tools/ai-agent-roi-calculator">AI agent ROI calculator</a>{' '}
         works for Agentforce and custom agents alike.
       </p>
 
-      <h2 id="einstein">Einstein vs Agentforce</h2>
+      <h2 id="einstein">Salesforce Einstein vs Agentforce</h2>
       <p>
         Salesforce now sells its AI under the Agentforce name. The pricing page describes the Agentforce add-ons as
         Salesforce&apos;s full suite of predictive, generative and agentic AI, unified in the flow of work. If you hold
@@ -343,6 +351,25 @@ export const post: BlogPost = {
         of agentic AI projects will be canceled by the end of 2027. Answering those five questions up front is the
         cheapest protection against it.
       </p>
+
+      <h2 id="what-else-ranks">What else ranks for &quot;salesforce agentforce pricing&quot;, and how this guide differs</h2>
+      <p>
+        These are the business sites on Google&apos;s first page for &quot;salesforce agentforce pricing&quot; in the US when we checked on 17
+        October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not
+        reviewed their services, and the list leaves out forums and video sites.
+      </p>
+      <Table
+        head={['Site', 'Page title shown in Google']}
+        rows={[
+          ['aquiva.com', 'Salesforce Agentforce Pricing (2026): Flex Credits ...'],
+          ['ekfrazo.com', 'Salesforce Agentforce Pricing 2026: Tiers, Flex Credits & ...'],
+          ['martech.org', 'Salesforce Agentforce pricing models continue to evolve'],
+          ['cosupport.ai', 'Salesforce Agentforce Pricing in 2026'],
+          ['salesfive.com', 'Agentforce: Costs, Tools & Integration Explained'],
+          ['getmacha.com', 'Agentforce Pricing 2026: 10 Cents an Action, $2 a Resolution'],
+        ]}
+      />
+      <p>Most of these summarise the price list. This guide adds Salesforce&apos;s own worked examples, a five-step way to estimate your bill, the change in the Conversations price between 11 and 18 October 2026, and when a custom connection is the smaller project.</p>
 
       <h2 id="how-factoryjet-works">How FactoryJet helps with Agentforce and custom agents</h2>
       <p>

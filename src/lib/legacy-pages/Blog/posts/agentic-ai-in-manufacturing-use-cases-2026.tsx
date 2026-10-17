@@ -129,6 +129,14 @@ const faqs: FAQItem[] = [
     q: 'How does FactoryJet help manufacturers with AI agents?',
     a: 'We pick one office job with you, pull past cases from your ERP, and build a demo on your own data before you sign. We have built RFQ automation, purchase and sales order generation and daily bookkeeping on several ERPs. You own the code, and we quote the build and any support as fixed prices in writing.',
   },
+  {
+    q: 'What is the future of AI in manufacturing?',
+    a: 'Gartner\'s October 2025 survey found manufacturing and supply chain leaders expect the share of manufacturing tasks completed by machines to rise significantly over the next three years, and ranked advanced automation with minimal human oversight among the top three capabilities for competitive advantage. The same survey found two-thirds are not yet redesigning operations to get there.',
+  },
+  {
+    q: 'What kinds of companies use AI agents in manufacturing?',
+    a: 'Mid-sized job shops and make-to-order manufacturers use them for quoting and order entry; distributors for purchase orders, acknowledgements and order status; and larger plants for maintenance and quality paperwork. The common thread is high volumes of documents arriving in different formats and an ERP to check them against.',
+  },
 ];
 
 export const post: BlogPost = {
@@ -199,7 +207,7 @@ export const post: BlogPost = {
         ]}
       />
 
-      <h2 id="use-cases">Nine agentic AI use cases for mid-sized manufacturers</h2>
+      <h2 id="use-cases">Nine agentic AI use cases: where AI agents for manufacturing earn their keep</h2>
       <Table
         head={['Use case', 'What the agent does', 'Systems it needs', 'A person approves']}
         rows={[
@@ -280,6 +288,25 @@ export const post: BlogPost = {
         the end of 2027 notes that integrating agents into legacy systems can be technically complex. Starting with one
         job on one ERP keeps that complexity small.
       </p>
+
+      <h2 id="what-else-ranks">What else ranks for &quot;agentic ai in manufacturing&quot;, and how this guide differs</h2>
+      <p>
+        These are the business sites on Google&apos;s first page for &quot;agentic ai in manufacturing&quot; in the US when we checked on 17
+        October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not
+        reviewed their services, and the list leaves out forums and video sites.
+      </p>
+      <Table
+        head={['Site', 'Page title shown in Google']}
+        rows={[
+          ['incit.org', 'Meet agentic AI: a new manufacturing frontier'],
+          ['aggranda.com', 'Agentic AI in Manufacturing: 11 Proven Insights for Smarter ...'],
+          ['rzsoftware.com', 'How Agentic AI Is Transforming Frontline Manufacturing'],
+          ['trootech.com', 'Agentic AI in Manufacturing: Predictive Maintenance and ...'],
+          ['graycyan.ai', 'Agentic AI in Manufacturing: 7 Real Use Cases & ROI (2026)'],
+          ['infotech.com', 'Assess and Prioritize Agentic AI Use Cases in Manufacturing'],
+        ]}
+      />
+      <p>Some of these focus on plant-floor uses such as predictive maintenance. This guide covers the office work around production, where a mid-sized manufacturer can start this quarter, and the ERP data each use case needs.</p>
 
       <h2 id="how-factoryjet-works">How FactoryJet works with manufacturers</h2>
       <p>

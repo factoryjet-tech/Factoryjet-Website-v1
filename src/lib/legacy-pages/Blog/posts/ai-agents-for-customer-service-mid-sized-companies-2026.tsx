@@ -130,6 +130,14 @@ const faqs: FAQItem[] = [
     q: 'How does FactoryJet build AI agents for customer service?',
     a: 'We map your ticket types to the systems behind them, decide with you which the agent answers, acts on or hands off, connect only what is needed with limited permissions, and test on your own past tickets. We can extend the agent in your help desk with a custom connection or build a custom agent. We show it working on your data before you sign.',
   },
+  {
+    q: 'Can I get an AI customer service agent for free?',
+    a: 'Some starting points cost nothing. Salesforce lists Salesforce Foundations as a $0 way to start with Agentforce (pricing page, 18 October 2026), and several help desks include a basic AI agent in their plans. Production use that takes actions in your systems is paid, either per use or as a build. Test any free option on your own past tickets first.',
+  },
+  {
+    q: 'What is customer service agentic AI used for first?',
+    a: 'Most companies start with order status and other look-up requests, because the rules are clear and the agent only reads data. Next come actions with low risk, such as address changes before dispatch or in-policy returns. Refunds above a small limit, complaints and disputes stay with people.',
+  },
 ];
 
 export const post: BlogPost = {
@@ -191,7 +199,7 @@ export const post: BlogPost = {
         forecast. What a mid-sized company can do this quarter depends on its own tickets.
       </p>
 
-      <h2 id="what-changes">What an agent does that a chatbot does not</h2>
+      <h2 id="what-changes">Agentic AI for customer service: what an agent does that a chatbot does not</h2>
       <p>
         Gartner&apos;s Daniel O&apos;Sullivan puts it this way in the same release: unlike traditional generative AI
         tools that simply assist users with information, agentic AI will proactively resolve service requests on behalf
@@ -251,7 +259,7 @@ export const post: BlogPost = {
         ]}
       />
       <p>
-        For prices, Salesforce lists Agentforce at $0.10 per action, and its own order-status example uses two actions
+        There is no single list of the best AI agents for customer service; the best one is the one that can reach the systems your tickets need. For prices, Salesforce lists Agentforce at $0.10 per action, and its own order-status example uses two actions
         per request (<a href={SRC.agentforcePricing} {...ext}>Salesforce, 18 October 2026</a>). Our{' '}
         <a href="/blog/intercom-fin-vs-zendesk-ai-vs-custom-ai-agent-2026">comparison of Intercom Fin, Zendesk AI, Agentforce and a custom agent</a>{' '}
         covers the other vendors with their read dates, and{' '}
@@ -329,6 +337,25 @@ export const post: BlogPost = {
         the end of 2027 names inadequate risk controls among the causes. In customer service, the controls above are the
         difference.
       </p>
+
+      <h2 id="what-else-ranks">What else ranks for &quot;ai agents for customer service&quot;, and how this guide differs</h2>
+      <p>
+        These are the business sites on Google&apos;s first page for &quot;ai agents for customer service&quot; in the US when we checked on 17
+        October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not
+        reviewed their services, and the list leaves out forums and video sites.
+      </p>
+      <Table
+        head={['Site', 'Page title shown in Google']}
+        rows={[
+          ['wonderchat.io', '13 Best AI Customer Service Chatbots (2026)'],
+          ['eazybe.com', '7 Best AI Agents For Customer Support In 2026'],
+          ['lindy.ai', '11 Best Customer Service Chatbots in 2026 for 24/7 ...'],
+          ['kapture.cx', 'AI Agents for Customer Service: Boost Efficiency & 24/7 ...'],
+          ['intellectyx.com', 'AI Agents in Customer Service - Get Started Today!'],
+          ['kibocommerce.com', 'AI Agents in Customer Service: Real-World Examples'],
+        ]}
+      />
+      <p>Several of these list chatbot products. This guide maps ticket types to what an agent can resolve, what goes to a person and which systems each needs, which is what decides rent or build.</p>
 
       <h2 id="how-factoryjet-works">How FactoryJet builds customer service agents</h2>
       <p>

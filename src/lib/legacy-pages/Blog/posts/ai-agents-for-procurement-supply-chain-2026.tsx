@@ -130,6 +130,14 @@ const faqs: FAQItem[] = [
     q: 'How does FactoryJet build procurement and supply chain agents?',
     a: 'We pick one job with your purchasing lead, pull past cases from your ERP and inbox, and build a demo on your own documents before you sign. We have built purchase and sales order generation on several ERPs and deliver EDI and punchout work. You own the code, and we quote the build and any support as fixed prices.',
   },
+  {
+    q: 'Which AI is best for demand forecasting?',
+    a: 'Demand forecasting is usually done by specialist planning software or your ERP\'s planning module, which use statistical and machine learning models on sales history. An AI agent is better used around the forecast: noticing when actual orders drift from it, finding the items affected, and preparing suggested purchase orders or a note for the planner.',
+  },
+  {
+    q: 'How can AI be used in logistics?',
+    a: 'In a mid-sized company the useful jobs are exceptions: reading carrier emails and tracking updates, flagging late or short shipments, matching proof-of-delivery documents to orders, answering where-is-my-order questions and drafting messages to customers about delays. Route planning and warehouse optimization are usually specialist software.',
+  },
 ];
 
 export const post: BlogPost = {
@@ -220,6 +228,12 @@ export const post: BlogPost = {
         </figcaption>
       </figure>
 
+      <p>
+        Most agentic AI use cases in supply chain at a mid-sized company sit in rows 3, 4 and 7: the exceptions. AI agents
+        for supply chain planning itself, such as demand forecasting, are usually specialist planning software rather than
+        a custom agent.
+      </p>
+
       <h2 id="first-job">The best first job: acknowledgement matching or chasing</h2>
       <p>
         Both have volume and a clear right answer. A supplier either confirmed your quantity, price and date or did not.
@@ -274,6 +288,25 @@ export const post: BlogPost = {
         the end of 2027 lists inadequate risk controls among the causes; in procurement these controls are the ones that
         matter.
       </p>
+
+      <h2 id="what-else-ranks">What else ranks for &quot;ai agents for procurement&quot;, and how this guide differs</h2>
+      <p>
+        These are the business sites on Google&apos;s first page for &quot;ai agents for procurement&quot; in the US when we checked on 17
+        October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not
+        reviewed their services, and the list leaves out forums and video sites.
+      </p>
+      <Table
+        head={['Site', 'Page title shown in Google']}
+        rows={[
+          ['zycus.com', 'What Are Procurement Agents? A Guide to Their AI ...'],
+          ['qvalia.com', 'Procurement AI agent'],
+          ['spendhq.com', 'Build vs. Buy AI Agents for Procurement'],
+          ['procurementaiagents.com', 'Best AI Agents for Procurement 2026: Reviews'],
+          ['procurementtactics.com', 'Procurement AI Agents Library'],
+          ['beam.ai', 'AI Agents for Procurement: What They Automate'],
+        ]}
+      />
+      <p>Several of these come from procurement software vendors. This guide covers the jobs an agent can take on in a company that buys through an ERP, email and EDI, and the decisions buyers should keep.</p>
 
       <h2 id="how-factoryjet-works">How FactoryJet builds procurement and supply chain agents</h2>
       <p>

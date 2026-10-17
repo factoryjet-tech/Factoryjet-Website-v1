@@ -131,6 +131,14 @@ const faqs: FAQItem[] = [
     q: 'Do we need a security platform for AI agents?',
     a: 'Not to start. The controls that matter most for a first agent are design decisions: narrow permissions, narrow tools, approvals, logging and testing. Specialist AI security tools help with monitoring and testing as you run more agents. Write the controls into your AI agent governance policy first, then choose tools that check them.',
   },
+  {
+    q: 'What is agentic cybersecurity?',
+    a: 'The phrase is used two ways. It can mean securing AI agents themselves, which is what this guide covers, or using AI agents inside a security team to triage alerts and investigate incidents. For a company deploying its first business agent, the first meaning is the one that matters: limiting what the agent can do and logging every action.',
+  },
+  {
+    q: 'Do we need AI agent security tools?',
+    a: 'Not to start. AI agent security tools and agentic AI security solutions help with monitoring, testing and policy enforcement as you run more agents. The controls that matter most for a first agent are design decisions: its own narrow account, narrow tools, approvals for high-impact actions, logging and testing. Put those in place first, then choose tools that check them.',
+  },
 ];
 
 export const post: BlogPost = {
@@ -194,6 +202,11 @@ export const post: BlogPost = {
 
       <h2 id="principle">The one principle: limit what the agent can do</h2>
       <p>
+        What is agentic AI security? It is the practice of keeping AI agents from taking harmful actions, whether they
+        are tricked, misconfigured or simply wrong. It overlaps with, but is not the same as, agentic AI cybersecurity in
+        the other sense: using agents to help a security team.
+      </p>
+      <p>
         OWASP&apos;s guidance on <a href={SRC.owaspLlm06} {...ext}>Excessive Agency</a> traces damaging agent actions
         to three root causes: excessive functionality, excessive permissions and excessive autonomy. Every control on
         this page shrinks one of those three. Instructions in a prompt can be talked around. A permission the ERP refuses
@@ -204,7 +217,7 @@ export const post: BlogPost = {
       <p>
         The <a href={SRC.owaspAgentic} {...ext}>OWASP GenAI Security Project</a> published the list on 9 December 2025,
         developed with more than 100 industry experts, researchers and practitioners. The names below are OWASP&apos;s;
-        the explanation and the control are how we apply them in a mid-sized company.
+        the explanation and the control are how we apply them in a mid-sized company. It is the closest thing to a shared agentic AI security framework today, and the best checklist of agentic AI security risks.
       </p>
       <Table
         head={['OWASP risk', 'What it looks like in a mid-sized company', 'The control']}
@@ -299,7 +312,7 @@ export const post: BlogPost = {
         tool layer sits.
       </p>
 
-      <h2 id="seven-controls">Seven controls every AI agent should have before go-live</h2>
+      <h2 id="seven-controls">AI agent security best practices: seven controls before go-live</h2>
       <ol className="list-decimal pl-6 space-y-3 mb-6">
         <li><strong>Own identity.</strong> A dedicated service account per agent, never a person&apos;s login or a shared admin account.</li>
         <li><strong>Least privilege.</strong> Read-only by default; each write action granted and listed.</li>
@@ -336,6 +349,25 @@ export const post: BlogPost = {
         <a href="/blog/enterprise-ai-agents-mid-sized-companies-buy-or-build-2026">enterprise AI agents for mid-sized companies</a>{' '}
         covers how security questions differ between platform agents and custom ones.
       </p>
+
+      <h2 id="what-else-ranks">What else ranks for &quot;agentic ai security&quot;, and how this guide differs</h2>
+      <p>
+        These are the business sites on Google&apos;s first page for &quot;agentic ai security&quot; in the US when we checked on 17
+        October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not
+        reviewed their services, and the list leaves out forums and video sites.
+      </p>
+      <Table
+        head={['Site', 'Page title shown in Google']}
+        rows={[
+          ['cloudsecurityalliance.org', 'Agentic AI Identity & Access Management'],
+          ['keyfactor.com', 'What Is Agentic AI Security?'],
+          ['checkpoint.com', 'Agentic AI Common Security Risks'],
+          ['zenity.io', 'Agentic AI Security for Enterprise AI Governance'],
+          ['airia.com', 'Agentic AI Security: The Risk Nobody is Talking About'],
+          ['nhimg.org', 'Agentic AI in cyber security: what it means for security teams'],
+        ]}
+      />
+      <p>Many of these are written by security software vendors. This guide maps every OWASP agentic risk to a control a mid-sized company can put in place without buying a platform, and adds the MCP server rules most guides skip.</p>
 
       <h2 id="how-factoryjet-works">How FactoryJet builds agents with these controls</h2>
       <p>

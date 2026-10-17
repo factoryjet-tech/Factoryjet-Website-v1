@@ -139,6 +139,14 @@ const faqs: FAQItem[] = [
     q: 'Should a mid-sized company start with an agent or a simpler automation?',
     a: 'Start with the simplest thing that does the job. Anthropic\'s guidance on building agents recommends finding the simplest solution possible and adding multi-step agentic systems only when simpler solutions fall short. Many first projects are a fixed workflow with one AI step, such as reading a document, and that is a good result.',
   },
+  {
+    q: 'What is problem scoping in AI, with an example?',
+    a: 'Problem scoping means writing down exactly what the AI must do, for whom, on which data, and how success is measured, before any build. Example: "Turn emailed purchase orders from our top 50 customers into draft sales orders in our ERP; pass if 90% of 150 past orders match what our team entered, with zero orders created outside the draft queue."',
+  },
+  {
+    q: 'What is an example of an AI proof of concept?',
+    a: 'A distributor takes 150 past emailed purchase orders, runs an agent that reads each PDF, matches customer part numbers to its item codes and prepares a draft sales order, then compares each draft with what the order team actually entered. The pass mark, end date and decision maker are agreed before it starts. A pass leads to a supervised pilot on live orders.',
+  },
 ];
 
 export const post: BlogPost = {
@@ -415,6 +423,25 @@ export const post: BlogPost = {
         For build costs in more detail, read our guide to{' '}
         <a href="/blog/what-is-an-ai-agent-cost-2026">what an AI agent costs</a>.
       </p>
+
+      <h2 id="what-else-ranks">What else ranks for &quot;ai proof of concept&quot;, and how this guide differs</h2>
+      <p>
+        These are the business sites on Google&apos;s first page for &quot;ai proof of concept&quot; in the US when we checked on 17
+        October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not
+        reviewed their services, and the list leaves out forums and video sites.
+      </p>
+      <Table
+        head={['Site', 'Page title shown in Google']}
+        rows={[
+          ['itrexgroup.com', 'How AI Proof of Concept (PoC) Helps You Succeed in Your ...'],
+          ['futurice.com', 'From AI Proof of Concepts to Production: How to scale AI ...'],
+          ['quinnox.com', 'AI Proof of Concept Services | AI POC Development'],
+          ['indatalabs.com', 'AI proof of concept – Steps and benefits'],
+          ['smartdev.com', 'Why AI Prototyping & PoCs Matter in Software Development'],
+          ['fossilite.ai', 'AI Proof Of Concept: How To Test AI Before You Commit'],
+        ]}
+      />
+      <p>Several of these are written by firms that sell proof-of-concept projects. This guide gives you the scoping template, the pass marks and the vendor red flags so you can run or judge one yourself.</p>
 
       <h2 id="how-factoryjet-works">How FactoryJet runs a proof of concept</h2>
       <p>

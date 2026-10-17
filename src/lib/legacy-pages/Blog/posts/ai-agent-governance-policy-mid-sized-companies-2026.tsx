@@ -142,6 +142,14 @@ const faqs: FAQItem[] = [
     q: 'What should I ask a vendor about governance before hiring them to build an agent?',
     a: 'Ask who owns the code, prompts, test set and logs; whether model and hosting accounts can be in your name; how permissions are scoped; what is logged; how the agent is tested on your own cases before go-live; who the named engineer is; how fast they respond to a serious incident; and whether they will show the agent working on your data before you sign.',
   },
+  {
+    q: 'What is an AI agent governance framework?',
+    a: 'An AI agent governance framework is the structure behind your policy: who owns each agent, how autonomy is granted, how access is limited, how actions are logged and tested, and how incidents are handled. Most companies borrow the structure from the NIST AI RMF (Govern, Map, Measure, Manage) and the controls from OWASP\'s guidance on Excessive Agency, then write their own limits on top.',
+  },
+  {
+    q: 'Is there an AI agent governance certification?',
+    a: 'There is no single certification for AI agents. Organizations can be certified against ISO/IEC 42001:2023, the international standard for an AI management system, through accredited certification bodies. For individuals there are many courses. For a mid-sized company, a written policy, named owners and logs matter more than a certificate until a large customer asks for one.',
+  },
 ];
 
 export const post: BlogPost = {
@@ -319,7 +327,7 @@ export const post: BlogPost = {
         The OWASP Top 10 for LLM Applications 2025 calls the core problem{' '}
         <a href={SRC.owaspLlm06} {...ext}>Excessive Agency</a>: damaging actions taken in response to unexpected,
         ambiguous or manipulated model output. It traces the root cause to one or more of three things: excessive
-        functionality, excessive permissions and excessive autonomy. Here is how those show up in ordinary companies.
+        functionality, excessive permissions and excessive autonomy. Here is how those show up in ordinary companies. Agentic AI risk management, in practice, means giving each one a control and an owner.
       </p>
       <Table
         head={['Risk', 'What it looks like', 'The control']}
@@ -375,7 +383,7 @@ export const post: BlogPost = {
         checks belong.
       </p>
 
-      <h2 id="frameworks">NIST AI RMF, ISO 42001 or OWASP: which framework fits a mid-sized company</h2>
+      <h2 id="frameworks">NIST AI RMF, ISO 42001 or OWASP: which AI agent governance framework fits a mid-sized company</h2>
       <Table
         head={['Framework', 'What it is', 'Use it for', 'At your size']}
         rows={[
@@ -400,7 +408,7 @@ export const post: BlogPost = {
         ]}
       />
       <p>
-        The template below maps each of its sections to one of these, so you can point to a recognized source if a
+        Whichever agentic AI governance framework you start from, it should end in the same place: named owners, written limits and logs. The template below maps each of its sections to one of these, so you can point to a recognized source if a
         customer or auditor asks where a rule came from.
       </p>
 
@@ -512,6 +520,25 @@ export const post: BlogPost = {
         do not decide who owns an agent, what it may touch or when a person must approve. Write those down first, then
         choose tools that record what the policy asks for.
       </p>
+
+      <h2 id="what-else-ranks">What else ranks for &quot;ai agent governance&quot;, and how this guide differs</h2>
+      <p>
+        These are the business sites on Google&apos;s first page for &quot;ai agent governance&quot; in the US when we checked on 17
+        October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not
+        reviewed their services, and the list leaves out forums and video sites.
+      </p>
+      <Table
+        head={['Site', 'Page title shown in Google']}
+        rows={[
+          ['mckinsey.com', 'Agentic AI security: Risks & governance for enterprises'],
+          ['acceldata.io', 'How Governance-Aware AI Agents Enforce Data Policies'],
+          ['indatalabs.com', 'AI Agent Governance: How to Manage Agents at Scale'],
+          ['covasant.com', 'What Is Agent Governance? The Three Questions'],
+          ['opsinsecurity.com', 'AI Governance and Security: Keeping Agents on Task'],
+          ['assistents.ai', 'AI Agent Governance'],
+        ]}
+      />
+      <p>Most of these explain what AI agent governance is. This guide is written for a company of 100 to 2,000 people and comes with a fill-in policy template, a four-level autonomy scale and written approval limits you can adopt this month.</p>
 
       <h2 id="how-factoryjet-works">How FactoryJet handles governance on agents we build</h2>
       <p>

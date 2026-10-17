@@ -54,7 +54,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Which AI agent is best for finance?',
-    a: 'If your accounting system or AP tool offers built-in AI for the job, try it first. If the work crosses systems, such as an inbox, an ERP, a bank portal and a spreadsheet, a custom agent connected to those systems usually fits better, because approval limits, vendor quirks and coding rules are specific to your company.',
+    a: 'The best AI agents for finance are the ones that can reach every system the job touches. If your accounting system or AP tool offers built-in AI for the job, try it first. If the work crosses systems, such as an inbox, an ERP, a bank portal and a spreadsheet, a custom agent connected to those systems usually fits better, because approval limits, vendor quirks and coding rules are specific to your company.',
   },
   {
     q: 'How many finance teams use AI?',
@@ -114,7 +114,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Do AI agents work for accounting firms?',
-    a: 'Yes, especially for repetitive client work such as bookkeeping, bank matching and document collection. The same controls apply per client: separate access, logs, and review by an accountant before anything is filed or posted.',
+    a: 'Yes. AI agents for accounting firms suit repetitive client work such as bookkeeping, bank matching and document collection. The same controls apply per client: separate access, logs, and review by an accountant before anything is filed or posted.',
   },
   {
     q: 'Can an AI agent reconcile supplier statements?',
@@ -127,6 +127,14 @@ const faqs: FAQItem[] = [
   {
     q: 'How does FactoryJet build AI agents for finance teams?',
     a: 'We pick one job with your controller, pull past cases from your accounting system and inbox, and build a demo on your own documents before you sign. We keep approvals and payments with your people and log every action. You own the code, and we quote the build and any support as fixed prices.',
+  },
+  {
+    q: 'What is the 30% rule for AI?',
+    a: 'There is no official 30% rule. People use the phrase loosely, often to mean that AI should take on part of a role\'s routine work while people keep the judgement calls, or that a first project should automate part of a process rather than all of it. In finance, that usually means the agent prepares matches and drafts while people approve and sign off.',
+  },
+  {
+    q: 'Can AI agents help with financial forecasting?',
+    a: 'They can prepare the inputs: pulling actuals, flagging variances, gathering assumptions from other teams and drafting commentary for review. The forecast model itself usually lives in your planning tool or spreadsheet. The finance team still decides the numbers and the story behind them.',
   },
 ];
 
@@ -188,6 +196,11 @@ export const post: BlogPost = {
         points to starting with one job where the data is reachable and the rules are written.
       </p>
 
+      <p>
+        Agentic AI in finance means agents that do a finance task end to end under rules, such as matching an invoice and
+        routing the exception, rather than tools that only answer questions.
+      </p>
+
       <h2 id="adoption">What finance teams already use AI for</h2>
       <Table
         head={['Use case (Gartner, November 2025)', 'Share of finance AI adopters', 'In a mid-sized company']}
@@ -226,6 +239,8 @@ export const post: BlogPost = {
           The agent prepares the match or the reconciliation; a person reviews and signs off.
         </figcaption>
       </figure>
+
+      <p>The same list covers most requests for AI agents for accounting, from bookkeeping to reconciliation.</p>
 
       <h2 id="first-job">The best first job: invoice matching or cash application</h2>
       <p>
@@ -278,6 +293,25 @@ export const post: BlogPost = {
         <li>Agree the pass mark and tolerances with the controller, and run a <a href="/blog/ai-proof-of-concept-to-production-2026">proof of concept</a> on those cases.</li>
         <li>Go live with a person approving every posting, then widen tolerances as accuracy holds.</li>
       </ol>
+
+      <h2 id="what-else-ranks">What else ranks for &quot;ai agents for finance&quot;, and how this guide differs</h2>
+      <p>
+        These are the business sites on Google&apos;s first page for &quot;ai agents for finance&quot; in the US when we checked on 17
+        October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not
+        reviewed their services, and the list leaves out forums and video sites.
+      </p>
+      <Table
+        head={['Site', 'Page title shown in Google']}
+        rows={[
+          ['leewayhertz.com', 'AI agents in finance: Capabilities, applications and use ...'],
+          ['corporatefinanceinstitute.com', 'AI Agents in Finance: Automating Workflows With Control'],
+          ['aiagentslist.com', 'Finance & Accounting AI Agents | 31+ Tools & Solutions 2026'],
+          ['sanalabs.com', '7 Best Enterprise AI Agents for Financial Services in 2025'],
+          ['quanam.com', 'AI Agents in Finance: useful only when embedded ...'],
+          ['onereach.ai', 'Smarter Finance: AI Agents in Planning, Forecasting, and ...'],
+        ]}
+      />
+      <p>Several of these list tools. This guide covers the seven jobs, Gartner&apos;s November 2025 adoption data and the controls that keep payments and sign-off with people.</p>
 
       <h2 id="how-factoryjet-works">How FactoryJet builds finance agents</h2>
       <p>
