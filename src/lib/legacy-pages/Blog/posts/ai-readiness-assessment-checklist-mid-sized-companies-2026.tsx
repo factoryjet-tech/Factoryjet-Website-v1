@@ -345,7 +345,7 @@ export const post: BlogPost = {
 
       <h2 id="after">After the assessment</h2>
       <ol className="list-decimal pl-6 space-y-2 mb-6">
-        <li>Pick the job that scored best, not the one that sounds most impressive.</li>
+        <li>Pick the job that scored best, not the one that sounds most impressive. Ideas by team: <a href="/blog/ai-agents-for-finance-accounting-teams-2026">finance</a>, <a href="/blog/ai-agents-for-procurement-supply-chain-2026">procurement</a> and <a href="/blog/agentic-ai-in-manufacturing-use-cases-2026">manufacturing</a>.</li>
         <li>Run a <a href="/blog/ai-proof-of-concept-to-production-2026">proof of concept</a> on your own past cases with a pass mark agreed in advance.</li>
         <li>Decide whether to rent the agent in software you already use or build one, using our guide to <a href="/blog/enterprise-ai-agents-mid-sized-companies-buy-or-build-2026">enterprise AI agents for mid-sized companies</a>.</li>
         <li>Sketch how it connects to your systems with our <a href="/blog/agentic-ai-architecture-mid-sized-companies-2026">agentic AI architecture guide</a>.</li>
