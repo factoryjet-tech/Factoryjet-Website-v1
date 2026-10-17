@@ -660,7 +660,10 @@ export const post: BlogPost = {
         A simple rule of thumb: use a freelancer to test a narrow idea quickly and cheaply, move to
         an agency once you need reliability and support you can count on, and only hire in-house
         once AI agent work has become a permanent, full-time part of your operation. Do not let a
-        vendor push you toward the option that happens to be how they get paid.
+        vendor push you toward the option that happens to be how they get paid. Our guide to
+        choosing an{' '}
+        <a href="/blog/ai-agency-vs-in-house-vs-freelancer-2026" className="text-[#B23E13] underline">agency, in-house or freelancer by company size</a>{' '}
+        adds year-one employer costs for the US, UK and Australia.
       </p>
 
       <h2 id="how-to-hire" className="text-2xl font-bold mt-8 mb-4 text-gray-900">
@@ -851,7 +854,9 @@ export const post: BlogPost = {
       </h2>
       <p className="mb-4 text-gray-800">
         Ask these out loud, whether you are talking to a freelancer or an agency, and listen for
-        how specific the answer is. A confident answer with no specifics is a warning.
+        how specific the answer is. A confident answer with no specifics is a warning. Hiring a
+        company rather than a person? Use our{' '}
+        <a href="/blog/questions-to-ask-ai-development-company-2026" className="text-[#B23E13] underline">15 questions to ask an AI development company before you sign</a>.
       </p>
       <div className="overflow-x-auto mb-6">
         <table className="min-w-full border-collapse border border-gray-300">
@@ -963,7 +968,9 @@ export const post: BlogPost = {
           U.S. Copyright Office, Circular 30
         </a>
         ). In plain terms, paying an invoice does not automatically make the code yours. Get a
-        written assignment of rights before work starts, not after.
+        written assignment of rights before work starts, not after. Our{' '}
+        <a href="/blog/ai-agent-development-contract-checklist-2026" className="text-[#B23E13] underline">AI agent development contract checklist</a>{' '}
+        lists the 14 clauses to agree.
       </p>
       <p className="mb-6 text-gray-800">
         Beyond code, ask about the credentials the agent depends on (API keys, OAuth connections,
@@ -1036,7 +1043,9 @@ export const post: BlogPost = {
         </a>
         . It gives a published build range with its phase breakdown, and vendor list prices for
         renting a ready-made agent. A quote only means something against a written scope, which is
-        check 1 on the list above.
+        check 1 on the list above. If your first agent is also your first product, our{' '}
+        <a href="/blog/ai-mvp-development-cost-2026" className="text-[#B23E13] underline">AI MVP cost guide</a>{' '}
+        compares six published 2026 estimates.
       </p>
 
       <h2 id="where-we-fit" className="text-2xl font-bold mt-8 mb-4 text-gray-900">

@@ -232,7 +232,9 @@ export const post: BlogPost = {
       <p>
         RAND interviewed 65 experienced data scientists and engineers and found five leading root causes. Gartner&apos;s
         list for abandoned generative AI projects overlaps: poor data quality, inadequate risk controls, escalating
-        costs and unclear business value. Here is each one with what to decide in the scoping meeting.
+        costs and unclear business value. Here is each one with what to decide in the scoping meeting. For the failure
+        rates behind this, and what to do when a pilot has already stalled, see{' '}
+        <a href="/blog/why-ai-agent-projects-fail-2026">why AI agent projects fail</a>.
       </p>
       <Table
         head={['Root cause', 'Source', 'Decide this before the POC starts']}
@@ -400,7 +402,8 @@ export const post: BlogPost = {
         Gartner&apos;s{' '}
         <a href={SRC.gartner40} {...ext}>June 2025 forecast</a> that over 40% of agentic AI projects will be canceled by
         the end of 2027 describes most current projects as early-stage experiments or proofs of concept; the checklist
-        above is what separates the ones that make it.
+        above is what separates the ones that make it. Before the production build, check{' '}
+        <a href="/blog/ai-agent-development-contract-checklist-2026">what to put in the contract</a>.
       </p>
 
       <h2 id="red-flags">Six red flags in a vendor&apos;s AI proof of concept</h2>
@@ -421,7 +424,8 @@ export const post: BlogPost = {
         enterprise AI system at $50,000 to $200,000 or more. Those are market ranges, not FactoryJet prices. FactoryJet
         quotes a fixed price in writing after a short scoping call, and the demo on your own data comes before you sign.
         For build costs in more detail, read our guide to{' '}
-        <a href="/blog/what-is-an-ai-agent-cost-2026">what an AI agent costs</a>.
+        <a href="/blog/what-is-an-ai-agent-cost-2026">what an AI agent costs</a>. Once the proof of concept passes, see{' '}
+        <a href="/blog/ai-mvp-development-cost-2026">what an AI MVP costs</a> to build in 2026.
       </p>
 
       <h2 id="what-else-ranks">What else ranks for &quot;ai proof of concept&quot;, and how this guide differs</h2>

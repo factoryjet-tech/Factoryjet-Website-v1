@@ -492,7 +492,7 @@ export default function AiAgentDevelopmentSections() {
                 </div>
                 <div className="fact">
                   <div className="sec">§03</div>
-                  <p>Cost follows the number of systems the agent has to read and write to. As a market reference, development firm ProductCrafters puts 2026 builds at about $5,000 to $180,000+. A narrow pilot takes two to four weeks. Our <a href="/blog/what-is-an-ai-agent-cost-2026" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI agent cost guide</a> breaks down what it costs to build, run or rent one.</p>
+                  <p>Cost follows the number of systems the agent has to read and write to. As a market reference, development firm ProductCrafters puts 2026 builds at about $5,000 to $180,000+. A narrow pilot takes two to four weeks. Our <a href="/blog/what-is-an-ai-agent-cost-2026" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI agent cost guide</a> breaks down what it costs to build, run or rent one. Our <a href="/blog/enterprise-ai-agent-cost-2026" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>enterprise AI agent cost guide</a> sets out published build ranges by stage and company size.</p>
                 </div>
                 <div className="fact">
                   <div className="sec">§04</div>

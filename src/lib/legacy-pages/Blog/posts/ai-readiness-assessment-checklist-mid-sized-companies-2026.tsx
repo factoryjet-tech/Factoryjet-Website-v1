@@ -207,7 +207,8 @@ export const post: BlogPost = {
         <a href={SRC.gartner30} {...ext}>July 2024 prediction</a> that at least 30% of generative AI projects would be
         abandoned after proof of concept cited poor data quality, inadequate risk controls, escalating costs and unclear
         business value. Nearly every item on both lists can be checked before a project starts. That is what a readiness
-        assessment is for.
+        assessment is for. For how each cause plays out on agent projects, see{' '}
+        <a href="/blog/why-ai-agent-projects-fail-2026">the seven causes of AI agent project failure</a>.
       </p>
 
       <h2 id="pillars">The five pillars of AI readiness</h2>

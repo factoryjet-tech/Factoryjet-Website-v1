@@ -532,7 +532,7 @@ export default function AiConsultingSections() {
                 </tbody>
               </table>
             </div>
-            <p className="sub-note">Comparing named firms? Our guide to the <a href={FIRMS_LIST}>best AI consulting firms in the USA</a> reviews them by business size, and <a href="/blog/how-to-hire-an-ai-agent-developer-2026">how to hire an AI agent developer</a> covers the build side.</p>
+            <p className="sub-note">Comparing named firms? Our guide to the <a href={FIRMS_LIST}>best AI consulting firms in the USA</a> reviews them by business size, and <a href="/blog/how-to-hire-an-ai-agent-developer-2026">how to hire an AI agent developer</a> covers the build side. If a first attempt has already stalled, our guide shows how to decide whether to <a href="/blog/why-ai-agent-projects-fail-2026">kill, fix or restart a stalled AI pilot</a>.</p>
           </div>
         </section>
 

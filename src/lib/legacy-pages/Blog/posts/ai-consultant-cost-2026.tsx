@@ -623,7 +623,8 @@ export const post: BlogPost = {
       <h2 id="hire-ai">How much does it cost to hire AI: employee, freelancer or agency?</h2>
       <p>
         There are three other ways to get the same skills: employ an engineer, book a freelancer, or sign an agency. Each
-        has a different cost shape.
+        has a different cost shape. Our comparison shows{' '}
+        <a href="/blog/ai-agency-vs-in-house-vs-freelancer-2026">which route fits your company size</a>.
       </p>
 
       <h3 id="employee-cost">An employee: how much does it cost to hire a developer?</h3>

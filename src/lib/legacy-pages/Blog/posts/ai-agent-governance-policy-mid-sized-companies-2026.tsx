@@ -509,7 +509,8 @@ export const post: BlogPost = {
         <a href={SRC.gartner40} {...ext}>25 June 2025 prediction</a> that over 40% of agentic AI projects will be
         canceled by the end of 2027 names three causes: escalating costs, unclear business value and inadequate risk
         controls. A month of governance work done alongside the build deals with the third one directly, and forces an
-        honest answer on the second.
+        honest answer on the second. For the full picture, see{' '}
+        <a href="/blog/why-ai-agent-projects-fail-2026">what Gartner, MIT and RAND found about AI project failure</a>.
       </p>
 
       <h2 id="platforms">Governance platforms vs a written policy</h2>

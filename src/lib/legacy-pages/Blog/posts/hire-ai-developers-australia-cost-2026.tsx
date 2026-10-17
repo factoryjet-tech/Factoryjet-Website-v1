@@ -942,6 +942,10 @@ export const post: BlogPost = {
           <li><strong>You have no engineers, a clear process and a tight budget:</strong> price an offshore agency on a fixed scope, and check the privacy and time zone points above.</li>
         </ul>
       </details>
+      <p>
+        For the same decision across the US and UK, with year-one employer costs, see{' '}
+        <a href="/blog/ai-agency-vs-in-house-vs-freelancer-2026">agency, in-house engineer or freelancer</a>.
+      </p>
 
       <h2 id="how-to-hire">How to hire dedicated developers or an AI developer in 7 steps</h2>
       <ol className="list-decimal pl-6 space-y-3 mb-6">
@@ -1065,7 +1069,8 @@ export const post: BlogPost = {
       <p>
         An AI agent needs upkeep, because the tools around it change. The contract should say how long defects are fixed
         at no charge, what a change costs after that, how much notice ends the arrangement, and what is handed over on
-        the last day: code, credentials, documentation and a walkthrough.
+        the last day: code, credentials, documentation and a walkthrough. For the full list, including Australian IP and
+        privacy rules, see our <a href="/blog/ai-agent-development-contract-checklist-2026">AI development contract checklist</a>.
       </p>
 
       <h2 id="gst-usd">GST and US dollars: the Australian details that change the number</h2>

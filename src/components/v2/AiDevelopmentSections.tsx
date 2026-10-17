@@ -579,7 +579,7 @@ export default function AiDevelopmentSections() {
                 </tbody>
               </table>
             </div>
-            <p className="sub-note">Shortlisting agent builders specifically? Our roundup of <a href="/blog/best-ai-agent-development-companies-small-business">AI agent development companies for small business</a> reviews more firms, and the <a href="/blog/how-to-hire-an-ai-agent-developer-2026">hiring guide</a> lists the questions to ask each one.</p>
+            <p className="sub-note">Shortlisting agent builders specifically? Our roundup of <a href="/blog/best-ai-agent-development-companies-small-business">AI agent development companies for small business</a> reviews more firms, and the <a href="/blog/how-to-hire-an-ai-agent-developer-2026">hiring guide</a> lists the questions to ask each one. Building a new product? See <a href="/blog/ai-mvp-development-cost-2026">how much an AI MVP costs</a> to build in 2026, with US, UK and Australian figures.</p>
           </div>
         </section>
 

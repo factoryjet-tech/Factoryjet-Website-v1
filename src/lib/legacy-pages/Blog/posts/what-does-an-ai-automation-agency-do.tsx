@@ -308,7 +308,7 @@ export const post: BlogPost = {
       </ul>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">DIY tools vs an agency vs hiring in-house</h2>
-      <p className="mb-4">All three are legitimate. They fail in different ways, which is the useful thing to know before choosing.</p>
+      <p className="mb-4">All three are legitimate. They fail in different ways, which is the useful thing to know before choosing. For year-one hiring costs by country, see <a href="/blog/ai-agency-vs-in-house-vs-freelancer-2026" className="text-[#B23E13] underline">AI agency vs in-house vs freelancer</a>.</p>
       <div className="overflow-x-auto mb-6">
         <table className="min-w-full border-collapse border border-gray-300">
           <thead className="bg-gray-800 text-white">

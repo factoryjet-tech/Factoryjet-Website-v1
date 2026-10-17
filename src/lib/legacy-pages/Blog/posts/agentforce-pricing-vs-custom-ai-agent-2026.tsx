@@ -309,7 +309,8 @@ export const post: BlogPost = {
       </ul>
       <p>
         Our guide to <a href="/blog/enterprise-ai-agents-mid-sized-companies-buy-or-build-2026">enterprise AI agents for mid-sized companies</a>{' '}
-        covers this choice across Salesforce, Microsoft and help desk platforms.
+        covers this choice across Salesforce, Microsoft and help desk platforms. For the Microsoft version of this
+        decision, see our guide to <a href="/blog/copilot-studio-vs-custom-ai-agents-2026">Copilot Studio vs a custom AI agent</a>.
       </p>
 
       <h2 id="middle-route">The middle route: Agentforce plus one custom connection</h2>
@@ -334,7 +335,9 @@ export const post: BlogPost = {
         <a href={SRC.layer3} {...ext}>AI consulting pricing guide</a> (updated 9 September 2026) puts a production MVP
         workflow at $5,000 to $25,000 and a full enterprise AI system at $50,000 to $200,000 or more. Those are market
         ranges, not FactoryJet prices. FactoryJet quotes the build, and any support you choose, as fixed prices in
-        writing after a short scoping call, and shows working software on your own data before you sign.
+        writing after a short scoping call, and shows working software on your own data before you sign. For ranges
+        across company sizes and the controls that move them, see{' '}
+        <a href="/blog/enterprise-ai-agent-cost-2026">enterprise AI agent cost in 2026</a>.
       </p>
 
       <h2 id="before-signing">Five questions to ask before signing an Agentforce order</h2>

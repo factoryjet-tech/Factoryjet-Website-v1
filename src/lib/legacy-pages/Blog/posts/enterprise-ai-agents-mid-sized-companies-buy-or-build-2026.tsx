@@ -256,7 +256,10 @@ export const post: BlogPost = {
         We compare the support-desk agents in detail in{' '}
         <a href="/blog/intercom-fin-vs-zendesk-ai-vs-custom-ai-agent-2026">Intercom Fin vs Zendesk AI vs a custom agent</a>,
         and Salesforce&apos;s pricing in{' '}
-        <a href="/blog/agentforce-pricing-vs-custom-ai-agent-2026">Agentforce pricing vs a custom AI agent</a>.
+        <a href="/blog/agentforce-pricing-vs-custom-ai-agent-2026">Agentforce pricing vs a custom AI agent</a>. If your
+        company runs on Microsoft 365, read{' '}
+        <a href="/blog/copilot-studio-vs-custom-ai-agents-2026">Microsoft Copilot Studio vs a custom AI agent</a> before
+        choosing.
       </p>
 
       <h2 id="build">When a custom AI agent is the right call</h2>
@@ -340,6 +343,11 @@ export const post: BlogPost = {
         <li>Where are permissions enforced: in the prompt, or in the system it acts on?</li>
         <li>What happens when the model behind it is retired?</li>
       </ol>
+      <p>
+        For a custom build, the full set is our{' '}
+        <a href="/blog/questions-to-ask-ai-development-company-2026">15 questions to ask an AI development company</a>{' '}
+        before you sign.
+      </p>
 
       <h2 id="cost">What each route costs in the market</h2>
       <p>The billing models differ, so compare what each counts rather than a headline number.</p>
@@ -368,7 +376,9 @@ export const post: BlogPost = {
       <p>
         Those are market figures, not FactoryJet prices. FactoryJet quotes the build, and any support you choose, as
         fixed prices in writing after a short scoping call. For the long version, read{' '}
-        <a href="/blog/what-is-an-ai-agent-cost-2026">what an AI agent costs</a>.
+        <a href="/blog/what-is-an-ai-agent-cost-2026">what an AI agent costs</a>. For stage-by-stage ranges and what
+        each enterprise control adds to scope, read{' '}
+        <a href="/blog/enterprise-ai-agent-cost-2026">what an enterprise AI agent costs to build</a>.
       </p>
 
       <h2 id="order">The order we suggest for a mid-sized company</h2>

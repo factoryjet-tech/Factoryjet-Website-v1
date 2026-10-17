@@ -336,7 +336,9 @@ export const post: BlogPost = {
         clients will use the same systems: staff in Claude or ChatGPT, a support agent, an order-entry agent. Permissions,
         tools and logs are then defined once. If your company runs on Salesforce, an Agentforce agent can reach the same
         backend through an API built alongside the server; see{' '}
-        <a href="/blog/agentforce-pricing-vs-custom-ai-agent-2026">Agentforce pricing vs a custom AI agent</a>.
+        <a href="/blog/agentforce-pricing-vs-custom-ai-agent-2026">Agentforce pricing vs a custom AI agent</a>. On
+        Microsoft 365, <a href="/blog/copilot-studio-vs-custom-ai-agents-2026">Copilot Studio can call an MCP server</a>{' '}
+        as a tool, so the same back end can serve a Microsoft front end.
       </p>
 
       <h2 id="what-else-ranks">What else ranks for &quot;custom mcp server&quot;, and how this guide differs</h2>

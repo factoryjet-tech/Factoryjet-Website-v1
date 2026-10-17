@@ -982,6 +982,7 @@ export const post: BlogPost = {
         <li><strong>No human approval step.</strong> Anything that sends money, gives advice or speaks to customers should have a person approving it, at least at first.</li>
         <li><strong>AI on a job that needs none.</strong> Some workflows are ordinary rules with a new label. Ask to test it on one of your own messy examples.</li>
       </ol>
+      <p className="mb-6">The full list of twelve <a href="/blog/questions-to-ask-ai-development-company-2026" className={link}>AI agency red flags</a>, with a scorecard, is in our guide to questions to ask before you sign.</p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Where FactoryJet fits</h2>
       <p className="mb-4">

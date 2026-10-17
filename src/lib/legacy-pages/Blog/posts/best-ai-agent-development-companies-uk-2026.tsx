@@ -703,7 +703,7 @@ export const post: BlogPost = {
       </div>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How to choose an AI agent development company in the UK: 6 steps</h2>
-      <p className="mb-4">Open each step for the detail.</p>
+      <p className="mb-4">Open each step for the detail. Our <a href="/blog/questions-to-ask-ai-development-company-2026" className="text-[#B23E13] underline">questions to ask before you sign</a> add the ICO controller and processor check.</p>
       <div className="space-y-3 mb-8 not-prose">
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">1. Write down one task</summary>

@@ -289,7 +289,11 @@ export const post: BlogPost = {
         <a href="/blog/intercom-fin-vs-zendesk-ai-vs-custom-ai-agent-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">
           Intercom Fin, Zendesk AI agents, Agentforce and Gorgias compared with a custom agent
         </a>
-        .
+        . For Microsoft 365 teams, our guide to{' '}
+        <a href="/blog/copilot-studio-vs-custom-ai-agents-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">
+          Copilot Studio pricing and limits
+        </a>{' '}
+        sets out the credit rates and when a custom agent fits better.
       </p>
 
       {/* Section 4: When build makes sense */}

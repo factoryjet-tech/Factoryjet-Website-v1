@@ -560,7 +560,7 @@ export const post: BlogPost = {
       </figure>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How to choose an AI agency in Australia: 7 steps</h2>
-      <p className="mb-4">Open each step for the detail.</p>
+      <p className="mb-4">Open each step for the detail. Run every name through our <a href="/blog/questions-to-ask-ai-development-company-2026" className="text-[#B23E13] underline">questions to ask an AI agency before you sign</a>, which include the OAIC privacy checks.</p>
       <div className="space-y-3 mb-8 not-prose">
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">1. Write down one task, not an AI strategy</summary>
