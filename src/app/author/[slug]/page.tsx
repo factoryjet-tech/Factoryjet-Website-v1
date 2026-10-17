@@ -100,7 +100,14 @@ export default async function Page({ params }: Props) {
     notFound()
   }
 
-  const authorPosts = POSTS.filter((post) => post.author === author.name)
+  // AuthorPage is a client component, so everything passed to it is serialized
+  // into the page. Pass only the card fields: with full post bodies the page
+  // was 8.4 MB of HTML (2026-10-17).
+  const authorPosts = POSTS.filter((post) => post.author === author.name).map(
+    ({ id, slug, title, excerpt, category, author, date, readTime, imageUrl, imageAlt, imageFit }) => ({
+      id, slug, title, excerpt, category, author, date, readTime, imageUrl, imageAlt, imageFit,
+    }),
+  )
   const authorJsonLd = generateAuthorJsonLd(author)
 
   return (
