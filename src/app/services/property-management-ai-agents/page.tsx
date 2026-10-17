@@ -1123,7 +1123,7 @@ export default function PropertyManagementAiAgentsPage() {
                 <div className="relative rounded-2xl border border-[#E7DED6] bg-white p-4 shadow-md max-w-md mx-auto">
                   <div className="relative rounded-xl overflow-hidden aspect-square">
                     <Image
-                      src="/bhavesh_image.webp"
+                      src="/bhavesh_card-832.webp"
                       alt="Bhavesh Barot, Founder & CEO of FactoryJet"
                       width={682}
                       height={1024}

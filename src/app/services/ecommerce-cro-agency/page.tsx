@@ -983,7 +983,7 @@ export default function EcommerceCroAgencyPage() {
               <figure className="pp-splitband-fig">
                 <div className="pp-shot" style={{ position: 'relative', aspectRatio: '4 / 3', maxWidth: '380px', margin: '0 auto' }}>
                   <Image
-                    src="/bhavesh_image.webp"
+                    src="/bhavesh_card-832.webp"
                     alt="Bhavesh Barot, Founder & CEO of FactoryJet"
                     width={682}
                     height={1024}

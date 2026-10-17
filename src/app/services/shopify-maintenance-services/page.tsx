@@ -1422,7 +1422,7 @@ export default function ShopifyMaintenanceServicesPage() {
             <h2 style={{ marginTop: '10px' }}>Who wrote this page, and how the facts were checked</h2>
             <div style={{ ...CARD_STYLE, marginTop: '22px', display: 'flex', gap: '18px', alignItems: 'flex-start' }}>
               <img
-                src="/bhavesh_image.webp"
+                src="/bhavesh_avatar-240.webp"
                 alt="Bhavesh Barot, founder of FactoryJet"
                 width={64}
                 height={64}

@@ -391,7 +391,7 @@ export default function AgenticCommercePage() {
               <div>
                 <Image
                   className="agc-avatar"
-                  src="/bhavesh_image.jpg"
+                  src="/bhavesh_avatar-240.webp"
                   alt="Bhavesh Barot, Founder of FactoryJet"
                   width={76}
                   height={76}

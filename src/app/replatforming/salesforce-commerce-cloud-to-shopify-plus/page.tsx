@@ -787,7 +787,7 @@ export default function SFCCToShopifyPlusPage() {
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '14px', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '100px', padding: '6px 20px 6px 6px', margin: '0 auto 28px' }}>
               <div style={{ position: 'relative', width: '44px', height: '44px' }}>
                 <Image
-                  src="/bhavesh_image.jpg"
+                  src="/bhavesh_avatar-240.webp"
                   alt="Bhavesh Barot, Founder of FactoryJet"
                   width={44}
                   height={44}

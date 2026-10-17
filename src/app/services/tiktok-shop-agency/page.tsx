@@ -497,7 +497,7 @@ export default function TikTokShopAgencyPage() {
         <section className="tts-sec pt0">
           <div className="tts-wrap tts-eeat-grid">
             <div className="tts-crystal tts-eeat">
-              <div><img className="tts-avatar" src="/bhavesh_image.jpg" alt="Bhavesh Barot, Founder of FactoryJet" width={76} height={76} loading="lazy" decoding="async" /></div>
+              <div><img className="tts-avatar" src="/bhavesh_avatar-240.webp" alt="Bhavesh Barot, Founder of FactoryJet" width={76} height={76} loading="lazy" decoding="async" /></div>
               <div>
                 <div className="role">Led by the founder</div>
                 <h3 className="disp">Bhavesh Barot, Founder of FactoryJet</h3>

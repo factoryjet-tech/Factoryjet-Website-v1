@@ -1106,7 +1106,7 @@ export default function EcommerceMarketingAgencyPage() {
           <div className={`${WRAP} grid gap-5 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch`}>
             <div className={`${CARD} grid gap-5 p-6 sm:grid-cols-[auto_1fr] sm:items-center sm:p-7`}>
               <img
-                src="/bhavesh_image.jpg"
+                src="/bhavesh_avatar-240.webp"
                 alt="Bhavesh Barot, Founder of FactoryJet"
                 width={76}
                 height={76}

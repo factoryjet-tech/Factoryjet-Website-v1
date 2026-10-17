@@ -843,7 +843,7 @@ export default function BigCommerceB2BPage() {
                 </div>
                 <div className="founder">
                   <Image
-                    src="/bhavesh_image.webp"
+                    src="/bhavesh_avatar-240.webp"
                     alt="Bhavesh Barot, Founder of FactoryJet."
                     width={46}
                     height={46}

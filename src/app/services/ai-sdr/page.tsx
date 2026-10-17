@@ -1091,7 +1091,7 @@ export default function AiSdrPage() {
                 <div className="pp-shot max-w-sm mx-auto">
                   <div className="relative aspect-square">
                     <Image
-                      src="/bhavesh_image.webp"
+                      src="/bhavesh_card-832.webp"
                       alt="Bhavesh Barot, Founder and CEO of FactoryJet"
                       width={682}
                       height={1024}
