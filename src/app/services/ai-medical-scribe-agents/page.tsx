@@ -31,7 +31,7 @@ const PAGE_URL = 'https://factoryjet.com/services/ai-medical-scribe-agents';
 const TITLE = 'AI Medical Scribe Agents for Orthopedic Clinics | FactoryJet';
 const H1 = `${SCRIBE_H1_LEAD} ${SCRIBE_H1_EMPHASIS}`;
 const DESCRIPTION =
-  'AI medical scribe agents for specialist clinics: they read the referral, draft the note under your headings and the letter back, flag mismatches, and file nothing.';
+  'AI medical scribe agents for specialist clinics: they read the referral, draft the note and the letter back, flag mismatches, and file nothing.';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 
 export const metadata: Metadata = {

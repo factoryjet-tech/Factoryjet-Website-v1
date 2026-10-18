@@ -109,6 +109,7 @@ const AGENT_DIRECTORY: { group: string; lead: string; items: { title: string; hr
   { group: 'By industry', lead: 'Agents built around one industry’s systems and rules.', items: [
     { title: 'Manufacturing', href: '/services/manufacturing-ai-agents', line: 'Quoting, ERP integration and supply chain' },
     { title: 'Healthcare', href: '/services/healthcare-ai-agents', line: 'HIPAA-aware receptionists and clinical workflows' },
+    { title: 'Medical Scribe Agents', href: '/services/ai-medical-scribe-agents', line: 'Clinical notes and referral letters, signed by the doctor' },
     { title: 'Legal', href: '/services/legal-ai-agents', line: 'Intake, document review and practice management' },
     { title: 'Real Estate', href: '/services/ai-agents-for-real-estate', line: 'Lead response, showings and follow-up' },
     { title: 'Property Management', href: '/services/property-management-ai-agents', line: 'Leasing agents for AppFolio, Yardi and more' },

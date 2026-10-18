@@ -1,0 +1,25 @@
+/* /services/ai-medical-scribe-agents only. Layered on AiAgentDevelopmentSections.css and
+   AiDevelopmentSections.css; uses their tokens. Adds film-still figures, the byline, and resets
+   for lists rendered as real <ul>/<ol> so each item is a retrievable list item. */
+
+.scribePage .scribe-byline { margin-top: 14px; font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: .02em; }
+.scribePage .scribe-byline b { color: var(--ink); font-weight: 600; }
+
+.scribePage ul.platlist, .scribePage ol.timeline, .scribePage ul.refs { list-style: none; margin: 0; padding: 0; }
+.scribePage ul.refs { margin-top: 22px; }
+.scribePage li.plat, .scribePage li.tnode, .scribePage ul.refs > li { list-style: none; }
+.scribePage ul.refs > li > a { display: block; height: 100%; }
+
+.scribePage .scribe-figrow { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px; max-width: 760px; margin-top: 36px; }
+.scribePage .scribe-wide { max-width: 960px; margin-top: 40px; }
+.scribePage .scribe-figure { margin: 0; }
+.scribePage .scribe-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 12px; }
+.scribePage .scribe-figure figcaption { margin-top: 10px; font-size: 13px; line-height: 1.6; color: var(--muted); }
+.scribePage .scribe-figure figcaption b { color: var(--ink); font-weight: 600; }
+
+.scribePage .definition .scribe-photo { aspect-ratio: 4 / 3; }
+.scribePage .definition .scribe-photo img { object-fit: cover; background: none; }
+
+@media (max-width: 560px) {
+  .scribePage .scribe-figrow { grid-template-columns: 1fr; gap: 28px; }
+}

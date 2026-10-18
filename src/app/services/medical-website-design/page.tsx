@@ -699,6 +699,7 @@ const RELATED_LINKS = [
   { href: '/services/healthcare-seo', label: 'Healthcare SEO for practices that want more patients from search.' },
   { href: '/services/dental-seo', label: 'Dental SEO for practices competing on "dentist near me".' },
   { href: '/services/healthcare-ai-agents', label: 'Healthcare AI agents for front desk questions and intake.' },
+  { href: '/services/ai-medical-scribe-agents', label: 'AI medical scribe agents that draft clinical notes and referral letters.' },
   { href: '/website-cost', label: 'How much a website costs, and what drives the price.' },
 ] as const;
 

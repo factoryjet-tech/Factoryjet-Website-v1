@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, type ReactNode } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import {
@@ -10,6 +10,7 @@ import {
 } from './AiMedicalScribeFaqs';
 import './AiAgentDevelopmentSections.css';
 import './AiDevelopmentSections.css';
+import './AiMedicalScribeSections.css';
 
 /*
  * AI Medical Scribe Agents (/services/ai-medical-scribe-agents), built 2026-10-18 as the landing
@@ -115,6 +116,72 @@ const BUYER_CHECKS: ReadonlyArray<readonly [string, string]> = [
   ['Can we see it draft one of our notes before we sign?', 'A demo on your own note type, with sample or de-identified data, tells you more than any feature list.'],
 ];
 
+/** Stills from our film "Charting at the kitchen table". Generated actors; the cards are the agent's own output. */
+function FilmStill({ name, w, h, small, large, alt, caption }: { name: string; w: number; h: number; small: number; large: number; alt: string; caption: ReactNode }) {
+  return (
+    <figure className="scribe-figure">
+      <img
+        src={`${IMAGE_ROOT}/${name}-${large}.webp`}
+        srcSet={`${IMAGE_ROOT}/${name}-${small}.webp ${small}w, ${IMAGE_ROOT}/${name}-${large}.webp ${large}w`}
+        sizes={`(max-width: 560px) calc(100vw - 40px), ${large === 960 ? '960px' : '368px'}`}
+        width={w}
+        height={h}
+        loading="lazy"
+        decoding="async"
+        alt={alt}
+      />
+      <figcaption>{caption}</figcaption>
+    </figure>
+  );
+}
+
+/** AI scribe products US buyers search for by name. Google Ads search volume, US, 18 Oct 2026 (DataForSEO). */
+const NAMED_SCRIBES: ReadonlyArray<readonly [string, string, number]> = [
+  ['Freed', 'freed ai', 110000],
+  ['Abridge', 'abridge', 33100],
+  ['Nabla', 'nabla', 9900],
+  ['Heidi Health', 'heidi health', 6600],
+  ['Microsoft DAX Copilot', 'dax copilot', 2900],
+  ['Suki', 'suki ai', 2900],
+  ['DeepScribe', 'deepscribe', 2400],
+];
+
+/** Each item is [bold lead, rest of the line]. */
+const DELIVERABLES: ReadonlyArray<{ title: string; lead: string; items: ReadonlyArray<readonly [string, string]> }> = [
+  { title: 'Your clinic, written down', lead: 'The agent can only follow rules someone has written down.', items: [
+    ['Note headings', ' in your order, from your own templates'],
+    ['Letter templates', ' for the referral reply and any other letter you send often'],
+    ['Specialty terms', ' and exam findings your doctors expect to see written out'],
+    ['Records to read', ': referral, last visit, medication list, and anything else you name'],
+    ['Fields to cross-check', ' between the referral and the visit, such as side, cause and duration'],
+    ['Consent wording', ' set by your counsel, recorded with each visit'],
+  ] },
+  { title: 'The agent itself', lead: 'Its tools decide what it can and cannot do.', items: [
+    ['Read-only record tools', ' for the referral, last visit and medication list'],
+    ['A draft tool', ' that saves the note and the letter as drafts'],
+    ['A flag tool', ' that records the field, what was said and what the record says, with its source'],
+    ['A signature-queue tool', ' as the last step of every run'],
+    ['No filing or sending tool', ', so a draft cannot leave without the doctor'],
+    ['A run log', ' of every tool the agent called and what came back'],
+  ] },
+  { title: 'Testing before go-live', lead: 'One demo is not evidence. Your own visits are.', items: [
+    ['A test set of past visits', ' of the types you see most'],
+    ['Clinician scoring', ' of each draft against the note that was actually signed'],
+    ['A pass mark', ' agreed with you before the build is called finished'],
+    ['Missed-detail checks', ', since AI scribes are known to omit things'],
+    ['Mismatch cases', ' planted in test referrals to prove the flags fire'],
+    ['Re-scoring', ' after every model, template or heading change'],
+  ] },
+  { title: 'Handover and ownership', lead: 'The agent should outlive any one vendor.', items: [
+    ['Code in your repository', ' and running in accounts you control'],
+    ['Prompts, templates and test visits', ' handed over with the code'],
+    ['Plain-English docs', ' for the next developer'],
+    ['Defect cover', ' for a stated period inside the build price'],
+    ['Changes approved per request', ', with no monthly minimum'],
+    ['Model layer kept swappable', ', so a better model is a configuration change'],
+  ] },
+];
+
 function FaqAccordion() {
   return (
     <div className="faqlist">
@@ -149,7 +216,7 @@ function FaqAccordion() {
 
 export default function AiMedicalScribeSections() {
   return (
-    <div className="aiAgentPage aiDevPage">
+    <div className="aiAgentPage aiDevPage scribePage">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {scribeBreadcrumbs.map((item, index) => (
@@ -243,10 +310,16 @@ export default function AiMedicalScribeSections() {
             <div className="section-head">
               <div className="eyebrow">§ In Plain Terms</div>
               <h2>What an AI Medical Scribe Agent Is, and Why Specialists Need the Letter Too</h2>
+              <p className="scribe-byline">By <b>Bhavesh Barot</b>, founder of FactoryJet (building software for businesses since 2014) · Updated 18 October 2026</p>
             </div>
             <div className="factswrap">
               <div className="factlist">
-                <div className="fact"><div className="sec">§01</div><p><span className="stat">An AI medical scribe agent listens to a consented visit, reads the patient&apos;s records, and drafts the clinical note and the referral letter for the doctor to review and sign.</span> An ordinary AI scribe writes the note from the conversation. The agent also checks what the referral said against what the patient said, and drafts the letter back.</p></div>
+                <div className="fact"><div className="sec">§01</div><p><span className="stat">An AI medical scribe agent listens to a consented visit, reads the patient&apos;s records, and drafts the clinical note and the referral letter for the doctor to review and sign.</span> An ordinary AI scribe writes the note from the conversation. Also called an ambient AI medical scribe or an AI-powered medical scribe, it works in the background of the visit. The agent version adds three jobs:</p>
+                  <ul>
+                    <li><b>Reads the records</b> before it writes: referral, last visit, medication list</li>
+                    <li><b>Checks the referral</b> against what the patient said, and flags any mismatch</li>
+                    <li><b>Drafts the letter back</b> to the referring doctor, next to the AI clinical note</li>
+                  </ul></div>
                 <div className="fact"><div className="sec">§02</div><p><span className="stat">Ambient AI scribes are already in daily use at scale.</span> The AMA reported that 7,260 Permanente Medical Group physicians used them across 2,576,627 patient encounters in 63 weeks, with cuts in note time and in &quot;pajama time&quot;, the charting doctors do after hours. <a href={SRC_AMA_TPMG} {...EXT}>AMA, 12 June 2025 ↗</a></p></div>
                 <div className="fact"><div className="sec">§03</div><p><span className="stat">AI scribes still miss things, so the doctor has to stay the last check.</span> A 2025 review of 18 studies reported frequent omissions and occasional clinically significant hallucinations. Our agent quotes its sources when it flags a conflict, and it cannot file a note or send a letter. <a href={SRC_PMC_REVIEW} {...EXT}>Narrative review on PMC ↗</a></p></div>
                 <div className="fact"><div className="sec">§04</div><p><span className="stat">US searches for &quot;ai medical scribe&quot; run at about 5,400 a month, with clicks bid at about $40.</span> That is our own DataForSEO measurement for the US on 18 October 2026. Searches naming orthopedics were too few to measure, which is one reason this page shows a full orthopedic run instead of a feature list.</p></div>
@@ -267,13 +340,35 @@ export default function AiMedicalScribeSections() {
           </div>
         </section>
 
+        {/* ═══ DEFINITION: PAJAMA TIME ═══ */}
+        <section className="definition" id="pajama-time">
+          <figure className="visual-slot definition-image scribe-photo" data-visual-slot="ai-medical-scribe:definition" data-visual-kind="photo" data-visual-status="ready">
+            <img
+              src={`${IMAGE_ROOT}/charting-at-940pm-960.webp`}
+              srcSet={`${IMAGE_ROOT}/charting-at-940pm-640.webp 640w, ${IMAGE_ROOT}/charting-at-940pm-960.webp 960w`}
+              sizes="(max-width: 820px) calc(100vw - 40px), 564px"
+              width={960}
+              height={720}
+              loading="lazy"
+              decoding="async"
+              alt="AI-generated still from our film: a doctor in scrubs types notes on a laptop at her kitchen table at night, dinner beside her."
+            />
+          </figure>
+          <div className="definition-copy">
+            <div className="eyebrow">Term</div>
+            <h2 className="term">Pajama Time</h2>
+            <p>Pajama time is the charting doctors do outside clinic hours: notes, orders and letters finished at home after the last patient. The AMA calls clinical documentation a leading contributor to physician burnout, and pajama time is where that work lands.</p>
+            <p>Our film opens on it: 9:40 pm, eighteen notes still to write. That scene is a dramatisation; the agent run below is real, on a sample visit.</p>
+          </div>
+        </section>
+
         {/* ═══ THE RECORDED RUN ═══ */}
         <section className="section comparison" id="the-run">
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">The Recorded Run</div>
               <h2>Three Things the Referral Got Different, Flagged and Left for the Doctor</h2>
-              <p>A sample orthopedic visit: a 52-year-old man referred by his family doctor for knee pain. The agent read the referral, the last visit (a 2024 shoulder strain) and the medication list, then compared them with what the patient said in the room. These are its three flags, word for word.</p>
+              <p>A sample orthopedic visit: a 52-year-old man referred by his family doctor for knee pain. The agent compared the referral, last visit and medication list with what he said in the room. Its three flags, word for word:</p>
             </div>
             <div className="tablewrap" tabIndex={0} role="region" aria-label="Referral mismatches flagged by the agent">
               <table>
@@ -286,6 +381,14 @@ export default function AiMedicalScribeSections() {
               </table>
             </div>
             <p className="tablenote">From one recorded run of the agent on 18 October 2026. The clinic, doctor, patient and referral are sample data, and one run on one visit does not measure accuracy. That comes from testing on your own past visits.</p>
+            <div className="scribe-figrow">
+              <FilmStill name="knee-exam" w={720} h={900} small={480} large={720}
+                alt="AI-generated still from our film: a patient lies on an exam table while the doctor examines his knee."
+                caption={<><b>The visit.</b> The doctor examines the knee; the patient agreed to the recording for the note. Dramatisation, generated actors.</>} />
+              <FilmStill name="referral-flag-card" w={720} h={900} small={480} large={720}
+                alt="Film still with the agent's flag card: in the visit, left knee, twisted playing pickleball; in the referral, right knee pain, per referral letter from Dr. Whitford dated 12 October 2026."
+                caption={<><b>The flag.</b> The agent&apos;s own card from the run: left knee in the visit, right in the referral.</>} />
+            </div>
           </div>
         </section>
 
@@ -308,6 +411,14 @@ export default function AiMedicalScribeSections() {
               </table>
             </div>
             <p className="tablenote">It also drafted a letter to the referring doctor at the sample family practice, with the findings, the suspected medial meniscus tear, the MRI requested and the plan, saved as &quot;draft saved, not sent&quot;. Both drafts were then queued with the status &quot;waiting for Dr. Rao to review and sign&quot;.</p>
+            <div className="scribe-figrow">
+              <FilmStill name="doctor-reviews-drafts" w={720} h={900} small={480} large={720}
+                alt="AI-generated still from our film: the doctor reads the drafts on a tablet in the exam room."
+                caption={<><b>The review.</b> The doctor checks the flags and the drafts before signing. Dramatisation, generated actors.</>} />
+              <FilmStill name="drafts-queued-for-signature" w={720} h={900} small={480} large={720}
+                alt="Film still with the agent's status cards: drafted the visit note, 4 sections; drafted the letter back, not sent; queued for signature, Dr. Rao."
+                caption={<><b>The hand-off.</b> The agent&apos;s status cards from the run: both drafts queued for Dr. Rao.</>} />
+            </div>
           </div>
         </section>
 
@@ -330,6 +441,28 @@ export default function AiMedicalScribeSections() {
               </table>
             </div>
             <p className="tablenote">If a subscription app or your EHR&apos;s own feature covers your notes, buy that first. We build when the job crosses documents: referral in, note, letter out.</p>
+          </div>
+        </section>
+
+        {/* ═══ NAMED AI SCRIBES ═══ */}
+        <section className="section comparison" id="named-scribes">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">The Ready-Made Options</div>
+              <h2>The AI Scribe Apps US Doctors Search For by Name</h2>
+              <p>If you are comparing the best AI medical scribe options, these are the products people look up most. Monthly US searches are our DataForSEO measurement from 18 October 2026. We have not tested these products; ask each one the seven questions below.</p>
+            </div>
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="AI scribe products searched for by name">
+              <table>
+                <thead><tr><th>Product</th><th>What people type</th><th>US searches a month</th></tr></thead>
+                <tbody>
+                  {NAMED_SCRIBES.map(([name, query, volume]) => (
+                    <tr key={name}><th>{name}</th><td>{query}</td><td>{volume.toLocaleString('en-US')}</td></tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="tablenote">&quot;Abridge&quot; and &quot;nabla&quot; are also ordinary words, so part of their volume is not about the products. For scale, &quot;ai medical scribe&quot; gets about 5,400 a month.</p>
           </div>
         </section>
 
@@ -359,10 +492,34 @@ export default function AiMedicalScribeSections() {
           </div>
         </section>
 
+        {/* ═══ DELIVERABLES ═══ */}
+        <section className="section changes" id="deliverables">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">Implementation</div>
+              <h2>What a Note-Drafting Agent Build Includes, Item by Item</h2>
+              <p>Four groups, 24 items. Ask any AI medical documentation vendor for a list this specific, us included.</p>
+            </div>
+            {DELIVERABLES.map((group, i) => (
+              <div className="agentdir-group chg-group" key={group.title}>
+                <div className="agentdir-label">
+                  <span className="capid">GRP-{String(i + 1).padStart(2, '0')}</span>
+                  <h3>{group.title}</h3>
+                  <p>{group.lead}</p>
+                  <span className="mono agentdir-count">{group.items.length} items</span>
+                </div>
+                <ul className="chg-list">
+                  {group.items.map(([bold, rest]) => <li key={bold}><span><b>{bold}</b>{rest}</span></li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <div className="ai-dev-midcta" id="next-step">
           <MidPageCTA
             headline="See it draft one of your notes"
-            sub="Tell us your specialty and the note or letter you write most. We set up the agent on a sample or de-identified visit of that type, with your headings, and you watch it draft, flag and queue for signature before you sign anything."
+            sub="Tell us your specialty and the note you write most. We set the agent up on a sample visit of that type, with your headings, and you watch it draft, flag and queue for signature before you sign anything."
             label="See it draft one of my notes"
           />
         </div>
@@ -372,13 +529,13 @@ export default function AiMedicalScribeSections() {
           <div className="wrap">
             <div className="section-head plat-head">
               <div><div className="eyebrow">Before You Choose</div><h2>7 Questions to Ask Before Any AI Scribe Writes in Your Charts</h2></div>
-              <p>Ask them of every vendor, us included. The answers separate a tool that saves time from one that moves the editing to later.</p>
+              <p>Ask them of every vendor, us included.</p>
             </div>
-            <div className="platlist" role="list">
+            <ul className="platlist">
               {BUYER_CHECKS.map(([question, why], i) => (
-                <div className="plat" role="listitem" key={question}><span className="capid">{String(i + 1).padStart(2, '0')}</span><div className="plat-name"><h3>{question}</h3></div><p className="plat-build">{why}</p><span className="plat-go" aria-hidden="true"></span></div>
+                <li className="plat" key={question}><span className="capid">{String(i + 1).padStart(2, '0')}</span><div className="plat-name"><h3>{question}</h3></div><p className="plat-build">{why}</p><span className="plat-go" aria-hidden="true"></span></li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -389,16 +546,21 @@ export default function AiMedicalScribeSections() {
               <div className="eyebrow">Process</div>
               <h2>From First Call to the Agent Drafting Your Real Notes</h2>
             </div>
-            <div className="timeline">
-              <div className="tnode"><div className="idx">01</div><h3>Scope</h3><p>Your specialty, the note and letter types you write most, your headings and your EHR. We say plainly if a ready-made AI scribe would do.</p></div>
-              <div className="tnode"><div className="idx">02</div><h3>Demo</h3><p>The agent drafts one of your note types on a sample or de-identified visit, flags mismatches and queues for signature. You see it before you sign.</p></div>
-              <div className="tnode"><div className="idx">03</div><h3>Test visits</h3><p>Your clinicians score drafts for a set of past visits against what they signed. We agree the pass mark with you first.</p></div>
-              <div className="tnode"><div className="idx">04</div><h3>Connect &amp; pilot</h3><p>Once your compliance lead approves, the agent&apos;s tools are connected to your EHR and one doctor pilots it with the signature step in place.</p></div>
-              <div className="tnode"><div className="idx">05</div><h3>Roll out &amp; re-test</h3><p>More doctors and letter types, with the same test visits re-scored after every model or template change.</p></div>
-            </div>
+            <ol className="timeline">
+              <li className="tnode"><div className="idx">01</div><h3>Scope</h3><p>Your specialty, the note and letter types you write most, your headings and your EHR. We say plainly if a ready-made AI scribe would do.</p></li>
+              <li className="tnode"><div className="idx">02</div><h3>Demo</h3><p>The agent drafts one of your note types on a sample or de-identified visit, flags mismatches and queues for signature. You see it before you sign.</p></li>
+              <li className="tnode"><div className="idx">03</div><h3>Test visits</h3><p>Your clinicians score drafts for a set of past visits against what they signed. We agree the pass mark with you first.</p></li>
+              <li className="tnode"><div className="idx">04</div><h3>Connect &amp; pilot</h3><p>Once your compliance lead approves, the agent&apos;s tools are connected to your EHR and one doctor pilots it with the signature step in place.</p></li>
+              <li className="tnode"><div className="idx">05</div><h3>Roll out &amp; re-test</h3><p>More doctors and letter types, with the same test visits re-scored after every model or template change.</p></li>
+            </ol>
             <div className="timelineAction">
               <a className="btn btn-primary" href="#hero">See it draft one of my notes</a>
               <a className="btn btn-ghost" href="/services/ai-agent-development">How we build AI agents</a>
+            </div>
+            <div className="scribe-wide">
+              <FilmStill name="dinner-after-clinic" w={960} h={540} small={640} large={960}
+                alt="AI-generated still from our film: a mother laughs with her young daughter at the kitchen table at dinner."
+                caption={<><b>The point of it all.</b> The film ends at 6:10 pm with dinner still hot. That is a dramatisation, not a measured result.</>} />
             </div>
           </div>
         </section>
@@ -409,7 +571,6 @@ export default function AiMedicalScribeSections() {
             <div className="section-head">
               <div className="eyebrow">Safety &amp; Privacy</div>
               <h2>How the Agent Stays Inside the Doctor&apos;s Control</h2>
-              <p>Where a commitment rests on a public rule, it links to it so your compliance lead can check.</p>
             </div>
             <div className="ventries">
               <div className="ventry"><span className="vtag">SIGNATURE</span><h3>Drafts only, signed by the doctor</h3><p>The agent has no tool that files a note or sends a letter. It can save a draft and add it to the doctor&apos;s signature queue, and that is where its job ends.</p></div>
@@ -427,12 +588,12 @@ export default function AiMedicalScribeSections() {
               <div><div className="eyebrow">Honest Advice</div><h2>When You Do Not Need a Custom AI Scribe Agent</h2></div>
               <p>A built agent is the right answer for some clinics and the wrong one for many.</p>
             </div>
-            <div className="platlist" role="list">
-              <div className="plat" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Your paperwork is the visit note</h3></div><div className="plat-fit"><span className="k">Do this instead</span>Trial two or three AI scribe apps</div><p className="plat-build">If you write standard notes and few letters, a subscription AI medical scribe is quicker to start. Test each on your own visits.</p><span className="plat-go" aria-hidden="true"></span></div>
-              <div className="plat" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Your EHR already has ambient notes</h3></div><div className="plat-fit"><span className="k">Do this instead</span>Turn on the built-in feature first</div><p className="plat-build">Some EHR vendors now include an ambient AI note feature. If it fits your templates, set it up well and build only for the gap, such as referral letters.</p><span className="plat-go" aria-hidden="true"></span></div>
-              <div className="plat" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>You have no consent process yet</h3></div><div className="plat-fit"><span className="k">Do this instead</span>Set the consent wording first</div><p className="plat-build">No AI scribe of any kind should listen to a visit until your counsel has set how and when patients are asked.</p><span className="plat-go" aria-hidden="true"></span></div>
-              <a className="plat" role="listitem" href="/services/healthcare-ai-agents"><span className="capid">04</span><div className="plat-name"><h3>The bottleneck is the phone</h3></div><div className="plat-fit"><span className="k">Do this instead</span>Look at a phone and scheduling agent</div><p className="plat-build">If missed calls and booking hurt more than charting, a different agent answers, books and logs calls. That one stays out of clinical notes.</p><span className="plat-go" aria-hidden="true">↗</span></a>
-            </div>
+            <ul className="platlist">
+              <li className="plat"><span className="capid">01</span><div className="plat-name"><h3>Your paperwork is the visit note</h3></div><div className="plat-fit"><span className="k">Do this instead</span>Trial two or three AI scribe apps</div><p className="plat-build">If you write standard notes and few letters, a subscription AI medical scribe is quicker to start. Test each on your own visits.</p><span className="plat-go" aria-hidden="true"></span></li>
+              <li className="plat"><span className="capid">02</span><div className="plat-name"><h3>Your EHR already has ambient notes</h3></div><div className="plat-fit"><span className="k">Do this instead</span>Turn on the built-in feature first</div><p className="plat-build">Some EHR vendors now include an ambient AI note feature. If it fits your templates, set it up well and build only for the gap, such as referral letters.</p><span className="plat-go" aria-hidden="true"></span></li>
+              <li className="plat"><span className="capid">03</span><div className="plat-name"><h3>You have no consent process yet</h3></div><div className="plat-fit"><span className="k">Do this instead</span>Set the consent wording first</div><p className="plat-build">No AI scribe of any kind should listen to a visit until your counsel has set how and when patients are asked.</p><span className="plat-go" aria-hidden="true"></span></li>
+              <li><a className="plat" href="/services/healthcare-ai-agents"><span className="capid">04</span><div className="plat-name"><h3>The bottleneck is the phone</h3></div><div className="plat-fit"><span className="k">Do this instead</span>Look at a phone and scheduling agent</div><p className="plat-build">If missed calls and booking hurt more than charting, a different agent answers, books and logs calls. That one stays out of clinical notes.</p><span className="plat-go" aria-hidden="true">↗</span></a></li>
+            </ul>
           </div>
         </section>
 
@@ -442,7 +603,7 @@ export default function AiMedicalScribeSections() {
             <div className="section-head">
               <div className="eyebrow">Compare</div>
               <h2>What Else Ranks for &quot;AI Medical Scribe&quot;, and How This Page Differs</h2>
-              <p>These are business sites on Google&apos;s first page in the US for &quot;ai medical scribe&quot;, &quot;ai scribe for orthopedics&quot; and &quot;ai medical scribe for specialists&quot; when we checked on 18 October 2026 (DataForSEO), with the title Google showed and each site&apos;s count of referring domains. We list them so you can compare; we have not tested their products, and the list leaves out forums, video sites and medical publishers.</p>
+              <p>Business sites on Google&apos;s US first page for &quot;ai medical scribe&quot;, &quot;ai scribe for orthopedics&quot; and &quot;ai medical scribe for specialists&quot; on 18 October 2026 (DataForSEO), with each site&apos;s referring domains. We have not tested their products.</p>
             </div>
             <div className="tablewrap" tabIndex={0} role="region" aria-label="Sites ranking for ai medical scribe">
               <table>
@@ -454,7 +615,7 @@ export default function AiMedicalScribeSections() {
                 </tbody>
               </table>
             </div>
-            <p className="sub-note">Most of these pages sell a scribe app or explain the category. This page shows one agent run in full, the flags and the draft word for word, and says when an app is the better buy.</p>
+            <p className="sub-note">Most of these pages sell a scribe app. This one shows a full agent run, word for word, and says when an app is the better buy.</p>
           </div>
         </section>
 
@@ -478,15 +639,15 @@ export default function AiMedicalScribeSections() {
         <section className="section referencesSection references" id="references">
           <div className="wrap">
             <div className="eyebrow">References &amp; Related</div>
-            <div className="refs">
-              <a href="/services/healthcare-ai-agents">Healthcare AI Agents</a>
-              <a href="/services/ai-agent-development">AI Agent Development</a>
-              <a href="/services/document-intake-ai-agents">Document Intake AI Agents</a>
-              <a href="/services/ai-agent-monitoring">AI Agent Monitoring</a>
-              <a href={SRC_AMA_TPMG} {...EXT}>AMA: AI Scribes at The Permanente Medical Group</a>
-              <a href={SRC_PMC_REVIEW} {...EXT}>Narrative Review of Ambient AI Scribes</a>
-              <a href={SRC_HHS_BA} {...EXT}>HHS: Business Associates Under HIPAA</a>
-            </div>
+            <ul className="refs">
+              <li><a href="/services/healthcare-ai-agents">Healthcare AI Agents</a></li>
+              <li><a href="/services/ai-agent-development">AI Agent Development</a></li>
+              <li><a href="/services/document-intake-ai-agents">Document Intake AI Agents</a></li>
+              <li><a href="/services/ai-agent-monitoring">AI Agent Monitoring</a></li>
+              <li><a href={SRC_AMA_TPMG} {...EXT}>AMA: AI Scribes at The Permanente Medical Group</a></li>
+              <li><a href={SRC_PMC_REVIEW} {...EXT}>Narrative Review of Ambient AI Scribes</a></li>
+              <li><a href={SRC_HHS_BA} {...EXT}>HHS: Business Associates Under HIPAA</a></li>
+            </ul>
           </div>
         </section>
 
