@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/healthcare-ai-agents';
 const PAGE_TITLE = 'Healthcare AI Agents & Medical Receptionists | FactoryJet';
 const PAGE_DESC =
   'Custom HIPAA-compliant healthcare AI agents and medical voice receptionists for US practices, dental clinics, and hospitals. Real EHR sync. Get an audit.';
-const PAGE_MODIFIED = '2026-10-10';
+const PAGE_MODIFIED = '2026-10-18';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -166,7 +166,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   {
     category: 'ehr',
     question: 'What does the AthenaHealth integration actually read and write?',
-    answer: 'Through the AthenaHealth Marketplace API, the agent reads live provider open slots, appointment types, and patient demographics. It writes new appointments, updates existing bookings, and logs call summaries as structured notes. It never touches clinical documentation, orders, or billing codes.',
+    answer: 'Through the AthenaHealth Marketplace API, the agent reads live provider open slots, appointment types, and patient demographics. It writes new appointments, updates existing bookings, and logs call summaries as structured notes. It never touches clinical documentation, orders, or billing codes. Drafting visit notes and referral letters is a separate agent, our AI medical scribe agent, which queues every draft for the doctor\'s signature.',
   },
   {
     category: 'hipaa',
@@ -734,7 +734,11 @@ export default function HealthcareAiAgentsPage() {
                     <Link href="/services/ai-customer-support-agents" className="underline hover:text-[#F05A28]">
                       AI customer support agents
                     </Link>{' '}
-                    for non-clinical hospital departments like billing or facilities.
+                    for non-clinical hospital departments like billing or facilities. This phone agent stays out of clinical notes. For specialist clinics that want the visit note and the referral letter drafted for the doctor to sign, see our{' '}
+                    <Link href="/services/ai-medical-scribe-agents" className="underline hover:text-[#F05A28]">
+                      AI medical scribe agents
+                    </Link>
+                    .
                   </p>
                   <ul className="grid grid-cols-2 gap-4 text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6] list-none">
                     <li>&bull; Epic FHIR R4 Integration.</li>

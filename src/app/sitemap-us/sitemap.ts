@@ -252,6 +252,8 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/comparisons/n8n-vs-langchain-vs-crewai-enterprise', source: 'src/app/comparisons/n8n-vs-langchain-vs-crewai-enterprise/page.tsx' },
   { path: '/comparisons/shopify-plus-vs-custom-headless-nextjs', source: 'src/app/comparisons/shopify-plus-vs-custom-headless-nextjs/page.tsx' },
   { path: '/services/healthcare-ai-agents',                 source: 'src/app/services/healthcare-ai-agents/page.tsx' },
+  // 2026-10-18: note and referral-letter drafting agents; landing page for AI agent film 2.
+  { path: '/services/ai-medical-scribe-agents',              source: 'src/app/services/ai-medical-scribe-agents/page.tsx' },
   { path: '/services/property-management-ai-agents',        source: 'src/app/services/property-management-ai-agents/page.tsx' },
   { path: '/services/dental-support-organization-ai-agents', source: 'src/app/services/dental-support-organization-ai-agents/page.tsx' },
   { path: '/services/ai-receptionist',           source: 'src/app/services/ai-receptionist/page.tsx' },
