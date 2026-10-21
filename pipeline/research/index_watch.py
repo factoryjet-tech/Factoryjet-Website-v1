@@ -6,14 +6,24 @@ What it does (built 2026-09-30):
   1. Reads every URL from https://factoryjet.com/sitemap.xml (all child sitemaps).
   2. Asks Google's URL Inspection API for each URL's coverage state
      (service account factoryjet-gsc-reader, Owner on sc-domain:factoryjet.com).
-  3. Sends every URL that is NOT "Submitted and indexed", plus every URL whose
-     sitemap <lastmod> is within the last 3 days (new or updated pages), to IndexNow
-     and to Bing's own SubmitUrlBatch. IndexNow goes to the shared endpoint and
-     then to each engine's own endpoint (Bing, Yandex, Seznam, Naver, Yep,
-     Amazonbot), so one engine refusing the push shows up by name.
-  4. Resubmits the sitemap index and every child sitemap to Bing Webmaster
-     (SubmitFeed) and Google (sitemaps API), and records Bing's own sitemap
-     report (status, URL count, last crawled) so a failing sitemap shows up.
+  3. Sends to IndexNow ONLY the URLs that are new, or whose sitemap <lastmod> is
+     newer than the lastmod we last sent for them. data/index-watch/pushed.json
+     remembers what was sent. One push to the shared endpoint
+     (api.indexnow.org), which forwards to every IndexNow engine.
+  4. Resubmits the sitemaps to Bing Webmaster (SubmitFeed) and Google (sitemaps
+     API) only when the sitemap URL list or a lastmod changed since the last
+     run. Always records Bing's own sitemap report (status, URL count, last
+     crawled) so a failing sitemap shows up.
+
+  Changed 2026-10-21. Until then the script re-sent every URL Google had not
+  indexed (88 on 2026-10-20) plus every recent lastmod, every day, to the shared
+  IndexNow endpoint AND to six engine endpoints (the shared one already forwards
+  to them, so Bing got each URL about 7 times) AND to Bing's SubmitUrlBatch, and
+  resubmitted all sitemaps daily. Google's index state says nothing about Bing.
+  Verified bingbot HTML fetches (Cloudflare) fell from 6,791 a week to 1,262 the
+  week after the 2026-10-08 --all push of 518 URLs. The cause is not proven;
+  IndexNow's own guidance is to submit only URLs that were added, changed or
+  deleted. Bing's index count kept rising (606 on 2026-10-18).
   5. Writes data/index-watch/<date>.json with every unindexed URL in priority
      order under "request_by_hand_in_gsc". Those still need "Request indexing"
      clicked by hand in Search Console (Google has no API for that on normal
@@ -33,9 +43,12 @@ to a one-URL test of the homepage the same day, cause not found.
 Run:  python3 pipeline/research/index_watch.py            (full run)
       python3 pipeline/research/index_watch.py --dry-run  (inspect only)
       python3 pipeline/research/index_watch.py --all      (full run, and send
-          EVERY sitemap URL to IndexNow, not only the unindexed and the new.
-          For the day a sitewide change ships, such as a footer link. Not for
-          daily use: IndexNow is meant for pages that changed.)
+          EVERY sitemap URL to IndexNow, not only the new and changed. Only
+          for the day a sitewide change ships that the lastmods do not show,
+          such as a footer link. Never as a routine.)
+      python3 pipeline/research/index_watch.py --seed     (record every current
+          URL and lastmod in pushed.json as already sent, send nothing. Run
+          once when pushed.json is missing, or the first run sends all URLs.)
 Scheduled daily by ~/Library/LaunchAgents/com.factoryjet.index-watch.plist.
 
 Quotas: URL Inspection 2,000/day per property (we use ~510), Bing URL
@@ -62,6 +75,7 @@ HOST = 'factoryjet.com'
 INDEXNOW_KEY = 'b4a2f89c67d14e359a72e8105c3d4f9b'  # same key as scripts/submit-indexnow.mjs
 OUT_DIR = os.path.join(HERE, 'data', 'index-watch')
 PIN_FILE = os.path.join(OUT_DIR, 'priority.txt')
+LEDGER_FILE = os.path.join(OUT_DIR, 'pushed.json')  # {'urls': {url: lastmod sent}, 'sitemap_fingerprint': str}
 
 # Order used for the "request by hand" list: money pages first.
 PRIORITY = [r'^/services/', r'^/website-cost', r'^/case-studies/', r'^/blog/', r'^/au/', r'^/uk/', r'^/']
@@ -160,9 +174,10 @@ def carry_over_errors(res, today):
 
 # Every engine on https://www.indexnow.org/searchengines.json with a live
 # endpoint on 2026-10-06 (Internet Archive is listed there but its host did not
-# resolve). The protocol says one push is shared with all of them; we push to
-# each anyway because the shared endpoint answers 200 either way and a direct
-# push is the only way to see one engine say no.
+# resolve). The protocol says one push is shared with all of them. Until
+# 2026-10-21 we pushed to each one as well, which sent every URL to Bing about
+# seven times a day. Now only 'indexnow' (the shared endpoint) is used; the
+# rest stay listed for a one-off check of a single engine by hand.
 INDEXNOW_ENDPOINTS = {
     'indexnow': 'https://api.indexnow.org/indexnow',
     'indexnow_bing': 'https://www.bing.com/indexnow',
@@ -252,6 +267,25 @@ def bing_sitemap_report():
     return rows
 
 
+def load_ledger():
+    try:
+        return json.load(open(LEDGER_FILE))
+    except FileNotFoundError:
+        return None
+
+
+def save_ledger(ledger):
+    tmp = LEDGER_FILE + '.tmp'
+    json.dump(ledger, open(tmp, 'w'), indent=1, sort_keys=True)
+    os.replace(tmp, LEDGER_FILE)
+
+
+def fingerprint(lastmod):
+    """Changes when a sitemap URL is added, removed, or gets a new lastmod."""
+    import hashlib
+    return hashlib.sha256('\n'.join(f'{u} {lastmod[u]}' for u in sorted(lastmod)).encode()).hexdigest()[:16]
+
+
 def pinned():
     """URLs to request first, in file order, from data/index-watch/priority.txt. Missing file = none."""
     try:
@@ -275,6 +309,14 @@ def main():
     today = datetime.date.today().isoformat()
     lastmod = sitemap_urls()
     urls = sorted(lastmod)
+    ledger = load_ledger()
+    if '--seed' in sys.argv:
+        save_ledger({'urls': dict(lastmod), 'sitemap_fingerprint': fingerprint(lastmod), 'seeded': today})
+        print(f'{today}: seeded {LEDGER_FILE} with {len(lastmod)} URLs as already sent. Nothing was submitted.')
+        return
+    if ledger is None and not dry:
+        sys.exit(f'{LEDGER_FILE} is missing. Run with --seed first, or every sitemap URL is sent again.')
+    ledger = ledger or {'urls': {}, 'sitemap_fingerprint': ''}
     res = inspect_all(urls)
     carry_over_errors(res, today)
     pins = pinned()
@@ -283,16 +325,15 @@ def main():
     def order(u):  # pinned first in file order, then money pages, then A to Z
         return (0, pin_pos[u], u) if u in pin_pos else (1, rank(u), u)
 
+    # Google's own list: still unindexed in Google. Only feeds the "request by
+    # hand in GSC" list. It is NOT a reason to push to IndexNow, because Google
+    # does not read IndexNow and Bing's index state is separate.
     todo = sorted((r['url'] for r in res if r['state'] != 'Submitted and indexed' and r['state'] != 'ERROR'), key=order)
-    # New or updated pages go to IndexNow + Bing even when Google already has
-    # them: Bing only learns about a page from its sitemap or IndexNow, and a
-    # page Google indexed on day one was otherwise never pushed to Bing.
-    since = (datetime.date.today() - datetime.timedelta(days=3)).isoformat()
-    recent = [u for u, lm in lastmod.items() if lm and lm >= since]
-    # Unindexed first, then new or updated, then (with --all) everything else.
-    # Bing's batch takes only the first 300, and an A to Z list cut there dropped
-    # the pages late in the alphabet whenever more than 300 were waiting.
-    push = todo + sorted(set(recent) - set(todo), key=order)
+    # IndexNow: a URL goes out once when it first appears, then again only when
+    # its sitemap lastmod moves past the lastmod we last sent.
+    sent_lm = ledger['urls']
+    changed = [u for u in urls if u not in sent_lm or (lastmod[u] and lastmod[u] > (sent_lm[u] or ''))]
+    push = sorted(changed, key=order)
     if send_all:
         push += sorted(set(urls) - set(push), key=order)
     summary = {}
@@ -301,17 +342,25 @@ def main():
 
     sent = {}
     if push and not dry:
-        # Bing's SubmitUrlBatch: GetUrlSubmissionQuota answered 10,000 a day and
-        # 240,000 a month for this site on 2026-10-08. The daily run stays at 300;
-        # --all sends the whole list. IndexNow has no practical cap at our volume.
-        targets = [(name, (lambda u, ep=ep: indexnow(u, ep)), 5000) for name, ep in INDEXNOW_ENDPOINTS.items()]
-        for name, fn, cap in targets + [('bing', bing_submit, len(push) if send_all else 300)]:
-            try:
-                sent[name] = fn(push[:cap])
-            except Exception as e:
-                sent[name] = f'failed: {str(e)[:80]}'
+        try:
+            sent['indexnow'] = indexnow(push[:10000])  # protocol limit per request
+        except Exception as e:
+            sent['indexnow'] = f'failed: {str(e)[:80]}'
+        if sent['indexnow'] in (200, 202):
+            for u in push[:10000]:
+                sent_lm[u] = lastmod[u]
+    # Drop URLs that left the sitemap, so a page that comes back counts as new.
+    for u in set(sent_lm) - set(urls):
+        del sent_lm[u]
 
-    sitemaps = {} if dry else resubmit_sitemaps(sitemap_files())
+    fp = fingerprint(lastmod)
+    sitemaps = {}
+    if not dry and fp != ledger.get('sitemap_fingerprint'):
+        sitemaps = resubmit_sitemaps(sitemap_files())
+        if all(v == 'ok' for engine in sitemaps.values() for v in engine.values()):
+            ledger['sitemap_fingerprint'] = fp
+    if not dry:
+        save_ledger(ledger)
     feeds = bing_sitemap_report()
 
     os.makedirs(OUT_DIR, exist_ok=True)
@@ -325,8 +374,10 @@ def main():
     print(f'{today}: {len(urls)} sitemap URLs')
     for k, v in sorted(summary.items(), key=lambda kv: -kv[1]):
         print(f'  {v:4}  {k}')
-    print(f'  submitted {len(push)} URLs ({len(todo)} unindexed in Google, {len(recent)} new or updated in the last 3 days'
-          f'{", plus every other sitemap URL (--all)" if send_all else ""}): {sent or "dry run"}')
+    print(f'  IndexNow: {len(push)} URLs ({len(changed)} new or with a newer lastmod since last sent'
+          f'{", plus every other sitemap URL (--all)" if send_all else ""}): {sent or ("dry run" if dry else "nothing to send")}')
+    if not sitemaps and not dry:
+        print('  sitemaps unchanged since the last resubmission: not resubmitted')
     for engine, res_ in (sitemaps or {}).items():
         ok = sum(1 for v in res_.values() if v == 'ok')
         print(f'  sitemaps resubmitted to {engine}: {ok}/{len(res_)}')

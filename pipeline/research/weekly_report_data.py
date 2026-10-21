@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Weekly lead-report data pull: GSC + GA4 + Bing + Clarity + Firestore.
+"""Weekly lead-report data pull: GSC + GA4 + Bing + Clarity + Firestore + Cloudflare.
 
 First written 2026-09-29. Reworked 2026-10-12 after the 5 to 11 Oct report was
 checked by hand and six of its numbers turned out wrong or misleading.
@@ -779,6 +779,138 @@ def firestore_vs_ga4(report):
     fs['counts']['not_trapped_minus_ga4_generate_lead'] = fs['counts']['not_trapped'] - got
 
 
+# ── Cloudflare (verified crawlers, secret-file probes, edge totals) ─────────
+# Added 2026-10-21. AI and Google user agents are heavily spoofed by scanners (1,699 'Perplexity-User'
+# requests in one pull, 12 got a 200), so crawler counts use only requests Cloudflare itself verified
+# (verifiedBotCategory != ''). Perplexity is never verified by Cloudflare: it cannot be counted here.
+# Google-Firebase (~1,160 a day) is a verified Firebase Hosting SSL retry from a project we do not own: excluded.
+CF_FAMILIES = [('Googlebot', r'Googlebot(?!-Image)|Google-InspectionTool'), ('bingbot', r'bingbot|BingPreview'),
+               ('OAI-SearchBot', r'OAI-SearchBot'), ('ChatGPT-User', r'ChatGPT-User'), ('GPTBot', r'GPTBot'),
+               ('ClaudeBot', r'ClaudeBot'), ('Claude-User', r'Claude-User'), ('Claude-SearchBot', r'Claude-SearchBot'),
+               ('Applebot', r'Applebot'), ('Amazonbot', r'Amazonbot'), ('DuckAssist/DuckDuckBot', r'DuckDuckBot|DuckAssistBot'),
+               ('Meta', r'meta-externalagent|facebookexternalhit|meta-externalfetcher'), ('Brave', r'Brave')]
+CF_EXCLUDED = r'Google-Firebase'
+CF_ASSISTANTS = ('ChatGPT-User', 'Claude-User')
+CF_PROBES = ['.env', 'credentials', 'serviceAccount', 'service-account', '.git/', '.git', 'secrets', 'config.json', 'firebase.json',
+             'docker-compose', '/proc/', '.aws', 'wp-config', 'id_rsa']
+
+
+def cf_family(ua):
+    for name, pat in CF_FAMILIES:
+        if re.search(pat, ua or ''):
+            return name
+    return 'others'
+
+
+def cf_env():
+    out = {}
+    for line in open(os.path.join(HERE, '.env')):
+        if '=' in line and not line.startswith('#'):
+            k, v = line.strip().split('=', 1)
+            out[k] = v
+    return out
+
+
+def cf_gql(token, query):
+    import urllib.request
+    req = urllib.request.Request('https://api.cloudflare.com/client/v4/graphql', data=json.dumps({'query': query}).encode(),
+                                 headers={'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json'})
+    d = json.load(urllib.request.urlopen(req, timeout=60))
+    if d.get('errors'):
+        raise RuntimeError(d['errors'][0]['message'])
+    return d['data']['viewer']['zones'][0]
+
+
+def cf_adaptive(token, zone, day, flt, dims, limit):
+    q = ('{viewer{zones(filter:{zoneTag:"%s"}){httpRequestsAdaptiveGroups(limit:%d,filter:{datetime_geq:"%sT00:00:00Z",datetime_lt:"%sT00:00:00Z",%s},'
+         'orderBy:[count_DESC]){count dimensions{%s}}}}}') % (zone, limit, day, day + dt.timedelta(days=1), flt, dims)
+    return cf_gql(token, q)['httpRequestsAdaptiveGroups']
+
+
+def cf_day(token, zone, day):
+    """One UTC day. Returns family counts, assistant pages (status 200) and probe counts."""
+    rows = cf_adaptive(token, zone, day, 'edgeResponseContentTypeName:"html",verifiedBotCategory_neq:""', 'userAgent', 10000)
+    fams, excluded = {}, 0
+    for r in rows:
+        ua = r['dimensions']['userAgent']
+        if re.search(CF_EXCLUDED, ua or ''):
+            excluded += r['count']
+            continue
+        f = cf_family(ua)
+        fams[f] = fams.get(f, 0) + r['count']
+    pages = {}
+    for name in CF_ASSISTANTS:
+        pat = dict(CF_FAMILIES)[name]
+        got = cf_adaptive(token, zone, day, 'edgeResponseContentTypeName:"html",verifiedBotCategory_neq:"",edgeResponseStatus:200,userAgent_like:"%%%s%%"' % name,
+                          'userAgent clientRequestPath', 10000)
+        c = {}
+        for r in got:
+            if re.search(pat, r['dimensions']['userAgent'] or ''):
+                c[r['dimensions']['clientRequestPath']] = c.get(r['dimensions']['clientRequestPath'], 0) + r['count']
+        pages[name] = c
+    flt = 'OR:[' + ','.join('{clientRequestPath_like:"%%%s%%"}' % p for p in CF_PROBES) + ']'
+    probe = cf_adaptive(token, zone, day, flt, 'clientRequestPath edgeResponseStatus', 10000)
+    return {'families': fams, 'excluded_google_firebase': excluded, 'pages': pages, 'probe': probe}
+
+
+def cloudflare(start, end, pstart, pend):
+    env = cf_env()
+    token, zone = env['CLOUDFLARE_API_TOKEN'], env['CLOUDFLARE_ZONE_ID']
+    days = [pstart + dt.timedelta(days=i) for i in range((end - pstart).days + 1)]
+    daily, day_errors = {}, {}
+    for d in days:
+        try:
+            daily[d] = cf_day(token, zone, d)
+        except Exception as e:
+            day_errors[str(d)] = f'{type(e).__name__}: {e}'
+
+    def in_week(d, a, b):
+        return a <= d <= b
+    out = {'day_errors': day_errors, 'days_returned': {'this_week': sum(1 for d in daily if in_week(d, start, end)),
+                                                       'prior_week': sum(1 for d in daily if in_week(d, pstart, pend))}}
+    fam_names = [n for n, _ in CF_FAMILIES] + ['others']
+    for label, a, b in (('this_week', start, end), ('prior_week', pstart, pend)):
+        sel = [v for d, v in daily.items() if in_week(d, a, b)]
+        out.setdefault('crawler_html_requests', {})[label] = {f: sum(v['families'].get(f, 0) for v in sel) for f in fam_names}
+        out.setdefault('google_firebase_excluded', {})[label] = sum(v['excluded_google_firebase'] for v in sel)
+    out['daily'] = {str(d): {'Googlebot': v['families'].get('Googlebot', 0), 'bingbot': v['families'].get('bingbot', 0)} for d, v in sorted(daily.items())}
+    for name in CF_ASSISTANTS:
+        for label, a, b in (('this_week', start, end), ('prior_week', pstart, pend)):
+            c = {}
+            for d, v in daily.items():
+                if in_week(d, a, b):
+                    for path, n in v['pages'][name].items():
+                        c[path] = c.get(path, 0) + n
+            out.setdefault('assistant_pages_200', {}).setdefault(name, {})[label] = {
+                'total_200': sum(c.values()), 'unique_pages': len(c), 'top15': sorted(c.items(), key=lambda kv: (-kv[1], kv[0]))[:15]}
+    for label, a, b in (('this_week', start, end), ('prior_week', pstart, pend)):
+        by_status, ok = {}, {}
+        for d, v in daily.items():
+            if in_week(d, a, b):
+                for r in v['probe']:
+                    st = r['dimensions']['edgeResponseStatus']
+                    by_status[st] = by_status.get(st, 0) + r['count']
+                    if st == 200:
+                        ok[r['dimensions']['clientRequestPath']] = ok.get(r['dimensions']['clientRequestPath'], 0) + r['count']
+        out.setdefault('secret_probes', {})[label] = {'requests': sum(by_status.values()), 'status_200': by_status.get(200, 0),
+                                                       'by_status': dict(sorted(by_status.items())), 'paths_with_200': sorted(ok.items(), key=lambda kv: -kv[1])[:20]}
+    out['probe_patterns'] = CF_PROBES
+    # Edge totals. httpRequests1dGroups, whole days UTC, all traffic.
+    q = ('{viewer{zones(filter:{zoneTag:"%s"}){httpRequests1dGroups(limit:100,filter:{date_geq:"%s",date_leq:"%s"},orderBy:[date_ASC])'
+         '{dimensions{date} sum{requests pageViews threats} uniq{uniques}}}}}') % (zone, pstart, end)
+    try:
+        rows = cf_gql(token, q)['httpRequests1dGroups']
+        for label, a, b in (('this_week', start, end), ('prior_week', pstart, pend)):
+            sel = [r for r in rows if str(a) <= r['dimensions']['date'] <= str(b)]
+            out.setdefault('edge_totals', {})[label] = {
+                'requests': sum(r['sum']['requests'] for r in sel), 'pageViews': sum(r['sum']['pageViews'] for r in sel),
+                'threats': sum(r['sum']['threats'] for r in sel), 'uniques_sum_of_daily': sum(r['uniq']['uniques'] for r in sel), 'days_returned': len(sel)}
+    except Exception as e:
+        out['edge_totals_error'] = f'{type(e).__name__}: {e}'
+    return out
+
+
+
 # ── Markdown (numbers only) ────────────────────────────────────────────────
 def cell(v):
     return str(v).replace('|', '\\|').replace('\n', ' ')
@@ -824,7 +956,7 @@ def md(report):
          f"Compared with {win['prior_start']} to {win['prior_end']}. Numbers only; no conclusions. Pulled {report.get('generated_at')} local time.",
          f"Time zones: GA4 days follow the property time zone, read live as {g.get('property_timezone', 'not read')} (Asia/Calcutta is IST, UTC+5:30). "
          'The Firestore week is cut at midnight IST. GSC days are Pacific time.', '']
-    for name in ('ga4', 'gsc', 'bing', 'clarity', 'firestore_leads'):
+    for name in ('ga4', 'gsc', 'bing', 'clarity', 'firestore_leads', 'cloudflare'):
         if err(report.get(name)):
             L.append(f"**{name} failed:** {err(report.get(name))}\n")
     for name, msg in report.get('cross_check_errors', {}).items():
@@ -1028,6 +1160,45 @@ def md(report):
                     lambda kv: [short(kv[0]), kv[1].get('sessions', 0), kv[1].get('bot_sessions', 'n/a'), kv[1].get('clarity_sessions_same_path', 'n/a'),
                                 kv[1].get('ga4_sessions_any_page', 'n/a'), kv[1].get('ga4_sessions_any_page_clarity_days', 'n/a'),
                                 kv[1].get('ga4_sessions_landing', 'n/a'), kv[1].get('DeadClickCount', 0), kv[1].get('avg_scroll', 'n/a')], 20)
+    # 9. Cloudflare
+    cf = report.get('cloudflare', {})
+    L += ['', '## 9. Cloudflare (verified crawlers only; days are UTC)']
+    if err(cf):
+        L += [f"Not available: {err(cf)}.", '']
+    else:
+        L += ['HTML responses from requests Cloudflare itself verified as a known bot (verifiedBotCategory is not empty). Scanners spoof AI and Google user agents, so unverified lookalikes are not counted. '
+              'Perplexity is never verified by Cloudflare, so it cannot be counted here. Google-Firebase is excluded: it is a verified Firebase Hosting SSL retry from a project we do not own '
+              f"({cf.get('google_firebase_excluded', {}).get('this_week', 'n/a')} this week, {cf.get('google_firebase_excluded', {}).get('prior_week', 'n/a')} prior).",
+              f"Days returned: this week {cf.get('days_returned', {}).get('this_week')} of 7, prior week {cf.get('days_returned', {}).get('prior_week')} of 7. "
+              + (f"Days that failed: {cf['day_errors']}." if cf.get('day_errors') else 'No day failed.'), '']
+        cr = cf.get('crawler_html_requests', {})
+        L += table(['Crawler family', 'This week', 'Prior week'],
+                   [[f, cr.get('this_week', {}).get(f, 'n/a'), cr.get('prior_week', {}).get(f, 'n/a')] for f in cr.get('this_week', {})])
+        for name in CF_ASSISTANTS:
+            ap = cf.get('assistant_pages_200', {}).get(name, {})
+            tw_, pw_ = ap.get('this_week', {}), ap.get('prior_week', {})
+            L += [f"**{name}, pages answered 200 (opened for a real user).** This week {tw_.get('total_200', 'n/a')} requests on {tw_.get('unique_pages', 'n/a')} pages; "
+                  f"prior week {pw_.get('total_200', 'n/a')} on {pw_.get('unique_pages', 'n/a')}. Top 15 this week:"]
+            prior = dict(pw_.get('top15', []))
+            L += table_from(['Page', 'This week', 'Prior week (if in its top 15)'], tw_.get('top15'), lambda r: [r[0], r[1], prior.get(r[0], 'not in prior top 15')])
+        L += ['bingbot and Googlebot HTML requests per day (a bingbot crawl drop began 9 Oct 2026):']
+        L += table(['Day (UTC)', 'bingbot', 'Googlebot'], [[d, v['bingbot'], v['Googlebot']] for d, v in cf.get('daily', {}).items()])
+        sp = cf.get('secret_probes', {})
+        for label in ('this_week', 'prior_week'):
+            x = sp.get(label, {})
+            L += [f"**Secret-file probes, {label.replace('_', ' ')}** (path contains {', '.join(cf.get('probe_patterns', []))}): {x.get('requests', 'n/a')} requests, "
+                  f"**{x.get('status_200', 'n/a')} returned 200** (expected 0). By status: {x.get('by_status')}."]
+            if x.get('status_200'):
+                L += [f"**!!! {x['status_200']} SECRET-FILE PROBES RETURNED 200 in {label.replace('_', ' ')}. Check these paths now: {x.get('paths_with_200')}**"]
+        L += ['']
+        et = cf.get('edge_totals', {})
+        if et:
+            L += table(['Edge totals (all traffic)', 'Requests', 'Page views', 'Uniques (sum of daily)', 'Threats'],
+                       [[label.replace('_', ' '), et[label]['requests'], et[label]['pageViews'], et[label]['uniques_sum_of_daily'], et[label]['threats']] for label in ('this_week', 'prior_week') if label in et])
+        else:
+            L += [f"Edge totals not available ({cf.get('edge_totals_error', 'not pulled')}).", '']
+        L += ['These totals are mostly bots. Cloudflare uniques are not visitors.']
+
     return '\n'.join(str(x) for x in L) + '\n'
 
 
@@ -1037,7 +1208,7 @@ def main():
               'window': {'start': str(start), 'end': str(end), 'prior_start': str(pstart), 'prior_end': str(pend)}}
     for name, fn in (('ga4', lambda: ga4(start, end, pstart, pend)), ('gsc', lambda: gsc(start, end, pstart, pend)),
                      ('bing', lambda: bing(start, end, pstart, pend)), ('clarity', lambda: clarity(start, end)),
-                     ('firestore_leads', lambda: firestore_leads(start, end))):
+                     ('firestore_leads', lambda: firestore_leads(start, end)), ('cloudflare', lambda: cloudflare(start, end, pstart, pend))):
         try:
             report[name] = fn()
         except Exception as e:

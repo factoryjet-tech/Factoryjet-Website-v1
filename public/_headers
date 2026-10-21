@@ -22,6 +22,18 @@
 /careers/*
   X-Robots-Tag: noindex, nofollow
 
+# *.pages.dev hosts: noindex so the duplicate copies of the site never get indexed.
+# Absolute-URL rules match on hostname only, so factoryjet.com is never affected.
+# First rule: factoryjet-v2.pages.dev (production alias). Second rule: branch and
+# per-deploy previews like nextjs.factoryjet-v2.pages.dev and <hash>.factoryjet-v2.pages.dev
+# (Pages already adds noindex to previews; this keeps it explicit).
+# Docs: developers.cloudflare.com/pages/configuration/headers/ ("Prevent your pages.dev URLs showing in search results")
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
+
 # Disable Cloudflare's AI hints injection in robots.txt
 /robots.txt
   X-Robots-Tag: all
