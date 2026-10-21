@@ -929,7 +929,7 @@ export default function AiCustomerSupportAgentsPage() {
                 </span>
                 <h3 className="text-xl font-bold text-[#14110F] mb-3">Zero Per-Seat SaaS Taxes</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
-                  You own all the code, connectors, and evaluation suites. You pay standard model token costs. There is no recurring per-agent licensing fee.
+                  You own all the code, connectors, and evaluation suites. There is no recurring per-agent licensing fee.
                 </p>
               </li>
             </ul>
@@ -1567,7 +1567,7 @@ export default function AiCustomerSupportAgentsPage() {
                     <td className="font-bold">Custom agent (FactoryJet)</td>
                     <td>Fixed-price build, then your own model and hosting costs</td>
                     <td>Yes, any system with an API, with limits and approvals written in code you own.</td>
-                    <td>Slower to launch than switching on a vendor agent, and your team owns the upkeep.</td>
+                    <td>Slower to launch than switching on a vendor agent, and it needs ongoing care. FactoryJet maintains and supports it, so your team does not deal with servers, AI model bills, updates or security.</td>
                   </tr>
                 </tbody>
               </table>

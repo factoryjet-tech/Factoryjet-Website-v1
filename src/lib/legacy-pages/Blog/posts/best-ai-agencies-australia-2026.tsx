@@ -293,7 +293,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Can you list agencies in Australia known for using advanced AI workflows in brand strategy?",
-    a: "This list covers agencies that build AI systems, not brand studios, so it only partly answers that. Of the agencies here, Edison AI in Surry Hills, Sydney lists AI marketing and search visibility among its services. When we put this question to AI assistants on 9 October 2026, they mostly named creative studios instead, such as Maker Street Studios and Absolutely AI. Ask any studio to walk you through the AI workflow it used on a real brand project, and who owns what it produced.",
+    a: "This list covers agencies that build AI systems, not brand studios, so it only partly answers that. Of the agencies here, Edison AI in Surry Hills, Sydney lists AI marketing and search visibility among its services. When we put this question to AI assistants on 9 October 2026, they mostly named creative studios instead. One of them, Absolutely AI in Brisbane, describes itself on its own site (absolutelyai.com.au, checked 21 October 2026) as a creative AI agency making AI-powered video, imagery and campaigns for brands. Ask any studio to walk you through the AI workflow it used on a real brand project, and who owns what it produced.",
   },
   {
     q: "Is it safe to pick an agency that an AI assistant recommended?",

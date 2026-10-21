@@ -674,10 +674,15 @@ export default function EcommerceConsultantUKPage() {
               <span className="eyebrow">Stock and accounting</span>
               <h2>Stock and accounting problems that stop a growing store</h2>
               <p className="lead mt-4">
-                In October 2026 a UK store came to us with a problem we hear often. It sells products made of
-                several parts, packed as one listing. Every web order has to become an itemised Xero invoice,
-                because the shipping software reads Xero. And in peak season, stock has to reach the shop
-                within minutes, or it oversells. Three questions decide how that gets fixed.
+                A problem we hear often from UK stores: they sell products made of several parts, packed as one
+                listing. Every web order has to become an itemised Xero invoice, because the shipping software
+                reads Xero. And in peak season, stock has to reach the shop within minutes, or it oversells.
+                Three questions decide how that gets fixed. The same split between store and back office runs
+                through our{' '}
+                <a href="/case-studies/sow-easy-distributor-portal" style={{ textDecoration: 'underline' }}>Sow Easy
+                project</a>, a UK WooCommerce trade store joined to Odoo, where Odoo stays the master for stock,
+                pricing and product identifiers. It is tested against Odoo&rsquo;s staging system, and its launch is
+                still ahead.
               </p>
             </div>
             <div className="stack mt-8" style={{ maxWidth: 820 }}>
