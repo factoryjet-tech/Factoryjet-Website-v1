@@ -14,7 +14,7 @@ import '../au-page.css';
 import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/small-business-web-design';
-const UPDATED = '2026-10-10';
+const UPDATED = '2026-10-21';
 const TITLE = 'Small Business Web Design Australia | Packages | FactoryJet';
 const H1 = 'Small Business Web Design in Australia: Sites That Bring Enquiries';
 const DESCRIPTION =
@@ -690,7 +690,9 @@ export default function SmallBusinessWebDesignAUPage() {
               plumber, physio or accountant nearby, the answer is built from pages that state plainly what a business
               does, where, and for whom, backed by reviews and consistent details. A clear small business website is
               how you become one of the businesses those answers can name. Our{' '}
-              <a href="/au/ai-seo">AI SEO for Australian businesses</a> page explains how that works.
+              <a href="/au/ai-seo">AI SEO for Australian businesses</a> page explains how that works. Some sectors add
+              their own rules on top, so we keep separate pages for{' '}
+              <a href="/au/accountant-website-design">accountant website design</a>, <a href="/au/ndis-website-design">NDIS website design</a> and <a href="/au/real-estate-websites">real estate agency websites</a>.
             </p>
           </div>
         </section>

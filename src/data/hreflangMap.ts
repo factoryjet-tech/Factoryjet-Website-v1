@@ -353,14 +353,8 @@ export const webDesignCityAlternatesIN = {
   kolkata: {
     'en-IN': 'https://factoryjet.com/web-design/kolkata',
   },
-  noida: {
-    'en-IN': 'https://factoryjet.com/web-design/noida',
-  },
   gurgaon: {
     'en-IN': 'https://factoryjet.com/web-design/gurgaon',
-  },
-  nagpur: {
-    'en-IN': 'https://factoryjet.com/web-design/nagpur',
   },
   vadodara: {
     'en-IN': 'https://factoryjet.com/web-design/vadodara',
@@ -448,25 +442,13 @@ export const ecommerceCityAlternatesUS: Record<string, { 'en-US': string; 'x-def
     'en-US': 'https://factoryjet.com/charlotte/ecommerce-development',
     'x-default': 'https://factoryjet.com/charlotte/ecommerce-development',
   },
-  'chattanooga': {
-    'en-US': 'https://factoryjet.com/chattanooga/ecommerce-development',
-    'x-default': 'https://factoryjet.com/chattanooga/ecommerce-development',
-  },
   'denver': {
     'en-US': 'https://factoryjet.com/denver/ecommerce-development',
     'x-default': 'https://factoryjet.com/denver/ecommerce-development',
   },
-  'fargo': {
-    'en-US': 'https://factoryjet.com/fargo/ecommerce-development',
-    'x-default': 'https://factoryjet.com/fargo/ecommerce-development',
-  },
   'lincoln': {
     'en-US': 'https://factoryjet.com/lincoln/ecommerce-development',
     'x-default': 'https://factoryjet.com/lincoln/ecommerce-development',
-  },
-  'miami': {
-    'en-US': 'https://factoryjet.com/miami/ecommerce-development',
-    'x-default': 'https://factoryjet.com/miami/ecommerce-development',
   },
   'nashville': {
     'en-US': 'https://factoryjet.com/nashville/ecommerce-development',
@@ -479,10 +461,6 @@ export const ecommerceCityAlternatesUS: Record<string, { 'en-US': string; 'x-def
   'raleigh': {
     'en-US': 'https://factoryjet.com/raleigh/ecommerce-development',
     'x-default': 'https://factoryjet.com/raleigh/ecommerce-development',
-  },
-  'sioux-falls': {
-    'en-US': 'https://factoryjet.com/sioux-falls/ecommerce-development',
-    'x-default': 'https://factoryjet.com/sioux-falls/ecommerce-development',
   },
   'tampa': {
     'en-US': 'https://factoryjet.com/tampa/ecommerce-development',

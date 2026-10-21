@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-21';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -284,6 +284,9 @@ export default function KolkataSeoPage() {
                 Google AI answers as standard, then adds content and real{' '}
                 <a href="/seo/link-building" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">links</a> over time. You keep every page, plan, and
                 link we build.
+              </p>
+              <p>
+                For East India firms that also sell in the South, our page on <a href="/seo/chennai" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">SEO in Chennai</a> covers the car-part, IT and hospital searches there.
               </p>
             </>
           }

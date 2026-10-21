@@ -92,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-21';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -151,149 +151,149 @@ const BLR_FAQ_CATEGORIES = [
 ];
 
 const BLR_FAQ_ITEMS = [
-
-  /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How much does a website cost for a startup in Bangalore?',
+    question: "How much does a website cost for a startup in Bangalore?",
     answer:
-      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
+      "It depends on what the site has to do. For Bangalore startups the price moves with the number of page templates, the SaaS pages most brochure sites skip (pricing, product tour, security, changelog), CRM integration with HubSpot or Zoho, and whether you want a Kannada version. A five-page launch site costs far less than a full SaaS site. FactoryJet quotes a fixed price in writing after a short scoping call.",
   },
   {
     category: 'pricing',
-    question: 'How long does it take to build a website?',
+    question: "How fast can a Bangalore startup get a new website live?",
     answer:
-      'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development days three through six, and content, SEO, and launch on day seven. The 7-day clock starts when your brand assets and content are in our shared workspace.',
+      "Sites of up to five pages go live in 7 days, counted from the day your logo, brand colours and content reach us. Larger SaaS sites with case studies, docs and a blog are scoped on the call and take longer. If you are timing the site to a funding announcement or a product launch, tell us the date first. We have delivered on time on 97% of projects.",
   },
   {
     category: 'pricing',
-    question: 'What makes FactoryJet better value than a Bangalore web agency?',
+    question: "Can we see a draft before we sign a contract?",
     answer:
-      "We are a specialised web engineering team, not a full-service agency with account managers, strategy layers, and large office overheads in Koramangala. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. We have been building websites. You pay for the build, not our overhead.",
+      "Yes. Before any contract, we build a working draft of your homepage on your own content and show it to you in a browser, not as a slide. You judge the design, the copy and the speed on a real page. If it is not right for you, you have spent nothing and you keep the feedback.",
   },
   {
     category: 'pricing',
-    question: 'What does 7-day delivery include?',
+    question: "How do payments work for a web design project?",
     answer:
-      'The 7-day timeline covers the development phase we control, design, build, content, and launch. If your internal approvals take longer, we agree a revised schedule upfront. We have delivered on time on 97% of all projects.',
-  },
-
-  /* ── What's Included ── */
-  {
-    category: 'included',
-    question: "What's included in a web design project?",
-    answer:
-      'Every FactoryJet project includes strategy, Figma design, Next.js development, basic copywriting, technical SEO setup (schema, meta, sitemap), GA4 analytics, and a 30-day post-launch support window. You receive the full codebase in your GitHub on launch day, the Figma design files, and a recorded handover walkthrough.',
+      "The work is split into phases. Each phase is scoped, priced and signed on its own, and the price is fixed in writing, so it does not grow with hours. You approve one phase before the next one starts. That suits Bangalore founders who need to show a board or an investor exactly what each rupee bought.",
   },
   {
     category: 'included',
-    question: 'Do you write the content for my website?',
+    question: "What does a SaaS website need that a brochure site does not?",
     answer:
-      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content, detailed service pages, blog posts, and city landing pages, is available as an add-on. We send a content brief before development starts so you know exactly what to provide and what we will write.',
+      "Six pages most templates skip: a pricing page that answers the plan question without a call, a product tour or demo request flow, case studies with named results, a security page that states your SOC 2 or ISO 27001 status honestly, an integrations directory, and a changelog. Enterprise buyers check the security page and case studies before they ever book a demo.",
   },
   {
     category: 'included',
-    question: 'Do you provide website hosting?',
+    question: "Do you write the website copy?",
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects (static Next.js builds). You set up and own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
+      "Yes, for the core pages. We interview the founder, then draft headlines, the homepage and service or product pages in plain English that a buyer in Ohio or Berlin reads the same way as one in Bengaluru. You edit and approve every line. Blog articles and long guides are quoted separately, because they need research of their own.",
   },
   {
     category: 'included',
-    question: 'Can I update the website myself after launch?',
+    question: "Can our marketing team edit the site without an engineer?",
     answer:
-      'Yes. Every Growth and Custom tier project includes a headless CMS integration (Sanity or Contentful) so your team can add blog posts, update team pages, and change service descriptions without touching code. We configure the CMS and walk you through it in the handover session.',
-  },
-
-  /* ── Technical & SEO ── */
-  {
-    category: 'technical',
-    question: 'Will my website rank on Google India?',
-    answer:
-      'Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images with descriptive alt text. Branded searches typically rank within 1–2 weeks. Service + location queries take 3–6 months for a new domain.',
+      "Yes. We connect a headless CMS such as Sanity or Contentful, or use WordPress where your team already knows it. Your marketers can publish blog posts, add case studies and change page copy without touching code. We set up the editing screens around your content, then walk the team through it in a recorded handover session.",
   },
   {
-    category: 'technical',
-    question: 'What tech stack do you build on, and why does it matter?',
+    category: 'included',
+    question: "Do you host the website?",
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN. Next.js generates static pages that load under 1.5 seconds on Indian 4G networks, significantly faster than WordPress. For Bangalore businesses competing on Google's Core Web Vitals ranking signals, that performance gap is real and measurable.",
+      "We deploy to Cloudflare Pages in a Cloudflare account that belongs to you. Its free plan covers most marketing sites, so many clients pay nothing for hosting. The domain stays in your name too. We never put your site on an account you do not control, and we do not add a markup to hosting.",
   },
   {
     category: 'technical',
-    question: 'How does the site perform on mobile for Indian users?',
+    question: "Will the site rank on Google in India and abroad?",
     answer:
-      'Mobile-first is the default. Every build targets Lighthouse 90+ and green Core Web Vitals on mobile before launch. We design at 375px before desktop, serve WebP images via Cloudflare CDN with lazy loading, and build thumb-friendly tap targets throughout.',
+      "It starts with the right build: schema markup, clean titles, fast pages and a sitemap in Search Console. Bangalore companies that sell to the US and India often need separate pages for each market, linked with hreflang tags so Google shows the right one. Ranking for competitive terms then depends on content and links built over months, not on launch day.",
   },
   {
     category: 'technical',
-    question: 'Do you set up Google Analytics and Search Console?',
+    question: "Why do you build on Next.js, and when is WordPress better?",
     answer:
-      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, demo requests) are configured from day one. Search Console is verified and the sitemap submitted.',
-  },
-
-  /* ── Bangalore Local ── */
-  {
-    category: 'local',
-    question: 'Do you build websites for IT companies and SaaS startups in Bangalore?',
-    answer:
-      "Yes: IT services, SaaS product companies, and enterprise software firms are a core client profile for us in Bangalore. We build sites with product demo flows, case study architecture, technical capability pages, and lead-capture forms designed for B2B SaaS sales cycles. We serve clients across Koramangala, Whitefield, Electronic City, Indiranagar, and HSR Layout.",
+      "Next.js produces static pages that load fast, have no plugins to patch, and suit the product and pricing pages SaaS companies change often. WordPress is the better choice when a non-technical team publishes several posts a week and wants the editor it already knows. We recommend one on the scoping call based on who will edit the site.",
   },
   {
-    category: 'local',
-    question: 'Can you build websites for D2C and consumer brands in Bangalore?',
+    category: 'technical',
+    question: "Will the site be fast on Indian mobile networks?",
     answer:
-      "Yes. Bangalore's consumer startup ecosystem is thriving, from lifestyle brands in Indiranagar to health-tech D2C companies in Koramangala. D2C websites need sub-1.5s load times on 4G, above-the-fold product display, Razorpay one-tap checkout, and Instagram integration. We build these mobile-first, every time.",
+      "We test on a mid-range Android phone over 4G, not only on a fibre connection in an office. The targets are Google's Core Web Vitals: LCP under 2.5 seconds, INP under 200 milliseconds and CLS under 0.1. We design at 375 pixels wide first, serve compressed images and load chat and tracking scripts only after the page is usable.",
   },
   {
-    category: 'local',
-    question: "Do you know Bangalore's tech and business districts well enough to write relevant copy?",
+    category: 'technical',
+    question: "Can the site send leads to HubSpot, Zoho or Salesforce?",
     answer:
-      "Yes. We research Bangalore's business geography as part of discovery, from Koramangala's startup corridor and Whitefield's IT parks to Electronic City's tech campus cluster and Indiranagar's premium retail strip. Local specificity in copy and LocalBusiness schema (areaServed) improves relevance for neighbourhood-level searches.",
+      "Yes. Contact and demo request forms post straight into your CRM with the page, campaign and UTM source attached, so your sales team sees where each lead came from. GA4 and Search Console are set up before launch, with form submissions and demo requests tracked as conversions from the first day.",
   },
   {
     category: 'local',
-    question: 'How does FactoryJet compare to Bangalore web agencies?',
+    question: "Do you build websites for Bangalore IT services firms selling to US and European clients?",
     answer:
-      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
-  },
-
-  /* ── Support & Ownership ── */
-  {
-    category: 'support',
-    question: 'Do I own the website after it is built?',
-    answer:
-      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No FactoryJet retainer required to keep your site running. No proprietary platform lock-in.',
+      "Yes. A firm in Whitefield or Electronic City pitching a US bank is judged on its website before any call. The site needs case studies by industry, certifications such as ISO 27001 shown with their scope, a clear delivery model and an RFP contact route that reaches the right person fast. Generic stock photos of handshakes cost more trust than they win.",
   },
   {
-    category: 'support',
-    question: 'What support do you provide after launch?',
+    category: 'local',
+    question: "How do you design websites for SaaS startups in Koramangala and HSR Layout?",
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes, minor adjustments, and launch questions at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase.',
+      "It depends on how you sell. A product-led startup needs a sign-up button above the fold, a pricing page and short product videos. A sales-led one needs a demo request flow, case studies and a security page for enterprise buyers. Many Bangalore SaaS teams run both motions, so we design two clear paths and track which one each visitor takes.",
+  },
+  {
+    category: 'local',
+    question: "Do you build sites for global capability centres in Whitefield and Manyata Tech Park?",
+    answer:
+      "Yes. Most global capability centres need a careers and employer brand site rather than a sales site: open roles pulled from the applicant tracking system, team stories, office locations and a clear explanation of what the Bangalore centre builds for the parent company. Approvals often run through the parent's brand team, so we plan for that review step.",
+  },
+  {
+    category: 'local',
+    question: "Can you build websites for D2C brands in Indiranagar and Jayanagar?",
+    answer:
+      "Yes. Consumer brands usually sell on Shopify, so we build or redesign the store with fast product pages, UPI and COD through Razorpay, and Instagram product sync. If you need a content-heavy brand site next to the store, we build that on Next.js and link the two. Our ecommerce development page for Bangalore covers stores in more detail.",
+  },
+  {
+    category: 'local',
+    question: "Can our website have a Kannada version?",
+    answer:
+      "Yes. We add Kannada pages on their own URLs, tagged with hreflang so Google indexes both languages, and use a Kannada font that renders cleanly on low-cost Android phones. The Kannada copy should be written or checked by a native speaker, not machine-translated. Most B2B tech companies keep English only, while consumer and local service brands gain the most from Kannada.",
+  },
+  {
+    category: 'local',
+    question: "What privacy rules apply to a Bangalore company website?",
+    answer:
+      "India's Digital Personal Data Protection Act, 2023 covers the names, emails and phone numbers your forms collect, so every form gets a plain notice saying what you collect and why, linked to a privacy policy. If you market to visitors in Europe, GDPR consent rules apply to tracking cookies too. This is general information, not legal advice.",
   },
   {
     category: 'support',
-    question: 'What happens if something breaks after launch?',
+    question: "Do we own the website after it is built?",
     answer:
-      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. Because your site is on Cloudflare Pages (static files, global CDN), the most common causes of downtime, server crashes, plugin conflicts, database failures, simply do not apply.',
+      "Yes. The full codebase sits in a GitHub repository in your name, along with the Figma design files. The domain, the Cloudflare account and every analytics login belong to you. There is no platform lock-in and no fee to keep the site running, so you can hand it to any developer later.",
   },
   {
     category: 'support',
-    question: 'Do you offer ongoing retainer services for Bangalore businesses?',
+    question: "What support do we get after launch?",
     answer:
-      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling, a dedicated engineer, and quarterly website health reports.',
+      "Defects in what we built are fixed inside the build price for a cover period agreed before work starts. After that, support is optional. Each change is quoted and approved by you before we do it, and there is no monthly minimum. Teams that ship product updates every sprint often ask us for a fixed monthly scope, which we quote separately.",
   },
-
-  // Money-query coverage, added 2026-06-11
+  {
+    category: 'support',
+    question: "What happens if something breaks after launch?",
+    answer:
+      "A static site on Cloudflare has fewer things that can break than a plugin-heavy WordPress install: no database to crash and no plugin updates to conflict. If a defect in our work shows up during the cover period, we fix it at no cost. Problems caused by later changes or third-party tools are quoted before we touch them.",
+  },
+  {
+    category: 'support',
+    question: "Can you keep building pages for us after launch?",
+    answer:
+      "Yes. Bangalore startups often need new landing pages for each campaign, feature launch or new market. We can build them on request, each one quoted before work starts, or on a fixed monthly scope if you know the volume ahead. Either way your team keeps the ability to publish routine updates itself through the CMS.",
+  },
   {
     category: 'pricing',
-    question: 'Who is the best web design agency in Bangalore?',
+    question: "Who is the best web design agency in Bangalore?",
     answer:
-      'For small businesses, FactoryJet makes a strong case as the best web design company in Bangalore: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Bangalore you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Bangalore.',
+      "For startups, IT services firms and D2C brands, FactoryJet makes a strong case as the best web design company in Bangalore: a draft of your site before you sign, 7-day delivery for sites up to five pages, and a fixed written price. Any website design company in Bangalore you compare should pass three checks: live sites you can test, a fixed price, and full ownership at the end.",
   },
   {
     category: 'pricing',
-    question: 'Should I hire web designer in Bangalore or use an agency?',
+    question: "Should I hire a web designer in Bangalore or use an agency?",
     answer:
-      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Bangalore directly, agree the scope and price in writing first.',
+      "A freelancer can be right for a one-page launch site. A company website also needs design, development, SEO, analytics and support working together, and one person rarely covers all five. A small senior team does, at a fixed price. If you hire a web designer in Bangalore directly, test two of their live sites on your phone and agree the scope in writing first.",
   },
 ];
 

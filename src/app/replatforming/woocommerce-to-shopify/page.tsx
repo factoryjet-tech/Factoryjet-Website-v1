@@ -22,7 +22,7 @@ const ReplatformingScopeEstimator = dynamic(
   { ssr: true }
 );
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-10-21';
 
 export const metadata: Metadata = {
   title: 'WooCommerce to Shopify Migration Services | FactoryJet',
@@ -511,6 +511,13 @@ export default function WooCommerceToShopifyPage() {
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
                 WooCommerce places all maintenance and server burdens on your team. Here is what changes when you move to Shopify:
+              </p>
+              <p style={{ marginTop: '10px', fontSize: '14.5px', lineHeight: 1.6, color: '#494852' }}>
+                If you are not yet sure you should move, read our{' '}
+                <Link href="/comparisons/shopify-vs-woocommerce" style={{ color: '#B23E13', textDecoration: 'underline' }}>
+                  Shopify vs WooCommerce comparison
+                </Link>{' '}
+                first.
               </p>
             </div>
 

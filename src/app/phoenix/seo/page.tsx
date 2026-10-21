@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/phoenix/seo';
 
 export const metadata: Metadata = {
@@ -146,250 +146,203 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
-    problem: 'Traditional Phoenix agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
-    solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
+    title: 'Six of ten results were not agency websites',
+    problem: 'On 21 Oct 2026 the top 10 Google results for "phoenix seo company" held 3 list pages (including Semrush\'s agency directory and The Manifest) and 3 social profiles: one LinkedIn page and two Facebook pages. Only 4 were agency websites.',
+    solution: 'For a Phoenix client we check which lists and directories already rank for your own service searches, then get your business listed and described correctly on those pages before we spend money on anything else.',
   },
   {
     num: '02',
-    title: 'Eliminating Risky PBN Links & Automated Citation Spam',
-    problem: 'Cheap agencies build spammy automated citations and private blog network links that trigger Google algorithmic penalties and destroy your domain authority.',
-    solution: 'We implement 100% white-hat local entity optimization, syncing direct with Google Business Profile API, Apple Business Connect, and tier-one local publications.',
+    title: 'The map pack runs on small review counts',
+    problem: 'The three businesses in the Google map pack for "phoenix seo company" had 7, 47 and 4 reviews on 21 Oct 2026. Two of the three had fewer than ten.',
+    solution: 'We set up a plain review request your staff can send after each job, fix your Google Business Profile categories and hours, and track your review count against the three map pack businesses every month.',
   },
   {
     num: '03',
-    title: 'Fixing Inconsistent NAP Data Across Duplicate Profiles',
-    problem: 'Duplicate or outdated listings with conflicting phone numbers and suite addresses confuse search engine crawlers and split your local ranking signals.',
-    solution: 'We execute complete citation deduplication and NAP synchronization across all major data aggregators, establishing clean, authoritative entity signals.',
+    title: 'Google Ads bids near $40 a click here',
+    problem: 'Google Ads suggested about $39.45 a click for "phoenix seo company" and $40.15 for "phoenix seo services" on 21 Oct 2026. Phoenix businesses in your trade face the same kind of bidding for their own searches.',
+    solution: 'We find the searches in your trade where Google Ads bids run high and build an organic page for each one, so a click you would otherwise buy can come from your own listing.',
   },
   {
     num: '04',
-    title: 'Optimizing for AI Answer Engines & SearchGPT Citations',
-    problem: 'Basic SEO tactics ignore generative AI engines like ChatGPT, Claude, and Perplexity, causing your business to be omitted from conversational recommendations.',
-    solution: 'We structure your content with deep semantic entities, speakable markup, and question-answering schemas that position your firm as the verified local authority.',
+    title: 'No AI Overview showed on the main search',
+    problem: 'Google showed no AI Overview for "phoenix seo company" when we searched from Phoenix on 21 Oct 2026. The People Also Ask box held questions like "How much should I expect to pay for SEO?" and "Is SEO legitimate?"',
+    solution: 'We write short, direct answers to the questions Phoenix buyers ask, in plain words with sources, and mark them up with schema. That gives Google and AI assistants clear text they can quote if they start showing answers.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Phase 01',
-    title: 'Local Entity & Citation Audit',
-    desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
-    deliverables: ['Google Maps rank grid scan across the Phoenix metro', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+    title: 'Phoenix SEO audit',
+    desc: 'We check your site, Google Business Profile and listings, then compare you with the 10 results Phoenix buyers see for your main search.',
+    deliverables: ['Written audit with every issue ranked', 'Top 10 results mapped by type', 'Map pack review count comparison'],
   },
   {
     phase: 'Phase 02',
-    title: 'Google Business Profile & On-Page Geo-Optimization',
-    desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
-    deliverables: ['GBP category and attribute optimization', 'LocalBusiness and Service schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+    title: 'Fix the foundation',
+    desc: 'We fix titles, page speed issues, schema and profile categories, and get you listed on directories such as Yelp, BBB and Bing Places.',
+    deliverables: ['Google Business Profile corrected', 'Directory listings matched name for name', 'LocalBusiness schema on every location page'],
   },
   {
     phase: 'Phase 03',
-    title: 'Tier-One Citation Sync & Local PR Distribution',
-    desc: 'We synchronize your verified business data across major directories and secure localized editorial placements to build genuine regional authority.',
-    deliverables: ['Direct API sync with Apple, Bing & Google', 'Tier-one directory citations (Data Axle, Neustar)', 'Localized press release and editorial outreach', 'Review velocity and response workflow setup'],
+    title: 'Pages for each Valley market',
+    desc: 'We write service pages for the areas you serve, from Goodyear and the West Valley to Tempe, Chandler and Gilbert, in your sector\'s words.',
+    deliverables: ['One page per suburb you serve', 'FAQ answers built from real searches', 'Internal links between related services'],
   },
   {
     phase: 'Phase 04',
-    title: 'Rank Defense, AI Citation Monitoring & Expansion',
-    desc: 'We track daily local 3-Pack movements, monitor AI search citations, protect against competitor spam, and expand into neighboring suburban corridors.',
-    deliverables: ['Weekly geo-grid rank tracking reports', 'SearchGPT and Perplexity citation audits', 'Spam listing monitoring and resolution', 'Quarterly local market expansion roadmap'],
+    title: 'Report and adjust',
+    desc: 'Each month we report calls, form leads and the searches that brought them, then quote the next changes for your approval.',
+    deliverables: ['Monthly calls and leads report', 'Review count tracked against map pack', 'Next changes quoted before work'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Ranking Target',
-    factoryjet: 'Qualified calls and inquiries from the local searches that matter to your business.',
-    traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
+    label: 'Which lists rank for my main search?',
+    factoryjet: 'We name them. On 21 Oct 2026, 3 of the top 10 results for "phoenix seo company" were list pages, and we check the same for your trade.',
+    traditional: 'A promise to rank you first with no look at who already holds the top 10 results.',
   },
   {
-    label: 'Structured Data',
-    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, FAQPage).',
-    traditional: 'Basic WordPress SEO plugin meta tags without connected entity graphs or practitioner credentials.',
+    label: 'How many reviews do the map pack businesses have?',
+    factoryjet: 'We count them. For "phoenix seo company" the three map pack businesses had 7, 47 and 4 reviews on 21 Oct 2026, so the target is concrete.',
+    traditional: 'General advice to "get more reviews" with no number to aim at and no request process.',
   },
   {
-    label: 'Citation Quality',
-    factoryjet: 'Direct API synchronization with major data providers and verified local chamber/industry publications.',
-    traditional: 'Automated spam submissions to hundreds of low-quality link directories that risk Google penalties.',
+    label: 'Who owns the work if I leave?',
+    factoryjet: 'You do. Your Google Business Profile, pages, schema and content stay yours, and there is no long-term contract.',
+    traditional: 'The agency owns the profile login or the pages and keeps them when the contract ends.',
   },
   {
-    label: 'AI Search Preparedness',
-    factoryjet: 'Semantic entity engineering optimized for ChatGPT Search, Perplexity AI, and Google AI Overviews.',
-    traditional: 'Outdated keyword stuffing techniques with no consideration for conversational search platforms.',
+    label: 'What will you report each month?',
+    factoryjet: 'Calls, form leads and the searches that brought them, plus every change we made and what it cost after your approval.',
+    traditional: 'A traffic chart and a list of keyword positions with no link to calls or sales.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Cost & Retainers' },
-  { key: 'timeline', label: 'Timeline & Results' },
-  { key: 'technical', label: 'GBP & Schemas' },
-  { key: 'local', label: 'Phoenix Market Focus' },
-  { key: 'reporting', label: 'Tracking & Deliverables' },
+  { key: 'pricing', label: 'Cost' },
+  { key: 'demand', label: 'Phoenix search demand' },
+  { key: 'local', label: 'Valley suburbs and sectors' },
+  { key: 'process', label: 'How the work runs' },
+  { key: 'ai', label: 'AI search' },
 ];
 
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does local SEO cost for a Phoenix business?',
-    answer:
-      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Phoenix corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring Valley-wide coverage receive tailored scoping with clear milestone deliverables.',
+    question: 'How much should I expect to pay for SEO in Phoenix?',
+    answer: 'Most local SEO retainers run about $500 to $3,000 a month, according to WebFX local SEO pricing updated Sep 2026. One-time local SEO projects run $500 to $5,000 on the same WebFX page. An Ahrefs survey of 439 providers put the average local SEO retainer at $1,557 a month. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Are there any hidden citation fees or third-party listing markups?',
-    answer:
-      'No. All direct directory submissions, data aggregator distribution fees, schema deployments, and ranking grid audits are fully included in your monthly program fee.',
+    question: 'Is there cheap SEO in Phoenix that still works?',
+    answer: 'Yes, if the scope is small and clear. A one-time project that fixes your Google Business Profile, listings and key pages costs far less than a retainer. WebFX lists one-time local SEO projects at $500 to $5,000 (Sep 2026). Rock-bottom monthly offers often mean bulk links or copied pages, which can hurt you. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Do you require long-term lock-in contracts for SEO retainers?',
-    answer:
-      'No. We operate on flexible month-to-month agreements after an initial 90-day foundational sprint. We earn your continued business through transparent rank improvements, phone call growth, and measurable local revenue.',
+    question: 'What does a Phoenix SEO audit cost?',
+    answer: 'Most businesses pay $101 to $750 for a one-time SEO audit, based on WebFX data covering 43% of businesses. A good audit lists every problem, ranks it by impact and shows who already holds the top 10 results for your main search. You keep the report whether or not you hire anyone. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
-    category: 'timeline',
-    question: 'How quickly can our Phoenix business expect to see Google Maps rank improvements?',
-    answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
+    category: 'pricing',
+    question: 'Why not just run Google Ads for Phoenix searches?',
+    answer: 'You can, but each click costs money every time. Google Ads suggests about $39.45 a click for "phoenix seo company" and $19.48 for "phoenix seo" (21 Oct 2026). Searches in your own trade can cost as much. Organic pages keep bringing visits after the work is done. Many Phoenix businesses run ads while their organic pages grow, then trim ad spend on the searches they start to win.',
   },
   {
-    category: 'timeline',
-    question: 'What factors determine how fast a Phoenix business can rank in the Local 3-Pack?',
-    answer:
-      'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
+    category: 'pricing',
+    question: 'How much does a small business in Phoenix spend on SEO?',
+    answer: 'Small business SEO usually costs $1,500 to $3,500 a month, according to WebFX SEO pricing updated Sep 2026. A business with one location and a short service list may need less, often a one-time project plus light monthly work. Ahrefs found an average of $2,917 a month across 439 providers. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
-    category: 'timeline',
-    question: 'What happens to our local rankings if we pause or discontinue services?',
-    answer:
-      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain your property after the engagement ends. Rankings can still change over time as competitors keep working.',
+    category: 'demand',
+    question: 'How many people search for SEO in Phoenix each month?',
+    answer: 'About 1,000 people a month search "phoenix seo" in the US, and about 880 search "phoenix seo company", based on Google Ads data we pulled on 21 Oct 2026. Another 590 search "phoenix seo services" and 320 search "local seo phoenix". Google groups close variants together, so treat these as rounded figures. The Google Ads bid for "phoenix seo company" was about $39.45 a click that day, which is why ranking for it is worth the work.',
   },
   {
-    category: 'technical',
-    question: 'How do you optimize our Google Business Profile for maximum local radius reach?',
-    answer:
-      'We identify and configure primary and secondary categories, craft keyword-optimized business descriptions, upload geo-tagged photo assets, build product and service catalogs, and configure automated review generation funnels.',
+    category: 'demand',
+    question: 'What shows up when someone in Phoenix searches for an SEO company?',
+    answer: 'On 21 Oct 2026 Google showed a map pack of three businesses, then 10 organic results. Of those 10, 4 were agency websites, 3 were list pages such as Semrush\'s agency directory and The Manifest, and 3 were social profiles on LinkedIn and Facebook. Your own trade\'s results may look different. We check them before we plan any work.',
   },
   {
-    category: 'technical',
-    question: 'What structured JSON-LD schemas do you implement on our website?',
-    answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+    category: 'demand',
+    question: 'Do I need to be on directories like The Manifest or Yelp?',
+    answer: 'Often, yes. When list pages rank for your search, being on them puts you in front of buyers who read lists before they call. For "phoenix seo company" on 21 Oct 2026, 3 of the top 10 results were list pages. We check which directories rank for your trade in Phoenix, then fix or create your listing on each one, with the same name, address and phone number.',
   },
   {
-    category: 'technical',
-    question: 'How do you help our company get recommended by AI search engines like ChatGPT and Perplexity?',
-    answer:
-      'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
-  },
-  {
-    category: 'technical',
-    question: 'How do you handle review generation without violating Google policies?',
-    answer:
-      'We establish frictionless SMS and email review request workflows that invite genuine satisfied clients to share their direct feedback on your Google Business Profile, strictly avoiding review gating or incentivized reviews.',
+    category: 'demand',
+    question: 'How many Google reviews do I need to show in the Phoenix map pack?',
+    answer: 'There is no fixed number, but you can measure the bar. For "phoenix seo company" on 21 Oct 2026, the three map pack businesses had 7, 47 and 4 reviews. Distance, categories and profile details also count. We count the reviews held by the map pack businesses in your trade and set a monthly target from that.',
   },
   {
     category: 'local',
-    question: 'Do you manage multi-location local SEO campaigns across the Phoenix Metro?',
-    answer:
-      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Phoenix, Scottsdale, Tempe, Chandler, Mesa, and Gilbert.',
+    question: 'Can you do SEO for a business in Goodyear or the West Valley?',
+    answer: 'Yes. We build a service page for Goodyear and each West Valley city you serve, with its own address details, service area and answers to local questions. Your Google Business Profile service area gets set to match. We work remotely with US clients and schedule calls in Arizona business hours, so a Goodyear owner gets the same process as a client in central Phoenix.',
   },
   {
     category: 'local',
-    question: 'Can you help our practice outrank entrenched competitors in Scottsdale and Biltmore?',
-    answer:
-      'We can help you compete with them. The work combines website speed, topical content, clean citations and a steady flow of reviews. No agency can promise a map position, so each month we report where you stand next to the work completed.',
+    question: 'Do you work with Phoenix technology companies?',
+    answer: 'Yes. Tech firms in Tempe and Chandler usually sell to other businesses, so their buyers search for a product type or a problem, not a city name. We write pages that answer those technical questions, add Organization and Product schema (code that labels your business for search engines) and get you listed on platforms such as Built In and Clutch where buyers compare vendors.',
   },
   {
     category: 'local',
-    question: 'How do service-area businesses without a public storefront rank in Phoenix?',
-    answer:
-      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target Valley ZIP codes and commercial corridors.',
+    question: 'Can SEO help a Phoenix restaurant or food service business?',
+    answer: 'Yes. For food service, most new customers come from the map pack and from listings. We fix your Google Business Profile hours, menu link and photos, then match your details on Yelp, Apple Business Connect and Bing Places. For food service suppliers who sell to other businesses, we write pages around the products and delivery areas your buyers search for.',
   },
   {
     category: 'local',
-    question: 'Do you optimize for Spanish-language search queries in Phoenix?',
-    answer:
-      'Yes. We build specialized bilingual landing pages and Spanish search query metadata for practices serving Arizona’s multicultural demographics.',
+    question: 'Do you do national SEO for a company based in Phoenix?',
+    answer: 'Yes. National SEO targets searches with no city in them, so the work shifts from map pack and suburb pages to topic pages, links from trade sites and technical fixes. Many Phoenix firms need both: local pages for the Valley and national pages for the product. We split the plan so you see which pages serve which goal.',
   },
   {
-    category: 'reporting',
-    question: 'How do you track and report local SEO progress each month?',
-    answer:
-      'We provide access to an interactive dashboard showing local 3-Pack geo-grid ranking positions, organic keyword trajectories, verified Google Maps phone calls, website click-throughs, and consultation inquiry submissions.',
+    category: 'local',
+    question: 'Can one site rank in Scottsdale, Tempe, Mesa and Chandler at once?',
+    answer: 'Yes, with a separate page for each city you serve. Each page needs its own content, such as the jobs you do there and questions buyers ask. Copying one page and swapping the city name tends to fail. If you have a physical office in more than one city, each office can have its own Google Business Profile.',
   },
   {
-    category: 'reporting',
-    question: 'What is a Local Geo-Grid rank tracking report?',
-    answer:
-      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across the Phoenix metro, showing exactly where your business appears in the top 3 and where optimization is needed.',
+    category: 'process',
+    question: 'What happens in the first month of a Phoenix SEO project?',
+    answer: 'We start with the audit. We check your site, Google Business Profile and listings, then map the top 10 results and the map pack for your main search. You get a written list of problems ranked by impact. Each fix is quoted and approved by you before we start it. Founder Bhavesh Barot replies to questions within 24 hours.',
   },
   {
-    category: 'reporting',
-    question: 'How do you combat spam and fake competitor listings on Google Maps?',
-    answer:
-      'We continuously monitor your primary search categories in Phoenix, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
+    category: 'process',
+    question: 'Do I have to sign a long contract?',
+    answer: 'No. There is no long-term contract. Each change is quoted and approved before we do it, and you can stop at any time. Your Google Business Profile, pages, schema and content stay yours. FactoryJet was founded in 2014, has worked with 500+ businesses and delivers 97% of work on time.',
   },
   {
-    category: 'reporting',
-    question: 'Who will be our main point of contact during the campaign?',
-    answer:
-      'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+    category: 'process',
+    question: 'How long does SEO take to work in Phoenix?',
+    answer: 'Profile and listing fixes can show up in the map pack within weeks. New pages usually take several months to rank, depending on how strong the top 10 results are for your search. A search where list pages and Facebook profiles fill the results, as with "phoenix seo company" on 21 Oct 2026, can open up faster than one held by large brands.',
   },
   {
-    category: 'maps',
-    question: 'How do you optimize Google Maps rankings across multiple Phoenix Valley suburbs?',
-    answer:
-      'We build distinct, geo-targeted location pages for Scottsdale, Tempe, Chandler, Gilbert, and Mesa with unique local schema markup, verified business citations, localized case studies, and hyper-local proximity signals.',
+    category: 'process',
+    question: 'Is SEO legitimate, or is it a scam?',
+    answer: 'SEO is legitimate work: fixing your site, profile and listings so search engines understand and show your business. The scams are firms that promise first place, hide what they did or keep your logins. Ask for a written list of every change, monthly reports tied to calls and leads, and ownership of your profile and pages.',
   },
   {
-    category: 'ai-seo',
-    question: 'How does AI search optimization for ChatGPT, Claude, and Perplexity work for Phoenix service businesses?',
-    answer:
-      'We structure your service offerings into factual question-and-answer formats, integrate verified credentials, publish transparent pricing guides, and embed JSON-LD Knowledge Graph entities that AI search engines parse and cite directly in answer summaries.',
+    category: 'process',
+    question: 'Do you work with Phoenix marketing agencies?',
+    answer: 'Yes. Marketing agencies can hire us for audits, technical fixes and page writing for their own clients, and we do white-label work where the agency keeps the client relationship. Direct business clients get the same audit, reporting and ownership terms. Every piece of work is quoted in writing and approved before it starts.',
   },
   {
-    category: 'technical',
-    question: 'What technical SEO factors are most critical for competitive Phoenix law firms and medical clinics?',
-    answer:
-      'We check whether important pages can be crawled and indexed, whether mobile visitors can use them easily, and whether internal links and structured data describe the business accurately. Core Web Vitals help diagnose loading, responsiveness, and layout problems. No single speed score decides a ranking.',
+    category: 'ai',
+    question: 'Is SEO dead in 2026, or is it changing?',
+    answer: 'It is changing. People still search Google; "phoenix seo" alone gets about 1,000 US searches a month (21 Oct 2026). More buyers now also ask ChatGPT or Perplexity for vendor names. Those tools pull from the same pages, reviews and lists that rank on Google. Clear pages, a complete profile and accurate listings help in both places.',
   },
   {
-    category: 'citations',
-    question: 'How do you clean up duplicate and incorrect NAP citations across Arizona business directories?',
-    answer:
-      'We run an exhaustive audit across 80+ top business directories, data aggregators, and mapping platforms, claiming unverified listings, removing spam duplicates, and correcting NAP details that do not match.',
+    category: 'ai',
+    question: 'What is an AI Overview, and did one show for Phoenix SEO searches?',
+    answer: 'An AI Overview is a short answer Google writes at the top of some results, with links to the pages it drew from. None showed when we searched "phoenix seo company" from Phoenix on 21 Oct 2026. Google decides when to show one. We write direct answers with sources and schema so your pages are easy to quote if it does.',
   },
   {
-    category: 'reviews',
-    question: 'What is your review generation and reputation management framework for Phoenix local practices?',
-    answer:
-      'We help create a consistent request for honest feedback after a completed service. Customers receive the same opportunity to leave a review regardless of whether their experience was positive or negative. We do not buy reviews, offer incentives, or filter unhappy customers away from public review platforms.',
+    category: 'ai',
+    question: 'How do I get my Phoenix business named by ChatGPT?',
+    answer: 'Make your business easy to find and easy to quote. AI assistants draw on websites, reviews and lists such as Clutch or Yelp. We write plain answers to the questions your buyers ask, add schema, and fix your listings on the directories that rank for your trade in Phoenix. No one can promise a mention, and we report what we see.',
   },
   {
-    category: 'schema',
-    question: 'How do you configure Schema.org JSON-LD structured data for local Phoenix businesses?',
-    answer:
-      'We embed granular Schema.org JSON-LD structured data on every page, including LocalBusiness, MedicalBusiness, LegalService, FAQPage, and Review schemas. These explicit semantic annotations enable Google to generate rich snippet stars, knowledge panel attributes, and local map pack citations.',
-  },
-  {
-    category: 'conversion',
-    question: 'How do you turn organic search visitors into qualified consultations and booked appointments?',
-    answer:
-      'We implement sticky click-to-call mobile headers, instant booking calendar integrations, verified customer review proof badges, and clear zero-friction consultation forms that convert local high-intent search traffic.',
-  },
-  {
-    category: 'gbp',
-    question: 'How do you choose and optimize primary and secondary Google Business Profile categories for Phoenix businesses?',
-    answer:
-      'We conduct competitor correlation analysis to select the highest-converting primary category and up to nine strategic secondary categories, ensuring your listing captures broad search intent without diluting relevance.',
-  },
-  {
-    category: 'citations',
-    question: 'Do you secure local links and sponsorships from Phoenix and Valley business organizations?',
-    answer:
-      'Yes. We help secure verified local links through the Greater Phoenix Chamber of Commerce, Arizona Tech Council, Local First Arizona, and regional charitable sponsorships to build genuine local geographic authority.',
+    category: 'ai',
+    question: 'What does AI SEO cost for a Phoenix small business?',
+    answer: 'AI SEO, sometimes called GEO, runs about $1,500 to $5,000 a month for small businesses, according to WebFX pricing from Sep 2026. Most of the work overlaps with regular SEO: clear answers, schema and accurate listings. Many Phoenix businesses add it to local SEO work they already need. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
 ];
 
@@ -736,7 +689,7 @@ export default function PhoenixSeoPage() {
                 What FactoryJet Does Differently for Phoenix Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace generic SEO reports with reporting on completed work, calls and inquiries:
+                We searched "phoenix seo company" from Phoenix on 21 Oct 2026 and pulled US search volumes the same day; each point below starts from that data.
               </p>
             </div>
 
@@ -756,11 +709,11 @@ export default function PhoenixSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw in Phoenix search, 21 Oct 2026:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What we do about it:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -797,7 +750,7 @@ export default function PhoenixSeoPage() {
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                The four stages of work we follow for local search across Maricopa County:
+                Each stage below names the Phoenix searches, suburbs and sectors we start from, so you can see the work before it starts.
               </p>
             </div>
 
@@ -861,7 +814,7 @@ export default function PhoenixSeoPage() {
                 Evaluating Phoenix SEO Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+                Ask these four questions before you sign with any SEO firm in Phoenix, and compare the answers line by line.
               </p>
             </div>
 

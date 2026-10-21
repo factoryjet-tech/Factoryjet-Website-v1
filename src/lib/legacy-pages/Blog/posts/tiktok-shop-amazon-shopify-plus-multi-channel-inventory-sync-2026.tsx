@@ -10,6 +10,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Sep 20, 2026',
+  dateModified: 'Oct 21, 2026',
   readTime: '19 min read',
   imageUrl: '/blog-images/tiktok-shop-amazon-shopify-plus-multi-channel-inventory-sync-2026.webp',
   imageAlt: 'Stacked cardboard boxes and packaging supplies on pallets, representing multi-channel order fulfillment and inventory sync across marketplaces',
@@ -229,7 +230,7 @@ export const post: BlogPost = {
         8. Financial Ledger Reconciliation: Syncing Net Margins to NetSuite &amp; SAP ERPs
       </h2>
       <p className="text-base leading-relaxed text-gray-700 mb-6">
-        High gross revenue across multiple channels is meaningless without accurate net margin visibility. Our ERP integration pipelines synchronize gross sales, referral commission deductions (Amazon 15%, TikTok Shop commission), fulfillment fees, and payment merchant processing costs directly into your general ledger, providing finance leaders real-time channel profitability dashboards.
+        High gross revenue across multiple channels is meaningless without accurate net margin visibility. Our ERP integration pipelines synchronize gross sales, referral commission deductions (Amazon 15%, TikTok Shop commission), fulfillment fees, and payment merchant processing costs directly into your general ledger, providing finance leaders real-time channel profitability dashboards. For what TikTok Shop itself deducts per order, see our <a href="/blog/tiktok-shop-fees-and-agency-cost-2026" className="text-[#B23E13] underline">TikTok Shop fees and agency cost guide</a>.
       </p>
 
       <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">

@@ -531,7 +531,7 @@ export const post: BlogPost = {
         The jobs are plainer than the name suggests. Flowio and AutoMazen publish the requests they get from small firms, and the two lists overlap: quotes followed up until the customer answers, a review request after every finished job, late payers chased and a weekly numbers report. Aucta AI adds the paperwork of a building firm: tenders, subcontractor messages and purchase orders.
       </p>
       <p className="mb-6">
-        Some jobs need no AI at all. BespokeWorks AI says on its own site that a request for AI may turn out to be a missing integration or an unclear process. For the longer version, read <a href="/blog/what-does-an-ai-automation-agency-do-uk" className="text-[#B23E13] underline">what an AI automation agency does for a UK business</a> and our guide to <a href="/blog/ai-automation-services-small-business-uk-2026" className="text-[#B23E13] underline">AI automation services for small UK businesses</a>.
+        Some jobs need no AI at all. BespokeWorks AI says on its own site that a request for AI may turn out to be a missing integration or an unclear process. For the longer version, read <a href="/blog/what-does-an-ai-automation-agency-do-uk" className="text-[#B23E13] underline">what an AI automation agency does for a UK business</a> and our comparison of <a href="/blog/best-ai-automation-tools-small-business-uk-2026" className="text-[#B23E13] underline">AI automation tools for small UK businesses</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How we built this list</h2>

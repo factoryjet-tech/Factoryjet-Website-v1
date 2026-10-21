@@ -880,7 +880,7 @@ export default function LucknowDigitalMarketingPage() {
                 an online store built for Lucknow
               </a>{' '}
               if selling online is the next step.
-              We also work in <a href="/digital-marketing/chandigarh" className="font-semibold text-[#B23E13] underline underline-offset-2">Chandigarh</a> or <a href="/digital-marketing/indore" className="font-semibold text-[#B23E13] underline underline-offset-2">Indore</a>.
+              We also work in <a href="/digital-marketing/noida" className="font-semibold text-[#B23E13] underline underline-offset-2">Noida</a> or <a href="/digital-marketing/delhi" className="font-semibold text-[#B23E13] underline underline-offset-2">Delhi</a>.
             </p>
           </div>
         </section>

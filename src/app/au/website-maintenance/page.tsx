@@ -999,8 +999,7 @@ export default function WebsiteMaintenanceAUPage() {
               ))}
             </ul>
             <p className="tablenote">
-              Further reading: <a href="/blog/importance-of-website-maintenance-seo">why website maintenance matters for SEO</a>,{' '}
-              <a href="/blog/wordpress-security-audit-guide">our WordPress security audit guide</a>, and{' '}
+              Further reading: <a href="/blog/wordpress-security-audit-guide">our WordPress security audit guide</a> and{' '}
               <a href="/blog/best-wordpress-development-companies-australia-2026">the best WordPress development companies in Australia</a>.
             </p>
           </div>

@@ -930,8 +930,8 @@ export default function LawFirmWebsiteDesignPage() {
             <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Related Reading.</p>
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit.</h2>
             <div className="grid grid-cols-1">
-              <a href="/blog/nyc-b2b-corporate-web-design-guide-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
-                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">NYC B2B corporate web design buyer guide for 2026.</p>
+              <a href="/new-york/web-design" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Web design for New York B2B and corporate firms.</p>
               </a>
             </div>
           </div>

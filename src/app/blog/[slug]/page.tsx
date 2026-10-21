@@ -46,10 +46,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: post.meta?.description || post.excerpt,
     authors: [{ name: post.author }],
     robots: {
-      index: true,
+      index: !post.noindex,
       follow: true,
       googleBot: {
-        index: true,
+        index: !post.noindex,
         follow: true,
         'max-video-preview': -1,
         'max-image-preview': 'large',

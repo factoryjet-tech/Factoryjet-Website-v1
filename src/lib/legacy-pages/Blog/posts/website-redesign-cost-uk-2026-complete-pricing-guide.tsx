@@ -1,111 +1,130 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
+// NOTE ON FIGURES (refreshed 21 October 2026). Every £ figure on this page is a market range
+// read first-hand from one of two sources, fetched on 21 October 2026:
+//   - Whito, "How Much Does a Website Cost in the UK? Web Design Prices 2026" (Jacob Whitmore),
+//     https://whito.co.uk/research/website-design-costs-uk/ ("Last Updated on October 19, 2026").
+//   - SpotDev, "Website Redesign Cost UK: What a Rebuild Actually Costs in 2026" (22 May 2026),
+//     https://www.spotdev.co.uk/blog/website-redesign-cost-uk. SpotDev builds HubSpot sites, so
+//     its ranges sit at the B2B end of the market; the page says so.
+// The earlier version carried unsourced ranges (£1,500 to £8,000 and others), an unverified
+// GPSUK price and order-value lift, conversion-lift percentages, and a FactoryJet price
+// comparison. All were cut. FactoryJet's own prices never appear here (house rule): we quote a
+// fixed price in writing after a short scoping call. Do not add a figure without fetching it.
+
+const WHITO = 'https://whito.co.uk/research/website-design-costs-uk/';
+const SPOTDEV = 'https://www.spotdev.co.uk/blog/website-redesign-cost-uk';
+
 export const post: BlogPost = {
   id: '110',
   slug: "website-redesign-cost-uk-2026-complete-pricing-guide",
   title: "Website Redesign Cost UK 2026: Complete Pricing Guide for SMBs (5-200 Employees)",
-  excerpt: "UK website redesigns cost £1,500–£8,000 for SMBs in 2026, with scope, platform choice, and agency location driving the final price. This guide breaks down real costs, hidden fees, and ROI timelines so you can budget accurately and avoid overpaying.",
+  excerpt: "Most UK businesses pay £3,000 to £6,000 for a professionally built website, and B2B redesigns run £10,000 to £80,000, according to two 2026 UK price guides we checked. This guide sets out the sourced ranges by project size, the hidden costs, and how to read a quote.",
   category: "Web Design & Strategy",
   author: 'Bhavesh Barot',
   date: "Apr 26, 2026",
-  readTime: '14 min read',
+  dateModified: "Oct 21, 2026",
+  readTime: '11 min read',
   imageUrl: "/blog-images/website-redesign-cost-uk-2026-complete-pricing-guide-hero.webp",
   meta: {
     title: "Website Redesign Cost UK 2026: Full Pricing Guide for SMBs",
-    description: "UK website redesigns cost £1,500-£8,000 for SMBs in 2026. Learn what drives the price, which hidden fees to watch for, and how to budget based on 500+ real projects.",
+    description: "UK website redesign costs in 2026 from two sourced price guides: £1,500 to £5,000 for a 5-page brochure site, £5,000 to £20,000+ for ecommerce, £10,000 to £80,000 for B2B.",
   },
   keyTakeaways: [
-    "UK SMB website redesigns range £1,500–£8,000 in 2026, with Next.js and WordPress dominating the mid-market and Shopify leading e-commerce rebuilds.",
-    "London agencies charge 50–80% more than lower-overhead remote teams for identical scope; remote delivery cuts costs without sacrificing Lighthouse performance scores.",
-    "Hidden costs, domain transfers, SSL renewals, content migration, and post-launch SEO, add 15–30% to quoted prices if not itemised upfront.",
-    "A redesign pays for itself in 6–18 months when conversion rate lifts 20–40% and organic traffic doubles through modern Core Web Vitals compliance.",
-    "Fixed-price contracts with milestone payments protect SMBs better than hourly billing; request Lighthouse 92+ guarantees and 30-day post-launch support in writing.",
-    "GPSUK in Staines rebuilt their B2B promotional products platform on a custom B2B e-commerce stack for under £6,000, gaining request-for-quote workflows and trade account management that increased average order value by 35%.",
+    "Most UK businesses pay £3,000 to £6,000 for a professionally built website (Whito, updated October 2026).",
+    "A 5-page brochure site costs £1,500 to £3,000 from a freelancer and £3,000 to £5,000 from an agency (Whito).",
+    "Ecommerce sites run £5,000 to £20,000 or more (Whito). B2B redesigns run £10,000 to £80,000, with most landing between £15,000 and £60,000 (SpotDev, a HubSpot developer, May 2026).",
+    "Copywriting, photography and SEO setup add 30 to 50% on top of a quoted price when nobody budgets for them (Whito).",
+    "Hourly rates: freelancers £40 to £70, agencies £60 to £150 (Whito). Ask for a fixed price per phase so the hours stop being your risk.",
+    "A platform move with no redesign costs £8,000 to £18,000 on SpotDev's figures. If the site only looks dated but passes Core Web Vitals, a visual refresh may be enough.",
   ],
   faqs: [
-    { q: "What is the average cost to redesign a website in the UK in 2026?", a: "UK SMBs with 5–200 employees pay £1,500–£8,000 for a full redesign in 2026. Brochure sites (5–10 pages, WordPress or Next.js) start at £1,500. E-commerce platforms (Shopify, WooCommerce) range £2,000–£8,000 depending on product count, payment integrations, and custom checkout flows. London agencies charge £5,000–£15,000 for similar scope; FactoryJet delivers the same scope for less, with identical Lighthouse 92+ performance." },
-    { q: "How long does a typical SMB website redesign take in 2026?", a: "Most UK SMB redesigns complete in 2–4 weeks from kickoff to launch. Discovery and wireframing take 3–5 days, design and development 7–14 days, content migration and QA 3–5 days. Delays happen when clients miss content deadlines or request mid-project scope changes. Agencies using Next.js 15 or headless WordPress ship faster than traditional PHP builds because component libraries and serverless hosting eliminate server provisioning time." },
-    { q: "Should I choose WordPress, Shopify, or Next.js for my redesign?", a: "WordPress suits content-heavy sites needing non-technical editors (law firms, consultancies). Shopify fits product catalogues under 10,000 SKUs with straightforward checkout. Next.js 15 works for custom B2B portals, membership sites, or brands wanting sub-500ms page loads and React-based interactivity. GPSUK chose a custom B2B e-commerce platform (headless commerce) for B2B quote workflows; Belle Maison uses WordPress for blog-driven traffic. Match platform to your team's technical comfort and growth plans." },
-    { q: "What hidden costs should I budget for in a website redesign?", a: "Add 15–30% for domain transfers (£10–50), SSL certificates (£0–200/year), content rewrites (£300–1,200), stock photography (£100–500), and post-launch SEO audits (£400–800). If migrating from an old CMS, budget £200–600 for URL redirects and broken-link fixes. Maintenance contracts (£100–300/month) cover security patches and uptime monitoring. Request an itemised quote listing every line item to avoid surprise invoices after launch." },
-    { q: "How do I know if my current website needs a redesign or just updates?", a: "Run a free Lighthouse audit at web.dev/measure. Scores below 70 for Performance or SEO signal technical debt requiring a rebuild. If your site loads slower than 3 seconds on 4G, fails mobile usability tests, or uses Flash/jQuery, redesign. If layout and branding feel dated but Core Web Vitals pass, a visual refresh (new CSS, updated imagery) costs 40–60% less than a full rebuild. Bounce rates above 70% or conversion rates under 2% justify investment in UX overhaul." },
-    { q: "Can I redesign my website in phases to spread the cost?", a: "Yes. Phase 1: homepage, about, contact (£800–1,500). Phase 2: service pages and blog (£600–1,200). Phase 3: e-commerce or member portal (£1,200–4,000). Staging environments let you test each phase before pushing live. Phased rollouts reduce upfront cash outlay but extend total project time to 6–12 weeks. Ensure your agency locks pricing per phase in writing to prevent scope creep between milestones." },
-    { q: "What ROI should I expect from a website redesign?", a: "UK SMBs see 20–40% conversion rate lifts and 50–100% organic traffic increases within 6 months when redesigns fix Core Web Vitals, mobile UX, and on-page SEO. A £4,000 redesign that raises monthly revenue from £8,000 to £11,000 pays for itself in 16 weeks. Track Google Analytics 4 goals, Search Console impressions, and average session duration monthly. If traffic and conversions stay flat after 90 days, audit your content strategy and backlink profile, technical fixes alone don't guarantee growth." },
-    { q: "How do London agencies and remote teams compare for website redesigns?", a: "London and Manchester agencies charge £80–150/hour; lower-overhead remote teams charge £25–50/hour for equivalent Next.js, WordPress, and Shopify expertise. A good remote team holds calls in UK working hours and replies on Slack the same day. Risk: verify portfolio, request UK client references, and insist on fixed-price contracts with milestone payments to avoid hourly overruns." },
-    { q: "What should I include in a website redesign brief?", a: "List current site URL, competitor sites you admire, must-have features (e.g. booking system, product filters), brand guidelines (logo, colours, fonts), target audience, and success metrics (leads per month, average order value). Specify platform preference (WordPress, Shopify, Next.js) or ask the agency to recommend. Include sitemap showing all pages, access to Google Analytics and Search Console, and hosting login details. A detailed brief cuts discovery time by 30–40% and prevents mid-project misalignment." },
-    { q: "Do I need to hire a separate SEO agency after redesigning my website?", a: "Not if your web agency includes technical SEO in the build. FactoryJet's redesigns include schema markup, XML sitemaps, meta tags, alt text, and 301 redirects as standard, meeting Google's 2026 Core Web Vitals and E-E-A-T guidelines. Ongoing SEO (content creation, link building, local citations) costs £500–1,500/month and starts after launch. If your agency doesn't mention Lighthouse scores, Search Console setup, or mobile-first indexing in their proposal, budget separately for an SEO audit (£400–800) before going live." },
+    { q: "What is the average cost to redesign a website in the UK in 2026?", a: "Most UK businesses pay £3,000 to £6,000 for a professionally built website, according to Whito's 2026 UK price guide. A 5-page brochure site costs £1,500 to £3,000 from a freelancer and £3,000 to £5,000 from an agency. Ecommerce sites run £5,000 to £20,000 or more. B2B redesigns with CRM and integration work cost more: SpotDev puts them at £10,000 to £80,000. FactoryJet quotes a fixed price in writing after a short scoping call." },
+    { q: "How long does a typical SMB website redesign take in 2026?", a: "It depends on page count and integrations. SpotDev gives 12 to 14 weeks for a standard B2B CMS build and 14 to 18 weeks for a complex one. Small brochure sites move much faster: FactoryJet offers 7-day delivery for sites of 5 pages or fewer. Most delays come from late content and from features added after the scope was signed." },
+    { q: "Should I choose WordPress, Shopify, or Next.js for my redesign?", a: "WordPress suits content-heavy sites where non-technical staff edit pages, such as law firms and consultancies. Shopify suits product catalogues with a standard checkout. Next.js suits custom portals and B2B tools where speed and custom logic matter. GPSUK, a UK promotional products supplier, runs a Commerceflo trade storefront because it needed account pricing and quote-to-order workflows. Match the platform to who will edit the site and what it has to do." },
+    { q: "What hidden costs should I budget for in a website redesign?", a: "Whito found copywriting, photography and SEO add 30 to 50% to a quoted price when they are left out. Its line items: copy £50 to £150 a page, photography £200 to £800, SEO setup £300 to £1,000, domain £10 to £30 a year, SSL £0 to £100 a year, hosting £50 to £300 a year, and premium plugins or themes £50 to £300. Ask for a quote that lists every one." },
+    { q: "How do I know if my current website needs a redesign or just updates?", a: "Run Google's PageSpeed Insights on your key pages. If they fail Core Web Vitals (LCP over 2.5 seconds, INP over 200 milliseconds, CLS over 0.1), break on mobile, or cannot be edited without a developer, a rebuild is usually cheaper over time. If the site passes and only the look is dated, a visual refresh of the theme and images costs less than a full rebuild." },
+    { q: "Can I redesign my website in phases to spread the cost?", a: "Yes. A common order is the homepage and contact pages first, then service pages and the blog, then ecommerce or a customer portal. Whito puts each extra page at £150 to £400, which helps you price later phases. Phasing lowers the first invoice but stretches the total timeline. Get the price of every phase fixed in writing before phase one starts." },
+    { q: "What ROI should I expect from a website redesign?", a: "There is no honest average, because it depends on your traffic and what the old site was losing. Work it out for your own numbers: monthly enquiries or orders, conversion rate and average order value before launch, then the same at 30, 90 and 180 days after. If the redesign costs £5,000 and adds £1,000 a month in gross profit, it pays back in five months." },
+    { q: "How do agency and freelancer rates compare for website redesigns?", a: "Whito puts UK freelancer rates at £40 to £70 an hour (£35 to £55 outside the big cities) and agency rates at £60 to £150 an hour. The same 5-page brochure site costs £1,500 to £3,000 from a freelancer and £3,000 to £5,000 from an agency. Whoever you hire, ask for a fixed price per phase, live client sites you can test, and two references." },
+    { q: "What should I include in a website redesign brief?", a: "List the current site URL, two or three sites you like, must-have features such as booking or product filters, brand guidelines, who the site is for, and how you will measure it (leads a month, average order value). Add a sitemap of every page you keep, plus access to Google Analytics and Search Console. A tight brief gets you quotes you can compare line by line." },
+    { q: "Do I need to hire a separate SEO agency after redesigning my website?", a: "Not for the technical basics, if your web team includes them: redirects from old URLs, schema markup, an XML sitemap, titles, alt text and Search Console setup. Whito puts SEO setup at £300 to £1,000 when it is bought separately. Ongoing work such as content and links is a separate monthly service. If a redesign proposal never mentions redirects, budget for them, or rankings can drop at launch." },
   ],
   content: (
     <>
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border">
         <h2 className="text-lg font-bold mb-3">Table of Content: In This Article</h2>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
-          <li>UK Website Redesign Cost Breakdown by Business Size (2026)</li>
-          <li>Platform Comparison: WordPress vs Shopify vs Next.js Redesign Costs</li>
-          <li>London vs Remote Agency Rates: Real Price Differences</li>
+          <li>UK Website Redesign Cost Breakdown by Project Size (2026)</li>
+          <li>Platform Comparison: WordPress vs Shopify vs Next.js Redesigns</li>
+          <li>Freelancer vs Agency Rates: Real Price Differences</li>
           <li>Hidden Costs and Budget Padding: What Quotes Don't Tell You</li>
           <li>ROI Timeline: When Does a Redesign Pay for Itself?</li>
           <li>Fixed-Price vs Hourly Billing: Which Protects SMBs Better?</li>
-          <li>Real Client Example: GPSUK's B2B Platform Redesign</li>
+          <li>Real Client Example: GPSUK's B2B Trade Storefront</li>
           <li>How to Choose the Right Agency for Your UK SMB Redesign</li>
         </ul>
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        UK SMB website redesigns cost £1,500–£8,000 in 2025, depending on page count, platform choice, and agency location. Brochure sites start at £1,500 for WordPress or Next.js builds; e-commerce platforms range £2,000–£8,000 for Shopify or WooCommerce. London agencies charge 50–80% more than lower-overhead remote teams for identical scope and Lighthouse 92+ performance scores.
+        Most UK businesses pay £3,000 to £6,000 for a professionally built website, according to{' '}
+        <a href={WHITO} className="text-blue-600 underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">Whito&apos;s 2026 UK price guide</a>{' '}
+        (updated 19 October 2026). A 5-page brochure site costs £1,500 to £3,000 from a freelancer and £3,000 to £5,000 from an agency. B2B redesigns cost far more: £10,000 to £80,000 on{' '}
+        <a href={SPOTDEV} className="text-blue-600 underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">SpotDev&apos;s May 2026 figures</a>. Every £ figure below comes from one of those two pages, read on 21 October 2026.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">UK Website Redesign Cost Breakdown by Business Size (2026)</h2>
-      <p className="mb-4">A UK SMB should expect to pay between £1,500 and £8,000 for a website redesign in 2026, with the final figure determined primarily by employee count, page volume, and technical complexity. The brackets below reflect current market rates for professionally built sites that meet WCAG 2.2 accessibility standards and achieve Lighthouse performance scores above 90. Micro businesses with 5–20 employees typically spend £1,500–£3,500 for a 5–15 page brochure site built on WordPress or Next.js. This includes mobile-responsive design, SSL certificates, basic on-page SEO configuration, and Google Analytics 4 integration. Most micro SMBs choose templated designs with light customisation to keep costs predictable and delivery timelines under three weeks. Small businesses employing 21–50 people require more sophisticated infrastructure, pushing budgets to £3,000–£5,500 for 15–30 pages. At this tier, expect custom contact forms with conditional logic, CRM integrations (HubSpot, Zoho CRM, or Pipedrive), blog publishing workflows, and email capture mechanisms tied to marketing automation platforms. These builds often include custom post types and taxonomy structures to support content marketing strategies. Mid-market organisations with 51–200 employees face costs of £5,000–£8,000 or higher when projects involve multi-language support, member-only portals, advanced analytics dashboards, or headless CMS architectures that separate content management from front-end presentation. Builds at this scale frequently require API integrations with ERP systems like Sage or Xero, plus compliance documentation for GDPR data handling. E-commerce functionality adds £500–£2,000 depending on product catalogue size, payment gateway requirements (Stripe, PayPal, Klarna Buy Now Pay Later), and whether inventory syncs with existing warehouse management software. Maintenance contracts running £100–£300 monthly cover security patches, uptime monitoring, and performance reports, add twelve months of maintenance to calculate true total cost of ownership before signing any redesign agreement.</p>
-      <p className="mb-4">➡ Learn more: <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Web Design</a></p>
+      <h2 className="text-2xl font-bold mt-8 mb-4">UK Website Redesign Cost Breakdown by Project Size (2026)</h2>
+      <p className="mb-4">Size of business matters less than size of the job. A 10-person firm with a quoting portal pays more than a 150-person firm that needs ten clean pages. So the table below sorts by project, not headcount. The small end comes from Whito, which surveys UK freelancers and agencies. The large end comes from SpotDev, a UK HubSpot developer, so treat its numbers as the B2B top of the market. SpotDev quotes all figures ex VAT. Two lines from the sources are worth keeping in mind. Each extra page adds £150 to £400 (Whito). And a straight platform move with no redesign costs £8,000 to £18,000 (SpotDev), which is why a migration is rarely the cheap option it looks like.</p>
+      <p className="mb-4">➡ Learn more: <a href="/uk/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">UK Web Design</a></p>
 
       <div className="overflow-x-auto mb-8">
         <table className="min-w-full border-collapse border border-gray-300">
           <thead className="bg-gray-800 text-white">
             <tr>
-              <th className="p-3 border">Business Size</th>
-              <th className="p-3 border">Page Count</th>
-              <th className="p-3 border">Platform</th>
-              <th className="p-3 border">Typical Cost</th>
-              <th className="p-3 border">Timeline</th>
+              <th className="p-3 border">Project</th>
+              <th className="p-3 border">Typical Scope</th>
+              <th className="p-3 border">Who Builds It</th>
+              <th className="p-3 border">Market Range</th>
+              <th className="p-3 border">Source</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="border p-3">5–20 employees</td>
-              <td className="border p-3">5–15 pages</td>
-              <td className="border p-3">WordPress / Next.js</td>
-              <td className="border p-3">£1,500–£3,500</td>
-              <td className="border p-3">2–3 weeks</td>
+              <td className="border p-3">Brochure site</td>
+              <td className="border p-3">5 pages</td>
+              <td className="border p-3">Freelancer</td>
+              <td className="border p-3">£1,500–£3,000</td>
+              <td className="border p-3">Whito</td>
             </tr>
             <tr>
-              <td className="border p-3">21–50 employees</td>
-              <td className="border p-3">15–30 pages</td>
-              <td className="border p-3">WordPress / Next.js / Shopify</td>
-              <td className="border p-3">£3,000–£5,500</td>
-              <td className="border p-3">3–4 weeks</td>
+              <td className="border p-3">Brochure site</td>
+              <td className="border p-3">5 pages</td>
+              <td className="border p-3">Agency</td>
+              <td className="border p-3">£3,000–£5,000</td>
+              <td className="border p-3">Whito</td>
             </tr>
             <tr>
-              <td className="border p-3">51–200 employees</td>
-              <td className="border p-3">30–100 pages</td>
-              <td className="border p-3">Next.js / Headless CMS</td>
-              <td className="border p-3">£5,000–£8,000+</td>
-              <td className="border p-3">4–6 weeks</td>
+              <td className="border p-3">Ecommerce site</td>
+              <td className="border p-3">Product catalogue and checkout</td>
+              <td className="border p-3">Agency</td>
+              <td className="border p-3">£5,000–£20,000+</td>
+              <td className="border p-3">Whito</td>
             </tr>
             <tr>
-              <td className="border p-3">E-commerce (any size)</td>
-              <td className="border p-3">Product catalogue</td>
-              <td className="border p-3">Shopify / WooCommerce / Custom B2B</td>
-              <td className="border p-3">+£2,000–£8,000</td>
-              <td className="border p-3">+1–2 weeks</td>
+              <td className="border p-3">B2B redesign</td>
+              <td className="border p-3">CMS build with CRM and integrations</td>
+              <td className="border p-3">Agency</td>
+              <td className="border p-3">£10,000–£80,000</td>
+              <td className="border p-3">SpotDev</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Platform Comparison: WordPress vs Shopify vs Next.js Redesign Costs</h2>
-      <p className="mb-4">For UK SMBs redesigning in 2026, WordPress typically offers the lowest upfront cost at £1,500–£4,000 for content-heavy sites, while Next.js 15 delivers the best performance-to-value ratio at £2,500–£8,000 for brands prioritising speed and search visibility. The right choice depends on whether you optimise for initial budget or long-term operational efficiency. WordPress remains the default for brochure sites and blogs because its mature plugin ecosystem: Yoast SEO, WooCommerce, Contact Form 7, keeps development hours low. A five-page service site with blog and contact form can launch in under two weeks at the lower end of that range. Performance degrades sharply above 50 installed plugins, however, and many SMBs discover their "cheap" WordPress build requires £600–£1,200 annual maintenance to patch security vulnerabilities and update dependencies. Shopify suits product-focused businesses redesigning for direct-to-consumer sales, with builds ranging £2,000–£6,000. Built-in PCI compliance and one-click Stripe or PayPal integrations save two to three days of developer time compared to custom WooCommerce checkouts. The trade-off appears in transaction fees: Shopify charges 0.5–2% per sale unless you subscribe to Shopify Payments, adding £300–£1,800 annually for a business processing £150,000 in online revenue. Next.js 15 commands a higher entry price, £2,500–£8,000, but its React-based architecture consistently delivers sub-500ms page loads and Lighthouse scores above 95. For SMBs competing in saturated UK markets like legal services or SaaS, that speed advantage translates directly into lower bounce rates and higher Google rankings. The framework's server-side rendering also future-proofs sites for AI-driven search engines prioritising structured data. custom B2B platforms, a headless commerce platform, sits at the premium end (£4,000–£8,000) but solves problems WordPress and Shopify cannot. GPSUK, a Staines-based promotional products distributor, needed request-for-quote workflows, artwork upload with print-preview visualisation, and Net 30/60/90 payment terms for trade accounts, capabilities that required the custom platform's unified omnichannel architecture. Platform migration adds £300–£800 to any redesign if you're moving from Wix, Squarespace, or legacy WordPress. That cost covers content export, URL mapping, and 301 redirects to preserve existing search rankings with Google and Bing.</p>
-      <p className="mb-4">➡ Learn more: <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Ecommerce Development</a></p>
+      <h2 className="text-2xl font-bold mt-8 mb-4">Platform Comparison: WordPress vs Shopify vs Next.js Redesigns</h2>
+      <p className="mb-4">Neither source prices platforms against each other, so this section gives no platform price. What it can tell you is what pushes each platform&apos;s quote up. WordPress is quickest for content sites because plugins cover forms, SEO and blogs. Costs climb when a site relies on dozens of plugins, since each one needs updates and can break the others. Shopify suits stores selling to consumers: hosting, payments and checkout come with the plan, so the redesign money goes on the theme and the apps. Next.js costs more to start because more is built by hand, and pays back when a business needs custom logic, member areas or very fast pages. A custom B2B platform sits at the top. It earns its price only when buyers need account pricing, quotes and payment terms that off-the-shelf plans cannot handle. Whatever the platform, moving to it from Wix, Squarespace or an old WordPress site means mapping every old URL to a new one with a 301 redirect, or your rankings drop at launch.</p>
+      <p className="mb-4">➡ Learn more: <a href="/uk/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">UK Ecommerce Development</a></p>
 
       <div className="overflow-x-auto mb-8">
         <table className="min-w-full border-collapse border border-gray-300">
@@ -113,91 +132,85 @@ export const post: BlogPost = {
             <tr>
               <th className="p-3 border">Platform</th>
               <th className="p-3 border">Best For</th>
-              <th className="p-3 border">Redesign Cost</th>
-              <th className="p-3 border">Lighthouse Performance</th>
-              <th className="p-3 border">Monthly Hosting</th>
+              <th className="p-3 border">What Pushes the Quote Up</th>
+              <th className="p-3 border">Ongoing Cost to Ask About</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td className="border p-3">WordPress</td>
-              <td className="border p-3">Content sites, blogs, small e-commerce</td>
-              <td className="border p-3">£1,500–£4,000</td>
-              <td className="border p-3">85–92</td>
-              <td className="border p-3">£10–50</td>
+              <td className="border p-3">Content sites, blogs, small stores</td>
+              <td className="border p-3">Custom theme work, plugin count</td>
+              <td className="border p-3">Hosting, plugin licences, updates</td>
             </tr>
             <tr>
               <td className="border p-3">Shopify</td>
-              <td className="border p-3">Product catalogues, DTC brands</td>
-              <td className="border p-3">£2,000–£6,000</td>
-              <td className="border p-3">88–94</td>
-              <td className="border p-3">£25–300</td>
+              <td className="border p-3">Product catalogues, consumer brands</td>
+              <td className="border p-3">Custom theme, app setup, data migration</td>
+              <td className="border p-3">Plan fee, app subscriptions</td>
             </tr>
             <tr>
-              <td className="border p-3">Next.js 15</td>
-              <td className="border p-3">Custom portals, membership sites, B2B</td>
-              <td className="border p-3">£2,500–£8,000</td>
-              <td className="border p-3">92–98</td>
-              <td className="border p-3">£15–80 (Vercel)</td>
+              <td className="border p-3">Next.js</td>
+              <td className="border p-3">Custom portals, member sites, B2B</td>
+              <td className="border p-3">Custom features built by hand</td>
+              <td className="border p-3">Hosting, developer time for changes</td>
             </tr>
             <tr>
-              <td className="border p-3">Custom B2B Platform</td>
-              <td className="border p-3">B2B omnichannel, trade accounts, RFQ</td>
-              <td className="border p-3">£4,000–£8,000</td>
-              <td className="border p-3">90–95</td>
-              <td className="border p-3">£50–200</td>
+              <td className="border p-3">Custom B2B platform</td>
+              <td className="border p-3">Trade accounts, quotes, payment terms</td>
+              <td className="border p-3">ERP and CRM integrations</td>
+              <td className="border p-3">Platform licence, integration upkeep</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">London vs Remote Agency Rates: Real Price Differences</h2>
-      <p className="mb-4">UK SMBs typically save 50–60% on website redesigns by partnering with lower-overhead remote agencies, with no measurable quality compromise when the provider maintains UK-standard processes and performance benchmarks. London and Manchester agencies charge £80–150 per hour for redesign work, translating to £5,000–£15,000 for a standard SMB project; that premium buys face-to-face meetings and deep local market knowledge. Remote teams typically charge £25–50 per hour for identical scope, bringing total project costs to £1,500–£8,000. FactoryJet, a team with 12+ years combined expertise and a 98% client satisfaction rate across 500+ projects in the UK, the US, the UAE and India, works remotely with UK clients and quotes a fixed price in writing after a short scoping call. Video calls are scheduled in UK working hours, and UK morning messages get same-day Slack and email responses. This rhythm keeps projects moving faster than many agencies manage, where internal bottlenecks and competing client demands often stretch timelines. Quality parity shows up in measurable performance data, not just subjective assessments. FactoryJet's Lighthouse Performance scores average 92+ across all builds, matching or exceeding the benchmarks set by Sheffield and Bristol agencies that charge double the rate. The platform doesn't care where developers sit: Core Web Vitals, accessibility audits, and SEO fundamentals remain identical. Risk mitigation strategies close the trust gap that naturally accompanies remote partnerships. Fixed-price contracts eliminate hourly billing uncertainty, while milestone payments, 30% upfront, 40% at design approval, 30% at launch, tie spending directly to verified progress. Thirty-day post-launch support periods catch edge cases and browser quirks that only surface under real user traffic, ensuring UK businesses don't face abandonment the moment the site goes live.</p>
-
+      <h2 className="text-2xl font-bold mt-8 mb-4">Freelancer vs Agency Rates: Real Price Differences</h2>
+      <p className="mb-4">Whito puts UK freelancer rates at £40 to £70 an hour, or £35 to £55 outside the big cities, and agency rates at £60 to £150 an hour. On a 5-page brochure site that gap shows up as £1,500 to £3,000 from a freelancer against £3,000 to £5,000 from an agency. The agency premium buys a team: a designer, a developer and someone who answers the phone when the freelancer is ill. The freelancer saving is real when the job is small and the brief is clear. Rates tell you less than they seem to, because a fast team at a higher rate can cost less in total than a slow one at a lower rate. Compare fixed totals for the same written scope, not hourly rates. FactoryJet works remotely with UK clients, holds calls in UK business hours, and quotes a fixed price in writing after a short scoping call.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Hidden Costs and Budget Padding: What Quotes Don't Tell You</h2>
-      <p className="mb-4">Most UK redesign quotes cover design and build, but SMBs typically spend an additional 15–30% on ancillary services that surface only after contracts are signed. Domain and hosting transfers add £10–50 for.co.uk or.com transfers through registrars like Namecheap or 123-reg, while SSL certificates range from free (Let's Encrypt, if your developer configures it) to £200 annually for extended validation certificates required by some payment processors. Content creation becomes unavoidable when existing copy fails readability tests or lacks target keywords. Professional copywriting runs £300–1,200 for a ten-page site, depending on industry complexity, financial services and healthcare demand more research than retail. Stock photography for hero sections and product galleries costs £100–500 through Unsplash Plus or Adobe Stock, though custom photography pushes that figure to £800–2,000 for a half-day shoot. Post-launch technical audits catch issues invisible during staging. Budget £400–800 for an SEO specialist to verify schema markup, repair broken internal links, and submit XML sitemaps to Google Search Console and Bing Webmaster Tools. This step prevents the common mistake of launching a beautiful site that search engines can't properly index. Training and handover sessions consume 2–4 hours at £150–400, teaching your team to publish blog posts in WordPress, update WooCommerce inventory, or modify Shopify collections without breaking layouts. Skipping this investment leads to expensive support tickets for trivial edits. Finally, pad your budget by 15–20% for scope changes and third-party delays. Payment gateway APIs like Stripe or PayPal occasionally require unexpected compliance documentation. CRM integrations with HubSpot or Salesforce hit version conflicts. Browser compatibility fixes emerge when Internet Explorer users (still 2–3% of UK traffic in certain sectors) report broken checkout flows. The realistic total for a £4,000 quoted redesign often lands near £5,200 once these line items appear. Agencies rarely itemise these costs upfront because they depend on your existing infrastructure and content quality, but asking for a detailed breakdown during the proposal stage eliminates surprises when invoices arrive.</p>
+      <p className="mb-4">Whito found that copywriting, photography and SEO add 30 to 50% on top of a quoted price when they are not budgeted at the start. On a £4,000 agency quote, that is £1,200 to £2,000 more. The fix is cheap: ask for every line below to be listed in the quote, even when the answer is &quot;you supply it&quot;. Two costs do not show up in any price guide but cost the most when skipped. The first is redirects: every old URL needs a 301 to its new address, or Google drops the pages that ranked. The second is training, so your team can edit pages without paying for a support ticket each time.</p>
 
       <div className="overflow-x-auto mb-8">
         <table className="min-w-full border-collapse border border-gray-300">
           <thead className="bg-gray-800 text-white">
             <tr>
               <th className="p-3 border">Hidden Cost</th>
-              <th className="p-3 border">Typical Range</th>
+              <th className="p-3 border">Typical Range (Whito)</th>
               <th className="p-3 border">When It Applies</th>
               <th className="p-3 border">How to Avoid</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="border p-3">Domain/SSL transfer</td>
-              <td className="border p-3">£10–200</td>
-              <td className="border p-3">Changing registrars or hosts</td>
-              <td className="border p-3">Request itemised quote upfront</td>
-            </tr>
-            <tr>
-              <td className="border p-3">Content rewrites</td>
-              <td className="border p-3">£300–1,200</td>
+              <td className="border p-3">Copywriting</td>
+              <td className="border p-3">£50–£150 per page</td>
               <td className="border p-3">Existing copy is outdated or off-brand</td>
               <td className="border p-3">Provide final text before design starts</td>
             </tr>
             <tr>
-              <td className="border p-3">Post-launch SEO audit</td>
-              <td className="border p-3">£400–800</td>
-              <td className="border p-3">Agency doesn't include technical SEO</td>
-              <td className="border p-3">Confirm Lighthouse 92+ guarantee in contract</td>
+              <td className="border p-3">Photography</td>
+              <td className="border p-3">£200–£800</td>
+              <td className="border p-3">No usable photos of your team or products</td>
+              <td className="border p-3">Agree the shot list in the quote</td>
             </tr>
             <tr>
-              <td className="border p-3">Training sessions</td>
-              <td className="border p-3">£150–400</td>
-              <td className="border p-3">Non-technical team needs CMS training</td>
-              <td className="border p-3">Ask for recorded video tutorials instead</td>
+              <td className="border p-3">SEO setup</td>
+              <td className="border p-3">£300–£1,000</td>
+              <td className="border p-3">Agency does not include technical SEO</td>
+              <td className="border p-3">Ask for redirects and schema in writing</td>
             </tr>
             <tr>
-              <td className="border p-3">Scope change fees</td>
-              <td className="border p-3">20–40% markup</td>
-              <td className="border p-3">Mid-project feature additions</td>
-              <td className="border p-3">Lock scope in signed SOW before kickoff</td>
+              <td className="border p-3">Domain and SSL</td>
+              <td className="border p-3">£10–£30 and £0–£100 a year</td>
+              <td className="border p-3">Changing registrar or host</td>
+              <td className="border p-3">Keep the domain in your own name</td>
+            </tr>
+            <tr>
+              <td className="border p-3">Hosting and maintenance</td>
+              <td className="border p-3">£500–£2,000 a year</td>
+              <td className="border p-3">Every live site</td>
+              <td className="border p-3">Get the monthly fee and what it covers in writing</td>
             </tr>
           </tbody>
         </table>
@@ -214,21 +227,17 @@ export const post: BlogPost = {
       </div>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">ROI Timeline: When Does a Redesign Pay for Itself?</h2>
-      <p className="mb-4">Most UK SMBs recoup their website redesign investment within four to six months when conversion tracking is in place from day one. A £4,000 build that lifts monthly revenue from £8,000 to £11,000 through better mobile checkout flows and clearer calls-to-action pays for itself in sixteen weeks, then continues delivering that £3,000 monthly uplift indefinitely. Conversion rate improvements arrive fastest. Modern UX patterns, mobile-first design, and streamlined navigation typically raise conversion rates 20–40% within ninety days of launch. Track Google Analytics 4 goals weekly during the first quarter to spot which landing pages and product categories drive the quickest returns. Organic traffic growth follows a longer curve. Core Web Vitals compliance: Largest Contentful Paint under 2.5 seconds, Cumulative Layout Shift below 0.1, and on-page SEO restructuring double organic sessions in six to twelve months. Monitor Google Search Console impressions and click-through rates monthly; a steady climb in position-one keywords signals compounding visibility gains that reduce paid-ad dependency. Bounce rates drop immediately when page load times fall below two seconds. Sites previously losing 60–70% of visitors at the door now retain 60–70%, keeping prospects engaged long enough to read testimonials, compare pricing, or submit enquiry forms. Faster hosting and optimised images deliver this win on launch day. Long-term savings amplify ROI. Next.js static generation and headless WordPress cut server costs 30–50% compared to traditional PHP hosting, while Shopify's built-in PCI compliance eliminates annual security audit fees of £500–1,200. Set baseline metrics, monthly leads, average order value, organic sessions, before launch, then review Analytics and Search Console data at thirty, ninety, and one hundred eighty days to quantify every pound returned.</p>
-
+      <p className="mb-4">No public source gives a UK payback average we would stand behind, so work it out on your own numbers. Write down four figures before launch: monthly visits, enquiries or orders, conversion rate, and average order value. Check them again at 30, 90 and 180 days. Payback is the redesign cost divided by the extra gross profit per month. A £5,000 redesign that adds £1,000 a month in gross profit pays back in five months. The same site adding £250 a month takes twenty. Speed fixes show up first, because Google&apos;s Core Web Vitals thresholds (LCP under 2.5 seconds, INP under 200 milliseconds, CLS under 0.1) affect both rankings and how many visitors stay. Organic traffic moves more slowly, usually over months, and only if the redirects were done right.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Fixed-Price vs Hourly Billing: Which Protects SMBs Better?</h2>
-      <p className="mb-4">Fixed-price contracts protect UK SMBs from budget overruns by locking in the total cost upfront: a £4,500 WordPress site remains £4,500 even if the agency encounters technical delays. You know exactly what you'll pay before signing, which simplifies board approval and eliminates the anxiety of watching hourly meters tick. The trade-off is rigidity: any change request outside the original scope triggers additional fees, so you must define requirements precisely at the outset. Hourly billing offers flexibility for evolving projects, charging £25–150 per hour depending on whether you hire a freelancer in Manchester or a Shoreditch studio. Agencies quote 40 hours, then discover your product catalogue needs custom filtering or your payment gateway requires extra API work, and the final invoice reflects 60–80 hours. Without a hard cap, hourly arrangements can spiral beyond your approved budget, leaving finance teams scrambling mid-project. Milestone payments split risk between both parties: 30 percent upfront funds discovery and wireframes, 40 percent at design approval ensures you're satisfied before build begins, and the final 30 percent releases only after launch and testing. This structure gives you use to request revisions before handing over the last tranche, aligning the agency's incentive to deliver quality work rather than rush to completion. Every contract should include a signed scope-of-work document listing page count, integrations (Stripe, Mailchimp, HubSpot), wireframe rounds, and post-launch training sessions. Without this written record, "responsive design" might mean mobile-friendly to you but tablet-only to the agency, sparking disputes that delay go-live dates. FactoryJet uses fixed-price contracts with Lighthouse performance guarantees and 30-day post-launch support, so you never face hourly surprises or hidden fees after handover.</p>
+      <p className="mb-4">A fixed price moves the risk of overruns to the agency. You know the total before you sign, which makes approval simple. The catch is that anything outside the written scope costs extra, so the scope has to be precise. Hourly billing suits work that will change as you go, but at £60 to £150 an hour for an agency (Whito), a 40-hour estimate that becomes 60 hours adds £1,200 to £3,000. Milestone payments split the risk: a deposit for discovery, a payment at design approval, and the final payment after launch and testing. Every contract should carry a signed scope listing pages, integrations, design rounds and training, plus who owns the code and the domain at the end. FactoryJet works to fixed prices per phase and includes post-launch defect cover in the build price.</p>
 
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Real Client Example: GPSUK's B2B Platform Redesign</h2>
-      <p className="mb-4">GPSUK, a Staines-based promotional products distributor serving trade partners across the UK, faced a common mid-market problem: their existing website couldn't handle the request-for-quote workflows that B2B buyers expect in 2026. Competitors with modern online quoting systems were winning deals simply because they could turn around artwork approvals and pricing faster. Director Gareth Sampson needed a platform that could manage trade account hierarchies, Net 30/60/90 payment terms, and print-preview visualisation, capabilities that London agencies quoted at £12,000 or more. The scope included end-to-end customer pipeline automation, RFQ workflow management, artwork upload with real-time preview, and email sequence automation for quote follow-up. Sampson reports 98% uptime and zero payment processing issues since go-live: a critical reliability benchmark for a business processing trade invoices daily. The platform handles everything from initial enquiry through artwork approval to final invoice, eliminating the manual email chains that previously slowed deal closure. This example illustrates the typical scope and return profile for a mid-market B2B redesign: a five-figure investment that pays back through faster sales cycles and higher transaction values, not through traffic volume alone. For companies selling to other businesses rather than consumers, the ROI calculation hinges on deal velocity and average contract value, metrics that a well-architected commerce platform directly improves.</p>
+      <h2 className="text-2xl font-bold mt-8 mb-4">Real Client Example: GPSUK's B2B Trade Storefront</h2>
+      <p className="mb-4">GPSUK supplies promotional products to business customers in the UK. Its buyers reorder branded stock and often need a quote before they order. Director Gareth Sampson needed trade accounts, Net 30/60/90 payment terms, artwork upload with a print preview, and request-for-quote workflows, none of which a standard store plan handles well. GPSUK now runs a Commerceflo trade storefront where trade customers log in to a catalogue priced for their account and turn quotes into orders. The lesson for budgeting: B2B features such as account pricing and quotes are what move a project from the brochure range into SpotDev&apos;s £10,000 to £80,000 band, so price them as separate lines.</p>
       <p className="mb-4">➡ Learn more: <a href="/portfolio" className="text-blue-600 underline hover:text-blue-800 transition-colors">Portfolio</a></p>
 
-
       <h2 className="text-2xl font-bold mt-8 mb-4">How to Choose the Right Agency for Your UK SMB Redesign</h2>
-      <p className="mb-4">Selecting a website redesign agency in 2026 demands verifiable proof over polished sales decks. Start by requesting live URLs, not Behance screenshots, of three to five recent projects in your sector, then run your own Lighthouse audits through Chrome DevTools to confirm Performance and SEO scores match the agency's claims. A Coventry manufacturer should see retail sites scoring 92+ on Performance; a Bristol consultancy should verify service-sector builds meet Core Web Vitals thresholds for Largest Contentful Paint under 2.5 seconds. Ask for contact details of two to three UK SMB clients who completed projects in the past twelve months. Phone or email them directly to verify timeline adherence, scope creep handling, and whether post-launch support actually materialised when a plugin broke or traffic spiked. References who hesitate or redirect you back to the agency are red flags. Reject vague promises like "fast loading" or "SEO-friendly", these mean nothing without numeric thresholds and audit evidence. Test communication during discovery. Agencies that reply within twenty-four hours before you sign the contract will maintain that responsiveness when you need a homepage tweak three weeks into the build. Finally, insist on fixed-price contracts with milestone payments tied to deliverables: wireframes approved, staging site live, final launch. Thirty-day post-launch support, itemised task lists, and full source code ownership transfer upon final payment should appear in every Statement of Work. Walk away from agencies that balk at transparency or bury ownership clauses in fine print.</p>
-
+      <p className="mb-4">Ask for live URLs of three to five recent sites, not screenshots, and run them through PageSpeed Insights yourself. Phone two clients from the past year and ask whether the site launched on time and whether support answered after launch. Ask for the quote with every line from the hidden-costs table filled in. Ask who owns the code, the domain and the hosting account at the end. Walk away from vague promises like &quot;fast loading&quot; with no numbers behind them. If you are planning the project rather than pricing it, our guide to <a href="/blog/website-redesign-small-business-uk-2026-ai-powered" className="text-blue-600 underline hover:text-blue-800 transition-colors">website redesign for UK small businesses</a> covers the process step by step.</p>
 
       <p className="mb-6">➡ Serving US clients? <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet delivers professional US business websites</a> with 7-day delivery for sites of 5 pages or fewer and Lighthouse 95+. See our <a href="/" className="text-blue-600 underline hover:text-blue-800 transition-colors">US services hub</a> for services and scoping.</p>
 
@@ -238,7 +247,7 @@ export const post: BlogPost = {
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · 12+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses · 97% on-time delivery · 12+ years combined experience</p>
       </div>
     </>
   ),

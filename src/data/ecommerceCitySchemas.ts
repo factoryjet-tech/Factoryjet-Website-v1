@@ -193,14 +193,6 @@ const CITIES: Record<string, CitySchemaInput> = {
     heroSub: 'FactoryJet builds Shopify, WooCommerce, and custom ecommerce stores for Austin small businesses, delivered in 7 days, at a fixed, transparent price. 500+ stores launched, 4.9★ Google rating.',
   },
 
-  // ── Miami, FL ───────────────────────────────────────────────────────────────
-  miami: {
-    city: 'Miami', state: 'FL', stateFullName: 'Florida', slug: 'miami',
-    metaTitle: 'Shopify Developer Miami FL | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Top-rated Shopify developer in Miami, Florida: stores live in 7 days, at a fixed price. Latin America e-commerce gateway: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
-    heroSub: 'The only Miami e-commerce agency that launches in 7 days at a fixed, transparent price. Shopify, WooCommerce & AI-powered stores for South Florida\'s luxury brands, Latin-American entrepreneurs, DTC founders, and 26M annual tourists. 500+ projects, 4.9★ Google rating.',
-  },
-
   // ── Denver, CO ──────────────────────────────────────────────────────────────
   denver: {
     city: 'Denver', state: 'CO', stateFullName: 'Colorado', slug: 'denver',
@@ -249,22 +241,6 @@ const CITIES: Record<string, CitySchemaInput> = {
     heroSub: 'The only Tampa e-commerce agency that launches in 7 days at a fixed, transparent price. Shopify, WooCommerce & AI-powered stores for Tampa Bay\'s DTC brands, healthcare companies, defense/aerospace businesses, and Florida\'s thriving Gulf Coast consumer market. 500+ projects, 4.9★ Google rating.',
   },
 
-  // ── Chattanooga, TN ──────────────────────────────────────────────────────────
-  chattanooga: {
-    city: 'Chattanooga', state: 'TN', stateFullName: 'Tennessee', slug: 'chattanooga',
-    metaTitle: 'Shopify Developer Chattanooga TN | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Top-rated Shopify developer in Chattanooga, Tennessee: stores live in 7 days, at a fixed price. Gig City 10 Gbps fiber + no state income tax. Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
-    heroSub: 'Chattanooga\'s Gig City fiber network and zero state income tax make it one of the best US cities to launch an e-commerce business. FactoryJet builds custom Shopify stores for Gig City brands, launched in 7 days, at a fixed, transparent price. 500+ stores, 4.9★ Google rating.',
-  },
-
-  // ── Fargo, ND ────────────────────────────────────────────────────────────────
-  fargo: {
-    city: 'Fargo', state: 'ND', stateFullName: 'North Dakota', slug: 'fargo',
-    metaTitle: 'Shopify Developer Fargo ND | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Best Shopify developer in Fargo, North Dakota: stores live in 7 days, at a fixed price. Silicon Prairie e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
-    heroSub: 'Fargo\'s Silicon Prairie is home to Microsoft TechSpark, the Emerging Prairie ecosystem, and some of the fastest-growing businesses in the upper Midwest. FactoryJet builds custom Shopify stores for Fargo-Moorhead businesses, launched in 7 days, at a fraction of what Onsharp or AdShark charge. 500+ stores, 4.9★ Google rating.',
-  },
-
   // ── Boise, ID ────────────────────────────────────────────────────────────────
   boise: {
     city: 'Boise', state: 'ID', stateFullName: 'Idaho', slug: 'boise',
@@ -279,14 +255,6 @@ const CITIES: Record<string, CitySchemaInput> = {
     metaTitle: 'Shopify Agency Lincoln NE | 7-Day Delivery, Fixed-Price | FactoryJet',
     metaDesc: 'Top-rated Shopify agency in Lincoln, Nebraska: stores live in 7 days, at a fixed price. Silicon Prairie e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
     heroSub: 'Lincoln is the Silicon Prairie\'s university town, ag-tech hub, and fastest-growing mid-market city. FactoryJet builds custom Shopify stores for Nebraska businesses, launched in 7 days, at a fixed, transparent price. 500+ stores, 4.9★ Google rating.',
-  },
-
-  // ── Sioux Falls, SD ──────────────────────────────────────────────────────────
-  'sioux-falls': {
-    city: 'Sioux Falls', state: 'SD', stateFullName: 'South Dakota', slug: 'sioux-falls',
-    metaTitle: 'Shopify Developer Sioux Falls SD | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Top-rated Shopify developer in Sioux Falls, South Dakota: stores live in 7 days, at a fixed price. Zero state income tax = higher margins. Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
-    heroSub: 'South Dakota has zero state income tax: the best business climate in the Midwest. FactoryJet builds custom Shopify stores for Sioux Falls businesses, launched in 7 days, at a fraction of what Lawrence & Schiller or Click Rain charge. 500+ stores, 4.9★ Google rating.',
   },
 
 };

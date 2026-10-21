@@ -50,7 +50,7 @@ const PAGE_TITLE = 'Shopify EDI Integration Services | FactoryJet';
 const PAGE_DESC =
   'Shopify EDI integration for brands selling to retailers and B2B stores taking EDI orders. The 850, 855, 856 and 810 explained, with five EDI products compared.';
 const PAGE_PUBLISHED = '2026-10-11';
-const PAGE_MODIFIED = '2026-10-11';
+const PAGE_MODIFIED = '2026-10-21';
 const CHECKED_ON = '11 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -1056,6 +1056,11 @@ export default function ShopifyEdiIntegrationPage() {
                 className="font-semibold text-fj-ink underline underline-offset-4"
               >
                 ecommerce ERP integration
+              </Link>
+              . When wholesale buyers also order on the site and need payment terms or their own delivery rules at
+              checkout, see{' '}
+              <Link href="/services/shopify-checkout-customization" className="font-semibold text-fj-ink underline underline-offset-4">
+                Shopify checkout customization
               </Link>
               .
             </p>

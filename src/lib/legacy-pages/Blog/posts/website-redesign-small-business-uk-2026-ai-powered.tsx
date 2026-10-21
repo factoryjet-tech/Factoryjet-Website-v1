@@ -9,6 +9,7 @@ export const post: BlogPost = {
   category: "Web Design & Strategy",
   author: 'Bhavesh Barot',
   date: "May 03, 2026",
+  dateModified: "Oct 21, 2026",
   readTime: '14 min read',
   imageUrl: "/blog-images/website-redesign-small-business-uk-2026-ai-powered-hero.webp",
   meta: {
@@ -168,6 +169,7 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-8 mb-4">Realistic UK Website Redesign Budgets and Pricing in 2026</h2>
       <p className="mb-4">UK small businesses planning a website redesign in 2026 should budget between £1,500 and £8,000 depending on complexity, with most projects landing in the £3,000–£5,000 range for a professional, conversion-focused site. These figures reflect the current market after AI-native workflows have compressed timelines and reduced overhead without sacrificing quality. At the entry tier, £1,500–£3,000 delivers a 5–10 page brochure site built on WordPress or Next.js, fully mobile-responsive with basic on-page SEO, contact forms, and Lighthouse performance scores above 90. This package suits local service businesses, plumbers, electricians, solicitors, who need a credible online presence but don't require advanced functionality. Expect a clean, template-based design with modest customisation and straightforward content management. The £3,000–£5,000 bracket covers most service businesses that need 10–20 pages, a regularly updated blog, advanced SEO configuration, custom design work, and integrations with CRM platforms like HubSpot or booking systems such as Calendly. Consultancies, marketing agencies, and professional services firms typically land here. This tier includes strategic content planning, conversion rate optimisation, and enough flexibility to scale as the business grows. For e-commerce, budget £5,000–£8,000 for a full Shopify or WooCommerce platform handling up to 100 products, payment gateway setup through Stripe or PayPal, inventory management, automated email sequences, and compliance with UK consumer protection regulations. This price point assumes moderate product photography needs and standard shipping logic, complex multi-variant products or bespoke fulfilment workflows push costs higher. AI-native agencies now hold those prices down by deploying tools like Midjourney for design iteration, Claude for content drafting, and GitHub Copilot for code generation, while retaining human oversight for strategy, quality control, and client communication. A project that cost £6,000 in 2024 through a London agency might run £3,000 in 2026 with comparable deliverables and faster turnaround.</p>
       <p className="mb-4">➡ Learn more: <a href="/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">Pricing</a></p>
+      <p className="mb-4">➡ Full breakdown with sourced ranges: <a href="/blog/website-redesign-cost-uk-2026-complete-pricing-guide" className="text-blue-600 underline hover:text-blue-800 transition-colors">UK website redesign cost guide</a></p>
 
       <div className="overflow-x-auto mb-8">
         <table className="min-w-full border-collapse border border-gray-300">

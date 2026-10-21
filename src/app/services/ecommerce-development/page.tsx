@@ -82,7 +82,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-10-10';
+const PAGE_MODIFIED = '2026-10-21';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -1139,10 +1139,12 @@ export default function EcommerceDevelopmentPage() {
                 ))}
               </div>
               <p>
-                <strong className="font-semibold text-fj-ink">Shopify / Shopify Plus</strong>, Custom Liquid themes and Hydrogen headless builds. Checkout Extensibility for Plus clients. Our most-used platform for DTC brands.
+                <strong className="font-semibold text-fj-ink">Shopify / Shopify Plus</strong>, Custom Liquid themes and Hydrogen headless builds. Checkout Extensibility for Plus clients. Our most-used platform for DTC brands, including{' '}
+                <a href="/services/shopify-development/korean-beauty-brands" className="font-semibold text-fj-ink underline underline-offset-4">Korean beauty brands launching in the US</a>.
               </p>
               <p>
-                <strong className="font-semibold text-fj-ink">WooCommerce on WordPress</strong>: Custom themes with Gutenberg blocks, WooCommerce Subscriptions, Bookings, and Product Bundles. Built for teams that need editorial and commerce on a single CMS.
+                <strong className="font-semibold text-fj-ink">WooCommerce on WordPress</strong>: Custom themes with Gutenberg blocks, WooCommerce Subscriptions, Bookings, and Product Bundles. Built for teams that need editorial and commerce on a single CMS. To keep WordPress for content and sell through Shopify instead, see{' '}
+                <a href="/services/wordpress-shopify-integration" className="font-semibold text-fj-ink underline underline-offset-4">WordPress Shopify integration</a>.
               </p>
               <p>
                 <strong className="font-semibold text-fj-ink">BigCommerce (Stencil)</strong>, Custom Stencil themes and headless builds using the BigCommerce Storefront API. Used for B2B brands that need native price lists, quote management, and ERP integration.
@@ -1221,18 +1223,11 @@ export default function EcommerceDevelopmentPage() {
               <div className="mt-5 flex flex-wrap gap-2">
                 {[
                   { label: 'Austin TX',      slug: 'austin' },
-                  { label: 'Miami FL',       slug: 'miami' },
                   { label: 'Denver CO',      slug: 'denver' },
                   { label: 'Nashville TN',   slug: 'nashville' },
-                  { label: 'Portland OR',    slug: 'portland' },
                   { label: 'Charlotte NC',   slug: 'charlotte' },
                   { label: 'Raleigh NC',     slug: 'raleigh' },
-                  { label: 'Tampa FL',       slug: 'tampa' },
-                  { label: 'Chattanooga TN', slug: 'chattanooga' },
                   { label: 'Boise ID',       slug: 'boise' },
-                  { label: 'Fargo ND',       slug: 'fargo' },
-                  { label: 'Lincoln NE',     slug: 'lincoln' },
-                  { label: 'Sioux Falls SD', slug: 'sioux-falls' },
                 ].map(({ label, slug }) => (
                   <a
                     key={slug}
@@ -1506,18 +1501,11 @@ export default function EcommerceDevelopmentPage() {
             <div className="flex flex-wrap gap-3">
               {[
                 { city: 'Austin, TX', href: '/austin/ecommerce-development/' },
-                { city: 'Miami, FL', href: '/miami/ecommerce-development/' },
                 { city: 'Denver, CO', href: '/denver/ecommerce-development/' },
                 { city: 'Nashville, TN', href: '/nashville/ecommerce-development/' },
-                { city: 'Portland, OR', href: '/portland/ecommerce-development/' },
                 { city: 'Charlotte, NC', href: '/charlotte/ecommerce-development/' },
                 { city: 'Raleigh, NC', href: '/raleigh/ecommerce-development/' },
-                { city: 'Tampa, FL', href: '/tampa/ecommerce-development/' },
                 { city: 'Boise, ID', href: '/boise/ecommerce-development/' },
-                { city: 'Sioux Falls, SD', href: '/sioux-falls/ecommerce-development/' },
-                { city: 'Lincoln, NE', href: '/lincoln/ecommerce-development/' },
-                { city: 'Chattanooga, TN', href: '/chattanooga/ecommerce-development/' },
-                { city: 'Fargo, ND', href: '/fargo/ecommerce-development/' },
               ].map(({ city, href }) => (
                 <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors">
                   {city}.
@@ -1567,8 +1555,8 @@ export default function EcommerceDevelopmentPage() {
               <Link href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
                 <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Shopify vs WooCommerce for US small businesses in 2026.</p>
               </Link>
-              <Link href="/blog/best-ecommerce-platform-tampa-boutiques-dtc-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
-                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">How Tampa boutiques and DTC brands pick an ecommerce platform.</p>
+              <Link href="/best-ecommerce-platforms" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">The best ecommerce platforms compared, side by side.</p>
               </Link>
               <Link href="/blog/austin-ecommerce-checkout-optimization-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
                 <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Cut cart abandonment: an Austin checkout optimization guide.</p>

@@ -162,10 +162,7 @@ export const post: BlogPost = {
         FactoryJet's Shopify store setup for US small businesses launches in 7 days, and we quote a fixed price in writing after a short scoping call. The standard scope is below; anything beyond it is added to the same written quote. Scope includes: custom theme configuration (colors, fonts, layout), up to 50 products loaded with SEO-optimized titles and descriptions, Shopify Payments or Stripe setup, shipping and tax configuration, Google Analytics 4 and Search Console, Product JSON-LD schema, Lighthouse 95+ optimization, Klaviyo abandoned cart setup, and 30 days post-launch support.
       </p>
       <p className="mb-4">
-        We serve US small businesses coast to coast, from outdoor brands and manufacturers in{' '}
-        <a href="/chattanooga/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">
-          Chattanooga, TN
-        </a>{' '}
+        We serve US small businesses coast to coast, from outdoor brands and manufacturers in Chattanooga, TN{' '}
         to DTC brands launching their first store. Every build includes Tennessee sales tax
         configuration, state-specific shipping zones, and compliance setup as standard, no
         extra charge for getting the details right.

@@ -11,7 +11,7 @@ import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/raleigh/web-design';
 
 export const metadata: Metadata = {
@@ -173,232 +173,203 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Eliminating Slow WordPress Themes & Fragile Plugin Stacks',
-    problem: 'Traditional Raleigh agencies install bloated multi-purpose themes loaded with 35+ unmaintained plugins that cause 4 to 6 second load times and frequent security breaches.',
-    solution: 'We engineer custom Next.js 15 architectures with pure TypeScript and Tailwind CSS, pre-rendering static HTML pages that load in under 600 milliseconds on mobile networks.',
+    title: 'Three of the top ten results are list pages',
+    problem: 'We searched "raleigh web design company" from Raleigh on 21 Oct 2026. Three of the top 10 results were list pages on Thumbtack, Built In and The Manifest. A buyer who clicks one gets a column of names with no prices, timelines or sample pages.',
+    solution: 'We put the answers a list page leaves out on your own site: what you build, real sample work, how long a job takes and how to start. A buyer who lands from a list then has a reason to call you first.',
   },
   {
     num: '02',
-    title: 'Ending Proprietary CMS Lock-In & Recurring Platform Surcharges',
-    problem: 'Many local web firms build on proprietary site-builder platforms, holding your design assets and database hostage under mandatory monthly hosting contracts.',
-    solution: 'You receive 100% intellectual property ownership of your Figma design system, clean GitHub source code, and Cloudflare Edge hosting accounts upon launch.',
+    title: 'The map box is won on reviews',
+    problem: 'The three businesses in Google\'s map box for that search had 63, 115 and 359 reviews, every one rated 5 stars (21 Oct 2026). A new website on its own does not move a business into that box.',
+    solution: 'Every site we build links to your Google Business Profile, names the places you work, such as Cary, Apex or Wake Forest, and includes a short review request page you can text to a customer after each job.',
   },
   {
     num: '03',
-    title: 'Replacing Protracted 16-Week Timelines with Focused 7-Day Sprints',
-    problem: 'Traditional agencies route your feedback through multiple layers of account managers, dragging simple corporate website builds into 4 to 6 month ordeals.',
-    solution: 'We work in dedicated daily sprints with direct senior engineering access, moving from approved Figma prototype to live production deployment in 7 calendar days.',
+    title: 'Buyers type the same search six ways',
+    problem: '"raleigh web design", "web design raleigh nc", "website design raleigh" and three other close variants each show about 480 US searches a month in Google Ads data (21 Oct 2026). "raleigh web design company" shows about 50.',
+    solution: 'We write titles and headings in the words people type, and give each service its own page. One page then targets one search, so the home page does not compete with your own service pages.',
   },
   {
     num: '04',
-    title: 'Building Built-In Search & AI Citation Architecture from Day One',
-    problem: 'Basic agencies treat SEO as an afterthought or an expensive add-on, leaving your site with missing JSON-LD schema, broken canonicals, and poor Core Web Vitals.',
-    solution: 'Every page includes server-rendered LocalBusiness, Service, and FAQPage schema, speakable selectors for AI search engines, and sub-second performance.',
+    title: 'No AI summary on this search yet',
+    problem: 'Google showed no AI Overview, its AI-written summary above the links, for "raleigh web design company" on 21 Oct 2026. Buyers still read ten links and the map box, so plain page copy decides who gets the call.',
+    solution: 'We write service pages with direct answers, sourced price ranges and an FAQ marked up for search engines. The page reads well to a person today, and its answers are easy to quote if an AI summary appears later.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Phase 01',
-    title: 'Architectural Scope & Figma Prototyping',
-    desc: 'We analyze your Raleigh competitors, map conversion pathways, and design a custom desktop and mobile prototype in Figma.',
-    deliverables: ['Competitive local search audit', 'Bespoke Figma UI component design', 'Conversion wireframes and content plan', 'Client milestone approval'],
+    title: 'Days 1 to 2: Scope and clickable draft',
+    desc: 'A short call fixes the pages, the buyers you want in Raleigh, Cary or Durham, and the search each page targets. You see a clickable draft before you sign.',
+    deliverables: ['Page list of up to 5 pages', 'Clickable draft on a private link', 'Fixed price in writing'],
   },
   {
     phase: 'Phase 02',
-    title: 'Headless Next.js 15 & React Engineering',
-    desc: 'We code your website using clean, type-safe Next.js 15 App Router components with modular Tailwind styling and zero plugin bloat.',
-    deliverables: ['Custom React 19 component library', 'Type-safe TypeScript architecture', 'Mobile responsive touch optimization', 'Lightweight headless CMS integration'],
+    title: 'Days 3 to 5: Build and copy',
+    desc: 'We build responsive pages that work on a phone from the first draft, and write copy in the words Raleigh buyers search, like "website design raleigh nc".',
+    deliverables: ['Responsive pages for phone and desktop', 'Page copy with sourced numbers', 'Contact form wired to your inbox'],
   },
   {
     phase: 'Phase 03',
-    title: 'Edge Deployment & Local SEO Integration',
-    desc: 'We deploy your site to Cloudflare Global Edge nodes and implement rich JSON-LD structured data for Google and AI engines.',
-    deliverables: ['Cloudflare Edge CDN caching', 'Structured JSON-LD schema graph', 'Google Analytics 4 & Tag Manager setup', 'Enterprise security header configuration'],
+    title: 'Day 6: Search setup and your review',
+    desc: 'We add page titles, LocalBusiness and FAQ markup, a Google Business Profile link and analytics. You review every page and approve each change.',
+    deliverables: ['Titles, headings and schema markup', 'Google Business Profile linked', 'Analytics with form tracking'],
   },
   {
     phase: 'Phase 04',
-    title: 'Core Web Vitals QA, Handoff & Launch',
-    desc: 'We execute comprehensive multi-device cross-browser testing, verify 95+ Lighthouse scores, transfer all code, and go live.',
-    deliverables: ['95+ Google Lighthouse verification', 'Cross-browser device QA testing', 'Full GitHub & Figma asset transfer', 'Recorded video training & 30-day warranty'],
+    title: 'Day 7: Launch and handover',
+    desc: 'We point your domain at the new site, test every form on real phones and hand over the code. Later changes are quoted and approved one at a time.',
+    deliverables: ['Domain connected, forms tested', 'Code and logins handed to you', 'Founder reply within 24 hours'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Source Code Ownership',
-    factoryjet: '100% Full IP Ownership. You receive the complete GitHub repository, Figma source files, and hosting credentials.',
-    traditional: 'Proprietary Lock-in. Agencies retain code rights or charge high recurring license fees to keep your website live.',
+    label: 'Can I see a working draft before I sign?',
+    factoryjet: 'Yes. You click through a draft of your own site on a private link before any contract, so you judge real pages and skip the pitch deck.',
+    traditional: 'A mood board and a long proposal, with the first real page showing up weeks after the deposit clears.',
   },
   {
-    label: 'Mobile Speed SLA',
-    factoryjet: 'Guaranteed 95+ Mobile Lighthouse score with sub-second page rendering on 4G/5G mobile connections.',
-    traditional: 'Heavy WordPress themes averaging 3 to 6 second load times and failing Google Core Web Vitals assessments.',
+    label: 'Which Raleigh searches will each page target?',
+    factoryjet: 'We name them in writing. "raleigh web design" and its close variants show about 480 US searches a month, "raleigh web design company" about 50 (21 Oct 2026).',
+    traditional: '"We\'ll handle the SEO," with no named searches, no monthly volumes and no page assigned to each one.',
   },
   {
-    label: 'Sprint Timeline',
-    factoryjet: 'Strict 7-day sprint delivery with daily progress updates and direct senior developer communication.',
-    traditional: '12 to 24 week protracted build cycles plagued by scope drift and endless account manager meetings.',
+    label: 'How will buyers find me past the list sites?',
+    factoryjet: 'Thumbtack, Built In and The Manifest held 3 of the top 10 results for "raleigh web design company" on 21 Oct 2026. We build service pages and a Business Profile link that compete with them.',
+    traditional: 'A paid directory listing renewed every year, with no work done on the pages you own.',
   },
   {
-    label: 'Structured Data & AI Readiness',
-    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, ProfessionalService, WebPage, speakable, FAQPage).',
-    traditional: 'Basic auto-generated meta tags without entity knowledge graphs, breadcrumb markup, or AI answer formatting.',
+    label: 'Who owns the code, and how are later changes priced?',
+    factoryjet: 'You own the code and every page. After launch, each change is quoted and approved before work starts, and there is no long-term contract.',
+    traditional: 'A site builder you cannot leave without a rebuild, plus a monthly plan that bundles changes you may never ask for.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Cost & Scope' },
-  { key: 'timeline', label: 'Timeline & Sprint' },
-  { key: 'technical', label: 'Tech Stack & Performance' },
-  { key: 'local', label: 'Raleigh Market Focus' },
-  { key: 'ownership', label: 'Ownership & Support' },
+  { key: 'pricing', label: 'Cost and pricing' },
+  { key: 'process', label: 'Timeline and process' },
+  { key: 'ecommerce', label: 'Ecommerce builds' },
+  { key: 'local', label: 'Raleigh search and hiring' },
+  { key: 'ai', label: 'AI and new search' },
 ];
 
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does a custom Raleigh web design project cost?',
-    answer:
-      'Project pricing is based on your required page volume, interactive features, custom integrations, and content scope. A high-converting 5 to 10 page corporate website built in Next.js is delivered on a transparent fixed-price quote with zero hidden agency surcharges. Large enterprise platforms with complex database portals or multi-location architectures are scoped with clear milestone deliverables. Every quote includes custom Figma design, Next.js engineering, local SEO schema, and 100% code ownership.',
+    question: 'How much does a website cost in Raleigh?',
+    answer: 'Most small business websites cost between $1,000 and $48,000, according to WebFX\'s web design pricing data. Small agencies usually land between $6,000 and $12,000 (WebFX). The spread comes from page count, custom design, forms, booking tools and online payments. A five-page site for a Raleigh contractor sits near the low end. A store with hundreds of products sits near the top. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Are there any recurring hosting fees or ongoing platform royalties?',
-    answer:
-      'No. Because we build using modern static generation and serverless Next.js deployed to Cloudflare Pages or Vercel, your ongoing hosting infrastructure costs are virtually zero. You own your hosting accounts directly and never pay mandatory monthly agency platform fees.',
+    question: 'How much should I pay someone to redesign my website?',
+    answer: 'A website redesign runs from about $3,000 to $75,000, per WebFX\'s redesign pricing. Where you land depends on how much changes. New colors and photos on the same pages cost far less than new pages, new copy and a move to a new platform. Write down what is broken today, such as slow pages or a contact form nobody uses, before you ask for quotes. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'How does your fixed-price quote protect our business from budget overruns?',
-    answer:
-      'We complete a thorough technical scope and wireframe review before beginning development. Your written proposal specifies all deliverables, design revisions, technical integrations, and launch timelines. The agreed price is guaranteed and will only adjust if you explicitly request expanded features during the sprint.',
+    question: 'What does it cost to keep a website running after launch?',
+    answer: 'Maintenance for a small site runs about $35 to $100 a month, and $125 to $500 a month for a larger small business site, according to WebFX. That covers updates, backups, security fixes and small edits. With FactoryJet there is no long-term contract. Each change after launch is quoted and approved before we start, and you own the code, so any developer you pick later can work on it. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
-    category: 'timeline',
-    question: 'How can you deliver a custom Next.js website in 7 days without cutting corners?',
-    answer:
-      'We eliminate agency bureaucracy and account manager bottlenecks. By assigning dedicated senior engineers and UI designers who work directly with your leadership team using modular design tokens, we execute focused daily sprint milestones. Day 1-2 covers architecture and Figma approval; Day 3-4 completes Next.js engineering; Day 5-6 integrates local schema and edge deployment; Day 7 handles QA and launch.',
+    category: 'pricing',
+    question: 'Why are web design ads in Raleigh so expensive?',
+    answer: 'Google Ads suggests about $15.68 a click for "raleigh web design" and about $20.88 a click for "web designers raleigh" (21 Oct 2026). Firms bid that much because one signed project pays for hundreds of clicks. For you, the buyer, it means the first ads you see are bought placements. Scroll past them and compare the organic links and the map box too, then judge each firm on its sample sites and written quote.',
   },
   {
-    category: 'timeline',
-    question: 'What do you need from our team before starting the 7-day sprint?',
-    answer:
-      'To maintain our 7-day delivery SLA, we require high-resolution brand assets (logos and brand guidelines), existing photography or video assets, approved copy direction or core service descriptions, and access to your domain DNS or hosting accounts. Once these assets are in our shared project workspace, the sprint begins immediately.',
-  },
-  {
-    category: 'timeline',
-    question: 'What happens if we need design revisions during the sprint?',
-    answer:
-      'Our sprint includes dedicated review milestones on Days 2 and 6. Because we prototype in Figma before writing code, visual adjustments to layout, typography, and color schemes are made rapidly without causing development delays.',
-  },
-  {
-    category: 'technical',
-    question: 'Why choose Next.js over traditional WordPress for a Raleigh business?',
-    answer:
-      'WordPress websites rely on bloated server runtime PHP, heavy database queries, and vulnerable third-party plugins that degrade page load speed and invite security exploits. Next.js pre-renders pages into static HTML and modern JavaScript, deploying directly to global edge networks. This delivers sub-second page loads, near-instant mobile browsing, impenetrable security, and significantly higher conversion rates for competitive Raleigh search queries.',
-  },
-  {
-    category: 'technical',
-    question: 'How do you guarantee a 95+ Google Lighthouse mobile score?',
-    answer:
-      'We optimize image compression with modern WebP formats, eliminate render-blocking JavaScript, implement CSS containment, and deploy assets globally via Cloudflare Edge CDN to achieve Lighthouse performance scores of 95+.',
-  },
-  {
-    category: 'technical',
-    question: 'What content management system (CMS) do you connect for easy client updates?',
-    answer:
-      'We connect intuitive headless CMS platforms like Sanity, Contentful, or Strapi that allow your marketing team to edit text, upload photos, and publish blog articles effortlessly without touching code or risking site layout breaks.',
-  },
-  {
-    category: 'technical',
-    question: 'How do you handle website hosting and security certificates?',
-    answer:
-      'We deploy your website to Cloudflare Pages or Vercel, providing enterprise-grade DDoS protection, automated global SSL certificates, and zero hosting maintenance fees for most small and mid-sized business applications.',
-  },
-  {
-    category: 'local',
-    question: 'Do you build B2B websites for RTP biopharma and life sciences companies?',
-    answer:
-      'Yes. We build high-conversion B2B websites tailored for Research Triangle biopharma, clinical CROs, and agtech enterprises, complete with pipeline charts, downloadable clinical whitepapers, and automated CRM lead routing.',
-  },
-  {
-    category: 'local',
-    question: 'Can you design websites for Cary and Downtown Raleigh software startups?',
-    answer:
-      'Yes. We build modern SaaS websites featuring interactive product demos, API documentation hubs, and frictionless demo scheduling workflows.',
-  },
-  {
-    category: 'local',
-    question: 'Can you integrate e-commerce capabilities into our North Carolina business site?',
-    answer:
-      'Yes. Whether you require a simple Stripe checkout for service retainers or a full Shopify storefront integration for consumer goods, we build secure, high-conversion e-commerce workflows into your custom web architecture.',
-  },
-  {
-    category: 'local',
-    question: 'How does your web design optimize for local Raleigh search rankings?',
-    answer:
-      'We embed structured LocalBusiness JSON-LD schema, configure Google Analytics 4 conversion tracking, optimize Core Web Vitals, and architect localized service area landing pages for Raleigh, Durham, Cary, Chapel Hill, and Apex.',
-  },
-  {
-    category: 'ownership',
-    question: 'Do we own the website code and design assets after launch?',
-    answer:
-      'Yes, 100%. You receive full intellectual property ownership of your Figma design system, clean GitHub repository, and Cloudflare hosting configuration. You are never locked into proprietary platforms or mandatory maintenance contracts.',
-  },
-  {
-    category: 'ownership',
-    question: 'What kind of support is included after the website goes live?',
-    answer:
-      'Every project includes a 30-day post-launch warranty covering any bug fixes, technical adjustments, and recorded video handover training to ensure your team is completely confident managing the site.',
-  },
-  {
-    category: 'ownership',
-    question: 'Can any developer maintain our Next.js website in the future?',
-    answer:
-      'Yes. Next.js and React are the global industry standard for modern web engineering. Because we write clean, documented TypeScript without proprietary plugins, any competent software engineer can maintain or extend your codebase.',
-  },
-  {
-    category: 'ownership',
-    question: 'How do you train our internal team to manage site content?',
-    answer:
-      'Upon launch, we record a personalized video walkthrough demonstrating exactly how to update copy, add new team members, publish articles, and view analytics data, giving your team complete operational independence.',
-  },
-  {
-    category: 'architecture',
-    question: 'How do you engineer clinical trial gateways and biopharma hubs for Research Triangle Park (RTP) leaders?',
-    answer:
-      'We build static React Server Component architectures with structured MedicalBusiness and ClinicalTrial schemas, searchable protocol repositories, investigator application forms, and sub-second page performance across global research networks.',
-  },
-  {
-    category: 'technical',
-    question: 'Why is Next.js 15 preferred by Downtown Raleigh and Durham B2B SaaS startups over legacy CMS platforms?',
-    answer:
-      'Tech startups in the Triangle demand developer-grade documentation portals, interactive product demo tours, automated CRM lead routing, and sub-600ms load speeds. Next.js 15 eliminates the security risks and bloat of legacy PHP plugins while supporting modern TypeScript component architecture.',
-  },
-  {
-    category: 'design',
-    question: 'Can you design investor pitch portals and patent repositories for university spinouts in Chapel Hill and Raleigh?',
-    answer:
-      'Yes. We build structured commercialization portals featuring scientific publication hubs, patent portfolios, technology readiness matrices, and password-protected investor data rooms.',
+    category: 'pricing',
+    question: 'Is there a way to get a written price before I commit?',
+    answer: 'Yes. FactoryJet quotes a fixed price in writing after a short scoping call, and you see a clickable draft of your site before you sign. The quote lists every page, every form and the launch date. If the scope grows later, the new work is quoted and approved on its own, so the first number does not quietly change. There is no long-term contract.',
   },
   {
     category: 'process',
-    question: 'How do you guarantee sub-600ms load speeds and 100/100 Core Web Vitals in North Carolina?',
-    answer:
-      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the Research Triangle.',
+    question: 'How fast can a new website go live?',
+    answer: 'A site of up to 5 pages can go live in 7 days. Day one is a short scoping call, and you see a clickable draft before you sign. Days three to five are the build and copy. Launch day covers the domain, form tests and code handover. Larger sites and ecommerce stores take longer, and their timeline is written into the quote. FactoryJet has kept a 97% on-time delivery record across 500+ businesses since 2014.',
   },
   {
-    category: 'ownership',
-    question: 'What design files and tokens are delivered during the Figma design system handover?',
-    answer:
-      'You receive full edit access to a complete Figma design system containing typography scales, color tokens, responsive mobile/desktop wireframes, custom icon sets, component variants, and interactive prototype flows that your marketing team owns forever.',
+    category: 'process',
+    question: 'What is functional prototyping, and can I get one before I sign?',
+    answer: 'A functional prototype is a draft of your site you can click through: real pages, working menus and sample forms, on a private link. It differs from a picture of a design because you can test it on your own phone. FactoryJet shows you a working draft or working software before you sign anything. You find out early whether the layout suits your buyers, and changes at that stage cost little.',
+  },
+  {
+    category: 'process',
+    question: 'What help do I get when my website launches?',
+    answer: 'On launch day we connect your domain, test every form on real phones and hand you the code and all logins. After that, founder Bhavesh Barot replies to questions within 24 hours. Any fix or new page is quoted and approved before work starts, so nothing gets billed by surprise. You own the code, so you are free to hand it to another developer at any point.',
+  },
+  {
+    category: 'process',
+    question: 'Will I own my website code?',
+    answer: 'Yes. You own the code, the pages, the images and the written content from the day we hand over. Logins for your domain, hosting and analytics are in your name. That matters if you ever switch providers: a site you own can move to any developer, while a site locked inside a builder platform often has to be rebuilt from scratch. There is no long-term contract with FactoryJet.',
+  },
+  {
+    category: 'process',
+    question: 'What is responsive web design, and is it included?',
+    answer: 'Responsive design means one website that rearranges itself to fit a phone, tablet or laptop screen. Text stays readable, buttons stay large enough to tap and forms work with a thumb. Every FactoryJet site is responsive by default, at no extra line item. We test each page on real phones before launch, because most local buyers find a service business on their phone first.',
+  },
+  {
+    category: 'process',
+    question: 'Do you build websites for healthcare practices in Raleigh?',
+    answer: 'Yes. We build sites for clinics and practices, such as a dental office in North Hills or a specialist group in Cary. Typical pages are providers, services, insurance accepted and a booking link. If a form collects health details, it needs a tool that supports HIPAA, the federal health privacy law, and we name that tool in the written scope. FactoryJet quotes a fixed price in writing after a short scoping call.',
+  },
+  {
+    category: 'process',
+    question: 'Can you build a website for a contractor or trade business?',
+    answer: 'Yes. A contractor site needs a few things done well: a clear list of services, the towns you cover such as Garner, Apex or Wake Forest, photos of finished jobs and a quote form that reaches your phone. Most trade sites fit in 5 pages or fewer, so they qualify for 7-day delivery. We also link the site to your Google Business Profile, where reviews drive local calls.',
+  },
+  {
+    category: 'ecommerce',
+    question: 'How long does a custom ecommerce website take to build?',
+    answer: 'A store on a custom theme takes 3 to 5 weeks. An advanced build with custom features, such as product builders or wholesale pricing, takes 5 to 8 weeks. A headless store takes 8 to 14 weeks. Headless means the shop\'s back office and the pages shoppers see run as two separate systems, which gives more design freedom. The 7-day delivery covers only sites of up to 5 pages, never stores.',
+  },
+  {
+    category: 'ecommerce',
+    question: 'Can you build a direct-to-consumer store for a Raleigh brand?',
+    answer: 'Yes. A direct-to-consumer store sells your own products to shoppers without a retailer in the middle. We build the product pages, cart, checkout and the emails a buyer gets after ordering. A store on a custom theme takes 3 to 5 weeks, and you see working software before you sign. You own the code and the store. FactoryJet quotes a fixed price in writing after a short scoping call.',
+  },
+  {
+    category: 'ecommerce',
+    question: 'Should my store use a custom theme or a headless build?',
+    answer: 'Most stores should start on a custom theme. It launches in 3 to 5 weeks, costs less and is easier for your staff to edit. Headless, where the store\'s back office and the shop pages run separately, takes 8 to 14 weeks. It pays off when you need pages a theme cannot handle, or several storefronts fed from one catalog. We tell you which fits on the scoping call, in writing.',
   },
   {
     category: 'local',
-    question: 'How do you configure Schema.org JSON-LD structured data for Google Rich Results in the Triangle?',
-    answer:
-      'We embed granular Schema.org JSON-LD structured data on every page, including Organization, ProfessionalService, LocalBusiness, FAQPage, BreadcrumbList, and WebSite schemas. These explicit semantic annotations enable Google to generate rich snippet cards, sitelinks, and AI search citations.',
+    question: 'How many people in Raleigh search for a web designer each month?',
+    answer: 'About 480 US searches a month each for "raleigh web design", "web design raleigh nc" and "website design raleigh", based on Google Ads data we pulled on 21 Oct 2026. Google groups close variants together, so those figures overlap. Smaller phrases: "web designers raleigh" about 110, "raleigh web development" about 90, "raleigh web design company" about 50 and "web design pricing raleigh" about 10 a month.',
+  },
+  {
+    category: 'local',
+    question: 'How do I find the top web design companies in Raleigh?',
+    answer: 'Start with Google, then check each firm\'s own work. On 21 Oct 2026, 7 of the top 10 results for "raleigh web design company" were agency sites and 3 were lists from Thumbtack, Built In and The Manifest. Lists are a fine starting point, but few show prices or timelines. Shortlist three firms, ask each for live sites they built and a written quote, and compare those side by side.',
+  },
+  {
+    category: 'local',
+    question: 'Do Google reviews matter when I choose a web designer?',
+    answer: 'Yes, but read them closely. On 21 Oct 2026 the three firms in Google\'s map box for "raleigh web design company" had 63, 115 and 359 reviews, all rated 5 stars. When every rating is 5 stars, the stars stop telling firms apart. Read the newest reviews for words like "on time" and "after launch", then ask the firm for two live sites you can open yourself.',
+  },
+  {
+    category: 'local',
+    question: 'Is web design still in demand in 2026?',
+    answer: 'Yes, in Raleigh the searches are steady. Google Ads data from 21 Oct 2026 shows about 480 US searches a month for "raleigh web design" and its close variants. Google Ads also suggests about $15.68 a click for that phrase, which means firms still pay to win those buyers. What has changed is the build: tools are faster, so a 5-page site can now go live in 7 days.',
+  },
+  {
+    category: 'local',
+    question: 'How do you work with Raleigh clients?',
+    answer: 'By video call and a shared draft. FactoryJet works remotely with US clients and schedules calls in US business hours. Founder Bhavesh Barot replies within 24 hours. Raleigh, Durham, Cary and Chapel Hill clients work with us the same way: a video scoping call, a clickable draft on a private link and written approvals for each change. FactoryJet was founded in 2014 and has worked with 500+ businesses, with 97% of projects delivered on time.',
+  },
+  {
+    category: 'ai',
+    question: 'Can ChatGPT build a website for my business?',
+    answer: 'ChatGPT can write page text and sample code for a simple page. It cannot buy your domain, set up hosting, connect your booking tool or test your forms on a phone. It also will not notice when your contact form stops sending email next month. Use it to draft copy ideas. For a site customers pay through or book from, you want a person who builds it, tests it and answers when it breaks.',
+  },
+  {
+    category: 'ai',
+    question: 'Does Google show an AI summary when people search for Raleigh web designers?',
+    answer: 'Not on the search we checked. Google showed no AI Overview, its AI-written summary above the links, for "raleigh web design company" on 21 Oct 2026. Buyers saw the map box with three firms and ten regular links. That can change at any time, so we write pages with short, direct answers and FAQ markup that both a person and an AI summary can read.',
+  },
+  {
+    category: 'ai',
+    question: 'Will my new website show up in ChatGPT or Google AI answers?',
+    answer: 'Nobody can promise that, and you should be wary of anyone who does. What we control is how the site is built: clear facts on each page, FAQ markup, a page for each service, and crawler access open to the bots that ChatGPT, Claude and Perplexity send out. Those steps make your answers easy to quote. Whether an AI tool quotes them is decided by that tool.',
   },
 ];
 
@@ -756,7 +727,7 @@ export default function RaleighWebDesignPage() {
                 Why Raleigh Companies Choose FactoryJet Web Design
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace outdated WordPress themes and bloated retainers with modern engineering:
+                Each point below starts with something we measured in Raleigh Google results on 21 Oct 2026, then says what we build because of it.
               </p>
             </div>
 
@@ -776,11 +747,11 @@ export default function RaleighWebDesignPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw in Raleigh search, 21 Oct 2026:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What we build because of it:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -817,7 +788,7 @@ export default function RaleighWebDesignPage() {
                 Our 7-Day Delivery Sprint Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                From initial kickoff and Figma prototyping to production code and zero-downtime launch in 7 calendar days:
+                The 7-day delivery covers sites of up to 5 pages; larger sites and ecommerce builds get their own written timeline before you sign.
               </p>
             </div>
 
@@ -881,7 +852,7 @@ export default function RaleighWebDesignPage() {
                 Evaluating Raleigh Web Design Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led Next.js development against traditional design agencies before you commit:
+                Put these four questions to any Raleigh web design firm before you sign, and check the answers against what we measured in Raleigh search on 21 Oct 2026.
               </p>
             </div>
 

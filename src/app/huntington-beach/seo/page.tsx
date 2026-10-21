@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/huntington-beach/seo';
 
 export const metadata: Metadata = {
@@ -146,238 +146,198 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending Opaque Monthly Retainers With Zero Visible Map Pack Growth',
-    problem: 'Traditional agencies send generic monthly PDF reports filled with vanity impressions while your Google Business Profile remains stuck outside the Local 3-Pack.',
-    solution: 'We focus on tangible Google Maps 3-Pack rankings, qualified phone calls, and revenue-generating local search positions with full dashboard transparency.',
+    title: 'Four of the top ten results are list pages',
+    problem: 'We searched “huntington beach seo company” from Huntington Beach on 21 Oct 2026. Four of the top 10 results were list or directory pages, including Yelp and the Semrush agency directory. One more was a Facebook profile.',
+    solution: 'We check how your business looks on those lists before touching your website. We fix your Yelp page, claim the free profiles buyers open, and write a service page that answers what the list pages leave out.',
   },
   {
     num: '02',
-    title: 'Eliminating Fragile Plugin Schemas That Fail AI Citation Crawlers',
-    problem: 'Basic WordPress SEO plugins generate disjointed, broken schemas that AI search engines like SearchGPT and Perplexity fail to parse as verified business entities.',
-    solution: 'We hand-craft connected Schema.org JSON-LD entity graphs linking your Google Knowledge Graph, licensing credentials, and verified local citations.',
+    title: 'Thirteen reviews was enough for the map pack',
+    problem: 'The three businesses in the map pack for that search had 70, 39 and 13 Google reviews, rated between 4.7 and 5 stars. On 21 Oct 2026, a business with 13 reviews held a map spot.',
+    solution: 'We set your review target from the counts on your own search, not a guess. We add a short review request to your invoice or receipt flow and reply to every review so new ones keep arriving.',
   },
   {
     num: '03',
-    title: 'Overcoming High Agency Turnover & Junior Account Handler Runaround',
-    problem: 'Big-box marketing agencies assign junior coordinators who do not understand Orange County coastal demographics, local corridors, or industry specifics.',
-    solution: 'You work directly with senior local SEO technical engineers who execute hyper-local geo-targeting tailored to Southern California commercial realities.',
+    title: 'No AI Overview, but buyers still ask AI tools',
+    problem: 'Google showed no AI Overview for “huntington beach seo company” on 21 Oct 2026. The People Also Ask box did ask “Is SEO dead or evolving in 2026?”, so buyers are weighing AI tools too.',
+    solution: 'We write plain answers to the questions your buyers ask and add schema, which is code that labels your business facts. Then we check by hand whether ChatGPT and Perplexity name you, and report the dated result.',
   },
   {
     num: '04',
-    title: 'Stopping Toxic Link Networks That Trigger Search Penalties',
-    problem: 'Cheap SEO providers build spammy automated backlinks from private blog networks, risking sudden Google algorithmic penalties and ranking demotions.',
-    solution: 'We execute white-hat local citation building, regional trade publication placements, and verified local press authority, with no private blog networks.',
+    title: 'City-name searches are small here',
+    problem: 'Google Ads data from 21 Oct 2026 shows about 30 searches a month for “huntington beach seo” and about 10 for “local seo huntington beach”. Most buyers here search by service or neighborhood, not by city name.',
+    solution: 'We target the phrases your customers type, such as a service plus Sunset Beach or Huntington Harbour. We track calls and forms from each page so you can see which searches bring paying work.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Phase 01',
-    title: 'Entity Audit, GBP Optimization & Technical Foundations',
-    desc: 'We audit your Google Business Profile, fix Name-Address-Phone (NAP) discrepancies, optimize categories, and eliminate technical website crawling bottlenecks.',
-    deliverables: ['Comprehensive local ranking audit and competitor gap analysis', 'Complete Google Business Profile category and attribute overhaul', 'NAP consistency audit across 60+ major US citation directories', 'Core Web Vitals and mobile crawlability technical fixes'],
+    title: 'Record what Google shows today',
+    desc: 'We search your main service from Huntington Beach, note the map pack, review counts and list pages, and compare your Google Business Profile against them.',
+    deliverables: ['Map pack and review count snapshot', 'Business Profile category and service check', 'List of directories that outrank you'],
   },
   {
     phase: 'Phase 02',
-    title: 'Local Geo-Silo Architecture & JSON-LD Entity Graph Build',
-    desc: 'We engineer dedicated geo-targeted service silos and implement nested Schema.org JSON-LD entity graphs connecting your business to the Google Knowledge Graph.',
-    deliverables: ['Hyper-local corridor landing pages (Downtown, Pacific City, Bella Terra, Harbour)', 'Custom JSON-LD schema graphs (LocalBusiness, Service, Physician, LegalService)', 'Internal contextual link graph distributing domain authority', 'Service area boundary definition in Google Maps API'],
+    title: 'Fix the profile and the service pages',
+    desc: 'We correct categories, hours and service areas, then write a page per service naming the areas you serve, such as Sunset Beach, Huntington Harbour or Fountain Valley.',
+    deliverables: ['One page per core service', 'LocalBusiness and FAQ schema added', 'Name, address and phone matched everywhere'],
   },
   {
     phase: 'Phase 03',
-    title: 'High-Authority Regional Citations & Review Velocity Engine',
-    desc: 'We build authoritative local citations across regional Orange County chambers, industry trade directories, and deploy automated review generation workflows.',
-    deliverables: ['Tier-1 citation distribution across Apple Maps, Bing, Yelp, and YellowPages', 'Regional Huntington Beach business directory and chamber listings', 'Automated SMS and email review generation campaign deployment', 'Review response protocol and Google Maps attribute updates'],
+    title: 'Grow reviews and clean up listings',
+    desc: 'We set a monthly review goal from your map pack rivals (13 to 70 reviews on our 21 Oct 2026 check) and fix Yelp, Apple Business Connect and Bing Places.',
+    deliverables: ['Review request text and counter card', 'Yelp, Apple and Bing listings corrected', 'Reply drafts for new reviews'],
   },
   {
     phase: 'Phase 04',
-    title: 'AI Citation Retrieval, Continuous Tracking & Reporting',
-    desc: 'We optimize your brand footprint for retrieval in AI answer engines (SearchGPT, Perplexity, Google AI Overviews) and provide real-time ranking dashboards.',
-    deliverables: ['AI search engine citation indexing verification', 'Real-time geo-grid local rank tracking dashboard', 'Monthly inbound call and consultation conversion reporting', 'Quarterly strategic expansion and competitor defense roadmaps'],
+    title: 'Report calls, forms and AI mentions',
+    desc: 'Each month we report calls, forms and map views by page, and test whether ChatGPT and Perplexity name you for Orange County questions.',
+    deliverables: ['Monthly report with dated screenshots', 'AI answer check on agreed questions', 'Next month\'s changes, quoted for approval'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Local Ranking Method',
-    factoryjet: 'Full-stack entity engineering, connected JSON-LD schemas, and verified GBP category optimization.',
-    traditional: 'Basic keyword stuffing, generic blog posts, and automated low-quality citation blasts.',
+    label: 'Which searches will you target, and how many people make them?',
+    factoryjet: 'We show Google Ads volume for each phrase. “huntington beach seo” gets about 30 searches a month, so we add service and neighborhood phrases with more buyers.',
+    traditional: 'A promise to rank for your city name, with no search numbers attached to it.',
   },
   {
-    label: 'AI Search Readiness',
-    factoryjet: 'Optimized for OpenAI SearchGPT, Perplexity AI, and Google AI Overviews citation retrieval.',
-    traditional: 'Unaware of AI answer engines; relies solely on legacy 10 blue link keyword matching.',
+    label: 'How many reviews do I need to reach the map pack?',
+    factoryjet: 'We count reviews for the three map pack businesses on your own search. For SEO companies on 21 Oct 2026 the counts were 13, 39 and 70.',
+    traditional: '“More reviews are always better,” with no target and no plan for asking customers.',
   },
   {
-    label: 'Citation Integrity',
-    factoryjet: 'Manual NAP synchronization across top-tier business directories and regional chambers.',
-    traditional: 'Automated spam submissions leading to duplicate listings and fragmented NAP data.',
+    label: 'What will you do about Yelp and the list sites?',
+    factoryjet: 'Four of the top 10 results for “huntington beach seo company” were list pages. We fix your profiles on whichever lists show up for your service.',
+    traditional: 'They work only on your website and skip the directory pages buyers click first.',
   },
   {
-    label: 'Contract Flexibility',
-    factoryjet: 'Transparent milestone and performance deliverables with zero predatory multi-year lock-ins.',
-    traditional: 'Rigid 12-month locking contracts with severe early termination penalties.',
+    label: 'Who owns the work if I leave?',
+    factoryjet: 'You do. Your Google Business Profile, pages, schema and content stay yours. There is no long-term contract, and each change is quoted and approved first.',
+    traditional: 'The agency holds the profile login or the site, so leaving means starting from zero.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Pricing & Retainers' },
-  { key: 'timeline', label: 'Rankings & Timeline' },
-  { key: 'ai', label: 'Search & AI Citations' },
-  { key: 'local', label: 'Huntington Beach & OC' },
-  { key: 'deliverables', label: 'Deliverables & Reporting' },
+  { key: 'tips', label: 'Ranking tips you can do yourself' },
+  { key: 'local', label: 'Neighborhoods and local businesses' },
+  { key: 'pricing', label: 'Cost and contracts' },
+  { key: 'hiring', label: 'Hiring an SEO company' },
+  { key: 'ai', label: 'AI search' },
 ];
 
 const FAQ_ITEMS = [
   {
-    category: 'pricing',
-    question: 'How much does local SEO cost for a Huntington Beach CA business?',
-    answer:
-      'Monthly investments depend on your industry vertical, market competition, and target geographic coverage. We provide clear, transparent monthly deliverables with zero hidden hourly fees and zero long-term hostage contracts.',
+    category: 'tips',
+    question: 'How do I rank my business in Huntington Beach on Google?',
+    answer: 'Start with your Google Business Profile, because the map pack shows above the normal results. Pick the most exact main category, add every service, set real hours and upload photos taken at your business. Then ask each happy customer for a review. On 21 Oct 2026, the three map pack businesses for “huntington beach seo company” had 13, 39 and 70 reviews. That gives you a target. Last, give each service you sell its own page on your website.',
+  },
+  {
+    category: 'tips',
+    question: 'What are some local SEO tips for Huntington Beach businesses?',
+    answer: 'Here are five steps you can do this week. Use the same name, address and phone number on your website, Google, Yelp, Apple Business Connect and Bing Places. Answer every Google review, good or bad. Post a photo or update on your profile each week. Name the area, like Huntington Harbour or Sunset Beach, on the service pages that serve it. Put your phone number in plain text on every page so people can tap it.',
+  },
+  {
+    category: 'tips',
+    question: 'How many Google reviews does a Huntington Beach business need?',
+    answer: 'Enough to sit near the businesses already in the map pack for your search. We checked “huntington beach seo company” on 21 Oct 2026. The three map pack businesses had 70, 39 and 13 reviews, rated 4.7, 5 and 4.8 stars. So 13 reviews was enough to get in for that search. Search your own service from your shop, count the reviews of the top three, and aim for the middle number first.',
+  },
+  {
+    category: 'tips',
+    question: 'Can I do SEO for my small business in Huntington Beach myself?',
+    answer: 'Yes, most of the basics take a few hours a month. Keep your Google Business Profile complete, ask for reviews, and write a clear page for each service, with a price range if you can share one. Owners usually get stuck on the technical part: site speed, schema (code that labels your business facts for Google) and merging duplicate listings. That part is worth paying someone for.',
+  },
+  {
+    category: 'tips',
+    question: 'Does Yelp still matter for SEO in Huntington Beach?',
+    answer: 'Yes. On 21 Oct 2026, the Yelp page “TOP 10 BEST Seo Company in Huntington Beach, CA” ranked sixth for “huntington beach seo company”. When Google ranks a Yelp list, buyers click it and compare businesses there. Claim your free Yelp page, match your hours and phone number to Google, and add real photos. You do not need Yelp ads to appear on its list pages.',
+  },
+  {
+    category: 'tips',
+    question: 'How long does it take to rank a business in Huntington Beach?',
+    answer: 'Profile fixes can show in Google Maps within a few weeks. New service pages usually take a few months to settle in the normal results, depending on how many reviews and links your rivals have. Look at who you are up against first: on 21 Oct 2026, list pages held four of the top 10 spots for “huntington beach seo company”. We do not promise a rank or a date.',
+  },
+  {
+    category: 'local',
+    question: 'Can you help my business show up in Sunset Beach searches?',
+    answer: 'Yes. Sunset Beach sits on Pacific Coast Highway at the north end of Huntington Beach, and people search it by name. If you serve it, name it on a service page with real details: the streets you cover, how soon you can arrive and jobs you have done there. Add it as a service area on your Google Business Profile. A thin page that only swaps the place name will not help.',
+  },
+  {
+    category: 'local',
+    question: 'Do you work with businesses in Capistrano Beach?',
+    answer: 'Yes. We can work with businesses anywhere in Orange County, Capistrano Beach included, and we work remotely. The steps match Huntington Beach: a complete Google Business Profile, steady reviews, and one page per service that names the area. Search your main service from Capistrano Beach and write down who shows in the map pack. Those businesses are your competition, whatever their street address says.',
+  },
+  {
+    category: 'local',
+    question: 'How do I get found by people searching near the 405 and Brookhurst?',
+    answer: 'Google ranks map results partly by distance from the person searching. Someone near the 405 and Brookhurst Street sees businesses close to that spot first. You cannot move your shop, but you can name nearby cross streets and landmarks on your location page, list the neighborhoods you serve, and collect reviews that mention the area. Searches naming that intersection showed up in the Huntington Beach search data we reviewed.',
+  },
+  {
+    category: 'local',
+    question: 'How should a surf shop in Huntington Beach do SEO?',
+    answer: 'Start with Google Maps, because visitors search for a surf shop from their phone near the pier. Choose “Surf shop” as the main category if it fits, add rentals and lessons as services, and post photos of your racks and boards. Keep summer and holiday hours current. List the brands you carry on your website, since people search by brand. Ask renters for a review when they return the board.',
+  },
+  {
+    category: 'local',
+    question: 'What local SEO works for home service companies in Huntington Beach?',
+    answer: 'Contractors, plumbers and roofers usually have no storefront, so set your Google Business Profile up as a service-area business and hide your home address. List the cities you drive to, such as Huntington Beach, Fountain Valley and Costa Mesa. Write one page per job type with photos from real jobs. Ask for a review when you send the final invoice, because a finished job is fresh in the customer\'s mind.',
   },
   {
     category: 'pricing',
-    question: 'Do you lock clients into mandatory 12-month contracts?',
-    answer:
-      'No. We operate on performance and transparency. We believe our results should earn your partnership every single month, so you are never locked into an inflexible annual agreement.',
+    question: 'How much does SEO cost for a small business in Huntington Beach?',
+    answer: 'Small business SEO usually runs $1,500 to $3,500 a month, according to WebFX SEO pricing (updated Sep 2026). WebFX puts local SEO retainers at about $500 to $3,000 a month, and one-time local SEO projects at $500 to $5,000. An Ahrefs survey of 439 providers found an average of $1,557 a month for local SEO. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'What is included in your monthly local SEO scope?',
-    answer:
-      'Every engagement includes full Google Business Profile management, local citation building and cleanup, structured schema graph maintenance, geo-silo content engineering, review generation workflows, and monthly conversion tracking.',
+    question: 'How much does a one-time SEO audit cost?',
+    answer: 'Most businesses pay $101 to $750 for a one-time SEO audit, according to WebFX, which found 43% of businesses in that range. An audit should list what is broken on your website and Google Business Profile, sorted by what to fix first. Ask for a sample audit before you pay. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'How do you calculate ROI on local SEO campaigns?',
-    answer:
-      'We track qualified phone calls, appointment bookings, contact form submissions, and direct navigation requests generated through Google Maps and local organic search, giving you clear visibility into revenue attribution.',
+    question: 'Do I have to sign a long-term SEO contract?',
+    answer: 'No. FactoryJet works with no long-term contract. Each change is quoted and approved before we start it, so you know what every dollar pays for. Your Google Business Profile, pages, schema and content stay yours if you stop. Ask any Huntington Beach SEO firm the same question, and get the answer in writing before you sign anything.',
   },
   {
-    category: 'timeline',
-    question: 'How quickly can a Huntington Beach business rank in the Google Maps 3-Pack?',
-    answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
+    category: 'pricing',
+    question: 'Is it worth hiring an SEO company in Huntington Beach?',
+    answer: 'It depends on what one new customer is worth to you. If a single job pays a few thousand dollars, two or three extra calls a month can cover the fee. If your sales are small walk-in purchases, the free steps on your Google profile may be enough. Google\'s People Also Ask box showed this exact question on our 21 Oct 2026 search for “huntington beach seo company”.',
   },
   {
-    category: 'timeline',
-    question: 'What factors determine ranking speed in local search?',
-    answer:
-      'Key factors include existing domain authority, Google Business Profile age and history, review count and sentiment velocity, NAP consistency across citation networks, and the strength of competitor profiles in your specific corridor.',
+    category: 'hiring',
+    question: 'What does an SEO company do for a local business?',
+    answer: 'An SEO company makes your business easier to find on Google and other search tools. For a local business that means fixing your Google Business Profile, writing service pages, adding schema, cleaning up listings on sites like Yelp and Bing Places, and helping you ask customers for reviews. A good firm also reports which calls and forms came from search. Ask to see a sample monthly report before you hire.',
   },
   {
-    category: 'timeline',
-    question: 'Can you fix past Google Business Profile suspensions or penalties?',
-    answer:
-      'Yes. We audit your profile for policy compliance issues, correct address and category discrepancies, submit formal reinstatement appeals to Google, and restore your ranking standing.',
+    category: 'hiring',
+    question: 'How do I check out a Huntington Beach SEO company before hiring?',
+    answer: 'Search the phrase you want to rank for and read the results yourself. On 21 Oct 2026, “huntington beach seo company” showed five agency sites, four list pages and one Facebook page in the top 10. Lists like Yelp and the Semrush agency directory are a place to start, and they prove little on their own. Ask each firm for dated screenshots of past work and who will own the accounts.',
   },
   {
-    category: 'timeline',
-    question: 'How do you handle review generation without violating Google policies?',
-    answer:
-      'We set up automated post-service email and SMS review request funnels that invite genuine customers to share their authentic experiences on your verified Google Business Profile in compliance with FTC and Google guidelines.',
+    category: 'hiring',
+    question: 'How many people in Huntington Beach search for an SEO company?',
+    answer: 'Not many. Google Ads data from 21 Oct 2026 shows about 30 searches a month for “huntington beach seo”, about 30 for “seo huntington beach”, about 20 for “huntington beach seo company” and about 10 for “local seo huntington beach”. Google groups close variants together, so some of those numbers overlap. Most local buyers search for the service they need and never type the word SEO.',
+  },
+  {
+    category: 'hiring',
+    question: 'Who is FactoryJet, and how do we work together?',
+    answer: 'FactoryJet was founded in 2014 and has worked with 500+ businesses, with 97% on-time delivery. We work remotely with US clients and schedule calls in US business hours. Founder Bhavesh Barot replies to new inquiries within 24 hours. We also do white-label work for agencies. You get one written plan, and you approve each change before it goes live.',
   },
   {
     category: 'ai',
-    question: 'How does local SEO help my business appear in SearchGPT and AI Overviews?',
-    answer:
-      'AI answer engines retrieve verified facts from structured knowledge graphs, verified directories, and authoritative publications. We build connected JSON-LD schemas that make your business data unmistakable to LLM crawlers.',
+    question: 'What is AI search optimization for a Huntington Beach business?',
+    answer: 'AI search optimization means making your business easy for ChatGPT, Perplexity and Google\'s AI answers to read and quote. In practice that is plain answers to common customer questions, schema that labels your name, address and services, and matching facts on every listing. WebFX puts AI SEO at $1,500 to $5,000 a month for small businesses (Sep 2026). FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'ai',
-    question: 'Why is structured Schema.org JSON-LD so important for local search?',
-    answer:
-      'Schema markup explicitly defines your exact business type, physical coordinates, service area, opening hours, accepted payments, and practitioner credentials directly in machine-readable code for search crawlers.',
+    question: 'Does Google show AI answers for Huntington Beach SEO searches?',
+    answer: 'Not on the search we checked. On 21 Oct 2026, Google showed no AI Overview for “huntington beach seo company” searched from Huntington Beach. It showed a map pack, ten normal results and a People Also Ask box. That can change any week, and question-style searches often do get AI answers. Nobody can promise you a spot in one, but we write pages so they can be quoted.',
   },
   {
     category: 'ai',
-    question: 'How do you track whether AI search engines are citing our brand?',
-    answer:
-      'We monitor citation appearances, brand mentions, and referral traffic originating from OpenAI SearchGPT, Perplexity AI, Claude, and Google AI Overviews, and report what we find.',
-  },
-  {
-    category: 'ai',
-    question: 'Can AI search engines replace traditional Google Maps for local queries?',
-    answer:
-      'No. AI search engines synthesize and cite verified local data from Google Maps, Apple Maps, Yelp, and official websites. Accurate local data helps you appear in both traditional and AI-driven searches.',
-  },
-  {
-    category: 'local',
-    question: 'What does local SEO involve for Huntington Beach cosmetic and medical practices?',
-    answer:
-      'For plastic surgeons, medical spas, and cosmetic dental practices across Huntington Beach, Newport Beach, and Costa Mesa, the work covers the Google Business Profile for the practice, a page for each procedure, and physician and procedure schema.',
-  },
-  {
-    category: 'local',
-    question: 'Can you optimize commercial contractors competing across Orange County?',
-    answer:
-      'Yes. We engineer comprehensive Service Area Business profiles and commercial contracting silos targeting Huntington Beach, Irvine, Anaheim, and surrounding coastal cities.',
-  },
-  {
-    category: 'local',
-    question: 'How do you target multiple Orange County coastal cities without keyword cannibalization?',
-    answer:
-      'We construct distinct, geo-targeted corridor pages with unique local proof points, localized customer testimonials, and specific municipal service coordinates that avoid internal ranking conflicts.',
-  },
-  {
-    category: 'local',
-    question: 'Can you help surf, action sports, and hospitality brands get found in local search?',
-    answer:
-      'Yes. We optimize local search profiles, retail store schemas, and map listings for surf shops, oceanfront dining venues, and action sports facilities across Surf City.',
-  },
-  {
-    category: 'deliverables',
-    question: 'What reports and dashboards will our team receive each month?',
-    answer:
-      'You receive access to a real-time geo-grid local rank tracking dashboard showing exact keyword positions across every Huntington Beach neighborhood, plus monthly conversion summaries detailing call volume and lead inquiries.',
-  },
-  {
-    category: 'deliverables',
-    question: 'Do we own all citations and profiles created during the campaign?',
-    answer:
-      'Yes, 100%. All directory listings, Google Business Profiles, and citation accounts belong exclusively to your business with full master ownership credentials.',
-  },
-  {
-    category: 'deliverables',
-    question: 'Who will be our primary point of contact during the engagement?',
-    answer:
-      'You work directly with a senior technical SEO engineer who leads the strategy, executes the code changes, and leads your monthly strategy review sessions.',
-  },
-  {
-    category: 'deliverables',
-    question: 'How do we get started with a Huntington Beach local SEO audit?',
-    answer:
-      'Schedule a free 30-minute local search audit. We will analyze your Google Business Profile, identify competitor gaps, and deliver an actionable ranking roadmap for your business.',
-  },
-  {
-    category: 'local',
-    question: 'How do you optimize for aerospace manufacturing and precision tooling along the Gothard corridor?',
-    answer:
-      'Huntington Beach is a major defense and aerospace manufacturing hub. We engineer technical B2B product catalogs, AS9100/ISO certification schema markup, and downloadable capability spec sheets that capture high-ticket procurement queries from defense contractors and tier-1 aerospace buyers nationwide.',
-  },
-  {
-    category: 'technical',
-    question: 'How do cosmetic surgery and elective medical practices capture high-value Orange County patients?',
-    answer:
-      'We deploy granular MedicalBusiness and Physician schemas, optimize doctor bio authority profiles with California Medical Board licensing data, build neighborhood landing pages for Pacific City and Bella Terra, and streamline verified Google patient reviews to compete for high-intent procedural queries.',
-  },
-  {
-    category: 'local',
-    question: 'How do you optimize for yacht brokerages and marine repair services in Huntington Harbour?',
-    answer:
-      'Huntington Harbour features exclusive waterfront residences and private boat slips. We structure specialized MarineBusiness schemas, boat inventory showcase pages, and localized Map Pack profiles capturing high-net-worth vessel sales, yacht maintenance, and slip leasing inquiries.',
-  },
-  {
-    category: 'technical',
-    question: 'How does Google Gemini and SearchGPT AI citation indexing work in Southern California?',
-    answer:
-      'Generative AI search platforms index clear entity relationships, verified state licensing records from the California Secretary of State, and direct answer-first content blocks. We format your service offerings and customer review data with granular JSON-LD markup to maximize AI conversational recommendations.',
-  },
-  {
-    category: 'deliverables',
-    question: 'What is NAP citation synchronization across Huntington Beach and Orange County directories?',
-    answer:
-      'We establish and synchronize verified business citations across essential regional platforms, including the Huntington Beach Chamber of Commerce, Orange County BBB, Apple Maps, Bing Places, YellowPages, and industry registries, checking that your details match, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
+    question: 'Is SEO dead in 2026, or still worth doing?',
+    answer: 'SEO is still worth doing, and our Huntington Beach check shows why. On 21 Oct 2026, the results for “huntington beach seo company” had a map pack with three businesses and ten normal results, and no AI Overview. The People Also Ask box listed “Is SEO dead or evolving in 2026?” as a question. The work now covers AI tools too, which read the same pages Google does.',
   },
 ];
 
@@ -724,7 +684,7 @@ export default function HuntingtonBeachSeoPage() {
                 What FactoryJet Does Differently for Huntington Beach Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace opaque monthly agency reports with reporting on completed work, calls and inquiries:
+                Each point below starts with something we measured in Huntington Beach Google results on 21 Oct 2026, then says what we change for a client here.
               </p>
             </div>
 
@@ -744,11 +704,11 @@ export default function HuntingtonBeachSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw in Huntington Beach search, 21 Oct 2026:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What we do about it:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -785,7 +745,7 @@ export default function HuntingtonBeachSeoPage() {
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                The four stages of work we follow for Google Maps listings and AI answer visibility:
+                Four stages, built around what Huntington Beach buyers search and what Google showed them on 21 Oct 2026.
               </p>
             </div>
 
@@ -849,7 +809,7 @@ export default function HuntingtonBeachSeoPage() {
                 Evaluating Huntington Beach SEO Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+                Ask any Huntington Beach SEO firm these four questions before you sign, and compare the answers to what we measured on 21 Oct 2026.
               </p>
             </div>
 

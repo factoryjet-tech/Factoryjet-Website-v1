@@ -287,6 +287,35 @@
 /us/services/ecommerce-development/:city /:city/ecommerce-development 301
 /us/services/ecommerce-development/:city/* /:city/ecommerce-development 301
 
+# ── INDEX QUALITY MERGES (2026-10-21) ────────────────────────────────────────
+# docs/reports/2026-10-21-index-quality-audit.md section 3. 18 thin or duplicate
+# pages Google dropped or never valued, merged into an indexed page. Every
+# target is a live page and no rule's source, so each is one hop. The 4 /us/
+# lines sit above the /us/* splat below so old URLs with GSC impressions skip
+# the 2-hop path. Cut those 4 first if rule bytes run short.
+/web-design/nagpur /web-design 301
+/web-design/noida /web-design 301
+/chattanooga/ecommerce-development /services/ecommerce-development 301
+/fargo/ecommerce-development /services/ecommerce-development 301
+/miami/ecommerce-development /services/ecommerce-development 301
+/sioux-falls/ecommerce-development /services/ecommerce-development 301
+/chattanooga/seo /services/local-seo 301
+/lincoln/seo /services/local-seo 301
+/blog/ai-automation-services-small-business-uk-2026 /blog/best-ai-automation-tools-small-business-uk-2026 301
+/blog/best-ecommerce-platform-tampa-boutiques-dtc-2026 /best-ecommerce-platforms 301
+/blog/custom-shopify-theme-development-us-brands-2026 /services/shopify-theme-development 301
+/blog/importance-of-website-maintenance-seo /services/website-maintenance 301
+/blog/nyc-b2b-corporate-web-design-guide-2026 /new-york/web-design 301
+/blog/raleigh-shopify-training-support-triangle-nc-2026 /raleigh/ecommerce-development 301
+/blog/shopify-store-development-uk-smbs-2026-guide /blog/custom-online-store-development-uk-smbs-2026 301
+/digital-marketing/chandigarh /digital-marketing 301
+/digital-marketing/indore /digital-marketing 301
+/digital-marketing/surat /digital-marketing 301
+/us/chattanooga/seo /services/local-seo 301
+/us/lincoln/seo /services/local-seo 301
+/us/chattanooga/ecommerce-development /services/ecommerce-development 301
+/us/sioux-falls/ecommerce-development /services/ecommerce-development 301
+
 # ── /us → root migration: US is now the primary domain (2026-07-01) ──────────
 # Every former /us/* path now lives at root. Keep permanently.
 /us/* /:splat 301

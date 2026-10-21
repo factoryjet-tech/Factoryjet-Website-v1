@@ -1304,8 +1304,8 @@ export default function ShopifyDevelopmentPage() {
     <h3 style={{ fontSize: '16px', marginTop: '40px', marginBottom: '16px' }}>Related reading</h3>
     <ul className="col-3">
       <li>
-        <a href="/blog/shopify-store-development-uk-smbs-2026-guide" className="blog-card">
-          <p>Shopify store development for UK small businesses: the 2026 guide</p>
+        <a href="/blog/custom-online-store-development-uk-smbs-2026" className="blog-card">
+          <p>Custom online store development for UK small businesses: the 2026 guide</p>
         </a>
       </li>
       <li>

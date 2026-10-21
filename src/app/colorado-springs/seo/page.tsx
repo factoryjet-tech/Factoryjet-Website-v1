@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/colorado-springs/seo';
 
 export const metadata: Metadata = {
@@ -146,243 +146,203 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Overcoming Map Pack Invisibility Across Pikes Peak Region Corridors',
-    problem: 'Outdated business listings, missing category signals, and zero review velocity leave your business invisible on the second and third pages of Google Maps.',
-    solution: 'We execute comprehensive Google Business Profile optimization, primary category audits, geotagged photo feeds, and automated review collection systems.',
+    title: 'Directories hold six of ten spots',
+    problem: 'Six of the top 10 organic results for "colorado springs seo company" on 21 Oct 2026 were lists or directories: Yelp, GoodFirms, two Semrush agency directory pages and two software agency roundups. Only four were actual business sites.',
+    solution: 'For a client here, we check which directories already rank for their own service search and get the business listed accurately on those pages. A buyer who lands on Yelp or GoodFirms first should still find you there.',
   },
   {
     num: '02',
-    title: 'Fixing Slow Legacy Code and Technical Debt That Destroys Rankings',
-    problem: 'Bloated WordPress plugins, sluggish server hosting, and missing schema markup prevent search engine bots and AI assistants from indexing your pages.',
-    solution: 'We work on page load speed, clean JSON-LD entity schema, and single-hop crawl architecture so search engines and AI assistants can crawl and read your pages.',
+    title: 'The map pack runs on reviews',
+    problem: 'The three businesses in the Google map pack on that search had 83, 50 and 120 reviews, rated 5, 4.9 and 4.8 stars. A profile with a dozen reviews starts far behind that line.',
+    solution: 'We count the reviews held by the three map pack businesses for your trade, then set a monthly review target and a simple request routine for your staff. Your Google Business Profile stays in your name.',
   },
   {
     num: '03',
-    title: 'Ending Locked 12-Month Contracts with Zero Transparent Lead Attribution',
-    problem: 'Traditional agencies lock Colorado Springs businesses into rigid annual retainers while delivering meaningless keyword ranking screenshots instead of qualified leads.',
-    solution: 'FactoryJet operates on flexible month-to-month agreements. We track real phone calls, form completions, and qualified pipeline revenue with custom GA4 events.',
+    title: '"Local" wording outsearches "company"',
+    problem: 'Google Ads data on 21 Oct 2026 showed about 880 monthly US searches for "colorado springs local seo" against about 720 for "colorado springs seo company" and about 70 for "colorado springs seo services".',
+    solution: 'We pull the same volume data for your service before any page is written. Titles and headings use the wording people in Colorado Springs type most, checked against the actual numbers.',
   },
   {
     num: '04',
-    title: 'Capturing High-Value Geo-Targeted Commercial Keywords in El Paso County',
-    problem: 'Relying solely on broad city-level terms causes businesses to miss high-intent searches across Briargate, Falcon, Fountain, and Monument.',
-    solution: 'We build structured local service area landing pages and localized content silos that capture micro-corridor search volume throughout the Pikes Peak region.',
+    title: 'No AI Overview, no question box',
+    problem: 'That search showed no AI Overview and no People Also Ask box on 21 Oct 2026. Google gave buyers ten links and a map, so each page has to answer questions itself.',
+    solution: 'We write plain question and answer blocks on your service pages, with FAQ schema built from the same text. If Google or ChatGPT starts summarizing this search, your answers are ready to be quoted.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Month 1',
-    title: 'Full Technical Audit, Core Web Vitals Fixes & GBP Baseline',
-    desc: 'We conduct a line-by-line audit of your website code, crawl depth, indexing health, server response times, and current Google Business Profile status. We resolve all technical errors, repair broken redirects, clean up duplicate citations, and establish baseline conversion tracking in Google Analytics 4.',
-    deliverables: [
-      'Comprehensive 50-point technical SEO and crawlability audit report',
-      'Core Web Vitals code refactoring targeting sub-second LCP and zero CLS',
-      'Google Business Profile category audit, address verification, and metadata cleanup',
-      'Custom phone call, form submission, and live chat conversion tracking setup',
-    ],
+    title: 'Measure your search market',
+    desc: 'We pull monthly volumes for your service plus Colorado Springs, check who holds the map pack, and record which directories rank above you.',
+    deliverables: ['Search volume sheet for your service', 'Map pack review count comparison', 'Directory listing gap list'],
   },
   {
     phase: 'Month 2',
-    title: 'Local Citation Architecture, Review Systems & Entity Schema',
-    desc: 'We rebuild your local citation footprint across essential Tier 1 business directories, mapping your Name, Address, and Phone number with complete consistency. In parallel, we deploy structured JSON-LD LocalBusiness schema and launch automated review generation workflows.',
-    deliverables: [
-      'Cleanup and synchronization across 40+ premier local business directories',
-      'Implementation of exhaustive nested JSON-LD schema markup',
-      'Automated SMS and email review collection system deployment',
-      'Competitive gap analysis against top 3 Colorado Springs Map Pack leaders',
-    ],
+    title: 'Fix the profile and site',
+    desc: 'We correct your Google Business Profile, Bing Places and Apple Business Connect details, then fix the site problems that block calls and form fills.',
+    deliverables: ['Profile fixes across three map platforms', 'Conversion audit with ranked fixes', 'Schema matched to visible text'],
   },
   {
     phase: 'Month 3',
-    title: 'Corridor Landing Pages & Pikes Peak Content Silo Expansion',
-    desc: 'We architect and publish high-converting, answer-first landing pages tailored to specific Colorado Springs business corridors and surrounding suburbs. Each page is engineered with distinct geographic schema, localized proof points, and targeted commercial copy.',
-    deliverables: [
-      'Launch of dedicated neighborhood service pages for key target areas',
-      'Publishing of detailed service category guides and comparison matrices',
-      'On-page internal linking optimization across core commercial URLs',
-      'First quarterly ranking progress review and pipeline attribution report',
-    ],
+    title: 'Write pages for real areas',
+    desc: 'We write service pages for the areas you serve, such as Briargate, Falcon, Fountain and Monument, for trades like HVAC, roofing and accounting.',
+    deliverables: ['Area pages with real job details', 'FAQ blocks answering buyer questions', 'Copy written at plain reading level'],
   },
   {
     phase: 'Months 4 to 6',
-    title: 'Authority Link Acquisition, AI Engine Optimization & Scale',
-    desc: 'We build high-quality contextual backlinks from reputable Colorado publications, industry associations, and regional business hubs. We optimize content structure to trigger direct citations across generative AI search platforms including ChatGPT, Perplexity, and Google AI Overviews.',
-    deliverables: [
-      'Targeted local digital PR and editorial backlink acquisition',
-      'Generative Engine Optimization formatting for AI answer citation',
-      'Ongoing Map Pack rank tracking and competitor defense updates',
-      'Monthly executive strategy meetings with senior technical engineers',
-    ],
+    title: 'Report and adjust monthly',
+    desc: 'From month 4 we report calls, form fills and searches you showed for, then quote the next change for your approval.',
+    deliverables: ['Monthly calls and leads report', 'Competitor review count check', 'Next change quoted for approval'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Contract Flexibility',
-    factoryjet: 'Month-to-month agreements based on performance and trust.',
-    traditional: 'Rigid 6 to 12 month binding contracts with steep cancellation fees.',
+    label: 'Which directories rank for my search?',
+    factoryjet: 'We name them. On 21 Oct 2026, six of the top 10 results for "colorado springs seo company" were lists like Yelp, GoodFirms and Semrush\'s agency directory.',
+    traditional: 'A promise to rank your homepage, with no mention of the directory pages already taking most of the clicks.',
   },
   {
-    label: 'Team Seniority',
-    factoryjet: 'Direct access to senior software engineers and technical SEO architects.',
-    traditional: 'Junior account coordinators acting as communication intermediaries.',
+    label: 'How many reviews do I need?',
+    factoryjet: 'We count the reviews of the three map pack businesses for your trade. For SEO firms here that was 50 to 120 on 21 Oct 2026.',
+    traditional: '"More reviews help," with no number, no comparison and no plan for asking customers.',
   },
   {
-    label: 'Technical Implementation',
-    factoryjet: 'We write and deploy clean code directly to your Next.js or CMS repository.',
-    traditional: 'Provides spreadsheets of generic recommendations for your team to code.',
+    label: 'Who owns the work if I leave?',
+    factoryjet: 'You do. Your profile, pages, schema and content stay yours, and there is no long-term contract to break.',
+    traditional: 'Pages hosted on the agency\'s own platform, or a 12-month agreement with an exit fee.',
   },
   {
-    label: 'Lead Attribution',
-    factoryjet: 'Monitors real phone calls, qualified form leads, and closed pipeline value.',
-    traditional: 'Reports on keyword impressions and unverified ranking screenshots.',
-  },
-  {
-    label: 'Data & Account Ownership',
-    factoryjet: 'You maintain 100% ownership of your accounts, analytics data, and code.',
-    traditional: 'Holds landing pages and tracking accounts hostage inside proprietary tools.',
-  },
-  {
-    label: 'AI & Generative Search',
-    factoryjet: 'Builds entity graph schema formatted for ChatGPT, Perplexity, and Google AI.',
-    traditional: 'Relies on outdated 2018 keyword stuffing and doorway page tactics.',
+    label: 'What will you report each month?',
+    factoryjet: 'Calls, form fills and the searches you appeared for, plus the next change and its quoted price for you to approve.',
+    traditional: 'A traffic chart and a keyword list, with no link to calls or booked jobs.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Pricing & Contracts' },
-  { key: 'local', label: 'Local Map Pack & GBP' },
-  { key: 'technical', label: 'Technical SEO & AI' },
-  { key: 'timeline', label: 'Timeline & ROI' },
+  { key: 'pricing', label: 'Cost' },
+  { key: 'local', label: 'Colorado Springs search' },
+  { key: 'trades', label: 'HVAC, contractors and firms' },
+  { key: 'audits', label: 'Audits and competitors' },
+  { key: 'process', label: 'Working with FactoryJet' },
 ];
 
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does SEO cost in Colorado Springs CO?',
-    answer:
-      'US small businesses typically pay $1,500 to $3,500 a month for SEO, according to WebFX pricing data updated in October 2026. WebFX puts local SEO retainers at $500 to $3,000 a month. What a Colorado Springs business pays depends on how competitive the sector is, how many locations it has and the condition of the website. FactoryJet quotes a fixed price in writing after a short scoping call and works on month-to-month terms.',
+    question: 'How much does SEO cost for a small business in Colorado Springs?',
+    answer: 'Most small businesses pay $1,500 to $3,500 a month for SEO, according to WebFX SEO pricing updated Sep 2026. Local SEO alone costs less. WebFX lists local retainers at about $500 to $3,000 a month. The right figure depends on how many services and areas you want to show up for. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Why do you offer month-to-month terms instead of 12-month contracts?',
-    answer:
-      'We believe client retention should be earned through measurable lead generation and ranking improvements rather than legal lock-ins. Month-to-month agreements keep our engineering team accountable to driving real business pipeline every 30 days.',
+    question: 'Is it cheaper to run Google Ads than pay for SEO here?',
+    answer: 'Not for long. Google Ads suggests about $39.19 a click for "colorado springs seo" (21 Oct 2026). A trade with similar bids pays that every time someone clicks. SEO work costs money up front, but a page that ranks keeps getting visits without a per-click charge. Many businesses run both: ads for fast calls, SEO for steady calls later.',
   },
   {
     category: 'pricing',
-    question: 'What hidden fees or setup costs should Colorado Springs businesses watch out for?',
-    answer:
-      'Many traditional agencies bill extra onboarding fees, charge separately for basic Google Business Profile setup, or invoice additional hourly rates for technical code adjustments. With FactoryJet, your monthly rate covers complete technical execution, on-page optimization, content production, citation management, and conversion tracking with zero unexpected surcharges.',
+    question: 'What does a one-time SEO audit cost?',
+    answer: 'Most businesses pay $101 to $750 for a one-time SEO audit, according to WebFX, which found 43% of businesses in that band. An audit is a check of your site and listings that lists what is broken and what to fix first. A one-time local SEO project runs $500 to $5,000 per WebFX. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'How do I compare quotes from different Colorado Springs SEO companies?',
-    answer:
-      'Compare deliverables, team seniority, and account ownership. Verify whether technical code fixes are included or billed extra, whether you will speak directly with an engineer or an account manager, and confirm that you retain 100% ownership of your content, code, and analytics data.',
+    question: 'What do other SEO providers charge on average?',
+    answer: 'An Ahrefs survey of 439 providers found an average of $2,917 a month for SEO and $1,557 a month for local SEO. Those are national averages, so a Colorado Springs plumber and a Denver law firm both sit inside them. Ask any firm to break its price into hours and tasks. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'local',
-    question: 'How do we get our Colorado Springs business into the Google 3-Pack Map results?',
-    answer:
-      'Winning the Google Map Pack requires an accurate primary category selection, complete service menus, consistent Name-Address-Phone (NAP) citations, steady customer review acquisition, and high domain authority from a fast, technically optimized website.',
+    question: 'How many people search for SEO help in Colorado Springs?',
+    answer: 'About 2,900 people a month search "colorado springs seo" in the US, per Google Ads data we pulled on 21 Oct 2026. About 880 search "colorado springs local seo" and about 720 search "colorado springs seo company". Google groups close variants, so "seo colorado springs" shows the same 2,900. Those numbers tell you which words to put in your page titles.',
   },
   {
     category: 'local',
-    question: 'Can you rank our business in surrounding towns like Monument, Falcon, and Fountain?',
-    answer:
-      'Yes. We architect dedicated geographic service area landing pages and localized schema markup targeting Greater El Paso County areas including Monument, Falcon, Fountain, Manitou Springs, and Woodland Park.',
+    question: 'Why do Yelp and directory lists show up above SEO companies?',
+    answer: 'Google trusts large list sites for "best" and "company" searches. On 21 Oct 2026, six of the top 10 results for "colorado springs seo company" were lists: Yelp, GoodFirms, two Semrush agency directory pages and two software agency roundups. The same pattern shows up for many trades. That is why we get clients listed correctly on the directories that rank for their own service.',
   },
   {
     category: 'local',
-    question: 'How important are Google reviews for Colorado Springs local rankings?',
-    answer:
-      'Google describes local results in terms of relevance, distance, and prominence. Reviews can help customers evaluate a business and contribute to prominence, but they do not remove the effect of distance. We help you request honest feedback consistently, without incentives or filtering customers by how positively they respond.',
+    question: 'How many Google reviews do I need to show up in the map results?',
+    answer: 'Enough to sit near the businesses already there. The map results are the three businesses Google shows beside a map. For "colorado springs seo company" on 21 Oct 2026, those three had 83, 50 and 120 reviews. Your trade will have its own line. We count it for your search, then set a monthly target you can reach with steady asking.',
   },
   {
     category: 'local',
-    question: 'What is the difference between Google Map Pack SEO and organic website SEO?',
-    answer:
-      'Google Map Pack SEO focuses on the localized 3-Pack box displayed at the top of local search results, driven by your Google Business Profile, geographic proximity, citations, and reviews. Organic website SEO focuses on the traditional search listings beneath the map, driven by technical site speed, deep content silos, structured data, and high-authority backlinks. A successful campaign optimizes both layers in unison.',
-  },
-  {
-    category: 'technical',
-    question: 'What is technical SEO and why is it essential for Colorado Springs businesses?',
-    answer:
-      'Technical SEO optimizes site architecture, mobile responsiveness, server speed, Core Web Vitals, and structured JSON-LD schema markup. Without a strong technical foundation, Google and AI search engines cannot crawl or rank your content effectively.',
-  },
-  {
-    category: 'technical',
-    question: 'How do you optimize Colorado Springs websites for Google AI Overviews and ChatGPT search?',
-    answer:
-      'We format content using answer-first prose, authoritative factual data, structured schema entities, and clean semantic HTML. This enables AI search engines like Perplexity, ChatGPT Search, and Google AI Overviews to parse and quote your brand directly.',
-  },
-  {
-    category: 'technical',
-    question: 'Why does website loading speed directly impact Google search rankings?',
-    answer:
-      'Page experience and Core Web Vitals are among the signals Google can use, but speed alone does not determine rankings. A faster mobile experience also makes it easier for visitors to read, call, or submit a form. We improve performance because it supports both search visibility and conversion, without promising that one speed score will produce a particular position.',
-  },
-  {
-    category: 'technical',
-    question: 'What structured data schema do you implement on local Colorado Springs websites?',
-    answer:
-      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, MedicalClinic, GovernmentOrganization, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
-  },
-  {
-    category: 'timeline',
-    question: 'How long does it take to see organic ranking improvements in Colorado Springs?',
-    answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
-  },
-  {
-    category: 'timeline',
-    question: 'How do you track and report SEO return on investment (ROI)?',
-    answer:
-      'We track real commercial outcomes: phone call leads, form submissions, online appointment bookings, and organic revenue via custom Google Analytics 4 event tracking and Google Search Console data.',
-  },
-  {
-    category: 'timeline',
-    question: 'Will algorithm updates from Google disrupt our search rankings?',
-    answer:
-      'They can. Google core updates move rankings for many sites, and no agency controls them. Our work stays inside Google guidelines. That means clean site architecture, authentic local citations and original content, with no link networks or thin automated copy. After each update we check your rankings and inquiries and tell you what changed.',
-  },
-  {
-    category: 'timeline',
-    question: 'Can SEO replace our paid Google Ads spend in Colorado Springs?',
-    answer:
-      'It can reduce how much you rely on ads, but it rarely replaces them outright. Google Ads buy visibility for as long as you pay per click. SEO work on your site and listings stays in place after it is done. We report calls and inquiries from organic search each month, so you can decide whether and when to move ad budget.',
+    question: 'What is local SEO and how is it different from regular SEO?',
+    answer: 'Local SEO is work that helps you appear when people nearby search for your service. It covers your Google Business Profile, reviews, directory listings and pages for the areas you serve. Regular SEO aims at searches anywhere. In Colorado Springs, "colorado springs local seo" gets about 880 searches a month (21 Oct 2026), so many buyers already think in local terms.',
   },
   {
     category: 'local',
-    question: 'How do you optimize for defense contractors and cybersecurity firms near Peterson SFB and Schriever?',
-    answer:
-      'Defense technology contractors, cybersecurity consultancies, and aerospace engineering providers in Colorado Springs operate under strict security and procurement standards. We build specialized B2B content hubs highlighting CMMC 2.0 readiness, ISO 9001/AS9100 certifications, cage codes, and NAICS codes with structured Organization and GovernmentPermit schemas.',
+    question: 'Can my business show up in Monument, Falcon and Fountain too?',
+    answer: 'Yes, if you serve those towns and say so clearly. Google looks at where you are, the area you list on your profile, and pages that describe work you do in each place. We write one page per area with real details, like the jobs you do there and how you reach customers. Thin copies of the same page with a town name swapped do not help.',
   },
   {
     category: 'local',
-    question: 'How do you handle urgent storm hail damage search spikes for local roofing contractors?',
-    answer:
-      'Pikes Peak region weather brings sudden hail and wind storm events that trigger sharp surges in emergency roofing and storm restoration searches across Falcon, Briargate, and Fountain. We build pre-optimized storm response landing pages and automated Google Business Profile update workflows to capture peak hail-repair demand instantly.',
+    question: 'Did Google show an AI answer for Colorado Springs SEO searches?',
+    answer: 'No. On 21 Oct 2026, the search "colorado springs seo company" showed no AI Overview and no People Also Ask box. An AI Overview is the summary Google sometimes writes above the links. We still write pages with short, direct answers and matching FAQ schema, so they are ready to be quoted if Google or ChatGPT starts summarizing these searches.',
   },
   {
-    category: 'technical',
-    question: 'How does Google Gemini AI Overview citation indexing work for Olympic City businesses?',
-    answer:
-      'Generative AI search platforms analyze authoritative entity relationships, verified local business citations, and structured JSON-LD schemas. We engineer answer-first content blocks, transparent pricing ranges, and verified customer testimonials so Google Gemini, ChatGPT, and Perplexity can read and cite your company in conversational answers.',
+    category: 'trades',
+    question: 'How does SEO work for an HVAC company in Colorado Springs?',
+    answer: 'HVAC SEO starts with the map results, because people with a broken furnace call whoever shows up first. We fix your Google Business Profile, set a review target based on the map leaders for your search, and write pages for each service, like furnace repair or AC installation. Each page names the areas you cover, such as Briargate or Falcon, and has a click-to-call button.',
   },
   {
-    category: 'local',
-    question: 'How do you capture military relocation and family service inquiries near Fort Carson?',
-    answer:
-      'With significant active-duty military and veteran populations across Fort Carson, Peterson Space Force Base, and the US Air Force Academy, we develop dedicated military relocation guides and VA-approved service pages optimized for service members transitioning to El Paso County.',
+    category: 'trades',
+    question: 'What should a contractor\'s website have to get more calls?',
+    answer: 'A phone number at the top of every page, one page per service, and photos of real local jobs. Add short answers to the questions homeowners ask, like cost ranges and how fast you can come out. In Colorado Springs, list the areas you serve by name. We check each of these during an audit and fix the ones that are missing.',
   },
   {
-    category: 'technical',
-    question: 'What is NAP citation synchronization across Colorado Springs and Front Range directories?',
-    answer:
-      'We establish and maintain consistent business citations across major regional platforms, including the Colorado Springs Chamber & EDC, Better Business Bureau of Southern Colorado, Apple Maps, Bing Places, and Yelp, preventing map pin duplication and strengthening local 3-Pack authority.',
+    category: 'trades',
+    question: 'Do roofers need different SEO after a hail storm?',
+    answer: 'Yes. Storm searches can jump fast and fade within weeks. A roofer needs a storm repair page live before the season, with insurance claim steps, the areas you cover, and a call button. We also post updates to your Google Business Profile during busy weeks. Review requests matter most right after jobs, when customers are happy and remember you.',
+  },
+  {
+    category: 'trades',
+    question: 'Can you do SEO for a CPA or accounting firm in Colorado Springs?',
+    answer: 'Yes. Accounting firms win on trust, so we start with a complete Google Business Profile, reviews and clear service pages for tax prep, bookkeeping and small business accounting. We add plain answers to the questions clients ask before tax season. We also make sure each partner\'s credentials appear as visible text on the page, since Google reads that.',
+  },
+  {
+    category: 'trades',
+    question: 'Is there SEO software that can do this for a small business?',
+    answer: 'Software helps you track rankings and find site errors, but it does not write your pages, ask customers for reviews or fix your profile. Tools like Semrush and Ahrefs show data. Someone still has to act on it. Many small businesses use a tool for tracking and pay for the writing and fixes. We report from the same kind of data each month.',
+  },
+  {
+    category: 'audits',
+    question: 'What is a website conversion audit?',
+    answer: 'A conversion audit checks why visitors leave without calling or filling in a form. We look at load speed on phones, where the phone number sits, how long the form is, and whether each page says clearly what you do and where. You get a ranked list of fixes. Most cost little and can go live within days.',
+  },
+  {
+    category: 'audits',
+    question: 'How do you study my competitors in Colorado Springs?',
+    answer: 'We search your main service plus "Colorado Springs" from a Colorado Springs location, then record who holds the map results, their review counts, and which directories rank. For SEO firms on 21 Oct 2026, that showed 6 directories in the top 10 and map leaders with 50 to 120 reviews. You get the same table for your own trade.',
+  },
+  {
+    category: 'audits',
+    question: 'What does a Colorado Springs SEO audit include?',
+    answer: 'An SEO audit checks your site, your Google Business Profile and your listings for problems that keep you out of search. We look at page titles, broken links, speed, schema and duplicate pages. We also compare your reviews to the map leaders for your service. The result is a short list of fixes in order, with the reason for each.',
+  },
+  {
+    category: 'audits',
+    question: 'Do you offer SEO copywriting?',
+    answer: 'Yes. We write service pages, area pages and FAQ answers in short sentences that customers understand on a phone screen. Each page uses the words people in Colorado Springs type, such as "colorado springs local seo" at about 880 searches a month (21 Oct 2026), without stuffing them in. Jargon gets explained the first time it appears. You approve every page before it goes live.',
+  },
+  {
+    category: 'process',
+    question: 'How long does it take to see results from local SEO?',
+    answer: 'Profile fixes and new reviews tend to move first, because the map results react to your Google Business Profile. New pages take longer to settle in Google results, and searches with more competition take longest. That is why our roadmap runs six months. We report calls and form fills each month so you can see what is moving. No honest firm can promise a ranking date.',
+  },
+  {
+    category: 'process',
+    question: 'Do I have to sign a long-term SEO contract?',
+    answer: 'No. FactoryJet has no long-term contract. Each change is quoted and approved before we start. Your Google Business Profile, pages, schema and content stay yours if you stop working with us. Founder Bhavesh Barot replies to new inquiries within 24 hours. FactoryJet was founded in 2014 and has worked with 500+ businesses, with 97% on-time delivery.',
+  },
+  {
+    category: 'process',
+    question: 'Can local SEO work be done without meeting in person?',
+    answer: 'Yes. We work remotely with US clients and schedule calls in US business hours. You get video calls, shared documents and a written monthly report. Founder Bhavesh Barot replies within 24 hours. Local search work runs through your Google Business Profile, your site and online directories, so none of it needs a visit to your office.',
+  },
+  {
+    category: 'process',
+    question: 'What do I need to give you to get started?',
+    answer: 'Manager access to your Google Business Profile, access to your website, and a list of the services and areas you want to show up for. A short scoping call covers your goals and your busiest season. FactoryJet then quotes a fixed price in writing. We also do white-label work for agencies. Work starts once you approve the quote.',
   },
 ];
 
@@ -734,7 +694,7 @@ export default function ColoradoSpringsSeoPage() {
                 What FactoryJet Does Differently for Colorado Springs Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace opaque agency retainers with transparent, engineering-driven search performance:
+                On 21 Oct 2026 we pulled the Google results for "colorado springs seo company" from inside Colorado Springs, and four findings shape how we work here.
               </p>
             </div>
 
@@ -754,11 +714,11 @@ export default function ColoradoSpringsSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw in Colorado Springs search, 21 Oct 2026:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What we do about it:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -795,7 +755,7 @@ export default function ColoradoSpringsSeoPage() {
                 Our 6-Month Colorado Springs SEO Roadmap
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A step-by-step roadmap of the work, month by month:
+                A six-month roadmap built around what Colorado Springs buyers search and the trades that search hardest here.
               </p>
             </div>
 
@@ -859,7 +819,7 @@ export default function ColoradoSpringsSeoPage() {
                 Evaluating Colorado Springs SEO Companies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led execution against traditional marketing agency retainers before you sign:
+                Ask any Colorado Springs SEO firm these four questions before you sign, and compare the answers to what the local results show.
               </p>
             </div>
 

@@ -12,7 +12,7 @@ import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-09-13';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/denver/seo';
 
 export const metadata: Metadata = {
@@ -50,10 +50,30 @@ const SEO_TOOLS = [
 ];
 
 const STAT_CARDS = [
-  { num: 'Maps', title: 'Business Profile Review', desc: 'Review your categories, services, and business details against what customers need to find.', icon: '📍' },
-  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Identify the calls and website inquiries that matter to your business and plan how to measure them.', icon: '📈' },
-  { num: 'Data', title: 'Listing Consistency', desc: 'Check your business name, address, and phone number across your website and business listings.', icon: '🛡️' },
-  { num: 'Site', title: 'Technical SEO Review', desc: 'Find crawl issues, unclear service pages, and usability problems that get between a search and an inquiry.', icon: '⚡' },
+  {
+    num: 'Maps',
+    title: 'Business Profile Review',
+    desc: 'Category, services, hours and service area checked against the Denver map pack for your terms.',
+    icon: '📍',
+  },
+  {
+    num: 'Leads',
+    title: 'Inquiry Tracking',
+    desc: 'Calls, forms and bookings agreed up front, so every report counts the same things.',
+    icon: '📈',
+  },
+  {
+    num: 'Data',
+    title: 'Listing Consistency',
+    desc: 'Your details on Apple Maps, Bing, Yelp and Facebook matched to your profile, one listing at a time.',
+    icon: '🛡️',
+  },
+  {
+    num: 'Site',
+    title: 'Technical SEO Review',
+    desc: 'Pages Google cannot read, slow mobile templates and broken redirects, each named with its URL.',
+    icon: '⚡',
+  },
 ];
 
 const DISTRICTS = [
@@ -147,77 +167,82 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
-    problem: 'Traditional Denver agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
-    solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
+    title: 'Two Facebook posts made page one',
+    problem: 'On 21 Oct 2026 we searched "local seo denver" from a Denver location. Two of the top ten results were Facebook posts. A Semrush list of Colorado agencies, a company database and a designers directory took three more spots.',
+    solution: 'Half of page one was not an agency website. Google indexes public posts and directories, so your Facebook page and directory listings need the same name, phone and services as your Business Profile. We check each one.',
   },
   {
     num: '02',
-    title: 'Eliminating Risky PBN Links & Automated Citation Spam',
-    problem: 'Cheap agencies build spammy automated citations and private blog network links that trigger Google algorithmic penalties and destroy your domain authority.',
-    solution: 'We implement 100% white-hat local entity optimization, syncing direct with Google Business Profile API, Apple Business Connect, and tier-one local publications.',
+    title: 'The map pack ran from 6 reviews to 80',
+    problem: 'The three map results for that search had 6, 80 and 54 Google reviews. The 6-review business held its place next to firms with nine and thirteen times as many.',
+    solution: 'Google says local ranking rests on relevance, distance and how well known a business is. Reviews feed the last one. Category, services and the page your profile points to feed the first, and that is where we start.',
   },
   {
     num: '03',
-    title: 'Fixing Inconsistent NAP Data Across Duplicate Profiles',
-    problem: 'Duplicate or outdated listings with conflicting phone numbers and suite addresses confuse search engine crawlers and split your local ranking signals.',
-    solution: 'We execute complete citation deduplication and NAP synchronization across all major data aggregators, establishing clean, authoritative entity signals.',
+    title: 'No AI Overview, no questions box',
+    problem: 'For that search Google showed the map pack, ten regular results and related searches. No AI Overview appeared, and no People Also Ask box.',
+    solution: 'For local service searches in Denver, the map and the regular results still decide who gets the call. We put the first months of work there, then check AI assistants separately with your buyers\' own questions.',
   },
   {
     num: '04',
-    title: 'Optimizing for AI Answer Engines & SearchGPT Citations',
-    problem: 'Basic SEO tactics ignore generative AI engines like ChatGPT, Claude, and Perplexity, causing your business to be omitted from conversational recommendations.',
-    solution: 'We structure your content with deep semantic entities, speakable markup, and question-answering schemas that position your firm as the verified local authority.',
+    title: 'Denver searchers ask for audits',
+    problem: 'Search Console for this page shows a run of audit searches: "denver seo audit", "local seo audit denver" and "denver website seo audit service", along with "google maps optimization denver".',
+    solution: 'Denver owners want to know what is wrong before they pay for a plan. Our audit is free and written so you can act on it with or without us. It covers your profile, listings, pages and technical health.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Phase 01',
-    title: 'Local Entity & Citation Audit',
-    desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
-    deliverables: ['Google Maps rank grid scan across the Denver metro', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+    title: 'Free audit and quick fixes',
+    desc: 'We compare your profile, listings and pages with the Denver businesses ranking for your terms, then fix the problems that cost calls.',
+    deliverables: ['Audit with a ranked fix list', 'Category, hours and services corrected'],
   },
   {
     phase: 'Phase 02',
-    title: 'Google Business Profile & On-Page Geo-Optimization',
-    desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
-    deliverables: ['GBP category and attribute optimization', 'LocalBusiness and Service schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+    title: 'Listings and locations',
+    desc: 'We match your details across Apple Maps, Bing, Yelp and Facebook. Multi-location Colorado businesses get one profile and one page per site.',
+    deliverables: ['Listing log you can check', 'Location pages for each verified site'],
   },
   {
     phase: 'Phase 03',
-    title: 'Tier-One Citation Sync & Local PR Distribution',
-    desc: 'We synchronize your verified business data across major directories and secure localized editorial placements to build genuine regional authority.',
-    deliverables: ['Direct API sync with Apple, Bing & Google', 'Tier-one directory citations (Data Axle, Neustar)', 'Localized press release and editorial outreach', 'Review velocity and response workflow setup'],
+    title: 'Pages for the areas you serve',
+    desc: 'We write service pages and area pages for the parts of the metro where you take work, from Golden to Commerce City.',
+    deliverables: ['Service pages with your own project detail', 'Area pages only where you serve'],
   },
   {
     phase: 'Phase 04',
-    title: 'Rank Defense, AI Citation Monitoring & Expansion',
-    desc: 'We track daily local 3-Pack movements, monitor AI search citations, protect against competitor spam, and expand into neighboring suburban corridors.',
-    deliverables: ['Weekly geo-grid rank tracking reports', 'SearchGPT and Perplexity citation audits', 'Spam listing monitoring and resolution', 'Quarterly local market expansion roadmap'],
+    title: 'Reviews, tracking and AI checks',
+    desc: 'We set up review requests, call and form tracking, and a monthly check of what AI assistants say about you.',
+    deliverables: ['Review request routine', 'Monthly note: work done, calls, forms'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Ranking Target',
-    factoryjet: 'Qualified calls and inquiries from the local searches that matter to your business.',
-    traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
+    label: 'Switching Providers',
+    factoryjet: 'Admin access to every account stays with you, and nothing we build is removed if you leave.',
+    traditional: 'Ask: "If we leave, which accounts and pages do we keep?"',
   },
   {
-    label: 'Structured Data',
-    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, FAQPage).',
-    traditional: 'Basic WordPress SEO plugin meta tags without connected entity graphs or practitioner credentials.',
+    label: 'Multi-Location',
+    factoryjet: 'One verified profile and one page per location, each with its own details and photos.',
+    traditional: 'Ask: "How will you handle each of our Colorado locations?"',
   },
   {
-    label: 'Citation Quality',
-    factoryjet: 'Direct API synchronization with major data providers and verified local chamber/industry publications.',
-    traditional: 'Automated spam submissions to hundreds of low-quality link directories that risk Google penalties.',
+    label: 'Audit Scope',
+    factoryjet: 'Profile, listings, pages and technical health. Free, with read-only Search Console access.',
+    traditional: 'Ask: "What does your audit check, and what access do you need for it?"',
   },
   {
-    label: 'AI Search Preparedness',
-    factoryjet: 'Semantic entity engineering optimized for ChatGPT Search, Perplexity AI, and Google AI Overviews.',
-    traditional: 'Outdated keyword stuffing techniques with no consideration for conversational search platforms.',
+    label: 'Expected Results',
+    factoryjet: 'A dated fix list and monthly calls and forms. No ranking guarantee.',
+    traditional: 'Ask: "What results should we expect, and when?"',
+  },
+  {
+    label: 'Local Proof',
+    factoryjet: 'Yes. We pull the live results from a Denver location in the first call.',
+    traditional: 'Ask: "Can you show who ranks for our terms in Denver right now?"',
   },
 ];
 
@@ -231,148 +256,74 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
 
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   {
-    category: 'local',
-    question: 'How do we get our Denver business into the top 3 Google Map Pack results?',
-    answer:
-      'Securing a top 3 spot in the Denver Google Map Pack requires four synchronized actions: selecting the primary Google Business Profile category with the highest transaction intent, maintaining exact Name-Address-Phone (NAP) consistency across major Tier 1 directories, maintaining a steady velocity of authentic customer reviews, and building localized domain authority through a fast website backed by structured LocalBusiness schema.',
-  },
-  {
-    category: 'local',
-    question: 'How do you optimize our Google Business Profile for maximum Front Range reach?',
-    answer:
-      'We audit and configure primary and secondary categories, craft service-specific business descriptions, upload geo-tagged photo assets, build product and service catalogs, and configure automated post-service review request workflows.',
-  },
-  {
-    category: 'local',
-    question: 'How important are Google customer reviews for local search rankings in Denver?',
-    answer:
-      'Google customer reviews are one of the most powerful direct ranking factors in local search algorithms. Both review volume and the frequency of new reviews directly expand your Map Pack proximity radius. We help your team implement automated post-service SMS and email review collection workflows that generate authentic feedback.',
-  },
-  {
-    category: 'local',
-    question: 'How do service-area businesses without a public storefront rank in Denver?',
-    answer:
-      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your private address while establishing explicit service boundaries across your target Denver ZIP codes, Arapahoe County, and surrounding Front Range municipalities.',
-  },
-  {
-    category: 'technical',
-    question: 'What structured JSON-LD schemas do you implement on Denver websites?',
-    answer:
-      'We deploy comprehensive server-rendered schemas including LocalBusiness, LegalService, MedicalProcedure, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and BreadcrumbList schemas.',
-  },
-  {
-    category: 'technical',
-    question: 'How do you optimize websites for Google AI Overviews and SearchGPT citations?',
-    answer:
-      'Generative AI search platforms extract facts from websites with clear entity relationships, concise answer-first prose, authoritative data points, and semantic HTML markup. We structure your content using direct informational answers, structured comparison tables, and detailed entity schemas so AI engines can effortlessly parse, cite, and reference your business.',
-  },
-  {
-    category: 'technical',
-    question: 'Why does website loading speed directly impact Google local search rankings?',
-    answer:
-      'Page experience and Core Web Vitals are among the signals Google can use, but speed alone does not determine rankings. A faster mobile experience also makes it easier for visitors to read, call, or submit a form. We improve performance because it supports both search visibility and conversion, without promising that one speed score will produce a particular position.',
-  },
-  {
-    category: 'technical',
-    question: 'What is technical SEO and why is it critical for competitive Denver businesses?',
-    answer:
-      'Technical SEO optimizes the fundamental software architecture of your website. It encompasses server response speed, crawl budget optimization, mobile layout stability, internal link architecture, and nested JSON-LD schema markup. In competitive markets like Denver, minor technical defects like slow JavaScript execution can prevent search engines from indexing your high-value commercial pages.',
-  },
-  {
-    category: 'corridors',
-    question: 'Can you rank our business in surrounding Front Range suburbs like Boulder, Lakewood, and Littleton?',
-    answer:
-      'Yes. We architect dedicated geographic service area landing pages and localized schema markup targeting key Front Range submarkets across Denver, Boulder, Jefferson, and Arapahoe counties without triggering duplicate content issues.',
-  },
-  {
-    category: 'corridors',
-    question: 'How do you optimize for technology and enterprise B2B SaaS searches in the Denver Tech Center?',
-    answer:
-      'We build specialized topical hubs and enterprise B2B schema markup for SaaS, cloud engineering, and telecom providers along the I-25 corridor, capturing enterprise decision-makers conducting vendor due diligence.',
-  },
-  {
-    category: 'corridors',
-    question: 'How do you structure SEO for multi-location practices in Colorado?',
-    answer:
-      'For multi-location practices, we build dedicated location pages with unique NAP data, localized staff profiles, distinct Google Business Profile embeds, specific service menus, and custom LocalBusiness schema for each physical facility. This prevents internal location cannibalization and establishes clear geographic relevance.',
-  },
-  {
-    category: 'corridors',
-    question: 'How does Denver local SEO differ from statewide Colorado SEO?',
-    answer:
-      'Denver local SEO targets hyper-specific geographic proximity signals, Map Pack 3-Pack rankings, and neighborhood-level search terms across the Denver metro. Statewide Colorado SEO focuses on broader regional keyword authority, high-volume commercial head terms, and programmatic category hubs that rank across Denver, Colorado Springs, Fort Collins, and Grand Junction simultaneously.',
+    category: 'contracts',
+    question: 'How much does local SEO cost in Denver?',
+    answer: 'WebFX\'s 2026 pricing guide puts local SEO retainers at $500 to $3,000 a month and one-time local projects at $500 to $5,000. A single-location Denver shop in a quiet trade sits near the bottom. A multi-location group or a busy category like personal injury sits near the top. FactoryJet quotes a fixed price in writing after a scoping call.',
   },
   {
     category: 'contracts',
-    question: 'Do you require long-term lock-in contracts for Denver SEO services?',
-    answer:
-      'No. We operate on flexible month-to-month agreements. We believe agency retention must be earned every thirty days through measurable business outcomes rather than enforced through rigid annual commitments.',
+    question: 'How do I switch SEO providers in Denver without losing rankings?',
+    answer: 'Get admin access to everything before you give notice: Business Profile, Search Console, analytics, your domain and your website. Download past reports. Keep page addresses the same, or redirect any that change. Ask the old firm not to remove content or listings it set up in your name. Rankings rarely drop from a clean handover.',
   },
   {
     category: 'contracts',
-    question: 'How do I compare proposals from different Denver SEO agencies?',
-    answer:
-      'Ask three fundamental questions: First, who will actually write and deploy the technical code on my website? Second, will you implement fixes directly or only hand over audit spreadsheets? Third, what specific business metrics will you track each month? If an agency will not say who does the technical work and refuses to track qualified inbound phone calls, they are selling marketing reports rather than revenue engineering.',
+    question: 'What results can I expect from a Denver SEO company?',
+    answer: 'Expect finished work on a schedule: fixes made, pages written, listings corrected. Expect calls and forms counted each month. Do not expect a promised ranking. Google\'s own advice on hiring an SEO says to find someone else if a firm guarantees first place. Profile fixes can show in weeks, busy terms take months.',
   },
   {
-    category: 'contracts',
-    question: 'Do we maintain full ownership of our website code, analytics, and listings?',
-    answer:
-      'Yes, 100 percent. You maintain complete direct ownership and administrative control over your domain, code repository, Google Analytics 4 property, Google Search Console account, and Google Business Profile. You are never locked into a proprietary agency ecosystem.',
+    category: 'local',
+    question: 'What does Google Maps optimization in Denver involve?',
+    answer: 'The work happens mostly inside your Business Profile and on the page it links to. Pick the primary category that matches your main service. List every service. Keep hours right, including holidays. Add real photos. Set a service area if customers do not visit you. Then build reviews and reply to them, the good and the bad.',
   },
   {
-    category: 'contracts',
-    question: 'Who will execute the technical work on our Denver account?',
-    answer:
-      'Senior software engineers and technical SEO architects execute all code, schema, and content work directly. You speak directly with the technical engineers building your systems rather than junior account coordinators.',
+    category: 'local',
+    question: 'How should a multi-location Colorado business manage Google Business Profiles?',
+    answer: 'Give each real location its own verified profile, and give each one its own page on your site with that address and phone. Do not share photos or descriptions across locations. Google offers bulk verification for businesses with 10 or more locations. Keep one person or firm in charge so details do not drift apart.',
   },
   {
-    category: 'attribution',
-    question: 'How quickly can our Denver business expect to see Google Maps rank improvements?',
-    answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report movement each month, and do not promise a specific Map Pack position or deadline.',
-  },
-  {
-    category: 'attribution',
-    question: 'How do you track and report local SEO progress each month?',
-    answer:
-      'We provide access to an interactive dashboard showing local 3-Pack geo-grid ranking positions, organic keyword trajectories, verified Google Maps phone calls, website click-throughs, and consultation inquiry submissions via custom Google Analytics 4 event tracking.',
-  },
-  {
-    category: 'attribution',
-    question: 'What is a Local Geo-Grid rank tracking report?',
-    answer:
-      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across Greater Denver, showing exactly where your business appears in the top 3 and where optimization is needed.',
-  },
-  {
-    category: 'attribution',
-    question: 'How do you combat spam and fake competitor listings on Google Maps in Denver?',
-    answer:
-      'We continuously monitor your primary search categories in Denver, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
-  },
-  {
-    category: 'technical',
-    question: 'How does Google Gemini AI Overview citation indexing work for Denver local businesses?',
-    answer:
-      'Google Gemini AI Overviews synthesize local search answers by querying verified Knowledge Graph entities, high-authority localized directory citations, and authoritative Schema.org LocalBusiness markup. We structure your website content with explicit factual entities and customer review statistics to maximize generative AI citation frequency.',
-  },
-  {
-    category: 'basics',
-    question: 'What role do Google Business Profile primary and secondary categories play in Denver Maps rankings?',
-    answer:
-      'Your primary GBP category carries the heaviest ranking weight for Google Local 3-Pack placement, while up to 9 secondary categories allow you to capture long-tail service inquiries. We conduct reverse-engineering audits on top-ranking Denver competitors to identify the exact category hierarchy that maximizes search impression share.',
+    category: 'local',
+    question: 'Can Facebook posts rank for Denver local searches?',
+    answer: 'Yes. When we checked "local seo denver" on 21 Oct 2026, two Facebook posts sat in the top ten. Google indexes public posts like any page. That is useful, but you do not control how long a post ranks. Keep your Facebook details matching your profile, and put your main answers on your own site.',
   },
   {
     category: 'corridors',
-    question: 'How do you handle canonical tags and schema for Colorado multi-city service areas?',
-    answer:
-      'Each Front Range city page receives self-referential canonical tags, unique localized copy detailing specific neighborhood landmarks, and nested LocalBusiness/AreaServed JSON-LD schemas. This avoids duplicate content across the Denver, Aurora, Boulder, and Littleton pages.',
+    question: 'Do you help businesses in Commerce City, Golden and the Denver Tech Center?',
+    answer: 'Yes. Each area pulls a different search. Commerce City searches lean industrial and trades, Golden mixes local services with visitors, and the Tech Center is mostly offices. Google weighs distance from the searcher, so a profile in one area will not rank everywhere. Area pages help in regular results where you take work.',
+  },
+  {
+    category: 'corridors',
+    question: 'Should a Boulder business target Denver searches?',
+    answer: 'Win Boulder first. Map results favor businesses close to the searcher, and Boulder buyers often search "Boulder" by name. If you also take Denver work, add a Denver page with jobs and reviews from there. A Boulder address will rarely show in central Denver map results, however good the profile.',
   },
   {
     category: 'technical',
-    question: 'What is citation velocity and NAP consistency across Denver commercial directories?',
-    answer:
-      'Citation velocity refers to the steady, natural acquisition of verified business listings across authoritative platforms (BBB Colorado, Denver Chamber of Commerce, Apple Maps, Bing Places). We keep your NAP (Name, Address, Phone) details matching across them.',
+    question: 'What is in a Denver SEO audit, and what should it cost?',
+    answer: 'WebFX reports that 43% of businesses pay $101 to $750 for a one-time SEO audit. A useful audit covers your Business Profile, listings, page content, technical health and the businesses ranking above you. Ours is free and asks for read-only Search Console access, which is what Google advises at that stage.',
+  },
+  {
+    category: 'technical',
+    question: 'Can a Denver cannabis business use SEO?',
+    answer: 'Yes, and it matters more for cannabis than most trades because Google\'s ad policies leave little room for paid search. Organic pages and map listings carry the load. Keep the profile within Google\'s rules for your category, show your hours and menu as text, follow Colorado\'s advertising rules on every page, and ask customers for reviews.',
+  },
+  {
+    category: 'technical',
+    question: 'How does SEO work for Denver restaurants and hotels?',
+    answer: 'Restaurants win on the profile: correct hours, menu as text on your site, real photos, a reservation link and replies to reviews. Hotels compete with booking sites for their own name, so a fast direct-booking page and an accurate profile matter most. Both need updates before ski season and summer.',
+  },
+  {
+    category: 'technical',
+    question: 'Does AI search change local SEO in Denver?',
+    answer: 'Not yet for most local searches. Our 21 Oct 2026 check of "local seo denver" showed no AI Overview. People do ask ChatGPT and Perplexity which Denver firm to hire. Those tools pull from your site, profile, listings and reviews, so the same work serves both. We check what they say about you each month.',
+  },
+  {
+    category: 'attribution',
+    question: 'How do I measure local SEO results in Denver?',
+    answer: 'Watch three numbers. Calls and direction requests from your Business Profile. Form fills and calls from your website, with the source recorded. Booked jobs you can trace back to those. Rankings help explain the numbers, but they are not the goal. We agree what counts before the first month ends.',
+  },
+  {
+    category: 'attribution',
+    question: 'Do you work with Denver architects and home service companies?',
+    answer: 'Yes. Architects win with project pages that name the neighborhood, the building type and the problem solved, plus photos you own. Home service firms win with a service-area profile, a page per service and reviews that mention the job. Both need the same name, address and phone everywhere.',
   },
 ];
 
@@ -485,7 +436,7 @@ export default function DenverSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Help customers find your business when they search for the services you sell. FactoryJet works on your Google Business Profile, service pages, and technical SEO, with a focus on qualified inquiries.
+                  FactoryJet fixes your Google Business Profile, your service pages and your technical SEO so Denver buyers find you on the map and call. Start with a free audit you can use whether or not you hire us.
                 </p>
 
                 {/* Answer-First Brief */}
@@ -537,7 +488,7 @@ export default function DenverSeoPage() {
                 How Local SEO Works for Colorado Businesses
               </h2>
               <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.6, margin: 0 }}>
-                Winning high-intent commercial search terms across the Denver metro area requires four verified technical assets: configuring primary and secondary Google Business Profile categories tailored to local purchase intent, maintaining exact Name-Address-Phone (NAP) synchronization across major Tier 1 directories, deploying nested LocalBusiness JSON-LD markup on high-speed Next.js pages, and operating automated review generation workflows.
+                Google says it ranks local results mainly on relevance, distance and how well known a business is. Distance is fixed by where you are. Relevance comes from your profile category, services and pages. Being well known comes from reviews and from other sites mentioning you. A Denver plan works on those last two, in that order.
               </p>
             </div>
           </div>
@@ -596,7 +547,7 @@ export default function DenverSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From LoDo corporate law firms to Cherry Creek aesthetic surgery clinics and DTC enterprise software providers, Colorado businesses need verified search authority to capture high-ticket clients before competitors do.
+                  On page one for "local seo denver" on 21 Oct 2026, half the results were Facebook posts, lists and directories. Your details need to match in all of those places, and your own pages need to answer what Denver buyers ask.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -750,13 +701,13 @@ export default function DenverSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>The FactoryJet Difference</span>
+                <span>Denver Search Check, 21 Oct 2026</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                What FactoryJet Does Differently for Denver Businesses
+                What Page One Looks Like for Local SEO in Denver
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace opaque agency retainers with transparent, engineering-driven search performance:
+                We ran "local seo denver" from a Denver location. Four things stood out:
               </p>
             </div>
 
@@ -776,11 +727,11 @@ export default function DenverSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What it means for you:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -831,7 +782,7 @@ export default function DenverSeoPage() {
                 Our 4-Phase Denver SEO Roadmap
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A phase-by-phase roadmap of the work for businesses across the Front Range:
+                Four phases for a Front Range business, starting with the free audit:
               </p>
             </div>
 
@@ -895,7 +846,7 @@ export default function DenverSeoPage() {
                 Evaluating Denver SEO Companies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led execution against traditional marketing agency retainers before you sign:
+                Five questions to ask a Denver SEO company, with how we answer each:
               </p>
             </div>
 
@@ -903,7 +854,7 @@ export default function DenverSeoPage() {
               <div className="rv-eval-head" style={{ background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Factor</div>
                 <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional Marketing Agencies</div>
+                <div style={{ color: '#A0A0B0' }}>Questions to ask any agency</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
@@ -924,7 +875,7 @@ export default function DenverSeoPage() {
                   <div data-label="FactoryJet Engineering Model" style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
                     {crit.factoryjet}
                   </div>
-                  <div data-label="Traditional Marketing Agencies" style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                  <div data-label="Questions to ask any agency" style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
                     {crit.traditional}
                   </div>
                 </div>
@@ -939,7 +890,7 @@ export default function DenverSeoPage() {
         <FAQ
           eyebrow="DENVER SEO INTELLIGENCE"
           headline="Frequently Asked Questions About Local SEO in Denver CO"
-          lead="Direct, plain English answers to what Denver business owners and marketing leaders ask about local search rankings and lead generation:"
+          lead="What Denver owners search before hiring: cost, audits, switching firms, multi-location profiles and more:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"

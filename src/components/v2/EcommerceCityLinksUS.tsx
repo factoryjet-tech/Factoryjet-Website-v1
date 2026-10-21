@@ -1,28 +1,14 @@
 import Link from 'next/link'
 
+// 2026-10-21 index quality audit: merged (301) and noindex city pages are left out of this list so crawlers are not sent to them.
 const ALL_CITIES = [
-  { slug: 'atlanta',        label: 'Atlanta, GA' },
   { slug: 'austin',         label: 'Austin, TX' },
   { slug: 'boise',          label: 'Boise, ID' },
   { slug: 'charlotte',      label: 'Charlotte, NC' },
-  { slug: 'chattanooga',    label: 'Chattanooga, TN' },
-  { slug: 'chicago',        label: 'Chicago, IL' },
-  { slug: 'dallas',         label: 'Dallas, TX' },
   { slug: 'denver',         label: 'Denver, CO' },
-  { slug: 'fargo',          label: 'Fargo, ND' },
-  { slug: 'lincoln',        label: 'Lincoln, NE' },
-  { slug: 'los-angeles',    label: 'Los Angeles, CA' },
-  { slug: 'miami',          label: 'Miami, FL' },
   { slug: 'minneapolis',    label: 'Minneapolis, MN' },
   { slug: 'nashville',      label: 'Nashville, TN' },
-  { slug: 'new-york',       label: 'New York, NY' },
-  { slug: 'portland',       label: 'Portland, OR' },
   { slug: 'raleigh',        label: 'Raleigh, NC' },
-  { slug: 'salt-lake-city', label: 'Salt Lake City, UT' },
-  { slug: 'san-francisco',  label: 'San Francisco, CA' },
-  { slug: 'seattle',        label: 'Seattle, WA' },
-  { slug: 'sioux-falls',    label: 'Sioux Falls, SD' },
-  { slug: 'tampa',          label: 'Tampa, FL' },
 ] as const
 
 interface Props {

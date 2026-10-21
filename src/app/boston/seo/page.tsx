@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/boston/seo';
 
 export const metadata: Metadata = {
@@ -146,244 +146,203 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
-    problem: 'Traditional Boston agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
-    solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
+    title: 'Ranking lists own half the page',
+    problem: 'On 21 Oct 2026, 5 of the top 10 Google results for "boston seo company" were lists or directories, including GoodFirms and Trustpilot. Two more were LinkedIn and Facebook pages. Only 3 were agency websites.',
+    solution: 'For a Boston client, we check which lists and directories rank for your own service searches. Then we get your business listed and reviewed on the ones buyers open, and we build your own page to compete for the other slots.',
   },
   {
     num: '02',
-    title: 'Eliminating Risky PBN Links & Automated Citation Spam',
-    problem: 'Cheap agencies build spammy automated citations and private blog network links that trigger Google algorithmic penalties and destroy your domain authority.',
-    solution: 'We implement 100% white-hat local entity optimization, syncing direct with Google Business Profile API, Apple Business Connect, and tier-one local publications.',
+    title: 'The map pack runs on small review counts',
+    problem: 'The three businesses in the Google map pack for "boston seo company" had 11, 69 and 11 reviews on 21 Oct 2026. All three showed 5 stars. Two of the three spots went to firms with only 11 reviews.',
+    solution: 'We set up a steady way for your happy customers to leave Google reviews, and we fix your Google Business Profile categories, hours and service areas, from Back Bay out to Waltham and Quincy.',
   },
   {
     num: '03',
-    title: 'Fixing Inconsistent NAP Data Across Duplicate Profiles',
-    problem: 'Duplicate or outdated listings with conflicting phone numbers and suite addresses confuse search engine crawlers and split your local ranking signals.',
-    solution: 'We execute complete citation deduplication and NAP synchronization across all major data aggregators, establishing clean, authoritative entity signals.',
+    title: 'Paid clicks here cost a lot',
+    problem: 'Google Ads suggests about $86.37 a click for "boston seo" and $40.07 a click for "boston seo company" (21 Oct 2026). Both searches get about 720 US searches a month.',
+    solution: 'We find the Boston searches where an unpaid ranking is in reach and build pages for those first. That way a client can trim ad spend on the terms where organic results start to bring calls.',
   },
   {
     num: '04',
-    title: 'Optimizing for AI Answer Engines & SearchGPT Citations',
-    problem: 'Basic SEO tactics ignore generative AI engines like ChatGPT, Claude, and Perplexity, causing your business to be omitted from conversational recommendations.',
-    solution: 'We structure your content with deep semantic entities, speakable markup, and question-answering schemas that position your firm as the verified local authority.',
+    title: 'No AI Overview, yet',
+    problem: 'Google showed no AI Overview on "boston seo company" when we checked on 21 Oct 2026. The People Also Ask box did show questions such as "Is SEO dead now with AI?" and "How much should I expect to pay for SEO?"',
+    solution: 'We write your service pages so each question gets a short, direct answer near the top. Pages built that way are easier for Google and AI assistants to quote if those answers start showing here.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Phase 01',
-    title: 'Local Entity & Citation Audit',
-    desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
-    deliverables: ['Google Maps rank grid scan across Greater Boston', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+    title: 'Boston search audit',
+    desc: 'We check how your site shows for your real service searches across Boston, Cambridge and Brookline, and we list what Google sees as broken or missing.',
+    deliverables: ['Ranking check on your key searches', 'Google Business Profile review', 'List of technical fixes by priority'],
   },
   {
     phase: 'Phase 02',
-    title: 'Google Business Profile & On-Page Geo-Optimization',
-    desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
-    deliverables: ['GBP category and attribute optimization', 'LocalBusiness and Service schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+    title: 'Map pack and listings',
+    desc: 'We fix your Google Business Profile, Apple Business Connect and Bing Places, then get you onto the directories that rank for your trade in Boston.',
+    deliverables: ['Profile categories and service areas fixed', 'Directory listings matched name for name', 'Review request process set up'],
   },
   {
     phase: 'Phase 03',
-    title: 'Tier-One Citation Sync & Local PR Distribution',
-    desc: 'We synchronize your verified business data across major directories and secure localized editorial placements to build genuine regional authority.',
-    deliverables: ['Direct API sync with Apple, Bing & Google', 'Tier-one directory citations (Data Axle, Neustar)', 'Localized press release and editorial outreach', 'Review velocity and response workflow setup'],
+    title: 'Pages for each service and area',
+    desc: 'We write pages for each service and the areas you serve, such as Back Bay, Seaport, Dorchester or Kendall Square, with plain answers to buyer questions.',
+    deliverables: ['Service pages with direct answers', 'Area pages where demand exists', 'Schema markup on every new page'],
   },
   {
     phase: 'Phase 04',
-    title: 'Rank Defense, AI Citation Monitoring & Expansion',
-    desc: 'We track daily local 3-Pack movements, monitor AI search citations, protect against competitor spam, and expand into neighboring suburban corridors.',
-    deliverables: ['Weekly geo-grid rank tracking reports', 'SearchGPT and Perplexity citation audits', 'Spam listing monitoring and resolution', 'Quarterly local market expansion roadmap'],
+    title: 'Monthly report and next fixes',
+    desc: 'Each month we report calls, form leads and rankings for your Boston searches. Then we quote the next set of changes for you to approve.',
+    deliverables: ['Monthly leads and rankings report', 'Quoted list of next changes', 'Call with the founder on request'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Ranking Target',
-    factoryjet: 'Qualified calls and inquiries from the local searches that matter to your business.',
-    traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
+    label: 'Will you show me what you measured for my Boston searches?',
+    factoryjet: 'We share the real search volumes and the Google results we pulled for your services, dated, before we suggest any work. For "boston seo" that was about 720 searches a month.',
+    traditional: 'A general pitch deck about SEO with no numbers from your own Boston searches.',
   },
   {
-    label: 'Structured Data',
-    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, FAQPage).',
-    traditional: 'Basic WordPress SEO plugin meta tags without connected entity graphs or practitioner credentials.',
+    label: 'How will you handle the directories that rank above me?',
+    factoryjet: 'We show you which lists rank for your searches, like GoodFirms or Trustpilot, and get your business onto the ones buyers read, with reviews.',
+    traditional: 'Mass submissions to hundreds of low quality directories that no Boston buyer ever opens.',
   },
   {
-    label: 'Citation Quality',
-    factoryjet: 'Direct API synchronization with major data providers and verified local chamber/industry publications.',
-    traditional: 'Automated spam submissions to hundreds of low-quality link directories that risk Google penalties.',
+    label: 'Who owns the work if I leave?',
+    factoryjet: 'You own your Google Business Profile, pages, schema and content. There is no long-term contract, and each change is quoted and approved first.',
+    traditional: 'A 12-month contract, with the profile or site held in the agency\'s own account.',
   },
   {
-    label: 'AI Search Preparedness',
-    factoryjet: 'Semantic entity engineering optimized for ChatGPT Search, Perplexity AI, and Google AI Overviews.',
-    traditional: 'Outdated keyword stuffing techniques with no consideration for conversational search platforms.',
+    label: 'How do you get more Google reviews?',
+    factoryjet: 'We set up a simple review request after each job. On 21 Oct 2026 two of the three map pack firms for "boston seo company" had only 11 reviews.',
+    traditional: 'Vague talk about "reputation management" with no plan for asking real customers.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Cost & Retainers' },
-  { key: 'timeline', label: 'Timeline & Results' },
-  { key: 'technical', label: 'GBP & Schemas' },
-  { key: 'local', label: 'Boston Market Focus' },
-  { key: 'reporting', label: 'Tracking & Deliverables' },
+  { key: 'choosing', label: 'Choosing a Boston SEO firm' },
+  { key: 'pricing', label: 'Cost and ads' },
+  { key: 'local', label: 'Local SEO in Boston' },
+  { key: 'ai', label: 'SEO and AI search' },
+  { key: 'process', label: 'How we work' },
 ];
 
 const FAQ_ITEMS = [
   {
-    category: 'pricing',
-    question: 'How much does local SEO cost for a Boston business?',
-    answer:
-      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Boston corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring metro-wide coverage receive tailored scoping with clear milestone deliverables.',
+    category: 'choosing',
+    question: 'How many people in Boston search for an SEO company?',
+    answer: 'About 720 people a month in the US search for "boston seo", and the same number search for "boston seo company" and "boston seo agency", per Google Ads data we pulled on 21 Oct 2026. Google groups close versions of a search together, so those figures overlap. Smaller searches add more: "seo company boston" gets about 170 a month and "boston seo services" about 110.',
+  },
+  {
+    category: 'choosing',
+    question: 'Who is the best SEO agency in Boston?',
+    answer: 'The best SEO agency for you is the one that shows real numbers from your own searches before you pay. No single list settles it. When we searched "boston seo company" on 21 Oct 2026, five of the top 10 Google results were ranking lists, and each list ranked firms in a different order. Ask any firm, us included, to show what it measured for your trade in Boston.',
+  },
+  {
+    category: 'choosing',
+    question: 'Can I trust the "top SEO companies in Boston" lists?',
+    answer: 'Use them as a starting point only. On 21 Oct 2026, Google showed GoodFirms, Trustpilot and three other ranking or review lists in the top 10 for "boston seo company". Some lists rank firms that pay for placement, and some count reviews without checking them. Open a firm\'s own site, read its client names, and check its Google reviews before you call.',
+  },
+  {
+    category: 'choosing',
+    question: 'How do I find a good SEO consultant in Boston?',
+    answer: 'Start with a short list of three firms, then ask each one the same questions. Ask what it found on your current Google results. Ask who owns the work if you leave. Ask how it will report leads, and whether there is a long-term contract. A good consultant answers with your own data. A weak one answers with a slide deck about SEO in general.',
+  },
+  {
+    category: 'choosing',
+    question: 'Do I need an SEO firm located in Boston?',
+    answer: 'No. What matters is that the firm studies Boston search results, not where its desk sits. Google ranks your business by your profile, reviews, pages and links. FactoryJet works remotely with US clients and schedules calls in US business hours. We pull the Google results from a Boston location, so we see what your customers in Back Bay or Dorchester see.',
   },
   {
     category: 'pricing',
-    question: 'Are there any hidden citation fees or third-party listing markups?',
-    answer:
-      'No. All direct directory submissions, data aggregator distribution fees, schema deployments, and ranking grid audits are fully included in your monthly program fee.',
+    question: 'How much does SEO cost for a Boston business?',
+    answer: 'Local SEO retainers usually run about $500 to $3,000 a month, and one-time local SEO projects $500 to $5,000, according to WebFX local SEO pricing updated in Sep 2026. An Ahrefs survey of 439 providers found an average of $1,557 a month for local SEO. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Do you require long-term lock-in contracts for SEO retainers?',
-    answer:
-      'No. We operate on flexible month-to-month agreements after an initial 90-day foundational sprint. We earn your continued business through transparent rank improvements, phone call growth, and measurable local revenue.',
+    question: 'How much does a Boston SEO audit cost?',
+    answer: 'Most businesses pay $101 to $750 for a one-time SEO audit, per WebFX, which found 43% of businesses fall in that range. An audit checks how Google reads your site, your profile and your rankings, and lists what to fix first. Bigger sites with many pages cost more to audit. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
-    category: 'timeline',
-    question: 'How quickly can our Boston business expect to see Google Maps rank improvements?',
-    answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
+    category: 'pricing',
+    question: 'Why pay for SEO when I can run Google Ads in Boston?',
+    answer: 'Because Boston clicks are expensive. Google Ads suggests about $86.37 a click for "boston seo" and $40.07 for "boston seo company" on 21 Oct 2026. Every ad click costs money, every time. An organic ranking keeps bringing visits after the work is done. You can run both: ads for fast leads, and SEO to lower the ad bill over time.',
   },
   {
-    category: 'timeline',
-    question: 'What factors determine how fast a Boston business can rank in the Local 3-Pack?',
-    answer:
-      'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
-  },
-  {
-    category: 'timeline',
-    question: 'What happens to our local rankings if we pause or discontinue services?',
-    answer:
-      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain your property after the engagement ends. Rankings can still change over time as competitors keep working.',
-  },
-  {
-    category: 'technical',
-    question: 'How do you optimize our Google Business Profile for maximum local radius reach?',
-    answer:
-      'We identify and configure primary and secondary categories, craft keyword-optimized business descriptions, upload geo-tagged photo assets, build product and service catalogs, and configure automated review generation funnels.',
-  },
-  {
-    category: 'technical',
-    question: 'What structured JSON-LD schemas do you implement on our website?',
-    answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
-  },
-  {
-    category: 'technical',
-    question: 'How do you help our company get recommended by AI search engines like ChatGPT and Perplexity?',
-    answer:
-      'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
-  },
-  {
-    category: 'technical',
-    question: 'How do you handle review generation without violating Google policies?',
-    answer:
-      'We establish frictionless SMS and email review request workflows that invite genuine satisfied clients to share their direct feedback on your Google Business Profile, strictly avoiding review gating or incentivized reviews.',
+    category: 'pricing',
+    question: 'Do you lock clients into a long contract?',
+    answer: 'No. FactoryJet has no long-term contract. Each change is quoted and approved by you before we start it. You own your Google Business Profile, pages, schema markup and content, so all of it stays with you if you stop working with us. Founder Bhavesh Barot replies to every inquiry within 24 hours.',
   },
   {
     category: 'local',
-    question: 'Do you manage multi-location local SEO campaigns across Greater Boston?',
-    answer:
-      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Boston, Cambridge, Newton, Waltham, Quincy, and Burlington.',
+    question: 'What is local SEO, and does a Boston business need it?',
+    answer: 'Local SEO is work that helps your business show in Google Maps and the map pack, the box of three businesses near the top of local searches. A Boston business that serves customers nearby needs it. On 21 Oct 2026 the map pack appeared above the regular results for "boston seo company". About 70 people a month search "local seo boston" alone, per Google Ads data.',
   },
   {
     category: 'local',
-    question: 'Can you help our practice outrank entrenched competitors in Back Bay and Cambridge?',
-    answer:
-      'We can help you compete with them. The work combines website speed, topical content, clean citations and a steady flow of reviews. No agency can promise a map position, so each month we report where you stand next to the work completed.',
+    question: 'How many Google reviews do I need to show in the Boston map pack?',
+    answer: 'Fewer than most owners think. On 21 Oct 2026, the three map pack businesses for "boston seo company" had 11, 69 and 11 Google reviews, all with 5 stars. Reviews are one signal among several. Your category, your distance from the searcher, and how complete your profile is also count. A steady flow of new reviews matters more than one big push.',
   },
   {
     category: 'local',
-    question: 'How do service-area businesses without a public storefront rank in Boston?',
-    answer:
-      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target ZIP codes and commercial corridors.',
+    question: 'Can you help my business show up in Dorchester searches?',
+    answer: 'Yes. People do search "seo dorchester" and similar phrases, so the demand is there. We add Dorchester to your Google Business Profile service area if you serve it. Then we write a page for your Dorchester customers with real details, such as the streets or jobs you cover. We only build an area page when people in that area search for your service.',
   },
   {
     category: 'local',
-    question: 'Do you optimize for biotechnology and scientific research searches in Kendall Square?',
-    answer:
-      'Yes. We build specialized topical hubs and scientific schema markup for life sciences, CRO, and biotech diagnostic firms.',
-  },
-  {
-    category: 'reporting',
-    question: 'How do you track and report local SEO progress each month?',
-    answer:
-      'We provide access to an interactive dashboard showing local 3-Pack geo-grid ranking positions, organic keyword trajectories, verified Google Maps phone calls, website click-throughs, and consultation inquiry submissions.',
-  },
-  {
-    category: 'reporting',
-    question: 'What is a Local Geo-Grid rank tracking report?',
-    answer:
-      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across Greater Boston, showing exactly where your business appears in the top 3 and where optimization is needed.',
-  },
-  {
-    category: 'reporting',
-    question: 'How do you combat spam and fake competitor listings on Google Maps?',
-    answer:
-      'We continuously monitor your primary search categories in Boston, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
-  },
-  {
-    category: 'reporting',
-    question: 'Who will be our main point of contact during the campaign?',
-    answer:
-      'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+    question: 'Should I make a separate page for Cambridge, Back Bay and Seaport?',
+    answer: 'Only when each page has something real to say. Google treats near-copy pages with the city name swapped as thin content and may ignore them. If you have a Cambridge office, Seaport clients or Back Bay case work, write about that on its own page. If not, list those areas on one strong Boston page and in your profile\'s service area.',
   },
   {
     category: 'local',
-    question: 'How do Kendall Square and Cambridge life sciences firms compete in B2B search and patent procurement queries?',
-    answer:
-      'Cambridge is the global life sciences capital. We engineer scientific knowledge graphs, MedicalEntity and ResearchProject schemas, ClinicalTrial recruitment landing pages, and B2B contract research organization (CRO) capability hubs.',
+    question: 'Which listings matter besides Google for a Boston business?',
+    answer: 'Apple Business Connect and Bing Places matter, because Apple Maps and Bing feed answers on many phones and assistants. After that, pick the directories that rank for your own trade in Boston. For "boston seo company" on 21 Oct 2026, that meant GoodFirms and Trustpilot. For a dentist or a law firm the list will be different, so we check it per client.',
   },
   {
     category: 'local',
-    question: 'How do Back Bay and Beacon Hill wealth managers and estate planning attorneys capture high-net-worth clients?',
-    answer:
-      'We optimize Google Business Profiles with verified practitioner citations, attorney bar credentials, LegalService and FinancialService schema markup, and neighborhood location silos for Back Bay, Beacon Hill, and Wellesley.',
+    question: 'Do you work with businesses outside the city, like Waltham or Quincy?',
+    answer: 'Yes. We can work with businesses anywhere in Greater Boston, such as Waltham, Quincy, Newton, Brookline and Burlington. Each town has its own map results, so a Waltham firm competes with different businesses than one in Back Bay. We pull Google results for your own town and the towns you serve, then plan the work around what we find there.',
   },
   {
-    category: 'technical',
-    question: 'How do Route 128 and Waltham robotics and defense contractors capture federal and OEM contracts?',
-    answer:
-      'We build technical capability matrices, ISO 9001 and AS9100 certification data schemas, defense contractor compliance portals, and rapid blueprint upload RFQ gateways that convert engineering procurement officers.',
+    category: 'ai',
+    question: 'Is SEO dead now that people use AI to search?',
+    answer: 'No. Google still showed a full page of regular results and a map pack for "boston seo company" on 21 Oct 2026, and no AI Overview. "Is SEO dead now with AI?" was one of the People Also Ask questions on that same page. AI tools also pull answers from websites, so a well built site helps you in both places.',
   },
   {
-    category: 'local',
-    question: 'How do specialized medical clinics in the Longwood Medical Area structure local SEO?',
-    answer:
-      'We construct multi-practitioner clinic architectures with individual physician schemas, hospital affiliation links, accepted insurance network disclosures, and procedure-specific landing pages that rank across New England.',
+    category: 'ai',
+    question: 'What is an AI Overview, and does it show for Boston searches?',
+    answer: 'An AI Overview is a short summary Google writes at the top of some results, with links to the sites it used. It did not show on "boston seo company" when we searched from Boston on 21 Oct 2026. It shows on many question searches. We write pages with short, direct answers so they are easier to quote, though no one can promise Google will pick them.',
   },
   {
-    category: 'technical',
-    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in Massachusetts?',
-    answer:
-      'Generative AI search engines synthesize verified factual entities from structured JSON-LD schemas, official Massachusetts Secretary of the Commonwealth corporate filings, and direct answer-first page sections. We format your core service offerings to maximize conversational citation frequency in Google AI Overviews and ChatGPT search.',
+    category: 'ai',
+    question: 'Can you get my Boston business named by ChatGPT or Perplexity?',
+    answer: 'We can make your business easier for AI assistants to find and quote, but no firm controls what they say. These tools read your site, your listings and what other sites say about you. We give each service a clear page, add schema markup (code that labels facts for machines), and keep your name and details the same everywhere. WebFX puts AI SEO at $1,500 to $5,000 a month for small businesses.',
   },
   {
-    category: 'deliverables',
-    question: 'What is NAP citation synchronization across Greater Boston and Massachusetts business directories?',
-    answer:
-      'We establish and synchronize verified business citations across essential regional directories, including the Greater Boston Chamber of Commerce, Massachusetts BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, checking that your details match, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
+    category: 'ai',
+    question: 'Will SEO be replaced by AI?',
+    answer: 'Not on what we saw. "Will SEO be replaced by AI?" showed in People Also Ask for "boston seo company" on 21 Oct 2026. On that same page, the map pack and ten regular results still took the screen. AI tools change how people search, but they still pull from websites, reviews and listings. Someone has to build and fix those.',
   },
   {
-    category: 'local',
-    question: 'How do university spin-outs and deep-tech startups in Cambridge and Boston capture venture and enterprise inquiries?',
-    answer:
-      'Greater Boston is the world academic, biomedical, and engineering research epicenter. We build specialized academic spin-out landing pages, peer-reviewed research publication citation schemas, patent portfolio indexes, tech licensing gateways, and executive recruitment funnels that capture national enterprise partnerships and venture capital.',
+    category: 'process',
+    question: 'What happens in the first month of SEO work?',
+    answer: 'We start with an audit of your site, your Google Business Profile and your rankings on the Boston searches that bring buyers. Then we fix the profile and the worst technical problems first, because those can move fastest. You get a written list of what we found and a quote for the next set of changes, which you approve before we begin.',
   },
   {
-    category: 'deliverables',
-    question: 'How do you acquire authoritative local backlinks across Boston and New England business publications?',
-    answer:
-      'We conduct white-hat digital PR outreach securing editorial citations in the Boston Business Journal, The Boston Globe, Massachusetts Tech Collaborative, university innovation digests across MIT, Harvard, Northeastern, and Boston University, and verified regional trade associations and chambers of commerce without PBNs or link farms.',
+    category: 'process',
+    question: 'How long before SEO brings leads in Boston?',
+    answer: 'Map pack changes can show within a few weeks once your profile and reviews improve. New pages usually take several months to rank, longer for a crowded search like "boston seo", where Google Ads suggests about $86.37 a click. We report calls and form leads each month, so you can see what is working before you approve more work.',
+  },
+  {
+    category: 'process',
+    question: 'What will I see in a monthly SEO report?',
+    answer: 'You will see calls, form leads, and where you rank for the Boston searches we agreed on at the start. We also list what we changed that month and what we plan next, with a quote. The report uses plain words. If a number dropped, we say so and explain why we think it happened.',
+  },
+  {
+    category: 'process',
+    question: 'Who will I talk to at FactoryJet?',
+    answer: 'Founder Bhavesh Barot replies to every inquiry within 24 hours, and you can ask for a call with him at any stage. FactoryJet was founded in 2014, has worked with 500+ businesses, and delivers 97% of work on time. We work remotely with US clients and schedule calls in US business hours. We also do white-label SEO work for agencies.',
   },
 ];
 
@@ -730,7 +689,7 @@ export default function BostonSeoPage() {
                 What FactoryJet Does Differently for Boston Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace generic SEO reports with reporting on completed work, calls and inquiries:
+                We searched "boston seo company" from a Boston location on 21 Oct 2026 and pulled US search volumes the same day, and these four findings shape how we work here.
               </p>
             </div>
 
@@ -750,11 +709,11 @@ export default function BostonSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw in Boston search, 21 Oct 2026:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What we do about it:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -791,7 +750,7 @@ export default function BostonSeoPage() {
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                The four stages of work we follow for local search across Greater Boston:
+                Each stage below is built around the searches Boston buyers typed in October 2026 and the parts of the city your customers come from.
               </p>
             </div>
 
@@ -855,7 +814,7 @@ export default function BostonSeoPage() {
                 Evaluating Boston SEO Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+                Five of the top 10 results for "boston seo company" on 21 Oct 2026 were ranking lists, so ask these questions before you trust any list or sign with any firm.
               </p>
             </div>
 

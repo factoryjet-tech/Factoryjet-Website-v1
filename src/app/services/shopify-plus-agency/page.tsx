@@ -12,7 +12,7 @@ import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-09-28';
+const PAGE_MODIFIED = '2026-10-21';
 
 export const metadata: Metadata = {
   title: 'Shopify Plus Development Agency | FactoryJet',
@@ -504,7 +504,11 @@ export default function ShopifyPlusAgencyPage() {
                 <h2 style={{ marginTop: '10px' }}>What is a Shopify Plus agency?</h2>
                 <div style={{ marginTop: '18px', display: 'grid', gap: '14px' }} className="pp-lead">
                   <p>
-                    A Shopify Plus agency builds and runs stores on Shopify enterprise tier. Most of the engineering sits below the theme. We develop checkout extensibility, custom Shopify Functions, native B2B catalogs, and multi-region expansion stores. We also integrate enterprise ERP and warehouse systems.
+                    A Shopify Plus agency builds and runs stores on Shopify enterprise tier. Most of the engineering sits below the theme. We develop checkout extensibility, custom Shopify Functions, native B2B catalogs, and multi-region expansion stores. We also integrate enterprise ERP and warehouse systems. What each checkout change needs, plan by plan, is set out on our{' '}
+                    <Link href="/services/shopify-checkout-customization" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                      Shopify checkout customization
+                    </Link>{' '}
+                    page.
                   </p>
                   <p>
                     That is the honest distinction between this and general{' '}
@@ -517,7 +521,10 @@ export default function ShopifyPlusAgencyPage() {
                     integrating the Shopify Storefront API. A Plus build is a platform engineering project with a custom storefront attached.
                   </p>
                   <p>
-                    The practical test is simple. If the thing blocking you is how the store looks, you do not need Plus. If it is custom checkout logic, B2B pricing models, or multi-store permissions, that requires the Plus tier. If you already run Plus and need platform replatforming, see{' '}
+                    The practical test is simple. If the thing blocking you is how the store looks, you do not need Plus; you need{' '}
+                    <Link href="/services/shopify-theme-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                      Shopify theme development
+                    </Link>. If it is custom checkout logic, B2B pricing models, or multi-store permissions, that requires the Plus tier. If you already run Plus and need platform replatforming, see{' '}
                     <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       e-commerce replatforming
                     </Link>{' '}

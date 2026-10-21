@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/boise/seo';
 
 export const metadata: Metadata = {
@@ -49,10 +49,30 @@ const SEO_TOOLS = [
 ];
 
 const STAT_CARDS = [
-  { num: 'Maps', title: 'Business Profile Review', desc: 'Check business details, categories, services, and the areas you actually serve.', icon: '📍' },
-  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Agree which calls, forms, and booked conversations count as useful inquiries.', icon: '📈' },
-  { num: 'Schema', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
-  { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
+  {
+    num: 'Maps',
+    title: 'Business Profile Review',
+    desc: 'Your category, services and reviews set beside the Boise map pack firms, which had 37 to 126 reviews when we checked.',
+    icon: '📍',
+  },
+  {
+    num: 'Leads',
+    title: 'Inquiry Tracking',
+    desc: 'Calls, forms and booked estimates from Ada and Canyon County, counted the same way each month.',
+    icon: '📈',
+  },
+  {
+    num: 'Site',
+    title: 'Website and SEO Together',
+    desc: 'Pages built with titles, headings and schema in place from day one, so a new site does not start from zero.',
+    icon: '🛡️',
+  },
+  {
+    num: '0',
+    title: 'Bought Links',
+    desc: 'Mentions earned from real Treasure Valley sites and directories only.',
+    icon: '⚡',
+  },
 ];
 
 const DISTRICTS = [
@@ -146,77 +166,77 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending Opaque Monthly Retainers With Zero Visible Map Pack Growth',
-    problem: 'Traditional agencies send generic monthly PDF reports filled with vanity impressions while your Google Business Profile remains stuck outside the Local 3-Pack.',
-    solution: 'We focus on tangible Google Maps 3-Pack rankings, qualified phone calls, and revenue-generating local search positions with full dashboard transparency.',
+    title: 'The map pack firms have 37 to 126 reviews',
+    problem: 'On 21 Oct 2026 we searched "boise seo company" from a Boise location. The three map pack results had 126, 37 and 124 Google reviews. Of the eight cities we checked that day, Boise had the highest review counts in the map pack.',
+    solution: 'Established Boise firms have years of reviews behind them. A newer business will not catch up in a month, so we start a review routine on day one and win on relevance in the meantime: category, services and a strong page behind the profile.',
   },
   {
     num: '02',
-    title: 'Eliminating Fragile Plugin Schemas That Fail AI Citation Crawlers',
-    problem: 'Basic WordPress SEO plugins generate disjointed, broken schemas that AI search engines like SearchGPT and Perplexity fail to parse as verified business entities.',
-    solution: 'We hand-craft connected Schema.org JSON-LD entity graphs linking your Google Knowledge Graph, licensing credentials, and verified local citations.',
+    title: 'One local firm holds the first and last spot',
+    problem: 'The same local agency held the number one organic result with its website and the number ten result with its Instagram profile.',
+    solution: 'Google ranks profiles on other platforms when they carry your name and real activity. We make sure your social profiles show the same name, phone and services as your Business Profile, so each one supports the others.',
   },
   {
     num: '03',
-    title: 'Overcoming High Agency Turnover & Junior Account Handler Runaround',
-    problem: 'Big-box marketing agencies assign junior coordinators who do not understand Boise unique municipal boundaries, Treasure Valley corridors, or industry specifics.',
-    solution: 'You work directly with senior local SEO technical engineers who execute hyper-local geo-targeting tailored to Idaho commercial realities.',
+    title: 'Multi-city agency pages fill three spots',
+    problem: 'Three of the agency results were Boise pages from agencies that publish one page per city. Three more spots went to a ranking list site, Clutch and an article on a local lifestyle site.',
+    solution: 'Boise buyers see few pages written about Boise specifically. Your service pages can stand out by naming the Treasure Valley towns, jobs and customers you actually work with.',
   },
   {
     num: '04',
-    title: 'Stopping Toxic Link Networks That Trigger Search Penalties',
-    problem: 'Cheap SEO providers build spammy automated backlinks from private blog networks, risking sudden Google algorithmic penalties and ranking demotions.',
-    solution: 'We execute white-hat local citation building, regional trade publication placements, and verified local press authority, with no private blog networks.',
+    title: 'Boise searchers want the website and SEO together',
+    problem: 'Search Console for this page shows searches such as "website with seo boise", "google seo website boise" and "seo website boise", along with builder and remodeler searches.',
+    solution: 'Many Boise owners are replacing an old site and want it found on Google from launch. We build and handle SEO in one project, and a site of up to five pages has 7-day delivery.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Phase 01',
-    title: 'Entity Audit, GBP Optimization & Technical Foundations',
-    desc: 'We audit your Google Business Profile, fix Name-Address-Phone (NAP) discrepancies, optimize categories, and eliminate technical website crawling bottlenecks.',
-    deliverables: ['Comprehensive local ranking audit and competitor gap analysis', 'Complete Google Business Profile category and attribute overhaul', 'NAP consistency audit across 60+ major US citation directories', 'Core Web Vitals and mobile crawlability technical fixes'],
+    title: 'Audit or site plan',
+    desc: 'For an existing site we audit your profile, pages and listings. For a new site we plan the pages around what Boise buyers search.',
+    deliverables: ['Fix list or page plan, in order', 'Profile category and services set'],
   },
   {
     phase: 'Phase 02',
-    title: 'Local Geo-Silo Architecture & JSON-LD Entity Graph Build',
-    desc: 'We engineer dedicated geo-targeted service silos and implement nested Schema.org JSON-LD entity graphs connecting your business to the Google Knowledge Graph.',
-    deliverables: ['Hyper-local corridor landing pages (Downtown, Meridian, Eagle, Nampa)', 'Custom JSON-LD schema graphs (LocalBusiness, Service, Physician, LegalService)', 'Internal contextual link graph distributing domain authority', 'Service area boundary definition in Google Maps API'],
+    title: 'Pages and redirects',
+    desc: 'We write or rebuild your service pages and, if the site changes, redirect every old address so rankings carry over.',
+    deliverables: ['Service pages with schema', 'Redirect map for any changed URLs'],
   },
   {
     phase: 'Phase 03',
-    title: 'High-Authority Regional Citations & Review Velocity Engine',
-    desc: 'We build authoritative local citations across regional Treasure Valley chambers, industry trade directories, and deploy automated review generation workflows.',
-    deliverables: ['Tier-1 citation distribution across Apple Maps, Bing, Yelp, and YellowPages', 'Regional Boise business directory and chamber of commerce listings', 'Automated SMS and email review generation campaign deployment', 'Review response protocol and Google Maps attribute updates'],
+    title: 'Treasure Valley listings',
+    desc: 'We match your details across Apple Maps, Bing, Yelp and Idaho directories, then add pages for Meridian, Nampa or Eagle if you serve them.',
+    deliverables: ['Listing log', 'Town pages only where you work'],
   },
   {
     phase: 'Phase 04',
-    title: 'AI Citation Retrieval, Continuous Tracking & Reporting',
-    desc: 'We optimize your brand footprint for retrieval in AI answer engines (SearchGPT, Perplexity, Google AI Overviews) and provide real-time ranking dashboards.',
-    deliverables: ['AI search engine citation indexing verification', 'Real-time geo-grid local rank tracking dashboard', 'Monthly inbound call and consultation conversion reporting', 'Quarterly strategic expansion and competitor defense roadmaps'],
+    title: 'Reviews and reporting',
+    desc: 'We set up a review routine and report calls, forms and ranking changes every month.',
+    deliverables: ['Review request routine', 'Monthly note with calls and forms'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Local Ranking Method',
-    factoryjet: 'Full-stack entity engineering, connected JSON-LD schemas, and verified GBP category optimization.',
-    traditional: 'Basic keyword stuffing, generic blog posts, and automated low-quality citation blasts.',
+    label: 'Review Plan',
+    factoryjet: 'A request routine your staff send after each job, started in the first month.',
+    traditional: 'Ask: "The Boise map pack firms have over 100 reviews. How will we close that gap?"',
   },
   {
-    label: 'AI Search Readiness',
-    factoryjet: 'Optimized for OpenAI SearchGPT, Perplexity AI, and Google AI Overviews citation retrieval.',
-    traditional: 'Unaware of AI answer engines; relies solely on legacy 10 blue link keyword matching.',
+    label: 'Site Changes',
+    factoryjet: 'Every changed URL is redirected, and we check rankings the week after launch.',
+    traditional: 'Ask: "If you rebuild our site, how do we keep our current rankings?"',
   },
   {
-    label: 'Citation Integrity',
-    factoryjet: 'Manual NAP synchronization across top-tier business directories and regional chambers.',
-    traditional: 'Automated spam submissions leading to duplicate listings and fragmented NAP data.',
+    label: 'Local Pages',
+    factoryjet: 'Pages for Meridian, Nampa or Eagle only if you work there, each with local jobs.',
+    traditional: 'Ask: "Which towns will you write pages for, and what will each page say?"',
   },
   {
-    label: 'Contract Flexibility',
-    factoryjet: 'Transparent milestone and performance deliverables with zero predatory multi-year lock-ins.',
-    traditional: 'Rigid 12-month locking contracts with severe early termination penalties.',
+    label: 'Contract Terms',
+    factoryjet: 'No long-term contract. Your accounts stay in your name.',
+    traditional: 'Ask: "What happens to my profile and site if I stop?"',
   },
 ];
 
@@ -231,159 +251,73 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does local SEO cost for a Boise ID business?',
-    answer:
-      'Monthly investments depend on your industry vertical, market competition, and target geographic coverage. We provide clear, transparent monthly deliverables with zero hidden hourly fees and zero long-term hostage contracts.',
+    question: 'How much should I expect to pay for SEO in Boise?',
+    answer: 'WebFX\'s 2026 pricing data says micro businesses typically pay $500 to $1,500 a month for SEO and small businesses $1,500 to $3,500. A one-truck Nampa plumber usually needs less than a Boise law firm chasing citywide terms. FactoryJet quotes a fixed price in writing after a short scoping call, before any work starts.',
   },
   {
     category: 'pricing',
-    question: 'Do you lock clients into mandatory 12-month contracts?',
-    answer:
-      'No. We operate on performance and transparency. We believe our results should earn your partnership every single month, so you are never locked into an inflexible annual agreement.',
-  },
-  {
-    category: 'pricing',
-    question: 'What is included in your monthly local SEO scope?',
-    answer:
-      'Every engagement includes full Google Business Profile management, local citation building and cleanup, structured schema graph maintenance, geo-silo content engineering, review generation workflows, and monthly conversion tracking.',
-  },
-  {
-    category: 'pricing',
-    question: 'How do you calculate ROI on local SEO campaigns?',
-    answer:
-      'We track qualified phone calls, appointment bookings, contact form submissions, and direct navigation requests generated through Google Maps and local organic search, giving you clear visibility into revenue attribution.',
+    question: 'Can I get a new website and SEO together in Boise?',
+    answer: 'Yes, and it is cheaper than fixing SEO after launch. Page titles, headings, schema and internal links go in while the site is built. If you are replacing an old site, every old address gets redirected so you keep what already ranks. A site of up to five pages has 7-day delivery.',
   },
   {
     category: 'timeline',
-    question: 'How quickly can a Boise business rank in the Google Maps 3-Pack?',
-    answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
+    question: 'How many reviews do I need to reach the Boise map pack?',
+    answer: 'There is no fixed number, but Boise sets a high bar. When we searched "boise seo company" on 21 Oct 2026, two of the three map pack firms had over 120 reviews. Google says more reviews and good ratings can help. Start asking every happy customer now and work on your categories and pages while the count grows.',
   },
   {
     category: 'timeline',
-    question: 'What factors determine ranking speed in local search?',
-    answer:
-      'Key factors include existing domain authority, Google Business Profile age and history, review count and sentiment velocity, NAP consistency across citation networks, and the strength of competitor profiles in your specific corridor.',
-  },
-  {
-    category: 'timeline',
-    question: 'Can you fix past Google Business Profile suspensions or penalties?',
-    answer:
-      'Yes. We audit your profile for policy compliance issues, correct address and category discrepancies, submit formal reinstatement appeals to Google, and restore your ranking standing.',
-  },
-  {
-    category: 'timeline',
-    question: 'How do you handle review generation without violating Google policies?',
-    answer:
-      'We set up automated post-service email and SMS review request funnels that invite genuine customers to share their authentic experiences on your verified Google Business Profile in compliance with FTC and Google guidelines.',
+    question: 'How long until SEO starts working for a Boise business?',
+    answer: 'Profile corrections and technical fixes can show up within weeks. Ranking for terms like "boise roofer" takes months, longer if rivals have years of reviews. No honest firm will promise a date. Google\'s own hiring advice says to find someone else if an SEO guarantees first place.',
   },
   {
     category: 'ai',
-    question: 'How does local SEO help my business appear in SearchGPT and AI Overviews?',
-    answer:
-      'AI answer engines retrieve verified facts from structured knowledge graphs, verified directories, and authoritative publications. We build connected JSON-LD schemas that make your business data unmistakable to LLM crawlers.',
+    question: 'Is SEO dead now with AI?',
+    answer: 'No. On 21 Oct 2026, Google showed no AI Overview for "boise seo company", just a map pack and ten regular results. Where AI answers do appear, in Google or in ChatGPT, they draw on websites, profiles and reviews. Good SEO work feeds both, so the effort is not wasted either way.',
   },
   {
     category: 'ai',
-    question: 'Why is structured Schema.org JSON-LD so important for local search?',
-    answer:
-      'Schema markup explicitly defines your exact business type, physical coordinates, service area, opening hours, accepted payments, and practitioner credentials directly in machine-readable code for search crawlers.',
-  },
-  {
-    category: 'ai',
-    question: 'How do you track whether AI search engines are citing our brand?',
-    answer:
-      'We monitor citation appearances, brand mentions, and referral traffic originating from OpenAI SearchGPT, Perplexity AI, Claude, and Google AI Overviews, and report what we find.',
-  },
-  {
-    category: 'ai',
-    question: 'Can AI search engines replace traditional Google Maps for local queries?',
-    answer:
-      'No. AI search engines synthesize and cite verified local data from Google Maps, Apple Maps, Yelp, and official websites. Accurate local data helps you appear in both traditional and AI-driven searches.',
+    question: 'What is answer engine optimization, and does a Boise business need it?',
+    answer: 'It means writing pages so an AI tool or Google can lift a clear answer from them. Put the answer in the first sentence, use the words buyers use, and keep facts like hours and service areas the same everywhere. A Boise business needs this only after the basics: a full profile and good service pages.',
   },
   {
     category: 'local',
-    question: 'What does local SEO involve for Boise medical and dental practices?',
-    answer:
-      'For surgical practices, dental implant specialists, and wellness clinics across Boise, Meridian, and Eagle, the work covers the Google Business Profile for the practice, a page for each procedure, and physician and procedure schema.',
+    question: 'Do you work with businesses in Meridian, Nampa and Eagle?',
+    answer: 'Yes. Boise, Meridian and Eagle sit in Ada County, while Nampa and Caldwell are in Canyon County. Google weighs distance, so a Nampa shop shows on the map in Nampa far more easily than in Boise. We add a page for each town where you take work, with jobs and reviews from that town.',
   },
   {
     category: 'local',
-    question: 'Can you optimize commercial contractors competing across the Treasure Valley?',
-    answer:
-      'Yes. We engineer comprehensive Service Area Business profiles and commercial contracting silos targeting Boise, Nampa, Caldwell, and surrounding counties.',
+    question: 'How does SEO work for Boise home builders and remodelers?',
+    answer: 'Buyers search by community and home type, so build a page for each subdivision or area you build in, with floor plans as real text and photos you own. Remodelers do well with project pages that name the neighborhood and the room. Reviews from past buyers carry weight with both Google and families comparing builders.',
   },
   {
     category: 'local',
-    question: 'How do you target multiple Treasure Valley cities without keyword cannibalization?',
-    answer:
-      'We construct distinct, geo-targeted corridor pages with unique local proof points, localized customer testimonials, and specific municipal service coordinates that avoid internal ranking conflicts.',
+    question: 'How does SEO work for Boise dentists?',
+    answer: 'Patients search by treatment and by insurance. Give each treatment its own page, name the dentists, and list the insurance plans you accept as text, not an image. Keep the profile hours exact and add a booking link. Ask patients for reviews by text after visits, and keep replies free of any treatment details.',
   },
   {
     category: 'local',
-    question: 'Can you help outdoor recreation and adventure hospitality brands?',
-    answer:
-      'Yes. We optimize local search profiles, tourist attraction schemas, and map listings for outfitters, guides, and hospitality resorts across southwest Idaho.',
+    question: 'Do Boise plumbers and auto repair shops need SEO?',
+    answer: 'Yes, because most of their calls start with a phone search. Plumbers need a service-area profile, a page per service and accurate after-hours details. Auto shops need their street address shown, the makes and repairs they handle listed, and photos of the bays. Both win on reviews that mention the job.',
+  },
+  {
+    category: 'local',
+    question: 'How does local SEO work for Boise financial advisors and CPA firms?',
+    answer: 'Trust drives the search, so name the advisors, their credentials and the clients they serve. Registered investment advisers must check testimonials and reviews against the SEC marketing rule before using them. CPA firms see demand peak before tax deadlines, so update service pages ahead of the season.',
   },
   {
     category: 'deliverables',
-    question: 'What reports and dashboards will our team receive each month?',
-    answer:
-      'You receive access to a real-time geo-grid local rank tracking dashboard showing exact keyword positions across every Boise neighborhood, plus monthly conversion summaries detailing call volume and lead inquiries.',
+    question: 'Who is the best SEO company in Boise?',
+    answer: 'Judge by evidence, not lists. Ask each firm to show where it ranks for its own Boise terms, what it would fix first on your site, and how it will count your calls. Ask who will make the changes. A firm that cannot show its own rankings or name its process is guessing.',
   },
   {
     category: 'deliverables',
-    question: 'Do we own all citations and profiles created during the campaign?',
-    answer:
-      'Yes, 100%. All directory listings, Google Business Profiles, and citation accounts belong exclusively to your business with full master ownership credentials.',
+    question: 'What does the free Boise SEO audit cover?',
+    answer: 'We review your Business Profile, website and listings, then compare them with the businesses ranking for your terms in Boise today. We need read-only Search Console access, which is what Google advises before hiring. You get a short written fix list that any developer can work from.',
   },
   {
     category: 'deliverables',
-    question: 'Who will be our primary point of contact during the engagement?',
-    answer:
-      'You work directly with a senior technical SEO engineer who leads the strategy, executes the code changes, and leads your monthly strategy review sessions.',
-  },
-  {
-    category: 'deliverables',
-    question: 'How do we get started with a Boise local SEO audit?',
-    answer:
-      'Schedule a free 30-minute local search audit. We will analyze your Google Business Profile, identify competitor gaps, and deliver an actionable ranking roadmap for your business.',
-  },
-  {
-    category: 'local',
-    question: 'How do you optimize for semiconductor supply chain, clean tech, and IT software enterprises near Micron in Boise?',
-    answer:
-      'Boise is a premier semiconductor innovation center in the Mountain West. We build technical B2B content hubs, ISO/AS9100 manufacturing schemas, cleanroom equipment specifications, and enterprise RFP lead funnels that capture national procurement queries.',
-  },
-  {
-    category: 'technical',
-    question: 'How do cosmetic dentists and private elective medical clinics capture high-value patients in Meridian and Eagle?',
-    answer:
-      'We deploy granular MedicalBusiness and Physician schemas, optimize doctor profile authority with Idaho Board of Medicine credentials, construct neighborhood landing pages for Eagle, Meridian, and Star, and streamline verified Google review funnels to compete for high-intent clinical queries.',
-  },
-  {
-    category: 'local',
-    question: 'How do you structure SEO for food processing, agricultural logistics, and commercial contractors in Nampa and Caldwell?',
-    answer:
-      'Canyon County is a critical industrial, food processing, and agricultural distribution corridor. We construct technical B2B catalog structures, cold-storage capability matrices, and rapid contractor RFQ estimating workflows to capture high-value regional contracts.',
-  },
-  {
-    category: 'technical',
-    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in Idaho?',
-    answer:
-      'Generative AI search engines synthesize verified factual entities from structured JSON-LD schemas, official Idaho Secretary of State business filings, and direct answer-first page sections. We format your core service offerings to maximize conversational citation frequency in Google AI Overviews and ChatGPT search.',
-  },
-  {
-    category: 'local',
-    question: 'Can you structure local SEO across both Ada County and Canyon County corridors?',
-    answer:
-      'Yes. The Treasure Valley spans Ada County (Boise, Meridian, Eagle) and Canyon County (Nampa, Caldwell). We construct distinct localized landing pages and multi-county Schema.org AreaServed arrays without triggering duplicate content penalties.',
-  },
-  {
-    category: 'deliverables',
-    question: 'What is NAP citation synchronization across Boise and Idaho business directories?',
-    answer:
-      'We establish and synchronize verified business citations across essential regional directories, including the Boise Metro Chamber, Idaho BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, checking that your details match, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
+    question: 'What should I get each month from a Boise SEO company?',
+    answer: 'A plain note listing the pages and listings changed, the calls and forms that came from search, and ranking moves for the terms you chose. You should also see review counts and any new problems found. If the note does not show finished work, ask what you are paying for.',
   },
 ];
 
@@ -486,7 +420,7 @@ export default function BoiseSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  We work on your Google Business Profile, your service pages and your listings so customers searching in Boise and the Treasure Valley can find you.
+                  We build and fix the things Boise buyers see first: your Google Business Profile, your service pages and your listings across the Treasure Valley. Need a new site too? We build both together.
                 </p>
 
                 <div className="rv-actions">
@@ -570,7 +504,7 @@ export default function BoiseSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From Downtown Boise legal practices to Meridian medical enclaves and Nampa contracting specialists, we build high-converting search architectures that capture Idaho buyers.
+                  Boise has the most-reviewed map pack of the eight cities we checked on 21 Oct 2026. We plan around that: relevance work first, a review routine from day one, and pages that name the towns you serve.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -724,13 +658,13 @@ export default function BoiseSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>The FactoryJet Difference</span>
+                <span>Boise Search Check, 21 Oct 2026</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                What FactoryJet Does Differently for Boise Businesses
+                What Boise Buyers Find When They Search for SEO
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace opaque monthly agency reports with reporting on completed work, calls and inquiries:
+                We ran "boise seo company" from a Boise location and wrote down what came back:
               </p>
             </div>
 
@@ -750,11 +684,11 @@ export default function BoiseSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What it means for you:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -791,7 +725,7 @@ export default function BoiseSeoPage() {
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                The four stages of work we follow for Google Maps listings and AI answer visibility:
+                Four phases, whether you keep your current site or build a new one:
               </p>
             </div>
 
@@ -855,7 +789,7 @@ export default function BoiseSeoPage() {
                 Evaluating Boise SEO Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+                Four questions to put to any Boise SEO agency, with how we answer them:
               </p>
             </div>
 
@@ -863,7 +797,7 @@ export default function BoiseSeoPage() {
               <div className="rv-eval-head" style={{ background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Factor</div>
                 <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional Marketing Agencies</div>
+                <div style={{ color: '#A0A0B0' }}>Questions to ask any agency</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
@@ -884,7 +818,7 @@ export default function BoiseSeoPage() {
                   <div data-label="FactoryJet Engineering Model" style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
                     {crit.factoryjet}
                   </div>
-                  <div data-label="Traditional Marketing Agencies" style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                  <div data-label="Questions to ask any agency" style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
                     {crit.traditional}
                   </div>
                 </div>
@@ -900,7 +834,7 @@ export default function BoiseSeoPage() {
         <FAQ
           eyebrow="BOISE LOCAL SEARCH INTELLIGENCE"
           headline="Frequently Asked Questions About Local SEO in Boise ID"
-          lead="Direct, plain English answers to what Idaho business owners and marketing leaders ask about Google Maps 3-Pack and search visibility:"
+          lead="What Treasure Valley owners ask about cost, reviews, new websites and trades, answered plainly:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"

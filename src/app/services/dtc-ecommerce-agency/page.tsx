@@ -610,10 +610,10 @@ export default function DtcEcommerceAgencyPage() {
                 </ul>
                 <p className="text-base text-fj-ink/70 leading-relaxed">
                   {"Checkout is worth fixing during the move, not carrying over unchanged. The Baymard Institute's meta-analysis of 50 studies puts the average documented cart abandonment rate above 70%, and a meaningful share of that is tied to checkout friction most brands never audit until a migration forces the question. Weighing platforms as well as partners? Our "}
-                  <Link href="/blog/best-ecommerce-platform-tampa-boutiques-dtc-2026" className="text-[#B23E13] underline hover:no-underline">
-                    guide to choosing an ecommerce platform for boutique and DTC brands
+                  <Link href="/best-ecommerce-platforms" className="text-[#B23E13] underline hover:no-underline">
+                    ecommerce platform comparison
                   </Link>
-                  {" covers the Shopify-versus-WooCommerce-versus-Squarespace tradeoffs that apply well beyond the Tampa market it was written for."}
+                  {" sets Shopify, WooCommerce, BigCommerce and the rest side by side."}
                 </p>
               </div>
 

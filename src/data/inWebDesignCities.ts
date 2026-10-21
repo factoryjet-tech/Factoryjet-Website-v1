@@ -7,6 +7,9 @@
  *
  * Canonical route is /web-design/[slug], no trailing slash
  * (next.config.mjs sets trailingSlash: false).
+ *
+ * Nagpur and Noida were merged into /web-design by 301 on 2026-10-21
+ * (index quality audit), so they are no longer listed.
  */
 export const IN_WEB_DESIGN_CITIES: ReadonlyArray<{ slug: string; name: string }> = [
   { slug: 'ahmedabad', name: 'Ahmedabad' },
@@ -23,8 +26,6 @@ export const IN_WEB_DESIGN_CITIES: ReadonlyArray<{ slug: string; name: string }>
   { slug: 'kolkata', name: 'Kolkata' },
   { slug: 'madurai', name: 'Madurai' },
   { slug: 'mumbai', name: 'Mumbai' },
-  { slug: 'nagpur', name: 'Nagpur' },
-  { slug: 'noida', name: 'Noida' },
   { slug: 'pune', name: 'Pune' },
   { slug: 'rajkot', name: 'Rajkot' },
   { slug: 'surat', name: 'Surat' },

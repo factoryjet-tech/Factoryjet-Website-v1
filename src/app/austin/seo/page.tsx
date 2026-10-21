@@ -12,7 +12,7 @@ import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-09-14';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/austin/seo';
 
 export const metadata: Metadata = {
@@ -50,10 +50,30 @@ const SEO_TOOLS = [
 ];
 
 const STAT_CARDS = [
-  { num: 'Maps', title: 'Business Profile Review', desc: 'Check business details, categories, services, and the areas you actually serve.', icon: '📍' },
-  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Agree which calls, forms, and booked conversations count as useful inquiries.', icon: '📈' },
-  { num: 'Site', title: 'Technical SEO Review', desc: 'Find indexing, mobile usability, and service-page issues that interrupt the path to an inquiry.', icon: '🛠️' },
-  { num: 'Plan', title: 'Prioritized Next Steps', desc: 'See what needs fixing first, who will implement it, and how progress will be reviewed.', icon: '📋' },
+  {
+    num: 'Maps',
+    title: 'Business Profile Review',
+    desc: 'Categories, services and the Austin areas you take jobs in, checked against the firms in your map pack.',
+    icon: '📍',
+  },
+  {
+    num: 'Leads',
+    title: 'Inquiry Tracking',
+    desc: 'Calls, forms and booked jobs, agreed with you before the first month ends.',
+    icon: '📈',
+  },
+  {
+    num: 'Site',
+    title: 'Technical SEO Review',
+    desc: 'Indexing and mobile problems on the service pages Austin buyers land on.',
+    icon: '🛠️',
+  },
+  {
+    num: 'Plan',
+    title: 'Prioritized Next Steps',
+    desc: 'A ranked fix list with an owner and a date beside each item.',
+    icon: '📋',
+  },
 ];
 
 const DISTRICTS = [
@@ -147,107 +167,87 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Breaking Through the Google 3-Pack Barrier in Crowded Austin Sectors',
-    problem: 'Many Travis County businesses compete for just three spots in the Google Local Map Pack. Generic directory submissions and unoptimized Google Business Profiles languish invisibly on pages two and three.',
-    solution: 'We execute comprehensive Google Business Profile optimization, audit primary categories, inject localized photo feeds, and implement automated review acquisition systems.',
+    title: 'Half of page one is lists, not agencies',
+    problem: 'On 21 Oct 2026 we pulled Google\'s top 10 for "austin seo company" from an Austin location. Five of the ten were lists or directories: a Semrush agency list, a Built In Austin article, Clutch, a Reddit thread and a company database.',
+    solution: 'Austin buyers shortlist from those lists before they open a vendor\'s website. We find the lists that rank for your own service terms and check that your business is on them with matching details.',
   },
   {
     num: '02',
-    title: 'Fixing Slow Legacy WordPress Code That Destroys Mobile Search Rankings',
-    problem: 'Websites bogged down by 35 active plugins, heavy tracking scripts, and slow shared hosting fail Google Core Web Vitals tests. This causes high mobile bounce rates and algorithmic ranking penalties.',
-    solution: 'We work on page speed using modern Next.js static architecture, automated image compression, and edge caching on Cloudflare CDN, then check the result with mobile Lighthouse tests.',
+    title: 'A firm with 10 reviews still made the map pack',
+    problem: 'The three map pack results for that search had 63, 10 and 61 Google reviews. Review count matters, yet the 10-review business sat in the top three anyway.',
+    solution: 'Google says local results rest mainly on relevance, distance and how well known a business is. We start with relevance, the part you control fastest: categories, listed services and the page your profile links to.',
   },
   {
     num: '03',
-    title: 'Ending Locked 12-Month Agency Retainers with Zero Transparent Lead Data',
-    problem: 'Traditional marketing agencies lock Austin businesses into expensive annual retainers while sending automated monthly PDF reports filled with vanity impressions rather than real phone calls.',
-    solution: 'FactoryJet operates strictly on month-to-month terms. We track real phone calls, form completions, and qualified pipeline revenue with custom Google Analytics 4 conversion events.',
+    title: 'Multi-city agency pages rank in Austin too',
+    problem: 'Three of the five agency results were city pages from agencies that publish one page per city. One of those agencies had a city page on page one in 5 of the 8 US city searches we ran that day.',
+    solution: 'A page written for Austin should carry facts only your Austin business has: the neighborhoods you serve, jobs you finished there and reviews from those customers. We build your service pages around that material.',
   },
   {
     num: '04',
-    title: 'Capturing High-Value Geo-Targeted Commercial Keywords Across Travis County',
-    problem: 'Relying exclusively on broad Austin city keywords ignores high-converting localized searches across Westlake Hills, Lakeway, Round Rock, Cedar Park, and Buda.',
-    solution: 'We build dedicated geographic service area landing pages and localized content silos that capture micro-corridor search volume throughout Greater Austin.',
+    title: 'Buyers ask Google about price and whether SEO still works',
+    problem: 'The People Also Ask box on that search showed three buyer questions: what an SEO company does, whether SEO is dead in 2026, and how much to expect to pay.',
+    solution: 'Your own pages should answer the questions your customers type. We write those answers into your service pages and FAQ, and the FAQ schema is generated from the same text visitors read.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Month 1',
-    title: 'Full Technical Audit, Core Web Vitals Fixes & GBP Baseline',
-    desc: 'We conduct a line-by-line audit of your website code, crawl depth, indexing health, server response times, and current Google Business Profile status. We resolve all technical errors, repair broken redirects, clean up duplicate citations, and establish baseline conversion tracking in Google Analytics 4.',
-    deliverables: [
-      'Comprehensive 50-point technical SEO and crawlability report',
-      'Core Web Vitals code refactoring targeting sub-second LCP and zero CLS',
-      'Google Business Profile category audit, address verification, and metadata cleanup',
-      'Custom phone call, form submission, and live chat conversion tracking setup',
-    ],
+    title: 'Audit and Business Profile fixes',
+    desc: 'We read your Search Console with read-only access, your Google Business Profile and your top service pages, then fix whatever stops Austin callers first.',
+    deliverables: ['Written issue list ranked by effect on inquiries', 'Profile categories and services matched to what you sell'],
   },
   {
     phase: 'Month 2',
-    title: 'Local Citation Architecture, Review Systems & Entity Schema',
-    desc: 'We rebuild your local citation footprint across essential Tier 1 business directories, mapping your Name, Address, and Phone number with complete consistency. In parallel, we deploy structured JSON-LD LocalBusiness schema and launch automated review generation workflows.',
-    deliverables: [
-      'Cleanup and synchronization across 40+ premier local directories',
-      'Implementation of exhaustive nested JSON-LD schema markup',
-      'Automated SMS and email review collection system deployment',
-      'Competitive gap analysis against top 3 Austin Map Pack leaders',
-    ],
+    title: 'Listings and tracking',
+    desc: 'We correct your name, address and phone on the directories that rank for your Austin terms and set up call and form tracking you agree to.',
+    deliverables: ['Listing fixes on Apple Maps, Bing Places and the Austin lists that rank', 'Call and form tracking live'],
   },
   {
     phase: 'Month 3',
-    title: 'Corridor Landing Pages & Austin Content Silo Expansion',
-    desc: 'We architect and publish high-converting, answer-first landing pages tailored to specific Austin business corridors and surrounding suburbs. Each page is engineered with distinct geographic schema, localized proof points, and targeted commercial copy.',
-    deliverables: [
-      'Launch of dedicated neighborhood service pages for key target areas',
-      'Publishing of detailed service category guides and comparison matrices',
-      'On-page internal linking optimization across core commercial URLs',
-      'First quarterly ranking progress review and pipeline attribution report',
-    ],
+    title: 'Pages for the places you serve',
+    desc: 'We write or rewrite service pages for the parts of Travis and Williamson County where you take work, using real jobs and reviews.',
+    deliverables: ['Area pages only where you serve customers, such as Round Rock or Cedar Park', 'FAQ answers built from your buyers\' searches'],
   },
   {
     phase: 'Months 4 to 6',
-    title: 'Authority Link Acquisition, AI Engine Optimization & Scale',
-    desc: 'We build high-quality contextual backlinks from reputable Texas publications, industry associations, and local business hubs. We optimize content structure to trigger direct citations across generative AI search platforms including ChatGPT, Perplexity, and Google AI Overviews.',
-    deliverables: [
-      'Targeted local digital PR and editorial backlink acquisition',
-      'Generative Engine Optimization formatting for AI answer citation',
-      'Ongoing Map Pack rank tracking and competitor defense updates',
-      'Monthly executive strategy meetings with senior technical engineers',
-    ],
+    title: 'Reviews, links and AI answers',
+    desc: 'We set up a review request routine, look for Austin links you can earn, and check how ChatGPT, Perplexity and Google describe your business.',
+    deliverables: ['Review request routine your team can run', 'Monthly note: work done, calls, forms, rankings'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Contract Flexibility',
-    factoryjet: 'Written scope, review cadence, and cancellation terms agreed before work starts.',
-    traditional: 'Ask which customer inquiries they measure and how they report them.',
+    label: 'Austin Experience',
+    factoryjet: 'We begin with a check of who ranks for your terms in Austin and hand you the raw results.',
+    traditional: 'Ask: "What is your experience in my city?" Google lists this in its own advice on hiring an SEO.',
   },
   {
-    label: 'Team Seniority',
-    factoryjet: 'Direct access to senior software engineers and technical SEO architects.',
-    traditional: 'Ask who performs technical work and which deliverables are included.',
+    label: 'Guarantees',
+    factoryjet: 'No ranking guarantee. We commit to deliverables and dates instead.',
+    traditional: 'Ask: "Do you guarantee first place?" Google\'s advice is to find someone else if the answer is yes.',
   },
   {
-    label: 'Technical Implementation',
-    factoryjet: 'We write and deploy clean code directly to your Next.js or CMS repository.',
-    traditional: 'Ask which listings or publications are relevant to your actual business.',
+    label: 'Audit Access',
+    factoryjet: 'Read-only Search Console access for the audit. Write access only after you sign.',
+    traditional: 'Ask what access they need before you have hired them.',
   },
   {
-    label: 'Lead Attribution',
-    factoryjet: 'Monitors real phone calls, qualified form leads, and closed pipeline value.',
-    traditional: 'Ask how they validate search content and describe any limitations.',
+    label: 'Contract Terms',
+    factoryjet: 'No long-term contract. Your profile, analytics and pages stay yours.',
+    traditional: 'Ask: "Can I stop monthly, and what do I keep if I do?"',
   },
   {
-    label: 'Data & Account Ownership',
-    factoryjet: 'You maintain 100% ownership of your accounts, analytics data, and code.',
-    traditional: 'Ask who owns accounts and what happens when the engagement ends.',
+    label: 'Lists and Directories',
+    factoryjet: 'The ones that rank for your terms. For "austin seo company" on 21 Oct 2026 that included Clutch and Built In Austin.',
+    traditional: 'Ask which Austin lists and directories they will check for you.',
   },
   {
-    label: 'AI & Generative Search',
-    factoryjet: 'Builds entity graph schema formatted for ChatGPT, Perplexity, and Google AI.',
-    traditional: 'Ask what is included in implementation and what requires a separate quote.',
+    label: 'Monthly Reporting',
+    factoryjet: 'Work completed, calls, forms and ranking changes for the Austin terms you chose.',
+    traditional: 'Ask to see a sample monthly report before you sign.',
   },
 ];
 
@@ -262,123 +262,73 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   {
     category: 'contracts',
-    question: 'Why do you offer no-contract SEO agreements for Austin businesses?',
-    answer:
-      'If you are comparing no-contract SEO, check what that means in writing: the initial scope, any minimum term, the notice period, and ownership of accounts and content. Our proposal spells out the engagement terms before work starts. Ask us to separate initial setup from ongoing work so you can compare like for like.',
+    question: 'How much should I expect to pay for SEO in Austin?',
+    answer: 'WebFX\'s 2026 pricing data puts US local SEO retainers at about $500 to $3,000 a month, with one-time projects from $500 to $5,000. Austin is a busy market, so a firm chasing citywide terms usually sits higher in that range than one serving a single suburb. FactoryJet quotes a fixed price in writing after a short scoping call, so you know the number before any work starts.',
   },
   {
     category: 'contracts',
-    question: 'How do I compare proposals from different Austin SEO agencies?',
-    answer:
-      'Ask three fundamental questions: First, who will actually write and deploy the technical code on my website? Second, will you implement fixes directly or only hand over audit spreadsheets? Third, what specific business metrics will you track each month? If an agency will not say who does the technical work and refuses to track qualified inbound phone calls, they are selling marketing reports rather than revenue engineering.',
+    question: 'Can I hire an Austin SEO company with no contract?',
+    answer: 'Yes. Plenty of Austin firms work month to month, and so do we. The detail to check is what you keep when you stop. Your Google Business Profile, Search Console, analytics and website should sit in accounts you own from day one. If an agency owns them, leaving costs you your history.',
   },
   {
     category: 'contracts',
-    question: 'What hidden onboarding or setup fees do traditional agencies charge?',
-    answer:
-      'Fees vary by provider and scope. Ask each agency to list setup work, monthly deliverables, third-party subscriptions, and out-of-scope changes separately. Our proposal documents what is included and how additional work is agreed, so you can evaluate the full commitment before signing.',
-  },
-  {
-    category: 'contracts',
-    question: 'Do we own our website code, analytics accounts, and digital assets?',
-    answer:
-      'Yes, completely. You maintain 100 percent direct ownership and administrative control over your domain, code repository, Google Analytics 4 property, Google Search Console account, and Google Business Profile. We build on open web standards so you are never locked into a proprietary agency ecosystem.',
+    question: 'Is any Austin SEO service guaranteed?',
+    answer: 'Nobody controls Google\'s rankings, so a ranking guarantee is a sales line. Google\'s own page on hiring an SEO says that if someone guarantees first place, you should find someone else. What a firm can promise is the work: which pages, which listings, which fixes, and by what date.',
   },
   {
     category: 'local',
-    question: 'How do we get our Austin business into the top 3 Google Map Pack results?',
-    answer:
-      'Securing a placement in the top 3 Google Map Pack requires four synchronized components: selecting the precise primary business category, ensuring absolute Name-Address-Phone consistency across major directories, maintaining a steady velocity of authentic customer reviews containing natural service terms, and building localized domain authority through a fast website backed by structured LocalBusiness schema.',
+    question: 'What does an SEO company actually do for an Austin business?',
+    answer: 'Most of the work is in three places. Your Google Business Profile gets the right categories, services and photos. Your website gets service pages that answer what Austin buyers ask, plus technical fixes so Google can read them. Your listings on other sites get the same name, address and phone. Then you track which calls and forms came from search.',
   },
   {
     category: 'local',
-    question: 'How important are customer reviews for local search rankings in Austin?',
-    answer:
-      'Google describes local results in terms of relevance, distance, and prominence. Reviews can help customers evaluate a business and contribute to prominence, but they do not remove the effect of distance. We help you request honest feedback consistently, without incentives or filtering customers by how positively they respond.',
+    question: 'How do I get into the Google Maps top three in Austin?',
+    answer: 'Google says local results are mainly based on relevance, distance and how well known a business is. When we searched "austin seo company" on 21 Oct 2026, the three map results had 63, 10 and 61 reviews, so reviews alone did not decide it. Match your profile categories to what you sell, link it to a strong service page, then build reviews steadily.',
   },
   {
     category: 'local',
-    question: 'What is the difference between Google Map Pack SEO and organic website SEO?',
-    answer:
-      'Google Map Pack SEO focuses on the localized 3-Pack box displayed at the top of local search results, driven by your Google Business Profile, geographic proximity, citations, and reviews. Organic website SEO focuses on the traditional search listings beneath the map, driven by technical site speed, deep content silos, structured data, and high-authority backlinks. A successful campaign optimizes both layers in unison.',
-  },
-  {
-    category: 'local',
-    question: 'How do you handle Google Business Profile category optimization?',
-    answer:
-      'We analyze the primary and secondary GBP categories of the top three ranking competitors in your specific Austin business vertical. We align your primary category with the highest-volume commercial intent and configure relevant secondary categories to capture high-intent long-tail searches across Central Texas.',
-  },
-  {
-    category: 'technical',
-    question: 'What is technical SEO and why is it critical for Austin companies?',
-    answer:
-      'Technical SEO optimizes the fundamental software architecture of your website. It encompasses server response speed, crawl budget optimization, mobile layout stability, internal link architecture, and nested JSON-LD schema markup. In competitive markets like Austin, even minor technical defects like slow JavaScript execution can prevent search engine spiders from indexing your highest-value commercial pages.',
-  },
-  {
-    category: 'technical',
-    question: 'How do you optimize websites for Google AI Overviews and ChatGPT search?',
-    answer:
-      'Generative AI search platforms extract facts from websites with clear entity relationships, concise answer-first prose, authoritative data points, and semantic HTML markup. We structure your content using direct informational answers, structured comparison tables, and detailed entity schemas so AI engines can effortlessly parse, cite, and reference your business.',
-  },
-  {
-    category: 'technical',
-    question: 'Why does website loading speed directly impact Google search rankings?',
-    answer:
-      'A usable website helps visitors read your services and contact you. Core Web Vitals measure loading, responsiveness, and layout stability and are part of the broader page experience. There is no universal two-second cutoff that automatically demotes a page. We fix measured usability issues alongside relevance and content quality.',
-  },
-  {
-    category: 'technical',
-    question: 'What structured data schema do you implement on local Austin websites?',
-    answer:
-      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, MedicalClinic, LegalService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified entity relationships.',
+    question: 'What is the difference between organic SEO and local SEO in Austin?',
+    answer: 'Local SEO aims at the map results and searches with a place in them, like "plumber near me" or "Austin roofer". Organic SEO aims at the regular blue links, which can come from anywhere. A Lakeway contractor mostly needs local. An Austin software company selling across the US mostly needs organic. Many businesses need some of each.',
   },
   {
     category: 'corridors',
-    question: 'Can you rank our business in surrounding suburbs like Round Rock, Westlake, and Lakeway?',
-    answer:
-      'Yes. We architect dedicated geographic service area landing pages and localized schema markup targeting key suburban centers across Travis, Williamson, and Hays counties. This allows your brand to capture high-intent searches in Westlake Hills, Lakeway, Round Rock, Cedar Park, Pflugerville, Buda, and Kyle without triggering duplicate content issues.',
+    question: 'Can you rank my business in Round Rock, Cedar Park and Pflugerville too?',
+    answer: 'Yes, if you actually serve those places. Distance is one of Google\'s three local factors, so a business based in South Austin will struggle to show in Round Rock map results. Service pages for each suburb still help in the regular results, as long as each page has real jobs, reviews or details from that area and is not a copy with the town name changed.',
   },
   {
     category: 'corridors',
-    question: 'How do you structure SEO for multi-location businesses in Central Texas?',
-    answer:
-      'For multi-location businesses, we build dedicated location pages with unique NAP data, localized staff profiles, distinct Google Business Profile embeds, specific service menus, and custom LocalBusiness schema for each physical facility. This prevents internal location cannibalization and establishes clear geographic relevance.',
+    question: 'I am in Bee Cave or Bear Creek. Does Austin SEO still apply to me?',
+    answer: 'Partly. People nearby often search with "Austin" in the phrase, so your pages should mention it where it is true. Your map ranking, though, depends on where your business is and where the searcher stands. A Bee Cave business usually wins its own area first and then works outward toward Lakeway and West Austin.',
   },
   {
-    category: 'corridors',
-    question: 'How does Austin local SEO differ from statewide Texas SEO?',
-    answer:
-      'Austin local SEO targets hyper-specific geographic proximity signals, Map Pack 3-Pack rankings, and neighborhood-level search terms across Travis County. Statewide Texas SEO focuses on broader regional keyword authority, high-volume commercial head terms, and programmatic category hubs that rank across Houston, Dallas, San Antonio, and Austin simultaneously.',
+    category: 'technical',
+    question: 'Is SEO dead now that AI answers sit at the top of Google?',
+    answer: 'No. When we checked "austin seo company" on 21 Oct 2026, Google showed no AI Overview at all. It showed a map pack, ten regular results and a People Also Ask box. Where AI answers do appear, they pull from the same pages, listings and reviews that SEO work improves, so the work carries over.',
   },
   {
-    category: 'attribution',
-    question: 'How long does it take to see measurable SEO ranking improvements in Austin?',
-    answer:
-      'Timing varies with your starting point, the work required, and competition. We first record a baseline and agree the implementation priorities. Monthly reviews separate completed work from changes in rankings, calls, and qualified inquiries. We do not promise a top-three placement or a fixed deadline for results.',
+    category: 'technical',
+    question: 'How is SEO different for an Austin SaaS or B2B company?',
+    answer: 'Your buyers are rarely in Austin, so the map pack matters less. They search for the problem your product solves and compare vendors. The work shifts to comparison pages, use-case pages and technical health on a larger site. A local profile still helps with hiring and brand searches, but it is not where the revenue comes from.',
   },
   {
-    category: 'attribution',
-    question: 'How do you track and verify real return on investment for our business?',
-    answer:
-      'We track concrete commercial outcomes: verified phone calls, qualified contact form submissions, appointment bookings, and organic pipeline revenue. Through custom Google Analytics 4 event tracking and Google Search Console data, you receive transparent monthly reporting showing exactly how search visibility translates into customer acquisition.',
+    category: 'technical',
+    question: 'Do you work on real estate SEO in Austin?',
+    answer: 'Yes. Austin real estate is crowded, and the large portals own most broad searches. Agents and brokerages win on narrower ones: a neighborhood guide for Mueller or Tarrytown, a school-zone page, a relocation page for people moving from California. Each needs local facts a portal does not write, and a Business Profile linked to the right page.',
   },
   {
     category: 'attribution',
-    question: 'Will algorithm updates from Google disrupt our search rankings?',
-    answer:
-      'They can. Google core updates move rankings for many sites, and no agency controls them. Our work stays inside Google guidelines. That means clean site architecture, authentic local citations and original content, with no link networks or thin automated copy. After each update we check your rankings and inquiries and tell you what changed.',
+    question: 'What is in the free Austin SEO audit?',
+    answer: 'We look at your Business Profile, your top service pages and your listings, and compare them with the businesses already in your map pack. We ask for read-only Search Console access, which is what Google advises at this stage. You get a short written list of what to fix first. You are free to hand it to anyone to do the work.',
   },
   {
     category: 'attribution',
-    question: 'Can SEO replace our paid Google Ads spend in Austin?',
-    answer:
-      'It can reduce how much you rely on ads, but it rarely replaces them outright. Google Ads buy visibility for as long as you pay per click. SEO work on your site and listings stays in place after it is done. We report calls and inquiries from organic search each month, so you can decide whether and when to move ad budget.',
+    question: 'Should I hire an Austin SEO consultant or an agency?',
+    answer: 'Ask who will make the changes. A consultant usually advises and your team or web developer carries it out. An agency or implementation team makes the changes itself. If you have a developer with spare time, a consultant can be enough. If nobody on your side can edit the site or profile, pay for the people who will do it.',
   },
   {
     category: 'attribution',
-    question: 'Who executes the work on our account?',
-    answer:
-      'Senior technical software engineers and technical SEO architects execute all code, schema, and content work directly. You speak directly with the engineers building your systems rather than junior account managers or sales intermediaries.',
+    question: 'How will I know the work is bringing in Austin leads?',
+    answer: 'Agree what counts before work starts: phone calls from your profile, form fills, booked estimates. We set up tracking for those in the first month. Each monthly note lists the work done, then the calls and forms, then ranking changes for the terms you chose. Rankings come last because they matter only when they bring calls.',
   },
 ];
 
@@ -493,7 +443,7 @@ export default function AustinSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Help Austin customers find your business, understand your services, and get in touch. We improve your Google Business Profile, service pages, and technical SEO, with direct access to the team doing the work.
+                  We work on your Google Business Profile, your Austin service pages and your technical SEO. Scope and terms are written down before we start, and you talk directly to the people making the changes.
                 </p>
 
                 {/* Answer-First Brief */}
@@ -546,7 +496,7 @@ export default function AustinSeoPage() {
                 How Local SEO Works for Central Texas Businesses
               </h2>
               <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.6, margin: 0 }}>
-                Local SEO helps nearby customers find and evaluate your business. We check your Google Business Profile, service pages, business listings, and inquiry paths. The audit identifies what is missing or inconsistent, then prioritizes fixes around the services you sell and the areas you genuinely serve.
+                Local SEO is the work that gets you shown when someone nearby searches for what you sell. Google says it ranks local results mainly on relevance, distance and how well known a business is. You cannot move your address. The other two depend on your Business Profile, service pages, listings and reviews, so that is where an Austin audit starts.
               </p>
             </div>
           </div>
@@ -606,7 +556,7 @@ export default function AustinSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  Your website needs to explain what you do and make it easy to contact you. We connect accurate business listings with useful service content, technical fixes, and inquiry tracking, so each monthly review covers both implementation and customer response.
+                  Austin buyers often compare three or four firms from a map pack or a list before calling one. We make your profile, listings and service pages tell them the same facts, then track which calls and forms follow.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -761,13 +711,13 @@ export default function AustinSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>The FactoryJet Difference</span>
+                <span>Austin Search Check, 21 Oct 2026</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                What FactoryJet Does Differently for Austin Businesses
+                What Page One Shows Austin Buyers Searching for SEO
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace opaque agency retainers with transparent, engineering-driven search performance:
+                We searched Google from an Austin location. Here is what a buyer sees, and what we take from it:
               </p>
             </div>
 
@@ -787,11 +737,11 @@ export default function AustinSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What it means for you:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -845,7 +795,7 @@ export default function AustinSeoPage() {
                 Our 6-Month Austin SEO Roadmap
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A step-by-step roadmap of the work, month by month:
+                The first six months, in the order we do the work:
               </p>
             </div>
 
@@ -909,7 +859,7 @@ export default function AustinSeoPage() {
                 Evaluating Austin SEO Companies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Use these questions to compare implementation, reporting, and ownership before you sign:
+                Six questions to put to any Austin SEO company, with our own answers beside them:
               </p>
             </div>
 
@@ -953,7 +903,7 @@ export default function AustinSeoPage() {
         <FAQ
           eyebrow="AUSTIN SEO INTELLIGENCE"
           headline="Frequently Asked Questions About SEO in Austin TX"
-          lead="Direct, plain English answers to what Austin business owners and marketing leaders ask about local search rankings and lead generation:"
+          lead="Questions Austin owners type into Google before hiring for SEO, answered in plain words:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"

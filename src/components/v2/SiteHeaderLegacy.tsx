@@ -383,13 +383,11 @@ const IN_LOCATIONS_SOUTH = [
   { label: 'Coimbatore',        state: 'TN', href: '/web-design/coimbatore' },
   { label: 'Madurai',           state: 'TN', href: '/web-design/madurai' },
   { label: 'Visakhapatnam',     state: 'AP', href: '/web-design/visakhapatnam' },
-  { label: 'Nagpur',            state: 'MH', href: '/web-design/nagpur' },
   { label: 'Thiruvananthapuram',state: 'KL', href: '/web-design/thiruvananthapuram' },
 ] as const;
 
 const IN_LOCATIONS_NORTH_EAST = [
   { label: 'Delhi',        state: 'DL', href: '/web-design/delhi' },
-  { label: 'Noida',        state: 'UP', href: '/web-design/noida' },
   { label: 'Gurgaon',      state: 'HR', href: '/web-design/gurgaon' },
   { label: 'Jaipur',       state: 'RJ', href: '/web-design/jaipur' },
   { label: 'Kolkata',      state: 'WB', href: '/web-design/kolkata' },

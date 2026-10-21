@@ -12,7 +12,7 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/services/shopify-migration-agency';
 
 export const metadata: Metadata = {
@@ -479,6 +479,13 @@ export default function ShopifyMigrationPage() {
                 </p>
                 <p>
                   We use <strong>Shopify Multipass auth</strong> to keep customer password hashes intact. We validate 1:1 301 redirects at the edge. Coverage reaches 100% of historical URLs. We run live delta sync during cutover. This guarantees zero downtime and protects search rankings.
+                </p>
+                <p style={{ marginTop: '1.25rem' }}>
+                  When the move also needs a new storefront, our{' '}
+                  <Link href="/services/shopify-theme-development" style={{ color: '#ffffff', textDecoration: 'underline', textUnderlineOffset: 3 }}>
+                    Shopify theme development
+                  </Link>{' '}
+                  team builds it inside the same project plan.
                 </p>
               </div>
             </div>

@@ -66,7 +66,7 @@ const PAGE_TITLE = 'AI Agents for Ecommerce Stores on Any Platform | FactoryJet'
 const PAGE_DESC =
   'We design, build and support AI agents for WooCommerce, BigCommerce, Adobe Commerce, Shopify and headless stores. Orders, returns, B2B quotes and listings.';
 const PAGE_PUBLISHED = '2026-10-11';
-const PAGE_MODIFIED = '2026-10-11';
+const PAGE_MODIFIED = '2026-10-21';
 const CHECKED_ON = '11 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -1367,7 +1367,12 @@ export default function EcommerceAiAgentsPage() {
               <Link href="/services/shopify-ai-agents" className="font-semibold text-fj-ink underline underline-offset-4">
                 Shopify AI agents
               </Link>{' '}
-              page goes deeper than the Shopify card here.
+              page goes deeper than the Shopify card here. If your content lives in WordPress and your store in
+              Shopify, the two usually need joining before an agent can answer from both; that work is on our{' '}
+              <Link href="/services/wordpress-shopify-integration" className="font-semibold text-fj-ink underline underline-offset-4">
+                WordPress Shopify integration
+              </Link>{' '}
+              page.
             </p>
             <SourceLinks ids={['wooWebhooks', 'wooMcp']} />
             <ul className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-12">

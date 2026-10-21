@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/fargo/seo';
 
 export const metadata: Metadata = {
@@ -146,238 +146,198 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending Opaque Monthly Retainers With Zero Visible Map Pack Growth',
-    problem: 'Traditional agencies send generic monthly PDF reports filled with vanity impressions while your Google Business Profile remains stuck outside the Local 3-Pack.',
-    solution: 'We focus on tangible Google Maps 3-Pack rankings, qualified phone calls, and revenue-generating local search positions with full dashboard transparency.',
+    title: 'Directories Hold Three of the Top 10 Spots',
+    problem: 'We searched "fargo seo company" from Fargo on 21 Oct 2026. Three of the top 10 results were list or directory pages, including Expertise.com and Yelp. Two more were Facebook posts. Only five were agency or business websites.',
+    solution: 'We get your business listed on the directories that already rank for your service, with the same name, address and phone on each one. Then we build your own service page so it can win the clicks those lists are taking.',
   },
   {
     num: '02',
-    title: 'Eliminating Fragile Plugin Schemas That Fail AI Citation Crawlers',
-    problem: 'Basic WordPress SEO plugins generate disjointed, broken schemas that AI search engines like SearchGPT and Perplexity fail to parse as verified business entities.',
-    solution: 'We hand-craft connected Schema.org JSON-LD entity graphs linking your Google Knowledge Graph, licensing credentials, and verified local citations.',
+    title: 'The Map Pack Is Won With Dozens of Reviews',
+    problem: 'The three businesses in the Fargo map pack that day had 31, 32 and 15 Google reviews, rated between 4.8 and 5 stars. One business made the top three with only 15 reviews.',
+    solution: 'Fifteen reviews is a reachable target for most Fargo firms. We set up a simple ask after each finished job, reply to every review, and fix your Google Business Profile categories so relevance does the rest of the work.',
   },
   {
     num: '03',
-    title: 'Overcoming High Agency Turnover & Junior Account Handler Runaround',
-    problem: 'Big-box marketing agencies assign junior coordinators who do not understand Fargo regional corridors, Red River agricultural dynamics, or industry specifics.',
-    solution: 'You work directly with senior local SEO technical engineers who execute hyper-local geo-targeting tailored to North Dakota commercial realities.',
+    title: 'No AI Overview, So Plain Answers Still Win',
+    problem: 'Google showed no AI Overview on "fargo seo company" on 21 Oct 2026. The People Also Ask box asked basic questions, such as whether SEO is legitimate and what an SEO agency is.',
+    solution: 'We write your pages to answer those buyer questions in the first two sentences, then add FAQ schema built from the same text. The page reads well for a person today and can be quoted by an answer engine later.',
   },
   {
     num: '04',
-    title: 'Stopping Toxic Link Networks That Trigger Search Penalties',
-    problem: 'Cheap SEO providers build spammy automated backlinks from private blog networks, risking sudden Google algorithmic penalties and ranking demotions.',
-    solution: 'We execute white-hat local citation building, regional trade publication placements, and verified local press authority, with no private blog networks.',
+    title: 'Fargo Searches Are Few, So Each One Counts',
+    problem: 'Google Ads data from 21 Oct 2026 shows about 50 monthly searches each for "fargo seo" and "seo fargo", 20 for "seo company fargo" and about 10 for "local seo fargo". Small numbers, and each searcher is close to buying.',
+    solution: 'We skip broad traffic goals. We track calls, form fills and direction requests from your profile, so you can see which of those searches turned into paying work.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Phase 01',
-    title: 'Entity Audit, GBP Optimization & Technical Foundations',
-    desc: 'We audit your Google Business Profile, fix Name-Address-Phone (NAP) discrepancies, optimize categories, and eliminate technical website crawling bottlenecks.',
-    deliverables: ['Comprehensive local ranking audit and competitor gap analysis', 'Complete Google Business Profile category and attribute overhaul', 'NAP consistency audit across 60+ major US citation directories', 'Core Web Vitals and mobile crawlability technical fixes'],
+    title: 'Audit What Fargo Searchers See',
+    desc: 'We check your site, your Google Business Profile and your listings on Yelp, BBB, Bing Places and Apple Business Connect against the live Fargo results.',
+    deliverables: ['Dated screenshot of your main Fargo search', 'Listing errors across directories, one sheet', 'Fix list ranked by likely calls'],
   },
   {
     phase: 'Phase 02',
-    title: 'Local Geo-Silo Architecture & JSON-LD Entity Graph Build',
-    desc: 'We engineer dedicated geo-targeted service silos and implement nested Schema.org JSON-LD entity graphs connecting your business to the Google Knowledge Graph.',
-    deliverables: ['Hyper-local corridor landing pages (Downtown, West Fargo, NDSU, Moorhead)', 'Custom JSON-LD schema graphs (LocalBusiness, Service, Physician, LegalService)', 'Internal contextual link graph distributing domain authority', 'Service area boundary definition in Google Maps API'],
+    title: 'Build Pages for Each Town You Serve',
+    desc: 'One clear page per service, plus pages for West Fargo, Moorhead and Grand Forks where your work there differs. Each page answers real buyer questions first.',
+    deliverables: ['Service pages with plain first answers', 'Town pages for Moorhead and Grand Forks', 'LocalBusiness and FAQ schema from page text'],
   },
   {
     phase: 'Phase 03',
-    title: 'High-Authority Regional Citations & Review Velocity Engine',
-    desc: 'We build authoritative local citations across regional Fargo-Moorhead chambers, industry trade directories, and deploy automated review generation workflows.',
-    deliverables: ['Tier-1 citation distribution across Apple Maps, Bing, Yelp, and YellowPages', 'Regional Fargo business directory and chamber of commerce listings', 'Automated SMS and email review generation campaign deployment', 'Review response protocol and Google Maps attribute updates'],
+    title: 'Reviews and Listings That Match',
+    desc: 'The map pack leaders had 15 to 32 reviews on 21 Oct 2026. We set up a review routine and clean every listing across both states.',
+    deliverables: ['Review request text for your team', 'Matching name, address, phone everywhere', 'Profile categories and services rebuilt'],
   },
   {
     phase: 'Phase 04',
-    title: 'AI Citation Retrieval, Continuous Tracking & Reporting',
-    desc: 'We optimize your brand footprint for retrieval in AI answer engines (SearchGPT, Perplexity, Google AI Overviews) and provide real-time ranking dashboards.',
-    deliverables: ['AI search engine citation indexing verification', 'Real-time geo-grid local rank tracking dashboard', 'Monthly inbound call and consultation conversion reporting', 'Quarterly strategic expansion and competitor defense roadmaps'],
+    title: 'Report Calls, Then Adjust',
+    desc: 'Each month we report calls, forms and profile actions, rerun the Fargo search, and propose the next changes for you to approve.',
+    deliverables: ['Monthly report with dated search snapshot', 'Search Console query review', 'Next changes, quoted before work starts'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Local Ranking Method',
-    factoryjet: 'Full-stack entity engineering, connected JSON-LD schemas, and verified GBP category optimization.',
-    traditional: 'Basic keyword stuffing, generic blog posts, and automated low-quality citation blasts.',
+    label: 'Can you show me today\'s Fargo results for my service?',
+    factoryjet: 'We show the live results page with a date, how many spots are directories, and the review counts of the three map pack businesses. On 21 Oct 2026 those counts were 31, 32 and 15.',
+    traditional: 'A ranking report with no date, no screenshot and no mention of which directories hold the top spots.',
   },
   {
-    label: 'AI Search Readiness',
-    factoryjet: 'Optimized for OpenAI SearchGPT, Perplexity AI, and Google AI Overviews citation retrieval.',
-    traditional: 'Unaware of AI answer engines; relies solely on legacy 10 blue link keyword matching.',
+    label: 'How many reviews do I need, and how will we get them?',
+    factoryjet: 'We give you a target from the current map pack, then write the review request your staff sends after each job. One Fargo map pack business had 15 reviews.',
+    traditional: 'Talk of a review tool subscription with no target number and no plan for who sends the requests.',
   },
   {
-    label: 'Citation Integrity',
-    factoryjet: 'Manual NAP synchronization across top-tier business directories and regional chambers.',
-    traditional: 'Automated spam submissions leading to duplicate listings and fragmented NAP data.',
+    label: 'Will you cover Moorhead and the Minnesota side?',
+    factoryjet: 'Yes. We set your profile service area across the Red River, keep Minnesota listings consistent, and only build a Moorhead page if your work there differs.',
+    traditional: 'Dozens of copied town pages with only the city name swapped, which Google tends to ignore.',
   },
   {
-    label: 'Contract Flexibility',
-    factoryjet: 'Transparent milestone and performance deliverables with zero predatory multi-year lock-ins.',
-    traditional: 'Rigid 12-month locking contracts with severe early termination penalties.',
+    label: 'Who owns the profile, pages and content if we stop?',
+    factoryjet: 'You do. Your Google Business Profile, pages, schema and content stay yours, and there is no long-term contract.',
+    traditional: 'The agency keeps admin access to your profile or hosts the pages, so leaving means starting over.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Pricing & Retainers' },
-  { key: 'timeline', label: 'Rankings & Timeline' },
-  { key: 'ai', label: 'Search & AI Citations' },
-  { key: 'local', label: 'Fargo & Red River Valley' },
-  { key: 'deliverables', label: 'Deliverables & Reporting' },
+  { key: 'pricing', label: 'Cost, contracts and who you work with' },
+  { key: 'local', label: 'Fargo, Moorhead and North Dakota' },
+  { key: 'industry', label: 'Trades and industries' },
+  { key: 'results', label: 'Results and reporting' },
+  { key: 'ai', label: 'AI search and basics' },
 ];
 
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does local SEO cost for a Fargo ND business?',
-    answer:
-      'Monthly investments depend on your industry vertical, market competition, and target geographic coverage. We provide clear, transparent monthly deliverables with zero hidden hourly fees and zero long-term hostage contracts.',
+    question: 'How much does SEO cost for a small business in Fargo?',
+    answer: 'Most small businesses pay $1,500 to $3,500 a month for SEO, according to WebFX pricing updated in September 2026. An Ahrefs survey of 439 providers found an average of $2,917 a month. Fargo is a smaller search market than Minneapolis, so you may need less ongoing work than a big city firm. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Do you lock clients into mandatory 12-month contracts?',
-    answer:
-      'No. We operate on performance and transparency. We believe our results should earn your partnership every single month, so you are never locked into an inflexible annual agreement.',
+    question: 'What does local SEO cost in Fargo, ND?',
+    answer: 'Local SEO retainers usually run about $500 to $3,000 a month, and one-time local projects run $500 to $5,000, per WebFX local SEO pricing updated September 2026. The same Ahrefs survey put the average local SEO price at $1,557 a month. Local SEO means work on your Google Business Profile, reviews and listings so you show in the map results. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'What is included in your monthly local SEO scope?',
-    answer:
-      'Every engagement includes full Google Business Profile management, local citation building and cleanup, structured schema graph maintenance, geo-silo content engineering, review generation workflows, and monthly conversion tracking.',
+    question: 'How much does an SEO audit cost for a Fargo-Moorhead business?',
+    answer: 'Most businesses pay $101 to $750 for a one-time SEO audit, according to WebFX, which found 43% of businesses in that range. An audit is a check of your site, profile and listings with a list of what to fix. Ours includes a dated screenshot of the Fargo results for your main search. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'How do you calculate ROI on local SEO campaigns?',
-    answer:
-      'We track qualified phone calls, appointment bookings, contact form submissions, and direct navigation requests generated through Google Maps and local organic search, giving you clear visibility into revenue attribution.',
+    question: 'Do I have to sign a long contract for SEO?',
+    answer: 'No. FactoryJet has no long-term contract. Each change is quoted, and you approve it before we start. Your Google Business Profile, pages, schema and content stay yours if you stop working with us. Ask any Fargo firm the same question in writing, because some keep admin access to your profile, and that makes leaving costly.',
   },
   {
-    category: 'timeline',
-    question: 'How quickly can a Fargo business rank in the Google Maps 3-Pack?',
-    answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
+    category: 'local',
+    question: 'How many people in Fargo search for an SEO company?',
+    answer: 'Not many. Google Ads data from 21 Oct 2026 shows about 50 searches a month each for "fargo seo" and "seo fargo". "Seo company fargo" gets about 20. "Fargo seo company", "fargo seo agency" and "local seo fargo" get about 10 each. Google groups close variants, so treat these as rough. The point holds: in a market this size, a handful of searches a week can decide who gets the call.',
   },
   {
-    category: 'timeline',
-    question: 'What factors determine ranking speed in local search?',
-    answer:
-      'Key factors include existing domain authority, Google Business Profile age and history, review count and sentiment velocity, NAP consistency across citation networks, and the strength of competitor profiles in your specific corridor.',
+    category: 'local',
+    question: 'What shows up when someone in Fargo searches for an SEO company?',
+    answer: 'On 21 Oct 2026 we searched "fargo seo company" from Fargo. Google showed a map pack of three businesses and 10 regular results. Five of those 10 were agency or business sites. Three were lists or directories, including Expertise.com and Yelp. Two were Facebook posts. There was no AI Overview. A Fargo business can get found through those directories as well as through its own site.',
   },
   {
-    category: 'timeline',
-    question: 'Can you fix past Google Business Profile suspensions or penalties?',
-    answer:
-      'Yes. We audit your profile for policy compliance issues, correct address and category discrepancies, submit formal reinstatement appeals to Google, and restore your ranking standing.',
+    category: 'local',
+    question: 'How many Google reviews do I need to get into the Fargo map pack?',
+    answer: 'Fewer than you might think. On 21 Oct 2026 the three map pack businesses for "fargo seo company" had 31, 32 and 15 reviews, with ratings from 4.8 to 5 stars. Reviews are one signal. Google also weighs how close you are to the searcher and how well your profile matches the search. Counts differ by trade, so we check your own service search first.',
   },
   {
-    category: 'timeline',
-    question: 'How do you handle review generation without violating Google policies?',
-    answer:
-      'We set up automated post-service email and SMS review request funnels that invite genuine customers to share their authentic experiences on your verified Google Business Profile in compliance with FTC and Google guidelines.',
+    category: 'local',
+    question: 'Can one SEO plan cover both Fargo and Moorhead?',
+    answer: 'Yes. Moorhead sits across the Red River in Minnesota, so one metro spans two states. We set your Google Business Profile service area to include both, keep your listings matching on Bing Places and Apple Business Connect, and add a Moorhead page only if you do different work or hold different licenses there. Copied town pages with a swapped city name rarely help.',
+  },
+  {
+    category: 'local',
+    question: 'Do you do SEO for businesses in Grand Forks?',
+    answer: 'Yes. Grand Forks businesses search for local SEO and small business SEO too, and the work is the same: a strong Google Business Profile, matching listings, and clear service pages. Google shows map results near the searcher, so a Fargo profile rarely shows to someone in Grand Forks. If you serve both cities, each location needs its own address or a clear service area. We work remotely and schedule calls in US business hours.',
+  },
+  {
+    category: 'local',
+    question: 'Can my business rank across all of North Dakota?',
+    answer: 'In the map results, mostly no. Google shows map businesses close to the searcher, so a Fargo address rarely appears in Bismarck or Minot. Statewide reach comes from regular results: pages that describe the work you do in each place, backed by real jobs or staff there. We tell you which towns are worth a page and which are not, before you pay for them.',
+  },
+  {
+    category: 'industry',
+    question: 'Can SEO help an auto repair shop in Fargo?',
+    answer: 'Yes. Most auto repair customers search on a phone and call from the map results, so the Google Business Profile matters most. We set the right categories, list each service you offer, add photos of your bays, and build a steady review routine. On your site, we add a page for each repair you want more of, such as brakes or diesel work. We then track calls from the profile each month.',
+  },
+  {
+    category: 'industry',
+    question: 'Does local SEO work for home services companies in Fargo, ND?',
+    answer: 'Yes. Plumbers, roofers and HVAC firms often work from home or a shop, so Google treats them as service area businesses. You can hide your address and list the towns you cover, such as West Fargo, Horace and Moorhead. We build a page for each main service, set up review requests after each job, and make sure winter emergency work is on your profile.',
+  },
+  {
+    category: 'industry',
+    question: 'We are a machinery manufacturer with almost no online presence. Where do we start?',
+    answer: 'Start with pages buyers and engineers look for: one page per product line, with specs, capacities and downloadable data sheets. Add a page on custom work and the industries you serve. Then list the company on Google Business Profile and Bing Places. Trade show and existing customer sales still matter, so we turn your show materials into pages that keep working after the show ends.',
+  },
+  {
+    category: 'industry',
+    question: 'Do you do SEO for dentists and clinics in Fargo?',
+    answer: 'Yes. For a dental or medical practice we work on the Google Business Profile for each location, a clear page for each procedure, and schema that tells Google who the practice and providers are. Schema is code on the page that labels facts like your address and services. We do not write medical claims we cannot support, and every page goes to you for approval first.',
+  },
+  {
+    category: 'results',
+    question: 'How long does SEO take to work in Fargo?',
+    answer: 'Profile and listing fixes can show in the map results within weeks, because Google reads them quickly. New pages take longer, often months, to earn a steady spot. Fargo has fewer competing pages than a large city, which can help, but we do not promise a timeline or a ranking. We rerun your Fargo search each month so you can judge the progress yourself.',
+  },
+  {
+    category: 'results',
+    question: 'How will I know if SEO is working for my business?',
+    answer: 'You should see more calls, form fills and direction requests, not only better rankings. Each month we report those numbers from your Google Business Profile and site, show which searches brought people in from Search Console, and attach a dated screenshot of your main Fargo search. If a change did not help, the report says so and we suggest what to try next.',
+  },
+  {
+    category: 'results',
+    question: 'Can you promise my business will rank first in Fargo?',
+    answer: 'No. Nobody controls Google\'s results, and any firm that promises a top spot is guessing or hiding a trick that can get your profile suspended. What we can promise is the work: a fixed list of fixes, pages and listings, each quoted before we start, and a monthly report showing what changed in your Fargo results.',
+  },
+  {
+    category: 'results',
+    question: 'Is SEO legitimate?',
+    answer: 'Yes, when it means fixing your site, writing useful pages and keeping your business listings accurate. Google publishes its own guide to this work. The bad kind buys links, stuffs keywords, or creates fake reviews, and Google can penalize your site or profile for it. Ask any Fargo firm to list exactly what they will change. If they cannot, walk away.',
   },
   {
     category: 'ai',
-    question: 'How does local SEO help my business appear in SearchGPT and AI Overviews?',
-    answer:
-      'AI answer engines retrieve verified facts from structured knowledge graphs, verified directories, and authoritative publications. We build connected JSON-LD schemas that make your business data unmistakable to LLM crawlers.',
+    question: 'Does Google show an AI answer when people in Fargo search for SEO help?',
+    answer: 'Not on the day we checked. On 21 Oct 2026, Google showed no AI Overview for "fargo seo company" searched from Fargo. An AI Overview is the summary Google sometimes writes above the regular results. That can change any week. We write pages that answer common questions in the first sentence or two, so they are easy to quote if Google starts showing one.',
   },
   {
     category: 'ai',
-    question: 'Why is structured Schema.org JSON-LD so important for local search?',
-    answer:
-      'Schema markup explicitly defines your exact business type, physical coordinates, service area, opening hours, accepted payments, and practitioner credentials directly in machine-readable code for search crawlers.',
+    question: 'Can my Fargo business show up when people ask ChatGPT for a recommendation?',
+    answer: 'It can, though no one can promise it. People now type long requests into assistants, like asking which agencies help industrial firms build an online presence from scratch. Assistants pull from pages that state facts plainly: what you do, where, for whom, and since when. We structure your pages and listings that way, and we test sample questions each month to see whether you are named.',
   },
   {
     category: 'ai',
-    question: 'How do you track whether AI search engines are citing our brand?',
-    answer:
-      'We monitor citation appearances, brand mentions, and referral traffic originating from OpenAI SearchGPT, Perplexity AI, Claude, and Google AI Overviews, and report what we find.',
+    question: 'What does SEO stand for?',
+    answer: 'SEO stands for search engine optimization. It means changing your website, Google Business Profile and online listings so search engines show your business to people looking for what you sell. An SEO agency is a firm that does that work for you. For a Fargo business, most of the value is in the map results and a few service pages.',
   },
   {
-    category: 'ai',
-    question: 'Can AI search engines replace traditional Google Maps for local queries?',
-    answer:
-      'No. AI search engines synthesize and cite verified local data from Google Maps, Apple Maps, Yelp, and official websites. Accurate local data helps you appear in both traditional and AI-driven searches.',
-  },
-  {
-    category: 'local',
-    question: 'What does local SEO involve for Fargo medical and dental practices?',
-    answer:
-      'For surgical practices, dental implant specialists, and wellness clinics across Fargo and West Fargo, the work covers the Google Business Profile for the practice, a page for each procedure, and physician and procedure schema.',
-  },
-  {
-    category: 'local',
-    question: 'Can you optimize commercial contractors competing across Cass and Clay Counties?',
-    answer:
-      'Yes. We engineer comprehensive Service Area Business profiles and commercial contracting silos targeting Fargo, West Fargo, Moorhead, and surrounding areas.',
-  },
-  {
-    category: 'local',
-    question: 'How do you target both North Dakota and Minnesota without keyword cannibalization?',
-    answer:
-      'We construct distinct, geo-targeted corridor pages with unique local proof points, localized customer testimonials, and specific municipal service coordinates for Fargo and Moorhead.',
-  },
-  {
-    category: 'local',
-    question: 'Can you help agricultural equipment and rural supply businesses?',
-    answer:
-      'Yes. We optimize local search profiles, equipment dealership schemas, and map listings for implement dealers, seed suppliers, and rural contractors across the valley.',
-  },
-  {
-    category: 'deliverables',
-    question: 'What reports and dashboards will our team receive each month?',
-    answer:
-      'You receive access to a real-time geo-grid local rank tracking dashboard showing exact keyword positions across every Fargo neighborhood, plus monthly conversion summaries detailing call volume and lead inquiries.',
-  },
-  {
-    category: 'deliverables',
-    question: 'Do we own all citations and profiles created during the campaign?',
-    answer:
-      'Yes, 100%. All directory listings, Google Business Profiles, and citation accounts belong exclusively to your business with full master ownership credentials.',
-  },
-  {
-    category: 'deliverables',
-    question: 'Who will be our primary point of contact during the engagement?',
-    answer:
-      'You work directly with a senior technical SEO engineer who leads the strategy, executes the code changes, and leads your monthly strategy review sessions.',
-  },
-  {
-    category: 'deliverables',
-    question: 'How do we get started with a Fargo local SEO audit?',
-    answer:
-      'Schedule a free 30-minute local search audit. We will analyze your Google Business Profile, identify competitor gaps, and deliver an actionable ranking roadmap for your business.',
-  },
-  {
-    category: 'local',
-    question: 'How do you optimize for agricultural technology, precision machinery, and seed suppliers across Cass County?',
-    answer:
-      'The Red River Valley is one of the most productive agricultural centers in North America. We construct technical B2B product catalogs, equipment dealership schemas, and regional dealer landing pages that capture high-ticket farm machinery and ag-tech procurement searches across North Dakota and Minnesota.',
-  },
-  {
-    category: 'technical',
-    question: 'How can independent medical clinics and dental practices compete with Sanford Health and Essentia Health?',
-    answer:
-      'While major health systems lead on general brand searches, private specialists and cosmetic dentists capture lucrative procedural queries through hyper-targeted neighborhood landing pages, sub-second mobile page loads, Doctor Schema markup, and verified patient review generation.',
-  },
-  {
-    category: 'local',
-    question: 'Can you structure local SEO across the Fargo, North Dakota and Moorhead, Minnesota metro area?',
-    answer:
-      'Yes. The Fargo-Moorhead metro spans Cass County in North Dakota and Clay County in Minnesota. We construct distinct geographic service area landing pages and multi-state Schema.org AreaServed arrays targeting Fargo, West Fargo, Moorhead, and Dilworth without duplicate content penalties.',
-  },
-  {
-    category: 'technical',
-    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in the Upper Midwest?',
-    answer:
-      'Generative AI search engines synthesize verified factual entities from structured JSON-LD schemas, official North Dakota Secretary of State corporate records, and direct question-answering page sections. We format your core service offerings to maximize conversational citation frequency in Google AI Overviews and ChatGPT search.',
-  },
-  {
-    category: 'deliverables',
-    question: 'What is NAP citation synchronization across Fargo and North Dakota business directories?',
-    answer:
-      'We establish and synchronize verified business citations across essential regional directories, including the Fargo Moorhead West Fargo Chamber of Commerce, North Dakota BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, checking that your details match, eliminating duplicate records, and reinforcing Google Maps 3-Pack authority across Cass and Clay counties.',
+    category: 'pricing',
+    question: 'Who will I work with at FactoryJet?',
+    answer: 'Founder Bhavesh Barot replies to every new inquiry within 24 hours. FactoryJet was founded in 2014, has worked with more than 500 businesses, and delivers 97% of projects on time. We work remotely with US clients and schedule calls in US business hours, so a Fargo client gets the same calls and reports as a client anywhere else. We also do white-label work for agencies.',
   },
 ];
 
@@ -724,7 +684,7 @@ export default function FargoSeoPage() {
                 What FactoryJet Does Differently for Fargo Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace opaque monthly agency reports with reporting on completed work, calls and inquiries:
+                On 21 Oct 2026 we pulled the Google results and search volumes Fargo buyers see, and each point below starts from one of those measurements.
               </p>
             </div>
 
@@ -744,11 +704,11 @@ export default function FargoSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw in Fargo search, 21 Oct 2026:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What we do about it:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -785,7 +745,7 @@ export default function FargoSeoPage() {
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                The four stages of work we follow for Google Maps listings and AI answer visibility:
+                Four stages, built around the searches, towns and trades we measured across the Fargo-Moorhead area on 21 Oct 2026.
               </p>
             </div>
 
@@ -849,7 +809,7 @@ export default function FargoSeoPage() {
                 Evaluating Fargo SEO Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+                Ask any Fargo SEO firm these four questions before you sign, and compare their answers to what the Fargo results showed on 21 Oct 2026.
               </p>
             </div>
 

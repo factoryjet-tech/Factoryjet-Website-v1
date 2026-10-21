@@ -24,6 +24,8 @@ export interface BlogPost {
   keyTakeaways?: string[];
   faqs?: FAQItem[];
   hideExcerptOnPage?: boolean;
+  /** Keep the post live but out of the index: robots noindex,follow, dropped from the sitemap. */
+  noindex?: boolean;
   meta?: {
     title: string;
     description: string;

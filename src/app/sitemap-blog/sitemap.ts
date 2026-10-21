@@ -40,7 +40,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // rather than git timestamps — the date in the post body is more
   // meaningful to readers and search engines than the last commit
   // touching the file. Falls back to build time for malformed dates.
-  const posts: MetadataRoute.Sitemap = POSTS.map((post) => ({
+  // noindex posts stay live but never go in the sitemap.
+  const posts: MetadataRoute.Sitemap = POSTS.filter((post) => !post.noindex).map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: parsePostDate(post.dateModified ?? post.date, buildTime),
     changeFrequency: CHANGEFREQ.blog as ChangeFreq,

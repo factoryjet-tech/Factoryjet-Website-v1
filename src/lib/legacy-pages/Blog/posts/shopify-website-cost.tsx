@@ -776,11 +776,7 @@ export const post: BlogPost = {
         <Link href="/austin/ecommerce-development" className="text-[#B23E13] font-semibold underline hover:text-[#9A3510]">
           Austin
         </Link>
-        ,{' '}
-        <Link href="/miami/ecommerce-development" className="text-[#B23E13] font-semibold underline hover:text-[#9A3510]">
-          Miami
-        </Link>{' '}
-        and{' '}
+        , Miami and{' '}
         <Link href="/nashville/ecommerce-development" className="text-[#B23E13] font-semibold underline hover:text-[#9A3510]">
           Nashville
         </Link>

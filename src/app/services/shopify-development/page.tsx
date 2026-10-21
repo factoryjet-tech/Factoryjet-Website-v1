@@ -1453,13 +1453,10 @@ export default function ShopifyPage() {
             <div className="flex flex-wrap gap-3">
               {[
                 { city: 'Austin, TX', href: '/austin/ecommerce-development/' },
-                { city: 'Miami, FL', href: '/miami/ecommerce-development/' },
                 { city: 'Denver, CO', href: '/denver/ecommerce-development/' },
                 { city: 'Nashville, TN', href: '/nashville/ecommerce-development/' },
-                { city: 'Portland, OR', href: '/portland/ecommerce-development/' },
                 { city: 'Charlotte, NC', href: '/charlotte/ecommerce-development/' },
                 { city: 'Raleigh, NC', href: '/raleigh/ecommerce-development/' },
-                { city: 'Tampa, FL', href: '/tampa/ecommerce-development/' },
               ].map(({ city, href }) => (
                 <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors">
                   {city}

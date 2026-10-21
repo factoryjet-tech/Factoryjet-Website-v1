@@ -23,7 +23,7 @@ const ReplatformingScopeEstimator = dynamic(
   { ssr: true }
 );
 
-const PAGE_MODIFIED = '2026-09-17';
+const PAGE_MODIFIED = '2026-10-21';
 
 export const metadata: Metadata = {
   title: 'E-Commerce Replatforming & Migration | FactoryJet',
@@ -573,6 +573,10 @@ export default function ReplatformingHubPage() {
                 For published price ranges and timelines, read{' '}
                 <Link href="/blog/shopify-plus-migration-cost-2026" style={{ color: '#B23E13', textDecoration: 'underline' }}>
                   Shopify Plus migration cost by platform
+                </Link>
+                . To keep your rankings through the move, read{' '}
+                <Link href="/blog/ecommerce-replatforming-without-losing-seo-2026" style={{ color: '#B23E13', textDecoration: 'underline' }}>
+                  ecommerce replatforming without losing SEO
                 </Link>
                 .
               </p>

@@ -10,6 +10,8 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 07, 2026",
   readTime: '14 min read',
+  // noindex,follow per the 2026-10-21 index quality audit: agency-facing, not a buyer page.
+  noindex: true,
   imageUrl: "/blog-images/sell-ai-automation-services-uk-agency-playbook-2026-hero.webp",
   meta: {
     title: "How to Sell AI Automation Services in 2026: UK Agency Playbook",

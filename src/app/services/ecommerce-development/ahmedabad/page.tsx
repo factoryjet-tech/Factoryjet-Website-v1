@@ -93,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-21';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -189,149 +189,143 @@ const AHMEDABAD_ECOM_FAQ_CATEGORIES = [
 ];
 
 const AHMEDABAD_ECOM_FAQ_ITEMS = [
-
-  /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How long does it take to launch an Ahmedabad ecommerce store?',
+    question: "How long does it take to launch an ecommerce store in Ahmedabad?",
     answer:
-      'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
+      "A standard Shopify or WooCommerce store for an Ahmedabad brand goes live in 7 days once we have your products, photos and payment gateway approval. Gateway approval is the step most often late, so start it the day you sign. Wholesale portals for GIDC manufacturers and textile traders take 5 to 8 weeks, because buyer-specific prices and GST invoices need testing. Custom marketplaces take 8 to 14 weeks.",
   },
   {
     category: 'pricing',
-    question: 'How much does ecommerce development cost in Ahmedabad?',
+    question: "How much does ecommerce development cost in Ahmedabad?",
     answer:
-      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing, with no hourly billing and no scope creep.",
+      "It depends on what the store has to do. In Ahmedabad the things that move the price most are wholesale pricing for trade buyers, a Gujarati storefront, international shipping for NRI customers, and syncing stock with Amazon and Flipkart. A retail store with none of these costs far less than a B2B portal with all of them. FactoryJet quotes a fixed price in writing after a short scoping call.",
   },
   {
     category: 'pricing',
-    question: 'Do you offer payment plans for the development cost?',
+    question: "How do I pay for an ecommerce build?",
     answer:
-      'Yes. All plans can be split 50% upfront and 50% on launch day. Growth and Custom plans can be structured as 40-30-30 across the build. We accept NEFT, RTGS, UPI, and all major credit cards. No interest or fees are charged on installment plans; it is simply a split of the quoted fixed price.',
+      "We split the build into phases. Each phase is scoped, priced and signed on its own, so you never pay for work that has not been agreed. The price is fixed in writing and does not move with hours. You can pay by NEFT, RTGS or UPI.",
   },
   {
     category: 'pricing',
-    question: 'What happens if my store is not ready in 7 days?',
+    question: "Can I see my store before I sign a contract?",
     answer:
-      'We have delivered on time for 97% of all builds. When a build does run over, the cause is almost always a delay in receiving product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
+      "Yes. Before a contract, we build a draft of your store on your own products and show it to you working. You judge the design, the product pages and the checkout on real items, not a sample theme. If it is not right, you have spent nothing.",
   },
-
-  /* ── Platform & Tech ── */
   {
-    category: 'platform',
-    question: 'Which ecommerce platform is right for my Ahmedabad business?',
+    category: 'pricing',
+    question: "What if I need the store live before Navratri or Diwali?",
     answer:
-      'Shopify is the best default for most Ahmedabad D2C and B2C brands: fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration (recipes, guides, editorial content). Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces where Shopify and WooCommerce hit their ceiling. FactoryJet makes this recommendation during discovery at no charge.',
+      "Brief us at least 8 weeks before the festival. That leaves time to build, get payment approval, test courier pickups and run real orders before demand spikes. We have delivered on time on 97% of builds, and the late ones were almost always waiting on product photos or gateway approval. A festival launch is the one deadline we plan backwards from.",
   },
   {
     category: 'platform',
-    question: 'Do you set up Razorpay, UPI, and Cash on Delivery for all stores?',
+    question: "Which platform suits an Ahmedabad textile or saree brand?",
     answer:
-      'Yes, all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI on major cards, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if you have an existing relationship. Cash on Delivery is configured with prepaid-to-COD ratios you control. Razorpay\'s fraud detection rules are configured at launch to keep COD abuse low.',
+      "Shopify, for most retail brands. It handles fabric, colour and size variants well, takes UPI and COD out of the box, and lets you share products to a WhatsApp catalogue. If you also sell wholesale to shops, we either add a trade price list for logged-in buyers or build a separate wholesale portal, depending on how different the two price lists are.",
   },
   {
     category: 'platform',
-    question: 'Can you connect my Ahmedabad store to Amazon India and Flipkart?',
+    question: "Can you build a wholesale ordering portal for my GIDC factory?",
     answer:
-      'Yes, this is included in the Growth plan and above. We use Cedcommerce or Unicommerce to sync your product catalogue, pricing, and inventory between your Shopify or WooCommerce store and your Amazon India and Flipkart seller accounts. Orders from all channels flow into one dashboard. When stock sells on Amazon, it is deducted from your store automatically, preventing overselling.',
+      "Yes. Trade buyers log in and see their own price list, minimum order quantities and credit terms. They can reorder past orders in two clicks or request a quote for a custom batch. We capture each buyer's GSTIN, raise GST invoices automatically and export orders to Tally or Zoho Books. Manufacturers in Vatva, Naroda and Odhav estates often start here instead of with a retail store.",
   },
   {
     category: 'platform',
-    question: 'Can you set up WhatsApp Commerce and automated order flows?',
+    question: "Can diamond and jewellery traders sell online safely?",
     answer:
-      'Yes. We integrate WhatsApp Business API via Interakt, Wati, or AiSensy to send order confirmations, shipping updates, and abandoned cart messages on WhatsApp, where open rates are 85%+ versus email\'s 20%. We also build conversational product discovery chatbots where customers browse and order directly in WhatsApp, with Razorpay payment links sent in-chat. This is included in Growth and Custom plans.',
-  },
-
-  /* ── India-Specific ── */
-  {
-    category: 'india',
-    question: 'Do your stores support GST invoicing and compliance?',
-    answer:
-      'Yes, GST compliance is built into every Indian ecommerce store we deliver. This includes auto-generated GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code mapping per product category, state-wise IGST/CGST/SGST rate configuration, and monthly GSTR-1 export compatibility. We integrate with Tally, Zoho Books, or custom accounting exports on request.',
+      "Yes, with two different setups. Retail jewellery needs high-trust product pages, BIS hallmark details including the HUID number on gold pieces, insured shipping and COD limits. B2B diamond trade needs a login-only catalogue, so prices and stock are visible to approved dealers only. We build both on Shopify or a custom platform, depending on how many stones and certificates you list.",
   },
   {
-    category: 'india',
-    question: 'Which logistics partner should I use for an Ahmedabad store?',
+    category: 'platform',
+    question: "Do you set up Razorpay, UPI and Cash on Delivery?",
     answer:
-      'Shiprocket is our default recommendation for most Ahmedabad ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Ahmedabad, Shadowfax and Porter are the right fit.',
+      "Yes, on every store. Razorpay is our default gateway and covers UPI, cards, net banking, wallets and EMI in one account. We connect PayU, CCAvenue or PhonePe if you already use one. Cash on Delivery is switched on with the limits you choose, such as a maximum order value or pincodes where COD is off.",
+  },
+  {
+    category: 'platform',
+    question: "Can you sync my Ahmedabad store with Amazon and Flipkart?",
+    answer:
+      "Yes. We connect your store to your Amazon and Flipkart seller accounts through a multi-channel tool such as Unicommerce or CedCommerce. Products, prices and stock stay in step, and orders from every channel land in one dashboard. When an item sells on Amazon, stock drops on your own store too, so you do not oversell during a sale.",
   },
   {
     category: 'india',
-    question: 'Can you add Gujarati or Hindi language support to my store?',
+    question: "Do your stores handle GST invoicing?",
     answer:
-      'Yes, multi-language support is available for all platforms. For Shopify we use the Translate & Adapt app or Langify for regional language storefronts. For WooCommerce we implement WPML or TranslatePress. For custom platforms we build the i18n layer natively. Language-switched URLs follow SEO-safe hreflang patterns. We have built stores in Hindi, Gujarati, Marathi, Tamil, and Bengali.',
+      "Yes. Every store raises a GST invoice when an order is placed, with HSN codes per product and the right IGST, or CGST and SGST, split for the buyer's state. B2B buyers can enter a GSTIN at checkout. If your turnover puts you inside GST e-invoicing, we connect the store to your e-invoicing setup so B2B invoices carry an IRN. Orders export to Tally or Zoho Books.",
   },
   {
     category: 'india',
-    question: 'How do you handle cart abandonment for Indian shoppers?',
+    question: "Can my store be in Gujarati?",
     answer:
-      'India has a 78% cart abandonment rate, higher than global averages because COD hesitancy and payment UX friction are common. We build a 3-touch recovery sequence: 1) WhatsApp message within 30 minutes with a direct Razorpay payment link, 2) SMS at 2 hours with a small discount, 3) email at 24 hours with a trust signal (reviews, return policy). Stores with this sequence recover 18–22% of abandoned carts on average.',
+      "Yes. Shopify's translation tools and WooCommerce plugins such as WPML can run a Gujarati version next to English, each on its own URL so Google can index both. Gujarati script needs a font that renders it cleanly on cheap Android phones, so we test the theme on real devices before we quote. Product names and descriptions should be written by a person, not machine-translated.",
   },
-
-  /* ── Speed & SEO ── */
+  {
+    category: 'india',
+    question: "How do I sell to NRI customers in the US and UK from Ahmedabad?",
+    answer:
+      "Shopify Markets shows prices in the buyer's own currency and handles international checkout. We connect a cross-border courier, such as Shiprocket X or DHL, and show duties and delivery times at checkout so nothing surprises the buyer. Kutch embroidery, Patola and bandhani sell well to the Gujarati diaspora, and those buyers expect clear photos of the weave and honest delivery dates.",
+  },
+  {
+    category: 'india',
+    question: "Which courier should an Ahmedabad store use?",
+    answer:
+      "Shiprocket is the default for most stores. One account gives you Delhivery, Blue Dart, Xpressbees, Ekart and others, with automatic courier choice, return handling and non-delivery follow-up. Brands shipping high volumes often move to a direct Delhivery contract later. For same-day delivery inside Ahmedabad, a hyperlocal partner such as Porter works for food, gifts and urgent B2B parts.",
+  },
+  {
+    category: 'india',
+    question: "How do I cut COD returns on an Ahmedabad store?",
+    answer:
+      "Three changes do most of the work. Ask for a small prepaid amount on COD orders, confirm each COD order by WhatsApp before it ships, and switch COD off for pincodes and order values where returns are high. We also show a clear returns policy at checkout, because unclear terms are a common reason buyers refuse a parcel at the door.",
+  },
+  {
+    category: 'india',
+    question: "Can pharma and food brands from Ahmedabad sell online?",
+    answer:
+      "Food brands can, and the FSSAI licence number must be shown on every product page, along with ingredients and shelf life. Pharma is different. We build B2B ordering portals for GIDC pharma makers that sell to licensed distributors and chemists, with each buyer's drug licence number captured at sign-up. Selling prescription medicines to consumers online needs legal advice first, before any build.",
+  },
   {
     category: 'seo',
-    question: 'Will my Ahmedabad ecommerce store rank on Google?',
+    question: "Will my store rank for Ahmedabad and Gujarat searches?",
     answer:
-      'Every store we build includes technical SEO from day one: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates, canonical URLs to prevent duplicate content (a common Shopify and WooCommerce issue), GST price display, Core Web Vitals green on mobile, and sitemap submission to Google Search Console. LocalBusiness schema with Ahmedabad geo-coordinates is included for local search visibility.',
+      "It can, if the basics are right from launch. We add product and breadcrumb schema, clean titles, canonical URLs and a sitemap submitted to Search Console. If you have a showroom on SG Highway or in Manek Chowk, we link the store to your Google Business Profile so you show on the map too. Gujarati pages give you a second set of searches most competitors ignore.",
   },
   {
     category: 'seo',
-    question: 'Do you guarantee a Lighthouse score?',
+    question: "Do you test the store speed before handover?",
     answer:
-      'Yes, Lighthouse 90+ on Performance, Accessibility, Best Practices, and SEO is a contractual commitment on all builds. We achieve this by serving WebP images from CDN, deferring non-critical JavaScript, inlining critical CSS, using next-gen fonts with preload, and hosting on Cloudflare Pages with assets served from the nearest edge node to your customer. We QA the score before handover and fix any regression post-launch within 48 hours at no charge.',
+      "Yes. Before handover we test the main pages against Google's Core Web Vitals: LCP under 2.5 seconds, INP under 200 milliseconds and CLS under 0.1, on a mobile connection. We share the Lighthouse report with you. Most of the work is in images, apps and theme code, so we keep apps to the ones your store actually uses.",
   },
   {
     category: 'seo',
-    question: 'What are Core Web Vitals and why do they matter for my store?',
+    question: "Can you fix an Ahmedabad store that is already slow?",
     answer:
-      'Core Web Vitals are Google\'s three page experience signals: LCP (Largest Contentful Paint, how fast the main content loads, target under 2.5s), INP (Interaction to Next Paint, how fast the page responds to clicks, target under 200ms), and CLS (Cumulative Layout Shift, whether elements jump around, target below 0.1). Google confirmed these are a ranking signal. More importantly, a 1-second delay in mobile load time reduces conversion rates by 20%. For a high-revenue store, that adds up to significant lost revenue every second of slowness.',
-  },
-  {
-    category: 'seo',
-    question: 'Can you optimise an existing Ahmedabad store that is already slow?',
-    answer:
-      'Yes, we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
-  },
-
-  /* ── Process & Ownership ── */
-  {
-    category: 'trust',
-    question: 'Do I own my store and all the code after launch?',
-    answer:
-      '100% yes. On launch day we transfer full ownership of the store account, the theme code, all integrations, and every custom component we built. You get GitHub repository access for all code assets and full admin credentials for every tool. We do not hold your store with ongoing fees. You can take the store to any developer after handover; we encourage it. What we hope is that you come back to us for the next phase.',
-  },
-  {
-    category: 'trust',
-    question: 'What does the handover process look like?',
-    answer:
-      'Day 7 is handover day. We schedule a 60–90 minute Zoom walkthrough covering: admin panel navigation, adding and editing products, processing orders, managing discounts, viewing analytics, and handling basic shipping issues. We deliver a handover document with all credentials, API keys, support contacts for each integration, and a first-30-days checklist. Post-handover, we are available on WhatsApp for 30 days for quick questions at no charge.',
-  },
-  {
-    category: 'trust',
-    question: 'Do you offer post-launch maintenance for Ahmedabad stores?',
-    answer:
-      'Yes. Our Care Plan covers plugin and platform updates, a monthly Lighthouse audit and performance fixes, uptime monitoring, a few hours of content or feature changes each month, and priority support with a 4-hour response SLA. Our Growth Retainer adds monthly A/B tests, conversion optimization, and new campaign landing pages. Both are month-to-month with no lock-in, and we share the exact monthly price on your free call.',
+      "Yes. We start with an audit of the slowest pages: image sizes, apps loading scripts on every page, theme code and third-party chat or review widgets. You get a written list of fixes in order of impact, with a fixed price for doing them. Often the biggest gain comes from removing apps nobody uses any more.",
   },
   {
     category: 'trust',
-    question: 'Can I manage and update the store myself after launch?',
+    question: "Do I own the store and all the code?",
     answer:
-      'Absolutely, self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
+      "Yes, from day one. The store account, domain, payment gateway and courier accounts sit in your business name, and you get the code repository and every admin login. Hosting and app bills can run in your own accounts at cost, with no markup from us. You can move to another developer whenever you like.",
   },
-
-  // Money-query coverage, added 2026-06-11
   {
-    category: 'pricing',
-    question: 'Who is the best ecommerce development company in Ahmedabad?',
+    category: 'trust',
+    question: "What support do I get after launch?",
     answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Ahmedabad, or any ecommerce solution company in Ahmedabad, should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Ahmedabad and the best ecommerce solution company in Ahmedabad for your catalog.',
+      "Defects in what we built are fixed inside the build price for a cover period agreed before work starts. After that, support is optional. Each change is quoted and approved by you before we do it, and there is no monthly minimum. If you want us to keep running updates and checks, we quote that as a fixed price too.",
   },
   {
     category: 'pricing',
-    question: 'Should I hire ecommerce developer in Ahmedabad or use an agency?',
+    question: "Who is the best ecommerce development company in Ahmedabad?",
     answer:
-      'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Ahmedabad directly, check store speed scores from their past work first.',
+      "For D2C brands, textile traders and GIDC manufacturers, FactoryJet makes a strong case: a fixed written price, senior engineers, a draft of your store before you sign, and you own everything at the end. Any ecommerce website development company in Ahmedabad, or ecommerce solution company in Ahmedabad, should pass three checks: who writes the code, is the price fixed, and do you own the store.",
+  },
+  {
+    category: 'pricing',
+    question: "Should I hire an ecommerce developer in Ahmedabad or use an agency?",
+    answer:
+      "One developer can build a simple store. A real shop also needs design, payments, couriers, GST and SEO working together, and one person rarely covers all five. A small senior team does, at a fixed price. If you hire an ecommerce developer in Ahmedabad directly, open two of their past stores on your phone and check how fast they load first.",
   },
 ];
 

@@ -66,10 +66,11 @@ const INDUSTRIES = [
   { href: '/services/agriculture-equipment-ai-agents', t: 'Agriculture equipment AI agents', l: 'Parts lookup and service dispatch' },
 ] as const;
 
+// Indexable ecommerce city pages only. Miami was merged by 301 and the other
+// big-metro pages set to noindex on 2026-10-21 (index quality audit).
 const CITIES = [
-  ['austin', 'Austin'], ['dallas', 'Dallas'], ['denver', 'Denver'], ['chicago', 'Chicago'],
-  ['new-york', 'New York'], ['los-angeles', 'Los Angeles'], ['san-francisco', 'San Francisco'], ['seattle', 'Seattle'],
-  ['atlanta', 'Atlanta'], ['miami', 'Miami'], ['nashville', 'Nashville'], ['portland', 'Portland'],
+  ['austin', 'Austin'], ['boise', 'Boise'], ['charlotte', 'Charlotte'], ['denver', 'Denver'],
+  ['minneapolis', 'Minneapolis'], ['nashville', 'Nashville'], ['raleigh', 'Raleigh'],
 ] as const;
 
 export function WorkDirectory() {

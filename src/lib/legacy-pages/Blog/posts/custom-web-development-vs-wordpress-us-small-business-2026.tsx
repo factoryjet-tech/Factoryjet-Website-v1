@@ -216,7 +216,7 @@ export const post: BlogPost = {
         ➡ See our <a href="/services/web-application-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US custom web application development</a> service for technical scope and pricing.
       </p>
       <p className="mb-4">
-        For the B2B angle on this same decision, read our <a href="/blog/nyc-b2b-corporate-web-design-guide-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">corporate B2B context: NYC custom web design buyer guide</a>.
+        For the B2B angle on this same decision, read our <a href="/new-york/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">page on web design for New York B2B and corporate firms</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The Hybrid Path: Headless WordPress + Next.js</h2>

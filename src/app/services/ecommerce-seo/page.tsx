@@ -213,7 +213,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-21';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -661,7 +661,7 @@ export default function EcommerceSeoServicePage() {
             </ol>
 
             <h3 data-reveal style={{ marginTop: 52, fontSize: 22 }}>How we compare to other US ecommerce SEO agencies</h3>
-            <p className="dek" data-reveal style={{ marginTop: 8 }}>Every agency below is a real, credible option. The right pick depends on fit. Here is what each is known for, in plain terms.</p>
+            <p className="dek" data-reveal style={{ marginTop: 8 }}>Every agency below is a real, credible option. The right pick depends on fit. Here is what each is known for, in plain terms. For a longer shortlist of eight agencies, read our <a href="/blog/best-ecommerce-seo-agencies-usa" style={{ textDecoration: 'underline', textUnderlineOffset: 3 }}>best ecommerce SEO agencies in the USA</a> comparison.</p>
             <div data-reveal style={{ overflowX: 'auto', marginTop: 24 }}>
               <table style={{ width: '100%', minWidth: 620, borderCollapse: 'collapse' }}>
                 <thead>

@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/lakewood-ranch/seo';
 
 export const metadata: Metadata = {
@@ -146,243 +146,203 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Overcoming Map Pack Invisibility Across Sarasota and Manatee Counties',
-    problem: 'Because Lakewood Ranch spans both Sarasota and Manatee county lines, generic Google Business Profile setups fail to rank across multi-district boundaries.',
-    solution: 'We execute comprehensive Google Business Profile optimization, multi-county radius citation sync, and localized neighborhood landing page silos.',
+    title: 'Almost nobody types the town name',
+    problem: 'Google Ads data from 21 Oct 2026 shows about 10 US searches a month each for "lakewood ranch seo", "seo lakewood ranch" and "lakewood ranch seo company". A plan built only around the Lakewood Ranch name chases a tiny pool of buyers.',
+    solution: 'We target what your customers type across Manatee and Sarasota counties: Bradenton and Sarasota phrases, service plus town searches, and "near me" searches that Google answers from your location. Lakewood Ranch stays on the page as one place you serve.',
   },
   {
     num: '02',
-    title: 'Fixing Slow Legacy Code and Technical Debt That Blocks Search Rankings',
-    problem: 'Sluggish server response times, bloated WordPress plugins, and missing schema markup prevent search engine bots and AI assistants from indexing your pages.',
-    solution: 'We work on page load speed, clean JSON-LD entity schema, and single-hop crawl architecture so search engines and AI assistants can crawl and read your pages.',
+    title: 'Six of the top 10 results were directories',
+    problem: 'On 21 Oct 2026, six of the top 10 Google results for "lakewood ranch seo company" were lists or directories: two Yelp pages, two BBB pages, a MapQuest listing and the Lakewood Ranch Business Alliance member directory at members.lwrba.org.',
+    solution: 'We get your business listed and correct on those same pages, so you show up even where your own site does not rank. That means your Yelp profile, your BBB profile and, if you are a member, your Business Alliance directory entry.',
   },
   {
     num: '03',
-    title: 'Ending Locked 12-Month Contracts with Zero Transparent Lead Attribution',
-    problem: 'Traditional agencies lock Lakewood Ranch businesses into rigid annual retainers while delivering meaningless keyword ranking screenshots instead of qualified leads.',
-    solution: 'FactoryJet operates on flexible month-to-month agreements. We track real phone calls, form completions, and qualified pipeline revenue with custom GA4 events.',
+    title: 'The map pack runs on reviews',
+    problem: 'The three businesses in Google\'s map pack on 21 Oct 2026 had 62, 8 and 49 reviews, rated 5, 4.5 and 5 stars. One business held a map spot with only 8 reviews.',
+    solution: 'We set up a steady review request routine for your Google Business Profile, tied to finished jobs or visits. Getting to a few dozen honest reviews puts you in range of what the map pack showed that day.',
   },
   {
     num: '04',
-    title: 'Capturing High-Value Geo-Targeted Commercial Keywords in Master-Planned Villages',
-    problem: 'Relying solely on broad city-level terms causes businesses to miss high-intent searches across Waterside, Main Street, The Lake Club, and University Parkway.',
-    solution: 'We build structured local service area landing pages and localized content silos that capture micro-corridor search volume throughout the Lakewood Ranch community.',
+    title: 'Searches spill over to Bradenton and Parrish',
+    problem: 'The top 10 for a Lakewood Ranch search on 21 Oct 2026 included a Yelp list titled for Bradenton and an agency page aimed at Parrish. Google mixes nearby towns into the same results.',
+    solution: 'We write one service page per real area you serve, such as Bradenton, Sarasota, Parrish or Holmes Beach, each with its own details. No copied pages with only the town name swapped.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Month 1',
-    title: 'Full Technical Audit, Core Web Vitals Fixes & GBP Baseline',
-    desc: 'We conduct a line-by-line audit of your website code, crawl depth, indexing health, server response times, and current Google Business Profile status. We resolve all technical errors, repair broken redirects, clean up duplicate citations, and establish baseline conversion tracking in Google Analytics 4.',
-    deliverables: [
-      'Comprehensive 50-point technical SEO and crawlability audit report',
-      'Core Web Vitals code refactoring targeting sub-second LCP and zero CLS',
-      'Google Business Profile category audit, address verification, and metadata cleanup',
-      'Custom phone call, form submission, and live chat conversion tracking setup',
-    ],
+    title: 'Measure your real local demand',
+    desc: 'We pull monthly volumes for your service in Lakewood Ranch, Bradenton and Sarasota, then run live Google searches from your area to see who ranks today.',
+    deliverables: ['Volume table for your service by town', 'Live results check from Lakewood Ranch', 'List of directories ranking for you'],
   },
   {
     phase: 'Month 2',
-    title: 'Local Citation Architecture, Review Systems & Entity Schema',
-    desc: 'We rebuild your local citation footprint across essential Tier 1 business directories, mapping your Name, Address, and Phone number with complete consistency. In parallel, we deploy structured JSON-LD LocalBusiness schema and launch automated review generation workflows.',
-    deliverables: [
-      'Cleanup and synchronization across 40+ premier local business directories',
-      'Implementation of exhaustive nested JSON-LD schema markup',
-      'Automated SMS and email review collection system deployment',
-      'Competitive gap analysis against top 3 Lakewood Ranch Map Pack leaders',
-    ],
+    title: 'Fix your profile and listings',
+    desc: 'We clean up your Google Business Profile, Apple Business Connect, Bing Places, Yelp and BBB so name, address and phone match everywhere.',
+    deliverables: ['Google Business Profile categories and services', 'Matching Yelp, BBB and Bing details', 'Review request routine for finished jobs'],
   },
   {
     phase: 'Month 3',
-    title: 'Corridor Landing Pages & Lakewood Ranch Content Silo Expansion',
-    desc: 'We architect and publish high-converting, answer-first landing pages tailored to specific Lakewood Ranch business corridors and surrounding suburbs. Each page is engineered with distinct geographic schema, localized proof points, and targeted commercial copy.',
-    deliverables: [
-      'Launch of dedicated neighborhood service pages for key target areas',
-      'Publishing of detailed service category guides and comparison matrices',
-      'On-page internal linking optimization across core commercial URLs',
-      'First quarterly ranking progress review and pipeline attribution report',
-    ],
+    title: 'Build area and service pages',
+    desc: 'We write pages for the services and towns that showed demand, such as roofing in Bradenton or pool building in Sarasota, with plain answers to common questions.',
+    deliverables: ['One page per service and town', 'Local business schema on each page', 'Technical fixes for speed and crawling'],
   },
   {
     phase: 'Months 4 to 6',
-    title: 'Authority Link Acquisition, AI Engine Optimization & Scale',
-    desc: 'We build high-quality contextual backlinks from reputable Florida publications, industry associations, and regional business hubs. We optimize content structure to trigger direct citations across generative AI search platforms including ChatGPT, Perplexity, and Google AI Overviews.',
-    deliverables: [
-      'Targeted local digital PR and editorial backlink acquisition',
-      'Generative Engine Optimization formatting for AI answer citation',
-      'Ongoing Map Pack rank tracking and competitor defense updates',
-      'Monthly executive strategy meetings with senior technical engineers',
-    ],
+    title: 'Report what moved',
+    desc: 'From month 4 we add pages where demand showed up, then each month we report calls, form leads and searches by town, and quote any next change in writing.',
+    deliverables: ['Monthly report of calls and leads', 'Search terms by town', 'Written quote for each next change'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Contract Flexibility',
-    factoryjet: 'Month-to-month agreements based on performance and trust.',
-    traditional: 'Rigid 6 to 12 month binding contracts with steep cancellation fees.',
+    label: 'How many people search for what I sell here?',
+    factoryjet: 'We show you the monthly volume for your service in Lakewood Ranch, Bradenton and Sarasota. For "lakewood ranch seo" itself, it was about 10 a month on 21 Oct 2026.',
+    traditional: 'A promise of "thousands of local searches" with no table, no source and no date behind it.',
   },
   {
-    label: 'Team Seniority',
-    factoryjet: 'Direct access to senior software engineers and technical SEO architects.',
-    traditional: 'Junior account coordinators acting as communication intermediaries.',
+    label: 'Who ranks for my search today?',
+    factoryjet: 'We run a live Google search from your area and show you each top 10 result. On our Lakewood Ranch check, six of ten were directories like Yelp and BBB.',
+    traditional: 'A general audit score from a tool, with no look at the real results page your buyers see.',
   },
   {
-    label: 'Technical Implementation',
-    factoryjet: 'We write and deploy clean code directly to your Next.js or CMS repository.',
-    traditional: 'Provides spreadsheets of generic recommendations for your team to code.',
+    label: 'What happens to my work if I leave?',
+    factoryjet: 'There is no long-term contract. Your Google profile, pages, schema and content stay yours, and each change is quoted and approved before work starts.',
+    traditional: 'A 12 month lock-in, with the profile or site held in the agency\'s own account.',
   },
   {
-    label: 'Lead Attribution',
-    factoryjet: 'Monitors real phone calls, qualified form leads, and closed pipeline value.',
-    traditional: 'Reports on keyword impressions and unverified ranking screenshots.',
-  },
-  {
-    label: 'Data & Account Ownership',
-    factoryjet: 'You maintain 100% ownership of your accounts, analytics data, and code.',
-    traditional: 'Holds landing pages and tracking accounts hostage inside proprietary tools.',
-  },
-  {
-    label: 'AI & Generative Search',
-    factoryjet: 'Builds entity graph schema formatted for ChatGPT, Perplexity, and Google AI.',
-    traditional: 'Relies on outdated 2018 keyword stuffing and doorway page tactics.',
+    label: 'Who answers when I have a question?',
+    factoryjet: 'Founder Bhavesh Barot replies within 24 hours. We work remotely with US clients and schedule calls in US business hours.',
+    traditional: 'A support ticket queue and a new account manager every few months.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Pricing & Contracts' },
-  { key: 'local', label: 'Local Map Pack & GBP' },
-  { key: 'technical', label: 'Technical SEO & AI' },
-  { key: 'timeline', label: 'Timeline & ROI' },
+  { key: 'local', label: 'Lakewood Ranch search' },
+  { key: 'pricing', label: 'Cost' },
+  { key: 'trades', label: 'Contractors and web design' },
+  { key: 'ai', label: 'AI search' },
+  { key: 'process', label: 'Working with us' },
 ];
 
 const FAQ_ITEMS = [
   {
+    category: 'local',
+    question: 'How many people search for an SEO company in Lakewood Ranch?',
+    answer: 'Few people type the town name. Google Ads data we pulled on 21 Oct 2026 showed about 10 US searches a month each for "lakewood ranch seo", "seo lakewood ranch" and "lakewood ranch seo company". Google groups close variants, so these may overlap. Most local buyers search for the service plus Bradenton or Sarasota, or use "near me". That is why we plan around the whole area.',
+  },
+  {
+    category: 'local',
+    question: 'Why should a Lakewood Ranch business care about Bradenton and Sarasota searches?',
+    answer: 'Because that is where most of the searching happens. Lakewood Ranch spans Manatee and Sarasota counties, and the town name alone gets about 10 searches a month for SEO terms (21 Oct 2026). Customers near you often type Bradenton or Sarasota. Even our Lakewood Ranch search showed a Yelp list titled for Bradenton. Pages that mention the towns you serve catch those buyers.',
+  },
+  {
+    category: 'local',
+    question: 'What showed up when you searched for an SEO company in Lakewood Ranch?',
+    answer: 'Mostly directories. On 21 Oct 2026 we searched "lakewood ranch seo company" from Lakewood Ranch. Six of the top 10 results were lists: two Yelp pages, two BBB pages, a MapQuest listing and the Lakewood Ranch Business Alliance member directory. Four were agency websites. Above them sat a map pack of three businesses. Google did not show an AI Overview on that search.',
+  },
+  {
+    category: 'local',
+    question: 'Does joining the Lakewood Ranch Business Alliance help my SEO?',
+    answer: 'It can help you get seen. The Alliance member directory at members.lwrba.org ranked in the top 10 for "lakewood ranch seo company" on 21 Oct 2026. If you are a member, your listing there is one more place buyers can find you. We check that your name, address, phone and website match your Google Business Profile, because mismatched details confuse Google.',
+  },
+  {
+    category: 'local',
+    question: 'How many Google reviews do I need to show in the Lakewood Ranch map pack?',
+    answer: 'There is no fixed number, but the map pack gives a guide. On 21 Oct 2026 the three businesses shown had 62, 8 and 49 reviews, rated 5, 4.5 and 5 stars. One held a spot with just 8. Reviews help, but so do distance, your categories and how complete your profile is. We set up a simple routine to ask happy customers for reviews.',
+  },
+  {
+    category: 'local',
+    question: 'Do Yelp and BBB listings matter for local SEO in Lakewood Ranch?',
+    answer: 'Yes, here they matter more than usual. Two Yelp pages and two BBB pages made the top 10 for "lakewood ranch seo company" on 21 Oct 2026. Buyers who click those lists should find you on them. We claim or fix your Yelp and BBB profiles and make your details match your website, Google, Apple Business Connect and Bing Places.',
+  },
+  {
+    category: 'local',
+    question: 'Can I rank in Holmes Beach or Parrish from a Lakewood Ranch address?',
+    answer: 'You can show up in organic results, though the map pack favors businesses close to the searcher. One top 10 result for our Lakewood Ranch search on 21 Oct 2026 was a page aimed at Parrish, so Google does mix nearby towns. We write a real page for each area you serve, such as Holmes Beach on Anna Maria Island, with details specific to that area.',
+  },
+  {
     category: 'pricing',
-    question: 'How much does SEO cost in Lakewood Ranch FL?',
-    answer:
-      'US small businesses typically pay $1,500 to $3,500 a month for SEO, according to WebFX pricing data updated in October 2026. WebFX puts local SEO retainers at $500 to $3,000 a month. What a Lakewood Ranch business pays depends on how competitive the sector is, how many locations it has and the condition of the website. FactoryJet quotes a fixed price in writing after a short scoping call and works on month-to-month terms.',
+    question: 'How much does an SEO agency cost in Lakewood Ranch?',
+    answer: 'Local SEO retainers run about $500 to $3,000 a month, and one-time local SEO projects $500 to $5,000, per WebFX local SEO pricing updated Sep 2026. Small business SEO runs $1,500 to $3,500 a month, per WebFX. Your cost depends on how many services and towns you target. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Why do you offer month-to-month terms instead of 12-month contracts?',
-    answer:
-      'We believe client retention should be earned through measurable lead generation and ranking improvements rather than legal lock-ins. Month-to-month agreements keep our engineering team accountable to driving real business pipeline every 30 days.',
+    question: 'What do most businesses pay for SEO each month?',
+    answer: 'An Ahrefs survey of 439 SEO providers found an average of $2,917 a month for SEO and $1,557 a month for local SEO. Those are national averages, and small Lakewood Ranch businesses with one location often need less. Ask any agency what is in the price and how they report results. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'What hidden fees or setup costs should Lakewood Ranch businesses watch out for?',
-    answer:
-      'Many traditional agencies bill extra onboarding fees, charge separately for basic Google Business Profile setup, or invoice additional hourly rates for technical code adjustments. With FactoryJet, your monthly rate covers complete technical execution, on-page optimization, content production, citation management, and conversion tracking with zero unexpected surcharges.',
+    question: 'How much does a one-time SEO audit cost near Sarasota?',
+    answer: 'Most businesses pay $101 to $750 for a one-time SEO audit, according to WebFX, which found 43% of businesses fall in that range. An audit checks your site for crawl errors, slow pages, missing titles and listing problems. It is a good first step before any monthly plan. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'How do I compare quotes from different Lakewood Ranch SEO companies?',
-    answer:
-      'Compare deliverables, team seniority, and account ownership. Verify whether technical code fixes are included or billed extra, whether you will speak directly with an engineer or an account manager, and confirm that you retain 100% ownership of your content, code, and analytics data.',
+    question: 'Do I have to sign a long contract for SEO?',
+    answer: 'Not with us. FactoryJet has no long-term contract. Each change is quoted and approved before we start, and your Google profile, pages, schema and content stay yours if you leave. Ask other firms the same question. Some hold your profile or website in their own account, which makes it hard to switch later.',
   },
   {
-    category: 'local',
-    question: 'How do we rank our business across both Sarasota and Manatee counties?',
-    answer:
-      'Lakewood Ranch sits on the border of Sarasota and Manatee counties. We configure multi-location service area schema, build dedicated landing pages for both counties, and align directory citations so you can be found for searches in Lakewood Ranch, Sarasota, and Bradenton.',
+    category: 'trades',
+    question: 'How does SEO work for roofing and HVAC companies in Bradenton?',
+    answer: 'It starts with your Google Business Profile and one page per service. Roofing and HVAC buyers search with urgency, often from a phone, and call the first trusted name they see. We set your profile categories, add each service and the towns you cover, such as Bradenton and Lakewood Ranch, and build a review routine tied to finished jobs. Then we track calls by town.',
   },
   {
-    category: 'local',
-    question: 'How do we get our Lakewood Ranch business into the Google 3-Pack Map results?',
-    answer:
-      'Winning the Google Map Pack requires an accurate primary category selection, complete service menus, consistent Name-Address-Phone (NAP) citations, steady customer review acquisition, and high domain authority from a fast, technically optimized website.',
+    category: 'trades',
+    question: 'Can SEO help a pool builder or pool contractor in Sarasota?',
+    answer: 'Yes. Pool buyers research for weeks, so photos, project pages and clear answers about permits and timelines help them choose. We build a page for each pool service and each area you serve, such as Sarasota, Lakewood Ranch and Bradenton. We add local business schema, which is code that tells Google your service area. Your project gallery becomes proof Google and buyers can read.',
   },
   {
-    category: 'local',
-    question: 'How important are Google reviews for Lakewood Ranch local rankings?',
-    answer:
-      'Google describes local results in terms of relevance, distance, and prominence. Reviews can help customers evaluate a business and contribute to prominence, but they do not remove the effect of distance. We help you request honest feedback consistently, without incentives or filtering customers by how positively they respond.',
+    category: 'trades',
+    question: 'Do you build websites for Lakewood Ranch small businesses?',
+    answer: 'Yes. Many people who find our SEO page also search for Lakewood Ranch web design, website builders and WordPress sites. We build and redesign small business websites, and we set them up for search from day one: fast pages, clear titles, one page per service and local business schema. You own the site and its content. We quote the build in writing first.',
   },
   {
-    category: 'local',
-    question: 'What is the difference between Google Map Pack SEO and organic website SEO?',
-    answer:
-      'Google Map Pack SEO focuses on the localized 3-Pack box displayed at the top of local search results, driven by your Google Business Profile, geographic proximity, citations, and reviews. Organic website SEO focuses on the traditional search listings beneath the map, driven by technical site speed, deep content silos, structured data, and high-authority backlinks. A successful campaign optimizes both layers in unison.',
+    category: 'trades',
+    question: 'Should I use a website builder or hire someone in Lakewood Ranch?',
+    answer: 'A builder like Wix or Squarespace works for a simple site you will update yourself. It gets harder when you need a page for each service and town, custom schema or fast load times on phones. If your site already exists on a builder, we can fix its SEO there. If you outgrow it, we can rebuild it on a platform you own.',
   },
   {
-    category: 'technical',
-    question: 'What is technical SEO and why is it essential for Lakewood Ranch businesses?',
-    answer:
-      'Technical SEO optimizes site architecture, mobile responsiveness, server speed, Core Web Vitals, and structured JSON-LD schema markup. Without a strong technical foundation, Google and AI search engines cannot crawl or rank your content effectively.',
+    category: 'ai',
+    question: 'What is AI SEO, and do Lakewood Ranch businesses need it?',
+    answer: 'AI SEO means setting up your pages so AI tools like ChatGPT, Perplexity and Google\'s AI answers can read and quote them. You do it with clear question and answer sections, facts with sources and accurate schema. Google showed no AI Overview on "lakewood ranch seo company" on 21 Oct 2026, but buyers ask AI tools for local picks. We structure pages so they can be quoted.',
   },
   {
-    category: 'technical',
-    question: 'How do you optimize Lakewood Ranch websites for Google AI Overviews and ChatGPT search?',
-    answer:
-      'We format content using answer-first prose, authoritative factual data, structured schema entities, and clean semantic HTML. This enables AI search engines like Perplexity, ChatGPT Search, and Google AI Overviews to parse and quote your brand directly.',
+    category: 'ai',
+    question: 'How much do AI SEO services cost for a small business?',
+    answer: 'AI SEO, also called GEO (generative engine optimization), runs about $1,500 to $5,000 a month for small businesses, per WebFX in Sep 2026. Much of the work overlaps with regular SEO: clear answers, accurate facts and clean code. A Lakewood Ranch business with one location rarely needs a separate AI plan. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
-    category: 'technical',
-    question: 'Why does website loading speed directly impact Google search rankings?',
-    answer:
-      'Page experience and Core Web Vitals are among the signals Google can use, but speed alone does not determine rankings. A faster mobile experience also makes it easier for visitors to read, call, or submit a form. We improve performance because it supports both search visibility and conversion, without promising that one speed score will produce a particular position.',
+    category: 'ai',
+    question: 'Is SEO dead now that people use AI to search?',
+    answer: 'No. Google showed this exact question as a People Also Ask result on our Lakewood Ranch search on 21 Oct 2026. AI tools still pull from web pages, and many cite pages that rank well or answer plainly. Local buyers also still use Google Maps to find a roofer or dentist nearby. The basics still count: a good profile, honest reviews and clear service pages.',
   },
   {
-    category: 'technical',
-    question: 'What structured data schema do you implement on local Lakewood Ranch websites?',
-    answer:
-      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, MedicalClinic, FinancialService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
+    category: 'process',
+    question: 'What does an SEO company do for a local business?',
+    answer: 'An SEO company helps your business show up when people search on Google. For a Lakewood Ranch business that means fixing your Google Business Profile, matching your listings on sites like Yelp and BBB, writing service pages and fixing technical problems on your site. Then it reports what changed. This was a People Also Ask question on our 21 Oct 2026 search.',
   },
   {
-    category: 'timeline',
-    question: 'How long does it take to see organic ranking improvements in Lakewood Ranch?',
-    answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
+    category: 'process',
+    question: 'What are technical SEO services?',
+    answer: 'Technical SEO fixes the parts of your site that people do not see but Google does. That covers page speed, broken links, pages Google cannot crawl, duplicate pages, missing titles and schema code. A slow or broken site can hold back good content. We test your site, list each problem by impact and quote the fixes before we touch anything.',
   },
   {
-    category: 'timeline',
-    question: 'How do you track and report SEO return on investment (ROI)?',
-    answer:
-      'We track real commercial outcomes: phone call leads, form submissions, online appointment bookings, and organic revenue via custom Google Analytics 4 event tracking and Google Search Console data.',
+    category: 'process',
+    question: 'How long does SEO take to work for a Lakewood Ranch business?',
+    answer: 'Profile and listing fixes can show up in the map pack within weeks. New service pages usually take a few months to rank. With only about 10 searches a month for Lakewood Ranch SEO terms (21 Oct 2026), small towns can move faster than big cities because fewer firms compete. We report calls and leads each month so you can see what moved.',
   },
   {
-    category: 'timeline',
-    question: 'Will algorithm updates from Google disrupt our search rankings?',
-    answer:
-      'They can. Google core updates move rankings for many sites, and no agency controls them. Our work stays inside Google guidelines. That means clean site architecture, authentic local citations and original content, with no link networks or thin automated copy. After each update we check your rankings and inquiries and tell you what changed.',
+    category: 'process',
+    question: 'How do I pick the best SEO company near Bradenton or Sarasota?',
+    answer: 'Ask each firm to show you the live Google results for your service from your area, and the monthly searches behind it. On our 21 Oct 2026 check for Lakewood Ranch, six of ten results were directories, so a good firm should plan for those. Ask who owns your work, how long the contract runs and who answers your emails.',
   },
   {
-    category: 'timeline',
-    question: 'Can SEO replace our paid Google Ads spend in Lakewood Ranch?',
-    answer:
-      'It can reduce how much you rely on ads, but it rarely replaces them outright. Google Ads buy visibility for as long as you pay per click. SEO work on your site and listings stays in place after it is done. We report calls and inquiries from organic search each month, so you can decide whether and when to move ad budget.',
-  },
-  {
-    category: 'local',
-    question: 'How do you optimize for businesses straddling both Sarasota and Manatee counties?',
-    answer:
-      'Because Lakewood Ranch spans both Sarasota and Manatee counties, businesses often struggle with geographic boundary confusion in Google Maps. We implement dual-county LocalBusiness schema with precise latitude/longitude geo-coordinates, multiple service area definitions, and targeted neighborhood pages (Waterside, Main Street, CORE) to cover searches on both sides of the county line.',
-  },
-  {
-    category: 'technical',
-    question: 'How do you implement MedicalBusiness and Physician Schema for healthcare providers in CORE?',
-    answer:
-      'For medical specialists, cosmetic surgeons, and wellness clinics in the CORE and University Parkway medical corridors, we deploy structured MedicalBusiness and Physician schemas. These markup tags explicitly define medical specialties, board certifications, accepting-insurance status, and hospital affiliations for instant Google Knowledge Panel enrichment.',
-  },
-  {
-    category: 'technical',
-    question: 'How does Google Gemini and Perplexity AI local citation indexing work in Florida?',
-    answer:
-      'Generative AI search engines extract facts from high-authority localized knowledge sources, verified Florida Division of Corporations (Sunbiz) records, and structured JSON-LD entity markup. We engineer your site content with direct informational answers, service pricing ranges, and verified review statistics to maximize generative AI recommendation frequency.',
-  },
-  {
-    category: 'local',
-    question: 'How do you capture high-intent inquiries in affluent villages like Country Club and Waterside?',
-    answer:
-      'We build dedicated luxury lifestyle service pages and localized content silos highlighting specific master-planned communities across Lakewood Ranch. High-net-worth residents searching for wealth managers, custom builders, or concierge medical providers find tailored case studies and localized social proof.',
-  },
-  {
-    category: 'technical',
-    question: 'What is NAP citation verification across Florida regional directories and chambers?',
-    answer:
-      'We establish and synchronize verified business citations across essential Gulf Coast platforms, including the Lakewood Ranch Business Alliance, Sarasota Chamber of Commerce, Manatee Chamber, Better Business Bureau West Florida, Apple Maps, and Bing Places, checking that your details match.',
+    category: 'process',
+    question: 'Who will I work with at FactoryJet?',
+    answer: 'Founder Bhavesh Barot replies within 24 hours. FactoryJet was founded in 2014, has worked with 500+ businesses and delivers 97% of work on time. We work remotely with US clients and schedule calls in US business hours. We also do white-label SEO work for agencies. Every change is quoted and approved before it starts.',
   },
 ];
 
@@ -733,7 +693,7 @@ export default function LakewoodRanchSeoPage() {
                 What FactoryJet Does Differently for Lakewood Ranch Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace opaque agency retainers with transparent, engineering-driven search performance:
+                We searched "lakewood ranch seo company" from Lakewood Ranch on 21 Oct 2026 and pulled US search volumes the same day; these four findings shape how we work here.
               </p>
             </div>
 
@@ -753,11 +713,11 @@ export default function LakewoodRanchSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw in Lakewood Ranch search, 21 Oct 2026:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What we do about it:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -794,7 +754,7 @@ export default function LakewoodRanchSeoPage() {
                 Our 6-Month Lakewood Ranch SEO Roadmap
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A step-by-step roadmap of the work, month by month:
+                A 6-month roadmap built around how people search in Manatee and Sarasota counties, where Bradenton and Sarasota phrases carry most of the demand.
               </p>
             </div>
 
@@ -858,7 +818,7 @@ export default function LakewoodRanchSeoPage() {
                 Evaluating Lakewood Ranch SEO Companies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led execution against traditional marketing agency retainers before you sign:
+                Ask any Lakewood Ranch SEO firm these four questions before you sign, and compare the answers to what we measured on 21 Oct 2026.
               </p>
             </div>
 

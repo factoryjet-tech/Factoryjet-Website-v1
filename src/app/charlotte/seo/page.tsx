@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/charlotte/seo';
 
 export const metadata: Metadata = {
@@ -146,237 +146,198 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Breaking Through Map Pack Saturation Across the Charlotte Metro Area',
-    problem: 'Many businesses across Mecklenburg County compete for the same top 3 Google Map Pack spots. Generic directory spam and neglected profiles sit invisible on page two.',
-    solution: 'We execute comprehensive Google Business Profile optimization, primary category audits, geotagged photo feeds, and automated review collection systems.',
+    title: 'Three of the top 10 are list pages',
+    problem: 'When we searched "charlotte seo company" from Charlotte on 21 Oct 2026, three of the top 10 organic results were list pages: Built In Charlotte, Clutch and The Manifest. A LinkedIn page took a fourth spot. Only six slots went to business websites.',
+    solution: 'A Charlotte buyer often meets you on a list before your own site. We fix your Clutch and directory profiles so the facts match your website, then build service pages that answer the questions those lists leave open.',
   },
   {
     num: '02',
-    title: 'Fixing Slow Legacy WordPress Code That Destroys Mobile Search Rankings',
-    problem: 'Websites bogged down by bloated plugins, slow server hosting, and missing schema markup fail Google Core Web Vitals tests, resulting in mobile ranking penalties.',
-    solution: 'We work on page speed using modern Next.js static architecture, automated image compression, and edge caching on Cloudflare CDN, then check the result with mobile Lighthouse tests.',
+    title: 'Map pack trust is thin',
+    problem: 'The three map pack businesses on that search had 4.2 stars from 15 reviews, 5 stars from 5 reviews, and no rating at all. That was 20 reviews in total across the three businesses Google chose to show on 21 Oct 2026.',
+    solution: 'A small, steady review count can move you in a market this thin. We set up a plain request routine for your customers after each job and complete every field of your Google Business Profile.',
   },
   {
     num: '03',
-    title: 'Ending Locked 12-Month Agency Retainers with Zero Transparent Lead Data',
-    problem: 'Traditional agencies lock Charlotte businesses into rigid annual retainers while delivering meaningless keyword ranking screenshots instead of qualified leads.',
-    solution: 'FactoryJet operates strictly on month-to-month terms. We track real phone calls, form completions, and qualified pipeline revenue with custom Google Analytics 4 conversion events.',
+    title: 'Agency wording gets the searches',
+    problem: '"Seo agency charlotte", "seo company charlotte" and "charlotte seo company" each show about 720 US searches a month (21 Oct 2026). "Local seo charlotte" shows about 30, yet Google Ads suggests about $31.87 a click for it.',
+    solution: 'We map each of your pages to the exact phrase your buyers type, using fresh volume data for your trade. Small phrases with high ad bids get their own page, because advertisers pay for those clicks for a reason.',
   },
   {
     num: '04',
-    title: 'Capturing High-Value Geo-Targeted Commercial Keywords Across the Carolinas',
-    problem: 'Relying exclusively on broad Charlotte terms causes businesses to miss high-converting localized searches across Huntersville, Matthews, Fort Mill, and Concord.',
-    solution: 'We build dedicated geographic service area landing pages and localized content silos that capture micro-corridor search volume throughout the Charlotte metro region.',
+    title: 'No AI Overview, yet',
+    problem: 'Google showed no AI Overview for "charlotte seo company" on 21 Oct 2026. The People Also Ask box did ask "What is replacing SEO?" and "Is SEO still relevant in 2026?", so searchers are already wondering about AI answers.',
+    solution: 'We write answer-first pages with schema (code that labels your facts for machines), so ChatGPT, Perplexity and Google\'s AI features have a clean, quotable source when they do answer Charlotte questions.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Month 1',
-    title: 'Full Technical Audit, Core Web Vitals Fixes & GBP Baseline',
-    desc: 'We conduct a line-by-line audit of your website code, crawl depth, indexing health, server response times, and current Google Business Profile status. We resolve all technical errors, repair broken redirects, clean up duplicate citations, and establish baseline conversion tracking in Google Analytics 4.',
-    deliverables: [
-      'Comprehensive 50-point technical SEO and crawlability audit report',
-      'Core Web Vitals code refactoring targeting sub-second LCP and zero CLS',
-      'Google Business Profile category audit, address verification, and metadata cleanup',
-      'Custom phone call, form submission, and live chat conversion tracking setup',
-    ],
+    title: 'Measure Charlotte demand for your trade',
+    desc: 'We pull search volumes and live Charlotte results for your service, whether that is roofing, auto repair or wealth advice, and record who holds the map pack today.',
+    deliverables: ['Volume sheet for your Charlotte phrases', 'Map pack review counts, dated', 'List of directories ranking for you'],
   },
   {
     phase: 'Month 2',
-    title: 'Local Citation Architecture, Review Systems & Entity Schema',
-    desc: 'We rebuild your local citation footprint across essential Tier 1 business directories, mapping your Name, Address, and Phone number with complete consistency. In parallel, we deploy structured JSON-LD LocalBusiness schema and launch automated review generation workflows.',
-    deliverables: [
-      'Cleanup and synchronization across 40+ premier local business directories',
-      'Implementation of exhaustive nested JSON-LD schema markup',
-      'Automated SMS and email review collection system deployment',
-      'Competitive gap analysis against top 3 Charlotte Map Pack leaders',
-    ],
+    title: 'Fix the profiles and the site',
+    desc: 'We clean up your Google Business Profile, Clutch listing and Bing Places entry, then fix crawl errors, titles and schema on your website.',
+    deliverables: ['Matching name, address, phone everywhere', 'Schema on service and location pages', 'Fixed list of technical errors'],
   },
   {
     phase: 'Month 3',
-    title: 'Corridor Landing Pages & Charlotte Content Silo Expansion',
-    desc: 'We architect and publish high-converting, answer-first landing pages tailored to specific Charlotte business corridors and surrounding suburbs. Each page is engineered with distinct geographic schema, localized proof points, and targeted commercial copy.',
-    deliverables: [
-      'Launch of dedicated neighborhood service pages for key target areas',
-      'Publishing of detailed service category guides and comparison matrices',
-      'On-page internal linking optimization across core commercial URLs',
-      'First quarterly ranking progress review and pipeline attribution report',
-    ],
+    title: 'Write pages for Mecklenburg and beyond',
+    desc: 'We write a page for each real service area you cover, such as Matthews, Huntersville or Fort Mill across the South Carolina line, with local proof on each.',
+    deliverables: ['One page per suburb you serve', 'Answer-first FAQ on each page', 'Review request routine for customers'],
   },
   {
     phase: 'Months 4 to 6',
-    title: 'Authority Link Acquisition, AI Engine Optimization & Scale',
-    desc: 'We build high-quality contextual backlinks from reputable North Carolina publications, industry associations, and regional business hubs. We optimize content structure to trigger direct citations across generative AI search platforms including ChatGPT, Perplexity, and Google AI Overviews.',
-    deliverables: [
-      'Targeted local digital PR and editorial backlink acquisition',
-      'Generative Engine Optimization formatting for AI answer citation',
-      'Ongoing Map Pack rank tracking and competitor defense updates',
-      'Monthly executive strategy meetings with senior technical engineers',
-    ],
+    title: 'Report and adjust through month 6',
+    desc: 'From month 4 to month 6 we rerun the same Charlotte searches each month, compare rankings and map pack position, and quote any next change for your approval.',
+    deliverables: ['Monthly report against the first baseline', 'AI answer checks on buyer questions', 'Written quote for each next change'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Contract Flexibility',
-    factoryjet: 'Month-to-month agreements based on performance and trust.',
-    traditional: 'Rigid 6 to 12 month binding contracts with steep cancellation fees.',
+    label: 'Which Charlotte searches did you check for us?',
+    factoryjet: 'We show dated search volumes, such as about 720 a month for "seo company charlotte" on 21 Oct 2026, plus the live results page for your own service.',
+    traditional: 'A generic keyword list with no dates, no volumes and nothing about your trade or your part of town.',
   },
   {
-    label: 'Team Seniority',
-    factoryjet: 'Direct access to senior software engineers and technical SEO architects.',
-    traditional: 'Junior account coordinators acting as communication intermediaries.',
+    label: 'What will you do about Clutch and Built In?',
+    factoryjet: 'Three of the top 10 for "charlotte seo company" were list pages on 21 Oct 2026. We fix your profiles on the lists that rank for your trade.',
+    traditional: 'Lists are ignored entirely, or the firm sells paid directory placements without showing they rank for anything.',
   },
   {
-    label: 'Technical Implementation',
-    factoryjet: 'We write and deploy clean code directly to your Next.js or CMS repository.',
-    traditional: 'Provides spreadsheets of generic recommendations for your team to code.',
+    label: 'Who owns the work if we stop?',
+    factoryjet: 'You do. Your profile, pages, schema and content stay yours, there is no long-term contract, and each change is quoted and approved first.',
+    traditional: 'Pages hosted on the agency\'s system, a 12-month lock-in, and a profile you cannot log in to.',
   },
   {
-    label: 'Lead Attribution',
-    factoryjet: 'Monitors real phone calls, qualified form leads, and closed pipeline value.',
-    traditional: 'Reports on keyword impressions and unverified ranking screenshots.',
-  },
-  {
-    label: 'Data & Account Ownership',
-    factoryjet: 'You maintain 100% ownership of your accounts, analytics data, and code.',
-    traditional: 'Holds landing pages and tracking accounts hostage inside proprietary tools.',
-  },
-  {
-    label: 'AI & Generative Search',
-    factoryjet: 'Builds entity graph schema formatted for ChatGPT, Perplexity, and Google AI.',
-    traditional: 'Relies on outdated 2018 keyword stuffing and doorway page tactics.',
+    label: 'How do you handle AI answers?',
+    factoryjet: 'We write answer-first pages with schema so AI tools can quote you, and we test buyer questions in ChatGPT and Perplexity each month.',
+    traditional: 'A promise to get you into AI answers with no test method, or a claim that SEO no longer matters.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Pricing & Contracts' },
-  { key: 'local', label: 'Local Map Pack & GBP' },
-  { key: 'technical', label: 'Technical SEO & AI' },
-  { key: 'timeline', label: 'Timeline & ROI' },
+  { key: 'pricing', label: 'Cost and contracts' },
+  { key: 'local', label: 'Charlotte and nearby towns' },
+  { key: 'results', label: 'Rankings and results' },
+  { key: 'ai', label: 'AI search and AEO' },
+  { key: 'process', label: 'Choosing a Charlotte SEO firm' },
 ];
 
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does professional SEO cost in Charlotte NC?',
-    answer:
-      'US small businesses typically pay $1,500 to $3,500 a month for SEO, according to WebFX pricing data updated in October 2026. WebFX puts local SEO retainers at $500 to $3,000 a month. What a Charlotte business pays depends on how competitive the sector is, how many locations it has and the condition of the website. FactoryJet quotes a fixed price in writing after a short scoping call and works on month-to-month terms.',
+    question: 'How much should I expect to pay for SEO in Charlotte?',
+    answer: 'Most small businesses pay about $1,500 to $3,500 a month for SEO, according to WebFX\'s pricing page updated Sep 2026. Local SEO retainers run about $500 to $3,000 a month, and one-time local projects $500 to $5,000, also per WebFX. An Ahrefs survey of 439 providers found an average of $2,917 a month. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Why do you operate month-to-month instead of requiring 12-month retainers?',
-    answer:
-      'We believe agency retention must be earned every thirty days through measurable business outcomes rather than enforced through legal contracts. When agencies hide behind annual commitments, client communication slows down and technical momentum stalls. Our month-to-month model aligns our engineering incentives directly with your ongoing commercial revenue growth.',
+    question: 'Why do Charlotte SEO ads cost so much per click?',
+    answer: 'Because many agencies bid on the same few buyers. On 21 Oct 2026 Google Ads suggested about $31.87 a click for "local seo charlotte" and about $10.22 a click for "seo charlotte". The first phrase gets only about 30 US searches a month. When a click costs that much, a page that ranks on its own for free is worth building.',
   },
   {
     category: 'pricing',
-    question: 'What hidden fees or setup costs should Charlotte businesses look out for?',
-    answer:
-      'Many traditional agencies bill extra onboarding fees, charge separately for basic Google Business Profile setup, or invoice additional hourly rates for technical code adjustments. With FactoryJet, your monthly rate covers complete technical execution, on-page optimization, content production, citation management, and conversion tracking with zero unexpected surcharges.',
+    question: 'How much does a one-time SEO audit cost?',
+    answer: 'Most businesses pay $101 to $750 for a one-time SEO audit, according to WebFX, which found 43% of businesses fall in that range. An audit lists what is broken on your site and your Google Business Profile. FactoryJet quotes a fixed price in writing after a short scoping call, and the audit file is yours to keep.',
   },
   {
     category: 'pricing',
-    question: 'How do I compare quotes from different Charlotte SEO agencies?',
-    answer:
-      'When reviewing proposals, ask three fundamental questions: First, who will actually perform the technical work on my website? Second, will you write and deploy code directly or just deliver a list of suggestions? Third, what specific commercial metrics will you report on each month? If an agency will not say who does the technical work and refuses to track qualified inbound phone calls, they are selling marketing reports rather than revenue engineering.',
+    question: 'Do I have to sign a long contract with a Charlotte SEO company?',
+    answer: 'No. FactoryJet works with no long-term contract. Each change is quoted in writing and you approve it before work starts. If you stop, your Google Business Profile, pages, schema and content stay yours. Ask any firm you are comparing whether you keep the login to your own profile, because some agencies hold it.',
   },
   {
     category: 'local',
-    question: 'How do we get our Charlotte business into the top 3 Google Map Pack results?',
-    answer:
-      'Securing a spot in the top 3 Google Map Pack requires four synchronized components: selecting the precise primary business category, ensuring absolute Name-Address-Phone consistency across major directories, maintaining a steady velocity of authentic customer reviews, and building localized domain authority through a fast website backed by structured LocalBusiness schema.',
+    question: 'How many people search for an SEO company in Charlotte?',
+    answer: 'About 720 people a month search "charlotte seo company" in the US, and the same for "seo agency charlotte" and "seo company charlotte" (Google Ads data, 21 Oct 2026). Google groups close variants, so these overlap. "Seo charlotte" shows about 260, "charlotte seo" about 170, and "charlotte seo services" about 110 a month.',
   },
   {
     category: 'local',
-    question: 'Can you rank our business in surrounding suburbs like Huntersville, Matthews, and Fort Mill?',
-    answer:
-      'Yes. We architect dedicated geographic service area landing pages and localized schema markup targeting key suburban centers across Mecklenburg, Cabarrus, and York counties. This allows your brand to capture high-intent searches in Huntersville, Cornelius, Matthews, Mint Hill, Pineville, Concord, and Fort Mill SC without triggering duplicate content penalties.',
+    question: 'Can you help us show up in Matthews and Fort Mill, not just Charlotte?',
+    answer: 'Yes, if you serve those towns. Google ranks map listings partly on distance, so a Charlotte address alone rarely wins in Matthews or Fort Mill. We write one page per town you serve, with real jobs and details from that town. Fort Mill sits in South Carolina, so that page names York County, not Mecklenburg.',
   },
   {
     category: 'local',
-    question: 'How important are Google customer reviews for local search rankings in Charlotte?',
-    answer:
-      'Google customer reviews are one of the most powerful direct ranking factors in local search algorithms. Both review quantity and the frequency of new reviews directly influence your Map Pack proximity radius. We help your team implement frictionless post-service SMS and email review collection workflows that consistently generate verified, detailed customer feedback.',
+    question: 'Does SEO work differently across Mecklenburg County?',
+    answer: 'Yes. The map results change with where the searcher stands. Someone in Huntersville and someone in Pineville can see three different map pack businesses for the same search. We check results from more than one point in the county, then pick the towns where you can compete. Each town you serve gets its own page.',
   },
   {
     category: 'local',
-    question: 'What is the difference between Google Map Pack SEO and organic website SEO?',
-    answer:
-      'Google Map Pack SEO focuses on the localized 3-Pack box displayed at the top of local search results, driven by your Google Business Profile, geographic proximity, citations, and reviews. Organic website SEO focuses on the traditional search listings beneath the map, driven by technical site speed, deep content silos, structured data, and high-authority backlinks. A successful campaign optimizes both layers in unison.',
-  },
-  {
-    category: 'technical',
-    question: 'What is technical SEO and why is it critical for Charlotte companies?',
-    answer:
-      'Technical SEO optimizes the fundamental software architecture of your website. It encompasses server response speed, crawl budget optimization, mobile layout stability, internal link architecture, and nested JSON-LD schema markup. In competitive markets like Charlotte, even minor technical defects like slow JavaScript execution can prevent search engine spiders from indexing your highest-value commercial pages.',
-  },
-  {
-    category: 'technical',
-    question: 'How do you optimize websites for Google AI Overviews and ChatGPT search?',
-    answer:
-      'Generative AI search platforms extract facts from websites with clear entity relationships, concise answer-first prose, authoritative data points, and semantic HTML markup. We structure your content using direct informational answers, structured comparison tables, and detailed entity schemas so AI engines can effortlessly parse, cite, and reference your business.',
-  },
-  {
-    category: 'technical',
-    question: 'Why does website loading speed directly impact Google search rankings?',
-    answer:
-      'Page experience and Core Web Vitals are among the signals Google can use, but speed alone does not determine rankings. A faster mobile experience also makes it easier for visitors to read, call, or submit a form. We improve performance because it supports both search visibility and conversion, without promising that one speed score will produce a particular position.',
-  },
-  {
-    category: 'technical',
-    question: 'What structured data schema do you implement on local Charlotte websites?',
-    answer:
-      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, MedicalClinic, FinancialService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
-  },
-  {
-    category: 'timeline',
-    question: 'How long does it take to see measurable SEO ranking improvements in Charlotte?',
-    answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
-  },
-  {
-    category: 'timeline',
-    question: 'How do you track and verify real return on investment for our business?',
-    answer:
-      'We track concrete commercial outcomes: verified phone calls, qualified contact form submissions, appointment bookings, and organic pipeline revenue. Through custom Google Analytics 4 event tracking and Google Search Console data, you receive transparent monthly reporting showing exactly how search visibility translates into customer acquisition.',
-  },
-  {
-    category: 'timeline',
-    question: 'Will algorithm updates from Google disrupt our search rankings?',
-    answer:
-      'They can. Google core updates move rankings for many sites, and no agency controls them. Our work stays inside Google guidelines. That means clean site architecture, authentic local citations and original content, with no link networks or thin automated copy. After each update we check your rankings and inquiries and tell you what changed.',
-  },
-  {
-    category: 'timeline',
-    question: 'Can SEO replace our paid Google Ads spend in Charlotte?',
-    answer:
-      'It can reduce how much you rely on ads, but it rarely replaces them outright. Google Ads buy visibility for as long as you pay per click. SEO work on your site and listings stays in place after it is done. We report calls and inquiries from organic search each month, so you can decide whether and when to move ad budget.',
+    question: 'Do you work with contractors and home service businesses in Charlotte?',
+    answer: 'Yes. Contractor and home service searches lean hard on the Google map pack, and reviews decide a lot there. On the "charlotte seo company" search we checked on 21 Oct 2026, the three map businesses had only 20 reviews between them. We set up a review request routine and pages for each service and town.',
   },
   {
     category: 'local',
-    question: 'How does Charlotte local SEO differ from regional North Carolina statewide optimization?',
-    answer:
-      'Charlotte local SEO optimizes for hyper-local geographic proximity signals across Mecklenburg County corridors (Uptown, South End, SouthPark, Ballantyne) and Google Maps 3-Pack capture. Statewide North Carolina SEO focuses on broader regional keyword authority, high-volume commercial head terms, and category directory architecture that ranks simultaneously across Charlotte, Raleigh, Greensboro, and Wilmington.',
-  },
-  {
-    category: 'technical',
-    question: 'What role do Apple Business Connect and Bing Places play in Queen City local search?',
-    answer:
-      'While Google represents the majority of local search volume, Apple Business Connect powers default local search on millions of iPhones, Apple CarPlay navigation units, and Siri voice assistants across Charlotte. Bing Places directly powers Copilot conversational search. We synchronize your verified NAP profiles across all primary mapping ecosystems.',
+    question: 'Can you do SEO for a car dealer or auto repair shop in Charlotte?',
+    answer: 'Yes. Auto businesses need a complete Google Business Profile, a page per service such as brake repair or used inventory, and steady reviews. We also add schema, code that tells Google your hours, address and services in a format it reads directly. Each new page or change is quoted and approved before we start.',
   },
   {
     category: 'local',
-    question: 'How do you handle Google Business Profile re-verification and suspension appeals in Charlotte?',
-    answer:
-      'If your Google Business Profile faces algorithmic suspension or video re-verification requests, we assemble complete physical documentation, including North Carolina Secretary of State filings, utility bills, permanent suite signage photographs, and lease agreements, to rapidly submit compliant reinstatement appeals directly to Google support.',
+    question: 'Do you also work outside Charlotte, like Wilmington or the rest of North Carolina?',
+    answer: 'Yes. The work is the same in Wilmington, Raleigh or anywhere in North Carolina: measure local searches, fix your profiles, then write pages for the towns you serve. We work remotely with US clients and schedule calls in US business hours, so location does not change the process.',
   },
   {
-    category: 'technical',
-    question: 'What is internal link siloing and topical authority mapping for Charlotte service businesses?',
-    answer:
-      'Internal link siloing organizes your website into clear semantic topic clusters. Primary service pillars (e.g. Commercial Litigation, HVAC Installation, Wealth Management) link hierarchically to detailed sub-service guides and neighborhood case studies, concentrating PageRank and proving exhaustive topical depth to search crawlers.',
+    category: 'results',
+    question: 'Why do Clutch and Built In Charlotte show up when I search for SEO companies?',
+    answer: 'Google treats "charlotte seo company" as a comparison search. On 21 Oct 2026, three of the top 10 results were list pages: Built In Charlotte, Clutch and The Manifest. A LinkedIn page held one more spot. So buyers often see a list before any agency site. A complete, accurate profile on those lists matters.',
+  },
+  {
+    category: 'results',
+    question: 'How many reviews do I need to get into the Charlotte map pack?',
+    answer: 'There is no fixed number, and the bar can be low. On 21 Oct 2026 the map pack for "charlotte seo company" showed 4.2 stars from 15 reviews, 5 stars from 5 reviews, and one business with no rating. Distance and how well your profile matches the search count too. Steady new reviews help.',
+  },
+  {
+    category: 'results',
+    question: 'How long does SEO take to work in Charlotte?',
+    answer: 'Profile fixes can show up in map results within weeks. New pages usually take a few months to rank, depending on how many strong sites already hold your phrase. A thin market moves faster. We rerun the same Charlotte searches each month and report the changes, so you can see progress against the first baseline.',
+  },
+  {
+    category: 'results',
+    question: 'Is SEO still relevant in 2026?',
+    answer: 'Yes. Google still sends most search traffic, and "charlotte seo company" gets about 720 US searches a month (21 Oct 2026). What has changed is where answers appear. AI tools now quote web pages, so clear, factual pages win in both places. This question showed up in Google\'s own People Also Ask box.',
+  },
+  {
+    category: 'ai',
+    question: 'What is answer engine optimization, and does a Charlotte business need it?',
+    answer: 'Answer engine optimization (AEO) means shaping your pages so AI tools such as ChatGPT, Perplexity and Google\'s AI features can quote them. That means direct answers near the top, clear facts and schema. A Charlotte business needs it if buyers ask AI tools for recommendations. AEO builds on normal SEO work and does not replace it.',
+  },
+  {
+    category: 'ai',
+    question: 'Does Google show AI answers for Charlotte SEO searches?',
+    answer: 'Not on the search we checked. Google showed no AI Overview for "charlotte seo company" from Charlotte on 21 Oct 2026. An AI Overview is the summary box Google puts above normal results. They come and go by search and by day, so we check your own phrases each month and structure pages so they can be quoted.',
+  },
+  {
+    category: 'ai',
+    question: 'What is replacing SEO?',
+    answer: 'Nothing has replaced it. AI search tools sit on top of it. ChatGPT and Perplexity pull answers from web pages that already rank or are easy to read. This question appeared in Google\'s People Also Ask box for "charlotte seo company" on 21 Oct 2026. The fix is the same: clear pages, real facts and clean schema.',
+  },
+  {
+    category: 'ai',
+    question: 'How much does AI SEO or GEO cost?',
+    answer: 'AI SEO, also called GEO (generative engine optimization), costs about $1,500 to $5,000 a month for small businesses, according to WebFX in Sep 2026. It covers answer-first pages, schema and checking how AI tools describe you. FactoryJet quotes a fixed price in writing after a short scoping call. We cannot promise any AI tool will name you.',
+  },
+  {
+    category: 'process',
+    question: 'What does an SEO company actually do?',
+    answer: 'An SEO company fixes, writes and reports. We fix your Google Business Profile and website errors. We write pages for each service and town you serve. We set up review requests and add schema so search engines read your facts. Each month we report what moved. This question topped Google\'s People Also Ask box for Charlotte.',
+  },
+  {
+    category: 'process',
+    question: 'SEO firm, SEO expert or SEO agency: what is the difference?',
+    answer: 'Mostly the label. Charlotte searchers type all three, and "seo agency charlotte" alone shows about 720 US searches a month (21 Oct 2026). A solo expert may handle everything personally. A firm or agency splits work across a few people. Ask who does the work on your account and who answers your emails.',
+  },
+  {
+    category: 'process',
+    question: 'How do I compare Charlotte SEO companies on Clutch?',
+    answer: 'Read the reviews for clients like you, not the star average. Clutch\'s Charlotte SEO list ranked sixth on Google for "charlotte seo company" on 21 Oct 2026. Then ask each firm three things: which Charlotte searches they checked for you, who owns the work, and how changes are approved. Written answers make comparison easy.',
+  },
+  {
+    category: 'process',
+    question: 'Who will I talk to if I hire FactoryJet for Charlotte SEO?',
+    answer: 'Founder Bhavesh Barot replies to messages within 24 hours. FactoryJet was founded in 2014 and has worked with 500+ businesses, with 97% on-time delivery. We work remotely with US clients and schedule calls in US business hours. We also do white-label SEO work for agencies. Every change is quoted and approved before work begins.',
   },
 ];
 
@@ -728,7 +689,7 @@ export default function CharlotteSeoPage() {
                 What FactoryJet Does Differently for Charlotte Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace opaque agency retainers with transparent, engineering-driven search performance:
+                On 21 Oct 2026 we pulled Google's results and search volumes for Charlotte SEO searches, and these four findings shape how we work for clients here.
               </p>
             </div>
 
@@ -748,11 +709,11 @@ export default function CharlotteSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw in Charlotte search, 21 Oct 2026:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What we do about it:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -789,7 +750,7 @@ export default function CharlotteSeoPage() {
                 Our 6-Month Charlotte SEO Roadmap
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A step-by-step roadmap of the work, month by month:
+                Over six months, each step below follows the searches, suburbs and trades that showed up in our Charlotte data on 21 Oct 2026.
               </p>
             </div>
 
@@ -853,7 +814,7 @@ export default function CharlotteSeoPage() {
                 Evaluating Charlotte SEO Companies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led execution against traditional marketing agency retainers before you sign:
+                Ask any Charlotte SEO firm these four questions before you sign, and compare the answers side by side.
               </p>
             </div>
 

@@ -12,7 +12,7 @@ import './shopify-seo.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/uk/shopify-seo';
-const UPDATED = '2026-08-25';
+const UPDATED = '2026-10-21';
 
 /* ─── Breadcrumb source of truth. ONE array feeds both the visible trail and the JSON-LD,
        so the two can never drift apart. Never hand-copy a second version of this. ─── */
@@ -365,7 +365,7 @@ export default function ShopifySeoPage() {
           <p style={{ fontSize: '13px', fontWeight: 700, color: 'var(--ink)', marginBottom: '12px' }}>Which page do you actually need?</p>
           <ul className="tick-list">
             <li><strong>This page, if your store is on Shopify and the problem is technical.</strong> Collection architecture, duplicate and variant URLs, filter pages, Liquid template edits, app weight and Core Web Vitals, structured data written into the theme.</li>
-            <li><strong>Our <a href="/uk/ecommerce-seo">ecommerce SEO page</a>, if the question is strategy.</strong> Which categories to target, how to structure the site, what content earns links, how organic sits next to your paid channels. That page applies to any platform, Shopify included.</li>
+            <li><strong>Our <a href="/uk/ecommerce-seo">ecommerce SEO agency UK</a> page, if the question is strategy.</strong> Which categories to target, how to structure the site, what content earns links, how organic sits next to your paid channels. That page applies to any platform, Shopify included.</li>
             <li><strong>Our <a href="/uk/shopify-development">Shopify development page</a>, if the store itself needs building or rebuilding</strong> rather than tuning.</li>
           </ul>
           <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '14px' }}>Most engagements use two of the three. The strategy page decides what to aim at. This page is how it gets built on Shopify.</p>

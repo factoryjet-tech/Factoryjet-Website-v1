@@ -10,6 +10,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'May 29, 2026',
+  dateModified: 'Oct 21, 2026',
   readTime: '11 min read',
   imageUrl: '/blog-images/shopify-vs-woocommerce-us-small-business-2026.webp',
   meta: {
@@ -209,6 +210,9 @@ export const post: BlogPost = {
       </p>
       <p className="mb-4">
         ➡ Compare across all our ecommerce options: <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet ecommerce development</a>
+      </p>
+      <p className="mb-4">
+        ➡ For total cost of ownership and architecture side by side, see our <a href="/comparisons/shopify-vs-woocommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify vs WooCommerce comparison</a>
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The Hidden Costs Nobody Talks About</h2>

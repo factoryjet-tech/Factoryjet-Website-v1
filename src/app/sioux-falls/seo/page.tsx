@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-09-13';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/sioux-falls/seo';
 
 export const metadata: Metadata = {
@@ -49,10 +49,30 @@ const SEO_TOOLS = [
 ];
 
 const STAT_CARDS = [
-  { num: 'Maps', title: 'Business Profile Review', desc: 'Review the categories, services, and business details customers see in local search.', icon: '📍' },
-  { num: 'Site', title: 'Technical SEO Review', desc: 'Find crawl, performance, and usability issues that get between a search and an inquiry.', icon: '📈' },
-  { num: 'Pages', title: 'Service Content Review', desc: 'Check whether each important service has a clear page that answers buyers’ questions.', icon: '🏢' },
-  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Connect SEO activity to calls and form submissions instead of reporting rankings alone.', icon: '⚡' },
+  {
+    num: 'Maps',
+    title: 'Business Profile Review',
+    desc: 'Category, services and service area compared with the Sioux Falls map pack for your own trade.',
+    icon: '📍',
+  },
+  {
+    num: 'Site',
+    title: 'Technical SEO Review',
+    desc: 'Pages Google skips, slow mobile loads and broken redirects, each listed with its URL.',
+    icon: '📈',
+  },
+  {
+    num: 'Pages',
+    title: 'Service Content Review',
+    desc: 'One clear page per service, written to answer what buyers ask Google and ChatGPT.',
+    icon: '🏢',
+  },
+  {
+    num: 'Leads',
+    title: 'Inquiry Tracking',
+    desc: 'Calls and form fills from search and AI tools, counted before rankings.',
+    icon: '⚡',
+  },
 ];
 
 const DISTRICTS = [
@@ -146,107 +166,82 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Overcoming Google Map Pack Invisibility in Minnehaha County',
-    problem: 'Outdated business listings, duplicate directory citations, and missing review velocity push your profile down into the second and third pages of Google Maps.',
-    solution: 'We execute comprehensive Google Business Profile optimization, primary category audits, geotagged photo feeds, and automated review collection systems.',
+    title: 'Directories take four of the top ten spots',
+    problem: 'On 21 Oct 2026 we searched "sioux falls seo company" from a Sioux Falls location. Four results were directories: The Manifest, Clutch, DesignRush and the Sioux Falls Area Chamber of Commerce member directory. A fifth was an agency\'s Facebook page.',
+    solution: 'Buyers in Sioux Falls compare names on those pages before they call. We check which directories rank for your trade here and whether your listing on each is complete and matches your Business Profile.',
   },
   {
     num: '02',
-    title: 'Fixing Slow Legacy Code and Technical Debt That Blocks Search Rankings',
-    problem: 'Sluggish server response times, bloated WordPress plugins, and missing schema markup prevent search engine bots and AI assistants from indexing your pages.',
-    solution: 'We work on page load speed, clean JSON-LD entity schema, and single-hop crawl architecture so search engines and AI assistants can crawl and read your pages.',
+    title: 'The Chamber directory ranks on page one',
+    problem: 'The Chamber\'s directory page for marketing and advertising agencies was the tenth organic result, ahead of most agency websites.',
+    solution: 'Local member directories carry weight in a city this size. If you belong to the Chamber or a trade group, a full listing with your website, phone and services is one of the cheapest fixes on the list.',
   },
   {
     num: '03',
-    title: 'Ending Locked 12-Month Contracts with Zero Transparent Lead Attribution',
-    problem: 'Traditional agencies lock Sioux Falls businesses into rigid annual retainers while delivering meaningless keyword ranking screenshots instead of qualified leads.',
-    solution: 'FactoryJet operates on flexible month-to-month agreements. We track real phone calls, form completions, and qualified pipeline revenue with custom GA4 events.',
+    title: 'Three agency results were multi-city pages',
+    problem: 'Of the five agency websites in the top ten, three were Sioux Falls pages from agencies that publish one page per city. The three map pack firms had 35, 64 and 39 Google reviews.',
+    solution: 'Few pages are written about Sioux Falls in particular. A service page that names Brandon, Harrisburg or Tea jobs and quotes local reviews has little real competition, and a steady review routine closes the map pack gap.',
   },
   {
     num: '04',
-    title: 'Capturing High-Value Geo-Targeted Commercial Keywords Across Lincoln County',
-    problem: 'Relying solely on broad city-level terms causes businesses to miss high-intent searches across Brandon, Harrisburg, Tea, and Hartford.',
-    solution: 'We build structured local service area landing pages and localized content silos that capture micro-corridor search volume throughout the Sioux Falls metro area.',
+    title: 'Sioux Falls searches ask about ChatGPT',
+    problem: 'Search Console for this page shows searches like "chatgpt optimization sioux falls sd", "answer engine optimization sioux falls sd" and "who helps businesses show up in chatgpt in sioux falls, sd?"',
+    solution: 'Owners here want to know what AI tools say about them. We ask ChatGPT, Perplexity and Google your buyers\' questions before we start, save the answers, and check again each month.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Month 1',
-    title: 'Full Technical Audit, Core Web Vitals Fixes & GBP Baseline',
-    desc: 'We conduct a line-by-line audit of your website code, crawl depth, indexing health, server response times, and current Google Business Profile status. We resolve all technical errors, repair broken redirects, clean up duplicate citations, and establish baseline conversion tracking in Google Analytics 4.',
-    deliverables: [
-      'Comprehensive 50-point technical SEO and crawlability audit report',
-      'Core Web Vitals code refactoring targeting sub-second LCP and zero CLS',
-      'Google Business Profile category audit, address verification, and metadata cleanup',
-      'Custom phone call, form submission, and live chat conversion tracking setup',
-    ],
+    title: 'Search and AI baseline',
+    desc: 'We record who ranks for your terms in Sioux Falls and what ChatGPT and Perplexity say when asked about your trade here.',
+    deliverables: ['Baseline of rankings and AI answers', 'Fix list in order of impact'],
   },
   {
     phase: 'Month 2',
-    title: 'Local Citation Architecture, Review Systems & Entity Schema',
-    desc: 'We rebuild your local citation footprint across essential Tier 1 business directories, mapping your Name, Address, and Phone number with complete consistency. In parallel, we deploy structured JSON-LD LocalBusiness schema and launch automated review generation workflows.',
-    deliverables: [
-      'Cleanup and synchronization across 40+ premier local business directories',
-      'Implementation of exhaustive nested JSON-LD schema markup',
-      'Automated SMS and email review collection system deployment',
-      'Competitive gap analysis against top 3 Sioux Falls Map Pack leaders',
-    ],
+    title: 'Profile and directories',
+    desc: 'We fix your Business Profile and match your details on the directories that rank, including the Chamber if you are a member.',
+    deliverables: ['Corrected profile and listings', 'Call and form tracking'],
   },
   {
     phase: 'Month 3',
-    title: 'Corridor Landing Pages & Sioux Falls Content Silo Expansion',
-    desc: 'We architect and publish high-converting, answer-first landing pages tailored to specific Sioux Falls business corridors and surrounding suburbs. Each page is engineered with distinct geographic schema, localized proof points, and targeted commercial copy.',
-    deliverables: [
-      'Launch of dedicated neighborhood service pages for key target areas',
-      'Publishing of detailed service category guides and comparison matrices',
-      'On-page internal linking optimization across core commercial URLs',
-      'First quarterly ranking progress review and pipeline attribution report',
-    ],
+    title: 'Answer-first service pages',
+    desc: 'We rewrite service pages to answer buyer questions in the first lines and add pages for Brandon, Harrisburg or Tea if you serve them.',
+    deliverables: ['Service pages with matching FAQ schema', 'Town pages with local jobs'],
   },
   {
     phase: 'Months 4 to 6',
-    title: 'Authority Link Acquisition, AI Engine Optimization & Scale',
-    desc: 'We build high-quality contextual backlinks from reputable South Dakota publications, industry associations, and regional business hubs. We optimize content structure to trigger direct citations across generative AI search platforms including ChatGPT, Perplexity, and Google AI Overviews.',
-    deliverables: [
-      'Targeted local digital PR and editorial backlink acquisition',
-      'Generative Engine Optimization formatting for AI answer citation',
-      'Ongoing Map Pack rank tracking and competitor defense updates',
-      'Monthly executive strategy meetings with senior technical engineers',
-    ],
+    title: 'Reviews and monthly AI checks',
+    desc: 'We run a review routine and repeat the AI questions every month to see whether the answers now name you.',
+    deliverables: ['Review request routine', 'Monthly note: calls, forms, rankings, AI answers'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Contract Flexibility',
-    factoryjet: 'Month-to-month agreements based on performance and trust.',
-    traditional: 'Rigid 6 to 12 month binding contracts with steep cancellation fees.',
+    label: 'AI Baseline',
+    factoryjet: 'Yes. We save ChatGPT and Perplexity answers to your buyers\' questions before any work starts.',
+    traditional: 'Ask: "Will you show me what AI tools say about us today, before you change anything?"',
   },
   {
-    label: 'Team Seniority',
-    factoryjet: 'Direct access to senior software engineers and technical SEO architects.',
-    traditional: 'Junior account coordinators acting as communication intermediaries.',
+    label: 'AI Overviews',
+    factoryjet: 'Google says no special optimization is needed for AI Overviews. We apply sound SEO and answer-first pages.',
+    traditional: 'Ask: "What do you do for AI Overviews that differs from normal SEO?"',
   },
   {
-    label: 'Technical Implementation',
-    factoryjet: 'We write and deploy clean code directly to your Next.js or CMS repository.',
-    traditional: 'Provides spreadsheets of generic recommendations for your team to code.',
+    label: 'Directories',
+    factoryjet: 'The ones that rank for your trade here, including the Chamber directory if you are a member.',
+    traditional: 'Ask: "Which Sioux Falls directories will you check, and why those?"',
   },
   {
-    label: 'Lead Attribution',
-    factoryjet: 'Monitors real phone calls, qualified form leads, and closed pipeline value.',
-    traditional: 'Reports on keyword impressions and unverified ranking screenshots.',
+    label: 'Guarantees',
+    factoryjet: 'None. Google advises finding someone else if an SEO guarantees first place.',
+    traditional: 'Ask: "Do you guarantee a ranking or an AI mention?"',
   },
   {
-    label: 'Data & Account Ownership',
-    factoryjet: 'You maintain 100% ownership of your accounts, analytics data, and code.',
-    traditional: 'Holds landing pages and tracking accounts hostage inside proprietary tools.',
-  },
-  {
-    label: 'AI & Generative Search',
-    factoryjet: 'Builds entity graph schema formatted for ChatGPT, Perplexity, and Google AI.',
-    traditional: 'Relies on outdated 2018 keyword stuffing and doorway page tactics.',
+    label: 'Ownership',
+    factoryjet: 'Month to month. Profile, analytics and site stay in your accounts.',
+    traditional: 'Ask: "What do we keep if we stop working with you?"',
   },
 ];
 
@@ -260,129 +255,73 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does SEO cost in Sioux Falls SD?',
-    answer:
-      'US small businesses typically pay $1,500 to $3,500 a month for SEO, according to WebFX pricing data updated in October 2026. WebFX puts local SEO retainers at $500 to $3,000 a month. What a Sioux Falls business pays depends on how competitive the sector is, how many locations it has and the condition of the website. FactoryJet quotes a fixed price in writing after a short scoping call and works on month-to-month terms.',
+    question: 'How much does an SEO company cost in Sioux Falls?',
+    answer: 'Clutch\'s SEO pricing page, updated September 2026, lists US hourly rates of $100 to $149. Monthly plans depend on how many hours your trade needs. A Sioux Falls pest control firm with one service area needs fewer than an ecommerce store selling nationwide. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Why do you offer month-to-month terms instead of 12-month contracts?',
-    answer:
-      'We believe client retention should be earned through measurable lead generation and ranking improvements rather than legal lock-ins. Month-to-month agreements keep our engineering team accountable to driving real business pipeline every 30 days.',
-  },
-  {
-    category: 'pricing',
-    question: 'What hidden fees or setup costs should Sioux Falls businesses watch out for?',
-    answer:
-      'Many traditional agencies bill extra onboarding fees, charge separately for basic Google Business Profile setup, or invoice additional hourly rates for technical code adjustments. With FactoryJet, your monthly rate covers complete technical execution, on-page optimization, content production, citation management, and conversion tracking with zero unexpected surcharges.',
-  },
-  {
-    category: 'pricing',
-    question: 'How do I compare quotes from different Sioux Falls SEO companies?',
-    answer:
-      'Compare deliverables, team seniority, and account ownership. Verify whether technical code fixes are included or billed extra, whether you will speak directly with an engineer or an account manager, and confirm that you retain 100% ownership of your content, code, and analytics data.',
-  },
-  {
-    category: 'local',
-    question: 'How do we get our Sioux Falls business into the Google 3-Pack Map results?',
-    answer:
-      'Winning the Google Map Pack requires an accurate primary category selection, complete service menus, consistent Name-Address-Phone (NAP) citations, steady customer review acquisition, and high domain authority from a fast, technically optimized website.',
-  },
-  {
-    category: 'local',
-    question: 'Can you rank our business in surrounding towns like Brandon, Harrisburg, and Tea?',
-    answer:
-      'Yes. We architect dedicated geographic service area landing pages and localized schema markup targeting Greater Minnehaha and Lincoln county suburbs including Brandon, Harrisburg, Tea, Hartford, and Dell Rapids.',
-  },
-  {
-    category: 'local',
-    question: 'How important are Google reviews for Sioux Falls local rankings?',
-    answer:
-      'Google describes local results in terms of relevance, distance, and prominence. Reviews can help customers evaluate a business and contribute to prominence, but they do not remove the effect of distance. We help you request honest feedback consistently, without incentives or filtering customers by how positively they respond.',
-  },
-  {
-    category: 'local',
-    question: 'What is the difference between Google Map Pack SEO and organic website SEO?',
-    answer:
-      'Google Map Pack SEO focuses on the localized 3-Pack box displayed at the top of local search results, driven by your Google Business Profile, geographic proximity, citations, and reviews. Organic website SEO focuses on the traditional search listings beneath the map, driven by technical site speed, deep content silos, structured data, and high-authority backlinks. A successful campaign optimizes both layers in unison.',
+    question: 'What does ChatGPT or AI search optimization cost?',
+    answer: 'WebFX\'s 2026 guide puts generative engine optimization at about $1,500 to $5,000 a month for small businesses. Much of that work overlaps with good SEO, since AI tools read the same websites, profiles and reviews. Ask any firm which parts of the price are new work and which are SEO under a new name.',
   },
   {
     category: 'technical',
-    question: 'What is technical SEO and why is it essential for Sioux Falls businesses?',
-    answer:
-      'Technical SEO optimizes site architecture, mobile responsiveness, server speed, Core Web Vitals, and structured JSON-LD schema markup. Without a strong technical foundation, Google and AI search engines cannot crawl or rank your content effectively.',
+    question: 'Who helps businesses show up in ChatGPT in Sioux Falls?',
+    answer: 'Any firm can claim it, so test it yourself. Ask ChatGPT and Perplexity "who is the best [your trade] in Sioux Falls" and note who they name. Then ask the firm what it would change so you appear, and how it will check. We save those answers before we start and repeat them monthly.',
   },
   {
     category: 'technical',
-    question: 'How do you optimize Sioux Falls websites for Google AI Overviews and ChatGPT search?',
-    answer:
-      'We format content using answer-first prose, authoritative factual data, structured schema entities, and clean semantic HTML. This enables AI search engines like Perplexity, ChatGPT Search, and Google AI Overviews to parse and quote your brand directly.',
+    question: 'What is generative engine optimization (GEO)?',
+    answer: 'GEO means shaping your pages so AI tools are more likely to use and cite them. The term comes from a 2024 study by researchers at Princeton and other institutions, which found that adding sources, quotes and statistics to a page made AI engines more likely to show it. Keyword stuffing did not help.',
   },
   {
     category: 'technical',
-    question: 'Why does website loading speed directly impact Google search rankings?',
-    answer:
-      'Page experience and Core Web Vitals are among the signals Google can use, but speed alone does not determine rankings. A faster mobile experience also makes it easier for visitors to read, call, or submit a form. We improve performance because it supports both search visibility and conversion, without promising that one speed score will produce a particular position.',
+    question: 'Is AI Overview optimization different from regular SEO?',
+    answer: 'Less than people think. Google\'s own guide to AI features says there are no extra requirements to appear in AI Overviews and no special optimization needed. The same basics apply: pages Google can read, answers near the top, accurate facts. Be wary of anyone selling a separate secret method.',
   },
   {
     category: 'technical',
-    question: 'What structured data schema do you implement on local Sioux Falls websites?',
-    answer:
-      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, MedicalClinic, FinancialService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
+    question: 'Can you do ecommerce SEO for a Sioux Falls online store?',
+    answer: 'Yes. Store SEO is national, not local, so the map pack hardly matters. The work is category pages that match how people search, product pages with real descriptions, clean filters that do not create thousands of duplicate pages, and fast mobile loading. FactoryJet is a registered Shopify Partner and also builds on other platforms.',
+  },
+  {
+    category: 'local',
+    question: 'Who is the best Google Business Profile optimization service in Sioux Falls?',
+    answer: 'Judge the work, not the claim. Good profile work sets the right primary category, lists every service, adds real photos, sets the service area, matches your details on other sites and builds reviews. Ask a firm to show a profile it fixed and what changed in calls after. Then compare.',
+  },
+  {
+    category: 'local',
+    question: 'Should I list my business with the Sioux Falls Area Chamber of Commerce?',
+    answer: 'If you are a member, fill in the listing fully. When we searched "sioux falls seo company" on 21 Oct 2026, the Chamber\'s directory ranked tenth, ahead of most agency sites. A complete listing with your website and phone is a trusted local mention. Join for the business reasons, not only for SEO.',
+  },
+  {
+    category: 'local',
+    question: 'Do you serve businesses in Brandon, Harrisburg and Tea?',
+    answer: 'Yes, if you take work there. Brandon sits in Minnehaha County, and Harrisburg and Tea in Lincoln County. Google weighs distance from the searcher, so a Tea shop shows on the map in Tea first. Pages for each town you serve, with jobs and reviews from that town, help in the regular results.',
+  },
+  {
+    category: 'local',
+    question: 'Is Sioux City the same SEO market as Sioux Falls?',
+    answer: 'No. Sioux City is a separate city in Iowa with its own map results. A Sioux Falls profile will not show in Sioux City map searches. If you serve both, give Sioux City its own page with local jobs and reviews, and list it in your service area only if you take jobs there.',
+  },
+  {
+    category: 'local',
+    question: 'How does SEO work for Sioux Falls law firms?',
+    answer: 'Give each practice area its own page, name the attorneys and their bar admissions, and answer the questions clients ask before a first call. Follow South Dakota\'s rules on lawyer advertising for any reviews or results you show. Keep the profile category matched to your main practice, not a general one.',
   },
   {
     category: 'timeline',
-    question: 'How long does it take to see organic ranking improvements in Sioux Falls?',
-    answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
+    question: 'Is SEO dead or evolving in 2026?',
+    answer: 'Evolving. On 21 Oct 2026 Google showed no AI Overview for "sioux falls seo company", just a map pack and ten results. Buyers also ask ChatGPT, which builds answers from the same websites and listings. The work is the same foundation, checked in more places.',
   },
   {
     category: 'timeline',
-    question: 'How do you track and report SEO return on investment (ROI)?',
-    answer:
-      'We track real commercial outcomes: phone call leads, form submissions, online appointment bookings, and organic revenue via custom Google Analytics 4 event tracking and Google Search Console data.',
+    question: 'How soon will my Sioux Falls business show in AI answers?',
+    answer: 'There is no set time. Each AI tool refreshes what it knows on its own schedule, and some answer from live search results. Fixes to your profile and listings can show up in Google within weeks. We repeat the same questions every month so you see the change, or the lack of one.',
   },
   {
     category: 'timeline',
-    question: 'Will algorithm updates from Google disrupt our search rankings?',
-    answer:
-      'They can. Google core updates move rankings for many sites, and no agency controls them. Our work stays inside Google guidelines. That means clean site architecture, authentic local citations and original content, with no link networks or thin automated copy. After each update we check your rankings and inquiries and tell you what changed.',
-  },
-  {
-    category: 'timeline',
-    question: 'Can SEO replace our paid Google Ads spend in Sioux Falls?',
-    answer:
-      'It can reduce how much you rely on ads, but it rarely replaces them outright. Google Ads buy visibility for as long as you pay per click. SEO work on your site and listings stays in place after it is done. We report calls and inquiries from organic search each month, so you can decide whether and when to move ad budget.',
-  },
-  {
-    category: 'local',
-    question: 'How do you optimize for financial institutions and South Dakota corporate trust companies?',
-    answer:
-      'South Dakota is the premier trust and banking jurisdiction in the United States. We construct high-authority wealth management and trust administration content silos, optimizing for high-net-worth family office search terms, asset protection laws, and fiduciary governance with structured FinancialService and Organization schema markup.',
-  },
-  {
-    category: 'technical',
-    question: 'How can independent medical and dental practices compete with Sanford and Avera health systems?',
-    answer:
-      'While hospital conglomerates lead on broad regional terms, independent medical specialists and dental clinics capture lucrative procedural queries (e.g. dental implants, pediatric orthodontics, private physical therapy) through hyper-targeted neighborhood landing pages, sub-second mobile page loads, and verified Google patient review funnels.',
-  },
-  {
-    category: 'local',
-    question: 'Can you structure local SEO across the South Dakota, Iowa, and Minnesota Tri-State area?',
-    answer:
-      'Yes. Sioux Falls businesses frequently serve clients across Minnehaha and Lincoln counties in South Dakota, Lyon County in Iowa, and Rock County in Minnesota. We construct distinct geographic service area landing pages and localized Schema.org AreaServed arrays targeting Brandon, Harrisburg, Tea, Luverne MN, and Rock Rapids IA without duplicate content penalties.',
-  },
-  {
-    category: 'technical',
-    question: 'How does Google Gemini and SearchGPT AI citation indexing work in the Upper Midwest?',
-    answer:
-      'Generative AI search platforms index clear entity relationships, verified state licensing records from the South Dakota Secretary of State, and direct answer-first content blocks. We format your service offerings and customer review data with granular JSON-LD markup to maximize AI conversational recommendations.',
-  },
-  {
-    category: 'technical',
-    question: 'What is NAP citation synchronization across Sioux Falls and regional directories?',
-    answer:
-      'We establish and synchronize verified business listings across essential regional platforms, including the Greater Sioux Falls Chamber of Commerce, South Dakota Better Business Bureau, Apple Maps, Bing Places, and YellowPages, checking that your details match and reinforcing Google Maps 3-Pack authority.',
+    question: 'How do Sioux Falls home service companies get more calls from search?',
+    answer: 'Set up a service-area profile with the street address hidden, list every service, and keep hours accurate through winter, when furnace and snow calls spike. Give each service its own page. Ask every customer for a review that names the job. Track which calls come from the profile so you know what works.',
   },
 ];
 
@@ -444,7 +383,7 @@ const BREADCRUMB_SCHEMA = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Sioux Falls', item: 'https://factoryjet.com/sioux-falls/ecommerce-development' },
+    { '@type': 'ListItem', position: 2, name: 'Local SEO', item: 'https://factoryjet.com/services/local-seo' },
     { '@type': 'ListItem', position: 3, name: 'SEO', item: CANONICAL },
   ],
 };
@@ -480,7 +419,7 @@ export default function SiouxFallsSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Help more Sioux Falls customers find your business and get in touch. FactoryJet works on your Google Business Profile, service pages, and website performance, with reporting focused on calls and form submissions.
+                  FactoryJet works on your Google Business Profile, your service pages and how AI tools describe you, so Sioux Falls buyers find you on Google and in ChatGPT. Reports start with calls and form fills.
                 </p>
 
                 <div className="rv-actions">
@@ -566,7 +505,7 @@ export default function SiouxFallsSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  With regional medical networks, expanding banking institutions, and rapid residential growth in Minnehaha and Lincoln counties, standard generic agency tactics fail. We combine sub-second Core Web Vitals speed optimization, Google Business Profile work, and localized corridor authority.
+                  In our 21 Oct 2026 check, directories and an agency Facebook page took half of page one for "sioux falls seo company". We fix your listings on those directories first, then your profile and pages.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -721,13 +660,13 @@ export default function SiouxFallsSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>The FactoryJet Difference</span>
+                <span>Sioux Falls Search Check, 21 Oct 2026</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                What FactoryJet Does Differently for Sioux Falls Businesses
+                What Sioux Falls Buyers See on Google Today
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace opaque agency retainers with transparent, engineering-driven search performance:
+                We searched from a Sioux Falls location and recorded the page:
               </p>
             </div>
 
@@ -747,11 +686,11 @@ export default function SiouxFallsSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What it means for you:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -802,7 +741,7 @@ export default function SiouxFallsSeoPage() {
                 Our 6-Month Sioux Falls SEO Roadmap
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A step-by-step roadmap of the work, month by month:
+                Six months of work, starting with a record of where you stand in Google and AI tools:
               </p>
             </div>
 
@@ -866,7 +805,7 @@ export default function SiouxFallsSeoPage() {
                 Evaluating Sioux Falls SEO Companies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led execution against traditional marketing agency retainers before you sign:
+                Five questions to ask any Sioux Falls SEO or AI search firm, with our answers:
               </p>
             </div>
 
@@ -874,7 +813,7 @@ export default function SiouxFallsSeoPage() {
               <div className="rv-eval-head" style={{ background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Factor</div>
                 <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional Marketing Agencies</div>
+                <div style={{ color: '#A0A0B0' }}>Questions to ask any agency</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
@@ -895,7 +834,7 @@ export default function SiouxFallsSeoPage() {
                   <div data-label="FactoryJet Engineering Model" style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
                     {crit.factoryjet}
                   </div>
-                  <div data-label="Traditional Marketing Agencies" style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                  <div data-label="Questions to ask any agency" style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
                     {crit.traditional}
                   </div>
                 </div>
@@ -910,7 +849,7 @@ export default function SiouxFallsSeoPage() {
         <FAQ
           eyebrow="SIOUX FALLS SEO INTELLIGENCE"
           headline="Frequently Asked Questions About SEO in Sioux Falls SD"
-          lead="Direct, plain English answers to what Sioux Falls business owners and marketing leaders ask about local search rankings and lead generation:"
+          lead="What Sioux Falls owners ask about cost, ChatGPT, AI Overviews and local search, answered plainly:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"

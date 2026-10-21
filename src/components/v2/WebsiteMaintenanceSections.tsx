@@ -67,7 +67,6 @@ const WIX = 'https://www.wix.com/blog/website-maintenance-cost';
 const OUTERBOX = 'https://www.outerboxdesign.com/digital-marketing-services/web-development/maintenance/';
 
 const COST_GUIDE = '/blog/website-running-cost-per-month-2026';
-const SEO_DECAY_POST = '/blog/importance-of-website-maintenance-seo';
 
 const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
 const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
@@ -414,7 +413,7 @@ export default function WebsiteMaintenanceSections() {
                 </ul>
               </div>
             ))}
-            <p className="chg-note">Speed targets follow Google’s Core Web Vitals thresholds: LCP within 2.5 seconds, INP of 200 milliseconds or less, CLS of 0.1 or less. <a href={VITALS} target="_blank" rel="noopener">web.dev ↗</a> Want to know why a site left alone slowly loses rankings? Read <a href={SEO_DECAY_POST}>why set it and forget it kills SEO</a>.</p>
+            <p className="chg-note">Speed targets follow Google’s Core Web Vitals thresholds: LCP within 2.5 seconds, INP of 200 milliseconds or less, CLS of 0.1 or less. <a href={VITALS} target="_blank" rel="noopener">web.dev ↗</a></p>
           </div>
         </section>
 

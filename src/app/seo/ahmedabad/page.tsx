@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-21';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -275,7 +275,8 @@ export default function AhmedabadSeoPage() {
                 win with{' '}
                 <a href="/seo/ecommerce-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">strong product and detail pages</a>, the hidden code that helps Google understand your products,
                 and the trust signals that get you on the shortlist. For clinics, shops, and local services, it is the{' '}
-                <a href="/seo/local-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">top three businesses on the map</a> and Google Maps.
+                <a href="/seo/local-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">top three businesses on the map</a> and Google Maps. If you still need the store itself, our{' '}
+                <a href="/services/ecommerce-development/ahmedabad" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">ecommerce development in Ahmedabad</a> page covers the build.
               </p>
               <p>
                 Every FactoryJet Ahmedabad plan covers{' '}
@@ -283,6 +284,9 @@ export default function AhmedabadSeoPage() {
                 Google AI answers as standard, then adds content and{' '}
                 <a href="/seo/link-building" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">links</a> over time. You keep every page, plan, and
                 link we build.
+              </p>
+              <p>
+                Sanand&apos;s car-part makers sell to the same carmakers as the Sriperumbudur belt near Chennai. Our page on <a href="/seo/chennai" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">SEO in Chennai</a> covers how we plan for that market.
               </p>
             </>
           }

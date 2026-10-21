@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-21';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -425,6 +425,9 @@ export default function SeoHyderabad() {
               </p>
               <p>
                 The Hyderabad SEO opportunity window is real and still open. KD 6 on primary search terms is exceptional for a city of this economic size. Act before the market catches up.
+              </p>
+              <p>
+                Hyderabad and Chennai compete for the same IT and hospital buyers. Our page on <a href="/seo/chennai" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">SEO in Chennai</a> covers the OMR IT belt and Chennai&apos;s hospitals.
               </p>
             </>
           }

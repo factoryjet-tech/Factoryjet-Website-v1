@@ -880,7 +880,7 @@ export default function JaipurDigitalMarketingPage() {
                 web design in Jaipur
               </a>{' '}
               if the website is the piece holding you back.
-              We also work in <a href="/digital-marketing/indore" className="font-semibold text-[#B23E13] underline underline-offset-2">Indore</a> or <a href="/digital-marketing/chandigarh" className="font-semibold text-[#B23E13] underline underline-offset-2">Chandigarh</a>.
+              We also work in <a href="/digital-marketing/delhi" className="font-semibold text-[#B23E13] underline underline-offset-2">Delhi</a> or <a href="/digital-marketing/ahmedabad" className="font-semibold text-[#B23E13] underline underline-offset-2">Ahmedabad</a>.
             </p>
           </div>
         </section>

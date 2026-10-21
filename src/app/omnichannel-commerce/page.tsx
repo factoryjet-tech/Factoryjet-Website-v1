@@ -97,7 +97,7 @@ const HOWTO_SCHEMA = {
   ],
 };
 const ORG_SCHEMA = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-21';
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org', '@type': 'WebPage',
   '@id': 'https://factoryjet.com/omnichannel-commerce#webpage',
@@ -352,6 +352,11 @@ export default function OmnichannelCommercePage() {
                 <tbody>{COMPARE.map((r) => (<tr key={r.cap} className={r.me ? 'me' : ''}><td className="name">{r.cap}</td><td>{r.single}</td><td>{r.multi}</td><td>{r.omni}</td></tr>))}</tbody>
               </table>
             </div>
+            <p className="pp-lead" style={{ marginTop: '20px' }}>
+              If Shopify Plus is on your shortlist, our{' '}
+              <Link href="/blog/best-omnichannel-commerce-solution-shopify-plus-2026" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>best omnichannel commerce solution for Shopify Plus</Link>{' '}
+              guide compares the apps and setups brands use to run stores, POS and marketplaces from one system.
+            </p>
           </div>
         </section>
 

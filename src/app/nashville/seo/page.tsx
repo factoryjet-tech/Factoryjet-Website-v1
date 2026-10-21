@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-09-14';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/nashville/seo';
 
 export const metadata: Metadata = {
@@ -49,10 +49,30 @@ const SEO_TOOLS = [
 ];
 
 const STAT_CARDS = [
-  { num: 'Maps', title: 'Business Profile Review', desc: 'Check business details, categories, services, and the areas you actually serve.', icon: '📍' },
-  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Agree which calls, forms, and booked conversations count as useful inquiries.', icon: '📈' },
-  { num: 'Site', title: 'Technical SEO Review', desc: 'Find indexing, mobile usability, and service-page issues that interrupt the path to an inquiry.', icon: '🛠️' },
-  { num: 'Plan', title: 'Prioritized Next Steps', desc: 'See what needs fixing first, who will implement it, and how progress will be reviewed.', icon: '📋' },
+  {
+    num: 'Maps',
+    title: 'Business Profile Review',
+    desc: 'Your categories and listed services compared with the three Nashville firms already in your map pack.',
+    icon: '📍',
+  },
+  {
+    num: 'Leads',
+    title: 'Inquiry Tracking',
+    desc: 'Profile calls, website forms and booked estimates, counted the same way every month.',
+    icon: '📈',
+  },
+  {
+    num: 'Site',
+    title: 'Technical SEO Review',
+    desc: 'Slow themes, plugin clutter and pages Google skips, listed page by page.',
+    icon: '🛠️',
+  },
+  {
+    num: 'Plan',
+    title: 'Prioritized Next Steps',
+    desc: 'What to fix first across Davidson, Williamson and Wilson counties, in order.',
+    icon: '📋',
+  },
 ];
 
 const DISTRICTS = [
@@ -146,77 +166,82 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
-    problem: 'Traditional Nashville agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
-    solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
+    title: 'Six of the top ten results are lists or directories',
+    problem: 'We searched "nashville seo company" from a Nashville location on 21 Oct 2026. Only four of the top ten were agency websites. The other six were a LinkedIn article ranking five agencies, DesignRush, Mayple, Built In, Yelp and a company database.',
+    solution: 'Nashville buyers read lists before they read websites. The same pattern shows up in many trades. We look up which lists rank for your service in Nashville and get your business onto the ones that accept real listings.',
   },
   {
     num: '02',
-    title: 'Eliminating Risky PBN Links & Automated Citation Spam',
-    problem: 'Cheap agencies build spammy automated citations and private blog network links that trigger Google algorithmic penalties and destroy your domain authority.',
-    solution: 'We implement 100% white-hat local entity optimization, syncing direct with Google Business Profile API, Apple Business Connect, and tier-one local publications.',
+    title: 'A business with 3 reviews sat in the map pack',
+    problem: 'The three map pack results for that search had 65, 3 and 6 Google reviews. Two of the three had fewer than ten.',
+    solution: 'Google ranks local results on relevance, distance and how well known a business is. With reviews this thin, relevance decides a lot: the right primary category, a full services list and a strong page behind the profile.',
   },
   {
     num: '03',
-    title: 'Fixing Inconsistent NAP Data Across Duplicate Profiles',
-    problem: 'Duplicate or outdated listings with conflicting phone numbers and suite addresses confuse search engine crawlers and split your local ranking signals.',
-    solution: 'We execute complete citation deduplication and NAP synchronization across all major data aggregators, establishing clean, authoritative entity signals.',
+    title: 'People ask Google whether ChatGPT can do SEO',
+    problem: 'Google\'s People Also Ask box showed "Can ChatGPT do SEO?" next to "Who is the best SEO agency?" and a question about the major companies based in Nashville.',
+    solution: 'Buyers now check AI tools as well as Google. We ask ChatGPT and Perplexity your customers\' questions before we start, record who they name, and check again after the work.',
   },
   {
     num: '04',
-    title: 'Optimizing for AI Answer Engines & SearchGPT Citations',
-    problem: 'Basic SEO tactics ignore generative AI engines like ChatGPT, Claude, and Perplexity, causing your business to be omitted from conversational recommendations.',
-    solution: 'We structure your content with deep semantic entities, speakable markup, and question-answering schemas that position your firm as the verified local authority.',
+    title: 'Nashville searches name the suburb',
+    problem: 'Search Console for this page shows people searching by town: Mount Juliet, Nolensville, Belle Meade, Goodlettsville, Franklin and Brentwood, often with the word "cost" attached.',
+    solution: 'A single "Nashville" page will not catch a Mount Juliet search. We build a page for each town where you take jobs, with jobs and reviews from that town, and skip towns you do not serve.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
-    phase: 'Phase 01',
-    title: 'Local Entity & Citation Audit',
-    desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
-    deliverables: ['Google Maps rank grid scan across metro Nashville', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+    phase: 'Stage 1',
+    title: 'Profile and site check',
+    desc: 'We review your Business Profile, Search Console (read-only) and top pages against the Nashville firms ranking for your terms.',
+    deliverables: ['Written fix list in order of impact', 'Primary category and services corrected'],
   },
   {
-    phase: 'Phase 02',
-    title: 'Google Business Profile & On-Page Geo-Optimization',
-    desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
-    deliverables: ['GBP category and attribute optimization', 'LocalBusiness and Service schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+    phase: 'Stage 2',
+    title: 'Listings and tracking',
+    desc: 'We correct your details on Apple Maps, Bing Places, Yelp and the Nashville lists that rank, and set up call and form tracking.',
+    deliverables: ['Listing log you can audit', 'Tracking for calls and forms'],
   },
   {
-    phase: 'Phase 03',
-    title: 'Tier-One Citation Sync & Local PR Distribution',
-    desc: 'We synchronize your verified business data across major directories and secure localized editorial placements to build genuine regional authority.',
-    deliverables: ['Direct API sync with Apple, Bing & Google', 'Tier-one directory citations (Data Axle, Neustar)', 'Localized press release and editorial outreach', 'Review velocity and response workflow setup'],
+    phase: 'Stage 3',
+    title: 'Town pages and answers',
+    desc: 'We write pages for the Middle Tennessee towns you serve and add answers to the questions your buyers search.',
+    deliverables: ['Pages for towns you actually serve', 'FAQ text with matching schema'],
   },
   {
-    phase: 'Phase 04',
-    title: 'Rank Defense, AI Citation Monitoring & Expansion',
-    desc: 'We track daily local 3-Pack movements, monitor AI search citations, protect against competitor spam, and expand into neighboring suburban corridors.',
-    deliverables: ['Weekly geo-grid rank tracking reports', 'SearchGPT and Perplexity citation audits', 'Spam listing monitoring and resolution', 'Quarterly local market expansion roadmap'],
+    phase: 'Stage 4',
+    title: 'Reviews and AI checks',
+    desc: 'We start a review routine and re-ask AI tools the same buyer questions to see whether they now name you.',
+    deliverables: ['Review request routine', 'Monthly note with calls, forms and AI answers'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Ranking Target',
-    factoryjet: 'Qualified inquiries from searches for the services you actually sell. Rankings are tracked, never promised.',
-    traditional: 'Ask which customer inquiries they measure and how they report them.',
+    label: 'Who Does the Work',
+    factoryjet: 'You talk directly to the people editing your site and profile.',
+    traditional: 'Ask: "Who will make changes to my site and profile, and can I talk to them?"',
   },
   {
-    label: 'Structured Data',
-    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, FAQPage).',
-    traditional: 'Ask who performs technical work and which deliverables are included.',
+    label: 'AI Search',
+    factoryjet: 'We ask ChatGPT and Perplexity your buyers\' questions before and after, and keep the answers.',
+    traditional: 'Ask: "How will you check what AI tools say about my business?"',
   },
   {
-    label: 'Citation Quality',
-    factoryjet: 'Direct API synchronization with major data providers and verified local chamber/industry publications.',
-    traditional: 'Ask which listings or publications are relevant to your actual business.',
+    label: 'Town Pages',
+    factoryjet: 'Only towns where you take jobs, each with its own jobs and reviews.',
+    traditional: 'Ask: "Which suburbs will you build pages for, and why those?"',
   },
   {
-    label: 'AI Search Preparedness',
-    factoryjet: 'Semantic entity engineering optimized for ChatGPT Search, Perplexity AI, and Google AI Overviews.',
-    traditional: 'Ask how they validate search content and describe any limitations.',
+    label: 'Guarantees',
+    factoryjet: 'None. Google tells buyers to avoid anyone who guarantees first place.',
+    traditional: 'Ask: "Do you guarantee a top three map ranking?"',
+  },
+  {
+    label: 'Ownership',
+    factoryjet: 'You own the profile, analytics and site from the first day.',
+    traditional: 'Ask: "Who owns my Business Profile and analytics if we part ways?"',
   },
 ];
 
@@ -231,171 +256,73 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does local SEO cost for a Nashville business?',
-    answer:
-      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Nashville corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring county-wide coverage receive tailored scoping with clear milestone deliverables.',
+    question: 'What does SEO cost in Nashville and the suburbs?',
+    answer: 'Backlinko\'s survey of more than 300 SEO professionals, updated December 2025, puts the average monthly SEO spend at $1,000 to $2,500. The price for a Mount Juliet plumber and a Nashville law firm differ because of how many rivals chase the same terms, not because of the zip code. FactoryJet gives you a fixed price in writing after a short call.',
   },
   {
     category: 'pricing',
-    question: 'Are there any hidden citation fees or third-party listing markups?',
-    answer:
-      'Your proposal identifies the work included in our fee and any separate tools, directory charges, or subscriptions. We agree additional costs before starting the related work. Ask for setup costs and ongoing costs to be shown separately when comparing SEO proposals.',
-  },
-  {
-    category: 'pricing',
-    question: 'Do you require long-term lock-in contracts for SEO retainers?',
-    answer:
-      'Your proposal sets out the initial work, ongoing monthly scope, any minimum term, and cancellation notice before you sign. Ask us to separate setup work from continuing SEO so you can compare the commitment clearly. The agreement, rather than a ranking promise, defines what we deliver.',
+    question: 'Should I hire a solo Nashville SEO guy or a team?',
+    answer: 'A solo consultant can cost less and you always reach the same person. The risk is cover: if they are sick or busy, nothing moves. A team costs more but spreads the work. Ask either one who edits your site, who answers when they are away, and whether your accounts stay in your name.',
   },
   {
     category: 'timeline',
-    question: 'How quickly can our Nashville business expect to see Google Maps rank improvements?',
-    answer:
-      'Timing depends on your starting point, competition, location, and the fixes needed. We establish a baseline and agree the first priorities after the audit. We report completed work alongside changes in visibility and inquiries. No agency can promise a top-three position or a fixed date for reaching it.',
+    question: 'How fast can local SEO move my Nashville map ranking?',
+    answer: 'Profile fixes can show within weeks. In our 21 Oct 2026 check of "nashville seo company", two of the three map pack firms had fewer than ten reviews, so a well-built profile can compete quickly in some trades. Busy terms take months. Nobody can promise a date, and Google advises against anyone who guarantees first place.',
   },
   {
     category: 'timeline',
-    question: 'What factors determine how fast a Nashville business can rank in the Local 3-Pack?',
-    answer:
-      'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
-  },
-  {
-    category: 'timeline',
-    question: 'What happens to our local rankings if we pause or discontinue services?',
-    answer:
-      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain your property after the engagement ends. Rankings can still change over time as competitors keep working.',
+    question: 'What is on a local SEO checklist for a Nashville business?',
+    answer: 'Start with eight items. Set the right primary category. List every service. Add real photos. Set your service area by county or town. Make your name, address and phone match on Apple Maps, Bing and Yelp. Give each main service its own page. Ask every happy customer for a review. Track calls and forms.',
   },
   {
     category: 'technical',
-    question: 'How do you optimize our Google Business Profile for maximum local radius reach?',
-    answer:
-      'We identify and configure primary and secondary categories, craft keyword-optimized business descriptions, upload geo-tagged photo assets, build product and service catalogs, and configure automated review generation funnels.',
+    question: 'Can ChatGPT do SEO for my business?',
+    answer: 'It can draft page text, suggest questions to answer and explain a report. It cannot log in to your Business Profile, fix a wrong listing on Apple Maps, or see today\'s Nashville results without other tools. Treat its output as a first draft that a person checks against what actually ranks.',
   },
   {
     category: 'technical',
-    question: 'What structured JSON-LD schemas do you implement on our website?',
-    answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+    question: 'How do I get my Nashville business recommended by AI search tools?',
+    answer: 'AI tools name businesses they can describe with confidence. Give them consistent facts: the same name, address, phone and service list on your site, your Business Profile and the directories that rank. Write pages that answer buyer questions in the first sentence. Collect reviews that mention the service and the town.',
   },
   {
     category: 'technical',
-    question: 'How do you help our company get recommended by AI search engines like ChatGPT and Perplexity?',
-    answer:
-      'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
+    question: 'What are local SEO citations, and which ones matter in Nashville?',
+    answer: 'A citation is any listing of your business name, address and phone on another site. The ones that count most are Apple Maps, Bing Places, Yelp, the directories for your trade, and local groups such as the Nashville Area Chamber of Commerce if you are a member. Ten correct listings beat a hundred messy ones.',
   },
   {
     category: 'technical',
-    question: 'How do you handle review generation without violating Google policies?',
-    answer:
-      'We establish frictionless SMS and email review request workflows that invite genuine satisfied clients to share their direct feedback on your Google Business Profile, strictly avoiding review gating or incentivized reviews.',
+    question: 'Does WordPress hurt my Nashville SEO?',
+    answer: 'No. WordPress ranks fine. Trouble comes from heavy themes that load slowly on phones, stacked plugins that clash, and thin tag and archive pages that Google indexes by mistake. A technical review lists each problem with the page it affects, and most fixes do not need a rebuild.',
   },
   {
     category: 'local',
-    question: 'Do you manage multi-location local SEO campaigns across Middle Tennessee?',
-    answer:
-      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Nashville, Brentwood, Franklin, Murfreesboro, Hendersonville, and Mount Juliet.',
+    question: 'Do you work with businesses in Franklin, Brentwood and Belle Meade?',
+    answer: 'Yes, as long as you serve customers there. Franklin and Brentwood sit in Williamson County, and Belle Meade is its own small city inside Nashville. Each one needs its own page with local jobs and reviews. A page that only swaps the town name helps nobody and can hurt the rest of your site.',
   },
   {
     category: 'local',
-    question: 'Can you help our practice outrank entrenched competitors in West End and Green Hills?',
-    answer:
-      'We can help you compete with them. The work combines website speed, topical content, clean citations and a steady flow of reviews. No agency can promise a map position, so each month we report where you stand next to the work completed.',
+    question: 'My business is in Goodlettsville or Fairview. Should I target Nashville searches?',
+    answer: 'Win your own town first. Google weighs the distance between the searcher and your business, so a Goodlettsville shop shows more easily for Goodlettsville and Hendersonville searches than for downtown Nashville ones. Mention Nashville on your pages where it is true, and add pages for the areas you serve as your reviews grow.',
   },
   {
     category: 'local',
-    question: 'How do service-area businesses without a public storefront rank in Nashville?',
-    answer:
-      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target ZIP codes and commercial corridors.',
+    question: 'How is SEO different for Nashville contractors?',
+    answer: 'Contractors are usually service-area businesses, so Google wants the street address hidden and a service area set instead. Your pages should show finished projects with the town named, the trades you hold licenses for, and photos you took. Reviews that mention the job type and town help both Google and buyers.',
   },
   {
     category: 'local',
-    question: 'Can you optimize our local presence for entertainment and artist services?',
-    answer:
-      'Yes. We build specialized event and entertainment schemas, local studio directories, and music licensing metadata to capture high-value industry searches across Music Row.',
+    question: 'Who is the best SEO agency in Nashville?',
+    answer: 'Lists will not settle it. When we searched on 21 Oct 2026, six of the top ten results were lists or directories, each with its own picks. Ask three firms the same questions: what would you fix first, how will you measure it, and who does the work. Compare the answers, not the badges.',
   },
   {
     category: 'reporting',
-    question: 'How do you track and report local SEO progress each month?',
-    answer:
-      'We provide access to an interactive dashboard showing local 3-Pack geo-grid ranking positions, organic keyword trajectories, verified Google Maps phone calls, website click-throughs, and consultation inquiry submissions.',
+    question: 'What does the free Nashville SEO audit include?',
+    answer: 'A side-by-side of your Business Profile, top pages and listings against the firms that rank for your terms in Nashville today. We ask for read-only Search Console access only. You get a short list of fixes in order, written so you or any developer can act on it.',
   },
   {
     category: 'reporting',
-    question: 'What is a Local Geo-Grid rank tracking report?',
-    answer:
-      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across Nashville, showing exactly where your business appears in the top 3 and where optimization is needed.',
-  },
-  {
-    category: 'reporting',
-    question: 'How do you combat spam and fake competitor listings on Google Maps?',
-    answer:
-      'We continuously monitor your primary search categories in Nashville, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
-  },
-  {
-    category: 'reporting',
-    question: 'Who will be our main point of contact during the campaign?',
-    answer:
-      'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
-  },
-  {
-    category: 'maps',
-    question: 'How do you optimize Google Maps rankings across Nashville and Middle Tennessee suburbs?',
-    answer:
-      'We build distinct, geo-targeted location pages for Franklin, Brentwood, Hendersonville, Mount Juliet, and Murfreesboro with unique local schema markup, verified business citations, localized case studies, and hyper-local proximity signals.',
-  },
-  {
-    category: 'ai-seo',
-    question: 'How does AI search optimization for ChatGPT, Claude, and Perplexity work for Nashville healthcare and legal practices?',
-    answer:
-      'We structure your service offerings into factual question-and-answer formats, integrate verified practitioner credentials, publish transparent fee structures, and embed JSON-LD Knowledge Graph entities that AI answer engines cite directly.',
-  },
-  {
-    category: 'technical',
-    question: 'What technical SEO factors are most critical for competitive Nashville enterprises?',
-    answer:
-      'We check whether important pages can be crawled and indexed, whether mobile visitors can use them easily, and whether internal links and structured data describe the business accurately. Core Web Vitals help diagnose loading, responsiveness, and layout problems. No single speed score decides a ranking.',
-  },
-  {
-    category: 'citations',
-    question: 'How do you clean up duplicate and incorrect NAP citations across Tennessee business directories?',
-    answer:
-      'We run an exhaustive audit across 80+ top business directories, data aggregators, and mapping platforms, claiming unverified listings, removing spam duplicates, and correcting NAP details that do not match.',
-  },
-  {
-    category: 'reviews',
-    question: 'What is your review generation framework for Nashville medical clinics and hospitality groups?',
-    answer:
-      'We help create a consistent request for honest feedback after a completed service. Customers receive the same opportunity to leave a review regardless of whether their experience was positive or negative. We do not buy reviews, offer incentives, or filter unhappy customers away from public review platforms.',
-  },
-  {
-    category: 'schema',
-    question: 'How do you configure Schema.org JSON-LD structured data for local Nashville businesses?',
-    answer:
-      'We embed granular Schema.org JSON-LD structured data on every page, including LocalBusiness, MedicalBusiness, LegalService, FAQPage, and Review schemas. These explicit semantic annotations enable Google to generate rich snippet stars, knowledge panel attributes, and local map pack citations.',
-  },
-  {
-    category: 'conversion',
-    question: 'How do you turn organic search visitors into booked consultations and corporate inquiries in Nashville?',
-    answer:
-      'We implement sticky click-to-call mobile headers, instant booking calendar integrations, verified customer review proof badges, and clear zero-friction consultation forms that convert local high-intent search traffic.',
-  },
-  {
-    category: 'gbp',
-    question: 'How do you choose and optimize primary and secondary Google Business Profile categories for Nashville businesses?',
-    answer:
-      'We conduct competitor correlation analysis to select the highest-converting primary category and up to nine strategic secondary categories, ensuring your listing captures broad search intent without diluting relevance.',
-  },
-  {
-    category: 'citations',
-    question: 'Do you secure local links and sponsorships from Nashville and Williamson County business organizations?',
-    answer:
-      'Yes. We help secure verified local links through the Nashville Area Chamber of Commerce, Williamson County Chamber, Nashville Downtown Partnership, and regional charitable sponsorships to build genuine local geographic authority.',
-  },
-  {
-    category: 'tracking',
-    question: 'How do you track local phone call inquiries and form conversions from Google Maps?',
-    answer:
-      'We set up dynamic call tracking numbers integrated with Google Analytics 4 and your CRM, tracking every inbound phone call, appointment booking, and consultation request directly to specific local search keywords and Google Maps actions.',
+    question: 'How will I know which calls came from Google?',
+    answer: 'Your Business Profile shows calls, direction requests and website clicks each month. Website forms can record where each visitor came from. If you want more detail, a tracking number on the profile separates map calls from other calls. We agree on what counts as a lead before the first report.',
   },
 ];
 
@@ -491,7 +418,7 @@ export default function NashvilleSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Help nearby customers find the services you sell. We improve your Google Business Profile, service pages, and technical SEO, with reporting focused on calls, inquiries, and booked conversations.
+                  We fix your Google Business Profile, your service pages and your listings so people in Nashville and the surrounding towns find you, call you and book. Reports count calls and inquiries before rankings.
                 </p>
 
                 <div className="rv-actions">
@@ -575,7 +502,7 @@ export default function NashvilleSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From Music Row entertainment firms to West End hospital systems and Brentwood corporate headquarters, Tennessee businesses need verified search authority to capture high-ticket clients before competitors do.
+                  Nashville is a list-heavy market: when we searched "nashville seo company" on 21 Oct 2026, six of the top ten results were lists or directories. We make sure your business shows up correctly on the lists, the map and your own pages.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -729,13 +656,13 @@ export default function NashvilleSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>The FactoryJet Difference</span>
+                <span>Nashville Search Check, 21 Oct 2026</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                What FactoryJet Does Differently for Nashville Businesses
+                What a Nashville Buyer Sees on Google Today
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace generic SEO reports with reporting on completed work, calls and inquiries:
+                We searched from a Nashville location and recorded the results. Four findings shape how we work here:
               </p>
             </div>
 
@@ -755,11 +682,11 @@ export default function NashvilleSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What it means for you:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -813,7 +740,7 @@ export default function NashvilleSeoPage() {
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                The four stages of work we follow for local search across Middle Tennessee:
+                Four stages, in order, for a Middle Tennessee business:
               </p>
             </div>
 
@@ -877,7 +804,7 @@ export default function NashvilleSeoPage() {
                 Evaluating Nashville SEO Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare the work, reporting, and ownership in each proposal before you sign:
+                Five questions worth asking any Nashville SEO firm, with our own answers:
               </p>
             </div>
 
@@ -922,7 +849,7 @@ export default function NashvilleSeoPage() {
         <FAQ
           eyebrow="NASHVILLE LOCAL SEARCH INTELLIGENCE"
           headline="Frequently Asked Questions About Local SEO in Nashville TN"
-          lead="Direct, plain English answers to what Nashville business owners and marketing directors ask about search visibility:"
+          lead="What Nashville owners ask about cost, suburbs, AI search and choosing a firm:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"

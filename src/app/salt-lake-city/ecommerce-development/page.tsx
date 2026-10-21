@@ -36,7 +36,8 @@ export const metadata: Metadata = {
     description: 'Custom Shopify Plus and Headless Next.js ecommerce engineering for Utah brands. Sub-second performance and ERP integration.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+  // noindex,follow per the 2026-10-21 index quality audit; page stays live, links stay followable.
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
 const PARTNERS = [

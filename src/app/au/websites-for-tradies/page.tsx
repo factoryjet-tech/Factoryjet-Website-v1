@@ -13,7 +13,7 @@ import '../au-page.css';
 import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/websites-for-tradies';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-21';
 const TITLE = 'Websites for Tradies Australia | Win More Jobs | FactoryJet';
 const H1 = 'Websites for Tradies: Quote-Ready Sites That Get Found Locally and Turn Calls Into Booked Jobs';
 const DESCRIPTION =
@@ -782,7 +782,8 @@ export default function WebsitesForTradiesAUPage() {
                   need a copy-paste page for every suburb. If your main goal is ranking in the map results across your
                   area, see our <a href="/au/local-seo">local SEO services in Australia</a>. If you are a small trade
                   business starting from scratch, our <a href="/au/small-business-web-design">small business web
-                  design</a> page explains the simplest site that still brings in work.
+                  design</a> page explains the simplest site that still brings in work. Not a trade? We also build{' '}
+                  <a href="/au/accountant-website-design">accountant website design</a>, <a href="/au/ndis-website-design">NDIS website design</a> and <a href="/au/real-estate-websites">real estate agency websites</a> in Australia.
                 </p></div>
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts-4" kind="photo" ratio="3:2" className="factphoto"

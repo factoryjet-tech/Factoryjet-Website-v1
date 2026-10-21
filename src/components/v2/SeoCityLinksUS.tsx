@@ -6,6 +6,7 @@ import Link from 'next/link'
 // exists to stop new SEO city pages shipping as orphans.
 // Exported 2026-09-23 so the /services/ai-seo hub renders the same city list
 // instead of keeping a second copy that drifts.
+// 2026-10-21 index quality audit: merged (301) and noindex city pages are left out of this list so crawlers are not sent to them.
 export const US_SEO_CITY_PAGES = [
   { slug: 'arlington',        label: 'Arlington, TX' },
   { slug: 'atlanta',          label: 'Atlanta, GA' },
@@ -13,7 +14,6 @@ export const US_SEO_CITY_PAGES = [
   { slug: 'boise',            label: 'Boise, ID' },
   { slug: 'boston',           label: 'Boston, MA' },
   { slug: 'charlotte',        label: 'Charlotte, NC' },
-  { slug: 'chattanooga',      label: 'Chattanooga, TN' },
   { slug: 'chicago',          label: 'Chicago, IL' },
   { slug: 'cleveland',        label: 'Cleveland, OH' },
   { slug: 'colorado-springs', label: 'Colorado Springs, CO' },
@@ -25,14 +25,10 @@ export const US_SEO_CITY_PAGES = [
   { slug: 'kansas-city',      label: 'Kansas City, MO' },
   { slug: 'lakewood-ranch',   label: 'Lakewood Ranch, FL' },
   { slug: 'las-vegas',        label: 'Las Vegas, NV' },
-  { slug: 'lincoln',          label: 'Lincoln, NE' },
   { slug: 'los-angeles',      label: 'Los Angeles, CA' },
-  { slug: 'miami',            label: 'Miami, FL' },
-  { slug: 'minneapolis',      label: 'Minneapolis, MN' },
   { slug: 'nashville',        label: 'Nashville, TN' },
   { slug: 'phoenix',          label: 'Phoenix, AZ' },
   { slug: 'providence',       label: 'Providence, RI' },
-  { slug: 'salt-lake-city',   label: 'Salt Lake City, UT' },
   { slug: 'san-diego',        label: 'San Diego, CA' },
   { slug: 'sioux-falls',      label: 'Sioux Falls, SD' },
   { slug: 'tampa',            label: 'Tampa, FL' },

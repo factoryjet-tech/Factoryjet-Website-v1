@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-21';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -425,6 +425,9 @@ export default function SeoPune() {
                 from Indian tech publications. For auto suppliers in Pimpri, it means capability pages and certification content. For local businesses in Baner and Koregaon Park, it means{' '}
                 <a href="/seo/local-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">local SEO</a>{' '}
                 that puts you on Google Maps. One plan per client, not one plan for all of Pune.
+              </p>
+              <p>
+                Pimpri auto suppliers sell to the same carmakers as the Sriperumbudur belt near Chennai. Our page on <a href="/seo/chennai" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">SEO in Chennai</a> covers that market.
               </p>
             </>
           }

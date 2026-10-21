@@ -12,7 +12,7 @@ import CityLinksUK from '@/components/v2/CityLinksUK';
 import './web-design.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/web-design';
-const UPDATED = '2026-08-25';
+const UPDATED = '2026-10-21';
 
 /* ─── Breadcrumb source of truth (drives the visible trail AND the JSON-LD) ───
    One array only. Never hand-copy a second BreadcrumbList literal: a trail the
@@ -866,6 +866,11 @@ export default function WebDesignUKPage() {
                     worst case or too thin to deliver the real one. Instead we scope your project on a short call,
                     once we know what you actually need. We also offer routes that fit a startup on a tight budget,
                     and we agree the scope up front so there are no change-order surprises halfway through.
+                  </p>
+                  <p>
+                    Replacing a site you already have? Our{' '}
+                    <a href="/blog/website-redesign-cost-uk-2026-complete-pricing-guide" style={{ color: "#B23E13", textDecoration: "underline", textUnderlineOffset: 2 }}>UK website redesign cost guide</a>{' '}
+                    sets out sourced market ranges by project size, plus the hidden costs quotes tend to leave out.
                   </p>
                 </div>
                 <div className="mt-8">

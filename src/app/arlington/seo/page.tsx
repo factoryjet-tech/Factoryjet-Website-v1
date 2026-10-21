@@ -12,7 +12,7 @@ import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/arlington/seo';
 
 export const metadata: Metadata = {
@@ -147,238 +147,198 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending Opaque Monthly Retainers With Zero Visible Map Pack Growth',
-    problem: 'Traditional agencies send generic monthly PDF reports filled with vanity impressions while your Google Business Profile remains stuck outside the Local 3-Pack.',
-    solution: 'We focus on tangible Google Maps 3-Pack rankings, qualified phone calls, and revenue-generating local search positions with full dashboard transparency.',
+    title: 'The city keyword is small',
+    problem: '"Arlington seo" and "arlington seo company" each get about 50 US searches a month. "Local seo arlington" and "arlington seo services" get about 10 each. A plan built on the city name alone chases a few dozen searches.',
+    solution: 'We start from the searches your own buyers type, such as a trade plus "arlington tx" or a suburb like Mansfield or Grand Prairie. Then we check monthly volume for each one before a single page is written.',
   },
   {
     num: '02',
-    title: 'Eliminating Fragile Plugin Schemas That Fail AI Citation Crawlers',
-    problem: 'Basic WordPress SEO plugins generate disjointed, broken schemas that AI search engines like SearchGPT and Perplexity fail to parse as verified business entities.',
-    solution: 'We hand-craft connected Schema.org JSON-LD entity graphs linking your Google Knowledge Graph, licensing credentials, and verified local citations.',
+    title: 'Ten results, one headline',
+    problem: 'Nine of the top 10 Google results for "arlington seo company" were agency pages, and most used almost the same title: "Arlington SEO Company". The tenth was a "Top 40 SEO Agencies" list page.',
+    solution: 'Copying that title gets you lost in the pile. For your site we write pages around details only you hold: job photos, the streets and suburbs you serve, real prices you publish, and answers to the calls you get.',
   },
   {
     num: '03',
-    title: 'Overcoming High Agency Turnover & Junior Account Handler Runaround',
-    problem: 'Big-box marketing agencies assign junior coordinators who do not understand Arlington unique municipal boundaries, regional corridors, or industry specifics.',
-    solution: 'You work directly with senior local SEO technical engineers who execute hyper-local geo-targeting tailored to Arlington commercial realities.',
+    title: 'A wide review gap in the map pack',
+    problem: 'The three businesses in the Google map pack had 171 reviews, 4 reviews and 2 reviews. Two of the three got in with a handful of five star ratings. Review count was the clearest split.',
+    solution: 'We set up a simple review request after each finished job, write replies to every review, and fix your Google Business Profile categories and service areas. You keep the profile and all of its history.',
   },
   {
     num: '04',
-    title: 'Stopping Toxic Link Networks That Trigger Search Penalties',
-    problem: 'Cheap SEO providers build spammy automated backlinks from private blog networks, risking sudden Google algorithmic penalties and ranking demotions.',
-    solution: 'We execute white-hat local citation building, regional trade publication placements, and verified local press authority, with no private blog networks.',
+    title: 'No AI Overview, but AI questions',
+    problem: 'Google showed no AI Overview on "arlington seo company" that day. Its People Also Ask box still asked "Is SEO dead now with AI?" and "How much should I expect to pay for SEO?"',
+    solution: 'We write short, direct answers to those buyer questions on your pages, with FAQ schema built from the same text people see. That gives AI tools clean lines to quote. Nobody can promise they will.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Phase 01',
-    title: 'Entity Audit, GBP Optimization & Technical Foundations',
-    desc: 'We audit your Google Business Profile, fix Name-Address-Phone (NAP) discrepancies, optimize categories, and eliminate technical website crawling bottlenecks.',
-    deliverables: ['Comprehensive local ranking audit and competitor gap analysis', 'Complete Google Business Profile category and attribute overhaul', 'NAP consistency audit across 60+ major US citation directories', 'Core Web Vitals and mobile crawlability technical fixes'],
+    title: 'Measure the searches that pay',
+    desc: 'We pull monthly volume for your trade in Arlington, Grand Prairie, Mansfield and Pantego, and check who holds the map pack and top 10 today.',
+    deliverables: ['Keyword list with monthly search volumes', 'Map pack review counts for your terms', 'Top 10 result types noted'],
   },
   {
     phase: 'Phase 02',
-    title: 'Local Geo-Silo Architecture & JSON-LD Entity Graph Build',
-    desc: 'We engineer dedicated geo-targeted service silos and implement nested Schema.org JSON-LD entity graphs connecting your business to the Google Knowledge Graph.',
-    deliverables: ['Hyper-local corridor landing pages (Entertainment District, Downtown, Viridian)', 'Custom JSON-LD schema graphs (LocalBusiness, Service, Physician, LegalService)', 'Internal contextual link graph distributing domain authority', 'Service area boundary definition in Google Maps API'],
+    title: 'Fix the profile and the site',
+    desc: 'We correct your Google Business Profile, Bing Places and Apple Business Connect listings, then fix crawl errors, page titles and slow pages on your site.',
+    deliverables: ['Matching name, address and phone everywhere', 'Profile categories and service areas set', 'Technical fix list, done and checked'],
   },
   {
     phase: 'Phase 03',
-    title: 'High-Authority Regional Citations & Review Velocity Engine',
-    desc: 'We build authoritative local citations across regional DFW chambers, industry trade directories, and deploy automated review generation workflows.',
-    deliverables: ['Tier-1 citation distribution across Apple Maps, Bing, Yelp, and YellowPages', 'Regional Arlington business directory and chamber of commerce listings', 'Automated SMS and email review generation campaign deployment', 'Review response protocol and Google Maps attribute updates'],
+    title: 'Write pages for real jobs',
+    desc: 'One page per service and area: roofing in North Arlington, game day catering near the Entertainment District, paver patios in Viridian. Each answers the questions buyers ask.',
+    deliverables: ['Service and area pages with photos', 'FAQ blocks with matching schema', 'Review request flow after each job'],
   },
   {
     phase: 'Phase 04',
-    title: 'AI Citation Retrieval, Continuous Tracking & Reporting',
-    desc: 'We optimize your brand footprint for retrieval in AI answer engines (SearchGPT, Perplexity, Google AI Overviews) and provide real-time ranking dashboards.',
-    deliverables: ['AI search engine citation indexing verification', 'Real-time geo-grid local rank tracking dashboard', 'Monthly inbound call and consultation conversion reporting', 'Quarterly strategic expansion and competitor defense roadmaps'],
+    title: 'Report what moved',
+    desc: 'Every month you see calls, form leads and map views next to the work we did, in plain words, plus the next set of changes for approval.',
+    deliverables: ['Monthly report of calls and leads', 'Review count tracked against map pack', 'Next changes quoted for approval'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Local Ranking Method',
-    factoryjet: 'Full-stack entity engineering, connected JSON-LD schemas, and verified GBP category optimization.',
-    traditional: 'Basic keyword stuffing, generic blog posts, and automated low-quality citation blasts.',
+    label: 'Which searches will you target, and how many people make them?',
+    factoryjet: 'We show monthly volume for every term. "Arlington seo company" gets about 50 a month, so we build around your trade and suburbs where the buyers are.',
+    traditional: 'A list of city keywords with no search numbers, or a promise to rank for "Arlington SEO" itself.',
   },
   {
-    label: 'AI Search Readiness',
-    factoryjet: 'Optimized for OpenAI SearchGPT, Perplexity AI, and Google AI Overviews citation retrieval.',
-    traditional: 'Unaware of AI answer engines; relies solely on legacy 10 blue link keyword matching.',
+    label: 'How will you close the review gap in the map pack?',
+    factoryjet: 'We measured the map pack at 171, 4 and 2 reviews. We set up a review request after each job and reply to every review for you.',
+    traditional: '"We optimize your Google profile" with no plan for getting new reviews from real customers.',
   },
   {
-    label: 'Citation Integrity',
-    factoryjet: 'Manual NAP synchronization across top-tier business directories and regional chambers.',
-    traditional: 'Automated spam submissions leading to duplicate listings and fragmented NAP data.',
+    label: 'Who owns the work if I stop?',
+    factoryjet: 'You do. Your Google Business Profile, pages, schema and content stay with you. There is no long-term contract and each change is quoted first.',
+    traditional: 'A 12 month contract, with the profile or site held in the agency\'s account.',
   },
   {
-    label: 'Contract Flexibility',
-    factoryjet: 'Transparent milestone and performance deliverables with zero predatory multi-year lock-ins.',
-    traditional: 'Rigid 12-month locking contracts with severe early termination penalties.',
+    label: 'How do you handle AI answers?',
+    factoryjet: 'We write direct answers and FAQ schema from the visible page text so AI tools can quote you. We report what we see and promise nothing.',
+    traditional: 'A promise to get you "into ChatGPT" or "into AI Overviews" by a set date.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Pricing & Retainers' },
-  { key: 'timeline', label: 'Rankings & Timeline' },
-  { key: 'ai', label: 'Search & AI Citations' },
-  { key: 'local', label: 'Arlington & DFW Focus' },
-  { key: 'deliverables', label: 'Deliverables & Reporting' },
+  { key: 'pricing', label: 'Cost and contracts' },
+  { key: 'local', label: 'Arlington search and Google Maps' },
+  { key: 'industries', label: 'Contractors, restaurants and home services' },
+  { key: 'ai', label: 'AI search' },
+  { key: 'process', label: 'Working with FactoryJet' },
 ];
 
 const FAQ_ITEMS = [
   {
-    category: 'pricing',
-    question: 'How much does local SEO cost for an Arlington TX business?',
-    answer:
-      'Monthly investments depend on your industry vertical, market competition, and target geographic coverage. We provide clear, transparent monthly deliverables with zero hidden hourly fees and zero long-term hostage contracts.',
-  },
-  {
-    category: 'pricing',
-    question: 'Do you lock clients into mandatory 12-month contracts?',
-    answer:
-      'No. We operate on performance and transparency. We believe our results should earn your partnership every single month, so you are never locked into an inflexible annual agreement.',
+    category: 'local',
+    question: 'How many people in Arlington search for an SEO company?',
+    answer: 'Few people do. On 21 Oct 2026, Google Ads data showed about 50 US searches a month each for "arlington seo" and "arlington seo company". "Arlington seo agency" and "seo company arlington" got about 20 each. "Local seo arlington" got about 10. So the agency keyword is small. What matters for your business is how many people search for your own service in Arlington, which can be far larger. We measure that before we plan anything.',
   },
   {
     category: 'pricing',
-    question: 'What is included in your monthly local SEO scope?',
-    answer:
-      'Every engagement includes full Google Business Profile management, local citation building and cleanup, structured schema graph maintenance, geo-silo content engineering, review generation workflows, and monthly conversion tracking.',
+    question: 'How much should I expect to pay for SEO in Arlington, TX?',
+    answer: 'Most small businesses pay $500 to $3,000 a month for local SEO, and one-time local SEO projects run $500 to $5,000, per WebFX local SEO pricing updated Sep 2026. Google showed this same question in its People Also Ask box when we searched "arlington seo company" on 21 Oct 2026. Your price depends on how many services and suburbs you want to show up for. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'How do you calculate ROI on local SEO campaigns?',
-    answer:
-      'We track qualified phone calls, appointment bookings, contact form submissions, and direct navigation requests generated through Google Maps and local organic search, giving you clear visibility into revenue attribution.',
+    question: 'What does a full SEO plan cost for a small business compared with local SEO alone?',
+    answer: 'Small business SEO usually runs $1,500 to $3,500 a month, per WebFX SEO pricing updated Sep 2026. An Ahrefs survey of 439 providers put the average at $2,917 a month for SEO and $1,557 for local SEO. Local SEO alone covers your map listing, reviews and area pages. A full plan adds wider content and links. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
-    category: 'timeline',
-    question: 'How quickly can an Arlington business rank in the Google Maps 3-Pack?',
-    answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
+    category: 'pricing',
+    question: 'Can I start with a one-time SEO audit instead of a monthly plan?',
+    answer: 'Yes. Most businesses pay $101 to $750 for a one-time SEO audit, according to WebFX, which found 43% of businesses fall in that range. An audit lists what is broken on your site and Google Business Profile, in order of impact. You can fix it yourself or hire someone. FactoryJet quotes a fixed price in writing after a short scoping call, and there is no long-term contract after it.',
   },
   {
-    category: 'timeline',
-    question: 'What factors determine ranking speed in local search?',
-    answer:
-      'Key factors include existing domain authority, Google Business Profile age and history, review count and sentiment velocity, NAP consistency across citation networks, and the strength of competitor profiles in your specific corridor.',
+    category: 'pricing',
+    question: 'Do I have to sign a long contract with an SEO company in Arlington?',
+    answer: 'Not with us. FactoryJet has no long-term contract. Each change is quoted and approved before we start it. You own your Google Business Profile, pages, schema and content, so nothing is locked in an agency account if you leave. Ask any firm you talk to who owns the profile and the site. If the answer is them, keep looking.',
   },
   {
-    category: 'timeline',
-    question: 'Can you fix past Google Business Profile suspensions or penalties?',
-    answer:
-      'Yes. We audit your profile for policy compliance issues, correct address and category discrepancies, submit formal reinstatement appeals to Google, and restore your ranking standing.',
+    category: 'local',
+    question: 'What shows up when you search for an SEO company in Arlington, TX?',
+    answer: 'We searched "arlington seo company" from Arlington, Texas on 21 Oct 2026. Google showed a map pack of three businesses, then 10 regular results. Nine were agency websites, most titled close to "Arlington SEO Company". One was a "Top 40 SEO Agencies in Arlington" list page. There was no AI Overview at the top. For most local trades, the map pack is where calls come from.',
   },
   {
-    category: 'timeline',
-    question: 'How do you handle review generation without violating Google policies?',
-    answer:
-      'We set up automated post-service email and SMS review request funnels that invite genuine customers to share their authentic experiences on your verified Google Business Profile in compliance with FTC and Google guidelines.',
+    category: 'local',
+    question: 'How many reviews do I need to get into the Google map pack in Arlington?',
+    answer: 'There is no fixed number, and the gap here is wide. On 21 Oct 2026, the three map pack businesses for "arlington seo company" had 171, 4 and 2 reviews. Two got in with fewer than five. Distance, categories and how well the profile matches the search all count too. A steady flow of real reviews helps, so we set up a request after each job.',
+  },
+  {
+    category: 'local',
+    question: 'What is local SEO and how is it different from regular SEO?',
+    answer: 'Local SEO means showing up when someone nearby searches for a service, mostly in the Google map pack and "near me" results. It covers your Google Business Profile, reviews, Bing Places, Apple Business Connect and pages for each area you serve. Regular SEO covers your whole website for searches with no location. An Arlington plumber needs local SEO first. An online store selling nationwide needs the wider kind.',
+  },
+  {
+    category: 'local',
+    question: 'Can you help me show up in Grand Prairie, Mansfield and Bedford too?',
+    answer: 'Yes, if you serve those places. Google ties map results to where the searcher stands, so one Arlington address will not cover every suburb. We set service areas on your Google Business Profile and write one page per area you work in, such as Grand Prairie, Mansfield, Pantego, Kennedale or Bedford. Each page names real jobs there. We skip areas you do not serve.',
+  },
+  {
+    category: 'local',
+    question: 'Are SEO directory and "top agencies" list sites worth trusting?',
+    answer: 'Use them as a starting list, not a verdict. One of the top 10 results for "arlington seo company" on 21 Oct 2026 was a "Top 40 SEO Agencies" list. Some list sites sell placement, and some rank firms only on reviews they collect themselves. Check each firm\'s own work, ask who owns the accounts, and ask for search volume numbers before you sign.',
+  },
+  {
+    category: 'industries',
+    question: 'How does SEO work for contractors and construction companies in Arlington?',
+    answer: 'Contractor SEO starts with your Google Business Profile, set to your exact trade, such as roofer or general contractor. Then each service gets its own page with job photos, the areas you cover and the questions people ask before they call. Reviews from finished jobs carry a lot of weight. For commercial work near the Great Southwest Industrial District, pages should list licenses, insurance and project types.',
+  },
+  {
+    category: 'industries',
+    question: 'I own a restaurant in Arlington. How do I get more people to find us when they search for food nearby?',
+    answer: 'Start with your Google Business Profile: correct hours, menu link, photos, price range and the right category, such as Tex-Mex restaurant. Most "places to eat near me" searches end in the map, not a website. Add game day hours and parking notes if you are near AT&T Stadium or Globe Life Field. Answer every review. Keep your Yelp and Apple Business Connect listings the same as Google.',
+  },
+  {
+    category: 'industries',
+    question: 'What should an SEO agency do for a restaurant that a general marketer would miss?',
+    answer: 'A restaurant needs menu data Google can read, event and holiday hours kept current, and photo updates every few weeks. Menu schema is code that tells Google your dishes and prices. Reservation and order links should work on phones. Ask any agency how they handle game day crowds in the Entertainment District and review replies. If they only talk about blog posts, they are a poor fit.',
+  },
+  {
+    category: 'industries',
+    question: 'Does local SEO work for home services and paver companies in Arlington?',
+    answer: 'Yes, and it fits them well, because people search for these jobs by area. A paver or patio company needs a page per service, such as patios, driveways and pool decks, with photos of finished work. Area pages for places like Viridian or South Arlington help. Reviews that mention the job type help Google match you to searches like "paver installers near me".',
   },
   {
     category: 'ai',
-    question: 'How does local SEO help my business appear in SearchGPT and AI Overviews?',
-    answer:
-      'AI answer engines retrieve verified facts from structured knowledge graphs, verified directories, and authoritative publications. We build connected JSON-LD schemas that make your business data unmistakable to LLM crawlers.',
+    question: 'Is SEO dead now that people use AI to search?',
+    answer: 'No. Google showed this exact question when we searched "arlington seo company" on 21 Oct 2026, and it showed no AI Overview on that search. AI tools like ChatGPT and Google\'s AI answers still pull from web pages and business listings. Pages with clear, direct answers and accurate listings are easier for them to quote. The basics of SEO still decide what they can find.',
   },
   {
     category: 'ai',
-    question: 'Why is structured Schema.org JSON-LD so important for local search?',
-    answer:
-      'Schema markup explicitly defines your exact business type, physical coordinates, service area, opening hours, accepted payments, and practitioner credentials directly in machine-readable code for search crawlers.',
+    question: 'What is AI SEO, and does an Arlington business need it?',
+    answer: 'AI SEO means writing and structuring your pages so AI answer tools can read and quote them. That covers short direct answers, FAQ schema that matches the visible text, and business details that agree across Google, Bing and Apple. Most Arlington businesses should get local SEO right first. AI SEO for small businesses runs $1,500 to $5,000 a month, per WebFX, Sep 2026. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'ai',
-    question: 'How do you track whether AI search engines are citing our brand?',
-    answer:
-      'We monitor citation appearances, brand mentions, and referral traffic originating from OpenAI SearchGPT, Perplexity AI, Claude, and Google AI Overviews, and report what we find.',
+    question: 'Can you get my business recommended by ChatGPT or Google\'s AI answers?',
+    answer: 'Nobody can promise that, and you should be wary of anyone who does. What we can do is make your pages and listings easy to quote. We write plain answers to the questions buyers ask, add schema built from the same text people see, and keep your details the same on every platform. Then we check AI answers for your key questions and report what we find.',
   },
   {
     category: 'ai',
-    question: 'Can AI search engines replace traditional Google Maps for local queries?',
-    answer:
-      'No. AI search engines synthesize and cite verified local data from Google Maps, Apple Maps, Yelp, and official websites. Accurate local data helps you appear in both traditional and AI-driven searches.',
+    question: 'What is an AI Overview?',
+    answer: 'An AI Overview is the short summary Google writes at the top of some search results, with links to the pages it drew from. It shows on some searches and not others. When we searched "arlington seo company" from Arlington on 21 Oct 2026, no AI Overview appeared. Question style searches, such as "how much does a roof cost", are more likely to get one.',
   },
   {
-    category: 'local',
-    question: 'What does local SEO involve for Arlington entertainment and stadium hospitality venues?',
-    answer:
-      'For restaurants, private event spaces, catering providers, and hospitality brands across the Entertainment District and Downtown Arlington, the work covers the Google Business Profile, event and menu pages, and structured data for menus and events.',
+    category: 'process',
+    question: 'What does an SEO company do day to day?',
+    answer: 'An SEO company audits your site and listings, fixes technical problems, writes pages, earns links and reports results. For an Arlington business, most of the work is local: your Google Business Profile, reviews, service area pages and matching listings on Bing Places and Apple Business Connect. Google asked this in its People Also Ask box on 21 Oct 2026. Ask any firm to show you each month what they changed.',
   },
   {
-    category: 'local',
-    question: 'Can you optimize healthcare practices competing across Tarrant County?',
-    answer:
-      'Yes. We engineer comprehensive practitioner schemas and medical procedure silos targeting Arlington, Mansfield, Grand Prairie, and Fort Worth patient queries.',
+    category: 'process',
+    question: 'How do I pick the best SEO consultant in Arlington, Texas?',
+    answer: 'Ask four things. Which searches will you target, and how many people make them each month? How will you get more reviews? Who owns the profile and pages if I leave? What will I see in a monthly report? Good answers include numbers. Lists of "top SEO experts" rarely check results, so judge firms by what they show you about your own market.',
   },
   {
-    category: 'local',
-    question: 'How do you target multiple DFW cities without keyword cannibalization?',
-    answer:
-      'We construct distinct, geo-targeted corridor pages with unique local proof points, localized customer testimonials, and specific municipal service coordinates that avoid internal ranking conflicts.',
+    category: 'process',
+    question: 'Does an SEO company need to be in Arlington to rank my business?',
+    answer: 'No. Google ranks your business on your profile, reviews and pages, not on where your SEO firm sits. FactoryJet works remotely with US clients and schedules calls in US business hours. It needs accurate data about your market, which we pull for each client: search volumes, map pack review counts and who ranks today. Founder Bhavesh Barot replies to new inquiries within 24 hours. FactoryJet was founded in 2014 and has worked with 500+ businesses.',
   },
   {
-    category: 'local',
-    question: 'Can you help commercial contractors win bids across the Great Southwest Industrial District?',
-    answer:
-      'Yes. We optimize Service Area Business (SAB) profiles, commercial contracting schemas, and geo-targeted service corridors across Arlington, Dallas, and Fort Worth commercial zones.',
-  },
-  {
-    category: 'deliverables',
-    question: 'What reports and dashboards will our team receive each month?',
-    answer:
-      'You receive access to a real-time geo-grid local rank tracking dashboard showing exact keyword positions across every Arlington neighborhood, plus monthly conversion summaries detailing call volume and lead inquiries.',
-  },
-  {
-    category: 'deliverables',
-    question: 'Do we own all citations and profiles created during the campaign?',
-    answer:
-      'Yes, 100%. All directory listings, Google Business Profiles, and citation accounts belong exclusively to your business with full master ownership credentials.',
-  },
-  {
-    category: 'deliverables',
-    question: 'Who will be our primary point of contact during the engagement?',
-    answer:
-      'You work directly with a senior technical SEO engineer who leads the strategy, executes the code changes, and leads your monthly strategy review sessions.',
-  },
-  {
-    category: 'deliverables',
-    question: 'How do we get started with an Arlington local SEO audit?',
-    answer:
-      'Schedule a free 30-minute local search audit. We will analyze your Google Business Profile, identify competitor gaps, and deliver an actionable ranking roadmap for your business.',
-  },
-  {
-    category: 'local',
-    question: 'How do you capture high-volume hospitality and event queries near AT&T Stadium and Globe Life Field?',
-    answer:
-      'Arlington’s Entertainment District hosts millions of major league sports fans, concertgoers, and convention travelers. We optimize real-time Google Business Profile event attributes, mobile click-to-book reservation widgets, and dynamic location pages targeting corporate banquet dining, luxury party buses, and private game-day hospitality.',
-  },
-  {
-    category: 'technical',
-    question: 'How do you optimize B2B precision tooling and logistics suppliers in the Great Southwest Industrial District?',
-    answer:
-      'The Great Southwest Industrial District (GSW) spans thousands of manufacturing, CNC machining, and freight distribution hubs. We engineer technical B2B product catalogs, ISO 9001/AS9100 certification schema markup, and downloadable capability sheets to capture high-value enterprise procurement searches.',
-  },
-  {
-    category: 'local',
-    question: 'Can you structure local SEO across both Tarrant and Dallas county service corridors?',
-    answer:
-      'Yes. Arlington businesses bridge the Fort Worth and Dallas economic corridors. We build distinct localized landing pages and multi-county AreaServed schema markup targeting Mansfield, Grand Prairie, Kennedale, Hurst, and Euless without triggering duplicate content penalties.',
-  },
-  {
-    category: 'technical',
-    question: 'How does Google Gemini and SearchGPT AI citation indexing work in DFW?',
-    answer:
-      'Generative AI search platforms extract direct factual entities from structured JSON-LD schemas, verified Texas Secretary of State business records, and clear question-and-answer content blocks. We format your service offerings to maximize conversational citation frequency in Google AI Overviews and ChatGPT search.',
-  },
-  {
-    category: 'deliverables',
-    question: 'What is NAP citation synchronization across Arlington and North Texas business directories?',
-    answer:
-      'We establish and synchronize verified business citations across essential regional directories, including the Greater Arlington Chamber of Commerce, North Texas BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, checking that your details match, eliminating duplicate listings, and reinforcing Google Maps 3-Pack authority across Tarrant, Dallas, and Johnson counties.',
+    category: 'process',
+    question: 'How long before local SEO brings more calls?',
+    answer: 'Profile fixes can change map visibility within a few weeks, because Google rereads your listing often. New service and area pages take longer to be found and ranked, often a few months. Reviews build over time. We report calls, form leads and map views every month so you can see what moved. We do not promise rankings or dates, and you should doubt anyone who does.',
   },
 ];
 
@@ -745,7 +705,7 @@ export default function ArlingtonSeoPage() {
                 What FactoryJet Does Differently for Arlington Businesses
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace opaque monthly agency reports with reporting on completed work, calls and inquiries:
+                We searched "arlington seo company" from Arlington, Texas on 21 Oct 2026 and pulled US search volumes the same day; these four findings shape how we work here.
               </p>
             </div>
 
@@ -765,11 +725,11 @@ export default function ArlingtonSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw in Arlington, TX search, 21 Oct 2026:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What we do about it:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -806,7 +766,7 @@ export default function ArlingtonSeoPage() {
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                The four stages of work we follow for Google Maps listings and AI answer visibility:
+                Four stages, each one quoted and approved before work starts, aimed at the searches and suburbs where Arlington buyers look.
               </p>
             </div>
 
@@ -870,7 +830,7 @@ export default function ArlingtonSeoPage() {
                 Evaluating Arlington SEO Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+                Ask any Arlington SEO firm these four questions before you sign, and compare the answers to what we found in local search on 21 Oct 2026.
               </p>
             </div>
 

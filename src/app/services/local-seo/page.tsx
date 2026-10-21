@@ -221,7 +221,7 @@ export const metadata: Metadata = {
 /* ── JSON-LD ──────────────────────────────────────────────────────────────── */
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-21';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -829,7 +829,8 @@ export default function LocalSeoServicePage() {
                 with a geography constraint bolted on. The{' '}
                 <Link href="/services/seo-audit" style={LINK_STYLE}>free SEO audit</Link> runs this same list and hands
                 you the findings whether or not you hire us. To see what this work usually costs, job by job, read our{' '}
-                <Link href="/blog/local-seo-cost-2026" style={LINK_STYLE}>local SEO cost guide</Link>. Single-location owners usually start with{' '}
+                <Link href="/blog/local-seo-cost-2026" style={LINK_STYLE}>local SEO cost guide</Link>. To compare providers before you hire, see our{' '}
+                <Link href="/blog/best-local-seo-companies-usa" style={LINK_STYLE}>best local SEO companies in the USA</Link>. Single-location owners usually start with{' '}
                 <Link href="/services/small-business-seo" style={LINK_STYLE}>small business SEO</Link>. We also offer vertical programs including{' '}
                 <Link href="/services/dental-seo" style={LINK_STYLE}>dental SEO</Link>,{' '}
                 <Link href="/services/healthcare-seo" style={LINK_STYLE}>healthcare SEO</Link> and{' '}

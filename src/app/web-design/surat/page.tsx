@@ -524,14 +524,14 @@ const SRT_FAQ_ITEMS = [
             items={SRT_FAQ_ITEMS}
           />
         <FinalCTA {...finalCTAProps} />
-        {/* Cross-silo link to the Surat digital marketing page */}
+        {/* Cross-silo link to the digital marketing hub (the Surat page merged into it on 2026-10-21) */}
         <section className="border-t border-fj-ink/10 bg-white px-6 py-10 md:px-8">
           <div className="mx-auto max-w-3xl">
             <p className="text-base leading-relaxed text-fj-ink/75">
               A website only pays for itself once buyers find it. If you also need traffic and
               enquiries, see our{' '}
-              <a href="/digital-marketing/surat" className="font-semibold text-[#B23E13] underline underline-offset-2">
-                digital marketing agency services in Surat
+              <a href="/digital-marketing" className="font-semibold text-[#B23E13] underline underline-offset-2">
+                digital marketing agency services
               </a>
               , covering Google, ads, WhatsApp and AI search.
             </p>

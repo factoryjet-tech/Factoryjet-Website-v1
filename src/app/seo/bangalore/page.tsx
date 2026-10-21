@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-21';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -564,6 +564,9 @@ export default function SeoBangalore() {
                 We are also considerably cheaper than most Bangalore SEO agencies because we run lean, and we do not lock you in. Month to month. Everything we build stays yours. And unlike most{' '}
                 <a href="/seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">SEO companies in India</a>,{' '}
                 we have 12 years of experience behind the work, not just a team of recent graduates running templates.
+              </p>
+              <p>
+                IT firms along Chennai&apos;s OMR chase the same B2B buyers as Bangalore SaaS companies. Our page on <a href="/seo/chennai" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">SEO in Chennai</a> covers that market.
               </p>
             </>
           }

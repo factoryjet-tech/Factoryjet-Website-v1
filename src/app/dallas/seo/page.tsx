@@ -12,7 +12,7 @@ import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-29';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/dallas/seo';
 
 export const metadata: Metadata = {
@@ -50,10 +50,30 @@ const SEO_TOOLS = [
 ];
 
 const STAT_CARDS = [
-  { num: 'Maps', title: 'Business Profile Review', desc: 'Review your categories, services, and business details against what customers need to find.', icon: '📍' },
-  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Identify the calls and website inquiries that matter to your business and plan how to measure them.', icon: '📈' },
-  { num: 'Data', title: 'Listing Consistency', desc: 'Check your business name, address, and phone number across your website and business listings.', icon: '🛡️' },
-  { num: 'Site', title: 'Technical SEO Review', desc: 'Find crawl issues, unclear service pages, and usability problems that get between a search and an inquiry.', icon: '⚡' },
+  {
+    num: 'Maps',
+    title: 'Business Profile Review',
+    desc: 'Category and service area checked against the DFW map pack for your trade, city by city.',
+    icon: '📍',
+  },
+  {
+    num: 'Leads',
+    title: 'Inquiry Tracking',
+    desc: 'Calls, forms and booked jobs from search, agreed before the first report.',
+    icon: '📈',
+  },
+  {
+    num: 'Data',
+    title: 'Listing Consistency',
+    desc: 'Name, address and phone matched on Apple Maps, Bing, Yelp and the Dallas directories that rank.',
+    icon: '🛡️',
+  },
+  {
+    num: 'Site',
+    title: 'Technical SEO Review',
+    desc: 'Sitemap errors, blocked pages and slow mobile templates, each listed with its URL.',
+    icon: '⚡',
+  },
 ];
 
 const DISTRICTS = [
@@ -92,132 +112,117 @@ const DISTRICTS = [
 const INDUSTRY_SHOWCASE = [
   {
     sector: 'Commercial Contractors, Roofing & Mechanical Trades',
-    headline: 'Capturing High-Value Commercial & Emergency Service Calls Across North Texas',
-    description:
-      'Commercial property managers and facility directors across Dallas, Collin, and Tarrant counties do not browse pages of search results. When hail storms damage roofs or HVAC units fail, they call the top 3 verified businesses in the Google Map Pack. We structure your Google Business Profile, service radius coordinates, localized job photo geo-tagging, and high-authority local contractor citations to compete for high-ticket service queries.',
+    headline: 'Storm Season Calls for North Texas Contractors',
+    description: 'After a hail storm, property managers call the contractors they see first on the map with recent reviews. That means a service-area profile covering only the counties you work in, a page for each service such as roof replacement or commercial HVAC, and job photos that name the suburb. Show your license details wherever your trade needs one.',
     image: '/images/us/services/roofing-seo/hero.webp',
     alt: 'Aerial view of suburban shingle rooftops at golden hour',
-    points: [
-      'Hyper-localized neighborhood landing pages covering 25+ DFW suburban municipalities',
-      'Automated review generation workflows securing verified customer testimonials with keyword signals',
-      'Structured LocalBusiness and Contractor JSON-LD schema with exact service area coordinates',
-    ],
+    points: ['Service area set to the Dallas, Collin, Denton or Tarrant towns you serve', 'A page per service with finished jobs named by suburb', 'Review requests sent after every completed job'],
   },
   {
     sector: 'Healthcare Practices, Specialty Dental & Medical Clinics',
-    headline: 'Driving High-Value Patient Appointments in Dallas’s Premier Medical Corridors',
-    description:
-      'From private practices in the Medical District to surgical centers in Frisco and Plano, local search visibility determines your patient acquisition costs. We optimize your medical entity profiles, connect provider NPI registries to local schema, optimize Google Maps categories, and check citation consistency across healthcare directories.',
+    headline: 'Patient Searches From the Medical District to Frisco',
+    description: 'Patients search by treatment, by doctor and by insurance plan. Each clinic needs a profile linked to a page with booking, the doctors named, and accepted insurance listed as text rather than a logo image. Replies to reviews must never confirm that the reviewer is a patient.',
     image: '/images/us/dallas/seo/card-blood-pressure-check.webp',
     alt: 'A nurse in burgundy scrubs wrapping a blood pressure cuff around the arm of a seated woman in an exam room',
-    points: [
-      'Physician-specific and clinic-level Google Business Profile optimization with appointment booking links',
-      'MedicalSpecialty and Physician schema markup aligning with state licensing and hospital networks',
-      'Strict HIPAA-compliant review response protocols and localized patient guide content hubs',
-    ],
+    points: ['Clinic profiles with booking links and exact hours', 'Treatment pages that name the doctor who performs them', 'Review replies written to protect patient privacy'],
   },
   {
     sector: 'Litigation Law Firms, Personal Injury & Defense Practices',
-    headline: 'Legal Search Work in Uptown Dallas',
-    description:
-      'Legal keywords in Dallas are among the most competitive in the United States. Ranking in the Map Pack and top organic positions requires deep entity authority. We build comprehensive legal practice area content silos, optimize attorney bar admission entities, earn high-tier legal directory citations, and structure verified case result knowledge panels.',
+    headline: 'Practice Area Pages for Dallas and Plano Firms',
+    description: 'Legal searches in Dallas are crowded, and legal directories rank well for them. Each practice area needs its own page that answers what clients ask before they call, with attorney names and bar admissions. Your Avvo, Justia and Martindale profiles should match your site. Check anything you publish against the State Bar of Texas advertising rules.',
     image: '/images/us/dallas/seo/card-court-file-packing.webp',
     alt: 'A lawyer in a black suit and orange scarf packing folders into a wheeled case while a younger colleague carries archive boxes',
-    points: [
-      'Practice area content architecture engineered for high-intent legal search queries',
-      'LegalService and Attorney schema with state bar credentials and practice jurisdiction tags',
-      'Authoritative local legal citations across Avvo, Justia, Martindale, and Texas Bar associations',
-    ],
+    points: ['One page per practice area instead of one page listing all of them', 'Attorney bios with bar admissions and case types', 'Matching profiles on the legal directories that rank for your terms'],
   },
   {
     sector: 'Industrial Suppliers, Warehousing & Fleet Logistics',
-    headline: 'Winning B2B Procurement Searches Across the DFW Logistics Hub',
-    description:
-      'Industrial buyers and supply chain managers in Fort Worth, Irving, and Alliance search for local fabrication, machining, and logistics partners. We optimize your technical capability matrices, register verified B2B industry citations, and structure commercial supplier schemas to capture corporate purchase orders.',
+    headline: 'Quote Requests for Fort Worth and Alliance Suppliers',
+    description: 'Industrial buyers search by process, material and capacity, often from outside Texas. Capability pages need real specs, equipment lists and only the certifications you hold, plus a quote form that accepts drawings. A Business Profile at your plant address helps drivers and local buyers find the right gate.',
     image: '/images/us/manufacturing-website-design/rfq-desk.webp',
     alt: 'A man comparing a printed technical drawing with a machined bracket shown on a laptop, calipers on the desk',
-    points: [
-      'B2B supplier and fabrication capability schemas linking equipment specs to regional search queries',
-      'Google Maps optimization for commercial loading dock addresses and industrial park locations',
-      'Industry-specific citation syndication across ThomasNet, IndustryNet, and Texas manufacturing networks',
-    ],
+    points: ['A capability page per process with equipment and tolerances', 'Listings on Thomasnet and the supplier directories your buyers use', 'A quote form that accepts drawings and specs'],
   },
 ];
 
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending Low Proximity Traps & Geo-Grid Disappearance',
-    problem: 'Most local businesses rank well right in front of their office but disappear completely from the 3-Pack just two miles away in adjacent DFW suburbs.',
-    solution: 'We deploy localized entity content hubs and multi-radius geo-signals that expand your Google Map Pack visibility across Dallas, Collin, and Tarrant counties.',
+    title: 'A firm named after the search holds three spots',
+    problem: 'On 21 Oct 2026 we searched "dallas seo" from a Dallas location. A firm with "Dallas SEO" in its name held the first map pack spot, and its LinkedIn and Facebook pages both sat in the organic top ten.',
+    solution: 'Google reads names as a relevance signal, but its profile rules ban adding keywords to a business name. We keep your real name and make every listing and page say clearly what you do and which DFW cities you serve.',
   },
   {
     num: '02',
-    title: 'Resolving Inconsistent NAP Data & Corrupted Directory Citations',
-    problem: 'Duplicate listings, old suite numbers, and mismatched phone formats across Yelp, Apple Maps, and Bing confuse search algorithms and suppress rankings.',
-    solution: 'We audit your business data across primary data aggregators (Data Axle, Neustar, Foursquare) and correct name, address and phone details that do not match.',
+    title: 'Half of page one is not an agency website',
+    problem: 'Five of the ten organic results were a LinkedIn company page, Clutch, a Facebook page, a "top SEO agencies in Dallas" list and a blog post listing Dallas firms.',
+    solution: 'Profiles on other platforms rank in Dallas. We check your LinkedIn, Facebook and directory listings so they carry the same name, phone, services and website as your Business Profile.',
   },
   {
     num: '03',
-    title: 'Neutralizing Competitor Map Spam & Fake Listing Floods',
-    problem: 'Unscrupulous competitors stuff keywords into their GBP business names and create fake virtual office listings that displace legitimate local companies.',
-    solution: 'We run weekly automated geo-grid scans and file formal Google Redressal complaints backed by state corporate records to clear out map spam.',
+    title: 'Map pack firms had 41 to 89 reviews',
+    problem: 'The three map results had 89, 41 and 69 Google reviews. Three of the five agency websites in the top ten were Dallas pages from agencies that publish one page per city.',
+    solution: 'Review counts in Dallas are high enough that a new profile needs months of steady requests. Meanwhile, pages that name real Dallas jobs and clients stand apart from city pages written the same way for every market.',
   },
   {
     num: '04',
-    title: 'Transforming Empty Rankings into Tracked Revenue & Phone Calls',
-    problem: 'Standard agencies report on vanity impressions or search volume without tracking how many phone calls, form fills, or consultation bookings were produced.',
-    solution: 'We implement call tracking, dynamic number insertion, and Google Business Profile conversion tracking to report on actual client revenue.',
+    title: 'DFW searches name the suburb',
+    problem: 'Search Console for this page shows searches naming Denton, McKinney, Irving, Rowlett, Carrollton and Lewisville, plus "seo dfw" and "dfw seo".',
+    solution: 'DFW is dozens of cities, each with its own map results. We build a page for each city where you take work and set your profile service area to match, instead of one page that claims the whole Metroplex.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
-    phase: 'Phase 01',
-    title: 'Local Entity Audit & GBP Optimization',
-    desc: 'We perform a 50-point inspection of your Google Business Profile, citation consistency, and local competitors across target DFW ZIP codes.',
-    deliverables: ['50-point GBP health audit', 'Geo-grid benchmark scan across 15 miles', 'Category & primary keyword alignment', 'Spam competitor audit'],
+    phase: 'Days 1 to 15',
+    title: 'Audit and profile fixes',
+    desc: 'We audit your profile, sitemap, pages and listings with read-only access, then fix category, services and hours first.',
+    deliverables: ['Fix list with a URL for each problem', 'Corrected Business Profile'],
   },
   {
-    phase: 'Phase 02',
-    title: 'On-Page Entity SEO & Local Content Hubs',
-    desc: 'We inject advanced LocalBusiness schema and build hyper-relevant neighborhood and suburban landing pages covering core DFW service areas.',
-    deliverables: ['JSON-LD LocalBusiness & Service schema', 'DFW neighborhood landing pages', 'Optimized localized header hierarchies', 'Geo-tagged image metadata integration'],
+    phase: 'Days 15 to 45',
+    title: 'Listings and tracking',
+    desc: 'We match your details on Apple Maps, Bing, Yelp, LinkedIn and the DFW directories that rank, and set up call and form tracking.',
+    deliverables: ['Listing log you can check', 'Call and form tracking live'],
   },
   {
-    phase: 'Phase 03',
-    title: 'Citation Syndication & Review Acceleration',
-    desc: 'We synchronize your business data across tier-1 directories and deploy automated review generation workflows.',
-    deliverables: ['Data aggregator API syndication', 'Tier-1 directory verification (60+ hubs)', 'Automated SMS/Email review request funnel', 'Local Chamber & industry citations'],
+    phase: 'Days 45 to 75',
+    title: 'Service and city pages',
+    desc: 'We write a page per service, then pages for the DFW cities you serve, each with local jobs and reviews.',
+    deliverables: ['Service pages with FAQ schema', 'City pages only where you work'],
   },
   {
-    phase: 'Phase 04',
-    title: 'Map Pack Geo-Grid Defense & Monthly Reporting',
-    desc: 'We continuously track your 3-Pack rankings across a 15-mile grid, publish weekly profile updates, and report on verified inbound calls.',
-    deliverables: ['Weekly geo-grid proximity tracking', 'Weekly GBP photo & post management', 'Ongoing competitor spam removal', 'Transparent call & revenue reporting'],
+    phase: 'Days 75 to 90',
+    title: 'Reviews and first results',
+    desc: 'We start the review routine and send the first full report: work done, calls, forms and ranking moves.',
+    deliverables: ['Review request routine', 'First 90-day report'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Google Business Profile Optimization',
-    factoryjet: 'Deep Entity Engineering. Complete category optimization, weekly geotagged updates, structured Q&A seed libraries, and automated review velocity workflows.',
-    traditional: 'Basic Setup Only. Simple address verification without category testing, geo-grid monitoring, or spam defense against competitors.',
+    label: 'Business Name',
+    factoryjet: 'No. Keyword stuffing breaks Google\'s profile rules and can get the profile suspended.',
+    traditional: 'Ask: "Will you add keywords to our business name on Google?"',
   },
   {
-    label: 'Local Schema & Structured Data',
-    factoryjet: 'Enterprise JSON-LD Graph. Complete LocalBusiness, ServiceArea, GeoCoordinates, and aggregateRating markup embedded directly in server-rendered code.',
-    traditional: 'Generic Plugin Schema. Basic auto-generated Yoast schema lacking exact coordinates, service radius polygons, or verified entity connections.',
+    label: 'City Coverage',
+    factoryjet: 'Pages only for DFW cities where you take work, each with local jobs.',
+    traditional: 'Ask: "Which DFW cities will you target, and how?"',
   },
   {
-    label: 'Reporting & Attribution',
-    factoryjet: 'Real Business Metrics. Track verified phone calls, form fills, Map Pack direction requests, and geo-grid ranking improvements over time.',
-    traditional: 'Vague Vanity Reports. PDF reports highlighting total impressions or vanity keyword rankings that do not correlate with inbound revenue.',
+    label: 'Review Rules',
+    factoryjet: 'We ask every customer the same way. Google forbids rewards for reviews and asking only happy customers.',
+    traditional: 'Ask: "How will you get us reviews, and is it within Google\'s rules?"',
   },
   {
-    label: 'Spam Defense & Listing Security',
-    factoryjet: 'Active Map Defense. Regular audits of competitor keyword stuffing and reporting of fake listings that artificially crowd the Dallas Map Pack.',
-    traditional: 'Passive Monitoring. Zero intervention against fraudulent competitor tactics that displace your legitimate business from top map rankings.',
+    label: 'Guarantees',
+    factoryjet: 'None. Google\'s advice is to walk away from anyone who guarantees first place.',
+    traditional: 'Ask: "Do you guarantee a top three map ranking?"',
+  },
+  {
+    label: 'Ownership',
+    factoryjet: 'Your profile, analytics and site stay in your accounts. No long-term contract.',
+    traditional: 'Ask: "What do we keep if we leave?"',
   },
 ];
 
@@ -233,123 +238,78 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS = [
   {
     category: 'local-seo',
-    question: 'What is the difference between local SEO and traditional organic SEO in Dallas?',
-    answer:
-      'Traditional SEO focuses on nationwide or regional keyword rankings in standard blue search links. Local SEO focuses on capturing geographically constrained searches (such as "commercial roofer Dallas" or "dentist near me") by optimizing for the Google Map Pack 3-pack and localized organic results. Local SEO relies heavily on Google Business Profile health, citation consistency across directories, local reviews, and geo-targeted schema.',
+    question: 'How much should I expect to pay for SEO in Dallas?',
+    answer: 'Ahrefs surveyed 439 SEO providers and found general SEO averaged $2,917 a month, with local SEO lower at $1,557. Dallas prices spread widely around those figures because the city is crowded in law, roofing and healthcare. FactoryJet quotes a fixed price in writing after a short scoping call, so you see the number before work starts.',
   },
   {
-    category: 'timeline',
-    question: 'How long does it take to rank in the Dallas Google Map Pack?',
-    answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
+    category: 'local-seo',
+    question: 'Is SEO still relevant in 2026?',
+    answer: 'Yes. When we searched "dallas seo" on 21 Oct 2026, Google showed a map pack, ten organic results and a People Also Ask box, with no AI Overview. AI assistants that answer "which Dallas firm should I hire" build their answers from the same websites, profiles and reviews. The work serves both.',
+  },
+  {
+    category: 'local-seo',
+    question: 'Do you work with Dallas enterprise and B2B companies?',
+    answer: 'Yes. Enterprise and B2B SEO in Dallas is less about the map and more about large sites: thousands of pages, several locations, many people editing. The work is technical health, clear page structure and content for each buying question. Success is measured in qualified pipeline, not phone calls.',
   },
   {
     category: 'map-pack',
-    question: 'Why does our Dallas business rank on maps near our office but disappear 3 miles away?',
-    answer:
-      'Google weighs proximity heavily in map rankings. Without deep localized entity signals, your ranking radius remains tightly clustered around your physical address. We expand your ranking radius across the entire DFW metro area by building neighborhood-specific service pages, earning location-specific backlinks, and optimizing localized service area schema.',
+    question: 'Do businesses named "Dallas [service]" rank better?',
+    answer: 'A name that matches the search can help. In our 21 Oct 2026 check, a firm with "Dallas SEO" in its name held the first map spot plus two organic spots through its LinkedIn and Facebook pages. Do not rename your profile to copy that. Google\'s rules require your real-world name, and stuffed names get suspended.',
+  },
+  {
+    category: 'map-pack',
+    question: 'How do I show up in the map pack in McKinney, Denton or Irving?',
+    answer: 'Each DFW city has its own map results, and Google weighs the distance between the searcher and your business. A Dallas address rarely wins the McKinney map. If you have a real location in that city, give it its own verified profile. If not, a city page with jobs and reviews from there can still rank in the regular results.',
+  },
+  {
+    category: 'map-pack',
+    question: 'Which Google Business Profile category should a Dallas business choose?',
+    answer: 'Pick the primary category that names your main service as narrowly as Google allows, such as "Personal injury attorney" rather than "Lawyer". Add secondary categories only for services you offer. Look at the categories of the three firms in your map pack for ideas, but do not copy one that does not fit.',
+  },
+  {
+    category: 'citations',
+    question: 'Which citations matter for a Dallas business?',
+    answer: 'Start with Apple Maps, Bing Places, Yelp and Facebook. Add the directories for your trade: Avvo and Justia for lawyers, Thomasnet for manufacturers, and the review sites your customers use. If you are a member of the Dallas Regional Chamber or a local trade group, complete that listing too. Accuracy matters more than count.',
+  },
+  {
+    category: 'citations',
+    question: 'What is a sitemap audit, and does my Dallas site need one?',
+    answer: 'A sitemap is the file that lists your pages for Google. An audit checks that it holds only live pages you want indexed, with no redirects, errors or duplicates. After a redesign, old sitemaps often list dead addresses. Search Console\'s sitemap report shows problems for free, so look there first.',
   },
   {
     category: 'dallas',
-    question: 'How do you handle local SEO for businesses with multiple DFW locations?',
-    answer:
-      'We establish dedicated, verified Google Business Profiles for each physical location, ensuring zero phone number or address cross-contamination. On your website, we engineer unique location landing pages with bespoke content, distinct LocalBusiness schema, and individualized driving directions, eliminating internal keyword cannibalization.',
-  },
-  {
-    category: 'citations',
-    question: 'What is NAP consistency and why is it crucial for Dallas search rankings?',
-    answer:
-      'NAP stands for Name, Address, and Phone number. Search engines compare your business data across hundreds of directories like Google, Apple Maps, Bing, Yelp, and Data Axle. If variations in spelling, suite numbers, or phone numbers exist, search engines lose confidence in your location data and suppress your map rankings. We audit your citations and correct the ones that do not match.',
-  },
-  {
-    category: 'reviews',
-    question: 'Can you help our business remove fake 1-star reviews or competitor spam?',
-    answer:
-      'We systematically flag and appeal reviews that violate Google’s Prohibited and Restricted Content policies (such as hate speech, conflict of interest, or fake spam accounts). For legitimate negative feedback, we provide professional response frameworks and set up review requests to every customer, so the profile reflects all of your customers.',
-  },
-  {
-    category: 'local-seo',
-    question: 'How do you structure local schema markup for Dallas service area businesses?',
-    answer:
-      'We inject custom server-rendered JSON-LD schema defining your exact primary service categories, GeoShape service radius polygons covering DFW counties (Dallas, Tarrant, Collin, Denton), verified licensing credentials, and explicit opening hours. This ensures Google and AI crawlers understand your exact operating footprint.',
-  },
-  {
-    category: 'citations',
-    question: 'Do you optimize Apple Maps and Apple Business Connect alongside Google?',
-    answer:
-      'Yes. Millions of Dallas iPhone users and CarPlay drivers utilize Apple Maps for local searches. We claim, optimize, and synchronize your Apple Business Connect profile with custom action buttons, verified hours, and high-resolution brand photography.',
-  },
-  {
-    category: 'local-seo',
-    question: 'How does local SEO help our business appear in AI search answers like ChatGPT and Perplexity?',
-    answer:
-      'AI search engines synthesize local recommendations using structured web data, verified citation sources, and Google Business Profile information. We keep your NAP details consistent, add FAQ schema and build local business citations, so AI models have accurate information about your company when they answer local queries.',
-  },
-  {
-    category: 'map-pack',
-    question: 'How do you combat competitors who stuff keywords into their Google Business Profile name?',
-    answer:
-      'Keyword stuffing in business names violates Google Business Profile guidelines. We perform regular local grid scans and submit Redressal Complaints with state licensing documentation to remove unauthorized keywords from competitor listings, restoring fair 3-Pack rankings.',
-  },
-  {
-    category: 'timeline',
-    question: 'What metrics do you track to measure the ROI of our Dallas local SEO campaign?',
-    answer:
-      'We track concrete commercial indicators: total verified phone calls from map listings, direction requests, website visits from local search, click-to-call mobile conversions, and geo-grid 3-Pack ranking expansions across target Dallas ZIP codes.',
-  },
-  {
-    category: 'map-pack',
-    question: 'Can a service-area business without a public storefront rank in the Dallas Map Pack?',
-    answer:
-      'Yes. You can configure your Google Business Profile as a Service-Area Business (SAB) with a hidden residential address. We optimize your designated service radius and pair it with strong suburban landing pages to be visible in the map pack without displaying your home address.',
-  },
-  {
-    category: 'citations',
-    question: 'Why are local backlinks from Dallas websites more valuable than generic links?',
-    answer:
-      'Search engines evaluate local relevance when ranking Map Pack listings. A link from a Dallas Chamber of Commerce, local business association, or regional news publication passes strong geographic trust signals that generic national links cannot replicate.',
-  },
-  {
-    category: 'reviews',
-    question: 'How often should our Dallas business post updates or photos to our Google Profile?',
-    answer:
-      'We recommend at least one high-quality update and 2 to 4 geotagged project photos weekly. Consistent profile activity signals an active, trustworthy business, which positively influences Google’s local ranking algorithm.',
+    question: 'Should a Dallas business have Spanish-language pages?',
+    answer: 'If many of your customers search in Spanish, yes. Each Spanish page should be a real translation written for those customers, linked from its English version, with tags that tell Google which language each page is in. A Spanish page that only runs English text through a translator rarely ranks or converts.',
   },
   {
     category: 'dallas',
-    question: 'What is the role of neighborhood landing pages in our Dallas SEO strategy?',
-    answer:
-      'Neighborhood pages allow your website to target specific commercial micro-markets (such as Plano, Frisco, or Fort Worth) with hyper-relevant content, local testimonials, and tailored schema without diluting your primary homepage focus.',
+    question: 'How does SEO work for Plano and Dallas law firms?',
+    answer: 'Give each practice area its own page, name the attorneys and their bar admissions, and answer the questions clients ask before a first call. Legal directories rank well in Dallas, so keep your Avvo, Justia and Martindale profiles current. Check every page and review you publish against the State Bar of Texas advertising rules.',
+  },
+  {
+    category: 'dallas',
+    question: 'Is a Magento store harder to rank than Shopify in Dallas?',
+    answer: 'The platform rarely decides it. Magento\'s layered navigation can create thousands of near-duplicate filter pages, so it needs careful canonical and indexing settings. Shopify limits some URL choices but is simpler to keep clean. Either can rank if product and category pages are well written and fast on phones.',
   },
   {
     category: 'reviews',
-    question: 'How do you handle review generation without violating Google’s anti-gating policies?',
-    answer:
-      'We implement direct SMS and email review request workflows that invite all verified clients to leave honest feedback on Google. We avoid review gating or incentive schemes, ensuring full compliance with Google guidelines and FTC regulations.',
+    question: 'How should I read reviews of Dallas SEO companies?',
+    answer: 'Look for reviews that describe the work: what changed, how fast they replied, what happened to calls. Skip vague five-star lines. Count how many reviews mention the same person. Then check the firm\'s own rankings. When we searched "dallas seo", the three map pack firms had 89, 41 and 69 reviews.',
   },
   {
-    category: 'citations',
-    question: 'What happens if our business moves office locations within DFW?',
-    answer:
-      'We execute a comprehensive address migration protocol: updating your Google Business Profile, submitting state corporate filing verification, synchronizing primary data aggregators, updating website schema, and monitoring citations to prevent duplicate listing penalties.',
-  },
-  {
-    category: 'timeline',
-    question: 'Do you require long-term annual contracts for Dallas local SEO?',
-    answer:
-      'No. We operate on transparent monthly retainers with clear deliverable milestones. Our retention is built on measurable ranking improvements, verified inbound phone calls, and clear revenue growth rather than restrictive contract terms.',
-  },
-  {
-    category: 'local-seo',
-    question: 'Can local SEO help our B2B manufacturing or logistics business in Dallas?',
-    answer:
-      'Yes. Corporate buyers and procurement officers frequently search for local suppliers, fabrication shops, and logistics providers. Local SEO helps your facility appear in commercial map queries and localized B2B industrial searches.',
+    category: 'reviews',
+    question: 'How should a Dallas business ask customers for reviews?',
+    answer: 'Ask every customer the same way, soon after the job, with a direct link to your profile. Google\'s rules forbid paying or rewarding customers for reviews and forbid asking only the happy ones. Reply to every review, including the bad ones, with a short and calm answer.',
   },
   {
     category: 'timeline',
-    question: 'How do we begin our Dallas local SEO campaign with FactoryJet?',
-    answer:
-      'Schedule a discovery consultation or request a complimentary 50-point Dallas Local SEO Audit. We will analyze your current Map Pack visibility, identify citation errors, evaluate your local competitors, and present a plan of what we would fix first.',
+    question: 'How long does SEO take in Dallas?',
+    answer: 'Profile and technical fixes can show within weeks. Busy Dallas terms take many months, because the firms already ranking have years of reviews and links. Suburbs often move faster than the city center. Nobody can promise a date, and Google tells buyers to avoid anyone who guarantees first place.',
+  },
+  {
+    category: 'timeline',
+    question: 'Which free SEO tools can a small Dallas business use?',
+    answer: 'Four cover most needs. Google Business Profile shows calls and searches. Google Search Console shows which searches find your site and which pages have errors. Bing Webmaster Tools does the same for Bing. PageSpeed Insights tests how fast your pages load on phones. Check them monthly.',
   },
 ];
 
@@ -466,7 +426,7 @@ export default function DallasSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Capture high-intent local phone calls, consultation inquiries, and foot traffic across the DFW Metroplex. Precision GBP optimization, NAP citation clean-up, and no long-term contracts.
+                  We fix your Google Business Profile, your listings and your service pages so buyers across Dallas and the DFW suburbs find you and call. No long-term contract.
                 </p>
 
                 {/* Answer-First Brief */}
@@ -557,7 +517,7 @@ export default function DallasSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From Uptown Dallas to Plano, Frisco, and Fort Worth, we help commercial contractors, law firms, healthcare providers, and industrial suppliers get found in local search.
+                  DFW is dozens of separate map markets. A McKinney search and an Irving search return different businesses, so we plan city by city, starting where you already take work.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -649,7 +609,7 @@ export default function DallasSeoPage() {
                 Specialized Local Search Frameworks for Dallas Sectors
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Discover how our localized entity engineering captures high-value inbound calls across core industries:
+                What changes by industry for Dallas businesses:
               </p>
             </div>
 
@@ -710,13 +670,13 @@ export default function DallasSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>The FactoryJet Advantage</span>
+                <span>Dallas Search Check, 21 Oct 2026</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                What FactoryJet Does Differently for Dallas Businesses
+                What Dallas Buyers See When They Search for SEO
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace empty keyword promises with technical entity engineering and measurable ROI:
+                We searched "dallas seo" from a Dallas location. Four findings shape the plan:
               </p>
             </div>
 
@@ -736,11 +696,11 @@ export default function DallasSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Technical Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What it means for you:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -777,7 +737,7 @@ export default function DallasSeoPage() {
                 Our 90-Day Local SEO Work Plan
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                The four stages of work we follow for Google Maps listings and phone inquiries:
+                What happens in the first 90 days:
               </p>
             </div>
 
@@ -841,7 +801,7 @@ export default function DallasSeoPage() {
                 Evaluating Dallas Local SEO Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-first entity optimization against standard directory sellers before you invest:
+                Five questions to ask any Dallas SEO agency, with our answers:
               </p>
             </div>
 
@@ -849,7 +809,7 @@ export default function DallasSeoPage() {
               <div className="rv-eval-head" style={{ background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Pillar</div>
                 <div style={{ color: '#FF5622' }}>FactoryJet Entity Model</div>
-                <div style={{ color: '#A0A0B0' }}>Standard Local SEO Providers</div>
+                <div style={{ color: '#A0A0B0' }}>Questions to ask any agency</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
@@ -870,7 +830,7 @@ export default function DallasSeoPage() {
                   <div data-label="FactoryJet Entity Model" style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
                     {crit.factoryjet}
                   </div>
-                  <div data-label="Standard Local SEO Providers" style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                  <div data-label="Questions to ask any agency" style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
                     {crit.traditional}
                   </div>
                 </div>
@@ -886,7 +846,7 @@ export default function DallasSeoPage() {
         <FAQ
           eyebrow="DALLAS LOCAL SEO INTELLIGENCE"
           headline="Frequently Asked Questions About Local SEO in Dallas TX"
-          lead="Direct, plain English answers to what Dallas business owners ask about Google Map Pack rankings and local search:"
+          lead="What DFW owners ask about cost, suburbs, reviews and choosing an agency, answered plainly:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"

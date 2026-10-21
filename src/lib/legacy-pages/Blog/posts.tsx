@@ -14,7 +14,6 @@ import { post as bestWebDesignAgenciesUkSmbs2026Post } from './posts/best-web-de
 import { post as topWebDesignAgenciesLondonSmbs2026Post } from './posts/top-web-design-agencies-london-smbs-2026';
 import { post as whatDoesWebDesignAgencyDo2026Post } from './posts/what-does-web-design-agency-do-2026';
 import { post as customOnlineStoreDevelopmentUkSmbs2026Post } from './posts/custom-online-store-development-uk-smbs-2026';
-import { post as shopifyStoreDevelopmentUkSmbs2026GuidePost } from './posts/shopify-store-development-uk-smbs-2026-guide';
 import { post as ecommerceDevelopmentUkShopifyWoocommerce2026Post } from './posts/ecommerce-development-uk-shopify-woocommerce-2026';
 import { post as bestWebDesignCompaniesSmallBusinessAustraliaPost } from './posts/best-web-design-companies-small-business-australia';
 import { post as bestEcommerceAgencySmallBusinessAustralia2026Post } from './posts/best-ecommerce-agency-small-business-australia-2026';
@@ -28,7 +27,6 @@ import { post as howToBuildOnlineStoreUkSmbGuide2026Post } from './posts/how-to-
 import { post as topEcommerceDevelopmentAgenciesUk2026Post } from './posts/top-ecommerce-development-agencies-uk-2026';
 import { post as bestAiAutomationToolsSmallBusinessUk2026Post } from './posts/best-ai-automation-tools-small-business-uk-2026';
 import { post as aiAgentsBusinessOperationsUkSmbs2026Post } from './posts/ai-agents-business-operations-uk-smbs-2026';
-import { post as aiAutomationServicesSmallBusinessUk2026Post } from './posts/ai-automation-services-small-business-uk-2026';
 import { post as aiSeoAgencyUkGeoAeoOrganicGrowthPost } from './posts/ai-seo-agency-uk-geo-aeo-organic-growth';
 import { post as bestSeoAgencyUkSmallBusiness2026Post } from './posts/best-seo-agency-uk-small-business-2026';
 import { post as salesAutomationAiUkSmbsWorkflowsPost } from './posts/sales-automation-ai-uk-smbs-workflows';
@@ -48,13 +46,9 @@ import { post as howMuchDoesWebsiteCostSmallBusinessUsa2026Post } from './posts/
 import { post as websiteDevelopmentCostIndia2026Post } from './posts/website-development-cost-india-2026';
 import { post as shopifyVsWoocommerceUsSmallBusiness2026Post } from './posts/shopify-vs-woocommerce-us-small-business-2026';
 import { post as aiChatbotsVsAiAgentsBusinessPost } from './posts/ai-chatbots-vs-ai-agents-business';
-import { post as bestEcommercePlatformTampaBoutiquesDtc2026Post } from './posts/best-ecommerce-platform-tampa-boutiques-dtc-2026';
 import { post as customWebDevelopmentVsWordpressUsSmallBusiness2026Post } from './posts/custom-web-development-vs-wordpress-us-small-business-2026';
 import { post as boiseShopifyDevelopmentGuideIdahoSmallBusiness2026Post } from './posts/boise-shopify-development-guide-idaho-small-business-2026';
-import { post as nycB2bCorporateWebDesignGuide2026Post } from './posts/nyc-b2b-corporate-web-design-guide-2026';
 import { post as austinEcommerceCheckoutOptimization2026Post } from './posts/austin-ecommerce-checkout-optimization-2026';
-import { post as raleighShopifyTrainingSupportTriangleNc2026Post } from './posts/raleigh-shopify-training-support-triangle-nc-2026';
-import { post as customShopifyThemeDevelopmentUsBrands2026Post } from './posts/custom-shopify-theme-development-us-brands-2026';
 import { post as webflowVsWordpressUsSmallBusiness2026Post } from './posts/webflow-vs-wordpress-us-small-business-2026';
 import { post as seoCostSmallBusiness2026Post } from './posts/seo-cost-small-business-2026';
 import { post as howToGetChatgptToRecommendYourBusiness2026Post } from './posts/how-to-get-chatgpt-to-recommend-your-business-2026';
@@ -2208,172 +2202,6 @@ export const POSTS: BlogPost[] = [
   )
 },
 
-{
-  id: '12',
-  slug: 'importance-of-website-maintenance-seo',
-  title: "Why Set It and Forget It Slowly Kills SEO Rankings",
-  excerpt: "Websites that are not maintained quietly lose visibility over time. This guide explains why ongoing updates are essential for search rankings and long term traffic.",
-  category: 'Maintenance & Security',
-  author: 'Bhavesh Barot',
-  date: 'Sep 28, 2024',
-  readTime: '6 min read',
-  imageUrl: '/blog-images/importance-of-website-maintenance-seo.webp',
-  keyTakeaways: [
-    "Regular content updates signal relevance and activity to search engines.",
-    "Broken links and outdated pages slowly reduce domain trust.",
-    "Unmaintained code creates errors that block search crawlers.",
-    "Ongoing speed improvements help maintain strong Core Web Vitals.",
-    "Website maintenance is a ranking factor through cumulative signals."
-  ],
-  faqs: [
-    { q: "What does website maintenance mean?", a: "It includes updating content, fixing errors, improving speed, and keeping systems secure." },
-    { q: "Why does Google care about maintenance?", a: "Google prefers sites that remain accurate, fast, and reliable for users." },
-    { q: "What is link rot?", a: "Links pointing to pages that no longer exist or return errors." },
-    { q: "Do broken links really affect SEO?", a: "Yes. They reduce crawl efficiency and user trust." },
-    { q: "Does updating old content help rankings?", a: "Yes. Refreshing content often improves relevance and visibility." },
-    { q: "What is historical optimization?", a: "Improving existing pages instead of only creating new ones." },
-    { q: "How often should content be updated?", a: "Important pages should be reviewed at least every few months." },
-    { q: "Does Google crawl inactive sites less?", a: "Yes. Sites with no updates are crawled less frequently." },
-    { q: "What happens if Google stops crawling?", a: "New changes may not be indexed and rankings may decline." },
-    { q: "Do comments affect SEO?", a: "Real engagement helps. Spam comments hurt credibility." },
-    { q: "Should spam comments be removed?", a: "Yes. They reduce quality signals." },
-    { q: "What is an XML sitemap?", a: "A file that helps search engines discover and index pages." },
-    { q: "Does sitemap need updates?", a: "Yes. It should reflect current site structure." },
-    { q: "Can outdated plugins hurt SEO?", a: "Yes. They can cause errors and slowdowns." },
-    { q: "What is code deprecation?", a: "When older code becomes unsupported or inefficient." },
-    { q: "Does site speed decline over time?", a: "Yes. New scripts and content often increase load without optimization." },
-    { q: "Why do Core Web Vitals change?", a: "User behavior and browser updates affect performance metrics." },
-    { q: "Is mobile performance part of maintenance?", a: "Yes. Mobile usability must be reviewed regularly." },
-    { q: "Do security issues affect SEO?", a: "Yes. Hacked sites can be penalized or removed from results." },
-    { q: "How does downtime affect rankings?", a: "Frequent downtime reduces crawl reliability." },
-    { q: "Can old content still rank?", a: "Yes, but only if it remains accurate and updated." },
-    { q: "Does deleting old pages help?", a: "Sometimes. Low quality pages can dilute overall site quality." },
-    { q: "Should redirects be checked regularly?", a: "Yes. Broken redirects harm crawl flow." },
-    { q: "Is SEO maintenance ongoing work?", a: "Yes. Rankings are maintained, not set once." },
-    { q: "What is the biggest maintenance mistake?", a: "Assuming SEO work ends after launch." }
-  ],
-  content: (
-    <>
-      <p>
-        A website is similar to a machine that runs every day. When it is maintained, it performs smoothly. When it is ignored, small problems build up until performance suffers. Many businesses treat websites as one time projects, but search engines do not see them that way.
-      </p>
-
-      <p>
-        Google evaluates websites continuously. It looks for freshness, accuracy, performance, and reliability. A site that remains unchanged for years sends a clear signal that it may no longer be relevant.
-      </p>
-
-      <p>
-        This decline does not happen overnight. Rankings slowly slip, traffic reduces, and leads dry up. By the time businesses notice, recovery becomes difficult.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Why Search Engines Prefer Active Websites</h2>
-
-      <p>
-        Search engines aim to deliver the best possible results to users. This includes showing content that is current and trustworthy.
-      </p>
-
-      <p>
-        When a website shows regular updates, Google assumes that the information is more likely to be accurate. This increases confidence in ranking the site.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Content Decay Is Real</h2>
-
-      <p>
-        Even well written content becomes outdated over time. Statistics change. Tools evolve. User expectations shift.
-      </p>
-
-      <p>
-        Pages that once ranked well may lose relevance simply because newer and updated content appears elsewhere.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Broken Links and Crawl Issues</h2>
-
-      <p>
-        As websites grow, links break. External references disappear. Internal URLs change.
-      </p>
-
-      <p>
-        Broken links waste crawl budget and create poor user experience. Over time, this reduces trust signals.
-      </p>
-
-      <NativeAd />
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Code and Technical Debt</h2>
-
-      <p>
-        Web technology evolves quickly. Code that worked years ago may become inefficient or unsupported.
-      </p>
-
-      <p>
-        Deprecated code can cause errors that block crawlers from accessing pages properly.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Speed Declines Without Maintenance</h2>
-
-      <p>
-        Websites tend to slow down over time. New images, scripts, and tracking tools increase load.
-      </p>
-
-      <p>
-        Regular optimization keeps performance metrics stable and competitive.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Core Web Vitals Are Not Static</h2>
-
-      <p>
-        Core Web Vitals measure real user experience. As user devices and browsers change, so do these metrics.
-      </p>
-
-      <p>
-        A site that was fast two years ago may not meet current standards.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Security and Trust Signals</h2>
-
-      <p>
-        Unmaintained sites are more vulnerable to attacks. Malware and spam damage credibility instantly.
-      </p>
-
-      <p>
-        Search engines warn users about unsafe sites, which leads to traffic loss.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Maintenance as an SEO Strategy</h2>
-
-      <p>
-        Maintenance is not separate from SEO. It supports every ranking factor indirectly.
-      </p>
-
-      <p>
-        Updating content, fixing issues, and improving performance compound over time.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Why Set It and Forget It Fails</h2>
-
-      <p>
-        Websites that are launched and ignored fall behind competitors who continue improving.
-      </p>
-
-      <p>
-        Search rankings reward consistency and effort.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Long Term Visibility Requires Care</h2>
-
-      <p>
-        SEO is not a one time task. It is an ongoing process that reflects how seriously a business treats its online presence.
-      </p>
-
-      <p>
-        Maintaining a website protects the investment made during development and ensures steady growth instead of gradual decline.
-      </p>
-
-      <p>
-        If you would rather hand this off, see our <a href="/services/website-maintenance" className="text-[#B23E13] underline">website maintenance services</a>.
-      </p>
-    </>
-  )
-},
 
 {
   id: '13',
@@ -4868,7 +4696,6 @@ export const POSTS: BlogPost[] = [
   topWebDesignAgenciesLondonSmbs2026Post,
   whatDoesWebDesignAgencyDo2026Post,
   customOnlineStoreDevelopmentUkSmbs2026Post,
-  shopifyStoreDevelopmentUkSmbs2026GuidePost,
   ecommerceDevelopmentUkShopifyWoocommerce2026Post,
   bestWebDesignCompaniesSmallBusinessAustraliaPost,
   bestEcommerceAgencySmallBusinessAustralia2026Post,
@@ -4882,7 +4709,6 @@ export const POSTS: BlogPost[] = [
   topEcommerceDevelopmentAgenciesUk2026Post,
   bestAiAutomationToolsSmallBusinessUk2026Post,
   aiAgentsBusinessOperationsUkSmbs2026Post,
-  aiAutomationServicesSmallBusinessUk2026Post,
   aiSeoAgencyUkGeoAeoOrganicGrowthPost,
   bestSeoAgencyUkSmallBusiness2026Post,
   salesAutomationAiUkSmbsWorkflowsPost,
@@ -4902,13 +4728,9 @@ export const POSTS: BlogPost[] = [
   websiteDevelopmentCostIndia2026Post,
   shopifyVsWoocommerceUsSmallBusiness2026Post,
   aiChatbotsVsAiAgentsBusinessPost,
-  bestEcommercePlatformTampaBoutiquesDtc2026Post,
   customWebDevelopmentVsWordpressUsSmallBusiness2026Post,
   boiseShopifyDevelopmentGuideIdahoSmallBusiness2026Post,
-  nycB2bCorporateWebDesignGuide2026Post,
   austinEcommerceCheckoutOptimization2026Post,
-  raleighShopifyTrainingSupportTriangleNc2026Post,
-  customShopifyThemeDevelopmentUsBrands2026Post,
   webflowVsWordpressUsSmallBusiness2026Post,
   seoCostSmallBusiness2026Post,
   howToGetChatgptToRecommendYourBusiness2026Post,

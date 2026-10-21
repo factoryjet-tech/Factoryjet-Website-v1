@@ -453,7 +453,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  dateModified: '2026-08-04',
+  dateModified: '2026-10-21',
   '@id': `${PAGE_URL}#webpage`,
   url: PAGE_URL,
   name: 'SEO Consulting Services in the US: Audits, Strategy & Roadmaps',
@@ -1130,7 +1130,11 @@ export default function SeoConsultingPage() {
                   <Link href="/services/small-business-seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
                     small business SEO
                   </Link>{' '}
-                  is scoped for you.
+                  is scoped for you. If you are still comparing consultants, our{' '}
+                  <Link href="/blog/best-seo-consulting-companies-usa" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
+                    best SEO consulting companies in the USA
+                  </Link>{' '}
+                  list sets the options side by side.
                 </p>
               </div>
             </div>

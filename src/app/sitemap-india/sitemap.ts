@@ -39,8 +39,7 @@ const INDIA_WEB_DESIGN_CITIES = [
   'kolkata',
   'madurai',
   'mumbai',
-  'nagpur',
-  'noida',
+  // nagpur, noida merged into /web-design (301) on 2026-10-21.
   'pune',
   'rajkot',
   'surat',
@@ -185,7 +184,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // ── India digital-marketing city pages ───────────────────────────────────────
-  const dmCities: MetadataRoute.Sitemap = ['mumbai', 'bangalore', 'delhi', 'pune', 'hyderabad', 'noida', 'ahmedabad', 'chennai', 'kolkata', 'surat', 'indore', 'chandigarh', 'lucknow', 'jaipur'].map((city) => ({
+  // surat, indore, chandigarh merged into /digital-marketing (301) on 2026-10-21.
+  const dmCities: MetadataRoute.Sitemap = ['mumbai', 'bangalore', 'delhi', 'pune', 'hyderabad', 'noida', 'ahmedabad', 'chennai', 'kolkata', 'lucknow', 'jaipur'].map((city) => ({
     url: `${SITE_URL}/digital-marketing/${city}`,
     lastModified: getFileLastMod(`src/app/digital-marketing/${city}/page.tsx`),
     changeFrequency: CHANGEFREQ.city as ChangeFreq,

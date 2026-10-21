@@ -10,6 +10,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Jul 11, 2026',
+  dateModified: 'Oct 21, 2026',
   readTime: '10 min read',
   imageUrl: '/blog-images/how-to-sell-on-tiktok-shop-2026.webp',
   imageAlt: 'A smartphone mounted on a tripod filming a product, set up to sell on TikTok Shop',
@@ -162,7 +163,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
-        Two honest caveats. First, TikTok has raised the referral fee more than once since launch, so treat any published number as a snapshot and confirm your live rate inside Seller Center. Second, TikTok frequently runs reduced-fee windows for brand-new shops, which is a real reason to start sooner rather than later. Even at 8%, the commission is meaningfully lower than the all-in cut most sellers pay on a search-driven marketplace, which is part of the appeal.
+        Two honest caveats. First, TikTok has raised the referral fee more than once since launch, so treat any published number as a snapshot and confirm your live rate inside Seller Center. Second, TikTok frequently runs reduced-fee windows for brand-new shops, which is a real reason to start sooner rather than later. Even at 8%, the commission is meaningfully lower than the all-in cut most sellers pay on a search-driven marketplace, which is part of the appeal. For the full fee breakdown, plus what a TikTok Shop agency charges, read our <a href="/blog/tiktok-shop-fees-and-agency-cost-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">TikTok Shop fees and agency cost guide</a>.
       </p>
 
       <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8 not-prose">

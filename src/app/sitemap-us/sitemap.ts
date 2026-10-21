@@ -22,6 +22,10 @@ type ChangeFreq = MetadataRoute.Sitemap[number]['changeFrequency']
 // mirroring sitemap-uk.
 // A URL belongs to exactly one sitemap. The homepage, /about, /portfolio and
 // /pricing live in sitemap-pages; /blog lives in sitemap-blog (deduped 2026-09-30).
+// 2026-10-21 index quality audit: 6 thin city pages were merged by 301
+// (chattanooga, lincoln /seo; chattanooga, fargo, miami, sioux-falls
+// /ecommerce-development) and 24 city pages were set to noindex,follow. Neither
+// group is listed here. See docs/reports/2026-10-21-index-quality-audit.md.
 const US_ROUTES: { path: string; source: string }[] = [
   { path: '/b2b-ecommerce',                                source: 'src/app/b2b-ecommerce/page.tsx' },
   { path: '/ecommerce-for-manufacturers',                  source: 'src/app/ecommerce-for-manufacturers/page.tsx' },
@@ -139,11 +143,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/ecommerce-app-development',            source: 'src/app/services/ecommerce-app-development/page.tsx' },
   // 2026-08-12 US build: 12 new major-metro city pages. Targets verified live on DataForSEO,
   // see pipeline/research/data/us4_city_demand.csv and pipeline/research/briefs/.
-  { path: '/dallas/web-design',                             source: 'src/app/dallas/web-design/page.tsx' },
-  { path: '/chicago/web-design',                            source: 'src/app/chicago/web-design/page.tsx' },
   { path: '/phoenix/web-design',                            source: 'src/app/phoenix/web-design/page.tsx' },
-  { path: '/san-diego/web-design',                          source: 'src/app/san-diego/web-design/page.tsx' },
-  { path: '/detroit/web-design',                            source: 'src/app/detroit/web-design/page.tsx' },
   { path: '/dallas/seo',                                    source: 'src/app/dallas/seo/page.tsx' },
   { path: '/chicago/seo',                                   source: 'src/app/chicago/seo/page.tsx' },
   { path: '/phoenix/seo',                                   source: 'src/app/phoenix/seo/page.tsx' },
@@ -153,14 +153,9 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/los-angeles/seo',                               source: 'src/app/los-angeles/seo/page.tsx' },
   // Four deliberate head-on high-KD city targets (Atlanta 75, Seattle 79, St Louis 72, Houston 50).
   // Not expected to rank quickly; published to compound as domain authority grows.
-  { path: '/atlanta/web-design',                            source: 'src/app/atlanta/web-design/page.tsx' },
-  { path: '/seattle/web-design',                            source: 'src/app/seattle/web-design/page.tsx' },
-  { path: '/houston/web-design',                            source: 'src/app/houston/web-design/page.tsx' },
   { path: '/st-louis/web-design',                           source: 'src/app/st-louis/web-design/page.tsx' },
   { path: '/boise/seo', source: 'src/app/boise/seo/page.tsx' },
-  { path: '/chattanooga/seo', source: 'src/app/chattanooga/seo/page.tsx' },
   { path: '/fargo/seo', source: 'src/app/fargo/seo/page.tsx' },
-  { path: '/lincoln/seo', source: 'src/app/lincoln/seo/page.tsx' },
   { path: '/sioux-falls/seo', source: 'src/app/sioux-falls/seo/page.tsx' },
   { path: '/tampa/seo',                                     source: 'src/app/tampa/seo/page.tsx' },
   { path: '/charlotte/seo',                                 source: 'src/app/charlotte/seo/page.tsx' },
@@ -180,14 +175,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   // listed here were added (each verified 200 on production, not a redirect).
   { path: '/atlanta/seo',                                   source: 'src/app/atlanta/seo/page.tsx' },
   { path: '/kansas-city/seo',                               source: 'src/app/kansas-city/seo/page.tsx' },
-  { path: '/kansas-city/web-design',                        source: 'src/app/kansas-city/web-design/page.tsx' },
-  { path: '/miami/seo',                                     source: 'src/app/miami/seo/page.tsx' },
-  { path: '/minneapolis/seo',                               source: 'src/app/minneapolis/seo/page.tsx' },
-  { path: '/minneapolis/web-design',                        source: 'src/app/minneapolis/web-design/page.tsx' },
   { path: '/minneapolis/ecommerce-development',             source: 'src/app/minneapolis/ecommerce-development/page.tsx' },
-  { path: '/salt-lake-city/seo',                            source: 'src/app/salt-lake-city/seo/page.tsx' },
-  { path: '/salt-lake-city/web-design',                     source: 'src/app/salt-lake-city/web-design/page.tsx' },
-  { path: '/salt-lake-city/ecommerce-development',          source: 'src/app/salt-lake-city/ecommerce-development/page.tsx' },
   { path: '/services/shopify-theme-development',            source: 'src/app/services/shopify-theme-development/page.tsx' },
   { path: '/services/ecommerce-development',               source: 'src/app/services/ecommerce-development/page.tsx' },
   { path: '/services/ecommerce-growth-agency',             source: 'src/app/services/ecommerce-growth-agency/page.tsx' },
@@ -221,26 +209,12 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/comparisons/headless-commerce-vs-monolithic',  source: 'src/app/comparisons/headless-commerce-vs-monolithic/page.tsx' },
   { path: '/replatforming/bigcommerce-to-shopify-plus',    source: 'src/app/replatforming/bigcommerce-to-shopify-plus/page.tsx' },
   { path: '/replatforming/netsuite-suitecommerce-to-shopify-plus', source: 'src/app/replatforming/netsuite-suitecommerce-to-shopify-plus/page.tsx' },
-  { path: '/san-francisco/ecommerce-development',          source: 'src/app/san-francisco/ecommerce-development/page.tsx' },
-  { path: '/dallas/ecommerce-development',                 source: 'src/app/dallas/ecommerce-development/page.tsx' },
-  { path: '/atlanta/ecommerce-development',                source: 'src/app/atlanta/ecommerce-development/page.tsx' },
   { path: '/austin/ecommerce-development',        source: 'src/app/austin/ecommerce-development/page.tsx' },
   { path: '/boise/ecommerce-development',         source: 'src/app/boise/ecommerce-development/page.tsx' },
-  { path: '/chicago/ecommerce-development',       source: 'src/app/chicago/ecommerce-development/page.tsx' },
   { path: '/charlotte/ecommerce-development',     source: 'src/app/charlotte/ecommerce-development/page.tsx' },
-  { path: '/chattanooga/ecommerce-development',   source: 'src/app/chattanooga/ecommerce-development/page.tsx' },
   { path: '/denver/ecommerce-development',        source: 'src/app/denver/ecommerce-development/page.tsx' },
-  { path: '/fargo/ecommerce-development',         source: 'src/app/fargo/ecommerce-development/page.tsx' },
-  { path: '/lincoln/ecommerce-development',       source: 'src/app/lincoln/ecommerce-development/page.tsx' },
-  { path: '/los-angeles/ecommerce-development',   source: 'src/app/los-angeles/ecommerce-development/page.tsx' },
-  { path: '/miami/ecommerce-development',         source: 'src/app/miami/ecommerce-development/page.tsx' },
   { path: '/nashville/ecommerce-development',     source: 'src/app/nashville/ecommerce-development/page.tsx' },
-  { path: '/new-york/ecommerce-development',      source: 'src/app/new-york/ecommerce-development/page.tsx' },
-  { path: '/portland/ecommerce-development',      source: 'src/app/portland/ecommerce-development/page.tsx' },
   { path: '/raleigh/ecommerce-development',       source: 'src/app/raleigh/ecommerce-development/page.tsx' },
-  { path: '/seattle/ecommerce-development',       source: 'src/app/seattle/ecommerce-development/page.tsx' },
-  { path: '/sioux-falls/ecommerce-development',   source: 'src/app/sioux-falls/ecommerce-development/page.tsx' },
-  { path: '/tampa/ecommerce-development',         source: 'src/app/tampa/ecommerce-development/page.tsx' },
   // ── 2026-09-01 Lead Gen & Revenue Expansion ────────────────────────────────
   { path: '/tools/ai-agent-roi-calculator',                 source: 'src/app/tools/ai-agent-roi-calculator/page.tsx' },
   { path: '/tools/replatforming-cost-calculator',          source: 'src/app/tools/replatforming-cost-calculator/page.tsx' },

@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/cleveland/seo';
 
 export const metadata: Metadata = {
@@ -49,10 +49,30 @@ const SEO_TOOLS = [
 ];
 
 const STAT_CARDS = [
-  { num: 'Maps', title: 'Business Profile Review', desc: 'Review the categories, services, and business details customers see in local search.', icon: '📍' },
-  { num: 'Site', title: 'Technical SEO Review', desc: 'Find crawl, performance, and usability issues that get between a search and an inquiry.', icon: '📈' },
-  { num: '500+', title: 'Businesses Served', desc: 'Businesses FactoryJet has built for, across all services.', icon: '🏢' },
-  { num: 'Monthly', title: 'Month-to-Month Terms', desc: 'Month-to-month terms with direct access to senior technical engineers.', icon: '⚡' },
+  {
+    num: 'Maps',
+    title: 'Business Profile Review',
+    desc: 'Categories and service areas checked against the Cleveland map pack for your own terms.',
+    icon: '📍',
+  },
+  {
+    num: 'Site',
+    title: 'Technical SEO Review',
+    desc: 'Crawl, speed and duplicate-page problems on the pages Northeast Ohio buyers land on.',
+    icon: '📈',
+  },
+  {
+    num: '500+',
+    title: 'Businesses Served',
+    desc: 'Businesses FactoryJet has built for, across all services.',
+    icon: '🏢',
+  },
+  {
+    num: 'Monthly',
+    title: 'Month-to-Month Terms',
+    desc: 'Stop any month. Your profile, analytics and pages stay in your accounts.',
+    icon: '⚡',
+  },
 ];
 
 const DISTRICTS = [
@@ -146,107 +166,87 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Breaking Out of Google Map Pack Invisibility in Northeast Ohio',
-    problem: 'Outdated business listings, duplicate directory citations, and missing review velocity push your profile down into the second and third pages of Google Maps.',
-    solution: 'We execute comprehensive Google Business Profile optimization, primary category audits, geotagged photo feeds, and automated review collection systems.',
+    title: 'One consultant fills three of the top ten spots',
+    problem: 'On 21 Oct 2026 we pulled Google\'s top 10 for "cleveland seo services" from a Cleveland location. A single local consultant held three of the ten spots with three different pages: a blog, an about page and an advice page.',
+    solution: 'Google will rank several pages from one site when each answers a different question. For a Cleveland trade business that means one page per service you sell, so furnace repair and AC installs are not squeezed onto one page.',
   },
   {
     num: '02',
-    title: 'Fixing Slow Legacy Code and Technical Debt That Blocks Search Rankings',
-    problem: 'Sluggish server response times, bloated WordPress plugins, and missing schema markup prevent search engine bots and AI assistants from indexing your pages.',
-    solution: 'We work on page load speed, clean JSON-LD entity schema, and single-hop crawl architecture so search engines and AI assistants can crawl and read your pages.',
+    title: 'The map pack firms had between 4 and 17 reviews',
+    problem: 'The three map results for that search had 15, 4 and 17 Google reviews. That is a low bar compared with other cities we checked the same day, where map pack firms had over 100.',
+    solution: 'Where the top three have fewer than 20 reviews each, a steady habit of asking real customers can move you. We set up a short request routine your staff can send after each finished job.',
   },
   {
     num: '03',
-    title: 'Ending Locked 12-Month Contracts with Zero Transparent Lead Attribution',
-    problem: 'Traditional agencies lock Cleveland businesses into rigid annual retainers while delivering meaningless keyword ranking screenshots instead of qualified leads.',
-    solution: 'FactoryJet operates on flexible month-to-month agreements. We track real phone calls, form completions, and qualified pipeline revenue with custom GA4 events.',
+    title: 'Directories and lists take three more spots',
+    problem: 'Three more results were a LinkedIn services directory, a "top 10 Cleveland SEO companies" list and a company database page. Buyers compare names on those pages before they call anyone.',
+    solution: 'We find the directories and lists that rank for your own service terms in Cuyahoga County, then check that your name, address, phone and categories match your Business Profile.',
   },
   {
     num: '04',
-    title: 'Capturing High-Value Geo-Targeted Commercial Keywords Across Cuyahoga County',
-    problem: 'Relying solely on broad city-level terms causes businesses to miss high-intent searches across Lakewood, Westlake, Beachwood, and Mentor.',
-    solution: 'We build structured local service area landing pages and localized content silos that capture micro-corridor search volume throughout Greater Cleveland.',
+    title: 'Cleveland buyers ask Google whether SEO is paid or free',
+    problem: 'Google\'s People Also Ask box on that search showed who the best SEO agency is, what the 80/20 rule in SEO means, and whether SEO is paid or free.',
+    solution: 'Your customers ask the same kind of cost and trust questions about your trade. We write plain answers into your service pages and FAQ, and generate the FAQ schema from that same text.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Month 1',
-    title: 'Full Technical Audit, Core Web Vitals Fixes & GBP Baseline',
-    desc: 'We conduct a line-by-line audit of your website code, crawl depth, indexing health, server response times, and current Google Business Profile status. We resolve all technical errors, repair broken redirects, clean up duplicate citations, and establish baseline conversion tracking in Google Analytics 4.',
-    deliverables: [
-      'Comprehensive 50-point technical SEO and crawlability audit report',
-      'Core Web Vitals code refactoring targeting sub-second LCP and zero CLS',
-      'Google Business Profile category audit, address verification, and metadata cleanup',
-      'Custom phone call, form submission, and live chat conversion tracking setup',
-    ],
+    title: 'Read-only audit and profile clean-up',
+    desc: 'We start with read-only Search Console access, review your Business Profile and top pages, and fix what stops calls first.',
+    deliverables: ['Ranked fix list with a date beside each item', 'Profile categories set to the services you sell'],
   },
   {
     phase: 'Month 2',
-    title: 'Local Citation Architecture, Review Systems & Entity Schema',
-    desc: 'We rebuild your local citation footprint across essential Tier 1 business directories, mapping your Name, Address, and Phone number with complete consistency. In parallel, we deploy structured JSON-LD LocalBusiness schema and launch automated review generation workflows.',
-    deliverables: [
-      'Cleanup and synchronization across 40+ premier local business directories',
-      'Implementation of exhaustive nested JSON-LD schema markup',
-      'Automated SMS and email review collection system deployment',
-      'Competitive gap analysis against top 3 Cleveland Map Pack leaders',
-    ],
+    title: 'Listings across Cuyahoga County',
+    desc: 'We correct your details on Apple Maps, Bing Places and the Cleveland directories that rank for your terms, and set up call and form tracking.',
+    deliverables: ['Listing corrections logged in a shared sheet', 'Call and form tracking agreed with you'],
   },
   {
     phase: 'Month 3',
-    title: 'Corridor Landing Pages & Cleveland Content Silo Expansion',
-    desc: 'We architect and publish high-converting, answer-first landing pages tailored to specific Cleveland business corridors and surrounding suburbs. Each page is engineered with distinct geographic schema, localized proof points, and targeted commercial copy.',
-    deliverables: [
-      'Launch of dedicated neighborhood service pages for key target areas',
-      'Publishing of detailed service category guides and comparison matrices',
-      'On-page internal linking optimization across core commercial URLs',
-      'First quarterly ranking progress review and pipeline attribution report',
-    ],
+    title: 'Service and suburb pages',
+    desc: 'We write one page per service, then suburb pages only for places you take work, such as Westlake, Parma or Euclid.',
+    deliverables: ['Service pages with real job and review detail', 'Suburb pages that are not name swaps'],
   },
   {
     phase: 'Months 4 to 6',
-    title: 'Authority Link Acquisition, AI Engine Optimization & Scale',
-    desc: 'We build high-quality contextual backlinks from reputable Ohio publications, industry associations, and regional business hubs. We optimize content structure to trigger direct citations across generative AI search platforms including ChatGPT, Perplexity, and Google AI Overviews.',
-    deliverables: [
-      'Targeted local digital PR and editorial backlink acquisition',
-      'Generative Engine Optimization formatting for AI answer citation',
-      'Ongoing Map Pack rank tracking and competitor defense updates',
-      'Monthly executive strategy meetings with senior technical engineers',
-    ],
+    title: 'Reviews, seasonal pages and monthly notes',
+    desc: 'We run the review routine, publish seasonal pages ahead of demand, such as furnace work before winter, and report each month.',
+    deliverables: ['Review request routine in use', 'Monthly note: changes made, calls, forms, rankings'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Contract Flexibility',
-    factoryjet: 'Month-to-month agreements based on performance and trust.',
-    traditional: 'Rigid 6 to 12 month binding contracts with steep cancellation fees.',
+    label: 'Examples First',
+    factoryjet: 'The free audit shows the exact pages and listings we would change, before you sign.',
+    traditional: 'Ask: "Can you show me examples of your previous work?" It is the first question on Google\'s own hiring list.',
   },
   {
-    label: 'Team Seniority',
-    factoryjet: 'Direct access to senior software engineers and technical SEO architects.',
-    traditional: 'Junior account coordinators acting as communication intermediaries.',
+    label: 'Search Essentials',
+    factoryjet: 'Yes. No bought links and no suburb pages that only swap the town name.',
+    traditional: 'Ask: "Do you follow the Google Search Essentials?"',
   },
   {
-    label: 'Technical Implementation',
-    factoryjet: 'We write and deploy clean code directly to your Next.js or CMS repository.',
-    traditional: 'Provides spreadsheets of generic recommendations for your team to code.',
+    label: 'Results and Timeframe',
+    factoryjet: 'A fix list with dates. No ranking promise, because Google tells buyers to avoid anyone who makes one.',
+    traditional: 'Ask: "What results do you expect, and in what timeframe?"',
   },
   {
-    label: 'Lead Attribution',
-    factoryjet: 'Monitors real phone calls, qualified form leads, and closed pipeline value.',
-    traditional: 'Reports on keyword impressions and unverified ranking screenshots.',
+    label: 'Measuring Success',
+    factoryjet: 'Calls, forms and booked jobs first. Rankings second.',
+    traditional: 'Ask: "How do you measure success?"',
   },
   {
-    label: 'Data & Account Ownership',
-    factoryjet: 'You maintain 100% ownership of your accounts, analytics data, and code.',
-    traditional: 'Holds landing pages and tracking accounts hostage inside proprietary tools.',
+    label: 'Cleveland Experience',
+    factoryjet: 'We begin with today\'s Cleveland results for your terms and share them as we found them.',
+    traditional: 'Ask: "What is your experience in my city?"',
   },
   {
-    label: 'AI & Generative Search',
-    factoryjet: 'Builds entity graph schema formatted for ChatGPT, Perplexity, and Google AI.',
-    traditional: 'Relies on outdated 2018 keyword stuffing and doorway page tactics.',
+    label: 'Visible Changes',
+    factoryjet: 'Every monthly note lists the pages and listings we changed.',
+    traditional: 'Ask: "Will you share all the changes you make to my site?"',
   },
 ];
 
@@ -260,129 +260,73 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does SEO cost in Cleveland OH?',
-    answer:
-      'US small businesses typically pay $1,500 to $3,500 a month for SEO, according to WebFX pricing data updated in October 2026. WebFX puts local SEO retainers at $500 to $3,000 a month. What a Cleveland business pays depends on how competitive the sector is, how many locations it has and the condition of the website. FactoryJet quotes a fixed price in writing after a short scoping call and works on month-to-month terms.',
+    question: 'What do Cleveland SEO packages cost?',
+    answer: 'Ahrefs surveyed 439 SEO providers and found local SEO averaged about $1,557 a month. Cleveland packages land on both sides of that. Before comparing prices, compare what each package counts. Some count directory submissions or blog posts. Others count fixes and calls. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Why do you offer month-to-month terms instead of 12-month contracts?',
-    answer:
-      'We believe client retention should be earned through measurable lead generation and ranking improvements rather than legal lock-ins. Month-to-month agreements keep our engineering team accountable to driving real business pipeline every 30 days.',
+    question: 'Is SEO paid or free?',
+    answer: 'Showing up is free. Google does not charge for a Business Profile, a map listing or a place in the regular results. What costs money is the work: fixing your profile, writing service pages, correcting listings and asking for reviews. You can do that yourself, pay staff, or hire a firm. Paid ads are a separate thing.',
   },
   {
     category: 'pricing',
-    question: 'What hidden fees or setup costs should Cleveland businesses watch out for?',
-    answer:
-      'Many traditional agencies bill extra onboarding fees, charge separately for basic Google Business Profile setup, or invoice additional hourly rates for technical code adjustments. With FactoryJet, your monthly rate covers complete technical execution, on-page optimization, content production, citation management, and conversion tracking with zero unexpected surcharges.',
-  },
-  {
-    category: 'pricing',
-    question: 'How do I compare quotes from different Cleveland SEO companies?',
-    answer:
-      'Compare deliverables, team seniority, and account ownership. Verify whether technical code fixes are included or billed extra, whether you will speak directly with an engineer or an account manager, and confirm that you retain 100% ownership of your content, code, and analytics data.',
+    question: 'What is in the free Cleveland SEO audit?',
+    answer: 'We compare your Business Profile, top pages and listings with the businesses that rank for your terms in Cleveland today. We ask for read-only Search Console access, which is what Google advises before you hire anyone. You get a short written list of what to fix first, and you can give it to anyone.',
   },
   {
     category: 'local',
-    question: 'How do we get our Cleveland business into the Google 3-Pack Map results?',
-    answer:
-      'Winning the Google Map Pack requires an accurate primary category selection, complete service menus, consistent Name-Address-Phone (NAP) citations, steady customer review acquisition, and high domain authority from a fast, technically optimized website.',
+    question: 'Who is the best SEO company in Cleveland?',
+    answer: 'There is no single answer, because the right firm depends on your trade and your budget. Judge each one the same way: ask for examples of past work, how they measure success, and what they would change first. Then look them up. A firm that ranks for its own services in Cleveland has at least shown it can do the work.',
   },
   {
     category: 'local',
-    question: 'Can you rank our business in surrounding towns like Lakewood, Beachwood, and Westlake?',
-    answer:
-      'Yes. We architect dedicated geographic service area landing pages and localized schema markup targeting Greater Cleveland suburbs including Lakewood, Beachwood, Westlake, Strongsville, Parma, Solon, and Mentor.',
+    question: 'Can you help my business show up in Fairview Park, North Olmsted or Westlake?',
+    answer: 'Yes, if you serve customers there. Google weighs distance between the searcher and your business, so a shop in Parma will find the Westlake map results hard. Regular results are easier. A page for each West Side suburb you work in, with jobs and reviews from that area, can rank there even when the map pack does not.',
   },
   {
     category: 'local',
-    question: 'How important are Google reviews for Cleveland local rankings?',
-    answer:
-      'Google describes local results in terms of relevance, distance, and prominence. Reviews can help customers evaluate a business and contribute to prominence, but they do not remove the effect of distance. We help you request honest feedback consistently, without incentives or filtering customers by how positively they respond.',
+    question: 'Do I need separate pages for Lakewood, Parma and Euclid?',
+    answer: 'Only for places where you take work, and only if each page says something different. Google\'s spam policies call out doorway pages made to rank for many similar searches. A Lakewood page should mention Lakewood jobs, Lakewood reviews and how you serve it. A copy with the city name swapped can drag the whole site down.',
   },
   {
     category: 'local',
-    question: 'What is the difference between Google Map Pack SEO and organic website SEO?',
-    answer:
-      'Google Map Pack SEO focuses on the localized 3-Pack box displayed at the top of local search results, driven by your Google Business Profile, geographic proximity, citations, and reviews. Organic website SEO focuses on the traditional search listings beneath the map, driven by technical site speed, deep content silos, structured data, and high-authority backlinks. A successful campaign optimizes both layers in unison.',
+    question: 'How many Google reviews does a Cleveland business need?',
+    answer: 'No fixed number. Google says more reviews and positive ratings can help local ranking. In our 21 Oct 2026 check of "cleveland seo services", the three map pack firms had 15, 4 and 17 reviews. Look up your own main search and count what the top three have. That is your real target.',
   },
   {
     category: 'technical',
-    question: 'What is technical SEO and why is it essential for Cleveland businesses?',
-    answer:
-      'Technical SEO optimizes site architecture, mobile responsiveness, server speed, Core Web Vitals, and structured JSON-LD schema markup. Without a strong technical foundation, Google and AI search engines cannot crawl or rank your content effectively.',
+    question: 'What does a technical SEO company in Cleveland actually fix?',
+    answer: 'The problems that stop Google reading your site. Common ones: pages blocked from indexing, slow mobile pages, the same content on two addresses, redirects broken by a redesign, and missing schema. These do not show on screen, so owners rarely notice them. A technical audit lists each one with the page it affects.',
   },
   {
     category: 'technical',
-    question: 'How do you optimize Cleveland websites for Google AI Overviews and ChatGPT search?',
-    answer:
-      'We format content using answer-first prose, authoritative factual data, structured schema entities, and clean semantic HTML. This enables AI search engines like Perplexity, ChatGPT Search, and Google AI Overviews to parse and quote your brand directly.',
+    question: 'How does SEO work for HVAC companies in Cleveland?',
+    answer: 'Demand flips with the season. Furnace and boiler searches climb as Cleveland gets cold, and AC searches climb in summer. Each service needs its own page, published before the season starts. Set your Business Profile category to HVAC contractor, list the suburbs you cover, and ask for reviews that mention the job and the area.',
   },
   {
     category: 'technical',
-    question: 'Why does website loading speed directly impact Google search rankings?',
-    answer:
-      'Page experience and Core Web Vitals are among the signals Google can use, but speed alone does not determine rankings. A faster mobile experience also makes it easier for visitors to read, call, or submit a form. We improve performance because it supports both search visibility and conversion, without promising that one speed score will produce a particular position.',
+    question: 'Is SEO different for Cleveland manufacturers?',
+    answer: 'Yes. Your buyers are engineers and purchasing managers, often outside Ohio, so the map pack matters less. They search by process, material and tolerance. You need a page for each capability, real photos, the certifications you actually hold and a quote form that asks for drawings. That brings in the RFQs.',
   },
   {
     category: 'technical',
-    question: 'What structured data schema do you implement on local Cleveland websites?',
-    answer:
-      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, MedicalClinic, LegalService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
+    question: 'How do I get my Cleveland business named by ChatGPT and AI search?',
+    answer: 'AI tools build answers from what they can find about you. Keep your name, address, phone and services the same everywhere: your site, your Business Profile, Apple Maps, Bing and the directories that rank. Write service pages that answer questions directly. Then ask the tools about your trade in Cleveland and see who they name.',
   },
   {
     category: 'timeline',
-    question: 'How long does it take to see organic ranking improvements in Cleveland?',
-    answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
+    question: 'How long does Cleveland SEO take to show results?',
+    answer: 'Profile and listing fixes can show up within weeks. Ranking for busy terms like "cleveland hvac" usually takes months, and nobody can promise a date. Google\'s advice on hiring an SEO is to walk away from anyone who guarantees first place. Ask instead for a dated list of what will be done.',
   },
   {
     category: 'timeline',
-    question: 'How do you track and report SEO return on investment (ROI)?',
-    answer:
-      'We track real commercial outcomes: phone call leads, form submissions, online appointment bookings, and organic revenue via custom Google Analytics 4 event tracking and Google Search Console data.',
+    question: 'How should I evaluate an SEO company in Cleveland?',
+    answer: 'Use the questions Google itself suggests. Ask for examples of past work. Ask if they follow Google Search Essentials, what results they expect and by when, how they measure success, and what experience they have in your industry and your city. Ask whether they will share every change they make to your site.',
   },
   {
     category: 'timeline',
-    question: 'Will algorithm updates from Google disrupt our search rankings?',
-    answer:
-      'They can. Google core updates move rankings for many sites, and no agency controls them. Our work stays inside Google guidelines. That means clean site architecture, authentic local citations and original content, with no link networks or thin automated copy. After each update we check your rankings and inquiries and tell you what changed.',
-  },
-  {
-    category: 'timeline',
-    question: 'Can SEO replace our paid Google Ads spend in Cleveland?',
-    answer:
-      'It can reduce how much you rely on ads, but it rarely replaces them outright. Google Ads buy visibility for as long as you pay per click. SEO work on your site and listings stays in place after it is done. We report calls and inquiries from organic search each month, so you can decide whether and when to move ad budget.',
-  },
-  {
-    category: 'local',
-    question: 'How do you optimize for healthcare practices competing with Cleveland Clinic and University Hospitals?',
-    answer:
-      'While hospital conglomerates lead on broad hospital terms, independent specialists, cosmetic surgeons, and dental clinics capture lucrative procedural searches (such as concierge cardiology, pediatric dentistry, and med spa aesthetics) through localized Schema.org MedicalBusiness markup, doctor profile authority, and sub-second mobile page speeds.',
-  },
-  {
-    category: 'local',
-    question: 'How do you structure SEO for precision manufacturing and polymer distributors in Northeast Ohio?',
-    answer:
-      'Northeast Ohio is a global center for polymer compounding, metal stamping, and precision tooling. We engineer technical B2B catalog structures, ISO/IATF certification schema markup, and downloadable CAD spec sheet pages that capture high-ticket procurement queries from industrial buyers nationwide.',
-  },
-  {
-    category: 'technical',
-    question: 'How does Google Gemini AI Overview citation indexing work for Cleveland businesses?',
-    answer:
-      'Generative AI search engines extract direct factual entities from structured JSON-LD schemas, verified Ohio Secretary of State business records, and clear question-and-answer content blocks. We format your website content to directly answer user intent and maximize citation frequency in Google AI Overviews and ChatGPT search results.',
-  },
-  {
-    category: 'local',
-    question: 'Can you structure local SEO across Cuyahoga, Lake, and Lorain county service areas?',
-    answer:
-      'Yes. Cleveland businesses often service clients across the entire Greater Cleveland metro. We build distinct localized landing pages and multi-county AreaServed schema markup targeting Beachwood, Westlake, Solon, Mentor, Lakewood, and Strongsville without triggering duplicate content penalties.',
-  },
-  {
-    category: 'technical',
-    question: 'What is NAP citation synchronization across Cleveland and Ohio business directories?',
-    answer:
-      'We establish and synchronize verified business citations across essential regional directories, including the Greater Cleveland Partnership, Council of Smaller Enterprises (COSE), Better Business Bureau of Greater Cleveland, Apple Maps, and Bing Places, checking that your details match and reinforcing Google Maps 3-Pack authority.',
+    question: 'Is local SEO worth it for a small Cleveland electrician or trade?',
+    answer: 'Usually, because most trade jobs start with a phone search. A small shop does not need a large plan. It needs a complete Business Profile, a page for each service, correct listings and a habit of asking for reviews. Skip the weekly blog posts until those four are done.',
   },
 ];
 
@@ -488,7 +432,7 @@ export default function ClevelandSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  We work on your Google Business Profile, your service pages and your listings so customers searching in Cleveland can find you. No long-term contracts. Talk directly with senior technical engineers.
+                  We work on your Google Business Profile, your service pages and your listings so people searching in Cleveland and Northeast Ohio find you and call. Month to month, and you talk directly to the people doing the work.
                 </p>
 
                 <div className="rv-actions">
@@ -574,7 +518,7 @@ export default function ClevelandSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  Cleveland search competition moves fast across healthcare, manufacturing, and local services. We combine Core Web Vitals speed optimization, Google Business Profile work, and localized corridor authority to capture real commercial leads.
+                  In Cleveland, the map pack for many service terms is still winnable: when we checked on 21 Oct 2026, the top three for "cleveland seo services" had fewer than 20 reviews each. We fix your profile and pages first, then build reviews.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -729,13 +673,13 @@ export default function ClevelandSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>The FactoryJet Difference</span>
+                <span>Cleveland Search Check, 21 Oct 2026</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                What FactoryJet Does Differently for Cleveland Businesses
+                What Cleveland Buyers See When They Search for SEO Help
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace opaque agency retainers with transparent, engineering-driven search performance:
+                We ran the search from a Cleveland location and wrote down what came back:
               </p>
             </div>
 
@@ -755,11 +699,11 @@ export default function ClevelandSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What it means for you:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -796,7 +740,7 @@ export default function ClevelandSeoPage() {
                 Our 6-Month Cleveland SEO Roadmap
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A step-by-step roadmap of the work, month by month:
+                What we do in each of the first six months:
               </p>
             </div>
 
@@ -860,7 +804,7 @@ export default function ClevelandSeoPage() {
                 Evaluating Cleveland SEO Companies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led execution against traditional marketing agency retainers before you sign:
+                Google publishes its own list of questions to ask an SEO. Here are six of them, with our answers:
               </p>
             </div>
 
@@ -868,7 +812,7 @@ export default function ClevelandSeoPage() {
               <div className="rv-eval-head" style={{ background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Factor</div>
                 <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional Marketing Agencies</div>
+                <div style={{ color: '#A0A0B0' }}>Questions to ask any agency</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
@@ -889,7 +833,7 @@ export default function ClevelandSeoPage() {
                   <div data-label="FactoryJet Engineering Model" style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
                     {crit.factoryjet}
                   </div>
-                  <div data-label="Traditional Marketing Agencies" style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                  <div data-label="Questions to ask any agency" style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
                     {crit.traditional}
                   </div>
                 </div>
@@ -904,7 +848,7 @@ export default function ClevelandSeoPage() {
         <FAQ
           eyebrow="CLEVELAND SEO INTELLIGENCE"
           headline="Frequently Asked Questions About SEO in Cleveland OH"
-          lead="Direct, plain English answers to what Cleveland business owners and marketing leaders ask about local search rankings and lead generation:"
+          lead="Cleveland owners search for prices, packages and how to judge an SEO firm. Plain answers below:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"

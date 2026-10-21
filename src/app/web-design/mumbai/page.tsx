@@ -92,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-21';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -570,6 +570,9 @@ export default function MumbaiWebDesignPage() {
                 under 1.5 seconds on a 4G connection, present the product or service above the fold,
                 and make the next step obvious. We build these sites mobile-first, at 375px before
                 1440px, with Lighthouse 90+ performance before launch.
+                If you sell products online, see our{' '}
+                <a href="/services/ecommerce-development/mumbai" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">ecommerce development in Mumbai</a>{' '}
+                for fashion stores, outlet stock sync and Bhiwandi warehouse integration.
               </p>
               <p>
                 Every FactoryJet Mumbai project covers discovery, Figma prototyping, Next.js

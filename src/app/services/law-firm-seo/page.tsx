@@ -232,7 +232,7 @@ const schemaWebPage = {
   description:
     'Law firm SEO agency for US attorneys and legal practices. Content built to Google YMYL standards, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more.',
   inLanguage: 'en-US',
-  dateModified: '2026-08-13',
+  dateModified: '2026-10-21',
   isPartOf: {
     '@type': 'WebSite',
     name: 'FactoryJet',
@@ -560,7 +560,9 @@ export default function LawFirmSEOPage() {
               are the ones that treat legal SEO as its own discipline: YMYL content standards, real
               attorney authorship, Map Pack work, and now visibility inside AI answers. Below we
               compare the companies that actually rank for law firm SEO in the US, including
-              ourselves, so you can judge the fit yourself.
+              ourselves, so you can judge the fit yourself. The full write-up of each firm is in our{' '}
+              <Link href="/blog/best-law-firm-seo-companies-usa" style={LINK_STYLE}>best law firm SEO companies in the USA</Link>{' '}
+              guide.
             </p>
           </div>
         </section>

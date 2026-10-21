@@ -12,7 +12,7 @@ import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/tampa/seo';
 
 export const metadata: Metadata = {
@@ -50,10 +50,30 @@ const SEO_TOOLS = [
 ];
 
 const STAT_CARDS = [
-  { num: 'Maps', title: 'Business Profile Review', desc: 'Check business details, categories, services, and the areas you actually serve.', icon: '📍' },
-  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Agree which calls, forms, and booked conversations count as useful inquiries.', icon: '📈' },
-  { num: 'Schema', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
-  { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
+  {
+    num: 'Maps',
+    title: 'Business Profile Review',
+    desc: 'Category, services and service area across Hillsborough, Pasco and Pinellas, checked against who ranks now.',
+    icon: '📍',
+  },
+  {
+    num: 'Leads',
+    title: 'Inquiry Tracking',
+    desc: 'Calls and forms from search counted each month, with the source recorded.',
+    icon: '📈',
+  },
+  {
+    num: 'Schema',
+    title: 'Structured Data Check',
+    desc: 'Business and FAQ schema that matches the words visitors actually see on the page.',
+    icon: '🛡️',
+  },
+  {
+    num: '0',
+    title: 'Bought Links',
+    desc: 'We earn mentions from real Tampa Bay sites and directories. No link networks.',
+    icon: '⚡',
+  },
 ];
 
 const DISTRICTS = [
@@ -147,77 +167,82 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
-    problem: 'Traditional Tampa agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
-    solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
+    title: 'No map pack on the main search',
+    problem: 'We searched "local seo tampa" from a Tampa location on 21 Oct 2026. Google showed an AI Overview, a business knowledge panel and ten regular results. It showed no map pack at all.',
+    solution: 'Google picks a different layout for each search. For some Tampa terms your website pages decide everything, because there is no map to win. We check the layout for each of your main terms before we choose where to spend effort.',
   },
   {
     num: '02',
-    title: 'Eliminating Risky PBN Links & Automated Citation Spam',
-    problem: 'Cheap agencies build spammy automated citations and private blog network links that trigger Google algorithmic penalties and destroy your domain authority.',
-    solution: 'We implement 100% white-hat local entity optimization, syncing direct with Google Business Profile API, Apple Business Connect, and tier-one local publications.',
+    title: 'A firm named after the search took three spots',
+    problem: 'A company whose name is the search phrase held the knowledge panel and three of the top five results: its own site, its Facebook page and its Yelp listing.',
+    solution: 'Names carry weight, but Google\'s profile rules forbid adding keywords to a business name. We keep your real name and make your profile, listings and pages state plainly what you do and which part of Tampa Bay you serve.',
   },
   {
     num: '03',
-    title: 'Fixing Inconsistent NAP Data Across Duplicate Profiles',
-    problem: 'Duplicate or outdated listings with conflicting phone numbers and suite addresses confuse search engine crawlers and split your local ranking signals.',
-    solution: 'We execute complete citation deduplication and NAP synchronization across all major data aggregators, establishing clean, authoritative entity signals.',
+    title: 'An AI Overview sits above every result',
+    problem: 'The AI Overview filled the top of the page before any link. Buyers read a summary first and click second, if at all.',
+    solution: 'AI Overviews quote pages that answer a question in their opening lines. We rewrite your key service pages to open with the answer, then check whether Google cites you.',
   },
   {
     num: '04',
-    title: 'Optimizing for AI Answer Engines & SearchGPT Citations',
-    problem: 'Basic SEO tactics ignore generative AI engines like ChatGPT, Claude, and Perplexity, causing your business to be omitted from conversational recommendations.',
-    solution: 'We structure your content with deep semantic entities, speakable markup, and question-answering schemas that position your firm as the verified local authority.',
+    title: 'Tampa searchers ask for technical audits',
+    problem: 'Search Console for this page shows "technical seo audit tampa" and "technical seo audit tampa florida" among its top searches, next to Wesley Chapel and trade terms for accountants, electricians and contractors.',
+    solution: 'Many Tampa Bay owners suspect something is broken under the hood. Our free audit checks indexing, speed, redirects and schema page by page, and names each problem with its URL.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Phase 01',
-    title: 'Local Entity & Citation Audit',
-    desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
-    deliverables: ['Google Maps rank grid scan across Tampa Bay', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+    title: 'Technical audit',
+    desc: 'We read your site the way Google does: what is indexed, what is blocked, what is slow, and which redirects break.',
+    deliverables: ['Issue list with the URL for each problem', 'Fixes ranked by effect on calls'],
   },
   {
     phase: 'Phase 02',
-    title: 'Google Business Profile & On-Page Geo-Optimization',
-    desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
-    deliverables: ['GBP category and attribute optimization', 'LocalBusiness and Service schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+    title: 'Profile and listings',
+    desc: 'We set your profile category and service area, then match your details across Apple Maps, Bing, Yelp and Tampa Bay directories.',
+    deliverables: ['Corrected profile', 'Listing log for Hillsborough, Pasco and Pinellas'],
   },
   {
     phase: 'Phase 03',
-    title: 'Tier-One Citation Sync & Local PR Distribution',
-    desc: 'We synchronize your verified business data across major directories and secure localized editorial placements to build genuine regional authority.',
-    deliverables: ['Direct API sync with Apple, Bing & Google', 'Tier-one directory citations (Data Axle, Neustar)', 'Localized press release and editorial outreach', 'Review velocity and response workflow setup'],
+    title: 'Answer-first pages',
+    desc: 'We rewrite service pages to open with the answer and add pages for towns you serve, such as Brandon, Riverview or Wesley Chapel.',
+    deliverables: ['Service pages that lead with the answer', 'Town pages with local jobs and reviews'],
   },
   {
     phase: 'Phase 04',
-    title: 'Rank Defense, AI Citation Monitoring & Expansion',
-    desc: 'We track daily local 3-Pack movements, monitor AI search citations, protect against competitor spam, and expand into neighboring suburban corridors.',
-    deliverables: ['Weekly geo-grid rank tracking reports', 'SearchGPT and Perplexity citation audits', 'Spam listing monitoring and resolution', 'Quarterly local market expansion roadmap'],
+    title: 'Reviews and AI Overview checks',
+    desc: 'We start a review routine and check monthly whether Google\'s AI Overview and other AI tools cite your pages.',
+    deliverables: ['Review request routine', 'Monthly note: changes, calls, forms, citations'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Ranking Target',
-    factoryjet: 'Qualified calls and inquiries from the local searches that matter to your business.',
-    traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
+    label: 'Search Layout',
+    factoryjet: 'Yes. For "local seo tampa" on 21 Oct 2026 there was no map pack, so we would weight your pages first.',
+    traditional: 'Ask: "Does Google show a map pack for my main terms in Tampa?"',
   },
   {
-    label: 'Structured Data',
-    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, FAQPage).',
-    traditional: 'Basic WordPress SEO plugin meta tags without connected entity graphs or practitioner credentials.',
+    label: 'Technical Audit',
+    factoryjet: 'Indexing, speed, redirects and schema, with the URL of each problem.',
+    traditional: 'Ask: "Will the audit name each problem and the page it is on?"',
   },
   {
-    label: 'Citation Quality',
-    factoryjet: 'Direct API synchronization with major data providers and verified local chamber/industry publications.',
-    traditional: 'Automated spam submissions to hundreds of low-quality link directories that risk Google penalties.',
+    label: 'Business Name',
+    factoryjet: 'No. Google\'s profile rules ban keyword stuffing in names, and it can get a profile suspended.',
+    traditional: 'Ask: "Will you change our business name to add keywords?"',
   },
   {
-    label: 'AI Search Preparedness',
-    factoryjet: 'Semantic entity engineering optimized for ChatGPT Search, Perplexity AI, and Google AI Overviews.',
-    traditional: 'Outdated keyword stuffing techniques with no consideration for conversational search platforms.',
+    label: 'AI Overviews',
+    factoryjet: 'We check monthly whether Google\'s AI Overview cites your pages and record the result.',
+    traditional: 'Ask: "How will you track whether AI Overviews mention us?"',
+  },
+  {
+    label: 'Contract',
+    factoryjet: 'Month to month. Your accounts stay in your name.',
+    traditional: 'Ask: "Can I stop at any month, and what do I keep?"',
   },
 ];
 
@@ -232,147 +257,73 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does local SEO cost for a Tampa business?',
-    answer:
-      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Tampa corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring county-wide coverage receive tailored scoping with clear milestone deliverables.',
+    question: 'How much does local SEO cost in Tampa?',
+    answer: 'Backlinko\'s 2025 survey of more than 300 SEO professionals found established small businesses often pay $501 to $1,000 a month, with the overall average at $1,000 to $2,500. A single Brandon salon sits at the low end. A Westshore law firm chasing citywide terms sits higher. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Are there any hidden citation fees or third-party listing markups?',
-    answer:
-      'No. All direct directory submissions, data aggregator distribution fees, schema deployments, and ranking grid audits are fully included in your monthly program fee.',
-  },
-  {
-    category: 'pricing',
-    question: 'Do you require long-term lock-in contracts for SEO retainers?',
-    answer:
-      'No. We operate on flexible month-to-month agreements after an initial 90-day foundational sprint. We earn your continued business through transparent rank improvements, phone call growth, and measurable local revenue.',
+    question: 'What does a technical SEO audit in Tampa cost?',
+    answer: 'There is no reliable published range for technical audits on their own. Backlinko groups full site audits with other one-time projects at $1,000 to $5,000. Price depends on how many pages you have and how deep the check goes. Our first audit is free, and it names each problem with the page it is on.',
   },
   {
     category: 'timeline',
-    question: 'How quickly can our Tampa business expect to see Google Maps rank improvements?',
-    answer:
-      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not promise a specific Map Pack position or deadline.',
+    question: 'Is local SEO worth it for a Tampa business?',
+    answer: 'Check before you spend. Open your Business Profile performance screen and see how many calls and searches it already gets. If people in Tampa Bay search for what you sell, local SEO is usually worth it, because those buyers are ready to call. If almost nobody searches for your service, put the money elsewhere.',
   },
   {
     category: 'timeline',
-    question: 'What factors determine how fast a Tampa business can rank in the Local 3-Pack?',
-    answer:
-      'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
-  },
-  {
-    category: 'timeline',
-    question: 'What happens to our local rankings if we pause or discontinue services?',
-    answer:
-      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain your property after the engagement ends. Rankings can still change over time as competitors keep working.',
+    question: 'How long does it take to rank in Tampa Bay?',
+    answer: 'Fixes to your profile and pages can show within weeks. Busy citywide terms take months, and no one can promise a date. Google\'s advice on hiring an SEO says to find someone else if a firm guarantees first place. A smaller area like Plant City or Zephyrhills usually moves faster than downtown Tampa.',
   },
   {
     category: 'technical',
-    question: 'How do you optimize our Google Business Profile for maximum local radius reach?',
-    answer:
-      'We identify and configure primary and secondary categories, craft keyword-optimized business descriptions, upload geo-tagged photo assets, build product and service catalogs, and configure automated review generation funnels.',
+    question: 'What does a technical SEO audit check?',
+    answer: 'It checks whether Google can find, read and trust each page. That covers pages left out of the index, pages blocked by mistake, slow mobile load times, redirect chains after a redesign, duplicate pages on two addresses, missing or wrong schema, and orphan pages nothing links to. A good audit names the URL for each problem.',
   },
   {
     category: 'technical',
-    question: 'What structured JSON-LD schemas do you implement on our website?',
-    answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+    question: 'Why did Google show an AI Overview but no map for "local seo tampa"?',
+    answer: 'Google chooses a layout for each search. On 21 Oct 2026 it treated "local seo tampa" as a research question plus a search for a company with that name, so it showed an AI Overview and a knowledge panel instead of a map. Your own terms may look different. Check each one before planning.',
   },
   {
     category: 'technical',
-    question: 'How do you help our company get recommended by AI search engines like ChatGPT and Perplexity?',
-    answer:
-      'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
-  },
-  {
-    category: 'technical',
-    question: 'How do you handle review generation without violating Google policies?',
-    answer:
-      'We establish frictionless SMS and email review request workflows that invite genuine satisfied clients to share their direct feedback on your Google Business Profile, strictly avoiding review gating or incentivized reviews.',
+    question: 'Does my business name affect Tampa local rankings?',
+    answer: 'It can. In our check, a company named after the search phrase held three of the top five results. Do not copy that by adding words to your profile name, though. Google\'s Business Profile rules forbid it, and profiles get suspended for it. Use your real name and make your categories and pages clear.',
   },
   {
     category: 'local',
-    question: 'Do you manage multi-location local SEO campaigns across Tampa Bay?',
-    answer:
-      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Tampa, St. Petersburg, Clearwater, Brandon, Riverview, and Wesley Chapel.',
+    question: 'Do you work with businesses in Wesley Chapel, Westchase and Riverview?',
+    answer: 'Yes, if you serve those areas. Wesley Chapel is in Pasco County, while Westchase and Riverview are in Hillsborough. Google weighs distance from the searcher, so a Riverview office will not rank on the map in Wesley Chapel. A page for each area you work in, with real local jobs and reviews, can still rank in the regular results.',
   },
   {
     category: 'local',
-    question: 'Can you help our practice outrank entrenched competitors in Westshore and South Tampa?',
-    answer:
-      'We can help you compete with them. The work combines website speed, topical content, clean citations and a steady flow of reviews. No agency can promise a map position, so each month we report where you stand next to the work completed.',
+    question: 'Is SEO for St. Petersburg and Clearwater different from Tampa?',
+    answer: 'Yes. Pinellas is across the bay, and buyers there search by their own city name. A Tampa profile seldom shows in St. Pete map results. If you serve both sides, give each side its own page with jobs and reviews from there, and list both counties in your profile service area.',
   },
   {
     category: 'local',
-    question: 'How do service-area businesses without a public storefront rank in Tampa?',
-    answer:
-      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target ZIP codes and commercial corridors.',
+    question: 'How does SEO work for Tampa accountants and bookkeepers?',
+    answer: 'Demand peaks before tax deadlines, so publish and update pages well ahead of them. Give tax prep, bookkeeping and payroll each their own page. State only credentials you actually hold, such as a CPA license. Choose the profile category that matches your main service, and ask business clients for reviews that name the service they used.',
   },
   {
     category: 'local',
-    question: 'Can you optimize for both Hillsborough and Pinellas county searches?',
-    answer:
-      'Yes. We build dedicated geo-targeted landing page silos and citation networks tailored for both sides of Tampa Bay, so you can be found in both Tampa and St. Petersburg.',
+    question: 'How does SEO work for Tampa med spas and plastic surgery practices?',
+    answer: 'Patients compare procedures, doctors and photos before they call. Each procedure needs its own page with the doctor named and photos used with written consent. Be careful replying to reviews: under federal privacy rules, a reply should not confirm that the reviewer is a patient. Profile reviews still matter a great deal.',
+  },
+  {
+    category: 'local',
+    question: 'Do Tampa electricians and contractors need a different SEO plan?',
+    answer: 'They need a service-area plan. Google asks service-area businesses to hide the street address and set the area they cover. Show your Florida license number on your site, give each service its own page, and post finished jobs with the neighborhood named. Emergency work needs accurate hours, including nights and weekends if you take those calls.',
   },
   {
     category: 'reporting',
-    question: 'How do you track and report local SEO progress each month?',
-    answer:
-      'We provide access to an interactive dashboard showing local 3-Pack geo-grid ranking positions, organic keyword trajectories, verified Google Maps phone calls, website click-throughs, and consultation inquiry submissions.',
+    question: 'What are the top SEO agencies in Tampa?',
+    answer: 'Lists disagree, and some are paid placements. A better test: search your own main term from Tampa and see who ranks. Then ask three firms the same things: what they would fix first, how they will measure it, and who will do the work. Compare their answers side by side.',
   },
   {
     category: 'reporting',
-    question: 'What is a Local Geo-Grid rank tracking report?',
-    answer:
-      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across Tampa Bay, showing exactly where your business appears in the top 3 and where optimization is needed.',
-  },
-  {
-    category: 'reporting',
-    question: 'How do you combat spam and fake competitor listings on Google Maps?',
-    answer:
-      'We continuously monitor your primary search categories in Tampa, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
-  },
-  {
-    category: 'reporting',
-    question: 'Who will be our main point of contact during the campaign?',
-    answer:
-      'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
-  },
-  {
-    category: 'local',
-    question: 'How do you optimize for financial institutions, fintechs, and corporate law firms in Water Street and Westshore?',
-    answer:
-      'Water Street and Westshore represent the premier corporate corridors in Tampa. We construct high-authority corporate content hubs, optimizing for financial advisory, commercial litigation retainers, private equity, and wealth management search terms with structured FinancialService and LegalService schema markup.',
-  },
-  {
-    category: 'technical',
-    question: 'How do medical aesthetics and elective healthcare practices capture high-value patients in South Tampa and Hyde Park?',
-    answer:
-      'We deploy granular MedicalBusiness and Physician schemas, optimize doctor profile authority with Florida Board of Medicine credentials, construct neighborhood landing pages for Hyde Park, Davis Islands, and Palma Ceia, and streamline verified Google review funnels to compete for high-intent procedural queries.',
-  },
-  {
-    category: 'local',
-    question: 'How do you structure SEO for maritime logistics, cold storage, and heavy distribution near Port Tampa Bay?',
-    answer:
-      'Port Tampa Bay is Florida’s largest cargo gateway. We engineer technical B2B catalog structures, ISO certification schema markup, freight capability calculators, and downloadable spec sheets that capture high-ticket procurement queries from industrial supply chain buyers nationwide.',
-  },
-  {
-    category: 'technical',
-    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in Florida?',
-    answer:
-      'Generative AI search platforms index clear entity relationships, verified state business records from Sunbiz (Florida Division of Corporations), and direct answer-first content blocks. We format your service offerings and customer review data with granular JSON-LD markup to maximize conversational AI recommendations.',
-  },
-  {
-    category: 'local',
-    question: 'Can you structure local SEO across both Hillsborough and Pinellas county service corridors?',
-    answer:
-      'Yes. Tampa Bay businesses frequently serve clients across both sides of the bay. We construct distinct localized landing pages and multi-county AreaServed schema markup targeting Tampa, St. Petersburg, Clearwater, Brandon, and Carrollwood without triggering duplicate content penalties.',
-  },
-  {
-    category: 'reporting',
-    question: 'What is NAP citation synchronization across Tampa Bay and Florida directories?',
-    answer:
-      'We establish and synchronize verified business citations across essential regional platforms, including the Greater Tampa Chamber of Commerce, Suncoast BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, checking that your details match, eliminating duplicates, and reinforcing Google Maps 3-Pack authority across Hillsborough, Pinellas, and Pasco counties.',
+    question: 'What should a Tampa SEO report show each month?',
+    answer: 'Four things, in order. The work done that month, with links to the pages and listings changed. Calls and forms from search. Profile activity such as calls and direction requests. Then rankings for the terms you agreed on. If a report opens with impressions and traffic charts, ask where the calls are.',
   },
 ];
 
@@ -489,7 +440,7 @@ export default function TampaSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  We work on your Google Business Profile, your service pages and your listings so customers searching in Downtown Tampa, Westshore, and South Tampa can find you. Monthly reporting covers calls and inquiries.
+                  We fix your Google Business Profile, your service pages and the technical problems under them, so buyers across Tampa Bay find you and call. Each monthly report starts with calls and inquiries.
                 </p>
 
                 {/* Answer-First Brief */}
@@ -580,7 +531,7 @@ export default function TampaSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From Downtown Tampa corporate litigation firms to Westshore business consultants and South Tampa aesthetic clinics, Florida businesses need verified search authority to capture high-ticket clients before competitors do.
+                  When we searched "local seo tampa" on 21 Oct 2026, Google showed an AI Overview and no map pack. For searches like that, your own pages decide whether you appear, so the work starts with your site.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -734,13 +685,13 @@ export default function TampaSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>The FactoryJet Difference</span>
+                <span>Tampa Search Check, 21 Oct 2026</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                What FactoryJet Does Differently for Tampa Businesses
+                What Google Shows Tampa Buyers Searching for Local SEO
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace generic SEO reports with reporting on completed work, calls and inquiries:
+                We searched from a Tampa location and noted the layout. It changes how we plan the work:
               </p>
             </div>
 
@@ -760,11 +711,11 @@ export default function TampaSeoPage() {
                   </div>
                   <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>What we saw:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What it means for you:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -801,7 +752,7 @@ export default function TampaSeoPage() {
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                The four stages of work we follow for local search across Tampa Bay:
+                Four phases, starting with the technical audit Tampa owners ask for most:
               </p>
             </div>
 
@@ -865,7 +816,7 @@ export default function TampaSeoPage() {
                 Evaluating Tampa SEO Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+                Five questions to ask any Tampa SEO agency, with our answer to each:
               </p>
             </div>
 
@@ -873,7 +824,7 @@ export default function TampaSeoPage() {
               <div className="rv-eval-head" style={{ background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Factor</div>
                 <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional SEO Agencies</div>
+                <div style={{ color: '#A0A0B0' }}>Questions to ask any agency</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
@@ -894,7 +845,7 @@ export default function TampaSeoPage() {
                   <div data-label="FactoryJet Engineering Model" style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
                     {crit.factoryjet}
                   </div>
-                  <div data-label="Traditional SEO Agencies" style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                  <div data-label="Questions to ask any agency" style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
                     {crit.traditional}
                   </div>
                 </div>
@@ -910,7 +861,7 @@ export default function TampaSeoPage() {
         <FAQ
           eyebrow="TAMPA BAY LOCAL SEARCH INTELLIGENCE"
           headline="Frequently Asked Questions About Local SEO in Tampa FL"
-          lead="Direct, plain English answers to what Tampa Bay business owners and marketing directors ask about search visibility:"
+          lead="What Tampa Bay owners ask about audits, cost, towns and trades, answered plainly:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
@@ -953,7 +904,7 @@ export default function TampaSeoPage() {
             </div>
 
             <p style={{ marginTop: '28px', fontSize: '13.5px', color: '#8E8E9F' }}>
-              Related services: <Link href="/tampa/ecommerce-development" style={{ color: '#FF5622', textDecoration: 'underline' }}>Tampa ecommerce development</Link>, <Link href="/tampa/web-design" style={{ color: '#FF5622', textDecoration: 'underline' }}>Tampa web design</Link>, <Link href="/services/local-seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Local SEO services</Link>, and <Link href="/services/seo-audit" style={{ color: '#FF5622', textDecoration: 'underline' }}>technical SEO audits</Link>.
+              Related services: <Link href="/services/ecommerce-development" style={{ color: '#FF5622', textDecoration: 'underline' }}>ecommerce development</Link>, <Link href="/tampa/web-design" style={{ color: '#FF5622', textDecoration: 'underline' }}>Tampa web design</Link>, <Link href="/services/local-seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Local SEO services</Link>, and <Link href="/services/seo-audit" style={{ color: '#FF5622', textDecoration: 'underline' }}>technical SEO audits</Link>.
             </p>
           </div>
         </section>

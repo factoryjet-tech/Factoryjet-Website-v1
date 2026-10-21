@@ -419,10 +419,11 @@ export const post: BlogPost = {
         A site nobody updates accumulates outdated dependencies, a checkout that broke on one
         browser, and content that stopped matching the business two pivots ago. Then it gets
         replaced. The SEO version of that decay is worse than the security version and slower to
-        notice, which we covered in{' '}
-        <a href="/blog/importance-of-website-maintenance-seo">
-          why website maintenance matters for SEO
-        </a>
+        notice, which is what our{' '}
+        <a href="/services/website-maintenance">
+          website maintenance service
+        </a>{' '}
+        is built to prevent
         .
       </p>
 
