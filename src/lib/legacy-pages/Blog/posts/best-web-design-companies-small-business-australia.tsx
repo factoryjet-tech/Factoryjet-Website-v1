@@ -33,17 +33,18 @@ const linkCls = 'text-blue-600 underline hover:text-blue-800 transition-colors';
 export const post: BlogPost = {
   id: '116',
   slug: "best-web-design-companies-small-business-australia",
-  title: "Best Web Design Companies for Small Business in Australia (2026)",
+  title: "Small Business Web Design in Australia: 6 Companies Compared (2026)",
   excerpt: "How to choose a web design company as an Australian small business in 2026. Six companies whose services we checked on their own websites, sourced AUD price ranges from Australian price guides, and the checks that separate a good agency from a risky one.",
   category: "Web Design & Strategy",
   author: 'Bhavesh Barot',
   date: "Sep 26, 2026",
-  dateModified: "Oct 10, 2026",
+  dateModified: "Oct 21, 2026",
   readTime: '12 min read',
   imageUrl: "/blog-images/best-web-design-companies-small-business-australia-hero.webp",
   meta: {
-    title: "Best Web Design Companies for Australian Small Business 2026",
-    description: "Six web design companies for Australian small businesses, checked on their own sites, with sourced AUD price ranges and a plain checklist for choosing one.",
+    // 21 Oct 2026 (AU plan R1): rewritten for "small business web design" (pos. 12.3, 9,975 AU impressions, 0 clicks).
+    title: "Small Business Web Design Australia: 6 Companies, 2026",
+    description: "Small business web design in Australia: six companies checked on their own sites, sourced 2026 AUD price ranges, and the questions to ask before you hire.",
   },
   keyTakeaways: [
     "Australian price guides put a small business website at roughly $3,500 to $7,000 for 5 to 8 pages (Keen to Design, April 2026) or $3,000 to $7,000 for a brochure site (WolfIQ, 2026 guide). These are typical Australian market ranges, not FactoryJet prices.",

@@ -21,18 +21,26 @@ import type { BlogPost } from '../data.types';
  * The "named in N of 14 answers" counts come from the buyer-question sweeps of
  * 2026-10-09 (question ids A12 and B198), counted from the answer text only.
  *
+ * 2026-10-21: the eight product price pages, Deepgram and Twilio were read again; none of
+ * the eight had changed since 11 October. Added: a pick-by-company-size table, a
+ * compliance table (HIPAA, SOC 2, GDPR, PCI, TCPA) quoting each vendor's own page, and
+ * published custom build ranges from Groovy Web and Master of Code Global. No running,
+ * hosting or maintenance figure for a custom build appears on the page (rule of 11 Oct).
+ * The cost questions belong to the voice cost guide; this page keeps the "best" and
+ * "which companies" questions and links there for cost detail.
+ *
  * The blog route builds the FAQ schema from the `faqs` array below. Keep one array.
  */
 export const post: BlogPost = {
   id: '436',
   slug: 'best-ai-receptionist-small-business',
-  title: 'Best AI Voice Agents and AI Receptionists for Business Phone Calls (2026), and the Companies That Build Them',
+  title: 'Best AI Voice Agents and AI Receptionists for Business Phone Calls in 2026: Prices and the Companies That Build Them',
   excerpt:
-    'The best AI voice agent for answering business phone calls depends on who sets it up. For a small business that wants calls answered this week, Goodcall and RingCentral AI Receptionist are ready-made. For a team with a developer, Retell AI, Vapi and Bland AI are the platforms to build on. For a large contact center, PolyAI, NiCE Cognigy and Parloa sell enterprise platforms. Every price here was read on the vendor\'s own page on 11 October 2026.',
+    'The best AI voice agent for answering business phone calls depends on who sets it up. For a small business that wants calls answered this week, Goodcall and RingCentral AI Receptionist are ready-made. For a team with a developer, Retell AI, Vapi and Bland AI are the platforms to build on. For a large contact center, PolyAI, NiCE Cognigy and Parloa sell enterprise platforms. Every price here was read on the vendor\'s own page on 11 October 2026 and checked again on 21 October 2026.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 7, 2026',
-  dateModified: 'Oct 11, 2026',
+  dateModified: 'Oct 21, 2026',
   readTime: '20 min read',
   imageUrl: '/blog-images/best-ai-receptionist-small-business.webp',
   imageAlt:
@@ -40,7 +48,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Best AI Voice Agent or AI Receptionist for Business Calls (2026)',
     description:
-      'Best AI voice agents for answering business phone calls, by kind of buyer, with vendor prices read 11 Oct 2026, plus the companies that develop voice AI agents.',
+      'Best AI voice agents for business phone calls in 2026, by company size, with vendor prices checked 21 Oct 2026, HIPAA and BAA notes, and the firms that build them.',
   },
   keyTakeaways: [
     'There is no single best AI voice agent for business phone calls. Three kinds of product share the name: ready-made products you set up yourself (Goodcall, RingCentral AI Receptionist), platforms a developer builds on (Retell AI, Vapi, Bland AI) and live receptionist services (Ruby, Smith.ai).',
@@ -49,7 +57,9 @@ export const post: BlogPost = {
     'We put the question to ChatGPT, Claude, Gemini, Perplexity and Google\'s AI answers on 9 October 2026. Across 14 answers, Retell AI was named in all 14, Smith.ai in 11, and Goodcall and Bland AI in 9 each.',
     'Synthflow states "Enterprise contracts start at $30,000 annually" and lists one plan on its pricing page, so it suits a large contact center more than a small office.',
     'The companies that develop voice AI agents fall into four groups: developer platforms, enterprise contact center platforms, ready-made small business products, and firms that build a custom agent for you (Intellectyx, Master of Code Global, Appinventiv, RaftLabs and FactoryJet).',
-    'At least three of the eight price pages changed between our reading on 7 September 2026 and this one on 11 October 2026. Read the vendor page on the day you buy.',
+    'Picked by company size: an office under 10 staff starts with Goodcall, RingCentral or Smith.ai; a team with a developer builds on Retell AI, Vapi or Bland AI; a contact center looks at Synthflow, PolyAI, NiCE Cognigy or Parloa, or a custom build. Groovy Web puts a single-purpose custom build at $3,000 to $12,000.',
+    'For a medical practice the deciding line is the Business Associate Agreement. Vapi lists a HIPAA add-on with a BAA at $2,000 a month, Bland AI says it signs a BAA, and RingCentral says its AI Receptionist is designed to support HIPAA compliance.',
+    'At least three of the eight price pages changed between our reading on 7 September 2026 and 11 October 2026. None changed between 11 and 21 October. Read the vendor page on the day you buy.',
   ],
   faqs: [
     { q: 'What is the best AI voice agent for answering business phone calls?', a: 'It depends on who will set it up. For a small business that wants calls answered this week, Goodcall ($79 to $299 a month) and RingCentral AI Receptionist (from $49 a month) are ready-made products. For a team with a developer, Retell AI, Vapi and Bland AI are platforms priced by the minute. For calls that need a person behind the AI, Smith.ai adds live receptionists. For a large contact center, PolyAI, NiCE Cognigy and Parloa sell enterprise platforms. Prices were read on each vendor\'s page on 11 October 2026.' },
@@ -74,14 +84,18 @@ export const post: BlogPost = {
     { q: 'Do I need to change my phone number or phone system?', a: 'Usually no. Most of these products work by call forwarding, so you keep your number and send calls to the agent always, after hours, or only when your line is busy. RingCentral states its AI Receptionist can be layered on existing phone systems "using call forwarding or SIP-based integrations". Goodcall states you can keep your existing number by forwarding it. Starting with after-hours calls only is a low-risk first step.' },
     { q: 'What is the cheapest way to try an AI voice agent?', a: 'Several vendors let you test before paying. Smith.ai AI Receptionist has a Free plan with 25 calls a month. Goodcall lets you build and test a free demo agent before you connect a number. RingCentral offers a 14-day free trial. Bland AI\'s Start plan needs no card. Retell AI gives $10 in free credits and Vapi gives $5. Hearing the agent handle your own call flow tells you more than any comparison page.' },
     { q: 'Should I buy an AI voice agent product or have one built?', a: 'Buy a product when your calls are standard and your booking software is mainstream. It will be live sooner. Have one built when the calls depend on your own systems. The usual signs are an intake process a product cannot follow, software it does not connect to, a job that spans several tools and must stay consistent across them, or a call center queue with a team of agents behind it. In a custom build you own the agent, and the firm that builds it connects it to the phone system and CRM you already run.' },
-    { q: 'What does a custom AI voice agent cost?', a: 'It is quoted per project, because the price depends on the calls the agent takes and the systems it must connect to. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. After launch, FactoryJet can keep managing the servers, AI, APIs and maintenance so your team does not have to. To get a quote, send the top reasons people call you and the phone system and CRM you use.' },
+    { q: 'What does a custom AI voice agent cost?', a: 'It is quoted per project, because the price depends on the calls the agent takes and the systems it must connect to. Published 2026 market ranges run from $3,000 to $12,000 for one job with one integration (Groovy Web) to $25,000 to $50,000 for a mid-tier agent with CRM integration (Master of Code Global). Our voice agent cost guide sets them out by company size. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. After launch, FactoryJet can keep managing the servers, AI, APIs and maintenance so your team does not have to. To get a quote, send the top reasons people call you and the phone system and CRM you use.' },
+    { q: 'Which AI voice agents will sign a HIPAA business associate agreement?', a: 'From the vendors\' own pages on 21 October 2026: Vapi lists a HIPAA add-on with a Business Associate Agreement at $2,000 a month. Bland AI says it is HIPAA compliant with a signed BAA, holds SOC 2 Type I and Type II, and is GDPR compliant with a DPA. Retell AI calls itself SOC 2 certified and HIPAA-ready, with a BAA in its plan list. RingCentral says its AI Receptionist is designed to support HIPAA compliance. Ruby lists HIPAA-compliant services. Get the signed agreement before any patient calls.' },
+    { q: 'What is the best AI voice agent for a call center?', a: 'A contact center usually needs concurrency, several languages and a connection to its own CRM and queue, so the shortlist is enterprise platforms or a custom build. PolyAI, NiCE Cognigy, Parloa and Sierra sell enterprise platforms; Synthflow states enterprise contracts from $30,000 a year. Bland AI Build lists 50 concurrent calls against 10 on Start. A custom build fits when calls depend on your own systems; Master of Code Global puts multilingual, compliance-heavy builds at $50,000 to $150,000+.' },
+    { q: 'Do AI voice agents work with Twilio?', a: 'The developer platforms do. Vapi lists Twilio inbound at $0.008 a minute and outbound at $0.014 a minute as pass-through transport, beside Vonage and Telnyx. Twilio\'s own US list, read on 21 October 2026, prices a local number at $1.15 a month and incoming calls on it at $0.0085 a minute. Ready-made products such as Goodcall and RingCentral include a number or work by forwarding your existing one, so the carrier sits on the vendor\'s side.' },
+    { q: 'Can an AI voice agent make outbound sales or reminder calls?', a: 'It can, but outbound is regulated. On 8 February 2024 the FCC ruled that calls made with AI-generated voices are artificial under the Telephone Consumer Protection Act, and its rules require telemarketers to get prior express written consent before robocalling consumers. Keep a record of each consent and take legal advice before an AI voice dials anyone.' },
     { q: 'What questions should I ask before buying an AI voice agent?', a: 'Five. What is the published price at my call volume, in writing, including extra calls or minutes. What happens when the AI cannot handle the call. Which of my systems does it write into, and have you made that exact connection before. How long do you keep call records, and will you sign a business associate agreement if I need one. Can I hear a recording of it handling a call like mine.' },
     { q: 'Does FactoryJet sell an AI receptionist product?', a: 'FactoryJet is a services company. We design, build, implement and support custom AI receptionists and AI voice agents for small offices and call centers, and the client owns what we build. The products on this page are sold by their own vendors, and FactoryJet receives nothing if you buy one. A ready-made product fits standard calls and mainstream booking software. A custom build fits calls that depend on your own phone system, CRM or intake process.' },
     { q: 'How was this list researched?', a: 'Every price and company description was read on that company\'s own site on 11 October 2026, and each source is linked at the foot of the page. Prices are the vendor\'s published list prices, quoted as written. Company descriptions use the wording on each firm\'s own pages. The counts of which companies AI assistants name come from 14 answers per question that we collected on 9 October 2026. FactoryJet wrote this list and appears on it as one of the firms that build custom voice agents. No company paid to appear.' },
   ],
   content: (
     <>
-      <p className="mb-4"><strong>The short answer.</strong> The best AI voice agent for answering business phone calls depends on who will set it up. For a small business that wants calls answered this week, <strong>Goodcall</strong> ($79 to $299 a month) and <strong>RingCentral AI Receptionist</strong> (from $49 a month) are ready-made products. For a team with a developer, <strong>Retell AI</strong>, <strong>Vapi</strong> and <strong>Bland AI</strong> are platforms priced by the minute. For calls that need a person behind the AI, <strong>Smith.ai</strong> adds live receptionists. For a large contact center, <strong>PolyAI</strong>, <strong>NiCE Cognigy</strong> and <strong>Parloa</strong> sell enterprise platforms. The companies that develop voice AI agents, including the firms that build custom ones, are listed by group further down.</p>
+      <p className="mb-4"><strong>The short answer.</strong> The best AI voice agent for answering business phone calls depends on who will set it up. For a small business that wants calls answered this week, <strong>Goodcall</strong> ($79 to $299 a month) and <strong>RingCentral AI Receptionist</strong> (from $49 a month) are ready-made products. For a team with a developer, <strong>Retell AI</strong>, <strong>Vapi</strong> and <strong>Bland AI</strong> are platforms priced by the minute. For calls that need a person behind the AI, <strong>Smith.ai</strong> adds live receptionists. For a large contact center, <strong>PolyAI</strong>, <strong>NiCE Cognigy</strong> and <strong>Parloa</strong> sell enterprise platforms. If none of those fits and you have one call to be handled in your own system, a custom build is the fourth route: <a href="https://www.groovyweb.co/blog/ai-voice-agent-development-cost" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">Groovy Web</a> puts a single-purpose small business build at $3,000 to $12,000 in 2026, and <a href="https://masterofcode.com/blog/voice-ai-development-costs" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">Master of Code Global</a> puts a mid-tier agent with CRM integration at $25,000 to $50,000. The companies that develop voice AI agents, including the firms that build custom ones, are listed by group further down.</p>
 
       <p className="mb-4"><strong>Who wrote this.</strong> FactoryJet wrote this list and is on it. We build custom AI voice agents as a service, so we appear among the firms that build them and in none of the product entries. No company paid to appear. Every price and description below was read on the company&apos;s own site on 11 October 2026 and is linked under Sources.</p>
 
@@ -113,12 +127,58 @@ export const post: BlogPost = {
       </div>
       <p className="mb-4">PolyAI, NiCE Cognigy and Parloa also sell enterprise platforms. Their entries are in the companies section further down.</p>
 
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">Which AI voice agent fits your company size in 2026</h2>
+      <p className="mb-4">The right pick depends mostly on company size and on who will set it up. The products are the same ones covered below. Prices are each vendor&apos;s list price, checked on 21 October 2026. The full cost breakdown, with build ranges for each size, is in our <a href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026" className="text-orange-600 underline">AI voice agent cost guide for 2026</a>.</p>
+      <div className="overflow-x-auto mb-6">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="bg-gray-50">
+              <th className="p-3 border text-left">Company size</th>
+              <th className="p-3 border text-left">Main call job</th>
+              <th className="p-3 border text-left">Start with</th>
+              <th className="p-3 border text-left">Check first</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td className="p-3 border">1 to 10 staff: a trade, clinic front desk or law office</td><td className="p-3 border">Answer every call, take the details, book the job</td><td className="p-3 border">Goodcall ($79 to $299 a month), RingCentral AI Receptionist (from $49), Smith.ai AI Receptionist (free for 25 calls)</td><td className="p-3 border">Whether it writes into the booking software you already use</td></tr>
+            <tr><td className="p-3 border">10 to 50 staff with someone technical</td><td className="p-3 border">Bookings, transfers, a CRM update after each call</td><td className="p-3 border">Retell AI ($0.07 to $0.31 a minute), Vapi ($0.05 plus providers), Bland AI ($0.14)</td><td className="p-3 border">Who designs and tests the call flow, and the concurrent call limit</td></tr>
+            <tr><td className="p-3 border">50 to 500 staff, several call types</td><td className="p-3 border">Calls that read and write your CRM, orders or payments</td><td className="p-3 border">A developer platform with a build partner, or a custom build ($25,000 to $50,000 mid-tier, per Master of Code Global)</td><td className="p-3 border">Which systems the agent must write into, named in writing</td></tr>
+            <tr><td className="p-3 border">Contact center</td><td className="p-3 border">High volume, several languages, a live queue behind it</td><td className="p-3 border">PolyAI, NiCE Cognigy, Parloa, Sierra, or Synthflow (from $30,000 a year)</td><td className="p-3 border">Concurrency, hand-off to the queue, and a reference in your industry</td></tr>
+            <tr><td className="p-3 border">Healthcare, insurance or finance, any size</td><td className="p-3 border">Calls that carry patient or policy data</td><td className="p-3 border">A vendor that signs a BAA or DPA (see the compliance table below)</td><td className="p-3 border">The signed agreement and how long recordings are kept</td></tr>
+          </tbody>
+        </table>
+      </div>
+
       <h2 className="text-2xl font-bold mt-8 mb-4">Three kinds of product share one name</h2>
       <table className={styles.profileFacts}><tbody><tr><th scope="row"><strong>Ready-made products</strong></th><td>(Goodcall, RingCentral AI Receptionist, Smith.ai AI Receptionist) sell a working receptionist that you set up yourself for a flat monthly price.</td></tr><tr><th scope="row"><strong>Developer platforms</strong></th><td>(Retell AI, Vapi, Bland AI) sell minutes on a platform. The rate buys the building blocks. Someone on your side designs the conversation, connects your calendar and CRM, and tests what happens when a caller says something unexpected.</td></tr><tr><th scope="row"><strong>Live receptionist services</strong></th><td>(Ruby, and the human-first plans at Smith.ai) sell people answering your phone.</td></tr></tbody></table>
       <p className="mb-4">A per-minute platform rate set against a live answering service is a bag of flour set against a delivered cake. Decide which of the three you are buying before you compare prices.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Four things to check on a pricing page before you sign up</h2>
-      <table className={[styles.profileFacts, styles.orderedFacts].join(' ')}><tbody><tr><th scope="row"><strong>Whether the entry price is an enterprise contract.</strong></th><td> Synthflow&apos;s pricing page states &quot;Enterprise contracts start at $30,000 annually&quot; and listed one plan, Enterprise, on 11 October 2026. Synthflow describes itself as a voice platform for enterprises, so a small office should start with the ready-made products.</td></tr><tr><th scope="row"><strong>What a health data add-on costs.</strong></th><td> Vapi lists $0.05 a minute for its platform. It also lists a health data add-on, which includes a Business Associate Agreement, at <strong>$2,000 a month</strong>. A medical or dental practice should read the add-on list before the per-minute rate.</td></tr><tr><th scope="row"><strong>What a platform fee does to the lower rate.</strong></th><td> Bland AI&apos;s Build plan lowers the rate from $0.14 to $0.12 a minute and adds a $299 a month platform fee. Match the plan to your call volume before you pick the lower rate.</td></tr><tr><th scope="row"><strong>Whether the page has changed since the article you read.</strong></th><td> We first read these eight price pages on 7 September 2026. By 11 October 2026 at least three had changed. Goodcall&apos;s top plan moved from $249 to $299 a month. Bland AI&apos;s Scale plan at $0.11 a minute was no longer listed, and the third plan shown was a custom Enterprise plan. Vapi&apos;s entry plan listed 10 concurrent lines in September and lists 4 now. Read the vendor page on the day you buy.</td></tr></tbody></table>
+      <table className={[styles.profileFacts, styles.orderedFacts].join(' ')}><tbody><tr><th scope="row"><strong>Whether the entry price is an enterprise contract.</strong></th><td> Synthflow&apos;s pricing page states &quot;Enterprise contracts start at $30,000 annually&quot; and listed one plan, Enterprise, on 11 October 2026. Synthflow describes itself as a voice platform for enterprises, so a small office should start with the ready-made products.</td></tr><tr><th scope="row"><strong>What a health data add-on costs.</strong></th><td> Vapi lists $0.05 a minute for its platform. It also lists a health data add-on, which includes a Business Associate Agreement, at <strong>$2,000 a month</strong>. A medical or dental practice should read the add-on list before the per-minute rate.</td></tr><tr><th scope="row"><strong>What a platform fee does to the lower rate.</strong></th><td> Bland AI&apos;s Build plan lowers the rate from $0.14 to $0.12 a minute and adds a $299 a month platform fee. Match the plan to your call volume before you pick the lower rate.</td></tr><tr><th scope="row"><strong>Whether the page has changed since the article you read.</strong></th><td> We first read these eight price pages on 7 September 2026. By 11 October 2026 at least three had changed. Goodcall&apos;s top plan moved from $249 to $299 a month. Bland AI&apos;s Scale plan at $0.11 a minute was no longer listed, and the third plan shown was a custom Enterprise plan. Vapi&apos;s entry plan listed 10 concurrent lines in September and lists 4 now. We read all eight again on 21 October 2026 and none had changed since 11 October. Read the vendor page on the day you buy.</td></tr></tbody></table>
+
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">Compliance checks by vendor: HIPAA, SOC 2, GDPR and outbound calls</h2>
+      <p className="mb-4">For a medical, legal or financial office, the vendor&apos;s compliance terms matter as much as its price. Here is what each vendor&apos;s own page said on 21 October 2026. Where a page we read stated no terms, the table says so; the vendor may still offer them. Ask for every answer in writing.</p>
+      <div className="overflow-x-auto mb-6">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="bg-gray-50">
+              <th className="p-3 border text-left">Vendor</th>
+              <th className="p-3 border text-left">What its own page says</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td className="p-3 border"><strong>Bland AI</strong></td><td className="p-3 border">SOC 2 Type I and Type II, HIPAA compliant with a signed BAA, GDPR compliant with a DPA, PCI DSS self-attested</td></tr>
+            <tr><td className="p-3 border"><strong>Retell AI</strong></td><td className="p-3 border">&quot;SOC 2 certified, HIPAA-ready&quot;, with HIPAA / BAA, custom DPA and custom BAA in its plan comparison</td></tr>
+            <tr><td className="p-3 border"><strong>Vapi</strong></td><td className="p-3 border">HIPAA add-on with a Data Processing Agreement and Business Associate Agreement at $2,000 a month</td></tr>
+            <tr><td className="p-3 border"><strong>RingCentral AI Receptionist</strong></td><td className="p-3 border">&quot;designed to support HIPAA compliance&quot;, with encryption, access controls and audit logging</td></tr>
+            <tr><td className="p-3 border"><strong>Ruby</strong></td><td className="p-3 border">Lists HIPAA-compliant services among its plan features</td></tr>
+            <tr><td className="p-3 border"><strong>Goodcall, Smith.ai, Synthflow</strong></td><td className="p-3 border">The pricing pages we read did not state HIPAA or BAA terms. Ask the vendor.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="mb-4">Two rules apply whichever product you choose. Recording consent varies by US state, and some states require every party on the call to agree, so have the agent say the call is recorded. For outbound calls, the FCC ruled on 8 February 2024 that AI-generated voices are &quot;artificial&quot; under the Telephone Consumer Protection Act, and its rules require prior express written consent before telemarketing robocalls. See the <a href="https://docs.fcc.gov/public/attachments/DOC-400393A1.pdf" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">FCC news release</a>.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The eight products, one by one</h2>
 
@@ -146,7 +206,7 @@ export const post: BlogPost = {
 
       <h3 className="text-xl font-bold mt-6 mb-3">Vapi, a developer platform that lets you choose each provider</h3>
       <p className="mb-4">Vapi is &quot;$0 to start&quot;, then $0.05 a minute for its own platform, with the transcription, language and voice providers you choose charged on top. The usage-only plan includes $5 in free credits, 4 concurrent calls and 14 days of raw data retention. A Core package at $29 a month raises that to 10 concurrent calls and 30 days.</p>
-      <p className="mb-4">Extra concurrent lines are $10 each a month. A health data add-on that includes a Business Associate Agreement is $2,000 a month. See <a href="https://vapi.ai/pricing" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">Vapi pricing</a>.</p>
+      <p className="mb-4">Vapi does not include a phone line in that rate: it lists Twilio inbound at $0.008 a minute and outbound at $0.014 a minute as pass-through, beside Vonage and Telnyx. Twilio&apos;s own US list prices a local number at $1.15 a month (<a href="https://www.twilio.com/en-us/voice/pricing/us" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">Twilio voice pricing</a>). Extra concurrent lines are $10 each a month. A health data add-on that includes a Business Associate Agreement is $2,000 a month. See <a href="https://vapi.ai/pricing" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">Vapi pricing</a>.</p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">Bland AI, a developer platform with one per-minute rate</h3>
       <p className="mb-4">Bland AI&apos;s Start plan is &quot;$0.14 /min&quot; with &quot;$0 platform fee. No card required.&quot; It includes 10 concurrent calls and 100 calls a day. The Build plan is &quot;$0.12 /min&quot; with a &quot;$299/month platform fee&quot;, 50 concurrent calls and 2,000 calls a day. Enterprise is priced to your volume.</p>
@@ -242,11 +302,11 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">How this list was made</h2>
       <p className="mb-4">Every price and company description on this page was read on that company&apos;s own site on 11 October 2026. Prices are quoted as published, in the vendor&apos;s own units. Where the pages we read carried no price, the entry carries none.</p>
-      <p className="mb-4">We first read the eight product price pages on 7 September 2026 and read them again for this update, which is how we know at least three of them changed. The counts of which companies the AI assistants name come from 14 answers per question, collected on 9 October 2026 from ChatGPT, Claude, Gemini, Perplexity and Google&apos;s AI answers.</p>
+      <p className="mb-4">We first read the eight product price pages on 7 September 2026 and read them again on 11 October 2026, which is how we know at least three of them changed. We read them a third time on 21 October 2026, along with Twilio&apos;s price list and the build ranges from Groovy Web and Master of Code Global; none of the eight prices had moved. The counts of which companies the AI assistants name come from 14 answers per question, collected on 9 October 2026 from ChatGPT, Claude, Gemini, Perplexity and Google&apos;s AI answers.</p>
       <p className="mb-4">FactoryJet wrote this list and appears on it among the firms that build custom voice agents. No company paid to appear. FactoryJet sells none of these products and receives nothing if you buy one. Prices in this market change often, so check the vendor&apos;s page before you commit. Tell us if a figure here has moved and we will correct it.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Sources</h2>
-      <p className="mb-4">All read on 11 October 2026.</p>
+      <p className="mb-4">All read on 11 October 2026. The eight price pages were read again on 21 October 2026.</p>
       <ul className="list-disc pl-6 mb-4 space-y-2">
         <li><a href="https://www.goodcall.com/pricing" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">Goodcall pricing</a></li>
         <li><a href="https://www.ringcentral.com/pricing/ai-receptionist.html" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">RingCentral AI Receptionist plans and pricing</a> and <a href="https://www.ringcentral.com/ai-receptionist.html" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">product page</a></li>
@@ -267,6 +327,13 @@ export const post: BlogPost = {
         <li><a href="https://masterofcode.com/ai-voice-bot-solutions" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">Master of Code Global voice bot solutions</a> and <a href="https://masterofcode.com/" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">home page</a></li>
         <li><a href="https://appinventiv.com/ai-voice-agent-development-services/" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">Appinventiv AI voice agent development services</a></li>
         <li><a href="https://www.raftlabs.com/services/ai-voicebot-development" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">RaftLabs AI voice agents</a></li>
+      </ul>
+      <p className="mb-4">Read on 21 October 2026.</p>
+      <ul className="list-disc pl-6 mb-4 space-y-2">
+        <li><a href="https://www.twilio.com/en-us/voice/pricing/us" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">Twilio US voice pricing</a></li>
+        <li><a href="https://www.groovyweb.co/blog/ai-voice-agent-development-cost" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">Groovy Web: AI voice agent development cost</a> (published 6 July 2026)</li>
+        <li><a href="https://masterofcode.com/blog/voice-ai-development-costs" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">Master of Code Global: voice AI development costs</a> (updated 14 September 2026)</li>
+        <li><a href="https://docs.fcc.gov/public/attachments/DOC-400393A1.pdf" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">FCC news release, 8 February 2024: AI-generated voices in robocalls</a></li>
       </ul>
     </>
   ),

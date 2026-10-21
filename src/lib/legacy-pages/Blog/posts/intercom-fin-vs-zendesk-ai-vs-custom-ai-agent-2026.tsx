@@ -5,8 +5,14 @@ import type { BlogPost, FAQItem } from '../data.types';
 /*
  * Intercom Fin vs Zendesk AI agents vs Salesforce Agentforce vs Gorgias AI Agent vs a custom-built agent (US, 2026).
  * Every statement about a vendor comes from that vendor's own pricing, product or help page, opened and read on
- * 11 October 2026. Dollar figures are the vendors' published list prices, plus one market range for a BUILD from
+ * 11 October 2026. The five pricing pages and the ProductCrafters page were re-read on 21 October 2026 (curl with a
+ * browser user agent, read in the page text); every price on this page is the 21 October figure. Changes found:
+ * Intercom Essential is $29 annual list ($19 is a new-customer offer), monthly seats $39/$99/$139; Fin Voice no
+ * longer has a public per-outcome price; Zendesk's committed-resolution price shows only in pounds (GBP 1.30) on
+ * the US page. Dollar figures are the vendors' published list prices, plus one market range for a BUILD from
  * ProductCrafters. None of them is a FactoryJet price.
+ * The worked example, decision table, Shopify section and vendor questions came from a 21 Oct draft that was
+ * never published (docs/reports/drafts/, since deleted).
  * This page carries no figure for what a custom agent costs to run or maintain, and no per-ticket or payback sums.
  * The general build or buy choice lives in ai-agent-build-vs-buy-2026.tsx and is linked, not repeated.
  * The FAQ array below is the single source for both the visible FAQ and the FAQPage JSON-LD
@@ -52,20 +58,24 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'I\'m weighing a no-code AI agent platform versus hiring developers to build bots. What\'s the real cost and ROI difference?',
-    a: 'A no-code platform has no build fee and bills by result: $0.99 per Fin outcome, $1.50 to $2.00 per Zendesk automated resolution beyond the plan allowance, $0.85 to $1.00 per Gorgias automated interaction (vendor pages, 11 October 2026). A custom build is a project price. Development firm ProductCrafters puts initial development of a customer service agent at $10,000 to $50,000. The return depends on what the agent can finish. A platform pays back fastest on common tickets. A build pays when the tickets that reach your team need systems or rules the platform cannot handle.',
+    a: 'A no-code platform has no build fee and bills by result: $0.99 per Fin outcome, $2.00 per pay-as-you-go Zendesk automated resolution beyond the plan allowance, $0.85 to $1.00 per Gorgias automated interaction (vendor pricing pages, read 21 October 2026). A custom build is a project price. Development firm ProductCrafters puts initial development of a customer service agent at $10,000 to $50,000. The return depends on what the agent can finish. A platform pays back fastest on common tickets. A build pays when the tickets that reach your team need systems or rules the platform cannot handle.',
   },
   // Named products: price and what they are
   {
     q: 'How much does Fin AI cost?',
-    a: 'Intercom lists Fin at $0.99 per outcome on every plan. With the Intercom help desk you also pay for seats: $19, $85 or $132 per seat per month on the Essential, Advanced and Expert plans, paid annually. On another help desk such as Zendesk or Salesforce there are no seat costs, and a minimum of 50 outcomes a month applies. Intercom says you are charged at most once per conversation. Prices read on intercom.com and fin.ai on 11 October 2026.',
+    a: 'Intercom lists Fin at $0.99 per outcome on every plan. With the Intercom help desk you also pay for seats: $29, $85 or $132 per seat per month on the Essential, Advanced and Expert plans paid annually, or $39, $99 and $139 paid monthly. New customers get Essential at $19. On another help desk such as Zendesk or Salesforce there are no seat costs, and a minimum of 50 outcomes a month applies. Prices read on intercom.com and fin.ai on 21 October 2026.',
   },
   {
     q: 'What is Fin vs Intercom?',
     a: 'Intercom is the company and its help desk: the shared inbox, tickets, help center and reporting your team works in. Fin is the AI agent Intercom built, which answers customers and can take actions. You can buy them together, or buy Fin alone and run it on a help desk you already have. Intercom lists Zendesk, Salesforce Service Cloud, HubSpot Service Hub and Freshdesk, plus any other help desk over an API.',
   },
   {
+    q: 'What counts as a Fin outcome?',
+    a: 'Intercom counts an outcome when the customer confirms the answer helped, when they leave without asking for more help, or when Fin completes a Procedure you set to end in a handoff. It bills at most one outcome per conversation, and nothing when a conversation is simply passed to your team. On 21 October 2026 fin.ai also listed $9.99 per qualified prospect when Fin works in a sales role. Read the definition in your contract, because it sets your bill.',
+  },
+  {
     q: 'How much does Intercom cost per month?',
-    a: 'The Intercom pricing page lists three help desk plans, paid annually: Essential at $19 per seat per month, Advanced at $85 and Expert at $132. Usage comes on top. Fin is $0.99 per outcome, the Copilot assistant is $29 per teammate per month, and channels such as SMS, WhatsApp and phone are billed by use. Advanced includes 20 free Lite seats and Expert 50. Figures read on 11 October 2026.',
+    a: 'The Intercom pricing page lists three help desk plans. Paid annually, Essential is $29 per seat per month (new customers pay $19), Advanced $85 and Expert $132. Paid monthly, they are $39, $99 and $139. Usage comes on top. Fin is $0.99 per outcome, the Copilot assistant is $29 per agent per month annually or $35 monthly, and SMS, WhatsApp and phone are billed by use. Figures read on 21 October 2026.',
   },
   {
     q: 'Does Zendesk have an AI agent?',
@@ -73,23 +83,35 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does a Zendesk AI agent cost?',
-    a: 'You pay for agent seats, then for automated resolutions beyond an allowance. Seats list at $19, $55 or $115 per agent per month, paid yearly, for Support Team, Suite Team and Suite Professional. Those plans include 5, 5 and 10 automated resolutions per agent per month. Extra resolutions list at $1.50 each if committed in advance or $2.00 pay-as-you-go. On the resolution tiers Zendesk introduced on 18 May 2026, only verified resolutions draw on the allowance. Read on zendesk.com on 11 October 2026.',
+    a: 'You pay for agent seats, then for automated resolutions beyond an allowance. Seats list at $19, $55 or $115 per agent per month, paid yearly, for Support Team, Suite Team and Suite Professional. Those plans include 5, 5 and 10 automated resolutions per agent per month. Extra resolutions list at $2.00 pay-as-you-go. Committed volumes cost less, though the US page showed that price only in pounds (£1.30). On the resolution tiers Zendesk introduced on 18 May 2026, only verified resolutions draw on the allowance. Read on zendesk.com on 21 October 2026.',
   },
   {
     q: 'What are the pricing plans for Zendesk?',
-    a: 'The Zendesk US pricing page showed four customer service plans on 11 October 2026. Support Team is $19 per agent per month, Suite Team $55 and Suite Professional $115, all paid yearly, or $25, $69 and $149 paid monthly. Suite Enterprise is sold through the sales team. Add-ons include Copilot at $50 per agent per month and Contact Center at $83. AI agents are in every plan, with extra automated resolutions at $1.50 to $2.00 each.',
+    a: 'The Zendesk US pricing page showed four customer service plans on 21 October 2026. Support Team is $19 per agent per month, Suite Team $55 and Suite Professional $115, all paid yearly, or $25, $69 and $149 paid monthly. Suite Enterprise is sold through the sales team. Add-ons include Copilot at $50 per agent per month and Contact Center at $83. AI agents are in every plan, with extra automated resolutions at $2.00 each pay-as-you-go and less on a committed volume.',
+  },
+  {
+    q: 'Why is Zendesk so expensive?',
+    a: 'Because a Zendesk bill has two parts: a seat for each human agent and a charge for each AI resolution beyond the plan allowance. In the worked example on this page, 10 agents on Suite Professional billed yearly cost $1,150 a month before any AI, and 1,900 extra resolutions at the $2.00 pay-as-you-go price add $3,800. A committed volume, fewer seats, a lower plan or AI on fewer ticket types brings it down. Prices read 21 October 2026.',
+  },
+  {
+    q: 'Can I use Zendesk for free?',
+    a: 'Not for long. Zendesk offers a 14-day free trial of its Customer Service Suite with Copilot included, and a paid plan is needed after that (pricing page, read 21 October 2026). The lowest listed plan was Support Team at $19 per agent per month billed yearly, or $25 monthly. Run the trial on real tickets so you see what share of your own questions the AI agent resolves.',
   },
   {
     q: 'How much does Agentforce cost?',
-    a: 'Salesforce lists three ways to pay. Flex Credits cost $500 per 100,000 credits, and a standard action uses 20 credits, which the examples on the Salesforce pricing page price at $0.10. Conversations cost $2 each for customer-facing agents. For staff use, Agentforce add-ons list at $125 per user per month and Max editions from $550. Salesforce licenses are separate, and the page says its examples leave out Data 360 credits. Read on salesforce.com on 11 October 2026.',
+    a: 'Salesforce lists three ways to pay. Flex Credits cost $500 per 100,000 credits, and a standard action uses 20 credits, which the examples on the Salesforce pricing page price at $0.10. Conversations cost $2 each for customer-facing agents. For staff use, Agentforce add-ons list at $125 per user per month and Max editions from $550. Salesforce licenses are separate, and the page says its examples leave out Data 360 credits. Read on salesforce.com on 21 October 2026.',
   },
   {
     q: 'What do I need before I can use Agentforce?',
     a: 'You need Salesforce. Agentforce runs on the Salesforce Platform and builds its actions from your existing flows, prompt templates, Apex code and APIs. Salesforce says customers can try it through Salesforce Foundations, a $0 add-on for Enterprise Edition and higher that includes credits for the first 1,000 conversations with Agentforce for Service. You also need an admin or developer who knows flows, because that is how the agent gets its actions.',
   },
   {
+    q: 'What is the difference between Salesforce and Agentforce?',
+    a: 'Salesforce is the company and its CRM platform. Agentforce is its AI agent layer, which works on Salesforce data inside products such as Service Cloud, so you need Salesforce for it to be useful. On 21 October 2026 Salesforce listed $2 per conversation for customer-facing agents, Flex Credits at $500 per 100,000, and an add-on at $125 per user per month for staff use.',
+  },
+  {
     q: 'How much does Gorgias charge?',
-    a: 'Gorgias prices its help desk by ticket volume. On 11 October 2026 its page listed Starter at $10 a month for 50 tickets, then Basic at $50, Pro at $300 and Advanced at $750 a month when billed annually, for 300, 2,000 and 5,000 tickets. AI Agent is extra: $1.00 per automated interaction on Starter, $0.90 on Basic and Pro, and $0.85 on Advanced. Gorgias says its help desk is never priced per agent.',
+    a: 'Gorgias prices its help desk by ticket volume. On 21 October 2026 its page listed Starter at $10 a month for 50 tickets, then Basic at $50, Pro at $300 and Advanced at $750 a month billed annually ($60, $360 and $900 monthly), for 300, 2,000 and 5,000 tickets. AI Agent is extra: $1.00 per automated interaction on Starter, $0.90 on Basic and Pro, and $0.85 on Advanced. Gorgias says its help desk is never priced per agent.',
   },
   // Alternatives and head-to-head searches
   {
@@ -117,6 +139,10 @@ const faqs: FAQItem[] = [
     a: 'The main differences are on their own pricing pages. Gorgias prices by ticket volume and says it never charges per agent, while Zendesk charges per agent seat. The Gorgias AI Agent is set up per Shopify store with a library of order actions, while Zendesk AI agents are not tied to a store platform and reach other systems through custom actions. Zendesk sells voice AI agents. Gorgias sells voice and SMS as add-ons to its help desk.',
   },
   {
+    q: 'Which AI support agent suits a Shopify store?',
+    a: 'Gorgias AI Agent if you already use Gorgias, because it is set up per Shopify store and its actions work on Shopify orders. Fin also runs on Gorgias, at $0.99 per outcome with a 50-outcome monthly minimum (fin.ai, read 21 October 2026). A custom agent fits when your returns, warranty or subscription rules are unusual, when orders also live in an ERP, or when you sell from several stores. It reads orders through the Shopify Admin API and writes only the fields your team approves.',
+  },
+  {
     q: 'Can I use Intercom Fin without moving off Zendesk?',
     a: 'Yes. Intercom sells Fin for Zendesk. Its page says Fin connects to your Zendesk instance via API, works on Zendesk tickets and messaging, updates tickets and custom fields, and hands off to your agents inside Zendesk. Pricing is $0.99 per outcome with minimum commitments and no per-agent cost from Intercom. You still pay Zendesk for your seats. Intercom says most teams go live in under an hour.',
   },
@@ -139,7 +165,20 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Which AI support agents can answer the phone?',
-    a: 'Intercom offers Fin Voice through its sales team. Zendesk voice AI agents need Zendesk voice and add telephony, connection-time and recording charges. Salesforce sells Agentforce Voice, where a voice action uses 30 Flex Credits. Gorgias docs list email, chat, SMS and social channels for its AI Agent, and Gorgias sells voice as a help desk add-on. FactoryJet builds custom AI voice agents for call centers as well as small offices, for calls that must read and write your own systems.',
+    a: 'Intercom offers Fin Voice to select customers through its sales team, with no public price on 21 October 2026. Zendesk voice AI agents need Zendesk voice and add telephony, connection-time and recording charges. Salesforce sells Agentforce Voice, where a voice action uses 30 Flex Credits. Gorgias docs list email, chat, SMS and social channels for its AI Agent, and Gorgias sells voice as a help desk add-on. FactoryJet builds custom AI voice agents for call centers as well as small offices, for calls that must read and write your own systems.',
+  },
+  // Data and switching
+  {
+    q: 'Who owns our support data and agent settings if we leave a vendor?',
+    a: 'It depends on the contract, so ask before you sign. Check who owns the conversation history, and whether the procedures, rules and tone settings you write inside the vendor tool can be exported, and in which format. None of the four pricing pages we read answers this. Get the answers in writing. With a custom agent, the code, prompts and test sets are yours from the start.',
+  },
+  {
+    q: 'How hard is it to switch from Zendesk to Intercom, or the other way?',
+    a: 'Ticket history can usually be moved with migration tools. The work is everything around it: help articles, macros, views, routing rules, reports and the AI procedures all need rebuilding, and the team needs retraining. Fin can run on top of Zendesk and several other help desks, which lets you test it without moving. Test the AI on your current help desk first, then decide whether a full move is worth it.',
+  },
+  {
+    q: 'Are AI support agents safe with customer data?',
+    a: 'Read each vendor data processing agreement for three things: where the data is stored, whether it trains models used by other customers, and how long logs are kept. Ask how the agent confirms who a customer is before it shares order details. With a custom build, the agent can be deployed in your own cloud account, with access limited to the fields each step needs.',
   },
   // Building one
   {
@@ -153,6 +192,10 @@ const faqs: FAQItem[] = [
   {
     q: 'How long does a custom support agent take to build?',
     a: 'Longer than switching on a rented one. As a guide, a pilot on one narrow workflow usually takes two to four weeks, and a production agent with permissions, logging and monitoring usually takes six to twelve weeks. The vendors in this guide say their agents can be set up in minutes or under an hour, though writing procedures and connecting systems takes longer. Build only when the rented route cannot do the job.',
+  },
+  {
+    q: 'How do we test an AI support agent before customers see it?',
+    a: 'Run it in shadow mode. The agent drafts replies on real, live tickets, and a person reviews each draft before anything is sent. You switch on automatic sending one ticket type at a time, only after drafts have been approved without edits often enough. The same test works for a rented agent and a custom one, and it shows you the handoff rate before a customer ever sees a reply.',
   },
   {
     q: 'Who owns a custom-built support agent?',
@@ -173,27 +216,27 @@ export const post: BlogPost = {
   slug: 'intercom-fin-vs-zendesk-ai-vs-custom-ai-agent-2026',
   title: 'Intercom Fin vs Zendesk AI vs a Custom AI Agent: What Each Can and Cannot Do (2026)',
   excerpt:
-    'Intercom Fin, Zendesk AI agents, Salesforce Agentforce and Gorgias AI Agent compared with a custom-built support agent: the help desk each runs on, the channels it answers, the systems it can act on, what each vendor bills for, and when renting or building is the right call. Every vendor fact was read on that vendor\'s own page on 11 October 2026.',
+    'Intercom Fin, Zendesk AI agents, Salesforce Agentforce and Gorgias AI Agent compared with a custom-built support agent: the help desk each runs on, the channels it answers, the systems it can act on, what each vendor bills for, a worked example at list prices, and when renting or building is the right call. Vendor pages read 11 October 2026, every price re-read 21 October 2026.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 11, 2026',
-  dateModified: 'Oct 11, 2026',
-  readTime: '23 min read',
+  dateModified: 'Oct 21, 2026',
+  readTime: '27 min read',
   imageUrl: '/images/blog/intercom-fin-vs-zendesk-ai-vs-custom-ai-agent-2026/hero.webp',
   imageAlt:
     'A woman in a navy sweater and a man in a gray shirt stand at a wooden table looking down at five blank cards in a row, four gray and one orange, as she touches the orange card.',
   meta: {
     title: 'Intercom Fin vs Zendesk AI vs Custom AI Agent (2026)',
     description:
-      'Fin, Zendesk AI agents, Agentforce and Gorgias compared with a custom build: list prices, channels and the systems each can act on. Read 11 Oct 2026.',
+      'Fin, Zendesk AI agents, Agentforce and Gorgias compared with a custom build: list prices read 21 Oct 2026, a worked example and a decision table.',
   },
   keyTakeaways: [
     'Rent when your tickets are common ones and the systems behind them have a modern API. Build when the work crosses systems the vendor builders cannot reach, needs approval rules across systems, or happens outside the help desk.',
-    'Intercom Fin lists at $0.99 per outcome and runs on Intercom, Zendesk, Salesforce Service Cloud, HubSpot Service Hub and Freshdesk. On another help desk a minimum of 50 outcomes a month applies (intercom.com and fin.ai, 11 October 2026).',
-    'Zendesk AI agents are in every Suite and Support plan. Extra automated resolutions list at $1.50 committed or $2.00 pay-as-you-go. Since 18 May 2026 Zendesk sorts results into three tiers, and only verified resolutions draw on the allowance.',
+    'Intercom Fin lists at $0.99 per outcome and runs on Intercom, Zendesk, Salesforce Service Cloud, HubSpot Service Hub and Freshdesk. On another help desk a minimum of 50 outcomes a month applies (intercom.com and fin.ai, read 21 October 2026).',
+    'Zendesk AI agents are in every Suite and Support plan. Extra automated resolutions list at $2.00 pay-as-you-go, less on a committed volume. Since 18 May 2026 Zendesk sorts results into three tiers, and only verified resolutions draw on the allowance.',
     'Salesforce Agentforce lists at $500 per 100,000 Flex Credits, with 20 credits per standard action, or $2 per conversation. It builds its actions from flows, Apex and APIs you already have in Salesforce.',
     'Gorgias AI Agent lists at $0.85 to $1.00 per automated interaction and is set up per connected Shopify store. Its order actions need the Basic plan or higher.',
-    'The four billing units are four different things, so the prices cannot be lined up as dollars per ticket. Read what each vendor counts before you compare.',
+    'The four billing units are four different things. At list prices, 10 agents and 2,000 AI conversations a month come to $2,100 to $4,950 a month across the four vendors, if every conversation is billed. Read what each vendor counts before you compare.',
     'You can keep a rented agent and have only the missing piece built. All four accept custom actions or API connectors.',
     'No figure on this page is a FactoryJet price. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.',
   ],
@@ -216,7 +259,8 @@ export const post: BlogPost = {
         <p className="text-sm text-[#1F2937] leading-relaxed mb-0">
           <strong>We build custom agents, so weigh this page with that in mind.</strong> Every statement about Intercom,
           Zendesk, Salesforce and Gorgias comes from that company&apos;s own pricing, product or help page, opened and
-          read on 11 October 2026 and linked where it appears. The dollar figures are those vendors&apos; published list
+          read on 11 October 2026 and linked where it appears. We re-read every pricing page on 21 October 2026, and
+          every price here is the 21 October figure. The dollar figures are those vendors&apos; published list
           prices, plus one market range for a build from a named firm. None of them is a FactoryJet price. Vendors
           change prices and plan names often, so check the linked page before you budget.
         </p>
@@ -229,10 +273,11 @@ export const post: BlogPost = {
         next to a fifth option, an agent built for you.
       </p>
       <p>
-        Several of the comparison pages we read line these products up by price per ticket. That does not work, because
-        the four bill in four different units and a custom build is priced as a project. So this guide compares them on
-        what each can do: the help desk it runs on, the channels it answers, the systems it can act on, and what it needs
-        from you.
+        Several of the comparison pages we read line these products up by price per ticket. On its own that misleads,
+        because the four bill in four different units and a custom build is priced as a project. So this guide compares
+        them first on what each can do: the help desk it runs on, the channels it answers, the systems it can act on, and
+        what it needs from you. Then it runs one worked example at list prices, with every assumption stated, so you can
+        redo the sum with your own numbers.
       </p>
       <p>
         The general choice between building and buying, with builders such as n8n, Make and Copilot Studio, is in our{' '}
@@ -280,7 +325,7 @@ export const post: BlogPost = {
               </td>
               <td className="p-3 border border-gray-200">Zendesk Suite and Support plans</td>
               <td className="p-3 border border-gray-200">
-                Automated resolutions: an allowance in the plan, then $1.50 committed or $2.00 pay-as-you-go
+                Automated resolutions: an allowance in the plan, then $2.00 pay-as-you-go, or less on a committed volume
               </td>
               <td className="p-3 border border-gray-200">Your team already works in Zendesk</td>
             </tr>
@@ -344,8 +389,8 @@ export const post: BlogPost = {
               </td>
               <td className="p-3 border border-gray-200">Outcome, $0.99</td>
               <td className="p-3 border border-gray-200">
-                Intercom seats at $19, $85 or $132 per seat per month, paid annually. Or no seats and a 50-outcome
-                monthly minimum on another help desk
+                Intercom seats at $29, $85 or $132 per seat per month paid annually ($39, $99 or $139 monthly; new
+                customers pay $19 for Essential). Or no seats and a 50-outcome monthly minimum on another help desk
               </td>
               <td className="p-3 border border-gray-200">
                 The customer confirms the answer helped or leaves without asking for more, or Fin completes a Procedure
@@ -358,7 +403,8 @@ export const post: BlogPost = {
               </td>
               <td className="p-3 border border-gray-200">
                 Automated resolution. 5, 5 and 10 per agent per month are included on Support Team, Suite Team and Suite
-                Professional, then $1.50 committed or $2.00 pay-as-you-go
+                Professional, then $2.00 pay-as-you-go. The committed price showed only in pounds (£1.30) on the US
+                page on 21 October 2026
               </td>
               <td className="p-3 border border-gray-200">
                 Agent seats at $19, $55 or $115 per agent per month, paid yearly
@@ -395,7 +441,7 @@ export const post: BlogPost = {
               </td>
               <td className="p-3 border border-gray-200">
                 A help desk plan by ticket volume: $10 a month for 50 tickets, up to $750 a month for 5,000 when billed
-                annually
+                annually ($900 monthly)
               </td>
               <td className="p-3 border border-gray-200">
                 Gorgias says you pay only when the AI Agent resolves a conversation
@@ -439,8 +485,8 @@ export const post: BlogPost = {
       <p>
         Each vendor leads with a number. Intercom says{' '}
         <a href={SRC.finZendesk} target="_blank" rel="noopener noreferrer">Fin resolves 76 percent of customer queries
-        on average</a>. Zendesk&apos;s pricing page says its AI agents resolve up to 80 percent or more of service
-        issues. Gorgias shows{' '}
+        on average</a>. Zendesk&apos;s pricing page says its AI agents resolve up to 80 percent of even the most
+        complex service issues. Gorgias shows{' '}
         <a href={SRC.gorgiasAgent} target="_blank" rel="noopener noreferrer">48 to 53 percent of conversations
         automated</a> across five industries. One is an average, one is a ceiling and one is a set of industry figures,
         and each vendor counts a resolution its own way.
@@ -461,6 +507,75 @@ export const post: BlogPost = {
         handle refunds, access order data and escalate complex issues (page modified 20 May 2026). That is a market
         range from a named firm and no FactoryJet price. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call, and we can keep managing the servers, the AI, the APIs and the
         maintenance so your team does not have to.
+      </p>
+
+      <h2 id="worked-example">A worked example: 10 agents and 2,000 AI conversations a month, at list prices</h2>
+      <p>
+        Here is one support team priced five ways. It has 10 human agents, and 2,000 conversations a month are handled by
+        the AI. Prices are the list prices we read on each vendor&apos;s pricing page on 21 October 2026, with annual
+        billing where it is offered. The sum assumes every one of those 2,000 conversations is billable, so it is the
+        ceiling for each vendor.
+      </p>
+      <div className="overflow-x-auto my-6">
+        <table className="w-full border-collapse text-sm">
+          <thead>
+            <tr className="bg-gray-800 text-white">
+                <th className="p-3 text-left border border-gray-700">Setup</th>
+                <th className="p-3 text-left border border-gray-700">Arithmetic</th>
+                <th className="p-3 text-left border border-gray-700">Monthly total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Gorgias Pro, on a Shopify store</td>
+              <td className="p-3 border border-gray-200">$300 help desk, plus 2,000 interactions &times; $0.90 = $1,800</td>
+              <td className="p-3 border border-gray-200">$2,100, before any ticket overage ($36 per 100 tickets on Pro)</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">Intercom Advanced with Fin</td>
+              <td className="p-3 border border-gray-200">10 seats &times; $85 = $850, plus 2,000 outcomes &times; $0.99 = $1,980</td>
+              <td className="p-3 border border-gray-200">$2,830</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Fin for Zendesk on Suite Professional</td>
+              <td className="p-3 border border-gray-200">10 Zendesk seats &times; $115 = $1,150, plus 2,000 Fin outcomes &times; $0.99 = $1,980</td>
+              <td className="p-3 border border-gray-200">$3,130</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">Agentforce, conversation pricing</td>
+              <td className="p-3 border border-gray-200">2,000 conversations &times; $2 = $4,000</td>
+              <td className="p-3 border border-gray-200">$4,000, plus the Salesforce licenses underneath</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Zendesk Suite Professional with its AI agents</td>
+              <td className="p-3 border border-gray-200">10 seats &times; $115 = $1,150, plus (2,000 &minus; 100 included) &times; $2.00 = $3,800</td>
+              <td className="p-3 border border-gray-200">$4,950</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The spread runs from $2,100 to $4,950 a month for the same 2,000 conversations. Three things move it.</p>
+      <ul className="list-disc pl-6 space-y-3 mb-6">
+        <li>
+          <strong>What each vendor counts.</strong> Fin bills outcomes, Zendesk verified resolutions and Gorgias
+          resolved interactions, so their real bills fall in line with how many conversations close. Agentforce
+          conversation pricing bills each conversation.
+        </li>
+        <li>
+          <strong>Committed volume.</strong> Zendesk sells committed resolutions below the $2.00 pay-as-you-go price,
+          but its US page showed that price only in pounds (£1.30) on 21 October 2026, so we left it out of the dollar
+          sums. Ask for it in dollars.
+        </li>
+        <li>
+          <strong>Seats you already pay for.</strong> A team already on Zendesk pays the $1,150 in seats whichever
+          agent it adds. The question there is $3,800 for Zendesk&apos;s own agent against $1,980 for Fin, on the same
+          tickets.
+        </li>
+      </ul>
+      <p>
+        Every one of these bills grows with volume. A custom agent is priced as a project instead: a market range of
+        $10,000 to $50,000 to build a customer service agent, per ProductCrafters (see above), and a fixed quote in
+        writing from FactoryJet after scoping.
       </p>
 
       <h2 id="channels-systems">Which channels each agent answers, and which systems it can act on</h2>
@@ -593,8 +708,10 @@ export const post: BlogPost = {
         it first. On a help desk other than Intercom, a minimum of 50 outcomes a month applies.
       </td></tr></tbody></table>
       <p>
-        Confirm phone pricing in writing. The Intercom pricing page lists Fin Voice at $1.99 per voice outcome through
-        its sales team, while the Fin pricing page says voice is on a custom pricing plan for select customers.
+        Confirm phone pricing in writing. On 11 October 2026 the Intercom pricing page listed Fin Voice at $1.99 per
+        voice outcome. When we re-read it on 21 October that figure was gone, and the{' '}
+        <a href={SRC.finPricing} target="_blank" rel="noopener noreferrer">Fin pricing page</a> said Fin Voice is
+        offered to select customers working with the sales team, on tailored pricing.
       </p>
 
       <h2 id="zendesk-ai-agents">Zendesk AI agents: included in the plan, billed on verified resolutions</h2>
@@ -696,6 +813,28 @@ export const post: BlogPost = {
         ERP that serves wholesale accounts. Ask Gorgias what the AI Agent can act on in that case before you plan
         around it.
       </td></tr></tbody></table>
+
+      <h3 id="shopify-stores">On Shopify: Gorgias, Fin on Gorgias, or a custom agent</h3>
+      <p>
+        Gorgias says it powers customer conversations for 40 percent of Shopify brands, and its pricing table lists
+        Shopify and Shopify Plus, WooCommerce and BigCommerce (read 21 October 2026). Each plan&apos;s AI Agent bundle
+        includes a set number of automated interactions a month: 30 on Starter and Basic, 190 on Pro and 530 on
+        Advanced. On Pro billed annually that is $300 for the help desk plus $171 for the AI Agent, or 190 interactions
+        at $0.90. If you already use Gorgias, its AI Agent is the shortest path, because it already sees the order.
+      </p>
+      <p>
+        Fin is the second option on the same help desk.{' '}
+        <a href={SRC.finPricing} target="_blank" rel="noopener noreferrer">fin.ai lists Gorgias</a> among the help
+        desks Fin works with, alongside Salesforce, HubSpot, Freshworks, Dixa, Front, Zoho and Sprinklr. A store can
+        keep Gorgias and trial Fin at $0.99 per outcome, with a 50-outcome monthly minimum. Run both on the same tickets
+        before paying for two.
+      </p>
+      <p>
+        A custom agent on the Shopify Admin API fits stores with unusual return or warranty rules, subscriptions, B2B
+        accounts, or several stores and a warehouse system behind them. It reads orders and tracking, starts approved
+        returns and writes only the fields your team approves. It can work inside Gorgias through its API, so the team
+        keeps its inbox. See <a href="/services/ecommerce-ai-agents">ecommerce AI agents</a>.
+      </p>
 
       <h2 id="custom-build">A custom-built agent: for work that leaves the help desk</h2>
       <p>
@@ -906,9 +1045,11 @@ export const post: BlogPost = {
       <h3 id="zendesk-vs-intercom">Zendesk vs Intercom</h3>
       <p>
         Both sell a help desk by the seat and an AI agent billed on results. Zendesk seats list at $19, $55 and $115 per
-        agent per month paid yearly, and Intercom seats at $19, $85 and $132 per seat per month paid annually. Zendesk
-        includes an allowance of automated resolutions in the plan and bills $1.50 to $2.00 beyond it. Intercom bills
-        $0.99 per outcome from the first one. The two count a result differently, as the section on billing units
+        agent per month paid yearly, and Intercom seats at $29, $85 and $132 per seat per month paid annually (both
+        read 21 October 2026). Zendesk includes an allowance of automated resolutions in the plan and bills $2.00
+        pay-as-you-go beyond it, less on a committed volume. Intercom bills $0.99 per outcome from the first one. In
+        the worked example above, Intercom Advanced with Fin came to $2,830 a month and Zendesk Suite Professional to
+        $4,950. The two count a result differently, as the section on billing units
         shows, so the unit prices do not settle the choice. Run both on the same tickets.
       </p>
 
@@ -920,6 +1061,60 @@ export const post: BlogPost = {
         specifically for ecommerce and Shopify&quot;. Zendesk describes plans for support teams of any kind, from
         teams that have outgrown a shared inbox to complex contact centers.
       </p>
+
+      <h2 id="decision-table">Decision table: find your situation, read the pick</h2>
+      <p>
+        Most teams match more than one row. The help desk you keep usually decides the vendor. The actions your tickets
+        need decide whether you also build.
+      </p>
+      <div className="overflow-x-auto my-6">
+        <table className="w-full border-collapse text-sm">
+          <thead>
+            <tr className="bg-gray-800 text-white">
+                <th className="p-3 text-left border border-gray-700">If this is you</th>
+                <th className="p-3 text-left border border-gray-700">Pick</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">You want an agent live this month, and most answers are in your help articles</td>
+              <td className="p-3 border border-gray-200">Rent the agent that belongs to your help desk: Fin, Zendesk AI agents or Gorgias AI Agent</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">You run Zendesk and like it</td>
+              <td className="p-3 border border-gray-200">Zendesk AI agents first, with Fin for Zendesk trialled on the same tickets</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">You run Intercom, or want an agent on Salesforce, HubSpot, Freshdesk, Front or Gorgias</td>
+              <td className="p-3 border border-gray-200">Intercom Fin</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">Your service team lives in Salesforce Service Cloud</td>
+              <td className="p-3 border border-gray-200">Agentforce</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">You sell on Shopify and most tickets are about orders</td>
+              <td className="p-3 border border-gray-200">Gorgias AI Agent, or a custom agent on the Shopify Admin API when return rules are unusual</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">One action is missing from the agent you rent</td>
+              <td className="p-3 border border-gray-200">Keep the agent and have that one action built (the middle route above)</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Tickets need actions in an ERP, a warehouse system or several stores at once</td>
+              <td className="p-3 border border-gray-200">A custom agent connected to those systems, working inside your help desk</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">Your AI-handled volume is high and growing</td>
+              <td className="p-3 border border-gray-200">Get a fixed build quote and set it against two years of the vendor bill at your volume, plus what the build costs to host and support</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">You need the prompts, logs and code in your own cloud account</td>
+              <td className="p-3 border border-gray-200">A custom agent</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2 id="how-to-choose">How to choose in one afternoon</h2>
       <p>You can settle most of this with a ticket export and a spreadsheet.</p>
@@ -939,6 +1134,25 @@ export const post: BlogPost = {
         <a href="/blog/ai-customer-support-agent-architecture-guide">support agent architecture guide</a>. For store-side
         tools beyond support, see{' '}
         <a href="/blog/best-ai-agents-for-ecommerce-2026">the best AI agents for ecommerce</a>.
+      </p>
+
+      <h2 id="vendor-questions">Seven questions to send every vendor before you sign</h2>
+      <p>
+        None of the five pricing pages we read on 21 October 2026 answers these. The answers sit in contracts and data
+        processing agreements, which is why you ask before signing and keep the replies in writing.
+      </p>
+      <ol className="list-decimal pl-6 space-y-2 mb-6">
+        <li>Can we export every conversation the AI handled, with the AI reply and the result you billed for, in a file we can open?</li>
+        <li>Who owns the procedures, rules and tone settings we write in your tool, and can we export them?</li>
+        <li>Is our conversation data used to train models that other customers use? Where does the contract say so?</li>
+        <li>Which region stores our data, and can we choose it?</li>
+        <li>If we move help desks, does the AI agent come with us or stay behind?</li>
+        <li>How do we audit why the agent gave a particular answer or took an action?</li>
+        <li>What does an outcome or resolution mean in the contract, word for word, and how do we dispute one?</li>
+      </ol>
+      <p>
+        Questions 1 and 7 set your bill. Questions 2 and 5 set how hard it is to leave. With a custom build, the code,
+        prompts and test sets are yours from the start, so the same questions become a checklist for the builder.
       </p>
 
       <h2 id="how-factoryjet-works">How FactoryJet works on a custom support agent</h2>
@@ -963,8 +1177,10 @@ export const post: BlogPost = {
 
       <h2 id="sources">Sources</h2>
       <p className="text-sm text-gray-600">
-        All pages opened and read on 11 October 2026. Vendors change prices and plan names often, so check the source
-        before you budget.
+        All pages opened and read on 11 October 2026. The five pricing pages (Intercom, Fin, Zendesk, Agentforce,
+        Gorgias), Service Cloud pricing and ProductCrafters were re-read on 21 October 2026, and every price on this
+        page is the 21 October figure. Vendors change prices and plan names often, so check the source before you
+        budget.
       </p>
       <ul className="list-disc pl-6 space-y-1 text-sm mb-8">
         <li>

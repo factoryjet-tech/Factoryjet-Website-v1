@@ -8,7 +8,7 @@ import '../ai-agents/ai-agents.css';
 import { aiDevelopmentAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-development';
-const UPDATED = '2026-10-10';
+const UPDATED = '2026-10-21';
 const TITLE = 'AI Development Company UK | Custom AI You Own | FactoryJet';
 const H1 = 'The AI Development Company for UK Businesses That Builds Custom AI Into the Systems You Already Run';
 const DESCRIPTION =
@@ -110,6 +110,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'A focused first project usually takes 6 to 14 weeks from kick-off to live use. Discovery takes 1 to 2 weeks, data preparation 1 to 4 weeks, a working prototype 2 to 4 weeks, the production build and integrations 3 to 8 weeks, and a pilot with real users 2 to 4 weeks. Messy data and older systems stretch the timeline; a clear, narrow job shortens it.' },
   { category: 'delivery', question: 'How much does it cost to build custom AI?',
     answer: 'It depends on scope, not a rate card. The biggest drivers are how many systems the AI must connect to, how clean your data is, how accurate it needs to be, how much personal data it touches, and whether you want ongoing support. We scope after a free first call and quote a fixed price per phase, so nothing is open-ended. Model usage is billed to you directly by the provider.' },
+  { category: 'delivery', question: 'What is the average hourly rate for software developers in the UK?',
+    answer: 'ITJobsWatch, which tracks UK job adverts, put the median software developer contract rate at £525 a day, or £52.50 an hour, for the six months to 21 October 2026. The middle 80% of adverts ran from £365 to £615 a day. Contract rates cover the contractor’s own tax, pension and the gaps between contracts, so they look higher than a salary worked out per hour. FactoryJet quotes a fixed price per phase rather than billing by the hour.' },
   { category: 'delivery', question: 'How do I implement AI in my company?',
     answer: 'Start with one job, not a strategy document. Pick a repeated task where mistakes are low-risk and results are easy to measure. Check the data it needs. Try a ready-made tool first. If that falls short, build a small prototype, test it on real cases, run a short pilot with the people who do the job, then roll out with training and monitoring. Add the next job only after the first one works.' },
   { category: 'delivery', question: 'What are the stages of the AI development lifecycle?',

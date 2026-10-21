@@ -26,8 +26,12 @@ import '../ai-agents/ai-agents.css';
       FAQ renders. Never add a second list of questions. */
 
 const CANONICAL = 'https://factoryjet.com/uk/shopify-xero-integration';
-const UPDATED = '2026-10-11';
+const UPDATED = '2026-10-21';
 const READ_ON = '11 October 2026';
+/* The bundles, discounts, stock and Cin7 Core / Unleashed facts were read on
+   the makers' own pages on 2026-10-21 (Xero Developer and Cin7 Core help in a
+   real browser, because they do not render for a plain fetch). */
+const READ_ON_STOCK = '21 October 2026';
 const TITLE = 'Shopify Xero Integration UK: Apps vs Custom | FactoryJet';
 const H1 = 'Shopify Xero Integration for UK Sellers: Every Sale, Refund, Fee and Payout in Your Books, VAT Split Out';
 const DESCRIPTION =
@@ -86,6 +90,18 @@ const SRC = {
   govExports: { label: 'GOV.UK: Exports, sending goods abroad and charging VAT', url: 'https://www.gov.uk/guidance/vat-exports-dispatches-and-supplying-goods-abroad' },
   govMtdIncome: { label: 'GOV.UK: when to use Making Tax Digital for Income Tax', url: 'https://www.gov.uk/guidance/find-out-if-and-when-you-need-to-use-making-tax-digital-for-income-tax' },
   govMtdSoftware: { label: 'GOV.UK: software for Making Tax Digital for VAT', url: 'https://www.gov.uk/guidance/find-software-thats-compatible-with-making-tax-digital-for-vat' },
+  // Read on 2026-10-21 for the bundles, discounts and stock section.
+  xeroWebhooks: { label: 'Xero Developer: webhooks overview', url: 'https://developer.xero.com/documentation/guides/webhooks/overview/' },
+  xeroInvoices: { label: 'Xero Developer: Invoices API', url: 'https://developer.xero.com/documentation/api/accounting/invoices' },
+  shopifyBundles: { label: 'Shopify Dev: bundles', url: 'https://shopify.dev/docs/apps/build/product-merchandising/bundles' },
+  cin7XeroProducts: { label: 'Cin7 Core Help: Sync products with Xero', url: 'https://help.core.cin7.com/hc/en-us/articles/13000990556431-Sync-products-with-Xero' },
+  cin7Assembly: { label: 'Cin7 Core Help: Introduction to Standard Manufacturing', url: 'https://help.core.cin7.com/hc/en-us/articles/9034465572111-Introduction-to-Standard-Manufacturing' },
+  cin7XeroApp: { label: 'Xero App Store UK: Cin7 Core', url: 'https://apps.xero.com/uk/app/cin7-core' },
+  cin7Pricing: { label: 'Cin7: pricing', url: 'https://www.cin7.com/pricing/' },
+  unleashedXero: { label: 'Unleashed Help: Xero integration introduction', url: 'https://help-unleashed.theaccessgroup.com/en/articles/11582210-xero-integration-introduction' },
+  unleashedAssembly: { label: 'Unleashed Help: Auto assemblies', url: 'https://help-unleashed.theaccessgroup.com/en/articles/11582019-auto-assemblies' },
+  unleashedPricing: { label: 'Unleashed UK: pricing', url: 'https://www.unleashedsoftware.com/en-gb/pricing/' },
+  xeroSwitch: { label: 'Xero UK: switch to Xero from Sage, QuickBooks or Kashflow', url: 'https://www.xero.com/uk/campaign/business-switch/' },
 } as const;
 
 type SrcKey = keyof typeof SRC;
@@ -140,6 +156,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     question: 'Does Shopify feed into QuickBooks as well?',
     answer:
       'Yes. Shopify connects to QuickBooks through a separate set of apps, and the questions are the same: which system owns each record, and how payouts, fees and tax reach the books. Our Shopify QuickBooks integration page covers that route. In the UK the Xero pairing is searched for more often: 260 searches a month for Shopify Xero integration against 70 for the QuickBooks pairing (DataForSEO, United Kingdom, 11 October 2026).',
+  },
+  {
+    category: 'basics',
+    question: 'We use Sage 50. Should we connect Shopify to it or move to Xero?',
+    answer:
+      'The posting questions do not change with the accounts package: sales split by VAT rate, refunds as credits, fees on their own line and payouts matched to the bank. If you are moving to Xero anyway, Xero’s UK switch page says its partner Movemybooks converts up to 24 months of Sage accounts for free, with extra years at £60 plus VAT each (read on 21 October 2026). Agree a cut-over date with your accountant so no Shopify sale posts to both systems.',
   },
   // Connector apps
   {
@@ -251,6 +273,30 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     question: 'Can Xero send stock levels or prices to Shopify?',
     answer:
       'Xero’s listing for its own Shopify integration describes data moving from Shopify into Xero, and mentions nothing going back. Amaka’s page lists a daily stock-on-hand sync. Xero itself recommends no more than 4,000 tracked inventory items in one organisation. If your stock or price list is kept in Xero, a warehouse system or an ERP and the shop has to follow it, that is a custom link. FactoryJet builds these, with the owner of each number agreed in writing first.',
+  },
+  {
+    category: 'custom',
+    question: 'Can a Shopify bundle show as separate component lines on a Xero invoice?',
+    answer:
+      'Yes, with a link that knows what each bundle contains. Shopify’s developer documentation says bundles built on its own bundle model return order lines for each component, linked to the bundle parent. Some bundle apps send only the bundle line. The link then writes one Xero line for each part, with its own item code, quantity and share of the price, and puts any rounding penny on one line so the invoice still equals what the customer paid. Every part needs a SKU.',
+  },
+  {
+    category: 'custom',
+    question: 'How often can stock sync from Xero to Shopify?',
+    answer:
+      'As often as the API limits allow, because Xero has no webhook for items or stock. Its webhooks cover contacts, credit notes, invoices, overpayments, prepayments and subscriptions. A link therefore checks Xero on a timer. Every five minutes is 288 checks a day, inside the 1,000 daily calls Xero allows each organisation on its starter tier, if each check is one call. Read on 21 October 2026.',
+  },
+  {
+    category: 'custom',
+    question: 'Do we need Cin7 Core or Unleashed, or can Xero hold our stock?',
+    answer:
+      'Xero can hold stock for a simple catalogue; it recommends no more than 4,000 tracked items. Cin7 Core or Unleashed fit when you add a warehouse, purchase orders, several locations or assembled packs. Both then own stock and post the accounting to Xero. Cin7 Core’s help page says it does not support Xero inventory tracking and tells you to turn it off. List prices on 21 October 2026: Cin7 Core from US$349 a month, Unleashed from £269 a month, both before tax.',
+  },
+  {
+    category: 'vat',
+    question: 'How do Shopify discounts appear on a Xero invoice?',
+    answer:
+      'As a discount on each line, or as a lower unit price. Xero’s Invoices API accepts a discount rate or amount on each line of a sales invoice, and says credit notes do not support discounts. So a refund of a discounted order posts at the net price on each line. Send VAT-inclusive or VAT-exclusive amounts consistently, because Shopify UK prices usually include VAT, and mixing the two leaves penny differences on every order. Read on 21 October 2026.',
   },
   {
     category: 'custom',
@@ -437,6 +483,19 @@ const COMPARE: { feat: string; xero: string; amaka: string; lmb: string; a2x: st
   },
 ];
 
+/* Cin7 Core and Unleashed, side by side. Every cell restates the maker's own
+   page, read on 2026-10-21. Cin7 lists prices in US dollars; Unleashed's UK page
+   lists pounds. Both exclude tax. */
+const STOCK_SYSTEMS: { q: string; cin7: string; unl: string }[] = [
+  { q: 'Entry list price', cin7: 'Standard US$349 a month, Pro US$599, Advanced US$1,199, before tax', unl: 'Core £269 a month, Pro £499, before tax' },
+  { q: 'What the entry plan includes', cin7: '2 ecommerce or app integrations on Standard, more for purchase', unl: '3 users, 100 sales orders a month (upgrades to 500, 1,500, 3,000 or unlimited) and 3 basic integrations' },
+  { q: 'API access', cin7: 'Listed as an add-on on every Core plan', unl: '250,000 API calls a month on Core' },
+  { q: 'What reaches Xero', cin7: 'Invoices, bills and journal entries, per the Xero App Store listing', unl: 'Sales, stock receipts and adjustments, with product details carried in each transaction line' },
+  { q: 'Xero inventory tracking', cin7: 'Not supported. Its help page says to turn tracking off in Xero', unl: 'Not covered on the help page we read. Ask Unleashed in writing before you change tracked items in Xero' },
+  { q: 'Bundles', cin7: 'An assembly bill of materials for packs and kits, assembled by hand or automatically', unl: 'Auto assemblies: a parked assembly is created for the short quantity on a sales order' },
+  { q: 'Best fit', cin7: 'Several channels, a B2B portal or point of sale beside Shopify', unl: 'Make-to-order packs, gift sets and multi-packs, with purchasing and production' },
+];
+
 /* JSON-LD. The Organization is referenced by @id only and is defined once,
    sitewide. Never redefine it here. */
 const jsonLd = {
@@ -531,10 +590,10 @@ const srcLink = { textDecoration: 'underline' } as const;
 const inlineLink = { textDecoration: 'underline', color: T.ink, fontWeight: 600 } as const;
 
 /* Small source line. Every id comes from the SRC map above. */
-function Sources({ ids }: { ids: SrcKey[] }) {
+function Sources({ ids, on = READ_ON }: { ids: SrcKey[]; on?: string }) {
   return (
     <p style={srcNote}>
-      Sources, read on {READ_ON}:{' '}
+      Sources, read on {on}:{' '}
       {ids.map((id, i) => (
         <span key={id}>
           {i > 0 ? '; ' : ''}
@@ -577,7 +636,7 @@ export default function ShopifyXeroIntegrationUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="upd">Last updated<br />{READ_ON_STOCK}</div>
                 </div>
 
                 <div className={styles.heroForm} style={{ maxWidth: 560 }}>
@@ -1010,6 +1069,95 @@ export default function ShopifyXeroIntegrationUKPage() {
           </div>
         </section>
 
+        {/* 10b. BUNDLES, DISCOUNTS, VAT AND STOCK (added 2026-10-21) */}
+        <section className="sec-lg" id="bundles-and-stock">
+          <div className="wrap">
+            <div style={{ maxWidth: 820 }}>
+              <span className="eyebrow">Where links break</span>
+              <h2>Bundles, discount lines and stock: where a Shopify Xero link needs its own rules</h2>
+              <p className="lead mt-4">
+                A payout summary tells Xero how much you sold at each VAT rate. It does not tell Xero which
+                components left the shelf, and it sends nothing back to Shopify. Stores that sell bundles, invoice
+                each order in Xero or keep stock in Xero hit the same three problems.
+              </p>
+            </div>
+
+            <div className="stack mt-10" style={{ maxWidth: 820 }}>
+              <h3>Bundles split into component lines on the Xero invoice</h3>
+              <p>
+                A customer buys one bundle: a frame, a canopy and a set of side walls, sold as one product at one
+                price. Your warehouse picks three items, and Xero has to show three lines, each with its own item
+                code, quantity and share of the price. Shopify&rsquo;s developer documentation says bundles built on
+                its own bundle model return order lines for each component, with a reference to the bundle parent.
+                Some bundle apps record only the bundle line, with the parts held in line properties. Open one real
+                order export before choosing an app, because the shape of that export decides the rest of the job.
+              </p>
+              <p>
+                Three rules then need writing down with your accountant. How the bundle price is spread across its
+                parts (for example, in proportion to each part&rsquo;s own price). Which part takes the rounding penny,
+                so the lines still add up to what the customer paid. And what happens when a variant has no SKU,
+                because a line with no item code cannot reduce a Xero stock count.
+              </p>
+
+              <h3 className="mt-6">VAT, discount and shipping lines</h3>
+              <p>
+                Xero&rsquo;s Invoices API takes a discount on each line, as a percentage or an amount, and works the
+                line total out as quantity times unit price times (100 minus the discount rate) over 100. The same
+                page says discounts are supported only on sales invoices and quotes. Credit notes do not take them,
+                so a refund of a discounted bundle has to post at the net price on each line, not as a discount.
+                Shopify UK prices usually include VAT, so the invoice is sent with VAT-inclusive line amounts or
+                converted first. Pick one, or the pennies drift on every order. Shipping goes on its own line with
+                the account and VAT rate your accountant chooses.
+              </p>
+
+              <h3 className="mt-6">Stock sync when Xero has no stock webhook</h3>
+              <p>
+                Xero&rsquo;s webhooks cover contacts, credit notes, invoices, overpayments, prepayments and App
+                Store subscriptions. There is no event for items or stock levels. A link that sends Xero stock to
+                Shopify therefore checks Xero on a timer, and can also re-read the items on any invoice the invoice
+                webhook reports. The timer sits inside Xero&rsquo;s API limits: 60 calls a minute and, on the
+                starter tier, 1,000 a day for each organisation. A check every five minutes is 288 a day (12 an hour
+                for 24 hours). If each check is one call, that leaves 712 of the 1,000 for invoices and payments.
+              </p>
+              <p>
+                One more rule to agree: what happens when an order arrives for stock Xero says you do not have.
+                Xero&rsquo;s documentation says an invoice that would create a backorder is rejected with an
+                &ldquo;Insufficient stock&rdquo; message unless the request sets allowBackorders to true. Decide
+                before launch whether the link allows the backorder or holds the order for a person.
+              </p>
+            </div>
+            <Sources ids={['shopifyBundles', 'xeroInvoices', 'xeroWebhooks', 'xeroLimits']} on={READ_ON_STOCK} />
+
+            <div style={{ maxWidth: 820 }} className="mt-12">
+              <h3>Cin7 Core or Unleashed: when an inventory system should own stock instead of Xero</h3>
+              <p className="mt-4">
+                Both products take stock out of Xero&rsquo;s hands and post the accounting back to it. That suits a
+                business with a warehouse, purchase orders, several locations or trade customers. It does not suit
+                a store that wants Xero to stay the stock record, because Cin7 Core&rsquo;s own help page says it
+                does not support Xero inventory tracking and tells you to turn it off. List prices as read on{' '}
+                {READ_ON_STOCK}:
+              </p>
+            </div>
+            <div className={`card mt-6 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Cin7 Core and Unleashed compared" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 760 }} data-columns={3}>
+              <thead>
+                <tr><th>Question</th><th>Cin7 Core</th><th>Unleashed</th></tr>
+              </thead>
+              <tbody>
+                {STOCK_SYSTEMS.map((r) => (
+                  <tr key={r.q}><td><b>{r.q}</b></td><td>{r.cin7}</td><td>{r.unl}</td></tr>
+                ))}
+              </tbody>
+            </table></div>
+            <p className="mt-6" style={{ maxWidth: 820 }}>
+              If you plan to move to one of them within a year or two, build the Shopify side so the stock source
+              can be switched later without rebuilding the invoice rules. For the wider stock and accounting
+              questions a growing store hits, see our{' '}
+              <a href="/uk/ecommerce-consultant#stock-and-accounting" style={inlineLink}>UK ecommerce consultant page</a>.
+            </p>
+            <Sources ids={['cin7XeroProducts', 'cin7XeroApp', 'cin7Assembly', 'cin7Pricing', 'unleashedXero', 'unleashedAssembly', 'unleashedPricing']} on={READ_ON_STOCK} />
+          </div>
+        </section>
+
         {/* 11. HOW WE BUILD IT (NUMBERED LIST) */}
         <section className="sec-lg" id="how-we-build">
           <div className="wrap">
@@ -1123,8 +1271,9 @@ export default function ShopifyXeroIntegrationUKPage() {
               <span className="eyebrow">Method</span>
               <h2>Sources, read on {READ_ON}</h2>
               <p className="lead mt-4">
-                Every price, rating, plan limit and tax rule on this page was read on the pages below on that day.
-                App prices and ratings move, and tax rules are HMRC’s to change, so open the linked page before
+                Every price, rating, plan limit and tax rule on this page was read on the pages below on that day,
+                except the bundles, discounts, stock, Cin7 Core, Unleashed and Sage facts, which were read on{' '}
+                {READ_ON_STOCK}. App prices and ratings move, and tax rules are HMRC’s to change, so open the linked page before
                 you act on a figure.
               </p>
             </div>

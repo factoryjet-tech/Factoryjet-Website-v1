@@ -1,225 +1,297 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
+// Re-aimed 2026-10-21 at "How much does a website cost in the UK in 2026?".
+// Every price is a market figure from a named source, read on 2026-10-21:
+//   - Whito, "How Much Does a Website Cost in the UK? Web Design Prices 2026"
+//     (reviewed by Jacob Whitmore), https://whito.co.uk/research/website-design-costs-uk/
+//     ("Last Updated on October 19, 2026"; "Data last verified: 19 October 2026").
+//   - SpotDev, "Website Redesign Cost UK" (22 May 2026, figures ex VAT and indicative),
+//     https://www.spotdev.co.uk/blog/website-redesign-cost-uk. SpotDev builds HubSpot sites.
+//   - SpotDev, "What is the average cost of website design in the UK?",
+//     https://www.spotdev.co.uk/blog/what-is-the-average-cost-of-website-design-in-the-uk
+//     (header dated 4 Aug 2021, body says "Real 2026 price bands"; cited only for the
+//     London brochure-site band, with the date mismatch stated in the copy).
+// No FactoryJet price. The 10-page sums are our arithmetic on Whito's figures, labelled.
+// Sibling posts own other questions: redesigns -> website-redesign-cost-uk-2026-complete-pricing-guide,
+// online stores -> ecommerce-website-cost-uk-2026. Keep this post on new builds and owning costs.
+const WHITO = 'https://whito.co.uk/research/website-design-costs-uk/';
+const SPOTDEV_REDESIGN = 'https://www.spotdev.co.uk/blog/website-redesign-cost-uk';
+const SPOTDEV_AVERAGE = 'https://www.spotdev.co.uk/blog/what-is-the-average-cost-of-website-design-in-the-uk';
+
+const src = 'text-blue-600 underline hover:text-blue-800 transition-colors';
+
 export const post: BlogPost = {
   id: '120',
   slug: "uk-web-design-agency-pricing-2026-smb-guide",
-  title: "How Much Do Web Design Agencies Charge in 2026? UK Pricing Guide for SMBs",
-  excerpt: "UK web design agencies charge £1,500–£25,000 for SMB websites in 2026, with most 5-200 employee businesses paying £3,000–£12,000 depending on complexity, platform choice, and agency location. This guide breaks down real pricing across brochure sites, e-commerce builds, and ongoing maintenance.",
+  title: "How Much Does a Website Cost in the UK in 2026?",
+  excerpt: "Most UK businesses pay £3,000 to £6,000 for a professionally built website in 2026. A 5-page brochure site costs £1,500 to £3,000 from a freelancer and £3,000 to £5,000 from an agency, and an online store £5,000 to £20,000 or more (Whito, updated 19 October 2026). Prices by project type, a 10-page worked example, and what a website costs to own each year.",
   category: "Web Design & Strategy",
   author: 'Bhavesh Barot',
   date: "May 01, 2026",
-  readTime: '14 min read',
+  dateModified: "Oct 21, 2026",
+  readTime: '9 min read',
   imageUrl: "/blog-images/uk-web-design-agency-pricing-2026-smb-guide-hero.webp",
   meta: {
-    title: "UK Web Design Agency Pricing Guide 2026 for SMBs (5-200 Staff)",
-    description: "UK web design agencies charge £1,500-£25,000 for SMB sites in 2026. See real pricing by service type and location, brochure, e-commerce, and custom builds.",
+    title: "How Much Does a Website Cost in the UK in 2026? Prices by Type",
+    description: "Most UK businesses pay £3,000 to £6,000 for a website in 2026. Prices by project type, a 10-page example, freelancer vs agency rates, and yearly costs to own one.",
   },
   keyTakeaways: [
-    "UK web design agencies charge £1,500–£8,000 for brochure sites, £3,000–£15,000 for e-commerce, and £10,000–£25,000+ for custom platforms in 2026.",
-    "London and Southeast agencies typically charge 40-60% more than Manchester, Birmingham, or Leeds-based studios for identical scope.",
-    "FactoryJet quotes a fixed price in writing after scoping, with 2-4 week turnaround and Lighthouse 92+ performance.",
-    "Platform choice drives cost: WordPress £2,000–£6,000, Shopify £3,000–£8,000, Next.js custom £5,000–£15,000, headless commerce £8,000–£25,000.",
-    "Ongoing maintenance costs £100–£500/month depending on hosting, security updates, content changes, and uptime SLAs.",
-    "Hidden costs include domain registration (£10-50/year), SSL certificates (£0-200/year), premium plugins (£50-500/year), and third-party integrations (£200-2,000 one-time).",
-    "SMBs with 5-50 employees typically spend £3,000–£8,000 on initial builds; 50-200 employee businesses average £8,000–£15,000 for multi-page sites with CRM/ERP integration.",
+    "Most UK businesses pay £3,000 to £6,000 for a professionally built website (Whito, updated 19 October 2026).",
+    "A 5-page brochure site costs £1,500 to £3,000 from a freelancer and £3,000 to £5,000 from an agency. Each extra page adds £150 to £400 (Whito).",
+    "A 10-page agency site works out at about £3,750 to £7,000 on Whito's figures: the 5-page price plus five extra pages. That sum is ours.",
+    "Custom business sites of 15 pages or more, with bookings, portals or integrations, cost £5,000 to £15,000. Online stores cost £5,000 to £20,000 or more (Whito).",
+    "Owning a website costs about £500 to £2,000 or more a year, or £50 to £200 a month, for hosting, domain, SSL, licences, maintenance and content updates (Whito).",
+    "Hourly rates: freelancers £40 to £70 (£35 to £55 outside London), agencies £60 to £150. Regional providers charge 20 to 30% less for the same work (Whito).",
+    "Copywriting, photography and SEO set-up add 30 to 50% on top of a quote when nobody budgets for them (Whito).",
   ],
   faqs: [
-    { q: "What's the average cost of a business website in the UK in 2026?", a: "The average UK business website costs £4,500–£8,000 in 2026 for a 5-15 page brochure site with responsive design, basic SEO, and contact forms. E-commerce adds £2,000–£7,000 depending on product count and payment gateway complexity. London agencies charge 40-60% more than regional studios for identical scope." },
-    { q: "Why do London web design agencies charge more than regional UK studios?", a: "London agencies carry higher overheads (office rent, salaries, business rates) and often target enterprise clients with larger budgets. A 10-page WordPress site costs £6,000–£12,000 in London versus £3,000–£6,000 in Manchester or Birmingham for the same deliverables. Quality and turnaround times are comparable across regions." },
-    { q: "How much should a 20-employee SMB budget for a new website in 2026?", a: "A 20-employee SMB should budget £4,000–£10,000 for a professional website in 2026. This covers 8-15 pages, mobile-responsive design, basic SEO setup, contact forms, and CMS training. Add £1,500–£3,000 for e-commerce functionality or £2,000–£5,000 for CRM/ERP integration. FactoryJet quotes the same scope at a fixed price in writing after a short scoping call." },
-    { q: "What's included in a £5,000 web design package from a UK agency?", a: "A £5,000 UK web design package typically includes 8-12 responsive pages, WordPress or similar CMS, mobile optimization, basic on-page SEO, contact forms, Google Analytics setup, 2-3 revision rounds, and 30 days post-launch support. Excludes copywriting (add £500-1,500), professional photography (£300-1,000), and ongoing maintenance (£100-300/month)." },
-    { q: "How much does Shopify e-commerce development cost in the UK?", a: "Shopify e-commerce development costs £3,000–£8,000 in the UK for 50-500 product stores with payment gateway integration, shipping calculators, and basic theme customization. Custom Shopify themes add £2,000–£5,000. Headless Shopify builds (Next.js frontend) range £8,000–£15,000. Monthly Shopify fees (£25-300) and transaction fees (1.5-2%) are separate." },
-    { q: "What are typical ongoing website maintenance costs for UK SMBs?", a: "UK SMBs pay £100–£500/month for website maintenance in 2026. Basic plans (£100-150/month) cover hosting, security updates, and monthly backups. Mid-tier (£200-350/month) adds content updates, performance monitoring, and priority support. Enterprise plans (£400-500/month) include uptime SLAs, advanced security, and dedicated account management." },
-    { q: "Is it cheaper to hire a freelancer or agency for web design in the UK?", a: "UK freelancers charge £1,000–£5,000 for SMB websites versus £3,000–£12,000 for agencies. Freelancers offer lower rates but limited capacity, single-point-of-failure risk, and variable quality. Agencies provide team redundancy, project management, and post-launch support but cost 2-3× more. FactoryJet bridges the gap with team backing and a fixed price quoted in writing after scoping." },
-    { q: "How long does a typical SMB website project take in 2026?", a: "UK agencies deliver SMB websites in 4-12 weeks depending on scope. Brochure sites (5-10 pages) take 4-6 weeks, e-commerce builds 6-10 weeks, and custom platforms 10-16 weeks. Delays often stem from client content delivery and revision cycles. FactoryJet completes most SMB projects in 2-4 weeks with structured content workflows and milestone approvals." },
-    { q: "What hidden costs should SMBs watch for in web design quotes?", a: "Hidden costs include domain registration (£10-50/year), SSL certificates (£0-200/year if not included), premium plugins (£50-500/year), stock photography (£100-500), copywriting (£500-2,000), third-party API integrations (£200-2,000 each), and post-launch content updates (£50-150/hour). Always request itemized quotes showing one-time versus recurring costs." },
-    { q: "How much does Next.js web development cost compared to WordPress?", a: "Next.js custom development costs £5,000–£15,000 versus £2,000–£6,000 for WordPress builds of similar page count. Next.js offers faster load times (Lighthouse 95+ typical), better SEO performance, and headless CMS flexibility but requires specialized developers. WordPress suits content-heavy sites with frequent updates; Next.js fits performance-critical applications and e-commerce." },
-    { q: "Can remote agencies match UK quality standards for web design?", a: "Yes, the top remote agencies deliver Lighthouse 92+ performance, WCAG 2.1 AA accessibility, and UK data protection compliance at a lower price point. Key is verifying real client references, checking live portfolio sites, and ensuring UK business hours overlap for communication." },
-    { q: "What's the ROI timeline for a £6,000 SMB website investment?", a: "SMBs typically see ROI in 6-18 months from a £6,000 website through improved lead generation, reduced print marketing costs, and 24/7 customer self-service. A 20-employee service business generating 10 extra enquiries/month at 20% conversion and £2,000 average job value recoups investment in 15 months. E-commerce ROI is faster (3-9 months) with direct sales tracking." },
+    { q: "How much does a website cost in the UK in 2026?", a: "Most UK businesses pay £3,000 to £6,000 for a professionally built website, according to Whito's UK price guide, updated 19 October 2026. A 5-page brochure site costs £1,500 to £3,000 from a freelancer and £3,000 to £5,000 from an agency. A custom site of 15 pages or more costs £5,000 to £15,000, and an online store £5,000 to £20,000 or more. A website builder runs £10 to £50 a month instead." },
+    { q: "How much does a small business website cost in the UK?", a: "For most small businesses it is a brochure site: a handful of pages saying what you do, where you work and how to get in touch. Whito puts a 5-page site at £1,500 to £3,000 from a freelancer and £3,000 to £5,000 from an agency in 2026. Add online booking, a client portal or a link to your CRM and you move into Whito's custom band of £5,000 to £15,000." },
+    { q: "How much for a 10 page website?", a: "About £3,750 to £7,000 from an agency and £2,250 to £5,000 from a freelancer, on Whito's 2026 figures. Whito prices a 5-page site at £3,000 to £5,000 (agency) or £1,500 to £3,000 (freelancer) and each extra page at £150 to £400. Five extra pages add £750 to £2,000. The sums are ours, and copywriting at £50 to £150 a page is extra if you do not write the words yourself." },
+    { q: "How much does it cost to own a website in the UK?", a: "About £500 to £2,000 or more a year, or £50 to £200 a month, on Whito's 2026 figures. That covers hosting (£50 to £300 a year), a domain (£10 to £30), an SSL certificate (£0 to £100), plugin and theme licences (£50 to £300), maintenance and updates (£300 to £1,200) and content updates (£0 to £500). Whito says to budget at least £500 a year." },
+    { q: "How much does a website cost per month in the UK?", a: "A website builder such as Wix or Squarespace costs £10 to £50 a month, which Whito puts at up to about £600 a year. A site built by a freelancer or agency costs about £50 to £200 a month to keep running once it is live. SpotDev puts basic WordPress maintenance at around £75 to £150 a month. Check what a care plan includes before comparing two of them." },
+    { q: "Is it cheaper to hire a freelancer or an agency for a website in the UK?", a: "A freelancer is usually cheaper. Whito puts a 5-page site at £1,500 to £3,000 from a freelancer against £3,000 to £5,000 from an agency, and hourly rates at £40 to £70 against £60 to £150. An agency gives you more than one person, so holidays and illness do not stop the project. For a small brochure site a good freelancer is often enough." },
+    { q: "Why do London web design agencies charge more?", a: "Higher costs for staff and offices. Whito says London and the South East sit at the top of both the freelancer and agency ranges, and that regional providers charge 20 to 30% less for identical work. SpotDev's average cost page says some London agencies quote £6,000 to £20,000 or more for a small brochure site. Location does not change the code, so compare the scope line by line." },
+    { q: "How much does an ecommerce website cost in the UK?", a: "Whito puts an online store at £5,000 to £20,000 or more in 2026. The spread comes from the platform, the number of products and how many systems the store has to talk to, such as stock, accounts and couriers. Our separate guide to ecommerce website cost in the UK breaks it down by Shopify, Shopify Plus, WooCommerce, Magento and BigCommerce." },
+    { q: "What costs are not included in a web design quote?", a: "Words, pictures and search set-up are the usual gaps. Whito lists copywriting at £50 to £150 a page, photography at £200 to £800 and SEO set-up at £300 to £1,000, and says hidden costs add 30 to 50% to the quote. Hosting, the domain and ongoing updates are often outside the build price too. Ask for an itemised quote that splits one-off and yearly costs." },
+    { q: "How much does a website redesign cost in the UK?", a: "Small redesigns start from around £10,000 on SpotDev's figures (22 May 2026), and its range for UK B2B redesigns is £10,000 to £80,000, with most between £15,000 and £60,000. A platform move with no redesign is around £8,000 to £18,000. SpotDev builds on HubSpot, so its figures sit at the B2B end. Our website redesign cost guide covers the rest." },
+    { q: "How long does it take to build a website in the UK?", a: "It depends on pages and integrations. SpotDev gives 12 to 14 weeks for a standard B2B CMS build and 14 to 18 weeks for a complex one. Small brochure sites move much faster: FactoryJet offers 7-day delivery for sites of 5 pages or fewer. Most delays come from late copy and images, and from features added after the scope was agreed." },
+    { q: "Are UK web design prices quoted with or without VAT?", a: "It varies, so ask. SpotDev says its figures are before VAT and indicative. The standard UK VAT rate is 20%, so a £5,000 quote before VAT is £6,000 to a business that is not VAT-registered. A VAT-registered business can usually reclaim it. Ask every supplier to state the basis in writing, and check with your accountant." },
   ],
   content: (
     <>
+      <p className="text-lg leading-relaxed mb-6">
+        Most UK businesses pay <strong>£3,000 to £6,000</strong> for a professionally built website in 2026. A
+        5-page brochure site costs £1,500 to £3,000 from a freelancer and £3,000 to £5,000 from an agency. A custom
+        site with bookings or integrations costs £5,000 to £15,000, and an online store £5,000 to £20,000 or more.
+        These are <a href={WHITO} className={src} target="_blank" rel="noopener noreferrer">Whito</a>&apos;s UK
+        figures, last updated on 19 October 2026, which we read on 21 October.
+      </p>
+
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border">
-        <h2 className="text-lg font-bold mb-3">Table of Content: In This Article</h2>
+        <h2 className="text-lg font-bold mb-3">In this guide</h2>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
-          <li>UK Web Design Pricing Breakdown by Project Type (2026)</li>
-          <li>How Agency Location Affects Web Design Costs</li>
-          <li>Platform Choice and Its Impact on Budget</li>
-          <li>Hidden Costs Every SMB Should Budget For</li>
-          <li>Ongoing Maintenance: What You'll Pay Monthly</li>
-          <li>Freelancer vs Local Agency vs Remote Agency: Cost-Benefit Analysis</li>
-          <li>How to Evaluate Web Design Quotes (Red Flags and Green Flags)</li>
+          <li>Website cost in the UK by project type (2026)</li>
+          <li>How much is a 10 page website?</li>
+          <li>How much does it cost to own a website each year?</li>
+          <li>Freelancer or agency: hourly rates and London prices</li>
+          <li>Costs that are not in the quote</li>
+          <li>How to read a web design quote</li>
         </ul>
       </div>
 
-      <p className="text-lg leading-relaxed mb-6">
-        UK web design agencies charge £1,500–£25,000 for SMB websites in 2026. Brochure sites (5–15 pages) cost £1,500–£8,000, e-commerce builds cost £3,000–£15,000, and custom platforms cost £10,000–£25,000+. London agencies charge 40–60% more than regional studios. FactoryJet delivers identical quality at a fixed price quoted after scoping, with a 2–4 week turnaround and Lighthouse Performance scores above 92.
+      <h2 className="text-2xl font-bold mt-8 mb-4">Website cost in the UK by project type (2026)</h2>
+      <p className="mb-4">
+        The type of site sets the price more than anything else. A brochure site is a few pages that say what you
+        do and how to reach you. A custom site adds things that need building, such as online booking, a client
+        portal or a link to your CRM. An online store adds products, payments and delivery.
+      </p>
+      <div className="overflow-x-auto mb-6">
+        <table className="min-w-full border-collapse border border-gray-300">
+          <thead className="bg-gray-800 text-white">
+            <tr>
+              <th className="p-3 border text-left">Project type</th>
+              <th className="p-3 border text-left">What it usually covers</th>
+              <th className="p-3 border text-left">UK price, 2026</th>
+              <th className="p-3 border text-left">Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border p-3 font-semibold">Website builder (DIY)</td>
+              <td className="border p-3">Wix or Squarespace style, you build it</td>
+              <td className="border p-3">£10 to £50 a month, up to about £600 a year</td>
+              <td className="border p-3"><a href={WHITO} className={src} target="_blank" rel="noopener noreferrer">Whito</a></td>
+            </tr>
+            <tr>
+              <td className="border p-3 font-semibold">Brochure site, freelancer</td>
+              <td className="border p-3">5 pages, contact form, mobile layout</td>
+              <td className="border p-3">£1,500 to £3,000</td>
+              <td className="border p-3"><a href={WHITO} className={src} target="_blank" rel="noopener noreferrer">Whito</a></td>
+            </tr>
+            <tr>
+              <td className="border p-3 font-semibold">Brochure site, agency</td>
+              <td className="border p-3">5 pages, design, build and launch</td>
+              <td className="border p-3">£3,000 to £5,000</td>
+              <td className="border p-3"><a href={WHITO} className={src} target="_blank" rel="noopener noreferrer">Whito</a></td>
+            </tr>
+            <tr>
+              <td className="border p-3 font-semibold">Each extra page</td>
+              <td className="border p-3">Added to a brochure site</td>
+              <td className="border p-3">£150 to £400 a page</td>
+              <td className="border p-3"><a href={WHITO} className={src} target="_blank" rel="noopener noreferrer">Whito</a></td>
+            </tr>
+            <tr>
+              <td className="border p-3 font-semibold">Custom business site</td>
+              <td className="border p-3">15 pages or more, bookings, portals, integrations</td>
+              <td className="border p-3">£5,000 to £15,000</td>
+              <td className="border p-3"><a href={WHITO} className={src} target="_blank" rel="noopener noreferrer">Whito</a></td>
+            </tr>
+            <tr>
+              <td className="border p-3 font-semibold">Online store</td>
+              <td className="border p-3">Products, payments, delivery</td>
+              <td className="border p-3">£5,000 to £20,000 or more</td>
+              <td className="border p-3"><a href={WHITO} className={src} target="_blank" rel="noopener noreferrer">Whito</a></td>
+            </tr>
+            <tr>
+              <td className="border p-3 font-semibold">B2B redesign</td>
+              <td className="border p-3">CRM, integrations, larger sites</td>
+              <td className="border p-3">£10,000 to £80,000, most £15,000 to £60,000, before VAT</td>
+              <td className="border p-3"><a href={SPOTDEV_REDESIGN} className={src} target="_blank" rel="noopener noreferrer">SpotDev</a>, 22 May 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="mb-4">
+        Online stores have their own guide, because the platform changes the answer:{' '}
+        <a href="/blog/ecommerce-website-cost-uk-2026" className={src}>ecommerce website cost in the UK</a>{' '}
+        covers Shopify, Shopify Plus, WooCommerce, Magento and BigCommerce in pounds. If you already have a site and
+        want it rebuilt, see our <a href="/blog/website-redesign-cost-uk-2026-complete-pricing-guide" className={src}>website redesign cost guide</a>.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">UK Web Design Pricing Breakdown by Project Type (2026)</h2>
-      <p className="mb-4">A brochure website for a UK SMB typically costs between £1,500 and £8,000 in 2026, while e-commerce platforms range from £3,000 to £15,000, and custom web applications start at £10,000 and can exceed £25,000 for complex integrations. These figures reflect the current UK market for professional agency work, though pricing varies significantly based on scope, platform choice, and technical requirements. Brochure sites built on WordPress or custom content management systems generally fall into the lower bracket when they include five to fifteen pages of standard content. A straightforward service business site with contact forms, image galleries, and basic SEO setup sits comfortably at £1,500 to £3,500. More design-intensive builds with custom animations, video backgrounds, or advanced content architecture push toward the £5,000 to £8,000 range. The difference hinges on design complexity, content volume, and whether the agency writes copy or the client provides finished text. E-commerce projects demand higher investment because they involve payment gateways, product catalogues, inventory management, and customer account systems. A Shopify store with fifty products and standard checkout costs around £3,000 to £5,000. WooCommerce builds with custom shipping logic or multi-currency support typically run £5,000 to £10,000. Custom headless platforms that support B2B workflows, trade accounts, and Net 30/60/90 payment terms often reach £10,000 to £15,000 because they require request-for-quote systems, artwork upload tools, and customer pipeline automation. Custom web applications and headless architectures represent the top tier. These projects start at £10,000 and scale to £25,000 or more when they connect CRM systems, ERP platforms, or third-party APIs. A headless Next.js build pulling data from Contentful and Stripe, for example, requires specialist React developers and typically exceeds £15,000. Multi-system integrations that sync inventory across warehouses, automate invoicing, or handle complex user permissions push well beyond £20,000 because they involve backend engineering, security audits, and ongoing maintenance contracts.</p>
-      <p className="mb-4">➡ Learn more: <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Web Design</a></p>
-
-      <div className="overflow-x-auto mb-8">
+      <h2 className="text-2xl font-bold mt-8 mb-4">How much is a 10 page website?</h2>
+      <p className="mb-4">
+        Whito prices sites in 5-page blocks and adds a price per extra page, so a 10-page site is the 5-page price
+        plus five extra pages. The sums below are ours, on Whito&apos;s 2026 figures.
+      </p>
+      <div className="overflow-x-auto mb-6">
         <table className="min-w-full border-collapse border border-gray-300">
           <thead className="bg-gray-800 text-white">
             <tr>
-              <th className="p-3 border">Project Type</th>
-              <th className="p-3 border">Typical Scope</th>
-              <th className="p-3 border">UK Agency Range</th>
+              <th className="p-3 border text-left">Who builds it</th>
+              <th className="p-3 border text-left">5-page site</th>
+              <th className="p-3 border text-left">5 extra pages at £150 to £400</th>
+              <th className="p-3 border text-left">10-page total</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="border p-3">Brochure Site</td>
-              <td className="border p-3">5-15 pages, WordPress, contact forms, basic SEO</td>
-              <td className="border p-3">£3,000–£8,000</td>
+              <td className="border p-3 font-semibold">Freelancer</td>
+              <td className="border p-3">£1,500 to £3,000</td>
+              <td className="border p-3">£750 to £2,000</td>
+              <td className="border p-3">£2,250 to £5,000</td>
             </tr>
             <tr>
-              <td className="border p-3">E-Commerce (Shopify)</td>
-              <td className="border p-3">50-500 products, payment gateway, shipping calculator</td>
-              <td className="border p-3">£5,000–£12,000</td>
-            </tr>
-            <tr>
-              <td className="border p-3">E-Commerce (Custom)</td>
-              <td className="border p-3">WooCommerce/custom B2B platforms, 500+ products, B2B features</td>
-              <td className="border p-3">£8,000–£18,000</td>
-            </tr>
-            <tr>
-              <td className="border p-3">Next.js Custom Build</td>
-              <td className="border p-3">10-20 pages, headless CMS, API integrations</td>
-              <td className="border p-3">£10,000–£20,000</td>
-            </tr>
-            <tr>
-              <td className="border p-3">Multi-Site/Portal</td>
-              <td className="border p-3">User dashboards, CRM/ERP sync, role-based access</td>
-              <td className="border p-3">£15,000–£30,000</td>
+              <td className="border p-3 font-semibold">Agency</td>
+              <td className="border p-3">£3,000 to £5,000</td>
+              <td className="border p-3">£750 to £2,000</td>
+              <td className="border p-3">£3,750 to £7,000</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p className="mb-4">
+        Two things move a 10-page quote out of that band. If nobody on your side writes the words, Whito puts
+        copywriting at £50 to £150 a page, so £500 to £1,500 for ten pages. And if a page needs something built,
+        such as a booking form tied to your diary or a quote calculator, the site is in the custom band of £5,000 to
+        £15,000.
+      </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">How Agency Location Affects Web Design Costs</h2>
-      <p className="mb-4">London and Southeast agencies charge £6,000–£15,000 for projects that cost £3,000–£8,000 in Manchester, Birmingham, Leeds, or Glasgow, not because the work is better, but because their overheads are higher. Office rent in Shoreditch or Soho runs £60–£90 per square foot annually, while comparable studio space in Manchester city centre costs £25–£35. Salaries follow the same pattern: a mid-level designer in London expects £45,000–£55,000, versus £32,000–£40,000 in Birmingham or Leeds. Business rates, recruitment costs, and client entertainment expenses compound the gap. These overhead differences account for 40–60% of the price premium you pay, yet they deliver no corresponding improvement in design quality, site performance, or business outcomes. A Next.js 15 build optimised for Core Web Vitals performs identically whether it's coded in Canary Wharf or Castlefield. Remote-first agencies eliminate location-based pricing entirely while maintaining UK business hours and communication standards. A remote studio with experienced developers and designers can deliver the same Lighthouse 92+ performance, the same Figma-to-code workflow, and the same Slack responsiveness as a Clerkenwell agency, at 50–60% lower cost. Project management, revisions, and approvals align with your 9-to-5. Geography no longer dictates capability. What matters is process discipline, platform expertise, and whether the agency structures pricing around your business outcomes rather than their postcode. If you're paying a London premium, ask what tangible advantage justifies it beyond proximity to Old Street roundabout.</p>
-
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Platform Choice and Its Impact on Budget</h2>
-      <p className="mb-4">Platform choice shapes your budget more than any other single decision. WordPress sites typically start at £2,000–£6,000, making them the most accessible option for SMBs launching their first professional web presence. The platform's vast plugin ecosystem means you can add contact forms, booking systems, and basic e-commerce without custom code, but that convenience comes with a maintenance tax, plugin conflicts, security patches, and performance degradation require ongoing attention that can cost £100–£250 monthly. Shopify simplifies e-commerce with setup costs ranging from £3,000–£8,000, bundling hosting, SSL certificates, and payment processing into a single monthly subscription. The platform handles PCI compliance and automatic updates, removing technical burden from your team. However, monthly fees climb from £25 for Basic Shopify to £300 for Advanced plans, and transaction fees of 1.5–2% apply unless you use Shopify Payments exclusively. For a business processing £50,000 monthly, those transaction costs alone add £750–£1,000 to your operating expenses. Next.js and headless architectures cost £5,000–£15,000 upfront but deliver Lighthouse scores consistently above 95, translating to faster page loads and better search visibility. These builds separate your front-end from your content management system, allowing you to swap out components without rebuilding everything. The catch: you need developers comfortable with React and modern JavaScript frameworks, which narrows your talent pool and increases hourly rates. Custom B2B and unified commerce platforms occupy the £3,500–£10,000 range and excel at B2B workflows that Shopify and WooCommerce struggle to handle. GPSUK in Staines runs their promotional products distribution on custom B2B platforms, managing request-for-quote workflows, trade account terms, and artwork visualisation for wholesale partners. These platforms integrate omnichannel inventory, Net 30/60/90 payment terms, and B2B Buy-Now-Pay-Later options that standard e-commerce builders don't support natively. If your business model involves complex pricing, approval chains, or multi-location fulfillment, the specialized platform investment pays for itself in operational efficiency.</p>
-      <p className="mb-4">➡ Learn more: <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Ecommerce Development</a></p>
-
-      <div className="overflow-x-auto mb-8">
+      <h2 className="text-2xl font-bold mt-8 mb-4">How much does it cost to own a website in the UK each year?</h2>
+      <p className="mb-4">
+        The build is a one-off. Keeping the site live, secure and up to date is a yearly cost that many first quotes
+        leave out. Whito&apos;s 2026 breakdown:
+      </p>
+      <div className="overflow-x-auto mb-6">
         <table className="min-w-full border-collapse border border-gray-300">
           <thead className="bg-gray-800 text-white">
             <tr>
-              <th className="p-3 border">Platform</th>
-              <th className="p-3 border">Setup Cost</th>
-              <th className="p-3 border">Monthly Cost</th>
-              <th className="p-3 border">Best For</th>
+              <th className="p-3 border text-left">Cost</th>
+              <th className="p-3 border text-left">A year</th>
+              <th className="p-3 border text-left">A month</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="border p-3">WordPress</td>
-              <td className="border p-3">£2,000–£6,000</td>
-              <td className="border p-3">£100–£250</td>
-              <td className="border p-3">Content-heavy sites, blogs, service businesses</td>
-            </tr>
-            <tr>
-              <td className="border p-3">Shopify</td>
-              <td className="border p-3">£3,000–£8,000</td>
-              <td className="border p-3">£125–£500</td>
-              <td className="border p-3">B2C e-commerce, 50-5,000 products, quick launch</td>
-            </tr>
-            <tr>
-              <td className="border p-3">WooCommerce</td>
-              <td className="border p-3">£3,500–£9,000</td>
-              <td className="border p-3">£150–£350</td>
-              <td className="border p-3">WordPress users wanting e-commerce, UK-specific plugins</td>
-            </tr>
-            <tr>
-              <td className="border p-3">Next.js + Headless CMS</td>
-              <td className="border p-3">£5,000–£15,000</td>
-              <td className="border p-3">£200–£400</td>
-              <td className="border p-3">Performance-critical sites, SEO-focused builds, scalable apps</td>
-            </tr>
-            <tr>
-              <td className="border p-3">Custom B2B Platform</td>
-              <td className="border p-3">£3,500–£10,000</td>
-              <td className="border p-3">£250–£600</td>
-              <td className="border p-3">B2B trade, RFQ workflows, multi-tier pricing, Net terms</td>
-            </tr>
+            <tr><td className="border p-3">Hosting</td><td className="border p-3">£50 to £300</td><td className="border p-3">£4 to £25</td></tr>
+            <tr><td className="border p-3">Domain</td><td className="border p-3">£10 to £30</td><td className="border p-3">£1 to £3</td></tr>
+            <tr><td className="border p-3">SSL certificate</td><td className="border p-3">£0 to £100</td><td className="border p-3">£0 to £8</td></tr>
+            <tr><td className="border p-3">Plugin and theme licences</td><td className="border p-3">£50 to £300</td><td className="border p-3">£4 to £25</td></tr>
+            <tr><td className="border p-3">Maintenance and updates</td><td className="border p-3">£300 to £1,200</td><td className="border p-3">£25 to £100</td></tr>
+            <tr><td className="border p-3">Content updates</td><td className="border p-3">£0 to £500</td><td className="border p-3">£0 to £40</td></tr>
+            <tr className="bg-gray-50 font-semibold"><td className="border p-3">Total</td><td className="border p-3">£500 to £2,000 or more</td><td className="border p-3">£50 to £200</td></tr>
           </tbody>
         </table>
       </div>
+      <p className="mb-4">
+        Whito says to budget at least £500 a year, and its September 2026 survey of care plans found a median entry
+        plan of £50 a month. <a href={SPOTDEV_REDESIGN} className={src} target="_blank" rel="noopener noreferrer">SpotDev</a>{' '}
+        puts basic WordPress maintenance at around £75 to £150 a month. Before you compare two care plans, check what
+        each one does when something breaks, and how many hours of changes it includes.
+      </p>
 
       <div className="my-8 rounded-xl bg-[#0052CC] p-6 flex flex-col sm:flex-row items-center justify-between gap-4 not-prose">
         <div>
-          <p className="text-white font-semibold text-lg">Web Design &amp; Strategy: Practical Guidance for Your Business</p>
-          <p className="text-blue-100 text-sm mt-1">We'll review your specific situation and recommend the right approach. No obligation.</p>
+          <p className="text-white font-semibold text-lg">Have a quote and not sure it is fair?</p>
+          <p className="text-blue-100 text-sm mt-1">Send it over. We will tell you which lines look high, which are missing, and what we would build instead. No obligation.</p>
         </div>
         <a href="https://factoryjet.com/contact" className="shrink-0 bg-white text-[#0052CC] font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-50 transition-colors whitespace-nowrap">
           Book a Free 30-Min Consultation →
         </a>
       </div>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Hidden Costs Every SMB Should Budget For</h2>
-      <p className="mb-4">Beyond the headline design fee, SMBs typically encounter £1,500–£4,000 in additional expenses that catch budget holders off guard. Domain registration runs £10–£50 annually, SSL certificates range from free Let's Encrypt options to £200/year for extended validation, and premium DNS services from providers like Cloudflare or AWS Route 53 add £20–£100 yearly: all frequently excluded from base quotes. Premium plugins and extensions create the largest recurring surprise. A WordPress site needing Yoast SEO Premium, Wordfence Security, UpdraftPlus backups, and Gravity Forms easily accumulates £200–£500 annually per plugin, with enterprise security suites reaching £2,000/year. Shopify apps follow similar patterns, where abandoned cart recovery, advanced analytics, and inventory management tools each demand monthly subscriptions. Content creation forms the second major cost layer. Professional copywriting for a 10-page site costs £500–£2,000 depending on industry complexity and SEO requirements. Product photography sessions run £300–£1,000 for basic e-commerce catalogues, while brand video production starts at £1,000 and climbs to £5,000 for polished 2-minute pieces. Stock imagery subscriptions from Shutterstock or Adobe Stock add another £150–£400 annually. Third-party integrations carry one-time setup fees that agencies quote separately. CRM connections to HubSpot or Salesforce cost £200–£1,500 for API configuration and data mapping. Payment gateway integration: Stripe, PayPal, Worldpay, runs £200–£800 including PCI compliance setup. Email marketing platforms like Mailchimp or ActiveCampaign require £150–£600 for template design and automation workflows. Google Analytics 4 and Tag Manager implementation adds £0–£300 depending on tracking complexity. UK SMBs should budget 30–50% above the quoted design fee to cover these essentials. Transparent agencies itemise every cost upfront, preventing the budget creep that derails projects mid-build.</p>
+      <h2 className="text-2xl font-bold mt-8 mb-4">Freelancer or agency: hourly rates and London prices</h2>
+      <p className="mb-4">
+        Whito puts UK freelancers at £40 to £70 an hour, or £35 to £55 outside London, and agencies at £60 to £150
+        an hour. London and the South East sit at the top of both ranges, and regional providers charge 20 to 30% less
+        for identical work. SpotDev&apos;s{' '}
+        <a href={SPOTDEV_AVERAGE} className={src} target="_blank" rel="noopener noreferrer">average cost page</a>,
+        which describes 2026 price bands under a 2021 header date, says some London agencies quote £6,000 to £20,000
+        or more for a small brochure site.
+      </p>
+      <p className="mb-4">
+        A freelancer is the cheaper route and often the right one for a small brochure site. The risk is capacity:
+        one person on holiday or ill stops the project, and support after launch depends on them. An agency costs
+        more because you get several people, which matters most for sites with integrations or a launch date you
+        cannot move. Whoever you pick, ask for a fixed price for each stage, so the hours stop being your risk.
+      </p>
 
+      <h2 className="text-2xl font-bold mt-8 mb-4">Costs that are not in the quote</h2>
+      <p className="mb-4">
+        Whito says hidden costs add 30 to 50% to a quoted price when nobody budgets for them. The usual gaps:
+      </p>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Copywriting:</strong> £50 to £150 a page.</li>
+        <li><strong>Photography:</strong> £200 to £800.</li>
+        <li><strong>SEO set-up:</strong> £300 to £1,000, covering page titles, descriptions, redirects from any old site and a sitemap.</li>
+        <li><strong>The yearly costs above:</strong> hosting, domain, licences and maintenance, which often sit outside the build price.</li>
+        <li><strong>VAT:</strong> SpotDev states its figures are before VAT. At 20%, a £5,000 quote is £6,000 to a business that cannot reclaim it.</li>
+      </ul>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Ongoing Maintenance: What You'll Pay Monthly</h2>
-      <p className="mb-4">Most UK SMBs pay between £100 and £500 monthly for web maintenance, depending on how hands-on they need their agency to be after launch. Basic plans at the lower end cover the essentials: managed hosting on platforms like AWS or DigitalOcean, automatic security patches, weekly backups, and one to two hours of monthly content updates. This tier works well for brochure sites or businesses with minimal change requests, though you're typically waiting 48-72 hours for non-urgent fixes. Mid-tier maintenance, running £200-350 monthly, adds performance monitoring through tools like New Relic or Pingdom, uptime guarantees of 99.5% or better, priority support queues, and four to six hours of monthly changes. Agencies at this level often include quarterly performance audits and proactive recommendations when Google updates its Core Web Vitals benchmarks. You'll also see faster response times, usually within 24 hours for support tickets, and someone actually checking your site's speed and security posture rather than waiting for something to break. Enterprise maintenance plans, £400-500 monthly, deliver 99.9% uptime SLAs, advanced security layers including web application firewalls and DDoS protection, a dedicated account manager who knows your business, and unlimited minor updates like text changes or image swaps. These contracts make sense for e-commerce sites processing thousands of transactions or membership platforms where downtime directly costs revenue. The SLA matters here: if your site goes dark during peak trading hours, you're compensated, not just apologised to. We handle the hosting infrastructure, run weekly security scans, and keep WordPress or Next.js dependencies current without you needing to track release notes. For SMBs operating on tight margins, that baseline plan prevents the surprise £800 invoice when your previous developer finally returns your email three weeks after your contact form stopped working.</p>
+      <h2 className="text-2xl font-bold mt-8 mb-4">How to read a web design quote</h2>
+      <p className="mb-4">
+        A fair quote splits one-off costs from yearly ones, names the pages and features it covers, and says how
+        many rounds of changes are included. Be wary of &quot;unlimited revisions&quot; with no scope behind them,
+        a quote with no hosting or maintenance line at all, and template screenshots shown as custom work.
+      </p>
+      <p className="mb-4">
+        Then check the work. Open two or three live sites the supplier built and run them through Google&apos;s
+        PageSpeed Insights on a phone setting. Ask one past client how the project went after launch, not just
+        before it. And ask who owns the site, the domain and the hosting account when the contract ends. The answer
+        should be you.
+      </p>
+      <p className="mb-6">
+        FactoryJet builds websites for UK businesses and quotes a fixed price in writing after a short scoping call.
+        See <a href="/uk/web-design" className={src}>web design in the UK</a>, or read{' '}
+        <a href="/blog/how-to-choose-web-design-agency-uk-2026" className={src}>how to choose a web design agency</a>{' '}
+        for the questions to ask before you sign.
+      </p>
 
-      <div className="overflow-x-auto mb-8">
-        <table className="min-w-full border-collapse border border-gray-300">
-          <thead className="bg-gray-800 text-white">
-            <tr>
-              <th className="p-3 border">Plan Tier</th>
-              <th className="p-3 border">Monthly Cost</th>
-              <th className="p-3 border">What's Included</th>
-              <th className="p-3 border">Best For</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border p-3">Basic</td>
-              <td className="border p-3">£100–£150</td>
-              <td className="border p-3">Hosting, security updates, backups, 1-2hr content changes</td>
-              <td className="border p-3">Brochure sites, low-traffic blogs</td>
-            </tr>
-            <tr>
-              <td className="border p-3">Professional</td>
-              <td className="border p-3">£200–£350</td>
-              <td className="border p-3">Above + performance monitoring, 99.5% uptime, 4-6hr changes</td>
-              <td className="border p-3">E-commerce, lead-gen sites, 5-50 employees</td>
-            </tr>
-            <tr>
-              <td className="border p-3">Enterprise</td>
-              <td className="border p-3">£400–£500</td>
-              <td className="border p-3">Above + 99.9% SLA, WAF, dedicated manager, unlimited minor updates</td>
-              <td className="border p-3">High-traffic sites, 50-200 employees, mission-critical</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Freelancer vs Local Agency vs Remote Agency: Cost-Benefit Analysis</h2>
-      <p className="mb-4">UK SMBs weighing web design options face a three-way choice: freelancers offer the lowest entry price but come with operational risk, local agencies provide maximum support at premium rates, and remote-first agencies increasingly deliver the middle path of team reliability at freelancer-adjacent pricing. Freelancers typically charge £1,000–£5,000 for a business website, making them attractive for tight budgets. The trade-off surfaces post-contract: a sole trader on holiday leaves you without support, illness can derail launch timelines, and many freelancers lack the capacity to handle urgent requests alongside their other clients. You're betting on one person's availability and skill range across design, development, and ongoing maintenance. Local agencies charging £3,000–£12,000 solve the single-point-of-failure problem with team redundancy and dedicated project managers. If your lead developer falls ill, another steps in. You get structured support agreements and established escalation paths. The premium reflects London or Manchester office rent, full-time salaries, and the administrative overhead of a registered limited company, costs that smaller businesses often struggle to justify. Remote-first agencies occupy the gap between these extremes. FactoryJet works remotely with UK clients and keeps team backing and 2–4 week delivery windows, with the price fixed in writing after scoping. GPSUK in Staines chose FactoryJet for their custom B2B platform, gaining access to Next.js specialists and ongoing support without the overhead burden of a Berkshire-based agency. Vetting a remote partner requires diligence. Demand verified UK client references with contact details, inspect live portfolio sites using Google Lighthouse to confirm performance claims, check for UK business hours overlap that enables real-time communication, and insist on transparent fixed-price quotes rather than hourly estimates. These filters separate professional remote teams from budget providers who disappear after launch.</p>
-
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">How to Evaluate Web Design Quotes (Red Flags and Green Flags)</h2>
-      <p className="mb-4">When comparing web design proposals, start by checking whether costs are broken down clearly: a trustworthy quote separates one-time build fees from ongoing expenses like hosting, maintenance, and domain renewals. Agencies confident in their work provide real client references with contact details you can verify independently. Red flags appear when agencies promise "unlimited revisions" without scope boundaries, omit hosting or maintenance costs entirely, or present stock template screenshots as examples of custom work. Pressure tactics, "this price expires Friday", signal desperation rather than demand. If a proposal lacks performance benchmarks or avoids discussing Core Web Vitals, the agency likely prioritizes aesthetics over technical execution. Request live portfolio URLs and run your own Lighthouse audits through Chrome DevTools or PageSpeed Insights. Scores below 85 in performance, accessibility, or SEO categories indicate poor technical foundations, regardless of how polished the design appears visually. A site that looks modern but loads slowly or fails accessibility standards will cost you conversions and search rankings. Verify testimonials by contacting references directly, don't rely on curated quotes on the agency's website. Ask former clients about communication frequency, whether deadlines were met, and how responsive the team was when issues arose post-launch. A reference who hesitates or declines to discuss their experience tells you everything you need to know. Agencies operating transparently welcome these conversations because satisfied clients become their strongest advocates.</p>
-
-
-      <p className="mb-6">➡ Serving US clients? <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet delivers professional US business websites</a> with 7-day delivery for sites of 5 pages or fewer and Lighthouse 95+. See our <a href="/" className="text-blue-600 underline hover:text-blue-800 transition-colors">US services hub</a> for services and scoping.</p>
+      <p className="mb-6 text-sm text-gray-500">
+        Sources, read on 21 October 2026:{' '}
+        <a href={WHITO} className="underline" target="_blank" rel="noopener noreferrer">Whito, How Much Does a Website Cost in the UK? Web Design Prices 2026 (updated 19 October 2026)</a>;{' '}
+        <a href={SPOTDEV_REDESIGN} className="underline" target="_blank" rel="noopener noreferrer">SpotDev, Website Redesign Cost UK (22 May 2026)</a>;{' '}
+        <a href={SPOTDEV_AVERAGE} className="underline" target="_blank" rel="noopener noreferrer">SpotDev, What is the average cost of website design in the UK?</a>.
+        Both firms sell web design. The 10-page totals are our arithmetic on Whito&apos;s figures.
+      </p>
 
       <div className="my-12 rounded-2xl bg-[#0052CC] p-8 sm:p-10 text-center not-prose">
-        <h3 className="text-white text-2xl font-bold mb-3">Ready to transform your business?</h3>
-        <p className="text-blue-100 mb-6 max-w-xl mx-auto">We'll review your specific situation and recommend the right approach. No obligation.</p>
+        <h3 className="text-white text-2xl font-bold mb-3">Get a fixed price for your website</h3>
+        <p className="text-blue-100 mb-6 max-w-xl mx-auto">Tell us the pages and features you need. We reply with a written, fixed quote. No obligation.</p>
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · 12+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses served · 97% on-time delivery · founded 2014</p>
       </div>
     </>
   ),

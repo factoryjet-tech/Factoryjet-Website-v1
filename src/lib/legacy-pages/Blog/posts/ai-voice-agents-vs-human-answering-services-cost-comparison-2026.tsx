@@ -4,8 +4,13 @@ import Link from 'next/link';
 import type { BlogPost } from '../data.types';
 
 /*
- * Every price on this page is a list price read on the vendor's own pricing page on
- * 11 October 2026. None is a FactoryJet price and none is a sum worked out by us.
+ * Every price on this page is a list price read on the vendor's own pricing page. All ten
+ * lists were first read on 11 October 2026 and read again on 21 October 2026, when none
+ * had changed. None is a FactoryJet price and none is a sum worked out by us.
+ * Custom build ranges are market ranges published by three development firms (BUILD_SOURCES),
+ * read on 21 October 2026, each named in the sentence that uses it.
+ * No running, hosting or maintenance figure for a custom build appears anywhere on this page
+ * (Bhavesh, 11 Oct 2026), and the build sources' own upkeep figures are deliberately left out.
  * When a price changes, re-read the linked page and update the row, the takeaways and
  * the FAQ answers together.
  */
@@ -20,6 +25,12 @@ const SRC = {
   smithAi: 'https://smith.ai/pricing/ai-receptionist',
   ruby: 'https://www.ruby.com/plans-and-pricing/',
   smithHuman: 'https://smith.ai/pricing/receptionists',
+  twilio: 'https://www.twilio.com/en-us/voice/pricing/us',
+  masterOfCode: 'https://masterofcode.com/blog/voice-ai-development-costs',
+  groovyWeb: 'https://www.groovyweb.co/blog/ai-voice-agent-development-cost',
+  softcery: 'https://softcery.com/lab/how-much-does-it-cost-to-build-an-ai-voice-agent',
+  fcc: 'https://docs.fcc.gov/public/attachments/DOC-400393A1.pdf',
+  airCanada: 'https://decisions.civilresolutionbc.ca/crt/crtd/en/item/525448/index.do',
 } as const;
 
 const linkClass = 'text-[#B23E13] underline';
@@ -103,43 +114,84 @@ const PRICE_ROWS: { name: string; href: string; kind: string; price: string; get
   },
 ];
 
+/*
+ * Cost by company size and use case. The size labels are ours; each build range is
+ * quoted under the tier name its source uses, so a reader can check the match.
+ */
+const SIZE_ROWS: { size: string; job: string; buy: string; build: string }[] = [
+  {
+    size: 'Solo trade or small office, 1 to 10 staff',
+    job: 'After-hours answering, messages, simple bookings',
+    buy: 'Dialzara $29 to $349 a month. Goodcall $79 to $299 a month. Smith.ai AI Receptionist free for 25 calls, then $150 to $800 a month.',
+    build: 'Groovy Web: $3,000 to $12,000 for an "SMB / single-purpose" build with one job and one CRM or calendar integration. Most offices this size buy a product.',
+  },
+  {
+    size: 'Small business, 10 to 50 staff',
+    job: 'Bookings written into the calendar or CRM, transfers to staff',
+    buy: 'My AI Front Desk $99 a month ($79 billed annually). RingCentral AI Receptionist from $49 a month. Ruby, with people, $250 to $1,725 a month.',
+    build: 'Groovy Web: $12,000 to $30,000 for "growth / multi-intent". Master of Code Global: $10,000 to $25,000 for an "MVP / proof of concept".',
+  },
+  {
+    size: 'Mid-size company, 50 to 500 staff',
+    job: 'Several call types, CRM and payments, inbound and outbound',
+    buy: 'Developer platforms by the minute: Retell AI $0.07 to $0.31, Bland AI $0.12 to $0.14, Vapi $0.05 plus the providers you choose.',
+    build: 'Master of Code Global: $25,000 to $50,000 for "mid-tier (CRM integration, multi-intent logic)".',
+  },
+  {
+    size: 'Contact center or multi-site enterprise',
+    job: 'High call volume, several languages, analytics',
+    buy: 'Synthflow: enterprise contracts from $30,000 a year. Retell AI and Bland AI: Enterprise plans on custom pricing.',
+    build: 'Master of Code Global: $50,000 to $150,000+ for "advanced (multilingual, compliance, analytics)". Groovy Web: $20,000 to $120,000 at enterprise scale.',
+  },
+  {
+    size: 'Regulated business: healthcare, insurance, finance',
+    job: 'Patient or policy data, a signed BAA, audit trails',
+    buy: 'Vapi lists a HIPAA add-on with a Business Associate Agreement at $2,000 a month. Bland AI says it signs a BAA.',
+    build: 'Softcery: $180,000+ for a "compliance-grade bespoke system", labelled as its own estimate band. Master of Code Global: $150,000 to $300,000+ for enterprise-grade work.',
+  },
+];
+
 export const post: BlogPost = {
   id: 'ai-voice-agents-vs-human-answering-services-cost-comparison-2026',
   slug: 'ai-voice-agents-vs-human-answering-services-cost-comparison-2026',
-  title: 'How Much Does an AI Voice Agent Cost? 2026 List Prices vs Human Answering Services',
+  title: 'How Much Does an AI Voice Agent Cost in 2026? List Prices, Custom Build Ranges and Human Answering Services',
   excerpt:
-    'How much does an AI voice agent cost? On the price lists we read on 11 October 2026, Retell AI lists $0.07 to $0.31 a minute and Bland AI $0.14 a minute, pay as you go. Ready-made AI receptionists are sold by the month: Dialzara from $29, Goodcall from $79. Ruby, a human answering service, starts at $250 a month.',
+    'How much does an AI voice agent cost in 2026? Building a custom one runs $3,000 to $12,000 for a single-purpose small business agent (Groovy Web) and $25,000 to $50,000 for a mid-tier agent with CRM integration (Master of Code Global). Renting starts lower: on 21 October 2026 Retell AI listed $0.07 to $0.31 a minute, Dialzara $29 a month and Ruby, a human answering service, $250 a month.',
   date: 'September 1, 2026',
-  dateModified: 'October 11, 2026',
+  dateModified: 'October 21, 2026',
   readTime: '15 min read',
   author: 'Bhavesh Barot',
   category: 'Emerging Tech',
   imageUrl: '/images/blog/ai-voice-agent-vs-human-answering-service.jpg',
   meta: {
-    title: 'How Much Does an AI Voice Agent Cost? 2026 Pricing Compared',
+    title: 'How Much Does an AI Voice Agent Cost in 2026? Prices Compared',
     description:
-      'AI voice agent cost on 11 October 2026: Retell AI $0.07 to $0.31 a minute, Bland AI $0.14, Dialzara from $29 a month, Ruby from $250. Ten price lists, linked.',
+      'AI voice agent cost in 2026: custom builds $3,000 to $150,000+ by size, Retell AI $0.07 to $0.31 a minute, Dialzara from $29 a month, Ruby from $250. Prices read 21 Oct.',
   },
   keyTakeaways: [
-    'Pay-as-you-go voice agent platforms list a price per minute. On 11 October 2026 Retell AI listed $0.07 to $0.31 a minute, Bland AI listed $0.14 a minute on Start with no platform fee, and Vapi listed $0.05 a minute for its platform with models passed through at cost.',
+    'Building a custom AI voice agent in 2026 costs $3,000 to $12,000 for one job with one integration, per Groovy Web, and $25,000 to $50,000 for a mid-tier agent with CRM integration and several call types, per Master of Code Global. Master of Code Global puts multilingual, compliance-heavy builds at $50,000 to $150,000 and up.',
+    'Pay-as-you-go voice agent platforms list a price per minute. On 21 October 2026 Retell AI listed $0.07 to $0.31 a minute, Bland AI listed $0.14 a minute on Start with no platform fee, and Vapi listed $0.05 a minute for its platform with models passed through at cost.',
     'Ready-made AI receptionist products list a price per month. Dialzara listed $29 a month for up to 60 minutes, Goodcall $79 a month for 100 unique customers, My AI Front Desk $99 a month with 200 voice minutes, and Smith.ai AI Receptionist $150 a month for 75 calls.',
     'Human answering services list a price per minute or per call of a person. Ruby listed 50 receptionist minutes at $250 a month and 500 at $1,725. Smith.ai listed 30 calls at $300 a month and 300 at $2,100, answered by its own staff.',
     'The lists sell different units: minutes, calls or unique customers. Count your own calls and your average call length for a busy month before you set two lists side by side.',
+    'Regulated buyers pay for compliance on the price list too. Vapi lists its HIPAA add-on, which includes a Business Associate Agreement, at $2,000 a month. Under a 2024 FCC ruling an AI-generated voice counts as artificial under the TCPA, so outbound AI calls need consent first.',
     'For seasonal spikes, check the concurrent call limit. Retell AI includes 20 concurrent calls on pay as you go, Bland AI 10 on Start and Vapi 4 on its usage-only plan.',
     'Buy an off-the-shelf AI receptionist for standard calls, keep a person on the hard calls, and build a custom voice agent only when a product hits a wall it cannot pass.',
     'A custom build has no list price. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.',
     'On a custom build you own the repository, the telephony backend and the prompt state machines outright, with no per-seat licensing.',
   ],
   faqs: [
-    { q: 'How much does an AI voice agent cost?', a: "It depends which of three things you buy. Pay-as-you-go platforms list a price per minute: Retell AI $0.07 to $0.31 and Bland AI $0.14 on its Start plan. Ready-made AI receptionist products list a price per month: Dialzara from $29, Goodcall from $79 and My AI Front Desk $99. A custom-built agent has no list price, so FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. Every list price here was read on the vendor's own pricing page on 11 October 2026." },
-    { q: 'How much does an AI voice agent cost per month?', a: 'Ready-made products publish monthly plans. On 11 October 2026 Dialzara listed $29 a month for up to 60 minutes and $349 for up to 1,000. Goodcall listed $79 a month for 100 unique customers and $299 for 2,000, with no per-minute charge. My AI Front Desk listed $99 a month with 200 voice minutes. Smith.ai AI Receptionist listed $150 a month for 75 calls. Pay-as-you-go platforms such as Retell AI and Bland AI bill by the minute, so the month depends on how many minutes your callers use.' },
-    { q: 'How much does an AI voice agent cost per minute?', a: 'Three pay-as-you-go platforms listed these rates on 11 October 2026. Retell AI: $0.07 to $0.31 a minute, with a calculator that moves the rate with the language model, voice and telephony you pick. Bland AI: $0.14 a minute on Start, or $0.12 a minute on Build, which also carries a $299 a month platform fee. Vapi: $0.05 a minute for the Vapi platform, with speech and language models passed through at cost. Dialzara lists $0.35 to $0.48 a minute, but only for minutes above the allowance in a plan.' },
-    { q: 'Which vendors offer pay-as-you-go pricing for AI voice agents?', a: 'Three that we read on 11 October 2026. Retell AI starts at $0 with no minimums or contracts and includes 20 concurrent calls. Bland AI has a Start plan at $0.14 a minute with a $0 platform fee, 10 concurrent calls and a cap of 100 calls a day. Vapi starts at $0 with no minimum minutes and 4 concurrent calls, and lists extra lines at $10 a line a month. For a seasonal business such as a construction or roofing contractor, the concurrent call limit decides how many callers get an answer at the same moment during a spike.' },
-    { q: 'How does an AI voice agent compare with a human answering service on cost?', a: 'Set the published lists side by side. Ruby lists 50 receptionist minutes at $250 a month and 500 at $1,725. Smith.ai lists 30 calls answered by its own staff at $300 a month and 300 at $2,100. Among AI products, Dialzara lists up to 60 minutes at $29 a month and up to 500 at $199, and Smith.ai AI Receptionist lists 75 calls at $150 a month. All were read on 11 October 2026. What a person adds is judgement on the hard calls, which is why a sensible design keeps a transfer path to a human.' },
-    { q: 'What does a custom AI voice agent cost?', a: 'A custom build has no list price, because the price depends on what is built: which systems the agent reads and writes, how many kinds of call it handles and where calls transfer. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. We can keep managing the servers, the AI, the APIs and the maintenance, so your team does not have to.' },
+    { q: 'How much does an AI voice agent cost?', a: "It depends which of three things you buy. Pay-as-you-go platforms list a price per minute: Retell AI $0.07 to $0.31 and Bland AI $0.14 on its Start plan. Ready-made AI receptionist products list a price per month: Dialzara from $29, Goodcall from $79 and My AI Front Desk $99. A custom build is quoted per project: development firms publish ranges from $3,000 to $12,000 for one job (Groovy Web) to $25,000 to $50,000 for a mid-tier agent with CRM integration (Master of Code Global). Every list price here was read on the vendor's own pricing page on 21 October 2026." },
+    { q: 'How much does it cost to build a custom AI voice agent in 2026?', a: 'Published market ranges, read on 21 October 2026: Groovy Web puts a single-purpose small business build at $3,000 to $12,000, a multi-intent agent with CRM, telephony and calendar at $12,000 to $30,000, and enterprise scale at $20,000 to $120,000. Master of Code Global lists $10,000 to $25,000 for a proof of concept, $25,000 to $50,000 for mid-tier, $50,000 to $150,000+ for multilingual and compliance work, and $150,000 to $300,000+ for enterprise-grade builds. FactoryJet quotes its own build as a fixed price in writing after a short scoping call.' },
+    { q: 'What does an AI voice agent cost for a small business compared with a call center?', a: 'A small office usually buys a product: Dialzara lists $29 to $349 a month, Goodcall $79 to $299 and Smith.ai AI Receptionist $150 to $800 for 75 to 500 calls. If it needs a build, Groovy Web puts one job with one integration at $3,000 to $12,000. A contact center weighs enterprise platforms, such as Synthflow at $30,000 a year and up, against a custom build that Master of Code Global prices at $50,000 to $150,000+ for multilingual, compliance and analytics work. Prices were read on 21 October 2026.' },
+    { q: 'How much does an AI voice agent cost per month?', a: 'Ready-made products publish monthly plans. On 21 October 2026 Dialzara listed $29 a month for up to 60 minutes and $349 for up to 1,000. Goodcall listed $79 a month for 100 unique customers and $299 for 2,000, with no per-minute charge. My AI Front Desk listed $99 a month with 200 voice minutes. Smith.ai AI Receptionist listed $150 a month for 75 calls. Pay-as-you-go platforms such as Retell AI and Bland AI bill by the minute, so the month depends on how many minutes your callers use.' },
+    { q: 'How much does an AI voice agent cost per minute?', a: 'Three pay-as-you-go platforms listed these rates on 21 October 2026. Retell AI: $0.07 to $0.31 a minute, with a calculator that moves the rate with the language model, voice and telephony you pick. Bland AI: $0.14 a minute on Start, or $0.12 a minute on Build, which also carries a $299 a month platform fee. Vapi: $0.05 a minute for the Vapi platform, with speech and language models passed through at cost. Dialzara lists $0.35 to $0.48 a minute, but only for minutes above the allowance in a plan.' },
+    { q: 'Which vendors offer pay-as-you-go pricing for AI voice agents?', a: 'Three that we read on 21 October 2026. Retell AI starts at $0 with no minimums or contracts and includes 20 concurrent calls. Bland AI has a Start plan at $0.14 a minute with a $0 platform fee, 10 concurrent calls and a cap of 100 calls a day. Vapi starts at $0 with no minimum minutes and 4 concurrent calls, and lists extra lines at $10 a line a month. For a seasonal business such as a construction or roofing contractor, the concurrent call limit decides how many callers get an answer at the same moment during a spike.' },
+    { q: 'How does an AI voice agent compare with a human answering service on cost?', a: 'Set the published lists side by side. Ruby lists 50 receptionist minutes at $250 a month and 500 at $1,725. Smith.ai lists 30 calls answered by its own staff at $300 a month and 300 at $2,100. Among AI products, Dialzara lists up to 60 minutes at $29 a month and up to 500 at $199, and Smith.ai AI Receptionist lists 75 calls at $150 a month. All were read on 21 October 2026. What a person adds is judgement on the hard calls, which is why a sensible design keeps a transfer path to a human.' },
+    { q: 'What does a custom AI voice agent cost?', a: 'A custom build has no list price, because the price depends on what is built: which systems the agent reads and writes, how many kinds of call it handles and where calls transfer. Published market ranges run from $3,000 to $12,000 for one job (Groovy Web) to $50,000 to $150,000+ for multilingual and compliance-heavy work (Master of Code Global). FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. We can keep managing the servers, the AI, the APIs and the maintenance, so your team does not have to.' },
     { q: 'What does the per-minute price of an AI voice agent include?', a: 'It differs by vendor, so read the line under the price. Every call uses four parts: a phone line, speech to text, a language model and text to speech. Bland AI says its per-minute rate covers the language model, speech to text and text to speech, with telephony billed separately. Vapi says its $0.05 a minute is for the Vapi platform, with models passed through at cost. Retell AI publishes a range, $0.07 to $0.31 a minute, and a calculator that moves with the options you choose.' },
-    { q: 'Is there a free AI voice agent plan or trial?', a: 'Several vendors listed one on 11 October 2026. Smith.ai AI Receptionist has a Free plan at $0 a month for 25 calls, then $3.00 a call. Retell AI gives $10 in free credits and Vapi gives $5. Bland AI has a Start plan with a $0 platform fee and no card required. Dialzara and My AI Front Desk each list a 7-day free trial, and Goodcall lets you build a free demo agent before you connect a number.' },
-    { q: 'Should I build a custom voice agent or just buy a product?', a: 'Buy, in most cases. If your calls are fairly standard and your scheduling software is mainstream, an off-the-shelf AI receptionist will be live faster and cheaper than anything custom, on a plan you can read before you sign. Dialzara listed plans from $29 a month and Goodcall from $79 a month on 11 October 2026. Building earns its cost when you hit a wall those products cannot pass.' },
+    { q: 'Is there a free AI voice agent plan or trial?', a: 'Several vendors listed one on 21 October 2026. Smith.ai AI Receptionist has a Free plan at $0 a month for 25 calls, then $3.00 a call. Retell AI gives $10 in free credits and Vapi gives $5. Bland AI has a Start plan with a $0 platform fee and no card required. Dialzara and My AI Front Desk each list a 7-day free trial, and Goodcall lets you build a free demo agent before you connect a number.' },
+    { q: 'Should I build a custom voice agent or just buy a product?', a: 'Buy, in most cases. If your calls are fairly standard and your scheduling software is mainstream, an off-the-shelf AI receptionist will be live faster and cheaper than anything custom, on a plan you can read before you sign. Dialzara listed plans from $29 a month and Goodcall from $79 a month on 21 October 2026. Building earns its cost when you hit a wall those products cannot pass.' },
     { q: 'When does a custom build beat an off-the-shelf product?', a: 'Four situations, in our experience. An intake process that does not fit the logic flows of the product. A system the product will not integrate with. A legal or industry requirement the product covers only on a plan priced beyond your budget. Or a workflow spanning several tools that has to stay consistent across all of them. Outside those, buy the product.' },
     { q: 'Can customers tell they are speaking with an AI voice agent?', a: 'Many will not on a routine booking, because a fast reply and a natural voice remove the tells people listen for. Some will, and that is fine. We would rather build agents that introduce themselves honestly as a digital assistant than ones that try to pass, because a caller who feels deceived is worse for you than one who knew from the start.' },
     { q: 'What happens when a caller has a complex or emotional situation?', a: 'The agent runs deterministic sentiment and complexity triggers. When a caller expresses frustration, describes serious injury, or asks for a specific specialist, it executes an immediate warm transfer to on-call staff with a summary of the conversation already captured, so your colleague does not start from nothing.' },
@@ -155,26 +207,32 @@ export const post: BlogPost = {
     { q: 'Will an AI voice agent damage customer experience?', a: 'It can, if you deploy it badly. The failure modes are predictable: no clean handoff to a human, an agent that cannot admit it does not know, and long latency that makes people talk over it. It also fixes a worse experience most businesses already inflict, which is nobody answering at all. Start with after-hours only, listen to real recordings weekly, and expand once you trust it.' },
     { q: 'What happens if the AI cannot answer the question?', a: 'It should say so and route to a person, not guess. Insist on hearing this path demoed before you buy or build, because it is where weak implementations fall over. A good agent captures what it learned first, so the human picks up with context rather than asking the caller to start again.' },
     { q: 'Do we need to record calls, and what about consent?', a: 'Recording is useful for tuning the agent but it is not mandatory, and consent rules vary by state, with several requiring all-party consent. Decide deliberately rather than by default. If you handle health information you also need a signed BAA with any vendor touching the audio, and you should confirm retention periods in writing.' },
+    { q: 'Is an AI voice agent HIPAA compliant?', a: 'Only if the vendor signs a Business Associate Agreement and your setup handles patient data the way HIPAA requires. On 21 October 2026 Vapi listed a HIPAA add-on with a BAA at $2,000 a month. Bland AI said it is HIPAA compliant with a signed BAA and holds SOC 2 Type I and Type II. Retell AI described itself as SOC 2 certified and HIPAA-ready, with a BAA in its plan list. RingCentral said its AI Receptionist is designed to support HIPAA compliance. Get the signed BAA before any patient calls.' },
+    { q: 'Is it legal for an AI voice agent to make outbound calls?', a: 'In the US, with care. On 8 February 2024 the FCC ruled that calls made with AI-generated voices are artificial under the Telephone Consumer Protection Act, and its rules require telemarketers to get prior express written consent before robocalling consumers. Inbound answering is a different case from dialling out. Take legal advice before an AI voice calls anyone, and keep a record of each consent.' },
+    { q: 'Is a business responsible for what its AI agent tells a caller?', a: "A Canadian tribunal said yes. In Moffatt v. Air Canada (2024 BCCRT 149, 14 February 2024), Air Canada's website chatbot told a customer that a bereavement fare could be claimed after booking, which was not the airline's policy. The tribunal found Air Canada did not take reasonable care to make its chatbot accurate and ordered it to pay C$812.02. A voice agent should answer refund and policy questions from your written policy, and hand off when it is unsure." },
+    { q: 'What does the phone line for an AI voice agent cost?', a: "Twilio, a phone carrier many voice platforms connect to, listed these US prices on 21 October 2026: a local number at $1.15 a month, receiving calls on it at $0.0085 a minute, making calls at $0.0140 a minute, and call recording at $0.0025 a minute. Some platforms bundle the line. Bland AI says telephony is billed separately from its per-minute rate, and Vapi lists Twilio inbound at $0.008 a minute as a pass-through." },
     { q: 'How do we measure whether the voice agent is working?', a: 'Four numbers monthly: calls answered against calls received, bookings completed by the agent, transfers to a human and why, and abandoned calls. Traffic-style metrics tell you nothing here. The single most revealing habit is listening to five real recordings a week for the first two months.' },
-    { q: 'Can it handle a sudden spike in call volume?', a: 'Yes, up to the concurrent call limit on your plan. On 11 October 2026 Retell AI included 20 concurrent calls on pay as you go, Bland AI 10 on Start and 50 on Build, and Vapi 4 on its usage-only plan with extra lines at $10 a line a month. On a custom build, concurrency is a configuration setting. A storm, a product recall or a busy Monday is when calls are worth the most, so size the limit for that day.' },
+    { q: 'Can it handle a sudden spike in call volume?', a: 'Yes, up to the concurrent call limit on your plan. On 21 October 2026 Retell AI included 20 concurrent calls on pay as you go, Bland AI 10 on Start and 50 on Build, and Vapi 4 on its usage-only plan with extra lines at $10 a line a month. On a custom build, concurrency is a configuration setting. A storm, a product recall or a busy Monday is when calls are worth the most, so size the limit for that day.' },
   ],
   content: (
     <article className="prose prose-lg max-w-none text-[#14110F]">
 
-      <h2 id="cost">How Much Does an AI Voice Agent Cost?</h2>
+      <h2 id="cost">How Much Does an AI Voice Agent Cost in 2026?</h2>
       <p>
         <strong>
-          On the price lists we read on 11 October 2026, Retell AI lists $0.07 to $0.31 a minute and Bland AI lists $0.14 a minute, both pay as you go. A ready-made AI receptionist is sold by the month: Dialzara from $29, Goodcall from $79, My AI Front Desk $99. A custom-built agent has no list price.
+          Building a custom AI voice agent in 2026 costs about $3,000 to $12,000 for one job with one integration, according to{' '}
+          <Ext href={SRC.groovyWeb}>Groovy Web</Ext>, and $25,000 to $50,000 for a mid-tier agent with CRM integration and several call types, according to{' '}
+          <Ext href={SRC.masterOfCode}>Master of Code Global</Ext>. Renting starts lower. On the price lists we read on 21 October 2026, Retell AI lists $0.07 to $0.31 a minute and Bland AI $0.14 a minute, pay as you go, and a ready-made AI receptionist costs $29 a month at Dialzara, $79 at Goodcall and $99 at My AI Front Desk.
         </strong>{' '}
-        Each figure is the published price on that vendor&apos;s own pricing page.
+        Each list price is the published price on that vendor&apos;s own pricing page. The build ranges are what each firm publishes for the US market, and the prices are in US dollars.
       </p>
       <p>
         The figures sit far apart because they are three different purchases. A platform sells minutes, and you or a developer build the agent on it. A receptionist product sells a finished agent on a monthly plan. A custom build is a project, made for your call types and your systems, and you own what is built. A human answering service is the fourth option, and two of them publish their prices as well.
       </p>
 
-      <h2 id="price-table">AI Voice Agent Pricing on 11 October 2026: Ten Published Price Lists</h2>
+      <h2 id="price-table">AI Voice Agent Pricing on 21 October 2026: Ten Published Price Lists</h2>
       <p>
-        We opened ten price lists from nine vendors on 11 October 2026 and copied the plan names, prices and limits as written. Each row links to the page it came from. All prices are in US dollars.
+        We opened ten price lists from nine vendors on 21 October 2026 and copied the plan names, prices and limits as written. Each row links to the page it came from. All prices are in US dollars.
       </p>
 
       <div className="overflow-x-auto my-8 not-prose">
@@ -213,6 +271,42 @@ export const post: BlogPost = {
         <Link href="/blog/best-ai-receptionist-small-business" className={linkClass}>our guide to AI receptionist and voice agent products for small business</Link>.
       </p>
 
+
+      <h2 id="by-company-size">AI Voice Agent Cost by Company Size and Use Case (2026)</h2>
+      <p>
+        The same question gets a different answer at a five-person plumbing firm and at a 300-seat contact center. The table sets the off-the-shelf list prices we read on 21 October 2026 beside the custom build ranges that three development firms publish. The size bands are ours. Each build range keeps the tier name its source uses, so you can check the match.
+      </p>
+
+      <div className="overflow-x-auto my-8 not-prose">
+        <table className={`w-full text-left text-sm border border-[#E7DED6] bg-white rounded-xl shadow-sm ${visualQa.priceTable}`}>
+          <thead className="bg-[#FFF8F5] border-b border-[#E7DED6]">
+            <tr>
+              <th className="p-4 font-bold text-[#14110F]">Company size</th>
+              <th className="p-4 font-bold text-[#14110F]">Typical call job</th>
+              <th className="p-4 font-bold text-[#14110F]">Buy: list price read 21 Oct 2026</th>
+              <th className="p-4 font-bold text-[#14110F]">Build: published market range</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-[#E7DED6]">
+            {SIZE_ROWS.map((row) => (
+              <tr key={row.size}>
+                <td className="p-4 font-semibold align-top">{row.size}</td>
+                <td className="p-4 text-[#46403B] align-top">{row.job}</td>
+                <td className="p-4 text-[#14110F] align-top">{row.buy}</td>
+                <td className="p-4 text-[#46403B] align-top">{row.build}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Read the build ranges as what the market charges, not as a quote. They come from firms that sell this work:{' '}
+        <Ext href={SRC.groovyWeb}>Groovy Web</Ext> (6 July 2026),{' '}
+        <Ext href={SRC.masterOfCode}>Master of Code Global</Ext> (updated 14 September 2026) and{' '}
+        <Ext href={SRC.softcery}>Softcery</Ext> (3 July 2026). Their bottom ends disagree. Softcery puts a configured platform agent at $1,000 to $15,000 and a custom integrated build at $80,000 to $200,000, and says the same 12-week scope can price at about $48,000, $120,000 or $216,000 depending on who staffs it. The gap is scope and team mix, so ask every firm you speak to which tier its quote sits in.
+      </p>
+
       <h2 id="what-you-buy">What Each Price List Sells, and Which Buyer It Suits</h2>
       <p>
         A business that wants every call answered can buy one of four services. Each suits a different kind of call, and each tells you a different amount on its price list.
@@ -243,7 +337,7 @@ export const post: BlogPost = {
         <Ext href={SRC.ruby}>Ruby plans page</Ext>{' '}
         lists 50 receptionist minutes at $250 a month, 100 at $395, 200 at $720 and 500 at $1,725. The{' '}
         <Ext href={SRC.smithHuman}>Smith.ai receptionist pricing page</Ext>{' '}
-        lists 30 calls at $300 a month, 90 at $810 and 300 at $2,100, answered by its own staff. We read both lists at those links on 11 October 2026.
+        lists 30 calls at $300 a month, 90 at $810 and 300 at $2,100, answered by its own staff. We read both lists at those links on 21 October 2026.
       </p>
       <p>
         One list sells minutes and the other sells calls, so you need your own average call length before you can set them side by side. Both step up with volume, so check which tier your busiest month would land in.
@@ -284,7 +378,7 @@ export const post: BlogPost = {
 
       <h2 id="per-month">How Much Does an AI Voice Agent Cost Per Month?</h2>
       <p>
-        On a ready-made product, the month is the plan price. The entry plans on 11 October 2026 were Dialzara at $29 a month for up to 60 minutes, Goodcall at $79 a month for 100 unique customers, My AI Front Desk at $99 a month with 200 voice minutes, and Smith.ai AI Receptionist at $150 a month for 75 calls. Smith.ai also lists a Free plan at $0 a month for 25 calls.
+        On a ready-made product, the month is the plan price. The entry plans on 21 October 2026 were Dialzara at $29 a month for up to 60 minutes, Goodcall at $79 a month for 100 unique customers, My AI Front Desk at $99 a month with 200 voice minutes, and Smith.ai AI Receptionist at $150 a month for 75 calls. Smith.ai also lists a Free plan at $0 a month for 25 calls.
       </p>
       <p>
         Higher up the same lists, Dialzara reads $349 a month for up to 1,000 minutes, Goodcall $299 a month for 2,000 unique customers, and Smith.ai AI Receptionist $800 a month for 500 calls.
@@ -321,6 +415,20 @@ export const post: BlogPost = {
         <tr><th scope="row"><strong>After-hours calls:</strong></th><td> the place to start with any AI agent. Begin with after-hours only, listen to real recordings every week, and expand once you trust it.</td></tr>
       </tbody></table>
 
+
+      <h2 id="compliance">Compliance and Risk: Call Recording Consent, HIPAA, TCPA and GDPR</h2>
+      <p>
+        Price is half the decision. The other half is what you are allowed to do with a caller&apos;s voice and data, and that differs by industry and by country.
+      </p>
+      <table className={visualQa.profileFacts} tabIndex={0}><tbody>
+        <tr><th scope="row"><strong>Healthcare in the US (HIPAA):</strong></th><td> any vendor that touches patient audio or transcripts must sign a Business Associate Agreement. On 21 October 2026{' '}<Ext href={SRC.vapi}>Vapi</Ext> listed a HIPAA add-on with a BAA at $2,000 a month.{' '}<Ext href={SRC.bland}>Bland AI</Ext> said it is HIPAA compliant with a signed BAA and holds SOC 2 Type I and Type II.{' '}<Ext href={SRC.retell}>Retell AI</Ext> described itself as SOC 2 certified and HIPAA-ready. Practices should also read{' '}<Link href="/blog/how-much-does-an-ai-medical-receptionist-cost-2026" className={linkClass}>what an AI medical receptionist costs</Link>.</td></tr>
+        <tr><th scope="row"><strong>Outbound calls in the US (TCPA):</strong></th><td> on 8 February 2024 the FCC ruled that calls made with AI-generated voices are &quot;artificial&quot; under the Telephone Consumer Protection Act, and its rules require telemarketers to get prior express written consent before robocalling consumers. Source:{' '}<Ext href={SRC.fcc}>FCC news release</Ext>. Take legal advice before an AI voice dials anyone.</td></tr>
+        <tr><th scope="row"><strong>Call recording consent:</strong></th><td> rules vary by US state, and some states require every party on the call to agree. Have the agent say at the start that the call is recorded, or turn recording off where you cannot get consent. Ask a lawyer which rule applies in each state you take calls from.</td></tr>
+        <tr><th scope="row"><strong>UK and EU callers (GDPR):</strong></th><td> a voice recording and its transcript are personal data. Ask for a Data Processing Agreement and where the audio is stored. Bland AI says it is GDPR compliant with a DPA, and Retell AI lists a custom DPA on its Enterprise plan.</td></tr>
+        <tr><th scope="row"><strong>What the agent says (Canada and everywhere else):</strong></th><td> in{' '}<Ext href={SRC.airCanada}>Moffatt v. Air Canada</Ext> (2024 BCCRT 149), a British Columbia tribunal held the airline responsible for a wrong answer its website chatbot gave about bereavement fares and ordered it to pay C$812.02. A voice agent should answer refund and policy questions only from your written policy, and pass anything else to a person.</td></tr>
+        <tr><th scope="row"><strong>Card payments (PCI DSS):</strong></th><td> card numbers should be typed on the keypad and sent straight to the payment gateway, never spoken into a recording. Bland AI says it is PCI DSS self-attested; ask any vendor for the same in writing.</td></tr>
+      </tbody></table>
+
       <h2 id="compare">How to Compare Two Price Lists in Five Steps</h2>
       <ol>
         <li><strong>Count your calls and your average call length for your busiest month.</strong> You need both numbers, because some lists sell minutes and others sell calls.</li>
@@ -334,6 +442,17 @@ export const post: BlogPost = {
       <p>
         Whichever service answers, the value sits in the calls that would otherwise be missed. Count the calls that went unanswered last month, the share of answered calls that turn into a booking, and what an average booking is worth. Those are your own numbers, and they tell you which of these price lists is worth paying.
       </p>
+
+
+      <h2 id="sources">Sources</h2>
+      <p>Vendor price lists were read on 11 October 2026 and again on 21 October 2026, when none had changed. The build ranges and the two rulings were read on 21 October 2026.</p>
+      <ul>
+        <li><Ext href={SRC.retell}>Retell AI pricing</Ext>, <Ext href={SRC.bland}>Bland AI pricing</Ext>, <Ext href={SRC.vapi}>Vapi pricing</Ext>, <Ext href={SRC.synthflow}>Synthflow pricing</Ext></li>
+        <li><Ext href={SRC.dialzara}>Dialzara pricing</Ext>, <Ext href={SRC.goodcall}>Goodcall pricing</Ext>, <Ext href={SRC.frontdesk}>My AI Front Desk pricing</Ext>, <Ext href={SRC.smithAi}>Smith.ai AI Receptionist pricing</Ext></li>
+        <li><Ext href={SRC.ruby}>Ruby plans and pricing</Ext>, <Ext href={SRC.smithHuman}>Smith.ai receptionist pricing</Ext>, <Ext href={SRC.twilio}>Twilio US voice pricing</Ext></li>
+        <li><Ext href={SRC.groovyWeb}>Groovy Web: AI voice agent development cost</Ext>, <Ext href={SRC.masterOfCode}>Master of Code Global: voice AI development costs</Ext>, <Ext href={SRC.softcery}>Softcery: how much it costs to build an AI voice agent</Ext></li>
+        <li><Ext href={SRC.fcc}>FCC, 8 February 2024: AI-generated voices in robocalls</Ext>, <Ext href={SRC.airCanada}>Moffatt v. Air Canada, 2024 BCCRT 149</Ext></li>
+      </ul>
 
       <div className="my-10 p-8 rounded-2xl bg-[#FFF8F5] border border-[#E7DED6] text-center not-prose">
         <div className="font-mono text-xs text-[#B23E13] font-bold uppercase mb-2">

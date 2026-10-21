@@ -20,7 +20,16 @@ const UPDATED = '2026-10-21';
 const TITLE = 'AI Automation Agency Australia | AI Agents | FactoryJet';
 /* Shortened 2026-09-26 so the hero form sits in the first desktop screen; "the tools you already
    run" moved into the hero lead. */
-const H1 = 'AI Automation Agency Australia: Custom AI Agents Built Into Your Tools';
+/* 21 Oct 2026 (AU plan R4): "Custom" dropped so the H1 reads closer to "ai automation agency" and
+   "ai agency australia" and stays inside the first screen. */
+const H1 = 'AI Automation Agency Australia: AI Agents Built Into Your Tools';
+/* Build-only market ranges, fetched and read 21 Oct 2026. Flowtivity, "How Much Does an AI Agent Cost
+   in 2026? Australian Pricing Guide" (5 March 2026): "Customer service automation $10,000 - $25,000",
+   "Multi-system workflow automation $20,000 - $50,000+", "Full implementation ($15,000 to $50,000+)".
+   Web Video Digital (August 2026): "between AUD 15,000 and AUD 150,000", most small-to-medium projects
+   "AUD 30,000 to AUD 80,000". Never add running, retainer or model-usage figures (Bhavesh, 11 Oct 2026). */
+const SRC_FLOWTIVITY = 'https://flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026/';
+const SRC_WVD = 'https://webvideodigital.com.au/custom-ai-agent-cost-in-australia/';
 const DESCRIPTION =
   'FactoryJet is an AI automation agency for Australian businesses. We build custom AI agents inside Xero, HubSpot, ServiceM8 and Microsoft 365. You own them.';
 
@@ -72,7 +81,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   // ── Basics ──
   { category: 'basics', question: 'What is an AI automation agency?',
     answer: 'An AI automation agency is a team that designs, builds and looks after AI systems that do repetitive work inside your business. That usually means AI agents and automated workflows connected to the software you already use, such as Xero, HubSpot or Microsoft 365. A good one maps your process first, builds with human approval where it matters, and supports the system after launch.' },
-  { category: 'basics', question: 'What do AI automation agencies actually do day to day?',
+  { category: 'basics', question: 'What do AI automation agencies do?',
     answer: 'They map how a job moves through your business today, find the slow and repetitive steps, and design an automation or AI agent for them. Then they connect it to your systems, test it on real examples, train your team, and watch it after launch. The weaker ones stop at a demo. The better ones stay accountable for the system working months later.' },
   { category: 'basics', question: 'What are AI agents?',
     answer: 'An AI agent is software that uses a large language model, the technology behind tools like ChatGPT and Claude, to read a situation, decide what to do next, and take an action in another system. For example, it can read an emailed purchase order, check stock, draft the order in your system and ask a person to approve it. It works within rules and permissions you set.' },
@@ -143,12 +152,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes. We work with businesses in Sydney, Melbourne, Brisbane, Perth, Adelaide, Canberra and regional Australia. Projects run remotely with video workshops, shared process maps and written plans, and we schedule calls in Australian business hours. AI automation work does not need anyone on site, so a business in Newcastle or Geelong gets the same senior team as one in the CBD.' },
 
   // ── Cost & process ──
-  { category: 'cost', question: 'How much do AI automation agencies charge?',
-    answer: 'Pricing varies widely because the work varies widely. The drivers are how many systems the agent connects to, how messy the inputs are, how much approval and logging it needs, how sensitive the data is, and whether you want ongoing support. We scope after a free call with the founder and give you a fixed quote per stage. Published Australian market ranges are in our AI cost guide.',
-    links: [{ href: '/blog/ai-cost-australia-2026#ai-automation-cost', label: 'AI automation costs in Australia' }] },
+  { category: 'cost', question: 'How much does an AI automation agency charge?',
+    answer: 'Most charge a project fee for the build. Flowtivity\'s March 2026 Australian guide puts customer service automation at A$10,000 to A$25,000, multi-system workflow automation at A$20,000 to A$50,000 or more, and a full implementation from A$15,000 to A$50,000 or more. These are market ranges, not our prices. The drivers are how many systems the agent connects to, how messy the inputs are and how much approval it needs. We give you a fixed quote per stage after a free call with the founder.',
+    links: [{ href: SRC_FLOWTIVITY, label: 'Flowtivity, Australian AI agent pricing guide (March 2026)' }, { href: '/blog/ai-cost-australia-2026#ai-automation-cost', label: 'AI automation costs in Australia' }] },
   { category: 'cost', question: 'How much does it cost to build an AI agent in Australia?',
-    answer: 'A focused agent that does one job in one or two systems costs far less than a multi-agent system spanning finance, CRM and operations. Add model usage fees, paid directly to the AI provider, and support if you want it. We map the process first, then give you a fixed-scope quote. Our AI agent cost guide for Australia sets out published market ranges and running costs.',
-    links: [{ href: '/blog/ai-cost-australia-2026#ai-agent-cost', label: 'AI agent cost guide for Australia' }] },
+    answer: 'Web Video Digital\'s August 2026 guide puts a custom AI agent at A$15,000 to A$150,000, with most small and mid-size projects at A$30,000 to A$80,000. Flowtivity\'s March 2026 guide starts lower, at A$5,000 to A$50,000 or more. A focused agent that does one job in one or two systems sits near the bottom of those ranges. We map the process first, then give you a fixed-scope quote.',
+    links: [{ href: SRC_WVD, label: 'Web Video Digital, custom AI agent cost in Australia (August 2026)' }, { href: '/blog/ai-cost-australia-2026#ai-agent-cost', label: 'AI agent cost guide for Australia' }] },
   { category: 'cost', question: 'How are AI agents developed?',
     answer: 'In stages. We map the process and pick one job, design what the agent may and may not do, connect it to your systems with the least access it needs, and test it on real past examples. Then it runs alongside your team in a supervised pilot before it takes on live work. Monitoring, logs and a simple way to switch it off are built in from day one.' },
   { category: 'cost', question: 'How long does it take to build an AI agent?',
@@ -888,11 +897,13 @@ export default function AiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Scope, not packages</div>
-              <h2>What decides the cost of an AI automation service</h2>
+              <h2>How much does an AI automation agency charge in Australia?</h2>
               <p className="lead">
-                We do not publish prices, because two agents with the same name can be very different jobs. Every
-                engagement is quoted after a free call, with a fixed price per stage. It usually takes one of four
-                shapes.
+                <a href={SRC_FLOWTIVITY} {...extLink}>Flowtivity&rsquo;s March 2026 Australian guide</a> puts a custom
+                build at A$10,000 to A$25,000 for customer service automation and A$20,000 to A$50,000 or more for
+                multi-system workflows. Those are market ranges, not our prices. Two agents with the same name can be very
+                different jobs, so every engagement is quoted after a free call, with a fixed price per stage. It
+                usually takes one of four shapes.
               </p>
             </div>
             <div className="au-split">

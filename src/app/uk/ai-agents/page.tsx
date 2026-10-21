@@ -7,7 +7,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import './ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-agents';
-const UPDATED = '2026-10-10';
+const UPDATED = '2026-10-21';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -47,8 +47,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'A chatbot mostly answers questions inside a chat window, following a script or a language model reply. An AI agent goes further: it can take action across your systems on its own, looking up an order, updating a record, booking a slot, or escalating a case, without a person doing every step by hand.' },
   { category: 'basics', question: 'Is ChatGPT an agent or a language model?',
     answer: 'ChatGPT is a language model with some agent-like features layered on top, such as browsing or connecting to a calendar. It is not, by itself, an agent built around your business. An AI agent development company takes that same class of model and wires it into your specific tools, data, and rules.' },
-  { category: 'basics', question: 'What are the best AI automation agencies?',
-    answer: 'It depends what you need automated and which systems you run. A strong AI automation agency should show real production builds, not just demos, explain exactly what it can integrate with, and be upfront about what an agent cannot yet do reliably. Ask any agency you are considering for examples, including us.' },
+  { category: 'basics', question: 'Which AI automation agencies are considered the best?',
+    answer: 'There is no official ranking, so it depends what you need automated and which systems you run. The list further up this page names eight UK agencies drawn from live Google results and the agencies AI assistants named for UK buyers on 24 September 2026, including Softomate Solutions, Ronins, MQLFlow and GoAgentic. FactoryJet is one of them. Judge any agency by real production builds rather than demos, by exactly what it can integrate with, and by whether it says plainly what an agent cannot yet do.' },
   { category: 'basics', question: 'How do companies typically adopt or roll out AI agents?',
     answer: 'Most businesses start with one narrow, well-defined process, often customer support or lead follow-up, run it alongside the existing team for a few weeks, then expand once it is proven. Rolling out several agents at once with no pilot is the most common way adoption goes wrong.' },
   { category: 'basics', question: 'What is agentic AI?',
@@ -60,8 +60,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // on each vendor’s own pricing page on 9 Oct 2026 (annual billing).
   { category: 'basics', question: 'Which AI agent development company in the UK should I choose?',
     answer: 'There is no single best one, so choose by fit. Check three things on each firm’s own website before a call: the systems it has connected, who owns the code, and the price of the first paid step. Our full list is the guide Best AI Agent Development Companies UK 2026, which compares 15 firms we read on 9 October 2026. Eight of the 14 other firms publish a price, and first steps run from a £250 diagnostic to an audit from £10,000. FactoryJet is on that list.' },
-  { category: 'basics', question: 'What are the best affordable AI automation platforms for small businesses under $5,000?',
-    answer: 'Zapier, Make, n8n and Microsoft Power Automate are the four to price first. On this budget a subscription product does this better than a service firm like us. Prices are from each vendor’s own pricing page on 9 October 2026, for annual billing. Zapier is free for 100 tasks a month, then from US$19.99 a month, shown as £15.30 with its page set to pounds. Power Automate Premium is £11.50 per user a month before VAT. Make prices in dollars, from $9 a month for 5,000 credits. n8n prices in euros, from €20 a month for 2,500 workflow executions.' },
+  { category: 'basics', question: 'What is affordable automation software for small and mid-sized businesses?',
+    answer: 'Zapier, Make, n8n and Microsoft Power Automate are the four to price first. On a small budget a subscription product does this better than a service firm like us. Prices are from each vendor’s own pricing page on 9 October 2026, for annual billing. Zapier is free for 100 tasks a month, then from US$19.99 a month, shown as £15.30 with its page set to pounds. Power Automate Premium is £11.50 per user a month before VAT. Make prices in dollars, from $9 a month for 5,000 credits. n8n prices in euros, from €20 a month for 2,500 workflow executions.' },
 
   // ── What we build ──
   { category: 'build', question: 'What can you actually automate for my business?',
@@ -106,6 +106,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // ── Results & working with us ──
   { category: 'results', question: 'How much does an AI automation agency charge?',
     answer: 'It depends on how many agents you need, how many systems they touch, and how complex the decisions inside each one are. A single support agent answering FAQs is a smaller job than a multi-agent system running sales, scheduling, and support together. We scope and quote after a free automation audit, not before.' },
+  { category: 'results', question: 'How much will it cost to develop an AI agent in 2026?',
+    answer: 'LeverX’s UK guide, published 4 October 2026, gives three market bands: £10,000 to £30,000 for a single-workflow agent built in 5 to 9 weeks, £30,000 to £80,000 for a multi-step agent with integrations built in 10 to 18 weeks, and £80,000 to £200,000 or more for an enterprise multi-agent system built in 5 to 9 months. These are market figures, not our prices. FactoryJet quotes a fixed price per phase in writing after a free automation audit.' },
   { category: 'results', question: 'How do you measure ROI?',
     answer: 'Against the outcome the agent exists for: tickets resolved without escalation, meetings booked, hours of manual work removed, leads followed up that previously went cold. We agree the number that matters before the build starts and report against it monthly, so you see the return, not just activity.' },
   { category: 'results', question: 'Do you support it after launch?',

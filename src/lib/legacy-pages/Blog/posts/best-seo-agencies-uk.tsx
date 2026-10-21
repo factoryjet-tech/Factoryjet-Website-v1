@@ -1,12 +1,30 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
+// Every figure below was re-read at these URLs on 21 Oct 2026.
+const SRC = {
+  whitehat: 'https://whitehat-seo.co.uk/blog/seo-package-prices',
+  statcounter: 'https://gs.statcounter.com/search-engine-market-share/all/united-kingdom',
+  ons: 'https://www.ons.gov.uk/businessindustryandtrade/retailindustry/timeseries/j4mc/drsi',
+  brainlabs: 'https://www.brainlabsdigital.com/',
+  croud: 'https://croud.com/en-gb/',
+  builtvisible: 'https://builtvisible.com/case-studies/',
+  novos: 'https://thisisnovos.com/about-us/',
+  novosEo: 'https://ipa.co.uk/knowledge/beacon/beacon-agencies/agencies/novos/',
+  riseAtSeven: 'https://riseatseven.com/',
+  screamingFrog: 'https://www.screamingfrog.co.uk/blog/screaming-frog-2025-search-awards-win/',
+  seoWorks: 'https://www.seoworks.co.uk/',
+  seoWorksDhl: 'https://www.seoworks.co.uk/case-studies/ai-search-for-dhl/',
+  addPeople: 'https://www.addpeople.co.uk/',
+};
+const ext = { target: '_blank', rel: 'noopener noreferrer', className: 'text-orange-600 underline' } as const;
+
 export const post: BlogPost = {
   id: '230',
   slug: 'best-seo-agencies-uk',
   title: 'The 10 Best SEO Agencies in the UK (2026)',
   excerpt:
-    'Google holds 91.5% of UK search, and online sales are 28% of UK retail. We compared the 10 best SEO agencies in the UK on specialty, pricing, and verifiable proof, including ecommerce, local, and technical specialists. Yes, we are on the list, disclosed.',
+    'Google holds 91.4% of UK search, and online sales are 28% of UK retail. We compared the 10 best SEO agencies in the UK on specialty, pricing, and verifiable proof, including ecommerce, local, and technical specialists. Yes, we are on the list, disclosed.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 11, 2026',
@@ -22,8 +40,8 @@ export const post: BlogPost = {
     'Our researched top 10: FactoryJet (disclosed self-inclusion), Brainlabs, Croud, Builtvisible, NOVOS, Rise at Seven, Screaming Frog, Blue Array, The SEO Works, and Add People. Every entry was verified on its own website on 06/11/2026.',
     'Segment fit is the most important filter: enterprise (Brainlabs, Croud, Builtvisible), ecommerce (NOVOS, Rise at Seven, FactoryJet), technical (Screaming Frog, Blue Array), SME/local (The SEO Works, Add People).',
     'SEO cost in UK runs £500–£20,000+/month: local £500–£1,200, SME £1,500–£3,000, mid-market £2,500–£5,000, enterprise £5,000+ (Whitehat SEO 2026 pricing guide). 78% of UK providers bill via monthly retainer.',
-    'UK SEO pricing has risen 15–30% since 2024, driven largely by AI-search scope expansion. Always ask whether AI search is included or an add-on.',
-    'Google still holds 91.47% of UK search (StatCounter, April 2026) and online sales are 28% of UK retail (ONS Q1 2026), and the content that ranks in Google is the same content ChatGPT and AI Overviews cite.',
+    'UK SEO pricing has risen 15–30% since 2024. Whitehat SEO puts it down to rising operating costs, wider AI-search scope and Google\'s higher quality bar. Always ask whether AI search is included or an add-on.',
+    'Google still holds 91.4% of UK search (StatCounter, September 2026) and online sales are 28% of UK retail (ONS Q1 2026), and the content that ranks in Google is the same content ChatGPT and AI Overviews cite.',
     'Almost no UK agency publishes pricing. Demand one case study with revenue numbers, one named account lead, and the price in writing before committing.',
   ],
   faqs: [
@@ -33,7 +51,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Which is the best SEO company in UK for small businesses?',
-      a: 'Add People (built for SMEs, 2,000+ five-star Trustpilot reviews, entry services from £89/mo), The SEO Works (SME-friendly with free website review), and FactoryJet (transparent scoping, month-to-month, AI search included). The best SEO services company in UK terms for an SME is whichever passes the transparency test first, and the best SEO services agency in UK shortlists is the one that names your account lead before you sign. That combination is what the best SEO services in UK actually look like.',
+      a: 'Add People (built for SMEs, 2,000+ five-star reviews, services from £89 a month for its Smart Sites website product), The SEO Works (SME-friendly with free website review), and FactoryJet (transparent scoping, month-to-month, AI search included). The best SEO services company in UK terms for an SME is whichever passes the transparency test first, and the best SEO services agency in UK shortlists is the one that names your account lead before you sign. That combination is what the best SEO services in UK actually look like.',
     },
     {
       q: 'What are the top 10 SEO agencies in UK?',
@@ -45,7 +63,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Which is the best ecommerce SEO agency in UK?',
-      a: 'NOVOS does ecommerce SEO exclusively, with 100+ migrations and clients like Adidas, Lush, and Bloom & Wild. Rise at Seven is strongest for retail brands needing creative campaigns plus links. FactoryJet is the strongest pick for SMB stores that want the best ecommerce SEO services in UK from the same engineers who build the store.',
+      a: 'NOVOS is an ecommerce specialist that runs SEO, AEO and platform migrations for brands such as Adidas, Ruggable and Bloom & Wild. Rise at Seven is strongest for retail brands needing creative campaigns plus links. FactoryJet is the strongest pick for SMB stores that want the best ecommerce SEO services in UK from the same engineers who build the store.',
     },
     {
       q: 'Who offers the best local SEO services in UK?',
@@ -69,11 +87,11 @@ export const post: BlogPost = {
     },
     {
       q: 'Which agency suits a Shopify store?',
-      a: 'NOVOS (ecommerce-only, headless and Shopify expertise) or FactoryJet (builds and optimizes Shopify stores with the same engineering team, transparent scoping). If your store is mid-migration or replatforming, NOVOS and its 100+ migration track record is the safety pick.',
+      a: 'NOVOS (ecommerce specialist with a Shopify practice) or FactoryJet (builds and optimizes Shopify stores with the same engineering team, transparent scoping). If your store is mid-migration or replatforming, NOVOS, which publishes migration case studies such as Osprey, is the safety pick.',
     },
     {
       q: 'Do UK SEO agencies include AI search optimization?',
-      a: 'Increasingly, but unevenly. The SEO Works, Blue Array, and Screaming Frog run dedicated GEO/AI-search services; FactoryJet includes AI search (ChatGPT, Perplexity, Claude, Gemini, AI Overviews) in standard retainers. UK SEO pricing has risen 15–30% since 2024 largely because of AI-search scope expansion. Ask whether it is included before comparing quotes.',
+      a: 'Increasingly, but unevenly. The SEO Works, Blue Array, and Screaming Frog run dedicated GEO/AI-search services; FactoryJet includes AI search (ChatGPT, Perplexity, Claude, Gemini, AI Overviews) in standard retainers. UK SEO pricing has risen 15–30% since 2024, and wider AI-search scope is one of the three causes Whitehat SEO names. Ask whether it is included before comparing quotes.',
     },
     {
       q: 'What results should I expect from a UK SEO agency in 90 days?',
@@ -81,7 +99,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Why does SEO still matter for UK businesses in 2026?',
-      a: 'Google still holds 91.47% of UK search (StatCounter, April 2026), and online sales are 28% of all UK retail (ONS, Q1 2026). Search is where UK buyers are, and the same structured, authoritative content that ranks in Google is what gets cited by ChatGPT and AI Overviews. One investment, two surfaces.',
+      a: 'Google still holds 91.4% of UK search (StatCounter, September 2026), and online sales are 28% of all UK retail (ONS, Q1 2026). Search is where UK buyers are, and the same structured, authoritative content that ranks in Google is what gets cited by ChatGPT and AI Overviews. One investment, two surfaces.',
     },
     {
       q: 'Should I hire a London SEO agency or does location not matter?',
@@ -89,7 +107,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What is a fair UK SEO audit price?',
-      a: '£500–£7,500 depending on site size (Whitehat SEO 2026 guide). Several agencies offer free entry audits: The SEO Works (free website review), Blue Array (free SEO Office Hours for eligible businesses). A paid audit should come with a prioritized roadmap, not just findings.',
+      a: '£500–£7,500 depending on depth (Whitehat SEO 2026 guide). Several agencies offer free entry audits: The SEO Works (free website review), Blue Array (free SEO Office Hours for eligible businesses). A paid audit should come with a prioritized roadmap, not just findings.',
     },
     {
       q: 'Are SEO retainers or one-off projects better for UK SMBs?',
@@ -97,7 +115,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Which UK SEO agencies publish their prices?',
-      a: 'Very few: the market’s biggest transparency problem. Add People publishes entry services from £89/mo, and Whitehat SEO publishes a full UK pricing guide. FactoryJet skips the published rate card, but scopes the work and confirms the price before you sign. The other major agencies quote only after discovery calls. Always get the number in writing first.',
+      a: 'Very few: the market’s biggest transparency problem. Add People publishes a £89-a-month price for its Smart Sites website product, and Whitehat SEO publishes a full UK pricing guide. FactoryJet skips the published rate card, but scopes the work and confirms the price before you sign. The other major agencies quote only after discovery calls. Always get the number in writing first.',
     },
     {
       q: 'Can one agency handle both my SEO and my website build?',
@@ -123,13 +141,15 @@ export const post: BlogPost = {
 
       <p className="mb-4">
         The UK context makes agency choice unusually consequential in 2026:{' '}
-        <strong>Google still holds 91.47% of UK search</strong> (StatCounter, April 2026),{' '}
-        <strong>online sales are 28% of all UK retail</strong> (ONS, Q1 2026), and UK SEO pricing
-        has risen <strong>15–30% since 2024</strong> as AI-search work expands scope (Whitehat SEO
-        2026 pricing guide). Picking wrong is more expensive than it used to be.
+        <strong>Google still holds 91.4% of UK search</strong> (
+        <a href={SRC.statcounter} {...ext}>StatCounter</a>, September 2026),{' '}
+        <strong>online sales are 28% of all UK retail</strong> (
+        <a href={SRC.ons} {...ext}>ONS series J4MC</a>, Q1 2026), and UK SEO pricing has risen{' '}
+        <strong>15–30% since 2024</strong>, with AI-search work one of the causes (
+        <a href={SRC.whitehat} {...ext}>Whitehat SEO 2026 pricing guide</a>). Picking wrong is more expensive than it used to be.
       </p>
       <p className="mb-4">
-        We verified every agency below on its own website on 06/11/2026. No pay-to-play, no invented
+        We verified every agency below on its own website on 11 June 2026 and re-checked every number on 21 October 2026. No pay-to-play, no invented
         review scores, and self-stated claims are labeled as such. <strong>Disclosure:</strong>{' '}
         FactoryJet appears on its own list. The current page-one for this query is roughly half
         directories (Clutch, Semrush, SEO.com) and half agencies ranking themselves: transparent
@@ -188,7 +208,7 @@ export const post: BlogPost = {
               <td className="p-3 border">5</td>
               <td className="p-3 border font-semibold">NOVOS</td>
               <td className="p-3 border">London</td>
-              <td className="p-3 border">Ecommerce SEO exclusively; 100+ migrations</td>
+              <td className="p-3 border">Ecommerce specialist: SEO, AEO, migrations</td>
               <td className="p-3 border">No (free SEO calculator)</td>
               <td className="p-3 border">DTC/Shopify/headless stores</td>
             </tr>
@@ -229,7 +249,7 @@ export const post: BlogPost = {
               <td className="p-3 border font-semibold">Add People</td>
               <td className="p-3 border">Altrincham</td>
               <td className="p-3 border">SME-native SEO, local SEO, ecommerce SEO</td>
-              <td className="p-3 border font-semibold">Partial: entry from £89/mo</td>
+              <td className="p-3 border font-semibold">Partial: Smart Sites website product from £89/mo</td>
               <td className="p-3 border">Small and local businesses</td>
             </tr>
           </tbody>
@@ -271,7 +291,8 @@ export const post: BlogPost = {
       <p className="mb-4">
         London-based, independent, founder-led. SEO and &quot;AI Visibility&quot; sit alongside paid
         media and measurement (MMM, incrementality), with AI agents running on its Cortex platform,
-        powered by Hippocampus, a proprietary repository of 2,500+ logged experiments. Strong Retail
+        powered by Hippocampus, a proprietary repository of 2,500+ logged experiments (
+        <a href={SRC.brainlabs} {...ext}>Brainlabs</a>). Strong Retail
         &amp; Ecommerce practice.
       </p>
 
@@ -279,7 +300,8 @@ export const post: BlogPost = {
       <p className="mb-4">
         London and Shrewsbury, plus New York, Atlanta, and Dubai. Croud&apos;s model is unique: 600+
         in-house staff supplemented by the &quot;Croudie Network&quot; of 2,900+ on-demand
-        specialists across 118 markets. If you&apos;re scaling into multiple countries and want SEO
+        specialists across 118 markets (
+        <a href={SRC.croud} {...ext}>Croud</a>). If you&apos;re scaling into multiple countries and want SEO
         under one roof with paid and data, this is the pick.
       </p>
 
@@ -287,23 +309,27 @@ export const post: BlogPost = {
       <p className="mb-4">
         London, organic-only: SEO, content, digital PR. Acquired by listed digital group Brave Bison
         in March 2025, and it now operates as the group&apos;s organic performance arm. Publishes
-        serious case studies, including 1,156% ROI for GLL, the UK&apos;s largest leisure social
-        enterprise.
+        serious case studies, including{' '}
+        <a href={SRC.builtvisible} {...ext}>1,156% ROI for GLL</a>, the UK&apos;s largest leisure
+        social enterprise.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">5. NOVOS: best ecommerce SEO agency</h3>
       <p className="mb-4">
-        London-based (Spitalfields) and ecommerce-exclusive: Shopify, headless, replatforming and
-        migration SEO (100+ ecommerce migrations), plus GEO/AI search. Clients include Adidas, Lush,
-        Bloom &amp; Wild, and Ruggable. States it is the first employee-owned ecommerce growth
-        agency in the UK. If you run a store and want a specialist, start here.
+        London (Liverpool Street) and Sheffield, and ecommerce-only: SEO, AEO, paid media, digital
+        PR, Shopify work and platform migrations. Clients include Adidas, Ruggable, Osprey and Bloom
+        &amp; Wild (<a href={SRC.novos} {...ext}>NOVOS</a>). It became employee-owned in 2022, when
+        the founders sold most of their shares to an employee-ownership trust (
+        <a href={SRC.novosEo} {...ext}>IPA Beacon profile</a>). If you run a store and want a
+        specialist, start here.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">6. Rise at Seven: best creative SEO and digital PR</h3>
       <p className="mb-4">
         Manchester and London (plus New York). Search-first content marketing: creative campaigns,
         digital PR, social search (TikTok/YouTube SEO), and AI/LLM search. Clients include JD
-        Sports, PrettyLittleThing, and Revolution Beauty. Its 79-awards figure is self-stated, but
+        Sports, PrettyLittleThing, and Revolution Beauty. Its{' '}
+        <a href={SRC.riseAtSeven} {...ext}>79-awards figure</a> is self-stated, but
         the campaign work is publicly visible and widely imitated.
       </p>
 
@@ -311,8 +337,9 @@ export const post: BlogPost = {
       <p className="mb-4">
         Henley-on-Thames. The team behind the SEO Spider and Log File Analyser, the tools most
         other agencies on this list use daily. Agency services span technical SEO, PPC, link
-        building, and AI search optimisation, with a five-year winning streak at the UK Search
-        Awards. For crawl-heavy, log-file-deep technical work, nobody is better positioned.
+        building, and AI search optimisation, with what it calls a{' '}
+        <a href={SRC.screamingFrog} {...ext}>five-year winning streak at the UK Search Awards</a>{' '}
+        (December 2025). For crawl-heavy, log-file-deep technical work, nobody is better positioned.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">8. Blue Array: best SEO-only consultancy</h3>
@@ -325,17 +352,19 @@ export const post: BlogPost = {
 
       <h3 className="text-xl font-bold mt-6 mb-3">9. The SEO Works: best for UK SMEs</h3>
       <p className="mb-4">
-        Sheffield HQ, offices in London and Leeds, 80+ specialists, employee-owned, established
-        2009. Full-stack organic (SEO, local SEO, technical, AI SEO/GEO, digital PR) with
-        published AI-search case numbers (+287% AI Overview citations and +121% ChatGPT referrals
-        for DHL). The free website review is a genuinely low-risk entry point.
+        Sheffield HQ, offices in London and Leeds,{' '}
+        <a href={SRC.seoWorks} {...ext}>80+ specialists, employee-owned, established 2009</a>. Full-stack organic (SEO, local SEO, technical, AI SEO/GEO, digital PR) with
+        published AI-search case numbers (
+        <a href={SRC.seoWorksDhl} {...ext}>+287% AI Overview citations and +121% ChatGPT referrals
+        for DHL</a>). The free website review is a genuinely low-risk entry point.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">10. Add People: best for small and local businesses</h3>
       <p className="mb-4">
-        Altrincham, Greater Manchester. Built for SMEs: 250+ staff, 2,000+ five-star Trustpilot
-        reviews, Google Premier Partner, with dedicated local SEO and ecommerce SEO services and
-        entry products from £89/month. The most accessible starting point on this list for a small
+        Altrincham, Greater Manchester. Built for SMEs:{' '}
+        <a href={SRC.addPeople} {...ext}>250+ experts and 2,000+ five-star reviews</a>, Google
+        Premier Partner, with dedicated local SEO and ecommerce SEO services. Its lowest published
+        price is £89 a month, for the Smart Sites website product rather than SEO. The most accessible starting point on this list for a small
         local business.
       </p>
 
@@ -376,13 +405,15 @@ export const post: BlogPost = {
       <p className="mb-4">
         One-off work: audits £500–£7,500; migrations £1,000–£15,000. Hourly: £40–£100 freelance,
         £70–£300 agency. 78% of UK providers bill monthly retainers, and prices are up 15–30% since
-        2024, driven largely by AI-search scope (AEO/GEO adds 20–50% to traditional scope per the
-        same guide). If you are comparing quotes, ask explicitly whether AI search is included or an
+        2024. The guide names three causes: rising operating costs, wider scope from AI search, and
+        Google&apos;s higher quality bar. It also says AEO (answer engine optimisation) adds 20–50%
+        to traditional SEO costs. If you are comparing quotes, ask explicitly whether AI search is included or an
         add-on; that single question explains most price gaps, and a one-off{' '}
         <a href="/uk/seo-audit" className="text-orange-600 underline">UK SEO audit</a> is the
         cheapest way to see how a shortlisted agency actually thinks before you commit to a
-        retainer. (Source: Whitehat SEO, SEO Packages
-        &amp; Pricing UK 2026.) Full breakdown by business type:{' '}
+        retainer. (Source:{' '}
+        <a href={SRC.whitehat} {...ext}>Whitehat SEO, SEO Packages &amp; Pricing UK 2026</a>, updated
+        29 July 2026.) Full breakdown by business type:{' '}
         <a href="/blog/seo-cost-uk-2026" className="text-orange-600 underline">SEO cost in the UK (2026)</a>.
       </p>
 
@@ -400,7 +431,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Methodology</h2>
       <p className="mb-4">
-        Every agency was verified on its own website on 06/11/2026: service pages, office addresses,
+        Every agency was verified on its own website on 11 June 2026: service pages, office addresses,
         ownership status, and at least one differentiator checkable at the source. Self-stated
         claims (awards counts, client tallies) are labeled. We noted Builtvisible&apos;s 2025
         acquisition by Brave Bison rather than describing it as independent. FactoryJet&apos;s
@@ -409,9 +440,11 @@ export const post: BlogPost = {
         appear.
       </p>
       <p className="mb-4">
-        Sources: StatCounter UK search share (April 2026); ONS internet sales series J4MC (April
-        2026 release); Whitehat SEO Packages &amp; Pricing UK 2026; Microsoft Clarity AI traffic
-        report; agency pages verified 06/11/2026.
+        Sources, all re-read on 21 October 2026:{' '}
+        <a href={SRC.statcounter} {...ext}>StatCounter UK search engine share</a> (September 2026);{' '}
+        <a href={SRC.ons} {...ext}>ONS internet sales series J4MC</a> (Q1 2026);{' '}
+        <a href={SRC.whitehat} {...ext}>Whitehat SEO Packages &amp; Pricing UK 2026</a>; and each
+        agency&apos;s own pages, linked above.
       </p>
 
       <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8">

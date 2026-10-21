@@ -56,7 +56,20 @@ const SRC_OAIC_SMALL = 'https://www.oaic.gov.au/privacy/privacy-for-organisation
 // of the page; the direct fetch timed out. Re-check with a direct fetch.
 const SRC_ACMA = 'https://www.acma.gov.au/keep-or-port-your-phone-number';
 
+// Flowtivity, "How Much Does an AI Agent Cost in 2026? Australian Pricing Guide"
+// (5 March 2026): "AI receptionist / appointment booking $5,000 - $10,000", 2 to 4
+// weeks. Web Video Digital, "Custom AI agent cost in Australia" (August 2026):
+// "between AUD 15,000 and AUD 150,000", most small-to-medium projects "AUD 30,000
+// to AUD 80,000". Both fetched and read 21 Oct 2026. Market ranges for a BUILD only;
+// never add running, minute or plan costs here (Bhavesh, 11 Oct 2026).
+const SRC_FLOWTIVITY = 'https://flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026/';
+
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
+/* 21 Oct 2026: the six Google AU People Also Ask questions for "ai receptionist australia"
+   (pipeline/research/data/au-page-plan-2026-10-21/serps.json) are answered below word for word:
+   Which AI receptionist is best in Australia? / How much does an AI receptionist cost? /
+   How much is an AI receptionist worth? / How much do AI receptionists make? /
+   Is an AI receptionist a good idea? / How do I get an AI receptionist? */
 const FAQ_CATEGORIES = [
   { key: 'basics',     label: 'AI receptionist basics' },
   { key: 'choosing',   label: 'Choosing the right option' },
@@ -75,6 +88,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Three parts work together. Speech recognition turns what the caller says into text. A language model, the kind of AI behind tools like ChatGPT, decides what the caller wants and what to say next, using only your rules and your approved answers. A voice then speaks the reply. Behind that, integrations connect it to your calendar, job system or practice software, so it can check availability and write the booking itself.' },
   { category: 'basics', question: 'Are AI receptionists worth it?',
     answer: 'They are worth it when you miss calls, when the same questions come in all day, or when the phone keeps pulling skilled people off the work they are paid to do. They are not worth it if most of your calls are complex, emotional or one of a kind. A quick test: sort your last fifty calls by type. If most are bookings, simple questions or messages, it is a strong fit.' },
+  { category: 'basics', question: 'Is an AI receptionist a good idea?',
+    answer: 'Yes, for most businesses that miss calls or answer the same questions all day. It is a good idea when callers want a booking, a quote request, opening hours or a message taken, and a poor idea when most calls are complex, emotional or need judgment. Start with after-hours and missed calls, listen to the first few weeks of transcripts, then decide whether to widen it.' },
+  { category: 'basics', question: 'How do I get an AI receptionist?',
+    answer: 'There are two routes. Sign up to an AI receptionist app, set your greeting and answers, and divert your business number to it, which suits simple message-taking. Or have one built: we map your call types, connect it to your calendar, job or practice software, write the handover rules, test it on realistic calls, then divert your number. Either way you keep your existing phone number.' },
   { category: 'basics', question: 'Is AI replacing receptionists?',
     answer: 'Not in the way we build it. A good AI receptionist supports the front desk: it takes overflow when two lines ring at once, covers lunch breaks, nights and weekends, and handles the repeat questions, so the person at the desk can look after people in the room and the calls that need a human. Your team decides which calls the AI takes and which always come straight through.' },
   { category: 'basics', question: 'What is the difference between a virtual receptionist and an AI receptionist?',
@@ -105,9 +122,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'The best one is the one that suits how your calls actually go. Human answering services such as OfficeHQ, Virtual Reception and Ruby Receptionist suit businesses whose callers expect a person and whose calls vary. AI receptionist apps suit high volumes of routine calls at any hour. Before you choose, sort your last fifty calls by type, then trial two services on your after-hours and overflow calls.' },
 
   // ── Setup, phone lines & cost ──
-  { category: 'setup', question: 'How much does an AI receptionist cost in Australia?',
-    answer: 'It depends on scope, not a rate card. The main drivers are how many call types it handles, how many systems it connects to, how many locations and phone numbers are involved, how many calls it takes each month (which sets the usage you pay the voice and AI providers directly), and the level of support you want. We scope it on a free first call and quote a fixed price for the build, with support shown separately. For published Australian plan prices, see our AI receptionist cost comparison.',
-    links: [{ href: '/blog/ai-cost-australia-2026#ai-receptionist-cost', label: 'AI receptionist cost comparison' }] },
+  { category: 'setup', question: 'How much does an AI receptionist cost?',
+    answer: 'A custom AI receptionist is a build project, priced by scope. Flowtivity\'s March 2026 Australian guide puts an AI receptionist that books appointments at A$5,000 to A$10,000, built in 2 to 4 weeks. Web Video Digital\'s August 2026 guide puts custom AI agents with more call types and integrations at A$15,000 to A$150,000. These are market ranges, not our prices. We quote a fixed price for your build in writing after a free scoping call.',
+    links: [{ href: SRC_FLOWTIVITY, label: 'Flowtivity, Australian AI agent pricing guide (March 2026)' }, { href: '/blog/ai-cost-australia-2026#ai-receptionist-cost', label: 'AI receptionist cost comparison' }] },
+  { category: 'setup', question: 'How much is an AI receptionist worth?',
+    answer: 'It is worth what the calls you currently miss are worth to you. Count a normal week of missed and after-hours calls, estimate how many would have turned into a booking or a job, and multiply by what an average job or appointment brings in. If that number is small, a simple app or voicemail will do. If it is large, a receptionist built around your systems earns its place quickly.' },
+  { category: 'setup', question: 'How much do AI receptionists make?',
+    answer: 'An AI receptionist does not earn a wage. It is software that answers your phone, either rented as an app plan or built for your business as a one-off project. Used well, the AI takes overflow, lunch breaks and after-hours calls, so the people on your front desk can look after the callers and visitors who need them.' },
   { category: 'setup', question: 'How much does a virtual receptionist cost?',
     answer: 'It depends on how the service charges and how many calls you get. Human answering services usually charge a monthly base plus a fee per call or per minute, so a busy line costs far more than a quiet one. AI services usually charge a monthly plan with included minutes and an overage rate. Hours covered, bookings and transfers add to it. Our AI cost guide lists published Australian prices for both.',
     links: [{ href: '/blog/ai-cost-australia-2026#virtual-receptionist', label: 'Virtual receptionist prices in Australia' }] },
@@ -850,7 +871,7 @@ export default function AiReceptionistAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Who we build for</div>
-              <h2>AI receptionists for tradies, clinics, dental practices, law firms, real estate and hospitality</h2>
+              <h2>AI receptionists for tradies, clinics and law firms, booking into ServiceM8, Tradify, Cliniko or your practice software</h2>
               <p className="lead">
                 The same core build, shaped very differently by the calls each industry gets and the rules it works
                 under.
@@ -885,6 +906,8 @@ export default function AiReceptionistAUPage() {
               Not on the list? The same approach works for vets, salons, gyms, accountants, car dealers, NDIS
               providers and aged care admin. If your calls follow a pattern, an AI receptionist can usually take the
               routine ones. For a buyer’s view of the options in this space, read our guide to{' '}
+              {/* TODO(AU plan N2): add a link to /blog/best-ai-receptionists-australia-2026 here once that post
+                  is live. It does not exist yet (21 Oct 2026), so do not link it before it ships. */}
               <a href="/blog/best-ai-receptionist-small-business">the best AI receptionist for small business</a>.
               If you are comparing{' '}
               <a href="/blog/best-ai-agencies-australia-2026">Australian agencies that build voice agents and chatbots</a>,

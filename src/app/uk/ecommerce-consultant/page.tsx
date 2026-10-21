@@ -7,7 +7,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-consultant';
-const UPDATED = '2026-09-24';
+const UPDATED = '2026-10-21';
 const TITLE = 'Ecommerce Consultant UK | Advice You Can Build | FactoryJet';
 const H1 = 'Ecommerce Consultant UK: Senior Advice on What to Fix First, and a Team That Can Build It';
 
@@ -51,6 +51,24 @@ const SRC_VAT_EXPORT = 'https://www.gov.uk/guidance/vat-on-goods-exported-from-t
 // HMRC: digital platforms must "collect and check information about sellers"
 // and "report details about sellers to HMRC". fetch-verified 2026-09-24
 const SRC_PLATFORM_REPORTING = 'https://www.gov.uk/guidance/reporting-rules-for-digital-platforms';
+
+/* ─── Stock and accounting section, each read on the maker's own page on
+       2026-10-21 (Xero Developer and Cin7 Core help in a real browser) ─── */
+// Webhook event categories: Contact, Credit Note, Invoice, Overpayment,
+// Prepayment, Subscription. No item or stock event.
+const SRC_XERO_WEBHOOKS = 'https://developer.xero.com/documentation/guides/webhooks/overview/';
+// 5 concurrent, 60 a minute, 1,000 a day (starter tier) or 5,000 (higher tiers) per organisation.
+const SRC_XERO_LIMITS = 'https://developer.xero.com/documentation/guides/oauth2/limits/';
+// "Order lines return bundle components, with a reference to the bundle parent."
+const SRC_SHOPIFY_BUNDLES = 'https://shopify.dev/docs/apps/build/product-merchandising/bundles';
+// "Cin7 Core does not support Xero inventory tracking. Turn off inventory tracking in Xero."
+const SRC_CIN7_XERO = 'https://help.core.cin7.com/hc/en-us/articles/13000990556431-Sync-products-with-Xero';
+// Core plans US$349 / US$599 / US$1,199 a month, USD, excluding taxes; API is an add-on.
+const SRC_CIN7_PRICING = 'https://www.cin7.com/pricing/';
+// Unleashed Core £269 a month, Pro £499, excluding taxes; Core includes 3 users and 100 sales orders a month.
+const SRC_UNLEASHED_PRICING = 'https://www.unleashedsoftware.com/en-gb/pricing/';
+// "Assemblies will be automatically created via your Sales Orders when they're needed."
+const SRC_UNLEASHED_ASSEMBLY = 'https://help-unleashed.theaccessgroup.com/en/articles/11582019-auto-assemblies';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -118,6 +136,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'For most goods sold online, gov.uk says you must tell customers they can cancel their order up to 14 days after it is delivered. If you do not tell them, they can cancel at any time in the next 12 months. So your returns wording, checkout and order emails need to be right. We check these as part of the audit.' },
   { category: 'uk', question: 'Does HMRC check online sellers?',
     answer: 'HMRC has digital platform reporting rules that require online platforms to collect and check information about sellers and report details about them to HMRC. That applies to marketplaces, not to your own store software. Either way, your sales records should match your accounts. We often connect the store and marketplaces to Xero or your ERP so the numbers line up.' },
+  { category: 'uk', question: 'Our Shopify bundles reach Xero as one line. Can that be fixed?',
+    answer: 'Yes. A link that knows what each bundle contains can write one Xero line for each part, with its own SKU, quantity and share of the price, so stock and cost of sales move for the parts that left the shelf. Shopify’s developer documentation says bundles built on its own bundle model return a line for each component; some bundle apps send only the bundle line. Every part needs a SKU first. Our Shopify Xero integration page covers the detail.' },
+  { category: 'uk', question: 'Should we move stock into Cin7 Core or Unleashed?',
+    answer: 'Only if you need what they add: a warehouse, purchase orders, several locations or assembled packs. Both then own stock and post the accounting to Xero, and Cin7 Core’s help page says it does not support Xero inventory tracking. List prices on 21 October 2026 were Cin7 Core from US$349 a month and Unleashed from £269 a month, before tax. If Xero stays your stock record, a direct Shopify to Xero link is the smaller job.' },
   { category: 'uk', question: 'Can you help us sell on Amazon UK, eBay, OnBuy or TikTok Shop?',
     answer: 'Yes. We look at which marketplaces suit your products and margins, how stock and orders should sync so you do not oversell, and how listings and pricing should differ from your own site. Marketplaces bring reach but take fees and control, so the plan covers which products go where, not just whether to list. We can build the integrations too.' },
   { category: 'uk', question: 'Can you help with B2B trade ordering?',
@@ -262,7 +284,7 @@ export default function EcommerceConsultantUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses since 2014</span></div>
-                  <div className="upd">Last updated<br />24 September 2026</div>
+                  <div className="upd">Last updated<br />21 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -642,6 +664,65 @@ export default function EcommerceConsultantUKPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ═══ 10b. STOCK AND ACCOUNTING (added 2026-10-21) ═══ */}
+        <section className="sec-lg" id="stock-and-accounting">
+          <div className="wrap">
+            <div style={{ maxWidth: 820 }}>
+              <span className="eyebrow">Stock and accounting</span>
+              <h2>Stock and accounting problems that stop a growing store</h2>
+              <p className="lead mt-4">
+                In October 2026 a UK store came to us with a problem we hear often. It sells products made of
+                several parts, packed as one listing. Every web order has to become an itemised Xero invoice,
+                because the shipping software reads Xero. And in peak season, stock has to reach the shop
+                within minutes, or it oversells. Three questions decide how that gets fixed.
+              </p>
+            </div>
+            <div className="stack mt-8" style={{ maxWidth: 820 }}>
+              <h3>1. Do bundles split into their parts on the Xero invoice?</h3>
+              <p>
+                A summary connector posts a bundle as one sale. The warehouse needs three lines: frame, cover and
+                fittings, each with its own SKU and quantity, and the accountant needs the bundle price spread
+                across them. Shopify&rsquo;s developer documentation says bundles built on its own bundle model
+                return an order line for each component. Some bundle apps send only the bundle line. So we open
+                one real order export before recommending anything. A part with no SKU cannot move a Xero stock
+                count, so missing SKUs are the first fix.
+              </p>
+              <h3 className="mt-4">2. How often does stock have to sync, and can Xero keep up?</h3>
+              <p>
+                Xero sends webhooks for contacts, invoices, credit notes, overpayments and prepayments, but none for items or stock.
+                A link that sends Xero stock to Shopify checks on a timer. Xero allows each organisation 60 calls a
+                minute and, on its starter tier, 1,000 a day. A check every five minutes is 288 a day (12 an hour
+                for 24 hours), so a five-to-ten-minute sync fits if each check stays small. An overnight batch sync
+                leaves a whole day of orders selling against yesterday&rsquo;s count.
+              </p>
+              <h3 className="mt-4">3. When do Cin7 Core or Unleashed fit?</h3>
+              <p>
+                When the business needs more than a stock count: purchase orders, a warehouse with bins, several
+                locations, or packs assembled from parts. Cin7 Core uses an assembly bill of materials for packs
+                and kits. Unleashed creates an assembly for any short quantity on a sales order. Both take stock
+                out of Xero, and Cin7 Core&rsquo;s own help page says it does not support Xero inventory tracking.
+                List prices on 21 October 2026: Cin7 Core from US$349 a month (API access is an add-on), Unleashed
+                from £269 a month with 100 sales orders a month included, both before tax. If Xero stays the stock
+                record, a direct link is the smaller job, and it can be built so the stock source switches later.
+              </p>
+              <p>
+                The full detail, with VAT and discount lines and a Cin7 Core and Unleashed comparison table, is on
+                our <a href="/uk/shopify-xero-integration#bundles-and-stock" style={{ textDecoration: 'underline', color: T.ink, fontWeight: 600 }}>Shopify Xero integration page</a>.
+              </p>
+            </div>
+            <p style={srcNote}>
+              Sources, read on 21 October 2026:{' '}
+              <a href={SRC_SHOPIFY_BUNDLES} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Shopify Dev, bundles</a>;{' '}
+              <a href={SRC_XERO_WEBHOOKS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Xero Developer, webhooks</a>;{' '}
+              <a href={SRC_XERO_LIMITS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Xero Developer, API limits</a>;{' '}
+              <a href={SRC_CIN7_XERO} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Cin7 Core Help, sync products with Xero</a>;{' '}
+              <a href={SRC_CIN7_PRICING} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Cin7 pricing</a>;{' '}
+              <a href={SRC_UNLEASHED_ASSEMBLY} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Unleashed Help, auto assemblies</a>;{' '}
+              <a href={SRC_UNLEASHED_PRICING} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Unleashed UK pricing</a>.
+            </p>
           </div>
         </section>
 

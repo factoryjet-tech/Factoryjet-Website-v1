@@ -7,7 +7,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-receptionist';
-const UPDATED = '2026-10-11';
+const UPDATED = '2026-10-21';
 const TITLE = 'AI Receptionist UK | Built Into Your Systems | FactoryJet';
 const H1 = 'AI Receptionist UK: Answers Every Call, Books Into Your Diary, Hands Over When It Matters';
 const DESCRIPTION =
@@ -55,6 +55,22 @@ const SRC_ICO_AI =
 // as you ask within one month of cancelling". fetch-verified 2026-09-24
 const SRC_OFCOM =
   'https://www.ofcom.org.uk/phones-and-broadband/switching-provider/switching-landline';
+
+/* ─── Dental and GP section, each read on 2026-10-21 ─────────────────── */
+// The VoIP Shop, AI receptionist for GP clinics: Premium £30 a month (50 calls),
+// Ultimate £120 (200 calls), extra calls £0.30, "Prices exclude VAT"; transfers
+// to a live person carry additional fees on both plans; lists EMIS Web,
+// SystmOne and Vision.
+const SRC_VOIPSHOP_GP = 'https://www.thevoipshop.co.uk/ai-receptionist-for-gp-clinics';
+// Softomate, AI receptionist for dental practices (published 25 June 2026,
+// updated 1 October 2026): "A focused Softomate setup starts from £2,000 plus
+// care from £99 per month"; calls, numbers and AI usage extra.
+const SRC_SOFTOMATE_DENTAL = 'https://www.softomatesolutions.com/blog/ai-receptionist-dental-practices-london-uk/';
+// NHS Herefordshire and Worcestershire, urgent dental care: out of hours "call
+// 111 for a referral"; A&E or 999 for heavy bleeding that won't stop, severe
+// swelling that affects breathing or vision, serious facial injuries, loss of
+// consciousness after a dental injury.
+const SRC_NHS_DENTAL = 'https://www.hacw.nhs.uk/urgent-dental-care';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -124,6 +140,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Businesses in the UK commonly record calls, but a recording and its transcript are personal data under UK GDPR. You need a lawful reason, you must tell callers, and you should keep recordings only as long as you need them. We set a short spoken notice at the start of the call, a clear retention period, and access controls. Confirm the detail for your sector with your data protection adviser.' },
   { category: 'rules', question: 'How does the AI hand a call over to a person?',
     answer: 'We agree handover rules with you before the build. Typical triggers are a caller asking for a person, an emergency or safeguarding word, an upset caller, or a question the AI has no approved answer for. The AI then transfers the call live to the right person or team, or, if nobody is free, takes a detailed message and alerts the right person by text, email or your team chat.' },
+  { category: 'rules', question: 'Can a dental practice use an AI receptionist?',
+    answer: 'Yes, for the admin calls: new patient enquiries, check-up and hygienist bookings, cancellations, fees and opening hours. It must never assess pain or swelling. One NHS trust’s urgent dental page sends heavy bleeding, swelling that affects breathing or vision, and serious facial injuries to A&E or 999, and out-of-hours urgent care to NHS 111. The receptionist reads out those routes and passes the call to the team. Read on 21 October 2026.' },
+  { category: 'rules', question: 'Can a GP surgery use an AI receptionist?',
+    answer: 'For admin calls, yes: booking and changing appointments, repeat prescription requests, test result call-backs and opening hours. Clinical triage stays with the practice’s own care navigation rules and its clinicians. On 21 October 2026 The VoIP Shop listed GP clinic plans at £30 a month for 50 calls and £120 for 200, extra calls £0.30, before VAT, with transfers to a person charged on top. Check it connects to your clinical system, such as EMIS Web or SystmOne.' },
   { category: 'rules', question: 'What calls should an AI receptionist never handle?',
     answer: 'Anything involving clinical advice, legal advice, emergencies, safeguarding concerns, complaints that need a real apology, or decisions that affect someone’s money or rights. For those, the AI’s only job is to recognise the situation quickly and get the caller to a person. For a medical or dental practice, that means urgent symptoms are routed straight to staff or to NHS 111 or 999 guidance you approve.' },
   { category: 'rules', question: 'Where is the call data stored?',
@@ -273,7 +293,7 @@ export default function AiReceptionistUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />11 October 2026</div>
+                  <div className="upd">Last updated<br />21 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -665,6 +685,71 @@ export default function AiReceptionistUKPage() {
               providers. If calls follow a pattern, an AI receptionist can usually take the routine ones. For a
               buyer’s view of the options in this space, read our guide to{' '}
               <a href="/blog/best-ai-receptionist-small-business">the best AI receptionist for small business</a>.
+            </p>
+          </div>
+        </section>
+
+        {/* ═══ 11b. DENTAL AND GP PRACTICES (added 2026-10-21) ═══ */}
+        <section className="sec-lg dot-grid" id="dental-and-gp">
+          <div className="wrap">
+            <div style={{ maxWidth: 820 }}>
+              <span className="eyebrow">Dental and GP practices</span>
+              <h2>AI receptionist for dental practices and GP surgeries</h2>
+              <p className="lead mt-4">
+                Most practice calls follow a short list of patterns, and the stakes are high when one does
+                not. The receptionist takes the admin. Anything that sounds clinical leaves the AI within
+                one sentence.
+              </p>
+            </div>
+            <div className="col-2 mt-10" style={{ gap: 24 }}>
+              <div className="card">
+                <h3>Dental practices</h3>
+                <p className="mt-4">
+                  <b>It takes:</b> new patient enquiries, check-up and hygienist bookings, moves and cancellations,
+                  NHS or private fee questions, opening hours and directions, booked into your practice software.
+                </p>
+                <p className="mt-4">
+                  <b>It routes at once:</b> pain, swelling, bleeding or injury. One NHS trust&rsquo;s urgent dental
+                  page sends heavy bleeding that will not stop, severe swelling that affects breathing or vision,
+                  serious facial injuries and loss of consciousness after a dental injury to A&amp;E or 999, and
+                  out-of-hours urgent care to NHS 111 for a referral. The AI reads out the route your practice
+                  approves and passes the call on. It does not judge how bad it is.
+                </p>
+              </div>
+              <div className="card">
+                <h3>GP surgeries</h3>
+                <p className="mt-4">
+                  <b>It takes:</b> booking, moving and cancelling appointments, repeat prescription requests, test
+                  result call-backs, sick note requests and opening hours: the calls that fill the 8am queue.
+                </p>
+                <p className="mt-4">
+                  <b>It routes at once:</b> any symptom. Triage stays with your care navigation rules and your
+                  clinicians, and the handover path is signed off by them before go-live. It must write into your
+                  clinical system (EMIS Web or SystmOne) or a task list your team already works from, never a
+                  separate inbox nobody checks.
+                </p>
+              </div>
+            </div>
+            <div style={{ maxWidth: 820 }} className="mt-10">
+              <h3>What practice-ready AI receptionists list, as read on 21 October 2026</h3>
+              <ul className="scope-list mt-4">
+                <li><b>The VoIP Shop, AI receptionist for GP clinics.</b> Premium £30 a month with 50 calls, Ultimate £120 a month with 200 calls, extra calls £0.30 each, prices before VAT. Transfers to a live person cost extra on both plans. It lists EMIS Web, SystmOne and Vision.</li>
+                <li><b>Softomate, AI receptionist for dental practices.</b> Set-up from £2,000 and care from £99 a month, with calls, numbers and AI usage charged on top. It names Software of Excellence, Dentally, Exact, R4+ and iSmile as the main UK practice platforms and tells buyers to see a demonstration on their own system.</li>
+              </ul>
+              <p className="mt-4">
+                Health information about a caller is special category data under UK GDPR, so a practice should
+                expect a DPIA, a clear AI disclosure in the greeting and a written retention period for recordings.
+                For what a practice receptionist costs in staff time next to these plans, see the receptionist
+                section of our <a href="/blog/ai-cost-uk-2026#ai-receptionist-cost" style={{ textDecoration: 'underline', color: T.ink, fontWeight: 600 }}>AI cost in the UK (2026) guide</a>,
+                which works through NHS band 2 and 3 pay for a GP receptionist.
+              </p>
+            </div>
+            <p style={srcNote}>
+              Sources, read on 21 October 2026:{' '}
+              <a href={SRC_VOIPSHOP_GP} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>The VoIP Shop, AI receptionist for GP clinics</a>;{' '}
+              <a href={SRC_SOFTOMATE_DENTAL} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Softomate, AI receptionist for dental practices (updated 1 October 2026)</a>;{' '}
+              <a href={SRC_NHS_DENTAL} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>NHS Herefordshire and Worcestershire, urgent dental care</a>.
+              Vendor prices are each vendor&rsquo;s own list prices. We are not clinicians or lawyers: your clinical lead approves every handover rule.
             </p>
           </div>
         </section>

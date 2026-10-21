@@ -343,7 +343,7 @@ export const UK_SERVICE_HUBS: ServiceHub[] = [
         { label: 'Glasgow', href: '/uk/glasgow' },
       ] },
     ],
-    feature: { image: '/images/menu/menu-web-design-model.webp', kicker: 'Guide', title: 'UK web design pricing in 2026', body: 'What drives the cost of a website for a UK small business.', href: '/blog/uk-web-design-agency-pricing-2026-smb-guide', cta: 'Read the guide' },
+    feature: { image: '/images/menu/menu-web-design-model.webp', kicker: 'Guide', title: 'What a website costs in the UK in 2026', body: 'Price ranges by project type for a UK small business, from published sources.', href: '/blog/uk-web-design-agency-pricing-2026-smb-guide', cta: 'Read the guide' },
     note: { lead: 'Planning a new site?', label: 'Talk to the founder', href: '/contact' },
   },
   {

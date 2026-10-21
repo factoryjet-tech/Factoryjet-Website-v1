@@ -237,5 +237,11 @@ export const AI_AGENT_FAQS = [
     "category": "faq-scope",
     "question": "Where is the data processed when an AI agent serves customers in Europe?",
     "answer": "Wherever the hosting and the AI model provider run it, so that is a design choice to settle before the build. Chapter V of the GDPR allows a transfer of personal data outside the EU only under its conditions, such as a European Commission adequacy decision or the Commission's standard contractual clauses. Before the build starts, ask your developer to list each service that touches personal data, the region it runs in and the transfer basis it relies on. Check the details with your own counsel."
+  },
+  {
+    "id": "Q35",
+    "category": "faq-cost",
+    "question": "What is the best AI agent hosting under $5?",
+    "answer": "For a hobby bot, a small virtual server is enough. DigitalOcean listed its cheapest Basic Droplet at $4.00 a month (512 MiB memory, 1 vCPU) when we checked on October 21, 2026. That price covers the server only; the AI model provider bills separately. A business agent that touches customer data needs more than the cheapest box: backups, logs, access control and someone watching it. Hosting can sit in your own cloud account at cost, and FactoryJet can keep managing the servers, AI models and maintenance."
   }
 ] as const;

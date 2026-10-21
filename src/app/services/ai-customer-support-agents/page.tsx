@@ -13,7 +13,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_MODIFIED = '2026-10-10';
+const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-customer-support-agents';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
@@ -217,7 +217,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'process',
     question: 'How much does a custom AI customer support agent cost?',
     answer:
-      'It depends on how many ticket types the agent handles, how many systems it has to write to, and how strict your approval rules are, not on the AI model. We quote a fixed price after reviewing your queue. For comparison, Intercom Fin bills $0.99 per resolved outcome, and our AI agent cost guide works through a support agent handling 2,000 tickets a month at about $22 to $112 in model calls on September 2026 prices.',
+      'It depends on how many ticket types the agent handles, how many systems it has to write to, and how strict your approval rules are, not on the AI model. We quote a fixed price after reviewing your queue. For comparison, Intercom Fin lists $0.99 per resolved outcome (read 21 October 2026), and our Intercom Fin vs Zendesk AI vs custom agent guide sets the vendor list prices side by side.',
   },
   {
     category: 'process',
@@ -390,6 +390,288 @@ const STATS = [
   { b: '100% Owned', s: 'private Git repo & cloud deployment' },
 ];
 
+/* ── Sources. One map, used by every inline source link (the `short` label) AND
+   by the visible "Sources" list near the foot of the page (the full `label`).
+   Each URL was opened on 2026-10-21 and the supporting sentence read before the
+   claim was written. Same pattern as /services/insurance-ai-agents. ── */
+const CHECKED_ON = '21 Oct 2026';
+
+const SRC = {
+  gorgiasShopify: {
+    short: 'Gorgias: Shopify order actions',
+    label: 'Gorgias Help Center: AI Agent Actions, make changes to Shopify orders',
+    url: 'https://docs.gorgias.com/en-US/ai-agent-actions-make-changes-to-shopify-orders-757792',
+  },
+  gorgiasExplained: {
+    short: 'Gorgias: AI Agent explained',
+    label: 'Gorgias Help Center: AI Agent explained (skills, actions and handover to humans)',
+    url: 'https://docs.gorgias.com/en-US/ai-agent-explained-497772',
+  },
+  zendeskPricing: {
+    short: 'Zendesk: pricing',
+    label: 'Zendesk: pricing, AI agents and automated resolutions',
+    url: 'https://www.zendesk.com/pricing/',
+  },
+  zendeskAgentic: {
+    short: 'Zendesk: agentic AI',
+    label: 'Zendesk help: About AI agents with agentic AI',
+    url: 'https://support.zendesk.com/hc/en-us/articles/8966284087066-About-AI-agents-with-agentic-AI',
+  },
+  zendeskBuilder: {
+    short: 'Zendesk: integration builder',
+    label: 'Zendesk help: About the integration builder for AI agents',
+    url: 'https://support.zendesk.com/hc/en-us/articles/8357756844442-About-the-integration-builder-for-AI-agents',
+  },
+  intercomPricing: {
+    short: 'Intercom: pricing',
+    label: 'Intercom: pricing (Fin AI Agent per outcome)',
+    url: 'https://www.intercom.com/pricing',
+  },
+  finProcedures: {
+    short: 'Fin: Procedures',
+    label: 'Fin: Procedures, automate complex customer queries',
+    url: 'https://fin.ai/procedures',
+  },
+  shopifyRefund: {
+    short: 'Shopify: refundCreate',
+    label: 'Shopify Admin GraphQL API: refundCreate mutation',
+    url: 'https://shopify.dev/docs/api/admin-graphql/latest/mutations/refundCreate',
+  },
+  airCanada: {
+    short: 'Moffatt v. Air Canada, 2024',
+    label: 'British Columbia Civil Resolution Tribunal: Moffatt v. Air Canada, 2024 BCCRT 149 (14 Feb 2024)',
+    url: 'https://decisions.civilresolutionbc.ca/crt/crtd/en/item/525448/index.do',
+  },
+  fcc: {
+    short: 'FCC release on AI-voice calls, 8 Feb 2024',
+    label: 'FCC news release of 8 Feb 2024, titled FCC Makes AI-Generated Voices in Robocalls Illegal',
+    url: 'https://docs.fcc.gov/public/attachments/DOC-400393A1.pdf',
+  },
+} as const;
+
+type SrcKey = keyof typeof SRC;
+const SOURCE_KEYS = Object.keys(SRC) as SrcKey[];
+
+/* ── Check before anyone builds. One row per ticket type above: what the help
+   desk vendors already ship for it (their own pages, read 2026-10-21) and
+   where a custom agent starts. No client is claimed. ── */
+const ALREADY_SHIPS: ReadonlyArray<{ ticket: string; ships: string; custom: string; sources: ReadonlyArray<SrcKey> }> = [
+  {
+    ticket: 'Where is my order',
+    ships: 'Gorgias lists order tracking among the post-purchase conversations its AI Agent resolves, as part of its AI Agent subscription.',
+    custom: 'Tracking lives in a 3PL portal, a warehouse system or NetSuite that the help desk agent cannot read.',
+    sources: ['gorgiasExplained'],
+  },
+  {
+    ticket: 'Cancel or change an order before it ships',
+    ships: 'Gorgias AI Agent can cancel an unfulfilled Shopify order, restock it and refund it in full, or edit the shipping address. Gorgias says the cancellation is not passed on to 3PL or fulfillment apps, and points to separate actions for ShipStation, ShipMonk and ShipBob.',
+    custom: 'The order has already reached a 3PL or ERP that has no ready-made action, so the change has to land in two systems at once.',
+    sources: ['gorgiasShopify'],
+  },
+  {
+    ticket: 'Returns and refunds within policy',
+    ships: "Shopify's Admin API has a refundCreate mutation that processes returns and issues payments back to customers, so any agent with the right access scope can do it. Fin Procedures handle queries with multiple steps, business logic and third-party systems.",
+    custom: 'The refund rule depends on data the vendor agent cannot see, such as a final-sale list in your ERP, or a dollar cap that has to sit in code.',
+    sources: ['shopifyRefund', 'finProcedures'],
+  },
+  {
+    ticket: 'Account and subscription changes',
+    ships: 'Zendesk says its AI agents can connect to any API or data source, and now asks admins to build those connections as custom actions. Zendesk AI agents with agentic AI work on messaging, email and voice.',
+    custom: 'The change has to be verified against a customer record and written to a billing platform the vendor connection cannot authenticate to.',
+    sources: ['zendeskBuilder', 'zendeskAgentic'],
+  },
+  {
+    ticket: 'Anything the agent should not decide',
+    ships: 'Gorgias says its AI Agent hands over to your team when it cannot respond confidently, meets a sensitive topic or detects frustration.',
+    custom: 'Your hand-off list is longer than the vendor settings allow, or the hand-off has to open a case in a second system with the transcript attached.',
+    sources: ['gorgiasExplained'],
+  },
+];
+
+/* ── Who keeps control. Same three-way split as the insurance page. ── */
+type Keeper = 'software' | 'build' | 'person';
+const KEEPER_LABEL: Record<Keeper, string> = {
+  software: 'Your help desk provides',
+  build: 'We set up',
+  person: 'Your support team keeps',
+};
+const GUARDS: ReadonlyArray<{ rule: string; keeper: Keeper; note: string }> = [
+  {
+    rule: 'Hand-off when unsure',
+    keeper: 'software',
+    note: 'Gorgias says its AI Agent hands over when it cannot respond confidently, meets a sensitive topic or detects frustration. Check what your own help desk does before you write new rules.',
+  },
+  {
+    rule: 'Billing only on resolved tickets',
+    keeper: 'software',
+    note: 'Zendesk says you pay only for requests its AI agent resolved, counted as automated resolutions. Intercom lists Fin at $0.99 per outcome. Read how each defines a resolution before you compare them.',
+  },
+  {
+    rule: 'A written hand-off list',
+    keeper: 'build',
+    note: 'Refunds above your cap, legal threats, chargebacks, safety issues and anything a written policy does not cover go on a list before the build starts. The agent passes those to a named person with the conversation attached.',
+  },
+  {
+    rule: 'Read first, write later',
+    keeper: 'build',
+    note: 'Version one can read orders and draft replies and cannot change anything. Each write permission, such as a refund or an address change, is switched on separately after your team has reviewed the drafts.',
+  },
+  {
+    rule: 'A log of every lookup and action',
+    keeper: 'build',
+    note: 'Each ticket is logged with the records the agent read, the action it took and the reply it sent, so a support lead can see what happened and why.',
+  },
+  {
+    rule: 'Policy and exceptions',
+    keeper: 'person',
+    note: 'What the return window is, which items are final sale and when to make an exception stay with your team. The agent applies the written rule and asks when the rule does not fit.',
+  },
+  {
+    rule: 'Upset and high-value customers',
+    keeper: 'person',
+    note: 'A complaint that could become a chargeback, a review or a lost account goes to a person. The agent gathers the order history first so that person starts with the facts.',
+  },
+];
+
+/* ── Where support AI projects go wrong. Four come from the linked pages.
+   Three are our own advice and carry no source link. ── */
+const BREAKS: ReadonlyArray<{ t: string; b: string; sources: ReadonlyArray<SrcKey> }> = [
+  {
+    t: 'The agent invents a policy',
+    b: "In Moffatt v. Air Canada (2024), Air Canada's website chatbot told a customer a bereavement fare could be claimed after booking, which was not the airline's policy. The tribunal found Air Canada did not take reasonable care to make its chatbot accurate and ordered it to pay C$812.02. An agent should answer policy questions only from the written policy, word for word.",
+    sources: ['airCanada'],
+  },
+  {
+    t: 'A cancellation that never reaches the warehouse',
+    b: 'Gorgias says its AI Agent cancels the order in Shopify only, and that the cancellation is not passed on to 3PL or fulfillment apps. If your 3PL picks orders within the hour, test what happens to an order cancelled after hand-off before the agent is allowed to cancel anything.',
+    sources: ['gorgiasShopify'],
+  },
+  {
+    t: 'Paying twice for what the help desk already does',
+    b: 'Zendesk says AI agents are included in every Suite and Support plan, priced per automated resolution. Intercom lists Fin at $0.99 per outcome. Switch on the agent you already pay for and test it on your real tickets before you commission a build.',
+    sources: ['zendeskPricing', 'intercomPricing'],
+  },
+  {
+    t: 'Refund rules that live in the prompt',
+    b: 'A model can be talked out of an instruction. A dollar cap, a return window and a final-sale list belong in code that checks every refund before it reaches Shopify or the ERP.',
+    sources: [],
+  },
+  {
+    t: 'Policies nobody has written down',
+    b: 'If the return and exception rules live in senior agents’ heads, the AI agent has nothing to follow. Write them first, then automate them.',
+    sources: [],
+  },
+  {
+    t: 'An AI voice that calls customers back',
+    b: "A 2024 FCC ruling treats an AI-generated voice on a call as 'artificial' under the TCPA, and the FCC says telemarketers need prior express written consent before robocalling consumers. Take legal advice before any outbound AI call, even a delivery update.",
+    sources: ['fcc'],
+  },
+  {
+    t: 'No named person behind the hand-off',
+    b: 'An escalation that lands in a shared queue at 2 a.m. waits until morning. Put a name and a response time against refunds, complaints and technical cases before launch.',
+    sources: [],
+  },
+];
+
+/* ── What FactoryJet brings, stated plainly. No client is named and no result
+   is claimed. Wording is the approved wording used on /services/insurance-ai-agents:
+   the voice and ERP experience (Bhavesh, 9 and 11 Oct 2026), the demo before a
+   contract (4 Oct 2026), founded 2014 and 500+ businesses (confirmed), and the
+   two fixed prices plus managed upkeep (9 Oct 2026). ── */
+const EXPERIENCE: ReadonlyArray<{ t: string; kind: string; what: string; href: string; cta: string }> = [
+  {
+    t: 'What we build',
+    kind: 'Support agents · ERP agents · integrations',
+    what: 'On Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs, our agents have handled RFQs (requests for quote), quoting, purchase orders, sales orders and daily bookkeeping. Our integration work covers HubSpot, WhatsApp, Xero and EDI (electronic data interchange). A support agent needs the same parts: a help desk, an order record and a rule book.',
+    href: '/services/ai-agent-development',
+    cta: 'See AI agent development',
+  },
+  {
+    t: 'A demo before the contract',
+    kind: 'A demo on your own tickets',
+    what: 'You see working software running on your own data before any contract is signed. For a support team that means a set of your past tickets answered in draft, for your team to check against what was actually sent.',
+    href: '/contact',
+    cta: 'Book a demo on your own tickets',
+  },
+  {
+    t: 'How long we have been at it',
+    kind: 'Founded 2014 · 500+ businesses served',
+    what: 'The company started in 2014. Since then it has delivered work for more than 500 businesses, and today it is an ecommerce and AI services firm that designs, builds, implements and supports what it ships.',
+    href: '/about',
+    cta: 'Read about FactoryJet',
+  },
+  {
+    t: 'Who looks after it',
+    kind: 'Managed after launch',
+    what: 'A short scoping call comes first. Then FactoryJet puts two fixed prices in writing, one to build the agent and one to support it. After go-live FactoryJet stays responsible for the servers, AI models, API connections and maintenance behind the agent. You own what we build.',
+    href: '/services/ai-agent-monitoring',
+    cta: 'See monitoring and support',
+  },
+];
+
+/* ── Ready-made support AI agents. Each line restates the vendor's own page as
+   read on 2026-10-21. FactoryJet sells none of them. Feeds the visible list AND
+   the ItemList JSON-LD. ── */
+const OTHERS: ReadonlyArray<{ name: string; focus: string; says: string; source: SrcKey; more?: SrcKey }> = [
+  {
+    name: 'Intercom Fin',
+    focus: 'Chat and email · billed per outcome',
+    says: 'Intercom lists Fin AI Agent at $0.99 per outcome on every helpdesk plan. Fin Procedures let a support team describe a multi-step process in plain language, including business logic and third-party systems, and Fin\'s page says they need no engineering to build.',
+    source: 'intercomPricing',
+    more: 'finProcedures',
+  },
+  {
+    name: 'Zendesk AI agents',
+    focus: 'Messaging, email and voice · billed per automated resolution',
+    says: 'Zendesk says AI agents are included in every Suite and Support plan, priced on automated resolutions. Its agentic AI agents are designed to solve complex requests with limited direct human supervision, and connect to outside systems through custom actions.',
+    source: 'zendeskPricing',
+    more: 'zendeskAgentic',
+  },
+  {
+    name: 'Gorgias AI Agent',
+    focus: 'Shopify stores · email, chat, SMS and social',
+    says: 'Gorgias says its AI Agent resolves returns, order tracking, cancellations and missing items, and can cancel an unfulfilled Shopify order or edit its shipping address. Changes made in Shopify are not passed on to 3PL or fulfillment apps.',
+    source: 'gorgiasExplained',
+    more: 'gorgiasShopify',
+  },
+];
+
+const othersSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Ready-made AI customer support agents from help desk vendors: Intercom Fin, Zendesk AI agents and Gorgias AI Agent',
+  itemListElement: OTHERS.map((o, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: o.name,
+    url: SRC[o.source].url,
+  })),
+};
+
+/** Small inline source links, same pattern as /services/insurance-ai-agents.
+ *  Renders nothing when a claim is our own and has no source. */
+function SourceLinks({ ids }: { ids: ReadonlyArray<SrcKey> }) {
+  if (ids.length === 0) return null;
+  return (
+    <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-0 m-0">
+      {ids.map((id) => (
+        <a
+          key={id}
+          href={SRC[id].url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex min-h-11 items-center gap-1.5 py-2 font-mono text-xs font-semibold tracking-wide text-[#B23E13] hover:underline"
+        >
+          <svg width="10" height="10" viewBox="0 0 9 9" fill="none" aria-hidden="true" className="flex-shrink-0">
+            <path d="M1.5 7.5L7.5 1.5M7.5 1.5H3M7.5 1.5V6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          {SRC[id].short}
+        </a>
+      ))}
+    </p>
+  );
+}
+
 export default function AiCustomerSupportAgentsPage() {
   return (
     <>
@@ -398,6 +680,7 @@ export default function AiCustomerSupportAgentsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <BreadcrumbSchema items={BREADCRUMB_ITEMS} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(othersSchema) }} />
 
       <SiteHeader locale="us" />
 
@@ -777,6 +1060,44 @@ export default function AiCustomerSupportAgentsPage() {
           </div>
         </section>
 
+
+        {/* CHECK BEFORE ANYONE BUILDS (added 2026-10-21, insurance-page proof
+            pattern): per ticket type, what the help desk already ships and where
+            a custom agent starts, each with its source. */}
+        <section className="pp-section pp-tint" id="already-ships">
+          <div className="pp-container">
+            <div className="max-w-3xl mb-10">
+              <h2 className="pp-h2">Check What Your Help Desk Already Ships, Ticket by Ticket</h2>
+              <p className="text-base text-[#46403B] mt-3 leading-relaxed">
+                Each of the five ticket types above has a ready-made answer in at least one help desk. Here is what the vendors say their own AI agents do, read on their pages on {CHECKED_ON}, and the point where a custom agent starts to earn its cost.
+              </p>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="pp-table">
+                <thead>
+                  <tr>
+                    <th>Ticket</th>
+                    <th>What the help desk vendors already ship</th>
+                    <th>Where a custom agent starts</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {ALREADY_SHIPS.map((row) => (
+                    <tr key={row.ticket}>
+                      <td className="font-bold align-top">{row.ticket}</td>
+                      <td className="align-top">
+                        {row.ships}
+                        <SourceLinks ids={row.sources} />
+                      </td>
+                      <td className="align-top">{row.custom}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         {/* SYSTEMS COVERAGE */}
         <section className="pp-section pp-tint">
           <div className="pp-container">
@@ -1094,6 +1415,63 @@ export default function AiCustomerSupportAgentsPage() {
           </div>
         </section>
 
+
+        {/* WHO KEEPS CONTROL (added 2026-10-21, insurance-page proof pattern) */}
+        <section className="pp-section" id="who-keeps-control">
+          <div className="pp-container">
+            <div className="max-w-3xl mb-10">
+              <h2 className="pp-h2">Who Keeps Control of a Support Agent</h2>
+              <p className="text-base text-[#46403B] mt-3 leading-relaxed">
+                Some safeguards come with your help desk. Some we write into the build. Two stay with your team whatever software you run.
+              </p>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="pp-table">
+                <thead>
+                  <tr>
+                    <th>Safeguard</th>
+                    <th>Who owns it</th>
+                    <th>How it works</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {GUARDS.map((g) => (
+                    <tr key={g.rule} className={g.keeper === 'build' ? 'tr-me' : undefined}>
+                      <td className="font-bold align-top">{g.rule}</td>
+                      <td className="align-top whitespace-nowrap">{KEEPER_LABEL[g.keeper]}</td>
+                      <td className="align-top">{g.note}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* WHERE SUPPORT AI GOES WRONG (added 2026-10-21) */}
+        <section className="pp-section pp-tint" id="where-it-goes-wrong">
+          <div className="pp-container">
+            <div className="max-w-3xl mb-10">
+              <h2 className="pp-h2">Where AI Customer Support Projects Go Wrong</h2>
+              <p className="text-base text-[#46403B] mt-3 leading-relaxed">
+                Seven failure points, with the source where one exists. The three without a link are our own advice from building agents.
+              </p>
+            </div>
+            <ol className="grid grid-cols-1 md:grid-cols-2 gap-6 list-none p-0 m-0">
+              {BREAKS.map((w, i) => (
+                <li key={w.t} className="pp-card p-6 bg-white">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#F05A28] block mb-2">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="text-lg font-bold text-[#14110F] mb-2">{w.t}</h3>
+                  <p className="text-sm text-[#46403B] leading-relaxed m-0">{w.b}</p>
+                  <SourceLinks ids={w.sources} />
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
         {/* HONEST FIT CHECK
             Ported 2026-09-17 from the retired duplicate support page (301 to this
             URL). Every vendor fact below was fetch-verified that day on the
@@ -1230,6 +1608,53 @@ export default function AiCustomerSupportAgentsPage() {
           </div>
         </section>
 
+
+        {/* READY-MADE SUPPORT AGENTS + WHAT WE BRING (added 2026-10-21,
+            insurance-page proof pattern). OTHERS also feeds the ItemList JSON-LD. */}
+        <section className="pp-section pp-tint" id="ready-made-agents">
+          <div className="pp-container">
+            <div className="max-w-3xl mb-10">
+              <h2 className="pp-h2">Ready-Made AI Support Agents, in Their Own Words</h2>
+              <p className="text-base text-[#46403B] mt-3 leading-relaxed">
+                FactoryJet sells none of these and earns nothing if you choose one. Each entry restates the vendor&apos;s own page as read on {CHECKED_ON}.
+              </p>
+            </div>
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 list-none p-0 m-0">
+              {OTHERS.map((o) => (
+                <li key={o.name} className="pp-card p-6 bg-white">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#F05A28] block mb-2">{o.focus}</span>
+                  <h3 className="text-lg font-bold text-[#14110F] mb-2">{o.name}</h3>
+                  <p className="text-sm text-[#46403B] leading-relaxed m-0">{o.says}</p>
+                  <SourceLinks ids={o.more ? [o.source, o.more] : [o.source]} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="pp-section" id="what-we-bring">
+          <div className="pp-container">
+            <div className="max-w-3xl mb-10">
+              <h2 className="pp-h2">What FactoryJet Brings to a Support Agent Build</h2>
+              <p className="text-base text-[#46403B] mt-3 leading-relaxed">
+                No client is named here and no result is claimed. These are the facts we can stand behind.
+              </p>
+            </div>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 list-none p-0 m-0">
+              {EXPERIENCE.map((x) => (
+                <li key={x.t} className="pp-card p-6 bg-white">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#F05A28] block mb-2">{x.kind}</span>
+                  <h3 className="text-lg font-bold text-[#14110F] mb-2">{x.t}</h3>
+                  <p className="text-sm text-[#46403B] leading-relaxed mb-3">{x.what}</p>
+                  <Link href={x.href} className="text-sm font-semibold underline text-[#B23E13]">
+                    {x.cta}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         {/* FOUNDER LEADERSHIP */}
         <section className="pp-section">
           <div className="pp-container">
@@ -1267,6 +1692,28 @@ export default function AiCustomerSupportAgentsPage() {
                   practice, not just customer support.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* SOURCES (added 2026-10-21): the full labels of every inline source link. */}
+        <section className="pp-section" id="sources">
+          <div className="pp-container">
+            <div className="max-w-3xl">
+              <h2 className="pp-h2">Sources</h2>
+              <p className="text-sm text-[#46403B] mt-3 leading-relaxed">
+                Each page was opened on {CHECKED_ON} and the supporting sentence read before the claim was written. The Zendesk and Gartner figures in the research section above link to their own pages.
+              </p>
+              <ul className="mt-4 space-y-2 text-sm list-disc pl-5">
+                {SOURCE_KEYS.map((k) => (
+                  <li key={k}>
+                    <a href={SRC[k].url} target="_blank" rel="noopener noreferrer" className="underline text-[#B23E13]">
+                      {SRC[k].label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>

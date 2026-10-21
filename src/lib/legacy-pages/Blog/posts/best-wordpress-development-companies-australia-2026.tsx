@@ -38,12 +38,13 @@ export const post: BlogPost = {
   category: "Web Design & Strategy",
   author: 'Bhavesh Barot',
   date: "Sep 26, 2026",
-  dateModified: "Oct 10, 2026",
+  dateModified: "Oct 21, 2026",
   readTime: '12 min read',
   imageUrl: "/blog-images/best-wordpress-development-companies-australia-2026-hero.webp",
   meta: {
-    title: "Best WordPress Developers for Australian Small Business 2026",
-    description: "Six WordPress developers for Australian small businesses, checked on their own sites, with sourced AUD price ranges and a checklist for choosing one.",
+    // 21 Oct 2026 (AU plan quick win): CTR rewrite for "wordpress developer australia" (pos. 4.9, 242 impressions, 0 clicks).
+    title: "WordPress Developers in Australia: 6 Compared, 2026 Costs",
+    description: "Need a WordPress developer in Australia? Six firms checked on their own sites, sourced 2026 AUD build ranges from $2,500, and what to put in the contract.",
   },
   keyTakeaways: [
     "Australian price guides put a professional WordPress site at about $3,000 to $7,000 for a basic brochure site and $5,000 to $15,000 for a fuller business site (WolfIQ, 2026 guide). These are typical Australian market ranges, not FactoryJet prices.",

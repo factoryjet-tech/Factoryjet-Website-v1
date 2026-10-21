@@ -16,9 +16,12 @@ import { aiConsultingAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-consulting';
 const UPDATED = '2026-10-21';
-const TITLE = 'AI Consulting Australia | Consultants Who Build | FactoryJet';
+/* 21 Oct 2026 (AU plan R3): Sydney and Melbourne promoted into the title and into their own H2s,
+   for "ai consultant sydney" and "ai consulting melbourne" (110 AU searches a month each), instead of
+   building separate city AI pages. */
+const TITLE = 'AI Consulting Australia | Sydney & Melbourne | FactoryJet';
 const DESCRIPTION =
-  'AI consulting for Australian SMEs: we find where AI pays off, check your data and Privacy Act duties, decide buy or build, then build it. Founder-led.';
+  'AI consultants for Sydney, Melbourne and all of Australia: we find where AI pays off, check your data and Privacy Act duties, then build it.';
 const H1 = 'AI Consulting in Australia: Find Where AI Pays Off, Then Build It';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
@@ -132,8 +135,11 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Cost & how it works ──
   { category: 'engagement', question: 'How much does an AI consultant cost?',
-    answer: 'It depends on scope, not a rate card. The drivers are how many teams and processes are in scope, how scattered your data is, how many systems need connecting, how much privacy and governance work your sector needs, and whether you want advice only or advice plus a build. We quote a fixed price per stage after a free first call. Published Australian hourly and day rates are in our AI cost guide.',
-    links: [{ href: '/blog/ai-cost-australia-2026#ai-consultant-cost', label: 'What AI consultants charge in Australia' }] },
+    answer: 'Flowtivity\'s March 2026 Australian guide lists a discovery or strategy engagement at A$3,000 to A$8,000, a proof of concept at A$5,000 to A$15,000, and full implementation from A$15,000 to A$50,000 or more. These are market ranges from one published source, not our prices. Scope sets where you land: how many processes, how scattered your data is, and how many systems need connecting. We quote a fixed price per stage after a free first call.',
+    links: [{ href: 'https://flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026/', label: 'Flowtivity, Australian AI pricing guide (March 2026)' }, { href: '/blog/ai-cost-australia-2026#ai-consultant-cost', label: 'What AI consultants charge in Australia' }] },
+  { category: 'engagement', question: 'What is the going rate for an AI consultant?',
+    answer: 'In Australia, Flowtivity\'s March 2026 guide puts AI consulting at A$150 to A$400 an hour, with most experienced consultants at A$200 to A$300, and day rates of A$1,500 to A$3,000. Check whether a rate is ex-GST, and whether the consultant can build what they recommend or hands you a report.',
+    links: [{ href: '/blog/ai-cost-australia-2026#ai-consultant-cost', label: 'AI consultant rates in Australia' }] },
   { category: 'engagement', question: 'How do AI consultants charge?',
     answer: 'Most AI consultants in Australia charge in one of three ways: a fixed price for a defined piece of work such as a readiness assessment, time and materials for open-ended work, or a monthly retainer for ongoing advice. We prefer fixed prices per stage, so you know the cost before each step starts and can stop after any stage without a penalty.' },
   { category: 'engagement', question: 'How long does an AI readiness assessment take?',
@@ -920,39 +926,44 @@ export default function AiConsultingAUPage() {
           </div>
         </section>
 
-        {/* ═══ SYDNEY + MELBOURNE → ruled rows + split (prose, links | demand) ═══ */}
+        {/* ═══ SYDNEY + MELBOURNE → two headed blocks + split (prose, links | demand) ═══
+            21 Oct 2026 (AU plan R3): each city got its own H2 instead of an H3 under one shared heading. */}
         <section className="section platforms" id="locations">
           <div className="wrap">
-            <div className="section-head plat-head">
+            <div className="section-head plat-head" id="sydney">
               <div>
-                <div className="eyebrow">Sydney, Melbourne and Australia-wide</div>
-                <h2>AI consulting in Sydney and Melbourne, and everywhere else in Australia</h2>
+                <div className="eyebrow">Sydney</div>
+                <h2>AI consultant in Sydney: document-heavy work, with privacy checked first</h2>
               </div>
               <p>
-                Plenty of people search for an AI consultant in Sydney or Melbourne, or type &ldquo;AI consulting near
-                me&rdquo;, expecting to need someone down the road. For this kind of work you do not. What matters is who
-                turns up to the workshop and who is still there after launch.
-              </p>
-            </div>
-            <div className="platlist" role="list">
-              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>AI consulting Sydney</h3></div><p className="plat-build">
                 Sydney has the deepest pool of AI consulting firms in the country, from Big Four practices in the CBD
                 to boutique builders. That makes choosing harder, not easier. Sydney businesses we talk to are often
                 in professional services, finance-adjacent work and distribution, where the first use cases are
                 document-heavy: reading contracts, drafting client letters, processing purchase orders. Privacy and
                 record-keeping expectations run high, so our Sydney engagements put the APP check and a written AI
                 usage policy right at the start.
-              </p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>AI consulting Melbourne</h3></div><p className="plat-build">
+              </p>
+            </div>
+            <div className="section-head plat-head" id="melbourne" style={{ marginTop: 56 }}>
+              <div>
+                <div className="eyebrow">Melbourne</div>
+                <h2>AI consulting in Melbourne: operations first, and you own what we build</h2>
+              </div>
+              <p>
                 Melbourne has a strong mix of manufacturers, wholesalers, health and education providers and
                 ecommerce brands. Our Melbourne AI consulting work often starts in operations: order entry, stock and
                 supplier questions, customer service queues, and connecting Xero or MYOB to the systems around it.
                 Melbourne firms also tend to ask hard questions about ownership, which suits us, because everything we
                 build is yours: code, prompts, integrations and documentation.
-              </p></div>
+              </p>
             </div>
             <div className="au-split">
               <div>
+                <p>
+                  Plenty of people search for an AI consultant in Sydney or Melbourne, or type &ldquo;AI consulting near
+                  me&rdquo;, expecting to need someone down the road. For this kind of work you do not. What matters is who
+                  turns up to the workshop and who is still there after launch.
+                </p>
                 <p>
                   We run engagements remotely, with video workshops, shared process maps and written reports, and plan
                   sessions around Australian business hours. The same model serves Brisbane, Perth, Adelaide, Canberra

@@ -42,6 +42,10 @@ const faqs: FAQItem[] = [
     a: 'Published Australian figures sit at about A$150 to A$400 an hour for AI consulting (Flowtivity, March 2026), with most experienced consultants in the middle of that band. Web Video Digital\'s August 2026 guide puts senior AI developers at about A$180 to A$280 an hour. Check whether a quote is ex-GST or GST-inclusive before you compare two rates.',
   },
   {
+    q: 'What is the average cost of hiring a software developer?',
+    a: 'It depends on seniority and on whether you employ, contract or hire a firm. For AI work, Web Video Digital\'s August 2026 Australian guide puts senior AI developers at about A$180 to A$280 an hour. An employee adds superannuation, leave, equipment and recruitment costs on top of salary. Firms usually quote per project instead, so compare a firm\'s total for the job with the hours a contractor would bill. Ask whether each quote is ex-GST or GST-inclusive.',
+  },
+  {
     q: 'What is the market rate for an AI consultant?',
     a: 'On published Australian 2026 figures, the market rate is roughly A$150 to A$400 an hour or A$1,500 to A$3,000 a day. Where a consultant sits in that band depends on seniority, whether they can build as well as advise, and how specialised your industry is. Health, finance and anything with personal data tends to sit higher because of the privacy work involved.',
   },
@@ -176,7 +180,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 26, 2026',
-  dateModified: 'Oct 11, 2026',
+  dateModified: 'Oct 21, 2026',
   readTime: '18 min read',
   imageUrl: '/blog-images/ai-cost-australia-2026-hero.webp',
   imageAlt:

@@ -17,7 +17,7 @@ import './visual.css';
 import { SystemBoundary, SystemServiceDiagram, DraftBillDiagram } from './SystemDiagram';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-development';
-const UPDATED = '2026-10-10';
+const UPDATED = '2026-10-21';
 const TITLE = 'AI Development Company Australia | Custom AI | FactoryJet';
 /* Shortened 2026-09-26 so the hero form sits in the first desktop screen. The rest of the old H1
    ("Built Into the Systems You Already Run") moved into the hero lead. */
@@ -134,6 +134,14 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Many software agencies now list AI integration services, from small specialists to large IT firms. The useful question is not who offers it but who has integrated with your specific systems before, such as Xero, MYOB, NetSuite, HubSpot or Zendesk. Ask each provider how they would connect to your stack and what happens when one of those systems releases an update.' },
   { category: 'choosing', question: 'Are you tied to one AI model or vendor?',
     answer: 'No. We do not resell any AI platform. We choose between models from OpenAI, Anthropic, Google, Microsoft Azure and open-source options based on accuracy on your test cases, where your data needs to stay, and running cost. We build so the model can be swapped later without rewriting the system, because the best model this year may not be the best next year.' },
+
+  { category: 'choosing', question: 'How can I hire agentic AI developers?',
+    answer: 'Agentic AI developers build AI that takes actions in your systems, such as updating a record or chasing an invoice, rather than only answering questions. You can hire a freelancer through a marketplace, employ someone through a job board, or engage a development company. Whichever route you take, give every candidate the same task: a real sample of the work with names removed, plus the systems involved, such as Xero or your CRM. Ask to see an agent they built writing data into a live system, and who supports it after launch.',
+    links: [{ href: '/blog/hire-ai-developers-australia-cost-2026', label: 'Cost of hiring AI developers in Australia' }] },
+  { category: 'choosing', question: 'How do I hire dedicated developers?',
+    answer: 'A dedicated developer works only on your project for an agreed period, either as your employee or through a development company. Before you hire, write down the job, the systems involved and who will manage the work each day. Check that the contract gives you the code and the intellectual property, and ask what happens when that developer is sick or leaves. A company covers holidays and handovers; a single hire cannot. FactoryJet scopes and prices each phase on its own, and the same team supports the system after launch.' },
+  { category: 'choosing', question: 'Where can I hire AI chatbot developers?',
+    answer: 'Three places. Freelance marketplaces suit a simple chatbot on a website. Chatbot products such as Intercom or Tidio sell ready-made bots you set up yourself. A development company suits a chatbot that must look up orders, book appointments or write to Xero or your CRM, while meeting the Privacy Act. Ask any developer to show a chatbot they put live, how it hands a conversation to a person, and who fixes it when a connected system changes.' },
 
   // ── Timelines, cost & how it works ──
   { category: 'delivery', question: 'How long does custom AI development take?',

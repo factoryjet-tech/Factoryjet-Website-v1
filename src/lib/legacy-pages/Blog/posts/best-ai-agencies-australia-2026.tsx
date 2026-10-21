@@ -292,6 +292,10 @@ const FAQS: FAQItem[] = [
     a: "The Australian Bureau of Statistics reported that 12 percent of businesses used artificial intelligence in 2024 to 2025, up from 1 percent in 2022 to 2023. That means most of your competitors are still early, and a well-chosen first project can make a visible difference. It also means many agencies are new, so check their examples carefully.",
   },
   {
+    q: "Can you list agencies in Australia known for using advanced AI workflows in brand strategy?",
+    a: "This list covers agencies that build AI systems, not brand studios, so it only partly answers that. Of the agencies here, Edison AI in Surry Hills, Sydney lists AI marketing and search visibility among its services. When we put this question to AI assistants on 9 October 2026, they mostly named creative studios instead, such as Maker Street Studios and Absolutely AI. Ask any studio to walk you through the AI workflow it used on a real brand project, and who owns what it produced.",
+  },
+  {
     q: "Is it safe to pick an agency that an AI assistant recommended?",
     a: "Treat it as a lead, not a reference. AI assistants often repeat lists that agencies publish about themselves, and they sometimes name companies that are not Australian. Check the agency's own site for an Australian address, look for named examples of their work, and ask to speak with a current client before you commit.",
   },
@@ -306,7 +310,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 26, 2026',
-  dateModified: 'Oct 11, 2026',
+  dateModified: 'Oct 21, 2026',
   readTime: '17 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageAlt:
@@ -340,7 +344,7 @@ export const post: BlogPost = {
                 'Compare the best AI automation agencies in Australia for 2026: where each is based, who it suits, platforms, published prices and how to choose the right one.',
               inLanguage: 'en-AU',
               datePublished: '2026-09-26',
-              dateModified: '2026-10-11',
+              dateModified: '2026-10-21',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI automation agencies in Australia' },

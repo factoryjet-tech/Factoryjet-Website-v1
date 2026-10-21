@@ -66,7 +66,7 @@ export const metadata: Metadata = {
 
 /** Honest last-substantive-edit date. Bump only when the page content changes. */
 const PAGE_PUBLISHED = '2026-09-28';
-const PAGE_MODIFIED = '2026-10-10';
+const PAGE_MODIFIED = '2026-10-21';
 
 const webPageSchema = {
   '@context': 'https://schema.org',

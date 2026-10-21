@@ -10,6 +10,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jul 26, 2026',
+  dateModified: 'Oct 21, 2026',
   readTime: '13 min read',
   imageUrl: '/blog-images/what-does-an-ai-automation-agency-do-uk.webp',
   imageAlt:
@@ -17,9 +18,12 @@ export const post: BlogPost = {
   meta: {
     title: 'What Does an AI Automation Agency Actually Do? (UK Guide)',
     description:
-      'Cutting through the hype: what a real AI automation agency does for a UK business, workflow discovery, integrations, security and support, versus a reseller flipping a template.',
+      'What a UK AI automation agency does, what a project costs on published UK prices (from £1,500 for one simple workflow to £45,000 and more) and how long it takes.',
   },
   keyTakeaways: [
+    'An AI automation agency finds the repetitive work in your business, connects software to the tools you already use so that work runs on its own, and keeps it running after launch.',
+    'Published UK prices, read on 21 October 2026: one simple n8n or Make workflow from £1,500 and a controlled AI agent from £6,500 (Softomate, before VAT); SpotDev budgets £8,000 to £45,000; Fulminous puts a simple agent at £8,000 to £25,000 before VAT.',
+    'Time: SpotDev says a first rollout is typically live in two to three weeks; Fulminous gives 4 to 8 weeks for a simple agent and 2 to 4 months for a mid-range one.',
     'A real AI automation agency spends most of its time on plumbing, not AI: mapping how your team actually works, then connecting software to the tools you already use.',
     'The work runs in six stages: discovery, deciding what to automate, choosing the right approach, integration, build and testing, then handover and ongoing monitoring.',
     'Office for National Statistics data shows self-reported AI use among UK businesses with 10 or more employees grew from around 12% in September 2023 to around 35% by June 2026, with adoption at 49% for firms of 250 or more employees against 28% for the smallest firms.',
@@ -33,7 +37,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does an AI automation agency charge?',
-      a: 'It varies enormously depending on how many workflows you want automated, how messy your data is, and how many systems need to connect. Rather than quote a figure that would be meaningless without that context, the honest approach is to ask any agency to scope your specific workflows first and price against that scope, not against a generic package that ignores what your business actually needs.',
+      a: 'Published UK prices, read on 21 October 2026, run from £1,500 to £45,000 and more. Softomate lists one simple n8n or Make automation from £1,500 and a controlled AI agent from £6,500, before VAT. SpotDev gives a working budget of £8,000 to £45,000. Fulminous puts a simple agent at £8,000 to £25,000 and a mid-range one at £25,000 to £75,000, before VAT. All three sell this work. FactoryJet quotes a fixed price in writing after a short scoping call.',
     },
     {
       q: 'What are the best AI automation agencies?',
@@ -61,7 +65,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Do I own the agent or the code afterward?',
-      a: 'You should, and it is worth confirming in writing before signing anything. Ask specifically who owns the workflow definitions, where the credentials and accounts live, and whether you receive documentation that would let a different developer pick up the work later. If the automation only exists inside the agency&apos;s own platform under their login, you do not own it, you are renting it back from them.',
+      a: 'You should, and it is worth confirming in writing before signing anything. Ask specifically who owns the workflow definitions, where the credentials and accounts live, and whether you receive documentation that would let a different developer pick up the work later. If the automation only exists inside the agency’s own platform under their login, you do not own it, you are renting it back from them.',
     },
     {
       q: 'How is this different from just using ChatGPT myself?',
@@ -69,11 +73,11 @@ export const post: BlogPost = {
     },
     {
       q: 'How long does a typical AI automation project take?',
-      a: 'A single, well-defined workflow connecting to modern systems with proper APIs is usually a matter of weeks rather than months. The timeline stretches when a workflow depends on an older system with no clean way in, or when internal approval to grant account access takes time, which is often the slowest part of the whole project and the easiest one to plan for in advance.',
+      a: 'Weeks for one workflow, months for several. SpotDev says a first rollout is typically live in two to three weeks. Fulminous gives 4 to 8 weeks for a simple agent, 2 to 4 months for a mid-range one and 4 to 9 months for a multi-agent system (both read on 21 October 2026). The timeline stretches when an older system has no API, or when approval to grant account access is slow, which is the easiest delay to plan for.',
     },
     {
       q: 'Is my data safe with an AI automation agency?',
-      a: 'It should be, but do not take that on faith. Ask exactly where your data goes, whether it is used to train any third party&apos;s model, what access the agency keeps after launch, and whether they can show you a log of every action the automation has taken. Under UK GDPR, your business stays responsible for how customer data is handled even when a contractor built the system, so these answers matter contractually, not only technically.',
+      a: 'It should be, but do not take that on faith. Ask exactly where your data goes, whether it is used to train any third party’s model, what access the agency keeps after launch, and whether they can show you a log of every action the automation has taken. Under UK GDPR, your business stays responsible for how customer data is handled even when a contractor built the system, so these answers matter contractually, not only technically.',
     },
     {
       q: 'What is the difference between an AI agent and a chatbot?',
@@ -89,11 +93,11 @@ export const post: BlogPost = {
     },
     {
       q: 'What happens if the agency disappears or I want to switch providers?',
-      a: 'This is exactly why ownership and documentation matter more than any sales pitch. If you hold the accounts, the credentials and a written record of how the workflow was built, a different developer can pick up maintenance without starting over. If the automation lives entirely inside the agency&apos;s own proprietary platform, losing that agency means losing the automation too.',
+      a: 'This is exactly why ownership and documentation matter more than any sales pitch. If you hold the accounts, the credentials and a written record of how the workflow was built, a different developer can pick up maintenance without starting over. If the automation lives entirely inside the agency’s own proprietary platform, losing that agency means losing the automation too.',
     },
     {
       q: 'Do I need technical staff in-house to work with an automation agency?',
-      a: 'Not to start. What actually helps is someone who understands how the work currently gets done and can describe the exceptions, the awkward edge cases, and the bits nobody has written down anywhere. Technical build is the agency&apos;s job. Process knowledge is yours, and it is the more valuable contribution in the first few weeks.',
+      a: 'Not to start. What actually helps is someone who understands how the work currently gets done and can describe the exceptions, the awkward edge cases, and the bits nobody has written down anywhere. Technical build is the agency’s job. Process knowledge is yours, and it is the more valuable contribution in the first few weeks.',
     },
     {
       q: 'What is "agent washing"?',
@@ -109,15 +113,63 @@ export const post: BlogPost = {
       <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-8">
         <p className="text-sm font-semibold text-orange-700 uppercase tracking-wide mb-2">Quick Answer</p>
         <p className="text-gray-800 font-medium">
-          A real AI automation agency maps how your business actually works, decides which parts of
-          that work should be automated and which should stay human, then builds and connects software
-          into the tools you already use, your CRM, your helpdesk, your inbox, tests it against your
-          messiest real cases, and stays responsible for it after launch. That is different from a
-          reseller who wraps a single no-code template around one tool and calls it an AI agent. The
-          difference shows up in the discovery process, the integrations, and who owns the result once
-          you have paid for it.
+          An AI automation agency finds the repetitive work in your business, such as enquiries, quotes,
+          invoices and bookings, and builds software that does it for you inside the tools you already use:
+          your CRM, inbox, helpdesk and accounts. It decides what should stay with a person, tests the build on
+          your real cases, and keeps it running after launch. On published UK prices, one simple workflow starts
+          at about £1,500 and a first AI agent at £6,500 to £25,000, before VAT. The first one is usually live in
+          two to eight weeks.
         </p>
       </div>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">What an AI automation project costs and takes in the UK</h2>
+      <p className="mb-4">
+        Few UK agencies publish prices. We read the three below on 21 October 2026. All three sell this work, so
+        treat them as list prices from sellers, not an independent survey.
+      </p>
+      <div className="overflow-x-auto mb-6">
+        <table className="min-w-full border-collapse border border-gray-300">
+          <thead className="bg-gray-800 text-white">
+            <tr>
+              <th className="p-3 border text-left">Source</th>
+              <th className="p-3 border text-left">Build price</th>
+              <th className="p-3 border text-left">Time to go live</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white">
+              <td className="p-3 border font-semibold">
+                <a href="https://www.softomatesolutions.com/blog/ai-automation-pricing-uk-businesses-2026/" className="underline" target="_blank" rel="noopener noreferrer">Softomate</a>, updated 1 October 2026
+              </td>
+              <td className="p-3 border">Simple n8n or Make automation from £1,500; system integration from £3,000; AI added to an existing system from £4,000; controlled AI agent from £6,500. All before VAT.</td>
+              <td className="p-3 border">Not stated</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border font-semibold">
+                <a href="https://www.spotdev.co.uk/blog/how-much-do-ai-agents-cost-uk" className="underline" target="_blank" rel="noopener noreferrer">SpotDev</a>, 27 May 2026
+              </td>
+              <td className="p-3 border">Readiness assessment £5,000; packages £8,000, £20,000 and £45,000; working budget £8,000 to £45,000. VAT basis not stated.</td>
+              <td className="p-3 border">First rollout typically live in two to three weeks</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border font-semibold">
+                <a href="https://fulminous.co.uk/ai-agent-development-cost-uk" className="underline" target="_blank" rel="noopener noreferrer">Fulminous</a>, updated 23 September 2026
+              </td>
+              <td className="p-3 border">Simple agent £8,000 to £25,000; mid-range £25,000 to £75,000; multi-agent £75,000 to £200,000 or more. Before VAT.</td>
+              <td className="p-3 border">4 to 8 weeks; 2 to 4 months; 4 to 9 months</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="mb-4">
+        Read together: one workflow between two modern tools sits at the bottom of these ranges and takes weeks.
+        An agent that reads messy input and acts across several systems sits in the middle. Several agents
+        sharing work across departments is a programme measured in months. The price moves with the number of
+        workflows and systems, not with the AI model, which is why the list further down matters more than any
+        headline figure. FactoryJet quotes a fixed price in writing after a short scoping call. For the wider
+        picture of UK AI prices, see our guide to{' '}
+        <a href="/blog/ai-cost-uk-2026" className="underline">AI cost in the UK (2026)</a>.
+      </p>
 
       <p className="mb-4">
         Search for &quot;AI automation agency&quot; right now and half of what you find is course
