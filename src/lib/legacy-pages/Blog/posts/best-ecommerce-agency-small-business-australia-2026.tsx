@@ -19,8 +19,24 @@ import type { BlogPost } from '../data.types';
  *     a month paid monthly; Basic online card rate 1.7% + 30c; third-party gateway fee 2% on Basic.
  * None of these is a FactoryJet price. This page must never carry a FactoryJet price.
  *
- * AGENCY LIST: each agency's own site was opened on 26 September 2026 to confirm an Australian office and the
- * services named. Partner tiers are the agency's own claim.
+ * AGENCY LIST: each agency's own site was opened on 26 September 2026, and again on 21 October 2026 for the
+ * Shopify Plus and Melbourne/Sydney sections. Partner tiers are the agency's own claim. 21 Oct 2026 readings:
+ *   - The Hope Factory, thehopefactory.com and /pages/shopify-experts-melbourne: "Shopify Premier Partner",
+ *     "one tier below Platinum", "ecommerce agency in Australia since 2008", "Shopify Partner since 2013",
+ *     "Our team is based in Melbourne". (Sydney, Adelaide and Perth were no longer stated, so they were dropped.)
+ *   - Prosper Digital, prosperdigital.com.au and /pages/contact: "Shopify Plus eCommerce agency in Australia.
+ *     Since 2017", "certified Shopify Plus Partner", studios at 20 Wilson St South Yarra and 285A Crown St
+ *     Surry Hills. The word "Platinum" no longer appears, so the old "Platinum Partner" line was corrected.
+ *   - Convert Digital, convertdigital.com.au: "we're now a Shopify Platinum Partner", Shopify and commercetools,
+ *     offices in Abbotsford (Melbourne), Surry Hills (Sydney) and South Brisbane.
+ *   - Alinga, alinga.com.au: "Shopify Platinum & Klaviyo Platinum", "Gold Coast - BRISBANE - BYRON BAY",
+ *     wholesale B2B solutions and Shopify migration.
+ *   - Flux, flux.agency: "Shopify Plus Partner", "210+ Shopify stores built since 2012", team in Melbourne,
+ *     Los Angeles and London, headless Shopify. Its own list ranks Flux first.
+ *   - Seventyfour Design, seventyfourdesign.com.au: "Certified Shopify Plus Partner", "Melbourne's Leading
+ *     Shopify Experts", custom app development, migration, ERP integrations.
+ *   - Moustache Republic, moustacherepublic.com: "SINCE 2013", 320 Pitt Street Sydney and Takapuna, Auckland,
+ *     "Platforming (Shopify, Big Commerce)".
  *
  * CASE FACTS: Belle Maison and GPSUK facts come from src/data/case-studies/index.ts (both built on Commerceflo).
  *
@@ -34,17 +50,17 @@ const linkCls = 'text-blue-600 underline hover:text-blue-800 transition-colors';
 export const post: BlogPost = {
   id: '117',
   slug: "best-ecommerce-agency-small-business-australia-2026",
-  title: "Best Ecommerce Agency for Small Business in Australia (2026): 8 Agencies Compared",
+  title: "Best Ecommerce and Shopify Agency for Small Business in Australia (2026): 8 Agencies Compared",
   excerpt: "How to choose an ecommerce agency as an Australian small business in 2026. Eight agencies whose services we checked on their own websites, sourced AUD market ranges for a store build, Shopify's Australian plan prices, and the questions that tell a good agency from a risky one.",
   category: "E-Commerce Development",
   author: 'Bhavesh Barot',
   date: "Sep 26, 2026",
-  dateModified: "Oct 10, 2026",
+  dateModified: "Oct 21, 2026",
   readTime: '13 min read',
   imageUrl: "/blog-images/best-ecommerce-agency-small-business-australia-2026-hero.webp",
   meta: {
-    title: "8 Ecommerce Agencies for Australian Small Business (2026)",
-    description: "Eight ecommerce and Shopify agencies for Australian stores, checked on their own sites, sourced AUD build ranges, Shopify AU plan prices and how to choose one.",
+    title: "Best Shopify & Ecommerce Agencies in Australia (2026)",
+    description: "Eight ecommerce and Shopify agencies for Australian stores, the Shopify Plus partners and Melbourne and Sydney picks, checked on their own sites in October 2026.",
   },
   keyTakeaways: [
     "Australian price guides put an ecommerce store build at roughly $5,000 to $25,000 (WolfIQ, 2026 guide) or $8,000 to $25,000+ (Keen to Design, April 2026). These are typical Australian market ranges, not FactoryJet prices.",
@@ -81,8 +97,8 @@ export const post: BlogPost = {
     { q: "What is the 80 20 rule in ecommerce?", a: "Roughly 80 percent of revenue comes from about 20 percent of your products and customers. Pull a 12 month sales report, identify that 20 percent, and give it the best photography, the homepage placement, and the ad budget. The long tail still helps search visibility and basket size, but it should not be eating your merchandising time. The same split usually shows up in returns and support tickets too." },
     { q: "Is ecommerce still worth it in 2026?", a: "Yes, but not as a generic store. Australian online retail keeps growing, and the marketplaces keep taking the easy, price-driven end of it. What still works: a defined category, products people reorder, real margin, and content that gets picked up by both Google and AI assistants. What no longer works: a general store dropshipping the same items as 500 other sites at the same price." },
     { q: "Which Shopify agencies are the best in Australia?", a: "There is no single best one; it depends on your size and the job. Agencies that come up often in Australian searches and AI answers include The Hope Factory, Prosper Digital, Convert Digital, Alinga, Flux, Seventyfour Design and Moustache Republic, plus FactoryJet. Some lead on design, some on Shopify Plus, some on ERP integration and B2B. Ask each for live stores in your category and who will support the store after launch." },
-    { q: "What are the best Shopify Plus agencies in Australia?", a: "Several Australian agencies focus on Shopify Plus. Prosper Digital, Convert Digital and Alinga describe themselves as Shopify Platinum Partners, The Hope Factory as a Premier Partner, Flux is a Melbourne-based Plus agency with headless experience, and Seventyfour Design describes itself as a Shopify Plus Partner. Check each agency's current status in Shopify's Partner Directory, because tiers change, and ask which Plus features they have actually shipped." },
-    { q: "Best Shopify developer in Melbourne or Sydney?", a: "Both cities have deep benches. In Melbourne, The Hope Factory, Prosper Digital, Flux and Seventyfour Design are frequently named; in Sydney, Moustache Republic, with Prosper Digital and Convert Digital working in both cities. A Shopify build does not need anyone on site, so a remote team can also fit. Judge on live stores in your category, who writes the code, and who answers when an app update breaks the cart." },
+    { q: "What are the best Shopify Plus agencies in Australia?", a: "On their own websites on 21 October 2026, Convert Digital and Alinga described themselves as Shopify Platinum Partners, The Hope Factory as a Premier Partner, and Prosper Digital, Flux and Seventyfour Design as Shopify Plus Partners. Convert Digital also builds on commercetools, Alinga leads on B2B and migrations, and Flux on headless builds. Tiers change, so confirm each one in Shopify's Partner Directory and ask which Plus features they have shipped for a store like yours." },
+    { q: "Best Shopify developer in Melbourne or Sydney?", a: "In Melbourne: The Hope Factory (team based in Melbourne, on Shopify since 2013), Seventyfour Design, Flux, and the South Yarra studio of Prosper Digital. In Sydney: Moustache Republic on Pitt Street, plus Prosper Digital and Convert Digital, which both have Surry Hills offices as well as Melbourne ones. We checked each on its own site on 21 October 2026. A Shopify build needs nobody on site, so judge on live stores in your category and support after launch." },
     { q: "What are the 7 major types of e-commerce?", a: "B2C, B2B, C2C, C2B, D2C, B2G, and C2G. Most Australian small businesses sit in B2C, D2C, or B2B, and a growing number run all three at once: public retail checkout, trade pricing for wholesale accounts, and their own brand sold direct. If that describes your business, pick a platform that handles trade accounts and quotes natively instead of stitching them together with plugins." },
   ],
   content: (
@@ -96,7 +112,8 @@ export const post: BlogPost = {
           <li>Case Study: Trade and Retail Storefronts We Built on Commerceflo</li>
           <li>How to Evaluate E-Commerce Agencies for Australian Consumer Law Compliance</li>
           <li>Next.js vs Shopify vs WooCommerce for Australian Small Businesses</li>
-          <li>Shopify and Shopify Plus Agencies in Australia</li>
+          <li>Best Shopify Plus Agencies in Australia</li>
+          <li>Best Shopify Developers in Melbourne and Sydney</li>
           <li>Maintenance and Security Requirements for Australian E-Commerce Sites</li>
         </ul>
       </div>
@@ -189,18 +206,35 @@ export const post: BlogPost = {
       <p className="mb-4">Still choosing a platform? See <a href="/blog/best-ecommerce-platform-australia-2026" className={linkCls}>the best ecommerce platform in Australia for 2026</a>, which compares Shopify, BigCommerce, WooCommerce and Maropost on AUD list prices, GST, Afterpay and Zip, and shipping.</p>
 
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Shopify and Shopify Plus Agencies in Australia</h2>
-      <p className="mb-4">Shopify is the platform most Australian direct-to-consumer brands end up on, so most searches for an ecommerce agency are really searches for a Shopify agency. The names below come up often in Australian search results and AI assistant answers for Shopify agency queries. We opened each agency's own website on 26 September 2026 to confirm its Australian locations and services. Partner tiers are the agencies' own descriptions, so confirm them in Shopify's Partner Directory.</p>
+      <h2 className="text-2xl font-bold mt-8 mb-4">Best Shopify Plus Agencies in Australia</h2>
+      <p className="mb-4">Shopify is the platform most Australian direct-to-consumer brands end up on, so most searches for an ecommerce agency are in fact searches for a Shopify agency. Shopify Plus is the enterprise plan, and the agencies that work on it say so in their partner tier. We opened each agency's own website on 21 October 2026 and wrote down the tier and services it states about itself. Partner tiers are the agencies' own descriptions, so confirm them in Shopify's Partner Directory before you sign. One more thing to know when you compare lists: Flux publishes its own ranking of Australian Shopify Plus agencies and puts itself first. We include FactoryJet in ours and say so.</p>
       <ul className="list-disc pl-6 mb-4 space-y-2">
-        <li><strong>The Hope Factory</strong> (Melbourne, also Sydney, Adelaide and Perth): design, custom development, migrations and growth consulting. Describes itself as a Shopify Premier Partner.</li>
-        <li><strong>Prosper Digital</strong> (Melbourne and Sydney): Shopify Plus strategy, UX, development and conversion work. Describes itself as a Shopify Platinum Partner.</li>
-        <li><strong>Convert Digital</strong> (Melbourne, Sydney and Brisbane): Shopify and commercetools builds, systems integration and conversion work. Describes itself as a Shopify Platinum Partner.</li>
-        <li><strong>Alinga</strong> (Gold Coast, working nationally): ERP integrations, B2B wholesale and migrations to Shopify and Shopify Plus. Describes itself as a Shopify Platinum Partner.</li>
-        <li><strong>Flux</strong> (Melbourne, with teams in Los Angeles and London): Shopify Plus, headless builds and migrations.</li>
-        <li><strong>Seventyfour Design</strong> (Melbourne): design, custom apps, migrations and integrations. Describes itself as a Shopify Plus Partner.</li>
-        <li><strong>Moustache Republic</strong> (Sydney and Auckland): Shopify and BigCommerce since 2013.</li>
-        <li><strong>FactoryJet</strong> (that is us): our senior engineers work remotely in Australian business hours. A registered Shopify Partner, strongest on Xero, MYOB and ERP integrations, migrations and B2B. We stay on to support the store after launch, and you own the code and every account.</li>
+        <li><strong><a href="https://www.convertdigital.com.au/" className={linkCls} {...ext}>Convert Digital</a></strong> (Melbourne, Sydney and Brisbane): Shopify and commercetools builds, systems integration, UX and conversion work. Describes itself as a Shopify Platinum Partner.</li>
+        <li><strong><a href="https://www.alinga.com.au/" className={linkCls} {...ext}>Alinga</a></strong> (Gold Coast, Brisbane and Byron Bay): wholesale B2B, Shopify migrations and Klaviyo email. Describes itself as a Shopify Platinum and Klaviyo Platinum partner.</li>
+        <li><strong><a href="https://thehopefactory.com/" className={linkCls} {...ext}>The Hope Factory</a></strong> (Melbourne): design, Shopify Plus builds and growth work, an ecommerce agency since 2008 and a Shopify Partner since 2013. Describes itself as a Shopify Premier Partner, which it explains is one tier below Platinum.</li>
+        <li><strong><a href="https://prosperdigital.com.au/" className={linkCls} {...ext}>Prosper Digital</a></strong> (Melbourne and Sydney): Shopify Plus strategy, UX, development and optimisation since 2017. Describes itself as a certified Shopify Plus Partner.</li>
+        <li><strong><a href="https://flux.agency/" className={linkCls} {...ext}>Flux</a></strong> (Melbourne, with team in Los Angeles and London): Shopify Plus migrations and headless builds, with "210+ Shopify stores built since 2012" on its home page. Describes itself as a Shopify Plus Partner.</li>
+        <li><strong><a href="https://seventyfourdesign.com.au/" className={linkCls} {...ext}>Seventyfour Design</a></strong> (Melbourne): theme work, custom apps, migrations and ERP integrations. Describes itself as a Certified Shopify Plus Partner.</li>
       </ul>
+      <p className="mb-4">Which one fits depends on the job more than the badge. A Platinum or Premier tier tells you the agency does a lot of Shopify work. It does not tell you whether it has built trade pricing, an ERP connection or a headless storefront like the one you need. Ask for two live Plus stores in your category, and ask who will be on your account after launch.</p>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">Best Shopify Developers in Melbourne and Sydney</h2>
+      <p className="mb-4">If you want someone in your own city, both have strong choices. These come from each agency's own site, checked on 21 October 2026.</p>
+      <h3 className="text-xl font-semibold mt-6 mb-3">Melbourne</h3>
+      <ul className="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>The Hope Factory</strong>: says its team is based in Melbourne and has worked on Shopify since 2013. A good fit for small and mid-sized brands that want design and growth help from one team.</li>
+        <li><strong>Seventyfour Design</strong>: calls itself Melbourne's leading Shopify experts. Stronger on custom apps and integrations.</li>
+        <li><strong>Flux</strong>: Melbourne base with people in Los Angeles and London, which suits brands selling into the US or UK.</li>
+        <li><strong>Prosper Digital</strong>: South Yarra studio, focused on Shopify Plus brands.</li>
+        <li><strong>Convert Digital</strong>: Abbotsford office, for brands that also need systems integration.</li>
+      </ul>
+      <h3 className="text-xl font-semibold mt-6 mb-3">Sydney</h3>
+      <ul className="list-disc pl-6 mb-4 space-y-2">
+        <li><strong><a href="https://www.moustacherepublic.com/" className={linkCls} {...ext}>Moustache Republic</a></strong>: Pitt Street office and an Auckland one, building on Shopify and BigCommerce since 2013.</li>
+        <li><strong>Prosper Digital</strong>: Surry Hills studio, the same team as its Melbourne office.</li>
+        <li><strong>Convert Digital</strong>: Surry Hills office, alongside Melbourne and Brisbane.</li>
+      </ul>
+      <p className="mb-4"><strong>FactoryJet</strong> (that is us): our senior engineers work remotely in Australian business hours, so we fit buyers in either city or anywhere else in Australia. A registered Shopify Partner, strongest on Xero, MYOB and ERP integrations, migrations and B2B. We stay on to support the store after launch, and you own the code and every account. A Shopify build does not need anyone on site. What matters is live stores in your category and who answers when an app update breaks the cart.</p>
       <p className="mb-4">For how we build Shopify stores for Australian brands, see our <a href="/au/shopify-development" className={linkCls}>Shopify development service in Australia</a>. If your store already exists and the problem is rankings, our <a href="/au/ecommerce-seo" className={linkCls}>ecommerce and Shopify SEO service</a> covers collection pages, product data and migrations.</p>
 
 

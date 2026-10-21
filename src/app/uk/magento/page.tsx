@@ -7,7 +7,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/magento';
-const UPDATED = '2026-10-10';
+const UPDATED = '2026-10-21';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -33,6 +33,23 @@ const SRC_VERSIONS =
 // GitHub under the OSL licence; built with Tailwind CSS and Alpine.js; Hyvä Enterprise adds
 // Adobe Commerce support.
 const SRC_HYVA = 'https://www.hyva.io/hyva-theme-license.html';
+// fetch-verified 2026-10-21 for the Magento support section (UK plan refresh 8). Lifecycle page
+// (updated 18 Sep 2026): 2.4.7 standard support to 31 May 2027; 2.4.6 extended support to
+// 31 Aug 2027; 2.4.4 and 2.4.5 "limited isolated security fixes only" to 31 May 2027. The page
+// offers the extra year to "Adobe Commerce customers" and never names Open Source, so the copy
+// does not claim it for Open Source. Schedule page (updated 8 Oct 2026): security patches "at
+// minimium" annually per supported line (Adobe's typo); isolated patches need the latest -p
+// release. Versions page (updated 14 Oct 2026): newest patches 2.4.8-p5 and 2.4.7-p10, 12 May 2026.
+const SRC_SCHEDULE =
+  'https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule';
+// fetch-verified 2026-10-21 (updated 8 Oct 2026): Adobe ensures the platform is "SOC 2 and PCI
+// compliant"; the merchant obtains PCI certification if its payment processor asks.
+const SRC_SHARED =
+  'https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility';
+// fetch-verified 2026-10-21 (updated 8 Oct 2026): free from the Commerce/Magento account
+// dashboard, Adobe Commerce and Magento Open Source sites, "over 21,000 security tests".
+const SRC_SCAN =
+  'https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -87,6 +104,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'The best Magento hosting is the one set up for Magento specifically, with a support team that knows the platform. Generic web hosts often struggle with its memory, caching and search needs. Ask any host whether they support your Magento version, offer staging and Varnish, and will help during an upgrade. Those answers tell you more than a price list.' },
   { category: 'hosting', question: 'Where can I find Magento support in the UK?',
     answer: 'From a Magento agency that offers an ongoing support retainer, not just build projects. Good Magento support covers security patching, monitoring, bug fixes, small improvements and a named team who already know your store. We run Magento support and maintenance for UK merchants remotely, with the same senior developers on your account every month.' },
+  { category: 'hosting', question: 'Which Magento versions are still supported?',
+    answer: 'On Adobe’s lifecycle page, read on 21 October 2026, 2.4.7, 2.4.8 and 2.4.9 have standard support. The next to lose it is 2.4.7, on 31 May 2027. For Adobe Commerce, 2.4.6 is in extended support until 31 August 2027, and 2.4.4 and 2.4.5 get only limited security fixes until 31 May 2027. Anything older gets nothing, so a support plan starts with an upgrade date.' },
+  { category: 'hosting', question: 'What does Magento support in the UK include?',
+    answer: 'Good Magento support covers five things: applying Adobe’s security patches after testing them on staging, keeping the store on a supported 2.4 line, running Adobe’s free Security Scan Tool on a schedule, monitoring and fixing what breaks, and keeping your side of PCI DSS in order. We do all five for UK merchants on Magento Open Source and Adobe Commerce, with the same senior developers every month.' },
   { category: 'hosting', question: 'Which systems can you integrate with Magento?',
     answer: 'The ones UK merchants usually run alongside it: accounting and ERP systems such as Sage, Microsoft Dynamics 365 Business Central and NetSuite, order and inventory tools like Brightpearl and Linnworks, Akeneo for product data, Klaviyo for email, and payment gateways. If a system has an API, a Magento integration is normally possible. We confirm yours during the health check.' },
   { category: 'hosting', question: 'Can you add AI to a Magento store?',
@@ -164,7 +185,7 @@ const jsonLd = {
       '@type': ['WebPage', 'Article'],
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'Magento Agency UK | Adobe Commerce Developers | FactoryJet',
+      name: 'Magento Agency UK | Adobe Commerce Developers & Support | FactoryJet',
       headline: 'Magento Agency UK: Senior Magento and Adobe Commerce Developers Who Stay After Launch',
       inLanguage: 'en-GB',
       datePublished: '2026-09-24',
@@ -205,12 +226,12 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: 'Magento Agency UK | Adobe Commerce Developers | FactoryJet',
+  title: 'Magento Agency UK | Adobe Commerce Developers & Support | FactoryJet',
   description:
     'Magento agency for UK stores. Senior Magento and Adobe Commerce developers for support, upgrades, Hyvä rebuilds and integrations. We stay after launch.',
   alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
   openGraph: {
-    title: 'Magento Agency UK | Adobe Commerce Developers | FactoryJet',
+    title: 'Magento Agency UK | Adobe Commerce Developers & Support | FactoryJet',
     description:
       'A Magento agency for UK merchants already on Magento 2 or Adobe Commerce. Senior developers for support, security patching, version upgrades, Hyvä front-end rebuilds, extension clean-up and ERP integrations. Free Magento health check.',
     url: CANONICAL,
@@ -512,6 +533,58 @@ export default function MagentoUKPage() {
               the calendar we plan upgrades against. It also notes that Adobe does not patch third-party pieces such
               as PHP and MySQL, so those need checking separately, and we do.
             </p>
+          </div>
+        </section>
+
+        {/* ═══ 7b. MAGENTO SUPPORT UK (Adobe facts read 21 Oct 2026) ═══ */}
+        <section className="sec-lg">
+          <div className="wrap">
+            <div className="col-6040">
+              <div>
+                <span className="eyebrow">Magento support UK</span>
+                <h2>Magento support for UK stores: what Adobe expects you to keep up with</h2>
+                <div className="stack mt-6">
+                  <p>
+                    Magento support is the ongoing work that keeps a live Magento Open Source or Adobe Commerce
+                    store patched, on a supported version and selling. Most of the calendar is set by Adobe, so a
+                    support plan is only as good as its grip on Adobe’s dates.
+                  </p>
+                  <p>
+                    <strong>Versions.</strong> Adobe gives each 2.4 release line three years of standard support.
+                    On 21 October 2026, 2.4.7, 2.4.8 and 2.4.9 had it, and 2.4.7 loses it first, on 31 May 2027.
+                    For Adobe Commerce, 2.4.6 is in extended support until 31 August 2027, while 2.4.4 and 2.4.5
+                    receive only limited security fixes until 31 May 2027 (<a href={SRC_LIFECYCLE} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>Adobe lifecycle policy</a>).
+                  </p>
+                  <p>
+                    <strong>Security patches.</strong> Adobe commits to security patches at least once a year for
+                    every supported line, with more possible but not guaranteed, and an isolated patch only
+                    applies if the store is already on the latest -p release (<a href={SRC_SCHEDULE} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>Adobe release schedule</a>).
+                    The latest patches, 2.4.8-p5 and 2.4.7-p10, shipped on 12 May 2026. A store that skipped
+                    earlier patches has to catch up before it can take the next one.
+                  </p>
+                  <p>
+                    <strong>PCI DSS.</strong> Adobe says it keeps the platform PCI compliant, and that getting PCI
+                    certification when your payment processor asks for it is the merchant’s job, along with
+                    custom code and your own processes (<a href={SRC_SHARED} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>Adobe shared responsibility</a>).
+                    Extensions and custom code are where most UK stores fail that check.
+                  </p>
+                </div>
+              </div>
+              <div className="card card-top-orange">
+                <h3>What our Magento support covers each month</h3>
+                <ul className="stack mt-4" style={{ paddingLeft: 18 }}>
+                  <li>Adobe security patches, tested on a staging copy, then deployed</li>
+                  <li>An upgrade plan dated against Adobe’s end-of-support calendar</li>
+                  <li>Adobe’s free <a href={SRC_SCAN} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>Security Scan Tool</a> on a weekly schedule, with every finding fixed or explained</li>
+                  <li>PHP, MySQL, OpenSearch and extension updates, which Adobe’s patches do not cover</li>
+                  <li>Uptime and checkout monitoring, with bug fixes from the same senior developers</li>
+                  <li>A written log of every change, so nothing depends on one person’s memory</li>
+                </ul>
+                <div className="mt-8">
+                  <ModalCTAButton label="Get a free Magento health check" region="uk" modalVariant="default" btnVariant="primary-light" />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

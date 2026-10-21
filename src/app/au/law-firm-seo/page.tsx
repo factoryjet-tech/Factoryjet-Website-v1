@@ -14,7 +14,7 @@ import '../au-page.css';
 import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/law-firm-seo';
-const UPDATED = '2026-10-10';
+const UPDATED = '2026-10-21';
 const TITLE = 'Law Firm SEO Australia | Lawyer SEO & Websites | FactoryJet';
 const H1 = 'Law Firm SEO and Lawyer Websites for Australian Legal Practices';
 const DESCRIPTION =
@@ -156,6 +156,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'On the business side, AI can answer common questions about how the firm works, sort new enquiries by practice area and urgency, draft follow-up emails for staff to approve, and summarise long enquiries. It should not give legal advice to the public, and client information must stay out of public AI tools. Lawyers remain responsible for any AI-assisted legal work, and Australian regulators expect them to check it.' },
   { category: 'ai', question: 'Is there a ChatGPT for lawyers?',
     answer: 'Several legal AI products are built on the same kind of language model as ChatGPT, and practice management vendors are adding AI features too. The key difference from the public ChatGPT app is the data terms. The joint statement from the NSW, Victorian and WA regulators says lawyers cannot safely enter confidential, sensitive or privileged client information into public AI chatbots, and should review commercial AI tools’ terms to ensure information is kept secure.' },
+  { category: 'ai', question: 'What is AI intake for law firms?',
+    answer: 'AI intake is an assistant that handles the first contact with a new enquiry, on the website chat or the phone, at any hour. It says it is an AI, explains how the firm works, asks for the details needed to route the matter and run a conflict check, warns people not to share confidential facts yet, and books a first call. It gives no legal advice. Each enquiry lands in your practice management software with a short summary for a person to review.',
+    links: [{ href: '/au/ai-agents', label: 'AI agents for Australian businesses' }] },
   { category: 'ai', question: 'Can an AI chatbot take enquiries on a law firm website?',
     answer: 'Yes, if it is built for intake and not advice. We set it to say clearly that it is an AI assistant, to explain how the firm works, to collect only the details needed to route the enquiry and run a conflict check, and to tell people not to share confidential facts until a solicitor contacts them. It never says whether someone has a case. Enquiries go to your team with a short summary.',
     links: [{ href: '/au/ai-receptionist', label: 'AI receptionist for phone enquiries' }] },
@@ -891,11 +894,17 @@ export default function LawFirmSeoAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Intake that lands in your systems</div>
-              <h2>Connecting enquiries to Actionstep, Smokeball, Clio and LEAP</h2>
+              <h2>AI intake for law firms, connected to Actionstep, Smokeball, Clio and LEAP</h2>
               <p className="lead">
                 An enquiry that sits in a shared inbox until Monday is a client lost to the firm that called back on
-                Saturday. We connect your website forms and any AI chat to the practice management software you already
-                use, so every enquiry is logged, assigned and followed up.
+                Saturday. AI intake answers a new enquiry on the website chat or the phone at any hour, says plainly that
+                it is an AI assistant, asks only the questions needed to route the matter and run a conflict check, and
+                never tells anyone whether they have a case. We connect it and your website forms to the practice
+                management software you already use, so every enquiry is logged, assigned and followed up by a person.
+              </p>
+              <p className="lead">
+                The intake agent is built for your firm, around your practice areas, offices and conflict-check fields.
+                See how we design and support <a href="/au/ai-agents">AI agents for Australian businesses</a>.
               </p>
             </div>
             <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">

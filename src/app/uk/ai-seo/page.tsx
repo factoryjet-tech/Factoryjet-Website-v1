@@ -8,8 +8,8 @@ import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import './ai-seo.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-seo';
-const UPDATED = '2026-10-10';
-const UPDATED_LABEL = '10 October 2026';
+const UPDATED = '2026-10-21';
+const UPDATED_LABEL = '21 October 2026';
 
 /* ─── Breadcrumb source of truth (drives the visible trail + JSON-LD) ── */
 const crumbs = [
@@ -48,6 +48,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What are the four types of SEO?',
     answer: 'Most teams split SEO into four parts: on-page SEO, which is your content and page structure; technical SEO, which is speed, crawling, and indexing; off-page SEO, which is links and reputation; and local SEO, which is maps and location searches. AI SEO adds a fifth layer on top: making all four legible to AI engines and answer boxes.' },
 
+  // 24 Sep 2026 UK PAA (UK page plan refresh 4): "What is a GEO agency?"
+  { category: 'basics', question: 'What is a GEO agency?',
+    answer: 'A GEO agency works on generative engine optimisation: getting a business named and cited inside answers written by ChatGPT, Gemini, Perplexity, Claude and Google AI Overviews. The work covers entity and schema data, answer-first page structure, access for AI crawlers, and mentions on sites the models already read. Most UK GEO agencies run it alongside normal SEO, because AI answers draw on the same web pages.' },
   { category: 'basics', question: 'Is AEO the same as GEO?',
     answer: 'No, though they overlap. Answer engine optimisation is about the shape of your page: stating the answer plainly, using question-style headings, and adding schema so an engine can lift a clean answer straight from it. Generative engine optimisation is about your standing off the page: entity clarity, credible mentions, and the wording that decides whether a model names your brand. AEO makes you quotable. GEO gets you chosen.' },
   { category: 'basics', question: 'How does pricing work for AI SEO in the UK?',
@@ -106,6 +109,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // 249 plus service 225).
   { category: 'results', question: 'Which consultants help B2B vendors rank higher in AI-generated shortlist summaries?',
     answer: 'FactoryJet does this work, and five other agencies serving UK firms are named further up this page. On 9 October 2026 we put 38 UK questions asking which firm to hire to AI assistants. Comparison lists made up 52% of the small-firm pages Perplexity cited, 49% for the Gemini app and 41% for Google AI Mode and AI Overviews. In the ChatGPT app, 79% were home and service pages of the firms themselves. So a B2B vendor needs a place on the comparison lists in its category, and service pages that answer the question in the first two lines.' },
+  // 24 Sep 2026 UK PAA: "Which GEO agency is the best in the UK?" Agency facts re-checked on each
+  // agency's own site 21 Oct 2026 for /blog/best-ai-seo-agencies-uk.
+  { category: 'results', question: 'Which GEO agency is the best in the UK?',
+    answer: 'It depends on what you need. On 21 October 2026 we re-checked ten UK agencies on their own sites for our list of the best AI SEO and GEO agencies in the UK. Impression and Passion Digital ran the deepest dedicated GEO practices we could verify, Screaming Frog had the most technical evidence, and Charle the clearest ecommerce GEO offer for Shopify brands. FactoryJet runs GEO and AEO as one programme for UK SMBs and ecommerce brands.' },
   { category: 'results', question: 'How do we get started?',
     answer: 'Send your name and work email through the form on this page. The founder replies within 24 hours to book a short call, where we run a free AI visibility check on your business, show you where you appear in AI answers today, and map the gap. That first look is genuinely useful whether or not we end up working together.' },
 ];
@@ -113,11 +120,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 /* ─── Named UK AI SEO / GEO agencies (open self-disclosure, ItemList) ─ */
 const AI_SEO_AGENCIES: { name: string; note: string }[] = [
   { name: 'FactoryJet', note: 'That is us. An AI-native team that builds pages to rank in Google and to be quoted by ChatGPT, Gemini, Perplexity, and Google AI Overviews, with AI visibility tracked as a first-class metric.' },
-  { name: 'Found', note: 'A large London performance agency with an established SEO practice and a strong link and PR footprint across the UK.' },
-  { name: 'StudioHawk', note: 'An SEO-specialist agency that has expanded into the UK, known for technical and content SEO depth.' },
-  { name: 'MRS Digital', note: 'A Hampshire-based digital agency offering SEO and content alongside wider performance marketing.' },
-  { name: 'Sierra Six Media', note: 'A UK SEO agency that publishes actively on GEO and answer engine topics for small and mid-sized businesses.' },
-  { name: 'Charle', note: 'A Shopify-focused agency in Bristol whose ecommerce SEO work overlaps with AI search for online stores.' },
+  // Each note re-checked on the agency's own site 21 Oct 2026 (found.co.uk, studiohawk.co.uk,
+  // mrs.digital, sierrasixmedia.co.uk, charle.co.uk). Charle was wrongly placed in Bristol before.
+  { name: 'Found', note: 'A UK performance marketing agency whose SEO practice now lists AI SEO and GEO services on its own site.' },
+  { name: 'StudioHawk', note: 'An SEO-specialist agency with a London office and a generative AI SEO service page.' },
+  { name: 'MRS Digital', note: 'A Hampshire digital agency, based in Church Crookham, offering SEO and GEO alongside wider performance marketing.' },
+  { name: 'Sierra Six Media', note: 'An SEO agency with offices in Billericay and Mayfair that runs an AI SEO service page.' },
+  { name: 'Charle', note: 'A Shopify agency in London and Manchester that sells Ecommerce AI SEO and Ecommerce GEO as named services.' },
 ];
 
 /* ─── External stats (fetch-verified, cited on page) ──────────────── */
@@ -387,7 +396,7 @@ export default function AiSeoUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 720 }}>
               <span className="eyebrow">The standard</span>
-              <h2>What AI SEO includes in 2026</h2>
+              <h2>What AI SEO, GEO and AEO include in 2026</h2>
               <p className="lead mt-4">
                 Getting quoted by an AI engine is not one trick. It is a stack of work that makes your business the
                 easiest correct answer to find, read, and trust. Every FactoryJet AI SEO programme covers all eight.
@@ -448,7 +457,7 @@ export default function AiSeoUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 720 }}>
               <span className="eyebrow">How it works</span>
-              <h2>Seven things we do to get you cited in AI answers</h2>
+              <h2>Seven GEO and AEO steps that get you cited in AI answers</h2>
               <p className="lead mt-4">
                 A repeatable method, not a black box. Here is the work, in the order we do it.
               </p>
@@ -559,16 +568,16 @@ export default function AiSeoUKPage() {
         <section className="sec-lg dot-grid">
           <div className="wrap">
             <span className="eyebrow">The UK AI SEO market</span>
-            <h2 style={{ maxWidth: 780 }}>The honest state of AI SEO demand in the UK</h2>
+            <h2 style={{ maxWidth: 780 }}>UK demand for AI SEO, GEO and AEO agencies</h2>
             <div className="col-6040 mt-8">
               <div>
                 <div className="stack">
                   <p>
-                    Here is something most agencies selling this will not tell you. Hardly anyone in the UK searches
-                    for AI SEO as a service yet. The whole cluster of terms, including AI SEO agency, AEO and GEO
-                    agency, adds up to a few dozen searches a month between them. Some of the phrases the industry
-                    talks about constantly, like generative engine optimisation agency and LLM SEO, have no
-                    measurable UK demand at all.
+                    UK buyers now search for this work by name, but in small numbers. Google keyword data for the
+                    UK in September 2026 put AI SEO agency, AI SEO services, GEO agency and generative engine
+                    optimisation at a few hundred searches a month each, and answer engine optimisation lower
+                    still. That is real buying intent, and it is tiny next to the searches where AI answers
+                    already decide who gets named.
                   </p>
                   <p>
                     Now hold that next to the Ofcom numbers above. Around 3 billion Google searches a month happen in
@@ -580,7 +589,7 @@ export default function AiSeoUKPage() {
                     So do not buy AI SEO because it is trending. The reason to do this work is that a large share of
                     the searches your customers already run hand them a written answer before they see a single link,
                     and someone is named in that answer. We wrote this page as a plain UK reference on how that
-                    naming actually happens, not to chase a keyword that barely exists.
+                    naming actually happens, not to chase a keyword.
                   </p>
                 </div>
                 <div className="flex-wrap mt-6">
@@ -646,7 +655,11 @@ export default function AiSeoUKPage() {
               ))}
             </ul>
             <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
-              Agencies named from live UK search results for AI SEO and GEO terms, July 2026. Listing is not endorsement, and we are one option among them.
+              Agencies named from live UK search results for AI SEO and GEO terms, July 2026, and re-checked on their own sites on 21 October 2026. Listing is not endorsement, and we are one option among them.
+            </p>
+            <p className="mt-6" style={{ maxWidth: 760 }}>
+              For ten UK agencies compared side by side, with what each one sells and where it is based, read our{' '}
+              <a href="/blog/best-ai-seo-agencies-uk" style={{ textDecoration: 'underline' }}>best AI SEO and GEO agencies in the UK</a>.
             </p>
           </div>
         </section>
@@ -776,7 +789,7 @@ export default function AiSeoUKPage() {
           <div className="wrap">
             <div style={{ textAlign: 'center' }}>
               <span className="eyebrow">FAQ</span>
-              <h2>AI SEO questions UK founders actually ask</h2>
+              <h2>AI SEO, GEO and AEO questions UK businesses ask</h2>
             </div>
             <div className="faq-grid">
               <aside className="faq-sidebar">

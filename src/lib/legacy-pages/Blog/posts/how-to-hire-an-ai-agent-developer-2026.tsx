@@ -17,6 +17,15 @@ import type { BlogPost, FAQItem } from '../data.types';
 // The FAQPage schema is generated centrally by the blog route (src/app/blog/[slug]/page.tsx)
 // FROM this exact array, so the visible FAQs and the structured data can never drift apart.
 // Do not add a second, hand-written FAQPage script anywhere in this file.
+// 2026-10-21 rework toward the decision-page shape the 18 Oct assistant study found cited
+// (year, company size, country, named platforms, risk words): added US/UK/AU contractor and
+// salary rates (BLS re-read 21 Oct via WebFetch; IT Jobs Watch UK read 21 Oct; AU figures from
+// the Robert Walters 2026 guide and Clicks, as read for /blog/hire-ai-developers-australia-cost-2026),
+// vetting depth by company size, a platform skills table, compliance checks (HHS, ICO, OAIC, OWASP)
+// and developer-specific red flags. Question ownership: this page owns the cost of hiring a
+// PERSON and how to vet that person. /blog/ai-agency-vs-in-house-vs-freelancer-2026 owns which
+// route fits a company size and in-house year-one cost; /blog/questions-to-ask-ai-development-company-2026
+// owns the questions and red flags for a COMPANY before signing.
 const faqs: FAQItem[] = [
   {
     // buyer wording (N18), 2026-10-11
@@ -56,6 +65,26 @@ const faqs: FAQItem[] = [
     // buyer wording (N14), 2026-10-11
     q: 'Can I hire AI agent developers for factory automation?',
     a: 'Yes, for the office side of a factory. An AI agent developer builds agents that handle the paperwork around production, such as RFQs, quotes, purchase orders and sales orders inside your ERP. Machines on the line, meaning the controllers, robots and vision systems, are a different trade, and a controls engineer or system integrator is the right hire there. FactoryJet builds the office-side kind on Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs.',
+  },
+  {
+    q: 'What does it cost to hire an AI agent developer in the UK in 2026?',
+    a: 'On IT Jobs Watch, UK contract adverts in the six months to 21 October 2026 had a median day rate of £600 for AI engineers and £525 for AI developers, with AI developer rates running from £460 at the 10th percentile to £638 at the 90th. Permanent AI developer adverts had a median salary of £80,000. These are advertised rates, not pay received. Employer National Insurance and pension sit on top of a salary.',
+  },
+  {
+    q: 'What does it cost to hire an AI agent developer in Australia in 2026?',
+    a: 'The Robert Walters 2026 salary guide lists NSW contract rates of A$800 to A$900 a day for an AI engineer and A$1,000 to A$1,150 for a senior AI engineer. On salary, it puts AI engineers in NSW at A$150,000 to A$170,000 or more, before 12 percent super. Our Australian hiring guide covers more sources and the 12-month arithmetic.',
+  },
+  {
+    q: 'What should a 10 to 50 person company check when hiring an AI agent developer?',
+    a: 'Without an engineer on staff, you cannot judge the code yourself, so buy that judgment. Pay for a one or two week trial on one narrow task, have an outside engineer read the code before you sign the main contract, and keep every API key and account in your company\'s name from day one. Ask for a written handover document. If the developer leaves, the next person starts from it.',
+  },
+  {
+    q: 'Which platforms should an AI agent developer know?',
+    a: 'The ones your agent must touch. Name them in the brief: a help desk such as Zendesk or Gorgias, a CRM such as HubSpot or Salesforce, a store such as Shopify, an ERP or accounting system such as NetSuite or QuickBooks. Then ask which model APIs they have shipped on (OpenAI, Anthropic Claude, Google Gemini) and which workflow tools they use (n8n, Zapier, Make). A past build on your exact system is worth more than a long list.',
+  },
+  {
+    q: 'Does an AI agent developer need to sign a HIPAA business associate agreement?',
+    a: 'If the developer will create, receive, maintain or transmit protected health information for a US covered entity, yes. HHS says the HIPAA Rules generally require covered entities to have contracts with their business associates so that protected health information is safeguarded. That includes a developer whose agent reads patient records or call transcripts. Sign it before they get access, and give them test data until it is signed.',
   },
   {
     q: 'What is an agentic AI developer?',
@@ -241,7 +270,7 @@ const faqs: FAQItem[] = [
 export const post: BlogPost = {
   id: '454',
   slug: 'how-to-hire-an-ai-agent-developer-2026',
-  title: 'Cost to Hire AI Agent Developers in 2026: Rates by Route and How to Hire',
+  title: 'Cost to Hire AI Agent Developers in 2026 (US, UK, Australia): Rates, Hiring Checklist and Red Flags',
   excerpt:
     'Hiring AI agent developers costs $30 to $150 an hour for a freelancer on Upwork and $50 to $99 an hour on average at a US development firm on Clutch. An employed US software developer earns a median $135,980 a year (BLS, May 2025). This guide gives each route with its source, who it suits and a 10-point vetting checklist.',
   // The answer-first block at the top of `content` carries the same answer, so the italic
@@ -250,20 +279,22 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 20, 2026',
-  dateModified: 'Oct 11, 2026',
-  readTime: '25 min read',
+  dateModified: 'Oct 21, 2026',
+  readTime: '29 min read',
   imageUrl: '/blog-images/how-to-hire-an-ai-agent-developer-2026.webp',
   imageAlt:
     'Two coworkers reviewing a laptop screen together during a hiring discussion, representing how a business should evaluate an AI agent developer before hiring one',
   meta: {
-    title: 'Cost to Hire AI Agent Developers in 2026: Rates, How to Hire',
+    title: 'Hire AI Agent Developers 2026: Cost, Checklist, Red Flags',
     description:
-      'Cost to hire AI agent developers in 2026: $30 to $150 an hour on Upwork, $50 to $99 at US firms (Clutch), $135,980 median developer salary (BLS). How to vet.',
+      'Cost to hire AI agent developers in 2026: $30 to $150 an hour on Upwork, $135,980 BLS median, £600 a day UK, A$800+ a day Australia. Checklist and red flags.',
   },
   keyTakeaways: [
     'What it costs: a freelancer lists at $30 to $150 an hour on Upwork, US development firms average $50 to $99 an hour on Clutch, and the median US software developer salary is $135,980 (BLS, May 2025). AI job titles average $152,060 on Indeed and $184,757 on Built In.',
     'Which route: a freelancer for one narrow build, an employee once AI work is permanent and full-time, a firm for a fixed-scope build across several systems with support after launch.',
     'How to choose the person: run the same 10 checks on every candidate. The two that filter fastest are a past agent that ran on live business data and code ownership written into the contract.',
+    'Outside the US: UK AI engineer contracts advertise at a £600 median day rate (IT Jobs Watch, 21 October 2026); Australian AI engineers contract at A$800 to A$1,150 a day in NSW (Robert Walters 2026).',
+    'Risk checks come before access: a HIPAA business associate agreement for health data, a UK GDPR processor contract, and test data until both are signed.',
   ],
   faqs,
   content: (
@@ -281,12 +312,12 @@ export const post: BlogPost = {
               '@id':
                 'https://factoryjet.com/blog/how-to-hire-an-ai-agent-developer-2026#webpage',
               url: 'https://factoryjet.com/blog/how-to-hire-an-ai-agent-developer-2026',
-              name: 'Cost to Hire AI Agent Developers in 2026: Rates by Route and How to Hire',
+              name: 'Cost to Hire AI Agent Developers in 2026 (US, UK, Australia): Rates, Hiring Checklist and Red Flags',
               description:
-                'What it costs to hire AI agent developers in 2026 as an employee, a freelancer or a firm, with each figure linked to its source, plus a 10-point vetting checklist, red flags, code ownership and testing.',
+                'What it costs to hire AI agent developers in 2026 in the US, UK and Australia as an employee, a freelancer or a firm, with each figure linked to its source, plus a 10-point vetting checklist, vetting by company size, platform skills, compliance checks and red flags.',
               inLanguage: 'en-US',
               datePublished: '2026-09-20',
-              dateModified: '2026-10-11',
+              dateModified: '2026-10-21',
               author: { '@type': 'Person', name: 'Bhavesh Barot' },
               publisher: {
                 '@type': 'Organization',
@@ -314,7 +345,11 @@ export const post: BlogPost = {
                 name: 'FactoryJet',
                 url: 'https://factoryjet.com',
               },
-              areaServed: [{ '@type': 'Country', name: 'United States' }],
+              areaServed: [
+                { '@type': 'Country', name: 'United States' },
+                { '@type': 'Country', name: 'United Kingdom' },
+                { '@type': 'Country', name: 'Australia' },
+              ],
               url: 'https://factoryjet.com/services/ai-agent-development',
             },
           ]),
@@ -469,13 +504,17 @@ export const post: BlogPost = {
         <ol className="list-decimal pl-5 space-y-1 text-gray-800">
           <li><a href="#cost" className="text-orange-600 underline">How much it costs to hire AI agent developers</a></li>
           <li><a href="#hiring-paths" className="text-orange-600 underline">Employee, freelancer or firm: what each route costs and who it suits</a></li>
+          <li><a href="#us-uk-au" className="text-orange-600 underline">Rates in the US, UK and Australia</a></li>
           <li><a href="#how-to-hire" className="text-orange-600 underline">How to hire agentic AI developers in six steps</a></li>
           <li><a href="#what-they-build" className="text-orange-600 underline">What an AI agent developer builds</a></li>
+          <li><a href="#platforms" className="text-orange-600 underline">Platforms and skills to test for</a></li>
           <li><a href="#vetting-checklist" className="text-orange-600 underline">A 10-point vetting checklist for AI developers</a></li>
+          <li><a href="#by-company-size" className="text-orange-600 underline">How vetting changes with company size</a></li>
           <li><a href="#questions-to-ask" className="text-orange-600 underline">Questions to ask before you hire</a></li>
           <li><a href="#red-flags" className="text-orange-600 underline">Red flags that predict a bad project</a></li>
           <li><a href="#check-references" className="text-orange-600 underline">How to check references and past work</a></li>
           <li><a href="#ownership-support" className="text-orange-600 underline">Code ownership and support after launch</a></li>
+          <li><a href="#risk-checks" className="text-orange-600 underline">Security, privacy and compliance checks</a></li>
           <li><a href="#testing" className="text-orange-600 underline">How a serious developer tests before launch</a></li>
           <li><a href="#cost-context" className="text-orange-600 underline">What moves the price up or down</a></li>
           <li><a href="#where-we-fit" className="text-orange-600 underline">Working with FactoryJet&apos;s team on a fixed-scope AI agent build</a></li>
@@ -666,6 +705,64 @@ export const post: BlogPost = {
         adds year-one employer costs for the US, UK and Australia.
       </p>
 
+      <h2 id="us-uk-au" className="text-2xl font-bold mt-8 mb-4 text-gray-900">
+        What it costs to hire an AI agent developer in the US, UK and Australia (2026)
+      </h2>
+      <p className="mb-4 text-gray-800">
+        Buyers in the three markets ask the same question and get answers in three units: an hourly
+        rate in the US, a day rate in the UK and a day rate or salary in Australia. The table keeps
+        each figure in the unit its source publishes, so nothing is lost in conversion. Every row is
+        a market figure, not a FactoryJet price.
+      </p>
+      <div className="overflow-x-auto mb-3">
+        <table className="min-w-full border-collapse border border-gray-300">
+          <thead className="bg-gray-800 text-white">
+            <tr>
+              <th className="p-3 border text-left">Market</th>
+              <th className="p-3 border text-left">Contractor or freelancer</th>
+              <th className="p-3 border text-left">Employee salary</th>
+              <th className="p-3 border text-left">Source and date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white">
+              <td className="p-3 border font-semibold text-gray-900">United States</td>
+              <td className="p-3 border text-gray-800">$30 to $150 an hour (Upwork); $95 to $165 an hour for contract AI agent engineers (KORE1)</td>
+              <td className="p-3 border text-gray-800">$135,980 median, software developers; $140,300 median, computer and information research scientists</td>
+              <td className="p-3 border text-gray-800"><a href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">BLS</a> and <a href="https://www.bls.gov/ooh/computer-and-information-technology/computer-and-information-research-scientists.htm" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">BLS</a>, May 2025 wages, pages modified 27 August 2026</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border font-semibold text-gray-900">United Kingdom</td>
+              <td className="p-3 border text-gray-800">£600 median a day, AI engineer; £525 median a day, AI developer (£460 to £638, 10th to 90th percentile); £519, agentic AI engineer</td>
+              <td className="p-3 border text-gray-800">£80,000 median advertised, AI developer (£75,000 outside London)</td>
+              <td className="p-3 border text-gray-800"><a href="https://www.itjobswatch.co.uk/contracts/uk/artificial%20intelligence%20developer.do" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">IT Jobs Watch</a>, adverts in the six months to 21 October 2026</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border font-semibold text-gray-900">Australia</td>
+              <td className="p-3 border text-gray-800">A$800 to A$900 a day, AI engineer; A$1,000 to A$1,150 a day, senior AI engineer (NSW)</td>
+              <td className="p-3 border text-gray-800">A$150,000 to A$170,000+ AI engineer; A$170,000 to A$200,000+ senior (NSW), before 12% super</td>
+              <td className="p-3 border text-gray-800"><a href="https://www.robertwalters.com.au/content/dam/robert-walters-redesign/country/australia/files/salary-survey/Salary-Guide-2026-AU-V10-mid-year.pdf" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">Robert Walters Salary Guide 2026</a>, mid-year edition</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="mb-4 text-gray-800">
+        Three things to read into it. First, BLS has no AI engineer category. Its software developer
+        median is the closest match for someone who connects a model to your systems, and its research
+        scientist median, which BLS links to AI and machine learning work, is the closest for someone who
+        trains models. Most business agent builds need the first kind. Second, the UK figures are
+        advertised rates from job adverts, and only 35 of the 57 AI developer contract adverts quoted a day
+        rate, so treat the median as a guide, not a quote. Third, a UK or Australian day rate is roughly an
+        8-hour or 7.6-hour day: £600 a day is about £75 an hour, and A$1,000 a day is about A$132 an hour.
+      </p>
+      <p className="mb-6 text-gray-800">
+        For the full year-one cost of an employee in each country, with US benefits, UK National
+        Insurance and Australian super worked out, see our{' '}
+        <a href="/blog/ai-agency-vs-in-house-vs-freelancer-2026#in-house-cost" className="text-[#B23E13] underline">agency, in-house or freelancer comparison</a>.
+        For Australian contractor, agency and offshore rates side by side, see{' '}
+        <a href="/blog/hire-ai-developers-australia-cost-2026" className="text-[#B23E13] underline">hiring AI developers in Australia</a>.
+      </p>
+
       <h2 id="how-to-hire" className="text-2xl font-bold mt-8 mb-4 text-gray-900">
         How can I hire agentic AI developers? Six steps
       </h2>
@@ -756,6 +853,58 @@ export const post: BlogPost = {
         what &quot;done&quot; looks like before you talk to candidates.
       </p>
 
+      <h2 id="platforms" className="text-2xl font-bold mt-8 mb-4 text-gray-900">
+        Platforms and skills to test for, by what your agent touches
+      </h2>
+      <p className="mb-4 text-gray-800">
+        &quot;AI experience&quot; is too broad to check. Name the systems in your brief, then ask each
+        candidate to show one past build on the same kind of system. The table lists the platforms that
+        come up most in small and mid-size business agent work, and a test you can run in an interview.
+      </p>
+      <div className="overflow-x-auto mb-6">
+        <table className="min-w-full border-collapse border border-gray-300">
+          <thead className="bg-gray-800 text-white">
+            <tr>
+              <th className="p-3 border text-left">Layer</th>
+              <th className="p-3 border text-left">Named platforms</th>
+              <th className="p-3 border text-left">What to ask them to show</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white">
+              <td className="p-3 border font-semibold text-gray-900">Model API</td>
+              <td className="p-3 border text-gray-800">OpenAI, Anthropic Claude, Google Gemini</td>
+              <td className="p-3 border text-gray-800">A tool call they wrote: the function the model was allowed to call, and the check that ran before it did anything</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border font-semibold text-gray-900">Agent framework or protocol</td>
+              <td className="p-3 border text-gray-800">OpenAI Agents SDK, LangGraph, Model Context Protocol (MCP)</td>
+              <td className="p-3 border text-gray-800">How the agent keeps track of a task across steps, and what happens when step three fails after step two changed a record</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border font-semibold text-gray-900">Workflow tool</td>
+              <td className="p-3 border text-gray-800">n8n, Zapier, Make</td>
+              <td className="p-3 border text-gray-800">When they would use a workflow tool instead of code, and how they log each run</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border font-semibold text-gray-900">Help desk and CRM</td>
+              <td className="p-3 border text-gray-800">Zendesk, Gorgias, Intercom, HubSpot, Salesforce</td>
+              <td className="p-3 border text-gray-800">Which fields the agent read and wrote, and how it handed a ticket or lead to a named person</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border font-semibold text-gray-900">Store, ERP and accounting</td>
+              <td className="p-3 border text-gray-800">Shopify, NetSuite, Odoo, QuickBooks, Xero</td>
+              <td className="p-3 border text-gray-800">How they stopped the agent posting the same order, refund or invoice twice when a step was retried</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="mb-6 text-gray-800">
+        One past build on your exact system beats a long list of logos. If nobody on your shortlist has
+        touched your ERP or help desk, budget extra time for the first integration and test it on a copy
+        of your data first.
+      </p>
+
       <h2 id="vetting-checklist" className="text-2xl font-bold mt-8 mb-4 text-gray-900">
         A 10-point vetting checklist for AI developers
       </h2>
@@ -815,6 +964,44 @@ export const post: BlogPost = {
           or a short paid pilot is a fair way to test fit before a larger build.
         </li>
       </ol>
+
+      <h2 id="by-company-size" className="text-2xl font-bold mt-8 mb-4 text-gray-900">
+        How vetting changes with company size
+      </h2>
+      <p className="mb-4 text-gray-800">
+        The ten checks stay the same. What changes with size is who can judge the answers and how much
+        paperwork your own security and legal people will want before a developer gets access. Which route
+        to choose at each size is a separate question, covered in our{' '}
+        <a href="/blog/ai-agency-vs-in-house-vs-freelancer-2026#by-company-size" className="text-[#B23E13] underline">agency, in-house or freelancer guide</a>.
+      </p>
+      <div className="overflow-x-auto mb-6">
+        <table className="min-w-full border-collapse border border-gray-300">
+          <thead className="bg-gray-800 text-white">
+            <tr>
+              <th className="p-3 border text-left">Company size</th>
+              <th className="p-3 border text-left">Who judges the technical answers</th>
+              <th className="p-3 border text-left">What to require before access</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white">
+              <td className="p-3 border font-semibold text-gray-900">10 to 50 staff</td>
+              <td className="p-3 border text-gray-800">Usually nobody inside. Pay an outside engineer for a few hours to review the trial code.</td>
+              <td className="p-3 border text-gray-800">A paid trial on one task, accounts in your name, a written handover note, test data instead of live customer records</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border font-semibold text-gray-900">50 to 250 staff</td>
+              <td className="p-3 border text-gray-800">Your IT lead or the person who runs your CRM or ERP, plus the manager who owns the workflow</td>
+              <td className="p-3 border text-gray-800">The above, plus a written list of what the agent may change, named-user access with logs, and a data processing agreement if personal data is involved</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border font-semibold text-gray-900">250 to 1,000+ staff</td>
+              <td className="p-3 border text-gray-800">An engineering or security reviewer, and procurement</td>
+              <td className="p-3 border text-gray-800">The above, plus your vendor security questionnaire, a SOC 2 report or equivalent if the supplier is a firm, a prompt injection test plan, and sign-off from legal on ownership and data location</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <div className="bg-gray-50 border border-gray-200 p-5 rounded-xl my-8">
         <h3 className="text-xl font-bold mb-3">Case Study: Look at a Live Agent Before You Hire</h3>
@@ -923,13 +1110,32 @@ export const post: BlogPost = {
               <td className="p-3 border font-semibold text-gray-900">Pressure to sign quickly, resists a fixed scope</td>
               <td className="p-3 border text-gray-800">Urgency and open-ended pricing both protect the seller&apos;s flexibility, not your budget</td>
             </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border font-semibold text-gray-900">Asks for an admin login to your live systems before a scope exists</td>
+              <td className="p-3 border text-gray-800">A careful developer starts on test data or read-only access and asks for more only when a written step needs it</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border font-semibold text-gray-900">Builds on a personal API key, personal code account or personal server</td>
+              <td className="p-3 border text-gray-800">Your agent then lives in someone else&apos;s account, and you cannot see usage, logs or the code if they leave</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border font-semibold text-gray-900">Will not say how the agent resists prompt injection</td>
+              <td className="p-3 border text-gray-800">OWASP ranks prompt injection first in its risks for language model apps. An agent that reads customer emails or web pages is exposed to it</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border font-semibold text-gray-900">Turns down a paid trial or an outside code review</td>
+              <td className="p-3 border text-gray-800">Both cost the developer little if the work is sound. Refusing both leaves you judging on a pitch alone</td>
+            </tr>
           </tbody>
         </table>
       </div>
       <p className="mb-6 text-gray-800">
         None of these alone is automatically disqualifying. A young freelancer might have a thin
         portfolio and still be sharp and honest about it. Two or more of these together, on
-        the same candidate, is a strong reason to keep looking.
+        the same candidate, is a strong reason to keep looking. These flags are about the person
+        you hire. For the warning signs in a company&apos;s pitch, contract and support terms, use
+        our list of{' '}
+        <a href="/blog/questions-to-ask-ai-development-company-2026#red-flags" className="text-[#B23E13] underline">twelve AI agency red flags</a>.
       </p>
 
       <h2 id="check-references" className="text-2xl font-bold mt-8 mb-4 text-gray-900">
@@ -978,6 +1184,53 @@ export const post: BlogPost = {
         ask what happens after launch: is there a defined support period, what does it cover, and
         who watches the agent once that period ends. A developer with no answer to
         &quot;what happens after launch&quot; is planning to disappear once the invoice is paid.
+      </p>
+
+      <h2 id="risk-checks" className="text-2xl font-bold mt-8 mb-4 text-gray-900">
+        Security, privacy and compliance checks before a developer gets access
+      </h2>
+      <p className="mb-4 text-gray-800">
+        A developer building an agent will see the data the agent sees. Settle these before the first
+        login, not after the first build. Each line names the rule and where to read it.
+      </p>
+      <ol className="list-decimal pl-6 space-y-3 mb-6 text-gray-800">
+        <li>
+          <strong>US health data (HIPAA).</strong> If the agent handles protected health information for a
+          covered entity, HHS says the HIPAA Rules generally require a contract with each business associate
+          so the information is safeguarded (
+          <a href="https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">HHS, sample business associate agreement provisions</a>
+          ). Sign the business associate agreement first.
+        </li>
+        <li>
+          <strong>UK personal data (UK GDPR).</strong> A developer who processes personal data for you is a
+          processor, and UK GDPR requires a written contract between controller and processor (
+          <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/contracts-and-liabilities-between-controllers-and-processors-multi/" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">ICO, contracts between controllers and processors</a>
+          ).
+        </li>
+        <li>
+          <strong>Australian personal data (Privacy Act 1988).</strong> Under Australian Privacy Principle 8,
+          you stay accountable for personal information you disclose to a developer overseas (
+          <a href="https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-8-app-8-cross-border-disclosure-of-personal-information" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">OAIC, APP 8 guidelines</a>
+          ).
+        </li>
+        <li>
+          <strong>Prompt injection (OWASP LLM01).</strong> OWASP describes it as user prompts that alter a
+          model&apos;s behaviour or output in unintended ways, including text a person cannot see (
+          <a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">OWASP, LLM01 prompt injection</a>
+          ). Ask the developer to show a test where a hostile email or web page tries to make the agent
+          act, and what stopped it.
+        </li>
+        <li>
+          <strong>Firms selling to larger buyers.</strong> If you hire a firm and your own customers ask for
+          security evidence, ask the firm for a SOC 2 report or its completed security questionnaire. An
+          individual freelancer will rarely have one, so the access limits in the checklist above carry more
+          weight.
+        </li>
+      </ol>
+      <p className="mb-6 text-gray-800">
+        The deeper contract questions, such as whether a firm is your data controller or processor and
+        whether your data trains anything, are in our{' '}
+        <a href="/blog/questions-to-ask-ai-development-company-2026#ownership" className="text-[#B23E13] underline">questions to ask an AI development company</a>.
       </p>
 
       <h2 id="testing" className="text-2xl font-bold mt-8 mb-4 text-gray-900">
@@ -1111,7 +1364,8 @@ export const post: BlogPost = {
         Sources
       </h2>
       <p className="mb-4 text-gray-800">
-        Each page below was opened and read on 11 October 2026. Day rates, hourly equivalents and
+        Each page below was opened and read on 11 October 2026 unless a later date is given; the BLS
+        software developer page was read again on 21 October 2026. Day rates, hourly equivalents and
         the cost of an employee with benefits are our arithmetic on these figures, shown where
         they appear.
       </p>
@@ -1146,6 +1400,24 @@ export const post: BlogPost = {
           (updated 23 August 2026) and{' '}
           <a href="https://www.kore1.com/cost-to-hire-ai-engineer-2026/" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">KORE1, How Much Does It Cost to Hire an AI Engineer</a>{' '}
           (updated 22 August 2026)
+        </li>
+        <li>
+          <a href="https://www.bls.gov/ooh/computer-and-information-technology/computer-and-information-research-scientists.htm" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">Bureau of Labor Statistics, Occupational Outlook Handbook, computer and information research scientists</a>{' '}
+          (May 2025 wages, read 21 October 2026)
+        </li>
+        <li>
+          <a href="https://www.itjobswatch.co.uk/contracts/uk/artificial%20intelligence%20developer.do" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">IT Jobs Watch, AI developer contract rates</a>{' '}
+          and <a href="https://www.itjobswatch.co.uk/jobs/uk/artificial%20intelligence%20developer.do" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">AI developer salaries</a>{' '}
+          (six months to 21 October 2026, read 21 October 2026)
+        </li>
+        <li>
+          <a href="https://www.robertwalters.com.au/content/dam/robert-walters-redesign/country/australia/files/salary-survey/Salary-Guide-2026-AU-V10-mid-year.pdf" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">Robert Walters, Salary Guide 2026, Australia, mid-year edition</a>
+        </li>
+        <li>
+          <a href="https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">HHS, sample business associate agreement provisions</a>,{' '}
+          <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/contracts-and-liabilities-between-controllers-and-processors-multi/" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">ICO, contracts between controllers and processors</a>,{' '}
+          <a href="https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-8-app-8-cross-border-disclosure-of-personal-information" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">OAIC, APP 8</a> and{' '}
+          <a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener noreferrer nofollow" className="text-orange-600 underline">OWASP, LLM01 prompt injection</a>
         </li>
         <li>
           FactoryJet&apos;s own record of 14 answers to &quot;How much does it cost to hire AI agent

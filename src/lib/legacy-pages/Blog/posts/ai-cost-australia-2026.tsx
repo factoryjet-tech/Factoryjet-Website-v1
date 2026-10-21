@@ -8,10 +8,18 @@ import type { BlogPost, FAQItem } from '../data.types';
  * USD figures are converted at US$1 = A$1.4224 (European Central Bank reference rate,
  * 25 September 2026, via frankfurter.dev). The FAQ array below is the single source for both
  * the visible FAQ and the FAQPage JSON-LD (the blog route maps post.faqs into schema).
+ * 21 Oct 2026 refresh (AU page plan R10): Flowtivity and Web Video Digital re-read on 21 October
+ * 2026; Web Video Digital's summary now says regulated or enterprise builds "can run past AUD
+ * 200,000" (its table: A$150,000 to A$300,000+). All Webbed Labs' chatbot guide (updated
+ * 28 September 2026) added for chatbot build tiers. Build ranges only, no running-cost figures.
+ * Question ownership with the sister guide hire-ai-developers-australia-cost-2026: this page owns
+ * what a PROJECT costs (9 Oct sweep B162 AI consultant, B168 AI chatbot build; 18 Oct N24 AI
+ * consultant hourly rate). The hire guide owns what PEOPLE cost (B161, B163 to B167, B169).
  */
 
 const SRC = {
   flowtivity: 'https://flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026/',
+  awlabsChatbot: 'https://www.awlabs.com.au/guides/ai-chatbot-cost-australia',
   wvd: 'https://webvideodigital.com.au/custom-ai-agent-cost-in-australia/',
   claude: 'https://claude.com/pricing',
   openai: 'https://platform.openai.com/docs/pricing',
@@ -39,11 +47,11 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does an AI consultant charge per hour?',
-    a: 'Published Australian figures sit at about A$150 to A$400 an hour for AI consulting (Flowtivity, March 2026), with most experienced consultants in the middle of that band. Web Video Digital\'s August 2026 guide puts senior AI developers at about A$180 to A$280 an hour. Check whether a quote is ex-GST or GST-inclusive before you compare two rates.',
+    a: 'Published Australian figures sit at about A$150 to A$400 an hour for AI consulting (Flowtivity, March 2026), and the same guide says most experienced consultants charge A$200 to A$300. Web Video Digital\'s August 2026 guide puts senior AI developers at about A$180 to A$280 an hour. Check whether a quote is ex-GST or GST-inclusive before you compare two rates.',
   },
   {
-    q: 'What is the average cost of hiring a software developer?',
-    a: 'It depends on seniority and on whether you employ, contract or hire a firm. For AI work, Web Video Digital\'s August 2026 Australian guide puts senior AI developers at about A$180 to A$280 an hour. An employee adds superannuation, leave, equipment and recruitment costs on top of salary. Firms usually quote per project instead, so compare a firm\'s total for the job with the hours a contractor would bill. Ask whether each quote is ex-GST or GST-inclusive.',
+    q: 'What does an AI consultant charge per day in Australia?',
+    a: 'Flowtivity\'s March 2026 Australian guide puts AI consultant day rates at A$1,500 to A$3,000. On its hourly band of A$150 to A$400, it says most experienced consultants sit at A$200 to A$300 an hour. A day rate suits short advisory work. For a defined piece of work, such as a strategy workshop, the same guide says project pricing starts at about A$5,000. Ask whether the rate is ex-GST.',
   },
   {
     q: 'What is the market rate for an AI consultant?',
@@ -72,7 +80,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does it cost to build a custom AI?',
-    a: 'For most Australian businesses, a custom AI means a custom agent or assistant built on an existing model, not a new model trained from scratch. Published 2026 Australian ranges run from about A$5,000 for a narrow single-task agent to A$150,000 or more for autonomous and regulated builds. Training your own model from scratch is a different order of cost and rarely makes sense for a small business.',
+    a: 'For most Australian businesses, a custom AI means a custom agent or assistant built on an existing model, not a new model trained from scratch. Published 2026 Australian ranges run from about A$5,000 for a narrow single-task agent to A$150,000 for an autonomous one, and A$150,000 to A$300,000 or more for regulated or enterprise builds. Training your own model from scratch is a different order of cost and rarely makes sense for a small business.',
   },
   {
     q: 'How much money does it cost to build an AI?',
@@ -80,7 +88,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does it cost to build a custom AI agent in Australia?',
-    a: 'Web Video Digital\'s August 2026 guide puts most small and mid-size projects at A$30,000 to A$80,000, with simple single-task agents from A$15,000 and regulated or enterprise builds past A$150,000. Flowtivity\'s March 2026 guide is lower, at A$5,000 to A$50,000 or more, for example A$5,000 to A$10,000 for an appointment booking agent. The gap mostly reflects how much each firm includes.',
+    a: 'Web Video Digital\'s August 2026 guide puts most small and mid-size projects at A$30,000 to A$80,000, with simple single-task agents from A$15,000 and regulated or enterprise builds at A$150,000 to A$300,000 or more. Its summary says those builds can run past A$200,000. Flowtivity\'s March 2026 guide is lower, at A$5,000 to A$50,000 or more, for example A$5,000 to A$10,000 for an appointment booking agent. The gap mostly reflects how much each firm includes.',
   },
   {
     q: 'Does it cost money to build an AI agent?',
@@ -109,7 +117,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does it cost to develop an AI chatbot?',
-    a: 'Developing a custom AI chatbot that connects to your own systems is a project. Flowtivity\'s March 2026 Australian guide puts customer service automation at A$10,000 to A$25,000. If the chatbot only needs to answer from your website content, you can set up software instead. Tidio lists a free plan and paid plans from US$24.17 a month on annual billing, about A$34. Once it has to check orders or change bookings, the AI agent ranges in this guide apply.',
+    a: 'In Australia, All Webbed Labs\' September 2026 guide puts a simple custom FAQ chatbot at A$10,000 to A$30,000 ex GST, and A$30,000 to A$80,000 once it reads your knowledge base and connects to orders, bookings or a CRM. Flowtivity puts customer service automation at A$10,000 to A$25,000. If the bot only answers from your website, chatbot software is cheaper: Tidio has a free plan and paid plans from US$24.17 a month, about A$34.',
   },
   // Receptionists and voice
   {
@@ -192,7 +200,8 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     'Australian AI consultants charge about A$150 to A$400 an hour or A$1,500 to A$3,000 a day, on Flowtivity\'s March 2026 figures.',
-    'Custom AI agent builds range from about A$5,000 for a narrow single-task agent to A$150,000 or more. Web Video Digital puts most small and mid-size projects at A$30,000 to A$80,000.',
+    'Custom AI agent builds range from about A$5,000 for a narrow single-task agent to A$150,000, and A$150,000 to A$300,000 or more for regulated builds. Web Video Digital puts most small and mid-size projects at A$30,000 to A$80,000.',
+    'A custom AI chatbot costs A$10,000 to A$30,000 to build as a simple FAQ bot and A$30,000 to A$80,000 once it connects to your systems, on All Webbed Labs\' September 2026 figures.',
     'AI receptionist plans from Australian providers start at A$49 a month GST included (Giday) and A$79 plus GST (Vereo), with managed plans up to A$499 a month.',
     'Check the GST basis on every quote. Some Australian vendors list prices ex-GST, some include it, and many overseas tools bill in US dollars.',
     'These are market ranges from named sources, not FactoryJet prices. We quote fixed scope after a short discovery call.',
@@ -216,7 +225,7 @@ export const post: BlogPost = {
       <div className="bg-[#FAF8F5] border-l-4 border-[#B23E13] p-5 rounded-r-lg mb-10">
         <p className="text-sm text-[#1F2937] leading-relaxed mb-0">
           <strong>These are market ranges, not our prices.</strong> Every price on this page comes from a named Australian
-          guide or a vendor&apos;s public pricing page that we opened and read on 26 September 2026, and each one is linked in
+          guide or a vendor&apos;s public pricing page that we opened and read on 26 September 2026 (the agent and chatbot build guides again on 21 October 2026), and each one is linked in
           the sources list at the end. The worked examples are our own arithmetic on those published figures. Where a source quotes US dollars, we convert at US$1 = A$1.4224 (European
           Central Bank reference rate, 25 September 2026). GST in Australia is 10 percent: add it to any ex-GST figure
           before you compare.
@@ -271,12 +280,18 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200">Not stated</td>
             </tr>
             <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">Custom AI chatbot build</td>
+              <td className="p-3 border border-gray-200">A$10,000 to A$30,000 simple FAQ bot; A$30,000 to A$80,000 connected to your systems</td>
+              <td className="p-3 border border-gray-200"><a href={SRC.awlabsChatbot} target="_blank" rel="noopener noreferrer">All Webbed Labs</a>, September 2026</td>
+              <td className="p-3 border border-gray-200">Ex GST</td>
+            </tr>
+            <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">Chatbot software</td>
               <td className="p-3 border border-gray-200">Free plan; paid from US$24.17 a month (about A$34) on annual billing</td>
               <td className="p-3 border border-gray-200"><a href={SRC.tidio} target="_blank" rel="noopener noreferrer">Tidio pricing</a>, September 2026</td>
               <td className="p-3 border border-gray-200">USD list price</td>
             </tr>
-            <tr className="bg-white">
+            <tr className="bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">AI receptionist subscription</td>
               <td className="p-3 border border-gray-200">A$49 to A$399 a month (Giday); A$79 + GST (Vereo); A$149 to A$499 managed (Valory)</td>
               <td className="p-3 border border-gray-200">Vendor pricing pages, September 2026</td>
@@ -296,6 +311,47 @@ export const post: BlogPost = {
         <strong>A$150 to A$400 an hour</strong>, with day rates of <strong>A$1,500 to A$3,000</strong>. Web Video
         Digital&apos;s August 2026 guide puts senior AI developers in Australia at about <strong>A$180 to A$280 an
         hour</strong>. Neither source states whether GST is included, so ask.
+      </p>
+      <h3 id="consultant-day-rate">What does an AI consultant charge per hour or per day in Australia?</h3>
+      <div className="overflow-x-auto my-6">
+        <table className="w-full border-collapse text-sm">
+          <thead>
+            <tr className="bg-gray-800 text-white">
+              <th className="p-3 text-left border border-gray-700">How the consultant bills</th>
+              <th className="p-3 text-left border border-gray-700">Published Australian range</th>
+              <th className="p-3 text-left border border-gray-700">Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Hourly, full band</td>
+              <td className="p-3 border border-gray-200">A$150 to A$400 an hour</td>
+              <td className="p-3 border border-gray-200"><a href={SRC.flowtivity} target="_blank" rel="noopener noreferrer">Flowtivity</a>, March 2026</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">Hourly, most experienced consultants</td>
+              <td className="p-3 border border-gray-200">A$200 to A$300 an hour</td>
+              <td className="p-3 border border-gray-200"><a href={SRC.flowtivity} target="_blank" rel="noopener noreferrer">Flowtivity</a>, March 2026</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Day rate</td>
+              <td className="p-3 border border-gray-200">A$1,500 to A$3,000 a day</td>
+              <td className="p-3 border border-gray-200"><a href={SRC.flowtivity} target="_blank" rel="noopener noreferrer">Flowtivity</a>, March 2026</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">Senior AI developer who builds as well</td>
+              <td className="p-3 border border-gray-200">A$180 to A$280 an hour</td>
+              <td className="p-3 border border-gray-200"><a href={SRC.wvd} target="_blank" rel="noopener noreferrer">Web Video Digital</a>, August 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        A day rate is a sum of hours: at A$200 to A$300 an hour, a 7.6-hour day comes to A$1,520 to A$2,280, inside
+        Flowtivity&apos;s day band. Pay by the hour for a few questions answered. Pay by the day for a workshop. For
+        anything with a deliverable, ask for a fixed fee, which the next table shows. If you would rather put an AI
+        engineer on your own payroll or bring in a contractor, salaries and contractor day rates are in our{' '}
+        <a href="/blog/hire-ai-developers-australia-cost-2026#ai-engineer-rates">guide to AI engineer rates in Australia</a>.
       </p>
       <h3 id="consultant-engagements">The three project stages AI consultants price</h3>
       <div className="overflow-x-auto my-6">
@@ -504,7 +560,7 @@ export const post: BlogPost = {
         </a>
       </div>
 
-      <h2 id="ai-chatbot-cost">How much does an AI chatbot cost?</h2>
+      <h2 id="ai-chatbot-cost">How much does an AI chatbot cost in Australia?</h2>
       <p>
         A chatbot answers questions in a chat window on your website. It does not change anything in your systems, so it costs
         much less than an agent. Most businesses buy chatbot software rather than build it.
@@ -557,6 +613,56 @@ export const post: BlogPost = {
         The per-outcome model is worth understanding. At US$0.99 a resolution, 1,000 resolved chats a month is US$990, about
         A$1,408, before helpdesk seats. That can be good value for a busy online store and poor value for a business with a
         handful of chats a day. Always model your own volume before you choose between a flat plan and per-outcome pricing.
+      </p>
+      <h3 id="ai-chatbot-build-cost">How much does it cost to develop a custom AI chatbot in Australia?</h3>
+      <p>
+        Once a chatbot has to read your own documents or look up an order, you are paying for a build, not a plan. All
+        Webbed Labs, a Sydney software firm, published the clearest Australian tiers in September 2026, drawing on Team
+        400&apos;s April 2026 figures. Its prices are ex GST.
+      </p>
+      <div className="overflow-x-auto my-6">
+        <table className="w-full border-collapse text-sm">
+          <thead>
+            <tr className="bg-gray-800 text-white">
+              <th className="p-3 text-left border border-gray-700">What the chatbot does</th>
+              <th className="p-3 text-left border border-gray-700">Build cost (AUD, ex GST)</th>
+              <th className="p-3 text-left border border-gray-700">Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Helpdesk AI configured inside Intercom, Zendesk or Freshdesk</td>
+              <td className="p-3 border border-gray-200">A$5,000 to A$20,000 setup, content and testing</td>
+              <td className="p-3 border border-gray-200"><a href={SRC.awlabsChatbot} target="_blank" rel="noopener noreferrer">All Webbed Labs</a> (its own estimate)</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">Simple custom FAQ bot</td>
+              <td className="p-3 border border-gray-200">A$10,000 to A$30,000</td>
+              <td className="p-3 border border-gray-200"><a href={SRC.awlabsChatbot} target="_blank" rel="noopener noreferrer">All Webbed Labs</a>, from Team 400</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Custom bot on your knowledge base, connected to orders, bookings or CRM</td>
+              <td className="p-3 border border-gray-200">A$30,000 to A$80,000</td>
+              <td className="p-3 border border-gray-200"><a href={SRC.awlabsChatbot} target="_blank" rel="noopener noreferrer">All Webbed Labs</a>, from Team 400</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">Customer service automation</td>
+              <td className="p-3 border border-gray-200">A$10,000 to A$25,000</td>
+              <td className="p-3 border border-gray-200"><a href={SRC.flowtivity} target="_blank" rel="noopener noreferrer">Flowtivity</a>, March 2026 (GST not stated)</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Enterprise agent that signs customers in and takes actions</td>
+              <td className="p-3 border border-gray-200">A$80,000 to A$250,000+</td>
+              <td className="p-3 border border-gray-200"><a href={SRC.awlabsChatbot} target="_blank" rel="noopener noreferrer">All Webbed Labs</a>, from Team 400</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Integrations move the number most. The same guide cites Team 400&apos;s estimate of A$5,000 to A$20,000 for each
+        added integration, depending on how good the other system&apos;s API is. A bot that reads but never writes stays
+        in the lower rows. Give it the right to change a booking or issue a refund and it becomes an agent, priced in the
+        agent table above.
       </p>
 
       <h2 id="ai-receptionist-cost">AI receptionist and AI voice agent cost in Australia</h2>
@@ -803,10 +909,11 @@ export const post: BlogPost = {
       </p>
 
       <h2 id="sources">Sources</h2>
-      <p className="text-sm text-gray-600">All pages opened and read on 26 September 2026. Prices change; check the source before you budget.</p>
+      <p className="text-sm text-gray-600">All pages opened and read on 26 September 2026. Flowtivity and Web Video Digital were read again on 21 October 2026, when All Webbed Labs was added. Prices change; check the source before you budget.</p>
       <ul className="list-disc pl-6 space-y-1 text-sm mb-8">
         <li><a href={SRC.flowtivity} target="_blank" rel="noopener noreferrer">Flowtivity, AI agent cost and pricing guide for Australia (March 2026)</a></li>
         <li><a href={SRC.wvd} target="_blank" rel="noopener noreferrer">Web Video Digital, Custom AI Agent Cost in Australia (August 2026)</a></li>
+        <li><a href={SRC.awlabsChatbot} target="_blank" rel="noopener noreferrer">All Webbed Labs, How much does an AI chatbot cost in Australia? (updated 28 September 2026)</a></li>
         <li><a href={SRC.claude} target="_blank" rel="noopener noreferrer">Anthropic, Claude pricing</a></li>
         <li><a href={SRC.giday} target="_blank" rel="noopener noreferrer">Giday pricing</a>, <a href={SRC.vereo} target="_blank" rel="noopener noreferrer">Vereo pricing</a>, <a href={SRC.frontly} target="_blank" rel="noopener noreferrer">Frontly pricing</a>, <a href={SRC.valory} target="_blank" rel="noopener noreferrer">Valory AI receptionist cost guide</a></li>
         <li><a href={SRC.virtualAddress} target="_blank" rel="noopener noreferrer">Virtual Address receptionist pricing</a>, <a href={SRC.officehq} target="_blank" rel="noopener noreferrer">OfficeHQ live call answering</a></li>

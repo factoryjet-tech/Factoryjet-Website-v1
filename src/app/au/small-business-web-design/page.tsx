@@ -66,6 +66,12 @@ const FAQ_CATEGORIES = [
   { key: 'after',    label: 'Ownership & after launch' },
 ] as const;
 
+// Keen to Design, Sydney web design cost guide, dateModified 2026-04-12, fetched 2026-10-21. Its
+// "Typical Sydney price range" table: "Landing page only $1,500 to $3,500", "Small business website
+// (5 to 8 pages) $3,500 to $7,000", "Mid-range custom WordPress site $7,000 to $15,000", "Ecommerce
+// website $8,000 to $25,000+". No GST statement. Market ranges, not FactoryJet prices.
+const SRC_KEEN = 'https://www.keentodesign.com.au/web-design-cost/';
+
 const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── Choosing ──
   { category: 'choosing', question: 'Which web designer is best for small businesses?',
@@ -88,6 +94,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     links: [{ href: '/blog/website-cost-australia-2026', label: 'Website cost in Australia (2026)' }] },
   { category: 'cost', question: 'What should a small business website design package include?',
     answer: 'At minimum: design for phones and desktops, a set number of pages, the words on those pages or help writing them, contact or quote forms that email you, basic SEO setup, analytics, a secure connection and a handover session. Check what is not included just as carefully: copywriting, photos, extra revisions, email accounts, hosting after year one and changes after launch are the usual extras.' },
+  { category: 'cost', question: 'How much do small business website design packages cost in Australia?',
+    answer: 'Keen to Design, a Sydney agency, published these typical ranges in April 2026: a landing page $1,500 to $3,500, a small business site of 5 to 8 pages $3,500 to $7,000, a mid-range custom WordPress site $7,000 to $15,000, and an ecommerce site $8,000 to $25,000 or more. Those are market ranges, not our prices, and the guide does not say whether GST is included. We quote a fixed price for your scope after a short call.',
+    links: [{ href: SRC_KEEN, label: 'Keen to Design: web design cost (Apr 2026)' }, { href: '/blog/website-cost-australia-2026', label: 'Website cost in Australia (2026)' }] },
   { category: 'cost', question: 'Is affordable website design for small business worth it?',
     answer: 'Sometimes. A low-cost template site is fine to test an idea or to get a basic online presence quickly. It becomes expensive when the domain is not in your name, the site is slow, nobody answers after launch, or you have to rebuild within a year. Judge an affordable quote by what you own at the end and what happens in month two, not only the launch price.' },
   { category: 'cost', question: 'Is there a monthly fee to have a website?',
@@ -558,7 +567,7 @@ export default function SmallBusinessWebDesignAUPage() {
             <div className="section-head head-split">
               <div className="eyebrow">Small business website packages</div>
               <div>
-                <h2>Four sizes of small business website, and which one fits you</h2>
+                <h2>Small business website design packages: four sizes, and which one fits you</h2>
                 <p className="lead">
                   Affordable web design for small business starts with choosing the right size. Most “small
                   business website design packages” fall into four sizes. We scope every site to one of
@@ -592,7 +601,13 @@ export default function SmallBusinessWebDesignAUPage() {
               </table>
             </div>
             <p className="tablenote">
-              Want numbers? Our <a href="/blog/website-cost-australia-2026">website cost guide for Australia (2026)</a>{' '}
+              <strong>Market ranges, not our prices.</strong> <a href={SRC_KEEN} target="_blank" rel="noopener noreferrer nofollow">Keen to Design</a>,
+              a Sydney agency, listed these typical ranges in April 2026: landing page $1,500 to $3,500; small business
+              site of 5 to 8 pages $3,500 to $7,000; mid-range custom WordPress site $7,000 to $15,000; ecommerce site
+              $8,000 to $25,000 or more. It does not say whether GST is included.
+            </p>
+            <p className="tablenote">
+              Want more numbers? Our <a href="/blog/website-cost-australia-2026">website cost guide for Australia (2026)</a>{' '}
               lists typical market ranges from several published Australian sources, with dates and GST notes, plus
               a worksheet to estimate your own site. Selling products? See the{' '}
               <a href="/blog/shopify-cost-australia-2026">Shopify cost guide</a> instead.

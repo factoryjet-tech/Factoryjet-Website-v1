@@ -16,10 +16,10 @@ import { websiteMaintenanceAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/au/website-maintenance';
 const UPDATED = '2026-10-21';
-const TITLE = 'Website Maintenance Services Australia | FactoryJet';
+const TITLE = 'Website Maintenance Services & Packages Australia | FactoryJet';
 const H1 = 'Website Maintenance Services for Australian Businesses: Updates, Security, Backups and Changes, Handled';
 const DESCRIPTION =
-  'Website maintenance services and care plans for Australian WordPress and Shopify sites: tested updates, backups, security checks and fixes. Ask the founder.';
+  'Website maintenance packages for Australian WordPress and Shopify sites, described by scope, with sourced AUD market ranges: tested updates, backups, security and fixes.';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD. */
 const crumbs = [
@@ -58,6 +58,16 @@ const SRC_WAI_AU = 'https://www.w3.org/WAI/policies/australia/';
 // buttons, missing document language; "96% of all errors detected fall into these
 // six categories". fetch-verified 2026-09-26
 const SRC_WEBAIM = 'https://webaim.org/projects/million/';
+// Small Biz Web Design, "How Much Does Website Maintenance Cost? (Australia 2026)", dateModified
+// 2026-10-14, fetched 2026-10-21: "can run anywhere between $ 200 and $900 per month"; "Managed
+// updates and testing: $150 – $400 per month"; "Advanced support with staging environments: $300 –
+// $800 per month"; WordPress "Care plans for updates, backups, and security: $200 to $600+ per month".
+const SRC_SMALLBIZ_MAINT = 'https://smallbizwebdesign.com.au/how-much-does-website-maintenance-cost/';
+// Keen to Design, web design cost guide, dateModified 2026-04-12, fetched 2026-10-21: "hosting ($250
+// to $1,500 per year ...), domain renewal ($15 to $100 per year), and maintenance and updates ($500 to
+// $3,000 per year)"; "A site that costs $5,000 to build can easily cost $1,500 to $3,000 per year to run".
+const SRC_KEEN = 'https://www.keentodesign.com.au/web-design-cost/';
+// Neither source says whether GST is included. These are market ranges, not FactoryJet prices.
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -87,17 +97,32 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Cost, hosting & plans ──
   { category: 'cost', question: 'How much does website maintenance cost in Australia?',
-    answer: 'It depends on the scope rather than a rate card. The biggest drivers are the platform (WordPress, WooCommerce, Shopify or custom), how many plugins, apps and integrations the site has, whether hosting is included, how many content changes you want each month, how fast you need a response, and whether the site takes payments. For typical Australian market ranges from independent sources, read our website cost guide. We quote a fixed monthly scope after a free site check.' },
+    answer: 'Small Biz Web Design, an Australian agency, puts website maintenance at $200 to $900 a month in its October 2026 guide, depending on size, features and security needs. Those are market ranges, not our prices, and the guide does not say whether GST is included. Where your site falls depends on the platform, how many plugins and integrations it has, whether it takes payments and how much change work you want. We quote a fixed monthly scope after a free site check.',
+    links: [{ href: SRC_SMALLBIZ_MAINT, label: 'Small Biz Web Design: website maintenance cost in Australia (Oct 2026)' }] },
   { category: 'cost', question: 'How much do website maintenance packages typically cost?',
-    answer: 'Packages across Australia vary widely, from basic update-only plans to full website management with hosting, content changes and priority support. Before comparing prices, compare what is actually included: are updates tested before going live, how often are backups taken and tested, are content changes included, what is the response time for a broken site, and is GST included in the price shown. Our website cost guide lists independent market ranges with their sources.' },
+    answer: 'Packages are usually tiered by scope. Small Biz Web Design (October 2026) lists managed updates and testing at $150 to $400 a month and advanced support with staging at $300 to $800 a month, and WordPress care plans covering updates, backups and security at $200 to $600 or more a month. Those are market ranges, not our prices. Before comparing, check what each tier includes: tested updates, backups you can restore, change time and response times.',
+    links: [{ href: SRC_SMALLBIZ_MAINT, label: 'Small Biz Web Design: website maintenance cost in Australia (Oct 2026)' }] },
+  { category: 'cost', question: 'How much does it cost to maintain a website every year?',
+    answer: 'Keen to Design, an Australian agency, estimates that a site costing $5,000 to build can easily cost $1,500 to $3,000 a year to run properly, before any marketing. Its breakdown puts maintenance and updates at $500 to $3,000 a year, hosting at $250 to $1,500 and domain renewal at $15 to $100. Those are market ranges, not our prices. Online stores and sites with many plugins sit higher, because every update needs testing.',
+    links: [{ href: SRC_KEEN, label: 'Keen to Design: web design cost in Australia (Apr 2026)' }] },
+  { category: 'cost', question: 'Is it costly to maintain a website?',
+    answer: 'It costs less than fixing a site nobody maintained. Routine care is mostly a few hours a month of updates, backups and checks. The expensive moments are a hacked site, a checkout that stopped working after a blind update, or a rebuild because years of skipped updates made the old site unsafe. Keen to Design (April 2026) puts maintenance and updates at $500 to $3,000 a year for a small business site, a market range rather than our price.',
+    links: [{ href: SRC_KEEN, label: 'Keen to Design: web design cost in Australia (Apr 2026)' }] },
   { category: 'cost', question: 'How much does it cost to pay someone to maintain a website?',
     answer: 'You can pay by the hour, by the job, or on a monthly care plan. Hourly and one-off fixes suit sites that rarely change, but a problem on a site nobody has looked after for a year usually takes longer to fix. A monthly plan suits sites that earn money every day, because the provider already knows the site and the updates never pile up. We explain what drives cost here and route price questions to our cost guide.' },
   { category: 'cost', question: 'Do I have to pay to maintain a website?',
     answer: 'Some costs are unavoidable. You need a domain name renewal, hosting (or a platform subscription such as Shopify), and often licences for premium themes, plugins or apps. The labour can be yours: if you have the time and skill, you can do the updates, backups and checks yourself. What you should not do is pay nothing and do nothing, because an unmaintained site becomes slower, less secure and harder to fix over time.' },
   { category: 'cost', question: 'How much should I pay someone to host my website?',
     answer: 'Hosting cost depends on the type, not just the provider. Cheap shared hosting suits a small brochure site. Managed WordPress hosting adds daily backups, staging and better security for busier sites. Online stores and high-traffic sites need more server resources. Shopify includes hosting in its subscription. Check where the servers are (Australian data centres help speed for local visitors), what backups include, and whether the account is in your name.' },
+  { category: 'cost', question: 'How much does it cost to host a website in Australia?',
+    answer: 'Keen to Design (April 2026) puts hosting for a professionally maintained small business site at $250 to $1,500 a year, depending on traffic and requirements. That is a market range, not our price. Shared hosting sits at the bottom, managed WordPress hosting with daily backups and staging sits higher, and Shopify includes hosting in its plan. Compare renewal prices rather than introductory offers, and keep the hosting account in your business name.',
+    links: [{ href: SRC_KEEN, label: 'Keen to Design: web design cost in Australia (Apr 2026)' }] },
+  { category: 'cost', question: 'What is the best free website hosting in Australia?',
+    answer: 'For a business, free hosting is rarely the right choice. Free plans from website builders such as Wix and WordPress.com put your site on their subdomain, show their branding and limit what you can add. Free hosts also tend to offer no backups you control and slow support when something breaks. A hobby site can live with that. A site that brings in leads or sales needs paid hosting with backups, SSL and an account in your name.' },
   { category: 'cost', question: 'How much does it cost to host a website for 1 year?',
     answer: 'It depends on the hosting type and on whether the first-year price is an introductory offer that rises on renewal, which is common. Compare the renewal price, not the sign-up price, and check whether the plan includes backups, SSL certificates, email and staging, or charges for them separately. Our website cost guide sets out independent Australian market ranges for hosting and maintenance with their sources and GST treatment.' },
+  { category: 'cost', question: 'What should a maintenance plan include?',
+    answer: 'At minimum: core, theme and plugin or app updates tested on a staging copy first, off-site backups with a restore test, uptime and security monitoring, SSL and domain renewal checks, and a monthly report in plain English. Better plans add a set amount of content or design changes, form and checkout testing, speed and technical SEO checks, and a written response time for a broken site. Every account should stay in your name.' },
   { category: 'cost', question: 'What is a website care plan?',
     answer: 'A website care plan is a monthly agreement where one provider looks after your site: updates, backups, security and uptime monitoring, fixes and usually a set amount of changes or support time. The word "care" signals ongoing responsibility rather than a one-off job. Our care plans are described by scope, not a price list: security and updates, updates plus regular changes, or ongoing improvement. We quote the scope that fits your site after a free check.' },
 
@@ -571,7 +596,7 @@ export default function WebsiteMaintenanceAUPage() {
             <div className="section-head plat-head">
               <div>
                 <div className="eyebrow">Website care plans</div>
-                <h2>Three levels of website care, described by scope, not a price list</h2>
+                <h2>Website maintenance packages: three scope tiers, not a price list</h2>
               </div>
               <p>
                 Every site is different, so we do not publish a rate card. We check your site first, then quote a fixed
@@ -591,6 +616,14 @@ export default function WebsiteMaintenanceAUPage() {
                 </div>
               ))}
             </div>
+            <p className="au-note">
+              <strong>Market ranges, not our prices.</strong> For a sense of what Australian packages cost,{' '}
+              <a href={SRC_SMALLBIZ_MAINT} {...extLink}>Small Biz Web Design</a> (October 2026) lists managed updates
+              and testing at $150 to $400 a month and advanced support with staging at $300 to $800 a month, and{' '}
+              <a href={SRC_KEEN} {...extLink}>Keen to Design</a> (April 2026) puts maintenance and updates for a small
+              business site at $500 to $3,000 a year. Neither says whether GST is included. More ranges, with sources, are
+              in our <a href="/blog/website-cost-australia-2026">website cost guide for Australia</a>.
+            </p>
           </div>
         </section>
 

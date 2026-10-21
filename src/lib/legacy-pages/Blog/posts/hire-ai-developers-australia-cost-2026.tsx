@@ -13,6 +13,13 @@ import type { BlogPost, FAQItem } from '../data.types';
  * (the blog route maps post.faqs into schema). Do not add a second FAQ array.
  * Sister guide: ai-cost-australia-2026 owns project costs (consultants, agents, chatbots,
  * receptionists). This page owns the cost and method of hiring people.
+ * 21 Oct 2026 refresh (AU page plan R10): added the "AI engineer rates in Australia" H2, one hourly
+ * table across routes (our arithmetic on the ranges already sourced here). Web Video Digital re-read
+ * on 21 October 2026: A$180 to A$280 an hour for senior AI developers still stands.
+ * Buyer questions this page owns (9 Oct sweep, AU): B161 AI engineer, B163 developer, B164
+ * dedicated developers, B165 average software developer, B166 how to hire dedicated developers,
+ * B167 freelance website developer, B169 where to hire AI chatbot developers. The AI cost guide
+ * owns B162 (AI consultant), B168 (AI chatbot build) and 18 Oct N24 (consultant hourly rate).
  */
 
 const SRC = {
@@ -107,6 +114,10 @@ const faqs: FAQItem[] = [
     a: 'Compared with other developers, yes. Jobs and Skills Australia puts the median for full-time software and applications programmers at about A$131,900 a year. Published 2026 ranges for senior AI engineers start at A$160,000 in Queensland and reach A$220,000 in Victoria on the Robert Walters guide. Re:Sourced says senior AI and machine learning engineers are priced 12 to 18 percent above senior software engineers in like-for-like roles.',
   },
   {
+    q: 'What are AI engineer rates in Australia per hour?',
+    a: 'Put on one hourly basis, a senior AI engineer in NSW costs about A$109 to A$128 an hour as an employee (salary plus 12 percent super over 1,748 working hours), A$132 to A$151 an hour as a contractor, and A$180 to A$280 an hour through an Australian agency (Web Video Digital). Robert Walters lists senior AI contractors in Victoria at A$125 to A$150 an hour. These are market ranges, not FactoryJet prices.',
+  },
+  {
     q: 'What is the day rate for an AI contractor in Australia?',
     a: 'The Robert Walters 2026 guide lists NSW contract rates of 800 to 900 for an AI engineer and 1,000 to 1,150 for a senior AI engineer. Its column is headed per hour, but figures that size are day rates, and they match other Sydney day-rate guides. Clicks IT Recruitment lists AI engineers nationally at A$885 to A$1,040 a day including super. Neither states a GST basis, so ask whether a quote is ex GST.',
   },
@@ -185,7 +196,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 9, 2026',
-  dateModified: 'Oct 9, 2026',
+  dateModified: 'Oct 21, 2026',
   readTime: '19 min read',
   imageUrl: '/blog-images/hire-ai-developers-australia-cost-2026-hero.webp',
   imageAlt:
@@ -346,6 +357,77 @@ export const post: BlogPost = {
           </tbody>
         </table>
       </div>
+
+      <h2 id="ai-engineer-rates">AI engineer rates in Australia: one hourly figure for each route</h2>
+      <p>
+        Salaries come per year, contractors per day and agencies per hour, so the table above cannot be read straight
+        across. Here we convert each AI engineer range from it to a cost per working hour. The method: salary plus 12
+        percent super, divided by 1,748 hours (230 working days of 7.6 hours); day rates divided by 7.6. The employee
+        figures leave out payroll tax, recruiter fees and equipment, so they are a floor.
+      </p>
+      <div className="overflow-x-auto my-6">
+        <table className="w-full border-collapse text-sm">
+          <thead>
+            <tr className="bg-gray-800 text-white">
+              <th className="p-3 text-left border border-gray-700">Route and role</th>
+              <th className="p-3 text-left border border-gray-700">Published range</th>
+              <th className="p-3 text-left border border-gray-700">Our arithmetic</th>
+              <th className="p-3 text-left border border-gray-700">About, per hour</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Employee: AI engineer, NSW</td>
+              <td className="p-3 border border-gray-200">A$150,000 to A$170,000+ a year (Robert Walters)</td>
+              <td className="p-3 border border-gray-200">A$168,000 to A$190,400 with super, ÷ 1,748</td>
+              <td className="p-3 border border-gray-200 font-semibold">A$96 to A$109</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">Employee: senior AI engineer, NSW</td>
+              <td className="p-3 border border-gray-200">A$170,000 to A$200,000+ a year (Robert Walters)</td>
+              <td className="p-3 border border-gray-200">A$190,400 to A$224,000 with super, ÷ 1,748</td>
+              <td className="p-3 border border-gray-200 font-semibold">A$109 to A$128</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Contractor: AI engineer, NSW</td>
+              <td className="p-3 border border-gray-200">800 to 900 a day (Robert Walters)</td>
+              <td className="p-3 border border-gray-200">÷ 7.6 hours</td>
+              <td className="p-3 border border-gray-200 font-semibold">A$105 to A$118</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">Contractor: senior AI engineer, NSW</td>
+              <td className="p-3 border border-gray-200">1,000 to 1,150 a day (Robert Walters)</td>
+              <td className="p-3 border border-gray-200">÷ 7.6 hours</td>
+              <td className="p-3 border border-gray-200 font-semibold">A$132 to A$151</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Contractor: senior AI engineer, Victoria</td>
+              <td className="p-3 border border-gray-200">A$125 to A$150 an hour (Robert Walters)</td>
+              <td className="p-3 border border-gray-200">Already hourly</td>
+              <td className="p-3 border border-gray-200 font-semibold">A$125 to A$150</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">Australian agency: senior AI developer</td>
+              <td className="p-3 border border-gray-200">A$180 to A$280 an hour (<a href={SRC.wvd} target="_blank" rel="noopener noreferrer">Web Video Digital</a>, re-read 21 October 2026)</td>
+              <td className="p-3 border border-gray-200">Already hourly</td>
+              <td className="p-3 border border-gray-200 font-semibold">A$180 to A$280</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Offshore outsourcing firm, Asia: senior developer</td>
+              <td className="p-3 border border-gray-200">US$31 to US$41 an hour (Accelerance)</td>
+              <td className="p-3 border border-gray-200">× 1.4402</td>
+              <td className="p-3 border border-gray-200 font-semibold">A$45 to A$59</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Read down the last column and the order is clear: an employee is the cheapest hour once you are past hiring, a
+        contractor costs about a fifth more per hour and stops when the work stops, and an agency hour costs the most
+        because it carries project management, testing and cover. The cheapest hour is not the cheapest project. If you
+        are pricing a build rather than a person, our{' '}
+        <a href="/blog/ai-cost-australia-2026#ai-agent-cost">AI cost guide for Australia</a> has the project ranges.
+      </p>
 
       <h2 id="agentic-ai-developers">What are agentic AI developers?</h2>
       <p>

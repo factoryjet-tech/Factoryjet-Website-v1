@@ -22,33 +22,44 @@ import type { BlogPost } from '../data.types';
 // London office and a Bath office; Impression's link points at impressiondigital.com because
 // impression.co.uk 301-redirects cross-host.
 //
+// Re-verified 21 October 2026 (UK page plan refresh 5): every agency claim re-read on the agency's
+// own site; per-claim URLs and quotes in the side-session note uk-ai-seo-agency-verify-2026-10-21.md.
+// Changes that day: GA Agency's BuzzWatch narrowed to the three engines its page names; The SEO Works
+// counted as three lines (its "AI Search" and "AI SEO" menu items share one URL); Varn's link moved to
+// its home page because the framework URL redirect-loops; Varn's "Bath" office is in Bradford on Avon;
+// deep links added for Passion Digital, Impression and Rise at Seven; the exclusion list rewritten,
+// because Found (found.co.uk), Distinctly (now distinctly.co) and Reposition now publish AI search
+// pages, Blue Array's site returned a Cloudflare error, convert-digital.co.uk refused connections, and
+// Builtvisible says it "is now part of Brave Bison". HikeMyTraffic still lists a Noida address.
+//
 // This page carries NO pricing figures or currency amounts by house rule.
 
 export const post: BlogPost = {
   id: '228',
   slug: 'best-ai-seo-agencies-uk',
-  title: 'The 10 Best AI SEO Agencies in the UK (2026)',
+  title: 'The 10 Best AI SEO and GEO Agencies in the UK (2026)',
   excerpt:
     'A UK-only list. ChatGPT logged 1.8 billion UK visits in the first eight months of 2025, and UK buyers now ask it which agency to hire. We checked 10 UK AI SEO agencies on their own websites and compared what each can actually verify. Yes, we are on the list, with full disclosure.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 11, 2026',
+  dateModified: 'Oct 21, 2026',
   readTime: '13 min read',
   imageUrl: '/blog-images/best-ai-seo-agencies-uk-2026.webp',
   meta: {
     // 51 chars. Covers both the "agencies" and "companies" phrasings, which GSC shows are
     // separate query families in the UK, not synonyms Google resolves for us.
-    title: '10 Best AI SEO Agencies & Companies in the UK (2026)',
+    title: '10 Best AI SEO & GEO Agencies in the UK (2026)',
     description:
-      'The best AI SEO agencies, companies and consultancies in the UK, each verified on its own site on 6 August 2026 and compared on GEO, AEO and AI search.',
+      'The best AI SEO agencies, companies and consultancies in the UK, each re-verified on its own site on 21 October 2026 and compared on GEO, AEO and AI search.',
   },
   keyTakeaways: [
     'This is a UK-only shortlist. If you are hiring for a United States or India business, the agencies here are the wrong ones, and we link you to the right page in the first paragraph.',
-    'Our researched top 10: FactoryJet (disclosed self-inclusion), Screaming Frog, The SEO Works, Passion Digital, Impression, Rise at Seven, Varn, GA Agency, ClickSlice, and Charle. Every entry was verified by fetching its own website on 6 August 2026.',
+    'Our researched top 10: FactoryJet (disclosed self-inclusion), Screaming Frog, The SEO Works, Passion Digital, Impression, Rise at Seven, Varn, GA Agency, ClickSlice, and Charle. Every entry was re-verified on its own website on 21 October 2026.',
     'ChatGPT recorded 1.8 billion UK visits in the first eight months of 2025, up from 368 million a year earlier (Ofcom, Online Nation 2025). About 30 percent of keyword searches now return an AI Overview.',
     'Two sets of labels get confused here. GEO, AEO, LLM SEO and AIO are overlapping names for one workflow, so if a supplier quotes generative engine optimisation on top of AI SEO you are paying twice. And AI SEO agency, company, firm, consultancy and provider are not different products either, they are different words for the same shortlist.',
     'Filter any UK shortlist on three things: per-engine reporting across ChatGPT, Perplexity, Claude and Gemini rather than Google alone, who actually executes the work, and the notice period.',
-    'Seven agencies that appear on other UK lists are missing from ours: two blocked our checks, four had no AI search service line we could find, and one is not a UK business. We name all seven and give the reason for each.',
+    'Seven agencies that appear on other UK lists are missing from ours. On 21 October 2026 two sites would not load, one is no longer independent, one is not a UK business, and three have added AI search pages since our last review. We name all seven and give the status of each.',
   ],
   faqs: [
     {
@@ -69,11 +80,11 @@ export const post: BlogPost = {
     },
     {
       q: 'Which is the best GEO agency in the UK?',
-      a: 'Impression and Passion Digital run the deepest dedicated generative engine optimisation practices we could verify. Impression sells GEO as a named service and publishes a GEO case study. Passion Digital splits AI search into five sub-services. FactoryJet covers GEO and AEO inside one retainer.',
+      a: 'Impression and Passion Digital run the deepest dedicated generative engine optimisation practices we could verify on their own sites on 21 October 2026. Impression sells GEO as a named service and publishes a GEO case study for Tensar. Passion Digital splits AI search into five sub-services. FactoryJet covers GEO and AEO inside one programme.',
     },
     {
       q: 'Which is the best AEO agency in the UK?',
-      a: 'AEO and GEO overlap almost completely, so the best AEO agency in the UK is usually a GEO specialist under a different label. ClickSlice runs separate Answer Engine Optimisation and Generative Engine Optimisation pages, and The SEO Works lists AEO Services and GEO Services as distinct lines.',
+      a: 'AEO and GEO overlap almost completely, so the best AEO agency in the UK is usually a GEO specialist under a different label. ClickSlice runs separate Answer Engine Optimisation and Generative Engine Optimisation pages, and The SEO Works lists AEO Services and GEO Services as distinct lines (both checked 21 October 2026).',
     },
     {
       q: 'Who is the best ChatGPT optimisation agency in the UK?',
@@ -89,7 +100,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Who provides the best AI Overviews optimisation services in the UK?',
-      a: 'Passion Digital has a dedicated AIO Optimisation service for Google AI Overviews and AI Mode. Varn benchmarks AI Overview and AI Mode visibility inside its AI Visibility Framework. FactoryJet optimises for AI Overviews using the same answer-first formatting that wins featured snippets.',
+      a: 'Passion Digital has a dedicated AIO Optimisation service for Google AI Overviews and AI Mode. Varn\'s AI Visibility Framework covers Google AI Overviews and AI Mode. FactoryJet optimises for AI Overviews using the same answer-first formatting that wins featured snippets.',
     },
     {
       q: 'Is there a good AI SEO agency in London?',
@@ -97,7 +108,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What about AI SEO for businesses outside London, in Manchester, Leeds or Glasgow?',
-      a: 'AI engines answer local queries too, and the answer pool outside London is far thinner. The SEO Works runs offices in Sheffield, Leeds, Manchester and Birmingham. Impression is Nottingham-based and Rise at Seven now lists Manchester. FactoryJet serves the whole UK remotely, with city pages for Manchester, Glasgow, Cardiff and Brighton.',
+      a: 'AI engines answer local queries too, and the answer pool outside London is far thinner. The SEO Works runs offices in Sheffield, Leeds, Manchester and Birmingham. Impression is Nottingham-based with a Manchester office, and Rise at Seven lists Manchester first. FactoryJet serves the whole UK remotely, with city pages for Manchester, Glasgow, Cardiff and Brighton.',
     },
     {
       q: 'What is the difference between an AI SEO agency and an AI SEO consultancy in the UK?',
@@ -150,7 +161,7 @@ export const post: BlogPost = {
 
       <p className="mb-4">
         <strong>This is a UK-only list.</strong> Every agency below serves UK businesses and was
-        checked on its own website on 6 August 2026. Hiring for a business in the United States?
+        re-checked on its own website on 21 October 2026. Hiring for a business in the United States?
         This is the wrong page. Start at our{' '}
         <a href="/services/ai-seo" className="text-orange-600 underline">
           US AI SEO services page
@@ -189,7 +200,7 @@ export const post: BlogPost = {
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">
-        The 10 best AI SEO agencies and companies in the UK: comparison table
+        The 10 best AI SEO and GEO agencies in the UK: comparison table
       </h2>
       <div className="overflow-x-auto mb-6">
         <table className="min-w-full border-collapse border border-gray-300">
@@ -221,7 +232,7 @@ export const post: BlogPost = {
               <td className="p-3 border">3</td>
               <td className="p-3 border font-semibold">The SEO Works</td>
               <td className="p-3 border">Sheffield, London, Leeds, Manchester, Birmingham</td>
-              <td className="p-3 border">Separate AI Search, GEO, AEO and AI SEO lines; publishes an Entitymap and an Info for AI and LLMs page</td>
+              <td className="p-3 border">Separate AI Search, GEO and AEO lines; publishes an Entitymap and an LLM info page</td>
               <td className="p-3 border">SMEs to mid-market, multi-region UK</td>
             </tr>
             <tr className="bg-gray-50">
@@ -234,7 +245,7 @@ export const post: BlogPost = {
             <tr className="bg-white">
               <td className="p-3 border">5</td>
               <td className="p-3 border font-semibold">Impression</td>
-              <td className="p-3 border">Nottingham</td>
+              <td className="p-3 border">Nottingham, Manchester and London</td>
               <td className="p-3 border">GEO as a named SEO service, with a published GEO case study and its own Alexis and Velocity tooling</td>
               <td className="p-3 border">B2B, SaaS, fintech, ecommerce</td>
             </tr>
@@ -248,7 +259,7 @@ export const post: BlogPost = {
             <tr className="bg-white">
               <td className="p-3 border">7</td>
               <td className="p-3 border font-semibold">Varn</td>
-              <td className="p-3 border">Bath and London</td>
+              <td className="p-3 border">Bradford on Avon (Wiltshire) and London</td>
               <td className="p-3 border">Productised AI Visibility Framework in LITE and COMPLETE tiers, with schema and entity recommendations</td>
               <td className="p-3 border">Buyers who want a fixed-scope audit first</td>
             </tr>
@@ -256,7 +267,7 @@ export const post: BlogPost = {
               <td className="p-3 border">8</td>
               <td className="p-3 border font-semibold">GA Agency</td>
               <td className="p-3 border">London</td>
-              <td className="p-3 border">GEO service page plus BuzzWatch AI brand visibility tracking; multilingual and international SEO</td>
+              <td className="p-3 border">GEO service page plus BuzzWatch AI brand visibility tracking; work across 18 languages</td>
               <td className="p-3 border">International, multilingual brands</td>
             </tr>
             <tr className="bg-white">
@@ -324,7 +335,7 @@ export const post: BlogPost = {
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">
-        The 10 best AI SEO agencies and companies in the UK, reviewed
+        The 10 best AI SEO and GEO agencies in the UK, reviewed
       </h2>
 
       <h3 className="text-xl font-bold mt-6 mb-3">
@@ -365,8 +376,8 @@ export const post: BlogPost = {
         >
           services menu
         </a>{' '}
-        lists AI Search, GEO Services, AEO Services and AI SEO as four distinct lines, and the site
-        publishes an Entitymap and an Info for AI and LLMs page. That is the discipline practised in
+        lists AI Search, GEO Services and AEO Services as distinct lines, and the site publishes an
+        Entitymap and an information page written for LLMs. That is the discipline practised in
         public rather than described. A free website review makes the first conversation low risk.
       </p>
 
@@ -374,7 +385,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         The most granular AI search menu in London:{' '}
         <a
-          href="https://passion.digital/"
+          href="https://passion.digital/services/ai-search/"
           className="text-orange-600 underline"
           target="_blank"
           rel="noopener"
@@ -388,15 +399,23 @@ export const post: BlogPost = {
       <h3 className="text-xl font-bold mt-6 mb-3">5. Impression: best published GEO proof</h3>
       <p className="mb-4">
         <a
-          href="https://www.impressiondigital.com/"
+          href="https://www.impressiondigital.com/generative-engine-optimisation-agency/"
           className="text-orange-600 underline"
           target="_blank"
           rel="noopener"
         >
           Generative Engine Optimisation
         </a>{' '}
-        is sold as a named service under SEO. Its case study claims a GEO strategy securing more
-        than 47,000 clicks in a year for Tensar, a B2B manufacturing client, and it runs two
+        is sold as a named service under SEO. Its{' '}
+        <a
+          href="https://www.impressiondigital.com/our-work/tensar-geo/"
+          className="text-orange-600 underline"
+          target="_blank"
+          rel="noopener"
+        >
+          Tensar case study
+        </a>{' '}
+        claims a GEO strategy securing more than 47,000 clicks in a year for the B2B manufacturer, and it runs two
         in-house tools, Alexis and Velocity. The named client makes it the most checkable
         proof-of-work here.
       </p>
@@ -405,7 +424,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         Search-first content marketing agency running{' '}
         <a
-          href="https://riseatseven.com/"
+          href="https://riseatseven.com/services/ai-seo-agency/"
           className="text-orange-600 underline"
           target="_blank"
           rel="noopener"
@@ -421,7 +440,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         Varn sells a named{' '}
         <a
-          href="https://varn.co.uk/services/ai-search-innovation/ai-visibility-framework/"
+          href="https://varn.co.uk/"
           className="text-orange-600 underline"
           target="_blank"
           rel="noopener"
@@ -444,9 +463,9 @@ export const post: BlogPost = {
         >
           GEO service
         </a>{' '}
-        pairs multilingual work across 18 languages with BuzzWatch, its own AI brand visibility
-        tracker, covering Google AI Overviews, Bing Copilot and Gemini as well as ChatGPT and
-        Perplexity. The pick if your UK site is one market of several.
+        pairs work across 18 languages with BuzzWatch, its own AI brand visibility tracker, which
+        its page says covers engines like ChatGPT, Google AI Overviews and Perplexity. The pick if
+        your UK site is one market of several.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">9. ClickSlice: best London acronym specialist</h3>
@@ -460,7 +479,16 @@ export const post: BlogPost = {
         >
           Answer Engine Optimisation
         </a>{' '}
-        and GEO as separate service pages, plus ChatGPT Ads, covering ChatGPT, Perplexity, Gemini,
+        and{' '}
+        <a
+          href="https://www.clickslice.co.uk/generative-engine-optimisation-geo-services/"
+          className="text-orange-600 underline"
+          target="_blank"
+          rel="noopener"
+        >
+          GEO
+        </a>{' '}
+        as separate service pages, plus ChatGPT Ads, covering ChatGPT, Perplexity, Gemini,
         Claude, Copilot and Grok. It states on its own site that it was the first agency ChatGPT
         recommended for the best SEO agency in London. Treat that as self-reported: AI answers
         change between runs, so nobody can verify it afterwards, including us.
@@ -505,7 +533,7 @@ export const post: BlogPost = {
         <li><strong>Sheffield, Leeds and Birmingham:</strong> The SEO Works. No other agency here has a base in any of the three.</li>
         <li><strong>Nottingham:</strong> Impression&apos;s headquarters, and the only East Midlands entry.</li>
         <li><strong>Henley-on-Thames, Oxfordshire:</strong> Screaming Frog, the Thames Valley option for log-file work.</li>
-        <li><strong>Bath and Wiltshire:</strong> Varn, the only South West entry, and the one selling an audit rather than a retainer.</li>
+        <li><strong>Bath and Wiltshire:</strong> Varn, whose Bath office is in Bradford on Avon. The only South West entry, and the one selling an audit rather than a retainer.</li>
         <li><strong>Scotland and Wales:</strong> nobody here is headquartered in Glasgow, Edinburgh or Cardiff. Those businesses buy remotely.</li>
         <li><strong>North East England and Northern Ireland:</strong> no Newcastle or Belfast base either. The North East is the largest genuine gap in UK coverage.</li>
         <li><strong>Bristol, Liverpool, Southampton and the rest:</strong> served remotely. Local presence is not a service line any of the ten sell.</li>
@@ -518,7 +546,7 @@ export const post: BlogPost = {
           search scope on one national page rather than repeated per city.</li>
       </ul>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">What a UK AI SEO agency actually does</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">What a UK AI SEO and GEO agency actually does</h2>
       <p className="mb-4">
         An agency that cannot describe the work in these terms is selling classic SEO with a new
         label.
@@ -609,22 +637,21 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Methodology, and what we excluded</h2>
       <p className="mb-4">
-        We verified every agency by fetching its own website on 6 August 2026 and reading the
-        service pages, capabilities and office details. Nothing here comes from a directory, a review
+        We first verified every agency on its own website on 6 August 2026, then re-read every claim
+        on the same sites on 21 October 2026: service pages, capabilities and office details. Nothing here comes from a directory, a review
         aggregator or another listicle. FactoryJet&apos;s position is disclosed self-placement. No
         agency paid to appear. Agencies on other UK lists but not on ours:
       </p>
       <ul className="list-disc pl-6 mb-6 space-y-2">
-        <li><strong>Blue Array</strong> and <strong>Distinctly</strong>: their sites blocked automated verification on 6 August 2026, so we could not confirm any claim first hand. Not a judgement on either agency, just a rule applied evenly.</li>
-        <li><strong>Found</strong>: on 6 August 2026 the sitemap at wearefound.com listed a single landing page, so we could not verify a live AI SEO service line.</li>
-        <li><strong>Convert Digital</strong>: no AI SEO or GEO service page found on convert-digital.co.uk on 6 August 2026.</li>
-        <li><strong>Reposition</strong>: no AI search, GEO or AEO line in its services menu on 6 August 2026.</li>
-        <li><strong>HikeMyTraffic</strong>: ranks for UK queries but is based in Noida, India, so it fails the UK-only rule. It appears on our India list instead.</li>
-        <li><strong>Builtvisible</strong>: no longer operating independently, and no current dedicated AI SEO service page.</li>
+        <li><strong>Blue Array</strong>: blocked automated checks on 6 August, and on 21 October 2026 its site returned a Cloudflare error page, so we still could not confirm any claim first hand.</li>
+        <li><strong>Convert Digital</strong>: convert-digital.co.uk refused connections on 21 October 2026.</li>
+        <li><strong>Found</strong>, <strong>Distinctly</strong> and <strong>Reposition</strong>: none showed an AI search line we could verify in August. On 21 October 2026 all three publish one (Found at found.co.uk, Distinctly at its new distinctly.co address, Reposition for luxury brands). They are due a full review in the next update.</li>
+        <li><strong>HikeMyTraffic</strong>: ranks for UK queries, but its site still lists a Noida, India address, so it fails the UK-only rule. It appears on our India list instead.</li>
+        <li><strong>Builtvisible</strong>: its site says it is now part of Brave Bison, so it is no longer an independent agency.</li>
       </ul>
       <p className="mb-4">
         Sources: Ofcom Online Nation 2025 (pages 30 to 32); agency service pages fetched 6 August
-        2026. If we cannot open the source, the number does not go on the page. Related reading:{' '}
+        2026 and re-read 21 October 2026. If we cannot open the source, the number does not go on the page. Related reading:{' '}
         <a href="/blog/is-geo-replacing-seo-2026" className="text-orange-600 underline">
           is GEO replacing SEO
         </a>

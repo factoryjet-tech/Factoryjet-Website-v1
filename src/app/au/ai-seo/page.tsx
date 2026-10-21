@@ -25,7 +25,7 @@ const CANONICAL = 'https://factoryjet.com/au/ai-seo';
 const UPDATED = '2026-10-21';
 const TITLE = 'AI SEO Agency Australia | GEO & AEO Services | FactoryJet';
 const DESCRIPTION =
-  'AI SEO agency in Australia. Generative engine optimisation (GEO) and AEO to get you named in ChatGPT, Perplexity and AI Overviews. Free AI visibility check.';
+  'AI SEO agency in Australia for AI search optimisation: GEO and AEO to get you named in ChatGPT, Perplexity and AI Overviews. Free AI visibility check.';
 const H1 = 'AI SEO Agency Australia: Get Named When Buyers Ask ChatGPT';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD. */
@@ -58,6 +58,10 @@ const SRC_GEO_PAPER = 'https://arxiv.org/abs/2311.09735';
 // reviews or to arrange for others to do so." (fetched via WebFetch; the site
 // blocks plain curl)
 const SRC_ACCC = 'https://www.accc.gov.au/business/advertising-and-promotions/online-product-and-service-reviews';
+// Google Search Central blog, 8 Feb 2023 (re-read 2026-10-21): "Appropriate use of AI or automation
+// is not against our guidelines"; using it "with the primary purpose of manipulating ranking in
+// search results is a violation of our spam policies".
+const SRC_GOOGLE_AI_CONTENT = 'https://developers.google.com/search/blog/2023/02/google-search-and-ai-content';
 
 /* ─── Our own measurement (DataForSEO, Australia, 24–25 September 2026).
        Source files: analysis.json (aio_rate, llm.top_cited_domains) and
@@ -113,6 +117,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'AI is replacing some clicks, not the work. Someone still has to make your business easy for machines to read, publish pages that answer real questions, and earn mentions on sites that AI assistants trust. That is SEO work, aimed at a new place. The agencies at risk are the ones selling rankings reports for searches that now end in an AI answer.' },
   { category: 'future', question: 'Is SEO still worth it in 2026?',
     answer: 'Yes, for most Australian businesses. In our September 2026 check of 154 Australian buyer searches, Google showed an AI Overview on 68% of them, and those overviews mostly cited pages that already ranked well. So ranking is still the entry ticket. The change is that you should now measure AI mentions too, not only positions and traffic.' },
+  { category: 'future', question: 'Can AI do SEO work?',
+    answer: 'Some of it, well. AI tools can group thousands of keywords, draft page outlines, write structured data and spot crawl errors in minutes. They cannot earn mentions on other sites, gather first-hand facts about your business, or decide which services deserve a page. Google says appropriate use of AI is not against its guidelines, but using it mainly to manipulate rankings breaks its spam policies. Good agencies use AI for the grunt work and people for judgment.',
+    links: [{ href: SRC_GOOGLE_AI_CONTENT, label: 'Google: guidance on AI-generated content' }] },
   { category: 'future', question: 'Can ChatGPT do SEO for me?',
     answer: 'ChatGPT can help draft content, suggest page titles and explain technical issues. It cannot make other websites mention you, fix your site’s crawling problems, or decide which of your services deserve a page. It also cannot measure how often it names you across many questions. Use it as a helper. The judgment, the technical work and the reputation building still need people.' },
   { category: 'future', question: 'Can ChatGPT do an SEO audit?',
@@ -146,7 +153,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Choosing an agency & cost ──
   { category: 'choosing', question: 'What are some good AI SEO agencies in Australia?',
-    answer: 'Well-known names include StudioHawk, Impressive Digital, Prosperity Media, Luminary, Click Click Media, Firewire, 23 Digital and Pivotal Agency, and we are one of the options too. We list each with a neutral note further up this page. Interestingly, when we asked four AI assistants the same question, they named different agencies, so talk to a few and ask each for evidence.' },
+    answer: 'Well-known names include StudioHawk, Impressive Digital, Prosperity Media, Luminary, Click Click Media, Firewire, 23 Digital and Pivotal Agency, and we are one of the options too. We list each with a neutral note further up this page, and our separate list of the best AI SEO agencies in Australia checks each firm against its own website. When we asked four AI assistants the same question, they named different agencies, so talk to a few and ask each for evidence.',
+    links: [{ href: '/blog/best-ai-seo-agencies-australia-2026', label: 'Best AI SEO agencies in Australia (2026)' }] },
   { category: 'choosing', question: 'How much does AI SEO cost in Australia?',
     answer: 'It depends on scope, not a price list. The main drivers are how many buyer questions and services you want to cover, how much content needs writing or fixing, the state of your site’s technical setup, how many directory and review profiles need work, and whether you want a one-off audit or ongoing monthly work. We scope after a free first call and quote in writing. Our SEO cost guide shows how Australian providers price AI SEO today.',
     links: [
@@ -286,7 +294,7 @@ const H1_REST = H1.slice(H1_AT + H1_EMPHASIS.length);
 
 const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
 
-/* Hero spec-panel icons (AI answers tested, AI Overviews seen, FactoryJet named). */
+/* Hero spec-panel icons (AI answers tested, AI Overviews seen, answers saved). */
 const HERO_ICONS = [
   'M4 5h16v11H9l-5 4V5Zm4 5h8M8 13h5',
   'M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14Zm9 16-4-4',
@@ -354,7 +362,7 @@ export default function AiSeoAUPage() {
               aria-label="What we measured before writing this page"
               data-visual-slot={`${PAGE_KEY}:hero`}
               data-visual-kind="diagram"
-              data-visual-subject="What we measured before writing this page: 68 AI answers to Australian buyer questions, AI Overviews on 18 of 18 AI SEO searches, and FactoryJet named 0 times"
+              data-visual-subject="What we measured before writing this page: 68 AI answers to Australian buyer questions, AI Overviews on 18 of 18 AI SEO searches, and every answer saved with its date"
               data-visual-ratio="1:1"
               data-visual-status="filled"
             >
@@ -425,7 +433,7 @@ export default function AiSeoAUPage() {
         <div className="wrap byline">
           <div className="av">BB</div>
           <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />25 September 2026</div>
+          <div className="upd">Last updated<br />21 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST DEFINITION (GEO) → Family A facts ═══ */}
@@ -580,9 +588,10 @@ export default function AiSeoAUPage() {
                   YouTube, Reddit, Upwork and Airtasker.
                 </p>
                 <p>
-                  We are not immune to this. Across all 68 answers, FactoryJet was named zero times. We publish that
-                  number because it is the same test we would run for you, and it is the honest starting point for
-                  any AI visibility audit.
+                  This is the same test we run for you before any work starts: your buyers&apos; questions, every
+                  assistant, every source recorded. Want a ranked comparison of the firms instead? Our list of the{' '}
+                  <a href="/blog/best-ai-seo-agencies-australia-2026">best AI SEO agencies in Australia for 2026</a>{' '}
+                  checks each one on its own site.
                 </p>
               </div>
             </div>
@@ -982,7 +991,8 @@ export default function AiSeoAUPage() {
                 We are one option, not the only one. These agencies show up when Australians search for an AI SEO
                 agency or ask AI assistants for a recommendation. Each note is based on what the company says on its
                 own website. Talk to a few, and ask every one of them, including us, to show you your starting
-                position before you sign.
+                position before you sign. For a longer comparison, see our{' '}
+                <a href="/blog/best-ai-seo-agencies-australia-2026">best AI SEO agencies in Australia</a> list.
               </p>
             </div>
             <div className="platlist" role="list">
