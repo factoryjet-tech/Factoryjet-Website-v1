@@ -15,7 +15,7 @@ import './page.css';
 import { websiteMaintenanceAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/au/website-maintenance';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-21';
 const TITLE = 'Website Maintenance Services Australia | FactoryJet';
 const H1 = 'Website Maintenance Services for Australian Businesses: Updates, Security, Backups and Changes, Handled';
 const DESCRIPTION =
@@ -332,7 +332,7 @@ const INDUSTRIES: { t: string; d: ReactNode }[] = [
   { t: 'Tradies and home services', d: <>Quote forms and call buttons tested after every update, service areas and photos kept current, and a site that loads fast on a phone at a job site. See our <a href="/au/websites-for-tradies">websites for tradies</a>.</> },
   { t: 'Dental and allied health', d: <>Online booking links checked, practitioner and fee pages kept accurate, and extra care with patient data because health providers are covered by the Privacy Act. See <a href="/au/dental-website-design">dental website design</a>.</> },
   { t: 'Online stores', d: <>Checkout, payment, shipping and stock sync tested after updates, with extra care before end of financial year sales, Black Friday and Christmas. See <a href="/au/ecommerce-development">ecommerce development</a>.</> },
-  { t: 'Professional services', d: 'Accountants, lawyers and consultants: enquiry forms that always arrive, team pages kept current, and security taken seriously because clients trust you with their details.' },
+  { t: 'Professional services', d: <>Accountants, lawyers and consultants: enquiry forms that always arrive, team pages kept current, and security taken seriously because clients trust you with their details. See <a href="/au/accountant-website-design">accountant website design</a>.</> },
   { t: 'Hospitality and venues', d: 'Menus, opening hours, function packs and booking links updated quickly, so the website never tells customers something that stopped being true last month.' },
   { t: 'Membership and community groups', d: 'Member logins, event pages and payment forms kept working, with volunteers able to edit content safely without breaking the site.' },
 ];
@@ -791,7 +791,9 @@ export default function WebsiteMaintenanceAUPage() {
                   <p>
                     <b>Accessibility.</b> Maintenance is also when accessibility slips or improves. We check new content
                     against the basics of WCAG 2.2, the current version of the web accessibility guidelines, such as
-                    colour contrast, image descriptions and keyboard use.
+                    colour contrast, image descriptions and keyboard use. Accessibility matters most for disability
+                    services, which is why our <a href="/au/ndis-website-design">NDIS website design</a> page treats it
+                    as the starting point.
                   </p>
                   <p className="au-note">
                     Sources: <a href={SRC_OAIC_NDB} {...extLink}>OAIC, Notifiable Data Breaches scheme</a>;{' '}

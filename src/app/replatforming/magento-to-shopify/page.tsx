@@ -30,7 +30,7 @@ import '@/components/v2/PlatformPage.css';
  */
 
 const PAGE_URL = 'https://factoryjet.com/replatforming/magento-to-shopify';
-const PAGE_MODIFIED = '2026-09-17';
+const PAGE_MODIFIED = '2026-10-21';
 const PAGE_TITLE = 'Magento to Shopify Plus Migration: Cost, Timeline & Runbook';
 const PAGE_DESCRIPTION =
   'Magento to Shopify Plus migration cost and timeline, with sourced 2026 ranges, Adobe Commerce end-of-support dates and an 11-phase runbook.';
@@ -103,6 +103,14 @@ const SRC = {
   cart2cart: 'https://www.shopping-cart-migration.com/shopping-cart-migration-options/1066-magento-to-shopify-migration',
   matrixifyPricing: 'https://matrixify.app/pricing/',
   matrixifyMagento: 'https://matrixify.app/migrate-to-shopify/magento/',
+  // EU section sources, each fetched 2026-10-21.
+  localCurrency: 'https://help.shopify.com/en/manual/international/pricing/currency-and-pricing',
+  intlDomains: 'https://help.shopify.com/en/manual/international/managing-international-domains',
+  euTaxes: 'https://help.shopify.com/en/manual/taxes/eu/eu-oss',
+  shopifyGdpr: 'https://help.shopify.com/en/manual/privacy-and-security/privacy/gdpr',
+  ecOss: 'https://vat-one-stop-shop.ec.europa.eu/one-stop-shop_en',
+  gdprText: 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679',
+  shopwareMagento: 'https://store.shopware.com/en/swag156421341964f/magento-migration-profile.html',
 } as const;
 
 const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
@@ -608,6 +616,30 @@ const FAQ_ITEMS = [
     question: 'What does replatforming mean?',
     answer:
       'Replatforming means moving your online store to a different commerce platform, such as from Magento to Shopify Plus. Shopify splits it into two parts: data migration, which moves products, customers, orders and content and takes weeks, and the full replatform, which adds the storefront build, integrations and redesign and usually takes 3 to 6 months.',
+  },
+  {
+    category: 'data',
+    question: 'Can Shopify handle multiple currencies and EU VAT after we leave Magento?',
+    answer:
+      "Yes for currencies, partly for VAT. With Shopify Markets, customers see prices, pay and get refunds in their local currency, and Shopify converts at the current exchange rate unless you set rates yourself. Shopify can charge VAT based on the customer's location once you add your VAT number, but it says it cannot file or pay your taxes. You still file your EU One Stop Shop return, which is quarterly. Sources read 21 October 2026.",
+  },
+  {
+    category: 'data',
+    question: 'What is the EU One Stop Shop, and does it change when we move to Shopify?',
+    answer:
+      'The One Stop Shop (OSS) has run since 1 July 2021. It lets a seller register in one EU country and file one quarterly VAT return for sales to consumers in other EU countries, with an annual EUR 10,000 threshold for those cross-border sales, per the European Commission. Changing platform does not change your OSS registration. It changes how VAT is calculated at checkout, so test EU orders before launch.',
+  },
+  {
+    category: 'data',
+    question: 'Is it GDPR compliant to move our Magento customer data to Shopify?',
+    answer:
+      "It can be, if the contracts are in place first. You remain the controller, and Shopify acts as your processor under its Data Processing Addendum. GDPR Article 28 says every processor, including a migration agency or app, needs a written contract, acts only on your documented instructions and needs your written authorisation for sub-processors. Chapter V sets conditions for transfers outside the EU. This is general information, not legal advice.",
+  },
+  {
+    category: 'seo',
+    question: 'Will we keep our hreflang tags and language URLs when we migrate to Shopify?',
+    answer:
+      'You keep hreflang, but maybe not the same URLs. Shopify creates hreflang tags automatically for each international domain or subfolder. Language-only subfolders such as /fr exist only on your primary market, and other markets use a language and country pair such as /fr-ca or /en-eu. If your Magento store used paths like /de/ for a secondary market, map each old URL to its new one with a 301 redirect.',
   },
 ];
 
@@ -1125,6 +1157,40 @@ export default function MagentoToShopifyPage() {
             <p style={{ ...BODY_STYLE, marginTop: '20px' }}>
               Selling wholesale? Our{' '}
               <Link href="/services/shopify-plus-b2b" style={LINK_STYLE}>Shopify Plus B2B service</Link> covers companies, catalogs, net terms and ERP pricing sync in more depth.
+            </p>
+          </div>
+        </section>
+
+        {/* 07b. European merchants. Sources fetched 2026-10-21. */}
+        <section id="magento-to-shopify-europe" className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <Badge>Selling in Europe</Badge>
+            <h2 style={H2_STYLE}>Migrating a European Magento store to Shopify</h2>
+            <p style={BODY_STYLE}>
+              A store that sells across the EU has five extra things to plan before cutover: currencies, VAT, customer data, language URLs and whether Shopify is the right target at all. Each point below links to the official page we read on 21 October 2026.
+            </p>
+            <h3 style={H3_STYLE}>1. Prices in euros, kroner and zloty with Shopify Markets</h3>
+            <p style={BODY_STYLE}>
+              With Markets, customers see prices, pay at checkout and get refunds in their local currency. Shopify converts prices at the current exchange rate unless you set rates by hand, and you can round prices per market. Only stores on Shopify Payments with one-page checkout get every part of the feature, so check your payment provider before you rebuild Magento store views as markets (<SourceLink href={SRC.localCurrency}>Shopify Help Center</SourceLink>).
+            </p>
+            <h3 style={H3_STYLE}>2. EU VAT and the One Stop Shop</h3>
+            <p style={BODY_STYLE}>
+              Since 1 July 2021, the One Stop Shop (OSS) lets a seller register in one EU country and file one VAT return each quarter for sales to consumers in other EU countries. An annual EUR 10,000 threshold applies to those cross-border consumer sales (<SourceLink href={SRC.ecOss}>European Commission</SourceLink>). Shopify can charge VAT based on where the customer is once you add your VAT number, but Shopify says you can&apos;t use it to file or pay your taxes (<SourceLink href={SRC.euTaxes}>Shopify Help Center</SourceLink>). Keep your OSS filing process, and test VAT on a few EU orders before launch.
+            </p>
+            <h3 style={H3_STYLE}>3. Moving customer data under the GDPR</h3>
+            <p style={BODY_STYLE}>
+              You stay the controller of your customers&apos; data, and Shopify acts as a processor following your instructions under its Data Processing Addendum (<SourceLink href={SRC.shopifyGdpr}>Shopify Help Center</SourceLink>). The same logic covers whoever runs the migration. Article 28 of the GDPR says a processor works under a written contract, only on your documented instructions, and cannot bring in another processor without your written authorisation. Chapter V adds conditions for any transfer of personal data outside the EU (<SourceLink href={SRC.gdprText}>GDPR on EUR-Lex</SourceLink>). Ask your agency and every migration app for their processing agreement and the list of sub-processors before the first test export.
+            </p>
+            <h3 style={H3_STYLE}>4. Keeping hreflang and per-language URLs</h3>
+            <p style={BODY_STYLE}>
+              Shopify creates hreflang tags automatically for every international domain or subfolder you set up. Language-only subfolders such as /fr can exist only on your primary market. Other markets combine language and country, such as /fr-ca or /en-eu (<SourceLink href={SRC.intlDomains}>Shopify Help Center</SourceLink>). So a Magento path like /de/ may not survive as it is. Map every old language URL to its new home in the redirect file, translate the content before launch, and check the hreflang output per market once the store is live.
+            </p>
+            <h3 style={H3_STYLE}>5. Shopware, the other route out of Magento</h3>
+            <p style={BODY_STYLE}>
+              If you are also weighing Shopware 6, Shopware publishes a free Magento Migration Profile that works with its free Migration Assistant. On 21 October 2026 the listing said it moves Magento 2.0 to 2.4 stores to Shopware 6, for Shopware 6.6.0.0 to 6.7.15.1 (<SourceLink href={SRC.shopwareMagento}>Shopware Store</SourceLink>). Run a test migration on each and compare them on your B2B, ERP and tax needs before you pick.
+            </p>
+            <p style={SMALL_STYLE}>
+              Sources, all read 21 October 2026: <SourceLink href={SRC.localCurrency}>Shopify local currencies</SourceLink>, <SourceLink href={SRC.ecOss}>European Commission OSS</SourceLink>, <SourceLink href={SRC.euTaxes}>Shopify EU taxes</SourceLink>, <SourceLink href={SRC.shopifyGdpr}>Shopify GDPR</SourceLink>, <SourceLink href={SRC.gdprText}>GDPR text</SourceLink>, <SourceLink href={SRC.intlDomains}>Shopify international domains</SourceLink>, <SourceLink href={SRC.shopwareMagento}>Shopware Magento Migration Profile</SourceLink>. This is general information, not legal or tax advice.
             </p>
           </div>
         </section>

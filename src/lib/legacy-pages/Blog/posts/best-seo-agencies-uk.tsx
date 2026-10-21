@@ -382,7 +382,8 @@ export const post: BlogPost = {
         <a href="/uk/seo-audit" className="text-orange-600 underline">UK SEO audit</a> is the
         cheapest way to see how a shortlisted agency actually thinks before you commit to a
         retainer. (Source: Whitehat SEO, SEO Packages
-        &amp; Pricing UK 2026.)
+        &amp; Pricing UK 2026.) Full breakdown by business type:{' '}
+        <a href="/blog/seo-cost-uk-2026" className="text-orange-600 underline">SEO cost in the UK (2026)</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">How to choose: segment first, then proof</h2>

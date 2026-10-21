@@ -19,7 +19,7 @@ import '../au-city.css';
    FAQ set and the sources are carried over from the August 2026 page; the
    old sections/ folder and the Lenis client shell were removed. */
 
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-21';
 const TITLE = 'Web Design & SEO Adelaide | Easier to Rank In | FactoryJet';
 const H1 = 'Web design Adelaide: websites and SEO for South Australian businesses';
 const DESCRIPTION =
@@ -675,7 +675,7 @@ export default function AdelaidePage() {
               <details className="ventry">
                 <summary><h3>We are a trade or clinic and want more calls from our suburbs</h3><span className="chev" aria-hidden="true">+</span></summary>
                 <span className="vtag">Local SEO first, site second.</span>
-                <p>Fix the Google listing and reviews, then build service pages for the suburbs you cover. See our <a href="/au/seo">SEO services in Australia</a>.</p>
+                <p>Fix the Google listing and reviews, then build service pages for the suburbs you cover. See our <a href="/au/seo">SEO services in Australia</a>. On a small budget, our guide to <a href="/au/small-business-seo">small business SEO</a> sets out what to buy first.</p>
               </details>
               <details className="ventry">
                 <summary><h3>We sell to business or government and buyers check us before calling</h3><span className="chev" aria-hidden="true">+</span></summary>

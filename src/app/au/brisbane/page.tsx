@@ -20,7 +20,7 @@ import '../au-city.css';
    720 · seo consultant / expert brisbane 590 · brisbane web designer 480 · web design
    agency brisbane 390 · local seo brisbane 390. Title and H1 intent kept from the
    previous version of this page. */
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-21';
 const TITLE = 'Web Design & SEO Brisbane | Fast Sites | FactoryJet';
 const H1 = 'Web design and SEO for Brisbane businesses';
 const DESCRIPTION =
@@ -608,7 +608,10 @@ export default function BrisbanePage() {
             <p>
               A Chermside dental practice, a Milton law firm or a Newstead accountant rarely needs a prettier
               homepage. They need the booking button to write into the practice system, the enquiry form to land in
-              the CRM, and invoices to reach Xero or MYOB without someone retyping them.
+              the CRM, and invoices to reach Xero or MYOB without someone retyping them. Each of those has its own
+              page: <a href="/au/dental-website-design">dental website design</a>,{' '}
+              <a href="/au/law-firm-seo">law firm SEO</a> and{' '}
+              <a href="/au/accountant-website-design">accountant website design</a>.
             </p>
             <p>
               That is where a custom build earns its keep over a template. We connect the site to the tools you
@@ -839,7 +842,7 @@ export default function BrisbanePage() {
               <details className="ventry">
                 <summary><h3>Our site is fine, but we do not show up in Google or on Maps</h3><span className="chev" aria-hidden="true">+</span></summary>
                 <span className="vtag">You need SEO, not a redesign.</span>
-                <p>Start with a technical audit and your Google Business Profile. See our <a href="/au/seo">SEO services for Australian businesses</a>.</p>
+                <p>Start with a technical audit and your Google Business Profile. See our <a href="/au/seo">SEO services for Australian businesses</a>, or <a href="/au/small-business-seo">SEO for small business</a> if the budget is tight and you need to know what to buy first.</p>
               </details>
               <details className="ventry">
                 <summary><h3>We sell products online, or want trade customers to order online</h3><span className="chev" aria-hidden="true">+</span></summary>

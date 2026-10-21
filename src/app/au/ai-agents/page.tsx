@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Fragment } from 'react';
+import { Fragment, type ReactNode } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -16,7 +16,7 @@ import './visual.css';
 import { ExecutionPath, ExecutionJobDiagram } from './ExecutionDiagram';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-agents';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-21';
 const TITLE = 'AI Automation Agency Australia | AI Agents | FactoryJet';
 /* Shortened 2026-09-26 so the hero form sits in the first desktop screen; "the tools you already
    run" moved into the hero lead. */
@@ -366,13 +366,13 @@ const JOB_SUBJECTS = [
 ] as const;
 
 /* Use cases by Australian industry (was the six service cards). */
-const INDUSTRIES: { t: string; d: string }[] = [
+const INDUSTRIES: { t: string; d: ReactNode }[] = [
   { t: 'Trades and home services', d: 'Turn emailed and web enquiries into booked jobs in ServiceM8, Simpro or Tradify, send quote follow-ups, chase overdue invoices from Xero, and collect photos and details before the visit. Construction sits at 6% AI use in the ABS data, so the head start is real.' },
   { t: 'Healthcare clinics', d: 'Admin only, never clinical decisions: sorting the practice inbox, drafting referral and recall letters, answering booking questions and preparing intake forms in tools like Cliniko. Health information is sensitive information under the Privacy Act, so approval steps and access limits are tighter.' },
-  { t: 'Professional services', d: 'Accountants, law firms, advisers and agencies: client onboarding, collecting documents, summarising meetings into your practice management system, drafting routine letters and preparing month-end data from Xero or MYOB for a person to check.' },
+  { t: 'Professional services', d: <>Accountants, law firms, advisers and agencies: client onboarding, collecting documents, summarising meetings into your practice management system, drafting routine letters and preparing month-end data from Xero or MYOB for a person to check. For the website side, see <a href="/au/accountant-website-design">accountant website design</a>.</> },
   { t: 'Ecommerce and retail', d: 'Order status and returns questions answered from Shopify and courier tracking, product data cleaned and enriched, supplier purchase orders drafted from stock levels, and refunds routed for approval under your Australian Consumer Law returns policy.' },
   { t: 'Logistics and wholesale', d: 'Emailed purchase orders turned into sales orders, delivery exceptions flagged before the customer calls, proof-of-delivery matched to invoices, and B2B reorder reminders. Transport, postal and warehousing sits at 1% AI use in the ABS figures.' },
-  { t: 'Property and real estate', d: 'Tenant maintenance requests sorted and passed to the right trade, rental enquiries answered and inspections booked, and routine notices drafted in tools like PropertyMe for a property manager to approve.' },
+  { t: 'Property and real estate', d: <>Tenant maintenance requests sorted and passed to the right trade, rental enquiries answered and inspections booked, and routine notices drafted in tools like PropertyMe for a property manager to approve. Agencies that need the website too can see <a href="/au/real-estate-websites">real estate websites</a>.</> },
 ];
 
 /* Where the agents plug in (was the eight integration cards). */

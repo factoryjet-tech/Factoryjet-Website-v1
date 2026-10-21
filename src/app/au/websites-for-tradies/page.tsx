@@ -688,7 +688,8 @@ export default function WebsitesForTradiesAUPage() {
                     genuine reviews, which is one more reason to get the basics right. Our{' '}
                     <a href="/au/ai-seo">AI SEO service for Australian businesses</a> goes deeper on this, and our{' '}
                     <a href="/au/seo">SEO services in Australia</a> cover ongoing local SEO for trades that want to rank
-                    across more services and suburbs.
+                    across more services and suburbs. A one-van business on a tight budget should read our guide to{' '}
+                    <a href="/au/small-business-seo">small business SEO</a> first.
                   </p>
                   <p className="au-note">
                     Source: <a href={SRC_GBP_SAB} {...extLink}>Google Business Profile Help, service-area businesses</a>.

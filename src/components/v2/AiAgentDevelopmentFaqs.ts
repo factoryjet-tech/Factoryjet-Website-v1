@@ -219,5 +219,23 @@ export const AI_AGENT_FAQS = [
     "category": "faq-cost",
     "question": "What are affordable agentic AI systems for small and mid-sized businesses?",
     "answer": "The affordable ones are ready-made products you rent by the seat or by the outcome. On October 9, 2026, Lindy listed plans from $29.99 to $199.99 a user a month, and Intercom listed its Fin support agent at $0.99 per outcome. Development firm ProductCrafters puts per-seat agent products at $20 to $500 a user a month and custom builds at about $5,000 to more than $180,000. Rent first if a product already connects to your tools. Build when the work follows your own rules across several systems. Our guide to AI agent development companies for small business covers both routes."
+  },
+  {
+    "id": "Q32",
+    "category": "faq-scope",
+    "question": "Does an AI chatbot or agent have to tell people in the EU that it is AI?",
+    "answer": "Yes, in most cases. Article 50(1) of the EU AI Act says AI systems that interact directly with people must be designed so those people are told they are dealing with AI, unless that is obvious from the context. Article 50(5) says the notice must be clear and given at the first interaction at the latest. Article 50 has applied since 2 August 2026. The 2026 Digital Omnibus amendment (Regulation (EU) 2026/1744, which we read on EUR-Lex on October 21, 2026) moved the high-risk deadlines but left that date in place. The simplest way to meet it is to say so in the agent's first message."
+  },
+  {
+    "id": "Q33",
+    "category": "faq-scope",
+    "question": "Who signs the data processing agreement when an AI agent handles EU personal data?",
+    "answer": "You sign it with each company that processes the data for you. Under GDPR Article 28, your business is usually the controller, and any vendor that handles personal data on your behalf is a processor bound by a written contract. The processor may act only on your documented instructions and may not add another processor without your written authorisation. For an AI agent that chain often covers the developer, the hosting provider and the AI model provider. Ask for each one's agreement and sub-processor list before go-live. This is general information, not legal advice."
+  },
+  {
+    "id": "Q34",
+    "category": "faq-scope",
+    "question": "Where is the data processed when an AI agent serves customers in Europe?",
+    "answer": "Wherever the hosting and the AI model provider run it, so that is a design choice to settle before the build. Chapter V of the GDPR allows a transfer of personal data outside the EU only under its conditions, such as a European Commission adequacy decision or the Commission's standard contractual clauses. Before the build starts, ask your developer to list each service that touches personal data, the region it runs in and the transfer basis it relies on. Check the details with your own counsel."
   }
 ] as const;

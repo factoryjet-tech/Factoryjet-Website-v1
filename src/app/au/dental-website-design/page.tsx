@@ -14,7 +14,7 @@ import './page.css';
 import { DentalBookingFlow, DentalPracticeDiagram } from './DentalVisuals';
 
 const CANONICAL = 'https://factoryjet.com/au/dental-website-design';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-21';
 const TITLE = 'Dental Website Design & Dental SEO Australia | FactoryJet';
 const H1 = 'Dental Website Design and Dental SEO for Australian Practices, Built Around the AHPRA Rules';
 const DESCRIPTION =
@@ -817,7 +817,8 @@ export default function DentalWebsiteDesignAUPage() {
                   as government, and the accepted benchmark for websites is the Web Content Accessibility Guidelines
                   (WCAG). The current version, WCAG 2.2, was published by the W3C in October 2023. We build to WCAG 2.2
                   level AA: strong contrast, text that resizes cleanly, clear focus states, labelled forms, captions on
-                  videos, and descriptive image text.
+                  videos, and descriptive image text. The same standard is the starting point for our{' '}
+                  <a href="/au/ndis-website-design">NDIS website design</a> work.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><div>
                   <p>

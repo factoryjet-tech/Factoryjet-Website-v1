@@ -877,7 +877,8 @@ export default function LocalSeoUKPage() {
                     A strong profile usually needs citation cleanup, structured data and AI answer tracking on top. A
                     neglected one needs the basics first. We scope it after a short call and a free local SEO audit,
                     so you know what the work involves before committing. Engagements run as a one-off audit, as
-                    fixed-price milestones, or as a monthly retainer.
+                    fixed-price milestones, or as a monthly retainer. Published market ranges are in our guide to{' '}
+                    <a href="/blog/seo-cost-uk-2026" style={{ textDecoration: 'underline' }}>what SEO costs in the UK</a>.
                   </p>
                 </div>
                 <div className="mt-8">

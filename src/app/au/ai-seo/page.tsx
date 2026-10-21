@@ -22,7 +22,7 @@ import CitationDiagram from './CitationDiagram';
    instead of targeting them. */
 
 const CANONICAL = 'https://factoryjet.com/au/ai-seo';
-const UPDATED = '2026-09-25';
+const UPDATED = '2026-10-21';
 const TITLE = 'AI SEO Agency Australia | GEO & AEO Services | FactoryJet';
 const DESCRIPTION =
   'AI SEO agency in Australia. Generative engine optimisation (GEO) and AEO to get you named in ChatGPT, Perplexity and AI Overviews. Free AI visibility check.';
@@ -216,7 +216,7 @@ const jsonLd = {
       headline: H1,
       description: DESCRIPTION,
       inLanguage: 'en-AU',
-      datePublished: UPDATED,
+      datePublished: '2026-09-25',
       dateModified: UPDATED,
       breadcrumb: { '@id': `${CANONICAL}#breadcrumb` },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="true"]'] },
@@ -763,7 +763,8 @@ export default function AiSeoAUPage() {
                   <li><span>Your Google Business Profile is incomplete or unverified.</span></li>
                   <li><span>You have fewer than a handful of genuine reviews anywhere.</span></li>
                 </ul>
-                <p>If this sounds like you, start with <a href="/au/seo">SEO services Australia</a>. The same foundations feed AI answers later.</p>
+                <p>If this sounds like you, start with <a href="/au/seo">SEO services Australia</a>, or <a href="/au/small-business-seo">small business SEO</a> if you are a small team on a small budget. The same foundations feed AI answers later.</p>
+                <p>Comparing firms first? Our list of the <a href="/blog/best-ai-seo-agencies-australia-2026">best AI SEO agencies in Australia</a> checks each one on its own site.</p>
               </details>
             </div>
           </div>

@@ -891,6 +891,10 @@ export default function SeoUKPage() {
                     audit, so the plan matches your situation rather than a template, and you know what the work is
                     before you commit.
                   </p>
+                  <p>
+                    For published UK market ranges by business type, see our{' '}
+                    <a href="/blog/seo-cost-uk-2026" style={{ textDecoration: 'underline' }}>UK SEO cost guide</a>.
+                  </p>
                 </div>
                 <div className="mt-8">
                   <ModalCTAButton label="Get my free SEO audit" region="uk" modalVariant="default" btnVariant="primary-light" />

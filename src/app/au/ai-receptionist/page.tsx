@@ -15,7 +15,7 @@ import './page.css';
 import CallRoutingDiagram from './CallRoutingDiagram';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-receptionist';
-const UPDATED = '2026-10-11';
+const UPDATED = '2026-10-21';
 const TITLE = 'AI Receptionist Australia | Custom, Supported | FactoryJet';
 /* Shortened 2026-09-26 so the hero form sits in the first desktop screen. The rest of the old H1
    ("Hands Over When It Matters") moved into the hero lead. */
@@ -295,7 +295,7 @@ const INDUSTRIES: { t: string; d: ReactNode }[] = [
   { t: 'Medical and allied health clinics', d: 'GPs, physios, chiros, psychologists and specialists, on the admin side only: bookings, changes, directions and what to bring, written into Cliniko or your practice software. No clinical advice, ever, and urgent symptoms follow a path your clinicians approve.' },
   { t: 'Dental practices', d: <>New patient enquiries, check-ups, hygiene bookings, cancellations and approved answers on health fund claiming. Pain, swelling and emergencies go to the team at once. It can work alongside online booking pages patients already use. Need the website side too? See <a href="/au/dental-website-design">dental website design and SEO</a>.</> },
   { t: 'Law firms', d: 'New enquiry intake by practice area, details for your conflict check, first consultation bookings, and routing existing clients to the right lawyer. A virtual receptionist for lawyers that never gives legal advice and captures every after-hours enquiry.' },
-  { t: 'Real estate and property management', d: 'Inspection and appraisal bookings, listing questions, tenant maintenance requests and after-hours calls, logged into your property software, with urgent repairs routed to the right tradie or property manager.' },
+  { t: 'Real estate and property management', d: <>Inspection and appraisal bookings, listing questions, tenant maintenance requests and after-hours calls, logged into your property software, with urgent repairs routed to the right tradie or property manager. Need the website side too? See <a href="/au/real-estate-websites">real estate agency websites</a>.</> },
   { t: 'Hospitality', d: 'Restaurants, cafés and venues. Table bookings and changes during service, opening hours, dietary and function enquiries, so staff are not pulled off the floor by the phone on a Friday night.' },
 ];
 
@@ -888,7 +888,9 @@ export default function AiReceptionistAUPage() {
               <a href="/blog/best-ai-receptionist-small-business">the best AI receptionist for small business</a>.
               If you are comparing{' '}
               <a href="/blog/best-ai-agencies-australia-2026">Australian agencies that build voice agents and chatbots</a>,
-              see our guide to the best AI agencies in Australia.
+              see our guide to the best AI agencies in Australia. If the website needs work as well, we cover{' '}
+              <a href="/au/accountant-website-design">websites for accounting firms</a> and{' '}
+              <a href="/au/ndis-website-design">NDIS provider websites</a> on their own pages.
             </p>
             <p>
               Health businesses get extra care. Because health service providers are covered by the Privacy Act
