@@ -128,11 +128,12 @@ export default function HeadlessCommercePage() {
               <div>
                 <p className="pp-eyebrow">Headless &amp; composable commerce</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '17ch' }}>
-                  A fast front end, any commerce backend.
+                  Headless commerce storefronts built on Next.js.
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '47ch' }}>
-                  Headless commerce decouples your storefront from the platform underneath, so you get sub-second loads
-                  and full design freedom while Shopify, BigCommerce, or Commerceflo by FactoryJet run catalog, cart, and checkout.
+                  FactoryJet is a headless commerce agency. We build custom storefronts in Next.js, Shopify Hydrogen or
+                  BigCommerce Catalyst, and connect them by API to Shopify, BigCommerce or Commerceflo by FactoryJet. The
+                  platform keeps running catalog, cart and checkout. You get sub-second page loads and a design no theme limits.
                 </p>
                 <HeroInlineForm source="us_headless_hero" region="us" submitLabel="Get a headless audit" />
               </div>

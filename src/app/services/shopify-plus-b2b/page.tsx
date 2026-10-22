@@ -359,11 +359,11 @@ export default function ShopifyPlusB2BPage() {
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
                 <p className="pp-eyebrow">Shopify Plus B2B Wholesale Agency.</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  Scale wholesale on <span className="pp-grad">Shopify Plus.</span>
+                <h1 style={{ margin: '14px 0 12px', maxWidth: '20ch' }}>
+                  Shopify Plus B2B agency for <span className="pp-grad">wholesale portals.</span>
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  Custom B2B price lists. Net 30 and 60 terms. Company hierarchies and volume tiers. Real-time ERP synchronization on one unified store backend.
+                  FactoryJet builds B2B wholesale portals on Shopify Plus for brands that sell to retailers and distributors. Your buyers log in to see their own price lists, Net 30 or Net 60 terms, company accounts and volume tiers. Orders sync to NetSuite, SAP, Dynamics 365, Acumatica or QuickBooks in real time.
                 </p>
                 <HeroInlineForm source="us_shopify_plus_b2b_hero" region="us" submitLabel="Get a Shopify B2B Scope." />
               </div>

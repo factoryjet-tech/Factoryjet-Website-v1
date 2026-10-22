@@ -382,13 +382,13 @@ export default function HealthcareAiAgentsPage() {
                   </span>
                 </div>
                 
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">Custom AI Medical Voice Receptionists with{' '}
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">AI Agents for Medical and Dental Practices, with{' '}
                   <span>
                     Live EHR Integration.
-                  </span>.</h1>
-                
+                  </span></h1>
+
                 <p className="text-lg sm:text-xl text-[#46403B] font-normal leading-relaxed mb-8 max-w-2xl">
-                  We build private AI voice agents for American medical practices, dental clinics, and hospital departments. Response time stays under 500 milliseconds, so calls feel like a real conversation. The agent stops missed patient calls, automates after-hours scheduling, and syncs both ways with Epic, Cerner, Dentrix, and AthenaHealth.
+                  FactoryJet builds custom AI agents for US medical practices, dental clinics and hospital departments. Our healthcare agents start at the front desk phone. They book and move appointments, check insurance eligibility, text intake forms, take refill requests and hand emergencies to your staff. Replies come in under 500 milliseconds, and every booking syncs both ways with Epic, Cerner, Dentrix and AthenaHealth.
                 </p>
 
                 <div className="mb-8">

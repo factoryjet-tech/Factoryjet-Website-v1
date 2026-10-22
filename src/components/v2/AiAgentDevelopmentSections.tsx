@@ -391,8 +391,8 @@ export default function AiAgentDevelopmentSections() {
           <div className="wrap hero-grid">
             <div className="hero-copy">
               <div className="eyebrow">Service Specification</div>
-              <h1>Custom AI Agent Development Services for <span className="hero-emphasis">Your Business Systems</span></h1>
-              <p className="lead">FactoryJet is an AI agent development company for US businesses. We design, build, integrate and support custom AI agents that follow your business rules and complete multi-step work inside the systems you already run: NetSuite, SAP, Odoo, Salesforce, HubSpot, Zendesk and Shopify. A person approves anything that matters. You own the code.</p>
+              <h1>Custom AI Agent Development for <span className="hero-emphasis">Small and Mid-Size Businesses</span></h1>
+              <p className="lead">FactoryJet is an agentic AI development company for small and mid-size US businesses. We design, build, integrate and support custom AI agents that follow your business rules and complete multi-step work inside the systems you already run: NetSuite, SAP, Odoo, Salesforce, HubSpot, Zendesk and Shopify. A person approves anything that matters. You own the code.</p>
               <div className="actions">
                 <a className="btn btn-primary" href="#tell-us">Tell us the workflow</a>
                 <a className="btn btn-ghost" href="#short-answers">Cost, timeline, ownership</a>

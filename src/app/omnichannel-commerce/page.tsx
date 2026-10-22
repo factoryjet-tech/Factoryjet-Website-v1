@@ -200,13 +200,13 @@ export default function OmnichannelCommercePage() {
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
                 <p className="pp-eyebrow">Omnichannel commerce</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '16ch' }}>
-                  One catalog. Every channel. One system that sells.
+                <h1 style={{ margin: '14px 0 12px', maxWidth: '20ch' }}>
+                  Omnichannel agency for Shopify, Amazon, Walmart and TikTok Shop.
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  We design, build, and run the engine behind omnichannel commerce, so your web store, retail POS,
-                  marketplaces, and social shops read from one catalog, one inventory, and one source of truth. DTC and
-                  B2B, on the platforms you already use.
+                  FactoryJet builds and runs omnichannel selling for brands on Shopify, Amazon, Walmart and TikTok Shop.
+                  Every channel reads from one catalog and one inventory count. A sale on Amazon updates stock on your
+                  Shopify store and your TikTok Shop listing, and nobody retypes it. Retail POS and B2B portals plug into the same system.
                 </p>
                 <HeroInlineForm source="us_omnichannel_hero" region="us" submitLabel="Get an omnichannel audit" />
               </div>
