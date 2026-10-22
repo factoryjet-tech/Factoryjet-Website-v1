@@ -129,6 +129,7 @@ import { post as websiteCostAustralia2026Post } from './posts/website-cost-austr
 import { post as seoCostAustralia2026Post } from './posts/seo-cost-australia-2026';
 import { post as seoCostUk2026Post } from './posts/seo-cost-uk-2026';
 import { post as bestAiSeoAgenciesAustralia2026Post } from './posts/best-ai-seo-agencies-australia-2026';
+import { post as bestAiReceptionistsAustralia2026Post } from './posts/best-ai-receptionists-australia-2026';
 import { post as aiCostAustralia2026Post } from './posts/ai-cost-australia-2026';
 import { post as shopifyCostAustralia2026Post } from './posts/shopify-cost-australia-2026';
 import { post as bestAiAgenciesAustralia2026Post } from './posts/best-ai-agencies-australia-2026';
@@ -148,6 +149,7 @@ import { post as bestAiAgentDevelopmentCompaniesForManufacturers2026Post } from 
 import { post as shopifyPlusMigrationCost2026Post } from './posts/shopify-plus-migration-cost-2026';
 import { post as bestAiAutomationAgenciesUk2026Post } from './posts/best-ai-automation-agencies-uk-2026';
 import { post as bestShopifyPlusAgenciesUk2026Post } from './posts/best-shopify-plus-agencies-uk-2026';
+import { post as bestEcommerceSeoAgenciesUk2026Post } from './posts/best-ecommerce-seo-agencies-uk-2026';
 import { post as ecommerceWebsiteCostUk2026Post } from './posts/ecommerce-website-cost-uk-2026';
 import { post as bestBigcommerceAgencies2026Post } from './posts/best-bigcommerce-agencies-2026';
 import { post as aiAgentGovernancePolicyMidSizedCompanies2026Post } from './posts/ai-agent-governance-policy-mid-sized-companies-2026';
@@ -169,8 +171,12 @@ import { post as aiAgentDevelopmentContractChecklist2026Post } from './posts/ai-
 import { post as whyAiAgentProjectsFail2026Post } from './posts/why-ai-agent-projects-fail-2026';
 import { post as copilotStudioVsCustomAiAgents2026Post } from './posts/copilot-studio-vs-custom-ai-agents-2026';
 import { post as enterpriseAiAgentCost2026Post } from './posts/enterprise-ai-agent-cost-2026';
+import { post as aiAutomationAgencyCost2026Post } from './posts/ai-automation-agency-cost-2026';
+import { post as privateAiForBusinessOwnData2026Post } from './posts/private-ai-for-business-own-data-2026';
 
 export const POSTS: BlogPost[] = [
+  aiAutomationAgencyCost2026Post,
+  privateAiForBusinessOwnData2026Post,
   bestAiAgentDevelopmentCompanies2026Post,
   // --- AI BUYER DECISION WAVE (2026-10-18): Copilot Studio, project failure, enterprise cost, vetting questions, agency vs in-house, contract checklist, AI MVP cost ---
   copilotStudioVsCustomAiAgents2026Post,
@@ -206,6 +212,7 @@ export const POSTS: BlogPost[] = [
   shopifyPlusMigrationCost2026Post,
   bestAiAutomationAgenciesUk2026Post,
   bestShopifyPlusAgenciesUk2026Post,
+  bestEcommerceSeoAgenciesUk2026Post,
   ecommerceWebsiteCostUk2026Post,
   // --- BUYER QUESTION WAVE (2026-10-09): lists and cost guides for UK, US and AU ---
   bestAiAgentDevelopmentCompaniesUk2026Post,
@@ -222,6 +229,7 @@ export const POSTS: BlogPost[] = [
   seoCostAustralia2026Post,
   seoCostUk2026Post,
   bestAiSeoAgenciesAustralia2026Post,
+  bestAiReceptionistsAustralia2026Post,
   aiCostAustralia2026Post,
   shopifyCostAustralia2026Post,
   bestAiAgenciesAustralia2026Post,

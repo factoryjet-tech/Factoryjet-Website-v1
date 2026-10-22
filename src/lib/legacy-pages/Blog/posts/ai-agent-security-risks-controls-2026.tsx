@@ -312,6 +312,11 @@ export const post: BlogPost = {
         tool layer sits.
       </p>
 
+      <p>
+        Choosing where the model runs? See{' '}
+        <a href="/blog/private-ai-for-business-own-data-2026">private AI for business: nine options compared</a>.
+      </p>
+
       <h2 id="seven-controls">AI agent security best practices: seven controls before go-live</h2>
       <ol className="list-decimal pl-6 space-y-3 mb-6">
         <li><strong>Own identity.</strong> A dedicated service account per agent, never a person&apos;s login or a shared admin account.</li>

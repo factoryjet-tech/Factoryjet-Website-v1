@@ -681,6 +681,7 @@ export const post: BlogPost = {
       <div className="bg-[#FAF8F5] border border-[#E5DFD7] rounded-xl p-6 my-10">
         <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-3">More 2026 decision guides</p>
         <ul className="mb-0">
+          <li><a href="/blog/ai-automation-agency-cost-2026">AI automation agency cost in 2026</a>: project and retainer ranges by company size and job.</li>
           <li><a href="/blog/ai-mvp-development-cost-2026">AI MVP development cost in 2026</a>: what a first AI product costs to build, by scope.</li>
           <li><a href="/blog/questions-to-ask-ai-development-company-2026">15 questions to ask an AI development company</a>: and the red flags in the answers.</li>
           <li><a href="/blog/ai-agent-development-contract-checklist-2026">AI agent development contract checklist</a>: 14 clauses on data, ownership and support.</li>

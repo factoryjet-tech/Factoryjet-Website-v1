@@ -637,7 +637,7 @@ export default function UsAiAutomationPage() {
                   <Link href="/blog/best-ai-automation-agencies-usa-2026" className="font-semibold text-[#B23E13] underline underline-offset-2">
                     best AI automation agencies in the US
                   </Link>{' '}
-                  compares 14 firms, including us.
+                  compares 14 firms, including us.{' '}Budgeting first? Our <Link href="/blog/ai-automation-agency-cost-2026" className="font-semibold text-[#B23E13] underline underline-offset-2">AI automation agency cost guide</Link> has project and retainer ranges by company size.
                 </p>
               </div>
             </div>

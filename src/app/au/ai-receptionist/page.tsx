@@ -15,7 +15,7 @@ import './page.css';
 import CallRoutingDiagram from './CallRoutingDiagram';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-receptionist';
-const UPDATED = '2026-10-21';
+const UPDATED = '2026-10-22';
 const TITLE = 'AI Receptionist Australia | Custom, Supported | FactoryJet';
 /* Shortened 2026-09-26 so the hero form sits in the first desktop screen. The rest of the old H1
    ("Hands Over When It Matters") moved into the hero lead. */
@@ -906,8 +906,8 @@ export default function AiReceptionistAUPage() {
               Not on the list? The same approach works for vets, salons, gyms, accountants, car dealers, NDIS
               providers and aged care admin. If your calls follow a pattern, an AI receptionist can usually take the
               routine ones. For a buyer’s view of the options in this space, read our guide to{' '}
-              {/* TODO(AU plan N2): add a link to /blog/best-ai-receptionists-australia-2026 here once that post
-                  is live. It does not exist yet (21 Oct 2026), so do not link it before it ships. */}
+              <a href="/blog/best-ai-receptionists-australia-2026">the best AI receptionists in Australia</a>, or,
+              for products sold worldwide,{' '}
               <a href="/blog/best-ai-receptionist-small-business">the best AI receptionist for small business</a>.
               If you are comparing{' '}
               <a href="/blog/best-ai-agencies-australia-2026">Australian agencies that build voice agents and chatbots</a>,

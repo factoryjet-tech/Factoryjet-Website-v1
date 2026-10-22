@@ -530,7 +530,7 @@ export const post: BlogPost = {
       <ol className="list-decimal pl-6 space-y-2 mb-6">
         <li><strong>Customer-facing at volume.</strong> Website chat, WhatsApp or voice for thousands of customers a day, where every answer would otherwise draw credits and the 50-a-minute limit on small pack counts matters.</li>
         <li><strong>Systems outside Microsoft.</strong> Orders in NetSuite, Odoo, SAP Business One or ERPNext, stock in Shopify, deals in HubSpot or Salesforce, invoices in Xero, or EDI feeds from trading partners.</li>
-        <li><strong>Model choice.</strong> You want to pick or switch between OpenAI, Anthropic Claude and Google Gemini, or run a model in your own cloud account.</li>
+        <li><strong>Model choice.</strong> You want to pick or switch between OpenAI, Anthropic Claude and Google Gemini, or <a href="/blog/private-ai-for-business-own-data-2026">run a model in your own cloud account</a>.</li>
         <li><strong>Custom approval steps and audit logs.</strong> A person must approve before an order, refund or price change posts, and every step must be logged in a format your auditors already use.</li>
         <li><strong>Code in your own repository.</strong> You want the agent to keep running if you change software vendors, with no dependency on a monthly credit pool.</li>
         <li><strong>Work that is not a conversation.</strong> Reading emailed purchase orders and PDFs, matching invoices, or building quotes from a rule book, where the agent works in the background.</li>

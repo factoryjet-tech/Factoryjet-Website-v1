@@ -13,7 +13,7 @@ import './ecommerce-seo.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-seo';
-const UPDATED = '2026-08-25';
+const UPDATED = '2026-10-22';
 
 /* ─── Breadcrumb: one array feeds both the visible trail and the JSON-LD, so they cannot drift. ─── */
 const crumbs = [
@@ -1028,12 +1028,15 @@ export default function EcommerceSeoPage() {
           <tr><td className="feat">Shopify-specific SEO: Liquid, canonicals, schema</td><td className="fj yes">✓ Native Shopify dev team</td><td className="partial">Generic</td><td className="partial">Varies</td></tr>
           <tr><td className="feat">Category page copy and on-page SEO</td><td className="fj yes">✓ Included</td><td className="partial">Often add-on</td><td className="partial">Separate scope</td></tr>
           <tr><td className="feat">Editorial links, not paid directories</td><td className="fj yes">✓ Editorial UK links</td><td className="partial">Varies</td><td className="no">✗ Rarely</td></tr>
-          <tr><td className="feat">Month-to-month, no annual lock-in</td><td className="fj yes">✓ Month-to-month</td><td className="no">✗ 12-month minimum</td><td className="yes">✓ Flexible</td></tr>
+          <tr><td className="feat">Month-to-month, no annual lock-in</td><td className="fj yes">✓ Month-to-month</td><td className="no">✗ Often 6 to 12 months</td><td className="yes">✓ Flexible</td></tr>
           <tr><td className="feat">Same team from audit onwards</td><td className="fj yes">✓ Yes</td><td className="no">✗ Often rotated</td><td className="yes">✓ Yes</td></tr>
           <tr><td className="feat">AI search optimisation (AEO/GEO)</td><td className="fj yes">✓ Schema + AEO included</td><td className="partial">Emerging</td><td className="no">✗ Rarely</td></tr>
         </tbody>
       </table>
     </div>
+    <p style={{ marginTop: '20px' }}>
+      Want named firms instead of categories? Our <a href="/blog/best-ecommerce-seo-agencies-uk-2026">list of the best ecommerce SEO agencies in the UK</a> checks 10 agencies on their own websites, with the platforms they name and the prices they publish.
+    </p>
   </div>
 </section>
 

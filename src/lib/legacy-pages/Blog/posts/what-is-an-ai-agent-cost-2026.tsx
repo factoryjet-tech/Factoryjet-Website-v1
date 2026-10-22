@@ -281,7 +281,7 @@ export const post: BlogPost = {
         to score the agent&apos;s answers against them. Skipping it is how demos turn into incidents. The model choice
         rarely moves the price much. The systems, the data and the approval rules do. For a larger company that needs
         audit logs, approval steps and a security review, see our guide to{' '}
-        <a href="/blog/enterprise-ai-agent-cost-2026">enterprise AI agent cost</a> in 2026.
+        <a href="/blog/enterprise-ai-agent-cost-2026">enterprise AI agent cost</a> in 2026. For what agencies charge to automate a workflow, see our <a href="/blog/ai-automation-agency-cost-2026">AI automation agency cost guide</a>.
       </p>
 
       <h2 id="rent">How much does an AI agent cost to rent instead?</h2>
