@@ -114,6 +114,22 @@ export const AuthorPage: React.FC<AuthorPageProps> = ({ author, posts }) => {
         </div>
       </section>
 
+      {/* Founder story */}
+      {author.story && author.story.length > 0 && (
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 pt-10 md:pt-16">
+          <div className="max-w-3xl">
+            <h2 className="font-display font-bold text-xl md:text-2xl text-slate-900 mb-4 md:mb-5">
+              How FactoryJet started
+            </h2>
+            {author.story.map((paragraph, idx) => (
+              <p key={idx} className="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Expertise, Credentials, Tools */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">

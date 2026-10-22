@@ -398,7 +398,7 @@ export default function AiAgentRoiCalculatorPage() {
                   AI-first contact handling significantly lowers cost per resolution versus a live human rep, a consistent directional finding across industry GenAI cost-efficiency analyses. Exact savings depend on ticket complexity and deflection rate.
                 </p>
                 <div className="text-xs font-mono text-[#6E655F]">
-                  Directional estimate &mdash; industry GenAI cost analyses, not a single named study
+                  Directional estimate: industry GenAI cost analyses, not a single named study
                 </div>
               </li>
             </ul>

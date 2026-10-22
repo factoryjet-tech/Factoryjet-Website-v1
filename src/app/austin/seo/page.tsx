@@ -12,7 +12,7 @@ import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-22';
 const CANONICAL = 'https://factoryjet.com/austin/seo';
 
 export const metadata: Metadata = {
@@ -330,6 +330,57 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'How will I know the work is bringing in Austin leads?',
     answer: 'Agree what counts before work starts: phone calls from your profile, form fills, booked estimates. We set up tracking for those in the first month. Each monthly note lists the work done, then the calls and forms, then ranking changes for the terms you chose. Rankings come last because they matter only when they bring calls.',
   },
+  {
+    category: 'local',
+    question: 'Should my Google profile show my LLC name or the brand on my trucks?',
+    answer: 'Use the name customers see. Google\'s profile rules say your name should match the one on your storefront, website and paperwork, and should leave out legal terms like LLC unless you use them that way in real life. If your Texas LLC trades under a brand that differs from its legal name, the Texas Secretary of State\'s Form 503 instructions say it must file an assumed name certificate with the state. That certificate lasts up to ten years.',
+  },
+  {
+    category: 'technical',
+    question: 'Can you help my Austin business show up in Google video results?',
+    answer: 'Yes, if the videos sit on your own site the right way. Google\'s video guide says a video needs a watch page that is indexed, a standard embed such as a video or iframe element, and a thumbnail at a stable URL. Uploading to YouTube alone does not put the video on your site. For an Austin contractor or clinic, we put a short walkthrough on the matching service page rather than on a separate gallery page.',
+  },
+  {
+    category: 'local',
+    question: 'How does SEO work for Austin contractors?',
+    answer: 'Contractors usually win on two things: the right profile category and one strong page per job type. A Pflugerville roofer needs a roof repair page and a roof replacement page, each with real local jobs, photos and reviews, and a primary category that matches the main trade. If you work from home and do not meet customers there, Google\'s service-area rules say to remove the address and list the cities you serve instead.',
+  },
+  {
+    category: 'technical',
+    question: 'What is the difference between SEO and search engine marketing in Austin?',
+    answer: 'Most people use search engine marketing to mean paid ads, such as Google Ads, where you pay per click and the traffic stops when the budget stops. SEO is the unpaid side: the map pack and regular results you earn with your profile, pages and reviews. A new Austin business often runs ads for leads in the first months while SEO builds. We handle the SEO side and will tell you if ads suit your case better.',
+  },
+  {
+    category: 'attribution',
+    question: 'How long before an Austin business sees changes from SEO?',
+    answer: 'Google\'s SEO Starter Guide says some changes show within a few hours and others can take several months, and it suggests waiting a few weeks before judging whether a change worked. Profile fixes and listing corrections tend to show first. New service pages and fresh reviews take longer to move map positions. Our monthly notes date each change, so you can match every fix to what happened after it.',
+  },
+  {
+    category: 'contracts',
+    question: 'Does my SEO company need an office in Austin?',
+    answer: 'No. What matters is that they know your market and can show it. Ask them to search your main terms from an Austin location and tell you who ranks in the map pack and why. That check needs a location setting in a search tool, not a desk on Congress Avenue. Pick a firm that answers your calls and puts you in direct contact with the people doing the work.',
+  },
+];
+
+const SOURCES: ReadonlyArray<{ publisher: string; title: string; url: string; note: string }> = [
+  {
+    publisher: 'Texas Secretary of State',
+    title: 'Form 503: Instructions for Assumed Name Certificate',
+    url: 'https://www.sos.state.tx.us/corp/instructions/503.shtml',
+    note: 'An LLC or corporation trading in Texas under a name other than its legal name files an assumed name certificate with the Secretary of State. The certificate lasts up to ten years.',
+  },
+  {
+    publisher: 'Google Search Central',
+    title: 'Video SEO best practices',
+    url: 'https://developers.google.com/search/docs/appearance/video',
+    note: 'A video needs an indexed watch page, a standard embed and a thumbnail at a stable URL before Google can show it in video results.',
+  },
+  {
+    publisher: 'Google Search Central',
+    title: 'SEO Starter Guide',
+    url: 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide',
+    note: 'Google says some changes show within a few hours and others can take several months, and suggests waiting a few weeks before judging a change.',
+  },
 ];
 
 const FAQ_SCHEMA = {
@@ -383,6 +434,7 @@ const WEBPAGE_SCHEMA = {
   description: 'Google Business Profile and technical SEO work for Austin, TX businesses. Scope and terms are put in writing before work starts.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  citation: SOURCES.map((src) => ({ '@type': 'CreativeWork', name: src.title, url: src.url })),
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
@@ -908,6 +960,28 @@ export default function AustinSeoPage() {
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
         />
+
+        {/* ── SOURCES CHECKED FOR THIS PAGE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '0 0 56px' }}>
+          <div className="pp-wrap" style={{ maxWidth: '860px' }}>
+            <h2 style={{ fontSize: '20px', fontWeight: 800, color: '#141414', letterSpacing: '-0.015em', margin: '0 0 8px' }}>
+              Sources behind these answers
+            </h2>
+            <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: '0 0 16px' }}>
+              We fetched and read each of these pages on 22 Oct 2026.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {SOURCES.map((s) => (
+                <li key={s.url} style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55 }}>
+                  <a href={s.url} target="_blank" rel="noopener" style={{ color: '#B23E13', fontWeight: 700, textDecoration: 'underline' }}>
+                    {s.publisher}: {s.title}
+                  </a>
+                  <span style={{ display: 'block' }}>{s.note}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>

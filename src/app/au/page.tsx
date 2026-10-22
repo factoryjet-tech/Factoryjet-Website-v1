@@ -1096,7 +1096,7 @@ export function AustraliaHubContent({ reviewConcept }: { reviewConcept?: Austral
             <div className="founder-cta__action">
               <p>
                 Send your name and work email. Bhavesh replies within one business day to book a short call in your time
-                zone. Leave with a clear scope and fixed quote—no sales team, no obligation.
+                zone. Leave with a clear scope and fixed quote. No sales team, no obligation.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="primary-light" />

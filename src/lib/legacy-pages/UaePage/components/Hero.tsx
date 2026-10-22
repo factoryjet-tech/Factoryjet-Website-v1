@@ -108,7 +108,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
                                 <CheckCircle size={16} className="text-blue-200" />
                             </div>
                             <div>
-                                <p className="text-[13px] font-bold text-white leading-none mb-1">98% Satisfaction</p>
+                                <p className="text-[13px] font-bold text-white leading-none mb-1">97% On-Time Delivery</p>
                                 <p className="text-[11px] text-white/80 leading-none">500+ Projects</p>
                             </div>
                          </div>

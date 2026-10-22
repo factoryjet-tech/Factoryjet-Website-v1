@@ -45,7 +45,7 @@ const TABS: TabConfig[] = [
     id: 'protocol',
     label: 'SEO Migration & Ranking Defense',
     icon: '🛡️',
-    tagline: 'Our 5-stage roadmap to protect 100% of organic traffic during redesigns and launches.',
+    tagline: 'Our 5-stage roadmap to protect organic traffic during redesigns and launches.',
   },
 ];
 
@@ -54,7 +54,6 @@ interface SimulationEvent {
   label: string;
   source: string;
   protocol: string;
-  latency: string;
   status: string;
   explanation: string;
 }
@@ -65,36 +64,32 @@ const SIMULATION_EVENTS: SimulationEvent[] = [
     label: 'High-Intent Local Map Pack Query',
     source: 'Google Search Local Proximity Algorithm',
     protocol: 'Primary Category + GeoCoordinates + Review Velocity',
-    latency: '84ms',
-    status: 'Ranked in Top 3 Local Map Pack',
-    explanation: 'A customer searches for high-ticket local services nearby. Google evaluates verified business categories, localized review velocity, and NAP citation consistency to rank your profile in the top three.',
+    status: 'Profile Evaluated for the Local Map Pack',
+    explanation: 'A customer searches for high-ticket local services nearby. Google weighs your verified business categories, recent reviews, and NAP citation consistency when it picks the three profiles shown in the Map Pack.',
   },
   {
     id: 'ai_citation',
     label: 'AI Search Engine Citation Trigger',
     source: 'ChatGPT Search / Perplexity / Google AI Overview',
     protocol: 'JSON-LD Entity Graph Schema → Direct Source Citation',
-    latency: '118ms',
-    status: 'Quoted as Recommended Local Provider',
-    explanation: 'A prospect asks an AI search engine for the top-rated local firm. Because your website features concise answer-first prose and structured schema, the AI engine directly cites and recommends your brand.',
+    status: 'Page Available as a Citable Source',
+    explanation: 'A prospect asks an AI search engine for a well-reviewed local firm. Concise answer-first prose and structured schema make your pages easy for the engine to read, quote, and link as a source.',
   },
   {
     id: 'review_sync',
-    label: 'Automated 5-Star Customer Review Ingestion',
+    label: 'Automated Customer Review Request',
     source: 'Post-Service SMS Flow → Google Business Profile',
     protocol: 'Verified Customer Feedback → Google Review Feed',
-    latency: '92ms',
     status: 'Review Published & Proximity Signal Boosted',
-    explanation: 'A satisfied customer completes a 1-tap SMS review request. The verified 5-star rating updates on Google Maps, immediately expanding your ranking radius across neighboring business corridors.',
+    explanation: 'After the job, the customer gets a 1-tap SMS link asking for an honest review. The review appears on your Google Business Profile and adds to the review signals Google weighs for local results.',
   },
   {
     id: 'crawl_speed',
     label: 'Googlebot Mobile-First Crawl & Index',
     source: 'Google Smartphone Crawler',
     protocol: 'Next.js 15 Static HTML → Cloudflare Edge CDN',
-    latency: '62ms',
     status: '200 OK Single-Hop Crawl Completed',
-    explanation: 'Googlebot requests your commercial service page. The server delivers statically rendered HTML in under 70 milliseconds with zero render-blocking JavaScript delays.',
+    explanation: 'Googlebot requests your commercial service page. The CDN edge returns statically rendered HTML with no render-blocking JavaScript in the way.',
   },
 ];
 
@@ -393,7 +388,7 @@ export default function LocalSeoArchitectureBlueprint({
                 </div>
                 <div className="flex items-center gap-2 self-start md:self-auto">
                   <span className="font-fj-mono text-xs text-[#0369A1] bg-[#E0F2FE] px-3 py-1 rounded-full font-semibold">
-                    100% Valid JSON-LD
+                    Tested JSON-LD
                   </span>
                   <span className="font-fj-mono text-xs text-[#047857] bg-[#D1FAE5] px-3 py-1 rounded-full font-semibold">
                     AI Entity Graph
@@ -451,13 +446,13 @@ export default function LocalSeoArchitectureBlueprint({
                       Layer 3: Google Business Profile &amp; Review Velocity
                     </h3>
                     <p className="text-xs text-[#64748B]">
-                      Dominating the localized 3-Pack Map results through category optimization, geotagged photos, and automated customer reviews.
+                      Competing for the local 3-Pack Map results through category choice, geotagged photos, and a steady flow of customer reviews.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 self-start md:self-auto">
                   <span className="font-fj-mono text-xs text-[#92400E] bg-[#FEF3C7] px-3 py-1 rounded-full font-semibold">
-                    Top 3 Map Pack Dominance
+                    Map Pack Signals
                   </span>
                 </div>
               </div>
@@ -465,11 +460,11 @@ export default function LocalSeoArchitectureBlueprint({
               <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
                 <div className="bg-[#FAF8F5] p-4 rounded-xl border border-[#EFE8E1]">
                   <p className="text-xs font-bold text-[#0F172A] mb-1">Primary Category Precision</p>
-                  <p className="text-[12px] text-[#475569] leading-relaxed">Exact primary and secondary category assignments driving over 60% of Map Pack weighting.</p>
+                  <p className="text-[12px] text-[#475569] leading-relaxed">Exact primary and secondary category assignments. Primary category is the top-rated local pack factor in Whitespark&apos;s{' '}<a href="https://whitespark.ca/local-search-ranking-factors/" target="_blank" rel="noopener noreferrer" className="underline text-[#B23E13]">2026 Local Search Ranking Factors survey</a>{' '}(checked 22 Oct 2026).</p>
                 </div>
                 <div className="bg-[#FAF8F5] p-4 rounded-xl border border-[#EFE8E1]">
                   <p className="text-xs font-bold text-[#0F172A] mb-1">Automated Review Workflows</p>
-                  <p className="text-[12px] text-[#475569] leading-relaxed">SMS and email workflows generating consistent 5-star verified customer feedback with keywords.</p>
+                  <p className="text-[12px] text-[#475569] leading-relaxed">SMS and email workflows that ask every customer for an honest Google review after the job.</p>
                 </div>
                 <div className="bg-[#FAF8F5] p-4 rounded-xl border border-[#EFE8E1]">
                   <p className="text-xs font-bold text-[#0F172A] mb-1">Multi-Platform NAP Sync</p>
@@ -497,7 +492,7 @@ export default function LocalSeoArchitectureBlueprint({
                   Click an Event to Trace How Search Engines Crawl &amp; Rank Your Site
                 </h3>
                 <p className="text-sm text-[#64748B] mt-1">
-                  See how local Map Pack queries, AI answer citations, customer reviews, and Googlebot crawls process in under 120ms.
+                  See, step by step, how local Map Pack queries, AI answer citations, customer reviews, and Googlebot crawls are processed.
                 </p>
               </div>
               <div className="flex items-center gap-2">
@@ -533,7 +528,7 @@ export default function LocalSeoArchitectureBlueprint({
               }`}>
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-fj-mono text-xs text-[#B23E13] font-bold">STEP 1: USER / BOT QUERY</span>
-                  <span className="text-[11px] font-fj-mono text-[#64748B]">0ms</span>
+                  <span className="text-[11px] font-fj-mono text-[#64748B]">Query</span>
                 </div>
                 <h4 className="font-bold text-sm text-[#0F172A]">Event Triggered</h4>
                 <p className="text-xs text-[#475569] mt-1">{activeEvent.source}</p>
@@ -547,7 +542,7 @@ export default function LocalSeoArchitectureBlueprint({
               }`}>
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-fj-mono text-xs text-[#0369A1] font-bold">STEP 2: SIGNAL EVALUATION</span>
-                  <span className="text-[11px] font-fj-mono text-[#64748B]">~40ms</span>
+                  <span className="text-[11px] font-fj-mono text-[#64748B]">Evaluate</span>
                 </div>
                 <h4 className="font-bold text-sm text-[#0F172A]">Algorithm Processing</h4>
                 <p className="text-xs text-[#475569] mt-1">{activeEvent.protocol}</p>
@@ -561,7 +556,7 @@ export default function LocalSeoArchitectureBlueprint({
               }`}>
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-fj-mono text-xs text-[#047857] font-bold">STEP 3: SEARCH VISIBILITY</span>
-                  <span className="text-[11px] font-fj-mono text-[#047857] font-bold">{activeEvent.latency}</span>
+                  <span className="text-[11px] font-fj-mono text-[#047857] font-bold">Result</span>
                 </div>
                 <h4 className="font-bold text-sm text-[#0F172A]">Result Rendered</h4>
                 <p className="text-xs text-[#475569] mt-1">{activeEvent.status}</p>
@@ -583,9 +578,9 @@ export default function LocalSeoArchitectureBlueprint({
                 </p>
               </div>
               <div className="w-full md:w-auto bg-white p-3 rounded-xl border border-[#E2D8CF] font-fj-mono text-xs text-[#475569]">
-                <span className="text-[#64748B] block text-[10px] uppercase font-bold mb-1">Response Latency</span>
-                <span className="text-lg font-bold text-[#0F172A]">{activeEvent.latency}</span>
-                <span className="text-[#047857] block text-[11px]">Top 3 Placement</span>
+                <span className="text-[#64748B] block text-[10px] uppercase font-bold mb-1">Outcome</span>
+                <span className="text-sm font-bold text-[#0F172A]">{activeEvent.status}</span>
+                <span className="text-[#047857] block text-[11px]">Illustrative walkthrough</span>
               </div>
             </div>
           </div>
@@ -605,13 +600,13 @@ export default function LocalSeoArchitectureBlueprint({
               <div className="bg-[#FAF8F5] p-5 rounded-2xl border border-[#E8DFD8] hover:border-[#F05A28]/50 transition-colors">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="h-2.5 w-2.5 rounded-full bg-[#F05A28]" />
-                  <h4 className="font-bold text-[#0F172A] text-sm">Google Search Console &amp; Indexing API</h4>
+                  <h4 className="font-bold text-[#0F172A] text-sm">Google Search Console &amp; Sitemaps</h4>
                 </div>
                 <p className="text-xs text-[#475569] leading-relaxed">
-                  Instant indexing notification protocol pushing new landing pages and updates to Googlebot in seconds.
+                  Sitemap submissions and URL Inspection requests so Googlebot finds new landing pages and updates quickly.
                 </p>
                 <div className="mt-3 flex gap-1.5">
-                  <span className="font-fj-mono text-[10px] bg-white px-2 py-0.5 rounded border text-[#0369A1]">Indexing API v3</span>
+                  <span className="font-fj-mono text-[10px] bg-white px-2 py-0.5 rounded border text-[#0369A1]">URL Inspection</span>
                   <span className="font-fj-mono text-[10px] bg-white px-2 py-0.5 rounded border text-[#047857]">Real-Time Sitemaps</span>
                 </div>
               </div>
@@ -636,7 +631,7 @@ export default function LocalSeoArchitectureBlueprint({
                   <h4 className="font-bold text-[#0F172A] text-sm">DataForSEO &amp; BrightLocal APIs</h4>
                 </div>
                 <p className="text-xs text-[#475569] leading-relaxed">
-                  Hyper-local ranking grid tracking across 100+ geographic coordinate pins throughout your target city.
+                  Hyper-local ranking grid tracking across a grid of coordinate pins laid over your target city.
                 </p>
                 <div className="mt-3 flex gap-1.5">
                   <span className="font-fj-mono text-[10px] bg-white px-2 py-0.5 rounded border text-[#0369A1]">Geo-Grid Scan</span>
@@ -650,7 +645,7 @@ export default function LocalSeoArchitectureBlueprint({
                   <h4 className="font-bold text-[#0F172A] text-sm">Tier 1 Directory Data Aggregators</h4>
                 </div>
                 <p className="text-xs text-[#475569] leading-relaxed">
-                  Neustar Localeze, Data Axle, and Factual distribution ensuring 100% NAP consistency across the web.
+                  Listings pushed through Data Axle and Neustar Localeze so your name, address, and phone match across directories.
                 </p>
                 <div className="mt-3 flex gap-1.5">
                   <span className="font-fj-mono text-[10px] bg-white px-2 py-0.5 rounded border text-[#0369A1]">Data Axle</span>
@@ -719,7 +714,7 @@ export default function LocalSeoArchitectureBlueprint({
                 <div>
                   <h4 className="font-bold text-[#0F172A] text-sm">1-to-1 301 Permanent Redirect Mapping Matrix</h4>
                   <p className="text-xs text-[#475569] mt-1 leading-relaxed">
-                    We map every legacy URL to its exact new destination, preserving 100% of domain authority without 404 broken links.
+                    We map every legacy URL to its exact new destination, so old links and rankings carry over and no visitor lands on a 404.
                   </p>
                 </div>
               </div>
@@ -743,7 +738,7 @@ export default function LocalSeoArchitectureBlueprint({
                 <div>
                   <h4 className="font-bold text-[#0F172A] text-sm">Zero-Downtime Cutover &amp; Instant Indexing Push</h4>
                   <p className="text-xs text-[#475569] mt-1 leading-relaxed">
-                    We execute DNS cutovers with immediate automated submissions to Google Search Console and IndexNow for instant crawling.
+                    We execute DNS cutovers with immediate sitemap submissions to Google Search Console and IndexNow so crawlers find the new URLs fast.
                   </p>
                 </div>
               </div>
@@ -753,7 +748,7 @@ export default function LocalSeoArchitectureBlueprint({
                   5
                 </span>
                 <div>
-                  <h4 className="font-bold text-[#0F172A] text-sm">24/7 Post-Launch Proximity &amp; Rank Monitoring</h4>
+                  <h4 className="font-bold text-[#0F172A] text-sm">Post-Launch Proximity &amp; Rank Monitoring</h4>
                   <p className="text-xs text-[#475569] mt-1 leading-relaxed">
                     We track daily keyword rankings, Google Map Pack proximity radiuses, and inbound lead conversion attribution in GA4.
                   </p>
@@ -766,16 +761,16 @@ export default function LocalSeoArchitectureBlueprint({
         {/* ── BENTO ASSURANCE METRICS (LIGHT & CRISP) ── */}
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div className="bg-white border border-[#E8DFD8] p-5 rounded-2xl shadow-sm hover:border-[#F05A28]/40 transition-colors">
-            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#0F172A]">44%</p>
-            <p className="text-xs text-[#64748B] mt-1 font-medium">Top 3 Map Pack Click Share</p>
+            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#0F172A]">GBP</p>
+            <p className="text-xs text-[#64748B] mt-1 font-medium">Primary Category First</p>
           </div>
           <div className="bg-white border border-[#E8DFD8] p-5 rounded-2xl shadow-sm hover:border-[#F05A28]/40 transition-colors">
             <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#F05A28]">Sub-1s</p>
             <p className="text-xs text-[#64748B] mt-1 font-medium">Mobile Core Web Vitals</p>
           </div>
           <div className="bg-white border border-[#E8DFD8] p-5 rounded-2xl shadow-sm hover:border-[#F05A28]/40 transition-colors">
-            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#0F172A]">100%</p>
-            <p className="text-xs text-[#64748B] mt-1 font-medium">Preserved 301 URL Equity</p>
+            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#0F172A]">1-to-1</p>
+            <p className="text-xs text-[#64748B] mt-1 font-medium">301 Redirect Map</p>
           </div>
           <div className="bg-white border border-[#E8DFD8] p-5 rounded-2xl shadow-sm hover:border-[#F05A28]/40 transition-colors">
             <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#047857]">Tier 1</p>
@@ -810,7 +805,7 @@ export default function LocalSeoArchitectureBlueprint({
             <div className="flex-shrink-0 flex flex-col items-center sm:items-end gap-3">
               <ModalCTAButton label={ctaLabel} region={region} btnVariant="primary-light" />
               <span className="text-xs text-[#64748B] font-fj-mono text-center sm:text-right">
-                ✓ 100% Engineer-Led · Zero Sales Pressure
+                ✓ Engineer-Led · Zero Sales Pressure
               </span>
             </div>
           </div>

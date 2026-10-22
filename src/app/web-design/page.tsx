@@ -1115,7 +1115,7 @@ export default function WebDesignServicePage() {
         {/* ── 9. INDIA MARKET CONTEXT ──────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="INDIA'S DIGITAL MARKET"
-          headline="Indian Businesses Can't Afford a Bad Website in 2025"
+          headline="Indian Businesses Can't Afford a Bad Website in 2026"
           leadParagraphs={[
             "94% of first impressions are design-related. Your potential customers decide whether to trust you in 0.05 seconds, before they read a single word. If your website looks outdated, loads slowly, or doesn't work on a mid-range Android phone, that impression doesn't get a second chance.",
             "India now has 800M+ internet users, the world's single largest internet market, and 70%+ of that traffic arrives via mobile. Google India uses mobile-first indexing, which means your site's mobile performance directly determines where you appear in search results. A site that loads in 5 seconds on mobile isn't just inconvenient; it's invisible.",

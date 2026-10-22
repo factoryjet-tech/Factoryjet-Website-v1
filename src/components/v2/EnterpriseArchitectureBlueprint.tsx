@@ -34,7 +34,7 @@ const TABS: TabConfig[] = [
     id: 'dataflow',
     label: 'Live Event Pipeline Simulator',
     icon: '⚡',
-    tagline: 'Test real-time orders, inventory sync, and pricing updates in under 150ms.',
+    tagline: 'Trace real-time orders, inventory sync, and pricing updates step by step.',
   },
   {
     id: 'erp',
@@ -44,9 +44,9 @@ const TABS: TabConfig[] = [
   },
   {
     id: 'cutover',
-    label: 'Zero-Downtime Cutover Protocol',
+    label: 'Staged Cutover Protocol',
     icon: '🛡️',
-    tagline: 'Our 5-stage roadmap to move platforms with zero lost sales and 100% SEO safety.',
+    tagline: 'Our 5-stage roadmap to move platforms while protecting sales and search rankings.',
   },
 ];
 
@@ -68,8 +68,8 @@ const SIMULATION_EVENTS: SimulationEvent[] = [
     source: 'Shopify Plus 1-Click Checkout',
     protocol: 'GraphQL Webhook → Cloudflare Message Queue',
     latency: '112ms',
-    status: 'Instantly synced into NetSuite ERP',
-    explanation: 'A buyer clicks "Pay". The order is safely queued in under 50ms so no purchase is ever lost, then booked straight into your ERP general ledger.',
+    status: 'Synced into NetSuite ERP',
+    explanation: 'A buyer clicks "Pay". The order lands in a durable queue first, so a slow or offline ERP does not lose it, then it is booked into your ERP general ledger.',
     payload: '{\n  "event": "orders/create",\n  "total": "$4,820.00",\n  "terms": "Net 30",\n  "idempotencyKey": "ord_8f92a1",\n  "status": "confirmed"\n}',
   },
   {
@@ -79,7 +79,7 @@ const SIMULATION_EVENTS: SimulationEvent[] = [
     protocol: 'REST Webhook → Smart Delta Ingestion',
     latency: '84ms',
     status: 'Stock levels updated across all stores',
-    explanation: 'When pallets arrive at your warehouse, stock counts update across your website, retail stores, and B2B portal in under 100 milliseconds.',
+    explanation: 'When pallets arrive at your warehouse, stock counts update across your website, retail stores, and B2B portal without anyone re-keying them.',
     payload: '{\n  "event": "inventory/delta",\n  "skuCount": 1420,\n  "locations": ["US-East", "US-West"],\n  "syncLatency": "84ms"\n}',
   },
   {
@@ -99,7 +99,7 @@ const SIMULATION_EVENTS: SimulationEvent[] = [
     protocol: 'Model Context Protocol → Real-Time ERP Catalog',
     latency: '165ms',
     status: 'Approved Draft PO sent to buyer',
-    explanation: 'An AI assistant reviews a customer RFQ email, checks real-time inventory and margin rules in your ERP, and drafts an instant invoice.',
+    explanation: 'An AI assistant reviews a customer RFQ email, checks real-time inventory and margin rules in your ERP, and drafts a quote for your team to approve.',
     payload: '{\n  "agent": "rfq_bidding_agent",\n  "quoteId": "quote_4421",\n  "marginCheck": "passed",\n  "approval": "auto"\n}',
   },
 ];
@@ -109,7 +109,7 @@ const AUTO_SCROLL_DURATION = 5000; // 5 seconds per tab
 export default function EnterpriseArchitectureBlueprint({
   badge = '// ENTERPRISE ARCHITECTURE BLUEPRINT',
   title = 'How Modern Enterprise Commerce Works',
-  subtitle = 'Say goodbye to slow cartridge builds, high license fees, and fragile integrations. Here is how leading brands move from Salesforce Commerce Cloud to Shopify Plus with zero downtime.',
+  subtitle = 'Say goodbye to slow cartridge builds, high license fees, and fragile integrations. Here is how brands move from Salesforce Commerce Cloud to Shopify Plus with a planned, rehearsed cutover.',
   legacySource = 'Salesforce Commerce Cloud (SFCC)',
   targetStack = 'Shopify Plus Enterprise Architecture',
   ctaLabel = 'Schedule a Free 30-Min Architecture Scoping Call',
@@ -364,7 +364,7 @@ export default function EnterpriseArchitectureBlueprint({
                 <div className="bg-[#FAF8F5] p-4 rounded-xl border border-[#EFE8E1]">
                   <p className="text-xs font-bold text-[#0F172A] mb-1">AI Search Optimization</p>
                   <p className="text-[12px] text-[#475569] leading-relaxed">
-                    Built so ChatGPT, Perplexity, and Google AI Overviews instantly recommend your brand.
+                    Structured so ChatGPT, Perplexity, and Google AI Overviews can read and cite your product pages.
                   </p>
                 </div>
               </div>
@@ -374,7 +374,7 @@ export default function EnterpriseArchitectureBlueprint({
             <div className="flex justify-center items-center gap-2 py-1 text-xs text-[#B23E13] font-fj-mono font-bold">
               <span>↓</span>
               <span className="bg-white px-4 py-1 rounded-full border border-[#E5DFD7] shadow-sm">
-                Instant GraphQL Webhook Stream (Zero Dropped Orders)
+                GraphQL Webhook Stream (Queued and Retried Orders)
               </span>
               <span>↓</span>
             </div>
@@ -422,7 +422,7 @@ export default function EnterpriseArchitectureBlueprint({
                 <div className="bg-[#FAF8F5] p-4 rounded-xl border border-[#EFE8E1]">
                   <p className="text-xs font-bold text-[#0F172A] mb-1">Automatic Data Translator</p>
                   <p className="text-[12px] text-[#475569] leading-relaxed">
-                    Converts Shopify orders and products into the exact format your ERP understands, with zero human data entry.
+                    Converts Shopify orders and products into the exact format your ERP understands, without manual re-keying.
                   </p>
                 </div>
                 <div className="bg-[#FAF8F5] p-4 rounded-xl border border-[#EFE8E1]">
@@ -468,7 +468,7 @@ export default function EnterpriseArchitectureBlueprint({
                 </div>
                 <div className="flex items-center gap-2 self-start md:self-auto">
                   <span className="font-fj-mono text-xs text-[#92400E] bg-[#FEF3C7] px-3 py-1 rounded-full font-semibold">
-                    Zero Back-Office Disruption
+                    Back-Office Continuity
                   </span>
                 </div>
               </div>
@@ -488,7 +488,7 @@ export default function EnterpriseArchitectureBlueprint({
                 </div>
                 <div className="bg-[#FAF8F5] p-4 rounded-xl border border-[#EFE8E1]">
                   <p className="text-xs font-bold text-[#0F172A] mb-1">Salesforce CRM / Klaviyo</p>
-                  <p className="text-[12px] text-[#475569] leading-relaxed">Keep your customer support tickets and marketing automations running seamlessly.</p>
+                  <p className="text-[12px] text-[#475569] leading-relaxed">Keep your customer support tickets and marketing automations running without interruption.</p>
                 </div>
               </div>
             </div>
@@ -505,7 +505,7 @@ export default function EnterpriseArchitectureBlueprint({
                   ⚡ Interactive Real-Time Pipeline
                 </span>
                 <h3 className="font-fj-display text-xl sm:text-2xl font-bold text-[#0F172A] mt-1">
-                  Click an Event to Trace How Data Moves in Under 150ms
+                  Click an Event to Trace How Data Moves
                 </h3>
                 <p className="text-sm text-[#64748B] mt-1">
                   See how orders, stock levels, and custom prices travel between your Shopify store and your ERP in real time.
@@ -563,7 +563,7 @@ export default function EnterpriseArchitectureBlueprint({
                 <h4 className="font-bold text-sm text-[#0F172A]">Idempotent Queue</h4>
                 <p className="text-xs text-[#475569] mt-1">{activeEvent.protocol}</p>
                 <div className="mt-3 text-[11px] font-fj-mono bg-white p-2 rounded-lg border border-[#EFE8E1] text-[#047857]">
-                  ✓ Zero Dropped Records
+                  ✓ Queued With Retries
                 </div>
               </div>
 
@@ -647,7 +647,7 @@ export default function EnterpriseArchitectureBlueprint({
                   <h4 className="font-bold text-[#0F172A] text-sm">Akeneo &amp; Pimcore PIM</h4>
                 </div>
                 <p className="text-xs text-[#475569] leading-relaxed">
-                  Automated sync of 100,000+ SKU attribute sets, technical specs, multilingual copy, and high-res media files.
+                  Automated sync of large SKU attribute sets, technical specs, multilingual copy, and high-res media files.
                 </p>
                 <div className="mt-3 flex gap-1.5">
                   <span className="font-fj-mono text-[10px] bg-white px-2 py-0.5 rounded border text-[#0369A1]">GraphQL API</span>
@@ -689,7 +689,7 @@ export default function EnterpriseArchitectureBlueprint({
                   <h4 className="font-bold text-[#0F172A] text-sm">Avalara AvaTax &amp; TaxJar</h4>
                 </div>
                 <p className="text-xs text-[#475569] leading-relaxed">
-                  Real-time sales tax calculation across 12,000+ US jurisdictions and automated filing with zero manual accounting adjustments.
+                  Real-time sales tax calculation across US state and local tax jurisdictions, with automated filing and no manual accounting adjustments.
                 </p>
                 <div className="mt-3 flex gap-1.5">
                   <span className="font-fj-mono text-[10px] bg-white px-2 py-0.5 rounded border text-[#0369A1]">AvaTax REST</span>
@@ -704,7 +704,7 @@ export default function EnterpriseArchitectureBlueprint({
         {activeTab === 'cutover' && (
           <div className="bg-white border border-[#E8DFD8] rounded-3xl p-6 sm:p-9 shadow-xl shadow-orange-950/5 animate-fadeIn">
             <h3 className="font-fj-display text-xl sm:text-2xl font-bold text-[#0F172A] mb-2">
-              Our 5-Stage Zero-Downtime Migration Protocol
+              Our 5-Stage Platform Migration Protocol
             </h3>
             <p className="text-sm text-[#64748B] mb-6 max-w-2xl">
               We never guess or rush cutovers. Here is the exact step-by-step roadmap that protects your sales and search traffic:
@@ -730,7 +730,7 @@ export default function EnterpriseArchitectureBlueprint({
                 <div>
                   <h4 className="font-bold text-[#0F172A] text-sm">Historical Customer &amp; Order Replication</h4>
                   <p className="text-xs text-[#475569] mt-1 leading-relaxed">
-                    We securely transfer 5+ years of customer purchase history, addresses, and product variants with automated scripts verifying 100% data parity.
+                    We securely transfer customer purchase history, addresses, and product variants, with automated scripts checking that record counts and order totals match on both platforms.
                   </p>
                 </div>
               </div>
@@ -740,7 +740,7 @@ export default function EnterpriseArchitectureBlueprint({
                   3
                 </span>
                 <div>
-                  <h4 className="font-bold text-[#0F172A] text-sm">1-to-1 301 URL Redirect Mapping (100% SEO Safety)</h4>
+                  <h4 className="font-bold text-[#0F172A] text-sm">1-to-1 301 URL Redirect Mapping</h4>
                   <p className="text-xs text-[#475569] mt-1 leading-relaxed">
                     We map every single indexed legacy URL so customers and Google bots land on the exact right product page without 404 broken links.
                   </p>
@@ -764,9 +764,9 @@ export default function EnterpriseArchitectureBlueprint({
                   5
                 </span>
                 <div>
-                  <h4 className="font-bold text-[#0F172A] text-sm">Zero-Downtime Blue/Green DNS Switch</h4>
+                  <h4 className="font-bold text-[#0F172A] text-sm">Blue/Green DNS Switch</h4>
                   <p className="text-xs text-[#475569] mt-1 leading-relaxed">
-                    We flip the DNS switch instantly during off-peak hours with immediate rollback safety nets and 24/7 engineer monitoring.
+                    We flip the DNS switch instantly during off-peak hours with a rollback plan ready and engineers watching orders and errors through the cutover.
                   </p>
                 </div>
               </div>
@@ -821,7 +821,7 @@ export default function EnterpriseArchitectureBlueprint({
             <div className="flex-shrink-0 flex flex-col items-center sm:items-end gap-3">
               <ModalCTAButton label={ctaLabel} region={region} btnVariant="primary-light" />
               <span className="text-xs text-[#64748B] font-fj-mono text-center sm:text-right">
-                ✓ 100% Engineer-Led · Zero Sales Pressure
+                ✓ Engineer-Led · Zero Sales Pressure
               </span>
             </div>
           </div>

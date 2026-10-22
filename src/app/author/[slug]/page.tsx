@@ -74,8 +74,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 function generateAuthorJsonLd(author: ReturnType<typeof getAuthorBySlug>) {
   if (!author) return null
-  return {
-    '@context': 'https://schema.org',
+  const person = {
     '@type': 'Person',
     name: author.name,
     url: `https://factoryjet.com/author/${author.slug}`,
@@ -89,6 +88,14 @@ function generateAuthorJsonLd(author: ReturnType<typeof getAuthorBySlug>) {
       name: 'FactoryJet',
       url: 'https://factoryjet.com',
     },
+  }
+  // ProfilePage carries dateModified, which Person does not support.
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    url: `https://factoryjet.com/author/${author.slug}`,
+    ...(author.dateModified ? { dateModified: author.dateModified } : {}),
+    mainEntity: person,
   }
 }
 

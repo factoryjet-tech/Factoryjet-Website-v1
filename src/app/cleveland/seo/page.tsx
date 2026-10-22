@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-22';
 const CANONICAL = 'https://factoryjet.com/cleveland/seo';
 
 export const metadata: Metadata = {
@@ -328,6 +328,57 @@ const FAQ_ITEMS = [
     question: 'Is local SEO worth it for a small Cleveland electrician or trade?',
     answer: 'Usually, because most trade jobs start with a phone search. A small shop does not need a large plan. It needs a complete Business Profile, a page for each service, correct listings and a habit of asking for reviews. Skip the weekly blog posts until those four are done.',
   },
+  {
+    category: 'local',
+    question: 'Can one Google profile cover Northeast Ohio, from Mentor to Medina?',
+    answer: 'If you visit customers, yes, within limits. Google gives a service-area business one profile for its whole area and says the boundary should be no more than about two hours of driving from your base. From Cleveland that takes in Mentor, Medina, Akron and Lorain with room to spare. If you also run a staffed office with signage in Akron or Mentor, that office can have its own profile.',
+  },
+  {
+    category: 'local',
+    question: 'Does putting a ZIP code like 44145 on my site help me rank in Westlake?',
+    answer: 'A ZIP code in your text does little by itself. Google\'s local ranking leans on relevance, distance and how well known you are, and a number in a footer changes none of those. What helps is listing Westlake or 44145 as a service area on your profile if you serve it, and a Westlake page that shows jobs you did there. If your shop is in Westlake, your address already carries that.',
+  },
+  {
+    category: 'local',
+    question: 'Why does a \'near me\' search in Cleveland show different companies to different people?',
+    answer: 'Distance is one of Google\'s main local factors, and Google measures it from the person searching. Its help page says that when a searcher does not share a location, Google uses what it knows about where they are. A Parma resident and a Euclid resident typing the same words can see different map packs. So test your rankings from a few points across the city, not only from your own office.',
+  },
+  {
+    category: 'technical',
+    question: 'What can I check myself before I hire a Cleveland SEO company?',
+    answer: 'Start with Google Search Console, which is free. Its Performance report shows the searches that already bring people to your site and your average position for each one. Then search your main service on your phone and see whether your profile shows, and under what category. If both look right and calls are still thin, the gap is usually in your service pages or reviews, and that is where outside help earns its fee.',
+  },
+  {
+    category: 'timeline',
+    question: 'How fast do Google profile edits show up for a Cleveland business?',
+    answer: 'Some show quickly. Google\'s help page on service areas says approved service-area edits can take up to 48 hours to appear. Ranking changes that follow an edit take longer, because Google weighs your profile against every other one nearby. Make one change at a time and write down the date. That way, when calls go up or down a few weeks later, you can tell which edit caused it.',
+  },
+  {
+    category: 'local',
+    question: 'Should I add \'Cleveland\' or my service to my Google profile name?',
+    answer: 'No, unless it is part of your real business name. Google\'s profile rules forbid adding service or location words that you do not use on your sign, website and paperwork. Google\'s own example: \'Midas Auto Service Experts\' is not allowed, while \'Midas\' is. The same rules say extra words in a name can get a profile suspended. Put Cleveland and your services in your categories, service areas and website instead.',
+  },
+];
+
+const SOURCES: ReadonlyArray<{ publisher: string; title: string; url: string; note: string }> = [
+  {
+    publisher: 'Google Business Profile Help',
+    title: 'Manage your service areas for service-area & hybrid businesses',
+    url: 'https://support.google.com/business/answer/9157481?hl=en',
+    note: 'A service-area business gets one profile for its whole area, can list up to 20 service areas, and should keep the area within about two hours of driving. Approved edits can take up to 48 hours to show.',
+  },
+  {
+    publisher: 'Google Business Profile Help',
+    title: 'Tips to improve your local ranking on Google',
+    url: 'https://support.google.com/business/answer/7091?hl=en',
+    note: 'Local results are based mainly on relevance, distance and prominence. Without a shared location, Google uses what it knows about where the searcher is.',
+  },
+  {
+    publisher: 'Google Business Profile Help',
+    title: 'Guidelines for representing your business on Google',
+    url: 'https://support.google.com/business/answer/3038177?hl=en',
+    note: 'Profile names must not carry service or location words that are not part of the real business name, with "Midas Auto Service Experts" shown as a name that is not allowed.',
+  },
 ];
 
 const FAQ_SCHEMA = {
@@ -379,6 +430,7 @@ const WEBPAGE_SCHEMA = {
   description: 'SEO for Cleveland, OH clinics, manufacturers, law firms and home service companies across Northeast Ohio. Month-to-month terms.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  citation: SOURCES.map((src) => ({ '@type': 'CreativeWork', name: src.title, url: src.url })),
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
@@ -853,6 +905,28 @@ export default function ClevelandSeoPage() {
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
         />
+
+        {/* ── SOURCES CHECKED FOR THIS PAGE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '0 0 56px' }}>
+          <div className="pp-wrap" style={{ maxWidth: '860px' }}>
+            <h2 style={{ fontSize: '20px', fontWeight: 800, color: '#141414', letterSpacing: '-0.015em', margin: '0 0 8px' }}>
+              Sources behind these answers
+            </h2>
+            <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: '0 0 16px' }}>
+              We fetched and read each of these pages on 22 Oct 2026.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {SOURCES.map((s) => (
+                <li key={s.url} style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55 }}>
+                  <a href={s.url} target="_blank" rel="noopener" style={{ color: '#B23E13', fontWeight: 700, textDecoration: 'underline' }}>
+                    {s.publisher}: {s.title}
+                  </a>
+                  <span style={{ display: 'block' }}>{s.note}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>

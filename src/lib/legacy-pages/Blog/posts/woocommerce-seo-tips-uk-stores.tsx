@@ -9,6 +9,7 @@ export const post: BlogPost = {
   category: "E-Commerce Development",
   author: 'Bhavesh Barot',
   date: "Apr 24, 2026",
+  dateModified: 'Oct 22, 2026',
   readTime: '14 min read',
   imageUrl: "/blog-images/woocommerce-seo-tips-uk-stores-hero.webp",
   meta: {
@@ -182,7 +183,7 @@ export const post: BlogPost = {
         </table>
       </div>
 
-      <p className="mb-6">➡ Want a website built for search visibility? <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet web design for US businesses</a>: Lighthouse 95+, full technical SEO included, delivered in 7 days from $1,999. See our <a href="/" className="text-blue-600 underline hover:text-blue-800 transition-colors">US services hub</a>.</p>
+      <p className="mb-6">➡ Want a website built for search visibility? <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet web design for US businesses</a>: Lighthouse 95+, full technical SEO included, 7-day delivery for sites up to 5 pages, fixed quote after scoping. See our <a href="/" className="text-blue-600 underline hover:text-blue-800 transition-colors">US services hub</a>.</p>
 
       <div className="my-12 rounded-2xl bg-[#0052CC] p-8 sm:p-10 text-center not-prose">
         <h3 className="text-white text-2xl font-bold mb-3">Ready to transform your business?</h3>
@@ -190,7 +191,7 @@ export const post: BlogPost = {
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · 12+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses served · 97% on-time delivery · founded 2014</p>
       </div>
     </>
   ),

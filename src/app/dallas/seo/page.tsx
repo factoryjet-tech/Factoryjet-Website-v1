@@ -12,7 +12,7 @@ import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-22';
 const CANONICAL = 'https://factoryjet.com/dallas/seo';
 
 export const metadata: Metadata = {
@@ -311,6 +311,52 @@ const FAQ_ITEMS = [
     question: 'Which free SEO tools can a small Dallas business use?',
     answer: 'Four cover most needs. Google Business Profile shows calls and searches. Google Search Console shows which searches find your site and which pages have errors. Bing Webmaster Tools does the same for Bing. PageSpeed Insights tests how fast your pages load on phones. Check them monthly.',
   },
+  {
+    category: 'map-pack',
+    question: 'Can one Google profile cover Dallas, Fort Worth and the suburbs?',
+    answer: 'If you go to customers, it can cover a lot. Google lets a service-area business list up to 20 service areas, set by city or ZIP code rather than a radius. DFW has far more than 20 cities, so choose the ones where you actually take jobs, such as Dallas, Plano, Irving and Garland. If customers come to you, the profile shows your address, and map results lean on distance from it.',
+  },
+  {
+    category: 'dallas',
+    question: 'Can I use a Dallas virtual office or mailbox address on my Google profile?',
+    answer: 'No. Google\'s profile rules say a rented address where you do not operate, which Google calls a virtual office, is not eligible, and P.O. boxes or mailboxes at remote locations are not accepted. If you work from home or on job sites, set up as a service-area business with the address hidden. If you want a storefront listing in Dallas, the address needs permanent signage with your business name.',
+  },
+  {
+    category: 'citations',
+    question: 'Can another Dallas company register the same business name as mine?',
+    answer: 'It can happen. The Texas Secretary of State\'s Form 503 instructions say an assumed name filing is a notice to the public, and the office does not review whether the name clashes with another name on file. Filing also gives you no right to the name by itself. If a Dallas competitor shares your name, your address, phone number, categories and reviews keep Google and customers from mixing you up.',
+  },
+  {
+    category: 'local-seo',
+    question: 'What does a Dallas SEO audit look at first?',
+    answer: 'We start with your Google Business Profile: the category, services, hours and whether the address setup follows Google\'s rules. Next come the pages your profile links to, checked for speed and for saying plainly what you do and where. Last, we check your listings on the sites that rank for your Dallas terms for the same name, address and phone. The written audit says which of these is holding you back.',
+  },
+  {
+    category: 'citations',
+    question: 'Can I put a call-tracking number on my Dallas Google profile?',
+    answer: 'Yes, with care. Google\'s rules say the phone number must be under the business\'s direct control and must not redirect callers to numbers other than the business\'s own. A tracking number you own that rings your own line fits that. One owned by an agency, which you lose when you leave, does not. Keep your main number on your website and listings so your details stay consistent.',
+  },
+];
+
+const SOURCES: ReadonlyArray<{ publisher: string; title: string; url: string; note: string }> = [
+  {
+    publisher: 'Texas Secretary of State',
+    title: 'Form 503: Instructions for Assumed Name Certificate',
+    url: 'https://www.sos.state.tx.us/corp/instructions/503.shtml',
+    note: 'An assumed name filing is a public notice. The Secretary of State does not check it against other names on file, and filing gives no right to the name by itself.',
+  },
+  {
+    publisher: 'Google Business Profile Help',
+    title: 'Guidelines for representing your business on Google',
+    url: 'https://support.google.com/business/answer/3038177?hl=en',
+    note: 'Virtual offices, P.O. boxes and remote mailboxes are not eligible addresses. The phone number must be under the direct control of the business and must not redirect to other numbers.',
+  },
+  {
+    publisher: 'Google Business Profile Help',
+    title: 'Manage your service areas for service-area & hybrid businesses',
+    url: 'https://support.google.com/business/answer/9157481?hl=en',
+    note: 'A service-area business can list up to 20 service areas by city or postal code, not by radius.',
+  },
 ];
 
 const FAQ_SCHEMA = {
@@ -368,6 +414,7 @@ const WEBPAGE_SCHEMA = {
   description: 'Local SEO for Dallas, TX businesses, from Uptown to Frisco. Google Business Profile work, citations, reviews and call tracking. No long-term contract.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  citation: SOURCES.map((src) => ({ '@type': 'CreativeWork', name: src.title, url: src.url })),
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
@@ -851,6 +898,28 @@ export default function DallasSeoPage() {
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
         />
+
+        {/* ── SOURCES CHECKED FOR THIS PAGE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '0 0 56px' }}>
+          <div className="pp-wrap" style={{ maxWidth: '860px' }}>
+            <h2 style={{ fontSize: '20px', fontWeight: 800, color: '#141414', letterSpacing: '-0.015em', margin: '0 0 8px' }}>
+              Sources behind these answers
+            </h2>
+            <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: '0 0 16px' }}>
+              We fetched and read each of these pages on 22 Oct 2026.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {SOURCES.map((s) => (
+                <li key={s.url} style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55 }}>
+                  <a href={s.url} target="_blank" rel="noopener" style={{ color: '#B23E13', fontWeight: 700, textDecoration: 'underline' }}>
+                    {s.publisher}: {s.title}
+                  </a>
+                  <span style={{ display: 'block' }}>{s.note}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>

@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-22';
 const CANONICAL = 'https://factoryjet.com/boise/seo';
 
 export const metadata: Metadata = {
@@ -319,6 +319,57 @@ const FAQ_ITEMS = [
     question: 'What should I get each month from a Boise SEO company?',
     answer: 'A plain note listing the pages and listings changed, the calls and forms that came from search, and ranking moves for the terms you chose. You should also see review counts and any new problems found. If the note does not show finished work, ask what you are paying for.',
   },
+  {
+    category: 'ai',
+    question: 'Is there a Google-certified SEO company in Boise?',
+    answer: 'No firm gets special treatment in Google\'s regular results. Google\'s own page on hiring an SEO tells you to be wary of anyone who claims a close tie to Google or says they can submit your site for priority handling. When an ad says Google SEO company, read it as a firm that works on Google search, nothing more. Judge them on what they will do, by when, and how they report it.',
+  },
+  {
+    category: 'local',
+    question: 'Does my Boise business need an Idaho assumed business name certificate?',
+    answer: 'If you trade under a name other than your legal one, yes. The Idaho Secretary of State\'s form says anyone planning to do business under an assumed name must file the certificate before starting. LLCs and corporations using their registered name, and people using their own first and last name, do not need one. The form also warns that filings are public, so put a business address on it, not your home.',
+  },
+  {
+    category: 'deliverables',
+    question: 'How do I check where my Boise business ranks?',
+    answer: 'Two ways. Google Search Console is free and shows the searches your site appeared for and your average position on each. Map rankings are harder, because Google ranks local results partly on distance from the person searching. A check run from downtown Boise and one from Meridian can show different results. A fair report checks from several points and states where each check was run.',
+  },
+  {
+    category: 'local',
+    question: 'Can one Google profile cover the whole Treasure Valley?',
+    answer: 'If you go to customers, yes. Google lets a service-area business list up to 20 areas by city or ZIP code, and it does not accept a radius drawn around your base. Boise, Meridian, Nampa, Caldwell, Eagle, Kuna and Star come to seven, which leaves room for the Boise ZIP codes you serve most. If customers come to your shop, your address matters more than the list.',
+  },
+  {
+    category: 'deliverables',
+    question: 'What should I have ready before I call a Boise SEO company?',
+    answer: 'Four things make the first call useful: a list of the services that earn you the most, the towns where you take work, manager access to your Google Business Profile, and read-only access to Search Console. Google\'s own advice is to give read access only at this stage. If you have never set up Search Console, that is fine. Setting it up is often the first task.',
+  },
+  {
+    category: 'local',
+    question: 'Should a Boise business try to rank for statewide searches like \'SEO Idaho\'?',
+    answer: 'Only if you serve the whole state. Map results depend on where the searcher is, so a Boise roofer will not show in Idaho Falls map packs whatever its pages say. A statewide page makes sense for firms that also work in Coeur d\'Alene, Twin Falls and Pocatello, such as a commercial contractor or an accounting firm with clients across Idaho. Otherwise, spend the effort on the Treasure Valley towns you serve.',
+  },
+];
+
+const SOURCES: ReadonlyArray<{ publisher: string; title: string; url: string; note: string }> = [
+  {
+    publisher: 'Idaho Secretary of State',
+    title: 'Certificate of Assumed Business Name (form and instructions)',
+    url: 'https://sos.idaho.gov/CORP/forms/ABN/ABN.pdf',
+    note: 'Anyone transacting business in Idaho under an assumed name files the certificate before starting. Registered entities using their true name, and individuals using their legal first and last name, are exempt. Filings are public, so use a business address.',
+  },
+  {
+    publisher: 'Google Search Central',
+    title: 'Do you need an SEO?',
+    url: 'https://developers.google.com/search/docs/fundamentals/do-i-need-seo',
+    note: 'Google warns against SEOs that claim a special relationship with Google, and advises granting only read access to Search Console at the hiring stage.',
+  },
+  {
+    publisher: 'Google Business Profile Help',
+    title: 'Manage your service areas for service-area & hybrid businesses',
+    url: 'https://support.google.com/business/answer/9157481?hl=en',
+    note: 'Service-area businesses can list up to 20 service areas by city or postal code. A radius around the business cannot be set.',
+  },
 ];
 
 const FAQ_SCHEMA = {
@@ -369,6 +420,7 @@ const WEBPAGE_SCHEMA = {
   description: 'Google Maps listings, citation clean-up, schema and AI answer visibility for Boise, ID and Treasure Valley businesses. No long-term contract.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  citation: SOURCES.map((src) => ({ '@type': 'CreativeWork', name: src.title, url: src.url })),
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
@@ -839,6 +891,28 @@ export default function BoiseSeoPage() {
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
         />
+
+        {/* ── SOURCES CHECKED FOR THIS PAGE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '0 0 56px' }}>
+          <div className="pp-wrap" style={{ maxWidth: '860px' }}>
+            <h2 style={{ fontSize: '20px', fontWeight: 800, color: '#141414', letterSpacing: '-0.015em', margin: '0 0 8px' }}>
+              Sources behind these answers
+            </h2>
+            <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: '0 0 16px' }}>
+              We fetched and read each of these pages on 22 Oct 2026.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {SOURCES.map((s) => (
+                <li key={s.url} style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55 }}>
+                  <a href={s.url} target="_blank" rel="noopener" style={{ color: '#B23E13', fontWeight: 700, textDecoration: 'underline' }}>
+                    {s.publisher}: {s.title}
+                  </a>
+                  <span style={{ display: 'block' }}>{s.note}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>

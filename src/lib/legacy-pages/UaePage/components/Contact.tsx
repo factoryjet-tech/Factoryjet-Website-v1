@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
                     <h3 className="text-lg font-bold text-white mb-5">Why Top Brands Choose Us</h3>
                     <div className="grid grid-cols-2 gap-3">
                          {[
-                             "12+ Years Experience", "98% Client Satisfaction",
+                             "12+ Years Experience", "97% On-Time Delivery",
                              "Bilingual Team (Ar/En)", "500+ Successful Projects",
                              "UAE Market Expertise", "UAE Business-Hours Support"
                          ].map((text, i) => (

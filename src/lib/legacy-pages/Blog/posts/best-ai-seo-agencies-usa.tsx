@@ -9,7 +9,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 17, 2026',
-  dateModified: 'Sep 29, 2026',
+  dateModified: 'Oct 22, 2026',
   readTime: '16 min read',
   imageUrl: '/blog-images/best-ai-seo-agencies-usa.webp',
   imageAlt: "Map of the United States with AI answer cards and a magnifying glass over a storefront, showing how AI search picks which US businesses to recommend",
@@ -82,7 +82,7 @@ export const post: BlogPost = {
             <tr className="bg-white">
               <td className="p-3 border">1</td>
               <td className="p-3 border"><strong>FactoryJet</strong> (us)</td>
-              <td className="p-3 border">Bengaluru, India; serves US clients remotely</td>
+              <td className="p-3 border">Works remotely with US clients; calls in US business hours</td>
               <td className="p-3 border">Small and mid-sized US businesses, ecommerce</td>
               <td className="p-3 border">Per-engine citation report: ChatGPT, Perplexity, Claude, Gemini, AI Overviews</td>
               <td className="p-3 border">Month-to-month retainer</td>

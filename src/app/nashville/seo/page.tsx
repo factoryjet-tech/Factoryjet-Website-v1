@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-22';
 const CANONICAL = 'https://factoryjet.com/nashville/seo';
 
 export const metadata: Metadata = {
@@ -324,6 +324,57 @@ const FAQ_ITEMS = [
     question: 'How will I know which calls came from Google?',
     answer: 'Your Business Profile shows calls, direction requests and website clicks each month. Website forms can record where each visitor came from. If you want more detail, a tracking number on the profile separates map calls from other calls. We agree on what counts as a lead before the first report.',
   },
+  {
+    category: 'local',
+    question: 'My Tennessee LLC uses a different trading name. What goes on my Google profile?',
+    answer: 'The trading name your customers know, as long as it is on your sign, site and invoices. Tennessee\'s Secretary of State calls this an assumed name, meaning a name other than the entity\'s true name, and says Tennessee does not recognize the terms DBA or fictitious name. A registered assumed name is good for five years and can be renewed. Keep your profile, website footer and directory listings on that same name.',
+  },
+  {
+    category: 'technical',
+    question: 'Will Google show an AI Overview when Nashville customers search for my service?',
+    answer: 'Not always. Google\'s guide to AI features says AI Overviews appear only when its systems judge them useful beyond the regular results, and that they often do not trigger. When one does appear, the links come from pages that are indexed and allowed to show a snippet. So the same work pays off either way: a page Google can read, with a clear answer near the top.',
+  },
+  {
+    category: 'pricing',
+    question: 'Can I pay for a one-time Nashville SEO project instead of a monthly retainer?',
+    answer: 'Yes. A one-time project fits when the problems are clear: a profile set up wrong, listings with an old address, a site Google struggles to read. We scope it, put a fixed price in writing and hand over the finished work with notes your team can follow. If you later want ongoing help, that is a separate choice with no monthly minimum.',
+  },
+  {
+    category: 'reporting',
+    question: 'Can you work on a website another Nashville agency built?',
+    answer: 'Usually, yes. We need admin access to the site, manager access to your Google Business Profile and access to Search Console. Before changing anything, we check who owns the domain, hosting and analytics accounts, because a past agency sometimes holds them. If they do, ask them to move ownership into an account in your name first. That step protects you whoever does your SEO next.',
+  },
+  {
+    category: 'local',
+    question: 'What happens to my map ranking if I move my Nashville office?',
+    answer: 'Expect some change. Distance from the searcher is one of Google\'s main local factors, so a move from East Nashville to Brentwood shifts which nearby searchers see you. Update the address on your profile first, then on your website and listings, so they all match. Do not keep the old address to hold onto rankings. Google\'s profile rules require your real location.',
+  },
+  {
+    category: 'local',
+    question: 'Should my Nashville service area say Nashville or Davidson County?',
+    answer: 'Pick whatever matches where you work, and be specific. Google\'s service-area setting takes cities, ZIP codes or other areas, up to 20 in total, and no longer accepts a radius drawn around your base. A plumber covering Davidson County and part of Williamson might list Nashville, Antioch, Hermitage, Brentwood and Franklin. Every area you add should be somewhere you would send a truck this week.',
+  },
+];
+
+const SOURCES: ReadonlyArray<{ publisher: string; title: string; url: string; note: string }> = [
+  {
+    publisher: 'Tennessee Secretary of State',
+    title: 'All Frequently Asked Questions for Businesses',
+    url: 'https://sos.tn.gov/businesses/faqs?page=1',
+    note: 'An assumed name is a name other than the entity\'s true name. Tennessee does not recognize "DBA" or fictitious names, and an assumed name is good for five years and can be renewed.',
+  },
+  {
+    publisher: 'Google Search Central',
+    title: 'AI features and your website',
+    url: 'https://developers.google.com/search/docs/appearance/ai-features',
+    note: 'AI Overviews show only when Google judges them additive to classic results and often do not trigger. A page must be indexed and eligible for a snippet to appear as a supporting link.',
+  },
+  {
+    publisher: 'Google Business Profile Help',
+    title: 'Manage your service areas for service-area & hybrid businesses',
+    url: 'https://support.google.com/business/answer/9157481?hl=en',
+    note: 'Service areas are set by city, postal code or other area, up to 20 of them. A radius around the business can no longer be set.',
+  },
 ];
 
 const FAQ_SCHEMA = {
@@ -367,6 +418,7 @@ const WEBPAGE_SCHEMA = {
   description: 'We improve your Google Business Profile and service pages so Nashville, TN customers can find you. Reporting covers calls and inquiries.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  citation: SOURCES.map((src) => ({ '@type': 'CreativeWork', name: src.title, url: src.url })),
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
@@ -854,6 +906,28 @@ export default function NashvilleSeoPage() {
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
         />
+
+        {/* ── SOURCES CHECKED FOR THIS PAGE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '0 0 56px' }}>
+          <div className="pp-wrap" style={{ maxWidth: '860px' }}>
+            <h2 style={{ fontSize: '20px', fontWeight: 800, color: '#141414', letterSpacing: '-0.015em', margin: '0 0 8px' }}>
+              Sources behind these answers
+            </h2>
+            <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: '0 0 16px' }}>
+              We fetched and read each of these pages on 22 Oct 2026.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {SOURCES.map((s) => (
+                <li key={s.url} style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55 }}>
+                  <a href={s.url} target="_blank" rel="noopener" style={{ color: '#B23E13', fontWeight: 700, textDecoration: 'underline' }}>
+                    {s.publisher}: {s.title}
+                  </a>
+                  <span style={{ display: 'block' }}>{s.note}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>

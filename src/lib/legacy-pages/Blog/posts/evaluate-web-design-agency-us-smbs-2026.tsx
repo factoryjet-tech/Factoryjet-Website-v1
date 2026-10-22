@@ -9,6 +9,7 @@ export const post: BlogPost = {
   category: "Web Design & Strategy",
   author: 'Bhavesh Barot',
   date: "Apr 23, 2026",
+  dateModified: 'Oct 22, 2026',
   readTime: '14 min read',
   imageUrl: "/blog-images/evaluate-web-design-agency-us-smbs-2026-hero.webp",
   meta: {
@@ -21,12 +22,10 @@ export const post: BlogPost = {
     "Transparent pricing with itemized scope prevents scope creep; avoid agencies that refuse to quote until after discovery calls.",
     "AI-native workflows (automated image optimization, semantic HTML generation, accessibility audits) cut delivery time by 40% without sacrificing quality.",
     "A clearly scoped post-launch maintenance plan prevents security breaches and keep your site compliant with evolving US accessibility standards.",
-    "Agencies serving international clients often deliver 30–50% cost savings versus local US firms while maintaining US business hours for communication.",
     "Request a staging environment and structured handoff documentation, you should own your codebase, hosting credentials, and content management system fully.",
   ],
   faqs: [
     { q: "What's the most important technical metric when evaluating a web design agency?", a: "Core Web Vitals scores, specifically Largest Contentful Paint under 2.5 seconds, Interaction to Next Paint under 200ms, and Cumulative Layout Shift under 0.1. Google uses these as ranking factors, and they directly correlate with conversion rates. Ask agencies for Lighthouse Performance scores on live client sites; anything below 85 indicates technical debt you'll inherit." },
-    { q: "Should I prioritize local US agencies over international providers?", a: "Not automatically. International agencies with US business-hour support often deliver identical quality at 30–50% lower cost. Verify they use US-based project managers, provide contracts governed by US law, and offer references from US clients. Time-zone overlap for real-time communication matters more than physical location." },
     { q: "How do I verify an agency's client testimonials are real?", a: "Request full names, job titles, and company names, then independently verify via LinkedIn or direct outreach. Real agencies provide contact details; fabricated testimonials use first names only or stock photos. Ask for three references you can call, and specifically request clients in your industry or revenue bracket." },
     { q: "What pricing model works best for SMBs: fixed-price or hourly?", a: "Fixed-price with itemized scope protects SMBs from budget overruns. Hourly billing makes sense only for ongoing retainers or undefined maintenance work. Expect $3,000–$12,000 for a custom SMB site in 2026; anything under $2,000 likely uses templates with minimal customization. Request a detailed statement of work before signing." },
     { q: "Do I need an agency that specializes in my industry?", a: "Industry specialization helps with compliance (healthcare HIPAA, finance GLBA) but isn't essential for most SMBs. Technical competence, fast load times, mobile responsiveness, accessibility, matters more than niche experience. An agency that's built 50 sites across industries often outperforms one that's built 10 sites in your vertical." },
@@ -49,7 +48,6 @@ export const post: BlogPost = {
           <li>How to Verify Client References Without Getting Burned</li>
           <li>AI-Native Workflows: Hype vs. Real Efficiency Gains</li>
           <li>Post-Launch Support: What a Maintenance Retainer Should Actually Buy</li>
-          <li>International Agencies vs. Local US Firms: The Real Trade-Offs</li>
           <li>Red Flags That Predict Missed Deadlines and Budget Overruns</li>
           <li>Contract Clauses That Protect SMB Interests</li>
         </ul>
@@ -228,10 +226,6 @@ export const post: BlogPost = {
         </table>
       </div>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">International Agencies vs. Local US Firms: The Real Trade-Offs</h2>
-      <p className="mb-4">When you evaluate a web design agency in 2026, the offshore-versus-domestic question boils down to three factors: cost structure, communication reliability, and contractual safeguards. International agencies with US-based project managers routinely deliver 30–50% cost savings without sacrificing quality: a $8,000 US project often costs $4,000–$5,500 from a Bangalore or Manila team with identical deliverables, same Lighthouse performance scores, and comparable turnaround times. Geography matters far less than responsiveness. An agency in India with 9am–5pm EST coverage via US account managers outperforms a California firm that goes silent for three days between emails. Real-time Slack channels, weekly video check-ins, and shared Figma boards eliminate friction regardless of where developers sit. The question isn't "Where is your team?" but "When can I reach someone who understands my business?" Contract jurisdiction and payment protection require deliberate attention when working across borders. Use Escrow.com or milestone-based payments via Stripe or PayPal to tie disbursements to verified deliverables, homepage approved, checkout flow tested, site live. Ensure your contract explicitly states that US law governs disputes and that the agency maintains errors-and-omissions insurance. Request references from other US clients and verify those businesses exist on LinkedIn or their state's Secretary of State registry. The practical advantage of international partnerships is straightforward: you access the same Next.js developers, the same Shopify expertise, and the same Google PageSpeed standards at a fraction of domestic rates. The risk is equally clear, poor communication, vague contracts, and no legal recourse if deliverables fail. Mitigate that risk by demanding transparency, enforceable milestones, and a US point of contact who answers within business hours.</p>
-
-
       <h2 className="text-2xl font-bold mt-8 mb-4">Red Flags That Predict Missed Deadlines and Budget Overruns</h2>
       <p className="mb-4">Vetting calls that end without a written statement of work or project timeline signal an agency that operates on handshakes rather than process. Businesses that skip this step typically discover scope creep three weeks into a build, suddenly "five pages" becomes "five pages plus a blog, resources section, and custom calculator," with no change order and mounting frustration on both sides. A Gantt chart or phased milestone document costs an agency nothing to produce if they've built more than a dozen sites; refusal suggests they lack internal project management discipline or plan to bill hourly without accountability. Portfolio pages showing exclusively homepage mockups, no interior page designs, no live domain links, deserve immediate skepticism. Legitimate agencies publish case studies with full URLs so prospects can test mobile responsiveness, page speed, and navigation logic on real devices. When an agency hides behind static JPEGs, they're often reselling Envato templates, outsourcing to unvetted contractors, or showcasing work they didn't actually build. Ask for three live sites they've launched in the past year; if they hesitate or provide only screenshots, walk away. Guarantees around "first-page Google rankings in 30 days" or "guaranteed viral reach" expose agencies that prioritize closing deals over delivering measurable outcomes. Organic search visibility requires consistent content, technical optimization, and backlink acquisition, Google's own documentation states most sites need four to six months before seeing meaningful ranking movement. Social virality depends on platform algorithms, audience behavior, and content timing that no agency controls. Reputable firms discuss keyword difficulty, competitive analysis, and realistic traffic projections; they never promise outcomes they can't influence. US businesses evaluating agencies should request a sample SEO roadmap or content calendar during discovery, agencies with genuine expertise will have templated frameworks ready, while those relying on empty promises will deflect or offer vague "custom strategies" they'll define "after kickoff." Agencies operating with transparent processes, documented portfolios, and evidence-based projections consistently deliver on time and within budget. Those relying on urgency tactics, hidden work samples, and algorithmic guarantees almost never do.</p>
 
@@ -291,7 +285,7 @@ export const post: BlogPost = {
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · 12+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses served · 97% on-time delivery · founded 2014</p>
       </div>
     </>
   ),

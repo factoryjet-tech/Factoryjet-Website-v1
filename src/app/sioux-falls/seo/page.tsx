@@ -11,7 +11,7 @@ import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEst
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-22';
 const CANONICAL = 'https://factoryjet.com/sioux-falls/seo';
 
 export const metadata: Metadata = {
@@ -323,6 +323,57 @@ const FAQ_ITEMS = [
     question: 'How do Sioux Falls home service companies get more calls from search?',
     answer: 'Set up a service-area profile with the street address hidden, list every service, and keep hours accurate through winter, when furnace and snow calls spike. Give each service its own page. Ask every customer for a review that names the job. Track which calls come from the profile so you know what works.',
   },
+  {
+    category: 'local',
+    question: 'Do I need a South Dakota fictitious name statement before using a brand name on Google?',
+    answer: 'Usually, yes. South Dakota law (SDCL 37-11-1) requires a fictitious name statement unless your business name shows the true surname of each owner, or the name is already on file with the Secretary of State. You can file online with the Secretary of State or on paper with any register of deeds. The fee is ten dollars, and the filing must be renewed every fifth year.',
+  },
+  {
+    category: 'technical',
+    question: 'What is AIO, and is it different from GEO and AEO?',
+    answer: 'These are labels for nearly the same work. AIO (AI optimization), GEO (generative engine optimization) and AEO (answer engine optimization) all mean making your business easy for AI tools to find, trust and quote. The tasks behind each label overlap: clear answers on your pages, correct listings, reviews and cited sources. If two Sioux Falls firms quote you for GEO and AIO, compare the task lists, not the names.',
+  },
+  {
+    category: 'technical',
+    question: 'If my page blocks snippets, can it still show in Google AI Overviews?',
+    answer: 'No. Google\'s guide to AI features says a page must be indexed and eligible to show in Search with a snippet before it can appear as a supporting link in AI Overviews or AI Mode. A nosnippet tag, or a page Google has not indexed, rules it out. Even pages that meet every rule are not promised a spot. Check in Search Console that your main Sioux Falls pages are indexed first.',
+  },
+  {
+    category: 'local',
+    question: 'Can my Sioux Falls business show up in Rapid City searches?',
+    answer: 'In the map pack, not without a location there. Rapid City is more than 300 miles away, and Google\'s service-area rules say your area should stay within about two hours of driving from your base. In the regular results, a page about work you do across South Dakota can still rank if you serve those customers today, for example with remote services or statewide installs.',
+  },
+  {
+    category: 'local',
+    question: 'Does my 57107 ZIP code limit where I show up in Sioux Falls?',
+    answer: 'Your address shapes map results, because Google ranks local results partly on the distance between your business and the searcher. A shop in 57107 will show more often to people nearby than to someone searching from Harrisburg. A business that visits customers can add the ZIP codes or towns it serves as service areas, up to 20, which helps people find the profile when they search there.',
+  },
+  {
+    category: 'pricing',
+    question: 'How do I compare quotes from Sioux Falls SEO companies?',
+    answer: 'Line them up on four points: the tasks done each month by name, who owns your profile and analytics, how much notice you give to stop, and what the monthly report shows. A cheaper quote with vague tasks can cost more by month six. Ask each firm what it would fix first on your site after a quick look. The answers show which firms actually looked.',
+  },
+];
+
+const SOURCES: ReadonlyArray<{ publisher: string; title: string; url: string; note: string }> = [
+  {
+    publisher: 'South Dakota Legislature',
+    title: 'Codified Law 37-11-1: Filing of fictitious name statement required',
+    url: 'https://sdlegislature.gov/Statutes/37-11-1',
+    note: 'A fictitious name statement is required unless the name shows the true surname of each owner or is on file with the Secretary of State. It is filed online with the Secretary of State or on paper with any register of deeds, costs ten dollars and is renewed every fifth year.',
+  },
+  {
+    publisher: 'Google Search Central',
+    title: 'AI features and your website',
+    url: 'https://developers.google.com/search/docs/appearance/ai-features',
+    note: 'To appear as a supporting link in AI Overviews or AI Mode, a page must be indexed and eligible to show with a snippet. Meeting every requirement does not guarantee it will be shown.',
+  },
+  {
+    publisher: 'Google Business Profile Help',
+    title: 'Manage your service areas for service-area & hybrid businesses',
+    url: 'https://support.google.com/business/answer/9157481?hl=en',
+    note: 'Service areas should stay within about two hours of driving from the business, up to 20 areas by city or postal code.',
+  },
 ];
 
 const FAQ_SCHEMA = {
@@ -366,6 +417,7 @@ const WEBPAGE_SCHEMA = {
   description: 'SEO for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  citation: SOURCES.map((src) => ({ '@type': 'CreativeWork', name: src.title, url: src.url })),
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
@@ -854,6 +906,28 @@ export default function SiouxFallsSeoPage() {
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
         />
+
+        {/* ── SOURCES CHECKED FOR THIS PAGE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '0 0 56px' }}>
+          <div className="pp-wrap" style={{ maxWidth: '860px' }}>
+            <h2 style={{ fontSize: '20px', fontWeight: 800, color: '#141414', letterSpacing: '-0.015em', margin: '0 0 8px' }}>
+              Sources behind these answers
+            </h2>
+            <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: '0 0 16px' }}>
+              We fetched and read each of these pages on 22 Oct 2026.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {SOURCES.map((s) => (
+                <li key={s.url} style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55 }}>
+                  <a href={s.url} target="_blank" rel="noopener" style={{ color: '#B23E13', fontWeight: 700, textDecoration: 'underline' }}>
+                    {s.publisher}: {s.title}
+                  </a>
+                  <span style={{ display: 'block' }}>{s.note}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>

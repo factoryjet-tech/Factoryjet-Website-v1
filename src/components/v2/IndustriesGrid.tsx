@@ -62,8 +62,6 @@ const INDUSTRIES = [
     name: 'E-Commerce & DTC Brands',
     description:
       'Custom Shopify and headless commerce storefronts that outperform templates, faster load times, higher AOV, and better mobile conversion rates for direct-to-consumer brands.',
-    stat: '+38%',
-    statLabel: 'avg. conversion lift on custom Shopify vs. off-the-shelf template builds',
     chips: ['Shopify', 'Headless', 'DTC', 'Klaviyo'],
     linkHref: '/services/ecommerce-development',
     linkLabel: 'See e-commerce builds',
@@ -73,8 +71,6 @@ const INDUSTRIES = [
     name: 'Professional Services',
     description:
       'Accountants, consultants, financial advisors, and agencies, credibility-first websites built to generate qualified inbound leads and shorten long B2B sales cycles.',
-    stat: '3.2×',
-    statLabel: 'more qualified inbound leads within 90 days of launch',
     chips: ['Consulting', 'Finance', 'Agencies', 'B2B'],
     linkHref: '/contact',
     linkLabel: 'Talk to us',
@@ -84,8 +80,6 @@ const INDUSTRIES = [
     name: 'Healthcare & MedTech',
     description:
       'HIPAA-aware, ADA-compliant web experiences for practices, clinics, and health tech companies, built to earn patient trust and drive appointment bookings.',
-    stat: '+52%',
-    statLabel: 'increase in appointment bookings after redesign',
     chips: ['HIPAA-aware', 'ADA', 'MedTech'],
     linkHref: '/contact',
     linkLabel: 'Talk to us',
@@ -95,8 +89,6 @@ const INDUSTRIES = [
     name: 'Retail & Local Businesses',
     description:
       'Mobile-first sites optimized for local search, foot traffic, and repeat customers, delivering measurable ROI for brick-and-mortar and omnichannel brands.',
-    stat: '+41%',
-    statLabel: 'increase in local organic search traffic within 60 days',
     chips: ['Local SEO', 'Google Maps', 'Mobile-First'],
     linkHref: '/contact',
     linkLabel: 'Talk to us',
@@ -106,8 +98,6 @@ const INDUSTRIES = [
     name: 'Restaurants & Hospitality',
     description:
       'High-converting reservation pages, rich menu experiences, and loyalty-building sites that turn first-time visitors into regulars and drive repeat bookings.',
-    stat: '+29%',
-    statLabel: 'more online reservations vs. generic restaurant template sites',
     chips: ['Reservations', 'Menus', 'Loyalty'],
     linkHref: '/contact',
     linkLabel: 'Talk to us',
@@ -117,8 +107,6 @@ const INDUSTRIES = [
     name: 'Real Estate',
     description:
       'Property listing sites, agent portals, and IDX-integrated platforms that turn browsers into booked showings, captured leads, and closed deals.',
-    stat: '4.7×',
-    statLabel: 'more lead form submissions on custom vs. template real estate sites',
     chips: ['IDX Integration', 'Lead Capture', 'Agent Portals'],
     linkHref: '/services/real-estate-website-design',
     linkLabel: 'See real estate builds',
@@ -248,32 +236,6 @@ function IndustryCard({ industry, titleSize = 24 }: { industry: Industry; titleS
       >
         {industry.description}
       </p>
-
-      {/* Outcome stat */}
-      <div
-        style={{
-          marginTop: 20,
-          paddingTop: 16,
-          borderTop: '0.5px solid rgba(255,255,255,0.10)',
-          display: 'flex',
-          alignItems: 'baseline',
-          gap: 10,
-        }}
-      >
-        <span style={{ fontSize: 26, fontWeight: 500, color: ORANGE, lineHeight: 1 }}>
-          {industry.stat}
-        </span>
-        <span
-          style={{
-            fontSize: 12,
-            color: 'rgba(255,255,255,0.75)',
-            lineHeight: 1.4,
-            maxWidth: 260,
-          }}
-        >
-          {industry.statLabel}
-        </span>
-      </div>
 
       <ServiceChips items={industry.chips} />
 
@@ -629,8 +591,8 @@ export default function IndustriesGrid(props: IndustriesGridProps = {}) {
           <ul className="grid grid-cols-1 gap-[3px] lg:grid-cols-[2fr_1fr]">
             <IndustryCard industry={INDUSTRIES[0]} titleSize={24} />
             <OrangeStatCard
-              stat="523+"
-              statLabel="businesses served across 30+ industries"
+              stat="500+"
+              statLabel="businesses served since 2014"
               tagline="7-day delivery · fixed pricing"
             />
           </ul>
@@ -640,7 +602,7 @@ export default function IndustriesGrid(props: IndustriesGridProps = {}) {
             <OrangeStatCard
               stat="Day 1"
               statLabel="code & data ownership on every project, with full GitHub repo handover at launch"
-              tagline="no retainers · no lock-in"
+              tagline="no monthly minimum · no lock-in"
             />
             <IndustryCard industry={INDUSTRIES[1]} titleSize={24} />
           </ul>

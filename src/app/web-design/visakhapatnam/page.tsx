@@ -557,7 +557,7 @@ export default function VisakhapatnamWebDesignPage() {
         {/* ── 5. SERVICE EXPLANATION ───────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="WEB DESIGN · VISAKHAPATNAM"
-          headline="What 'Web Design' Actually Means for a Vizag Business in 2025"
+          headline="What 'Web Design' Actually Means for a Vizag Business in 2026"
           lead="Visakhapatnam's economy spans industrial B2B businesses, fast-growing IT companies, port and logistics operators, and a tourism sector that is about to see a significant influx of high-income tech workers. Each of these sectors has very different web requirements, and very different windows of opportunity."
           body={
             <>

@@ -12,7 +12,7 @@ import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-22';
 const CANONICAL = 'https://factoryjet.com/denver/seo';
 
 export const metadata: Metadata = {
@@ -325,6 +325,57 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Do you work with Denver architects and home service companies?',
     answer: 'Yes. Architects win with project pages that name the neighborhood, the building type and the problem solved, plus photos you own. Home service firms win with a service-area profile, a page per service and reviews that mention the job. Both need the same name, address and phone everywhere.',
   },
+  {
+    category: 'local',
+    question: 'Do I need a Colorado trade name before my Google profile uses a brand name?',
+    answer: 'If the brand differs from your legal name, yes. The Colorado Secretary of State says a for-profit business not using its entity\'s true name, or a person not using their legal first and last name, must file a trade name. Its FAQ also notes trade names are not unique, so two Denver businesses can file the same one. Your address, phone number and reviews are what tell them apart on Google.',
+  },
+  {
+    category: 'local',
+    question: 'Can my Denver business list a coworking space address on Google?',
+    answer: 'Only if you work from it every business day. Google\'s profile rules say an office in a coworking space qualifies only if it has clear signage, receives customers during business hours and is staffed by your own people in those hours. A hot desk you use twice a week does not meet that bar. If you go to customers instead, set up as a service-area business with no address shown.',
+  },
+  {
+    category: 'contracts',
+    question: 'What should a Denver SEO package include?',
+    answer: 'Named deliverables with dates, not a count of hours. A fair package lists which Business Profile fixes, which pages written or rewritten, which listings corrected and what tracking is set up. It should also say who owns each account and how much notice you give to stop. If a package only promises improved rankings or a number of SEO hours, ask what you will have in hand at the end of month three.',
+  },
+  {
+    category: 'technical',
+    question: 'Is geofencing the same as local SEO?',
+    answer: 'No. Geofencing is an advertising method: you pay to show ads to phones inside a mapped area, such as the blocks around a competitor\'s store. Local SEO is unpaid and works through your Google profile, website pages and reviews. Both aim at nearby buyers, so they can run side by side. Geofencing stops the day the ad budget stops. We do the SEO side and do not sell geofencing ads.',
+  },
+  {
+    category: 'local',
+    question: 'Should my Denver and Colorado Springs locations use different names on Google?',
+    answer: 'Only if the signs on the buildings differ. Google\'s rules say all locations should share one name unless the business\'s real-world name consistently varies by location, and locations offering the same service should share a category. So your brand stays the same at both sites. Put the city in each address and on each location\'s page on your website, not in the profile name.',
+  },
+  {
+    category: 'attribution',
+    question: 'Can a Denver small business do its own local SEO?',
+    answer: 'Much of it, yes. Google\'s own page on hiring an SEO says a small local business can probably do much of the work itself, using free tools like Search Console. Keep your profile complete, ask every happy customer for a review and answer common questions on your site. Bring in help for technical problems, site moves or several locations, where a mistake costs more to undo.',
+  },
+];
+
+const SOURCES: ReadonlyArray<{ publisher: string; title: string; url: string; note: string }> = [
+  {
+    publisher: 'Colorado Secretary of State',
+    title: 'Business FAQs: Trade names',
+    url: 'https://www.coloradosos.gov/pubs/business/FAQs/tradeNames.html',
+    note: 'A for-profit business not using its entity\'s true name, or an individual not using their legal first and last name, must file a trade name. Trade names are not unique, so more than one person can file the same one.',
+  },
+  {
+    publisher: 'Google Business Profile Help',
+    title: 'Guidelines for representing your business on Google',
+    url: 'https://support.google.com/business/answer/3038177?hl=en',
+    note: 'Coworking addresses qualify only with clear signage, customers received and staff present during business hours. Locations share one name unless the real-world name varies.',
+  },
+  {
+    publisher: 'Google Search Central',
+    title: 'Do you need an SEO?',
+    url: 'https://developers.google.com/search/docs/fundamentals/do-i-need-seo',
+    note: 'Google says a small local business can probably do much of the SEO work itself.',
+  },
 ];
 
 const FAQ_SCHEMA = {
@@ -378,6 +429,7 @@ const WEBPAGE_SCHEMA = {
   description: 'We work on your Google Business Profile, service pages, listings and technical SEO so Denver, CO customers can find you. Month-to-month terms.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  citation: SOURCES.map((src) => ({ '@type': 'CreativeWork', name: src.title, url: src.url })),
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
@@ -895,6 +947,28 @@ export default function DenverSeoPage() {
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
         />
+
+        {/* ── SOURCES CHECKED FOR THIS PAGE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '0 0 56px' }}>
+          <div className="pp-wrap" style={{ maxWidth: '860px' }}>
+            <h2 style={{ fontSize: '20px', fontWeight: 800, color: '#141414', letterSpacing: '-0.015em', margin: '0 0 8px' }}>
+              Sources behind these answers
+            </h2>
+            <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: '0 0 16px' }}>
+              We fetched and read each of these pages on 22 Oct 2026.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {SOURCES.map((s) => (
+                <li key={s.url} style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55 }}>
+                  <a href={s.url} target="_blank" rel="noopener" style={{ color: '#B23E13', fontWeight: 700, textDecoration: 'underline' }}>
+                    {s.publisher}: {s.title}
+                  </a>
+                  <span style={{ display: 'block' }}>{s.note}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>

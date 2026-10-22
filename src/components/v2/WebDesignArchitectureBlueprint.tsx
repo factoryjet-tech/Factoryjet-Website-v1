@@ -33,7 +33,7 @@ const TABS: TabConfig[] = [
     id: 'dataflow',
     label: 'Page Speed & Vitals Simulator',
     icon: '⚡',
-    tagline: 'See how mobile browsers render pages in under 70ms with zero layout shifts.',
+    tagline: 'See, step by step, how mobile browsers render a pre-built page without layout shifts.',
   },
   {
     id: 'connectors',
@@ -54,7 +54,6 @@ interface SimulationEvent {
   label: string;
   source: string;
   protocol: string;
-  latency: string;
   status: string;
   explanation: string;
 }
@@ -65,16 +64,14 @@ const SIMULATION_EVENTS: SimulationEvent[] = [
     label: 'Mobile User Visits Landing Page',
     source: 'Mobile Safari / Chrome Browser Request',
     protocol: 'HTTP/3 Edge Response → Pre-Rendered HTML',
-    latency: '68ms',
     status: 'Sub-Second LCP Achieved',
-    explanation: 'A customer loads your website on a mobile device. Cloudflare Edge delivers the pre-rendered Next.js page in 68 milliseconds with zero render-blocking JavaScript.',
+    explanation: 'A customer loads your website on a mobile device. Cloudflare Edge delivers the pre-rendered Next.js page from a nearby data center, with no render-blocking JavaScript in the way.',
   },
   {
     id: 'form_lead',
     label: 'High-Value Inbound Lead Submission',
     source: 'Interactive Contact & Consultation Form',
     protocol: 'Type-Safe API Route → Instant Email & CRM Sync',
-    latency: '94ms',
     status: 'Lead Routed to Executive Team',
     explanation: 'A client submits a consultation request. The form securely verifies data, triggers custom GA4 conversion events, and routes inquiries directly to your team.',
   },
@@ -83,18 +80,16 @@ const SIMULATION_EVENTS: SimulationEvent[] = [
     label: 'Marketing Team Publishes New Content',
     source: 'Headless CMS (Sanity / Strapi / Contentful)',
     protocol: 'Instant On-Demand ISR Revalidation',
-    latency: '112ms',
     status: 'Live on Global Edge CDN',
-    explanation: 'Your marketing team updates copy or publishes an article. The page rebuilds instantly via on-demand Incremental Static Regeneration without engineering assistance.',
+    explanation: 'Your marketing team updates copy or publishes an article. The page rebuilds through on-demand Incremental Static Regeneration, with no engineer needed.',
   },
   {
     id: 'vitals_check',
     label: 'Google Core Web Vitals Audit',
     source: 'Lighthouse / Chrome User Experience Report',
-    protocol: 'Zero CLS + Sub-100ms INP + Fast LCP',
-    latency: '55ms',
-    status: '95+ Mobile Score Verified',
-    explanation: 'Google crawls and evaluates real user experience metrics. Your site easily passes all Core Web Vitals thresholds, securing higher mobile search rankings.',
+    protocol: 'Low CLS + Good INP + Fast LCP',
+    status: '95+ Mobile Score Target Checked',
+    explanation: 'Chrome collects real user experience metrics and Google reports them in Search Console. We build to pass every Core Web Vitals threshold, which Google counts among its page experience signals.',
   },
 ];
 
@@ -155,7 +150,7 @@ const AUTO_PLAY: boolean = false;
 export default function WebDesignArchitectureBlueprint({
   badge = '// MODERN WEB DESIGN BLUEPRINT',
   title = 'High-Performance Frontend: From Code to Conversion',
-  subtitle = 'Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together seamlessly.',
+  subtitle = 'Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together.',
   city = 'Local',
   ctaLabel = 'Get Your Fixed-Price Web Quote',
   region = 'us',
@@ -483,7 +478,7 @@ export default function WebDesignArchitectureBlueprint({
                       ⚡ Custom Figma UI
                     </span>
                     <span className="font-fj-mono text-xs text-[#047857] bg-[#D1FAE5] px-3 py-1 rounded-full font-semibold">
-                      100% Bespoke Code
+                      Bespoke Code
                     </span>
                   </div>
                 </div>
@@ -513,7 +508,7 @@ export default function WebDesignArchitectureBlueprint({
                   <div className="bg-[#FAF8F5] p-4 rounded-xl border border-[#EFE8E1]">
                     <p className="text-xs font-bold text-[#0F172A] mb-1">Micro-Interactions</p>
                     <p className="text-[12px] text-[#475569] leading-relaxed">
-                      Hardware-accelerated CSS transitions that make every button hover and modal open instantly without page lag.
+                      Hardware-accelerated CSS transitions so button hovers and modal opens respond without page lag.
                     </p>
                   </div>
                 </div>
@@ -547,7 +542,7 @@ export default function WebDesignArchitectureBlueprint({
                         Layer 2: High-Performance Next.js Engineering
                       </h3>
                       <p className="text-xs text-[#64748B]">
-                        Pre-rendered HTML delivering sub-second page loads, zero layout shifts, and flawless Google Core Web Vitals.
+                        Pre-rendered HTML delivering sub-second page loads, no layout shifts, and passing Google Core Web Vitals.
                       </p>
                     </div>
                   </div>
@@ -629,7 +624,7 @@ export default function WebDesignArchitectureBlueprint({
                   </div>
                   <div className="bg-[#FAF8F5] p-4 rounded-xl border border-[#EFE8E1]">
                     <p className="text-xs font-bold text-[#0F172A] mb-1">Cloudflare Global Edge</p>
-                    <p className="text-[12px] text-[#475569] leading-relaxed">Assets served from 300+ edge data centers worldwide with enterprise SSL and DDoS shields.</p>
+                    <p className="text-[12px] text-[#475569] leading-relaxed">Assets served from Cloudflare's global edge network with SSL and DDoS protection.</p>
                   </div>
                   <div className="bg-[#FAF8F5] p-4 rounded-xl border border-[#EFE8E1]">
                     <p className="text-xs font-bold text-[#0F172A] mb-1">Google Analytics 4 &amp; GTM</p>
@@ -637,7 +632,7 @@ export default function WebDesignArchitectureBlueprint({
                   </div>
                   <div className="bg-[#FAF8F5] p-4 rounded-xl border border-[#EFE8E1]">
                     <p className="text-xs font-bold text-[#0F172A] mb-1">Full IP Ownership</p>
-                    <p className="text-[12px] text-[#475569] leading-relaxed">You own 100% of your Git repository, Figma files, and hosting configuration with zero lock-in.</p>
+                    <p className="text-[12px] text-[#475569] leading-relaxed">You own your Git repository, Figma files, and hosting configuration, with no lock-in.</p>
                   </div>
                 </div>
               </div>
@@ -654,10 +649,10 @@ export default function WebDesignArchitectureBlueprint({
                     ⚡ Interactive Performance Simulator
                   </span>
                   <h3 className="font-fj-display text-xl sm:text-2xl font-bold text-[#0F172A] mt-1">
-                    Click an Event to Trace How Next.js Delivers Under 100ms
+                    Click an Event to Trace How Next.js Delivers a Page
                   </h3>
                   <p className="text-sm text-[#64748B] mt-1">
-                    See how mobile requests, lead form routing, CMS publishing, and Core Web Vitals process with zero lag.
+                    See how mobile requests, lead form routing, CMS publishing, and Core Web Vitals checks are processed.
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
@@ -695,7 +690,7 @@ export default function WebDesignArchitectureBlueprint({
                 }`}>
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-fj-mono text-xs text-[#B23E13] font-bold">STEP 1: INITIATION</span>
-                    <span className="text-[11px] font-fj-mono text-[#64748B]">0ms</span>
+                    <span className="text-[11px] font-fj-mono text-[#64748B]">Request</span>
                   </div>
                   <h4 className="font-bold text-sm text-[#0F172A]">Request Sent</h4>
                   <p className="text-xs text-[#475569] mt-1">{activeEvent.source}</p>
@@ -709,7 +704,7 @@ export default function WebDesignArchitectureBlueprint({
                 }`}>
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-fj-mono text-xs text-[#0369A1] font-bold">STEP 2: EDGE PROCESSING</span>
-                    <span className="text-[11px] font-fj-mono text-[#64748B]">~35ms</span>
+                    <span className="text-[11px] font-fj-mono text-[#64748B]">Render</span>
                   </div>
                   <h4 className="font-bold text-sm text-[#0F172A]">Serverless Execution</h4>
                   <p className="text-xs text-[#475569] mt-1">{activeEvent.protocol}</p>
@@ -723,7 +718,7 @@ export default function WebDesignArchitectureBlueprint({
                 }`}>
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-fj-mono text-xs text-[#047857] font-bold">STEP 3: COMPLETE</span>
-                    <span className="text-[11px] font-fj-mono text-[#047857] font-bold">{activeEvent.latency}</span>
+                    <span className="text-[11px] font-fj-mono text-[#047857] font-bold">Result</span>
                   </div>
                   <h4 className="font-bold text-sm text-[#0F172A]">Browser Paint</h4>
                   <p className="text-xs text-[#475569] mt-1">{activeEvent.status}</p>
@@ -745,9 +740,9 @@ export default function WebDesignArchitectureBlueprint({
                   </p>
                 </div>
                 <div className="w-full md:w-auto bg-white p-3 rounded-xl border border-[#E2D8CF] font-fj-mono text-xs text-[#475569]">
-                  <span className="text-[#64748B] block text-[10px] uppercase font-bold mb-1">Paint Latency</span>
-                  <span className="text-lg font-bold text-[#0F172A]">{activeEvent.latency}</span>
-                  <span className="text-[#047857] block text-[11px]">Sub-Second Speed</span>
+                  <span className="text-[#64748B] block text-[10px] uppercase font-bold mb-1">Outcome</span>
+                  <span className="text-sm font-bold text-[#0F172A]">{activeEvent.status}</span>
+                  <span className="text-[#047857] block text-[11px]">Illustrative walkthrough</span>
                 </div>
               </div>
             </div>
@@ -784,7 +779,7 @@ export default function WebDesignArchitectureBlueprint({
                     <h4 className="font-bold text-[#0F172A] text-sm">TypeScript &amp; Tailwind CSS</h4>
                   </div>
                   <p className="text-xs text-[#475569] leading-relaxed">
-                    100% type-safe codebase with zero runtime CSS bloat and pixel-perfect design system implementation.
+                    Type-safe codebase, no runtime CSS bloat, and a close match to the approved design system.
                   </p>
                   <div className="mt-3 flex gap-1.5">
                     <span className="font-fj-mono text-[10px] bg-white px-2 py-0.5 rounded border text-[#0369A1]">TypeScript 5</span>
@@ -881,7 +876,7 @@ export default function WebDesignArchitectureBlueprint({
                   <div>
                     <h4 className="font-bold text-[#0F172A] text-sm">Days 3 to 5: Custom Next.js 15 Frontend Engineering</h4>
                     <p className="text-xs text-[#475569] mt-1 leading-relaxed">
-                      We code your bespoke components with clean TypeScript and Tailwind CSS, achieving sub-second speed with zero plugin dependencies.
+                      We code your bespoke components with clean TypeScript and Tailwind CSS, aiming for sub-second loads with no plugin dependencies.
                     </p>
                   </div>
                 </div>
@@ -893,7 +888,7 @@ export default function WebDesignArchitectureBlueprint({
                   <div>
                     <h4 className="font-bold text-[#0F172A] text-sm">Days 6 to 7: Content Migration, Schema &amp; Live Launch</h4>
                     <p className="text-xs text-[#475569] mt-1 leading-relaxed">
-                      We populate verified copy, optimize WebP assets, embed JSON-LD schema, configure GA4 tracking, and execute a zero-downtime DNS cutover.
+                      We populate verified copy, optimize WebP assets, embed JSON-LD schema, configure GA4 tracking, and run a planned DNS cutover.
                     </p>
                   </div>
                 </div>
@@ -925,7 +920,7 @@ export default function WebDesignArchitectureBlueprint({
             <p className="text-xs text-[#64748B] mt-1 font-medium">Mobile Lighthouse Score</p>
           </div>
           <div className="bg-white border border-[#E8DFD8] p-5 rounded-2xl shadow-sm hover:border-[#F05A28]/40 transition-colors">
-            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#0F172A]">100%</p>
+            <p className="font-fj-mono text-2xl sm:text-3xl font-extrabold text-[#0F172A]">Yours</p>
             <p className="text-xs text-[#64748B] mt-1 font-medium">Full Code &amp; IP Ownership</p>
           </div>
           <div className="bg-white border border-[#E8DFD8] p-5 rounded-2xl shadow-sm hover:border-[#F05A28]/40 transition-colors">
@@ -961,7 +956,7 @@ export default function WebDesignArchitectureBlueprint({
             <div className="flex-shrink-0 flex flex-col items-center sm:items-end gap-3">
               <ModalCTAButton label={ctaLabel} region={region} btnVariant="primary-light" />
               <span className="text-xs text-[#64748B] font-fj-mono text-center sm:text-right">
-                ✓ 100% Engineer-Led · Zero Sales Pressure
+                ✓ Engineer-Led · Zero Sales Pressure
               </span>
             </div>
           </div>

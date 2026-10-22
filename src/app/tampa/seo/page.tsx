@@ -12,7 +12,7 @@ import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-22';
 const CANONICAL = 'https://factoryjet.com/tampa/seo';
 
 export const metadata: Metadata = {
@@ -325,6 +325,57 @@ const FAQ_ITEMS = [
     question: 'What should a Tampa SEO report show each month?',
     answer: 'Four things, in order. The work done that month, with links to the pages and listings changed. Calls and forms from search. Profile activity such as calls and direction requests. Then rankings for the terms you agreed on. If a report opens with impressions and traffic charts, ask where the calls are.',
   },
+  {
+    category: 'local',
+    question: 'Do I need a Florida fictitious name before using a brand name on Google?',
+    answer: 'Often, yes. Florida law requires a business trading under a fictitious name to register it, and the registrant certifies the name was advertised at least once in a newspaper in the county of its main office, which for many Tampa firms is Hillsborough. An LLC or corporation trading under its exact registered name is exempt. A registration runs until December 31 of the fifth calendar year, then needs renewing.',
+  },
+  {
+    category: 'local',
+    question: 'My Tampa business has a showroom and also visits customers. How should my profile be set up?',
+    answer: 'As a hybrid business. Google\'s help page says a hybrid business serves customers at its address and also travels or delivers to them, so the profile can show the showroom address and a service area. A pool supply store in Carrollwood that also services pools in Lutz and Westchase fits this. If there is no permanent sign at the address, Google says to list as service-area only.',
+  },
+  {
+    category: 'local',
+    question: 'How does Google decide which Tampa businesses show in the map pack?',
+    answer: 'Google says local results rest mainly on relevance, distance and prominence. Relevance is how well your profile and site match the words typed. Distance is measured from the searcher, so a Brandon business rarely shows to someone searching in Town \'n\' Country. Prominence is how well known you are, from reviews, links and mentions across the web. You cannot change distance, so the work goes into the other two.',
+  },
+  {
+    category: 'local',
+    question: 'How should a Tampa hair salon or barbershop use its Google profile?',
+    answer: 'Pick the most specific category, such as hair salon or barber shop, and list every service. Add recent photos of your work and keep hours current, including holidays. Google\'s profile rules do not allow prices or promotions in the business description, so put your price list on your website and link to booking. Ask clients to name the service they had in their review. It helps the next person choose.',
+  },
+  {
+    category: 'local',
+    question: 'Can I make a separate Google profile for each Tampa Bay city I serve?',
+    answer: 'No. Google\'s rules allow one profile per real location, and a service-area business gets one profile for its whole area. A second profile with a St. Petersburg address you do not staff breaks those rules. Instead, add the cities you cover as service areas, up to 20 of them, and give each city a page on your site with real jobs from there.',
+  },
+  {
+    category: 'reporting',
+    question: 'What happens on a first SEO call with a Tampa business?',
+    answer: 'We talk about your business before anything else: what you sell, where you take work, which customers bring the most profit and what you have tried. While we talk, we look at your profile and one or two key pages. You leave with the first fixes we would make, in order, whether or not you hire us. If SEO is the wrong spend for you right now, we say so.',
+  },
+];
+
+const SOURCES: ReadonlyArray<{ publisher: string; title: string; url: string; note: string }> = [
+  {
+    publisher: 'The Florida Legislature (Online Sunshine)',
+    title: 'Florida Statutes section 865.09: Fictitious name registration',
+    url: 'https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0865/Sections/0865.09.html',
+    note: 'Registrants certify the name was advertised once in a newspaper in the county of the principal place of business. Registrations expire December 31 of the fifth calendar year. Registered entities using their own name are exempt.',
+  },
+  {
+    publisher: 'Google Business Profile Help',
+    title: 'Manage your service areas for service-area & hybrid businesses',
+    url: 'https://support.google.com/business/answer/9157481?hl=en',
+    note: 'A hybrid business serves customers at its address and also visits or delivers, so it can show both. Without permanent signage, a business should be listed as service-area only.',
+  },
+  {
+    publisher: 'Google Business Profile Help',
+    title: 'Guidelines for representing your business on Google',
+    url: 'https://support.google.com/business/answer/3038177?hl=en',
+    note: 'One profile per location; business descriptions may not focus on prices or promotions; choose the most specific category.',
+  },
 ];
 
 const FAQ_SCHEMA = {
@@ -382,6 +433,7 @@ const WEBPAGE_SCHEMA = {
   description: 'SEO for Tampa, FL clinics, law firms, wealth managers and port logistics companies, from Westshore to Ybor City. No long-term contract.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  citation: SOURCES.map((src) => ({ '@type': 'CreativeWork', name: src.title, url: src.url })),
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
@@ -866,6 +918,28 @@ export default function TampaSeoPage() {
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
         />
+
+        {/* ── SOURCES CHECKED FOR THIS PAGE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '0 0 56px' }}>
+          <div className="pp-wrap" style={{ maxWidth: '860px' }}>
+            <h2 style={{ fontSize: '20px', fontWeight: 800, color: '#141414', letterSpacing: '-0.015em', margin: '0 0 8px' }}>
+              Sources behind these answers
+            </h2>
+            <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: '0 0 16px' }}>
+              We fetched and read each of these pages on 22 Oct 2026.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {SOURCES.map((s) => (
+                <li key={s.url} style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55 }}>
+                  <a href={s.url} target="_blank" rel="noopener" style={{ color: '#B23E13', fontWeight: 700, textDecoration: 'underline' }}>
+                    {s.publisher}: {s.title}
+                  </a>
+                  <span style={{ display: 'block' }}>{s.note}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>

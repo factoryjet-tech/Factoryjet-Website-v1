@@ -9,6 +9,7 @@ export const post: BlogPost = {
   excerpt:
     'Technical blueprint for manufacturing AI agents: PDF CAD drawing parsing, multi-tier BOM costing, and bi-directional NetSuite and SAP ERP synchronization.',
   date: 'September 1, 2026',
+  dateModified: 'Oct 22, 2026',
   readTime: '14 min read',
   author: 'Bhavesh Barot',
   category: 'Emerging Tech',
@@ -256,14 +257,9 @@ export const post: BlogPost = {
 }`}</pre>
       </div>
 
-      <h2>Token Compute Economics &amp; Infrastructure Costs</h2>
+      <h2>Running Costs and Upkeep</h2>
       <p>
-        A frequent concern for Chief Information Officers is ongoing token compute expenses. As an illustration, suppose parsing a 10-page drawing package with a multi-modal vision model uses 22,000 input tokens and 1,800 output tokens. Image-heavy packages can use more.
-      </p>
-      <p>
-        At{' '}
-        <a href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">Anthropic&apos;s published API prices</a>{' '}
-        for Claude Sonnet 5 ($2 per million input tokens and $10 per million output tokens, checked September 17, 2026), that package costs about 6 cents in model usage: $0.044 for input and $0.018 for output. Even at 1,000 packages a month, model usage comes to about $62, which is small next to the fully-loaded cost of hiring another full-time estimator. Hosting, monitoring and upkeep come on top of model usage.
+        A frequent concern for Chief Information Officers is what the agent costs to run once it is live. FactoryJet quotes the build and ongoing support as fixed prices in writing after scoping. Bills for AI usage and hosting can sit in your own cloud and AI accounts at cost, and FactoryJet keeps managing the servers, AI models, APIs and overall maintenance so your team does not have to.
       </p>
 
       <div className="my-10 p-8 rounded-2xl bg-[#FFF8F5] border border-[#E7DED6] text-center not-prose">
