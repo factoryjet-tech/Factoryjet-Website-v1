@@ -143,7 +143,7 @@ const FAQ_ITEMS = [
     category: 'dvs',
     question: 'How does FactoryJet connect Shopify, Business Central or another ERP to Target?',
     answer:
-      'We start with what Target gave you: your partner or vendor setup documents. Then we map your products, stock and orders from Shopify, Microsoft Business Central, NetSuite or another ERP to the format Target asks for. That can be Marketplace Connect, Target’s API or an EDI link through your EDI provider. Before you sign, we show the flow working on your own data.',
+      'Think of it as teaching two systems to talk. Your store or ERP (Shopify, Microsoft Business Central, NetSuite, SAP Business One, Odoo or another one) knows your products, prices and stock. Target needs that same list in its own format, and it sends orders back. We start with the setup papers Target gave you, then build the link: Marketplace Connect, Target’s API, or an EDI connection through your EDI provider. When an order comes in, it lands in your system without retyping, and your stock count updates on Target. Before you sign, we show it working on your own products.',
   },
   {
     category: 'dvs',
@@ -335,7 +335,7 @@ const BENEFITS = [
   { i: '◇', t: 'Target Plus Readiness Check', d: 'We test your business against each prerequisite on Target’s apply page before you submit, from DUNS number to GS1 barcodes.' },
   { i: '↯', t: 'Shipping Inside 24 Hours', d: 'Orders reach your warehouse or 3PL as soon as they land, and tracking numbers flow back to Target without manual entry.' },
   { i: '▤', t: 'Listing & Product Data Setup', d: 'Product titles, attributes, valid UPC or EAN codes and grid size charts for wearables, mapped to Target’s content rules.' },
-  { i: '⛓', t: 'Shopify & ERP Connectors', d: 'Shopify Marketplace Connect, Target’s API, or an EDI provider link from Business Central, NetSuite or another ERP.' },
+  { i: '⛓', t: 'Shopify & ERP Connectors', d: 'We link your store or ERP (Shopify, Business Central, NetSuite, SAP Business One, Odoo) to Target, so orders arrive without retyping and stock stays in sync.' },
   { i: '⤢', t: 'Stock Buffers & Returns Plan', d: 'Per-product stock buffers so you never take an order you cannot ship, plus a plan for parcel and pallet returns.' },
 ];
 
