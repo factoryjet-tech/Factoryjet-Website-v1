@@ -236,6 +236,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/netsuite-ai-agents',                   source: 'src/app/services/netsuite-ai-agents/page.tsx' },
   { path: '/services/odoo-ai-agents',                       source: 'src/app/services/odoo-ai-agents/page.tsx' },
   { path: '/services/accounts-payable-automation',          source: 'src/app/services/accounts-payable-automation/page.tsx' },
+  { path: '/services/accounts-receivable-automation',       source: 'src/app/services/accounts-receivable-automation/page.tsx' },
   { path: '/services/document-intake-ai-agents',            source: 'src/app/services/document-intake-ai-agents/page.tsx' },
   { path: '/services/sales-order-automation-ai-agents',     source: 'src/app/services/sales-order-automation-ai-agents/page.tsx' },
   { path: '/services/ai-inventory-management-agents',       source: 'src/app/services/ai-inventory-management-agents/page.tsx' },

@@ -762,7 +762,7 @@ export default function SeoUKPage() {
               </div>
               <div className="svc-card">
                 <h3>Professional services and B2B</h3>
-                <p className="mt-4">Firms where a buyer builds a shortlist from a search or an AI answer. We make sure you are on it, with the expertise and trust signals Google and the models want to cite.</p>
+                <p className="mt-4">Firms where a buyer builds a shortlist from a search or an AI answer. We make sure you are on it, with the expertise and trust signals Google and the models want to cite. Comparing firms? See our <a href="/blog/best-b2b-seo-agencies-uk-2026">list of UK B2B SEO agencies</a>.</p>
               </div>
               <div className="svc-card">
                 <h3>Local and small businesses</h3>

@@ -686,7 +686,7 @@ export default function SmallBusinessSeoAUPage() {
             </div>
             <p className="tablenote">
               Comparing prices? Our <a href="/blog/seo-cost-australia-2026">SEO cost guide</a> covers packages,
-              retainers and one-off audits with sourced Australian ranges.
+              retainers and one-off audits with sourced Australian ranges. Shortlisting agencies? Our <a href="/blog/best-seo-agencies-australia-2026">best SEO agencies in Australia for small business</a> list prints their published prices.
             </p>
           </div>
         </section>

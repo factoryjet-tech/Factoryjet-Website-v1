@@ -122,6 +122,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'NetSuite AI Agents',          href: '/services/netsuite-ai-agents' },
       { label: 'Odoo AI Agents',              href: '/services/odoo-ai-agents' },
       { label: 'Accounts Payable Automation', href: '/services/accounts-payable-automation' },
+      { label: 'Accounts Receivable Automation', href: '/services/accounts-receivable-automation' },
       { label: 'Document Intake AI Agents',   href: '/services/document-intake-ai-agents' },
       { label: 'Sales Order Automation Agents', href: '/services/sales-order-automation-ai-agents' },
       { label: 'AI Inventory Management Agents', href: '/services/ai-inventory-management-agents' },

@@ -939,7 +939,7 @@ export default function AuSeoPage() {
                 </p>
                 <p>
                   Want to see what Australian providers publish? Our <a href="/blog/seo-cost-australia-2026">SEO cost in Australia guide</a> compares
-                  package, hourly and audit prices from six sources.
+                  package, hourly and audit prices from six sources. Comparing agencies? See our <a href="/blog/best-seo-agencies-australia-2026">list of the best SEO agencies in Australia</a>.
                 </p>
                 <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               </div>

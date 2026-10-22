@@ -1168,6 +1168,7 @@ const othersSchema = {
 };
 
 const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
+  { href: '/services/accounts-receivable-automation', t: 'Accounts receivable automation', b: 'The other side of the ledger: reminders, cash application and dispute cases for customer invoices.' },
   { href: '/services/erp-ai-agents', t: 'AI agents for ERP systems', b: 'The overview: Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs on one page.' },
   { href: '/services/netsuite-ai-agents', t: 'NetSuite AI agents', b: "Bill Capture, Oracle's AI Connector and custom agents inside NetSuite." },
   { href: '/services/odoo-ai-agents', t: 'Odoo AI agents', b: 'The same work inside Odoo.' },

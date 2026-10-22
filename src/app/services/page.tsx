@@ -122,6 +122,7 @@ const SERVICE_GROUPS: { label: string; items: { title: string; href: string }[] 
       { title: 'AI Agent Development', href: '/services/ai-agent-development' },
       { title: 'Sales Order Automation Agents', href: '/services/sales-order-automation-ai-agents' },
       { title: 'Accounts Payable Automation', href: '/services/accounts-payable-automation' },
+      { title: 'Accounts Receivable Automation', href: '/services/accounts-receivable-automation' },
       { title: 'Document Intake AI Agents', href: '/services/document-intake-ai-agents' },
       { title: 'AI Inventory Management Agents', href: '/services/ai-inventory-management-agents' },
       { title: 'RFQ and Bidding Agent', href: '/services/ai-agent-development/rfq-bidding-agent' },
@@ -445,6 +446,7 @@ export default function USServicesHubPage() {
                   {[
                     { t: 'Sales orders from email, PDF and EDI', href: '/services/sales-order-automation-ai-agents' },
                     { t: 'Vendor invoices and bills', href: '/services/accounts-payable-automation' },
+                    { t: 'Customer payments and collections', href: '/services/accounts-receivable-automation' },
                     { t: 'RFQs and quotes', href: '/services/ai-agent-development/rfq-bidding-agent' },
                     { t: 'Stock checks and purchase orders', href: '/services/ai-inventory-management-agents' },
                     { t: 'Phone calls and bookings', href: '/services/ai-call-center-agents' },

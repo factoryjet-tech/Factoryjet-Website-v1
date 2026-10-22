@@ -8,6 +8,7 @@ import { ShareButton } from './ShareButton';
 import { BlogHeroImage } from './BlogHeroImage';
 import BlogLeadCapture from '@/components/BlogLeadCapture';
 import { blogLeadOffer } from '../leadOffer';
+import { BlogMidPageCTA, scanPostContent, withMidPageCTA } from './BlogMidPageCTA';
 import './BlogPostPage.css';
 import './VisualQA.css';
 import './IndiaAgencyGuide.css';
@@ -91,6 +92,10 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
 }) => {
   // One offer per post, matched to its topic and market (see ../leadOffer.ts).
   const leadOffer = blogLeadOffer(post);
+  // A post that already renders its own CTA between 20% and 80% of the text keeps it alone.
+  const content = scanPostContent(post.content).hasOwnMidCta
+    ? post.content
+    : withMidPageCTA(post.content, <BlogMidPageCTA offer={leadOffer} />);
   return (
     <div className={`blog-post min-h-screen bg-[#FAFAF7] relative${post.slug === 'best-ai-seo-agencies-india' ? ' blog-india-guide' : ''}`}>
       <ReadingProgress />
@@ -216,7 +221,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
 
               {/* Main Content Body */}
               <div id="content" className="blog-prose prose prose-slate prose-sm md:prose-base lg:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-[#F05A28] prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg prose-p:leading-relaxed prose-li:text-gray-700">
-                {keyboardReadableTables(post.content)}
+                {keyboardReadableTables(content)}
               </div>
 
 
