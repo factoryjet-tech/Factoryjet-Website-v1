@@ -10,192 +10,362 @@ import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-10-22';
+
+const PAGE_TITLE = 'Squarespace to Shopify Migration: Steps & 301s | FactoryJet';
+const PAGE_DESC =
+  'Squarespace to Shopify migration: the product CSV skips images, alt text and reviews, only one blog exports, and /p/ product URLs need 301s. The full plan.';
 
 export const metadata: Metadata = {
-  title: 'Squarespace to Shopify Migration Services | FactoryJet',
-  description:
-    'Migrate Squarespace to Shopify with zero ranking loss. Unlock Shop Pay 1-click checkout and advanced inventory while keeping your aesthetic.',
+  title: PAGE_TITLE,
+  description: PAGE_DESC,
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Squarespace to Shopify Migration Services | FactoryJet',
-    description:
-      'Migrate Squarespace to Shopify with zero ranking loss. Unlock Shop Pay 1-click checkout while keeping your aesthetic.',
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
     url: 'https://factoryjet.com/replatforming/squarespace-to-shopify',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Squarespace to Shopify Migration Services' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Squarespace to Shopify migration' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Squarespace to Shopify Migration Services | FactoryJet',
-    description: 'Migrate Squarespace to Shopify with zero ranking loss or downtime.',
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: 'https://factoryjet.com/replatforming/squarespace-to-shopify' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
+/* Official sources, all opened and read on 22 Oct 2026. */
+const SRC = {
+  shopifySq: { label: 'Shopify Help: Migrate from Squarespace', url: 'https://help.shopify.com/en/manual/migrating-to-shopify/migrating-from-squarespace' },
+  sqProducts: { label: 'Squarespace Help: Export products to a .csv', url: 'https://support.squarespace.com/hc/en-us/articles/360000694948-Export-products-to-a-csv' },
+  sqSite: { label: 'Squarespace Help: Export your site content', url: 'https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content' },
+  sqOrders: { label: 'Squarespace Help: Export Commerce orders', url: 'https://support.squarespace.com/hc/en-us/articles/206540677-Export-Commerce-orders' },
+  sqMappings: { label: 'Squarespace Help: URL mappings', url: 'https://support.squarespace.com/hc/en-us/articles/205815308-URL-mappings' },
+  sqDomain: { label: 'Squarespace Help: Transferring a domain away', url: 'https://support.squarespace.com/hc/en-us/articles/205812338-Transferring-a-domain-away-from-Squarespace' },
+  shopifyProducts: { label: 'Shopify Help: Import products', url: 'https://help.shopify.com/en/manual/products/import-export/import-products' },
+  shopifyCustomers: { label: 'Shopify Help: Import customers', url: 'https://help.shopify.com/en/manual/customers/import-export-customers' },
+  shopifyRedirects: { label: 'Shopify Help: URL redirects', url: 'https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect' },
+  shopifyPricing: { label: 'Shopify: Pricing', url: 'https://www.shopify.com/pricing' },
+  storeMigrationApp: { label: 'Shopify App Store: Store Migration', url: 'https://apps.shopify.com/store-migration' },
+  sqPricing: { label: 'Squarespace: Pricing', url: 'https://www.squarespace.com/pricing' },
+  shopifyConsiderations: { label: 'Shopify Help: Migration considerations', url: 'https://help.shopify.com/en/manual/migrating-to-shopify/considerations' },
+};
+
+const EXT_LINK = { color: '#141414', textDecoration: 'underline', textUnderlineOffset: '2px' } as const;
+
 const FAQ_CATEGORIES = [
-  { key: 'basics', label: 'Why Move to Shopify' },
-  { key: 'design', label: 'Design & Visual Aesthetic' },
-  { key: 'checkout', label: 'Checkout & Conversion' },
-  { key: 'cost', label: 'Costs & Fixed Pricing' },
-  { key: 'seo', label: 'SEO & 301 Redirects' },
-  { key: 'cutover', label: 'Cutover & Timeline' },
+  { key: 'squarespace-planning', label: 'Planning the Squarespace Move' },
+  { key: 'squarespace-store-data', label: 'Products, Customers & Orders' },
+  { key: 'squarespace-content', label: 'Blog, Pages & Design' },
+  { key: 'squarespace-urls', label: 'Squarespace URLs & Redirects' },
+  { key: 'squarespace-domain', label: 'Domain & Email' },
+  { key: 'squarespace-cost', label: 'Cost & Timeline' },
 ];
 
 const FAQ_ITEMS = [
   {
-    category: 'basics',
-    question: 'Why are boutique and direct-to-consumer brands leaving Squarespace for Shopify?',
+    category: 'squarespace-planning',
+    question: 'Can I migrate from Squarespace to Shopify?',
     answer:
-      'Brands outgrow Squarespace when they need advanced e-commerce functionality: multi-channel selling, native retail POS, 1-click Shop Pay checkout, third-party logistics integration, advanced customer segmentation, and custom subscription billing. Shopify provides an enterprise-ready foundation that scales without sales limits.',
+      'Yes. Shopify publishes its own Squarespace migration guide covering products, customers, order history and reviews. Products and customers move by CSV file. Order history moves through an app; Shopify’s guide names EZ Importer and Migration Pro. Your design, portfolio pages and custom CSS do not move, so they are rebuilt inside a Shopify theme.',
   },
   {
-    category: 'basics',
-    question: 'How long does a Squarespace to Shopify migration take?',
+    category: 'squarespace-planning',
+    question: 'What is the right order for moving from Squarespace to Shopify?',
     answer:
-      'A standard Squarespace migration takes between 2 to 4 weeks. This includes catalog and customer extraction, custom theme styling to preserve or elevate your visual brand, app integrations (Klaviyo, reviews, subscriptions), and complete 301 URL redirect mapping.',
+      'Products first, then customers, then historical orders, which is the order Shopify’s migration notes give. Before any of that, copy your Squarespace URL mappings and note each store page slug, because product URLs depend on it. Blog posts, images and pages can move in parallel. Redirects and the domain come last, after test orders pass.',
   },
   {
-    category: 'design',
-    question: 'Will our Shopify store look as clean and aesthetic as our Squarespace site?',
+    category: 'squarespace-planning',
+    question: 'Is it better to sell on Squarespace or Shopify?',
     answer:
-      'Yes, and even better. We rebuild your visual identity using custom Shopify Online Store 2.0 sections. You retain complete aesthetic elegance while gaining faster mobile load speeds, smoother interactions, and flexible drag-and-drop merchandising.',
+      'Squarespace suits a design-led site that sells a small range next to its content. Shopify suits a business where the store is the main event and you need more apps, more sales channels and more checkout choices. If products are a side line and your current setup works, staying on Squarespace is a fair decision. Move when the store has outgrown the site around it.',
   },
   {
-    category: 'design',
-    question: 'What happens to our blog articles, portfolios, and gallery layouts?',
+    category: 'squarespace-planning',
+    question: 'Is Squarespace still a good platform in 2026?',
     answer:
-      'We extract all historical blog posts, author records, gallery images, and portfolio case studies into Shopify Blog and custom page templates. All formatting, typography styles, and image alt tags are preserved.',
+      'For portfolios, service businesses and small catalogs, yes. Stores usually leave because they want a specific Shopify app, a wholesale or subscription setup, or one admin for several sales channels, not because Squarespace stopped working. If none of those apply to you, the cost of a migration may outweigh the gain.',
   },
   {
-    category: 'checkout',
-    question: 'How does Shopify checkout compare to Squarespace checkout?',
+    category: 'squarespace-planning',
+    question: 'Can Squarespace and Shopify work together?',
     answer:
-      'Shopify features Shop Pay, the highest-converting accelerated checkout on the internet with over 150 million saved buyers. Shop Pay lifts checkout conversion by up to 50% compared to standard guest checkout forms on Squarespace.',
+      'There is no built-in sync between them. The common middle ground is Shopify’s Buy Button, which adds Shopify products to an external website, so a Squarespace site can sell through Shopify checkout. That means two catalogs to keep in step and two admins to log into. For more than a handful of products, a full move to Shopify is usually simpler.',
   },
   {
-    category: 'checkout',
-    question: 'Can we manage inventory across multiple warehouses or retail stores?',
+    category: 'squarespace-planning',
+    question: 'Is there a Shopify app that imports a Squarespace store automatically?',
     answer:
-      'Yes. Unlike Squarespace which has limited inventory routing, Shopify natively supports multi-location inventory, warehouse splits, 3PL integrations (ShipBob, Deliverr, Flexport), and in-person retail sales via Shopify POS.',
+      'Not from Shopify itself, as of 22 October 2026. Shopify’s free Store Migration app lists Square, WooCommerce, Etsy, Wix, Amazon, eBay, Clover and Lightspeed as sources, and Squarespace was not on that list when we checked. The older Store Importer app is no longer available. So a Squarespace move runs on the product .csv, the .xml export and a few third-party apps.',
   },
   {
-    category: 'cost',
+    category: 'squarespace-store-data',
+    question: 'How do I export my products from Squarespace?',
+    answer:
+      'Open the Products panel and choose Export all, or select products and click Export. Squarespace exports physical and service products to a .csv, up to 10,000 products. The file is a one-time copy: later edits on either side do not sync. Re-map the columns to Shopify’s product CSV template and import under Products > Import, keeping each file under 15 MB.',
+  },
+  {
+    category: 'squarespace-store-data',
+    question: 'Why are product images missing after I import my Squarespace CSV?',
+    answer:
+      'Because the Squarespace export never had them. Squarespace says its product .csv will not include featured images, variant images, product image alt text, customer reviews or additional product information. We download each image from your live product pages, match it to the right product and variant, and attach it in Shopify with alt text filled in.',
+  },
+  {
+    category: 'squarespace-store-data',
+    question: 'Can I move digital download products from Squarespace?',
+    answer:
+      'Plan to rebuild them. Squarespace’s export article lists physical and service products for Export all and does not list download products. So we recreate each digital product in Shopify, re-upload the files through a digital downloads app you approve, and test a purchase end to end before launch.',
+  },
+  {
+    category: 'squarespace-store-data',
+    question: 'Can Squarespace customer accounts and passwords move to Shopify?',
+    answer:
+      'Customer records move; passwords cannot. Shopify’s Squarespace guide says it cannot import a customer CSV that does not match Shopify’s headings, so the Squarespace file is rewritten first. Shopify also says customer passwords cannot be migrated by CSV, so customers get an invite to set a new one. We draft that invite email with you so it reads as your brand.',
+  },
+  {
+    category: 'squarespace-store-data',
+    question: 'Can I move my Squarespace order history?',
+    answer:
+      'Yes. Squarespace exports Commerce orders as a .csv, filtered by status, date range or product. Know two quirks: partially refunded orders show the full purchase price, and hidden products or disabled store pages are left out. Shopify points to apps such as EZ Importer and Migration Pro for the import. Switch off new order notifications first.',
+  },
+  {
+    category: 'squarespace-store-data',
+    question: 'What happens to Squarespace product reviews?',
+    answer:
+      'They do not travel. Shopify’s guide says you cannot export or migrate reviews from Squarespace to Shopify, and the Squarespace product .csv leaves reviews out too. Shopify’s guide names Judge.me, Loox and Yotpo as review apps. You can start fresh in one of them or, with your sign-off, re-enter published review text with original dates.',
+  },
+  {
+    category: 'squarespace-content',
+    question: 'How do I move my Squarespace blog to Shopify?',
+    answer:
+      'Squarespace exports blog content as an .xml file in WordPress format from the Import and export panel. It holds one blog page, its posts and up to 1,000 comments per post; drafts do not export. Shopify has no admin button for that file, so posts go in through an app or Shopify’s Blog API. We parse the file, re-host the images and keep each slug for the 301 map.',
+  },
+  {
+    category: 'squarespace-content',
+    question: 'I have two blogs on Squarespace. What happens to the second?',
+    answer:
+      'Only one blog page exports. When a site has more than one, Squarespace asks you to pick a primary blog and exports just that one. We take the primary blog from the .xml file and capture the second blog from the live site: title, body, images, date and slug. Shopify supports several blogs, so each keeps its own section.',
+  },
+  {
+    category: 'squarespace-content',
+    question: 'Will my Squarespace portfolio, index and album pages move?',
+    answer:
+      'Not by export. Squarespace lists album, cover, index, portfolio, store and calendar pages as content that does not export, along with audio, video and product blocks. We rebuild those pages as Shopify pages and theme sections, using your original images, and redirect each old path to its new home. Gallery pages are on the export list, but only for version 7.0 sites.',
+  },
+  {
+    category: 'squarespace-content',
+    question: 'Will my Shopify store look like my Squarespace site?',
+    answer:
+      'It can look as close as you want, but it is a rebuild. Squarespace style settings and custom CSS do not export, so the look is recreated in a Shopify theme. FactoryJet builds custom-theme stores in 3 to 5 weeks and migrations in 5 to 8 weeks, and you see a working demo on your own products before you sign anything.',
+  },
+  {
+    category: 'squarespace-content',
+    question: 'Will blog images break after I cancel Squarespace?',
+    answer:
+      'They can. Squarespace warns that when its export is imported with the WordPress Importer plugin, images may come across as links back to Squarespace, which stop working once the Squarespace site is cancelled. The same risk applies to any tool that copies links instead of files. We download every image in the export and upload it to Shopify before posting the articles.',
+  },
+  {
+    category: 'squarespace-urls',
+    question: 'Will I lose search rankings when I move off Squarespace?',
+    answer:
+      'Some movement after a platform change is normal and nobody can promise none. What protects rankings is a one-to-one 301 map, with each old URL pointing straight to its closest Shopify page in one hop. We gather every URL from your Squarespace sitemap and Search Console, map each one and retest after launch. Titles and meta descriptions move with the content.',
+  },
+  {
+    category: 'squarespace-urls',
+    question: 'How do Squarespace product URLs change on Shopify?',
+    answer:
+      'On Squarespace 7.1, a product URL is the store page slug, then /p/, then the product slug, for example /shop/p/linen-apron. Shopify puts every product under /products/{handle}. The slug can often stay the same, but the path cannot, so each product gets its own 301. If you have several store pages, each one has its own prefix to map.',
+  },
+  {
+    category: 'squarespace-urls',
+    question: 'My Squarespace store page is called shop. Does that cause a problem?',
+    answer:
+      'Yes, and it is the trap we check first. Shopify says you cannot redirect URLs that begin with /shop, so old /shop/p/ product links cannot be redirected with Shopify’s own redirect tool. They need a rule outside Shopify, for example at your DNS or CDN provider, and we agree which during scoping. Store pages with other slugs, such as /store or /buy, redirect normally.',
+  },
+  {
+    category: 'squarespace-urls',
+    question: 'What happens to my Squarespace URL mappings?',
+    answer:
+      'They stop working when the domain leaves Squarespace, because they live in your Squarespace settings. That field holds up to 400 KB, roughly 2,500 redirect lines. We copy every line, merge it into the Shopify map and collapse chains. Shopify holds 100,000 redirects on standard plans and 20,000,000 on Plus, and redirects only fire from URLs that return 404.',
+  },
+  {
+    category: 'squarespace-domain',
+    question: 'How do I transfer my domain from Squarespace to Shopify?',
+    answer:
+      'Turn off the domain lock in Squarespace, then copy the transfer authentication code from the email Squarespace sends and give it to your new provider. Squarespace says the transfer can take up to 15 days. A recently purchased domain may have a 60-day lock. While you wait, Squarespace lets you point the domain to your new site, which is how we usually launch.',
+  },
+  {
+    category: 'squarespace-domain',
+    question: 'Will I lose my domain if I cancel my Squarespace plan?',
+    answer:
+      'Treat the domain and the website plan as two separate things. Before you cancel the site, either transfer the domain out or confirm with Squarespace how the domain is billed on its own. We keep the Squarespace site live until Shopify is launched and checked, then you cancel the website plan, never the domain by accident.',
+  },
+  {
+    category: 'squarespace-domain',
+    question: 'What happens to Google Workspace email when I leave Squarespace?',
+    answer:
+      'If Google Workspace is attached to your domain, Squarespace says to adjust your MX records with your new domain provider after transferring, to avoid an email outage. Squarespace also says you keep managing the Workspace subscription through Squarespace unless you cancel it. We list your MX records before launch and check mail delivery after the switch.',
+  },
+  {
+    category: 'squarespace-cost',
     question: 'How much does a Squarespace to Shopify migration cost?',
     answer:
-      'The cost depends on catalog size, custom layout complexity, and third-party app requirements. FactoryJet quotes a fixed price in writing after a short scoping call, before starting any development.',
+      'It depends on product and variant count, how many product images need re-attaching, how many blogs and portfolio pages need rebuilding, and which apps replace Squarespace features. FactoryJet quotes a fixed price in writing after a short scoping call. Defects are fixed inside the build price for a cover period agreed up front, and later support is optional with no monthly minimum.',
   },
   {
-    category: 'cost',
-    question: 'Does Shopify charge transaction fees on sales?',
+    category: 'squarespace-cost',
+    question: 'How long does moving from Squarespace to Shopify take?',
     answer:
-      'When using Shopify Payments (which powers Shop Pay, Apple Pay, Google Pay, and all major credit cards), there are 0% additional transaction fees. You only pay standard, competitive credit card processing rates.',
-  },
-  {
-    category: 'seo',
-    question: 'Will our search engine rankings drop when moving off Squarespace?',
-    answer:
-      'Not with our migration protocol. Squarespace uses distinct URL routing paths. We crawl 100% of your indexed URLs, create an exhaustive 1-to-1 redirect map, and deploy single-hop 301 redirects to ensure every customer bookmark and search engine ranking transfers seamlessly.',
-  },
-  {
-    category: 'seo',
-    question: 'How do you handle Squarespace image URLs and blog metadata?',
-    answer:
-      'We extract all custom page titles, meta descriptions, image alt attributes, and Open Graph tags from your Squarespace site and configure structured JSON-LD schemas in your new Shopify theme.',
-  },
-  {
-    category: 'cutover',
-    question: 'Can historical customer accounts and order histories be transferred?',
-    answer:
-      'Yes. All customer records, contact information, past order archives, and delivery addresses are imported into Shopify. We send automated activation emails so customers can log in to their new accounts instantly.',
-  },
-  {
-    category: 'cutover',
-    question: 'How do you guarantee zero downtime during DNS switchover?',
-    answer:
-      'We run a delta sync right before launch to capture recent orders and customer data, configure SSL certificates in advance, point your domain DNS records to Shopify during off-peak hours, and verify live payment processing immediately.',
+      'FactoryJet migrations run 5 to 8 weeks from signed scope to launch. A single store page with a small blog sits at the short end. Several store pages, a second blog captured from the live site, or many portfolio pages push it toward the long end. Across 500+ businesses since 2014, 97% of our projects have shipped on time.',
   },
 ];
 
 const STAT_CARDS = [
-  { num: 'Shop Pay', title: 'Accelerated Checkout', desc: 'Shopify\'s one-tap checkout, set up and tested on your new store.', icon: '⚡' },
-  { num: '10,000+', title: 'Ecosystem Apps', desc: 'Connect best-in-class tools for marketing, subscriptions, reviews, and loyalty.', icon: '🛍️' },
-  { num: 'Multi-Location', title: 'Inventory Sync', desc: 'Manage stock across multiple warehouses, 3PLs, and retail store locations.', icon: '🔄' },
-  { num: '1-to-1', title: 'Redirect Map', desc: 'Every old URL mapped to its new page with a single-hop 301 redirect.', icon: '🛡️' },
+  { num: '10,000', title: 'Products per export', desc: 'Squarespace’s product .csv holds up to 10,000 physical and service products.', icon: '📄', src: SRC.sqProducts },
+  { num: '1', title: 'Blog per .xml export', desc: 'If you run two blogs, Squarespace exports only the one you pick as primary.', icon: '📝', src: SRC.sqSite },
+  { num: '0', title: 'Product images in the CSV', desc: 'Featured images, variant images and alt text are left out of the export.', icon: '🖼️', src: SRC.sqProducts },
+  { num: '15 days', title: 'Domain transfer window', desc: 'Squarespace says a transfer away can take up to 15 days, so we point DNS first.', icon: '🌐', src: SRC.sqDomain },
 ];
 
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending the Strict E-Commerce Limitations of Squarespace',
-    problem: 'Squarespace lacks essential commerce capabilities like advanced shipping rules, multi-warehouse routing, and robust B2B pricing tiers.',
-    solution: 'Shopify provides an enterprise-grade commerce architecture that supports multi-location fulfillment, automated tax calculations, and global selling.',
+    title: 'The Product CSV Leaves Out Every Image',
+    problem: 'Squarespace’s product .csv does not include featured images, variant images, image alt text, reviews or additional product information.',
+    solution: 'We download each image from the live product pages, match it to its product and variant, and attach it in Shopify with alt text.',
   },
   {
     num: '02',
-    title: 'Unlocking Shop Pay Accelerated 1-Click Checkout Conversion',
-    problem: 'Standard multi-step checkouts on Squarespace create friction for mobile shoppers, leading to high cart abandonment.',
-    solution: 'Shop Pay allows over 150 million pre-authenticated shoppers to checkout in a single click, instantly boosting conversion rates.',
+    title: 'Only One Blog Leaves, and Store Pages Stay',
+    problem: 'The .xml export carries one blog page. Store, index, portfolio, album and cover pages, drafts and custom CSS do not export.',
+    solution: 'The primary blog comes from the .xml file; a second blog and every portfolio or index page are captured from the live site and rebuilt.',
   },
   {
     num: '03',
-    title: 'Accessing the World’s Premier E-Commerce App Ecosystem',
-    problem: 'Squarespace has a very limited extensions library, making advanced email flows, loyalty programs, and reviews difficult to scale.',
-    solution: 'Instant native integrations with top tools like Klaviyo, Gorgias, Yotpo, Recharge Subscriptions, and Triple Whale.',
+    title: 'Blog Images Can Still Point Back to Squarespace',
+    problem: 'Squarespace warns that imported posts may reference images by link, and those links stop working once the Squarespace site is cancelled.',
+    solution: 'Every image in the export is downloaded and uploaded to Shopify before the article is posted, so nothing depends on the old site.',
   },
   {
     num: '04',
-    title: 'Connecting Physical Retail & Pop-Up POS Effortlessly',
-    problem: 'Squarespace POS is basic and lacks deep omnichannel capabilities for multi-store retail brands.',
-    solution: 'Shopify POS unifies your online and physical retail sales, inventory counts, customer loyalty, and gift cards on a single platform.',
+    title: 'Your Squarespace Redirects Live in Squarespace',
+    problem: 'URL mappings you added over the years sit in Squarespace settings and stop working when the domain moves.',
+    solution: 'We copy every mapping line, merge it into the Shopify redirect map and collapse old chains into single hops.',
   },
 ];
 
 const PARTNERS = [
-  'Shopify Partner',
-  'Shop Pay Integration',
-  'Klaviyo Master Partner',
-  'Gorgias Premier',
-  'Yotpo Enterprise',
-  'Recharge Subscriptions',
-  'Judge.me Verified Partner',
-  'Cloudflare Global CDN',
+  'Shopify Partner (registered)',
+  'Squarespace product .csv',
+  'Squarespace .xml site export',
+  'Squarespace URL mappings',
+  'EZ Importer',
+  'Migration Pro',
+  'Shopify Blog API',
+  'Google Workspace MX records',
 ];
 
-const WORKING_STEPS = [
+const MIGRATION_STEPS = [
   {
     n: '01',
-    t: 'Catalog & Layout Architecture Audit',
-    d: 'We review your Squarespace products, variants, blog articles, and custom design layouts to build a comprehensive Shopify specification.',
+    t: 'Confirm version, visibility and store page slugs',
+    d: 'We note whether you are on 7.0 or 7.1, set the site to Public (Squarespace will not export from a trial site) and list every store page slug.',
     icon: '🔍',
   },
   {
     n: '02',
-    t: 'Data Extraction & Metafield Mapping',
-    d: 'We extract products, customer profiles, order history, blog posts, and SEO metadata, organizing them into clean Shopify data models.',
-    icon: '📊',
+    t: 'Export products from the Products panel',
+    d: 'Export all covers physical and service products, up to 10,000. Download products are listed for a manual rebuild.',
+    icon: '📦',
   },
   {
     n: '03',
-    t: 'Bespoke Shopify Storefront Build',
-    d: 'We design and develop a custom Shopify 2.0 theme that elevates your visual aesthetic while optimizing for sub-second load times.',
-    icon: '💻',
+    t: 'Collect product images and alt text from the live store',
+    d: 'The CSV has no images, so each product page is captured and every image is matched to its product and variant.',
+    icon: '🖼️',
   },
   {
     n: '04',
-    t: '1-to-1 SEO Crawl & 301 Redirect Matrix',
-    d: 'We crawl 100% of your indexed Squarespace URLs to generate single-hop 301 redirects, protecting all search engine equity and backlinks.',
-    icon: '🔗',
+    t: 'Import into Shopify with publishing off',
+    d: 'Columns are re-mapped to Shopify’s template, files kept under 15 MB, and products imported to the online store only until checked.',
+    icon: '⬆️',
   },
   {
     n: '05',
-    t: 'Delta Sync & Zero-Downtime Launch',
-    d: 'We perform a final delta sync of latest customer orders, switch DNS to Shopify during off-peak hours, and verify live payment routing.',
+    t: 'Rewrite the customer file to Shopify headings',
+    d: 'Shopify rejects customer files that do not match its headings. Passwords do not move, so the account invite email is drafted now.',
+    icon: '👥',
+  },
+  {
+    n: '06',
+    t: 'Export Commerce orders and import with an app',
+    d: 'Orders come out as a .csv by status and date. Partially refunded orders show full price, so we flag them before EZ Importer or Migration Pro loads the history.',
+    icon: '🧾',
+  },
+  {
+    n: '07',
+    t: 'Export the blog as .xml and post it to Shopify',
+    d: 'Import and export panel, Export, WordPress icon, primary blog. We parse the file, re-host images and post each article through the Blog API.',
+    icon: '📝',
+  },
+  {
+    n: '08',
+    t: 'Rebuild portfolio and index pages and the design',
+    d: 'Pages that do not export are rebuilt as Shopify pages and theme sections. You review a working demo on your own products.',
+    icon: '💻',
+  },
+  {
+    n: '09',
+    t: 'Build the 301 map, URL mappings included',
+    d: 'Every /p/ product URL, blog post and page gets a single-hop 301, and your old Squarespace URL mappings are merged in.',
+    icon: '🔗',
+  },
+  {
+    n: '10',
+    t: 'Point the domain and check email',
+    d: 'DNS points to Shopify while the transfer, if any, runs in the background. MX records for Google Workspace are checked the same day.',
     icon: '🚀',
   },
+];
+
+const URL_PATTERNS = [
+  { from: '/{store-page}/p/{product-slug}', to: '/products/{handle}', note: 'Squarespace 7.1 puts /p/ between the store page slug and the product slug. If that slug is shop, Shopify’s redirect tool cannot catch it, because Shopify blocks redirects from URLs that begin with /shop.' },
+  { from: '/{store-page}', to: '/collections/all or a named collection', note: 'A shop page becomes a Shopify collection. Several shop pages become several collections.' },
+  { from: '/{blog-page}/{post-slug}', to: '/blogs/{blog-handle}/{handle}', note: 'Slugs usually stay the same; the blog prefix changes, so each post still needs a 301.' },
+  { from: 'Portfolio, index and album pages', to: '/pages/{handle}', note: 'These do not export, so they are rebuilt first and then redirected.' },
+  { from: 'Lines in your Squarespace URL mappings', to: 'Merged into the Shopify map', note: 'Old chains collapse, so each URL reaches its final page in one 301.' },
+];
+
+const BEFORE_YOU_START = [
+  'Check whether the site runs Squarespace 7.0 or 7.1, since URL patterns differ.',
+  'Publish the site and set it to Public; exports do not run from a trial site.',
+  'Copy the full text of your URL mappings into a document.',
+  'Write down every store page slug and every blog page you run, and flag any store page named shop.',
+  'Find out whether Google Workspace email is billed through Squarespace.',
+];
+
+const ASK_A_PARTNER = [
+  'How will you recover the product images and alt text the CSV leaves out?',
+  'If I have two blogs, how does the second one move?',
+  'Will blog images be re-hosted on Shopify, or still linked to Squarespace?',
+  'What happens to the URL mappings I already have?',
+  'Will you point my domain first, or transfer it on launch day?',
+  'Can I see a working demo on my own products before I sign?',
+];
+
+const RELATED_LINKS = [
+  { href: '/services/shopify-migration-agency', label: 'Shopify migration agency: scope and what a fixed quote covers' },
+  { href: '/services/shopify-theme-development', label: 'Shopify theme development to recreate your Squarespace look' },
+  { href: '/services/shopify-seo', label: 'Shopify SEO after launch: Search Console checks and redirects' },
+  { href: '/replatforming/wix-to-shopify', label: 'Wix to Shopify: a store whose blog has no export at all' },
+  { href: '/replatforming/wordpress-to-shopify', label: 'WordPress to Shopify: moving a large blog by WXR file' },
+  { href: '/tools/replatforming-cost-calculator', label: 'Replatforming cost calculator' },
+  { href: '/blog/ecommerce-replatforming-without-losing-seo-2026', label: 'Replatforming without losing SEO: the redirect checklist' },
 ];
 
 const FAQ_SCHEMA = {
@@ -224,11 +394,11 @@ const SERVICE_SCHEMA = {
       'https://github.com/factoryjet-tech',
     ],
   },
-  name: 'Squarespace to Shopify Migration Services',
+  name: 'Squarespace to Shopify Migration',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  serviceType: 'E-Commerce Replatforming & Design Migration',
+  serviceType: 'Squarespace Commerce to Shopify migration',
   description:
-    'End-to-end migration from Squarespace to Shopify with visual design elevation, customer order history transfer, and 100% SEO ranking protection.',
+    'Moves Squarespace products, customers and order history to Shopify, re-attaches the product images the Squarespace CSV omits, moves the .xml blog export, and maps every /p/ product URL to a single-hop 301.',
   areaServed: ['US', 'GB', 'CA', 'AU'],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -248,8 +418,8 @@ const SERVICE_SCHEMA = {
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Squarespace to Shopify Migration Services | FactoryJet',
-  description: 'Complete engineering blueprint for migrating Squarespace stores to Shopify.',
+  name: PAGE_TITLE,
+  description: PAGE_DESC,
   url: 'https://factoryjet.com/replatforming/squarespace-to-shopify',
   dateModified: PAGE_MODIFIED,
   author: {
@@ -279,24 +449,24 @@ const BREADCRUMB_SCHEMA = {
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Technical Execution Model',
-    factoryjet: 'Senior commerce systems architects write custom ETL scripts and Shopify Functions with 100% full IP ownership.',
-    traditional: 'Junior agency generalists relying on generic third-party migration apps that cause database bloat.',
+    label: 'Product images',
+    factoryjet: 'Images and alt text recovered from the live store and matched to each product and variant before launch.',
+    traditional: 'CSV imported as is, so products go live with no photos.',
   },
   {
-    label: 'SEO & 301 URL Preservation',
-    factoryjet: '1-to-1 exact path mapping of 100% legacy URLs with single-hop 301 redirects and schema retention.',
-    traditional: 'Wildcard home-page redirects that result in massive Google ranking and organic revenue drops.',
+    label: 'Blogs and portfolio pages',
+    factoryjet: 'Primary blog from the .xml file, second blog and portfolio pages captured live, all images re-hosted on Shopify.',
+    traditional: 'Primary blog only, with images still linked to the Squarespace site.',
   },
   {
-    label: 'ERP & Warehouse Synchronization',
-    factoryjet: 'Direct GraphQL webhook pipeline syncing NetSuite, SAP, and Manhattan WMS in under 150ms.',
-    traditional: 'Batch CSV file uploads or slow third-party middleware with frequent inventory sync failures.',
+    label: 'Old /p/ URLs',
+    factoryjet: 'Every store page prefix mapped, URL mappings merged, each old URL a single-hop 301.',
+    traditional: 'Old product links sent to the homepage or left to 404.',
   },
   {
-    label: 'Commercial Terms & Accountability',
-    factoryjet: 'Transparent fixed-price milestone scope with guaranteed zero-downtime cutover SLA.',
-    traditional: 'Open-ended hourly retainer billing with frequent scope creep and unexpected overages.',
+    label: 'Price and accountability',
+    factoryjet: 'Fixed price per phase, a working demo on your products before you sign, defects fixed inside the build price.',
+    traditional: 'Hourly billing, with image recovery quoted later as extra work.',
   },
 ];
 
@@ -317,7 +487,7 @@ export default function SquarespaceToShopifyPage() {
         <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
           <div className="pp-wrap">
             <div className="rv-hero-wrap">
-              
+
               {/* Left Column Typography */}
               <div>
                 <div className="rv-badge" style={{ marginBottom: '18px' }}>
@@ -328,24 +498,28 @@ export default function SquarespaceToShopifyPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Migrate from Squarespace to Shopify with Zero Ranking Loss
+                  Squarespace to Shopify Migration, Product Images Included
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Keep your elegant visual brand aesthetic while upgrading to the conversion power of Shop Pay 1-click checkout, multi-location inventory, and advanced app integrations.
+                  To move from Squarespace to Shopify, export products as a .csv (up to 10,000), import them into Shopify, then bring customers and order history across. The Squarespace file leaves out product images, alt text and reviews, so those are recovered separately. Blog posts export as a WordPress-format .xml file, one blog only. Every /p/ product URL then needs its own 301.
                 </p>
 
                 <div className="rv-actions">
-                  <ModalCTAButton label="Get a Free Migration Audit" region="us" btnVariant="primary-dark" />
-                  <a href="#architecture-blueprint" className="rv-btn-secondary">
+                  <ModalCTAButton label="Get a Free Squarespace Audit" region="us" btnVariant="primary-dark" />
+                  <a href="#squarespace-export-table" className="rv-btn-secondary">
                     <div className="rv-video-circle">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
                         <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
                       </svg>
                     </div>
-                    <span>Explore Architecture</span>
+                    <span>What Squarespace Exports</span>
                   </a>
                 </div>
+
+                <p style={{ fontSize: '13px', color: '#6E6E80', margin: '20px 0 0' }}>
+                  Updated 22 October 2026 · Bhavesh Barot, Founder
+                </p>
               </div>
 
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
@@ -369,10 +543,10 @@ export default function SquarespaceToShopifyPage() {
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Trusted Enterprise Technology &amp; Ecosystem Partners</div>
+              <div className="rv-ticker-label">Exports, Apps and Records in a Squarespace Move</div>
               <div className="rv-ticker-line" />
             </div>
-            
+
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
                 {PARTNERS.concat(PARTNERS).map((p, idx) => (
@@ -392,7 +566,7 @@ export default function SquarespaceToShopifyPage() {
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
           <div className="pp-wrap">
             <div className="rv-about-grid">
-              
+
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
@@ -414,11 +588,11 @@ export default function SquarespaceToShopifyPage() {
                 </div>
 
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
-                  Engineered for Zero Downtime. Built for Growth.
+                  What the Squarespace Export Hands You
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  We specialize in high-touch migrations from Squarespace to Shopify. We preserve your visual brand identity while unlocking higher checkout conversion, multi-location inventory fulfillment, and access to thousands of enterprise marketing apps.
+                  Squarespace gives you two files: a product .csv and a WordPress-format .xml. Neither carries your product photos or your design. FactoryJet, a registered Shopify Partner serving 500+ businesses since 2014, plans each Squarespace job around these numbers and shows you a working Shopify demo on your own catalog before you commit.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -434,7 +608,8 @@ export default function SquarespaceToShopifyPage() {
                         {s.title}
                       </div>
                       <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
-                        {s.desc}
+                        {s.desc}{' '}
+                        <a href={s.src.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>Source</a>
                       </p>
                     </div>
                   ))}
@@ -458,13 +633,13 @@ export default function SquarespaceToShopifyPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>The Direct Comparison</span>
+                <span>Squarespace Export Gaps</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Growing Brands Are Leaving Squarespace
+                Four Gaps in the Squarespace Export
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Squarespace is great for portfolios, but restrictive for serious commerce. Here is what changes when you upgrade to Shopify:
+                The product list exports cleanly. Images, second blogs, portfolio pages and your old redirects do not, and that is where do-it-yourself moves come up short.
               </p>
             </div>
 
@@ -484,16 +659,25 @@ export default function SquarespaceToShopifyPage() {
                   </div>
                   <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Squarespace Limit:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>On Squarespace:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The Shopify Fix:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>What we do:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
                 </div>
               ))}
+
+              <div className="rv-service-row">
+                <h3 className="rv-service-title" style={{ margin: '0 0 12px' }}>Five things to do in Squarespace before the move</h3>
+                <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '14px', color: '#494852', lineHeight: 1.6 }}>
+                  {BEFORE_YOU_START.map((item) => (
+                    <li key={item} style={{ marginBottom: '6px' }}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -502,31 +686,31 @@ export default function SquarespaceToShopifyPage() {
 
         <div id="architecture-blueprint">
           <EnterpriseArchitectureBlueprint
-            badge="// SQUARESPACE TO SHOPIFY ARCHITECTURE BLUEPRINT"
-            title="Enterprise Architecture: Replatforming Squarespace to Shopify"
-            subtitle="Upgrade your visual brand into a high-converting Shopify 2.0 store with Shop Pay 1-click checkout, multi-location inventory, and zero cutover downtime."
-            legacySource="Squarespace CMS"
-            targetStack="Shopify Modern Cloud Architecture"
-            ctaLabel="Schedule Squarespace Migration Scoping"
+            badge="// SQUARESPACE COMMERCE TO SHOPIFY"
+            title="Where Each Squarespace Export Goes in Shopify"
+            subtitle="Product .csv into the Shopify importer, images recovered from the live store, the .xml blog through the Blog API, and URL mappings merged into one redirect map."
+            legacySource="Squarespace Commerce"
+            targetStack="Shopify"
+            ctaLabel="Book a Squarespace Scoping Call"
             region="us"
           />
         </div>
 
         {/* ── 06. RITOVEX SIDE-BY-SIDE COMPARISON TABLE ── */}
-        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+        <section className="pp-sec" id="squarespace-export-table" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 40px' }}>
               <div className="rv-badge" style={{ marginBottom: '14px' }}>
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Side-by-Side Analysis</span>
+                <span>From the Squarespace and Shopify Help Centers</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Squarespace vs. Shopify
+                Squarespace Export Limits Next to Shopify Import Rules
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare key commerce, checkout, and inventory capabilities side by side:
+                Every fact below is taken from the official help article in the last column, opened on 22 October 2026. Check them again before a large move, since both companies update these pages.
               </p>
             </div>
 
@@ -534,45 +718,83 @@ export default function SquarespaceToShopifyPage() {
               <table className="pp-table" style={{ margin: 0, width: '100%', background: '#FFFFFF' }}>
                 <thead style={{ background: '#F6F6F9' }}>
                   <tr>
-                    <th style={{ color: '#141414', fontWeight: 700 }}>Feature / Dimension</th>
-                    <th style={{ color: '#141414', fontWeight: 700 }}>Squarespace</th>
-                    <th style={{ color: '#141414', fontWeight: 700 }}>Shopify Cloud Platform</th>
-                    <th style={{ color: '#141414', fontWeight: 700 }}>What It Means for Your Brand</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Data</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>What Squarespace gives you</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Where it goes in Shopify</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Source (checked 22 Oct 2026)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Checkout Conversion</td>
-                    <td>Standard multi-step checkout with high mobile drop-off</td>
-                    <td style={{ color: '#047857', fontWeight: 600 }}>Shop Pay 1-click accelerated checkout</td>
-                    <td>Up to 50% higher checkout completion across 150M+ saved shoppers</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Products</td>
+                    <td>.csv of physical and service products, up to 10,000. A one-time copy that does not sync.</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Products &gt; Import. A product CSV cannot exceed 15 MB.</td>
+                    <td><a href={SRC.sqProducts.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.sqProducts.label}</a>; <a href={SRC.shopifyProducts.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifyProducts.label}</a></td>
                   </tr>
                   <tr>
-                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>App &amp; Partner Ecosystem</td>
-                    <td>Very small extensions library with limited integrations</td>
-                    <td style={{ color: '#047857', fontWeight: 600 }}>10,000+ top-tier enterprise apps &amp; integrations</td>
-                    <td>Seamless compatibility with Klaviyo, Gorgias, Yotpo, and Recharge</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Product images</td>
+                    <td>Not in the .csv: featured images, variant images, image alt text, reviews, additional information.</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Recovered from the live store and attached per product and variant.</td>
+                    <td><a href={SRC.sqProducts.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.sqProducts.label}</a></td>
                   </tr>
                   <tr>
-                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Inventory Management</td>
-                    <td>Single inventory location with basic stock tracking</td>
-                    <td style={{ color: '#047857', fontWeight: 600 }}>Native multi-location inventory &amp; 3PL warehouse sync</td>
-                    <td>Fulfill from multiple distribution centers and retail stores effortlessly</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Customers</td>
+                    <td>Customer list export</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>File must match Shopify headings. Passwords cannot be migrated. Limit 15 MB.</td>
+                    <td><a href={SRC.shopifySq.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifySq.label}</a>; <a href={SRC.shopifyCustomers.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifyCustomers.label}</a></td>
                   </tr>
                   <tr>
-                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Omnichannel &amp; POS</td>
-                    <td>Limited in-person POS capabilities</td>
-                    <td style={{ color: '#047857', fontWeight: 600 }}>Native Shopify POS for retail stores &amp; pop-ups</td>
-                    <td>Unified customer profiles, gift cards, and inventory across all channels</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Orders</td>
+                    <td>.csv filtered by status, date or product. Partially refunded orders show full price; hidden products are left out.</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Imported with an app; Shopify names EZ Importer and Migration Pro.</td>
+                    <td><a href={SRC.sqOrders.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.sqOrders.label}</a>; <a href={SRC.shopifySq.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifySq.label}</a></td>
                   </tr>
                   <tr>
-                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Global Selling</td>
-                    <td>Basic currency display with rigid tax rules</td>
-                    <td style={{ color: '#047857', fontWeight: 600 }}>Shopify Markets with localized pricing &amp; duties</td>
-                    <td>Sell internationally with local currencies, languages, and checkout</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Blog</td>
+                    <td>WordPress-format .xml: one blog page, its posts and up to 1,000 comments per post. Drafts do not export.</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Posted through a migration app or the Blog API.</td>
+                    <td><a href={SRC.sqSite.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.sqSite.label}</a>; <a href={SRC.shopifyConsiderations.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifyConsiderations.label}</a></td>
+                  </tr>
+                  <tr>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Other pages</td>
+                    <td>Store, index, portfolio, album, cover and calendar pages, style settings and custom CSS do not export. Gallery pages export on 7.0 only.</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Rebuilt as Shopify pages and theme sections.</td>
+                    <td><a href={SRC.sqSite.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.sqSite.label}</a></td>
+                  </tr>
+                  <tr>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Redirects</td>
+                    <td>URL mappings field, up to 400 KB (about 2,500 lines). Products sit under /p/ on 7.1, often as /shop/p/.</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Up to 100,000 redirects (20,000,000 on Plus), only from broken URLs. URLs that begin with /shop cannot be redirected.</td>
+                    <td><a href={SRC.sqMappings.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.sqMappings.label}</a>; <a href={SRC.shopifyRedirects.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifyRedirects.label}</a></td>
+                  </tr>
+                  <tr>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Domain</td>
+                    <td>Lock removed, then the emailed auth code goes to the new provider. Up to 15 days; new domains may carry a 60-day lock.</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Point the domain to Shopify while the transfer runs.</td>
+                    <td><a href={SRC.sqDomain.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.sqDomain.label}</a></td>
+                  </tr>
+                  <tr>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Monthly platform fee</td>
+                    <td>Basic $25/mo monthly or $19 yearly (2% store transaction fee); Core $39 or $29; Plus $65 or $49; Advanced $139 or $99.</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Basic $39/mo monthly or $29/mo yearly; Grow $105 or $89; Advanced $399 or $359 (USD).</td>
+                    <td><a href={SRC.sqPricing.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.sqPricing.label}</a>; <a href={SRC.shopifyPricing.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifyPricing.label}</a></td>
                   </tr>
                 </tbody>
               </table>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '40px auto 0' }}>
+              <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#141414', margin: '0 0 12px' }}>Squarespace URL patterns and their Shopify targets</h3>
+              <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '14px', color: '#494852', lineHeight: 1.6 }}>
+                {URL_PATTERNS.map((u) => (
+                  <li key={u.from} style={{ marginBottom: '8px' }}>
+                    <strong style={{ color: '#141414' }}>{u.from}</strong> to <strong style={{ color: '#141414' }}>{u.to}</strong>. {u.note}
+                  </li>
+                ))}
+              </ul>
+              <p style={{ fontSize: '14px', color: '#494852', margin: '16px 0 0', lineHeight: 1.6 }}>
+                Running several store pages? Each one is a separate /p/ prefix in the map. Our <Link href="/services/shopify-migration-agency" style={EXT_LINK}>migration team</Link> handles the mapping, and <Link href="/services/shopify-theme-development" style={EXT_LINK}>theme development</Link> rebuilds the portfolio and index pages that Squarespace does not export.
+              </p>
             </div>
           </div>
         </section>
@@ -581,28 +803,28 @@ export default function SquarespaceToShopifyPage() {
         <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
-              
+
               {/* Left Column Sticky Content */}
               <div style={{ position: 'sticky', top: '100px' }}>
                 <div className="rv-badge" style={{ marginBottom: '14px' }}>
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Our Working Process</span>
+                  <span>Squarespace Migration Steps</span>
                 </div>
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
-                  Our 5-Step Migration Protocol
+                  Moving Off Squarespace in 10 Steps
                 </h2>
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  We execute every phase with strict engineering standards: visual parity is verified before build, and 1-to-1 redirect mapping is tested before DNS switch.
+                  Images are the long pole on most Squarespace jobs, so we start capturing them on day one while the product file is re-mapped. FactoryJet migrations run 5 to 8 weeks.
                 </p>
                 <ModalCTAButton label="Start Your Squarespace Audit" region="us" btnVariant="primary-dark" />
               </div>
 
               {/* Right Column Step Cards */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {WORKING_STEPS.map((s) => (
-                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
+              <ol style={{ display: 'flex', flexDirection: 'column', gap: '16px', listStyle: 'none', margin: 0, padding: 0 }}>
+                {MIGRATION_STEPS.map((s) => (
+                  <li key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
                       <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
                         {s.icon}
@@ -617,16 +839,16 @@ export default function SquarespaceToShopifyPage() {
                     <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
                       {s.d}
                     </p>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ol>
 
             </div>
           </div>
         </section>
 
         {/* ── 09. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
-        
+
         {/* ── AGENCY EVALUATION FRAMEWORK TABLE ── */}
         <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
@@ -638,18 +860,18 @@ export default function SquarespaceToShopifyPage() {
                 <span>Vendor Due Diligence</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Evaluating Migration Partners: What to Ask
+                Choosing a Squarespace Migration Partner
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare senior engineering replatforming against traditional design agency retainers before you commit:
+                Quotes differ most on images and blogs. Ask how each partner handles these four:
               </p>
             </div>
 
             <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Factor</div>
-                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional Design Agencies</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet</div>
+                <div style={{ color: '#A0A0B0' }}>Common Shortcut</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
@@ -677,15 +899,36 @@ export default function SquarespaceToShopifyPage() {
                 </div>
               ))}
             </div>
+
+            <div style={{ maxWidth: '960px', margin: '40px auto 0', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px' }}>
+              <div>
+                <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 12px' }}>Questions to put to any Squarespace migration quote</h3>
+                <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '14px', color: '#494852', lineHeight: 1.6 }}>
+                  {ASK_A_PARTNER.map((q) => (
+                    <li key={q} style={{ marginBottom: '6px' }}>{q}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 12px' }}>Related pages</h3>
+                <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '14px', color: '#494852', lineHeight: 1.6 }}>
+                  {RELATED_LINKS.map((l) => (
+                    <li key={l.href} style={{ marginBottom: '6px' }}>
+                      <Link href={l.href} style={EXT_LINK}>{l.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
 
         <CommerceRoiCalculator city="Enterprise Store" region="us" />
 
         <FAQ
-          eyebrow="MIGRATION INTELLIGENCE"
-          headline="Frequently Asked Questions About Moving Off Squarespace"
-          lead="Everything brand founders, creative directors, and operations managers ask when migrating to Shopify:"
+          eyebrow="SQUARESPACE MIGRATION QUESTIONS"
+          headline="Moving From Squarespace to Shopify: FAQ"
+          lead="What Squarespace store owners ask before they switch, from missing images to Google Workspace email:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#F6F6F9]"
@@ -705,17 +948,17 @@ export default function SquarespaceToShopifyPage() {
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
-              <span>Fixed-Price Migration Guarantee</span>
+              <span>Fixed Price Per Phase</span>
             </div>
-            
+
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Upgrade Squarespace to Shopify?
+              Send Us Your Squarespace Site
             </h2>
-            
+
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Send us your Squarespace site URL. We will audit your current layout, product catalog, and delivery workflows to provide a detailed technical roadmap with a guaranteed fixed quote.
+              We count your store pages, products and images, check which blogs and portfolio pages will need a live capture, and send back a written fixed price with the URL map attached.
             </p>
-            
+
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
               <ModalCTAButton label="Schedule Squarespace Discovery Call" region="us" btnVariant="primary-light" />
             </div>

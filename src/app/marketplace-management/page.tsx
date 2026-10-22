@@ -11,27 +11,48 @@ import '@/components/v2/PlatformPage.css';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/marketplace';
 
+// Freshness signal. Bump only when the page content actually changes.
+const PAGE_MODIFIED = '2026-10-22';
+
+const PAGE_URL = 'https://factoryjet.com/marketplace-management';
+const PAGE_TITLE = 'Marketplace Management Agency: Amazon, Walmart | FactoryJet';
+const PAGE_DESCRIPTION =
+  'Marketplace management for US brands on Amazon, Walmart, Target Plus, Faire and TikTok Shop: one catalog, shared stock, MAP rules. Fixed price per phase.';
+
+/* Primary sources for marketplace fees and rules on this page (all read 22 Oct 2026). */
+const SRC = {
+  amazon: 'https://sell.amazon.com/pricing',
+  fba: 'https://sell.amazon.com/fulfillment-by-amazon',
+  walmart: 'https://marketplace.walmart.com/pricing/',
+  wfs: 'https://marketplace.walmart.com/walmart-fulfillment-services/',
+  wfsFees: 'https://marketplacelearn.walmart.com/guides/Walmart%20Fulfillment%20Services%20(WFS)/WFS%20basics/WFS-fees',
+  targetApply: 'https://plus.target.com/apply',
+  targetShopify: 'https://corporate.target.com/press/release/2024/06/target-and-shopify-partner-to-help-consumers-discover-and-shop-an-expanded-assortment-on-target-com',
+  faire: 'https://www.faire.com/tos-brand',
+};
+
+const LINK = { color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' } as const;
+
 export const metadata: Metadata = {
-  title: 'Multi-Channel Marketplace Management Agency | Amazon, Walmart, Target Plus | FactoryJet',
-  description:
-    'Scale multi-channel marketplace revenue across Amazon, Walmart, Target Plus, Faire, and TikTok Shop without inventory stockouts, pricing conflicts, or channel cannibalization. Platform-agnostic marketplace engineering for US DTC and B2B brands.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Marketplace Management & Brand Accelerator Agency | FactoryJet',
     description:
       'Unified catalog, inventory synchronization, and advertising growth across Amazon, Walmart, Target Plus, and Faire Wholesale.',
-    url: 'https://factoryjet.com/marketplace-management',
+    url: PAGE_URL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet Marketplace Management Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Multi-Channel Marketplace Management Agency | FactoryJet',
-    description: 'Sell across Amazon, Walmart, Target Plus, Faire, and TikTok Shop with unified inventory and zero channel conflict.',
+    description: 'Sell across Amazon, Walmart, Target Plus, Faire, and TikTok Shop from one catalog and one shared stock pool.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/marketplace-management' },
+  alternates: { canonical: PAGE_URL },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -42,6 +63,7 @@ const FAQ_CATEGORIES = [
   { key: 'strategy', label: 'Strategy & Fit' },
   { key: 'operations', label: 'Inventory & Operations' },
   { key: 'channels', label: 'Channel Specifics' },
+  { key: 'fees', label: 'Fees & Requirements' },
   { key: 'commercials', label: 'Pricing & Handover' },
 ];
 
@@ -51,25 +73,25 @@ const FAQ_ITEMS = [
     category: 'strategy',
     question: 'Will selling on Amazon cannibalize our direct Shopify store sales?',
     answer:
-      'No, when structured properly. Over 60% of US consumers begin their product discovery on Amazon and will not search for independent websites. Marketplace presence captures existing demand that would otherwise go to competing brands, while your DTC storefront retains exclusive bundles, loyalty rewards, and subscription offers.',
+      'Not when you set it up with clear roles. Many shoppers search Amazon first and never visit brand sites, so a listing there catches demand that would otherwise go to a competitor. Keep your own store the home of exclusive bundles, loyalty rewards and subscriptions, and hold one price across channels so neither one undercuts the other.',
   },
   {
     category: 'strategy',
     question: 'What is the difference between Seller Central and Vendor Central?',
     answer:
-      'On Seller Central (3P), you sell directly to consumers, set your own retail prices, control your inventory levels, and pay marketplace referral fees. On Vendor Central (1P), you sell wholesale inventory directly to Amazon as a supplier, and Amazon sets the retail price. We primarily help brands succeed on 3P Seller Central for higher margins and price control.',
+      'On Seller Central (3P), you sell to shoppers yourself, set your own prices, control your stock and pay Amazon referral fees. On Vendor Central (1P), you sell stock to Amazon as a supplier at a wholesale price, and Amazon sets the shelf price. We mostly help brands on Seller Central, because it keeps price control and margin with the brand.',
   },
   {
     category: 'strategy',
     question: 'How do we prevent channel conflict and MAP pricing violations?',
     answer:
-      'We establish automated price-syncing rules that match your Minimum Advertised Price (MAP) policy across all channels. We also implement Brand Registry protection to identify and suppress unauthorized gray-market sellers who undercut your retail pricing.',
+      'We set price-sync rules that hold your Minimum Advertised Price (MAP) on every channel, so no listing drops below it by accident. We also use Amazon Brand Registry tools to spot unauthorized sellers who undercut your price, and we report them through Amazon’s own process. Your team gets an alert whenever a listing breaks the price floor.',
   },
   {
     category: 'strategy',
     question: 'When is a brand ready for marketplace expansion?',
     answer:
-      'A brand is ready when it has proven product-market fit on its core website, stable supply chain capacity, clean barcode/UPC documentation, and trademark registration for brand registry protection.',
+      'A brand is ready when its products already sell steadily on its own site, its supply can handle a second or third channel, every product has a valid GS1 barcode, and it holds a registered trademark for Amazon Brand Registry. If any one of those is missing, fix it first. Launching early usually means stockouts or listings you cannot defend.',
   },
 
   // Inventory & Operations
@@ -77,31 +99,31 @@ const FAQ_ITEMS = [
     category: 'operations',
     question: 'How does inventory sync between Shopify and Amazon work?',
     answer:
-      'We connect your primary inventory database to marketplace APIs using webhook listeners. When an order is placed on Amazon, stock is decremented in Shopify within seconds. When stock is received in your main warehouse, available quantities update across all channels automatically.',
+      'We connect your main inventory database to marketplace APIs using webhook listeners. When an order lands on Amazon, the Shopify stock count drops within seconds. When new stock arrives at your main warehouse, the available quantity updates on every channel without anyone touching a spreadsheet. FBA stock is tracked as its own pool, since Amazon holds it.',
   },
   {
     category: 'operations',
     question: 'What happens if a product sells out simultaneously on multiple channels?',
     answer:
-      'We configure automated inventory safety buffers (e.g., reserving 5 units of buffer stock). When total warehouse quantity drops to the threshold, marketplace listings automatically switch to zero available stock while your main website continues selling down the final units.',
+      'We set inventory safety buffers per SKU, for example holding back 5 units. When warehouse stock drops to that level, marketplace listings switch to zero available while your own website sells the last units. That stops marketplaces from taking orders you cannot ship, which protects your seller ratings on every channel.',
   },
   {
     category: 'operations',
-    question: 'Should we use Amazon FBA, Walmart WFS, or our own 3PL?',
+    question: 'WFS vs FBA: should we use Amazon FBA, Walmart WFS, or our own 3PL?',
     answer:
-      'A hybrid model is usually best. Using FBA for Amazon Prime badges and WFS for Walmart 2-day delivery badges maximizes conversion rates, while your primary 3PL fulfills direct website and wholesale orders. We architect the inventory distribution model that minimizes storage fees.',
+      'Most brands mix them. FBA earns Prime delivery on Amazon, and WFS gives Walmart listings Walmart’s own fulfillment, while your 3PL ships website, Target Plus and wholesale orders. Compare per-unit costs first: WFS starts at $3.45 for items of 1 lb or less, and FBA fees vary by size tier on Amazon’s FBA page. Then split stock to keep storage fees low.',
   },
   {
     category: 'operations',
     question: 'How are returns and damaged inventory handled?',
     answer:
-      'Marketplace returns can be routed directly to automated inspection centers or returned to your central 3PL warehouse. We configure automated reconciliation reports to track customer return reasons and identify unfulfillable unit discrepancies.',
+      'Marketplace returns go either to the marketplace’s own centers, for FBA and WFS stock, or back to your central 3PL. We set up reconciliation reports that track return reasons by SKU and flag units marked unfulfillable, so you can claim reimbursements where they apply and fix the product or listing problem behind repeat returns.',
   },
   {
     category: 'operations',
     question: 'Can we sell B2B wholesale orders on marketplaces?',
     answer:
-      'Yes. We configure Amazon Business for volume-tiered pricing and integrate with Faire Wholesale to sell to independent boutiques with automated Net 60 invoice settlements.',
+      'Yes. We set up Amazon Business for quantity price tiers and connect Faire Wholesale so independent shops can order from you. On Faire, retailers get 60 days to pay with no interest, and Faire takes 15% plus a $10 new customer fee on each retailer’s first order. Wholesale orders then flow into the same order queue as your other channels.',
   },
 
   // Channel Specifics
@@ -109,31 +131,31 @@ const FAQ_ITEMS = [
     category: 'channels',
     question: 'Is Walmart Marketplace worth the investment for a DTC brand?',
     answer:
-      'Yes. Walmart Marketplace is the fastest-growing major US marketplace with less seller saturation than Amazon. Qualifying for the Pro Seller Badge and utilizing Walmart Fulfillment Services (WFS) allows established brands to capture substantial incremental volume with lower CPCs.',
+      'It is worth testing for most brands that already sell on Amazon. Walmart says it charges no setup or monthly fee, and the referral fee is 15% in many categories, so a small test costs little. Run your SKUs through our marketplace fee calculator first, list the ones that clear your margin, and use WFS to reach Walmart’s fast-delivery badges.',
   },
   {
     category: 'channels',
     question: 'How difficult is it to get approved for Target Plus?',
     answer:
-      'Target Plus is invitation-only. Acceptance requires proven brand equity, US incorporation, GS1-certified UPC barcodes, and Direct Vendor Ship (DVS) EDI compliance. We assist qualified brands in preparing their formal submission packages.',
+      'Target Plus is invite-only. Target’s apply page asks for a US-registered business with a W-9, EIN and DUNS number, GS1 barcodes on every product, US-only shipping with UPS, USPS or FedEx inside a 24-hour lead time, and the ability to take palletized returns. Onboarding runs 70 days. We help qualified brands prepare each item before they apply.',
   },
   {
     category: 'channels',
     question: 'How does TikTok Shop integrate with our existing e-commerce stack?',
     answer:
-      'We connect TikTok Shop directly to your product catalog, allowing in-app checkout while routing orders to your central warehouse for fulfillment. We also configure affiliate commission structures for creator promotion.',
+      'We connect TikTok Shop to your product catalog, so shoppers check out inside the app while orders route to your central warehouse. Stock counts come from the same pool as your other channels. We also set up affiliate commission rules so creators can promote your products, and we keep TikTok listings in step with your main catalog.',
   },
   {
     category: 'channels',
     question: 'Can we sell internationally on European or Asian marketplaces?',
     answer:
-      'Yes. We support cross-border expansion to Amazon Europe (UK, Germany, France), Mercado Libre in Latin America, and regional marketplaces with automated currency conversion, VAT compliance, and translated catalog feeds.',
+      'Yes. We support expansion to Amazon’s UK and European stores, such as Germany and France, Mercado Libre in Latin America, and regional marketplaces. That work covers currency conversion, VAT settings and translated catalog feeds. Each new country adds tax and compliance steps, so we scope it as its own phase with its own fixed price.',
   },
   {
     category: 'channels',
-    question: 'What is Amazon Brand Registry and why is it mandatory?',
+    question: 'What is Amazon Brand Registry and why does it matter?',
     answer:
-      'Amazon Brand Registry gives trademark owners access to enhanced A+ Content, customized Storefronts, Sponsored Brands video ads, and Project Zero counterfeit protection tools. We ensure your brand registry assets are fully active.',
+      'Amazon Brand Registry is Amazon’s program for trademark owners. It gives you A+ Content, brand Storefronts, Sponsored Brands ads and tools to report counterfeit or copycat listings. It is not required to sell, but without it you have little control over your own product pages. We get your registry set up and keep its assets active.',
   },
 
   // Pricing & Handover
@@ -141,25 +163,75 @@ const FAQ_ITEMS = [
     category: 'commercials',
     question: 'Do you charge a percentage of our marketplace sales?',
     answer:
-      'No. Unlike traditional agencies that charge 5% to 10% of gross marketplace revenue forever, FactoryJet works on transparent, fixed-price project milestones and optional flat-fee advisory retainers. You keep 100% of your margin.',
+      'No. We quote a fixed price per phase, in writing, after scoping. Before you sign, we show you working software on your own data. Every build includes defect cover for a stated period, and there is no monthly minimum. Many agencies bill a share of marketplace revenue; we never take a percentage of your sales.',
   },
   {
     category: 'commercials',
     question: 'Who owns the marketplace accounts and advertising data?',
     answer:
-      'You own 100% of your Seller Central accounts, advertising dashboards, and brand tokens. We operate via delegated partner permissions and never hold your business assets in proprietary agency accounts.',
+      'You own every Seller Central account, ad dashboard and brand registry login. We work through user permissions you grant inside your own accounts, and we never move your listings or data into agency-owned accounts. If we part ways, you remove our access and keep everything, including the integrations we built.',
   },
   {
     category: 'commercials',
     question: 'How long does a multi-marketplace setup take?',
     answer:
-      'A standard 3-channel rollout (Amazon + Walmart + Faire) typically takes 3 to 4 weeks from scoping to live catalog dispatch and advertising activation.',
+      'We give you the timeline in writing after scoping, because it depends on your channels, your catalog size and the systems we connect. Marketplace approval also sets the pace: Target Plus, for example, runs a 70-day onboarding. Each phase has a fixed price and a set scope, so you know what goes live first and when.',
   },
   {
     category: 'commercials',
     question: 'What happens after the initial build and launch?',
     answer:
-      'We provide comprehensive documentation, video walkthroughs, and standard operating procedures (SOPs) for your in-house team, with 30 days of post-launch hypercare support and optional ongoing advisory retainers.',
+      'Your team gets full documentation, video walkthroughs and standard operating procedures (SOPs) for every channel. Defect cover for a stated period is included in the build price. After that, there is no monthly minimum. You ask for changes when you need them, and we quote each one before work starts.',
+  },
+
+  // Fees & Requirements
+  {
+    category: 'fees',
+    question: 'How do brands manage orders from multiple marketplaces?',
+    answer:
+      'They pull every order into one queue. A central system, often Shopify or the ERP, takes orders from Amazon, Walmart, Target Plus, Faire and TikTok Shop through each marketplace’s API, sends them to the warehouse, and pushes tracking numbers back. Stock counts come from one shared pool, so a sale on one channel lowers the count on all of them.',
+  },
+  {
+    category: 'fees',
+    question: 'What does it cost to sell on Amazon, Walmart and Faire?',
+    answer:
+      'As of 22 Oct 2026, Amazon charges $39.99 a month on the Professional plan plus a referral fee, 15% in many categories. Walmart charges no monthly fee and a referral fee, 15% in many categories. Faire takes 15% of wholesale orders plus a $10 new customer fee on each retailer’s first order. Our marketplace fee calculator compares them side by side.',
+  },
+  {
+    category: 'fees',
+    question: 'Does Target Plus use EDI?',
+    answer:
+      'Target Plus is a marketplace, and partners connect through Target’s integration or connectors such as Shopify Marketplace Connect. EDI documents such as the 850 purchase order, 856 ship notice and 810 invoice are how Target’s first-party vendors, including Direct Vendor Ship (DVS) suppliers, trade with Target. We confirm which setup applies to you during scoping.',
+  },
+  {
+    category: 'fees',
+    question: 'Can Shopify brands apply to Target Plus?',
+    answer:
+      'Yes. Target and Shopify announced a partnership in June 2024 that lets Shopify merchants apply to sell on Target.com through Shopify Marketplace Connect. Target Plus is still invite-only, so the application goes through Target’s review. Brands still need the same basics: a US business, GS1 barcodes, US-only shipping and the ability to take palletized returns.',
+  },
+  {
+    category: 'strategy',
+    question: 'Do you build launch plans for startups selling on large marketplaces?',
+    answer:
+      'Yes. A launch plan covers which marketplace to open first, which SKUs to list, the fee and margin model for each, inventory split between FBA, WFS and your 3PL, and the listing content and ads for the first months. Startups usually do best on one marketplace first, then add a second once stock and reviews are steady.',
+  },
+  {
+    category: 'strategy',
+    question: 'Can one operations platform run Amazon FBA, Walmart and Faire together?',
+    answer:
+      'Yes. We build one operations layer on your Shopify store or ERP that connects Amazon FBA, Walmart Marketplace and WFS, and Faire. It holds the master catalog, one stock pool for the stock you ship yourself, a view of FBA and WFS stock held by the marketplaces, and one order queue. Your team runs every channel from one screen.',
+  },
+  {
+    category: 'channels',
+    question: 'Do you manage Walmart listing content and Walmart ads?',
+    answer:
+      'Yes. We write Walmart titles and bullets, build rich product content where Walmart allows it, set up Walmart Connect ads, and work toward the Pro Seller badge. Walmart content uses different fields and rules from Amazon A+ Content, so we map your master product data into Walmart’s format instead of copying Amazon listings across.',
+  },
+  {
+    category: 'channels',
+    question: 'Do you manage Target Plus as an agency?',
+    answer:
+      'Yes, for invited brands and brands preparing to apply. We get the application basics ready, connect your catalog and inventory to Target Plus, set up direct shipping from your warehouse or 3PL, and keep listings and stock in step with your other channels. Target sets commission terms in its partner agreement, so we model them once you have the offer.',
   },
 ];
 
@@ -176,9 +248,23 @@ const FAQ_SCHEMA = {
   })),
 };
 
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${PAGE_URL}#webpage`,
+  url: PAGE_URL,
+  name: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+  about: { '@id': `${PAGE_URL}#service` },
+};
+
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  '@id': `${PAGE_URL}#service`,
   serviceType: 'Marketplace Management & Multi-Channel E-Commerce Agency',
   name: 'Multi-Channel Marketplace Management & Growth',
   description:
@@ -195,8 +281,8 @@ const HOWTO_SCHEMA = {
   description: 'Our structured 3-stage framework for expanding brands across Amazon, Walmart, Target Plus, and Faire Wholesale.',
   step: [
     { '@type': 'HowToStep', position: 1, name: 'Catalog Audit & API Sync', text: 'We audit SKU taxonomy, barcode authenticity, brand registry tokens, and build direct API feeds connecting your core store.' },
-    { '@type': 'HowToStep', position: 2, name: 'Creative, SEO & Inbound Logistics', text: 'We write high-converting listing copy, build A+ content modules, and configure FBA/WFS inbound shipments.' },
-    { '@type': 'HowToStep', position: 3, name: 'Advertising, Buy-Box Defense & Velocity', text: 'We launch targeted Sponsored Ads, activate automated review generation, and enforce MAP price rules.' },
+    { '@type': 'HowToStep', position: 2, name: 'Creative, SEO & Inbound Logistics', text: 'We write listing copy, build A+ content modules, and configure FBA/WFS inbound shipments.' },
+    { '@type': 'HowToStep', position: 3, name: 'Advertising, Buy-Box Defense & Velocity', text: 'We launch targeted Sponsored Ads, request reviews through each marketplace’s approved tools, and enforce MAP price rules.' },
   ],
 };
 
@@ -208,35 +294,35 @@ const BREADCRUMB_SCHEMA = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
     { '@type': 'ListItem', position: 2, name: 'Solutions', item: 'https://factoryjet.com/omnichannel-commerce' },
-    { '@type': 'ListItem', position: 3, name: 'Marketplace Management', item: 'https://factoryjet.com/marketplace-management' },
+    { '@type': 'ListItem', position: 3, name: 'Marketplace Management', item: PAGE_URL },
   ],
 };
 
 const STATS = [
   { b: '6 Marketplaces', s: 'managed under one architecture' },
-  { b: '99.9% Uptime', s: 'real-time inventory reconciliation' },
-  { b: '$0 Channel Conflict', s: 'unified price floor & MAP rules' },
+  { b: '500+', s: 'businesses served since 2014' },
+  { b: '97%', s: 'on-time delivery' },
   { b: '10+ Yrs', s: 'scaling omnichannel commerce' },
 ];
 
 const SOURCED = [
   {
-    v: '54.6%',
-    d: 'of all US retail e-commerce sales occur on online marketplaces, with Amazon and Walmart leading total transaction volume.',
-    src: 'eMarketer Retail Analysis',
-    href: 'https://www.emarketer.com',
+    v: '$0',
+    d: 'Walmart Marketplace setup or monthly fee. Walmart charges a referral fee per sale instead, 15% in many categories (read 22 Oct 2026).',
+    src: 'Walmart Marketplace pricing',
+    href: SRC.walmart,
   },
   {
-    v: '63%',
-    d: 'of US consumers start their product searches directly on a marketplace rather than a traditional search engine.',
-    src: 'Jungle Scout Consumer Trends',
-    href: 'https://www.junglescout.com',
+    v: '15% + $10',
+    d: 'Faire commission on a retailer’s opening order. Reorders pay 15%, and qualified Faire Direct orders pay 0% (read 22 Oct 2026).',
+    src: 'Faire brand terms',
+    href: SRC.faire,
   },
   {
-    v: '3.2x',
-    d: 'higher customer lifetime value achieved by brands selling across their own DTC store plus at least two curated marketplaces.',
-    src: 'Omnichannel Benchmark Data',
-    href: 'https://www.statista.com',
+    v: '70 days',
+    d: 'Target Plus onboarding timeline, with inventory in place by day 45. Target Plus is invite-only (read 22 Oct 2026).',
+    src: 'Target Plus application requirements',
+    href: SRC.targetApply,
   },
 ];
 
@@ -245,15 +331,15 @@ const BENEFITS = [
   { i: '◇', t: 'Real-Time Inventory Allocation', d: 'Configurable inventory safety buffers prevent overselling during flash sales and peak seasonal volume. When warehouse stock hits low thresholds, external listings throttle down safely.' },
   { i: '↯', t: 'MAP Enforcement & Buy Box Defense', d: 'Automated monitoring tracks third-party reseller violations, rogue listings, and unauthorized price cuts to protect your direct margin and brand integrity.' },
   { i: '▤', t: 'Fulfillment Routing (FBA + WFS + 3PL)', d: 'Intelligent order routing assigns fulfillment based on lowest shipping cost, transit speed, and marketplace delivery promise requirements.' },
-  { i: '⛓', t: 'High-Converting A+ Content', d: 'Custom-designed comparison charts, lifestyle imagery modules, and structured bullet architecture that boost listing conversion rates by 15% to 30%.' },
+  { i: '⛓', t: 'High-Converting A+ Content', d: 'Custom comparison charts, lifestyle image modules and clear bullet structure, built inside Amazon’s A+ Content rules so shoppers get answers without leaving the listing.' },
   { i: '⤢', t: 'Full Account Ownership', d: 'You own every seller central account, brand registry token, and advertising profile. We manage the architecture and growth without holding your assets hostage.' },
 ];
 
 const CHANNELS = [
   { t: 'Amazon Marketplace', d: 'Seller Central & Vendor Central management, Brand Registry, Sponsored Products, Sponsored Brands, Amazon DSP programmatic ads, and FBA optimization.' },
-  { t: 'Walmart Marketplace', d: 'Application fast-tracking, Walmart Fulfillment Services (WFS) onboarding, Walmart Connect PPC ad management, and Pro Seller Badge qualification.' },
-  { t: 'Target Plus', d: 'Invitation-only merchant application packaging, Direct Vendor Ship (DVS) EDI compliance, and curated product positioning for Target digital shoppers.' },
-  { t: 'Faire Wholesale', d: 'B2B wholesale marketplace integration, opening accounts with 500,000+ independent retail boutiques with automated Net 60 payment reconciliation.' },
+  { t: 'Walmart Marketplace', d: 'Application prep, Walmart Fulfillment Services (WFS) onboarding, Walmart Connect PPC ad management, and Pro Seller Badge qualification.' },
+  { t: 'Target Plus', d: 'Invite-only application prep, Target Plus integration through Target’s API or Shopify Marketplace Connect, direct shipping from your warehouse, and product positioning for Target.com shoppers.' },
+  { t: 'Faire Wholesale', d: 'B2B wholesale marketplace integration, so independent retailers can order from you on 60-day terms, with payouts reconciled automatically.' },
   { t: 'TikTok Shop', d: 'Direct social commerce store setup, affiliate creator commission architecture, in-app checkout integration, and live-selling inventory synchronization.' },
   { t: 'Wayfair & Specialists', d: 'Drop-ship vendor integration, heavy-freight shipping rate tables, CastleGate fulfillment integration, and dimension-accurate 3D asset syndication.' },
 ];
@@ -266,7 +352,7 @@ const USECASES = [
   },
   {
     t: 'Hybrid Inbound Fulfillment (FBA, WFS & 3PL Logistics)',
-    d: 'Routing inventory strategically across Amazon FBA and Walmart WFS fulfillment centers to guarantee 2-day delivery badges without paying excess long-term storage fees.',
+    d: 'Routing inventory strategically across Amazon FBA and Walmart WFS fulfillment centers to qualify for fast-delivery badges without paying for long-term storage.',
     img: 'marketplace-fulfillment-wfs-fba.webp',
   },
   {
@@ -285,6 +371,7 @@ export default function MarketplaceManagementPage() {
   return (
     <>
       <script id="mp-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="mp-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="mp-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="mp-howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOWTO_SCHEMA) }} />
       <script id="mp-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
@@ -306,6 +393,12 @@ export default function MarketplaceManagementPage() {
                   We help US DTC and wholesale brands sell across Amazon, Walmart, Target Plus, Faire, and TikTok Shop
                   without catalog divergence, inventory stockouts, or channel conflict. You own your seller accounts,
                   your customer relationships, and your brand equity.
+                </p>
+                <p style={{ maxWidth: '52ch', margin: '0 0 18px', fontSize: '15px', color: 'var(--pp-body)' }}>
+                  Marketplace management is running your listings, stock, prices, ads and orders on Amazon, Walmart,
+                  Target Plus and Faire from one system. FactoryJet connects those channels to your Shopify store or ERP,
+                  so stock counts and prices stay in step, every order lands in one queue, and you keep ownership of each
+                  seller account.
                 </p>
                 <HeroInlineForm source="us_marketplace_management_hero" region="us" submitLabel="Get a Marketplace Scope" />
               </div>
@@ -371,9 +464,9 @@ export default function MarketplaceManagementPage() {
                 >
                   <div>
                     <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10B981', display: 'inline-block', marginRight: '6px' }} />
-                    Unified Real-Time Webhook Engine
+                    Real-Time Webhook Engine
                   </div>
-                  <div>Zero Stockouts · Unified Margins</div>
+                  <div>Shared Stock · One Price Floor</div>
                 </div>
               </div>
             </div>
@@ -406,15 +499,36 @@ export default function MarketplaceManagementPage() {
                 Target Plus, and Faire, while maintaining their primary DTC storefront as the central hub of truth.
               </p>
               <p>
-                Most brands fail at marketplace expansion because they treat each channel as a disconnected silo.
+                Marketplace expansion usually goes wrong when each channel runs as its own silo.
                 Inventory sells out on Shopify while Amazon keeps accepting orders, triggering seller penalties. MAP
                 pricing breaks because unauthorized third-party resellers undercut retail prices. Advertising spend is
                 wasted because listing content lacks high-converting A+ assets.
               </p>
               <p>
                 FactoryJet connects your product catalog, inventory feeds, and order management system directly to
-                marketplace APIs. We build automated buffer controls, price-sync state machines, and high-converting
-                storefront creative so you capture incremental revenue without multiplying overhead.
+                marketplace APIs. We build automated buffer controls, price-sync rules and listing creative, so new
+                channels add revenue without adding the same amount of manual work.
+              </p>
+              <p><strong>What you need before you launch on a new marketplace:</strong></p>
+              <ul style={{ paddingLeft: '20px', marginTop: '8px', display: 'grid', gap: '6px' }}>
+                <li>Products that already sell steadily on your own site.</li>
+                <li>GS1 barcodes on every product. Target Plus accepts 12-digit UPC or 13-digit EAN codes only.</li>
+                <li>A registered trademark, so you can enroll in Amazon Brand Registry.</li>
+                <li>A US business with a W-9, EIN and DUNS number if you plan to apply to Target Plus.</li>
+                <li>Enough stock and warehouse capacity to ship within each marketplace’s lead time, such as Target Plus’s 24 hours.</li>
+                <li>A fee and margin model per SKU. Our{' '}
+                  <a href="/marketplace-fee-calculator" style={LINK}>marketplace fee calculator</a> compares Amazon, Walmart WFS,
+                  Target Plus, Faire and Shopify side by side.</li>
+              </ul>
+              <p style={{ marginTop: '12px' }}>
+                Fees and rules on this page come from each marketplace’s own pages, read 22 Oct 2026:{' '}
+                <a href={SRC.amazon} target="_blank" rel="noopener noreferrer" style={LINK}>Amazon pricing</a>,{' '}
+                <a href={SRC.fba} target="_blank" rel="noopener noreferrer" style={LINK}>Amazon FBA</a>,{' '}
+                <a href={SRC.walmart} target="_blank" rel="noopener noreferrer" style={LINK}>Walmart pricing</a>,{' '}
+                <a href={SRC.wfsFees} target="_blank" rel="noopener noreferrer" style={LINK}>WFS fees</a>,{' '}
+                <a href={SRC.targetApply} target="_blank" rel="noopener noreferrer" style={LINK}>Target Plus requirements</a>,{' '}
+                <a href={SRC.targetShopify} target="_blank" rel="noopener noreferrer" style={LINK}>Target and Shopify</a> and{' '}
+                <a href={SRC.faire} target="_blank" rel="noopener noreferrer" style={LINK}>Faire brand terms</a>.
               </p>
               <p>
                 Each channel has its own page. See how we work on{' '}
@@ -433,7 +547,7 @@ export default function MarketplaceManagementPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// marketplace dynamics</p>
-            <h2 style={{ marginTop: '10px' }}>The multi-channel commerce landscape, by the numbers</h2>
+            <h2 style={{ marginTop: '10px' }}>Marketplace fees and rules, by the numbers</h2>
             <div className="pp-bento" style={{ marginTop: '32px' }}>
               {SOURCED.map((s) => (
                 <div className="pp-card" key={s.v}>
@@ -492,7 +606,9 @@ export default function MarketplaceManagementPage() {
             <h2 style={{ marginTop: '10px' }}>Every channel connected to your central operations</h2>
             <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '58ch' }}>
               From the largest consumer marketplaces to specialized B2B wholesale networks, we configure and manage
-              direct API connectivity.
+              direct API connectivity. If you still sell each channel on its own, read{' '}
+              <a href="/omnichannel-vs-multichannel-commerce" style={LINK}>omnichannel vs multichannel commerce</a> or our{' '}
+              <a href="/omnichannel-commerce" style={LINK}>omnichannel commerce service</a>.
             </p>
             <div className="pp-bento" style={{ marginTop: '32px', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
               {CHANNELS.map((c) => (
@@ -582,7 +698,7 @@ export default function MarketplaceManagementPage() {
                   <tr>
                     <td className="name">Account &amp; Data Ownership</td>
                     <td>100% Client-owned accounts and tokens</td>
-                    <td>Often locked into proprietary agency portals</td>
+                    <td>Sometimes run inside agency-owned portals</td>
                     <td>Client-owned</td>
                   </tr>
                   <tr className="me">
@@ -593,9 +709,9 @@ export default function MarketplaceManagementPage() {
                   </tr>
                   <tr>
                     <td className="name">Contract Structure</td>
-                    <td>Fixed-price milestones with clear SLA deliverables</td>
-                    <td>Hefty percentage-of-revenue fee on all gross sales</td>
-                    <td>Unpredictable hourly billing</td>
+                    <td>Fixed price per phase, quoted in writing; no monthly minimum</td>
+                    <td>Often a percentage of revenue</td>
+                    <td>Usually hourly billing</td>
                   </tr>
                 </tbody>
               </table>
@@ -608,9 +724,14 @@ export default function MarketplaceManagementPage() {
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">// execution roadmap</p>
             <h2 style={{ marginTop: '10px' }}>Our 3-stage marketplace launch framework</h2>
+            <ol style={{ paddingLeft: '22px', marginTop: '18px', display: 'grid', gap: '6px', color: 'var(--pp-body)' }}>
+              <li>Audit the catalog and connect your store to each marketplace.</li>
+              <li>Build listings and content, then set up FBA and WFS shipments.</li>
+              <li>Launch, start ads, and enforce price rules.</li>
+            </ol>
             <div style={{ display: 'grid', gap: '24px', marginTop: '28px' }}>
               <div className="pp-card">
-                <div className="pp-eyebrow" style={{ marginBottom: '6px' }}>Stage 1 · Days 1 to 10</div>
+                <div className="pp-eyebrow" style={{ marginBottom: '6px' }}>Stage 1 · Audit &amp; Sync</div>
                 <h3 style={{ fontSize: '18px', color: 'var(--pp-ink)' }}>Catalog Audit &amp; Data Synchronization</h3>
                 <p style={{ marginTop: '8px', color: 'var(--pp-body)' }}>
                   We audit your existing SKU taxonomy, barcode authenticity, brand registry credentials, and channel
@@ -619,7 +740,7 @@ export default function MarketplaceManagementPage() {
                 </p>
               </div>
               <div className="pp-card">
-                <div className="pp-eyebrow" style={{ marginBottom: '6px' }}>Stage 2 · Days 11 to 24</div>
+                <div className="pp-eyebrow" style={{ marginBottom: '6px' }}>Stage 2 · Listings &amp; Fulfillment</div>
                 <h3 style={{ fontSize: '18px', color: 'var(--pp-ink)' }}>Listing Creative, SEO &amp; Fulfillment Setup</h3>
                 <p style={{ marginTop: '8px', color: 'var(--pp-body)' }}>
                   We write keyword-rich titles, clear bullet specifications, and build custom A+ content modules. We
@@ -628,11 +749,11 @@ export default function MarketplaceManagementPage() {
                 </p>
               </div>
               <div className="pp-card">
-                <div className="pp-eyebrow" style={{ marginBottom: '6px' }}>Stage 3 · Days 25 to 30</div>
-                <h3 style={{ fontSize: '18px', color: 'var(--pp-ink)' }}>Launch, Advertising &amp; Review Acceleration</h3>
+                <div className="pp-eyebrow" style={{ marginBottom: '6px' }}>Stage 3 · Launch &amp; Ads</div>
+                <h3 style={{ fontSize: '18px', color: 'var(--pp-ink)' }}>Launch, Advertising &amp; Reviews</h3>
                 <p style={{ marginTop: '8px', color: 'var(--pp-body)' }}>
                   We trigger live indexing, activate targeted sponsored search campaigns to generate initial sales
-                  velocity, and enroll eligible SKUs in automated review request sequences to build social proof.
+                  velocity, and request reviews through each marketplace’s approved tools to build social proof.
                 </p>
               </div>
             </div>

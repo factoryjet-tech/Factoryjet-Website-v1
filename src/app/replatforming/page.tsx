@@ -18,31 +18,57 @@ import '@/components/v2/PlatformPage.css';
 // initial render. ssr stays true (required in a Server Component) so the
 // estimator's default output still renders in the static HTML for crawlers.
 // (The "Migration Guarantees" box was removed on 2026-09-17: unverifiable claims.)
+// 2026-10-22: partner marquee no longer claims partner tiers we do not hold; it
+// lists the platforms and tools we work with.
 const ReplatformingScopeEstimator = dynamic(
   () => import('@/components/commerce/ReplatformingScopeEstimator'),
   { ssr: true }
 );
 
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-22';
+const PAGE_TITLE = 'Ecommerce Replatforming Services | FactoryJet';
+const PAGE_DESCRIPTION =
+  'Ecommerce replatforming services to Shopify and Shopify Plus from Magento, WooCommerce, BigCommerce, NetSuite, SFCC and Wix, with a one-to-one 301 map.';
+
+/* Official sources. Each was fetched and read on 22 Oct 2026. */
+const SRC = {
+  adobeLifecycle: 'https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy',
+  wooCsv: 'https://woocommerce.com/document/product-csv-importer-exporter/',
+  wooRest: 'https://woocommerce.github.io/woocommerce-rest-api-docs/',
+  bcCatalog: 'https://docs.bigcommerce.com/docs/rest-catalog/products',
+  nsExport: 'https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N663983.html',
+  sfccOcapi: 'https://developer.salesforce.com/docs/commerce/b2c-commerce/references/b2c-commerce-ocapi/get-started-with-ocapi.html',
+  sfccScapi: 'https://developer.salesforce.com/docs/commerce/commerce-api/guide/get-started.html',
+  wpExport: 'https://wordpress.org/documentation/article/tools-export-screen/',
+  sqspExport: 'https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site',
+  shopifyTransfer: 'https://help.shopify.com/en/manual/migrating-to-shopify/transfer-data',
+  shopifyVariants: 'https://help.shopify.com/en/manual/products/variants/add-variants',
+  shopifyRedirects: 'https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect',
+  shopifyCustomers: 'https://help.shopify.com/en/manual/customers/import-export-customers',
+  shopifyB2b: 'https://help.shopify.com/en/manual/b2b',
+  shopifyPlusPlan: 'https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan',
+  googleSiteMove: 'https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes',
+} as const;
+
+const linkStyle = { color: '#B23E13', textDecoration: 'underline' } as const;
+const extLink = { target: '_blank', rel: 'noopener noreferrer', style: linkStyle } as const;
 
 export const metadata: Metadata = {
-  title: 'E-Commerce Replatforming & Migration | FactoryJet',
-  description:
-    'Ecommerce replatforming between Magento, NetSuite, BigCommerce, WooCommerce and Shopify Plus, with redirect mapping, ERP integration and a staged cutover.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'E-Commerce Replatforming & Migration | FactoryJet',
-    description:
-      'Ecommerce replatforming between Magento, NetSuite, BigCommerce, WooCommerce and Shopify Plus, with redirect mapping, ERP integration and a staged cutover.',
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     url: 'https://factoryjet.com/replatforming',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet e-commerce replatforming and migration services' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet ecommerce replatforming services' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'E-Commerce Replatforming & Migration | FactoryJet',
-    description: 'Enterprise platform migrations that protect search rankings, order history, customer accounts, and ERP workflows.',
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: 'https://factoryjet.com/replatforming' },
@@ -51,85 +77,145 @@ export const metadata: Metadata = {
 
 const FAQ_CATEGORIES = [
   { key: 'basics', label: 'Replatforming Basics' },
-  { key: 'seo', label: 'SEO & 301 Redirects' },
-  { key: 'data', label: 'Data & Order History' },
-  { key: 'erp', label: 'ERP & Integrations' },
-  { key: 'process', label: 'Process & Timeline' },
-  { key: 'guarantee', label: 'Pricing and scope' },
+  { key: 'b2b', label: 'B2B and ERP' },
+  { key: 'seo', label: 'SEO and Redirects' },
+  { key: 'data', label: 'Data and Accounts' },
+  { key: 'process', label: 'Process and Timeline' },
+  { key: 'pricing', label: 'Pricing and Scope' },
 ];
 
 const FAQ_ITEMS = [
   {
     category: 'basics',
-    question: 'What is e-commerce replatforming?',
+    question: 'What are ecommerce replatforming services?',
     answer:
-      'Replatforming means moving your online store from one commerce platform to another, transferring product catalogs, customer profiles, order history, blog content, and URL equity. The goal is to upgrade your underlying infrastructure, page speed, and conversion rate without losing existing search rankings or operational continuity.',
+      'Ecommerce replatforming services move a live online store from one commerce platform to another. The work covers products, customers, past orders, content, apps, integrations such as your ERP, and every public URL. A good provider also plans the cutover so orders keep flowing, and redirects old addresses so search engines and customers land on the right new page. FactoryJet moves stores to Shopify and Shopify Plus.',
   },
   {
     category: 'basics',
-    question: 'Why are leading brands migrating to Shopify and Shopify Plus?',
+    question: 'When is replatforming worth it, and when should we stay where we are?',
     answer:
-      'Brands migrate to Shopify Plus to eliminate expensive server maintenance, resolve developer bottlenecks, access the world’s largest third-party app ecosystem, and lift mobile conversion rates with Shop Pay 1-click checkout.',
+      'Replatform when the current system blocks revenue or carries a deadline: a version leaving vendor support, a checkout you cannot change, or an ERP link that breaks every update. Stay if the pain is mainly design or speed, because a theme rebuild or performance work on the current platform costs less. We say which one applies on the scoping call, before any proposal.',
   },
   {
     category: 'basics',
-    question: 'Which source platforms do you migrate from?',
+    question: 'Which ecommerce platforms do you migrate from?',
     answer:
-      'We specialize in enterprise migrations from Magento / Adobe Commerce, NetSuite SuiteCommerce, BigCommerce, WooCommerce, WordPress, Squarespace, Wix, and Salesforce Commerce Cloud (SFCC) to Shopify Plus.',
+      'We move stores from Magento and Adobe Commerce, WooCommerce, BigCommerce, NetSuite SuiteCommerce, Salesforce Commerce Cloud, WordPress, Squarespace and Wix, each with its own guide linked on this page. The destination is Shopify or Shopify Plus, either with a Shopify theme or as a headless build. We do not take on moves away from Shopify to other platforms.',
+  },
+  {
+    category: 'basics',
+    question: 'What is the difference between website replatforming and ecommerce replatforming?',
+    answer:
+      'Website replatforming moves pages and content from one CMS to another, for example WordPress to a new CMS. Ecommerce replatforming also moves the parts that take money: catalog, prices, customer accounts, order history, tax and shipping rules, payment providers and integrations. That extra data is why an ecommerce move needs a data mapping sheet and a cutover plan on top of a content export.',
+  },
+  {
+    category: 'basics',
+    question: 'Should we replatform to Shopify or Shopify Plus?',
+    answer:
+      'Pick Plus when you need higher limits or features that only Plus offers, such as checkout extensions, or when redirect volume is large: Shopify lists 20,000,000 URL redirects on Plus against 100,000 on other plans. Plus costs $2,300 a month on a three-year term or $2,500 on a one-year term in the US, per Shopify\'s help center. Many mid-size stores start on a standard plan.',
+  },
+  {
+    category: 'b2b',
+    question: 'What makes B2B ecommerce replatforming harder than a retail store move?',
+    answer:
+      'B2B stores carry data that retail stores do not: company accounts with several buyers, customer-specific price lists, quantity rules, payment terms, and orders that must reach the ERP the same way they do today. Each of these has to be mapped field by field and tested with real buyer logins. We run a B2B order through the new store and into the ERP before cutover.',
+  },
+  {
+    category: 'b2b',
+    question: 'Can Shopify handle company accounts and customer-specific prices?',
+    answer:
+      'Yes. Shopify\'s B2B features let you set up business customers as companies and personalize pricing, currency, products, payment and shipping methods for each one, from the same store as your retail sales or a separate B2B store. Draft orders, Shopify Flow and ERP integrations are also listed in Shopify\'s B2B help. We map your current price groups into Shopify catalogs before import.',
+  },
+  {
+    category: 'b2b',
+    question: 'What happens to our ERP connection when we replatform?',
+    answer:
+      'The ERP usually stays and the storefront changes, so the connection is rebuilt against Shopify\'s APIs. We have connected stores to Odoo, NetSuite, SAP Business One and ERPNext. Before launch we test the full loop: a web order lands in the ERP, stock levels flow back, and shipment tracking returns to the customer. Our ERP integration service covers this in more detail.',
   },
   {
     category: 'seo',
-    question: 'Will our Google rankings and organic revenue drop during migration?',
+    question: 'How do you protect SEO during an ecommerce replatform?',
     answer:
-      'Not with our engineering protocol. We crawl 100% of your legacy indexed URLs, build an exhaustive 1-to-1 redirect matrix, and deploy single-hop 301 redirects to ensure every search ranking and backlink transfers with zero equity loss.',
+      'We crawl the old site and pull indexed URLs from Search Console, map each one to a single new URL, load 301 redirects before DNS moves, carry over titles, descriptions and structured data, and crawl the new store before launch. Google\'s site move guide recommends permanent redirects and warns against redirect chains. Some ranking movement in the first weeks is normal, and we watch Search Console daily.',
   },
   {
     category: 'seo',
-    question: 'Why are single-hop 301 redirects so critical for SEO?',
+    question: 'Why should every redirect be a single hop?',
     answer:
-      'Redirect chains (Page A to Page B to Page C) waste search crawler budget and cause search engines to drop ranking signals. We enforce single-hop redirects directly to final canonical URLs and preserve all structured schema markup.',
+      'A chain such as old page to interim page to final page makes crawlers follow extra steps, and Google\'s site move guidance advises against chains. Chains often appear when a store has been replatformed before and the old redirects are kept as they are. We flatten every chain so each old URL points straight to its final Shopify address with one 301.',
+  },
+  {
+    category: 'seo',
+    question: 'How many redirects can a Shopify store hold?',
+    answer:
+      'Shopify\'s help center lists a limit of 100,000 URL redirects on standard plans and 20,000,000 on Plus. Shopify only follows a redirect when the old path is broken, and it does not let you redirect its fixed paths such as /products and /collections. Large catalogs with many filter and parameter URLs are the main reason a store needs the Plus limit.',
   },
   {
     category: 'data',
-    question: 'Can customer accounts and historical orders be migrated?',
+    question: 'What data can be moved to Shopify in a replatform?',
     answer:
-      'Yes. All customer records, contact information, delivery addresses, and past order archives are transferred cleanly into your new platform for seamless reporting continuity.',
+      'Products, customers, historical orders, gift cards, store credit, blog posts and pages, per Shopify\'s data transfer guide. Shopify says to import products first, then customers, then historical orders, so orders link to the right products and buyers. Settings such as tax rules, shipping rates and payment providers are rebuilt by hand, because no platform exports them in a form Shopify can read.',
   },
   {
     category: 'data',
-    question: 'Can customer passwords be exported directly between platforms?',
+    question: 'Can customer passwords move from the old platform?',
     answer:
-      'No platform exports raw customer passwords because they are securely hashed. We configure an automated, branded account activation sequence at launch so customers can log in to their new accounts in a single click.',
+      'No. Shopify\'s help center says you cannot migrate customer passwords from another store using a CSV, and the old platform stores them hashed. Customers move with their emails, addresses, tags and marketing consent, then get an invite to set a new password. On Shopify Plus, Multipass can sign customers in from an outside system, which some B2B stores use during a phased move.',
   },
   {
-    category: 'erp',
-    question: 'How do you handle ERP, WMS, and 3PL warehouse integrations?',
+    category: 'data',
+    question: 'What if our products have more options than Shopify allows?',
     answer:
-      'We rebuild and test bi-directional API pipelines for NetSuite, SAP, Microsoft Dynamics, Manhattan WMS, and Celigo middleware. Orders, real-time inventory counts, customer pricing tiers, and fulfillment tracking sync in under 200 milliseconds.',
+      'Shopify allows three options and up to 2,048 variants per product. Stores coming from Magento, WooCommerce or BigCommerce often have four or more attributes on one product. We decide per product line: split into separate products, move an attribute into a metafield, or offer rare choices as line-item properties. The decision goes into the mapping sheet you approve before import.',
   },
   {
-    category: 'erp',
-    question: 'Can complex B2B wholesale price rules and company accounts be migrated?',
+    category: 'data',
+    question: 'Can a migration app do the whole replatform for us?',
     answer:
-      'Yes. Customer-specific price matrices, volume discounts, Net payment terms, and multi-location company hierarchies map directly into Shopify Plus B2B or dedicated wholesale engines.',
-  },
-  {
-    category: 'process',
-    question: 'Will our online store experience downtime during cutover?',
-    answer:
-      'We plan every cutover to avoid downtime and to keep any disruption short. Everything is built and tested on a private staging store first. Just before launch we run a final sync of the latest orders and customers, switch DNS during scheduled off-peak hours and watch orders in real time. A written rollback trigger decides when to switch back if checkout or order sync fails.',
+      'For a small, simple catalog, often yes. Shopify\'s transfer guide lists its Store Migration app, CSV import, third-party apps, Shopify Partners and the API as routes. Apps struggle with custom attributes, B2B pricing, subscriptions, ERP links and full redirect maps. We often use an app for the bulk product copy and write scripts for the rest.',
   },
   {
     category: 'process',
-    question: 'How long does an enterprise replatforming project take?',
+    question: 'How long does ecommerce replatforming take?',
     answer:
-      'Standard migrations take between 3 to 8 weeks depending on catalog size, custom ERP middleware, and B2B pricing rules. We confirm the delivery timeline in writing before work begins.',
+      'FactoryJet delivers a custom-theme store in 3 to 5 weeks, a migration with subscriptions, B2B or heavy data cleanup in 5 to 8 weeks, and a headless or custom build in 8 to 14 weeks. ERP work and the number of integrations decide where a project lands in those ranges. We confirm the plan in writing before work starts.',
   },
   {
-    category: 'guarantee',
-    question: 'Do you charge hourly or offer fixed-price quotes?',
+    category: 'process',
+    question: 'Will our store go offline during cutover?',
     answer:
-      'All our replatforming projects are delivered on a guaranteed fixed-price basis. We audit your legacy architecture upfront so there are never surprise billable hours or scope creep.',
+      'We plan every cutover so the old store keeps taking orders until DNS moves. Everything is built and tested on a private Shopify store first. Just before launch we sync the latest orders and customers, switch DNS in a quiet hour and watch orders live. A written rollback rule says when to switch back if checkout or order sync fails.',
+  },
+  {
+    category: 'process',
+    question: 'Can we see the new store working before we commit?',
+    answer:
+      'Yes. FactoryJet builds a working demo on your own product data before you sign, so you can click through real products, prices and variants on Shopify. It is the fastest way to find gaps such as a missing attribute or a B2B price rule that does not map. The demo also shows how we work before any contract.',
+  },
+  {
+    category: 'process',
+    question: 'Should we redesign the store during the replatform or copy the old design?',
+    answer:
+      'Copy first if the current design converts and the move has a deadline, such as an end-of-support date. Redesign during the move if the old theme is part of the problem, because building the theme twice costs more than building it once. A middle path is to launch on a lightly adapted Shopify theme and redesign in a second phase.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much do ecommerce replatforming services cost?',
+    answer:
+      'Cost depends on catalog size, the number of integrations, B2B rules, redirects and whether you want a new design. FactoryJet quotes a fixed price in writing after a short scoping call, split by phase. For published market ranges by source platform, read our Shopify Plus migration cost guide, and try the replatforming cost calculator for a first rough scope.',
+  },
+  {
+    category: 'pricing',
+    question: 'Do you bill hourly or a fixed price?',
+    answer:
+      'Fixed price per phase. We scope the source platform, data and integrations up front, then agree a written price for each phase. Defects found during the cover period agreed before work starts are fixed inside that price. Changes you ask for later are quoted and approved one at a time, and ongoing support is optional with no monthly minimum.',
+  },
+  {
+    category: 'pricing',
+    question: 'Who owns the code and data after the replatform?',
+    answer:
+      'You do. The Shopify theme code, any custom apps or scripts we write, the data mapping sheet, the redirect map and every export file belong to you. You can take the store to another agency or an in-house team at any time without asking us for access or permission.',
   },
 ];
 
@@ -137,135 +223,151 @@ const SPOKES = [
   {
     slug: 'magento-to-shopify',
     name: 'Magento / Adobe Commerce to Shopify Plus',
-    badge: 'Enterprise Flagship',
+    badge: 'Adobe Support Dates',
     desc: 'Published cost and timeline ranges, Adobe Commerce end-of-support dates and an 11-phase runbook for moving Magento or Adobe Commerce to Shopify Plus.',
     icon: '⚡',
   },
   {
     slug: 'netsuite-suitecommerce-to-shopify-plus',
     name: 'NetSuite SuiteCommerce to Shopify Plus',
-    badge: 'ERP & B2B',
-    desc: 'Keep NetSuite ERP as your operational single source of truth while upgrading your storefront to lightning-fast Shopify Plus conversion.',
+    badge: 'ERP Stays',
+    desc: 'Keep NetSuite as the ERP and record of truth while the storefront and B2B buyer portal move to Shopify Plus.',
     icon: '🔄',
   },
   {
     slug: 'bigcommerce-to-shopify-plus',
     name: 'BigCommerce to Shopify Plus',
-    badge: 'High Conversion',
-    desc: 'Escape app ecosystem limitations and clunky checkouts. Transfer option sets, customer records, and unlock Shop Pay 1-click checkout.',
+    badge: 'Options and Modifiers',
+    desc: 'Map BigCommerce variant options, modifiers and bulk pricing rules to Shopify variants, metafields and discounts.',
     icon: '🛍️',
   },
   {
     slug: 'woocommerce-to-shopify',
     name: 'WooCommerce to Shopify',
-    badge: 'Zero Maintenance',
-    desc: 'Sanitize messy WordPress MySQL tables, eliminate server crashes during flash sales, and protect 100% of your Google search rankings.',
+    badge: 'WordPress Data',
+    desc: 'Export through the WooCommerce REST API, move subscriptions and WooPayments, and redirect every /product/ URL.',
     icon: '🧹',
   },
   {
     slug: 'salesforce-commerce-cloud-to-shopify-plus',
     name: 'Salesforce Commerce Cloud to Shopify Plus',
-    badge: 'Enterprise Replatform',
-    desc: 'Decouple proprietary SFCC cartridges, eliminate million-dollar annual maintenance retainers, and accelerate global time-to-market.',
+    badge: 'Cartridges to Apps',
+    desc: 'Rebuild SFCC cartridge logic as Shopify apps and Functions, and move catalogs and customers out through the Commerce APIs.',
     icon: '☁️',
   },
   {
     slug: 'wordpress-to-shopify',
     name: 'WordPress to Shopify',
-    badge: 'Content & Store',
-    desc: 'Migrate blog archives, custom landing pages, and product catalogs while eliminating PHP security vulnerabilities and server bills.',
+    badge: 'Content and Store',
+    desc: 'Move blog archives, landing pages and a product catalog from WordPress to Shopify, or keep WordPress for content only.',
     icon: '📝',
   },
   {
     slug: 'squarespace-to-shopify',
     name: 'Squarespace to Shopify',
-    badge: 'Design & Scale',
-    desc: 'Elevate your visual brand aesthetic while unlocking Shop Pay 1-click checkout, multi-warehouse inventory, and enterprise apps.',
+    badge: 'Store Pages',
+    desc: 'Squarespace site exports leave out store pages and product blocks, so products move on their own path.',
     icon: '🎨',
   },
   {
     slug: 'wix-to-shopify',
     name: 'Wix to Shopify',
-    badge: 'Commerce Growth',
-    desc: 'Break free from Wix eCommerce limits. Transfer products, customer history, and reviews into a scalable multi-channel Shopify store.',
+    badge: 'Growing Catalog',
+    desc: 'Move Wix products, customers and reviews into Shopify when the catalog, channels or apps outgrow Wix Stores.',
     icon: '🚀',
   },
 ];
 
+const COMPARISONS = [
+  { href: '/comparisons/shopify-plus-vs-magento', label: 'Shopify Plus vs Magento' },
+  { href: '/comparisons/shopify-plus-vs-bigcommerce', label: 'Shopify Plus vs BigCommerce' },
+  { href: '/comparisons/shopify-vs-woocommerce', label: 'Shopify vs WooCommerce' },
+  { href: '/comparisons/headless-commerce-vs-monolithic', label: 'Headless commerce vs monolithic' },
+];
+
 const STAT_CARDS = [
-  { num: 'Staged', title: 'Cutover Plan', desc: 'A rehearsed, staged cutover so orders keep flowing during the switch.', icon: '🛡️' },
-  { num: 'Single-Hop', title: '301 Redirects', desc: 'Exhaustive 1-to-1 URL mapping protects 100% of your organic search equity.', icon: '🔗' },
-  { num: 'Two-Way', title: 'ERP Order and Stock Sync', desc: 'Real-time bi-directional orders, inventory, and pricing sync into your ERP.', icon: '⚡' },
-  { num: 'Fixed Price', title: 'Senior Delivery', desc: 'Guaranteed upfront pricing and timeline with zero surprise hourly billing.', icon: '💰' },
+  { num: 'Staged', title: 'Cutover Plan', desc: 'The old store keeps selling until DNS moves, with a written rollback rule.', icon: '🛡️' },
+  { num: 'Single-Hop', title: '301 Redirects', desc: 'Every indexed URL gets one redirect straight to its new Shopify address.', icon: '🔗' },
+  { num: 'Two-Way', title: 'ERP Order and Stock Sync', desc: 'Orders flow into the ERP and stock flows back, tested before launch.', icon: '⚡' },
+  { num: 'Fixed Price', title: 'Per Phase', desc: 'A written price for each phase, agreed after scoping, with a demo first.', icon: '💰' },
 ];
 
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending the Crippling Frustration of Legacy Platform Technical Debt',
-    problem: 'Outdated versions, fragile custom plugins, and sluggish hosting servers slow down page loads and break under peak flash sale traffic.',
-    solution: 'Shopify Plus delivers 99.99% uptime, sub-second global CDN rendering, and handles over 40,000 checkout transactions per minute effortlessly.',
+    title: 'A Platform Version Leaving Vendor Support',
+    problem: 'Adobe lists the end of standard support for Adobe Commerce 2.4.6 as 11 August 2026, now passed, and for 2.4.7 as 31 May 2027. Staying means paid upgrades or running without full vendor support.',
+    solution: 'Shopify updates the platform itself, so there is no version to upgrade. Your team spends that budget on the store instead of the software.',
   },
   {
     num: '02',
-    title: 'Eliminating the Heavy Developer Bottleneck for Simple Marketing Changes',
-    problem: 'Marketing teams wait weeks and spend thousands of dollars on agency retainers just to launch basic promotions or update landing pages.',
-    solution: 'Shopify Online Store 2.0 visual drag-and-drop sections allow marketing teams to create dynamic campaigns in minutes with zero code.',
+    title: 'Marketing Changes That Need a Developer',
+    problem: 'On older platforms, a new landing page or promotion block often needs a developer and a deploy.',
+    solution: 'Shopify themes use sections and blocks that marketers add and edit in the theme editor, so most page changes ship without code.',
   },
   {
     num: '03',
-    title: 'Unlocking Shop Pay 1-Click Accelerated Checkout Conversion',
-    problem: 'Legacy multi-step checkout forms create friction and high mobile cart abandonment across modern consumer and wholesale shoppers.',
-    solution: 'Shop Pay enables over 150 million pre-authenticated shoppers to checkout in a single click, lifting conversion rates by up to 50%.',
+    title: 'B2B Buyers Stuck on Email and Phone Orders',
+    problem: 'When the store cannot show each company its own prices and terms, trade buyers fall back to emailing orders that staff key in by hand.',
+    solution: 'Shopify B2B sets up buyers as companies with their own pricing, products, payment and shipping methods, on the same store as retail or a separate one.',
   },
   {
     num: '04',
-    title: 'Protecting 100% of Historical SEO Equity & ERP Synchronicity',
-    problem: 'Fearing that changing platforms will tank Google search rankings, break customer order history, or desynchronize warehouse inventory.',
-    solution: 'We execute comprehensive 1-to-1 301 redirect matrices and robust bi-directional ERP middleware pipelines that keep everything intact.',
+    title: 'Fear of Losing Rankings and Order History',
+    problem: 'Teams delay a move because they expect search traffic to drop, past orders to vanish, or warehouse stock to go out of sync.',
+    solution: 'A one-to-one 301 map, historical order import in Shopify\'s recommended order, and an ERP sync tested end to end before launch.',
   },
 ];
 
+const B2B_CHECKLIST = [
+  'Company accounts, with every buyer login linked to the right company and location',
+  'Customer-specific price lists and quantity rules, mapped to Shopify B2B catalogs',
+  'Payment terms and approved payment methods per company',
+  'Reorder history, so buyers can see and repeat past orders after launch',
+  'ERP order, stock and invoice sync, tested with a real B2B order end to end',
+  'Sales rep access to place orders on behalf of buyers',
+];
+
 const PARTNERS = [
-  'Shopify Plus Partner',
-  'NetSuite Certified',
-  'Celigo Integrator',
-  'Klaviyo Master Partner',
-  'Gorgias Premier',
-  'Yotpo Enterprise',
-  'Recharge Subscriptions',
-  'Cloudflare Enterprise',
+  'Shopify Plus',
+  'Adobe Commerce',
+  'NetSuite',
+  'BigCommerce',
+  'WooCommerce',
+  'Salesforce Commerce Cloud',
+  'Klaviyo',
+  'Cloudflare',
 ];
 
 const WORKING_STEPS = [
   {
     n: '01',
-    t: 'Comprehensive Architecture & Data Audit',
-    d: 'We inventory all products, variants, customer records, order history, third-party apps, ERP touchpoints, and indexed URLs.',
+    t: 'Data and Integration Audit',
+    d: 'We count products, variants, customers, orders and indexed URLs, list every app and integration, and note what the source platform cannot export.',
     icon: '🔍',
   },
   {
     n: '02',
-    t: 'Data Normalization & ERP Middleware Setup',
-    d: 'We sanitize legacy database fields into native Shopify metafields and configure real-time ERP order and inventory sync pipelines.',
+    t: 'Mapping Sheet and ERP Plan',
+    d: 'Every source field gets a Shopify destination: product, variant, metafield, customer, company or order. You approve the sheet before import.',
     icon: '⚙️',
   },
   {
     n: '03',
-    t: 'High-Converting Shopify Storefront Build',
-    d: 'We design and engineer a custom Shopify Plus theme optimized for sub-second page loads, mobile responsiveness, and high conversion.',
+    t: 'Shopify Store Build',
+    d: 'We build or adapt the Shopify theme, rebuild app and checkout features, then import in Shopify\'s order: products, customers, orders.',
     icon: '💻',
   },
   {
     n: '04',
-    t: '1-to-1 SEO Crawl & 301 Redirect Mapping',
-    d: 'We crawl 100% of your legacy URLs to build single-hop 301 redirects, preserving all search rankings, backlinks, and domain authority.',
+    t: 'Crawl and 301 Redirect Map',
+    d: 'We crawl the old site, add Search Console URLs, map each to one new address, load the redirects and test them in bulk.',
     icon: '🔗',
   },
   {
     n: '05',
-    t: 'Delta Sync & Zero-Downtime Launch',
-    d: 'We perform a final delta sync of latest customer transactions, switch DNS during off-peak hours, and verify live ERP order generation.',
+    t: 'Final Sync and Launch',
+    d: 'We sync orders and customers created since the first import, switch DNS in a quiet hour, and confirm live orders reach the ERP.',
     icon: '🚀',
   },
 ];
@@ -296,11 +398,11 @@ const SERVICE_SCHEMA = {
       'https://github.com/factoryjet-tech',
     ],
   },
-  name: 'E-Commerce Replatforming & Platform Migration Services',
+  name: 'Ecommerce Replatforming Services',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  serviceType: 'Enterprise E-Commerce Replatforming & ERP Integration',
+  serviceType: 'Ecommerce Replatforming to Shopify and Shopify Plus',
   description:
-    'End-to-end enterprise replatforming between Magento, NetSuite, BigCommerce, WooCommerce, Shopify Plus, Salesforce Commerce Cloud, Squarespace, and Wix with zero downtime and 100% SEO protection.',
+    'Ecommerce replatforming from Magento, NetSuite SuiteCommerce, BigCommerce, WooCommerce, Salesforce Commerce Cloud, WordPress, Squarespace and Wix to Shopify or Shopify Plus, with data mapping, ERP integration, one-to-one 301 redirects and a staged cutover.',
   areaServed: ['US', 'GB', 'CA', 'AU'],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -318,8 +420,8 @@ const SERVICE_SCHEMA = {
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'E-Commerce Replatforming & Migration Services | FactoryJet',
-  description: 'Enterprise replatforming blueprint that protects rankings, order history, customer accounts, and ERP workflows.',
+  name: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   url: 'https://factoryjet.com/replatforming',
   dateModified: PAGE_MODIFIED,
   author: {
@@ -348,24 +450,24 @@ const BREADCRUMB_SCHEMA = {
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Technical Execution Model',
-    factoryjet: 'Senior commerce systems architects write custom ETL scripts and Shopify Functions with 100% full IP ownership.',
-    traditional: 'Junior agency generalists relying on generic third-party migration apps that cause database bloat.',
+    label: 'Data mapping',
+    factoryjet: 'A field-by-field mapping sheet you approve before import, with scripts for anything an app cannot move.',
+    traditional: 'A migration app run once, with gaps found by customers after launch.',
   },
   {
-    label: 'SEO & 301 URL Preservation',
-    factoryjet: '1-to-1 exact path mapping of 100% legacy URLs with single-hop 301 redirects and schema retention.',
-    traditional: 'Wildcard home-page redirects that result in massive Google ranking and organic revenue drops.',
+    label: 'Redirects',
+    factoryjet: 'One 301 per indexed URL, chains flattened, tested in bulk before DNS moves.',
+    traditional: 'Redirects for top pages only, or a catch-all to the homepage.',
   },
   {
-    label: 'ERP & Warehouse Synchronization',
-    factoryjet: 'Direct GraphQL webhook pipeline syncing NetSuite, SAP, and Manhattan WMS in under 150ms.',
-    traditional: 'Batch CSV file uploads or slow third-party middleware with frequent inventory sync failures.',
+    label: 'ERP and warehouse',
+    factoryjet: 'Order, stock and tracking sync rebuilt against Shopify\'s APIs and tested with a real order.',
+    traditional: 'Nightly CSV uploads left in place, with stock that drifts between syncs.',
   },
   {
-    label: 'Commercial Terms & Accountability',
-    factoryjet: 'Transparent fixed-price milestone scope with guaranteed zero-downtime cutover SLA.',
-    traditional: 'Open-ended hourly retainer billing with frequent scope creep and unexpected overages.',
+    label: 'Commercial terms',
+    factoryjet: 'Fixed price per phase, a demo on your data before you sign, and you own the code.',
+    traditional: 'Open hourly billing with scope set as the work goes.',
   },
 ];
 
@@ -386,22 +488,26 @@ export default function ReplatformingHubPage() {
         <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
           <div className="pp-wrap">
             <div className="rv-hero-wrap">
-              
+
               {/* Left Column Typography */}
               <div>
                 <div className="rv-badge" style={{ marginBottom: '18px' }}>
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Enterprise Replatforming &amp; Migration</span>
+                  <span>Ecommerce Replatforming Services</span>
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Change Platforms Without Losing What You Built
+                  Ecommerce Replatforming Without Losing What You Built
                 </h1>
 
-                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  We migrate enterprise stores between Magento, NetSuite, BigCommerce, WooCommerce, and Salesforce to Shopify Plus. We protect 100% of your search rankings, customer order history, and ERP synchronicity with zero cutover downtime.
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 12px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Ecommerce replatforming services move a live store to a new platform: products, customers, past orders, content, integrations and every URL. FactoryJet moves stores from Magento, WooCommerce, BigCommerce, NetSuite SuiteCommerce, Salesforce Commerce Cloud, WordPress, Squarespace and Wix to Shopify or Shopify Plus, with a one-to-one 301 redirect map, ERP links rebuilt, and a working demo on your own data before you sign.
+                </p>
+
+                <p style={{ fontSize: '13px', color: '#6E6E80', margin: '0 0 28px' }}>
+                  Updated 22 October 2026. Platform facts checked against vendor documentation on that date.
                 </p>
 
                 <div className="rv-actions">
@@ -438,10 +544,10 @@ export default function ReplatformingHubPage() {
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Trusted Enterprise Technology &amp; ERP Connectors</div>
+              <div className="rv-ticker-label">Platforms and Tools We Migrate Between</div>
               <div className="rv-ticker-line" />
             </div>
-            
+
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
                 {PARTNERS.concat(PARTNERS).map((p, idx) => (
@@ -461,7 +567,7 @@ export default function ReplatformingHubPage() {
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
           <div className="pp-wrap">
             <div className="rv-about-grid">
-              
+
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
@@ -483,11 +589,17 @@ export default function ReplatformingHubPage() {
                 </div>
 
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
-                  Engineered for Zero Downtime. Built for Growth.
+                  The Storefront Is the Easy Part
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  The storefront is the easy part. We treat replatforming as a data architecture, 301 URL redirect, and ERP integration project. That is how we ensure zero revenue drop, zero lost search rankings, and zero operational disruption.
+                  FactoryJet has served 500+ businesses since 2014, with 97% of projects delivered on time, and is a registered Shopify Partner. We treat a replatform as three jobs: moving data, keeping URLs, and keeping the ERP in step. The Shopify build itself runs through our{' '}
+                  <Link href="/services/shopify-migration-agency" style={linkStyle}>Shopify migration agency</Link>{' '}
+                  and{' '}
+                  <Link href="/services/shopify-plus-agency" style={linkStyle}>Shopify Plus development</Link>{' '}
+                  teams, and the ERP side through{' '}
+                  <Link href="/services/ecommerce-erp-integration" style={linkStyle}>ecommerce ERP integration</Link>
+                  .
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -520,34 +632,34 @@ export default function ReplatformingHubPage() {
             {/* Answer-First Definitions for AI Overviews & Search Engines */}
             <div style={{ marginTop: '56px', display: 'grid', gap: '18px' }}>
               <AnswerFirstDefinition
-                term="Zero-Downtime E-Commerce Replatforming"
-                definition="Zero-downtime replatforming is a phased technical migration framework where product catalogs, customer databases, order histories, and ERP connectors are fully pre-built and validated on the target platform while the legacy store continues processing live customer transactions uninterrupted until final off-peak DNS cutover."
+                term="Staged ecommerce cutover"
+                definition="A staged cutover builds and tests the new store in private while the old store keeps taking orders. Products, customers and orders are imported early, a final sync copies anything created since, and DNS moves in a quiet hour. A written rollback rule says when to point the domain back if checkout or order sync fails."
                 keyTakeaways={[
-                  'Continuous parallel operation prevents lost revenue and cart drop-offs during database transfer',
-                  'Dual delta sync captures all final customer orders and inventory deltas minutes before launch',
-                  'Sub-60-second TTL DNS switchover ensures immediate global routing without offline maintenance pages',
+                  'The old store stays live until the moment DNS changes',
+                  'Shopify recommends importing products first, then customers, then historical orders',
+                  'Rollback is decided by a written rule, not on the night',
                 ]}
-                citationSource="FactoryJet Zero-Downtime Migration Architecture Standard (2026)"
+                citationSource="Shopify data transfer guide, checked 22 Oct 2026"
               />
               <AnswerFirstDefinition
-                term="1-to-1 301 Link Equity & URL Preservation"
-                definition="1-to-1 301 redirect mapping is an exhaustive SEO protocol where every single historical indexable URL (products, collections, blog posts, static pages) from the legacy platform is mapped to its exact matching destination on the new platform using single-hop 301 Permanent Redirects and canonical schema retention."
+                term="One-to-one 301 redirect map"
+                definition="A one-to-one redirect map pairs every indexed URL on the old platform (products, categories, posts and pages) with a single matching URL on the new store, using a permanent 301 redirect with no chains. Google's site move guide recommends permanent redirects and advises against chains. On Shopify, redirects only fire when the old path is broken."
                 keyTakeaways={[
-                  'Guarantees 100% preservation of accumulated backlink authority and Google search rankings',
-                  'Eliminates lazy wildcard redirects to the homepage that cause Google soft 404 de-indexing penalties',
-                  'Maintains structured product, review, and breadcrumb JSON-LD schema across platform migrations',
+                  'Shopify allows 100,000 redirects on standard plans and 20,000,000 on Plus',
+                  'Catch-all redirects to the homepage throw away page-level relevance',
+                  'Titles, descriptions and structured data move with each page',
                 ]}
-                citationSource="FactoryJet E-Commerce SEO Preservation Standard (2026)"
+                citationSource="Google Search Central and Shopify Help Center, checked 22 Oct 2026"
               />
               <AnswerFirstDefinition
-                term="Historical Customer & Order Tokenization"
-                definition="Customer and order history migration is the secure ETL transformation of legacy buyer records, addresses, and order line items into native target platform entities while maintaining PCI-DSS compliance and customer privacy standards."
+                term="Customer and order history migration"
+                definition="Customer and order history migration copies buyer records, addresses and past order lines into Shopify so customers can see their history and your reports stay continuous. Passwords cannot move: Shopify says customer passwords cannot be migrated by CSV, so customers receive an invite to set a new one. Shopify customer CSV files must be 15 MB or smaller."
                 keyTakeaways={[
-                  'Preserves multi-year customer lifetime value (LTV) records, tax receipts, and order tracking history',
-                  'Automates password re-activation email campaigns through Klaviyo or native magic-link tokens',
-                  'Synchronizes historical customer records with external ERPs and subscription engines (Recharge, Smartrr)',
+                  'Past orders keep lifetime value and repeat-purchase reports intact',
+                  'Account invites go out on launch day with a note on the login page',
+                  'Subscription contracts move separately, with a plan for saved cards',
                 ]}
-                citationSource="FactoryJet Data Integrity & Security Benchmark (2026)"
+                citationSource="Shopify Help Center, checked 22 Oct 2026"
               />
             </div>
           </div>
@@ -564,18 +676,18 @@ export default function ReplatformingHubPage() {
                 <span>Migration Paths</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Choose Your Specific Replatforming Path
+                Choose Your Replatforming Path
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Explore dedicated engineering blueprints, database mapping strategies, and ROI models for your current e-commerce platform:
+                Each guide covers how data leaves that platform, what changes on Shopify, and the redirect patterns to expect:
               </p>
               <p style={{ marginTop: '10px', fontSize: '14.5px', lineHeight: 1.6, color: '#494852' }}>
                 For published price ranges and timelines, read{' '}
-                <Link href="/blog/shopify-plus-migration-cost-2026" style={{ color: '#B23E13', textDecoration: 'underline' }}>
+                <Link href="/blog/shopify-plus-migration-cost-2026" style={linkStyle}>
                   Shopify Plus migration cost by platform
                 </Link>
                 . To keep your rankings through the move, read{' '}
-                <Link href="/blog/ecommerce-replatforming-without-losing-seo-2026" style={{ color: '#B23E13', textDecoration: 'underline' }}>
+                <Link href="/blog/ecommerce-replatforming-without-losing-seo-2026" style={linkStyle}>
                   ecommerce replatforming without losing SEO
                 </Link>
                 .
@@ -616,13 +728,95 @@ export default function ReplatformingHubPage() {
                   </p>
 
                   <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '13.5px', fontWeight: 700, color: '#FF5622' }}>
-                    <span>View Engineering Blueprint</span>
+                    <span>Read the Migration Guide</span>
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M2 10L10 2M10 2H4M10 2V8" />
                     </svg>
                   </div>
                 </Link>
               ))}
+            </div>
+
+            {/* Source platform comparison table (vendor facts checked 22 Oct 2026) */}
+            <div style={{ maxWidth: '1100px', margin: '56px auto 0' }}>
+              <h3 style={{ fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', margin: '0 0 10px' }}>
+                Source Platform vs What Changes on Shopify
+              </h3>
+              <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.6, margin: '0 0 20px' }}>
+                How data leaves each platform and what has to be rebuilt on Shopify or Shopify Plus. Every row links to the vendor page it came from, checked on 22 October 2026.
+              </p>
+              <div style={{ overflowX: 'auto', borderRadius: '14px', border: '1px solid #E6E6EC' }}>
+                <table className="pp-table" style={{ margin: 0, width: '100%', background: '#FFFFFF' }}>
+                  <thead style={{ background: '#F6F6F9' }}>
+                    <tr>
+                      <th style={{ color: '#141414', fontWeight: 700 }}>Moving from</th>
+                      <th style={{ color: '#141414', fontWeight: 700 }}>How data leaves it</th>
+                      <th style={{ color: '#141414', fontWeight: 700 }}>What changes on Shopify</th>
+                      <th style={{ color: '#141414', fontWeight: 700 }}>Source (checked 22 Oct 2026)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="name" style={{ fontWeight: 700, color: '#141414' }}><Link href="/replatforming/magento-to-shopify" style={linkStyle}>Magento / Adobe Commerce</Link></td>
+                      <td>Exports and APIs vary by version; Adobe lists end of standard support for 2.4.6 on 11 Aug 2026 and 2.4.7 on 31 May 2027</td>
+                      <td>Attributes beyond three options become metafields or separate products; Shopify allows 2,048 variants per product</td>
+                      <td><a href={SRC.adobeLifecycle} {...extLink}>Adobe lifecycle policy</a>, <a href={SRC.shopifyVariants} {...extLink}>Shopify variants</a></td>
+                    </tr>
+                    <tr>
+                      <td className="name" style={{ fontWeight: 700, color: '#141414' }}><Link href="/replatforming/woocommerce-to-shopify" style={linkStyle}>WooCommerce</Link></td>
+                      <td>Built-in CSV exports products only; customers and orders come out through the REST API at /wp-json/wc/v3</td>
+                      <td>/product/ URLs become /products/; passwords cannot move by CSV, so customers reset them</td>
+                      <td><a href={SRC.wooCsv} {...extLink}>WooCommerce CSV</a>, <a href={SRC.wooRest} {...extLink}>REST API</a>, <a href={SRC.shopifyCustomers} {...extLink}>Shopify customers</a></td>
+                    </tr>
+                    <tr>
+                      <td className="name" style={{ fontWeight: 700, color: '#141414' }}><Link href="/replatforming/bigcommerce-to-shopify-plus" style={linkStyle}>BigCommerce</Link></td>
+                      <td>The Catalog API manages products, categories, brands and bulk pricing rules</td>
+                      <td>Bulk pricing rules are rebuilt as Shopify discounts or B2B catalog pricing</td>
+                      <td><a href={SRC.bcCatalog} {...extLink}>BigCommerce Catalog API</a>, <a href={SRC.shopifyB2b} {...extLink}>Shopify B2B</a></td>
+                    </tr>
+                    <tr>
+                      <td className="name" style={{ fontWeight: 700, color: '#141414' }}><Link href="/replatforming/netsuite-suitecommerce-to-shopify-plus" style={linkStyle}>NetSuite SuiteCommerce</Link></td>
+                      <td>Saved search results export to CSV, Excel or PDF; NetSuite stays as the ERP</td>
+                      <td>B2B buyers become Shopify companies with their own pricing, payment and shipping methods</td>
+                      <td><a href={SRC.nsExport} {...extLink}>NetSuite help</a>, <a href={SRC.shopifyB2b} {...extLink}>Shopify B2B</a></td>
+                    </tr>
+                    <tr>
+                      <td className="name" style={{ fontWeight: 700, color: '#141414' }}><Link href="/replatforming/salesforce-commerce-cloud-to-shopify-plus" style={linkStyle}>Salesforce Commerce Cloud</Link></td>
+                      <td>Data is read through OCAPI or the Commerce API (SCAPI); sites run across sandbox, staging, development and production instances</td>
+                      <td>Cartridge logic is rebuilt as apps and Functions; Plus holds up to 20,000,000 redirects</td>
+                      <td><a href={SRC.sfccOcapi} {...extLink}>OCAPI</a>, <a href={SRC.sfccScapi} {...extLink}>Commerce API</a>, <a href={SRC.shopifyRedirects} {...extLink}>Shopify redirects</a></td>
+                    </tr>
+                    <tr>
+                      <td className="name" style={{ fontWeight: 700, color: '#141414' }}><Link href="/replatforming/wordpress-to-shopify" style={linkStyle}>WordPress</Link></td>
+                      <td>Tools, Export creates a WXR (XML) file of posts, pages, comments, custom fields and users</td>
+                      <td>Posts move to Shopify blogs at new URLs, each with its own 301</td>
+                      <td><a href={SRC.wpExport} {...extLink}>WordPress docs</a></td>
+                    </tr>
+                    <tr>
+                      <td className="name" style={{ fontWeight: 700, color: '#141414' }}><Link href="/replatforming/squarespace-to-shopify" style={linkStyle}>Squarespace</Link></td>
+                      <td>Site export is a WordPress-format XML file; store pages and product blocks are left out</td>
+                      <td>Products move on a separate path from pages and the blog</td>
+                      <td><a href={SRC.sqspExport} {...extLink}>Squarespace help</a></td>
+                    </tr>
+                    <tr>
+                      <td className="name" style={{ fontWeight: 700, color: '#141414' }}><Link href="/replatforming/wix-to-shopify" style={linkStyle}>Wix</Link></td>
+                      <td>Products, customers and orders exported to file or copied by a migration app</td>
+                      <td>Import order on Shopify: products, then customers, then historical orders</td>
+                      <td><a href={SRC.shopifyTransfer} {...extLink}>Shopify transfer guide</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.6, margin: '20px 0 8px' }}>
+                Still choosing between platforms? Our comparison pages set the options side by side:
+              </p>
+              <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '14.5px', color: '#494852', lineHeight: 1.7 }}>
+                {COMPARISONS.map((c) => (
+                  <li key={c.href}>
+                    <Link href={c.href} style={linkStyle}>{c.label}</Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
@@ -649,10 +843,10 @@ export default function ReplatformingHubPage() {
                 <span>Core Business Drivers</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Enterprise Brands Choose to Replatform
+                Why Brands Replatform Their Store
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                When your current software becomes a bottleneck to revenue growth, here is what changes when you upgrade:
+                The four triggers we hear most often, and what changes on Shopify:
               </p>
             </div>
 
@@ -672,16 +866,31 @@ export default function ReplatformingHubPage() {
                   </div>
                   <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Legacy Bottleneck:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Problem Today:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The Modern Solution:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>After the Move:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '40px auto 0' }}>
+              <h3 style={{ fontSize: '20px', fontWeight: 800, color: '#141414', margin: '0 0 12px' }}>
+                B2B ecommerce replatforming: what we test before launch
+              </h3>
+              <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.6, margin: '0 0 12px' }}>
+                Trade buyers notice a broken price list on the first order. These items are checked with real buyer logins on the new store, using{' '}
+                <a href={SRC.shopifyB2b} {...extLink}>Shopify B2B</a> features:
+              </p>
+              <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '14.5px', color: '#494852', lineHeight: 1.7 }}>
+                {B2B_CHECKLIST.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
@@ -690,11 +899,11 @@ export default function ReplatformingHubPage() {
 
         <div id="architecture-blueprint">
           <EnterpriseArchitectureBlueprint
-            badge="// ENTERPRISE REPLATFORMING BLUEPRINT"
-            title="Enterprise Architecture: Decoupled Migration to Shopify Plus"
-            subtitle="Explore how your product data, ERP general ledger, 3PL inventory, and 301 URL redirect maps synchronize during zero-downtime cutover."
-            legacySource="Legacy Monolith / ERP Web Storefront"
-            targetStack="Shopify Plus Modern Architecture"
+            badge="// REPLATFORMING DATA FLOW"
+            title="How Data, ERP and Redirects Move to Shopify Plus"
+            subtitle="See how product data, ERP orders, warehouse stock and the 301 redirect map stay in step during a staged cutover."
+            legacySource="Current platform and ERP"
+            targetStack="Shopify Plus"
             ctaLabel="Schedule Replatforming Architecture Call"
             region="us"
           />
@@ -711,7 +920,7 @@ export default function ReplatformingHubPage() {
         <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
-              
+
               {/* Left Column Sticky Content */}
               <div style={{ position: 'sticky', top: '100px' }}>
                 <div className="rv-badge" style={{ marginBottom: '14px' }}>
@@ -721,18 +930,22 @@ export default function ReplatformingHubPage() {
                   <span>Our Working Process</span>
                 </div>
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
-                  Our 5-Step Migration Protocol
+                  How a Replatform Runs, in Five Steps
                 </h2>
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  Every migration is executed with strict engineering rigor: data parity is verified before build, and 1-to-1 redirect mapping is tested before DNS switch.
+                  Data parity is checked against the mapping sheet before the build is signed off, and the redirect map is tested before DNS moves. Want a first estimate? Try the{' '}
+                  <Link href="/tools/replatforming-cost-calculator" style={linkStyle}>replatforming cost calculator</Link>
+                  . Going headless? See{' '}
+                  <Link href="/services/headless-shopify-development" style={linkStyle}>headless Shopify development</Link>
+                  .
                 </p>
                 <ModalCTAButton label="Start Your Migration Audit" region="us" btnVariant="primary-dark" />
               </div>
 
               {/* Right Column Step Cards */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <ol style={{ display: 'flex', flexDirection: 'column', gap: '16px', listStyle: 'none', margin: 0, padding: 0 }}>
                 {WORKING_STEPS.map((s) => (
-                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
+                  <li key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
                       <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
                         {s.icon}
@@ -747,16 +960,16 @@ export default function ReplatformingHubPage() {
                     <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
                       {s.d}
                     </p>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ol>
 
             </div>
           </div>
         </section>
 
         {/* ── 09. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
-        
+
         {/* ── AGENCY EVALUATION FRAMEWORK TABLE ── */}
         <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
@@ -765,21 +978,21 @@ export default function ReplatformingHubPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Vendor Due Diligence</span>
+                <span>Choosing a Replatforming Agency</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Evaluating Migration Partners: What to Ask
+                How to Compare Replatforming Agencies
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare senior engineering replatforming against traditional design agency retainers before you commit:
+                Ask every agency on your shortlist how they handle these four areas, and compare the answers:
               </p>
             </div>
 
             <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
-                <div>Evaluation Factor</div>
-                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional Design Agencies</div>
+                <div>Area</div>
+                <div style={{ color: '#FF5622' }}>What FactoryJet does</div>
+                <div style={{ color: '#A0A0B0' }}>Warning sign elsewhere</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
@@ -814,15 +1027,23 @@ export default function ReplatformingHubPage() {
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="pp-wrap">
             <SeoLinkEquityChecklist sourcePlatform="magento" />
+            <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.6, margin: '24px auto 0', maxWidth: '960px' }}>
+              The redirect rules above follow Google&apos;s{' '}
+              <a href={SRC.googleSiteMove} {...extLink}>site move guide</a>
+              {' '}and Shopify&apos;s{' '}
+              <a href={SRC.shopifyRedirects} {...extLink}>URL redirect documentation</a>
+              . The Shopify Plus plan is $2,300 a month on a three-year term or $2,500 on a one-year term in the US, per the{' '}
+              <a href={SRC.shopifyPlusPlan} {...extLink}>Shopify Help Center</a>.
+            </p>
           </div>
         </section>
 
         <CommerceRoiCalculator city="Enterprise Store" region="us" />
 
         <FAQ
-          eyebrow="MIGRATION INTELLIGENCE"
-          headline="Frequently Asked Questions About E-Commerce Replatforming"
-          lead="Everything engineering directors, marketing VPs, and founders ask when scoping an enterprise migration:"
+          eyebrow="REPLATFORMING FAQ"
+          headline="Ecommerce Replatforming Questions, Answered"
+          lead="What founders, ecommerce managers and IT leads ask us before they choose a platform and a replatforming agency:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#F6F6F9]"
@@ -842,17 +1063,17 @@ export default function ReplatformingHubPage() {
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
-              <span>Fixed-Price Enterprise Replatforming</span>
+              <span>Fixed Price Per Phase</span>
             </div>
-            
+
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Upgrade Your Commerce Platform?
+              Ready to Change Platforms?
             </h2>
-            
+
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Send us your current store URL, SKU volume, and integration requirements. We will audit your architecture and provide a detailed technical roadmap with a guaranteed fixed quote.
+              Send us your current store URL, SKU count and the systems it connects to. We will review the setup and send a written plan with a fixed price for each phase.
             </p>
-            
+
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
               <ModalCTAButton label="Schedule Architecture Discovery Call" region="us" btnVariant="primary-light" />
             </div>

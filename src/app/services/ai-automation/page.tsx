@@ -507,6 +507,13 @@ export default function UsAiAutomationPage() {
                   <li key={t} className="rounded-full border border-fj-neutral-200 bg-white px-3 py-1.5 font-fj-body text-sm text-fj-ink">{t}</li>
                 ))}
               </ul>
+              <p className="mt-4 font-fj-body text-sm text-fj-neutral-600">
+                Choosing between a workflow tool and an agent framework? Read{' '}
+                <Link href="/comparisons/n8n-vs-langchain-vs-crewai-enterprise" className="font-semibold text-[#B23E13] underline underline-offset-2">
+                  n8n vs LangChain vs CrewAI
+                </Link>
+                .
+              </p>
             </div>
           </div>
         </section>

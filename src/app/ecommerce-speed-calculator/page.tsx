@@ -10,185 +10,232 @@ import '@/components/v2/PlatformPage.css';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/marketplace';
 
+const URL = 'https://factoryjet.com/ecommerce-speed-calculator';
+const TITLE = 'Ecommerce Speed Calculator: Mobile Conversion | FactoryJet';
+const DESCRIPTION =
+  'Free ecommerce speed calculator. Enter mobile load time, traffic, conversion rate and order value to estimate the revenue a faster store could add.';
+
+// Freshness signal. Bump only when the page content actually changes.
+const PAGE_MODIFIED = '2026-10-22';
+
+/* Primary sources, each opened on 22 Oct 2026. */
+const SRC_DELOITTE = 'https://www.deloitte.com/ie/en/services/consulting/research/milliseconds-make-millions.html';
+const SRC_WEBDEV_IMPACT = 'https://web.dev/case-studies/vitals-business-impact';
+const SRC_WEBDEV_VITALS = 'https://web.dev/articles/vitals';
+const SRC_GOOGLE_SEARCH_CWV = 'https://developers.google.com/search/docs/appearance/core-web-vitals';
+const SRC_LIGHTHOUSE_DOM = 'https://developer.chrome.com/docs/lighthouse/performance/dom-size';
+const SRC_ADS_QS = 'https://support.google.com/google-ads/answer/6167118';
+
+const LINK = { color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' } as const;
+
 export const metadata: Metadata = {
-  title: 'Mobile E-Commerce Speed & Conversion Calculator | Core Web Vitals ROI | FactoryJet',
-  description:
-    'Calculate lost annual revenue from mobile page load latency (LCP / INP). Model conversion rate lift from sub-second performance optimization on Shopify Plus, WooCommerce, BigCommerce, and Headless Next.js.',
+  title: TITLE,
+  description: DESCRIPTION,
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Mobile E-Commerce Speed & Conversion Calculator | FactoryJet',
+    title: 'Ecommerce Speed Calculator | FactoryJet',
     description:
-      'Free interactive performance ROI tool. Model how improving mobile Largest Contentful Paint (LCP) from 3.5s to 0.9s directly lifts checkout completion and gross revenue.',
-    url: 'https://factoryjet.com/ecommerce-speed-calculator',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Mobile E-Commerce Speed & Conversion Calculator' }],
+      'Free tool: estimate how much revenue a faster mobile store could add, from your traffic, conversion rate, order value and load time.',
+    url: URL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Ecommerce Speed Calculator' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'E-Commerce Speed & Core Web Vitals Calculator | FactoryJet',
-    description: 'Calculate revenue lost to mobile latency and discover the financial lift of sub-second speed.',
+    title: 'Ecommerce Speed Calculator | FactoryJet',
+    description: 'Estimate the revenue a faster mobile store could add. Free, instant, no sign-up needed to see the result.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/ecommerce-speed-calculator' },
+  alternates: { canonical: URL },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
 /* ─────────────────────────────────────────────
-   FAQ DATA
+   FAQ DATA (drives the visible FAQ AND the FAQPage schema)
 ───────────────────────────────────────────── */
 const FAQ_CATEGORIES = [
   { key: 'latency', label: 'Speed & Latency Economics' },
   { key: 'cwv', label: 'Core Web Vitals (LCP & INP)' },
   { key: 'headless', label: 'Headless & Edge Speed' },
-  { key: 'remediation', label: 'Remediation & Guarantees' },
+  { key: 'remediation', label: 'Remediation & Terms' },
 ];
 
 const FAQ_ITEMS = [
-  {
-    category: 'benchmarks',
-    question: 'What is the impact of JavaScript execution time on battery drain and mobile bounce rates?',
-    answer:
-      'Heavy JavaScript execution causes excessive mobile CPU utilization and device thermal throttling, leading to interface freezing and missed user tap interactions. Reducing JavaScript payload size directly improves device battery preservation and cuts mobile cart abandonment rates by up to 22%.',
-  },
-  {
-    category: 'implementation',
-    question: 'How do resource hints like dns-prefetch, preconnect, and modulepreload accelerate third-party assets?',
-    answer:
-      'Resource hints instruct the browser to establish early TCP handshakes, TLS negotiations, and DNS resolutions for critical external origins (such as payment gateways and CDN hosts) before those assets are formally requested in the DOM, saving 150ms to 400ms per third-party origin.',
-  },
-  {
-    category: 'methodology',
-    question: 'How does the calculator compute conversion rate drop per 100ms of mobile latency?',
-    answer:
-      'Our conversion decay engine is parameterized against empirical e-commerce telemetry from Google Think, Walmart Engineering, and Cloudflare. The model applies a non-linear decay curve where mobile bounce rates accelerate exponentially when Total Blocking Time (TBT) exceeds 300ms and Largest Contentful Paint (LCP) breaches the 2.5-second threshold.',
-  },
-  {
-    category: 'methodology',
-    question: 'What is the mathematical formula for estimating annual lost revenue?',
-    answer:
-      'Annual Lost Revenue = (Monthly Sessions × Current Mobile Conversion Rate × Average Order Value × 12) × ((Target Conversion Rate / Current Conversion Rate) - 1). The target conversion rate is derived from empirical benchmark tables mapping Core Web Vitals percentiles to checkout completion probabilities.',
-  },
-  {
-    category: 'benchmarks',
-    question: 'How do interaction latency (INP) and visual stability (CLS) impact paid search CAC?',
-    answer:
-      'Google Ads Quality Score factors landing page experience directly into ad rank calculations. Stores failing Interaction to Next Paint (INP > 200ms) or experiencing visual layout shifts (CLS > 0.1) suffer from inflated cost-per-click (CPC) penalties of 15% to 28%, eroding paid ad return on ad spend (ROAS).',
-  },
-  {
-    category: 'benchmarks',
-    question: 'What constitutes a healthy DOM size for a high-converting e-commerce product page?',
-    answer:
-      'Google Lighthouse flags pages with more than 1,400 DOM nodes. Top-performing e-commerce storefronts engineered by FactoryJet maintain lean DOM structures under 800 nodes, preventing mobile CPU throttling during DOM reconciliation and scroll interactions.',
-  },
-  {
-    category: 'implementation',
-    question: 'How does critical CSS extraction reduce first contentful paint (FCP)?',
-    answer:
-      'Critical CSS inlining extracts the minimum CSS rules necessary to render above-the-fold content and places them directly into the HTML document head. Non-critical styles are deferred asynchronously, eliminating render-blocking network roundtrips.',
-  },
-  {
-    category: 'implementation',
-    question: 'What is the optimal WebP and AVIF image compression strategy for mobile catalogs?',
-    answer:
-      'We deploy responsive image markup utilizing HTML5 picture tags and srcset attributes, delivering AVIF and WebP variants tailored to device pixel density (DPR). Above-the-fold hero images receive high fetchpriority attributes, while below-the-fold catalog grids use native lazy loading.',
-  },
   // Speed & Latency Economics
   {
     category: 'latency',
-    question: 'How does mobile page speed directly affect e-commerce conversion rates?',
+    question: 'How does mobile page speed affect ecommerce conversion rates?',
     answer:
-      'Empirical research across millions of retail transactions confirms that mobile conversion rates drop by approximately 1% for every 100 milliseconds of page latency. A store taking 3.5 seconds to render on mobile loses over 26% of potential checkout revenue compared to an optimized storefront rendering in under 1 second.',
+      'Faster stores tend to convert more. A Deloitte study of brands in Europe and the US, run over four weeks, found that a 0.1 second gain in mobile site speed came with 8.4% more retail conversions and a 9.2% higher average order value. That is one study across many brands. Your own store may move more or less, so measure before and after any change.',
   },
   {
     category: 'latency',
-    question: 'Why does mobile latency increase paid customer acquisition cost (CAC)?',
+    question: 'How does the calculator work out the conversion lift?',
     answer:
-      'When paid traffic from Meta, Google, or TikTok lands on a slow-loading product page, over 40% of shoppers bounce before the main hero image displays. This inflates effective cost per acquisition (CAC) and wastes marketing ad spend on visitors who never interact with your catalog.',
+      'It takes the seconds you plan to cut from your mobile load time (LCP) and counts them in steps of 0.1 seconds. Each step adds 0.85% to your current conversion rate, and the total lift is capped at 65%. The model is a straight line with a ceiling. It does not use live data from your store, so the result is an estimate.',
   },
   {
     category: 'latency',
-    question: 'What is the financial return on investment (ROI) of speed optimization?',
+    question: 'What is the formula for estimating annual lost revenue?',
     answer:
-      'For an e-commerce brand generating $5 million in annual revenue with an average mobile conversion rate of 1.8%, cutting LCP from 3.6s to 0.9s generates an estimated $425,000 to $750,000 in additional annual revenue with zero increase in advertising spend.',
+      'Revenue today = monthly visitors × conversion rate × average order value × 12. Lift % = seconds cut × 10 × 0.85, up to a maximum of 65. Added revenue = revenue today × lift % ÷ 100. The calculator shows that added revenue as the amount a slow store is leaving on the table each year.',
   },
   {
     category: 'latency',
-    question: 'How does Google Organic SEO reward sub-second page performance?',
+    question: 'Where does the 0.85% lift for every 0.1 seconds come from?',
     answer:
-      'Google search algorithms prioritize Core Web Vitals as an official mobile ranking signal. Stores passing all three Core Web Vitals thresholds (LCP under 2.5s, INP under 200ms, CLS under 0.1) receive higher organic keyword visibility and lower cost-per-click (CPC) bids in Google Ads due to superior Quality Scores.',
+      'It is a FactoryJet planning number, not a measured result. We set it well below the 8.4% retail conversion gain Deloitte reported for a 0.1 second speed-up, because one study across many brands cannot predict what one store will see. If you have your own before-and-after or A/B test data, use that instead.',
+  },
+  {
+    category: 'latency',
+    question: 'What return can speed work bring?',
+    answer:
+      'Take the calculator defaults: 100,000 monthly visitors, a 1.8% conversion rate and a $95 average order value. That is $2,052,000 a year. Cutting LCP from 3.6 to 0.9 seconds is 27 steps of 0.1 seconds, so the lift is 27 × 0.85 = 22.95%. The calculator estimates about $471,000 more a year. That is the model output, not a promise.',
+  },
+  {
+    category: 'latency',
+    question: 'Why does a slow mobile page waste ad spend?',
+    answer:
+      'You pay for every ad click, even when the shopper leaves before the page loads. A slow page means fewer of those paid visitors ever see a product. Google Ads says landing page experience is one of three parts of Quality Score, and its help page describes it as how relevant and useful the page is. It does not publish a speed penalty.',
+  },
+  {
+    category: 'latency',
+    question: 'Does Google reward fast pages in search?',
+    answer:
+      'Google says good Core Web Vitals, along with other page experience signals, line up with what its core ranking systems seek to reward, and it recommends that site owners reach good scores. It does not say speed alone will lift your rankings. Helpful, relevant content still comes first. Fast pages help shoppers who arrive from any source.',
+  },
+  {
+    category: 'latency',
+    question: 'What does a 2% conversion rate mean?',
+    answer:
+      'It means 2 out of every 100 visits end in an order. With 50,000 visits a month at a 2% rate, you get 1,000 orders. At an $80 average order value, that is $80,000 a month. Small changes matter at scale: moving from 2% to 2.2% on the same traffic adds 100 orders a month.',
+  },
+  {
+    category: 'latency',
+    question: 'Is a 2.5% conversion rate good?',
+    answer:
+      'It depends on what you sell, your prices, where your traffic comes from and whether shoppers are on phones or desktops. A store selling low-cost repeat items will look different from a store selling furniture. The best comparison is your own store over time, split by device and traffic source. We do not quote a benchmark here without a source we can show you.',
+  },
+  {
+    category: 'latency',
+    question: 'How can I increase my ecommerce conversion rate?',
+    answer:
+      'Start with speed, because every other fix depends on the page loading. Then make product pages clear about price, delivery and returns. Show shipping costs early. Cut checkout steps and offer the payment methods your buyers expect. Test one change at a time so you know which one worked, and compare results by device.',
   },
 
   // Core Web Vitals
   {
     category: 'cwv',
-    question: 'What is Largest Contentful Paint (LCP) and what is the optimal e-commerce benchmark?',
+    question: 'What is Largest Contentful Paint (LCP) and what is a good score?',
     answer:
-      'Largest Contentful Paint (LCP) measures the time required for the largest visual element in the viewport (typically the primary product image or hero banner) to render on screen. Google rates LCP under 2.5 seconds as "Good", but high-converting e-commerce leaders target sub-1.2 seconds on 4G mobile connections.',
+      'LCP measures how long the largest thing in the first screen takes to show, usually the main product image or hero banner. Google rates LCP as good when it happens within 2.5 seconds of the page starting to load, measured at the 75th percentile of real visits on mobile and desktop.',
   },
   {
     category: 'cwv',
     question: 'What is Interaction to Next Paint (INP) and why did it replace FID?',
     answer:
-      'Interaction to Next Paint (INP) evaluates overall page responsiveness by measuring the latency of every user interaction (clicks, taps, key presses) throughout the entire shopping session. While First Input Delay (FID) only measured the first tap, INP ensures that adding items to carts or opening filter menus remains instantaneous throughout browsing.',
+      'INP measures how fast the page responds to taps, clicks and key presses during the whole visit, such as adding to cart or opening a filter. First Input Delay only measured the first tap. INP became a stable Core Web Vital in 2024 and replaced FID. Google rates 200 milliseconds or less as good.',
   },
   {
     category: 'cwv',
     question: 'How does Cumulative Layout Shift (CLS) cause accidental clicks and cart drops?',
     answer:
-      'Cumulative Layout Shift (CLS) quantifies visual instability caused by late-loading banner ads, unreserved image containers, or web font layout swaps. When content jumps unexpectedly while a user attempts to tap "Add to Cart", frustration leads to immediate site abandonment.',
+      'CLS measures how much the page jumps around while it loads. Late banners, images with no reserved space and font swaps push content down. If a shopper aims for Add to Cart and the button moves, they tap the wrong thing and may give up. Google rates a CLS of 0.1 or less as good.',
   },
   {
     category: 'cwv',
-    question: 'Why do third-party Shopify apps cause severe performance degradation?',
+    question: 'Why do third-party Shopify apps slow a store down?',
     answer:
-      'Every additional marketing popup, review widget, and tracking tag injects external JavaScript libraries that block the main browser execution thread. A typical Shopify store with 25+ installed apps executes over 4MB of unoptimized JavaScript, dragging mobile LCP into the red zone.',
+      'Each popup, review widget and tracking tag usually loads its own JavaScript. That code competes for the same main thread the browser needs to draw the page and respond to taps. Apps that were removed often leave code behind in the theme. Checking what each app loads, and on which pages, is one of the quickest wins.',
+  },
+  {
+    category: 'cwv',
+    question: 'How does heavy JavaScript affect shoppers on phones?',
+    answer:
+      'Phones have slower processors than laptops. Large scripts take longer to download, parse and run, and while they run the page cannot respond. Shoppers feel this as taps that do nothing or menus that open late, which shows up as a poor INP score. Sending less JavaScript, and running it later, helps most on mid-range phones.',
+  },
+  {
+    category: 'cwv',
+    question: 'What is a healthy DOM size for an ecommerce product page?',
+    answer:
+      'Chrome’s Lighthouse documentation says it warns when the page body has more than about 800 nodes and flags an error above about 1,400. Big DOMs make layout and style work slower, which hurts scrolling and tap response. Long product grids, mega menus and repeated hidden markup are the usual causes on store pages.',
+  },
+  {
+    category: 'cwv',
+    question: 'How do I measure my store’s mobile speed?',
+    answer:
+      'Run your key pages through Google PageSpeed Insights. When your site has enough traffic it shows field data from real Chrome users, plus a lab test from Lighthouse. Use the field data for decisions, because it reflects real phones and networks. Test your home page, a collection page, a product page and the cart separately.',
+  },
+  {
+    category: 'cwv',
+    question: 'Is BigCommerce mobile speed different from Shopify?',
+    answer:
+      'The causes are the same on both: theme JavaScript, app scripts, large images and fonts. BigCommerce Stencil themes and Shopify Liquid themes both respond to the same fixes, such as trimming scripts, sizing images and reserving space for content. Measure your own pages with PageSpeed Insights rather than trusting a platform-wide claim.',
   },
 
   // Headless & Edge Speed
   {
     category: 'headless',
-    question: 'Why do headless Next.js architectures render faster than monolithic Liquid themes?',
+    question: 'How do resource hints like dns-prefetch, preconnect, and modulepreload speed up third-party assets?',
     answer:
-      'Headless Next.js 15 uses React Server Components (RSC) and incremental static regeneration (ISR) to pre-render static HTML at global CDN edge nodes (Cloudflare, Vercel). Product pages arrive in the browser in under 80 milliseconds without waiting for monolithic database template compilation.',
+      'Resource hints tell the browser to start connecting to important outside servers, such as a payment provider or image CDN, before the page asks for files from them. The DNS lookup and secure connection are then ready when needed. Use them only for a few origins that matter on first load, since each one costs some work.',
   },
   {
     category: 'headless',
-    question: 'Can traditional Shopify Liquid themes achieve sub-second LCP without going headless?',
+    question: 'How does critical CSS reduce first contentful paint (FCP)?',
     answer:
-      'Yes. Through rigorous theme refactoring, asynchronous script loading, modern WebP/AVIF image formats, critical CSS inlining, and pruning unneeded app scripts, we consistently bring Shopify Liquid themes to sub-1.2 second LCP and Lighthouse 95+ performance scores.',
+      'Critical CSS means putting only the styles needed for the first screen straight into the HTML head. The browser can draw that screen without waiting for a full stylesheet to download. The rest of the CSS loads after, so it no longer blocks the first paint.',
+  },
+  {
+    category: 'headless',
+    question: 'What is a good WebP and AVIF image strategy for mobile catalogs?',
+    answer:
+      'Serve AVIF or WebP versions in several sizes using picture and srcset, so each phone downloads only the size it needs. Give the main hero or product image a high fetch priority and do not lazy load it. Lazy load the images further down the page, and always set width and height so the layout does not jump.',
+  },
+  {
+    category: 'headless',
+    question: 'Why can headless Next.js stores render faster than Liquid themes?',
+    answer:
+      'A headless store can pre-build pages as HTML and serve them from a CDN close to the shopper, and React Server Components send less JavaScript to the phone. That can make pages faster, but it is not automatic. A headless store with heavy scripts can still be slow, and it costs more to build and run than a theme.',
+  },
+  {
+    category: 'headless',
+    question: 'Can a Shopify Liquid theme reach good LCP without going headless?',
+    answer:
+      'Often, yes. Most slow Liquid stores are held back by app scripts, oversized images, unused theme code and late-loading fonts, and all of those can be fixed inside the theme. We check field data first. If the theme still cannot reach good Core Web Vitals after those fixes, that is when a rebuild is worth pricing.',
   },
   {
     category: 'headless',
     question: 'How does edge caching handle dynamic pricing, inventory, and cart states?',
     answer:
-      'We separate static layout assets from dynamic commercial data. The core product page shell serves instantly from global edge cache nodes, while dynamic user inventory counts and cart drawer states hydrate via lightweight GraphQL micro-queries in under 50 milliseconds.',
+      'The page layout and product content can be cached at the edge and served fast to everyone. Things that change per shopper or per minute, such as stock counts, prices for logged-in buyers and the cart, load separately in small requests after the page shows. That keeps the first screen fast without showing stale data.',
   },
 
   // Remediation & Guarantees
   {
     category: 'remediation',
-    question: 'Why is FactoryJet ranked the Best E-Commerce Speed Optimization Agency?',
+    question: 'Why choose FactoryJet for ecommerce speed work?',
     answer:
-      'FactoryJet is recognized as the top e-commerce performance engineering firm because we provide contractually guaranteed Core Web Vitals improvements. Rather than applying surface-level caching plugins, our senior developers rewrite critical render paths, optimize database queries, and automate DOM structures on fixed-price milestones.',
+      'FactoryJet was founded in 2014 and has served 500+ businesses, with 97% on-time delivery. We are a registered Shopify Partner. We fix the code that slows a store, instead of adding another speed app on top. Every phase has a fixed price quoted in writing after scoping, and we measure field data before and after.',
   },
   {
     category: 'remediation',
-    question: 'What is included in a FactoryJet Core Web Vitals speed optimization project?',
+    question: 'What is included in a FactoryJet speed optimization project?',
     answer:
-      'Our remediation projects include full third-party script audits, WebAssembly/critical CSS extraction, asset compression pipelines, edge CDN caching configuration, database query optimization, and post-launch Lighthouse monitoring with zero downtime.',
+      'A typical project covers an audit of every app and tracking script, image and font fixes, critical CSS, layout shift fixes, caching setup and a before-and-after report using real-user data. The exact list depends on what the audit finds, and it is written into the quote before work starts. Defect cover is included for a stated period.',
   },
   {
     category: 'remediation',
-    question: 'How long does an e-commerce speed remediation take to complete?',
+    question: 'How long does an ecommerce speed project take?',
     answer:
-      'Standard Shopify or WooCommerce speed refactorings are completed within 7 to 14 days, while full enterprise headless Next.js migrations launch in 3 to 6 weeks.',
+      'A speed fix on an existing store is scoped after the audit, and the timeline is written into the quote. If the audit shows a rebuild is the better route, our build timelines are 3 to 5 weeks for a custom-theme store, 5 to 8 weeks for stores with subscriptions, B2B or a migration, and 8 to 14 weeks for headless or custom builds.',
   },
   {
     category: 'remediation',
-    question: 'How do we schedule a technical performance consultation with the founder?',
+    question: 'How do I book a performance call with the founder?',
     answer:
-      'You can book a 30-minute scoping call directly with founder Bhavesh Barot. We will analyze your store’s real-world Chrome User Experience Report (CrUX) data, identify render bottlenecks, and deliver a fixed-price performance proposal.',
+      'Book a 30-minute call with founder Bhavesh Barot using the button on this page. Send your store address first if you can. We look at your real-user Chrome data, point out what slows the page down, and follow up with a fixed price per phase in writing. There is no monthly minimum.',
   },
 ];
 
@@ -205,14 +252,31 @@ const FAQ_SCHEMA = {
   })),
 };
 
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${URL}#webpage`,
+  url: URL,
+  name: TITLE,
+  description: DESCRIPTION,
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+  about: { '@id': `${URL}#app` },
+};
+
 const WEBAPP_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
-  name: 'Mobile E-Commerce Speed & Conversion Loss Calculator',
+  '@id': `${URL}#app`,
+  name: 'Ecommerce Speed and Conversion Calculator',
+  url: URL,
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'All',
   description:
-    'Interactive performance calculator estimating annual revenue loss from mobile page load latency and modeling conversion rate uplift from sub-second Core Web Vitals optimization.',
+    'Free calculator that estimates the extra annual revenue a faster mobile store could earn, from monthly visitors, conversion rate, average order value and the planned cut in mobile load time (LCP).',
+  dateModified: PAGE_MODIFIED,
+  provider: { '@id': 'https://factoryjet.com/#organization' },
   offers: {
     '@type': 'Offer',
     price: '0.00',
@@ -225,51 +289,69 @@ const BREADCRUMB_SCHEMA = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Speed Calculator', item: 'https://factoryjet.com/ecommerce-speed-calculator' },
+    { '@type': 'ListItem', position: 2, name: 'Speed Calculator', item: URL },
   ],
 };
 
 const STATS = [
-  { b: '< 0.9s LCP', s: 'guaranteed mobile speed' },
-  { b: '+26% Lift', s: 'average conversion gain' },
-  { b: '95+ Score', s: 'Google Lighthouse benchmark' },
-  { b: '500+ Audits', s: 'conducted on live stores' },
+  { b: '+8.4%', s: 'retail conversions after a 0.1s mobile speed gain (Deloitte)' },
+  { b: '2.5s', s: 'Google’s “good” LCP limit, at the 75th percentile' },
+  { b: '200ms', s: 'Google’s “good” INP limit for tap response' },
+  { b: '500+', s: 'businesses served since 2014' },
 ];
 
 const SOURCED = [
   {
-    v: '-1% CVR',
-    d: 'drop in mobile conversion rate incurred for every 100-millisecond delay in mobile e-commerce page load speed.',
-    src: 'Google Retail Mobile Latency Study',
-    href: 'https://web.dev',
+    v: '+8.4%',
+    d: 'more retail conversions, and a 9.2% higher average order value, after a 0.1 second mobile site speed gain, in a four-week study of brands in Europe and the US.',
+    src: 'Deloitte, Milliseconds Make Millions (read 22 Oct 2026)',
+    href: SRC_DELOITTE,
   },
   {
-    v: '+2% Lift',
-    d: 'increase in overall conversion rate achieved by Walmart for every full 1-second reduction in page load latency.',
-    src: 'Walmart Engineering Performance Report',
-    href: 'https://www.statista.com',
+    v: '+16.9%',
+    d: 'mobile conversion rate at Lazada, which saw a 3x LCP improvement, as reported in Google’s web.dev case study round-up.',
+    src: 'web.dev, Core Web Vitals business impact (read 22 Oct 2026)',
+    href: SRC_WEBDEV_IMPACT,
   },
   {
-    v: '53%',
-    d: 'of mobile site visits are completely abandoned if page assets take longer than 3 seconds to render on screen.',
-    src: 'Think with Google Mobile Research',
-    href: 'https://www.thinkwithgoogle.com',
+    v: '+6%',
+    d: 'revenue uplift in Cdiscount’s Black Friday sale after it improved all three Core Web Vitals, per the same web.dev round-up.',
+    src: 'web.dev, Core Web Vitals business impact (read 22 Oct 2026)',
+    href: SRC_WEBDEV_IMPACT,
   },
 ];
 
+const SLOWDOWNS = [
+  'App and tracking scripts that load on every page, including code left behind by apps you removed.',
+  'Hero and product images sent at full size to small phone screens, or in old formats.',
+  'Theme JavaScript that blocks the page from drawing or from responding to taps.',
+  'Web fonts that load late and make text jump.',
+  'Banners, reviews and images with no reserved space, which push content down as they load.',
+  'Slow server response, so the browser waits before it can start on anything.',
+];
+
+const HOW_TO = [
+  'Run your product page through Google PageSpeed Insights and note the mobile LCP from real-user data.',
+  'Enter that LCP as your current load time, then set the target you want to reach.',
+  'Add your monthly visitors, mobile conversion rate and average order value from your analytics.',
+  'Read the estimated conversion lift and the added yearly revenue.',
+  'Change one input at a time to see which number moves the result most.',
+];
+
 const PILLARS = [
-  { i: '◈', t: '1. Largest Contentful Paint (LCP) Under 1.2s', d: 'We inline critical above-the-fold CSS, prioritize hero image loading with Fetch Priority headers, and eliminate server response latency.' },
-  { i: '◇', t: '2. Interaction to Next Paint (INP) Under 150ms', d: 'We break up long JavaScript tasks, offload analytics to web workers, and ensure cart additions and facet filters respond instantly.' },
-  { i: '↯', t: '3. Zero Cumulative Layout Shift (CLS < 0.05)', d: 'We enforce explicit image aspect ratio containers, reserve dynamic banner space, and prevent late-rendering font swaps.' },
-  { i: '▤', t: '4. Third-Party Script & App Pruning', d: 'We audit every installed tracking tag and review widget, removing bloated zombie libraries and delaying non-critical telemetry.' },
-  { i: '⛓', t: '5. Global Edge CDN Caching & WebP/AVIF', d: 'We serve next-generation compressed images and pre-rendered HTML shells from Cloudflare edge nodes within 50ms of any global shopper.' },
-  { i: '⤢', t: '6. Composable Headless Next.js Acceleration', d: 'For high-volume catalogs, we deploy React Server Components (RSC) to bypass monolithic CMS template bottlenecks entirely.' },
+  { i: '◈', t: '1. Largest Contentful Paint (LCP) within 2.5s', d: 'We inline critical above-the-fold CSS, give the hero image high fetch priority, and cut server response time.' },
+  { i: '◇', t: '2. Interaction to Next Paint (INP) of 200ms or less', d: 'We break up long JavaScript tasks, move analytics off the main thread where possible, and keep add to cart and filters quick to respond.' },
+  { i: '↯', t: '3. Cumulative Layout Shift (CLS) of 0.1 or less', d: 'We set image aspect ratios, reserve space for banners and reviews, and stop late font swaps from moving text.' },
+  { i: '▤', t: '4. Third-Party Script & App Pruning', d: 'We check every installed tracking tag and widget, remove dead code from old apps, and delay scripts that are not needed on first load.' },
+  { i: '⛓', t: '5. Edge CDN Caching & WebP/AVIF', d: 'We serve compressed, right-sized images and cached HTML from a CDN close to the shopper.' },
+  { i: '⤢', t: '6. Headless Next.js When It Pays', d: 'For large catalogs that a theme cannot make fast enough, we build with React Server Components to send less JavaScript to the phone.' },
 ];
 
 export default function EcommerceSpeedCalculatorPage() {
   return (
     <>
       <script id="speed-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="speed-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="speed-app-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBAPP_SCHEMA) }} />
       <script id="speed-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
@@ -286,8 +368,10 @@ export default function EcommerceSpeedCalculatorPage() {
                   E-commerce mobile speed &amp; <span className="pp-grad">conversion calculator.</span>
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  Model the direct revenue loss caused by mobile page load latency. Discover how much annual profit
-                  sub-second Core Web Vitals optimization generates for your Shopify, WooCommerce, or Headless store.
+                  This free calculator estimates the revenue a faster mobile store could add. Enter your monthly visitors,
+                  conversion rate, average order value and current load time (LCP). It assumes 0.85% more conversions for
+                  every 0.1 seconds you cut, capped at 65%, then adds that up over a year. Treat the result as an estimate,
+                  not a promise.
                 </p>
                 <HeroInlineForm source="us_speed_calculator_hero" region="us" submitLabel="Get a Free Speed Audit" />
               </div>
@@ -295,7 +379,7 @@ export default function EcommerceSpeedCalculatorPage() {
               {/* Visual Graphic */}
               <div
                 role="img"
-                aria-label="E-commerce speed performance engine diagram showing Core Web Vitals, sub-second LCP, and conversion lift."
+                aria-label="Diagram of the three Core Web Vitals with Google's good thresholds, plus edge caching, app script pruning and the calculator's conversion estimate."
                 style={{
                   border: '1px solid var(--pp-line)',
                   borderRadius: '18px',
@@ -319,17 +403,17 @@ export default function EcommerceSpeedCalculatorPage() {
                 >
                   Core Web Vitals Performance Engine
                   <small style={{ display: 'block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-orange-dark)', fontWeight: 600, marginTop: '2px' }}>
-                    LCP &lt; 0.9s · INP &lt; 100ms · CLS = 0.00 · Lighthouse 99
+                    Good: LCP ≤ 2.5s · INP ≤ 200ms · CLS ≤ 0.1
                   </small>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
                   {[
-                    { name: 'LCP Speed', desc: 'Sub-0.9s Render' },
-                    { name: 'INP Response', desc: '< 100ms Latency' },
-                    { name: 'CLS Stability', desc: 'Zero Shifts' },
+                    { name: 'LCP Speed', desc: 'Good: 2.5s or less' },
+                    { name: 'INP Response', desc: 'Good: 200ms or less' },
+                    { name: 'CLS Stability', desc: 'Good: 0.1 or less' },
                     { name: 'Edge CDN', desc: 'Cloudflare / Vercel' },
-                    { name: 'App Script Pruning', desc: 'Zero Bloat' },
-                    { name: 'Conversion Lift', desc: '+15% to +35%' },
+                    { name: 'App Script Pruning', desc: 'Remove dead code' },
+                    { name: 'Conversion Lift', desc: 'Estimated below' },
                   ].map((ch) => (
                     <div key={ch.name} style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#fff', padding: '12px 8px', textAlign: 'center' }}>
                       <b style={{ fontFamily: 'var(--pp-disp)', fontSize: '13px', display: 'block', color: 'var(--pp-ink)' }}>{ch.name}</b>
@@ -355,7 +439,7 @@ export default function EcommerceSpeedCalculatorPage() {
                     <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10B981', display: 'inline-block', marginRight: '6px' }} />
                     Performance Engineering
                   </div>
-                  <div>Zero Retainer Waste · Guaranteed CWV Lift</div>
+                  <div>Fixed Price Per Phase · No Monthly Minimum</div>
                 </div>
               </div>
             </div>
@@ -387,7 +471,7 @@ export default function EcommerceSpeedCalculatorPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">// mobile latency economics</p>
-            <h2 style={{ marginTop: '10px' }}>How mobile page load speed dictates commercial profitability</h2>
+            <h2 style={{ marginTop: '10px' }}>How mobile load time affects revenue</h2>
             <div style={{ margin: '24px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 12px 36px rgba(0,0,0,0.06)' }}>
               <Image
                 src={`/images/us/marketplace/speed-calculator-section-phone-sand-timer.webp`}
@@ -399,18 +483,47 @@ export default function EcommerceSpeedCalculatorPage() {
             </div>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                <strong>The Cost of Milliseconds:</strong> In modern digital commerce, mobile page speed is not merely a technical vanity
-                metric: it is the single largest controllable variable in your customer acquisition funnel. Every 100 milliseconds of
-                unnecessary server response time, render-blocking JavaScript execution, or unoptimized image decoding directly reduces
-                add-to-cart conversions and inflates customer acquisition cost (CAC).
+                <strong>The Cost of Milliseconds:</strong> A shopper who waits for a page is a shopper who can leave. In{' '}
+                <a href={SRC_DELOITTE} target="_blank" rel="noopener noreferrer" style={LINK}>
+                  Deloitte&rsquo;s Milliseconds Make Millions study
+                </a>{' '}
+                (read 22 Oct 2026), a 0.1 second gain in mobile site speed came with 8.4% more retail conversions and a
+                9.2% higher average order value. Slow server response, blocking scripts and heavy images all eat into that.
               </p>
               <p>
-                As consumer traffic increasingly shifts to mobile devices via social advertising channels (Instagram, TikTok, Meta Ads),
-                storefronts that take longer than 3 seconds to render lose over half their paid audience before the product image even appears.
+                Google sets the targets. Its{' '}
+                <a href={SRC_WEBDEV_VITALS} target="_blank" rel="noopener noreferrer" style={LINK}>
+                  Core Web Vitals guide
+                </a>{' '}
+                (read 22 Oct 2026) rates a page as good when LCP is 2.5 seconds or less, INP is 200 milliseconds or less and
+                CLS is 0.1 or less, at the 75th percentile of real visits.{' '}
+                <a href={SRC_GOOGLE_SEARCH_CWV} target="_blank" rel="noopener noreferrer" style={LINK}>
+                  Google Search
+                </a>{' '}
+                (read 22 Oct 2026) says good scores line up with what its ranking systems seek to reward.
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>What slows a store down</h3>
+              <ul>
+                {SLOWDOWNS.map((s) => (
+                  <li key={s}>{s}</li>
+                ))}
+              </ul>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>How to use the calculator</h3>
+              <ol>
+                {HOW_TO.map((s) => (
+                  <li key={s}>{s}</li>
+                ))}
+              </ol>
+              <p>
+                <strong>What the calculator assumes:</strong> 0.85% more conversions for each 0.1 seconds of LCP you cut,
+                capped at a 65% total lift. That is our planning number, not a measured result, and it is set well below
+                the 8.4% Deloitte reported, because one study across many brands cannot predict one store. If you have your
+                own test data, trust it over ours.
               </p>
               <p>
-                FactoryJet engineers sub-second digital storefronts on Shopify Plus, WooCommerce, and Headless Next.js, eliminating
-                third-party script bloat and deploying edge-rendered assets that consistently achieve 95+ Google Lighthouse scores.
+                FactoryJet fixes slow storefronts on Shopify Plus, WooCommerce, BigCommerce and headless Next.js by cutting
+                third-party script bloat, sizing images properly and caching pages at the edge. We measure real-user data
+                before and after, so you can see the change for yourself.
               </p>
               <p>
                 Speed is one input to conversion, not the whole picture. Once your Core Web Vitals are fixed, the next question is what
@@ -418,7 +531,20 @@ export default function EcommerceSpeedCalculatorPage() {
                 <a href="/services/ecommerce-cro-agency" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                   ecommerce CRO agency
                 </a>{' '}
-                services cover that full funnel.
+                services cover that full funnel, and our{' '}
+                <a href="/services/ecommerce-growth-agency" style={LINK}>
+                  ecommerce growth agency
+                </a>{' '}
+                team works on the traffic side. Selling on Amazon or Walmart too? Run the{' '}
+                <a href="/marketplace-fee-calculator" style={LINK}>
+                  marketplace fee calculator
+                </a>{' '}
+                to compare your margin per channel. And to see whether ChatGPT and Perplexity send shoppers your way at all,
+                try the free{' '}
+                <a href="/ai-visibility-checker" style={LINK}>
+                  AI visibility checker
+                </a>
+                .
               </p>
             </div>
           </div>
@@ -428,7 +554,7 @@ export default function EcommerceSpeedCalculatorPage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// verified industry benchmarks</p>
-            <h2 style={{ marginTop: '10px' }}>The empirical connection between speed and revenue</h2>
+            <h2 style={{ marginTop: '10px' }}>What published studies found about speed and revenue</h2>
             <div className="pp-bento" style={{ marginTop: '32px' }}>
               {SOURCED.map((s) => (
                 <div className="pp-card" key={s.v}>
@@ -452,9 +578,9 @@ export default function EcommerceSpeedCalculatorPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// performance engineering</p>
-            <h2 style={{ marginTop: '10px' }}>How our top e-commerce developers achieve sub-second speeds</h2>
+            <h2 style={{ marginTop: '10px' }}>How we make a store load faster</h2>
             <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '64ch' }}>
-              From critical render path refactoring to edge CDN caching, we optimize every layer of the commerce technology stack.
+              From the first byte the server sends to the last image on the page, we work on each layer that slows a store down.
             </p>
             <div className="pp-bento" style={{ marginTop: '32px' }}>
               {PILLARS.map((p) => (
@@ -472,16 +598,16 @@ export default function EcommerceSpeedCalculatorPage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// speed optimization approaches</p>
-            <h2 style={{ marginTop: '10px' }}>FactoryJet Engineering vs. Surface-Level App Plugins vs. Standard Agencies</h2>
+            <h2 style={{ marginTop: '10px' }}>FactoryJet Engineering vs. Speed Apps vs. Standard Agencies</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              Why true Core Web Vitals optimization requires senior codebase refactoring rather than superficial speed apps.
+              Lasting Core Web Vitals gains usually come from changing the code that loads, not from adding another app on top.
             </p>
             <div style={{ marginTop: '32px', overflowX: 'auto' }}>
               <table className="pp-table">
                 <thead>
                   <tr>
                     <th>Performance Dimension</th>
-                    <th>FactoryJet (Top Developers)</th>
+                    <th>FactoryJet</th>
                     <th>Third-Party Speed Apps</th>
                     <th>Standard Creative Agency</th>
                   </tr>
@@ -489,33 +615,33 @@ export default function EcommerceSpeedCalculatorPage() {
                 <tbody>
                   <tr className="me">
                     <td className="name">Remediation Method</td>
-                    <td>Deep codebase refactoring &amp; script pruning</td>
-                    <td>JavaScript injection wrappers (adds more bloat)</td>
-                    <td>Basic image compression only</td>
+                    <td>Code refactoring &amp; script pruning</td>
+                    <td>Adds its own script on top of the theme</td>
+                    <td>Often image compression only</td>
                   </tr>
                   <tr>
-                    <td className="name">Performance Guarantee</td>
-                    <td>Contractually guaranteed (&lt; 1.2s LCP, CWV Pass)</td>
-                    <td>No speed guarantees</td>
-                    <td>No performance guarantees</td>
+                    <td className="name">How Results Are Shown</td>
+                    <td>Real-user Core Web Vitals, before and after</td>
+                    <td>Usually a lab score inside the app</td>
+                    <td>Often not measured</td>
                   </tr>
                   <tr className="me">
                     <td className="name">Interaction to Next Paint (INP)</td>
-                    <td>Main-thread task splitting &amp; worker offloading</td>
-                    <td>Often worsens INP latency</td>
-                    <td>Ignored or misunderstood</td>
+                    <td>Long tasks split up, scripts moved off the main thread</td>
+                    <td>Extra script can make INP worse</td>
+                    <td>Often not measured</td>
                   </tr>
                   <tr>
                     <td className="name">App Script Governance</td>
-                    <td>Complete audit &amp; dead library removal</td>
-                    <td>Cannot remove third-party app scripts</td>
-                    <td>Avoid touching installed apps</td>
+                    <td>Full audit &amp; dead code removal</td>
+                    <td>Cannot remove other apps&rsquo; scripts</td>
+                    <td>Often leaves installed apps alone</td>
                   </tr>
                   <tr className="me">
                     <td className="name">Pricing Model</td>
-                    <td>100% Fixed-Price Milestones</td>
-                    <td>$49 to $199/month recurring app fees</td>
-                    <td>Hourly retainers ($200+/hr)</td>
+                    <td>Fixed price per phase, quoted in writing</td>
+                    <td>Monthly app subscription</td>
+                    <td>Often hourly billing</td>
                   </tr>
                 </tbody>
               </table>
@@ -523,7 +649,7 @@ export default function EcommerceSpeedCalculatorPage() {
           </div>
         </section>
 
-        
+
         {/* ── Advanced Technical Architecture Deep Dive ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap pp-narrow">
@@ -531,23 +657,33 @@ export default function EcommerceSpeedCalculatorPage() {
             <h2 style={{ marginTop: '10px' }}>Advanced Core Web Vitals Optimization Architecture</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                Achieving true sub-second page rendering on modern e-commerce storefronts requires systematic refactoring
-                across the entire technical delivery chain:
+                Getting a store to good Core Web Vitals usually means work across the whole delivery chain, from server to
+                browser:
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Edge-Side HTML Streaming and React Server Components</h3>
               <p>
-                By rendering component trees at CDN edge locations using Next.js 15 React Server Components, server-side data fetching
-                completes in close geographical proximity to the user. Critical HTML streams to the browser immediately, slashing Time to First Byte (TTFB) to under 60 milliseconds.
+                With Next.js React Server Components rendered close to the shopper, data fetching happens near the user and
+                the first HTML streams to the browser early. That cuts Time to First Byte (TTFB), which every other metric waits on.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Third-Party Script Sandboxing &amp; Web Worker Offloading</h3>
               <p>
-                Marketing tracking pixels (Meta CAPI, TikTok Events API, Google Tag Manager) execute in isolated Web Workers via Partytown,
-                freeing up the main browser UI thread to handle customer touch events and scroll animations with zero input delay.
+                Some tracking pixels (Meta, TikTok, Google Tag Manager) can run in a Web Worker through Partytown, or load after
+                the page is usable. That leaves the main thread free to handle taps and scrolling. Not every tag works in a worker,
+                so we test each one.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Font Preloading and Zero-CLS Layout Reservation</h3>
               <p>
-                We self-host variable fonts with font-display: optional and explicit aspect-ratio container placeholders,
-                preventing disruptive layout shifts when hero banners and typography finish rendering.
+                We self-host fonts, choose a font-display setting that avoids late swaps, and give images and banners fixed
+                aspect ratios. Product grids stay lean too: Chrome&rsquo;s{' '}
+                <a href={SRC_LIGHTHOUSE_DOM} target="_blank" rel="noopener noreferrer" style={LINK}>
+                  Lighthouse DOM size guide
+                </a>{' '}
+                (read 22 Oct 2026) warns above about 800 body nodes and flags an error above about 1,400. On paid traffic, note
+                that{' '}
+                <a href={SRC_ADS_QS} target="_blank" rel="noopener noreferrer" style={LINK}>
+                  Google Ads Quality Score
+                </a>{' '}
+                (read 22 Oct 2026) counts landing page experience, which Google describes as relevance and usefulness.
               </p>
             </div>
           </div>
@@ -573,10 +709,10 @@ export default function EcommerceSpeedCalculatorPage() {
             <div className="pp-ctagrid">
               <div className="pp-cta">
                 <p className="pp-mlabel">// accelerate your storefront</p>
-                <h2 style={{ margin: '12px 0 16px' }}>Ready to generate sub-second mobile performance?</h2>
+                <h2 style={{ margin: '12px 0 16px' }}>Want a faster mobile store?</h2>
                 <p className="pp-lead" style={{ maxWidth: '44ch' }}>
-                  Let us conduct an in-depth Core Web Vitals audit of your store, identify critical JavaScript render
-                  bottlenecks, and deliver a fixed-price performance remediation plan.
+                  We audit your store&rsquo;s Core Web Vitals with real-user data, find the scripts and assets that slow it
+                  down, and send a fixed price per phase in writing.
                 </p>
                 <div style={{ marginTop: '24px' }}>
                   <a className="pp-primary" href={CALENDLY} target="_blank" rel="noopener noreferrer">

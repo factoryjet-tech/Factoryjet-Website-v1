@@ -23,16 +23,19 @@ import '@/components/v2/PlatformPage.css';
  * exists to be cited and linked; a wrong number is worse than no page.
  */
 
-const PAGE_MODIFIED = '2026-08-03';
+const DATE_PUBLISHED = '2026-08-03';
+// 2026-10-22: metadata trimmed, Article type added, sources linked, 4 FAQs added.
+// No study figure changed.
+const PAGE_MODIFIED = '2026-10-22';
 // Regenerated and figure-checked by scripts/export-citation-study-dataset.mjs,
 // which fails if any number published here stops matching the source data.
 const DATASET_URL = 'https://factoryjet.com/data/ai-citation-study-2026-08.csv';
 const CITATION = 'FactoryJet (2026). Structural analysis of 58 pages cited by Google AI Overviews. https://factoryjet.com/ai-citation-study';
 
 export const metadata: Metadata = {
-  title: 'We Measured 58 Pages That AI Actually Cites. Authority Did Not Predict It. | FactoryJet',
+  title: 'AI Citation Study: What 58 AI-Cited Pages Share | FactoryJet',
   description:
-    'Original research: we analysed 232 Google AI Overview citations across 12 commercial queries, fetched the 58 most-cited pages, and measured what they structurally have in common. Median cited page is 2,813 words with 110 list items. FAQPage schema appears on only 41%. Domain authority did not predict citation.',
+    '232 Google AI Overview citations, 58 cited pages measured: median 2,813 words and 110 list items, FAQ schema on 41%, and authority did not predict citation.',
   openGraph: {
     type: 'article', siteName: 'FactoryJet',
     title: 'We Measured 58 Pages That AI Actually Cites. Authority Did Not Predict It.',
@@ -58,26 +61,31 @@ const FAQ_ITEMS = [
   { category: 'findings', question: 'How long should a page be to get cited by AI?', answer: 'The median cited page was 2,813 words. Only 3 of 58 exceeded 6,000 words, while 25 sat between 2,000 and 3,500. Longer is not better. The common advice to publish 5,000-plus-word pages for AI visibility is not supported by what is actually being cited.' },
   { category: 'findings', question: 'Is FAQPage schema required for AI citation?', answer: 'No. Only 41% of the cited pages had FAQPage schema, while 72% had a visible FAQ section. The visible section is far more common than the markup. Google states directly that no special schema is needed for AI features. Ship FAQ schema because it is cheap and honest, not because it buys citations.' },
   { category: 'findings', question: 'Does domain authority predict AI citation?', answer: 'Not in our data. Measuring referring domains against LLM mention counts across nine buyer prompts, netalico.com with 557 referring domains was cited 17 times, while outerboxdesign.com with 4,718 referring domains barely appeared on the same prompts. Authority buys organic position. It did not buy citation here.' },
-  { category: 'findings', question: 'Do listicles get cited more by AI?', answer: 'Not for commercial queries. Only 18% of the cited pages had a numbered listicle headline. The listicle format is widely recommended for AI visibility and it was a clear minority pattern in this sample. Use it where the topic genuinely enumerates, not as a default.' },
-  { category: 'findings', question: 'Do comparison tables help with AI citation?', answer: '32% of the cited pages contained a table. That makes tables common but not required. They are worth adding where the topic genuinely compares things, since a table is an unusually clean extractable unit, but the data does not support treating them as mandatory.' },
+  { category: 'findings', question: 'Do listicles get cited more by AI?', answer: 'Not for commercial queries. Only 18% of the cited pages had a numbered listicle headline. The listicle format is widely recommended for AI visibility and it was a clear minority pattern in this sample. Use it where the topic enumerates, not as a default.' },
+  { category: 'findings', question: 'Do comparison tables help with AI citation?', answer: '32% of the cited pages contained a table. That makes tables common but not required. They are worth adding where the topic compares things, since a table is a clean extractable unit, but the data does not support treating them as mandatory.' },
   { category: 'method', question: 'How was this study conducted?', answer: 'We ran 12 commercial e-commerce queries through Google with AI Overview loading enabled, captured 232 AI Overview citation URLs, excluded publisher and marketplace domains so the sample reflected pages a services company could realistically compete with, then fetched the 58 most-cited remaining pages and measured their rendered HTML.' },
   { category: 'method', question: 'What exactly was measured on each page?', answer: 'Rendered word count after stripping script, style, noscript and SVG elements; heading counts by level; list items; tables; ordered and unordered lists; JSON-LD schema types; presence of a visible FAQ; listicle headline patterns; and whether dateModified was present. Everything was measured on live rendered HTML, never on source files.' },
   { category: 'method', question: 'Why measure rendered HTML rather than the source?', answer: 'Because source files include markup, styles, and structured data that inflate word counts by roughly double. We made that exact mistake mid-study and corrected it: a page measuring 6,883 "words" in source was 3,904 rendered. Any study comparing content length has to state which it measured.' },
+  { category: 'method', question: 'When was the data collected?', answer: 'The AI Overview citations were captured and the 58 pages fetched in early August 2026, and the study was first published on 3 August 2026. AI Overviews change often, so treat the medians as a snapshot of that month rather than a permanent rule, and check the date before you quote a figure.' },
+  { category: 'method', question: 'Can I download the raw data?', answer: 'Yes. The per-page measurements are published as a CSV with one row for each of the 58 cited pages, under a CC BY 4.0 licence. It holds the word count, heading counts, list items, tables, schema types and FAQ flags behind every median on this page, so you can re-cut it or check the arithmetic.' },
+  { category: 'method', question: 'How should I cite this study?', answer: 'Cite it as: FactoryJet (2026). Structural analysis of 58 pages cited by Google AI Overviews. https://factoryjet.com/ai-citation-study. The CC BY 4.0 licence on the dataset asks only for that attribution. If you reuse a single figure, quote the sample size with it, since every number here comes from 58 pages.' },
   { category: 'limits', question: 'What are the limitations of this study?', answer: 'Four worth stating. The sample is 58 pages in one vertical, e-commerce and agency commercial queries. It reflects Google AI Overviews only, not ChatGPT or Claude. It is capped at the 60 most-cited URLs, so long-tail cited pages are excluded. And it is correlation: these pages are cited and share these traits, which does not prove the traits caused the citation.' },
   { category: 'limits', question: 'Why is ChatGPT and Claude data missing from the structural analysis?', answer: 'Our capture of citation URLs from ChatGPT and Perplexity answers returned no URLs on the run used for the structural analysis, so those pages could not be fetched and measured. The structural findings are Google AI Overview only. We have separate LLM mention-rate data, but not the page structures behind it.' },
   { category: 'limits', question: 'Could the sample be biased toward certain page types?', answer: 'Yes, deliberately and disclosed. We excluded publisher, marketplace, and social domains such as Forbes, Reddit, Clutch and the platform vendors themselves, because the question we were answering was what a services company can compete with. A study including those would produce different medians.' },
   { category: 'apply', question: 'What should we actually change based on this?', answer: 'Three things with the clearest support. Raise list density, since the median cited page carries 110 list items and most service pages carry far fewer. Aim for 2,500 to 3,500 words rather than padding higher. Add a visible FAQ section, which 72% of cited pages had. Everything else in the data is weaker.' },
-  { category: 'apply', question: 'Does this mean backlinks do not matter?', answer: 'No. Authority still governs organic ranking position, and our own site sits at 53 referring domains against a competitor median of 1,799, which is exactly why we rank poorly on competitive terms. The finding is narrower: authority did not predict AI citation in this sample. The two are different games with different inputs.' },
+  { category: 'apply', question: 'Does this mean backlinks do not matter?', answer: 'No. Authority still governs organic ranking position, which is why high-authority domains hold most competitive organic results. The finding is narrower: authority did not predict AI citation in this sample. The two are different games with different inputs, so a site with a small link profile can still earn citations through structure.' },
   { category: 'apply', question: 'What does Google itself say about optimising for AI Overviews?', answer: 'Google states there are no additional requirements to appear in AI Overviews or AI Mode and no special schema.org structured data to add. Its guidance is ordinary SEO fundamentals: allow crawling, keep important content in text, use internal links, and ensure structured data matches visible content. Our data is consistent with that.' },
+  { category: 'apply', question: 'How can I check whether AI assistants cite my own site?', answer: 'Run your brand through the same kind of buyer questions this study used and read which sources each answer cites. FactoryJet’s free AI visibility checker does that and sends you the raw answers with the cited sources included, so you can see where you appear and which competitors are named instead.' },
   { category: 'apply', question: 'Is llms.txt worth implementing?', answer: 'Not as a visibility lever. Google has stated no AI system currently uses llms.txt, and an Ahrefs analysis of 137,000 domains found 97% of llms.txt files received zero requests in May 2026. It is cheap and harmless to publish, but it is not a ranking or citation factor.' },
 ];
 
 const FAQ_SCHEMA = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ_ITEMS.map((i) => ({ '@type': 'Question', name: i.question, acceptedAnswer: { '@type': 'Answer', text: i.answer } })) };
 const ARTICLE_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'ScholarlyArticle',
+  '@context': 'https://schema.org', '@type': ['Article', 'ScholarlyArticle'],
+  image: 'https://factoryjet.com/og-default.png',
   headline: 'We measured 58 pages that AI actually cites. Domain authority did not predict it.',
   description: 'Original analysis of 232 Google AI Overview citations across 12 commercial e-commerce queries, with structural measurement of the 58 most-cited pages.',
-  datePublished: PAGE_MODIFIED, dateModified: PAGE_MODIFIED,
+  datePublished: DATE_PUBLISHED, dateModified: PAGE_MODIFIED,
   author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
   publisher: { '@id': 'https://factoryjet.com/#organization' },
   mainEntityOfPage: 'https://factoryjet.com/ai-citation-study',
@@ -88,7 +96,7 @@ const DATASET_SCHEMA = {
   name: 'Structural analysis of 58 pages cited by Google AI Overviews',
   description: 'Rendered-HTML measurements (word count, heading counts, list items, tables, JSON-LD schema types, FAQ presence, dateModified) for 58 pages captured from 232 Google AI Overview citations across 12 commercial e-commerce queries, August 2026.',
   creator: { '@id': 'https://factoryjet.com/#organization' },
-  dateModified: PAGE_MODIFIED, license: 'https://creativecommons.org/licenses/by/4.0/',
+  dateModified: DATE_PUBLISHED, license: 'https://creativecommons.org/licenses/by/4.0/',
   isAccessibleForFree: true,
   url: 'https://factoryjet.com/ai-citation-study',
   distribution: [{
@@ -159,7 +167,7 @@ export default function AICitationStudyPage() {
 
         <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>
           <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(36px,5vh,64px)' }}>
-            <p className="pp-eyebrow">Original research &middot; August 2026</p>
+            <p className="pp-eyebrow">Original research &middot; August 2026 &middot; Updated <time dateTime={PAGE_MODIFIED}>22 Oct 2026</time></p>
             <h1 style={{ margin: '14px 0 16px', maxWidth: '22ch' }}>
               We measured 58 pages that AI actually cites.
             </h1>
@@ -260,10 +268,8 @@ export default function AICitationStudyPage() {
               </table>
             </div>
             <p className="pp-lead" style={{ marginTop: '20px', maxWidth: '68ch' }}>
-              This does not mean links stopped mattering. Authority still governs organic ranking, and
-              our own site sits at 53 referring domains, which is precisely why we rank poorly on
-              competitive terms. The narrower claim is the interesting one: in this sample, authority
-              and citation came apart.
+              This does not mean links stopped mattering. Authority still governs organic ranking. The
+              narrower claim is the interesting one: in this sample, authority and citation came apart.
             </p>
           </div>
         </section>
@@ -351,6 +357,10 @@ export default function AICitationStudyPage() {
               <a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                 Claude-SearchBot and Claude-User as its retrieval crawlers
               </a>, with ClaudeBot used for training. Our structural findings are consistent with all three: this is ordinary excellent SEO plus extractability, not a separate discipline.
+              The llms.txt figure comes from{' '}
+              <a href="https://ahrefs.com/blog/llmstxt-study/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                Ahrefs&rsquo; study of 137,000 sites (15 June 2026)
+              </a>, read on 22 October 2026.
             </p>
           </div>
         </section>
@@ -410,12 +420,21 @@ export default function AICitationStudyPage() {
             <h2 style={{ marginTop: 0 }}>Use the data, challenge the data</h2>
             <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '66ch' }}>
               Every figure above is derived from the CSV published on this page. If you
-              reproduce this and get a different answer, we would genuinely like to know. If you want
+              reproduce this and get a different answer, we would like to know. If you want
               help applying it to your own commerce site, we build{' '}
               <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B commerce</Link>,{' '}
               <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>replatforming</Link>{' '}
               and{' '}
               <Link href="/headless-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>headless storefronts</Link>.
+            </p>
+            <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '66ch' }}>
+              Related:{' '}
+              <Link href="/services/ai-seo" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>AI SEO services</Link>,{' '}
+              <Link href="/ai-visibility-checker" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>free AI visibility checker</Link>,{' '}
+              <Link href="/glossary#generative-engine-optimization" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>what GEO means</Link>,{' '}
+              <Link href="/comparisons/headless-commerce-vs-monolithic" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>headless vs monolithic commerce</Link>,{' '}
+              <Link href="/pricing#faq-visible" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>what GEO costs (market ranges)</Link> and the{' '}
+              <Link href="/faq" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>FAQ</Link>.
             </p>
             <div style={{ marginTop: '22px' }}>
               <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="secondary-light" />

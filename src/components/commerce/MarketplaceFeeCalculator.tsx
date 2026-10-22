@@ -10,12 +10,21 @@ interface MarketplaceFeeCalculatorProps {
   source?: string;
 }
 
-const CATEGORIES = [
-  { id: 'apparel', label: 'Apparel & Fashion', amazonRef: 0.17, walmartRef: 0.15, targetRef: 0.15, faireRef: 0.15 },
-  { id: 'beauty', label: 'Beauty & Personal Care', amazonRef: 0.15, walmartRef: 0.15, targetRef: 0.15, faireRef: 0.15 },
-  { id: 'home', label: 'Home, Decor & Kitchen', amazonRef: 0.15, walmartRef: 0.15, targetRef: 0.15, faireRef: 0.15 },
-  { id: 'electronics', label: 'Electronics & Accessories', amazonRef: 0.08, walmartRef: 0.10, targetRef: 0.10, faireRef: 0.12 },
-  { id: 'toys', label: 'Toys, Games & Baby', amazonRef: 0.15, walmartRef: 0.15, targetRef: 0.15, faireRef: 0.15 },
+// Referral fees as published on sell.amazon.com/pricing and marketplace.walmart.com/pricing,
+// read 22 Oct 2026. Apparel and beauty are tiered by item price, so they are functions.
+// Target does not publish Target Plus commission rates: targetRef is a planning assumption,
+// labelled as such on screen. Faire: 15% of order subtotal (opening orders also carry a
+// $10 new customer fee, not modelled per unit), per faire.com/tos-brand.
+type RefFn = (price: number) => number;
+const tier3 = (a: number, b: number, c: number): RefFn => (p) => (p <= 15 ? a : p <= 20 ? b : c);
+const tier2 = (a: number, b: number): RefFn => (p) => (p <= 10 ? a : b);
+const flat = (r: number): RefFn => () => r;
+const CATEGORIES: { id: string; label: string; amazonRef: RefFn; walmartRef: RefFn; targetRef: RefFn; faireRef: RefFn }[] = [
+  { id: 'apparel', label: 'Apparel & Fashion', amazonRef: tier3(0.05, 0.10, 0.17), walmartRef: tier3(0.05, 0.10, 0.15), targetRef: flat(0.15), faireRef: flat(0.15) },
+  { id: 'beauty', label: 'Beauty & Personal Care', amazonRef: tier2(0.08, 0.15), walmartRef: tier2(0.08, 0.15), targetRef: flat(0.15), faireRef: flat(0.15) },
+  { id: 'home', label: 'Home, Decor & Kitchen', amazonRef: flat(0.15), walmartRef: flat(0.15), targetRef: flat(0.15), faireRef: flat(0.15) },
+  { id: 'electronics', label: 'Electronics & Accessories', amazonRef: flat(0.08), walmartRef: flat(0.08), targetRef: flat(0.15), faireRef: flat(0.15) },
+  { id: 'toys', label: 'Toys, Games & Baby', amazonRef: flat(0.15), walmartRef: flat(0.15), targetRef: flat(0.15), faireRef: flat(0.15) },
 ];
 
 const WEIGHT_TIERS = [
@@ -54,26 +63,26 @@ export default function MarketplaceFeeCalculator({
 
   // Computations
   // 1. Amazon FBA: Retail - COGS - (Retail * amazonRef) - fba - monthly storage ($0.30/unit)
-  const amazonFee = retailPrice * activeCategory.amazonRef + activeWeight.fba + 0.30;
+  const amazonFee = retailPrice * activeCategory.amazonRef(retailPrice) + activeWeight.fba + 0.30;
   const amazonNetUnit = Math.max(0, retailPrice - cogs - amazonFee);
   const amazonMarginPct = retailPrice > 0 ? (amazonNetUnit / retailPrice) * 100 : 0;
   const amazonMonthlyProfit = amazonNetUnit * monthlyUnits;
 
   // 2. Walmart WFS: Retail - COGS - (Retail * walmartRef) - wfs - storage ($0.25/unit)
-  const walmartFee = retailPrice * activeCategory.walmartRef + activeWeight.wfs + 0.25;
+  const walmartFee = retailPrice * activeCategory.walmartRef(retailPrice) + activeWeight.wfs + 0.25;
   const walmartNetUnit = Math.max(0, retailPrice - cogs - walmartFee);
   const walmartMarginPct = retailPrice > 0 ? (walmartNetUnit / retailPrice) * 100 : 0;
   const walmartMonthlyProfit = walmartNetUnit * monthlyUnits;
 
   // 3. Target Plus (DVS): Retail - COGS - (Retail * targetRef) - dvs3pl
-  const targetFee = retailPrice * activeCategory.targetRef + activeWeight.dvs3pl;
+  const targetFee = retailPrice * activeCategory.targetRef(retailPrice) + activeWeight.dvs3pl;
   const targetNetUnit = Math.max(0, retailPrice - cogs - targetFee);
   const targetMarginPct = retailPrice > 0 ? (targetNetUnit / retailPrice) * 100 : 0;
   const targetMonthlyProfit = targetNetUnit * monthlyUnits;
 
   // 4. Faire Wholesale (B2B): Sold at 50% wholesale price ($32.50) - COGS - 15% repeat fee
   const wholesalePrice = retailPrice * 0.50;
-  const faireFee = wholesalePrice * activeCategory.faireRef;
+  const faireFee = wholesalePrice * activeCategory.faireRef(wholesalePrice);
   const faireNetUnit = Math.max(0, wholesalePrice - cogs - faireFee);
   const faireMarginPct = wholesalePrice > 0 ? (faireNetUnit / wholesalePrice) * 100 : 0;
   const faireMonthlyProfit = faireNetUnit * monthlyUnits;
@@ -133,6 +142,9 @@ export default function MarketplaceFeeCalculator({
           </h2>
           <p className="mt-1 text-sm text-[#6E635A]">
             Compare real unit economics, platform commissions, and fulfillment costs across Amazon, Walmart, Target Plus, Faire, and Shopify DTC.
+          </p>
+          <p className="mt-1 text-xs text-[#6E635A]">
+            Referral fees follow Amazon&apos;s and Walmart&apos;s published pricing (read 22 October 2026) and Faire&apos;s 15% commission. Fulfillment and storage are per-unit planning estimates, and Target does not publish Target Plus commissions, so 15% is an assumption. Check each marketplace&apos;s own fee calculator before you decide.
           </p>
         </div>
       </div>

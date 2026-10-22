@@ -624,9 +624,17 @@ export default function WoocommerceDevelopmentPage() {
                   <Link href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
                     Shopify vs WooCommerce for US small businesses
                   </Link>
+                  , our{' '}
+                  <Link href="/comparisons/shopify-vs-woocommerce" className="font-medium text-[#B23E13] underline underline-offset-2">
+                    Shopify vs WooCommerce platform comparison
+                  </Link>
                   , or compare{' '}
                   <Link href="/services/shopify-development" className="font-medium text-[#B23E13] underline underline-offset-2">
                     Shopify development
+                  </Link>
+                  . Moving an existing store? See{' '}
+                  <Link href="/replatforming/woocommerce-to-shopify" className="font-medium text-[#B23E13] underline underline-offset-2">
+                    WooCommerce to Shopify migration
                   </Link>
                   .
                 </p>

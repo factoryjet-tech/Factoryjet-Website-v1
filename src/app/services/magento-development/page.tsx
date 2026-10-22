@@ -620,7 +620,8 @@ export default function MagentoDevelopmentPage() {
 
               <p>
                 Magento 1 to Magento 2 migration requires careful execution. Flawed migrations cause organic ranking drops and broken integrations. We protect SEO rankings with precise 301 redirect mapping. We transfer all catalog data and rebuild necessary extensions. We deploy modern Hyvä or Luma themes. They load fast under high traffic. Planning to leave Magento instead? See{' '}
-                <Link href="/replatforming/magento-to-shopify#magento-end-of-support" className="text-[#B23E13] font-medium underline underline-offset-2">Adobe Commerce end-of-support dates and Magento to Shopify Plus migration costs</Link>.
+                <Link href="/replatforming/magento-to-shopify#magento-end-of-support" className="text-[#B23E13] font-medium underline underline-offset-2">Adobe Commerce end-of-support dates and Magento to Shopify Plus migration costs</Link>, or weigh the two platforms side by side in{' '}
+                <Link href="/comparisons/shopify-plus-vs-magento" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify Plus vs Magento</Link>.
               </p>
 
               <div className="overflow-hidden rounded-xl border border-fj-neutral-200 bg-white shadow-sm">

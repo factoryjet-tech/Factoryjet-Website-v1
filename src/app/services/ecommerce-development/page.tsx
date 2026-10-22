@@ -172,7 +172,7 @@ const ECOMM_SERVICES = [
       'A Next.js or Remix storefront connected to Shopify, BigCommerce, or a headless commerce API (Medusa, Vendure, Commerce.js). Sub-1-second page loads and full design freedom, for brands where performance directly moves revenue.',
     example: 'Recommended for stores doing $5M+/year or with complex product configurator needs.',
     linkLabel: 'Is headless right for you?',
-    linkHref: '/contact',
+    linkHref: '/comparisons/headless-commerce-vs-monolithic',
   },
   {
     name: 'E-Commerce Platform Migration',
@@ -180,7 +180,7 @@ const ECOMM_SERVICES = [
       'Full data migrations from WooCommerce, Magento, Squarespace, Wix, PrestaShop, and custom platforms, preserving product catalog, customer data, order history, and SEO URL structure with 301 redirects.',
     example: 'Zero downtime launch day. All redirects mapped before DNS switch.',
     linkLabel: 'Plan your migration',
-    linkHref: '/contact',
+    linkHref: '/replatforming',
   },
   {
     name: 'Multi-Vendor Marketplace',

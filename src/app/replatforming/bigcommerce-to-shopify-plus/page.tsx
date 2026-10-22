@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
@@ -22,192 +23,329 @@ const ReplatformingScopeEstimator = dynamic(
   { ssr: true }
 );
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-10-22';
+
+const PAGE_TITLE = 'BigCommerce to Shopify Plus Migration & Replatforming';
+const PAGE_DESCRIPTION =
+  "BigCommerce to Shopify Plus migration: how the Catalog API export, modifiers, customers, orders and the 301 map move, with both platforms' fees.";
 
 export const metadata: Metadata = {
-  title: 'BigCommerce to Shopify Plus Migration | FactoryJet',
-  description:
-    'Migrate BigCommerce to Shopify Plus with zero data loss. We transfer product option sets, customer history, and 301 redirects. Get a fixed quote.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'BigCommerce to Shopify Plus Migration | FactoryJet',
-    description:
-      'Migrate BigCommerce to Shopify Plus with zero data loss. Transfer product option sets, customer history, and 301 redirects.',
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     url: 'https://factoryjet.com/replatforming/bigcommerce-to-shopify-plus',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'BigCommerce to Shopify Plus Migration Services' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BigCommerce to Shopify Plus Migration | FactoryJet',
-    description: 'Migrate BigCommerce to Shopify Plus with zero downtime or SEO loss.',
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: 'https://factoryjet.com/replatforming/bigcommerce-to-shopify-plus' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
+/* Vendor sources, all opened and read on 22 Oct 2026. */
+const SRC = {
+  bcPricing: 'https://www.bigcommerce.com/pricing/',
+  bcCatalogApi: 'https://docs.bigcommerce.com/developer/api-reference/rest/admin/catalog/products',
+  bcOptions: 'https://docs.bigcommerce.com/developer/learn/courses/catalog-rest-api/options/options',
+  shopPlusPricing: 'https://www.shopify.com/plus/pricing',
+  shopPricing: 'https://www.shopify.com/pricing',
+  shopVariants: 'https://help.shopify.com/en/manual/products/variants/2048-variant-limit',
+  shopRedirects: 'https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect',
+  shopMigration: 'https://help.shopify.com/en/manual/migrating-to-shopify/store-migration',
+  shopB2b: 'https://help.shopify.com/en/manual/b2b',
+};
+
+const SRC_LINK_STYLE = { color: '#B23E13', textDecoration: 'underline', textUnderlineOffset: '2px' } as const;
+
+function SourceLink({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" style={SRC_LINK_STYLE}>
+      {children}
+    </a>
+  );
+}
+
 const FAQ_CATEGORIES = [
-  { key: 'basics', label: 'Why Move to Shopify Plus' },
-  { key: 'data', label: 'Catalog & Variant Mapping' },
-  { key: 'checkout', label: 'Checkout & Conversion' },
-  { key: 'cost', label: 'Costs & Timeline' },
-  { key: 'seo', label: 'SEO & 301 Redirects' },
-  { key: 'b2b', label: 'B2B & Multi-Store' },
+  { key: 'basics', label: 'Why Move & What It Involves' },
+  { key: 'data', label: 'Catalog, Modifiers & Customers' },
+  { key: 'checkout', label: 'Checkout & Payments' },
+  { key: 'cost', label: 'Fees & Pricing' },
+  { key: 'seo', label: 'URLs, SEO & Launch' },
+  { key: 'b2b', label: 'B2B & Multi-Storefront' },
 ];
 
 const FAQ_ITEMS = [
   {
     category: 'basics',
-    question: 'Why are growing brands moving from BigCommerce to Shopify Plus?',
+    question: 'Is moving from BigCommerce to Shopify Plus worth it for a growing brand?',
     answer:
-      'Brands migrate to Shopify Plus primarily for four reasons: 1) Dramatically higher conversion rates powered by 1-click Shop Pay checkout, 2) Access to the world’s largest e-commerce app and partner ecosystem, 3) Unified multi-channel commerce with native Shopify POS for retail stores, and 4) Far greater developer and theme customizability via modern Shopify Functions and Theme Store 2.0 sections.',
+      'It is worth it when you want B2B and direct-to-consumer sales in one admin, more control over checkout, or Shopify POS Pro for retail stores. It is less clear-cut if your BigCommerce plan already covers what you need and your team knows Stencil well. Shopify Plus lists $2,300 a month on a 3-year term and from $2,500 on a 1-year term, so put that next to your current BigCommerce invoice before you decide.',
+  },
+  {
+    category: 'basics',
+    question: 'What does Shopify BigCommerce replatforming involve, step by step?',
+    answer:
+      'Replatforming means moving your catalog, customers, orders, content and URLs off BigCommerce, then rebuilding the storefront, checkout rules and integrations on Shopify Plus. Data comes out through the BigCommerce Catalog API or a CSV export. The Stencil theme is rebuilt in Liquid, each app is replaced or retired, and every old URL gets a single-hop 301. BigCommerce stays live until the Shopify store passes test orders.',
   },
   {
     category: 'basics',
     question: 'How long does a BigCommerce to Shopify Plus migration take?',
     answer:
-      'A typical mid-market to enterprise BigCommerce migration takes between 4 to 8 weeks. This includes catalog and customer data auditing, custom theme development, third-party app replacement, ERP webhook integrations, complete 301 URL redirect mapping, and pre-launch quality assurance testing.',
+      'Most BigCommerce moves fit our 5 to 8 week band for advanced builds, because they include data migration and often B2B pricing or subscriptions. A headless or heavily custom storefront runs 8 to 14 weeks. What stretches a timeline is a large set of modifiers, checkout scripts that need rebuilding, and ERP connections, so we count those on the scoping call before we give you a date.',
+  },
+  {
+    category: 'basics',
+    question: 'Do we have to rebuild our BigCommerce Stencil theme?',
+    answer:
+      'Yes. Stencil themes are built from Handlebars templates, and Shopify themes use Liquid with Online Store 2.0 sections, so no theme code carries over. We rebuild the design as a Shopify theme your team can rearrange in the theme editor. Layouts your analytics show are working stay; pages nobody visits are dropped rather than rebuilt.',
+  },
+  {
+    category: 'basics',
+    question: 'What happens to the apps we use on BigCommerce?',
+    answer:
+      'Each app goes on a list with what it does, what data it holds, and its Shopify replacement: a Shopify App Store app, a native Shopify feature, or custom code. Reviews, loyalty points and subscriptions hold customer data, so each gets its own export and import plan. Apps that only add a widget to the theme are rebuilt in the new theme and need no data move.',
   },
   {
     category: 'data',
-    question: 'How do BigCommerce product option sets and modifier rules map to Shopify Plus?',
+    question: 'How do BigCommerce variant options and modifier options map to Shopify?',
     answer:
-      'BigCommerce uses complex option sets and rules for product variations. We map these into native Shopify variant options, metafield definitions, and combined listing structures. For products with extensive custom personalization fields, we use Shopify custom line-item properties.',
+      'BigCommerce splits product choices in two. Variant options create SKUs with tracked stock. Modifier options change how an item is made or shipped, and BigCommerce documents that you cannot track inventory against modifier values. Variant options map to Shopify options and variants. Modifiers such as engraving text or gift wrap become line-item properties, a product options app, or a Shopify Function, never extra variants.',
   },
   {
     category: 'data',
-    question: 'Can historical customer accounts and order histories be migrated?',
+    question: 'What if a BigCommerce product has more variants or options than Shopify allows?',
     answer:
-      'Yes. All historical customer profiles, saved delivery addresses, past order archives, and invoice records transfer over completely. Because password hashes cannot be exported between platforms, we set up automated, branded customer invite emails so buyers can activate their accounts instantly upon launch.',
+      'Shopify allows up to 2,048 variants and up to three options per product. Most BigCommerce products fit. If one has a fourth option or more combinations than that, we split it into several products shown as a combined listing, or move the extra choice to a modifier. Shopify also notes that some themes and apps do not support more than 100 variants, so we test those products in the new theme early.',
+  },
+  {
+    category: 'data',
+    question: 'How do we export products from BigCommerce for the migration?',
+    answer:
+      'For a small, simple catalog the product CSV export in the BigCommerce control panel is enough. For anything with modifiers, custom fields, price lists or many images, we pull from the BigCommerce Catalog REST API, which returns products, variants, options, modifiers, images and custom fields as structured data. We script that pull so it can run again for the final top-up just before launch.',
+  },
+  {
+    category: 'data',
+    question: 'Can customer accounts and order history move from BigCommerce to Shopify?',
+    answer:
+      'Customers, addresses and past orders can move; passwords cannot. Shopify\'s migration guide lists CSV files or the API for customers, and migration apps or the Order API for historical orders. Passwords are stored as one-way hashes on BigCommerce, so each customer sets a new one from an account invite email. We send those invites in batches after launch so support is not flooded on day one.',
+  },
+  {
+    category: 'data',
+    question: 'What happens to BigCommerce custom fields, brands and categories?',
+    answer:
+      'Custom fields become typed Shopify metafields, so the theme and search filters can read them. Brands become the product vendor field, or a brand metaobject if you want proper brand pages. Categories become collections. Shopify collections are flat, so a nested BigCommerce tree becomes one collection per level plus a navigation menu. Every mapping goes into a spreadsheet you sign off before the first import.',
+  },
+  {
+    category: 'data',
+    question: 'Do BigCommerce gift certificates and store credit balances transfer?',
+    answer:
+      'The balances transfer, but each code needs checking. We export every open BigCommerce gift certificate with its code and remaining value, then recreate it as a Shopify gift card so the customer keeps the same amount. Store credit is recreated in the form your finance team books it. Any balance that does not reconcile before cutover goes on a short list for manual handling.',
   },
   {
     category: 'checkout',
-    question: 'What conversion rate improvements do merchants see moving to Shop Pay?',
+    question: 'Can we customize checkout on Shopify Plus the way we did with BigCommerce scripts?',
     answer:
-      'Independent studies show that Shop Pay increases checkout conversion by up to 50% compared to standard guest checkouts, and converts 10% higher than other accelerated wallets. Over 150 million shoppers already have their billing and shipping details saved in Shop Pay, making mobile purchases virtually frictionless.',
+      'Yes, through different tools. Shopify Plus checkout is changed with checkout extensions and Shopify Functions, which Shopify lists among its Plus features, rather than by editing checkout code directly. Custom fields, delivery rules, discounts and payment method rules are all possible. Scripts you added to the BigCommerce checkout through Script Manager do not carry over, so each is rebuilt or replaced by an app.',
   },
   {
     category: 'checkout',
-    question: 'Can we customize our checkout on Shopify Plus?',
+    question: 'Can we keep our current payment provider after leaving BigCommerce?',
     answer:
-      'Yes. Shopify Plus offers Checkout Extensibility, allowing full customization of the checkout experience using modular UI extensions, post-purchase upsells, custom delivery options, and sub-5ms Shopify Functions for complex business logic, all while remaining 100% upgrade-safe.',
+      'Often, yes. Shopify Plus works with Shopify Payments and with many third-party providers. Shopify\'s pricing page says third-party transaction fees may apply when you use a provider other than Shopify Payments. BigCommerce\'s pricing page says it charges a monthly fee on self-service plans for orders through Open Payment Providers. Model both before you choose, using your real order volume.',
+  },
+  {
+    category: 'checkout',
+    question: 'Does Shopify Plus handle our peak sale traffic?',
+    answer:
+      'Shopify\'s Plus pricing page states 10K+ checkouts per minute with unlimited bandwidth, transactions and SKUs. That covers the checkout side. The parts we load-test before a sale are the ones you add: apps that call outside services, custom Functions, and any ERP connection that has to accept a burst of orders. We run those tests on the development store before launch, not during your first sale.',
   },
   {
     category: 'cost',
     question: 'How much does a BigCommerce to Shopify Plus migration cost?',
     answer:
-      'The cost depends on SKU volume, custom design requirements, third-party app complexity, and ERP integrations. FactoryJet quotes a fixed price in writing after a short scoping call, before any development begins.',
+      'It depends on SKU count, how many modifiers and custom fields you use, custom checkout logic, the number of apps to replace, and integrations such as an ERP. FactoryJet quotes a fixed price in writing after a short scoping call, priced per phase. You see a working demo on your own BigCommerce data before you sign, and you own the code when the project ends.',
   },
   {
     category: 'cost',
-    question: 'How do BigCommerce GMV trailing revenue tiers compare to Shopify Plus fees?',
+    question: 'How do BigCommerce plan fees compare with Shopify Plus fees?',
     answer:
-      'BigCommerce automatically pushes merchants into more expensive enterprise tiers as their revenue grows, charging higher trailing annual fees. Shopify Plus offers transparent, predictable enterprise pricing with clear tier structures and lower credit card processing rates with Shop Pay.',
+      'BigCommerce lists Core at $39, Growth at $105 and Scale at $399 a month, with Performance starting at $1,499 a month billed annually. Shopify Plus lists $2,300 a month on a 3-year term, from $2,500 on a 1-year term, or a variable platform fee for more complex businesses. Payment fees sit on top on both platforms, so compare full invoices, not list prices.',
+  },
+  {
+    category: 'cost',
+    question: 'Does BigCommerce charge more as our sales grow?',
+    answer:
+      'Yes. BigCommerce sets your plan from trailing twelve-month GMV, which it defines as gross order value minus 10%. When you pass a threshold, such as $30K on Core or $100K on Growth, it upgrades you to the next plan. On Scale and Performance an overage rate applies to orders above the plan limit instead. Shopify Plus is a term fee or a variable platform fee agreed with Shopify.',
   },
   {
     category: 'seo',
-    question: 'Will we lose our search engine rankings or organic revenue during migration?',
+    question: 'Will we lose Google rankings moving from BigCommerce to Shopify Plus?',
     answer:
-      'Not with our migration protocol. BigCommerce and Shopify use different URL structures. We execute a 100% crawl of your indexed URLs, build an exhaustive 1-to-1 redirect map, and implement single-hop 301 redirects to ensure every search ranking and external backlink transfers with zero equity loss.',
+      'Rankings can wobble for a few weeks after any platform move. What protects them is a complete redirect map. We collect every URL from the BigCommerce XML sitemap, Search Console and backlink data, map each one to its Shopify page, and load them as single-hop 301s before DNS changes. Shopify Plus allows up to 20,000,000 redirects, so even very large catalogs fit.',
   },
   {
     category: 'seo',
-    question: 'What happens to BigCommerce blog posts, CMS pages, and brand content?',
+    question: 'What do BigCommerce URLs look like, and how do they map to Shopify?',
     answer:
-      'We migrate all historical blog articles, author records, CMS pages, and landing page content into Shopify Blog and Pages, preserving existing metadata, header tags, image alt tags, and JSON-LD structured data for continuous SEO visibility.',
+      'BigCommerce lets each store set its own URL format, so product pages may sit at /product-name/, under /products/, or under a category path. Shopify fixes products at /products/handle and collections at /collections/handle. We keep each old slug as the Shopify handle wherever we can, so most redirects follow one pattern, and we list every exception in the map for you to check.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you handle BigCommerce filter URLs such as ?_bc_fsnf=1?',
+    answer:
+      'We do not redirect them one by one. Shopify\'s own redirect help uses a URL like /brands/dell.html?_bc_fsnf=1 as its example of query strings that might not redirect as expected. We redirect the clean category or brand URL, set canonical tags on Shopify filter pages, and let the parameter versions drop out of the index on their own.',
+  },
+  {
+    category: 'seo',
+    question: 'Do BigCommerce blog posts and web pages move to Shopify?',
+    answer:
+      'Yes. BigCommerce blog posts become Shopify blog articles under /blogs/news/ or another blog handle you choose, and web pages become Shopify pages under /pages/. Titles, meta descriptions, images and alt text move with them. Because both paths change, every post and page gets its own 301 in the redirect map.',
+  },
+  {
+    category: 'seo',
+    question: 'Can we see the Shopify store working before we switch off BigCommerce?',
+    answer:
+      'Yes. We build on a Shopify development store, load your real catalog, and run test orders through payments, tax, shipping and any ERP connection. You click through it on a preview link and sign off. Only then do we freeze BigCommerce changes, top up orders and customers placed since the test import, and move DNS.',
   },
   {
     category: 'b2b',
     question: 'Can BigCommerce B2B Edition features move to Shopify Plus B2B?',
     answer:
-      'Yes. BigCommerce B2B features like custom price lists, customer company hierarchies, Net payment terms, and volume discount rules map directly to Shopify Plus B2B. Both wholesale (B2B) and direct-to-consumer (DTC) channels can be operated seamlessly from a single unified Shopify admin.',
+      'Most of them. Shopify B2B sets up buyers as companies with their own pricing, payment terms and catalogs, and one store can serve both B2B and direct-to-consumer buyers. BigCommerce price lists become Shopify B2B catalogs and company accounts become Shopify companies. Quote requests and buyer approval chains work differently on each side, so we check them feature by feature in the audit.',
   },
   {
     category: 'b2b',
-    question: 'Can we manage multiple international regional storefronts from one account?',
+    question: 'We run several BigCommerce storefronts. How does that work on Shopify Plus?',
     answer:
-      'Yes. Shopify Markets and Expansion Stores allow you to localize currencies, languages, localized domain subfolders, and regional pricing catalogs across global territories effortlessly from a centralized dashboard.',
+      'You choose between one Shopify store using Markets for countries and languages, or separate expansion stores for each brand. One store is simpler to run and keeps one catalog. Separate stores suit brands with different products, teams or checkout rules. We make this call in the audit, before any data moves, because it decides how the catalog and redirects are built.',
   },
 ];
 
 const STAT_CARDS = [
-  { num: 'Shop Pay', title: 'Accelerated Checkout', desc: 'Shopify\'s one-tap checkout, set up and tested on your new store.', icon: '⚡' },
-  { num: '10,000+', title: 'Ecosystem Apps', desc: 'Plug into the world’s most advanced e-commerce tools for marketing, reviews, and loyalty.', icon: '🛍️' },
-  { num: '1 Unified', title: 'Omnichannel Admin', desc: 'Manage online D2C, B2B wholesale, and physical retail POS from a single dashboard.', icon: '🔄' },
+  { num: '2,048', title: 'Variants per Product', desc: 'Shopify\'s current limit, with up to three options per product. We flag any BigCommerce product over it.', icon: '🧩' },
+  { num: '20M', title: 'Redirects on Plus', desc: 'Shopify Plus allows up to 20,000,000 URL redirects, enough for every old BigCommerce URL.', icon: '🔗' },
+  { num: '5-8 wks', title: 'Typical Build', desc: 'Our usual range for a migration with data, B2B or subscriptions. Headless runs 8 to 14 weeks.', icon: '📅' },
   { num: '1-to-1', title: 'Redirect Map', desc: 'Every old URL mapped to its new page with a single-hop 301 redirect.', icon: '🛡️' },
 ];
 
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending the Frustration of Stagnant App & Partner Ecosystems',
-    problem: 'BigCommerce has a limited third-party app marketplace, forcing merchants to build expensive custom workarounds for modern marketing tools.',
-    solution: 'Instant access to top-tier enterprise apps like Klaviyo, Gorgias, Yotpo, Triple Whale, Recharge, and native social commerce integrations.',
+    title: 'Plan Upgrades Tied to Trailing Sales',
+    problem: 'BigCommerce moves a store to the next plan when trailing twelve-month GMV passes a threshold, and charges an overage on Scale and Performance above the plan limit.',
+    solution: 'Shopify Plus is a term fee or a variable platform fee agreed up front, so the platform line in your budget is known before the year starts.',
   },
   {
     num: '02',
-    title: 'Unlocking the Conversion Power of Shop Pay Accelerated Checkout',
-    problem: 'Standard multi-step checkouts on BigCommerce suffer from friction and high mobile cart abandonment rates.',
-    solution: 'Shop Pay allows over 150 million pre-authenticated shoppers to checkout in a single click, driving immediate conversion rate lifts.',
+    title: 'Stencil Edits That Wait for a Developer',
+    problem: 'Stencil themes are Handlebars templates. Moving a banner, adding a block or building a campaign page often means a code change and a theme push.',
+    solution: 'Online Store 2.0 sections let your marketing team add, reorder and preview page blocks in the Shopify theme editor without touching code.',
   },
   {
     num: '03',
-    title: 'Replacing Fragile Stencil Templates with Modern Section Architecture',
-    problem: 'Customizing BigCommerce Stencil themes requires developer intervention for basic merchandising and promotional updates.',
-    solution: 'Shopify Online Store 2.0 visual drag-and-drop sections allow marketing teams to create dynamic landing pages and product promotions in minutes.',
+    title: 'Retail Stores Running on Separate Tools',
+    problem: 'Selling in physical stores alongside a BigCommerce site usually means a third-party POS and a sync tool between the two.',
+    solution: 'Shopify POS Pro is listed as a Plus feature, so in-store and online sales share one product list, one stock count and one customer record.',
   },
   {
     num: '04',
-    title: 'Unifying Retail Stores & POS Without Fragmented Third-Party Tools',
-    problem: 'Connecting physical retail POS systems to BigCommerce requires complex third-party synchronization tools that often desync.',
-    solution: 'Native Shopify POS integrates real-time inventory, customer profiles, and loyalty programs across online and retail store locations.',
+    title: 'Checkout Changes Built on Injected Scripts',
+    problem: 'Custom checkout behaviour on BigCommerce is often added through Script Manager snippets that break quietly when the checkout changes underneath them.',
+    solution: 'Shopify Plus uses checkout extensions and Shopify Functions, which run inside Shopify\'s checkout and keep working through Shopify\'s own updates.',
   },
 ];
 
 const PARTNERS = [
-  'Shopify Plus Partner',
-  'Shop Pay Integration',
-  'Klaviyo Master Partner',
-  'Gorgias Premier',
-  'Yotpo Enterprise',
-  'Recharge Subscriptions',
-  'NetSuite ERP Connector',
-  'Celigo Integrator',
+  'BigCommerce Catalog API',
+  'Shopify Plus',
+  'Shop Pay',
+  'Klaviyo',
+  'Gorgias',
+  'Yotpo',
+  'Recharge',
+  'Celigo',
 ];
 
 const WORKING_STEPS = [
   {
     n: '01',
-    t: 'Comprehensive Catalog & App Audit',
-    d: 'We catalog every BigCommerce product option set, custom field, and third-party app to determine the optimal Shopify Plus architecture.',
+    t: 'Catalog API Pull & App Audit',
+    d: 'We pull your full catalog through the BigCommerce Catalog API and list every variant option, modifier, custom field, price list and app on one sheet.',
     icon: '🔍',
   },
   {
     n: '02',
-    t: 'Data Migration & Metafield Normalization',
-    d: 'We extract and format products, variants, customer records, order histories, and B2B pricing tiers into native Shopify metafields.',
-    icon: '📊',
+    t: 'Field-by-Field Mapping Sign-Off',
+    d: 'Each BigCommerce field gets a Shopify home: variant, metafield, line-item property, collection or metaobject. You sign the sheet before anything is imported.',
+    icon: '🗺️',
   },
   {
     n: '03',
-    t: 'High-Converting Storefront Build',
-    d: 'We design and engineer a custom Shopify Plus theme optimized for sub-second page loads, mobile responsiveness, and high conversion.',
+    t: 'Liquid Theme Build & App Replacement',
+    d: 'We rebuild the Stencil design as an Online Store 2.0 theme on a development store and set up the Shopify replacement for each app.',
     icon: '💻',
   },
   {
     n: '04',
-    t: '1-to-1 SEO Crawl & Redirect Matrix',
-    d: 'We crawl 100% of your indexed BigCommerce URLs to build single-hop 301 redirects, protecting all domain authority and Google rankings.',
-    icon: '🔗',
+    t: 'Full Test Import',
+    d: 'Products, customers, orders, blog posts and gift card balances are loaded in full. Products over 2,048 variants or three options are split or reworked here.',
+    icon: '📊',
   },
   {
     n: '05',
-    t: 'Delta Sync & Zero-Downtime Cutover',
-    d: 'We run a final delta sync of latest customer accounts and transactions, switch DNS during off-peak hours, and verify live payment processing.',
+    t: 'Redirect Map From Sitemap, Search Console & Backlinks',
+    d: 'Every BigCommerce URL is mapped to its Shopify page and loaded as a single-hop 301. Filter URLs with query strings are handled with canonicals.',
+    icon: '🔗',
+  },
+  {
+    n: '06',
+    t: 'Test Orders & Your Sign-Off',
+    d: 'We run test orders through payments, tax, shipping and any ERP link, and you review the store on a preview link.',
+    icon: '✅',
+  },
+  {
+    n: '07',
+    t: 'Freeze, Top-Up & DNS Cutover',
+    d: 'BigCommerce changes are frozen, orders and customers since the test import are topped up, DNS moves, and account invites go out in batches.',
     icon: '🚀',
   },
+];
+
+const EXPORT_ITEMS = [
+  { t: 'Products, variants, options, modifiers, images and custom fields', d: 'BigCommerce Catalog REST API, pulled by script so it can rerun for the final top-up.' },
+  { t: 'Simple catalogs with no modifiers', d: 'The product CSV export in the BigCommerce control panel, cleaned and reshaped to the Shopify product CSV format.' },
+  { t: 'Customers and saved addresses', d: 'BigCommerce Customers API, loaded into Shopify by CSV or API. Passwords do not move.' },
+  { t: 'Historical orders', d: 'BigCommerce Orders API, loaded through the Shopify Order API or a migration app, as Shopify\'s migration guide lists.' },
+  { t: 'Blog posts and web pages', d: 'Pulled with titles, meta descriptions, images and alt text, then rebuilt as Shopify articles and pages.' },
+  { t: 'Gift certificates, reviews, loyalty points', d: 'Each exported from the app or feature that holds it, then reloaded into its Shopify replacement.' },
+  { t: 'The full URL list', d: 'The BigCommerce XML sitemap, Search Console page reports and backlink data, merged and de-duplicated.' },
+];
+
+const URL_PATTERNS = [
+  { from: '/product-name/ or /products/product-name/', to: '/products/product-name' },
+  { from: '/category/ and nested /parent/child/', to: '/collections/child plus a menu entry for the parent' },
+  { from: '/brands/brand-name.html', to: '/collections/brand-name' },
+  { from: '/blog/post-name/', to: '/blogs/news/post-name' },
+  { from: '/shipping-returns/ and other web pages', to: '/pages/shipping-returns' },
+  { from: 'Filter URLs with ?_bc_fsnf=1', to: 'No one-to-one redirect; canonical on the Shopify collection' },
+];
+
+const PLATFORM_RISKS = [
+  'Modifiers with price adjusters: each one has to be rebuilt so the price still changes at checkout.',
+  'Customer group pricing: maps to Shopify B2B catalogs or automatic discounts, and the two behave differently at checkout.',
+  'Script Manager snippets: tracking, chat and checkout scripts are listed and rebuilt one by one, because none of them carry over.',
+  'Multi-Storefront setups: each BigCommerce storefront needs a decision on Markets versus a separate expansion store.',
+  'Products over Shopify\'s 2,048 variant or three option limit: split into combined listings before import, not after.',
+  'Password resets: every returning customer sets a new password, so the invite email and its timing are planned.',
 ];
 
 const FAQ_SCHEMA = {
@@ -240,7 +378,7 @@ const SERVICE_SCHEMA = {
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'E-Commerce Replatforming & Migration',
   description:
-    'End-to-end enterprise migration from BigCommerce to Shopify Plus with complete data parity, app replacements, and zero ranking loss.',
+    'Migration from BigCommerce to Shopify Plus: Catalog API extraction, modifier and custom field mapping, customer and order history import, Liquid theme rebuild, and a one-to-one single-hop 301 redirect map.',
   areaServed: ['US', 'GB', 'CA', 'AU'],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -261,7 +399,7 @@ const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'BigCommerce to Shopify Plus Migration Services | FactoryJet',
-  description: 'Complete engineering blueprint for migrating BigCommerce stores to Shopify Plus.',
+  description: 'How a BigCommerce store moves to Shopify Plus: data export, modifier mapping, fees, URL patterns and a 7-step process.',
   url: 'https://factoryjet.com/replatforming/bigcommerce-to-shopify-plus',
   dateModified: PAGE_MODIFIED,
   author: {
@@ -291,24 +429,24 @@ const BREADCRUMB_SCHEMA = {
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Technical Execution Model',
-    factoryjet: 'Senior commerce systems architects write custom ETL scripts and Shopify Functions with 100% full IP ownership.',
-    traditional: 'Junior agency generalists relying on generic third-party migration apps that cause database bloat.',
+    label: 'Catalog Extraction',
+    factoryjet: 'A scripted pull from the BigCommerce Catalog API that reruns for the final top-up before launch.',
+    traditional: 'A one-off CSV export that drops modifiers and custom fields without anyone noticing.',
   },
   {
-    label: 'SEO & 301 URL Preservation',
-    factoryjet: '1-to-1 exact path mapping of 100% legacy URLs with single-hop 301 redirects and schema retention.',
-    traditional: 'Wildcard home-page redirects that result in massive Google ranking and organic revenue drops.',
+    label: 'Modifier Handling',
+    factoryjet: 'Every BigCommerce modifier listed and rebuilt as a line-item property, an app or a Shopify Function.',
+    traditional: 'Modifiers flattened into variants until products hit Shopify\'s variant limit.',
   },
   {
-    label: 'ERP & Warehouse Synchronization',
-    factoryjet: 'Direct GraphQL webhook pipeline syncing NetSuite, SAP, and Manhattan WMS in under 150ms.',
-    traditional: 'Batch CSV file uploads or slow third-party middleware with frequent inventory sync failures.',
+    label: 'Redirect Coverage',
+    factoryjet: 'Every URL from the sitemap, Search Console and backlinks mapped one-to-one as single-hop 301s.',
+    traditional: 'Top pages redirected by hand and the rest sent to the homepage.',
   },
   {
-    label: 'Commercial Terms & Accountability',
-    factoryjet: 'Transparent fixed-price milestone scope with guaranteed zero-downtime cutover SLA.',
-    traditional: 'Open-ended hourly retainer billing with frequent scope creep and unexpected overages.',
+    label: 'Commercial Terms',
+    factoryjet: 'Fixed price per phase, a demo on your own data before you sign, and you own the code.',
+    traditional: 'Hourly billing with the scope left open and no working store until late in the project.',
   },
 ];
 
@@ -329,7 +467,7 @@ export default function BigCommerceToShopifyPage() {
         <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
           <div className="pp-wrap">
             <div className="rv-hero-wrap">
-              
+
               {/* Left Column Typography */}
               <div>
                 <div className="rv-badge" style={{ marginBottom: '18px' }}>
@@ -340,11 +478,15 @@ export default function BigCommerceToShopifyPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Zero-Downtime Migration from BigCommerce to Shopify Plus
+                  BigCommerce to Shopify Plus Migration, Planned From Your Catalog Up
                 </h1>
 
-                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Escape app ecosystem limitations and clunky checkouts. We map your option sets, transfer customer order history, and unlock the conversion power of Shop Pay with zero SEO ranking loss.
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 12px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Moving from BigCommerce to Shopify Plus takes most stores 5 to 8 weeks. We pull your catalog through the BigCommerce Catalog API, turn variant options into Shopify variants and modifiers into line-item properties or apps, move customers and order history, and load a one-to-one 301 for every old URL. Shopify Plus lists $2,300 a month on a 3-year term.
+                </p>
+
+                <p style={{ fontSize: '13px', color: '#6E6E80', margin: '0 0 28px', fontFamily: 'var(--pp-mono)' }}>
+                  Updated 22 October 2026 · By Bhavesh Barot, Founder
                 </p>
 
                 <div className="rv-actions">
@@ -381,10 +523,10 @@ export default function BigCommerceToShopifyPage() {
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Trusted Enterprise Technology &amp; ERP Connectors</div>
+              <div className="rv-ticker-label">Platforms &amp; Tools We Work With on BigCommerce Moves</div>
               <div className="rv-ticker-line" />
             </div>
-            
+
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
                 {PARTNERS.concat(PARTNERS).map((p, idx) => (
@@ -404,7 +546,7 @@ export default function BigCommerceToShopifyPage() {
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
           <div className="pp-wrap">
             <div className="rv-about-grid">
-              
+
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
@@ -426,11 +568,11 @@ export default function BigCommerceToShopifyPage() {
                 </div>
 
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
-                  Engineered for Zero Downtime. Built for Growth.
+                  Modifiers, Custom Fields and URLs First. Theme Second.
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  We specialize in frictionless migrations from BigCommerce to Shopify Plus. We transfer your complex catalog, customer accounts, and order records while giving your marketing team total creative control and higher checkout conversion.
+                  FactoryJet has served 500+ businesses since 2014 and is a registered Shopify Partner. On a BigCommerce move the work that decides the outcome is the modifier list, the custom fields, the B2B price lists and the redirect map, so our audit starts there. You see the new store running on your own data before you sign.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -464,33 +606,33 @@ export default function BigCommerceToShopifyPage() {
             <div style={{ marginTop: '56px', display: 'grid', gap: '18px' }}>
               <AnswerFirstDefinition
                 term="BigCommerce to Shopify Plus Data Migration"
-                definition="Migrating from BigCommerce to Shopify Plus entails extracting catalog option sets, custom modifier rules, buyer address books, historical orders, and gift card balances via the BigCommerce V3 REST API, normalizing the data into Shopify product metafields and variant records, and preserving complete order history."
+                definition="Moving from BigCommerce to Shopify Plus means pulling products, variants, modifiers, custom fields, customers and orders out of BigCommerce through the Catalog REST API or a CSV export, reshaping them into Shopify products, variants, metafields and orders, and loading them into a Shopify Plus store that passes test orders before any DNS change."
                 keyTakeaways={[
-                  'Translates complex BigCommerce Option Sets and Modifiers into Shopify Variant Matrices and Metafields',
-                  'Maintains historical customer Lifetime Value (LTV) and tax receipt continuity without data loss',
-                  'Pre-validates checkout tax jurisdictions and carrier shipping rules in parallel staging environments',
+                  'Variant options become Shopify variants; modifier options become line-item properties, an app or a Shopify Function',
+                  'Custom fields become typed Shopify metafields that themes and filters can read',
+                  'Passwords cannot move, so returning customers set a new one from an account invite',
                 ]}
-                citationSource="FactoryJet BigCommerce to Shopify Plus Migration Standard (2026)"
+                citationSource="BigCommerce Catalog API docs and Shopify store migration guide, checked 22 Oct 2026"
               />
               <AnswerFirstDefinition
-                term="BigCommerce Custom URL 1:1 Redirect Mapping"
-                definition="BigCommerce generates distinct URL structures (e.g. /products/item-name or custom category paths) that differ from Shopify's native /products/ and /collections/ patterns. 1-to-1 301 redirect mapping ensures every legacy BigCommerce URL route points directly to its exact Shopify equivalent without redirect loops or 404 errors."
+                term="BigCommerce URL to Shopify 301 Redirect Mapping"
+                definition="BigCommerce lets each store choose its own URL format, so the redirect map starts from the live sitemap rather than a template. Shopify fixes product URLs at /products/handle and collections at /collections/handle, so every BigCommerce product, category, brand, blog and page URL needs its own single-hop 301."
                 keyTakeaways={[
-                  'Captures 100% of historical indexable BigCommerce product, category, and blog URLs',
-                  'Prevents organic search traffic drop-offs by preserving Google page authority and keyword rankings',
-                  'Eliminates soft 404 crawl errors in Google Search Console post-launch',
+                  'Shopify Plus allows up to 20,000,000 URL redirects',
+                  'Shopify redirects only fire for URLs that no longer load a page',
+                  'Filter URLs with query strings such as ?_bc_fsnf=1 are handled with canonical tags, not redirects',
                 ]}
-                citationSource="FactoryJet SEO Preservation & URL Routing Standard (2026)"
+                citationSource="Shopify Help Center, Creating and managing URL redirects, checked 22 Oct 2026"
               />
               <AnswerFirstDefinition
-                term="Shop Pay Conversion Uplift Over BigCommerce Checkout"
-                definition="Shop Pay is Shopify's 1-click accelerated checkout network with over 150 million pre-authenticated consumers. Compared to standard BigCommerce multi-step checkout forms, Shop Pay increases mobile checkout completion rates by up to 50% and reduces cart abandonment significantly."
+                term="BigCommerce Plan Fees vs Shopify Plus Fees"
+                definition="BigCommerce prices plans by trailing twelve-month GMV and moves stores up a plan as sales cross each threshold. Shopify Plus charges a term-based monthly fee or a variable platform fee for more complex businesses. Payment processing fees sit on top of both."
                 keyTakeaways={[
-                  'Pre-fills shipping address, billing info, and credit cards for instant 1-click buying',
-                  'Accelerates checkout transaction speed by up to 4x compared to legacy guest checkouts',
-                  'Supports native Shop Pay Installments directly without third-party iframe friction',
+                  'BigCommerce lists Core $39, Growth $105 and Scale $399 a month; Performance starts at $1,499 a month billed annually',
+                  'Shopify Plus lists $2,300 a month on a 3-year term and from $2,500 on a 1-year term',
+                  'BigCommerce defines GMV as gross order value minus 10% when setting plan thresholds',
                 ]}
-                citationSource="Shopify Enterprise Commerce Conversion Benchmark (2026)"
+                citationSource="BigCommerce pricing page and Shopify Plus pricing page, checked 22 Oct 2026"
               />
             </div>
           </div>
@@ -507,10 +649,10 @@ export default function BigCommerceToShopifyPage() {
                 <span>The Direct Comparison</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Leading Brands Are Leaving BigCommerce
+                Why Brands Move Off BigCommerce
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                BigCommerce limits your ecosystem and retail growth. Here is what happens when you upgrade to Shopify Plus:
+                The four reasons BigCommerce merchants give us most often, and what changes on Shopify Plus:
               </p>
             </div>
 
@@ -561,7 +703,7 @@ export default function BigCommerceToShopifyPage() {
           <EnterpriseArchitectureBlueprint
             badge="// BIGCOMMERCE TO SHOPIFY PLUS BLUEPRINT"
             title="Enterprise Architecture: Replatforming BigCommerce to Shopify Plus"
-            subtitle="Upgrade to the world’s highest-converting 1-click checkout ecosystem, modern Theme Store 2.0 sections, and unified omnichannel POS with zero cutover downtime."
+            subtitle="Catalog API extraction, a Liquid rebuild of your Stencil theme, checkout extensions in place of checkout scripts, and a staged DNS cutover."
             legacySource="BigCommerce Stencil"
             targetStack="Shopify Plus Modern Architecture"
             ctaLabel="Schedule BigCommerce Migration Review"
@@ -587,10 +729,10 @@ export default function BigCommerceToShopifyPage() {
                 <span>Side-by-Side Analysis</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                BigCommerce vs. Shopify Plus
+                BigCommerce vs. Shopify Plus: Fees, Limits and Rules
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare key operational, conversion, and architectural differences side by side:
+                Vendor facts only. Each row links to the vendor&apos;s own page, and every page was checked on 22 October 2026.
               </p>
             </div>
 
@@ -602,38 +744,58 @@ export default function BigCommerceToShopifyPage() {
                     <th style={{ color: '#141414', fontWeight: 700 }}>BigCommerce</th>
                     <th style={{ color: '#141414', fontWeight: 700 }}>Shopify Plus Enterprise</th>
                     <th style={{ color: '#141414', fontWeight: 700 }}>What It Means for Your Brand</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Source (checked 22 Oct 2026)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Checkout Experience</td>
-                    <td>Standard multi-step checkout with high mobile drop-off</td>
-                    <td style={{ color: '#047857', fontWeight: 600 }}>Shop Pay 1-click accelerated checkout</td>
-                    <td>Up to 50% higher checkout completion across 150M+ saved shoppers</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Listed plan price</td>
+                    <td>Core $39, Growth $105, Scale $399 a month; Performance from $1,499 a month billed annually</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>$2,300 a month on a 3-year term, from $2,500 on a 1-year term, or a variable platform fee</td>
+                    <td>Compare full invoices including payment fees, not list prices alone</td>
+                    <td><SourceLink href={SRC.bcPricing}>BigCommerce pricing</SourceLink>; <SourceLink href={SRC.shopPlusPricing}>Shopify Plus pricing</SourceLink></td>
                   </tr>
                   <tr>
-                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>App &amp; Partner Ecosystem</td>
-                    <td>Limited third-party marketplace and smaller agency ecosystem</td>
-                    <td style={{ color: '#047857', fontWeight: 600 }}>10,000+ top-tier enterprise apps &amp; integrations</td>
-                    <td>Instant compatibility with all leading marketing, loyalty, and analytics tools</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>How the plan level is set</td>
+                    <td>Trailing twelve-month GMV (gross order value minus 10%); automatic upgrade past thresholds such as $30K on Core or $100K on Growth</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Term fee, or a variable platform fee for more complex business structures</td>
+                    <td>BigCommerce cost moves with sales; Shopify Plus cost is agreed with Shopify up front</td>
+                    <td><SourceLink href={SRC.bcPricing}>BigCommerce pricing FAQ</SourceLink>; <SourceLink href={SRC.shopPlusPricing}>Shopify Plus pricing</SourceLink></td>
                   </tr>
                   <tr>
-                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Theme Customization</td>
-                    <td>Legacy Stencil framework requiring developer builds</td>
-                    <td style={{ color: '#047857', fontWeight: 600 }}>Visual Online Store 2.0 drag-and-drop sections</td>
-                    <td>Marketing launches new campaigns same-day with zero developer dependency</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Product choices</td>
+                    <td>Variant options create SKUs with tracked stock; modifier options cannot track inventory</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Up to 2,048 variants and up to three options per product</td>
+                    <td>Modifiers need a planned Shopify home before the first import</td>
+                    <td><SourceLink href={SRC.bcOptions}>BigCommerce options docs</SourceLink>; <SourceLink href={SRC.shopVariants}>Shopify variant limits</SourceLink></td>
                   </tr>
                   <tr>
-                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Omnichannel &amp; POS</td>
-                    <td>Fragmented third-party POS connectors prone to stock desync</td>
-                    <td style={{ color: '#047857', fontWeight: 600 }}>Native unified Shopify POS for physical retail</td>
-                    <td>Seamless unified customer profiles, inventory, and omni returns</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Third-party payment providers</td>
+                    <td>Monthly fee on self-service plans for orders through Open Payment Providers</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Third-party transaction fees may apply if you do not use Shopify Payments</td>
+                    <td>Model gateway costs on both platforms with your real order volume</td>
+                    <td><SourceLink href={SRC.bcPricing}>BigCommerce pricing</SourceLink>; <SourceLink href={SRC.shopPricing}>Shopify pricing</SourceLink></td>
                   </tr>
                   <tr>
-                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Pricing Model</td>
-                    <td>Automatic GMV threshold penalties and trailing fees</td>
-                    <td style={{ color: '#047857', fontWeight: 600 }}>Predictable flat enterprise tier with lower card rates</td>
-                    <td>Scale revenue without arbitrary platform plan penalization</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>URL redirects</td>
+                    <td>Store-defined URL formats; faceted filter URLs carry query strings such as ?_bc_fsnf=1</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Up to 20,000,000 redirects on Plus; query-string URLs might not redirect as expected</td>
+                    <td>Redirect clean URLs one-to-one; handle filter URLs with canonicals</td>
+                    <td><SourceLink href={SRC.shopRedirects}>Shopify URL redirects help</SourceLink></td>
+                  </tr>
+                  <tr>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Checkout capacity</td>
+                    <td>Set by your BigCommerce plan and contract</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>10K+ checkouts per minute with unlimited bandwidth, transactions and SKUs</td>
+                    <td>Load-test the parts you add (apps, Functions, ERP links), not Shopify&apos;s checkout</td>
+                    <td><SourceLink href={SRC.shopPlusPricing}>Shopify Plus pricing</SourceLink></td>
+                  </tr>
+                  <tr>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>B2B selling</td>
+                    <td>Sold as B2B Edition; check your current contract for what is included</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Native B2B with companies, catalogs and payment terms; one store can serve B2B and D2C</td>
+                    <td>Price lists and company accounts map to Shopify catalogs and companies</td>
+                    <td><SourceLink href={SRC.shopB2b}>Shopify B2B help</SourceLink></td>
                   </tr>
                 </tbody>
               </table>
@@ -641,11 +803,57 @@ export default function BigCommerceToShopifyPage() {
           </div>
         </section>
 
+        {/* ── BIGCOMMERCE EXPORT, URL PATTERNS & RISKS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', paddingTop: 0 }}>
+          <div className="pp-wrap" style={{ maxWidth: '960px' }}>
+            <h2 style={{ fontSize: 'clamp(26px, 3.6vw, 38px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+              What Comes Out of BigCommerce, and How
+            </h2>
+            <p style={{ fontSize: '16px', color: '#494852', lineHeight: 1.6, margin: '0 0 20px' }}>
+              Each data type has its own export route. The <SourceLink href={SRC.bcCatalogApi}>BigCommerce Catalog REST API</SourceLink> carries the catalog, and <SourceLink href={SRC.shopMigration}>Shopify&apos;s store migration guide</SourceLink> lists how each type loads on the Shopify side.
+            </p>
+            <ul style={{ margin: '0 0 36px', paddingLeft: '22px', display: 'grid', gap: '10px' }}>
+              {EXPORT_ITEMS.map((e) => (
+                <li key={e.t} style={{ fontSize: '15px', color: '#494852', lineHeight: 1.55 }}>
+                  <strong style={{ color: '#141414' }}>{e.t}:</strong> {e.d}
+                </li>
+              ))}
+            </ul>
+
+            <h3 style={{ fontSize: '22px', fontWeight: 800, color: '#141414', margin: '0 0 12px' }}>
+              BigCommerce URL patterns in the 301 map
+            </h3>
+            <p style={{ fontSize: '16px', color: '#494852', lineHeight: 1.6, margin: '0 0 16px' }}>
+              BigCommerce stores set their own URL format, so check your sitemap against these common patterns. The Shopify side is fixed by Shopify.
+            </p>
+            <ul style={{ margin: '0 0 36px', paddingLeft: '22px', display: 'grid', gap: '10px' }}>
+              {URL_PATTERNS.map((u) => (
+                <li key={u.from} style={{ fontSize: '15px', color: '#494852', lineHeight: 1.55 }}>
+                  <code style={{ fontFamily: 'var(--pp-mono)', fontSize: '13.5px', color: '#141414' }}>{u.from}</code> to {u.to}
+                </li>
+              ))}
+            </ul>
+
+            <h3 style={{ fontSize: '22px', fontWeight: 800, color: '#141414', margin: '0 0 12px' }}>
+              Risks specific to BigCommerce moves
+            </h3>
+            <ul style={{ margin: '0 0 28px', paddingLeft: '22px', display: 'grid', gap: '10px' }}>
+              {PLATFORM_RISKS.map((r) => (
+                <li key={r} style={{ fontSize: '15px', color: '#494852', lineHeight: 1.55 }}>{r}</li>
+              ))}
+            </ul>
+
+            <p style={{ fontSize: '16px', color: '#494852', lineHeight: 1.6, margin: 0 }}>
+              Still choosing a platform? Read our <Link href="/comparisons/shopify-plus-vs-bigcommerce" style={SRC_LINK_STYLE}>Shopify Plus vs BigCommerce comparison</Link>, or run your numbers in the <Link href="/tools/replatforming-cost-calculator" style={SRC_LINK_STYLE}>replatforming cost calculator</Link>. For the build itself, see our <Link href="/services/shopify-migration-agency" style={SRC_LINK_STYLE}>Shopify migration service</Link>, <Link href="/services/shopify-plus-agency" style={SRC_LINK_STYLE}>Shopify Plus development</Link>, <Link href="/services/shopify-plus-b2b" style={SRC_LINK_STYLE}>Shopify Plus B2B</Link> and <Link href="/services/ecommerce-erp-integration" style={SRC_LINK_STYLE}>ERP integration</Link> pages. Running NetSuite behind your store? The <Link href="/replatforming/netsuite-suitecommerce-to-shopify-plus" style={SRC_LINK_STYLE}>SuiteCommerce to Shopify Plus guide</Link> covers the ERP side, and the <Link href="/replatforming" style={SRC_LINK_STYLE}>replatforming hub</Link> lists every source platform.
+            </p>
+          </div>
+        </section>
+
         {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
         <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
-              
+
               {/* Left Column Sticky Content */}
               <div style={{ position: 'sticky', top: '100px' }}>
                 <div className="rv-badge" style={{ marginBottom: '14px' }}>
@@ -655,18 +863,18 @@ export default function BigCommerceToShopifyPage() {
                   <span>Our Working Process</span>
                 </div>
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
-                  Our 5-Step Migration Protocol
+                  Our 7-Step BigCommerce Migration Process
                 </h2>
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  We execute every phase with strict engineering rigor: data parity is verified before templates are built, and 1-to-1 redirect mapping is tested before DNS switch.
+                  Each step has a sign-off gate. The field map is signed before import, the full test import is checked before the redirect map is loaded, and test orders pass before DNS moves.
                 </p>
                 <ModalCTAButton label="Start Your BigCommerce Audit" region="us" btnVariant="primary-dark" />
               </div>
 
               {/* Right Column Step Cards */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <ol style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 {WORKING_STEPS.map((s) => (
-                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
+                  <li key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
                       <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
                         {s.icon}
@@ -681,16 +889,16 @@ export default function BigCommerceToShopifyPage() {
                     <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
                       {s.d}
                     </p>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ol>
 
             </div>
           </div>
         </section>
 
         {/* ── 09. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
-        
+
         {/* ── AGENCY EVALUATION FRAMEWORK TABLE ── */}
         <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
@@ -705,7 +913,7 @@ export default function BigCommerceToShopifyPage() {
                 Evaluating Migration Partners: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare senior engineering replatforming against traditional design agency retainers before you commit:
+                Four questions to put to any agency quoting a BigCommerce to Shopify Plus move:
               </p>
             </div>
 
@@ -756,7 +964,7 @@ export default function BigCommerceToShopifyPage() {
         <FAQ
           eyebrow="MIGRATION INTELLIGENCE"
           headline="Frequently Asked Questions About Moving Off BigCommerce"
-          lead="Everything marketing leaders, operations directors, and founders ask when migrating to Shopify Plus:"
+          lead="What BigCommerce merchants ask before moving to Shopify Plus, answered from the vendors' own documentation:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#F6F6F9]"
@@ -778,15 +986,15 @@ export default function BigCommerceToShopifyPage() {
               </svg>
               <span>Fixed-Price Enterprise Replatforming</span>
             </div>
-            
+
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
               Ready to Upgrade BigCommerce to Shopify Plus?
             </h2>
-            
+
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Send us your store URL, SKU volume, and third-party app list. We will audit your current architecture and deliver a detailed technical roadmap with a guaranteed fixed quote.
+              Send us your store URL, SKU count and app list. We reply with a scoped plan and a fixed price per phase in writing, and show you a demo on your own data before you sign.
             </p>
-            
+
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
               <ModalCTAButton label="Schedule BigCommerce Discovery Call" region="us" btnVariant="primary-light" />
             </div>

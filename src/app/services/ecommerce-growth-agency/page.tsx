@@ -17,12 +17,19 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import './ecommerce-growth-agency.css';
 
 const URL = 'https://factoryjet.com/services/ecommerce-growth-agency';
+const PAGE_TITLE = 'Ecommerce Growth Agency for US Brands | FactoryJet';
+const PAGE_DESCRIPTION =
+  'Ecommerce growth agency for US brands: paid ads, Google Shopping, email and SMS, SEO, CRO and AI automation, run by one senior in-house team. Free growth audit.';
+
+// Freshness signal. Bump only when the page content actually changes.
+const PAGE_MODIFIED = '2026-10-22';
+const LINK = { color: '#B23E13', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: 2 } as const;
+const LIST_RESET = { listStyle: 'none', margin: 0, padding: 0 } as const;
 
 /* ── SEO / Metadata ─────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: 'Ecommerce Growth Agency for US Brands | FactoryJet',
-  description:
-    'FactoryJet is a full-funnel ecommerce growth agency for US brands: paid ads, email and SMS, ecommerce SEO, CRO, and AI automation, run by one senior in-house team. Get a free growth audit.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: [
     'ecommerce growth agency',
     'ecommerce agency',
@@ -71,34 +78,37 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
 ];
 
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
-  { category: 'basics', question: 'What does an ecommerce growth agency do?', answer: 'It runs every channel that drives store revenue as one system: paid ads, email and SMS, SEO, conversion optimization, and AI automation. Rather than managing separate specialists, you get one accountable team that ties spend to revenue and reports on profit.' },
-  { category: 'basics', question: 'What is ecommerce marketing?', answer: 'Ecommerce marketing is how an online store attracts visitors and turns them into repeat buyers. It spans paid ads, email and SMS, SEO, social, and conversion optimization. The goal is not traffic for its own sake, it is profitable, repeatable revenue from the channels that pay back.' },
+  { category: 'basics', question: 'What does an ecommerce growth agency do?', answer: 'An ecommerce growth agency runs every channel that brings a store revenue as one plan: paid ads and Google Shopping, email and SMS, SEO, conversion rate optimization and AI automation. Instead of hiring a separate specialist for each, you get one team that ties ad spend to revenue, tests changes on the store and reports on profit, not clicks.' },
+  { category: 'basics', question: 'What is ecommerce marketing?', answer: 'Ecommerce marketing is how an online store attracts visitors and turns them into repeat buyers. It covers paid ads, email and SMS, SEO, social and conversion rate optimization. The goal is revenue that repeats and makes a profit, from the channels that pay back what you spend on them. Traffic only counts when it turns into orders.' },
   { category: 'basics', question: 'How do you grow an ecommerce business?', answer: 'You grow revenue on three fronts at once: get more of the right traffic (ads and SEO), convert more of it (CRO and store speed), and keep more customers buying (email, SMS, loyalty). We audit which lever is weakest for you and fix that first for the fastest return.' },
-  { category: 'basics', question: 'Which channels do you manage?', answer: 'Paid ads (Google, Meta, marketplaces), email and SMS, ecommerce SEO, conversion rate optimization, and AI search. We also set up and manage marketplace selling on Amazon, Walmart, and TikTok Shop when they fit your brand.' },
-  { category: 'basics', question: 'What makes FactoryJet different from a single-channel agency?', answer: 'Single-channel agencies optimize their slice while your overall revenue can still stall. We own the full funnel and the store itself, so ads, email, SEO, CRO, and site changes move together. One team, one number to grow.' },
+  { category: 'basics', question: 'Which channels do you manage?', answer: 'Paid ads on Google (including Google Shopping), Meta and marketplaces, email and SMS, ecommerce SEO, conversion rate optimization and AI search. We also set up and manage marketplace selling on Amazon, Walmart and TikTok Shop when they fit your brand, so pricing and stock stay in step with your own store.' },
+  { category: 'basics', question: 'What makes FactoryJet different from a single-channel agency?', answer: 'Single-channel agencies optimize their slice while your overall revenue can still stall. We own the full funnel and the store itself, so ads, email, SEO, CRO and site changes move together. One team works toward one number: profitable revenue. When a change on the store lifts conversion, the ad budget and email plan adjust the same week.' },
 
-  { category: 'services', question: 'Do you offer ecommerce PPC and advertising management?', answer: 'Yes. We run paid search, paid social, and marketplace ads as a full ecommerce advertising service, managed to blended ROAS and contribution margin. You get transparent reporting on what each dollar returns, not just impressions and clicks.' },
-  { category: 'services', question: 'Do you do ecommerce email marketing?', answer: 'Yes. Email and SMS are usually the fastest profit lever for an existing store. We build welcome, abandoned-cart, post-purchase, and win-back flows in Klaviyo or Shopify Email, then run campaigns that lift repeat revenue.' },
-  { category: 'services', question: 'Can you help with ecommerce SEO too?', answer: 'Yes, ecommerce SEO is one of our core services. We optimize category, product, and collection pages so buyers find you in Google, and we optimize for AI search so you get surfaced in ChatGPT and Google AI Overviews.' },
+  { category: 'services', question: 'Do you offer ecommerce PPC and advertising management?', answer: 'Yes. We run paid search, paid social, and marketplace ads as a full ecommerce advertising service, managed to blended ROAS and contribution margin. You get clear reporting on what each dollar returns in revenue and profit. Impressions and clicks are in the report too, but they are not how we judge the work.' },
+  { category: 'services', question: 'Do you do ecommerce email marketing?', answer: 'Yes. For a store that already has customers, email and SMS are often the quickest place to add profit, because the list is already paid for. We build welcome, abandoned-cart, post-purchase and win-back flows in Klaviyo or Shopify Email, then run campaigns that bring buyers back for a second and third order.' },
+  { category: 'services', question: 'Can you help with ecommerce SEO too?', answer: 'Yes, ecommerce SEO is one of our core services. We optimize category, product, and collection pages so buyers find you in Google, and we optimize for AI search so ChatGPT and Google AI Overviews can find and cite you. Work starts with the pages closest to a sale: collections and products.' },
   { category: 'services', question: 'What are the best AI tools for ecommerce?', answer: 'The most useful today are AI for product content and merchandising, AI-driven email and ad creative, AI support agents, and AI search optimization. We help you pick the few that fit your stack and build custom AI agents where an off-the-shelf tool falls short.' },
-  { category: 'services', question: 'Do you build or redesign the store as well?', answer: 'Yes. When the store itself is the bottleneck we handle builds, redesigns, and replatforming on Shopify and Magento, including headless commerce. Growth marketing and development under one roof means fixes ship without vendor hand-offs.' },
-  { category: 'services', question: 'Do you sell on Amazon, Walmart, or TikTok Shop?', answer: 'Yes. We set up and manage marketplace selling on Amazon, Walmart Marketplace, and TikTok Shop as additional revenue channels, coordinated with your site so product pricing, inventory, and brand stay consistent.' },
-  { category: 'services', question: 'Can you use AI to automate our marketing and operations?', answer: 'Yes. We build AI agents that handle customer support, product data, reporting, and repetitive ops, so your team spends time on growth instead of admin. This is a core focus, not a bolt-on.' },
-  { category: 'services', question: 'What is B2B ecommerce and do you support it?', answer: 'B2B ecommerce is selling to other businesses online, with features like account-based pricing, quotes, and bulk ordering. Yes, we build and grow B2B stores on platforms like Shopify Plus and BigCommerce B2B, alongside your direct-to-consumer channels.' },
+  { category: 'services', question: 'Do you build or redesign the store as well?', answer: 'Yes. When the store itself is the bottleneck we handle builds, redesigns, and replatforming on Shopify and Magento, including headless commerce. Growth marketing and development under one roof means fixes ship without vendor hand-offs. Builds are quoted as a fixed price per phase: a custom-theme store takes 3 to 5 weeks, headless or custom builds 8 to 14 weeks.' },
+  { category: 'services', question: 'Do you sell on Amazon, Walmart, or TikTok Shop?', answer: 'Yes. We set up and manage marketplace selling on Amazon, Walmart Marketplace, and TikTok Shop as additional revenue channels, coordinated with your site so product pricing, inventory, and brand stay consistent. We also run Faire wholesale and Target Plus, and one stock feed keeps every channel from selling the same last unit.' },
+  { category: 'services', question: 'Can you use AI to automate our marketing and operations?', answer: 'Yes. We build AI agents that handle customer support, product data, reporting, and repetitive ops, so your team spends time on growth instead of admin. AI work is a core part of what we build, and we show it working on your own data before you sign.' },
+  { category: 'services', question: 'What is B2B ecommerce and do you support it?', answer: 'B2B ecommerce is selling to other businesses online, with features like account-based pricing, quotes, and bulk ordering. Yes, we build and grow B2B stores on platforms like Shopify Plus and BigCommerce B2B, alongside your direct-to-consumer channels. B2B builds with custom pricing or ERP links usually take 5 to 8 weeks.' },
 
-  { category: 'working', question: 'How much does an ecommerce agency cost?', answer: 'No survey prices a full multi-channel ecommerce agency, but ecommerce SEO alone costs most businesses $500 to $7,500 a month, according to WebFX survey data. The total depends on the channels you need and the stage of your store. Rather than a fixed package, we scope the work to your goals and share a clear quote, so you only invest in what will actually move revenue. Ask for a free audit and we will size it with you.' },
-  { category: 'working', question: 'How long until I see results?', answer: 'Quick wins from email flows and paid-ad fixes often land in the first 30 to 60 days. SEO and CRO compound over three to six months. We prioritize the fastest-payback work first so early momentum funds the longer plays.' },
-  { category: 'working', question: 'Do I have to sign a long contract?', answer: 'No. We work on short, rolling terms and earn the renewal each month with results. If a longer commitment makes sense for a big build, we scope it clearly up front so there are no surprises.' },
-  { category: 'working', question: 'Who will actually work on my account?', answer: 'FactoryJet’s senior in-house team. The specialists in your kickoff are the ones doing the work, not a sales pod handing you to offshore juniors. That is a deliberate choice and a big part of why clients stay.' },
-  { category: 'working', question: 'What size businesses do you work with?', answer: 'Mostly US small and mid-market ecommerce brands, from stores doing their first serious growth push to established brands scaling past seven and eight figures. We scope the engagement to your stage rather than forcing one package on everyone.' },
-  { category: 'working', question: 'How do you report on performance?', answer: 'You get a live dashboard tied to revenue and contribution margin, plus a plain-language monthly review of what we did, what it returned, and what is next. No vanity metrics dressed up as progress.' },
-  { category: 'working', question: 'How do we get started?', answer: 'Request the free growth audit with your store URL and email. We come back with findings and a suggested 90-day plan, then you decide if you want us to run it. No pressure, no long sales cycle.' },
+  { category: 'working', question: 'How much does an ecommerce agency cost?', answer: 'It depends on the channels you need and the stage of your store, and no survey prices a full multi-channel agency in a way you can compare. We do not sell a fixed package. We scope the work to your goals, then quote a fixed price per phase in writing. Ongoing work is an option you pick, with no monthly minimum. Ask for a free audit and we will size it with you.' },
+  { category: 'working', question: 'How long until I see results?', answer: 'Email flows and paid-ad fixes usually show results first, because they work on traffic and customers you already have. SEO and CRO build up more slowly over months. We put the fastest-payback work first, so early gains help fund the longer plays, and we show you the numbers every month.' },
+  { category: 'working', question: 'Do I have to sign a long contract?', answer: 'No. There is no monthly minimum, and ongoing work runs on short, rolling terms that we earn each month. A store build or a big project is quoted as a fixed price per phase in writing, with defect cover, so you know the full scope and cost before work starts.' },
+  { category: 'working', question: 'Who will actually work on my account?', answer: 'FactoryJet’s senior in-house team. The specialists in your kickoff call are the people doing the work. Nobody hands your account to a junior after the contract is signed. You talk to the same people every week, and the founder stays involved in every engagement.' },
+  { category: 'working', question: 'What size businesses do you work with?', answer: 'Mostly US small and mid-market ecommerce brands, from stores doing their first serious growth push to established brands scaling past seven and eight figures. We scope the engagement to your stage rather than forcing one package on everyone. A newer store usually starts with tracking, email flows and conversion fixes. A larger brand often starts with margin-based ad structure.' },
+  { category: 'working', question: 'How do you report on performance?', answer: 'You get a live dashboard tied to revenue and contribution margin, plus a plain-language monthly review of what we did, what it returned, and what is next. Every number in the review ties back to revenue or profit, and we tell you plainly when something did not work and what we are changing.' },
+  { category: 'working', question: 'How do we get started?', answer: 'Request the free growth audit with your store URL and email. We come back with findings and a suggested 90-day plan, then you decide if you want us to run it. Before you sign anything, we show you working examples on your own store data. There is no long sales cycle.' },
   { category: 'services', question: 'What is Marketing Efficiency Ratio (MER) and why is it superior to platform ROAS?', answer: 'Platform-reported ROAS (in Meta Ads Manager or Google Ads) often takes double-credit for organic conversions and ignores customer acquisition costs. Marketing Efficiency Ratio (Total Net Revenue divided by Total Ad Spend) measures true blended business profitability, ensuring ad spend scales without eroding your bottom line.' },
-  { category: 'services', question: 'How do you combat post-iOS 14 ad signal loss and attribution inaccuracies?', answer: 'We implement server-side conversion tracking via Meta Conversions API (CAPI), Google Enhanced Conversions, and first-party data capture. This restores 95%+ event matching quality and allows machine learning bidding algorithms to optimize toward high-value repeat buyers.' },
-  { category: 'services', question: 'How does conversion rate optimization (CRO) interact with customer acquisition costs?', answer: 'Lifting your store conversion rate from 1.5% to 2.5% effectively cuts your customer acquisition cost (CAC) by 40% on every ad dollar spent. CRO creates operating utilize that allows you to outbid competitors and scale ad budgets profitably.' },
-  { category: 'services', question: 'What is RFM customer segmentation in Klaviyo email marketing?', answer: 'RFM analyzes Recency, Frequency, and Monetary value across your customer database. We build targeted VIP reward flows for high-value champions, automated replenishment triggers for predictable consumables, and aggressive win-back flows for churning buyers.' },
-  { category: 'services', question: 'How do you structure product bundles and threshold upsells to increase Average Order Value (AOV)?', answer: 'We engineer dynamic in-cart progress bars (e.g. "Add $15 for Free Shipping"), post-purchase 1-click upsells in checkout, and volume tiered bundle discounts (Buy 2 Get 10% Off, Buy 3 Get 20% Off), lifting site-wide AOV by 18% to 32%.' },
-  { category: 'services', question: 'How do AI search citations in ChatGPT and Perplexity drive e-commerce revenue?', answer: 'High-intent consumers increasingly use AI engines to research product comparisons and buying recommendations. By structuring your store content with deep schema, objective comparison tables, and verified reviews, your brand becomes the direct quoted answer in AI responses.' },
+  { category: 'services', question: 'How do you combat post-iOS 14 ad signal loss and attribution inaccuracies?', answer: 'We implement server-side conversion tracking via Meta Conversions API (CAPI), Google Enhanced Conversions, and first-party data capture. This sends more of your real conversions back to the ad platforms, so their bidding can aim at high-value repeat buyers instead of guessing.' },
+  { category: 'services', question: 'How does conversion rate optimization (CRO) interact with customer acquisition costs?', answer: 'Customer acquisition cost is ad spend divided by new orders. With the same traffic and spend, moving conversion from 1.5% to 2.5% gives you two-thirds more orders, so cost per order falls by 40% (1.5 divided by 2.5 is 0.6). That room lets you bid higher than competitors and still make a profit.' },
+  { category: 'services', question: 'What is RFM customer segmentation in Klaviyo email marketing?', answer: 'RFM analyzes Recency, Frequency, and Monetary value across your customer database. We build targeted VIP reward flows for high-value champions, automated replenishment triggers for predictable consumables, and win-back flows for buyers who have gone quiet. Segments update on their own as customers buy, so each flow reaches the right people.' },
+  { category: 'services', question: 'How do you structure product bundles and threshold upsells to increase Average Order Value (AOV)?', answer: 'We engineer dynamic in-cart progress bars (e.g. "Add $15 for Free Shipping"), post-purchase 1-click upsells in checkout, and tiered bundle discounts (Buy 2 Get 10% Off, Buy 3 Get 20% Off). We test each one against your current store, and keep only what raises order value without hurting margin.' },
+  { category: 'services', question: 'How do AI search citations in ChatGPT and Perplexity drive e-commerce revenue?', answer: 'Shoppers now ask AI assistants to compare products and recommend what to buy. Store content with clear schema, fair comparison tables and real reviews is easier for those assistants to quote. That makes your brand more likely to be named in the answer. Our free AI visibility checker shows whether assistants name you today.' },
+  { category: 'services', question: 'Which agencies specialize in Google Shopping for large ecommerce brands?', answer: 'Look for an agency that runs Google Shopping and Performance Max as part of a feed and margin plan, not as a standalone ad account. Large catalogs need clean product feeds, product-level bidding tied to margin and a check on which products eat budget without selling. We run Google Shopping for large catalogs this way, next to SEO and CRO.' },
+  { category: 'services', question: 'Do you run B2B ecommerce email and SMS retention?', answer: 'Yes. B2B buyers reorder on a cycle, so retention for B2B stores looks different from consumer flows. We build reorder reminders timed to how fast each account uses stock, quote follow-ups, new product alerts for existing accounts and SMS for buyers who prefer it. Flows run in Klaviyo or your ERP’s email tools, tied to account-level pricing.' },
+  { category: 'basics', question: 'What is the 80/20 rule in ecommerce?', answer: 'The 80/20 rule, or Pareto principle, says a small share of causes drives most results. In ecommerce it usually means a small group of products or customers brings in most of the revenue. The exact split varies by store. We check your own order data to find those products and customers, then aim ads, email and stock at them first.' },
 ];
 
 /* ── JSON-LD ─────────────────────────────────────────────────────────────── */
@@ -126,6 +136,18 @@ const serviceSchema = {
   },
 };
 
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${URL}#webpage`,
+  url: URL,
+  name: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -138,19 +160,19 @@ const faqSchema = {
 
 /* ── Small building blocks ───────────────────────────────────────────────── */
 const CHANNELS = [
-  { Icon: Megaphone, title: 'Ecommerce PPC & advertising', body: 'Google, Meta, and marketplace ads managed to blended ROAS and profit, not vanity clicks. A full ecommerce advertising service, in-house.', link: '/services/ecommerce-seo', label: 'How we run paid ads', span: 'w3' },
+  { Icon: Megaphone, title: 'Ecommerce PPC & advertising', body: 'Google Search, Google Shopping, Meta and marketplace ads, managed to blended ROAS and profit. A full ecommerce advertising service, run in-house.', link: '/services/ecommerce-seo', label: 'How we run paid ads', span: 'w3' },
   { Icon: Mail, title: 'Email & SMS retention', body: 'Ecommerce email marketing flows and campaigns in Klaviyo and Shopify Email that turn one-time buyers into repeat revenue.', link: '/contact', label: 'Retention playbook', span: 'w3' },
   { Icon: Search, title: 'Ecommerce SEO', body: 'Rank category and product pages for buyers, and compound long after ad spend stops.', link: '/services/ecommerce-seo', label: 'Ecommerce SEO', span: 'cell' },
-  { Icon: MousePointerClick, title: 'CRO & landing pages', body: 'Turn more of the traffic you already pay for into orders with testing and checkout fixes.', link: '/contact', label: 'Conversion work', span: 'cell' },
+  { Icon: MousePointerClick, title: 'CRO & landing pages', body: 'Turn more of the traffic you already pay for into orders with testing and checkout fixes.', link: '/services/ecommerce-cro-agency', label: 'Conversion work', span: 'cell' },
   { Icon: ShoppingBag, title: 'Store build & redesign', body: 'Shopify and Magento builds, replatforming, and headless commerce.', link: '/services/ecommerce-development', label: 'Ecommerce development', span: 'cell' },
 ];
 
 const LEVERS = [
   { b: 'Acquisition that pays back', p: 'Paid social and search tuned to contribution margin, so scaling spend does not quietly kill your profit.' },
   { b: 'Retention and lifetime value', p: 'Email, SMS, and loyalty flows that make the second and third order cheaper than the first.' },
-  { b: 'Organic and AI search', p: 'Ecommerce SEO plus answer-engine optimization so buyers find you in Google and in ChatGPT.' },
+  { b: 'Organic and AI search', p: 'Ecommerce SEO plus answer-engine optimization, so buyers find you in Google and in ChatGPT.' },
   { b: 'Conversion rate optimization', p: 'Structured testing on product, cart, and checkout to lift revenue without spending a dollar more.' },
-  { b: 'Marketplace expansion', p: 'Amazon, Walmart, and TikTok Shop set up and managed as extra revenue channels, not distractions.' },
+  { b: 'Marketplace expansion', p: 'Amazon, Walmart and TikTok Shop set up and managed as extra revenue channels, with stock and pricing kept in step with your store.' },
   { b: 'AI automation', p: 'Agents that handle support, product data, and reporting so your team spends time on growth, not admin.' },
 ];
 
@@ -170,11 +192,11 @@ const STEPS = [
   { n: 'Step 04', h: 'Scale', p: 'Weekly iteration and profit-based reporting. We double down on what works, cut what does not.' },
 ];
 
-/* Cited market stats. Every figure links to a real, opened source. */
+/* Cited market stats. Every figure re-read on the source page on 22 Oct 2026. */
 const STATS = [
-  { v: '$1.19T', l: 'in US ecommerce sales in 2024, a record high and still climbing every year.', src: 'Digital Commerce 360, 2025', href: 'https://www.digitalcommerce360.com/2025/03/03/us-ecommerce-sales-2024/' },
-  { v: '7.5%', l: 'how fast US ecommerce grew in 2024, nearly triple the 2.6% growth of total retail.', src: 'Digital Commerce 360, 2025', href: 'https://www.digitalcommerce360.com/2025/03/03/us-ecommerce-sales-2024/' },
-  { v: '2x', l: 'US ecommerce more than doubled in five years, up from $571 billion in 2019.', src: 'Digital Commerce 360, 2025', href: 'https://www.digitalcommerce360.com/2025/03/03/us-ecommerce-sales-2024/' },
+  { v: '$1.19T', l: 'in US ecommerce sales in 2024 ($1.192 trillion).', src: 'Digital Commerce 360, 2025 (read 22 Oct 2026)', href: 'https://www.digitalcommerce360.com/2025/03/03/us-ecommerce-sales-2024/' },
+  { v: '7.5%', l: 'how fast US ecommerce grew in 2024, against 2.6% growth for total retail.', src: 'Digital Commerce 360, 2025 (read 22 Oct 2026)', href: 'https://www.digitalcommerce360.com/2025/03/03/us-ecommerce-sales-2024/' },
+  { v: '2x', l: 'US ecommerce more than doubled in five years, up from $571 billion in 2019.', src: 'Digital Commerce 360, 2025 (read 22 Oct 2026)', href: 'https://www.digitalcommerce360.com/2025/03/03/us-ecommerce-sales-2024/' },
 ];
 
 /* Real, named ecommerce growth agencies brands weigh us against, framed honestly. */
@@ -182,7 +204,7 @@ const RIVALS = [
   { b: 'Common Thread Collective', p: 'A respected DTC growth shop with a strong paid-media and forecasting framework in the Shopify world. Excellent at paid acquisition, narrower on the full stack.' },
   { b: 'Power Digital', p: 'A broad cross-channel growth partner for brands that want wide coverage. A bigger-agency structure, which can mean more layers between you and the work.' },
   { b: 'Disruptive Advertising', p: 'A recognized PPC and conversion-optimization agency managing serious ad spend. Strong on ads and CRO, lighter on store builds and marketplaces.' },
-  { b: 'Where FactoryJet fits', p: 'One senior in-house team running ads, email, SEO, CRO, the store build itself, marketplaces, and AI, sized for SMBs rather than enterprise retainers.' },
+  { b: 'Where FactoryJet fits', p: 'One senior in-house team running ads, email, SEO, CRO, the store build itself, marketplaces and AI, sized for small and mid-size brands, with no monthly minimum.' },
 ];
 
 const yes = <span style={{ color: '#177a48', fontWeight: 700 }}>Yes</span>;
@@ -195,6 +217,7 @@ export default function EcommerceGrowthAgencyPage() {
     <>
       <JsonLd data={serviceSchema} id="service-schema" />
       <JsonLd data={faqSchema} id="faq-schema" />
+      <JsonLd data={webPageSchema} id="webpage-schema" />
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
@@ -217,11 +240,11 @@ export default function EcommerceGrowthAgencyPage() {
             <div>
               <span className="ega-pill"><span className="d" /> Ecommerce Growth Agency · United States</span>
               <h1 className="ega-h1 disp">The ecommerce growth agency that turns your store into a <span className="u">revenue engine</span></h1>
-              <p className="ega-lead">One team for the whole funnel: paid ads, email and SMS, ecommerce SEO, CRO, and AI automation. Built on 12 years and 500+ commerce builds.</p>
+              <p className="ega-lead">One team for the whole funnel: paid ads, email and SMS, ecommerce SEO, CRO, and AI automation. Founded 2014, with 500+ businesses served.</p>
               <HeroInlineForm region="us" source="us_services_ecommerce_growth_hero" submitLabel="Get my free audit" />
               <div className="ega-trust">
-                <span className="tk"><Check size={15} strokeWidth={2.4} /> 500+ stores served</span>
-                <span className="tk"><Check size={15} strokeWidth={2.4} /> 12 years in commerce</span>
+                <span className="tk"><Check size={15} strokeWidth={2.4} /> 500+ businesses served</span>
+                <span className="tk"><Check size={15} strokeWidth={2.4} /> Founded 2014</span>
                 <span className="tk"><Check size={15} strokeWidth={2.4} /> In-house senior team</span>
               </div>
             </div>
@@ -236,7 +259,7 @@ export default function EcommerceGrowthAgencyPage() {
                 </span>
                 <div>
                   <span className="hm-lab">Conversions</span>
-                  <b className="hm-val">+18%<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#177a48" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M17 7H8M17 7v9" /></svg></b>
+                  <b className="hm-val">Tracked<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#177a48" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M17 7H8M17 7v9" /></svg></b>
                 </div>
               </div>
             </div>
@@ -247,7 +270,16 @@ export default function EcommerceGrowthAgencyPage() {
         <section className="ega-answer">
           <div className="ega-wrap in">
             <div className="q disp"><span className="ql">Quick answer</span>What does an ecommerce growth agency do?</div>
-            <div className="a"><p><b>An ecommerce growth agency runs every channel that drives store revenue as one system:</b> paid ads, email and SMS, SEO, conversion rate optimization, and increasingly AI automation. Instead of hiring separate specialists, you get one accountable team that ties spend to revenue, tests continuously, and reports on profit. FactoryJet does this across Shopify, Magento, BigCommerce, and WooCommerce for US brands.</p></div>
+            <div className="a"><p><b>An ecommerce growth agency runs every channel that brings a store revenue as one plan:</b> paid ads and Google Shopping, email and SMS, SEO, conversion rate optimization and AI automation. You get one team that ties ad spend to revenue, tests changes on the store and reports on profit. FactoryJet does this on Shopify, Magento, BigCommerce and WooCommerce for US brands.</p>
+              <p style={{ marginTop: 12 }}>What that covers in practice:</p>
+              <ul style={{ paddingLeft: 20, marginTop: 8, display: 'grid', gap: 6, listStyle: 'disc' }}>
+                <li>Paid search, Google Shopping and paid social, judged on contribution margin.</li>
+                <li>Email and SMS flows for consumer and B2B buyers.</li>
+                <li>Conversion work on product, cart and checkout pages, run by our <a href="/services/ecommerce-cro-agency" style={LINK}>ecommerce CRO agency</a> team.</li>
+                <li>Store speed fixes. Check what a slow store costs you with the <a href="/ecommerce-speed-calculator" style={LINK}>ecommerce speed calculator</a>.</li>
+                <li>Amazon, Walmart and Faire run next to your store through <a href="/marketplace-management" style={LINK}>marketplace management</a>.</li>
+                <li>AI search. See whether ChatGPT and other assistants name your brand with the free <a href="/ai-visibility-checker" style={LINK}>AI visibility checker</a>.</li>
+              </ul></div>
           </div>
         </section>
 
@@ -307,20 +339,20 @@ export default function EcommerceGrowthAgencyPage() {
               <span className="ega-eyebrow">Financial Telemetry</span>
               <h2 className="disp">The 4-Pillar Ecommerce Profit Equation: Beyond Vanity ROAS</h2>
               <p>
-                Scaling ad spend without unit economic discipline destroys operating cash flow. We manage your growth portfolio across four fundamental financial metrics:
+                Raising ad spend without watching unit economics drains cash. We manage your growth against four financial measures:
               </p>
             </div>
-            <div className="ega-list" style={{ marginTop: 24 }}>
-              <div className="ega-crystal ega-li">
+            <ul className="ega-list" style={{ ...LIST_RESET, marginTop: 24 }}>
+              <li className="ega-crystal ega-li">
                 <span className="num" />
                 <div>
-                  <b>1. Marketing Efficiency Ratio (Blended MER) &gt; 4.0x</b>
+                  <b>1. Marketing Efficiency Ratio (Blended MER)</b>
                   <p>
-                    Rather than relying on isolated channel platform attribution, we calculate Blended MER (Total Top-Line Revenue divided by Total Marketing Ad Spend across all channels). This measures true enterprise profitability and ensures paid acquisition lifts net cash flow.
+                    Rather than relying on isolated channel platform attribution, we calculate Blended MER (Total Top-Line Revenue divided by Total Marketing Ad Spend across all channels). We set your MER target from your own margins, so paid acquisition adds cash instead of draining it.
                   </p>
                 </div>
-              </div>
-              <div className="ega-crystal ega-li">
+              </li>
+              <li className="ega-crystal ega-li">
                 <span className="num" />
                 <div>
                   <b>2. Net Contribution Margin (NCM) Modeling</b>
@@ -328,77 +360,77 @@ export default function EcommerceGrowthAgencyPage() {
                     We map your gross margin, payment gateway fees, pick-pack-and-ship fulfillment expenses, and returns allowance to establish the exact breakeven Customer Acquisition Cost (CAC) for every SKU and product category in your catalog.
                   </p>
                 </div>
-              </div>
-              <div className="ega-crystal ega-li">
+              </li>
+              <li className="ega-crystal ega-li">
                 <span className="num" />
                 <div>
-                  <b>3. 60-Day &amp; 90-Day LTV:CAC Expansion (4:1 Ratio Target)</b>
+                  <b>3. 60-Day &amp; 90-Day LTV:CAC Tracking</b>
                   <p>
-                    Acquiring a customer at breakeven is a winning strategy only when your post-purchase email, SMS, and loyalty engine reliably produces repeat purchases within 60 days. We engineer retention flows that turn single-order buyers into high-LTV brand advocates.
+                    Acquiring a customer at breakeven is a winning strategy only when your post-purchase email, SMS, and loyalty engine reliably produces repeat purchases within 60 days. We build retention flows that turn single-order buyers into repeat customers, and track LTV against CAC at 60 and 90 days.
                   </p>
                 </div>
-              </div>
-              <div className="ega-crystal ega-li">
+              </li>
+              <li className="ega-crystal ega-li">
                 <span className="num" />
                 <div>
                   <b>4. Server-Side First-Party Attribution &amp; Meta CAPI Signal Recovery</b>
                   <p>
-                    With browser cookie deprecation and iOS privacy signal loss, client-side tracking drops up to 30% of conversion events. We deploy server-side Meta Conversions API (CAPI) and Google Tag Manager server containers to restore 95%+ event match quality.
+                    Browser privacy limits and iOS changes mean browser-only tracking misses some conversions. We set up server-side Meta Conversions API (CAPI) and Google Tag Manager server containers, so more real conversions reach the ad platforms.
                   </p>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 
-        {/* ── Full-Funnel Growth Synergy ── */}
+        {/* ── Full-Funnel Growth System ── */}
         <section className="ega-sec pt0">
           <div className="ega-wrap">
             <div className="ega-sh">
               <span className="ega-eyebrow">Omnichannel Architecture</span>
               <h2 className="disp">How Paid Media, Retention, CRO &amp; AI Search Work as One Engine</h2>
               <p>
-                Single-channel tactics fail because modern consumers interact across six touchpoints before purchasing. Here is how our senior in-house team synchronizes your growth stack:
+                Shoppers see a brand in several places before they buy, so channels run in isolation waste spend. Here is how our senior in-house team keeps your growth stack in step:
               </p>
             </div>
-            <div className="ega-list" style={{ marginTop: 24 }}>
-              <div className="ega-crystal ega-li">
+            <ul className="ega-list" style={{ ...LIST_RESET, marginTop: 24 }}>
+              <li className="ega-crystal ega-li">
                 <span className="num" />
                 <div>
                   <b>Paid Media (Meta Advantage+, Google PMax &amp; TikTok Shop Ads)</b>
                   <p>
-                    We deploy high-converting UGC creative frameworks, modular video hooks, and value-based bidding (tROAS) targeting high-intent in-market shoppers across Google Search, Shopping, YouTube, Instagram Reels, and TikTok Shop.
+                    We run UGC creative, short video hooks and value-based bidding (tROAS) aimed at in-market shoppers across Google Search, Google Shopping, YouTube, Instagram Reels and TikTok Shop. For large catalogs, Shopping campaigns are split by margin so budget goes to products that make money.
                   </p>
                 </div>
-              </div>
-              <div className="ega-crystal ega-li">
+              </li>
+              <li className="ega-crystal ega-li">
                 <span className="num" />
                 <div>
                   <b>Klaviyo Lifecycle Retention &amp; RFM Predictive Segmentation</b>
                   <p>
-                    We build automated 12-stage email and SMS customer journeys, including dynamic welcome series, high-intent cart abandonment triggers, price drop alerts, VIP early access drops, and predictive replenishment flows based on SKU consumption cycles.
+                    We build automated email and SMS customer journeys, including welcome series, high-intent cart abandonment triggers, price drop alerts, VIP early access drops, and predictive replenishment flows based on SKU consumption cycles.
                   </p>
                 </div>
-              </div>
-              <div className="ega-crystal ega-li">
+              </li>
+              <li className="ega-crystal ega-li">
                 <span className="num" />
                 <div>
-                  <b>Scientific Conversion Rate Optimization &amp; Sub-Second Checkout</b>
+                  <b>Conversion Rate Optimization &amp; Faster Checkout</b>
                   <p>
-                    We execute multivariate A/B testing on product detail pages (PDPs), sticky add-to-cart bars, in-cart bundle builders, trust badges, and 1-click Shop Pay checkout workflows, lifting session conversion rates from 1.8% to 3.2%+.
+                    We run A/B tests on product detail pages (PDPs), sticky add-to-cart bars, in-cart bundle builders, trust badges and 1-click Shop Pay checkout, and keep only the changes that lift conversion on your own traffic.
                   </p>
                 </div>
-              </div>
-              <div className="ega-crystal ega-li">
+              </li>
+              <li className="ega-crystal ega-li">
                 <span className="num" />
                 <div>
                   <b>Organic E-Commerce SEO &amp; Generative AI Search Optimization (GEO)</b>
                   <p>
-                    We structure collection pages, product schemas, and buying guides to dominate traditional Google rankings and capture prominent citations in ChatGPT, Perplexity, and Google AI Overviews.
+                    We structure collection pages, product schema and buying guides so they rank in Google and are easier for ChatGPT, Perplexity and Google AI Overviews to cite.
                   </p>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -409,29 +441,29 @@ export default function EcommerceGrowthAgencyPage() {
               <span className="ega-eyebrow">Execution Methodology</span>
               <h2 className="disp">The 90-Day Compounding Ecommerce Growth Sprint Roadmap</h2>
               <p>
-                A proven, phase-governed engineering and marketing framework designed to capture fast cash flow and compound long-term market leadership:
+                A phased plan that goes after quick cash first, then builds the gains that grow over time:
               </p>
             </div>
-            <div className="ega-list" style={{ marginTop: 24 }}>
-              <div className="ega-crystal ega-li">
+            <ul className="ega-list" style={{ ...LIST_RESET, marginTop: 24 }}>
+              <li className="ega-crystal ega-li">
                 <span className="num" />
                 <div>
                   <b>Sprint 1: Days 1-30 (Foundation &amp; Rapid Cash Flow Levers)</b>
                   <p>
-                    Comprehensive technical audit, server-side CAPI pixel setup, Klaviyo high-intent core flows overhaul (Welcome, Abandoned Cart, Post-Purchase), ad account restructuring, and quick-win CRO fixes on high-traffic PDPs.
+                    Full technical audit, server-side CAPI pixel setup, Klaviyo high-intent core flows overhaul (Welcome, Abandoned Cart, Post-Purchase), ad account restructuring, and quick-win CRO fixes on high-traffic PDPs.
                   </p>
                 </div>
-              </div>
-              <div className="ega-crystal ega-li">
+              </li>
+              <li className="ega-crystal ega-li">
                 <span className="num" />
                 <div>
                   <b>Sprint 2: Days 31-60 (Creative Testing &amp; Category Scaling)</b>
                   <p>
-                    Iterative UGC ad creative sprint (15+ angles/hooks per month), Google Performance Max asset group segmentation, collection page SEO content optimization, in-cart bundle testing, and SMS list acceleration.
+                    UGC ad creative testing with new angles and hooks each month, Google Shopping and Performance Max asset group segmentation, collection page SEO content optimization, in-cart bundle testing, and SMS list acceleration.
                   </p>
                 </div>
-              </div>
-              <div className="ega-crystal ega-li">
+              </li>
+              <li className="ega-crystal ega-li">
                 <span className="num" />
                 <div>
                   <b>Sprint 3: Days 61-90 (Retention Compounding &amp; Omnichannel Expansion)</b>
@@ -439,8 +471,8 @@ export default function EcommerceGrowthAgencyPage() {
                     Predictive RFM segmentation, custom loyalty reward tiers, marketplace synchronization (Amazon Storefront / TikTok Shop), AI customer support agent deployment, and full quarterly contribution margin financial review.
                   </p>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -448,11 +480,11 @@ export default function EcommerceGrowthAgencyPage() {
         <section className="ega-sec pt0">
           <div className="ega-wrap">
             <div className="ega-sh"><span className="ega-eyebrow">The playbook</span><h2 className="disp">The 6 growth levers we pull for ecommerce brands</h2></div>
-            <div className="ega-list">
+            <ul className="ega-list" style={LIST_RESET}>
               {LEVERS.map((l) => (
-                <div key={l.b} className="ega-crystal ega-li"><span className="num" /><div><b>{l.b}</b><p>{l.p}</p></div></div>
+                <li key={l.b} className="ega-crystal ega-li"><span className="num" /><div><b>{l.b}</b><p>{l.p}</p></div></li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -462,7 +494,7 @@ export default function EcommerceGrowthAgencyPage() {
             <div className="ega-sh"><span className="ega-eyebrow">Why FactoryJet</span><h2 className="disp">Built to grow revenue, not to bill you for activity</h2><p>Three reasons brands move their growth to us and stay.</p></div>
             <div className="ega-pillars">
               <div className="ega-pillar"><div className="k">One team</div><h3 className="disp">Full funnel, not one channel</h3><p>Ads, email, SEO, CRO, and store fixes handled by people who talk to each other daily. No finger-pointing between three vendors.</p></div>
-              <div className="ega-pillar"><div className="k">Senior</div><h3 className="disp">In-house, not offshored juniors</h3><p>The people in your kickoff are the people doing the work. A senior in-house team that has shipped 500+ commerce projects.</p></div>
+              <div className="ega-pillar"><div className="k">Senior</div><h3 className="disp">Senior people on your account</h3><p>The people in your kickoff are the people doing the work. A senior in-house team behind 500+ businesses served since 2014.</p></div>
               <div className="ega-pillar"><div className="k">AI-native</div><h3 className="disp">Ahead on AI commerce</h3><p>We build AI agents and optimize for AI search now, so you win the channels your competitors have not figured out yet.</p></div>
             </div>
           </div>
@@ -472,11 +504,11 @@ export default function EcommerceGrowthAgencyPage() {
         <section className="ega-sec">
           <div className="ega-wrap">
             <div className="ega-sh"><span className="ega-eyebrow">How it works</span><h2 className="disp">From free audit to compounding growth in four steps</h2></div>
-            <div className="ega-steps">
+            <ol className="ega-steps" style={LIST_RESET}>
               {STEPS.map((s) => (
-                <div key={s.n} className="ega-step"><div className="n">{s.n}</div><h3 className="disp">{s.h}</h3><p>{s.p}</p></div>
+                <li key={s.n} className="ega-step"><div className="n">{s.n}</div><h3 className="disp">{s.h}</h3><p>{s.p}</p></li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -484,11 +516,11 @@ export default function EcommerceGrowthAgencyPage() {
         <section className="ega-sec pt0">
           <div className="ega-wrap">
             <div className="ega-sh"><span className="ega-eyebrow">Before you hire anyone</span><h2 className="disp">6 things to look for in an ecommerce agency</h2><p>Use this as a checklist, whether you talk to us or anyone else.</p></div>
-            <div className="ega-list">
+            <ul className="ega-list" style={LIST_RESET}>
               {CHECKS.map((c) => (
-                <div key={c.b} className="ega-crystal ega-li"><span className="num" /><div><b>{c.b}</b><p>{c.p}</p></div></div>
+                <li key={c.b} className="ega-crystal ega-li"><span className="num" /><div><b>{c.b}</b><p>{c.p}</p></div></li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -509,7 +541,7 @@ export default function EcommerceGrowthAgencyPage() {
                 { feature: 'Senior in-house team', values: [yes, partial('Often juniors'), yes, yes] },
                 { feature: 'Store build + growth together', values: [yes, no('No'), no('No'), no('Rarely')] },
                 { feature: 'AI search + AI automation', values: [yes, no('No'), no('No'), partial('Maybe')] },
-                { feature: 'Time to ramp', values: [yes, partial('Weeks'), partial('Weeks'), no('2-3 months')] },
+                { feature: 'Time to ramp', values: [yes, partial('Weeks'), partial('Weeks'), no('Months')] },
                 { feature: 'Profit-based reporting', values: [yes, partial('Channel metrics'), no('Limited'), yes] },
               ]}
             />
@@ -519,12 +551,12 @@ export default function EcommerceGrowthAgencyPage() {
         {/* NAMED COMPETITORS */}
         <section className="ega-sec pt0">
           <div className="ega-wrap">
-            <div className="ega-sh"><span className="ega-eyebrow">The landscape</span><h2 className="disp">Named ecommerce agencies brands compare us with</h2><p>Plenty of good growth agencies exist. Here is where the known names fit, and where we fit.</p></div>
-            <div className="ega-list">
+            <div className="ega-sh"><span className="ega-eyebrow">The alternatives</span><h2 className="disp">Named ecommerce agencies brands compare us with</h2><p>Plenty of good growth agencies exist. Here is where the known names fit, and where we fit.</p></div>
+            <ul className="ega-list" style={LIST_RESET}>
               {RIVALS.map((r) => (
-                <div key={r.b} className="ega-crystal ega-li"><span className="num" /><div><b>{r.b}</b><p>{r.p}</p></div></div>
+                <li key={r.b} className="ega-crystal ega-li"><span className="num" /><div><b>{r.b}</b><p>{r.p}</p></div></li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 

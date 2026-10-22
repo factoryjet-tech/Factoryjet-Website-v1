@@ -532,7 +532,14 @@ export default function ShopifyPlusAgencyPage() {
                     <Link href="/replatforming/salesforce-commerce-cloud-to-shopify-plus" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       Salesforce Commerce Cloud to Shopify Plus
                     </Link>{' '}
-                    migration work.
+                    migration work. Still choosing a platform? Read{' '}
+                    <Link href="/comparisons/shopify-plus-vs-magento" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                      Shopify Plus vs Magento
+                    </Link>{' '}
+                    and{' '}
+                    <Link href="/comparisons/shopify-plus-vs-bigcommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                      Shopify Plus vs BigCommerce
+                    </Link>.
                   </p>
                   <p>
                     Budgeting first? Our guide to{' '}

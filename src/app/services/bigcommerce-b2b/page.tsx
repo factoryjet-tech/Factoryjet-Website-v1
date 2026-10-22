@@ -738,7 +738,9 @@ export default function BigCommerceB2BPage() {
             <p className="pp-mlabel">// platform comparison</p>
             <h2 style={{ marginTop: '10px' }}>BigCommerce B2B Edition vs. Shopify Plus B2B vs. Magento B2B.</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              Compare enterprise B2B capabilities across the top commercial platforms.
+              Compare enterprise B2B capabilities across the top commercial platforms. For the full platform decision, read{' '}
+              <a href="/comparisons/shopify-plus-vs-bigcommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Shopify Plus vs BigCommerce</a>; if you are leaving BigCommerce, see{' '}
+              <a href="/replatforming/bigcommerce-to-shopify-plus" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>BigCommerce to Shopify Plus migration</a>.
             </p>
             <div style={{ marginTop: '32px', overflowX: 'auto' }}>
               <table className="pp-table">

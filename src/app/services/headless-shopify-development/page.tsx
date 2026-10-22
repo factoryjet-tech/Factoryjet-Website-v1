@@ -584,7 +584,10 @@ export default function HeadlessShopifyPage() {
               <span className="pp-badge">HEAD-TO-HEAD BENCHMARK.</span>
               <h2 className="pp-section-title">Headless Next.js 15 vs. Shopify Liquid vs. Hydrogen.</h2>
               <p className="pp-section-sub">
-                An objective architectural comparison across performance, development velocity, marketing flexibility, and total cost of ownership.
+                An objective architectural comparison across performance, development velocity, marketing flexibility, and total cost of ownership. For the longer versions, read{' '}
+                <Link href="/comparisons/shopify-plus-vs-custom-headless-nextjs" style={{ textDecoration: 'underline' }}>Shopify Plus vs a custom Next.js storefront</Link>{' '}
+                and{' '}
+                <Link href="/comparisons/headless-commerce-vs-monolithic" style={{ textDecoration: 'underline' }}>headless vs monolithic commerce</Link>.
               </p>
             </div>
 

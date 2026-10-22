@@ -918,6 +918,12 @@ export default function WebsiteRedesignPage() {
               <a href="/services/website-maintenance" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
                 <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Once the new site is live: website maintenance that keeps it updated and secure</p>
               </a>
+              <a href="/replatforming/wix-to-shopify" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Redesigning a Wix store? What moves to Shopify and how the redirects work</p>
+              </a>
+              <a href="/replatforming/squarespace-to-shopify" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Outgrowing Squarespace Commerce? The Squarespace to Shopify migration steps</p>
+              </a>
             </div>
           </div>
         </section>

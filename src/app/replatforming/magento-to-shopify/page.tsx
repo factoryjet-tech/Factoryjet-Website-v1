@@ -30,7 +30,7 @@ import '@/components/v2/PlatformPage.css';
  */
 
 const PAGE_URL = 'https://factoryjet.com/replatforming/magento-to-shopify';
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-22';
 const PAGE_TITLE = 'Magento to Shopify Plus Migration: Cost, Timeline & Runbook';
 const PAGE_DESCRIPTION =
   'Magento to Shopify Plus migration cost and timeline, with sourced 2026 ranges, Adobe Commerce end-of-support dates and an 11-phase runbook.';
@@ -150,7 +150,7 @@ const PROOF_POINTS = [
   'Registered Shopify Partner',
   '500+ businesses served',
   'Written by founder Bhavesh Barot',
-  'Last reviewed September 17, 2026',
+  'Updated October 22, 2026',
 ];
 
 /* What published guides report. Attributed ranges only, never FactoryJet prices. */
@@ -206,7 +206,7 @@ const COST_DRIVERS = [
   {
     driver: 'Customer and order history',
     why: "Historical orders load through a migration app or Shopify's Order API, not an admin CSV. Shopify's migration checklist counts 100,000+ orders as one sign you may need a migration service.",
-    measure: 'Customer count, years of order history you really need, loyalty and subscription data',
+    measure: 'Customer count, years of order history you need, loyalty and subscription data',
   },
   {
     driver: 'Custom Magento modules and extensions',
@@ -355,7 +355,7 @@ const RUNBOOK = [
   },
   {
     title: 'Data mapping',
-    body: 'Build a field-by-field map from Magento to Shopify. Attributes become metafields, configurable products become up to three options and 2,048 variants, customer groups become customer tags or B2B companies, and Magento order statuses map to Shopify statuses. Decide how many years of order history you really need.',
+    body: 'Build a field-by-field map from Magento to Shopify. Attributes become metafields, configurable products become up to three options and 2,048 variants, customer groups become customer tags or B2B companies, and Magento order statuses map to Shopify statuses. Decide how many years of order history you need.',
     done: 'A signed-off mapping document that marks every Magento field keep, transform or drop.',
   },
   {
@@ -821,7 +821,7 @@ export default function MagentoToShopifyPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '56ch', margin: '0 0 8px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  What a move off Magento or Adobe Commerce really costs, how long it takes, and the 11 phases we run to get there. Every market figure here names its source, and none of them are FactoryJet prices.
+                  What a move off Magento or Adobe Commerce costs, how long it takes, and the 11 phases we run to get there. Every market figure here names its source, and none of them are FactoryJet prices.
                 </p>
 
                 <HeroInlineForm source="us_magento_to_shopify_hero" region="us" submitLabel="Get a migration scope review" />
@@ -872,10 +872,10 @@ export default function MagentoToShopifyPage() {
             <div style={{ maxWidth: '860px', borderLeft: '4px solid #F05A28', paddingLeft: 'clamp(16px, 3vw, 28px)' }}>
               <h2 style={H2_STYLE}>The short answer: cost and timeline</h2>
               <p style={{ ...BODY_STYLE, fontSize: 'clamp(17px, 2vw, 19px)', color: '#141414', fontWeight: 500 }}>
-                A Magento 2 or Adobe Commerce to Shopify Plus migration costs about $20,000 to $150,000 or more in LitExtension&apos;s 2026 guide, and Elogic&apos;s cost index puts enterprise B2B builds at $250,000 to $500,000+. Shopify says Plus migrations average three to four months. Integrations, custom modules and B2B pricing move the number more than SKU count does.
+                A Magento 2 or Adobe Commerce to Shopify Plus migration costs about $20,000 to $150,000 or more in <SourceLink href={SRC.litextensionCost}>LitExtension&apos;s 2026 guide</SourceLink>, and <SourceLink href={SRC.elogic}>Elogic&apos;s cost index</SourceLink> puts enterprise B2B builds at $250,000 to $500,000+. <SourceLink href={SRC.dataMigration}>Shopify says</SourceLink> Plus migrations average three to four months. Integrations, custom modules and B2B pricing move the number more than SKU count does.
               </p>
               <p style={BODY_STYLE}>
-                Budget the platform separately: Shopify Plus is $2,300 a month on a 3-year term or $2,500 a month on a 1-year term in US dollars (<SourceLink href={SRC.plusPlan}>Shopify Help Center</SourceLink>). Sources for the project ranges: <SourceLink href={SRC.litextensionCost}>LitExtension</SourceLink>, <SourceLink href={SRC.elogic}>Elogic</SourceLink> and <SourceLink href={SRC.dataMigration}>Shopify</SourceLink>.
+                Budget the platform separately: Shopify Plus is $2,300 a month on a 3-year term or $2,500 a month on a 1-year term in US dollars (<SourceLink href={SRC.plusPlan}>Shopify Help Center</SourceLink>).
               </p>
               <nav aria-label="On this page" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px 18px', marginTop: '18px', fontSize: '14.5px' }}>
                 <a href="#migration-cost" style={LINK_STYLE}>Cost</a>
@@ -1330,7 +1330,7 @@ export default function MagentoToShopifyPage() {
             <div style={{ maxWidth: '900px' }}>
               <h2 style={{ ...H2_STYLE, fontSize: 'clamp(24px, 3vw, 32px)' }}>About this guide</h2>
               <p style={BODY_STYLE}>
-                Written by <Link href="/about" style={LINK_STYLE}>Bhavesh Barot</Link>, founder of FactoryJet (<SourceLink href="https://www.linkedin.com/in/bhavesh-ai-gtm-expert/">LinkedIn</SourceLink>). FactoryJet is a registered Shopify Partner and has served 500+ businesses. Last reviewed September 17, 2026, against the Shopify, Adobe and Google documentation listed below. Platform rules and prices change, so check the linked source before you sign anything.
+                Written by <Link href="/about" style={LINK_STYLE}>Bhavesh Barot</Link>, founder of FactoryJet (<SourceLink href="https://www.linkedin.com/in/bhavesh-ai-gtm-expert/">LinkedIn</SourceLink>). FactoryJet is a registered Shopify Partner and has served 500+ businesses. Updated October 22, 2026. Sources were first reviewed on September 17, 2026, the EU section was added on October 21, and the Shopify migration figures in the runbook were rechecked on October 22, against the Shopify, Adobe and Google documentation listed below. Platform rules and prices change, so check the linked source before you sign anything.
               </p>
 
               <h3 style={H3_STYLE}>Sources</h3>

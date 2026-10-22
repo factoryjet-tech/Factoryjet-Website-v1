@@ -807,6 +807,14 @@ export default function ShopifyPage() {
                   <Link href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
                     Shopify vs WooCommerce for US small businesses
                   </Link>
+                  , the{' '}
+                  <Link href="/comparisons/shopify-vs-woocommerce" className="font-medium text-[#B23E13] underline underline-offset-2">
+                    Shopify vs WooCommerce cost and feature comparison
+                  </Link>
+                  ,{' '}
+                  <Link href="/comparisons/shopify-plus-vs-custom-headless-nextjs" className="font-medium text-[#B23E13] underline underline-offset-2">
+                    Shopify Plus vs a custom Next.js storefront
+                  </Link>
                   , or see all our{' '}
                   <Link href="/services/ecommerce-development" className="font-medium text-[#B23E13] underline underline-offset-2">
                     ecommerce development services

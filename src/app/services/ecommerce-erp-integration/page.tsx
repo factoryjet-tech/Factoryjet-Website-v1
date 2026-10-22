@@ -1456,7 +1456,14 @@ export default function EcommerceErpIntegrationPage() {
                   >
                     ecommerce for manufacturers
                   </Link>{' '}
-                  covers stores for companies that make what they sell.
+                  covers stores for companies that make what they sell. Running SuiteCommerce on NetSuite today? See{' '}
+                  <Link
+                    href="/replatforming/netsuite-suitecommerce-to-shopify-plus"
+                    className="font-semibold text-fj-ink underline underline-offset-4"
+                  >
+                    NetSuite SuiteCommerce to Shopify Plus
+                  </Link>
+                  , which keeps NetSuite as the ERP and moves only the storefront.
                 </p>
               </div>
 

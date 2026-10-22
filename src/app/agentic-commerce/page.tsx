@@ -17,14 +17,15 @@ import AiVisibilityCtaBand from '@/components/ai-visibility/AiVisibilityCtaBand'
 
 import './agentic-commerce.css';
 
-const PAGE_MODIFIED = '2026-08-29';
+// Freshness signal. Bump only when the page content actually changes.
+const PAGE_MODIFIED = '2026-10-22';
 const URL = 'https://factoryjet.com/agentic-commerce';
 
 /* ── SEO / Metadata ─────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: 'Agentic Commerce Explained: 2026 Architecture Guide for Brands | FactoryJet',
+  title: 'Agentic Commerce Explained: The 2026 Guide | FactoryJet',
   description:
-    'What is agentic commerce? A comprehensive 2026 guide to how AI agents discover, compare, and buy on shoppers behalf, who is building it (OpenAI, Stripe, Visa, Mastercard, Shopify), and how brands get agent-ready.',
+    'Agentic commerce explained: how AI agents find and buy for shoppers, the protocols behind it (ACP, AP2, UCP, Visa, Mastercard) and how brands get agent-ready.',
   keywords: [
     'agentic commerce',
     'what is agentic commerce',
@@ -39,9 +40,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     siteName: 'FactoryJet',
-    title: 'Agentic Commerce Explained: 2026 Architecture Guide for Brands | FactoryJet',
+    title: 'Agentic Commerce Explained: The 2026 Guide | FactoryJet',
     description:
-      'How AI shopping agents are rewiring retail discovery and checkout: what agentic commerce is, who is building it, how it differs from traditional ecommerce, and how brands get agent-ready.',
+      'How AI shopping agents change retail discovery and checkout: what agentic commerce is, who is building it, how it differs from traditional ecommerce, and how brands get agent-ready.',
     url: URL,
     images: [
       { url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Agentic commerce explained for brands by FactoryJet' },
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Agentic Commerce Explained: 2026 Architecture Guide for Brands | FactoryJet',
+    title: 'Agentic Commerce Explained: The 2026 Guide | FactoryJet',
     description:
       'How AI agents are rewiring online buying, and how modern brands get agent-ready. A 2026 field guide.',
     images: ['https://factoryjet.com/og-default.png'],
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
 
 /* ── Definitions (drive both the on-page glossary and DefinedTermSet schema) ── */
 const DEFINITIONS = [
-  { term: 'Agentic commerce', body: 'Commerce carried out by autonomous AI agents acting on behalf of shoppers or businesses. The agent discovers products, compares attributes and pricing, and executes checkout with minimal human input, rather than a shopper manually navigating a website.' },
+  { term: 'Agentic commerce', body: 'Commerce carried out by autonomous AI agents acting on behalf of shoppers or businesses. The agent discovers products, compares attributes and pricing, and executes checkout with minimal human input, rather than a shopper clicking through a website.' },
   { term: 'Agentic AI', body: 'Artificial intelligence designed to reason, plan, and execute multi-step deterministic tasks toward a goal. Agentic AI calls external APIs, verifies data outputs, and completes workflows with bounded supervision.' },
   { term: 'AI commerce', body: 'The application of artificial intelligence across retail operations: search indexing, dynamic pricing, support triage, and autonomous agent-to-agent transactions. Agentic commerce represents the transaction-layer evolution of AI commerce.' },
   { term: 'AI shopping agent', body: 'An intelligent software agent that purchases items on behalf of a consumer. It parses natural-language intent, queries catalog feeds across multiple stores, compares verified reviews, and completes transactions inside chat interfaces or connected apps.' },
@@ -74,38 +75,47 @@ const DEFINITIONS = [
 /* ── FAQ data (drives both the on-page accordion and the FAQPage schema) ──── */
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
   { key: 'basics', label: 'The Basics' },
-  { key: 'landscape', label: 'The Landscape & Rails' },
+  { key: 'rails', label: 'Protocols & Payment Rails' },
   { key: 'brands', label: 'Brand Readiness & Implementation' },
 ];
 
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
-  { category: 'basics', question: 'What is agentic commerce?', answer: 'Agentic commerce is digital commerce carried out by AI agents that act on behalf of consumers or business buyers. Instead of a shopper browsing a website and clicking buttons, an AI agent discovers products, compares options across merchant catalogs, and completes checkout autonomously.' },
-  { category: 'basics', question: 'What is agentic AI?', answer: 'Agentic AI is artificial intelligence that plans and executes multi-step actions toward a defined goal, rather than merely generating text. An agentic AI evaluates intermediate results, calls typed tools and APIs, checks inventory or pricing data, and finishes tasks with minimal human intervention.' },
-  { category: 'basics', question: 'What is the difference between agentic AI and generative AI?', answer: 'Generative AI creates content such as text, images, or conversational replies. Agentic AI uses reasoning to take real actions: it sets a plan, executes API calls, verifies outcomes, and completes tasks. Generative AI drafts the text; agentic AI executes the transaction.' },
-  { category: 'basics', question: 'What is the difference between an AI agent and agentic AI?', answer: 'An AI agent is a software worker with tools and permissions. Agentic AI is the underlying architecture and autonomous reasoning capability that allows single or multi-agent networks to accomplish complex tasks independently.' },
-  { category: 'basics', question: 'What is an AI shopping agent?', answer: 'An AI shopping agent is an application that shops for a human. It takes a prompt (e.g., "find waterproof trail shoes for wide feet under $160"), queries product feeds, evaluates real customer reviews, and executes the purchase directly within the assistant interface or browser.' },
-  { category: 'basics', question: 'What is AI commerce?', answer: 'AI commerce spans the broad utilization of artificial intelligence across commerce operations: product discovery, semantic search, dynamic catalog feeds, customer support triage, and autonomous agent-to-agent transactions.' },
-  { category: 'basics', question: 'How is agentic commerce different from traditional ecommerce?', answer: 'In traditional ecommerce, humans browse a storefront UI and click buttons to purchase, so visual merchandising and display ads win. In agentic commerce, AI software reads product feeds, structured schema data, and API endpoints to make purchasing decisions based on verifiable attributes and machine-readable data.' },
+  { category: 'basics', question: 'What is agentic commerce?', answer: 'Agentic commerce is online buying and selling done by AI agents that act for a shopper or a business buyer. Instead of a person browsing a website and clicking buttons, the agent finds products, compares options across stores, and can complete checkout once the person confirms. The merchant still sells the product, takes the payment, and ships the order.' },
+  { category: 'basics', question: 'What is agentic AI?', answer: 'Agentic AI is artificial intelligence that plans and carries out steps toward a goal, instead of only writing text. It can call tools and APIs, check results such as stock or price, and decide the next step. In shopping, that means it can search, compare, fill a cart, and hand the order to the merchant with the buyer approving the purchase.' },
+  { category: 'basics', question: 'What is the difference between agentic AI and generative AI?', answer: 'Generative AI creates content such as text, images, or chat replies. Agentic AI takes actions: it sets a plan, calls APIs, checks the outcome, and moves to the next step. A generative model can write a product description. An agentic system can find the product, check that it is in stock, and pass the order to the store.' },
+  { category: 'basics', question: 'What is the difference between an AI agent and agentic AI?', answer: 'An AI agent is one piece of software with a job, a set of tools, and permissions, such as a shopping assistant inside ChatGPT. Agentic AI is the wider approach: models that plan, use tools, and act with limited supervision. One agent or a group of agents working together can be built on that approach.' },
+  { category: 'basics', question: 'What is an AI shopping agent?', answer: 'An AI shopping agent is software that shops for a person. It takes a request such as "waterproof trail shoes for wide feet under $160", reads product feeds and reviews from many stores, ranks the options, and can complete the purchase inside the assistant. OpenAI says ChatGPT ranks multiple sellers of the same product on availability, price, quality, and whether the merchant is the primary seller.' },
+  { category: 'basics', question: 'What is AI commerce?', answer: 'AI commerce is the use of artificial intelligence across selling online: product search, recommendations, pricing, customer support, and catalog feeds. Agentic commerce is the part of AI commerce where software also completes the transaction. A store can use AI commerce tools today without supporting agent checkout, but agent checkout depends on the same clean product data.' },
+  { category: 'basics', question: 'How is agentic commerce different from traditional ecommerce?', answer: 'In traditional ecommerce a person browses a storefront and clicks to buy, so page design, ads, and merchandising decide a lot. In agentic commerce software reads your product feed, structured data, and checkout endpoints, then picks based on facts it can check: price, stock, shipping, returns, and reviews. Your storefront still matters for people. Your data matters for agents.' },
+  { category: 'basics', question: 'What does agentic commerce architecture look like?', answer: 'It has four layers. A product data layer, such as a feed or Shopify Catalog, that agents read. A protocol layer, such as ACP or UCP, that carries the cart and order between the agent and the store. A payment layer of tokenized credentials from Stripe, Visa, or Mastercard. Your existing order, tax, fraud, and fulfillment systems sit underneath and stay in charge.' },
 
-  { category: 'landscape', question: 'Is agentic commerce active in 2026, or is it experimental?', answer: 'It is active and growing rapidly. Payment networks and major tech platforms have deployed live agent-payment rails in 2026. While human shopping remains the majority, agentic discovery and autonomous purchasing are expanding exponentially across conversational engines and mobile assistants.' },
-  { category: 'landscape', question: 'Who is building agentic commerce infrastructure?', answer: 'The ecosystem is led by OpenAI (Agentic Commerce Protocol), Stripe (agent billing APIs), Visa (Intelligent Commerce), Mastercard (Agent Pay), PayPal (agent-ready wallet rails), and Shopify (GraphQL merchant agent tools).' },
-  { category: 'landscape', question: 'What is the Agentic Commerce Protocol?', answer: 'The Agentic Commerce Protocol is an open standard introduced by OpenAI and Stripe that enables AI agents to securely share carts, negotiate terms, and execute authenticated payments with merchants directly inside assistant environments like ChatGPT.' },
-  { category: 'landscape', question: 'What is the difference between conversational commerce and agentic commerce?', answer: 'Conversational commerce requires human back-and-forth messaging inside a chat widget. Agentic commerce delegates the entire multi-step shopping and checkout task to the AI agent, which executes the transaction autonomously.' },
-  { category: 'landscape', question: 'Will AI shopping agents replace direct brand storefronts?', answer: 'No. Direct storefronts remain the central source of truth for product catalogs, brand identity, and customer relationships. However, stores must now serve both human shoppers and AI software by exposing structured data, clean API feeds, and agent-compatible checkout endpoints.' },
+  { category: 'rails', question: 'Is agentic commerce live in 2026, or still experimental?', answer: 'It is live but early. OpenAI launched Instant Checkout in ChatGPT on 29 September 2025 for US users buying from US Etsy sellers. Shopify says its Agentic Storefronts channel connects merchants to ChatGPT, Microsoft Copilot, and AI Mode in Google Search and the Gemini app, limited to businesses selling to US buyers. Most shopping still happens on normal storefronts.' },
+  { category: 'rails', question: 'Who is building agentic commerce infrastructure?', answer: 'OpenAI and Stripe co-developed the Agentic Commerce Protocol, which powers Instant Checkout in ChatGPT. Google announced the Agent Payments Protocol (AP2) with more than 60 organizations. Shopify and Google co-developed the Universal Commerce Protocol. Visa runs Intelligent Commerce with tokenized credentials for agents, and Mastercard runs Agent Pay with Agentic Tokens. PayPal is one of the named AP2 partners.' },
+  { category: 'rails', question: 'What is the Agentic Commerce Protocol?', answer: 'The Agentic Commerce Protocol (ACP) is an open standard co-developed by Stripe and OpenAI so AI agents and businesses can complete a purchase together. Stripe says it is open source and Apache 2.0 licensed. The merchant stays the merchant of record, accepts or declines each order, and charges the payment through its own provider. It powers Instant Checkout in ChatGPT.' },
+  { category: 'rails', question: 'What is the Agent Payments Protocol (AP2)?', answer: 'AP2 is an open protocol Google announced on 17 September 2025 for agent-led payments. It works as an extension of the Agent2Agent protocol and the Model Context Protocol. It uses signed "mandates": an Intent Mandate records what the user asked for and their limits, and a Cart Mandate records the exact items and price the user approved. Partners named include Mastercard, PayPal, and American Express.' },
+  { category: 'rails', question: 'What is agentic tokenization?', answer: 'Agentic tokenization replaces a real card number with a token that an AI agent can use only within set limits. Visa calls these tokenized digital credentials and says only the consumer can tell the agent when to use one. Mastercard calls them Agentic Tokens, built on the tokenization behind contactless and card-on-file payments, and requires agents to be registered and verified first.' },
+  { category: 'rails', question: 'What is the difference between conversational commerce and agentic commerce?', answer: 'Conversational commerce is a person chatting with a brand, usually in a chat widget or messaging app, and still doing the buying themselves. Agentic commerce hands the search, comparison, and checkout steps to an AI agent, with the person confirming the purchase. The agent may talk to many stores in one session, not one brand.' },
+  { category: 'rails', question: 'Will AI shopping agents replace direct brand storefronts?', answer: 'No. Your store stays the source of truth for products, prices, and customer relationships. In both ACP and Shopify Agentic Storefronts the merchant remains the merchant of record and the order lands in your own admin. What changes is that the store now serves two readers: people who browse, and agents that read your feed, structured data, and checkout endpoints.' },
 
-  { category: 'brands', question: 'How do brands get ready for agentic commerce?', answer: 'Brands prepare across three pillars: First, achieve machine legibility through rich schema markup and clean merchant feeds. Second, achieve transactability with accurate real-time inventory and pricing APIs. Third, deploy autonomous operational agents to manage multi-channel order synchronization.' },
-  { category: 'brands', question: 'Can mid-sized brands compete in agentic commerce against retail giants?', answer: 'Yes. AI agents evaluate data accuracy, inventory availability, and verified customer reviews rather than advertising budgets. A mid-sized brand with clean structured data and strong product specifications can outrank legacy retailers in AI shopping queries.' },
-  { category: 'brands', question: 'How does agentic commerce change SEO and product discovery?', answer: 'Discovery shifts from keyword search rankings to AI citation and recommendation engines. Brands must optimize for generative engine optimization (GEO) and structured Product JSON-LD markup so AI search platforms can parse and cite their catalog accurately.' },
-  { category: 'brands', question: 'How do security and payment authorizations work in agentic commerce?', answer: 'Agent transactions utilize tokenized credentials with hard spending limits, biometric user authorizations, and single-use transaction tokens enforced by payment networks (Visa, Mastercard, Stripe), ensuring agents cannot exceed pre-approved purchase thresholds.' },
-  { category: 'brands', question: 'How does FactoryJet engineer agentic commerce for brands?', answer: 'We engineer structured product feeds, deploy nested Product and Offer schemas, optimize API endpoints for AI indexing, and build custom back-office agents that automate order triage and ERP inventory synchronization.' },
-  { category: 'brands', question: 'How do we get started with an agentic readiness audit?', answer: 'Submit your website URL for a comprehensive agentic readiness scan. We analyze your catalog structure, schema completeness, and AI search visibility, providing a prioritized roadmap to make your store agent-ready.' },
+  { category: 'brands', question: 'How can brands prepare for agentic commerce?', answer: 'Start with your product data: complete titles, prices, stock, shipping, return terms, and GTINs in a feed and in Product schema on each page. Next, make sure your checkout can be reached by an agent, through Shopify Agentic Storefronts or an ACP integration with your payment provider. Then check whether AI assistants already name you, and fix the pages they skip.' },
+  { category: 'brands', question: 'How do you build a business case for agentic commerce readiness?', answer: 'Measure what you have before you spend. Pull how many orders and sessions already come from ChatGPT, Copilot, Perplexity, and Google AI Mode in your analytics. Run the buyer questions your customers ask through those assistants and count how often you are named. Then price the fixes: feed cleanup, schema, and checkout access. Most of that work also helps normal Google Shopping.' },
+  { category: 'brands', question: 'How can businesses upgrade to agentic checkout technology?', answer: 'The route depends on your platform. Shopify merchants can turn on the Agentic Storefronts sales channel in the Shopify admin. Stores on other platforms can sync products to Shopify Catalog through the Agentic Plan, which Shopify says has no monthly fee. Stores on Stripe can enable agentic payments for ACP; OpenAI says that can take as little as one line of code.' },
+  { category: 'brands', question: 'How can merchants evaluate infrastructure readiness for agentic commerce protocols?', answer: 'Check five things. Can you publish a full product feed (OpenAI asks for CSV or JSON, refreshed daily)? Does your stock and price data update fast enough to stay accurate? Can your checkout create and update a session through an API? Does your payment provider support tokenized agent payments? Can your order system accept or decline an order and report status back?' },
+  { category: 'brands', question: 'How do you build secure agentic commerce?', answer: 'Use the controls the payment rails already provide. Accept only tokenized credentials scoped to a set amount and merchant, never raw card numbers. Keep your own fraud checks on every order, since ACP lets the merchant accept or decline. Tell verified agents apart from scrapers at your CDN. Log each agent order with its approval record so disputes can be traced.' },
+  { category: 'brands', question: 'How does AI decisioning work in agentic commerce?', answer: 'The agent reads the request, pulls matching products from feeds and the web, then ranks them on facts it can check. OpenAI says ChatGPT shopping results are organic and unsponsored, and when several merchants sell the same item it weighs availability, price, quality, and whether the merchant is the primary seller. Shopify lists data quality, availability, and pricing as factors.' },
+  { category: 'brands', question: 'How can marketplaces and multi-channel sellers prepare for agentic commerce?', answer: 'Treat each marketplace listing as a feed an agent may read. Keep titles, GTINs, prices, and stock identical across your own store, Amazon, Walmart, and other channels, since an agent comparing sellers will spot a mismatch. Make your own store the most complete source, because agents weigh whether a merchant is the primary seller. Sync inventory so agents never buy what you cannot ship.' },
+  { category: 'brands', question: 'Can mid-sized brands compete in agentic commerce against retail giants?', answer: 'Yes, on the factors agents check. OpenAI says ChatGPT product results are unsponsored and ranked on relevance, so ad budget does not buy a place there. A mid-sized brand with complete product data, accurate stock, clear return terms, and real reviews can be picked over a larger retailer whose feed is thin or out of date.' },
+  { category: 'brands', question: 'How does agentic commerce change SEO and product discovery?', answer: 'Discovery moves from ranking on a results page to being named in an AI answer. That rewards pages AI engines can read and quote: Product and Offer schema, clear specs, direct answers to buyer questions, and consistent facts across your site and listings. Generative engine optimization (GEO) is the name for that work, and it sits on top of normal SEO.' },
+  { category: 'brands', question: 'How do security and payment authorizations work in agentic commerce?', answer: 'The shopper approves, the network issues a limited token, and the merchant charges it. OpenAI says ChatGPT payment tokens are authorized only for specific amounts and merchants. Visa lets consumers set spending limits and conditions for agent purchases. Mastercard requires agents to be registered and verified before they can pay. Google AP2 records the approved cart in a signed Cart Mandate.' },
+  { category: 'brands', question: 'How does FactoryJet build agentic commerce for brands?', answer: 'We clean and complete your product feed, add Product and Offer schema to every product page, connect your store to the agent channels your platform supports, and build back-office agents that keep inventory and orders in sync with your ERP. You see a working demo on your own data before you sign, and each phase has a fixed price quoted in writing after scoping.' },
+  { category: 'brands', question: 'How do we get started with an agentic readiness audit?', answer: 'Send your website URL. We check your catalog structure, schema coverage, feed quality, and whether AI assistants name your brand for your buyer questions. You get a list of fixes in priority order. You can run the free AI visibility checker first to see how often assistants mention you today.' },
 ];
 
 /* ── JSON-LD Schemas ─────────────────────────────────────────────────────── */
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Agentic Commerce Explained: The 2026 Guide for Brands',
+  headline: 'Agentic Commerce Explained: The 2026 Guide',
   description:
     'What agentic commerce is, who is building it, how it differs from traditional ecommerce, and how brands get agent-ready.',
   author: {
@@ -122,6 +132,19 @@ const articleSchema = {
   mainEntityOfPage: { '@type': 'WebPage', '@id': URL },
   datePublished: '2026-07-11T00:00:00.000Z',
   dateModified: `${PAGE_MODIFIED}T00:00:00.000Z`,
+};
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${URL}#webpage`,
+  url: URL,
+  name: 'Agentic Commerce Explained: The 2026 Guide',
+  description:
+    'Agentic commerce explained: how AI agents find and buy for shoppers, the protocols behind it (ACP, AP2, UCP, Visa, Mastercard) and how brands get agent-ready.',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const glossarySchema = {
@@ -149,7 +172,7 @@ const faqSchema = {
 
 /* ── Small building blocks ───────────────────────────────────────────────── */
 const SHIFTS = [
-  { b: 'Discovery moves from search to answer', p: 'Buyers ask an AI and it picks, instead of scrolling a results page. Your product has to be legible to agents, not just ranked on Google.' },
+  { b: 'Discovery moves from search to answer', p: 'Buyers ask an AI and it picks, instead of scrolling a results page. Ranking on Google still helps, and now your product also has to be legible to agents.' },
   { b: 'The buyer becomes software', p: 'An agent reads your data, compares, and checks out. Clean feeds, structured data, and machine-readable pricing win over brand polish alone.' },
   { b: 'Selling becomes agent-to-agent', p: 'Your systems will transact with buying agents directly. Brands that expose clean, accurate commerce get bought. Those that do not get skipped.' },
 ];
@@ -163,12 +186,12 @@ const USES = [
 ];
 
 const PLAYERS = [
-  { n: 'OpenAI', p: 'Put checkout inside ChatGPT via its Agentic Commerce Protocol, built with Stripe, so people can buy from merchants in the chat.' },
-  { n: 'Stripe', p: 'Payment tooling for agents, including the shared protocol with OpenAI and controls for what an agent may spend.' },
-  { n: 'Visa', p: 'Intelligent Commerce, a program to let trusted AI agents pay on a cardholder behalf with guardrails.' },
-  { n: 'Mastercard', p: 'Agent Pay, its framework for secure, authorized payments made by AI agents.' },
-  { n: 'PayPal', p: 'Agent-ready checkout so its wallet works inside agent-driven purchases.' },
-  { n: 'Shopify', p: 'Agent-facing commerce work so its millions of merchants can be discovered and bought by assistants.' },
+  { n: 'OpenAI', p: 'Launched Instant Checkout in ChatGPT on 29 September 2025, starting with US Etsy sellers. Merchants pay a fee on completed purchases, and OpenAI says checkout items get no ranking preference.' },
+  { n: 'Stripe', p: 'Co-developed the Agentic Commerce Protocol with OpenAI and powers Instant Checkout. Its Shared Payment Token was the first implementation of the ACP delegated payment spec.' },
+  { n: 'Google', p: 'Announced the Agent Payments Protocol (AP2) on 17 September 2025 with more than 60 organizations, and co-developed the Universal Commerce Protocol with Shopify.' },
+  { n: 'Visa', p: 'Intelligent Commerce, announced 30 April 2025: tokenized digital credentials and consumer-set spending limits so trusted AI agents can pay on a cardholder\'s behalf.' },
+  { n: 'Mastercard', p: 'Agent Pay, announced 29 April 2025: Agentic Tokens built on its existing tokenization, with AI agents registered and verified before they can pay.' },
+  { n: 'Shopify', p: 'Shopify Catalog makes products readable to agents, and the Agentic Storefronts channel sends them to ChatGPT, Microsoft Copilot, and Google AI Mode, with checkout handled by Shopify.' },
 ];
 
 const READY = [
@@ -193,6 +216,7 @@ export default function AgenticCommercePage() {
   return (
     <>
       <JsonLd data={articleSchema} id="article-schema" />
+      <JsonLd data={webPageSchema} id="webpage-schema" />
       <JsonLd data={glossarySchema} id="glossary-schema" />
       <JsonLd data={faqSchema} id="faq-schema" />
       <BreadcrumbSchema
@@ -218,7 +242,7 @@ export default function AgenticCommercePage() {
             <div className="agc-hero-copy">
               <span className="agc-pill"><span className="d" /> Agentic Commerce · Field Guide 2026</span>
               <h1 className="agc-h1 disp">Agentic commerce: how <span className="u">AI agents</span> are rewiring the way the world buys</h1>
-              <p className="agc-lead">AI agents are discovering products, comparing options, and checking out for shoppers. Here is what agentic commerce means, who is building it, and how brands get ready. Built on 12 years and 500+ commerce builds.</p>
+              <p className="agc-lead">AI agents are discovering products, comparing options, and checking out for shoppers. Here is what agentic commerce means, who is building it, and how brands get ready. Written from 12 years of commerce work and 500+ businesses served.</p>
               <HeroInlineForm region="us" source="us_agentic_commerce_hero" submitLabel="Get my readiness audit" />
               <div className="agc-trust">
                 <span className="tk"><Check size={15} strokeWidth={2.4} /> 500+ businesses served</span>
@@ -270,7 +294,7 @@ export default function AgenticCommercePage() {
         <section className="agc-answer">
           <div className="agc-wrap in">
             <div className="q disp"><span className="ql">Quick answer</span>What is agentic commerce?</div>
-            <div className="a"><p><b>Agentic commerce is commerce carried out by AI agents that act on a person or business behalf:</b> they discover products, compare options, and can complete checkout with limited human input. Instead of a shopper clicking through a store, an AI agent does the buying, and increasingly the selling, guided by goals you set. It is the next layer on top of ecommerce, the way mobile was a layer on top of the web.</p></div>
+            <div className="a"><p><b>Agentic commerce is buying and selling done by AI agents acting for a person or a business.</b> The agent finds products, compares them, and completes checkout after the shopper confirms. The store stays the merchant of record. Shoppers have bought this way inside ChatGPT since September 2025, through the Agentic Commerce Protocol that OpenAI built with Stripe.</p></div>
           </div>
         </section>
 
@@ -323,7 +347,7 @@ export default function AgenticCommercePage() {
         {/* USE CASES (BENTO) */}
         <section className="agc-sec pt0">
           <div className="agc-wrap">
-            <div className="agc-sh"><span className="agc-eyebrow">What it enables</span><h2 className="disp">What agentic commerce actually looks like</h2><p>Not science fiction. These are the patterns already showing up in 2026.</p></div>
+            <div className="agc-sh"><span className="agc-eyebrow">What it enables</span><h2 className="disp">What agentic commerce actually looks like</h2><p>The first two are live today in ChatGPT and through Shopify&apos;s agent channels. The other three are patterns brands are building toward.</p></div>
             <div className="agc-bento">
               {USES.map(({ Icon, title, body, span }) => (
                 <div key={title} className={`agc-crystal agc-bcard ${span}`}>
@@ -351,11 +375,35 @@ export default function AgenticCommercePage() {
         {/* PLAYERS */}
         <section className="agc-sec pt0">
           <div className="agc-wrap">
-            <div className="agc-sh"><span className="agc-eyebrow">The landscape</span><h2 className="disp">Who is building agentic commerce</h2><p>As of early 2026, the payment and platform giants are laying the rails. The standards are still settling, which is exactly why brands should prepare now. For store-side AI agents you can install today, see our comparison of the{' '}<Link href="/blog/best-ai-agents-for-ecommerce-2026" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>best AI agents for ecommerce in 2026</Link>.</p></div>
+            <div className="agc-sh"><span className="agc-eyebrow">Who builds it</span><h2 className="disp">Who is building agentic commerce</h2><p>As of 22 Oct 2026, the payment networks and platforms have each shipped a protocol or a token program. There are several standards and they overlap, so brands should make their data ready for all of them instead of betting on one. For store-side AI agents you can install today, see our comparison of the{' '}<Link href="/blog/best-ai-agents-for-ecommerce-2026" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>best AI agents for ecommerce in 2026</Link>.</p></div>
             <div className="agc-defs three">
               {PLAYERS.map((pl) => (
                 <div key={pl.n} className="agc-crystal agc-defcard"><div className="term">{pl.n}</div><p>{pl.p}</p></div>
               ))}
+            </div>
+
+            <div className="agc-sh" style={{ marginTop: '48px' }}>
+              <h3 className="disp" style={{ fontSize: '22px' }}>The protocols and launches, from each company&apos;s own page</h3>
+              <p>Every line below comes from the vendor&apos;s own announcement or documentation. We read each page on 22 Oct 2026 and kept only what it says.</p>
+              <ul style={{ listStyle: 'disc', paddingLeft: '22px', marginTop: '14px', color: 'var(--ink2)', fontSize: '16px', lineHeight: 1.6 }}>
+                <li style={{ marginTop: '10px' }}><b>Agentic Commerce Protocol (ACP), Stripe and OpenAI, 29 Sep 2025.</b> An open standard &ldquo;codeveloped by Stripe and OpenAI&rdquo;, open source under Apache 2.0. A business builds once and can sell through any ACP-compatible agent, stays the merchant of record, and can accept or decline each order using its own fraud signals. <a href="https://stripe.com/blog/developing-an-open-standard-for-agentic-commerce" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>Stripe announcement</a> (read 22 Oct 2026).</li>
+                <li style={{ marginTop: '10px' }}><b>Instant Checkout in ChatGPT, OpenAI, 29 Sep 2025.</b> US ChatGPT Plus, Pro, and Free users could buy from US Etsy sellers in chat, single items first, with over a million Shopify merchants announced as coming. Merchants pay a fee on completed purchases. OpenAI says product results are organic and unsponsored, and checkout items are not preferred. <a href="https://openai.com/index/buy-it-in-chatgpt/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>OpenAI launch post</a> (read 22 Oct 2026). OpenAI&apos;s developer docs ask merchants for a CSV or JSON product feed, refreshed daily: <a href="https://developers.openai.com/commerce/guides/key-concepts" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>key concepts</a> (read 22 Oct 2026).</li>
+                <li style={{ marginTop: '10px' }}><b>Agent Payments Protocol (AP2), Google, 17 Sep 2025.</b> An open protocol for agent-led payments, built with more than 60 organizations including Mastercard, PayPal, American Express, Adyen, and Etsy. It can run as an extension of the Agent2Agent protocol and the Model Context Protocol, and uses signed Intent and Cart Mandates as proof of what the user approved. <a href="https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>Google Cloud blog</a> (read 22 Oct 2026).</li>
+                <li style={{ marginTop: '10px' }}><b>Universal Commerce Protocol (UCP) and Agentic Storefronts, Shopify.</b> Shopify says UCP is an open standard it co-developed with Google, backed by Amazon, Mastercard, Microsoft, Stripe, Visa, and others. Agentic Storefronts is a sales channel in the Shopify admin for ChatGPT, Microsoft Copilot, and AI Mode in Google Search and the Gemini app, for businesses selling to US buyers. <a href="https://www.shopify.com/blog/how-agentic-commerce-works" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>Shopify guide, updated 18 Jun 2026</a> (read 22 Oct 2026).</li>
+                <li style={{ marginTop: '10px' }}><b>Visa Intelligent Commerce, 30 Apr 2025.</b> Replaces card details with tokenized digital credentials that confirm an agent may act for the consumer, with spending limits the consumer sets. Named partners include Anthropic, Microsoft, OpenAI, Perplexity, and Stripe. <a href="https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.21361.html" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>Visa press release</a> (read 22 Oct 2026).</li>
+                <li style={{ marginTop: '10px' }}><b>Mastercard Agent Pay, 29 Apr 2025.</b> Introduces Mastercard Agentic Tokens, built on the tokenization behind contactless and card-on-file payments. AI agents must be registered and verified before they can pay, and every party can see that an agent made the transaction. <a href="https://www.mastercard.com/us/en/news-and-trends/press/2025/april/mastercard-unveils-agent-pay-pioneering-agentic-payments-technology-to-power-commerce-in-the-age-of-ai.html" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>Mastercard press release</a> (read 22 Oct 2026).</li>
+              </ul>
+              <h3 className="disp" style={{ fontSize: '22px', marginTop: '36px' }}>What an AI agent does at checkout, step by step</h3>
+              <p>This is the ACP flow OpenAI documents for Instant Checkout. Shopify&apos;s flow has the same shape, with Shopify Checkout in the middle.</p>
+              <ol style={{ listStyle: 'decimal', paddingLeft: '22px', marginTop: '14px', color: 'var(--ink2)', fontSize: '16px', lineHeight: 1.6 }}>
+                <li style={{ marginTop: '8px' }}>The shopper asks a question and the agent shows matching products from merchant feeds and the web.</li>
+                <li style={{ marginTop: '8px' }}>The shopper taps Buy and confirms the order, shipping, and payment details. Nothing is charged without that confirmation.</li>
+                <li style={{ marginTop: '8px' }}>The agent calls the merchant&apos;s ACP endpoints to create or update a checkout session.</li>
+                <li style={{ marginTop: '8px' }}>A payment provider issues a one-time token with a maximum amount and an expiry, and the agent passes it to the merchant.</li>
+                <li style={{ marginTop: '8px' }}>The merchant checks the order, works out shipping and sales tax, runs its fraud checks, and charges the token through its own processor.</li>
+                <li style={{ marginTop: '8px' }}>The merchant accepts or declines and reports the status back. The agent shows the confirmation, and the merchant ships and handles returns as usual.</li>
+              </ol>
+              <p>Plain-language background is in our post on <Link href="/blog/what-is-agentic-commerce" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>what agentic commerce is</Link>. If you own a brand and want to know what to do first, read <Link href="/agentic-commerce-for-brands" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>agentic commerce for brands</Link>.</p>
             </div>
           </div>
         </section>
@@ -380,6 +428,21 @@ export default function AgenticCommercePage() {
               {READY.map((s) => (
                 <div key={s.n} className="agc-step"><div className="n">{s.n}</div><h3 className="disp">{s.h}</h3><p>{s.p}</p></div>
               ))}
+            </div>
+            <div className="agc-sh" style={{ marginTop: '44px' }}>
+              <h3 className="disp" style={{ fontSize: '22px' }}>Agent-readiness checklist</h3>
+              <p>Each item maps to something a protocol or platform above asks for. If you can tick all of them, an agent can find, trust, and buy from your store.</p>
+              <ul style={{ listStyle: 'disc', paddingLeft: '22px', marginTop: '14px', color: 'var(--ink2)', fontSize: '16px', lineHeight: 1.6 }}>
+                <li style={{ marginTop: '8px' }}>A full product feed in CSV or JSON with IDs, titles, descriptions, prices, stock, images, and shipping options, refreshed at least daily.</li>
+                <li style={{ marginTop: '8px' }}>A GTIN or other standard product ID on every variant, the same on your store and every marketplace listing.</li>
+                <li style={{ marginTop: '8px' }}>Product, Offer, shipping, and return policy schema on each product page, rendered in the HTML (not only after JavaScript runs).</li>
+                <li style={{ marginTop: '8px' }}>Stock and price that update fast enough that an agent never sells what you cannot ship.</li>
+                <li style={{ marginTop: '8px' }}>A checkout an agent can reach: Shopify Agentic Storefronts, an ACP integration, or a payment provider that accepts tokenized agent payments.</li>
+                <li style={{ marginTop: '8px' }}>Your own fraud rules still running on agent orders, with a way to accept or decline each one.</li>
+                <li style={{ marginTop: '8px' }}>Bot rules at your CDN that let verified shopping agents and AI crawlers in and keep scrapers out.</li>
+                <li style={{ marginTop: '8px' }}>Analytics that tag orders and sessions from ChatGPT, Copilot, Perplexity, and Google AI Mode separately.</li>
+                <li style={{ marginTop: '8px' }}>A baseline of how often AI assistants name your brand today. Our free <Link href="/ai-visibility-checker" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>AI visibility checker</Link> gives you one, and our <Link href="/services/ai-seo" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>AI SEO service</Link> fixes the pages assistants skip.</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -437,7 +500,7 @@ export default function AgenticCommercePage() {
           <div className="agc-wrap">
             <div className="agc-finalcta">
               <span className="agc-eyebrow">Get started</span>
-              <h2 className="disp">Find out how agent-ready your brand really is</h2>
+              <h2 className="disp">Find out how agent-ready your brand is</h2>
               <p>Get a free agentic-readiness audit of your catalog, structured data, pricing feeds, and AI discovery, plus an engineering roadmap to ensure your store is chosen by AI shopping agents.</p>
               <Link href="/contact" className="agc-cta-btn">Get my free readiness audit</Link>
               <div className="obj">No long contracts. Keep the audit either way.</div>

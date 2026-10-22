@@ -1325,7 +1325,15 @@ export default function NetSuiteAiAgentsPage() {
               <Link href="/services/erp-ai-agents" className="font-semibold text-fj-ink underline underline-offset-4">
                 AI agents for ERP systems
               </Link>
-              . Oracle keeps its own running list of the NetSuite features that use AI.
+              . Oracle keeps its own running list of the NetSuite features that use AI. If your web store still runs
+              on SuiteCommerce, read{' '}
+              <Link
+                href="/replatforming/netsuite-suitecommerce-to-shopify-plus"
+                className="font-semibold text-fj-ink underline underline-offset-4"
+              >
+                SuiteCommerce to Shopify Plus with NetSuite kept as the ERP
+              </Link>
+              .
             </p>
             <SourceLinks ids={['nsAiFeatures']} />
             <div className={`${styles.factsBox} mt-10`} tabIndex={0} data-visual-facts="SHIPS">

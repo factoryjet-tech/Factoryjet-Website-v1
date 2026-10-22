@@ -764,7 +764,11 @@ export default function AIIntegrationServicesPage() {
                 <a href="/services/ai-consulting#readiness" className="font-semibold underline underline-offset-2 text-[#B23E13]">
                   AI readiness assessment
                 </a>
-                .
+                . Deciding which framework runs the integration? Our{' '}
+                <a href="/comparisons/n8n-vs-langchain-vs-crewai-enterprise" className="font-semibold underline underline-offset-2 text-[#B23E13]">
+                  n8n vs LangChain vs CrewAI comparison
+                </a>{' '}
+                covers when each one fits.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>

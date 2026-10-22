@@ -885,6 +885,12 @@ export default function WordPressDevelopmentPage() {
               <a href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
                 <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Shopify vs WooCommerce: which fits a WP-based business?</p>
               </a>
+              <a href="/replatforming/wordpress-to-shopify" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Moving a WordPress site or blog to Shopify: what exports and what has to be rebuilt</p>
+              </a>
+              <a href="/comparisons/shopify-vs-woocommerce" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Shopify vs WooCommerce: fees, hosting and plugins side by side</p>
+              </a>
             </div>
           </div>
         </section>

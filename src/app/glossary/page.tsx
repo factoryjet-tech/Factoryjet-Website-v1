@@ -18,12 +18,16 @@ import JsonLd from '@/components/JsonLd';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL = 'https://factoryjet.com/glossary';
+// Freshness signal. Keep honest: bump only when a definition, link or source changes.
+const PAGE_MODIFIED = '2026-10-22';
+// Every source URL below was fetched and the quoted claim read on this date.
+const SOURCES_READ = '22 October 2026';
 const ORANGE = '#B23E13';
 
 export const metadata: Metadata = {
-  title: 'Commerce & AI Glossary: GEO, Headless, AI Agents & More | FactoryJet',
+  title: 'Commerce & AI Glossary: GEO, MCP, Headless | FactoryJet',
   description:
-    'Plain-language definitions of the commerce, AI, and AI-search terms that matter, from generative engine optimization (GEO) and headless commerce to AI agents and unified commerce. A reference by FactoryJet.',
+    '49 plain-language definitions of commerce, AI and AI-search terms, from GEO and MCP to headless commerce, each linked to its primary source or FactoryJet guide.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
@@ -45,7 +49,9 @@ export const metadata: Metadata = {
 };
 
 /* ── glossary data ──────────────────────────────────────────────────────────── */
-interface Term { slug: string; term: string; def: string; see?: string }
+interface TermLink { href: string; label: string }
+interface TermSource { label: string; url: string }
+interface Term { slug: string; term: string; def: string; see?: string; links: ReadonlyArray<TermLink>; source?: TermSource }
 interface Category { key: string; title: string; blurb: string; terms: ReadonlyArray<Term> }
 
 const CATEGORIES: ReadonlyArray<Category> = [
@@ -54,18 +60,18 @@ const CATEGORIES: ReadonlyArray<Category> = [
     title: 'AI Search & Generative Engine Optimization',
     blurb: 'How content earns citations in AI answer engines like ChatGPT, Perplexity, and Google AI Overviews.',
     terms: [
-      { slug: 'generative-engine-optimization', term: 'Generative Engine Optimization (GEO)', def: `Generative Engine Optimization (GEO) is the practice of structuring and writing content so that generative AI answer engines such as ChatGPT, Perplexity, Google AI Overviews, Claude, and Gemini quote and cite it. Unlike traditional SEO, which optimizes to rank a link, GEO optimizes to be the source an AI extracts its answer from.` },
-      { slug: 'answer-engine-optimization', term: 'Answer Engine Optimization (AEO)', def: `Answer Engine Optimization (AEO) is optimizing content to be served as the direct answer to a question, whether in a featured snippet, a voice-assistant reply, or an AI-generated answer. It emphasizes clear question-and-answer structure, concise definitions, and FAQ schema.` },
-      { slug: 'ai-overviews', term: 'Google AI Overviews', def: `Google AI Overviews are AI-generated summaries shown at the top of Google results that synthesize information from multiple pages and link to their sources. Appearing as a cited source inside an AI Overview is a primary goal of generative engine optimization.` },
-      { slug: 'llms-txt', term: 'llms.txt', def: `llms.txt is a plain-text file placed at a website's root that gives large language models a curated, machine-readable summary of the site, its key facts, and its most important URLs. It helps AI systems understand and cite a site accurately.` },
-      { slug: 'structured-data', term: 'Structured data', def: `Structured data is standardized, machine-readable markup added to a page that describes its content to search engines and AI systems. On the web it is usually expressed with the Schema.org vocabulary in JSON-LD format.`, see: 'schema-org' },
-      { slug: 'schema-org', term: 'Schema.org', def: `Schema.org is a shared vocabulary of types and properties, such as Organization, Product, FAQPage, and Article, used to mark up web content so machines can understand it. It is maintained collaboratively by Google, Microsoft, Yahoo, and Yandex.` },
-      { slug: 'json-ld', term: 'JSON-LD', def: `JSON-LD (JavaScript Object Notation for Linked Data) is the format Google and AI engines prefer for structured data. It places a block of schema markup in a script tag, kept separate from the visible page content, and should be server-rendered so non-JavaScript crawlers can read it.` },
-      { slug: 'knowledge-graph', term: 'Knowledge graph', def: `A knowledge graph is a network of real-world entities (people, companies, places, concepts) and the relationships between them. Search and AI systems use it to disambiguate and connect information; the sameAs property links a website's entity to its profiles elsewhere to strengthen that connection.` },
-      { slug: 'entity-seo', term: 'Entity SEO', def: `Entity SEO is optimizing for a clearly defined entity, such as a brand, person, or product, rather than only for keywords. It relies on consistent naming, structured data, and authoritative references so search and AI systems recognize the entity as a single trusted node.` },
-      { slug: 'eeat', term: 'E-E-A-T', def: `E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness, the qualities Google's quality raters, and increasingly AI systems, use to judge content. Named authors with credentials, cited sources, and a transparent organization all strengthen it.` },
-      { slug: 'rag', term: 'Retrieval-Augmented Generation (RAG)', def: `Retrieval-Augmented Generation (RAG) is an AI technique that retrieves relevant documents from a knowledge source and feeds them to a language model, so its answer is grounded in specific, up-to-date information rather than only its training data.` },
-      { slug: 'semantic-search', term: 'Semantic search', def: `Semantic search interprets the meaning and intent behind a query rather than matching keywords literally. It uses embeddings and language models to return conceptually related results, which is how most AI answer engines find their sources.` },
+      { slug: 'generative-engine-optimization', term: 'Generative Engine Optimization (GEO)', def: `Generative Engine Optimization (GEO) is the practice of structuring and writing content so that generative AI answer engines such as ChatGPT, Perplexity, Google AI Overviews, Claude, and Gemini quote and cite it. The term comes from a 2023 research paper by Princeton, Georgia Tech, Allen AI and IIT Delhi researchers, published at KDD 2024. Unlike traditional SEO, which optimizes to rank a link, GEO optimizes to be the source an AI extracts its answer from.`, links: [{href: "/services/generative-engine-optimization", label: "GEO services"}, {href: "/ai-citation-study", label: "Our AI citation study"}], source: { label: "Aggarwal et al., \"GEO: Generative Engine Optimization\", KDD 2024 (arXiv:2311.09735)", url: "https://arxiv.org/abs/2311.09735" } },
+      { slug: 'answer-engine-optimization', term: 'Answer Engine Optimization (AEO)', def: `Answer Engine Optimization (AEO) is optimizing content to be served as the direct answer to a question, whether in a featured snippet, a voice-assistant reply, or an AI-generated answer. It emphasizes clear question-and-answer structure, concise definitions, and FAQ schema.`, links: [{href: "/services/ai-seo", label: "AI SEO services"}, {href: "/blog/aio-artificial-intelligence-optimization-guide", label: "AIO guide"}] },
+      { slug: 'ai-overviews', term: 'Google AI Overviews', def: `Google AI Overviews are AI-generated summaries shown at the top of Google results that synthesize information from multiple pages and link to their sources. Google says there are no additional requirements to appear in them beyond normal SEO best practice. Appearing as a cited source inside an AI Overview is a primary goal of generative engine optimization.`, links: [{href: "/blog/how-to-show-up-in-google-ai-overviews-small-business", label: "How to show up in AI Overviews"}, {href: "/ai-visibility-checker", label: "AI visibility checker"}], source: { label: "Google Search Central, \"AI features and your website\"", url: "https://developers.google.com/search/docs/appearance/ai-features" } },
+      { slug: 'llms-txt', term: 'llms.txt', def: `llms.txt is a Markdown file placed at a website's root that gives large language models a curated summary of the site, its key facts, and its most important URLs. Jeremy Howard proposed it in September 2024. It is cheap to publish, but an Ahrefs study of 137,000 sites found 97% of llms.txt files received no requests in May 2026, so treat it as housekeeping, not a ranking lever.`, links: [{href: "/ai-citation-study", label: "What our study found on llms.txt"}, {href: "https://ahrefs.com/blog/llmstxt-study/", label: "Ahrefs llms.txt study (15 Jun 2026)"}], source: { label: "Jeremy Howard, \"The /llms.txt file\" proposal (published 3 Sep 2024)", url: "https://llmstxt.org/" } },
+      { slug: 'structured-data', term: 'Structured data', def: `Structured data is standardized, machine-readable markup added to a page that describes its content to search engines and AI systems. On the web it is usually expressed with the Schema.org vocabulary in JSON-LD format.`, see: 'schema-org', links: [{href: "/services/technical-seo", label: "Technical SEO services"}], source: { label: "Google Search Central, \"Introduction to structured data markup\"", url: "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" } },
+      { slug: 'schema-org', term: 'Schema.org', def: `Schema.org is a shared vocabulary of types and properties, such as Organization, Product, FAQPage, and Article, used to mark up web content so machines can understand it. It was founded by Google, Microsoft, Yahoo, and Yandex, and is developed through an open community process.`, links: [{href: "/seo/technical-seo", label: "Technical SEO"}], source: { label: "Schema.org, \"About Schema.org\"", url: "https://schema.org/docs/about.html" } },
+      { slug: 'json-ld', term: 'JSON-LD', def: `JSON-LD (JavaScript Object Notation for Linked Data) is a W3C standard format for structured data, and the one Google recommends where a site's setup allows it. It places a block of schema markup in a script tag, kept separate from the visible page content, and should be server-rendered so non-JavaScript crawlers can read it.`, links: [{href: "/blog/generative-engine-optimization-guide", label: "GEO guide"}], source: { label: "W3C, \"JSON-LD 1.1\" Recommendation", url: "https://www.w3.org/TR/json-ld11/" } },
+      { slug: 'knowledge-graph', term: 'Knowledge graph', def: `A knowledge graph is a network of real-world entities (people, companies, places, concepts) and the relationships between them. Search and AI systems use it to disambiguate and connect information; the sameAs property links a website's entity to its profiles elsewhere to strengthen that connection.`, links: [{href: "/blog/how-to-get-chatgpt-to-recommend-your-business-2026", label: "Getting ChatGPT to recommend you"}] },
+      { slug: 'entity-seo', term: 'Entity SEO', def: `Entity SEO is optimizing for a clearly defined entity, such as a brand, person, or product, rather than only for keywords. It relies on consistent naming, structured data, and authoritative references so search and AI systems recognize the entity as a single trusted node.`, links: [{href: "/services/ai-seo", label: "AI SEO services"}] },
+      { slug: 'eeat', term: 'E-E-A-T', def: `E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness, the qualities Google's quality raters use to judge content. Google says trust matters most and that E-E-A-T itself is not a specific ranking factor. Named authors with credentials, cited sources, and a transparent organization all strengthen it.`, links: [{href: "/seo", label: "SEO services"}], source: { label: "Google Search Central, \"Creating helpful, reliable, people-first content\"", url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content" } },
+      { slug: 'rag', term: 'Retrieval-Augmented Generation (RAG)', def: `Retrieval-Augmented Generation (RAG) is an AI technique that retrieves relevant documents from a knowledge source and feeds them to a language model, so its answer is grounded in specific, up-to-date information rather than only its training data. The term comes from a 2020 paper by researchers at Facebook AI Research, University College London and New York University.`, links: [{href: "/blog/private-ai-for-business-own-data-2026", label: "Private AI on your own data"}], source: { label: "Lewis et al., \"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\", 2020 (arXiv:2005.11401)", url: "https://arxiv.org/abs/2005.11401" } },
+      { slug: 'semantic-search', term: 'Semantic search', def: `Semantic search interprets the meaning and intent behind a query rather than matching keywords literally. It uses embeddings and language models to return conceptually related results, which is how most AI answer engines find their sources.`, links: [{href: "/services/llm-development", label: "LLM development"}] },
     ],
   },
   {
@@ -73,17 +79,17 @@ const CATEGORIES: ReadonlyArray<Category> = [
     title: 'AI & Automation',
     blurb: 'The building blocks of language models, agents, and automated workflows.',
     terms: [
-      { slug: 'llm', term: 'Large Language Model (LLM)', def: `A large language model (LLM) is an AI model trained on vast amounts of text to understand and generate human language. Models such as Claude, GPT, and Gemini power chatbots, AI search, and agentic systems.` },
-      { slug: 'ai-agent', term: 'AI agent', def: `An AI agent is a software system that uses a language model to pursue a goal by planning, calling tools or APIs, and taking actions with limited or no human intervention, rather than only answering a single prompt.`, see: 'agentic-ai' },
-      { slug: 'agentic-ai', term: 'Agentic AI', def: `Agentic AI refers to AI systems that act autonomously toward goals, making decisions, using tools, and completing multi-step tasks. It contrasts with a passive assistant that only responds to direct instructions.` },
-      { slug: 'multi-agent-system', term: 'Multi-agent system', def: `A multi-agent system coordinates several specialized AI agents that each handle part of a task and communicate to reach an outcome no single agent would complete alone, for example separate agents for research, drafting, and review.` },
-      { slug: 'mcp', term: 'Model Context Protocol (MCP)', def: `The Model Context Protocol (MCP) is an open standard that lets AI models connect to external tools, data sources, and services through a consistent interface. It standardizes how an agent reads context and takes actions across systems.` },
-      { slug: 'workflow-automation', term: 'Workflow automation', def: `Workflow automation uses software to run multi-step business processes with little manual effort. AI automation adds language models to tools like n8n, Zapier, and Make so workflows can interpret content and make decisions, not just move data between apps.` },
-      { slug: 'ai-chatbot', term: 'AI chatbot', def: `An AI chatbot is a conversational interface powered by a language model that answers questions and completes tasks in natural language. On a business site it can handle support, qualify leads, or guide product discovery.` },
-      { slug: 'prompt-engineering', term: 'Prompt engineering', def: `Prompt engineering is the practice of writing and structuring instructions to get reliable, accurate output from a language model. It includes providing context, examples, constraints, and a clear task definition.` },
-      { slug: 'fine-tuning', term: 'Fine-tuning', def: `Fine-tuning adapts a pre-trained language model to a specific domain or task by training it further on a curated dataset, improving accuracy and tone for that use case.` },
-      { slug: 'embeddings', term: 'Embeddings', def: `Embeddings are numerical representations of text or other data that capture meaning, so similar items sit close together in a mathematical space. They power semantic search, recommendations, and retrieval for AI systems.` },
-      { slug: 'vector-database', term: 'Vector database', def: `A vector database stores embeddings and retrieves the items most semantically similar to a query. It is a core component of retrieval-augmented generation and semantic search.` },
+      { slug: 'llm', term: 'Large Language Model (LLM)', def: `A large language model (LLM) is an AI model trained on vast amounts of text to understand and generate human language. Models such as Claude, GPT, and Gemini power chatbots, AI search, and agentic systems.`, links: [{href: "/services/llm-development", label: "LLM development"}] },
+      { slug: 'ai-agent', term: 'AI agent', def: `An AI agent is a software system that uses a language model to pursue a goal by planning, calling tools or APIs, and taking actions with limited or no human intervention, rather than only answering a single prompt.`, see: 'agentic-ai', links: [{href: "/services/ai-agent-development", label: "AI agent development"}, {href: "/blog/what-is-an-ai-agent-cost-2026", label: "What an AI agent costs to build"}] },
+      { slug: 'agentic-ai', term: 'Agentic AI', def: `Agentic AI refers to AI systems that act autonomously toward goals, making decisions, using tools, and completing multi-step tasks. It contrasts with a passive assistant that only responds to direct instructions.`, links: [{href: "/blog/what-is-agentic-ai", label: "What is agentic AI"}, {href: "/blog/agentic-ai-vs-ai-agents", label: "Agentic AI vs AI agents"}] },
+      { slug: 'multi-agent-system', term: 'Multi-agent system', def: `A multi-agent system coordinates several specialized AI agents that each handle part of a task and communicate to reach an outcome no single agent would complete alone, for example separate agents for research, drafting, and review.`, links: [{href: "/blog/multi-agent-workflows-langgraph-n8n-enterprise-erp-2026", label: "Multi-agent workflows"}, {href: "/comparisons/n8n-vs-langchain-vs-crewai-enterprise", label: "n8n vs LangChain vs CrewAI"}] },
+      { slug: 'mcp', term: 'Model Context Protocol (MCP)', def: `The Model Context Protocol (MCP) is an open-source standard that lets AI applications such as Claude or ChatGPT connect to external tools, data sources, and services through a consistent interface. It standardizes how an agent reads context and takes actions across systems.`, links: [{href: "/blog/custom-mcp-server-erp-crm-mid-sized-companies-2026", label: "Custom MCP servers for ERP and CRM"}], source: { label: "Model Context Protocol, \"What is the Model Context Protocol (MCP)?\"", url: "https://modelcontextprotocol.io/docs/getting-started/intro" } },
+      { slug: 'workflow-automation', term: 'Workflow automation', def: `Workflow automation uses software to run multi-step business processes with little manual effort. AI automation adds language models to tools like n8n, Zapier, and Make so workflows can interpret content and make decisions as well as move data between apps.`, links: [{href: "/services/ai-automation", label: "AI automation"}, {href: "/n8n-automation", label: "n8n automation"}, {href: "/comparisons/n8n-vs-langchain-vs-crewai-enterprise", label: "n8n vs LangChain vs CrewAI"}] },
+      { slug: 'ai-chatbot', term: 'AI chatbot', def: `An AI chatbot is a conversational interface powered by a language model that answers questions and completes tasks in natural language. On a business site it can handle support, qualify leads, or guide product discovery.`, links: [{href: "/services/ai-chatbot-development", label: "AI chatbot development"}, {href: "/blog/ai-chatbots-vs-ai-agents-business", label: "Chatbots vs agents"}] },
+      { slug: 'prompt-engineering', term: 'Prompt engineering', def: `Prompt engineering is the practice of writing and structuring instructions to get reliable, accurate output from a language model. It includes providing context, examples, constraints, and a clear task definition.`, links: [{href: "/services/ai-consulting", label: "AI consulting"}] },
+      { slug: 'fine-tuning', term: 'Fine-tuning', def: `Fine-tuning adapts a pre-trained language model to a specific domain or task by training it further on a curated dataset, improving accuracy and tone for that use case.`, links: [{href: "/services/llm-development", label: "LLM development"}] },
+      { slug: 'embeddings', term: 'Embeddings', def: `Embeddings are numerical representations of text or other data that capture meaning, so similar items sit close together in a mathematical space. They power semantic search, recommendations, and retrieval for AI systems.`, links: [{href: "/blog/private-ai-for-business-own-data-2026", label: "Private AI on your own data"}] },
+      { slug: 'vector-database', term: 'Vector database', def: `A vector database stores embeddings and retrieves the items most semantically similar to a query. It is a core component of retrieval-augmented generation and semantic search.`, links: [{href: "/services/ai-development", label: "AI development"}] },
     ],
   },
   {
@@ -91,23 +97,23 @@ const CATEGORIES: ReadonlyArray<Category> = [
     title: 'Commerce',
     blurb: 'The platforms, models, and metrics behind modern DTC and B2B commerce.',
     terms: [
-      { slug: 'ecommerce', term: 'E-commerce', def: `E-commerce is the buying and selling of goods and services online, including a brand's own store, online marketplaces, and B2B ordering portals.` },
-      { slug: 'dtc', term: 'Direct-to-consumer (DTC)', def: `Direct-to-consumer (DTC) is a model in which a brand sells straight to shoppers through its own channels, bypassing wholesalers and retailers to own the customer relationship and data.` },
-      { slug: 'b2b-commerce', term: 'B2B commerce', def: `B2B commerce is the online sale of products or services between businesses. It typically involves account-specific pricing, bulk ordering, approval workflows, and purchase-order payment, alongside or instead of a consumer storefront.` },
-      { slug: 'omnichannel-commerce', term: 'Omnichannel commerce', def: `Omnichannel commerce gives customers a consistent, connected experience across every channel, a brand's website, marketplaces, social shops, and physical stores, with inventory, orders, and customer data kept in sync.`, see: 'unified-commerce' },
-      { slug: 'unified-commerce', term: 'Unified commerce', def: `Unified commerce runs every sales channel on a single real-time platform and data source rather than stitching separate systems together, so inventory, orders, pricing, and customers stay consistent across store, marketplaces, and B2B at once.` },
-      { slug: 'headless-commerce', term: 'Headless commerce', def: `Headless commerce separates the storefront that shoppers see from the commerce engine behind it, connecting them through APIs. This lets teams build a fast, custom front end while keeping a proven backend for catalog, cart, and checkout.`, see: 'composable-commerce' },
-      { slug: 'composable-commerce', term: 'Composable commerce', def: `Composable commerce builds a store from independent, best-of-breed components (search, checkout, CMS, payments) connected by APIs, so each piece can be swapped or upgraded without replatforming the whole system.` },
-      { slug: 'marketplace', term: 'Marketplace', def: `A marketplace is an online platform such as Amazon, eBay, Walmart, or TikTok Shop where many third-party sellers list products to a shared audience. Selling on marketplaces alongside an owned store is a common multichannel strategy.` },
-      { slug: 'shopify-plus', term: 'Shopify Plus', def: `Shopify Plus is the enterprise tier of Shopify, aimed at high-volume and complex merchants. It adds higher API limits, checkout customization, multi-store management, and automation tools on top of standard Shopify.` },
-      { slug: 'adobe-commerce', term: 'Adobe Commerce (Magento)', def: `Adobe Commerce, formerly Magento, is an open-source-based commerce platform known for deep customization and strong B2B features. It suits merchants with complex catalogs and workflows that need extensive control.` },
-      { slug: 'bigcommerce', term: 'BigCommerce', def: `BigCommerce is a SaaS commerce platform with strong native and headless capabilities, known for flexible APIs and no added transaction fees. It is often chosen by mid-market and B2B merchants.` },
-      { slug: 'woocommerce', term: 'WooCommerce', def: `WooCommerce is an open-source commerce plugin for WordPress that turns a WordPress site into an online store, offering wide flexibility through themes and plugins and full control of hosting and code.` },
-      { slug: 'pos', term: 'Point of sale (POS)', def: `A point-of-sale (POS) system is the hardware and software a business uses to take in-person payments and record sales. In unified commerce it shares inventory and customer data with the online store in real time.` },
-      { slug: 'replatforming', term: 'Replatforming', def: `Replatforming, or migration, is moving a store from one commerce platform to another, transferring catalog, customers, orders, content, and URLs while preserving SEO and minimizing downtime.` },
-      { slug: 'aov', term: 'Average order value (AOV)', def: `Average order value (AOV) is the average amount a customer spends per order, calculated as total revenue divided by number of orders. Raising AOV through bundling, upsells, and free-shipping thresholds is a common growth lever.` },
-      { slug: 'cro', term: 'Conversion rate optimization (CRO)', def: `Conversion rate optimization (CRO) is the practice of increasing the share of visitors who take a desired action, such as buying or submitting a lead, by testing and improving design, copy, and flow.` },
-      { slug: 'commerce-ai-operator', term: 'Commerce AI operator', def: `A commerce AI operator is software that does the operating work of running a store, not just reporting on it. It reads live data from your channels, flags problems such as low stock or a price gap between channels, proposes the fix, and carries it out once a person approves. Commerceflo by FactoryJet is an example.` },
+      { slug: 'ecommerce', term: 'E-commerce', def: `E-commerce is the buying and selling of goods and services online, including a brand's own store, online marketplaces, and B2B ordering portals.`, links: [{href: "/services/ecommerce-development", label: "Ecommerce development"}, {href: "/best-ecommerce-platforms", label: "Best ecommerce platforms"}] },
+      { slug: 'dtc', term: 'Direct-to-consumer (DTC)', def: `Direct-to-consumer (DTC) is a model in which a brand sells straight to shoppers through its own channels, bypassing wholesalers and retailers to own the customer relationship and data.`, links: [{href: "/services/dtc-ecommerce-agency", label: "DTC ecommerce agency"}] },
+      { slug: 'b2b-commerce', term: 'B2B commerce', def: `B2B commerce is the online sale of products or services between businesses. It typically involves account-specific pricing, bulk ordering, approval workflows, and purchase-order payment, alongside or instead of a consumer storefront.`, links: [{href: "/b2b-ecommerce", label: "B2B ecommerce"}, {href: "/faire-wholesale-marketplace", label: "Faire wholesale"}] },
+      { slug: 'omnichannel-commerce', term: 'Omnichannel commerce', def: `Omnichannel commerce gives customers a consistent, connected experience across every channel, a brand's website, marketplaces, social shops, and physical stores, with inventory, orders, and customer data kept in sync.`, see: 'unified-commerce', links: [{href: "/omnichannel-commerce", label: "Omnichannel commerce"}, {href: "/omnichannel-vs-multichannel-commerce", label: "Omnichannel vs multichannel"}] },
+      { slug: 'unified-commerce', term: 'Unified commerce', def: `Unified commerce runs every sales channel on a single real-time platform and data source rather than stitching separate systems together, so inventory, orders, pricing, and customers stay consistent across store, marketplaces, and B2B at once.`, links: [{href: "/omnichannel-vs-multichannel-commerce", label: "Omnichannel vs multichannel"}] },
+      { slug: 'headless-commerce', term: 'Headless commerce', def: `Headless commerce separates the storefront that shoppers see from the commerce engine behind it, connecting them through APIs. This lets teams build a fast, custom front end while keeping a proven backend for catalog, cart, and checkout.`, see: 'composable-commerce', links: [{href: "/headless-commerce", label: "Headless commerce"}, {href: "/comparisons/headless-commerce-vs-monolithic", label: "Headless vs monolithic"}] },
+      { slug: 'composable-commerce', term: 'Composable commerce', def: `Composable commerce builds a store from independent, best-of-breed components (search, checkout, CMS, payments) connected by APIs, so each piece can be swapped or upgraded without replatforming the whole system.`, links: [{href: "/comparisons/shopify-plus-vs-custom-headless-nextjs", label: "Shopify Plus vs custom headless"}] },
+      { slug: 'marketplace', term: 'Marketplace', def: `A marketplace is an online platform such as Amazon, eBay, Walmart, or TikTok Shop where many third-party sellers list products to a shared audience. Selling on marketplaces alongside an owned store is a common multichannel strategy.`, links: [{href: "/marketplace-management", label: "Marketplace management"}, {href: "/marketplace-fee-calculator", label: "Marketplace fee calculator"}, {href: "/target-plus-marketplace", label: "Target Plus"}, {href: "/wayfair-marketplace", label: "Wayfair"}] },
+      { slug: 'shopify-plus', term: 'Shopify Plus', def: `Shopify Plus is the enterprise tier of Shopify, aimed at high-volume and complex merchants. It adds higher API limits, checkout customization, multi-store management, and automation tools on top of standard Shopify.`, links: [{href: "/services/shopify-plus-agency", label: "Shopify Plus agency"}, {href: "/comparisons/shopify-plus-vs-magento", label: "Shopify Plus vs Magento"}] },
+      { slug: 'adobe-commerce', term: 'Adobe Commerce (Magento)', def: `Adobe Commerce, formerly Magento, is an open-source-based commerce platform known for deep customization and strong B2B features. It suits merchants with complex catalogs and workflows that need extensive control.`, links: [{href: "/services/magento-development", label: "Magento development"}, {href: "/replatforming/magento-to-shopify", label: "Magento to Shopify"}] },
+      { slug: 'bigcommerce', term: 'BigCommerce', def: `BigCommerce is a SaaS commerce platform with strong native and headless capabilities, known for flexible APIs and no added transaction fees. It is often chosen by mid-market and B2B merchants.`, links: [{href: "/bigcommerce-development", label: "BigCommerce development"}, {href: "/comparisons/shopify-plus-vs-bigcommerce", label: "Shopify Plus vs BigCommerce"}] },
+      { slug: 'woocommerce', term: 'WooCommerce', def: `WooCommerce is an open-source commerce plugin for WordPress that turns a WordPress site into an online store, offering wide flexibility through themes and plugins and full control of hosting and code.`, links: [{href: "/services/woocommerce-development", label: "WooCommerce development"}, {href: "/comparisons/shopify-vs-woocommerce", label: "Shopify vs WooCommerce"}, {href: "/replatforming/woocommerce-to-shopify", label: "WooCommerce to Shopify"}] },
+      { slug: 'pos', term: 'Point of sale (POS)', def: `A point-of-sale (POS) system is the hardware and software a business uses to take in-person payments and record sales. In unified commerce it shares inventory and customer data with the online store in real time.`, links: [{href: "/services/ecommerce-erp-integration", label: "ERP and POS integration"}] },
+      { slug: 'replatforming', term: 'Replatforming', def: `Replatforming, or migration, is moving a store from one commerce platform to another, transferring catalog, customers, orders, content, and URLs while preserving SEO and minimizing downtime.`, links: [{href: "/replatforming", label: "Replatforming"}, {href: "/tools/replatforming-cost-calculator", label: "Replatforming cost calculator"}, {href: "/blog/ecommerce-replatforming-without-losing-seo-2026", label: "Replatforming without losing SEO"}] },
+      { slug: 'aov', term: 'Average order value (AOV)', def: `Average order value (AOV) is the average amount a customer spends per order, calculated as total revenue divided by number of orders. Raising AOV through bundling, upsells, and free-shipping thresholds is a common growth lever.`, links: [{href: "/services/ecommerce-cro-agency", label: "Ecommerce CRO"}] },
+      { slug: 'cro', term: 'Conversion rate optimization (CRO)', def: `Conversion rate optimization (CRO) is the practice of increasing the share of visitors who take a desired action, such as buying or submitting a lead, by testing and improving design, copy, and flow.`, links: [{href: "/services/ecommerce-cro-agency", label: "Ecommerce CRO"}, {href: "/ecommerce-speed-calculator", label: "Ecommerce speed calculator"}] },
+      { slug: 'commerce-ai-operator', term: 'Commerce AI operator', def: `A commerce AI operator is software that does the operating work of running a store, beyond reporting on it. It reads live data from your channels, flags problems such as low stock or a price gap between channels, proposes the fix, and carries it out once a person approves. Commerceflo by FactoryJet is an example.`, links: [{href: "/commerceflo", label: "Commerceflo"}, {href: "/services/ecommerce-ai-agents", label: "Ecommerce AI agents"}] },
     ],
   },
   {
@@ -115,20 +121,22 @@ const CATEGORIES: ReadonlyArray<Category> = [
     title: 'Web & Development',
     blurb: 'The rendering, performance, and technical-SEO concepts behind a fast, discoverable site.',
     terms: [
-      { slug: 'nextjs', term: 'Next.js', def: `Next.js is a React framework for building fast, production-grade websites and web apps. It supports server-side rendering and static generation, which deliver complete HTML that search engines and AI crawlers can read without executing JavaScript.` },
-      { slug: 'ssr', term: 'Server-side rendering (SSR)', def: `Server-side rendering (SSR) generates a page's full HTML on the server for each request, so browsers, search engines, and AI crawlers receive complete content immediately rather than a blank shell filled in later by JavaScript.` },
-      { slug: 'ssg', term: 'Static site generation (SSG)', def: `Static site generation (SSG) builds every page's HTML ahead of time at build and serves the pre-rendered files from a CDN. It is fast, reliable, and fully readable by crawlers.` },
-      { slug: 'core-web-vitals', term: 'Core Web Vitals', def: `Core Web Vitals are Google's user-experience metrics for loading (Largest Contentful Paint), interactivity (Interaction to Next Paint), and visual stability (Cumulative Layout Shift). They influence search rankings and reflect real-world speed.` },
-      { slug: 'lighthouse', term: 'Lighthouse', def: `Lighthouse is an open-source tool from Google that audits a page's performance, accessibility, best practices, and SEO, scoring each out of 100. A 100 out of 100 performance score signals a highly optimized page.` },
-      { slug: 'pwa', term: 'Progressive Web App (PWA)', def: `A Progressive Web App (PWA) is a website that behaves like a native app: it can work offline, load instantly, and be installed on a device, while still being reached through a normal URL.` },
-      { slug: 'canonical-url', term: 'Canonical URL', def: `A canonical URL tells search engines which version of a page is the primary one when similar or duplicate content exists at multiple addresses. It consolidates ranking signals and prevents duplicate-content dilution.` },
-      { slug: 'hreflang', term: 'hreflang', def: `hreflang is an HTML annotation that tells search engines which language and region a page targets, so the right version is shown to the right audience. It is essential for sites serving multiple countries.` },
-      { slug: 'web-accessibility', term: 'Web accessibility (WCAG)', def: `Web accessibility is designing sites so people with disabilities can use them, guided by the Web Content Accessibility Guidelines (WCAG). It covers keyboard navigation, color contrast, screen-reader support, and clear structure.` },
+      { slug: 'nextjs', term: 'Next.js', def: `Next.js is a React framework for building fast, production-grade websites and web apps. It supports server-side rendering and static generation, which deliver complete HTML that search engines and AI crawlers can read without executing JavaScript.`, links: [{href: "/comparisons/shopify-plus-vs-custom-headless-nextjs", label: "Shopify Plus vs custom Next.js"}, {href: "/services/web-application-development", label: "Web app development"}] },
+      { slug: 'ssr', term: 'Server-side rendering (SSR)', def: `Server-side rendering (SSR) generates a page's full HTML on the server for each request, so browsers, search engines, and AI crawlers receive complete content immediately rather than a blank shell filled in later by JavaScript.`, links: [{href: "/services/headless-shopify-development", label: "Headless Shopify development"}] },
+      { slug: 'ssg', term: 'Static site generation (SSG)', def: `Static site generation (SSG) builds every page's HTML ahead of time at build and serves the pre-rendered files from a CDN. It is fast, reliable, and fully readable by crawlers.`, links: [{href: "/services/web-design", label: "Web design"}] },
+      { slug: 'core-web-vitals', term: 'Core Web Vitals', def: `Core Web Vitals are Google's user-experience metrics for loading (Largest Contentful Paint), interactivity (Interaction to Next Paint), and visual stability (Cumulative Layout Shift). Google's threshold for a good LCP is 2.5 seconds or less. They feed into search ranking and reflect real-world speed.`, links: [{href: "/blog/core-web-vitals-optimization-service", label: "Core Web Vitals optimization"}, {href: "/ecommerce-speed-calculator", label: "Ecommerce speed calculator"}], source: { label: "web.dev, \"Web Vitals\"", url: "https://web.dev/articles/vitals" } },
+      { slug: 'lighthouse', term: 'Lighthouse', def: `Lighthouse is an open-source, automated tool from Google that audits a page's performance, accessibility, best practices, and SEO, scoring each out of 100. It can run on any public page or one behind a login.`, links: [{href: "/ecommerce-speed-calculator", label: "Ecommerce speed calculator"}], source: { label: "Chrome for Developers, \"Introduction to Lighthouse\"", url: "https://developer.chrome.com/docs/lighthouse/overview" } },
+      { slug: 'pwa', term: 'Progressive Web App (PWA)', def: `A Progressive Web App (PWA) is a website that behaves like a native app: it can work offline, load instantly, and be installed on a device, while still being reached through a normal URL.`, links: [{href: "/services/ecommerce-app-development", label: "Ecommerce app development"}] },
+      { slug: 'canonical-url', term: 'Canonical URL', def: `A canonical URL tells search engines which version of a page is the primary one when similar or duplicate content exists at multiple addresses. It consolidates ranking signals and prevents duplicate-content dilution.`, links: [{href: "/services/technical-seo", label: "Technical SEO services"}], source: { label: "Google Search Central, \"How to specify a canonical URL\"", url: "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" } },
+      { slug: 'hreflang', term: 'hreflang', def: `hreflang is an HTML annotation that tells search engines which language and region a page targets, so the right version is shown to the right audience. It is essential for sites serving multiple countries.`, links: [{href: "/seo/technical-seo", label: "Technical SEO"}], source: { label: "Google Search Central, \"Tell Google about localized versions of your page\"", url: "https://developers.google.com/search/docs/specialty/international/localized-versions" } },
+      { slug: 'web-accessibility', term: 'Web accessibility (WCAG)', def: `Web accessibility is designing sites so people with disabilities can use them, guided by the Web Content Accessibility Guidelines (WCAG). It covers keyboard navigation, color contrast, screen-reader support, and clear structure.`, links: [{href: "/services/medical-website-design", label: "Accessible medical websites"}, {href: "/services/web-design", label: "Web design"}], source: { label: "W3C, \"Web Content Accessibility Guidelines (WCAG) 2.2\"", url: "https://www.w3.org/TR/WCAG22/" } },
     ],
   },
 ];
 
 const ALL_TERMS = CATEGORIES.flatMap((c) => c.terms);
+const SOURCED_COUNT = ALL_TERMS.filter((t) => t.source).length;
+const LINK_CLASS = 'font-medium text-fj-ink underline decoration-fj-neutral-200 underline-offset-2 hover:decoration-[#F05A28]';
 
 /* ── schema ─────────────────────────────────────────────────────────────────── */
 const DEFINED_TERM_SET = {
@@ -139,12 +147,15 @@ const DEFINED_TERM_SET = {
   description:
     'Plain-language definitions of commerce, AI, and AI-search terms, maintained by FactoryJet.',
   url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
   hasDefinedTerm: ALL_TERMS.map((t) => ({
     '@type': 'DefinedTerm',
     '@id': `${CANONICAL}#${t.slug}`,
     name: t.term,
     description: t.def,
+    url: `${CANONICAL}#${t.slug}`,
     inDefinedTermSet: `${CANONICAL}#termset`,
+    ...(t.source ? { subjectOf: { '@type': 'CreativeWork', name: t.source.label, url: t.source.url } } : {}),
   })),
 };
 
@@ -165,6 +176,8 @@ const WEBPAGE = {
   url: CANONICAL,
   isPartOf: { '@type': 'WebSite', name: 'FactoryJet', url: 'https://factoryjet.com' },
   about: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization' },
+  dateModified: PAGE_MODIFIED,
+  mainEntity: { '@id': `${CANONICAL}#termset` },
   inLanguage: 'en',
 };
 
@@ -189,7 +202,11 @@ export default function GlossaryPage() {
             <p className="mt-6 max-w-[62ch] font-fj-body text-[17px] leading-[1.6] text-fj-neutral-600">
               Plain-language definitions of the commerce, AI, and AI-search terms that come up when you
               are building or scaling a modern store. Written to be accurate and quotable, for people and
-              for the AI assistants they ask.
+              for the AI assistants they ask. Each term links to the FactoryJet service, comparison or guide
+              that goes deeper, and {SOURCED_COUNT} definitions cite the primary source they rest on.
+            </p>
+            <p className="mt-4 font-fj-mono text-[12px] uppercase tracking-[0.12em] text-fj-neutral-600">
+              {ALL_TERMS.length} terms &middot; Updated <time dateTime={PAGE_MODIFIED}>22 October 2026</time> &middot; Sources read {SOURCES_READ}
             </p>
 
             {/* Category jump-nav */}
@@ -236,6 +253,25 @@ export default function GlossaryPage() {
                           </a>
                         </>
                       )}
+                      <span className="mt-3 block text-[14px]">
+                        <span className="text-fj-neutral-600">Read more: </span>
+                        {t.links.map((l, i) => (
+                          <span key={l.href}>
+                            {i > 0 && <span aria-hidden="true"> &middot; </span>}
+                            {l.href.startsWith('http') ? (
+                              <a href={l.href} target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>{l.label}</a>
+                            ) : (
+                              <Link href={l.href} className={LINK_CLASS}>{l.label}</Link>
+                            )}
+                          </span>
+                        ))}
+                      </span>
+                      {t.source && (
+                        <span className="mt-1 block text-[13px] text-fj-neutral-600">
+                          Source:{' '}
+                          <a href={t.source.url} target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>{t.source.label}</a>
+                        </span>
+                      )}
                     </dd>
                   </div>
                 ))}
@@ -253,6 +289,12 @@ export default function GlossaryPage() {
             <p className="mx-auto mt-3 max-w-[54ch] font-fj-body text-[16px] leading-[1.6] text-fj-neutral-600">
               FactoryJet designs, builds, and scales commerce and AI for DTC and B2B brands. Tell us what
               you are working on and we will scope it on a short call.
+            </p>
+            <p className="mx-auto mt-4 max-w-[60ch] font-fj-body text-[15px] leading-[1.6] text-fj-neutral-600">
+              More reference pages: <Link href="/faq" className={LINK_CLASS}>FAQ</Link>,{' '}
+              <Link href="/pricing" className={LINK_CLASS}>pricing and market cost ranges</Link>,{' '}
+              <Link href="/ai-citation-study" className={LINK_CLASS}>AI citation study</Link> and{' '}
+              <Link href="/portfolio" className={LINK_CLASS}>portfolio</Link>.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="rounded-full px-6 py-3 font-fj-body text-[15px] font-semibold text-white transition-opacity hover:opacity-90" style={{ backgroundColor: ORANGE }}>

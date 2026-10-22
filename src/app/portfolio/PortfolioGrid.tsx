@@ -135,7 +135,7 @@ const PortfolioCard: React.FC<{ item: PortfolioItem }> = ({ item }) => {
 
 /* ─── Portfolio Grid ─────────────────────────────────────────────────────── */
 
-export default function PortfolioGrid() {
+export default function PortfolioGrid({ intro, children }: { intro?: React.ReactNode; children?: React.ReactNode }) {
   const [selectedCategory, setSelectedCategory] = useState<PortfolioCategoryFilter>('All');
 
   const filteredItems = useMemo(() => {
@@ -155,7 +155,7 @@ export default function PortfolioGrid() {
             Websites we&apos;ve built for<br className="hidden md:block" /> ambitious brands
           </h1>
           <p className="text-base md:text-lg text-fj-neutral-400 font-fj-body max-w-2xl mx-auto mb-10">
-            From e-commerce stores to SaaS platforms, explore the diverse range of websites we&apos;ve crafted for businesses worldwide.
+            {intro ?? <>From e-commerce stores to SaaS platforms, explore the diverse range of websites we&apos;ve crafted for businesses worldwide.</>}
           </p>
 
           {/* Filter Tabs */}
@@ -210,6 +210,9 @@ export default function PortfolioGrid() {
           )}
         </div>
       </section>
+
+      {/* Server-rendered case-study list and FAQ from page.tsx sit between the grid and the CTA. */}
+      {children}
 
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
       <section className="pb-14 md:pb-20">

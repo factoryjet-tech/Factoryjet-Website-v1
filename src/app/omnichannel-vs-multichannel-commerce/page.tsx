@@ -11,17 +11,33 @@ import '@/components/v2/PlatformPage.css';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/marketplace';
 
+// Freshness signal. Bump only when the page content actually changes.
+const PAGE_MODIFIED = '2026-10-22';
+
+const PAGE_URL = 'https://factoryjet.com/omnichannel-vs-multichannel-commerce';
+const PAGE_TITLE = 'Omnichannel vs Multichannel: Architecture Guide | FactoryJet';
+const PAGE_DESCRIPTION =
+  'Omnichannel vs multichannel commerce: how shared stock, one customer record and an OMS, ERP and CDP stack differ from separate channels. Plus unified commerce.';
+
+/* Primary sources for marketplace fees on this page (all read 22 Oct 2026). */
+const SRC = {
+  amazon: 'https://sell.amazon.com/pricing',
+  walmart: 'https://marketplace.walmart.com/pricing/',
+  faire: 'https://www.faire.com/tos-brand',
+};
+
+const LINK = { color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' } as const;
+
 export const metadata: Metadata = {
-  title: 'Omnichannel vs Multichannel Commerce: Key Differences & Architecture | FactoryJet',
-  description:
-    'The definitive guide to omnichannel vs multichannel commerce. Learn how unified inventory, synchronized customer profiles, and real-time ERP data pipelines separate true omnichannel from fragmented multichannel operations.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   openGraph: {
     type: 'article',
     siteName: 'FactoryJet',
-    title: 'Omnichannel vs Multichannel Commerce: Key Differences & Architecture | FactoryJet',
+    title: 'Omnichannel vs Multichannel Commerce: Architecture Guide | FactoryJet',
     description:
       'Explore the architectural differences between omnichannel and multichannel commerce. Avoid out-of-stock cancellations and channel conflict with unified inventory orchestration.',
-    url: 'https://factoryjet.com/omnichannel-vs-multichannel-commerce',
+    url: PAGE_URL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Omnichannel vs Multichannel Commerce Comparison' }],
     locale: 'en_US',
   },
@@ -31,7 +47,7 @@ export const metadata: Metadata = {
     description: 'Technical comparison of omnichannel vs multichannel commerce architectures for modern DTC and B2B brands.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/omnichannel-vs-multichannel-commerce' },
+  alternates: { canonical: PAGE_URL },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -49,6 +65,12 @@ const FAQ_ITEMS = [
   // Core Differences
   {
     category: 'concepts',
+    question: 'Is omnichannel the same as multichannel?',
+    answer:
+      'No. Multichannel means you sell on several channels, such as your website, Amazon and a store, but each one runs on its own stock count, order queue and customer list. Omnichannel connects those same channels to one stock pool, one order system and one customer record, so a shopper can buy online, return in store and see the same price everywhere.',
+  },
+  {
+    category: 'concepts',
     question: 'What is the main difference between omnichannel and multichannel commerce?',
     answer:
       'The primary difference lies in backend data unification. Multichannel commerce means selling on multiple separate channels (such as a Shopify website, Amazon, and physical retail stores) where each channel operates in isolation with fragmented inventory and siloed customer records. Omnichannel commerce connects all touchpoints to a centralized data engine, providing synchronized real-time stock levels, unified customer purchase history, and flexible fulfillment options like buy online, pick up in store (BOPIS).',
@@ -57,19 +79,19 @@ const FAQ_ITEMS = [
     category: 'concepts',
     question: 'Why do brands fail when expanding from single-channel to multichannel?',
     answer:
-      'Brands frequently fail due to stockout cancellations, manual order transcription errors, and channel conflict. When inventory is not synchronized in real time across Amazon, Walmart, and Shopify, an inventory surge on one platform leads to unfulfillable orders on another, triggering severe marketplace seller account suspensions.',
+      'The usual causes are stockout cancellations, mistakes from typing orders by hand, and price clashes between channels. When stock is not synced in real time across Amazon, Walmart and Shopify, a sales spike on one channel creates orders on another that you cannot ship. Repeated cancellations hurt your seller ratings and can put a marketplace account at risk.',
   },
   {
     category: 'concepts',
-    question: 'What is unified commerce and how does it relate to omnichannel?',
+    question: 'Unified commerce vs omnichannel: what is the difference?',
     answer:
-      'Unified commerce is the most advanced evolution of omnichannel retail. Rather than connecting disparate legacy systems through brittle point-to-point plugins, unified commerce runs all commerce channels, customer interactions, pricing tiers, and fulfillment logic off a single centralized database architecture.',
+      'Omnichannel connects separate systems, such as the ecommerce platform, POS, OMS and ERP, so they share stock and customer data through integrations. Unified commerce goes one step further and runs those channels on one platform with one database, so there is less to sync. Most brands start with omnichannel and move parts toward unified commerce as old systems retire.',
   },
   {
     category: 'concepts',
     question: 'Does omnichannel commerce improve customer retention and lifetime value (LTV)?',
     answer:
-      'Yes. Industry research published by Harvard Business Review shows that omnichannel customers spend an average of 4% more in physical stores and 10% more online compared to single-channel shoppers, with a 30% higher lifetime customer value.',
+      'It can, because a shopper who can buy, collect and return wherever they like has fewer reasons to leave. One customer record also lets you reward purchases made on any channel and send offers based on everything a customer has bought. Measure it in your own data: compare repeat rate and order value for customers who use more than one channel.',
   },
 
   // Architecture & Tech
@@ -77,25 +99,25 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What core technologies are required for an omnichannel commerce stack?',
     answer:
-      'A modern omnichannel tech stack consists of four foundational layers: 1) A primary commerce engine (such as Shopify Plus or BigCommerce), 2) A centralized Order Management System (OMS) or Enterprise Resource Planning (ERP) platform, 3) Real-time API event webhooks for marketplace inventory syndication, and 4) A unified Customer Data Platform (CDP) connecting online browsing with offline POS transactions.',
+      'An omnichannel stack has four main layers. First, a commerce platform such as Shopify Plus or BigCommerce. Second, an order management system (OMS) or ERP that holds stock and routes orders. Third, an integration layer of APIs and webhooks that keeps marketplaces and POS in sync. Fourth, a customer data platform (CDP) that joins online browsing with in-store purchases.',
   },
   {
     category: 'technical',
     question: 'How do real-time inventory webhooks prevent overselling across marketplaces?',
     answer:
-      'When an order is placed on any channel, an event webhook triggers an immediate inventory decrement in your central database. Within 150 milliseconds, updated stock levels are pushed to Amazon SP-API, Walmart Marketplace API, Target DVS EDI, and your DTC store.',
+      'When an order lands on any channel, a webhook fires and the central database lowers the stock count straight away. The new count then goes out to the Amazon SP-API, the Walmart Marketplace API, the Target Plus integration and your own store. Because each channel gets the update as the sale happens, rather than on a timed batch, oversells drop sharply.',
   },
   {
     category: 'technical',
     question: 'Can headless commerce architecture support omnichannel distribution?',
     answer:
-      'Yes. Headless commerce separates the presentation frontend from the backend commerce engine, allowing developers to deploy custom web storefronts, native mobile apps, smart retail kiosks, and IoT devices that all consume the same centralized product and checkout APIs.',
+      'Yes. Headless commerce splits the storefront from the commerce engine behind it. That lets developers build a custom website, a mobile app, in-store kiosks and other screens that all use the same product, price and checkout APIs. Every screen then shows the same stock and price, which is the core promise of omnichannel.',
   },
   {
     category: 'technical',
     question: 'How are product catalog attributes syndicated across diverse marketplaces?',
     answer:
-      'Because Amazon, Walmart, Target Plus, and Faire all require different product taxonomies and attribute fields, we build automated data convertation middleware that normalizes your master product catalog into channel-specific schemas without manual double-entry.',
+      'Amazon, Walmart, Target Plus and Faire each use their own categories and attribute fields. We build mapping middleware that converts your master product catalog into each channel’s format, so you edit a product once and every listing updates. Missing required fields show up as errors before a listing goes live, instead of as rejected listings later.',
   },
 
   // Operations & ERP
@@ -103,19 +125,19 @@ const FAQ_ITEMS = [
     category: 'operations',
     question: 'Which ERP systems integrate best with omnichannel commerce architecture?',
     answer:
-      'Commonly integrated ERP platforms include NetSuite, SAP S/4HANA, Microsoft Dynamics 365, Acumatica, Katana Cloud Manufacturing, and QuickBooks Enterprise. We engineer custom bi-directional REST and GraphQL connectors tailored to each ERP.',
+      'The ERPs we connect most often are NetSuite, SAP S/4HANA, Microsoft Dynamics 365, Acumatica, Katana Cloud Manufacturing and QuickBooks Enterprise. We build two-way REST and GraphQL connectors for each one, so orders, stock and payouts flow between the ERP and every sales channel. The best fit depends on your order volume and how complex your stock is.',
   },
   {
     category: 'operations',
     question: 'How does omnichannel commerce handle cross-channel returns and exchanges?',
     answer:
-      'True omnichannel allows customers to buy online and return in person at a physical retail store or drop-off location. The store POS scans the digital order barcode, immediately processes the refund or exchange in the central OMS, and updates local warehouse inventory.',
+      'Omnichannel lets customers buy online and return in person at a store or drop-off point. The store POS scans the online order, processes the refund or exchange in the central OMS, and adds the item back to that store’s stock. The customer gets a refund on the spot, and the returned unit can sell again from that location.',
   },
   {
     category: 'operations',
     question: 'How are warehouse fulfillment locations (3PLs and retail stores) routed?',
     answer:
-      'Our intelligent distributed order management logic evaluates customer delivery postal codes, real-time warehouse stock levels, and carrier shipping costs to automatically route each order to the optimal fulfillment node for fastest delivery at lowest freight cost.',
+      'Our distributed order management (DOM) rules look at the delivery postal code, live stock at each warehouse, 3PL and store, and carrier costs. Each order then goes to the location that can deliver fastest at the lowest shipping cost. You can add your own rules, such as keeping store stock for walk-in shoppers during busy weeks.',
   },
 
   // Migration Strategy
@@ -123,43 +145,91 @@ const FAQ_ITEMS = [
     category: 'strategy',
     question: 'How long does an omnichannel transition take for an established brand?',
     answer:
-      'A complete omnichannel transition from fragmented multichannel systems to a unified commerce engine typically takes 4 to 8 weeks, including ERP connectivity, data migration, and sandbox order validation.',
+      'We give you the timeline in writing after scoping, because it depends on how many channels, stores and systems you connect. For reference, our store builds run 3 to 5 weeks for a custom theme, 5 to 8 weeks for advanced work such as B2B or migration, and 8 to 14 weeks for headless or custom builds.',
   },
   {
     category: 'strategy',
     question: 'What is the first step in moving from multichannel to omnichannel?',
     answer:
-      'The initial step is conducting an inventory and data flow audit. We map every sales channel, warehouse location, payment processor, and catalog database to identify manual bottlenecks, synchronization latencies, and points of data failure.',
+      'Start with an inventory and data flow audit. We map every sales channel, warehouse, payment provider and catalog database, then mark where people copy data by hand, where syncs run late, and where data breaks. That map shows which connection to fix first, which is usually stock sync between your store and your biggest marketplace.',
   },
   {
     category: 'strategy',
     question: 'What is FactoryJet’s pricing model for omnichannel architecture builds?',
     answer:
-      'We work on transparent fixed-price project milestones covering architecture design, API development, ERP integration, and launch verification. We never charge percentage cuts of gross merchandise value (GMV).',
+      'We quote a fixed price per phase, in writing, after scoping. Before you sign, we show you working software on your own data. Every build includes defect cover for a stated period, and there is no monthly minimum. We never take a percentage of your gross merchandise value (GMV).',
   },
   {
     category: 'strategy',
     question: 'How do we schedule an omnichannel scoping consultation?',
     answer:
-      'You can schedule a 30-minute technical scoping call with founder Bhavesh Barot. We will review your current channel architecture and provide an actionable, fixed-scope engineering proposal.',
+      'Book a 30-minute technical scoping call with founder Bhavesh Barot. On the call we review your current channels, systems and data flow. Afterwards you get a written plan with a fixed price for each phase, so you can start with one step, such as stock sync, without committing to the whole program.',
   },
   {
-    category: 'architecture',
+    category: 'technical',
     question: 'How do edge-rendered omnichannel architectures reduce shopping cart abandonment?',
     answer:
-      'Shopping cart abandonment increases by 7% for every 100-millisecond delay in checkout load time. Our omnichannel architecture renders checkout assets at the CDN edge on Cloudflare and Vercel, pre-fetching customer address profiles and payment tokens to deliver an instantaneous, one-tap checkout experience.',
+      'Slow checkouts lose shoppers. We serve storefront and checkout pages from the CDN edge on Cloudflare or Vercel, so they load from a server near the shopper. Returning customers can see saved addresses and payment methods filled in, which cuts steps at checkout. Test the change on your own store by comparing checkout completion before and after.',
   },
   {
     category: 'operations',
     question: 'How does unified inventory visibility reduce warehouse carrying costs and stockouts?',
     answer:
-      'Multichannel retailers maintain redundant safety stock across isolated channel silos, tying up working capital. Omnichannel architectures pool warehouse, 3PL, and retail store stock into a single virtual inventory pool, reducing overall holding costs by 22% while virtually eliminating out-of-stock cancellations.',
+      'Multichannel retailers keep separate safety stock for each channel, which ties up cash. Omnichannel pools warehouse, 3PL and store stock into one shared count, so one buffer covers every channel. You hold less stock in total for the same service level, and orders can be filled from any location that has the item, which cuts out-of-stock cancellations.',
   },
   {
-    category: 'architecture',
+    category: 'technical',
     question: 'How does an omnichannel architecture handle international cross-border currencies and taxes?',
     answer:
-      'Our omnichannel framework calculates landed costs, local duties, and value-added tax (VAT) at checkout for over 150 countries. Orders route to the nearest international fulfillment node or customs-bonded warehouse, ensuring rapid local delivery with zero surprise customs fees for overseas buyers.',
+      'We set checkout to show landed cost, meaning price plus local duties and value-added tax (VAT), so overseas buyers know the full amount before they pay. Orders then route to the nearest international warehouse or bonded facility you use. Each new country adds tax registration and compliance steps, so we scope cross-border work as its own phase.',
+  },
+  {
+    category: 'concepts',
+    question: 'What is an example of omnichannel?',
+    answer:
+      'A shopper browses a jacket on your phone app, checks that the nearest store has her size, buys it online and picks it up that afternoon. A week later she returns a second color at a different store and gets her refund at once. Every step uses the same stock count and the same customer record. That is omnichannel.',
+  },
+  {
+    category: 'concepts',
+    question: 'What is multichannel marketing?',
+    answer:
+      'Multichannel marketing means reaching customers on more than one channel, such as email, social media, search ads, marketplaces and stores. Each channel often runs its own campaigns and reports. It becomes omnichannel marketing when those channels share one customer record, so the message a shopper sees depends on what they did on every other channel.',
+  },
+  {
+    category: 'concepts',
+    question: 'What is the difference between single channel and multichannel ecommerce?',
+    answer:
+      'Single channel ecommerce sells through one place, usually your own website or one marketplace. Multichannel ecommerce adds more places to sell, such as Amazon, Walmart, Target Plus or Faire, alongside your site. It reaches more buyers, but each new channel adds fees, listings and stock to manage, which is why brands later connect them into an omnichannel setup.',
+  },
+  {
+    category: 'concepts',
+    question: 'What are the four Cs of omnichannel?',
+    answer:
+      'There is no single standard list. Different writers use different four Cs, and most circle the same idea: put the customer at the center, keep the experience consistent, make buying convenient, and connect every channel to the same data. Treat it as a checklist for design choices, not a formal framework you need to follow.',
+  },
+  {
+    category: 'technical',
+    question: 'What is omnichannel architecture?',
+    answer:
+      'Omnichannel architecture is the set of systems and connections that lets every sales channel share one view of stock, orders and customers. At its center sit an order management system (OMS) or ERP and a customer data platform (CDP). An integration layer of APIs and webhooks links them to your ecommerce platform, POS, marketplaces and warehouses.',
+  },
+  {
+    category: 'technical',
+    question: 'How do I map an omnichannel retail tech stack, including OMS, ERP, CDP, ecommerce platform and integrations?',
+    answer:
+      'List every system, then draw what data each one owns. The ecommerce platform owns the storefront and checkout. The OMS owns orders and routing. The ERP owns stock value, purchasing and finance. The CDP owns customer profiles. Then draw each data flow between them, mark which ones run in real time and which run in batches, and fix the batch flows first.',
+  },
+  {
+    category: 'operations',
+    question: 'What is a multichannel ERP?',
+    answer:
+      'A multichannel ERP is an ERP set up to take orders and sync stock across several sales channels, such as your website, Amazon, Walmart and wholesale. It holds the master stock count and the financial records for every sale. Most ERPs need connectors to talk to marketplaces, and those connectors decide how fast stock updates reach each channel.',
+  },
+  {
+    category: 'operations',
+    question: 'What does an OMS do in omnichannel commerce?',
+    answer:
+      'An order management system (OMS) collects orders from every channel, checks stock across all locations, and sends each order to the best warehouse, 3PL or store to ship it. It also handles splits, cancellations and returns. In an omnichannel setup, the OMS is the system that makes buy online, pick up in store and ship-from-store possible.',
   },
 ];
 
@@ -176,15 +246,30 @@ const FAQ_SCHEMA = {
   })),
 };
 
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${PAGE_URL}#webpage`,
+  url: PAGE_URL,
+  name: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+  mainEntity: { '@id': `${PAGE_URL}#article` },
+};
+
 const ARTICLE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'TechArticle',
+  '@id': `${PAGE_URL}#article`,
   headline: 'Omnichannel vs Multichannel Commerce: Technical Architecture & Differences',
   description:
-    'Comprehensive architectural breakdown of omnichannel vs multichannel commerce systems, inventory orchestration, and ERP data unification for retail brands.',
+    'Architecture comparison of omnichannel vs multichannel commerce systems, inventory orchestration, and ERP data unification for retail brands.',
+  dateModified: PAGE_MODIFIED,
   author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://factoryjet.com/author/bhavesh-barot' },
   publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  url: 'https://factoryjet.com/omnichannel-vs-multichannel-commerce',
+  url: PAGE_URL,
 };
 
 const ORG_SCHEMA = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
@@ -195,35 +280,35 @@ const BREADCRUMB_SCHEMA = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
     { '@type': 'ListItem', position: 2, name: 'Omnichannel Commerce', item: 'https://factoryjet.com/omnichannel-commerce' },
-    { '@type': 'ListItem', position: 3, name: 'Omnichannel vs Multichannel', item: 'https://factoryjet.com/omnichannel-vs-multichannel-commerce' },
+    { '@type': 'ListItem', position: 3, name: 'Omnichannel vs Multichannel', item: PAGE_URL },
   ],
 };
 
 const STATS = [
-  { b: '30% Higher LTV', s: 'omnichannel customer lifetime value' },
-  { b: '< 150ms Sync', s: 'real-time inventory API updates' },
-  { b: '99.9% Fulfillment', s: 'elimination of stockout cancellations' },
-  { b: '4 to 8 Weeks', s: 'complete unified architecture build' },
+  { b: '7 Differences', s: 'architecture pillars compared' },
+  { b: '3 Models', s: 'multichannel, omnichannel, unified' },
+  { b: '500+', s: 'businesses served since 2014' },
+  { b: '97%', s: 'on-time delivery' },
 ];
 
 const SOURCED = [
   {
-    v: '4% to 10%',
-    d: 'higher average transaction value generated by omnichannel shoppers in both physical stores and online channels.',
-    src: 'Harvard Business Review Commerce Study',
-    href: 'https://hbr.org',
+    v: '$39.99',
+    d: 'a month for Amazon’s Professional selling plan, before referral fees, which are 15% in many categories (read 22 Oct 2026).',
+    src: 'Amazon seller pricing',
+    href: SRC.amazon,
   },
   {
-    v: '73%',
-    d: 'of modern retail consumers use multiple channels during their standard product discovery and purchase journey.',
-    src: 'National Retail Federation (NRF) Consumer Survey',
-    href: 'https://nrf.com',
+    v: '15%',
+    d: 'Walmart Marketplace referral fee in many categories, with no setup or monthly fee. Rates run from 3% to 20% by category (read 22 Oct 2026).',
+    src: 'Walmart Marketplace pricing',
+    href: SRC.walmart,
   },
   {
-    v: '89%',
-    d: 'customer retention rate realized by brands with comprehensive omnichannel customer engagement strategies versus 33% for single-channel sellers.',
-    src: 'Aberdeen Group Omnichannel Benchmark',
-    href: 'https://www.aberdeen.com',
+    v: '15% + $10',
+    d: 'Faire commission on a retailer’s opening order. Reorders pay 15%, and qualified Faire Direct orders pay 0% (read 22 Oct 2026).',
+    src: 'Faire brand terms',
+    href: SRC.faire,
   },
 ];
 
@@ -241,6 +326,7 @@ export default function OmnichannelVsMultichannelPage() {
   return (
     <>
       <script id="omni-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="omni-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="omni-article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ARTICLE_SCHEMA) }} />
       <script id="omni-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
       <script id="omni-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -260,6 +346,12 @@ export default function OmnichannelVsMultichannelPage() {
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
                   The definitive architectural comparison. Learn how unified inventory orchestration, synchronized customer
                   profiles, and real-time ERP pipelines separate true omnichannel from fragmented multichannel operations.
+                </p>
+                <p style={{ maxWidth: '52ch', margin: '0 0 18px', fontSize: '15px', color: 'var(--pp-body)' }}>
+                  Is omnichannel the same as multichannel? No. Multichannel means selling on several channels that each
+                  run on their own, with separate stock and customer records. Omnichannel connects those channels to one
+                  stock pool, one order system and one customer record, so a shopper can buy online, return in store and
+                  see the same price everywhere.
                 </p>
                 <HeroInlineForm source="us_omnichannel_vs_multichannel_hero" region="us" submitLabel="Get an Omnichannel Audit" />
               </div>
@@ -299,7 +391,7 @@ export default function OmnichannelVsMultichannelPage() {
                     { name: 'Shopify Store', desc: 'Direct DTC' },
                     { name: 'Amazon Prime', desc: 'FBA Inventory' },
                     { name: 'Walmart WFS', desc: 'Marketplace' },
-                    { name: 'Target Plus', desc: 'DVS EDI' },
+                    { name: 'Target Plus', desc: 'Direct Ship' },
                     { name: 'Physical POS', desc: 'In-Store Pickup' },
                     { name: 'Central ERP', desc: 'Single Truth' },
                   ].map((ch) => (
@@ -367,7 +459,23 @@ export default function OmnichannelVsMultichannelPage() {
               </p>
               <p>
                 While multichannel expansion often causes stockouts, fulfillment friction, and channel conflict, omnichannel engineering
-                eliminates operational waste by establishing a single source of commercial truth across your entire business.
+                removes that waste by giving your whole business a single source of truth for stock, orders and customers.
+              </p>
+              <p><strong>Multichannel vs omnichannel at a glance:</strong></p>
+              <ul style={{ paddingLeft: '20px', marginTop: '8px', display: 'grid', gap: '6px' }}>
+                <li><strong>Stock:</strong> multichannel splits stock per channel; omnichannel shares one pool.</li>
+                <li><strong>Orders:</strong> multichannel has an order queue per channel; omnichannel routes every order through one OMS.</li>
+                <li><strong>Customers:</strong> multichannel keeps a customer list per channel; omnichannel keeps one record per customer.</li>
+                <li><strong>Returns:</strong> multichannel returns go back the way they came; omnichannel accepts returns at any location.</li>
+                <li><strong>Prices:</strong> multichannel prices drift apart; omnichannel sets them from one price engine.</li>
+                <li><strong>Reporting:</strong> multichannel reports per channel; omnichannel reports on the whole business.</li>
+              </ul>
+              <p style={{ marginTop: '12px' }}>
+                Every extra marketplace also brings its own fees. Our{' '}
+                <a href="/marketplace-fee-calculator" style={LINK}>marketplace fee calculator</a> compares them side by side.
+                When you are ready to connect channels, see our{' '}
+                <a href="/omnichannel-commerce" style={LINK}>omnichannel commerce service</a> and{' '}
+                <a href="/marketplace-management" style={LINK}>marketplace management</a>.
               </p>
             </div>
           </div>
@@ -376,8 +484,8 @@ export default function OmnichannelVsMultichannelPage() {
         {/* ── Sourced Stats ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
-            <p className="pp-mlabel">// verified industry data</p>
-            <h2 style={{ marginTop: '10px' }}>Omnichannel commerce by the numbers</h2>
+            <p className="pp-mlabel">// verified marketplace fees</p>
+            <h2 style={{ marginTop: '10px' }}>What each extra channel costs, by the numbers</h2>
             <div className="pp-bento" style={{ marginTop: '32px' }}>
               {SOURCED.map((s) => (
                 <div className="pp-card" key={s.v}>
@@ -424,18 +532,27 @@ export default function OmnichannelVsMultichannelPage() {
             <h2 style={{ marginTop: '10px' }}>Distributed Order Management (DOM) and Real-Time Event Webhooks</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                The fundamental flaw of multichannel commerce is batch synchronization. When inventory levels update every
-                15 to 60 minutes via scheduled cron jobs, high-velocity flash sales or multi-marketplace orders inevitably
-                lead to overselling.
+                The core flaw of multichannel commerce is batch syncing. When stock counts update on a timer through
+                scheduled jobs, a flash sale or a burst of marketplace orders can sell the same unit twice before the next
+                update runs.
               </p>
               <p>
                 Our omnichannel architecture replaces batch processing with an event-driven webhook pipeline:
               </p>
               <ul style={{ paddingLeft: '20px', marginTop: '12px', display: 'grid', gap: '8px' }}>
-                <li><strong>Sub-150ms Inventory Mutation:</strong> An order placed on Amazon SP-API immediately fires a webhook to our edge orchestration middleware, which recalculates available-to-promise (ATP) inventory across all physical stores and 3PL nodes within 150 milliseconds.</li>
+                <li><strong>Event-Driven Stock Updates:</strong> An order placed through the Amazon SP-API fires a webhook to our middleware straight away, which recalculates available-to-promise (ATP) stock across every store and 3PL as the sale happens.</li>
                 <li><strong>Dynamic Proximity Order Routing:</strong> When an online order is received, our Distributed Order Management (DOM) algorithm evaluates the customer delivery postal code against stock balances at regional warehouses and retail stores, routing fulfillment to minimize carrier transit time and zone surcharges.</li>
                 <li><strong>Unified ERP Ledger Synchronization:</strong> Financial transactions, tax calculations, and cost-of-goods-sold (COGS) entries post synchronously to your central ERP (NetSuite, SAP, or Microsoft Dynamics 365), providing your finance leadership with real-time gross margin visibility across every sales channel.</li>
               </ul>
+              <p style={{ marginTop: '16px' }}><strong>How to map an omnichannel tech stack, layer by layer:</strong></p>
+              <ol style={{ paddingLeft: '22px', marginTop: '8px', display: 'grid', gap: '6px' }}>
+                <li><strong>Ecommerce platform:</strong> storefront and checkout, such as Shopify Plus or BigCommerce.</li>
+                <li><strong>Order management system (OMS):</strong> collects orders from every channel and routes each one.</li>
+                <li><strong>ERP:</strong> master stock value, purchasing and finance, such as NetSuite or Dynamics 365.</li>
+                <li><strong>Customer data platform (CDP):</strong> one profile per customer across online and in-store buying.</li>
+                <li><strong>POS and warehouse systems:</strong> store tills, WMS and 3PL portals that report stock moves.</li>
+                <li><strong>Integration layer:</strong> APIs, webhooks and middleware that move data between all of the above in real time.</li>
+              </ol>
             </div>
           </div>
         </section>
@@ -456,7 +573,7 @@ export default function OmnichannelVsMultichannelPage() {
                 <h2 style={{ marginTop: '8px' }}>Unified Inventory &amp; ERP Synchronization</h2>
                 <p className="pp-lead" style={{ marginTop: '14px' }}>
                   How FactoryJet engineers real-time inventory pipelines connecting Shopify Plus, Amazon, Walmart, Target Plus,
-                  and your ERP into a synchronized, sub-150ms event stream.
+                  and your ERP into one event stream that updates every channel as each sale happens.
                 </p>
                 <div style={{ marginTop: '22px' }}>
                   <ModalCTAButton label="Scope omnichannel architecture" region="us" btnVariant="secondary-light" />
@@ -488,8 +605,8 @@ export default function OmnichannelVsMultichannelPage() {
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Real-Time POS Catalog and Stock Synchronization</h3>
               <p>
                 We connect physical Shopify POS or Lightspeed systems directly to your central commerce core. When an in-store transaction
-                occurs, our edge middleware decrements available inventory across your DTC website, Amazon store, and TikTok Shop within
-                150 milliseconds.
+                occurs, our middleware lowers available stock on your DTC website, Amazon store and TikTok Shop as the sale
+                happens.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Buy Online, Pick Up In Store (BOPIS) &amp; Curbside Fulfillment</h3>
               <p>
@@ -561,6 +678,18 @@ export default function OmnichannelVsMultichannelPage() {
                     <td>Fragile point-to-point plugins</td>
                     <td>Event-driven API &amp; webhook hub</td>
                     <td>Composable headless microservices</td>
+                  </tr>
+                  <tr className="me">
+                    <td className="name">Order Management</td>
+                    <td>Separate order queue per channel</td>
+                    <td>Central OMS routes every order</td>
+                    <td>One platform runs orders, POS and stock</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Typical Tech Stack</td>
+                    <td>Store + marketplace plugins + spreadsheets</td>
+                    <td>Ecommerce platform + OMS/ERP + CDP + integration layer</td>
+                    <td>Single commerce platform with built-in OMS and POS</td>
                   </tr>
                 </tbody>
               </table>
