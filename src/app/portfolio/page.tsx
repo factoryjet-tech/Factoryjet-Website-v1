@@ -91,8 +91,8 @@ const CASE_STUDIES = [
   { slug: 'impulse-branding-migration', client: 'Impulse Branding Solutions', line: 'Website build with ongoing SEO and AI search work for a branding and architecture business.' },
   { slug: 'yadav-entrance-automation-website-seo', client: 'Yadav Entrance Automation', line: 'Website built from scratch for an entrance automation installer, with SEO and AI SEO.' },
   { slug: 'rdb-travels-cab-booking-website', client: 'RDB Travels', line: 'Cab and group-travel website whose quote form turns a trip request into a ready-to-send WhatsApp message.' },
-  { slug: 'flying-pixel-agency', client: 'Flying Pixel', line: 'Wix Studio portfolio site for a creative agency, with SEO and conversion work built in.' },
-  { slug: 'formative-concepts-bim', client: 'Formative Concepts', line: '20+ page site on React, Gatsby and Contentful for an MEP and BIM consultancy.' },
+  { slug: 'flying-pixel-agency', client: 'Flying Pixel', line: 'Next.js website for a drone survey company, with SEO built in.' },
+  { slug: 'formative-concepts-bim', client: 'Formative Concepts', line: '20+ page WordPress site for an MEP and BIM consultancy.' },
   { slug: 'grofresh-manufacturing-erp', client: 'GroFresh Agro', line: 'Custom ERPNext implementation replacing Tally and spreadsheets for a food processing manufacturer.' },
   { slug: 'rukman-transport-logistics', client: 'Rukman Transport', line: 'WordPress site and local SEO for a B2B logistics operator.' },
 ];
@@ -166,7 +166,7 @@ export default function USPortfolioPage() {
             <>
               FactoryJet has served 500+ businesses since 2014. Recent work: a custom Shopify theme for Shopholistico,
               an AI agent for Washington Law Group, websites with ongoing SEO for Impulse Branding Solutions and Yadav
-              Entrance Automation, a booking site for RDB Travels and a Wix Studio site for Flying Pixel. Platforms
+              Entrance Automation, a booking site for RDB Travels and a Next.js site for Flying Pixel, a drone survey company. Platforms
               include Shopify, WooCommerce, Commerceflo, WordPress and ERPNext.
               <span className="mt-2 block text-sm">
                 Updated <time dateTime={PAGE_MODIFIED}>22 October 2026</time>

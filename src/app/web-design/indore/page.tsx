@@ -750,7 +750,7 @@ export default function IndoreWebDesignPage() {
               industry: 'MEP / BIM Consulting · SEO',
               title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is a B2B engineering consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture, credentials display, project portfolio, and technical SEO targeting high-value engineering queries. The same B2B-authority approach applies to Indore manufacturers and IT services companies targeting international clients.',
+                'Formative Concepts is a B2B engineering consulting firm. FactoryJet rebuilt their website on WordPress with authority-first architecture, credentials display, project portfolio, and technical SEO targeting high-value engineering queries. The same B2B-authority approach applies to Indore manufacturers and IT services companies targeting international clients.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',

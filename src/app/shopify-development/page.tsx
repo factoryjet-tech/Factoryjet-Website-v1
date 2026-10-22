@@ -1097,7 +1097,7 @@ export default function ShopifyDevelopmentPage() {
               industry: 'MEP / BIM Consulting · B2B',
               title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their site on Next.js with authority-first architecture, project portfolio, and technical SEO. While not Shopify, it demonstrates our B2B conversion-first design methodology applied across all builds.',
+                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their site on WordPress with authority-first architecture, project portfolio, and technical SEO. While not Shopify, it demonstrates our B2B conversion-first design methodology applied across all builds.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',

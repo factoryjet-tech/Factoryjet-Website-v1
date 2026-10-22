@@ -579,7 +579,7 @@ export default function PuneWebDesignPage() {
               industry: 'MEP / BIM Consulting · Pune',
               title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm in Pune. FactoryJet rebuilt their website on Next.js with an authority-first architecture for B2B project enquiries, credentials display, project portfolio, and technical SEO targeting high-value engineering queries.',
+                'Formative Concepts is an MEP drafting and BIM consulting firm in Pune. FactoryJet rebuilt their website on WordPress with an authority-first architecture for B2B project enquiries, credentials display, project portfolio, and technical SEO targeting high-value engineering queries.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
