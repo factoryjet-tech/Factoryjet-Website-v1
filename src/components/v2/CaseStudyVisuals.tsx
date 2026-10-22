@@ -38,7 +38,7 @@ export function CaseStudyHeroVisual({ cs }: { cs: CaseStudy }) {
       {mobile && <div className="csv-phone" aria-hidden="true">
         <span className="csv-phone-camera"/>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={mobile.src} alt="" width={390} height={844} decoding="async"/>
+        <img src={mobile.src} alt={mobile.alt} width={390} height={844} decoding="async"/>
       </div>}
       <span className="csv-inspect" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></span>
     </a>
@@ -62,7 +62,7 @@ export function CaseStudyScreenshotGallery({ screenshots }: { screenshots: CaseS
           <div className="csv-image-detail" tabIndex={0} role="region" aria-label={`Enlarged ${s.alt}`}>
             {/* Native disclosure: keyboard operable, full image without JavaScript. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={s.src} alt="" width={mobile ? 390 : 1200} height={mobile ? 844 : 750} loading="lazy" decoding="async"/>
+            <img src={s.src} alt={`${s.alt}, enlarged`} width={mobile ? 390 : 1200} height={mobile ? 844 : 750} loading="lazy" decoding="async"/>
           </div>
         </details>
         {s.caption && <figcaption>{s.caption}</figcaption>}

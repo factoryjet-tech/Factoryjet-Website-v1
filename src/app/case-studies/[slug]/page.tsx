@@ -27,6 +27,8 @@ import {
   type CaseStudyMetric,
   type CaseStudyGlanceTile,
   type CaseStudyScreenshot,
+  type CaseStudySnapshot,
+  type CaseStudyServiceLink,
 } from '@/data/case-studies'
 import { parseInlineLinks } from '@/data/case-studies/inline-links'
 
@@ -70,8 +72,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: 'Case Study Not Found | FactoryJet' }
   }
 
-  const title = `${cs.headline} | FactoryJet Case Study`
-  const description = cs.summary
+  const title = cs.seoTitle ?? `${cs.headline} | FactoryJet`
+  const description = cs.metaDescription ?? cs.summary
   const url = `https://factoryjet.com/case-studies/${slug}`
   const ogImage = cs.ogImageUrl?.startsWith('http')
     ? cs.ogImageUrl
@@ -81,10 +83,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     robots: {
-      index: true,
+      index: !cs.noindex,
       follow: true,
       googleBot: {
-        index: true,
+        index: !cs.noindex,
         follow: true,
         'max-video-preview': -1,
         'max-image-preview': 'large',
@@ -429,6 +431,91 @@ function HeroSection({ cs }: { cs: CaseStudy }) {
   )
 }
 
+// ───── SECTION 1b — IN SHORT (answer-first summary) ─────────────────────────
+function formatUpdated(iso: string) {
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-US', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  })
+}
+
+function SnapshotSection({ cs }: { cs: CaseStudy }) {
+  const snap: CaseStudySnapshot | undefined = cs.snapshot
+  if (!snap) return null
+  const updated = cs.modifiedDate ?? cs.publishedDate
+  const rows: Array<[string, string]> = [
+    ['Client', snap.who],
+    ['Problem', snap.problem],
+    ['What we built', snap.built],
+    ['Status', snap.status],
+  ]
+  return (
+    <section className="cs-snapshot bg-white py-12 md:py-16">
+      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+        <div className="max-w-[820px]">
+          <Eyebrow>In short</Eyebrow>
+          <Heading as="h2" size="h3" className="mt-4 text-fj-ink">
+            The {cs.client} project in four lines.
+          </Heading>
+          <p className="mt-5 font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}>
+            {cs.summary}
+          </p>
+          <dl className="mt-8 divide-y divide-black/[0.08] border-y border-black/[0.08]">
+            {rows.map(([label, value]) => (
+              <div key={label} className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-12 sm:gap-6">
+                <dt
+                  className="font-fj-mono text-[11px] font-bold uppercase sm:col-span-3 sm:pt-1"
+                  style={{ letterSpacing: '0.14em', color: ORANGE_DEEP }}
+                >
+                  {label}
+                </dt>
+                <dd className="font-fj-body text-fj-ink sm:col-span-9" style={{ fontSize: '1rem', lineHeight: 1.65 }}>
+                  {value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-4 font-fj-mono text-[12px] text-fj-neutral-600">
+            Last updated <time dateTime={updated}>{formatUpdated(updated)}</time>
+          </p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ───── SECTION 8b — SERVICES USED (light) ───────────────────────────────────
+function ServiceLinksSection({ links, client }: { links?: CaseStudyServiceLink[]; client: string }) {
+  if (!links?.length) return null
+  return (
+    <section className="cs-services bg-fj-cream py-12 md:py-16">
+      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+        <div className="max-w-[760px]">
+          <Eyebrow>Services on this project</Eyebrow>
+          <Heading as="h2" size="h3" className="mt-4 text-fj-ink">
+            The services behind the {client} work.
+          </Heading>
+          <ul className="mt-6 space-y-3">
+            {links.map((l) => (
+              <li key={l.href} className="font-fj-body" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
+                <Link
+                  href={l.href}
+                  className="font-semibold underline underline-offset-2"
+                  style={{ color: ORANGE_LINK }}
+                >
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // ───── SECTION 2 — AT A GLANCE ──────────────────────────────────────────────
 function AtAGlanceSection({ tiles }: { tiles: CaseStudyGlanceTile[] }) {
   if (!tiles?.length) return null
@@ -441,9 +528,10 @@ function AtAGlanceSection({ tiles }: { tiles: CaseStudyGlanceTile[] }) {
             The vitals.
           </Heading>
         </div>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {tiles.slice(0, 6).map((t, i) => (
-            <CrystalCard key={i}>
+            <li key={i}>
+            <CrystalCard className="h-full">
               <p
                 className="font-fj-mono text-[10px] font-bold uppercase"
                 style={{ letterSpacing: '0.16em', color: 'rgba(15,15,18,0.45)' }}
@@ -459,8 +547,9 @@ function AtAGlanceSection({ tiles }: { tiles: CaseStudyGlanceTile[] }) {
                 </p>
               )}
             </CrystalCard>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   )
@@ -499,7 +588,7 @@ function ChallengeSection({ body, pullQuote }: { body: string; pullQuote?: strin
         <div className="mb-10 max-w-[700px]">
           <Eyebrow dark>The Challenge</Eyebrow>
           <Heading as="h2" size="h3" className="mt-4" style={{ color: CREAM }}>
-            What we were up against.
+            The problem to solve.
           </Heading>
         </div>
 
@@ -563,7 +652,7 @@ function ApproachSection({ body, techStack }: { body: string; techStack?: string
         <div className="mb-10 max-w-[700px]">
           <Eyebrow>Our Approach</Eyebrow>
           <Heading as="h2" size="h3" className="mt-4 text-fj-ink">
-            How we attacked it.
+            How we approached it.
           </Heading>
         </div>
 
@@ -625,7 +714,7 @@ function SolutionSection({
         <div className="mb-10 max-w-[760px]">
           <Eyebrow>What We Built</Eyebrow>
           <Heading as="h2" size="h3" className="mt-4 text-fj-ink">
-            The project implementation.
+            What we built.
           </Heading>
         </div>
 
@@ -729,7 +818,7 @@ function ResultsSection({
         <div className="mb-10 max-w-[700px]">
           <Eyebrow dark>Results</Eyebrow>
           <Heading as="h2" size="h3" className="mt-4" style={{ color: CREAM }}>
-            What changed for the business.
+            Results and where it stands.
           </Heading>
         </div>
 
@@ -909,7 +998,7 @@ function RelatedCasesSection({ current }: { current: CaseStudy }) {
           <div>
             <Eyebrow>Related Cases</Eyebrow>
             <Heading as="h2" size="h3" className="mt-4 text-fj-ink">
-              Other wins worth a look.
+              Related case studies.
             </Heading>
           </div>
           <Link
@@ -1035,6 +1124,7 @@ export default async function CaseStudyPage({ params }: Props) {
           { name: cs.headline, url: `https://factoryjet.com/case-studies/${slug}` },
         ]} />
         <HeroSection cs={cs} />
+        <SnapshotSection cs={cs} />
         <AtAGlanceSection tiles={cs.glanceTiles ?? []} />
         <ChallengeSection body={cs.challenge} pullQuote={cs.challengePullQuote} />
         <ApproachSection body={cs.approach} techStack={cs.techStack} />
@@ -1047,6 +1137,7 @@ export default async function CaseStudyPage({ params }: Props) {
         />
         <TestimonialSection t={cs.testimonial} />
         <FounderBannerSection teaser={cs.ctaTeaser} />
+        <ServiceLinksSection links={cs.serviceLinks} client={cs.client} />
         <RelatedCasesSection current={cs} />
         <FAQSection faqs={cs.faqs} client={cs.client} enhanced={Boolean(visualSlug)} />
       </main>

@@ -30,7 +30,12 @@ const CHARCOAL = '#0F0F12'
 const ORANGE = '#F05A28'
 const CREAM = '#FAFAF7'
 
-// Stat + label are copied verbatim from each case study's `headlineMetric`
+// Stat + label describe what was delivered. They never carry a result figure
+// unless that figure is on the case study page with a measured source
+// (2026-10-22: the old "$360K", "5,000+", "+70%", "500+" and "+300%" cards
+// were replaced because the figures were removed from the pages).
+// Usage: node scripts/generate-case-study-cards.mjs [slug ...] (no args = all).
+// Stat + label were originally copied from each case study's `headlineMetric`
 // in src/data/case-studies/index.ts. realHero points at an existing, already
 //-shipped screenshot of the actual delivered client site.
 const CARDS = [
@@ -59,8 +64,8 @@ const CARDS = [
     slug: 'sow-easy-distributor-portal',
     client: 'Sow Easy',
     category: 'E-Comm',
-    stat: 'White-label',
-    label: 'Partner Mini-Sites',
+    stat: 'Odoo',
+    label: 'WooCommerce Trade Store',
   },
   {
     slug: 'gpsuk-promotional-products',
@@ -88,40 +93,40 @@ const CARDS = [
     slug: 'impulse-branding-migration',
     client: 'Impulse Branding',
     category: 'Corporate',
-    stat: '$360K',
-    label: 'Pipeline Influenced in 6 Months',
+    stat: 'Website',
+    label: 'Website + SEO + AI Search',
     realHero: 'impulse-branding.webp',
   },
   {
     slug: 'formative-concepts-bim',
     client: 'Formative Concepts',
     category: 'Corporate',
-    stat: '5,000+',
-    label: 'Monthly Global Visitors',
+    stat: 'BIM',
+    label: 'BIM Site for Global Buyers',
     realHero: 'formative-concepts.webp',
   },
   {
     slug: 'grofresh-manufacturing-erp',
     client: 'GroFresh Agro',
     category: 'Manufacturing',
-    stat: '+70%',
-    label: 'Operational Efficiency Gain',
+    stat: 'ERPNext',
+    label: 'Sourcing to Dispatch ERP',
     realHero: null,
   },
   {
     slug: 'flying-pixel-agency',
     client: 'Flying Pixel',
     category: 'Corporate',
-    stat: '500+',
-    label: 'Qualified Leads from Organic Traffic',
+    stat: 'Next.js',
+    label: 'Drone Survey Website',
     realHero: null,
   },
   {
     slug: 'rukman-transport-logistics',
     client: 'Rukman Transport',
     category: 'Logistics',
-    stat: '+300%',
-    label: 'Organic Search Visibility Lift',
+    stat: 'Local SEO',
+    label: 'Website + Google Profile',
     realHero: null,
   },
 ]
@@ -159,7 +164,8 @@ function renderCard(card, outPath) {
 
 if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true })
 
-for (const card of CARDS) {
+const only = process.argv.slice(2)
+for (const card of CARDS.filter((c) => !only.length || only.includes(c.slug))) {
   const ogPath = join(OUT_DIR, `${card.slug}-og.png`)
   renderCard(card, ogPath)
   console.log(`✓ ${card.slug}-og.png`)
@@ -175,4 +181,4 @@ for (const card of CARDS) {
   }
 }
 
-console.log(`\nDone. ${CARDS.length} case studies, ${CARDS.length * 2} files in ${OUT_DIR}`)
+console.log(`\nDone. ${only.length || CARDS.length} case studies, ${(only.length || CARDS.length) * 2} files in ${OUT_DIR}`)

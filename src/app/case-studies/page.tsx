@@ -23,7 +23,7 @@ const ORANGE = '#F05A28'
 const ORANGE_DEEP = '#C94A1A'
 const CHARCOAL = '#0F0F12'
 const CREAM = '#FAFAF7'
-const PAGE_MODIFIED = '2026-09-14'
+const PAGE_MODIFIED = '2026-10-22'
 
 export const metadata: Metadata = {
   title: 'Case Studies | FactoryJet',

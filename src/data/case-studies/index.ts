@@ -76,6 +76,8 @@ export type CaseStudyFaq = {
 }
 
 export type CaseStudy = {
+  /** true = page stays reachable by link but is noindexed and left out of the sitemap. */
+  noindex?: boolean
   /** URL slug, kebab-case. Becomes `/case-studies/{slug}/`. */
   slug: string
   /** Client name as published e.g. "Belle Maison". */
@@ -137,12 +139,35 @@ export type CaseStudy = {
   publishedDate: string
   /** Last substantive update, separate from original publication. */
   modifiedDate?: string
-  /** 4-6 FAQs per Report 19 Decision 5 (tight, not 20+). */
+  /** 8+ FAQs about this kind of project (raised from 4-6 by the 22 Oct 2026 weak-pages audit). */
   faqs: CaseStudyFaq[]
   /** Slugs of 2 related case studies rendered in Section 9. */
   relatedSlugs?: string[]
   /** Optional 1-line "What we'd build for you" used inside the CTA banner. */
   ctaTeaser?: string
+  /** <title>, 60 characters or fewer, rendered verbatim. Falls back to `headline`. */
+  seoTitle?: string
+  /** Meta description, 160 characters or fewer. Falls back to `summary`. */
+  metaDescription?: string
+  /**
+   * Answer-first block rendered under the hero: who the client is, the problem,
+   * what we built, and where the project stands today. One or two sentences each.
+   */
+  snapshot?: CaseStudySnapshot
+  /** Service pages that match this project. Internal paths, each a single hop (no redirect). */
+  serviceLinks?: CaseStudyServiceLink[]
+}
+
+export type CaseStudySnapshot = {
+  who: string
+  problem: string
+  built: string
+  status: string
+}
+
+export type CaseStudyServiceLink = {
+  label: string
+  href: string
 }
 
 /**
@@ -173,6 +198,20 @@ export const CASE_STUDIES: CaseStudy[] = [
   // is asserted unless it can be checked. Do not add numbers without a source.
   {
     slug: 'belle-maison-ecommerce-success',
+    seoTitle: 'Belle Maison: Retail and Trade Store on Commerceflo',
+    metaDescription:
+      'How FactoryJet built Belle Maison’s retail and trade storefront on Commerceflo, with per-account trade pricing, quote-to-order and a structured catalog.',
+    snapshot: {
+      who: 'Belle Maison, a Mumbai wholesale distributor of artificial plants, flowers, home decor and LED lighting that sells to retail shoppers and to trade buyers.',
+      problem: 'Retail shoppers and trade accounts buy in different ways. Trade orders started as messages and were priced by hand, one at a time.',
+      built: 'A Commerceflo storefront with a retail checkout, per-account trade pricing at login, and quotes that turn into orders without being retyped.',
+      status: 'Live on Commerceflo. The bellemaison.in domain is being moved onto the new store.',
+    },
+    serviceLinks: [
+      { label: 'B2B ecommerce development', href: '/b2b-ecommerce' },
+      { label: 'Commerceflo by FactoryJet', href: '/commerceflo' },
+      { label: 'Ecommerce development services', href: '/services/ecommerce-development' },
+    ],
     client: 'Belle Maison',
     tagline: 'A Commerceflo by FactoryJet storefront for retail shoppers and trade buyers.',
     industry: 'DTC + B2B Commerce',
@@ -226,7 +265,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Every order started as a message and got priced by hand. That does not scale past the people answering the phone.',
     approach:
       'We started from how the business actually sells rather than from a storefront template. That meant mapping the account tiers, the products that repeat, and the path a quote takes before it becomes an order. Commerceflo was the right base because quote-to-cash and account-based pricing are native to it rather than bolted on, which keeps trade logic out of custom code. We structured the catalog so trade buyers can find items the way they ask for them, and set pricing to resolve per account at login.',
-    techStack: ['Commerceflo'],
+    techStack: ['Commerceflo by FactoryJet', 'Next.js', 'Account-based pricing engine', 'Quote-to-order workflow'],
     solution:
       'The storefront shows a logged-in buyer their own contracted pricing, not a public list price. Buyers build a basket, raise a quote, and that quote carries through to an order without being retyped. Repeat ordering is account-based, so a returning buyer works from what they actually bought before. The catalog is structured around the categories trade buyers search, including artificial plants, flowers, flower runners, home decor and LED lighting.',
     results:
@@ -236,7 +275,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     ogImageUrl: '/images/case-studies/belle-maison-ecommerce-success-og.png',
     publishedDate: '2026-05-28',
     ctaTeaser: 'Selling to retail shoppers and trade accounts? We can scope both buying journeys on one commerce system.',
-    relatedSlugs: ['impulse-branding-migration', 'flying-pixel-agency'],
+    relatedSlugs: ['gpsuk-promotional-products', 'sow-easy-distributor-portal'],
     faqs: [
       {
         q: 'What is quote-to-cash, in plain terms?',
@@ -258,413 +297,595 @@ export const CASE_STUDIES: CaseStudy[] = [
         q: 'Can buyers still order the way they always have?',
         a: 'Yes, and that matters more than it sounds. Trade buyers who prefer to message still can. The portal removes the requirement that every order goes through a person, rather than removing the option.',
       },
+      {
+        q: 'Can retail shoppers and trade buyers use the same store?',
+        a: 'Yes. There is one catalog and two journeys. A retail shopper sees public prices and checks out as normal. A trade buyer logs in and sees their own account prices and the option to raise a quote. Products are kept up to date in one place for both.',
+      },
+      {
+        q: 'Can two trade accounts see different prices for the same product?',
+        a: 'Yes. Pricing is worked out per account at login, so each buyer sees the rate agreed with them. No account can see another account’s price, and the price on a quote carries through to the order.',
+      },
+      {
+        q: 'Is Commerceflo only for businesses in India?',
+        a: 'No. GPSUK, a UK promotional products supplier, also runs its trade storefront on Commerceflo. Account pricing and quote-to-order work the same way in any market.',
+      },
+      {
+        q: 'Can an existing domain move onto a new Commerceflo store?',
+        a: 'Yes. The store is built and tested on Commerceflo first, then the business’s own domain is pointed at it and old page addresses are redirected to the matching new pages. Belle Maison’s bellemaison.in domain is being moved onto its Commerceflo store.',
+      },
     ],
     clientUrl: 'https://app.commerceflo.ai/store/belle-maison',
     location: 'Mumbai, India',
-    modifiedDate: '2026-09-17',
+    modifiedDate: '2026-10-22',
   },
 
   // ─── 2. Impulse Branding: website, SEO and AI search engagement ──────────
+  // Revised 2026-10-22. impulsebranding.in fetched that day: HTTP 200, a
+  // Next.js build served through Cloudflare, title "Signage & Fit-Out, Mumbai",
+  // with services, sectors, case studies and insights sections in its sitemap.
+  // The old "₹3 Cr" / "$360K pipeline" figures were removed earlier as
+  // unsourced; the share card still printed "$360K" until this revision.
   {
     slug: 'impulse-branding-migration',
     client: 'Impulse Branding Solutions',
-    tagline: 'Website delivery with ongoing SEO and AI search work for a branding business.',
-    industry: 'Branding & Architecture',
+    tagline: 'A website, SEO and AI search engagement for a commercial signage and fit-out company.',
+    industry: 'Commercial Signage & Fit-Out',
     services: [
       'Website Development',
       'SEO',
       'AI Search',
     ],
     headline: 'A Website and Search Presence for Impulse Branding Solutions',
+    seoTitle: 'Impulse Branding: Website, SEO and AI Search',
+    metaDescription:
+      'How FactoryJet built the Impulse Branding Solutions website on Next.js and runs its SEO and AI search: services, sectors and project pages buyers can check.',
     summary:
-      'FactoryJet built a website for Impulse Branding Solutions and provides ongoing SEO and AI search work. The engagement connects the company’s service and portfolio content with the questions prospective customers ask.',
+      'Impulse Branding Solutions makes commercial signage and handles fit-out work for brands across India. FactoryJet built its website on Next.js and runs its ongoing SEO and AI search work, so buyers can find a service, see similar projects and send an inquiry.',
+    snapshot: {
+      who: 'Impulse Branding Solutions, a Mumbai company that manufactures commercial signage in-house and runs civil and MEP fit-out work for retail, aviation, healthcare, office and hospitality brands.',
+      problem: 'A buyer comparing signage and fit-out vendors wants to see the exact service, the sector it was done for, and real projects before they call. The site had to show all three and lead to an inquiry.',
+      built: 'A Next.js website with a page per service, a page per sector, project case studies and an insights section, plus ongoing SEO and AI search work on top of it.',
+      status: 'Live on impulsebranding.in. SEO and AI search work continues. Impulse Branding Solutions has reviewed FactoryJet publicly.',
+    },
     category: 'Corporate',
     heroStats: [
-      { value: 'Website', label: 'Built by FactoryJet' },
+      { value: 'Website', label: 'Built by FactoryJet on Next.js' },
       { value: 'SEO', label: 'Ongoing engagement' },
       { value: 'AI Search', label: 'Ongoing engagement' },
     ],
     glanceTiles: [
       { label: 'CLIENT', value: 'Impulse Branding Solutions' },
+      { label: 'INDUSTRY', value: 'Signage & Fit-Out' },
       { label: 'SERVICES', value: 'Website + SEO + AI Search' },
+      { label: 'PLATFORM', value: 'Next.js on Cloudflare' },
+      { label: 'STATUS', value: 'Live, Search Work Ongoing' },
+      { label: 'SITE', value: 'impulsebranding.in' },
     ],
     keyMetrics: [],
 
     challenge:
-      'A branding business needs its website to explain its services and make relevant work easy for prospective customers to assess. Search visitors also need a clear route from a service question to an inquiry.',
+      'Impulse Branding Solutions does two kinds of work that buyers usually hire separately: it makes signage in its own facility, and it runs the civil and MEP work for a fit-out. That is a strong offer, but it is hard to explain on one home page. A retail chain looking for store signage, an airport looking for wayfinding, and a hospital planning an interior refit all ask different questions.\nThey also check proof before they call. A buyer wants to see a project in their own sector, not a general gallery. And more of them now start by asking an AI assistant who does this kind of work, which only helps a company whose site explains itself in plain text.',
 
     approach:
-      'FactoryJet built the website and continues to work on SEO and AI search. The focus is on clear service information, accessible project evidence, and a site structure that helps visitors find the right next step.',
+      'We built the site around the questions a buyer asks, in the order they ask them. First, what exactly do you make or do, so each service has its own page. Second, have you done it for a business like mine, so each sector has its own page. Third, show me, so projects sit in their own case-study pages that the service and sector pages link to.\nSearch is ongoing work, not a launch task. We cover both traditional SEO and AI search, since being named in an AI answer and ranking in Google rest on the same base: real text, clear structure and pages that answer one question well.',
+    techStack: ['Next.js', 'React', 'Cloudflare', 'Schema.org JSON-LD'],
 
     solution:
-      'The engagement covers website development and ongoing search work. The current website project uses Next.js. This case keeps the implementation scope separate from claims about sales or search performance.',
+      'The live site has a page for each service, a page for each sector it serves, such as aviation and airports, retail and showrooms, healthcare and hospitals, corporate offices, education and hospitality, a set of project case studies, and an insights section for articles. Every page is plain server-rendered text, so search engines and AI tools can read it without running code, and each one ends with a route to an inquiry.\nOn top of the build, FactoryJet runs continuing SEO and AI search work: new pages where buyers are searching, internal links between services, sectors and projects, and fixes as the site grows.',
     results:
-      'The website engagement and ongoing SEO and AI search work are confirmed. This case describes that scope without attributing pipeline revenue or traffic growth to the work.',
+      'Impulse Branding Solutions has a live website that covers its services, its sectors and its projects, with SEO and AI search work continuing on it. This case describes the work delivered. Traffic and inquiry figures will be added here once they are measured and the client agrees to share them.',
     imageUrl: '/images/case-studies/impulse-branding-migration-hero.jpg',
     ogImageUrl: '/images/case-studies/impulse-branding-migration-og.png',
     publishedDate: '2026-05-28',
-    ctaTeaser: 'We can connect your service pages, portfolio, and inquiry journey as one website and search engagement.',
-    relatedSlugs: ['belle-maison-ecommerce-success', 'flying-pixel-agency'],
+    ctaTeaser: 'We can connect your service pages, sector pages, projects and inquiry journey as one website and search engagement.',
+    relatedSlugs: ['yadav-entrance-automation-website-seo', 'formative-concepts-bim'],
+    serviceLinks: [
+      { label: 'B2B website design', href: '/services/b2b-website-design' },
+      { label: 'AI SEO services', href: '/services/ai-seo' },
+      { label: 'Technical SEO', href: '/services/technical-seo' },
+    ],
     faqs: [
-      { q: 'What work does FactoryJet provide for Impulse Branding Solutions?', a: 'FactoryJet built the website and provides ongoing SEO and AI search work.' },
-      { q: 'Does this case claim a measured revenue uplift?', a: 'No. This case describes the engagement and its implementation scope. It does not report a measured revenue or traffic uplift.' },
+      { q: 'What work does FactoryJet do for Impulse Branding Solutions?', a: 'FactoryJet built the Impulse Branding Solutions website and runs its ongoing SEO and AI search work. The build covers service pages, sector pages, project case studies and an insights section. The search work adds and improves pages over time, based on what buyers are searching for.' },
+      { q: 'Why build a separate page for each service and each sector?', a: 'Because buyers search for one thing at a time. A retail chain looks for store signage, an airport looks for wayfinding, and a hospital looks for a fit-out partner. One page per service and one per sector gives each of them a direct answer, and gives Google and AI assistants a clear page to show for that question.' },
+      { q: 'Why did you use Next.js for this site?', a: 'Next.js lets us send every page as ready-made HTML, which loads fast and is easy for search engines and AI crawlers to read. It also lets the site grow to many service, sector and project pages without slowing down or turning into a page builder that only one person can edit.' },
+      { q: 'How should a B2B company show its projects on its website?', a: 'As separate case-study pages, each tied to the services and sectors it proves. A single gallery of photos does not tell a buyer what was done, for whom, or why it matters. A project page with the client type, the scope and the result, linked from the matching service page, does.' },
+      { q: 'What is AI search work, in plain terms?', a: 'It is making sure that when someone asks ChatGPT, Gemini or Google’s AI answers who does your kind of work, your company can be named. It rests on the same base as normal SEO: pages that answer one question clearly, in real text, with the facts a buyer needs.' },
+      { q: 'Can one website sell both manufacturing and site work?', a: 'Yes, if the structure is right. Impulse Branding Solutions makes signage and also runs civil and MEP fit-out work. The site explains each service on its own page and then shows how they combine, so a buyer who only needs one part is not lost, and a buyer who wants one partner for both sees that option.' },
+      { q: 'How long does SEO take to show results for a B2B services site?', a: 'Searches for the company name usually improve first, within weeks of launch. Service and sector searches take longer, often several months, and depend on how many competitors already rank. Anyone who promises a fixed date for page-one rankings is guessing.' },
+      { q: 'Does this case study report traffic or revenue figures?', a: 'Not yet. It describes the website and the search work FactoryJet delivers. Measured traffic and inquiry figures will be added once the client agrees to share them.' },
     ],
     clientUrl: 'https://impulsebranding.in/',
-    modifiedDate: '2026-09-14',
+    location: 'Mumbai, India',
+    modifiedDate: '2026-10-22',
   },
 
-  // ─── 3. Formative Concepts — BIM consultancy, zero to global ──────────────
+  // ─── 3. Formative Concepts: BIM and drafting website for overseas buyers ──
+  // Revised 2026-10-22. The old version claimed "$108K revenue in 4 months",
+  // "5,000+ monthly visitors", "30+ international leads" and "$0 paid spend",
+  // and a Gatsby + Contentful + Netlify stack. None of those figures has a
+  // source beyond the legacy /case/ data file, which also held the fabricated
+  // Belle Maison and Impulse figures. DataForSEO domain_rank_overview on
+  // 22 Oct 2026 estimated single-digit monthly organic visits for the domain,
+  // which contradicts "5,000+". The live site (formativeconcepts.com, fetched
+  // 22 Oct 2026) runs on WordPress with Breakdance, not Gatsby. Do not restore
+  // any figure without a measured source from the client.
   {
     slug: 'formative-concepts-bim',
     client: 'Formative Concepts',
-    tagline: 'A specialized MEP and BIM consultancy moving from word-of-mouth to international lead generation.',
+    tagline: 'An architectural, MEP drafting and BIM firm that needed a website overseas buyers could find and trust.',
     industry: 'MEP & BIM Consulting',
     services: [
-      'Gatsby/React Site Build',
-      'Contentful CMS Setup',
-      'Consultative SEO Strategy',
-      'AIO Content Engineering',
-      'International Lead Funnel',
+      'WordPress Website Build',
+      'Service and Country Pages',
+      'Consultative SEO',
+      'AI Search Content Structure',
     ],
-    headline: 'From Zero to 5,000 Monthly Global Visitors: BIM Consultancy Wins International Leads',
+    headline: 'A Website That Explains BIM and MEP Drafting to Overseas Buyers',
+    seoTitle: 'Formative Concepts: BIM and MEP Drafting Website',
+    metaDescription:
+      'How FactoryJet built the Formative Concepts website on WordPress: a page per drafting and BIM service, pages for each country it serves, and SEO for buyers.',
     summary:
-      'Formative Concepts had zero digital footprint and depended entirely on referrals, capping their ability to win international contracts. FactoryJet launched a 20+ page digital ecosystem engineered for consultative SEO and AI answer-engine citation, generating 30+ qualified international leads in the first four months.',
+      'Formative Concepts provides architectural drafting, MEP design and BIM services to architects, contractors and developers in other countries. FactoryJet built its website on WordPress with a page for each service and each country it sells into, written for the technical searches those buyers make.',
+    snapshot: {
+      who: 'Formative Concepts, an architectural drafting, MEP design and BIM outsourcing firm whose buyers are architects, contractors and developers in other countries.',
+      problem: 'The firm relied on referrals and had almost no web presence, so overseas buyers searching for drafting or BIM help never found it.',
+      built: 'A WordPress site with a page for each drafting and BIM service, a page for each country it serves, a projects page and insight articles, structured for technical search queries.',
+      status: 'Live on formativeconcepts.com. FactoryJet built and manages the site.',
+    },
     category: 'Corporate',
     heroStats: [
-      { value: '5,000+', label: 'Monthly global visitors' },
-      { value: '30+', label: 'International leads (4 mo)' },
-      { value: '$108K', label: 'Revenue in 4 months' },
+      { value: '20+', label: 'Pages at launch' },
+      { value: 'WordPress', label: 'Platform built on' },
+      { value: 'Worldwide', label: 'Buyers the site is written for' },
     ],
     glanceTiles: [
       { label: 'INDUSTRY', value: 'MEP & BIM Consulting' },
-      { label: 'SERVICES', value: 'Gatsby + Contentful + Consultative SEO' },
-      { label: 'TIMELINE', value: '4 Months' },
+      { label: 'SERVICES', value: 'Website + Consultative SEO' },
+      { label: 'PLATFORM', value: 'WordPress + Breakdance' },
       { label: 'SCALE', value: '20+ Pages' },
       { label: 'AUDIENCE', value: 'International B2B' },
-      { label: 'TECH', value: 'Gatsby, React, Contentful, Netlify' },
+      { label: 'SITE', value: 'formativeconcepts.com' },
     ],
     keyMetrics: [
-      { label: 'Revenue (4 Mo)', value: '$108K USD', note: '≈ ₹90 Lakh equivalent' },
-      { label: 'Monthly Visitors', value: '5,000+' },
-      { label: 'International Leads', value: '30+' },
       { label: 'Pages Live', value: '20+' },
+      { label: 'Service Pages', value: 'One per drafting discipline' },
+      { label: 'Country Pages', value: 'One per market served' },
+      { label: 'Platform', value: 'WordPress' },
     ],
     headlineMetric: {
-      label: 'Monthly International Visitors (4 Months In)',
-      value: '5,000+',
-      note: 'From zero, pure organic, no paid spend',
+      label: 'What Changed',
+      value: 'A site for overseas buyers',
+      note: 'Each service and each target country has its own page, written for the searches those buyers make',
     },
     resultsMetrics: [
-      { label: 'Revenue (4 Mo)', value: '$108K USD' },
-      { label: 'Monthly Visitors', value: '5,000+' },
-      { label: 'International Leads', value: '30+' },
-      { label: 'Pages Live', value: '20+' },
-      { label: 'Paid Spend', value: '$0' },
-      { label: 'AI Citation Appearances', value: 'Growing' },
+      { label: 'Website', value: 'Live' },
+      { label: 'Service Pages', value: 'Per discipline' },
+      { label: 'Country Pages', value: 'Per market' },
+      { label: 'Projects', value: 'Shown on site' },
+      { label: 'Insights', value: 'Articles published' },
+      { label: 'Platform', value: 'WordPress' },
     ],
     challenge:
-      'Formative Concepts, a specialized MEP and BIM consultancy, had zero digital footprint. They relied entirely on word-of-mouth, limiting their ability to attract international clients. Decision-makers shopping for BIM consultancy run technical search queries, they want to see evidence of capability before they reach out, and Formative Concepts simply was not showing up. The brand needed a digital presence that demonstrated technical depth and established trust on first visit, not after a 30-minute discovery call.',
-    challengePullQuote:
-      'We were invisible to the international clients we most wanted to win.',
+      'Formative Concepts had almost no digital footprint. Work came through word of mouth, which limits a drafting and BIM firm to the people who already know it. Its best buyers are architects, contractors and developers in other countries, and they search for a specific task, such as MEP coordination, clash detection or as-built drawings, rather than for a firm’s name. They also want to see evidence of capability before they make contact. A thin site, or no site, drops the firm from that shortlist before anyone calls.',
     approach:
-      'We treated the site as a credibility engine, not a brochure. The content strategy was built around "consultative SEO", answering the specific technical queries that BIM decision-makers actually type, rather than chasing high-volume generic keywords. Every page was structured so an AI answer engine could lift a clean, citable paragraph. We picked Gatsby + Contentful so the team could iterate content quickly while keeping the static-site performance profile that international visitors on slower connections need.',
-    techStack: ['React', 'Gatsby', 'Contentful', 'Netlify'],
+      'We treated the site as the firm’s first meeting with an overseas buyer. The content follows "consultative SEO": answer the specific technical question a decision-maker types, rather than chase broad, high-volume terms. That meant one page per service, so each discipline is explained on its own, and one page per country the firm sells into, so a buyer in that market lands on a page written for them. Every page is written so a search engine or AI assistant can lift a clear, direct answer from it. WordPress with the Breakdance builder lets the firm’s own team keep pages and projects current without a developer.',
+    techStack: ['WordPress', 'Breakdance', 'Rank Math SEO', 'Google Site Kit', 'Schema.org JSON-LD'],
     solution:
-      'We launched a comprehensive 20+ page digital ecosystem covering services, sector expertise, case studies, and technical resources. The content strategy was engineered for consultative SEO, targeting specific technical queries used by decision-makers (e.g., "MEP coordination for healthcare projects", "Revit family standards"). By optimizing for AIO, the brand began appearing in AI-generated answers for niche BIM queries. Contentful gave the in-house team a friendly editor for ongoing content updates.',
+      'The site covers every service the firm offers, each on its own page: architectural drafting, MEP drafting and design, mechanical (HVAC), electrical, plumbing and fire protection drafting, MEP coordination and clash detection, BIM modeling, 4D and 5D BIM, as-built drawings and models, shop drawings, permit drawings, and 3D modeling and rendering. Alongside those sit country pages for the markets it serves, including the USA, Canada, Australia, New Zealand, Singapore, Saudi Arabia and Kuwait, plus a projects page, an about page and insight articles. Each page leads to a call request.',
     results:
-      'In the first four months the site went from zero traffic to 5,000+ monthly international visitors and produced 30+ qualified international leads, generating roughly $108K USD in revenue (equivalent to about ₹90 Lakh). The "international" framing was no accident: decision-makers in the US, UK, and Middle East were the highest-value prospects, and the consultative SEO strategy was tuned for exactly those queries.',
+      'Formative Concepts has a live website that explains each of its services and speaks to buyers in each market it serves. FactoryJet built the site and manages it. This case describes the delivered work; traffic and lead figures will be added once they are measured on the current site.',
     imageUrl: '/images/case-studies/formative-concepts-bim-hero.jpg',
     ogImageUrl: '/images/case-studies/formative-concepts-bim-og.png',
     publishedDate: '2026-05-28',
-    ctaTeaser: 'B2B consultancy with zero web presence? We build the credibility engine that wins international leads.',
-    relatedSlugs: ['rukman-transport-logistics', 'impulse-branding-migration'],
+    modifiedDate: '2026-10-22',
+    clientUrl: 'https://formativeconcepts.com/',
+    ctaTeaser: 'Selling a technical service to buyers abroad? We build the pages they search for and the proof they check.',
+    relatedSlugs: ['impulse-branding-migration', 'yadav-entrance-automation-website-seo'],
+    serviceLinks: [
+      { label: 'WordPress development', href: '/wordpress-development' },
+      { label: 'B2B website design', href: '/services/b2b-website-design' },
+      { label: 'AI SEO services', href: '/services/ai-seo' },
+    ],
     faqs: [
       {
         q: 'What is consultative SEO and how is it different from standard SEO?',
-        a: 'Standard SEO chases the highest-volume keyword. Consultative SEO targets the specific technical queries decision-makers type when they have a real problem to solve. The volume is lower; the conversion rate is dramatically higher.',
+        a: 'Standard SEO chases the highest-volume keyword. Consultative SEO targets the specific technical question a decision-maker types when they have a real problem, such as "MEP coordination for a hospital project". Fewer people search those terms, but the people who do are much closer to hiring someone.',
       },
       {
-        q: 'Why Gatsby over WordPress for this build?',
-        a: 'Gatsby ships static HTML, which loads fast on slow international connections and ranks well on Core Web Vitals. Contentful sits behind it as the editor-friendly CMS so the in-house team can still publish without touching code.',
+        q: 'Why does a drafting firm need a page for every service?',
+        a: 'Because buyers search for the task, not the firm. An architect who needs clash detection searches for clash detection. If that service is one line on a general page, the firm will not show up. A page per service explains the scope, the files delivered and the software used, which is what that buyer wants to know.',
       },
       {
-        q: 'How does the site get cited by AI answer engines?',
-        a: 'Every section is structured so an AI engine can lift a clean, citable paragraph: clear named entities, structured data, FAQ schema, and explicit answers to common technical questions. We measure citation appearances and tune from there.',
+        q: 'Why build country pages for an outsourcing firm?',
+        a: 'A contractor in Australia and a developer in Saudi Arabia work to different standards and ask different questions. A page for each market lets the firm speak to that buyer directly, and gives search engines a clear page to show to people in that country.',
       },
       {
-        q: 'How did a brand-new site generate 5,000 monthly visitors in 4 months?',
-        a: 'Niche technical queries have much lower competition than generic terms. By being one of the few sites that answers the specific question a BIM coordinator is searching, the page ranks fast, often inside 6–8 weeks for long-tail technical queries.',
+        q: 'Why WordPress for this site?',
+        a: 'WordPress with the Breakdance builder lets the firm’s own team add projects and update pages without a developer. For a services firm that adds work samples often, that matters more than the small speed gain of a fully custom build.',
       },
       {
-        q: 'Can the same playbook work for a US consultancy?',
-        a: 'Yes, and the cost ratio is even more favorable in the US, where consultative SEO can carry deal sizes of $50K–$500K. The technical query landscape is the same; we just translate the local examples and certifications.',
+        q: 'How does a site get cited by AI answer engines?',
+        a: 'There is no special trick. AI assistants quote pages that answer a question clearly in real text, name the service and the facts plainly, and are easy to crawl. Every page on this site opens with a direct explanation of the service before going into detail.',
+      },
+      {
+        q: 'What should a BIM or drafting firm show on its website to win overseas work?',
+        a: 'The exact services, the software and file formats it works in, the standards it can meet, and real projects. Overseas buyers cannot visit the office, so the website has to answer the questions they would ask in a first meeting.',
+      },
+      {
+        q: 'Can the firm update the site itself?',
+        a: 'Yes. The site runs on WordPress, so the team can edit pages, add projects and publish articles from the admin screen. FactoryJet manages the site and handles the technical side.',
+      },
+      {
+        q: 'Does this case study report traffic or lead figures?',
+        a: 'Not at the moment. It describes the website FactoryJet built and manages. Measured traffic and lead figures will be added when they are available for the current site.',
       },
     ],
   },
 
-  // ─── 4. GroFresh Agro — custom ERPNext for food processing ────────────────
+  // ─── 4. GroFresh Agro: ERPNext for a food processing manufacturer ─────────
+  // Revised 2026-10-22. The old version claimed "+70% operational efficiency",
+  // "-90% paperwork", "finance close in days", "near-zero inventory leakage",
+  // a "12–20 week" timeline and a "multi-million-dollar" scale (the legacy
+  // source said "multi-crore", which is not the same thing). No source exists
+  // for any of these beyond the deleted legacy /case/ data file, which also
+  // held fabricated figures for two other clients. GroFresh Agrofood is listed
+  // in FactoryJet's GoodFirms portfolio. Do not restore a figure without a
+  // measured source from the client.
   {
     slug: 'grofresh-manufacturing-erp',
     client: 'GroFresh Agro',
-    tagline: 'A multi-million-dollar food processing manufacturer replacing spreadsheets with a unified ERP.',
+    tagline: 'A food processing manufacturer moving from Tally and spreadsheets to one ERP.',
     industry: 'Food Processing Manufacturing',
     services: [
-      'Custom ERPNext Implementation',
+      'ERPNext Implementation',
       'Supply Chain Digitization',
-      'Production Dashboard Build',
-      'Postgres + Docker Infrastructure',
-      'AWS Deployment',
+      'Production Dashboards',
+      'Cloud Deployment',
     ],
-    headline: '70% Operational Efficiency Gain: Custom ERPNext for a Food Processing Manufacturer',
+    headline: 'Replacing Tally and Spreadsheets With ERPNext at GroFresh Agro',
+    seoTitle: 'GroFresh Agro: ERPNext for Food Processing',
+    metaDescription:
+      'How FactoryJet replaced Tally and spreadsheets at GroFresh Agro with ERPNext: sourcing to dispatch in one system, batch tracking and live yield dashboards.',
     summary:
-      'GroFresh was running a multi-million-dollar food processing operation on Tally and disjointed spreadsheets, creating data silos, inventory leakage, and delayed financial reporting. FactoryJet replaced the legacy stack with a custom ERPNext implementation tailored to food-processing workflows, improving overall operational efficiency by 70%.',
+      'GroFresh Agro ran its food processing operation on Tally and separate spreadsheets, so stock, production and finance never matched. FactoryJet implemented ERPNext set up for food processing, covering raw material sourcing through to dispatch, with live dashboards for production yield and wastage.',
+    snapshot: {
+      who: 'GroFresh Agro, a food processing manufacturer.',
+      problem: 'Operations ran on Tally and disconnected spreadsheets, which split the data, let stock go missing between systems, and delayed financial reporting.',
+      built: 'An ERPNext system set up for food processing, from raw material sourcing to dispatch, with batch tracking, expiry and lot traceability, and live dashboards for yield and wastage.',
+      status: 'Delivered. Procurement, inventory, production and finance run in one system.',
+    },
     category: 'Manufacturing',
     heroStats: [
-      { value: '+70%', label: 'Operational efficiency' },
-      { value: '-90%', label: 'Paperwork' },
-      { value: 'Real-time', label: 'Data latency' },
+      { value: 'ERPNext', label: 'One system for the operation' },
+      { value: 'Live', label: 'Yield and wastage dashboards' },
+      { value: 'End to end', label: 'Sourcing through dispatch' },
     ],
     glanceTiles: [
       { label: 'INDUSTRY', value: 'Food Processing' },
-      { label: 'SERVICES', value: 'Custom ERPNext Implementation' },
-      { label: 'TIMELINE', value: '12–20 Weeks' },
-      { label: 'SCALE', value: 'Multi-million-dollar Ops' },
+      { label: 'SERVICES', value: 'ERPNext Implementation' },
+      { label: 'REPLACED', value: 'Tally + Spreadsheets' },
       { label: 'WORKFLOW', value: 'Sourcing → Dispatch' },
-      { label: 'TECH', value: 'ERPNext, Python, Postgres, Docker, AWS' },
+      { label: 'TRACEABILITY', value: 'Batch, Lot and Expiry' },
+      { label: 'TECH', value: 'ERPNext, Python, Docker, AWS' },
     ],
     keyMetrics: [
-      { label: 'Efficiency Gain', value: '+70%' },
-      { label: 'Paperwork Reduction', value: '-90%' },
-      { label: 'Data Latency', value: 'Real-time' },
+      { label: 'System', value: 'ERPNext' },
+      { label: 'Replaced', value: 'Tally + spreadsheets' },
+      { label: 'Dashboards', value: 'Live yield and wastage' },
       { label: 'Workflow Coverage', value: 'Sourcing → Dispatch' },
     ],
     headlineMetric: {
-      label: 'Operational Efficiency Gain',
-      value: '+70%',
-      note: 'Blended index across order-to-cash, yield variance, inventory leakage, finance close',
+      label: 'What Changed',
+      value: 'One system, sourcing to dispatch',
+      note: 'Stock, production and finance now read from the same records instead of separate spreadsheets',
     },
     resultsMetrics: [
-      { label: 'Efficiency Gain', value: '+70%' },
-      { label: 'Paperwork Reduction', value: '-90%' },
-      { label: 'Data Latency', value: 'Real-time' },
-      { label: 'Finance Close', value: 'Days, not weeks' },
-      { label: 'Inventory Leakage', value: 'Near-zero' },
-      { label: 'Module Coverage', value: 'Procurement → Finance' },
+      { label: 'Procurement', value: 'In ERPNext' },
+      { label: 'Inventory', value: 'In ERPNext' },
+      { label: 'Production', value: 'Batch + yield tracking' },
+      { label: 'Traceability', value: 'Lot and expiry' },
+      { label: 'Dashboards', value: 'Live' },
+      { label: 'Finance', value: 'Same records as operations' },
     ],
     challenge:
-      'GroFresh was running a multi-million-dollar manufacturing operation using Tally and disjointed spreadsheets. This created data silos, inventory leakage, and delayed financial reporting. Plant managers were making decisions on week-old data; finance was reconciling production yields by hand at month-end; raw material procurement had no real-time visibility into floor consumption. They needed a unified ERP solution to bring transparency to their supply chain and production lines without ripping out the existing operational habits all at once.',
-    challengePullQuote:
-      'We were a multi-million-dollar operation making decisions on week-old spreadsheets.',
+      'GroFresh was running a food processing operation on Tally and a set of separate spreadsheets. Each team kept its own numbers. Stock leaked between systems because nothing tied raw material received to what was used on the floor. Plant managers made decisions on old reports, and finance reconciled production yields by hand at month-end. The business needed one system for its supply chain and production lines, without forcing every team to change how it worked on the same day.',
     approach:
-      'We chose ERPNext as the foundation because it gives manufacturers a serious, modular ERP without the seven-figure license cost of SAP or Oracle. The implementation was sequenced module-by-module, procurement and inventory first (the highest-leakage area), then production planning, then finance integration, so the plant kept running while each module went live. Every workflow was mapped to existing GroFresh practice before being digitized, so the change-management burden stayed manageable.',
-    techStack: ['ERPNext', 'Python', 'PostgreSQL', 'Docker', 'AWS'],
+      'We chose ERPNext because it gives a manufacturer a full, modular ERP without the licence cost of the large enterprise suites. We mapped each GroFresh workflow as it ran before configuring anything, so the system matched how the plant works. Then we went live one area at a time: procurement and inventory first, where the stock gaps were, then production planning, then finance. The plant kept running while each part switched over.',
+    techStack: ['ERPNext', 'Python', 'Docker', 'AWS'],
     solution:
-      'We replaced their legacy systems with a custom ERPNext implementation tailored to food-processing workflows. The new system digitized everything from raw material sourcing to final dispatch, batch tracking, yield reporting, expiry management, and lot traceability all live in one system. Real-time dashboards now provide the leadership team with instant insights into production yields and wastage. The whole stack runs on Postgres in Docker containers on AWS for predictable scaling.',
+      'The ERP now covers the operation from raw material sourcing to final dispatch. Batch tracking, yield reporting, expiry management and lot traceability sit in the same system as purchasing and stock, so a batch can be traced back to the raw material it came from. Live dashboards show the leadership team production yield and wastage as they happen, instead of in a month-end report. The system runs in Docker containers on AWS.',
     results:
-      'Overall operational efficiency improved by 70%. Paper-based workflows dropped by 90%. Data latency went from week-old reports to real-time dashboards. Plant managers can now spot a yield drop in the morning and adjust the same shift, instead of finding out at month-end. Finance closes the books in days instead of weeks, and procurement orders against actual consumption instead of historical averages.',
+      'GroFresh runs procurement, inventory, production and finance in one ERPNext system instead of Tally and spreadsheets. Yield and wastage are visible on live dashboards, and every batch can be traced to its raw material. This case describes the system delivered; it does not publish efficiency figures.',
     imageUrl: '/images/case-studies/grofresh-manufacturing-erp-hero.jpg',
     ogImageUrl: '/images/case-studies/grofresh-manufacturing-erp-og.png',
     publishedDate: '2026-05-28',
-    ctaTeaser: 'Mid-market manufacturer stuck on Tally + spreadsheets? We build custom ERPNext stacks that scale.',
-    relatedSlugs: ['rukman-transport-logistics', 'belle-maison-ecommerce-success'],
+    modifiedDate: '2026-10-22',
+    ctaTeaser: 'Manufacturer still running on Tally and spreadsheets? We set up ERP systems around how your plant actually works.',
+    relatedSlugs: ['sow-easy-distributor-portal', 'belle-maison-ecommerce-success'],
+    serviceLinks: [
+      { label: 'AI agents for ERP systems', href: '/services/erp-ai-agents' },
+      { label: 'AI agents for manufacturing', href: '/services/manufacturing-ai-agents' },
+      { label: 'Custom web application development', href: '/services/web-application-development' },
+    ],
     faqs: [
       {
-        q: 'Why ERPNext over SAP or Oracle for a mid-market manufacturer?',
-        a: 'ERPNext is open-source, runs without per-seat licensing fees, and is modular enough to handle real manufacturing workflows. For a multi-million-dollar manufacturer, the total cost of ownership is a fraction of SAP/Oracle while covering 90% of the same functionality.',
+        q: 'Why ERPNext rather than SAP or Oracle for a mid-sized manufacturer?',
+        a: 'ERPNext is open source, has no per-user licence fee, and covers the core of manufacturing: purchasing, stock, production, quality and accounts. For a mid-sized plant it does most of what the large suites do at a much lower total cost, and it can be changed to fit the plant rather than the other way round.',
       },
       {
-        q: 'How long does a custom ERPNext implementation typically take?',
-        a: 'Plan on 12–20 weeks for a mid-market manufacturer with 3–5 modules live. The variable is data migration and change management, not the software itself.',
+        q: 'How do you move a business off Tally without stopping operations?',
+        a: 'One area at a time. We start where the data problems cost the most, usually purchasing and stock, run it live, and only then move the next area. Opening balances and item masters are cleaned before import, so the new system does not inherit the old errors.',
       },
       {
-        q: 'What does the 70% efficiency gain actually measure?',
-        a: 'A blended index across order-to-cash cycle time, production yield variance, inventory leakage, and finance close speed. Each subcomponent improved 40–90%: the 70% is the weighted average.',
+        q: 'What does food processing need that a generic ERP setup does not?',
+        a: 'Batch tracking, expiry dates, lot traceability and yield reporting. A generic setup tracks how much stock you have. A food processing setup also tracks which batch it came from, when it expires, and how much finished product each batch of raw material produced.',
       },
       {
-        q: 'How does food-specific workflow differ from generic ERPNext?',
-        a: 'Batch tracking, expiry management, lot traceability, and yield variance reporting are all customized for food processing. Generic ERPNext handles inventory; food-grade ERPNext handles regulatory traceability and shelf-life economics.',
+        q: 'What is lot traceability and why does it matter?',
+        a: 'It means you can follow any finished product back to the raw material lots it was made from, and forward to the customers who received it. If a supplier reports a problem with one lot, you can find every affected batch in minutes instead of searching through paper records.',
       },
       {
-        q: 'Can a US manufacturer get the same outcome?',
-        a: 'Yes, and the regulatory layer (FDA, FSMA traceability requirements) is actually easier to handle in a customized ERPNext build than in off-the-shelf US ERP packages. The implementation playbook transfers directly.',
+        q: 'Can ERPNext show production numbers in real time?',
+        a: 'Yes. When production entries are recorded in the system as work happens, dashboards update straight away. At GroFresh, leadership sees yield and wastage on live dashboards instead of waiting for a month-end report.',
+      },
+      {
+        q: 'Where does an ERPNext system run?',
+        a: 'Anywhere that can run Docker. The GroFresh system runs in Docker containers on AWS. A business can also host it on its own server or use a managed hosting provider, and the bills can sit in the business’s own account.',
+      },
+      {
+        q: 'Does FactoryJet work with ERPs other than ERPNext?',
+        a: 'Yes. FactoryJet has worked on Odoo, NetSuite, SAP Business One and custom ERPs, as well as ERPNext. The choice depends on the business, its budget and the systems it already runs.',
+      },
+      {
+        q: 'Can AI agents be added on top of an ERP like this?',
+        a: 'Yes, once the data lives in one system. Common examples are reading supplier quotes and purchase orders into the ERP, drafting sales orders from emails, and flagging stock that is close to expiry. The ERP stays the system of record and the agent does the repetitive reading and typing.',
       },
     ],
   },
 
-  // ─── 5. Flying Pixel — creative agency lead gen via design + CRO ─────────
+  // ─── 5. Flying Pixel: geospatial and drone survey website ────────────────
+  // Rewritten 2026-10-22. The old version described a "creative agency" on Wix
+  // Studio with Velo and Zapier, and claimed "500+ organic leads", "+300%
+  // traffic", "95% client retention", "$0 paid spend", "+47% dwell time" and
+  // "-31% bounce rate". The live site (flyingpixel.in, fetched 22 Oct 2026) is
+  // a geospatial and drone survey business on a Next.js static build served by
+  // Cloudflare, which FactoryJet built (project folder
+  // ~/FactoryJet/client-projects/flying-pixel, handover dated 2026-08-12). The
+  // old story and its figures do not describe this site and had no source.
+  // Client naming approved by Bhavesh on 2026-09-29.
   {
     slug: 'flying-pixel-agency',
     client: 'Flying Pixel',
-    tagline: 'A creative agency that needed a portfolio that converted as well as it looked.',
-    industry: 'Creative Agency',
+    tagline: 'A drone survey and geospatial company that needed a website its engineering buyers would take seriously.',
+    industry: 'Geospatial & Drone Survey',
     services: [
-      'WIX Studio Build',
-      'Conversion Rate Optimization',
-      'Organic SEO Strategy',
-      'AIO Content Pillars',
-      'Velo API + Zapier Automation',
+      'Website Design and Build',
+      'Enterprise Survey Site',
+      'Weddings & Events Section',
+      'SEO and AI Search Foundations',
     ],
-    headline: 'Generating 500+ Organic Leads via High-Performance Design',
+    headline: 'A Geospatial and Drone Survey Website for Flying Pixel',
+    seoTitle: 'Flying Pixel: Drone Survey and Geospatial Website',
+    metaDescription:
+      'How FactoryJet built Flying Pixel a Next.js website for drone survey, LiDAR and photogrammetry buyers, plus a separate section for weddings and events.',
     summary:
-      'As a creative agency, Flying Pixel needed a website that walked the talk, visually impressive and rigorously optimized for conversion. FactoryJet built a WIX Studio site layered with custom SEO/AIO strategy, generating 500+ qualified leads from organic traffic without paid ads.',
+      'Flying Pixel runs drone surveys, LiDAR and photogrammetry for infrastructure, energy and construction projects, and also films weddings and events from the air. FactoryJet built its website on Next.js with a survey site for engineering buyers and a separate weddings and events section, so each audience lands on pages written for it.',
+    snapshot: {
+      who: 'Flying Pixel, a drone company that delivers survey data (point clouds, terrain models and contours) for infrastructure, energy and construction projects, and also shoots weddings and events.',
+      problem: 'Two very different audiences, project engineers and wedding clients, were being served by one mixed site, which made the survey business look less serious to the buyers who matter most.',
+      built: 'A Next.js website with a survey and geospatial site (solutions, sectors, work, about, contact) and a separate weddings and events section with its own service pages.',
+      status: 'Live on flyingpixel.in.',
+    },
     category: 'Corporate',
     heroStats: [
-      { value: '500+', label: 'Organic leads' },
-      { value: '+300%', label: 'Traffic growth' },
-      { value: '95%', label: 'Client retention' },
+      { value: 'Next.js', label: 'Fast static build' },
+      { value: 'Two audiences', label: 'Survey buyers and event clients' },
+      { value: 'Live', label: 'flyingpixel.in' },
     ],
     glanceTiles: [
-      { label: 'INDUSTRY', value: 'Creative Agency' },
-      { label: 'SERVICES', value: 'WIX Studio + SEO + CRO' },
-      { label: 'TIMELINE', value: 'Ongoing' },
-      { label: 'SCALE', value: '500+ Leads' },
-      { label: 'PAID SPEND', value: '$0' },
-      { label: 'TECH', value: 'WIX Studio, Velo API, GA4, Zapier' },
+      { label: 'INDUSTRY', value: 'Geospatial & Drone Survey' },
+      { label: 'SERVICES', value: 'Website Design + Build' },
+      { label: 'PLATFORM', value: 'Next.js on Cloudflare' },
+      { label: 'AUDIENCES', value: 'Engineers + Event Clients' },
+      { label: 'STATUS', value: 'Live' },
+      { label: 'SITE', value: 'flyingpixel.in' },
     ],
     keyMetrics: [
-      { label: 'Organic Leads', value: '500+' },
-      { label: 'Traffic Growth', value: '+300%' },
-      { label: 'Client Retention', value: '95%' },
-      { label: 'Paid Spend', value: '$0' },
+      { label: 'Survey Site', value: 'Solutions, sectors, work' },
+      { label: 'Events Section', value: 'Own service pages' },
+      { label: 'Platform', value: 'Next.js' },
+      { label: 'Site', value: 'flyingpixel.in' },
     ],
     headlineMetric: {
-      label: 'Qualified Leads from Organic Traffic',
-      value: '500+',
-      note: 'Zero paid ad spend over the same window',
+      label: 'What Changed',
+      value: 'One site per audience',
+      note: 'Engineering buyers and wedding clients each land on pages written for them',
     },
     resultsMetrics: [
-      { label: 'Organic Leads', value: '500+' },
-      { label: 'Traffic Growth', value: '+300%' },
-      { label: 'Client Retention', value: '95%' },
-      { label: 'Paid Spend', value: '$0' },
-      { label: 'Avg. Dwell Time', value: '+47%' },
-      { label: 'Bounce Rate', value: '-31%' },
+      { label: 'Website', value: 'Live' },
+      { label: 'Survey Pages', value: 'Solutions + sectors' },
+      { label: 'Project Work', value: 'Shown on site' },
+      { label: 'Events Section', value: 'Separate pages' },
+      { label: 'Platform', value: 'Next.js, static' },
+      { label: 'Hosting', value: 'Cloudflare' },
     ],
     challenge:
-      'As a creative agency, Flying Pixel needed a website that walked the talk. Their existing portfolio was visually appealing but functionally weak, it was not converting visitors into inquiries. They needed a balance of stunning aesthetics and rigorous conversion rate optimization (CRO). The site had to look like it was made by a creative agency you would actually hire, while still moving the prospect through a clear inquiry funnel and feeding the CRM cleanly enough that the team could follow up the same day.',
-    challengePullQuote:
-      'A portfolio that looks beautiful but does not convert is a luxury we could not afford.',
+      'Flying Pixel sells to two groups that have almost nothing in common. One is project teams on highways, airports, ports, solar parks and construction sites, who need survey-grade data delivered in the formats their engineers use. The other is couples and families booking aerial photography and films for weddings and events. Putting both on one set of pages confuses each of them. An engineer who lands on wedding photos doubts the survey work, and a couple who lands on LiDAR deliverables leaves. The business needed a site that gave the survey work the weight it deserves without losing the events side.',
     approach:
-      'We split the design and the conversion architecture into two parallel tracks. The design track focused on what every creative agency cares about: the portfolio shots, the typography, the motion, while the CRO track quietly engineered the conversion funnel beneath it: above-the-fold inquiry forms, exit-intent capture, content-pillar landing pages mapped to specific service queries, and Velo-driven personalization for returning visitors. WIX Studio was the platform pick because it gave the design team the visual fidelity they needed without slowing the build.',
-    techStack: ['Wix Studio', 'Velo API', 'Google Analytics 4', 'Zapier'],
+      'We split the business into two parts of the website, each with its own pages and its own tone. The survey site speaks to engineers and project managers: what is captured, how it is processed, and what files arrive at the end. The weddings and events section speaks to families and planners. We wrote every claim against facts the client could back up, and marked anything unconfirmed rather than guessing. The site is a Next.js static build, so every page is ready-made HTML that loads fast and can be read by search engines and AI tools.',
+    techStack: ['Next.js', 'React', 'Tailwind CSS', 'Static export', 'Cloudflare Pages', 'Schema.org JSON-LD'],
     solution:
-      'We deployed a visually rich website with highly optimized conversion funnels. We utilized WIX Studio for its design flexibility but superimposed a custom SEO and AIO strategy layer. By creating high-value content pillars around their services, we drove a massive influx of organic traffic. Velo API powered the dynamic case-study filtering; Zapier wired inquiries into the CRM with immediate Slack alerts.',
+      'The survey site has a home page, a solutions page covering drone survey, LiDAR, photogrammetry and the data deliverables, a sectors page for the industries served, a work page showing projects, an about page and a contact page that leads to a survey request. The weddings and events section has its own hub and service pages for wedding photography, pre-wedding shoots, ceremony coverage, aerial videography, drone shows, birthday events, corporate events, and maternity and newborn shoots.',
     results:
-      'Over 500 qualified leads from organic traffic alone, zero paid spend. Traffic grew 300% in the same window, and client retention hit 95%. The team now spends discovery calls qualifying down a full inbound pipeline instead of chasing outbound prospects cold.',
+      'Flying Pixel has a live website on flyingpixel.in that serves its survey buyers and its events clients on separate pages. This case describes the site FactoryJet built. Lead and traffic figures will be added once they are measured on the new site.',
     imageUrl: '/images/case-studies/flying-pixel-agency-hero.jpg',
     ogImageUrl: '/images/case-studies/flying-pixel-agency-og.png',
     publishedDate: '2026-05-28',
-    ctaTeaser: 'Agency portfolio that does not convert? We balance stunning design with rigorous CRO, no paid ads required.',
-    relatedSlugs: ['impulse-branding-migration', 'belle-maison-ecommerce-success'],
+    modifiedDate: '2026-10-22',
+    clientUrl: 'https://flyingpixel.in/',
+    ctaTeaser: 'Selling to two very different buyers? We build a site that gives each one pages written for them.',
+    relatedSlugs: ['yadav-entrance-automation-website-seo', 'formative-concepts-bim'],
+    serviceLinks: [
+      { label: 'B2B website design', href: '/services/b2b-website-design' },
+      { label: 'Web design services', href: '/services/web-design' },
+      { label: 'Technical SEO', href: '/services/technical-seo' },
+    ],
     faqs: [
       {
-        q: 'Why WIX Studio for a creative agency site?',
-        a: 'WIX Studio gives designers pixel-level layout control without forcing every change through a developer. For an agency where design iteration is part of the daily workflow, that flexibility matters more than the marginal performance gain of a fully custom build.',
+        q: 'Should a business with two very different audiences have one website or two?',
+        a: 'It needs clearly separate sections at the least, and sometimes separate domains. Flying Pixel’s survey buyers and wedding clients want different things, so each gets its own pages, its own language and its own route to an inquiry. Mixing them on the same pages weakens both.',
       },
       {
-        q: 'How do you generate 500 leads with zero paid spend?',
-        a: 'Content pillars mapped to specific service queries, ranked for long-tail terms with high commercial intent, and a conversion funnel tight enough to capture inquiries on first visit. Pure organic + CRO compounding over 6–12 months.',
+        q: 'What do engineering buyers look for on a drone survey website?',
+        a: 'What is captured, how accurate it is, how it is processed, and which files they receive, such as point clouds, terrain models and contours in their own formats. They also want to see similar projects. A survey site that leads with pretty aerial photos and hides the deliverables loses them.',
       },
       {
-        q: 'What does "content pillars" mean in practice?',
-        a: 'A pillar is a comprehensive resource page on a high-intent service topic, surrounded by cluster posts that link back to it. Search engines reward the topical authority; visitors reward the depth with longer dwell times and lower bounce.',
+        q: 'Why Next.js for this site?',
+        a: 'A Next.js static build turns every page into ready-made HTML. Pages load fast on mobile connections, cost little to host, and can be read by search engines and AI crawlers without running any code. That suits a business whose buyers often check the site from a project site on a phone.',
       },
       {
-        q: 'Can a creative agency in the US replicate this?',
-        a: 'Yes, and the deal sizes in the US creative-agency market are typically 2–3x higher, so the same 500 leads translate into materially more revenue. The CRO and content-pillar playbook is locale-independent.',
+        q: 'How do you show survey work without breaching client confidentiality?',
+        a: 'By describing the type of project, the sector and the deliverables, and showing images only where the client allows it. Many infrastructure projects cannot be named, but a buyer can still see what was captured and what was delivered.',
       },
       {
-        q: 'How does Velo API factor in?',
-        a: 'Velo lets us add real backend logic to a WIX site, dynamic case-study filtering, returning-visitor personalization, and CRM webhooks. It is what turns a brochure WIX site into a working sales tool.',
+        q: 'Can one website rank for both survey and wedding searches?',
+        a: 'Yes, when each topic has its own pages. Search engines rank pages, not whole sites. A page about LiDAR survey and a page about aerial wedding videography can each rank for their own searches, as long as each is written for that one topic.',
+      },
+      {
+        q: 'What should a drone survey company put on its contact page?',
+        a: 'A short request form that asks for the site location, the type of survey, the area and the deliverables needed. Those four answers let the team reply with a useful next step instead of a generic follow-up email.',
+      },
+      {
+        q: 'How do you avoid unsupported claims on a services website?',
+        a: 'We write every claim against facts the client can back up, and mark anything unconfirmed instead of filling the gap with a guess. Accuracy figures, project names and client logos only go on the site once the client confirms them.',
+      },
+      {
+        q: 'Does this case study report lead or traffic figures?',
+        a: 'Not yet. It describes the website FactoryJet built for Flying Pixel. Measured figures will be added once the new site has been live long enough to report them.',
       },
     ],
   },
 
-  // ─── 6. Rukman Transport — local SEO for B2B logistics ────────────────────
+  // ─── 6. Rukman Transport: brand, local SEO and website for B2B logistics ──
+  // Revised 2026-10-22. The old version claimed "+300% organic traffic",
+  // "+150% GMB calls", "Top 3 local search visibility" and "multiple B2B
+  // contracts secured". No source exists for these beyond the deleted legacy
+  // /case/ data file. Rukman Transport is listed in FactoryJet's GoodFirms
+  // portfolio. On 22 Oct 2026 rukmantransport.com returned a Wix "connect your
+  // domain" error page, so no client URL is published and the site is not
+  // described as live. The WordPress stack comes from the legacy data and
+  // could not be checked. Do not restore a figure without a measured source.
   {
     slug: 'rukman-transport-logistics',
+    // 22 Oct 2026, Bhavesh: noindex while the client site is down.
+    noindex: true,
     client: 'Rukman Transport',
-    tagline: 'A B2B logistics operator winning local contracts on the strength of their digital presence.',
+    tagline: 'A B2B transport operator whose online presence needed to match the size of its fleet.',
     industry: 'B2B Logistics',
     services: [
-      'Local SEO Overhaul',
+      'Local SEO',
       'Google Business Profile Optimization',
-      'WordPress + Yoast Setup',
-      'Schema Markup Implementation',
-      'Fleet & Safety Microsites',
+      'WordPress Website Build',
+      'Schema Markup',
+      'Brand Refresh',
     ],
-    headline: '300% Organic Traffic Surge: Local SEO for a B2B Logistics Operator',
+    headline: 'Local SEO and a Credible Website for Rukman Transport',
+    seoTitle: 'Rukman Transport: Local SEO for B2B Logistics',
+    metaDescription:
+      'How FactoryJet rebuilt Rukman Transport’s brand assets, website and Google Business Profile so procurement teams could see its fleet and safety record.',
     summary:
-      'In B2B logistics, trust is currency, and Rukman Transport had a minimal digital presence that did not reflect their fleet size or reliability. FactoryJet overhauled their brand identity, executed a hyper-local SEO strategy, and drove a 300% increase in organic search visibility for high-intent industrial transport queries.',
+      'Rukman Transport is a B2B transport operator that was losing bids because its thin online presence did not show its fleet or safety record. FactoryJet refreshed its brand assets, built a WordPress website with fleet and safety pages, and optimized its Google Business Profile and local search pages for industrial transport searches.',
+    snapshot: {
+      who: 'Rukman Transport, a B2B transport and logistics operator serving industrial customers.',
+      problem: 'Procurement teams shortlisting transport partners found a thin website with no fleet photos or safety credentials, and dropped the firm before sales heard about the bid.',
+      built: 'A brand refresh, a WordPress website with fleet, safety and service-area pages, structured data for the business, and a fully completed Google Business Profile.',
+      status: 'Delivered.',
+    },
     category: 'Logistics',
     heroStats: [
-      { value: '+300%', label: 'Organic traffic' },
-      { value: '+150%', label: 'GMB calls' },
-      { value: 'Top 3', label: 'Local search visibility' },
+      { value: 'Local SEO', label: 'Service-area pages and profile' },
+      { value: 'Google', label: 'Business Profile completed' },
+      { value: 'Brand', label: 'Fleet and safety assets rebuilt' },
     ],
     glanceTiles: [
       { label: 'INDUSTRY', value: 'B2B Logistics' },
-      { label: 'SERVICES', value: 'Local SEO + GBP + WordPress' },
-      { label: 'TIMELINE', value: '90 Days' },
-      { label: 'SCALE', value: 'Multi-city Service Area' },
-      { label: 'OUTCOME', value: 'B2B Contracts Secured' },
-      { label: 'TECH', value: 'WordPress, Yoast SEO, Google Maps API, Schema' },
+      { label: 'SERVICES', value: 'Local SEO + GBP + Website' },
+      { label: 'PLATFORM', value: 'WordPress + Yoast SEO' },
+      { label: 'BUYERS', value: 'Industrial Procurement' },
+      { label: 'SCOPE', value: 'Brand + Site + Profile' },
+      { label: 'TECH', value: 'WordPress, Yoast, Schema' },
     ],
     keyMetrics: [
-      { label: 'Organic Traffic', value: '+300%' },
-      { label: 'GMB Calls', value: '+150%' },
-      { label: 'B2B Contracts', value: 'Secured' },
-      { label: 'Local Search Visibility', value: 'Top 3' },
+      { label: 'Website', value: 'Fleet + safety pages' },
+      { label: 'Google Profile', value: 'Fully completed' },
+      { label: 'Local Pages', value: 'Per service area' },
+      { label: 'Structured Data', value: 'Business + services' },
     ],
     headlineMetric: {
-      label: 'Organic Search Visibility Lift',
-      value: '+300%',
-      note: 'High-intent industrial transport queries',
+      label: 'What Changed',
+      value: 'A firm that looks its size',
+      note: 'Fleet, safety record and service areas visible to procurement teams before the first call',
     },
     resultsMetrics: [
-      { label: 'Organic Traffic', value: '+300%' },
-      { label: 'GMB Calls', value: '+150%' },
-      { label: 'Local Search Visibility', value: 'Top 3' },
-      { label: 'Inquiry Quality', value: 'B2B Procurement' },
-      { label: 'Contracts Secured', value: 'Multiple' },
-      { label: 'Brand Refresh', value: 'Full' },
+      { label: 'Brand Assets', value: 'Refreshed' },
+      { label: 'Fleet Pages', value: 'Built' },
+      { label: 'Safety Record', value: 'Shown on site' },
+      { label: 'Google Profile', value: 'Completed' },
+      { label: 'Service Areas', value: 'Own pages' },
+      { label: 'Schema', value: 'Business + services' },
     ],
     challenge:
-      'In the competitive logistics sector, trust is currency. Rukman Transport had a minimal digital presence that did not reflect their fleet size or reliability. They were losing local B2B contracts to competitors who simply looked more professional online. Procurement teams short-listing logistics partners would search, find a thin website with no fleet photos, no safety credentials, and no proof of operational scale, and quietly drop them from the bid list before the sales team ever heard about it.',
-    challengePullQuote:
-      'We were the size we claimed to be: the site just did not show it.',
+      'In logistics, trust decides who gets onto a bid list. Rukman Transport had a minimal online presence that did not reflect its fleet or its reliability, and it was losing local B2B contracts to competitors who simply looked more established online. A procurement team shortlisting transport partners would search, find a thin site with no fleet photos, no safety credentials and no sign of operating scale, and quietly drop the firm before the sales team ever heard about the bid.',
     approach:
-      'We treated this as a credibility problem first and an SEO problem second. Step one was rebuilding the brand assets, fleet photography, safety credentials, contract case studies, so when a procurement team did land on the site, the firm looked the size it actually was. Step two layered hyper-local SEO on top: Google Business Profile completeness, location-specific landing pages, and schema markup that fed search engines structured information about service area, fleet capacity, and safety record.',
-    techStack: ['WordPress', 'Yoast SEO', 'Google Maps API', 'Schema Markup'],
+      'We treated it as a credibility problem first and a search problem second. First came the brand assets: fleet photography, safety credentials and examples of contract work, so that a procurement team landing on the site saw a firm of the size Rukman really is. Then local search on top: a fully completed Google Business Profile, pages for each service area, and structured data describing the business, its services and where it operates.',
+    techStack: ['WordPress', 'Yoast SEO', 'Google Business Profile', 'Google Maps API', 'Schema.org JSON-LD'],
     solution:
-      'We overhauled their digital brand identity and executed a hyper-local SEO strategy. We optimized their Google My Business profile end-to-end: every category, every service, every photo, every FAQ. The new WordPress + Yoast SEO stack carried structured data for service area and fleet capabilities. The site highlighted fleet capabilities and safety records prominently, with dedicated microsites for each service vertical. The result was a 300% increase in organic search visibility for high-intent keywords like "industrial transport".',
+      'We refreshed the brand and built a WordPress website that puts the fleet and the safety record up front, with a page for each service line and each service area. Yoast SEO keeps titles, descriptions and structured data consistent as pages are added. We completed the Google Business Profile in full, with every relevant category, service, photo and common question, so the firm can appear in local results for searches such as "industrial transport" near its operating base.',
     results:
-      'A 300% increase in organic search visibility, a 150% lift in calls from Google Business Profile, and a measurable jump in B2B contracts secured. Procurement teams now find a firm that looks the size it is, and the inquiry-to-contract conversion rate jumped alongside the visibility, because the brand finally backed up the search ranking.',
+      'Rukman Transport received a refreshed brand, a website that shows its fleet and safety record, service-area pages, and a fully completed Google Business Profile. This case describes the work delivered; it does not publish traffic or call figures.',
     imageUrl: '/images/case-studies/rukman-transport-logistics-hero.jpg',
     ogImageUrl: '/images/case-studies/rukman-transport-logistics-og.png',
     publishedDate: '2026-05-28',
-    ctaTeaser: 'B2B logistics operator losing bids to bigger-looking competitors? We rebuild brand + local SEO together.',
-    relatedSlugs: ['grofresh-manufacturing-erp', 'formative-concepts-bim'],
+    modifiedDate: '2026-10-22',
+    ctaTeaser: 'Logistics operator losing bids to bigger-looking competitors? We rebuild brand, website and local search together.',
+    relatedSlugs: ['rdb-travels-cab-booking-website', 'grofresh-manufacturing-erp'],
+    serviceLinks: [
+      { label: 'Local SEO services', href: '/services/local-seo' },
+      { label: 'B2B website design', href: '/services/b2b-website-design' },
+      { label: 'WordPress development', href: '/wordpress-development' },
+    ],
     faqs: [
       {
-        q: 'Why WordPress + Yoast for a logistics site?',
-        a: 'WordPress is the lowest-friction platform for non-technical teams to keep service-area pages and fleet photos current. Yoast handles the on-page SEO discipline so every new page ships with correct schema, meta, and internal linking.',
+        q: 'How does a Google Business Profile help a B2B logistics company?',
+        a: 'Procurement teams often search for "industrial transport" or "B2B logistics" plus a city and pick from the map results. A complete profile, with every category, service, photo and common question filled in and reviews answered, is what gets a firm into those results and onto the call list.',
       },
       {
-        q: 'How does Google Business Profile (GBP) drive B2B logistics leads?',
-        a: 'Procurement teams Google "industrial transport near me" or "B2B logistics [city]" and pick from the local pack. A fully optimized GBP: every category filled, every photo current, every review responded to, gets you into that pack and into the call queue.',
+        q: 'What should a transport company show on its website to win B2B contracts?',
+        a: 'The fleet, with real photos and vehicle types, the safety record and certifications, the areas served, and examples of contract work. A procurement team is judging whether the firm can handle the volume and the risk, so the site has to show that before anyone calls.',
       },
       {
-        q: 'What kind of schema markup did the site use?',
-        a: 'LocalBusiness, MovingCompany, Service, and FAQPage schemas covering service area, fleet specs, certifications, and common questions. Schema is what helps search engines display rich snippets, which directly drives click-through rate.',
+        q: 'Why WordPress with Yoast for a logistics site?',
+        a: 'WordPress is easy for a non-technical team to keep fleet photos and service-area pages current. Yoast keeps titles, descriptions and structured data consistent on every new page, so the site stays tidy for search engines as it grows.',
       },
       {
-        q: 'How do you measure "B2B contracts secured"?',
-        a: 'We track form submissions and call recordings tagged as procurement inquiries, then follow them through to signed contract. The lift was measurable both in inquiry volume and inquiry quality.',
+        q: 'What schema markup helps a logistics business?',
+        a: 'LocalBusiness or Organization markup for the company, Service markup for each service line, and FAQPage markup for common questions. Together they tell search engines what the firm does, where it operates and how to reach it.',
       },
       {
-        q: 'Can a US logistics operator follow the same playbook?',
-        a: 'Directly. Local SEO for B2B logistics in US metros (Dallas, Atlanta, Chicago, LA) is extremely winnable: most operators still have weak GBP profiles. The playbook is identical; only the city pages and certifications change.',
+        q: 'Why fix the brand before doing SEO?',
+        a: 'Because ranking only helps if the visitor trusts what they find. A firm that ranks well but shows a thin site with no fleet or safety information still gets dropped from the shortlist. Brand assets and proof come first, and search brings people to them.',
+      },
+      {
+        q: 'Do service-area pages still work for local SEO?',
+        a: 'They do when each page is written for that area: the routes covered, the depots or bases nearby, and the types of loads handled there. Copying one page and swapping the city name does not work and can hurt the whole site.',
+      },
+      {
+        q: 'How long does local SEO take for a transport company?',
+        a: 'A completed Google Business Profile can start appearing in map results within weeks. Ranking website pages for competitive service searches usually takes several months and depends on how strong local competitors already are.',
+      },
+      {
+        q: 'Does this case study report traffic or call figures?',
+        a: 'No. It describes the brand, website and local search work FactoryJet delivered for Rukman Transport.',
       },
     ],
   },
@@ -675,6 +896,20 @@ export const CASE_STUDIES: CaseStudy[] = [
   // The public site is still in development, so no live URL is published here.
   {
     slug: 'sow-easy-distributor-portal',
+    seoTitle: 'Sow Easy: WooCommerce Trade Store Connected to Odoo',
+    metaDescription:
+      'How FactoryJet is building Sow Easy’s WooCommerce trade store with Odoo as the source of stock, pricing and SKUs, tested on staging before launch.',
+    snapshot: {
+      who: 'Sow Easy, a B2B distributor that sells to trade buyers and runs its stock, pricing and product data in Odoo.',
+      problem: 'Trade buyers need accurate stock, account pricing and ordering online, and the team cannot keep a second, conflicting copy of that data in the website.',
+      built: 'A WooCommerce trade store that reads stock, pricing and SKUs from Odoo, with trade ordering and product pages, plus SEO and AI search work alongside the build.',
+      status: 'Build in progress. The store and the Odoo link are being tested on staging, and launch is still ahead.',
+    },
+    serviceLinks: [
+      { label: 'WooCommerce development', href: '/services/woocommerce-development' },
+      { label: 'Ecommerce ERP integration', href: '/services/ecommerce-erp-integration' },
+      { label: 'Odoo AI agents', href: '/services/odoo-ai-agents' },
+    ],
     client: 'Sow Easy',
     tagline: 'A B2B commerce build in progress, connecting WooCommerce ordering with Odoo.',
     industry: 'B2B Distribution',
@@ -720,18 +955,52 @@ export const CASE_STUDIES: CaseStudy[] = [
     ogImageUrl: '/images/case-studies/sow-easy-distributor-portal-og.png',
     publishedDate: '2026-08-04',
     ctaTeaser: 'If your trade store needs to work with an existing ERP, we can scope the storefront and integration together.',
-    relatedSlugs: ['belle-maison-ecommerce-success', 'gpsuk-promotional-products'],
+    relatedSlugs: ['gpsuk-promotional-products', 'belle-maison-ecommerce-success'],
     faqs: [
       { q: 'Is the Sow Easy website build complete?', a: 'The build is in progress. FactoryJet is developing and testing the WooCommerce website and Odoo integration on staging, alongside ongoing SEO and AI search work.' },
       { q: 'Which system owns stock and pricing?', a: 'Odoo is the source of stock, pricing, and SKU data in the current project. WooCommerce uses that data in the storefront rather than becoming a separate source of truth.' },
       { q: 'Does this case study report sales results?', a: 'No. It describes an active implementation. It does not present staging activity as customer sales or claim a completed launch.' },
+      {
+        q: 'Why connect WooCommerce to Odoo instead of managing stock in WooCommerce?',
+        a: 'Because two places that both hold stock and prices will drift apart. If Odoo already runs purchasing, stock and accounts, it should stay the single source. The store reads from it, so a price or stock change made in Odoo shows up on the website without anyone retyping it.',
+      },
+      {
+        q: 'Why test the integration on staging first?',
+        a: 'An ERP link touches real stock and real prices. Testing against Odoo’s staging system lets us check product data, prices and orders end to end without affecting live stock or sending real orders into the business.',
+      },
+      {
+        q: 'What does a B2B WooCommerce store need that a retail store does not?',
+        a: 'Trade pricing per account, larger order quantities, reorder from past orders, and often quotes before orders. Retail WooCommerce shows one price to everyone and expects a quick card checkout, which does not match how trade buyers purchase.',
+      },
+      {
+        q: 'Does FactoryJet work with other ERPs besides Odoo?',
+        a: 'Yes. FactoryJet has worked on Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs. The approach is the same: decide which system owns each piece of data, and make every other system read from it.',
+      },
+      {
+        q: 'When will results be published for Sow Easy?',
+        a: 'After launch, once the store has been live long enough to measure. Until then this page describes the work in progress and does not report sales or traffic.',
+      },
     ],
-    modifiedDate: '2026-09-14',
+    modifiedDate: '2026-10-22',
   },
 
   // ─── 8. GPSUK — promotional products, B2B storefront on Commerceflo ──────
   {
     slug: 'gpsuk-promotional-products',
+    seoTitle: 'GPSUK: B2B Promotional Products Store on Commerceflo',
+    metaDescription:
+      'How FactoryJet built GPSUK’s trade storefront on Commerceflo so UK business buyers can reorder promotional products at their own account prices.',
+    snapshot: {
+      who: 'GPSUK, a UK supplier of branded promotional products such as pens, drinkware, bags and tech accessories, selling to business customers.',
+      problem: 'Promotional products is a reorder business, and repeat orders were rebuilt by email against prices that lived in someone’s inbox.',
+      built: 'A Commerceflo trade storefront where business buyers log in, see their own account pricing, and move from quote to order without retyping, plus ongoing SEO and AI search work.',
+      status: 'Live on Commerceflo. SEO and AI search work continues.',
+    },
+    serviceLinks: [
+      { label: 'B2B ecommerce development', href: '/b2b-ecommerce' },
+      { label: 'Commerceflo by FactoryJet', href: '/commerceflo' },
+      { label: 'AI SEO services', href: '/services/ai-seo' },
+    ],
     client: 'GPSUK',
     tagline: 'A UK promotional products supplier selling to trade buyers who order the same things repeatedly.',
     industry: 'Promotional Products',
@@ -783,7 +1052,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Promotional products is a reorder business. A customer brands stock once and then comes back for more of the same, often against pricing agreed earlier. Handling that over email means the catalogue lives in one place, the agreed price lives in someone\'s inbox, and every repeat order is reconstructed from scratch. It is slow for the buyer and it hides demand from the supplier.',
     approach:
       'We built the storefront around the reorder, not the first order. That means a trade account can find what they bought before, see the price that applies to them, and raise a quote or an order without a conversation. Commerceflo handles account-based pricing and quote-to-order natively, so the trade rules stay in the platform rather than being reimplemented.',
-    techStack: ['Commerceflo'],
+    techStack: ['Commerceflo by FactoryJet', 'Next.js', 'Account-based pricing engine', 'Quote-to-order workflow'],
     solution:
       'GPSUK trade customers log in to a catalogue priced for their account. Where an order needs quoting first, the quote carries through to the order rather than being retyped. The catalogue is structured so buyers can find products the way they describe them, which matters in a category with a very wide range and a lot of near-identical items.',
     results:
@@ -792,7 +1061,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     ogImageUrl: '/images/case-studies/gpsuk-promotional-products-og.png',
     publishedDate: '2026-08-04',
     ctaTeaser: 'If your buyers reorder against agreed pricing, a trade storefront removes the email round trip.',
-    relatedSlugs: ['sow-easy-distributor-portal', 'belle-maison-ecommerce-success'],
+    relatedSlugs: ['belle-maison-ecommerce-success', 'sow-easy-distributor-portal'],
     faqs: [
       {
         q: 'Why do promotional products suppliers need B2B commerce specifically?',
@@ -810,8 +1079,24 @@ export const CASE_STUDIES: CaseStudy[] = [
         q: 'How do you handle a very large catalogue of similar items?',
         a: 'Structure. If products are only findable by exact code, buyers give up and email instead. We organise the catalogue around how buyers describe what they want, so search and browsing both land on the right item.',
       },
+      {
+        q: 'Can trade buyers reorder what they bought before?',
+        a: 'Yes. A logged-in trade account can see what it ordered before at the price that applies to it, and place the same order again or raise a quote for changes. That is the main job of a promotional products store, since most orders repeat.',
+      },
+      {
+        q: 'How does SEO work for a B2B store that needs a login?',
+        a: 'The catalog, category pages and product information can be public so search engines and AI assistants can read them, while account prices stay behind the login. Buyers find the products in search, then log in to see their own terms.',
+      },
+      {
+        q: 'Is Commerceflo suitable for UK businesses?',
+        a: 'Yes. GPSUK sells to UK business buyers on Commerceflo. Account pricing, quote-to-order and catalog structure work the same in any market.',
+      },
+      {
+        q: 'What if a buyer still wants to email an order?',
+        a: 'They still can. The storefront takes the routine reorders off the sales team, and anything unusual or custom can still go through a person.',
+      },
     ],
-    modifiedDate: '2026-09-17',
+    modifiedDate: '2026-10-22',
     clientUrl: 'https://app.commerceflo.ai/store/gpsuk',
     location: 'United Kingdom',
   },
@@ -825,6 +1110,20 @@ export const CASE_STUDIES: CaseStudy[] = [
   // read from the pages' own headings on the same day.
   {
     slug: 'yadav-entrance-automation-website-seo',
+    seoTitle: 'Yadav Entrance Automation: Website, SEO and AI SEO',
+    metaDescription:
+      'How FactoryJet built Yadav Entrance Automation’s website from scratch and runs its SEO and AI SEO, with product pages buyers and AI assistants can read.',
+    snapshot: {
+      who: 'Yadav Entrance Automation, an industrial entrance automation manufacturer that makes, installs and services high speed doors, rolling shutters, dock levellers and other automatic entrance systems.',
+      problem: 'A specialist trade business with no real website is invisible to buyers who search for the product, not the company name, and to AI assistants answering those searches.',
+      built: 'A hand-built website with a page per product, specifications and FAQs on each, real text that search engines and AI tools can read, and ongoing SEO and AI SEO work.',
+      status: 'Live on yadaventranceautomation.com. SEO and AI SEO work continues.',
+    },
+    serviceLinks: [
+      { label: 'Manufacturing website design', href: '/services/manufacturing-website-design' },
+      { label: 'AI SEO services', href: '/services/ai-seo' },
+      { label: 'Technical SEO', href: '/services/technical-seo' },
+    ],
     client: 'Yadav Entrance Automation',
     tagline: 'An entrance automation specialist that needed a real website before it could be found at all.',
     industry: 'Entrance Automation',
@@ -874,7 +1173,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'A specialist trade business with no real web presence is invisible to anyone who does not already know its name. Buyers looking for entrance automation search for the problem, not the company, and increasingly they ask an AI assistant rather than scrolling results. Without a site that either can read properly, the business only gets found by referral.',
     approach:
       'We built the site from scratch rather than dressing up a template, so the structure matches how the work is actually bought: what the systems are, what gets installed and serviced, and who it is for. Then we treated search as ongoing work rather than a launch task, covering both traditional SEO and AI SEO, because being quoted in an AI answer and ranking in results draw on the same foundations.',
-    techStack: ['Custom Website'],
+    techStack: ['Hand-built HTML and CSS', 'Cloudflare Pages', 'Cloudflare Pages Functions', 'Schema.org JSON-LD', 'llms.txt'],
     solution:
       'The site is structured so each section answers one question a buyer would actually ask, with content in real text that both search engines and AI assistants can extract. On top of that we run continuing SEO and AI SEO work rather than treating the launch as the finish line.\nThe product pages are built the same way. The pages for [high speed doors](https://yadaventranceautomation.com/high-speed-doors), the [motorized rolling shutter](https://yadaventranceautomation.com/motorized-rolling-shutter) and [dock levellers](https://yadaventranceautomation.com/dock-levelers) each set out the specifications and a list of frequently asked questions for that product.',
     results:
@@ -883,7 +1182,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     ogImageUrl: '/images/case-studies/yadav-entrance-automation-website-seo-og.png',
     publishedDate: '2026-08-04',
     ctaTeaser: 'If your buyers search for the problem rather than your name, the site has to answer the problem.',
-    relatedSlugs: ['formative-concepts-bim', 'rukman-transport-logistics'],
+    relatedSlugs: ['impulse-branding-migration', 'flying-pixel-agency'],
     faqs: [
       {
         q: 'What is AI SEO, in plain terms?',
@@ -891,7 +1190,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       },
       {
         q: 'Is AI SEO separate work from normal SEO?',
-        a: 'Mostly not, and anyone selling it as a separate trick is overselling. Google states there is no special markup or file that gets you into AI answers. What helps is being crawlable, being clearly structured, and genuinely answering the question.',
+        a: 'Mostly not, and anyone selling it as a separate trick is overselling. Google states there is no special markup or file that gets you into AI answers. What helps is being crawlable, being clearly structured, and answering the question directly.',
       },
       {
         q: 'Why build from scratch instead of using a template?',
@@ -901,8 +1200,24 @@ export const CASE_STUDIES: CaseStudy[] = [
         q: 'How long before search work shows results?',
         a: 'Branded searches for the company name tend to come first, usually within weeks of launch. Competitive service terms take longer, typically months, and depend on how contested the category is. Anyone promising a fixed timeline is guessing.',
       },
+      {
+        q: 'What should a product page for industrial doors include?',
+        a: 'What the product is for, the sizes and specifications, the materials and motor options, where it is typically installed, and the questions buyers ask before ordering. Each of the Yadav product pages sets out the specifications and a list of frequently asked questions for that product.',
+      },
+      {
+        q: 'Why is the site hand-built instead of on a page builder?',
+        a: 'A hand-built site ships only the code each page needs, so it loads fast and is easy for search engines and AI crawlers to read. It also lets every page follow the structure that suits that product, rather than a theme’s defaults.',
+      },
+      {
+        q: 'What is llms.txt and does this site have one?',
+        a: 'llms.txt is a plain text summary at the root of a website that tells AI assistants what the business does and which pages matter. The Yadav site publishes one, alongside its sitemap and structured data.',
+      },
+      {
+        q: 'Can a manufacturer rank in Google without a blog?',
+        a: 'Yes, if the product and service pages answer buyer questions well. Many industrial searches are for a product type, so a strong page per product often does more than general blog posts. A blog helps later with related questions.',
+      },
     ],
-    modifiedDate: '2026-10-12',
+    modifiedDate: '2026-10-22',
     clientUrl: 'https://yadaventranceautomation.com/',
     location: 'India',
   },

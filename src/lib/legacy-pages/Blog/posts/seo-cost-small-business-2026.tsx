@@ -1,289 +1,370 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
+// Every source below was fetched and read on 22 Oct 2026.
+const SRC = {
+  ahrefs: 'https://ahrefs.com/blog/seo-pricing/',
+  ahrefsRank: 'https://ahrefs.com/blog/how-long-does-it-take-to-rank/',
+  webfx: 'https://www.webfx.com/seo/pricing/',
+  webfxAudit: 'https://www.webfx.com/seo/pricing/how-much-does-seo-audit-cost/',
+  webfxGeo: 'https://www.webfx.com/blog/ai/generative-engine-optimization-cost/',
+  backlinko: 'https://backlinko.com/seo-pricing',
+  clutch: 'https://clutch.co/seo-firms/pricing',
+  bls: 'https://www.bls.gov/ooh/business-and-financial/market-research-analysts.htm',
+  googleSeo: 'https://developers.google.com/search/docs/fundamentals/do-i-need-seo',
+  googleSpam: 'https://developers.google.com/search/docs/essentials/spam-policies',
+  googleAi: 'https://developers.google.com/search/docs/appearance/ai-features',
+};
+
+const ext = { target: '_blank', rel: 'noopener noreferrer', className: 'text-orange-600 hover:underline font-medium' };
+
 const faqs = [
     {
       q: 'How much does SEO cost per month for a small business?',
-      a: 'Most US small businesses spend between $500 and $2,500 per month on SEO. Local businesses competing in a single city often land at $500–$1,000/month for basic local SEO work. Businesses in competitive industries, legal, healthcare, home services, e-commerce, typically need $1,500–$3,500/month to move the needle. Ahrefs\' 2024 survey of 439 SEO providers found an average of $2,917 a month for SEO retainers and $1,557 a month for local SEO.',
+      a: 'Most US small businesses pay $1,500 to $3,500 a month, the band WebFX gives for small businesses on its 2026 pricing page. Ahrefs polled 439 SEO providers and found an average of $2,917 a month, and $1,557 for local SEO. Backlinko surveyed 300+ SEO professionals and found $1,001 to $2,500 the most common monthly band. Single-city service firms usually sit near the low end.',
     },
     {
-      q: 'What is included in a typical small business SEO retainer?',
-      a: 'A proper monthly retainer should cover: keyword research and tracking, on-page optimization of existing pages, technical SEO monitoring (site speed, crawlability, indexing), content creation or optimization (typically 2–4 pieces per month), local citation management if applicable, link building outreach, and monthly reporting. Cheaper retainers under $500/month typically skip link building and produce minimal content, and that is why they rarely produce results.',
+      q: 'How much should a small business budget for SEO in 2026?',
+      a: 'Start from the published bands and adjust for competition. WebFX puts startups and micro businesses at $500 to $1,500 a month and small businesses at $1,500 to $3,500. If you sell in one city with few rivals, the lower band can work. If you compete regionally, or in law, healthcare or ecommerce, budget for the upper band and plan to keep it running for at least a year before judging results.',
     },
     {
-      q: 'Is $500/month SEO worth it for a small business?',
-      a: 'At $500/month you can get real results, but the scope is narrow: typically local SEO optimization, Google Business Profile management, and basic on-page fixes. If you run a service business competing in a single city (plumber, dentist, landscaper), $500/month with the right agency can deliver a 3–5 position improvement in local rankings within 4–6 months. If you compete regionally or in a high-competition niche, $500/month is unlikely to generate meaningful results, your competitors are spending more.',
+      q: 'What can I get from an SEO company charging $300 to $500 a month?',
+      a: 'Expect a narrow scope: Google Business Profile upkeep, a few on-page fixes and a monthly report. That price sits below the $500 floor of the smallest band WebFX publishes, and well below the $1,557 local SEO average in Ahrefs’ provider poll. Ask for a written list of monthly tasks. If link earning and new content are missing, the plan maintains what you have and will rarely lift rankings.',
     },
     {
-      q: 'What does SEO actually cost if I hire a freelancer vs. an agency?',
-      a: 'Freelancers typically charge $50–$150/hour or $500–$2,000/month. An experienced SEO freelancer at $100/hour working 10 hours per month = $1,000/month, which is cost-competitive with agency retainers but lacks the multi-specialist depth. Agencies charge $1,000–$5,000+/month because they provide a team: an SEO strategist, a content writer, a technical SEO specialist, and a link builder. For most SMBs, a mid-tier agency ($1,500–$2,500/month) outperforms a solo freelancer at the same budget over a 12-month horizon.',
+      q: 'Is $500 a month SEO worth it for a small business?',
+      a: 'It can be, if your market is small and the scope is honest. $500 is the bottom of the startup band on WebFX’s pricing page. Ahrefs found that SEOs with two years or less in business average about $1,541 a month, so a $500 retainer usually means limited hours or a newer provider. It suits one location in a quiet niche. It rarely moves rankings in a crowded one.',
+    },
+    {
+      q: 'How much does an SEO specialist cost per hour?',
+      a: 'Ahrefs puts the average hourly SEO rate at $111, from its poll of 439 providers. WebFX lists $75 to $200 an hour. On Clutch, most SEO agencies charge $100 to $149 an hour, and that is also the band its location table shows for the United States. Backlinko found $50 to $100 the most common tier worldwide, with senior consultants at $101 to $150.',
+    },
+    {
+      q: 'What does an in-house SEO specialist cost compared with an agency?',
+      a: 'The closest federal benchmark is the Bureau of Labor Statistics figure for market research analysts, with a median wage of $78,760 in May 2025. Add benefits and paid tools on top. An agency retainer in the WebFX small business band, $1,500 to $3,500 a month, comes to $18,000 to $42,000 a year and covers several skills, though with less of your time and brand knowledge.',
+    },
+    {
+      q: 'What does boutique SEO agency pricing look like?',
+      a: 'Smaller agencies cluster around the middle of the market. Backlinko’s survey found $1,001 to $2,500 a month the most common retainer band, and Clutch reports most SEO agencies at $100 to $149 an hour. Clutch also says agencies typically charge $2,000 to $20,000 a month, with an average monthly cost of about $3,199. Ask a boutique who does the work and how many clients each person carries.',
+    },
+    {
+      q: 'Do SEO companies charge per keyword?',
+      a: 'A few do, but it is uncommon and none of the six pricing studies we read uses it as a model. WebFX cites Ahrefs data that 78.2% of SEOs charge monthly retainers for some or all of their services, with hourly and project fees covering the rest. Per-keyword deals reward vanity terms with no buyers behind them. Ask for pricing tied to scope and reporting instead.',
     },
     {
       q: 'How much does a one-time SEO audit cost?',
-      a: 'SEO audits range from $300 (automated tool reports, not worth it) to $15,000 (enterprise-grade technical + content + competitive audits). For a small business, a legitimate manual audit from a qualified agency or consultant typically costs $750–$3,500 depending on site size and depth. A useful benchmark: if the audit costs less than one month of whatever retainer they quote you, question whether they are doing real work or running a template through a tool.',
+      a: 'WebFX says most SEO audits cost $101 to $750, and in its survey of 250 US businesses the most common band was $501 to $750, at 22.41% of respondents. Full audits of very large sites can reach $12,001 to $15,000. For a small business site, pay for a manual review that lists each fix with a priority, not an automated tool export.',
     },
     {
-      q: 'Why does SEO cost so much if I can do it myself for free?',
-      a: 'You can do the basics yourself using Google Search Console, Ahrefs\' free plan, and Google\'s own documentation. The real cost of DIY SEO is time: a meaningful SEO program requires 15–25 hours per month of skilled work. At $100/hour of opportunity cost, that is $1,500–$2,500/month of your time, and most business owners are not close to the skill level of a specialist. DIY makes sense for very early-stage businesses with more time than money. Once you have customers to serve and growth to protect, delegating SEO typically has better ROI.',
+      q: 'How much does local SEO cost?',
+      a: 'Ahrefs found local SEO averages $1,557 a month across the 439 providers it polled. Single-location businesses in quieter markets often pay less, and multi-location or high-value niches pay more. A local plan should cover your Google Business Profile, consistent listings across directories, location pages and a review routine. Ask the provider to name the searches they expect you to rank for.',
     },
     {
-      q: 'What is a fair price for local SEO for a small business?',
-      a: 'Local SEO for a single-location business in a medium-competition market should cost $400–$1,200/month. That range covers Google Business Profile optimization, local citation building and cleanup, local landing page optimization, review management strategy, and monthly reporting. If you have multiple locations, add $200–$500 per location. If you are in a highly competitive local market (personal injury law, addiction treatment, locksmith), expect to pay $1,500–$3,000/month for local SEO that actually competes.',
+      q: 'Why is SEO so expensive?',
+      a: 'Because it is skilled labor billed over many months. Ahrefs’ average hourly rate is $111, and a retainer pays for research, writing, technical fixes and earning links from other sites. Results also take time to arrive. Ahrefs’ 2023 crawl found only 1.74% of 1 million new pages reached Google’s top 10 within a year, so most programs need a long runway.',
     },
     {
-      q: 'Should I pay for SEO or Google Ads, which is better for a small business?',
-      a: 'It depends on your timeline and budget. Google Ads delivers traffic immediately but stops the moment you stop paying. SEO takes 3–6 months to show results but compounds over time, traffic continues even when you reduce investment. A practical guideline: if you need leads this month, spend on Ads. If you are building for the next 2–5 years, invest in SEO. The ideal setup for most SMBs is Ads for immediate revenue + SEO building in parallel, then reduce Ads spend as organic traffic grows.',
+      q: 'Is SEO worth it for small businesses?',
+      a: 'Usually, if buyers search for what you sell and one customer is worth more than a few months of fees. Search keeps sending visitors after the work is done, unlike ads, which stop when you stop paying. It is a poor fit if you need leads this month, or if almost nobody searches for your service. Check your demand in Google Search Console or a keyword tool before signing.',
     },
     {
-      q: 'How long does it take to see results from SEO?',
-      a: 'For a new or poorly optimized site, realistic timelines are: 3 months for technical improvements and indexing to take effect, 4–6 months for content to start ranking in the top 20 positions, 6–12 months for consistent top-10 rankings on medium-competition keywords. Ahrefs\' analysis of 2 million random pages found that only 5.7% of newly published pages reach the top 10 within a year. SEO is not a quick channel, it is a compounding one.',
+      q: 'How long does SEO take to show results?',
+      a: 'Plan in months, not weeks. Ahrefs found that 72.9% of pages in Google’s top 10 are more than three years old, and the average number one page is five years old. Technical fixes can show up within weeks of Google recrawling your site. New content in a competitive niche often takes most of a year. Google’s own advice is to ask any SEO what results to expect and in what timeframe.',
+    },
+    {
+      q: 'Can I do my own SEO for my business?',
+      a: 'Yes, the basics are free and well documented. Google Search Console, Google Business Profile and Google’s SEO Starter Guide cover setup, titles, page structure and local listings. Where most owners stall is time and link earning: producing useful content every month and getting other sites to reference it. Doing the basics yourself also makes you a sharper buyer if you hire help later.',
+    },
+    {
+      q: 'Can ChatGPT do SEO?',
+      a: 'It can draft outlines, title tags, meta descriptions and FAQ answers quickly, and it can explain a technical issue. It cannot see your Search Console data, check what actually ranks today, or earn links for you. Google’s spam policies target content made mainly to manipulate rankings, so publishing large volumes of unedited AI text is a risk. Treat it as a drafting assistant with a human editor.',
+    },
+    {
+      q: 'Is SEO dead now that AI answers searches?',
+      a: 'No. Google says the best practices for SEO remain relevant for AI features such as AI Overviews and AI Mode, and that there are no additional requirements to appear in them. What has changed is that clear, sourced answers near the top of a page matter more than before.',
+    },
+    {
+      q: 'What is the 80/20 rule for SEO?',
+      a: 'It is the idea that a small share of pages and fixes produce most of the results. For a small business, that usually means your homepage, your top service pages and your Google Business Profile. Fix crawl errors, titles and page speed on those first, then add content for the questions buyers ask most. Leave long lists of minor tweaks until the core pages perform.',
+    },
+    {
+      q: 'What is included in a typical small business SEO retainer?',
+      a: 'A full retainer should list keyword research and tracking, on-page work on existing pages, technical monitoring for speed, crawling and indexing, new or refreshed content, local listings if you serve an area, link earning, and a monthly report with rankings, traffic and leads. If a proposal gives one price with no task list, ask for the list before you compare it with anyone else.',
+    },
+    {
+      q: 'Freelancer, agency or in-house: which is cheaper for SEO?',
+      a: 'A freelancer is usually cheapest per hour; Backlinko found $50 to $100 the most common tier. Agencies cost more, with Clutch reporting $100 to $149 an hour for most firms, but give you several specialists and cover when someone is away. In-house staff cost a salary near the $78,760 BLS median plus tools. Pick based on how many skills you need running at once.',
+    },
+    {
+      q: 'How much does GEO or AI SEO cost in 2026?',
+      a: 'WebFX’s October 2026 guide puts generative engine optimization at $1,500 to $5,000 a month for small businesses and $5,000 to $25,000+ for mid-sized ones, with hourly consulting at $50 to $300. Much of the work overlaps with good SEO, since Google says no special optimization is needed for AI Overviews. Ask what a separate AI fee buys beyond your existing retainer.',
     },
     {
       q: 'What are the red flags that an SEO agency is not worth the money?',
-      a: 'Walk away from any agency that: guarantees a #1 ranking (no one can guarantee this), offers SEO for $99/month (nobody profitable does meaningful work at that price), sends you a proposal without auditing your site first, cannot explain exactly what work they will do each month, uses vague terms like "optimizing your presence" without specifying what that means, or sells "private blog network" links (these violate Google\'s guidelines and can result in manual penalties).',
-    },
-    {
-      q: 'Does paying more for SEO always mean better results?',
-      a: 'No. Higher price does not guarantee better results, but severely underpriced SEO almost always underdelivers. The sweet spot for most US SMBs is $1,000–$2,500/month with a specialist agency that has documented case studies in your industry. Above $5,000/month, you are typically entering enterprise territory. Below $500/month, the economics do not work for the agency to do meaningful work, you are usually getting a templated report and minimal actual optimization.',
-    },
-    {
-      q: 'What is GEO and do I need it in my SEO budget in 2026?',
-      a: 'GEO stands for Generative Engine Optimization, the practice of making your website, content, and brand citations visible in AI-generated answers (ChatGPT, Google AI Overviews, Perplexity, Gemini). In 2026, AI Overviews appear in an estimated 30–49% of Google searches according to BrightEdge research. Businesses that are cited in AI responses get referral traffic even for searches where they do not rank organically. GEO-specific work, building authoritative brand mentions, structuring content for AI extraction, adding structured data, is now an inseparable part of competitive SEO.',
-    },
-    {
-      q: 'How much extra does GEO or AI SEO cost on top of regular SEO?',
-      a: 'Most agencies that do GEO properly bundle it into their SEO retainer rather than charging separately, because the tactics overlap significantly: better-sourced content, answer-first structure, and technical schema are good for both Google rankings and AI citations. Agencies that charge a separate "AI SEO" fee of $500–$1,000/month are typically just relabeling existing SEO work. The exception is dedicated AI visibility auditing and brand mention monitoring, tools like Peec.ai or Brandwatch AI run $100–$500/month extra for tracking.',
-    },
-    {
-      q: 'What does a $1,000/month SEO retainer actually cover?',
-      a: 'A realistic $1,000/month SEO retainer from a mid-tier agency covers approximately 8–12 hours of specialist work. That typically looks like: keyword rank tracking (5–10 priority keywords), monthly on-page optimization of 2–3 existing pages, one new content piece (800–1,200 words), technical monitoring and one round of fixes, basic link outreach (2–3 pitches per month, 0–1 links earned), and a monthly report. This scope can move the needle for a local service business. It is not enough for competitive e-commerce or multi-location regional campaigns.',
-    },
-    {
-      q: 'Can I do SEO myself using free tools?',
-      a: 'Yes, and for bootstrapped businesses, you should start there. Google Search Console (free), Google Business Profile (free), Ahrefs Webmaster Tools (free for your own site), and Yoast or RankMath (free WordPress plugins) give you a legitimate foundation. The DIY ceiling is keyword and content strategy, most business owners hit a wall when they need link building, technical SEO fixes, or competitive content at scale. At that point, a specialist delivers better results per dollar than continued DIY.',
-    },
-    {
-      q: 'Is it worth hiring an SEO agency if I only have a 5-page website?',
-      a: 'A 5-page brochure site needs SEO investment, but the nature of the investment is different from a content-heavy site. Priority for small brochure sites: Google Business Profile optimization (highest ROI for local businesses), local citation consistency, page-level technical optimization (speed, schema, title tags), and 1–2 new service or location pages per quarter. An agency can do this effectively at $500–$800/month. You do not need a $3,000/month retainer for a 5-page site unless you are in a hyper-competitive industry.',
-    },
-    {
-      q: 'What industries pay the most for SEO?',
-      a: 'The highest SEO spends come from industries where a single new customer is worth thousands: personal injury law ($5,000–$20,000+/month is common), addiction treatment and rehab, financial services, home improvement (HVAC, roofing, plumbing), insurance, and healthcare. E-commerce businesses with large catalogs also spend heavily because every product category requires its own SEO work. If you are in one of these industries, budget accordingly, your competitors are.',
-    },
-    {
-      q: 'How do I know if my current SEO agency is actually doing the work?',
-      a: 'Ask for three things every month: a keyword rank movement report (showing which specific keywords moved up, down, or stayed flat), a content delivery log (what was published and what the word count was), and a link report (what links were earned, from which domains, and what their Domain Rating is). If your agency cannot produce these in 10 minutes, they are not doing the work. Also check your Google Search Console monthly, impressions and clicks should be trending up within 4–6 months of starting a proper campaign.',
-    },
-    {
-      q: 'What is the difference between cheap SEO and affordable SEO?',
-      a: 'Cheap SEO means cutting corners: buying links from link farms, publishing AI-generated content at scale, using automated on-page tools with no human review, and providing reports that show activity without results. Affordable SEO means right-sized work: a specialist doing focused optimization on your highest-value pages and keywords within a realistic budget. The outcome difference is significant: cheap SEO often results in a Google penalty or years of wasted spend. Affordable SEO from a qualified specialist compounds into real organic traffic.',
+      a: 'Walk away from anyone who guarantees a number one ranking; Google says no one can. Other warning signs: a quote sent before anyone looked at your site, reports that list activity but no rankings or leads, and offers to buy links or use private blog networks. Google’s spam policies list buying or selling links for ranking purposes as link spam, which can cost you rankings.',
     },
     {
       q: 'What questions should I ask an SEO agency before hiring them?',
-      a: 'Ask: How will you measure success, and what specific metrics will you report? Can you share case studies from clients in my industry or region? How many clients does each account manager handle? What does your link-building process look like, can you show me examples? How do you stay current with Google algorithm updates? What happens to my rankings if I stop working with you? What work will actually be done each month, and by whom? A good agency answers all of these without hesitation.',
+      a: 'Google suggests asking for examples of previous work and what results to expect in what timeframe, and how success is measured. Add your own: who does the work each month, how many clients each person handles, how links are earned, and what happens to your content and accounts if you leave. A good agency answers all of these in writing without hedging.',
     },
     {
       q: 'Should a small business sign a long-term SEO contract?',
-      a: 'Month-to-month is the safest arrangement for a new agency relationship. Some agencies require a 3–6 month minimum, which is reasonable because SEO takes time, but be skeptical of 12-month locked contracts from an agency you have never worked with. A good agency earns your renewal every month through demonstrated progress. The best arrangement: a 3-month trial scope, then month-to-month with a 30-day cancellation notice.',
+      a: 'Start short. A three-month first scope with clear deliverables lets you judge the working relationship before you commit, then move to month-to-month with 30 days’ notice. Some agencies ask for a six-month minimum because SEO is slow, which is reasonable if the monthly tasks are written down. Be wary of a 12-month lock-in from a provider you have never worked with.',
     },
     {
       q: 'Does FactoryJet offer SEO services for US small businesses?',
-      a: 'Yes. FactoryJet builds SEO programs for US small businesses, with the retainer sized to your market and quoted in writing after a short call. Every engagement includes technical SEO, on-page optimization, content, link building outreach, and GEO-readiness work (structured data, answer-first content structure, brand citation monitoring). We are founder-led, which means you work directly with a senior strategist, not a junior account manager passing your tasks to an offshore team. Book a 30-minute call at calendly.com/bhavesh-factoryjet/30min to discuss your situation.',
+      a: 'Yes. FactoryJet runs SEO and AI search programs for US small businesses covering technical fixes, on-page work, content, link earning and structured data for AI answers. FactoryJet quotes a fixed price in writing after a short scoping call, so the monthly scope is agreed before work starts. We have served 500+ businesses since 2014 with 97% on-time delivery. You can book a 30-minute call from our contact page.',
     },
   ];
 
 export const post: BlogPost = {
   id: '217',
   slug: 'seo-cost-small-business-2026',
-  title: 'How Much Does SEO Cost for a Small Business in 2026? ($500–$3,500/Mo, Itemized)',
+  title: 'How Much Does SEO Cost for a Small Business in 2026?',
   excerpt:
-    'SEO pricing ranges from $300 to $30,000 per month depending on who you hire. Here is the honest, itemized breakdown of what US small businesses actually pay, and what each budget tier buys you.',
+    'Most US small businesses pay $1,500 to $3,500 a month for SEO (WebFX), and Ahrefs’ poll of 439 providers puts the average at $2,917. Monthly, hourly, audit, local and AI SEO prices from six pricing studies, checked 22 Oct 2026.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 7, 2026',
-  readTime: '11 min read',
+  dateModified: 'Oct 22, 2026',
+  readTime: '12 min read',
   imageUrl: '/blog-images/seo-cost-small-business-2026.webp',
   meta: {
-    title: 'SEO Cost for Small Business in 2026: Real Monthly Pricing, Itemized',
+    title: 'SEO Cost for Small Business 2026: Monthly Prices Compared',
     description:
-      'How much does SEO cost for a small business in 2026? Honest breakdown of monthly retainer, project, and hourly rates, with what each budget tier actually delivers.',
+      'Small business SEO costs $1,500 to $3,500 a month (WebFX); Ahrefs puts the average at $2,917. Hourly, audit, local and AI SEO prices, checked 22 Oct 2026.',
   },
   keyTakeaways: [
-    'Most US small businesses pay $500–$2,500 per month for SEO. Local-only campaigns land at the low end; regional or competitive industries push toward the high end.',
-    'The three most common pricing models are monthly retainers ($500–$5,000+), project-based fees ($1,000–$15,000 for audits or one-time campaigns), and hourly consulting ($75–$200/hr).',
-    'What you get at $500/month is not the same as what you get at $2,500/month. Budget tiers are not just price, they are fundamentally different scopes of work.',
-    'The biggest SEO cost mistakes small businesses make: paying for a one-time SEO fix, buying cheap link packages, and choosing a vendor based solely on price.',
-    'AI search (ChatGPT, Gemini, Perplexity) now drives meaningful referral traffic for SMBs. In 2026, SEO without GEO (Generative Engine Optimization) is incomplete.',
-    'FactoryJet builds US small business SEO programs with GEO-readiness work included as standard on every engagement, quoted in writing after a short scoping call.',
+    'WebFX puts small business SEO at $1,500 to $3,500 a month and startups at $500 to $1,500.',
+    'Ahrefs polled 439 SEO providers: $2,917 a month on average, $1,557 for local SEO, $111 an hour.',
+    'Backlinko’s survey of 300+ SEO professionals found $1,001 to $2,500 the most common monthly retainer.',
+    'Most SEO audits cost $101 to $750, per WebFX’s survey of 250 US businesses.',
+    'Google says no one can guarantee a number one ranking, and that no special optimization is needed for AI Overviews beyond good SEO.',
+    'FactoryJet quotes a fixed price in writing after a short scoping call.',
   ],
   faqs,
   content: (
     <>
-      {/* Article, BreadcrumbList and FAQPage schema are emitted once by the blog route (src/app/blog/[slug]/page.tsx). The literal copy that lived here duplicated all three types. */}
+      {/* Article, BreadcrumbList and FAQPage schema are emitted once by the blog route (src/app/blog/[slug]/page.tsx) from the faqs array above. */}
       {/* Quick Answer Box */}
       <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-8">
         <p className="text-sm font-semibold text-orange-700 uppercase tracking-wide mb-2">Quick Answer</p>
         <p className="text-gray-800 font-medium">
-          Most US small businesses pay <strong>$500–$2,500 per month</strong> for SEO. Local service businesses typically land at $500–$1,200/month. Regional or competitive industries need $1,500–$3,500/month. Project-based SEO audits run $750–$5,000. Here is the full itemized breakdown.
+          Most US small businesses pay <strong>$1,500 to $3,500 a month</strong> for SEO, the small business band on{' '}
+          <a href={SRC.webfx} {...ext}>WebFX&apos;s 2026 pricing page</a>.{' '}
+          <a href={SRC.ahrefs} {...ext}>Ahrefs polled 439 SEO providers</a> and found an average of $2,917 a month, and $1,557
+          for local SEO. Hourly rates average $111. Most one-time audits cost $101 to $750.
         </p>
       </div>
 
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border">
         <h2 className="text-lg font-bold mb-3">Table of Contents</h2>
         <ol className="list-decimal pl-5 space-y-1 text-blue-700 text-sm">
-          <li><a href="#seo-pricing-table">The SEO Pricing Table: Every Tier, Itemized</a></li>
-          <li><a href="#what-each-tier-buys">What Each Budget Tier Actually Buys You</a></li>
-          <li><a href="#pricing-models">The Three SEO Pricing Models (Retainer vs. Project vs. Hourly)</a></li>
-          <li><a href="#freelancer-vs-agency">Freelancer vs. Agency vs. DIY: The Real Cost Comparison</a></li>
-          <li><a href="#geo-ai-seo">GEO and AI Search: The New Line Item in Every SEO Budget</a></li>
-          <li><a href="#red-flags">Red Flags That Tell You an Agency Is Not Worth the Money</a></li>
-          <li><a href="#roi">How to Calculate Whether SEO Has ROI for Your Business</a></li>
-          <li><a href="#faqs">Frequently Asked Questions</a></li>
+          <li><a href="#seo-pricing-table">What the pricing studies say, side by side</a></li>
+          <li><a href="#what-each-tier-buys">What each budget band buys</a></li>
+          <li><a href="#pricing-models">Retainer, project or hourly</a></li>
+          <li><a href="#freelancer-vs-agency">Freelancer, agency or in-house</a></li>
+          <li><a href="#geo-ai-seo">AI search and GEO in an SEO budget</a></li>
+          <li><a href="#red-flags">Red flags at any price</a></li>
+          <li><a href="#roi">How to check SEO pays for your business</a></li>
+          <li><a href="#faqs">Frequently asked questions</a></li>
         </ol>
       </div>
 
       <p>
-        If you search &ldquo;how much does SEO cost&rdquo; and read the first three results, you will get a range so wide it is useless: $300 to $30,000 per month. Technically accurate. Practically worthless.
+        Search &ldquo;how much does SEO cost&rdquo; and the answers run from a few hundred dollars to tens of thousands a month.
+        The spread is real. It tracks business size, competition and who does the work. This guide puts six published pricing
+        studies next to each other, so you can see where they agree and what each budget actually pays for.
       </p>
       <p>
-        This guide skips the range-giving and gives you what actually matters: what each budget tier buys, why the price differences exist, and how to decide what to spend before you call a single agency.
-      </p>
-      <p>
-        The date is June 7, 2026. The SEO market has shifted meaningfully in the past 18 months. AI Overviews changed how much organic traffic clicks actually reach websites, <a href="/blog/geo-cost-small-business-2026" className="text-orange-600 hover:underline font-medium">GEO (Generative Engine Optimization)</a> became a real practice rather than a buzzword, and the number of low-quality SEO vendors advertising on LinkedIn has never been higher. All of that context matters when you read a price quote.
+        We read every source below on 22 October 2026. Most come from agencies or tool makers with their own services to sell,
+        so treat them as market signals, not neutral audits. Where a figure could not be traced to a page we read, we cut it.
       </p>
 
       {/* Section 1: Pricing Table */}
-      <h2 id="seo-pricing-table" className="text-2xl font-bold mt-10 mb-4">The SEO Pricing Table: Every Tier, Itemized</h2>
+      <h2 id="seo-pricing-table" className="text-2xl font-bold mt-10 mb-4">What the pricing studies say, side by side</h2>
       <p>
-        Here is the table that should exist on every page about SEO costs but almost never does, not just the price range, but what the work actually consists of at each level.
+        The six sources measure different things. Ahrefs and Backlinko surveyed SEO providers. WebFX publishes bands by business
+        size. Clutch reports what agencies listed on its directory charge.
       </p>
 
       <div className="overflow-x-auto my-6">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="bg-gray-800 text-white">
-              <th className="p-3 text-left border border-gray-700">Monthly Budget</th>
-              <th className="p-3 text-left border border-gray-700">Who It Suits</th>
-              <th className="p-3 text-left border border-gray-700">Typical Scope</th>
-              <th className="p-3 text-left border border-gray-700">Expected Timeline to Results</th>
-              <th className="p-3 text-left border border-gray-700">Realistic Outcome</th>
+              <th className="p-3 text-left border border-gray-700">Source</th>
+              <th className="p-3 text-left border border-gray-700">What it measured</th>
+              <th className="p-3 text-left border border-gray-700">Monthly figure</th>
+              <th className="p-3 text-left border border-gray-700">Hourly figure</th>
             </tr>
           </thead>
           <tbody>
             <tr className="bg-white">
-              <td className="p-3 border border-gray-200 font-semibold">$300–$500/mo</td>
-              <td className="p-3 border border-gray-200">Single-location local business, very low competition</td>
-              <td className="p-3 border border-gray-200">GBP management, basic citation audit, monthly report, no link building</td>
-              <td className="p-3 border border-gray-200">6–12 months</td>
-              <td className="p-3 border border-gray-200">Local pack improvement for low-competition searches; negligible organic ranking movement</td>
+              <td className="p-3 border border-gray-200 font-semibold"><a href={SRC.ahrefs} {...ext}>Ahrefs</a> (updated Aug 2024)</td>
+              <td className="p-3 border border-gray-200">Poll of 439 SEO providers</td>
+              <td className="p-3 border border-gray-200">$2,917 average; local SEO $1,557</td>
+              <td className="p-3 border border-gray-200">$111 average</td>
             </tr>
             <tr className="bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">$500–$1,000/mo</td>
-              <td className="p-3 border border-gray-200">Local service businesses in medium-competition markets</td>
-              <td className="p-3 border border-gray-200">On-page optimization, GBP, 1 content piece/month, minimal link outreach</td>
-              <td className="p-3 border border-gray-200">4–8 months</td>
-              <td className="p-3 border border-gray-200">Local ranking improvements; 20–40% organic traffic increase over 12 months in low-competition markets</td>
+              <td className="p-3 border border-gray-200 font-semibold"><a href={SRC.webfx} {...ext}>WebFX</a> (2026)</td>
+              <td className="p-3 border border-gray-200">Bands by business size</td>
+              <td className="p-3 border border-gray-200">Startup $500 to $1,500; small business $1,500 to $3,500; mid-sized $1,500 to $10,000</td>
+              <td className="p-3 border border-gray-200">$75 to $200</td>
             </tr>
             <tr className="bg-white">
-              <td className="p-3 border border-gray-200 font-semibold">$1,000–$2,000/mo</td>
-              <td className="p-3 border border-gray-200">Growing SMBs, regional competition, service businesses</td>
-              <td className="p-3 border border-gray-200">Technical SEO, 2–3 content pieces/month, active link building (2–5 links/month), rank tracking</td>
-              <td className="p-3 border border-gray-200">3–6 months</td>
-              <td className="p-3 border border-gray-200">Measurable organic traffic growth; 40–80% increase over 12 months with consistent work</td>
+              <td className="p-3 border border-gray-200 font-semibold"><a href={SRC.backlinko} {...ext}>Backlinko</a> (updated Dec 2025)</td>
+              <td className="p-3 border border-gray-200">Survey of 300+ SEO professionals</td>
+              <td className="p-3 border border-gray-200">$1,001 to $2,500 most common</td>
+              <td className="p-3 border border-gray-200">$50 to $100 most common; senior $101 to $150</td>
             </tr>
             <tr className="bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">$2,000–$3,500/mo</td>
-              <td className="p-3 border border-gray-200">Competitive industries, e-commerce, multi-location</td>
-              <td className="p-3 border border-gray-200">Full technical SEO, 4–6 content pieces/month, aggressive link building (5–15 links/month), CRO input</td>
-              <td className="p-3 border border-gray-200">3–5 months</td>
-              <td className="p-3 border border-gray-200">Significant organic growth; real competitive displacement; sustainable lead pipeline from SEO</td>
+              <td className="p-3 border border-gray-200 font-semibold"><a href={SRC.clutch} {...ext}>Clutch</a> (updated Sep 2026)</td>
+              <td className="p-3 border border-gray-200">Agencies on its directory</td>
+              <td className="p-3 border border-gray-200">$2,000 to $20,000 typical; about $3,199 average</td>
+              <td className="p-3 border border-gray-200">$100 to $149 for most agencies</td>
             </tr>
             <tr className="bg-white">
-              <td className="p-3 border border-gray-200 font-semibold">$5,000–$10,000+/mo</td>
-              <td className="p-3 border border-gray-200">High-value industries (legal, medical, finance), e-commerce with large catalogs</td>
-              <td className="p-3 border border-gray-200">Dedicated team, 8–15 content pieces/month, editorial link placements, PR, digital PR campaigns</td>
-              <td className="p-3 border border-gray-200">2–4 months for initial movement</td>
-              <td className="p-3 border border-gray-200">Market leadership in target keywords; measurable revenue attribution from organic</td>
+              <td className="p-3 border border-gray-200 font-semibold"><a href={SRC.webfxAudit} {...ext}>WebFX audit survey</a></td>
+              <td className="p-3 border border-gray-200">250 US businesses, one-time audits</td>
+              <td className="p-3 border border-gray-200">$101 to $750 per audit; $501 to $750 most common (22.41%)</td>
+              <td className="p-3 border border-gray-200">n/a</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold"><a href={SRC.webfxGeo} {...ext}>WebFX GEO guide</a> (Oct 2026)</td>
+              <td className="p-3 border border-gray-200">AI search optimization</td>
+              <td className="p-3 border border-gray-200">Small business $1,500 to $5,000; mid-sized $5,000 to $25,000+</td>
+              <td className="p-3 border border-gray-200">$50 to $300</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p className="text-xs text-gray-500 mb-6">
-        Ranges are market estimates. For published survey data, see Ahrefs\' SEO pricing survey (2024) and WebFX\'s SEO pricing page (2026).
+        All six pages fetched and read 22 Oct 2026. Ahrefs&apos; survey is from 2024; the others carry 2025 or 2026 dates.
+      </p>
+      <p>
+        The studies agree more than the headline spread suggests. All four monthly figures for a typical retainer land between
+        $1,000 and $3,500: Backlinko&apos;s common band, WebFX&apos;s small business band, Ahrefs&apos; $2,917 and Clutch&apos;s $3,199
+        average. Clutch&apos;s typical agency range still stretches to $20,000, which is where competitive industries sit.
       </p>
       <p className="text-sm text-gray-700 mb-6">
-        Want to know how long each tier takes to deliver results? Read our{' '}
+        Want to know how long each budget takes to show results? Read our{' '}
         <a href="/blog/how-long-does-seo-take-2026-month-by-month-timeline" className="text-orange-600 hover:underline font-medium">month-by-month SEO timeline for 2026</a>.
         Before starting a retainer, consider whether you need a professional review first: see{' '}
         <a href="/blog/seo-audit-cost-2026" className="text-orange-600 hover:underline font-medium">how much an SEO audit costs in 2026</a>.
       </p>
 
       {/* Section 2 */}
-      <h2 id="what-each-tier-buys" className="text-2xl font-bold mt-10 mb-4">What Each Budget Tier Actually Buys You</h2>
+      <h2 id="what-each-tier-buys" className="text-2xl font-bold mt-10 mb-4">What each budget band buys</h2>
       <p>
-        The table above shows the scope. Here is what that scope means in practice, because the difference between $500/month and $2,000/month is not just budget. It is a fundamentally different program.
+        Price bands describe hours, and hours decide scope. The descriptions below are what a fair provider can fit into each
+        band. They are not outcome promises; no honest provider makes those.
       </p>
 
-      <h3 className="text-xl font-semibold mt-6 mb-3">$500–$1,000/Month: Local SEO Essentials</h3>
+      <div className="overflow-x-auto my-6">
+        <table className="w-full border-collapse text-sm">
+          <thead>
+            <tr className="bg-gray-800 text-white">
+              <th className="p-3 text-left border border-gray-700">Monthly budget</th>
+              <th className="p-3 text-left border border-gray-700">Where it sits in the studies</th>
+              <th className="p-3 text-left border border-gray-700">Who it suits</th>
+              <th className="p-3 text-left border border-gray-700">Typical scope</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Under $500</td>
+              <td className="p-3 border border-gray-200">Below every band WebFX publishes</td>
+              <td className="p-3 border border-gray-200">One location, very few competitors</td>
+              <td className="p-3 border border-gray-200">Google Business Profile upkeep, a few fixes, a report. Little or no content or link earning</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">$500 to $1,500</td>
+              <td className="p-3 border border-gray-200">WebFX startup band; near Ahrefs&apos; $1,557 local average at the top</td>
+              <td className="p-3 border border-gray-200">Local service businesses</td>
+              <td className="p-3 border border-gray-200">Local listings, on-page work on core pages, some new content, light outreach</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">$1,500 to $3,500</td>
+              <td className="p-3 border border-gray-200">WebFX small business band; covers Backlinko&apos;s most common band and Ahrefs&apos; $2,917 average</td>
+              <td className="p-3 border border-gray-200">Growing firms with regional competition</td>
+              <td className="p-3 border border-gray-200">Technical monitoring, regular content, active link earning, rank and lead tracking</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">$3,500 and up</td>
+              <td className="p-3 border border-gray-200">WebFX mid-sized and large bands; Clutch&apos;s $3,199 agency average</td>
+              <td className="p-3 border border-gray-200">Law, healthcare, finance, large ecommerce catalogs, multi-location</td>
+              <td className="p-3 border border-gray-200">A team: strategist, writers, technical lead and digital PR for editorial links</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 className="text-xl font-semibold mt-6 mb-3">$500 to $1,500 a month: local essentials</h3>
       <p>
-        At this budget, you are hiring a specialist to do the work that most local businesses need most, and almost none have done properly. That means: cleaning up your Google Business Profile (category selection, photo frequency, review response cadence), building consistent Name-Address-Phone citations across the 50+ local directories Google checks, and fixing the most damaging on-page issues on your homepage and top service pages.
-      </p>
-      <p>
-        What this budget does not include: meaningful link building (the #1 ranking factor for competitive keywords), content creation at scale, or technical SEO for site architecture. If you are a plumber or a dentist competing in a low-competition suburban market, this is often enough. If you are trying to rank &ldquo;personal injury lawyer [city]&rdquo; or &ldquo;HVAC repair [major metro],&rdquo; it is not.
+        This band covers the work most local businesses need and few have done properly: a clean Google Business Profile with
+        the right categories and a review routine, consistent name, address and phone details across directories, and fixes to
+        the homepage and top service pages. It rarely includes meaningful link earning or steady content. For a dentist in a quiet
+        suburb that is often enough. For &ldquo;personal injury lawyer&rdquo; in a big metro it is not.
       </p>
 
-      <h3 className="text-xl font-semibold mt-6 mb-3">$1,000–$2,500/Month: The Full Small Business Program</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-3">$1,500 to $3,500 a month: the full small business program</h3>
       <p>
-        This is where the economics of SEO start to make sense for most US small businesses. At this budget level, a quality agency can run a complete program: keyword strategy, technical monitoring, on-page optimization, content publishing, and active link building, not just outreach, but links actually earned. Ahrefs\' 2024 survey of 439 SEO providers puts the average local SEO retainer at $1,557 a month, which aligns with this tier.
-      </p>
-      <p>
-        The difference between a $1,000/month agency and a $2,500/month agency is usually link velocity and content volume. Both can produce results. The higher-budget option compounds faster because it is building domain authority and topical coverage at a higher rate.
+        Here a provider can run every part of SEO at once: keyword strategy, technical monitoring, on-page work, regular content and
+        links that are actually earned rather than pitched. WebFX&apos;s small business band and Ahrefs&apos; $2,917 average both sit
+        here. The gap between the low and high end of this band is mostly how much content gets published and how many links get earned.
       </p>
 
-      <h3 className="text-xl font-semibold mt-6 mb-3">$2,500–$5,000/Month: Competitive Industry Standard</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-3">$3,500 and up: competitive industries</h3>
       <p>
-        If you are in legal, healthcare, home services, finance, or competitive e-commerce, this is the minimum effective spend to compete against well-established sites. At this level, you should expect a dedicated team rather than a generalist: a strategist, a content specialist, and a link builder. You should also be getting editorial link placements, mentions in industry publications and news outlets, not just directory links.
+        In legal, healthcare, home services, finance or large-catalog ecommerce, rivals have years of content and links. You need a
+        team, not a generalist, and editorial mentions in real publications rather than directory listings. Clutch&apos;s typical agency
+        range of $2,000 to $20,000 a month shows how far this band stretches.
       </p>
 
       {/* Section 3 */}
-      <h2 id="pricing-models" className="text-2xl font-bold mt-10 mb-4">The Three SEO Pricing Models (Retainer vs. Project vs. Hourly)</h2>
+      <h2 id="pricing-models" className="text-2xl font-bold mt-10 mb-4">Retainer, project or hourly</h2>
       <p>
-        Price is not the only variable, how you pay matters. The three standard models have very different risk profiles.
+        How you pay changes your risk. <a href={SRC.webfx} {...ext}>WebFX</a> cites Ahrefs data that 78.2% of SEOs charge monthly
+        retainers for some or all of their services, so most quotes you receive will be retainers.
       </p>
 
-      <h3 className="text-xl font-semibold mt-6 mb-3">Monthly Retainer (Most Common)</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-3">Monthly retainer</h3>
       <p>
-        A fixed monthly fee for an agreed scope of work. This is the right model for ongoing SEO, because SEO is not a one-time fix, it is a continuous program. The agency has predictable revenue; you get consistent effort and compounding results. Most quality agencies only take retainer clients because project work does not allow enough time to produce real results.
+        A fixed monthly fee for a written scope. It fits ongoing SEO, because rankings are built over many months and lost if the
+        work stops. Insist on a monthly task list so you can tell what each payment bought.
       </p>
 
-      <h3 className="text-xl font-semibold mt-6 mb-3">Project-Based Fees</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-3">Project fees</h3>
       <p>
-        Used for defined deliverables: SEO audits ($750–$5,000), site migrations ($2,000–$15,000), penalty recovery ($1,000–$5,000), or one-time content campaigns. These make sense when you have a specific problem to solve and a defined endpoint. They are not a substitute for an ongoing retainer if you actually want to rank competitively.
+        For defined jobs with an end: an audit, a site migration, recovery from a penalty, a one-off content push. WebFX lists project
+        work at $500 to $5,000, and Backlinko found $1,000 to $5,000 the most common project band. Projects solve a known problem. They
+        do not replace a retainer if you want to keep climbing.
       </p>
 
-      <h3 className="text-xl font-semibold mt-6 mb-3">Hourly Consulting</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-3">Hourly consulting</h3>
       <p>
-        Typically $75–$200/hour for a freelancer or consultant. Works well for: getting a second opinion on your current agency, training your internal team, diagnosing a specific problem (ranking drop, traffic loss), or strategic guidance alongside in-house execution. Not the right model if you want someone executing the work, hourly engagements rarely sustain the consistency that results require.
+        Ahrefs&apos; average is $111 an hour; <a href={SRC.clutch} {...ext}>Clutch</a> puts most agencies at $100 to $149. Hourly suits a
+        second opinion on your current agency, training an in-house person, or diagnosing a sudden traffic drop. It rarely suits ongoing
+        execution, because nobody owns the results.
       </p>
 
-      {/* Section 4 */}
       <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
         <h3 className="text-lg font-bold mb-3">Not sure which model fits your business?</h3>
-        <p className="mb-4">The right answer depends on how competitive your market is and how much you can execute in house. FactoryJet scopes SEO engagements to the work that will actually move rankings and leads, quoted before anything begins.</p>
+        <p className="mb-4">It depends on how competitive your market is and how much you can do in house. FactoryJet quotes a fixed price in writing after a short scoping call, with the monthly scope agreed before anything starts.</p>
         <div className="flex flex-wrap items-center gap-4">
           <a href="/contact" className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors">Get a written SEO quote &rarr;</a>
           <a href="/services/ai-seo" className="inline-block bg-white text-[#1F2937] border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">See SEO services</a>
         </div>
       </div>
 
-      <h2 id="freelancer-vs-agency" className="text-2xl font-bold mt-10 mb-4">Freelancer vs. Agency vs. In-House: The Real Cost Comparison</h2>
+      <h2 id="freelancer-vs-agency" className="text-2xl font-bold mt-10 mb-4">Freelancer, agency or in-house</h2>
 
       <div className="overflow-x-auto my-6">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Model</th>
-              <th className="p-3 text-left border border-gray-700">Typical Cost</th>
+              <th className="p-3 text-left border border-gray-700">Published cost</th>
               <th className="p-3 text-left border border-gray-700">Strengths</th>
               <th className="p-3 text-left border border-gray-700">Weaknesses</th>
             </tr>
@@ -291,87 +372,93 @@ export const post: BlogPost = {
           <tbody>
             <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">Freelancer</td>
-              <td className="p-3 border border-gray-200">$500–$2,000/mo or $75–$150/hr</td>
-              <td className="p-3 border border-gray-200">Flexible, often highly specialized, lower overhead</td>
-              <td className="p-3 border border-gray-200">Single point of failure, no coverage if they get sick or overloaded, limited tooling</td>
+              <td className="p-3 border border-gray-200">$50 to $100 an hour most common (<a href={SRC.backlinko} {...ext}>Backlinko</a>)</td>
+              <td className="p-3 border border-gray-200">Flexible, often specialized, low overhead</td>
+              <td className="p-3 border border-gray-200">One person: no cover for illness or overload, narrower skills</td>
             </tr>
             <tr className="bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">Boutique Agency</td>
-              <td className="p-3 border border-gray-200">$1,000–$5,000/mo</td>
-              <td className="p-3 border border-gray-200">Specialist team, consistent process, accountability structures, broader skill coverage</td>
-              <td className="p-3 border border-gray-200">Less flexible than freelancer, junior staff on execution at lower price points</td>
+              <td className="p-3 border border-gray-200 font-semibold">Agency</td>
+              <td className="p-3 border border-gray-200">$100 to $149 an hour for most; $2,000 to $20,000 a month (<a href={SRC.clutch} {...ext}>Clutch</a>)</td>
+              <td className="p-3 border border-gray-200">Several specialists, set process, someone accountable</td>
+              <td className="p-3 border border-gray-200">Junior staff may do the work at the lower price points</td>
             </tr>
             <tr className="bg-white">
-              <td className="p-3 border border-gray-200 font-semibold">In-House SEO</td>
-              <td className="p-3 border border-gray-200">$55,000–$90,000/yr salary + tools ($500–$1,500/mo)</td>
-              <td className="p-3 border border-gray-200">Deep brand knowledge, immediate availability, strategic alignment</td>
-              <td className="p-3 border border-gray-200">One person cannot cover all specializations; expensive; hard to hire well below $70K</td>
+              <td className="p-3 border border-gray-200 font-semibold">In-house hire</td>
+              <td className="p-3 border border-gray-200">$78,760 median wage for market research analysts, May 2025 (<a href={SRC.bls} {...ext}>BLS</a>), plus benefits and tools</td>
+              <td className="p-3 border border-gray-200">Knows the brand, always available</td>
+              <td className="p-3 border border-gray-200">One person rarely covers technical, content and links equally well</td>
             </tr>
             <tr className="bg-gray-50">
-              <td className="p-3 border border-gray-200 font-semibold">DIY (Tools Only)</td>
-              <td className="p-3 border border-gray-200">$0–$500/mo for tools</td>
-              <td className="p-3 border border-gray-200">Zero external cost, full control</td>
-              <td className="p-3 border border-gray-200">Time-intensive, skill ceiling on link building, competes against specialists</td>
+              <td className="p-3 border border-gray-200 font-semibold">Do it yourself</td>
+              <td className="p-3 border border-gray-200">Free Google tools; paid tools optional</td>
+              <td className="p-3 border border-gray-200">No fees, full control</td>
+              <td className="p-3 border border-gray-200">Your time, and link earning is hard to do alone</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <p>
-        The agency vs. freelancer decision is less about cost and more about risk tolerance. A great freelancer outperforms a mediocre agency at the same budget. The agency wins when you need multiple skill sets executed simultaneously, which is most sustained SEO programs.
+        The choice is less about cost than risk. A strong freelancer beats a weak agency at the same budget. An agency wins when you need
+        technical, content and link work running at the same time, which describes most programs that last.
       </p>
 
       {/* Section 5 */}
-      <h2 id="geo-ai-seo" className="text-2xl font-bold mt-10 mb-4">GEO and AI Search: The New Line Item Every SEO Budget Needs in 2026</h2>
+      <h2 id="geo-ai-seo" className="text-2xl font-bold mt-10 mb-4">AI search and GEO in an SEO budget</h2>
       <p>
-        Here is something your agency&apos;s pricing proposal probably does not address clearly: Google AI Overviews, ChatGPT search, Perplexity, and Gemini now drive meaningful traffic to business websites, and ranking in those AI responses requires different work than traditional SEO.
+        Google AI Overviews, AI Mode, ChatGPT search, Perplexity and Gemini now answer many questions before anyone clicks.{' '}
+        <a href={SRC.googleAi} {...ext}>Google&apos;s guidance on AI features</a> says the best practices for SEO remain relevant for them,
+        and that there are no additional requirements or special optimizations needed to appear.
       </p>
       <p>
-        BrightEdge published data in 2025 showing that AI Overviews appear in 30–49% of Google searches across industries. For informational queries, exactly the type that feed small business lead generation, that figure is even higher. A business that shows up in an AI Overview gets traffic even for searches where it does not rank in the traditional top 10.
+        That matters for your budget. <a href={SRC.webfxGeo} {...ext}>WebFX&apos;s October 2026 guide</a> prices standalone generative
+        engine optimization at $1,500 to $5,000 a month for small businesses. Before you add a line like that, ask what it covers that
+        your SEO retainer does not. The useful parts are specific: answer-first pages with cited sources, structured data such as FAQPage
+        and Article schema, named entities, mentions of your business on other trusted sites, and tracking of whether AI answers name you.
+        Read more in our guide to <a href="/blog/geo-cost-small-business-2026" className="text-orange-600 hover:underline font-medium">what GEO costs a small business</a>.
       </p>
       <p>
-        What GEO-readiness actually requires: authoritative content with cited sources, structured data markup (FAQPage, HowTo, Article schema), answer-first paragraph structure, named entity mentions (real tools, real people, real locations), and brand mentions across third-party sites. None of this is separate from good SEO, it is good SEO done for the 2026 search environment.
-      </p>
-      <p>
-        FactoryJet includes GEO-readiness as a standard component of every SEO engagement. Most agencies do not, because most agencies learned SEO before AI Overviews were a factor.
+        FactoryJet builds that structure into SEO work rather than selling it as a separate product, because the overlap is large.
       </p>
 
       {/* Section 6 */}
-      <h2 id="red-flags" className="text-2xl font-bold mt-10 mb-4">Red Flags That Tell You an Agency Is Not Worth the Money, at Any Price</h2>
+      <h2 id="red-flags" className="text-2xl font-bold mt-10 mb-4">Red flags at any price</h2>
       <ul className="list-disc pl-6 space-y-2">
-        <li><strong>They guarantee a #1 ranking.</strong> No legitimate agency does this. Google&apos;s algorithms are not controllable. Rankings depend on competitor behavior, algorithm updates, and factors no agency controls.</li>
-        <li><strong>They send a proposal without auditing your site first.</strong> A price quote without a site audit is a guess. Good agencies need to understand your technical baseline, current rankings, and competitive landscape before they can scope meaningful work.</li>
-        <li><strong>Their reporting is all activity, no outcomes.</strong> If your monthly report shows &ldquo;published 4 blog posts, submitted 20 directory listings&rdquo; but no rank tracking data, no traffic data, and no conversion data, they are measuring effort, not results.</li>
-        <li><strong>They talk about &ldquo;DA boosting&rdquo; or &ldquo;private blog networks.&rdquo;</strong> PBN links are a Google violation. Sites hit by PBN-driven link schemes often suffer manual penalties that take months to recover from.</li>
-        <li><strong>They cannot name a single client reference in your industry.</strong> SEO is not generic. An agency that has never worked in your vertical is learning on your budget.</li>
+        <li><strong>They guarantee a number one ranking.</strong> <a href={SRC.googleSeo} {...ext}>Google&apos;s own hiring guide</a> says no one can guarantee a #1 ranking on Google, and tells you to find someone else if an SEO promises it.</li>
+        <li><strong>They quote before looking at your site.</strong> A price without a review of your technical state, current rankings and rivals is a guess.</li>
+        <li><strong>Reports show activity, not outcomes.</strong> &ldquo;Published four posts, submitted 20 listings&rdquo; with no rankings, traffic or leads measures effort only.</li>
+        <li><strong>They sell links or private blog networks.</strong> <a href={SRC.googleSpam} {...ext}>Google&apos;s spam policies</a> list buying or selling links for ranking purposes as link spam.</li>
+        <li><strong>They cannot show relevant past work.</strong> Google suggests asking any SEO for examples of previous work and success stories before hiring.</li>
       </ul>
 
       {/* Section 7 */}
-      <h2 id="roi" className="text-2xl font-bold mt-10 mb-4">How to Calculate Whether SEO Has ROI for Your Specific Business</h2>
+      <h2 id="roi" className="text-2xl font-bold mt-10 mb-4">How to check SEO pays for your business</h2>
       <p>
-        Before you hire anyone, run this math. It takes five minutes and tells you whether the investment makes economic sense at all.
+        Run this check with your own numbers before you hire anyone. It takes five minutes.
       </p>
       <ol className="list-decimal pl-6 space-y-3">
-        <li><strong>What is a new customer worth to you?</strong> Be specific: average lifetime value, not just first transaction. A HVAC company signing a customer to a maintenance contract might have a $2,400 LTV. A personal injury attorney might have a $15,000 average case value.</li>
-        <li><strong>What is your close rate on inbound leads?</strong> If 30% of inbound leads become clients, you need about 3.3 leads per new customer.</li>
-        <li><strong>How many leads would justify the SEO spend?</strong> If SEO costs $1,500/month = $18,000/year, and your LTV is $2,400, you need 7.5 new customers from SEO per year to break even. At a 30% close rate, that is 25 leads per year from organic, roughly 2 qualified leads per month.</li>
-        <li><strong>Is 2 qualified leads per month from SEO realistic for your market?</strong> Check your Google Search Console for current organic traffic. Even a poorly optimized site in a medium-competition market should convert 1–3% of organic visitors to leads. If you get 200 organic visits per month today, you are already getting 2–6 leads. SEO investment scales that number.</li>
+        <li><strong>What is a new customer worth?</strong> Use lifetime value, not the first sale.</li>
+        <li><strong>What share of inbound leads become customers?</strong> Your CRM or sales log has this.</li>
+        <li><strong>How many customers would cover a year of fees?</strong> Divide twelve months of the quoted retainer by customer value. Then divide that by your close rate to get the leads you need.</li>
+        <li><strong>Is that many leads realistic?</strong> Open Google Search Console and look at how many people already search for your service and click through. If the leads you need are far beyond that demand, SEO alone will not pay back, whatever you spend.</li>
       </ol>
       <p>
-        This is the calculation every agency should walk you through before quoting. If they skip it, ask for it. It tells you both whether SEO makes sense and whether the agency understands your business model.
+        A good agency walks you through this sum before quoting. If one skips it, ask for it. The answer shows whether SEO makes sense
+        and whether the agency understands how you make money.
       </p>
 
-      {/* High-Converting CTA Box */}
-      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl p-6 md:p-8 my-8 shadow-lg">
+      {/* CTA Box */}
+      <div className="bg-gray-900 text-white rounded-2xl p-6 md:p-8 my-8">
         <div className="max-w-2xl">
           <span className="inline-block px-3 py-1 bg-[#F05A28] text-white text-xs font-bold uppercase rounded-full tracking-wider mb-3">
-            SEO & AI Visibility Roadmap
+            SEO and AI visibility
           </span>
           <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
-            Not Sure What SEO & GEO Budget Makes Sense for Your Business?
+            Find the SEO budget that fits your market
           </h3>
           <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
-            FactoryJet engineers technical SEO and Generative Engine Optimization programs that get businesses cited across Google AI Overviews, Perplexity, and ChatGPT. Book a 30-minute consultation with founder Bhavesh Barot.
+            FactoryJet runs technical SEO and AI search programs for small businesses, and quotes a fixed price in writing after a short
+            scoping call. Book 30 minutes with founder Bhavesh Barot.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
@@ -397,7 +484,21 @@ export const post: BlogPost = {
         <div>
           <p className="font-semibold text-gray-900">Bhavesh Barot</p>
           <p className="text-sm text-gray-600">
-            Founder, FactoryJet. Bhavesh has led web design, e-commerce, and SEO programs for 500+ small businesses across the US, UK, UAE and India. He writes about what actually works in organic search, without the agency spin.
+            Founder, FactoryJet. Bhavesh has led web design, ecommerce and SEO work for 500+ businesses since founding FactoryJet in 2014.
+          </p>
+          <p className="text-xs text-gray-500 mt-3">
+            Sources checked 22 Oct 2026:{' '}
+            <a href={SRC.ahrefs} {...ext}>Ahrefs SEO pricing</a>,{' '}
+            <a href={SRC.ahrefsRank} {...ext}>Ahrefs ranking time study</a>,{' '}
+            <a href={SRC.webfx} {...ext}>WebFX SEO pricing</a>,{' '}
+            <a href={SRC.webfxAudit} {...ext}>WebFX audit pricing</a>,{' '}
+            <a href={SRC.webfxGeo} {...ext}>WebFX GEO cost</a>,{' '}
+            <a href={SRC.backlinko} {...ext}>Backlinko SEO pricing</a>,{' '}
+            <a href={SRC.clutch} {...ext}>Clutch SEO pricing</a>,{' '}
+            <a href={SRC.bls} {...ext}>BLS Occupational Outlook</a>,{' '}
+            <a href={SRC.googleSeo} {...ext}>Google: Do you need an SEO?</a>,{' '}
+            <a href={SRC.googleSpam} {...ext}>Google spam policies</a>,{' '}
+            <a href={SRC.googleAi} {...ext}>Google AI features</a>. Published prices change; confirm with each provider.
           </p>
         </div>
       </div>

@@ -10,6 +10,20 @@ import type { CaseStudy } from './index'
 // without a measured source.
 export const shopholisticoCaseStudy: CaseStudy = {
   slug: 'shopholistico-shopify-store',
+  seoTitle: 'Shopholistico: Custom Shopify Theme for a US Brand',
+  metaDescription:
+    'How FactoryJet built Shopholistico a custom Shopify theme with tiered subscriptions, a bundle and two Meta ad landing pages, live since September 2026.',
+  snapshot: {
+    who: 'Shopholistico, a small US brand selling whole-food vitamin D and calcium supplements online.',
+    problem: 'The old store had clashing brand colors, empty policy pages, one flat subscription discount, and no landing pages for Meta ads.',
+    built: 'A custom Shopify theme built from scratch, three subscription tiers through Appstle, a bundle, two ad landing pages, filled-in policy pages, and SEO and AI search basics.',
+    status: 'Live on shopholistico.com since 27 September 2026.',
+  },
+  serviceLinks: [
+    { label: 'Shopify theme development', href: '/services/shopify-theme-development' },
+    { label: 'Shopify development', href: '/shopify-development' },
+    { label: 'DTC ecommerce agency', href: '/services/dtc-ecommerce-agency' },
+  ],
   client: 'Shopholistico',
   tagline: 'A custom Shopify theme for a whole-food supplement brand selling in the US.',
   industry: 'Whole-Food Supplements (DTC)',
@@ -100,7 +114,7 @@ export const shopholisticoCaseStudy: CaseStudy = {
   imageUrl: '/images/case-studies/shopholistico-shopify-store-hero.jpg',
   ogImageUrl: '/images/case-studies/shopholistico-shopify-store-og.png',
   publishedDate: '2026-09-29',
-  modifiedDate: '2026-09-29',
+  modifiedDate: '2026-10-22',
   ctaTeaser: 'Running a Shopify store that has outgrown its template? We can build a theme around how you actually sell.',
   relatedSlugs: ['belle-maison-ecommerce-success', 'gpsuk-promotional-products'],
   faqs: [
@@ -131,6 +145,10 @@ export const shopholisticoCaseStudy: CaseStudy = {
     {
       q: 'Does FactoryJet work on stores that sell in the US?',
       a: 'Yes. Shopholistico sells and ships within the US, in US dollars. FactoryJet is a registered Shopify Partner and builds and maintains Shopify stores for US brands, working with the store owner through review rounds on a preview store before anything goes live.',
+    },
+    {
+      q: 'How do you launch a new Shopify theme without downtime?',
+      a: 'Build and review it on a preview store or an unpublished theme, copy over the app embeds, check every page type, then publish it in one step. Shopholistico’s store moved onto the new theme this way, with signups, reviews and subscriptions working from the first day.',
     },
   ],
 }

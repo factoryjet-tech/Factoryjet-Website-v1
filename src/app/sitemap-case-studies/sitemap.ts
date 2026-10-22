@@ -45,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // later if individual case studies live in separate files.
   const dataLastMod = getFileLastMod('src/data/case-studies/index.ts')
 
-  return CASE_STUDIES.map((cs) => ({
+  return CASE_STUDIES.filter((cs) => !cs.noindex).map((cs) => ({
     url: `${SITE_URL}/case-studies/${cs.slug}`,
     lastModified: dataLastMod,
     changeFrequency: CHANGEFREQ.caseStudy as ChangeFreq,

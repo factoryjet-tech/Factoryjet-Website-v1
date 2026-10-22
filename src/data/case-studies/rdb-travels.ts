@@ -9,6 +9,20 @@ import type { CaseStudy } from './index'
 // client's, not ours, and are deliberately not repeated here.
 export const rdbTravelsCaseStudy: CaseStudy = {
   slug: 'rdb-travels-cab-booking-website',
+  seoTitle: 'RDB Travels: Cab Booking Website With WhatsApp Quotes',
+  metaDescription:
+    'How FactoryJet built RDB Travels a cab and group-travel website where every quote request opens a ready-to-send WhatsApp message to the Ahmedabad office.',
+  snapshot: {
+    who: 'RDB Travels, an Ahmedabad operator of cars, Tempo Travellers and buses with drivers, for airport runs, outstation trips and group travel.',
+    problem: 'Customers book on WhatsApp and search by route or vehicle, so a generic site with a long email form worked against how they actually buy.',
+    built: 'A website with a quote form that turns a trip request into a pre-filled WhatsApp message, plus a page for each service and each popular route out of Ahmedabad.',
+    status: 'Live on rdbtravels.com.',
+  },
+  serviceLinks: [
+    { label: 'Small business website design', href: '/services/small-business-website-design' },
+    { label: 'Local SEO services', href: '/services/local-seo' },
+    { label: 'AI SEO services', href: '/services/ai-seo' },
+  ],
   client: 'RDB Travels',
   tagline: 'An Ahmedabad cab and group-travel operator that needed a website built around how people actually book: on WhatsApp.',
   industry: 'Travel & Transport',
@@ -83,9 +97,9 @@ export const rdbTravelsCaseStudy: CaseStudy = {
   imageUrl: '/images/case-studies/rdb-travels-cab-booking-website-hero.jpg',
   ogImageUrl: '/images/case-studies/rdb-travels-cab-booking-website-og.png',
   publishedDate: '2026-09-29',
-  modifiedDate: '2026-09-29',
+  modifiedDate: '2026-10-22',
   ctaTeaser: 'Run a cab or travel business that books on WhatsApp? We can build a site that feeds that chat instead of fighting it.',
-  relatedSlugs: ['rukman-transport-logistics', 'yadav-entrance-automation-website-seo'],
+  relatedSlugs: ['yadav-entrance-automation-website-seo', 'flying-pixel-agency'],
   faqs: [
     {
       q: 'My customers already book on WhatsApp. Why do I need a website?',
@@ -114,6 +128,10 @@ export const rdbTravelsCaseStudy: CaseStudy = {
     {
       q: 'Can I update routes and vehicles later?',
       a: 'Yes. New routes and vehicle types can be added as new pages and cards without rebuilding the site. That matters for a travel business, where the routes customers ask for change with seasons, festivals and wedding dates.',
+    },
+    {
+      q: 'Should a cab website show prices?',
+      a: 'Only where the price is fixed. A standard airport drop can show a set fare. Outstation trips and group bookings depend on dates, distance and vehicle, so a quote in the chat gives the customer an accurate price instead of a misleading one.',
     },
   ],
   clientUrl: 'https://www.rdbtravels.com/',

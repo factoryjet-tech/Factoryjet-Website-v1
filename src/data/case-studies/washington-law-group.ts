@@ -10,6 +10,20 @@ import type { CaseStudy } from './index'
 // contains illustrative sample data and is NOT described here as results.
 export const washingtonLawGroupCaseStudy: CaseStudy = {
   slug: 'washington-law-group-accident-detection-agent',
+  seoTitle: 'Washington Law Group: AI Crash Detection Agent',
+  metaDescription:
+    'How FactoryJet built Washington Law Group an AI agent that reads crash news in all 50 states every two hours and emails the firm qualifying truck crashes.',
+  snapshot: {
+    who: 'Washington Law Group, a US personal injury firm that handles truck and commercial-vehicle accident cases.',
+    problem: 'Serious commercial-vehicle crashes are first reported by local news and state police across 50 states, far more sources than anyone at a firm can read every day.',
+    built: 'An AI agent that reads news and police sources every two hours, pulls out the facts, applies the firm’s rules, checks every victim name against the article, and emails the qualifying crashes.',
+    status: 'Live in production on a dedicated US server. Lawyers at the firm review every lead.',
+  },
+  serviceLinks: [
+    { label: 'AI agent development', href: '/services/ai-agent-development' },
+    { label: 'AI agents for law firms', href: '/services/legal-ai-agents' },
+  ],
+  modifiedDate: '2026-10-22',
   client: 'Washington Law Group',
   tagline: 'An AI agent that reads crash news across all 50 states and emails the firm the serious commercial-vehicle accidents.',
   industry: 'Legal',
@@ -83,7 +97,7 @@ export const washingtonLawGroupCaseStudy: CaseStudy = {
   ogImageUrl: '/images/case-studies/washington-law-group-accident-detection-agent-og.png',
   publishedDate: '2026-09-29',
   ctaTeaser: 'If your team reads the same sources every day looking for the few that matter, an agent can do the reading and hand you the shortlist.',
-  relatedSlugs: ['rukman-transport-logistics', 'yadav-entrance-automation-website-seo'],
+  relatedSlugs: ['rdb-travels-cab-booking-website', 'yadav-entrance-automation-website-seo'],
   faqs: [
     {
       q: 'Where does the agent find accidents?',
@@ -112,6 +126,10 @@ export const washingtonLawGroupCaseStudy: CaseStudy = {
     {
       q: 'Who can see the leads?',
       a: 'Only people the firm has named. The console sits behind a sign-in that checks each person\'s email with a one-time code before the page loads. The server itself has no public door, and the database is backed up daily, encrypted, to separate storage.',
+    },
+    {
+      q: 'Could a law firm use an agent like this for other kinds of cases?',
+      a: 'Yes, wherever the first sign of a case is a published report. The same pattern, read public sources, pull out the facts, apply the firm’s own rules and email a shortlist, can be pointed at other accident types or other public records. The rules change; the checks against invented details stay.',
     },
   ],
 }
