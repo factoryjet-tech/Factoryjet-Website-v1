@@ -58,6 +58,14 @@ export const ROLES = Object.freeze({
 export const MAX_CV_BYTES = 5 * 1024 * 1024;
 export const MAX_NOTE_WORDS = 180;
 const MAX_SHORT_ANSWER = 300;
+
+// Hard length caps. Values are truncated to these before validation, storage and email.
+const MAX_NAME = 120;
+const MAX_EMAIL = 254;
+const MAX_PHONE = 40;
+const MAX_LINK = 300;
+const MAX_LONG_TEXT = 5000;
+const MAX_OTHER = 500;
 const ERP_FETCH_TIMEOUT_MS = 8000;
 
 export const NOTICE_PERIODS = ['Immediate', '15 days', '30 days', '60 days', '90 days'];
@@ -89,7 +97,7 @@ function clip(value, max) {
 
 /** Adds https:// to a bare domain, rejects anything that is not http(s). Returns '' when invalid. */
 export function normalizeUrl(value) {
-  let v = clip(value, 500);
+  let v = clip(value, MAX_LINK);
   if (!v) return '';
   if (!/^https?:\/\//i.test(v)) v = `https://${v}`;
   try {
@@ -131,16 +139,16 @@ export function validateApplication(fields, cv) {
   const role = clip(f.role, 80);
   if (!ROLES[role]) errors.role = 'This role is not open.';
 
-  const name = clip(f.name, 140);
+  const name = clip(f.name, MAX_NAME);
   if (name.length < 2) errors.name = 'Please enter your full name.';
 
-  const email = clip(f.email, 200).toLowerCase();
+  const email = clip(f.email, MAX_EMAIL).toLowerCase();
   if (!EMAIL_RE.test(email)) errors.email = 'Please enter a valid email address.';
 
-  const phone = clip(f.phone, 40);
+  const phone = clip(f.phone, MAX_PHONE);
   if (phone.replace(/\D/g, '').length < 8) errors.phone = 'Please enter a phone number we can call.';
 
-  const linkedinRaw = clip(f.linkedin, 500);
+  const linkedinRaw = clip(f.linkedin, MAX_LINK);
   const linkedin = linkedinRaw ? normalizeUrl(linkedinRaw) : '';
   if (linkedinRaw && !linkedin) errors.linkedin = 'That does not look like a link.';
 
@@ -156,7 +164,7 @@ export function validateApplication(fields, cv) {
   if (!aiNote) errors.ai_note = 'Tell us what the AI did and what you did.';
   else if (aiNote.length > MAX_SHORT_ANSWER) errors.ai_note = `Keep it under ${MAX_SHORT_ANSWER} characters.`;
 
-  const aiSearchNote = clip(f.ai_search_note, 2000);
+  const aiSearchNote = clip(f.ai_search_note, MAX_LONG_TEXT);
   const words = countWords(aiSearchNote);
   if (words < 20) errors.ai_search_note = 'Please write your note (around 150 words).';
   else if (words > MAX_NOTE_WORDS) errors.ai_search_note = `Please keep it under ${MAX_NOTE_WORDS} words. You have ${words}.`;
@@ -201,7 +209,7 @@ export function validateApplication(fields, cv) {
       salaryOk: salary === 'yes',
       noticePeriod: notice,
       currentCity: city,
-      source: sourceToErp(f.source),
+      source: sourceToErp(clip(f.source, MAX_OTHER)),
       cvType: sniffCvType(cv.bytes, cv.name),
     },
   };
@@ -282,7 +290,19 @@ export function linesToHtml(lines) {
     .join('');
 }
 
-/** Copied from notify-lead.js on purpose: that file has uncommitted work from another session. Same contract. */
+/** Hostnames a genuine careers-form token can come from. */
+export function turnstileHostnameOk(hostname) {
+  const h = String(hostname || '').toLowerCase();
+  return h === 'factoryjet.com' || h === 'www.factoryjet.com' || /^[a-z0-9-]+(\.[a-z0-9-]+)*\.pages\.dev$/.test(h);
+}
+
+/**
+ * Based on notify-lead.js, plus a hostname check: a token solved on another
+ * site does not count. The careers widget (ApplicationForm.tsx) sets no
+ * `action`, so none is checked here; if one is added there, check it here too.
+ * 'unchecked' means the secret is missing OR siteverify could not be reached;
+ * callers tell the two apart with turnstileConfigured(env).
+ */
 async function verifyTurnstile(env, token, ip) {
   const secret = env && env.TURNSTILE_SECRET_KEY;
   if (!secret) return 'unchecked';
@@ -294,11 +314,24 @@ async function verifyTurnstile(env, token, ip) {
     if (ip) form.append('remoteip', ip);
     const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', { method: 'POST', body: form });
     const out = await res.json();
-    return out.success ? 'verified' : 'failed';
+    return out && out.success === true && turnstileHostnameOk(out.hostname) ? 'verified' : 'failed';
   } catch (err) {
     console.error('job-application: turnstile verify error', err && err.name);
     return 'unchecked';
   }
+}
+
+function turnstileConfigured(env) {
+  return Boolean(env && env.TURNSTILE_SECRET_KEY);
+}
+
+/**
+ * True when Turnstile vouches for this submission, or when Turnstile is not
+ * configured at all (so a missing secret never loses a candidate). A siteverify
+ * outage with the secret set does not count as verified.
+ */
+function turnstileTrusted(env, verdict) {
+  return verdict === 'verified' || (verdict === 'unchecked' && !turnstileConfigured(env));
 }
 
 async function fetchWithTimeout(url, options, timeoutMs) {
@@ -340,6 +373,13 @@ async function saveToErp(env, v, turnstileVerdict, cv) {
     let returning = false;
 
     if (existing.status === 200) {
+      // RISK: Job Applicant records are named by email, so anyone who types an
+      // existing candidate's email would add a Comment and a CV to that person's
+      // record. Only do it when Turnstile vouches for the submission (or Turnstile
+      // is not configured); otherwise hand it to Bhavesh via the fallback email.
+      if (!turnstileTrusted(env, turnstileVerdict)) {
+        return { saved: false, reason: `email matches an existing applicant but Turnstile verdict is "${turnstileVerdict}", so nothing was added to that record` };
+      }
       returning = true;
       applicant = v.email;
       const comment = await fetchWithTimeout(`${erp.url}/api/resource/Comment`, {
@@ -428,13 +468,29 @@ async function sendEmail(env, payload) {
   }
 }
 
+/** Strips CR/LF and keeps only letters, spaces, hyphens and apostrophes, max 40 chars. */
+export function subjectName(value) {
+  return String(value == null ? '' : value)
+    .replace(/[\r\n]+/g, ' ')
+    .replace(/[^\p{L}\p{M} '\u2019-]/gu, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 40)
+    .trim();
+}
+
+/** Single-line subject text: no CR/LF, capped length. */
+function oneLine(value, max) {
+  return String(value == null ? '' : value).replace(/[\r\n]+/g, ' ').slice(0, max);
+}
+
 export function receiptEmail(v) {
-  const first = v.name.split(/\s+/)[0];
+  const first = subjectName(v.name.split(/\s+/)[0]);
   const title = ROLES[v.role].title;
   return {
-    subject: `We got your application, ${first}`,
+    subject: first ? `We got your application, ${first}` : 'We got your application',
     html:
-      `<p>Hi ${escapeHtml(first)},</p>` +
+      `<p>${first ? `Hi ${escapeHtml(first)},` : 'Hi,'}</p>` +
       `<p>Thanks for applying for the ${escapeHtml(title)} role at FactoryJet.</p>` +
       '<p>A person reads every application, with an AI tool helping to sort them. ' +
       'You will hear from us within 7 days either way.</p>' +
@@ -455,14 +511,14 @@ export function fallbackEmail(v, result, verdict) {
   const reason = escapeHtml(result.reason);
   if (result.applicant) {
     return {
-      subject: `[CV NOT ATTACHED] Job application: ${v.name} (${title})`,
+      subject: `[CV NOT ATTACHED] Job application: ${oneLine(v.name, MAX_NAME)} (${oneLine(title, 100)})`,
       intro:
         `<p><b>The application was saved in ERPNext as ${escapeHtml(result.applicant)}, but the CV could not be ` +
         `attached.</b> Reason: ${reason}. Attach the CV from this email to that record by hand.</p>`,
     };
   }
   return {
-    subject: `[ERP DOWN] Job application: ${v.name} (${title})`,
+    subject: `[ERP DOWN] Job application: ${oneLine(v.name, MAX_NAME)} (${oneLine(title, 100)})`,
     intro:
       `<p><b>This application did not reach ERPNext.</b> Reason: ${reason}. ` +
       'Add it by hand or forward it once ERPNext is back. The CV is attached.</p>',
@@ -486,10 +542,10 @@ async function processApplication(env, v, turnstileVerdict, trapFilled, cv) {
     });
   }
 
-  // Receipt only for submissions that look human. A bot that fills the form with
-  // someone else's address must not be able to make us email that person.
-  const looksHuman = !trapFilled && (turnstileVerdict === 'verified' || turnstileVerdict === 'unchecked');
-  if (looksHuman) {
+  // Receipt only when Turnstile verified the submission. The address is whatever
+  // was typed, so anything weaker would let anyone make careers@ email a stranger.
+  // With no TURNSTILE_SECRET_KEY the application is still saved, but no receipt goes out.
+  if (!trapFilled && turnstileVerdict === 'verified') {
     const r = receiptEmail(v);
     await sendEmail(env, {
       from: env.CAREERS_FROM || DEFAULT_FROM,

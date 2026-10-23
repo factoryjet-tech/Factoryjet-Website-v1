@@ -7,7 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { CheckCircle2, Menu, X, Monitor, Bot, ShoppingCart, RefreshCw, TrendingUp } from "lucide-react";
 import { useContactModal } from "@/context/ContactModalContext";
-import { submitLead } from "@/utils/submitLead";
+import { markLeadSubmitted, submitLead } from "@/utils/submitLead";
 import { FAQ_ITEMS } from "./faqData";
 
 const PricingSection = dynamic(
@@ -222,6 +222,7 @@ export default function SheffieldPage() {
       });
       // Hard navigation so /thank-you always loads fresh (conversion lives there).
       // region=uk -> GTM credits the London Ads account.
+      markLeadSubmitted(docId);
       window.location.assign(
         `/thank-you?source=sheffield_inline&service=${encodeURIComponent(lead.pkg || "unknown")}&region=uk&lid=${encodeURIComponent(docId)}`
       );

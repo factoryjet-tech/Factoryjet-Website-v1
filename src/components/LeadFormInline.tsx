@@ -12,7 +12,7 @@
 
 import React, { useState, useRef } from 'react';
 import { Send, CheckCircle, Loader2 } from 'lucide-react';
-import { submitLead } from '@/utils/submitLead';
+import { markLeadSubmitted, submitLead } from '@/utils/submitLead';
 import { keepTrappedLead } from '@/utils/trappedLead';
 import {
   trackFormStart,
@@ -170,6 +170,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
       // Hard navigation (not router.push) so /thank-you always loads fresh — the
       // conversion lives there and the client transition intermittently crashed.
       // region routes the Ads conversion in GTM (uk -> London, us -> US, else GA4-only).
+      markLeadSubmitted(docId);
       window.location.assign(
         `/thank-you?source=${encodeURIComponent(source)}&service=${encodeURIComponent(service || 'unknown')}&region=${encodeURIComponent(region || 'us')}&lid=${encodeURIComponent(docId)}`
       );

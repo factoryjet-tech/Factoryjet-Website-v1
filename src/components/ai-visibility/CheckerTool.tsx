@@ -24,6 +24,15 @@ const MAX_POLL_MS = 150_000; // ~2.5 min, then fall back to "we'll email it"
 
 type Step = 'form' | 'scanning' | 'done' | 'emailed' | 'error';
 
+interface TurnstileApi {
+  render: (el: HTMLElement, opts: Record<string, unknown>) => string;
+  remove: (id: string) => void;
+  reset: (id: string) => void;
+}
+function turnstileApi(): TurnstileApi | undefined {
+  return (window as unknown as { turnstile?: TurnstileApi }).turnstile;
+}
+
 /**
  * Which Google Ads account should be credited for this lead.
  *
@@ -55,6 +64,11 @@ export default function CheckerTool() {
   const [result, setResult] = useState<ScanResult | null>(null);
   const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const firedConv = useRef(false);
+  // Turnstile: the server BLOCKS without a token (each scan costs money), so the
+  // widget loads on first focus (not page load) and submit waits for its token.
+  const turnstileRef = useRef<HTMLDivElement>(null);
+  const turnstileId = useRef<string | null>(null);
+  const turnstileToken = useRef('');
 
   const bind = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
@@ -66,6 +80,48 @@ export default function CheckerTool() {
     }
   };
   useEffect(() => stopPolling, []);
+
+  useEffect(() => () => {
+    const api = turnstileApi();
+    if (turnstileId.current && api) api.remove(turnstileId.current);
+  }, []);
+
+  function loadTurnstile() {
+    if (turnstileId.current || typeof window === 'undefined') return;
+    const render = () => {
+      const api = turnstileApi();
+      const el = turnstileRef.current;
+      if (!api || !el || turnstileId.current) return;
+      turnstileId.current = api.render(el, {
+        sitekey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? '1x00000000000000000000AA',
+        callback: (token: unknown) => { turnstileToken.current = String(token || ''); },
+        'expired-callback': () => { turnstileToken.current = ''; },
+        'error-callback': () => { turnstileToken.current = ''; },
+        theme: 'light',
+        appearance: 'interaction-only',
+      });
+    };
+    if (turnstileApi()) { render(); return; }
+    const id = 'cf-turnstile-script';
+    const existing = document.getElementById(id) as HTMLScriptElement | null;
+    if (existing) { existing.addEventListener('load', render); return; }
+    const s = document.createElement('script');
+    s.id = id;
+    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+    s.async = true;
+    s.defer = true;
+    s.onload = render;
+    document.head.appendChild(s);
+  }
+
+  /** Tokens are single-use: get a fresh one after any submit the server saw. */
+  function resetTurnstile() {
+    turnstileToken.current = '';
+    const api = turnstileApi();
+    if (turnstileId.current && api) {
+      try { api.reset(turnstileId.current); } catch { /* widget gone; next focus re-renders */ }
+    }
+  }
 
   const poll = useCallback((slug: string, startedAt: number) => {
     stopPolling();
@@ -111,14 +167,21 @@ export default function CheckerTool() {
     }
     setErr(null);
     setSubmitting(true);
+    // Give the invisible Turnstile check up to ~6 seconds to produce a token.
+    loadTurnstile();
+    for (let i = 0; i < 40 && !turnstileToken.current; i++) {
+      await new Promise((r) => setTimeout(r, 150));
+    }
+    const turnstileTokenValue = turnstileToken.current;
     try {
       const res = await fetch('/api/ai-scan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, company_url: honeypot }),
+        body: JSON.stringify({ ...form, company_url: honeypot, turnstileToken: turnstileTokenValue }),
       });
-      const d = await res.json();
+      const d = await res.json().catch(() => ({}));
       if (!res.ok) {
+        resetTurnstile();
         setErr(d.error || 'Something went wrong. Please try again.');
         setSubmitting(false);
         return;
@@ -143,6 +206,7 @@ export default function CheckerTool() {
         setStep('emailed');
       }
     } catch {
+      resetTurnstile();
       setErr('Network hiccup. Please try again.');
     } finally {
       setSubmitting(false);
@@ -198,7 +262,7 @@ export default function CheckerTool() {
 
   /* ── FORM: the gate ───────────────────────────────────────────────────── */
   return (
-    <form onSubmit={submit} className="avc-panel avc-form" noValidate>
+    <form onSubmit={submit} onFocusCapture={loadTurnstile} className="avc-panel avc-form" noValidate>
       <div className="avc-form-row">
         <label className="avc-field avc-field--full">
           <span className="avc-label">Your website</span>
@@ -234,6 +298,9 @@ export default function CheckerTool() {
         value={honeypot} onChange={(e) => setHoneypot(e.target.value)}
         style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
       />
+
+      {/* Invisible Turnstile (interaction-only); shows a checkbox only if Cloudflare needs one */}
+      <div ref={turnstileRef} className="empty:hidden" />
 
       <button type="submit" disabled={submitting} className="avc-btn avc-btn--primary avc-btn--submit">
         {submitting ? 'Starting your scan…' : 'Run my free AI visibility report'}

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, CheckCircle, Loader2 } from 'lucide-react';
 import { trackModalOpen, trackModalClose, trackFormSubmit, trackFormSuccess, trackFormError } from '../utils/gtm';
-import { submitLead } from '../utils/submitLead';
+import { markLeadSubmitted, submitLead } from '../utils/submitLead';
 
 interface PlanSelectionModalProps {
   isOpen: boolean;
@@ -79,6 +79,7 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
       // Conversion fires on /thank-you (single source of truth). No PII in URL.
       // Hard navigation so the page always loads fresh.
       onClose();
+      markLeadSubmitted(docId);
       window.location.assign(
         `/thank-you?source=plan_selection&service=${encodeURIComponent(selectedPlan)}&region=in&lid=${encodeURIComponent(docId)}`
       );

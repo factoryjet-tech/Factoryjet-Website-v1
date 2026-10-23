@@ -153,14 +153,14 @@ function requestWith(over = {}, cvBytes = PDF, extra = {}) {
   });
 }
 
-async function run(handler, { erp, request = requestWith(), env = {} }) {
+async function run(handler, { erp, request = requestWith(), env = {}, siteverify = { success: true, hostname: 'factoryjet.com' } }) {
   const calls = [];
   const realFetch = globalThis.fetch;
   globalThis.fetch = async (url, opts = {}) => {
     const u = String(url);
     calls.push({ url: u, method: opts.method || 'GET', body: opts.body });
     if (u.startsWith('https://api.resend.com')) return new Response('{}', { status: 200 });
-    if (u.startsWith('https://challenges.cloudflare.com')) return new Response('{"success":true}');
+    if (u.startsWith('https://challenges.cloudflare.com')) return new Response(JSON.stringify(siteverify));
     return erp(u, opts);
   };
   const pending = [];
@@ -203,6 +203,7 @@ test('new applicant: lookup 404, create, private CV upload, receipt sent', async
 
 test('returning applicant: comment on the existing record, no second create', async () => {
   const { res, calls } = await run(onRequestPost, {
+    request: requestWith({}, PDF, { 'cf-turnstile-response': 'tok' }),
     erp: (u, o) => {
       if (u.includes('/api/resource/Job%20Applicant/') && (o.method || 'GET') === 'GET') return new Response('{"data":{}}', { status: 200 });
       if (u.endsWith('/api/resource/Comment')) return new Response('{}');
@@ -285,4 +286,86 @@ test('live case from 2026-10-15: upload_file 500 sends CV NOT ATTACHED with the 
   assert.ok(!fallback.subject.includes('ERP DOWN'));
   assert.equal(fallback.attachments.length, 1);
   assert.ok(emails.some((e) => e.to[0] === 'asha@example.com'), 'candidate still gets the receipt');
+});
+
+// ── Turnstile hardening (2026-10-23) ───────────────────────────────────────────
+import { turnstileHostnameOk, subjectName } from '../functions/api/job-application.js';
+
+const newApplicantErp = (u, o) => {
+  if (u.includes('/api/resource/Job%20Applicant/') && (o.method || 'GET') === 'GET') return new Response('{}', { status: 404 });
+  if (u.endsWith('/api/resource/Job%20Applicant')) return new Response('{"data":{"name":"asha@example.com"}}');
+  if (u.endsWith('/upload_file')) return new Response('{"message":{}}');
+  return new Response('{}');
+};
+const existingApplicantErp = (u, o) => {
+  if (u.includes('/api/resource/Job%20Applicant/') && (o.method || 'GET') === 'GET') return new Response('{"data":{}}', { status: 200 });
+  return new Response('{"message":{}}');
+};
+const emailsOf = (calls) => calls.filter((c) => c.url.startsWith('https://api.resend.com')).map((c) => JSON.parse(c.body));
+
+test('turnstile hostnames: factoryjet.com, www and *.pages.dev only', () => {
+  assert.ok(turnstileHostnameOk('factoryjet.com'));
+  assert.ok(turnstileHostnameOk('www.factoryjet.com'));
+  assert.ok(turnstileHostnameOk('abc123.factoryjet-v2.pages.dev'));
+  assert.ok(!turnstileHostnameOk('evil.com'));
+  assert.ok(!turnstileHostnameOk('factoryjet.com.evil.com'));
+  assert.ok(!turnstileHostnameOk('pages.dev'));
+  assert.ok(!turnstileHostnameOk(''));
+});
+
+test('token solved on another hostname: saved as failed, no receipt', async () => {
+  const { calls } = await run(onRequestPost, {
+    request: requestWith({}, PDF, { 'cf-turnstile-response': 'tok' }),
+    siteverify: { success: true, hostname: 'evil.example' },
+    erp: newApplicantErp,
+  });
+  const doc = JSON.parse(calls.find((c) => c.url.endsWith('/api/resource/Job%20Applicant') && c.method === 'POST').body);
+  assert.equal(doc.custom_turnstile_verdict, 'failed');
+  assert.equal(emailsOf(calls).length, 0);
+});
+
+test('no TURNSTILE_SECRET_KEY: application saved, no receipt sent', async () => {
+  const { res, calls } = await run(onRequestPost, {
+    request: requestWith({}, PDF, { 'cf-turnstile-response': 'tok' }),
+    env: { TURNSTILE_SECRET_KEY: '' },
+    erp: newApplicantErp,
+  });
+  assert.equal(res.status, 200);
+  const doc = JSON.parse(calls.find((c) => c.url.endsWith('/api/resource/Job%20Applicant') && c.method === 'POST').body);
+  assert.equal(doc.custom_turnstile_verdict, 'unchecked');
+  assert.ok(!calls.some((c) => c.url.startsWith('https://challenges.cloudflare.com')));
+  assert.equal(emailsOf(calls).length, 0);
+});
+
+test('existing email without a verified token: record untouched, Bhavesh gets the application', async () => {
+  const { calls } = await run(onRequestPost, { erp: existingApplicantErp }); // no token -> absent
+  assert.ok(!calls.some((c) => c.url.endsWith('/api/resource/Comment')));
+  assert.ok(!calls.some((c) => c.url.endsWith('/upload_file')));
+  const emails = emailsOf(calls);
+  assert.equal(emails.length, 1);
+  assert.deepEqual(emails[0].to, ['bhavesh@factoryjet.com']);
+  assert.match(emails[0].html, /existing applicant/);
+});
+
+test('existing email with no secret configured still gets the comment', async () => {
+  const { calls } = await run(onRequestPost, { env: { TURNSTILE_SECRET_KEY: '' }, erp: existingApplicantErp });
+  assert.ok(calls.some((c) => c.url.endsWith('/api/resource/Comment')));
+});
+
+test('receipt subject: no CR/LF, only name characters, max 40', () => {
+  assert.equal(subjectName('Asha\r\nBcc: x@y.com'), 'Asha Bcc xycom');
+  assert.equal(subjectName("O'Brien-Smith"), "O'Brien-Smith");
+  assert.equal(subjectName('x'.repeat(60)).length, 40);
+  const v = validateApplication(goodFields({ name: 'http://spam.example/win\r\n Rao' }), goodCv).value;
+  const r = receiptEmail(v);
+  assert.ok(!/[\r\n]/.test(r.subject));
+  assert.ok(!r.subject.includes('://'));
+  assert.ok(!r.subject.includes('.'));
+});
+
+test('free text is truncated to the caps', () => {
+  const r = validateApplication(goodFields({ name: 'A'.repeat(500), linkedin: `linkedin.com/in/${'a'.repeat(600)}` }), goodCv);
+  assert.equal(r.ok, true);
+  assert.equal(r.value.name.length, 120);
+  assert.ok(r.value.linkedin.length <= 300 + 'https://'.length);
 });

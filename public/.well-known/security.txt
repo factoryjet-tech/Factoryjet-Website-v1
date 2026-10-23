@@ -1,0 +1,4 @@
+Contact: mailto:connect@factoryjet.com
+Expires: 2027-09-23T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://factoryjet.com/.well-known/security.txt

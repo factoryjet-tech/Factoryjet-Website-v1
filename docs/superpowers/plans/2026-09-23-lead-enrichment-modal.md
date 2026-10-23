@@ -1236,7 +1236,7 @@ git commit -m "docs(leads): tracking notes and fill-rate script for the details 
 - [ ] **Step 5: Hand Bhavesh the push command** (deploy workflow: he pushes `NextJS`; Cloudflare builds in ~90s).
 
 - [ ] **Step 6: Live verification after deploy** (a test lead named "TEST enrich", a test inbox address):
-  1. `curl -s -H 'Cache-Control: no-cache' "https://factoryjet.com/api/notify-lead?check=crm&cb=$$"` shows `authOk: true`.
+  1. `curl -s -H 'Cache-Control: no-cache' -H "X-Health-Key: $HEALTH_CHECK_KEY" "https://factoryjet.com/api/notify-lead?check=crm&cb=$$"` (HEALTH_CHECK_KEY must match the Cloudflare Pages secret of that name; without it the endpoint answers 405) shows `authOk: true`.
   2. Submit the hero form on a live page, confirm the modal opens, fill phone + message, send.
   3. Two emails arrive (new lead, "Details added"); ERPNext Lead has `mobile_no` and the "Details added" comment; GA4 realtime shows one `generate_lead`.
   4. Repeat and click Skip: one conversion, no details email.

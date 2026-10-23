@@ -235,7 +235,7 @@ test('trap or failed bot check wins over a pitch; the test-lead name wins over b
   assert.equal(trapped.saved.body.fields.leadType.stringValue, 'Likely spam');
   assert.equal(trapped.leadPosts[0].body.custom_lead_type, 'Likely spam');
   assert.equal(trapped.leadPosts[0].body.notes[0].note.split('\n')[0], 'Lead type: Likely spam');
-  assert.match(trapped.mail.body.subject, /^⚠️ LIKELY SPAM — New lead: Sam Okoro/);
+  assert.equal(trapped.mail, undefined, 'a filled trap sends no alert email');
 
   const failedCheck = freshErp((c) => (c.url.includes('challenges.cloudflare.com') ? [200, { success: false }] : null));
   const bot = await submit({ ...pitch, turnstileToken: 'tok' }, { handler: failedCheck, env: { ...ENV, TURNSTILE_SECRET_KEY: 't' } });
@@ -248,7 +248,9 @@ test('trap or failed bot check wins over a pitch; the test-lead name wins over b
   assert.equal(ours.saved.body.fields.leadType.stringValue, 'Test');
   assert.equal(ours.saved.body.fields.honeypot.stringValue, 'filled', 'the trap is still recorded');
   assert.equal(ours.leadPosts[0].body.custom_lead_type, 'Test');
-  assert.match(ours.mail.body.subject, /^🧪 TEST · New lead: FactoryJet Test Lead/);
+  assert.equal(ours.mail, undefined, 'a filled trap sends no alert email, even for a test lead');
+  const oursNoTrap = await submit({ ...pitch, name: 'FactoryJet Test Lead (ignore)' });
+  assert.match(oursNoTrap.mail.body.subject, /^🧪 TEST · New lead: FactoryJet Test Lead/);
 });
 
 test('a returning lead gets the label and the country line in the comment, and its field is left alone', async () => {

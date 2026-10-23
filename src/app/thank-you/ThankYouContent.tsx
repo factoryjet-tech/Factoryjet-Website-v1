@@ -32,6 +32,7 @@
 import { useEffect } from 'react';
 import { CheckCircle, CalendarClock, ArrowRight } from 'lucide-react';
 import { fireLeadConversion } from '@/utils/leadConversion';
+import { consumeLeadProof } from '@/utils/submitLead';
 
 const CALENDLY_URL = 'https://calendly.com/bhavesh-factoryjet/30min';
 
@@ -59,6 +60,13 @@ export default function ThankYouContent() {
 
     // The inline forms already counted this lead on their own page (counted=1).
     if (counted) return;
+
+    // A lid in the URL is not proof: anyone can type /thank-you?lid=x. Count only
+    // when this tab's form wrote a matching, fresh proof right before navigating
+    // (markLeadSubmitted). The proof is removed on read, so a reload does not
+    // count again. If sessionStorage is unavailable we do NOT fire: losing a
+    // handful of real conversions is better than Ads bidding on fake ones.
+    if (!consumeLeadProof(lid)) return;
 
     // One dataLayer push -> GTM fires GA4 generate_lead + the region-routed Ads
     // conversion. Deduped per lid; see src/utils/leadConversion.ts.

@@ -1,10 +1,14 @@
 # Cloudflare Pages headers configuration
 # https://developers.cloudflare.com/pages/configuration/headers/
 
+# HSTS is managed in the Cloudflare dashboard (zone level), not here.
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block
+  X-XSS-Protection: 0
+  Content-Security-Policy: frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'self'; upgrade-insecure-requests
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
   Referrer-Policy: strict-origin-when-cross-origin
   Cache-Control: public, max-age=0, must-revalidate
   Link: </.well-known/api-catalog>; rel="api-catalog", </.well-known/agent-skills/index.json>; rel="describedby"
@@ -12,6 +16,9 @@
 # Agent-discovery well-known files — correct content types
 /.well-known/api-catalog
   Content-Type: application/linkset+json; charset=utf-8
+
+/.well-known/security.txt
+  Content-Type: text/plain; charset=utf-8
 
 # Careers pages: noindex, belt and braces with the page metadata.
 # Spec docs/HIRING-PIPELINE-SPEC.md 4.2. Do NOT also Disallow /careers in robots.txt:

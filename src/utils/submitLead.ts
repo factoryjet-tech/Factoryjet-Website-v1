@@ -204,3 +204,45 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
 
   return { ok, docId, erpLeadId, enrichToken };
 }
+
+/*
+ * Thank-you proof (2026-10-23). /thank-you used to count a conversion for any
+ * visit that carried ?lid=<anything>, so a bot looping random lids could inflate
+ * GA4 generate_lead and the Google Ads conversion and corrupt smart bidding.
+ * Every form now writes this short-lived proof right before it navigates to
+ * /thank-you after a confirmed submit, and /thank-you counts only when the proof
+ * matches the URL lid and is fresh. sessionStorage is per-tab and same-origin,
+ * so a crafted URL alone cannot carry it.
+ */
+const LEAD_PROOF_KEY = 'fj_lead_ok';
+const LEAD_PROOF_MAX_AGE_MS = 30 * 60 * 1000;
+
+/** Call right before navigating to /thank-you after a successful submit. */
+export function markLeadSubmitted(lid: string): void {
+  if (!lid) return;
+  try {
+    window.sessionStorage.setItem(LEAD_PROOF_KEY, JSON.stringify({ lid, ts: Date.now() }));
+  } catch {
+    /* storage blocked: /thank-you will not count this lead (see consumeLeadProof) */
+  }
+}
+
+/**
+ * True only if this tab holds a fresh proof for exactly this lid. The proof is
+ * removed on read so a reload cannot count again. If sessionStorage is blocked
+ * this returns false: we accept losing a few real conversions over counting fake ones.
+ */
+export function consumeLeadProof(lid: string): boolean {
+  if (!lid) return false;
+  try {
+    const raw = window.sessionStorage.getItem(LEAD_PROOF_KEY);
+    if (!raw) return false;
+    window.sessionStorage.removeItem(LEAD_PROOF_KEY);
+    const proof = JSON.parse(raw) as { lid?: unknown; ts?: unknown };
+    if (proof.lid !== lid || typeof proof.ts !== 'number') return false;
+    const age = Date.now() - proof.ts;
+    return age >= 0 && age <= LEAD_PROOF_MAX_AGE_MS;
+  } catch {
+    return false;
+  }
+}

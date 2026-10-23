@@ -19,9 +19,60 @@
  * Env (Cloudflare Pages → Settings → Environment Variables):
  *   SIS_PARTNER_KEY   the shared secret (same value as SIS's PARTNER_API_KEY)
  *   SIS_API_BASE      default https://app.seeninsearch.com
+ *   TURNSTILE_SECRET_KEY  same secret notify-lead.js and job-application.js read
+ *
+ * Bot defence: unlike notify-lead (which only flags), this endpoint BLOCKS without
+ * a valid Turnstile token, because each request can spend money on a paid scan.
+ * It fails open only when the secret is unset (local/preview) or siteverify itself
+ * is unreachable, so our own outage never locks out real visitors.
  */
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+/** Max lengths applied before any field is used or forwarded. */
+export const MAX_LEN = { name: 120, email: 254, mobile: 40, company: 160, website: 253 };
+
+const clip = (v, n) => String(v || '').trim().slice(0, n);
+
+/** Hostnames a Turnstile token may have been issued on. */
+export function allowedTurnstileHost(hostname) {
+  const h = String(hostname || '').toLowerCase();
+  return h === 'factoryjet.com' || h === 'www.factoryjet.com' || h.endsWith('.pages.dev');
+}
+
+/**
+ * Verify a Turnstile token. Returns 'verified' | 'blocked' | 'unchecked'.
+ *   unchecked: secret unset, or siteverify unreachable (fail open, logged).
+ *   blocked:   token missing, rejected, or issued on a host that is not ours.
+ */
+export async function verifyTurnstile(env, token, ip, fetchImpl = fetch) {
+  const secret = env && env.TURNSTILE_SECRET_KEY;
+  if (!secret) {
+    console.warn('ai-scan: TURNSTILE_SECRET_KEY unset, skipping bot check');
+    return 'unchecked';
+  }
+  if (!token) return 'blocked';
+  let out;
+  try {
+    const form = new FormData();
+    form.append('secret', secret);
+    form.append('response', String(token).slice(0, 2048));
+    if (ip) form.append('remoteip', ip);
+    const res = await fetchImpl('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST', body: form,
+    });
+    out = await res.json();
+  } catch (err) {
+    console.error('ai-scan: Turnstile verify error, failing open:', err);
+    return 'unchecked';
+  }
+  if (!out || !out.success) return 'blocked';
+  if (!allowedTurnstileHost(out.hostname)) {
+    console.warn('ai-scan: Turnstile token from unexpected host:', out.hostname);
+    return 'blocked';
+  }
+  return 'verified';
+}
 
 function corsHeaders(origin) {
   const allow = origin.includes('factoryjet.com') || origin.includes('pages.dev') || origin === '';
@@ -58,17 +109,27 @@ export async function onRequestPost(context) {
   } catch {
     return json({ error: 'invalid json' }, 400);
   }
+  if (!body || typeof body !== 'object') return json({ error: 'invalid json' }, 400);
 
   // Honeypot — a filled hidden field means a bot. Silent success, no lead, no scan.
   if (String(body.company_url || '').trim() !== '') {
     return json({ ok: true, slug: null, status: null });
   }
 
-  const name = String(body.name || '').trim();
-  const email = String(body.email || '').trim();
-  const mobile = String(body.mobile || body.phone || '').trim();
-  const company = String(body.company || '').trim();
-  const website = normalizeWebsite(body.website || body.domain);
+  // Bot check before any lead or scan spend.
+  const human = await verifyTurnstile(env, body.turnstileToken, request.headers.get('CF-Connecting-IP') || '');
+  if (human === 'blocked') {
+    return json(
+      { error: 'We could not confirm you are human. Please wait a moment and press the button again.', code: 'turnstile' },
+      403,
+    );
+  }
+
+  const name = clip(body.name, MAX_LEN.name);
+  const email = clip(body.email, MAX_LEN.email);
+  const mobile = clip(body.mobile || body.phone, MAX_LEN.mobile);
+  const company = clip(body.company, MAX_LEN.company);
+  const website = normalizeWebsite(clip(body.website || body.domain, MAX_LEN.website));
 
   if (!name || !EMAIL_RE.test(email) || !mobile || !company || !website) {
     return json(

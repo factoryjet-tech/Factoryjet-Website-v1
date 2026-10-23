@@ -194,7 +194,7 @@ async function writeLeadToERPNext(env, lead) {
   const leadType = LEAD_TYPES.includes(lead.leadType) ? lead.leadType : leadTypeOf(lead);
   // "Lead type" is the first line on purpose: the note is shared by the new-Lead
   // path and the returning-lead comment, so both open with the label.
-  const noteText = `Lead type: ${leadType}\nService: ${category}${lead.serviceInferred === 'yes' ? ' (guessed from the page, the form had no service picker)' : ''}\n${lead.service ? `Service picked on form: ${serviceLabel(lead.service)}\n` : ''}Came from: ${channelLabel(lead)}\n${lead.aiAssistant ? `AI assistant: yes (${lead.aiAssistant})\n` : ''}${attributionLines(lead)}Form: ${lead.source || 'Website'}\nForm page: https://factoryjet.com${lead.page || ''}\nWebsite region: ${lead.region ? String(lead.region).toUpperCase() : 'Not specified'}\nVisitor country (from network): ${lead.ipCountry || 'unknown'}\nMessage: ${lead.message || 'N/A'}\nFirebase Doc ID: ${lead.docId || 'N/A'}`;
+  const noteText = `Lead type: ${leadType}\nService: ${category}${lead.serviceInferred === 'yes' ? ' (guessed from the page, the form had no service picker)' : ''}\n${lead.service ? `Service picked on form: ${serviceLabel(lead.service)}\n` : ''}Came from: ${channelLabel(lead)}\n${lead.aiAssistant ? `AI assistant: yes (${lead.aiAssistant})\n` : ''}${attributionLines(lead)}Form: ${lead.source || 'Website'}\nForm page: ${isSafeSitePath(lead.page) ? `https://factoryjet.com${lead.page}` : (lead.page || 'N/A')}\nWebsite region: ${lead.region ? String(lead.region).toUpperCase() : 'Not specified'}\nVisitor country (from network): ${lead.ipCountry || 'unknown'}\nMessage: ${lead.message || 'N/A'}\nFirebase Doc ID: ${lead.docId || 'N/A'}`;
   // The phone prefix wins because the visitor typed it. The network country is
   // the fallback for the many leads that leave no phone.
   const country = countryFromPhone(lead.phone) || countryFromNetwork(lead.ipCountry);
@@ -276,7 +276,9 @@ async function writeLeadToERPNext(env, lead) {
       // NETWORK_COUNTRIES). When neither is known ERPNext fills its system
       // default (India), which is cleared right after the insert below.
       ...(country ? { country } : {}),
-      notes: [{ note: noteText }],
+      // The note and ToDo fields render as HTML in ERPNext, so the visitor's
+      // text is escaped. Newlines are kept: the first line is the lead type.
+      notes: [{ note: escapeHtml(noteText) }],
     };
     const postLead = (body) => fetchWithTimeout(`${erpUrl}/api/resource/Lead`, {
       method: 'POST',
@@ -342,7 +344,7 @@ async function writeLeadToERPNext(env, lead) {
     try {
       const serviceName = category;
       const todoPayload = {
-        description: `${returning ? 'Returning lead, new inquiry. ' : ''}Follow up with ${lead.name || 'Website Lead'} (${lead.company || 'Individual'})\nLead type: ${leadType} · Service: ${serviceName} · Page: ${lead.page || '/'}\nCame from: ${channelLabel(lead)}${lead.landingPage ? ` · Landed on: ${lead.landingPage}` : ''}\nPhone: ${lead.phone || 'N/A'} · Email: ${lead.email || 'N/A'}\nInquiry: ${lead.message || 'N/A'}`,
+        description: escapeHtml(`${returning ? 'Returning lead, new inquiry. ' : ''}Follow up with ${lead.name || 'Website Lead'} (${lead.company || 'Individual'})\nLead type: ${leadType} · Service: ${serviceName} · Page: ${lead.page || '/'}\nCame from: ${channelLabel(lead)}${lead.landingPage ? ` · Landed on: ${lead.landingPage}` : ''}\nPhone: ${lead.phone || 'N/A'} · Email: ${lead.email || 'N/A'}\nInquiry: ${lead.message || 'N/A'}`),
         status: 'Open',
         priority: 'High',
         allocated_to: LEAD_OWNER,
@@ -497,6 +499,57 @@ function escapeHtml(value) {
     .replace(/"/g, '&quot;');
 }
 
+// Strict on purpose: an address that fails it is shown as plain text, never as a
+// mailto link or a reply_to. No "?", "&", "%" or "#", so it cannot smuggle mailto
+// headers (cc=, body=) into the link.
+const STRICT_EMAIL = /^[A-Za-z0-9._+'-]+@[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+$/;
+export function isStrictEmail(value) {
+  return typeof value === 'string' && value.length <= 254 && STRICT_EMAIL.test(value);
+}
+
+/**
+ * True when the value is a path on factoryjet.com: one leading "/", and no "//",
+ * "@", backslash or whitespace. "https://factoryjet.com" + "@evil.tld/login" is a
+ * link to evil.tld, so anything else is shown as plain text.
+ */
+export function isSafeSitePath(value) {
+  return typeof value === 'string' && /^\/(?!\/)/.test(value) && !/[@\\\s]/.test(value);
+}
+
+// Length caps for the lead form, applied after trimming and before anything is
+// stored or emailed. Over-long values are cut, never rejected: a lead is never lost.
+export const LEAD_FIELD_CAPS = {
+  name: 120, email: 254, phone: 40, company: 160, service: 80, message: 5000, page: 300,
+};
+const OTHER_FIELD_CAP = 500;
+
+/** The lead form's own fields, trimmed and capped (see LEAD_FIELD_CAPS). */
+export function clipLeadFields(body) {
+  const b = body || {};
+  const out = {};
+  for (const key of ['docId', 'collection', 'name', 'email', 'phone', 'company', 'service', 'message', 'region', 'source', 'page']) {
+    out[key] = clipText(b[key], LEAD_FIELD_CAPS[key] || OTHER_FIELD_CAP);
+  }
+  return out;
+}
+
+/**
+ * The CRM health check is open only to a caller holding HEALTH_CHECK_KEY, sent
+ * as the X-Health-Key header or ?key=. Both sides are hashed first so the
+ * comparison takes the same time whatever the input. No key set means closed.
+ */
+export async function healthKeyMatches(env, request) {
+  const expected = env && env.HEALTH_CHECK_KEY;
+  if (!expected) return false;
+  const given = request.headers.get('X-Health-Key') || new URL(request.url).searchParams.get('key') || '';
+  if (!given) return false;
+  const digest = async (s) => new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(String(s))));
+  const [a, b] = await Promise.all([digest(expected), digest(given)]);
+  let diff = 0;
+  for (let i = 0; i < a.length; i++) diff |= a[i] ^ b[i];
+  return diff === 0;
+}
+
 // Referring hosts we know, mapped to a plain channel name for the lead record.
 const KNOWN_REFERRERS = [
   [/(^|\.)chatgpt\.com$|(^|\.)chat\.openai\.com$/, 'ChatGPT'],
@@ -552,9 +605,18 @@ function attributionLines(lead) {
   return out;
 }
 
-/** Build a clean HTML email body */
-function buildHtml({ name, email, phone, company, service, serviceCategory, serviceInferred, message, region, page, turnstileVerdict, trapFilled, erpLeadId, erpReturning, attribution }) {
+/**
+ * Build a clean HTML email body. Every visitor-supplied value is escaped, and a
+ * value only becomes a link when it passes isStrictEmail or isSafeSitePath, so a
+ * lead cannot plant its own buttons or links in the alert.
+ */
+export function buildHtml({ name, email, phone, company, service, serviceCategory, serviceInferred, message, region, page, turnstileVerdict, trapFilled, erpLeadId, erpReturning, attribution }) {
   const a = attribution || {};
+  const mailOk = isStrictEmail(email);
+  const firstName = name ? String(name).trim().split(/\s+/)[0] : '';
+  const sitePath = (p, style) => (isSafeSitePath(p)
+    ? `<a href="https://factoryjet.com${escapeHtml(p)}" style="${style}">factoryjet.com${escapeHtml(p)}</a>`
+    : `<span style="${style}">${escapeHtml(p)}</span>`);
   const now = new Date().toLocaleString('en-US', {
     timeZone: 'Asia/Kolkata',
     dateStyle: 'medium',
@@ -588,18 +650,18 @@ function buildHtml({ name, email, phone, company, service, serviceCategory, serv
           <tr>
             <td style="padding:28px 32px;">
               <table width="100%" cellpadding="0" cellspacing="0">
-                ${row('Name',    name    || '—')}
-                ${row('Email',   email ? `<a href="mailto:${email}" style="color:#F05A28;text-decoration:none;">${email}</a>` : '—')}
-                ${row('Phone',   phone   || '—')}
-                ${row('Company', company || '—')}
+                ${row('Name',    escapeHtml(name    || '—'))}
+                ${row('Email',   !email ? '—' : mailOk ? `<a href="mailto:${escapeHtml(email)}" style="color:#F05A28;text-decoration:none;">${escapeHtml(email)}</a>` : escapeHtml(email))}
+                ${row('Phone',   escapeHtml(phone   || '—'))}
+                ${row('Company', escapeHtml(company || '—'))}
                 ${row('Service', `<span style="display:inline-block;background:#FFF1EB;color:#B23E13;padding:3px 10px;border-radius:20px;font-weight:600;font-size:13px;">${escapeHtml(serviceCategory || serviceLabel(service))}</span>${serviceInferred === 'yes' ? ' <span style="color:#6B7280;font-size:12px;">(guessed from the page)</span>' : (service ? ` <span style="color:#6B7280;font-size:12px;">${escapeHtml(serviceLabel(service))}</span>` : '')}`)}
-                ${row('Region',  (region || '').toUpperCase() || '—')}
-                ${message ? row('Message', `<span style="color:#374151;">${message}</span>`) : ''}
-                ${erpLeadId ? row('CRM Lead', `<a href="https://erp.factoryjet.com/app/lead/${encodeURIComponent(erpLeadId)}" style="color:#F05A28;font-weight:600;text-decoration:none;">${erpLeadId} ${erpReturning ? '(returning lead, new inquiry added)' : '(Assigned to Bhavesh)'}</a>`) : ''}
+                ${row('Region',  escapeHtml(String(region || '').toUpperCase() || '—'))}
+                ${message ? row('Message', `<span style="color:#374151;">${escapeHtml(message).replace(/\r?\n/g, '<br>')}</span>`) : ''}
+                ${erpLeadId ? row('CRM Lead', `<a href="https://erp.factoryjet.com/app/lead/${encodeURIComponent(erpLeadId)}" style="color:#F05A28;font-weight:600;text-decoration:none;">${escapeHtml(erpLeadId)} ${erpReturning ? '(returning lead, new inquiry added)' : '(Assigned to Bhavesh)'}</a>`) : ''}
                 ${row('Came from', `<strong>${escapeHtml(channelLabel(a))}</strong>${a.aiAssistant ? ' <span style="color:#B23E13;font-size:12px;font-weight:600;">AI assistant</span>' : ''}`)}
-                ${a.landingPage ? row('Landing page', `<a href="https://factoryjet.com${escapeHtml(a.landingPage)}" style="color:#6B7280;font-size:12px;">factoryjet.com${escapeHtml(a.landingPage)}</a>`) : ''}
+                ${a.landingPage ? row('Landing page', sitePath(a.landingPage, 'color:#6B7280;font-size:12px;')) : ''}
                 ${a.utmCampaign ? row('Campaign', escapeHtml(a.utmCampaign)) : ''}
-                ${page ? row('Form page', `<a href="https://factoryjet.com${page}" style="color:#6B7280;font-size:12px;">factoryjet.com${page}</a>`) : ''}
+                ${page ? row('Form page', sitePath(page, 'color:#6B7280;font-size:12px;')) : ''}
                 ${turnstileVerdict === 'failed'
                   ? row('Spam check', '<span style="color:#B23E13;font-weight:600;">Failed bot check — treat with suspicion</span>')
                   : ''}
@@ -613,7 +675,7 @@ function buildHtml({ name, email, phone, company, service, serviceCategory, serv
           <!-- CTA -->
           <tr>
             <td style="padding:0 32px 28px;">
-              <a href="mailto:${email || ''}" style="display:inline-block;background:#F05A28;color:#ffffff;padding:12px 24px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;">Reply to ${name ? name.split(' ')[0] : 'Lead'}</a>
+              ${mailOk ? `<a href="mailto:${escapeHtml(email)}" style="display:inline-block;background:#F05A28;color:#ffffff;padding:12px 24px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;">Reply to ${escapeHtml(firstName || 'Lead')}</a>` : ''}
               ${erpLeadId ? `<a href="https://erp.factoryjet.com/app/lead/${encodeURIComponent(erpLeadId)}" style="display:inline-block;margin-left:12px;background:#111827;color:#ffffff;padding:12px 20px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;">Open in CRM →</a>` : ''}
               <a href="https://console.firebase.google.com/project/factoryjet-c5f8a/firestore/data/contactus" style="display:inline-block;margin-left:12px;color:#6B7280;font-size:13px;text-decoration:none;">View in Firestore →</a>
             </td>
@@ -1164,7 +1226,9 @@ export async function onRequestPost(context) {
   // Step-2 details from the enrichment modal attach to an existing lead.
   if (body && body.mode === 'enrich') return handleEnrich(context, body, corsHeaders);
 
-  const { docId, collection, name, email, phone, company, service, message, region, source, page } = body;
+  // Trimmed and capped once here (clipLeadFields), before Firestore, ERPNext or
+  // the email sees them, so one request cannot write a megabyte of text.
+  const { docId, collection, name, email, phone, company, service, message, region, source, page } = clipLeadFields(body);
 
   // Where the visitor came from (src/utils/leadAttribution.ts). Untrusted input:
   // trimmed here, escaped in the email, and paths must start with "/".
@@ -1246,9 +1310,14 @@ export async function onRequestPost(context) {
   ]);
 
   // ── (2) Notify by email via Resend (best-effort) ───────────────────────────
+  // A filled trap field is still saved and labelled above, but sends no alert:
+  // a bot hammering the form would otherwise burn the Resend quota. The lead
+  // stays in Firestore and the CRM as "Likely spam" for a human to read.
   let emailed = false;
   const apiKey = env.RESEND_API_KEY;
-  if (!apiKey) {
+  if (trapFilled) {
+    console.log('Trap field filled: lead saved, alert email skipped');
+  } else if (!apiKey) {
     console.error('RESEND_API_KEY not set — lead saved, email skipped');
   } else {
     const serviceStr = serviceCategory;
@@ -1256,7 +1325,7 @@ export async function onRequestPost(context) {
     // 'absent' and 'unchecked' are normal for real people and stay unmarked, so
     // the warning keeps its meaning instead of appearing on half the leads.
     // The prefix comes from the same leadType the CRM and Firestore received.
-    const subject = `${SUBJECT_PREFIX[leadType]}New lead: ${name} — ${serviceStr}${region ? ` (${region.toUpperCase()})` : ''}`;
+    const subject = `${SUBJECT_PREFIX[leadType]}New lead: ${name} — ${serviceStr}${region ? ` (${region.toUpperCase()})` : ''}`.replace(/[\r\n]+/g, ' ');
     try {
       const resendRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',
@@ -1269,7 +1338,7 @@ export async function onRequestPost(context) {
             name, email, phone, company, service, serviceCategory, serviceInferred, message, region, page,
             turnstileVerdict, trapFilled, erpLeadId: erpResult.leadId, erpReturning: Boolean(erpResult.returning), attribution,
           }),
-          reply_to: email,
+          ...(isStrictEmail(email) ? { reply_to: email } : {}),
         }),
       });
       emailed = resendRes.ok;
@@ -1283,8 +1352,10 @@ export async function onRequestPost(context) {
 
   // Capture is successful if the lead was saved OR an alert email was sent.
   const ok = fsResult.saved || erpResult.saved || emailed;
-  // Lets the step-2 modal attach phone/company/message to THIS lead.
-  const enrichToken = await signEnrichToken(enrichKey(env), sanitizeDocId(fsResult.docId || docId));
+  // Lets the step-2 modal attach phone/company/message to THIS lead. Only for a
+  // lead Firestore actually saved: otherwise the docId is whatever the client
+  // sent, and signing it would hand out a token for a document we never wrote.
+  const enrichToken = fsResult.saved ? await signEnrichToken(enrichKey(env), sanitizeDocId(fsResult.docId)) : null;
   return new Response(
     JSON.stringify({
       ok,
@@ -1304,7 +1375,10 @@ export async function onRequestPost(context) {
 }
 
 /**
- * CRM health check that creates nothing: GET /api/notify-lead?check=crm
+ * CRM health check that creates nothing: GET /api/notify-lead?check=crm with the
+ * HEALTH_CHECK_KEY secret in an X-Health-Key header (or ?key=). Without the right
+ * key it answers exactly like any other GET, so the check is not discoverable and
+ * strangers cannot make it call ERPNext.
  *
  * Reports whether ERPNext credentials are configured, whether ERPNext is
  * reachable from Cloudflare, and whether the credentials authenticate, with
@@ -1318,8 +1392,8 @@ export async function onRequestGet(context) {
     status,
     headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' },
   });
-  if (url.searchParams.get('check') !== 'crm') {
-    return json({ error: 'POST a lead, or GET ?check=crm for the CRM health check' }, 405);
+  if (url.searchParams.get('check') !== 'crm' || !(await healthKeyMatches(env, request))) {
+    return json({ error: 'Method not allowed. POST a lead.' }, 405);
   }
 
   const erpUrl = (env && env.ERPNEXT_URL) || DEFAULT_ERPNEXT_URL;

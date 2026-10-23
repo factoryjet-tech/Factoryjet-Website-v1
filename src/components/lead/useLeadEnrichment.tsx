@@ -14,6 +14,7 @@
 import React, { useCallback, useRef, useState } from 'react';
 import { afterSubmitPlan, fireLeadConversion, thankYouUrl } from '@/utils/leadConversion';
 import { enrichLead } from '@/utils/enrichLead';
+import { markLeadSubmitted } from '@/utils/submitLead';
 import { pushToDataLayer } from '@/utils/gtm';
 import type { EnrichFields, LeadEnrichModalProps } from './LeadEnrichModal';
 
@@ -47,6 +48,8 @@ export function useLeadEnrichment() {
   const bail = useCallback((ctx: EnrichStart) => {
     if (doneRef.current) return;
     doneRef.current = true;
+    // Only reached after submitLead confirmed capture (afterSubmitPlan ok).
+    markLeadSubmitted(ctx.docId);
     window.location.assign(thankYouUrl({ lid: ctx.docId, region: ctx.region, source: ctx.source }));
   }, []);
 

@@ -43,15 +43,15 @@ async function create(extra) {
   } finally { f.restore(); }
 }
 
-test('a lead with the trap field filled is saved, emailed and marked likely spam', async () => {
+test('a lead with the trap field filled is saved and marked likely spam, but sends no alert email', async () => {
   const { res, out, saved, mail } = await create({ honeypot: 'Acme Inc.' });
   assert.equal(res.status, 200);
   assert.equal(out.ok, true);
+  assert.equal(out.emailed, false);
   assert.equal(saved.body.fields.honeypot.stringValue, 'filled');
+  assert.equal(saved.body.fields.leadType.stringValue, 'Likely spam');
   assert.equal(saved.body.fields.email.stringValue, 'jane@acme.com');
-  assert.match(mail.body.subject, /^⚠️ LIKELY SPAM — New lead: Jane/);
-  assert.match(mail.body.html, /Hidden trap field was filled/);
-  assert.doesNotMatch(mail.body.html, /Acme Inc\./, 'the trap value itself is never echoed');
+  assert.equal(mail, undefined, 'a bot filling the trap must not burn the Resend quota');
 });
 
 test('a normal lead is unmarked, and a whitespace-only trap value counts as empty', async () => {

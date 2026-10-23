@@ -29,7 +29,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { useContactModal } from '../context/ContactModalContext';
-import { submitLead } from '../utils/submitLead';
+import { markLeadSubmitted, submitLead } from '../utils/submitLead';
 import { keepTrappedLead } from '../utils/trappedLead';
 import { containDialogFocus } from '../utils/dialogFocus';
 import {
@@ -338,6 +338,7 @@ const ContactFormModal: React.FC = () => {
       // lives on /thank-you. A full browser load always renders it. region routes
       // the Ads conversion in GTM (uk -> London acct, us -> US acct, else GA4-only).
       closeModal();
+      markLeadSubmitted(docId);
       window.location.assign(
         `/thank-you?source=modal&service=${encodeURIComponent(formData.service || 'unknown')}&region=${encodeURIComponent(region || 'us')}&lid=${encodeURIComponent(docId)}`
       );

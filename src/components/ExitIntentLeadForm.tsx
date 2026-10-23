@@ -15,7 +15,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { X, Gift, ArrowRight, ShieldCheck, Loader2, CheckCircle } from 'lucide-react';
-import { submitLead } from '@/utils/submitLead';
+import { markLeadSubmitted, submitLead } from '@/utils/submitLead';
 import { keepTrappedLead } from '@/utils/trappedLead';
 import { SERVICE_CATEGORIES, serviceFromPath } from '@/utils/leadService';
 import {
@@ -132,6 +132,7 @@ const ExitIntentLeadForm: React.FC<ExitIntentLeadFormProps> = ({
       });
       trackFormSuccess(source);
       // Hard navigation so /thank-you always loads fresh (conversion lives there).
+      markLeadSubmitted(docId);
       window.location.assign(
         `/thank-you?source=${encodeURIComponent(source)}&service=unknown&region=${encodeURIComponent(region || 'us')}&lid=${encodeURIComponent(docId)}`
       );
