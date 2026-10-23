@@ -403,7 +403,7 @@ export default function TikTokShopAgencyPage() {
         {/* HOW TO CHOOSE (checklist) */}
         <section className="tts-sec pt0">
           <div className="tts-wrap">
-            <div className="tts-sh"><span className="tts-eyebrow">Before you hire anyone</span><h2 className="disp">How to choose a TikTok Shop agency</h2><p>Use this checklist with any agency, including us. The best agency for you is the one that can prove results with products like yours. To budget for it, read our breakdown of <Link href="/blog/tiktok-shop-fees-and-agency-cost-2026" className="tts-inline-link">TikTok Shop fees and what an agency costs</Link>.</p></div>
+            <div className="tts-sh"><span className="tts-eyebrow">Before you hire anyone</span><h2 className="disp">How to choose a TikTok Shop agency</h2><p>Use this checklist with any agency, including us. The best agency for you is the one that can prove results with products like yours. To budget for it, read our breakdown of <Link href="/blog/tiktok-shop-fees-and-agency-cost-2026" className="tts-inline-link">TikTok Shop fees and what an agency costs</Link>, and compare agencies in <Link href="/blog/best-tiktok-shop-agencies-us-2026" className="tts-inline-link">13 TikTok Shop agencies for US brands</Link>.</p></div>
             <div className="tts-list">
               {CHECKS.map((c) => (
                 <div key={c.b} className="tts-crystal tts-li"><span className="num" /><div><b>{c.b}</b><p>{c.p}</p></div></div>

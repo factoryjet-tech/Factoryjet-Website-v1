@@ -1,4 +1,8 @@
 import React from 'react';
+import { post as bestTiktokShopAgenciesUs2026Post } from './posts/best-tiktok-shop-agencies-us-2026';
+import { post as bestHeadlessCommerceAgenciesNextjs2026Post } from './posts/best-headless-commerce-agencies-nextjs-2026';
+import { post as bestAiAgentCompaniesHealthcarePractices2026Post } from './posts/best-ai-agent-companies-healthcare-practices-2026';
+import { post as bestMagentoToShopifyPlusMigrationAgencies2026Post } from './posts/best-magento-to-shopify-plus-migration-agencies-2026';
 import { post as bestAiAgentDevelopmentCompanies2026Post } from './posts/best-ai-agent-development-companies-2026';
 import { BlogPost } from './data.types';
 import { NativeAd } from './components/NativeAd';
@@ -177,6 +181,11 @@ import { post as aiAutomationAgencyCost2026Post } from './posts/ai-automation-ag
 import { post as privateAiForBusinessOwnData2026Post } from './posts/private-ai-for-business-own-data-2026';
 
 export const POSTS: BlogPost[] = [
+  // --- AGENCY LISTICLES (2026-10-23): Magento to Shopify Plus migration agencies, healthcare AI agent companies, headless Next.js agencies, TikTok Shop agencies ---
+  bestMagentoToShopifyPlusMigrationAgencies2026Post,
+  bestAiAgentCompaniesHealthcarePractices2026Post,
+  bestHeadlessCommerceAgenciesNextjs2026Post,
+  bestTiktokShopAgenciesUs2026Post,
   aiAutomationAgencyCost2026Post,
   privateAiForBusinessOwnData2026Post,
   bestAiAgentDevelopmentCompanies2026Post,

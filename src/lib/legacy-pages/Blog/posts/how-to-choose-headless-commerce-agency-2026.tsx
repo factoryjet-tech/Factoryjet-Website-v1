@@ -248,7 +248,10 @@ export const post: BlogPost = {
         agencies. It is telling the ones with real headless experience apart from the ones who
         will describe any custom website as &quot;headless&quot; because the word sounds impressive. This
         guide is deliberately narrow and platform-neutral: it does not rank companies, and it
-        assumes you already know roughly why you want headless. If you are not sure headless is
+        assumes you already know roughly why you want headless. For named agencies, see{' '}
+        <a href="/blog/best-headless-commerce-agencies-nextjs-2026" className="text-orange-600 underline">
+          12 headless commerce agencies that build Next.js storefronts
+        </a>. If you are not sure headless is
         the right call for your business yet, our{' '}
         <a href="/blog/how-to-choose-ecommerce-development-agency-2026" className="text-orange-600 underline">
           general guide to choosing an ecommerce development agency

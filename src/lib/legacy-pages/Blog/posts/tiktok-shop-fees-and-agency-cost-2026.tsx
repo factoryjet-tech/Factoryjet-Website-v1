@@ -1123,7 +1123,10 @@ export const post: BlogPost = {
         <a href="/services/tiktok-shop-agency" className="text-[#B23E13] hover:underline">
           TikTok Shop agency team
         </a>{' '}
-        does for US brands.
+        does for US brands. To compare agencies by published fee, see{' '}
+        <a href="/blog/best-tiktok-shop-agencies-us-2026" className="text-[#B23E13] hover:underline">
+          13 TikTok Shop agencies for US brands
+        </a>.
       </p>
 
       <div className="bg-[#FAF8F5] border-2 border-[#E5DFD7] p-6 sm:p-8 rounded-xl my-10 shadow-sm">

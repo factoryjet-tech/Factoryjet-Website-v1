@@ -481,7 +481,10 @@ export default function HealthcareAiAgentsPage() {
                   <Link href="/blog/how-much-does-an-ai-medical-receptionist-cost-2026" className="underline hover:text-[#F05A28]">
                     AI medical receptionist cost breakdown
                   </Link>{' '}
-                  covers what that gap is worth for a typical practice.
+                  covers what that gap is worth for a typical practice. To compare vendors, see{' '}
+                  <Link href="/blog/best-ai-agent-companies-healthcare-practices-2026" className="underline hover:text-[#F05A28]">
+                    13 healthcare AI agent companies compared
+                  </Link>.
                 </p>
                 <a
                   href="https://www.mgma.com/articles/enhancing-patient-access-front-desk-phone-system-improvements"
