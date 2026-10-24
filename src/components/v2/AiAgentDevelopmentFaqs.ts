@@ -110,7 +110,7 @@ export const AI_AGENT_FAQS = [
     "id": "Q14",
     "category": "faq-cost",
     "question": "How long does it take to build an AI agent?",
-    "answer": "A pilot on one narrow workflow usually takes two to four weeks. A production agent with permissions, logging, approvals and monitoring usually takes six to twelve weeks. Timelines stretch when the agent touches several systems, or when the rules have many edge cases that need testing on real examples."
+    "answer": "A pilot on one narrow workflow usually takes two to four weeks. A production agent with permissions, logging, approvals and monitoring usually takes six to twelve weeks. Timelines stretch when the agent touches several systems, or when the rules have many edge cases that need testing on real examples. Our guide to how long it takes to implement an AI agent compares published timelines from 11 firms."
   },
   {
     "id": "Q15",

@@ -700,6 +700,7 @@ export const post: BlogPost = {
           <li><a href="/blog/ai-agent-development-contract-checklist-2026">AI agent development contract checklist</a>: 14 clauses on data, ownership and support.</li>
           <li><a href="/blog/copilot-studio-vs-custom-ai-agents-2026">Copilot Studio vs a custom AI agent</a>: pricing and when each wins.</li>
           <li><a href="/blog/enterprise-ai-agent-cost-2026">Enterprise AI agent cost in 2026</a>: build ranges and what drives them.</li>
+          <li><a href="/blog/how-long-to-implement-an-ai-agent-2026">How long it takes to implement an AI agent</a>: timelines from 11 firms, by agent type.</li>
         </ul>
       </div>
 

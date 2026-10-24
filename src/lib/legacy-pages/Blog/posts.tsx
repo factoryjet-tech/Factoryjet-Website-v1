@@ -1,4 +1,6 @@
 import React from 'react';
+import { post as aiAgentShopifyPlusReturnsRefunds2026Post } from './posts/ai-agent-shopify-plus-returns-refunds-2026';
+import { post as howLongToImplementAnAiAgent2026Post } from './posts/how-long-to-implement-an-ai-agent-2026';
 import { post as bestTiktokShopAgenciesUs2026Post } from './posts/best-tiktok-shop-agencies-us-2026';
 import { post as bestHeadlessCommerceAgenciesNextjs2026Post } from './posts/best-headless-commerce-agencies-nextjs-2026';
 import { post as bestAiAgentCompaniesHealthcarePractices2026Post } from './posts/best-ai-agent-companies-healthcare-practices-2026';
@@ -181,6 +183,9 @@ import { post as aiAutomationAgencyCost2026Post } from './posts/ai-automation-ag
 import { post as privateAiForBusinessOwnData2026Post } from './posts/private-ai-for-business-own-data-2026';
 
 export const POSTS: BlogPost[] = [
+  // --- DIRECT-ANSWER GUIDES (2026-10-24): AI agent implementation timeline, Shopify Plus returns agents ---
+  howLongToImplementAnAiAgent2026Post,
+  aiAgentShopifyPlusReturnsRefunds2026Post,
   // --- AGENCY LISTICLES (2026-10-23): Magento to Shopify Plus migration agencies, healthcare AI agent companies, headless Next.js agencies, TikTok Shop agencies ---
   bestMagentoToShopifyPlusMigrationAgencies2026Post,
   bestAiAgentCompaniesHealthcarePractices2026Post,

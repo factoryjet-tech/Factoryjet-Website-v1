@@ -30,7 +30,7 @@ import '@/components/v2/PlatformPage.css';
  */
 
 const PAGE_URL = 'https://factoryjet.com/replatforming/magento-to-shopify';
-const PAGE_MODIFIED = '2026-10-22';
+const PAGE_MODIFIED = '2026-10-24';
 const PAGE_TITLE = 'Magento to Shopify Plus Migration: Cost, Timeline & Runbook';
 const PAGE_DESCRIPTION =
   'Magento to Shopify Plus migration cost and timeline, with sourced 2026 ranges, Adobe Commerce end-of-support dates and an 11-phase runbook.';
@@ -96,6 +96,11 @@ const SRC = {
   litextensionCost: 'https://litextension.com/blog/shopify-plus-migration-cost/',
   litextensionMagento: 'https://litextension.com/shopify-migration/magento-to-shopify-migration.html',
   soloMedia: 'https://solomediagroup.com/blogs/insights/shopify-migration-cost',
+  soloMediaMigration: 'https://solomediagroup.com/pages/shopify-plus-migration',
+  shero: 'https://sherocommerce.com/pages/magento-to-shopify',
+  netalico: 'https://netalico.com/pages/magento-to-shopify-plus-migration',
+  ruby: 'https://rubydigitalagency.com/adobe-commerce-to-shopify-migration-guide/',
+  anatta: 'https://anatta.io/what-we-do/shopify-migration-services/',
   presta: 'https://wearepresta.com/shopify-migration-cost-2026-the-complete-pricing-breakdown/',
   elogic: 'https://elogic.co/blog/replatforming-cost-index/',
   askPhill: 'https://askphill.com/blogs/blog/magento-to-shopify-migration',
@@ -150,7 +155,7 @@ const PROOF_POINTS = [
   'Registered Shopify Partner',
   '500+ businesses served',
   'Written by founder Bhavesh Barot',
-  'Updated October 22, 2026',
+  'Updated October 24, 2026',
 ];
 
 /* What published guides report. Attributed ranges only, never FactoryJet prices. */
@@ -258,6 +263,15 @@ const TIMELINE_ROWS = [
   { profile: 'Larger catalogs, several storefronts, or B2B price lists', time: '16–20 weeks', source: '1Digital', url: SRC.oneDigital },
   { profile: 'Enterprise Shopify Plus rebuild', time: '16–24 weeks', source: 'Solo Media Group', url: SRC.soloMedia },
   { profile: 'Adobe Commerce enterprise with SAP or NetSuite and complex B2B', time: '8–14 months', source: 'Elogic Commerce', url: SRC.elogic },
+];
+
+/* Timelines published on each agency's own Magento migration page, read 23 Oct 2026. */
+const AGENCY_TIMELINES = [
+  { agency: 'Shero Commerce', time: '10 to 14 weeks for a standard Magento migration; 14 to 20 weeks with ERP, B2B and heavy custom work', url: SRC.shero },
+  { agency: 'Solo Media Group', time: '10 to 14 weeks typical, on its Shopify Plus migration page', url: SRC.soloMediaMigration },
+  { agency: 'Ruby Digital Agency', time: '10 to 14 weeks for one Adobe Commerce website selling direct; 3 to 6 months in stages for B2B, several websites or an ERP', url: SRC.ruby },
+  { agency: 'Anatta', time: 'Most of its migrations in three months or fewer; it says Dorel Juvenile moved four brands off Magento in about 90 days', url: SRC.anatta },
+  { agency: 'Netalico', time: '16 to 24 weeks for stores doing $5M to $50M; 24 to 36 weeks for enterprise Adobe Commerce with ERP work', url: SRC.netalico },
 ];
 
 const SLOWDOWNS = [
@@ -501,7 +515,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'How long does a Magento to Shopify migration take?',
     answer:
-      "Shopify says Plus migrations average three to four months from kickoff to go-live. Agency plans line up with that. 1Digital plans 12 weeks for a Magento 2 store with 5,000 to 25,000 SKUs and one storefront, and 16 to 20 weeks for larger, multi-store or B2B stores. Enterprise builds with SAP or NetSuite run 8 to 14 months in Elogic's cost index.",
+      "Shopify says Plus migrations average three to four months from kickoff to go-live. Agency plans line up with that. Shero Commerce, Solo Media Group and Ruby Digital Agency each publish 10 to 14 weeks for a standard store. Shero says 14 to 20 weeks with ERP and B2B work, and Netalico 24 to 36 weeks for enterprise Adobe Commerce with ERP work. Elogic's cost index puts enterprise builds with SAP or NetSuite at 8 to 14 months.",
   },
   {
     category: 'timeline',
@@ -1025,6 +1039,35 @@ export default function MagentoToShopifyPage() {
               </table>
             </div>
 
+            <h3 style={H3_STYLE}>What Magento migration agencies publish about time</h3>
+            <p style={BODY_STYLE}>
+              Five US Shopify partners publish a timeline on their own Magento migration pages, which we read on October 23, 2026. They are each agency&rsquo;s own figures, not FactoryJet&rsquo;s.
+            </p>
+            <div style={TABLE_WRAP_STYLE}>
+              <table className="pp-table" style={{ margin: 0, width: '100%' }}>
+                <caption style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0 0 0 0)', whiteSpace: 'nowrap' }}>
+                  Magento to Shopify migration timelines published by agencies
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col" style={TH_STYLE}>Agency</th>
+                    <th scope="col" style={TH_STYLE}>Timeline it publishes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {AGENCY_TIMELINES.map((row) => (
+                    <tr key={row.agency}>
+                      <td className="name" style={TD_STYLE}><SourceLink href={row.url}>{row.agency}</SourceLink></td>
+                      <td style={TD_STYLE}>{row.time}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p style={BODY_STYLE}>
+              Read together, a single Magento store selling direct lands at 10 to 14 weeks in three of the five, ERP and B2B work pushes it to 14 to 20 weeks or 3 to 6 months, and enterprise Adobe Commerce with ERP work runs 24 to 36 weeks at Netalico. To compare these agencies and others on tier, redirects and price, see our list of <Link href="/blog/best-magento-to-shopify-plus-migration-agencies-2026" style={LINK_STYLE}>Magento to Shopify Plus migration agencies</Link>.
+            </p>
+
             <h3 style={H3_STYLE}>What slows a migration down</h3>
             <ul style={{ margin: '0 0 16px', paddingLeft: '22px', display: 'grid', gap: '10px', maxWidth: '78ch' }}>
               {SLOWDOWNS.map((item) => (
@@ -1330,7 +1373,7 @@ export default function MagentoToShopifyPage() {
             <div style={{ maxWidth: '900px' }}>
               <h2 style={{ ...H2_STYLE, fontSize: 'clamp(24px, 3vw, 32px)' }}>About this guide</h2>
               <p style={BODY_STYLE}>
-                Written by <Link href="/about" style={LINK_STYLE}>Bhavesh Barot</Link>, founder of FactoryJet (<SourceLink href="https://www.linkedin.com/in/bhavesh-ai-gtm-expert/">LinkedIn</SourceLink>). FactoryJet is a registered Shopify Partner and has served 500+ businesses. Updated October 22, 2026. Sources were first reviewed on September 17, 2026, the EU section was added on October 21, and the Shopify migration figures in the runbook were rechecked on October 22, against the Shopify, Adobe and Google documentation listed below. Platform rules and prices change, so check the linked source before you sign anything.
+                Written by <Link href="/about" style={LINK_STYLE}>Bhavesh Barot</Link>, founder of FactoryJet (<SourceLink href="https://www.linkedin.com/in/bhavesh-ai-gtm-expert/">LinkedIn</SourceLink>). FactoryJet is a registered Shopify Partner and has served 500+ businesses. Updated October 24, 2026. Sources were first reviewed on September 17, 2026, the EU section was added on October 21, the Shopify migration figures in the runbook were rechecked on October 22, and agency timelines read on October 23 were added on October 24, against the Shopify, Adobe and Google documentation listed below. Platform rules and prices change, so check the linked source before you sign anything.
               </p>
 
               <h3 style={H3_STYLE}>Sources</h3>
@@ -1349,6 +1392,11 @@ export default function MagentoToShopifyPage() {
                 <li><SourceLink href={SRC.soloMedia}>Solo Media Group: Shopify migration cost</SourceLink></li>
                 <li><SourceLink href={SRC.elogic}>Elogic: Ecommerce Replatforming Cost Index 2026</SourceLink></li>
                 <li><SourceLink href={SRC.oneDigital}>1Digital: Magento to Shopify Plus 12-week timeline</SourceLink></li>
+                <li><SourceLink href={SRC.shero}>Shero Commerce: Magento to Shopify migration</SourceLink></li>
+                <li><SourceLink href={SRC.soloMediaMigration}>Solo Media Group: Shopify Plus migration</SourceLink></li>
+                <li><SourceLink href={SRC.ruby}>Ruby Digital Agency: Adobe Commerce to Shopify migration guide</SourceLink></li>
+                <li><SourceLink href={SRC.anatta}>Anatta: Shopify migration services</SourceLink></li>
+                <li><SourceLink href={SRC.netalico}>Netalico: Magento to Shopify Plus migration</SourceLink></li>
               </ul>
 
               <h3 style={H3_STYLE}>Related guides</h3>

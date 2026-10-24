@@ -524,6 +524,8 @@ export default function ShopifyAiAgentsSections() {
               <a href={COST_GUIDE}>AI Agent Cost Guide</a>
               <a href="/blog/best-ai-agents-for-ecommerce-2026">Best AI Agents for Ecommerce</a>
               <a href="/blog/ai-agents-erp-netsuite-odoo-sap-business-one-2026">AI Agents Inside Your ERP</a>
+              <a href="/blog/ai-agent-shopify-plus-returns-refunds-2026">AI Agents for Shopify Plus Returns and Refunds</a>
+              <a href="/blog/how-long-to-implement-an-ai-agent-2026">How Long an AI Agent Takes to Implement</a>
               <a href={SRC_SHOPIFY_RATE_LIMITS} {...EXT}>Shopify: GraphQL Admin API Rate Limits</a>
               <a href={SRC_OWASP_LLM06} {...EXT}>OWASP: Excessive Agency</a>
             </div>
