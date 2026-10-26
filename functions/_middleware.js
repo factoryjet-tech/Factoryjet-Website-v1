@@ -279,6 +279,108 @@ function recordAgentRequest(env, request, path) {
   }
 }
 
+// ─── Retired-URL fallback (added 2026-10-26) ───
+// WHY: Search Console listed 109 "Not found (404)" URLs on 2026-10-26. We fetched
+// all 109: 108 still 404'd. They were retired UK/India city pages, old Wix /post/
+// URLs, trailing-slash copies of URLs that already have a _redirects rule
+// (/denver works, /denver/ 404'd), and _redirects rules whose target itself 404s
+// (/us/providence → /providence → 404). public/_redirects is at 7,869 of its
+// 8,192-byte cap, so the fix lives here, where there is no cap.
+//
+// These rules run ONLY when the static site answers 404, or to collapse a
+// _redirects hop that would land on a retired URL. A live page is never touched.
+// scripts/test-gone-redirects.mjs checks every target is a real route and that no
+// real route matches a rule. Run it after editing.
+const IN_CITY = '(?:ahmedabad|bangalore|bengaluru|chandigarh|chennai|delhi|hyderabad|indore|jaipur|kochi|kolkata|lucknow|mumbai|pune|surat)'
+const UK_CITY = '(birmingham|leeds|liverpool|manchester|sheffield)'
+const SEO_ONLY_US_CITY = '(arlington|colorado-springs|corpus-christi|huntington-beach|lakewood-ranch|providence)'
+
+export const GONE_RULES = [
+  [/^\/(?:index\.php|index\.html|home|FactoryJet)$/, '/'],
+  // Old Wix blog, pre-2026 site.
+  [/^\/post\/.+$/, '/blog'],
+  [/^\/india\/pricing$/, '/pricing'],
+  [/^\/india(?:\/.*)?$/, '/web-design'],
+  [new RegExp(`^/wordpress-development/${IN_CITY}$`), '/wordpress-development'],
+  [new RegExp(`^/(?:services/)?shopify-development/${IN_CITY}$`), '/shopify-development'],
+  // /us/services/ecommerce-development/:city in _redirects catches this slug as a city.
+  [/^\/shopify-development\/ecommerce-development$/, '/services/shopify-development'],
+  [/^\/(?:services\/)?ecommerce-development\/shopify-development$/, '/services/shopify-development'],
+  [/^\/services\/ecommerce-development\/(lincoln|raleigh|portland|charlotte|nashville|denver)$/, '/$1/ecommerce-development'],
+  [/^\/services\/ecommerce-development\/(?:chattanooga|fargo|miami|sioux-falls)$/, '/services/ecommerce-development'],
+  [/^\/(?:cleveland|chattanooga|fargo|miami|sioux-falls)\/ecommerce-development$/, '/services/ecommerce-development'],
+  [/^\/services\/ecommerce$/, '/services/ecommerce-development'],
+  [/^\/web-design\/(nashville|denver)-[a-z]{2}$/, '/$1/web-design'],
+  // These cities only have an /seo page; the bare city and other services are gone.
+  [new RegExp(`^/${SEO_ONLY_US_CITY}(?:/(?!seo$).*)?$`), '/$1/seo'],
+  // UK cities that lived at the root, and the per-service pages retired on 2026-08-03.
+  [new RegExp(`^/${UK_CITY}(?:/.*)?$`), '/uk/$1'],
+  [new RegExp(`^/uk/${UK_CITY}/.+$`), '/uk/$1'],
+  [/^\/edinburgh$/, '/uk/edinburgh'],
+  [/^\/uk\/ecommerce$/, '/uk/ecommerce-development'],
+  [/^\/uk\/services$/, '/uk'],
+  [/^\/blog\/shopify-development-partner-uk-guide$/, '/uk/shopify-development'],
+  [/^\/blog\/ecommerce-seo-vs-paid-ads-uk-2026$/, '/uk/ecommerce-seo'],
+  [/^\/blog\/shopify-seo-audit-guide-uk$/, '/uk/shopify-seo'],
+  [/^\/how-to-get-chatgpt-to-recommend-your-business-2026$/, '/blog/how-to-get-chatgpt-to-recommend-your-business-2026'],
+  [/^\/au\/services\/ai$/, '/au/ai-development'],
+  [/^\/au\/services\/seo$/, '/au/seo'],
+  [/^\/au\/services\/website-development$/, '/au/small-business-web-design'],
+  [/^\/au\/services(?:\/.*)?$/, '/au'],
+]
+
+/** Where a retired path now lives, or null. Pure; covered by scripts/test-gone-redirects.mjs. */
+export function goneTarget(pathname) {
+  const p = normalizePath(pathname)
+  for (const [re, to] of GONE_RULES) {
+    if (re.test(p)) return p.replace(re, to)
+  }
+  return null
+}
+
+function movedPermanently(target, search) {
+  return new Response(null, {
+    status: 301,
+    headers: { Location: SITE_ORIGIN + target + search, 'X-FJ-Gone-Redirect': '1' },
+  })
+}
+
+/**
+ * Turns a 404, or a redirect that points at a retired URL, into one 301 hop.
+ * Any error returns the original response untouched.
+ */
+async function fixMissing(res, url, env) {
+  try {
+    if (res.status === 301 || res.status === 308) {
+      const loc = new URL(res.headers.get('location') || '', url)
+      const target = loc.origin === SITE_ORIGIN ? goneTarget(loc.pathname) : null
+      return target ? movedPermanently(target, loc.search) : res
+    }
+    if (res.status !== 404) return res
+
+    const target = goneTarget(url.pathname)
+    if (target) return movedPermanently(target, url.search)
+
+    // `/denver/` 404s even though `/denver` has a _redirects rule, because those
+    // rules match the exact path. Ask the static site about the slashless path.
+    const p = url.pathname
+    if (p.length > 1 && p.endsWith('/') && env && env.ASSETS) {
+      const bare = p.slice(0, -1)
+      const probe = await env.ASSETS.fetch(new Request(SITE_ORIGIN + bare, { redirect: 'manual' }))
+      if (probe.status === 200) return movedPermanently(bare, url.search)
+      if (probe.status >= 301 && probe.status <= 308) {
+        const loc = new URL(probe.headers.get('location') || '', SITE_ORIGIN)
+        if (loc.origin === SITE_ORIGIN) {
+          return movedPermanently(goneTarget(loc.pathname) || loc.pathname, url.search)
+        }
+      }
+    }
+  } catch {
+    // Fail open: serve whatever the static site said.
+  }
+  return res
+}
+
 // --- Cloudflare Pages Functions entrypoint ---
 export async function onRequest(context) {
   const { request, next, env } = context
@@ -292,7 +394,7 @@ export async function onRequest(context) {
 
     // Only geo-sensitive paths are country/UA-dependent. Everything else passes
     // straight through untouched (keeps its normal edge caching + the /api function).
-    if (!isGeoSensitivePath(path)) return next()
+    if (!isGeoSensitivePath(path)) return fixMissing(await next(), url, env)
 
     const country = request.headers.get('cf-ipcountry') || ''
     const userAgent = request.headers.get('user-agent') || ''
@@ -314,7 +416,9 @@ export async function onRequest(context) {
     // caching so a cached 200 can't later be served to an NA human without this
     // Function running. Without this, an exempt crawler's 200 would populate the edge
     // cache and defeat the redirect. Cost is negligible (Pages still serves from edge).
-    const res = await next()
+    const served = await next()
+    const res = await fixMissing(served, url, env)
+    if (res !== served) return res
     const headers = new Headers(res.headers)
     headers.set('Cache-Control', 'private, no-store')
     headers.set('X-FJ-Geo-Redirect', isIndiaPath(path) ? 'india-served' : 'us-served')

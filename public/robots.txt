@@ -19,7 +19,10 @@ Disallow: /safe_search/
 Disallow: /demo/
 Disallow: /old/
 Disallow: /backup/
-Disallow: /index.php
+# /index.php is NOT blocked (removed 2026-10-26). Search Console listed
+# www.factoryjet.com/index.php as "Indexed, though blocked by robots.txt": Google
+# indexed it from links but could not crawl it to see that it is gone. It now 301s
+# to / (functions/_middleware.js GONE_RULES), and Google has to fetch it to see that.
 Disallow: /zhHant/
 Disallow: /zhHans/
 Disallow: /surugaya/
