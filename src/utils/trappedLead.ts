@@ -3,8 +3,9 @@
  *
  * Until 2026-10-08 every form dropped these in the browser. Three of them showed
  * "Request sent!" first, and nothing was saved, emailed or counted. A browser
- * autofill can fill the trap for a real visitor (it is named company_website and
- * sits next to a real company field), so a real lead could vanish with no trace.
+ * autofill can fill the trap for a real visitor (it was named company_website and
+ * sat next to a real company field; renamed fj_hp_x on 2026-10-26 after Chrome
+ * filled it for a real job applicant), so a real lead could vanish with no trace.
  *
  * Now the lead is sent like any other and the server marks it likely spam in the
  * email subject, the same way it treats a failed Turnstile check. Two things are

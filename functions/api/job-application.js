@@ -230,8 +230,8 @@ export function erpDatePlusDays(days, date = new Date()) {
 }
 
 /** The Job Applicant document for POST /api/resource/Job Applicant. */
-export function buildApplicantDoc(v, { turnstileVerdict, retentionDays, now = new Date() }) {
-  return {
+export function buildApplicantDoc(v, { turnstileVerdict, turnstileDetail = '', retentionDays, now = new Date() }) {
+  const doc = {
     applicant_name: v.name,
     email_id: v.email,
     phone_number: v.phone,
@@ -254,6 +254,11 @@ export function buildApplicantDoc(v, { turnstileVerdict, retentionDays, now = ne
     custom_consent_version: CONSENT_VERSION,
     custom_retention_until: erpDatePlusDays(retentionDays, now),
   };
+  // Why siteverify said no, in the stock notes field. The verdict itself stays one of
+  // the fixed values worker.py matches on (BOT_VERDICTS). notes is a Data field:
+  // ERPNext rejects (HTTP 417), not truncates, anything over 140 characters.
+  if (turnstileDetail) doc.notes = `Turnstile ${turnstileVerdict}: ${turnstileDetail}`.slice(0, 140);
+  return doc;
 }
 
 function escapeHtml(value) {
@@ -302,11 +307,13 @@ export function turnstileHostnameOk(hostname) {
  * `action`, so none is checked here; if one is added there, check it here too.
  * 'unchecked' means the secret is missing OR siteverify could not be reached;
  * callers tell the two apart with turnstileConfigured(env).
+ * Returns { verdict, detail }. detail says why a token failed: siteverify's
+ * error-codes (e.g. timeout-or-duplicate for an expired token) or the hostname.
  */
 async function verifyTurnstile(env, token, ip) {
   const secret = env && env.TURNSTILE_SECRET_KEY;
-  if (!secret) return 'unchecked';
-  if (!token) return 'absent';
+  if (!secret) return { verdict: 'unchecked', detail: '' };
+  if (!token) return { verdict: 'absent', detail: '' };
   try {
     const form = new FormData();
     form.append('secret', secret);
@@ -314,10 +321,16 @@ async function verifyTurnstile(env, token, ip) {
     if (ip) form.append('remoteip', ip);
     const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', { method: 'POST', body: form });
     const out = await res.json();
-    return out && out.success === true && turnstileHostnameOk(out.hostname) ? 'verified' : 'failed';
+    if (out && out.success === true) {
+      return turnstileHostnameOk(out.hostname)
+        ? { verdict: 'verified', detail: '' }
+        : { verdict: 'failed', detail: `hostname ${String(out.hostname || 'missing').slice(0, 100)}` };
+    }
+    const codes = out && Array.isArray(out['error-codes']) ? out['error-codes'].join(', ') : '';
+    return { verdict: 'failed', detail: codes.slice(0, 200) || 'no error-codes returned' };
   } catch (err) {
     console.error('job-application: turnstile verify error', err && err.name);
-    return 'unchecked';
+    return { verdict: 'unchecked', detail: '' };
   }
 }
 
@@ -360,7 +373,7 @@ function erpConfig(env) {
  * Saves the application. Returns { saved: true, applicant, returning } or
  * { saved: false, reason } with a short reason for the fallback email (no secrets).
  */
-async function saveToErp(env, v, turnstileVerdict, cv) {
+async function saveToErp(env, v, turnstileVerdict, cv, turnstileDetail = '') {
   const erp = erpConfig(env);
   if (!erp) return { saved: false, reason: 'CAREERS_ERP_API_KEY / SECRET not set' };
   const json = { Authorization: erp.auth, 'Content-Type': 'application/json', Accept: 'application/json' };
@@ -398,7 +411,7 @@ async function saveToErp(env, v, turnstileVerdict, cv) {
       const created = await fetchWithTimeout(`${erp.url}/api/resource/Job%20Applicant`, {
         method: 'POST',
         headers: json,
-        body: JSON.stringify(buildApplicantDoc(v, { turnstileVerdict, retentionDays })),
+        body: JSON.stringify(buildApplicantDoc(v, { turnstileVerdict, turnstileDetail, retentionDays })),
       }, erp.timeout);
       if (!created.ok) return { saved: false, reason: `create failed (HTTP ${created.status})` };
       const out = await created.json();
@@ -526,9 +539,10 @@ export function fallbackEmail(v, result, verdict) {
 }
 
 /** Background part: ERPNext save, fallback email when it fails, candidate receipt. */
-async function processApplication(env, v, turnstileVerdict, trapFilled, cv) {
+async function processApplication(env, v, turnstileVerdict, trapFilled, cv, turnstileDetail = '') {
   const verdict = trapFilled ? 'trap' : turnstileVerdict;
-  const result = await saveToErp(env, v, verdict, cv);
+  if (turnstileDetail) console.log('job-application: turnstile', turnstileVerdict, turnstileDetail);
+  const result = await saveToErp(env, v, verdict, cv, trapFilled ? '' : turnstileDetail);
 
   if (!result.saved) {
     console.error('job-application: ERP save incomplete:', result.reason);
@@ -612,12 +626,14 @@ export async function onRequestPost(context) {
   const checked = validateApplication(fields, cv);
   if (!checked.ok) return reply(400, { ok: false, errors: checked.errors }, cors);
 
-  const trap = form.get('company_website');
+  // Renamed from company_website on 2026-10-26: Chrome autofilled that one for a real
+  // candidate. Old cached pages still send company_website, so read both for now.
+  const trap = form.get('fj_hp_x') ?? form.get('company_website');
   const trapFilled = typeof trap === 'string' && trap.trim() !== '';
-  const turnstileVerdict = await verifyTurnstile(
+  const { verdict: turnstileVerdict, detail: turnstileDetail } = await verifyTurnstile(
     env, form.get('cf-turnstile-response'), request.headers.get('CF-Connecting-IP'),
   );
 
-  context.waitUntil(processApplication(env, checked.value, turnstileVerdict, trapFilled, cv));
+  context.waitUntil(processApplication(env, checked.value, turnstileVerdict, trapFilled, cv, turnstileDetail));
   return reply(200, { ok: true }, cors);
 }

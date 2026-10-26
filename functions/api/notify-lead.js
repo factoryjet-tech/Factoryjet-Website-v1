@@ -1269,8 +1269,8 @@ export async function onRequestPost(context) {
   );
   // Same rule for the hidden trap field. The forms used to drop these in the
   // browser and show "Request sent!", leaving no record; a browser autofill can
-  // fill that field for a real visitor (it is named company_website on three
-  // forms). The lead is kept and marked; the trap value itself is never stored.
+  // fill that field for a real visitor (it was named company_website until
+  // 2026-10-26, which Chrome autofills; now fj_hp_x). The lead is kept and marked; the trap value itself is never stored.
   const trapFilled = Boolean(body.honeypot && String(body.honeypot).trim());
   // One label for this lead (Buyer, Vendor pitch, Likely spam or Test), worked out
   // here once and handed to Firestore, the CRM and the email subject.

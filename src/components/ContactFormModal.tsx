@@ -11,7 +11,7 @@
  *   - No visible CAPTCHA / no blocked submit: Cloudflare Turnstile runs in
  *     `appearance: 'interaction-only'` mode (invisible unless a challenge is
  *     actually needed) and the token is sent if present but never gates submit.
- *   - Honeypot field (`company_website`) added for spam protection.
+ *   - Honeypot field (`fj_hp_x`, was `company_website` until 2026-10-26) for spam protection.
  *   - All GA4/GTM events preserved (form_start, form_step, form_submit/success/error).
  */
 
@@ -487,9 +487,9 @@ const ContactFormModal: React.FC = () => {
 
       {/* Honeypot, visually hidden, off-screen; real users never see/fill it. */}
       <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', top: 'auto', height: 0, width: 0, overflow: 'hidden' }}>
-        <label>Company website
+        <label>Leave this empty
           <input
-            type="text" name="company_website" tabIndex={-1} autoComplete="off"
+            type="text" name="fj_hp_x" tabIndex={-1} autoComplete="off" data-1p-ignore data-lpignore="true"
             value={honeypot} onChange={(e) => setHoneypot(e.target.value)}
           />
         </label>

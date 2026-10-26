@@ -35,6 +35,7 @@ type Errors = Record<string, string>;
 interface TurnstileApi {
   render: (el: HTMLElement, opts: Record<string, unknown>) => string;
   remove: (id: string) => void;
+  reset: (id: string) => void;
 }
 function turnstileApi(): TurnstileApi | undefined {
   return (window as unknown as { turnstile?: TurnstileApi }).turnstile;
@@ -142,10 +143,19 @@ export default function ApplicationForm({ roleSlug }: { roleSlug: string }) {
 
     setStatus('sending');
     setErrors({});
-    // Give an invisible Turnstile check up to 3 seconds to finish. Without a token the
-    // server still saves the application but sends no receipt email.
+    // Always ask for a fresh token here. The widget rendered on first focus, and a
+    // token lives 5 minutes: candidates spend far longer than that (the note sends
+    // them to ChatGPT in another tab, where the auto-refresh timer is paused), so
+    // the first token went stale. Most likely cause of 5 real candidates saved as
+    // 'failed', 16-20 Oct 2026. Without a token the server still saves the application but
+    // sends no receipt email.
+    turnstileToken.current = '';
+    const api = turnstileApi();
+    if (turnstileId.current && api) {
+      try { api.reset(turnstileId.current); } catch { /* widget gone; render again below */ }
+    }
     loadTurnstile();
-    for (let i = 0; i < 20 && !turnstileToken.current; i++) {
+    for (let i = 0; i < 34 && !turnstileToken.current; i++) {
       await new Promise((r) => setTimeout(r, 150));
     }
     if (turnstileToken.current) fd.set('cf-turnstile-response', turnstileToken.current);
@@ -203,9 +213,11 @@ export default function ApplicationForm({ roleSlug }: { roleSlug: string }) {
       encType="multipart/form-data"
       className="mt-8 space-y-7"
     >
-      {/* Spam trap. Hidden from people and screen readers; bots fill it. */}
+      {/* Spam trap. Hidden from people and screen readers; bots fill it. The name and
+          label must not look like a contact field: Chrome ignores autoComplete="off"
+          and autofilled the old "company_website" trap for a real candidate. */}
       <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
-        <label>Company website<input type="text" name="company_website" tabIndex={-1} autoComplete="off" /></label>
+        <label>Leave this empty<input type="text" name="fj_hp_x" tabIndex={-1} autoComplete="off" data-1p-ignore data-lpignore="true" /></label>
       </div>
 
       <fieldset className="space-y-6">

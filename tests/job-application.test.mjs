@@ -247,6 +247,37 @@ test('honeypot filled: saved and flagged, but no receipt to the address given', 
   assert.equal(calls.filter((c) => c.url.startsWith('https://api.resend.com')).length, 0);
 });
 
+test('renamed trap field fj_hp_x filled: saved as trap', async () => {
+  const { calls } = await run(onRequestPost, {
+    request: requestWith({}, PDF, { fj_hp_x: 'spam.biz', 'cf-turnstile-response': 'tok' }),
+    erp: newApplicantErp,
+  });
+  const doc = JSON.parse(calls.find((c) => c.url.endsWith('/api/resource/Job%20Applicant') && c.method === 'POST').body);
+  assert.equal(doc.custom_turnstile_verdict, 'trap');
+  assert.equal(emailsOf(calls).length, 0);
+});
+
+test('expired token: saved as failed with the siteverify error code in notes', async () => {
+  const { calls } = await run(onRequestPost, {
+    request: requestWith({}, PDF, { 'cf-turnstile-response': 'tok' }),
+    siteverify: { success: false, 'error-codes': ['timeout-or-duplicate'] },
+    erp: newApplicantErp,
+  });
+  const doc = JSON.parse(calls.find((c) => c.url.endsWith('/api/resource/Job%20Applicant') && c.method === 'POST').body);
+  assert.equal(doc.custom_turnstile_verdict, 'failed');
+  assert.equal(doc.notes, 'Turnstile failed: timeout-or-duplicate');
+});
+
+test('long siteverify error list: notes capped at the ERPNext 140-character limit', async () => {
+  const { calls } = await run(onRequestPost, {
+    request: requestWith({}, PDF, { 'cf-turnstile-response': 'tok' }),
+    siteverify: { success: false, 'error-codes': Array(30).fill('invalid-input-response') },
+    erp: newApplicantErp,
+  });
+  const doc = JSON.parse(calls.find((c) => c.url.endsWith('/api/resource/Job%20Applicant') && c.method === 'POST').body);
+  assert.equal(doc.notes.length, 140);
+});
+
 test('invalid form gets 400 with field errors and touches nothing', async () => {
   const { res, calls } = await run(onRequestPost, {
     request: requestWith({ email: 'nope' }),
@@ -321,6 +352,7 @@ test('token solved on another hostname: saved as failed, no receipt', async () =
   });
   const doc = JSON.parse(calls.find((c) => c.url.endsWith('/api/resource/Job%20Applicant') && c.method === 'POST').body);
   assert.equal(doc.custom_turnstile_verdict, 'failed');
+  assert.equal(doc.notes, 'Turnstile failed: hostname evil.example');
   assert.equal(emailsOf(calls).length, 0);
 });
 
