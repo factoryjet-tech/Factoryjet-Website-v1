@@ -80,7 +80,7 @@ export const metadata: Metadata = {
    JSON-LD Schema
 ───────────────────────────────────────────────────────────────────────────── */
 
-const PAGE_MODIFIED = '2026-09-28';
+const PAGE_MODIFIED = '2026-10-29';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -215,9 +215,20 @@ const SHOPIFY_TIMELINES = [
   { scope: 'Headless Shopify', detail: 'Hydrogen storefront on the Storefront API', weeks: '8-14 weeks' },
 ] as const;
 
-/* Only published, verified case studies from src/data/case-studies. Both run on
-   Commerceflo, not Shopify, and the cards say so. */
+/* Only published, verified case studies from src/data/case-studies. Shopholistico
+   is the Shopify build (naming approved 2026-09-29). Its card states only what the
+   live store shows (fetched 2026-10-29: Shopify.theme schema "Holistico" with no
+   Theme Store id, prices in USD, "U.S. shipping only", vitamin D and calcium,
+   Subscribe & Save, a Vitamin D + Whole Food Calcium bundle). Belle Maison and
+   GPSUK run on Commerceflo, not Shopify, and their cards say so. */
 const PROOF_CASES = [
+  {
+    client: 'Shopholistico',
+    market: 'Whole-food supplements, United States',
+    platform: 'Built on Shopify',
+    what: 'A custom Shopify theme for a brand selling whole-food vitamin D and calcium. Shoppers pick Subscribe & Save or buy the vitamin D and calcium bundle. The store ships within the U.S. only.',
+    href: '/case-studies/shopholistico-shopify-store',
+  },
   {
     client: 'Belle Maison',
     market: 'Wholesale distributor',
@@ -276,91 +287,115 @@ const US_SHOPIFY_STATS = [
   },
 ];
 
+/* Replaced the FactoryJet vs agency vs freelancer vs theme store table on
+   2026-10-29. Each column is one phase, quoted on its own. No figures. */
 const COMPARISON_COLUMNS = [
-  { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'US Shopify Agency' },
-  { label: 'Freelancer' },
-  { label: 'Shopify Theme Store' },
+  { label: 'Theme customisation' },
+  { label: 'Custom build' },
+  { label: 'Shopify Plus' },
 ] as const;
 
 const COMPARISON_ROWS = [
   {
-    feature: 'Pricing model.',
+    feature: 'Who it suits.',
     values: [
-      'Fixed-price, quoted upfront.',
-      'Multiples higher, often hourly.',
-      'Hourly, no ceiling.',
-      'Cheap one-time theme (you build it).',
+      'A store already on Shopify whose theme mostly works.',
+      'A brand that has outgrown its theme, or is moving to Shopify.',
+      'Brands selling wholesale, changing checkout or running several storefronts.',
     ],
   },
   {
-    feature: 'Delivery timeline.',
-    values: ['3–5 weeks.', '3–6 months.', '4–10 weeks (unreliable).', '~1 week (but you configure it).'],
-  },
-  {
-    feature: 'Custom Figma design.',
+    feature: 'Design.',
     values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="yes" />,
-      <CompareIcon key="fl" kind="partial" />,
-      <CompareIcon key="tp" kind="no" />,
+      'Changes to the sections and pages you already have.',
+      'A new Figma design for every key page, approved before any code.',
+      'A new Figma design, plus the B2B portal and checkout screens.',
     ],
   },
   {
-    feature: 'Shopify Plus capability.',
+    feature: 'Theme code.',
     values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="yes" />,
-      <CompareIcon key="fl" kind="partial" />,
-      <CompareIcon key="tp" kind="no" />,
+      'Your current theme, adjusted.',
+      'A new Liquid theme written from scratch.',
+      'A new Liquid theme or a headless Hydrogen storefront.',
     ],
   },
   {
-    feature: 'Full data migration.',
+    feature: 'Products and data.',
     values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="yes" />,
-      <CompareIcon key="fl" kind="partial" />,
-      <CompareIcon key="tp" kind="no" />,
+      'Cleanup of the products and collections you have.',
+      'Full catalog, customers and orders moved, with redirects.',
+      'All of that, plus company accounts, price lists and ERP sync.',
     ],
   },
   {
-    feature: 'Lighthouse 95+ performance.',
+    feature: 'B2B wholesale (company accounts, price lists, net terms).',
     values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="partial" />,
-      <CompareIcon key="fl" kind="partial" />,
-      <CompareIcon key="tp" kind="no" />,
+      <CompareIcon key="tc" kind="no" />,
+      <CompareIcon key="cb" kind="partial" />,
+      <CompareIcon key="sp" kind="yes" />,
     ],
   },
   {
-    feature: 'Technical SEO built in.',
+    feature: 'Checkout changes.',
     values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="partial" />,
-      <CompareIcon key="fl" kind="no" />,
-      <CompareIcon key="tp" kind="no" />,
+      <CompareIcon key="tc" kind="no" />,
+      <CompareIcon key="cb" kind="partial" />,
+      <CompareIcon key="sp" kind="yes" />,
     ],
   },
   {
-    feature: 'Full code ownership.',
+    feature: 'What you have at the end.',
     values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="partial" />,
-      <CompareIcon key="fl" kind="yes" />,
-      <CompareIcon key="tp" kind="yes" />,
+      'The updated theme in your GitHub.',
+      'A live store, with the theme code in your GitHub.',
+      'A live store, with the theme, Shopify Functions and integration code in your GitHub.',
     ],
   },
   {
-    feature: 'Fixed-price contract.',
+    feature: 'Fixed price for the phase.',
     values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="no" />,
-      <CompareIcon key="fl" kind="partial" />,
-      <CompareIcon key="tp" kind="yes" />,
+      <CompareIcon key="tc" kind="yes" />,
+      <CompareIcon key="cb" kind="yes" />,
+      <CompareIcon key="sp" kind="yes" />,
     ],
   },
 ];
+
+/* House terms, approved wording (2026-10-16). Same terms as /services/ai-automation. */
+const HOUSE_TERMS = [
+  { t: 'A draft of your store before you sign', d: 'We build a working draft with your own products, so you see the store before you commit.' },
+  { t: 'Fixed price per phase', d: 'Each phase is scoped, priced and signed on its own. Nothing is billed by the hour.' },
+  { t: 'You own the code', d: 'The theme code sits in your own GitHub from day one. Shopify and app fees are billed to your own accounts.' },
+  { t: 'Defect cover inside the build price', d: 'Defects found after launch are fixed inside the build price, for a cover period we agree before work starts.' },
+  { t: 'Support only if you want it', d: 'After that, support is optional. Each change is quoted and approved before we do it.' },
+  { t: 'No monthly minimum', d: 'There is no monthly fee you pay whether you use it or not.' },
+] as const;
+
+/* Custom and enterprise Shopify questions, added 2026-10-29. Rendered in their own
+   section and merged into faqSchema below, so schema and page read the same arrays. */
+const CUSTOM_SHOPIFY_FAQS = [
+  {
+    question: 'What is custom Shopify development?',
+    answer:
+      'Custom Shopify development means building the parts of a store that a Theme Store theme does not give you. That can be a theme written from scratch in Liquid, Shopify\'s template language, a private app that talks to the Shopify Admin API, or Shopify Functions that change discount, shipping or payment rules. Shopify still runs hosting, checkout and inventory. The custom part is the code on top, and that code sits in your own GitHub.',
+  },
+  {
+    question: 'When is a custom Shopify build worth it instead of a theme?',
+    answer:
+      'When the theme is what holds sales back. Common signs: product pages that cannot show how you sell, such as subscriptions, bundles or dosage choices; a theme slowed down by stacked apps; or a team that files a developer ticket for every content change. If a premium theme with a few custom sections fixes that, we say so and quote that phase instead. Shopholistico runs on a theme we built from scratch around its Subscribe & Save plans.',
+  },
+  {
+    question: 'What does enterprise Shopify development include?',
+    answer:
+      'Enterprise Shopify work usually runs on Shopify Plus, the plan for larger and B2B merchants. It covers native B2B (company accounts, a price list per account, net payment terms), checkout changes through Checkout Extensibility, Shopify Functions for custom discount and validation rules, several storefronts or markets from one admin, and two-way sync with an ERP such as NetSuite, SAP or Dynamics 365. Each piece is scoped as its own phase with a fixed price.',
+  },
+  {
+    question: 'How do you scope a custom or enterprise Shopify build?',
+    answer:
+      'We start with a free call and one real example: a product that is hard to sell on your current store, or one wholesale order from start to finish. Then we build a working draft with your own products before you sign. The proposal splits the work into phases, each with a fixed price, and states the defect cover period. Support after launch is optional, each change is quoted first, and there is no monthly minimum.',
+  },
+] as const;
 
 const PRICING_TIERS = [
   {
@@ -395,7 +430,7 @@ const PRICING_TIERS = [
       'Up to 3 Shopify App Store integrations for reviews, upsell, and loyalty.',
       'Google Analytics 4, Meta Pixel, and Search Console setup.',
       'Post-launch Lighthouse audit and Core Web Vitals report.',
-      '30-day post-launch support window included.',
+      'Defects fixed inside the build price for an agreed cover period.',
     ],
     cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
     popular: true,
@@ -413,7 +448,7 @@ const PRICING_TIERS = [
       'Headless Hydrogen storefront option using React and Remix.',
       'International markets setup with multi-currency and translations.',
       'Dedicated senior engineering point of contact throughout build.',
-      '90-day post-launch support and iteration window included.',
+      'Defects fixed inside the build price for an agreed cover period.',
     ],
     cta: { label: 'Schedule a Plus Consultation', modal: true, region: 'us' },
   },
@@ -455,7 +490,7 @@ const FAQ_ITEMS = [
     category: 'platform',
     question: 'Do I need Shopify Plus, or will standard Shopify work?',
     answer:
-      'Standard Shopify works well for most DTC brands under $2M in annual revenue. Shopify Plus is worth the investment when you need custom checkout extensions, native B2B wholesale pricing, or multi-storefront setups. We evaluate your sales volume during discovery. We never recommend Plus unless your operations genuinely require it.',
+      'Standard Shopify works well for most DTC brands under $2M in annual revenue. Shopify Plus is worth the investment when you need custom checkout extensions, native B2B wholesale pricing, or multi-storefront setups. We evaluate your sales volume during discovery. We never recommend Plus unless your operations require it.',
   },
   {
     category: 'platform',
@@ -493,7 +528,7 @@ const FAQ_ITEMS = [
     category: 'migration',
     question: 'Will my SEO rankings survive a migration to Shopify?',
     answer:
-      'Yes, when handled with proper engineering, your rankings will stay safe. We crawl your entire legacy domain to document all ranking URLs. We build comprehensive 301 redirect maps and preserve all title tags, meta descriptions, and structured data. We verify indexing in Google Search Console post-launch.',
+      'Yes, when handled with proper engineering, your rankings will stay safe. We crawl your entire legacy domain to document all ranking URLs. We build a 301 redirect for every ranking URL and preserve all title tags, meta descriptions, and structured data. We verify indexing in Google Search Console post-launch.',
   },
 
   /* ── SEO & Performance ── */
@@ -558,7 +593,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Does FactoryJet offer ongoing Shopify support after launch?',
     answer:
-      'Every build includes a 30-day post-launch support window for adjustments and questions. After that, we offer flexible monthly retainer plans with dedicated engineering hours. Retainer services include new landing pages, speed audits, app integrations, and promotion setups. We also provide standalone conversion audits 60 to 90 days after launch. You always have direct access to the engineer who wrote your store code.',
+      'Yes, and it is optional. Defects found after launch are fixed inside the build price, for a cover period we agree before work starts. After that, you ask for changes when you need them: new landing pages, speed audits, app integrations or promotion setups. Each change is quoted and approved before we start, and there is no monthly minimum. You always talk to the engineer who wrote your store code.',
   },
   {
     category: 'pricing',
@@ -570,7 +605,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Can I hire a dedicated Shopify expert for my store?',
     answer:
-      'Yes, we provide dedicated senior Shopify engineers for ongoing work. The same engineer who builds your storefront can support your growth. You avoid handoff friction and maintain technical continuity. We offer monthly blocks of hours for feature updates, seasonal promotions, and performance monitoring.',
+      'Yes. The same senior engineer who builds your storefront stays on for later work, so nobody has to learn your store from scratch. Feature updates, seasonal promotions and performance checks are each quoted and approved before we start. If you want a set amount of work each month, we can agree that too, but there is no monthly minimum unless you ask for one.',
   },
   {
     category: 'platform',
@@ -609,7 +644,7 @@ const FAQ_ITEMS = [
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: FAQ_ITEMS.map((item) => ({
+  mainEntity: [...FAQ_ITEMS, ...CUSTOM_SHOPIFY_FAQS].map((item) => ({
     '@type': 'Question',
     name: item.question,
     acceptedAnswer: { '@type': 'Answer', text: item.answer },
@@ -1025,9 +1060,9 @@ export default function ShopifyPage() {
         {/* ── 5b. MID-PAGE CTA ─────────────────────────────────────────────── */}
         <MidPageCTA
           headline="Get a fixed quote and a launch date for your Shopify store"
-          sub="Tell us what you sell, how many products you have and whether you are already on Shopify. We reply with a scope, a fixed price and a launch date. No hourly billing, no obligation."
+          sub="Tell us what you sell, how many products you have and whether you are already on Shopify. We reply with a scope, a fixed price and a launch date. Nothing is billed by the hour."
           label="Get my Shopify quote"
-          note="Bhavesh, our founder, reads every request and usually replies within 2 to 3 hours."
+          note="Working software on your own data before you sign. Founder replies within 24 hours."
         />
 
         {/* ── 6. WHAT WE BUILD ─────────────────────────────────────────────── */}
@@ -1246,17 +1281,50 @@ export default function ShopifyPage() {
 
         {/* ── 10. COMPARISON TABLE ─────────────────────────────────────────── */}
         <ComparisonTable
-          eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. US Shopify Agency vs. Freelancer vs. Theme Store"
-          lead="Not all Shopify development options deliver the same result. Here's what the decision actually looks like when you compare side by side."
-          pullQuote={{
-            stat: 'Fixed price',
-            caption: 'quoted upfront. Same Figma design, Liquid engineering, and Lighthouse audits as a US Shopify agency project that costs several times more.',
-          }}
+          eyebrow="WHICH BUILD YOU NEED"
+          headline="Theme customisation, custom build or Shopify Plus: what each phase includes"
+          lead="Most stores need one of three builds. We recommend the smallest one that does the job, and each is scoped and priced as its own phase."
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
-          footer="Timelines reflect typical US market ranges as of 2026. FactoryJet fixed-price contracts available for all tiers, quoted upfront after a free discovery call."
+          footer={
+            <>
+              Many brands start with theme customisation and move to a custom build later. For typical market costs, read{' '}
+              <Link href="/blog/shopify-development-cost-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
+                Shopify development cost in 2026
+              </Link>
+              .
+            </>
+          }
         />
+
+        {/* ── 10b. CUSTOM AND ENTERPRISE SHOPIFY ───────────────────────────── */}
+        <section id="custom-enterprise-shopify" className="border-y border-fj-neutral-200 bg-white py-14 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
+              <div className="lg:col-span-4">
+                <p className="fj-eyebrow">CUSTOM AND ENTERPRISE</p>
+                <h2 className="mt-3 font-fj-display text-[clamp(1.625rem,3vw,2.25rem)] font-bold leading-[1.15] tracking-[-0.03em] text-fj-ink">
+                  Custom and enterprise Shopify development
+                </h2>
+                <p className="mt-4 font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600">
+                  Four questions buyers ask before a custom theme, a private app or a Shopify Plus build. For B2B on Plus, see{' '}
+                  <Link href="/services/shopify-plus-b2b" className="font-medium text-[#B23E13] underline underline-offset-2">
+                    Shopify Plus B2B development
+                  </Link>
+                  .
+                </p>
+              </div>
+              <dl className="grid gap-4 lg:col-span-8">
+                {CUSTOM_SHOPIFY_FAQS.map((f) => (
+                  <div key={f.question} className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6">
+                    <dt className="font-fj-display text-[1.125rem] font-bold leading-snug tracking-[-0.02em] text-fj-ink">{f.question}</dt>
+                    <dd className="faq-answer mt-2 font-fj-body text-[0.9375rem] leading-relaxed text-fj-neutral-600">{f.answer}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </section>
 
         {/* ── 11b. HOW PRICING WORKS ───────────────────────────────────────── */}
         {/* Replaces TestimonialsSection here: the same real quote now sits near the
@@ -1320,6 +1388,31 @@ export default function ShopifyPage() {
           </div>
         </section>
 
+        {/* ── 11c. HOUSE TERMS ─────────────────────────────────────────────── */}
+        <section id="terms" className="border-y border-fj-neutral-200 bg-white py-14 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
+              <div className="lg:col-span-4">
+                <p className="fj-eyebrow">HOW WE WORK</p>
+                <h2 className="mt-3 font-fj-display text-[clamp(1.625rem,3vw,2.25rem)] font-bold leading-[1.15] tracking-[-0.03em] text-fj-ink">
+                  Terms on every Shopify build
+                </h2>
+                <p className="mt-4 font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600">
+                  Six terms, written into the proposal before work starts.
+                </p>
+              </div>
+              <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:col-span-8">
+                {HOUSE_TERMS.map((x) => (
+                  <li key={x.t} className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-5">
+                    <p className="font-fj-display text-lg font-semibold text-fj-ink">{x.t}</p>
+                    <p className="mt-1 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{x.d}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* ── 12. PRICING ──────────────────────────────────────────────────── */}
         <div id="pricing">
           <PricingTiers
@@ -1363,7 +1456,7 @@ export default function ShopifyPage() {
                 },
                 {
                   title: 'Support after launch, from the people who built it.',
-                  body: 'Every build includes a post-launch support window. After that, you can keep us on a monthly retainer for fixes, seasonal updates and new features.',
+                  body: 'Defects are fixed inside the build price for a cover period agreed before work starts. After that, fixes, seasonal updates and new features are each quoted and approved, with no monthly minimum.',
                   span: 'md:col-span-5',
                 },
               ].map((p) => (
@@ -1388,8 +1481,8 @@ export default function ShopifyPage() {
                   Most US brands avoid marketplace gigs. They prefer to <strong>hire a Shopify developer</strong> with a proven track record. Every FactoryJet project pairs you with a dedicated Shopify expert. We design, code, and deploy your store directly without account managers or contractor handoffs.
                 </p>
                 <p>
-                  Need ongoing engineering capacity? You can hire a dedicated developer on a monthly retainer. We handle theme updates, app setups, conversion tests, and seasonal landing pages. See how our{' '}
-                  <Link href="/services/shopify-maintenance-services" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify maintenance and support retainers</Link> work. Need broader technical architecture? Explore our{' '}
+                  Need ongoing engineering help? The same developer handles theme updates, app setups, conversion tests and seasonal landing pages, each quoted and approved first, with no monthly minimum. See how our{' '}
+                  <Link href="/services/shopify-maintenance-services" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify maintenance and support</Link> work. Need broader technical architecture? Explore our{' '}
                   <Link href="/services/ecommerce-development" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce development services</Link>. Already live and scaling? Review our{' '}
                   <Link href="/services/shopify-seo" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify SEO services</Link>. For a custom Online Store 2.0 theme coded from scratch, see{' '}
                   <Link href="/services/shopify-theme-development" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify theme development</Link>. For agents that work on orders, returns and ERP sync inside the store, see{' '}

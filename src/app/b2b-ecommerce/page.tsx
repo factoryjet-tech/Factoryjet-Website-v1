@@ -16,7 +16,17 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_MODIFIED = '2026-09-20';
+const PAGE_MODIFIED = '2026-10-29';
+
+/* House terms, approved wording (2026-10-16). Same terms as /services/ai-automation. */
+const HOUSE_TERMS = [
+  { t: 'A draft of your store before you sign', d: 'We build a working draft with your own products and one of your price lists, so you see the trade portal before you commit.' },
+  { t: 'Fixed price per phase', d: 'Each phase is scoped, priced and signed on its own. Nothing is billed by the hour.' },
+  { t: 'You own the code', d: 'The code, the repository and the admin accounts are yours from day one. Platform and app fees are billed to your own accounts.' },
+  { t: 'Defect cover inside the build price', d: 'Defects found after launch are fixed inside the build price, for a cover period we agree before work starts.' },
+  { t: 'Support only if you want it', d: 'After that, support is optional. Each change is quoted and approved before we do it.' },
+  { t: 'No monthly minimum', d: 'There is no monthly fee you pay whether you use it or not.' },
+] as const;
 
 export const metadata: Metadata = {
   title: 'B2B Ecommerce Website Development for DTC + B2B Brands | FactoryJet',
@@ -66,9 +76,9 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   { category: 'basics', question: 'What are the benefits of B2B ecommerce?', answer: 'Self-service ordering your buyers prefer, fewer manual errors, faster reorders, larger average orders, and hours back for your sales team. One system replaces the email-and-phone process that slows everyone down.' },
   { category: 'basics', question: 'How big is the B2B ecommerce market?', answer: 'US B2B ecommerce sales across sites, password-protected portals, and apps reached roughly $2.3 trillion in 2023, growing 17% year over year, according to Digital Commerce 360.' },
   { category: 'basics', question: 'Can DTC and B2B run on one site with different pricing?', answer: 'Yes. We build one storefront that serves retail shoppers and gives trade buyers their own login with tiered or contract pricing, net terms, and reordering, on one catalog and one inventory.' },
-  { category: 'platforms', question: 'What is the best B2B ecommerce platform?', answer: 'There is no single best one; it depends on your catalog size, B2B rules, and budget. Shopify Plus suits a clean DTC-plus-B2B model on one store, Adobe Commerce (Magento) suits deep native B2B and very large catalogs, BigCommerce offers strong mid-market B2B value, and our own Commerceflo fits when a unified multi-channel engine is the goal.' },
+  { category: 'platforms', question: 'What is the best B2B ecommerce platform?', answer: 'There is no single best one; it depends on your catalog size, B2B rules, and budget. Shopify Plus suits a clean DTC-plus-B2B model on one store, Adobe Commerce (Magento) suits deep native B2B and the largest catalogs, BigCommerce offers strong mid-market B2B value, and our own Commerceflo fits when a unified multi-channel engine is the goal.' },
   { category: 'platforms', question: 'How do I choose a B2B ecommerce platform?', answer: 'Match the platform to five things: your catalog size and complexity, your pricing rules (tiers, contracts, customer-specific catalogs), the integrations you need (ERP, PIM, POS, marketplaces), whether you also sell DTC, and your budget.' },
-  { category: 'platforms', question: 'Shopify Plus vs Adobe Commerce vs BigCommerce for B2B?', answer: 'Shopify Plus for speed, a clean admin, and DTC + B2B on one store. Adobe Commerce for deep native B2B (company accounts, shared catalogs, requisition lists) and very large catalogs. BigCommerce for strong B2B features at mid-market value.' },
+  { category: 'platforms', question: 'Shopify Plus vs Adobe Commerce vs BigCommerce for B2B?', answer: 'Shopify Plus for speed, a clean admin, and DTC + B2B on one store. Adobe Commerce for deep native B2B (company accounts, shared catalogs, requisition lists) and the largest catalogs. BigCommerce for strong B2B features at mid-market value.' },
   { category: 'platforms', question: 'Is there an open-source B2B ecommerce platform?', answer: 'Yes. Adobe Commerce (Magento Open Source) and WooCommerce are open-source options we build B2B on. They offer full control and no platform fees, in exchange for hosting and maintenance you own.' },
   { category: 'platforms', question: 'Can you build a wholesale ecommerce platform?', answer: 'Yes. A wholesale ecommerce platform is a B2B store built for trade buyers: gated catalogs, per-account price lists, minimum order quantities, volume tiers, net terms, and fast reordering. We build it on the platform that fits and connect it to your ERP.' },
   { category: 'features', question: 'What B2B ecommerce features can you build?', answer: 'Tiered and contract pricing, quote and approval workflows, account hierarchies, net terms, purchase-order checkout, gated catalogs, customer-specific catalogs, fast reordering, sales-rep order-on-behalf, and ERP integration.' },
@@ -76,7 +86,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   { category: 'features', question: 'Can you build a dealer or distributor portal?', answer: 'Yes. We build dealer, distributor, and wholesale portals with per-account pricing, order history, reordering, quote requests, and net terms, integrated with your ERP.' },
   { category: 'features', question: 'Can my sales reps place orders for accounts?', answer: 'Yes. We build order-on-behalf tools, account dashboards, and quoting so your reps work in the same system your buyers do, with full visibility of pricing and history.' },
   { category: 'wholesale', question: 'What is a wholesale ecommerce platform?', answer: 'A wholesale ecommerce platform is a B2B store built for trade buyers rather than consumers. It holds wholesale pricing behind a login, enforces minimum order quantities and case or pallet units, gives each account its own catalogue and price list, offers net terms and on-account checkout, and makes reordering forty SKUs a one-click job.' },
-  { category: 'wholesale', question: 'What is the best B2B wholesale platform?', answer: 'It depends on catalogue size and trade complexity. Shopify Plus handles most wholesale operations cleanly and runs DTC on the same store. Adobe Commerce fits very large catalogues and deep native B2B. BigCommerce sits well in the mid-market.' },
+  { category: 'wholesale', question: 'What is the best B2B wholesale platform?', answer: 'It depends on catalogue size and trade complexity. Shopify Plus handles most wholesale operations cleanly and runs DTC on the same store. Adobe Commerce fits the largest catalogues and deep native B2B. BigCommerce sits well in the mid-market.' },
   { category: 'wholesale', question: 'Can you build a B2B ecommerce site for manufacturers?', answer: 'Yes. Manufacturer builds usually mean dealer and distributor portals: per-account pricing, spec sheets and technical attributes, configurable or made-to-order products, warranty registration, and reordering, all synced to the ERP that holds your part master.' },
   { category: 'wholesale', question: 'Can you build B2B ecommerce for distributors?', answer: 'Yes. Distributor builds centre on large attribute-heavy catalogues, parametric and compatibility search, customer-specific assortments, contract pricing, bulk order pads, and tight inventory accuracy across multiple warehouses.' },
   { category: 'wholesale', question: 'What is multi-channel commerce for B2B?', answer: 'Multi-channel commerce means every route an order can arrive by writes to one system. A self-service portal, EDI from national accounts, punchout from procurement platforms, rep-written orders, marketplaces, and retail or POS all share the same catalogue, pricing rules, and inventory pool.' },
@@ -90,7 +100,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   { category: 'working', question: 'Do you work with US B2B brands?', answer: 'Yes, most of the brands we work with are US-based, across DTC and B2B, with a decade-plus of commerce builds. You own and operate everything we build.' },
   { category: 'working', question: 'What do you need from us before the build starts?', answer: 'Your current catalog or ERP export, a list of account types and pricing rules such as tiers, contracts, and net terms, and one real example of how a buyer orders today. That is enough for us to scope accounts, pricing, and integrations before writing a proposal.' },
   { category: 'working', question: 'Who owns the code and the platform after launch?', answer: 'You do. We hand over the full codebase, admin access, and platform ownership at launch. There is no agency subscription or software rent; you run the store and pay only your own platform and hosting costs.' },
-  { category: 'working', question: 'What happens after our B2B ecommerce site launches?', answer: 'We support the cutover period, fix anything that surfaces under real order volume, and train your team on the admin, pricing rules, and ERP sync. After that you can run it yourself or keep us on for ongoing support and new features.' },
+  { category: 'working', question: 'What happens after our B2B ecommerce site launches?', answer: 'We support the cutover, train your team on the admin, pricing rules and ERP sync, and fix defects inside the build price for a cover period agreed before work starts. After that you can run it yourself, or ask us for changes one at a time. Each change is quoted and approved first, and there is no monthly minimum.' },
   { category: 'working', question: 'How is building a B2B ecommerce site different from a normal ecommerce build, process-wise?', answer: 'A DTC build mostly needs product pages, cart, and checkout. A B2B build adds account hierarchies, per-account pricing logic, quote and approval workflows, and ERP or EDI integration, so more of the work happens in mapping data and business rules before any storefront design starts.' },
 ];
 
@@ -706,6 +716,29 @@ export default function B2BEcommercePage() {
           </div>
         </section>
 
+        {/* ── House terms ── */}
+        <section className="pp-sec" id="terms">
+          <div className="pp-wrap">
+            <div style={{ display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'start' }} className="pp-herogrid">
+              <div>
+                <p className="pp-mlabel">{'// how we work'}</p>
+                <h2 style={{ marginTop: '10px' }}>Terms</h2>
+                <p className="pp-lead" style={{ marginTop: '14px' }}>
+                  The same six terms on every B2B build, written into the proposal before any work starts.
+                </p>
+              </div>
+              <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '14px' }}>
+                {HOUSE_TERMS.map((x) => (
+                  <li key={x.t} className="pp-card">
+                    <h3>{x.t}</h3>
+                    <p>{x.d}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* ── Portfolio ── */}
         <section className="pp-sec">
           <div className="pp-wrap">
@@ -859,7 +892,7 @@ export default function B2BEcommercePage() {
               </p>
               <div style={{ margin: '20px 0', borderTop: '1px solid var(--pp-line)' }} />
               {[
-                'Fixed proposal, no hourly billing surprises',
+                'Fixed price per phase, and no monthly minimum',
                 'You own the code and the system, not a subscription',
                 'Platform-agnostic: we recommend fit, not the most expensive option',
                 'Decade-plus building commerce: DTC, B2B, and unified',

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import SiteHeader from '@/components/v2/SiteHeader';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -12,7 +13,17 @@ import Net30PaymentComparison from '@/components/commerce/Net30PaymentComparison
 import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-29';
+const PAGE_MODIFIED = '2026-10-29';
+
+/* House terms, approved wording (2026-10-16). Same terms as /services/ai-automation. */
+const HOUSE_TERMS = [
+  { t: 'A draft of your store before you sign', d: 'We build a working draft on BigCommerce with your own products and one of your price lists, so you see the trade portal before you commit.' },
+  { t: 'Fixed price per phase', d: 'Each phase is scoped, priced and signed on its own. Nothing is billed by the hour.' },
+  { t: 'You own the code', d: 'The storefront, the middleware and the integration code sit in your own repository from day one. BigCommerce and app fees are billed to your own accounts.' },
+  { t: 'Defect cover inside the build price', d: 'Defects found after launch are fixed inside the build price, for a cover period we agree before work starts.' },
+  { t: 'Support only if you want it', d: 'After that, support is optional. Each change is quoted and approved before we do it.' },
+  { t: 'No monthly minimum', d: 'There is no monthly fee you pay whether you use it or not.' },
+] as const;
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/marketplace';
 
@@ -134,13 +145,13 @@ const FAQ_ITEMS = [
     category: 'commercials',
     question: 'What is FactoryJet’s pricing model for BigCommerce B2B development?',
     answer:
-      'We work on transparent fixed-price milestone contracts. We never charge percentage revenue shares. We never bill open-ended hourly rates.',
+      'Each phase is scoped, priced and signed on its own, paid in milestones, with no hourly billing and no share of your revenue. Defects found after launch are fixed inside the build price for a cover period agreed before work starts. Support after that is optional, each change is quoted and approved first, and there is no monthly minimum.',
   },
   {
     category: 'commercials',
     question: 'How do we schedule a BigCommerce B2B scoping call with the founder?',
     answer:
-      'You can book a 30-minute scoping call directly with Bhavesh Barot. We analyze your wholesale pricing rules and ERP architecture. Then we deliver a comprehensive fixed-scope proposal.',
+      'You can book a 30-minute scoping call directly with Bhavesh Barot. We analyze your wholesale pricing rules and ERP architecture. Then we send a fixed-scope proposal.',
   },
   {
     category: 'b2b',
@@ -335,12 +346,17 @@ export default function BigCommerceB2BPage() {
               <div>
                 <p className="pp-eyebrow">BigCommerce B2B Edition Agency.</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  Enterprise wholesale on. <span className="pp-grad">BigCommerce B2B.</span>
+                  Enterprise Wholesale on <span className="pp-grad">BigCommerce B2B</span>
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
                   Custom quoting engines, corporate hierarchies, and sales rep masquerade. Native PunchOut e-procurement and real-time ERP sync for distributors.
                 </p>
-                <HeroInlineForm source="us_bigcommerce_b2b_hero" region="us" submitLabel="Get a BigCommerce B2B Scope." />
+                <HeroInlineForm
+                  source="us_bigcommerce_b2b_hero"
+                  region="us"
+                  submitLabel="See a draft of my store"
+                  trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+                />
               </div>
 
               {/* Visual Architecture Graphic */}
@@ -731,6 +747,36 @@ export default function BigCommerceB2BPage() {
             </div>
           </div>
         </section>
+
+        {/* ── House terms ── */}
+        <section className="pp-sec tint" id="terms">
+          <div className="pp-wrap">
+            <div style={{ display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'start' }} className="pp-herogrid">
+              <div>
+                <p className="pp-mlabel">{'// how we work'}</p>
+                <h2 style={{ marginTop: '10px' }}>Terms on every BigCommerce B2B build</h2>
+                <p className="pp-lead" style={{ marginTop: '14px' }}>
+                  Six terms, written into the proposal before Phase 1 starts.
+                </p>
+              </div>
+              <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '14px' }}>
+                {HOUSE_TERMS.map((x) => (
+                  <li key={x.t} className="pp-card">
+                    <h3>{x.t}</h3>
+                    <p>{x.d}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <MidPageCTA
+          headline="Send us one price list and one real quote request."
+          sub="Tell us your ERP, your procurement systems and how your trade accounts order today. We reply with what the BigCommerce build would cover, phase by phase."
+          label="Talk to the founder"
+          note="Working software on your own data before you sign. Founder replies within 24 hours."
+        />
 
         {/* ── Comparison Table ── */}
         <section className="pp-sec">
