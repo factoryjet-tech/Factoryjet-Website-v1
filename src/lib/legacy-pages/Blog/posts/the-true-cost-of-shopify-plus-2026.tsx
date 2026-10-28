@@ -510,7 +510,7 @@ export const post: BlogPost = {
         13. Shopify vs Shopify Plus: When the Upgrade Pays
       </h2>
       <p className="mb-4 text-gray-700 leading-relaxed">
-        The fee gap is large, so the upgrade has to earn its keep through features or card savings. This table compares the plans on the five things buyers ask about most. Feature rows come from the plan comparison on <a href={SRC_PLANS_COMPARE} target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>Shopify&apos;s pricing page</a>, read on October 29, 2026. That page showed local-currency prices from our network, so the US Plus fee comes from the <a href={SRC_PLUS_PLAN} target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>Shopify Plus plan page in Shopify&apos;s help center</a>, read the same day. US prices for the lower plans are in section 3.
+        The fee gap is large, so the upgrade has to earn its keep through features or card savings. This table compares the plans on the five things buyers ask about most. Feature rows come from the plan comparison on <a href={SRC_PLANS_COMPARE} target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>Shopify&apos;s pricing page</a>, read on October 29, 2026. The US Plus fee comes from the <a href={SRC_PLUS_PLAN} target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>Shopify Plus plan page in Shopify&apos;s help center</a>, read the same day. US prices for the lower plans are in section 3.
       </p>
 
       <div className="overflow-x-auto mb-4">
@@ -587,7 +587,7 @@ export const post: BlogPost = {
         <li><strong>Checkout has to change.</strong> Custom fields, payment rules by customer type or extra steps for B2B need the full checkout customization that only Plus has.</li>
         <li><strong>An ERP syncs all day.</strong> A NetSuite or Odoo connection that pushes stock and orders every few minutes can hit standard API limits; Plus lists up to 10x on select APIs.</li>
         <li><strong>The team outgrows 15 logins.</strong> Warehouse, support and wholesale staff each needing an account is a common trigger.</li>
-        <li><strong>A second market or brand needs its own store.</strong> Plus includes up to 9 expansion stores; one contract covers one brand.</li>
+        <li><strong>A second market needs its own store.</strong> Plus includes up to 9 expansion stores for selling the same brand in other markets. A second brand needs its own Plus contract.</li>
       </ul>
       <p className="mb-8 text-gray-700 leading-relaxed">
         If none of these apply and your card sales sit below the break-even, Advanced is the cheaper plan. If two or more apply, see how our <a href="/services/shopify-plus-agency" className={LINK_CLASS}>Shopify Plus agency</a> plans the move. UK brands can see how we run Plus projects there on our <a href="/uk/shopify-plus" className={LINK_CLASS}>UK Shopify Plus page</a>.
