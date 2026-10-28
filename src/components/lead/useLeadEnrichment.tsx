@@ -76,7 +76,7 @@ export function useLeadEnrichment() {
     if (!active) return;
     const { ctx } = active;
     const filled = [
-      ...(['phone', 'company', 'message', 'projectType', 'timeline'] as const).filter((k) => f[k].trim() !== ''),
+      ...(['phone', 'company', 'message', 'projectType', 'timeline', 'companySize', 'budget', 'role'] as const).filter((k) => f[k].trim() !== ''),
       ...(f.systems.length ? ['systems'] : []),
       ...(f.brief ? ['brief'] : []),
     ];
@@ -97,6 +97,9 @@ export function useLeadEnrichment() {
       projectType: f.projectType,
       systems: f.systems,
       timeline: f.timeline,
+      companySize: f.companySize,
+      budget: f.budget,
+      role: f.role,
       brief: f.brief,
       source: ctx.source,
     });

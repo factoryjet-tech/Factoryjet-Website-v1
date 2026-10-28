@@ -77,6 +77,8 @@ async function writeLeadToFirestore(env, lead) {
       channel:           s(channelLabel(lead)),
       turnstileToken: s(lead.turnstileToken),
       turnstileVerdict: s(lead.turnstileVerdict),
+      // siteverify's error-codes when the verdict is 'failed' (see verifyTurnstile).
+      turnstileDetail: s(lead.turnstileDetail),
       // 'filled' when the form's hidden trap field had a value (see trapFilled).
       honeypot:   s(lead.honeypot),
       // Buyer | Vendor pitch | Likely spam | Test (see leadTypeOf).
@@ -194,7 +196,7 @@ async function writeLeadToERPNext(env, lead) {
   const leadType = LEAD_TYPES.includes(lead.leadType) ? lead.leadType : leadTypeOf(lead);
   // "Lead type" is the first line on purpose: the note is shared by the new-Lead
   // path and the returning-lead comment, so both open with the label.
-  const noteText = `Lead type: ${leadType}\nService: ${category}${lead.serviceInferred === 'yes' ? ' (guessed from the page, the form had no service picker)' : ''}\n${lead.service ? `Service picked on form: ${serviceLabel(lead.service)}\n` : ''}Came from: ${channelLabel(lead)}\n${lead.aiAssistant ? `AI assistant: yes (${lead.aiAssistant})\n` : ''}${attributionLines(lead)}Form: ${lead.source || 'Website'}\nForm page: ${isSafeSitePath(lead.page) ? `https://factoryjet.com${lead.page}` : (lead.page || 'N/A')}\nWebsite region: ${lead.region ? String(lead.region).toUpperCase() : 'Not specified'}\nVisitor country (from network): ${lead.ipCountry || 'unknown'}\nMessage: ${lead.message || 'N/A'}\nFirebase Doc ID: ${lead.docId || 'N/A'}`;
+  const noteText = `Lead type: ${leadType}\nService: ${category}${lead.serviceInferred === 'yes' ? ' (guessed from the page, the form had no service picker)' : ''}\n${lead.service ? `Service picked on form: ${serviceLabel(lead.service)}\n` : ''}Came from: ${channelLabel(lead)}\n${lead.aiAssistant ? `AI assistant: yes (${lead.aiAssistant})\n` : ''}${attributionLines(lead)}Form: ${lead.source || 'Website'}\nForm page: ${isSafeSitePath(lead.page) ? `https://factoryjet.com${lead.page}` : (lead.page || 'N/A')}\nWebsite region: ${lead.region ? String(lead.region).toUpperCase() : 'Not specified'}\nVisitor country (from network): ${lead.ipCountry || 'unknown'}\n${lead.turnstileVerdict === 'failed' ? `Bot check: failed (${lead.turnstileDetail || 'no reason given'}). Usually an expired token, not a bot.\n` : ''}Message: ${lead.message || 'N/A'}\nFirebase Doc ID: ${lead.docId || 'N/A'}`;
   // The phone prefix wins because the visitor typed it. The network country is
   // the fallback for the many leads that leave no phone.
   const country = countryFromPhone(lead.phone) || countryFromNetwork(lead.ipCountry);
@@ -610,7 +612,7 @@ function attributionLines(lead) {
  * value only becomes a link when it passes isStrictEmail or isSafeSitePath, so a
  * lead cannot plant its own buttons or links in the alert.
  */
-export function buildHtml({ name, email, phone, company, service, serviceCategory, serviceInferred, message, region, page, turnstileVerdict, trapFilled, erpLeadId, erpReturning, attribution }) {
+export function buildHtml({ name, email, phone, company, service, serviceCategory, serviceInferred, message, region, page, turnstileVerdict, turnstileDetail, trapFilled, erpLeadId, erpReturning, attribution }) {
   const a = attribution || {};
   const mailOk = isStrictEmail(email);
   const firstName = name ? String(name).trim().split(/\s+/)[0] : '';
@@ -663,7 +665,7 @@ export function buildHtml({ name, email, phone, company, service, serviceCategor
                 ${a.utmCampaign ? row('Campaign', escapeHtml(a.utmCampaign)) : ''}
                 ${page ? row('Form page', sitePath(page, 'color:#6B7280;font-size:12px;')) : ''}
                 ${turnstileVerdict === 'failed'
-                  ? row('Spam check', '<span style="color:#B23E13;font-weight:600;">Failed bot check — treat with suspicion</span>')
+                  ? row('Bot check', `<span style="color:#6B7280;">Token failed (${escapeHtml(turnstileDetail || 'no reason given')}). Usually an expired token: all 9 such leads to 28 Oct 2026 were real people.</span>`)
                   : ''}
                 ${trapFilled
                   ? row('Spam trap', '<span style="color:#B23E13;font-weight:600;">Hidden trap field was filled. Usually a bot, sometimes a real visitor whose browser autofilled it. Read before deleting.</span>')
@@ -768,16 +770,23 @@ export function isVendorPitch({ email, company, message }) {
  * Firestore doc, the CRM note and field, the email subject) so they cannot
  * disagree. First match wins:
  *   Test          name starts with "FactoryJet Test Lead" (our own checks)
- *   Likely spam   hidden trap field filled, or Turnstile verification failed
+ *   Likely spam   hidden trap field filled
  *   Vendor pitch  reads like someone selling to us (isVendorPitch)
  *   Buyer         everything else
  * It labels and never blocks: every type is saved, emailed and sent to the CRM
  * the same way. "Buyer" means nothing says otherwise. It does not mean qualified.
+ *
+ * A failed Turnstile check no longer makes a lead "Likely spam". Checked on
+ * 2026-10-28: all 9 leads ever saved with turnstileVerdict 'failed' (16 to 26 Oct)
+ * were real people, among them a live prospect (Obelisk) and 4 sellers. Bots
+ * send no token ('absent') or fill the trap. A token lives 5 minutes, so a
+ * visitor who reads the page before sending fails the check. The verdict and
+ * siteverify's reason are still saved and shown in the note and the email.
  */
 export const LEAD_TYPES = ['Buyer', 'Vendor pitch', 'Likely spam', 'Test'];
 export function leadTypeOf({ name, email, company, message, trapFilled, turnstileVerdict }) {
   if (/^\s*factoryjet test lead/i.test(String(name || ''))) return 'Test';
-  if (trapFilled || turnstileVerdict === 'failed') return 'Likely spam';
+  if (trapFilled) return 'Likely spam';
   if (isVendorPitch({ email, company, message })) return 'Vendor pitch';
   return 'Buyer';
 }
@@ -803,12 +812,14 @@ const SUBJECT_PREFIX = {
  *   - losing one real lead costs far more than receiving ten spam ones, and this
  *     file exists because a 2026-06-22 regression silently lost ~100% of leads.
  *
- * Returns: 'verified' | 'failed' | 'absent' | 'unchecked'
+ * Returns { verdict, detail }. verdict: 'verified' | 'failed' | 'absent' | 'unchecked'.
+ * detail says why a token failed: siteverify's error-codes, e.g.
+ * timeout-or-duplicate for an expired token (same as job-application.js).
  */
 async function verifyTurnstile(env, token, ip) {
   const secret = env && env.TURNSTILE_SECRET_KEY;
-  if (!secret) return 'unchecked';        // not configured — degrade quietly
-  if (!token) return 'absent';            // legit users can land here; not spam
+  if (!secret) return { verdict: 'unchecked', detail: '' };   // not configured — degrade quietly
+  if (!token) return { verdict: 'absent', detail: '' };       // legit users can land here; not spam
   try {
     const form = new FormData();
     form.append('secret', secret);
@@ -818,10 +829,12 @@ async function verifyTurnstile(env, token, ip) {
       method: 'POST', body: form,
     });
     const out = await res.json();
-    return out.success ? 'verified' : 'failed';
+    if (out && out.success) return { verdict: 'verified', detail: '' };
+    const codes = out && Array.isArray(out['error-codes']) ? out['error-codes'].join(', ') : '';
+    return { verdict: 'failed', detail: codes.slice(0, 200) || 'no error-codes returned' };
   } catch (err) {
     console.error('Turnstile verify error:', err);
-    return 'unchecked';                   // never let our own outage look like spam
+    return { verdict: 'unchecked', detail: '' };   // never let our own outage look like spam
   }
 }
 
@@ -883,6 +896,12 @@ export async function verifyEnrichToken(key, docId, token, now = Date.now()) {
 export const ENRICH_PROJECT_TYPES = ['New online store', 'Store rebuild or migration', 'B2B or wholesale portal', 'ERP or inventory integration', 'AI agent', 'Other'];
 export const ENRICH_SYSTEMS = ['Shopify', 'WooCommerce', 'BigCommerce', 'Magento', 'QuickBooks', 'NetSuite', 'Odoo', 'Salesforce', 'Faire', 'Amazon', 'Other'];
 export const ENRICH_TIMELINES = ['As soon as possible', 'Within 3 months', '3 to 6 months', 'Just researching'];
+// Added 2026-10-28 so a medium or large company stands out. Company sizes are
+// the stock options of ERPNext's Lead.no_of_employees, so the answer can be
+// written to that field (every Lead showed its default "1-10" before).
+export const ENRICH_COMPANY_SIZES = ['1-10', '11-50', '51-200', '201-500', '501-1000', '1000+'];
+export const ENRICH_BUDGETS = ['Under $10,000', '$10,000 to $25,000', '$25,000 to $50,000', '$50,000 to $100,000', 'Over $100,000', 'Not sure yet'];
+export const ENRICH_ROLES = ['Founder or owner', 'C-level or VP', 'Director or head of a team', 'Manager', 'Engineer or IT', 'Other'];
 export const MAX_BRIEF_BYTES = 5 * 1024 * 1024;
 
 export function cleanEnrichInput(body) {
@@ -896,6 +915,9 @@ export function cleanEnrichInput(body) {
     projectType: pick(b.projectType, ENRICH_PROJECT_TYPES),
     systems: [...new Set(systems)].join(', '),
     timeline: pick(b.timeline, ENRICH_TIMELINES),
+    companySize: pick(b.companySize, ENRICH_COMPANY_SIZES),
+    budget: pick(b.budget, ENRICH_BUDGETS),
+    role: pick(b.role, ENRICH_ROLES),
   };
 }
 
@@ -946,7 +968,7 @@ export function buildEnrichFirestoreRequest(env, docId, fields, source, nowIso =
   const apiKey  = (env && (env.FIREBASE_API_KEY || env.NEXT_PUBLIC_FIREBASE_API_KEY)) || FB_API_KEY;
   const s = (v) => ({ stringValue: v == null ? '' : String(v) });
   const out = { leadDocId: s(docId) };
-  for (const k of ['phone', 'company', 'message', 'projectType', 'systems', 'timeline', 'briefName']) if (fields[k]) out[k] = s(fields[k]);
+  for (const k of ['phone', 'company', 'message', 'projectType', 'systems', 'timeline', 'companySize', 'budget', 'role', 'briefName']) if (fields[k]) out[k] = s(fields[k]);
   // Present only when these details raise a flag (see handleEnrich). The lead doc
   // keeps the label it got at step 1 and cannot be updated.
   if (leadType && leadType !== 'Buyer') out.leadType = s(leadType);
@@ -1020,6 +1042,9 @@ export async function enrichLeadInERPNext(env, lead, sleep = (ms) => new Promise
     lead.projectType && `Project type: ${lead.projectType}`,
     lead.systems && `Systems: ${lead.systems}`,
     lead.timeline && `Timeline: ${lead.timeline}`,
+    lead.companySize && `Company size: ${lead.companySize} employees`,
+    lead.budget && `Budget: ${lead.budget}`,
+    lead.role && `Role: ${lead.role}`,
     lead.brief && `Brief attached: ${lead.brief.name}`,
     lead.phone && `Phone: ${lead.phone}`,
     lead.company && `Company: ${lead.company}`,
@@ -1071,6 +1096,16 @@ export async function enrichLeadInERPNext(env, lead, sleep = (ms) => new Promise
         console.warn('ERPNext enrich field update warning:', describeFetchError(err));
       }
     }
+    // Company size in its own request: ERPNext refuses the whole update when a
+    // Select value is not one of its options, and phone/company must not go with it.
+    if (lead.companySize) {
+      try {
+        const res = await send(`/api/resource/Lead/${encodeURIComponent(leadId)}`, 'PUT', { no_of_employees: lead.companySize });
+        if (!res.ok) console.warn('ERPNext enrich company size update returned HTTP', res.status);
+      } catch (err) {
+        console.warn('ERPNext enrich company size update warning:', describeFetchError(err));
+      }
+    }
     // A pitch typed into the details box: move the Lead's own label from Buyer to
     // Vendor pitch. Its own request, after the comment and the phone/company
     // update, so a refused value costs nothing. Read first: a Likely spam or Test
@@ -1092,7 +1127,7 @@ export async function enrichLeadInERPNext(env, lead, sleep = (ms) => new Promise
   return { saved: commented, leadId, returning };
 }
 
-function buildEnrichHtml({ name, email, phone, company, message, projectType, systems, timeline, briefName, erpLeadId, returning }) {
+function buildEnrichHtml({ name, email, phone, company, message, projectType, systems, timeline, companySize, budget, role, briefName, erpLeadId, returning }) {
   const erpLink = erpLeadId
     ? `<a href="${DEFAULT_ERPNEXT_URL}/app/lead/${encodeURIComponent(erpLeadId)}">${escapeHtml(erpLeadId)}</a>${returning ? ' (returning lead)' : ''}`
     : 'Updating in the background';
@@ -1108,6 +1143,9 @@ function buildEnrichHtml({ name, email, phone, company, message, projectType, sy
       ${row('Project type', escapeHtml(projectType || 'Not given'))}
       ${row('Systems', escapeHtml(systems || 'Not given'))}
       ${row('Timeline', escapeHtml(timeline || 'Not given'))}
+      ${row('Company size', escapeHtml(companySize ? `${companySize} employees` : 'Not given'))}
+      ${row('Budget', escapeHtml(budget || 'Not given'))}
+      ${row('Role', escapeHtml(role || 'Not given'))}
       ${row('Brief', briefName ? `${escapeHtml(briefName)} (attached)` : 'None')}
       ${row('Phone', escapeHtml(phone || 'Not given'))}
       ${row('Company', escapeHtml(company || 'Not given'))}
@@ -1115,6 +1153,11 @@ function buildEnrichHtml({ name, email, phone, company, message, projectType, sy
       ${row('CRM lead', erpLink)}
     </table></td></tr>
   </table></body></html>`;
+}
+
+/** 51+ employees or a budget of $25,000 or more: flagged in the email subject. */
+export function isLargerAccount({ companySize, budget } = {}) {
+  return ENRICH_COMPANY_SIZES.indexOf(companySize) >= 2 || ENRICH_BUDGETS.slice(2, 5).includes(budget);
 }
 
 async function sendEnrichEmail(env, data) {
@@ -1126,7 +1169,7 @@ async function sendEnrichEmail(env, data) {
       body: JSON.stringify({
         from: NOTIFY_FROM,
         to: [NOTIFY_TO],
-        subject: `📝 Details added: ${(data.name || data.email || 'website lead').replace(/[\r\n]+/g, ' ')}`,
+        subject: `${isLargerAccount(data) ? '🏢 Larger company · ' : ''}📝 Details added: ${(data.name || data.email || 'website lead').replace(/[\r\n]+/g, ' ')}`,
         html: buildEnrichHtml({ ...data, briefName: data.brief ? data.brief.name : '' }),
         ...(EMAIL_SHAPE.test(data.email || '') ? { reply_to: data.email } : {}),
         ...(data.brief ? { attachments: [{ filename: data.brief.name, content: bytesToBase64(data.brief.bytes) }] } : {}),
@@ -1264,7 +1307,7 @@ export async function onRequestPost(context) {
   }
 
   // Spam signal only — see verifyTurnstile. Never gates capture.
-  const turnstileVerdict = await verifyTurnstile(
+  const { verdict: turnstileVerdict, detail: turnstileDetail } = await verifyTurnstile(
     env, body.turnstileToken, request.headers.get('CF-Connecting-IP')
   );
   // Same rule for the hidden trap field. The forms used to drop these in the
@@ -1283,7 +1326,7 @@ export async function onRequestPost(context) {
   const fsResult = await writeLeadToFirestore(env, {
     docId, collection, name, email, phone, company, service, serviceCategory, serviceInferred, message, region, source, page,
     ...attribution,
-    turnstileToken: body.turnstileToken, turnstileVerdict,
+    turnstileToken: body.turnstileToken, turnstileVerdict, turnstileDetail,
     honeypot: trapFilled ? 'filled' : '',
     leadType, ipCountry,
   });
@@ -1295,7 +1338,7 @@ export async function onRequestPost(context) {
     docId: fsResult.docId || docId,
     name, email, phone, company, service, serviceCategory, serviceInferred, message, region, source, page,
     ...attribution,
-    leadType, ipCountry,
+    leadType, ipCountry, turnstileVerdict, turnstileDetail,
   }).then((result) => {
     if (!result.saved) console.error('ERPNext lead sync did not save:', result.error || result.status || 'unknown');
     return result;
@@ -1336,7 +1379,7 @@ export async function onRequestPost(context) {
           subject,
           html: buildHtml({
             name, email, phone, company, service, serviceCategory, serviceInferred, message, region, page,
-            turnstileVerdict, trapFilled, erpLeadId: erpResult.leadId, erpReturning: Boolean(erpResult.returning), attribution,
+            turnstileVerdict, turnstileDetail, trapFilled, erpLeadId: erpResult.leadId, erpReturning: Boolean(erpResult.returning), attribution,
           }),
           ...(isStrictEmail(email) ? { reply_to: email } : {}),
         }),

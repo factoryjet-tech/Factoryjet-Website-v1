@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {
   signEnrichToken, verifyEnrichToken, sanitizeDocId, cleanEnrichInput, buildEnrichFirestoreRequest,
   cleanBrief, ENRICH_PROJECT_TYPES, ENRICH_SYSTEMS, ENRICH_TIMELINES, MAX_BRIEF_BYTES,
+  ENRICH_COMPANY_SIZES, ENRICH_BUDGETS, ENRICH_ROLES, isLargerAccount,
 } from '../functions/api/notify-lead.js';
 
 const KEY = 'test-secret';
@@ -46,7 +47,7 @@ test('cleanEnrichInput trims and clips', () => {
   assert.equal(out.phone, '+1 555 0100');
   assert.equal(out.company.length, 100);
   assert.equal(out.message.length, 10_000);
-  assert.deepEqual(cleanEnrichInput({}), { phone: '', company: '', message: '', projectType: '', systems: '', timeline: '' });
+  assert.deepEqual(cleanEnrichInput({}), { phone: '', company: '', message: '', projectType: '', systems: '', timeline: '', companySize: '', budget: '', role: '' });
 });
 
 test('Firestore details go to a create-only sibling doc with only filled fields', () => {
@@ -257,6 +258,31 @@ test('the modal offers exactly the server lists', async () => {
   assert.deepEqual(listOf('PROJECT_TYPES'), ENRICH_PROJECT_TYPES);
   assert.deepEqual(listOf('SYSTEMS'), ENRICH_SYSTEMS);
   assert.deepEqual(listOf('TIMELINES'), ENRICH_TIMELINES);
+  assert.deepEqual(listOf('COMPANY_SIZES'), ENRICH_COMPANY_SIZES);
+  assert.deepEqual(listOf('BUDGETS'), ENRICH_BUDGETS);
+  assert.deepEqual(listOf('ROLES'), ENRICH_ROLES);
+});
+
+test('company size, budget and role keep only listed values', () => {
+  const ok = cleanEnrichInput({ companySize: '201-500', budget: '$50,000 to $100,000', role: 'C-level or VP' });
+  assert.deepEqual([ok.companySize, ok.budget, ok.role], ['201-500', '$50,000 to $100,000', 'C-level or VP']);
+  const bad = cleanEnrichInput({ companySize: '5000', budget: '$1', role: '<b>CEO</b>' });
+  assert.deepEqual([bad.companySize, bad.budget, bad.role], ['', '', '']);
+  const fs = buildEnrichFirestoreRequest({}, DOC, ok, 'test').body.fields;
+  assert.equal(fs.companySize.stringValue, '201-500');
+  assert.equal(fs.budget.stringValue, '$50,000 to $100,000');
+  assert.equal(fs.role.stringValue, 'C-level or VP');
+});
+
+test('larger account: 51+ employees or a $25,000+ budget', () => {
+  assert.equal(isLargerAccount({ companySize: '51-200' }), true);
+  assert.equal(isLargerAccount({ companySize: '1000+' }), true);
+  assert.equal(isLargerAccount({ companySize: '11-50' }), false);
+  assert.equal(isLargerAccount({ budget: '$25,000 to $50,000' }), true);
+  assert.equal(isLargerAccount({ budget: 'Over $100,000' }), true);
+  assert.equal(isLargerAccount({ budget: 'Not sure yet' }), false);
+  assert.equal(isLargerAccount({ budget: '$10,000 to $25,000' }), false);
+  assert.equal(isLargerAccount({}), false);
 });
 
 const b64 = (bytes) => Buffer.from(bytes).toString('base64');

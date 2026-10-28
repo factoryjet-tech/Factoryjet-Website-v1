@@ -71,10 +71,10 @@ test('leadTypeOf precedence: Test, then Likely spam, then Vendor pitch, then Buy
   assert.equal(leadTypeOf({ name: 'FactoryJet Test Lead (ignore)', ...pitch, trapFilled: true, turnstileVerdict: 'failed' }), 'Test');
   assert.equal(leadTypeOf({ name: '  factoryjet test lead 2', ...plain }), 'Test', 'leading space and case are ignored');
   assert.equal(leadTypeOf({ name: 'Sam', ...pitch, trapFilled: true }), 'Likely spam', 'trap outranks a pitch');
-  assert.equal(leadTypeOf({ name: 'Sam', ...pitch, turnstileVerdict: 'failed' }), 'Likely spam', 'failed bot check outranks a pitch');
+  assert.equal(leadTypeOf({ name: 'Sam', ...pitch, turnstileVerdict: 'failed' }), 'Vendor pitch', 'a failed bot check alone is not spam');
   assert.equal(leadTypeOf({ name: 'Sam', ...pitch }), 'Vendor pitch');
   assert.equal(leadTypeOf({ name: 'Dana', ...plain }), 'Buyer');
-  for (const turnstileVerdict of ['verified', 'absent', 'unchecked', undefined]) {
+  for (const turnstileVerdict of ['verified', 'absent', 'unchecked', 'failed', undefined]) {
     assert.equal(leadTypeOf({ name: 'Dana', ...plain, turnstileVerdict }), 'Buyer', `verdict ${turnstileVerdict} is not spam`);
   }
   assert.equal(leadTypeOf({ name: 'Dana Test', ...plain }), 'Buyer', 'only the exact test-lead name prefix counts');
@@ -228,7 +228,7 @@ test('a vendor pitch carries the same label in Firestore, the CRM, the task and 
   assert.match(mail.body.subject, /^🧾 Vendor pitch — New lead: Sam Okoro/);
 });
 
-test('trap or failed bot check wins over a pitch; the test-lead name wins over both', async () => {
+test('trap wins over a pitch, a failed bot check does not; the test-lead name wins over both', async () => {
   const pitch = { name: 'Sam Okoro', email: 'sam@example.com', message: SELLERS.paidLinks };
 
   const trapped = await submit({ ...pitch, honeypot: 'Acme Inc.' });
@@ -237,12 +237,16 @@ test('trap or failed bot check wins over a pitch; the test-lead name wins over b
   assert.equal(trapped.leadPosts[0].body.notes[0].note.split('\n')[0], 'Lead type: Likely spam');
   assert.equal(trapped.mail, undefined, 'a filled trap sends no alert email');
 
-  const failedCheck = freshErp((c) => (c.url.includes('challenges.cloudflare.com') ? [200, { success: false }] : null));
-  const bot = await submit({ ...pitch, turnstileToken: 'tok' }, { handler: failedCheck, env: { ...ENV, TURNSTILE_SECRET_KEY: 't' } });
-  assert.equal(bot.saved.body.fields.turnstileVerdict.stringValue, 'failed');
-  assert.equal(bot.saved.body.fields.leadType.stringValue, 'Likely spam');
-  assert.equal(bot.leadPosts[0].body.custom_lead_type, 'Likely spam');
-  assert.match(bot.mail.body.subject, /^⚠️ LIKELY SPAM — /);
+  // All 9 leads saved with a failed check (16 to 26 Oct 2026) were real people.
+  const failedCheck = freshErp((c) => (c.url.includes('challenges.cloudflare.com') ? [200, { success: false, 'error-codes': ['timeout-or-duplicate'] }] : null));
+  const expired = await submit({ ...pitch, turnstileToken: 'tok' }, { handler: failedCheck, env: { ...ENV, TURNSTILE_SECRET_KEY: 't' } });
+  assert.equal(expired.saved.body.fields.turnstileVerdict.stringValue, 'failed');
+  assert.equal(expired.saved.body.fields.turnstileDetail.stringValue, 'timeout-or-duplicate');
+  assert.equal(expired.saved.body.fields.leadType.stringValue, 'Vendor pitch');
+  assert.equal(expired.leadPosts[0].body.custom_lead_type, 'Vendor pitch');
+  assert.match(expired.leadPosts[0].body.notes[0].note, /Bot check: failed \(timeout-or-duplicate\)/);
+  assert.match(expired.mail.body.subject, /^🧾 Vendor pitch — /);
+  assert.match(expired.mail.body.html, /Token failed \(timeout-or-duplicate\)/);
 
   const ours = await submit({ ...pitch, name: 'FactoryJet Test Lead (ignore)', honeypot: 'x' });
   assert.equal(ours.saved.body.fields.leadType.stringValue, 'Test');
