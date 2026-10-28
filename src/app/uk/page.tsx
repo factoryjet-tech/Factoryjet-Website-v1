@@ -6,6 +6,7 @@ import DigitalLandscape from "./sections/DigitalLandscape";
 import Services from "./sections/Services";
 import Cities from "./sections/Cities";
 import Deliverables from "./sections/Deliverables";
+import Guides from "./sections/Guides";
 import TechStack from "./sections/TechStack";
 import Pricing from "./sections/Pricing";
 import FAQ from "./sections/FAQ";
@@ -23,7 +24,7 @@ import { ukSchemas, UK_CRUMBS } from "./schema";
 
 // Last date the content of /uk actually changed. Matches the `UPDATED` const
 // convention used by the UK hub pages (see src/app/uk/ai-agents/page.tsx).
-const UPDATED = "2026-08-25";
+const UPDATED = "2026-10-29";
 
 export function generateMetadata(): Metadata {
   return ukMetadata;
@@ -92,6 +93,10 @@ export default function UKPage() {
         <Services />
         <Cities />
         <Deliverables />
+
+        {/* 2026-10-29: UK guides grouped by job, so the indexed hub links the
+            UK posts and the UK service pages Google has not crawled yet. */}
+        <Guides />
 
         {/* Mid-page CTA, roughly halfway down. Before this the page had a hero
             CTA and a closing CTA and nothing in between. */}

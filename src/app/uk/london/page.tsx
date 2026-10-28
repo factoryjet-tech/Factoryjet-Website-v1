@@ -12,7 +12,7 @@ import CityLinksUK from '@/components/v2/CityLinksUK';
 import './london-hub.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/london';
-const UPDATED = '2026-10-10';
+const UPDATED = '2026-10-29';
 
 /* ─── Breadcrumb source of truth (drives the visible trail AND the JSON-LD) ─ */
 const crumbs = [
@@ -137,7 +137,7 @@ const WORKSTREAMS: { h: string; p: string }[] = [
   },
   {
     h: 'Local SEO',
-    p: 'The Google map pack, your Google Business Profile, review flow, and pages for the boroughs you genuinely serve. For a plumber in Islington or a dental practice in Clapham, this is usually where the first enquiries come from.',
+    p: 'The Google map pack, your Google Business Profile, review flow, and pages for the boroughs you actually serve. For a plumber in Islington or a dental practice in Clapham, this is usually where the first enquiries come from.',
   },
   {
     h: 'Digital PR and links',
@@ -237,11 +237,11 @@ const LOCAL_CHECK: string[] = [
   'A Google Business Profile with the correct primary category, real opening hours and the borough you actually trade in',
   'Name, address and phone number written identically everywhere they appear online',
   'A UK landline or a mobile you answer, listed on the page a searcher lands on, not buried on a contact form',
-  'One page per area you genuinely serve, written about that area, with different content on each',
+  'One page per area you actually serve, written about that area, with different content on each',
   'LocalBusiness structured data whose values match what a visitor can read on the page',
   'Real photographs of your premises, your team or your work, rather than stock images of a generic office',
   'A steady flow of reviews from real customers, with public replies to the awkward ones as well as the kind ones',
-  'Transport and landmark references only where they are genuinely useful to a customer finding you',
+  'Transport and landmark references only where they are useful to a customer finding you',
   'Analytics configured so you can see London enquiries separately from the rest of the UK',
   'A check that your listing is not duplicated across old addresses from a previous office',
 ];
@@ -310,6 +310,56 @@ const SOURCES: { href: string; label: string; cite: string; note: string }[] = [
   },
 ];
 
+/* ─── London ecommerce section (added 2026-10-29) ───────────────────── */
+const ECOM_JOBS: { h: string; p: string; href: string; link: string }[] = [
+  {
+    h: 'Shopify development and redesign',
+    p: 'A new Shopify store, or a redesign of the one you have, on a custom theme. We map every old web address to its new one before launch so the pages that already rank keep their place. A store on a custom theme takes 3 to 5 weeks.',
+    href: '/uk/shopify-development',
+    link: 'Shopify developers for London stores',
+  },
+  {
+    h: 'Shopify Plus',
+    p: 'Builds and migrations to Shopify Plus from Magento, Adobe Commerce, WooCommerce, Salesforce Commerce Cloud or BigCommerce. That covers native B2B, checkout extensions, Shopify Functions and expansion stores for selling abroad. A store with subscriptions, B2B pricing or a migration takes 5 to 8 weeks.',
+    href: '/uk/shopify-plus',
+    link: 'Shopify Plus agency work',
+  },
+  {
+    h: 'Shopify and Xero sync',
+    p: 'Sales split by VAT rate, with refunds, Shopify fees and payouts posted to the accounts and tax rates your accountant picks. We choose and set up the connector app, or build the link where an app cannot do the job, then test it against a month of real orders.',
+    href: '/uk/shopify-xero-integration',
+    link: 'Shopify Xero integration',
+  },
+  {
+    h: 'B2B and trade ordering',
+    p: 'Trade portals for London wholesalers and distributors: customer-specific prices, quick order and reorder, quotes, and pay on account with credit limits. Orders and stock can sync with Sage, Microsoft Dynamics, NetSuite or SAP Business One.',
+    href: '/uk/ecommerce-consultant',
+    link: 'Not sure where to start? Book an ecommerce audit',
+  },
+];
+
+/* ─── London AI section (added 2026-10-29) ───────────────────────────── */
+const AI_JOBS: { h: string; p: string; href: string; link: string }[] = [
+  {
+    h: 'AI agents that do one written job',
+    p: 'An agent with a job description: qualify enquiries, book appointments, chase invoices or move order data between systems. It runs inside the tools you already use, and we show it working on your own data before you sign a contract.',
+    href: '/uk/ai-agents',
+    link: 'AI agents for UK businesses',
+  },
+  {
+    h: 'AI customer service',
+    p: 'Agents that answer chat, email and WhatsApp from wording you approve. They read order, stock and invoice data from your own systems, and they hand complaints and judgement calls to a person with a summary of the conversation so far.',
+    href: '/uk/ai-customer-service',
+    link: 'AI customer service agents',
+  },
+  {
+    h: 'AI consulting before you build',
+    p: 'A readiness check that ranks the use cases worth doing, looks at your data and at UK GDPR duties such as a DPIA (a data protection impact assessment), and decides whether to buy a tool or build one.',
+    href: '/uk/ai-consulting',
+    link: 'AI consultancy for UK businesses',
+  },
+];
+
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ──────────────── */
 const FAQ_CATEGORIES = [
   { key: 'f1', label: 'About FactoryJet' },
@@ -327,8 +377,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'We run projects remotely with scheduled video calls, which most London clients prefer because it is faster and cheaper. If an in-person kickoff matters for your project, we can arrange one.' },
   { category: 'f1', question: 'Who actually does the work on my project?',
     answer: 'Senior designers and engineers, with the founder involved on every account. You are not handed to a junior after the sales call. If that changes at any point, we tell you before it happens rather than after.' },
+  { category: 'f1', question: 'Are you an AI company that works with London businesses?',
+    answer: 'Yes. We build AI agents for London firms: customer service on chat, email and WhatsApp, enquiry qualification, booking and back-office work such as invoice chasing. Each agent has one written job, runs inside the tools you already use, and is shown working on your own data before you sign a contract.' },
   { category: 'f1', question: 'Why choose FactoryJet over a traditional London agency?',
-    answer: 'You get a fixed quote instead of open-ended day rates, full code ownership, monthly rather than annual commitments, and a team that builds for both Google and AI search. Most London agencies do one or two of those. Very few do all four.' },
+    answer: 'You get a fixed quote instead of open-ended day rates, full code ownership, monthly rather than annual commitments, and a team that builds for both Google and AI search. Most London agencies do one or two of those. Few do all four.' },
 
   // Websites & platforms
   { category: 'f2', question: 'How long does it take to build a website?',
@@ -339,6 +391,14 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Yes, one hundred percent. Code goes to your GitHub at launch, and your content and data stay yours. There is no lock-in and no rented platform. If you leave, you take a working site with you rather than a rebuild.' },
   { category: 'f2', question: 'Will a redesign hurt my existing rankings?',
     answer: 'It can, and that is exactly why redesign is the best moment to involve an SEO. Google says the earlier you bring one in, the better. We map every old URL to a new one, keep the pages that already earn impressions, and watch Search Console closely for a month after launch.' },
+  { category: 'f2', question: 'How do I find a good Shopify developer in London?',
+    answer: 'Ask for three live stores they built and open each one on your phone. Ask who writes the code, and whether the theme and any custom apps will sit in accounts you own. Check the firm in the Shopify partner directory. FactoryJet is a registered Shopify Partner, and we build a draft theme in your own store before you sign.' },
+  { category: 'f2', question: 'Do I need Shopify Plus, or is standard Shopify enough?',
+    answer: 'Standard Shopify suits most London shops. Plus is worth a look when you sell to trade buyers on the same store, need checkout rules a normal plan cannot run, or want expansion stores for other countries. Shopify UK listed Plus from £1,800 a month on a three-year term when we checked on 11 October 2026, so the features have to earn that fee.' },
+  { category: 'f2', question: 'Can you connect my Shopify store to Xero?',
+    answer: 'Yes. Sales post to Xero split by VAT rate, and refunds, Shopify fees and payouts go to the accounts your accountant chooses. Most stores need a connector app set up properly rather than custom code. We set it up, test it against a month of real orders, and write down what each line in Xero means.' },
+  { category: 'f2', question: 'What does an ecommerce agency in London actually do?',
+    answer: 'It designs and builds the online shop, connects it to payments, delivery and accounting, and supports it after launch. Some agencies also run SEO and ads. Ask any London ecommerce agency which of those it does in-house, and who you call when checkout breaks on a Saturday.' },
 
   // SEO & AI search
   { category: 'f3', question: 'Do you offer SEO for London businesses?',
@@ -350,7 +410,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'f3', question: 'What are GEO and AEO?',
     answer: 'GEO means generative engine optimisation and AEO means answer engine optimisation. Both describe structuring content so AI assistants can lift a clean answer out of it. In practice that means a direct answer near the top, question-shaped headings, and structured data that matches the visible text. Both are part of our SEO work, not a separate product.' },
   { category: 'f3', question: 'Do you do local SEO for a specific London borough?',
-    answer: 'Yes. Local SEO in London covers the Google map pack, your Google Business Profile, and pages for the areas you genuinely serve, whether that is Camden, Islington, or Croydon. We build one page per real service area, never thirty spun variants, because Google treats those as doorway pages.' },
+    answer: 'Yes. Local SEO in London covers the Google map pack, your Google Business Profile, and pages for the areas you actually serve, whether that is Camden, Islington, or Croydon. We build one page per real service area, never thirty spun variants, because Google treats those as doorway pages.' },
   { category: 'f3', question: 'Can you guarantee a first page ranking in London?',
     answer: 'No, and neither can anyone else. Google states directly that no one can guarantee a number one ranking, and warns you to walk away from any agency that claims it. What we can guarantee is that you will see your real positions every month and know exactly what we changed.' },
 
@@ -654,7 +714,7 @@ export default function LondonHubPage() {
                 </a>
                 <a className="scard" href="/uk/shopify-development">
                   <span className="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="20" r="1.6" fill="currentColor" /><circle cx="18" cy="20" r="1.6" fill="currentColor" /><path d="M2 3h3l2.6 13h11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
-                  <div><h3>Shopify Development</h3><p>Certified Shopify Partner builds, Shopify Plus, migrations, and <mark>shopify web design london</mark>.</p><span className="go">Explore Shopify →</span></div>
+                  <div><h3>Shopify Development</h3><p>Registered Shopify Partner builds, Shopify Plus, migrations, and <mark>shopify web design london</mark>.</p><span className="go">Explore Shopify →</span></div>
                 </a>
                 <a className="scard" href="/services/wordpress-development">
                   <span className="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="2" /><path d="M3 9h18" stroke="currentColor" strokeWidth="2" /></svg></span>
@@ -664,6 +724,84 @@ export default function LondonHubPage() {
                   <span className="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="16" height="12" rx="3" stroke="currentColor" strokeWidth="2" /><path d="M9 12v2M15 12v2M12 3v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></span>
                   <div><h3>AI Agents &amp; Automation</h3><p>Custom AI agents for intake, support, and scheduling, plus <mark>ai seo</mark> to get quoted by ChatGPT and Gemini.</p><span className="go">Explore AI →</span></div>
                 </a>
+              </div>
+            </MotionFadeUp>
+          </div>
+        </section>
+
+        {/* ═══ 5a. ECOMMERCE + SHOPIFY (added 2026-10-29) ═══ */}
+        <section className="sec" id="ecommerce-london">
+          <div className="wrap">
+            <MotionFadeUp>
+              <div style={{ maxWidth: 780 }}>
+                <span className="eyebrow">Ecommerce in London</span>
+                <h2>Ecommerce development and Shopify developers in London</h2>
+                <p style={{ fontSize: 16, marginTop: 12 }}>
+                  Most London shops that come to us already sell online. The store is slow, it was built by someone
+                  who has moved on, or it no longer talks to the accounts. As an ecommerce agency for London
+                  retailers and wholesalers, we take on the four jobs below, on Shopify and Shopify Plus, and we are
+                  a registered Shopify Partner.
+                </p>
+              </div>
+
+              <div className="split">
+                {ECOM_JOBS.map((j) => (
+                  <div className="panel" key={j.h}>
+                    <h3>{j.h}</h3>
+                    <p style={{ fontSize: 14.5, marginTop: 8 }}>{j.p}</p>
+                    <p style={{ fontSize: 14, marginTop: 10 }}>
+                      <a className="exlink" href={j.href}>{j.link} →</a>
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="callout">
+                <h3>Before you sign anything</h3>
+                <p>
+                  We build a draft theme inside your own Shopify store, so you see the redesign on your real products
+                  before there is a contract. The quote is a fixed price in writing. You own the theme code and any
+                  custom apps from the first day.
+                </p>
+              </div>
+            </MotionFadeUp>
+          </div>
+        </section>
+
+        {/* ═══ 5b. AI AGENTS (added 2026-10-29) ═══ */}
+        <section className="sec dotbg" id="ai-london">
+          <div className="wrap">
+            <MotionFadeUp>
+              <div style={{ maxWidth: 780 }}>
+                <span className="eyebrow">AI in London</span>
+                <h2>AI agents for London businesses</h2>
+                <p style={{ fontSize: 16, marginTop: 12 }}>
+                  If you are looking for an AI company in London to build something that does real work, start with
+                  one job that eats staff hours every week. We build that one agent, connect it to the systems you
+                  already run, and prove it on your own data before anyone talks about a second.
+                </p>
+              </div>
+
+              <div className="split-73">
+                <div className="panel">
+                  <h3>What we build for London firms</h3>
+                  <ul className="chk">
+                    {AI_JOBS.map((j) => (
+                      <li key={j.h}>
+                        <b>{j.h}.</b> {j.p}{' '}
+                        <a className="exlink" href={j.href}>{j.link} →</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="panel">
+                  <h3>Three first agents worth considering</h3>
+                  <ul className="chk">
+                    <li>A support agent for a Shopify store that answers order and delivery questions.</li>
+                    <li>An intake agent for a professional services firm that qualifies new enquiries.</li>
+                    <li>An accounts agent that chases overdue invoices raised in Xero.</li>
+                  </ul>
+                </div>
               </div>
             </MotionFadeUp>
           </div>
