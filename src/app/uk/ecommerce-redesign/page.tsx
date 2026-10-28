@@ -105,7 +105,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── Working with us ──
   { category: 'working', question: 'Can I see the redesign before I sign anything?',
-    answer: 'Yes. We build working software on your own data before you sign. For a store redesign that means a draft theme with your real products and collections, so you judge it on your own catalogue, not a mock-up. If you like it, we scope the full redesign and give you a fixed price. If not, you have lost an hour of your time.' },
+    answer: 'Yes. Working software on your own data before you sign. We set up a preview copy of your theme, unpublished, so live customers never see it. You open the preview link on your own phone, tap through a product page, the basket and checkout, and send us notes. After that, each phase is scoped, priced and signed on its own before work starts.' },
   { category: 'working', question: 'Which platforms do you redesign?',
     answer: 'Shopify and Shopify Plus, WooCommerce, BigCommerce and Adobe Commerce (Magento), plus headless stores built on Next.js. FactoryJet is a registered Shopify Partner. If the review shows your platform is the real problem, we plan a migration instead, and the redesign happens on the new platform as part of the same project.' },
   { category: 'working', question: 'Do you work with stores outside London?',
@@ -113,7 +113,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'working', question: 'Who owns the new theme and code?',
     answer: 'You do, from day one. The theme sits in your own store and the code in a repository in your name. Apps, hosting and any AI tools can run in your own accounts at cost, with no markup from us. If you ever move to another agency, they pick up everything without asking our permission.' },
   { category: 'working', question: 'What happens if something breaks after launch?',
-    answer: 'Defects are fixed inside the build price for a cover period we agree before work starts. After that, support is optional: each change is quoted and approved before we do it, and there is no monthly minimum. Many stores call us for a peak season check and little else, and that is fine.' },
+    answer: 'Defects are fixed inside the build price for a cover period we agree before work starts. After that, support is optional: each change is quoted and approved before we do it, and there is no monthly minimum. You can book a one-off check before peak season and nothing else.' },
   { category: 'working', question: 'Who will I deal with day to day?',
     answer: 'Senior people, with the founder, Bhavesh Barot, involved in every project. FactoryJet was founded in 2014 and has worked with more than 500 businesses, most of them in commerce, with 97% of projects delivered on time. The people who scope your redesign are the people who build it. The founder replies to new enquiries within 24 hours.' },
 ];

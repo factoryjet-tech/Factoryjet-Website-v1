@@ -117,7 +117,6 @@ const REDESIGN_SERVICES = [
     name: 'Homepage & Brand Refresh.',
     description:
       'Your homepage is your highest-stakes page. We redesign it with a clear value proposition above the fold. Social proof is positioned where trust decisions happen. The conversion path moves visitors from landing to contact without friction.',
-    example: 'Clients typically see 30-60% improvement in homepage engagement metrics within 30 days.',
     linkLabel: 'Get a free redesign audit',
     linkHref: '/contact',
   },
@@ -125,7 +124,6 @@ const REDESIGN_SERVICES = [
     name: 'Service & Product Pages.',
     description:
       'Service pages that only list features fail to convert. We redesign them with outcome-focused copy and structured content answering buyer questions. Strategic CTAs appear where user intent is highest.',
-    example: 'Well-structured service pages generate 2-3× more quote requests than feature-list pages.',
     linkLabel: 'See our process',
     linkHref: '#process',
   },
@@ -133,7 +131,6 @@ const REDESIGN_SERVICES = [
     name: 'E-Commerce Store Redesign.',
     description:
       'Cart abandonment, poor mobile checkout, and slow product pages hurt revenue. We redesign Shopify Plus, Shopify, and WooCommerce stores. We build conversion-focused layouts, fast catalog filtering, and mobile-first checkout flows.',
-    example: 'E-commerce redesigns regularly recover 15-25% of revenue lost to cart abandonment.',
     linkLabel: 'See e-commerce redesign pricing',
     linkHref: '#pricing',
   },
@@ -141,15 +138,13 @@ const REDESIGN_SERVICES = [
     name: 'Lead Generation Landing Pages.',
     description:
       'A landing page that fails to convert wastes ad spend. We redesign landing pages with a single clear offer. We match social proof to your audience and optimize form design for rapid lead capture.',
-    example: 'Optimized landing pages outperform original versions by 40-120% in form completion rate.',
     linkLabel: 'Book a strategy call',
     linkHref: '/contact',
   },
   {
     name: 'Mobile-First Responsive Rebuild.',
     description:
-      'Over 60% of US web traffic is on mobile devices. Google uses mobile page experience as a primary ranking signal. We audit your mobile experience and rebuild your site to pass Core Web Vitals on every device.',
-    example: 'Mobile-first rebuilds improve Google ranking positions for mobile searches within 60 days.',
+      'Most store and service traffic now arrives on a phone, and Google ranks pages on their mobile version. We audit your mobile experience and rebuild your site to pass Core Web Vitals on every device.',
     linkLabel: 'Start a conversation',
     linkHref: '/contact',
   },
@@ -157,7 +152,6 @@ const REDESIGN_SERVICES = [
     name: 'Page Speed & Performance Redesign.',
     description:
       'Your current site may look fine but fail due to slow load times and bloated page builder output. We rebuild with clean Next.js code that loads in under 2 seconds.',
-    example: 'Sites rebuilt from heavy page builders to clean code see 60-80% reduction in page load time.',
     linkLabel: 'Get a free speed audit',
     linkHref: '/contact',
   },
@@ -412,7 +406,7 @@ const FAQ_ITEMS = [
   /* ── Pricing & ROI ── */
   {
     category: 'pricing',
-    question: 'How much does a website redesign cost for a small business?',
+    question: 'How much does a website redesign cost for a growing business or online store?',
     answer:
       'A website redesign costs $3,000 to $75,000, with agencies charging $5,000 to $75,000 and freelancers $3,000 to $10,000, according to WebFX. The price depends on page volume, headless CMS or WordPress integration, e-commerce checkout requirements, and custom animations. FactoryJet quotes a fixed price up front after a free site audit, milestone-paid with no hourly billing surprises.',
   },
@@ -420,7 +414,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'What is the ROI of a website redesign?',
     answer:
-      'A high-performance redesign delivers ROI by increasing lead conversion rates, reducing mobile bounce rates, and lifting organic search visibility. Improving mobile page speed to under two seconds routinely lifts conversions by 20% to 50%. Businesses recover their redesign investment through increased inquiry volume within 60 to 90 days.',
+      'A high-performance redesign delivers ROI by increasing lead conversion rates, reducing mobile bounce rates, and lifting organic search visibility. Google research shows 53% of mobile visitors leave a page that takes more than 3 seconds to load, so speed fixes alone keep more of the traffic you already pay for. We agree the numbers to track before work starts, so you can judge the return yourself.',
   },
   {
     category: 'pricing',
@@ -452,7 +446,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'Will my redesigned site work on all devices and browsers?',
     answer:
-      'Yes. Every build is rigorously tested across Chrome, Safari, Firefox, and Edge. We also validate iOS and Android mobile viewports. We verify touch targets, responsive breakpoints, and WCAG accessibility on mobile hardware. This guarantees reliable user experiences across all devices.',
+      'Yes. Every build is rigorously tested across Chrome, Safari, Firefox, and Edge. We also validate iOS and Android mobile viewports. We verify touch targets, responsive breakpoints, and WCAG accessibility on mobile hardware. Anything that fails is fixed before launch.',
   },
 
   /* ── Trust & Results ── */
@@ -466,7 +460,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Can I see examples of website redesigns you have done?',
     answer:
-      'Yes. During our initial consultation, we provide live before-and-after case studies across professional services, home contractors, e-commerce stores, and healthcare practices. Documented client results include a 3× increase in contact form leads within 60 days. Clients also achieve over 60% reductions in mobile page load latency.',
+      'Yes. On the first call we walk you through live sites and stores we have built, with the old and new versions side by side. You can also ask for a working draft of your own redesign before you sign.',
   },
   {
     category: 'trust',
@@ -484,7 +478,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Who is the best website redesign agency in USA?',
     answer:
-      'The premier website redesign agency pairs modern engineering with rigorous SEO preservation and conversion rate optimization. FactoryJet delivers senior engineering and fixed pricing. We also provide Core Web Vitals guarantees and comprehensive 301 redirect mapping, ensuring your redesign generates measurable inbound revenue.',
+      'Pick the agency that will show you a working draft before you sign, map a 301 redirect for every URL that changes, and quote a fixed price per phase. FactoryJet does all three. We also test Core Web Vitals before launch and hand you the full codebase, so you are never tied to us for changes.',
   },
 
   /* ── Choosing a Redesign Partner ── */
@@ -498,7 +492,7 @@ const FAQ_ITEMS = [
     category: 'choosing',
     question: 'What should I ask a website redesign agency before hiring them?',
     answer:
-      'Ask five critical questions: Will you map 301 redirects for every changed URL? Do you guarantee passing Core Web Vitals scores? Do I receive full ownership of code and Figma design files? Is this project fixed-price or hourly? What technical warranty is provided post-launch? Clear answers identify dependable engineering partners.',
+      'Ask five critical questions: Will you map 301 redirects for every changed URL? Will you test Core Web Vitals before launch? Do I receive full ownership of code and Figma design files? Is this project fixed-price or hourly? What technical warranty is provided post-launch? Clear answers identify dependable engineering partners.',
   },
   {
     category: 'choosing',
@@ -751,6 +745,7 @@ export default function WebsiteRedesignPage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ businesses served. 12 years of building. Redesigns that keep what already works."
+          description="Redesigns for growing businesses, Shopify stores, B2B companies and DTC brands. Fixed price per phase, every ranking URL kept or redirected once, and the full codebase handed to you at launch."
         />
 
         {/* ── 4. WHAT IS A WEBSITE REDESIGN ────────────────────────────────── */}
@@ -846,7 +841,7 @@ export default function WebsiteRedesignPage() {
         <StrategicDarkSection
           eyebrow="THE REAL COST OF AN OUTDATED WEBSITE."
           headline="A site that loads in 8 seconds loses 53% of mobile visitors before they see a single word you wrote."
-          lead="Google research shows 53% of mobile visitors abandon a site that takes more than 3 seconds to load. The average small business website built on a heavy page builder loads in 6-12 seconds on mobile. That means more than half your mobile visitors: your highest-growth traffic segment, are leaving before your business has said anything. A website redesign isn't a marketing expense. It's plugging a leak."
+          lead="Google research shows 53% of mobile visitors abandon a site that takes more than 3 seconds to load. Sites built on heavy page builders often miss that 3 second mark on a phone. When they do, more than half of your mobile visitors leave before your page has said anything. A redesign that fixes load time stops that loss."
           pillars={[
             {
               title: "Your site's first impression happens in 50 milliseconds.",
@@ -887,6 +882,7 @@ export default function WebsiteRedesignPage() {
           headline="Six Types of Website Redesign Projects We Deliver for Growing Businesses and Online Stores"
           lead="Every redesign starts with a specific problem. Here are the six most common, and what the solution actually looks like."
           sectors={REDESIGN_SERVICES}
+          variant="cards"
         />
 
         {/* ── 8. US MARKET CONTEXT ─────────────────────────────────────────── */}
