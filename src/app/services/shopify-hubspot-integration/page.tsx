@@ -224,7 +224,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'native',
     question: 'Which HubSpot plan do I need for the Shopify integration?',
     answer:
-      "HubSpot lists the integration for all products and plans, One part needs a paid plan: HubSpot says you need at least a Data Hub Starter subscription to create custom field mappings. Without it, you get the default field mappings only. If your team wants extra store fields on the contact or order record, plan for that subscription or a custom build.",
+      "HubSpot lists the integration for all products and plans. One part needs a paid plan. HubSpot says you need at least a Data Hub Starter subscription to create custom field mappings. Without it, you get the default field mappings only. If your team wants extra store fields on the contact or order record, plan for that subscription or a custom build.",
   },
   {
     category: 'native',
@@ -341,7 +341,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'Can I send you a brief or an RFP?',
     answer:
-      'Yes, and it speeds things up. Use the form on this page with your name and email. The next step lets you upload a brief or RFP as a PDF or Word file, and name your Shopify plan and HubSpot hubs. Bhavesh, the founder, reads it and replies within 24 hours with questions or a route.',
+      'Yes, and it speeds things up. Use the form on this page with your name and email. The next step lets you upload a brief or RFP as a PDF or Word file, and tell us your Shopify plan and HubSpot hubs in the message box. Bhavesh, the founder, reads it and replies within 24 hours with questions or a route.',
   },
   {
     category: 'working',
@@ -540,7 +540,7 @@ const COMPARE_ROWS: ReadonlyArray<ComparisonRow> = [
   },
   {
     feature: 'HubSpot plan needed',
-    values: ['Whatever you already have', 'Data Hub Starter or higher', 'Listed for all plans'],
+    values: ['Any plan; Enterprise only for custom objects', 'Data Hub Starter or higher', 'Listed for all plans'],
   },
   {
     feature: 'Right call when',
