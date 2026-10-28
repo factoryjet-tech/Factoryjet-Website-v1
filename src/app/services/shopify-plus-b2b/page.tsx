@@ -996,24 +996,31 @@ export default function ShopifyPlusB2BPage() {
                   Explore related capabilities: <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce platforms</Link>, <Link href="/services/shopify-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Shopify store development</Link>, <Link href="/services/shopify-edi-integration" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>EDI orders from B2B customers</Link>, <Link href="/agentic-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>agentic commerce</Link>, and <Link href="/services/ai-agent-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>AI agent operations</Link>.
                 </p>
               </div>
-              {/* Replaced the Impulse Branding quote on 2026-10-29: that client has a
-                  75+ page business site, not a B2B store. GPSUK is already named on
-                  /b2b-ecommerce. Its store runs on Commerceflo, and the card says so. */}
+              {/* B2B proof, 2026-10-29: GPSUK (Commerceflo) and Sow Easy (WordPress
+                  WooCommerce + Odoo), both approved for any page on 2026-10-29. They are
+                  B2B ordering work on other platforms, never presented as Shopify Plus
+                  builds. Facts come from their public case studies only. */}
               <div className="pp-proof">
                 <div className="top">
                   <div>
-                    <b>GPSUK</b>
-                    <span>Promotional products, United Kingdom</span>
+                    <b>B2B ordering we have built</b>
+                    <span>On Commerceflo and on WooCommerce with Odoo</span>
                   </div>
                 </div>
-                <p style={{ fontSize: '15px', lineHeight: 1.6, color: 'var(--pp-body)', margin: '0 0 18px 0' }}>
-                  A B2B storefront for a supplier whose business buyers reorder branded stock. Trade accounts log in,
-                  see their own account pricing, and move from quote to order without anyone retyping it.
+                <p style={{ fontSize: '15px', lineHeight: 1.6, color: 'var(--pp-body)', margin: '0 0 12px 0' }}>
+                  <b>GPSUK</b>, promotional products, United Kingdom. A trade storefront on Commerceflo. Business buyers
+                  log in, see their own account pricing, and move from quote to order without anyone retyping it.
                 </p>
-                <div className="rate">
-                  <span>Built by FactoryJet on Commerceflo, not Shopify Plus.</span>
+                <p style={{ fontSize: '15px', lineHeight: 1.6, color: 'var(--pp-body)', margin: '0 0 18px 0' }}>
+                  <b>Sow Easy</b>, B2B distribution. A trade store on WordPress WooCommerce that reads stock, pricing
+                  and SKUs from Odoo. The build is in progress and being tested on staging.
+                </p>
+                <div className="rate" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 18px' }}>
                   <Link href="/case-studies/gpsuk-promotional-products" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
                     Read the GPSUK case study →
+                  </Link>
+                  <Link href="/case-studies/sow-easy-distributor-portal" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
+                    Read the Sow Easy case study →
                   </Link>
                 </div>
               </div>

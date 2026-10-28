@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import MidPageCTA from '@/components/v2/MidPageCTA';
@@ -904,28 +905,32 @@ export default function BigCommerceB2BPage() {
                   </div>
                 </div>
               </div>
+              {/* B2B proof, 2026-10-29: GPSUK (Commerceflo) and Sow Easy (WordPress
+                  WooCommerce + Odoo), both approved for any page on 2026-10-29. They are
+                  B2B ordering work on other platforms, never presented as BigCommerce
+                  builds. Facts come from their public case studies only. */}
               <div className="pp-proof">
                 <div className="top">
-                  <Image
-                    src="/images/testimonials/vishal-impulse-branding-160.webp"
-                    alt="Vishal K, Impulse Branding."
-                    width={46}
-                    height={46}
-                    style={{ borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--pp-line)' }}
-                  />
                   <div>
-                    <b>Vishal K.</b>
-                    <span>Director, Impulse Branding.</span>
+                    <b>B2B ordering we have built</b>
+                    <span>On Commerceflo and on WooCommerce with Odoo</span>
                   </div>
                 </div>
-                <blockquote>
-                  &ldquo;In our business, clients size you up before they ever call. FactoryJet built us a website
-                  that looks as solid as our work. We now get qualified enterprise project inquiries through it.&rdquo;
-                </blockquote>
-                <div className="rate">
-                  <a href="/case-studies/impulse-branding-migration" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
-                    Read the Impulse Branding case study &rarr;.
-                  </a>
+                <p style={{ fontSize: '15px', lineHeight: 1.6, color: 'var(--pp-body)', margin: '0 0 12px 0' }}>
+                  <b>GPSUK</b>, promotional products, United Kingdom. A trade storefront on Commerceflo. Business buyers
+                  log in, see their own account pricing, and move from quote to order without anyone retyping it.
+                </p>
+                <p style={{ fontSize: '15px', lineHeight: 1.6, color: 'var(--pp-body)', margin: '0 0 18px 0' }}>
+                  <b>Sow Easy</b>, B2B distribution. A trade store on WordPress WooCommerce that reads stock, pricing
+                  and SKUs from Odoo. The build is in progress and being tested on staging.
+                </p>
+                <div className="rate" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 18px' }}>
+                  <Link href="/case-studies/gpsuk-promotional-products" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
+                    Read the GPSUK case study →
+                  </Link>
+                  <Link href="/case-studies/sow-easy-distributor-portal" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
+                    Read the Sow Easy case study →
+                  </Link>
                 </div>
               </div>
             </div>

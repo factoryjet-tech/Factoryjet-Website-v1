@@ -219,8 +219,13 @@ const SHOPIFY_TIMELINES = [
    is the Shopify build (naming approved 2026-09-29). Its card states only what the
    live store shows (fetched 2026-10-29: Shopify.theme schema "Holistico" with no
    Theme Store id, prices in USD, "U.S. shipping only", vitamin D and calcium,
-   Subscribe & Save, a Vitamin D + Whole Food Calcium bundle). Belle Maison and
-   GPSUK run on Commerceflo, not Shopify, and their cards say so. */
+   Subscribe & Save, a Vitamin D + Whole Food Calcium bundle). DTF Virginia is a
+   Shopify store (naming approved 2026-10-29). Its card states only what the live
+   store showed on 2026-10-29: dtf-virginia.myshopify.com, a custom theme with no
+   Theme Store id, USD prices, gang sheet builders per transfer size, "same-day
+   printing on orders before 3PM", a reseller sign-up, based in Hampton, VA. It has
+   no case study yet, so its card links to the live store. Belle Maison and GPSUK
+   run on Commerceflo, and their cards are labelled with that platform. */
 const PROOF_CASES = [
   {
     client: 'Shopholistico',
@@ -228,6 +233,15 @@ const PROOF_CASES = [
     platform: 'Built on Shopify',
     what: 'A custom Shopify theme for a brand selling whole-food vitamin D and calcium. Shoppers pick Subscribe & Save or buy the vitamin D and calcium bundle. The store ships within the U.S. only.',
     href: '/case-studies/shopholistico-shopify-store',
+    cta: 'Read the case study',
+  },
+  {
+    client: 'DTF Virginia',
+    market: 'Custom DTF transfers, Hampton, Virginia',
+    platform: 'Built on Shopify',
+    what: 'A custom Shopify theme for a print shop that sells DTF transfers, patches and stickers. Buyers build their own gang sheets at each transfer size, and resellers can sign up for an account. Orders placed before 3PM qualify for same-day printing.',
+    href: 'https://dtfvirginia.com/',
+    cta: 'See the live store',
   },
   {
     client: 'Belle Maison',
@@ -235,6 +249,7 @@ const PROOF_CASES = [
     platform: 'Built on Commerceflo',
     what: 'One storefront for retail shoppers and trade buyers. Trade accounts log in, see their own prices, and turn a quote into an order without anyone retyping it.',
     href: '/case-studies/belle-maison-ecommerce-success',
+    cta: 'Read the case study',
   },
   {
     client: 'GPSUK',
@@ -242,6 +257,7 @@ const PROOF_CASES = [
     platform: 'Built on Commerceflo',
     what: 'A B2B storefront for a supplier whose buyers reorder branded stock. Trade accounts browse the catalogue, get account pricing, and move from quote to order online.',
     href: '/case-studies/gpsuk-promotional-products',
+    cta: 'Read the case study',
   },
 ] as const;
 
@@ -776,7 +792,7 @@ export default function ShopifyPage() {
         <Hero
           formSlot={<HeroInlineForm region="us" source="us_services_shopify_development_hero"
             submitLabel="See a draft of my store"
-            trustText="A working draft built with your own products before you sign. Founder replies within 24 hours."
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
           />}
           eyebrow="SHOPIFY DEVELOPMENT · USA"
           headline="Custom Shopify stores for US brands, designed, built and supported by one team."
@@ -873,7 +889,7 @@ export default function ShopifyPage() {
                     <span className="font-fj-body text-[0.875rem] leading-snug text-fj-neutral-600">
                       <strong className="font-semibold text-fj-ink">Ricky B.</strong>, Founder, Belle Maison
                       <br />
-                      Store built by FactoryJet on Commerceflo, not Shopify.
+                      Store built by FactoryJet on Commerceflo.
                     </span>
                   </figcaption>
                 </figure>
@@ -896,7 +912,7 @@ export default function ShopifyPage() {
                       </p>
                       <p className="mt-2 font-fj-body text-[0.9375rem] leading-relaxed text-fj-neutral-600">{c.what}</p>
                       <p className="mt-3 font-fj-body text-[0.8125rem] font-semibold text-fj-ink">
-                        {c.platform} &middot; Read the case study <span aria-hidden="true">&rarr;</span>
+                        {c.platform} &middot; {c.cta} <span aria-hidden="true">&rarr;</span>
                       </p>
                     </Link>
                   ))}

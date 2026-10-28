@@ -312,7 +312,7 @@ export default function B2BEcommercePage() {
                   buyers self-serve, your team stops re-keying orders.
                 </p>
                 <HeroInlineForm source="us_b2b_hero" region="us" submitLabel="See a draft of my store"
-            trustText="A working draft built with your own products before you sign. Founder replies within 24 hours."
+            trustText="Working software on your own data before you sign. Founder replies within 24 hours."
           />
               </div>
               <div className="pp-stage" role="img" aria-label="A B2B storefront showing per-account price tiers, net terms, and a trade portal.">
@@ -656,6 +656,7 @@ export default function B2BEcommercePage() {
           headline="Ordering still living in emails and spreadsheets?"
           sub="Tell us your catalog size, ERP, and customer pricing rules. We will map how a unified portal replaces manual order entry."
           label="Talk to the founder"
+          note="Working software on your own data before you sign. Founder replies within 24 hours."
         />
 
         {/* ── How to choose ── */}
@@ -793,6 +794,15 @@ export default function B2BEcommercePage() {
                 <h3>Trade ordering for a promotional products supplier</h3>
                 <p className="pp-lead" style={{ marginTop: '16px', fontSize: '15px' }}>FactoryJet built GPSUK’s Commerceflo storefront for UK trade buyers. Account-based pricing and quote-to-order workflows support customers buying against agreed terms. We also provide ongoing SEO and AI search work.</p>
                 <Link href="/case-studies/gpsuk-promotional-products" className="rv-btn-secondary" style={{ marginTop: '18px' }}>Read the GPSUK case study →</Link>
+              </article>
+              {/* Sow Easy naming approved 2026-10-29. Facts from the public case study
+                  /case-studies/sow-easy-distributor-portal: WooCommerce on WordPress,
+                  Odoo as the source of stock, pricing and SKUs, build in progress. */}
+              <article className="pp-card">
+                <p className="pp-mlabel">Sow Easy · B2B distribution</p>
+                <h3>A WooCommerce trade store connected to Odoo</h3>
+                <p className="pp-lead" style={{ marginTop: '16px', fontSize: '15px' }}>FactoryJet is building Sow Easy’s trade store on WordPress WooCommerce. Stock, pricing and SKUs come from Odoo, so the website does not keep a second copy of that data. The build and the Odoo link are being tested on staging before launch.</p>
+                <Link href="/case-studies/sow-easy-distributor-portal" className="rv-btn-secondary" style={{ marginTop: '18px' }}>Read the Sow Easy case study →</Link>
               </article>
             </div>
             <div className="pp-card" style={{ marginTop: '28px' }}>
