@@ -114,7 +114,7 @@ const serviceSchema = {
   ],
   serviceType: 'E-Commerce Development',
   description:
-    'Custom e-commerce development for US brands, also delivered in the UK, the UAE and India. Shopify, WooCommerce, BigCommerce and headless Next.js stores: designed, built, launched and supported after launch. Custom-theme stores take 3 to 5 weeks, advanced stores 5 to 8 weeks, headless or custom builds 8 to 14 weeks. Fixed price, milestone-paid, full code ownership.',
+    'Custom e-commerce development for US brands, also delivered in the UK and the UAE. Shopify, WooCommerce, BigCommerce and headless Next.js stores: designed, built, launched and supported after launch. Custom-theme stores take 3 to 5 weeks, advanced stores 5 to 8 weeks, headless or custom builds 8 to 14 weeks. Fixed price per phase, milestone-paid, full code ownership.',
 };
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
@@ -242,13 +242,13 @@ const BUILD_TIMELINES = [
    say so. Shopholistico (naming approved 2026-09-29) is the Shopify proof. Its
    card states only what the live store showed on 2026-10-29: Shopify, USD,
    "we only ship within the U.S." on the shipping policy page, Subscribe & Save,
-   a full-routine bundle, and wholesale and affiliate links in the footer. */
+   a vitamin D and calcium bundle, and wholesale and affiliate links in the footer. */
 const PROOF_CASES = [
   {
     client: 'Shopholistico',
     market: 'Whole-food supplements · Ships within the US',
     platform: 'Built on Shopify',
-    what: 'A custom Shopify theme for a supplement brand. Shoppers can subscribe and save, buy the full routine as a bundle, and reach the wholesale and affiliate sign-ups from the footer.',
+    what: 'A custom Shopify theme for a supplement brand. Shoppers can subscribe and save, buy vitamin D and calcium together as a bundle, and reach the wholesale and affiliate sign-ups from the footer.',
     href: '/case-studies/shopholistico-shopify-store',
   },
   {
@@ -304,7 +304,7 @@ const ECOMM_STATS = [
   },
   {
     value: 'Fixed Price',
-    label: 'milestone-paid e-commerce builds with full code ownership.',
+    label: 'per phase, milestone-paid e-commerce builds with full code ownership.',
     microcopy: 'same design quality, same engineering standard, predictable from quote to launch.',
     categoryLabel: 'PRICING MODEL',
   },
@@ -381,7 +381,7 @@ const PRICING_TIERS = [
     name: 'Platform Store',
     priceRange: 'Get a quote',
     description:
-      'A custom-designed Shopify or WooCommerce store, ready to sell on launch day. Best for product-based businesses launching their first online store or replacing a template site.',
+      'A custom-designed Shopify or WooCommerce store, ready to sell on launch day. Best for stores that already trade and need a custom theme on the platform they run today.',
     features: [
       'Platform of your choice: Shopify or WooCommerce.',
       'Custom Figma design, homepage, PDP, collection, cart.',
@@ -482,7 +482,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How does FactoryJet keep e-commerce pricing fixed and predictable?',
     answer:
-      'We work fixed-price and milestone-paid. Every store is scoped upfront with no hourly billing or surprise invoices. Twelve years of building stores means we estimate accurately on the first call. The quote you sign is what you pay. You get Figma-first design, strict platform engineering, a Lighthouse performance audit, and full code ownership.',
+      'We give one fixed price per phase, paid at milestones. Every store is scoped upfront with no hourly billing or surprise invoices. Twelve years of building stores means we estimate accurately on the first call. The quote you sign is what you pay. You get Figma-first design, strict platform engineering, a Lighthouse performance audit, and full code ownership.',
   },
 
   /* ── Migrations ── */
@@ -524,7 +524,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from other e-commerce agencies?',
     answer:
-      'Four things: price, ownership, support and honesty. Every build has a fixed price, agreed before work starts. You own the full codebase on launch day, with no lock-in. We stay on after launch for fixes and improvements instead of handing you off. And we tell you when a simpler, cheaper setup fits better. We have delivered 500+ projects since 2014.',
+      'Four things: price, ownership, support and honesty. Every build has a fixed price per phase, agreed before work starts. You own the full codebase on launch day, with no lock-in. We stay on after launch for fixes and improvements instead of handing you off. And we tell you when a simpler, cheaper setup fits better. We have delivered 500+ projects since 2014.',
   },
   {
     category: 'trust',
@@ -585,13 +585,13 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How does pricing work for an e-commerce build?',
     answer:
-      'You get one fixed price for an agreed scope, written down before work starts. There is no hourly billing. You pay in milestones, usually tied to design approval, the staging store and launch. Platform fees (Shopify, BigCommerce) and app subscriptions are billed to you directly by those companies, so you always see them. If you add something mid-project, we quote that change before we build it.',
+      'You get one fixed price per phase, written down before work starts. There is no hourly billing. You pay in milestones, usually tied to design approval, the staging store and launch. Platform fees (Shopify, BigCommerce) and app subscriptions are billed to you directly by those companies, so you always see them. If you add something mid-project, we quote that change before we build it.',
   },
   {
     category: 'trust',
     question: 'What should I have ready before the first call?',
     answer:
-      'Nothing formal. It helps to know what you sell, roughly how many products and variants you have, which platform you are on today (if any), and one or two stores you like. If you have monthly traffic or sales numbers, bring them. We use the call to recommend a platform and scope, then send a fixed quote and a launch date.',
+      'Nothing formal. It helps to know what you sell, roughly how many products and variants you have, which platform you are on today, and one or two stores you like. If you have monthly traffic or sales numbers, bring them. We use the call to recommend a platform and scope, then send a fixed price per phase and a launch date.',
   },
   {
     category: 'trust',
@@ -757,10 +757,10 @@ export default function EcommerceDevelopmentPage() {
           }
           eyebrow="ECOMMERCE DEVELOPMENT COMPANY, USA"
           headline="We design, build and support online stores for US brands. Most go live in 3 to 5 weeks."
-          lead="Shopify, WooCommerce, BigCommerce or a custom headless build. We move your products, customers and SEO over, connect payments, shipping and email, and stay on after launch. You get a fixed quote before work starts, and you own the code."
+          lead="Shopify, WooCommerce, BigCommerce or a custom headless build. We move your products, customers and SEO over, connect payments, shipping and email, and stay on after launch. You get a fixed price per phase before work starts, and you own the code."
           secondaryCta={{ label: 'How pricing works', href: '#pricing-explained' }}
           trustItems={[
-            'Fixed quote before work starts',
+            'Fixed price per phase, upfront',
             '97% delivered on time or early',
             'You own the code on launch day',
           ]}
@@ -814,7 +814,7 @@ export default function EcommerceDevelopmentPage() {
                   data-speakable
                   className="mt-5 font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600"
                 >
-                  FactoryJet builds custom Shopify, WooCommerce, BigCommerce and headless stores for small and mid-size US brands. A custom-theme store takes 3 to 5 weeks. A store with subscriptions, B2B pricing or a migration takes 5 to 8 weeks. Headless and custom builds take 8 to 14 weeks. You get one fixed price after a free call, you pay in milestones, and you own the code and every login on launch day. After launch, the same team stays on to fix, test and improve the store.
+                  FactoryJet builds custom Shopify, WooCommerce, BigCommerce and headless stores for small and mid-size US brands. A custom-theme store takes 3 to 5 weeks. A store with subscriptions, B2B pricing or a migration takes 5 to 8 weeks. Headless and custom builds take 8 to 14 weeks. You get one fixed price per phase after a free call, you pay in milestones, and you own the code and every login on launch day. After launch, the same team stays on to fix, test and improve the store.
                 </p>
                 <p className="mt-4 font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600">
                   Not sure which platform fits? Start with our{' '}
@@ -1034,8 +1034,8 @@ export default function EcommerceDevelopmentPage() {
         {/* ── 5b. MID-PAGE CTA ─────────────────────────────────────────────── */}
         <div className="ec-growth-mid-cta">
         <MidPageCTA
-          headline="Get a fixed quote and a launch date for your store"
-          sub="Tell us what you sell, how many products you have and which platform you are on today. We reply with a platform recommendation, a fixed price and a launch date. No hourly billing, no obligation."
+          headline="Get a fixed price per phase and a launch date for your store"
+          sub="Tell us what you sell, how many products you have and which platform you are on today. We reply with a platform recommendation, a fixed price per phase and a launch date. No hourly billing, no obligation."
           label="Get my store quote"
           note="Bhavesh, our founder, reads every request and replies within 24 hours."
         />
@@ -1277,7 +1277,7 @@ export default function EcommerceDevelopmentPage() {
         <ComparisonTable
           eyebrow="THREE KINDS OF PROJECT"
           headline="Redesign, B2B portal or replatform: what each phase includes"
-          lead="Most stores that come to us already sell on Shopify, WooCommerce, Magento or BigCommerce. The work usually falls into one of these three projects, and many stores need two of them in sequence."
+          lead="These three projects are for stores already selling on Shopify, WooCommerce, Magento or BigCommerce. Many stores need two of them in sequence."
           pullQuote={{
             stat: 'One price per phase',
             caption: 'fixed and in writing before work starts, after you have seen a working draft in your own store. You sign the next phase only once the last one works.',
@@ -1310,7 +1310,7 @@ export default function EcommerceDevelopmentPage() {
                   How pricing works for an ecommerce build
                 </h2>
                 <p className="mt-5 font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-                  We do not publish one price, because a 40-product Shopify store and a B2B store synced to NetSuite are different jobs. What we do promise: one fixed price for an agreed scope, written down before work starts, paid in milestones. Nothing is billed by the hour.
+                  We do not publish one price, because a 40-product Shopify store and a B2B store synced to NetSuite are different jobs. What we do promise: one fixed price per phase, written down before work starts, paid in milestones. Nothing is billed by the hour.
                 </p>
                 <ul className="mt-6 space-y-3 font-fj-body text-[1rem] leading-[1.6] text-fj-neutral-600">
                   <li><strong className="font-semibold text-fj-ink">Platform.</strong> Shopify and WooCommerce builds cost less than headless or fully custom ones.</li>
@@ -1351,7 +1351,7 @@ export default function EcommerceDevelopmentPage() {
                     </li>
                   </ul>
                   <p className="mt-5 border-t border-fj-neutral-100 pt-5 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
-                    Want a number for your store? Fill in the form at the top of this page and we will send a fixed quote after a free 30-minute call.
+                    Want a number for your store? Fill in the form at the top of this page and we will send a fixed price per phase after a free 30-minute call.
                   </p>
                 </div>
               </div>
@@ -1396,8 +1396,8 @@ export default function EcommerceDevelopmentPage() {
         <div id="pricing" className="ec-growth-pricing">
           <PricingTiers
             eyebrow="PRICING"
-            headline="Transparent, Fixed-Price E-Commerce Development"
-            lead="No hourly billing. No scope creep surprises. Every tier includes a fixed price, fixed scope, and a delivery timeline we stand behind."
+            headline="E-Commerce Development at a Fixed Price per Phase"
+            lead="No hourly billing. No scope creep surprises. Every tier includes a fixed price per phase, a fixed scope and a delivery timeline we stand behind."
             tiers={PRICING_TIERS}
             footnote="Platform subscription fees (Shopify, BigCommerce) are billed directly by the platform. App subscription fees go directly to app providers. Every scope is quoted after a free discovery call. You own all code and credentials on launch day."
           />
@@ -1457,7 +1457,7 @@ export default function EcommerceDevelopmentPage() {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="text-[#3A3A40] leading-relaxed space-y-4">
                 <p>
-                  When you <strong>hire ecommerce developers</strong> through FactoryJet, you get a full team: designer, developer, and QA engineer. You do not get a single freelancer juggling multiple clients. As a custom ecommerce development company, we have delivered 500+ projects across the US, the UK, and the UAE. We build everything from DTC stores to multi-vendor marketplaces and B2B platforms.
+                  When you <strong>hire ecommerce developers</strong> through FactoryJet, you get a full team: designer, developer, and QA engineer. Each of them works on your store from kickoff to launch. As a custom ecommerce development company, we have delivered 500+ projects across the US, the UK, and the UAE. We build everything from DTC stores to multi-vendor marketplaces and B2B platforms.
                 </p>
                 <p>
                   You can hire a dedicated ecommerce developer for a fixed-scope build. Or keep a team on retainer for ongoing feature work. Either way, the codebase is yours on GitHub from launch day with no lock-in. Once the store is live, that same team can carry on as your{' '}
@@ -1627,11 +1627,11 @@ export default function EcommerceDevelopmentPage() {
           <FinalCTA
             variant="light"
             eyebrow="READY TO START"
-            headline="Get a fixed quote and a launch date for your store"
-            sub="In a free 30-minute call we look at your current store or plan, point out what is costing you sales, and recommend a platform. Then we send a fixed price and a launch date in writing. No pitch, no pressure."
+            headline="Get a fixed price per phase and a launch date for your store"
+            sub="In a free 30-minute call we look at your current store or plan, point out what is costing you sales, and recommend a platform. Then we send a fixed price per phase and a launch date in writing. No pitch, no pressure."
             primaryCta={{ label: 'Book a Free Store Call', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See Case Studies', href: '/case-studies' }}
-            objectionHandler="Fixed price. You own the code. Support after launch. 500+ projects delivered."
+            objectionHandler="Fixed price per phase. You own the code. Support after launch. 500+ projects delivered."
           />
         </div>
 
