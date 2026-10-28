@@ -896,9 +896,9 @@ export default function MelbournePage() {
               <div className="eyebrow">Ecommerce development Melbourne</div>
               <h2>Ecommerce website development in Melbourne</h2>
               <p className="lead">
-                About 390 searches a month in Melbourne are for ecommerce website development, and about 50 more are for
-                a Shopify developer. Most come from brands that already sell online and want a faster store, fewer
-                manual jobs, or trade customers ordering on the site instead of by email.
+                This section is about the build itself: platform, migration, checkout, trade ordering and accounts.
+                About 50 searches a month in Melbourne ask for a Shopify developer, and most come from brands that
+                already sell online and want a faster store with fewer manual jobs.
               </p>
             </div>
             <div className="factswrap">
@@ -909,8 +909,7 @@ export default function MelbournePage() {
                   Partner, and you own the store, the theme code and every account from day one.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
-                  For wholesalers and makers in the south east and the west, the store is an ordering system. Trade
-                  customers log in to see their own prices, reorder from past orders and pay on account, while orders,
+                  On a B2B build, trade customers log in to see their own prices, reorder from past orders and pay on account, while orders,
                   GST and invoices sync to Xero so nobody retypes them. See <a href="/au/ecommerce-development">ecommerce
                   development in Australia</a> and <a href="/au/shopify-development">Shopify development for Australian
                   businesses</a>.
