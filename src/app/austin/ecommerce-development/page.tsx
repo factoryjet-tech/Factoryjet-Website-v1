@@ -71,7 +71,7 @@ const DISTRICTS = [
   {
     corridor: 'East Austin & Artisan Studios',
     focus: 'Specialty CPG, Craft Beverages & Subscription Goods',
-    desc: 'Rapidly scaling food and beverage brands leveraging automated subscription billing workflows, bundled discount matrices, and Klaviyo lifecycle marketing automation.',
+    desc: 'Rapidly scaling food and beverage brands running automated subscription billing workflows, bundled discount matrices, and Klaviyo lifecycle marketing automation.',
   },
   {
     corridor: 'Mueller & Central Austin Commercial',
@@ -282,13 +282,13 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How do you prevent budget overruns during custom e-commerce builds?',
     answer:
-      'We conduct an in-depth discovery phase before writing any code. We document all catalog structures, third-party integrations, design specifications, and launch requirements in a detailed scope of work with guaranteed fixed pricing.',
+      'We conduct an in-depth discovery phase before writing any code. We document all catalog structures, third-party integrations, design specifications, and launch requirements in a detailed scope of work with a fixed price for each phase.',
   },
   {
     category: 'platforms',
     question: 'Why do you recommend Shopify Plus for scaling Austin consumer brands?',
     answer:
-      'Shopify Plus provides 99.99% cloud uptime, native Shop Pay accelerated checkout that lifts conversion by up to 50%, built-in B2B wholesale features, frictionless international expansion via Shopify Markets, and zero server maintenance overhead.',
+      'Shopify Plus provides 99.99% cloud uptime, native Shop Pay accelerated checkout (Shopify reports up to 50% better conversion than guest checkout, based on an April 2023 study it commissioned, per shopify.com/shop-pay), built-in B2B wholesale features, frictionless international expansion via Shopify Markets, and zero server maintenance overhead.',
   },
   {
     category: 'platforms',
@@ -324,7 +324,7 @@ const FAQ_ITEMS = [
     category: 'migration',
     question: 'How do you protect our Google SEO rankings when migrating from Magento or WooCommerce?',
     answer:
-      'We map out every single legacy URL and create comprehensive 1-to-1 301 redirects, preserve meta titles and descriptions, transfer product schema markup, and execute launch DNS cutover during off-peak hours to ensure zero ranking disruption.',
+      'We map out every legacy URL and create 1-to-1 301 redirects, preserve meta titles and descriptions, transfer product schema markup, and execute launch DNS cutover during off-peak hours to ensure zero ranking disruption.',
   },
   {
     category: 'migration',
@@ -394,15 +394,15 @@ const FAQ_ITEMS = [
   },
   {
     category: 'growth',
-    question: 'How do you guarantee sub-500ms page load speeds and 100/100 Core Web Vitals on large catalog Shopify Plus stores?',
+    question: 'How do you keep page loads fast and Core Web Vitals green on large catalog Shopify Plus stores?',
     answer:
-      'We eliminate third-party JavaScript bloat, implement critical CSS inlining, transcode images to next-generation AVIF/WebP formats, and utilize Cloudflare edge caching to deliver instantaneous page transitions.',
+      'We eliminate third-party JavaScript bloat, implement critical CSS inlining, transcode images to next-generation AVIF/WebP formats, and use Cloudflare edge caching so pages load quickly.',
   },
   {
     category: 'growth',
     question: 'How do you implement Schema.org JSON-LD structured data for Google Shopping, Merchant Center, and AI Overviews?',
     answer:
-      'We inject comprehensive Product, Offer, AggregateRating, Organization, and FAQPage JSON-LD schemas directly into each template, providing search engines and AI agents with precise price, inventory, and review metadata.',
+      'We inject Product, Offer, AggregateRating, Organization, and FAQPage JSON-LD schemas directly into each template, providing search engines and AI agents with precise price, inventory, and review metadata.',
   },
   {
     category: 'growth',
@@ -859,6 +859,12 @@ export default function AustinEcommerceDevelopmentPage() {
                   </li>
                 ))}
               </ul>
+              <div style={{ marginTop: '24px', background: '#F9F9FC', border: '1px solid #E6E6EC', borderLeft: '4px solid #FF5622', borderRadius: '12px', padding: '20px 22px', maxWidth: '72ch' }}>
+                <p style={{ margin: '0 0 8px', fontFamily: 'var(--font-geist-mono), monospace', fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#B23E13' }}>Client: European Garden (Exaco)</p>
+                <p style={{ fontSize: '15px', color: '#26252B', lineHeight: 1.6, margin: 0 }}>
+                  Exaco, a garden products company in Pflugerville, Texas, chose us to build the new Shopify store for its European Garden brand and to connect it to QuickBooks Enterprise. Before they signed, we built a draft theme inside their own Shopify store. The store is in build now.
+                </p>
+              </div>
               <div style={{ marginTop: '28px' }}>
                 <ModalCTAButton label="See a draft of my store" region="us" btnVariant="primary-dark" />
               </div>
@@ -872,7 +878,7 @@ export default function AustinEcommerceDevelopmentPage() {
           <EnterpriseArchitectureBlueprint
             badge="// AUSTIN ENTERPRISE E-COMMERCE BLUEPRINT"
             title="High-Scale Commerce: Next.js Storefront to Real-Time ERP"
-            subtitle="Explore how custom Next.js storefronts, headless Shopify Plus &amp; BigCommerce engines, NetSuite ERP middleware, and sub-second checkout pipelines operate together seamlessly."
+            subtitle="Explore how custom Next.js storefronts, headless Shopify Plus &amp; BigCommerce engines, NetSuite ERP middleware, and checkout pipelines fit together."
             legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
             targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
             ctaLabel="Get an E-Commerce Architecture Quote"
