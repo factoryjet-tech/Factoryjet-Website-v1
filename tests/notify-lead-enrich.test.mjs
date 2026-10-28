@@ -258,7 +258,6 @@ test('the modal offers exactly the server lists', async () => {
   assert.deepEqual(listOf('PROJECT_TYPES'), ENRICH_PROJECT_TYPES);
   assert.deepEqual(listOf('SYSTEMS'), ENRICH_SYSTEMS);
   assert.deepEqual(listOf('TIMELINES'), ENRICH_TIMELINES);
-  assert.deepEqual(listOf('COMPANY_SIZES'), ENRICH_COMPANY_SIZES);
   assert.deepEqual(listOf('BUDGETS'), ENRICH_BUDGETS);
   assert.deepEqual(listOf('ROLES'), ENRICH_ROLES);
 });

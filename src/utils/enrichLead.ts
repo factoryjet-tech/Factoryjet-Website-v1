@@ -16,7 +16,6 @@ export interface EnrichInput {
   projectType: string;
   systems: string[];
   timeline: string;
-  companySize: string;
   budget: string;
   role: string;
   /** base64 file from the modal, or null */
