@@ -34,7 +34,7 @@ const faqSchema = {
 };
 
 // Freshness signal. Bump only when the page content actually changes.
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-29';
 
 const webPageSchema = {
   '@context': 'https://schema.org',
@@ -69,7 +69,7 @@ export default function AiAgentDevelopmentPage() {
       <JsonLd id="ai-agent-webpage-schema" data={webPageSchema} />
       <JsonLd id="ai-agent-service-schema" data={serviceSchema} />
       <BreadcrumbSchema items={breadcrumbs} />
-      <SiteHeader cta={{ label: 'Tell us the workflow', href: '/contact' }} />
+      <SiteHeader cta={{ label: 'See a demo on my data', href: '/contact' }} />
       <AiAgentDevelopmentSections />
       <SiteFooter />
     </>
