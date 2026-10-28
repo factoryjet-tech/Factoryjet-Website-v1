@@ -199,7 +199,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'tools',
     question: 'Who owns the code and the prompts?',
     answer:
-      'You do, from day one. The workflows live in your own n8n, Make or Zapier account, and any custom code sits in a repository you own. The prompts are part of that code, written down and versioned, not hidden in our accounts. Credentials are yours, and AI usage is billed to your own Anthropic or OpenAI account with no markup from us. If you stop working with us, everything keeps running and any developer can pick it up.',
+      'You do, from day one. The workflows live in your own n8n, Make or Zapier account, and any custom code sits in a repository you own. The prompts are part of that code, written down and versioned in your repository. Credentials are yours, and AI usage is billed to your own Anthropic or OpenAI account with no markup from us. If you stop working with us, everything keeps running and any developer can pick it up.',
   },
   {
     category: 'tools',
@@ -211,7 +211,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'tools',
     question: 'Will this comply with GDPR and the EU AI Act if we sell into Europe?',
     answer:
-      'Compliance is your legal team\'s call, and we build so they can sign off. Personal data stays in accounts you control, and self-hosted n8n can run on servers in the EU. Per the European Commission\'s AI Act page (digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai), the transparency rules in Article 50 of the Act apply from August 2026: a customer talking to an AI agent must be told it is a machine. We build customer-facing agents to say so, and each step is logged.',
+      'Compliance is your legal team\'s call, and we build so they can sign off. Personal data stays in accounts you control, and self-hosted n8n can run on servers in the EU. The AI Act\'s transparency rules (Article 50) apply from August 2026, per the European Commission\'s AI Act page (digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai). Under them, a customer talking to an AI agent must be told it is a machine. We build customer-facing agents to say so, and each step is logged.',
   },
   {
     category: 'tools',
