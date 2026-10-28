@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {
   signEnrichToken, verifyEnrichToken, sanitizeDocId, cleanEnrichInput, buildEnrichFirestoreRequest,
   cleanBrief, ENRICH_PROJECT_TYPES, ENRICH_SYSTEMS, ENRICH_TIMELINES, MAX_BRIEF_BYTES,
-  ENRICH_COMPANY_SIZES, ENRICH_BUDGETS, ENRICH_ROLES, isLargerAccount,
+  ENRICH_COMPANY_SIZES, ENRICH_BUDGETS, ENRICH_ROLES, isLargerAccount, enrichSubject,
 } from '../functions/api/notify-lead.js';
 
 const KEY = 'test-secret';
@@ -283,6 +283,14 @@ test('larger account: 51+ employees or a $25,000+ budget', () => {
   assert.equal(isLargerAccount({ budget: 'Not sure yet' }), false);
   assert.equal(isLargerAccount({ budget: '$10,000 to $25,000' }), false);
   assert.equal(isLargerAccount({}), false);
+});
+
+test('step-2 subject: test and spam leads keep their step-1 prefix', () => {
+  const big = { name: 'FactoryJet Test Lead (Claude, ignore)', companySize: '201-500' };
+  assert.equal(enrichSubject({ ...big, leadType: 'Test' }), '🧪 TEST · 🏢 Larger company · 📝 Details added: FactoryJet Test Lead (Claude, ignore)');
+  assert.equal(enrichSubject({ ...big, leadType: 'Buyer' }), '🏢 Larger company · 📝 Details added: FactoryJet Test Lead (Claude, ignore)');
+  assert.match(enrichSubject({ name: 'Ann', leadType: 'Vendor pitch' }), /^🧾 Vendor pitch — 📝 Details added: Ann$/);
+  assert.equal(enrichSubject({ email: 'a@b.co' }), '📝 Details added: a@b.co');
 });
 
 const b64 = (bytes) => Buffer.from(bytes).toString('base64');

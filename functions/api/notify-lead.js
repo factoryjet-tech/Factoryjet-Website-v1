@@ -1160,6 +1160,14 @@ export function isLargerAccount({ companySize, budget } = {}) {
   return ENRICH_COMPANY_SIZES.indexOf(companySize) >= 2 || ENRICH_BUDGETS.slice(2, 5).includes(budget);
 }
 
+/** Step-2 email subject. Test, spam and vendor leads carry the same prefix as
+ *  their step-1 email, so a test is never read as a big new buyer. */
+export function enrichSubject(data = {}) {
+  const typePrefix = data.leadType && data.leadType !== 'Buyer' ? SUBJECT_PREFIX[data.leadType] || '' : '';
+  const sizePrefix = isLargerAccount(data) ? '🏢 Larger company · ' : '';
+  return `${typePrefix}${sizePrefix}📝 Details added: ${(data.name || data.email || 'website lead').replace(/[\r\n]+/g, ' ')}`;
+}
+
 async function sendEnrichEmail(env, data) {
   if (!env || !env.RESEND_API_KEY) { console.error('RESEND_API_KEY not set, enrich email skipped'); return false; }
   try {
@@ -1169,7 +1177,7 @@ async function sendEnrichEmail(env, data) {
       body: JSON.stringify({
         from: NOTIFY_FROM,
         to: [NOTIFY_TO],
-        subject: `${isLargerAccount(data) ? '🏢 Larger company · ' : ''}📝 Details added: ${(data.name || data.email || 'website lead').replace(/[\r\n]+/g, ' ')}`,
+        subject: enrichSubject(data),
         html: buildEnrichHtml({ ...data, briefName: data.brief ? data.brief.name : '' }),
         ...(EMAIL_SHAPE.test(data.email || '') ? { reply_to: data.email } : {}),
         ...(data.brief ? { attachments: [{ filename: data.brief.name, content: bytesToBase64(data.brief.bytes) }] } : {}),
@@ -1237,7 +1245,7 @@ async function handleEnrich(context, body, corsHeaders) {
   ]);
 
   // (3) Tell the inbox.
-  const emailed = await sendEnrichEmail(env, { name, email, ...fields, brief, erpLeadId: erp.leadId, returning: erp.returning });
+  const emailed = await sendEnrichEmail(env, { name, email, leadType: detailsType, ...fields, brief, erpLeadId: erp.leadId, returning: erp.returning });
 
   const ok = saved || emailed;
   return reply({ ok, saved, emailed }, ok ? 200 : 502);

@@ -8,7 +8,8 @@
  * the same GA4/GTM events (form_start, form_submit, form_success/error), sends
  * the notify-lead email, counts the lead, opens the step-2 details modal
  * (useLeadEnrichment), then goes to /thank-you.
- * Only name + email are required. Honeypot for spam; no blocking CAPTCHA.
+ * Only name + email are required. Honeypot plus invisible Turnstile for spam;
+ * neither blocks the submit.
  */
 
 import React, { useState, useRef } from 'react';
@@ -21,6 +22,7 @@ import {
   trackFormError,
 } from '@/utils/gtm';
 import { useLeadEnrichment } from '@/components/lead/useLeadEnrichment';
+import { useTurnstile } from '@/components/lead/useTurnstile';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -64,12 +66,14 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
   const emailRef = useRef<HTMLInputElement>(null);
   const errorRef = useRef<HTMLParagraphElement>(null);
   const enrichment = useLeadEnrichment();
+  const turnstile = useTurnstile();
 
   const onFirstInteraction = () => {
     if (startedRef.current) return;
     startedRef.current = true;
     trackFormStart(source);
     enrichment.prefetch();
+    turnstile.load();
   };
 
   const canSubmit = name.trim() !== '' && EMAIL_RE.test(email);
@@ -83,7 +87,8 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
       if (!canSubmit) return;
       setIsSubmitting(true);
       setError(null);
-      const kept = await keepTrappedLead({ name, email, region, source, service, honeypot });
+      const turnstileToken = await turnstile.freshToken();
+      const kept = await keepTrappedLead({ name, email, region, source, service, turnstileToken, honeypot });
       setIsSubmitting(false);
       setSent(kept);
       if (!kept) setError('Something went wrong. Please try again.');
@@ -114,7 +119,8 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
     trackFormSubmit(source, { service: service || '' });
     try {
       // Durable, server-first capture — never hangs on the browser Firestore SDK.
-      const { ok, docId, enrichToken } = await submitLead({ name, email, region, source, service });
+      const turnstileToken = await turnstile.freshToken();
+      const { ok, docId, enrichToken } = await submitLead({ name, email, region, source, service, turnstileToken });
       trackFormSuccess(source);
       // Counts the lead now, then opens the step-2 details modal; it goes to
       // /thank-you?...&counted=1 when the visitor sends or skips.
@@ -190,6 +196,9 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
             </a>
           )}
         </div>
+
+        {/* Invisible Turnstile (interaction-only): no visible widget unless challenged. */}
+        <div ref={turnstile.containerRef} className="empty:hidden" />
 
         {sent && <p className="mt-2 font-fj-body text-[13px]" role="status" style={{ color: '#0F2138' }}>Request sent. We reply within 24 hours.</p>}
       </div>

@@ -31,6 +31,7 @@ import {
 import { useContactModal } from '../context/ContactModalContext';
 import { markLeadSubmitted, submitLead } from '../utils/submitLead';
 import { keepTrappedLead } from '../utils/trappedLead';
+import { useTurnstile } from './lead/useTurnstile';
 import { containDialogFocus } from '../utils/dialogFocus';
 import {
   trackModalOpen,
@@ -53,7 +54,6 @@ interface FormData {
   company: string;
   service: ServiceType | '';
   message: string;
-  turnstileToken: string;
 }
 
 const defaultServices: {
@@ -125,8 +125,7 @@ const ContactFormModal: React.FC = () => {
   // Honeypot — real users never fill this; bots often do.
   const [honeypot, setHoneypot] = useState('');
   // Cloudflare Turnstile
-  const turnstileContainerRef = useRef<HTMLDivElement>(null);
-  const turnstileWidgetId = useRef<string | null>(null);
+  const turnstile = useTurnstile();
   const panelRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef<() => void>(() => {});
 
@@ -145,7 +144,7 @@ const ContactFormModal: React.FC = () => {
 
   const [formData, setFormData] = useState<FormData>({
     name: '', email: '', phone: '', company: '',
-    service: isSeoFlow ? 'seo' : '', message: '', turnstileToken: '',
+    service: isSeoFlow ? 'seo' : '', message: '',
   });
 
   // ── Body scroll lock ──────────────────────────────────────────────────────
@@ -191,56 +190,12 @@ const ContactFormModal: React.FC = () => {
 
   // ── Cloudflare Turnstile — mount on Step 2, invisible (interaction-only) ──
   // Runs in the background; only shows a challenge if Cloudflare deems it
-  // necessary. The token is captured if produced but never gates the submit.
+  // necessary. A fresh token is fetched at submit but never gates it.
+  const { load: loadTurnstile, remove: removeTurnstile } = turnstile;
   useEffect(() => {
-    if (step !== 2) {
-      if (turnstileWidgetId.current && window.turnstile) {
-        window.turnstile.remove(turnstileWidgetId.current);
-        turnstileWidgetId.current = null;
-      }
-      return;
-    }
-
-    const renderWidget = () => {
-      const container = turnstileContainerRef.current;
-      if (!container || !window.turnstile) return;
-      if (turnstileWidgetId.current) return; // already rendered
-      turnstileWidgetId.current = window.turnstile.render(container, {
-        sitekey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? '1x00000000000000000000AA',
-        callback: (token: unknown) => {
-          setFormData((prev) => ({ ...prev, turnstileToken: token as string }));
-        },
-        'expired-callback': () => setFormData((prev) => ({ ...prev, turnstileToken: '' })),
-        'error-callback': () => setFormData((prev) => ({ ...prev, turnstileToken: '' })),
-        theme: 'light',
-        appearance: 'interaction-only',
-        size: 'normal',
-      });
-    };
-
-    if (window.turnstile) {
-      renderWidget();
-      return;
-    }
-
-    const scriptId = 'cf-turnstile-script';
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
-      script.async = true;
-      script.defer = true;
-      script.onload = renderWidget;
-      document.head.appendChild(script);
-    } else {
-      let attempts = 0;
-      const poll = setInterval(() => {
-        attempts++;
-        if (window.turnstile) { clearInterval(poll); renderWidget(); }
-        if (attempts > 50) clearInterval(poll);
-      }, 100);
-    }
-  }, [step]);
+    if (step === 2) loadTurnstile();
+    else removeTurnstile();
+  }, [step, loadTurnstile, removeTurnstile]);
 
   // ── Field handlers ────────────────────────────────────────────────────────
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -290,6 +245,7 @@ const ContactFormModal: React.FC = () => {
       // (the server marks it likely spam) and count no conversion.
       if (!canSubmit()) { setIsSuccess(true); return; }
       setIsSubmitting(true);
+      const turnstileToken = await turnstile.freshToken();
       const kept = await keepTrappedLead({
         name:    formData.name,
         email:   formData.email,
@@ -299,7 +255,7 @@ const ContactFormModal: React.FC = () => {
         message: formData.message,
         region,
         source: 'contact_form',
-        turnstileToken: formData.turnstileToken,
+        turnstileToken,
         honeypot,
       });
       setIsSubmitting(false);
@@ -319,6 +275,7 @@ const ContactFormModal: React.FC = () => {
     try {
       // Durable, server-first capture (edge function write + email) with a
       // best-effort client Firestore write. Never hangs on the browser SDK.
+      const turnstileToken = await turnstile.freshToken();
       const { docId } = await submitLead({
         name:    formData.name,
         email:   formData.email,
@@ -328,7 +285,7 @@ const ContactFormModal: React.FC = () => {
         message: formData.message,
         region,
         source: 'contact_form',
-        turnstileToken: formData.turnstileToken,
+        turnstileToken,
       });
 
       trackFormSuccess('contact_form');
@@ -362,8 +319,8 @@ const ContactFormModal: React.FC = () => {
       setIsSuccess(false);
       setError(null);
       setHoneypot('');
-      turnstileWidgetId.current = null;
-      setFormData({ name: '', email: '', phone: '', company: '', service: isSeoFlow ? 'seo' : '', message: '', turnstileToken: '' });
+      turnstile.remove();
+      setFormData({ name: '', email: '', phone: '', company: '', service: isSeoFlow ? 'seo' : '', message: '' });
     }, 300);
   };
 
@@ -496,7 +453,7 @@ const ContactFormModal: React.FC = () => {
       </div>
 
       {/* Invisible Turnstile (interaction-only): no visible widget unless challenged. */}
-      <div ref={turnstileContainerRef} className="empty:hidden" />
+      <div ref={turnstile.containerRef} className="empty:hidden" />
 
       {error && (
         <div className="bg-red-50 text-red-600 px-4 py-3 rounded-xl text-sm">{error}</div>

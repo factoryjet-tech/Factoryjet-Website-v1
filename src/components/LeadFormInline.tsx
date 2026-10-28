@@ -14,6 +14,7 @@ import React, { useState, useRef } from 'react';
 import { Send, CheckCircle, Loader2 } from 'lucide-react';
 import { markLeadSubmitted, submitLead } from '@/utils/submitLead';
 import { keepTrappedLead } from '@/utils/trappedLead';
+import { useTurnstile } from '@/components/lead/useTurnstile';
 import {
   trackFormStart,
   trackFormSubmit,
@@ -61,7 +62,6 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
   const [service, setService] = useState('');
   const [message, setMessage] = useState('');
   const [honeypot, setHoneypot] = useState('');
-  const [token, setToken] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -71,50 +71,13 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const errorRef = useRef<HTMLDivElement>(null);
-  const turnstileContainerRef = useRef<HTMLDivElement>(null);
-  const turnstileWidgetId = useRef<string | null>(null);
-
-  // ── Invisible Turnstile (interaction-only) — never blocks submit ──────────
-  // Loaded on the first focus inside the form, not on page open (2026-10-17):
-  // the challenge pulls ~730 KB from challenges.cloudflare.com, and a missing
-  // token is stored as 'absent' by notify-lead.js, never as spam.
-  const loadTurnstile = () => {
-    const renderWidget = () => {
-      const container = turnstileContainerRef.current;
-      if (!container || !window.turnstile || turnstileWidgetId.current) return;
-      turnstileWidgetId.current = window.turnstile.render(container, {
-        sitekey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? '1x00000000000000000000AA',
-        callback: (t: unknown) => setToken(t as string),
-        'expired-callback': () => setToken(''),
-        'error-callback': () => setToken(''),
-        theme: 'light',
-        appearance: 'interaction-only',
-        size: 'normal',
-      });
-    };
-    if (window.turnstile) { renderWidget(); return; }
-    const scriptId = 'cf-turnstile-script';
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
-      script.async = true; script.defer = true; script.onload = renderWidget;
-      document.head.appendChild(script);
-    } else {
-      let attempts = 0;
-      const poll = setInterval(() => {
-        attempts++;
-        if (window.turnstile) { clearInterval(poll); renderWidget(); }
-        if (attempts > 50) clearInterval(poll);
-      }, 100);
-    }
-  };
+  const turnstile = useTurnstile();
 
   const onFirstInteraction = () => {
     if (startedRef.current) return;
     startedRef.current = true;
     trackFormStart(source);
-    loadTurnstile();
+    turnstile.load();
   };
 
   const canSubmit = name.trim() !== '' && EMAIL_RE.test(email);
@@ -126,9 +89,10 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
       // (the server marks it likely spam) and count no conversion.
       if (!canSubmit) { setIsSuccess(true); return; }
       setIsSubmitting(true);
+      const turnstileToken = await turnstile.freshToken();
       const kept = await keepTrappedLead({
         name, email, phone, company, service, message,
-        region, source, collection: collectionName, turnstileToken: token, honeypot,
+        region, source, collection: collectionName, turnstileToken, honeypot,
       });
       setIsSubmitting(false);
       if (kept) setIsSuccess(true);
@@ -161,9 +125,10 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
     try {
       // Durable, server-first capture (writes via the edge function + emails),
       // with a best-effort client Firestore write. Never hangs on the SDK.
+      const turnstileToken = await turnstile.freshToken();
       const { docId } = await submitLead({
         name, email, phone, company, service, message,
-        region, source, collection: collectionName, turnstileToken: token,
+        region, source, collection: collectionName, turnstileToken,
       });
       trackFormSuccess(source);
 
@@ -288,7 +253,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
         </div>
 
         {/* Invisible Turnstile (interaction-only) */}
-        <div ref={turnstileContainerRef} className="empty:hidden" />
+        <div ref={turnstile.containerRef} className="empty:hidden" />
 
         <button type="submit" disabled={isSubmitting}
           className="w-full bg-[#B23E13] hover:bg-[#d44d1f] text-white font-bold text-base py-3.5 rounded-xl shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2">
