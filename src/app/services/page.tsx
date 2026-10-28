@@ -99,6 +99,7 @@ const SERVICE_GROUPS: { label: string; items: { title: string; href: string }[] 
       { title: 'Replatforming', href: '/replatforming' },
       { title: 'Headless Shopify Development', href: '/services/headless-shopify-development' },
       { title: 'B2B Ecommerce', href: '/b2b-ecommerce' },
+      { title: 'Punchout Catalog Development', href: '/b2b-ecommerce/punchout-catalog' },
       { title: 'Shopify Theme Development', href: '/services/shopify-theme-development' },
       { title: 'Shopify Checkout Customization', href: '/services/shopify-checkout-customization' },
       { title: 'Ecommerce Audit', href: '/services/ecommerce-audit' },
@@ -109,6 +110,7 @@ const SERVICE_GROUPS: { label: string; items: { title: string; href: string }[] 
     items: [
       { title: 'Ecommerce ERP Integration', href: '/services/ecommerce-erp-integration' },
       { title: 'Shopify QuickBooks Integration', href: '/services/shopify-quickbooks-integration' },
+      { title: 'Shopify HubSpot Integration', href: '/services/shopify-hubspot-integration' },
       { title: 'Shopify EDI Integration', href: '/services/shopify-edi-integration' },
       { title: 'WordPress Shopify Integration', href: '/services/wordpress-shopify-integration' },
       { title: 'Faire Wholesale Marketplace', href: '/faire-wholesale-marketplace' },
@@ -120,6 +122,7 @@ const SERVICE_GROUPS: { label: string; items: { title: string; href: string }[] 
     label: 'AI agents',
     items: [
       { title: 'AI Agent Development', href: '/services/ai-agent-development' },
+      { title: 'Claude AI Agent Development', href: '/services/claude-ai-agent-development' },
       { title: 'Sales Order Automation Agents', href: '/services/sales-order-automation-ai-agents' },
       { title: 'Accounts Payable Automation', href: '/services/accounts-payable-automation' },
       { title: 'Accounts Receivable Automation', href: '/services/accounts-receivable-automation' },
@@ -128,6 +131,7 @@ const SERVICE_GROUPS: { label: string; items: { title: string; href: string }[] 
       { title: 'RFQ and Bidding Agent', href: '/services/ai-agent-development/rfq-bidding-agent' },
       { title: 'AI Quoting Software', href: '/services/ai-quoting-software' },
       { title: 'ERP AI Agents', href: '/services/erp-ai-agents' },
+      { title: 'CRM AI Agents for HubSpot and Salesforce', href: '/services/crm-ai-agents' },
       { title: 'NetSuite AI Agents', href: '/services/netsuite-ai-agents' },
       { title: 'Odoo AI Agents', href: '/services/odoo-ai-agents' },
       { title: 'Shopify AI Agents', href: '/services/shopify-ai-agents' },

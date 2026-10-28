@@ -591,7 +591,8 @@ export default function ShopifyPlusUKPage() {
               If you are on Magento and not yet sure about leaving, our <a href="/uk/magento">UK Magento agency</a> page
               explains how we decide between staying and moving. Many trade sellers weighing Plus B2B should also read
               our <a href="/uk/b2b-ecommerce">UK B2B ecommerce</a> page. For a move to standard Shopify or Plus, with UK
-              price ranges, see <a href="/uk/shopify-migration">Shopify migration for UK stores</a>.
+              price ranges, see <a href="/uk/shopify-migration">Shopify migration for UK stores</a>. If you are
+              staying on your current plan and want a new design, see our <a href="/uk/ecommerce-redesign">UK ecommerce redesign</a> page.
             </p>
           </div>
         </section>

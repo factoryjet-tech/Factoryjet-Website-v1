@@ -729,6 +729,7 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/shopify-development', t: 'Shopify development', b: 'Full store builds, with the accounting link planned from day one.' },
   { href: '/b2b-ecommerce', t: 'B2B ecommerce', b: 'Wholesale portals with account pricing.' },
   { href: '/services/shopify-plus-b2b', t: 'Shopify Plus B2B', b: 'Company accounts, price lists and payment terms.' },
+  { href: '/services/shopify-hubspot-integration', t: 'Shopify HubSpot integration', b: 'Customers, orders, B2B companies and deals in HubSpot.' },
   { href: '/services/ecommerce-audit', t: 'Free ecommerce audit', b: 'A written review of your store before you change anything.' },
   { href: '/services/shopify-maintenance-services', t: 'Shopify maintenance and support', b: 'Keeps the store and its connections current.' },
   { href: '/services/ai-integration-services', t: 'AI integration services', b: 'When the next system to connect is an AI agent.' },

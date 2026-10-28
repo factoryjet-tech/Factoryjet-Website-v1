@@ -815,6 +815,7 @@ export default function EcommerceConsultantUKPage() {
                   <a className="city-pill" href="/uk/ecommerce-development">Ecommerce development UK</a>
                   <a className="city-pill" href="/uk/shopify-development">Shopify development UK</a>
                   <a className="city-pill" href="/uk/magento">Magento UK</a>
+                  <a className="city-pill" href="/uk/ecommerce-redesign">Ecommerce redesign UK</a>
                   <a className="city-pill" href="/uk/ecommerce-seo">Ecommerce SEO UK</a>
                   <a className="city-pill" href="/uk/seo-audit">SEO audit UK</a>
                   <a className="city-pill" href="/contact">Contact us</a>

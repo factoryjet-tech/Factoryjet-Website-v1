@@ -1398,7 +1398,11 @@ export default function AiReceptionistPage() {
               <Link href="/tools/ai-agent-roi-calculator" className="underline decoration-[#F05A28]/40 hover:text-[#F05A28]">
                 AI agent ROI calculator
               </Link>{' '}
-              before you book a call.
+              before you book a call. If you are weighing other builders too, our{' '}
+              <Link href="/blog/best-ai-voice-agent-development-companies-2026" className="underline decoration-[#F05A28]/40 hover:text-[#F05A28]">
+                list of AI voice agent development companies
+              </Link>{' '}
+              compares them.
             </p>
           </div>
         </section>

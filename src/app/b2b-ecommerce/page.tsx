@@ -588,7 +588,12 @@ export default function B2BEcommercePage() {
               <Link href="/omnichannel-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                 omnichannel commerce
               </Link>{' '}
-              build covers the store, POS, and marketplace side of that in more depth.
+              build covers the store, POS, and marketplace side of that in more depth. For buyers who order from
+              inside Coupa, SAP Ariba or Jaggaer, see our{' '}
+              <Link href="/b2b-ecommerce/punchout-catalog" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                punchout catalog development
+              </Link>{' '}
+              page.
             </p>
             <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {MULTICHANNEL.map((u) => (

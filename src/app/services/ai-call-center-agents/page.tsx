@@ -1565,7 +1565,11 @@ export default function AiCallCenterAgentsPage() {
               <Link href="/services/ai-agent-development" className="underline decoration-[#F05A28]/40 hover:text-[#F05A28]">
                 AI agent development
               </Link>{' '}
-              practice: connect to the systems a business already runs, and agree in writing what the agent may do.
+              practice: connect to the systems a business already runs, and agree in writing what the agent may do. If you are comparing builders, our{' '}
+              <Link href="/blog/best-ai-voice-agent-development-companies-2026" className="underline decoration-[#F05A28]/40 hover:text-[#F05A28]">
+                list of AI voice agent development companies
+              </Link>{' '}
+              sets the main firms side by side.
             </p>
           </div>
         </section>

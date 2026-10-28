@@ -602,7 +602,8 @@ export default function ShopifyMigrationUKPage() {
                 and its{' '}
                 <a href={SRC_PLUS_CHECKLIST} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>Plus launch checklist</a>.
                 If the destination is Shopify Plus, our <a href="/uk/shopify-plus">UK Shopify Plus</a> page covers
-                what the bigger plan adds.
+                what the bigger plan adds. If the platform is fine and only the design has aged, our{' '}
+                <a href="/uk/ecommerce-redesign">UK ecommerce redesign</a> page covers a rebuild without moving.
               </p>
             </div>
           </div>

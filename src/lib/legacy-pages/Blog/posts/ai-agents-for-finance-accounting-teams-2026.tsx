@@ -326,6 +326,8 @@ export const post: BlogPost = {
         <a href="/services/erp-ai-agents">AI agents for ERP systems</a> and{' '}
         <a href="/services/ai-integration-services">AI integration services</a>. Purchasing teams should also read{' '}
         <a href="/blog/ai-agents-for-procurement-supply-chain-2026">AI agents for procurement and supply chain</a>.
+        If you are deciding whether to leave QuickBooks, our{' '}
+        <a href="/comparisons/netsuite-vs-quickbooks">NetSuite vs QuickBooks comparison</a> covers when the move pays off.
       </p>
 
       <h2 id="sources">Sources</h2>

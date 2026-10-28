@@ -688,6 +688,11 @@ export default function AiSdrPage() {
                   AI workflow automation
                 </Link>{' '}
                 builds. It is just aimed at your sales pipeline instead of back-office operations. Here is what runs under the hood.
+                For agents that keep working inside the CRM after the first reply, see our{' '}
+                <Link href="/services/crm-ai-agents" className="underline hover:text-[#F05A28]">
+                  AI agents for HubSpot and Salesforce
+                </Link>
+                .
               </p>
             </div>
 

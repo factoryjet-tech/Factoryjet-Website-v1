@@ -601,7 +601,9 @@ export default function BigCommerceB2BPage() {
             <h2 style={{ marginTop: '10px' }}>PunchOut cXML Architecture. Connecting Enterprise Buyers on SAP Ariba and Coupa.</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                Enterprise buyers, healthcare systems, and government teams often mandate PunchOut tools. Procurement teams access your catalog directly from within their internal ERP systems. They avoid public consumer storefronts completely.
+                Enterprise buyers, healthcare systems, and government teams often mandate PunchOut tools. Procurement teams access your catalog directly from within their internal ERP systems. They avoid public consumer storefronts completely. Our{' '}
+                <a href="/b2b-ecommerce/punchout-catalog" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>punchout catalog development</a>{' '}
+                page covers the same build across Shopify Plus, Adobe Commerce and custom stores.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. PunchOut Setup Request (cXML POSR)</h3>
               <p>

@@ -265,6 +265,9 @@ export default function EcommerceForManufacturersPage() {
                     </Link>. For retailers that order by EDI, see{' '}
                     <Link href="/services/shopify-edi-integration" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       Shopify EDI integration
+                    </Link>. For buyers who order from Coupa or SAP Ariba, see{' '}
+                    <Link href="/b2b-ecommerce/punchout-catalog" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                      punchout catalog development
                     </Link>. For trade channels, see our{' '}
                     <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       B2B e-commerce

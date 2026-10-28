@@ -110,6 +110,8 @@ const AGENT_DIRECTORY: { group: string; lead: string; items: { title: string; hr
     { title: 'Procurement & Supply Chain Agent', href: '/services/ai-agent-development/procurement-supply-chain-agent', line: 'Supplier emails, PO acknowledgements, open-PO follow-up' },
     { title: 'Manufacturing Operations Agent', href: '/services/ai-agent-development/manufacturing-operations-agent', line: 'Answers from ERP, CMMS and shop-floor data' },
     { title: 'AI Integration Services', href: '/services/ai-integration-services', line: 'Connect AI to your CRM, ERP and apps' },
+    { title: 'CRM AI Agents', href: '/services/crm-ai-agents', line: 'Qualify leads, update deals and log activity in HubSpot or Salesforce' },
+    { title: 'Claude AI Agent Development', href: '/services/claude-ai-agent-development', line: 'Agents built on the Claude API, MCP and Agent SDK' },
     { title: 'AI Development Services', href: '/services/ai-development', line: 'Custom AI applications, retrieval and system integration' },
     { title: 'AI Automation', href: '/services/ai-automation', line: 'Lead follow-up, invoicing and reporting, automated' },
     { title: 'AI Agent Monitoring', href: '/services/ai-agent-monitoring', line: 'Support, evaluations and upkeep after launch' },
@@ -303,7 +305,7 @@ function SalesAgents() {
           <li>It replies to a qualified lead and offers times from the right rep&apos;s calendar. Anything unclear goes to a person.</li>
           <li>It logs every step, so a sales manager can see why a lead was marked cold and change the rule.</li>
         </ol>
-        <p style={BODY_STYLE}>This is the work our <a href="/services/ai-sdr" style={INLINE_LINK}>AI SDR and BDR agents</a> page covers in detail. Before you sign, we run the agent on a sample of your recent leads, so you can set its scores beside your team&apos;s own calls.</p>
+        <p style={BODY_STYLE}>This is the work our <a href="/services/ai-sdr" style={INLINE_LINK}>AI SDR and BDR agents</a> page covers in detail. For agents that work inside the CRM itself, see <a href="/services/crm-ai-agents" style={INLINE_LINK}>AI agents for HubSpot and Salesforce</a>. Before you sign, we run the agent on a sample of your recent leads, so you can set its scores beside your team&apos;s own calls.</p>
       </div>
     </section>
   );
@@ -884,6 +886,7 @@ export default function AiAgentDevelopmentSections() {
               <a href="/services/shopify-ai-agents">Shopify AI agents: orders, wholesale POs, returns and ERP sync</a>
               <a href="/services/erp-ai-agents">ERP AI agents: quotes, orders and invoices inside your ERP</a>
               <a href="/services/netsuite-ai-agents">NetSuite AI agents: RFQs, sales orders and vendor bills in NetSuite</a>
+              <a href="/services/claude-ai-agent-development">Building AI agents on Claude: API, MCP servers and the Agent SDK</a>
               <a href="/services/ai-automation">Compare: AI Agent Development vs. AI Automation vs. AI Integration Services</a>
               <a href="/blog/what-is-agentic-ai">What Is Agentic AI? A Plain-Language Guide</a>
               <a href="/tools/ai-agent-roi-calculator">AI Agent Cost Calculator</a>

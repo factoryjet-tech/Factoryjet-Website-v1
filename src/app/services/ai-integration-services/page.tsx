@@ -199,8 +199,8 @@ const INTEGRATION_TYPES = [
     description:
       'We add AI-powered workflows directly inside HubSpot, Salesforce, Pipedrive, or Zoho. Sales reps generate email drafts with one click based on contact history. AI handles lead scoring and summarizes call notes without leaving your CRM.',
     example: 'Sales reps cut email writing time from 45 min to 8 min per day.',
-    linkLabel: 'See AI automation services',
-    linkHref: '/services/ai-automation',
+    linkLabel: 'See CRM AI agents',
+    linkHref: '/services/crm-ai-agents',
   },
   {
     name: 'E-Commerce AI Integration',
@@ -822,7 +822,11 @@ export default function AIIntegrationServicesPage() {
                 </p>
               </div>
               <p>
-                We connect GPT, Claude and specialized models using native APIs. A sales rep gets a personalized email draft with one click in HubSpot. A support agent opens Zendesk to find tickets pre-classified with drafted replies. A Shopify store creates optimized product descriptions upon adding a new SKU. Familiar workflows deliver AI-powered efficiency.
+                We connect GPT, Claude and specialized models using native APIs. A sales rep gets a personalized email draft with one click in HubSpot. A support agent opens Zendesk to find tickets pre-classified with drafted replies. A Shopify store creates optimized product descriptions upon adding a new SKU. Familiar workflows deliver AI-powered efficiency. If you want the agent built on Anthropic&apos;s models, see our{' '}
+                <a href="/services/claude-ai-agent-development" className="font-semibold underline underline-offset-2 text-[#B23E13]">
+                  Claude AI agent development
+                </a>{' '}
+                page.
               </p>
 
               <div className="grid grid-cols-2 gap-2" aria-hidden>
