@@ -463,7 +463,7 @@ const FAQ_ITEMS = [
     category: 'cost',
     question: 'How much does a custom CRM AI agent cost?',
     answer:
-      'Market figures vary widely. Development firm ProductCrafters puts a custom AI agent build at $5,000 to more than $180,000 in its 2026 breakdown. Consultant Justin McKelvey puts a first done-for-you AI install for an owner-led business at $4,500 to $25,000, as of September 2026. FactoryJet quotes a fixed price in writing after a short scoping call.',
+      'Market figures vary widely. Development firm ProductCrafters puts a custom AI agent build at $5,000 to more than $180,000 in its 2026 breakdown. Consultant Justin McKelvey puts a first done-for-you AI install for an owner-led business at $4,500 to $25,000, as of September 2026. FactoryJet quotes a fixed price in writing after a short scoping call. Both sources are linked below the questions.',
   },
   {
     category: 'cost',
@@ -492,6 +492,20 @@ const faqSchema = {
 /* ─────────────────────────────────────────────────────────────────────────────
    Page
 ───────────────────────────────────────────────────────────────────────────── */
+
+/** Market price sources named in the cost FAQ. Not FactoryJet prices. */
+const MARKET_PRICE_SOURCES = [
+  {
+    label: 'ProductCrafters: AI Agent Development Cost, 2026 pricing breakdown',
+    url: 'https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent/',
+    note: 'Custom AI agent builds at $5K to $180K+.',
+  },
+  {
+    label: 'Justin McKelvey: AI integration services',
+    url: 'https://justinmckelvey.com/blog/ai-integration-services',
+    note: 'A first done-for-you AI install at $4,500 to $25,000.',
+  },
+];
 
 const LINK_CLASS = 'font-semibold underline underline-offset-2 text-[#B23E13]';
 
@@ -525,12 +539,6 @@ export default function CrmAiAgentsPage() {
       />
 
       <SiteHeader
-        navLinks={[
-          { label: 'Services', href: '/services' },
-          { label: 'AI Agents', href: '/services/ai-agent-development' },
-          { label: 'AI Integration', href: '/services/ai-integration-services' },
-          { label: 'Contact', modal: true, region: 'us' },
-        ]}
         cta={{ label: 'See a demo on my data', modal: true, region: 'us' }}
       />
 
@@ -627,6 +635,7 @@ export default function CrmAiAgentsPage() {
 
         {/* ── 3. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
+          variant="statement"
           eyebrow="BY THE NUMBERS"
           headline="500+ businesses. 12 years of building. Agents your team can check."
         />
@@ -673,13 +682,14 @@ export default function CrmAiAgentsPage() {
               </p>
               <p>
                 In Salesforce, the agent signs in through a connected app with its own integration user. A permission
-                set limits it to the objects and fields the job needs, such as Lead, Contact and Opportunity, and
-                field history tracking shows each change it makes.
+                set limits it to the objects and fields the job needs, such as Lead, Contact and Opportunity. Field
+                history tracking, switched on for the fields the agent edits, shows each change in Salesforce, and the
+                agent&apos;s own action log records every change with its reason.
               </p>
               <p>
                 The model itself, Claude, GPT or Gemini, never touches the CRM directly. It uses{' '}
                 <a
-                  href="https://docs.anthropic.com/en/docs/build-with-claude/tool-use"
+                  href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={LINK_CLASS}
@@ -841,6 +851,25 @@ export default function CrmAiAgentsPage() {
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
+
+        {/* ── 11b. PRICE SOURCES (named in the cost FAQ) ───────────────────── */}
+        <section className="border-b border-fj-neutral-200 bg-white py-8">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.14em] text-fj-neutral-600">
+              PRICE SOURCES IN THE COST ANSWER
+            </p>
+            <ul className="mt-3 space-y-2 font-fj-body text-[0.9375rem] leading-relaxed text-fj-neutral-600">
+              {MARKET_PRICE_SOURCES.map((src) => (
+                <li key={src.url}>
+                  <a href={src.url} target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>
+                    {src.label}
+                  </a>
+                  . {src.note}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* ── 12. FINAL CTA ────────────────────────────────────────────────── */}
         <div id="final-cta">
