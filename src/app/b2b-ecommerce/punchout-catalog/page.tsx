@@ -50,6 +50,7 @@ export const metadata: Metadata = {
 const SRC_CXML = 'https://cxml.org/';
 const SRC_COUPA = 'https://compass.coupa.com/en-us/products/product-documentation/supplier-resources/supplier-integration-resources/purchase-orders-and-punchouts/punchout-ordering';
 const SRC_SHOPIFY_B2B = 'https://help.shopify.com/en/manual/b2b';
+const SRC_COUPA_CART_FAIL = 'https://compass.coupa.com/en-us/products/product-documentation/supplier-resources/for-suppliers/integration-resources/purchase-orders-and-punchouts/punchout-failed-punchout-failed-to-return-a-cart';
 const SRC_KOLONELL = 'https://kolonell.com/en/blog/punchout-catalog-integration-ariba-coupa-cost-2026';
 
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
@@ -79,9 +80,9 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   { category: 'platforms', question: 'We run a custom or older store. Can punchout still work?', answer: 'Yes. Punchout only needs your store to accept a setup request, start a logged-in session and send a cart back in the right format. We can build that as a small service that sits beside a custom or older store. If the store is due for replacement anyway, we can plan punchout into the new build so you only pay for it once.' },
   { category: 'erp', question: 'How do punchout orders get into our ERP?', answer: 'After the buyer approves the requisition, their system sends a purchase order, usually a cXML OrderRequest. We receive it, check it against the cart that was returned, and create the sales order in your ERP, such as NetSuite, SAP Business One, Dynamics 365 Business Central, Acumatica or Odoo. Order confirmations, ship notices and invoices can flow back to the buyer the same way.' },
   { category: 'erp', question: 'How do contract prices show up for each punchout buyer?', answer: 'Each punchout login carries the buyer\'s company identity. We map that identity to the right customer account in your store, which reads contract prices from your ERP or your price lists. The buyer sees only their agreed prices and approved items. The same prices are written into the returned cart, so the purchase order matches what the buyer saw on screen.' },
-  { category: 'erp', question: 'What usually goes wrong in a punchout project?', answer: 'Small data mismatches. Units of measure are the common one: Coupa\'s own documentation warns that a cart fails to load if a unit of measure from the punchout does not exist in Coupa. Others are missing classification codes such as UNSPSC, a shared secret entered wrong, and prices that differ between the cart and the purchase order. We test each of these with the buyer before go-live.' },
+  { category: 'erp', question: 'What usually goes wrong in a punchout project?', answer: 'Small data mismatches. Units of measure are a common one: Coupa\'s own troubleshooting guide for a cart that fails to return tells admins to check that the right units of measure are enabled. Others are missing classification codes such as UNSPSC, a shared secret entered wrong, and prices that differ between the cart and the purchase order. We test each of these with the buyer before go-live.' },
   { category: 'erp', question: 'Can punchout run alongside EDI?', answer: 'Yes. Many suppliers use both: punchout for shopping and the cart, and EDI for purchase orders, ship notices and invoices with customers who prefer it. We make sure both routes write to the same order and stock records in your ERP, so a punchout order and an EDI order look the same to your warehouse and your finance team.' },
-  { category: 'cost', question: 'How much does punchout catalog integration cost?', answer: 'It depends on the procurement system, the level and your ERP. As one market reference, Kolonell, a European firm that builds punchout connectors, published a range of EUR 12,000 to 35,000 per procurement platform on 8 October 2026, with Level 1 cXML at the low end and Level 2 at the high end. FactoryJet quotes a fixed price in writing after a short scoping call.' },
+  { category: 'cost', question: 'How much does punchout catalog integration cost?', answer: 'It depends on the procurement system, the level and your ERP. As one market reference, Kolonell, a web studio that builds punchout connectors, published a range of EUR 12,000 to 35,000 excl. VAT per procurement platform on 8 October 2026, with Level 1 cXML at the low end and Level 2 at the high end. FactoryJet quotes a fixed price in writing after a short scoping call.' },
   { category: 'cost', question: 'How long does a punchout integration take?', answer: 'Kolonell\'s October 2026 guide puts one procurement platform at 6 to 12 weeks, including 2 to 4 weeks of testing with the customer. The buyer\'s supplier enablement team sets the test dates, so we agree a plan with them early. A second customer on a system you already connect to is much faster, because the connector, pricing and ERP order flow already exist.' },
   { category: 'working', question: 'What do you need from us to scope a punchout project?', answer: 'The supplier enablement guide or punchout requirements your customer sent, the name of their procurement system, your store platform, your ERP, and how you set contract prices today. If the customer sent an RFP or a vendor onboarding pack, send that too. With those, we can tell you which method you need, what can be reused and what has to be built.' },
   { category: 'working', question: 'Can we add more customers after the first one goes live?', answer: 'Yes. Once the connector for a procurement system is built, each new customer on that system mostly needs their own credentials, a company account and a contract price list, plus a round of testing with their team. A second procurement system reuses the login mapping, pricing rules and ERP order flow from the first one.' },
@@ -222,7 +223,7 @@ const PLATFORMS = [
 
 const SOURCED = [
   { v: '1.2.071', d: 'The cXML version listed on cxml.org in August 2026. cXML is the format Coupa, SAP Ariba and Jaggaer use for punchout, purchase orders and invoices.', src: 'cxml.org', href: SRC_CXML },
-  { v: 'EUR 12K to 35K', d: 'Market range for one procurement platform connector, from Kolonell\'s 8 October 2026 guide. Level 1 cXML sits at the low end, Level 2 at the high end. A market reference, not a FactoryJet price.', src: 'Kolonell, Oct 2026', href: SRC_KOLONELL },
+  { v: 'EUR 12K to 35K', d: 'Market range for one procurement platform connector, excl. VAT, from Kolonell\'s 8 October 2026 guide. Level 1 cXML sits at the low end, Level 2 at the high end. A market reference, not a FactoryJet price.', src: 'Kolonell, Oct 2026', href: SRC_KOLONELL },
   { v: '6 to 12 weeks', d: 'Time for one procurement platform in the same guide, including 2 to 4 weeks of testing with the customer\'s team.', src: 'Kolonell, Oct 2026', href: SRC_KOLONELL },
 ];
 
@@ -351,7 +352,10 @@ export default function PunchoutCatalogPage() {
               This is the flow{' '}
               <a href={SRC_COUPA} target="_blank" rel="noopener noreferrer" style={linkStyle}>Coupa&apos;s supplier documentation</a>{' '}
               describes, and SAP Ariba and Jaggaer work the same way over cXML. The message names come from the{' '}
-              <a href={SRC_CXML} target="_blank" rel="noopener noreferrer" style={linkStyle}>cXML specification</a>.
+              <a href={SRC_CXML} target="_blank" rel="noopener noreferrer" style={linkStyle}>cXML specification</a>. When
+              a cart fails to come back, Coupa&apos;s{' '}
+              <a href={SRC_COUPA_CART_FAIL} target="_blank" rel="noopener noreferrer" style={linkStyle}>troubleshooting guide</a>{' '}
+              tells admins to check that the right units of measure are enabled.
             </p>
             <ol className="pp-bento" style={{ marginTop: '36px' }}>
               {ROUND_TRIP.map((r, i) => (
@@ -556,7 +560,7 @@ export default function PunchoutCatalogPage() {
             <h2 style={{ marginTop: '10px' }}>The B2B parts punchout sits on</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
               Punchout depends on the same pieces as any B2B store: company accounts, contract prices and orders that
-              land in the ERP. Two B2B builds where we did that work:
+              land in the ERP. Two B2B builds with that work, one live and one in progress:
             </p>
             <div style={{ marginTop: '28px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '16px' }}>
               <article className="pp-card">
@@ -567,8 +571,9 @@ export default function PunchoutCatalogPage() {
               </article>
               <article className="pp-card">
                 <p className="pp-mlabel">Sow Easy · WooCommerce + Odoo</p>
-                <h3>Trade orders straight into the ERP</h3>
-                <p className="pp-lead" style={{ marginTop: '16px', fontSize: '15px' }}>WooCommerce ordering for a distributor, connected to Odoo, so trade orders and stock live in one place instead of two.</p>
+                <h3>Trade store connected to Odoo (in progress)</h3>
+                <p className="pp-lead" style={{ marginTop: '16px', fontSize: '15px' }}>WooCommerce ordering for a distributor, being connected to Odoo so trade orders and stock live in one place instead of two. Being tested on staging before launch.</p>
+                <Link href="/case-studies/sow-easy-distributor-portal" className="rv-btn-secondary" style={{ marginTop: '18px' }}>Read the Sow Easy case study →</Link>
               </article>
             </div>
           </div>
@@ -577,7 +582,7 @@ export default function PunchoutCatalogPage() {
         <FAQ
           eyebrow="PUNCHOUT CATALOG FAQ"
           headline="Questions suppliers ask before building punchout."
-          lead="Plain answers to what distributors and manufacturers ask when a customer wants them on Coupa, SAP Ariba, Jaggaer or Oracle:"
+          lead="Plain answers to what distributors and manufacturers ask when a customer wants them on Coupa, SAP Ariba, Jaggaer or Oracle."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
@@ -619,7 +624,7 @@ export default function PunchoutCatalogPage() {
                 'Working draft on your own catalog before you sign',
                 'Fixed price per phase, no hourly billing surprises',
                 'You own the code and the repository from day one',
-                'Decade-plus building B2B commerce and ERP links',
+                'Decade-plus building commerce, B2B included',
               ].map((item) => (
                 <div key={item} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', marginBottom: '12px' }}>
                   <div style={{ flex: 'none', marginTop: '2px', width: '18px', height: '18px', borderRadius: '50%', background: 'rgba(240,90,40,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--pp-orange-dark)' }}>{checkIcon}</div>
