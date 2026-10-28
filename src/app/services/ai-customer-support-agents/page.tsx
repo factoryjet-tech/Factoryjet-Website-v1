@@ -13,7 +13,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-29';
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-customer-support-agents';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
@@ -133,6 +133,18 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Which help desk platforms and ticketing systems do you integrate with?',
     answer:
       'We build direct, two-way connectors for Zendesk, Gorgias, Intercom, Freshdesk, Front, Salesforce Service Cloud, and Kustomer. These run on webhooks and REST APIs. The agent reads and writes ticket fields, tags, and macros right inside your existing help desk. It sees the same ticket history and internal notes a human rep would see. Nobody needs a second browser tab to check a conversation.',
+  },
+  {
+    category: 'integrations',
+    question: 'Can an AI agent answer our support emails and tickets in Zendesk or Gorgias?',
+    answer:
+      'Yes. The agent we build connects to Zendesk or Gorgias through their APIs, reads each new email or ticket with its history, checks the order in Shopify or your ERP, and writes the reply back into the same ticket. It starts in shadow mode, drafting replies for your team to approve. The hand-off rule is fixed: if a question falls outside its approved ticket types, the customer is upset, or a refund is over your cap, the ticket goes to a person with a summary attached.',
+  },
+  {
+    category: 'integrations',
+    question: 'What does the support agent do when it is not sure of an answer?',
+    answer:
+      'It hands the ticket to a person instead of guessing. Each ticket type has a list of facts the agent must confirm from a live system before it replies, such as the order status, the return window or the tracking event. If any of them cannot be confirmed, the agent tags the ticket for your team in Zendesk or Gorgias, adds a note on what it found and what it could not confirm, and sends nothing to the customer.',
   },
   {
     category: 'integrations',

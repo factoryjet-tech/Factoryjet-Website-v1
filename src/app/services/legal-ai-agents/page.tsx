@@ -14,7 +14,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/legal-ai-agents';
 const PAGE_TITLE = 'AI for Law Firms: Legal AI Agents & AI Intake | FactoryJet';
 const PAGE_DESC =
   'AI for law firms: custom legal AI agents and an AI receptionist for intake, contract redlining and discovery, synced with Clio, MyCase and Filevine.';
-const PAGE_MODIFIED = '2026-10-10';
+const PAGE_MODIFIED = '2026-10-29';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below. So the two
@@ -82,6 +82,20 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
 ];
 
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
+  // Added 2026-10-29 for buyer question N06 (legal intake and document review), whose closest
+  // live FAQ in the 9 Oct 2026 buyer-question map was about receptionists (0.46).
+  {
+    category: 'intake',
+    question: 'Can an AI agent handle client intake and first-pass document review for a law firm?',
+    answer:
+      'Yes, with an attorney signing off at each step. For intake, the agent collects the facts of the matter, checks jurisdiction and statute of limitations dates, runs a conflict check in Clio, Filevine or MyCase, and stages a summary for attorney review. For first-pass review, it sorts and tags documents, flags likely privilege and key terms, and cites the page behind each flag. It never gives legal advice or decides what gets produced. We built an accident-detection agent for Washington Law Group.',
+  },
+  {
+    category: 'intake',
+    question: 'Should a law firm automate intake or document review first?',
+    answer:
+      'Intake, for most firms. Every inquiry gets the same questions, the same conflict check and the same summary format, so the rules are easy to write down and test against past calls and web forms. First-pass document review comes second, once the firm has a written review protocol the agent can follow and a paralegal assigned to check its tags. Without that protocol, the agent has no standard to check documents against.',
+  },
   {
     category: 'intake',
     question: 'How do legal AI agents qualify prospective clients without giving unauthorized legal advice?',
