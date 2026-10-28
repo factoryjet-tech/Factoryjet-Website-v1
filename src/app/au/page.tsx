@@ -26,7 +26,7 @@ import '../au-design-review/review.css';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL = 'https://factoryjet.com/au';
-const UPDATED = '2026-09-25';
+const UPDATED = '2026-10-29';
 const TITLE = 'Ecommerce, AI Agents & Web Design Australia | FactoryJet';
 const DESCRIPTION =
   'Web design Australia, ecommerce stores and AI agents from one senior team. Founded 2014, 500+ businesses served, 7-day websites. You own what we build.';
@@ -109,6 +109,43 @@ const AU_MORE_PAGES = [
   { href: '/au/real-estate-websites', name: 'Real Estate Websites' },
   { href: '/au/accountant-website-design', name: 'Accountant Website Design' },
   { href: '/au/website-maintenance', name: 'Website Maintenance' },
+];
+
+/* AU guides on the blog, grouped by the job the reader is hiring for, plus the
+   spoke pages each group points to. Added 2026-10-29 (P14): the hub linked only
+   three posts before, and one of them was a US cost guide. Every slug below is
+   registered in src/lib/legacy-pages/Blog/posts.tsx. */
+const AU_GUIDE_GROUPS: { job: string; guides: { href: string; name: string; note: string }[] }[] = [
+  { job: 'Building or rebuilding an online store', guides: [
+    { href: '/blog/best-ecommerce-agency-small-business-australia-2026', name: 'Best ecommerce agencies in Australia', note: 'Eight agencies checked on their own sites, plus the Shopify Plus agencies in Melbourne and Sydney.' },
+    { href: '/blog/best-ecommerce-platform-australia-2026', name: 'Best ecommerce platform in Australia', note: 'Shopify, WooCommerce, BigCommerce, Maropost and Adobe Commerce compared on AUD fees, GST and Afterpay.' },
+    { href: '/blog/shopify-cost-australia-2026', name: 'Shopify pricing in Australia', note: 'Plan prices and card fees read from shopify.com/au, with sourced AUD ranges for developers and agencies.' },
+    { href: '/au/ecommerce-development', name: 'Ecommerce development Australia', note: 'Our service page for new stores, replatforms and B2B ordering portals.' },
+    { href: '/au/shopify-development', name: 'Shopify development Australia', note: 'Our service page for Shopify and Shopify Plus builds, migrations and store support.' },
+  ] },
+  { job: 'Bringing AI into the business', guides: [
+    { href: '/blog/ai-cost-australia-2026', name: 'How much AI costs in Australia', note: 'Consultant rates, AI agent builds, chatbots and AI receptionists, each figure with its source and GST basis.' },
+    { href: '/blog/best-ai-agencies-australia-2026', name: 'Best AI agencies in Australia', note: 'AI automation agencies and developers compared on location, platforms and published prices.' },
+    { href: '/blog/best-ai-consultancies-australia-2026', name: 'Best AI consultancies in Australia', note: 'Fifteen consultancies in Sydney, Melbourne, Brisbane and remote, grouped by the buyer each suits.' },
+    { href: '/blog/best-ai-receptionists-australia-2026', name: 'Best AI receptionists in Australia', note: 'Thirteen products checked on 21 October 2026: list prices with GST, software connections and where call data is kept.' },
+    { href: '/blog/hire-ai-developers-australia-cost-2026', name: 'Hiring AI developers in Australia', note: 'Employee, contractor and agency routes in AUD, with the 12-month arithmetic shown.' },
+    { href: '/au/ai-consulting', name: 'AI consulting Australia', note: 'Our service page for AI readiness assessments and build or buy decisions.' },
+    { href: '/au/ai-customer-service', name: 'AI customer service Australia', note: 'Our service page for AI agents that answer customers from your own policies and order data.' },
+  ] },
+  { job: 'Getting found on Google and in AI answers', guides: [
+    { href: '/blog/best-ai-seo-agencies-australia-2026', name: 'Best AI SEO agencies in Australia', note: 'Ten agencies checked on 21 October 2026 on the AI engines they track and what they publish about price.' },
+    { href: '/blog/best-seo-agencies-australia-2026', name: 'Best SEO agencies in Australia', note: 'Ten agencies checked on 22 October 2026 on contract terms and published AUD prices.' },
+    { href: '/blog/seo-cost-australia-2026', name: 'SEO packages in Australia', note: 'Monthly, hourly and audit price ranges in AUD from six published Australian sources.' },
+  ] },
+  { job: 'Commissioning a website', guides: [
+    { href: '/blog/website-cost-australia-2026', name: 'Website cost in Australia', note: 'Sourced AUD ranges for brochure, WordPress and ecommerce sites, monthly fees and GST on quotes.' },
+    { href: '/blog/best-web-design-companies-small-business-australia', name: 'Web design companies in Australia', note: 'Six companies checked on their own sites, with the questions to ask before you hire.' },
+    { href: '/blog/best-wordpress-development-companies-australia-2026', name: 'WordPress developers in Australia', note: 'Six firms checked on their own sites, and what to put in the contract.' },
+  ] },
+  { job: 'Hiring in your city', guides: [
+    { href: '/au/melbourne', name: 'FactoryJet in Melbourne', note: 'Ecommerce website development, Shopify and Shopify Plus builds, migrations and B2B ordering for Melbourne brands.' },
+    { href: '/au/sydney', name: 'FactoryJet in Sydney', note: 'Ecommerce web development, Shopify Plus, migrations and Xero sync for Sydney brands.' },
+  ] },
 ];
 
 /* City pages that exist today. Sydney was added 2026-10-11. Perth and the
@@ -776,7 +813,7 @@ export function AustraliaHubContent({ reviewConcept }: { reviewConcept?: Austral
                 </ol>
                 <p className="mt-6" style={{ maxWidth: 600 }}>
                   For online stores the drivers are similar, plus catalogue size, product options, shipping rules and
-                  payment setup. For the ecommerce detail, see our <a href="/blog/ecommerce-website-cost-2026" style={linkUnder}>ecommerce website cost guide</a>.
+                  payment setup. For the ecommerce detail, see our <a href="/au/ecommerce-development" style={linkUnder}>ecommerce development page for Australian stores</a>.
                   Whatever you build, we quote a fixed price per stage after a short call. No hourly billing, no surprise invoices.
                 </p>
               </div>
@@ -1037,6 +1074,33 @@ export function AustraliaHubContent({ reviewConcept }: { reviewConcept?: Austral
               </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ═══ 14b. AU GUIDES ═══ */}
+        <section className="sec-lg" id="guides">
+          <div className="wrap">
+            <span className="eyebrow">Australian guides</span>
+            <h2 style={{ maxWidth: 760 }}>Australian guides by the job you are hiring for</h2>
+            <p className="lead mt-4" style={{ maxWidth: 640 }}>
+              Each guide below was written for Australian buyers, with AUD figures named to their source and agencies
+              checked on their own websites. Pick the job you are hiring for, read the guide, then the service page.
+            </p>
+            {AU_GUIDE_GROUPS.map((g) => (
+              <div key={g.job} className="mt-6">
+                <h3 style={{ fontSize: 18 }}>{g.job}</h3>
+                <ul className="col-2 mt-4" style={{ listStyle: 'none' }}>
+                  {g.guides.map((x) => (
+                    <li key={x.href}>
+                      <a className="svc-card" href={x.href} style={{ display: 'block', padding: 20, height: '100%' }}>
+                        <span style={{ fontFamily: T.fd, fontWeight: 700, fontSize: 16, color: T.ink }}>{x.name} →</span>
+                        <p style={{ fontSize: 14, marginTop: 6 }}>{x.note}</p>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </section>
 

@@ -7,7 +7,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import { CANONICAL, CRUMBS, CITATIONS, SERVICE_AREAS } from './pageData';
-import { FAQ_CATEGORIES, FAQ_ITEMS } from './faqData';
+import { FAQ_CATEGORIES as BASE_FAQ_CATEGORIES, FAQ_ITEMS as BASE_FAQ_ITEMS } from './faqData';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
 import '@/components/v2/AiAgentDevelopmentSections.css';
@@ -19,7 +19,31 @@ import '../au-city.css';
    1,000 · melbourne web designer 720 · web design company / agency melbourne 590.
    Title and H1 intent kept from the previous version of this page (it already carries
    "web design" + "SEO consultant" + "Melbourne"). */
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-29';
+
+/* Ecommerce FAQs added 2026-10-29 (P14) with the "Ecommerce website development in
+   Melbourne" section. They are appended to the faqData.ts array here, and the result
+   (FAQ_ITEMS) is the ONE array that both <AuFaq> renders and the FAQPage JSON-LD maps.
+   Questions follow Google AU People-Also-Ask wording from
+   pipeline/research/data/market-au-2026-09-24/brief_au_ecommerce.json and brief_au_shopify.json.
+   Cost ranges: WolfIQ (2026 guide, checked Sep 2026) and Keen to Design (Apr 2026), as cited
+   in /blog/website-cost-australia-2026. Market ranges only, never FactoryJet prices. */
+const ECOMMERCE_FAQ_ITEMS = [
+  { category: 'ecommerce', question: 'How much does it cost to have an ecommerce website built in Melbourne?',
+    answer: 'No Australian price guide we checked publishes a Melbourne-only figure, so national ranges apply. WolfIQ (2026 guide) puts an ecommerce build at $5,000 to $25,000, and Keen to Design (April 2026) at $8,000 to $25,000 or more. These are market ranges, not FactoryJet prices. Catalogue size, a migration from Magento or WooCommerce, B2B pricing and a Xero connection move the number most. We quote a fixed price in writing after a short scoping call.',
+    links: [{ href: '/blog/website-cost-australia-2026', label: 'Website cost in Australia (2026 guide)' }] },
+  { category: 'ecommerce', question: 'Can I hire someone to build me a Shopify store in Melbourne?',
+    answer: 'Yes. A Shopify developer sets up the theme, products, payments, shipping rates and GST, connects stock and accounting, and tests real orders before launch. FactoryJet is a registered Shopify Partner and builds Shopify and Shopify Plus stores for Melbourne brands, working remotely in Melbourne business hours. You own the store, the theme code and every account. A build needs nobody on site, so judge any developer on live stores like yours.',
+    links: [{ href: '/au/shopify-development', label: 'Shopify development for Australian businesses' }] },
+  { category: 'ecommerce', question: 'Can you move my store from Magento or WooCommerce to Shopify without losing rankings?',
+    answer: 'Yes, if the move is planned around your URLs. We export products, customers and order history, set a 301 redirect from every old product, category and blog URL to its new home, and check the new store on a test domain before the switch. Customer passwords cannot be carried across from Magento or WooCommerce, so we plan the email that invites customers to reactivate their accounts. Expect some movement in rankings for a few weeks after the switch.',
+    links: [{ href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' }] },
+  { category: 'ecommerce', question: 'Can a Shopify store send orders and invoices to Xero?',
+    answer: 'Yes. Most stores use a connector app from the Shopify App Store that posts orders, refunds, fees and GST into Xero. Wholesalers with trade accounts, payment terms or several warehouses often need more control, so we build the connection to match how your bookkeeper wants the ledger set up. Either way, test it with a week of real orders before launch, and check that GST and Shopify payouts reconcile in Xero.',
+    links: [{ href: '/au/shopify-development', label: 'Shopify development for Australian businesses' }] },
+];
+const FAQ_CATEGORIES = [...BASE_FAQ_CATEGORIES, { key: 'ecommerce', label: 'Ecommerce & Shopify' }];
+const FAQ_ITEMS = [...BASE_FAQ_ITEMS, ...ECOMMERCE_FAQ_ITEMS];
 const TITLE = 'Web Design & SEO Consultant Melbourne | FactoryJet';
 const H1 = 'Web design and SEO consulting in Melbourne';
 const DESCRIPTION =
@@ -861,6 +885,49 @@ export default function MelbournePage() {
                 caption="In a Dandenong South warehouse, the website is an ordering system. It has to agree with the stock on the racks and the invoice in the accounts.">
                 <img src="/images/au/melbourne/melbourne-b2b.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An operations manager with a tablet and a warehouse worker check a pallet of plain cartons in a light-industrial warehouse in Dandenong South, Melbourne" />
               </VisualSlot>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ ECOMMERCE WEBSITE DEVELOPMENT MELBOURNE (added 2026-10-29) → facts ═══ */}
+        <section className="section facts" id="ecommerce-website-development-melbourne">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">Ecommerce development Melbourne</div>
+              <h2>Ecommerce website development in Melbourne</h2>
+              <p className="lead">
+                About 390 searches a month in Melbourne are for ecommerce website development, and about 50 more are for
+                a Shopify developer. Most come from brands that already sell online and want a faster store, fewer
+                manual jobs, or trade customers ordering on the site instead of by email.
+              </p>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  We build on Shopify for most Melbourne retailers, and on Shopify Plus when a brand needs B2B company
+                  accounts, checkout changes or several storefronts run from one admin. We are a registered Shopify
+                  Partner, and you own the store, the theme code and every account from day one.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  For wholesalers and makers in the south east and the west, the store is an ordering system. Trade
+                  customers log in to see their own prices, reorder from past orders and pay on account, while orders,
+                  GST and invoices sync to Xero so nobody retypes them. See <a href="/au/ecommerce-development">ecommerce
+                  development in Australia</a> and <a href="/au/shopify-development">Shopify development for Australian
+                  businesses</a>.
+                </p></div>
+              </div>
+              <div className="au-panel">
+                <div className="eyebrow">What a Melbourne store build covers, in order</div>
+                <ol className="au-numlist">
+                  <li><span><b>Platform choice in writing:</b> Shopify, Shopify Plus or a custom build, with the reason for it.</span></li>
+                  <li><span><b>Migration from Magento or WooCommerce:</b> products, customers and order history moved, and a 301 redirect for every old URL so rankings carry over.</span></li>
+                  <li><span><b>Australian checkout:</b> GST, Afterpay, Zip and Australia Post or courier rates, tested with real orders before launch.</span></li>
+                  <li><span><b>B2B ordering:</b> trade price lists, quote to order, payment terms and quick reorder for logged-in accounts.</span></li>
+                  <li><span><b>Xero sync:</b> orders, refunds, fees and GST posted so the accounts match the store.</span></li>
+                  <li><span><b>Support after launch</b> from the team that built the store.</span></li>
+                </ol>
+                <p className="au-note">Search counts: Google Australia keyword data, monthly averages, 2026.</p>
+              </div>
             </div>
           </div>
         </section>
