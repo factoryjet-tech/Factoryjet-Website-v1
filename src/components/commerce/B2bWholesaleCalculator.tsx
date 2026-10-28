@@ -382,7 +382,7 @@ export default function B2bWholesaleCalculator({
               Assumptions, edit to match your business
             </div>
             <p style={{ fontSize: '12px', color: 'var(--pp-muted, #78716C)', margin: '0 0 12px 0', lineHeight: 1.5 }}>
-              These starting values are working assumptions, not measured results. Picking an order method resets the first and fifth values.
+              These starting values are working assumptions for you to edit. Picking an order method resets the first and fifth values.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
               {assumptionFields.map((field) => (
@@ -524,7 +524,7 @@ export default function B2bWholesaleCalculator({
                     ${totalThreeYearImpact.toLocaleString()}
                   </div>
                   <div style={{ fontSize: '11.5px', color: '#D6D3D1', marginTop: '4px' }}>
-                    The yearly figures above times three, before build cost. An estimate, not a promise.
+                    The yearly figures above times three, before build cost. Treat it as a rough guide.
                   </div>
                 </div>
               </>

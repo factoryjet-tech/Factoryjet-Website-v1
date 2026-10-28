@@ -251,7 +251,7 @@ export default function EcommerceRoiCalculator({
               />
             </div>
             <p className="sm:col-span-2 text-[11px] text-[#6E635A]">
-              These two are your assumptions, not figures from us. Use a number from your own tests or a quote you trust.
+              These two are your own assumptions. Use a number from your own tests or a quote you trust.
             </p>
           </div>
 
@@ -352,7 +352,7 @@ export default function EcommerceRoiCalculator({
                     ${totalThreeYearValue.toLocaleString()}
                   </div>
                   <div className="text-[11px] text-[#6E635A] mt-0.5">
-                    Your figures times three, before build cost. An estimate, not a promise.
+                    Your figures times three, before build cost. Treat it as a rough guide.
                   </div>
                 </div>
               </>

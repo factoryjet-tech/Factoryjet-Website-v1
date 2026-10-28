@@ -219,7 +219,7 @@ export default function CommerceRoiCalculator({
                     onChange={(e) => setLiftPer100msInput(e.target.value)}
                     style={inputStyle}
                   />
-                  <p style={hintStyle}>A working assumption, not a measured result for your store. Change it to match your own tests.</p>
+                  <p style={hintStyle}>A working assumption. Change it to match your own tests.</p>
                 </div>
                 <div>
                   <label htmlFor="comm-cap-input" style={labelStyle}>
@@ -272,7 +272,7 @@ export default function CommerceRoiCalculator({
                       <span style={{ fontSize: '14px', fontWeight: 600, color: '#A0A0B0', marginLeft: '6px' }}>/ year</span>
                     </div>
                     <p style={{ fontSize: '12px', color: '#8E8E9F', margin: '4px 0 0' }}>
-                      From your figures and the assumptions on this page. An estimate, not a promise.
+                      From your figures and the assumptions on this page. Treat it as a rough guide.
                     </p>
                   </div>
 
