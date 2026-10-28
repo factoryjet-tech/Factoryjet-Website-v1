@@ -18,7 +18,7 @@ import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
 import CityContextSection from '@/components/v2/CityContextSection';
-import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import ComparisonTable from '@/components/v2/ComparisonTable';
 import PricingTiers from '@/components/v2/PricingTiers';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-29';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -238,8 +238,19 @@ const BUILD_TIMELINES = [
 
 /* Proof near the top of the page. Only published, verified case studies from
    src/data/case-studies (no invented metrics: those entries deliberately carry
-   none). Both stores run on Commerceflo, not Shopify, and the cards say so. */
+   none). Belle Maison and GPSUK run on Commerceflo, not Shopify, and the cards
+   say so. Shopholistico (naming approved 2026-09-29) is the Shopify proof. Its
+   card states only what the live store showed on 2026-10-29: Shopify, USD,
+   "we only ship within the U.S." on the shipping policy page, Subscribe & Save,
+   a full-routine bundle, and wholesale and affiliate links in the footer. */
 const PROOF_CASES = [
+  {
+    client: 'Shopholistico',
+    market: 'Whole-food supplements · Ships within the US',
+    platform: 'Built on Shopify',
+    what: 'A custom Shopify theme for a supplement brand. Shoppers can subscribe and save, buy the full routine as a bundle, and reach the wholesale and affiliate sign-ups from the footer.',
+    href: '/case-studies/shopholistico-shopify-store',
+  },
   {
     client: 'Belle Maison',
     market: 'Retail and trade in one store',
@@ -320,88 +331,47 @@ const US_ECOMM_STATS = [
   },
 ];
 
+/* Phase comparison (2026-10-29). Replaced the FactoryJet vs agency vs
+   freelancer vs DIY table: this page's Ads and organic visitors are stores
+   that already trade, so the table now shows what each kind of project
+   includes. Prices are never shown, only how they are set. */
 const COMPARISON_COLUMNS = [
-  { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'Traditional Agency' },
-  { label: 'Freelancer' },
-  { label: 'DIY (Squarespace/Wix)' },
+  { label: 'Redesign' },
+  { label: 'B2B portal' },
+  { label: 'Replatform' },
 ] as const;
 
 const COMPARISON_ROWS = [
   {
-    feature: 'Pricing model.',
+    feature: 'Scope.',
     values: [
-      'Fixed-price, quoted upfront.',
-      'Multiples higher, often hourly.',
-      'Hourly, no ceiling.',
-      'Cheap monthly fee (you build it).',
+      'A new custom theme on the platform you already run. Product, collection, cart and account pages redesigned, with your products, customers and URLs left in place.',
+      'Trade accounts, customer price lists, minimum order quantities, quick reorder, quote to order and net terms, inside your current store or beside it.',
+      'Products, variants, customers, order history and reviews moved from Magento, WooCommerce or BigCommerce, with every old URL mapped to one 301 redirect.',
     ],
   },
   {
-    feature: 'Delivery timeline.',
-    values: ['3-5 weeks.', '3-6 months.', '6-12 weeks (unreliable).', '1 week (but you build it).'],
-  },
-  {
-    feature: 'Custom design (not a template).',
+    feature: 'Systems touched.',
     values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="yes" />,
-      <CompareIcon key="fl" kind="partial" />,
-      <CompareIcon key="diy" kind="no" />,
+      'Your current platform and apps, payments, email, reviews and analytics. Most integrations carry over as they are.',
+      'Your store\'s B2B features, your ERP or accounting system for prices and credit, and your payment terms provider.',
+      'The old and new platforms, the payment gateway, ERP or 3PL feeds, email lists and Google Search Console.',
     ],
   },
   {
-    feature: 'Platform migration with SEO preservation.',
+    feature: 'What you see before you sign.',
     values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="yes" />,
-      <CompareIcon key="fl" kind="partial" />,
-      <CompareIcon key="diy" kind="no" />,
+      'A working draft of the new theme in your own store, with your own products, kept unpublished until you approve it.',
+      'A working draft with a test trade account, showing your own products at account prices.',
+      'A working draft on the new platform with a sample of your own products imported, so you check the data before the full move.',
     ],
   },
   {
-    feature: 'Checkout + payment testing before launch.',
+    feature: 'How it is priced.',
     values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="yes" />,
-      <CompareIcon key="fl" kind="partial" />,
-      <CompareIcon key="diy" kind="partial" />,
-    ],
-  },
-  {
-    feature: 'Lighthouse 95+ performance on delivery.',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="partial" />,
-      <CompareIcon key="fl" kind="partial" />,
-      <CompareIcon key="diy" kind="no" />,
-    ],
-  },
-  {
-    feature: 'Technical SEO built in.',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="partial" />,
-      <CompareIcon key="fl" kind="no" />,
-      <CompareIcon key="diy" kind="no" />,
-    ],
-  },
-  {
-    feature: 'Full code ownership (your GitHub).',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="partial" />,
-      <CompareIcon key="fl" kind="yes" />,
-      <CompareIcon key="diy" kind="no" />,
-    ],
-  },
-  {
-    feature: 'Fixed-price contract.',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="no" />,
-      <CompareIcon key="fl" kind="partial" />,
-      <CompareIcon key="diy" kind="yes" />,
+      'One fixed price for the theme phase, in writing, paid at milestones.',
+      'A fixed price for the portal phase. The ERP or accounting sync is scoped and priced as its own phase.',
+      'A fixed price per phase: the migration, the theme, then each integration. Platform and app fees are billed to you directly.',
     ],
   },
 ];
@@ -438,7 +408,7 @@ const PRICING_TIERS = [
       'Multi-channel inventory sync (Amazon, eBay, or 3PL).',
       'Reviews platform integration (Yotpo, Okendo, or Judge.me).',
       'Post-purchase upsell flow.',
-      '30-day post-launch support window.',
+      'Defects fixed inside the build price for an agreed cover period.',
     ],
     cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
     popular: true,
@@ -457,7 +427,7 @@ const PRICING_TIERS = [
       'ERP or WMS integration (NetSuite, SAP, Brightpearl).',
       'International multi-currency and multi-language setup.',
       'Dedicated engineering point of contact.',
-      '90-day post-launch support and iteration.',
+      'Defect cover inside the build price, then optional support with no monthly minimum.',
     ],
     cta: { label: 'Schedule a Discovery Call', modal: true, region: 'us' },
   },
@@ -500,7 +470,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does e-commerce development cost?',
     answer:
-      'A small store on a pre-built theme can launch for about $1,000 to $5,000, and a store with custom design and integrations typically costs $5,000 to $25,000, according to BigCommerce. Where yours lands depends on four things: the platform, how many products and variants you have, whether you are moving from an old store, and which systems the store has to talk to (ERP, 3PL, subscriptions, B2B pricing). A custom-theme Shopify or WooCommerce store is the smallest build. Headless and marketplace builds are the largest. We give you one fixed price after a free 30-minute call, paid in milestones. Our ecommerce website cost and Shopify development cost guides go deeper.',
+      'A store with custom design and integrations typically costs $5,000 to $25,000, according to BigCommerce. Custom and enterprise builds with advanced integrations run $25,000 to $250,000 or more, also according to BigCommerce, and headless Shopify builds $60,000 to $200,000 or more, according to CartCoders. Where yours lands depends on four things: the platform, how many products and variants you have, whether you are moving from an old store, and which systems the store has to talk to (ERP, 3PL, B2B pricing). We give one fixed price per phase, in writing, after a free 30-minute call. Our ecommerce website cost and Shopify development cost guides go deeper.',
   },
   {
     category: 'pricing',
@@ -597,13 +567,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'What ongoing support does FactoryJet offer after my store launches?',
     answer:
-      'Every e-commerce project includes a 14 to 30 day post-launch support window. This covers bug fixes and launch questions at no added charge. Beyond launch, we offer monthly retainers for ongoing development, priority bug response, and seasonal updates. We also offer one-time sprints for checkout testing, app integrations, and performance audits.',
-  },
-  {
-    category: 'trust',
-    question: 'How do I know if I need an e-commerce agency or a freelancer for my store?',
-    answer:
-      'A freelancer works well for simple theme setups or single app installs. An agency makes sense when you need custom design, an SEO-safe migration, or complex product logic. FactoryJet delivers agency quality at predictable fixed pricing. You get a full team of designer, developer, and QA engineer, with full code ownership on launch day.',
+      'Defects found after launch are fixed inside the build price, for a cover period we agree before work starts. After that, support is optional. Each change is quoted and approved before we do it, and there is no monthly minimum. If you would rather keep a team on hand for seasonal updates or new features, a retainer is an option you can pick, never a condition of the build.',
   },
   {
     category: 'trust',
@@ -634,6 +598,51 @@ const FAQ_ITEMS = [
     question: 'Can you improve my current store instead of rebuilding it?',
     answer:
       'Often, yes. If your platform is right and the problem is speed, checkout friction or a weak product page, a focused fix costs far less than a rebuild. We start with an audit and tell you plainly whether a rebuild is worth it. For Shopify stores we also run ongoing support and maintenance, so the same team keeps improving the store after the fix.',
+  },
+
+  /* ── Added 2026-10-29 for stores that already trade (replaces the
+        agency-or-freelancer question). ── */
+  {
+    category: 'migration',
+    question: 'Can you redesign our store without losing our Google rankings?',
+    answer:
+      'Yes. A redesign on the same platform keeps your product and collection URLs, so most rankings carry over. Before launch we list every page that gets search traffic today and check that the new theme keeps its title, headings, schema and internal links. Any URL that does change gets a single 301 redirect to its new address. The theme stays unpublished until you approve the draft, and we watch Search Console for 30 days after launch.',
+  },
+  {
+    category: 'migration',
+    question: 'Can we keep taking orders while you move us to a new platform?',
+    answer:
+      'Yes. The new store is built and tested on a separate copy while your current store keeps selling. Close to launch we run a final sync of products, customers and recent orders, then point your domain at the new store at a time you choose. The 301 redirects for every old URL are mapped before that switch, so shoppers and Google land on the right page from the first minute. Our replatforming page walks through the full sequence.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you sync orders to NetSuite or QuickBooks?',
+    answer:
+      'First we check whether a connector app already does the job, because a tested app is cheaper to own than custom code. If one fits, we set it up and tell you so. If your rules are unusual, such as split shipments, customer price levels or trade credit terms, we build the link ourselves with the store\'s webhooks and the NetSuite or QuickBooks Online API. Orders, customers, stock and payouts are mapped field by field and tested on real orders before go-live.',
+  },
+  {
+    category: 'technical',
+    question: 'Can you add a wholesale portal to the Shopify store we already run?',
+    answer:
+      'Usually, yes. On Shopify Plus, the built-in B2B features give trade buyers company accounts, their own price lists, payment terms and quantity rules inside the same store your retail shoppers use. When a rule falls outside what Shopify offers, such as prices pulled from your ERP, we add it with an app or custom code. You see a working draft with a test trade account before you sign. Our B2B ecommerce page shows how retail and trade share one store.',
+  },
+  {
+    category: 'trust',
+    question: 'We have a written brief or RFP. How do you respond to it?',
+    answer:
+      'Send it. Attach the brief or RFP as a PDF or Word file at step 2 of the form on this page, up to 5 MB. Bhavesh, our founder, reads it and replies within 24 hours with questions or a time for a scoping call. We answer each requirement in writing, split the work into phases and give one fixed price per phase. If a requirement is better met by an app you can buy, the response says so.',
+  },
+  {
+    category: 'trust',
+    question: 'Can you take over a store another agency built?',
+    answer:
+      'Yes. We start with an audit of the theme code, the apps and any custom integrations, then tell you in writing what is sound and what is at risk. Access comes first: the repository, the platform admin and the app accounts are moved into your name if they are not there already. From there we fix what is broken as one scoped phase, or quote changes one at a time with no monthly minimum.',
+  },
+  {
+    category: 'pricing',
+    question: 'Whose accounts do the platform, apps and hosting sit in?',
+    answer:
+      'Yours. Your Shopify, BigCommerce or WooCommerce hosting plan, your apps and any AI usage run in accounts in your name and are billed to you by those companies at cost, with no markup from us. You own the code and the repository from day one. If you stop working with us, the store keeps running and any developer can pick it up from the same repository we used.',
   },
 ];
 
@@ -735,10 +744,17 @@ export default function EcommerceDevelopmentPage() {
             using only the confirmed timelines. */}
         <div className="ec-growth-hero">
         <Hero
-          formSlot={<HeroInlineForm region="us" source="us_services_ecommerce_development_hero"
-            submitLabel="See a draft of my store"
-            trustText="A working draft built with your own products before you sign. Founder replies within 24 hours."
-          />}
+          formSlot={
+            <>
+              <HeroInlineForm region="us" source="us_services_ecommerce_development_hero"
+                submitLabel="See a draft of my store"
+                trustText="A working draft built with your own products before you sign. Founder replies within 24 hours."
+              />
+              <p className="mt-3 max-w-[540px] font-fj-body text-[0.9375rem] leading-relaxed text-fj-ink">
+                Have a brief or RFP? Attach it at step 2 and get a fixed price per phase in writing.
+              </p>
+            </>
+          }
           eyebrow="ECOMMERCE DEVELOPMENT COMPANY, USA"
           headline="We design, build and support online stores for US brands. Most go live in 3 to 5 weeks."
           lead="Shopify, WooCommerce, BigCommerce or a custom headless build. We move your products, customers and SEO over, connect payments, shipping and email, and stay on after launch. You get a fixed quote before work starts, and you own the code."
@@ -1259,17 +1275,25 @@ export default function EcommerceDevelopmentPage() {
         {/* ── 10. COMPARISON TABLE ─────────────────────────────────────────── */}
         <div className="ec-growth-comparison">
         <ComparisonTable
-          eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Traditional Agency vs. Freelancer vs. DIY Platforms"
-          lead="Not all e-commerce development options deliver the same output. Here's the honest comparison."
+          eyebrow="THREE KINDS OF PROJECT"
+          headline="Redesign, B2B portal or replatform: what each phase includes"
+          lead="Most stores that come to us already sell on Shopify, WooCommerce, Magento or BigCommerce. The work usually falls into one of these three projects, and many stores need two of them in sequence."
           pullQuote={{
-            stat: 'Fixed price',
-            caption: 'quoted upfront, same Figma design, platform engineering, and Lighthouse audits as a traditional agency project that costs several times more.',
+            stat: 'One price per phase',
+            caption: 'fixed and in writing before work starts, after you have seen a working draft in your own store. You sign the next phase only once the last one works.',
           }}
-          scrollRegionLabel="Ecommerce development options comparison"
+          scrollRegionLabel="Redesign, B2B portal and replatform phases compared"
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
-          footer="Timelines reflect typical agency and freelancer ranges as of 2026. FactoryJet fixed-price contracts available for all tiers, quoted upfront after a free discovery call."
+          footer={
+            <>
+              More on each:{' '}
+              <Link href="/services/shopify-development" className="font-medium text-[#B23E13] underline underline-offset-2">Shopify development</Link>,{' '}
+              <Link href="/b2b-ecommerce" className="font-medium text-[#B23E13] underline underline-offset-2">B2B ecommerce</Link>,{' '}
+              <Link href="/replatforming" className="font-medium text-[#B23E13] underline underline-offset-2">replatforming</Link> and{' '}
+              <Link href="/services/ecommerce-erp-integration" className="font-medium text-[#B23E13] underline underline-offset-2">ecommerce ERP integration</Link>.
+            </>
+          }
         />
         </div>
 
@@ -1335,6 +1359,39 @@ export default function EcommerceDevelopmentPage() {
           </div>
         </section>
 
+        {/* ── 11c. TERMS ───────────────────────────────────────────────────── */}
+        {/* House terms, approved 15 to 16 Oct 2026. Same wording as the terms
+            block on /services and /services/ai-agent-development. */}
+        <section id="terms" className="border-y border-fj-neutral-200 bg-white py-14 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-5">
+                <p className="fj-eyebrow">TERMS</p>
+                <h2 className="mt-3 font-fj-display text-[clamp(1.625rem,3vw,2.25rem)] font-bold leading-[1.15] tracking-[-0.03em] text-fj-ink">
+                  The code, the accounts and the data stay yours.
+                </h2>
+                <p className="mt-4 font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600">
+                  Nothing we build holds you to us. If you want another developer to take the store over next year, they start from the same repository we used.
+                </p>
+              </div>
+              <ul className="grid gap-3 lg:col-span-7">
+                {[
+                  { t: 'Code and repository', d: 'Yours from day one, along with the design files.' },
+                  { t: 'Accounts in your name', d: 'Your store, ERP, AI and hosting accounts. AI and hosting can run there at cost, with no markup from us.' },
+                  { t: 'Defect cover in the build price', d: 'Defects found after launch are fixed for a cover period agreed before work starts.' },
+                  { t: 'No monthly minimum', d: 'Support after launch is optional. Each change is quoted and approved before we do it.' },
+                  { t: 'Each phase signed on its own', d: 'Every phase is scoped, priced and signed on its own, in writing.' },
+                ].map((x) => (
+                  <li key={x.t} className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-5">
+                    <p className="font-fj-display text-lg font-semibold text-fj-ink">{x.t}</p>
+                    <p className="mt-1 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{x.d}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* ── 12. PRICING ──────────────────────────────────────────────────── */}
         <div id="pricing" className="ec-growth-pricing">
           <PricingTiers
@@ -1378,7 +1435,7 @@ export default function EcommerceDevelopmentPage() {
                 },
                 {
                   title: 'Support after launch, from the people who built it.',
-                  body: 'Every build includes a post-launch support window. After that, you can keep us on a monthly retainer for fixes, seasonal updates and new features.',
+                  body: 'Defects found after launch are fixed inside the build price for an agreed cover period. After that, support is optional: each change is quoted and approved first, with no monthly minimum.',
                   span: 'md:col-span-5',
                 },
               ].map((p) => (
