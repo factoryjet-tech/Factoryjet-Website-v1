@@ -202,7 +202,7 @@ export default function Guides() {
             id="uk-guides-heading"
             className="font-fj-display mt-3 text-fj-ink"
             style={{
-              fontWeight: 700,
+              fontWeight: 800,
               fontSize: "clamp(24px, 3.2vw, 40px)",
               lineHeight: 1.12,
               letterSpacing: "-0.02em",
