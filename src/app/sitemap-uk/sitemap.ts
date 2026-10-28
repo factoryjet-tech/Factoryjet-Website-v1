@@ -81,6 +81,7 @@ const NATIONAL_SERVICE_PAGE_SLUGS = [
   'accounts-payable-automation',
   'whatsapp-ai-agents',
   'shopify-xero-integration',
+  'ecommerce-redesign',
 ] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {
