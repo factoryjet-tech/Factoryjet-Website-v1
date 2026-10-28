@@ -17,6 +17,7 @@ import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import PricingTiers from '@/components/v2/PricingTiers';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -461,7 +462,7 @@ const FAQ_CATEGORIES = [
   { key: 'trust',     label: 'Trust & Results' },
 ];
 
-/* ─── FAQ items - 21 conversational Q-A pairs ────────────────────────────── */
+/* ─── FAQ items: 25 conversational Q-A pairs ─────────────────────────────── */
 const FAQ_ITEMS = [
 
   /* ── What Is AI Integration ── */
@@ -616,12 +617,12 @@ const FAQ_ITEMS = [
   },
   // Added 2026-10-29 for buyer question N20 (connecting an agent to a CRM), which had no live
   // FAQ above 0.6 similarity in the 9 Oct 2026 buyer-question map. Salesforce delivery confirmed
-  // by Bhavesh 17 Oct 2026. HubSpot is described at the platform API level only.
+  // by Bhavesh 17 Oct 2026; HubSpot delivery confirmed by Bhavesh 29 Oct 2026.
   {
     category: 'technical',
     question: 'Can an AI agent read and update HubSpot or Salesforce records?',
     answer:
-      'Yes. Both CRMs publish APIs that let an agent read contacts, companies and deals, then write back fields, notes and tasks, using an access token limited to the objects you approve. We have delivered Salesforce integrations. A typical agent reads a new lead, adds company details, updates the lead status and logs a short summary on the record. Anything that changes the record owner or a deal value waits for a person to approve it, and every write is logged.',
+      'Yes. Both CRMs publish APIs that let an agent read contacts, companies and deals, then write back fields, notes and tasks, using an access token limited to the objects you approve. We have delivered both HubSpot and Salesforce integrations. A typical agent reads a new lead, adds company details, updates the lead status and logs a short summary on the record. Anything that changes the record owner or a deal value waits for a person to approve it, and every write is logged.',
   },
   {
     category: 'technical',
@@ -1053,6 +1054,13 @@ export default function AIIntegrationServicesPage() {
             </div>
           </div>
         </section>
+
+        {/* ── 6.6. MID-PAGE CTA ── */}
+        <MidPageCTA
+          headline="Name the tool and the task. We will say how AI connects to it."
+          sub="Tell us which CRM, store or help desk you use and one task your team repeats every day. We reply with how an agent would connect through that tool's API, what a person still approves, and a fixed quote if there is work for us."
+          label="Scope my AI integration"
+        />
 
         {/* ── 7. MARKET STATS ──────────────────────────────────────────────── */}
         <div className="bg-fj-neutral-50">

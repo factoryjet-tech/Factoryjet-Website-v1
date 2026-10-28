@@ -94,7 +94,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'intake',
     question: 'Should a law firm automate intake or document review first?',
     answer:
-      'Intake, for most firms. Every inquiry gets the same questions, the same conflict check and the same summary format, so the rules are easy to write down and test against past calls and web forms. First-pass document review comes second, once the firm has a written review protocol the agent can follow and a paralegal assigned to check its tags. Without that protocol, the agent has no standard to check documents against.',
+      'Intake, for most firms. Every inquiry runs through the same questions and the same conflict check, so the rules are easy to write down and test against past calls and web forms. First-pass document review comes second, once the firm has a written review protocol the agent can follow and a paralegal assigned to check its tags. Without that protocol, the agent has no standard to check documents against.',
   },
   {
     category: 'intake',
