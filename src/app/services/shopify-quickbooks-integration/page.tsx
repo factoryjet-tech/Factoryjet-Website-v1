@@ -379,15 +379,9 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
   {
     category: 'working',
-    question: 'Are you running Shopify and QuickBooks projects right now?',
-    answer:
-      'Yes, two. One joins a Shopify store to QuickBooks Online and the other joins a Shopify store to QuickBooks Enterprise. In both, the work is getting orders, refunds and payouts posting to the right accounts. Both are in progress, so we report no results from them yet, and we do not name either client.',
-  },
-  {
-    category: 'working',
     question: 'Can I send our chart of accounts or field list before a call?',
     answer:
-      'Yes, and it makes the first reply more useful. Send your QuickBooks version, your chart of accounts or a list of the fields Shopify has to follow, through the contact form. We map each field to the system that leads it and quote each phase at a fixed price in writing. If Intuit\'s own connector covers it, we tell you to use that.',
+      'Yes, and it makes the first reply more useful. Send your QuickBooks version, your chart of accounts or a list of the fields Shopify has to follow, through the contact form. We map each field to the system that leads it and quote each phase at a fixed price in writing. If Intuit\'s own connector covers it, we tell you to use that. If you are close to outgrowing QuickBooks, factoryjet.com/comparisons/netsuite-vs-quickbooks covers that choice.',
   },
   {
     category: 'working',
@@ -1054,7 +1048,7 @@ export default function ShopifyQuickBooksIntegrationPage() {
         <MidPageCTA
           headline="Tell us what lives in QuickBooks. We will tell you the route."
           sub="Send your QuickBooks version and what Shopify has to follow. We reply with the lightest way to connect them, and a fixed quote if there is work for us."
-          label="Scope my integration"
+          label="See a demo on my data"
         />
 
         {/* 7. WHO THIS IS FOR */}
@@ -1298,8 +1292,8 @@ export default function ShopifyQuickBooksIntegrationPage() {
           variant="light"
           eyebrow="Shopify QuickBooks integration"
           headline="One list of products. One set of books."
-          sub="Tell us your QuickBooks version and what the store has to follow. We agree the master for each field, test with sample orders and stay on after launch."
-          primaryCta={{ label: 'Scope my integration', modal: true, region: 'us' }}
+          sub="Tell us your QuickBooks version and what the store has to follow. We agree the master for each field, test with sample orders and fix defects after launch inside the build price."
+          primaryCta={{ label: 'See a demo on my data', modal: true, region: 'us' }}
           secondaryCta={{ label: 'Talk to the founder', href: '/contact' }}
           objectionHandler="Registered Shopify Partner. Fixed quote in writing before work starts. You own the code."
         />

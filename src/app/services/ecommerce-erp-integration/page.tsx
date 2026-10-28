@@ -546,7 +546,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'Can we send a field list or an RFP instead of booking a call?',
     answer:
-      'Yes. Send your field list, an export of the records you sync today, or your written brief through the contact form. We map every field to its owner and its direction, then quote each phase at a fixed price in writing. If a ready-made connector already covers your list, the reply says so and names it.',
+      'Yes. Send your field list, an export of the records you sync today, or your written brief through the contact form. We map every field to its owner and its direction, then quote each phase at a fixed price in writing. If a ready-made connector already covers your list, the reply says so and names it. If the list shows QuickBooks straining, read factoryjet.com/comparisons/netsuite-vs-quickbooks before you send it.',
   },
   {
     category: 'working',
@@ -1420,7 +1420,7 @@ export default function EcommerceErpIntegrationPage() {
         <MidPageCTA
           headline="Send us your store, your ERP and the record that causes the retyping."
           sub="Send your field list or brief. We map every field and quote each phase at a fixed price. If a ready-made connector covers it, we say so."
-          label="Map my integration"
+          label="See a demo on my data"
         />
 
         {/* 7. WHERE IT BREAKS */}
@@ -1590,8 +1590,8 @@ export default function EcommerceErpIntegrationPage() {
                   ))}
                 </ul>
                 <p className="mt-4 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
-                  Sow Easy is the ERP link. The other three show how we build product and trade pages. No results are
-                  reported for a build that has not launched.
+                  Sow Easy is the ERP link. GPSUK, Yadav and Impulse show the storefronts and websites we build. No
+                  results are reported for a build that has not launched.
                 </p>
               </div>
             </div>
@@ -1736,7 +1736,7 @@ export default function EcommerceErpIntegrationPage() {
           eyebrow="Ecommerce ERP integration"
           headline="Give every record one owner. We build the link."
           sub="Send your store platform, your ERP and the record your team retypes most. We come back with an owner map and the shortest route to it."
-          primaryCta={{ label: 'Map my integration', modal: true, region: 'us' }}
+          primaryCta={{ label: 'See a demo on my data', modal: true, region: 'us' }}
           secondaryCta={{ label: 'Talk to the founder', href: '/contact' }}
           objectionHandler="Working demo on your own data before a contract. Fixed quote in writing, and you own the code."
         />
