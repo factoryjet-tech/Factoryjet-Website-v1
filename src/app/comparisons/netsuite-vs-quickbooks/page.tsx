@@ -110,7 +110,7 @@ const FAQ_ITEMS = [
     category: 'fit',
     question: 'What are the downsides of using NetSuite?',
     answer:
-      'Cost, setup time and dependence on outside help. NetSuite is licensed through Oracle on a quote, and its pricing page would not load for us on 29 October 2026. Setup runs as a project with milestones. Many changes need an admin or a partner who knows SuiteScript (NetSuite’s scripting language). Some reports also do not support consolidation, per Oracle’s own help center, so check the ones you need.',
+      'Cost and dependence on outside help. NetSuite is licensed through Oracle on a quote, and its pricing page would not load for us on 29 October 2026. Setup runs as a project with milestones. Many changes need an admin or a partner who knows SuiteScript (NetSuite’s scripting language). Some reports also do not support consolidation, per Oracle’s own help center, so check the ones you need.',
   },
   {
     category: 'fit',
@@ -527,7 +527,7 @@ export default function NetsuiteVsQuickbooksPage() {
                   </tr>
                   <tr className="me">
                     <td className="name">Implementation effort</td>
-                    <td>Self-serve. Most small companies set it up with their bookkeeper</td>
+                    <td>Self-serve. Many small companies set it up with their bookkeeper</td>
                     <td>A project with Oracle or a partner, plus re-wiring every app that talked to QuickBooks</td>
                     <td>Our scoping experience</td>
                   </tr>
@@ -566,9 +566,9 @@ export default function NetsuiteVsQuickbooksPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// sourced figures</p>
             <h2 style={{ marginTop: '10px' }}>Three limits that usually decide the move</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <ul className="pp-bento" style={{ marginTop: '32px', listStyle: 'none', padding: 0 }}>
               {SOURCED.map((s) => (
-                <div className="pp-card" key={s.v}>
+                <li className="pp-card" key={s.v}>
                   <div style={{ fontFamily: 'var(--pp-disp)', fontWeight: 800, fontSize: '36px', color: 'var(--pp-orange-dark)', letterSpacing: '-.03em', lineHeight: 1 }}>{s.v}</div>
                   <p style={{ marginTop: '10px', fontSize: '15px', color: 'var(--pp-body)' }}>{s.d}</p>
                   <a
@@ -579,9 +579,9 @@ export default function NetsuiteVsQuickbooksPage() {
                   >
                     {s.src}
                   </a>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -678,7 +678,7 @@ export default function NetsuiteVsQuickbooksPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// what you own</p>
             <h2 style={{ marginTop: '10px' }}>The code, the accounts and the data stay yours.</h2>
-            <ul className="pp-bento" style={{ marginTop: '32px', listStyle: 'none', padding: 0 }}>
+            <ul className="pp-bento n5" style={{ marginTop: '32px', listStyle: 'none', padding: 0 }}>
               {TERMS.map((x) => (
                 <li className="pp-card" key={x.t}>
                   <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '16px', color: 'var(--pp-ink)', marginBottom: '6px' }}>{x.t}</h3>
