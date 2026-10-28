@@ -20,35 +20,70 @@ import { submitLead } from '@/utils/submitLead';
 interface B2bWholesaleCalculatorProps {
   className?: string;
   source?: string;
+  /** Accepted for call-site compatibility. No longer prefills any input. */
   defaultRevenue?: number;
+  /** Accepted for call-site compatibility. No longer prefills any input. */
   defaultAov?: number;
+  /** Accepted for call-site compatibility. No longer prefills any input. */
   defaultAccounts?: number;
 }
 
+// Starting assumptions per order method. Each one is shown on screen as an
+// editable assumption and is copied into the inputs when a method is picked.
 const ORDER_METHODS = [
-  { id: 'manual', label: 'Email, PDF Invoices & Spreadsheets', laborHoursPerOrder: 0.35, errorRate: 0.045 },
-  { id: 'phone', label: 'Field Reps & Phone Order Desk', laborHoursPerOrder: 0.45, errorRate: 0.035 },
-  { id: 'legacy', label: 'Legacy Monolith / ERP Web Portal', laborHoursPerOrder: 0.15, errorRate: 0.02 },
+  { id: 'manual', label: 'Email, PDF Invoices & Spreadsheets', minutesPerOrder: '21', errorRatePercent: '4.5' },
+  { id: 'phone', label: 'Field Reps & Phone Order Desk', minutesPerOrder: '27', errorRatePercent: '3.5' },
+  { id: 'legacy', label: 'Legacy Monolith / ERP Web Portal', minutesPerOrder: '9', errorRatePercent: '2' },
 ];
+
+/** Returns a finite number above zero, or null when the field is empty or invalid. */
+function toPositive(value: string): number | null {
+  if (value.trim() === '') return null;
+  const n = Number(value);
+  return Number.isFinite(n) && n > 0 ? n : null;
+}
+
+/** Returns a finite number of zero or more, or null when the field is empty or invalid. Used for assumptions. */
+function toNonNegative(value: string): number | null {
+  if (value.trim() === '') return null;
+  const n = Number(value);
+  return Number.isFinite(n) && n >= 0 ? n : null;
+}
+
+const fieldLabelStyle: React.CSSProperties = { display: 'block', fontWeight: 700, fontSize: '14px', color: 'var(--pp-ink, #14110F)', marginBottom: '6px' };
+const assumptionLabelStyle: React.CSSProperties = { display: 'block', fontWeight: 600, fontSize: '12.5px', color: 'var(--pp-ink, #14110F)', marginBottom: '4px' };
+const numberInputStyle: React.CSSProperties = {
+  width: '100%',
+  padding: '10px 12px',
+  borderRadius: '8px',
+  border: '1px solid var(--pp-line, #E5E0DA)',
+  fontSize: '14px',
+  background: '#FFFFFF',
+  fontFamily: 'var(--pp-mono, monospace)',
+  color: 'var(--pp-ink, #14110F)',
+};
 
 export default function B2bWholesaleCalculator({
   className = '',
   source = 'b2b_wholesale_calculator',
-  defaultRevenue = 3500000,
-  defaultAov = 1800,
-  defaultAccounts = 120,
 }: B2bWholesaleCalculatorProps) {
   const { openModal } = useContactModal();
 
-  const [annualRevenue, setAnnualRevenue] = useState<number>(defaultRevenue);
-  const [aov, setAov] = useState<number>(defaultAov);
-  const [activeAccounts, setActiveAccounts] = useState<number>(defaultAccounts);
+  // Visitor inputs start empty. Nothing is prefilled.
+  const [annualRevenueInput, setAnnualRevenueInput] = useState<string>('');
+  const [aovInput, setAovInput] = useState<string>('');
+  const [activeAccountsInput, setActiveAccountsInput] = useState<string>('');
   const [selectedMethod, setSelectedMethod] = useState<string>('manual');
 
-  // Interactive toggle parameters
-  const [enableMatrixOrdering, setEnableMatrixOrdering] = useState<boolean>(true);
-  const [enableErpCreditSync, setEnableErpCreditSync] = useState<boolean>(true);
-  const [enableCustomPriceLists, setEnableCustomPriceLists] = useState<boolean>(true);
+  // Assumptions are shown on screen and the visitor can edit each one.
+  const [minutesPerOrderInput, setMinutesPerOrderInput] = useState<string>(ORDER_METHODS[0].minutesPerOrder);
+  const [handlingCutPercentInput, setHandlingCutPercentInput] = useState<string>('75');
+  const [hourlyRateInput, setHourlyRateInput] = useState<string>('32');
+  const [reorderLiftPercentInput, setReorderLiftPercentInput] = useState<string>('8');
+  const [errorRatePercentInput, setErrorRatePercentInput] = useState<string>(ORDER_METHODS[0].errorRatePercent);
+  const [costPerErrorInput, setCostPerErrorInput] = useState<string>('180');
+  const [errorCutPercentInput, setErrorCutPercentInput] = useState<string>('92');
+  const [dsoDaysInput, setDsoDaysInput] = useState<string>('8');
 
   // Lead capture state
   const [fullName, setFullName] = useState('');
@@ -61,36 +96,78 @@ export default function B2bWholesaleCalculator({
   const revenueSliderId = useId();
   const aovSliderId = useId();
   const accountsSliderId = useId();
+  const assumptionIdPrefix = useId();
 
-  const methodObj = ORDER_METHODS.find((m) => m.id === selectedMethod) || ORDER_METHODS[0];
+  const selectMethod = (id: string) => {
+    const method = ORDER_METHODS.find((m) => m.id === id) || ORDER_METHODS[0];
+    setSelectedMethod(method.id);
+    setMinutesPerOrderInput(method.minutesPerOrder);
+    setErrorRatePercentInput(method.errorRatePercent);
+  };
 
-  // Mathematical Calculations
-  const totalAnnualOrders = Math.max(1, Math.round(annualRevenue / Math.max(100, aov)));
-  const monthlyOrders = Math.round(totalAnnualOrders / 12);
+  // Visitor figures
+  const revenueValue = toPositive(annualRevenueInput);
+  const aovValue = toPositive(aovInput);
+  // Assumptions
+  const minutesPerOrder = toNonNegative(minutesPerOrderInput);
+  const handlingCutPercent = toNonNegative(handlingCutPercentInput);
+  const hourlyRate = toNonNegative(hourlyRateInput);
+  const reorderLiftPercent = toNonNegative(reorderLiftPercentInput);
+  const errorRatePercent = toNonNegative(errorRatePercentInput);
+  const costPerError = toNonNegative(costPerErrorInput);
+  const errorCutPercent = toNonNegative(errorCutPercentInput);
+  const dsoReductionDays = toNonNegative(dsoDaysInput);
 
-  // 1. Labor Hours & CSR Cost Savings ($32/hr benchmark CSR + sales operations rate)
-  const hourlyRate = 32;
-  const hoursSavedPerYear = Math.round(totalAnnualOrders * methodObj.laborHoursPerOrder * (enableMatrixOrdering ? 0.9 : 0.75));
-  const annualLaborSavings = Math.round(hoursSavedPerYear * hourlyRate);
+  const hasEstimate =
+    revenueValue !== null &&
+    aovValue !== null &&
+    minutesPerOrder !== null &&
+    handlingCutPercent !== null &&
+    hourlyRate !== null &&
+    reorderLiftPercent !== null &&
+    errorRatePercent !== null &&
+    costPerError !== null &&
+    errorCutPercent !== null &&
+    dsoReductionDays !== null;
 
-  // 2. AOV & Reorder Frequency Lift (+12% to +18% based on custom pricing & matrix ordering)
-  let liftMultiplier = 0.08;
-  if (enableMatrixOrdering) liftMultiplier += 0.04;
-  if (enableCustomPriceLists) liftMultiplier += 0.04;
-  const annualRevenueLift = Math.round(annualRevenue * liftMultiplier);
+  // Numeric values the lead handler reports. Zero means the visitor left it blank.
+  const annualRevenue = revenueValue ?? 0;
+  const aov = aovValue ?? 0;
+  const activeAccounts = toPositive(activeAccountsInput) ?? 0;
 
-  // 3. Invoicing Error & Return Reductions
-  const baselineErrors = Math.round(totalAnnualOrders * methodObj.errorRate);
-  const costPerError = 180; // $180 avg cost per billing dispute / return freight
-  const annualErrorSavings = Math.round(baselineErrors * costPerError * 0.92);
+  const totalAnnualOrders = hasEstimate ? Math.max(1, Math.round(annualRevenue / aov)) : 0;
 
-  // 4. Working Capital & Cash Flow Acceleration (DSO reduced by 14 days)
-  const dailyRevenue = annualRevenue / 365;
-  const dsoReductionDays = enableErpCreditSync ? 16 : 8;
-  const acceleratedCashFlow = Math.round(dailyRevenue * dsoReductionDays);
+  // 1. Staff time saved
+  const hoursSavedPerYear = hasEstimate
+    ? Math.round(totalAnnualOrders * ((minutesPerOrder as number) / 60) * (Math.min(100, handlingCutPercent as number) / 100))
+    : 0;
+  const annualLaborSavings = hasEstimate ? Math.round(hoursSavedPerYear * (hourlyRate as number)) : 0;
 
-  // Total 3-Year Value
+  // 2. Reorder revenue lift
+  const annualRevenueLift = hasEstimate ? Math.round(annualRevenue * ((reorderLiftPercent as number) / 100)) : 0;
+
+  // 3. Order and invoice errors avoided
+  const baselineErrors = hasEstimate ? Math.round(totalAnnualOrders * ((errorRatePercent as number) / 100)) : 0;
+  const annualErrorSavings = hasEstimate
+    ? Math.round(baselineErrors * (costPerError as number) * (Math.min(100, errorCutPercent as number) / 100))
+    : 0;
+
+  // 4. Cash collected sooner (one-time, not yearly)
+  const acceleratedCashFlow = hasEstimate ? Math.round((annualRevenue / 365) * (dsoReductionDays as number)) : 0;
+
+  // Three years at the same yearly rate
   const totalThreeYearImpact = (annualLaborSavings + annualRevenueLift + annualErrorSavings) * 3;
+
+  const assumptionFields: Array<{ key: string; label: string; value: string; set: (v: string) => void }> = [
+    { key: 'minutes', label: 'Staff minutes to handle one order today', value: minutesPerOrderInput, set: setMinutesPerOrderInput },
+    { key: 'handling', label: 'Share of that handling time removed (%)', value: handlingCutPercentInput, set: setHandlingCutPercentInput },
+    { key: 'rate', label: 'Loaded staff cost per hour ($)', value: hourlyRateInput, set: setHourlyRateInput },
+    { key: 'reorder', label: 'Extra reorder revenue (%)', value: reorderLiftPercentInput, set: setReorderLiftPercentInput },
+    { key: 'errors', label: 'Orders with a billing or picking error today (%)', value: errorRatePercentInput, set: setErrorRatePercentInput },
+    { key: 'cost', label: 'Cost of one error, disputes and return freight ($)', value: costPerErrorInput, set: setCostPerErrorInput },
+    { key: 'errorcut', label: 'Share of those errors removed (%)', value: errorCutPercentInput, set: setErrorCutPercentInput },
+    { key: 'dso', label: 'Days sooner customers pay', value: dsoDaysInput, set: setDsoDaysInput },
+  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -188,7 +265,7 @@ export default function B2bWholesaleCalculator({
           B2B Wholesale Savings &amp; Revenue Lift Calculator
         </h3>
         <p style={{ margin: 0, fontSize: '15px', color: '#D6D3D1', maxWidth: '640px', lineHeight: 1.55 }}>
-          Calculate how moving wholesale ordering from manual emails, PDFs, and phone calls to a self-serve B2B portal reduces CSR labor, accelerates reorders, and frees working capital.
+          Type in your own wholesale figures to estimate what a self-serve B2B portal could save over ordering by email, PDF and phone. Every assumption is on screen, and you can change each one.
         </p>
       </div>
 
@@ -202,103 +279,58 @@ export default function B2bWholesaleCalculator({
       >
         {/* Left Column: Interactive Inputs */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '22px' }}>
-          {/* Revenue Slider */}
+          {/* Annual Wholesale Revenue */}
           <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '8px' }}>
-              <label htmlFor={revenueSliderId} style={{ fontWeight: 700, fontSize: '14px', color: 'var(--pp-ink, #14110F)' }}>
-                Annual Wholesale Revenue
-              </label>
-              <span style={{ fontFamily: 'var(--pp-mono, monospace)', fontWeight: 800, fontSize: '17px', color: '#B23E13' }}>
-                ${annualRevenue.toLocaleString()}
-              </span>
-            </div>
+            <label htmlFor={revenueSliderId} style={fieldLabelStyle}>
+              Your annual wholesale revenue ($)
+            </label>
             <input
               id={revenueSliderId}
-              type="range"
-              min={500000}
-              max={30000000}
-              step={250000}
-              value={annualRevenue}
-              onChange={(e) => setAnnualRevenue(Number(e.target.value))}
-              style={{
-                width: '100%',
-                height: '6px',
-                borderRadius: '3px',
-                accentColor: '#F05A28',
-                cursor: 'pointer',
-              }}
+              type="number"
+              inputMode="decimal"
+              min={0}
+              step="any"
+              placeholder="Enter your figure"
+              value={annualRevenueInput}
+              onChange={(e) => setAnnualRevenueInput(e.target.value)}
+              style={numberInputStyle}
             />
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginTop: '4px', fontFamily: 'var(--pp-mono, monospace)' }}>
-              <span>$500k</span>
-              <span>$10M</span>
-              <span>$30M+</span>
-            </div>
           </div>
 
           {/* Average Order Value (AOV) */}
           <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '8px' }}>
-              <label htmlFor={aovSliderId} style={{ fontWeight: 700, fontSize: '14px', color: 'var(--pp-ink, #14110F)' }}>
-                Average B2B Order Value (AOV)
-              </label>
-              <span style={{ fontFamily: 'var(--pp-mono, monospace)', fontWeight: 800, fontSize: '17px', color: '#B23E13' }}>
-                ${aov.toLocaleString()}
-              </span>
-            </div>
+            <label htmlFor={aovSliderId} style={fieldLabelStyle}>
+              Your average B2B order value ($)
+            </label>
             <input
               id={aovSliderId}
-              type="range"
-              min={250}
-              max={15000}
-              step={250}
-              value={aov}
-              onChange={(e) => setAov(Number(e.target.value))}
-              style={{
-                width: '100%',
-                height: '6px',
-                borderRadius: '3px',
-                accentColor: '#F05A28',
-                cursor: 'pointer',
-              }}
+              type="number"
+              inputMode="decimal"
+              min={0}
+              step="any"
+              placeholder="Enter your figure"
+              value={aovInput}
+              onChange={(e) => setAovInput(e.target.value)}
+              style={numberInputStyle}
             />
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginTop: '4px', fontFamily: 'var(--pp-mono, monospace)' }}>
-              <span>$250</span>
-              <span>$5,000</span>
-              <span>$15,000+</span>
-            </div>
           </div>
 
           {/* Active Wholesale Accounts */}
           <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '8px' }}>
-              <label htmlFor={accountsSliderId} style={{ fontWeight: 700, fontSize: '14px', color: 'var(--pp-ink, #14110F)' }}>
-                Active Wholesale Accounts
-              </label>
-              <span style={{ fontFamily: 'var(--pp-mono, monospace)', fontWeight: 800, fontSize: '17px', color: '#B23E13' }}>
-                {activeAccounts} accounts
-              </span>
-            </div>
+            <label htmlFor={accountsSliderId} style={fieldLabelStyle}>
+              Your active wholesale accounts (optional)
+            </label>
             <input
               id={accountsSliderId}
-              type="range"
-              min={20}
-              max={1000}
-              step={10}
-              value={activeAccounts}
-              onChange={(e) => setActiveAccounts(Number(e.target.value))}
-              style={{
-                width: '100%',
-                height: '6px',
-                borderRadius: '3px',
-                accentColor: '#F05A28',
-                cursor: 'pointer',
-              }}
+              type="number"
+              inputMode="numeric"
+              min={0}
+              step={1}
+              placeholder="Enter your figure"
+              value={activeAccountsInput}
+              onChange={(e) => setActiveAccountsInput(e.target.value)}
+              style={numberInputStyle}
             />
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginTop: '4px', fontFamily: 'var(--pp-mono, monospace)' }}>
-              <span>20</span>
-              <span>250</span>
-              <span>1,000+</span>
-            </div>
           </div>
 
           {/* Current Order Intake Method */}
@@ -313,7 +345,7 @@ export default function B2bWholesaleCalculator({
                   <button
                     key={method.id}
                     type="button"
-                    onClick={() => setSelectedMethod(method.id)}
+                    onClick={() => selectMethod(method.id)}
                     style={{
                       display: 'flex',
                       alignItems: 'center',
@@ -337,39 +369,39 @@ export default function B2bWholesaleCalculator({
             </div>
           </div>
 
-          {/* Feature Optimization Toggles */}
-          <div>
-            <label style={{ display: 'block', fontWeight: 700, fontSize: '14px', color: 'var(--pp-ink, #14110F)', marginBottom: '8px' }}>
-              Planned Portal Capabilities
-            </label>
-            <div style={{ display: 'grid', gap: '8px' }}>
-              <label style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '13px', cursor: 'pointer' }}>
-                <input
-                  type="checkbox"
-                  checked={enableMatrixOrdering}
-                  onChange={(e) => setEnableMatrixOrdering(e.target.checked)}
-                  style={{ accentColor: '#F05A28', width: '16px', height: '16px' }}
-                />
-                <span>Matrix SKU quick-order grid &amp; 1-click CSV reorder pads</span>
-              </label>
-              <label style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '13px', cursor: 'pointer' }}>
-                <input
-                  type="checkbox"
-                  checked={enableCustomPriceLists}
-                  onChange={(e) => setEnableCustomPriceLists(e.target.checked)}
-                  style={{ accentColor: '#F05A28', width: '16px', height: '16px' }}
-                />
-                <span>Tiered pricing matrices &amp; per-company contract price lists</span>
-              </label>
-              <label style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '13px', cursor: 'pointer' }}>
-                <input
-                  type="checkbox"
-                  checked={enableErpCreditSync}
-                  onChange={(e) => setEnableErpCreditSync(e.target.checked)}
-                  style={{ accentColor: '#F05A28', width: '16px', height: '16px' }}
-                />
-                <span>Real-time ERP credit line checks &amp; Net 30 terms at checkout</span>
-              </label>
+          {/* Editable assumptions */}
+          <div
+            style={{
+              border: '1px solid var(--pp-line, #E5E0DA)',
+              borderRadius: '12px',
+              background: '#FBF9F7',
+              padding: '16px',
+            }}
+          >
+            <div style={{ fontFamily: 'var(--pp-mono, monospace)', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: '#B23E13', marginBottom: '4px' }}>
+              Assumptions, edit to match your business
+            </div>
+            <p style={{ fontSize: '12px', color: 'var(--pp-muted, #78716C)', margin: '0 0 12px 0', lineHeight: 1.5 }}>
+              These starting values are working assumptions for you to edit. Picking an order method resets the first and fifth values.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
+              {assumptionFields.map((field) => (
+                <div key={field.key}>
+                  <label htmlFor={`${assumptionIdPrefix}-${field.key}`} style={assumptionLabelStyle}>
+                    {field.label}
+                  </label>
+                  <input
+                    id={`${assumptionIdPrefix}-${field.key}`}
+                    type="number"
+                    inputMode="decimal"
+                    min={0}
+                    step="any"
+                    value={field.value}
+                    onChange={(e) => field.set(e.target.value)}
+                    style={numberInputStyle}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -388,7 +420,7 @@ export default function B2bWholesaleCalculator({
         >
           <div>
             <div style={{ fontFamily: 'var(--pp-mono, monospace)', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: '#B23E13', marginBottom: '4px' }}>
-              Projected Annual Impact
+              Your Estimate
             </div>
             <h4
               style={{
@@ -400,91 +432,103 @@ export default function B2bWholesaleCalculator({
                 letterSpacing: '-0.02em',
               }}
             >
-              Estimated Value Gains
+              Estimated Yearly Effect
             </h4>
 
-            {/* Metric Cards Grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '18px' }}>
-              <div style={{ background: '#FFFFFF', padding: '14px', borderRadius: '12px', border: '1px solid var(--pp-line, #E5E0DA)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginBottom: '4px', fontFamily: 'var(--pp-mono, monospace)' }}>
-                  <Clock size={13} color="#F05A28" />
-                  <span>Labor Saved</span>
-                </div>
-                <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--pp-ink, #14110F)', fontFamily: 'var(--pp-mono, monospace)' }}>
-                  ${annualLaborSavings.toLocaleString()}/yr
-                </div>
-                <div style={{ fontSize: '11px', color: '#16A34A', marginTop: '2px', fontWeight: 600 }}>
-                  {hoursSavedPerYear.toLocaleString()} hrs saved/yr
-                </div>
-              </div>
+            {!hasEstimate ? (
+              <p
+                style={{
+                  background: '#FFFFFF',
+                  border: '1px solid var(--pp-line, #E5E0DA)',
+                  borderRadius: '12px',
+                  padding: '16px',
+                  fontSize: '14px',
+                  color: 'var(--pp-ink, #14110F)',
+                  margin: '0 0 20px 0',
+                  lineHeight: 1.55,
+                }}
+              >
+                Enter your own numbers to see an estimate. We do not prefill your figures.
+              </p>
+            ) : (
+              <>
+                {/* Metric Cards Grid */}
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '18px' }}>
+                  <div style={{ background: '#FFFFFF', padding: '14px', borderRadius: '12px', border: '1px solid var(--pp-line, #E5E0DA)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginBottom: '4px', fontFamily: 'var(--pp-mono, monospace)' }}>
+                      <Clock size={13} color="#F05A28" />
+                      <span>Staff Time Saved</span>
+                    </div>
+                    <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--pp-ink, #14110F)', fontFamily: 'var(--pp-mono, monospace)' }}>
+                      ${annualLaborSavings.toLocaleString()}/yr
+                    </div>
+                    <div style={{ fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginTop: '2px' }}>
+                      {hoursSavedPerYear.toLocaleString()} hrs/yr at your assumptions
+                    </div>
+                  </div>
 
-              <div style={{ background: '#FFFFFF', padding: '14px', borderRadius: '12px', border: '1px solid var(--pp-line, #E5E0DA)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginBottom: '4px', fontFamily: 'var(--pp-mono, monospace)' }}>
-                  <TrendingUp size={13} color="#F05A28" />
-                  <span>Revenue Lift</span>
-                </div>
-                <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--pp-ink, #14110F)', fontFamily: 'var(--pp-mono, monospace)' }}>
-                  +${annualRevenueLift.toLocaleString()}/yr
-                </div>
-                <div style={{ fontSize: '11px', color: '#16A34A', marginTop: '2px', fontWeight: 600 }}>
-                  +{Math.round(liftMultiplier * 100)}% reorder volume
-                </div>
-              </div>
+                  <div style={{ background: '#FFFFFF', padding: '14px', borderRadius: '12px', border: '1px solid var(--pp-line, #E5E0DA)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginBottom: '4px', fontFamily: 'var(--pp-mono, monospace)' }}>
+                      <TrendingUp size={13} color="#F05A28" />
+                      <span>Reorder Revenue</span>
+                    </div>
+                    <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--pp-ink, #14110F)', fontFamily: 'var(--pp-mono, monospace)' }}>
+                      ${annualRevenueLift.toLocaleString()}/yr
+                    </div>
+                    <div style={{ fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginTop: '2px' }}>
+                      At the {reorderLiftPercent}% you assumed
+                    </div>
+                  </div>
 
-              <div style={{ background: '#FFFFFF', padding: '14px', borderRadius: '12px', border: '1px solid var(--pp-line, #E5E0DA)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginBottom: '4px', fontFamily: 'var(--pp-mono, monospace)' }}>
-                  <ShieldCheck size={13} color="#F05A28" />
-                  <span>Error Reduction</span>
-                </div>
-                <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--pp-ink, #14110F)', fontFamily: 'var(--pp-mono, monospace)' }}>
-                  ${annualErrorSavings.toLocaleString()}/yr
-                </div>
-                <div style={{ fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginTop: '2px' }}>
-                  92% fewer invoice disputes
-                </div>
-              </div>
+                  <div style={{ background: '#FFFFFF', padding: '14px', borderRadius: '12px', border: '1px solid var(--pp-line, #E5E0DA)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginBottom: '4px', fontFamily: 'var(--pp-mono, monospace)' }}>
+                      <ShieldCheck size={13} color="#F05A28" />
+                      <span>Errors Avoided</span>
+                    </div>
+                    <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--pp-ink, #14110F)', fontFamily: 'var(--pp-mono, monospace)' }}>
+                      ${annualErrorSavings.toLocaleString()}/yr
+                    </div>
+                    <div style={{ fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginTop: '2px' }}>
+                      {Math.min(100, errorCutPercent as number)}% of errors removed, as you assumed
+                    </div>
+                  </div>
 
-              <div style={{ background: '#FFFFFF', padding: '14px', borderRadius: '12px', border: '1px solid var(--pp-line, #E5E0DA)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginBottom: '4px', fontFamily: 'var(--pp-mono, monospace)' }}>
-                  <DollarSign size={13} color="#F05A28" />
-                  <span>Cash Accelerated</span>
+                  <div style={{ background: '#FFFFFF', padding: '14px', borderRadius: '12px', border: '1px solid var(--pp-line, #E5E0DA)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginBottom: '4px', fontFamily: 'var(--pp-mono, monospace)' }}>
+                      <DollarSign size={13} color="#F05A28" />
+                      <span>Cash Collected Sooner</span>
+                    </div>
+                    <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--pp-ink, #14110F)', fontFamily: 'var(--pp-mono, monospace)' }}>
+                      ${acceleratedCashFlow.toLocaleString()}
+                    </div>
+                    <div style={{ fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginTop: '2px' }}>
+                      One time, {dsoReductionDays} days sooner as you assumed
+                    </div>
+                  </div>
                 </div>
-                <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--pp-ink, #14110F)', fontFamily: 'var(--pp-mono, monospace)' }}>
-                  ${acceleratedCashFlow.toLocaleString()}
-                </div>
-                <div style={{ fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginTop: '2px' }}>
-                  {dsoReductionDays} days faster DSO
-                </div>
-              </div>
-            </div>
 
-            {/* Total 3-Year Value Box */}
-            <div
-              style={{
-                background: 'linear-gradient(135deg, #14110F 0%, #201B17 100%)',
-                borderRadius: '12px',
-                padding: '16px 20px',
-                color: '#FFFFFF',
-                marginBottom: '20px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-              }}
-            >
-              <div>
-                <div style={{ fontFamily: 'var(--pp-mono, monospace)', fontSize: '10.5px', color: '#D6D3D1', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                  Total 3-Year Value Creation
+                {/* Three-Year Total Box */}
+                <div
+                  style={{
+                    background: 'linear-gradient(135deg, #14110F 0%, #201B17 100%)',
+                    borderRadius: '12px',
+                    padding: '16px 20px',
+                    color: '#FFFFFF',
+                    marginBottom: '20px',
+                  }}
+                >
+                  <div style={{ fontFamily: 'var(--pp-mono, monospace)', fontSize: '10.5px', color: '#D6D3D1', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    Three Years at the Same Rate
+                  </div>
+                  <div style={{ fontSize: '26px', fontWeight: 800, color: '#FF7A45', fontFamily: 'var(--pp-mono, monospace)', marginTop: '2px' }}>
+                    ${totalThreeYearImpact.toLocaleString()}
+                  </div>
+                  <div style={{ fontSize: '11.5px', color: '#D6D3D1', marginTop: '4px' }}>
+                    The yearly figures above times three, before build cost. Treat it as a rough guide.
+                  </div>
                 </div>
-                <div style={{ fontSize: '26px', fontWeight: 800, color: '#FF7A45', fontFamily: 'var(--pp-mono, monospace)', marginTop: '2px' }}>
-                  ${totalThreeYearImpact.toLocaleString()}
-                </div>
-              </div>
-              <div style={{ textAlign: 'right' }}>
-                <span style={{ fontSize: '11.5px', background: 'rgba(255, 255, 255, 0.12)', padding: '4px 10px', borderRadius: '6px', fontFamily: 'var(--pp-mono, monospace)' }}>
-                  ~3 to 5 Mo. Payback
-                </span>
-              </div>
-            </div>
+              </>
+            )}
           </div>
 
           {/* Lead Capture or Consultation Trigger */}

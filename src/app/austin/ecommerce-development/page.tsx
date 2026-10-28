@@ -8,12 +8,11 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
-import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-10-04';
+const PAGE_MODIFIED = '2026-10-29';
 const CANONICAL = 'https://factoryjet.com/austin/ecommerce-development';
 
 export const metadata: Metadata = {
@@ -72,7 +71,7 @@ const DISTRICTS = [
   {
     corridor: 'East Austin & Artisan Studios',
     focus: 'Specialty CPG, Craft Beverages & Subscription Goods',
-    desc: 'Rapidly scaling food and beverage brands leveraging automated subscription billing workflows, bundled discount matrices, and Klaviyo lifecycle marketing automation.',
+    desc: 'Rapidly scaling food and beverage brands running automated subscription billing workflows, bundled discount matrices, and Klaviyo lifecycle marketing automation.',
   },
   {
     corridor: 'Mueller & Central Austin Commercial',
@@ -222,7 +221,7 @@ const ROADMAP_STEPS = [
     phase: 'Phase 04',
     title: 'Load Testing, Cutover & Launch',
     desc: 'We execute multi-device checkout testing, run automated traffic load simulations, execute zero-downtime domain cutover, and provide staff training.',
-    deliverables: ['Comprehensive multi-device QA testing', 'Zero-downtime DNS cutover execution', 'Recorded staff training video tutorials', '30-day post-launch warranty and optimization'],
+    deliverables: ['Multi-device QA testing', 'Zero-downtime DNS cutover execution', 'Recorded staff training video tutorials', 'Defects fixed inside the build price for the agreed cover period'],
   },
 ];
 
@@ -247,6 +246,15 @@ const EVALUATION_CRITERIA = [
     factoryjet: '100% full intellectual property ownership. You own your Shopify store, theme files, and payment gateways directly.',
     traditional: 'Agencies retaining proprietary app licenses or charging ongoing monthly markups on hosting and development.',
   },
+];
+
+const HOUSE_TERMS = [
+  { t: 'A draft of your store before you sign', d: 'We build a working draft on your own products first. You see it and click through it before any contract.' },
+  { t: 'Fixed price per phase', d: 'Redesign, B2B ordering and ERP sync can each be its own phase. Each one is scoped and priced in writing on its own.' },
+  { t: 'You own the code and repo from day one', d: 'The theme, the custom apps and the code repository sit in your accounts. Any developer can pick them up later.' },
+  { t: 'Defects fixed inside the build price', d: 'Bugs found after launch are fixed at no extra cost, for a cover period we agree before work starts.' },
+  { t: 'Support only if you want it', d: 'After that, each change is quoted and approved before we do it.' },
+  { t: 'No monthly minimum', d: 'You pay Shopify and your apps directly. There is no FactoryJet fee that runs whether you use us or not.' },
 ];
 
 const FAQ_CATEGORIES = [
@@ -274,13 +282,13 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How do you prevent budget overruns during custom e-commerce builds?',
     answer:
-      'We conduct an in-depth discovery phase before writing any code. We document all catalog structures, third-party integrations, design specifications, and launch requirements in a detailed scope of work with guaranteed fixed pricing.',
+      'We conduct an in-depth discovery phase before writing any code. We document all catalog structures, third-party integrations, design specifications, and launch requirements in a detailed scope of work with a fixed price for each phase.',
   },
   {
     category: 'platforms',
     question: 'Why do you recommend Shopify Plus for scaling Austin consumer brands?',
     answer:
-      'Shopify Plus provides 99.99% cloud uptime, native Shop Pay accelerated checkout that lifts conversion by up to 50%, built-in B2B wholesale features, frictionless international expansion via Shopify Markets, and zero server maintenance overhead.',
+      'Shopify Plus provides 99.99% cloud uptime, native Shop Pay accelerated checkout (Shopify reports up to 50% better conversion than guest checkout, based on an April 2023 study it commissioned, per shopify.com/shop-pay), built-in B2B wholesale features, frictionless international expansion via Shopify Markets, and zero server maintenance overhead.',
   },
   {
     category: 'platforms',
@@ -316,7 +324,7 @@ const FAQ_ITEMS = [
     category: 'migration',
     question: 'How do you protect our Google SEO rankings when migrating from Magento or WooCommerce?',
     answer:
-      'We map out every single legacy URL and create comprehensive 1-to-1 301 redirects, preserve meta titles and descriptions, transfer product schema markup, and execute launch DNS cutover during off-peak hours to ensure zero ranking disruption.',
+      'We map out every legacy URL and create 1-to-1 301 redirects, preserve meta titles and descriptions, transfer product schema markup, and execute launch DNS cutover during off-peak hours to ensure zero ranking disruption.',
   },
   {
     category: 'migration',
@@ -386,15 +394,15 @@ const FAQ_ITEMS = [
   },
   {
     category: 'growth',
-    question: 'How do you guarantee sub-500ms page load speeds and 100/100 Core Web Vitals on large catalog Shopify Plus stores?',
+    question: 'How do you keep page loads fast and Core Web Vitals green on large catalog Shopify Plus stores?',
     answer:
-      'We eliminate third-party JavaScript bloat, implement critical CSS inlining, transcode images to next-generation AVIF/WebP formats, and utilize Cloudflare edge caching to deliver instantaneous page transitions.',
+      'We eliminate third-party JavaScript bloat, implement critical CSS inlining, transcode images to next-generation AVIF/WebP formats, and use Cloudflare edge caching so pages load quickly.',
   },
   {
     category: 'growth',
     question: 'How do you implement Schema.org JSON-LD structured data for Google Shopping, Merchant Center, and AI Overviews?',
     answer:
-      'We inject comprehensive Product, Offer, AggregateRating, Organization, and FAQPage JSON-LD schemas directly into each template, providing search engines and AI agents with precise price, inventory, and review metadata.',
+      'We inject Product, Offer, AggregateRating, Organization, and FAQPage JSON-LD schemas directly into each template, providing search engines and AI agents with precise price, inventory, and review metadata.',
   },
   {
     category: 'growth',
@@ -532,7 +540,7 @@ export default function AustinEcommerceDevelopmentPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Austin Ecommerce Agency for High-Growth Brands
+                  Austin Ecommerce Development for Store Redesigns, B2B Ordering and ERP Sync
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
@@ -550,12 +558,15 @@ export default function AustinEcommerceDevelopmentPage() {
                   region="us"
                   source="ecommerce_austin_hero"
                   service="E-commerce"
-                  submitLabel="Get my quote"
+                  submitLabel="See a draft of my store"
                   formId="austin-ecom-hero-form"
                   secondaryHref="#austin-ecom-districts"
                   secondaryLabel="Explore Austin Corridors ↓"
-                  trustText="Founder usually replies within 2 to 3 hours. You see a working draft of your store before you sign."
+                  trustText="Working software on your own data before you sign. Founder replies within 24 hours."
                 />
+                <p style={{ margin: '12px 0 0', fontSize: '13.5px', color: '#494852', lineHeight: 1.5, maxWidth: '52ch' }}>
+                  Have a brief or RFP? Attach it at step 2 and get a fixed price per phase in writing.
+                </p>
               </div>
 
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
@@ -820,13 +831,54 @@ export default function AustinEcommerceDevelopmentPage() {
           </div>
         </section>
 
+        {/* ── 06B. HOUSE TERMS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>How we work</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                Terms for your Austin store build
+              </h2>
+              <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6, maxWidth: '62ch' }}>
+                These terms are for owners who already sell online and want a redesign, a{' '}
+                <Link href="/b2b-ecommerce" style={{ color: '#B23E13', textDecoration: 'underline' }}>B2B ordering portal</Link>{' '}
+                for wholesale buyers, or{' '}
+                <Link href="/services/ecommerce-erp-integration" style={{ color: '#B23E13', textDecoration: 'underline' }}>ERP sync</Link>{' '}
+                so stock and orders match. The same terms apply to each job.
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: '16px' }}>
+                {HOUSE_TERMS.map((x) => (
+                  <li key={x.t} style={{ background: '#F9F9FC', border: '1px solid #E6E6EC', borderRadius: '16px', padding: '22px' }}>
+                    <p style={{ fontSize: '16px', fontWeight: 800, color: '#141414', margin: '0 0 6px', letterSpacing: '-0.01em' }}>{x.t}</p>
+                    <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: 0 }}>{x.d}</p>
+                  </li>
+                ))}
+              </ul>
+              <div style={{ marginTop: '24px', background: '#F9F9FC', border: '1px solid #E6E6EC', borderLeft: '4px solid #FF5622', borderRadius: '12px', padding: '20px 22px', maxWidth: '72ch' }}>
+                <p style={{ margin: '0 0 8px', fontFamily: 'var(--font-geist-mono), monospace', fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#B23E13' }}>Client: European Garden (Exaco)</p>
+                <p style={{ fontSize: '15px', color: '#26252B', lineHeight: 1.6, margin: 0 }}>
+                  Exaco, a garden products company in Pflugerville, Texas, chose us to build the new Shopify store for its European Garden brand and to connect it to QuickBooks Enterprise. Before they signed, we built a draft theme inside their own Shopify store. The store is in build now.
+                </p>
+              </div>
+              <div style={{ marginTop: '28px' }}>
+                <ModalCTAButton label="See a draft of my store" region="us" btnVariant="primary-dark" />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="ecommerce-blueprint">
 
           <EnterpriseArchitectureBlueprint
             badge="// AUSTIN ENTERPRISE E-COMMERCE BLUEPRINT"
             title="High-Scale Commerce: Next.js Storefront to Real-Time ERP"
-            subtitle="Explore how custom Next.js storefronts, headless Shopify Plus &amp; BigCommerce engines, NetSuite ERP middleware, and sub-second checkout pipelines operate together seamlessly."
+            subtitle="Explore how custom Next.js storefronts, headless Shopify Plus &amp; BigCommerce engines, NetSuite ERP middleware, and checkout pipelines fit together."
             legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
             targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
             ctaLabel="Get an E-Commerce Architecture Quote"
@@ -949,9 +1001,6 @@ export default function AustinEcommerceDevelopmentPage() {
             </div>
           </div>
         </section>
-
-        {/* ── INTERACTIVE SPEED & REVENUE RECOVERY CALCULATOR ── */}
-        <CommerceRoiCalculator city="Austin" region="us" />
 
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ

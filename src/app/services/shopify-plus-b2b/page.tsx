@@ -13,10 +13,21 @@ import B2bWholesaleCalculator from '@/components/commerce/B2bWholesaleCalculator
 import Net30PaymentComparison from '@/components/commerce/Net30PaymentComparison';
 import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-29';
+const PAGE_MODIFIED = '2026-10-29';
+
+/* House terms, approved wording (2026-10-16). Same terms as /services/ai-automation. */
+const HOUSE_TERMS = [
+  { t: 'A draft of your store before you sign', d: 'We build a working draft on Shopify with your own products and one of your price lists, so you see the wholesale portal before you commit.' },
+  { t: 'Fixed price per phase', d: 'Each phase is scoped, priced and signed on its own. Nothing is billed by the hour.' },
+  { t: 'You own the code', d: 'The theme, the Shopify Functions and the integration code sit in your own repository from day one. Shopify and app fees are billed to your own accounts.' },
+  { t: 'Defect cover inside the build price', d: 'Defects found after launch are fixed inside the build price, for a cover period we agree before work starts.' },
+  { t: 'Support only if you want it', d: 'After that, support is optional. Each change is quoted and approved before we do it.' },
+  { t: 'No monthly minimum', d: 'There is no monthly fee you pay whether you use it or not.' },
+] as const;
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/marketplace';
 
@@ -144,13 +155,13 @@ const FAQ_ITEMS = [
     category: 'commercials',
     question: 'What is FactoryJet’s pricing model for Shopify Plus B2B development?',
     answer:
-      'We deliver all B2B development on fixed-price project scopes with milestone deliverables. We do not bill open-ended hourly rates. We never take percentage cuts of your wholesale revenue.',
+      'Each phase is scoped, priced and signed on its own, with milestone deliverables and no hourly billing. We never take a percentage of your wholesale revenue. Defects found after launch are fixed inside the build price for a cover period agreed before work starts. Support after that is optional, each change is quoted and approved first, and there is no monthly minimum.',
   },
   {
     category: 'commercials',
     question: 'How do we schedule a Shopify Plus B2B technical scoping session with the founder?',
     answer:
-      'You can schedule a 30-minute scoping call directly with founder Bhavesh Barot. We review your wholesale price matrices, ERP requirements, and buyer workflows. Then we deliver a comprehensive fixed-scope technical proposal.',
+      'You can schedule a 30-minute scoping call directly with founder Bhavesh Barot. We review your wholesale price matrices, ERP requirements, and buyer workflows. Then we send a fixed-scope technical proposal.',
   },
   {
     category: 'architecture',
@@ -365,7 +376,12 @@ export default function ShopifyPlusB2BPage() {
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
                   FactoryJet builds B2B wholesale portals on Shopify Plus for brands that sell to retailers and distributors. Your buyers log in to see their own price lists, Net 30 or Net 60 terms, company accounts and volume tiers. Orders sync to NetSuite, SAP, Dynamics 365, Acumatica or QuickBooks in real time.
                 </p>
-                <HeroInlineForm source="us_shopify_plus_b2b_hero" region="us" submitLabel="Get a Shopify B2B Scope." />
+                <HeroInlineForm
+                  source="us_shopify_plus_b2b_hero"
+                  region="us"
+                  submitLabel="See a draft of my store"
+                  trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+                />
               </div>
 
               {/* Visual Architecture Graphic */}
@@ -756,6 +772,36 @@ export default function ShopifyPlusB2BPage() {
           </div>
         </section>
 
+        {/* ── House terms ── */}
+        <section className="pp-sec tint" id="terms">
+          <div className="pp-wrap">
+            <div style={{ display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'start' }} className="pp-herogrid">
+              <div>
+                <p className="pp-mlabel">{'// how we work'}</p>
+                <h2 style={{ marginTop: '10px' }}>Terms on every Shopify Plus B2B build</h2>
+                <p className="pp-lead" style={{ marginTop: '14px' }}>
+                  Six terms, written into the proposal before Phase 1 starts.
+                </p>
+              </div>
+              <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '14px' }}>
+                {HOUSE_TERMS.map((x) => (
+                  <li key={x.t} className="pp-card">
+                    <h3>{x.t}</h3>
+                    <p>{x.d}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <MidPageCTA
+          headline="Send us one price list and one real wholesale order."
+          sub="Tell us your ERP, how many trade accounts you have and how they order today. We reply with what the Shopify Plus build would cover, phase by phase."
+          label="Talk to the founder"
+          note="Working software on your own data before you sign. Founder replies within 24 hours."
+        />
+
         {/* ── Comparison Table ── */}
         <section className="pp-sec">
           <div className="pp-wrap">
@@ -950,29 +996,32 @@ export default function ShopifyPlusB2BPage() {
                   Explore related capabilities: <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce platforms</Link>, <Link href="/services/shopify-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Shopify store development</Link>, <Link href="/services/shopify-edi-integration" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>EDI orders from B2B customers</Link>, <Link href="/agentic-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>agentic commerce</Link>, and <Link href="/services/ai-agent-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>AI agent operations</Link>.
                 </p>
               </div>
+              {/* B2B proof, 2026-10-29: GPSUK (Commerceflo) and Sow Easy (WordPress
+                  WooCommerce + Odoo), both approved for any page on 2026-10-29. They are
+                  B2B ordering work on other platforms, never presented as Shopify Plus
+                  builds. Facts come from their public case studies only. */}
               <div className="pp-proof">
                 <div className="top">
-                  <Image
-                    src="/images/testimonials/vishal-impulse-branding-160.webp"
-                    alt="Vishal K, Impulse Branding"
-                    width={46}
-                    height={46}
-                    style={{ borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--pp-line)' }}
-                  />
                   <div>
-                    <b>Vishal K.</b>
-                    <span>Director, Impulse Branding</span>
+                    <b>B2B ordering we have built</b>
+                    <span>On Commerceflo and on WooCommerce with Odoo</span>
                   </div>
                 </div>
-                <blockquote>
-                  &ldquo;In our business, clients size you up before they ever call. FactoryJet built us a website
-                  that finally looks as solid as the work we deliver, and we are getting real project inquiries
-                  through it.&rdquo;
-                </blockquote>
-                <div className="rate">
-                  <a href="/case-studies/impulse-branding-migration" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
-                    Read the Impulse Branding case study →
-                  </a>
+                <p style={{ fontSize: '15px', lineHeight: 1.6, color: 'var(--pp-body)', margin: '0 0 12px 0' }}>
+                  <b>GPSUK</b>, promotional products, United Kingdom. A trade storefront on Commerceflo. Business buyers
+                  log in, see their own account pricing, and move from quote to order without anyone retyping it.
+                </p>
+                <p style={{ fontSize: '15px', lineHeight: 1.6, color: 'var(--pp-body)', margin: '0 0 18px 0' }}>
+                  <b>Sow Easy</b>, B2B distribution. A trade store on WordPress WooCommerce that reads stock, pricing
+                  and SKUs from Odoo. The build is in progress and being tested on staging.
+                </p>
+                <div className="rate" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 18px' }}>
+                  <Link href="/case-studies/gpsuk-promotional-products" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
+                    Read the GPSUK case study →
+                  </Link>
+                  <Link href="/case-studies/sow-easy-distributor-portal" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
+                    Read the Sow Easy case study →
+                  </Link>
                 </div>
               </div>
             </div>

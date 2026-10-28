@@ -190,12 +190,12 @@ export const AI_AGENT_FAQS = [
     "question": "Do you build AI agents for B2B and wholesale ecommerce?",
     "answer": "Yes. The common ones read emailed RFQs and purchase orders, check customer price lists and stock in NetSuite or Odoo, and draft a quote or order for your team to approve. On Shopify Plus B2B stores they can also answer account and reorder questions from live data. A person approves anything that commits price, stock or credit."
   },
-  // Q28 to Q31 added 2026-10-10 (Q32, a hosting-price question, was removed on
-  // 2026-10-11). Wording comes from open buyer questions in the
-  // 9 Oct 2026 assistant sweep (Search Console, US). Third-party prices and
-  // figures were read on each source's own page on 2026-10-09 and will date:
-  // re-read Lindy, Intercom Fin, MentorCruise and ProductCrafters before
-  // changing or reusing them.
+  // Q28 added 2026-10-10 from open buyer questions in the 9 Oct 2026
+  // assistant sweep. On 2026-10-29 the mentor/freelancer answer, the two
+  // answers that pointed to the small-business vendor guide and the
+  // hosting-under-$5 answer were removed, four buyer questions were added,
+  // and ids were renumbered. The EU AI Act answer was checked against the
+  // European Commission AI Act page on 2026-10-29.
   {
     "id": "Q28",
     "category": "faq-vendor",
@@ -205,43 +205,39 @@ export const AI_AGENT_FAQS = [
   {
     "id": "Q29",
     "category": "faq-vendor",
-    "question": "Is there a small agency that builds with AI agents?",
-    "answer": "Yes. FactoryJet is a specialist firm, founded in 2014, where Bhavesh, our founder, reads every request and usually replies within 2 to 3 hours. We build custom AI agents into the systems you already run, such as NetSuite, Odoo, HubSpot, Zendesk and Shopify. A person approves anything that matters, and you own the code. We work with US clients remotely, so choose a local firm if you need people on site every week. Our guide to AI agent development companies for small business describes other developers and platforms from their own websites."
+    "question": "What are good alternatives to Accenture or Deloitte for building AI agents?",
+    "answer": "It depends on the size of the change. Large consultancies such as Accenture and Deloitte fit when the agent is one part of a wider program: several business units, a big integration team, formal change management and a budget set at board level. A specialist firm fits when you already know the job, such as RFQ-to-quote or order entry, and want a working agent inside your NetSuite, SAP or Salesforce within weeks. FactoryJet is a specialist. We show the agent on your own data before you sign, and we scope, price and sign each phase on its own. Whoever you talk to, ask to see an agent writing to a system like yours."
   },
   {
     "id": "Q30",
-    "category": "faq-vendor",
-    "question": "I need to hire an AI agents expert. Who should I contact?",
-    "answer": "Contact a mentor for advice, a freelancer for one small task, or a development firm for an agent built into your systems. MentorCruise listed 85 agentic AI experts on October 9, 2026 and says fewer than 5% of applicants are accepted. Freelancer.com lets you post a project for free and compare bids. For a build with support after launch, send FactoryJet the form on this page. Bhavesh, our founder, usually replies within 2 to 3 hours. Our guide to hiring an AI agent developer has a 10-point vetting checklist for whichever you pick."
-  },
-  {
-    "id": "Q31",
-    "category": "faq-cost",
-    "question": "What are affordable agentic AI systems for small and mid-sized businesses?",
-    "answer": "The affordable ones are ready-made products you rent by the seat or by the outcome. On October 9, 2026, Lindy listed plans from $29.99 to $199.99 a user a month, and Intercom listed its Fin support agent at $0.99 per outcome. Development firm ProductCrafters puts per-seat agent products at $20 to $500 a user a month and custom builds at about $5,000 to more than $180,000. Rent first if a product already connects to your tools. Build when the work follows your own rules across several systems. Our guide to AI agent development companies for small business covers both routes."
-  },
-  {
-    "id": "Q32",
-    "category": "faq-scope",
-    "question": "Does an AI chatbot or agent have to tell people in the EU that it is AI?",
-    "answer": "Yes, in most cases. Article 50(1) of the EU AI Act says AI systems that interact directly with people must be designed so those people are told they are dealing with AI, unless that is obvious from the context. Article 50(5) says the notice must be clear and given at the first interaction at the latest. Article 50 has applied since 2 August 2026. The 2026 Digital Omnibus amendment (Regulation (EU) 2026/1744, which we read on EUR-Lex on October 21, 2026) moved the high-risk deadlines but left that date in place. The simplest way to meet it is to say so in the agent's first message."
-  },
-  {
-    "id": "Q33",
     "category": "faq-scope",
     "question": "Who signs the data processing agreement when an AI agent handles EU personal data?",
     "answer": "You sign it with each company that processes the data for you. Under GDPR Article 28, your business is usually the controller, and any vendor that handles personal data on your behalf is a processor bound by a written contract. The processor may act only on your documented instructions and may not add another processor without your written authorisation. For an AI agent that chain often covers the developer, the hosting provider and the AI model provider. Ask for each one's agreement and sub-processor list before go-live. This is general information, not legal advice."
   },
   {
-    "id": "Q34",
+    "id": "Q31",
     "category": "faq-scope",
     "question": "Where is the data processed when an AI agent serves customers in Europe?",
     "answer": "Wherever the hosting and the AI model provider run it, so that is a design choice to settle before the build. Chapter V of the GDPR allows a transfer of personal data outside the EU only under its conditions, such as a European Commission adequacy decision or the Commission's standard contractual clauses. Before the build starts, ask your developer to list each service that touches personal data, the region it runs in and the transfer basis it relies on. Check the details with your own counsel."
   },
   {
-    "id": "Q35",
-    "category": "faq-cost",
-    "question": "What is the best AI agent hosting under $5?",
-    "answer": "Cloud providers do sell very small virtual servers for a few dollars a month, and one can run a personal test bot. That figure is a server list price only. It does not include the AI model provider's charges, and it is not what a business agent costs to run. An agent that handles customer data needs more: backups, logs, access control, security updates and someone watching it, and the real cost depends on your volume and the systems it connects to. FactoryJet scopes hosting with you before launch, and then maintains and supports the servers, AI models and updates."
+    "id": "Q32",
+    "category": "faq-support",
+    "question": "Can you build agents on Claude or the Anthropic API?",
+    "answer": "Yes. We build agents on Anthropic's Claude models through the Anthropic API, and on other providers' models such as OpenAI's. We pick the model for each job after testing it on your own examples, because one model may read scanned purchase orders more accurately while another answers short questions faster. The API account can sit in your company's name, so you hold the key and the usage records. FactoryJet is an independent development firm. We are not an Anthropic partner and do not speak for Anthropic."
+  },
+  {
+    "id": "Q33",
+    "category": "faq-support",
+    "question": "Do you build multi-agent systems with CrewAI or LangGraph?",
+    "answer": "Yes, when the job needs more than one agent. A multi-agent system splits the work: one agent reads an RFQ, a second checks stock and price lists, a third drafts the quote for a person to approve. LangGraph suits flows where every step and approval must be explicit and traceable. CrewAI suits teams of agents with set roles that pass work to each other. Many jobs need only one agent with fixed steps, and we will tell you so, because every extra agent adds testing.",
+    "link": { "href": "/comparisons/n8n-vs-langchain-vs-crewai-enterprise", "label": "Compare n8n, LangChain and CrewAI for enterprise teams." }
+  },
+  {
+    "id": "Q34",
+    "category": "faq-scope",
+    "question": "Does an AI agent need to comply with the EU AI Act?",
+    "answer": "If it talks to people in the EU, the transparency rules apply to it. Article 50(1) of the EU AI Act says an AI system that interacts directly with people must tell them they are dealing with AI, unless that is obvious, and Article 50(5) says the notice must come at the first interaction at the latest. Article 50 applies from 2 August 2026, the Act's general application date under Article 113. The European Commission's AI Act page, which we read on 29 October 2026, says the transparency rules took effect in August 2026. It lists the AI Omnibus as moving the high-risk deadlines, with no change to the transparency date. Agents used for hiring or credit decisions carry heavier duties. This is general information. Ask your own lawyer about your case.",
+    "link": { "href": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai", "label": "European Commission: AI Act regulatory framework." }
   }
 ] as const;

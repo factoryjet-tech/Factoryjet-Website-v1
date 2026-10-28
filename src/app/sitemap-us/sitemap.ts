@@ -28,6 +28,7 @@ type ChangeFreq = MetadataRoute.Sitemap[number]['changeFrequency']
 // group is listed here. See docs/reports/2026-10-21-index-quality-audit.md.
 const US_ROUTES: { path: string; source: string }[] = [
   { path: '/b2b-ecommerce',                                source: 'src/app/b2b-ecommerce/page.tsx' },
+  { path: '/b2b-ecommerce/punchout-catalog',               source: 'src/app/b2b-ecommerce/punchout-catalog/page.tsx' },
   { path: '/ecommerce-for-manufacturers',                  source: 'src/app/ecommerce-for-manufacturers/page.tsx' },
   { path: '/ai-citation-study',                            source: 'src/app/ai-citation-study/page.tsx' },
   { path: '/replatforming',                                source: 'src/app/replatforming/page.tsx' },
@@ -91,6 +92,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   // agent", 2,900/mo) that are not buyer intent. Size expectations accordingly;
   // see pipeline/research/US-ONLY-REALITY-2026-08-17.md.
   { path: '/services/ai-agent-development',                source: 'src/app/services/ai-agent-development/page.tsx' },
+  { path: '/services/claude-ai-agent-development',         source: 'src/app/services/claude-ai-agent-development/page.tsx' },
   { path: '/services/ai-development',                       source: 'src/app/services/ai-development/page.tsx' },
   // 2026-10-18: LLM development services (batch 5 of the mid-market plan); owns the model work.
   { path: '/services/llm-development',                      source: 'src/app/services/llm-development/page.tsx' },
@@ -111,6 +113,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/ai-agent-development/procurement-supply-chain-agent', source: 'src/app/services/ai-agent-development/procurement-supply-chain-agent/page.tsx' },
   { path: '/services/ai-chatbot-development',              source: 'src/app/services/ai-chatbot-development/page.tsx' },
   { path: '/services/ai-integration-services',             source: 'src/app/services/ai-integration-services/page.tsx' },
+  { path: '/services/crm-ai-agents',                       source: 'src/app/services/crm-ai-agents/page.tsx' },
   { path: '/services/ai-consulting',                        source: 'src/app/services/ai-consulting/page.tsx' },
   { path: '/services/small-business-website-design',       source: 'src/app/services/small-business-website-design/page.tsx' },
   { path: '/services/magento-development',                 source: 'src/app/services/magento-development/page.tsx' },
@@ -189,6 +192,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/faire-alternatives',                           source: 'src/app/faire-alternatives/page.tsx' },
   { path: '/services/shopify-checkout-customization',      source: 'src/app/services/shopify-checkout-customization/page.tsx' },
   { path: '/services/shopify-quickbooks-integration',      source: 'src/app/services/shopify-quickbooks-integration/page.tsx' },
+  { path: '/services/shopify-hubspot-integration',         source: 'src/app/services/shopify-hubspot-integration/page.tsx' },
   { path: '/services/wordpress-shopify-integration',       source: 'src/app/services/wordpress-shopify-integration/page.tsx' },
   { path: '/services/ecommerce-erp-integration',           source: 'src/app/services/ecommerce-erp-integration/page.tsx' },
   { path: '/services/shopify-edi-integration',             source: 'src/app/services/shopify-edi-integration/page.tsx' },
@@ -225,6 +229,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/ecommerce-cro-agency',                source: 'src/app/services/ecommerce-cro-agency/page.tsx' },
   { path: '/comparisons/n8n-vs-langchain-vs-crewai-enterprise', source: 'src/app/comparisons/n8n-vs-langchain-vs-crewai-enterprise/page.tsx' },
   { path: '/comparisons/shopify-plus-vs-custom-headless-nextjs', source: 'src/app/comparisons/shopify-plus-vs-custom-headless-nextjs/page.tsx' },
+  { path: '/comparisons/netsuite-vs-quickbooks', source: 'src/app/comparisons/netsuite-vs-quickbooks/page.tsx' },
   { path: '/services/healthcare-ai-agents',                 source: 'src/app/services/healthcare-ai-agents/page.tsx' },
   // 2026-10-18: note and referral-letter drafting agents; landing page for AI agent film 2.
   { path: '/services/ai-medical-scribe-agents',              source: 'src/app/services/ai-medical-scribe-agents/page.tsx' },

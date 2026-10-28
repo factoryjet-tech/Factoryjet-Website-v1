@@ -79,7 +79,15 @@ function AiAgentFaqAccordion() {
                 <span className="qtext">{faq.question}</span>
                 <span className="chev" aria-hidden="true">+</span>
               </summary>
-              <p className="ans" data-faq-answer>{faq.answer}</p>
+              <p className="ans" data-faq-answer>
+                {faq.answer}
+                {'link' in faq && faq.link ? (
+                  <>
+                    {' '}
+                    <a href={faq.link.href} style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>{faq.link.label}</a>
+                  </>
+                ) : null}
+              </p>
             </details>
           ))}
         </Fragment>
@@ -273,6 +281,56 @@ function EcommerceAgents() {
   );
 }
 
+/* Sales and voice sections (added 2026-10-29). They carry the themes of the
+   pages merged into this one by 301. No running-cost numbers here, by rule. */
+const LIST_STYLE = { margin: '22px 0 0', paddingLeft: 20, color: 'var(--body)', fontSize: 16, lineHeight: 1.75 } as const;
+const BODY_STYLE = { marginTop: 18, color: 'var(--body)', fontSize: 16, lineHeight: 1.75, maxWidth: '70ch' } as const;
+const INLINE_LINK = { color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 } as const;
+
+function SalesAgents() {
+  return (
+    <section className="section facts" id="ai-sales-agents">
+      <div className="wrap">
+        <div className="section-head">
+          <div className="eyebrow">Sales</div>
+          <h2>AI Sales Agents for Lead Qualifying and CRM Entry</h2>
+        </div>
+        <p style={BODY_STYLE}>A sales agent works the first hour after a lead arrives. It reads the form or the email, checks the lead against the rules your team already uses, writes the record into HubSpot or Salesforce, and offers a meeting when the lead fits. Your reps keep the conversations that close deals, and they start each one with the history already in the CRM.</p>
+        <ol style={LIST_STYLE}>
+          <li>It reads every inbound lead from web forms, email and chat, including the ones that land at 11 pm on a Friday.</li>
+          <li>It scores fit against your own rules, such as region, product line, order size or the systems the buyer runs. You write the rules once and the agent applies them the same way to every lead.</li>
+          <li>It creates or updates the contact, company and deal in your CRM, with the source and the reason for the score attached, so nobody retypes a form.</li>
+          <li>It replies to a qualified lead and offers times from the right rep&apos;s calendar. Anything unclear goes to a person.</li>
+          <li>It logs every step, so a sales manager can see why a lead was marked cold and change the rule.</li>
+        </ol>
+        <p style={BODY_STYLE}>This is the work our <a href="/services/ai-sdr" style={INLINE_LINK}>AI SDR and BDR agents</a> page covers in detail. Before you sign, we run the agent on a sample of your recent leads, so you can set its scores beside your team&apos;s own calls.</p>
+      </div>
+    </section>
+  );
+}
+
+function VoiceAgents() {
+  return (
+    <section className="section facts" id="ai-voice-agents">
+      <div className="wrap">
+        <div className="section-head">
+          <div className="eyebrow">Voice</div>
+          <h2>AI Voice Agents for Inbound Calls and Booking</h2>
+        </div>
+        <p style={BODY_STYLE}>A voice agent answers the phone, works out what the caller wants, and does the job in your systems while the caller is still on the line. When it cannot help, it hands the call to a person with a short summary of what was said.</p>
+        <ol style={LIST_STYLE}>
+          <li>It answers every inbound call, after hours and during the lunch rush, and tells the caller at the start that it is an AI assistant.</li>
+          <li>It books, moves or cancels appointments in your scheduling system and texts a confirmation.</li>
+          <li>It takes phone orders for restaurants and writes them into the POS, reading items, modifiers and pickup time back to the caller.</li>
+          <li>It books service visits for car dealers in the DMS, against real bay and technician slots.</li>
+          <li>It transfers to a person when the caller asks, when it is unsure, or when the request falls outside its rules.</li>
+        </ol>
+        <p style={BODY_STYLE}>Each job has its own page: <a href="/services/ai-call-center-agents" style={INLINE_LINK}>AI call center agents</a> for support lines and contact centers, <a href="/services/restaurant-ai-voice-agents" style={INLINE_LINK}>restaurant AI voice agents</a> for phone orders, and <a href="/services/automotive-ai-voice-agents" style={INLINE_LINK}>automotive AI voice agents</a> for dealer service lanes. Before you sign, we run sample calls built from your own menu, calendar or service rules.</p>
+      </div>
+    </section>
+  );
+}
+
 function TellUsTheWorkflow() {
   return (
     <section className="finalcta" id="tell-us">
@@ -391,12 +449,13 @@ export default function AiAgentDevelopmentSections() {
           <div className="wrap hero-grid">
             <div className="hero-copy">
               <div className="eyebrow">Service Specification</div>
-              <h1>Custom AI Agent Development for <span className="hero-emphasis">Small and Mid-Size Businesses</span></h1>
-              <p className="lead">FactoryJet is an agentic AI development company for small and mid-size US businesses. We design, build, integrate and support custom AI agents that follow your business rules and complete multi-step work inside the systems you already run: NetSuite, SAP, Odoo, Salesforce, HubSpot, Zendesk and Shopify. A person approves anything that matters. You own the code.</p>
+              <h1>AI Agent Development for <span className="hero-emphasis">RFQ-to-Quote, Order Entry and ERP Work</span> in NetSuite and SAP</h1>
+              <p className="lead">FactoryJet is an agentic AI development company. We design, build, integrate and support custom AI agents that follow your business rules and finish multi-step work inside the systems you already run: NetSuite, SAP, Odoo, Salesforce, HubSpot, Zendesk and Shopify. The jobs are specific: reading an emailed RFQ and drafting the quote, keying a customer PO in as a sales order, matching a vendor invoice to its purchase order. A person approves anything that matters. You own the code.</p>
               <div className="actions">
-                <a className="btn btn-primary" href="#tell-us">Tell us the workflow</a>
+                <a className="btn btn-primary" href="#tell-us">See a demo on my data</a>
                 <a className="btn btn-ghost" href="#short-answers">Cost, timeline, ownership</a>
               </div>
+              <p style={{ marginTop: 14, color: 'var(--body)', fontSize: 14, lineHeight: 1.6 }}>Have a brief or RFP? Attach it at step 2. We scope, price and sign each phase on its own.</p>
             </div>
             <form className="specpanel" aria-label="Interactive RFQ workflow illustration">
               <div className="specpanel-bar">
@@ -497,7 +556,7 @@ export default function AiAgentDevelopmentSections() {
                 </div>
                 <div className="fact">
                   <div className="sec">§04</div>
-                  <p>The three vendor categories are platforms (you build it yourself with LangGraph, CrewAI, or AutoGen), enterprise consultancies (large-scale, slow, expensive), and specialist agentic AI development companies (custom-built, production-focused, faster than a consultancy, more accountable than a platform). If you are not sure an agent is the right first project, our <a href="/services/ai-consulting" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI consulting services</a> start with a readiness assessment and tell you.</p>
+                  <p>The three vendor categories are platforms (you build it yourself with LangGraph, CrewAI, or AutoGen), enterprise consultancies (wider transformation programs run by large teams), and specialist agentic AI development companies (custom-built, production-focused, faster than a consultancy, more accountable than a platform). If you are not sure an agent is the right first project, our <a href="/services/ai-consulting" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI consulting services</a> start with a readiness assessment and tell you.</p>
                 </div>
                 <div className="fact">
                   <div className="sec">§05</div>
@@ -539,7 +598,7 @@ export default function AiAgentDevelopmentSections() {
                     <th>Enterprise consultancies<br /><span className="mono tableSubLabel">Accenture / IBM scale</span></th>
                     <td>Agentic AI as part of a larger transformation program</td>
                     <td>Large, regulated enterprises</td>
-                    <td>Slower pilots, higher cost, less flexibility</td>
+                    <td>Longer programs, sized for enterprise budgets</td>
                   </tr>
                   <tr className="us">
                     <th>Specialist development partners<br /><span className="mono tableSubLabel tableSubLabelAccent">FactoryJet</span></th>
@@ -687,6 +746,8 @@ export default function AiAgentDevelopmentSections() {
           </div>
         </section>
         <EcommerceAgents />
+        <SalesAgents />
+        <VoiceAgents />
         <TellUsTheWorkflow />
         <AgentDirectory />
         <section className="photobreak" id="photobreak">
@@ -821,6 +882,8 @@ export default function AiAgentDevelopmentSections() {
               <a href="/blog/ai-agents-erp-netsuite-odoo-sap-business-one-2026">AI agents inside NetSuite, Odoo and SAP Business One</a>
               <a href="/blog/best-ai-agents-for-ecommerce-2026">Best AI agents for ecommerce, and when a custom agent wins</a>
               <a href="/services/shopify-ai-agents">Shopify AI agents: orders, wholesale POs, returns and ERP sync</a>
+              <a href="/services/erp-ai-agents">ERP AI agents: quotes, orders and invoices inside your ERP</a>
+              <a href="/services/netsuite-ai-agents">NetSuite AI agents: RFQs, sales orders and vendor bills in NetSuite</a>
               <a href="/services/ai-automation">Compare: AI Agent Development vs. AI Automation vs. AI Integration Services</a>
               <a href="/blog/what-is-agentic-ai">What Is Agentic AI? A Plain-Language Guide</a>
               <a href="/tools/ai-agent-roi-calculator">AI Agent Cost Calculator</a>

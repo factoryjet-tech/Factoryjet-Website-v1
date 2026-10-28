@@ -5,7 +5,6 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -22,7 +21,7 @@ const PAGE_DESCRIPTION =
   'Faire charges 15% plus a $10 new customer fee on opening orders, 15% on reorders and 0% on Faire Direct. We connect Shopify or your ERP to Faire.';
 
 // Freshness signal. Bump only when the page content actually changes.
-const PAGE_MODIFIED = '2026-10-22';
+const PAGE_MODIFIED = '2026-10-29';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -138,6 +137,30 @@ const FAQ_ITEMS = [
     question: 'How are shipping labels and logistics handled on Faire?',
     answer:
       'Brands can buy shipping labels through Faire or ship with their own carrier accounts and 3PL. Faire sets the current shipping options and any reimbursement rules, so check them in your Brand Portal. We pick the option that fits your product sizes and warehouse, and connect tracking so retailers can see where their order is.',
+  },
+  {
+    category: 'sync',
+    question: 'Can you run Faire and our Shopify wholesale store from one catalog?',
+    answer:
+      'Yes. Your products live in one place, usually Shopify or your ERP. Faire and your Shopify wholesale store both read from that list. When you change a product, a photo or a stock count, both channels update. Wholesale prices can still differ by channel, because each one gets its own price list.',
+  },
+  {
+    category: 'sync',
+    question: 'Can we charge different wholesale prices on Faire and on our own wholesale site?',
+    answer:
+      'Yes. Some brands set a lower price on their own wholesale site, since Faire takes 15% on marketplace orders and their own site carries no commission. We set up a price list for each channel and keep both tied to the same products. You change a price in one place, and the right channel picks it up.',
+  },
+  {
+    category: 'sync',
+    question: 'Where do Faire orders and Shopify wholesale orders end up?',
+    answer:
+      'Both land in the same place, so your team works from one order list. That can be Shopify, your ERP or your warehouse system. Each order keeps a tag that shows where it came from. Your warehouse picks and ships it the same way, and tracking goes back to Faire or to the buyer on your own site.',
+  },
+  {
+    category: 'growth',
+    question: 'Should we move our Faire retailers to our own wholesale store?',
+    answer:
+      'Sometimes. Retailers you brought yourself can order through Faire Direct at 0% commission and still get Faire’s payment terms, so moving them may not save much. Shops that found you on Faire often like Faire’s 60-day terms. Your own store suits large accounts that want net terms from you, custom prices or quick reorders. We look at your order history and suggest which accounts go where.',
   },
 
   // Margins & Terms
@@ -260,6 +283,25 @@ const HOW_STEPS = [
   },
 ];
 
+const BUILD_STEPS = [
+  {
+    t: 'Catalog sync',
+    d: 'We pick one source for your products, usually Shopify or your ERP. Names, photos, case packs and stock then flow out to Faire and to your Shopify wholesale store from that one list.',
+  },
+  {
+    t: 'Wholesale price lists',
+    d: 'Each channel gets its own price list. Faire prices allow for Faire’s commission, and your own wholesale store can carry a different price, tiers by volume or prices for named accounts.',
+  },
+  {
+    t: 'Order routing to the warehouse or ERP',
+    d: 'Faire orders and Shopify wholesale orders land in the same order list in your ERP or warehouse system, tagged by channel. Tracking numbers go back to Faire or to the buyer on your site.',
+  },
+  {
+    t: 'Reorder flows',
+    d: 'Retailers get restock reminders, a quick reorder list on your own store and a Faire Direct link where it saves you commission. Reminders stop once the shop reorders.',
+  },
+];
+
 const HOWTO_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
@@ -360,7 +402,7 @@ export default function FaireWholesaleMarketplacePage() {
                   (read 22 Oct 2026). Faire also charges a payment processing fee. FactoryJet connects Shopify or your ERP
                   to Faire so wholesale orders flow in on their own.
                 </p>
-                <HeroInlineForm source="us_faire_wholesale_hero" region="us" submitLabel="Get a Faire Wholesale Scope" trustText="Want us to run Faire for you each month instead of a one-time build? Ask, and we will scope it. Founder replies within 24 hours." />
+                <HeroInlineForm source="us_faire_wholesale_hero" region="us" submitLabel="Get a Faire Wholesale Scope" trustText="Prefer a flat monthly scope for 6 months? We can quote that too. Founder replies within 24 hours." />
               </div>
 
               {/* Visual Hero Architecture Graphic */}
@@ -548,17 +590,6 @@ export default function FaireWholesaleMarketplacePage() {
           </div>
         </section>
 
-        {/* ── Interactive ROI Calculator ── */}
-        <section className="pp-sec" id="faire-roi-calculator">
-          <div className="pp-wrap">
-            <EcommerceRoiCalculator
-              source="us_faire_wholesale_page"
-              defaultPlatform="shopify"
-              defaultTarget="bigcommerce-b2b"
-            />
-          </div>
-        </section>
-
         {/* ── Use Cases ── */}
         {USECASES.map((uc, idx) => (
           <section key={uc.t} className={`pp-sec${idx % 2 === 0 ? '' : ' tint'}`}>
@@ -673,52 +704,32 @@ export default function FaireWholesaleMarketplacePage() {
           </div>
         </section>
 
-        {/* ── Testimonials ── */}
+        {/* ── Faire plus Shopify wholesale build ── */}
         <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">// client proof</p>
-            <h2 style={{ marginTop: '10px' }}>Founders we have built stores for</h2>
-            <div className="pp-tgrid" style={{ marginTop: '32px' }}>
-              <div className="pp-tcard">
-                <blockquote>
-                  &ldquo;We were live in 6 days, I genuinely did not believe that was possible. The design is
-                  stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed
-                  lightning fast.&rdquo;
-                </blockquote>
-                <div className="who">
-                  <Image
-                    src="/images/testimonials/ricky-belle-maison-160.webp"
-                    alt="Ricky B, Founder of Belle Maison"
-                    width={48}
-                    height={48}
-                    style={{ borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--pp-line)' }}
-                  />
-                  <div>
-                    <b>Ricky B.</b>
-                    <span>Founder, Belle Maison</span>
-                  </div>
-                </div>
-              </div>
-              <div className="pp-tcard">
-                <blockquote>
-                  &ldquo;In our business, clients size you up before they ever call. FactoryJet built us a website
-                  that finally looks as solid as the work we deliver, and we are getting real project inquiries
-                  through it.&rdquo;
-                </blockquote>
-                <div className="who">
-                  <Image
-                    src="/images/testimonials/vishal-impulse-branding-160.webp"
-                    alt="Vishal K, Director of Impulse Branding"
-                    width={48}
-                    height={48}
-                    style={{ borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--pp-line)' }}
-                  />
-                  <div>
-                    <b>Vishal K.</b>
-                    <span>Director, Impulse Branding</span>
-                  </div>
-                </div>
-              </div>
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">// faire plus your own wholesale store</p>
+            <h2 style={{ marginTop: '10px' }}>How a Faire plus Shopify wholesale build runs</h2>
+            <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '62ch' }}>
+              Some brands sell on Faire and also run their own wholesale store for larger accounts. Here are the four
+              parts we build so both channels run from one set of products and one order list.
+            </p>
+            <ol style={{ display: 'grid', gap: '16px', marginTop: '28px', listStyle: 'none', padding: 0 }}>
+              {BUILD_STEPS.map((step, i) => (
+                <li className="pp-card" key={step.t}>
+                  <div className="pp-eyebrow" style={{ marginBottom: '6px' }}>{`Step ${i + 1}`}</div>
+                  <h3 style={{ fontSize: '18px', color: 'var(--pp-ink)' }}>{step.t}</h3>
+                  <p style={{ marginTop: '8px', color: 'var(--pp-body)' }}>{step.d}</p>
+                </li>
+              ))}
+            </ol>
+            <p className="pp-lead" style={{ marginTop: '24px', maxWidth: '62ch' }}>
+              The wholesale store side is usually built on{' '}
+              <a href="/services/shopify-plus-b2b" style={LINK}>Shopify Plus B2B</a>, which gives each retail account
+              its own prices and payment terms. You see the sync working on your own catalog before you sign, and each
+              phase has a fixed price in writing.
+            </p>
+            <div style={{ marginTop: '22px' }}>
+              <ModalCTAButton label="Scope my Faire and Shopify wholesale build" region="us" btnVariant="primary-dark" />
             </div>
           </div>
         </section>
@@ -769,29 +780,14 @@ export default function FaireWholesaleMarketplacePage() {
                 </div>
               </div>
               <div className="pp-proof">
-                <div className="top">
-                  <Image
-                    src="/images/testimonials/ricky-belle-maison-160.webp"
-                    alt="Ricky B, Belle Maison"
-                    width={46}
-                    height={46}
-                    style={{ borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--pp-line)' }}
-                  />
-                  <div>
-                    <b>Ricky B.</b>
-                    <span>Founder, Belle Maison</span>
-                  </div>
-                </div>
-                <blockquote>
-                  &ldquo;We were live in 6 days, I genuinely did not believe that was possible. The design is
-                  stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed
-                  lightning fast.&rdquo;
-                </blockquote>
-                <div className="rate">
-                  <a href="/case-studies/belle-maison-ecommerce-success" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
-                    Read the Belle Maison case study →
-                  </a>
-                </div>
+                <p className="pp-mlabel">// how we work</p>
+                <ul style={{ marginTop: '14px', paddingLeft: '20px', display: 'grid', gap: '10px', color: 'var(--pp-body)', fontSize: '15px' }}>
+                  <li>See the sync working on your own catalog before you sign.</li>
+                  <li>Fixed price per phase, quoted in writing after scoping.</li>
+                  <li>You own the code and the accounts from day one.</li>
+                  <li>Defects fixed inside the build price for a cover period agreed before work starts.</li>
+                  <li>Support is optional. Each change is quoted and approved, with no monthly minimum.</li>
+                </ul>
               </div>
             </div>
           </div>

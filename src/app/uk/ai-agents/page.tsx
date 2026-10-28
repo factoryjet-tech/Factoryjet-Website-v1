@@ -7,7 +7,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import './ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-agents';
-const UPDATED = '2026-10-21';
+const UPDATED = '2026-10-29';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -35,7 +35,7 @@ const FAQ_CATEGORIES = [
   { key: 'results',      label: 'Results & working with us' },
 ] as const;
 
-const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
+const FAQ_ITEMS: { category: string; question: string; answer: string; link?: { href: string; label: string } }[] = [
   // ── AI agents basics ──
   { category: 'basics', question: 'What is an AI automation agency?',
     answer: 'An AI automation agency builds AI into the way a business already works, instead of selling you a product to log into. The work is mapping which of your processes are worth automating, building an agent or workflow that handles one, connecting it to your existing systems, and keeping it accurate once it is live. It is engineering and integration work, not software resale.' },
@@ -60,6 +60,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // on each vendor’s own pricing page on 9 Oct 2026 (annual billing).
   { category: 'basics', question: 'Which AI agent development company in the UK should I choose?',
     answer: 'There is no single best one, so choose by fit. Check three things on each firm’s own website before a call: the systems it has connected, who owns the code, and the price of the first paid step. Our full list is the guide Best AI Agent Development Companies UK 2026, which compares 15 firms we read on 9 October 2026. Eight of the 14 other firms publish a price, and first steps run from a £250 diagnostic to an audit from £10,000. FactoryJet is on that list.' },
+  // Added 2026-10-29 for buyer question B177 (0.57 in the 9 Oct 2026 buyer-question map). Firm
+  // facts restate /blog/best-ai-automation-agencies-uk-2026, checked on 11 Oct 2026.
+  { category: 'basics', question: 'What are the best AI automation companies in the UK?',
+    answer: 'No independent ranking exists, so pick by fit. Our guide, Best AI Automation Agencies in the UK (2026), compares 13 firms we checked on 11 October 2026. FactoryJet is one of them, so read it knowing we wrote it. In short, Flowio, Antek Automation, AutoMazen and Aucta AI suit small firms. MQLFlow, Automaly and OpScaling suit sales and CRM work. Ronins and Robiquity suit mid-size companies. Send the same one-page brief to three firms and compare the questions they ask.',
+    link: { href: '/blog/best-ai-automation-agencies-uk-2026', label: 'Read the 13 UK AI automation agencies compared' } },
+  { category: 'basics', question: 'Can I trust what AI assistants say about the best UK automation agencies?',
+    answer: 'Treat it as a starting point. AI assistants mostly repeat lists that agencies publish about themselves. On 11 October 2026 we opened ten UK lists that assistants cite, and the publisher was on its own list in all ten. Those lists named 53 different firms, and no firm appeared on more than five of them. Read each firm’s own website, ask to see a build that is live today, and ask who will own the code.' },
   { category: 'basics', question: 'What is affordable automation software for small and mid-sized businesses?',
     answer: 'Zapier, Make, n8n and Microsoft Power Automate are the four to price first. On a small budget a subscription product does this better than a service firm like us. Prices are from each vendor’s own pricing page on 9 October 2026, for annual billing. Zapier is free for 100 tasks a month, then from US$19.99 a month, shown as £15.30 with its page set to pounds. Power Automate Premium is £11.50 per user a month before VAT. Make prices in dollars, from $9 a month for 5,000 credits. n8n prices in euros, from €20 a month for 2,500 workflow executions.' },
 
@@ -1022,7 +1029,9 @@ export default function AiAgentsUKPage() {
                             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
                           </span>
                         </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
+                        <div className="faq-ans"><p>{f.answer}</p>{f.link ? (
+                          <p><a href={f.link.href} style={{ textDecoration: 'underline' }}>{f.link.label}</a></p>
+                        ) : null}</div>
                       </details></li>
                     ))}</ul>
                   </div>

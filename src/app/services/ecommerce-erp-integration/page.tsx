@@ -33,7 +33,13 @@ import OwnerMapDiagram from './OwnerMapDiagram';
      Prices and plans move. If you change one, re-fetch the page first.
    * No FactoryJet price. The only dollar figures are list prices of named
      off-the-shelf products, each from the maker's own page.
-   * No running or support cost figure of any kind. No client is named.
+   * No running or support cost figure of any kind.
+   * Clients: on 2026-10-09 Bhavesh approved naming Sow Easy (Odoo to
+     WooCommerce), GPSUK, Yadav Entrance Automation and Impulse Branding
+     Solutions on this page, in ONE labelled block (the "Recent work" block).
+     Each line restates that client's own case study in src/data/case-studies.
+     Add no metric or scope that the case study does not state. Do not say
+     where Sow Easy is based.
    * Nothing here says FactoryJet is a partner of any ERP maker or platform.
    * The owner map is the starting map FactoryJet proposes on a scoping call.
      Do not harden it into a statistic about what "most" stores do.
@@ -51,7 +57,7 @@ const PAGE_TITLE = 'Ecommerce ERP Integration Services | FactoryJet';
 const PAGE_DESC =
   'Ecommerce ERP integration for Shopify, BigCommerce, WooCommerce and Adobe Commerce stores on QuickBooks, NetSuite, Odoo, SAP Business One or ERPNext.';
 const PAGE_PUBLISHED = '2026-10-11';
-const PAGE_MODIFIED = '2026-10-11';
+const PAGE_MODIFIED = '2026-10-29';
 const CHECKED_ON = '11 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -535,6 +541,18 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Can we see the integration working before we sign?',
     answer:
       'Yes. We show working software on your own data before a contract. For an ERP link, expect a handful of your real products and one test order passing between a development store and a test copy of your ERP. Your team checks each record it creates before anything is signed.',
+  },
+  {
+    category: 'working',
+    question: 'Can we send a field list or an RFP instead of booking a call?',
+    answer:
+      'Yes. Send your field list, an export of the records you sync today, or your written brief through the contact form. We map every field to its owner and its direction, then quote each phase at a fixed price in writing. If a ready-made connector already covers your list, the reply says so and names it. If the list shows QuickBooks straining, read factoryjet.com/comparisons/netsuite-vs-quickbooks before you send it.',
+  },
+  {
+    category: 'working',
+    question: 'We have outgrown QuickBooks. Can you move us to NetSuite without breaking the store sync?',
+    answer:
+      'Yes. The store keeps posting to QuickBooks while NetSuite is set up, so sales keep reaching the books. We rewrite the owner map for NetSuite, build the new link against a NetSuite sandbox and a development store, and replay your real orders through it. On the cutover date the QuickBooks link is switched off and order totals are checked in NetSuite. Our comparison at factoryjet.com/comparisons/netsuite-vs-quickbooks sets out when the move is worth making.',
   },
   {
     category: 'working',
@@ -1401,8 +1419,8 @@ export default function EcommerceErpIntegrationPage() {
 
         <MidPageCTA
           headline="Send us your store, your ERP and the record that causes the retyping."
-          sub="We reply with the owner map we would start from and whether a ready-made connector covers it. If there is work for us, you get a fixed quote in writing."
-          label="Map my integration"
+          sub="Send your field list or brief. We map every field and quote each phase at a fixed price. If a ready-made connector covers it, we say so."
+          label="See a demo on my data"
         />
 
         {/* 7. WHERE IT BREAKS */}
@@ -1486,6 +1504,96 @@ export default function EcommerceErpIntegrationPage() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* 8b. HOUSE TERMS + RECENT WORK. The one labelled client block on this page. */}
+        <section className="border-b border-fj-neutral-200 bg-white py-16 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-7">
+                <p className="fj-eyebrow">How we work with you</p>
+                <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
+                  The code, the accounts and the data stay yours.
+                </h2>
+                <ul className="mt-6 grid gap-3">
+                  {[
+                    { t: 'Code and repository', d: 'Yours from day one.' },
+                    { t: 'Accounts in your name', d: 'Your store, ERP and hosting accounts. Hosting, and any AI usage, can run there at cost, with no markup from us.' },
+                    { t: 'Fixed price per phase', d: 'Each phase is scoped, priced and signed on its own. You see working software on your own data before you sign.' },
+                    { t: 'Defect cover in the build price', d: 'Defects found after launch are fixed for a cover period agreed before work starts.' },
+                    { t: 'No monthly minimum', d: 'Support after launch is optional. Each change is quoted and approved before we do it.' },
+                  ].map((x) => (
+                    <li key={x.t} className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-5">
+                      <p className="font-fj-display text-lg font-semibold text-fj-ink">{x.t}</p>
+                      <p className="mt-1 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{x.d}</p>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-6 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">
+                  Weighing an ERP move before the link? Our{' '}
+                  <a
+                    href="/comparisons/netsuite-vs-quickbooks"
+                    className="font-semibold text-[#B23E13] underline underline-offset-2"
+                  >
+                    NetSuite vs QuickBooks comparison
+                  </a>{' '}
+                  sets out when a store outgrows QuickBooks.
+                </p>
+              </div>
+              <div className="lg:col-span-5">
+                <p className="fj-eyebrow">Recent work</p>
+                <ul className="mt-4 grid gap-3">
+                  {[
+                    {
+                      href: '/case-studies/sow-easy-distributor-portal',
+                      tag: 'Odoo to WooCommerce · Build in progress',
+                      name: 'Sow Easy',
+                      body: 'A WooCommerce trade store that reads stock, pricing and SKUs from Odoo, with trade ordering. The store and the Odoo link are being tested on staging, and launch is still ahead.',
+                    },
+                    {
+                      href: '/case-studies/gpsuk-promotional-products',
+                      tag: 'Trade storefront · Live',
+                      name: 'GPSUK',
+                      body: 'A Commerceflo trade storefront where business buyers log in, see their own account pricing and move from quote to order without retyping.',
+                    },
+                    {
+                      href: '/case-studies/yadav-entrance-automation-website-seo',
+                      tag: 'Product catalog site · Live',
+                      name: 'Yadav Entrance Automation',
+                      body: 'A hand-built website with a page per product, and specifications and FAQs on each, for a maker of high speed doors, rolling shutters and dock levellers.',
+                    },
+                    {
+                      href: '/case-studies/impulse-branding-migration',
+                      tag: 'Website, SEO and AI search',
+                      name: 'Impulse Branding Solutions',
+                      body: 'A Next.js website for a commercial signage and fit-out company, with service, sector and project pages buyers can check. We run its ongoing SEO and AI search work.',
+                    },
+                  ].map((w) => (
+                    <li key={w.href}>
+                      <Link
+                        href={w.href}
+                        className="group flex flex-col rounded-2xl border border-fj-neutral-200 bg-white p-5 hover:border-[#F05A28]/50"
+                      >
+                        <span className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">{w.tag}</span>
+                        <span className="mt-2 font-fj-display text-lg font-semibold text-fj-ink">{w.name}</span>
+                        <span className="mt-1.5 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{w.body}</span>
+                        <span className="mt-3 inline-flex items-center gap-2 font-fj-body text-sm font-semibold text-fj-ink group-hover:text-[#B23E13]">
+                          Read the case study
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="h-4 w-4">
+                            <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
+                  Sow Easy is the ERP link. GPSUK, Yadav and Impulse show the storefronts and websites we build. No
+                  results are reported for a build that has not launched.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -1628,7 +1736,7 @@ export default function EcommerceErpIntegrationPage() {
           eyebrow="Ecommerce ERP integration"
           headline="Give every record one owner. We build the link."
           sub="Send your store platform, your ERP and the record your team retypes most. We come back with an owner map and the shortest route to it."
-          primaryCta={{ label: 'Map my integration', modal: true, region: 'us' }}
+          primaryCta={{ label: 'See a demo on my data', modal: true, region: 'us' }}
           secondaryCta={{ label: 'Talk to the founder', href: '/contact' }}
           objectionHandler="Working demo on your own data before a contract. Fixed quote in writing, and you own the code."
         />

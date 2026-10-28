@@ -24,8 +24,14 @@ import FinalCTA from '@/components/v2/FinalCTA';
    automation agency" stays in the title and H1.
 
    Market range: Layer3 Labs, "AI automation agency cost", updated 2 Jul 2026,
-   read 16 Oct 2026. Tool prices: each vendor's pricing page, read 9 Oct 2026
-   (kept from the previous page). No FactoryJet prices, no running-cost figures.
+   read 16 Oct 2026. No FactoryJet prices, no running-cost figures.
+
+   2026-10-29: dropped four micro-buyer and DIY FAQs (tool plan prices, "under
+   $5,000" platforms, freelance setup, where to find tools). Added NetSuite
+   order intake, demo inputs, code and prompt ownership, and GDPR / EU AI Act.
+   AI Act dates: European Commission AI Act page, read 29 Oct 2026
+   (transparency rules apply from August 2026). Title, meta and H1 unchanged
+   (edited 22 Oct, re-measure due about 18 Nov).
 
    Schema: WebPage + Service + FAQPage (from FAQ_ITEMS, the array <FAQ>
    renders) + BreadcrumbList (from BREADCRUMB_ITEMS).
@@ -35,7 +41,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/ai-automation';
 const PAGE_TITLE = 'AI Automation Agency in the USA | FactoryJet';
 const PAGE_DESC =
   'AI automation for operations teams: orders, invoices, leads and reports that move between your tools without retyping. Built in n8n, Make or Zapier. Fixed price in writing, and you own every workflow.';
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-29';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const LAYER3_URL = 'https://www.layer3labs.io/roi/ai-automation-agency-cost';
 
@@ -137,9 +143,9 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
   {
     category: 'process',
-    question: 'What do you need from us to scope an automation?',
+    question: 'What do you need from us to show a demo on our data?',
     answer:
-      'Three answers. What starts the work, such as a form, an email, an invoice or an order. Which tools it touches, such as HubSpot, QuickBooks or Shopify. And roughly how many times a week it happens and who does it today. A few real examples with names removed let us tell you on the first call what it takes, and whether it needs AI at all.',
+      'Three answers and a few samples. What starts the work, such as an order email, an invoice or a form. Which systems it touches, such as NetSuite, HubSpot or QuickBooks. How often it happens and who handles it today. Then a few real examples, with names removed if you prefer. A process doc or a short brief helps most: attach it at step 2 of the form and we scope each phase at a fixed price.',
   },
   {
     category: 'process',
@@ -161,21 +167,9 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
   {
     category: 'cost',
-    question: 'What do Zapier, Make and n8n cost on their own?',
-    answer:
-      'On 9 October 2026 their pricing pages listed plans, billed annually, starting at $0 to $69 a month for Zapier, $0 to $9 for Make with up to 5,000 credits, and €20 to €50 for n8n Cloud. Self-hosting n8n is free, per its docs. A platform alone is enough when the steps never change and your team maintains them. An agency earns its fee when a workflow crosses several systems or reads documents.',
-  },
-  {
-    category: 'cost',
     question: 'How do we know it is worth building?',
     answer:
       'Start with one task. Multiply how often it runs each week by the minutes it takes and what that time costs you, then compare that with the build price. We work this out with your own numbers on the scoping call, and we will tell you if the payback is too slow to be worth building.',
-  },
-  {
-    category: 'cost',
-    question: 'What are the best affordable AI automation platforms for small businesses under $5,000?',
-    answer:
-      'Zapier, Make and n8n all fit well under $5,000 a year on their own. On 9 October 2026 their pricing pages listed annual plans from $0 to $69 a month for Zapier, $0 to $9 a month for Make and €20 to €50 a month for n8n Cloud, and n8n can be self-hosted for free. Having an agency build the workflow is a separate cost: Layer3 Labs puts one workflow at $5,000 to $15,000.',
   },
   {
     category: 'tools',
@@ -203,9 +197,21 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
   {
     category: 'tools',
-    question: 'What do we own when the automation is finished?',
+    question: 'Who owns the code and the prompts?',
     answer:
-      'Everything. The workflows live in your own n8n, Make or Zapier account, the credentials are yours, and AI model usage is billed to your own Anthropic or OpenAI account with no markup from us. You get the documentation. If you stop working with us, the automations keep running and any developer can pick them up.',
+      'You do, from day one. The workflows live in your own n8n, Make or Zapier account, and any custom code sits in a repository you own. The prompts are part of that code, written down and versioned in your repository. Credentials are yours, and AI usage is billed to your own Anthropic or OpenAI account with no markup from us. If you stop working with us, everything keeps running and any developer can pick it up.',
+  },
+  {
+    category: 'tools',
+    question: 'Can an AI agent read our order emails and enter them into NetSuite?',
+    answer:
+      'Yes. The agent reads each order email or PDF attachment, matches the lines to your NetSuite items, prices and customer records, and drafts the sales order. Anything it cannot match, such as an unknown SKU or a price outside the customer\'s terms, goes to a person with the reason attached. Your team approves the draft before it posts. The same pattern works for SAP Business One, Odoo and ERPNext.',
+  },
+  {
+    category: 'tools',
+    question: 'Will this comply with GDPR and the EU AI Act if we sell into Europe?',
+    answer:
+      'Compliance is your legal team\'s call, and we build so they can sign off. Personal data stays in accounts you control, and self-hosted n8n can run on servers in the EU. The AI Act\'s transparency rules (Article 50) apply from August 2026, per the European Commission\'s AI Act page (digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai). Under them, a customer talking to an AI agent must be told it is a machine. We build customer-facing agents to say so, and each step is logged.',
   },
   {
     category: 'tools',
@@ -269,12 +275,6 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
   {
     category: 'finding',
-    question: 'Where can I find AI automation solutions for my business?',
-    answer:
-      'Three places. Tools such as Zapier, Make and n8n, which you can set up yourself for simple steps. The partner directories those tool makers run, which list consultants who build on each tool. And agencies that design, build and support the workflow for you; our comparison of 14 US AI automation agencies is a starting point. Choose by how many systems the task crosses and who will fix it when one changes.',
-  },
-  {
-    category: 'finding',
     question: 'Is there workflow automation support for digital agencies?',
     answer:
       'Yes. Agencies usually need one of two things: a partner who builds a client\'s workflow under the agency\'s name, or support for automations the agency already runs. FactoryJet takes both as projects, and white-label work is welcome. Each build has a written scope and one fixed price, and support after launch is quoted per change, and there is no monthly minimum.',
@@ -284,12 +284,6 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Who offers offshore workflow automation services for digital agencies?',
     answer:
       'If you are weighing offshore help, the question that matters is how the work fits your working day. FactoryJet works remotely with agencies and schedules calls in US business hours. Every build runs against a written scope with dated milestones, payments are tied to those milestones, and every workflow is documented, so your own team can follow what was built without waiting on us.',
-  },
-  {
-    category: 'finding',
-    question: 'What services are there for freelance AI workflow setup?',
-    answer:
-      'Freelance marketplaces such as Upwork and Fiverr list people who set up Zapier, Make or n8n workflows, and Make points small jobs to the Hire a pro section of its community. A freelancer suits one workflow between two or three common tools that you can test yourself. Choose an agency when the workflow touches money or customer data, crosses several systems, or needs someone to fix it when a connected tool changes.',
   },
 ];
 
@@ -378,6 +372,9 @@ export default function UsAiAutomationPage() {
                     submitLabel="See a demo on my data"
                     trustText="Working software on your own data before you sign. Founder replies within 24 hours."
                   />
+                  <p className="mt-3 max-w-xl font-fj-body text-sm leading-relaxed text-fj-neutral-600">
+                    Have a brief or a process doc? Attach it at step 2 and we scope each phase at a fixed price.
+                  </p>
                 </div>
 
                 <div className="mt-5">
@@ -512,6 +509,14 @@ export default function UsAiAutomationPage() {
                 <Link href="/comparisons/n8n-vs-langchain-vs-crewai-enterprise" className="font-semibold text-[#B23E13] underline underline-offset-2">
                   n8n vs LangChain vs CrewAI
                 </Link>
+                . Building on n8n already? See{' '}
+                <Link href="/n8n-automation" className="font-semibold text-[#B23E13] underline underline-offset-2">
+                  n8n automation
+                </Link>
+                . Want the agent working inside NetSuite, SAP Business One, Odoo or ERPNext? See{' '}
+                <Link href="/services/erp-ai-agents" className="font-semibold text-[#B23E13] underline underline-offset-2">
+                  AI agents for ERP
+                </Link>
                 .
               </p>
             </div>
@@ -623,16 +628,17 @@ export default function UsAiAutomationPage() {
                 </ul>
               </div>
               <div className="lg:col-span-5">
-                <p className="fj-eyebrow">Recent work</p>
+                <p className="fj-eyebrow">Case study</p>
                 <Link
                   href="/case-studies/washington-law-group-accident-detection-agent"
                   className="group mt-4 flex flex-col rounded-2xl border border-fj-neutral-200 bg-white p-6 hover:border-[#F05A28]/50"
                 >
-                  <span className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">Legal · Daily research, automated</span>
+                  <span className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">Legal · AI agent</span>
                   <span className="mt-3 font-fj-display text-xl font-semibold text-fj-ink">Washington Law Group</span>
                   <span className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">
-                    A daily manual search for truck accident reports, turned into an agent that finds qualifying cases and
-                    sends the firm one summary email per case. The code is assigned to the firm.
+                    An AI agent that detects and reports commercial-vehicle accidents for a personal injury law firm. It
+                    reads news and police sources across all 50 states every two hours, applies the firm&apos;s rules and
+                    emails each qualifying crash. Lawyers at the firm review every lead, and the code is assigned to the firm.
                   </span>
                   <span className="mt-4 inline-flex items-center gap-2 font-fj-body text-sm font-semibold text-fj-ink group-hover:text-[#B23E13]">
                     Read the case study
@@ -655,7 +661,7 @@ export default function UsAiAutomationPage() {
         <FAQ
           eyebrow="AI automation FAQ"
           headline="What operations teams ask before automating a workflow."
-          lead="Cost ranges are sourced and dated. Tool prices were read on each vendor's pricing page on 9 October 2026."
+          lead="Cost ranges are sourced and dated. AI Act dates are from the European Commission's AI Act page, read 29 October 2026."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-white"

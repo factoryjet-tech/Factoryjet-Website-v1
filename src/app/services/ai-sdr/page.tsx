@@ -14,7 +14,7 @@ import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-sdr';
-const PAGE_MODIFIED = '2026-10-10';
+const PAGE_MODIFIED = '2026-10-29';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -108,6 +108,20 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Is an AI SDR the same as AI SDR software you buy off the shelf?',
     answer:
       'No, and the difference matters. Off-the-shelf AI SDR tools give you a fixed qualification flow, a fixed data provider, and a fixed set of CRM fields, and you adapt your process to fit. We build the agent against your ICP definition, your CRM schema, your routing rules, and your calendar logic, so it qualifies the way your best rep qualifies. You also own the code and the prompts at the end, rather than renting a seat and losing the workflow if you leave.',
+  },
+  // Added 2026-10-29 for buyer question N04 (buy or build), which had no live FAQ above 0.6
+  // similarity in the 9 Oct 2026 buyer-question map.
+  {
+    category: 'basics',
+    question: 'Should we buy an AI SDR tool or build our own lead-qualifying agent?',
+    answer:
+      'Buy a tool if your sales process is standard, you run one CRM, and you want to start this month. Off-the-shelf AI SDR products switch on quickly and you can cancel them. Build when qualification depends on your own rules, such as territory, product fit or account history, when the agent must write to several systems, or when you want to own the code and prompts. We build custom agents, so weigh our view with that in mind.',
+  },
+  {
+    category: 'basics',
+    question: 'How do we test whether an AI SDR qualifies our leads correctly?',
+    answer:
+      'Run it on leads you have already worked. Export 100 or more past inbound leads from your CRM with the outcome your reps recorded, such as qualified, disqualified or closed. Let the tool or agent score them without seeing those outcomes, then compare. Where it disagrees with your best rep, read why. The same test works for a bought tool during its trial and for a custom agent before launch.',
   },
   {
     category: 'basics',

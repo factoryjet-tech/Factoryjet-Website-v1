@@ -181,6 +181,7 @@ import { post as copilotStudioVsCustomAiAgents2026Post } from './posts/copilot-s
 import { post as enterpriseAiAgentCost2026Post } from './posts/enterprise-ai-agent-cost-2026';
 import { post as aiAutomationAgencyCost2026Post } from './posts/ai-automation-agency-cost-2026';
 import { post as privateAiForBusinessOwnData2026Post } from './posts/private-ai-for-business-own-data-2026';
+import { post as bestAiVoiceAgentDevelopmentCompanies2026Post } from './posts/best-ai-voice-agent-development-companies-2026';
 
 export const POSTS: BlogPost[] = [
   // --- DIRECT-ANSWER GUIDES (2026-10-24): AI agent implementation timeline, Shopify Plus returns agents ---
@@ -193,6 +194,7 @@ export const POSTS: BlogPost[] = [
   bestTiktokShopAgenciesUs2026Post,
   aiAutomationAgencyCost2026Post,
   privateAiForBusinessOwnData2026Post,
+  bestAiVoiceAgentDevelopmentCompanies2026Post,
   bestAiAgentDevelopmentCompanies2026Post,
   // --- AI BUYER DECISION WAVE (2026-10-18): Copilot Studio, project failure, enterprise cost, vetting questions, agency vs in-house, contract checklist, AI MVP cost ---
   copilotStudioVsCustomAiAgents2026Post,

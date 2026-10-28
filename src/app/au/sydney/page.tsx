@@ -25,7 +25,7 @@ import '../au-city.css';
    fetched 2026-09-24: website design sydney 2,400 · web design sydney 1,000 · sydney web designer 880.
 
    Every third-party fact on this page was read on its owner’s page on 2026-10-11. */
-const UPDATED = '2026-10-11';
+const UPDATED = '2026-10-29';
 const TITLE = 'Ecommerce Website Development & Web Design Sydney | FactoryJet';
 const H1 = 'Ecommerce website development and web design in Sydney';
 const DESCRIPTION =
@@ -456,6 +456,20 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     links: [{ href: 'https://experienceleague.adobe.com/en/docs/commerce-operations/release/versions', label: 'Adobe Commerce released versions' }] },
   { category: 'platforms', question: 'What does a Magento developer do?',
     answer: 'A Magento developer builds and maintains stores on Magento or Adobe Commerce. That covers the theme, the catalogue structure, extensions, and connections to stock, shipping and accounting systems. Much of the work on an existing store is upgrades, security patches and speed. FactoryJet builds and supports Adobe Commerce stores, and has worked on ERPs including Odoo, NetSuite and SAP Business One.' },
+  // Added 2026-10-29 (P14) with the "Ecommerce web development in Sydney" section.
+  // Google AU PAA wording from pipeline/research/data/market-au-2026-09-24/brief_au_ecommerce.json.
+  { category: 'platforms', question: 'What is eCommerce web development?',
+    answer: 'It is the work of building an online store and the systems behind it: the storefront and theme, the product catalogue, checkout and payments, shipping rates, and the connections that pass orders to the warehouse and invoices to the accounts. In Sydney that also means GST shown correctly, Afterpay and Zip at checkout, and refund wording that matches Australian Consumer Law. Design is one part of it. Most of the work sits behind the page.',
+    links: [{ href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' }] },
+  { category: 'platforms', question: 'Can I move my store from Magento or WooCommerce to Shopify without losing rankings?',
+    answer: 'Yes, if the move is planned around your URLs. Products, customers and order history are exported, every old product, category and blog URL gets a 301 redirect to its new address, and the new store is checked on a test domain before the switch. Customer passwords cannot be carried across, so plan the email that invites customers to reactivate their accounts. Expect some movement in rankings for a few weeks after the switch.',
+    links: [{ href: '/au/shopify-development', label: 'Shopify development for Australian businesses' }] },
+  { category: 'platforms', question: 'Can Shopify handle B2B wholesale ordering?',
+    answer: 'Shopify Plus can. Its B2B features give each trade customer a company account with its own price list, payment terms and permitted products, alongside your retail checkout in the same store. Distributors with quote approvals, several delivery sites or contract pricing that changes by volume sometimes outgrow that, and a custom ordering portal connected to the store fits better. Map your trade rules on paper before you choose.',
+    links: [{ href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' }] },
+  { category: 'platforms', question: 'Can a Shopify store send orders and invoices to Xero?',
+    answer: 'Yes. Most stores use a connector app from the Shopify App Store that posts orders, refunds, fees and GST into Xero. Wholesalers with trade accounts, payment terms or more than one warehouse often need more control, so the connection is built to match how the bookkeeper wants the ledger. Test it with a week of real orders before launch, and check that GST and Shopify payouts reconcile.',
+    links: [{ href: '/au/shopify-development', label: 'Shopify development for Australian businesses' }] },
 
   // ---------- Selling online from NSW ----------
   { category: 'selling', question: 'Is e-commerce legal in Australia?',
@@ -1047,6 +1061,48 @@ export default function SydneyPage() {
               between systems, that is a job for an <a href="/au/ai-agents">AI agent built into your existing tools</a>.
               For a first opinion on where AI fits, see <a href="/au/ai-consulting">AI consulting for Australian businesses</a>.
             </p>
+          </div>
+        </section>
+
+        {/* ═══ ECOMMERCE WEB DEVELOPMENT SYDNEY (added 2026-10-29) → facts ═══ */}
+        <section className="section facts" id="ecommerce-web-development-sydney">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">Ecommerce web development Sydney</div>
+              <h2>Ecommerce web development in Sydney</h2>
+              <p className="lead">
+                About 390 searches a month in Sydney are for ecommerce web development, and about 70 for an ecommerce
+                agency. The brands behind them are usually past their first store. They are moving off Magento or
+                WooCommerce, adding trade customers, or tired of copying orders into Xero by hand.
+              </p>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  Shopify fits most Sydney retailers. Shopify Plus fits when you need B2B company accounts with their
+                  own price lists and payment terms, checkout changes, or separate storefronts for Australia and New
+                  Zealand from one admin. When trade rules outgrow both, we build a custom ordering portal connected to
+                  the store.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  We are a registered Shopify Partner, we work remotely in Sydney business hours, and you own the
+                  store, the code and every account. See <a href="/au/ecommerce-development">ecommerce development in
+                  Australia</a> and <a href="/au/shopify-development">Shopify development for Australian businesses</a>.
+                </p></div>
+              </div>
+              <div className="au-panel">
+                <div className="eyebrow">How a Sydney store build runs</div>
+                <ol className="au-numlist">
+                  <li><span><b>Free review</b> of the current store: speed, apps, checkout and which pages Google indexes.</span></li>
+                  <li><span><b>Platform decision:</b> Shopify, Shopify Plus or custom, written down with the reason.</span></li>
+                  <li><span><b>Migration plan from Magento or WooCommerce:</b> a URL map, a 301 redirect for every old page, and products, customers and orders imported to a test store first.</span></li>
+                  <li><span><b>B2B ordering:</b> trade price lists, quote to order, payment terms and reorder from past orders.</span></li>
+                  <li><span><b>Xero sync:</b> orders, refunds, fees and GST posted so the books match the store.</span></li>
+                  <li><span><b>Launch and support</b> from the same team, with real test orders before the switch.</span></li>
+                </ol>
+                <p className="au-note">Search counts: Google Australia keyword data, monthly averages, 2026.</p>
+              </div>
+            </div>
           </div>
         </section>
 
