@@ -34,7 +34,11 @@ import SyncMapDiagram from './SyncMapDiagram';
      app prices) was read from the maker's own page on 2026-10-08 and links to
      that page through the SRC map below. Ratings and prices move. If you change
      one, re-fetch the page first and update the "as listed on" wording.
-   - Written for every industry on purpose. No client is named or described.
+   - Written for every industry on purpose. No client is named. On 2026-10-09
+     Bhavesh approved describing two QuickBooks projects in progress (one
+     Shopify to QuickBooks Online, one Shopify to QuickBooks Enterprise) with
+     no client name, no trade or industry and no results. They sit in the one
+     "Current projects" block. Do not add detail beyond what is there.
    - No FactoryJet prices. The only dollar figures are a third-party app's list
      price and a sourced market rate, both inside the one cost FAQ answer.
    - "QuickBooks is most often the master for items, stock and prices" is how
@@ -52,7 +56,7 @@ const PAGE_TITLE = 'Shopify QuickBooks Integration Services | FactoryJet';
 const PAGE_DESC =
   'Shopify QuickBooks integration for Online, Desktop and Enterprise. Keep items, stock and prices in step, with orders, fees and payouts in your books.';
 const PAGE_PUBLISHED = '2026-10-08';
-const PAGE_MODIFIED = '2026-10-08';
+const PAGE_MODIFIED = '2026-10-29';
 const CHECKED_ON = '8 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -372,6 +376,24 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Can I see it working before I sign?',
     answer:
       'Yes. Before a contract, we show working software on your own data. For this kind of project that means a sample of your own items moving between a test store and QuickBooks, so you can check the entries it creates.',
+  },
+  {
+    category: 'working',
+    question: 'Are you running Shopify and QuickBooks projects right now?',
+    answer:
+      'Yes, two. One joins a Shopify store to QuickBooks Online and the other joins a Shopify store to QuickBooks Enterprise. In both, the work is getting orders, refunds and payouts posting to the right accounts. Both are in progress, so we report no results from them yet, and we do not name either client.',
+  },
+  {
+    category: 'working',
+    question: 'Can I send our chart of accounts or field list before a call?',
+    answer:
+      'Yes, and it makes the first reply more useful. Send your QuickBooks version, your chart of accounts or a list of the fields Shopify has to follow, through the contact form. We map each field to the system that leads it and quote each phase at a fixed price in writing. If Intuit\'s own connector covers it, we tell you to use that.',
+  },
+  {
+    category: 'working',
+    question: 'We have outgrown QuickBooks. Can you move us to NetSuite without breaking the Shopify sync?',
+    answer:
+      'Yes. Shopify keeps posting to QuickBooks while NetSuite is set up, so the books stay current. We map each field again for NetSuite, build the new sync against a NetSuite sandbox and a development store, and replay your real orders through it. On the cutover date the QuickBooks sync is switched off and totals are checked. Our comparison at factoryjet.com/comparisons/netsuite-vs-quickbooks covers when the move is worth making.',
   },
   {
     category: 'working',
@@ -795,7 +817,8 @@ export default function ShopifyQuickBooksIntegrationPage() {
                     region="us"
                     source="services_shopify_quickbooks_integration_hero"
                     service="Shopify QuickBooks Integration"
-                    submitLabel="Scope my integration"
+                    submitLabel="See a demo on my data"
+                    trustText="Working software on your own data before you sign. Founder replies within 24 hours."
                   />
                 </div>
 
@@ -1122,6 +1145,67 @@ export default function ShopifyQuickBooksIntegrationPage() {
                   </li>
                 ))}
               </ol>
+            </div>
+          </div>
+        </section>
+
+        {/* 8b. HOUSE TERMS + CURRENT PROJECTS. Clients unnamed by agreement. */}
+        <section className="border-b border-fj-neutral-200 bg-white py-16 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-7">
+                <p className="fj-eyebrow">How we work with you</p>
+                <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
+                  The code, the accounts and the books stay yours.
+                </h2>
+                <ul className="mt-6 grid gap-3">
+                  {[
+                    { t: 'Code and repository', d: 'Yours from day one.' },
+                    { t: 'Accounts in your name', d: 'Your Shopify, QuickBooks and hosting accounts. Hosting, and any AI usage, can run there at cost, with no markup from us.' },
+                    { t: 'Fixed price per phase', d: 'Each phase is scoped, priced and signed on its own. You see working software on your own data before you sign.' },
+                    { t: 'Defect cover in the build price', d: 'Defects found after launch are fixed for a cover period agreed before work starts.' },
+                    { t: 'No monthly minimum', d: 'Support after launch is optional. Each change is quoted and approved before we do it.' },
+                  ].map((x) => (
+                    <li key={x.t} className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-5">
+                      <p className="font-fj-display text-lg font-semibold text-fj-ink">{x.t}</p>
+                      <p className="mt-1 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{x.d}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="lg:col-span-5">
+                <p className="fj-eyebrow">Current projects</p>
+                <ul className="mt-4 grid gap-3">
+                  {[
+                    {
+                      tag: 'Shopify to QuickBooks Online · In progress',
+                      body: 'Orders, refunds and payouts from a Shopify store posting to the right accounts in QuickBooks Online.',
+                    },
+                    {
+                      tag: 'Shopify to QuickBooks Enterprise · In progress',
+                      body: 'Orders, refunds and payouts from a Shopify store posting to the right accounts in QuickBooks Enterprise.',
+                    },
+                  ].map((w) => (
+                    <li key={w.tag} className="rounded-2xl border border-fj-neutral-200 bg-white p-5">
+                      <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">{w.tag}</p>
+                      <p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{w.body}</p>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
+                  Both builds are under way, so neither client is named and no results are reported yet.
+                </p>
+                <p className="mt-6 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">
+                  Outgrowing QuickBooks? Our{' '}
+                  <a
+                    href="/comparisons/netsuite-vs-quickbooks"
+                    className="font-semibold text-[#B23E13] underline underline-offset-2"
+                  >
+                    NetSuite vs QuickBooks comparison
+                  </a>{' '}
+                  sets out when a store should move.
+                </p>
+              </div>
             </div>
           </div>
         </section>
