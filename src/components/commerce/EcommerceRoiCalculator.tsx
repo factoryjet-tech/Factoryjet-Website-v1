@@ -13,19 +13,29 @@ interface EcommerceRoiCalculatorProps {
 }
 
 const CURRENT_PLATFORMS = [
-  { id: 'magento', label: 'Magento 1 / 2 (Adobe)', avgMaintenance: 3500, speedPenalty: 0.007 },
-  { id: 'woocommerce', label: 'WooCommerce', avgMaintenance: 1200, speedPenalty: 0.005 },
-  { id: 'shopify', label: 'Legacy Shopify (Non-Plus)', avgMaintenance: 800, speedPenalty: 0.003 },
-  { id: 'bigcommerce', label: 'BigCommerce Standard', avgMaintenance: 900, speedPenalty: 0.003 },
-  { id: 'salesforce', label: 'Salesforce (SFCC)', avgMaintenance: 6500, speedPenalty: 0.004 },
-  { id: 'other', label: 'Custom / Legacy Monolith', avgMaintenance: 4000, speedPenalty: 0.008 },
+  { id: 'magento', label: 'Magento 1 / 2 (Adobe)' },
+  { id: 'woocommerce', label: 'WooCommerce' },
+  { id: 'shopify', label: 'Legacy Shopify (Non-Plus)' },
+  { id: 'bigcommerce', label: 'BigCommerce Standard' },
+  { id: 'salesforce', label: 'Salesforce (SFCC)' },
+  { id: 'other', label: 'Custom / Legacy Monolith' },
 ];
 
+/** Returns a finite number above zero, or null when the field is empty or invalid. */
+function toPositive(value: string): number | null {
+  if (value.trim() === '') return null;
+  const n = Number(value);
+  return Number.isFinite(n) && n > 0 ? n : null;
+}
+
+const NUMBER_INPUT_CLASS =
+  'w-full px-3 py-2.5 rounded-lg border border-[#E7DED6] bg-white font-mono text-sm text-[#14110F] focus:border-[#F05A28] focus:outline-none';
+
 const TARGET_STACKS = [
-  { id: 'shopify-plus', label: 'Shopify Plus (Optimized)', crLift: 0.0055, feeEfficiency: 0.4 },
-  { id: 'bigcommerce-b2b', label: 'BigCommerce B2B Edition', crLift: 0.0065, feeEfficiency: 0.5 },
-  { id: 'headless', label: 'Composable Headless (Next.js)', crLift: 0.0085, feeEfficiency: 0.3 },
-  { id: 'omnichannel', label: 'Omnichannel Storefront + Marketplaces', crLift: 0.0075, feeEfficiency: 0.45 },
+  { id: 'shopify-plus', label: 'Shopify Plus (Optimized)' },
+  { id: 'bigcommerce-b2b', label: 'BigCommerce B2B Edition' },
+  { id: 'headless', label: 'Composable Headless (Next.js)' },
+  { id: 'omnichannel', label: 'Omnichannel Storefront + Marketplaces' },
 ];
 
 export default function EcommerceRoiCalculator({
@@ -36,16 +46,15 @@ export default function EcommerceRoiCalculator({
 }: EcommerceRoiCalculatorProps) {
   const { openModal } = useContactModal();
 
-  const [annualRevenue, setAnnualRevenue] = useState<number>(2500000);
-  const [aov, setAov] = useState<number>(125);
+  // Visitor inputs start empty. Nothing is prefilled.
+  const [annualRevenueInput, setAnnualRevenueInput] = useState<string>('');
+  const [aovInput, setAovInput] = useState<string>('');
+  const [monthlySpendInput, setMonthlySpendInput] = useState<string>('');
+  // Assumptions the visitor sets and can edit. No built-in uplift.
+  const [liftPercentInput, setLiftPercentInput] = useState<string>('');
+  const [spendCutPercentInput, setSpendCutPercentInput] = useState<string>('');
   const [selectedPlatform, setSelectedPlatform] = useState<string>(defaultPlatform);
   const [selectedTarget, setSelectedTarget] = useState<string>(defaultTarget);
-
-  // Inefficiency toggles
-  const [hasSlowSpeed, setHasSlowSpeed] = useState<boolean>(true);
-  const [hasAppBloat, setHasAppBloat] = useState<boolean>(true);
-  const [hasB2bFriction, setHasB2bFriction] = useState<boolean>(false);
-  const [hasCheckoutFriction, setHasCheckoutFriction] = useState<boolean>(true);
 
   // Lead capture state
   const [fullName, setFullName] = useState('');
@@ -57,31 +66,30 @@ export default function EcommerceRoiCalculator({
 
   const revenueSliderId = useId();
   const aovSliderId = useId();
+  const spendInputId = useId();
+  const liftInputId = useId();
+  const spendCutInputId = useId();
 
   const currentPlatformObj = CURRENT_PLATFORMS.find((p) => p.id === selectedPlatform) || CURRENT_PLATFORMS[0];
   const targetStackObj = TARGET_STACKS.find((t) => t.id === selectedTarget) || TARGET_STACKS[0];
 
-  // Mathematical projections
-  // Base conversion rate assumed ~1.8%
-  let projectedCrLift = targetStackObj.crLift;
-  if (hasSlowSpeed) projectedCrLift += 0.0025; // +0.25% for sub-second Core Web Vitals
-  if (hasCheckoutFriction) projectedCrLift += 0.002; // +0.20% for 1-click checkout & payment methods
-  if (hasB2bFriction) projectedCrLift += 0.003; // +0.30% for wholesale self-serve portals
+  // Estimates use only the visitor's own figures and the assumptions they type.
+  const revenueValue = toPositive(annualRevenueInput);
+  const liftValue = toPositive(liftPercentInput);
+  const spendValue = toPositive(monthlySpendInput);
+  const spendCutValue = toPositive(spendCutPercentInput);
 
-  const baselineCr = 0.018;
-  const newCr = baselineCr + projectedCrLift;
-  const crLiftPercent = Math.round((projectedCrLift / baselineCr) * 100);
+  const hasRevenueEstimate = revenueValue !== null && liftValue !== null;
+  const hasSavingsEstimate = spendValue !== null && spendCutValue !== null;
 
-  // Additional Annual Revenue
-  const additionalAnnualRevenue = Math.round(annualRevenue * (projectedCrLift / baselineCr));
-  
-  // App & Infrastructure Savings
-  let annualSavings = Math.round(currentPlatformObj.avgMaintenance * 12 * targetStackObj.feeEfficiency);
-  if (hasAppBloat) annualSavings += 8400; // eliminate $700/mo duplicate plugins
-
-  // Total Net 3-Year Value
+  // Numeric values the lead handler reports. Zero means the visitor left it blank.
+  const annualRevenue = revenueValue ?? 0;
+  const aov = toPositive(aovInput) ?? 0;
+  const additionalAnnualRevenue = hasRevenueEstimate ? Math.round(annualRevenue * ((liftValue as number) / 100)) : 0;
+  const annualSavings = hasSavingsEstimate
+    ? Math.round((spendValue as number) * 12 * (Math.min(100, spendCutValue as number) / 100))
+    : 0;
   const totalThreeYearValue = (additionalAnnualRevenue + annualSavings) * 3;
-  const estimatedPaybackMonths = Math.max(2, Math.min(8, Math.round((45000 / (additionalAnnualRevenue / 12 + annualSavings / 12)) * 10) / 10));
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -137,78 +145,114 @@ export default function EcommerceRoiCalculator({
             style={{ color: '#B23E13', background: 'rgba(240,90,40,0.08)', border: '1px solid rgba(240,90,40,0.22)' }}
           >
             <Sparkles size={11} className="text-[#F05A28]" />
-            Interactive Commerce ROI Model · US Operations
+            Interactive Commerce ROI Model · Your Numbers Only
           </div>
           <h3 className="mt-2 text-[1.5rem] md:text-[1.85rem] font-bold text-[#14110F]" style={{ letterSpacing: '-0.025em', lineHeight: 1.15 }}>
-            Calculate Your Revenue Lift &amp; Replatforming Payback
+            Estimate Your Replatforming Return
           </h3>
           <p className="mt-1 text-[0.9375rem] text-[#6E635A]">
-            Model the financial impact of modernizing from legacy monoliths to high-converting commerce engines.
+            Type in your own store figures and the lift you expect. We do not prefill numbers, so the estimate is built only from what you enter.
           </p>
         </div>
         <div className="hidden lg:flex items-center gap-2 text-xs font-mono text-[#6E635A] bg-[#FFF8F5] px-3 py-2 rounded-lg border border-[#E7DED6]">
           <Gauge size={14} className="text-[#F05A28]" />
-          <span>Sub-second LCP benchmarked</span>
+          <span>No prefilled figures</span>
         </div>
       </div>
 
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         {/* Left Column: Sliders & Controls */}
         <div className="lg:col-span-7 space-y-6">
-          {/* Revenue Slider */}
-          <div>
-            <div className="flex justify-between items-center mb-2">
-              <label htmlFor={revenueSliderId} className="text-xs font-mono font-bold uppercase tracking-wider text-[#6E635A]">
-                Annual Online Revenue (GMV)
+          {/* Visitor's own figures */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label htmlFor={revenueSliderId} className="text-xs font-mono font-bold uppercase tracking-wider text-[#6E635A] block mb-2">
+                Your annual online revenue ($)
               </label>
-              <span className="font-mono text-base font-bold text-[#14110F] bg-[#FFF8F5] px-2.5 py-0.5 rounded border border-[#E7DED6]">
-                ${(annualRevenue / 1000000).toFixed(2)}M / yr
-              </span>
+              <input
+                id={revenueSliderId}
+                type="number"
+                inputMode="decimal"
+                min={0}
+                step="any"
+                placeholder="Enter your figure"
+                value={annualRevenueInput}
+                onChange={(e) => setAnnualRevenueInput(e.target.value)}
+                className={NUMBER_INPUT_CLASS}
+              />
             </div>
-            <input
-              id={revenueSliderId}
-              type="range"
-              min={250000}
-              max={15000000}
-              step={250000}
-              value={annualRevenue}
-              onChange={(e) => setAnnualRevenue(Number(e.target.value))}
-              className="w-full accent-[#F05A28] cursor-pointer h-2 bg-[#E7DED6] rounded-lg appearance-none"
-            />
-            <div className="flex justify-between text-[11px] font-mono text-[#6E635A] mt-1">
-              <span>$250k</span>
-              <span>$5M</span>
-              <span>$10M</span>
-              <span>$15M+</span>
+            <div>
+              <label htmlFor={aovSliderId} className="text-xs font-mono font-bold uppercase tracking-wider text-[#6E635A] block mb-2">
+                Your average order value ($, optional)
+              </label>
+              <input
+                id={aovSliderId}
+                type="number"
+                inputMode="decimal"
+                min={0}
+                step="any"
+                placeholder="Enter your figure"
+                value={aovInput}
+                onChange={(e) => setAovInput(e.target.value)}
+                className={NUMBER_INPUT_CLASS}
+              />
+            </div>
+            <div className="sm:col-span-2">
+              <label htmlFor={spendInputId} className="text-xs font-mono font-bold uppercase tracking-wider text-[#6E635A] block mb-2">
+                Your monthly platform, hosting and app spend ($)
+              </label>
+              <input
+                id={spendInputId}
+                type="number"
+                inputMode="decimal"
+                min={0}
+                step="any"
+                placeholder="Enter your figure"
+                value={monthlySpendInput}
+                onChange={(e) => setMonthlySpendInput(e.target.value)}
+                className={NUMBER_INPUT_CLASS}
+              />
             </div>
           </div>
 
-          {/* AOV Slider */}
-          <div>
-            <div className="flex justify-between items-center mb-2">
-              <label htmlFor={aovSliderId} className="text-xs font-mono font-bold uppercase tracking-wider text-[#6E635A]">
-                Average Order Value (AOV)
+          {/* Visitor's own assumptions */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 rounded-xl border border-[#E7DED6] bg-[#FFF8F5] p-4">
+            <div>
+              <label htmlFor={liftInputId} className="text-xs font-mono font-bold uppercase tracking-wider text-[#6E635A] block mb-2">
+                Assumption: revenue lift you expect (%)
               </label>
-              <span className="font-mono text-base font-bold text-[#14110F] bg-[#FFF8F5] px-2.5 py-0.5 rounded border border-[#E7DED6]">
-                ${aov}
-              </span>
+              <input
+                id={liftInputId}
+                type="number"
+                inputMode="decimal"
+                min={0}
+                step="any"
+                placeholder="Your assumption"
+                value={liftPercentInput}
+                onChange={(e) => setLiftPercentInput(e.target.value)}
+                className={NUMBER_INPUT_CLASS}
+              />
             </div>
-            <input
-              id={aovSliderId}
-              type="range"
-              min={30}
-              max={600}
-              step={10}
-              value={aov}
-              onChange={(e) => setAov(Number(e.target.value))}
-              className="w-full accent-[#F05A28] cursor-pointer h-2 bg-[#E7DED6] rounded-lg appearance-none"
-            />
-            <div className="flex justify-between text-[11px] font-mono text-[#6E635A] mt-1">
-              <span>$30</span>
-              <span>$150</span>
-              <span>$350</span>
-              <span>$600+</span>
+            <div>
+              <label htmlFor={spendCutInputId} className="text-xs font-mono font-bold uppercase tracking-wider text-[#6E635A] block mb-2">
+                Assumption: cut in monthly spend (%)
+              </label>
+              <input
+                id={spendCutInputId}
+                type="number"
+                inputMode="decimal"
+                min={0}
+                max={100}
+                step="any"
+                placeholder="Your assumption"
+                value={spendCutPercentInput}
+                onChange={(e) => setSpendCutPercentInput(e.target.value)}
+                className={NUMBER_INPUT_CLASS}
+              />
             </div>
+            <p className="sm:col-span-2 text-[11px] text-[#6E635A]">
+              These two are your assumptions, not figures from us. Use a number from your own tests or a quote you trust.
+            </p>
           </div>
 
           {/* Current Platform Grid */}
@@ -252,54 +296,8 @@ export default function EcommerceRoiCalculator({
                   }`}
                 >
                   <div className="font-bold text-[#14110F]">{t.label}</div>
-                  <div className="text-[11px] text-[#6E635A] mt-0.5">Est. CR Lift: +{(t.crLift * 100).toFixed(2)}%</div>
                 </button>
               ))}
-            </div>
-          </div>
-
-          {/* Friction Checkboxes */}
-          <div>
-            <label className="text-xs font-mono font-bold uppercase tracking-wider text-[#6E635A] block mb-2">
-              Current Friction Points (Select All That Apply)
-            </label>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              <label className="flex items-center gap-2 p-2.5 rounded-lg border border-[#E7DED6] text-xs text-[#46403B] cursor-pointer hover:bg-[#FFF8F5]">
-                <input
-                  type="checkbox"
-                  checked={hasSlowSpeed}
-                  onChange={(e) => setHasSlowSpeed(e.target.checked)}
-                  className="rounded border-[#E7DED6] text-[#F05A28] focus:ring-[#F05A28]"
-                />
-                <span>Slow mobile speed (PSI &lt; 65)</span>
-              </label>
-              <label className="flex items-center gap-2 p-2.5 rounded-lg border border-[#E7DED6] text-xs text-[#46403B] cursor-pointer hover:bg-[#FFF8F5]">
-                <input
-                  type="checkbox"
-                  checked={hasAppBloat}
-                  onChange={(e) => setHasAppBloat(e.target.checked)}
-                  className="rounded border-[#E7DED6] text-[#F05A28] focus:ring-[#F05A28]"
-                />
-                <span>Heavy app fees ($1k–$5k/mo)</span>
-              </label>
-              <label className="flex items-center gap-2 p-2.5 rounded-lg border border-[#E7DED6] text-xs text-[#46403B] cursor-pointer hover:bg-[#FFF8F5]">
-                <input
-                  type="checkbox"
-                  checked={hasCheckoutFriction}
-                  onChange={(e) => setHasCheckoutFriction(e.target.checked)}
-                  className="rounded border-[#E7DED6] text-[#F05A28] focus:ring-[#F05A28]"
-                />
-                <span>Checkout drop-off &gt; 70%</span>
-              </label>
-              <label className="flex items-center gap-2 p-2.5 rounded-lg border border-[#E7DED6] text-xs text-[#46403B] cursor-pointer hover:bg-[#FFF8F5]">
-                <input
-                  type="checkbox"
-                  checked={hasB2bFriction}
-                  onChange={(e) => setHasB2bFriction(e.target.checked)}
-                  className="rounded border-[#E7DED6] text-[#F05A28] focus:ring-[#F05A28]"
-                />
-                <span>Manual B2B wholesale orders</span>
-              </label>
             </div>
           </div>
         </div>
@@ -308,40 +306,57 @@ export default function EcommerceRoiCalculator({
         <div className="lg:col-span-5 flex flex-col justify-between rounded-2xl border border-[#E7DED6] bg-[#FFF8F5] p-6">
           <div>
             <div className="text-xs font-mono uppercase tracking-wider text-[#6E635A] font-bold">
-              Projected Commercial Return
+              Your Estimate
             </div>
 
-            {/* Big Metrics Grid */}
-            <div className="mt-4 grid grid-cols-2 gap-4 border-b border-[#E7DED6] pb-6">
-              <div>
-                <div className="text-[11px] font-mono text-[#6E635A]">Annual Revenue Lift</div>
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#C94A1A] font-mono tracking-tight">
-                  +${(additionalAnnualRevenue / 1000).toFixed(0)}k
+            {!hasRevenueEstimate && !hasSavingsEstimate ? (
+              <p className="mt-4 rounded-xl bg-white border border-[#E7DED6] p-4 text-sm text-[#46403B]">
+                Enter your own numbers to see an estimate. We do not prefill figures.
+              </p>
+            ) : (
+              <>
+                {/* Metrics Grid */}
+                <div className="mt-4 grid grid-cols-2 gap-4 border-b border-[#E7DED6] pb-6">
+                  <div>
+                    <div className="text-[11px] font-mono text-[#6E635A]">Revenue lift per year</div>
+                    {hasRevenueEstimate ? (
+                      <>
+                        <div className="text-2xl sm:text-3xl font-extrabold text-[#C94A1A] font-mono tracking-tight">
+                          ${additionalAnnualRevenue.toLocaleString()}
+                        </div>
+                        <div className="text-[11px] text-[#6E635A] mt-0.5">At the {liftValue}% lift you assumed</div>
+                      </>
+                    ) : (
+                      <div className="text-[11px] text-[#6E635A] mt-1">Add your revenue and expected lift.</div>
+                    )}
+                  </div>
+                  <div>
+                    <div className="text-[11px] font-mono text-[#6E635A]">Spend saved per year</div>
+                    {hasSavingsEstimate ? (
+                      <>
+                        <div className="text-2xl sm:text-3xl font-extrabold text-[#14110F] font-mono tracking-tight">
+                          ${annualSavings.toLocaleString()}
+                        </div>
+                        <div className="text-[11px] text-[#6E635A] mt-0.5">At the {Math.min(100, spendCutValue as number)}% cut you assumed</div>
+                      </>
+                    ) : (
+                      <div className="text-[11px] text-[#6E635A] mt-1">Add your monthly spend and expected cut.</div>
+                    )}
+                  </div>
                 </div>
-                <div className="text-[11px] text-[#6E635A] mt-0.5">+{crLiftPercent}% conversion lift</div>
-              </div>
-              <div>
-                <div className="text-[11px] font-mono text-[#6E635A]">Annual Cost Savings</div>
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#14110F] font-mono tracking-tight">
-                  ${(annualSavings / 1000).toFixed(0)}k
-                </div>
-                <div className="text-[11px] text-[#6E635A] mt-0.5">App &amp; infra reduction</div>
-              </div>
-            </div>
 
-            {/* 3-Year Total Box */}
-            <div className="mt-4 p-4 rounded-xl bg-white border border-[#E7DED6] flex items-center justify-between">
-              <div>
-                <div className="text-[11px] font-mono text-[#6E635A] uppercase tracking-wider">3-Year Net Value Creation</div>
-                <div className="text-xl sm:text-2xl font-black text-[#14110F] font-mono">
-                  ${(totalThreeYearValue / 1000000).toFixed(2)}M
+                {/* 3-Year Total Box */}
+                <div className="mt-4 p-4 rounded-xl bg-white border border-[#E7DED6]">
+                  <div className="text-[11px] font-mono text-[#6E635A] uppercase tracking-wider">Three years at the same rate</div>
+                  <div className="text-xl sm:text-2xl font-black text-[#14110F] font-mono">
+                    ${totalThreeYearValue.toLocaleString()}
+                  </div>
+                  <div className="text-[11px] text-[#6E635A] mt-0.5">
+                    Your figures times three, before build cost. An estimate, not a promise.
+                  </div>
                 </div>
-              </div>
-              <div className="text-right">
-                <div className="text-[11px] font-mono text-[#6E635A]">Payback Window</div>
-                <div className="text-sm font-bold text-[#C94A1A] font-mono">~{estimatedPaybackMonths} Months</div>
-              </div>
-            </div>
+              </>
+            )}
           </div>
 
           {/* Lead Capture or Success State */}
