@@ -556,7 +556,7 @@ export default function AiAgentDevelopmentSections() {
                 </div>
                 <div className="fact">
                   <div className="sec">§04</div>
-                  <p>The three vendor categories are platforms (you build it yourself with LangGraph, CrewAI, or AutoGen), enterprise consultancies (large-scale, slow, expensive), and specialist agentic AI development companies (custom-built, production-focused, faster than a consultancy, more accountable than a platform). If you are not sure an agent is the right first project, our <a href="/services/ai-consulting" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI consulting services</a> start with a readiness assessment and tell you.</p>
+                  <p>The three vendor categories are platforms (you build it yourself with LangGraph, CrewAI, or AutoGen), enterprise consultancies (wider transformation programs run by large teams), and specialist agentic AI development companies (custom-built, production-focused, faster than a consultancy, more accountable than a platform). If you are not sure an agent is the right first project, our <a href="/services/ai-consulting" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI consulting services</a> start with a readiness assessment and tell you.</p>
                 </div>
                 <div className="fact">
                   <div className="sec">§05</div>
@@ -598,7 +598,7 @@ export default function AiAgentDevelopmentSections() {
                     <th>Enterprise consultancies<br /><span className="mono tableSubLabel">Accenture / IBM scale</span></th>
                     <td>Agentic AI as part of a larger transformation program</td>
                     <td>Large, regulated enterprises</td>
-                    <td>Slower pilots, higher cost, less flexibility</td>
+                    <td>Longer programs, sized for enterprise budgets</td>
                   </tr>
                   <tr className="us">
                     <th>Specialist development partners<br /><span className="mono tableSubLabel tableSubLabelAccent">FactoryJet</span></th>
