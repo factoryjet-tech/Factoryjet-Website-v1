@@ -34,13 +34,13 @@ const ECOMMERCE_FAQ_ITEMS = [
     links: [{ href: '/blog/website-cost-australia-2026', label: 'Website cost in Australia (2026 guide)' }] },
   { category: 'ecommerce', question: 'Can I hire someone to build me a Shopify store in Melbourne?',
     answer: 'Yes. A Shopify developer sets up the theme, products, payments, shipping rates and GST, connects stock and accounting, and tests real orders before launch. FactoryJet is a registered Shopify Partner and builds Shopify and Shopify Plus stores for Melbourne brands, working remotely in Melbourne business hours. You own the store, the theme code and every account. A build needs nobody on site, so judge any developer on live stores like yours.',
-    links: [{ href: '/au/shopify-development', label: 'Shopify development for Australian businesses' }] },
+    links: [{ href: '/au/shopify-development', label: 'Shopify development for Australian businesses' }, { href: '/au/shopify-plus', label: 'Shopify Plus agency for Australian brands' }] },
   { category: 'ecommerce', question: 'Can you move my store from Magento or WooCommerce to Shopify without losing rankings?',
     answer: 'Yes, if the move is planned around your URLs. We export products, customers and order history, set a 301 redirect from every old product, category and blog URL to its new home, and check the new store on a test domain before the switch. Customer passwords cannot be carried across from Magento or WooCommerce, so we plan the email that invites customers to reactivate their accounts. Expect some movement in rankings for a few weeks after the switch.',
-    links: [{ href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' }] },
+    links: [{ href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' }, { href: '/au/shopify-migration', label: 'Shopify migration for Australian stores' }] },
   { category: 'ecommerce', question: 'Can a Shopify store send orders and invoices to Xero?',
     answer: 'Yes. Most stores use a connector app from the Shopify App Store that posts orders, refunds, fees and GST into Xero. Wholesalers with trade accounts, payment terms or several warehouses often need more control, so we build the connection to match how your bookkeeper wants the ledger set up. Either way, test it with a week of real orders before launch, and check that GST and Shopify payouts reconcile in Xero.',
-    links: [{ href: '/au/shopify-development', label: 'Shopify development for Australian businesses' }] },
+    links: [{ href: '/au/shopify-development', label: 'Shopify development for Australian businesses' }, { href: '/au/shopify-xero-integration', label: 'Shopify Xero integration' }] },
 ];
 const FAQ_CATEGORIES = [...BASE_FAQ_CATEGORIES, { key: 'ecommerce', label: 'Ecommerce & Shopify' }];
 const FAQ_ITEMS = [...BASE_FAQ_ITEMS, ...ECOMMERCE_FAQ_ITEMS];

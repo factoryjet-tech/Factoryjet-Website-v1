@@ -37,6 +37,9 @@ export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Real Estate Websites',     href: '/au/real-estate-websites' },
       { label: 'Accountant Website Design', href: '/au/accountant-website-design' },
       { label: 'Website Maintenance',      href: '/au/website-maintenance' },
+      { label: 'B2B Ecommerce',            href: '/au/b2b-ecommerce' },
+      { label: 'Shopify Plus',             href: '/au/shopify-plus' },
+      { label: 'Ecommerce Consultant',     href: '/au/ecommerce-consultant' },
     ],
   },
   {
@@ -48,6 +51,7 @@ export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'AI Receptionist',          href: '/au/ai-receptionist' },
       { label: 'AI Customer Service',      href: '/au/ai-customer-service' },
       { label: 'Accounts Payable Automation', href: '/au/accounts-payable-automation' },
+      { label: 'AI Integration Services',  href: '/au/ai-integration-services' },
       { label: 'AI SEO & GEO',             href: '/au/ai-seo' },
       { label: 'SEO Services',             href: '/au/seo' },
       { label: 'Local SEO',                href: '/au/local-seo' },

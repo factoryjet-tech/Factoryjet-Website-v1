@@ -317,6 +317,9 @@ const SIBLINGS: { href: string; t: string; d: string }[] = [
   { href: '/au/shopify-development', t: 'Shopify development', d: 'Shopify and Shopify Plus stores built and supported by the same team, with support tooling wired in from day one.' },
   { href: '/au/ai-consulting', t: 'AI consulting', d: 'Not sure support is the right place to start? A short assessment of where AI will actually pay off.' },
   { href: '/au', t: 'FactoryJet Australia', d: 'Everything we build for Australian businesses: ecommerce, websites, AI agents and AI search.' },
+  { href: '/au/shopify-ai-agents', t: 'Shopify AI agents', d: 'Agents for Shopify store operations, from order and returns questions to stock and product updates.' },
+  { href: '/au/ecommerce-ai-agents', t: 'Ecommerce AI agents', d: 'Agents for online stores and marketplaces that answer customers and handle routine store tasks.' },
+  { href: '/au/crm-ai-agents', t: 'CRM AI agents', d: 'HubSpot and Salesforce agents that keep customer records current after every call and email.' },
 ];
 
 /* Visual slot page key (route without /au/). */

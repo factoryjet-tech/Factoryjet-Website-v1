@@ -404,6 +404,12 @@ const RELATED: { h: string; t: string; d: string }[] = [
   { h: '/au/ai-receptionist', t: 'AI receptionist', d: 'A voice agent that answers, qualifies and books calls, day and night.' },
   { h: '/au/ai-seo', t: 'AI SEO', d: 'Get your business named in ChatGPT, Perplexity and Google AI answers.' },
   { h: '/blog/ai-cost-australia-2026', t: 'AI cost guide', d: 'Published Australian price ranges for AI agents, chatbots and receptionists, with sources and GST basis.' },
+  { h: '/au/erp-ai-agents', t: 'ERP AI agents', d: 'Agents that work inside Xero, MYOB, NetSuite and Odoo, with a person approving anything that posts.' },
+  { h: '/au/shopify-ai-agents', t: 'Shopify AI agents', d: 'Custom agents for store operations: order questions, returns, stock alerts and product updates.' },
+  { h: '/au/ecommerce-ai-agents', t: 'Ecommerce AI agents', d: 'Agents for online stores and marketplaces, from customer replies to listing and stock tasks.' },
+  { h: '/au/sales-order-automation-ai-agents', t: 'Sales order automation', d: 'Emailed purchase orders from trade buyers turned into draft sales orders for your team to check.' },
+  { h: '/au/document-intake-ai-agents', t: 'AI document processing', d: 'Intake agents that read invoices, dockets and forms and put the details into Xero, MYOB or your ERP.' },
+  { h: '/au/crm-ai-agents', t: 'CRM AI agents', d: 'HubSpot and Salesforce agents that log calls, draft follow-ups and keep records up to date.' },
 ];
 
 export default function AiAgentsAUPage() {

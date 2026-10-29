@@ -463,13 +463,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     links: [{ href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' }] },
   { category: 'platforms', question: 'Can I move my store from Magento or WooCommerce to Shopify without losing rankings?',
     answer: 'Yes, if the move is planned around your URLs. Products, customers and order history are exported, every old product, category and blog URL gets a 301 redirect to its new address, and the new store is checked on a test domain before the switch. Customer passwords cannot be carried across, so plan the email that invites customers to reactivate their accounts. Expect some movement in rankings for a few weeks after the switch.',
-    links: [{ href: '/au/shopify-development', label: 'Shopify development for Australian businesses' }] },
+    links: [{ href: '/au/shopify-development', label: 'Shopify development for Australian businesses' }, { href: '/au/shopify-migration', label: 'Shopify migration for Australian stores' }] },
   { category: 'platforms', question: 'Can Shopify handle B2B wholesale ordering?',
     answer: 'Shopify Plus can. Its B2B features give each trade customer a company account with its own price list, payment terms and permitted products, alongside your retail checkout in the same store. Distributors with quote approvals, several delivery sites or contract pricing that changes by volume sometimes outgrow that, and a custom ordering portal connected to the store fits better. Map your trade rules on paper before you choose.',
-    links: [{ href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' }] },
+    links: [{ href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' }, { href: '/au/shopify-plus', label: 'Shopify Plus agency for B2B and migrations' }, { href: '/au/b2b-ecommerce', label: 'B2B ecommerce trade portals' }] },
   { category: 'platforms', question: 'Can a Shopify store send orders and invoices to Xero?',
     answer: 'Yes. Most stores use a connector app from the Shopify App Store that posts orders, refunds, fees and GST into Xero. Wholesalers with trade accounts, payment terms or more than one warehouse often need more control, so the connection is built to match how the bookkeeper wants the ledger. Test it with a week of real orders before launch, and check that GST and Shopify payouts reconcile.',
-    links: [{ href: '/au/shopify-development', label: 'Shopify development for Australian businesses' }] },
+    links: [{ href: '/au/shopify-development', label: 'Shopify development for Australian businesses' }, { href: '/au/shopify-xero-integration', label: 'Shopify Xero integration' }] },
 
   // ---------- Selling online from NSW ----------
   { category: 'selling', question: 'Is e-commerce legal in Australia?',

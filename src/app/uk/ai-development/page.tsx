@@ -416,6 +416,10 @@ export default function AiDevelopmentUKPage() {
               <a className="city-pill" href="/uk/whatsapp-ai-agents">WhatsApp AI agents UK</a>
               <a className="city-pill" href="/uk/ecommerce-development">Ecommerce development UK</a>
               <a className="city-pill" href="/uk/magento">Magento UK</a>
+              <a className="city-pill" href="/uk/ai-integration-services">AI integration services UK</a>
+              <a className="city-pill" href="/uk/ai-automation">AI workflow automation UK</a>
+              <a className="city-pill" href="/uk/netsuite-ai-agents">NetSuite AI agents UK</a>
+              <a className="city-pill" href="/uk/sales-order-automation-ai-agents">Sales order automation UK</a>
             </div>
           </div>
         </section>

@@ -485,7 +485,7 @@ export default function ShopifyPlusUKPage() {
               </li>
               <li className="card">
                 <h3>Shopify Plus support</h3>
-                <p className="mt-4">A monthly retainer from the same engineers: fixes, improvements, new extensions, peak-trading preparation and integration monitoring, with a written log of every change. Plus <a href="/uk/shopify-seo">Shopify SEO</a> when you need it.</p>
+                <p className="mt-4">A monthly retainer from the same engineers: fixes, improvements, new extensions, peak-trading preparation and integration monitoring, with a written log of every change. Plus <a href="/uk/shopify-seo">Shopify SEO</a> when you need it. See <a href="/uk/shopify-maintenance-services">Shopify maintenance services in the UK</a>.</p>
               </li>
             </ul>
           </div>
@@ -590,7 +590,9 @@ export default function ShopifyPlusUKPage() {
             <p className="mt-6" style={{ maxWidth: 820 }}>
               If you are on Magento and not yet sure about leaving, our <a href="/uk/magento">UK Magento agency</a> page
               explains how we decide between staying and moving. Many trade sellers weighing Plus B2B should also read
-              our <a href="/uk/b2b-ecommerce">UK B2B ecommerce</a> page. For a move to standard Shopify or Plus, with UK
+              our <a href="/uk/b2b-ecommerce">UK B2B ecommerce</a> page and our{' '}
+              <a href="/uk/shopify-plus-b2b">Shopify Plus B2B page for UK wholesalers</a>. If you want a custom front end on
+              Plus, see <a href="/uk/headless-shopify-development">headless Shopify development in the UK</a>. For a move to standard Shopify or Plus, with UK
               price ranges, see <a href="/uk/shopify-migration">Shopify migration for UK stores</a>. If you are
               staying on your current plan and want a new design, see our <a href="/uk/ecommerce-redesign">UK ecommerce redesign</a> page.
             </p>

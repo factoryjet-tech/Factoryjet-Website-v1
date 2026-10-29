@@ -832,6 +832,11 @@ export default function AiAgentsUKPage() {
                   <a className="city-pill" href="/uk/birmingham">AI Agents Birmingham</a>
                   <a className="city-pill" href="/uk/leeds">AI Agents Leeds</a>
                   <a className="city-pill" href="/uk/ai-seo">AI SEO</a>
+                  <a className="city-pill" href="/uk/erp-ai-agents">ERP AI agents UK</a>
+                  <a className="city-pill" href="/uk/crm-ai-agents">CRM AI agents for HubSpot and Salesforce</a>
+                  <a className="city-pill" href="/uk/ecommerce-ai-agents">Ecommerce AI agents UK</a>
+                  <a className="city-pill" href="/uk/document-intake-ai-agents">Document intake AI agents UK</a>
+                  <a className="city-pill" href="/uk/ai-automation">AI workflow automation UK</a>
                 </div>
               </div>
 

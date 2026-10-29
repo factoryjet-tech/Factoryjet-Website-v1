@@ -114,7 +114,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'There is no official list, and different writers use different five words. The version we find useful when planning a store is catalogue (clean product data), content (pages that answer buyer questions), checkout (short, honest, fast), connections (payments, stock, accounts and couriers talking to each other) and care (support after launch). A store that gets those five right usually does well.' },
 
   { category: 'basics', question: 'How to design an e-commerce website?',
-    answer: 'Design from the product page outwards. Start with what a shopper needs to decide: clear photos from the angles people ask about, variants that are easy to pick, stock status, delivery estimate and the returns promise. Then build category pages with filters that work on a phone, and a checkout with guest option, address lookup and the total price shown up front. Test the whole flow on a real phone before anything looks finished.' },
+    answer: 'Design from the product page outwards. Start with what a shopper needs to decide: clear photos from the angles people ask about, variants that are easy to pick, stock status, delivery estimate and the returns promise. Then build category pages with filters that work on a phone, and a checkout with guest option, address lookup and the total price shown up front. Test the whole flow on a real phone before anything looks finished.',
+    links: [{ href: '/au/ecommerce-redesign', label: 'Ecommerce website redesign' }] },
   { category: 'basics', question: 'What are common eCommerce mistakes?',
     answer: 'The ones we fix most often: delivery costs that only appear at checkout, product descriptions copied from the supplier, category pages with no words on them, too many apps slowing the store, a checkout that forces account creation, and a replatform with no redirects that wipes out Google rankings overnight. Under Australian Consumer Law, a no refunds line or a price that excludes unavoidable fees is a legal problem as well as a sales one.' },
   { category: 'basics', question: 'Do I need an ABN for eCommerce?',
@@ -145,6 +146,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     links: [
       { href: '/blog/best-ecommerce-platform-australia-2026#head-to-head', label: 'Shopify vs WooCommerce comparison for Australia' },
       { href: '/au/shopify-development', label: 'Shopify development' },
+      { href: '/au/woocommerce', label: 'WooCommerce development' },
     ] },
   { category: 'platforms', question: 'When does Adobe Commerce (Magento) make sense?',
     answer: 'Adobe Commerce, the paid version of Magento, earns its place with large catalogues, several stores or brands on one back end, and complex B2B rules such as company accounts, negotiated quotes and approval chains. It needs specialist developers, proper hosting and regular upkeep. For a small or mid-sized DTC brand it is usually more platform than the job needs.' },
@@ -155,7 +157,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Integrations, B2B & migration ──
   { category: 'build', question: 'Can you connect our online store to Xero or MYOB?',
-    answer: 'Yes. Orders, customers, payments and GST should flow into Xero or MYOB without anyone retyping them. Where a proven connector exists we set it up and configure it properly, including tax codes, payout reconciliation and refunds. Where your setup is unusual, or you run an ERP such as NetSuite, Dynamics 365 Business Central or Pronto, we build or configure the integration and document it.' },
+    answer: 'Yes. Orders, customers, payments and GST should flow into Xero or MYOB without anyone retyping them. Where a proven connector exists we set it up and configure it properly, including tax codes, payout reconciliation and refunds. Where your setup is unusual, or you run an ERP such as NetSuite, Dynamics 365 Business Central or Pronto, we build or configure the integration and document it.',
+    links: [{ href: '/au/ecommerce-erp-integration', label: 'Ecommerce ERP integration with GST mapping' }, { href: '/au/shopify-xero-integration', label: 'Shopify Xero integration' }] },
   { category: 'build', question: 'Which payment and buy now, pay later options can you add?',
     answer: 'Whatever your platform supports and your customers use: card payments through Shopify Payments, Stripe or your bank’s gateway, PayPal, Apple Pay and Google Pay, and buy now, pay later options such as Afterpay and Zip. We check each one works on a real phone with a real order before launch, and that refunds and payouts reconcile in Xero or MYOB.' },
   { category: 'build', question: 'Can you set up Australia Post and courier shipping rates?',
@@ -163,7 +166,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'build', question: 'Can you migrate our store without losing Google rankings?',
     answer: 'Yes, and this is where a lot of DIY migrations go wrong. We map every old URL to its new address with one permanent (301) redirect, keep the product and category structure Google already trusts, carry over structured data and reviews, and test on a staging store first. After launch we watch rankings and traffic so anything that slips gets fixed early.' },
   { category: 'build', question: 'Do you build B2B ecommerce and trade portals?',
-    answer: 'Yes. B2B ecommerce needs trade logins, account-specific prices, quick order by SKU, bulk upload, quotes, pay on account with credit limits, and prices shown ex-GST for trade buyers. We build it on Shopify Plus, Adobe Commerce, BigCommerce or WooCommerce, connected to your ERP or accounts software. We built this kind of B2B ordering for Bombay Petals.' },
+    answer: 'Yes. B2B ecommerce needs trade logins, account-specific prices, quick order by SKU, bulk upload, quotes, pay on account with credit limits, and prices shown ex-GST for trade buyers. We build it on Shopify Plus, Adobe Commerce, BigCommerce or WooCommerce, connected to your ERP or accounts software. We built this kind of B2B ordering for Bombay Petals.',
+    links: [{ href: '/au/b2b-ecommerce', label: 'B2B ecommerce for wholesalers and manufacturers' }] },
   { category: 'build', question: 'Which Australian agency should I hire to build a B2B ecommerce website?',
     answer: 'Hire one that has built a live trade portal connected to an ERP, not just DTC stores. Ask to log in to a B2B store they built, ask how they sync customer prices and credit limits from your ERP, and ask who supports it after launch. FactoryJet builds B2B stores for Australian wholesalers and manufacturers, working remotely. Compare us with the agencies listed on this page.' },
   { category: 'build', question: 'What is B2B ecommerce?',
@@ -177,7 +181,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Shopify says B2B is included on the Basic, Grow, Advanced and Plus plans, so on those plans you are not paying for a separate B2B add-on. What you do pay for is the Shopify plan that fits your catalogue and pricing, any apps, and the build work: trade theme, price lists, ERP or Xero and MYOB integration, and migration. Our Shopify cost guide has Australian ranges.',
     links: [{ href: '/blog/shopify-cost-australia-2026', label: 'Shopify cost in Australia' }] },
   { category: 'build', question: 'Can our store also sell on Amazon Australia, eBay and Kogan?',
-    answer: 'Yes. We connect your store to Amazon Australia, eBay Australia and Kogan Marketplace so products, prices and stock are managed in one place and orders flow back to one system. The rule is one source of truth for stock, so you never sell the same last item twice. Catch is no longer an option: Wesfarmers wound it down in 2025.' },
+    answer: 'Yes. We connect your store to Amazon Australia, eBay Australia and Kogan Marketplace so products, prices and stock are managed in one place and orders flow back to one system. The rule is one source of truth for stock, so you never sell the same last item twice. Catch is no longer an option: Wesfarmers wound it down in 2025.',
+    links: [{ href: '/au/amazon-agency', label: 'Amazon.com.au ads, listings and stock sync' }] },
 
   // ── Consumer law & GST ──
   { category: 'law', question: 'What consumer law applies to an Australian online store?',

@@ -341,6 +341,10 @@ const SIBLINGS: { href: string; t: string; d: string }[] = [
   { href: '/au/ai-consulting', t: 'AI consulting', d: 'A short assessment of where AI will pay off in your finance and operations work.' },
   { href: '/au/accountant-website-design', t: 'Websites for accountants', d: 'Websites, SEO and client portals for Australian accounting and bookkeeping practices.' },
   { href: '/au', t: 'FactoryJet Australia', d: 'Everything we build for Australian businesses: ecommerce, websites, AI agents and AI search.' },
+  { href: '/au/accounts-receivable-automation', t: 'Accounts receivable automation', d: 'Debtor follow-up and payment reminders inside Xero and MYOB, for the money coming in.' },
+  { href: '/au/document-intake-ai-agents', t: 'AI document processing', d: 'Intake agents for dockets, forms and purchase orders as well as supplier bills, feeding Xero, MYOB or your ERP.' },
+  { href: '/au/erp-ai-agents', t: 'ERP AI agents', d: 'Agents that work inside Xero, MYOB, NetSuite and Odoo for finance and operations tasks.' },
+  { href: '/au/netsuite-ai-agents', t: 'NetSuite AI agents', d: 'For businesses on NetSuite: agents built into your account, with approvals set by your finance team.' },
 ];
 
 /* Visual slot page key (route without /au/). */

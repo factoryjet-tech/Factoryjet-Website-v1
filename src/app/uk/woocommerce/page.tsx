@@ -749,6 +749,8 @@ export default function WooCommerceUKPage() {
                   <a className="city-pill" href="/uk/leeds">Leeds</a>
                   <a className="city-pill" href="/uk/shopify-development">Shopify development</a>
                   <a className="city-pill" href="/uk/magento">Magento agency</a>
+                  <a className="city-pill" href="/uk/website-maintenance">Website maintenance UK</a>
+                  <a className="city-pill" href="/uk/ecommerce-audit">Free ecommerce audit UK</a>
                 </div>
               </div>
 

@@ -1095,6 +1095,10 @@ export default function ShopifyDevelopmentPage() {
               <li><a href="/uk/b2b-ecommerce" style={inlineLink}>B2B ecommerce</a></li>
               <li><a href="/uk/ecommerce-consultant" style={inlineLink}>Ecommerce consultant, before you choose a platform</a></li>
               <li><a href="/uk/shopify-seo" style={inlineLink}>Shopify SEO</a></li>
+              <li><a href="/uk/headless-shopify-development" style={inlineLink}>Headless Shopify development</a></li>
+              <li><a href="/uk/shopify-maintenance-services" style={inlineLink}>Shopify maintenance and support retainers</a></li>
+              <li><a href="/uk/shopify-ai-agents" style={inlineLink}>Shopify AI agents for store operations</a></li>
+              <li><a href="/uk/shopify-edi-integration" style={inlineLink}>Shopify EDI integration with retailers</a></li>
             </ul>
           </div>
         </div>

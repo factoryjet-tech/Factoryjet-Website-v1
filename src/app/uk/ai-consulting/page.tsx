@@ -679,6 +679,8 @@ export default function AiConsultingUKPage() {
                   <a className="city-pill" href="/uk/accounts-payable-automation">Accounts payable automation UK</a>
                   <a className="city-pill" href="/uk/ecommerce-development">Ecommerce development UK</a>
                   <a className="city-pill" href="/uk/ai-seo">AI SEO UK</a>
+                  <a className="city-pill" href="/uk/erp-ai-agents">ERP AI agents UK</a>
+                  <a className="city-pill" href="/uk/odoo-ai-agents">Odoo AI agents UK</a>
                   <a className="city-pill" href="/contact">Contact us</a>
                 </div>
               </div>

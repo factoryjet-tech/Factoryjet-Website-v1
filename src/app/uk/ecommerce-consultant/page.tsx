@@ -386,7 +386,7 @@ export default function EcommerceConsultantUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Marketplaces</h3>
-                <p className="mt-4">Amazon UK, eBay, OnBuy and TikTok Shop. Which products belong where, how pricing should differ from your own site, and how stock syncs so you never sell something you do not have.</p>
+                <p className="mt-4">Amazon UK, eBay, OnBuy and TikTok Shop. Which products belong where, how pricing should differ from your own site, and how stock syncs so you never sell something you do not have. For Seller Central and FBA work, see our <a href="/uk/amazon-agency">Amazon agency for UK sellers</a>.</p>
               </li>
               <li className="svc-card">
                 <h3>B2B trade ordering</h3>
@@ -818,6 +818,8 @@ export default function EcommerceConsultantUKPage() {
                   <a className="city-pill" href="/uk/ecommerce-redesign">Ecommerce redesign UK</a>
                   <a className="city-pill" href="/uk/ecommerce-seo">Ecommerce SEO UK</a>
                   <a className="city-pill" href="/uk/seo-audit">SEO audit UK</a>
+                  <a className="city-pill" href="/uk/ecommerce-audit">Free ecommerce audit UK</a>
+                  <a className="city-pill" href="/uk/ecommerce-ai-agents">Ecommerce AI agents UK</a>
                   <a className="city-pill" href="/contact">Contact us</a>
                 </div>
               </div>

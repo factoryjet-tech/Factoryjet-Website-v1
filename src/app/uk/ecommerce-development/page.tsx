@@ -902,7 +902,7 @@ export default function EcommerceDevelopmentUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Scaling multi-channel retailers</h3>
-                <p className="mt-4">Brands selling across their own site, Amazon, and marketplaces like TikTok Shop, who need a store and stock system that stays in sync everywhere they sell.</p>
+                <p className="mt-4">Brands selling across their own site, Amazon, and marketplaces like TikTok Shop, who need a store and stock system that stays in sync everywhere they sell. See our <a href="/uk/amazon-agency" style={linkStyle}>Amazon agency for UK sellers</a>.</p>
               </li>
             </ul>
           </div>

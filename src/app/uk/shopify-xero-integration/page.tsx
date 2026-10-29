@@ -1221,7 +1221,12 @@ export default function ShopifyXeroIntegrationUKPage() {
               <a href="/uk/shopify-development" style={inlineLink}>Shopify development</a> and{' '}
               <a href="/uk/woocommerce" style={inlineLink}>WooCommerce development</a>. For trade buyers, see{' '}
               <a href="/uk/b2b-ecommerce" style={inlineLink}>B2B ecommerce</a>. For supplier bills paid out of the
-              same Xero, see <a href="/uk/accounts-payable-automation" style={inlineLink}>accounts payable automation</a>.
+              same Xero, see <a href="/uk/accounts-payable-automation" style={inlineLink}>accounts payable automation</a>,
+              and for chasing the trade invoices you raise, see{' '}
+              <a href="/uk/accounts-receivable-automation" style={inlineLink}>accounts receivable automation</a>.
+              If you run Sage, NetSuite or Odoo rather than Xero, see{' '}
+              <a href="/uk/ecommerce-erp-integration" style={inlineLink}>ecommerce ERP integration</a>, and for AI that
+              works across those systems, see <a href="/uk/ai-integration-services" style={inlineLink}>AI integration services in the UK</a>.
               If your books are in QuickBooks, see{' '}
               <a href="/services/shopify-quickbooks-integration" style={inlineLink}>Shopify QuickBooks integration</a>.
             </p>

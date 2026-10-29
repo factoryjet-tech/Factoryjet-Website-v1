@@ -741,6 +741,8 @@ export default function MagentoUKPage() {
                   <a className="city-pill" href="/uk/leeds">Leeds</a>
                   <a className="city-pill" href="/uk/shopify-development">Shopify development</a>
                   <a className="city-pill" href="/uk/ecommerce-development">Ecommerce development</a>
+                  <a className="city-pill" href="/uk/bigcommerce-b2b">BigCommerce B2B Edition</a>
+                  <a className="city-pill" href="/uk/website-maintenance">Website maintenance UK</a>
                 </div>
               </div>
 

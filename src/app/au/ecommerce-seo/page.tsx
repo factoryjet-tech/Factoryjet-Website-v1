@@ -327,6 +327,10 @@ const SIBLINGS: { href: string; t: string; d: string }[] = [
   { href: '/au/seo', t: 'SEO services', d: 'Technical SEO, SEO audits and local SEO for Australian businesses that are not only selling online.' },
   { href: '/au/website-maintenance', t: 'Website maintenance', d: 'Updates, security, backups and small fixes, so the store stays fast and healthy after the SEO work is done.' },
   { href: '/au', t: 'FactoryJet Australia', d: 'Everything we build for Australian businesses: ecommerce, websites, AI agents and AI search.' },
+  { href: '/au/ecommerce-redesign', t: 'Ecommerce website redesign', d: 'Rebuild the store with every old URL mapped and redirected, so rankings and orders carry over.' },
+  { href: '/au/shopify-migration', t: 'Shopify migration', d: 'Moving off Magento, WooCommerce, Neto or BigCommerce with redirects planned before the switch.' },
+  { href: '/au/amazon-agency', t: 'Amazon agency', d: 'Amazon.com.au ads, listings and stock sync for brands that sell on the marketplace as well as their own store.' },
+  { href: '/au/ecommerce-consultant', t: 'Ecommerce consultant', d: 'For stores that already trade: an outside review of what to fix first across the site, systems and channels.' },
 ];
 
 /* Visual slot page key (route without /au/). */

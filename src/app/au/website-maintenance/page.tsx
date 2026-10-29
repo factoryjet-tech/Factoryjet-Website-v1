@@ -259,6 +259,10 @@ const SIBLINGS: { href: string; t: string; d: string }[] = [
   { href: '/au/ai-seo', t: 'AI SEO', d: 'Get found when Australians ask ChatGPT, Perplexity or Google AI for a business like yours.' },
   { href: '/au/ai-customer-service', t: 'AI customer service', d: 'AI that answers customer questions on your website, chat and email, supported after launch.' },
   { href: '/au', t: 'FactoryJet Australia', d: 'Everything we build for Australian businesses: ecommerce, websites, AI agents and AI search.' },
+  { href: '/au/shopify-maintenance-services', t: 'Shopify maintenance', d: 'Theme and app updates, fixes and small builds for Shopify and Shopify Plus stores.' },
+  { href: '/au/woocommerce', t: 'WooCommerce development', d: 'WooCommerce stores connected to Xero, MYOB and a warehouse, built and looked after by one team.' },
+  { href: '/au/ecommerce-redesign', t: 'Ecommerce website redesign', d: 'When small fixes are no longer enough: a rebuild that keeps your URLs, rankings and orders.' },
+  { href: '/au/ecommerce-consultant', t: 'Ecommerce consultant', d: 'For a trading store that needs an outside review of what to fix next, ranked by payoff.' },
 ];
 
 /* ─── JSON-LD. The Organization is referenced by @id only. ─────────── */

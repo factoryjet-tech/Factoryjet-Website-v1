@@ -741,7 +741,9 @@ export default function AiCustomerServiceUKPage() {
                   For phone calls, see our <a href="/uk/ai-receptionist">AI receptionist for UK businesses</a>. For
                   WhatsApp, see <a href="/uk/whatsapp-ai-agents">WhatsApp AI agents for UK businesses</a>. For
                   agents that do back-office work such as quotes, purchase orders and bookkeeping, see{' '}
-                  <a href="/uk/ai-agents">UK AI agent development</a>.
+                  <a href="/uk/ai-agents">UK AI agent development</a>. For agents that update deals and contacts in
+                  your CRM, see <a href="/uk/crm-ai-agents">CRM AI agents for HubSpot and Salesforce</a>, and for order
+                  work inside a Shopify store, see <a href="/uk/shopify-ai-agents">Shopify AI agents for UK stores</a>.
                 </p>
               </div>
               <div className="card" style={{ padding: 8 }}>

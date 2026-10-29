@@ -1155,7 +1155,12 @@ export default function AccountsPayableAutomationUKPage() {
               Accounts payable is one job an agent can take on. For the wider picture, see our{' '}
               <a href="/uk/ai-agents">UK AI agent development service</a> and{' '}
               <a href="/uk/ai-development">AI development and integration</a>. If you are still deciding where AI
-              would pay off first, start with <a href="/uk/ai-consulting">AI consulting</a>.
+              would pay off first, start with <a href="/uk/ai-consulting">AI consulting</a>. For the money coming
+              in, see <a href="/uk/accounts-receivable-automation">accounts receivable automation for UK firms</a>. For
+              delivery notes, statements and other paperwork beyond invoices, see{' '}
+              <a href="/uk/document-intake-ai-agents">document intake AI agents</a>. If your ledger is NetSuite or Odoo,
+              see <a href="/uk/netsuite-ai-agents">NetSuite AI agents for UK companies</a> and{' '}
+              <a href="/uk/odoo-ai-agents">Odoo AI agents for UK firms</a>.
             </p>
           </div>
         </section>

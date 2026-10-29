@@ -465,6 +465,9 @@ export default function B2bEcommerceUKPage() {
                 <a href="/uk/shopify-plus" style={{ textDecoration: 'underline' }}>Shopify Plus agency</a>,{' '}
                 <a href="/uk/magento" style={{ textDecoration: 'underline' }}>Magento</a> and{' '}
                 <a href="/uk/woocommerce" style={{ textDecoration: 'underline' }}>WooCommerce developers</a> pages.
+                For the trade builds themselves, see{' '}
+                <a href="/uk/shopify-plus-b2b" style={{ textDecoration: 'underline' }}>Shopify Plus B2B for UK wholesalers</a> and{' '}
+                <a href="/uk/bigcommerce-b2b" style={{ textDecoration: 'underline' }}>BigCommerce B2B Edition for UK distributors</a>.
               </p>
             </div>
             <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
@@ -580,7 +583,7 @@ export default function B2bEcommerceUKPage() {
             <ul className="col-3 mt-12">
               <li className="card"><h3>Start with the regulars</h3><p className="mt-4">Your top repeat buyers get invites first, with their past orders already loaded so their usual order is one click away. Early wins build the habit.</p></li>
               <li className="card"><h3>Keep the phone open</h3><p className="mt-4">Nobody is forced online. Your sales team places phone orders through the same portal, so every order lands in one place and customers see it in their history.</p></li>
-              <li className="card"><h3>Turn emailed POs into orders</h3><p className="mt-4">For customers who only send PDF purchase orders, we can add AI that reads the PO and drafts the order for your team to check. See our <a href="/uk/ai-agents">UK AI agent development</a>.</p></li>
+              <li className="card"><h3>Turn emailed POs into orders</h3><p className="mt-4">For customers who only send PDF purchase orders, we can add AI that reads the PO and drafts the order for your team to check. See our <a href="/uk/ai-agents">UK AI agent development</a>, or the dedicated <a href="/uk/sales-order-automation-ai-agents">sales order automation for UK trade suppliers</a>.</p></li>
               <li className="card"><h3>Move your old website safely</h3><p className="mt-4">If you already have a website, we migrate products, customers and order history, and set up redirects so your search rankings carry over.</p></li>
               <li className="card"><h3>Clean the data once</h3><p className="mt-4">Product codes, descriptions and price bands are often messy after years of manual ordering. We fix them as part of the move, not after launch.</p></li>
               <li className="card"><h3>Measure the shift</h3><p className="mt-4">We track what share of orders arrives online each week, by customer, so you can see who needs a nudge and who has already moved.</p></li>
@@ -646,6 +649,8 @@ export default function B2bEcommerceUKPage() {
                 <p className="mt-6" style={{ maxWidth: 580 }}>
                   FactoryJet has served 500+ businesses since 2014, with more than a decade in commerce. For the
                   wider picture of our UK builds, see <a href="/uk/ecommerce-development">ecommerce development in the UK</a>.
+                  For the back office, see <a href="/uk/ecommerce-erp-integration">ecommerce ERP integration for UK businesses</a>,
+                  and for retailers who order by EDI, <a href="/uk/shopify-edi-integration">Shopify EDI integration for UK suppliers</a>.
                 </p>
               </div>
               <div className="card card-top-orange" style={{ padding: 8 }}>

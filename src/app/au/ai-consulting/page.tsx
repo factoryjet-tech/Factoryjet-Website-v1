@@ -271,6 +271,9 @@ const NEXT_STEPS: { href: string; t: string; d: string }[] = [
   { href: '/au/ai-development', t: 'Custom AI development in Australia', d: 'When you need AI built into your CRM, ERP, ecommerce platform or internal tools.' },
   { href: '/au/ai-receptionist', t: 'AI receptionist for Australian SMEs', d: 'When the biggest time sink is the phone: after-hours calls, bookings and common questions.' },
   { href: '/au/ai-seo', t: 'AI SEO in Australia', d: 'When the question is how your business shows up in ChatGPT, Perplexity and Google AI answers.' },
+  { href: '/au/ai-integration-services', t: 'AI integration services in Australia', d: 'When the plan is to connect AI to the systems you already run, rather than replace them.' },
+  { href: '/au/sales-order-automation-ai-agents', t: 'AI sales order automation', d: 'When trade buyers email purchase orders that staff retype into your ERP by hand.' },
+  { href: '/au/accounts-receivable-automation', t: 'Accounts receivable automation', d: 'When overdue invoices and debtor follow-up take up hours in Xero or MYOB each week.' },
 ];
 
 /* ─── JSON-LD ────────────────────────────────────────────────────── */
