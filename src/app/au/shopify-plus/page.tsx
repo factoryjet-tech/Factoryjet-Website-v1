@@ -54,6 +54,11 @@ const SRC_SCRIPTS = 'https://help.shopify.com/en/manual/checkout-settings/script
 // Plus plans"; "You can use one store for both B2B and direct-to-consumer (D2C) sales, or create
 // a separate B2B-only store"; B2B customers are set up "as companies".
 const SRC_B2B = 'https://help.shopify.com/en/manual/b2b';
+// Shopify Help Center, B2B plan features: "On the Basic, Grow, and Advanced plans, you can assign
+// up to 3 active catalogs across all your B2B markets." Pricing page POS Pro row (read 2026-10-29):
+// Advanced "$129 AUD/mo per location"; Plus "Includes 20 locations. Up to 200 with Shopify Payments.";
+// support row: Advanced "Enhanced live chat", Plus "Priority support".
+const SRC_B2B_PLANS = 'https://help.shopify.com/en/manual/b2b/getting-started/plan-features';
 // Shopify Help Center, billing taxes for Australia and New Zealand (read 2026-10-29): Australian
 // merchants are "subject to a 10% Goods and Services Tax (GST) on your Shopify subscription and
 // any shipping labels", and "you don't have to pay this GST if you register for Australian GST"
@@ -64,7 +69,7 @@ const SRC_GST =
 // are. A small business is one with an annual turnover of $3 million or less."
 const SRC_OAIC =
   'https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/organisations/small-business';
-// Market build ranges (never FactoryJet prices). WP Creative, a Melbourne agency, "Shopify
+// Market build ranges (never FactoryJet prices). WP Creative, a Sydney agency (Ultimo NSW), "Shopify
 // Development Cost in Australia" (updated 6 May 2026): "Shopify Plus Build ($30,000 to $100,000+
 // AUD)". What's The Damage?, an Australian cost guide run by Focus Search Pty Ltd ("Updated
 // October 2026"): "Shopify Plus / enterprise" "$30,000–$100,000+". Neither page says whether
@@ -92,11 +97,11 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'plan', question: 'Is GST charged on top of the Shopify Plus fee?',
     answer: 'Shopify’s billing help page says Australian merchants pay 10% GST on the Shopify subscription and on shipping labels. It also says you do not pay that GST once you register for Australian GST and add your ABN to the store, and the change applies to invoices issued after the ABN goes in. Any established brand buying Plus will be GST registered, so add the ABN before the first Plus invoice.' },
   { category: 'plan', question: 'How much does a Shopify Plus build cost in Australia?',
-    answer: 'Two Australian sources we read on 29 October 2026 agree on the range. WP Creative, a Melbourne agency, puts a Shopify Plus build at A$30,000 to A$100,000 or more, and the cost guide What’s The Damage? gives the same band. Neither says whether GST is included. These are market figures, not ours. FactoryJet quotes a fixed price per phase in writing after a scoping call.' },
+    answer: 'Two Australian sources we read on 29 October 2026 agree on the range. WP Creative, a Sydney agency, puts a Shopify Plus build at A$30,000 to A$100,000 or more, and the cost guide What’s The Damage? gives the same band. Neither says whether GST is included. These are market figures, not ours. FactoryJet quotes a fixed price per phase in writing after a scoping call.' },
   { category: 'plan', question: 'Is Shopify Plus worth it for an Australian brand?',
     answer: 'Plus pays off when a Plus-only feature fixes something that costs you money every week: stockists ordering by email, a New Zealand store kept in sync by hand, checkout rules that no app can build, or a pile of paid apps faking wholesale pricing. A higher card turnover on its own is a weak reason. If your problems are design, speed or conversion, a better build on Advanced does more.' },
   { category: 'plan', question: 'What is the difference between Shopify Advanced and Shopify Plus?',
-    answer: 'On Shopify’s Australian pricing page, Advanced costs A$575 a month paid monthly, with card rates from 1.35% plus 30c and up to 15 staff accounts. Plus starts at A$3,700 a month, with card rates from 1.15% plus 30c, unlimited staff, a fully customisable checkout, up to 200 POS Pro locations and unlimited B2B catalogues. Advanced is a monthly plan. Plus is a contract.' },
+    answer: 'On Shopify’s Australian pricing page, Advanced costs A$575 a month paid monthly, with card rates from 1.35% plus 30c and up to 15 staff accounts. Plus starts at A$3,700 a month, with card rates from 1.15% plus 30c, unlimited staff, a fully customisable checkout, up to 200 POS Pro locations and unlimited B2B catalogues. Advanced can be paid monthly or yearly with no lock-in term. Plus is a 1-year or 3-year contract.' },
   { category: 'plan', question: 'How do I know if my store is already on Shopify Plus?',
     answer: 'Open Settings, then Plan, in your Shopify admin. The plan name and billing term are shown there. Plus stores can also add expansion stores and unlimited staff accounts, which standard plans cannot, so either one is a quick tell. If you inherited a store from another team and nobody is sure, check the most recent Shopify invoice, which names the plan and the billing term.' },
 
@@ -104,7 +109,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'agency', question: 'Do I need a Shopify Plus Partner agency to run a Plus store?',
     answer: 'No. Shopify does not require a badged partner to build or support a Plus store. The work is Shopify engineering: checkout extensions, Functions, B2B set-up and integrations. FactoryJet is a registered Shopify Partner and does not claim a Plus partner tier. Judge any agency on Plus stores it has shipped, who will write the code, and how it supports the store after launch.' },
   { category: 'agency', question: 'Who are the best Shopify Plus agencies in Australia?',
-    answer: 'No one agency suits every brand. Names that come up often in Australian results include Alinga on the Gold Coast, Flux, The Hope Factory in Melbourne, Prosper Digital in Melbourne and Sydney, and Swanky, which works internationally. We list them on this page with a note from each one’s own homepage. Pick by fit: B2B and ERP depth, design, headless, or support after launch.' },
+    answer: 'No one agency suits every brand. Names that come up often in Australian results include Alinga on the Gold Coast, Flux, Prosper Digital in Melbourne and Sydney, and Swanky, which works internationally. We list them on this page with a note from each one’s own homepage. Pick by fit: B2B and ERP depth, design, headless, or support after launch.' },
   { category: 'agency', question: 'What should a Shopify Plus agency ask us before quoting?',
     answer: 'At minimum: how many SKUs and variants you carry, which channels you sell through, how trade customers order today, which accounting, ERP and inventory systems hold the truth for stock and prices, what checkout or discount rules you rely on, and what has broken in the last year. An agency that quotes a Plus build without asking those questions is guessing, and the guess usually lands in a change request later.' },
 
@@ -136,7 +141,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Probably, if you are big enough to need Plus. The OAIC says most small businesses are not covered by the Privacy Act 1988, and defines a small business as one with annual turnover of A$3 million or less, counting income from all sources. Above that line the Act generally applies. Get your adviser to confirm. We build the store so customer data, consent and access are easy to manage.',
     links: [{ href: SRC_OAIC, label: 'OAIC, small business and the Privacy Act' }] },
   { category: 'after', question: 'What is the downside of Shopify Plus?',
-    answer: 'Three come up most. The contract runs one or three years, so you commit before you have used every feature. Large or complex businesses can move onto a variable platform fee tied to revenue. And the features only pay off if someone builds them: we meet brands that paid for Plus for two years and still take trade orders by email. Plan the B2B, checkout and integration work before you sign.' },
+    answer: 'Three come up most. The contract runs one or three years, so you commit before you have used every feature. Large or complex businesses can move onto a variable platform fee tied to revenue. And Plus features only pay off if someone builds them, so plan the B2B, checkout and integration work before you sign.' },
   { category: 'after', question: 'Can you take over a Shopify Plus store another agency built?',
     answer: 'Yes, and a handover is often where our work starts. We begin with a review of the theme code, every installed app, checkout extensions, Functions and integrations, plus a search for anything that depended on Scripts. You receive a written priority order with a fixed price per fix. Shopify collaborator access means you keep your own login, and we write up each app and sync as we learn it.' },
   { category: 'after', question: 'Do we own the store, the code and the Plus contract?',
@@ -157,7 +162,6 @@ const PLUS_AGENCIES: { name: string; note: string }[] = [
   { name: 'FactoryJet', note: 'That is us. A registered Shopify Partner that builds, migrates and supports Shopify Plus stores, with most of its effort below the theme: native B2B, checkout extensions, Shopify Functions and the sync to accounting, ERP and inventory systems. The founder is on every project.' },
   { name: 'Alinga', note: 'A Gold Coast ecommerce agency that describes itself as a Shopify Platinum Partner, with services covering Shopify Plus, wholesale B2B, ERP and Shopify integrations, migrations and Klaviyo email.' },
   { name: 'Flux', note: 'Describes itself as a Shopify Plus Partner, offering Plus development, headless Shopify, Plus migrations, Plus B2B and systems integration, plus AI search work for ecommerce brands.' },
-  { name: 'The Hope Factory', note: 'A Melbourne agency that describes itself as a Shopify Premier Partner, listing Plus themes and checkout extensibility, B2B portals with buyer-specific pricing, and integrations with Xero, NetSuite, Klaviyo and Gorgias.' },
   { name: 'Prosper Digital', note: 'An ecommerce agency with offices in Melbourne and Sydney, covering strategy, design, development and ongoing optimisation for Shopify brands.' },
   { name: 'Swanky', note: 'Describes itself as a full-service Shopify Platinum Partner with international teams, covering migrations to Shopify Plus, B2B on Shopify, internationalisation, integrations and retail POS.' },
 ];
@@ -452,9 +456,8 @@ export default function ShopifyPlusAUPage() {
                 <div className="fact">
                   <div className="sec">§03</div>
                   <p>
-                    Australian searches for Shopify Plus are mostly about money: in DataForSEO figures we pulled on 29 October 2026,
-                    “shopify plus pricing” and “shopify plus cost” each draw about 210 searches a month here, against
-                    50 for “shopify plus agency”. So this page starts with the fee in AUD and the GST rule, and gives
+                    Most Australian questions about Shopify Plus are about money: what the plan costs and what a build costs.
+                    So this page starts with the fee in AUD and the GST rule, and gives
                     the build range other Australian agencies publish, before it asks you for anything.
                   </p>
                 </div>
@@ -509,7 +512,7 @@ export default function ShopifyPlusAUPage() {
               <div>
                 <h2>Shopify Advanced vs Shopify Plus, in Australian dollars</h2>
                 <p className="lead">
-                  Advanced is the top monthly plan. Plus is a contract. Every figure below is from Shopify’s own
+                  Advanced can be paid monthly or yearly with no lock-in term. Plus is a 1-year or 3-year contract. Every figure below is from Shopify’s own
                   Australian pricing page or help centre, read on 29 October 2026.
                 </p>
               </div>
@@ -530,16 +533,17 @@ export default function ShopifyPlusAUPage() {
                   <tr><th scope="row">Staff accounts</th><td>Up to 15</td><td className="fj">Unlimited</td></tr>
                   <tr><th scope="row">Checkout</th><td>Standard checkout</td><td className="fj">Fully customisable</td></tr>
                   <tr><th scope="row">Custom apps with Shopify Functions</th><td>Through public apps</td><td className="fj">Your own custom apps</td></tr>
-                  <tr><th scope="row">B2B catalogues</th><td>Limited by plan</td><td className="fj">Unlimited, assigned to company locations</td></tr>
+                  <tr><th scope="row">B2B catalogues</th><td>Up to 3 active catalogues</td><td className="fj">Unlimited, assigned to company locations</td></tr>
                   <tr><th scope="row">Deposits and partial payments for B2B</th><td>No</td><td className="fj">Yes</td></tr>
                   <tr><th scope="row">Expansion stores</th><td>Separate accounts</td><td className="fj">9 included</td></tr>
-                  <tr><th scope="row">POS Pro locations</th><td>Plan limit</td><td className="fj">Up to 200</td></tr>
-                  <tr><th scope="row">Shopify support</th><td>Standard</td><td className="fj">Priority 24/7 phone and chat</td></tr>
+                  <tr><th scope="row">POS Pro locations</th><td>A$129 a month per location</td><td className="fj">20 included, up to 200 with Shopify Payments</td></tr>
+                  <tr><th scope="row">Shopify support</th><td>Enhanced live chat</td><td className="fj">Priority 24/7 phone and chat</td></tr>
                 </tbody>
               </table>
             </div>
             <p className="tablenote">
-              Sources: <a href={SRC_PRICING} {...extLink}>Shopify Australia pricing</a> and{' '}
+              Sources: <a href={SRC_PRICING} {...extLink}>Shopify Australia pricing</a>,{' '}
+              <a href={SRC_B2B_PLANS} {...extLink}>Shopify Help Center, B2B plan features</a> and{' '}
               <a href={SRC_PLUS_PLAN} {...extLink}>Shopify Help Center, Shopify Plus plan</a>. Shopify sets these
               figures and changes them, so confirm with Shopify before you sign.
             </p>
@@ -622,7 +626,7 @@ export default function ShopifyPlusAUPage() {
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
                   Two Australian sources we read on 29 October 2026 give the same band for a build. WP Creative, a
-                  Melbourne agency, puts a Shopify Plus build at A$30,000 to A$100,000 or more in its{' '}
+                  Sydney agency, puts a Shopify Plus build at A$30,000 to A$100,000 or more in its{' '}
                   <a href={SRC_WPC} {...extLink}>Shopify development cost guide</a> (updated 6 May 2026). The
                   Australian cost guide <a href={SRC_WTD} {...extLink}>What’s The Damage?</a> lists A$30,000 to
                   A$100,000 or more for Shopify Plus and enterprise work. Neither says whether GST is included, so
