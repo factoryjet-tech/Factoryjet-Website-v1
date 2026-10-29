@@ -57,13 +57,24 @@ const crumbs = [
 const SRC_B2B_HELP = 'https://support.bigcommerce.com/articles/en_US/Knowledge/B2B-Edition';
 // BigCommerce press release, 25 March 2025: "Support for multi-tier account
 // structures", role-based permissions, bulk invoice payments, CPQ "built to
-// help B2B businesses accelerate quote-to-cash cycles". Footer names
-// Commerce LLC; release text says "BigCommerce (Nasdaq: BIGC)".
+// help B2B businesses accelerate quote-to-cash cycles". The release predates
+// the parent company's rename (see SRC_SEC_RENAME), so its "Nasdaq: BIGC"
+// ticker is out of date. Do not quote that ticker as current.
 const SRC_B2B_PRESS = 'https://www.commerce.com/en-GB/press/b2b-multi-account-hierarchy-and-cpq-press-release/';
 // BigCommerce UK pricing: "Prices are in US Dollars and exclude all forms of
 // tax (US Sales, GST, VAT)." Core $29, Growth $79, Scale $299 a month billed
 // annually; Performance custom, starting at $1,499 a month, billed annually.
 // B2B Edition not priced on the page.
+// SEC Form 8-K, filed for 31 July 2025: BigCommerce Holdings, Inc. changed its
+// name to Commerce.com, Inc. effective 31 July 2025, and its Nasdaq ticker
+// moved from BIGC to CMRC from the open on 1 August 2025. Commerce.com's FAQ
+// says BigCommerce, Feedonomics and Makeswift stay in use as brands.
+const SRC_SEC_RENAME = 'https://www.sec.gov/Archives/edgar/data/1626450/000095017025100556/bigc-20250731.htm';
+// BigCommerce blog, BigCommerce Payments UK expansion: PayPal-powered, for UK
+// merchants on Core, Growth and Scale, including "Buy Now, Pay Later (Klarna,
+// Clearpay)". No GoCardless app was found in BigCommerce's own listings on
+// 29 Oct 2026, so Direct Debit is written as a scoping item, not a feature.
+const SRC_BC_PAYMENTS_UK = 'https://www.bigcommerce.com/blog/bigcommerce-payments-uk-expansion';
 const SRC_BC_PRICING = 'https://www.bigcommerce.co.uk/essentials/pricing/';
 // HMRC VAT Notice 700/22: "API transfer" and CSV import are digital links;
 // HMRC "does not consider the use of 'cut and paste' or 'copy and paste'" a
@@ -99,7 +110,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What does B2B stand for in ecommerce?',
     answer: 'B2B means business to business. You sell to other companies, such as retailers, contractors, salons, schools or other distributors, rather than to the public. B2B ecommerce is the online version of that trade: business customers log in, see their own prices and terms, and order without phoning or emailing your sales office. Selling to the public is called B2C, business to consumer.' },
   { category: 'basics', question: 'What is BigCommerce called now?',
-    answer: 'The platform is still sold as BigCommerce, and its UK site is bigcommerce.co.uk. Its March 2025 B2B press release sits on commerce.com, where the page footer names Commerce LLC, while the release text still says BigCommerce (Nasdaq: BIGC). For a buyer nothing practical has changed: B2B Edition, the storefront and the developer documentation keep the BigCommerce name.' },
+    answer: 'The company is now Commerce.com, Inc. Its SEC filing says BigCommerce Holdings, Inc. took that name on 31 July 2025, and its Nasdaq ticker changed from BIGC to CMRC on 1 August 2025. BigCommerce stays as the platform brand, alongside Feedonomics and Makeswift. For a UK buyer nothing practical has changed: B2B Edition, the storefront, the UK site at bigcommerce.co.uk and the developer documentation all keep the BigCommerce name.' },
   { category: 'basics', question: 'Can our sales reps place orders on behalf of trade customers?',
     answer: 'Yes. BigCommerce’s help centre says sales agents can view the Buyer Portal and place orders for consenting companies, and can share quotes with custom products, shipping rates and discounts. For a UK distributor that means the rep on the phone builds the order inside the customer’s own account, at the customer’s own prices, instead of keying it into the ERP afterwards. We set which reps see which accounts.' },
   { category: 'basics', question: 'Can one BigCommerce account run our trade portal and our retail shop?',
@@ -107,7 +118,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── UK systems, VAT and trade terms ──
   { category: 'uk', question: 'Which ERP and accounts systems can you connect to BigCommerce B2B Edition?',
-    answer: 'The ones UK distributors bring to us most are Sage 50, Sage 200, Sage Intacct, Microsoft Dynamics 365 Business Central, NetSuite and Odoo, with Xero or QuickBooks UK where the finance team is smaller, and Brightpearl or Linnworks where operations run stock and channels. Each one connects differently, so we confirm the route on your version and hosting before we quote. One rule holds throughout: one system owns each piece of data.' },
+    answer: 'We connect BigCommerce B2B Edition to Sage 50, Sage 200, Sage Intacct, Microsoft Dynamics 365 Business Central, NetSuite and Odoo, plus Xero or QuickBooks UK for smaller finance teams and Brightpearl or Linnworks for stock and channels. Each one connects differently, so we confirm the route on your version and hosting before we quote. Whatever the system, one of them owns each piece of data.' },
   { category: 'uk', question: 'Does a BigCommerce to Xero link meet Making Tax Digital rules?',
     answer: 'It can, if the link is built as a digital link. HMRC’s VAT Notice 700/22 lists API transfer and CSV import as accepted digital links and says copy and paste does not count. A link that sends each trade invoice to Xero by API, with the VAT rate on every line, keeps the trail from order to VAT Return digital. Your accountant should still check your whole setup against the notice.' },
   { category: 'uk', question: 'How do pay-on-account and credit limits work for UK trade buyers?',
@@ -127,21 +138,21 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'project', question: 'How much does BigCommerce B2B Edition cost in the UK?',
     answer: 'BigCommerce’s UK pricing page lists its standard plans in US dollars, excluding VAT: from $29 a month on Core to $299 on Scale, billed annually, with Performance starting at $1,499 a month billed annually. B2B Edition is not priced on that page; BigCommerce quotes it through sales. The build depends on accounts, price lists, ERP and marketplaces in scope, so FactoryJet quotes a fixed price in writing after a short scoping call.' },
   { category: 'project', question: 'How long does a BigCommerce B2B project take?',
-    answer: 'The ERP link sets the pace more than the storefront does. Company accounts, price lists and quick order can go live in an early phase if your prices can be loaded from a file, with the live ERP sync following in the next phase. We set dates for each phase in the written quote, after we have seen how your ERP exposes stock, prices and credit, so the dates come from your systems and not from a template.' },
+    answer: 'The ERP link sets the pace more than the storefront does. Company accounts, price lists and quick order can go live in an early phase if your prices can be loaded from a file, with the live ERP sync following in the next phase. We set dates for each phase in the written quote, after we have seen how your ERP exposes stock and account prices, so the dates come from your systems and not from a template.' },
   { category: 'project', question: 'Do we see anything before we sign?',
-    answer: 'Yes. Before you sign, we build a working draft on BigCommerce with a slice of your real catalogue and one of your trade price lists. Your sales team can log in as a buyer, place a quick order by SKU and check that their own prices appear. It answers the question a slide deck cannot: will our trade customers actually order this way?' },
+    answer: 'Yes. Before you sign, we build a working draft on BigCommerce with a slice of your real catalogue and one of your trade price lists. Your sales team can log in as a buyer, place a quick order by SKU and check that their own prices appear. Your sales team finds out whether trade customers will order this way before you commit.' },
   { category: 'project', question: 'Who owns the store, the code and the integrations?',
     answer: 'You do, from day one. The BigCommerce account, B2B Edition and any apps sit in your company’s name and are billed to you directly, at cost, with no markup from us. Theme changes, middleware and integration code live in your own repository. Defects found after launch are fixed inside the build price, for a cover period we agree in writing before work starts.' },
   { category: 'project', question: 'Do we have to sign a monthly support contract?',
-    answer: 'No. Support after launch is optional. If you want us to stay on, each change is quoted and approved before we do it, and there is no monthly minimum you pay whether you use it or not. Many distributors keep us for the ERP link and price-list changes and run product content themselves. We can also keep managing the hosting and integrations if your team would rather not.' },
+    answer: 'No. Support after launch is optional. If you want us to stay on, each change is quoted and approved before we do it, and there is no monthly minimum you pay whether you use it or not. A common split is for us to keep the ERP link and price-list changes while your team runs product content. We can also keep managing the hosting and integrations if your team would rather not.' },
   { category: 'project', question: 'What should we put in a BigCommerce B2B brief or RFP?',
-    answer: 'Five things save a week of back and forth: how many trade accounts and buyers per account you have, how prices are set today (bands, customer-specific or contract), which systems hold stock, prices and credit, your order volume and delivery types such as parcels and pallets, and the date that matters to you. Upload it as a PDF or Word file with the form and the founder replies within 24 hours.' },
+    answer: 'Five things save a week of back and forth: how many trade accounts and buyers per account you have, how prices are set today (bands, customer-specific or contract), which systems hold stock and credit limits, your order volume and delivery types such as parcels and pallets, and the date that matters to you. Upload it as a PDF or Word file with the form and the founder replies within 24 hours.' },
 
   // ── Choosing a platform ──
   { category: 'choose', question: 'Which is better for B2B, Shopify or BigCommerce?',
     answer: 'Both run hosted B2B for UK wholesalers, so the answer comes from your ERP, your price rules and your team. BigCommerce B2B Edition suits distributors who want company hierarchies, sales-agent quotes and an invoice portal inside the platform’s own B2B layer, and trade and retail on separate storefronts of one account. Shopify Plus suits brands whose direct-to-consumer channel is the bigger business. We build on both, so we have no reason to push either.' },
   { category: 'choose', question: 'Is BigCommerce better than WooCommerce for B2B?',
-    answer: 'For a distributor with hundreds of trade accounts and an ERP, BigCommerce is usually the steadier choice, because hosting and the core B2B features come from the vendor. WooCommerce suits firms already on WordPress who want full control and are happy to own hosting and plugin updates. Our Sow Easy trade store is WooCommerce joined to Odoo, so we build both and can say which fits your catalogue.' },
+    answer: 'For a distributor with hundreds of trade accounts and an ERP, BigCommerce is usually the steadier choice, because hosting and the core B2B features come from the vendor. WooCommerce suits firms already on WordPress who want full control and are happy to own hosting and plugin updates. Our Sow Easy trade store, now in build, joins WooCommerce to Odoo, so we build both and can say which fits your catalogue.' },
   { category: 'choose', question: 'Should we move from Magento to BigCommerce B2B Edition?',
     answer: 'Sometimes. Heavily customised Magento and Adobe Commerce sites often move to cut hosting and upgrade work. The risk sits in the data, not the theme: company accounts, price rules, order history and URLs that already rank. We map each one before anything moves, set a 301 redirect for every old URL, and load trade accounts so buyers arrive to their company, colleagues and price lists already in place.' },
 ];
@@ -212,15 +223,19 @@ export const metadata: Metadata = {
   title: TITLE,
   description:
     'BigCommerce B2B Edition for UK distributors and manufacturers: trade accounts, account prices, quick order, quotes and pay on terms, linked to Sage, Xero, NetSuite or Odoo.',
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  // No x-default: the US/global page /services/bigcommerce-b2b exists and
+  // declares no alternates yet, so pointing x-default here would be wrong.
+  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL } },
   openGraph: {
     title: TITLE,
     description:
-      'We build BigCommerce B2B Edition trade portals for UK distributors and manufacturers and connect them to the ERP that owns stock, prices and credit. A working draft on your data before you sign.',
+      'We build BigCommerce B2B Edition trade portals for UK distributors and manufacturers and connect them to the ERP that owns stock and account prices. A working draft on your data before you sign.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
     type: 'website',
+    // Deliberate placeholder: shared with /uk/b2b-ecommerce until a
+    // BigCommerce-B2B-specific 1200x630 OG image is generated (via Codex).
     images: [{ url: '/images/uk/b2b-ecommerce/b2b-ecommerce-og.webp', width: 1200, height: 630, alt: 'A UK wholesale operations manager working on a trade ordering portal in a warehouse office' }],
   },
   robots: { index: true, follow: true },
@@ -309,7 +324,7 @@ export default function BigCommerceB2BUKPage() {
                 It turns a BigCommerce store into a trade portal your business customers order from. That means
                 setting up company accounts and buyer roles, loading each account’s prices, switching on quick
                 order, quotes and the invoice portal, and connecting it all to the ERP or accounts system that
-                owns stock, prices and credit. Most of the work, and most of the risk, sits in that connection.
+                owns each customer’s prices and credit limit. Most of the work, and most of the risk, sits in that connection.
               </p>
             </div>
             <div className="def mt-6" style={{ maxWidth: 940 }}>
@@ -386,11 +401,11 @@ export default function BigCommerceB2BUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Invoice portal and terms</h3>
-                <p className="mt-4">Buyers see invoice history and pay balances. Payment terms and allowed payment methods are set per company, so one account pays on 30-day terms and a new one pays by card until credit is approved. GoCardless can collect Direct Debits where finance wants it.</p>
+                <p className="mt-4">Buyers see invoice history and pay balances. Payment terms and allowed payment methods are set per company, so one account pays on 30-day terms and a new one pays by card until credit is approved. Direct Debit through a provider such as GoCardless is confirmed during scoping.</p>
               </li>
               <li className="svc-card">
                 <h3>ERP and accounts link</h3>
-                <p className="mt-4">Orders and new accounts go to Sage, Business Central, NetSuite, Odoo, Xero or QuickBooks UK. Stock, prices and credit status come back. See our <a href="/uk/shopify-xero-integration">Xero integration</a> work for how we map VAT lines.</p>
+                <p className="mt-4">Orders and new accounts go to Sage, Business Central, NetSuite, Odoo, Xero or QuickBooks UK. Stock levels and credit status come back. See our <a href="/uk/shopify-xero-integration">Xero integration</a> work for how we map VAT lines.</p>
               </li>
               <li className="svc-card">
                 <h3>Warehouse and couriers</h3>
@@ -398,11 +413,11 @@ export default function BigCommerceB2BUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Retail and marketplaces alongside</h3>
-                <p className="mt-4">A public storefront on the same account for retail shoppers, with payment options such as Stripe, Klarna or Clearpay, plus Amazon.co.uk, eBay UK or OnBuy, all fed from one stock figure so trade orders are never oversold.</p>
+                <p className="mt-4">A public storefront on the same account for retail shoppers, with Klarna and Clearpay available through BigCommerce Payments in the UK, plus Amazon.co.uk, eBay UK or OnBuy, all fed from one stock figure so trade orders are never oversold.</p>
               </li>
             </ul>
             <p style={srcNote}>
-              B2B Edition features described as listed in the <a href={SRC_B2B_HELP} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>BigCommerce Help Center</a> and the <a href={SRC_B2B_PRESS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>BigCommerce March 2025 B2B release</a>. Payment providers and marketplaces are confirmed against your BigCommerce plan during scoping.
+              B2B Edition features described as listed in the <a href={SRC_B2B_HELP} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>BigCommerce Help Center</a> and the <a href={SRC_B2B_PRESS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>BigCommerce March 2025 B2B release</a>; Klarna and Clearpay from <a href={SRC_BC_PAYMENTS_UK} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>BigCommerce’s UK payments announcement</a>. Payment providers and marketplaces are confirmed against your BigCommerce plan during scoping.
             </p>
           </div>
         </section>
@@ -413,7 +428,7 @@ export default function BigCommerceB2BUKPage() {
             <span className="eyebrow">One owner per piece of data</span>
             <h2 style={{ maxWidth: 760 }}>Which UK system owns stock, prices and credit in a BigCommerce B2B build</h2>
             <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              Most failed trade portals fail on this question, not on design. When two systems both think they own
+              In our integration work, this is where we find the problems, not in the design. When two systems both think they own
               a customer’s price, the buyer sees one number and the invoice shows another. This is how we usually
               split the jobs for the systems UK distributors run. Your setup may differ, and we confirm it on the
               scoping call.
@@ -503,6 +518,7 @@ export default function BigCommerceB2BUKPage() {
           headline={'Send us one price list and ten SKUs. We send back a working trade portal.'}
           sub={'Tell us which system holds your prices and stock, and how your trade customers order today. Before you sign anything, we put ten of your SKUs and one customer’s prices into a BigCommerce draft, and your sales team tries it as a buyer.'}
           label={'See a draft of my trade portal'}
+          note={'The founder replies within 24 hours.'}
         />
 
         {/* ═══ 7. HOUSE TERMS ═══ */}
@@ -610,7 +626,7 @@ export default function BigCommerceB2BUKPage() {
         <section className="sec-lg dot-grid">
           <div className="wrap">
             <div style={{ maxWidth: 780 }}>
-              <span className="eyebrow">UK trade work we have done</span>
+              <span className="eyebrow">UK trade work</span>
               <h2>The same trade problems, solved for UK B2B sellers</h2>
               <p className="lead mt-4">
                 FactoryJet has worked with more than 500 businesses since 2014, most of them in commerce, and builds
@@ -711,7 +727,7 @@ export default function BigCommerceB2BUKPage() {
               </div>
             </div>
             <p style={{ ...srcNote, textAlign: 'center' }}>
-              Platform prices from the <a href={SRC_BC_PRICING} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>BigCommerce UK pricing page</a>, read 29 October 2026, in US dollars excluding VAT as that page states.
+              Platform prices from the <a href={SRC_BC_PRICING} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>BigCommerce UK pricing page</a>, read 29 October 2026, in US dollars excluding VAT as that page states. Company name and ticker from the <a href={SRC_SEC_RENAME} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Commerce.com, Inc. Form 8-K, 31 July 2025</a>.
             </p>
           </div>
         </section>
