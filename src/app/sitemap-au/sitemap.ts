@@ -42,6 +42,8 @@ const SERVICE_PAGES = [
   'small-business-web-design', 'local-seo', 'small-business-seo', 'law-firm-seo',
   'website-maintenance', 'websites-for-tradies', 'dental-website-design', 'accountant-website-design',
   'ndis-website-design', 'real-estate-websites',
+  // 2026-10-29: AU service buildout (19 pages mirrored from US equivalents).
+  'ecommerce-erp-integration', 'shopify-xero-integration', 'b2b-ecommerce', 'shopify-plus', 'shopify-migration', 'ecommerce-consultant', 'ecommerce-redesign', 'woocommerce', 'erp-ai-agents', 'netsuite-ai-agents', 'shopify-ai-agents', 'ecommerce-ai-agents', 'sales-order-automation-ai-agents', 'document-intake-ai-agents', 'accounts-receivable-automation', 'ai-integration-services', 'crm-ai-agents', 'shopify-maintenance-services', 'amazon-agency',
 ] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -82,6 +82,27 @@ const NATIONAL_SERVICE_PAGE_SLUGS = [
   'whatsapp-ai-agents',
   'shopify-xero-integration',
   'ecommerce-redesign',
+  // 2026-10-29: UK service buildout (20 pages mirrored from US equivalents).
+  'ecommerce-erp-integration',
+  'shopify-plus-b2b',
+  'bigcommerce-b2b',
+  'erp-ai-agents',
+  'netsuite-ai-agents',
+  'odoo-ai-agents',
+  'shopify-ai-agents',
+  'ecommerce-ai-agents',
+  'sales-order-automation-ai-agents',
+  'document-intake-ai-agents',
+  'accounts-receivable-automation',
+  'ai-integration-services',
+  'crm-ai-agents',
+  'ai-automation',
+  'headless-shopify-development',
+  'website-maintenance',
+  'shopify-maintenance-services',
+  'ecommerce-audit',
+  'amazon-agency',
+  'shopify-edi-integration',
 ] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -109,6 +109,26 @@ const AU_MORE_PAGES = [
   { href: '/au/real-estate-websites', name: 'Real Estate Websites' },
   { href: '/au/accountant-website-design', name: 'Accountant Website Design' },
   { href: '/au/website-maintenance', name: 'Website Maintenance' },
+  // 2026-10-29: AU service buildout.
+  { href: '/au/ecommerce-erp-integration', name: "Ecommerce ERP integration" },
+  { href: '/au/shopify-xero-integration', name: "Shopify Xero integration" },
+  { href: '/au/b2b-ecommerce', name: "B2B ecommerce" },
+  { href: '/au/shopify-plus', name: "Shopify Plus Australia" },
+  { href: '/au/shopify-migration', name: "Shopify migration" },
+  { href: '/au/ecommerce-consultant', name: "Ecommerce Consultant Australia" },
+  { href: '/au/ecommerce-redesign', name: "Ecommerce Redesign Australia" },
+  { href: '/au/woocommerce', name: "WooCommerce development" },
+  { href: '/au/erp-ai-agents', name: "ERP AI Agents" },
+  { href: '/au/netsuite-ai-agents', name: "NetSuite AI agents" },
+  { href: '/au/shopify-ai-agents', name: "Shopify AI agents" },
+  { href: '/au/ecommerce-ai-agents', name: "Ecommerce AI agents" },
+  { href: '/au/sales-order-automation-ai-agents', name: "Sales order automation" },
+  { href: '/au/document-intake-ai-agents', name: "Document intake AI agents" },
+  { href: '/au/accounts-receivable-automation', name: "Accounts Receivable Automation" },
+  { href: '/au/ai-integration-services', name: "AI Integration Services" },
+  { href: '/au/crm-ai-agents', name: "CRM AI Agents" },
+  { href: '/au/shopify-maintenance-services', name: "Shopify maintenance and support" },
+  { href: '/au/amazon-agency', name: "Amazon agency" },
 ];
 
 /* AU guides on the blog, grouped by the job the reader is hiring for, plus the

@@ -130,7 +130,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'uk', question: 'Can you keep Linnworks, Brightpearl or Mintsoft in step with Shopify?',
     answer: 'Yes. Order management and warehouse systems talk to Shopify through webhooks, messages Shopify sends when an order or product changes. Shopify’s developer documentation says a failing webhook is retried up to eight times in four hours, and if failures persist the subscription is removed. After that, orders silently stop arriving. We watch for those failures and fix the endpoint before stock drifts.' },
   { category: 'uk', question: 'Do you support stores selling on Amazon.co.uk, eBay and OnBuy?',
-    answer: 'Yes. Marketplace channels add listings, stock and order sync that must stay in step with Shopify, or you oversell. We maintain the connectors and the product data behind Amazon.co.uk, eBay UK, OnBuy, ManoMano, the B&Q marketplace and Zalando, plus the courier links for Royal Mail, DPD and Evri, and payment set-ups with Shopify Payments, Klarna, Clearpay and GoCardless for trade accounts.' },
+    answer: 'Yes. Marketplace channels add listings, stock and order sync that must stay in step with Shopify, or you oversell. We maintain the connectors and the product data behind Amazon.co.uk, eBay UK, OnBuy, ManoMano and the B&Q marketplace, plus the courier links for Royal Mail, DPD and Evri, and payment set-ups with Shopify Payments, Klarna, Clearpay and GoCardless for trade accounts.' },
   { category: 'uk', question: 'Do you only maintain Shopify stores?',
     answer: 'No. Shopify and Shopify Plus are the focus of this page, but the same team supports WooCommerce, Magento and Commerceflo stores. We are building Sow Easy’s WooCommerce trade store with Odoo as the master for stock and pricing, and we built GPSUK’s trade storefront on Commerceflo, where our SEO and AI search work continues. If your business runs more than one store platform, one team can look after all of them.' },
 ];
@@ -401,7 +401,7 @@ export default function ShopifyMaintenanceServicesUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Marketplaces</h3>
-                <p className="mt-4">Amazon.co.uk, eBay UK, OnBuy, ManoMano, the B&amp;Q marketplace and Zalando. Listings, prices and stock that drift out of step with Shopify lead to oversold orders and marketplace penalties.</p>
+                <p className="mt-4">Amazon.co.uk, eBay UK, OnBuy, ManoMano and the B&amp;Q marketplace. Listings, prices and stock that drift out of step with Shopify lead to oversold orders and marketplace penalties.</p>
               </li>
               <li className="svc-card">
                 <h3>Theme updates and code</h3>

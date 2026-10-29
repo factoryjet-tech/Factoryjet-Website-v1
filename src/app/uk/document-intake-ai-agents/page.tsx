@@ -297,7 +297,7 @@ const DOCS: { doc: string; from: string; check: string; lands: string }[] = [
   },
   {
     doc: 'Marketplace and payment reports',
-    from: 'Amazon.co.uk, eBay UK, OnBuy, ManoMano, B&Q, Zalando, Stripe, GoCardless, Klarna, Clearpay',
+    from: 'Amazon.co.uk, eBay UK, OnBuy, ManoMano, B&Q, Stripe, GoCardless, Klarna, Clearpay',
     check: 'Orders, fees and refunds against the sales already recorded',
     lands: 'Summary entries for your accountant, split the way they ask',
   },

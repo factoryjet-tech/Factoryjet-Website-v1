@@ -121,7 +121,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'ops', question: 'Do you run Amazon ads?',
     answer: 'Yes. We structure Sponsored Products, Sponsored Brands and Sponsored Display around the products that make money, then judge them on profit after fees, not on ad sales alone. Advertising sits inside the project, alongside listings and stock, because ads pointed at a weak listing or a product about to run out waste budget. If you already have a good ads team, we can leave ads with them.' },
   { category: 'ops', question: 'Do you also manage eBay UK, OnBuy and other marketplaces?',
-    answer: 'Yes. Many UK brands sell across Amazon.co.uk, eBay UK and OnBuy, and some add ManoMano, the B&Q marketplace or Zalando for the right categories. The hard part is keeping stock, prices and product data consistent across all of them. We usually solve that once, in your order hub or ERP, then add channels one at a time so nothing oversells.' },
+    answer: 'Yes. Many UK brands sell across Amazon.co.uk, eBay UK and OnBuy, and some add ManoMano or the B&Q marketplace for the right categories. The hard part is keeping stock, prices and product data consistent across all of them. We usually solve that once, in your order hub or ERP, then add channels one at a time so nothing oversells.' },
 
   // ── Cost and working with us ──
   { category: 'working', question: 'How much does an Amazon agency cost in the UK?',
@@ -419,7 +419,7 @@ export default function AmazonAgencyUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Other UK marketplaces</h3>
-                <p className="mt-4">eBay UK and OnBuy, plus ManoMano, the B&amp;Q marketplace or Zalando where the category fits, all fed from one stock and price source so nothing oversells.</p>
+                <p className="mt-4">eBay UK and OnBuy, plus ManoMano or the B&amp;Q marketplace where the category fits, all fed from one stock and price source so nothing oversells.</p>
               </li>
             </ul>
           </div>

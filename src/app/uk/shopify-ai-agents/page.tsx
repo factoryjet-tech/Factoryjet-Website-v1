@@ -135,7 +135,7 @@ const AGENT_JOBS: { title: string; trigger: string; body: string; guard: string;
 /* Who owns each record in a typical UK Shopify stack. */
 const OWNERS: { record: string; owner: string; agent: string }[] = [
   { record: 'Retail orders and customers', owner: 'Shopify', agent: 'Reads, tags and adds notes' },
-  { record: 'Marketplace orders', owner: 'Amazon.co.uk, eBay UK, OnBuy, ManoMano or Zalando, often through Linnworks', agent: 'Reads, flags exceptions' },
+  { record: 'Marketplace orders', owner: 'Amazon.co.uk, eBay UK, OnBuy or ManoMano, often through Linnworks', agent: 'Reads, flags exceptions' },
   { record: 'Trade companies and price lists', owner: 'Shopify B2B or your ERP', agent: 'Reads, builds draft orders' },
   { record: 'Stock and warehouse bins', owner: 'Brightpearl, Linnworks, Mintsoft, Odoo or your 3PL', agent: 'Compares counts, drafts reorders' },
   { record: 'Sales ledger and VAT', owner: 'Xero, Sage, QuickBooks UK, Business Central or NetSuite', agent: 'Read-only, drafts corrections' },

@@ -202,7 +202,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'systems',
     question: 'Can Odoo take orders from Amazon.co.uk and other UK marketplaces?',
     answer:
-      'Amazon, yes. Odoo’s Amazon Connector links a paid seller account, and the marketplaces available to that account are synchronised into Odoo. eBay UK, OnBuy, ManoMano, the B&Q marketplace and Zalando are not covered by Odoo’s own connectors, so they need a third-party module or a custom link. An agent helps where orders arrive with problems: an unknown SKU, a price that differs, a missing address.',
+      'Amazon, yes. Odoo’s Amazon Connector links a paid seller account, and the marketplaces available to that account are synchronised into Odoo. eBay UK, OnBuy, ManoMano and the B&Q marketplace are not covered by Odoo’s own connectors, so they need a third-party module or a custom link. An agent helps where orders arrive with problems: an unknown SKU, a price that differs, a missing address.',
   },
   {
     category: 'systems',

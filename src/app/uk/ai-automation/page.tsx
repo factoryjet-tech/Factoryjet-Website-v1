@@ -90,7 +90,7 @@ const SOURCE_KEYS = Object.keys(SRC) as SrcKey[];
 const SYSTEMS: { group: string; items: string[] }[] = [
   { group: 'Accounts', items: ['Xero', 'Sage 50', 'Sage 200', 'Sage Intacct', 'QuickBooks UK'] },
   { group: 'ERP and stock', items: ['NetSuite', 'Dynamics 365 Business Central', 'Odoo', 'Brightpearl', 'Linnworks', 'Mintsoft'] },
-  { group: 'Marketplaces', items: ['Amazon.co.uk', 'eBay UK', 'OnBuy', 'ManoMano', 'B&Q marketplace', 'Zalando'] },
+  { group: 'Marketplaces', items: ['Amazon.co.uk', 'eBay UK', 'OnBuy', 'ManoMano', 'B&Q marketplace'] },
   { group: 'Payments', items: ['Stripe', 'GoCardless', 'Klarna', 'Clearpay'] },
   { group: 'Couriers', items: ['Royal Mail', 'DPD', 'Evri'] },
   { group: 'Workflow tools', items: ['n8n', 'Make', 'Zapier'] },
@@ -238,7 +238,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'systems',
     question: 'Can you automate Amazon.co.uk, eBay UK and OnBuy orders into Linnworks or Mintsoft?',
     answer:
-      'Yes. Where Linnworks or Mintsoft already pulls the channel, we automate what happens around it: courier booking with Royal Mail, DPD or Evri, tracking sent back to the marketplace, stock pushed to each channel, and sales posted to the ledger. Where a channel is missing, such as ManoMano, Zalando or the B&Q marketplace, we build the connector to the same rules. Every order keeps one reference from channel to bank.',
+      'Yes. Where Linnworks or Mintsoft already pulls the channel, we automate what happens around it: courier booking with Royal Mail, DPD or Evri, tracking sent back to the marketplace, stock pushed to each channel, and sales posted to the ledger. Where a channel is missing, such as ManoMano or the B&Q marketplace, we build the connector to the same rules. Every order keeps one reference from channel to bank.',
   },
   {
     category: 'systems',

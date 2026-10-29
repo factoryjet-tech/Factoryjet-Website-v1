@@ -81,6 +81,51 @@ const GROUPS: GuideGroup[] = [
         label: "Magento agency",
         blurb: "Support, security patching, upgrades and Hyvä rebuilds for Magento and Adobe Commerce stores.",
       },
+      {
+        href: "/uk/ecommerce-erp-integration",
+        label: "Ecommerce ERP Integration",
+        blurb: "Shopify, BigCommerce, WooCommerce or Adobe Commerce linked to Sage, NetSuite, Business Central, Odoo or Brightpearl, with one owner per record and VAT on every order line.",
+      },
+      {
+        href: "/uk/shopify-plus-b2b",
+        label: "Shopify Plus B2B UK",
+        blurb: "Trade accounts, price lists, net terms within UK late payment rules, VAT numbers and ERP sync for UK wholesalers on Shopify.",
+      },
+      {
+        href: "/uk/bigcommerce-b2b",
+        label: "BigCommerce B2B Edition UK",
+        blurb: "Trade portals on BigCommerce B2B Edition for UK distributors and manufacturers, connected to Sage, Business Central, NetSuite, Odoo or Xero.",
+      },
+      {
+        href: "/uk/headless-shopify-development",
+        label: "Headless Shopify development",
+        blurb: "Hydrogen or Next.js storefronts for UK brands, keeping Shopify checkout, Xero/Sage and Linnworks links, with CMA price rules and UK cookie consent built in.",
+      },
+      {
+        href: "/uk/website-maintenance",
+        label: "Website maintenance",
+        blurb: "Updates tested on staging, backups we restore, patching within 14 days, and monthly checks that the site's links to Xero, Sage, Linnworks and couriers still work.",
+      },
+      {
+        href: "/uk/shopify-maintenance-services",
+        label: "Shopify maintenance UK",
+        blurb: "Optional support for established UK Shopify and Shopify Plus stores, covering theme and app upkeep, Shopify deadlines and the Xero, Sage and Linnworks links, with no monthly minimum.",
+      },
+      {
+        href: "/uk/ecommerce-audit",
+        label: "Ecommerce audit UK",
+        blurb: "A ranked fix list for UK stores that already trade, following real orders from checkout and CMA pricing rules through stock, couriers and Xero, Sage or NetSuite.",
+      },
+      {
+        href: "/uk/amazon-agency",
+        label: "Amazon agency UK",
+        blurb: "Amazon.co.uk and Amazon EU for established UK brands: listings, Brand Registry, FBA, ads and GPSR, joined to Linnworks, Xero, Sage or your ERP.",
+      },
+      {
+        href: "/uk/shopify-edi-integration",
+        label: "Shopify EDI integration",
+        blurb: "EANCOM and Tradacoms orders from UK retailers and distributors into Shopify, with despatch advice and VAT invoices sent back.",
+      },
     ],
   },
   {
@@ -125,6 +170,61 @@ const GROUPS: GuideGroup[] = [
         href: "/uk/ai-customer-service",
         label: "AI customer service",
         blurb: "Agents that answer chat, email and WhatsApp from approved wording and hand complaints to a person.",
+      },
+      {
+        href: "/uk/erp-ai-agents",
+        label: "ERP AI agents",
+        blurb: "AI agents inside Sage, NetSuite, Business Central, Odoo and Xero that draft quotes, orders and supplier bills for UK teams to approve",
+      },
+      {
+        href: "/uk/netsuite-ai-agents",
+        label: "NetSuite AI Agents",
+        blurb: "Agents that draft supplier bills, sales orders and quotes in NetSuite for UK subsidiaries, in pounds with VAT, built around MTD and your approvals.",
+      },
+      {
+        href: "/uk/odoo-ai-agents",
+        label: "Odoo AI Agents",
+        blurb: "AI agents for UK firms on Odoo 19 and 20 that draft trade orders, supplier bills and CIS invoices in Odoo, with UK VAT and Making Tax Digital left in Odoo's UK modules.",
+      },
+      {
+        href: "/uk/shopify-ai-agents",
+        label: "Shopify AI agents",
+        blurb: "Custom AI agents for UK Shopify stores that handle marketplace orders, trade POs, returns, stock checks and Xero or Sage payout checks, shown on your own data before you sign.",
+      },
+      {
+        href: "/uk/ecommerce-ai-agents",
+        label: "Ecommerce AI agents UK",
+        blurb: "AI agents for UK online stores on any platform, across Amazon.co.uk, eBay, Linnworks, Royal Mail and Xero, with a demo on your data before you sign.",
+      },
+      {
+        href: "/uk/sales-order-automation-ai-agents",
+        label: "Sales order automation AI agents",
+        blurb: "AI agents that turn the purchase orders UK trade customers email in into draft sales orders in Sage, Business Central, NetSuite, Odoo, Brightpearl or Xero, for your team to approve.",
+      },
+      {
+        href: "/uk/document-intake-ai-agents",
+        label: "Document intake AI agents",
+        blurb: "Supplier invoices, delivery notes, customer POs and forms read and checked against your records, then filed into Xero, Sage, NetSuite, Business Central or Odoo.",
+      },
+      {
+        href: "/uk/accounts-receivable-automation",
+        label: "Accounts receivable automation",
+        blurb: "Credit control on your Xero, Sage, QuickBooks, Business Central or Odoo ledger: reminders, remittance matching and Late Payment Act interest.",
+      },
+      {
+        href: "/uk/ai-integration-services",
+        label: "AI integration services",
+        blurb: "AI connected to the Xero, Sage, Business Central, Odoo and Linnworks systems UK firms already run, with UK GDPR and MTD built in.",
+      },
+      {
+        href: "/uk/crm-ai-agents",
+        label: "CRM AI agents UK",
+        blurb: "HubSpot and Salesforce agents that score leads, log calls and draft follow-ups, with outreach checked against UK GDPR and PECR.",
+      },
+      {
+        href: "/uk/ai-automation",
+        label: "AI workflow automation",
+        blurb: "n8n, Make and Zapier workflows for UK operations teams, joining Xero, Sage, Linnworks, marketplaces and your ERP.",
       },
     ],
   },
