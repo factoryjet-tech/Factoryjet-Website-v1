@@ -107,13 +107,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'basics',
-    question: 'Can you give me an example of ERP integration?',
+    question: 'What does a store to ERP link look like for a UK wholesaler?',
     answer:
-      'A wholesaler sells on WooCommerce and runs stock in Odoo. A trade buyer logs in, sees their own price from Odoo, and orders 40 cases. The order lands in Odoo as a sales order with the right VAT code. Odoo picks it, the courier label prints, and the tracking number goes back to the store. That is close to the Sow Easy build we are working on now.',
+      'A wholesaler sells on WooCommerce and runs stock in Odoo. A trade buyer logs in, sees their own price from Odoo, and orders 40 cases. The order lands in Odoo as a sales order with the right VAT code. Odoo picks it, the courier label prints, and the tracking number goes back to the store.',
   },
   {
     category: 'basics',
-    question: 'Which ERP system is best for e-commerce?',
+    question: 'Which ERP should a UK online retailer pick?',
     answer:
       'In most cases, the one your finance and warehouse teams already run. Replacing an ERP to suit a website is a far bigger project than linking the two. For a fresh choice, test three points first: does the maker publish a connector for your store platform, does a UK partner support it near you, and can it hold your trade price lists. This page lists the connectors we read.',
   },
@@ -132,21 +132,21 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'systems',
-    question: 'Does Shopify integrate with NetSuite?',
+    question: 'Can NetSuite take orders from a UK Shopify or BigCommerce store?',
     answer:
-      'Yes. Oracle NetSuite publishes its own app on the Shopify App Store, and the listing says it syncs product, pricing, inventory, sales order and fulfilment data between NetSuite and Shopify stores and Shopify POS. Oracle also lists a NetSuite connector on the BigCommerce marketplace. When the connector cannot follow a rule, such as trade price breaks or a bundle split, we build that part as a custom link.',
+      'Yes, and Oracle makes the connector itself. For Shopify, it sits in the Shopify App Store and covers products, prices, stock, sales orders and fulfilment, for online stores and Shopify POS alike. BigCommerce stores get an Oracle connector of their own on that platform’s marketplace. When the connector cannot follow a rule, such as trade price breaks or a bundle split, we build that part as a custom link.',
   },
   {
     category: 'systems',
     question: 'Does Odoo have a Shopify connector?',
     answer:
-      'Yes. Odoo’s documentation says its Shopify connector syncs orders, products, inventory, deliveries, returns and refunds. It also states two limits worth knowing: the connector runs on scheduled jobs rather than real-time webhooks, and returns started in Shopify do not sync automatically. If your stock moves fast or most returns begin online, plan for those two gaps before launch.',
+      'Yes. Odoo’s documentation says its Shopify connector syncs orders, products, inventory, deliveries, returns and refunds. It also states two limits worth knowing: the connector runs on scheduled jobs rather than real-time webhooks, and when Odoo handles deliveries, returns started in Shopify do not sync automatically. If your stock moves fast, or Odoo ships your orders and most returns begin online, plan for those gaps before launch.',
   },
   {
     category: 'systems',
     question: 'Can Sage 200 connect to Shopify or Magento?',
     answer:
-      'Yes, through a connector or a custom build. Limely, an agency in Chester, describes Sage 200 integrations for both Shopify and Magento 2 that carry orders, stock, trade accounts with credit limits, customer pricing and nominal codes, and says a project typically takes six to ten weeks after scoping. The posting rules (which nominal code each line hits) come from your accountant or Sage partner.',
+      'Yes, through a connector or a custom build. Limely, an agency in Chester, describes Sage 200 integrations for both Shopify and Magento 2 that carry orders, stock, trade accounts with credit limits, customer pricing and nominal codes, and says Sage 200 integrations typically take six to ten weeks. The posting rules (which nominal code each line hits) come from your accountant or Sage partner.',
   },
   {
     category: 'systems',
@@ -170,7 +170,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'systems',
     question: 'We also sell on Amazon.co.uk, eBay and OnBuy. Where do those orders go?',
     answer:
-      'Into the same ERP, through one route. Some firms feed marketplaces through a multichannel tool: Linnworks, for example, lists Amazon, eBay and Shopify among its integrations. Others send marketplace orders straight to the ERP. The rule we hold to is one owner for stock, so Amazon, eBay, OnBuy, ManoMano or the B&Q marketplace never sell the same last unit twice.',
+      'Into the same ERP, through one route. Some firms feed marketplaces through a multichannel tool: Linnworks, for example, lists Amazon, eBay and Shopify among its integrations. Others send marketplace orders straight to the ERP. The rule we hold to is one owner for stock, so Amazon, eBay, OnBuy or the B&Q marketplace never sell the same last unit twice.',
   },
   // VAT, refunds and MTD
   {
@@ -205,9 +205,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'vat',
-    question: 'When does a growing online seller have to register for VAT?',
+    question: 'We trade through more than one company on one ERP. Can one link serve all of them?',
     answer:
-      'GOV.UK says you must register when total taxable turnover goes over £90,000. Turnover from the website, marketplaces and every other sale counts towards that figure. Most established firms on an ERP are well past it, but a new brand launched by a group can cross it within a year, so map VAT codes in the link from day one.',
+      'Yes, if the map names the selling company on every order. Each store or channel is tied to one trading company, and its orders post to that company’s ledger with that company’s VAT codes. Stock can still have one owner across the group. Where two companies sell the same SKU, we agree in writing which one invoices the buyer before any order moves.',
   },
   // Cost, time and working with us
   {
@@ -218,9 +218,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'working',
-    question: 'How long does an ERP integration take?',
+    question: 'How many weeks should a UK firm plan for a store to ERP link?',
     answer:
-      'Limely, a Chester agency, says a Sage 200 integration typically takes six to ten weeks once scoped. Our plans move with three things: how many records travel, how many custom rules sit on top of the connector, and how fast your ERP partner can give us a sandbox. The plan and dates go in writing with the quote, and each phase is signed on its own.',
+      'Limely, a Chester agency, says Sage 200 integrations typically take six to ten weeks. Our plans move with three things: how many records travel, how many custom rules sit on top of the connector, and how fast your ERP partner can give us a sandbox. The plan and dates go in writing with the quote, and each phase is signed on its own.',
   },
   {
     category: 'working',
@@ -279,7 +279,7 @@ const PAIRS: { erp: string; ready: string; watch: string; sources: SrcKey[] }[] 
   {
     erp: 'Odoo',
     ready: 'Odoo’s Shopify connector syncs orders, products, inventory, deliveries, returns and refunds.',
-    watch: 'Runs on scheduled jobs, not real-time webhooks. Returns started in Shopify do not sync automatically.',
+    watch: 'Runs on scheduled jobs, not real-time webhooks. When Odoo handles deliveries, returns started in Shopify do not sync automatically.',
     sources: ['odooShopify'],
   },
   {
@@ -291,7 +291,7 @@ const PAIRS: { erp: string; ready: string; watch: string; sources: SrcKey[] }[] 
   {
     erp: 'Sage 200',
     ready: 'Connectors and agency builds for Shopify and Magento 2. Limely in Chester lists orders, stock, trade accounts, pricing and nominal codes.',
-    watch: 'Limely says a project typically takes six to ten weeks after scoping. Nominal codes come from your accountant.',
+    watch: 'Limely says Sage 200 integrations typically take six to ten weeks. Nominal codes come from your accountant.',
     sources: ['limelySage'],
   },
   {
@@ -443,7 +443,7 @@ export default function EcommerceErpIntegrationUKPage() {
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/b2b-ecommerce/b2b-ecommerce-warehouse.webp" width={1200} height={800} fetchPriority="high" decoding="async" alt="Two colleagues in a UK warehouse aisle checking a trade order on a tablet, between racks of boxed stock" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/uk/b2b-ecommerce/b2b-ecommerce-warehouse.webp" width={1200} height={800} fetchPriority="high" decoding="async" alt="Warehouse staff checking a store order on a tablet against stock on the racks, the moment an ERP link has to get right" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">Agreed in writing before any code</span>
                   <div className="scorecard-row">
@@ -532,11 +532,11 @@ export default function EcommerceErpIntegrationUKPage() {
                 </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/shopify-xero-integration/shopify-xero-record-owners.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A woman in a green shirt and a man in a cream top arrange blank orange and yellow sticky notes in two columns on a white table" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/uk/shopify-xero-integration/shopify-xero-record-owners.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two colleagues sorting blank sticky notes into a store column and an ERP column while mapping which system owns each record" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
-                    One column for the store, one for the ERP. Every record goes in one column only, and your
-                    finance lead signs the finished page.
+                    Left side for what the store owns, right side for what the ERP owns. A record that lands on
+                    both sides gets settled before build starts, and finance approves the final split.
                   </p>
                 </div>
               </div>
@@ -680,7 +680,7 @@ export default function EcommerceErpIntegrationUKPage() {
               <li className="card">
                 <h3>Marketplaces</h3>
                 <p className="mt-4">
-                  Amazon.co.uk, eBay UK, OnBuy, ManoMano, the B&amp;Q marketplace and Zalando each send their own
+                  Amazon.co.uk, eBay UK, OnBuy and the B&amp;Q marketplace each send their own
                   orders. Some firms route them through a multichannel tool such as Linnworks, which lists Amazon,
                   eBay and Shopify among its integrations. Either way, one system owns stock for all of them.
                 </p>
@@ -735,7 +735,7 @@ export default function EcommerceErpIntegrationUKPage() {
               <div className="card card-top-orange">
                 <span className="eyebrow">A rule of thumb</span>
                 <div className="scorecard-row"><div><div className="scorecard-metric">One store, one company, list prices</div><div className="scorecard-note">ERP maker&rsquo;s connector fits</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Connector</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Returns that start online, Odoo stock</div><div className="scorecard-note">connector plus a return sync</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Connector+</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Online returns, Odoo ships the orders</div><div className="scorecard-note">connector plus a return sync</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Connector+</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Trade prices per buyer</div><div className="scorecard-note">read live from the ERP</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Custom</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Marketplaces plus a warehouse tool</div><div className="scorecard-note">one stock owner across all</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Custom</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Several companies or VAT numbers</div><div className="scorecard-note">one map across all of them</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Custom</div></div>
@@ -749,13 +749,13 @@ export default function EcommerceErpIntegrationUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">Recent UK work</span>
-              <h2>Two UK trade builds, and what each one connects</h2>
+              <h2>Two UK trade builds: one ERP link, one trade storefront</h2>
             </div>
             <ul className="col-2 mt-8">
               <li className="card">
                 <h3>Sow Easy: WooCommerce trade store connected to Odoo</h3>
                 <p className="mt-4">
-                  A UK distributor selling to trade buyers, with stock, pricing and product data in Odoo. We are
+                  A B2B distributor selling to trade buyers, with stock, pricing and product data in Odoo. We are
                   building its WooCommerce trade store with Odoo supplying stock levels, prices and SKUs, so Odoo stays
                   the single source. It has not launched: store and Odoo link are under test on staging.
                 </p>
@@ -766,7 +766,8 @@ export default function EcommerceErpIntegrationUKPage() {
                 <p className="mt-4">
                   A UK supplier of branded promotional products selling to business customers. We built its trade
                   storefront on Commerceflo, where business buyers sign in, see the prices on their own account,
-                  and turn an accepted quote into an order with nothing keyed twice.
+                  and turn an accepted quote into an order with nothing keyed twice. Pricing and quoting run inside
+                  Commerceflo; no ERP link is part of this build.
                 </p>
                 <p className="mt-4"><a href="/case-studies/gpsuk-promotional-products" style={inlineLink}>Read the GPSUK case study</a></p>
               </li>
@@ -789,7 +790,7 @@ export default function EcommerceErpIntegrationUKPage() {
               {[
                 { n: '01', t: 'Read a week of real orders', d: 'We take a week of store orders, refunds and payouts, plus the matching ERP entries, and list every kind of line inside them: VAT rates, discounts, bundles, delivery charges, marketplace orders and trade accounts. We scope from that inventory.' },
                 { n: '02', t: 'Write the owner map with finance', d: 'Your accountant names the nominal code and VAT code for each kind of line. Your ERP partner flags custom fields and locked periods. The result is a one-page map that both sides sign.' },
-                { n: '03', t: 'Fix the data before it moves', d: 'Missing SKUs, duplicate trade customers and products with no VAT code are cleaned in the owner system first. Whatever is wrong on day one will be wrong in both systems by day two.' },
+                { n: '03', t: 'Fix the data before it moves', d: 'Missing SKUs, duplicate trade customers and products with no VAT code are cleaned in the owner system first. A duplicate customer copied into a live link turns into two ledgers to reconcile later.' },
                 { n: '04', t: 'Pick connector first, custom second', d: 'The ERP maker’s connector is tried against your owner map first. Custom code covers only the gaps it leaves, priced per phase in writing.' },
                 { n: '05', t: 'Prove it in a sandbox before signing', d: 'Ten or so of your real SKUs, one trade order and one refund pass from a development store into an ERP sandbox. Finance opens each record, credit note included, before any contract.' },
                 { n: '06', t: 'Run the edge cases', d: 'A part refund, a zero-rated line, a bundle, a trade order on account, a marketplace order and an order for the last unit in stock all go through the sandbox first.' },
