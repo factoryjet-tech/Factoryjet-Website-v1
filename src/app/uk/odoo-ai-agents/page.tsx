@@ -21,8 +21,9 @@ import '../ai-agents/ai-agents.css';
       staging) and GPSUK (built on Commerceflo, not Odoo). No results claimed.
    4. No partner or accreditation status is claimed for FactoryJet.
    5. Structure mirrors /uk/shopify-xero-integration (imports, components,
-      CSS module, schema). The copy is written fresh for this page and does not
-      reuse sentences from /services/odoo-ai-agents.
+      CSS module, schema). Reviewer pass on 2026-10-29 rewrote the passages
+      that echoed /services/odoo-ai-agents and /uk/shopify-xero-integration.
+      Keep new copy in fresh words; do not paste from either page.
    6. The FAQ schema is generated from FAQ_ITEMS, the same array the visible
       FAQ renders. Never add a second list of questions.
 
@@ -37,7 +38,7 @@ const CANONICAL = 'https://factoryjet.com/uk/odoo-ai-agents';
 const UPDATED = '2026-10-29';
 const READ_ON = '29 October 2026';
 const TITLE = 'Odoo AI Agents UK: Built for UK VAT and MTD | FactoryJet';
-const H1 = 'Odoo AI Agents for UK Businesses: Quotes, Orders and Supplier Bills Drafted in Odoo, With UK VAT and Making Tax Digital Left Intact';
+const H1 = 'Odoo AI Agents for UK Firms, With VAT and MTD Left Intact';
 const DESCRIPTION =
   'Odoo AI agents for UK firms on Odoo 19 and 20: trade orders, supplier bills and stock answers drafted for a person to approve, with UK VAT and MTD intact.';
 const IMG = '/images/us/services/odoo-ai-agents';
@@ -93,6 +94,7 @@ const SRC = {
   govDuaa: { label: 'GOV.UK: Data (Use and Access) Act 2025, plans for commencement', url: 'https://www.gov.uk/guidance/data-use-and-access-act-2025-plans-for-commencement' },
   icoAi: { label: 'ICO: Artificial intelligence guidance and the AI and data protection risk toolkit', url: 'https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/' },
   euAiAct: { label: 'European Commission: AI Act regulatory framework', url: 'https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai' },
+  odooPricing: { label: 'Odoo: Pricing', url: 'https://www.odoo.com/pricing' },
   softomateCost: { label: 'Softomate Solutions (London): Odoo implementation cost UK, 2026 breakdown', url: 'https://www.softomatesolutions.com/blog/odoo-implementation-cost-uk/' },
 } as const;
 
@@ -138,7 +140,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'odoo',
     question: 'What is the Odoo MCP server, and can Claude or ChatGPT use it?',
     answer:
-      'MCP, the Model Context Protocol, is an open standard for letting an AI model use outside software. In Odoo 20 you point the AI tool at your database address with /mcp on the end. Odoo’s page names Claude Code, Antigravity and Codex as compatible clients and gives set-up steps for Claude, Grok and ChatGPT. Out of the box only five reading tools are exposed. Write tools stay hidden until someone exposes them in Odoo’s settings.',
+      'It is Odoo 20’s door for outside AI assistants. MCP (Model Context Protocol) is a shared format those assistants use to call other programs, and Odoo serves it from a /mcp address on your own database. Odoo’s page names Claude Code, Antigravity and Codex as compatible clients and gives set-up steps for Claude, Grok and ChatGPT. As shipped, the server offers five tools that only read. Write tools stay hidden until someone exposes them in Odoo’s settings.',
   },
   {
     category: 'odoo',
@@ -157,7 +159,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'tax',
     question: 'Can an AI agent submit our VAT Return to HMRC?',
     answer:
-      'We do not build it to. The agent prepares drafts: orders, bills and suggested tax codes. Your accountant or finance lead reviews the period and presses Send to HMRC in Odoo, as today. GOV.UK says some VAT records must be kept digitally under Making Tax Digital, and the person signing the return should be the one checking it. Tax advice stays with your accountant.',
+      'We do not build it to. The agent prepares drafts: orders, bills and suggested tax codes. Your accountant or finance lead reviews the period and presses Send to HMRC in Odoo, as today. GOV.UK says some VAT records must be kept digitally under Making Tax Digital. We keep the check with whoever signs the return. Tax advice stays with your accountant.',
   },
   {
     category: 'tax',
@@ -206,13 +208,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'systems',
     question: 'Which Odoo plan do we need for a custom agent?',
     answer:
-      'Custom. Odoo’s API documentation says access to data through the external API is only available on Custom pricing plans, and not on One App Free or Standard. Odoo’s pricing page also lists Agentic AI and the external API under Custom. Check your plan before anything else, because a Standard plan rules out every route that runs from outside Odoo.',
+      'Custom. Odoo’s API documentation limits the external API to that plan, so One App Free and Standard are shut out, and its pricing page lists Agentic AI and External API under Custom too. For a UK firm on Standard, that means no outside agent can turn a supplier inbox into draft bills, and no link from Xero, Linnworks or a courier can write into Odoo. Settle the plan question first.',
   },
   {
     category: 'systems',
     question: 'Does this work on Odoo Online, Odoo.sh and our own server?',
     answer:
-      'Yes, with a different shape on each. On Odoo Online the agent runs outside Odoo and calls the JSON-2 API, because Online will not install custom modules. Odoo.sh and a self-hosted server can also carry a custom module for steps that must succeed or fail together. For testing, an Online duplicate expires after 15 days, with at most five per database.',
+      'Yes, though the agent sits somewhere different on each. Odoo Online refuses custom modules, so there the agent runs on a separate server and talks to Odoo over the JSON-2 API. On Odoo.sh or your own server, part of the logic can live inside Odoo as a module, which helps when a supplier bill and its stock receipt must be saved together or not at all. Testing on Online uses a duplicate that expires after 15 days, with at most five per database.',
   },
   // Data and AI rules
   {
@@ -225,7 +227,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'rules',
     question: 'Does the Data (Use and Access) Act 2025 change anything?',
     answer:
-      'It is changing UK data protection law in stages. GOV.UK says the Act received Royal Assent on 19 June 2025, and that the main data protection changes in Part 5 commence at stage 3, about six months after Royal Assent. For agents that draft orders and bills for a person to confirm, the practical rules are the same as before: lawful purpose, minimum data, and a person accountable for each decision.',
+      'Yes, and most of it is already in force. GOV.UK says the Act received Royal Assent on 19 June 2025, and that the Commencement No. 6 Regulations brought most of the data protection provisions in Part 5 into force on 5 February 2026. For agents that draft orders and bills for a person to confirm, two habits carry over unchanged: take only the data the job needs, and keep a named person answerable for each decision.',
   },
   {
     category: 'rules',
@@ -238,7 +240,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'working',
     question: 'How much does an Odoo AI agent project cost in the UK?',
     answer:
-      'It depends on the job and on how much of your Odoo is already in shape. Softomate Solutions, a London Odoo agency, puts UK Odoo implementations at £8,000 to £120,000 in its 2026 guide, and says five or more integrations add £15,000 to £40,000. It does not say whether those ranges include VAT. FactoryJet quotes a fixed price in writing after a short scoping call.',
+      'It depends on the job and on how much of your Odoo is already in shape. Softomate Solutions, a London Odoo agency, puts UK Odoo implementations at £8,000 to £120,000 in its 2026 guide, and says five or more integrations add £15,000 to £40,000. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'working',
@@ -329,7 +331,7 @@ const JOBS: { n: string; t: string; b: string; items: string[]; sources: SrcKey[
     items: [
       'One owner named for each number: stock, price, customer, ledger',
       'Mismatches listed for a person each morning, never fixed silently',
-      'Payments from Stripe, GoCardless, Klarna or Clearpay matched to the right invoice',
+      'Payments from Stripe or GoCardless matched to the right invoice',
     ],
     sources: ['appsXero', 'appsLinnworks', 'appsGoCardless', 'odooPayments'],
   },
@@ -360,9 +362,9 @@ const STEPS: { n: string; t: string; d: string }[] = [
   { n: '01', t: 'Read your Odoo', d: 'Version, hosting, plan, installed apps and the UK modules in use. Each database lists its own models on its /doc page, so we read yours before promising anything.' },
   { n: '02', t: 'Check what Odoo already does', d: 'Bill reading, the UK localisation, Amazon Connector, Sendcloud. If a built-in feature covers the job, we tell you to switch it on and stop there.' },
   { n: '03', t: 'Pick one job and agree its rules', d: 'One task, such as trade orders from email. Your team’s rules for it go on paper, with the VAT mapping signed off by your accountant and a named person who confirms each draft.' },
-  { n: '04', t: 'Show it on your own data', d: 'Before a contract, three or four real documents you have already processed go through a first version, and you compare its drafts with what your team posted.' },
-  { n: '05', t: 'Build on a test copy', d: 'An Online duplicate, an Odoo.sh staging branch, or a restored backup on your own server. The agent gets its own bot user and an API key that expires.' },
-  { n: '06', t: 'Run it beside your team', d: 'For an agreed period the agent drafts while your team works as normal, and every difference is reviewed. Nothing goes live until the drafts match.' },
+  { n: '04', t: 'Try it on last month’s paperwork', d: 'Before a contract, three or four orders or bills your team has already posted go through a first version. You hold its drafts up against the real entries, line by line and VAT code by VAT code.' },
+  { n: '05', t: 'Work away from live', d: 'All building happens on a copy of your database that is never connected to HMRC. We test the UK taxes there, and the CIS set-up if you use it. The agent signs in as a bot user whose API key has a fixed end date.' },
+  { n: '06', t: 'A parallel run your accountant signs off', d: 'For an agreed number of weeks your team posts as usual while the agent drafts the same documents, and we go through every mismatch together. Go-live waits until your accountant has signed off the VAT on those drafts.' },
   { n: '07', t: 'Launch, then stay on if you want us', d: 'Defects are fixed inside the build price for a cover period agreed before work starts. Support after that is optional, with each change quoted and approved first.' },
 ];
 
@@ -432,7 +434,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL } },
   openGraph: {
     title: TITLE,
     description:
@@ -634,15 +636,15 @@ export default function OdooAiAgentsUKPage() {
                 <h2>How an agent keeps UK VAT records clean instead of creating a second set</h2>
                 <div className="stack mt-6">
                   <p>
-                    GOV.UK says all VAT-registered businesses should now be signed up for Making Tax Digital for
-                    VAT, and that some VAT records must be kept digitally. HMRC’s VAT Notice 700/22 adds the rule
-                    that matters for an agent: once data is in your record-keeping software, any further transfer
-                    has to happen through a digital link.
+                    Once a figure is inside Odoo, HMRC’s VAT Notice 700/22 says every later move of it between
+                    programs must be by digital link. That is the rule an agent has to respect. GOV.UK adds that
+                    some VAT records must be kept digitally, and it keeps a list of software that can send VAT
+                    returns under Making Tax Digital.
                   </p>
                   <p>
-                    The notice lists what counts. API transfer is accepted. So are CSV import and export. Copy and
-                    paste is not. An agent that reads a supplier invoice and saves a draft bill in Odoo through the
-                    API is moving data by an accepted route, where today someone may be retyping it by hand.
+                    Copy and paste fails the notice’s test. Exporting and importing a CSV passes, and so does
+                    sending data over an API. The API is how an agent saves a draft bill in Odoo, so a supplier
+                    invoice someone retypes today would reach Odoo by an accepted link instead.
                   </p>
                   <p>
                     The tax itself comes from Odoo. GOV.UK lists three rates: 20% standard, 5% reduced and 0% zero.
@@ -712,8 +714,8 @@ export default function OdooAiAgentsUKPage() {
               <span className="eyebrow">Three routes</span>
               <h2>Odoo’s AI app, its MCP server, or a custom agent: which suits a UK firm</h2>
               <p className="lead mt-4">
-                All three use the same UK localisation underneath. They differ in where the agent lives, what
-                starts it and who answers for it when something goes wrong.
+                All three use the same UK localisation underneath. They differ in where the agent lives and
+                who answers for it when something goes wrong.
               </p>
             </div>
             <div className={`card mt-10 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Three routes to an AI agent in Odoo" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 900 }} data-columns={4}>
@@ -770,8 +772,8 @@ export default function OdooAiAgentsUKPage() {
                     protection risk toolkit. We work through it with your data protection lead before launch.
                   </p>
                   <p style={{ fontSize: 14 }}>
-                    <b>Data (Use and Access) Act 2025.</b> GOV.UK says it received Royal Assent on 19 June 2025 and
-                    is being brought into force in four stages, with the main data protection changes at stage 3.
+                    <b>Data (Use and Access) Act 2025.</b> GOV.UK says it received Royal Assent on 19 June 2025, and
+                    most of the data protection changes in Part 5 have been in force since 5 February 2026.
                   </p>
                   <p style={{ fontSize: 14 }}>
                     <b>EU AI Act.</b> For UK firms selling into the EU, the European Commission says the transparency
@@ -819,9 +821,9 @@ export default function OdooAiAgentsUKPage() {
               </li>
             </ul>
             <p className="mt-6" style={{ maxWidth: 780 }}>
-              FactoryJet has worked on Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs, on quote requests,
-              daily bookkeeping, and purchase and sales order drafting. The US version of this page,{' '}
-              <a href="/services/odoo-ai-agents" style={inlineLink}>Odoo AI agent development</a>, goes deeper on
+              Odoo is one of several ERPs we build agents for, and our{' '}
+              <a href="/services/erp-ai-agents" style={inlineLink}>ERP AI agents</a> page covers the others. Our{' '}
+              <a href="/services/odoo-ai-agents" style={inlineLink}>Odoo AI agent development</a> page goes deeper on
               Odoo 19 and 20 themselves.
             </p>
           </div>
