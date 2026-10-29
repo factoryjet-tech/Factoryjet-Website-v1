@@ -79,24 +79,24 @@ const FAQ_CATEGORIES = [
 
 const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // ── Shopify maintenance basics ──
-  { category: 'basics', question: 'What are Shopify maintenance services?',
+  { category: 'basics', question: 'What do Shopify maintenance services cover for a UK store?',
     answer: 'Shopify maintenance is the work that keeps a live store selling once the build team has gone: theme updates merged with your custom code, app clashes untangled, broken buttons and filters fixed, integrations to Xero, Sage or your warehouse kept running, and the store tested before peak trading. Shopify hosts the platform. Everything you added on top of it is yours to look after, and that is the part a maintenance partner takes on.' },
-  { category: 'basics', question: 'Does a Shopify store need maintenance if Shopify hosts it?',
+  { category: 'basics', question: 'If Shopify hosts our UK store, does it still need maintenance?',
     answer: 'Yes, if it is a store of any size. Shopify keeps its servers, checkout and security running. It does not look after your theme edits, your third-party apps or the links to your accounting, stock and courier systems. Shopify’s own Help Center says third-party apps are supported by their developers and that coding changes sit outside Shopify Support’s scope. Those are exactly the parts that break on an established store.' },
   { category: 'basics', question: 'What is a Shopify support retainer?',
     answer: 'A retainer is an agreement where the same team looks after your store over months rather than for one project. At FactoryJet it is optional. You can keep a standing allowance of time if you want one, or pay per change, with each change quoted and approved before work starts. There is no monthly minimum unless you ask for one, and the fee does not climb just because time has passed.' },
   { category: 'basics', question: 'Why is my Shopify website not working?',
     answer: 'Start with what changed. Most faults on an established store follow a theme edit, a new app, an app update or a content change, so the change log usually points to the cause within minutes. If nothing changed on your side, check Shopify’s status page for a platform incident. If checkout or payments are failing, treat it as urgent: test an order on a phone, then roll back the latest change while the cause is found.' },
   { category: 'basics', question: 'Can you take over a Shopify store another agency built?',
-    answer: 'Yes, and most of our maintenance work starts this way. The first job is an onboarding audit: we back up the live theme, list every app, script, webhook and integration, and note what nobody documented. You end up with a written map of your own store, which is useful even if you later move the work elsewhere. We do not need the previous agency’s help to start.' },
-  { category: 'basics', question: 'Do you need our Shopify password?',
+    answer: 'Yes. This is a common starting point. The first job is an onboarding audit: we back up the live theme, list every app, script, webhook and integration, and note what nobody documented. You end up with a written map of your own store, which is useful even if you later move the work elsewhere. We do not need the previous agency’s help to start.' },
+  { category: 'basics', question: 'Do you need our Shopify owner password to maintain the store?',
     answer: 'No. Shopify lets you add a collaborator account for a Shopify Partner to work on your store, and the permissions you set control which sections of the store that account can reach. Your owner login and password are never shared. When the work ends, the collaborator account is removed. Your developers, accountant and warehouse partner keep their own logins.' },
 
   // ── Shopify Support and platform changes ──
   { category: 'shopify', question: 'How do I get support from Shopify itself?',
     answer: 'Through the Shopify Help Center. Shopify says chat is open 24/7 on every plan. Shopify Plus and Retail plans add inbound phone and email support, and Shopify says email tickets typically get a response within 48 hours. Shopify Support does not make outbound phone or video calls on any plan. For store-specific code and third-party apps, you need your developer or the app maker.' },
   { category: 'shopify', question: 'Is there a phone number I can call for Shopify support?',
-    answer: 'Only on some plans. Shopify’s Help Center lists inbound phone support for Shopify Plus, Retail and POS Pro, reached through the Help Center rather than a public number. Other plans get 24/7 chat. If your store is losing orders and you are not on Plus, the faster route is usually your own developer or maintenance partner, who can open the code and roll back a change straight away.' },
+    answer: 'Only on some plans. Shopify’s Help Center lists inbound phone support for Shopify Plus and Retail, and for POS Pro through the Help Center. Other plans get 24/7 chat, and Shopify does not make outbound calls. If your store is losing orders and you are not on Plus, the faster route is usually your own developer or maintenance partner, who can open the code and roll back a change straight away.' },
   { category: 'shopify', question: 'Will Shopify Support fix our theme code or apps?',
     answer: 'Mostly not. Shopify’s Help Center says that unless you are on Shopify Plus or are a Shopify Partner, Support cannot help with most custom code issues. Apps built by third parties are supported by their developers, and paid third-party themes by their theme developer. Coding changes to free Shopify themes are outside Support’s scope too. A maintenance partner covers the code Shopify will not touch.' },
   { category: 'shopify', question: 'What happens to Shopify script tags in 2026 and 2027?',
@@ -126,11 +126,11 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'uk', question: 'Does Making Tax Digital affect how our Shopify store is maintained?',
     answer: 'It can. GOV.UK says all VAT-registered businesses should now be signed up for Making Tax Digital for VAT. HMRC’s VAT Notice 700/22 says records must be kept digitally and data moved between programs by digital links; copy and paste does not count. If a broken connector leaves your team retyping Shopify sales into the books, that gap matters. We map it, and your accountant confirms the rules.' },
   { category: 'uk', question: 'Do UK cookie rules still need a banner for Shopify analytics?',
-    answer: 'Often, but the rules changed. The ICO’s guidance, updated after the Data (Use and Access) Act, describes an exception for storage used solely to collect statistics that improve your service, provided you explain it clearly and give a simple, free way to object. It does not cover advertising. Most stores run marketing pixels too, which still need consent. We check what each app sets; your adviser makes the legal call.' },
+    answer: 'Often. The ICO’s guidance describes an exception for storage used solely to collect statistics that improve your service, provided you explain it clearly and give a simple, free way to object. It does not cover advertising. Most stores run marketing pixels too, which still need consent. We check what each app sets; your adviser makes the legal call.' },
   { category: 'uk', question: 'Can you keep Linnworks, Brightpearl or Mintsoft in step with Shopify?',
     answer: 'Yes. Order management and warehouse systems talk to Shopify through webhooks, messages Shopify sends when an order or product changes. Shopify’s developer documentation says a failing webhook is retried up to eight times in four hours, and if failures persist the subscription is removed. After that, orders silently stop arriving. We watch for those failures and fix the endpoint before stock drifts.' },
   { category: 'uk', question: 'Do you support stores selling on Amazon.co.uk, eBay and OnBuy?',
-    answer: 'Yes. Marketplace channels add listings, stock and order sync that must stay in step with Shopify, or you oversell. We maintain the connectors and the product data behind Amazon.co.uk, eBay UK, OnBuy, ManoMano, the B&Q marketplace and Zalando, plus the courier links for Royal Mail, DPD and Evri, and payment set-ups with Stripe, Klarna, Clearpay and GoCardless for trade accounts.' },
+    answer: 'Yes. Marketplace channels add listings, stock and order sync that must stay in step with Shopify, or you oversell. We maintain the connectors and the product data behind Amazon.co.uk, eBay UK, OnBuy, ManoMano, the B&Q marketplace and Zalando, plus the courier links for Royal Mail, DPD and Evri, and payment set-ups with Shopify Payments, Klarna, Clearpay and GoCardless for trade accounts.' },
   { category: 'uk', question: 'Do you only maintain Shopify stores?',
     answer: 'No. Shopify and Shopify Plus are the focus of this page, but the same team supports WooCommerce, Magento and Commerceflo stores. We are building Sow Easy’s WooCommerce trade store with Odoo as the master for stock and pricing, and we built GPSUK’s trade storefront on Commerceflo, where our SEO and AI search work continues. If your business runs more than one store platform, one team can look after all of them.' },
 ];
@@ -141,7 +141,7 @@ const PROVIDERS: { name: string; note: string }[] = [
   { name: 'FactoryJet', note: 'That is us. Shopify and Shopify Plus maintenance with the integration work behind the store: Xero, Sage, Linnworks, marketplaces and couriers. Optional support with no monthly minimum, changes quoted and approved, and you own every line of code.' },
   { name: 'Visualsoft', note: 'Describes itself as the UK’s unified retail agency. Builds Shopify stores, including multi-site migrations, and offers ongoing support from a support desk it says is open 8am to 8pm every day of the year.' },
   { name: 'Pixel Kicks', note: 'A Manchester ecommerce agency that builds, migrates, markets and supports Shopify stores, and also works on WordPress and WooCommerce, with ongoing Shopify support services.' },
-  { name: 'We Manage Web', note: 'A Preston, Lancashire company focused on looking after existing Shopify stores: routine upkeep, quick fixes, speed work and changes aimed at conversion.' },
+  { name: 'We Manage Web', note: 'A Preston, Lancashire company that manages existing Shopify, WordPress and WooCommerce sites: routine upkeep, quick fixes, speed work and conversion changes.' },
   { name: 'Envisage Digital', note: 'A Bournemouth agency offering Shopify design, theme and app development, migrations, integrations, SEO, headless builds and Shopify Plus services, alongside Shopify support.' },
 ];
 
@@ -220,7 +220,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'en-US': 'https://factoryjet.com/services/shopify-maintenance-services', 'x-default': 'https://factoryjet.com/services/shopify-maintenance-services' } },
   openGraph: {
     title: TITLE,
     description:
@@ -378,14 +378,14 @@ export default function ShopifyMaintenanceServicesUKPage() {
               <span className="eyebrow">What we look after</span>
               <h2>What Shopify maintenance covers for an established UK store</h2>
               <p className="lead mt-4">
-                A store with a few hundred orders a week fails in predictable places. These are the nine we spend
-                most of our time on, roughly in the order they cost UK merchants money.
+                A store with a few hundred orders a week fails in predictable places. These are the nine areas we
+                check on every established store.
               </p>
             </div>
             <ul className="col-3 mt-12">
               <li className="svc-card">
                 <h3>Checkout and payments</h3>
-                <p className="mt-4">Stripe, Klarna and Clearpay at checkout, GoCardless for trade accounts, discount rules and delivery rates. After any change to payments, shipping or discounts we place a test order before customers find the fault.</p>
+                <p className="mt-4">Shopify Payments, Klarna and Clearpay at checkout, GoCardless for trade accounts, discount rules and delivery rates. After any change to payments, shipping or discounts we place a test order before customers find the fault.</p>
               </li>
               <li className="svc-card">
                 <h3>Accounting links</h3>
@@ -641,8 +641,8 @@ export default function ShopifyMaintenanceServicesUKPage() {
                     confirms the rules.
                   </p>
                   <p>
-                    <b>Cookies and analytics.</b> The ICO updated its guidance on cookies and similar technologies
-                    after the Data (Use and Access) Act. It now describes an exception for storage used solely to
+                    <b>Cookies and analytics.</b> The ICO’s guidance on cookies and similar technologies
+                    describes an exception for storage used solely to
                     collect statistics that improve your service, where you explain it clearly and offer a simple,
                     free way to object. The ICO says the exception does not cover online advertising. A typical
                     Shopify store runs both kinds of app, so we list what each one sets and which still sit behind
@@ -679,8 +679,8 @@ export default function ShopifyMaintenanceServicesUKPage() {
               <h2>Support for established UK merchants, wholesalers and multi-channel brands</h2>
               <p className="lead mt-4">
                 FactoryJet was founded in 2014 and has worked with more than 500 businesses, most of them in
-                commerce. The founder, Bhavesh Barot, is involved in every engagement. Two UK clients show the
-                integration side of the work, on platforms other than Shopify.
+                commerce. The founder, Bhavesh Barot, is involved in every engagement. Two UK clients show our
+                commerce and ERP work, on platforms other than Shopify.
               </p>
             </div>
             <ul className="col-3 mt-12">
@@ -694,10 +694,10 @@ export default function ShopifyMaintenanceServicesUKPage() {
           </div>
         </section>
 
-        {/* ═══ 12. PROVIDERS + DEMAND ═══ */}
+        {/* ═══ 12. PROVIDERS ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div className="col-6040">
+            <div style={{ maxWidth: 820 }}>
               <div>
                 <span className="eyebrow">The honest field</span>
                 <h2>UK Shopify support and maintenance providers worth knowing</h2>
@@ -717,31 +717,6 @@ export default function ShopifyMaintenanceServicesUKPage() {
                   ))}
                 </ul>
                 <p style={srcNote}>Listing is not endorsement.</p>
-              </div>
-
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>UK · Monthly Search Demand</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                    {[
-                      { kw: 'shopify support', v: '1,900', w: '100%', kd: 'Mostly merchants looking for Shopify itself' },
-                      { kw: 'shopify expert uk', v: '320', w: '17%', kd: 'Hiring intent' },
-                      { kw: 'shopify agency uk', v: '210', w: '11%', kd: 'Agency selection' },
-                      { kw: 'shopify plus support', v: '90', w: '5%', kd: 'Plus merchants' },
-                      { kw: 'shopify developer uk', v: '90', w: '5%', kd: 'Hands-on help' },
-                    ].map((r) => (
-                      <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
-                        <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                        <div className="demand-kd">{r.kd}</div>
-                      </li>
-                    ))}
-                  </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, Google Ads volumes, United Kingdom, read 29 October 2026</p>
-                </div>
               </div>
             </div>
           </div>
