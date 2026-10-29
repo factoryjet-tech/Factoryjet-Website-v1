@@ -78,7 +78,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'What are the main disadvantages of ecommerce for an established business?',
     answer: 'The common ones are margin lost to fees and returns, stock that drifts out of step across channels, rising advertising costs, more customer data to protect, and manual admin that grows with every new channel. None of them are reasons to stop selling online. Each one is a fixable process problem, and most of our audit findings for Australian stores fall into one of those five groups.' },
   { category: 'basics', question: 'What is the 80/20 rule in ecommerce?',
-    answer: 'It is the observation that a small share of products, customers or channels usually produces most of the revenue or profit. It is a rule of thumb, not a law. In an audit we test it on your own order data: which SKUs, channels and customer groups carry the margin, and which ones cost more to sell than they bring in. That list often decides where the first fixes go.' },
+    answer: 'It is the observation that a small share of products, customers or channels usually produces most of the revenue or profit. It is a rule of thumb. In an audit we test it on your own order data: which SKUs, channels and customer groups carry the margin, and which ones cost more to sell than they bring in. That list often decides where the first fixes go.' },
 
   // ── Choosing a consultant ──
   { category: 'choosing', question: 'When should we hire a consultant instead of a developer?',
@@ -102,7 +102,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'cost', question: 'How long does an ecommerce audit take?',
     answer: 'It depends on access more than on effort. Once we have read-only access to the store, the accounting file, the inventory system and the marketplace accounts, the review moves quickly. Waiting on logins is the usual delay. We agree the timeline in writing on the first call, and we tell you upfront which parts depend on your team or your current agency.' },
   { category: 'cost', question: 'Do you charge a monthly retainer?',
-    answer: 'Not by default. Each phase has a fixed price agreed before work starts. Support after a build is optional: each change is quoted and approved before we do it, and there is no monthly minimum. If you want a senior adviser on call for trading reviews and second opinions on proposals, we can set that up, but it is your choice, not a condition of working with us.' },
+    answer: 'Not by default. Each phase has a fixed price agreed before work starts. Support after a build is optional: each change is quoted and approved before we do it, and there is no monthly minimum. If you want a senior adviser on call for trading reviews and second opinions on proposals, we can set that up when you ask for it.' },
 
   // ── Australian systems and rules ──
   { category: 'systems', question: 'Our Shopify payouts never match Xero. Can you fix that?',
@@ -111,7 +111,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Move when stock lives in more than one place and nobody trusts the numbers: several warehouses, a 3PL, marketplaces, assembled or bundled products, or purchase orders to suppliers. Both are common choices for Australian product businesses and both connect to Xero. The harder decision is which system owns stock, prices and product data. We settle that first, because a second source of truth causes most overselling.' },
   { category: 'systems', question: 'We run MYOB Acumatica or NetSuite. Can our store connect to it?',
     answer: 'Yes. Most of these links use an off-the-shelf connector; the rest need a short piece of custom code. The first job is a written list of who is the master record for customers, prices, stock and invoices, then a choice of what syncs straight away and what can run in a nightly batch. We build and test on staging copies first, so your live store and your books keep trading while the connection is proven.' },
-  { category: 'systems', question: 'Should we sell on Amazon.com.au, Catch, Kogan or Bunnings Marketplace?',
+  { category: 'systems', question: 'Should we sell on Amazon.com.au, eBay, Kogan or Bunnings Marketplace?',
     answer: 'Only where the margin survives the marketplace’s fees and your shipping cost. Before adding a channel, we model profit per order on your best sellers, check whether your stock system can feed that marketplace without manual updates, and work out who will handle its customer messages. Some brands do well on one marketplace and should skip the rest. The answer comes from your numbers.' },
   { category: 'systems', question: 'Do we need e-invoicing through Peppol for our trade customers?',
     answer: 'Peppol is the network accounting systems use to send invoices directly to each other instead of by email. Xero says registering for it to receive eInvoices is free to set up, and those invoices arrive as draft bills ready for approval. If larger trade or government customers ask you for it, the change sits in your accounting setup, so we plan it alongside your store and order flow. Check your obligations with your accountant.' },
@@ -123,8 +123,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   // ── Working with FactoryJet ──
   { category: 'working', question: 'Can we see something working before we sign?',
     answer: 'Yes. Before you sign a build, we show working software on your own data: for example a reconciled week of payouts in a copy of your Xero file, or a stock sync between a staging store and your inventory system. It is the fastest way to judge whether we understand your business, and it gives your finance and operations people something concrete to test.' },
-  { category: 'working', question: 'Do you work with stores in Sydney, Melbourne, Brisbane and Perth?',
-    answer: 'Yes. We work remotely with ecommerce businesses across Australia, using video workshops, shared screens, a shared project board and written reports, and we schedule calls in your business hours, including Perth time. Consulting work does not need anyone on site. The founder and the senior team stay on your project whichever city your warehouse is in.' },
+  { category: 'working', question: 'Can you run an ecommerce audit for a store in Perth or regional Queensland?',
+    answer: 'Yes. We work with ecommerce businesses in every Australian state, using video workshops, shared screens, a shared project board and written reports, and we schedule calls in your business hours, including Perth time. The founder and the senior team stay on your project whichever city your warehouse is in.' },
   { category: 'working', question: 'How do we get started?',
     answer: 'Send your name and work email through the form on this page. The founder, Bhavesh Barot, replies within 24 hours to book a short call. If you have a written brief or an RFP, send it with your reply. On the call we go through your channels, your systems and the decision in front of you, and you leave knowing the right first step, even if you choose another firm.' },
 ];
@@ -154,7 +154,7 @@ const jsonLd = {
       areaServed: { '@type': 'Country', name: 'Australia' },
       url: CANONICAL,
       description:
-        'Ecommerce consulting for established Australian online stores: margin by channel, Shopify and WooCommerce order flow into Xero, MYOB, QuickBooks, NetSuite or Odoo, stock in Cin7 or Unleashed, Amazon.com.au, eBay, Catch, Kogan, MyDeal, Bunnings Marketplace and THE ICONIC, Afterpay, Zip and Stripe, Australia Post, StarTrack and Sendle, replatforming and trade ordering.',
+        'Ecommerce consulting for established Australian online stores: margin by channel, Shopify and WooCommerce order flow into Xero, MYOB, QuickBooks, NetSuite or Odoo, stock in Cin7 or Unleashed, Amazon.com.au, eBay, Kogan, Bunnings Marketplace and THE ICONIC, Afterpay, Zip and Stripe, Australia Post, StarTrack and Sendle, replatforming and trade ordering.',
     },
     {
       '@type': 'BreadcrumbList',
@@ -224,7 +224,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_AU',
     type: 'website',
-    images: [{ url: '/images/au/ecommerce-development/ecommerce-development-og.webp', width: 1200, height: 630, alt: 'Ecommerce consultant Australia: a Melbourne homewares brand owner reviewing her online store on a laptop' }],
+    images: [{ url: '/images/au/ecommerce-development/ecommerce-development-og.webp', width: 1200, height: 630, alt: 'Ecommerce consultant Australia: an online homewares brand owner reviewing her store on a laptop' }],
   },
   robots: { index: true, follow: true },
 };
@@ -251,7 +251,7 @@ const HERO_ICONS = [
 
 /* Ten things the audit checks. */
 const AUDIT_ITEMS: { n: string; t: string; d: string }[] = [
-  { n: '01', t: 'Profit per order, by channel', d: 'Your own site, Amazon.com.au, eBay, Catch, Kogan, MyDeal or THE ICONIC, each with its commission, Afterpay or Zip fees, card fees, returns and freight taken out. Revenue rankings and profit rankings rarely match.' },
+  { n: '01', t: 'Profit per order, by channel', d: 'Your own site, Amazon.com.au, eBay, Kogan, Bunnings Marketplace or THE ICONIC, each with its commission, Afterpay or Zip fees, card fees, returns and freight taken out. Revenue rankings and profit rankings rarely match.' },
   { n: '02', t: 'How orders land in Xero or MYOB', d: 'One invoice per order or a daily summary, how GST and fees are posted, and whether refunds and payouts reconcile without someone fixing them by hand every month.' },
   { n: '03', t: 'Which system owns stock', d: 'Shopify, Cin7 Core, Unleashed, NetSuite, Odoo or a spreadsheet. We trace how often each channel updates and where oversells and phantom stock come from.' },
   { n: '04', t: 'Marketplace listings and their data', d: 'Titles, attributes, images and prices across every marketplace, and whether they come from one product record or get retyped per channel.' },
@@ -279,7 +279,7 @@ const AUDIT_ICONS = [
 const STEPS: { n: string; t: string; d: string; out: string }[] = [
   { n: '01', t: 'Brief and first call', d: 'You send a short brief or your RFP, or just tell us on the call what is going wrong. We go through your channels, systems and the decision you are facing.', out: 'A written note of scope, the access we need and a fixed price for the audit.' },
   { n: '02', t: 'Read-only access', d: 'Viewer access to the store, Xero or MYOB, the inventory system, the marketplaces and analytics. Nothing is changed in your live systems at this stage.', out: 'A checklist of what we can see, and anything we could not reach.' },
-  { n: '03', t: 'Audit and evidence', d: 'We trace real orders end to end, test the checkout, compare margin by channel and talk to the people who run the store every day.', out: 'Findings backed by your own order data, not opinion.' },
+  { n: '03', t: 'Audit and evidence', d: 'We trace real orders end to end, test the checkout, compare margin by channel and talk to the people who run the store every day.', out: 'Findings drawn from your own order data.' },
   { n: '04', t: 'Ranked fix list and demo', d: 'Each fix ranked by value and effort, with who should do it. For the top item we show working software on your data, such as a reconciled week in a copy of Xero.', out: 'A plan your team, another agency or we can act on.' },
   { n: '05', t: 'Fixed price per phase', d: 'If you want us to build, each phase is scoped, priced and signed on its own. Hosting and AI can run in your own accounts at cost, with no markup.', out: 'A signed scope for the next phase only. You can stop here.' },
   { n: '06', t: 'Build, test and launch', d: 'Work happens on staging copies so the live store keeps trading. Defects are fixed inside the build price for a cover period agreed before work starts.', out: 'Working fixes, the code and repository in your name, and a written handover.' },
@@ -352,7 +352,7 @@ export default function EcommerceConsultantAUPage() {
               <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
               <p className="lead">
                 Your store takes orders every day. The trouble sits behind it: Shopify or WooCommerce orders keyed
-                into Xero or MYOB by hand, stock in Cin7 or Unleashed that never matches Amazon.com.au or Catch, trade
+                into Xero or MYOB by hand, stock in Cin7 or Unleashed that never matches Amazon.com.au or eBay, trade
                 buyers still ordering by email, and freight to regional postcodes eating the margin. FactoryJet is an
                 ecommerce consultant for established Australian businesses. We find what to fix first, show it working
                 on your own data, and our team can build it.
@@ -480,7 +480,7 @@ export default function EcommerceConsultantAUPage() {
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto" src={null}
                 subject="An operations manager at an online homewares brand checking synced orders on her laptop beside a label printer and courier satchels">
-                <img src="/images/au/ecommerce-development/ecommerce-development-packing.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An operations manager at a Melbourne online homewares brand checking synced orders on her laptop, with a label printer and courier satchels ready beside her" />
+                <img src="/images/au/ecommerce-development/ecommerce-development-packing.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An operations manager at an online homewares brand checking synced orders on her laptop, with a label printer and courier satchels ready beside her" />
               </VisualSlot>
             </div>
           </div>
@@ -579,7 +579,7 @@ export default function EcommerceConsultantAUPage() {
                 <ul className="trigrows">
                   <li><span className="m">Accounting</span><span className="n">Xero, MYOB Business, MYOB Acumatica, QuickBooks</span><span className="t">Books</span></li>
                   <li><span className="m">Inventory and ERP</span><span className="n">Cin7 Core, Cin7 Omni, Unleashed, NetSuite, Odoo</span><span className="t">Stock</span></li>
-                  <li><span className="m">Marketplaces</span><span className="n">Amazon.com.au, eBay, Catch, Kogan, MyDeal, Bunnings, THE ICONIC</span><span className="t">Channels</span></li>
+                  <li><span className="m">Marketplaces</span><span className="n">Amazon.com.au, eBay, Kogan, Bunnings, THE ICONIC</span><span className="t">Channels</span></li>
                   <li><span className="m">Payments</span><span className="n">Afterpay, Zip, Stripe, Shopify Payments</span><span className="t">Checkout</span></li>
                   <li><span className="m">Freight</span><span className="n">Australia Post, StarTrack, Sendle, 3PLs</span><span className="t">Delivery</span></li>
                 </ul>
@@ -730,7 +730,7 @@ export default function EcommerceConsultantAUPage() {
                   <p>
                     <b>eInvoicing for trade customers.</b> Peppol lets accounting systems send invoices straight to each
                     other. Xero says registering to receive eInvoices is free to set up, and they arrive as draft bills.
-                    If your trade buyers ask for it, plan it with the order flow, not as an afterthought.
+                    If your trade buyers ask for it, plan it at the same time as the order flow.
                   </p>
                   <p className="au-note">
                     Sources: <a href={SRC_OAIC} {...extLink}>OAIC, Small business</a>; <a href={SRC_SCRIPTS} {...extLink}>Shopify Help Center, Script Editor</a>; <a href={SRC_XERO_EINVOICE} {...extLink}>Xero, eInvoicing</a>. We are not lawyers or tax advisers; check obligations with yours.
@@ -739,7 +739,7 @@ export default function EcommerceConsultantAUPage() {
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" src={null}
                 subject="A trade customer and a sales rep in a wholesale showroom looking at a trade ordering portal on a tablet">
-                <img src="/images/au/visual-pass-2026-10-03/ecommerce-development/trade-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/trade-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/trade-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="A trade customer and a sales rep in a Brisbane wholesale showroom looking at a trade ordering portal on a tablet" />
+                <img src="/images/au/visual-pass-2026-10-03/ecommerce-development/trade-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/trade-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/trade-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="A trade customer and a sales rep in a wholesale showroom looking at a trade ordering portal on a tablet" />
               </VisualSlot>
             </div>
           </div>
@@ -817,12 +817,12 @@ export default function EcommerceConsultantAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Sydney, Melbourne, Brisbane, Perth, Adelaide</div>
-              <h2>Ecommerce consulting across Australia, run remotely</h2>
+              <h2>Ecommerce consulting for stores in every Australian state</h2>
             </div>
             <div className="factswrap">
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
-                  Consulting work happens in your data, not your office. We run workshops by video, share screens to
+                  Consulting work happens in your order data and your systems. We run workshops by video, share screens to
                   walk through orders and reconciliations, and send written findings you can forward to your
                   accountant or board. Calls are booked in your business hours, Perth included.
                 </p></div>
@@ -857,7 +857,7 @@ export default function EcommerceConsultantAUPage() {
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" src={null}
                 subject="The owner of a homewares and gift shop on a video call with his ecommerce team from the back room of his store">
-                <img src="/images/au/visual-pass-2026-10-03/ecommerce-development/remote-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/remote-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/remote-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a Perth homewares and gift shop on a video call with his ecommerce team from the back room of his store, seen over his shoulder" />
+                <img src="/images/au/visual-pass-2026-10-03/ecommerce-development/remote-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/remote-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/remote-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a homewares and gift shop on a video call with his ecommerce team from the back room of his store, seen over his shoulder" />
               </VisualSlot>
             </div>
           </div>
