@@ -55,6 +55,9 @@ const crumbs = [
 // Plus "1000", Shopify for enterprise "2000"; a single query is capped at 1,000 points
 // "regardless of plan limits". fetched 2026-10-29
 const SRC_RATE_LIMITS = 'https://shopify.dev/docs/apps/build/apis/graphql-admin/rate-limits';
+// Shopify Help Center: "Shopify B2B is available on the Basic, Grow, Advanced, and Shopify Plus plans";
+// the feature set varies by plan. fetched 2026-10-29
+const SRC_B2B = 'https://help.shopify.com/en/manual/b2b';
 // shopify.dev, REST Admin API: "a legacy API as of October 1, 2024"; new public apps must use
 // the GraphQL Admin API from April 1, 2025. fetched 2026-10-29
 const SRC_REST_LEGACY = 'https://shopify.dev/docs/api/admin-rest';
@@ -92,15 +95,15 @@ const SRC_WVD = 'https://webvideodigital.com.au/custom-ai-agent-cost-in-australi
 const AGENT_JOBS: { n: string; t: string; d: string; guard: string }[] = [
   { n: '01', t: 'Order exception agent',
     d: 'Reads each new order against your rules: a PO box sent to a courier that will not deliver there, a billing and delivery state that do not match, a quantity far above that customer’s usual, a SKU your Cin7 or Unleashed stock says is gone. It tags the order with a one-line reason and puts it in the right person’s queue.',
-    guard: 'Tags and notes only. It never edits or cancels an order.' },
+    guard: 'Adds a tag and an order note. Cancelling or editing stays with your team.' },
   { n: '02', t: 'Stockist purchase order agent',
-    d: 'Your stockists still email PDF purchase orders. The agent reads each one, finds the stockist’s company record, matches every line to your SKUs and trade price list, and builds a Shopify draft order. A line it cannot match, such as an old product code, goes to your wholesale team with the reason.',
+    d: 'A stockist emails a PDF order under a trading name that differs from the business name on their ABN, with prices written GST-inclusive when your trade list is ex-GST. The agent works out which account it belongs to, checks each line against that stockist’s trade price level in MYOB, Xero or your price sheet and against your minimum order quantities, then builds a Shopify draft order. Any product code missing from your catalogue is held back from the draft and listed in a note for your wholesale team.',
     guard: 'Builds drafts. A person sends the invoice.' },
   { n: '03', t: 'Returns and change-of-mind agent',
     d: 'Finds the order, reads the request and photos, checks the item against the returns policy you have written (window, condition, final-sale items), and prepares the return or exchange with a reason code. Faulty-item claims are kept apart from change-of-mind requests so your team handles them the way your policy says.',
     guard: 'Refunds above the limit you set always wait for a person.' },
   { n: '04', t: 'Reorder and stock agent',
-    d: 'Compares stock by location in Shopify with sales speed and open purchase orders in Cin7 Core, Unleashed, NetSuite or a spreadsheet, then drafts a reorder list split by supplier. Once a supplier replies, it compares their confirmed price and ship date with your purchase order and flags any difference.',
+    d: 'Imported stock can spend weeks at sea, so the agent plans from each supplier’s real lead time rather than a fixed reorder point. It reads what sits at your Sydney or Melbourne 3PL and on the shop floor, plus inbound shipments recorded in Cin7 Core, Unleashed, NetSuite or a spreadsheet, and drafts orders early enough to land before Christmas or the EOFY sales. A supplier confirmation that shows a new price or a later ship date raises a flag.',
     guard: 'Drafts lists. Your buyer raises every purchase order.' },
   { n: '05', t: 'Payout and ledger check agent',
     d: 'Each day it compares Shopify orders, refunds and payouts, including Afterpay, Zip and Stripe settlements, with what landed in Xero, MYOB Business, MYOB Acumatica or QuickBooks Online. When an invoice is missing or a GST line looks wrong, it writes a short note on what does not match and prepares the correction for your bookkeeper to check.',
@@ -110,7 +113,7 @@ const AGENT_JOBS: { n: string; t: string; d: string; guard: string }[] = [
     guard: 'Reports and drafts. Listing and stock changes need approval.' },
   { n: '07', t: 'Catalogue data agent',
     d: 'Turns supplier spreadsheets into Shopify product drafts: titles, descriptions, tags, size charts and metafields in Australian spelling and your brand voice. It checks each draft against your rules, such as required fields and claims you never make, before anyone sees it.',
-    guard: 'Products stay unpublished until a person approves.' },
+    guard: 'Saved as draft products. Nothing goes live on your storefront until someone on your team publishes it.' },
 ];
 
 /* ─── Numbered project steps ─── */
@@ -119,7 +122,7 @@ const STEPS: { n: string; t: string; d: string; out: string }[] = [
     d: 'You send a brief or RFP if you have one, and we look at a sample of last month’s orders, returns and stockist emails with the person who handles them. We note which system owns stock, prices and customers.',
     out: 'A one-page map of the job and the systems it touches.' },
   { n: '02', t: 'Build a demo on your data',
-    d: 'Before you sign anything, we run a working version against a copy of your own orders or emails, so you see what the agent would tag, draft or flag. Sample data only where you prefer it.',
+    d: 'Before you sign anything, we run a working version against a copy of your own orders or emails, so you see what the agent would draft or flag. Sample data only where you prefer it.',
     out: 'A demo you can poke at, and a written list of what it got right and wrong.' },
   { n: '03', t: 'Scope and price one phase',
     d: 'We list the actions the agent can take on its own, the ones a person signs off, and the ones that are off limits, then quote that phase as a fixed price. The next phase gets its own scope and its own signature.',
@@ -162,7 +165,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     links: [{ href: SRC_SIDEKICK, label: 'Shopify Help Center: Sidekick' }] },
   { category: 'basics', question: 'Can you use AI in Shopify?',
     answer: 'Yes, in three ways. Shopify’s own tools, Sidekick and the AI text features in the admin, help staff write and edit. Apps from the Shopify App Store add AI for search, support or reviews. And a custom app built on Shopify’s Admin API can run an AI agent that does an operations job across Shopify and your other systems. Most established stores use a mix of all three.' },
-  { category: 'basics', question: 'What is a Shopify AI agent?',
+  { category: 'basics', question: 'What is a Shopify AI agent for an Australian store?',
     answer: 'A Shopify AI agent is software that reads something messy, such as a stockist’s emailed PDF or a return request with photos, decides what it means using a language model, and then acts in Shopify within limits you set. It might tag an order, build a draft order or prepare a return. It logs every action and passes anything outside its rules to a person.' },
   { category: 'basics', question: 'How is Shopify Flow different from an AI agent?',
     answer: 'Shopify Flow is free on the Basic, Grow, Advanced and Plus plans, according to Shopify. It runs fixed rules: when this happens and this condition is true, do that. It is excellent for tagging orders or alerting on low stock. It cannot read a free-text email or a scanned PO and work out what the sender meant. We often use Flow for the fixed steps and an agent only for the judgement.',
@@ -172,8 +175,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'Should I buy a Shopify app or have a custom AI agent built?',
     answer: 'Buy an app when the job is the same for every store, such as product reviews or a standard chat widget, and the app’s rules match yours. Have an agent built when the job depends on your own systems and policies: your trade price lists, your Cin7 or Unleashed stock, your returns rules, your chart of accounts in Xero. Apps you rent; a custom agent you own.' },
   { category: 'basics', question: 'Do I need Shopify Plus for a custom AI agent?',
-    answer: 'No. A custom app with an AI agent works on any paid Shopify plan. Plus matters in two places: its native B2B features, which make stockist ordering cleaner, and its higher API allowance. Shopify’s documentation lists 100 points a second for GraphQL Admin API calls on standard plans and 1,000 on Plus, which changes how fast an agent can work through a large backlog.',
-    links: [{ href: SRC_RATE_LIMITS, label: 'shopify.dev: GraphQL Admin API rate limits' }] },
+    answer: 'No. Any paid Shopify plan can run a custom app with an AI agent in it. Plus matters mainly for its higher API allowance: Shopify’s documentation lists 100 points a second for GraphQL Admin API calls on standard plans and 1,000 on Plus, which changes how fast an agent clears a large backlog. Shopify B2B now runs on Basic, Grow, Advanced and Plus, though the B2B features you get depend on your plan, so we check yours against the job during scoping.',
+    links: [{ href: SRC_RATE_LIMITS, label: 'shopify.dev: GraphQL Admin API rate limits' }, { href: SRC_B2B, label: 'Shopify Help Center: B2B' }] },
   { category: 'basics', question: 'Can an AI agent handle customer support tickets for a Shopify store?',
     answer: 'Yes, though that is a separate service with its own page. A support agent reads tickets in Gorgias, Zendesk or your helpdesk, finds the order in Shopify, checks Australia Post, StarTrack or Sendle tracking, and drafts a reply with the facts filled in. This page covers the operations jobs behind the store; see AI customer service for the support side.',
     links: [{ href: '/au/ai-customer-service', label: 'AI customer service in Australia' }] },
@@ -204,20 +207,20 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'cost', question: 'What should our brief or RFP include?',
     answer: 'Name the job, how often it happens and who does it today. List the systems involved, for example Shopify plan, Xero or MYOB, Cin7 or Unleashed, couriers and marketplaces. Say what the agent must never do, how you measure the job now, and your timeline. Attach a few real examples with personal details removed. A two-page brief is plenty to quote from.' },
   { category: 'cost', question: 'Do you show a demo before we sign?',
-    answer: 'Yes. Before any contract, we build a working version against a copy of your own orders, emails or catalogue, or against sample data if you prefer, and walk you through what it tagged, drafted and flagged. You see the misses as well as the hits. The demo is how you judge whether the job is worth building, and it is how we scope the fixed price.' },
+    answer: 'Yes. Before any contract, we build a working version against a copy of your own orders, emails or catalogue, or against sample data if you prefer, and walk you through what it drafted and what it sent to a person. You see the misses as well as the hits. The demo is how you judge whether the job is worth building, and it is how we scope the fixed price.' },
 
   // ── Privacy, safety and ownership ──
   { category: 'risk', question: 'Can an AI agent safely make changes in our Shopify store?',
-    answer: 'It is safe when the agent’s power is limited on purpose. Ours run as a custom app with only the access scopes the job needs, start by tagging and drafting rather than changing live records, and send refunds, discounts and price changes to a person. Every action is logged. Shopify also warns that a webhook can arrive more than once, so each agent skips duplicates.',
+    answer: 'The custom app we install on your store can only reach what its Shopify access scopes allow, and we choose those scopes per job, so a returns agent never gets access to product prices. Agents start by tagging and drafting rather than changing live records, and refunds, discounts and price changes go to a person. Every action is logged. Shopify also warns that a webhook can arrive more than once, so each agent skips duplicates.',
     links: [{ href: SRC_WEBHOOK_DUPES, label: 'shopify.dev: duplicate webhooks' }] },
   { category: 'risk', question: 'Does the Privacy Act apply to an AI agent handling customer orders?',
     answer: 'Yes, for any business the Privacy Act 1988 covers. The OAIC states that privacy obligations attach to personal information entered into an AI system, and to generated output that includes it. Order data carries names, addresses and phone numbers, so we pass the agent only the fields each job needs and use business AI terms, not consumer chatbots, which the OAIC advises against for personal information.',
     links: [{ href: SRC_OAIC_AI, label: 'OAIC: privacy and commercially available AI products' }] },
-  { category: 'risk', question: 'What changes on 10 December 2026 for automated decisions?',
-    answer: 'The OAIC’s APP 1 guidelines say that from 10 December 2026 your privacy policy must include new information about decisions made using computer programs and personal information. If an agent helps decide something that could significantly affect a customer, such as declining a refund or flagging an order as fraud, it belongs in the policy. Each agent comes with a plain record of the decisions it makes, ready for your adviser.',
+  { category: 'risk', question: 'Does the December 2026 Privacy Act change affect Shopify order agents?',
+    answer: 'It can. The OAIC’s APP 1 guidelines say that from 10 December 2026 your privacy policy must include new information about decisions made using computer programs and personal information. If an agent helps decide something that could significantly affect a customer, such as declining a refund or flagging an order as fraud, it belongs in the policy. Each agent comes with a plain record of the decisions it makes, ready for your adviser.',
     links: [{ href: SRC_OAIC_APP1, label: 'OAIC: APP guidelines chapter 1' }] },
-  { category: 'risk', question: 'Do we own the Shopify AI agent you build?',
-    answer: 'Yes, from day one. The code sits in a repository in your name, along with the prompts, rules, test cases and documentation. The custom app is installed on your Shopify store under your account, and AI and hosting can run in your own accounts at cost. If you later bring the work in-house or move to another provider, nothing has to be rebuilt.' },
+  { category: 'risk', question: 'Who owns a Shopify agent you build for us in Australia?',
+    answer: 'Your business does, from day one. The code sits in a repository in your name, along with the prompts, rules, test cases and documentation. The custom app is installed on your Shopify store under your account, and AI and hosting can run in your own accounts at cost. If you later bring the work in-house or move to another provider, nothing has to be rebuilt.' },
 ];
 
 /* ─── Australian systems the agents connect to (prose rows, no platform-feature claims) ─── */
@@ -237,7 +240,7 @@ const RELATED: { h: string; t: string; d: string }[] = [
   { h: '/au/ai-customer-service', t: 'AI customer service', d: 'Order status and returns answers drafted inside Gorgias, Zendesk or your helpdesk.' },
   { h: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'Supplier invoices read into draft bills in Xero or MYOB, with approval.' },
   { h: '/au/ecommerce-development', t: 'Ecommerce development', d: 'Not on Shopify, or not sure it fits? We compare platforms for your catalogue.' },
-  { h: '/services/shopify-ai-agents', t: 'Shopify AI agents (United States)', d: 'The same service for US stores, with NetSuite, QuickBooks and US carriers.' },
+  { h: '/services/shopify-ai-agents', t: 'Shopify AI agents (United States)', d: 'The same service for US stores, with NetSuite, SAP Business One and ShipStation.' },
 ];
 
 /* ─── JSON-LD (Organization lives sitewide; referenced by @id only) ─── */
@@ -476,7 +479,7 @@ export default function ShopifyAiAgentsAUPage() {
                   <p data-speakable="true">
                     <span className="stat">A Shopify AI agent reads the messy inputs behind a store, such as emailed stockist orders,
                     return requests and payout reports, and prepares the next step in Shopify, Xero, MYOB or your
-                    inventory system.</span> It tags, drafts and flags. A person approves refunds, prices and anything posted to
+                    inventory system.</span> It tags orders and drafts the next step. A person approves refunds, prices and anything posted to
                     the ledger, and every action is logged.
                   </p>
                 </div>
@@ -513,7 +516,7 @@ export default function ShopifyAiAgentsAUPage() {
                   <li><span className="m">shopify sidekick</span><span className="t">110</span></li>
                   <li><span className="m">shopify myob integration</span><span className="t">30</span></li>
                 </ul>
-                <p className="au-note">Source: DataForSEO, Google Ads data for Australia, pulled 29 October 2026. Australian store owners search for the integration far more often than for an “AI agent”, which is why this page starts from Xero, MYOB and stock.</p>
+                <p className="au-note">Source: DataForSEO, Google Ads data for Australia, pulled 29 October 2026. Most Australian stores look for the integration first, so every agent here starts from your Xero or MYOB and stock data.</p>
               </div>
             </div>
           </div>
@@ -550,7 +553,7 @@ export default function ShopifyAiAgentsAUPage() {
               <div className="eyebrow">Choose the lightest tool that works</div>
               <h2>Sidekick, Shopify Flow, an App Store app or a custom agent?</h2>
               <p className="lead">
-                Four tools, four different jobs. The cheapest mistake is building an agent for something Flow already does.
+                Four tools, four different jobs. The most avoidable cost is building an agent for a job Flow already does for free.
               </p>
             </div>
             <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison of Shopify AI options">
@@ -587,8 +590,8 @@ export default function ShopifyAiAgentsAUPage() {
               <div className="eyebrow">Where the agents plug in</div>
               <h2>Built around the systems Australian Shopify stores run</h2>
               <p className="lead">
-                We build each agent as a custom app on Shopify’s GraphQL Admin API, the interface Shopify now expects new
-                apps to use, and connect it to your back office through each vendor’s official API. You keep the software
+                We build each agent as a custom app on Shopify’s GraphQL Admin API, the interface Shopify requires for new
+                public apps and recommends for all new builds, and connect it to your back office through each vendor’s official API. You keep the software
                 you have.
               </p>
             </div>
@@ -788,8 +791,8 @@ export default function ShopifyAiAgentsAUPage() {
                 No brief yet? Answer the five points opposite in an email and that will do.
               </p>
               <p>
-                The founder reads every brief and replies within 24 hours with questions, a proposed first job and a date
-                for the demo on your data.
+                The founder reads every brief and replies within 24 hours with a proposed first job and a date for the
+                demo on your data.
               </p>
               <ModalCTAButton label="Send my brief" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
             </div>
@@ -821,7 +824,7 @@ export default function ShopifyAiAgentsAUPage() {
                   orders, stock, wholesale buyers and the accounting behind them.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
-                  We do not name Australian clients on this page. Ask on the call and we will show you live Shopify work and a
+                  Ask on the call and we will show you live Shopify work and a
                   demo of an agent running against your own data, which is the better test of whether we suit your store.
                 </p></div>
               </div>
@@ -873,6 +876,7 @@ export default function ShopifyAiAgentsAUPage() {
               <a href={SRC_SIDEKICK} {...extLink}>Shopify Help Center: Sidekick</a>
               <a href={SRC_FLOW} {...extLink}>Shopify Help Center: Shopify Flow</a>
               <a href={SRC_DRAFT_ORDERS} {...extLink}>Shopify Help Center: draft orders</a>
+              <a href={SRC_B2B} {...extLink}>Shopify Help Center: B2B</a>
               <a href={SRC_RATE_LIMITS} {...extLink}>shopify.dev: GraphQL Admin API rate limits</a>
               <a href={SRC_REST_LEGACY} {...extLink}>shopify.dev: REST Admin API (legacy)</a>
               <a href={SRC_WEBHOOK_DUPES} {...extLink}>shopify.dev: duplicate webhooks</a>
@@ -892,7 +896,7 @@ export default function ShopifyAiAgentsAUPage() {
               <h2>See what an agent would do with last week’s orders</h2>
               <p>
                 Send your name and work email, and your brief if you have one. The founder replies within 24 hours to book
-                a short call about the job, your systems and a demo on your own data. No spam, no obligation.
+                a short call about the job and a demo on your own data. No spam, no obligation.
               </p>
             </div>
             <div className="ctas">
