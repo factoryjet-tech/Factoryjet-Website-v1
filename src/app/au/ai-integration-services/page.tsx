@@ -91,7 +91,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'Which AI is best for integration?',
     answer: 'The model matters less than the connection around it. GPT, Claude and Gemini all read invoices, emails and order notes well enough for business work. We choose per job, based on accuracy on your real examples, where the provider can process data, and what your security team will approve. We keep the model behind our own integration code, so it can be swapped later without rebuilding the Xero or ERP side.' },
   { category: 'basics', question: 'Do we have to replace our current software to use AI?',
-    answer: 'No. The point of integration is to leave Xero, MYOB, NetSuite or Cin7 where they are and connect AI to them through each vendor’s official API. Your team keeps the same screens. What changes is that drafts, matches and summaries appear inside those screens instead of being typed. If a system has no API at all, we look at exports or a different first job before suggesting any change.' },
+    answer: 'No. The point of integration is to leave Xero, MYOB, NetSuite or Cin7 where they are and connect AI to them through each vendor’s official API. Your team keeps the same screens. What changes is that draft bills and order matches appear inside those screens instead of being typed. If a system has no API at all, we look at exports or a different first job before suggesting any change.' },
   { category: 'basics', question: 'What is an MCP server, and do we need one?',
     answer: 'MCP, the Model Context Protocol, is an open standard for connecting AI applications to outside systems. Its own documentation compares it to a USB-C port for AI. An MCP server exposes chosen actions, such as listing invoices, to an AI assistant. Xero publishes an open-source MCP server. You need one when staff want to ask an assistant like Claude about live data. Background jobs usually call the API directly.',
     links: [{ href: SRC_MCP, label: 'Model Context Protocol: introduction' }, { href: SRC_XERO_MCP, label: 'Xero MCP server on GitHub' }] },
@@ -100,21 +100,21 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Systems ──
   { category: 'systems', question: 'Can you connect AI to Xero?',
-    answer: 'Yes. For one business, the usual route is a Xero Custom Connection, which Xero says links to a single organisation and is purchased by that organisation for each app. Connections created from 29 April 2026 use granular scopes that do not include journal access, so we design around what those scopes allow. Common jobs are coding bills, matching payouts and drafting overdue reminders for approval.',
+    answer: 'Yes. For one business, the usual route is a Xero Custom Connection, which Xero says links to a single organisation and is purchased by that organisation for each app. Connections created from 29 April 2026 use granular scopes that do not include journal access, so we design around what those scopes allow. Common jobs are coding supplier bills and matching marketplace payouts to invoices, with a person approving each one.',
     links: [{ href: SRC_XERO_FAQ, label: 'Xero Developer FAQ' }] },
   { category: 'systems', question: 'What limits does the Xero API put on an AI integration?',
-    answer: 'Each Xero organisation gets a ceiling of 60 calls a minute, 5,000 calls a day and no more than 5 running together, plus 10,000 calls a minute across all organisations using one app. A business pushing several thousand marketplace orders a day into Xero can hit the daily figure. We batch writes, queue work during peaks and summarise orders where your accountant agrees that is acceptable.',
+    answer: 'Each app connected to a Xero organisation gets 60 calls a minute, 5,000 a day and no more than 5 at once, plus 10,000 calls a minute across all organisations using one app. A business pushing several thousand marketplace orders a day into Xero can hit the daily figure. We batch writes, queue work during peaks and summarise orders where your accountant agrees that is acceptable.',
     links: [{ href: SRC_XERO_LIMITS, label: 'Xero API limits' }] },
   { category: 'systems', question: 'We run MYOB AccountRight. Does that change the integration?',
     answer: 'Not much. MYOB says AccountRight, Essentials and MYOB Business all integrate through the same API, and that MYOB Business will replace Essentials and AccountRight for new customers in Australia. Apps register for an API key and secret and authenticate with OAuth. We build against the shared API so a later move from AccountRight to MYOB Business does not mean starting again.',
     links: [{ href: SRC_MYOB_API, label: 'MYOB API: getting started' }] },
   { category: 'systems', question: 'Can AI work with NetSuite, Odoo or QuickBooks Online?',
-    answer: 'Yes. We connect through the official interface each vendor provides and confirm during discovery what your edition, licence and roles allow, because that differs between accounts. Typical jobs are turning emailed purchase orders into draft sales orders, flagging pricing that breaks a customer agreement, and summarising overdue accounts. We have delivered an Odoo integration for a distributor, and QuickBooks work connected to Shopify.' },
+    answer: 'Yes. We connect through the official interface each vendor provides and confirm during discovery what your edition, licence and roles allow, because that differs between accounts. Typical jobs are turning emailed purchase orders into draft sales orders, flagging pricing that breaks a customer agreement, and summarising overdue accounts. We have delivered an Odoo integration for a distributor, and are building QuickBooks connections to Shopify.' },
   { category: 'systems', question: 'Can AI keep Cin7 or Unleashed stock in step with our channels?',
     answer: 'It can help, with care about who is the source of truth. Inventory systems like Cin7 Core and Unleashed should own stock numbers. The AI’s job is the messy edges: reading supplier emails about late stock, drafting purchase orders from reorder points, and flagging listings where stock and price disagree. Unleashed notes that API credentials are only available to the account owner, so that person needs to be in the kick-off.',
     links: [{ href: SRC_UNLEASHED_API, label: 'Unleashed API documentation' }] },
   { category: 'systems', question: 'Can AI handle orders from Amazon.com.au, Bunnings Marketplace and THE ICONIC?',
-    answer: 'Yes, as the layer that reads and drafts rather than the system of record. Each marketplace has its own order format, cancellation rules and customer messages. An AI integration can read those messages, match them to the order in your ERP or Cin7, draft a reply and flag a cancellation for approval. The same pattern covers eBay Australia, Catch, Kogan and MyDeal. We confirm each marketplace’s seller access during discovery.' },
+    answer: 'Yes, as the layer that reads and drafts rather than the system of record. Each marketplace has its own order format, cancellation rules and customer messages. An AI integration can read those messages, match them to the order in your ERP or Cin7, draft a reply and flag a cancellation for approval. The same pattern covers eBay Australia and Kogan. We confirm each marketplace’s seller access during discovery.' },
   { category: 'systems', question: 'Can AI match Afterpay, Zip and Stripe payouts in Xero?',
     answer: 'It can do most of the reading and leave the decision to your bookkeeper. Payout reports from buy now pay later providers and Stripe bundle many orders, fees and refunds into one bank line. The integration reads the report, links each order to its invoice, proposes the fee and refund lines, and leaves a draft match for approval. Nothing is reconciled without a person agreeing to it.' },
   { category: 'systems', question: 'Can an AI integration book Australia Post, StarTrack or Sendle shipments?',
@@ -140,7 +140,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes, for any business the Privacy Act 1988 covers. According to the OAIC, the obligations reach personal information that goes into an AI system as well as AI output that contains it. It also recommends, as best practice, not entering personal information into publicly available AI tools. An integration helps here, because it can pass only the fields a job needs instead of whole records.',
     links: [{ href: SRC_OAIC_AI, label: 'OAIC guidance on commercially available AI products' }] },
   { category: 'data', question: 'What changes for AI integrations on 10 December 2026?',
-    answer: 'From 10 December 2026, APP 1.7 says a covered business’s privacy policy must explain any software that relies on personal information to reach decisions with a significant effect on a person. The change came in with the Privacy and Other Legislation Amendment Act 2024. An integration that helps set credit terms, pricing or account holds belongs in that policy. We hand over a plain list of what each integration decides.',
+    answer: 'From 10 December 2026, APP 1.7 says a covered business’s privacy policy must explain any software that relies on personal information to reach decisions with a significant effect on a person. The change came in with the Privacy and Other Legislation Amendment Act 2024. An integration that helps set credit terms, pricing or account holds for individual customers may need to be described in that policy; your privacy adviser decides. We hand over a plain list of what each integration decides.',
     links: [{ href: SRC_OAIC_APP1, label: 'OAIC APP guidelines, chapter 1' }] },
   { category: 'data', question: 'Can the AI post transactions into our ledger on its own?',
     answer: 'Only if you decide it should, and we advise against it for anything involving money. Our default is drafts: the AI creates a draft bill, a proposed payout match or a suggested credit note, and a named person approves it. Every write uses its own integration login, so your ledger history shows exactly what the AI did. Low-risk actions such as tagging can move to automatic after a pilot.' },
@@ -151,10 +151,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 /* ─── Systems we connect AI to (platlist rows) ─── */
 const SYSTEMS: { t: string; d: string }[] = [
   { t: 'Xero', d: 'Draft bills from supplier emails, payout matching for bookkeeper approval, overdue reminders, and month-end summaries. Built on a Custom Connection or an app, within Xero’s per-organisation call limits.' },
-  { t: 'MYOB Business, AccountRight and Acumatica', d: 'Supplier bills, customer statements and job costing notes through the shared MYOB API, designed so a move from AccountRight to MYOB Business does not break the build.' },
+  { t: 'MYOB Business, AccountRight and Essentials', d: 'Supplier bills, customer statements and job costing notes through the shared MYOB API, designed so a move from AccountRight to MYOB Business does not break the build.' },
   { t: 'QuickBooks Online, NetSuite and Odoo', d: 'Emailed purchase orders turned into draft sales orders, contract pricing checks, credit hold summaries and approval queues inside the ERP your finance team already uses.' },
   { t: 'Cin7 Core, Cin7 Omni and Unleashed', d: 'Supplier delay emails read and matched to purchase orders, reorder drafts from stock rules, and listings flagged where stock and price disagree across channels.' },
-  { t: 'Amazon.com.au, eBay, Catch, Kogan, MyDeal, Bunnings Marketplace, THE ICONIC', d: 'Customer messages and cancellation requests read, matched to the order in your system of record, and drafted for a person to send.' },
+  { t: 'Amazon.com.au, eBay, Kogan, Bunnings Marketplace, THE ICONIC', d: 'Customer messages and cancellation requests read, matched to the order in your system of record, and drafted for a person to send.' },
   { t: 'Afterpay, Zip and Stripe', d: 'Settlement reports split into orders, fees and refunds, then proposed as matches in Xero or MYOB for approval.' },
   { t: 'Australia Post, StarTrack and Sendle', d: 'Service and parcel details suggested from the order, passed to your shipping software, and delivery exception emails turned into drafted customer updates.' },
   { t: 'HubSpot, Salesforce, Zendesk and Microsoft 365', d: 'Account history summarised before a call, enquiries sorted into the right queue, and policy answers found in SharePoint with the source shown.' },
@@ -341,7 +341,7 @@ export default function AiIntegrationServicesAUPage() {
               <p className="lead">
                 Your business already runs on Xero or MYOB, an ERP such as NetSuite or Odoo, stock in Cin7 or
                 Unleashed, and orders from your own store and marketplaces like Amazon.com.au and Bunnings
-                Marketplace. We connect AI to those systems so drafts, matches and summaries appear where your team
+                Marketplace. We connect AI to those systems so draft bills and payout matches appear where your team
                 works. People approve anything involving money, and you own the code.
               </p>
               <HeroInlineForm
@@ -462,8 +462,8 @@ export default function AiIntegrationServicesAUPage() {
                 <div className="fact">
                   <div className="sec">§03</div>
                   <p>
-                    The hard part is rarely the AI. It is the access rules, limits and product changes on each system.
-                    Xero caps each organisation at 60 API calls a minute. MYOB is moving new Australian customers to MYOB
+                    Most of the build time goes into the access rules, limits and product changes on each system.
+                    Xero caps each app connected to an organisation at 60 API calls a minute. MYOB is moving new Australian customers to MYOB
                     Business. A build that ignores either one works in the demo and fails in the first busy week.
                   </p>
                 </div>
@@ -545,7 +545,7 @@ export default function AiIntegrationServicesAUPage() {
                 <div className="fact"><div className="sec">§02</div><p>
                   Xero Custom Connections link to a single organisation and are bought by that organisation per app.
                   Connections created from 29 April 2026 use granular scopes that do not include journal access. A
-                  design that assumes it can post manual journals has to change, so we check scopes in discovery.
+                  design that relies on reading the general ledger journals has to change, so we check scopes in discovery.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><div>
                   <p>
@@ -696,7 +696,7 @@ export default function AiIntegrationServicesAUPage() {
                 <li><span className="m">Sow Easy: WooCommerce and Odoo integration</span><span className="t">Odoo</span></li>
                 <li><span className="m">HubSpot integrations delivered</span><span className="t">CRM</span></li>
                 <li><span className="m">Salesforce integrations delivered</span><span className="t">CRM</span></li>
-                <li><span className="m">Shopify connected to QuickBooks Online and Enterprise</span><span className="t">Accounting</span></li>
+                <li><span className="m">Shopify to QuickBooks Online and Enterprise (in progress)</span><span className="t">Accounting</span></li>
               </ul>
               <p className="au-note">
                 Read the <a href="/case-studies/sow-easy-distributor-portal">Sow Easy case study</a>. The QuickBooks
