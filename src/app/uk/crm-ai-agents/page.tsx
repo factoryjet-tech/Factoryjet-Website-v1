@@ -134,13 +134,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What is a CRM AI agent?',
     answer: 'It is a piece of software that works inside your CRM the way a careful sales administrator would. It reads a new lead, an email reply or a call note, decides what should change on the record, and either makes that change or asks a person to approve it. The AI model reads and writes the text. Your written rules decide what it may touch.' },
   { category: 'basics', question: 'Should we use HubSpot Breeze or Salesforce Agentforce instead of a custom agent?',
-    answer: 'Use the vendor agents when the job starts and ends inside one CRM and their settings match your process. HubSpot lists a Customer agent, a Prospecting agent and a Data agent. Salesforce prices Agentforce in the UK per conversation or by Flex Credits. A custom agent earns its place when the job crosses into Xero, Sage, NetSuite or a helpdesk, or when you want your own approval rules and code.' },
+    answer: 'Use the vendor agents when the job starts and ends inside one CRM and their settings match your process. HubSpot lists a Customer agent, a Prospecting agent and a Data agent. Salesforce prices Agentforce in the UK per conversation, by Flex Credits or per user. A custom agent earns its place when the job crosses into Xero, Sage, NetSuite or a helpdesk, or when you want your own approval rules and code.' },
   { category: 'basics', question: 'How is a CRM agent different from an AI SDR?',
     answer: 'An AI SDR, short for sales development representative, writes to people who are not yet in conversation with you and tries to book meetings. A CRM agent looks after records you already hold: scoring, logging, updating stages and drafting replies. In the UK the SDR job carries more PECR risk, because it sends the first message. Many teams start with the CRM agent for that reason.' },
   { category: 'basics', question: 'Which CRMs do you build agents for?',
     answer: 'Mostly HubSpot and Salesforce. When the brief calls for it, we also connect agents to Microsoft Dynamics 365 Sales, Zoho CRM or Pipedrive through their APIs. If your marketing runs in HubSpot and your sales team works in Salesforce, one agent can read one and update the other with a shared record ID.' },
   { category: 'basics', question: 'Do we need HubSpot Professional or Enterprise?',
-    answer: 'Not for a custom agent in most cases. It reaches HubSpot through a private app or a public app with chosen permissions, and the edition you pay for decides which objects and properties exist to work with. Edition matters more for HubSpot’s own Breeze features and for moving data regions: HubSpot says paid Starter, Professional and Enterprise accounts can change data centre.' },
+    answer: 'Not for a custom agent in most cases. It reaches HubSpot through a HubSpot app with scopes a super admin selects, and the edition you pay for decides which objects and properties exist to work with. Edition matters more for HubSpot’s own Breeze features and for moving data regions: HubSpot says paid Starter, Professional and Enterprise accounts can change data centre.' },
 
   // ── What the agent does ──
   { category: 'jobs', question: 'Can an AI agent qualify leads in HubSpot or Salesforce?',
@@ -162,13 +162,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'rules', question: 'Can we email sole traders and partnerships the same way?',
     answer: 'No. The ICO says sole traders and some partnerships are treated as individuals under PECR. You can only send them marketing emails if they have specifically consented, or if they bought a similar product from you and were given a clear chance to opt out. Our agents tag each contact by subscriber type so these records never reach a cold sequence.' },
   { category: 'rules', question: 'What changed for sales outreach under the Data (Use and Access) Act 2025?',
-    answer: 'Three things matter for sales teams. The ICO says the Act clarifies that direct marketing can be a legitimate interest. It widens the lawful bases for significant automated decisions, with safeguards. And the ICO can now fine up to £17.5 million or 4% of global turnover under PECR. The ICO says all data protection provisions are in force, and that its PECR guidance is under review.' },
+    answer: 'Three things matter for sales teams. The ICO says the Act clarifies that direct marketing can be a legitimate interest. It widens the lawful bases for significant automated decisions, with safeguards. And the ICO can now fine up to £17.5 million or 4% of global turnover under PECR. The ICO’s DUAA guide says all data protection provisions are in force. Its PECR email guidance says it is under review after the Act.' },
   { category: 'rules', question: 'Does the soft opt-in cover leads from a bought list?',
     answer: 'No. The ICO says the soft opt-in only applies where you previously sold a similar product or service to that person, and offered a clear opt-out when you collected their details and in every message after. It does not cover prospective customers or bought-in lists. An agent can check purchase history before any record joins a sequence that relies on it.' },
   { category: 'rules', question: 'Where is our HubSpot data stored?',
     answer: 'HubSpot’s help centre says EU accounts are hosted on AWS in Germany, and that the region is set by the sign-up IP address. It does not list a UK region. Paid Starter, Professional and Enterprise accounts can move to another data centre. For the agent, we can run the AI model in your own cloud account in a region you choose.' },
   { category: 'rules', question: 'Does the EU AI Act apply to a UK company?',
-    answer: 'It can. Article 2 brings providers and deployers outside the EU into scope where the output of the AI system is used in the Union. If your agent chats with EU prospects or customers, plan for the transparency rules, which the European Commission says take effect in August 2026: people should know they are dealing with a machine. Internal CRM housekeeping carries far less exposure.' },
+    answer: 'It can. Article 2 brings providers and deployers outside the EU into scope where the output of the AI system is used in the Union. If your agent chats with EU prospects or customers, plan for the transparency rules, which have applied since August 2026, per the European Commission: people should know they are dealing with a machine. Internal CRM housekeeping carries far less exposure.' },
   { category: 'rules', question: 'Is lead scoring by AI an automated decision under UK GDPR?',
     answer: 'Usually not a significant one, because a score decides which rep calls first, not whether a person gets a job, a loan or a service. It becomes sensitive when a score blocks someone from an offer or a price. We keep a person on those decisions, log the reason the agent gave, and let you show anyone who asks how the score was reached. That is our reading; your DPO makes the call.' },
 
@@ -176,9 +176,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'project', question: 'How much does a CRM AI agent cost in the UK?',
     answer: 'Market figures, not ours: LeverX’s UK guide of 4 October 2026 puts a single-workflow agent at £10,000 to £30,000 and a multi-step agent with integrations at £30,000 to £80,000, as indicative benchmarks. It does not say whether VAT is included. FactoryJet quotes a fixed price per phase in writing after a short scoping call, and states whether VAT applies to your invoice.' },
   { category: 'project', question: 'How long does a HubSpot or Salesforce agent take to build?',
-    answer: 'One focused job, such as lead scoring in HubSpot, usually goes live one to three weeks after the scope is signed. Two CRMs, several jobs or a finance system in the loop take longer, and the written scope carries dated milestones. Every week you see the agent working in your own sandbox or test account, not in a slide deck.' },
+    answer: 'It depends on the job. One focused job, such as lead scoring in HubSpot, is the shortest build. Two CRMs, several jobs or a finance system in the loop take longer. Either way, the written scope carries dated milestones, and every week you see the agent working in your own sandbox or test account.' },
   { category: 'project', question: 'Can we see the agent work before we sign anything?',
-    answer: 'Yes. We run it on a sample of your own records, with names removed if your data protection officer prefers. You see each decision, the reason it gave, the fields it would change and the places it would stop and ask a person. That demo is the point where most buyers decide, so we do it before the contract, not after.' },
+    answer: 'Yes. We run it on a sample of your own records, with names removed if your data protection officer prefers. You see each decision, the reason it gave, the fields it would change and the places it would stop and ask a person. That demo is the point where most buyers decide, so we do it before the contract.' },
   { category: 'project', question: 'What should our brief or RFP include?',
     answer: 'Your CRM and edition, the first job you want done, roughly how many leads or deals move each week, the other systems involved, such as Xero, Sage or NetSuite, and who signs off the agent’s actions. Add your DPO or privacy lead’s name if you have one. If procurement has already written an RFP, send it unchanged and we answer it point by point.' },
   { category: 'project', question: 'Who owns the agent once it is built?',
@@ -372,7 +372,7 @@ export default function CrmAiAgentsUKPage() {
                 <b>PECR</b> is the Privacy and Electronic Communications Regulations, the UK rules on marketing by
                 email, text and phone. <b>UK GDPR</b> is the main UK law on personal data, and it still applies when a
                 business email names a person. A <b>corporate subscriber</b> is a company, LLP or public body, as
-                opposed to a sole trader or partnership.
+                opposed to a sole trader or one of the partnerships PECR treats as an individual.
               </p>
             </div>
           </div>
@@ -385,7 +385,7 @@ export default function CrmAiAgentsUKPage() {
               {[
                 { v: '£17.5m', t: 'or 4% of global turnover: the ICO’s maximum PECR fine after the Data (Use and Access) Act', s: 'ICO, June 2025', u: SRC.duaaNews.url },
                 { v: 'Individuals', t: 'is how PECR treats sole traders and some partnerships, so consent rules apply to them', s: 'ICO guide to PECR', u: SRC.pecrEmail.url },
-                { v: 'Aug 2026', t: 'EU AI Act transparency rules take effect: people must know they are talking to a machine', s: 'European Commission', u: SRC.aiActEc.url },
+                { v: 'Aug 2026', t: 'EU AI Act transparency rules have applied since this date: people must know they are talking to a machine', s: 'European Commission', u: SRC.aiActEc.url },
                 { v: 'Germany', t: 'is where HubSpot hosts EU-region accounts, on AWS. No UK region is listed', s: 'HubSpot Knowledge Base', u: SRC.hubspotHosting.url },
               ].map((r) => (
                 <li key={r.v}>
@@ -467,8 +467,8 @@ export default function CrmAiAgentsUKPage() {
                     <b>The Data (Use and Access) Act 2025.</b> It received Royal Assent on 19 June 2025. The ICO says it
                     clarifies that direct marketing can be a legitimate interest, widens the lawful bases for
                     significant automated decisions with safeguards, and lets the ICO fine up to £17.5 million or 4%
-                    of global turnover under PECR. The ICO’s guide notes that all data protection provisions are now in
-                    force and that its PECR guidance is under review, so we re-read it at the start of every project.
+                    of global turnover under PECR. The ICO’s DUAA guide says all data protection provisions are now in
+                    force. Its PECR email guidance says it is under review after the Act, so we re-read it at the start of every project.
                   </p>
                   <p>
                     <b>Named people at companies.</b> PECR may allow the email, but UK GDPR still governs
@@ -671,7 +671,7 @@ export default function CrmAiAgentsUKPage() {
                 <p>
                   <b>EU AI Act.</b> Brexit did not take UK sellers out of it. Article 2 covers providers and deployers
                   outside the EU where the output of an AI system is used in the Union. The European Commission says
-                  the Act’s transparency rules come into effect in August 2026, and that people using chatbots should
+                  the Act’s transparency rules apply from August 2026, and that people using chatbots should
                   be made aware they are interacting with a machine. A CRM agent that only tidies records carries
                   little exposure. One that chats with prospects in Dublin or Rotterdam should say it is automated.
                 </p>
