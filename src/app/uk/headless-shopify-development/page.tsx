@@ -27,10 +27,10 @@ import '../ai-agents/ai-agents.css';
 const CANONICAL = 'https://factoryjet.com/uk/headless-shopify-development';
 const UPDATED = '2026-10-29';
 const READ_ON = '29 October 2026';
-const TITLE = 'Headless Shopify Development UK: Hydrogen and Next.js | FactoryJet';
+const TITLE = 'Headless Shopify Development UK | FactoryJet';
 const H1 = 'Headless Shopify Development for UK Brands: Hydrogen or Next.js Storefronts on Shopify’s Own Checkout';
 const DESCRIPTION =
-  'Headless Shopify development for established UK retailers: Hydrogen on Oxygen or Next.js, Shopify checkout kept, Xero, Linnworks and couriers untouched. Fixed quote per phase.';
+  'Headless Shopify for UK retailers: Hydrogen or Next.js storefronts, Shopify checkout kept, Xero, Linnworks and couriers untouched. Fixed quote per phase.';
 const IMG = '/images/us/headless-shopify';
 
 /* Design tokens, copied by value from ../ai-agents/ai-agents.css so inline
@@ -97,7 +97,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'basics',
     question: 'What is Shopify Hydrogen?',
     answer:
-      'Hydrogen is Shopify’s own framework for headless shops. Shopify’s documentation calls Hydrogen projects React Router apps preconfigured with Shopify features, and says Hydrogen does not ship a component library, so the interface is designed and built for you. Most Hydrogen shops run on Oxygen, Shopify’s edge hosting, which Shopify says is available at no extra charge on paid plans.',
+      'Hydrogen is Shopify’s own framework for headless shops. Shopify’s documentation calls Hydrogen projects React Router apps preconfigured with Shopify features, and says it provides ready-made components wired to Shopify data. The design of your shop is still built for you. Most Hydrogen shops run on Oxygen, Shopify’s edge hosting, which Shopify says is available at no extra charge on paid plans.',
   },
   {
     category: 'basics',
@@ -190,7 +190,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'uk',
     question: 'Do analytics cookies on a headless Shopify store need consent in the UK?',
     answer:
-      'Often yes, with a narrower exception. The ICO updated its draft cookie guidance after the Data (Use and Access) Act and now describes a statistical purposes exception, which needs clear information about the purpose and a simple, free way to object. Marketing tags still need consent. Shopify’s Hydrogen analytics guide says to meet consent rules before tracking starts, and points to its Customer Privacy API and banner.',
+      'Often yes, with a narrower exception. The ICO’s guidance on cookies and similar technologies, updated for the Data (Use and Access) Act and finalised in April 2026, describes a statistical purposes exception, which needs clear information about the purpose and a simple, free way to object. Marketing tags still need consent. Shopify’s Hydrogen analytics guide says to meet consent rules before tracking starts, and points to its Customer Privacy API and banner.',
   },
   {
     category: 'uk',
@@ -215,7 +215,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'working',
     question: 'Can you work alongside our in-house developers or current agency?',
     answer:
-      'Yes. Many UK retailers keep an in-house developer or a marketing agency. We agree the split at scoping: who owns the storefront code, who owns the CMS, who runs paid media tags. Your developers get access to the repository and review rights from the start, so the handover at the end is a formality, not a project of its own.',
+      'Yes. Many UK retailers keep an in-house developer or a marketing agency. We agree the split at scoping: who owns the storefront code, who owns the CMS, who runs paid media tags. Your developers get access to the repository and review rights from the start, so there is no separate handover project at the end.',
   },
   {
     category: 'working',
@@ -278,10 +278,15 @@ const STAYS: { area: string; stays: string; note: string }[] = [
   { area: 'Page content', stays: 'Moves to a CMS', note: 'Edited by marketing, published on a schedule.' },
 ];
 
-/* UK agencies seen in Google UK organic results for "headless shopify" and
-   "shopify hydrogen" on 2026-10-29 (DataForSEO, location United Kingdom).
-   Named so buyers can compare; no claim is made about their work. */
-const UK_AGENCIES = ['Vervaunt', 'Swanky', 'Charle', 'Limely', 'CTI Digital', 'Flux', 'RVS Media'];
+/* Questions a buyer can put to any headless Shopify agency, FactoryJet included.
+   (A named list of UK agencies was removed: the search pull behind it had no saved file.) */
+const AGENCY_QUESTIONS = [
+  'Which of our apps carry on, which get rebuilt, and which get dropped?',
+  'Where are delivery charges shown before checkout?',
+  'Which consent tool controls our Google tags and Meta pixel?',
+  'How will you test orders into our accounts and warehouse systems before launch?',
+  'Who owns the code and the hosting account on day one?',
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -347,7 +352,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL } },
   openGraph: {
     title: TITLE,
     description:
@@ -413,12 +418,12 @@ export default function HeadlessShopifyDevelopmentUKPage() {
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served</span></div>
                   <div className="upd">Last updated<br />{READ_ON}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="uk" source="uk_headless_shopify_development_hero" service="Headless Shopify Development" submitLabel="See a draft of my store" trustText="Working software on your own data before you sign. Founder replies within 24 hours." />
+                  <HeroInlineForm region="uk" source="uk_headless_shopify_development_hero" service="Headless Shopify Development" submitLabel="See a draft of my store" trustText="Working software on your own data before you sign. Founder replies within one business day." />
                 </div>
               </div>
 
@@ -468,8 +473,8 @@ export default function HeadlessShopifyDevelopmentUKPage() {
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              The hard part of a headless project is rarely the code. It is the list of things a theme gave you for
-              free that now need an owner: the reviews widget, the bundle builder, the cookie banner, the delivery
+              Most of the work in a headless project is the list of things a theme gave you for free that now need
+              an owner: the reviews widget, the bundle builder, the cookie banner, the delivery
               charge shown on the product page. We write that list before we quote, and every line on it gets a
               decision.
             </p>
@@ -481,7 +486,7 @@ export default function HeadlessShopifyDevelopmentUKPage() {
           <div className="wrap">
             <ul className="col-4" style={{ gap: 20 }}>
               {[
-                { v: '500+', t: 'businesses served by FactoryJet since it was founded in 2014', s: 'About FactoryJet', u: '/about' },
+                { v: '500+', t: 'businesses served by FactoryJet', s: 'About FactoryJet', u: '/about' },
                 { v: 'No extra charge', t: 'is how Shopify describes Oxygen hosting for Hydrogen shops on paid plans', s: 'Shopify Dev, Hydrogen fundamentals', u: SRC.hydrogen.url },
                 { v: '2.5 s', t: 'is Google’s good threshold for Largest Contentful Paint, at the 75th percentile', s: 'web.dev, Web Vitals', u: SRC.vitals.url },
                 { v: '10%', t: 'of turnover, or £300,000 if greater, is the CMA’s maximum fine for hiding charges', s: 'GOV.UK, CMA price guidance', u: SRC.cma.url },
@@ -552,9 +557,8 @@ export default function HeadlessShopifyDevelopmentUKPage() {
               <span className="eyebrow">Choosing the stack</span>
               <h2>Hydrogen, Next.js or a Liquid theme: a side-by-side for UK brands</h2>
               <p className="lead mt-4">
-                In Google’s UK results on {READ_ON}, “headless shopify” and “shopify hydrogen” drew about 170
-                searches a month each (DataForSEO, United Kingdom). The searches next to them were about pricing,
-                Liquid versus headless, the Storefront API and Oxygen. This table answers those in one place.
+                UK buyers comparing headless options ask about pricing, Liquid versus headless, the Storefront API
+                and Oxygen. This table answers those in one place.
               </p>
             </div>
             <div className="card mt-8" tabIndex={0} role="region" aria-label="Hydrogen, Next.js and Liquid compared" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 860 }}>
@@ -638,8 +642,8 @@ export default function HeadlessShopifyDevelopmentUKPage() {
               </p>
               <h3 className="mt-6">Cookie consent before tracking starts</h3>
               <p>
-                The ICO updated its draft guidance on cookies and similar technologies after the Data (Use and
-                Access) Act, and it now explains a statistical purposes exception. That exception needs clear
+                The ICO’s guidance on cookies and similar technologies, updated for the Data (Use and Access) Act
+                and finalised in April 2026, describes a statistical purposes exception. That exception needs clear
                 information about the purpose and a simple, free way to object. Advertising tags still need consent.
                 Shopify’s Hydrogen analytics guide says to meet consent rules before tracking begins, and offers its
                 Customer Privacy API and native cookie banner, or a third-party consent tool. We wire the banner,
@@ -686,14 +690,13 @@ export default function HeadlessShopifyDevelopmentUKPage() {
                 <Sources ids={['imaginaire', 'shopifyPricing', 'hydrogen']} />
               </div>
               <div className="card card-top-orange">
-                <span className="eyebrow">UK agencies in the same search results</span>
+                <span className="eyebrow">Comparing quotes</span>
                 <p style={{ fontSize: 14, marginTop: 8 }}>
-                  These UK agencies appeared in Google’s UK organic results for “headless shopify” or “shopify
-                  hydrogen” on {READ_ON} (DataForSEO, United Kingdom). Ask each one the questions in the brief section
-                  below and compare the answers.
+                  Prices only compare when the scope does. Put these questions to every agency you talk to, us
+                  included, and compare the answers line by line.
                 </p>
                 <ul className="scope-list mt-4">
-                  {UK_AGENCIES.map((a) => (
+                  {AGENCY_QUESTIONS.map((a) => (
                     <li key={a}>{a}</li>
                   ))}
                 </ul>
@@ -792,9 +795,8 @@ export default function HeadlessShopifyDevelopmentUKPage() {
               <span className="eyebrow">UK work on other platforms</span>
               <h2>Commerce we have built for UK businesses</h2>
               <p className="lead mt-4">
-                Neither project below is a Shopify build. Both show the part of a headless job that decides whether
-                it works: a storefront that reads stock and prices from another system and keeps trade buyers
-                ordering.
+                Neither project below is a Shopify build. Both show trade buyers ordering at their own prices from a
+                storefront we built, one on Commerceflo and one on WooCommerce reading stock and prices from Odoo.
               </p>
             </div>
             <ul className="col-2 mt-8">
@@ -827,8 +829,7 @@ export default function HeadlessShopifyDevelopmentUKPage() {
               <h2>Sources, read on {READ_ON}</h2>
               <p className="lead mt-4">
                 Every price, plan detail, platform behaviour and legal rule on this page was read on the pages below
-                that day. Search volumes and the agency list come from DataForSEO, Google UK, pulled the same day.
-                Prices and rules change, so open the linked page before you act on a figure.
+                that day. Prices and rules change, so open the linked page before you act on a figure.
               </p>
             </div>
             <ul className="col-2 mt-8" style={{ gap: 10 }}>
@@ -844,7 +845,7 @@ export default function HeadlessShopifyDevelopmentUKPage() {
         {/* 13. FAQ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Headless Shopify questions from UK retailers and brands</h2>
             </div>
