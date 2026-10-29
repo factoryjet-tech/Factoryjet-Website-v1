@@ -71,7 +71,7 @@ const SRC_WOO_PERMALINKS = 'https://woocommerce.com/document/permalinks/';
 const SRC_BC_PRICE_LISTS =
   'https://docs.bigcommerce.com/developer/docs/admin/catalog-and-inventory/pricing/price-lists';
 // Maropost (Neto) knowledge base. Its article index lists a Sales Orders Export Wizard, a Customer
-// Export Wizard, a Category & Content Export Wizard, and setup guides for Amazon Australia, Catch,
+// Export Wizard, a Category & Content Export Wizard, and setup guides for Amazon Australia,
 // Bunnings Marketplace, Unleashed, Neto POS and Pick'n Pack.
 const SRC_MAROPOST_KB = 'https://galaxy.maropost.com/kb/articles/1457';
 // Xero App Store (AU), "Shopify, by Xero": "syncs sales, payouts, fees and taxes from Shopify into Xero".
@@ -91,7 +91,8 @@ const SRC_OAIC_APPS = 'https://www.oaic.gov.au/privacy/australian-privacy-princi
 // $60,000+ AUD"; Neto migration quotes "typically land between $5,000 and $25,000+"; a "$40K+" tier for
 // ERP, B2B and custom work. Perceptiv Digital ("teams in Australia and Europe"), Neto to Shopify page:
 // "Migration & Build Cost $45,000 - $160,000" for a mid-level Plus build (upwards of 5,000 SKUs, single
-// currency and warehouse, 1 to 2 integrations), in a cost table it labels AUD. Neither page says whether
+// currency and warehouse, 1 to 2 integrations). The row itself carries no currency label; the table's Year 1
+// and later totals are labelled AUD. Neither page says whether
 // its figures include GST.
 const SRC_JABOO = 'https://www.jaboo.io/insights/ecommerce-migration-cost-australia/';
 const SRC_PERCEPTIV = 'https://perceptiv.digital/migration/neto-to-shopify/';
@@ -124,8 +125,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Published Australian ranges are wide. Jaboo, a Shopify Premier Partner, puts migrations at $5,000 to $60,000+ AUD, with ERP, B2B and custom work in a $40,000+ tier. Perceptiv Digital lists $45,000 to $160,000 to migrate and build a mid-level Shopify Plus store of 5,000+ SKUs. Neither page says whether GST is included. FactoryJet quotes a fixed price per phase in writing after a short scoping call.' },
   { category: 'cost', question: 'Why do quotes for the same Shopify migration differ so much?',
     answer: 'Because the word migration covers different jobs. One quote moves products into a stock theme. Another rebuilds the theme, rewires Xero or MYOB, rebuilds trade pricing, moves years of orders and re-points marketplace feeds. Ask each agency for a line-item scope: what data moves, how many years of orders, which integrations are rebuilt, and who writes the redirect map. Then compare like with like.' },
-  { category: 'cost', question: 'How long does a move to Shopify take?',
-    answer: 'An advanced build that includes a migration usually takes 5 to 8 weeks with us. Big catalogues, several stores, an ERP link or B2B pricing push it longer, and Shopify Plus projects with many integrations can run for several months. We give you the timeline in writing once the scope is agreed, and the first thing you see is a draft of your store, not a slide deck.' },
+  { category: 'cost', question: 'How many weeks does a Shopify migration take in Australia?',
+    answer: 'An advanced build that includes a migration usually takes 5 to 8 weeks with us. Big catalogues, several stores, an ERP link or B2B pricing push it longer, and Shopify Plus projects with many integrations can run for several months. We give you the timeline in writing once the scope is agreed.' },
   { category: 'cost', question: 'Are Shopify prices in Australia shown with or without GST?',
     answer: 'Shopify’s Australian pricing page lists its plans in AUD (Basic is $56 a month on monthly billing as of 29 October 2026) but carries no wording on GST either way, so check your invoice. The agency ranges quoted on this page do not say whether they include GST either. Every FactoryJet quote states plainly whether GST is included.' },
 
@@ -153,7 +154,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'platforms', question: 'Is Magento end of life in 2026?',
     answer: 'Magento as a platform is not, but older versions are. Adobe’s lifecycle policy, updated 18 September 2026, shows standard support for Adobe Commerce 2.4.6 ended on 11 August 2026, with extended support running to 31 August 2027, and 2.4.5 extended support already ended. A store on those versions faces an upgrade either way, which is when many Australian merchants price a move to Shopify.' },
   { category: 'platforms', question: 'Should an established Neto or Maropost store move to Shopify?',
-    answer: 'Only if the jobs Neto does today have a clear new home. Maropost’s own knowledge base covers marketplace setups for Amazon Australia, Catch and Bunnings Marketplace, plus POS, Pick’n Pack and an Unleashed link, all inside one platform. On Shopify each of those becomes an app, a connector or your inventory system. We map every one before you commit.' },
+    answer: 'Only if the jobs Neto does today have a clear new home. Maropost’s own knowledge base covers marketplace setups for Amazon Australia and Bunnings Marketplace, plus POS, Pick’n Pack and an Unleashed link, all inside one platform. On Shopify each of those becomes an app, a connector or your inventory system. We map every one before you commit.' },
   { category: 'platforms', question: 'Can you move WooCommerce to Shopify without losing search traffic?',
     answer: 'Yes, with a full redirect map. WooCommerce addresses follow your permalink settings, by default /product/ and /product-category/, while Shopify uses /products/ and /collections/. If your store uses the Shop base option, products sit under /shop/, a prefix Shopify will not redirect from, so we plan that before the build. Titles, meta descriptions and image alt text carry across too.',
     links: [{ href: '/au/ecommerce-seo', label: 'Ecommerce SEO in Australia' }] },
@@ -165,10 +166,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes, once it is reconnected. Xero’s own Shopify integration syncs sales, payouts, fees and taxes from Shopify into Xero. For MYOB Business, MYOB Acumatica or QuickBooks Online we set up a connector that suits your file. The link from your old platform does not carry across, so we set the new one up with your bookkeeper and reconcile a test month before launch.' },
   { category: 'au', question: 'Do Afterpay and Zip keep working after we move to Shopify?',
     answer: 'They work on Shopify, but your accounts need reconnecting to the new store. Afterpay’s developer docs say the Shopify store address and store currency must match your Afterpay account region, which for Australia means an Australian address and AUD. Zip is set up as its own payment method. We place real orders with each one, and refund one, before launch.' },
-  { category: 'au', question: 'What happens to our Amazon, eBay, Catch or Bunnings Marketplace listings?',
-    answer: 'They need a new source of stock and orders. On Neto, many stores list on Amazon.com.au, eBay and Catch from the platform itself. On Shopify, listings run through each marketplace’s app, a multichannel tool, or your inventory system such as Cin7 Core or Unleashed. We pick one owner per channel so stock is never sold twice.' },
+  { category: 'au', question: 'What happens to our Amazon, eBay, Kogan or Bunnings Marketplace listings?',
+    answer: 'They need a new source of stock and orders. On Neto, many stores list on Amazon.com.au, eBay and Bunnings Marketplace from the platform itself. On Shopify, listings run through each marketplace’s app, a multichannel tool, or your inventory system such as Cin7 Core or Unleashed. We pick one owner per channel so stock is never sold twice.' },
   { category: 'au', question: 'Does the Privacy Act matter when we move customer data to Shopify?',
-    answer: 'For most established stores, yes. The OAIC says businesses with annual turnover above $3 million are generally covered by the Privacy Act 1988. APP 8 covers steps before personal information is disclosed overseas, and APP 11 requires reasonable steps to protect it. We move customer files through access-controlled channels, delete working copies after launch, and suggest your adviser reviews your privacy policy.' },
+    answer: 'If your annual turnover is above $3 million, yes: the OAIC says you must comply with the Australian Privacy Principles, and some smaller businesses are covered too. APP 8 covers steps before personal information is disclosed overseas, and APP 11 requires reasonable steps to protect it. We move customer files through access-controlled channels, delete working copies after launch, and suggest your adviser reviews your privacy policy.' },
 
   // ── Working with us ──
   { category: 'working', question: 'Can we see our store running on Shopify before we commit?',
@@ -288,7 +289,7 @@ const PLATFORMS: { n: string; name: string; d: string; src: string; srcLabel: st
     d: 'Usually the most custom of the four: extensions, filtered category addresses and customer groups that set trade prices. Adobe ended standard support for 2.4.6 on 11 August 2026, so many stores are choosing between an upgrade and a move. Shopify publishes no Magento migration guide, and its free migration app does not read Magento, so the data move is scripted.',
     src: SRC_ADOBE_LIFECYCLE, srcLabel: 'Adobe Commerce lifecycle policy' },
   { n: '02', name: 'Neto (Maropost Commerce Cloud)',
-    d: 'A platform many Australian merchants run, bundling marketplace listings, POS and warehouse picking with the webstore. Maropost’s knowledge base has export wizards for sales orders, customers, and categories and content, which is where the data comes from. The bigger job is giving Amazon Australia, Catch, Bunnings Marketplace and Pick’n Pack a new home on Shopify.',
+    d: 'A platform many Australian merchants run, bundling marketplace listings, POS and warehouse picking with the webstore. Maropost’s knowledge base has export wizards for sales orders, customers, and categories and content, which is where the data comes from. The bigger job is giving Amazon Australia, Bunnings Marketplace and Pick’n Pack a new home on Shopify.',
     src: SRC_MAROPOST_KB, srcLabel: 'Maropost (Neto) knowledge base' },
   { n: '03', name: 'WooCommerce',
     d: 'The one source of the four that Shopify’s free Store Migration app reads, for products and customers. It leaves behind everything a plugin did: subscriptions, wholesale pricing, product add-ons, SEO fields and the Xero or MYOB link. Watch the permalinks too: a store on WooCommerce’s Shop base option keeps products under /shop/, a path Shopify will not redirect from.',
@@ -336,7 +337,7 @@ export default function ShopifyMigrationAUPage() {
               <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
               <p className="lead">
                 Your store has outgrown its platform. Orders flow into Xero or MYOB, stock sits in Cin7 or
-                Unleashed, listings go out to Amazon.com.au, Catch or Bunnings Marketplace, and shoppers pay with
+                Unleashed, listings go out to Amazon.com.au, Kogan or Bunnings Marketplace, and shoppers pay with
                 Afterpay or Zip. We move all of it to Shopify in a rehearsed order, keep every old web address
                 working with a written redirect map, and show you a draft of your store on your own data before
                 you sign.
@@ -395,7 +396,7 @@ export default function ShopifyMigrationAUPage() {
               { v: '100,000', t: 'URL redirects on a standard Shopify plan, 20 million on Plus', s: 'Shopify Help Center', u: SRC_REDIRECTS },
               { v: '2 to 5 yrs', t: 'of past orders Shopify suggests importing, at least your returns window', s: 'Shopify Plus launch checklist', u: SRC_PLUS_CHECKLIST },
               { v: '11 Aug 2026', t: 'standard support ended for Adobe Commerce 2.4.6', s: 'Adobe lifecycle policy', u: SRC_ADOBE_LIFECYCLE },
-              { v: '$3M', t: 'annual turnover above which most businesses are covered by the Privacy Act 1988', s: 'OAIC, small business', u: SRC_OAIC_SMALL },
+              { v: '$3M', t: 'annual turnover above which a business must comply with the Privacy Act 1988', s: 'OAIC, small business', u: SRC_OAIC_SMALL },
             ].map((r) => (
               <div className="ledgercell" key={r.t}>
                 <div className="k"><a href={r.u} {...extLink}>{r.s}</a></div>
@@ -447,9 +448,9 @@ export default function ShopifyMigrationAUPage() {
                   <div className="sec">§03</div>
                   <p>
                     This page is for established companies with a working store, real order volume and systems
-                    hanging off it: brands, wholesalers and retailers whose platform has become slow, costly to
-                    patch or hard to hire for. If you are launching a brand new store instead, our{' '}
-                    <a href="/au/shopify-development">Shopify development team in Australia</a> is the better
+                    hanging off it: brands and wholesalers whose platform has become slow or costly to
+                    patch. If you are launching a brand new store instead, our{' '}
+                    <a href="/au/shopify-development">Shopify development for Australian stores</a> is the better
                     starting point.
                   </p>
                 </div>
@@ -622,7 +623,7 @@ export default function ShopifyMigrationAUPage() {
                   postcodes.
                 </p></div>
                 <div className="fact"><div className="sec">§04</div><p>
-                  <b>Marketplaces.</b> Amazon.com.au, eBay, Catch, Kogan, MyDeal, Bunnings Marketplace and THE ICONIC
+                  <b>Marketplaces.</b> Amazon.com.au, eBay, Kogan, Bunnings Marketplace and THE ICONIC
                   each need a new source of stock and a new path for orders. Neto merchants feel this most, because
                   the old platform ran many of those channels itself. We name one owner per channel and test an
                   order through each before cutover.
@@ -655,17 +656,17 @@ export default function ShopifyMigrationAUPage() {
             <div className="section-head plat-head">
               <div>
                 <div className="eyebrow">What the market charges</div>
-                <h2>Published AUD ranges for a Shopify migration, from agencies working in Australia</h2>
+                <h2>Published Australian ranges for a Shopify migration, from agencies working in Australia</h2>
               </div>
               <p>
-                These are other firms’ published build figures in AUD, read on their own pages on 29 October 2026.
+                These are other firms’ published build figures, read on their own pages on 29 October 2026. Jaboo quotes in AUD; Perceptiv’s row has no currency label, but the Year 1 totals in its table are labelled AUD.
                 Neither page says whether its figures include GST, so ask every agency you talk to.
               </p>
             </div>
             <div className="platlist" role="list">
               <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>$5,000 to $60,000+</h3></div><p className="plat-build">Jaboo, a Shopify Premier Partner, for Shopify migrations in Australia overall, from a theme lift-and-shift to a re-platform. <a href={SRC_JABOO} {...extLink}>Jaboo cost guide</a>.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>$5,000 to $25,000+</h3></div><p className="plat-build">Jaboo’s figure for typical migration quotes from platforms such as Neto, depending on complexity. <a href={SRC_JABOO} {...extLink}>Jaboo cost guide</a>.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>$40,000+</h3></div><p className="plat-build">Jaboo’s tier for re-platforming with custom design, ERP or warehouse integration, B2B company accounts and price lists. <a href={SRC_JABOO} {...extLink}>Jaboo cost guide</a>.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>$40,000+</h3></div><p className="plat-build">Jaboo’s tier for re-platforming with custom design, ERP or warehouse integration, B2B functionality, Shopify Markets and custom apps. <a href={SRC_JABOO} {...extLink}>Jaboo cost guide</a>.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>$45,000 to $160,000</h3></div><p className="plat-build">Perceptiv Digital, migration and build of a mid-level Shopify Plus store from Neto: upwards of 5,000 SKUs, one currency, one warehouse, one or two integrations. <a href={SRC_PERCEPTIV} {...extLink}>Perceptiv Neto to Shopify page</a>.</p></div>
             </div>
             <div className="au-split">
@@ -682,7 +683,7 @@ export default function ShopifyMigrationAUPage() {
                 <p>
                   FactoryJet quotes a fixed price in writing for each phase after a short scoping call, and states
                   whether GST is included. Each phase is signed on its own, so you are never committed to the whole
-                  programme on day one.
+                  program on day one.
                 </p>
                 <ModalCTAButton label="Get a fixed-scope migration quote" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               </div>
@@ -830,10 +831,10 @@ export default function ShopifyMigrationAUPage() {
           <div className="wrap">
             <div>
               <div className="eyebrow">Ready when you are</div>
-              <h2>Move to Shopify with your sales, your rankings and your books intact</h2>
+              <h2>Move to Shopify with your sales and your rankings intact</h2>
               <p>
                 Send your name and work email, and attach your brief if you have one. The founder replies within 24
-                hours to book a short call about your platform, your systems and a fixed price for the first phase.
+                hours to book a short call about your platform and a fixed price for the first phase.
               </p>
             </div>
             <div className="ctas">
