@@ -49,7 +49,7 @@ const UPDATED = '2026-10-29';
 const TITLE = 'AI for Ecommerce Australia | Ecommerce AI Agents | FactoryJet';
 const H1 = 'Ecommerce AI Agents for Australian Online Stores and Marketplaces';
 const DESCRIPTION =
-  'AI agents for established Australian online stores: order questions, returns, marketplace listings and stock, wired into Shopify, Xero, MYOB, Cin7 and Australia Post.';
+  'AI agents for Australian online stores: order questions, returns, marketplace listings and stock, wired into Shopify, Xero, MYOB and Australia Post.';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD. */
 const crumbs = [
@@ -89,10 +89,6 @@ const SRC_OAIC_APP1 =
 // 5 March 2026, AUD, GST not stated: "Customer service automation $10,000 - $25,000",
 // "Multi-system workflow automation $20,000 - $50,000+".
 const SRC_FLOWTIVITY = 'https://flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026/';
-// Web Video Digital, custom AI agent cost in Australia, 5 August 2026, GST not stated:
-// "between AUD 15,000 and AUD 150,000"; "most small-to-medium business projects land
-// somewhere in the AUD 30,000 to AUD 80,000 range".
-const SRC_WVD = 'https://webvideodigital.com.au/custom-ai-agent-cost-in-australia/';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -116,7 +112,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'What is marketplace automation?',
     answer: 'Marketplace automation means software keeps your listings, stock, prices and orders in step across the channels you sell on, such as Amazon.com.au, eBay, Kogan or Bunnings Marketplace, so nobody retypes them. Classic tools sync fields on a schedule. An AI agent adds the reading work: rewriting titles to each channel’s rules, fixing rejected listings, and sorting buyer messages that arrive in each seller centre.' },
   { category: 'basics', question: 'Is ecommerce being taken over by AI?',
-    answer: 'Not taken over, but the office work behind a store is changing fast. Shoppers still buy from brands they trust, and your team still makes the calls on price, stock and customers. What shifts is who does the reading and copying between systems. Stores that let an agent draft the routine replies and listing fixes free their people for buying, merchandising and the customers who need a person.' },
+    answer: 'No. The office work behind a store is changing fast. Shoppers still buy from brands they trust, and your team still makes the calls on price, stock and customers. What shifts is who does the reading and copying between systems. Stores that let an agent draft the routine replies and listing fixes free their people for buying, merchandising and the customers who need a person.' },
 
   // ── Systems ──
   { category: 'systems', question: 'Which store platforms do your agents work with?',
@@ -136,25 +132,25 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes, and it is usually the first job we build. Plan for one limit. Australia Post says its Track Items API allows 10 requests a minute with up to 10 tracking IDs each, so an agent cannot fetch tracking fresh for every question in a busy week. We store tracking events as they arrive and answer from that record. StarTrack and Sendle orders are handled through their own connections.',
     links: [{ href: SRC_AUSPOST, label: 'Australia Post: Track Items API limits' }] },
   { category: 'systems', question: 'Can the agent handle Afterpay, Zip and Stripe refunds?',
-    answer: 'Yes. The agent reads the return, tests it against your policy and lines up the refund on the payment method the shopper used. Afterpay’s API documents one refund call for a full or partial refund, safe to retry when each request carries its own unique ID. That matters for an agent, because a retried call must never refund twice. We build every refund path so a person approves before money moves.',
+    answer: 'Yes. The agent reads the return, tests it against your policy and lines up the refund on the payment method the shopper used. Afterpay’s API documents one refund call for a full or partial refund, and it can be retried safely when the retry reuses the first request’s requestId and merchantReference. That matters for an agent, because a retried call must never refund twice. We build every refund path so a person approves before money moves.',
     links: [{ href: SRC_AFTERPAY, label: 'Afterpay API: create refund' }] },
 
   // ── Privacy and safety ──
   { category: 'privacy', question: 'Does the Privacy Act apply to an ecommerce AI agent?',
-    answer: 'Yes, when your business falls under the Privacy Act 1988 and the agent handles customer names, addresses or order histories, yes. The OAIC says privacy obligations apply to any personal information put into an AI system, and to output that contains it. In practice we pass the agent only the fields a job needs, keep logs of what it saw, and check which AI provider processes the data before building.',
+    answer: 'Yes, when your business falls under the Privacy Act 1988 and the agent handles customer names, addresses or order histories. A delivery address or a past order is personal information the moment it reaches the model, per OAIC guidance on AI products. So a where-is-my-order agent checks the shopper’s email and order number before it shares any order details, reads only the order it was asked about, and logs what it saw. We also confirm which AI provider processes the data before building.',
     links: [{ href: SRC_OAIC_AI, label: 'OAIC: privacy and commercially available AI' }] },
   { category: 'privacy', question: 'Do we have to tell shoppers they are chatting with AI?',
     answer: 'OAIC guidance asks businesses to make sure any chatbot or other AI tool facing the public is clearly identified as AI, and that privacy policies explain how the business uses AI. We label the chat as an AI assistant, show how to reach a person, and give you wording for your privacy policy. Your adviser should still review the final policy.' },
   { category: 'privacy', question: 'What changes for ecommerce agents on 10 December 2026?',
-    answer: 'From 10 December 2026, under changes made by the Privacy and Other Legislation Amendment Act 2024, APP 1 requires your privacy policy to describe computer programs that use personal information to make decisions that could significantly affect a person’s rights or interests. An agent that refuses refunds or blocks accounts by itself may fall in scope. We document what each agent decides so the policy can say so accurately.',
+    answer: 'If your business is covered by the Privacy Act, then from 10 December 2026, under changes made by the Privacy and Other Legislation Amendment Act 2024, APP 1 requires your privacy policy to describe the kinds of personal information used and the kinds of decisions made by computer programs that could significantly affect a person’s rights or interests. Most businesses under A$3 million turnover are exempt. An agent that refuses refunds or blocks accounts by itself may fall in scope. We document what each agent decides so the policy can say so accurately.',
     links: [{ href: SRC_OAIC_APP1, label: 'OAIC: APP 1 guidelines' }] },
   { category: 'privacy', question: 'Is it safe to give an AI agent access to our store?',
     answer: 'Safety comes from the access you grant, so each agent gets its own API key with the least permission the job needs, starts read-only, and logs every action with what it saw. Refunds, price changes, discount codes and account changes stay behind a person until the logs show the agent follows your rules. There is one switch that pauses it, and you hold it.' },
 
   // ── Cost, briefs and working with us ──
   { category: 'working', question: 'How much does an ecommerce AI agent cost to build in Australia?',
-    answer: 'Flowtivity’s Australian pricing guide (March 2026) lists customer service automation at A$10,000 to A$25,000 and multi-system workflow automation at A$20,000 to A$50,000 or more. Web Video Digital’s August 2026 guide puts most small and mid-size custom agent projects at A$30,000 to A$80,000. Neither says whether GST is included. These are market ranges, not our prices. FactoryJet quotes a fixed price in writing after a short scoping call.',
-    links: [{ href: SRC_FLOWTIVITY, label: 'Flowtivity, AU pricing guide (March 2026)' }, { href: SRC_WVD, label: 'Web Video Digital, AU agent cost (August 2026)' }] },
+    answer: 'For a store, the price moves with three things: how many sales channels the agent covers, whether it only reads or also writes back to your ERP or accounting system, and how much product data needs cleaning first. A support agent that reads Shopify and Australia Post sits at the low end. One that writes stock to Cin7 across four marketplaces costs more, because every write needs testing. Flowtivity’s March 2026 guide lists customer service automation at A$10,000 to A$25,000, GST not stated. That is a market range, not our price; we quote a fixed price in writing after a short scoping call.',
+    links: [{ href: SRC_FLOWTIVITY, label: 'Flowtivity, AU pricing guide (March 2026)' }, { href: '/au/ai-agents#cost', label: 'More published AU agent cost ranges' }] },
   { category: 'working', question: 'Should we buy an app or have a custom agent built?',
     answer: 'If an app handles the job out of the box, use the app. Helpdesk tools such as Gorgias answer standard policy questions well. Commission a custom agent when the work depends on your own policies, spans two systems such as Shopify and Cin7, or touches money. Many stores run both: an app for front-line chat and a custom agent for returns, trade orders and marketplace listings.',
     links: [{ href: '/au/ai-customer-service', label: 'AI customer service in Australia' }] },
@@ -431,8 +427,8 @@ export default function EcommerceAiAgentsAUPage() {
             {[
               { v: '10 / min', t: 'requests allowed on Australia Post’s Track Items API, with up to 10 tracking IDs each', s: 'Australia Post Developer Centre', u: SRC_AUSPOST },
               { v: 'AU', t: 'Amazon lists Australia as its own Selling Partner API marketplace, in the Far East region', s: 'Amazon SP-API', u: SRC_AMAZON },
-              { v: 'Full or part', t: 'Afterpay’s refund call covers both, and is safe to retry when each request has a unique ID', s: 'Afterpay API reference', u: SRC_AFTERPAY },
-              { v: '10 Dec 2026', t: 'privacy policies must start describing programs that make significant decisions with personal information', s: 'OAIC, APP 1', u: SRC_OAIC_APP1 },
+              { v: 'Full or part', t: 'Afterpay’s refund call covers both, and is safe to retry when the retry reuses the first requestId and merchantReference', s: 'Afterpay API reference', u: SRC_AFTERPAY },
+              { v: '10 Dec 2026', t: 'privacy policies of businesses covered by the Privacy Act must describe the kinds of decisions computer programs make with personal information', s: 'OAIC, APP 1', u: SRC_OAIC_APP1 },
             ].map((r) => (
               <div className="ledgercell" key={r.t}>
                 <div className="k"><a href={r.u} {...extLink}>{r.s}</a></div>
@@ -483,7 +479,7 @@ export default function EcommerceAiAgentsAUPage() {
                 <div className="fact">
                   <div className="sec">§03</div>
                   <p>
-                    The hard part is rarely the AI. It is the limits of the systems around it. Australia Post allows 10
+                    Agents usually fail on the limits of the systems around them. Australia Post allows 10
                     tracking requests a minute on its Track Items API, so an agent that looks up tracking live for every
                     question stalls in a sale week. Ours store tracking events as they arrive and answer from that record.
                     Details like this decide whether an agent survives Click Frenzy or falls over on day two.
@@ -555,7 +551,7 @@ export default function EcommerceAiAgentsAUPage() {
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
                   Selling on four channels means four sets of product data rules, four seller inboxes and four places
-                  where stock can drift. Most of the time lost is not in selling. It is in rewriting the same product to
+                  where stock can drift. Most of the lost time goes into rewriting the same product to
                   each channel’s rules and chasing listings that get rejected for a missing attribute.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
@@ -616,7 +612,7 @@ export default function EcommerceAiAgentsAUPage() {
             </div>
             <p className="tablenote">
               Refunds on Afterpay can be full or partial, and the <a href={SRC_AFTERPAY} {...extLink}>Afterpay refund call</a> is
-              safe to retry only when each request carries a unique ID. We build every refund path around that, so a retry never
+              safe to retry when the retry reuses the first request’s requestId and merchantReference. We build every refund path around that, so a retry never
               pays twice.
             </p>
           </div>
@@ -673,7 +669,7 @@ export default function EcommerceAiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Send us your brief</div>
-              <h2>Have a brief or an RFP? Send it as it is.</h2>
+              <h2>Send your brief or RFP as it is</h2>
             </div>
             <div className="factswrap">
               <div className="factlist">
@@ -730,7 +726,7 @@ export default function EcommerceAiAgentsAUPage() {
         <section className="section platforms" id="work">
           <div className="wrap">
             <div className="section-head">
-              <div className="eyebrow">Work we have done</div>
+              <div className="eyebrow">Work on the same platforms</div>
               <h2>Store and back-office work on the same platforms</h2>
               <p className="lead">
                 None of these is an Australian client. We show them because the platforms match the stack many Australian
@@ -738,7 +734,7 @@ export default function EcommerceAiAgentsAUPage() {
               </p>
             </div>
             <div className="platlist" role="list">
-              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Sow Easy</h3></div><p className="plat-build">WooCommerce trade ordering connected to Odoo, so orders and stock live in one place. <a href="/case-studies/sow-easy-distributor-portal">Read the case study</a>.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Sow Easy</h3></div><p className="plat-build">WooCommerce trade store reading stock, pricing and SKUs from Odoo (build in progress). <a href="/case-studies/sow-easy-distributor-portal">Read the case study</a>.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Mannik</h3></div><p className="plat-build">WooCommerce store work and an AI search project.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>DTF Virginia</h3></div><p className="plat-build">Shopify store work.</p></div>
             </div>
@@ -766,9 +762,10 @@ export default function EcommerceAiAgentsAUPage() {
                   an AI label and a way to reach a person.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><p>
-                  From 10 December 2026, under the Privacy and Other Legislation Amendment Act 2024, APP 1 requires privacy
-                  policies to describe computer programs that use personal information in decisions that could
-                  significantly affect a person. An agent that refuses a refund or blocks an account by itself may be one.
+                  If your business is covered by the Privacy Act (most businesses under A$3 million turnover are exempt),
+                  then from 10 December 2026, under the Privacy and Other Legislation Amendment Act 2024, APP 1 requires
+                  privacy policies to describe the kinds of personal information used and the kinds of decisions made by
+                  computer programs that could significantly affect a person’s rights or interests. An agent that refuses a refund or blocks an account by itself may be one.
                   We record what each agent decides so your policy can say so. We are not lawyers; your adviser signs off.
                 </p></div>
               </div>
@@ -799,10 +796,10 @@ export default function EcommerceAiAgentsAUPage() {
             <div className="au-split">
               <div>
                 <p>
-                  In its March 2026 pricing guide, Flowtivity lists customer service automation at A$10,000 to A$25,000 and
-                  multi-system workflow automation at A$20,000 to A$50,000 or more. Web Video Digital’s August 2026 guide puts
-                  most small and mid-size custom agent projects at A$30,000 to A$80,000. Neither guide says whether its
-                  figures include GST.
+                  An ecommerce agent costs more when it covers more sales channels, when it writes to your ERP or accounting
+                  system instead of only reading, and when product data has to be cleaned before any channel will accept it.
+                  For a starting point, Flowtivity’s March 2026 guide lists customer service automation at A$10,000 to
+                  A$25,000, GST not stated. The <a href="/au/ai-agents#cost">AI agents page</a> lists more published ranges.
                 </p>
                 <p>
                   These are market ranges, not our prices. FactoryJet quotes a fixed price in writing after a short scoping
@@ -820,7 +817,7 @@ export default function EcommerceAiAgentsAUPage() {
                   <li><span className="m">Approval steps</span><span className="t">Designed in</span></li>
                 </ul>
                 <p className="au-note">
-                  Sources: <a href={SRC_FLOWTIVITY} {...extLink}>Flowtivity (March 2026)</a>; <a href={SRC_WVD} {...extLink}>Web Video Digital (August 2026)</a>.
+                  Source: <a href={SRC_FLOWTIVITY} {...extLink}>Flowtivity (March 2026)</a>.
                 </p>
               </div>
             </div>
@@ -868,7 +865,6 @@ export default function EcommerceAiAgentsAUPage() {
               <a href={SRC_OAIC_AI} {...extLink}>OAIC, privacy and commercially available AI</a>
               <a href={SRC_OAIC_APP1} {...extLink}>OAIC, APP 1 guidelines</a>
               <a href={SRC_FLOWTIVITY} {...extLink}>Flowtivity, AI agent cost in Australia</a>
-              <a href={SRC_WVD} {...extLink}>Web Video Digital, custom AI agent cost</a>
             </div>
           </div>
         </section>
