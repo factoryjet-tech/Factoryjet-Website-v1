@@ -49,7 +49,7 @@ const READ_ON = '29 October 2026';
 const TITLE = 'Accounts Receivable Automation UK | Credit Control Agent | FactoryJet';
 const H1 = 'Accounts Receivable Automation UK: Credit Control That Chases on Time, Matches Remittances and Works Out Late Payment Interest';
 const DESCRIPTION =
-  'Accounts receivable automation for UK finance teams on Xero, Sage, QuickBooks, Business Central or Odoo. Reminders, remittance matching and statutory interest, built for you.';
+  'Accounts receivable automation for UK credit control on Xero, Sage, QuickBooks, Business Central or Odoo: reminders, remittance matching, statutory interest.';
 
 /* Design values, copied from ../ai-agents/ai-agents.css so inline styles stay
    on-system without CSS custom property references in this file. */
@@ -145,19 +145,19 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'law',
     question: 'How much interest can you charge on a late payment in the UK?',
     answer:
-      'Between businesses, GOV.UK says statutory interest is 8% plus the Bank of England base rate. The Bank of England listed Bank Rate at 3.75% on 29 October 2026, which makes 11.75% a year. GOV.UK’s own method divides the yearly figure by 365 for a daily amount, then multiplies by the days late. A contract can set its own late payment terms, so ask your solicitor which rate applies to your debt.',
+      'Between businesses, GOV.UK says statutory interest is 8% plus the Bank of England base rate. The reference rate is the Bank Rate on 30 June or 31 December before the half-year the debt fell late in. Bank Rate was 3.75% on 30 June 2026, which makes 11.75% a year. GOV.UK’s own method divides the yearly figure by 365 for a daily amount, then multiplies by the days late. A contract can set its own late payment terms, so ask your solicitor which rate applies to your debt.',
   },
   {
     category: 'law',
     question: 'What is the Late Payment of Commercial Debts Act?',
     answer:
-      'It is the 1998 Act that lets a business claim statutory interest and debt recovery costs when another business pays late. GOV.UK summarises it in three parts: when a payment becomes late, interest at 8% plus base rate, and a fixed sum of £40, £70 or £100 depending on the size of the debt, plus reasonable recovery costs. An agent can work the figures out. Deciding to claim stays with you.',
+      'It is the 1998 Act that lets you, as the supplier, add charges to an invoice another business pays late, even if your contract says nothing about it. You can add statutory interest for each day late. You can add one fixed sum per invoice: £40 under £1,000, £70 up to £9,999.99, and £100 from £10,000. Reasonable recovery costs can go on top. An agent can work the figures out. Deciding to claim stays with you.',
   },
   {
     category: 'law',
     question: 'How long should you allow a business customer to pay an invoice?',
     answer:
-      'If you agree no date, GOV.UK says a business payment is late 30 days after the customer receives the invoice or you deliver, whichever is later. An agreed date must usually be within 60 days between businesses, and longer only if it is fair to both sides. Public authorities should pay within 30 days. Your agent reads each customer’s terms from the ledger rather than assuming one rule.',
+      'Set the term on the invoice and in your contract before you supply. Between businesses you can agree up to 60 days, and longer only if it is fair to both sides. Leave the date out and the customer has 30 days from receiving the invoice or the goods, whichever is later, before you can add interest. Public authorities should pay you within 30 days. Your agent reads each customer’s terms from the ledger rather than assuming one rule.',
   },
   {
     category: 'law',
@@ -273,7 +273,7 @@ const CYCLE: { stage: string; agent: string; team: string }[] = [
   { stage: 'Due date passes', agent: 'Checks the bank feed and ledger first, then sends reminder 1 with the open items listed.', team: 'Approves the wording once. Changes it whenever they like.' },
   { stage: 'Customer replies', agent: 'Reads the reply and tags it: promise to pay, dispute, missing PO, copy invoice or proof of delivery.', team: 'Owns every dispute and every promise that slips.' },
   { stage: 'Remittance arrives', agent: 'Splits one receipt across the invoices it pays and posts the allocation for review.', team: 'Confirms matches the agent marks as unsure.' },
-  { stage: '30 days overdue', agent: 'Drafts reminder 2 with statutory interest and the fixed sum worked out to the day.', team: 'Decides whether to claim interest for this customer.' },
+  { stage: '30 days overdue', agent: 'Drafts reminder 2 with statutory interest at the right half-year rate and the fixed sum, worked out to the day.', team: 'Decides whether to claim interest for this customer.' },
   { stage: 'Account at risk', agent: 'Flags accounts over limit or crossing your hold rule, with history attached.', team: 'Puts the account on hold, agrees a plan or refers it on.' },
   { stage: '6 months unpaid', agent: 'Lists invoices crossing the VAT bad debt relief line for the next return.', team: 'Your accountant decides on write-off and the claim.' },
 ];
@@ -476,7 +476,7 @@ export default function AccountsReceivableAutomationUKPage() {
                   <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>£273.70</div>
                 </div>
                 <p style={{ fontSize: 12.5, marginTop: 8 }}>
-                  Our arithmetic, for illustration, using GOV.UK’s method and the Bank Rate listed on {READ_ON}.
+                  Our arithmetic, for illustration, using GOV.UK’s method and the 3.75% Bank Rate in force on 30 June 2026.
                   Your contract terms and your solicitor decide what you claim.
                 </p>
               </div>
@@ -501,8 +501,8 @@ export default function AccountsReceivableAutomationUKPage() {
               <span className="lab">Three terms we use a lot</span>
               <p>
                 <b>Credit control</b> is the UK name for managing customers who buy on terms, from the credit limit to
-                the last reminder. A <b>remittance</b> is the note a customer sends saying which invoices a payment
-                covers. <b>Statutory interest</b> is the interest the law lets one business charge another for paying
+                the last reminder. A <b>remittance advice</b> is the email or PDF a customer sends with a BACS payment listing the
+                invoices it settles. <b>Statutory interest</b> is the interest the law lets one business charge another for paying
                 late, whether or not the contract mentions it.
               </p>
             </div>
@@ -519,9 +519,9 @@ export default function AccountsReceivableAutomationUKPage() {
           <div className="wrap">
             <ul className="col-4" style={{ gap: 20 }}>
               {[
-                { v: '30 days', t: 'after invoice or delivery is when GOV.UK says a business payment is late if no date was agreed', s: 'GOV.UK, late commercial payments', u: SRC.govLate.url },
+                { v: '£100', t: 'is the fixed sum you can add to a late invoice of £10,000 or more, on top of interest', s: 'GOV.UK, debt recovery costs', u: SRC.govCosts.url },
                 { v: '8% + base', t: 'is the statutory interest GOV.UK sets for late payment between businesses', s: 'GOV.UK, charging interest', u: SRC.govInterest.url },
-                { v: '£40 to £100', t: 'is the fixed recovery sum you can add to each late payment, set by the size of the debt', s: 'GOV.UK, debt recovery costs', u: SRC.govCosts.url },
+                { v: '11.75%', t: 'a year is the statutory rate on debts falling late in the second half of 2026: 8% plus the 3.75% Bank Rate of 30 June', s: 'Bank of England, Bank Rate', u: SRC.boeRate.url },
                 { v: '6 months', t: 'unpaid is the wait HMRC sets before you can claim VAT bad debt relief', s: 'HMRC, VAT Notice 700/18', u: SRC.govBadDebt.url },
               ].map((r) => (
                 <li key={r.t}>
@@ -588,8 +588,9 @@ export default function AccountsReceivableAutomationUKPage() {
                   <p>
                     <b>Interest.</b> Between businesses the statutory rate is 8% plus the Bank of England base rate.
                     GOV.UK’s worked example takes the yearly interest, divides it by 365 for a daily figure and
-                    multiplies by the days late. On {READ_ON} the Bank of England listed Bank Rate at 3.75%, with the
-                    next decision due on 5 November 2026.
+                    multiplies by the days late. The reference rate is the Bank Rate on 30 June or 31 December before the
+                    half-year the debt fell late in. Bank Rate was 3.75% on 30 June 2026. A change at a later decision
+                    only affects debts that fall late from the next 1 January or 1 July.
                   </p>
                   <p>
                     <b>Fixed sums.</b> On top of interest you can claim a fixed sum per payment: £40 on a debt up to
@@ -689,14 +690,15 @@ export default function AccountsReceivableAutomationUKPage() {
                   <p>
                     <b>Renting.</b> Chaser is a UK credit control product. Its site lists email, SMS and automated phone
                     reminders, a customer payment portal, and integrations with Xero, QuickBooks Online, Sage 50 UK,
-                    Sage 200 and Sage Intacct. Its UK plans were listed at £199 a month (Compact, up to £4 million
+                    Sage 200, Sage Intacct, Microsoft Dynamics 365 Business Central, NetSuite, Odoo, SAP, AccountsIQ
+                    and Stripe. Its UK plans were listed at £199 a month (Compact, up to £4 million
                     annual revenue), £599 (Core, up to £10 million) and £899 (Complete, up to £100 million), with
                     cheaper rates billed yearly. The page does not say whether VAT is included.
                   </p>
                   <p>
                     <b>Building.</b> A built agent suits a business whose rules no product setting covers: credit
                     limits shared across a group, remittances from large retailers in their own formats, Direct Debit
-                    and BACS on the same account, or an ERP that a product does not connect to. You own it, and it
+                    and BACS on the same account, or approval steps of your own on any ERP. You own it, and it
                     follows your terms rather than a vendor’s template.
                   </p>
                   <p>
@@ -708,7 +710,7 @@ export default function AccountsReceivableAutomationUKPage() {
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">A rule of thumb</span>
-                <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Rent or build"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="scorecard-row"><th><div><div className="scorecard-metric">Under 200 open invoices, one ledger</div><div className="scorecard-note">use the reminders you already pay for</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Native</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Xero, QuickBooks or Sage, standard terms</div><div className="scorecard-note">a product with a portal fits</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Rent</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">PDF remittances from big retailers</div><div className="scorecard-note">reading and splitting across invoices</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Several companies, one credit limit</div><div className="scorecard-note">group exposure across ledgers</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Business Central, NetSuite or Odoo</div><div className="scorecard-note">with your own approval steps</div></div></th><td><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Build</div></td></tr></tbody></table></div>
+                <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Rent or build"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="scorecard-row"><th><div><div className="scorecard-metric">Most payments carry an invoice reference</div><div className="scorecard-note">use the reminders you already pay for</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Native</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Xero, QuickBooks or Sage, standard terms</div><div className="scorecard-note">a product with a portal fits</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Rent</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">PDF remittances from big retailers</div><div className="scorecard-note">reading and splitting across invoices</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Several companies, one credit limit</div><div className="scorecard-note">group exposure across ledgers</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Your own approval steps on any ERP</div><div className="scorecard-note">holds, write-offs and sign-off your way</div></div></th><td><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Build</div></td></tr></tbody></table></div>
                 <p style={{ fontSize: 12.5, marginTop: 8 }}>
                   GoCardless lists UK Direct Debit from 1% plus 20p, capped at £4, on Standard, excluding VAT. Both
                   routes collect through providers like it.
@@ -761,7 +763,7 @@ export default function AccountsReceivableAutomationUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 820 }}>
               <span className="eyebrow">UK trade work</span>
-              <h2>Trade accounts we have built for UK businesses</h2>
+              <h2>UK trade stores we have built or are building</h2>
               <p className="lead mt-4">
                 Credit control starts where the trade order is placed. Two UK clients, described as their case studies
                 describe them, with no results claimed.
