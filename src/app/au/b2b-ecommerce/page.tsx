@@ -99,7 +99,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'What does B2B mean in ecommerce?',
     answer: 'B2B means business to business. In ecommerce it is a store where your customers are other companies: retailers, trade contractors, venues or distributors. They log in to an account, see the prices agreed for that account, order in cartons or pallets, and pay on terms instead of by card upfront. A retail store sells to the public at one shelf price. A B2B store sells to known accounts at many prices.' },
   { category: 'basics', question: 'What is a trade portal or dealer portal?',
-    answer: 'It is the logged-in part of a B2B store where an approved account does its ordering. A dealer portal is the same idea for manufacturers who sell through dealers, often with spec sheets, warranty forms and parts lookups added. In our Australian keyword data, dealer portal draws about 1,300 searches a month and trade portal about 170, so the words differ by industry while the job stays the same.' },
+    answer: 'It is the logged-in part of a B2B store where an approved account does its ordering. A dealer portal is the same idea for manufacturers who sell through dealers, often with spec sheets, warranty forms and parts lookups added. Wholesalers tend to say trade portal and manufacturers tend to say dealer portal, but the job is the same.' },
   { category: 'basics', question: 'What are some examples of B2B ecommerce in Australia?',
     answer: 'A food wholesaler letting cafes reorder online before a delivery cut-off. A building supplies distributor giving each trade account its own prices and a 30-day account. A manufacturer of pumps or fittings letting dealers check stock and order spare parts. A homewares brand running a retail store and a stockist portal from one catalogue. Each one moves orders out of email and phone calls and into a system that writes straight to the books.' },
   { category: 'basics', question: 'Can one store sell to the public and to trade buyers?',
@@ -115,8 +115,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'platforms', question: 'How much does Shopify B2B cost?',
     answer: 'Shopify includes its B2B features in the Basic, Grow, Advanced and Plus plans, so there is no separate B2B licence on those plans. What you pay is the plan that fits your catalogue and price-list count, plus any apps and the build work to set up companies, catalogues and your accounting connection. Shopify publishes its current plan fees in Australian dollars on its own pricing page, and those change, so read them there.',
     links: [{ href: SRC_SHOPIFY_PRICING, label: 'Shopify Australia pricing' }] },
-  { category: 'platforms', question: 'Does Cin7 have a B2B portal, and is it enough?',
-    answer: 'Cin7 Core, the product formerly sold as DEAR, has a B2B portal, and its help centre says each product can carry up to 10 price points assigned to customers or to a sale order. For a wholesaler with simple tiers that can be enough. Businesses that need a branded storefront, retail and trade in one place, richer product content or SEO usually put a store in front of Cin7 and let Cin7 keep stock and pricing.',
+  { category: 'platforms', question: 'Are Cin7 Core price tiers enough for trade ordering?',
+    answer: 'Cin7 Core’s help centre says each product can carry up to 10 price points, assigned to customers or to a sale order. For a wholesaler with simple tiers that can be enough. Businesses that need a branded storefront, retail and trade in one place, richer product content or SEO usually put a store in front of Cin7 and let Cin7 keep stock and pricing.',
     links: [{ href: SRC_CIN7, label: 'Cin7 Core: different prices for a customer' }] },
   { category: 'platforms', question: 'Does Unleashed have a B2B store?',
     answer: 'Yes. Unleashed has its own B2B store. Its help centre says the B2B Portal pushes product details, images, customers, stock and pricing to the store, imports orders into Unleashed every 10 to 15 minutes, and syncs order status back every 15 minutes. If a 15-minute gap matters, for example on fast-moving stock or cut-off times, factor that into the design or put a store with a direct connection in front.',
@@ -136,13 +136,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── GST, invoices and Peppol ──
   { category: 'gst', question: 'Do trade prices on a B2B portal need to include GST?',
-    answer: 'Not if only businesses can see them. The ACCC says a business displaying prices only to other businesses does not need to include GST in the total price. Retail shoppers are different: prices shown to consumers must be the total as a single figure. So a mixed store usually shows GST-inclusive prices to the public and ex-GST prices to logged-in trade accounts, with GST added clearly at checkout and on the invoice.',
+    answer: 'Not if only businesses can see them. The ACCC says a business displaying prices only to other businesses does not need to include GST in the total price. Retail shoppers are different: prices shown to consumers must be the total as a single figure. So a mixed store usually shows GST-inclusive prices to the public and ex-GST prices to logged-in trade accounts. We then add GST clearly at checkout and on the tax invoice.',
     links: [{ href: SRC_ACCC_PRICE, label: 'ACCC: price displays' }] },
   { category: 'gst', question: 'What must a B2B tax invoice show in Australia?',
     answer: 'The ATO lists the seller’s identity and ABN, the date, a description of what was sold with quantity and price, the GST, and wording saying the document is intended as a tax invoice. For sales of $1,000 or more it must also show the buyer’s identity or ABN. If a customer asks for a tax invoice you must give one within 28 days, unless the sale is $82.50 including GST or less. We set up order invoices to meet these.',
     links: [{ href: SRC_ATO_TAX_INVOICES, label: 'ATO: tax invoices' }] },
   { category: 'gst', question: 'Is e-invoicing mandatory for businesses in Australia?',
-    answer: 'Not between private businesses today. Xero’s guide for accountants says B2B e-invoicing remains voluntary, and the ATO says eInvoicing is not a compliance or revenue measure. Government is further along: the ATO says Commonwealth agencies are working towards 30% of received invoices as eInvoices by 1 July 2026. If you supply government or large buyers who ask for Peppol invoices, it pays to be ready.',
+    answer: 'Not between private businesses today. Xero’s guide for accountants says B2B e-invoicing remains voluntary, and the ATO says eInvoicing is not a compliance or revenue measure. Government is further along: the ATO says Commonwealth agencies must be able to process and send eInvoices automatically by December 2026, after a target of 30% of received invoices as eInvoices by 1 July 2026. If you supply government or large buyers who ask for Peppol invoices, it pays to be ready.',
     links: [{ href: SRC_ATO_GOV, label: 'ATO: eInvoicing for government' }] },
   { category: 'gst', question: 'What is a Peppol e-invoice, and is Peppol only for B2B?',
     answer: 'Peppol is an international framework for sending invoices as structured data between accounting systems, so the buyer’s software reads them without anyone typing. The ATO is the Australian Peppol Authority. It works for business to business and business to government invoicing. The ATO says over 400,000 Australian businesses can trade eInvoices on the network, and many accounting packages already include it.',
@@ -161,8 +161,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   // ── Working with us ──
   { category: 'working', question: 'What should our brief or RFP include?',
     answer: 'Five things get you an accurate quote. A product export with SKU count and units of sale. Your account types and how a price is worked out for each. The systems you run, with editions: Xero or MYOB, Cin7, Unleashed, NetSuite or Odoo. One real order traced from the buyer’s email to the invoice. And any channels beyond the portal, such as retail, Amazon.com.au or Bunnings Marketplace. A one-page note is fine.' },
-  { category: 'working', question: 'Have you built B2B stores for Australian businesses?',
-    answer: 'We do not show any Australian client as proof on this page. What we can show is the same kind of work elsewhere: a live Commerceflo trade storefront for GPSUK, a UK promotional products supplier whose buyers reorder at their own account prices, and a WooCommerce trade store connected to Odoo for Sow Easy, which is in testing. On a call we walk you through both, then build a draft with your own products.',
+  { category: 'working', question: 'What B2B trade stores have you built?',
+    answer: 'Two examples. A live Commerceflo trade storefront for GPSUK, a UK promotional products supplier whose buyers reorder at their own account prices. And a WooCommerce trade store for Sow Easy, a B2B distributor, reading stock, pricing and SKUs from Odoo, which is in testing on staging. On a call we walk you through both, then build a draft with your own products.',
     links: [{ href: '/case-studies/gpsuk-promotional-products', label: 'GPSUK case study' }] },
   { category: 'working', question: 'Who owns the portal and the code after launch?',
     answer: 'You do. The code, the repository and the admin accounts are in your name from day one, and platform and app fees are billed to your own accounts. Defects found after launch are fixed inside the build price for a cover period agreed before work starts. After that, support is optional: each change is quoted and approved before we do it, and there is no monthly minimum.' },
@@ -206,7 +206,7 @@ const PORTAL_ITEMS: { n: string; t: string; d: string }[] = [
 const SYSTEMS: { name: string; owns: string; build: string }[] = [
   { name: 'Xero', owns: 'Customers, invoices, GST and payments, often with stock kept in Cin7 or Unleashed alongside it.', build: 'Portal orders post as invoices on the right account and terms; card payouts reconcile against the bank feed.' },
   { name: 'MYOB Business and MYOB Acumatica', owns: 'Accounts and invoicing in MYOB Business; full ERP records, price lists and stock in MYOB Acumatica.', build: 'Orders post in the shape your MYOB partner expects; with Acumatica the portal reads prices and stock from it.' },
-  { name: 'Cin7 Core (formerly DEAR)', owns: 'Stock by location and customer price tiers. Cin7 Core supports up to 10 price points per product.', build: 'A store in front of Cin7 when you need retail and trade together, richer product pages or search traffic.' },
+  { name: 'Cin7 Core', owns: 'Stock by location and customer price tiers. Cin7 Core supports up to 10 price points per product.', build: 'A store in front of Cin7 when you need retail and trade together, richer product pages or search traffic.' },
   { name: 'Unleashed', owns: 'Stock, products and pricing, with its own B2B store that imports orders every 10 to 15 minutes.', build: 'Either set up the Unleashed store properly or build a portal with a direct connection where timing matters.' },
   { name: 'NetSuite, Odoo and QuickBooks Online', owns: 'Items, customers, price levels and stock in NetSuite and Odoo; accounts and invoicing in QuickBooks Online.', build: 'The portal reads from the ERP and writes orders back, so there is one set of numbers.' },
 ];
@@ -223,7 +223,6 @@ const PLATFORM_ROWS: { what: string; shopify: string; plus: string; other: strin
 
 /* ─── Australian demand, DataForSEO Google Ads volumes, location 2036, pulled 29 Oct 2026 ── */
 const DEMAND: { kw: string; v: number; kd: string }[] = [
-  { kw: 'dealer portal', v: 1300, kd: 'Manufacturers and dealers' },
   { kw: 'shopify b2b', v: 260, kd: 'Platform research' },
   { kw: 'peppol e-invoicing', v: 210, kd: 'Invoicing and finance' },
   { kw: 'b2b portal', v: 170, kd: 'Mixed intent' },
@@ -232,7 +231,7 @@ const DEMAND: { kw: string; v: number; kd: string }[] = [
   { kw: 'b2b ecommerce platform', v: 50, kd: 'Platform research' },
   { kw: 'wholesale website', v: 50, kd: 'Buyer intent' },
 ];
-const DEMAND_MAX = 1300;
+const DEMAND_MAX = 260;
 
 const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
   { href: '/au/ecommerce-development', t: 'Ecommerce development Australia', d: 'New stores and replatforms for Australian brands selling direct to consumers as well as to trade.', go: 'Explore ecommerce →' },
@@ -308,7 +307,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: { 'en-US': 'https://factoryjet.com/b2b-ecommerce', 'en-GB': 'https://factoryjet.com/uk/b2b-ecommerce', 'en-AU': CANONICAL, 'x-default': 'https://factoryjet.com/b2b-ecommerce' } },
   openGraph: {
     title: TITLE,
     description:
@@ -387,7 +386,7 @@ export default function B2bEcommerceAUPage() {
               </p>
               <HeroInlineForm region="au" source="au_b2b_ecommerce_hero" submitLabel="See a draft of my trade portal" />
               <p className="hero-alt">
-                Working software on your own products and price list before you sign. Founder replies within 24 hours.
+                Working software on your own products and price list before you sign.
               </p>
             </div>
 
@@ -678,6 +677,7 @@ export default function B2bEcommerceAUPage() {
             headline={'Want to see your own price list in a working trade portal?'}
             sub={'Tell us how a trade customer orders from you today and which systems you run. The founder will then say which platform suits you, what the first phase covers, and what a draft built on your own products would show.'}
             label={'See a draft of my trade portal'}
+            note={'Founder replies within 24 hours.'}
           />
         </div>
 
@@ -694,11 +694,11 @@ export default function B2bEcommerceAUPage() {
                   <b>Prices.</b> The ACCC says a business showing prices only to other businesses does not need to
                   include GST in the total price, while prices shown to consumers must be one total figure. A mixed
                   store therefore shows GST-inclusive prices to the public and can show ex-GST prices to logged-in
-                  trade accounts, as long as GST is added clearly at checkout.
+                  trade accounts. We then add GST clearly at checkout and on the tax invoice.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
                   <b>Tax invoices.</b> The ATO requires the buyer’s identity or ABN on tax invoices for sales of
-                  $1,000 or more, which covers most wholesale orders. If a customer asks, you must issue a tax invoice
+                  $1,000 or more. If a customer asks, you must issue a tax invoice
                   within 28 days. We capture the buyer’s ABN when an account is approved, so every portal invoice
                   carries it without anyone checking by hand.
                 </p></div>
@@ -706,8 +706,9 @@ export default function B2bEcommerceAUPage() {
                   <p>
                     <b>Peppol eInvoicing.</b> The ATO is the Australian Peppol Authority, and says over 400,000
                     Australian businesses can exchange eInvoices on the network. Between private businesses it is
-                    voluntary, according to Xero’s guide for accountants. Commonwealth agencies are working towards
-                    30% of received invoices as eInvoices by 1 July 2026. If your customers include government or
+                    voluntary, according to Xero’s guide for accountants. Commonwealth agencies must be able to
+                    process and send eInvoices automatically by December 2026, after a target of 30% of received
+                    invoices as eInvoices by 1 July 2026. If your customers include government or
                     large buyers who ask for Peppol, invoices raised from portal orders in Xero can go to them as data.
                   </p>
                   <p className="au-note">
@@ -801,8 +802,8 @@ export default function B2bEcommerceAUPage() {
                 <h2>B2B trade stores we have built and are building</h2>
               </div>
               <p>
-                Neither of these is an Australian client. We show them because the problem matches: trade buyers who
-                need their own prices and an ordering flow tied to the back office. On a call we walk you through how
+                Both solve the problem a wholesale portal exists for: trade buyers who need their own prices and an
+                ordering flow tied to the back office. On a call we walk you through how
                 each one handles accounts, pricing and orders.
               </p>
             </div>
