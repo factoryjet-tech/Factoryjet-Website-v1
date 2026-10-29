@@ -33,9 +33,10 @@ import '../au-hub.css';
    Truth rules for anyone editing this file:
    - Every platform, law and price fact links to a page fetched and read on
      2026-10-29 (SRC map below). Re-fetch before changing one.
-   - No Australian client is named or implied. Sow Easy (WooCommerce + Odoo)
-     and the two unnamed QuickBooks projects appear once, in the WORK block,
-     framed as work we have done on the same platforms, not as Australian work.
+   - No Australian client is named or implied. Sow Easy (WooCommerce + Odoo,
+     launch still ahead) and the two unnamed QuickBooks projects (in progress)
+     appear once, in the WORK block, framed as work on the same platforms, not
+     as Australian work and not as finished work.
    - No FactoryJet prices. The only figures are Flowtivity's AUD build ranges,
      whose guide does not say whether GST is included; the page says so.
    - No running, hosting, model or support cost figures (Bhavesh, 11 Oct 2026).
@@ -133,21 +134,21 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'Can ChatGPT do my bookkeeping?',
     answer: 'A chatbot on its own should not run your books. A custom agent can take the repetitive layer: lining up Stripe or Afterpay payouts against orders, finding the purchase order behind each supplier bill, and proposing a GST code from your past coding. The result is a queue of drafts for your bookkeeper, who still approves every line and still owns the BAS.' },
   { category: 'basics', question: 'Is it safe to put bank statements into ChatGPT?',
-    answer: 'Not into a free, public chatbot. The OAIC recommends that organisations do not enter personal information, and especially sensitive information, into publicly available generative AI tools. A custom agent is different: it runs under business terms, sees only the fields its job needs, signs in with its own limited login and logs every lookup. Bank data then stays inside a setup you control.',
+    answer: 'Not into a free, public chatbot. A bank statement names the people and businesses you pay and are paid by, and the OAIC’s AI guidance tells organisations to keep personal information out of publicly available generative AI tools. A custom agent is different: it runs under business terms, sees only the fields its job needs, signs in with its own limited login and logs every lookup. Bank data then stays inside a setup you control.',
     links: [{ href: SRC_OAIC_AI, label: 'OAIC guidance on AI products' }] },
   { category: 'basics', question: 'Is Xero an ERP?',
     answer: 'Xero is accounting software, and many Australian businesses run it as the centre of a wider stack: Cin7 Core or Unleashed for inventory, Shopify or a marketplace for sales, a payroll app alongside. Together those behave like an ERP. An AI agent works well across that kind of stack, because most of the slow work is copying data between the pieces. When the stack outgrows Xero, MYOB Acumatica, NetSuite and Odoo are the usual next steps.' },
 
   // ── Systems ──
   { category: 'systems', question: 'Can ChatGPT or Claude integrate with Xero?',
-    answer: 'Yes, through Xero’s own MCP server. Xero publishes it on GitHub under the MIT licence, and the README lists tools to list contacts, invoices and bank transactions, create invoices and quotes, and update draft invoices. Any MCP-capable AI client can use it. We use the same route for custom agents, with a role that excludes anything the job does not need, such as payroll tools.',
+    answer: 'Yes, through Xero’s own MCP server. Xero publishes it on GitHub under the MIT licence, and the README lists tools to list contacts, invoices and bank transactions, create invoices and quotes, and update draft invoices. Any MCP-capable AI client can use it. We use the same route for custom agents, with OAuth scopes limited to the records the job needs. Payroll and Single Touch Payroll reporting stay in your payroll app.',
     links: [{ href: SRC_XERO_MCP, label: 'Xero MCP server on GitHub' }] },
   { category: 'systems', question: 'What is the Xero MCP server?',
     answer: 'MCP, the Model Context Protocol, is an open standard for connecting AI applications to outside systems. Xero’s MCP server is its implementation for Xero, published on GitHub. It signs in either with a Custom Connection, where you set a client ID and secret, or with a bearer token for working across several Xero organisations. Its tools cover reading, creating and updating accounting records, so the permissions you grant matter.' },
   { category: 'systems', question: 'What is JAX in Xero?',
-    answer: 'JAX is the name Xero gives its own AI. In its March 2026 release Xero called JAX its AI superagent and said it would handle tasks such as cash flow forecasting and invoice tracking. JAX works inside Xero. A custom agent is for jobs that cross systems, such as turning an emailed purchase order into a Cin7 sales order and a Xero invoice, with your own approval rules.' },
+    answer: 'JAX is the name Xero gives its own AI. In its March 2026 release Xero called JAX its AI superagent and said it would handle tasks such as predicting cash flow gaps and identifying unpaid invoices. JAX works inside Xero. A custom agent is for jobs that cross systems, such as turning an emailed purchase order into a Cin7 sales order and a Xero invoice, with your own approval rules.' },
   { category: 'systems', question: 'Can an AI agent work with MYOB?',
-    answer: 'Yes. MYOB’s developer documentation says AccountRight, Essentials and MYOB Business all integrate with its Business API, and that MYOB Business will replace Essentials and AccountRight for new customers in Australia. An agent can read and draft records there under its own access. For mid-sized businesses on MYOB Acumatica, MYOB’s cloud ERP formerly called MYOB Advanced, we confirm the connection your edition allows during scoping.',
+    answer: 'Yes. One Business API covers AccountRight, Essentials and MYOB Business, per MYOB’s developer pages, and new Australian customers are now put on MYOB Business rather than the older two. An agent can read and draft records there under its own access. For mid-sized businesses on MYOB Acumatica, MYOB’s cloud ERP formerly called MYOB Advanced, we confirm the connection your edition allows during scoping.',
     links: [{ href: SRC_MYOB_API, label: 'MYOB Business API documentation' }] },
   { category: 'systems', question: 'Does NetSuite have AI?',
     answer: 'Yes. NetSuite now speaks the Model Context Protocol, according to Oracle’s help centre, and ships a SuiteApp called MCP Standard Tools for working with your NetSuite data, with the option to build your own tools. Oracle does not charge for the connector or that SuiteApp, per its FAQ; the cost sits with your AI client subscription, if any. We build custom tools on top when a job needs rules the standard set lacks.',
@@ -159,22 +160,22 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes, in Odoo 19. Odoo’s documentation calls an agent a smart assistant that understands natural language and performs tasks, built from topics, which hold its instructions and tools, and sources, which hold its reference material. Creating agents needs the AI app installed. For agents that live outside Odoo, check your plan first: Odoo says its external API is only available on Custom pricing plans.',
     links: [{ href: SRC_ODOO_AGENTS, label: 'Odoo 19 documentation: AI agents' }] },
   { category: 'systems', question: 'We have an old Odoo integration. Will it keep working?',
-    answer: 'Check which API it uses. Odoo’s developer docs give the XML-RPC and JSON-RPC endpoints an end date: Odoo Online 21.1 in winter 2027, then Odoo 22 in fall 2028. Anything new should use the External JSON-2 API, which takes a bearer API key. If your current connector uses the old endpoints, we can move it across while building the agent.',
+    answer: 'Check which API it uses. Odoo’s developer docs give the XML-RPC and JSON-RPC endpoints an end date: Odoo Online 21.1 in 2027, then Odoo 22 in 2028. Anything new should use the External JSON-2 API, which takes a bearer API key. If your current connector uses the old endpoints, we can move it across while building the agent.',
     links: [{ href: SRC_ODOO_API, label: 'Odoo 19: External JSON-2 API' }] },
   { category: 'systems', question: 'Do you work with Cin7, Unleashed and QuickBooks?',
     answer: 'Yes. Many Australian wholesalers keep stock in Cin7 Core, formerly DEAR, or Unleashed, with Xero or MYOB holding the books. Some run QuickBooks Online instead. An agent often sits between them, turning an order into a sales order in the inventory system and an invoice in the accounts. We check which connection each system offers on your plan before quoting.' },
 
   // ── Rules ──
   { category: 'rules', question: 'Does the Privacy Act apply to an ERP AI agent?',
-    answer: 'Yes, if your business is covered by the Privacy Act 1988 and the agent handles personal information, such as customer names, delivery addresses or staff details. The OAIC says privacy obligations apply to personal information put into an AI system and to AI output that contains it. We map which fields each agent sees before building, and keep everything else out of its reach.',
+    answer: 'Yes, if your business is covered by the Privacy Act 1988 and the agent handles personal information. Customer names and delivery addresses on a sales order are personal information, and the OAIC’s guidance says your obligations follow that data into the AI and into the drafts it writes back. We map which fields each agent sees before building, and keep everything else out of its reach.',
     links: [{ href: SRC_OAIC_AI, label: 'OAIC guidance on AI products' }] },
-  { category: 'rules', question: 'What changes for automated decisions on 10 December 2026?',
-    answer: 'From 10 December 2026, APP 1.7 requires covered businesses to explain in their privacy policy when a computer program uses personal information to make, or substantially help make, a decision that could significantly affect someone’s rights or interests. An agent that drafts a sales order for approval is unlikely to be that. One that sets credit limits or refuses accounts might be. We document what each agent decides so your adviser can judge.',
+  { category: 'rules', question: 'Do credit-limit or account-approval agents fall under the December 2026 privacy rules?',
+    answer: 'They might. From 10 December 2026, APP 1.7 requires covered businesses to explain in their privacy policy when a computer program uses personal information to make, or substantially help make, a decision that could significantly affect someone’s rights or interests. An agent that drafts a sales order for approval is unlikely to be that. One that sets credit limits or refuses accounts might be. We document what each agent decides so your adviser can judge.',
     links: [{ href: SRC_OAIC_APP1, label: 'OAIC APP guidelines, chapter 1' }] },
   { category: 'rules', question: 'Will the agent code GST and lodge our BAS?',
     answer: 'It will suggest GST codes, and it will not lodge anything. The agent proposes a tax rate on each draft bill or invoice from the supplier’s history and the tax rates set up in Xero or MYOB. A person approves the batch. Your BAS, and every conversation with the ATO, stays with your bookkeeper or registered agent. Payroll and Single Touch Payroll reporting stay in your payroll software, outside the agent’s role.' },
   { category: 'rules', question: 'Can the agent handle Peppol eInvoices?',
-    answer: 'Yes, and they are easier than PDFs. Business.gov.au says Peppol is a common standard in Australia and that eInvoices are delivered by ATO-approved service providers straight into your software. Because the invoice arrives as data rather than as a page to read, the agent spends its effort on matching it to the purchase order and receipt, then drafting the bill for approval.',
+    answer: 'Yes, and they are easier than PDFs. Business.gov.au says Peppol is a common standard in Australia and that eInvoices are delivered through ATO-approved service providers to software connected to the Peppol network. Because the invoice arrives as data rather than as a page to read, the agent spends its effort on matching it to the purchase order and receipt, then drafting the bill for approval.',
     links: [{ href: SRC_EINVOICING, label: 'business.gov.au: eInvoicing' }] },
 
   // ── Working with us ──
@@ -184,7 +185,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'working', question: 'How long does it take to build an ERP AI agent?',
     answer: 'Flowtivity’s Australian guide gives 6 to 12 weeks for multi-system workflow automation, which is a fair guide for an agent that writes to two systems. One that only reads and answers is quicker. Access is often the slowest part: a sandbox or test file, a dedicated role for the agent, and a yes from the person responsible for the ERP. The timeline goes in writing with the quote.' },
   { category: 'working', question: 'Can we see it working before we sign?',
-    answer: 'Yes, and we insist on it. You send a sample of last week’s emailed purchase orders or supplier bills. We run them through an early version of the agent and put its drafts next to what your team keyed in by hand. You decide from that comparison whether a build is worth paying for. If the drafts miss, you have spent nothing.' },
+    answer: 'Yes, and we insist on it. You send a sample of last week’s emailed purchase orders or supplier bills. We run them through an early version of the agent and put its drafts next to what your team keyed in by hand. You decide from that comparison whether a build is worth paying for.' },
   { category: 'working', question: 'Can we send a brief or an RFP?',
     answer: 'Please do. A written brief gets a faster, firmer answer than a form. Name the systems and editions you run, the job you want the agent to take, roughly how many documents arrive each week, who approves today, and any deadline such as a financial year end or a system migration. We reply with questions, then a written scope and a fixed price per phase.' },
   { category: 'working', question: 'Who owns the agent, and what happens after launch?',
@@ -194,9 +195,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 /* ─── Systems the agent works inside. Each restates the maker's page. ─── */
 const SYSTEMS: { t: string; d: string; src?: { href: string; label: string } }[] = [
   { t: 'Xero', d: 'Xero publishes an MCP server on GitHub with tools to list, create and update accounting records, including draft invoices and quotes. It also announced a multi-year partnership with Anthropic on 27 March 2026. We build on Xero’s own connections and give the agent a role scoped to the job.', src: { href: SRC_XERO_MCP, label: 'Xero MCP server' } },
-  { t: 'MYOB Business and AccountRight', d: 'MYOB says AccountRight, Essentials and MYOB Business all integrate with its Business API, and that MYOB Business will replace Essentials and AccountRight for new customers in Australia. Agents draft bills, invoices and sales orders here for your team to approve.', src: { href: SRC_MYOB_API, label: 'MYOB Business API' } },
+  { t: 'MYOB Business and AccountRight', d: 'Agents draft bills, invoices and sales orders through MYOB’s Business API, and your team approves each one inside MYOB. The agent gets a login of its own, separate from any staff member’s.', src: { href: SRC_MYOB_API, label: 'MYOB Business API' } },
   { t: 'MYOB Acumatica', d: 'MYOB’s cloud ERP for mid-sized businesses, formerly MYOB Advanced, covering finance, stock and projects in one system. The edition and licence you hold decide the connection; we confirm it in scoping.', src: { href: SRC_MYOB_ACUMATICA, label: 'MYOB Acumatica' } },
-  { t: 'NetSuite', d: 'Oracle has adopted the Model Context Protocol for NetSuite and ships the free MCP Standard Tools SuiteApp. The connection needs Server SuiteScript, OAuth 2.0 and a role with the MCP Server Connection permission, and Oracle refuses it for the Administrator role.', src: { href: SRC_NS_PERMS, label: 'Oracle NetSuite permissions' } },
+  { t: 'NetSuite', d: 'Oracle has adopted the Model Context Protocol for NetSuite and ships MCP Standard Tools as a free SuiteApp. The role the agent signs in with sets what it can reach, so we design that role first, record type by record type.', src: { href: SRC_NS_FAQ, label: 'Oracle NetSuite AI Connector FAQ' } },
   { t: 'Odoo', d: 'Odoo 19 has its own AI agents, built from topics and sources. Outside agents use the External JSON-2 API, which Odoo says is only available on Custom pricing plans. The older RPC endpoints are due for removal in Odoo 22 and Odoo Online 21.1.', src: { href: SRC_ODOO_API, label: 'Odoo External JSON-2 API' } },
   { t: 'Cin7 Core, Unleashed, QuickBooks', d: 'The inventory and accounts tools many Australian wholesalers run beside Xero or MYOB. The agent usually sits between them, so one order becomes one sales order and one invoice without anyone retyping it.' },
 ];
@@ -204,7 +205,7 @@ const SYSTEMS: { t: string; d: string; src?: { href: string; label: string } }[]
 /* ─── Six jobs, each drafted by the agent and approved by a person ─── */
 const JOBS: { t: string; d: string }[] = [
   { t: 'Customer purchase orders into sales orders', d: 'Trade customers email purchase orders as PDFs, spreadsheets or a few lines in the message body. The agent finds the customer, the delivery address and each SKU in Cin7, NetSuite or Odoo, checks the price on the PO against your price list, and saves a draft sales order with the original attached. A price difference is flagged, never quietly accepted.' },
-  { t: 'Marketplace orders and exceptions', d: 'Orders from Amazon.com.au, eBay, Catch, Kogan, MyDeal, Bunnings Marketplace or THE ICONIC usually arrive through a connector. The agent watches what the connector cannot handle: a SKU that does not map, a bundle, an address that fails validation. It drafts the fix and asks a person before anything is changed.' },
+  { t: 'Marketplace orders and exceptions', d: 'Orders from Amazon.com.au, eBay, Kogan, Bunnings Marketplace or THE ICONIC usually arrive through a connector. The agent watches what the connector cannot handle: a SKU that does not map, a bundle, an address that fails validation. It drafts the fix and asks a person before anything is changed.' },
   { t: 'Supplier bills with GST coded', d: 'Supplier invoices arrive by email or through Peppol. The agent matches each one to its purchase order and goods receipt, suggests the account and GST code from how your team coded that supplier before, and drafts the bill in Xero, MYOB or NetSuite. Our accounts payable automation page covers this job in depth.' },
   { t: 'Purchase orders from reorder points', d: 'A SKU in Unleashed or Odoo drops under its minimum, or a large trade order needs stock you do not hold. The agent prepares the supplier PO from the preferred supplier and last cost on file. Later, if the supplier writes back with a later ship date or a short quantity, your buyer sees it on the same screen.' },
   { t: 'Payment and settlement matching', d: 'Payouts from Stripe, Afterpay and Zip land as single bank lines that cover many orders, less fees. The agent breaks each payout down against its settlement report, matches the orders and fees, and prepares the reconciliation for your bookkeeper to approve.' },
@@ -232,10 +233,10 @@ const BUILD_STEPS: { n: string; t: string; d: string; out: string }[] = [
   { n: '07', t: 'Go live and keep it working', d: 'ERPs release updates and model makers retire versions. Odoo has already set removal dates for its older APIs. We watch the logs, re-test after changes and fix what breaks, inside the defect cover period and after it if you choose.', out: 'A live agent you own, with the team that built it on call.' },
 ];
 
-/* ─── Work we have done on the same platforms (not Australian clients) ─── */
+/* ─── Work on the same platforms (not Australian clients; not all finished) ─── */
 const WORK: { who: string; kind: string; what: string; href: string; cta: string }[] = [
-  { who: 'Sow Easy', kind: 'B2B distribution · WooCommerce and Odoo', what: 'A WooCommerce trade store joined to Odoo, with Odoo as the master for stock, pricing and product identifiers. The same Odoo connection work sits under an Odoo AI agent.', href: '/case-studies/sow-easy-distributor-portal', cta: 'Read the case study' },
-  { who: 'Two QuickBooks projects, unnamed', kind: 'Shopify · QuickBooks Online and Enterprise', what: 'One Shopify store joined to QuickBooks Online and one to QuickBooks Enterprise. We cannot name either client.', href: '/services/erp-ai-agents', cta: 'See our ERP agent work' },
+  { who: 'Sow Easy', kind: 'B2B distribution · WooCommerce and Odoo', what: 'A WooCommerce trade store being joined to Odoo, with Odoo as the master for stock, pricing and product identifiers. It is being tested against Odoo’s staging system; launch is still ahead. The same Odoo connection work sits under an Odoo AI agent.', href: '/case-studies/sow-easy-distributor-portal', cta: 'Read the case study' },
+  { who: 'Two QuickBooks projects, unnamed', kind: 'Shopify · QuickBooks Online and Enterprise', what: 'One Shopify store being joined to QuickBooks Online and one to QuickBooks Enterprise, both in progress. We cannot name either client.', href: '/services/erp-ai-agents', cta: 'See our ERP agent work' },
 ];
 
 /* ─── Internal links: live AU routes (checked on disk 2026-10-29) + US page ─── */
@@ -426,7 +427,7 @@ export default function ErpAiAgentsAUPage() {
           <div className="wrap">
             {[
               { v: '27 Mar 2026', t: 'Xero announced a multi-year partnership with Anthropic to bring Claude into Xero', s: 'Xero', u: SRC_XERO_ANTHROPIC },
-              { v: 'MCP', t: 'is how NetSuite now lets ChatGPT, Claude and other AI clients reach its data, via a free SuiteApp', s: 'Oracle NetSuite', u: SRC_NS_CONNECTOR },
+              { v: 'MCP', t: 'is how NetSuite now lets ChatGPT, Claude and other AI clients reach its data, via a free SuiteApp', s: 'Oracle NetSuite FAQ', u: SRC_NS_FAQ },
               { v: 'Custom plan', t: 'is the only Odoo plan with access to data through the external API', s: 'Odoo 19 docs', u: SRC_ODOO_API },
               { v: '10 Dec 2026', t: 'new APP 1 privacy policy rules start for computer programs that make significant decisions', s: 'OAIC, APP 1', u: SRC_OAIC_APP1 },
             ].map((r) => (
@@ -470,9 +471,9 @@ export default function ErpAiAgentsAUPage() {
                     <div className="factlabel">Three terms, in plain English</div>
                     <p>
                       An <b>ERP</b> (enterprise resource planning system) is the software that holds your stock, orders
-                      and money in one place. An <b>API</b> is the documented door other software uses to read and write
-                      those records. <b>MCP</b>, the Model Context Protocol, is an open standard that lets AI tools use
-                      that door. Xero, NetSuite and Odoo all now publish ways for AI to connect.
+                      and money in one place. An <b>API</b> is the published set of requests one program can send another to fetch
+                      records or add new ones. <b>MCP</b>, the Model Context Protocol, is an open standard that lets AI
+                      tools make those requests. Xero, NetSuite and Odoo all now publish ways for AI to connect.
                     </p>
                   </div>
                 </div>
@@ -569,9 +570,9 @@ export default function ErpAiAgentsAUPage() {
                   9am, the 9.05am order is checked against the new figure.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
-                  The agent’s login decides what it can touch. Oracle will not let the NetSuite AI Connector Service
-                  connect as Administrator, and we apply that thinking everywhere: a Xero connection without payroll
-                  tools, an Odoo key for one integration user, a MYOB login that can draft but not delete.
+                  The agent’s login decides what it can touch, so each system gets a narrow one of its own: a NetSuite
+                  role covering only the record types the job uses, Xero OAuth scopes for those records alone, an Odoo
+                  API key for one integration user, a MYOB login that belongs to the agent and no staff member.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><div>
                   <div className="factlabel">A typical approval split</div>
@@ -669,8 +670,8 @@ export default function ErpAiAgentsAUPage() {
                 <h2>How we work on ERP agent projects</h2>
               </div>
               <p>
-                The same terms on every project, written into the proposal. The agencies that disappear after launch
-                are the real risk with ERP work, so the support terms are as plain as the build terms.
+                The same terms on every project, written into the proposal. An ERP agent needs re-testing each time
+                the ERP or the AI model changes, so what happens after launch is written down as plainly as the build.
               </p>
             </div>
             <div className="platlist" role="list">
@@ -695,21 +696,23 @@ export default function ErpAiAgentsAUPage() {
             <div className="factswrap">
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
-                  ERP records hold personal information: customer names, delivery addresses, staff details on expense
-                  claims. If your business is covered by the Privacy Act 1988, the OAIC says privacy obligations apply to
-                  personal information put into an AI system and to AI output that contains it, and that due diligence on
-                  AI products should not be set and forget. We list the fields each agent sees before we build.
+                  Staff details on expense claims and bank details on supplier cards are the fields most easily swept
+                  into an ERP agent by accident. The OAIC’s AI products guidance also says checking an AI product is not
+                  a set-and-forget job. So the list of fields each agent may see goes into its written specification
+                  before we build, and is reviewed whenever the agent takes on a new job.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
-                  From 10 December 2026, APP 1.7 requires covered businesses to explain in their privacy policy when a
-                  computer program uses personal information in decisions that could significantly affect someone. An
-                  agent that drafts orders for approval is unlikely to qualify. One that sets credit limits or refuses
-                  trade accounts might. We write down what each agent decides so your adviser can judge.
+                  A worked example for APP 1.7: an agent checks each trade order against the customer’s credit limit.
+                  If it flags an order over the limit and a credit controller decides what happens, the agent only
+                  advises. If it puts a sole trader’s account on stop by itself, it sits much closer to the decisions the
+                  10 December 2026 rule covers, and your privacy policy may need to describe it. We build the first kind
+                  by default and leave the call on the second to your adviser.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><div>
                   <p>
-                    Peppol is a common eInvoicing standard in Australia, with eInvoices delivered by ATO-approved service
-                    providers. An eInvoice arrives as data, so the agent skips the reading and goes straight to matching.
+                    Once your software is connected to Peppol, supplier eInvoices arrive as data, so the agent skips the
+                    reading and goes straight to matching. Business.gov.au notes that the ATO runs the network but cannot
+                    see the invoices sent across it.
                     GST codes are suggested from your own tax rates and supplier history, and approved by a person. BAS
                     lodgement and Single Touch Payroll reporting stay with your accountant and payroll software.
                   </p>
@@ -777,9 +780,9 @@ export default function ErpAiAgentsAUPage() {
               <h2>How much does an ERP AI agent cost in Australia?</h2>
               <p className="lead">
                 <a href={SRC_FLOWTIVITY} {...extLink}>Flowtivity’s March 2026 Australian guide</a> puts multi-system
-                workflow automation at A$20,000 to A$50,000 or more, over 6 to 12 weeks. The guide says its figures are
-                in AUD and does not say whether GST is included. Those are market ranges, not our prices. FactoryJet
-                quotes a fixed price per phase in writing after a short scoping call.
+                workflow automation at A$20,000 to A$50,000 or more over 6 to 12 weeks, and customer service
+                automation at A$10,000 to A$25,000 over 4 to 8 weeks. Market ranges, not FactoryJet prices. Where a
+                project lands depends mostly on the four things below.
               </p>
             </div>
             <div className="au-split">
@@ -806,13 +809,13 @@ export default function ErpAiAgentsAUPage() {
           </div>
         </section>
 
-        {/* ═══ WORK WE HAVE DONE (same platforms; not Australian clients) ═══ */}
+        {/* ═══ WORK ON THE SAME PLATFORMS (not Australian clients; some still in progress) ═══ */}
         <section className="section platforms" id="work">
           <div className="wrap">
             <div className="section-head plat-head">
               <div>
-                <div className="eyebrow">Work we have done</div>
-                <h2>ERP integration work on the same platforms</h2>
+                <div className="eyebrow">Work on the same platforms</div>
+                <h2>ERP integration work on Odoo and QuickBooks</h2>
               </div>
               <p>
                 These are not Australian clients. They are the same platforms an Australian ERP agent connects to, and
