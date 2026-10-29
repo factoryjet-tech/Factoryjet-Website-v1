@@ -50,15 +50,17 @@ const SRC_MCF = 'https://sell.amazon.com.au/fba-mcf';
 // "pending or registered trademark" from the government office of a country with an Amazon store; "In some
 // cases, you may also enrol with a pending trademark registration"; IP Accelerator; A+ Content, Brand
 // Stores, Brand Analytics, Sponsored Brands; Project Zero and Transparency; New Seller Incentives of a 5%
-// referral fee credit on up to $75,000 in eligible branded sales plus a $75 Sponsored Ads credit.
+// credit on referral fees on the first $1,500,000 in eligible branded sales (up to $75,000 in value), plus a
+// $75 Sponsored Ads credit.
 const SRC_BRAND = 'https://sell.amazon.com.au/brand-registry';
 // Amazon Ads, Sponsored Products (en-au): "cost-per-click (CPC) ads"; "no monthly or upfront fees"; daily
 // budget; AU listed among eligible countries.
 const SRC_ADS = 'https://advertising.amazon.com/en-au/solutions/products/sponsored-products';
-// eStore Factory (estorefactory.com.au, describes itself as a Sydney-based Amazon agency), "Is hiring an
+// eStore Factory (estorefactory.com.au, an Amazon agency; homepage AU address Niddrie, VIC 3042), "Is hiring an
 // Amazon PPC agency in Australia worth it?", dated 16 Oct 2026: "On average, you can expect to pay between
 // $1,000 to $10,000 per month"; small businesses "around $1,000 to $3,000 per month"; medium to large
-// "$3,000 to $6,000 per month"; high-volume "$6,000 to $10,000+ per month". GST status not stated.
+// "$3,000 to $6,000 per month"; high-volume "$6,000 to $10,000+ per month". Currency, GST status and
+// whether ad spend is included are not stated.
 // Market range only. Never FactoryJet prices.
 const SRC_RANGE = 'https://www.estorefactory.com.au/blog/amazon-ppc-agency-in-australia/';
 
@@ -94,13 +96,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'cost', question: 'How much does Amazon take from a $100 sale?',
     answer: 'The referral fee alone on an A$100 sale is usually A$6 to A$15, because Amazon says most referral fees sit between 6% and 15%, set by category. Fulfilment is extra: FBA charges per unit by size and weight, plus storage. Then add your share of the monthly plan and any ad cost for that sale. Work it out per product, because a small, light item and a bulky one give different answers.' },
   { category: 'cost', question: 'How much does an Amazon agency cost in Australia?',
-    answer: 'eStore Factory, which markets itself as a Sydney Amazon agency, published a guide on 16 October 2026 putting Amazon agency fees in Australia at A$1,000 to A$10,000 a month: around A$1,000 to A$3,000 for small sellers, A$3,000 to A$6,000 for medium to large businesses, and A$6,000 to A$10,000 or more for high-volume brands. The guide does not say whether GST is included. FactoryJet quotes a fixed price in writing after a short scoping call.' },
+    answer: 'eStore Factory, an Amazon agency with an office in Niddrie, Victoria, published a guide on 16 October 2026 putting Amazon PPC agency fees in Australia at $1,000 to $10,000 a month: around $1,000 to $3,000 for small sellers, $3,000 to $6,000 for medium to large businesses, and $6,000 to $10,000 or more for high-volume brands. The guide quotes dollars without naming the currency and does not say whether GST or ad spend is included. FactoryJet quotes a fixed price in writing after a short scoping call.' },
   { category: 'cost', question: 'How do Amazon ads charge in Australia?',
     answer: 'Sponsored Products are cost-per-click ads, so you pay when a shopper clicks, not when the ad shows. Amazon Ads says there are no monthly or upfront fees for Sponsored Products, and you set a daily budget so spend stays within a cap. The craft is in the structure: which search terms you bid on, how much each is worth to your margin, and when to stop paying for a term that never converts.' },
   { category: 'cost', question: 'Why is my FBA fee so high?',
     answer: 'Usually one of three reasons. The item’s measured size or weight puts it in a dearer fulfilment band, so packaging changes can help. Storage builds up, because Amazon bills storage on average daily volume in cubic metres. Or stock has sat too long, and Amazon adds long-term storage fees after 365 days. Check the dimensions Amazon recorded for each product, then plan restocks so slow sellers do not sit in a fulfilment centre.' },
   { category: 'cost', question: 'Are there incentives for new Amazon sellers in Australia?',
-    answer: 'When we checked Amazon’s Brand Registry page on 29 October 2026, it listed New Seller Incentives for registered brands: a 5% referral fee credit on up to A$75,000 in eligible branded sales, plus an A$75 credit for Sponsored Ads campaigns. Programs like this change, so read the current terms in Seller Central before you plan around them, and ask us whether your launch timing affects eligibility.' },
+    answer: 'When we checked Amazon’s Brand Registry page on 29 October 2026, it listed New Seller Incentives for registered brands: a 5% credit on referral fees on your first A$1,500,000 in eligible branded sales, worth up to A$75,000, plus an A$75 credit for Sponsored Ads campaigns. Programs like this change, so read the current terms in Seller Central before you plan around them, and ask us whether your launch timing affects eligibility.' },
 
   // ── FBA, stock and systems ──
   { category: 'ops', question: 'Should we use FBA or ship Amazon orders ourselves?',
@@ -491,7 +493,7 @@ export default function AmazonAgencyAUPage() {
                   <tr><th scope="row">Packaging</th><td className="fj">Amazon’s</td><td>Unbranded by default, no extra fee</td><td>Yours</td></tr>
                   <tr><th scope="row">Prime shipping logo</th><td className="fj">FBA listings eligible</td><td>Not an Amazon listing</td><td>Check Amazon’s current programs</td></tr>
                   <tr><th scope="row">Storage cost</th><td className="fj">By cubic metre, plus long-term fees after 365 days</td><td>Same stock pool as FBA</td><td>Your own warehouse cost</td></tr>
-                  <tr><th scope="row">Remote postcodes 2898, 2899, 4875, 6798, 6799</th><td className="fj">Not serviced</td><td>Being withdrawn, per Amazon</td><td>Your carrier’s coverage</td></tr>
+                  <tr><th scope="row">Remote postcodes 2898, 2899, 4875, 6798, 6799</th><td className="fj">Not serviced</td><td>Not serviced (Amazon gave notice it would stop)</td><td>Your carrier’s coverage</td></tr>
                   <tr><th scope="row">Connects to</th><td className="fj">Seller Central</td><td>Shopify, Magento, WooCommerce, or the Selling Partner API</td><td>Your inventory and shipping apps</td></tr>
                 </tbody>
               </table>
@@ -537,7 +539,7 @@ export default function AmazonAgencyAUPage() {
               <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap" src={null}
                 subject="An online store team member handing courier satchels to a driver loading a van outside their warehouse"
                 caption="Bulky or slow lines often ship best from your own warehouse. We set the routing so each order takes the cheaper path.">
-                <img src="/images/au/visual-pass-2026-10-03/shopify-development/dispatch-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/dispatch-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/dispatch-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="An online store team member handing a stack of courier satchels to a driver loading a white van outside their warehouse" />
+                <img src="/images/au/visual-pass-2026-10-03/shopify-development/dispatch-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/dispatch-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/dispatch-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="Courier satchels being loaded into a white van at a seller's own warehouse, for orders that skip FBA" />
               </VisualSlot>
             </div>
             <div className="timeline">
@@ -699,16 +701,16 @@ export default function AmazonAgencyAUPage() {
                 </p>
               </div>
               <div className="au-panel">
-                <div className="eyebrow">What Amazon agencies charge (market range)</div>
+                <div className="eyebrow">What Amazon PPC agencies charge (market range)</div>
                 <ul className="trigrows">
-                  <li><span className="m">Small sellers</span><span className="t">A$1,000 to A$3,000 a month</span></li>
-                  <li><span className="m">Medium to large businesses</span><span className="t">A$3,000 to A$6,000 a month</span></li>
-                  <li><span className="m">High-volume brands</span><span className="t">A$6,000 to A$10,000+ a month</span></li>
+                  <li><span className="m">Small sellers</span><span className="t">$1,000 to $3,000 a month</span></li>
+                  <li><span className="m">Medium to large businesses</span><span className="t">$3,000 to $6,000 a month</span></li>
+                  <li><span className="m">High-volume brands</span><span className="t">$6,000 to $10,000+ a month</span></li>
                 </ul>
                 <p className="au-note">
                   Source: <a href={SRC_RANGE} {...extLink}>eStore Factory, Amazon PPC agency in Australia</a>, 16 October
-                  2026. eStore Factory markets itself as a Sydney Amazon agency; the guide does not say whether GST is
-                  included. FactoryJet quotes a fixed price in writing after a short scoping call.
+                  2026. eStore Factory is an Amazon agency with an office in Niddrie, Victoria. The guide quotes dollars without naming
+                  the currency and does not say whether GST or ad spend is included. FactoryJet quotes a fixed price in writing after a short scoping call.
                 </p>
               </div>
             </div>
@@ -780,7 +782,7 @@ export default function AmazonAgencyAUPage() {
               <a href={SRC_MCF} {...extLink}>Amazon Australia, Multi-Channel Fulfilment</a>
               <a href={SRC_BRAND} {...extLink}>Amazon Australia, Brand Registry</a>
               <a href={SRC_ADS} {...extLink}>Amazon Ads, Sponsored Products</a>
-              <a href={SRC_RANGE} {...extLink}>eStore Factory, Amazon agency cost in Australia</a>
+              <a href={SRC_RANGE} {...extLink}>eStore Factory, Amazon PPC agency cost in Australia</a>
             </div>
           </div>
         </section>
