@@ -12,8 +12,9 @@ import '../ai-agents/ai-agents.css';
    1. Every law, tax rule, platform threshold and market price below was read
       on the regulator's or publisher's own page on 29 October 2026 and links to
       it through the SRC map. Re-read the page before changing a figure.
-   2. No FactoryJet price. The only money figure is one sourced market range
-      from a named London agency (Red Eagle Tech), labelled as theirs.
+   2. No FactoryJet price. The audit itself is free, matching /services/ecommerce-audit
+      (Bhavesh's decision, 29 October 2026). The only money figure is one sourced
+      market range from a named London agency (Red Eagle Tech), labelled as theirs.
    3. Client proof is limited to GPSUK (built on Commerceflo) and Sow Easy
       (WooCommerce joined to Odoo, still in build), per the 29 Oct naming rule.
       Never present either as Shopify work, and never add a metric for them.
@@ -33,10 +34,10 @@ import '../ai-agents/ai-agents.css';
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-audit';
 const UPDATED = '2026-10-29';
 const READ_ON = '29 October 2026';
-const TITLE = 'Ecommerce Audit UK for Trading Stores | FactoryJet';
-const H1 = 'Ecommerce Audit UK: A Ranked Fix List for Stores That Already Trade, From the Checkout to Xero';
+const TITLE = 'Free Ecommerce Audit UK for Trading Stores | FactoryJet';
+const H1 = 'Free Ecommerce Audit UK: A Ranked Fix List for Stores That Already Trade, From the Checkout to Xero';
 const DESCRIPTION =
-  'Ecommerce audit for established UK online stores: checkout and CMA price rules, speed, marketplaces, Xero, Sage or NetSuite links, couriers and tracking. A ranked fix list.';
+  'Free ecommerce audit for established UK online stores: checkout and CMA price rules, speed, marketplaces, Xero, Sage or NetSuite links, couriers and tracking. A ranked fix list.';
 
 /* Design values, copied from ../ai-agents/ai-agents.css so inline styles stay
    on-system without CSS custom property references in this file. */
@@ -145,13 +146,15 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── Cost and terms ──
   { category: 'cost', question: 'How much does an ecommerce audit cost in the UK?',
-    answer: 'There is no standard price, because the word audit covers anything from an automated report to weeks of work. The nearest published reference is for SEO audits: Red Eagle Tech, a North London agency, puts one-off SEO audits at £500 to £7.5k, and £5k to £15k+ for sites over 500 pages (updated 9 July 2026, VAT not stated). An ecommerce audit that also covers systems and operations sits on scope. FactoryJet quotes a fixed price in writing after a short scoping call.' },
+    answer: 'There is no standard price, because the word audit covers anything from an automated report to weeks of work. The nearest published reference is for SEO audits: Red Eagle Tech, a North London agency, puts one-off SEO audits at £500 to £7.5k, and £5k to £15k+ for sites over 500 pages (updated 9 July 2026, VAT not stated). An ecommerce audit that also covers systems and operations goes further than that. The FactoryJet audit is free: no fee for the scope call, the report or the walkthrough.' },
+  { category: 'cost', question: 'Is the audit really free, and why?',
+    answer: 'Yes. You pay nothing for the scope call, the test orders we agree with you, the written report or the walkthrough with the founder, and you keep the report whatever you decide. We offer it free because a ranked list of real findings from your own store shows how we work better than any sales call. Some stores hand the list to their own team. Others ask us to quote for the fixes.' },
   { category: 'cost', question: 'How long does the audit take?',
-    answer: 'Three inputs set the timeline: how many systems an order passes through, how fast the read-only logins arrive, and whether trade ordering is in scope. Each extra system adds another hop to trace with test orders. Logins that take a week to arrive add a week. We put the agreed dates in writing with the price, before work starts.' },
+    answer: 'Three inputs set the timeline: how many systems an order passes through, how fast the read-only logins arrive, and whether trade ordering is in scope. Each extra system adds another hop to trace with test orders. Logins that take a week to arrive add a week. We put the agreed dates in writing with the scope, before work starts.' },
   { category: 'cost', question: 'What access do you need, and is our data safe?',
     answer: 'Read-only access is enough: analytics, Search Console, the store admin as a staff user and a viewer login for the accounting system. We never need write access to audit. You can remove every login the day the report lands. If a test order is needed, we agree it with you first and refund it, so it does not distort your sales or stock figures.' },
   { category: 'cost', question: 'What are your terms?',
-    answer: 'The audit is a fixed price, agreed in writing before work starts. If you then ask us to fix things, each phase is scoped, priced and signed on its own. You own the code and the repository from day one, defects are fixed inside the build price for an agreed cover period, and support is optional, quoted per change, with no monthly minimum.' },
+    answer: 'The audit is free, and its scope is agreed in writing before work starts. If you then ask us to fix things, each phase is scoped, priced and signed on its own. You own the code and the repository from day one, defects are fixed inside the build price for an agreed cover period, and support is optional, quoted per change, with no monthly minimum.' },
 
   // ── After the report ──
   { category: 'after', question: 'What do we get at the end?',
@@ -184,13 +187,13 @@ const jsonLd = {
     {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
-      name: 'Ecommerce Audit UK',
+      name: 'Free Ecommerce Audit UK',
       serviceType: 'Ecommerce audit: checkout and pricing, site speed, product data, marketplaces, stock, payments, couriers, tracking and accounting integrations',
       provider: { '@id': 'https://factoryjet.com/#organization' },
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
       url: CANONICAL,
       description:
-        'A written, ranked audit of an established UK online store and the systems behind it: checkout and price display against CMA guidance, speed against Google Web Vitals, product data, marketplaces such as Amazon.co.uk and eBay UK, stock sync, payment payouts, Royal Mail, DPD and Evri delivery, cookies and tracking, and the links to Xero, Sage, QuickBooks UK, NetSuite, Business Central or Odoo.',
+        'A free, written, ranked audit of an established UK online store and the systems behind it: checkout and price display against CMA guidance, speed against Google Web Vitals, product data, marketplaces such as Amazon.co.uk and eBay UK, stock sync, payment payouts, Royal Mail, DPD and Evri delivery, cookies and tracking, and the links to Xero, Sage, QuickBooks UK, NetSuite, Business Central or Odoo.',
     },
     {
       '@type': 'BreadcrumbList',
@@ -315,7 +318,7 @@ export default function EcommerceAuditUKPage() {
                 <div className="mt-6" style={{ maxWidth: 560 }}>
                   <HeroInlineForm region="uk" source="uk_ecommerce_audit_hero"
                     submitLabel="Scope my store audit"
-                    trustText="Fixed price in writing before you sign. Founder replies within 24 hours."
+                    trustText="Free audit, scope agreed in writing first. Founder replies within 24 hours."
                     service="Ecommerce Audit" />
                 </div>
               </div>
@@ -509,7 +512,7 @@ export default function EcommerceAuditUKPage() {
         {/* ═══ 7. MID-PAGE CTA ═══ */}
         <MidPageCTA
           headline={'Want the order traced through your own systems?'}
-          sub={'Send the store address, the channels you sell on and the systems behind them. We reply with a written scope and a fixed price for the audit. Attach your brief or RFP at step 2.'}
+          sub={'Send the store address, the channels you sell on and the systems behind them. We reply with a written scope for your free audit. Attach your brief or RFP at step 2.'}
           label={'Scope my store audit'}
         />
 
@@ -526,7 +529,7 @@ export default function EcommerceAuditUKPage() {
             </div>
             <ol className="stack mt-10" style={{ maxWidth: 900 }}>
               {[
-                { n: '01', t: 'Scope call with the founder', d: 'Channels, systems, order volume and what worries you. We agree what is in scope, the timeline and a fixed price, in writing, before any login is shared.' },
+                { n: '01', t: 'Scope call with the founder', d: 'Channels, systems, order volume and what worries you. We agree what is in scope and the timeline, in writing, before any login is shared. The audit is free.' },
                 { n: '02', t: 'Read-only access', d: 'Analytics, Search Console, the store admin as a staff user, a viewer login for the books and, where relevant, Linnworks, Brightpearl or Mintsoft. No write access, ever.' },
                 { n: '03', t: 'Buy, change and refund', d: 'Agreed test orders on a phone and a laptop, with a discount, a part refund and each payment method you offer. Each one is refunded and labelled so it never skews your figures.' },
                 { n: '04', t: 'Follow every order into the back office', d: 'Each test order traced through stock, the courier label, the payout and the entry in Xero, Sage, QuickBooks UK, NetSuite, Business Central or Odoo.' },
@@ -558,7 +561,7 @@ export default function EcommerceAuditUKPage() {
                   a build.
                 </p>
                 <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
-                  <li><b>A fixed price for the audit.</b> Scoped on the first call and confirmed in writing before you share a single login.</li>
+                  <li><b>The audit is free.</b> Scoped on the first call and confirmed in writing before you share a single login.</li>
                   <li><b>The report is yours.</b> Written so any team can act on it. You are never tied to us for the fixes.</li>
                   <li><b>Working software on your own data before you sign a build.</b> If you ask us to fix something, we show it on your real products or orders first.</li>
                   <li><b>A fixed price per phase.</b> Each phase is scoped, priced and signed on its own, so you can stop after any one of them.</li>
@@ -635,7 +638,7 @@ export default function EcommerceAuditUKPage() {
                   <tr><td className="feat">UK rule checks</td><td className="fj"><span className="yes">CMA, GOV.UK, HMRC, ICO</span></td><td><span className="partial">Cookie scan at most</span></td><td><span className="partial">Varies, ask</span></td></tr>
                   <tr><td className="feat">Ranked by money</td><td className="fj"><span className="yes">Value and effort on each fix</span></td><td><span className="partial">Severity scores</span></td><td><span className="partial">Often ranked toward a rebuild</span></td></tr>
                   <tr><td className="feat">Usable by another team</td><td className="fj"><span className="yes">Written to hand over</span></td><td><span className="yes">Yes</span></td><td><span className="partial">Tied to their proposal</span></td></tr>
-                  <tr><td className="feat">Price shape</td><td className="fj"><span className="yes">Fixed, in writing, before access</span></td><td><span className="yes">Free or a subscription</span></td><td><span className="partial">Often folded into a build quote</span></td></tr>
+                  <tr><td className="feat">Price shape</td><td className="fj"><span className="yes">Free, with the scope in writing</span></td><td><span className="yes">Free or a subscription</span></td><td><span className="partial">Often folded into a build quote</span></td></tr>
                 </tbody>
               </table>
             </div>
@@ -664,8 +667,8 @@ export default function EcommerceAuditUKPage() {
                   <p>
                     An audit that follows orders into stock, couriers and the books has more scope than an SEO
                     audit. Four things move it: the number of channels, the number of systems, order volume, and
-                    whether trade ordering is included. FactoryJet quotes a fixed price in writing after a short
-                    scoping call, and the price does not move once you sign.
+                    whether trade ordering is included. Those set how long the FactoryJet audit takes, not what it costs:
+                    the audit is free, and the scope is agreed in writing on a short call first.
                   </p>
                 </div>
                 <Sources ids={['redEagle']} />
@@ -677,6 +680,7 @@ export default function EcommerceAuditUKPage() {
                 <div className="scorecard-row"><div className="scorecard-metric">Orders a month and catalogue size</div><div className="scorecard-val" style={{ fontSize: 14 }}>Volume</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Trade ordering in scope</div><div className="scorecard-val" style={{ fontSize: 14 }}>B2B</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Scope call with the founder</div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>No charge</div></div>
+                <div className="scorecard-row"><div className="scorecard-metric">The audit and the report</div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Free</div></div>
               </div>
             </div>
           </div>
@@ -759,8 +763,8 @@ export default function EcommerceAuditUKPage() {
             <h2>Find the fixes your store is already paying for</h2>
             <p className="mt-4">
               Send your name and work email. The founder replies within 24 hours to book a scope call about your
-              channels, your systems and what is going wrong. You leave with a written scope and a fixed price for the
-              audit, and no obligation to go ahead.
+              channels, your systems and what is going wrong. You leave with a written scope for a free audit, and no
+              obligation to hire us for the fixes.
             </p>
             <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="Scope my store audit" region="uk" modalVariant="default" btnVariant="primary-light" />

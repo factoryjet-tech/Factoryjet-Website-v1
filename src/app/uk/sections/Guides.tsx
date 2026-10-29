@@ -113,8 +113,8 @@ const GROUPS: GuideGroup[] = [
       },
       {
         href: "/uk/ecommerce-audit",
-        label: "Ecommerce audit UK",
-        blurb: "A ranked fix list for UK stores that already trade, following real orders from checkout and CMA pricing rules through stock, couriers and Xero, Sage or NetSuite.",
+        label: "Free ecommerce audit UK",
+        blurb: "A free, ranked fix list for UK stores that already trade, following real orders from checkout and CMA pricing rules through stock, couriers and Xero, Sage or NetSuite.",
       },
       {
         href: "/uk/amazon-agency",
