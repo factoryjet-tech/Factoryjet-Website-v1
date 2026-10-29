@@ -18,8 +18,14 @@ import '../ai-agents/ai-agents.css';
    3. Client proof: GPSUK (built on Commerceflo) and Sow Easy (WooCommerce plus
       Odoo, still in build). Neither is presented as Shopify or AI agent work.
    4. Structure mirrors /uk/ecommerce-consultant and /uk/shopify-xero-integration
-      (imports, components, CSS, schema). The copy is written fresh for the UK
-      and shares no paragraph with /services/shopify-ai-agents.
+      (imports, components, CSS, schema). The copy is written for the UK. A
+      reviewer pass on 2026-10-29 rewrote the passages that had tracked
+      /services/shopify-ai-agents too closely (four FAQ answers, the agent limit
+      lines, the delivery agent body and the connection H2). The Shopify facts
+      are shared with that page; the wording should not be. Compare new copy
+      against it before shipping.
+      Hreflang: this page and the US page each set themselves as x-default with
+      no reciprocal en-GB/en-US pair. Fixing that needs an edit to both files.
    5. The FAQ schema is generated from FAQ_ITEMS and the Service offers from
       AGENT_JOBS, the same arrays the page renders. Never add a second list.
    6. Search demand used to shape the title and FAQs (DataForSEO, United
@@ -86,7 +92,7 @@ const AGENT_JOBS: { title: string; trigger: string; body: string; guard: string;
     title: 'Marketplace and order exception agent',
     trigger: 'An order lands from the web store, Amazon.co.uk, eBay or OnBuy',
     body: 'Reads each order against your rules: a postcode that does not match the town, a Highlands or Northern Ireland address on a mainland-only service, a quantity ten times the customer’s usual, a SKU the warehouse shows as nil. It tags the order in Shopify with a one-line reason and sends it to the person who owns that kind of problem.',
-    guard: 'Tags and notes only. It never cancels, edits or ships an order.',
+    guard: 'Adds a tag and a reason. Cancelling a marketplace order or booking a courier stays with your order team.',
     systems: 'Shopify, Linnworks or your order hub, Mintsoft or your 3PL',
   },
   {
@@ -100,14 +106,14 @@ const AGENT_JOBS: { title: string; trigger: string; body: string; guard: string;
     title: 'Returns and cancellations agent',
     trigger: 'A customer asks to cancel, return or swap an item',
     body: 'Finds the order, checks the delivery date against the 14-day cancellation window GOV.UK describes and against your own returns policy, and prepares the return with the right reason code. Clear cases wait for one click. Anything outside policy goes to a person with the policy line quoted beside the request.',
-    guard: 'Refunds above the limit you set always need a person.',
+    guard: 'Your finance team signs off any refund over the amount you set.',
     systems: 'Shopify returns, your helpdesk, Stripe, Klarna or Clearpay orders',
   },
   {
     title: 'Stock and reorder agent',
     trigger: 'Stock falls below a level, or every morning at a time you pick',
     body: 'Compares Shopify stock by location with what Brightpearl, Linnworks or your warehouse system holds, plus open supplier orders. Where the counts disagree it says by how much and since when. It then drafts a reorder list grouped by supplier for your buyer to check.',
-    guard: 'Drafts reorder lists. Your buyer sends every purchase order.',
+    guard: 'Supplier POs leave from your buyer’s inbox, never from the agent.',
     systems: 'Shopify inventory, Brightpearl, Linnworks, Mintsoft, Odoo',
   },
   {
@@ -120,7 +126,7 @@ const AGENT_JOBS: { title: string; trigger: string; body: string; guard: string;
   {
     title: 'Delivery query agent',
     trigger: 'A where-is-my-parcel or change-of-address email arrives',
-    body: 'Finds the order, reads the tracking status from Royal Mail, DPD or Evri, and drafts a reply in your helpdesk with the facts filled in. Address changes are checked against fulfilment status first, so a parcel already handed to the courier is never promised a new address.',
+    body: 'Looks up the latest Royal Mail, DPD or Evri tracking event for the parcel and writes the customer a draft answer in Zendesk, Gorgias or your shared inbox. A redirect request gets one extra check. If the courier already holds the parcel, the draft says so plainly instead of promising a new address, and your team decides what to offer.',
     guard: 'Complaints and lost parcels go to a person with the order attached.',
     systems: 'Royal Mail, DPD, Evri, Zendesk, Gorgias',
   },
@@ -143,7 +149,7 @@ const ROUTES: { feat: string; sidekick: string; flow: string; app: string; fj: s
   { feat: 'Who starts it', sidekick: 'A person typing in the admin', flow: 'A store event and a rule', app: 'Depends on the app', fj: 'A store event, an email or a timer' },
   { feat: 'Reads systems outside Shopify', sidekick: 'Through Shopify and its apps', flow: 'Through connected apps', app: 'The ones the maker supports', fj: 'Any with an API or export: Xero, Sage, Linnworks, couriers' },
   { feat: 'Handles messy input such as PDFs and emails', sidekick: 'When a person pastes it in', flow: 'No, rules only', app: 'Sometimes', fj: 'Yes, with a test set from your own data' },
-  { feat: 'Who owns it', sidekick: 'Shopify', flow: 'Shopify', app: 'The app maker', fj: 'You: code, prompts and logs' },
+  { feat: 'Who owns it', sidekick: 'Shopify', flow: 'Shopify', app: 'The app maker', fj: 'You: the code, prompts, test set and logs' },
   { feat: 'Best first step when', sidekick: 'The job happens inside the admin', flow: 'The rule fits in one sentence', app: 'The job is common and the app fits', fj: 'The job crosses Shopify and another system' },
 ];
 
@@ -152,7 +158,7 @@ const STEPS: { n: string; t: string; d: string }[] = [
   { n: '01', t: 'Pick one job and count it', d: 'We sit with the person who does the job today and count a normal week: how many orders, emails or POs, how long each takes, and which ones go wrong. That count is the baseline the agent is judged against.' },
   { n: '02', t: 'Name an owner for every record', d: 'Orders, stock, trade prices, the ledger and parcels each get one home. The agent reads from the owner and never keeps a second copy of the same number.' },
   { n: '03', t: 'Build a test set from your data', d: 'We collect real past cases, including the awkward ones: split parcels, part refunds, a Northern Ireland address, a trade PO with a retired part. Your best person writes the right answer for each.' },
-  { n: '04', t: 'Show it working before you sign', d: 'Before a contract, the agent runs on your own data against that test set, so you see its drafts, its tags and the cases it hands to a person.' },
+  { n: '04', t: 'Show it working before you sign', d: 'Before a contract, the agent runs on your own data against that test set, so you see what it drafts and which cases it hands to a person.' },
   { n: '05', t: 'Agree limits and approvals', d: 'Which actions it can take alone, which need a click, and which it must never touch. Money decisions sit with your team. The rules go in writing with the fixed quote for the phase.' },
   { n: '06', t: 'Run it alongside your team', d: 'For the first weeks the agent drafts and your team decides, so every miss is caught and fed back into the test set before it is trusted with more.' },
   { n: '07', t: 'Go live and stay on', d: 'The same team supports the agent after launch if you choose, re-scores it against the test set and adjusts it when Shopify, a marketplace or your ERP changes.' },
@@ -182,15 +188,15 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'basics',
-    question: 'What is the difference between Shopify Flow and an AI agent?',
+    question: 'Should we use Shopify Flow or a custom AI agent?',
     answer:
-      'Shopify describes Flow as a free app on the Basic, Grow, Advanced and Plus plans that watches for store events and runs actions. It follows rules you write, and it should be your first stop. An agent handles what a rule cannot: reading a customer email, working out which order it means and choosing a next step. Many builds use both together.',
+      'Shopify’s help centre says Flow is free on the Basic, Grow, Advanced and Plus plans. It runs a fixed action when a store event matches a rule, such as tagging every order over £500 for a manual check. Flow cannot open a trade buyer’s PDF purchase order and work out which company price list each line belongs to. That part is agent work. In a typical UK set-up, Flow does the tagging and the agent does the reading.',
   },
   {
     category: 'basics',
     question: 'Which jobs should a UK Shopify store give an AI agent first?',
     answer:
-      'Pick a job your team repeats every day, where the data already sits in Shopify, an inbox or your order hub, and where a person can check the result in seconds. For UK stores that is usually marketplace order exceptions, trade POs arriving by email, where-is-my-parcel replies or stock counts that disagree between Shopify and the warehouse. Leave anything that moves money until later.',
+      'Marketplace order exceptions, trade POs that arrive by email and where-is-my-parcel replies are the usual UK starting points, followed by stock counts that disagree between Shopify and Linnworks. A quick test: the job comes up a few dozen times a week, the facts it needs sit in Shopify or the order inbox, and your team can mark each result right or wrong at a glance. Refunds, trade credit and postings to Xero come later, once the first agent has a record on your own data.',
   },
   {
     category: 'basics',
@@ -256,15 +262,15 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // How the build works
   {
     category: 'build',
-    question: 'How does the agent connect to our Shopify store?',
+    question: 'What access does the agent get to our Shopify store, and how do we remove it?',
     answer:
-      'Through a custom app installed on your store and owned by you. It gets its own access token and only the permissions the job needs, for example reading orders and writing draft orders. It reads and writes through the GraphQL Admin API and listens for store events through webhooks. Removing the app removes its access at once, without calling us.',
+      'Only the access scopes its job needs, set on a custom app that you own. A trade PO agent might ask for read_orders, read_customers and write_draft_orders. A stock agent needs read_inventory. You see that list when the app is installed. Requests go over the GraphQL Admin API, and store events reach the agent as webhooks. To cut it off, uninstall the app. Its token stops working straight away, with no call to us.',
   },
   {
     category: 'build',
-    question: 'What happens if Shopify sends the same event twice or misses one?',
+    question: 'What if a webhook arrives twice, or never arrives, on a busy sale day?',
     answer:
-      'Shopify plans for both, and so do we. Its developer docs say an app might receive the same webhook more than once, that ordering within a topic is not guaranteed and that delivery is not always guaranteed. So the agent skips repeats using the X-Shopify-Webhook-Id header, re-reads the order before acting, and runs a scheduled reconciliation job that catches anything missed.',
+      'Picture Boxing Day, with orders landing every few seconds. Shopify’s developer docs warn that one webhook can be delivered more than once, that events within a topic can arrive out of order and that delivery is not always guaranteed. A repeat is matched on its X-Shopify-Webhook-Id header and dropped. Before acting, the agent fetches the order fresh from Shopify. A sweep on a timer compares recent orders with what the agent has handled, so a lost event is picked up on the next run.',
   },
   {
     category: 'build',
@@ -282,7 +288,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'build',
     question: 'How do we know the agent is getting things right?',
     answer:
-      'Before the build we agree a test set of your real past cases, each with the answer your best person would give, and a pass mark. The agent is scored against that set before launch and again after changes. Every input, decision and action is logged in an account you control, so your team can open any case and see why it was handled that way.',
+      'Before the build we agree a test set of your real past cases, each with the answer your best person would give, and a pass mark. The agent is scored against that set before launch and again after changes. Every input and action is logged in an account you control, so your team can open any case and see why it was handled that way.',
   },
   // Cost and working with us
   {
@@ -295,7 +301,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'working',
     question: 'Can we see it working before we sign?',
     answer:
-      'Yes. Before a contract, we show working software on your own data. For a Shopify agent that means a set of your real orders, emails or POs run through the agent, with its drafts, tags and hand-offs laid out for your team to check against what they would have done. You decide on the build after seeing it.',
+      'Yes. Before a contract, we show working software on your own data. For a Shopify agent that means a batch of your real trade POs or customer emails run through the agent, with its drafts and hand-offs laid out for your team to check against what they would have done. You decide on the build after seeing it.',
   },
   {
     category: 'working',
@@ -453,7 +459,7 @@ export default function ShopifyAiAgentsUKPage() {
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="uk" source="uk_shopify_ai_agents_hero" service="Shopify AI Agents" submitLabel="See a demo on my data" trustText="Working software on your own data before you sign. Founder replies within 24 hours." />
+                  <HeroInlineForm region="uk" source="uk_shopify_ai_agents_hero" service="Shopify AI Agents" submitLabel="See a demo on my data" trustText="Working software on your own data before you sign. Founder replies within one business day." />
                 </div>
               </div>
 
@@ -540,10 +546,10 @@ export default function ShopifyAiAgentsUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">What we build</span>
-              <h2>Six AI agents UK Shopify stores ask us for</h2>
+              <h2>Six AI agents we build for UK Shopify stores</h2>
               <p className="lead mt-4">
-                Each one starts from a single trigger, does one job and stops at a line your team draws. Most stores
-                start with one, prove it on their own data, then add the next.
+                Each one starts from a single trigger, does one job and stops at a line your team draws. Start with
+                one, prove it on your own data, then add the next.
               </p>
             </div>
             <ol className="stack mt-10" style={{ maxWidth: 940 }}>
@@ -666,7 +672,7 @@ export default function ShopifyAiAgentsUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">How it connects</span>
-                <h2>Built the way Shopify tells app developers to build</h2>
+                <h2>How the agent plugs into your Shopify store, by Shopify’s own rules</h2>
                 <div className="stack mt-6">
                   <p>
                     Each agent is a custom app on your store with its own token and only the permissions the job
@@ -689,11 +695,11 @@ export default function ShopifyAiAgentsUKPage() {
               <div className="card card-top-orange">
                 <span className="eyebrow">Limits built into every agent</span>
                 <ul className="scope-list yes-list mt-4">
-                  <li><b>Drafts, tags and notes by default.</b> Live changes only where you approve them.</li>
-                  <li><b>Money stays with people.</b> Refunds, discounts and price changes sit behind a rule and a person above your limit.</li>
+                  <li><b>Drafts and tags by default.</b> Live changes only where you approve them.</li>
+                  <li><b>Money stays with people.</b> Refunds and price changes sit behind a rule, and a person signs off anything above your limit.</li>
                   <li><b>A spend cap on the model.</b> A loop cannot run up a bill.</li>
                   <li><b>An off switch.</b> Your team can stop the agent without calling us.</li>
-                  <li><b>A full log.</b> Every input, decision and change, kept in an account you control.</li>
+                  <li><b>A full log.</b> Every input and every change, kept in an account you control.</li>
                   <li><b>Prompt-injection tests.</b> Instructions hidden in a customer email are tested before launch.</li>
                 </ul>
               </div>
@@ -792,7 +798,7 @@ export default function ShopifyAiAgentsUKPage() {
                 <span className="eyebrow">Terms</span>
                 <h2>How we work, and what the UK market charges</h2>
                 <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
-                  <li><b>A demo on your data before you sign.</b> Working software on your own orders, emails or POs, so you judge the agent on your cases.</li>
+                  <li><b>A demo on your data before you sign.</b> Working software on your own store data, so you judge the agent on your cases.</li>
                   <li><b>A fixed price per phase.</b> Each phase is scoped, priced and signed on its own. You can stop after the first.</li>
                   <li><b>You own it from day one.</b> The code, the repository, the prompts, the test set and the logs.</li>
                   <li><b>Your accounts, at cost.</b> AI and hosting can run in your own accounts, with no markup.</li>
