@@ -115,7 +115,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'basics',
     question: 'What is EDI in the UK?',
     answer:
-      'EDI means electronic data interchange. GS1 UK describes it as the automated exchange of business documents, such as purchase orders, invoices and shipping notices, between different computer systems. The standards GS1 UK supports are EANCOM, GS1 XML and the GS1 UN/CEFACT XML profile, and some older links use Tradacoms. Nobody retypes an order from a PDF or an email: the buyer’s system sends it, and yours reads it.',
+      'EDI means electronic data interchange. GS1 UK describes it as the automated exchange of business documents, such as purchase orders, invoices and shipping notices, between different computer systems. The standards GS1 UK supports are GS1 EANCOM, GS1 XML, GS1 UN/CEFACT XML Profiles and GS1 EDI Business Terms, and some older links use Tradacoms. Nobody retypes an order from a PDF or an email: the buyer’s system sends it, and yours reads it.',
   },
   {
     category: 'basics',
@@ -195,7 +195,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'shopify',
     question: 'What does an EDI purchase order become inside Shopify?',
     answer:
-      'Usually as a draft order, so a person can check it before it becomes a confirmed order. Shopify’s DraftOrderInput accepts a purchase order number, payment terms, a purchasing entity for the buying company, and a time after which reserved stock is released. That covers what an ORDERS message brings. You choose per trading partner whether orders stop as drafts or go straight through.',
+      'Usually a draft order, so a person can check it before it becomes a confirmed order. Shopify’s DraftOrderInput accepts a purchase order number, payment terms, a purchasing entity for the buying company, and a time after which reserved stock is released. That covers what an ORDERS message brings. You choose per trading partner whether orders stop as drafts or go straight through.',
   },
   {
     category: 'shopify',
@@ -232,7 +232,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'working',
     question: 'How much does Shopify EDI integration cost in the UK?',
     answer:
-      'The EDI provider and the build are priced separately. XEDI, a UK provider, listed plans on 29 October 2026 at £128, £256 and £348 per trading partner a month, with Enterprise on custom pricing and usage charged on top. The page does not say whether VAT is added. We could not verify a published GBP range for the build from a named UK agency, so FactoryJet quotes its work as a fixed price in writing after a short scoping call.',
+      'The EDI provider and the build are priced separately. XEDI, a UK provider, listed plans on 29 October 2026 at £128, £256 and £348 per trading partner a month, with usage charged on top. Those three are web-portal tiers: XEDI’s comparison table ticks Shopify and WooCommerce integration only on Enterprise, which is custom-priced. The page does not say whether VAT is added. We could not verify a published GBP range for the build from a named UK agency, so FactoryJet quotes its work as a fixed price in writing after a short scoping call.',
   },
   {
     category: 'working',
@@ -352,7 +352,14 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: {
+    canonical: CANONICAL,
+    languages: {
+      'en-GB': CANONICAL,
+      'en-US': 'https://factoryjet.com/services/shopify-edi-integration',
+      'x-default': 'https://factoryjet.com/services/shopify-edi-integration',
+    },
+  },
   openGraph: {
     title: TITLE,
     description:
@@ -466,7 +473,7 @@ export default function ShopifyEdiIntegrationUKPage() {
             </div>
             <Sources ids={['gs1Eancom', 'uneceDir', 'devDraftInput', 'shopifyB2b']} />
             <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms we use a lot</span>
+              <span className="lab">Four terms we use a lot</span>
               <p>
                 <b>EANCOM</b> is GS1’s cut-down version of UN/EDIFACT, the United Nations rulebook for trade
                 messages, and the main EDI standard GS1 UK supports. A <b>GTIN</b> is the number behind a product
@@ -705,10 +712,11 @@ export default function ShopifyEdiIntegrationUKPage() {
                 <div className="scorecard-row"><div><div className="scorecard-metric">XEDI Growth</div><div className="scorecard-note">receive orders, send invoices</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£128</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">XEDI Scale</div><div className="scorecard-note">adds despatch notices and SKU mapping</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£256</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">XEDI Advanced</div><div className="scorecard-note">adds automated invoice reconciliation</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£348</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">XEDI Enterprise</div><div className="scorecard-note">ERP and API integration</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Custom</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">XEDI Enterprise</div><div className="scorecard-note">Shopify, ERP and API integration</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Custom</div></div>
                 <p style={{ fontSize: 12.5, marginTop: 10 }}>
                   Per trading partner, per month, with usage charged on top. The pricing page does not say whether VAT
-                  is added. We work with whichever provider you already use.
+                  is added. Growth, Scale and Advanced are web-portal plans. XEDI’s comparison table lists Shopify
+                  integration on Enterprise only. We work with whichever provider you already use.
                 </p>
                 <Sources ids={['xediPricing']} />
               </div>
@@ -858,7 +866,7 @@ export default function ShopifyEdiIntegrationUKPage() {
                 { n: '04', t: 'Choose the lightest route that fits', d: 'Your current EDI provider and its Shopify connector come first. We quote custom work only for the rules a connector cannot follow, as a fixed price in writing.' },
                 { n: '05', t: 'Show it on your own data', d: 'Before a contract, a sample order from the buyer’s guide arrives in a test store, and the order response, despatch advice and invoice it would send are laid out for you to check.' },
                 { n: '06', t: 'Pass the buyer’s tests', d: 'A changed order, a part delivery, an unknown GLN, a zero-rated line and a rejected message all go through, then the buyer’s own test cycle.' },
-                { n: '07', t: 'Go live, watch the first orders, stay on', d: 'For the first weeks we check every order against its despatch advice and invoice. After that the same team supports the link, and you own the code and the map.' },
+                { n: '07', t: 'Go live and watch the first orders', d: 'For the first weeks we check every order against its despatch advice and invoice. If you choose support, the team that built the link looks after it. The code and the map are yours either way.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
@@ -918,7 +926,7 @@ export default function ShopifyEdiIntegrationUKPage() {
         {/* 15. FAQ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Shopify EDI questions from UK suppliers</h2>
             </div>
