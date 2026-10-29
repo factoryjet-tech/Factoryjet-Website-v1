@@ -13,7 +13,8 @@ import '../au-hub.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /au/netsuite-ai-agents, built 2026-10-29. Australian twin of
-   /services/netsuite-ai-agents (US). Ideas reused, no sentence copied.
+   /services/netsuite-ai-agents (US). Ideas reused; sentences rewritten for AU,
+   except the ERP experience sentence, which is the approved wording.
 
    Why an Australian page: Oracle's own help center says two of NetSuite's
    AP features do not reach Australian businesses. Bill Capture "is available
@@ -48,7 +49,10 @@ import '../au-hub.css';
      No client is named and no client is presented as Australian.
    - No partner claim. FactoryJet is not a listed Oracle NetSuite partner.
    - Catch and MyDeal are left out on purpose: their marketplace status could
-     not be confirmed from a primary source on the build date.
+     not be confirmed from a primary source on the build date. Amazon.com.au,
+     eBay Australia, Kogan, Bunnings Marketplace and THE ICONIC are named as
+     example channels only; no primary-source check of each was recorded on
+     29 Oct 2026. Re-check before adding any claim about them.
 
    Schema: Service (areaServed Australia) + BreadcrumbList + WebPage/Article +
    FAQPage. FAQPage mainEntity is mapped from FAQ_ITEMS, the same array the
@@ -60,7 +64,7 @@ const UPDATED = '2026-10-29';
 const TITLE = 'NetSuite AI Agents Australia | AI Connector & AP | FactoryJet';
 const H1 = 'NetSuite AI Agents for Australian Businesses: Built Into Your Account';
 const DESCRIPTION =
-  'Custom AI agents inside Oracle NetSuite for Australian companies: supplier bills, sales orders, marketplace and courier exceptions, all approved by your team. Demo on your data first.';
+  'Custom AI agents inside Oracle NetSuite for Australian companies: supplier bills, sales orders and marketplace exceptions your team approves. Demo first.';
 
 /* One array feeds the visible trail and the BreadcrumbList JSON-LD. */
 const crumbs = [
@@ -73,7 +77,7 @@ const crumbs = [
 const NS = 'https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help';
 // "Bill Capture is available only in the United States."
 const SRC_BILL_LIMITS = `${NS}/article_0417034348.html`;
-// IPA limitations: business subsidiaries can use it to pay vendors in the United States; USD; not in sandbox, development or Release Preview accounts.
+// IPA limitations: "Only companies with U.S. business subsidiaries can use this SuiteApp to pay vendors in the United States." USD only; not in sandbox, development or Release Preview accounts.
 const SRC_IPA_LIMITS = `${NS}/section_0530040548.html`;
 // AI Connector FAQ: "not a paid feature"; MCP Standard Tools is a free SuiteApp; enable Server SuiteScript and OAuth 2.0; Claude Pro and ChatGPT currently supported; log retention 21 days production, 7 days sandbox.
 const SRC_CONNECTOR_FAQ = `${NS}/article_4160616848.html`;
@@ -81,9 +85,7 @@ const SRC_CONNECTOR_FAQ = `${NS}/article_4160616848.html`;
 const SRC_CONNECTOR_PERMS = `${NS}/section_0714080625.html`;
 // Risks page: NetSuite "cannot control the behavior of external AI agents, MCP clients, third-party MCP servers".
 const SRC_RISKS = `${NS}/article_9002708453.html`;
-// ANZ Localization overview: free managed SuiteApp; PTR, TPAR, templates; best for Australia edition, JCurve Premium, OneWorld with AU/NZ subsidiaries.
-const SRC_ANZ = `${NS}/article_158677153915.html`;
-// Installing ANZ Localization: with SuiteTax supports BAS, GST101A, PTR, Supplier ABN List; free, managed SuiteApp.
+// Installing ANZ Localization: free, managed SuiteApp; with SuiteTax supports BAS, GST101A, PTR, Supplier ABN List; TPAR listed for accounts without SuiteTax.
 const SRC_ANZ_INSTALL = `${NS}/article_158677437293.html`;
 // Known limitations: JCurve and JCurve Financials not supported, they lack Server SuiteScript and SDF; no multi-book.
 const SRC_ANZ_LIMITS = `${NS}/article_158677431009.html`;
@@ -118,25 +120,25 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   // ── NetSuite AI in Australia ──
   { category: 'oracle', question: 'Does NetSuite have AI that works in Australia?',
     answer: 'Some of it. The NetSuite AI Connector Service, which lets Claude or ChatGPT work with your records, has requirements that list features and permissions, with no country named. Two accounts payable features do name one: Oracle says Bill Capture is available only in the United States, and Intelligent Payment Automation pays US vendors in US dollars. Ask Oracle arrives with NetSuite Next, which Oracle is releasing to customers in phases.',
-    links: [{ href: SRC_BILL_LIMITS, label: 'Oracle: Bill Capture considerations' }] },
+    links: [{ href: SRC_BILL_LIMITS, label: 'Oracle: Bill Capture considerations' }, { href: SRC_ASK_ORACLE, label: 'Oracle: Ask Oracle' }] },
   { category: 'oracle', question: 'Can Australian companies use NetSuite Bill Capture?',
     answer: 'Not today. Oracle’s Bill Capture considerations page states that the feature is available only in the United States. An Australian AP team on NetSuite still keys supplier invoices or uses an outside tool. That is the gap a custom agent fills: it reads the PDF, checks the ABN and GST against the vendor record, and saves a draft vendor bill for your team to approve.',
     links: [{ href: SRC_BILL_LIMITS, label: 'Oracle: Bill Capture considerations' }] },
   { category: 'oracle', question: 'What is NetSuite Intelligent Payment Automation, and does it pay Australian suppliers?',
-    answer: 'It is Oracle’s SuiteApp, powered by BILL, for paying vendors from inside NetSuite. Oracle’s limitations page says business subsidiaries can use it to pay vendors in the United States, in US dollars, and that it cannot run in sandbox, development or Release Preview accounts. For AUD supplier payments, Australian companies keep their existing bank file or payment process.',
+    answer: 'It is an Oracle SuiteApp that runs vendor payments through BILL without leaving NetSuite. Oracle’s limitations page says only companies with US business subsidiaries can use it, only to pay vendors in the United States, and only in US dollars. It also cannot run in sandbox, development or Release Preview accounts. An Australian group with a US subsidiary could use it for that subsidiary’s US vendors. For AUD supplier payments, Australian companies keep their existing bank file or payment process.',
     links: [{ href: SRC_IPA_LIMITS, label: 'Oracle: Intelligent Payment Automation limitations' }] },
   { category: 'oracle', question: 'How much does the NetSuite AI Connector cost?',
     answer: 'Nothing extra from Oracle. Its FAQ describes the AI Connector Service as not a paid feature, and lists the MCP Standard Tools SuiteApp as free to install. Your AI client is a separate subscription; Oracle lists Claude Pro and ChatGPT as currently supported. A custom agent built on top of NetSuite is a build project, priced on scope. Market ranges for those builds are further down this page.',
     links: [{ href: SRC_CONNECTOR_FAQ, label: 'Oracle: AI Connector Service FAQ' }] },
   { category: 'oracle', question: 'How do I connect Claude, ChatGPT or Copilot to NetSuite?',
-    answer: 'Through Oracle’s AI Connector Service, which uses the Model Context Protocol, an open standard for linking AI tools to business systems. Your administrator enables Server SuiteScript and OAuth 2.0, then gives a role the MCP Server Connection permission. Oracle blocks the Administrator role and any full-permission role from connecting. Oracle says Claude Pro and ChatGPT are supported, and some ChatGPT plans need Developer Mode.',
-    links: [{ href: SRC_CONNECTOR_PERMS, label: 'Oracle: required features and permissions' }] },
+    answer: 'Through Oracle’s AI Connector Service, which uses the Model Context Protocol, an open standard for linking AI tools to business systems. Your administrator enables Server SuiteScript and OAuth 2.0, then gives a role the MCP Server Connection permission. Oracle blocks the Administrator role and any full-permission role from connecting. Oracle says Claude Pro and ChatGPT are supported, and some ChatGPT plans need Developer Mode. For Copilot Studio, Oracle points to a SuiteAnswers article that needs a login, and says any MCP client that meets its requirements can connect.',
+    links: [{ href: SRC_CONNECTOR_PERMS, label: 'Oracle: required features and permissions' }, { href: SRC_CONNECTOR_FAQ, label: 'Oracle: AI Connector Service FAQ' }] },
   { category: 'oracle', question: 'We are on NetSuite JCurve. Can we use these AI tools?',
     answer: 'Check before you plan anything. Oracle’s ANZ Localization limitations page says JCurve and JCurve Financials do not have the Server SuiteScript and SuiteCloud Development Framework features. Oracle’s AI Connector FAQ lists Server SuiteScript as a feature you must enable. JCurve Premium is a different case, listed by Oracle as supported for ANZ Localization. Your NetSuite account manager can confirm your edition.',
     links: [{ href: SRC_ANZ_LIMITS, label: 'Oracle: known limitations of ANZ Localization' }] },
   { category: 'oracle', question: 'Is NetSuite better than Xero for a growing Australian business?',
-    answer: 'They suit different stages. Xero suits one entity with simple stock. NetSuite is an ERP built for several subsidiaries, warehouses and approval chains, and Oracle ships a free ANZ Localization SuiteApp for BAS, TPAR and Payment Times reporting. Some groups keep Xero in a smaller entity and run NetSuite at group level. An AI agent can work in either; we build for the system you already run.',
-    links: [{ href: SRC_ANZ, label: 'Oracle: ANZ Localization' }] },
+    answer: 'They suit different stages. Xero suits one entity with simple stock. NetSuite is an ERP built for several subsidiaries, warehouses and approval chains, and Oracle ships a free ANZ Localization SuiteApp for Payment Times and TPAR reporting, plus BAS on SuiteTax accounts. Some groups keep Xero in a smaller entity and run NetSuite at group level. An AI agent can work in either; we build for the system you already run.',
+    links: [{ href: SRC_ANZ_INSTALL, label: 'Oracle: installing ANZ Localization' }] },
 
   // ── Jobs ──
   { category: 'jobs', question: 'What is a NetSuite AI agent?',
@@ -145,7 +147,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes, as a draft. The agent reads the invoice, matches the supplier by ABN, checks the GST amount against the tax code on the vendor and item, and matches the bill to the purchase order and item receipt. Anything that does not match goes to your AP lead with the difference highlighted. It never posts or pays a bill without a person approving it.',
     links: [{ href: '/au/accounts-payable-automation', label: 'Accounts payable automation in Australia' }] },
   { category: 'jobs', question: 'Can an agent turn emailed purchase orders into NetSuite sales orders?',
-    answer: 'Yes. Trade customers and retailers often send purchase orders as PDFs or spreadsheets. The agent reads each line, maps the customer’s product codes to your items, applies their price level and saves the sales order as Pending Approval. Oracle’s help center says a sales order in that status must be approved by someone with the right permissions before NetSuite processes it.',
+    answer: 'Yes. Trade customers and retailers often send purchase orders as PDFs or spreadsheets. The agent reads each line, maps the customer’s product codes to your items, applies their price level and saves the sales order as Pending Approval. Oracle’s Help Center says a sales order in that status must be approved by someone with the right permissions before NetSuite processes it.',
     links: [{ href: SRC_SO_APPROVE, label: 'Oracle: approving sales orders' }] },
   { category: 'jobs', question: 'Can it handle orders from Amazon.com.au, Bunnings Marketplace or THE ICONIC?',
     answer: 'It works on the exceptions, which is where the hours go. Most channels already feed NetSuite through a connector. The agent watches for orders that fail to import, SKUs that do not map, prices that differ from your NetSuite price level and stock that is about to oversell. It drafts the fix and a short note for your channel manager to approve.',
@@ -178,7 +180,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Cost and working with us ──
   { category: 'working', question: 'How much does a custom NetSuite AI agent cost in Australia?',
-    answer: 'Flowtivity’s early-2026 Australian guide puts a custom AI agent at A$5,000 to A$50,000 or more, and says enterprise-grade agents with several system integrations can exceed A$50,000. Web Video Digital’s August 2026 guide gives a wider band, A$15,000 to A$150,000. Neither guide says whether GST is included, and neither is NetSuite-specific. These are market ranges, not our prices. FactoryJet quotes a fixed price in writing after a short scoping call.',
+    answer: 'Flowtivity’s early-2026 Australian guide puts a custom AI agent at A$5,000 to A$50,000 or more, and says enterprise-grade agents with several system integrations can exceed A$50,000. Web Video Digital’s August 2026 guide gives a wider band, A$15,000 to A$150,000. Neither guide says whether GST is included, and neither is NetSuite-specific. These are market ranges, not our prices. Ours comes as one fixed figure in writing, once a short scoping call has shown what the job involves.',
     links: [{ href: SRC_FLOWTIVITY, label: 'Flowtivity: AI agent cost in Australia' }, { href: SRC_WVD, label: 'Web Video Digital: custom AI agent cost' }] },
   { category: 'working', question: 'Can we see it working before we sign?',
     answer: 'Yes. Before any contract, we run a first version of the agent on your own documents: a batch of supplier invoices your team has already entered, or customer purchase orders you have already keyed. You compare its drafts with what your team did, line by line. If it does not match well enough, you have spent nothing and we tell you why.' },
@@ -225,10 +227,10 @@ const BUILD_STEPS: { n: string; t: string; d: string; out: string }[] = [
     d: 'A custom role with only the record types and permissions the job needs, never Administrator. Approval steps are written down: what the agent may save alone, what waits for a person, what it must never touch.',
     out: 'A signed-off agent specification with permissions and approvals.' },
   { n: '05', t: 'Build and test in your sandbox',
-    d: 'The agent is built against your sandbox and tested on past documents, including the awkward ones: credit notes, split deliveries, foreign-currency suppliers, missing ABNs.',
+    d: 'Development happens in your NetSuite sandbox, never live, and testing uses past documents, including the awkward ones: credit notes, split deliveries, foreign-currency suppliers, missing ABNs.',
     out: 'A test report showing match rates and every hand-off case.' },
   { n: '06', t: 'Run beside your team, then go live',
-    d: 'For an agreed period the agent drafts and a person reviews every transaction. Low-risk actions move to one-click approval as the numbers prove out. High-risk ones stay with a person.',
+    d: 'At first, every transaction the agent drafts gets a human review, for a period you set with us. Low-risk actions move to one-click approval as the numbers prove out. High-risk ones stay with a person.',
     out: 'Pilot results against the measure agreed in step 3, and your go-live decision.' },
   { n: '07', t: 'Support on your terms',
     d: 'Defects are fixed inside the build price for the agreed cover period. After that, changes are quoted and approved one at a time. NetSuite releases and model updates are re-tested before they reach live work.',
@@ -319,7 +321,16 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  /* Twin of the US page: reciprocal en-US/en-AU pair, x-default on the US URL
+     (same shape as aiDevelopmentAlternates in src/data/hreflangMap). */
+  alternates: {
+    canonical: CANONICAL,
+    languages: {
+      'en-US': 'https://factoryjet.com/services/netsuite-ai-agents',
+      'en-AU': CANONICAL,
+      'x-default': 'https://factoryjet.com/services/netsuite-ai-agents',
+    },
+  },
   openGraph: {
     title: TITLE,
     description:
@@ -378,7 +389,7 @@ export default function NetSuiteAiAgentsAUPage() {
                 source="au_netsuite_ai_agents_hero"
                 submitLabel="See a demo on my data"
                 service="NetSuite AI Agents"
-                trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+                trustText="Your own invoices, run through the agent before any contract. The founder replies within a day."
               />
             </div>
 
@@ -455,8 +466,8 @@ export default function NetSuiteAiAgentsAUPage() {
               <div className="fact">
                 <div className="sec">§02</div>
                 <p>
-                  Australian NetSuite users get less of Oracle’s built-in AP help than US users. We read Oracle’s help
-                  center on 29 October 2026: <a href={SRC_BILL_LIMITS} {...extLink}>Bill Capture is listed as available
+                  Australian NetSuite users get less of Oracle’s built-in AP help than US users. We read Oracle’s Help
+                  Center on 29 October 2026: <a href={SRC_BILL_LIMITS} {...extLink}>Bill Capture is listed as available
                   only in the United States</a>, and <a href={SRC_IPA_LIMITS} {...extLink}>Intelligent Payment
                   Automation pays US vendors in USD</a>. An AP officer in Sydney or Perth reconciling AUD supplier bills
                   with GST and ABNs gets neither.
@@ -466,8 +477,8 @@ export default function NetSuiteAiAgentsAUPage() {
                 <div className="sec">§03</div>
                 <p>
                   What Oracle does give Australian accounts is free: the <a href={SRC_CONNECTOR_FAQ} {...extLink}>AI
-                  Connector Service</a> for Claude and ChatGPT, and the <a href={SRC_ANZ} {...extLink}>ANZ Localization
-                  SuiteApp</a> for BAS, TPAR and Payment Times reporting. A custom agent sits on top of both. It
+                  Connector Service</a> for Claude and ChatGPT, and the <a href={SRC_ANZ_INSTALL} {...extLink}>ANZ Localization
+                  SuiteApp</a> for Payment Times and TPAR reporting, plus BAS on SuiteTax accounts. A custom agent sits on top of both. It
                   starts work when a document arrives, without anyone typing a prompt.
                 </p>
               </div>
@@ -479,7 +490,7 @@ export default function NetSuiteAiAgentsAUPage() {
         <section className="section facts au-top" id="oracle-in-australia">
           <div className="wrap">
             <div className="section-head">
-              <div className="eyebrow">Checked on Oracle’s help center, 29 Oct 2026</div>
+              <div className="eyebrow">Checked on Oracle’s Help Center, 29 Oct 2026</div>
               <h2>What NetSuite’s own AI does and does not cover in Australia</h2>
               <p className="lead">
                 Before we quote a custom agent, we check whether Oracle already ships the feature for your edition and
@@ -515,7 +526,7 @@ export default function NetSuiteAiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Where Australian NetSuite teams lose hours</div>
-              <h2>Six NetSuite jobs an AI agent can take first</h2>
+              <h2>Where an agent earns its keep first in an Australian NetSuite account</h2>
               <p className="lead">
                 Each one starts with a document or a feed your team already handles by hand, and ends with a
                 transaction a person approves in NetSuite.
