@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { websiteMaintenanceAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/website-maintenance, built 2026-10-29.
@@ -26,7 +27,7 @@ const CANONICAL = 'https://factoryjet.com/uk/website-maintenance';
 const UPDATED = '2026-10-29';
 const READ_ON = '29 October 2026';
 const TITLE = 'Website Maintenance Services UK | Stores and B2B | FactoryJet';
-const H1 = 'Website Maintenance for UK Businesses: Tested Updates, Working Integrations and a Team That Stays On';
+const H1 = 'Website Maintenance for UK Businesses: Updates Tested on Staging and Integrations Checked Every Month';
 const DESCRIPTION =
   'Website maintenance for UK stores and B2B sites: updates tested on staging, restorable backups, security patching and checks on your Xero, Sage or Linnworks links.';
 
@@ -98,13 +99,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What do website maintenance services include?',
     answer: 'The baseline is keeping the platform, theme and add-ons current, plus backups, security checks and fixes when something breaks. For a UK business site that takes orders or leads, we add tests of forms and checkout after every update, checks that the links to Xero, Sage, Linnworks or your courier still post correctly, speed checks on real pages, and a written log of every change that month.' },
   { category: 'basics', question: 'Does a business website need monthly maintenance?',
-    answer: 'If it earns money, yes. Software around your site changes every month whether you touch it or not. PHP 8.2, which still runs many UK WordPress sites, loses security support on 31 December 2026, and Shopify ships a new API version every three months. A site left alone for a year usually has a backlog of updates that are riskier to apply all at once.' },
+    answer: 'If it earns money, yes. Software around your site changes every month whether you touch it or not. PHP 8.2 loses security support on 31 December 2026, and Shopify ships a new API version every three months. A site left alone for a year usually has a backlog of updates that are riskier to apply all at once.' },
   { category: 'basics', question: 'What is the difference between website maintenance and website management services?',
     answer: 'The words overlap, and UK agencies use them loosely. Maintenance usually means keeping the site safe and working: updates, backups, security and fixes. Management often adds the work of changing the site: new pages, content, campaign landing pages and reporting. Ask any provider for a written list of tasks. The list tells you more than the name of the plan.' },
   { category: 'basics', question: 'What is a website care plan, and is it worth paying for?',
     answer: 'A care plan is a monthly maintenance service sold as a named package, often with tiers. Cheaper tiers are mostly automated updates and backups. Higher tiers add developer time, testing and change requests. The useful questions are whether updates are tested on a copy of the site before going live, and whether anyone ever restores a backup to prove it works. If both happen every month, it is worth paying for.' },
   { category: 'basics', question: 'Can you maintain a site that a different agency built?',
-    answer: 'Yes, and most of the sites we look after came to us that way. We start with a takeover check: who owns the domain, hosting and licences, what is installed, which systems the site talks to, and what is out of date. You get that list in writing, with urgent items marked, before any monthly work is agreed.' },
+    answer: 'Yes. We start with a takeover check: who owns the domain, hosting and licences, what is installed, which systems the site talks to, and what is out of date. You get that list in writing, with urgent items marked, before any monthly work is agreed.' },
   { category: 'basics', question: 'What if our old developer will not hand over the logins?',
     answer: 'Start with what is in your company’s name. The domain registrar, the hosting account and any paid plugin licences can usually be recovered by the account holder through the provider’s own support, with proof of ownership. We help you work through each one. Where an account sits in the old agency’s name, we plan a move to a new account in yours.' },
 
@@ -112,7 +113,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'cost', question: 'How much does website maintenance cost in the UK?',
     answer: 'Rattlesnake, a London studio, sampled 15 UK providers in August 2026 and found entry care plans at £15 to £59 a month, managed business care at £60 to £149, and ecommerce or advanced CMS care at £99 to £249 a month or a custom quote. Those are market figures, not our prices. VAT treatment varied between providers in the sample.' },
   { category: 'cost', question: 'How much do website maintenance packages cost for an online store?',
-    answer: 'In Rattlesnake’s September 2026 sample, care for stores, memberships and integrated platforms sat at £99 to £249 a month or a custom quote, and development retainers for revenue-critical sites at £149 to £379 or more. Stores cost more because checkout, payments and stock sync need testing after every update. Each system the store talks to adds work.' },
+    answer: 'In Rattlesnake’s August 2026 sample of 15 UK providers, care for stores, memberships and integrated platforms sat at £99 to £249 a month or a custom quote, and development retainers for revenue-critical sites at £149 to £379 or more. Stores cost more because checkout, payments and stock sync need testing after every update. Each system the store talks to adds work.' },
   { category: 'cost', question: 'Are UK maintenance prices quoted with or without VAT?',
     answer: 'Both, which is why like-for-like comparison is hard. In Rattlesnake’s sample of 15 published plans, some providers quoted plus VAT, one included it and several did not say. At the standard 20% rate, a £79 fee before VAT becomes £94.80. Ask every provider for a figure that states VAT either way before you compare.' },
   { category: 'cost', question: 'Why do some agencies charge £500 a month or more?',
@@ -122,7 +123,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── Platforms and integrations ──
   { category: 'systems', question: 'Do you maintain WordPress and WooCommerce sites?',
-    answer: 'Yes. WordPress and WooCommerce need the most care, because plugins are the usual way in for attackers and the usual cause of a broken checkout. WordPress.org now recommends PHP 8.3 or newer and says older PHP releases are past their end of life and can leave a site open to known flaws. We plan PHP upgrades on a staging copy, test the plugins against them, then move the live site.' },
+    answer: 'Yes. WordPress and WooCommerce need the most care, because plugins are the usual way in for attackers and the usual cause of a broken checkout. WordPress.org recommends PHP 8.3 or newer, and says PHP 7.4-era versions have reached end of life and may expose a site to security vulnerabilities. We plan PHP upgrades on a staging copy, test the plugins against them, then move the live site.' },
   { category: 'systems', question: 'Do you look after Magento and Shopify stores as well?',
     answer: 'Yes. Magento and Adobe Commerce need security patches and extension updates applied with care, and we have a separate UK Magento page for that work. Shopify patches its own platform, but custom apps, theme code and integrations still need planned updates as Shopify retires API versions, each supported for at least 12 months. Custom Next.js and headless builds are covered too.' },
   { category: 'systems', question: 'Our store talks to Xero, Sage or Linnworks. Is that part of maintenance?',
@@ -136,7 +137,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── Security and UK rules ──
   { category: 'security', question: 'How quickly should security updates be applied?',
-    answer: 'The NCSC’s Cyber Essentials requirements, version 3.3 from April 2026, say updates fixing flaws the vendor rates critical or high risk must be applied within 14 days of release. Publicly available commercial web applications are in scope by default. Even if you are not certified, 14 days is a sensible ceiling for a site that handles customer data or payments.' },
+    answer: 'The NCSC’s Cyber Essentials requirements, version 3.3 from April 2026, say updates fixing flaws the vendor rates critical or high risk must be applied within 14 days of release. Off-the-shelf web applications are in scope by default; bespoke custom code is out of scope. Even if you are not certified, 14 days is a sensible ceiling for a site that handles customer data or payments.' },
   { category: 'security', question: 'What happens if our website is hacked?',
     answer: 'First we stop the damage, switching the site to a holding page if that is safer, put back the last copy we know is clean, trace how the attacker got in and shut that route, rotate every password and key, and ask Google to review any warnings. If personal data may have been exposed, the ICO says a notifiable breach must be reported without undue delay and no later than 72 hours after you become aware. That decision is yours, and we give you the facts fast.' },
   { category: 'security', question: 'How common are cyber attacks on UK businesses?',
@@ -220,7 +221,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: { ...websiteMaintenanceAlternates, 'en-GB': CANONICAL } },
   openGraph: {
     title: TITLE,
     description:
@@ -343,7 +344,7 @@ export default function WebsiteMaintenanceUKPage() {
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Most care plans stop at the website. The costly failures we see happen one step further out: a plugin
+              Most care plans stop at the website. A costly failure often sits one step further out: a plugin
               update that leaves the checkout working but stops orders reaching the accounts, so the gap only shows
               at month end. That is why every month includes one test order traced all the way through.
             </p>
@@ -358,7 +359,7 @@ export default function WebsiteMaintenanceUKPage() {
                 { v: '69%', t: 'of large UK businesses and 65% of medium ones reported a breach or attack in the past 12 months', s: 'DSIT, April 2026', u: SRC.csbs.url },
                 { v: '14 days', t: 'to apply updates that fix critical or high-risk flaws, under Cyber Essentials', s: 'NCSC, v3.3', u: SRC.ce.url },
                 { v: '72 hours', t: 'to report a notifiable personal data breach to the ICO after you become aware of it', s: 'ICO', u: SRC.ico.url },
-                { v: '31 Dec 2026', t: 'is when PHP 8.2, still common on WordPress and Magento hosts, stops getting security fixes', s: 'PHP.net', u: SRC.php.url },
+                { v: '31 Dec 2026', t: 'is when PHP 8.2, a version of the language WordPress and Magento run on, stops getting security fixes', s: 'PHP.net', u: SRC.php.url },
               ].map((r) => (
                 <li key={r.t}>
                   <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
@@ -388,7 +389,7 @@ export default function WebsiteMaintenanceUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Backups we restore</h3>
-                <p className="mt-4">A copy of files and database taken on a set timetable, kept off your server, and put back onto a test copy every month. A backup nobody has restored is a guess.</p>
+                <p className="mt-4">A copy of files and database taken on a set timetable, kept off your server, and put back onto a test copy every month. We restore one to a test copy every month, so the first restore is not the day you need it.</p>
               </li>
               <li className="svc-card">
                 <h3>Security patching</h3>
@@ -396,7 +397,7 @@ export default function WebsiteMaintenanceUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Hosting and PHP upgrades</h3>
-                <p className="mt-4">Server software kept on supported versions. PHP 8.2 loses security support on 31 December 2026, so we plan the move to 8.3 or 8.4 on staging, not in a January rush.</p>
+                <p className="mt-4">Server software kept on supported versions. PHP 8.2 loses security support on 31 December 2026, so we plan the move to 8.3 or 8.4 on staging well before that date.</p>
               </li>
               <li className="svc-card">
                 <h3>Integration checks</h3>
@@ -439,8 +440,8 @@ export default function WebsiteMaintenanceUKPage() {
                   <p>
                     <b>The platforms move on a timetable.</b> Shopify ships a fresh API version each quarter and
                     keeps each one running for a minimum of 12 months. Apps and custom links written against an old version
-                    stop working when it retires. WordPress.org now asks for PHP 8.3 or newer and flags older
-                    releases as past their end of life, which leaves known flaws unfixed.
+                    stop working when it retires. WordPress.org recommends PHP 8.3 or newer, and says PHP 7.4-era
+                    versions have reached end of life and may expose a site to security vulnerabilities.
                   </p>
                   <p>
                     <b>Workarounds can put VAT records outside the rules.</b> When the store to Xero link fails, the
@@ -452,11 +453,11 @@ export default function WebsiteMaintenanceUKPage() {
                 <Sources ids={['shopifyApi', 'wp', 'mtd']} />
               </div>
               <div className="card card-top-orange">
-                <span className="eyebrow">Where we see breakages start</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Plugin or app update</div><div className="scorecard-note">checkout works, the order feed does not</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Most often</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">PHP or server upgrade by the host</div><div className="scorecard-note">old plugins fail on the new version</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Often</div></div>
+                <span className="eyebrow">Common places a breakage starts</span>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Plugin or app update</div><div className="scorecard-note">checkout works, the order feed does not</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Every update</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">PHP or server upgrade by the host</div><div className="scorecard-note">old plugins fail on the new version</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Host-led</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">API version retired</div><div className="scorecard-note">Shopify apps and custom links</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Quarterly</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Expired key or password change</div><div className="scorecard-note">Xero, courier or payment account</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Easy to miss</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Expired key or password change</div><div className="scorecard-note">Xero, courier or payment account</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Any time</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">A test order traced end to end</div><div className="scorecard-note">catches all four</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Every month</div></div>
               </div>
             </div>
@@ -497,9 +498,10 @@ export default function WebsiteMaintenanceUKPage() {
         </section>
 
         <MidPageCTA
-          headline={'Do you know what is out of date on your website?'}
+          headline={'Find out what is out of date on your site before it breaks'}
           sub={'Send the address. We check versions, backups, security and speed from the outside, then send a short note listing the urgent items, the ones that can wait, and which of your integrations we would test first.'}
           label={'Get my free site check'}
+          note={'The founder replies within 24 hours.'}
         />
 
         {/* ═══ 7. COMPARISON TABLE ═══ */}
@@ -527,7 +529,7 @@ export default function WebsiteMaintenanceUKPage() {
                   <tr><td className="feat">Updates tested on staging</td><td className="fj"><span className="yes">Every update</span></td><td><span className="no">Rarely</span></td><td><span className="partial">Core only, sometimes</span></td><td><span className="partial">Depends on the person</span></td></tr>
                   <tr><td className="feat">Integrations checked (Xero, Sage, Linnworks)</td><td className="fj"><span className="yes">Test order traced monthly</span></td><td><span className="no">When something breaks</span></td><td><span className="no">Out of scope</span></td><td><span className="partial">If they built them</span></td></tr>
                   <tr><td className="feat">Backups restore-tested</td><td className="fj"><span className="yes">Monthly</span></td><td><span className="no">Rarely</span></td><td><span className="partial">Server backups, untested</span></td><td><span className="partial">Varies</span></td></tr>
-                  <tr><td className="feat">Cover during holidays and illness</td><td className="fj"><span className="yes">A team, not one person</span></td><td><span className="no">You</span></td><td><span className="yes">For the server</span></td><td><span className="no">One person</span></td></tr>
+                  <tr><td className="feat">Cover during holidays and illness</td><td className="fj"><span className="yes">Team cover</span></td><td><span className="no">You</span></td><td><span className="yes">For the server</span></td><td><span className="no">One person</span></td></tr>
                   <tr><td className="feat">Changes and new features</td><td className="fj"><span className="yes">Same team, quoted first</span></td><td><span className="partial">Within your skills</span></td><td><span className="no">Not offered</span></td><td><span className="yes">Usually</span></td></tr>
                   <tr><td className="feat">Accounts in your name</td><td className="fj"><span className="yes">Always</span></td><td><span className="yes">Yes</span></td><td><span className="partial">Hosting held by the host</span></td><td><span className="partial">Ask</span></td></tr>
                 </tbody>
@@ -589,11 +591,11 @@ export default function WebsiteMaintenanceUKPage() {
                 <h2>Terms for website maintenance with FactoryJet</h2>
                 <p className="lead mt-4" style={{ maxWidth: 560 }}>
                   FactoryJet has served 500+ businesses since 2014, most of them in commerce. We design, build and
-                  support stores and B2B sites, so maintenance is part of the job, not an afterthought. We work
+                  support stores and B2B sites, and maintenance is part of that same contract. We work
                   remotely with UK businesses and hold calls in UK business hours.
                 </p>
                 <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
-                  <li><b>A check on your own site before you sign.</b> You see a written review of your actual website, not a sales deck.</li>
+                  <li><b>A check on your own site before you sign.</b> You see a written review of your actual website.</li>
                   <li><b>Fixed prices in writing.</b> The takeover, each fix and any ongoing support you choose are quoted as fixed prices after a short scoping call.</li>
                   <li><b>You own it from day one.</b> Domain, hosting, store, code, licences and every login stay in your company’s name.</li>
                   <li><b>Hosting and licences at cost.</b> They can run in your own accounts, billed to you directly, with no markup from us.</li>
@@ -632,14 +634,14 @@ export default function WebsiteMaintenanceUKPage() {
                     <b>Patch inside 14 days.</b> The NCSC’s Cyber Essentials requirements, version 3.3 from April 2026,
                     say updates that fix flaws a vendor rates critical or high risk, or that score 7 or above on the
                     CVSS v3 scale, must be applied within 14 days of release. Software that no longer gets fixes must
-                    be removed. Publicly available commercial web applications are in scope by default, which covers
-                    WordPress, WooCommerce and Magento.
+                    be removed. Off-the-shelf web applications are in scope by default, which would normally take in
+                    platforms such as WordPress, WooCommerce and Magento; bespoke custom code is out of scope.
                   </p>
                   <p>
                     <b>Breaches have a 72-hour clock.</b> The ICO says a notifiable personal data breach must be
                     reported without undue delay and no later than 72 hours after you become aware of it. If a
                     processor working for you has the breach, it must tell you without undue delay. A hacked checkout
-                    or a leaked customer export can start that clock, so the first hours need facts, not guesses.
+                    or a leaked customer export can start that clock, so the first hours need facts.
                   </p>
                   <p>
                     <b>Attacks are routine.</b> The government’s Cyber security breaches survey 2025/2026 found 43% of
@@ -655,7 +657,7 @@ export default function WebsiteMaintenanceUKPage() {
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
                     Before the first update, we draw every system your site talks to on one page. The monthly test
-                    order follows that map, so a broken link shows up in our report, not in your month-end close.
+                    order follows that map, so a broken link shows up in our monthly report before your month-end close.
                   </p>
                 </div>
               </div>
