@@ -39,7 +39,7 @@ const CANONICAL = 'https://factoryjet.com/uk/erp-ai-agents';
 const UPDATED = '2026-10-29';
 const READ_ON = '29 October 2026';
 const TITLE = 'AI Agents for ERP UK: Sage, Xero, NetSuite, Odoo | FactoryJet';
-const H1 = 'ERP AI Agents for UK Businesses: Quotes, Sales Orders and Supplier Bills Drafted in Sage, NetSuite, Business Central, Odoo or Xero for Your Team to Approve';
+const H1 = 'ERP AI Agents for UK Businesses: Drafts in Sage, NetSuite, Odoo or Xero';
 const DESCRIPTION =
   'AI agents built inside Sage, NetSuite, Business Central, Odoo and Xero for UK firms. They draft quotes, orders and bills; your team approves before anything posts.';
 const IMG = '/images/us/services/erp-ai-agents';
@@ -142,7 +142,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'systems',
     question: 'Does Xero have an AI?',
     answer:
-      'Yes. Xero calls it JAX, short for Just Ask Xero. Xero’s September 2025 release describes it automating bank reconciliations, data entry and getting paid. Its July 2026 release from Xerocon London adds document capture, payment follow-ups, checks on bills before payment, and XeroForce, a natural-language builder for custom agents that connect Xero to other apps. Neither release gives UK-specific dates for each feature.',
+      'Yes. Xero calls it JAX, short for Just Ask Xero. Xero’s September 2025 release describes it automating bank reconciliations, data entry and getting paid. Its July 2026 release from Xerocon London describes document capture and automatic bank matching, and says checks on bills before payment are coming, with no date given. It also describes payment follow-ups and XeroForce, a natural-language builder for custom agents that connect Xero to other apps. Neither release gives UK-specific dates for each feature.',
   },
   {
     category: 'systems',
@@ -172,7 +172,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'systems',
     question: 'Can an outside agent connect to Odoo?',
     answer:
-      'Yes. Odoo 19 documents an External JSON-2 API, called at /json/2/ followed by the model and method, using API keys. The same page says the older XML-RPC and JSON-RPC addresses are scheduled for removal in Odoo 22, in fall 2028, and in Odoo Online 21.1, in winter 2027. Anything new should be built on JSON-2, and older integrations need a rewrite on the calendar.',
+      'Yes. Odoo 19 documents an External JSON-2 API, called at /json/2/ followed by the model and method, using API keys. The same page says the older XML-RPC and JSON-RPC addresses are scheduled for removal in Odoo 22, in autumn 2028, and in Odoo Online 21.1, in winter 2027. Anything new should be built on JSON-2, and older integrations need a rewrite on the calendar. Odoo also says the External API is not available on One App Free or Standard plans, so check your plan first.',
   },
   {
     category: 'systems',
@@ -359,15 +359,15 @@ const SYSTEMS: { name: string; maker: string; door: string; says: string; source
     name: 'Odoo',
     maker: 'Odoo',
     door: 'External JSON-2 API and the Odoo 19 AI app',
-    says: 'Odoo 19 has its own AI agents, built from topics (instructions and tools) and sources (the data they refer to). Without topics, Odoo says an agent can only give information, not change the database. For an outside agent, version 19 documents the External JSON-2 API. The older XML-RPC and JSON-RPC addresses go in Odoo 22, fall 2028.',
+    says: 'Odoo 19 has its own AI agents, built from topics (instructions and tools) and sources (the data they refer to). Without topics, Odoo says an agent can only give information, not change the database. For an outside agent, version 19 documents the External JSON-2 API. The older XML-RPC and JSON-RPC addresses go in Odoo Online 21.1 (winter 2027) and Odoo 22 (autumn 2028). Odoo says the External API is not available on One App Free or Standard plans, so check your plan first.',
     sources: ['odooAgents', 'odooApi'],
   },
   {
     name: 'Xero',
     maker: 'Xero',
     door: 'JAX inside Xero, and the Xero API for your own agent',
-    says: 'Xero’s July 2026 release describes JAX reading source documents into Xero, matching bank transactions, running payment follow-ups and checking bills for changed bank details or unfamiliar suppliers. It also describes XeroForce, a natural-language builder for agents that connect Xero to other apps. Neither release gives UK dates for each feature.',
-    sources: ['xeroJax', 'xeroLondon', 'xeroDev'],
+    says: 'Xero’s July 2026 release describes JAX reading source documents into Xero, matching bank transactions and running payment follow-ups, and says checks on bills for unusual amounts, altered bank details or unfamiliar suppliers are coming, with no date given. It also describes XeroForce, a natural-language builder for agents that connect Xero to other apps. Neither release gives UK dates for each feature.',
+    sources: ['xeroJax', 'xeroLondon'],
   },
   {
     name: 'Sage 50, Sage 200 and Sage Intacct',
@@ -599,7 +599,7 @@ export default function ErpAiAgentsUKPage() {
               {[
                 { v: '500+', t: 'businesses served by FactoryJet since it was founded in 2014', s: 'About FactoryJet', u: '/about' },
                 { v: '15', t: 'item lines per sales document is the limit Microsoft gives for its Business Central Sales Order Agent', s: 'Microsoft Learn, Sales Order Agent FAQ', u: SRC.bcFaq.url },
-                { v: '2028', t: 'is when Odoo says its old XML-RPC and JSON-RPC addresses are removed, in Odoo 22', s: 'Odoo 19, External JSON-2 API', u: SRC.odooApi.url },
+                { v: '2027', t: 'is when Odoo says its old XML-RPC and JSON-RPC addresses are removed in Odoo Online 21.1 (winter 2027), with Odoo 22 following in autumn 2028', s: 'Odoo 19, External JSON-2 API', u: SRC.odooApi.url },
                 { v: 'API', t: 'transfer is on HMRC’s list of accepted digital links for Making Tax Digital; copy and paste is not', s: 'GOV.UK, VAT Notice 700/22', u: SRC.govMtd.url },
               ].map((r) => (
                 <li key={r.t}>
@@ -780,6 +780,7 @@ export default function ErpAiAgentsUKPage() {
           headline={'Send three real documents. We show you the drafts.'}
           sub={'Pick the job your team retypes most: a quote request, a customer PO or a supplier bill. Tell us your ERP and edition. On a short call we say what the built-in assistant already covers, what a custom agent would add, and we quote phase one as a fixed price.'}
           label={'See a demo on my data'}
+          note={'Bhavesh replies within 24 hours.'}
         />
 
         {/* 8. BUILT-IN OR CUSTOM */}
@@ -789,7 +790,7 @@ export default function ErpAiAgentsUKPage() {
               <span className="eyebrow">Built-in or custom</span>
               <h2>Business Central’s own Sales Order Agent beside a custom agent, line by line</h2>
               <p className="lead mt-4">
-                Microsoft publishes the clearest limits of any ERP maker, so we use its agent as the worked example.
+                Microsoft publishes a written list of what its agent will not do, so we use it as the worked example.
                 If your quotes come from email, run under 15 lines and stay inside Business Central, start with
                 Microsoft’s agent. We will tell you so on the first call.
               </p>
@@ -822,10 +823,11 @@ export default function ErpAiAgentsUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">UK work we can show</span>
-              <h2>The integration work an ERP agent stands on, for two UK clients</h2>
+              <h2>One ERP link and one quote-to-order trade store, for two UK clients</h2>
               <p className="lead mt-4">
-                An agent is only as good as the link underneath it. These two UK projects are that link: one
-                system owning stock and prices, and the storefront reading from it.
+                An agent is only as good as the link underneath it. Sow Easy is that ERP link, still in build:
+                WooCommerce reading stock and prices from Odoo. GPSUK is the trade flow an agent would feed: a Commerceflo
+                store where account pricing and quote-to-order run natively.
               </p>
             </div>
             <ul className="col-2 mt-10">
@@ -861,7 +863,7 @@ export default function ErpAiAgentsUKPage() {
                 <h2>Two published UK market ranges for building an ERP agent</h2>
                 <div className="stack mt-6">
                   <p>
-                    Fulminous, a UK development firm, puts a back-office agent that covers data entry, invoice
+                    Fulminous, a development firm with a London office, puts a back-office agent that covers data entry, invoice
                     processing and multi-system workflows at £30,000 to £90,000, excluding VAT, in a guide last
                     updated on 23 September 2026. It names integrations as the biggest single driver of cost.
                   </p>
@@ -992,9 +994,10 @@ export default function ErpAiAgentsUKPage() {
               <span className="eyebrow">Method</span>
               <h2>Sources, read on {READ_ON}</h2>
               <p className="lead mt-4">
-                Every platform feature, tax rule, legal point and market range on this page was read on the pages
-                below on that day. Makers change features and HMRC changes guidance, so open the linked page before
-                you act on a point. For Sage editions we state no feature beyond the name of Sage’s assistant: ask
+                We read Microsoft Learn, Oracle, Odoo and Xero for the agent features, HMRC’s VAT notices for
+                Making Tax Digital, the European Commission and GOV.UK for the AI and data law, and the LeverX and
+                Fulminous guides for cost, all on that date. Makers change agent features between releases, so
+                check the maker’s page against your own edition before you plan around one. For Sage editions we state no feature beyond the name of Sage’s assistant: ask
                 Sage or your reseller what your licence includes.
               </p>
             </div>
