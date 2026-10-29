@@ -157,7 +157,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'rules',
     question: 'Does UK GDPR allow AI to make decisions about customers?',
     answer:
-      'Within limits. GOV.UK says the Data (Use and Access) Act 2025 replaced Article 22 of the UK GDPR with Articles 22A to 22D, allowing solely automated decisions in wider circumstances if safeguards are in place. The safeguards include telling people about significant decisions, letting them challenge one and letting them get human intervention. We design approval steps in from the start. Your data protection lead signs off the use.',
+      'Within limits. GOV.UK says the Data (Use and Access) Act 2025 replaces Article 22 of the UK GDPR with Articles 22A to 22D once that section is commenced, allowing solely automated decisions in wider circumstances if safeguards are in place. Check the ICO’s current position before you rely on it. The safeguards include telling people about significant decisions, letting them challenge one and letting them get human intervention. We design approval steps in from the start. Your data protection lead signs off the use.',
   },
   {
     category: 'rules',
@@ -194,13 +194,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'cost',
     question: 'How much does AI integration cost in the UK?',
     answer:
-      'Market figures vary with the systems involved. Cloudswitched, a London IT firm, published these integration ranges in April 2026: £2,000 to £5,000 for one modern API, £8,000 to £25,000 across several cloud platforms, £15,000 to £40,000 per legacy or on-premises system, and £25,000 to £80,000 for custom middleware. Its page does not say whether VAT is included. These are market figures. FactoryJet quotes a fixed price in writing after scoping.',
-  },
-  {
-    category: 'cost',
-    question: 'Are your quotes inclusive or exclusive of VAT?',
-    answer:
-      'Our written quote says plainly whether each figure includes VAT, so your finance team can approve it without a follow-up email. Each phase is scoped, priced and signed on its own, so you never commit to the whole programme on day one. The market ranges on this page come from another firm’s published guide, which does not say whether its figures include VAT.',
+      'Market figures vary with the systems involved. Cloudswitched, a London IT firm, published these integration ranges in April 2026: £2,000 to £5,000 for one modern API, £8,000 to £25,000 across several SaaS platforms, £15,000 to £40,000 per legacy or on-premises system, and £25,000 to £80,000 for custom middleware. Its page does not say whether VAT is included. These are market figures. FactoryJet quotes a fixed price in writing after scoping.',
   },
   {
     category: 'cost',
@@ -252,7 +246,7 @@ const SYSTEMS: { family: string; names: string; job: string; check: string }[] =
   },
   {
     family: 'Marketplaces',
-    names: 'Amazon.co.uk, eBay UK, OnBuy, ManoMano, B&Q marketplace, Zalando',
+    names: 'Amazon.co.uk, eBay UK, OnBuy, ManoMano, B&Q marketplace',
     job: 'Buyer messages triaged and drafted, listing errors flagged before they cost the account',
     check: 'Each marketplace’s own messaging and response-time rules',
   },
@@ -335,7 +329,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: { 'en-US': 'https://factoryjet.com/services/ai-integration-services', 'en-GB': CANONICAL, 'x-default': 'https://factoryjet.com/services/ai-integration-services' } },
   openGraph: {
     title: TITLE,
     description:
@@ -408,7 +402,7 @@ export default function AiIntegrationServicesUKPage() {
                   <HeroInlineForm region="uk" source="uk_ai_integration_services_hero" service="AI Integration Services" submitLabel="See a demo on my data" />
                 </div>
                 <p style={{ fontSize: 13, marginTop: 10, maxWidth: 560 }}>
-                  Working software on your own data before you sign. Founder replies within 24 hours.
+                  Working software on your own data before you sign. Founder replies within one business day.
                 </p>
               </div>
 
@@ -558,7 +552,7 @@ export default function AiIntegrationServicesUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Marketplace exceptions in Linnworks</h3>
-                <p className="mt-4">Routine Amazon.co.uk, eBay UK and OnBuy orders already flow. The AI watches the ones that stall: an address a courier will reject, a buyer message asking to swap a colour, stock on a ManoMano or Zalando listing that disagrees with the warehouse. It proposes the fix and a person accepts it.</p>
+                <p className="mt-4">Routine Amazon.co.uk, eBay UK and OnBuy orders already flow. The AI watches the ones that stall: an address a courier will reject, a buyer message asking to swap a colour, stock on a ManoMano listing that disagrees with the warehouse. It proposes the fix and a person accepts it.</p>
               </li>
               <li className="svc-card">
                 <h3>Customer answers from live order data</h3>
@@ -579,7 +573,7 @@ export default function AiIntegrationServicesUKPage() {
                   <p>
                     <b>UK GDPR and the Data (Use and Access) Act 2025.</b> GOV.UK says the Act received Royal Assent on
                     19 June 2025 and that most of its Part 5 data protection changes came into force on 5 February
-                    2026. Its factsheet says Article 22 of the UK GDPR was replaced by Articles 22A to 22D, allowing
+                    2026. Its factsheet says the Act replaces Article 22 of the UK GDPR with Articles 22A to 22D once commenced, allowing
                     solely automated decisions in wider circumstances where safeguards exist: telling people about
                     significant decisions, letting them challenge them, and letting them get human intervention.
                   </p>
@@ -627,7 +621,7 @@ export default function AiIntegrationServicesUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">UK work</span>
-                <h2>Two UK trade businesses whose systems we connect</h2>
+                <h2>UK trade businesses we build for</h2>
                 <div className="stack mt-6">
                   <p>
                     <b>GPSUK</b> supplies branded promotional products to business buyers in the UK. We built its trade
@@ -641,7 +635,7 @@ export default function AiIntegrationServicesUKPage() {
                     staging. Read the <a href="/case-studies/sow-easy-distributor-portal" style={inlineLink}>Sow Easy case study</a>.
                   </p>
                   <p>
-                    Both projects are system integration work: deciding which system owns each record and connecting
+                    The Sow Easy build is system integration work: deciding which system owns each record and connecting
                     the rest to it. That groundwork is what an AI integration sits on.
                   </p>
                 </div>
@@ -674,7 +668,7 @@ export default function AiIntegrationServicesUKPage() {
             </div>
             <ol className="stack mt-10" style={{ maxWidth: 900 }}>
               {[
-                { n: '01', t: 'Pick one job and its measure', d: 'One job a person does between two systems, such as coding supplier bills, with a measure everyone accepts: time per bill, error rate, or bills waiting at month end.' },
+                { n: '01', t: 'Pick one job and its measure', d: 'One job a person does between two systems, such as coding supplier bills, with a measure everyone accepts: time per bill or bills waiting at month end.' },
                 { n: '02', t: 'Name an owner for every record', d: 'Supplier, item, price, stock, order and payment each get one home. Where Sage and Linnworks both hold stock, the map says which wins. Both sides sign the one-page map.' },
                 { n: '03', t: 'Check access on each system', d: 'Edition, plan and API access: Sage product, Business Central online or on-premises, Odoo plan, marketplace seller permissions. Anything that blocks a direct link surfaces here.' },
                 { n: '04', t: 'Demo on your own data', d: 'A test copy of the link runs a sample of your real past cases. You see the AI’s proposal beside what your team did, and decide whether to go on.' },
@@ -719,9 +713,9 @@ export default function AiIntegrationServicesUKPage() {
                 <span className="eyebrow">What to put in the brief</span>
                 <div className="scorecard-row"><div><div className="scorecard-metric">The systems, with editions</div><div className="scorecard-note">Sage 200 or Intacct, BC online or on-premises</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>1</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">The job and who does it today</div><div className="scorecard-note">and roughly how many a month</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>2</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Who approves postings</div><div className="scorecard-note">finance lead, accountant, ops manager</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>3</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Who approves postings</div><div className="scorecard-note">finance lead or accountant</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>3</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Where your customers are</div><div className="scorecard-note">UK only, or EU as well</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>4</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Your deadline</div><div className="scorecard-note">year end, a peak season, a system change</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>5</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Your deadline</div><div className="scorecard-note">year end or a system change</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>5</div></div>
               </div>
             </div>
           </div>
