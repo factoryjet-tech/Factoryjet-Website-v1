@@ -16,8 +16,9 @@ import '../au-page.css';
    Why this page exists: no AU page owned store to ERP links. /au/shopify-development
    and /au/ecommerce-development each answer "can you connect Xero or MYOB" in one
    FAQ, and /au/accounts-payable-automation covers supplier bills, not sales. This
-   page is the Australian twin of /services/ecommerce-erp-integration and shares
-   no sentence with it.
+   page covers the same topic as /services/ecommerce-erp-integration for Australia.
+   Copy was rewritten on 29 Oct 2026 after review found paraphrased US and UK
+   sentences; keep it written from AU material (GST, BAS, ATO, AU systems).
 
    Demand (DataForSEO Google Ads volumes, Australia, location 2036, run 29 Oct 2026):
    "shopify xero integration" 260, "shopify xero" 110, "xero integration" 90,
@@ -47,7 +48,7 @@ import '../au-page.css';
 const CANONICAL = 'https://factoryjet.com/au/ecommerce-erp-integration';
 const PUBLISHED = '2026-10-29';
 const UPDATED = '2026-10-29';
-const TITLE = 'Ecommerce ERP Integration Australia | Shopify, Xero, MYOB | FactoryJet';
+const TITLE = 'Ecommerce ERP Integration Australia | Xero, MYOB | FactoryJet';
 const H1 = 'Ecommerce ERP Integration in Australia, With GST Right on Every Order and Refund';
 const DESCRIPTION =
   'Ecommerce ERP integration for Australian stores on Xero, MYOB, NetSuite, Cin7, Unleashed or Odoo. Orders, stock, payouts, refunds and GST that reconcile at BAS time.';
@@ -67,7 +68,8 @@ const crumbs = [
 // you must provide one within 28 days, unless it is for a sale of $82.50 (including GST)
 // or less." Sales of $1,000 or more "also need to show the buyer's identity or ABN".
 // Mixed invoices "must clearly show which items are taxable". "Australia has adopted the
-// Peppol framework as the common standard and network for eInvoicing." Rounding: the
+// Peppol framework as the common standard and network for eInvoicing." (The A-NZ
+// specification clause was cut on review: not confirmed on the page.) Rounding: the
 // total invoice rule and the taxable supply rule. Read in a real browser (403 to fetch).
 const SRC_ATO_INVOICES = 'https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/tax-invoices';
 // ATO, Adjustment notes (last updated 14 Sep 2026): "You need a valid adjustment note
@@ -143,7 +145,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'gst', question: 'Why is the GST in Xero a few cents different from the store?',
     answer: 'Rounding. The ATO allows two rounding rules on an invoice with several taxable lines: round once on the invoice total, or round each line and then the total. Stores and accounting tools do not always pick the same one, so a cart of ten lines can differ by a few cents. We choose one rule, set both systems to match where they allow it, and post any leftover cent to a rounding account.' },
   { category: 'gst', question: 'Do we need Peppol eInvoicing for our trade customers?',
-    answer: 'Only if your trade buyers ask for it. The ATO says Australia has adopted the Peppol framework as its common eInvoicing standard and network, and that a Peppol invoice issued to the A-NZ specification with all mandatory data meets the tax invoice test. If they do, the job on our side is making sure wholesale orders reach your ERP complete, with ABN, purchase order number and tax per line.' },
+    answer: 'Only if your trade buyers ask for it. The ATO says Australia has adopted the Peppol framework as its common eInvoicing standard and network. If they do, the job on our side is making sure wholesale orders reach your ERP complete, with ABN, purchase order number and tax per line.' },
   { category: 'gst', question: 'Should every order be its own invoice in Xero, or a daily summary?',
     answer: 'For most retail stores, a summary per payout. Xero’s developer guide says Xero is designed for volumes of up to 5,000 sales invoices a month. A store taking 300 orders a day passes that in under three weeks (300 × 17 = 5,100). Summary apps such as A2X post one entry per payout, split by taxed and GST-free sales. Trade orders, where the buyer needs a tax invoice, still go in one by one.' },
 
@@ -166,21 +168,17 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Cost and connector or custom ──
   { category: 'choose', question: 'How much does Shopify ERP integration cost in Australia?',
-    answer: 'Published Australian ranges are wide. Exodigital puts typical integrations at AUD $5,000 to $40,000 each, and AUD $4,000 to $15,000 for a Shopify or WooCommerce link. Insiteful puts a custom Shopify and ERP build at AUD $25,000 to $80,000 and NetSuite implementation consulting at AUD $50,000 to $250,000. Neither says whether GST is included. FactoryJet quotes a fixed price per phase in writing after a scoping call.',
-    links: [
-      { href: SRC_EXODIGITAL, label: 'Exodigital, ERP cost in Australia' },
-      { href: SRC_INSITEFUL, label: 'Insiteful, NetSuite, Cin7 and Unleashed compared' },
-    ] },
+    answer: 'Published Australian ranges are wide. Exodigital puts typical integrations at AUD $5,000 to $40,000 each, and AUD $4,000 to $15,000 for a Shopify or WooCommerce link. Insiteful puts a custom Shopify and ERP build at AUD $25,000 to $80,000 and NetSuite implementation consulting at AUD $50,000 to $250,000. Neither says whether GST is included. FactoryJet quotes a fixed price per phase in writing after a scoping call.' },
   { category: 'choose', question: 'When is a ready-made connector enough, and when is custom better?',
     answer: 'A connector is enough when it moves each record in the direction your owner map says, syncs often enough for your stock, handles your tax codes and fits your order volume. Custom wins when one of those fails: trade price lists the connector cannot read, bundles that must split into components, several warehouses with allocation rules, or marketplaces the connector does not support. Often the answer is a connector plus one small custom piece.' },
   { category: 'choose', question: 'How long does an ERP integration take?',
-    answer: 'It depends on the route and on how clean your data is. Configuring a proven connector is the short route. A custom link is a project with design, build, testing on copies of both systems and a watched go-live. Duplicate SKUs, missing tax codes and old customer records add time to either route. We confirm the timeline in writing once the owner map and scope are agreed.' },
+    answer: 'Plan backwards from a BAS quarter. Going live on the first day of a quarter keeps each BAS inside one setup, so the build and testing need to finish before then. Clean-up sets most of the pace: duplicate SKUs, products with no GST setting and tax codes nobody uses any more. Before go-live we replay past weeks of real orders and check the GST totals against the BAS you already lodged. The written timeline follows the signed owner map.' },
 
   // ── Working with us ──
-  { category: 'working', question: 'Can we see the integration working before we sign?',
-    answer: 'Yes. Before any contract, you watch the link run on your own records. For an ERP link that means a sample of your real products and a few test orders, including a GST-free line and a refund, passing between a development store and a test copy of your Xero, MYOB, Cin7 or ERP file. Your bookkeeper checks every record it creates before anything touches the live books.' },
+  { category: 'working', question: 'Can we watch it post a GST-free sale and a refund to a test Xero file first?',
+    answer: 'Yes, and that is the test we suggest. Pick the awkward cases from your own catalogue: a cart with a GST-free item next to a taxable one, a discount code, an Afterpay order, a partial refund. We run them through a test copy of your books and your bookkeeper reads the tax code on every line it posts. No contract is signed until those lines look right to them.' },
   { category: 'working', question: 'Can we send a brief, field list or RFP instead of booking a call?',
-    answer: 'Yes. Send your written brief, an RFP, a field list or an export of the records you sync today through the form on this page. We map each field to its owner and its direction, flag the GST and refund cases, and quote each phase at a fixed price in writing. If a ready-made connector covers your needs, we say so in that reply.' },
+    answer: 'Yes, through the form on this page. The most useful Australian brief names the tax codes you use today, whether you lodge BAS monthly or quarterly, every marketplace you sell on, and each payment provider, including Afterpay and Zip. Add a recent payout statement and one month of exported orders if you can. Those let us spot the GST and clearing account problems before a call.' },
   { category: 'working', question: 'We are moving from Xero to NetSuite, or MYOB to Cin7. Can the store keep selling?',
     answer: 'Yes. The store keeps posting to the old system while the new one is set up, so sales and GST keep reaching the books. We rewrite the owner map for the new system, build the link against a sandbox, replay real orders through it, and switch over on a quiet day at the start of a BAS period so each quarter sits in one system.' },
   { category: 'working', question: 'Who looks after the integration after launch?',
@@ -201,7 +199,7 @@ const jsonLd = {
       areaServed: { '@type': 'Country', name: 'Australia' },
       url: CANONICAL,
       description:
-        'FactoryJet designs, builds, implements and supports the link between an Australian online store and its accounting, inventory or ERP system. Products, prices and stock go out to the store and marketplaces such as Amazon.com.au, eBay, Kogan and Bunnings Marketplace. Orders, customers, payouts from Shopify Payments, Stripe, Afterpay and Zip, refunds and GST come back, mapped to the right tax codes for BAS.',
+        'FactoryJet connects Australian online stores to Xero, MYOB, NetSuite, Cin7, Unleashed or Odoo so orders, payouts, refunds and GST reach the books coded for BAS. Products, prices and stock go out to the store and marketplaces such as Amazon.com.au, eBay, Kogan and Bunnings Marketplace. Orders, customers, payouts from Shopify Payments, Stripe, Afterpay and Zip, refunds and GST come back, mapped to the right tax codes for BAS.',
     },
     {
       '@type': 'BreadcrumbList',
@@ -253,7 +251,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL } },
   openGraph: {
     title: TITLE,
     description:
@@ -309,7 +307,7 @@ const OWNER_ROWS: { rec: string; owner: string; dir: string; note: string }[] = 
 const STAGES: { t: string; d: string }[] = [
   { t: '01 · Scoping call or written brief', d: 'Thirty minutes with the founder, or your brief, RFP or field list by email. We learn which store, marketplaces, payment providers and back-office systems you run, where the retyping happens today and what your bookkeeper fixes before each BAS.' },
   { t: '02 · Owner map and tax code map', d: 'A written table of every record, the system that owns it and the direction it moves, plus a map from each store tax setting to a ledger tax code. You and your bookkeeper sign it off. Nothing is built until this is agreed.' },
-  { t: '03 · Demo on your data', d: 'A sample of your real products and a handful of test orders, including a GST-free line, a discount and a partial refund, passing between a development store and a test copy of your Xero, MYOB, Cin7 or ERP file. You see it work before you sign.' },
+  { t: '03 · Demo on your data', d: 'The link runs on your own products against test copies of your store and books. You choose the cases, and the FAQ below lists the ones we suggest. Nothing is signed until your bookkeeper is happy with what it posts.' },
   { t: '04 · Fixed price per phase', d: 'Each phase is scoped, priced and signed on its own, in writing. A typical split is the core order and stock link first, then payouts and refunds, then marketplaces or trade price lists.' },
   { t: '05 · Build, data clean-up and testing', d: 'We configure the connector or write the custom link, clean duplicate SKUs and old tax settings, then replay real orders from past weeks through test copies of both systems and compare the totals to your actual BAS figures.' },
   { t: '06 · Go-live at a period start', d: 'We switch on at the start of a BAS period where we can, so each quarter sits in one setup. For the first weeks we check clearing accounts and stock counts daily and fix anything that drifts.' },
@@ -404,7 +402,7 @@ export default function EcommerceErpIntegrationAUPage() {
             {[
               { v: '$82.50', t: 'sales above this (inc GST) need a tax invoice within 28 days when the customer asks', s: 'ATO, Tax invoices', u: SRC_ATO_INVOICES },
               { v: '$75', t: 'GST adjustments above this need a valid adjustment note before you claim the decrease', s: 'ATO, Adjustment notes', u: SRC_ATO_ADJUST },
-              { v: '5,000', t: 'sales invoices a month is the volume Xero says it is designed for, a reason big stores post summaries', s: 'Xero Developer', u: SRC_XERO_LIMITS },
+              { v: 'Daily', t: 'is how often MYOB Business syncs Shopify sales through Amaka, with third-party fee bills created for you', s: 'MYOB support', u: SRC_MYOB_SHOPIFY },
               { v: '10 min', t: 'default cycle for Odoo’s Shopify Connector to pull orders, with stock pushed back after each pull', s: 'Odoo 19 documentation', u: SRC_ODOO },
             ].map((r) => (
               <div className="ledgercell" key={r.t}>
@@ -445,11 +443,11 @@ export default function EcommerceErpIntegrationAUPage() {
                 <div className="fact">
                   <div className="sec">§02</div>
                   <div>
-                    <div className="factlabel">Three terms we use a lot</div>
+                    <div className="factlabel">Words on this page</div>
                     <p>
                       An <b>owner map</b> is a table saying which system is the source of truth for each record. A{' '}
-                      <b>clearing account</b> is a holding account in Xero or MYOB where a payout is built up from sales,
-                      fees and refunds, then emptied by the bank deposit. A <b>tax code</b> is the label that tells your
+                      <b>clearing account</b> stands in for one payment provider, such as Afterpay or Shopify Payments.
+                      When the provider’s deposit lands in your bank, that account should read $0. A <b>tax code</b> is the label that tells your
                       ledger whether a line carries GST.
                     </p>
                   </div>
@@ -457,10 +455,10 @@ export default function EcommerceErpIntegrationAUPage() {
                 <div className="fact">
                   <div className="sec">§03</div>
                   <p>
-                    The stores that call us are rarely starting out. They take hundreds of orders a week across a store
-                    and two or three marketplaces, a bookkeeper spends days each quarter matching deposits, and stock is
-                    wrong often enough that customers notice. The software exists. What is missing is someone who agrees
-                    the rules first, builds the link, and stays accountable for it after launch.
+                    If you take hundreds of orders a week across a store and two or three marketplaces, the strain shows
+                    in two places. A bookkeeper spends days each quarter matching deposits, and stock is wrong often
+                    enough that customers notice. The software exists. What is missing is someone who agrees the rules
+                    first, builds the link, and stays accountable for it after launch.
                   </p>
                 </div>
               </div>
@@ -485,7 +483,7 @@ export default function EcommerceErpIntegrationAUPage() {
               <div className="eyebrow">The Australian stack</div>
               <h2>The systems we connect, and what each one should own</h2>
               <p className="lead">
-                Most Australian stores we scope run some mix of these eight. The pairing decides the route: Shopify to
+                These eight systems cover most Australian store stacks. The pairing decides the route: Shopify to
                 Xero through a payout app is a different job from Shopify to NetSuite with trade price lists and three
                 warehouses.
               </p>
@@ -513,7 +511,7 @@ export default function EcommerceErpIntegrationAUPage() {
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
                   <b>Mixed carts.</b> The ATO says a tax invoice covering taxable and non-taxable items must clearly show
-                  which items are taxable. A store selling food, health products or anything else GST-free next to
+                  which items are taxable. A store selling basic food, some medical aids or anything else GST-free next to
                   taxable lines needs every product carrying the right tax setting, and each setting mapped to a ledger
                   tax code. Get one wrong and it repeats on every order until someone notices at BAS time.
                 </p></div>
@@ -565,8 +563,8 @@ export default function EcommerceErpIntegrationAUPage() {
               <div>
                 <h2>Which system owns each record</h2>
                 <p className="lead">
-                  Most broken integrations we take over have one fault in common: two systems both think they own stock,
-                  or prices, or customers. This is the starting map we put on the table at a scoping call. Your version
+                  The usual fault in a broken integration is two systems that both think they own stock, or prices, or
+                  customers. This is the starting map we put on the table at a scoping call. Your version
                   will differ, and it gets written down and signed before anything is built.
                 </p>
               </div>
@@ -696,10 +694,8 @@ export default function EcommerceErpIntegrationAUPage() {
               <div>
                 <h3>Send us a brief or an RFP</h3>
                 <p>
-                  Already written a brief, an RFP or a field list? Send it through the form, along with an export of
-                  the records you sync today if you have one. We map every field to its owner and direction, flag the
-                  GST and refund cases, and reply with a fixed price per phase in writing. If a ready-made connector
-                  covers your needs, we tell you that instead.
+                  Already written a brief, an RFP or a field list? Send it through the form. The reply is a fixed price
+                  per phase in writing, or a note that a ready-made connector covers it.
                 </p>
                 <ModalCTAButton label="Send my brief" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               </div>
@@ -772,9 +768,9 @@ export default function EcommerceErpIntegrationAUPage() {
               <div className="eyebrow">After launch</div>
               <h2>The integration nobody owns is the one that breaks</h2>
               <p className="lead">
-                The call we get most often is about a link an agency set up two years ago and then stopped answering
-                for. An app update changed a tax setting, refunds started posting twice, and nobody
-                knows which system was meant to own stock.
+                In a typical failure, an agency sets up a link and then stops answering for it. Two years later an app update
+                changes a tax setting, refunds start posting twice, and nobody knows which system was meant to own
+                stock.
               </p>
               <p className="lead">
                 We work the other way. The engineers who build your link support it, the handover documents every field
