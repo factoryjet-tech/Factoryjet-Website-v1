@@ -69,7 +69,7 @@ const crumbs = [
 // Contextual checkout and storefront (Markets) on Advanced and Plus only.
 const SRC_PLAN_FEATURES = 'https://help.shopify.com/en/manual/b2b/getting-started/plan-features';
 // Shopify Help, B2B overview: "Shopify B2B is available on the Basic, Grow,
-// Advanced, and Shopify Plus plans." Not on Starter or Retail.
+// Advanced, and Shopify Plus plans." Starter and Retail are not on that list.
 const SRC_B2B = 'https://help.shopify.com/en/manual/b2b';
 // Shopify Help, payment terms: net 7, 15, 30, 45, 60 and 90, all starting from
 // the day the order is placed; due on fulfillment; fixed date. "Deposit
@@ -130,7 +130,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What is Shopify B2B?',
     answer: 'Shopify B2B is the set of trade-selling tools built into Shopify itself. You set each trade customer up as a company, add its sites as locations, give its staff logins, and attach catalogues that hold that customer’s products and prices. Payment terms, purchase order numbers and quick reorders sit on top. Retail and trade can run from the same admin, product data and stock.' },
   { category: 'basics', question: 'Can you do wholesale on Shopify?',
-    answer: 'Yes. Shopify’s help centre says B2B is available on the Basic, Grow, Advanced and Shopify Plus plans, though not on Starter or Retail. What changes between plans is depth: how many catalogues you can run, whether a catalogue can be tied to one company, and whether you can take deposits and part payments. For a UK wholesaler with dozens of negotiated price lists, those limits decide the plan.' },
+    answer: 'Yes. Shopify’s help centre says B2B is available on the Basic, Grow, Advanced and Shopify Plus plans. Starter and Retail are not on that list. What changes between plans is depth: how many catalogues you can run, whether a catalogue can be tied to one company, and whether you can take deposits and part payments. For a UK wholesaler with dozens of negotiated price lists, those limits decide the plan.' },
   { category: 'basics', question: 'Do I need Shopify Plus for B2B?',
     answer: 'Not always. On Basic, Grow and Advanced you get companies, locations, net terms, quantity rules and price breaks, but only three active B2B catalogues and no catalogue assigned directly to one company. Plus removes the catalogue cap and adds direct company catalogues, deposits, partial payments and payment requests per fulfilment. If each trade account has its own negotiated prices, you will usually need Plus.' },
   { category: 'basics', question: 'Is Shopify B2B worth it?',
@@ -142,7 +142,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── Terms, VAT and HMRC ──
   { category: 'money', question: 'Can trade buyers pay on account with net 30 terms?',
-    answer: 'Yes. Shopify’s payment terms page lists net 7, 15, 30, 45, 60 and 90, counted from the day the order is placed, plus due on fulfilment and fixed-date terms. Approved trade accounts can check out without paying at that moment, and Shopify can send payment reminders. Deposit requirements are Plus only. Which accounts get which terms is a credit decision we set up to match your own rules.' },
+    answer: 'Yes. Shopify’s payment terms page lists net 7, 15, 30, 45, 60 and 90, counted from the day the order is placed, plus due on fulfilment. Fixed-date terms are available only on individual draft orders, so a standing month-end account needs a rep-built draft order or custom work. Approved trade accounts can check out without paying at that moment, and Shopify can send payment reminders. Deposit requirements are Plus only. Which accounts get which terms is a credit decision we set up to match your own rules.' },
   { category: 'money', question: 'Can we offer net 90 to UK trade customers?',
     answer: 'Shopify offers net 90, but UK law adds a check. GOV.UK says agreed payment dates must usually be within 60 days for business transactions, and longer terms are allowed only if they are fair to both sides. Where no date is agreed, payment is late 30 days after the invoice or delivery, whichever is later. Ask your solicitor before standardising anything past 60 days.' },
   { category: 'money', question: 'Can we charge interest when a trade account pays late?',
@@ -152,7 +152,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'money', question: 'Do our trade buyers need a full VAT invoice?',
     answer: 'Usually, yes. HMRC’s VAT Notice 700/21 says a VAT-registered business must issue a VAT invoice when it makes standard or reduced rate supplies to another VAT-registered person, normally within 30 days. A full invoice carries set details, including your VAT number, unit prices and the VAT total in sterling. A simplified invoice is allowed only at £250 or less including VAT. We decide which system issues it.' },
   { category: 'money', question: 'Does HMRC check Shopify sales?',
-    answer: 'HMRC checks your VAT returns and records, not Shopify as such. GOV.UK says all VAT-registered businesses should now be signed up for Making Tax Digital for VAT, so your returns come from digital records in compatible software. For a trade store, that means every Shopify order, refund and credit note should reach Xero, Sage or your ERP without being retyped. That link is usually part of our build.' },
+    answer: 'HMRC checks your VAT returns and records, not Shopify as such. GOV.UK says all VAT-registered businesses should now be signed up for Making Tax Digital for VAT. In plain terms, your VAT records should be digital. For a trade store, that means every Shopify order, refund and credit note should reach Xero, Sage or your ERP without being retyped. That link is usually part of our build.' },
   { category: 'money', question: 'Can we sell to trade buyers in the EU from a UK Shopify store?',
     answer: 'Yes, and the VAT side needs planning. HMRC Notice 703 says goods exported from the UK can be zero-rated only if they leave, and you hold official or commercial evidence of export, within three months of the supply. Shopify can show EU accounts their own catalogue. Northern Ireland to EU movements follow separate rules. We set up the store; your accountant confirms the treatment.' },
 
@@ -178,7 +178,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'project', question: 'Will we see something before we sign?',
     answer: 'Yes. Before you commit, we build a working draft on Shopify with your own products, one real trade account and one of your price lists. Your sales team can log in as that buyer, see the prices and terms, and place a test order. It is the quickest way to find out whether native B2B fits the way your customers buy, before anyone signs a contract.' },
   { category: 'project', question: 'What happens after launch?',
-    answer: 'Defects found after launch are fixed inside the build price for a cover period we agree before work starts. You own the code, the repository and the Shopify accounts. After that, support is optional: each change is quoted and approved before we do it, and there is no monthly minimum. Many clients call us only when they add a channel, a system or a new price structure.' },
+    answer: 'Defects found after launch are fixed inside the build price for a cover period we agree before work starts. You own the code, the repository and the Shopify accounts. After that, support is optional: each change is quoted and approved before we do it, and there is no monthly minimum. You can come back for a quoted change when you add a channel, a system or a price structure.' },
 ];
 
 /* ─── JSON-LD. The Organization is defined once, sitewide; this page only
@@ -518,8 +518,8 @@ export default function ShopifyPlusB2BUKPage() {
                 <div className="stack mt-6">
                   <p>
                     Shopify lets you offer net 7, 15, 30, 45, 60 or 90, counted from the day the order is placed. It
-                    also offers payment due on fulfilment and payment on a fixed date. That covers most UK trade
-                    arrangements, including the common month-end account.
+                    also offers payment due on fulfilment. A fixed payment date is available only on individual draft
+                    orders, so a standing month-end account needs a fixed date on each rep-built draft order, or custom work.
                   </p>
                   <p>
                     UK law adds limits Shopify does not enforce for you. GOV.UK says agreed payment dates between
@@ -583,8 +583,8 @@ export default function ShopifyPlusB2BUKPage() {
               <h3 className="mt-4">3. The order has to reach your VAT records digitally</h3>
               <p>
                 GOV.UK says all VAT-registered businesses should now be signed up for Making Tax Digital for VAT. For a
-                trade store, the practical test is simple: every order, refund and credit note should reach Xero,
-                QuickBooks, Sage or your ERP without being retyped. That link is part of our build from the first phase.
+                trade store, every order, refund and credit note should reach Xero, QuickBooks, Sage or your ERP
+                without being retyped. That link is part of our build from the first phase.
               </p>
               <h3 className="mt-4">Selling to trade buyers in the EU</h3>
               <p>
@@ -615,7 +615,7 @@ export default function ShopifyPlusB2BUKPage() {
             <span className="eyebrow">UK systems</span>
             <h2 style={{ maxWidth: 780 }}>Which system owns each trade record: the question we settle first</h2>
             <p className="lead mt-4" style={{ maxWidth: 780 }}>
-              A fault we see often in UK trade stores: two systems both think they own the price or the stock.
+              The most common integration fault is simple to state. Two systems both think they own the price or the stock.
               We agree one owner per record before writing any integration code. This is the pattern we start from, and
               we change it to match your business.
             </p>
@@ -655,11 +655,11 @@ export default function ShopifyPlusB2BUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">UK trade work</span>
-                <h2>UK trade stores we have built, and what carries over to Shopify</h2>
+                <h2>UK trade stores we have built or are building, and what carries over to Shopify</h2>
                 <div className="stack mt-6">
                   <p>
                     Neither of these is a Shopify store, and we say so plainly. They are UK trade projects with the same
-                    hard parts a Shopify B2B build has: per-account prices, trade logins and a back office that has to
+                    hard parts a Shopify B2B build has: per-account prices and a back office that has to
                     stay the single source of truth.
                   </p>
                   <p>
@@ -674,8 +674,8 @@ export default function ShopifyPlusB2BUKPage() {
                     in, see their own account prices and move from quote to order without retyping.
                   </p>
                   <p>
-                    The method transfers directly: settle who owns each record, check every account’s price before
-                    switching, and test against a copy of the back office, never the live one.
+                    The method transfers directly. We settle who owns each record before any code is written, and we test
+                    against a copy of the back office, never the live one.
                   </p>
                 </div>
               </div>
@@ -732,7 +732,7 @@ export default function ShopifyPlusB2BUKPage() {
                 <h2>Have a brief or an RFP? Send it as it is</h2>
                 <div className="stack mt-6">
                   <p>
-                    The UK wholesalers we work best with send a written brief that names their systems. If yours is
+                    A written brief that names your systems lets us quote fastest. If yours is
                     half-finished, send it anyway. If you have none, these six answers let us quote a fixed price:
                   </p>
                   <ul className="scope-list num-list" style={{ maxWidth: 580 }}>
