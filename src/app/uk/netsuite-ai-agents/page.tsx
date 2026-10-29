@@ -39,7 +39,7 @@ const PUBLISHED = '2026-10-29';
 const UPDATED = '2026-10-29';
 const READ_ON = '29 October 2026';
 const TITLE = 'NetSuite AI Agents UK: VAT, MTD and Approvals | FactoryJet';
-const H1 = 'NetSuite AI Agents for UK Companies: Supplier Bills, Sales Orders and Quotes Drafted in NetSuite, in Pounds and With VAT, Approved by Your Team';
+const H1 = 'NetSuite AI Agents for UK Companies: Bills, Orders and Quotes Drafted in Pounds With VAT';
 const DESCRIPTION =
   'AI agents inside Oracle NetSuite for UK subsidiaries and UK-led groups: bills, orders and quotes in pounds with VAT, built around MTD and approvals. Demo first.';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
@@ -117,13 +117,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'connector',
     question: 'What is the NetSuite AI Connector Service?',
     answer:
-      'It is how Oracle lets an outside AI tool work inside your NetSuite account. Oracle says NetSuite has adopted the Model Context Protocol, an open standard for connecting AI applications to other systems, and supplies a SuiteApp called MCP Standard Tools for records, reports, saved searches and queries. You can also write your own tools. Everything runs under a NetSuite role your administrator chooses.',
+      'It is how Oracle lets an outside AI tool work inside your NetSuite account. Oracle says NetSuite has adopted the Model Context Protocol (MCP). MCP is an open standard for connecting AI tools to other systems. Oracle supplies a SuiteApp called MCP Standard Tools for records, reports, saved searches and queries. You can also write your own tools. Everything runs under a NetSuite role your administrator chooses.',
   },
   {
     category: 'connector',
     question: 'How much does the NetSuite AI connector cost?',
     answer:
-      'Oracle’s FAQ says the NetSuite AI Connector Service is not a paid feature and that MCP Standard Tools is a free SuiteApp. You may still need a paid plan with your AI provider: Oracle names Claude Pro and ChatGPT as the clients it currently supports. A custom agent built on top of the connector, or on NetSuite’s web services, is a separate project with its own fixed quote.',
+      'Oracle’s FAQ says the NetSuite AI Connector Service is not a paid feature and that MCP Standard Tools is a free SuiteApp. You may still need a paid plan with your AI provider: Oracle names Claude Pro and ChatGPT as currently supported, and says any client that supports MCP can connect. A custom agent built on top of the connector, or on NetSuite’s web services, is a separate project with its own fixed quote.',
   },
   {
     category: 'connector',
@@ -178,7 +178,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'uk',
     question: 'Does adding an AI agent break the MTD digital link rules?',
     answer:
-      'Not if the data moves by software. HMRC’s VAT Notice 700/22 says a digital link needs no manual intervention, such as copying information by hand, and lists API transfer and automated data transfer among the links it accepts. An agent that reads a supplier invoice and writes the vendor bill into NetSuite through its API is that kind of link. Ask your accountant to check the whole chain.',
+      'Not if the data moves by software. HMRC’s VAT Notice 700/22 says a digital link needs no manual intervention, such as copying information by hand, and lists API transfer and automated data transfer among the links it accepts. An agent that reads a supplier invoice and writes the vendor bill into NetSuite through its API is that kind of link. Keying a supplier invoice into NetSuite by hand is also allowed, because HMRC treats it as the first record. The digital-link rule covers what happens to the data after that. Ask your accountant to check the whole chain.',
   },
   {
     category: 'uk',
@@ -197,7 +197,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'agents',
     question: 'Can an AI agent create sales orders from emailed purchase orders?',
     answer:
-      'Yes, under a role that allows it. The agent finds the customer, the delivery address and each item, checks the price on the order against NetSuite, and saves the sales order as pending. In Oracle’s words, NetSuite will not process an order in that state until a user with the right permissions approves it. Oracle also advises setting an External ID on every record a tool creates, which stops one email making two orders.',
+      'Yes, under a role that allows it. The agent finds the customer, the delivery address and each item, checks the price on the order against NetSuite, and saves the sales order as pending. In Oracle’s words, NetSuite will not process an order in that state until a user with the right permissions approves it. Oracle also advises setting an External ID on every record a tool creates, which Oracle says helps prevent duplicate records, such as one email turning into two orders.',
   },
   {
     category: 'agents',
@@ -368,7 +368,7 @@ const JOBS: { n: string; title: string; body: string; items: string[]; note: str
     body: 'A week before the VAT return, the agent reads the period’s transactions and lists the ones whose tax code looks out of line.',
     items: [
       'A zero-rated code on a supplier who normally charges 20%',
-      'An EU purchase with no reverse charge code',
+      'An overseas service bought with no reverse charge code, or an import with no postponed VAT accounting code',
       'A sales invoice missing a tax code',
       'A bill whose VAT does not equal net times rate, to the penny',
       'Credits posted at a different rate from the invoice they reverse',
@@ -384,7 +384,7 @@ const GUARDS: { rule: string; keeper: string; note: string; sources: SrcKey[] }[
   { rule: 'A log of every call', keeper: 'NetSuite enforces', note: 'The Execution Log is kept 21 days in production and 7 days in a sandbox.', sources: ['nsFaq'] },
   { rule: 'Shared API capacity', keeper: 'NetSuite enforces', note: 'The connector uses whatever concurrency your other integrations have not been allocated.', sources: ['nsConcurrency'] },
   { rule: 'One role per agent, read-only first', keeper: 'We set up', note: 'Oracle advises separate roles per tool and read-only or low-impact tools during first evaluation.', sources: ['nsRisks'] },
-  { rule: 'An External ID on every record', keeper: 'We set up', note: 'Oracle’s best practice when a tool creates a record. It stops duplicates.', sources: ['nsBest'] },
+  { rule: 'An External ID on every record', keeper: 'We set up', note: 'Oracle’s best practice when a tool creates a record. Oracle says it helps prevent duplicate records.', sources: ['nsBest'] },
   { rule: 'Our own log, kept longer', keeper: 'We set up', note: 'What arrived, what was read, what was saved and who approved it, kept for your audit period.', sources: ['govVatRecords'] },
   { rule: 'Approval before anything is processed', keeper: 'Your team keeps', note: 'Bills, orders and estimates are saved as pending. Your approval set-up decides who signs off.', sources: ['nsSoApprove', 'ns3Way'] },
   { rule: 'Paying and filing stay with people', keeper: 'Your team keeps', note: 'Payment runs and the VAT100 submission are never handed to an agent.', sources: ['nsRisks', 'nsMtd'] },
@@ -531,7 +531,7 @@ export default function NetSuiteAiAgentsUKPage() {
                   <HeroInlineForm region="uk" source="uk_netsuite_ai_agents_hero" service="NetSuite AI Agents" submitLabel="See a demo on my data" />
                 </div>
                 <p style={{ fontSize: 13.5, color: T.n400, marginTop: 10, maxWidth: 580 }}>
-                  Working software on your own data before you sign. Founder replies within 24 hours.
+                  Working software on your own data before you sign. Founder replies within one business day.
                 </p>
               </div>
 
@@ -649,8 +649,8 @@ export default function NetSuiteAiAgentsUKPage() {
             <Sources ids={['nsConnector', 'nsFaq', 'nsBillLimits', 'nsGenAi', 'nsIpa', 'nsIpaLimits', 'nsUkSetup', 'nsMtd', 'nsMtdSetup']} />
             <p className="mt-6" style={{ maxWidth: 800 }}>
               The gap sits in accounts payable. A US sister company can have bills read by Bill Capture and paid
-              through BILL. The UK company next to it in the same OneWorld account keys its supplier invoices by
-              hand and pays through Electronic Bank Payments. That gap is where a custom agent earns its place. For
+              through BILL. The UK company next to it in the same OneWorld account usually keys its supplier invoices
+              by hand or through a separate capture tool, and pays through Electronic Bank Payments. That gap is where a custom agent earns its place. For
               supplier bills on other UK ledgers too, see our{' '}
               <a href="/uk/accounts-payable-automation" style={inlineLink}>UK accounts payable automation</a> page.
             </p>
@@ -713,7 +713,9 @@ export default function NetSuiteAiAgentsUKPage() {
                     says that once data is in the software that keeps your electronic account, any further transfer
                     must use digital links, and it lists API transfer and automated data transfer among the links it
                     accepts. An agent that writes a vendor bill into NetSuite through its API keeps that chain
-                    digital. Retyping a PDF does not.
+                    digital. Keying a supplier invoice in by hand is also allowed: HMRC accepts manually entered
+                    purchase invoice data as the first record (Notice 700/22, Example 1). So the agent is not what
+                    makes you compliant. What it changes is fewer keying errors and bills drafted faster.
                   </p>
                   <p>
                     One catch for testing. Oracle says the MTD feature does not run in sandbox accounts, because HMRC
@@ -923,9 +925,8 @@ export default function NetSuiteAiAgentsUKPage() {
               </div>
             </div>
             <p className="mt-8" style={{ maxWidth: 800 }}>
-              Not sure an agent is the right first step? Our{' '}
-              <a href="/uk/ai-consulting" style={inlineLink}>UK AI consulting</a> work starts with the question of
-              which job to automate first. If your books are in Xero rather than NetSuite, see{' '}
+              If you are still choosing which job to automate first, our{' '}
+              <a href="/uk/ai-consulting" style={inlineLink}>UK AI consulting</a> work starts there. If your books are in Xero rather than NetSuite, see{' '}
               <a href="/uk/shopify-xero-integration" style={inlineLink}>Shopify Xero integration</a>.
             </p>
           </div>
