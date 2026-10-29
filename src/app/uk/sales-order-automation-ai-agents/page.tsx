@@ -14,13 +14,14 @@ import '../ai-agents/ai-agents.css';
       or regulator's own page on 29 October 2026 and links to it through the
       SRC constants below. Re-read the page before changing a fact.
    2. No FactoryJet price, and nothing on what an agent costs to run. The only
-      money figures are two named UK firms' published build ranges.
+      money figures are two named firms' published UK build ranges.
    3. Client proof is limited to GPSUK (Commerceflo trade storefront) and
       Sow Easy (WooCommerce plus Odoo, still in build). Neither is described
       as an order agent client.
    4. Structure mirrors /uk/ecommerce-consultant (imports, components, CSS,
-      schema). The copy is written fresh; no paragraph is shared with
-      /services/sales-order-automation-ai-agents.
+      schema). The copy is written fresh. FAQ answers on accuracy, timing and the demo
+      were reworked on 29 Oct 2026 so they no longer track the US answers on
+      /services/sales-order-automation-ai-agents; keep them UK-specific.
    5. The FAQ schema is generated from FAQ_ITEMS, the same array the visible
       FAQ renders. Never add a second list of questions. */
 
@@ -124,7 +125,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'systems', question: 'Can an agent create sales orders in Dynamics 365 Business Central?',
     answer: 'Yes. Microsoft’s Business Central API documentation lists a create method for sales orders, a field for the customer’s external document number, a requested delivery date, and a status that can be Draft, In Review or Open. So the agent writes each order as a draft with the customer’s PO number in that field, and your team releases it. We read your environment first, because extensions often add required fields.' },
   { category: 'systems', question: 'Does it work with Sage 50, Sage 200 and Sage Intacct?',
-    answer: 'We work with all three, and the edition decides the route. Sage’s own UK knowledge base says the Sales Orders module in Sage 50 Accounts is only in the Professional edition, where dispatching an order creates the sales invoice. Sage 200 and Sage Intacct setups depend on the modules and add-ons you licence. In the first week we confirm what your edition exposes, and we tell you plainly if the route is weaker than you expected.' },
+    answer: 'We work with all three, and the edition decides the route. Sage’s own UK knowledge base says the Sales Orders module in Sage 50 Accounts is only in the Professional edition, where dispatching an order creates the sales invoice. Sage 200 and Sage Intacct setups depend on the modules and add-ons you license. In the first week we confirm what your edition exposes, and we tell you plainly if the route is weaker than you expected.' },
   { category: 'systems', question: 'Can it write orders into Odoo?',
     answer: 'Yes, as quotations that your team confirms into sales orders. Check your plan first. Odoo’s developer documentation limits external API access to Custom pricing plans and rules out One App Free and Standard. If you are on Standard, moving to Custom is a cost to weigh before the build. We work on Odoo now for Sow Easy, a UK wholesale client.' },
   { category: 'systems', question: 'We use Brightpearl, Linnworks or Mintsoft. Where does the agent fit?',
@@ -132,11 +133,11 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'systems', question: 'What about NetSuite and QuickBooks?',
     answer: 'Both, with different records. On NetSuite the agent writes the order where your own approval roles already sit, so release happens the way it does today. QuickBooks setups in the UK vary more, and some firms run an inventory app beside QuickBooks that owns the orders. We look at your actual account, edition and add-ons before promising which record the agent will write, and we put that answer in the written quote.' },
   { category: 'systems', question: 'Do marketplace orders from Amazon.co.uk, eBay or OnBuy need this?',
-    answer: 'Usually not. Orders from Amazon.co.uk, eBay UK, OnBuy, ManoMano, the B&Q marketplace or Zalando already arrive as structured data through a connector, so nobody retypes them. The agent is for the orders that come in as PDFs, spreadsheets and typed emails from trade accounts. It can share the same price, stock and SKU checks, so both routes end up in the ERP in the same shape.' },
+    answer: 'Usually not. Orders from Amazon.co.uk, eBay UK, OnBuy or the B&Q marketplace already arrive as structured data through a connector, so nobody retypes them. The agent is for the orders that come in as PDFs, spreadsheets and typed emails from trade accounts. It can share the same price, stock and SKU checks, so both routes end up in the ERP in the same shape.' },
 
   // ── How the agent behaves ──
   { category: 'agent', question: 'How accurate is AI at reading purchase orders?',
-    answer: 'We measure it on your documents, not ours. Ahead of go-live we run it over a set of orders your team keyed last month and score every field against the human entry. PDFs exported from a customer’s own system are the easy case. Scans, photos and spreadsheets with merged cells need more review. Whatever the score, fields the agent is unsure about are flagged for a person rather than guessed.' },
+    answer: 'There is no single figure worth quoting, because accuracy depends on who sends you orders. The number that matters is a score sheet built from your own past orders: one row per order, one column per field (account, PO number, delivery date, each line’s code, quantity and price), each marked as matching your team’s entry or not. The weak spots in UK trade are usually Excel exports with merged header cells and scanned delivery-address blocks. Any field the agent cannot read with confidence goes to a person.' },
   { category: 'agent', question: 'What happens when the price on the PO does not match our price list?',
     answer: 'The draft is held and the line is highlighted with both figures side by side: the customer’s price and the price your system holds for that account. The same goes for a discontinued item, a quantity outside the pack size, an account on stop or a delivery date you cannot meet. Your team decides, and nothing is acknowledged to the customer until a person approves the order.' },
   { category: 'agent', question: 'Our customers use their own product codes. Can the agent cope?',
@@ -156,11 +157,11 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── Cost, timing and terms ──
   { category: 'working', question: 'How much does sales order automation cost in the UK?',
-    answer: 'For a build, published UK ranges run from £10,000 to £90,000. LeverX gives £10,000 to £30,000 for one workflow, and £30,000 to £80,000 for a multi-step agent, using an order agent that writes to an ERP as its example; it does not state VAT. Fulminous gives £30,000 to £90,000, ex VAT, for a back-office data entry agent. FactoryJet gives a fixed price in writing after a short scoping call.' },
+    answer: 'For a build, published ranges for UK projects run from £10,000 to £90,000. LeverX gives £10,000 to £30,000 for one workflow, and £30,000 to £80,000 for a multi-step agent, using an order agent that writes to an ERP as its example; it does not state VAT. Fulminous gives £30,000 to £90,000, ex VAT, for a back-office data entry agent. FactoryJet gives a fixed price in writing after a short scoping call.' },
   { category: 'working', question: 'How long does it take to build an order agent?',
-    answer: 'A pilot on one order mailbox writing drafts into one ERP usually takes two to four weeks. Taking it to production, with permissions, logging, approval rules and monitoring in place, is usually a further four to eight weeks. Spreadsheets with many layouts, a second ERP company or EDI orders push a project towards the longer end. During the pilot your team approves every draft, so you see how it handles real orders before you widen its job.' },
+    answer: 'The written quote gives the date, and it depends on your setup more than on the agent. Three things in UK setups add time. Sage 200 run on a server in your office needs a secure route in before anything can be written. A second Business Central or Sage company means a second set of price lists and rules. EDI from a large UK retailer runs on that retailer’s own format and testing timetable, which we do not control.' },
   { category: 'working', question: 'Can we see it working on our own orders before we sign?',
-    answer: 'Yes. Send us twenty or thirty purchase orders your customers have already sent, with the sales orders your team keyed from them. We run a first version of the agent over them and show you each draft next to what your team entered, with the lines it would have flagged. If your ERP’s own tools or an off-the-shelf parser would cover the job, we say so at that point.' },
+    answer: 'Yes. Pick a recent month of trade orders from the accounts that cause the most retyping, include the Sage, Business Central, Xero or Odoo records your team made from them, and send both. The demo comes back as drafts in the shape your system expects, plus the score sheet and the lines that would have been held. You decide from that whether to go further.' },
   { category: 'working', question: 'Who owns the agent, and do we have to pay a monthly fee?',
     answer: 'You own the agent, the code, the part-number cross-reference and the test orders from day one, and they can run in your own cloud account with the AI and hosting billed to you at cost. Defects are fixed inside the build price for a cover period agreed before work starts. Support is optional: FactoryJet can keep managing it, with each change quoted and approved, and no monthly minimum.' },
 ];
@@ -480,7 +481,7 @@ export default function SalesOrderAutomationUKPage() {
               <h2>Which orders need an agent, and which already arrive as data</h2>
               <div className="stack mt-6">
                 <p>
-                  Orders from Amazon.co.uk, eBay UK, OnBuy, ManoMano, the B&amp;Q marketplace and Zalando come through
+                  Orders from Amazon.co.uk, eBay UK, OnBuy and the B&amp;Q marketplace come through
                   connectors as structured records. So do orders from your own Shopify, WooCommerce or Commerceflo
                   store, and card or pay-later payments taken through Stripe, Klarna or Clearpay. Nobody retypes those,
                   and an agent adds nothing there.
@@ -588,14 +589,19 @@ export default function SalesOrderAutomationUKPage() {
           <div className="wrap">
             <div className="col-6040">
               <div>
-                <span className="eyebrow">What UK firms publish</span>
+                <span className="eyebrow">What firms publish for UK builds</span>
                 <h2>What a custom sales order agent costs to build in the UK</h2>
                 <div className="stack mt-6">
                   <p>
-                    LeverX, in a cost guide dated 4 October 2026, gives £10,000 to £30,000 for an agent that handles one workflow and £30,000 to £80,000 for a multi-step agent working across several systems. Fulminous, whose page was last updated on 23 September 2026, gives £30,000 to £90,000 for a back-office agent that automates data entry and multi-system workflows, and states its figures exclude VAT. Its own
-                    example for the higher band is an order management agent that checks inventory, validates customer
-                    details and creates or updates an order in an ERP. LeverX does not say whether its figures include
-                    VAT.
+                    LeverX, in a UK cost guide dated 4 October 2026, gives £10,000 to £30,000 for an agent that handles one
+                    workflow and £30,000 to £80,000 for a multi-step agent working across several systems. Its example
+                    for that higher band is an order management agent that checks inventory, validates customer details
+                    and creates or updates an order in an ERP. LeverX does not say whether its figures include VAT.
+                  </p>
+                  <p>
+                    Fulminous, whose page was last updated on 23 September 2026, gives £30,000 to £90,000 for a
+                    back-office agent that automates data entry and multi-system workflows, and states its figures
+                    exclude VAT.
                   </p>
                   <p>
                     What moves a project within those ranges: how many customer layouts you receive, whether customer
