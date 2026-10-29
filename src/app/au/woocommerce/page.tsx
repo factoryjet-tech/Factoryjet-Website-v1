@@ -76,14 +76,14 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'hiring', question: 'What does a WooCommerce developer actually do?',
     answer: 'A WooCommerce developer writes and fixes the code behind a WordPress store. Day to day that means custom plugins, theme templates, checkout changes, and the connections that carry orders into Xero or MYOB and stock back from Cin7 or Unleashed. On an established store the bigger job is often subtraction: finding which of the 40 installed plugins are slowing checkout or clashing, and replacing three of them with one small piece of code you own.' },
   { category: 'hiring', question: 'How do I choose a WooCommerce agency in Australia?',
-    answer: 'Ask three things before price. First, show us a live WooCommerce store you connected to accounting or stock software, and explain what syncs which way. Second, how do you test plugin updates before they touch the live store? Third, who owns the code, the hosting account and the admin logins when the project ends? An agency that answers all three plainly is worth a scoping call. Woo also lists agency partners on its own development services directory.' },
+    answer: 'Ask three things before price. First, show us a live WooCommerce store you connected to accounting or stock software, and explain what syncs which way. Second, how do you test plugin updates before they touch the live store? Third, who owns the code, the hosting account and the admin logins when the project ends? An agency that answers all three plainly is worth a scoping call.' },
   { category: 'hiring', question: 'Is a freelancer enough, or do we need a WooCommerce agency?',
-    answer: 'A freelancer is a good fit for a contained job you can describe in a paragraph, such as a new product field or a broken shipping rule. Once the work touches Xero, a warehouse system or a trade portal, cover matters more than hourly rate. If one person holds all the knowledge and goes on leave during a stock sync failure, orders stop. An agency gives you more than one engineer who knows the store, plus code review before changes ship.' },
+    answer: 'Start with how much of the business runs through the store. A freelancer is a sensible choice for one contained job, such as a new product field or a broken shipping rule. When the store feeds Xero, a warehouse system and trade accounts, ask what happens in an EOFY or Click Frenzy week if that one person is away. Any agency you shortlist should name a second engineer who knows your store and show how code is reviewed before it reaches checkout.' },
   { category: 'hiring', question: 'How much does WooCommerce development cost in Australia?',
     answer: 'Published Australian ranges are wide. WP Creative, a Sydney WordPress agency, puts an ecommerce website at AUD $10,000 to $50,000 or more, and a premium build for established ecommerce brands at AUD $25,000 to $100,000 or more (updated 28 August 2026; the guide does not say whether GST is included). Integrations, trade pricing and data migration push a store up those bands. FactoryJet quotes a fixed price in writing after a short scoping call.',
     links: [{ href: SRC_WPCREATIVE, label: 'WP Creative website cost guide' }] },
   { category: 'hiring', question: 'Our previous WooCommerce developer has gone quiet. Can you take over?',
-    answer: 'Yes, and most of our WooCommerce work starts this way. We begin with a written health check: plugin list and update status, custom code review, hosting setup, a speed test and a ranked list of risks. Then we fix whatever can stop orders first. If the previous developer has gone quiet, access can usually be recovered through your hosting account and domain registrar, which should be in your company’s name.' },
+    answer: 'Yes. This is a common way our WooCommerce work starts. First we confirm that the hosting account, the domain and the payment gateway logins sit in your company’s name, because nobody can work safely without them. Then a written health check covers plugins and premium licences, custom code, the staging setup, speed and the Xero or MYOB sync, with risks ranked by what can stop orders. Urgent fixes come before anything new.' },
 
   // ── Xero, MYOB, stock and shipping ──
   { category: 'systems', question: 'Can WooCommerce connect to Xero?',
@@ -119,20 +119,20 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'WooCommerce’s published minimums for version 10.8 and later are WordPress 6.9, PHP 8.3, MySQL 8.0 or MariaDB 10.6, HTTPS and a 256 MB WordPress memory limit. Treat those as the floor. A store taking steady orders also needs object caching, a staging copy, tested backups and enough server room for sale days. We usually recommend an Australian data centre so pages load fast for local shoppers, with the hosting account in your name.',
     links: [{ href: SRC_REQS, label: 'WooCommerce server requirements' }] },
   { category: 'running', question: 'How often does WooCommerce need updating?',
-    answer: 'WooCommerce publishes a release calendar saying new versions typically arrive about every five weeks, with security fixes possible between them. Add WordPress core, the theme and each plugin, and an established store sees several updates most weeks. Leaving them for six months and updating all at once is how stores break. Updates should be tested on a staging copy against a real checkout, then applied to the live store in a quiet hour, with a written log of what changed.',
+    answer: 'Plan on something most weeks. The WooCommerce release calendar puts core releases about five weeks apart, with security fixes possible in between, and WordPress, the theme and each plugin keep their own timetables. Premium plugins also stop updating when a licence lapses, which is a common way a store ends up stuck on old versions. We test each batch on a staging copy with a real checkout, apply it in a quiet hour, and keep a written log.',
     links: [{ href: SRC_RELEASE, label: 'WooCommerce release calendar' }] },
   { category: 'running', question: 'Does the Privacy Act apply to our WooCommerce store?',
-    answer: 'If your business turns over more than $3 million a year, yes. The OAIC defines a small business as one with annual turnover of $3 million or less, and some businesses are covered regardless of turnover, including health service providers and businesses trading in personal information. A store holds names, addresses, phone numbers and order history, so we limit admin access, remove plugins that copy customer data offsite without need, and keep a written list of where that data goes.',
+    answer: 'If your annual turnover has been over $3 million in any financial year since 2002, the Privacy Act applies. The OAIC defines a small business as one with annual turnover of $3 million or less, and some businesses are covered regardless of turnover, including health service providers and businesses trading in personal information. A store holds names, addresses, phone numbers and order history, so we limit admin access, remove plugins that copy customer data offsite without need, and keep a written list of where that data goes.',
     links: [{ href: SRC_OAIC, label: 'OAIC guidance on small business' }] },
   { category: 'running', question: 'Is WooCommerce secure enough for an established business?',
-    answer: 'The core plugin is well maintained, and card numbers are normally handled by Stripe, Afterpay or Zip, not stored on your server. Most WooCommerce breaches start with an outdated or abandoned plugin, shared admin logins or hosting nobody patches. Fewer plugins, tested updates, individual admin accounts with two-factor sign-in and backups you have restored at least once cover most of the risk.' },
+    answer: 'For an Australian store, security is partly a legal question. If the Privacy Act covers your business, a data breach likely to cause serious harm must be reported to the OAIC and to affected customers under the Notifiable Data Breaches scheme. Card numbers normally stay with Stripe, Afterpay or Zip, so the exposure is names, addresses and order history. We cut unused plugins, give each admin a separate login with two-factor sign-in, and restore a backup to prove it works.' },
 
   // ── WooCommerce or Shopify ──
   { category: 'platform', question: 'Is WooCommerce or Shopify better for an Australian business?',
-    answer: 'Shopify suits a business that wants hosting, security and checkout run for it and whose processes fit its apps. WooCommerce suits a business that wants to own its code and database, already runs a content-heavy WordPress site, or needs trade pricing and integration logic that Shopify only reaches through Plus or apps. FactoryJet builds on both platforms, so neither answer earns us more. The deciding question is usually where your stock and prices should live.',
+    answer: 'Start with where your stock and prices live. If Cin7, Unleashed or an ERP owns them, either platform can read them, and the choice comes down to who runs the software. WooCommerce keeps the code and database in your hands and sits well beside a large WordPress content site. Shopify runs hosting and checkout for you, with trade pricing through Shopify Plus or apps. FactoryJet builds on both platforms, so neither answer earns us more.',
     links: [{ href: '/au/shopify-development', label: 'Shopify development in Australia' }] },
   { category: 'platform', question: 'Should we move from WooCommerce to Shopify?',
-    answer: 'Move if running WordPress, hosting and plugins is costing you more attention than the control is worth, and your store fits Shopify without heavy workarounds. Stay if you rely on custom checkout logic, deep content or a trade portal built around your ERP. Often the right first step is a health check and two weeks of fixes on the current store. You then decide with a stable store and real numbers instead of frustration.' },
+    answer: 'List what the store connects to first: Afterpay, Zip, Xero or MYOB, Australia Post or Sendle, and your inventory system. Then check that each one has a working Shopify connection that handles your GST setup and trade accounts. If every one does, and WordPress hosting and plugins are draining your attention, moving is reasonable. If the trade portal or checkout depends on custom code, a health check and a few weeks of fixes on the current store usually gives a clearer answer.' },
   { category: 'platform', question: 'Will we lose Google rankings if we rebuild or migrate a WooCommerce store?',
     answer: 'Not if the move is planned around your web addresses. We crawl the current site, list every URL that earns traffic, keep titles and content that rank, and map each old address to its new one with a 301 redirect. Shopify uses fixed URL patterns such as /products/, so a WooCommerce to Shopify move needs a fuller redirect map than a rebuild on WooCommerce. We watch Search Console daily for the first weeks.',
     links: [{ href: '/au/ecommerce-seo', label: 'Ecommerce SEO in Australia' }] },
@@ -211,7 +211,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_AU',
     type: 'website',
-    images: [{ url: '/images/au/ecommerce-development/ecommerce-development-og.webp', width: 1200, height: 630, alt: 'Ecommerce agency Australia: a Melbourne homewares brand owner reviewing her online store on a laptop' }],
+    images: [{ url: '/images/au/ecommerce-development/ecommerce-development-og.webp', width: 1200, height: 630, alt: 'A business owner reviewing her online store on a laptop' }],
   },
   robots: { index: true, follow: true },
 };
@@ -285,8 +285,8 @@ export default function WooCommerceAUPage() {
               <p className="lead">
                 Your WooCommerce store takes real orders. Staff still re-key some of them into Xero or MYOB, stock in
                 Cin7 or Unleashed drifts away from what the website shows, trade customers email their orders, and
-                every plugin update feels like a gamble. FactoryJet’s WooCommerce developers rebuild, connect and
-                steady stores like that for established Australian businesses, and you own every line of code.
+                every plugin update feels like a gamble. FactoryJet’s WooCommerce developers fix stores like that for established
+                Australian businesses, from one broken sync to a full rebuild, and you own every line of code.
               </p>
               <HeroInlineForm region="au" source="au_woocommerce_hero" submitLabel="See a draft of my store"
                 trustText="Working software on your own data before you sign. Founder replies within 24 hours." />
@@ -361,7 +361,7 @@ export default function WooCommerceAUPage() {
               <div className="fact">
                 <div className="sec">§01</div>
                 <p data-speakable="true">
-                  <span className="stat">A WooCommerce developer builds, connects and maintains a store that runs on WordPress.</span>{' '}
+                  <span className="stat">A WooCommerce developer builds and looks after a store that runs on WordPress.</span>{' '}
                   For an Australian business past its first few years, most of that work sits behind the storefront:
                   orders reaching Xero or MYOB with GST and payment fees recorded correctly, stock and prices read from
                   Cin7, Unleashed, Odoo or NetSuite, trade buyers seeing their own ex-GST prices, and Australia Post or
@@ -384,7 +384,7 @@ export default function WooCommerceAUPage() {
                 <div className="sec">§03</div>
                 <p>
                   WooCommerce costs nothing to download, and WordPress.org counts it on 7+ million active sites. That popularity is why so many stores end up with 30 to 60 plugins from different
-                  authors. Our first job on most Australian stores is deciding which ones to keep, which to replace with
+                  authors. Our first job on an established store is deciding which ones to keep, which to replace with
                   a small custom plugin, and which system should own each piece of data.
                 </p>
               </div>
@@ -397,10 +397,10 @@ export default function WooCommerceAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">WooCommerce development, itemised</div>
-              <h2>Eight WooCommerce jobs Australian businesses bring to us</h2>
+              <h2>Eight WooCommerce jobs established stores bring to us</h2>
               <p className="lead">
-                Few of these start with design. They start with an order that did not reach the warehouse, a refund
-                that landed twice in Xero, or a stockist who gave up on the website and phoned instead.
+                These jobs usually start behind the storefront: an order that never reached the warehouse, a refund
+                booked twice in Xero, a stockist who gave up and phoned, or an update that took checkout down.
               </p>
             </div>
             <div className="capgrid">
@@ -523,7 +523,7 @@ export default function WooCommerceAUPage() {
               <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Systems and owners.</h3></div><p className="plat-build">Accounting, inventory, ERP, CRM and carriers by name, and which one you treat as the truth for stock and price.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Catalogue shape.</h3></div><p className="plat-build">Number of products and variants, bundles, made-to-order items, and how often prices change.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Customer types.</h3></div><p className="plat-build">Retail only, or trade accounts too, with ex-GST pricing, payment terms and purchase order numbers.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Current plugin list.</h3></div><p className="plat-build">Export it from the WordPress admin. It tells a developer more in five minutes than an hour of description.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Current plugin list.</h3></div><p className="plat-build">Copy it from Tools &gt; Site Health &gt; Info in the WordPress admin, or screenshot the Plugins screen. It tells a developer more in five minutes than an hour of description.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">05</span><div className="plat-name"><h3>What is breaking now.</h3></div><p className="plat-build">Missed syncs, slow pages, failed updates, abandoned checkouts. Dates and screenshots help.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">06</span><div className="plat-name"><h3>Deadlines that matter.</h3></div><p className="plat-build">EOFY, a trade show, a Black Friday or Click Frenzy sale, or the date a contract with your old developer ends.</p></div>
             </div>
@@ -536,14 +536,14 @@ export default function WooCommerceAUPage() {
                 <ModalCTAButton label="Send my brief or RFP" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               </div>
               <div className="au-panel">
-                <div className="eyebrow">Work we have done on WooCommerce</div>
+                <div className="eyebrow">Recent WooCommerce work</div>
                 <ul className="trigrows">
-                  <li><span className="m">Sow Easy</span><span className="n">WooCommerce trade store with stock, pricing and SKUs from Odoo</span><span className="t">B2B</span></li>
-                  <li><span className="m">Mannik</span><span className="n">WooCommerce store plus an AI search project</span><span className="t">Retail</span></li>
+                  <li><span className="m">Sow Easy</span><span className="n">WooCommerce trade store with stock, pricing and SKUs from Odoo</span><span className="t">In progress</span></li>
+                  <li><span className="m">Mannik</span><span className="n">WooCommerce store plus an AI search project</span><span className="t">Store</span></li>
                 </ul>
                 <p className="au-note">
-                  Read the <a href="/case-studies/sow-easy-distributor-portal">Sow Easy case study</a>. Same platform,
-                  same integration pattern as an Australian trade store on Cin7 or NetSuite.
+                  Read the <a href="/case-studies/sow-easy-distributor-portal">Sow Easy case study</a> for the
+                  one-owner-per-field pattern we use with any ERP.
                 </p>
               </div>
             </div>
@@ -640,7 +640,7 @@ export default function WooCommerceAUPage() {
               <div className="fact"><div className="sec">§03</div><p>
                 Customer data needs a plan as well as a plugin. The <a href={SRC_OAIC} {...extLink}>OAIC</a> defines a
                 small business for Privacy Act purposes as one with annual turnover of $3 million or less, and some
-                businesses are covered whatever their turnover. Most established stores are over that line. We limit
+                businesses are covered whatever their turnover. We limit
                 admin access to named accounts, remove plugins that copy customer data offsite without need, and hand
                 over a list of every service that receives it. Your adviser checks the policy; the store supports it.
               </p></div>
@@ -697,23 +697,26 @@ export default function WooCommerceAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">After launch</div>
-              <h2>The developer who disappears after launch is the real risk</h2>
+              <h2>What breaks a WooCommerce store in the year after launch</h2>
               <p className="lead">
-                The story we hear most from Australian WooCommerce owners is not about design. It is about a developer
-                who launched the store, stopped answering, and left behind a plugin stack nobody else understands.
-                Six months later an update breaks checkout and the Xero sync starts doubling refunds.
+                Four problems turn up when we open an older WooCommerce store. Premium plugins were bought on the
+                developer’s own account, the licences lapsed, and those plugins stopped updating. The theme was
+                edited directly, so a theme update wipes the changes. Nobody built a staging site. And everyone
+                shares one admin login.
               </p>
               <p className="lead">
-                Our engineers who build the store can support it, the handover documents every plugin and
-                integration, and the code sits in a repository in your name. Support is optional, each change is
-                quoted and approved first, and there is no monthly minimum. See what our{' '}
+                We set stores up so those problems cannot build up. Licences are bought in your name, custom work
+                lives in a child theme or a small plugin you own, and staging is part of the hosting from day one.
+                The handover lists every plugin, licence and integration with its renewal date. Support is optional,
+                each change is quoted and approved first, and there is no monthly minimum. See what our{' '}
                 <a href="/au/website-maintenance">website maintenance in Australia</a> covers.
               </p>
             </div>
             <div className="platlist" role="list">
-              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Fix</h3></div><p className="plat-build">Plugin clashes, failed syncs and checkout errors, picked up by the engineers who wrote the field map.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Improve</h3></div><p className="plat-build">Trade features, speed work and campaign pages ahead of EOFY, Click Frenzy or Black Friday.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Grow</h3></div><p className="plat-build">Marketplaces, a second warehouse, or an AI agent that answers order questions from your WooCommerce data.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Licences</h3></div><p className="plat-build">Premium plugin and theme licences held in your account, with renewal dates in the handover so updates never stop quietly.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Child theme</h3></div><p className="plat-build">Custom templates kept in a child theme or a small plugin, so a theme update cannot overwrite them.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Staging</h3></div><p className="plat-build">A private copy of the store on your hosting, refreshed before each batch of updates and each new feature.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Changes</h3></div><p className="plat-build">Trade features, speed work and campaign pages ahead of EOFY or Click Frenzy, each quoted and approved before work starts.</p></div>
             </div>
           </div>
         </section>
