@@ -37,7 +37,7 @@ const CANONICAL = 'https://factoryjet.com/uk/ai-automation';
 const UPDATED = '2026-10-29';
 const READ_ON = '29 October 2026';
 const TITLE = 'AI Workflow Automation UK: n8n, Make and Zapier | FactoryJet';
-const H1 = 'AI Workflow Automation for UK Operations Teams: n8n, Make and Zapier Built Around Xero, Sage and Your ERP';
+const H1 = 'AI Workflow Automation for UK Operations Teams';
 const DESCRIPTION =
   'Workflow automation for UK operations teams in n8n, Make or Zapier. Orders, payouts, supplier bills and VAT records moved between Xero, Sage, Linnworks and your ERP.';
 
@@ -157,11 +157,12 @@ const TOOLS_CMP: { feat: string; n8n: string; make: string; zapier: string }[] =
    2026-10-29. Monthly tool, hosting and support figures on those pages are
    deliberately left out. */
 const RANGES: { firm: string; job: string; range: string; vat: string; src: SrcKey }[] = [
-  { firm: 'The AI Consultancy', job: 'No-code automation with no AI step', range: '£1,500 to £5,000 one-off', vat: 'Its engagement prices are stated ex VAT; this FAQ tier does not say', src: 'aiConsultancy' },
-  { firm: 'Augustova', job: 'First AI agent or automation', range: '£4,000 to £15,000', vat: 'Ex VAT, stated on the page', src: 'augustovaPricing' },
-  { firm: 'The AI Consultancy', job: 'No-code workflow with an AI step', range: '£5,000 to £15,000 one-off', vat: 'Not stated for this tier', src: 'aiConsultancy' },
-  { firm: 'Augustova', job: 'Custom AI system across several systems', range: '£8,000 to £25,000', vat: 'Ex VAT, stated on the page', src: 'augustovaPricing' },
-  { firm: 'The AI Consultancy', job: 'Self-hosted n8n with AI integration', range: '£10,000 to £30,000 one-off', vat: 'Not stated for this tier', src: 'aiConsultancy' },
+  { firm: 'The AI Consultancy', job: 'No-code automation with no AI step', range: '£1,500 to £5,000 one-off', vat: 'Ex VAT, stated on the page', src: 'aiConsultancy' },
+  { firm: 'Augustova', job: 'Single automation: one chosen task, automated end to end', range: '£595', vat: 'Ex VAT, stated on the page', src: 'augustovaPricing' },
+  { firm: 'Augustova', job: 'AI agents and automation: one repetitive job run by an AI agent', range: '£4,000 to £15,000', vat: 'Ex VAT, stated on the page', src: 'augustovaPricing' },
+  { firm: 'The AI Consultancy', job: 'No-code workflow with an AI step', range: '£5,000 to £15,000 one-off', vat: 'Ex VAT, stated on the page', src: 'aiConsultancy' },
+  { firm: 'Augustova', job: 'Custom AI system: several agents sharing data and hand-offs', range: '£8,000 to £25,000', vat: 'Ex VAT, stated on the page', src: 'augustovaPricing' },
+  { firm: 'The AI Consultancy', job: 'Self-hosted n8n with AI integration', range: '£10,000 to £30,000 one-off', vat: 'Ex VAT, stated on the page', src: 'aiConsultancy' },
   { firm: 'Ronins', job: 'Proof of concept on your own data', range: '£12,000 to £30,000', vat: 'Not stated', src: 'ronins' },
 ];
 
@@ -181,7 +182,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'basics',
     question: 'What is AI automation for a business?',
     answer:
-      'It is a set of workflows that move records between the systems you already run, so an order, an invoice or a payout is keyed in once and then travels on its own. Most steps follow a fixed rule. AI is added only where a step has to read something messy, such as a PDF purchase order or a customer email. In the UK, Google shows about 1,900 searches a month for the phrase (DataForSEO, 29 October 2026).',
+      'It is a set of workflows that move records between the systems you already run, so an order, an invoice or a payout is keyed in once and then travels on its own. Most steps follow a fixed rule. AI is added only where a step has to read something messy, such as a PDF purchase order or a customer email.',
   },
   {
     category: 'basics',
@@ -249,7 +250,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'systems',
     question: 'Do you work with NetSuite, Business Central, Odoo and Brightpearl?',
     answer:
-      'Yes. In a business that runs one of these, it is usually the record for stock, prices and customers, and the shop and marketplaces follow it. The workflow work is deciding which system owns each number and then building the sync around that decision. Our Sow Easy project, a UK wholesale client, connects a WooCommerce trade store to Odoo for stock, pricing and SKUs.',
+      'Yes. In a business that runs one of these, it is usually the record for stock, prices and customers, and the shop and marketplaces follow it. The workflow work is deciding which system owns each number and then building the sync around that decision. For Sow Easy, a UK wholesale client, we are building a WooCommerce trade store that reads stock, pricing and SKUs from Odoo, now in testing on staging.',
   },
   {
     category: 'systems',
@@ -287,13 +288,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'cost',
     question: 'How much does AI automation cost in the UK?',
     answer:
-      'Published UK ranges, read on 29 October 2026: Augustova lists £4,000 to £15,000 for a first agent or automation and £8,000 to £25,000 for a custom system across several tools, both ex VAT. The AI Consultancy lists £5,000 to £15,000 for a no-code workflow with an AI step and £10,000 to £30,000 for self-hosted n8n with AI. FactoryJet quotes a fixed price in writing after a short scoping call.',
+      'Published UK ranges, read on 29 October 2026: Augustova lists £595 for a single automation of one chosen task, £4,000 to £15,000 for one repetitive job run by an AI agent, and £8,000 to £25,000 for a custom system of several agents sharing data and hand-offs, all ex VAT. The AI Consultancy lists £5,000 to £15,000 for a no-code workflow with an AI step and £10,000 to £30,000 for self-hosted n8n with AI, also ex VAT. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'cost',
     question: 'Are the prices on this page with or without VAT?',
     answer:
-      'The ranges are restated exactly as each agency publishes them. Augustova says all its prices exclude VAT. The AI Consultancy says its engagement prices exclude VAT, and its workflow cost tiers do not say either way. Ronins does not say. When you compare quotes, ask each supplier to state VAT treatment in writing. Your FactoryJet quote states it in writing too.',
+      'The ranges are restated exactly as each agency publishes them. Augustova and The AI Consultancy both say their prices exclude VAT. Ronins does not say. When you compare quotes, ask each supplier to state VAT treatment in writing. Your FactoryJet quote states it in writing too.',
   },
   {
     category: 'cost',
@@ -399,7 +400,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL } },
   openGraph: {
     title: TITLE,
     description:
@@ -455,7 +456,7 @@ export default function AiAutomationUKPage() {
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  Your orders arrive from Amazon.co.uk, eBay and your own shop. Stock lives in Linnworks, Mintsoft or
+                  n8n, Make and Zapier workflows built around Xero, Sage and your ERP. Your orders arrive from Amazon.co.uk, eBay and your own shop. Stock lives in Linnworks, Mintsoft or
                   an ERP. Payouts land from Stripe, GoCardless and Klarna, and someone matches them in Xero or Sage
                   each week. FactoryJet designs, builds and supports the workflows that join those systems, in n8n,
                   Make or Zapier, so each record is entered once.
@@ -477,7 +478,7 @@ export default function AiAutomationUKPage() {
                     source="uk_ai_automation_hero"
                     service="AI Automation"
                     submitLabel="See a demo on my data"
-                    trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+                    trustText="Working software on your own data before you sign. Founder replies within one business day."
                   />
                   <p className="mt-4" style={{ fontSize: 14, maxWidth: 560 }}>
                     If you hold a process document, a written brief or a formal RFP, add it on the second screen of the
@@ -734,7 +735,7 @@ export default function AiAutomationUKPage() {
           headline={'Name one workflow and the systems it crosses. We reply with the build.'}
           sub={'Tell us what starts it, the systems and versions involved, and how often it runs. On a short call we say whether it needs AI at all, which tool fits, and we quote a fixed price for the first phase.'}
           label={'See a demo on my data'}
-          note={'Bhavesh replies within 24 hours.'}
+          note={'Bhavesh replies within one business day.'}
         />
 
         {/* 8. MARKET RANGES */}
@@ -799,7 +800,7 @@ export default function AiAutomationUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">UK client work</span>
-              <h2>Two UK trade businesses whose systems we connect</h2>
+              <h2>Two UK trade businesses we build for</h2>
             </div>
             <ul className="col-2 mt-10">
               <li className="card">
@@ -839,7 +840,7 @@ export default function AiAutomationUKPage() {
             </div>
             <ol className="stack mt-10" style={{ maxWidth: 900 }}>
               {[
-                { n: '01', t: 'A scoping call with the founder', d: 'Bhavesh runs the first call. You describe what starts the work, the systems it touches and how often it happens. We say whether it needs AI, and which of n8n, Make or Zapier fits.' },
+                { n: '01', t: 'A scoping call with the founder', d: 'Bhavesh asks which Sage or Xero edition you run, whether it is hosted or on premises, and which postings your accountant signs off. From those answers he says if any step needs AI, and whether n8n, Make or Zapier suits the volume.' },
                 { n: '02', t: 'The workflow on your own data, before you sign', d: 'We run a few of your real orders, payouts or bills through the proposed steps, with names removed if you prefer, and show every record it writes and every case it hands to a person.' },
                 { n: '03', t: 'Posting rules and owners agreed in writing', d: 'Your accountant names the account and VAT code for each kind of entry. Each record gets one owning system. Both go on a single page that you sign.' },
                 { n: '04', t: 'A fixed price for each phase', d: 'Each phase is scoped, priced and signed on its own, with a dated schedule. Data location, credentials and any self-hosting are written into the scope.' },
@@ -986,7 +987,7 @@ export default function AiAutomationUKPage() {
               leave knowing whether it needs AI, which tool fits, and what the first phase costs.
             </p>
             <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-light" />
+              <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-dark" />
               <a className="btn btn-outline" href="/contact" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Contact us</a>
             </div>
           </div>
