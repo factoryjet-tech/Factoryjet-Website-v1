@@ -40,12 +40,14 @@ const crumbs = [
 // is express, or reasonably inferred from conduct and business relationships. Sch 2 cl 4:
 // consent "may not be inferred from the mere fact that the relevant electronic address has
 // been published", except a conspicuously published role or employee address, for messages
-// relevant to that person's work-related business, functions or duties. Sch 2 cl 6:
+// relevant to that person's work-related business, functions or duties, where the publication
+// is not accompanied by a statement that the account-holder does not want unsolicited commercial
+// electronic messages at that address (cl 4(1)(c), from cl 4 as known; not re-fetched 29 Oct 2026). Sch 2 cl 6:
 // withdrawal of consent "takes effect at the end of the period of 5 business days".
 const SRC_SPAM_ACT = 'https://www.legislation.gov.au/C2004A01214/latest/text';
 // OAIC APP guidelines chapter 7: APP 7 restricts using personal information for direct
 // marketing and requires a simple opt-out; "APP 7 does not apply to the extent that the
-// Do Not Call Register Act 2006, the Spam Act 2003" apply (para 7.49). Fetched 29 Oct 2026.
+// Do Not Call Register Act 2006, the Spam Act 2003" apply (para 7.8; the Do Not Call Register Act is also named at para 7.48). Fetched 29 Oct 2026.
 const SRC_OAIC_APP7 =
   'https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-7-app-7-direct-marketing';
 // OAIC APP guidelines chapter 1: "From 10 December 2026, APP 1.7 requires APP entities to
@@ -91,13 +93,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'Is AI replacing the CRM?',
     answer: 'No. The CRM stays the record your managers report from and your board trusts. What changes is who keeps it current. An agent logs the call, fills the empty industry field and proposes the next stage, so the pipeline report reflects what happened this week. Reps still own the relationship. They spend less time typing into HubSpot or Salesforce after every conversation.' },
   { category: 'basics', question: 'Do we need a CRM agent or an AI SDR?',
-    answer: 'They do different jobs. An AI SDR works at the front door: it writes to new prospects, answers inbound enquiries quickly and books meetings. A CRM agent looks after the records you already hold, keeping contacts, companies and deals accurate and moving. Both send or draft commercial messages, so both must meet the Spam Act. Many Australian sales teams run the two together on one set of scoring rules.' },
+    answer: 'An AI SDR goes after new business: first emails to prospects, fast replies to inbound enquiries and meetings booked into a rep’s calendar. A CRM agent maintains what you already hold, so contacts, companies and deals stay correct and keep moving. Both draft or send commercial messages, so both need consent, sender and unsubscribe checks under the Spam Act. Australian teams often run the pair from one shared set of scoring rules.' },
 
   // ── Jobs ──
   { category: 'jobs', question: 'Which sales tasks suit a CRM agent first?',
     answer: 'Start where reps lose the most hours each week. For most Australian B2B teams that is one of four jobs: scoring inbound leads from web forms and trade show lists, logging emails and calls to the right deal, keeping deal stages honest before the Monday pipeline meeting, or drafting follow-ups after a quote. We build one job first, measure it against your own CRM numbers, then add the next.' },
   { category: 'jobs', question: 'Can the agent qualify leads against our Australian ideal customer profile?',
-    answer: 'Yes. You write the rules in plain English, such as wholesale buyers in Victoria and New South Wales with more than 20 staff, or distributors already stocking a named brand. The agent reads the form answers, the company website and past activity, then sets the lead status and owner. It writes a two-line reason next to the score, so the rep sees why before picking up the phone.' },
+    answer: 'Yes. Your sales leader writes the profile in plain English, such as wholesale buyers in Victoria and New South Wales with more than 20 staff, or distributors already stocking a named brand. For each new contact the agent compares the enquiry, the buyer’s own website and any earlier emails with that profile. It assigns a status and an owner, and adds a two-line reason the rep reads before calling.' },
   { category: 'jobs', question: 'Can the agent check ABNs on new company records?',
     answer: 'Yes. The Australian Business Register offers free ABN Lookup web services once you register and receive an access key. The agent can validate the ABN a buyer types into a form and keep stored ABN details on the company record current. A record whose ABN fails the check goes to a review list instead of straight to a rep or to Xero.',
     links: [{ href: SRC_ABN_LOOKUP, label: 'ABR: ABN Lookup web services' }] },
@@ -113,12 +115,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes. The Act applies to anyone who sends, or causes to be sent, a commercial electronic message with an Australian link, and it covers email, SMS and instant messages. Using software does not change who is responsible. Each message needs consent, clear details of who authorised it and how to contact them, and a working unsubscribe option. We build those three checks into the agent before it drafts anything.',
     links: [{ href: SRC_SPAM_ACT, label: 'Spam Act 2003, Federal Register of Legislation' }] },
   { category: 'rules', question: 'Can the agent email contacts we found on a company website?',
-    answer: 'Only in a narrow case. Under Schedule 2 of the Spam Act, consent cannot be inferred just because an address was published. The exception is an address published conspicuously for a person or a role, where the message is relevant to that person’s work. A buyer address on a distributor’s contact page may qualify for a relevant trade offer. Bought lists usually do not. The agent records which basis applies to each contact.' },
+    answer: 'Only in a narrow case. Under Schedule 2 of the Spam Act, consent cannot be inferred just because an address was published. The exception is an address published conspicuously for a person or a role, where the message is relevant to that person’s work and the page does not say they want no unsolicited commercial messages. A buyer address on a distributor’s contact page may qualify for a relevant trade offer. Bought lists usually do not. The agent records which basis applies to each contact.' },
   { category: 'rules', question: 'How quickly must we stop emailing someone who unsubscribes?',
     answer: 'Under Schedule 2 of the Spam Act, a withdrawal of consent takes effect at the end of five business days from the day the unsubscribe message was sent. The unsubscribe address in each message must keep working for at least 30 days after sending. We sync unsubscribe status across HubSpot, Salesforce and any sending tool, so a contact who opts out in one system is blocked in all of them.' },
   { category: 'rules', question: 'Does the Spam Act cover calls made by an AI voice agent?',
     answer: 'Not as an electronic message. Section 5 of the Spam Act excludes a voice call made over a standard telephone service, so calls fall under other rules. The OAIC guidance on APP 7 names the Do Not Call Register Act 2006 alongside the Spam Act as laws that govern direct marketing. If your agent will place outbound calls, check the calling rules with your adviser before launch.',
-    links: [{ href: '/au/ai-receptionist', label: 'AI receptionist for inbound calls' }] },
+    links: [{ href: SRC_OAIC_APP7, label: 'OAIC, APP guidelines chapter 7, direct marketing' }] },
   { category: 'rules', question: 'Can our HubSpot data stay in Australia?',
     answer: 'HubSpot lists Australia among its five data centre locations, and its data centre page says existing paid customers can move their data to a new data centre through account settings at no charge. Free-only accounts default to the United States. For Salesforce, ask your account executive which region your org runs in. The AI model can also run in a cloud account you choose.',
     links: [{ href: SRC_HUBSPOT_DC, label: 'HubSpot data centre locations' }] },
@@ -148,14 +150,14 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'cost', question: 'Are there ongoing fees after launch?',
     answer: 'Only if you ask for support. You can hold the AI model and hosting accounts in your company’s name and pay those providers directly, at cost and without our markup. A defect that appears after go-live is fixed free during the cover period written into the scope. Past that period, we price each change on its own, you approve it first, and nothing is billed as a monthly minimum.' },
   { category: 'cost', question: 'Who owns the agent once it is built?',
-    answer: 'You do, from day one. The code sits in a repository your company owns. The HubSpot app or the Salesforce integration user sits in your own account. The prompts and approval rules are a plain-English document your team can edit. If you hire a Salesforce administrator or move the work to another partner later, they get everything needed to run and change the agent.' },
+    answer: 'Your company owns all of it from the first commit. The repository is created in your company’s own code account. The HubSpot app or the Salesforce integration user is registered to your organisation. Prompts and approval rules live in a plain-English document your team edits. A Salesforce administrator you hire later, or another partner, receives everything needed to run and change the agent.' },
 ];
 
 /* ─── What a CRM agent does (capability cards) ─── */
 const AGENT_JOBS: { n: string; t: string; d: string }[] = [
-  { n: '01', t: 'Score inbound leads against your rules', d: 'Web form, trade show upload or chat creates a contact. The agent reads the answers, the company site and past activity, scores the lead against criteria you wrote, sets owner and status, and leaves a two-line reason on the record.' },
-  { n: '02', t: 'Keep deal stages honest', d: 'Replies, call notes and meeting outcomes become a proposed stage change with the evidence attached. The deal owner approves in one click. Closed Won always stays with a person.' },
-  { n: '03', t: 'Log every email and call to the right deal', d: 'Threads, call summaries and meeting notes are matched to the contact, company and deal, then logged with next steps. When the match is unclear, the item waits on a review list instead of being filed by guesswork.' },
+  { n: '01', t: 'Score inbound leads against your rules', d: 'A trade show badge list arrives as a CSV, or a buyer fills in the quote form. Each new contact is compared with the profile your sales leader wrote, such as state, staff count and the brands they stock. The agent gives a score, assigns an owner and notes in two lines why.' },
+  { n: '02', t: 'Keep deal stages honest', d: 'The Friday chase for stage updates goes away. When a buyer replies to a quote or a call note mentions a purchase order, the agent proposes the next stage and quotes the line that supports it. The owner accepts or rejects it, and only a rep can mark a deal won.' },
+  { n: '03', t: 'Log every email and call to the right deal', d: 'Outlook and Gmail threads, call recordings and meeting notes are filed against the contact, the company and the open deal, with the next step written out. If a buyer has two company records, say one per state branch, or two deals could fit, a rep places the item from a review queue.' },
   { n: '04', t: 'Fill company records, ABN included', d: 'Missing industry, size and website fields come from sources you approve. ABNs are validated through the ABR’s ABN Lookup web services. Every value records where it came from, and a field a rep typed is never overwritten.' },
   { n: '05', t: 'Draft follow-ups that pass the Spam Act check', d: 'After a quote or a quiet fortnight, the agent drafts the next email from the deal history. Before drafting, it confirms consent and unsubscribe status and adds your sender details. The rep edits and sends.' },
   { n: '06', t: 'Read your other systems before a call', d: 'Open invoices in Xero or MYOB, stock in Cin7 or Unleashed, orders in NetSuite or Odoo, delivery status from Australia Post or StarTrack. The rep sees it on the account before dialling.' },
@@ -212,7 +214,7 @@ const RELATED: { h: string; t: string; d: string }[] = [
   { h: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'Supplier invoices read into draft bills in Xero or MYOB, with approval before anything posts.' },
   { h: '/au/ai-consulting', t: 'AI consulting', d: 'Not sure the CRM is the right first job? A readiness assessment ranks the options.' },
   { h: '/au/ai-development', t: 'AI development', d: 'Bigger projects: AI built into your own software, new apps and deep system integration.' },
-  { h: '/services/crm-ai-agents', t: 'CRM AI agents (US page)', d: 'The same service written for US sales and RevOps teams, written for the US market.' },
+  { h: '/services/crm-ai-agents', t: 'CRM AI agents (US page)', d: 'The same service for US sales and RevOps teams.' },
 ];
 
 /* ─── JSON-LD ──────────────────────────────────────────────────────
@@ -323,16 +325,17 @@ const JOB_ICONS = [
   'M9 15 15 9M8 11l-2 2a4 4 0 0 0 6 6l2-2M16 13l2-2a4 4 0 0 0-6-6l-2 2',
 ] as const;
 
-/* Australian search demand, DataForSEO Google Ads search volume, location 2036, pulled 29 Oct 2026. */
+/* Australian search demand, DataForSEO Google Ads search volume, location 2036, language en.
+   Re-run 29 Oct 2026 for review; raw JSON saved outside the repo (scratchpad
+   crm_ai_agents_au_volumes_2026_10_29.json). 'salesforce agentforce' and 'hubspot ai agent' returned
+   no volume on the re-run and were dropped. Bar widths are each volume / 880. */
 const DEMAND: { kw: string; v: string; w: string; kd: string }[] = [
   { kw: 'agentforce', v: '880', w: '100%', kd: 'Salesforce buyers researching the vendor agent' },
-  { kw: 'salesforce agentforce', v: '390', w: '44%', kd: 'Vendor agent research' },
   { kw: 'hubspot ai', v: '170', w: '19%', kd: 'HubSpot customers comparing options' },
   { kw: 'hubspot xero integration', v: '140', w: '16%', kd: 'Sales and finance data in one place' },
   { kw: 'ai crm', v: '140', w: '16%', kd: 'Mixed intent, high CPC' },
   { kw: 'ai sales agent', v: '90', w: '10%', kd: 'Buyer intent' },
   { kw: 'hubspot salesforce integration', v: '70', w: '8%', kd: 'Two-CRM companies' },
-  { kw: 'hubspot ai agent', v: '40', w: '5%', kd: 'Buyer intent' },
 ];
 
 export default function CrmAiAgentsAUPage() {
@@ -574,7 +577,7 @@ export default function CrmAiAgentsAUPage() {
                   Section 16 bans sending a commercial message without the account-holder’s consent. Schedule 2 says
                   consent is express, or reasonably inferred from conduct and business relationships. It cannot be
                   inferred just because an address was published, except a conspicuously published work or role
-                  address, and then only for messages relevant to that person’s job.
+                  address, and then only for messages relevant to that person’s job, where the page does not say they want no unsolicited commercial messages.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><div>
                   <p>
@@ -708,7 +711,7 @@ export default function CrmAiAgentsAUPage() {
               <div className="eyebrow">Side by side</div>
               <h2>Custom CRM agent vs Breeze or Agentforce vs a Zapier or Make workflow</h2>
               <p className="lead">
-                All three are right for someone. Match the option to the job, not the other way round.
+                Match the option to the job, not the other way round.
               </p>
             </div>
             <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
