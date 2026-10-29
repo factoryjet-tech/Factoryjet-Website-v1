@@ -25,9 +25,11 @@ import '../au-page.css';
       Australian company (Hatchet, Perth).
    3. No client is named or described, and no partner status is claimed.
    4. Structure mirrors /au/shopify-development (components, props, CSS,
-      metadata and schema shape). The copy is written fresh for Australia and
-      shares no paragraph with /uk/shopify-xero-integration or the US
-      /services/shopify-quickbooks-integration page.
+      metadata and schema shape). The copy is written for Australia. Reviewer
+      pass on 29 Oct 2026 rewrote three FAQ answers that ran close to
+      /uk/shopify-xero-integration and one payout sentence shared with
+      /au/shopify-development. Check for shared runs of 10+ words against
+      those pages before adding copy.
    5. The FAQPage schema is generated from FAQ_ITEMS, the same array the
       visible FAQ renders. Never add a second list of questions. */
 
@@ -71,7 +73,8 @@ const SRC = {
   xeroApp: { label: 'Xero App Store AU: Shopify, by Xero', url: 'https://apps.xero.com/au/app/shopify' },
   // "Automatically match payouts from Shopify Payments and other gateways to your bank account".
   xeroShopify: { label: 'Xero AU: Integrate Shopify with Xero', url: 'https://www.xero.com/au/partnerships/shopify/' },
-  // Concurrent 5, 60 calls per minute, 1,000 calls per day for starter, 5,000 for higher tiers.
+  // Concurrent 5 and 60 calls per minute, per organisation per app. Daily cap not quoted on the page
+  // because the per-day figure varies by the app's developer tier; reviewer could not confirm it here.
   xeroLimits: { label: 'Xero Developer: API limits', url: 'https://developer.xero.com/documentation/guides/oauth2/limits/' },
   // "operating your business from ... Australia ... taxes are added on processing fees".
   shopifyFees: { label: 'Shopify Help: Shopify Payments payout fees', url: 'https://help.shopify.com/en/manual/payments/shopify-payments/payouts/pay-periods-and-fees' },
@@ -109,11 +112,11 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── Connecting Shopify and Xero ──
   { category: 'basics', question: 'Does Shopify integrate with Xero in Australia?',
-    answer: 'Yes. Xero lists its own Shopify integration on the Australian Xero App Store, and the listing says it is free on all Xero plans. It brings sales, payouts, fees and taxes across from the Shopify online store and Shopify POS. Connector apps such as A2X and Amaka cover the same ground with more posting choices. A custom link handles the rules neither has a setting for, such as trade invoices on terms or stock kept in another system.' },
+    answer: 'Yes. Xero’s own Shopify app has an Australian App Store listing, covers both the Shopify online store and Shopify POS, and costs nothing on any Xero plan. What it does not decide for you is Australian bookkeeping: which GST rate each line takes, how Afterpay deposits match their sales, and how the BAS figures add up. A2X and Amaka give more posting options. Trade invoices on terms, or stock kept in Cin7 Core, usually call for a custom build.' },
   { category: 'basics', question: 'How do I connect Shopify to Xero?',
-    answer: 'On the Xero App Store, select Get this app, log in to Xero, connect your Shopify store and follow the prompts. Settle three things with your bookkeeper before that click: daily summary or per-sale posting, which Xero accounts take sales, shipping, refunds and fees, and which Xero tax rate each Shopify tax maps to. Then sync a short period and check it against one real payout before you rely on it.' },
+    answer: 'The install takes minutes from the Xero App Store. The work is the agreement with your bookkeeper first. Pick a start date at the beginning of a BAS period so no quarter is split between two methods. Write down the GST map: taxable lines, GST-free lines, exports and fees, each against a Xero tax rate. Choose summary or per-sale posting. Then let the first week post and have your bookkeeper tick the deposits off in the bank feed.' },
   { category: 'basics', question: 'Should we post a daily summary or every Shopify order to Xero?',
-    answer: 'For retail volume, a daily summary. Xero’s listing suggests it for high-volume stores to keep the file clean. Per-sale posting brings customer and line-item detail into Xero, which suits trade accounts you invoice and chase by name. Plenty of established sellers run both: retail orders as one summary a day, wholesale orders as individual invoices with payment terms and the buyer’s ABN.' },
+    answer: 'For retail volume, a daily summary, which is the option Xero’s listing points busy stores towards. Posting each sale gives Xero a record per buyer and per product, which suits trade accounts you invoice and chase by name. Plenty of established sellers run both: retail orders as one summary a day, wholesale orders as individual invoices with payment terms and the buyer’s ABN.' },
   { category: 'basics', question: 'How much Shopify history can the Xero integration bring across?',
     answer: 'Xero’s listing says it can sync up to 90 days of historical data. That covers one quarter, roughly a BAS period, but not a financial year. If you are catching up further back, or moving from MYOB or spreadsheets part way through the year, agree a cut-over date with your accountant and bring older periods in as journals, so no sale is counted twice.' },
   { category: 'basics', question: 'Is Xero’s free Shopify integration enough for a larger store?',
@@ -121,7 +124,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── GST and tax invoices ──
   { category: 'gst', question: 'How does GST on Shopify sales show up in Xero?',
-    answer: 'The ATO describes GST as a 10% tax on most goods sold in Australia, and Australian Shopify prices are normally shown GST-inclusive. When a total includes GST, the GST is one-eleventh of it. Each Shopify tax has to map to the matching Xero tax rate, so taxable lines land under a GST rate and GST-free lines under a GST-free rate. Get that mapping right once and the BAS figures come straight out of Xero.' },
+    answer: 'The ATO describes GST as a 10% tax on most goods sold in Australia, and Australian Shopify prices are normally shown GST-inclusive. When every item in a total is taxable, the GST is one-eleventh of it. Each Shopify tax has to map to the matching Xero tax rate, so taxable lines land under a GST rate and GST-free lines under a GST-free rate. Get that mapping right once and the BAS figures come straight out of Xero.' },
   { category: 'gst', question: 'When does an online store have to register for GST?',
     answer: 'The ATO says you must register once your GST turnover reaches $75,000, or when you start a business and expect to reach that figure. Turnover here means gross income minus GST. The stores we build for are well past that line, so their question is how GST appears in Xero. Your tax agent should confirm your own position, including any branches or GST groups.' },
   { category: 'gst', question: 'What happens when one cart has GST-free and taxable items?',
@@ -137,7 +140,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Payouts, Afterpay and refunds ──
   { category: 'payouts', question: 'Why does our Shopify payout never match the day’s sales?',
-    answer: 'Because a payout is a net figure. Shopify Help says the payout export lists Amount, Fee and Net for each transaction, and that chargebacks, dispute fees and adjustments come out of it, often across several days of orders. Record gross sales, fees and refunds separately through a clearing account in Xero, and let the payout clear that account when it lands in your bank feed.' },
+    answer: 'Because a payout is a net figure. Shopify Help says the payout export lists Amount, Fee and Net for each transaction, and that chargebacks, dispute fees and adjustments come out of it, and one deposit can cover orders from several days. In Xero, post sales, fees and refunds as their own lines into a holding account for Shopify Payments, then match the deposit against that account when it appears in the bank feed.' },
   { category: 'payouts', question: 'How do we reconcile Afterpay sales in Xero?',
     answer: 'Treat Afterpay as its own payment channel. Afterpay says that for online sales it pays you after setting off what you owe it, including its fee, typically up to five business days after the purchase. So the sale belongs on the order date, the deposit arrives later as a separate bank line, and the fee is an expense. A dedicated Afterpay clearing account in Xero keeps those three pieces matched. Zip and PayPal need the same treatment.' },
   { category: 'payouts', question: 'What happens to refunds and chargebacks in Xero?',
@@ -157,10 +160,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Cost and working with us ──
   { category: 'working', question: 'How much does a Shopify Xero integration cost in Australia?',
-    answer: 'Xero’s own integration is free on all Xero plans, per its listing. Connector apps charge by volume: A2X says its plans depend on Shopify order volume and features. For custom work, Hatchet, a Perth software company and Xero Development Partner, wrote in September 2026 that each integration typically adds $5,000 to $20,000 to a build; the article does not say whether GST is included. FactoryJet quotes a fixed price in writing after a short scoping call.',
+    answer: 'Xero’s own integration is free on all Xero plans, per its listing. Connector apps charge by volume: A2X says its plans depend on Shopify order volume and features. For custom work, Hatchet, a Perth software company which describes itself as a Xero Development Partner, wrote in September 2026 that each integration typically adds $5,000 to $20,000 to a build; the article does not say whether GST is included. FactoryJet quotes a fixed price in writing after a short scoping call.',
     links: [{ href: '/au/shopify-development', label: 'Shopify development in Australia' }] },
   { category: 'working', question: 'When is a custom Shopify Xero link worth paying for?',
-    answer: 'When your rules have no setting in an app: trade invoices with the buyer’s ABN, stock held in Cin7 Core or an ERP, several entities, marketplace settlements or bundles that must post as their parts. Volume matters too. Xero Developer limits each organisation to 60 API calls a minute, five at a time, and 1,000 a day on the starter tier, so a big sale day needs queued, batched writes.' },
+    answer: 'When your rules have no setting in an app: trade invoices with the buyer’s ABN, stock held in Cin7 Core or an ERP, several entities, marketplace settlements or bundles that must post as their parts. Volume matters too. Xero allows each connected app 60 API calls a minute for each organisation, five at a time, plus a daily cap, so a big sale day needs queued, batched writes.' },
   { category: 'working', question: 'Who owns the integration once it is built?',
     answer: 'You do. The code and the repository are yours from day one, and the link can run in your own hosting and Xero accounts, at cost with no markup. Defects are fixed inside the build price for a cover period we agree before work starts. Support after that is optional: each change is quoted and approved, and there is no monthly minimum.' },
   { category: 'working', question: 'What should our brief or RFP include?',
@@ -204,7 +207,6 @@ const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
   { href: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'The other side of the books: supplier invoices read into Xero or MYOB, matched to purchase orders and routed for approval.', go: 'Explore AP automation →' },
   { href: '/au/ai-agents', t: 'AI agents for Australian businesses', d: 'Agents we build to answer order questions, chase exceptions and update records across Shopify and your back office.', go: 'Explore AI agents →' },
   { href: '/au/website-maintenance', t: 'Website and store maintenance', d: 'Ongoing care for the store and the integrations behind it, quoted per change.', go: 'Explore maintenance →' },
-  { href: '/services/shopify-quickbooks-integration', t: 'Shopify QuickBooks integration (US)', d: 'The same posting problems for stores whose books run on QuickBooks Online or QuickBooks Enterprise.', go: 'See the QuickBooks route →' },
 ];
 
 /* ─── JSON-LD ────────────────────────────────────────────────────── */
@@ -636,8 +638,9 @@ export default function ShopifyXeroIntegrationAUPage() {
                   <li><span className="m">Taxable retail lines</span><span className="t">GST rate</span></li>
                   <li><span className="m">GST-free lines (food, health)</span><span className="t">GST-free rate</span></li>
                   <li><span className="m">Exports, including New Zealand</span><span className="t">GST-free rate</span></li>
-                  <li><span className="m">Shipping charged to the buyer</span><span className="t">Follows the order</span></li>
-                  <li><span className="m">Shopify, Afterpay and app fees</span><span className="t">Expense with GST</span></li>
+                  <li><span className="m">Shipping charged to the buyer</span><span className="t">Usually taxed like the goods</span></li>
+                  <li><span className="m">Shopify and app fees</span><span className="t">Expense with GST</span></li>
+                  <li><span className="m">Afterpay fees</span><span className="t">Expense, GST per your merchant statement</span></li>
                   <li><span className="m">Trade orders of $1,000 or more</span><span className="t">Invoice with ABN</span></li>
                 </ul>
                 <p className="au-note">
@@ -671,7 +674,7 @@ export default function ShopifyXeroIntegrationAUPage() {
               <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Cin7 Core or Unleashed</h3></div><p className="plat-build">Stock, purchasing and cost live here. Shopify receives available quantities, Xero receives sales, purchases and cost of goods sold. Bundles post as their parts.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>NetSuite, Odoo or MYOB Acumatica</h3></div><p className="plat-build">The ERP holds the ledger, so Shopify posts there and Xero leaves the order flow, unless one entity in the group still runs Xero.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>MYOB Business or QuickBooks Online</h3></div><p className="plat-build">Same posting rules, different ledger. If you are moving to Xero at the same time, your accountant sets the cut-over date.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Australia Post, StarTrack, Sendle and 3PLs</h3></div><p className="plat-build">Freight the customer pays follows the order’s tax treatment. Freight you pay the courier should arrive as a bill, kept apart from sales.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Australia Post, StarTrack, Sendle and 3PLs</h3></div><p className="plat-build">Freight the customer pays is usually taxed like the goods it carries; on mixed carts your accountant sets the apportionment. Freight you pay the courier should arrive as a bill, kept apart from sales.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">05</span><div className="plat-name"><h3>Marketplaces</h3></div><p className="plat-build">Amazon.com.au, eBay, Kogan, Bunnings Marketplace and THE ICONIC each settle with their own fees. Each gets a clearing account and a channel tag in Xero.</p></div>
             </div>
           </div>
