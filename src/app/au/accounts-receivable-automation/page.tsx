@@ -9,6 +9,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import '../au-hub.css';
 
 const CANONICAL = 'https://factoryjet.com/au/accounts-receivable-automation';
 const PUBLISHED = '2026-10-29';
@@ -91,7 +92,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'What are the 5 Cs of accounts receivable management?',
     answer: 'They are a checklist for deciding how much credit to give a customer: character (their record of paying), capacity (whether their cash flow can cover the bill), capital (what the business is worth), collateral (security you could fall back on) and conditions (the state of their industry and the economy). The agent can pull the payment history for the first one; people judge the rest.' },
   { category: 'basics', question: 'How do you politely chase an unpaid invoice?',
-    answer: 'Be early, specific and easy to pay. Send a friendly note a few days before the due date, then one on the day after, quoting the invoice number, amount and a pay link or bank details. Attach the invoice again. If there is no reply after a week or two, ring. Keep the tone the same as your sales team uses, because the customer relationship outlasts one late payment.' },
+    answer: 'Be early and make paying easy. Send a friendly note a few days before the due date, then one on the day after, quoting the invoice number, amount and a pay link or bank details. Attach the invoice again. If there is no reply after a week or two, ring. Keep the tone the same as your sales team uses, because the customer relationship outlasts one late payment.' },
 
   // ── Software ──
   { category: 'software', question: 'Does Xero send automatic invoice reminders in Australia?',
@@ -104,9 +105,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Xero’s published API specification lists the pieces an agent uses: emailing a copy of an invoice to the customer, reading your invoice reminder settings, recording payments against invoices or credit notes, creating batch payments, pulling the Aged Receivables by Contact report, and adding history notes to an invoice. So the agent can follow up, record and leave an audit trail without anyone retyping figures.',
     links: [{ href: SRC_XERO_API, label: 'Xero Accounting API specification' }] },
   { category: 'software', question: 'What is the best debtor management software for Xero?',
-    answer: 'There is no single best one. Australian businesses on Xero often compare ezyCollect, CreditorWatch Collect and Paidnice, and practices look at FeeSynergy Collect. Each runs reminders on a set schedule with a dashboard. Pick a product if your process is standard. Consider a custom agent when you run several entities, sell through reps or an ERP, or need replies read and routed by your own rules.' },
+    answer: 'There is no single best one. Australian businesses on Xero often compare ezyCollect, CreditorWatch Collect and Paidnice, and practices look at FeeSynergy Collect. Each automates reminders with a dashboard, and some also log replies or draft next steps for approval. Pick a product if your process is standard. Consider a custom agent when you run several entities, sell through reps or an ERP, or need replies read and routed by your own rules.' },
   { category: 'software', question: 'Can it work with NetSuite, Odoo, QuickBooks or an inventory system?',
-    answer: 'Usually, yes. Larger Australian wholesalers often invoice from NetSuite, Odoo or QuickBooks Online, and keep orders in Cin7 or Unleashed. The agent reads open invoices and customer details from the ledger and, where useful, order and delivery records from the inventory system, so it can answer “what was this for?” emails. We check each system’s API access for your plan before we quote.' },
+    answer: 'Usually, yes. If your ledger is NetSuite, Odoo or QuickBooks Online, or your orders sit in Cin7 or Unleashed, the agent reads open invoices and customer details from the ledger and, where useful, order and delivery records from the inventory system, so it can answer “what was this for?” emails. We check each system’s API access for your plan before we quote.' },
 
   // ── AI ──
   { category: 'ai', question: 'Can AI do debt collection for my business?',
@@ -114,7 +115,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'ai', question: 'How does the agent handle a customer who disputes an invoice?',
     answer: 'It stops reminders on that invoice straight away, so a customer who has raised a problem is not chased again. It summarises the email, attaches the invoice and any order or delivery record it can find, and sends the case to the person who owns that account. Once the dispute is settled, that person marks it, and the agent picks up the follow-up again.' },
   { category: 'ai', question: 'Will customers know they are dealing with an AI agent?',
-    answer: 'That is your decision, and we recommend being open about it. Most of our builds send emails from your accounts address and sign off with your team’s name, with every message drafted from wording your credit controller approved. Some businesses add a line saying replies are sorted automatically and a person reads anything unusual. Customers mainly care that their question gets a correct, fast answer.' },
+    answer: 'That is your decision, and we recommend being open about it. By default the agent sends from your accounts address and signs off with your team’s name, using wording your credit controller approved. Some businesses add a line saying replies are sorted automatically and a person reads anything unusual. Customers mainly care that their question gets a correct, fast answer.' },
   { category: 'ai', question: 'Can the agent match payments when the remittance does not quote an invoice number?',
     answer: 'Often. When a customer pays several invoices in one transfer and sends the remittance as a PDF or email, the agent reads it, finds the open invoices by number, amount and customer name, and proposes a match. Anything it is unsure about goes into a review queue for a person. Clear matches are recorded in Xero or MYOB with a note saying how they were matched.' },
 
@@ -123,7 +124,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes. ASIC and the ACCC publish a joint debt collection guideline for collectors and creditors, which sets out how consumer protection law applies to collection conduct. It matters most if you sell to individuals as well as businesses. Our agents send polite email only, never threaten, and hand anything sensitive to a person. Ask your lawyer how the guideline applies to your customers.',
     links: [{ href: SRC_ASIC_RG96, label: 'ASIC: debt collection guideline' }] },
   { category: 'rules', question: 'Does the Privacy Act affect an AI agent that follows up debtors?',
-    answer: 'It can. Sole traders and partnerships are people, so their names, contact details and payment history can be personal information. The OAIC says that from 10 December 2026, APP 1 requires privacy policies to explain where a computer program makes, or helps make, decisions that could significantly affect individuals. If the agent suggests credit holds, we document that so your policy can be updated.',
+    answer: 'It can. Sole traders, and the individual partners in a partnership, are people, so their names, contact details and payment history can be personal information. The OAIC says that from 10 December 2026, APP 1 requires an APP entity’s privacy policy to explain where a computer program makes, or helps make, decisions that could significantly affect individuals. If the agent suggests credit holds, we document that so your policy can be updated.',
     links: [{ href: SRC_OAIC_APP1, label: 'OAIC: APP 1 guidelines' }] },
   { category: 'rules', question: 'Does Peppol eInvoicing help us get paid faster?',
     answer: 'It can help. business.gov.au lists faster payments and fewer invoice mistakes to chase among the benefits of eInvoicing, which runs on the Peppol standard through ATO-approved service providers. An eInvoice lands straight in the customer’s accounting software, so “we never got it” replies drop. Customers not on Peppol still need emailed invoices, and the agent follows up both the same way.',
@@ -329,7 +330,7 @@ export default function AccountsReceivableAutomationAUPage() {
                 Your aged receivables in Xero or MYOB show the same 60 and 90-day names every month, and the person who
                 chases them is also doing month-end. FactoryJet builds an AI agent that follows up debtors in your tone,
                 sorts their replies, pauses on disputes and matches remittances, so your credit controller spends the day
-                on the accounts that need a call. We build it, support it, and you own it.
+                on the accounts that need a call. We build and support it, and you own it.
               </p>
               <HeroInlineForm region="au" source="au_accounts_receivable_automation_hero" submitLabel="See a demo on my data"
                 trustText="Working software on your own data before you sign. Founder replies within 24 hours." />
@@ -394,7 +395,7 @@ export default function AccountsReceivableAutomationAUPage() {
               { v: '500+', t: 'businesses served by FactoryJet since 2014, founder-led on every project', s: 'About FactoryJet', u: '/about' },
               { v: 'A$100m', t: 'annual consolidated revenue at which large businesses must report how fast they pay small suppliers', s: 'Payment Times Reporting Regulator', u: SRC_PTRS },
               { v: '20 days', t: 'pay small business suppliers within this and a reporting entity can join the fast payers list', s: 'Payment Times Reporting Regulator', u: SRC_PTRS },
-              { v: '10 Dec 2026', t: 'privacy policies must start explaining decisions made with computer programs', s: 'OAIC, APP 1', u: SRC_OAIC_APP1 },
+              { v: '10 Dec 2026', t: 'APP entity privacy policies must start explaining decisions made with computer programs', s: 'OAIC, APP 1', u: SRC_OAIC_APP1 },
             ].map((r) => (
               <div className="ledgercell" key={r.t}>
                 <div className="k"><a href={r.u} {...(r.u.startsWith('http') ? extLink : {})}>{r.s}</a></div>
@@ -486,7 +487,7 @@ export default function AccountsReceivableAutomationAUPage() {
               <div className="eyebrow">What the accounts receivable agent does</div>
               <h2>Six jobs: watch, remind, sort, answer, match and escalate</h2>
               <p className="lead">
-                You choose which jobs the agent does for each customer group. Most finance teams start with reminders and
+                You choose which jobs the agent does for each customer group. We suggest starting with reminders and
                 reply sorting, then add payment matching once a month of results has been checked.
               </p>
             </div>
@@ -523,8 +524,8 @@ export default function AccountsReceivableAutomationAUPage() {
               <div className="eyebrow">Works inside the tools you already use</div>
               <h2>Xero and MYOB integration for receivables: what the agent reads and what it does</h2>
               <p className="lead">
-                Your team keeps working in Xero or MYOB. The agent connects through each product’s published API with the
-                least access each job needs, and every action it takes is written to the invoice history.
+                Reminders, history notes and payment records land in the same Xero or MYOB file your team already works in,
+                through each product’s published API and with the least access each job needs.
               </p>
             </div>
             <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable integrations table">
@@ -581,8 +582,8 @@ export default function AccountsReceivableAutomationAUPage() {
                   eInvoices get yours in their software; everyone else gets email. The agent follows up both the same way.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><p>
-                  <b>Sole-trader debtors are people.</b> Their names, contact details and payment history can be personal
-                  information. The OAIC says that from 10 December 2026, APP 1 requires a privacy policy to explain where a
+                  <b>Sole traders, and the individual partners in a partnership, are people.</b> Their names, contact details and payment history can be personal
+                  information. The OAIC says that from 10 December 2026, APP 1 requires an APP entity’s privacy policy to explain where a
                   computer program makes, or helps make, decisions that could significantly affect someone, a change made
                   by the Privacy and Other Legislation Amendment Act 2024. If your agent suggests credit holds, we write up
                   how it works so your policy can say so.
@@ -614,7 +615,7 @@ export default function AccountsReceivableAutomationAUPage() {
               <div className="eyebrow">How a project runs</div>
               <h2>How we build your accounts receivable agent, in eight steps</h2>
               <p className="lead">
-                Step two is the one buyers remember: working software on your own invoices before any contract. Open a step
+                Step two is working software on your own invoices before any contract. Open a step
                 to see what happens in it.
               </p>
             </div>
@@ -701,7 +702,7 @@ export default function AccountsReceivableAutomationAUPage() {
                   <tr><th scope="row">Reminders around the due date</th><td className="fj">Yes, tone set per customer group</td><td>Yes, set schedules</td><td>Yes, fixed schedule</td><td>When someone has time</td></tr>
                   <tr><th scope="row">Reads and sorts customer replies</th><td className="fj">Every reply, labelled and routed</td><td>Varies by product</td><td>No</td><td>A person reads the inbox</td></tr>
                   <tr><th scope="row">Pauses on a dispute</th><td className="fj">Automatically, then hands over</td><td>Usually, if flagged</td><td>Manual</td><td>If someone remembers</td></tr>
-                  <tr><th scope="row">Matches remittances to invoices</th><td className="fj">Proposes matches, people approve unclear ones</td><td>Some products</td><td>Bank rules only</td><td>By hand</td></tr>
+                  <tr><th scope="row">Matches remittances to invoices</th><td className="fj">Proposes matches, people approve unclear ones</td><td>Some products</td><td>Bank feed match suggestions; remittances read by hand</td><td>By hand</td></tr>
                   <tr><th scope="row">Several entities or an ERP</th><td className="fj">Designed around your setup</td><td>Within listed integrations</td><td>One file at a time</td><td>Spreadsheets</td></tr>
                   <tr><th scope="row">Who owns the setup</th><td className="fj">You do</td><td>Your config, their product</td><td>Xero or MYOB</td><td>You do</td></tr>
                 </tbody>
@@ -777,8 +778,7 @@ export default function AccountsReceivableAutomationAUPage() {
               ))}
             </div>
             <p className="sub-note">
-              Options named from Australian Google results for accounts receivable automation and Xero debtor management,
-              checked through DataForSEO on 29 October 2026. Notes reflect each company’s own website on that date. Listing
+              Options we found researching Australian debtor management tools on 29 October 2026. Notes reflect each company’s own website on that date. Listing
               is not endorsement, and we have not tested these products.
             </p>
             <div className="au-panel au-panel-wide">
@@ -832,7 +832,7 @@ export default function AccountsReceivableAutomationAUPage() {
           <div className="wrap">
             <div>
               <div className="eyebrow">Ready when you are</div>
-              <h2>Fewer 90-day debtors, replies answered the same day, disputes in the right hands</h2>
+              <h2>Fewer 90-day debtors, and disputes in the right hands</h2>
               <p>
                 Send your name and work email. The founder replies within 24 hours to book a short call about your
                 receivables, your Xero or MYOB setup and a demo on your own data. No spam, no obligation.
