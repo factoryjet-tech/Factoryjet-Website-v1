@@ -77,7 +77,7 @@ const SRC = {
   govEinvoice: { label: 'GOV.UK: Promoting electronic invoicing, consultation response', url: 'https://www.gov.uk/government/consultations/promoting-electronic-invoicing-across-uk-businesses-and-the-public-sector/outcome/promoting-electronic-invoicing-across-uk-businesses-and-the-public-sector-consultation-response' },
   icoDuaa: { label: 'ICO: The Data (Use and Access) Act 2025, what it means for organisations', url: 'https://ico.org.uk/about-the-ico/what-we-do/legislation-we-cover/data-use-and-access-act-2025/the-data-use-and-access-act-2025-what-does-it-mean-for-organisations/' },
   euAiAct: { label: 'European Commission AI Act Service Desk: Article 2, Scope', url: 'https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-2' },
-  xeroPricing: { label: 'Xero UK: pricing plans (Hubdoc footnote)', url: 'https://www.xero.com/uk/pricing-plans/' },
+  xeroPricing: { label: 'Xero UK: pricing plans (Hubdoc note)', url: 'https://www.xero.com/uk/pricing-plans/' },
   dextPricing: { label: 'Dext UK: business pricing', url: 'https://dext.com/uk/business/pricing' },
   autoentryPricing: { label: 'AutoEntry: pricing', url: 'https://www.autoentry.com/pricing' },
   odooDigitise: { label: 'Odoo 18 documentation: invoice digitization', url: 'https://www.odoo.com/documentation/18.0/applications/finance/accounting/vendor_bills/invoice_digitization.html' },
@@ -135,13 +135,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'rent',
     question: 'Is Hubdoc free if you have Xero?',
     answer:
-      'Yes, while you subscribe to Xero. A footnote on Xero’s UK pricing page includes Hubdoc in its plans, on condition the Xero subscription stays connected. The same page lists smart document capture on its paid plans from Ignite upwards, and automated bill entry from Grow upwards. For receipts and supplier bills going into one Xero organisation, that is often enough, and we will say so on the call.',
+      'Yes, while you subscribe to Xero. A note on Xero’s UK pricing page includes Hubdoc in its plans, on condition the Xero subscription stays connected. The same page lists smart document capture on its paid plans from Ignite upwards, and automated bill entry from Grow upwards. For receipts and supplier bills going into one Xero organisation, that is often enough, and we will say so on the call.',
   },
   {
     category: 'rent',
-    question: 'What does Dext cost in the UK, and how does AutoEntry compare?',
+    question: 'Do Dext and AutoEntry suit delivery notes, POs and forms?',
     answer:
-      'Dext’s UK business page lists one plan at £24.17 a month, excluding VAT, for 250 documents a month and 5 users. Reading individual invoice lines costs extra. AutoEntry sells credits: £15.45 a month for 50 credits up to £518.25 for 2,500, excluding VAT. An invoice costs 1 credit, an invoice with line items 2, and each bank statement page 3. Both read bookkeeping documents for an accounts package.',
+      'Both price by the bookkeeping document: Dext at £24.17 a month billed annually (£290 a year), excluding VAT, for 250 documents a month and 5 users, and AutoEntry by credits from £15.45 a month for 50. Our UK accounts payable automation page compares them on supplier invoices. A delivery note, customer PO or credit form is a different job, because it has to be checked against an order, a price list or a credit limit that an accounts package does not hold.',
   },
   {
     category: 'rent',
@@ -159,20 +159,20 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'rent',
     question: 'What does a document intake build cost in the UK?',
     answer:
-      'Two UK market figures, both before VAT. LeverX’s guide of 4 October 2026 puts a single-workflow agent, with document triage and data extraction among its examples, at £10,000 to £30,000. Fulminous, updated 23 September 2026, puts a back-office agent covering data entry and invoice processing at £30,000 to £90,000. These are other firms’ ranges. FactoryJet quotes a fixed price in writing after a short scoping call.',
+      'Two published UK figures. For a back-office agent that handles data entry and invoice processing, Fulminous (page updated 23 September 2026) gives £30,000 to £90,000 before VAT. LeverX’s guide of 4 October 2026 gives £10,000 to £30,000 for a single-workflow agent, naming document triage and data extraction among its examples, and does not say whether VAT is included. These are other firms’ ranges. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   // HMRC, UK GDPR and the EU
   {
     category: 'rules',
     question: 'Can we throw away paper invoices once the agent has scanned them?',
     answer:
-      'Usually, yes. In VAT Notice 700/22, HMRC describes software that scans incoming invoices and writes the details to the ledger; there the paper can go, as long as the saved image carries every VAT detail. If a clerk keys the details in by hand instead, HMRC expects the original kept. So the agent stores the full image beside the record. Confirm your own policy with your accountant.',
+      'Usually, yes. In VAT Notice 700/22, HMRC describes software that scans incoming invoices and writes the details to the ledger; there the paper can go, as long as the saved image carries every VAT detail, unless you need the paper for another purpose. If a clerk keys the details in by hand instead, HMRC expects the original kept. So the agent stores the full image beside the record. Confirm your own policy with your accountant.',
   },
   {
     category: 'rules',
     question: 'Can the agent post a delivery note so we can reclaim the VAT?',
     answer:
-      'No, and it should stop anyone trying. GOV.UK says you cannot reclaim VAT using an invalid invoice, a pro-forma invoice, a statement or a delivery note. So the agent treats a delivery note as proof of what arrived, pairs it with the order and the goods-in count, then holds until the real VAT invoice turns up. A delivery note posted as a bill is one of the first exceptions it raises.',
+      'No, and it should stop anyone trying. A delivery note proves goods arrived; it is not the document VAT is reclaimed on, and GOV.UK lists it alongside pro-forma invoices and statements as paperwork that will not support a claim. So the agent treats a delivery note as proof of what arrived, pairs it with the order and the goods-in count, then holds until the real VAT invoice turns up. A delivery note posted as a bill is one of the first exceptions it raises.',
   },
   {
     category: 'rules',
@@ -246,7 +246,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'working',
     question: 'What should we put in a brief or RFP for document intake?',
     answer:
-      'Five things make a quote accurate. The document types and rough monthly volume of each. Ten to twenty real examples per type, redacted if needed. The systems and versions involved, such as Sage 200 on premises or Business Central online. Who approves what today. And any date that matters, like a year end or an ERP go-live. Attach it in the second step of the form and Bhavesh replies within 24 hours.',
+      'Five things make a quote accurate. The document types and rough monthly volume of each. Ten to twenty real examples per type, redacted if needed, sent by email after the first call. The systems and versions involved, such as Sage 200 on premises or Business Central online. Who approves what today. And any date that matters, like a year end or an ERP go-live. Attach the written brief in the second step of the form and Bhavesh replies within one business day.',
   },
   {
     category: 'working',
@@ -280,7 +280,7 @@ const DOCS: { doc: string; from: string; check: string; lands: string }[] = [
   {
     doc: 'Credit account application',
     from: 'A signed form, often scanned',
-    check: 'Company name and number against what the applicant typed, references, requested limit',
+    check: 'Company name and number checked against the Companies House register, references, requested limit against your credit policy',
     lands: 'A customer record held for a person to approve the limit',
   },
   {
@@ -316,7 +316,7 @@ const TOOLS: { name: string; maker: string; price: string; reads: string; suits:
   {
     name: 'Dext',
     maker: 'Dext',
-    price: '£24.17 a month, excluding VAT, for 250 documents a month and 5 users',
+    price: '£24.17 a month billed annually (£290 a year), excluding VAT, for 250 documents a month and 5 users',
     reads: 'Document capture and data extraction, with line-item extraction, bank statements and supplier statements sold as add-ons.',
     suits: 'Bookkeeping documents for an accountant or an in-house finance team.',
     sources: ['dextPricing'],
@@ -352,7 +352,7 @@ const COMPARE: { feat: string; hubdoc: string; dext: string; autoentry: string; 
   {
     feat: 'List price',
     hubdoc: 'Included with Xero',
-    dext: '£24.17 a month ex VAT, 250 documents',
+    dext: '£24.17 a month billed annually (£290 a year) ex VAT, 250 documents a month, 5 users',
     autoentry: '£15.45 to £518.25 a month ex VAT, by credits',
     erp: 'Odoo: prepaid credits. Business Central: inside the product',
     fj: 'Fixed price, quoted in writing after a scoping call',
@@ -548,7 +548,7 @@ export default function DocumentIntakeAiAgentsUKPage() {
                 <div className={styles.heroForm} style={{ maxWidth: 560 }}>
                   <HeroInlineForm region="uk" source="uk_document_intake_ai_agents_hero" service="Document Intake AI Agents" submitLabel="See a demo on my data" />
                   <p style={{ fontSize: 13.5, color: T.ink, marginTop: 10 }}>
-                    Working software on your own data before you sign. Founder replies within 24 hours.
+                    Working software on your own data before you sign. Bhavesh replies within one business day.
                   </p>
                 </div>
               </div>
@@ -588,8 +588,8 @@ export default function DocumentIntakeAiAgentsUKPage() {
                 It reads inbound paperwork the way a clerk would. Supplier invoices, delivery notes, customer
                 purchase orders, credit account forms and returns are picked up from an inbox or scanner, named,
                 read, checked against your ERP or accounts package and filed. HMRC accepts a scanned invoice in
-                place of the paper original when the stored image keeps every detail needed for VAT, so the agent
-                keeps that image beside the record.
+                place of the paper original when the stored image keeps every detail needed for VAT, unless you
+                need the paper for another purpose, so the agent keeps that image beside the record.
               </p>
             </div>
             <Sources ids={['govMtd']} />
@@ -682,13 +682,14 @@ export default function DocumentIntakeAiAgentsUKPage() {
                   <p>
                     <b>Scans can replace paper.</b> HMRC’s Making Tax Digital notice gives the case of a business
                     whose software scans received invoices and posts the details to its ledger. That business can
-                    stop keeping the paper, provided the image is kept and holds every detail needed for VAT. Where
+                    stop keeping the paper, provided the image is kept and holds every detail needed for VAT, unless the
+                    paper is needed for another purpose. Where
                     someone types the details in by hand, the original invoice has to be kept.
                   </p>
                   <p>
-                    <b>A delivery note is not a VAT invoice.</b> GOV.UK says you cannot reclaim VAT using an invalid
-                    invoice, a pro-forma invoice, a statement or a delivery note. The agent keeps a delivery note as
-                    proof of what arrived and waits for the invoice before anything reaches the VAT figures.
+                    <b>A delivery note is not a VAT invoice.</b> It shows what arrived, and that is all the agent uses
+                    it for: proof of goods, matched to the order, held until the invoice comes. GOV.UK puts delivery
+                    notes on the same list as pro-forma invoices and statements, none of which support a VAT claim.
                   </p>
                   <p>
                     <b>Copy and paste does not count.</b> The notice says HMRC does not treat copying and pasting as a
@@ -765,7 +766,9 @@ export default function DocumentIntakeAiAgentsUKPage() {
               <p className="lead mt-4">
                 Dext, Hubdoc and AutoEntry are searched for far more often in the UK than any phrase about document
                 processing. If one of them, or the reader inside your ERP, covers your paperwork, use it. We sell
-                none of them.
+                none of them. For supplier invoices alone, our{' '}
+                <a href="/uk/accounts-payable-automation" style={inlineLink}>UK accounts payable automation</a>{' '}
+                page goes further; this section is about everything else that lands in the inbox.
               </p>
             </div>
             <ul className="col-2 mt-10">
@@ -816,8 +819,8 @@ export default function DocumentIntakeAiAgentsUKPage() {
         </section>
 
         <MidPageCTA
-          headline={'Send ten of your worst documents. We show you what an agent makes of them.'}
-          sub={'Pick the delivery notes, purchase orders or forms your team dreads, with personal details removed if you prefer. We come back with a plain verdict (Hubdoc, Dext, AutoEntry, your ERP or a custom agent) and, where a build makes sense, a fixed price in writing.'}
+          headline={'Tell us which documents your team dreads. We show you what an agent makes of them.'}
+          sub={'Name the delivery notes, purchase orders or forms that slow you down. After the first call we ask for about ten examples by email, with personal details removed if you prefer, and come back with a plain verdict (Hubdoc, Dext, AutoEntry, your ERP or a custom agent) and, where a build makes sense, a fixed price in writing.'}
           label={'See a demo on my data'}
         />
 
@@ -995,9 +998,9 @@ export default function DocumentIntakeAiAgentsUKPage() {
                 </ul>
                 <p className="mt-6" style={{ maxWidth: 560 }}>
                   FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short
-                  scoping call. Published UK market ranges, before VAT: £10,000 to £30,000 for one workflow in LeverX’s
-                  guide, and £30,000 to £90,000 for a back-office agent handling data entry and invoice processing
-                  in Fulminous’s. Those are their ranges, not ours.
+                  scoping call. Published UK market ranges: £30,000 to £90,000 before VAT for a back-office agent
+                  handling data entry and invoice processing in Fulminous’s guide, and £10,000 to £30,000 for one
+                  workflow in LeverX’s, which does not state its VAT treatment. Those are their ranges, not ours.
                 </p>
                 <Sources ids={['leverx', 'fulminous']} />
                 <div className="mt-8">
