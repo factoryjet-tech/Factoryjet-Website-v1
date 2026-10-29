@@ -103,7 +103,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What is an ecommerce AI agent?',
     answer: 'It is software that does one store job from start to finish. It reads a customer email, a return request, a trade order or a stock report, looks the facts up in your own systems, and prepares the answer, refund, quote or purchase order. A person approves anything that moves money or changes a price. We build each one for your store, and you own it.' },
   { category: 'basics', question: 'Is ChatGPT a chatbot or an AI agent?',
-    answer: 'On its own, ChatGPT is a chatbot: it answers what you type. An agent is built around a model like it and given tools, such as read access to your orders, a courier tracking lookup and a way to save a draft refund. The tools and the rules about when to stop and ask a person are what make it an agent. That part is the build.' },
+    answer: 'A plain ChatGPT chat answers what you type. It does not hold your store’s API keys, your returns rules or your approval steps. An ecommerce agent is built around a model like it and given those: read access to your orders, a courier tracking lookup, a way to save a draft refund, and rules about when to stop and ask a person. That part is the build.' },
   { category: 'basics', question: 'How is AI used in ecommerce by UK retailers?',
     answer: 'Mostly in four places. Customer service, where most messages are about orders, deliveries and returns. Product data, where listings for Amazon.co.uk, eBay and your own store have to say the same thing. Trade sales, where buyers email orders that someone retypes. And the back office, where orders, stock and payouts have to reach Xero or Sage. We start with whichever costs your team the most hours.' },
   { category: 'basics', question: 'Should we buy an AI app or have a custom agent built?',
@@ -116,8 +116,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'It can check each request against your returns policy and the UK cancellation window, then prepare the refund. GOV.UK says customers can cancel most online orders up to 14 days after delivery, and up to 12 months if you never told them about that right. The agent dates every request from the delivery date. A person approves the refund before money goes back through Stripe, Klarna or Clearpay.' },
   { category: 'jobs', question: 'Can an AI agent manage our Amazon.co.uk and eBay listings?',
     answer: 'It can draft and send listing changes through each marketplace’s own API. Amazon’s documentation warns that attributes left out of a full listing update may be dropped, so our agent uses partial updates and previews errors first. On eBay, an inventory item with a SKU must exist before an offer, and the published offer is what becomes the live listing. Price changes stay with a person.' },
-  { category: 'jobs', question: 'What about OnBuy, ManoMano, B&Q’s marketplace and Zalando?',
-    answer: 'Each one has its own seller integration and its own product data rules, and some route sellers through approved connectors. Before we quote, we read the integration terms for your seller account and check whether your existing channel software, such as Linnworks or Brightpearl, already lists there. The agent then works on the product data and order flow behind those channels, whichever tool publishes the listing.' },
+  { category: 'jobs', question: 'What about UK marketplaces other than Amazon and eBay?',
+    answer: 'Each marketplace has its own seller integration and its own product data rules. Before we quote, we read the integration terms for your seller account and check whether your existing channel software, such as Linnworks or Brightpearl, already lists there. The agent then works on the product data and order flow behind those channels, whichever tool publishes the listing.' },
   { category: 'jobs', question: 'Can an agent handle trade quotes and repeat orders?',
     answer: 'Yes. Trade buyers often email a list of codes and quantities. The agent matches each line to a product, applies that account’s price list, checks stock and saves a draft quote or order for your sales team to send. GPSUK, a UK promotional products supplier, runs its trade store on Commerceflo, where business buyers reorder at their own account prices. The agent work sits on the same kind of data.' },
   { category: 'jobs', question: 'Can an agent draft purchase orders when stock runs low?',
@@ -127,7 +127,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'systems', question: 'Which ecommerce platforms do you build agents for?',
     answer: 'Shopify and Shopify Plus, WooCommerce, Adobe Commerce (Magento), BigCommerce, Commerceflo and custom or headless stores. A back-office agent talks to the platform through its admin API, so the platform matters less than you might expect. A customer-facing agent has to fit your theme or front end, which is where most of the platform-specific work sits.' },
   { category: 'systems', question: 'Can the agent work with Linnworks, Brightpearl or Mintsoft?',
-    answer: 'Yes, through their APIs. Brightpearl’s API documentation covers sales and purchase orders, products and pricing, warehouse stock movements and accounting entries. Linnworks publishes an API for building applications on Linnworks data. When one of these is already the record for stock and orders, the agent reads from it and writes drafts back to it, so your team keeps working in the screen they know.' },
+    answer: 'Yes, through their APIs. Brightpearl’s API documentation covers sales orders, products and price lists, goods-in and goods-out notes, stock transfers and journals. Linnworks publishes an API for building applications on Linnworks data. When one of these is already the record for stock and orders, the agent reads from it and writes drafts back to it, so your team keeps working in the screen they know.' },
   { category: 'systems', question: 'Can the agent post orders into Xero, Sage or QuickBooks?',
     answer: 'Yes, and for VAT that link matters. HMRC’s Making Tax Digital notice says copy and paste is not a digital link, and that manually moving data between software is not acceptable once it is part of your VAT records. An agent that moves order, refund and fee data by API keeps that chain digital. Your accountant decides which accounts and tax codes each entry posts to.' },
   { category: 'systems', question: 'We run NetSuite, Business Central or Odoo. Can an agent use it?',
@@ -137,7 +137,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── UK and EU rules ──
   { category: 'rules', question: 'Does UK GDPR let an AI agent make decisions about customers?',
-    answer: 'With safeguards, yes. The Data (Use and Access) Act 2025 received Royal Assent on 19 June 2025 and added Articles 22A to 22D to UK GDPR. ICO draft guidance says that for significant decisions made solely by automation, you must give people information about the decision, let them make representations, offer human intervention and let them contest it. We keep a person on refusals, so the agent drafts and staff decide.' },
+    answer: 'With safeguards, yes. The Data (Use and Access) Act 2025 received Royal Assent on 19 June 2025 and changed the UK GDPR rules on automated decisions. ICO draft guidance on Article 22C says that for significant decisions made solely by automation, you must give people information about the decision, let them make representations, offer human intervention and let them contest it. We keep a person on refusals, so the agent drafts and staff decide.' },
   { category: 'rules', question: 'Do we have to tell customers they are talking to an AI?',
     answer: 'For shoppers in the EU, plan on it. Article 50 of the EU AI Act says AI systems that talk directly with people must be designed so those people are told they are dealing with an AI, unless that is obvious from the context. The Act’s published timeline applies Article 50 from 2 August 2026. Our shopper-facing agents say they are an AI in their first message, for UK and EU customers alike.' },
   { category: 'rules', question: 'Does the EU AI Act apply to a UK online store?',
@@ -352,9 +352,9 @@ export default function EcommerceAiAgentsUKPage() {
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              The hard part of an ecommerce agent is rarely the AI. It is knowing which system owns each fact. Is the
-              stock figure in Shopify, Linnworks or Odoo? Does the trade price live in the store or the ERP? Who
-              approves a refund on a Klarna order? We answer those questions on paper before anything is built.
+              Most of an ecommerce agent build is deciding which system owns each fact: stock in Shopify, Linnworks
+              or Odoo, trade prices in the store or the ERP, and who approves a refund on a Klarna order. We settle
+              that on paper before anything is built.
             </p>
           </div>
         </section>
@@ -384,7 +384,7 @@ export default function EcommerceAiAgentsUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">What the agents do</span>
-              <h2>Eight store jobs we build AI agents for</h2>
+              <h2>Nine store jobs we build AI agents for</h2>
               <p className="lead mt-4">
                 Each agent does one job well before it gets a second. These are the jobs UK sellers bring to us most,
                 roughly in the order they tend to build them.
@@ -409,7 +409,7 @@ export default function EcommerceAiAgentsUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Other UK marketplaces</h3>
-                <p className="mt-4">OnBuy, ManoMano, B&amp;Q’s marketplace and Zalando each have their own product rules and integration routes. The agent prepares the product data behind them, whichever connector publishes it.</p>
+                <p className="mt-4">Each other marketplace you sell on has its own product rules and integration route. We read the integration terms for your seller account before we quote, and the agent prepares the product data behind it, whichever connector publishes it.</p>
               </li>
               <li className="svc-card">
                 <h3>Trade quotes and reorders</h3>
@@ -453,7 +453,7 @@ export default function EcommerceAiAgentsUKPage() {
                 </thead>
                 <tbody>
                   <tr><td className="feat">Store: Shopify, WooCommerce, Adobe Commerce, BigCommerce, Commerceflo</td><td className="fj"><span className="yes">Orders, customers, products</span></td><td><span className="partial">Replies, return records</span></td><td><span className="no">Refunds, discounts</span></td></tr>
-                  <tr><td className="feat">Marketplaces: Amazon.co.uk, eBay UK, OnBuy</td><td className="fj"><span className="yes">Orders, listing errors</span></td><td><span className="partial">Listing updates</span></td><td><span className="no">Price changes</span></td></tr>
+                  <tr><td className="feat">Marketplaces: Amazon.co.uk, eBay UK</td><td className="fj"><span className="yes">Orders, listing errors</span></td><td><span className="partial">Listing updates</span></td><td><span className="no">Price changes</span></td></tr>
                   <tr><td className="feat">Channel and stock: Linnworks, Brightpearl, Mintsoft</td><td className="fj"><span className="yes">Stock, despatch, tracking</span></td><td><span className="partial">Purchase orders</span></td><td><span className="no">Supplier orders</span></td></tr>
                   <tr><td className="feat">Accounting: Xero, Sage 50, Sage 200, QuickBooks UK</td><td className="fj"><span className="yes">Invoices, payment status</span></td><td><span className="partial">Sales, refund and fee entries</span></td><td><span className="no">Account and tax code mapping</span></td></tr>
                   <tr><td className="feat">ERP: NetSuite, Business Central, Odoo, Sage Intacct</td><td className="fj"><span className="yes">Customer prices, credit terms</span></td><td><span className="partial">Quotes, sales orders</span></td><td><span className="no">Credit over limit</span></td></tr>
@@ -462,8 +462,8 @@ export default function EcommerceAiAgentsUKPage() {
               </table>
             </div>
             <p className="mt-6" style={{ maxWidth: 820 }}>
-              Brightpearl’s API documentation covers sales and purchase orders, products and pricing, warehouse stock
-              movements and accounting entries, which is why it is a common place for an agent to read from. Linnworks
+              Brightpearl’s API documentation covers sales orders, products and price lists, goods-in and goods-out
+              notes, stock transfers and journals, which is why it is a common place for an agent to read from. Linnworks
               publishes an API for applications built on Linnworks data. Where neither is in place, we read from the
               store or the ERP directly.
             </p>
@@ -644,7 +644,7 @@ export default function EcommerceAiAgentsUKPage() {
               <div className="card card-top-orange">
                 <span className="eyebrow">Six things a good brief names</span>
                 <div className="scorecard-row"><div><div className="scorecard-metric">The first job</div><div className="scorecard-note">delivery questions, returns, listings, trade orders</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>1</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Store platform and marketplaces</div><div className="scorecard-note">including OnBuy, ManoMano, B&amp;Q, Zalando</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>2</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Store platform and marketplaces</div><div className="scorecard-note">every channel you sell on</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>2</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Stock and channel software</div><div className="scorecard-note">Linnworks, Brightpearl, Mintsoft or an ERP</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>3</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Accounting system</div><div className="scorecard-note">Xero, Sage, QuickBooks UK, NetSuite, Business Central</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>4</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Rough monthly volumes</div><div className="scorecard-note">orders, messages, returns, trade orders</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>5</div></div>
@@ -668,8 +668,7 @@ export default function EcommerceAiAgentsUKPage() {
                   <a href="/uk/woocommerce" style={inlineLink}>WooCommerce development</a>.
                 </p>
                 <p>
-                  Selling from the US as well? The <a href="/services/ecommerce-ai-agents" style={inlineLink}>US ecommerce AI agents</a> page
-                  covers Walmart and US marketplaces.
+                  For US marketplaces, including Walmart, see the <a href="/services/ecommerce-ai-agents" style={inlineLink}>US ecommerce AI agents</a> page.
                 </p>
               </div>
               <div className="flex-wrap mt-6">
