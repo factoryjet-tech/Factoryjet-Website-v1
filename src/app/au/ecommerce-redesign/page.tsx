@@ -79,7 +79,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'Can ChatGPT redesign our online store for us?',
     answer: 'It can help with parts of the job. It writes draft product copy, suggests menu structures and explains theme code. It cannot test a real checkout with Afterpay, check that a refund lands correctly in Xero, map hundreds of old web addresses, or take responsibility when a sale fails at 9pm. Use it to speed up writing, and let an accountable team handle the build and the testing.' },
   { category: 'basics', question: 'Which platforms do you redesign?',
-    answer: 'Shopify and Shopify Plus, WooCommerce, BigCommerce and Adobe Commerce (Magento), plus headless stores built on Next.js. FactoryJet is a registered Shopify Partner. If the review shows the platform is the real limit, we plan the move first and do the redesign on the new platform within the same project, so you only go through one launch.',
+    answer: 'An Australian store on Shopify or Shopify Plus usually has Afterpay or Zip, a Xero or MYOB connector and an Australia Post or Sendle app plugged in, and we redesign around all of them. We do the same for WooCommerce, BigCommerce, Adobe Commerce (Magento) and headless Next.js stores, where those links are often plugins or custom code. On Shopify we work as a registered Shopify Partner. When the platform itself is what holds sales back, the move and the new design go into one project with one launch.',
     links: [{ href: '/au/shopify-development', label: 'Shopify development in Australia' }] },
 
   // ── Rankings and redirects ──
@@ -102,9 +102,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'cost', question: 'Why do redesign quotes for the same store differ so much?',
     answer: 'Because each agency is quoting a different job. One quote may adapt an existing theme and leave integrations alone. Another may include custom templates, a redirect map, retesting Xero, Afterpay and shipping, product photography and a month of checks after launch. Ask each agency to list what is in and what is out, line by line, and whether the figure is ex or inc GST, then compare like with like.' },
   { category: 'cost', question: 'How long does an ecommerce redesign take?',
-    answer: 'A custom-theme redesign usually takes 3 to 5 weeks. A store with Shopify Plus features, subscriptions, B2B trade pricing or a platform move takes 5 to 8 weeks. Headless or heavily custom work runs 8 to 14 weeks. Late product photos, late copy and features added after the scope is signed are what usually stretch a timeline, so we agree those dates at the start.' },
+    answer: 'Plan back from the trading dates that matter. A custom theme takes 3 to 5 weeks, so a store that wants it live before the Christmas trade should start by early October. Add Shopify Plus features, subscriptions, B2B trade pricing or a platform move and it becomes 5 to 8 weeks. A headless store or one with a lot of custom code needs 8 to 14 weeks. We fix the dates for your photos, copy and sign-offs in week one, because those are what slip.' },
   { category: 'cost', question: 'Can we split the redesign into phases?',
-    answer: 'Yes, and for a busy store it often lowers the risk. A sensible order is product and collection templates first, since that is where most sales happen, then the homepage and menus, then content pages. Each phase is scoped, priced and signed on its own. You can pause after any phase, before the Christmas trade for example, and still have a working store.' },
+    answer: 'Yes. If you want the site left alone through November and December, or kept clear of your EOFY sales in June, we cut the work to fit around those dates: one phase can ship in the quiet weeks after January, the next before the June sales, and the rest once trading settles. Each phase is scoped, priced and signed on its own, and the store works normally between them.' },
 
   // ── Australian systems and rules ──
   { category: 'systems', question: 'Will our Xero or MYOB sync keep working after the redesign?',
@@ -116,7 +116,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'systems', question: 'Does a redesign affect stock sync with Cin7, Unleashed or NetSuite?',
     answer: 'Not if the product records stay the same. Most inventory and ERP connections match items by SKU, so a redesign that leaves SKUs and variants alone keeps the sync intact. Trouble starts when someone restructures products for a new filter layout. We agree with your operations lead which system owns stock, prices and product data before any product is changed.' },
   { category: 'systems', question: 'Does the Privacy Act apply to our online store?',
-    answer: 'For most established stores, yes. The OAIC says a small business is one with an annual turnover of $3 million or less, and some businesses are covered regardless of turnover. If you sit above that line, the Privacy Act applies. A redesign changes forms, tracking scripts and sign-up flows, so it is the right time to have your adviser check the privacy policy against what the new store collects.' },
+    answer: 'It applies if your annual turnover is above $3 million, and to some smaller businesses regardless of turnover, per the OAIC. Check which side of that line you sit with your adviser. A redesign changes forms, tracking scripts and sign-up flows, so it is the right time to have your adviser check the privacy policy against what the new store collects.' },
   { category: 'systems', question: 'We also sell on Amazon.com.au, eBay and Bunnings Marketplace. Does the redesign touch those?',
     answer: 'The listings themselves sit on each marketplace, but many stores feed them from the same product data the redesign touches. If titles, variant names or images change in your store, a connected feed can push those changes to every channel. We list your feeds and connectors at the start and agree which product fields are frozen during the project.' },
 
@@ -128,10 +128,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'working', question: 'Who owns the new theme and code?',
     answer: 'You do, from day one. The redesigned theme is published in your store, and its source code lives in a repository registered to your business. Paid apps, hosting and any AI tools can be billed to your own accounts at cost, and we add no markup. If you later switch agencies or hire your own developer, they start with everything and need nothing from us.' },
   { category: 'working', question: 'What happens if something breaks after launch?',
-    answer: 'Defects are fixed inside the build price for a cover period we agree before work starts. After that, support is optional. Each change is quoted and approved before we start it, and there is no monthly minimum. Many stores book a check before a big sale, such as Black Friday, and nothing else for the rest of the year.',
+    answer: 'Defects are fixed inside the build price for a cover period we agree before work starts. After that, support is optional. Each change is quoted and approved before we start it, and there is no monthly minimum. You can book a single check before a big sale, such as Black Friday, and nothing else.',
     links: [{ href: '/au/website-maintenance', label: 'Website care in Australia' }] },
-  { category: 'working', question: 'Do you work with stores in Sydney, Melbourne, Brisbane and Perth?',
-    answer: 'Yes. We work with established online stores across Australia, from Sydney and Melbourne to Brisbane, Perth, Adelaide and regional towns. Redesigns run on video calls, shared screens and a draft theme inside your own store, so nobody needs to be on site. Calls are scheduled in Australian business hours, and the founder is involved in every project.' },
+  { category: 'working', question: 'Can you run a redesign for a store outside Sydney or Melbourne?',
+    answer: 'Yes. We work with established online stores across Australia, from Sydney and Melbourne to Brisbane, Perth, Adelaide and regional towns. You review progress on a preview link inside your own admin and talk it through with us on scheduled calls, so where your warehouse sits makes no difference. Calls are scheduled in Australian business hours, and the founder is involved in every project.' },
 ];
 
 /* ─── Eight things a trading store must not lose in a redesign ─────── */
@@ -191,7 +191,7 @@ const TERMS: { t: string; d: string }[] = [
        client). Facts limited to src/app/services/shopify-development and
        src/app/austin/ecommerce-development, naming approved 2026-10-29. ── */
 const WORK: { client: string; where: string; what: string; href: string; cta: string }[] = [
-  { client: 'European Garden (Exaco)', where: 'Shopify, Texas, United States', what: 'Before Exaco signed, we built a draft theme inside its own Shopify store. It then chose us to build the new store for its European Garden brand and connect it to QuickBooks Enterprise.', href: '/austin/ecommerce-development', cta: 'Read about the project' },
+  { client: 'European Garden (Exaco)', where: 'Shopify, Texas, United States', what: 'Before Exaco signed, we built a draft theme inside its own Shopify store. It then chose us to build the new store for its European Garden brand and connect it to QuickBooks Enterprise. The store is in build now.', href: '/austin/ecommerce-development', cta: 'Read about the project' },
   { client: 'Shopholistico', where: 'Shopify, United States', what: 'A custom Shopify theme for a brand selling whole-food vitamin D and calcium, with Subscribe & Save and a bundle offer on the product pages.', href: '/case-studies/shopholistico-shopify-store', cta: 'Read the case study' },
   { client: 'DTF Virginia', where: 'Shopify, Virginia, United States', what: 'A custom Shopify theme for a print shop where buyers build their own gang sheets at each transfer size and resellers sign up for an account.', href: 'https://dtfvirginia.com/', cta: 'See the live store' },
 ];
@@ -387,7 +387,7 @@ export default function EcommerceRedesignAUPage() {
         <div className="ledger">
           <div className="wrap">
             {[
-              { v: '1 year', t: 'minimum Google advises keeping old-to-new redirects live after a site move', s: 'Google Search Central', u: SRC_GOOGLE_MOVE },
+              { v: '1 year', t: "Google's general guide for how long to keep old-to-new redirects live after a site move (as long as possible)", s: 'Google Search Central', u: SRC_GOOGLE_MOVE },
               { v: 'Weeks', t: 'for most pages of a small to medium site to move in Google, and longer for large catalogues', s: 'Google Search Central', u: SRC_GOOGLE_MOVE },
               { v: '$3M', t: 'annual turnover above which a business falls outside the Privacy Act small business exemption', s: 'OAIC, Small business', u: SRC_OAIC },
               { v: '20', t: 'themes a Shopify admin holds before one must go, so the old theme can stay as a fallback', s: 'Shopify Help Center', u: SRC_SHOPIFY_DUPLICATE },
@@ -431,10 +431,11 @@ export default function EcommerceRedesignAUPage() {
                   <div>
                     <div className="factlabel">Three terms on this page</div>
                     <p>
-                      A <b>theme</b> is the set of templates that decides how your store looks. A <b>301 redirect</b> is
-                      a permanent forwarding rule from an old web address to a new one. An <b>integration</b> is a
-                      connection that moves data between the store and another system, such as orders into Xero or stock
-                      from Cin7.
+                      A <b>theme</b> is the set of templates that decides how your store looks. A <b>301 redirect</b> tells
+                      browsers and Google that an address has moved for good, so a shopper on an old link such as
+                      /collections/summer-linen lands on its new collection page instead of an error. An <b>integration</b> is
+                      any app or link that keeps two systems in step, so a sale in your store shows up in Xero and a stock
+                      count in Cin7 shows up on the product page.
                     </p>
                   </div>
                 </div>
@@ -449,8 +450,8 @@ export default function EcommerceRedesignAUPage() {
                 </div>
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/ecommerce-development/facts-1536.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/facts-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ecommerce-development/facts-1536.webp 1536w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" className="factphoto"
-                subject="The owner of a Melbourne homewares brand reviewing product pages on her online store at a timber desk"
-                imageAlt="The owner of a Melbourne homewares brand reviewing product pages on her online store, seen over her shoulder at a bright timber desk" />
+                subject="A store owner reviewing product pages on her online store at a timber desk"
+                imageAlt="A store owner reviewing product pages on her online store, seen over her shoulder at a bright timber desk" />
             </div>
           </div>
         </section>
@@ -462,7 +463,7 @@ export default function EcommerceRedesignAUPage() {
               <div className="eyebrow">What a redesign must not break</div>
               <h2>Eight parts of a trading Australian store we protect in every redesign</h2>
               <p className="lead">
-                Most redesign quotes list templates and pages. A store that already turns over real money has more to
+                A redesign quote can list only templates and pages. A store that already turns over real money has more to
                 lose than that. Each of these eight gets an owner and a test before the new theme is published.
               </p>
             </div>
@@ -611,8 +612,7 @@ export default function EcommerceRedesignAUPage() {
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
                   The OAIC defines a small business as one with an annual turnover of $3 million or less, and lists
-                  businesses the Privacy Act covers whatever their turnover. Most stores this page is written for sit
-                  above that line. A redesign usually adds or changes newsletter sign-ups, account forms, review
+                  businesses the Privacy Act covers whatever their turnover. A redesign usually adds or changes newsletter sign-ups, account forms, review
                   prompts and tracking scripts, which changes what personal information the store collects.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><div>
@@ -697,7 +697,7 @@ export default function EcommerceRedesignAUPage() {
             <div className="section-head plat-head">
               <div>
                 <div className="eyebrow">Work we have done</div>
-                <h2>Shopify stores we have designed and built</h2>
+                <h2>Shopify stores we have designed and are building</h2>
               </div>
               <p>
                 These are stores we have worked on in the United States, on the same platform most Australian
