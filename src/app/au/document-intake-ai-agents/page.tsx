@@ -21,8 +21,9 @@ import { ExecutionPath, ExecutionJobDiagram } from '../ai-agents/ExecutionDiagra
    /au/document-intake-ai-agents, built 2026-10-29.
 
    Why this page exists and how it differs from its neighbours:
-   * /services/document-intake-ai-agents is the US page on the same service. No
-     sentence, FAQ or heading is reused from it; only the service facts are.
+   * /services/document-intake-ai-agents is the US page on the same service. Copy is
+     written fresh for Australia; shared service facts (systems worked on, house
+     terms) are restated, not copied sentence by sentence.
    * /au/accounts-payable-automation already owns SUPPLIER INVOICES into Xero and
      MYOB. This page deliberately covers the other paperwork: customer purchase
      orders, delivery dockets and proof of delivery, credit and trade account
@@ -33,7 +34,7 @@ import { ExecutionPath, ExecutionJobDiagram } from '../ai-agents/ExecutionDiagra
    2026-10-29): "ocr software" 590, "document ai" 170, "document processing" 140,
    "ai ocr" 110, "intelligent document processing" 50 (CPC A$40.58), "pdf data
    extraction" 40, "document automation" 30, "invoice ocr" 30. "hubdoc" 14,800 and
-   "dext" 18,100 are brand searches for rented capture apps. PAA (same run):
+   "dext" 18,100 are brand searches for subscription capture apps. PAA (same run):
    "Is intelligent document processing AI?", "What's the difference between OCR and
    IDP?", "What is document automation software?", "Which AI is best for document
    processing?", "Can ChatGPT OCR a PDF?". Related searches surfaced "Xero Smart
@@ -146,7 +147,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'Is intelligent document processing AI?',
     answer: 'Yes. Intelligent document processing, usually shortened to IDP, is the industry name for document reading that uses AI rather than fixed templates. Older tools needed a template drawn for every supplier or customer layout. IDP uses machine learning, and now large language models, to find a PO number or a delivery address wherever it sits on the page. The name sounds grand. The job is reading paperwork accurately and saying when it is not sure.' },
   { category: 'basics', question: 'What’s the difference between OCR and IDP?',
-    answer: 'OCR, optical character recognition, turns a picture of text into text. It tells you the words on the page, not what they mean. IDP goes further: it decides that one number is the order total and another is an ABN, checks them, and maps them to fields in your system. Most IDP systems use OCR as their first step. OCR alone suits searchable archives. IDP suits documents that must become records.' },
+    answer: 'Optical character recognition (OCR) converts a scanned image into characters a computer can search. It can hand you every word on a delivery docket and still have no idea which one is the PO number. IDP goes further: it decides that one number is the order total and another is an ABN, checks them, and maps them to fields in your system. Most IDP systems use OCR as their first step. OCR alone suits searchable archives. IDP suits documents that must become records.' },
   { category: 'basics', question: 'What is document automation software?',
     answer: 'The phrase covers two different jobs, which confuses many searches. One is generating documents, such as contracts or quotes built from a template. The other, which this page is about, is reading documents that arrive and turning them into data. If a vendor says document automation, ask which direction they mean. We build the reading side: intake from inbox, portal or scanner into Xero, MYOB or your ERP.' },
   { category: 'basics', question: 'Which AI is best for document processing?',
@@ -162,12 +163,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Partly. Xero’s smart document capture reads documents sent to Xero by email, app or upload and has the details ready for review. Xero’s July 2026 post names receipts, bills and statements, and says the feature is rolling out in beta in Australia and New Zealand. If your documents are bills and receipts for Xero, try it first. A custom agent fits documents Xero does not handle, such as customer orders, forms or dockets.',
     links: [{ href: SRC_XERO_SDC, label: 'Xero, smart document capture' }] },
   { category: 'systems', question: 'Should we use Hubdoc or Dext instead of a custom agent?',
-    answer: 'If the job is getting bookkeeping documents into your accounting software, look at rented capture apps such as Hubdoc and Dext first. Renting is quicker to start than any build. A custom agent makes sense when the documents are not bookkeeping paperwork, when the record belongs in an ERP or inventory system, or when each document must be checked against your own price lists, customers or stock before anything is created.' },
+    answer: 'If the job is getting bookkeeping documents into your accounting software, look first at subscription capture apps such as Dext, or Hubdoc, which comes with many Xero plans. Either is quicker to start than any build. A custom agent makes sense when the documents are not bookkeeping paperwork, when the record belongs in an ERP or inventory system, or when each document must be checked against your own price lists, customers or stock before anything is created.' },
   { category: 'systems', question: 'Can an agent turn emailed purchase orders into sales orders in MYOB?',
-    answer: 'Yes. MYOB’s Business API works with AccountRight, new Essentials and MYOB Business files, and its Sale Order endpoint accepts new orders, with a status of Open until the order is converted to an invoice. The agent reads the customer’s PDF, matches the customer and each item code, checks the price against your list and creates the order as Open for a person to confirm before anything is picked.',
+    answer: 'Yes. MYOB’s Business API works with AccountRight, new Essentials and MYOB Business files, and its Sale Order endpoint takes new orders with a status of Open or ConvertedToInvoice. There is no draft status, so an Open order is live. The agent reads the customer’s PDF, matches the customer and each item code, checks the price against your list and holds the order in its review queue. Only when a person approves it does the agent create it in MYOB as Open.',
     links: [{ href: SRC_MYOB_ORDER, label: 'MYOB Business API, Sale Order' }] },
   { category: 'systems', question: 'Which ERPs and inventory systems can it file into?',
-    answer: 'Any system that lets outside software create a record through an API or a supported import. In Australia that usually means Xero, MYOB Business or AccountRight, MYOB Acumatica, NetSuite, Odoo, QuickBooks Online, Cin7 Core or Unleashed. We have worked on Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs. During scoping we confirm the exact record your system will accept and whether it has a test copy we can build against.' },
+    answer: 'Any system that lets outside software create a record through an API or a supported import. In Australia that usually means Xero, MYOB Business or AccountRight, MYOB Acumatica, NetSuite, Odoo, QuickBooks Online, Cin7 Core or Unleashed. Our own ERP work spans Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs. Before any build we name the exact record type your system accepts from outside software, and ask whether a sandbox copy exists so testing never touches live books.' },
   { category: 'systems', question: 'Can the agent handle Peppol eInvoices?',
     answer: 'It does not need to read them. A Peppol eInvoice arrives as structured data, not a picture, so it can go straight into the system with a few checks. Australia’s Peppol Authority is the ATO, according to OpenPeppol’s list. Our agent treats Peppol documents as a clean lane and spends its reading effort on the PDFs, scans and emails that still arrive from customers and suppliers who are not on the network.',
     links: [{ href: SRC_PEPPOL_AUTH, label: 'OpenPeppol, Peppol Authorities' }] },
@@ -180,8 +181,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'It depends on your documents, so ignore any vendor’s headline figure. Clean, typed orders from regular customers read close to perfectly. Faxed dockets and handwritten forms do not. We measure accuracy field by field on a batch your team has already processed, then set a bar for each field. Fields that clear the bar flow through as drafts. Fields that fall short go to a person, so a low score slows things down rather than filing a wrong record.' },
   { category: 'checks', question: 'What happens when the agent is unsure?',
     answer: 'It stops and asks. The document lands in a review queue with the unsure fields highlighted beside the original page, and a person corrects or confirms them in a few clicks. The agent also stops when a check fails: an unknown customer, an item code that does not exist, a price outside your list or a total that does not add up. Every correction is logged, which tells us where to tighten the rules.' },
-  { category: 'checks', question: 'Does the agent need to be trained on our documents?',
-    answer: 'Not in the old sense of training a model for months. Current models read most business documents out of the box. What the agent needs is your rules: which fields matter, what counts as a valid order, which checks to run against your system and who reviews what. We write those rules with your team and test them on a few hundred past documents. Your documents are not used to train anyone’s public model.' },
+  { category: 'checks', question: 'Do we have to train the AI on our paperwork first?',
+    answer: 'No months-long training project is involved. Current models already read most business documents well. What the agent needs is your rules: which fields matter, what counts as a valid order, which checks to run against your system and who reviews what. We write those rules with your team and test them on a few hundred past documents. Your documents are not used to train anyone’s public model.' },
 
   // ── Privacy ──
   { category: 'privacy', question: 'Does the Privacy Act apply to documents the agent reads?',
@@ -201,7 +202,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'working', question: 'How long does it take to build a document intake agent?',
     answer: 'Flowtivity’s Australian guide puts document processing builds at 4 to 8 weeks, which matches the shape of our projects: about a week to collect samples and write rules, then building, testing on past documents and a supervised pilot. One document type into one system sits at the short end. Several document types, a review queue and an ERP with no test copy sit at the long end. We confirm the plan after scoping.' },
   { category: 'working', question: 'Can we see it working on our documents before we sign?',
-    answer: 'Yes, and that is how we prefer to start. You send a batch of documents your team has already processed, an early version of the agent reads them, and you compare its fields with what your team entered, unsure fields included. If a rented tool such as Xero’s built-in capture would cover your job, we tell you then. You decide whether to go ahead with real results in front of you.' },
+    answer: 'Yes, and that is how we prefer to start. You send a batch of documents your team has already processed, an early version of the agent reads them, and you compare its fields with what your team entered, unsure fields included. If a tool you already have, such as Xero’s built-in capture, would cover your job, we tell you then. You decide whether to go ahead with real results in front of you.' },
   { category: 'working', question: 'Who owns the agent, and who looks after it?',
     answer: 'You own the code, the rules, the test documents and the logs from day one, and the AI and hosting accounts can sit in your name at cost with no markup. Defects are fixed inside the build price for a cover period agreed before work starts. Support after that is optional. Each change is quoted and approved before we do it, with no monthly minimum, and we can keep managing the servers, models and connections if you want us to.' },
   { category: 'working', question: 'What should we send you to get a quote?',
@@ -215,14 +216,14 @@ const AGENT_JOBS: { n: string; t: string; d: string }[] = [
   { n: '03', t: 'Reads the fields you name', d: 'Customer, PO number, delivery address, item codes, quantities, prices, ABN, signature present or missing. You choose the fields per document type; the agent reads only those.' },
   { n: '04', t: 'Checks them against your own records', d: 'Is this a known customer? Does item code 40-118 exist? Is the price inside the customer’s price list? Does the ABN match ABN Lookup? Checks run against your system before a record is drafted.' },
   { n: '05', t: 'Sends unsure fields to a person', d: 'Each field carries a score. Below your bar, the document goes to a review queue with the original page beside it. A person confirms or fixes it, and the correction is logged.' },
-  { n: '06', t: 'Files a draft in the right system', d: 'A sales order in MYOB or NetSuite, a contact and credit request in Xero, a receipt record in Cin7 Core or Unleashed. Drafts by default; nothing is confirmed until a person says so.' },
+  { n: '06', t: 'Files a draft in the right system', d: 'A sales order in NetSuite, a contact with the application attached in Xero, a receipt record in Cin7 Core or Unleashed. Where a system has a draft state, the agent uses it. MYOB sale orders have none, so they wait in the review queue until a person approves them.' },
   { n: '07', t: 'Keeps the original with the record', d: 'The source document is attached to, or linked from, the record it created, so anyone can see what arrived and what was entered, months later.' },
   { n: '08', t: 'Reports what it did and why', d: 'A daily summary: documents in, records drafted, documents held and the reason each was held. Your team sees the exceptions first and the routine work as a count.' },
 ];
 
 /* ─── Documents by Australian industry ─── */
 const INDUSTRIES: { t: string; d: ReactNode }[] = [
-  { t: 'Wholesale and distribution', d: 'Customer purchase orders that arrive as PDFs, spreadsheets or photos of handwritten order pads, read and created as draft sales orders in MYOB, NetSuite, Cin7 Core or Unleashed, with item codes and price lists checked first. Orders with an unknown code or an off-list price wait for a person.' },
+  { t: 'Wholesale and distribution', d: 'Customer purchase orders that arrive as PDFs, spreadsheets or photos of handwritten order pads, read and prepared as sales orders for approval in MYOB, NetSuite, Cin7 Core or Unleashed, with item codes and price lists checked first. Orders with an unknown code or an off-list price wait for a person.' },
   { t: 'Manufacturing', d: 'Supplier certificates of conformance, test reports and material data sheets matched to the batch or purchase order they belong to, plus customer drawings and order changes logged against the job. Expired or missing certificates are flagged before goods are released.' },
   { t: 'Freight, 3PL and warehousing', d: 'Consignment notes, signed proof of delivery and damage reports from carriers such as Australia Post, StarTrack and Sendle read and matched to the order, so disputed deliveries have their evidence attached before the customer rings.' },
   { t: 'Trade suppliers and B2B ecommerce', d: <>Trade account and credit applications read, ABNs checked against ABN Lookup, and the account drafted for the credit team to approve. For online B2B ordering itself, see our <a href="/au/ecommerce-development">ecommerce development</a> work in Australia.</> },
@@ -233,13 +234,13 @@ const INDUSTRIES: { t: string; d: ReactNode }[] = [
 /* ─── Where the agent files (platform rows) ─── */
 const INTEGRATIONS: { t: string; d: ReactNode }[] = [
   { t: 'Xero', d: 'Contacts, quotes, draft invoices and attachments for documents Xero’s own capture does not cover. Bills and receipts are often better left to Xero’s smart document capture.' },
-  { t: 'MYOB Business and AccountRight', d: <>Draft sale orders, customers and items through the MYOB Business API, which <a href={SRC_MYOB_API} target="_blank" rel="noopener noreferrer nofollow">works with AccountRight, new Essentials and MYOB Business files</a>.</> },
+  { t: 'MYOB Business and AccountRight', d: <>Sale orders, customers and items through the MYOB Business API (sale orders have no draft status, so each waits in the review queue for approval before it is created as Open), which <a href={SRC_MYOB_API} target="_blank" rel="noopener noreferrer nofollow">works with AccountRight, new Essentials and MYOB Business files</a>.</> },
   { t: 'MYOB Acumatica and NetSuite', d: 'Sales orders, item receipts and customer records in mid-market ERPs, each through a separate login for the agent with only the access the job needs.' },
   { t: 'Odoo, Cin7 Core and Unleashed', d: 'Sales and purchase orders, stock receipts and delivery records in the inventory systems Australian wholesalers and brands run.' },
   { t: 'QuickBooks Online', d: 'Customers, estimates and invoices for businesses on QuickBooks in Australia, filed as drafts for review.' },
   { t: 'Microsoft 365 and Google Workspace', d: 'The inboxes, shared drives and SharePoint libraries where documents arrive, plus Teams or Google Chat for review alerts.' },
   { t: 'ABN Lookup', d: 'ABN and business name checks on applications and new customer orders, through the Australian Business Register’s free web services.' },
-  { t: 'Your own ERP or database', d: 'If it has an API or a supported import, the agent can file to it. If it has neither, the agent prepares the record for a person to key in one step.' },
+  { t: 'Your own ERP or database', d: 'If it has an API or a supported import, the agent can file to it. Without either, the agent sets the record out field by field on the review screen, ready to enter in one sitting.' },
 ];
 
 /* ─── Project steps (rendered as <details>) ─── */
@@ -569,7 +570,7 @@ export default function DocumentIntakeAiAgentsAUPage() {
               <h2>Eight things the intake agent does with every document</h2>
               <p className="lead">
                 Reading the page is one step of eight. The checks and the review queue are what make the output safe to
-                file, and they are where most document tools are thinnest.
+                file.
               </p>
             </div>
             <div className="capgrid">
@@ -677,7 +678,7 @@ export default function DocumentIntakeAiAgentsAUPage() {
                   <div className="factlabel">A typical split</div>
                   <ul className="trigrows">
                     <li><span className="m">Sorting and splitting documents</span><span className="n">type labels, page splits</span><span className="t">Automatic</span></li>
-                    <li><span className="m">High-scoring fields that pass every check</span><span className="n">drafted in your system</span><span className="t">Draft only</span></li>
+                    <li><span className="m">High-scoring fields that pass every check</span><span className="n">drafted, or held for approval where there is no draft state (MYOB)</span><span className="t">Draft only</span></li>
                     <li><span className="m">Low scores or failed checks</span><span className="n">review queue, original page attached</span><span className="t">Review</span></li>
                     <li><span className="m">Confirming orders, opening credit accounts</span><span className="n">stock, credit, money</span><span className="t">Always a person</span></li>
                     <li><span className="m">Deleting records, changing prices</span><span className="n">outside the agent’s job</span><span className="t">Never</span></li>
@@ -707,8 +708,8 @@ export default function DocumentIntakeAiAgentsAUPage() {
                 </p>
               </div>
               <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/accounts-payable-automation/process-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/accounts-payable-automation/process-640.webp 640w, /images/au/visual-pass-2026-10-03/accounts-payable-automation/process-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2"
-                subject="A FactoryJet engineer and the bookkeeper of an Australian trade supplier sorting printed documents into piles by type on a meeting table, laptop screen facing them, no readable text or logos"
-                imageAlt="A FactoryJet engineer and the bookkeeper of an Australian trade supplier sorting printed documents into piles by type on a meeting table" />
+                subject="A warehouse supervisor in hi-vis workwear and a bookkeeper at an Australian trade supplier sorting printed documents into piles by type on a meeting table, laptop screen facing them, no readable text or logos"
+                imageAlt="A warehouse supervisor and a bookkeeper at an Australian trade supplier sorting printed documents into piles by type" />
             </div>
             <div className="timeline timeline-4">
               {BUILD_STEPS.map((s) => (
@@ -730,6 +731,7 @@ export default function DocumentIntakeAiAgentsAUPage() {
             headline={'Send ten of your messiest documents and watch the agent read them'}
             sub={'Tell us which paperwork your team retypes and where it ends up. The founder replies within 24 hours, and the demo runs on your own documents before you sign anything.'}
             label={'See a demo on my data'}
+            note={'Replies within 24 hours.'}
           />
         </div>
 
@@ -829,7 +831,7 @@ export default function DocumentIntakeAiAgentsAUPage() {
               </details>
               <details className="ventry">
                 <summary><h3>Customers email us purchase orders in every layout imaginable</h3><span className="chev" aria-hidden="true">+</span></summary>
-                <p><b>This is what an intake agent is for.</b> Varied layouts, checks against item codes and price lists, and a draft sales order in MYOB, NetSuite, Cin7 Core or Unleashed. This page is the right place.</p>
+                <p><b>This is what an intake agent is for.</b> Varied layouts, checks against item codes and price lists, and a sales order ready for approval in MYOB, NetSuite, Cin7 Core or Unleashed. This page is the right place.</p>
               </details>
               <details className="ventry">
                 <summary><h3>Most of our orders already arrive through EDI or a marketplace connector</h3><span className="chev" aria-hidden="true">+</span></summary>
@@ -866,7 +868,7 @@ export default function DocumentIntakeAiAgentsAUPage() {
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><div>
                   <p>
-                    If a document is read by an AI model hosted overseas, APP 8 applies: reasonable steps first, and your
+                    If a document is sent to an AI model hosted overseas, that is usually a disclosure under APP 8: reasonable steps first, and your
                     business stays accountable for what the overseas recipient does under section 16C. The OAIC’s AI
                     guidance also warns against treating AI products as set and forget.
                   </p>
@@ -913,7 +915,7 @@ export default function DocumentIntakeAiAgentsAUPage() {
               <div>
                 <ol className="au-numlist">
                   <li><span><b>Demo and scoping.</b> We read a batch of your documents, show you the results and write a fixed-price plan.</span></li>
-                  <li><span><b>One document type, one system.</b> For example, customer purchase orders into MYOB or NetSuite as draft sales orders.</span></li>
+                  <li><span><b>One document type, one system.</b> For example, customer purchase orders into MYOB or NetSuite as sales orders held for approval.</span></li>
                   <li><span><b>Several document types.</b> Orders, dockets and applications sharing one review queue, one log and one set of privacy controls.</span></li>
                   <li><span><b>Optional support.</b> Changes quoted and approved one at a time, with no monthly minimum.</span></li>
                 </ol>
@@ -942,14 +944,14 @@ export default function DocumentIntakeAiAgentsAUPage() {
               <div className="eyebrow">Work we have done</div>
               <h2>Document work at the ERP end, where the record has to be right</h2>
               <p>
-                FactoryJet has worked on Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs, building RFQ
-                automation, daily bookkeeping, and the generation of purchase and sales orders. Each of those starts with a
-                document someone used to read and retype: a request for quote, a vendor invoice, a customer order.
+                Our ERP projects on Odoo, NetSuite, SAP Business One, ERPNext and custom systems have included RFQ
+                automation, daily bookkeeping, and purchase and sales orders raised by software. Every one of them hinged on
+                paperwork. A supplier quote request or a customer’s order had to be read correctly before the ERP could act on it.
               </p>
               <p>
                 We build Xero and HubSpot integrations, and for Sow Easy, a distributor, we connected a WooCommerce store to
                 Odoo. FactoryJet has served more than 500 businesses since 2014, so the ERP side of an intake agent, the
-                part that decides whether a draft order is valid, is familiar ground.
+                part that decides whether an order is valid, is familiar ground.
               </p>
               <p>
                 The same service for US businesses, with US platforms and sources, is on our{' '}
@@ -993,12 +995,13 @@ export default function DocumentIntakeAiAgentsAUPage() {
             </p>
             <p>
               The agent reads each order, maps old codes to current ones from a table the team keeps, checks every price
-              against the store’s price list and creates the sale order in MYOB as Open. Orders from new stores, codes it
-              cannot map, and prices off the list wait in the review queue with the original page attached.
+              against the store’s price list and prepares the sale order. Orders that pass every check go on one approval
+              list. Orders from new stores, codes it cannot map, and prices off the list wait in the review queue with the
+              original page attached. MYOB has no draft status, so nothing is created there until a person approves it.
             </p>
             <p>
-              The two coordinators start the day confirming a short list of held orders and calling the stores that need a
-              call. They still own every customer relationship. What changes is how much of the morning goes on typing.
+              The two coordinators start the day approving the checked list, which the agent then creates in MYOB as Open,
+              then work through the held orders and call the stores that need a call. They still own every customer relationship. What changes is how much of the morning goes on typing.
             </p>
           </div>
         </section>
