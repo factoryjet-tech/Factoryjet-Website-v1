@@ -18,8 +18,9 @@ import '../ai-agents/ai-agents.css';
       (WooCommerce joined to Odoo, still in build), per the 29 Oct naming rule.
       Never present either as Shopify work, and never add a metric for them.
    4. Structure mirrors /uk/ecommerce-consultant (imports, CSS, schema, FAQ
-      layout). The copy is written fresh: no sentence is shared with that page
-      or with /services/ecommerce-audit.
+      layout). The copy must be written fresh. A reviewer found shared
+      sentences on 29 October 2026 and they were rewritten; check new copy
+      against that page and /services/ecommerce-audit before adding it.
    5. FAQ wording draws on Google People Also Ask and related searches for
       "ecommerce audit", "ecommerce website audit", "shopify audit" and "how
       much does a website audit cost uk", pulled for the United Kingdom on
@@ -84,8 +85,10 @@ const SRC = {
   icoExceptions: { label: 'ICO: storage and access technologies, what are the exceptions?', url: 'https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/' },
   // LCP within 2.5 s, INP 200 ms or less, CLS 0.1 or less, at the 75th percentile.
   vitals: { label: 'web.dev (Google): Web Vitals', url: 'https://web.dev/articles/vitals' },
-  // "One-off audits cost £500-£7.5k"; technical audit £500 to £7.5k. Updated
-  // 9 July 2026. North London agency. VAT not stated in the price sentences.
+  // SEO-audit prices. "One-off audits cost £500-£7.5k"; the audit section says
+  // "SEO audits in the UK cost £500-£7.5k+" and "enterprise sites with 500+
+  // pages cost £5k-£15k+". Updated 9 July 2026. North London agency. VAT not
+  // stated in the price sentences.
   redEagle: { label: 'Red Eagle Tech: how much does SEO cost in the UK (updated 9 July 2026)', url: 'https://redeagle.tech/blog/how-much-does-seo-cost-uk' },
 } as const;
 
@@ -108,7 +111,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'How do you do a store audit?',
     answer: 'Start with data, then walk the store as a buyer. We read analytics, Search Console and a month of orders and returns. Then we place real orders on a phone and a laptop, refund one, and follow each order through stock, the courier label and the accounting entry. Last, we interview the people who run the shop. Gaps between what the data says and what staff describe are where most findings sit.' },
   { category: 'basics', question: 'Who is this ecommerce audit for?',
-    answer: 'Established UK businesses with a store that already takes orders every day: brands, retailers, wholesalers and manufacturers selling direct or to trade. Typical clients run more than one channel, such as their own site plus Amazon.co.uk or eBay, and an accounting or ERP system behind it. If the store is not live yet, a launch plan is the better first step than an audit.' },
+    answer: 'Established UK businesses with a store that already takes orders every day: brands, retailers, wholesalers and manufacturers selling direct or to trade. Typical clients run more than one channel, such as their own site plus Amazon.co.uk or eBay, and an accounting or ERP system behind it. If the store is not live yet, a launch plan is a better first step than an audit.' },
   { category: 'basics', question: 'How is this different from an SEO audit?',
     answer: 'An SEO audit asks whether search engines can find and rank your pages. An ecommerce audit asks whether the business behind those pages makes money on each order: checkout, pricing display, stock accuracy, courier costs, refunds and the books. Search is one section of ours. If search turns out to be your biggest gap, our UK SEO audit goes deeper on crawling, indexing and AI search visibility.' },
   { category: 'basics', question: 'Is an automated audit tool enough?',
@@ -118,7 +121,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'scope', question: 'Which platforms do you audit?',
     answer: 'Shopify and Shopify Plus, WooCommerce, Adobe Commerce (Magento), BigCommerce and custom storefronts. Behind the store we read Xero, Sage 50, Sage 200 and Sage Intacct, QuickBooks UK, NetSuite, Dynamics 365 Business Central and Odoo, plus Brightpearl, Linnworks and Mintsoft for orders and stock. The method stays the same on every platform. The weak points differ, so the checklist adjusts.' },
   { category: 'scope', question: 'Why is my Shopify store running so slowly?',
-    answer: 'On the stores we audit, the usual causes are apps that each load their own scripts, oversized product images and a theme that renders too much before the first product appears. Google’s Web Vitals guidance says the main content should appear within 2.5 seconds and a tap should get a response within 200 milliseconds, measured at the 75th percentile. We name the scripts and images behind each miss.' },
+    answer: 'Common causes are apps that each load their own scripts, oversized product images and a theme that renders too much before the first product appears. Google’s Web Vitals guidance says the main content should appear within 2.5 seconds and a tap should get a response within 200 milliseconds, measured at the 75th percentile. We name the scripts and images behind each miss.' },
   { category: 'scope', question: 'Do you check marketplaces such as Amazon.co.uk, eBay and OnBuy?',
     answer: 'Yes. We compare listings, prices and stock across your own store and Amazon.co.uk, eBay UK, OnBuy, ManoMano, the B&Q marketplace or Zalando, wherever you sell. The usual findings are oversells from slow stock syncs, fees that make one channel lose money once returns are counted, and marketplace sales reaching the books as one lump with no VAT split.' },
   { category: 'scope', question: 'Do you look at payments and refunds?',
@@ -132,7 +135,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'uk', question: 'Does the audit check the CMA rules on drip pricing?',
     answer: 'Yes. The CMA’s price transparency guidance, published 18 November 2025, describes drip pricing as prices added as a shopper moves through a purchase. The same day the CMA said it can fine companies up to 10% of global turnover. We walk your checkout and list every charge that first appears after the product page, such as a mandatory fee or a delivery charge shown late, so your team and lawyers can decide what to change.' },
   { category: 'uk', question: 'What does the audit check on returns and cancellations?',
-    answer: 'GOV.UK says you must tell customers they can cancel most online orders up to 14 days after delivery, and if you never tell them, they can cancel at any time in the next 12 months. We read your returns page, checkout wording and order emails for that information, and the pre-purchase details GOV.UK lists, including a price with all taxes included and delivery costs.' },
+    answer: 'Under GOV.UK rules, shoppers must be told about a right to cancel most online orders up to 14 days after delivery, and the window grows to 12 months when nobody tells them. We screenshot the order-confirmation email and the returns-portal screen from our own test order and mark whether each one states that right, a price with all taxes included and the delivery cost.' },
   { category: 'uk', question: 'Do you check our cookies and analytics after the Data (Use and Access) Act 2025?',
     answer: 'Yes. The ICO says the Data (Use and Access) Act 2025 lets you set some cookies without consent, including ones that collect statistical information. Its guidance also says that exception does not cover online advertising, such as ad measurement. We list every tag your store fires, sort each into analytics or advertising, and check your banner. Your data protection lead makes the final call.' },
   { category: 'uk', question: 'How does Making Tax Digital affect an online store?',
@@ -142,9 +145,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── Cost and terms ──
   { category: 'cost', question: 'How much does an ecommerce audit cost in the UK?',
-    answer: 'There is no standard price, because the word audit covers anything from an automated report to weeks of work. As one published reference, Red Eagle Tech, a North London agency, puts one-off technical audits at £500 to £7.5k (updated 9 July 2026, VAT not stated). An ecommerce audit that also covers systems and operations sits on scope. FactoryJet quotes a fixed price in writing after a short scoping call.' },
+    answer: 'There is no standard price, because the word audit covers anything from an automated report to weeks of work. The nearest published reference is for SEO audits: Red Eagle Tech, a North London agency, puts one-off SEO audits at £500 to £7.5k, and £5k to £15k+ for sites over 500 pages (updated 9 July 2026, VAT not stated). An ecommerce audit that also covers systems and operations sits on scope. FactoryJet quotes a fixed price in writing after a short scoping call.' },
   { category: 'cost', question: 'How long does the audit take?',
-    answer: 'It depends on the number of channels and systems in scope, and we agree the timeline in writing before work starts. A single store with one warehouse and Xero moves quickly. A brand selling direct, on two marketplaces and to trade customers, with an ERP and a 3PL, takes longer because every link has to be followed with real orders. The founder replies to new enquiries within 24 hours.' },
+    answer: 'Three inputs set the timeline: how many systems an order passes through, how fast the read-only logins arrive, and whether trade ordering is in scope. Each extra system adds another hop to trace with test orders. Logins that take a week to arrive add a week. We put the agreed dates in writing with the price, before work starts.' },
   { category: 'cost', question: 'What access do you need, and is our data safe?',
     answer: 'Read-only access is enough: analytics, Search Console, the store admin as a staff user and a viewer login for the accounting system. We never need write access to audit. You can remove every login the day the report lands. If a test order is needed, we agree it with you first and refund it, so it does not distort your sales or stock figures.' },
   { category: 'cost', question: 'What are your terms?',
@@ -154,7 +157,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'after', question: 'What do we get at the end?',
     answer: 'A written report and a walkthrough call with the founder. Each finding has the evidence (a screenshot, an order number or a log line), the likely cost of leaving it, the effort to fix it and who should do it: your team, your current agency, a supplier or us. The list is ranked, so the first five items are the ones worth starting this month.' },
   { category: 'after', question: 'Do we have to use FactoryJet to fix the findings?',
-    answer: 'No. The report is written so your own developers, your current agency or a freelancer can act on it. Many clients do ask us to carry on, because the people who traced the problem already know where it lives. When they do, the work moves into our build team with the same people, priced phase by phase, and nothing starts until you sign that phase.' },
+    answer: 'No. The report is written so your own developers, your current agency or a freelancer can act on it. If you hire us for the fixes, the same people who wrote the report do the work, priced phase by phase, and nothing starts until you sign that phase.' },
   { category: 'after', question: 'What if the audit says we should replatform?',
     answer: 'We say so only when the evidence points there, and we show what staying would cost next to what moving would involve: redirects, customer accounts, order history and every integration. Most audits end with fixes on the current platform. When a move is right, our Shopify migration team plans redirects and data first, so rankings and order history survive the switch.' },
 ];
@@ -360,7 +363,7 @@ export default function EcommerceAuditUKPage() {
               <p>
                 <b>Drip pricing</b> is the CMA’s name for charges added as a shopper moves through a purchase.
                 A <b>digital link</b> is HMRC’s term for data moved between software by API or file import, never by
-                retyping. An <b>ERP</b> is the system that runs stock, orders and finance in one place, such as
+                copy and paste. An <b>ERP</b> is the single system that holds stock, purchase orders and the ledger, such as
                 NetSuite, Business Central or Odoo.
               </p>
             </div>
@@ -395,8 +398,8 @@ export default function EcommerceAuditUKPage() {
                 <span className="eyebrow">When an audit pays for itself</span>
                 <h2>Signs a trading store needs an audit before it needs more traffic</h2>
                 <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Buying more traffic into a store with a leak only makes the leak bigger. These are the situations UK
-                  retailers, brands and wholesalers describe on the first call.
+                  Buying more traffic into a store with a leak only makes the leak bigger. Common signs a trading
+                  store needs an audit.
                 </p>
                 <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
                   <li><b>Revenue grew, margin did not.</b> Marketplace fees, returns and courier surcharges ate the extra orders, and nobody can show profit by channel.</li>
@@ -473,17 +476,18 @@ export default function EcommerceAuditUKPage() {
               </p>
               <h3 className="mt-4">2. Cancellation rights and pre-purchase information (GOV.UK)</h3>
               <p>
-                GOV.UK says customers must be told they can cancel most online orders up to 14 days after delivery.
-                Leave that out and the window stretches to 12 months. The same page lists what a shopper must see
-                before paying, including a price with all taxes included and delivery costs. We check your returns
-                page, checkout text and confirmation emails against that list.
+                The GOV.UK guidance sets a 14-day cancellation right after delivery for most online orders, which
+                stretches to 12 months if the seller never mentions it. It also lists what a shopper must see before
+                paying, including a price with all taxes included and delivery costs. From our test order we capture
+                the order-confirmation email and the returns-portal screen, then mark each item on that list as shown
+                or missing.
               </p>
               <h3 className="mt-4">3. Digital links for VAT records (HMRC)</h3>
               <p>
                 VAT Notice 700/22, paragraph 3.2.1, accepts API transfers, CSV imports, linked spreadsheet cells and
-                emailed spreadsheets as digital links. It says copy and paste does not count. So when a person types
-                last week’s Amazon payout into Xero or Sage, that is a finding. We mark every such step on the order
-                map for your accountant to confirm.
+                emailed spreadsheets as digital links. It says cut and paste or copy and paste does not count. So when a person types
+                last week’s Amazon payout into Xero or Sage, we flag it as a step your accountant should check against
+                para 3.2.1, which also covers when manual entry is allowed. We mark every such step on the order map.
               </p>
               <h3 className="mt-4">4. Cookies and analytics (ICO)</h3>
               <p>
@@ -582,7 +586,7 @@ export default function EcommerceAuditUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">UK work behind the method</span>
-              <h2>Two UK trade stores where the order chain is the job</h2>
+              <h2>Two trade stores where the order chain is the job</h2>
               <p className="lead mt-4">
                 Both projects are about what happens after the click: account prices, stock held in another system,
                 and orders that must reach the back office without retyping. That is the part of a store most audits
@@ -596,7 +600,7 @@ export default function EcommerceAuditUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Sow Easy, WooCommerce joined to Odoo</h3>
-                <p className="mt-4">A UK wholesale store on WordPress WooCommerce that reads stock, pricing and SKUs from Odoo. The Odoo link is still being built, and every change is tried on a staging copy before it goes near live orders. <a href="/case-studies/sow-easy-distributor-portal" style={inlineLink}>Read the Sow Easy case study</a>.</p>
+                <p className="mt-4">A wholesale store on WordPress WooCommerce that reads stock, pricing and SKUs from Odoo. The Odoo link is still being built, and every change is tried on a staging copy before it goes near live orders. <a href="/case-studies/sow-easy-distributor-portal" style={inlineLink}>Read the Sow Easy case study</a>.</p>
               </li>
             </ul>
             <p className="mt-8" style={{ maxWidth: 820 }}>
@@ -652,12 +656,13 @@ export default function EcommerceAuditUKPage() {
                 <div className="stack mt-6">
                   <p>
                     No price list exists, because audit means anything from a one-hour screen recording to weeks of
-                    order tracing. One published UK reference: Red Eagle Tech, a North London agency, puts one-off
-                    technical audits at £500 to £7.5k in its guide updated 9 July 2026. The guide does not say whether
+                    order tracing. The nearest published UK reference is for SEO audits: Red Eagle Tech, a North London
+                    agency, puts one-off SEO audits at £500 to £7.5k, and £5k to £15k+ for sites over 500 pages, in its
+                    guide updated 9 July 2026. The guide does not say whether
                     those figures include VAT, so ask any supplier whether a quote is ex or inc VAT before you compare.
                   </p>
                   <p>
-                    An audit that follows orders into stock, couriers and the books has more scope than a technical
+                    An audit that follows orders into stock, couriers and the books has more scope than an SEO
                     audit. Four things move it: the number of channels, the number of systems, order volume, and
                     whether trade ordering is included. FactoryJet quotes a fixed price in writing after a short
                     scoping call, and the price does not move once you sign.
@@ -685,8 +690,7 @@ export default function EcommerceAuditUKPage() {
               <h2>Sources, read on {READ_ON}</h2>
               <p className="lead mt-4">
                 Every rule, threshold and price on this page was read on the pages below that day. Regulators update
-                guidance and agencies change prices, so open the linked page before you act on a figure. If you sell
-                to the US too, see our <a href="/services/ecommerce-audit" style={inlineLink}>US ecommerce audit</a>.
+                guidance and agencies change prices, so open the linked page before you act on a figure.
               </p>
             </div>
             <ul className="col-2 mt-8" style={{ gap: 10 }}>
