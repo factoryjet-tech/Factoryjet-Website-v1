@@ -86,7 +86,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'What does Shopify maintenance cover for an Australian store?',
     answer: 'Shopify runs the servers, hosting and platform security. Whatever you add to it is yours to look after: theme code, installed apps, checkout extensions, and the connections to Xero or MYOB, your warehouse, Afterpay or Zip, and couriers such as Australia Post and Sendle. Maintenance is the regular work of testing, updating and fixing those pieces, so a change in one does not quietly break another.' },
   { category: 'basics', question: 'If Shopify hosts our store, why does it need maintenance?',
-    answer: 'Yes. Hosting is off your plate, but the platform keeps moving underneath your theme and apps. Shopify puts out a fresh API version each quarter and keeps each one alive for at least 12 months, so custom apps and integrations need planned updates. Shopify Scripts were deprecated on 30 June 2026, and apps that still rely on script tags stop loading on storefronts from 1 March 2027.' },
+    answer: 'Because the platform keeps moving underneath your theme and apps, even though hosting is off your plate. Shopify puts out a fresh API version each quarter and keeps each one alive for at least 12 months, so custom apps and integrations need planned updates. Shopify Scripts were deprecated on 30 June 2026, and apps that still rely on script tags stop loading on storefronts from 1 March 2027.' },
   { category: 'basics', question: 'What is a Shopify support retainer?',
     answer: 'A retainer is a monthly arrangement that sets aside developer hours for your store, with response times agreed in writing for when something breaks. Some brands want that certainty, especially before peak season. Others prefer to call on support only when they need it. With us a retainer is optional, there is no monthly minimum unless you ask for one, and every change is quoted and approved before work starts.' },
   { category: 'basics', question: 'What goes on a Shopify maintenance checklist?',
@@ -104,7 +104,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'shopify', question: 'How much extra support does Shopify Plus include?',
     answer: 'According to Shopify’s Help Center, Plus stores get inbound phone, email and chat support, and Support can help with more custom code questions than on other plans. Shopify still does not become your developer. Checkout extensions, Shopify Functions, B2B price lists and your ERP connection are code you own, and someone has to test and update them each time Shopify changes the platform.' },
   { category: 'shopify', question: 'What happened to Shopify Scripts and script tags?',
-    answer: 'Shopify says Scripts were deprecated on 30 June 2026 and points stores to Shopify Functions instead. Separately, since 1 October 2026 Shopify’s Admin API has rejected new or edited script tags, and from 1 March 2027 Shopify stops loading script tags on storefronts. Apps must move to app embed blocks or web pixels. An app audit shows which of yours are affected.' },
+    answer: 'Scripts, the Ruby code Plus stores ran at checkout, reached deprecation on 30 June 2026, according to Shopify, which points stores to Shopify Functions instead. Separately, since 1 October 2026 Shopify’s Admin API has rejected new or edited script tags, and from 1 March 2027 Shopify stops loading script tags on storefronts. Apps must move to app embed blocks or web pixels. An app audit shows which of yours are affected.' },
 
   // ── Cost, GST and retainers ──
   { category: 'cost', question: 'How much does Shopify maintenance cost in Australia?',
@@ -515,8 +515,8 @@ export default function ShopifyMaintenanceAUPage() {
                 <div className="fact"><div className="sec">§01</div><p>
                   Shopify retires old tools on published dates. Scripts, the code Plus stores used for custom
                   discounts, shipping and payment rules at checkout, were deprecated on 30 June 2026. Shopify’s
-                  replacement is Shopify Functions. If a bundle discount or a free-shipping rule quietly stopped this
-                  year, that is the likely cause, and we rebuild it as a Function.
+                  replacement is Shopify Functions. A tiered discount that ran as a Script becomes a discount Function, and
+                  a rule that hid express shipping for bulky items becomes a delivery customisation Function.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
                   Script tags are next. Since 1 October 2026 the Admin API has refused requests to add or edit them,
@@ -594,6 +594,7 @@ export default function ShopifyMaintenanceAUPage() {
             headline={'Not sure what state your Shopify store is in?'}
             sub={'Approve a collaborator request and tell us what broke recently. The founder will come back with a written list of what is urgent, what is fragile and what is fine, with a fixed price for the urgent work.'}
             label={'Book my Shopify store review'}
+            note={'The founder replies within 24 hours.'}
           />
         </div>
 
@@ -618,7 +619,7 @@ export default function ShopifyMaintenanceAUPage() {
               will not reconcile.
             </p>
             <ul className="chg-list chg-list-1col">
-              <li><span><b>Accounting.</b> Xero, MYOB Business or Acumatica, QuickBooks Online or NetSuite, so each Shopify payout, its card fees, GST and any refunds reconcile to the bank feed in a form your bookkeeper accepts.</span></li>
+              <li><span><b>Accounting.</b> Xero, MYOB Business or MYOB Acumatica, QuickBooks Online or NetSuite, so each Shopify payout, its card fees, GST and any refunds reconcile to the bank feed in a form your bookkeeper accepts.</span></li>
               <li><span><b>Inventory and ERP.</b> Cin7 Core (formerly DEAR), Cin7 Omni, Unleashed, Odoo or NetSuite. Before touching a sync we write down which system is the master for stock, for prices and for customer records.</span></li>
               <li><span><b>Payments.</b> Shopify Payments or Stripe, plus Afterpay and Zip at checkout, tested with real orders and a refund after any change.</span></li>
               <li><span><b>Shipping.</b> Australia Post, StarTrack and Sendle, directly or through a multi-carrier app, with rules for bulky items and regional postcodes.</span></li>
