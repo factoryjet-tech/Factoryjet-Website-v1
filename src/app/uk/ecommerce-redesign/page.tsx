@@ -4,12 +4,13 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-redesign';
 const PUBLISHED = '2026-10-29';
-const UPDATED = '2026-10-29';
-const TITLE = 'Ecommerce Website Redesign Agency UK | FactoryJet';
+const UPDATED = '2026-10-31';
+const TITLE = 'Ecommerce Website Redesign Services UK | FactoryJet';
 const H1 = 'Ecommerce Website Redesign for UK Stores That Already Sell';
 
 /* Design tokens, copied by value from ../ai-agents/ai-agents.css so inline
@@ -53,6 +54,12 @@ const SRC_GOOGLE_MOVE = 'https://developers.google.com/search/docs/crawling-inde
 // 404 errors" and "If the URL still loads a valid webpage, then" the redirect
 // does not apply.
 const SRC_SHOPIFY_REDIRECTS = 'https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect';
+// web.dev, Web Vitals (read 2026-10-31): "LCP should occur within 2.5 seconds",
+// "pages should have a INP of 200 milliseconds or less", "CLS of 0.1. or less".
+const SRC_WEBVITALS = 'https://web.dev/articles/vitals';
+// Shopify.dev, JSON templates (read 2026-10-31): "Merchants can add, remove, and
+// reorder these sections using the theme editor."
+const SRC_SHOPIFY_JSON = 'https://shopify.dev/docs/storefronts/themes/architecture/templates/json-templates';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -74,8 +81,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Redesign if the platform still does what the business needs and the problem is the shop front. Move platform if you are paying developers to work around missing features every month, if the platform cannot handle your trade pricing or catalogue, or if it is near the end of support. A short review of your store usually settles the question in one call.' },
   { category: 'basics', question: 'Can you redesign a Shopify store without taking it offline?',
     answer: 'Yes. Shopify lets you build and preview a new theme while the current one stays live. We build the redesign as an unpublished theme in your own store, using your real products, and you review it on your phone before anything changes. Launch is a theme switch, plus the redirects for any URLs that changed. Shoppers see no downtime.' },
-  { category: 'basics', question: 'How should an online store look in 2026?',
-    answer: 'Fast and plain on a phone. Most shoppers decide on a small screen, so the product photo, price, delivery promise and add to basket button need to sit together near the top. Clear filters, honest stock messages and UK delivery and returns details matter more than animation. Good stores in 2026 look calm and load quickly.' },
+  { category: 'basics', question: 'How often should you redesign an online store?',
+    answer: 'There is no fixed cycle. Redesign when the evidence says so: phone conversion well below desktop in GA4, Core Web Vitals failing in PageSpeed Insights, or staff unable to edit pages without a developer. A store that passes all three can wait and spend the budget on photography and copy.' },
+  { category: 'basics', question: 'Can I redesign a WooCommerce store without moving platform?',
+    answer: 'Yes. A WooCommerce redesign is a new or reworked WordPress theme built on a staging copy of the site, so the live shop keeps trading. Products, customers and orders stay in the same database. Launch swaps the theme, and any URL that changes gets one permanent redirect. Move platform only if WooCommerce itself blocks how you sell.' },
+  { category: 'basics', question: 'Can AI redesign my ecommerce store?',
+    answer: 'AI tools can draft layouts, write first-pass product copy and suggest section orders quickly. They cannot decide which URLs to keep, check that every redirect fires once, or test a basket on a real phone. We use AI for drafts and people for the redirect map, the data and the launch checks.' },
 
   // ── SEO and rankings ──
   { category: 'rankings', question: 'Will a website redesign hurt my Google rankings?',
@@ -86,8 +97,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Shopify only follows a URL redirect when the old address returns a 404. Its own help pages say a redirect from a URL that still loads a valid page will not fire. So if an old collection or page is still published, the redirect is ignored. We unpublish or delete the old page first, then test every redirect in the map one by one.' },
   { category: 'rankings', question: 'Does a redesign help with AI search like ChatGPT and Google AI Overviews?',
     answer: 'It can. AI assistants and AI Overviews read your pages the way a search crawler does, so clear product data, collection pages that answer real buying questions, structured data and fast pages all help. A redesign is a good moment to add delivery, returns and sizing answers in plain text. We cover this alongside classic SEO in every store redesign.' },
-  { category: 'rankings', question: 'Is SEO dead now with AI?',
-    answer: 'No. AI answers still come from pages that search engines can crawl and trust. What changed is that a shopper may read a summary before they click. For a store, that rewards plain answers on product and collection pages, accurate structured data and a site that loads fast. A redesign that ignores SEO now also ignores AI search.' },
+  { category: 'rankings', question: 'What goes on a website redesign checklist?',
+    answer: 'Before design: export URLs with clicks and backlinks from Search Console and a Screaming Frog crawl, note the GA4 conversion rate by device, and run PageSpeed Insights on the top templates. Before launch: test every redirect, check each page has one H1 and its old title, and submit the new sitemap. After launch: watch 404s and clicks for a fortnight.' },
   { category: 'rankings', question: 'What should I check in Search Console after the new store goes live?',
     answer: 'Check four things in the first fortnight. Pages that return 404 errors, which usually means a missing redirect. Redirect chains, where one URL hops through two others. Clicks on your top twenty pages compared with the same days before launch. And whether the new sitemap was read. A dip of a few days is normal while Google recrawls; a slide that keeps going is not.' },
 
@@ -99,31 +110,31 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'cost', question: 'How long should an ecommerce website redesign take?',
     answer: 'A custom-theme redesign on Shopify or WooCommerce usually takes 3 to 5 weeks. Stores with subscriptions, trade pricing or a migration take 5 to 8 weeks. A headless or custom build takes 8 to 14 weeks. The things that stretch a timeline are late product photos, late copy and features added after the scope was signed, so we agree those up front.' },
   { category: 'cost', question: 'Can I redesign my store in phases to spread the cost?',
-    answer: 'Yes, and for a trading store it is often the safer route. A common order is product and collection templates first, because that is where most revenue sits, then the homepage and navigation, then content pages and the blog. Each phase is scoped, priced and signed on its own, so you can stop after any phase and still own a working store.' },
+    answer: 'Yes, and for a trading store it is often the safer route. A common order is product and collection templates first, because that is where most revenue sits, then the homepage and navigation, then content pages and the blog. You can stop after any phase and still own a working store.' },
   { category: 'cost', question: 'Is a theme refresh enough instead of a full redesign?',
     answer: 'Sometimes. If the store converts well, loads fast and only looks dated, new colours, type, photography and a tidier homepage can be enough. If shoppers struggle with filters, product pages, the basket or the mobile layout, a refresh only paints over the problem. We will tell you which one you need before you spend money on either.' },
 
   // ── Working with us ──
   { category: 'working', question: 'Can I see the redesign before I sign anything?',
-    answer: 'Yes. Working software on your own data before you sign. We set up a preview copy of your theme, unpublished, so live customers never see it. You open the preview link on your own phone, tap through a product page, the basket and checkout, and send us notes. After that, each phase is scoped, priced and signed on its own before work starts.' },
+    answer: 'Yes. We build an unpublished preview theme on your own products, so live customers never see it. You tap through a product page, the basket and checkout on your own phone and send us notes.' },
+  { category: 'working', question: 'What should I look for in a website redesign agency in the UK?',
+    answer: 'Ask four things. Will they show a working draft on your own products before you sign? Who builds and tests the redirect map? Is the price fixed per phase, in writing? Do you own the theme and code from day one? A redesign agency that cannot answer all four clearly is pricing the design and leaving the risk with you.' },
   { category: 'working', question: 'Which platforms do you redesign?',
-    answer: 'Shopify and Shopify Plus, WooCommerce, BigCommerce and Adobe Commerce (Magento), plus headless stores built on Next.js. FactoryJet is a registered Shopify Partner. If the review shows your platform is the real problem, we plan a migration instead, and the redesign happens on the new platform as part of the same project.' },
-  { category: 'working', question: 'Do you work with stores outside London?',
-    answer: 'Yes. We work with online retailers across the UK, from London and Manchester to Birmingham, Leeds, Bristol and Scotland. Redesign work runs on video calls, shared screens and a draft theme in your own store, so nobody needs to be on site. Every client gets the same senior people and the same founder involvement.' },
+    answer: 'Shopify and Shopify Plus, WooCommerce, BigCommerce and Adobe Commerce (Magento), plus headless stores built on Next.js. If the review shows your platform is the real problem, we plan a migration instead, and the redesign happens on the new platform as part of the same project.' },
   { category: 'working', question: 'Who owns the new theme and code?',
-    answer: 'You do, from day one. The theme sits in your own store and the code in a repository in your name. Apps, hosting and any AI tools can run in your own accounts at cost, with no markup from us. If you ever move to another agency, they pick up everything without asking our permission.' },
+    answer: 'You do, from day one. The theme sits in your own store and the code in a repository in your name. Apps, hosting and any AI tools can run in your own accounts at cost, with no markup.' },
   { category: 'working', question: 'What happens if something breaks after launch?',
     answer: 'Defects are fixed inside the build price for a cover period we agree before work starts. After that, support is optional: each change is quoted and approved before we do it, and there is no monthly minimum. You can book a one-off check before peak season and nothing else.' },
   { category: 'working', question: 'Who will I deal with day to day?',
-    answer: 'Senior people, with the founder, Bhavesh Barot, involved in every project. FactoryJet was founded in 2014 and has worked with more than 500 businesses, most of them in commerce, with 97% of projects delivered on time. The people who scope your redesign are the people who build it. The founder replies to new enquiries within 24 hours.' },
+    answer: 'The founder, Bhavesh Barot, is involved in every project and replies to new enquiries within 24 hours. FactoryJet was founded in 2014 and has worked with more than 500 businesses, with 97% of projects delivered on time.' },
 ];
 
 /* ─── Six signs listicle (rendered and reused in nothing else) ──────── */
 const SIGNS: { t: string; d: string }[] = [
-  { t: 'Phone shoppers leave much faster than desktop shoppers.', d: 'Compare bounce and conversion by device in your analytics. A wide gap points at the mobile layout, image weight or a cramped product page, which a redesign fixes. The platform is rarely the cause.' },
-  { t: 'Nobody dares edit the homepage.', d: 'If a banner change needs a developer or breaks the layout, the theme has been patched too many times. A clean theme with sections your team can edit solves it on the platform you already pay for.' },
-  { t: 'Filters and search cannot keep up with the catalogue.', d: 'You added ranges, sizes and colours, but collections still show one long grid. Better product data, metafields and filter design usually fix this on the platform you already have.' },
-  { t: 'Apps pile up and slow every page.', d: 'Each app adds scripts to every page. A redesign is the moment to check which apps a modern theme can replace, and removing them lifts speed without a platform move.' },
+  { t: 'Phone shoppers leave much faster than desktop shoppers.', d: 'In GA4, compare engagement rate and purchases per session by device category for the last 90 days. A wide gap points at the mobile layout, image weight or a cramped product page, which a redesign fixes. The platform is rarely the cause.' },
+  { t: 'Nobody dares edit the homepage.', d: 'If a banner change needs a developer or breaks the layout, the theme has been patched too many times. On Shopify, a theme built on JSON templates lets staff add, remove and reorder sections in the theme editor, which solves it on the platform you already pay for.' },
+  { t: 'Filters and search cannot keep up with the catalogue.', d: 'You added ranges, sizes and colours, but collections still show one long grid. Better product data, metafields (extra product fields such as fabric or fit) and filter design usually fix this on the platform you already have.' },
+  { t: 'Apps pile up and slow every page.', d: 'Each app can add scripts to every page. Run a product page through PageSpeed Insights: Google counts a page as good when, for at least 75% of visits, the largest element loads within 2.5 seconds and taps respond within 200 milliseconds. A redesign is the moment to check which apps a modern theme can replace, and removing them lifts speed without a platform move.' },
   { t: 'The brand moved on and the store did not.', d: 'New packaging, new photography, a new range, and a store that still looks like the launch version. That is a design problem, and the cheapest one to solve.' },
   { t: 'Product pages hide the answers shoppers need.', d: 'Delivery cost, returns window, sizing and stock sit in tabs or below the fold. Moving them next to the add to basket button is template work, and it also gives AI search plain answers to quote.' },
 ];
@@ -134,9 +145,26 @@ const COMPARE_ROWS: { feat: string; redesign: string; replatform: string; refres
   { feat: 'Platform', redesign: 'Stays the same', replatform: 'Changes (for example WooCommerce or Magento to Shopify)', refresh: 'Stays the same' },
   { feat: 'URLs and redirects', redesign: 'Some change, mapped one by one', replatform: 'Most change, full redirect map needed', refresh: 'Usually none change' },
   { feat: 'Customer accounts and orders', redesign: 'Untouched', replatform: 'Migrated, then checked record by record', refresh: 'Untouched' },
-  { feat: 'Typical timeline', redesign: '3 to 5 weeks on a custom theme', replatform: '5 to 8 weeks, longer for headless', refresh: 'Days to a couple of weeks' },
+  { feat: 'Typical timeline', redesign: '3 to 5 weeks on a custom theme', replatform: '5 to 8 weeks, longer for headless', refresh: 'Shorter than a redesign, quoted per job' },
   { feat: 'Risk to rankings', redesign: 'Low with a redirect map', replatform: 'Highest, needs the most care', refresh: 'Lowest' },
   { feat: 'Right when', redesign: 'The platform works and the shop front does not', replatform: 'The platform blocks how you sell', refresh: 'The store converts well but looks dated' },
+];
+
+/* Cells that are a real downside render amber; neutral cells stay plain ink. */
+const DOWNSIDE = new Set([
+  'Most change, full redirect map needed',
+  'Migrated, then checked record by record',
+  '5 to 8 weeks, longer for headless',
+  'Highest, needs the most care',
+]);
+const cellClass = (v: string) => (DOWNSIDE.has(v) ? 'partial' : undefined);
+
+/* ─── Agency vs freelancer vs theme edit ─────────────────────────────── */
+const WHO_ROWS: { feat: string; agency: string; freelancer: string; edit: string }[] = [
+  { feat: 'Who builds the redirect map', agency: 'Part of the quoted scope, tested after launch', freelancer: 'Ask, it is often left to you', edit: 'Rarely needed, URLs usually stay' },
+  { feat: 'Who owns the code', agency: 'Should be you, written into the contract', freelancer: 'Agree it in writing before work starts', edit: 'You, inside your own store' },
+  { feat: 'Cover if something breaks', agency: 'Defect cover period agreed up front', freelancer: 'Depends on one person being free', edit: 'Theme developer support, if any' },
+  { feat: 'Right when', agency: 'Templates, filters and URLs all change', freelancer: 'A small catalogue and a narrow brief', edit: 'The store works and only looks dated' },
 ];
 
 /* ─── JSON-LD. The Organization is defined once, sitewide; this page only
@@ -177,9 +205,10 @@ const jsonLd = {
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="true"]'] },
       author: {
         '@type': 'Person',
+        '@id': 'https://factoryjet.com/#bhavesh-barot',
         name: 'Bhavesh Barot',
         jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
+        url: 'https://factoryjet.com/author/bhavesh-barot',
         sameAs: [
           'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
           'https://github.com/factoryjet-tech',
@@ -205,7 +234,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description:
     'Ecommerce website redesign for UK stores that already sell. See a draft on your own products before you sign, keep your rankings with a full redirect map.',
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['ecommerce-redesign'] },
   openGraph: {
     title: TITLE,
     description:
@@ -248,12 +277,13 @@ export default function EcommerceRedesignUKPage() {
                   You have orders, customers and pages that rank. A redesign should keep all of that and fix the shop
                   front: product pages, collections, filters, the basket and the phone layout. We build the new design
                   as a draft theme inside your own store, on your real products, so you see it working before you sign.
+                  Our ecommerce website redesign services cover Shopify, WooCommerce, BigCommerce and Adobe Commerce.
                 </p>
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses since 2014</span></div>
-                  <div className="upd">Last updated<br />29 October 2026</div>
+                  <div className="who"><a href="/author/bhavesh-barot"><b>Bhavesh Barot</b></a>, Founder<br /><span>500+ businesses since 2014</span></div>
+                  <div className="upd">Last updated<br />31 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -304,7 +334,9 @@ export default function EcommerceRedesignUKPage() {
                 A <b>theme</b> is the set of templates that controls how a Shopify or WooCommerce store looks. A
                 <b> 301 redirect</b> is a permanent forwarding rule that sends an old web address, and its ranking, to a
                 new one. <b>Replatforming</b> means moving the whole store to different software, for example from
-                Magento to Shopify.
+                Magento to Shopify. A <b>handle</b> is the last part of a Shopify product or collection address.
+                <b> PageRank</b> is Google&rsquo;s name for the ranking value that links pass to a page. A <b>headless</b>{' '}
+                store keeps the platform for products and orders but runs the shop front as separate code.
               </p>
             </div>
           </div>
@@ -350,15 +382,15 @@ export default function EcommerceRedesignUKPage() {
                 <h2>Redesign without losing rankings</h2>
                 <div className="stack mt-6">
                   <p>
-                    Rankings drop after a redesign for one plain reason: an address that Google knew stops working, or
-                    stops saying what it said before. Google&rsquo;s own site move guide recommends server-side permanent
+                    Rankings drop after a redesign when an address Google knew stops working, or stops saying what it
+                    said before. Google&rsquo;s own site move guide recommends server-side permanent
                     redirects from each old URL to its new one, and says permanent redirects do not lose PageRank. So the
                     work sits in the map.
                   </p>
                   <h3>1. Redirect map, built before design starts</h3>
                   <p>
                     We export every URL with clicks, impressions or backlinks from Search Console and a full crawl of the
-                    store. Each one gets a row: keep, or redirect to the closest new page. Every redirect is one hop. A URL
+                    store with Screaming Frog. Each one gets a row: keep, or redirect to the closest new page. Every redirect is one hop. A URL
                     that forwards to another URL that forwards again wastes crawl time, so we check each destination is
                     not itself redirected.
                   </p>
@@ -382,13 +414,15 @@ export default function EcommerceRedesignUKPage() {
                   </p>
                 </div>
                 <p style={srcNote}>
-                  Sources, read on 29 October 2026:{' '}
+                  Sources, read on 29 and 31 October 2026:{' '}
                   <a href={SRC_GOOGLE_MOVE} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Google Search Central, site moves with URL changes</a>;{' '}
-                  <a href={SRC_SHOPIFY_REDIRECTS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Shopify Help Center, URL redirects</a>.
+                  <a href={SRC_SHOPIFY_REDIRECTS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Shopify Help Center, URL redirects</a>;{' '}
+                  <a href={SRC_WEBVITALS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>web.dev, Web Vitals</a>;{' '}
+                  <a href={SRC_SHOPIFY_JSON} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Shopify.dev, JSON templates</a>.
                 </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/shopify-migration/shopify-migration-redirect-map.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A woman pins cards joined by orange string in a tree shape on a cork board while a colleague holds more cards" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/uk/shopify-migration/shopify-migration-redirect-map.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A woman pins cards joined by orange string in a tree shape on a cork board while a colleague holds more cards" style={{ width: '100%', height: 'auto', aspectRatio: '3 / 2', background: T.n200, borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">Every row in the map</span>
                   <div className="scorecard-row"><div className="scorecard-metric">Old URL and its clicks</div><div className="scorecard-val" style={{ fontSize: 14 }}>Search Console</div></div>
@@ -408,10 +442,11 @@ export default function EcommerceRedesignUKPage() {
             <h2 style={{ maxWidth: 760 }}>Redesign vs replatform vs theme refresh</h2>
             <p className="lead mt-4" style={{ maxWidth: 760 }}>
               Three jobs that agencies often sell under one name. They differ in what moves, how long they take and how
-              much they put your rankings at risk. Timelines are the ranges we work to on our own projects.
+              much they put your rankings at risk. Redesign and replatform timelines are the ranges we work to on our own projects.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
-              <table className="cmp-table">
+            <p className="md:hidden mt-8" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
                     <th>Question</th>
@@ -425,8 +460,8 @@ export default function EcommerceRedesignUKPage() {
                     <tr key={r.feat}>
                       <td className="feat">{r.feat}</td>
                       <td className="fj"><span className="yes">{r.redesign}</span></td>
-                      <td><span className="partial">{r.replatform}</span></td>
-                      <td><span className="partial">{r.refresh}</span></td>
+                      <td><span className={cellClass(r.replatform)}>{r.replatform}</span></td>
+                      <td><span className={cellClass(r.refresh)}>{r.refresh}</span></td>
                     </tr>
                   ))}
                 </tbody>
@@ -437,6 +472,101 @@ export default function EcommerceRedesignUKPage() {
               consultant</a> review answers. If you sell at volume on Shopify and want more control over checkout and
               several storefronts, see <a href="/uk/shopify-plus">Shopify Plus in the UK</a>.
             </p>
+
+            <h3 className="mt-10" style={{ maxWidth: 760 }}>Redesign agency, freelancer or theme edit</h3>
+            <p className="mt-4" style={{ maxWidth: 760 }}>
+              The best choice is the one where someone is named as responsible for the redirect map and you own the
+              code. For prices, use the market ranges in the cost section below; the four rows here cover what a quote
+              often leaves out.
+            </p>
+            <p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-6" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="cmp-table" style={{ minWidth: 640 }}>
+                <thead>
+                  <tr>
+                    <th>Question</th>
+                    <th>Redesign agency</th>
+                    <th>Freelancer</th>
+                    <th>Theme edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {WHO_ROWS.map((r) => (
+                    <tr key={r.feat}>
+                      <td className="feat">{r.feat}</td>
+                      <td>{r.agency}</td>
+                      <td>{r.freelancer}</td>
+                      <td>{r.edit}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ 5b. PROCESS ═══ */}
+        <section className="sec-lg">
+          <div className="wrap">
+            <div style={{ maxWidth: 820 }}>
+              <span className="eyebrow">Step by step</span>
+              <h2>How our UK website redesign service works</h2>
+              <p className="lead mt-4">
+                Five steps, in this order, on every store. The draft comes before the contract, and the redirect map
+                comes before any design.
+              </p>
+            </div>
+            <ol className="stack mt-8" style={{ maxWidth: 900 }}>
+              <li className="card">
+                <h3 style={{ fontSize: 18 }}>1. Review the store and its numbers</h3>
+                <p className="mt-2">We read GA4 conversion by device, run the top templates through PageSpeed Insights and list the pages that earn clicks in Search Console.</p>
+              </li>
+              <li className="card">
+                <h3 style={{ fontSize: 18 }}>2. Build a draft on your own products</h3>
+                <p className="mt-2">An unpublished theme in your own store, so you test a product page and the basket on your phone before you sign.</p>
+              </li>
+              <li className="card">
+                <h3 style={{ fontSize: 18 }}>3. Agree the scope and a fixed price per phase</h3>
+                <p className="mt-2">Each phase is scoped, priced and signed on its own, in writing. Changes after that are quoted and approved per request.</p>
+              </li>
+              <li className="card">
+                <h3 style={{ fontSize: 18 }}>4. Map URLs, then build the templates</h3>
+                <p className="mt-2">The redirect map is finished before design work starts. Templates are built only once the map is signed off.</p>
+              </li>
+              <li className="card">
+                <h3 style={{ fontSize: 18 }}>5. Launch and watch for a fortnight</h3>
+                <p className="mt-2">We switch the theme, test every redirect once and check Search Console for 404s and clicks each day for two weeks.</p>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        {/* ═══ 5c. PLATFORMS ═══ */}
+        <section className="sec">
+          <div className="wrap">
+            <div style={{ maxWidth: 820 }}>
+              <span className="eyebrow">Platforms</span>
+              <h2>Platforms we redesign: Shopify, WooCommerce, BigCommerce and Adobe Commerce</h2>
+              <div className="stack mt-6">
+                <p>
+                  <b>Shopify and Shopify Plus.</b> A new theme is built unpublished beside the live one, then switched on.
+                  See our <a href="/uk/shopify-development">UK Shopify development</a> page for builds beyond the theme.
+                </p>
+                <p>
+                  <b>WooCommerce.</b> The theme is rebuilt on a staging copy of the WordPress site, then swapped on the
+                  live shop. More on our <a href="/uk/woocommerce">UK WooCommerce</a> page.
+                </p>
+                <p>
+                  <b>BigCommerce and Adobe Commerce (Magento).</b> Same order of work, with the redirect map built first.
+                  See <a href="/uk/magento">Magento in the UK</a> and <a href="/uk/bigcommerce-b2b">BigCommerce B2B</a>.
+                </p>
+                <p>
+                  <b>Headless.</b> The shop front is rebuilt in Next.js while the platform keeps products and orders. Our{' '}
+                  <a href="/uk/headless-shopify-development">headless Shopify</a> page covers when that is worth it, and{' '}
+                  <a href="/uk/ecommerce-seo">UK ecommerce SEO</a> covers rankings after launch.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -460,7 +590,7 @@ export default function EcommerceRedesignUKPage() {
                 </p>
                 <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
                   <li><b>A draft before you sign.</b> Working software on your own data: a draft theme in your own store, built on your real products and collections.</li>
-                  <li><b>A fixed price per phase.</b> Each phase is scoped, priced and signed on its own, so you can stop after any one of them.</li>
+                  <li><b>A fixed price per phase, quoted in writing.</b> You can stop after any phase.</li>
                   <li><b>You own it from day one.</b> The theme, the code and the repository are yours. Apps and hosting can run in your own accounts at cost, with no markup.</li>
                   <li><b>Defects fixed inside the build price.</b> For a cover period we agree before work starts.</li>
                   <li><b>Support is optional.</b> Each change is quoted and approved before we start, and there is no monthly minimum.</li>
@@ -471,6 +601,7 @@ export default function EcommerceRedesignUKPage() {
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">Typical timelines</span>
+                <h2 style={{ fontSize: 22, marginTop: 8, marginBottom: 8 }}>How long an ecommerce website redesign takes in the UK</h2>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Custom theme redesign</div><div className="scorecard-note">Shopify or WooCommerce</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>3 to 5 weeks</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Subscriptions, trade pricing or a migration</div><div className="scorecard-note">more templates and data to test</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>5 to 8 weeks</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Headless or custom storefront</div><div className="scorecard-note">Next.js front, platform behind it</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>8 to 14 weeks</div></div>
@@ -491,8 +622,9 @@ export default function EcommerceRedesignUKPage() {
                 after a short scoping call, for each phase on its own.
               </p>
             </div>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden', maxWidth: 900 }}>
-              <table className="cmp-table">
+            <p className="md:hidden mt-8" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch', maxWidth: 900 }}>
+              <table className="cmp-table" style={{ minWidth: 560 }}>
                 <thead>
                   <tr>
                     <th>Job</th>
@@ -504,7 +636,6 @@ export default function EcommerceRedesignUKPage() {
                   <tr><td className="feat">Ecommerce website</td><td>£5,000 to £20,000 or more</td><td>Whito, updated October 2026</td></tr>
                   <tr><td className="feat">UK website redesign, all types</td><td>£10,000 to £80,000</td><td>SpotDev, May 2026</td></tr>
                   <tr><td className="feat">Most B2B redesigns</td><td>£15,000 to £60,000</td><td>SpotDev, May 2026</td></tr>
-                  <tr><td className="feat">HubSpot platform move with no redesign</td><td>£8,000 to £18,000</td><td>SpotDev, May 2026</td></tr>
                   <tr><td className="feat">Copy, photography and SEO left out of a quote</td><td>adds 30 to 50%</td><td>Whito, updated October 2026</td></tr>
                 </tbody>
               </table>
@@ -513,7 +644,7 @@ export default function EcommerceRedesignUKPage() {
               <p>
                 Read the two sources for what they are. Whito surveys UK freelancers and agencies, so it shows the
                 lower and middle of the market. SpotDev builds on HubSpot and quotes ex VAT, so its figures describe the
-                B2B top end. A trading Shopify store with a few hundred products usually sits between the two.
+                B2B top end.
               </p>
               <p>
                 What moves the price on a store: the number of templates that change, how many products need new
@@ -534,7 +665,7 @@ export default function EcommerceRedesignUKPage() {
         {/* ═══ 9. FAQ (canonical Linear Minimal) ═══ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Ecommerce redesign questions UK store owners ask</h2>
             </div>

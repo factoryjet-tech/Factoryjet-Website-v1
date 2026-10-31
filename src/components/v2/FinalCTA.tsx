@@ -8,16 +8,12 @@ import type { ModalRegion } from '../../context/ContactModalContext';
  *
  * Dark variant design language (Path A — CSS/JSX only):
  *   - Background: multi-stop gradient (navy→charcoal→dark-purple) + dot grid.
- *     Flat bg-fj-charcoal is replaced — aurora orbs need tonal contrast to be
- *     visible (same fix as StrategicDarkSection)
- *   - Aurora orbs: blue left-center + indigo right-center + violet bottom-
- *     center. Different positioning from StrategicDarkSection so adjacent
- *     dark sections feel compositionally distinct
+ *     No orbs or glow (removed 2026-10-31, banned by CLAUDE.md).
  *   - Eyebrow: inline color '#7EB3FF' — fj-eyebrow/text-[#F05A28] is too
  *     dark on dark backgrounds. Never use fj-eyebrow class on dark sections.
  *   - Headline: clamp(1.875rem, 3.5vw, 3rem) — slightly larger than body
  *     section headlines (urgency signal) but still viewport-safe
- *   - Primary CTA: intense blue glow (button-as-light-source on dark bg)
+ *   - Primary CTA: solid fill with a 1px ring, no glow
  *   - Secondary CTA: border-white/25 ghost treatment
  *
  * Light variant: dot grid + centre bloom on cream + top shimmer separator.
@@ -65,45 +61,8 @@ export default function FinalCTA({
           backgroundSize: '28px 28px, 100% 100%',
         }}
       >
-        {/* Orange aurora, left-center */}
-        <div
-          className="pointer-events-none absolute"
-          style={{
-            left: '-10%', top: '15%',
-            width: '720px', height: '720px',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(240,90,40,0.28) 0%, transparent 65%)',
-            filter: 'blur(48px)',
-          }}
-          aria-hidden="true"
-        />
-
-        {/* Warm amber aurora, right-center */}
-        <div
-          className="pointer-events-none absolute"
-          style={{
-            right: '-8%', top: '25%',
-            width: '580px', height: '580px',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(240,90,40,0.16) 0%, transparent 65%)',
-            filter: 'blur(56px)',
-          }}
-          aria-hidden="true"
-        />
-
-        {/* Amber accent, bottom-center */}
-        <div
-          className="pointer-events-none absolute"
-          style={{
-            left: '50%', bottom: '-15%',
-            transform: 'translateX(-50%)',
-            width: '440px', height: '440px',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(240,90,40,0.12) 0%, transparent 65%)',
-            filter: 'blur(60px)',
-          }}
-          aria-hidden="true"
-        />
+        {/* The three blurred orange "aurora" orbs that sat here were removed 2026-10-31:
+            glowing orbs are on the CLAUDE.md banned list. Flat dark band plus dot grid only. */}
 
         <div className="relative mx-auto max-w-[1120px] px-6 md:px-8 text-center">
 
@@ -142,7 +101,7 @@ export default function FinalCTA({
                 label={primaryCta.label}
                 region={primaryCta.region ?? 'us'}
                 btnVariant="primary-dark"
-                style={{ boxShadow: '0 0 0 1px rgba(240,90,40,0.50), 0 8px 48px rgba(240,90,40,0.40), 0 2px 12px rgba(240,90,40,0.30)' }}
+                style={{ boxShadow: '0 0 0 1px rgba(240,90,40,0.50)' }}
               />
             ) : (
               <Link
@@ -150,7 +109,7 @@ export default function FinalCTA({
                 className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 font-fj-body text-base font-semibold text-white transition-all hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
                 style={{
                   background: '#B23E13',
-                  boxShadow: '0 0 0 1px rgba(178,62,19,0.50), 0 8px 48px rgba(178,62,19,0.40), 0 2px 12px rgba(178,62,19,0.30)',
+                  boxShadow: '0 0 0 1px rgba(178,62,19,0.50)',
                 }}
               >
                 {primaryCta.label}

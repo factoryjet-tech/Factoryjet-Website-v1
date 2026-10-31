@@ -13,17 +13,20 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_MODIFIED = '2026-10-31';
+const PAGE_PUBLISHED = '2026-10-29';
+const PAGE_MODIFIED_LABEL = new Date(`${PAGE_MODIFIED}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+const PAGE_TITLE = 'Punchout Catalog Integration for Coupa & Ariba';
 const CANONICAL_URL = 'https://factoryjet.com/b2b-ecommerce/punchout-catalog';
 
 export const metadata: Metadata = {
-  title: 'Punchout Catalog Development: cXML and OCI for B2B Stores | FactoryJet',
+  title: `${PAGE_TITLE} | FactoryJet`,
   description:
-    'Punchout catalog development for distributors and manufacturers. cXML and OCI punchout from Shopify Plus, BigCommerce B2B, Adobe Commerce or a custom store into Coupa, SAP Ariba, Jaggaer and Oracle, with contract pricing and POs into your ERP.',
+    'Punchout catalog integration for B2B suppliers. cXML and OCI from Shopify Plus, BigCommerce or Adobe Commerce into Coupa, Ariba and Jaggaer, POs into your ERP.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Punchout Catalog Development: cXML and OCI for B2B Stores | FactoryJet',
+    title: `${PAGE_TITLE} | FactoryJet`,
     description:
       'cXML and OCI punchout from your B2B store into Coupa, SAP Ariba, Jaggaer and Oracle, with contract pricing and purchase orders flowing into your ERP.',
     url: CANONICAL_URL,
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Punchout Catalog Development | FactoryJet',
+    title: `${PAGE_TITLE} | FactoryJet`,
     description: 'cXML and OCI punchout from your B2B store into Coupa, SAP Ariba, Jaggaer and Oracle, with POs into your ERP.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -52,6 +55,12 @@ const SRC_COUPA = 'https://compass.coupa.com/en-us/products/product-documentatio
 const SRC_SHOPIFY_B2B = 'https://help.shopify.com/en/manual/b2b';
 const SRC_COUPA_CART_FAIL = 'https://compass.coupa.com/en-us/products/product-documentation/supplier-resources/for-suppliers/integration-resources/purchase-orders-and-punchouts/punchout-failed-punchout-failed-to-return-a-cart';
 const SRC_KOLONELL = 'https://kolonell.com/en/blog/punchout-catalog-integration-ariba-coupa-cost-2026';
+/* Added 31 Oct 2026, each fetched that day. */
+const SRC_SAP_PUNCHOUT = 'https://learning.sap.com/courses/loading-catalogs/working-with-punchout-catalogs_e7638548-6f70-4ffb-b4af-7b5e2171f867';
+const SRC_ARIBA_STARTPAGE = 'https://support.ariba.com/item/view/124906_en';
+const SRC_AMAZON_PUNCHOUT = 'https://business.amazon.com/en/find-solutions/punchout';
+const SRC_TRADECENTRIC = 'https://tradecentric.com/';
+const SRC_SHOPIFY_PUNCHOUT_APP = 'https://apps.shopify.com/punchout-cloud';
 
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
   { key: 'basics', label: 'Punchout Basics' },
@@ -66,27 +75,29 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
  *  and the FAQPage JSON-LD below, so the schema can never drift from the page. */
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   { category: 'basics', question: 'What is a punchout catalog?', answer: 'A punchout catalog lets a buyer shop your online store from inside their own procurement system, such as Coupa or SAP Ariba. They click your company name, land on your store already logged in, see their contract prices and build a cart. The cart goes back to their system as a requisition for approval. Once it is approved, a purchase order comes back to you.' },
-  { category: 'basics', question: 'Why are our biggest customers asking us for punchout?', answer: 'Large companies send their spending through a procurement system so every purchase follows approval rules and budgets. If you are not inside that system, their buyers have to raise a manual request or pick a supplier who is. Punchout puts your catalog, your prices and your stock inside their buying process, so ordering from you is as easy as ordering from anyone else on their approved list.' },
-  { category: 'basics', question: 'What is the difference between a punchout catalog and a hosted catalog?', answer: 'A hosted catalog, also called a static catalog, is a file of items and prices you upload into the buyer\'s system. It goes stale when prices or stock change, and you have to load it again. A punchout catalog keeps the buyer on your live store, so they always see current prices, stock and product options. Many buyers accept both. Large or configurable catalogs suit punchout better.' },
-  { category: 'basics', question: 'Do we still need our normal B2B store if we add punchout?', answer: 'Yes, in most cases. Punchout serves the buyers who purchase through a procurement system. Smaller accounts, field buyers and quick reorders often still come through your trade portal, by EDI or through a sales rep. We build punchout on top of the store you already run, so every route uses the same catalog, the same contract prices and the same inventory.' },
+  { category: 'basics', question: 'Why are our biggest customers asking us for punchout?', answer: 'Large companies send their spending through a procurement system so every purchase follows approval rules and budgets. If you are not inside that system, their buyers have to raise a manual request or pick a supplier who is. Punchout puts your catalog and your live prices inside their buying process, so ordering from you is as easy as ordering from anyone else on their approved list.' },
+  { category: 'basics', question: 'What is a punchout supplier or punchout vendor?', answer: 'A punchout supplier, or punchout vendor, is a seller whose online store a buyer can open from inside their procurement system. The buyer\'s team adds you as a supplier, enters your punchout URL and credentials, and tests the round trip with you. After that, their staff see your company as a button in their buying screen. Distributors and manufacturers usually become punchout suppliers because a large customer asks them to.' },
+  { category: 'basics', question: 'What is punchout in Amazon Business?', answer: 'Amazon Business is itself a punchout supplier. Its punchout page says buyers start in their e-procurement system, punch out to Amazon Business, and route the cart back for approval. Amazon says more than 200 e-procurement systems integrate with it. Your customers may already buy from Amazon this way. A punchout catalog on your store gives your products the same place in their buying screen.' },
+  { category: 'basics', question: 'What are punchout items, and how are they different from hosted catalog items?', answer: 'Punchout items live on your own store. The buyer sees them only after punching out from their procurement system, so prices, stock and options are always current. Hosted catalog items, also called static catalog items, sit in a file you upload into the buyer\'s system. That file goes stale when prices or stock change, and you have to load it again. Many buyers accept both. Large or configurable catalogs suit punchout better.' },
+  { category: 'basics', question: 'Do we still need our normal B2B store if we add punchout?', answer: 'Yes, in most cases. Punchout serves the buyers who purchase through a procurement system. Smaller accounts, field buyers and quick reorders often still come through your trade portal, by EDI (electronic data interchange, a direct system-to-system order feed) or through a sales rep. We build punchout on top of the store you already run, so every route uses the same catalog, the same contract prices and the same inventory.' },
   { category: 'protocols', question: 'What is cXML?', answer: 'cXML, short for Commerce XML, is a shared format for sending business documents between procurement systems and suppliers. It defines the messages for a punchout session, the returned cart and the purchase order, plus later documents such as order confirmations, ship notices and invoices. Coupa, SAP Ariba and Jaggaer all use it. The specification is published at cxml.org, which listed version 1.2.071 in August 2026.' },
   { category: 'protocols', question: 'What is OCI punchout?', answer: 'OCI stands for Open Catalog Interface. It is SAP\'s own punchout method, used mostly by companies buying through SAP procurement tools. The buyer\'s system opens your store with a return address called the HOOK_URL. When the buyer finishes shopping, your store posts the cart back to that address as a set of form fields. The purchase order then usually reaches you by another route, such as email, EDI or cXML.' },
-  { category: 'protocols', question: 'Should we build cXML or OCI punchout first?', answer: 'Build the one your first customer asks for. Their supplier enablement team will tell you which procurement system they run and which method they expect. Coupa, SAP Ariba and Jaggaer customers need cXML. Customers buying through SAP\'s own procurement tools often ask for OCI. Login mapping, contract prices and the order flow into your ERP are shared by both, so the second method costs less than the first.' },
   { category: 'protocols', question: 'What is the difference between Level 1 and Level 2 punchout?', answer: 'With Level 1, the buyer clicks your company name in their procurement system and lands on your store\'s home page or a chosen category. With Level 2, your items are searchable inside the buyer\'s system, and a click takes them straight to that product on your store. Level 2 needs an item index file that stays up to date, so it takes more work. Some buyers ask for Level 2 from the start.' },
-  { category: 'protocols', question: 'Which procurement systems can you connect our store to?', answer: 'We connect B2B stores to Coupa, SAP Ariba, Jaggaer and Oracle procurement over cXML, and to SAP buying tools that use OCI. Other procurement systems that accept standard cXML or OCI follow the same pattern. Send us the supplier enablement guide your customer gave you, and we will confirm the fit, the method and the test steps before you sign anything.' },
+  { category: 'protocols', question: 'How do we set up an Ariba punchout catalog as a supplier?', answer: 'Your customer adds you as a supplier on SAP Business Network. You give them a punchout URL that answers cXML setup requests. SAP\'s training material says a Level 1 catalog needs a static index file, often a single comma-separated line, while Level 2 needs one line per item. Each setup response must return a 200 status code and a StartPage URL, per an SAP Ariba support note. Then you run the buyer\'s tests together.' },
+  { category: 'protocols', question: 'Which procurement systems can you connect our store to, and should we build cXML or OCI first?', answer: 'We connect B2B stores to Coupa, SAP Ariba, Jaggaer and Oracle procurement through their cXML punchout interfaces, and to SAP buying tools that use OCI. Build the method your first customer asks for. Their supplier enablement guide names the system and the method. Login mapping, contract prices and the order flow into your ERP are shared by both, so the second method costs less than the first.' },
   { category: 'platforms', question: 'Can Shopify Plus support punchout?', answer: 'Yes. Shopify B2B gives you companies, catalogs with pricing set per customer, and payment terms, but punchout is not part of it out of the box. We add it with a punchout connector or a custom app. That piece answers the setup request, logs the buyer into the right Shopify company, and sends the finished cart back to their procurement system in the format it expects.' },
   { category: 'platforms', question: 'Can BigCommerce B2B Edition do punchout?', answer: 'Yes, with a connector. BigCommerce B2B Edition handles company accounts, buyer roles, quotes and price lists. Punchout is added through a partner connector or custom code. We set up that layer, map each procurement login to a B2B Edition company, and make sure the returned cart carries the right part numbers, units of measure and contract prices so the purchase order matches.' },
   { category: 'platforms', question: 'Can you add punchout to Adobe Commerce (Magento)?', answer: 'Yes. Adobe Commerce has company accounts, shared catalogs and requisition lists, which map well to punchout buyers. Punchout itself comes from an extension or a custom module. We build or configure that module, connect it to shared catalogs so each buyer sees their contract prices, and test the full round trip with your customer before go-live.' },
+  { category: 'platforms', question: 'Should we use a punchout connector app or a custom build?', answer: 'A connector app is the fastest start if your platform has one and your customer\'s system is on its list. Shopify\'s app store, for example, lists punchout apps sold as monthly subscriptions. A custom build suits unusual pricing rules, an older store, or a buyer test script the app cannot pass, and you own the code. We read your customer\'s requirements first and tell you which one fits.' },
   { category: 'platforms', question: 'We run a custom or older store. Can punchout still work?', answer: 'Yes. Punchout only needs your store to accept a setup request, start a logged-in session and send a cart back in the right format. We can build that as a small service that sits beside a custom or older store. If the store is due for replacement anyway, we can plan punchout into the new build so you only pay for it once.' },
   { category: 'erp', question: 'How do punchout orders get into our ERP?', answer: 'After the buyer approves the requisition, their system sends a purchase order, usually a cXML OrderRequest. We receive it, check it against the cart that was returned, and create the sales order in your ERP, such as NetSuite, SAP Business One, Dynamics 365 Business Central, Acumatica or Odoo. Order confirmations, ship notices and invoices can flow back to the buyer the same way.' },
   { category: 'erp', question: 'How do contract prices show up for each punchout buyer?', answer: 'Each punchout login carries the buyer\'s company identity. We map that identity to the right customer account in your store, which reads contract prices from your ERP or your price lists. The buyer sees only their agreed prices and approved items. The same prices are written into the returned cart, so the purchase order matches what the buyer saw on screen.' },
-  { category: 'erp', question: 'What usually goes wrong in a punchout project?', answer: 'Small data mismatches. Units of measure are a common one: Coupa\'s own troubleshooting guide for a cart that fails to return tells admins to check that the right units of measure are enabled. Others are missing classification codes such as UNSPSC, a shared secret entered wrong, and prices that differ between the cart and the purchase order. We test each of these with the buyer before go-live.' },
+  { category: 'erp', question: 'What usually goes wrong in a punchout project?', answer: 'Small data mismatches. Units of measure are a common one: Coupa\'s own troubleshooting guide for a cart that fails to return tells admins to check that the right units of measure are enabled. Others are missing classification codes such as UNSPSC (a standard code for each type of product), a shared secret (the password the buyer\'s system sends with each request) entered wrong, and prices that differ between the cart and the purchase order. We test each of these with the buyer before go-live.' },
   { category: 'erp', question: 'Can punchout run alongside EDI?', answer: 'Yes. Many suppliers use both: punchout for shopping and the cart, and EDI for purchase orders, ship notices and invoices with customers who prefer it. We make sure both routes write to the same order and stock records in your ERP, so a punchout order and an EDI order look the same to your warehouse and your finance team.' },
-  { category: 'cost', question: 'How much does punchout catalog integration cost?', answer: 'It depends on the procurement system, the level and your ERP. As one market reference, Kolonell, a web studio that builds punchout connectors, published a range of EUR 12,000 to 35,000 excl. VAT per procurement platform on 8 October 2026, with Level 1 cXML at the low end and Level 2 at the high end. FactoryJet quotes a fixed price in writing after a short scoping call.' },
+  { category: 'cost', question: 'How much does punchout catalog integration cost?', answer: 'It depends on the procurement system, the level and your ERP. As one market reference, Kolonell, a remote web studio that builds punchout connectors, published a range of EUR 12,000 to 35,000 excl. VAT per procurement platform on 8 October 2026, with Level 1 cXML at the low end and Level 2 at the high end. That is a euro price, not a US quote. FactoryJet quotes a fixed price in writing after a short scoping call.' },
   { category: 'cost', question: 'How long does a punchout integration take?', answer: 'Kolonell\'s October 2026 guide puts one procurement platform at 6 to 12 weeks, including 2 to 4 weeks of testing with the customer. The buyer\'s supplier enablement team sets the test dates, so we agree a plan with them early. A second customer on a system you already connect to is much faster, because the connector, pricing and ERP order flow already exist.' },
-  { category: 'working', question: 'What do you need from us to scope a punchout project?', answer: 'The supplier enablement guide or punchout requirements your customer sent, the name of their procurement system, your store platform, your ERP, and how you set contract prices today. If the customer sent an RFP or a vendor onboarding pack, send that too. With those, we can tell you which method you need, what can be reused and what has to be built.' },
+  { category: 'working', question: 'What do you need from us to scope a punchout project, and will you work with our customer\'s team?', answer: 'Send the supplier enablement guide or RFP your customer sent, the name of their procurement system, your store platform, your ERP, and how you set contract prices today. With those, we tell you which method you need and what has to be built. During testing, we can join calls with your customer\'s procurement team and work through their checklist, while you keep the customer relationship and the commercial terms.' },
   { category: 'working', question: 'Can we add more customers after the first one goes live?', answer: 'Yes. Once the connector for a procurement system is built, each new customer on that system mostly needs their own credentials, a company account and a contract price list, plus a round of testing with their team. A second procurement system reuses the login mapping, pricing rules and ERP order flow from the first one.' },
-  { category: 'working', question: 'Will you work with our customer\'s procurement team directly?', answer: 'Yes, if you want us to. Punchout testing needs both sides. Their team sets up your supplier record and credentials, and we set up your store. We can join the calls, swap test files and work through every item on their checklist, while you stay in charge of the customer relationship and the commercial terms.' },
   { category: 'working', question: 'Who owns the punchout code when the project ends?', answer: 'You do. You own the code and the repository from day one. Hosting and any connector apps can run in your own accounts at cost, with no markup. Defects found after launch are fixed inside the build price for a cover period we agree before work starts. Support after that is optional, each change is quoted and approved, and there is no monthly minimum.' },
 ];
 
@@ -147,14 +158,15 @@ const WEBPAGE_SCHEMA = {
   '@type': 'WebPage',
   '@id': `${CANONICAL_URL}#webpage`,
   url: CANONICAL_URL,
-  name: 'Punchout Catalog Development: cXML and OCI for B2B Stores',
+  name: PAGE_TITLE,
   description: 'cXML and OCI punchout catalog development from B2B stores into Coupa, SAP Ariba, Jaggaer, Oracle and SAP procurement, with contract pricing and purchase orders into the ERP.',
+  datePublished: PAGE_PUBLISHED,
   dateModified: PAGE_MODIFIED,
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
     url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-    jobTitle: 'Founder & Chief Technical Architect',
+    jobTitle: 'Founder & CEO',
   },
   publisher: { '@id': 'https://factoryjet.com/#organization' },
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
@@ -189,7 +201,7 @@ const STATS = [
 
 /** The punchout round trip, as Coupa's own supplier documentation describes it. */
 const ROUND_TRIP = [
-  { t: 'Setup request', d: 'The buyer clicks your company inside their procurement system. It sends your store a PunchOutSetupRequest with who the buyer is.' },
+  { t: 'Setup request', d: 'The buyer clicks your company inside their procurement system. It sends your store a PunchOutSetupRequest, a cXML message that says who the buyer is.' },
   { t: 'Setup response', d: 'Your store checks the credentials and replies with a one-time address. The buyer lands on your store, logged in to their company account.' },
   { t: 'Shopping', d: 'The buyer searches, sees their contract prices and stock, and builds a cart on your live catalog.' },
   { t: 'Cart return', d: 'At checkout, your store sends the cart back as a PunchOutOrderMessage. Nothing is ordered yet.' },
@@ -200,11 +212,11 @@ const ROUND_TRIP = [
 const PROTOCOLS = [
   { name: 'cXML Level 1', who: 'Coupa, SAP Ariba, Jaggaer, Oracle', how: 'Buyer clicks your name, lands on your store home page or a chosen category', order: 'cXML OrderRequest' },
   { name: 'cXML Level 2', who: 'Buyers who want your items in their own search', how: 'Your items are indexed in their system; a click opens that exact product', order: 'cXML OrderRequest' },
-  { name: 'OCI', who: 'SAP procurement tools', how: 'Store opens with a HOOK_URL; cart posts back as form fields', order: 'Often email, EDI or cXML' },
+  { name: 'OCI', who: 'SAP procurement tools', how: 'Store opens with a HOOK_URL; cart posts back as form fields', order: 'Often email, EDI (a direct system-to-system order feed) or cXML' },
 ];
 
 const BUILD = [
-  { t: 'Setup and login', d: 'We answer the setup request, check the shared secret, and open a session tied to the right company account and buyer.' },
+  { t: 'Setup and login', d: 'We answer the setup request, check the shared secret (a password the buyer\'s system sends with each request), and open a session tied to the right company account and buyer.' },
   { t: 'Contract pricing per buyer', d: 'Each buyer sees the prices, items and minimums in their contract, read from your ERP or price lists.' },
   { t: 'Cart return', d: 'Carts go back with part numbers, units of measure, classification codes and prices in the format the buyer\'s system expects.' },
   { t: 'Purchase order intake', d: 'Incoming OrderRequests are checked against the returned cart, then created as sales orders in your ERP.' },
@@ -217,14 +229,20 @@ const BUILD = [
 const PLATFORMS = [
   { t: 'Shopify Plus', d: 'Shopify B2B companies and catalogs hold the buyer and their prices. We add punchout with a connector or a custom app and keep checkout rules intact.', href: '/services/shopify-plus-b2b', link: 'Shopify Plus B2B' },
   { t: 'BigCommerce B2B Edition', d: 'Company accounts, buyer roles and price lists carry over. We add the punchout layer through a partner connector or custom code.', href: '/services/bigcommerce-b2b', link: 'BigCommerce B2B' },
-  { t: 'Adobe Commerce (Magento)', d: 'Shared catalogs and company accounts map well to punchout buyers. We build or configure the punchout module and test it end to end.', href: '', link: '' },
-  { t: 'Custom or older stores', d: 'A small punchout service sits beside your store and talks to its catalog, prices and orders. Or we plan it into a rebuild.', href: '', link: '' },
+  { t: 'Adobe Commerce (Magento)', d: 'Shared catalogs and company accounts map well to punchout buyers. We build or configure the punchout module and test it end to end.', href: '/services/magento-development', link: 'Adobe Commerce development' },
+  { t: 'Custom or older stores', d: 'A small punchout service sits beside your store and reads its catalog and contract prices. Or we plan it into a rebuild.', href: '', link: '' },
 ];
 
 const SOURCED = [
   { v: '1.2.071', d: 'The cXML version listed on cxml.org in August 2026. cXML is the format Coupa, SAP Ariba and Jaggaer use for punchout, purchase orders and invoices.', src: 'cxml.org', href: SRC_CXML },
-  { v: 'EUR 12K to 35K', d: 'Market range for one procurement platform connector, excl. VAT, from Kolonell\'s 8 October 2026 guide. Level 1 cXML sits at the low end, Level 2 at the high end. A market reference, not a FactoryJet price.', src: 'Kolonell, Oct 2026', href: SRC_KOLONELL },
+  { v: 'EUR 12K to 35K', d: 'Market range for one procurement platform connector, in euros excl. VAT, from Kolonell\'s 8 October 2026 guide. Kolonell is a remote studio, so treat this as a euro reference, not a US quote. Level 1 cXML sits at the low end, Level 2 at the high end. Not a FactoryJet price.', src: 'Kolonell, Oct 2026', href: SRC_KOLONELL },
   { v: '6 to 12 weeks', d: 'Time for one procurement platform in the same guide, including 2 to 4 weeks of testing with the customer\'s team.', src: 'Kolonell, Oct 2026', href: SRC_KOLONELL },
+];
+
+const CONNECTOR_OPTIONS = [
+  { name: 'Punchout app from your platform\'s app store', example: 'Punchout Cloud on the Shopify App Store lists cXML and OCI, with Ariba, Coupa, Jaggaer and Oracle', pay: 'Monthly subscription, per the listing', fits: 'Your platform has an app and your customer\'s system is on its list', src: SRC_SHOPIFY_PUNCHOUT_APP, srcLabel: 'Shopify App Store listing' },
+  { name: 'Punchout network vendor', example: 'TradeCentric says it connects 75+ ecommerce platforms to 220+ ERP and eprocurement systems', pay: 'Quoted by the vendor', fits: 'You want a third party to run the connection for many buyers', src: SRC_TRADECENTRIC, srcLabel: 'tradecentric.com' },
+  { name: 'Custom build', example: 'A punchout service written for your store, your price rules and your ERP', pay: 'Fixed build price; hosting in your account at cost', fits: 'Unusual pricing, an older store, or a test script an app cannot pass', src: '', srcLabel: '' },
 ];
 
 const TERMS = [
@@ -253,7 +271,7 @@ export default function PunchoutCatalogPage() {
       <script id="punchout-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
       <script id="punchout-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
 
-      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+      <SiteHeader cta={{ label: 'Talk to the founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
@@ -272,19 +290,25 @@ export default function PunchoutCatalogPage() {
                   Adobe Commerce or custom store into their procurement system, with their contract prices on screen
                   and their purchase orders landing in your ERP.
                 </p>
-                <HeroInlineForm source="us_punchout_hero" region="us" submitLabel="See a draft of my store"
+                <p style={{ margin: '0 0 18px', fontFamily: 'var(--pp-mono)', fontSize: '12px', color: 'var(--pp-muted)' }}>
+                  By{' '}
+                  <a href="https://www.linkedin.com/in/bhavesh-ai-gtm-expert/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--pp-muted)', textDecoration: 'underline' }}>Bhavesh Barot</a>
+                  , Founder &amp; CEO · Updated <time dateTime={PAGE_MODIFIED}>{PAGE_MODIFIED_LABEL}</time>
+                </p>
+                <HeroInlineForm source="us_punchout_hero" region="us" submitLabel="Send my punchout brief"
                   service="Punchout Catalog Development"
-                  trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+                  trustText="Working software on your own data before you sign. Bhavesh replies within 24 hours."
                 />
               </div>
               <div className="pp-stage" role="img" aria-label="A punchout session: a buyer opens a supplier store from Coupa, sees contract prices, and returns the cart for approval.">
                 <div className="pp-store" aria-hidden="true">
-                  <div className="bar"><i /><i /><i /></div>
+                  <div className="bar"><i /><i /><i /><span style={{ marginLeft: 'auto', fontFamily: 'var(--pp-mono)', fontSize: '10px', color: 'var(--pp-muted)' }}>Example session</span></div>
                   <div className="body">
                     <div className="row"><span className="k">PunchOutSetupRequest</span><span className="v">from Coupa</span></div>
                     <div className="row"><span className="k">Buyer · Acme Facilities</span><span className="v">contract prices</span></div>
                     <div className="row win"><span className="k">Cart returned · 14 lines</span><span className="v">for approval</span></div>
                     <div className="row"><span className="k">OrderRequest · PO</span><span className="v">to ERP</span></div>
+                    <div className="row"><span className="k">ShipNotice · cXML</span><span className="v">back to buyer</span></div>
                   </div>
                 </div>
                 <span className="pp-node" style={{ top: '4%', left: '-4%' }} aria-hidden="true"><span className="d" />cXML or OCI</span>
@@ -324,8 +348,9 @@ export default function PunchoutCatalogPage() {
                     ERP.
                   </p>
                   <p>
-                    We design, build and test that link between your store, your customer&apos;s procurement system and
-                    your ERP. Then we hand it over. You own the code.
+                    Buyers and their eprocurement teams also call this punchout ecommerce, and the store they open is your
+                    punchout website. We build and test the link between that store, your customer&apos;s procurement
+                    system and your ERP. Then we hand it over. You own the code.
                   </p>
                 </div>
               </div>
@@ -355,7 +380,10 @@ export default function PunchoutCatalogPage() {
               <a href={SRC_CXML} target="_blank" rel="noopener noreferrer" style={linkStyle}>cXML specification</a>. When
               a cart fails to come back, Coupa&apos;s{' '}
               <a href={SRC_COUPA_CART_FAIL} target="_blank" rel="noopener noreferrer" style={linkStyle}>troubleshooting guide</a>{' '}
-              tells admins to check that the right units of measure are enabled.
+              tells admins to check that the right units of measure are enabled. Amazon Business sells to the same
+              buyers this way:{' '}
+              <a href={SRC_AMAZON_PUNCHOUT} target="_blank" rel="noopener noreferrer" style={linkStyle}>its punchout page</a>{' '}
+              says buyers start in their e-procurement system and route the cart back for approval.
             </p>
             <ol className="pp-bento" style={{ marginTop: '36px' }}>
               {ROUND_TRIP.map((r, i) => (
@@ -377,8 +405,9 @@ export default function PunchoutCatalogPage() {
               Your customer picks the method. Their supplier enablement guide will name the procurement system and
               the level they expect. Here is what each one means for your store.
             </p>
-            <div style={{ marginTop: '28px', overflowX: 'auto' }}>
-              <table className="pp-table">
+            <p className="md:hidden" style={{ marginTop: '20px', fontFamily: 'var(--pp-mono)', fontSize: '12px', color: 'var(--pp-muted)' }}>Swipe sideways to see every column.</p>
+            <div style={{ marginTop: '28px', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="pp-table" style={{ minWidth: '720px' }}>
                 <thead>
                   <tr><th>Method</th><th>Used by</th><th>How the buyer reaches you</th><th>How the PO arrives</th></tr>
                 </thead>
@@ -397,12 +426,57 @@ export default function PunchoutCatalogPage() {
           </div>
         </section>
 
-        {/* ── What we build ── */}
+        {/* ── Coupa and Ariba setup ── */}
         <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// supplier setup by system</p>
+            <h2 style={{ marginTop: '10px' }}>Coupa punchout and SAP Ariba punchout setup for suppliers</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
+              Each procurement system has its own supplier steps. Here is what the vendors&apos; own documentation
+              says, checked on 31 Oct 2026.
+            </p>
+            <div style={{ marginTop: '28px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '16px' }}>
+              <article className="pp-card">
+                <h3>Coupa punchout</h3>
+                <p style={{ marginTop: '10px' }}>
+                  Per{' '}
+                  <a href={SRC_COUPA} target="_blank" rel="noopener noreferrer" style={linkStyle}>Coupa&apos;s punchout ordering guide</a>,
+                  Coupa sends your store a PunchoutSetupRequest with the user&apos;s details. Your store logs them in and
+                  replies with a landing page URL. At checkout, your store sends a PunchoutOrderMessage, and the items
+                  land on the buyer&apos;s requisition. After approval, Coupa sends an OrderRequest. The same guide lists
+                  the common setup errors, such as a wrong URL, a login failure and no cart returned.
+                </p>
+              </article>
+              <article className="pp-card">
+                <h3>SAP Ariba punchout</h3>
+                <p style={{ marginTop: '10px' }}>
+                  Per{' '}
+                  <a href={SRC_SAP_PUNCHOUT} target="_blank" rel="noopener noreferrer" style={linkStyle}>SAP&apos;s training on punchout catalogs</a>,
+                  the buyer&apos;s request goes through SAP Business Network, which checks the buying company and passes it
+                  to your store. The catalog stays on your site and is not uploaded. Level 1 needs a static index file;
+                  Level 2 needs one line per item. An{' '}
+                  <a href={SRC_ARIBA_STARTPAGE} target="_blank" rel="noopener noreferrer" style={linkStyle}>SAP Ariba support note</a>{' '}
+                  says every setup response must carry a 200 status code and a StartPage URL.
+                </p>
+              </article>
+              <article className="pp-card">
+                <h3>Jaggaer, Oracle and SAP OCI</h3>
+                <p style={{ marginTop: '10px' }}>
+                  Jaggaer and Oracle customers send their own supplier guide, which names the messages and the test
+                  steps they expect. Customers on SAP&apos;s own buying tools often ask for OCI instead, where the cart
+                  goes back as form fields to a HOOK_URL. We read the guide your customer sent before we quote.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* ── What we build ── */}
+        <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// what we build</p>
             <h2 style={{ marginTop: '10px' }}>Eight parts of a punchout integration we build</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '60ch' }}>A punchout project is more than a URL. These are the pieces that make your customer&apos;s test script pass.</p>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '60ch' }}>Your customer&apos;s test script checks each of these eight pieces, not only the punchout URL.</p>
             <ul className="pp-bento n8" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(4,1fr)' }}>
               {BUILD.map((f) => (
                 <li className="pp-card" key={f.t}>
@@ -414,7 +488,7 @@ export default function PunchoutCatalogPage() {
         </section>
 
         {/* ── By platform ── */}
-        <section className="pp-sec">
+        <section className="pp-sec tint">
           <div className="pp-wrap">
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'center' }} className="pp-herogrid">
               <div style={{ borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 24px 48px -28px rgba(20,17,15,0.28)' }}>
@@ -457,16 +531,54 @@ export default function PunchoutCatalogPage() {
           </div>
         </section>
 
+        {/* ── Connector vs custom ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// connector or custom</p>
+            <h2 style={{ marginTop: '10px' }}>Punchout connector app vs custom build</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
+              There are three ways to add punchout to a store. The examples below are named from each vendor&apos;s own
+              page, checked on 31 Oct 2026.
+            </p>
+            <p className="md:hidden" style={{ marginTop: '20px', fontFamily: 'var(--pp-mono)', fontSize: '12px', color: 'var(--pp-muted)' }}>Swipe sideways to see every column.</p>
+            <div style={{ marginTop: '28px', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="pp-table" style={{ minWidth: '720px' }}>
+                <thead>
+                  <tr><th>Option</th><th>Example</th><th>How you pay</th><th>Fits when</th></tr>
+                </thead>
+                <tbody>
+                  {CONNECTOR_OPTIONS.map((r) => (
+                    <tr key={r.name}>
+                      <td className="name">{r.name}</td>
+                      <td>
+                        {r.example}
+                        {r.src ? (
+                          <>
+                            {' '}(<a href={r.src} target="_blank" rel="noopener noreferrer" style={linkStyle}>{r.srcLabel}</a>)
+                          </>
+                        ) : null}
+                      </td>
+                      <td>{r.pay}</td>
+                      <td>{r.fits}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         {/* MidPage CTA */}
         <MidPageCTA
-          headline="A customer asked for your punchout URL?"
+          headline="Find out which punchout method your customer needs"
           sub="Send us their supplier enablement guide. We will tell you which method they need, what your store already covers, and what has to be built."
           label="Talk to the founder"
         />
 
         {/* ── Send your brief ── */}
         <section className="pp-sec">
-          <div className="pp-wrap pp-narrow">
+          <div className="pp-wrap">
+            <div style={{ maxWidth: '760px' }}>
             <p className="pp-mlabel">// send us your brief or RFP</p>
             <h2 style={{ marginTop: '10px' }}>Send us your customer&apos;s brief or RFP</h2>
             <p className="pp-lead" style={{ marginTop: '12px' }}>
@@ -485,7 +597,8 @@ export default function PunchoutCatalogPage() {
               ))}
             </ol>
             <div className="rv-actions" style={{ marginTop: '24px' }}>
-              <ModalCTAButton label="Send my brief or RFP" region="us" btnVariant="primary-dark" />
+              <ModalCTAButton label="Send my punchout brief" region="us" btnVariant="primary-dark" />
+            </div>
             </div>
           </div>
         </section>
@@ -542,7 +655,7 @@ export default function PunchoutCatalogPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// how we work</p>
-            <h2 style={{ marginTop: '10px' }}>Our terms, in writing</h2>
+            <h2 style={{ marginTop: '10px' }}>Punchout project terms: fixed price per phase, no monthly minimum</h2>
             <ul className="pp-bento n5" style={{ marginTop: '36px' }}>
               {TERMS.map((t) => (
                 <li className="pp-card" key={t.t}>
@@ -557,7 +670,7 @@ export default function PunchoutCatalogPage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// select client work</p>
-            <h2 style={{ marginTop: '10px' }}>The B2B parts punchout sits on</h2>
+            <h2 style={{ marginTop: '10px' }}>B2B account pricing and ERP work that punchout builds on</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
               Punchout depends on the same pieces as any B2B store: company accounts, contract prices and orders that
               land in the ERP. Two B2B builds with that work, one live and one in progress:
@@ -591,7 +704,7 @@ export default function PunchoutCatalogPage() {
         <section className="pp-sec tint" id="final-cta">
           <div className="pp-wrap" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'start' }}>
             <div>
-              <h2 style={{ maxWidth: '22ch' }}>Get on your customer&apos;s approved supplier list.</h2>
+              <h2 style={{ maxWidth: '22ch' }}>Get on your customer&apos;s approved supplier list</h2>
               <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '52ch' }}>
                 Send us the punchout requirements your customer gave you. We will map the method, your store and your
                 ERP, show it working on your own catalog, and send a fixed proposal before any work starts.
@@ -603,9 +716,9 @@ export default function PunchoutCatalogPage() {
                   rel="noopener noreferrer"
                   style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: '13px', background: '#B23E13', padding: '14px 24px', fontSize: '15px', fontWeight: 600, color: '#fff', textDecoration: 'none' }}
                 >
-                  Talk to the Founder
+                  Talk to the founder
                 </a>
-                <ModalCTAButton label="Scope my punchout project" region="us" btnVariant="secondary-light" />
+                <ModalCTAButton label="Send my punchout brief" region="us" btnVariant="secondary-light" />
               </div>
               <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--pp-muted)' }}>
                 Related:{' '}
@@ -622,7 +735,7 @@ export default function PunchoutCatalogPage() {
               <div style={{ margin: '20px 0', borderTop: '1px solid var(--pp-line)' }} />
               {[
                 'Working draft on your own catalog before you sign',
-                'Fixed price per phase, no hourly billing surprises',
+                'Fixed price per phase, quoted in writing; changes quoted and approved per request',
                 'You own the code and the repository from day one',
                 'Decade-plus building commerce, B2B included',
               ].map((item) => (

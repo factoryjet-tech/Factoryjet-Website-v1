@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/ai-integration-services, built 2026-10-29.
@@ -24,10 +25,15 @@ import '../ai-agents/ai-agents.css';
       FAQ renders. Never add a second list of questions. */
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-integration-services';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
+const UPDATED_LABEL = '31 October 2026';
 const READ_ON = '29 October 2026';
+/* Sources added or re-read on 2026-10-31: zapier, aiBuilder, bcCopilot,
+   euAiAct (Annex III date confirmed as adopted via the AI Omnibus) and
+   cloudswitched (ranges, 12 April 2026 date and London descriptor). */
+const READ_ON_2 = '31 October 2026';
 const TITLE = 'AI Integration Services UK: Xero, Sage, ERP | FactoryJet';
-const H1 = 'AI Integration Services for UK Firms: Connecting AI to the Xero, Sage, Business Central and Odoo Systems You Already Run';
+const H1 = 'AI Integration Services for UK Firms on Xero, Sage and Business Central';
 const DESCRIPTION =
   'AI integration services for established UK firms. We connect AI to Xero, Sage, NetSuite, Business Central, Odoo and Linnworks, with UK GDPR and MTD in mind.';
 const IMG = '/images/uk/ai-development';
@@ -66,6 +72,9 @@ const SRC = {
   bcApi: { label: 'Microsoft Learn: API (v2.0) for Dynamics 365 Business Central', url: 'https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reference/v2.0/' },
   odooApi: { label: 'Odoo 18.0 documentation: External API', url: 'https://www.odoo.com/documentation/18.0/developer/reference/external_api.html' },
   cloudswitched: { label: 'Cloudswitched: AI software development cost UK 2026', url: 'https://www.cloudswitched.com/blog/ai-software-development-cost-uk-2026' },
+  zapier: { label: 'Zapier: app directory', url: 'https://zapier.com/apps' },
+  aiBuilder: { label: 'Microsoft Learn: Overview of AI Builder', url: 'https://learn.microsoft.com/en-us/ai-builder/overview' },
+  bcCopilot: { label: 'Microsoft Learn: Copilot FAQ, Business Central', url: 'https://learn.microsoft.com/en-us/dynamics365/business-central/copilot-overview' },
 } as const;
 
 type SrcKey = keyof typeof SRC;
@@ -93,9 +102,15 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'basics',
-    question: 'What is AI service integration?',
+    question: 'What are examples of AI integration?',
     answer:
-      'It is the delivery work around the model: choosing which system owns each record, building the API connections, setting what the AI may read and change, testing it on real cases and supporting it after launch. A firm that sells AI integration services does that work for you. FactoryJet designs, builds, implements and supports it, and you own the code and the accounts it runs in.',
+      'Four we scope often for UK firms. An AI reads a PDF supplier bill and drafts it in Xero with a proposed nominal code. It reads a trade customer’s emailed purchase order and drafts the sales order in Business Central or NetSuite. It sorts Amazon.co.uk buyer messages that stall an order in Linnworks. It drafts a “where is my order” reply from the ERP record and the latest Royal Mail event. A person approves each one before it posts or sends.',
+  },
+  {
+    category: 'basics',
+    question: 'Is Zapier, Power Automate or Copilot enough, or do we need a custom integration?',
+    answer:
+      'Often the tool you already license is enough. Microsoft says Copilot in Business Central comes with the licence at no extra cost, on Business Central online only. Zapier says it connects more than 10,000 apps. A custom AI integration earns its cost when one job crosses several systems, such as Linnworks, a marketplace and Xero, or needs your own approval and audit rules. The comparison table on this page sets the options side by side.',
   },
   {
     category: 'basics',
@@ -120,13 +135,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'systems',
     question: 'Can you connect AI to Xero, Sage and QuickBooks?',
     answer:
-      'Yes. Typical jobs are reading supplier invoices and proposing the nominal code and VAT rate, matching remittances to open invoices, and drafting credit-control emails from aged debt. On Sage we first confirm which product you run, because Sage 50, Sage 200 and Sage Intacct connect in different ways. Nothing posts to the ledger until a named person approves it.',
+      'Yes. Typical jobs are reading supplier invoices and proposing the nominal code (the ledger account a cost is posted to) and VAT rate, matching remittances to open invoices, and drafting credit-control emails from aged debt. On Sage we first confirm which product you run, because Sage 50, Sage 200 and Sage Intacct connect in different ways. Nothing posts to the ledger until a named person approves it.',
   },
   {
     category: 'systems',
     question: 'Can AI work with Microsoft Dynamics 365 Business Central?',
     answer:
-      'Yes. Microsoft’s documentation says its APIs are enabled by default on Business Central online and use standard REST calls, so any language that can call REST can connect. It also says the standard APIs cannot be extended with extra fields, so a custom field means a custom API page. We check your extensions on the scoping call for that reason. Read on 29 October 2026.',
+      'Yes. Microsoft’s documentation says its APIs are enabled by default on Business Central online and use standard REST calls (the common way software asks a web service for data), so any language that can call REST can connect. It also says the standard APIs cannot be extended with extra fields, so a custom field means a custom API page. We check your extensions on the scoping call for that reason. Read on 29 October 2026.',
   },
   {
     category: 'systems',
@@ -148,6 +163,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'systems',
+    question: 'How do you integrate an AI agent with our ERP?',
+    answer:
+      'Through the ERP’s own API, under a dedicated user or role with only the permissions the job needs. The agent reads items, prices and open orders, and writes drafts, not posted documents. On Business Central that means its REST APIs. On Odoo it needs a Custom plan. On NetSuite we agree roles with your administrator. Every action lands in an audit log. In this kind of AI systems integration the ERP stays the record owner, and the agent only proposes.',
+  },
+  {
+    category: 'systems',
     question: 'Can AI read payment data from Stripe, GoCardless, Klarna or Clearpay?',
     answer:
       'Yes, for reconciliation and follow-up rather than for taking payments. Examples: explaining why a GoCardless Direct Debit failed and drafting the customer note, or splitting a Klarna or Clearpay settlement into the orders inside it so the books match the bank line. The AI reads payout and transaction records. Card numbers and bank details stay with the payment provider.',
@@ -157,7 +178,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'rules',
     question: 'Does UK GDPR allow AI to make decisions about customers?',
     answer:
-      'Within limits. GOV.UK says the Data (Use and Access) Act 2025 replaces Article 22 of the UK GDPR with Articles 22A to 22D once that section is commenced, allowing solely automated decisions in wider circumstances if safeguards are in place. Check the ICO’s current position before you rely on it. The safeguards include telling people about significant decisions, letting them challenge one and letting them get human intervention. We design approval steps in from the start. Your data protection lead signs off the use.',
+      'Within limits. GOV.UK says the Data (Use and Access) Act 2025 replaces Article 22 of the UK GDPR with Articles 22A to 22D once that section is commenced, allowing solely automated decisions in wider circumstances if safeguards are in place. The safeguards include telling people about significant decisions, letting them challenge one and letting them get human intervention. We design approval steps in from the start. Your data protection lead signs off the use.',
   },
   {
     category: 'rules',
@@ -175,13 +196,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'rules',
     question: 'Does the EU AI Act apply to a UK company?',
     answer:
-      'It can. Article 2 of the Act covers providers placing AI systems on the EU market whether they are based in the EU or in a third country, and providers and deployers outside the EU where the system’s output is used in the EU. A UK firm selling into Germany or Ireland with AI facing those customers should check its position. Take legal advice on your own case.',
+      'It can. Article 2 of the Act covers providers placing AI systems on the EU market, wherever they are based. It also covers providers and deployers (firms that use an AI system in their work) outside the EU when the system’s output is used in the EU. A UK firm selling into Germany or Ireland with AI facing those customers should check its position. Take legal advice on your own case.',
   },
   {
     category: 'rules',
     question: 'What are the key EU AI Act dates for 2026 and 2027?',
     answer:
-      'The European Commission’s page says the Act entered into force on 1 August 2024, prohibited practices and AI literacy rules applied from 2 February 2025, and general-purpose AI obligations from 2 August 2025. It became applicable on 2 August 2026 with exceptions. Rules for high-risk systems listed in Annex III were extended to 2 December 2027. Read on 29 October 2026.',
+      'The European Commission’s page says the Act entered into force on 1 August 2024, prohibited practices and AI literacy rules applied from 2 February 2025, and general-purpose AI obligations from 2 August 2025. It became applicable on 2 August 2026 with exceptions. Rules for the high-risk uses listed in Annex III, such as hiring and credit scoring, were extended to 2 December 2027 by the AI Omnibus, which entered into force on 27 July 2026. Read on 31 October 2026.',
   },
   {
     category: 'rules',
@@ -194,7 +215,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'cost',
     question: 'How much does AI integration cost in the UK?',
     answer:
-      'Market figures vary with the systems involved. Cloudswitched, a London IT firm, published these integration ranges in April 2026: £2,000 to £5,000 for one modern API, £8,000 to £25,000 across several SaaS platforms, £15,000 to £40,000 per legacy or on-premises system, and £25,000 to £80,000 for custom middleware. Its page does not say whether VAT is included. These are market figures. FactoryJet quotes a fixed price in writing after scoping.',
+      'Market figures vary with the systems involved. Cloudswitched, a London-based managed IT services provider, published these integration ranges on 12 April 2026: £2,000 to £5,000 for one modern API, £8,000 to £25,000 across several SaaS platforms, £15,000 to £40,000 per legacy or on-premises system, and £25,000 to £80,000 for custom middleware. Its page does not say whether VAT is included. These are market figures. FactoryJet quotes a fixed price in writing after scoping.',
   },
   {
     category: 'cost',
@@ -211,9 +232,15 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'working',
-    question: 'We have a written brief or an RFP. Can we send it?',
+    question: 'Can we send a written brief or tender document before a call?',
     answer:
-      'Please do. Name the systems involved, with versions and editions (Sage 200 or Intacct, Business Central online or on-premises), rough monthly volumes, who approves changes, and any procurement or security questionnaire. You can attach the brief to the form on this page. Bhavesh replies within one business day with questions or a call slot.',
+      'Yes. Name the systems involved, with versions and editions (Sage 200 or Intacct, Business Central online or on-premises), rough monthly volumes, who approves changes, and any procurement or security questionnaire. Email the file to connect@factoryjet.com, or use the Send my brief button on this page. Bhavesh replies within 24 hours with questions or a call slot.',
+  },
+  {
+    category: 'working',
+    question: 'How do we choose an AI integration company or specialist?',
+    answer:
+      'Check five things before you sign. They show working software on your own data first. Each phase has a fixed price, quoted in writing. You own the code and the repository. The AI and hosting accounts can sit in your name, at cost. A person approves anything that posts to the ledger or messages a customer. An AI integration specialist who will not agree to these is asking you to carry the risk.',
   },
   {
     category: 'working',
@@ -329,7 +356,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-US': 'https://factoryjet.com/services/ai-integration-services', 'en-GB': CANONICAL, 'x-default': 'https://factoryjet.com/services/ai-integration-services' } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['ai-integration-services'] },
   openGraph: {
     title: TITLE,
     description:
@@ -339,6 +366,12 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     type: 'website',
     images: [{ url: `${IMG}/ai-development-og.webp`, width: 1200, height: 630, alt: 'A FactoryJet developer and a business owner reviewing an internal AI tool on a large monitor' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [`${IMG}/ai-development-og.webp`],
   },
   robots: { index: true, follow: true },
 };
@@ -386,7 +419,7 @@ export default function AiIntegrationServicesUKPage() {
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  Your firm already runs on Xero or Sage, an ERP such as NetSuite, Business Central or Odoo, and an
+                  We connect AI to the Xero, Sage, Business Central and Odoo systems you already run. Your firm runs on Xero or Sage, an ERP such as NetSuite, Business Central or Odoo, and an
                   order system such as Linnworks or Brightpearl. Staff still retype between them. We connect AI to
                   those systems so it reads the real record, proposes the next step and waits for a named person to
                   approve it. You see it working on your own data before you sign, and you own what we build.
@@ -394,19 +427,19 @@ export default function AiIntegrationServicesUKPage() {
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="who"><a href="/about" style={{ color: T.ink, textDecoration: 'underline' }}><b>Bhavesh Barot</b></a>, Founder and CEO of FactoryJet<br /><span>500+ businesses served since 2014</span></div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
                   <HeroInlineForm region="uk" source="uk_ai_integration_services_hero" service="AI Integration Services" submitLabel="See a demo on my data" />
                 </div>
                 <p style={{ fontSize: 13, marginTop: 10, maxWidth: 560 }}>
-                  Working software on your own data before you sign. Founder replies within one business day.
+                  Working software on your own data before you sign. Founder replies within 24 hours.
                 </p>
               </div>
 
-              <div className="card card-top-orange">
+              <div className="card card-top-orange" style={{ position: 'sticky', top: 96, alignSelf: 'start' }}>
                 <span className="eyebrow">Where AI meets your systems</span>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Accounts</div><div className="scorecard-note">Xero, Sage 50, 200 and Intacct, QuickBooks UK</div></div>
@@ -505,7 +538,8 @@ export default function AiIntegrationServicesUKPage() {
                 </div>
               </div>
             </div>
-            <div className="card mt-10" tabIndex={0} role="region" aria-label="UK systems and first AI jobs" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 860 }} data-columns={4}>
+            <p className="md:hidden" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400, marginTop: 24 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-10" tabIndex={0} role="region" aria-label="UK systems and first AI jobs" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 860 }} data-columns={4}>
                 <thead>
                   <tr>
                     <th>System family</th>
@@ -544,11 +578,11 @@ export default function AiIntegrationServicesUKPage() {
             <ul className="col-2 mt-10">
               <li className="svc-card">
                 <h3>Supplier bills into Xero or Sage</h3>
-                <p className="mt-4">A PDF bill arrives by email. The AI reads supplier, lines and VAT, finds the matching purchase order, proposes the nominal code and tax rate, and parks a draft bill. Your bookkeeper approves or corrects it, and the correction is logged. See also <a href="/uk/accounts-payable-automation" style={inlineLink}>accounts payable automation</a>.</p>
+                <p className="mt-4">A PDF bill arrives by email. The AI reads supplier, lines and VAT, finds the matching purchase order, proposes the nominal code and tax rate, and parks a draft bill. Your bookkeeper approves or corrects it, and the correction is logged. See also <a href="/uk/accounts-payable-automation" style={inlineLink}>accounts payable automation</a> and, for reading bills and forms of every kind, <a href="/uk/document-intake-ai-agents" style={inlineLink}>document intake AI agents</a>.</p>
               </li>
               <li className="svc-card">
                 <h3>Trade orders into Business Central or NetSuite</h3>
-                <p className="mt-4">Trade customers still email purchase orders as PDFs or spreadsheets. The AI reads the customer, part numbers and quantities, checks them against item records and the account’s price list, and drafts the sales order. Mismatches, such as a discontinued part, are flagged for the sales office instead of guessed.</p>
+                <p className="mt-4">Trade customers still email purchase orders as PDFs or spreadsheets. The AI reads the customer, part numbers and quantities, checks them against item records and the account’s price list, and drafts the sales order. Mismatches, such as a discontinued part, are flagged for the sales office instead of guessed. More on this job: <a href="/uk/sales-order-automation-ai-agents" style={inlineLink}>sales order automation AI agents</a>.</p>
               </li>
               <li className="svc-card">
                 <h3>Marketplace exceptions in Linnworks</h3>
@@ -556,9 +590,59 @@ export default function AiIntegrationServicesUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Customer answers from live order data</h3>
-                <p className="mt-4">When a customer asks where an order is, the AI reads the order in your ERP and the latest Royal Mail, DPD or Evri tracking event, then drafts a reply your service team sends. Answers come from your records, so nothing is invented. See our <a href="/uk/ai-customer-service" style={inlineLink}>AI customer service page</a> for the helpdesk side.</p>
+                <p className="mt-4">When a customer asks where an order is, the AI reads the order in your ERP and the latest Royal Mail, DPD or Evri tracking event, then drafts a reply from those records. A person on your service team checks the reply before it sends. See our <a href="/uk/ai-customer-service" style={inlineLink}>AI customer service page</a> for the helpdesk side.</p>
               </li>
             </ul>
+          </div>
+        </section>
+
+        {/* 5b. ALTERNATIVES COMPARISON (vendor facts read on 2026-10-31) */}
+        <section className="sec-lg dot-grid" id="alternatives">
+          <div className="wrap">
+            <div style={{ maxWidth: 780 }}>
+              <span className="eyebrow">Before you buy a build</span>
+              <h2>AI integration vs Zapier, Power Automate and built-in Copilot</h2>
+              <p className="lead mt-4">
+                Start with what you already license. If a Zapier workflow or Copilot in Business Central does the
+                job, use it and keep your money. A custom build earns its cost when one job crosses several systems
+                or needs approval rules of your own.
+              </p>
+            </div>
+            <p className="md:hidden" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400, marginTop: 24 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-10" tabIndex={0} role="region" aria-label="AI integration options compared" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="cmp-table" style={{ minWidth: 760 }} data-columns={3}>
+                <thead>
+                  <tr>
+                    <th>Option</th>
+                    <th>What the vendor says it does</th>
+                    <th className="fj">Where it stops</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="feat">Zapier</td>
+                    <td>Zapier says it connects more than 10,000 apps, so a trigger in one app can start a step in another.</td>
+                    <td className="fj">Rules that span many records, such as matching one remittance to several Xero invoices, get hard to hold in one workflow.</td>
+                  </tr>
+                  <tr>
+                    <td className="feat">Power Automate with AI Builder</td>
+                    <td>Microsoft calls AI Builder a Power Platform feature with prebuilt and custom AI models, used in Power Automate flows such as document processing.</td>
+                    <td className="fj">A good fit inside Microsoft 365. Microsoft prices AI Builder through licences and credits, so check the cost at your volume.</td>
+                  </tr>
+                  <tr>
+                    <td className="feat">Copilot in Business Central</td>
+                    <td>Microsoft says it is included with the Business Central licence at no extra cost, runs on Business Central online only, and cannot read more data than the user can.</td>
+                    <td className="fj">It works inside Business Central. It is not available on-premises, and a job that also touches Linnworks or a marketplace needs a connection built.</td>
+                  </tr>
+                  <tr>
+                    <td className="feat">Custom AI integration</td>
+                    <td>An AI model wired to each system’s own API, with record owners agreed in writing, an approval step and an audit log.</td>
+                    <td className="fj">Costs more up front than a tool you already pay for. Market ranges from a London firm are in the FAQ below.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <Sources ids={['zapier', 'aiBuilder', 'bcCopilot']} on={READ_ON_2} />
           </div>
         </section>
 
@@ -573,9 +657,10 @@ export default function AiIntegrationServicesUKPage() {
                   <p>
                     <b>UK GDPR and the Data (Use and Access) Act 2025.</b> GOV.UK says the Act received Royal Assent on
                     19 June 2025 and that most of its Part 5 data protection changes came into force on 5 February
-                    2026. Its factsheet says the Act replaces Article 22 of the UK GDPR with Articles 22A to 22D once commenced, allowing
-                    solely automated decisions in wider circumstances where safeguards exist: telling people about
-                    significant decisions, letting them challenge them, and letting them get human intervention.
+                    2026. In plain terms, once this part applies, firms may let software make some decisions about
+                    people on its own in more cases, as long as safeguards are in place. Its factsheet says the Act replaces Article 22 of
+                    the UK GDPR with Articles 22A to 22D once commenced. The safeguards are telling people about
+                    significant decisions, letting them challenge one, and letting them get human intervention.
                   </p>
                   <p>
                     The ICO says its guidance on AI and data protection is under review because of the Act. We design
@@ -589,20 +674,22 @@ export default function AiIntegrationServicesUKPage() {
                     posting rules.
                   </p>
                   <p>
-                    <b>The EU AI Act, if you sell into the EU.</b> Article 2 covers providers placing AI systems on the
-                    EU market wherever they are established, and providers and deployers in a third country where the
-                    system’s output is used in the EU. The European Commission says the Act became applicable on 2
-                    August 2026 with exceptions, and that Annex III high-risk rules were extended to 2 December 2027.
+                    <b>The EU AI Act, if you sell into the EU.</b> If EU customers see your AI’s output, the Act can
+                    apply to you. Article 2 covers providers placing AI systems on the EU market, wherever they are
+                    based. It also covers providers and deployers (firms that use an AI system in their work) outside
+                    the EU when the system’s output is used in the EU. The European Commission says the Act became
+                    applicable on 2 August 2026 with exceptions. Rules for the high-risk uses listed in Annex III,
+                    such as hiring and credit scoring, were extended to 2 December 2027 by the AI Omnibus.
                   </p>
                 </div>
-                <Sources ids={['duaaCommence', 'duaaFactsheet', 'icoAi', 'vatNotice', 'euArticle2', 'euAiAct']} />
+                <Sources ids={['duaaCommence', 'duaaFactsheet', 'icoAi', 'vatNotice', 'euArticle2', 'euAiAct']} on="29 and 31 October 2026" />
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">What each side owns</span>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Approval steps and audit log</div><div className="scorecard-note">who approved what, and when</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>We build</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Fields sent to the model</div><div className="scorecard-note">only what the job needs</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>We build</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Posting rules and VAT codes</div><div className="scorecard-note">signed before the build</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Accountant</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Lawful basis and DPIA</div><div className="scorecard-note">data protection impact assessment</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Your DPO</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Lawful basis and DPIA</div><div className="scorecard-note">data protection impact assessment, owned by your data protection officer (DPO)</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Your DPO</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">EU AI Act position</div><div className="scorecard-note">if EU customers see the output</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Your lawyer</div></div>
               </div>
             </div>
@@ -635,8 +722,10 @@ export default function AiIntegrationServicesUKPage() {
                     staging. Read the <a href="/case-studies/sow-easy-distributor-portal" style={inlineLink}>Sow Easy case study</a>.
                   </p>
                   <p>
-                    The Sow Easy build is system integration work: deciding which system owns each record and connecting
-                    the rest to it. That groundwork is what an AI integration sits on.
+                    The Sow Easy build is <a href="/uk/ecommerce-erp-integration" style={inlineLink}>system integration work</a>:
+                    deciding which system owns each record and connecting the rest to it. That groundwork is what an
+                    AI integration sits on, and it is the same discipline an AI integration company has to get right
+                    before any model reads a record.
                   </p>
                 </div>
               </div>
@@ -669,12 +758,12 @@ export default function AiIntegrationServicesUKPage() {
             <ol className="stack mt-10" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Pick one job and its measure', d: 'One job a person does between two systems, such as coding supplier bills, with a measure everyone accepts: time per bill or bills waiting at month end.' },
-                { n: '02', t: 'Name an owner for every record', d: 'Supplier, item, price, stock, order and payment each get one home. Where Sage and Linnworks both hold stock, the map says which wins. Both sides sign the one-page map.' },
+                { n: '02', t: 'One owner for every record', d: 'Supplier, item, price, stock, order and payment each get one home. Where Sage and Linnworks both hold stock, the map says which wins. Both sides sign the one-page map.' },
                 { n: '03', t: 'Check access on each system', d: 'Edition, plan and API access: Sage product, Business Central online or on-premises, Odoo plan, marketplace seller permissions. Anything that blocks a direct link surfaces here.' },
-                { n: '04', t: 'Demo on your own data', d: 'A test copy of the link runs a sample of your real past cases. You see the AI’s proposal beside what your team did, and decide whether to go on.' },
+                { n: '04', t: 'A demo on your own data', d: 'A test copy of the link runs a sample of your real past cases. You see the AI’s proposal beside what your team did, and decide whether to go on.' },
                 { n: '05', t: 'Build with approval steps in place', d: 'Narrow permissions, a person’s approval in front of every posting or customer message, an audit log, and only the fields the job needs sent to the model.' },
                 { n: '06', t: 'Test the awkward cases', d: 'Credit notes, part deliveries, zero-rated lines, a discontinued part, a marketplace return and an order in euros go through before any live record is touched.' },
-                { n: '07', t: 'Go live and stay on', d: 'We watch the first weeks of live proposals with your team. Defects are fixed inside the build price for the agreed cover period, and further support is optional.' },
+                { n: '07', t: 'Live, with us watching', d: 'We watch the first weeks of live proposals with your team. Defects are fixed inside the build price for the agreed cover period, and further support is optional.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
@@ -694,10 +783,11 @@ export default function AiIntegrationServicesUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">Send a brief</span>
-                <h2>Have a brief or an RFP? Send it, and we reply with questions</h2>
+                <p style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 'clamp(1.5rem,3vw,2.25rem)', lineHeight: 1.15, letterSpacing: '-0.03em', color: T.ink, marginTop: 8 }}>Have a brief or an RFP? Send it, and we reply with questions</p>
                 <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Written briefs get faster, sharper answers. Attach yours to the form at the top of this page, or
-                  send the five points on the right in a few lines. Procurement and security questionnaires are
+                  Written briefs get faster, sharper answers. Email yours to{' '}
+                  <a href="mailto:connect@factoryjet.com" style={inlineLink}>connect@factoryjet.com</a>, or send the
+                  five points on the right in a few lines. Procurement and security questionnaires are
                   welcome.
                 </p>
                 <p className="mt-6" style={{ maxWidth: 560 }}>
@@ -715,7 +805,7 @@ export default function AiIntegrationServicesUKPage() {
                 <div className="scorecard-row"><div><div className="scorecard-metric">The job and who does it today</div><div className="scorecard-note">and roughly how many a month</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>2</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Who approves postings</div><div className="scorecard-note">finance lead or accountant</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>3</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Where your customers are</div><div className="scorecard-note">UK only, or EU as well</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>4</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Your deadline</div><div className="scorecard-note">year end or a system change</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>5</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Your deadline</div><div className="scorecard-note">year end or a system change</div></div><div className="scorecard-val" style={{ color: T.small, fontSize: 14 }}>5</div></div>
               </div>
             </div>
           </div>
@@ -726,11 +816,16 @@ export default function AiIntegrationServicesUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">Related work</span>
-              <h2>Where AI integration sits among our UK services</h2>
+              <h2>AI integration compared with AI development, AI agents and AI consulting</h2>
               <p className="lead mt-4">
                 Need new AI software rather than a connection? See <a href="/uk/ai-development" style={inlineLink}>AI development in the UK</a>.
-                Want AI that takes actions across systems within rules you set? See <a href="/uk/ai-agents" style={inlineLink}>UK AI agents</a>.
-                Not sure which job to start with? Our <a href="/uk/ai-consulting" style={inlineLink}>UK AI consultancy</a> runs
+                Want AI that takes actions across systems within rules you set? See <a href="/uk/ai-agents" style={inlineLink}>UK AI agents</a>,
+                with pages for <a href="/uk/erp-ai-agents" style={inlineLink}>ERP AI agents</a>,{' '}
+                <a href="/uk/netsuite-ai-agents" style={inlineLink}>NetSuite AI agents</a> and{' '}
+                <a href="/uk/odoo-ai-agents" style={inlineLink}>Odoo AI agents</a>. Workflow automation for operations
+                teams is covered on <a href="/uk/ai-automation" style={inlineLink}>AI automation</a>, and chasing what
+                customers owe on <a href="/uk/accounts-receivable-automation" style={inlineLink}>accounts receivable automation</a>.
+                Not sure which job to start with? Our <a href="/uk/ai-consulting" style={inlineLink}>AI consulting service for UK firms</a> runs
                 the readiness review. Selling online to trade buyers? See <a href="/uk/b2b-ecommerce" style={inlineLink}>B2B ecommerce</a>,
                 and for the books behind a Shopify store, <a href="/uk/shopify-xero-integration" style={inlineLink}>Shopify Xero integration</a>.
                 US buyers can read our <a href="/services/ai-integration-services" style={inlineLink}>AI integration services</a> page.
@@ -744,10 +839,10 @@ export default function AiIntegrationServicesUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">Method</span>
-              <h2>Sources, read on {READ_ON}</h2>
+              <h2>Sources, read on {READ_ON} and {READ_ON_2}</h2>
               <p className="lead mt-4">
-                Every law, date, platform fact and market price on this page was read on the pages below on that
-                day. Rules and plans change, so open the linked page before you act on one.
+                Every law, date, platform fact and market price on this page was read on the pages below on those
+                days. Rules and plans change, so open the linked page before you act on one.
               </p>
             </div>
             <ul className="col-2 mt-8" style={{ gap: 10 }}>
@@ -763,7 +858,7 @@ export default function AiIntegrationServicesUKPage() {
         {/* 12. FAQ */}
         <section className="sec-lg dot-grid" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>AI integration questions from UK finance, operations and IT leads</h2>
             </div>
@@ -779,8 +874,8 @@ export default function AiIntegrationServicesUKPage() {
                   ))}
                 </nav>
                 <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Ask the founder a question" region="uk" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Bhavesh replies within one business day.</p>
+                  <ModalCTAButton label="Send my brief" region="uk" modalVariant="default" btnVariant="secondary-light" />
+                  <p>Bhavesh replies within 24 hours.</p>
                 </div>
               </aside>
 
@@ -806,7 +901,6 @@ export default function AiIntegrationServicesUKPage() {
                 ))}
               </div>
             </div>
-            <Sources ids={['cloudswitched', 'duaaCommence', 'duaaFactsheet', 'icoAi', 'vatNotice', 'euArticle2', 'euAiAct', 'bcApi', 'odooApi']} />
           </div>
         </section>
 
@@ -814,15 +908,15 @@ export default function AiIntegrationServicesUKPage() {
         <section className="dark-sec">
           <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
             <span className="eyebrow">Next step</span>
-            <h2>Stop retyping between Sage, your ERP and your order system</h2>
+            <p style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 'clamp(1.5rem,3vw,2.25rem)', lineHeight: 1.15, letterSpacing: '-0.03em', color: '#fff', marginTop: 8 }}>Stop retyping between Sage, your ERP and your order system</p>
             <p className="mt-4">
-              Send your name and work email, or your brief. Bhavesh replies within one business day to set up a short
+              Send your name and work email, or your brief. Bhavesh replies within 24 hours to set up a short
               call about your systems and the job you want AI to take on. You leave the call knowing whether it fits,
               and what the first phase would include.
             </p>
             <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/contact" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Contact us</a>
+              <a className="btn btn-outline" href="/contact" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Send my brief</a>
             </div>
           </div>
         </section>

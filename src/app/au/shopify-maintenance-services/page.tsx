@@ -8,16 +8,17 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/shopify-maintenance-services';
-const UPDATED = '2026-10-29';
-const TITLE = 'Shopify Maintenance & Support Australia | Retainers | FactoryJet';
+const UPDATED = '2026-10-31';
+const TITLE = 'Shopify Maintenance & Support Australia | FactoryJet';
 const H1 = 'Shopify Maintenance and Support for Australian Stores';
 const DESCRIPTION =
-  'Shopify maintenance and support for established Australian stores: theme and app updates, Xero, MYOB and Cin7 syncs, Plus checkout, peak-season testing. Retainers optional.';
+  'Shopify maintenance and support for Australian stores: tested theme and app updates, Xero, MYOB and Cin7 syncs, Plus checkout, peak testing. No monthly minimum.';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -108,7 +109,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Cost, GST and retainers ──
   { category: 'cost', question: 'How much does Shopify maintenance cost in Australia?',
-    answer: 'It depends on how much your store changes and how many systems it connects to, not on page count. The main drivers are custom theme code, the number of apps, integrations such as Xero, MYOB, Cin7 or a 3PL, Shopify Plus features and peak trading. FactoryJet quotes support as a fixed price in writing after a short review of your store. Shopify’s own plan fees are listed in AUD on its Australian pricing page.',
+    answer: 'Cost follows how much your store changes and how many systems it connects to. Page count barely moves it. The main drivers are custom theme code, the number of apps, integrations such as Xero, MYOB, Cin7 or a 3PL, Shopify Plus features and peak trading. FactoryJet quotes support as a fixed price in writing after a short review of your store. Shopify’s own plan fees are listed in AUD on its Australian pricing page.',
     links: [{ href: '/blog/shopify-cost-australia-2026', label: 'Shopify cost in Australia guide' }] },
   { category: 'cost', question: 'Do you quote in AUD, and how is GST shown?',
     answer: 'Every quote is in Australian dollars and states on its face how GST is treated, so your finance team can compare it with other quotes line for line. Shopify’s plan fees, app subscriptions, Shopify Payments fees and Afterpay or Zip merchant fees are billed to you by those providers directly. They are never bundled into our quote or marked up.' },
@@ -118,12 +119,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Not automatically. A retainer suits stores with steady change: weekly campaign pages, frequent product drops, several integrations. A store that changes twice a quarter often spends less paying per job. Before signing any retainer, ask what happens to unused hours and how urgent faults are handled outside them. We tell you which model fits after reading the last six months of changes in your store.' },
 
   // ── Choosing a support partner ──
-  { category: 'choose', question: 'Does a support partner need to be a registered Shopify Partner?',
-    answer: 'For store access, yes: collaborator accounts are open only to Shopify Partners, and they let a developer work in your store without anyone sharing a password. Partner status shows registration, not quality, so also ask to see live stores they support, who will do the work, and how they test before publishing. FactoryJet is a registered Shopify Partner, and we will walk you through recent Shopify work on a call.' },
+  { category: 'choose', question: 'How do we compare Shopify agencies and Shopify experts in Australia?',
+    answer: 'Ask each one the same five things. Which live stores do they look after, and who does the work? How do they get into your store? A collaborator request is right, an owner login is not. How do they test, and do they use an unpublished theme copy and real test orders? What happens to unused retainer hours? And how fast does a named person reply when checkout fails on a Saturday? Write the answers side by side.' },
   { category: 'choose', question: 'Freelancer, agency or in-house: who should support our Shopify store?',
-    answer: 'Pick a freelancer when the store has few integrations and the work comes in small, clearly described pieces. Pick an agency when orders flow into Xero, MYOB, Cin7 or a 3PL, because one fix touches several systems and someone must cover holidays and sick days. In-house makes sense when the store changes every week and you already have a technical lead. Many established Australian brands pair one internal person with an agency.' },
+    answer: 'Pick a freelancer when the store has few integrations and the work comes in small, clearly described pieces. Pick a Shopify agency when orders flow into Xero, MYOB, Cin7 or a 3PL, because one fix touches several systems and someone must cover holidays and sick days. In-house makes sense when the store changes every week and you already have a technical lead. Many established Australian brands pair one internal person with an agency.' },
   { category: 'choose', question: 'Can you take over a Shopify store another agency built?',
-    answer: 'Yes, and most support work starts that way. The first job is reading what the last team left: theme edits, app settings, connector logins and any private apps. You get a written list sorted into urgent, fragile and healthy. The usual finding is a sound store carrying a Xero or 3PL connector that no one has owned since launch. You keep the documentation we write, whether or not you keep us on afterwards.' },
+    answer: 'Yes, and most support work starts that way. The first job is reading what the last team left: theme edits, app settings, connector logins and any private apps. You get a written list sorted into urgent, fragile and healthy. One thing we check early is any Xero or 3PL connector that no one has owned since launch. You keep the documentation we write, whether or not you keep us on afterwards.' },
   { category: 'choose', question: 'Do you support Shopify Plus, B2B and multiple stores?',
     answer: 'Yes. We look after Plus checkout extensions, the Shopify Functions that replaced Scripts, native B2B with company accounts and price lists, and the extra Plus stores brands open for New Zealand shoppers or trade buyers. Multi-store setups need extra care, because a theme or app change in one store often has to be repeated in the others. We keep a single change log across all of them so nothing drifts.',
     links: [{ href: '/au/shopify-development', label: 'Shopify Plus and B2B builds' }] },
@@ -138,7 +139,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'working', question: 'How do you handle peak season for Australian stores?',
     answer: 'We plan backwards from your biggest dates: EOFY sales in June, Black Friday on 27 November 2026, Christmas posting cut-offs for Australia Post and StarTrack, and Boxing Day. A few weeks before each one we test discounts, checkout, Afterpay and Zip, shipping rates and integrations with real test orders, then hold theme and app releases until the peak passes, unless something is broken.' },
   { category: 'working', question: 'What should our brief or RFP include?',
-    answer: 'Send your name and work email through the form on this page, and attach a brief or RFP on the next step. The most useful brief lists your store URL, Shopify plan, installed apps, connected systems such as Xero, MYOB, Cin7 or a 3PL, what has broken in the last six months, and your peak trading dates. The founder replies within 24 hours.' },
+    answer: 'The most useful brief lists your store URL, Shopify plan, installed apps, connected systems such as Xero, MYOB, Cin7 or a 3PL, what has broken in the last six months, and your peak trading dates. An RFP (a formal request for proposal) works too, sent as it is. Send your name and work email through the form on this page, then attach the brief on the next step. The founder replies within 24 hours.' },
   { category: 'working', question: 'Do we own everything if we stop working with you?',
     answer: 'Yes. The store, theme code, custom apps and documentation are yours, and the code we write lives in version control you can access. There is no monthly minimum and no lock-in. If you move to another agency or hire in-house, we hand over the change log, the app list with costs and the integration notes, then remove our collaborator access.' },
 ];
@@ -183,7 +184,7 @@ const jsonLd = {
         '@type': 'Person',
         name: 'Bhavesh Barot',
         jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
+        url: 'https://factoryjet.com/author/bhavesh-barot',
         sameAs: [
           'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
           'https://github.com/factoryjet-tech',
@@ -207,7 +208,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['shopify-maintenance-services'] },
   openGraph: {
     title: TITLE,
     description:
@@ -247,10 +248,10 @@ const JOBS: { n: string; t: string; d: string }[] = [
   { n: '04', t: 'Webhook and integration watch', d: 'Integrations listen for webhooks, messages Shopify sends when an order or product changes. Shopify retries a failed one up to eight times in four hours, then removes the subscription. We catch that before the sync goes silent.' },
   { n: '05', t: 'API version upgrades', d: 'Custom apps and private integrations call a dated Shopify API version. Each is supported for at least 12 months, then Shopify answers with the oldest version still running, which can change results without warning.' },
   { n: '06', t: 'Checkout, Afterpay and Zip testing', d: 'Real test orders after any change to payments, discounts or shipping, including a refund. Buy now, pay later options get checked on product pages and at checkout.' },
-  { n: '07', t: 'Shipping rates and courier apps', d: 'Australia Post, StarTrack and Sendle rates, label printing and tracking emails kept correct when carriers change services, surcharges or app versions.' },
-  { n: '08', t: 'Speed and Core Web Vitals', d: 'Core Web Vitals are Google’s page-experience scores. Google’s targets: LCP within 2.5 seconds, INP of 200 milliseconds or less, CLS of 0.1 or less. We recheck after every release.' },
-  { n: '09', t: 'Marketplace feeds', d: 'Product and stock feeds to Amazon.com.au, eBay, Kogan or Bunnings Marketplace, so a price change or sell-out in Shopify reaches every channel you sell on.' },
-  { n: '10', t: 'Small builds between fixes', d: 'Campaign landing pages, new product page sections, a size guide, a trade sign-up form. Each one is quoted and approved before work starts.' },
+  { n: '07', t: 'Shipping rates and courier apps', d: 'After any carrier or app change we price one test cart to a metro postcode and one to a regional postcode. Then we check that the Australia Post, StarTrack or Sendle label prints and the tracking email goes out.' },
+  { n: '08', t: 'Speed and Core Web Vitals', d: 'Core Web Vitals are Google’s page-experience scores. Google’s targets: LCP (how fast the main content shows) within 2.5 seconds, INP (how fast a tap gets a response) of 200 milliseconds or less, and CLS (how much the layout jumps) of 0.1 or less. We recheck after every release.' },
+  { n: '09', t: 'Marketplace feeds', d: 'We mark one test product sold out in Shopify, then check that it shows as unavailable on Amazon.com.au, eBay, Kogan or Bunnings Marketplace. We do the same with a price change.' },
+  { n: '10', t: 'Small builds between fixes', d: 'Campaign landing pages, new product page sections, a size guide or a trade sign-up form. Each one is quoted and approved first, built on an unpublished theme copy and checked on a phone before it goes live.' },
 ];
 
 const JOB_ICONS = [
@@ -312,10 +313,11 @@ export default function ShopifyMaintenanceAUPage() {
               <div className="eyebrow">Shopify Maintenance Australia</div>
               <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
               <p className="lead">
-                Your Shopify store already trades. Orders flow into Xero or MYOB, stock syncs with Cin7 or a 3PL,
-                Afterpay and Zip sit at checkout, and Australia Post or Sendle print the labels. Then an app update
-                breaks the cart, or a sync stops on a Friday night. We are the team that keeps those pieces working,
-                tests every change before it goes live, and answers when something breaks.
+                Your Shopify store already trades. Orders flow into Xero or MYOB, stock syncs with Cin7 or a 3PL (a
+                third-party logistics warehouse), Afterpay and Zip sit at checkout, and Australia Post or Sendle print
+                the labels. Then an app update breaks the cart, or a sync stops on a Friday night. We keep those
+                pieces working and test every change before it goes live. When something breaks, the founder replies
+                within 24 hours.
               </p>
               <HeroInlineForm region="au" source="au_shopify_maintenance_hero" submitLabel="Book my Shopify store review" />
             </div>
@@ -333,7 +335,7 @@ export default function ShopifyMaintenanceAUPage() {
               <div className="specpanel-bar">
                 <span className="statusdot"></span>
                 <span>SUPPORT · WHAT WE LOOK AFTER</span>
-                <span className="sys"><span>Registered Shopify Partner</span><span>Shopify and Shopify Plus</span></span>
+                <span className="sys"><span>Shopify and Shopify Plus</span><span>Xero, MYOB, Cin7</span></span>
               </div>
               <div className="specpanel-body">
                 <div className="specrow run">
@@ -382,8 +384,8 @@ export default function ShopifyMaintenanceAUPage() {
 
         <div className="wrap byline">
           <div className="av">BB</div>
-          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="who"><b><a href="/author/bhavesh-barot">Bhavesh Barot</a></b>, Founder &amp; CEO<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST DEFINITION (GEO) ═══ */}
@@ -406,12 +408,13 @@ export default function ShopifyMaintenanceAUPage() {
                 <div className="fact">
                   <div className="sec">§02</div>
                   <div>
-                    <div className="factlabel">Three terms we use a lot</div>
+                    <div className="factlabel">Terms we use a lot</div>
                     <p>
                       A <b>retainer</b> is a monthly arrangement that sets aside developer hours for your store. A{' '}
                       <b>webhook</b> is a message Shopify sends to another system when an order, product or customer
                       changes. A <b>collaborator account</b> is how a Shopify Partner works in your store without you
-                      handing over a password.
+                      handing over a password. <b>ERP</b> is the system that runs stock, orders and finance in one place,
+                      such as NetSuite or Odoo. <b>EOFY</b> is the end of the Australian financial year on 30 June.
                     </p>
                   </div>
                 </div>
@@ -440,7 +443,7 @@ export default function ShopifyMaintenanceAUPage() {
               <div className="eyebrow">Shopify support, itemised</div>
               <h2>Ten jobs we do on Australian Shopify stores</h2>
               <p className="lead">
-                Most Shopify support quotes promise “updates and bug fixes”. These are the specific jobs that decide
+                Most Shopify support quotes, from freelancers and Shopify experts alike, promise “updates and bug fixes”. These are the specific jobs that decide
                 whether an established store keeps trading through a platform change, an app update or a busy
                 Black Friday weekend.
               </p>
@@ -475,8 +478,9 @@ export default function ShopifyMaintenanceAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap" role="region" tabIndex={0} aria-label="Who fixes what on a Shopify store">
-              <table>
+            <p className="swipe-hint">Swipe sideways to see every column.</p>
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="Who fixes what on a Shopify store" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
                     <th>The fault</th>
@@ -492,7 +496,7 @@ export default function ShopifyMaintenanceAUPage() {
                   <tr><th scope="row">Xero, MYOB or Cin7 sync stopped</th><td>No</td><td>Connector app only</td><td className="fj">Yes, end to end</td></tr>
                   <tr><th scope="row">Old Scripts or script tags stopped working</th><td>Points you to Functions</td><td>If they update the app</td><td className="fj">Yes, rebuilt and tested</td></tr>
                   <tr><th scope="row">Afterpay, Zip or shipping rates wrong at checkout</th><td>Shopify Payments side only</td><td>Their app only</td><td className="fj">Yes, with real test orders</td></tr>
-                  <tr><th scope="row">Phone support</th><td>Plus, Retail and POS Pro</td><td>Varies</td><td className="fj">A named engineer</td></tr>
+                  <tr><th scope="row">Reaching a person</th><td>Phone on Plus, Retail and POS Pro</td><td>Varies</td><td className="fj">The founder replies within 24 hours</td></tr>
                 </tbody>
               </table>
             </div>
@@ -513,22 +517,23 @@ export default function ShopifyMaintenanceAUPage() {
             <div className="factswrap">
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
-                  Shopify retires old tools on published dates. Scripts, the code Plus stores used for custom
-                  discounts, shipping and payment rules at checkout, were deprecated on 30 June 2026. Shopify’s
+                  Shopify retires old tools on published dates. Scripts were the code Plus stores used for custom
+                  discounts, shipping and payment rules at checkout. Shopify deprecated them on 30 June 2026, and its
                   replacement is Shopify Functions. A tiered discount that ran as a Script becomes a discount Function, and
                   a rule that hid express shipping for bulky items becomes a delivery customisation Function.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
                   Script tags are next. Since 1 October 2026 the Admin API has refused requests to add or edit them,
                   and from 1 March 2027 Shopify stops loading them on storefronts. Older reviews, tracking and pop-up
-                  apps often still use them. The fix sits with each app: move to an app embed block you switch on in the
-                  theme editor, or a web pixel for tracking. We list which of your apps are affected and chase the
+                  apps often still use them. The fix sits with each app. It can move to an app embed block, a setting you
+                  switch on in the theme editor. For tracking, it can move to a web pixel, Shopify’s newer way to run
+                  tracking code. We list which of your apps are affected and chase the
                   developers.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><p>
                   API versions age out on a timetable too. Shopify ships a new version each quarter and supports each
                   one for at least 12 months. After that, a private app calling a retired version gets answers from the
-                  oldest version still running, which can change what your Xero or 3PL connector receives without any
+                  oldest version still running. That can change what your Xero or 3PL connector receives, with no
                   error message.
                 </p></div>
               </div>
@@ -572,7 +577,7 @@ export default function ShopifyMaintenanceAUPage() {
                 </ul>
               </div>
             </div>
-            <div className="timeline">
+            <div className="timeline timeline-3">
               {STEPS.map((s) => {
                 const [idx, title] = s.t.split(' · ');
                 return (
@@ -603,31 +608,30 @@ export default function ShopifyMaintenanceAUPage() {
           <div>
             <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image" src={null}
               subject="A Shopify developer checking a product page on her phone against the desktop version on her laptop">
-              <img src="/images/au/visual-pass-2026-10-03/shopify-development/mobile-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/mobile-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/mobile-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="A Shopify developer checking a product page on her phone against the desktop version on her laptop" />
+              <img src="/images/au/visual-pass-2026-10-03/shopify-development/mobile-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/mobile-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/mobile-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="eager" fetchPriority="low" decoding="async" alt="A Shopify developer checking a product page on her phone against the desktop version on her laptop" />
             </VisualSlot>
             <p className="figcap">
-              After each release we check the store on a phone first. Most faults customers see start on a small
-              screen, and so do most Core Web Vitals problems.
+              After each release we check the store on a phone first, then on a desktop. Google reports Core Web
+              Vitals for mobile and desktop separately, so we test both.
             </p>
           </div>
           <div className="definition-copy">
             <div className="eyebrow">The systems Australian stores connect</div>
             <h2>Keeping Shopify talking to Xero, MYOB, Cin7 and your couriers</h2>
             <p>
-              Most faults on an established store are not in the storefront. They sit in the hand-offs between Shopify
-              and the systems behind it, and they surface days later as a stock count that is wrong or a payout that
-              will not reconcile.
+              On an established store, many faults sit in the hand-offs between Shopify and the systems behind it.
+              They surface days later as a stock count that is wrong or a payout that will not reconcile.
             </p>
             <ul className="chg-list chg-list-1col">
-              <li><span><b>Accounting.</b> Xero, MYOB Business or MYOB Acumatica, QuickBooks Online or NetSuite, so each Shopify payout, its card fees, GST and any refunds reconcile to the bank feed in a form your bookkeeper accepts.</span></li>
+              <li><span><b>Accounting.</b> Xero, MYOB Business or MYOB Acumatica, QuickBooks Online or NetSuite. Each Shopify payout, its card fees, GST and any refunds should reconcile to the bank feed in a form your bookkeeper accepts.</span></li>
               <li><span><b>Inventory and ERP.</b> Cin7 Core (formerly DEAR), Cin7 Omni, Unleashed, Odoo or NetSuite. Before touching a sync we write down which system is the master for stock, for prices and for customer records.</span></li>
               <li><span><b>Payments.</b> Shopify Payments or Stripe, plus Afterpay and Zip at checkout, tested with real orders and a refund after any change.</span></li>
               <li><span><b>Shipping.</b> Australia Post, StarTrack and Sendle, directly or through a multi-carrier app, with rules for bulky items and regional postcodes.</span></li>
               <li><span><b>Marketplaces.</b> Feeds to Amazon.com.au, eBay, Kogan, Bunnings Marketplace or THE ICONIC, kept in step with Shopify prices and stock.</span></li>
             </ul>
             <p>
-              Shopify work we have done includes DTF Virginia and Shop Holistico, two US stores. For Australian brands
-              we will walk you through comparable stores on a call.
+              Shopify work we have done includes DTF Virginia. We work with stores anywhere in Australia, from Sydney
+              and Melbourne to Brisbane, Perth and Adelaide, over video call and email.
             </p>
           </div>
         </section>
@@ -683,12 +687,13 @@ export default function ShopifyMaintenanceAUPage() {
               <div className="eyebrow">Shopify retainer or pay per job</div>
               <h2>Retainer, pay-per-job support or an in-house developer</h2>
               <p className="lead">
-                Each model suits a different store. Two questions settle it: how many changes you ship a month, and how many
+                A retainer is what some agencies sell as a Shopify maintenance package or care plan. Each model suits a different store. Two questions settle it: how many changes you ship a month, and how many
                 systems hang off Shopify.
               </p>
             </div>
-            <div className="tablewrap" role="region" tabIndex={0} aria-label="Shopify support models compared">
-              <table>
+            <p className="swipe-hint">Swipe sideways to see every column.</p>
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="Shopify support models compared" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
                     <th>What matters</th>
@@ -742,7 +747,7 @@ export default function ShopifyMaintenanceAUPage() {
         <section className="vlog" id="brief">
           <div className="wrap">
             <div className="section-head">
-              <h2>Send us your brief or RFP</h2>
+              <h2>What to include in a Shopify support brief or RFP</h2>
               <p>
                 If you are running a tender for Shopify support, send the document as it is. If not, these lists cover
                 what we need to give you a fixed quote on the first reply.
@@ -782,7 +787,7 @@ export default function ShopifyMaintenanceAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Related FactoryJet services in Australia</div>
-              <h2>Beyond Shopify support</h2>
+              <h2>Related ecommerce services for Australian stores</h2>
               <p className="lead">
                 Selling in the US as well? See our <a href="/services/shopify-maintenance-services">Shopify maintenance services for US stores</a>.
               </p>
@@ -838,13 +843,14 @@ export default function ShopifyMaintenanceAUPage() {
               <div className="eyebrow">Ready when you are</div>
               <h2>Get a Shopify store someone is looking after before it breaks</h2>
               <p>
-                Send your name and work email. The founder replies within 24 hours to book a short call about your store,
-                the systems behind it and the support model that fits. No spam, no obligation.
+                Book a store review and leave your name and work email in the form that opens. The founder replies
+                within 24 hours to book a short call about your store, the systems behind it and the support model
+                that fits. No obligation.
               </p>
             </div>
             <div className="ctas">
               <ModalCTAButton label="Book my Shopify store review" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
-              <a className="btn btn-ghost" href="/au/shopify-development">See Shopify development</a>
+              <a className="btn btn-ghost" href="#brief">See what to send us</a>
             </div>
           </div>
         </section>

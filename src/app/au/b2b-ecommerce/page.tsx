@@ -8,17 +8,19 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
 import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/b2b-ecommerce';
-const UPDATED = '2026-10-29';
-const TITLE = 'B2B Ecommerce Australia | Wholesale Trade Portals | FactoryJet';
+const PUBLISHED = '2026-10-29';
+const UPDATED = '2026-10-31';
+const TITLE = 'B2B Ecommerce Australia | Trade Portals | FactoryJet';
 const H1 = 'B2B Ecommerce Australia: Trade Portals for Wholesalers and Manufacturers';
 const DESCRIPTION =
-  'B2B ecommerce for Australian wholesalers and manufacturers: trade portals with account pricing ex GST, connected to Xero, MYOB, NetSuite, Cin7, Unleashed or Odoo.';
+  'B2B ecommerce for Australian wholesalers and manufacturers: trade portals with account prices ex GST, linked to Xero, MYOB, NetSuite, Cin7, Unleashed or Odoo.';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -65,7 +67,8 @@ const SRC_XERO_GUIDE = 'https://www.xero.com/au/accountant-bookkeeper-guides/wha
 // "Deposit requirements, partial payments, and payment requests per fulfillment are
 // available only on the Shopify Plus plan"; direct company catalogs Plus only.
 const SRC_SHOPIFY_B2B = 'https://help.shopify.com/en/manual/b2b/getting-started/plan-features';
-// Shopify Australia pricing page, for live plan fees in AUD (we never restate them).
+// Shopify Australia pricing page, read 2026-10-31: Basic $42/mo billed yearly ($56 monthly), Grow $114 ($149),
+// Advanced $431 ($575), Plus "Starts at $3,700 AUD/mo".
 const SRC_SHOPIFY_PRICING = 'https://www.shopify.com/au/pricing';
 // Cin7 Core help: "Cin7 Core lets you set up to 10 price points for each individual
 // product"; tiers assigned to customers or sale orders; "The sale order price tier takes
@@ -76,12 +79,10 @@ const SRC_CIN7 =
 // details, stock and pricing to B2B Stores; "Import from B2B Portal to Unleashed every
 // 10-15 minutes"; order status syncs back "every 15 minutes".
 const SRC_UNLEASHED = 'https://help-unleashed.theaccessgroup.com/en/articles/11582440-b2b-portal-introduction';
-// Market ranges (build only, never FactoryJet prices; neither source says whether GST is
-// included). Digitized Kosmos, Sydney and Australia page: "Custom B2B wholesale and
-// industrial e-commerce platforms typically range between AUD $20,000 to AUD $65,000".
+// Market range (build only, never FactoryJet prices; the source does not say whether GST is
+// included). The Digitized Kosmos range was dropped 2026-10-31: it is a vendor selling B2B portals.
 // What's The Damage? (Focus Search Pty Ltd, ABN 70 167 781 946), BigCommerce Cost in
 // Perth, last verified October 2026: "$15,000–$50,000 for B2B and wholesale builds".
-const SRC_KOSMOS = 'https://digitizedkosmos.com/locations/sydney-australia';
 const SRC_WTD = 'https://whatsthedamage.com.au/bigcommerce-cost-perth/';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
@@ -109,11 +110,11 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'platforms', question: 'What is the best B2B ecommerce platform for an Australian wholesaler?',
     answer: 'It depends on where your prices and stock live today. If you already sell retail on Shopify, Shopify B2B or Shopify Plus is usually first to test. If Cin7 Core or Unleashed already holds your customers and price tiers, their own portals or a store fed from them may be enough. Complex quoting, approvals or large catalogues point to Adobe Commerce, BigCommerce or a custom portal. We start from your own price and stock data.',
     links: [{ href: '/blog/best-b2b-ecommerce-platform-manufacturers-distributors-2026', label: 'B2B ecommerce platforms for manufacturers and distributors' }] },
-  { category: 'platforms', question: 'Can you do B2B on Shopify?',
-    answer: 'Yes. Shopify’s help centre lists B2B features for the Basic, Grow, Advanced and Shopify Plus plans, and not for Starter or Retail. Every supported plan gets company accounts, payment terms and quantity rules. Below Plus you can run up to three active B2B catalogues. Plus has no catalogue cap and adds catalogues set per company, deposits and partial payments. A wholesaler with dozens of negotiated price lists will usually end up on Plus or need a workaround.',
+  { category: 'platforms', question: 'Can you do B2B or wholesale on Shopify?',
+    answer: 'Yes. Shopify wholesale selling runs on Shopify’s own B2B features. Its help centre lists B2B features for the Basic, Grow, Advanced and Shopify Plus plans, and not for Starter or Retail. Every supported plan gets company accounts, payment terms and quantity rules. Below Plus you can run up to three active B2B catalogues. Plus has no catalogue cap and adds catalogues set per company, deposits and partial payments. A wholesaler with dozens of negotiated price lists will usually end up on Plus or need a workaround.',
     links: [{ href: SRC_SHOPIFY_B2B, label: 'Shopify Help: B2B features by plan' }] },
   { category: 'platforms', question: 'How much does Shopify B2B cost?',
-    answer: 'Shopify includes its B2B features in the Basic, Grow, Advanced and Plus plans, so there is no separate B2B licence on those plans. What you pay is the plan that fits your catalogue and price-list count, plus any apps and the build work to set up companies, catalogues and your accounting connection. Shopify publishes its current plan fees in Australian dollars on its own pricing page, and those change, so read them there.',
+    answer: 'Shopify includes B2B in the Basic, Grow, Advanced and Plus plans, so there is no separate B2B licence. On 31 October 2026 its Australian pricing page listed Basic at AUD 42 a month, Grow at AUD 114 and Advanced at AUD 431, each billed yearly, and Plus from AUD 3,700 a month. Add any apps and the build work for companies, catalogues and your accounting connection. Fees change, so check the page before you budget.',
     links: [{ href: SRC_SHOPIFY_PRICING, label: 'Shopify Australia pricing' }] },
   { category: 'platforms', question: 'Are Cin7 Core price tiers enough for trade ordering?',
     answer: 'Cin7 Core’s help centre says each product can carry up to 10 price points, assigned to customers or to a sale order. For a wholesaler with simple tiers that can be enough. Businesses that need a branded storefront, retail and trade in one place, richer product content or SEO usually put a store in front of Cin7 and let Cin7 keep stock and pricing.',
@@ -127,7 +128,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   // ── Xero, MYOB, ERP and stock ──
   { category: 'systems', question: 'Can a B2B portal connect to Xero?',
     answer: 'Yes. Trade orders become Xero invoices on the right account, with GST coded correctly and the payment terms that account has. Card payments from retail or trade checkout are recorded against the payout so the bank feed reconciles. The important decision is which system owns customers and credit terms. If Xero does, the store reads from it rather than holding its own copy.' },
-  { category: 'systems', question: 'Can it connect to MYOB Business or MYOB Acumatica?',
+  { category: 'systems', question: 'Can a B2B portal connect to MYOB Business or MYOB Acumatica?',
     answer: 'Yes. MYOB Business suits a wholesaler whose stock and pricing are fairly simple, with orders posted in as invoices. MYOB Acumatica is a fuller ERP, so the portal can read customer price lists, stock by warehouse and credit status from it and post orders back as sales orders. We map every field with your bookkeeper or ERP partner first, so nothing lands in the ledger in a shape they have to fix by hand.' },
   { category: 'systems', question: 'Do you integrate with NetSuite, Odoo or QuickBooks?',
     answer: 'Yes. NetSuite and Odoo are full ERPs, so they usually own items, customers, price levels and stock, and the portal reads from them and sends orders back. QuickBooks Online is closer to Xero in role. Our current trade store work includes a WooCommerce store fed by Odoo for stock, pricing and SKUs, so the website never keeps a second copy of that data. We confirm the connection method against your exact edition before quoting.' },
@@ -153,13 +154,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Cost and timing ──
   { category: 'cost', question: 'How much does a B2B ecommerce portal cost in Australia?',
-    answer: 'Published Australian ranges are wide. Digitized Kosmos, which markets B2B portals to Australian trade suppliers, puts custom wholesale platforms at AUD 20,000 to 65,000. What’s The Damage?, an Australian cost guide, puts BigCommerce B2B and wholesale builds in Perth at AUD 15,000 to 50,000. Neither says whether GST is included. These are market figures, not our prices. FactoryJet quotes a fixed price per phase in writing after scoping.',
-    links: [{ href: SRC_KOSMOS, label: 'Digitized Kosmos: Australian B2B portals' }] },
+    answer: 'What’s The Damage?, an Australian cost guide, puts BigCommerce B2B and wholesale builds in Perth at AUD 15,000 to 50,000. It does not say whether GST is included, so ask every agency to quote ex GST. The spread comes from how many systems connect, how complex your price rules are and how clean your product data is. These are market figures, not our prices. FactoryJet quotes a fixed price per phase in writing after scoping.',
+    links: [{ href: SRC_WTD, label: 'What’s The Damage?: BigCommerce cost in Perth' }] },
   { category: 'cost', question: 'How long does a B2B ecommerce build take?',
     answer: 'It depends far more on your data than on design. A portal on an existing platform with one accounting connection moves fastest. Each extra system, custom pricing rule or approval step adds time, and so does cleaning a price list that lives in three spreadsheets. We give you a phased timeline after the scoping session, and the first working draft with your own products comes before you sign the build.' },
 
   // ── Working with us ──
-  { category: 'working', question: 'What should our brief or RFP include?',
+  { category: 'working', question: 'What should our brief or request for proposal (RFP) include?',
     answer: 'Five things get you an accurate quote. A product export with SKU count and units of sale. Your account types and how a price is worked out for each. The systems you run, with editions: Xero or MYOB, Cin7, Unleashed, NetSuite or Odoo. One real order traced from the buyer’s email to the invoice. And any channels beyond the portal, such as retail, Amazon.com.au or Bunnings Marketplace. A one-page note is fine.' },
   { category: 'working', question: 'What B2B trade stores have you built?',
     answer: 'Two examples. A live Commerceflo trade storefront for GPSUK, a UK promotional products supplier whose buyers reorder at their own account prices. And a WooCommerce trade store for Sow Easy, a B2B distributor, reading stock, pricing and SKUs from Odoo, which is in testing on staging. On a call we walk you through both, then build a draft with your own products.',
@@ -167,23 +168,23 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'working', question: 'Who owns the portal and the code after launch?',
     answer: 'You do. The code, the repository and the admin accounts are in your name from day one, and platform and app fees are billed to your own accounts. Defects found after launch are fixed inside the build price for a cover period agreed before work starts. After that, support is optional: each change is quoted and approved before we do it, and there is no monthly minimum.' },
   { category: 'working', question: 'How do we get started?',
-    answer: 'Use the form at the top of this page: a name, a work email and, if you have one, your brief. Bhavesh Barot, the founder, answers within 24 hours and sets up a call on your accounts, price lists and systems. If the fit is right, we build a working draft with your own products and one of your price lists, so you can see the trade portal before you commit to the build.' },
+    answer: 'Use the form at the top of this page with your name and work email. The next screen lets you upload your brief if you have one. Bhavesh Barot, the founder, answers within 24 hours and sets up a call about how your trade customers order and what software holds their prices. If the fit is right, we build a working draft with your own products and one of your price lists, so you can see the trade portal before you commit to the build.' },
 ];
 
 /* ─── House terms, approved wording (2026-10-16), same as /b2b-ecommerce ── */
 const HOUSE_TERMS: { t: string; d: string }[] = [
   { t: 'A draft before you sign', d: 'We build a working draft with your own products and one of your real price lists, so you see the trade portal before you commit.' },
-  { t: 'Fixed price per phase', d: 'Each phase is scoped, priced and signed on its own. Nothing is billed by the hour.' },
+  { t: 'Fixed price per phase', d: 'Each phase is scoped, quoted in writing and signed on its own before work on it starts.' },
   { t: 'You own the code', d: 'The code, the repository and the admin accounts are yours from day one. Platform and app fees go to your own accounts.' },
   { t: 'Defect cover in the build price', d: 'Defects found after launch are fixed inside the build price, for a cover period we agree before work starts.' },
-  { t: 'Support only if you want it', d: 'After that, support is optional. Each change is quoted and approved before we do it.' },
+  { t: 'Support only if you want it', d: 'After that, support is optional. Each change is quoted and approved per request before we do it.' },
   { t: 'No monthly minimum', d: 'There is no monthly fee you pay whether you use it or not.' },
 ];
 
 /* ─── Numbered project steps (rendered as the process timeline) ──────── */
 const STEPS: { n: string; t: string; d: string; out: string }[] = [
   { n: '01', t: 'Trace one real order', d: 'We follow one trade order from the buyer’s email or phone call to the invoice in Xero, MYOB or your ERP, with the person who handles it today. Most of the rules a portal needs show up in that hour.', out: 'a written map of accounts, price rules and systems' },
-  { n: '02', t: 'Decide which system owns what', d: 'Customers, price lists, stock, credit limits and invoices each get one owner. Usually that is Xero, MYOB, Cin7, Unleashed, NetSuite or Odoo, and the store reads from it.', out: 'a data ownership table your bookkeeper signs off' },
+  { n: '02', t: 'Decide which system owns what', d: 'Customers, price lists, stock, credit limits and invoices each get one owner. Often that is Xero, MYOB, Cin7, Unleashed, NetSuite or Odoo, and the store reads from it.', out: 'a data ownership table your bookkeeper signs off' },
   { n: '03', t: 'Build a draft with your products', d: 'A working portal with your own catalogue and one real price list, logged in as one of your trade accounts. You see it before you sign the build.', out: 'a draft you can click through, and a fixed price per phase' },
   { n: '04', t: 'Build the portal and the connections', d: 'Account pricing ex GST, quantity rules, reorder lists, payment terms, freight rules for Australia Post, StarTrack or pallet carriers, and the accounting or ERP connection.', out: 'a staging portal fed by your real systems' },
   { n: '05', t: 'Test with real accounts', d: 'Your staff and two or three friendly customers place orders on staging. We check prices, GST, invoices, credit holds and freight against what your team expects.', out: 'a signed test sheet, issue by issue' },
@@ -194,7 +195,7 @@ const STEPS: { n: string; t: string; d: string; out: string }[] = [
 const PORTAL_ITEMS: { n: string; t: string; d: string }[] = [
   { n: '01', t: 'Account pricing, ex GST', d: 'Each trade account sees its own price list or tier, shown ex GST if only businesses can see it, with GST added clearly at checkout and on the tax invoice.' },
   { n: '02', t: 'Cartons, pallets and minimums', d: 'Units of sale, case packs, minimum order values and quantity breaks are enforced in the cart, so the warehouse stops fixing orders after they arrive.' },
-  { n: '03', t: 'Reorder in a minute', d: 'Past orders, saved lists and quick order by SKU or CSV upload. Most wholesale orders are repeats, so this is the screen buyers use most.' },
+  { n: '03', t: 'Reorder in a minute', d: 'Past orders, saved lists and quick order by SKU or CSV upload. In a B2B ordering portal most orders are repeats, so this is the screen buyers open most.' },
   { n: '04', t: 'Pay on account or by card', d: 'Orders on 30-day or other agreed terms for approved accounts, with credit checks read from your accounting system. Card payments through Stripe for everyone else.' },
   { n: '05', t: 'Several buyers, several sites', d: 'One customer company with several staff logins and delivery addresses, so a chain of cafes or a builder with multiple sites orders under one account.' },
   { n: '06', t: 'Quotes and approvals', d: 'Request a quote on large or custom orders, and approval steps when a buyer’s own company needs a manager to sign off.' },
@@ -221,25 +222,13 @@ const PLATFORM_ROWS: { what: string; shopify: string; plus: string; other: strin
   { what: 'Best fit, in our view', shopify: 'Brands adding a stockist channel', plus: 'Many negotiated price lists', other: 'Large catalogues, complex quoting', custom: 'Rules no platform handles' },
 ];
 
-/* ─── Australian demand, DataForSEO Google Ads volumes, location 2036, pulled 29 Oct 2026 ── */
-const DEMAND: { kw: string; v: number; kd: string }[] = [
-  { kw: 'shopify b2b', v: 260, kd: 'Platform research' },
-  { kw: 'peppol e-invoicing', v: 210, kd: 'Invoicing and finance' },
-  { kw: 'b2b portal', v: 170, kd: 'Mixed intent' },
-  { kw: 'trade portal', v: 170, kd: 'Wholesale and trade' },
-  { kw: 'b2b ecommerce', v: 140, kd: 'Research stage' },
-  { kw: 'b2b ecommerce platform', v: 50, kd: 'Platform research' },
-  { kw: 'wholesale website', v: 50, kd: 'Buyer intent' },
-];
-const DEMAND_MAX = 260;
-
 const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
   { href: '/au/ecommerce-development', t: 'Ecommerce development Australia', d: 'New stores and replatforms for Australian brands selling direct to consumers as well as to trade.', go: 'Explore ecommerce →' },
   { href: '/au/shopify-development', t: 'Shopify development Australia', d: 'Shopify and Shopify Plus builds, migrations and Shopify B2B set up with Xero or MYOB.', go: 'Explore Shopify →' },
   { href: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'Supplier bills, tax invoice checks and Peppol eInvoices handled before they reach Xero or MYOB.', go: 'Explore AP automation →' },
   { href: '/au/ai-agents', t: 'AI agents for Australian businesses', d: 'AI agents that read emailed trade orders and enter them into your portal or ERP for a person to approve.', go: 'Explore AI agents →' },
   { href: '/au/website-maintenance', t: 'Website maintenance Australia', d: 'Updates, fixes and changes after launch, quoted and approved one request at a time.', go: 'Explore maintenance →' },
-  { href: '/b2b-ecommerce', t: 'B2B ecommerce (US page)', d: 'Our main B2B ecommerce page, including EDI and punchout work for national accounts and procurement teams.', go: 'Read the US page →' },
+  { href: '/b2b-ecommerce', t: 'B2B ecommerce (US page)', d: 'Our main B2B ecommerce page, including EDI (orders sent straight between two companies’ systems) and punchout (ordering from inside a buyer’s purchasing software).', go: 'Read the US page →' },
 ];
 
 /* ─── JSON-LD ────────────────────────────────────────────────────── */
@@ -276,14 +265,14 @@ const jsonLd = {
       headline: H1,
       description: DESCRIPTION,
       inLanguage: 'en-AU',
-      datePublished: UPDATED,
+      datePublished: PUBLISHED,
       dateModified: UPDATED,
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="true"]'] },
       author: {
         '@type': 'Person',
         name: 'Bhavesh Barot',
         jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
+        url: 'https://factoryjet.com/author/bhavesh-barot',
         sameAs: [
           'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
           'https://github.com/factoryjet-tech',
@@ -307,7 +296,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-US': 'https://factoryjet.com/b2b-ecommerce', 'en-GB': 'https://factoryjet.com/uk/b2b-ecommerce', 'en-AU': CANONICAL, 'x-default': 'https://factoryjet.com/b2b-ecommerce' } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['b2b-ecommerce'] },
   openGraph: {
     title: TITLE,
     description:
@@ -464,8 +453,8 @@ export default function B2bEcommerceAUPage() {
 
         <div className="wrap byline">
           <div className="av">BB</div>
-          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="who"><b><a href="/author/bhavesh-barot">Bhavesh Barot</a></b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST DEFINITION (GEO) ═══ */}
@@ -488,12 +477,14 @@ export default function B2bEcommerceAUPage() {
                 <div className="fact">
                   <div className="sec">§02</div>
                   <div>
-                    <div className="factlabel">Four terms we use on this page</div>
+                    <div className="factlabel">Six terms we use on this page</div>
                     <p>
                       A <b>trade portal</b> is the logged-in part of the store for approved accounts. A <b>price
                       list</b> or <b>price tier</b> is the set of prices one account or group pays. An <b>ERP</b> is
                       the system that runs stock, orders and finance, such as NetSuite, Odoo or MYOB Acumatica.{' '}
                       <b>Peppol</b> is the network that lets accounting systems send invoices to each other as data.
+                      A <b>3PL</b> is a third-party logistics company that stores and ships your stock for you.{' '}
+                      <b>Staging</b> is a private copy of the portal where we test with real data before customers see it.
                     </p>
                   </div>
                 </div>
@@ -502,8 +493,8 @@ export default function B2bEcommerceAUPage() {
                   <p>
                     The buyers we build for are not starting out. They already turn over real wholesale volume, have
                     hundreds or thousands of SKUs, and run Xero, MYOB, Cin7, Unleashed or an ERP that works. The
-                    portal has to fit that stack. When a portal fails, the cause is almost always a price rule or a
-                    stock number that the store and the back office disagree on.
+                    portal has to fit that stack. When a portal fails, the cause is often a price rule or a stock
+                    number that the store and the back office disagree on.
                   </p>
                 </div>
               </div>
@@ -523,7 +514,7 @@ export default function B2bEcommerceAUPage() {
               <div className="eyebrow">Trade portal, itemised</div>
               <h2>Eight things a working Australian trade portal has to do</h2>
               <p className="lead">
-                These eight cover what a wholesale brief usually asks for. Each one moves a step out of email and
+                These eight cover what a wholesale brief tends to ask for. Each one moves a step out of email and
                 spreadsheets, and each one has to agree with the numbers in your accounting system.
               </p>
             </div>
@@ -550,8 +541,8 @@ export default function B2bEcommerceAUPage() {
               <p>
                 Before any design, we agree which system is the single owner of customers, price lists, stock,
                 credit limits and invoices. The portal then reads from that owner and writes orders back. Get this
-                wrong and two systems hold two different prices for the same customer, which is the most common way
-                a wholesale portal loses the trust of the sales team.
+                wrong and two systems hold two different prices for the same customer, and the sales team stops
+                trusting the portal.
               </p>
             </div>
             <div className="platlist" role="list">
@@ -580,12 +571,15 @@ export default function B2bEcommerceAUPage() {
                 <h2>Shopify B2B vs Shopify Plus vs BigCommerce or Adobe Commerce vs a custom portal</h2>
                 <p className="lead">
                   We are not tied to one platform. Here is how the usual options compare for an Australian wholesaler.
-                  The Shopify columns come from Shopify’s own help centre; the last row is our view.
+                  The Shopify columns come from Shopify’s own help centre; the last row is our view. WooCommerce
+                  can also run a trade store: the Sow Easy store further down this page is WooCommerce, with Odoo
+                  behind it.
                 </p>
               </div>
             </div>
-            <div className="tablewrap" role="region" tabIndex={0} aria-label="B2B ecommerce platform comparison">
-              <table>
+            <p className="md:hidden" style={{ fontSize: 13, margin: '0 0 8px' }}>Swipe sideways to see every column.</p>
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="B2B ecommerce platform comparison" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 760 }}>
                 <thead>
                   <tr>
                     <th>What you need</th>
@@ -610,7 +604,7 @@ export default function B2bEcommerceAUPage() {
             </div>
             <p className="tablenote">
               Shopify figures from <a href={SRC_SHOPIFY_B2B} {...extLink}>Shopify Help Center, B2B features by plan</a>, read 29 October 2026.
-              For live plan fees in AUD, see <a href={SRC_SHOPIFY_PRICING} {...extLink}>Shopify’s Australian pricing page</a>.
+              Plan fees in AUD are on <a href={SRC_SHOPIFY_PRICING} {...extLink}>Shopify’s Australian pricing page</a>.
             </p>
             <div className="au-split">
               <div>
@@ -624,7 +618,7 @@ export default function B2bEcommerceAUPage() {
               <div>
                 <h3>Payments and freight, set for trade</h3>
                 <p>
-                  Trade accounts usually pay on terms, with Stripe for card payments when an account is new or over
+                  Trade accounts often pay on terms, with Stripe for card payments when an account is new or over
                   its limit. Afterpay and Zip stay on the retail checkout. Freight rules come from your real costs:
                   Australia Post or Sendle for parcels, StarTrack for heavier consignments, and pallet rates for
                   bulky goods.
@@ -657,7 +651,7 @@ export default function B2bEcommerceAUPage() {
                 </ul>
               </div>
             </div>
-            <div className="timeline timeline-4">
+            <div className="timeline timeline-4 timeline-3">
               {STEPS.map((s) => (
                 <details key={s.n} className="tnode">
                   <summary>
@@ -704,12 +698,10 @@ export default function B2bEcommerceAUPage() {
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><div>
                   <p>
-                    <b>Peppol eInvoicing.</b> The ATO is the Australian Peppol Authority, and says over 400,000
-                    Australian businesses can exchange eInvoices on the network. Between private businesses it is
-                    voluntary, according to Xero’s guide for accountants. Commonwealth agencies must be able to
-                    process and send eInvoices automatically by December 2026, after a target of 30% of received
-                    invoices as eInvoices by 1 July 2026. If your customers include government or
-                    large buyers who ask for Peppol, invoices raised from portal orders in Xero can go to them as data.
+                    <b>Peppol eInvoicing.</b> The ATO is the Australian Peppol Authority. Between private businesses
+                    eInvoicing is voluntary, according to Xero’s guide for accountants, and Commonwealth agencies
+                    must be able to send and process eInvoices automatically by December 2026. If government or large buyers
+                    ask for Peppol, invoices raised from portal orders in Xero can go to them as data.
                   </p>
                   <p className="au-note">
                     Sources: <a href={SRC_ACCC_PRICE} {...extLink}>ACCC, Price displays</a>,{' '}
@@ -746,8 +738,9 @@ export default function B2bEcommerceAUPage() {
                 <h2>How we work with wholesalers and manufacturers</h2>
               </div>
               <p>
-                The same terms on every B2B project, written into the proposal before any work starts. You see working
-                software before you sign, and you are never tied to a monthly fee.
+                FactoryJet is a B2B ecommerce agency that builds trade and dealer portals for Australian wholesalers,
+                distributors and manufacturers, connected to the accounting or ERP system they already run. The same
+                terms go into every B2B proposal before work starts, and there is no monthly minimum.
               </p>
             </div>
             <div className="platlist" role="list">
@@ -775,12 +768,12 @@ export default function B2bEcommerceAUPage() {
             </p>
           </div>
           <div className="definition-copy">
-            <div className="eyebrow">Send us your brief or RFP</div>
-            <h2>Already have a brief or a tender document? Send it.</h2>
+            <div className="eyebrow">Send us your brief</div>
+            <h2>Already have a brief, tender or request for proposal (RFP)? Send it.</h2>
             <p>
-              Serious B2B projects usually start with a written brief that names the systems. If you have one, attach
-              it to the form and we reply to it point by point. If you do not, these five items are enough to scope
-              accounts, pricing and integrations:
+              Many B2B projects start with a written brief that names the systems. If you have one, enter your
+              name and email, and the next screen lets you upload it. We reply to it point by point. If you do not,
+              these five items are enough for us to scope the build:
             </p>
             <ol className="au-numlist">
               <li><span><b>Product export.</b> SKU count, units of sale and any carton or pallet rules.</span></li>
@@ -804,7 +797,7 @@ export default function B2bEcommerceAUPage() {
               <p>
                 Both solve the problem a wholesale portal exists for: trade buyers who need their own prices and an
                 ordering flow tied to the back office. On a call we walk you through how
-                each one handles accounts, pricing and orders.
+                each one sets a buyer’s price and gets the order into the back office.
               </p>
             </div>
             <div className="platlist" role="list">
@@ -837,11 +830,9 @@ export default function B2bEcommerceAUPage() {
               <div className="eyebrow">Market ranges, not our prices</div>
               <h2>How much does B2B ecommerce cost in Australia?</h2>
               <p className="lead">
-                <a href={SRC_KOSMOS} {...extLink}>Digitized Kosmos</a>, which markets B2B portals to Australian trade
-                suppliers, puts custom wholesale platforms at AUD 20,000 to 65,000.{' '}
                 <a href={SRC_WTD} {...extLink}>What’s The Damage?</a>, an Australian cost guide run by Focus Search Pty
-                Ltd, puts BigCommerce B2B and wholesale builds in Perth at AUD 15,000 to 50,000. Neither source says
-                whether GST is included, so ask every agency you shortlist to quote ex GST. FactoryJet quotes a fixed
+                Ltd, puts BigCommerce B2B and wholesale builds in Perth at AUD 15,000 to 50,000. The source does not
+                say whether GST is included, so ask every agency you shortlist to quote ex GST. FactoryJet quotes a fixed
                 price per phase in writing after scoping.
               </p>
             </div>
@@ -857,19 +848,17 @@ export default function B2bEcommerceAUPage() {
                 <ModalCTAButton label="Get a fixed-scope B2B quote" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               </div>
               <div className="au-panel">
-                <div className="demand">
-                  <div className="demand-head"><span>Australia · Monthly Search Demand</span><b>DataForSEO</b></div>
-                  <ul>
-                    {DEMAND.map((r) => (
-                      <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v.toLocaleString('en-AU')}<small> searches</small></span></div>
-                        <div className="demand-bar"><i style={{ width: `${Math.max(3, Math.round((r.v / DEMAND_MAX) * 100))}%` }} /></div>
-                        <div className="demand-kd">{r.kd}</div>
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="demand-src">Source: DataForSEO, Google Ads volumes, Australia, pulled 29 October 2026</p>
-                </div>
+                <div className="eyebrow">Published market range, AUD</div>
+                <ul className="trigrows">
+                  <li><span className="m">BigCommerce B2B and wholesale build, Perth</span><span className="n">AUD 15,000 to 50,000</span><span className="t">Build</span></li>
+                  <li><span className="m">GST in that range</span><span className="n">not stated by the source</span><span className="t">Ask</span></li>
+                  <li><span className="m">Shopify Advanced plan fee</span><span className="n">AUD 431 a month, billed yearly</span><span className="t">Platform</span></li>
+                  <li><span className="m">Shopify Plus plan fee</span><span className="n">from AUD 3,700 a month</span><span className="t">Platform</span></li>
+                </ul>
+                <p className="au-note">
+                  Build range from <a href={SRC_WTD} {...extLink}>What’s The Damage?</a>. Plan fees from{' '}
+                  <a href={SRC_SHOPIFY_PRICING} {...extLink}>Shopify’s Australian pricing page</a>, read 31 October 2026.
+                </p>
               </div>
             </div>
           </div>
@@ -880,7 +869,7 @@ export default function B2bEcommerceAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Related FactoryJet services</div>
-              <h2>Around the trade portal</h2>
+              <h2>Related services for Australian trade sellers</h2>
             </div>
             <ul className="agentdir-grid">
               {SIBLINGS.map((s) => (
@@ -921,7 +910,7 @@ export default function B2bEcommerceAUPage() {
               <a href={SRC_SHOPIFY_B2B} {...extLink}>Shopify, B2B features by plan</a>
               <a href={SRC_CIN7} {...extLink}>Cin7 Core, customer price tiers</a>
               <a href={SRC_UNLEASHED} {...extLink}>Unleashed, B2B Portal</a>
-              <a href={SRC_KOSMOS} {...extLink}>Digitized Kosmos, Australian B2B portals</a>
+              <a href={SRC_SHOPIFY_PRICING} {...extLink}>Shopify, Australian pricing</a>
               <a href={SRC_WTD} {...extLink}>What’s The Damage?, BigCommerce cost in Perth</a>
             </div>
           </div>

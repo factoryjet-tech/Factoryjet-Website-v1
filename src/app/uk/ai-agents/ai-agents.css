@@ -33,9 +33,12 @@
 
 .uk-aiagents h3 {font-size:clamp(1.1rem,2vw,1.375rem);font-weight:700}
 
-.uk-aiagents p {font-size:15px;line-height:1.75;color:var(--n600)}
+/* :where() keeps these two at element specificity, so Tailwind utilities on shared
+   components (MidPageCTA's text-white button, its orange eyebrow) still win.
+   As plain .uk-aiagents rules they overrode them: dark text on the orange pill. */
+:where(.uk-aiagents) p {font-size:15px;line-height:1.75;color:var(--n600)}
 
-.uk-aiagents a {text-decoration:none;color:inherit}
+:where(.uk-aiagents) a {text-decoration:none;color:inherit}
 
 
 .uk-aiagents .eyebrow {
@@ -275,6 +278,9 @@
 .uk-aiagents summary::after {content:'+';font-size:22px;font-weight:300;color:var(--orange);flex-shrink:0}
 
 .uk-aiagents details[open] summary::after {content:'−'}
+
+/* FAQ rows render their own .chevron span; drop the + so each row shows one icon. */
+.uk-aiagents .faq-item summary::after {content:none}
 
 
 /* ─── City pills ─── */

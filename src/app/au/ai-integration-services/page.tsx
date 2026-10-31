@@ -8,16 +8,17 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-integration-services';
-const UPDATED = '2026-10-29';
-const TITLE = 'AI Integration Services Australia | Xero, MYOB, ERP | FactoryJet';
+const UPDATED = '2026-10-31';
+const TITLE = 'AI Integration Services Australia | Xero & MYOB | FactoryJet';
 const H1 = 'AI Integration Services in Australia: AI Connected to the Systems You Run';
 const DESCRIPTION =
-  'AI integration services for established Australian businesses. We connect AI to Xero, MYOB, NetSuite, Cin7, Unleashed, marketplaces and couriers. Demo on your data first.';
+  'AI integration services in Australia. We connect AI to Xero, MYOB, NetSuite, Cin7, Unleashed, marketplaces and couriers, and demo it on your own data first.';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -86,35 +87,40 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'What is the meaning of AI integration?',
     answer: 'AI integration is the wiring between an AI model and the software your business already runs. The AI gets read access to the records it needs, such as orders in Cin7 or invoices in Xero, does one job with them, and writes its result back where your team will see it. Without that wiring, staff copy data into a chat window and paste the answer back by hand.' },
   { category: 'basics', question: 'How is AI integration different from AI development?',
-    answer: 'Integration starts from your existing stack and adds AI to it. Development can mean building a whole new application, an AI feature inside your own product, or a data platform. Most established businesses get value faster from integration, because the systems, the data and the habits are already there. If you need a new app as well, our AI development page covers that work.',
+    answer: 'An AI integration specialist starts from your existing stack and adds AI to it. Development can mean building a whole new application, an AI feature inside your own product, or a data platform. Most established businesses get value faster from integration, because the systems and the data are already there. If you need a new app as well, our AI development page covers that work.',
     links: [{ href: '/au/ai-development', label: 'AI development in Australia' }] },
   { category: 'basics', question: 'Which AI is best for integration?',
-    answer: 'The model matters less than the connection around it. GPT, Claude and Gemini all read invoices, emails and order notes well enough for business work. We choose per job, based on accuracy on your real examples, where the provider can process data, and what your security team will approve. We keep the model behind our own integration code, so it can be swapped later without rebuilding the Xero or ERP side.' },
+    answer: 'The model matters less than the connection around it. OpenAI’s GPT models (the ones behind ChatGPT), Claude and Gemini all read invoices, emails and order notes well enough for business work. We choose per job, based on accuracy on your real examples, where the provider can process data, and what your security team will approve. We keep the model behind our own integration code, so it can be swapped later without rebuilding the Xero or ERP side.' },
   { category: 'basics', question: 'Do we have to replace our current software to use AI?',
     answer: 'No. The point of integration is to leave Xero, MYOB, NetSuite or Cin7 where they are and connect AI to them through each vendor’s official API. Your team keeps the same screens. What changes is that draft bills and order matches appear inside those screens instead of being typed. If a system has no API at all, we look at exports or a different first job before suggesting any change.' },
   { category: 'basics', question: 'What is an MCP server, and do we need one?',
     answer: 'MCP, the Model Context Protocol, is an open standard for connecting AI applications to outside systems. Its own documentation compares it to a USB-C port for AI. An MCP server exposes chosen actions, such as listing invoices, to an AI assistant. Xero publishes an open-source MCP server. You need one when staff want to ask an assistant like Claude about live data. Background jobs usually call the API directly.',
     links: [{ href: SRC_MCP, label: 'Model Context Protocol: introduction' }, { href: SRC_XERO_MCP, label: 'Xero MCP server on GitHub' }] },
+  { category: 'basics', question: 'What are examples of AI integration?',
+    answer: 'Five examples from the jobs on this page. Supplier emails become draft bills in Xero or MYOB. Emailed purchase orders become draft sales orders in NetSuite or Odoo. Afterpay, Zip and Stripe payout reports become proposed matches for your bookkeeper. Marketplace cancellation messages get matched to the order and a reply drafted. Delivery exception emails from Australia Post become customer updates. In each one, a person approves the result.' },
+  { category: 'basics', question: 'Which companies offer AI integration services in Australia?',
+    answer: 'Four kinds of provider. ERP and accounting partners add AI inside the one product they resell. Automation consultancies build flows in Zapier, Make or n8n. Larger IT firms run AI programs for enterprise stacks. An AI integration company like FactoryJet connects AI across several systems at once, such as Xero, an ERP and your sales channels. Ask each one who owns the code and whether they will demo on your own data first.' },
   { category: 'basics', question: 'Can we build our own AI integration for free?',
     answer: 'You can build a test for little or no software cost. Xero’s MCP server is open source, n8n can be self-hosted, and most AI providers have free tiers. A test on sample data is a sensible way to learn. The cost appears when the integration touches live ledgers and customer records: permissions, logging, approval steps, error handling when an API is busy, and someone accountable when it stops at 2am.' },
 
   // ── Systems ──
   { category: 'systems', question: 'Can you connect AI to Xero?',
-    answer: 'Yes. For one business, the usual route is a Xero Custom Connection, which Xero says links to a single organisation and is purchased by that organisation for each app. Connections created from 29 April 2026 use granular scopes that do not include journal access, so we design around what those scopes allow. Common jobs are coding supplier bills and matching marketplace payouts to invoices, with a person approving each one.',
+    answer: 'Yes. A Xero integration for one business usually runs on a Xero Custom Connection, which Xero says links to a single organisation and is purchased by that organisation for each app. Connections created from 29 April 2026 use granular scopes (narrow permissions, one per type of data) that do not include journal access, so we design around what those scopes allow. Common jobs are coding supplier bills and matching marketplace payouts to invoices, with a person approving each one.',
     links: [{ href: SRC_XERO_FAQ, label: 'Xero Developer FAQ' }] },
   { category: 'systems', question: 'What limits does the Xero API put on an AI integration?',
-    answer: 'Each app connected to a Xero organisation gets 60 calls a minute, 5,000 a day and no more than 5 at once, plus 10,000 calls a minute across all organisations using one app. A business pushing several thousand marketplace orders a day into Xero can hit the daily figure. We batch writes, queue work during peaks and summarise orders where your accountant agrees that is acceptable.',
+    answer: 'Each app connected to a Xero organisation gets 60 calls a minute and 5,000 a day. No more than 5 calls can run at once. Across all organisations using one app, the cap is 10,000 calls a minute. A business pushing several thousand marketplace orders a day into Xero can hit the daily figure. We batch writes, queue work during peaks and summarise orders where your accountant agrees that is acceptable.',
     links: [{ href: SRC_XERO_LIMITS, label: 'Xero API limits' }] },
   { category: 'systems', question: 'We run MYOB AccountRight. Does that change the integration?',
-    answer: 'Not much. MYOB says AccountRight, Essentials and MYOB Business all integrate through the same API, and that MYOB Business will replace Essentials and AccountRight for new customers in Australia. Apps register for an API key and secret and authenticate with OAuth. We build against the shared API so a later move from AccountRight to MYOB Business does not mean starting again.',
+    answer: 'Not much. A MYOB integration works the same way for all three: MYOB says AccountRight, Essentials and MYOB Business all integrate through the same API, and that MYOB Business will replace Essentials and AccountRight for new customers in Australia. Apps register for an API key and secret, then sign in with OAuth, a standard way to grant an app access without sharing your password. We build against the shared API so a later move from AccountRight to MYOB Business does not mean starting again.',
     links: [{ href: SRC_MYOB_API, label: 'MYOB API: getting started' }] },
   { category: 'systems', question: 'Can AI work with NetSuite, Odoo or QuickBooks Online?',
-    answer: 'Yes. We connect through the official interface each vendor provides and confirm during discovery what your edition, licence and roles allow, because that differs between accounts. Typical jobs are turning emailed purchase orders into draft sales orders, flagging pricing that breaks a customer agreement, and summarising overdue accounts. We have delivered an Odoo integration for a distributor, and are building QuickBooks connections to Shopify.' },
-  { category: 'systems', question: 'Can AI keep Cin7 or Unleashed stock in step with our channels?',
+    answer: 'Yes. We connect through the official interface each vendor provides and confirm during discovery what your edition, licence and roles allow, because that differs between accounts. Typical jobs are turning emailed purchase orders into draft sales orders, flagging pricing that breaks a customer agreement, and summarising overdue accounts. We have built a WooCommerce-to-Odoo connection for a distributor, tested against Odoo’s staging system, with the store’s launch still ahead. We are also building QuickBooks connections to Shopify.',
+    links: [{ href: '/au/netsuite-ai-agents', label: 'NetSuite AI agents in Australia' }, { href: '/au/sales-order-automation-ai-agents', label: 'Sales order automation' }] },
+  { category: 'systems', question: 'Can AI keep Cin7 or Unleashed stock in sync with our sales channels?',
     answer: 'It can help, with care about who is the source of truth. Inventory systems like Cin7 Core and Unleashed should own stock numbers. The AI’s job is the messy edges: reading supplier emails about late stock, drafting purchase orders from reorder points, and flagging listings where stock and price disagree. Unleashed notes that API credentials are only available to the account owner, so that person needs to be in the kick-off.',
     links: [{ href: SRC_UNLEASHED_API, label: 'Unleashed API documentation' }] },
-  { category: 'systems', question: 'Can AI handle orders from Amazon.com.au, Bunnings Marketplace and THE ICONIC?',
-    answer: 'Yes, as the layer that reads and drafts rather than the system of record. Each marketplace has its own order format, cancellation rules and customer messages. An AI integration can read those messages, match them to the order in your ERP or Cin7, draft a reply and flag a cancellation for approval. The same pattern covers eBay Australia and Kogan. We confirm each marketplace’s seller access during discovery.' },
+  { category: 'systems', question: 'Can AI handle marketplace orders from Amazon.com.au or Bunnings Marketplace?',
+    answer: 'Yes, as the layer that reads and drafts. It is not the system of record (the one system whose numbers count). Each marketplace has its own order format, cancellation rules and customer messages. An AI integration can read those messages, match them to the order in your ERP or Cin7, draft a reply and flag a cancellation for approval. The same pattern covers THE ICONIC, eBay Australia and Kogan. We confirm each marketplace’s seller access during discovery.' },
   { category: 'systems', question: 'Can AI match Afterpay, Zip and Stripe payouts in Xero?',
     answer: 'It can do most of the reading and leave the decision to your bookkeeper. Payout reports from buy now pay later providers and Stripe bundle many orders, fees and refunds into one bank line. The integration reads the report, links each order to its invoice, proposes the fee and refund lines, and leaves a draft match for approval. Nothing is reconciled without a person agreeing to it.' },
   { category: 'systems', question: 'Can an AI integration book Australia Post, StarTrack or Sendle shipments?',
@@ -125,22 +131,22 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Flowtivity’s March 2026 Australian guide budgets A$1,000 to A$3,000 per integration as a rough guide, and A$20,000 to A$50,000 or more for multi-system workflow automation. For a full custom agent, the range Web Video Digital published in August 2026 runs from A$15,000 to A$150,000. Neither guide says whether GST is included. These are market ranges, not our prices. We quote a fixed price per phase in writing after scoping.',
     links: [{ href: SRC_FLOWTIVITY, label: 'Flowtivity, Australian AI pricing guide (March 2026)' }, { href: SRC_WVD, label: 'Web Video Digital, AI agent cost in Australia (August 2026)' }] },
   { category: 'cost', question: 'How long does an AI integration project take?',
-    answer: 'Flowtivity lists 6 to 12 weeks for multi-system workflow automation, which matches what we see when three or more systems are involved. A single job in one well-documented system, such as drafting bills in Xero, is shorter. Older ERPs, missing test environments and slow access approvals stretch timelines more than the AI work does. We give a dated plan after discovery, once we have seen your systems.',
+    answer: 'Flowtivity lists 6 to 12 weeks for multi-system workflow automation. A single job in one well-documented system, such as drafting bills in Xero, has fewer connections to build and test. Older ERPs and slow access approvals stretch timelines more than the AI work does. We give a dated plan after discovery, once we have seen your systems.',
     links: [{ href: SRC_FLOWTIVITY, label: 'Flowtivity, Australian AI pricing guide' }] },
   { category: 'cost', question: 'What should we put in a brief or RFP for AI integration?',
     answer: 'Name every system involved, with edition and who administers it. Describe one job in plain steps: where it starts, who touches it and where it ends. Add monthly volumes, ten to twenty real examples with personal details removed, the approval rules you want, and any data residency or security requirements. Say what success looks like as a number you already track. That is enough for a fixed-price quote.' },
   { category: 'cost', question: 'Will you show a working demo before we sign?',
     answer: 'Yes. Before you commit to a build, we connect to a test copy of one system, or to sample data you approve, and show the AI doing your chosen job on your own examples. You see the output, the approval step and the log. That is the fastest way to find out whether the job suits AI, and it gives your finance and IT people something concrete to review.' },
   { category: 'cost', question: 'What happens when Xero, MYOB or a marketplace changes its API?',
-    answer: 'Integrations need looking after, because vendors change scopes, retire endpoints and adjust limits. Xero’s move to granular scopes for connections created from 29 April 2026 is one recent example. We document every connection, monitor errors, and tell you when a change is coming. Support is optional: each change is quoted and approved before work starts, with no monthly minimum, or your own team can take it over.',
+    answer: 'Integrations need looking after, because vendors change scopes, switch off old API addresses (endpoints) and adjust limits. Xero’s move to granular scopes for connections created from 29 April 2026 is one recent example. We document every connection, monitor errors, and tell you when a change is coming. Support is optional: each change is quoted and approved before work starts, with no monthly minimum, or your own team can take it over.',
     links: [{ href: SRC_XERO_FAQ, label: 'Xero Developer FAQ' }] },
 
   // ── Data & ownership ──
   { category: 'data', question: 'Does the Privacy Act apply when AI reads our customer records?',
     answer: 'Yes, for any business the Privacy Act 1988 covers. According to the OAIC, the obligations reach personal information that goes into an AI system as well as AI output that contains it. It also recommends, as best practice, not entering personal information into publicly available AI tools. An integration helps here, because it can pass only the fields a job needs instead of whole records.',
     links: [{ href: SRC_OAIC_AI, label: 'OAIC guidance on commercially available AI products' }] },
-  { category: 'data', question: 'What changes for AI integrations on 10 December 2026?',
-    answer: 'From 10 December 2026, APP 1.7 says a covered business’s privacy policy must explain any software that relies on personal information to reach decisions with a significant effect on a person. The change came in with the Privacy and Other Legislation Amendment Act 2024. An integration that helps set credit terms, pricing or account holds for individual customers may need to be described in that policy; your privacy adviser decides. We hand over a plain list of what each integration decides.',
+  { category: 'data', question: 'Does the December 2026 Privacy Act change affect AI integrations?',
+    answer: 'It can. From 10 December 2026, APP 1.7 says a covered business’s privacy policy must explain software that uses personal information to make decisions with a significant effect on a person. The Privacy and Other Legislation Amendment Act 2024 made the change. An integration that helps set credit terms or account holds for a customer may need a mention. Your privacy adviser decides, using our plain list of what each integration decides.',
     links: [{ href: SRC_OAIC_APP1, label: 'OAIC APP guidelines, chapter 1' }] },
   { category: 'data', question: 'Can the AI post transactions into our ledger on its own?',
     answer: 'Only if you decide it should, and we advise against it for anything involving money. Our default is drafts: the AI creates a draft bill, a proposed payout match or a suggested credit note, and a named person approves it. Every write uses its own integration login, so your ledger history shows exactly what the AI did. Low-risk actions such as tagging can move to automatic after a pilot.' },
@@ -149,20 +155,24 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 ];
 
 /* ─── Systems we connect AI to (platlist rows) ─── */
-const SYSTEMS: { t: string; d: string }[] = [
-  { t: 'Xero', d: 'Draft bills from supplier emails, payout matching for bookkeeper approval, overdue reminders, and month-end summaries. Built on a Custom Connection or an app, within Xero’s per-organisation call limits.' },
-  { t: 'MYOB Business, AccountRight and Essentials', d: 'Supplier bills, customer statements and job costing notes through the shared MYOB API, designed so a move from AccountRight to MYOB Business does not break the build.' },
-  { t: 'QuickBooks Online, NetSuite and Odoo', d: 'Emailed purchase orders turned into draft sales orders, contract pricing checks, credit hold summaries and approval queues inside the ERP your finance team already uses.' },
+const SYSTEMS: { t: string; d: string; link?: { href: string; label: string } }[] = [
+  { t: 'Xero integration', d: 'Draft bills from supplier emails, payout matching for bookkeeper approval, overdue reminders, and month-end summaries. Built on a Custom Connection or an app, within Xero’s per-organisation call limits.',
+    link: { href: '/au/shopify-xero-integration', label: 'Shopify and Xero integration' } },
+  { t: 'MYOB integration: MYOB Business, AccountRight and Essentials', d: 'Supplier bills, customer statements and job costing notes through the shared MYOB API, designed so a move from AccountRight to MYOB Business does not break the build.' },
+  { t: 'QuickBooks Online, NetSuite and Odoo', d: 'Emailed purchase orders turned into draft sales orders, contract pricing checks, credit hold summaries and approval queues inside the ERP your finance team already uses.',
+    link: { href: '/au/erp-ai-agents', label: 'AI agents for ERP systems' } },
   { t: 'Cin7 Core, Cin7 Omni and Unleashed', d: 'Supplier delay emails read and matched to purchase orders, reorder drafts from stock rules, and listings flagged where stock and price disagree across channels.' },
-  { t: 'Amazon.com.au, eBay, Kogan, Bunnings Marketplace, THE ICONIC', d: 'Customer messages and cancellation requests read, matched to the order in your system of record, and drafted for a person to send.' },
-  { t: 'Afterpay, Zip and Stripe', d: 'Settlement reports split into orders, fees and refunds, then proposed as matches in Xero or MYOB for approval.' },
+  { t: 'Amazon.com.au, eBay, Kogan, Bunnings Marketplace, THE ICONIC', d: 'Customer messages and cancellation requests read, matched to the order in your main order system, and drafted for a person to send.',
+    link: { href: '/au/ecommerce-erp-integration', label: 'Ecommerce and ERP integration' } },
+  { t: 'Afterpay, Zip and Stripe', d: 'Settlement reports split into orders, fees and refunds, then proposed as matches in Xero or MYOB for approval.',
+    link: { href: '/au/accounts-receivable-automation', label: 'Accounts receivable automation' } },
   { t: 'Australia Post, StarTrack and Sendle', d: 'Service and parcel details suggested from the order, passed to your shipping software, and delivery exception emails turned into drafted customer updates.' },
   { t: 'HubSpot, Salesforce, Zendesk and Microsoft 365', d: 'Account history summarised before a call, enquiries sorted into the right queue, and policy answers found in SharePoint with the source shown.' },
 ];
 
 /* ─── Integration patterns (capgrid, four cards) ─── */
 const PATTERNS: { n: string; t: string; d: string }[] = [
-  { n: '01', t: 'Direct API job', d: 'A background service reads from one system, asks the AI to do one task, and writes a draft back. Best for high-volume work such as bills or order emails, because it can queue around rate limits.' },
+  { n: '01', t: 'Direct API job', d: 'A background service reads from one system, asks the AI to do one task, and writes a draft back. Best for high-volume work such as bills or order emails, because it can queue work under each rate limit (the most calls a system accepts per minute).' },
   { n: '02', t: 'MCP server for staff', d: 'Staff ask an assistant such as Claude about live data: which invoices are overdue for a customer, what a supplier last quoted. The server exposes only the actions you approve, read-only by default.' },
   { n: '03', t: 'Workflow tool in the middle', d: 'n8n, Make or Power Automate handles triggers and simple routing, and calls AI only for the step that needs reading or judgement. Good when your team wants to adjust the flow without a developer.' },
   { n: '04', t: 'Exports where there is no API', d: 'Some older systems only offer scheduled file exports. We read those safely, keep the AI out of the write path, and record the gap so it can be closed if the system is upgraded.' },
@@ -171,7 +181,7 @@ const PATTERNS: { n: string; t: string; d: string }[] = [
 /* ─── Project steps (rendered as <details> expanders) ─── */
 const STEPS: { n: string; t: string; d: string; out: string }[] = [
   { n: '01', t: 'Read your brief and map the systems',
-    d: 'We read your brief or RFP, then list every system involved with its edition, owner, API access and test environment. Gaps in access show up here, not in week six.',
+    d: 'We read your brief or RFP, then list every system involved with its edition, owner, API access and test environment. Any missing access is found at this step, before the build starts.',
     out: 'A system map and a list of the access approvals your team needs to request.' },
   { n: '02', t: 'Pick one job and agree the number',
     d: 'We choose the first job by value and risk, then agree one measure you already track, such as bills keyed per week or hours spent on payout matching, and record today’s figure.',
@@ -182,7 +192,7 @@ const STEPS: { n: string; t: string; d: string; out: string }[] = [
   { n: '04', t: 'Design permissions and approvals',
     d: 'Each integration gets its own login with only the scopes the job needs. We write down what the AI may draft, what needs approval and what it can never touch, and check which personal information it will see.',
     out: 'A permissions and approval sheet, plus privacy notes for your adviser.' },
-  { n: '05', t: 'Build against limits, not around them',
+  { n: '05', t: 'Build to each vendor’s published limits',
     d: 'We build the connectors with queues, retries and batching sized to each vendor’s published limits, and keep the AI model behind our own code so it can be changed later.',
     out: 'Connectors running in a test environment, in your repository.' },
   { n: '06', t: 'Test on past cases, then pilot with people checking',
@@ -260,7 +270,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['ai-integration-services'] },
   openGraph: {
     title: TITLE,
     description:
@@ -307,6 +317,7 @@ const RELATED: { h: string; t: string; d: string }[] = [
   { h: '/au/ai-agents', t: 'AI agents and automation', d: 'Agents that take actions across several tools within rules you set.' },
   { h: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'Supplier invoices read, checked and drafted as bills in Xero or MYOB.' },
   { h: '/au/ai-consulting', t: 'AI consulting', d: 'Not sure which job to integrate first? Start with a ranked list of use cases.' },
+  { h: '/au/ecommerce-erp-integration', t: 'Ecommerce and ERP integration', d: 'Store, marketplace and ERP orders, stock and prices kept in sync without re-keying.' },
   { h: '/au/ecommerce-development', t: 'Ecommerce development', d: 'Stores, B2B portals and the order flows an integration plugs into.' },
   { h: '/services/ai-integration-services', t: 'AI integration services (US)', d: 'The same service for US businesses on QuickBooks, Salesforce and HubSpot.' },
 ];
@@ -380,7 +391,7 @@ export default function AiIntegrationServicesAUPage() {
                 <label className="specrow run">
                   <input className="workflow-select" type="radio" name="integration-au-step" value="1" />
                   <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[0]} /></svg></span>
-                  <span className="idx">own login, least access</span>
+                  <span className="idx">own login, only the access it needs</span>
                   <span className="title">Official API connections</span>
                   <span className="tag">Per system</span>
                 </label>
@@ -426,8 +437,8 @@ export default function AiIntegrationServicesAUPage() {
 
         <div className="wrap byline">
           <div className="av">BB</div>
-          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="who"><b><a href="/about">Bhavesh Barot</a></b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST (GEO) → Family A facts ═══ */}
@@ -455,7 +466,7 @@ export default function AiIntegrationServicesAUPage() {
                       Wholesalers, distributors, multi-channel retailers and service firms with a finance team, several
                       connected systems and the same data being typed twice every day. If your team re-keys emailed
                       purchase orders into NetSuite, or spends Monday matching Afterpay payouts in Xero, the job is
-                      already defined. The integration is the missing piece.
+                      already defined.
                     </p>
                   </div>
                 </div>
@@ -489,15 +500,18 @@ export default function AiIntegrationServicesAUPage() {
                 The system itself stays the record of truth, and your team keeps the final say.
               </p>
             </div>
-            <div className="platlist" role="list">
+            <ul className="platlist" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
               {SYSTEMS.map((c, i) => (
-                <div key={c.t} className="plat plat-2col" role="listitem">
+                <li key={c.t} className="plat plat-2col">
                   <span className="capid">{String(i + 1).padStart(2, '0')}</span>
                   <div className="plat-name"><h3>{c.t}</h3></div>
-                  <p className="plat-build">{c.d}</p>
-                </div>
+                  <p className="plat-build">
+                    {c.d}
+                    {c.link ? <>{' '}See <a href={c.link.href}>{c.link.label}</a>.</> : null}
+                  </p>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -540,7 +554,9 @@ export default function AiIntegrationServicesAUPage() {
                 <div className="fact"><div className="sec">§01</div><p>
                   Xero allows each connected organisation 60 calls a minute and 5,000 a day, with at most 5 running together.
                   A distributor syncing marketplace orders, payouts and stock adjustments can pass 5,000 calls in a
-                  single sale day. We size queues and batches to those numbers before writing the first connector.
+                  single sale day. The sum is short: if each order needs 3 calls (create the invoice, apply the
+                  payment, update the contact), 1,700 orders use 5,100 calls and pass the daily cap. We size queues and
+                  batches to those numbers before writing the first connector.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
                   Xero Custom Connections link to a single organisation and are bought by that organisation per app.
@@ -578,7 +594,7 @@ export default function AiIntegrationServicesAUPage() {
         {/* ═══ PROJECT STEPS → process timeline ═══ */}
         <section className="section process" id="how-we-work">
           <div className="wrap">
-            <div className="section-head">
+            <div className="section-head head-stack">
               <div className="eyebrow">How a project runs</div>
               <h2>AI integration in seven steps, from your brief to a live connection</h2>
               <p className="lead">
@@ -605,7 +621,7 @@ export default function AiIntegrationServicesAUPage() {
           <MidPageCTA
             headline={'Which system does your team re-key data into every day?'}
             sub={'Tell us the job and the systems involved. The founder will reply within 24 hours and tell you whether AI suits it, which pattern fits, and what a demo on your own data would involve.'}
-            label={'Talk to the Founder'}
+            label={'See a demo on my data'}
           />
         </div>
 
@@ -615,20 +631,20 @@ export default function AiIntegrationServicesAUPage() {
             <div className="section-head plat-head">
               <div>
                 <div className="eyebrow">Terms</div>
-                <h2>How we work with you</h2>
+                <h2>What are the terms for an AI integration project?</h2>
               </div>
               <p>
                 The same terms apply to every AI integration we build for Australian businesses, whatever the size of
                 the first phase.
               </p>
             </div>
-            <div className="platlist" role="list">
-              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Demo before you sign</h3></div><p className="plat-build">You see working software on your own data, or sample data you approve, before you commit to a build.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Fixed price per phase</h3></div><p className="plat-build">Each phase is scoped, priced and signed on its own, in writing. No hourly meter on the build.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>You own the code</h3></div><p className="plat-build">Connectors, prompts and documentation sit in your repository from day one. AI and hosting can run in your own accounts at cost, with no markup.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Defect cover in the build price</h3></div><p className="plat-build">Defects found after launch are fixed inside the build price for a cover period agreed before work starts.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">05</span><div className="plat-name"><h3>Support is optional</h3></div><p className="plat-build">Each change is quoted and approved before work starts, with no monthly minimum. We can keep managing the servers and APIs if you want that.</p></div>
-            </div>
+            <ul className="platlist" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+              <li className="plat plat-2col"><span className="capid">01</span><div className="plat-name"><h3>Demo before you sign</h3></div><p className="plat-build">You see working software on your own data, or sample data you approve, before you commit to a build.</p></li>
+              <li className="plat plat-2col"><span className="capid">02</span><div className="plat-name"><h3>Fixed price per phase</h3></div><p className="plat-build">Each phase is a fixed price, quoted in writing and signed on its own. Changes are quoted and approved per request, and there is no monthly minimum.</p></li>
+              <li className="plat plat-2col"><span className="capid">03</span><div className="plat-name"><h3>You own the code</h3></div><p className="plat-build">Connectors, prompts and documentation sit in your repository from day one. AI and hosting can run in your own accounts at cost, with no markup.</p></li>
+              <li className="plat plat-2col"><span className="capid">04</span><div className="plat-name"><h3>Defect cover in the build price</h3></div><p className="plat-build">Defects found after launch are fixed inside the build price for a cover period agreed before work starts.</p></li>
+              <li className="plat plat-2col"><span className="capid">05</span><div className="plat-name"><h3>Support is optional</h3></div><p className="plat-build">Each change is quoted and approved before work starts, with no monthly minimum. We can keep managing the servers and APIs if you want that.</p></li>
+            </ul>
           </div>
         </section>
 
@@ -659,12 +675,12 @@ export default function AiIntegrationServicesAUPage() {
               <div className="au-panel">
                 <div className="eyebrow">What moves the scope</div>
                 <ul className="trigrows">
-                  <li><span className="m">Number of systems connected</span><span className="t">Reach</span></li>
-                  <li><span className="m">Test environments available</span><span className="t">Speed</span></li>
-                  <li><span className="m">Older systems without an API</span><span className="t">Effort</span></li>
-                  <li><span className="m">Approval and logging rules</span><span className="t">Control</span></li>
-                  <li><span className="m">Personal or health information</span><span className="t">Privacy</span></li>
-                  <li><span className="m">Support after launch</span><span className="t">Optional</span></li>
+                  <li><span className="m">Number of systems connected: each one adds a connector to build and test</span><span className="t">Reach</span></li>
+                  <li><span className="m">Test environments available: without one, testing waits for sample data you approve</span><span className="t">Speed</span></li>
+                  <li><span className="m">Older systems without an API: the build reads file exports instead</span><span className="t">Effort</span></li>
+                  <li><span className="m">Approval and logging rules: each approval step is a screen to design</span><span className="t">Control</span></li>
+                  <li><span className="m">Personal or health information: fields are removed before the AI sees them</span><span className="t">Privacy</span></li>
+                  <li><span className="m">Support after launch: quoted per change, with no monthly minimum</span><span className="t">Optional</span></li>
                 </ul>
               </div>
             </div>
@@ -691,9 +707,9 @@ export default function AiIntegrationServicesAUPage() {
               </p>
             </div>
             <div className="au-panel">
-              <div className="eyebrow">Work we have done</div>
+              <div className="eyebrow">Work we can show</div>
               <ul className="trigrows">
-                <li><span className="m">Sow Easy: WooCommerce and Odoo integration</span><span className="t">Odoo</span></li>
+                <li><span className="m">Sow Easy: WooCommerce and Odoo integration (launch ahead)</span><span className="t">Odoo</span></li>
                 <li><span className="m">HubSpot integrations delivered</span><span className="t">CRM</span></li>
                 <li><span className="m">Salesforce integrations delivered</span><span className="t">CRM</span></li>
                 <li><span className="m">Shopify to QuickBooks Online and Enterprise (in progress)</span><span className="t">Accounting</span></li>
@@ -716,24 +732,25 @@ export default function AiIntegrationServicesAUPage() {
                 Each option suits a different job. If an app in the Xero or MYOB marketplace already does yours, use it.
               </p>
             </div>
-            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
-              <table>
+            <p className="md:hidden au-note" style={{ marginBottom: 8 }}>Swipe sideways to see every column.</p>
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 760 }}>
                 <thead>
                   <tr>
                     <th>What you get</th>
                     <th className="fj">FactoryJet</th>
                     <th>Off-the-shelf app</th>
-                    <th>Workflow tool (DIY)</th>
+                    <th>Workflow tool such as Zapier or Make (DIY)</th>
                     <th>ERP partner</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr><th scope="row">Best fit</th><td className="fj">One job across several systems</td><td>A common job in one system</td><td>Simple links between two apps</td><td>Changes inside the ERP itself</td></tr>
                   <tr><th scope="row">Works across Xero, ERP and channels</th><td className="fj">Yes, designed for it</td><td>Usually one or two</td><td>If connectors exist</td><td>Mostly their own product</td></tr>
-                  <tr><th scope="row">Planned around API limits</th><td className="fj">Before the build</td><td>Vendor handles it</td><td>On you</td><td>Varies</td></tr>
-                  <tr><th scope="row">Approval steps on money</th><td className="fj">Every build</td><td>Depends on the app</td><td>If you add them</td><td>Varies</td></tr>
-                  <tr><th scope="row">Demo on your data first</th><td className="fj">Yes</td><td>Often a trial</td><td>You build it</td><td>Sometimes</td></tr>
-                  <tr><th scope="row">Who owns it</th><td className="fj">You: code and logins</td><td>Licensed to you</td><td>You, inside the tool</td><td>Check the contract</td></tr>
+                  <tr><th scope="row">Planned around API limits</th><td className="fj">Before the build</td><td>Vendor handles it</td><td>On you</td><td>Inside their own ERP; ask about other systems</td></tr>
+                  <tr><th scope="row">Approval steps on money</th><td className="fj">Every build</td><td>Depends on the app</td><td>If you add them</td><td>Ask for them in the scope</td></tr>
+                  <tr><th scope="row">Demo on your data first</th><td className="fj">Yes</td><td>Often a trial</td><td>You build it</td><td>Ask for one on your data</td></tr>
+                  <tr><th scope="row">Who owns it</th><td className="fj">You: code and logins</td><td>Licensed to you</td><td>You, inside the tool</td><td>Set by the partner contract; ask who holds the code</td></tr>
                 </tbody>
               </table>
             </div>
@@ -761,9 +778,9 @@ export default function AiIntegrationServicesAUPage() {
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><div>
                   <p>
-                    The Privacy and Other Legislation Amendment Act 2024 added APP 1.7, which from 10 December 2026 makes
-                    covered businesses describe, in their privacy policy, software that uses personal information to
-                    reach decisions with a significant effect on people. We keep a written record of what each
+                    The Privacy and Other Legislation Amendment Act 2024 added APP 1.7. From 10 December 2026, covered
+                    businesses must describe in their privacy policy any software that uses personal information to
+                    make decisions with a significant effect on people. We keep a written record of what each
                     integration decides for that policy. We are not lawyers, so your adviser signs it off.
                   </p>
                   <p className="au-note">
@@ -781,7 +798,7 @@ export default function AiIntegrationServicesAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Related services</div>
-              <h2>Need something other than an integration?</h2>
+              <h2>Which related AI and ecommerce services do Australian businesses use?</h2>
             </div>
             <div className="agentdir-group">
               <div className="agentdir-label">

@@ -6,7 +6,6 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
@@ -14,6 +13,8 @@ import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import { twinAlternates } from '@/data/hreflangMap';
+import { FOUNDER_ID } from '@/data/organization';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -22,9 +23,9 @@ import FinalCTA from '@/components/v2/FinalCTA';
 const CANONICAL_URL = 'https://factoryjet.com/services/crm-ai-agents';
 
 export const metadata: Metadata = {
-  title: 'AI Agents for HubSpot and Salesforce | FactoryJet',
+  title: 'AI Agents for Salesforce and HubSpot | FactoryJet',
   description:
-    'Custom AI agents that qualify leads, update deal stages, log calls and emails, enrich contacts and draft follow-ups inside HubSpot or Salesforce, with your approval rules.',
+    'Custom AI agents for HubSpot and Salesforce that qualify leads, update deals, log calls and enrich contacts. Your approval rules. Demo on your data first.',
   keywords: [
     'hubspot ai agent',
     'salesforce ai agent',
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Agents for HubSpot and Salesforce | FactoryJet',
+    title: 'AI Agents for Salesforce and HubSpot | FactoryJet',
     description:
       'Agents that qualify leads, update deals, log activity and draft follow-ups in your CRM. Your rules decide what needs approval. Fixed price per phase.',
     url: CANONICAL_URL,
@@ -56,17 +57,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Agents for HubSpot and Salesforce | FactoryJet',
+    title: 'AI Agents for Salesforce and HubSpot | FactoryJet',
     description:
       'Custom CRM agents with human approval rules. See a demo on your own records before you sign.',
     images: ['https://factoryjet.com/images/us/services/hero-ai-integration.webp'],
   },
   alternates: {
     canonical: CANONICAL_URL,
-    languages: {
-      'en-US': CANONICAL_URL,
-      'x-default': CANONICAL_URL,
-    },
+    languages: twinAlternates['crm-ai-agents'],
   },
   robots: {
     index: true,
@@ -87,15 +85,17 @@ export const metadata: Metadata = {
 ───────────────────────────────────────────────────────────────────────────── */
 
 // Freshness signal. Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_MODIFIED = '2026-10-31';
 
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': `${CANONICAL_URL}#webpage`,
   url: CANONICAL_URL,
-  name: 'AI Agents for HubSpot and Salesforce',
+  name: 'AI Agents for Salesforce and HubSpot',
   dateModified: PAGE_MODIFIED,
+  author: { '@type': 'Person', '@id': FOUNDER_ID, name: 'Bhavesh Barot' },
+  reviewedBy: { '@type': 'Person', '@id': FOUNDER_ID, name: 'Bhavesh Barot' },
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
@@ -110,11 +110,7 @@ const serviceSchema = {
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
-  areaServed: [
-    { '@type': 'Country', name: 'United States' },
-    { '@type': 'Country', name: 'United Kingdom' },
-    { '@type': 'Country', name: 'Australia' },
-  ],
+  areaServed: [{ '@type': 'Country', name: 'United States' }],
   serviceType: 'CRM AI agent development',
   description:
     'Custom AI agents built for sales and RevOps teams that qualify inbound leads, update deal stages, log calls and emails, enrich contacts and draft follow-ups inside HubSpot or Salesforce, with human approval rules set per action.',
@@ -304,7 +300,7 @@ const COMPARISON_ROWS = [
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="vendor" kind="no" />,
-      <CompareIcon key="zap" kind="partial" />,
+      'The workflow stays in your Zapier or Make account and runs only there.',
     ],
   },
   {
@@ -347,7 +343,25 @@ const FAQ_ITEMS = [
     category: 'basics',
     question: 'Is a CRM agent the same as an AI SDR?',
     answer:
-      'They do different jobs. An AI SDR works at the edge of the CRM: it writes to new prospects, replies to inbound leads fast and books meetings. A CRM agent works on the records your team already has, keeping them accurate and moving deals forward. Many sales teams run both, and they can share the same lead scoring rules.',
+      'They do different jobs. An SDR is a sales development rep, the person who works new leads. An AI SDR works at the edge of the CRM: it writes to new prospects, replies to inbound leads fast and books meetings. A CRM agent works on the records your team already has, keeping them accurate and moving deals forward. Many sales teams run both, and they can share the same lead scoring rules.',
+  },
+  {
+    category: 'basics',
+    question: 'Do we need Agentforce to run an AI agent in Salesforce?',
+    answer:
+      'No. Agentforce is Salesforce\'s own agent platform, and you can use it if it fits. A Salesforce AI agent can also be built outside it. The Salesforce REST API lets an approved app create, read, update and delete records, so a custom agent signs in through its own connected app and works on leads, contacts and opportunities. Our Agentforce pricing guide compares the cost of each route.',
+  },
+  {
+    category: 'basics',
+    question: 'Do you build agents for Dynamics 365, Zoho or Pipedrive?',
+    answer:
+      'This page covers HubSpot and Salesforce. Microsoft Dynamics 365, Zoho CRM and Pipedrive each publish an API for reading and writing records, so an agent connects to them the same way: its own login, limited permissions and your approval rules. Send the CRM name with your brief and we confirm what its API allows before we quote.',
+  },
+  {
+    category: 'basics',
+    question: 'Will AI agents replace our CRM or our CRM admin?',
+    answer:
+      'No. The agent works inside the CRM you already pay for, and the records stay there. It takes over repeat work such as logging calls, filling empty fields and drafting follow-ups. Your CRM admin still owns the fields, the pipeline stages and the rules the agent follows. Your admin reviews the agent\'s suggestion log instead of fixing stale records by hand.',
   },
 
   /* ── What It Does ── */
@@ -355,7 +369,7 @@ const FAQ_ITEMS = [
     category: 'jobs',
     question: 'Which CRM tasks can an AI agent handle?',
     answer:
-      'Five jobs cover most of the requests we get. Qualifying inbound leads against your ideal customer rules. Updating deal stages when an email or call shows progress. Logging calls, meetings and emails to the right record. Enriching contacts and companies with missing fields. Drafting follow-ups for a rep to send. Each one can be built alone, or several can be combined into one agent.',
+      'Six jobs cover most of the requests we get. Qualifying inbound leads against your ideal customer rules. Updating deal stages when an email or call shows progress. Logging calls, meetings and emails to the right record. Enriching contacts and companies with missing fields. Drafting follow-ups for a rep to send. Reading your ERP or help desk before acting. Each one can be built alone, or several can be combined into one agent.',
   },
   {
     category: 'jobs',
@@ -368,12 +382,6 @@ const FAQ_ITEMS = [
     question: 'Will the agent move deals between stages on its own?',
     answer:
       'Only if you allow it. Most teams start with suggestions. The agent reads a reply or call notes, proposes a stage change with the reason, and the deal owner approves it in one click. Once suggestions prove right for a few weeks, you can let low-risk moves happen without approval, such as Discovery to Demo Booked. Closed Won stays with a person.',
-  },
-  {
-    category: 'jobs',
-    question: 'Can it log calls and emails automatically?',
-    answer:
-      'Yes. The agent matches each email thread, call summary or meeting note to the right contact, company and deal. It logs it as an activity with a short summary and next steps. If it cannot find a clear match, it does not guess. The item goes to a review list for a person to file.',
   },
   {
     category: 'jobs',
@@ -415,15 +423,9 @@ const FAQ_ITEMS = [
   },
   {
     category: 'safety',
-    question: 'Which AI model do you use for CRM agents?',
+    question: 'Which AI model do you use, and do you build CRM agents on Claude?',
     answer:
-      'We build on Claude, GPT or Gemini and pick per task. Tool use, where the model can only call functions we define, suits record updates because each action has a fixed shape that our code checks before anything reaches the CRM. The model sits behind our own code layer, so you can switch providers later without rebuilding the agent.',
-  },
-  {
-    category: 'safety',
-    question: 'Do you build CRM agents on Claude?',
-    answer:
-      'Yes. We build agents on the Anthropic API and use Claude\'s tool use, so the model can only call the CRM actions we define for it. FactoryJet is an independent services company, not part of Anthropic. If your company already has an Anthropic account, the agent can run in it, billed to you directly.',
+      'We build on Claude, GPT or Gemini and pick per task, and many of our agents run on the Anthropic API. With tool use, the model can only ask to run functions we define. Our code checks each request against your rules before anything reaches the CRM. The model sits behind that code layer, so you can switch providers later without a rebuild. FactoryJet is an independent services company, not part of Anthropic.',
   },
   {
     category: 'safety',
@@ -463,13 +465,13 @@ const FAQ_ITEMS = [
     category: 'cost',
     question: 'How much does a custom CRM AI agent cost?',
     answer:
-      'Market figures vary widely. Development firm ProductCrafters puts a custom AI agent build at $5,000 to more than $180,000 in its 2026 breakdown. Consultant Justin McKelvey puts a first done-for-you AI install for an owner-led business at $4,500 to $25,000, as of September 2026. FactoryJet quotes a fixed price in writing after a short scoping call. Both sources are linked below the questions.',
+      'Market figures vary widely. Development firm ProductCrafters, in the FAQ of its February 2026 cost guide, puts custom-built AI agents with integrations at $15,000 to $75,000, and enterprise multi-agent systems higher. FactoryJet does not publish a price list. We quote a fixed price per phase in writing after a short scoping call. Later changes are quoted and approved one request at a time.',
   },
   {
     category: 'cost',
     question: 'Are there monthly fees after launch?',
     answer:
-      'Not from us unless you choose support. The AI model and hosting can run in your own accounts, billed to you at cost with no markup. Defects found after launch are fixed inside the build price for a cover period agreed before work starts. After that, each change is quoted and approved first, and there is no monthly minimum.',
+      'Not from us unless you choose support. The AI model and hosting can run in your own accounts, billed to you at cost with no markup. Defects found after launch are fixed inside the build price for a cover period agreed before work starts. If you choose support, we keep managing the servers, model bills, updates and security, quoted as a fixed price. Each change is quoted and approved first, and there is no monthly minimum.',
   },
   {
     category: 'cost',
@@ -496,15 +498,38 @@ const faqSchema = {
 /** Market price sources named in the cost FAQ. Not FactoryJet prices. */
 const MARKET_PRICE_SOURCES = [
   {
-    label: 'ProductCrafters: AI Agent Development Cost, 2026 pricing breakdown',
+    label: 'ProductCrafters: AI Agent Development Cost, February 2026',
     url: 'https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent/',
-    note: 'Custom AI agent builds at $5K to $180K+.',
+    note: 'Custom-built agents with integrations at $15K to $75K, per its FAQ.',
   },
   {
-    label: 'Justin McKelvey: AI integration services',
-    url: 'https://justinmckelvey.com/blog/ai-integration-services',
-    note: 'A first done-for-you AI install at $4,500 to $25,000.',
+    label: 'Salesforce: REST API Developer Guide, working with records',
+    url: 'https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/using_resources_working_with_records.htm',
+    note: 'How an app creates, reads, updates and deletes Salesforce records.',
   },
+  {
+    label: 'Microsoft: Dataverse Web API overview (Dynamics 365)',
+    url: 'https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview',
+    note: 'The Web API for Dataverse, the data platform behind Dynamics 365 sales apps.',
+  },
+  {
+    label: 'Zoho CRM API documentation',
+    url: 'https://www.zoho.com/crm/developer/docs/api/v8/',
+    note: 'Zoho CRM record APIs.',
+  },
+  {
+    label: 'Pipedrive API reference',
+    url: 'https://developers.pipedrive.com/docs/api/v1',
+    note: 'Pipedrive deals, persons and activities APIs.',
+  },
+];
+
+/** Vendor pages behind the comparison table. */
+const COMPARISON_SOURCES = [
+  { label: 'Salesforce Agentforce developer guide', url: 'https://developer.salesforce.com/docs/ai/agentforce/guide' },
+  { label: 'HubSpot AI (Breeze)', url: 'https://www.hubspot.com/products/artificial-intelligence' },
+  { label: 'Zapier', url: 'https://zapier.com' },
+  { label: 'Make', url: 'https://www.make.com' },
 ];
 
 const LINK_CLASS = 'font-semibold underline underline-offset-2 text-[#B23E13]';
@@ -554,7 +579,7 @@ export default function CrmAiAgentsPage() {
                 source="us_services_crm_ai_agents_hero"
                 service="CRM AI Agents"
                 submitLabel="See a demo on my data"
-                trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+                trustText="Working software on your own data before you sign. Bhavesh replies within 24 hours."
               />
               <p className="mt-3 max-w-[540px] font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">
                 Have a brief or RFP? Attach it at step 2. We scope, price and sign each phase on its own.
@@ -564,7 +589,7 @@ export default function CrmAiAgentsPage() {
           eyebrow="CRM AI AGENTS · HUBSPOT · SALESFORCE"
           headline="AI agents that qualify leads and update records in HubSpot and Salesforce"
           lead="Your reps spend the end of each day logging calls, fixing fields and chasing stale deals. We build agents that do that work inside HubSpot or Salesforce: they score inbound leads, move deal stages, log activity, fill missing contact data and draft follow-ups. Your rules decide which actions need a person to approve them."
-          trustItems={['500+ businesses served', 'Fixed price per phase', 'You own the code']}
+          trustItems={['500+ businesses served', '97% on-time delivery', 'Fixed price per phase', 'You own the code']}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
@@ -573,7 +598,7 @@ export default function CrmAiAgentsPage() {
               >
                 ONE LEAD, FOUR ACTIONS
               </p>
-              <p className="mt-4 font-fj-display text-[1.75rem] font-medium leading-[1.15] tracking-[-0.025em] text-fj-ink">
+              <p className="mt-4 font-fj-display text-[1.75rem] font-extrabold leading-[1.15] tracking-[-0.025em] text-fj-ink">
                 A demo request arrives at 9:02. The CRM is up to date by 9:03.
               </p>
               <ol className="mt-6 space-y-3">
@@ -617,13 +642,25 @@ export default function CrmAiAgentsPage() {
                   enrich contacts and draft follow-ups. Your rules decide which actions need a person&apos;s approval
                   first.
                 </p>
+                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
+                  FactoryJet builds custom AI agents for HubSpot and Salesforce that qualify leads, update deal stages,
+                  log calls and emails and enrich contacts, with a demo on your own records before you sign. AI agents
+                  for CRM are a type of agentic AI, meaning AI that takes actions in your systems after reading them.
+                </p>
+                <p className="mt-4 font-fj-mono text-xs leading-relaxed text-fj-neutral-600">
+                  Updated 31 October 2026 &middot; Written by{' '}
+                  <a href="/author/bhavesh-barot" className="underline underline-offset-4">
+                    Bhavesh Barot
+                  </a>
+                  , Founder &amp; CEO
+                </p>
               </div>
               <div className="lg:col-span-5">
                 <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.14em] text-fj-neutral-600">
                   WHO THIS IS FOR
                 </p>
                 <ul className="mt-3 space-y-2 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  <li>Sales and RevOps leaders with a real CRM and a team of reps.</li>
+                  <li>Sales leaders and RevOps (revenue operations) leads who run a CRM for a team of reps.</li>
                   <li>Companies on HubSpot Sales Hub, Salesforce Sales Cloud, or both.</li>
                   <li>Teams where CRM data goes stale because logging comes last.</li>
                   <li>Buyers with a written brief or RFP who want a fixed price.</li>
@@ -633,12 +670,26 @@ export default function CrmAiAgentsPage() {
           </div>
         </section>
 
-        {/* ── 3. TRUST STATS ───────────────────────────────────────────────── */}
-        <BigThreeTrustBlock
-          variant="statement"
-          eyebrow="BY THE NUMBERS"
-          headline="500+ businesses. 12 years of building. Agents your team can check."
-        />
+        {/* ── 3. TRUST STATS (page-local, left-aligned tiles) ──────────────── */}
+        <section className="border-b border-fj-neutral-200 bg-fj-cream py-10 md:py-12">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.14em] text-[#B23E13]">
+              BY THE NUMBERS
+            </p>
+            <ul className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              {[
+                { stat: '500+', label: 'businesses served' },
+                { stat: '97%', label: 'of projects delivered on time' },
+                { stat: '2014', label: 'the year FactoryJet started building' },
+              ].map((t) => (
+                <li key={t.stat} className="rounded-2xl border border-fj-neutral-200 bg-white p-5 text-left">
+                  <p className="font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink">{t.stat}</p>
+                  <p className="mt-1 font-fj-body text-[0.9375rem] leading-relaxed text-fj-neutral-600">{t.label}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* ── 4. WHAT THE AGENT DOES ───────────────────────────────────────── */}
         <IndustriesGrid
@@ -652,7 +703,7 @@ export default function CrmAiAgentsPage() {
         {/* ── 5. HOW IT CONNECTS ───────────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="HOW IT CONNECTS"
-          headline="The agent works through the same APIs your other CRM apps use."
+          headline="How a Salesforce AI agent or HubSpot AI agent connects to your CRM"
           lead="No new screen for your reps. The agent writes to the records they already open, and every change shows up in the record history."
           body={
             <>
@@ -678,16 +729,23 @@ export default function CrmAiAgentsPage() {
                   MCP server
                 </a>{' '}
                 that gives AI tools read and write access to contacts, companies, deals, tickets and activities, under
-                the scopes of an app you approve.
+                the scopes of an app you approve. MCP (Model Context Protocol) is a standard way for an AI tool to call
+                an app&apos;s functions.
               </p>
               <p>
-                In Salesforce, the agent signs in through a connected app with its own integration user. A permission
-                set limits it to the objects and fields the job needs, such as Lead, Contact and Opportunity. Field
-                history tracking, switched on for the fields the agent edits, shows each change in Salesforce, and the
-                agent&apos;s own action log records every change with its reason.
+                In Salesforce, the agent signs in through a connected app, which is an app registered in your org with
+                its own keys. It uses an integration user, a Salesforce login kept only for the agent. A permission set,
+                the list of what that login may see and change, limits it to the objects and fields the job needs, such
+                as Lead, Contact and Opportunity. Switch on field history tracking for the fields the agent edits, and
+                Salesforce shows each change on the record. The agent&apos;s own action log also records every change
+                with its reason.
               </p>
               <p>
-                The model itself, Claude, GPT or Gemini, never touches the CRM directly. It uses{' '}
+                The model itself (
+                <a href="/services/claude-ai-agent-development" className={LINK_CLASS}>
+                  Claude
+                </a>
+                , GPT or Gemini) never touches the CRM directly. It uses{' '}
                 <a
                   href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview"
                   target="_blank"
@@ -696,10 +754,14 @@ export default function CrmAiAgentsPage() {
                 >
                   tool use
                 </a>{' '}
-                to ask for an action, our code checks the action against your rules, and only then does the API call
-                run. If the job also needs your ERP or help desk, our{' '}
+                to ask for an action by name. Our code checks that action against your rules, and only then does the API
+                call run. If the job also needs your ERP or help desk, our{' '}
                 <a href="/services/ai-integration-services" className={LINK_CLASS}>
                   AI integration services
+                </a>{' '}
+                and our{' '}
+                <a href="/services/erp-ai-agents" className={LINK_CLASS}>
+                  ERP AI agents
                 </a>{' '}
                 cover those links, and our guide to a{' '}
                 <a href="/blog/custom-mcp-server-erp-crm-mid-sized-companies-2026" className={LINK_CLASS}>
@@ -751,9 +813,9 @@ export default function CrmAiAgentsPage() {
 
         {/* ── 7. MID-PAGE CTA ──────────────────────────────────────────────── */}
         <MidPageCTA
-          headline="Send us your brief or RFP."
-          sub="Tell us your CRM, the first job you want off your reps' plates and who approves changes. We reply with what we would build and a date for a demo on your records."
-          label="Send your brief"
+          headline="Get a CRM agent demo on your own records"
+          sub="Send your brief or RFP. Tell us your CRM, the first job you want off your reps' plates and who approves changes. We reply with what we would build and a date for a demo on your records."
+          label="See a demo on my data"
           note="Bhavesh replies within 24 hours."
         />
 
@@ -766,7 +828,7 @@ export default function CrmAiAgentsPage() {
                   HOW WE WORK
                 </p>
                 <h2 className="fj-display mt-3 text-2xl font-bold tracking-tight text-fj-ink md:text-3xl lg:text-4xl">
-                  The terms, in writing before you sign
+                  What terms do you sign before the build starts?
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   FactoryJet quotes the build, and any support you choose, as fixed prices. We design the agent,
@@ -790,9 +852,27 @@ export default function CrmAiAgentsPage() {
         <ComparisonTable
           eyebrow="YOUR OPTIONS"
           headline="Custom agent vs CRM vendor agent vs a Zapier workflow"
-          lead="Each one fits a different team. A vendor agent suits work that stays in one CRM. A Zapier or Make workflow suits fixed if-this-then-that steps. A custom agent suits jobs that read free text, cross systems or need your own rules."
+          lead="Each one fits a different team. Agentforce is Salesforce's own agent platform, and Breeze is HubSpot's set of AI tools. A vendor agent like these suits work that stays in one CRM. A Zapier or Make workflow suits fixed if-this-then-that steps. A custom agent suits jobs that read free text, cross systems or need your own rules."
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
+          scrollRegionLabel="Comparison of a custom agent, a CRM vendor agent and a Zapier workflow"
+          footer={
+            <div className="font-fj-body text-[0.8125rem] leading-relaxed text-fj-neutral-600">
+              <p className="md:hidden">Swipe the table sideways to see every column.</p>
+              <p className="mt-2">
+                Vendor details checked on 31 October 2026 against:{' '}
+                {COMPARISON_SOURCES.map((src, i) => (
+                  <span key={src.url}>
+                    <a href={src.url} target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>
+                      {src.label}
+                    </a>
+                    {i < COMPARISON_SOURCES.length - 1 ? ', ' : '.'}
+                  </span>
+                ))}{' '}
+                Vendors change their products often, so check the linked page before you decide.
+              </p>
+            </div>
+          }
         />
 
         {/* ── 10. RELATED + PROOF ──────────────────────────────────────────── */}
@@ -804,7 +884,7 @@ export default function CrmAiAgentsPage() {
                   AGENT WORK WE HAVE SHIPPED
                 </p>
                 <h2 className="fj-display mt-3 text-2xl font-bold tracking-tight text-fj-ink md:text-3xl">
-                  An agent that finds the facts and leaves the decision to people
+                  What agent work has FactoryJet already shipped?
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   For Washington Law Group, a US law firm, we built an AI agent that finds serious crashes involving
@@ -837,6 +917,18 @@ export default function CrmAiAgentsPage() {
                     <a href="/services/ai-agent-development" className={LINK_CLASS}>AI agent development</a> for
                     agents outside sales, such as quoting and order entry.
                   </li>
+                  <li>
+                    <a href="/services/netsuite-ai-agents" className={LINK_CLASS}>NetSuite AI agents</a> when the
+                    renewal or invoice data lives in NetSuite.
+                  </li>
+                  <li>
+                    <a href="/services/ai-customer-support-agents" className={LINK_CLASS}>AI customer support agents</a>{' '}
+                    for help desk work such as Zendesk tickets.
+                  </li>
+                  <li>
+                    <a href="/services/ai-agent-monitoring" className={LINK_CLASS}>AI agent monitoring</a> for
+                    watching an agent&apos;s actions and errors after launch.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -856,7 +948,7 @@ export default function CrmAiAgentsPage() {
         <section className="border-b border-fj-neutral-200 bg-white py-8">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.14em] text-fj-neutral-600">
-              PRICE SOURCES IN THE COST ANSWER
+              SOURCES FOR THE ANSWERS ABOVE, CHECKED 31 OCTOBER 2026
             </p>
             <ul className="mt-3 space-y-2 font-fj-body text-[0.9375rem] leading-relaxed text-fj-neutral-600">
               {MARKET_PRICE_SOURCES.map((src) => (
@@ -880,7 +972,7 @@ export default function CrmAiAgentsPage() {
             sub="Send the first job you want handled. We run it on a sample of your HubSpot or Salesforce records and show you every decision and its reason."
             primaryCta={{ label: 'See a demo on my data', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See all AI services', href: '/services' }}
-            objectionHandler="Fixed price per phase. You own the code. No monthly minimum."
+            objectionHandler="Demo before you sign. Fixed price per phase. You own the code. No monthly minimum."
           />
         </div>
       </main>

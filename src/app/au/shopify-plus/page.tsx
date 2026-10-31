@@ -7,16 +7,17 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/shopify-plus';
-const UPDATED = '2026-10-29';
-const TITLE = 'Shopify Plus Agency Australia | Plus Cost, B2B, Migration | FactoryJet';
+const UPDATED = '2026-10-31';
+const TITLE = 'Shopify Plus Agency Australia | B2B & Migration | FactoryJet';
 const H1 = 'Shopify Plus Agency Australia: Plus Builds, B2B and Migrations';
 const DESCRIPTION =
-  'Shopify Plus agency for Australian brands: Plus builds, native B2B, NZ expansion stores, Scripts rebuilt as Functions, and Xero, MYOB Acumatica, NetSuite or Cin7 sync.';
+  'Shopify Plus agency for Australian brands: Plus builds, native B2B, NZ expansion stores, Scripts rebuilt as Functions, and Xero, MYOB or NetSuite sync.';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -45,6 +46,9 @@ const SRC_PLUS_PLAN =
 // staff accounts"; Plus "Starts at $3,700 AUD/mo", "Card rates from 1.15% + 30¢ AUD",
 // "Unlimited staff accounts", "Fully customizable checkout", "Up to 200 POS Pro locations",
 // "Unlimited B2B catalogs"; third-party transaction fees "2% 1% 0.6% 0.2%" (Basic to Plus).
+// Re-read 2026-10-31: "Online standard card rates 1.7% + 30¢ AUD 1.55% + 30¢ AUD 1.35% + 30¢ AUD
+// 1.15% + 30¢ AUD" (Basic, Grow, Advanced, Plus); Advanced "$575 AUD/mo", Plus "Starts at $3,700
+// AUD/mo", third-party fees unchanged. The A$100 sale FAQ is worked from these rates.
 const SRC_PRICING = 'https://www.shopify.com/au/pricing';
 // Shopify Help Center, Scripts: "As of June 30, 2026, Shopify Scripts has been deprecated. Any
 // Scripts that were still published on your store have been deactivated and no longer work.
@@ -102,21 +106,22 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Plus pays off when a Plus-only feature fixes something that costs you money every week: stockists ordering by email, a New Zealand store kept in sync by hand, checkout rules that no app can build, or a pile of paid apps faking wholesale pricing. A higher card turnover on its own is a weak reason. If your problems are design, speed or conversion, a better build on Advanced does more.' },
   { category: 'plan', question: 'What is the difference between Shopify Advanced and Shopify Plus?',
     answer: 'On Shopify’s Australian pricing page, Advanced costs A$575 a month paid monthly, with card rates from 1.35% plus 30c and up to 15 staff accounts. Plus starts at A$3,700 a month, with card rates from 1.15% plus 30c, unlimited staff, a fully customisable checkout, up to 200 POS Pro locations and unlimited B2B catalogues. Advanced can be paid monthly or yearly with no lock-in term. Plus is a 1-year or 3-year contract.' },
+  { category: 'plan', question: 'How much does Shopify take from a A$100 sale?',
+    answer: 'On Shopify Payments, the online card rate on Plus is 1.15% plus 30c, so a A$100 order costs A$1.45. On Advanced it is 1.35% plus 30c, or A$1.65, and on Basic 1.7% plus 30c, or A$2.00. Those are Shopify’s Australian rates as read on 31 October 2026. If you use a third-party payment provider instead, Shopify adds 0.2% on Plus, which is 20c on A$100, on top of that provider’s own fee. The monthly plan fee is separate.',
+    links: [{ href: SRC_PRICING, label: 'Shopify Australia pricing' }] },
   { category: 'plan', question: 'How do I know if my store is already on Shopify Plus?',
     answer: 'Open Settings, then Plan, in your Shopify admin. The plan name and billing term are shown there. Plus stores can also add expansion stores and unlimited staff accounts, which standard plans cannot, so either one is a quick tell. If you inherited a store from another team and nobody is sure, check the most recent Shopify invoice, which names the plan and the billing term.' },
 
   // ── Choosing a Plus agency ──
-  { category: 'agency', question: 'Do I need a Shopify Plus Partner agency to run a Plus store?',
-    answer: 'No. Shopify does not require a badged partner to build or support a Plus store. The work is Shopify engineering: checkout extensions, Functions, B2B set-up and integrations. FactoryJet is a registered Shopify Partner and does not claim a Plus partner tier. Judge any agency on Plus stores it has shipped, who will write the code, and how it supports the store after launch.' },
   { category: 'agency', question: 'Who are the best Shopify Plus agencies in Australia?',
-    answer: 'No one agency suits every brand. Names that come up often in Australian results include Alinga on the Gold Coast, Flux, Prosper Digital in Melbourne and Sydney, and Swanky, which works internationally. We list them on this page with a note from each one’s own homepage. Pick by fit: B2B and ERP depth, design, headless, or support after launch.' },
+    answer: 'The best one is the one whose past work matches your problem. Four Australian Shopify Plus agencies we list on this page are Alinga on the Gold Coast, Flux, Prosper Digital in Melbourne and Sydney, and Swanky, which works internationally. Each has a note taken from its own homepage. Pick by fit: B2B and ERP depth, design, headless, or support after launch. Ask each one to show a Function or B2B flow running on your own data.' },
   { category: 'agency', question: 'What should a Shopify Plus agency ask us before quoting?',
     answer: 'At minimum: how many SKUs and variants you carry, which channels you sell through, how trade customers order today, which accounting, ERP and inventory systems hold the truth for stock and prices, what checkout or discount rules you rely on, and what has broken in the last year. An agency that quotes a Plus build without asking those questions is guessing, and the guess usually lands in a change request later.' },
 
   // ── B2B, checkout and Functions ──
   { category: 'build', question: 'Can Shopify Plus run B2B wholesale for Australian stockists?',
     answer: 'Yes. Shopify B2B runs on every paid plan, but Plus adds unlimited catalogues, catalogues assigned straight to company locations, deposits, partial payments and payment requests per fulfilment. Each stockist becomes a company with its own buyers, delivery addresses, prices and terms. Trade and retail customers can share one store, one stock pool and one product catalogue, or you can run a separate B2B-only store.',
-    links: [{ href: '/au/ecommerce-development', label: 'B2B ecommerce in Australia' }] },
+    links: [{ href: '/au/b2b-ecommerce', label: 'B2B ecommerce in Australia' }] },
   { category: 'build', question: 'What happened to Shopify Scripts?',
     answer: 'Shopify’s help centre says Scripts were deprecated on 30 June 2026 and any still published were deactivated. Plus brands relied on them for bundle pricing, trade discounts, hidden payment options and shipping tweaks in the cart. The replacement is Shopify Functions. If a tiered discount, a free-shipping rule or a hidden payment option quietly stopped working this year, a switched-off Script is the first thing to check.' },
   { category: 'build', question: 'What are Shopify Functions and checkout extensions?',
@@ -127,43 +132,53 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   // ── Migrations and systems ──
   { category: 'move', question: 'How do we move from Magento or Salesforce Commerce Cloud to Shopify Plus?',
     answer: 'We audit the current store first: catalogue, customer groups, trade pricing, extensions, custom code and integrations. Each piece is mapped to native Plus, a Function, an app or custom code. Data moves in rehearsal runs on a copy of the store, every old web address gets a 301 redirect, and the domain switches at a quiet trading hour. If you already trade on Shopify, Plus is a contract upgrade with no data to move.',
-    links: [{ href: '/blog/magento-to-shopify-plus-migration-checklist-2026', label: 'Magento to Shopify Plus migration checklist' }] },
+    links: [
+      { href: '/au/shopify-migration', label: 'Shopify migration in Australia' },
+      { href: '/blog/magento-to-shopify-plus-migration-checklist-2026', label: 'Magento to Shopify Plus migration checklist' },
+    ] },
   { category: 'move', question: 'Will we lose Google rankings when we replatform to Shopify Plus?',
     answer: 'Not if the move is planned. Shopify fixes its own address patterns, such as /products/ and /collections/, so every old product, category and content address needs a permanent 301 redirect. We crawl the old site, keep the pages that earn traffic, carry titles and descriptions across, and watch Google Search Console daily for the first weeks so a dip is caught while it is still small.',
     links: [{ href: '/au/ecommerce-seo', label: 'Ecommerce SEO in Australia' }] },
   { category: 'move', question: 'Can Shopify Plus connect to MYOB Acumatica, NetSuite, Cin7 or Xero?',
-    answer: 'Yes. We connect Plus to Xero, MYOB Business, MYOB Acumatica, QuickBooks, NetSuite, Odoo, Cin7 Core (formerly DEAR) and Unleashed, using a proven connector where one fits and a small custom integration where it does not. Before any sync runs we agree which system owns stock, prices, customers and refunds, and how GST and payment fees are posted, so the books reconcile at month end.' },
+    answer: 'Yes. Shopify Plus connects to Xero, MYOB Business, MYOB Acumatica, QuickBooks, NetSuite, Odoo, Cin7 Core (formerly DEAR) and Unleashed through each system’s API. We use an existing connector where one fits and a small custom integration where it does not. Before any sync runs we agree which system owns stock, prices, customers and refunds, and how GST and payment fees are posted, so the books reconcile at month end.',
+    links: [
+      { href: '/au/shopify-xero-integration', label: 'Shopify Xero integration in Australia' },
+      { href: '/au/ecommerce-erp-integration', label: 'Ecommerce ERP integration in Australia' },
+    ] },
   { category: 'move', question: 'Can Shopify Plus feed Amazon.com.au, eBay, Kogan and THE ICONIC?',
     answer: 'Yes, through each marketplace’s own connector or a multichannel tool that sits between Shopify and the marketplaces. The hard part is the stock and pricing rules: which channel gets the last units, whether marketplace prices carry the fees, and how returns flow back. We set one source of truth for stock first, then connect the channels, so you stop overselling on a busy weekend.' },
 
   // ── Australia, ownership and support ──
   { category: 'after', question: 'Does the Privacy Act apply to our Shopify Plus store?',
-    answer: 'Probably, if you are big enough to need Plus. The OAIC says most small businesses are not covered by the Privacy Act 1988, and defines a small business as one with annual turnover of A$3 million or less, counting income from all sources. Above that line the Act generally applies. Get your adviser to confirm. We build the store so customer data, consent and access are easy to manage.',
+    answer: 'It usually does once turnover passes A$3 million. The OAIC says most small businesses are not covered by the Privacy Act 1988, and defines a small business as one with annual turnover of A$3 million or less, counting income from all sources. Above that line the Act generally applies. Get your adviser to confirm. We build the store so customer data, consent and access are easy to manage.',
     links: [{ href: SRC_OAIC, label: 'OAIC, small business and the Privacy Act' }] },
   { category: 'after', question: 'What is the downside of Shopify Plus?',
-    answer: 'Three come up most. The contract runs one or three years, so you commit before you have used every feature. Large or complex businesses can move onto a variable platform fee tied to revenue. And Plus features only pay off if someone builds them, so plan the B2B, checkout and integration work before you sign.' },
+    answer: 'The contract runs one or three years, so you commit before you have used every feature. Large or complex businesses can move onto a variable platform fee tied to revenue. Plus features also only pay off if someone builds them, so plan the B2B, checkout and integration work before you sign.' },
   { category: 'after', question: 'Can you take over a Shopify Plus store another agency built?',
     answer: 'Yes, and a handover is often where our work starts. We begin with a review of the theme code, every installed app, checkout extensions, Functions and integrations, plus a search for anything that depended on Scripts. You receive a written priority order with a fixed price per fix. Shopify collaborator access means you keep your own login, and we write up each app and sync as we learn it.' },
   { category: 'after', question: 'Do we own the store, the code and the Plus contract?',
     answer: 'Yes. The Plus agreement is between your company and Shopify, billed to your account. The theme, custom apps and Functions sit in a repository in your name from day one, with the full change history. Paid apps and connectors are billed to you at cost, with no markup from us. If you move agencies or bring the work in-house, everything they need is already yours.' },
   { category: 'after', question: 'What does support look like after a Plus launch?',
     answer: 'Defects in what we built are fixed inside the build price for a cover period we agree before work starts. After that, support is optional. Each change is quoted, you approve it, and then we do it, with no monthly minimum. The engineers who built the store answer the tickets, and every change goes into a written log so you can see what was done and why.',
-    links: [{ href: '/au/website-maintenance', label: 'Website and Shopify care in Australia' }] },
-  { category: 'after', question: 'Will you show us anything before we sign?',
+    links: [{ href: '/au/shopify-maintenance-services', label: 'Shopify maintenance and support in Australia' }] },
+  { category: 'after', question: 'Can we see working software before we sign a Shopify Plus build?',
     answer: 'Yes. For a store project we build a draft of your store on your own products, or a working Function or B2B flow on your own data, before you sign the build. You see how it handles your catalogue and your trade rules with your own eyes. The founder replies to every enquiry within 24 hours, and the first scoping call is free.' },
-  { category: 'after', question: 'How do we start, and can we send an RFP?',
-    answer: 'Use the form at the top of this page, which asks only for your name and work email. If you already have a written brief or an RFP, send it with your enquiry and we will answer it point by point, including the parts we would scope differently. The founder, Bhavesh Barot, books a short call, and you leave it knowing the phases, the order of work and what each phase needs from your team.' },
+  { category: 'after', question: 'Can we start a Shopify Plus project by sending an RFP?',
+    answer: 'Yes. Use the form at the top of this page, which asks only for your name and work email. If you already have a written brief or an RFP, send it with your enquiry and we will answer it point by point, including the parts we would scope differently. The founder, Bhavesh Barot, books a short call, and you leave it knowing the phases, the order of work and what each phase needs from your team.' },
 ];
 
-/* ─── Australian Shopify Plus agencies (open self-disclosure, ItemList). Each note
-       is based on the company’s own homepage, fetched 2026-10-29. Partner tiers are
-       quoted as each company states them. ─────────────────────────────────────── */
-const PLUS_AGENCIES: { name: string; note: string }[] = [
-  { name: 'FactoryJet', note: 'That is us. A registered Shopify Partner that builds, migrates and supports Shopify Plus stores, with most of its effort below the theme: native B2B, checkout extensions, Shopify Functions and the sync to accounting, ERP and inventory systems. The founder is on every project.' },
-  { name: 'Alinga', note: 'A Gold Coast ecommerce agency that describes itself as a Shopify Platinum Partner, with services covering Shopify Plus, wholesale B2B, ERP and Shopify integrations, migrations and Klaviyo email.' },
+/* ─── Other Australian Shopify Plus agencies (ItemList). Each note is based on the
+       company’s own homepage, fetched 2026-10-29. Partner tiers are quoted as each
+       company states them. FactoryJet is NOT in this list: it gets its own card in the
+       section, so the list never ranks us among the others. The 29 Oct SERP file that
+       named Alinga was not found on disk (QA 2026-10-31), so the copy no longer claims
+       a dated Google ranking. URLs resolved 2026-10-31 (HTTP 200, homepage title names
+       the agency); Flux's homepage URL was not confirmed, so it carries none. ───── */
+const PLUS_AGENCIES: { name: string; note: string; url?: string }[] = [
+  { name: 'Alinga', url: 'https://www.alinga.com.au/', note: 'A Gold Coast ecommerce agency that describes itself as a Shopify Platinum Partner, with services covering Shopify Plus, wholesale B2B, ERP and Shopify integrations, migrations and Klaviyo email.' },
   { name: 'Flux', note: 'Describes itself as a Shopify Plus Partner, offering Plus development, headless Shopify, Plus migrations, Plus B2B and systems integration, plus AI search work for ecommerce brands.' },
-  { name: 'Prosper Digital', note: 'An ecommerce agency with offices in Melbourne and Sydney, covering strategy, design, development and ongoing optimisation for Shopify brands.' },
-  { name: 'Swanky', note: 'Describes itself as a full-service Shopify Platinum Partner with international teams, covering migrations to Shopify Plus, B2B on Shopify, internationalisation, integrations and retail POS.' },
+  { name: 'Prosper Digital', url: 'https://prosperdigital.com.au/', note: 'An ecommerce agency with offices in Melbourne and Sydney, covering strategy, design, development and ongoing optimisation for Shopify brands.' },
+  { name: 'Swanky', url: 'https://swankyagency.com/', note: 'Describes itself as a full-service Shopify Platinum Partner with international teams, covering migrations to Shopify Plus, B2B on Shopify, internationalisation, integrations and retail POS.' },
 ];
 
 /* ─── JSON-LD ────────────────────────────────────────────────────── */
@@ -218,11 +233,12 @@ const jsonLd = {
     {
       '@type': 'ItemList',
       '@id': `${CANONICAL}#agencies`,
-      name: 'Shopify Plus agencies in Australia',
+      name: 'Other Shopify Plus agencies in Australia',
       itemListElement: PLUS_AGENCIES.map((a, i) => ({
         '@type': 'ListItem',
         position: i + 1,
         name: a.name,
+        ...(a.url ? { url: a.url } : {}),
       })),
     },
     {
@@ -240,7 +256,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['shopify-plus'] },
   openGraph: {
     title: TITLE,
     description:
@@ -272,11 +288,15 @@ const HERO_ICONS = [
 ] as const;
 
 /* Six situations that bring Australian brands to a Plus conversation. */
-const SITUATIONS: { n: string; t: string; d: string; icon: string }[] = [
+const SITUATIONS: { n: string; t: string; d: string; icon: string; links?: { href: string; label: string }[] }[] = [
   { n: '01', t: 'Stockists still order by email', d: 'Trade prices live in a spreadsheet, orders arrive as PDFs, and someone keys them in. Plus B2B gives each stockist a company account with its own catalogue, price list, payment terms and deposit rules, in the same admin as retail.', icon: 'M3 7h18v12H3V7Zm0 0 9 6 9-6' },
   { n: '02', t: 'A discount stopped working on 30 June', d: 'Shopify switched off Scripts on 30 June 2026. Bundle pricing, tiered trade discounts and shipping rules written as Scripts stopped with them. We rebuild each one as a Shopify Function and test it against last year’s real orders.', icon: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 4v5l3 2' },
   { n: '03', t: 'The New Zealand store drifts', d: 'A second store copied from the Australian one, with prices, stock and content updated by hand. On Plus it becomes an expansion store on the same plan, or a market inside the main store when the catalogue is the same.', icon: 'M4 12h16M12 4a12 12 0 0 1 0 16M12 4a12 12 0 0 0 0 16M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z' },
-  { n: '04', t: 'Magento is due for a costly upgrade', d: 'Adobe Commerce, Magento Open Source or Salesforce Commerce Cloud carries years of custom code. We map each customisation to native Plus, a Function, an app or a small custom app, so the move removes code instead of copying it.', icon: 'M4 7h10l-3-3m3 3-3 3M20 17H10l3 3m-3-3 3-3' },
+  { n: '04', t: 'Magento is due for a costly upgrade', d: 'Adobe Commerce, Magento Open Source or Salesforce Commerce Cloud carries years of custom code. We map each customisation to native Plus, a Function, an app or a small custom app, so the move removes code instead of copying it.', icon: 'M4 7h10l-3-3m3 3-3 3M20 17H10l3 3m-3-3 3-3',
+    links: [
+      { href: '/comparisons/shopify-plus-vs-magento', label: 'Shopify Plus vs Magento' },
+      { href: '/comparisons/shopify-plus-vs-bigcommerce', label: 'Shopify Plus vs BigCommerce' },
+    ] },
   { n: '05', t: 'Stock is wrong in two systems', d: 'Shopify says one number, Cin7, Unleashed or NetSuite says another, and the marketplace feed says a third. We set one owner for stock and price, then wire Shopify, the inventory system and the marketplaces to it.', icon: 'M5 4h14v6H5V4Zm0 10h14v6H5v-6Zm4-7h.01M9 17h.01' },
   { n: '06', t: 'Apps are faking what Plus does natively', d: 'Six paid apps stacked to imitate wholesale pricing, checkout fields and staff permissions. Sometimes Plus is cheaper than the stack and runs faster. Sometimes it is not, and we say so with the sums in front of you.', icon: 'M4 6h7v5H4V6Zm9 0h7v5h-7V6ZM4 13h7v5H4v-5Zm9 2.5h7' },
 ];
@@ -304,9 +324,12 @@ const STEPS: { t: string; d: string }[] = [
 const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
   { href: '/au/shopify-development', t: 'Shopify development Australia', d: 'New stores, custom themes and migrations on the standard Shopify plans, for brands that do not need Plus yet.', go: 'Explore Shopify development →' },
   { href: '/au/ecommerce-development', t: 'Ecommerce development Australia', d: 'Still weighing Shopify Plus against Adobe Commerce, BigCommerce or a custom build? Start with the platform comparison.', go: 'Explore ecommerce →' },
+  { href: '/au/b2b-ecommerce', t: 'B2B ecommerce Australia', d: 'Trade portals for wholesalers and manufacturers, with ex-GST account prices linked to the accounting or ERP system.', go: 'Explore B2B ecommerce →' },
+  { href: '/au/shopify-migration', t: 'Shopify migration Australia', d: 'Moving an established store off Magento, WooCommerce, Neto (Maropost) or BigCommerce, with redirects planned.', go: 'Explore Shopify migration →' },
+  { href: '/au/shopify-xero-integration', t: 'Shopify Xero integration', d: 'GST mapped line by line, and Shopify and Afterpay payouts matched in Xero.', go: 'Explore Shopify Xero →' },
+  { href: '/au/ecommerce-erp-integration', t: 'Ecommerce ERP integration', d: 'Orders, stock, refunds and GST synced between the store and MYOB, NetSuite, Cin7 or Odoo.', go: 'Explore ERP integration →' },
   { href: '/au/ecommerce-seo', t: 'Ecommerce SEO Australia', d: 'Rankings protected through a replatform, then collection pages and technical SEO for a large catalogue.', go: 'Explore ecommerce SEO →' },
-  { href: '/au/ai-customer-service', t: 'AI customer service', d: 'AI agents we build into Gorgias or Zendesk to answer order, delivery and returns questions from Shopify data.', go: 'Explore AI customer service →' },
-  { href: '/au/website-maintenance', t: 'Website and store care', d: 'Optional support after launch, each change quoted and approved, with no monthly minimum.', go: 'Explore care plans →' },
+  { href: '/au/shopify-maintenance-services', t: 'Shopify maintenance and support', d: 'Optional support after launch, each change quoted and approved, with no monthly minimum.', go: 'Explore Shopify support →' },
   { href: '/services/shopify-plus-agency', t: 'Shopify Plus agency (US)', d: 'Our Shopify Plus service for US brands, with US payment, tax and logistics systems.', go: 'See the US page →' },
 ];
 
@@ -378,7 +401,7 @@ export default function ShopifyPlusAUPage() {
                 <label className="specrow run">
                   <input className="workflow-select" type="radio" name="shopify-plus-au-step" value="2" />
                   <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[1]} /></svg></span>
-                  <span className="idx">reconciled, not just syncing</span>
+                  <span className="idx">reconciled to your books</span>
                   <span className="title">Xero, MYOB, NetSuite, Cin7</span>
                   <span className="tag">Connected</span>
                 </label>
@@ -417,8 +440,8 @@ export default function ShopifyPlusAUPage() {
 
         <div className="wrap byline">
           <div className="av">BB</div>
-          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="who"><b><a href="/about">Bhavesh Barot</a></b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST DEFINITION (GEO) ═══ */}
@@ -443,13 +466,20 @@ export default function ShopifyPlusAUPage() {
                 <div className="fact">
                   <div className="sec">§02</div>
                   <div>
-                    <div className="factlabel">Four terms on this page</div>
+                    <div className="factlabel">Terms used on this page</div>
                     <p>
                       A <b>Shopify Function</b> is custom code that changes how Shopify’s back end
                       prices, ships or accepts an order. A <b>checkout extension</b> is an approved block added to
                       checkout. An <b>expansion store</b> is an extra store under the same Plus contract. A{' '}
                       <b>replatform</b> is moving a whole store, its data and its web addresses from another platform
-                      to Shopify.
+                      to Shopify. A <b>301 redirect</b> sends anyone who opens an old web address, Google included,
+                      to the new one for good.
+                    </p>
+                    <p>
+                      A <b>headless</b> store keeps Shopify for products and orders but runs a separately coded
+                      front end, and <b>Hydrogen</b> is Shopify’s own framework for building one. A <b>3PL</b> is a
+                      third-party logistics company that stores and ships your stock. <b>POS Pro</b> is Shopify’s
+                      paid point-of-sale tier for physical shops.
                     </p>
                   </div>
                 </div>
@@ -488,19 +518,29 @@ export default function ShopifyPlusAUPage() {
               <div className="eyebrow">Why brands call us about Plus</div>
               <h2>Six situations that start a Shopify Plus project in Australia</h2>
               <p className="lead">
-                Almost nobody asks us for “Shopify Plus” as a product. They describe a problem. These six come up
-                most, and Plus is the right answer to some of them, not all.
+                Almost nobody asks Shopify Plus experts for “Shopify Plus” as a product. They describe a problem.
+                These six come up most, and Plus is the right answer to some of them, not all.
               </p>
             </div>
-            <div className="capgrid">
+            <ul className="capgrid">
               {SITUATIONS.map((s, i) => (
-                <div key={s.n} className={`cap cap-plain cap-${i + 1}`}>
+                <li key={s.n} className={`cap cap-plain cap-${i + 1}`}>
                   <div className="caphead"><span className="capid">CASE‑{s.n}</span><svg {...CAP_ICON}><path d={s.icon} /></svg></div>
                   <h3>{s.t}</h3>
                   <p>{s.d}</p>
-                </div>
+                  {s.links && (
+                    <p className="cap-links">
+                      {s.links.map((l, j) => (
+                        <Fragment key={l.href}>
+                          {j > 0 && ' · '}
+                          <a href={l.href}>{l.label}</a>
+                        </Fragment>
+                      ))}
+                    </p>
+                  )}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -517,7 +557,7 @@ export default function ShopifyPlusAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap" role="region" tabIndex={0} aria-label="Shopify Advanced vs Shopify Plus comparison">
+            <div className="tablewrap plus-compare" role="region" tabIndex={0} aria-label="Shopify Advanced vs Shopify Plus comparison">
               <table>
                 <thead>
                   <tr>
@@ -527,17 +567,17 @@ export default function ShopifyPlusAUPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><th scope="row">Plan fee</th><td>A$575 a month paid monthly, A$431 paid yearly</td><td className="fj">From A$3,700 a month (3-year term)</td></tr>
-                  <tr><th scope="row">Domestic card rates</th><td>From 1.35% + 30c</td><td className="fj">From 1.15% + 30c</td></tr>
-                  <tr><th scope="row">Fee for a third-party payment provider</th><td>0.6%</td><td className="fj">0.2%</td></tr>
-                  <tr><th scope="row">Staff accounts</th><td>Up to 15</td><td className="fj">Unlimited</td></tr>
-                  <tr><th scope="row">Checkout</th><td>Standard checkout</td><td className="fj">Fully customisable</td></tr>
-                  <tr><th scope="row">Custom apps with Shopify Functions</th><td>Through public apps</td><td className="fj">Your own custom apps</td></tr>
-                  <tr><th scope="row">B2B catalogues</th><td>Up to 3 active catalogues</td><td className="fj">Unlimited, assigned to company locations</td></tr>
-                  <tr><th scope="row">Deposits and partial payments for B2B</th><td>No</td><td className="fj">Yes</td></tr>
-                  <tr><th scope="row">Expansion stores</th><td>Separate accounts</td><td className="fj">9 included</td></tr>
-                  <tr><th scope="row">POS Pro locations</th><td>A$129 a month per location</td><td className="fj">20 included, up to 200 with Shopify Payments</td></tr>
-                  <tr><th scope="row">Shopify support</th><td>Enhanced live chat</td><td className="fj">Priority 24/7 phone and chat</td></tr>
+                  <tr><th scope="row">Plan fee</th><td data-label="Shopify Advanced">A$575 a month paid monthly, A$431 paid yearly</td><td className="fj" data-label="Shopify Plus">From A$3,700 a month (3-year term)</td></tr>
+                  <tr><th scope="row">Domestic card rates</th><td data-label="Shopify Advanced">From 1.35% + 30c</td><td className="fj" data-label="Shopify Plus">From 1.15% + 30c</td></tr>
+                  <tr><th scope="row">Fee for a third-party payment provider</th><td data-label="Shopify Advanced">0.6%</td><td className="fj" data-label="Shopify Plus">0.2%</td></tr>
+                  <tr><th scope="row">Staff accounts</th><td data-label="Shopify Advanced">Up to 15</td><td className="fj" data-label="Shopify Plus">Unlimited</td></tr>
+                  <tr><th scope="row">Checkout</th><td data-label="Shopify Advanced">Standard checkout</td><td className="fj" data-label="Shopify Plus">Fully customisable</td></tr>
+                  <tr><th scope="row">Custom apps with Shopify Functions</th><td data-label="Shopify Advanced">Through public apps</td><td className="fj" data-label="Shopify Plus">Your own custom apps</td></tr>
+                  <tr><th scope="row">B2B catalogues</th><td data-label="Shopify Advanced">Up to 3 active catalogues</td><td className="fj" data-label="Shopify Plus">Unlimited, assigned to company locations</td></tr>
+                  <tr><th scope="row">Deposits and partial payments for B2B</th><td data-label="Shopify Advanced">No</td><td className="fj" data-label="Shopify Plus">Yes</td></tr>
+                  <tr><th scope="row">Expansion stores</th><td data-label="Shopify Advanced">Separate accounts</td><td className="fj" data-label="Shopify Plus">9 included</td></tr>
+                  <tr><th scope="row">POS Pro locations</th><td data-label="Shopify Advanced">A$129 a month per location</td><td className="fj" data-label="Shopify Plus">20 included, up to 200 with Shopify Payments</td></tr>
+                  <tr><th scope="row">Shopify support</th><td data-label="Shopify Advanced">Enhanced live chat</td><td className="fj" data-label="Shopify Plus">Priority 24/7 phone and chat</td></tr>
                 </tbody>
               </table>
             </div>
@@ -593,19 +633,20 @@ export default function ShopifyPlusAUPage() {
                 <h2>What our Shopify Plus developers build for Australian brands</h2>
               </div>
               <p>
-                Most of the value in Plus sits below the theme. These six pieces of work cover nearly every Plus
-                project we scope, and each one is priced as its own phase if you want it that way.
+                Most of the value in Plus sits below the theme. Shopify Plus development for an Australian brand
+                usually means these six pieces of work, and each one is priced as its own phase if you want it
+                that way.
               </p>
             </div>
-            <div className="platlist" role="list">
+            <ol className="platlist">
               {BUILDS.map((b, i) => (
-                <div key={b.t} className="plat plat-2col" role="listitem">
+                <li key={b.t} className="plat plat-2col">
                   <span className="capid">{String(i + 1).padStart(2, '0')}</span>
                   <div className="plat-name"><h3>{b.t}</h3></div>
                   <p className="plat-build">{b.d}</p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ol>
             <p className="sub-note">
               Shopify’s help centre confirms that B2B runs on the Basic, Grow, Advanced and Plus plans, and that one
               store can serve both trade and retail customers. See <a href={SRC_B2B} {...extLink}>Shopify B2B</a>.
@@ -672,13 +713,13 @@ export default function ShopifyPlusAUPage() {
                 replatform.
               </p>
             </div>
-            <div className="platlist" role="list">
-              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Demo before you sign</h3></div><p className="plat-build">A draft of your store, or a working Function or B2B flow, on your own data before the build contract.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Fixed price per phase</h3></div><p className="plat-build">Each phase is scoped, priced and signed on its own. You can stop after any phase.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>You own it from day one</h3></div><p className="plat-build">The Plus contract is yours with Shopify. Theme, Functions and custom apps sit in a repository in your name. Apps and connectors are billed to your accounts at cost, with no markup.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Defect cover in the build price</h3></div><p className="plat-build">Defects in what we built are fixed at no charge for a cover period agreed before work starts.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">05</span><div className="plat-name"><h3>Optional support, no minimum</h3></div><p className="plat-build">After the cover period, each change is quoted and approved before we do it. No monthly minimum.</p></div>
-            </div>
+            <ol className="platlist">
+              <li className="plat plat-2col"><span className="capid">01</span><div className="plat-name"><h3>Demo before you sign</h3></div><p className="plat-build">A draft of your store, or a working Function or B2B flow, on your own data before the build contract.</p></li>
+              <li className="plat plat-2col"><span className="capid">02</span><div className="plat-name"><h3>Fixed price per phase</h3></div><p className="plat-build">Each phase is scoped, priced and signed on its own. You can stop after any phase.</p></li>
+              <li className="plat plat-2col"><span className="capid">03</span><div className="plat-name"><h3>You own it from day one</h3></div><p className="plat-build">The Plus contract is yours with Shopify. Theme, Functions and custom apps sit in a repository in your name. Apps and connectors are billed to your accounts at cost, with no markup.</p></li>
+              <li className="plat plat-2col"><span className="capid">04</span><div className="plat-name"><h3>Defect cover in the build price</h3></div><p className="plat-build">Defects in what we built are fixed at no charge for a cover period agreed before work starts.</p></li>
+              <li className="plat plat-2col"><span className="capid">05</span><div className="plat-name"><h3>Optional support, no minimum</h3></div><p className="plat-build">After the cover period, each change is quoted and approved before we do it. No monthly minimum.</p></li>
+            </ol>
           </div>
         </section>
 
@@ -709,7 +750,7 @@ export default function ShopifyPlusAUPage() {
                 </ul>
               </div>
             </div>
-            <div className="timeline">
+            <div className="timeline timeline-3">
               {STEPS.map((s) => {
                 const [idx, title] = s.t.split(' · ');
                 return (
@@ -731,7 +772,7 @@ export default function ShopifyPlusAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Selling at Plus scale in Australia</div>
-              <h2>Australian rules a Plus store crosses, and the Shopify work behind us</h2>
+              <h2>Privacy Act and GST rules a Shopify Plus store meets in Australia</h2>
             </div>
             <div className="factswrap">
               <div className="factlist">
@@ -749,11 +790,22 @@ export default function ShopifyPlusAUPage() {
                   Shopify charges 10% GST on the subscription itself unless your ABN is on the store, according to{' '}
                   <a href={SRC_GST} {...extLink}>Shopify’s billing tax page for Australia</a>.
                 </p></div>
-                <div className="fact"><div className="sec">§03</div><p>
-                  <b>Shopify work we have done.</b> We have done Shopify work for DTF Virginia and Shop Holistico,
-                  both stores in the United States. Neither is an Australian client and we do not present
-                  them as one. Ask to walk through them, and through our B2B and integration work, on the scoping call.
-                </p></div>
+              </div>
+            </div>
+            <div className="au-split au-proof">
+              <div>
+                <h3>Shopify work we have done</h3>
+                {/* DTF Virginia: naming approved 2026-10-29. Wording matches what the live store
+                    showed on 2026-10-29 (custom theme with no Theme Store id, gang sheet builders
+                    per transfer size, reseller sign-up), as recorded on /services/shopify-development.
+                    No metric and no year are stated until Bhavesh confirms them. */}
+                <p>
+                  We do Shopify development for <a href="https://dtfvirginia.com/" {...extLink}>DTF Virginia</a>,
+                  a print shop that sells direct-to-film (DTF) transfers, patches and stickers. Its store runs on a
+                  custom Shopify theme. Buyers build their own gang sheets at each transfer size, and resellers sign
+                  up for their own trade account. Ask to walk through it, and through our B2B and integration work,
+                  on the scoping call.
+                </p>
               </div>
             </div>
           </div>
@@ -768,20 +820,25 @@ export default function ShopifyPlusAUPage() {
                 <h2>Shopify Plus agencies in Australia worth talking to</h2>
               </div>
               <p>
-                These agencies appear in Australian Google results for Shopify Plus agency searches (DataForSEO, 29
-                October 2026). Notes come from each company’s own homepage that day, and partner tiers are as each
-                one states them. Check tiers in Shopify’s Partner Directory, and compare at least two of them with us.
+                Four other Australian Shopify Plus agencies, in alphabetical order. Notes come from each company’s own
+                homepage, read on 29 October 2026, and partner tiers are as each one states them. Check tiers in
+                Shopify’s Partner Directory, and compare at least two of them with us.
               </p>
             </div>
-            <div className="platlist" role="list">
-              {PLUS_AGENCIES.map((a, i) => (
-                <div key={a.name} className={a.name === 'FactoryJet' ? 'plat plat-2col plat-own' : 'plat plat-2col'} role="listitem">
-                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
-                  <div className="plat-name"><h3>{a.name}</h3>{a.name === 'FactoryJet' && <span className="plat-flag">That is us</span>}</div>
-                  <p className="plat-build">{a.note}</p>
-                </div>
-              ))}
+            <div className="plat plat-2col plat-own">
+              <span className="capid">FJ</span>
+              <div className="plat-name"><h3>FactoryJet</h3><span className="plat-flag">That is us</span></div>
+              <p className="plat-build">A registered Shopify Partner that builds, migrates and supports Shopify Plus stores, with most of its effort below the theme: native B2B, checkout extensions, Shopify Functions and the sync to accounting, ERP and inventory systems. The founder is on every project.</p>
             </div>
+            <ol className="platlist">
+              {PLUS_AGENCIES.map((a, i) => (
+                <li key={a.name} className="plat plat-2col">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{a.url ? <a href={a.url} {...extLink}>{a.name}</a> : a.name}</h3></div>
+                  <p className="plat-build">{a.note}</p>
+                </li>
+              ))}
+            </ol>
             <p className="sub-note">Listing is not endorsement.</p>
           </div>
         </section>
@@ -791,7 +848,7 @@ export default function ShopifyPlusAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Related FactoryJet services</div>
-              <h2>Around the Shopify Plus build</h2>
+              <h2>Related Shopify and ecommerce services in Australia</h2>
             </div>
             <ul className="agentdir-grid">
               {SIBLINGS.map((s) => (
@@ -846,7 +903,7 @@ export default function ShopifyPlusAUPage() {
               </p>
             </div>
             <div className="ctas">
-              <ModalCTAButton label="See a draft of my store" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <ModalCTAButton label="See a draft of my store" region="au" modalVariant="default" btnVariant="primary-light" className="btn btn-primary" />
               <a className="btn btn-ghost" href="/au/shopify-development">See Shopify development</a>
             </div>
           </div>

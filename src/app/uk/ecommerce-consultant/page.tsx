@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-consultant';
@@ -235,7 +236,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description:
     'UK ecommerce consultant for online stores: platform, replatforming, speed, marketplaces and SEO. A ranked fix list from senior people, and a team to build it.',
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['ecommerce-consultant'] },
   openGraph: {
     title: TITLE,
     description:

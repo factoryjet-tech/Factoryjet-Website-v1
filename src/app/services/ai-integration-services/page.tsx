@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { usServiceAlternates } from '@/data/hreflangMap';
+import { twinAlternates } from '@/data/hreflangMap';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -53,10 +53,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ai-integration-services',
-    languages: {
-      'en-US': 'https://factoryjet.com/services/ai-integration-services',
-      'x-default': 'https://factoryjet.com/services/ai-integration-services',
-    },
+    languages: twinAlternates['ai-integration-services'],
   },
   robots: {
     index: true,

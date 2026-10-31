@@ -573,9 +573,10 @@ export const aiDevelopmentAlternates = {
   'x-default': 'https://factoryjet.com/services/ai-development',
 } as const
 
-/** /services/website-maintenance (US), /au/website-maintenance. No UK page exists. */
+/** Website maintenance US/UK/AU cluster. Pages now import twinAlternates instead; kept in sync. */
 export const websiteMaintenanceAlternates = {
   'en-US': 'https://factoryjet.com/services/website-maintenance',
+  'en-GB': 'https://factoryjet.com/uk/website-maintenance',
   'en-AU': 'https://factoryjet.com/au/website-maintenance',
   'x-default': 'https://factoryjet.com/services/website-maintenance',
 } as const
@@ -721,3 +722,168 @@ export const seoSubServiceAlternatesIN = {
 // NEW YORK SUB-PAGES (US only)
 // ===========================================================================
 
+// ===========================================================================
+// US / UK / AU SERVICE TWINS (added 2026-10-31)
+// ===========================================================================
+
+/**
+ * One reciprocal cluster per service topic. Every twin page in the cluster
+ * imports the same object, so each URL lists all the others and they agree
+ * on x-default (the US URL when one exists, else the UK URL). Fixes the
+ * self-only en-GB / en-AU sets found in the 31 Oct QA, where each twin also
+ * claimed x-default for itself. Only URLs in the sitemap are listed.
+ */
+export const twinAlternates = {
+  'accounts-receivable-automation': {
+    'en-US': 'https://factoryjet.com/services/accounts-receivable-automation',
+    'en-GB': 'https://factoryjet.com/uk/accounts-receivable-automation',
+    'en-AU': 'https://factoryjet.com/au/accounts-receivable-automation',
+    'x-default': 'https://factoryjet.com/services/accounts-receivable-automation',
+  },
+  'ai-automation': {
+    'en-US': 'https://factoryjet.com/services/ai-automation',
+    'en-GB': 'https://factoryjet.com/uk/ai-automation',
+    'x-default': 'https://factoryjet.com/services/ai-automation',
+  },
+  'ai-integration-services': {
+    'en-US': 'https://factoryjet.com/services/ai-integration-services',
+    'en-GB': 'https://factoryjet.com/uk/ai-integration-services',
+    'en-AU': 'https://factoryjet.com/au/ai-integration-services',
+    'x-default': 'https://factoryjet.com/services/ai-integration-services',
+  },
+  'amazon-agency': {
+    'en-US': 'https://factoryjet.com/services/amazon-agency',
+    'en-GB': 'https://factoryjet.com/uk/amazon-agency',
+    'en-AU': 'https://factoryjet.com/au/amazon-agency',
+    'x-default': 'https://factoryjet.com/services/amazon-agency',
+  },
+  'bigcommerce-b2b': {
+    'en-US': 'https://factoryjet.com/services/bigcommerce-b2b',
+    'en-GB': 'https://factoryjet.com/uk/bigcommerce-b2b',
+    'x-default': 'https://factoryjet.com/services/bigcommerce-b2b',
+  },
+  'crm-ai-agents': {
+    'en-US': 'https://factoryjet.com/services/crm-ai-agents',
+    'en-GB': 'https://factoryjet.com/uk/crm-ai-agents',
+    'en-AU': 'https://factoryjet.com/au/crm-ai-agents',
+    'x-default': 'https://factoryjet.com/services/crm-ai-agents',
+  },
+  'document-intake-ai-agents': {
+    'en-US': 'https://factoryjet.com/services/document-intake-ai-agents',
+    'en-GB': 'https://factoryjet.com/uk/document-intake-ai-agents',
+    'en-AU': 'https://factoryjet.com/au/document-intake-ai-agents',
+    'x-default': 'https://factoryjet.com/services/document-intake-ai-agents',
+  },
+  'ecommerce-ai-agents': {
+    'en-US': 'https://factoryjet.com/services/ecommerce-ai-agents',
+    'en-GB': 'https://factoryjet.com/uk/ecommerce-ai-agents',
+    'en-AU': 'https://factoryjet.com/au/ecommerce-ai-agents',
+    'x-default': 'https://factoryjet.com/services/ecommerce-ai-agents',
+  },
+  'ecommerce-audit': {
+    'en-US': 'https://factoryjet.com/services/ecommerce-audit',
+    'en-GB': 'https://factoryjet.com/uk/ecommerce-audit',
+    'x-default': 'https://factoryjet.com/services/ecommerce-audit',
+  },
+  'ecommerce-erp-integration': {
+    'en-US': 'https://factoryjet.com/services/ecommerce-erp-integration',
+    'en-GB': 'https://factoryjet.com/uk/ecommerce-erp-integration',
+    'en-AU': 'https://factoryjet.com/au/ecommerce-erp-integration',
+    'x-default': 'https://factoryjet.com/services/ecommerce-erp-integration',
+  },
+  'erp-ai-agents': {
+    'en-US': 'https://factoryjet.com/services/erp-ai-agents',
+    'en-GB': 'https://factoryjet.com/uk/erp-ai-agents',
+    'en-AU': 'https://factoryjet.com/au/erp-ai-agents',
+    'x-default': 'https://factoryjet.com/services/erp-ai-agents',
+  },
+  'headless-shopify-development': {
+    'en-US': 'https://factoryjet.com/services/headless-shopify-development',
+    'en-GB': 'https://factoryjet.com/uk/headless-shopify-development',
+    'x-default': 'https://factoryjet.com/services/headless-shopify-development',
+  },
+  'netsuite-ai-agents': {
+    'en-US': 'https://factoryjet.com/services/netsuite-ai-agents',
+    'en-GB': 'https://factoryjet.com/uk/netsuite-ai-agents',
+    'en-AU': 'https://factoryjet.com/au/netsuite-ai-agents',
+    'x-default': 'https://factoryjet.com/services/netsuite-ai-agents',
+  },
+  'odoo-ai-agents': {
+    'en-US': 'https://factoryjet.com/services/odoo-ai-agents',
+    'en-GB': 'https://factoryjet.com/uk/odoo-ai-agents',
+    'x-default': 'https://factoryjet.com/services/odoo-ai-agents',
+  },
+  'sales-order-automation-ai-agents': {
+    'en-US': 'https://factoryjet.com/services/sales-order-automation-ai-agents',
+    'en-GB': 'https://factoryjet.com/uk/sales-order-automation-ai-agents',
+    'en-AU': 'https://factoryjet.com/au/sales-order-automation-ai-agents',
+    'x-default': 'https://factoryjet.com/services/sales-order-automation-ai-agents',
+  },
+  'shopify-ai-agents': {
+    'en-US': 'https://factoryjet.com/services/shopify-ai-agents',
+    'en-GB': 'https://factoryjet.com/uk/shopify-ai-agents',
+    'en-AU': 'https://factoryjet.com/au/shopify-ai-agents',
+    'x-default': 'https://factoryjet.com/services/shopify-ai-agents',
+  },
+  'shopify-edi-integration': {
+    'en-US': 'https://factoryjet.com/services/shopify-edi-integration',
+    'en-GB': 'https://factoryjet.com/uk/shopify-edi-integration',
+    'x-default': 'https://factoryjet.com/services/shopify-edi-integration',
+  },
+  'shopify-maintenance-services': {
+    'en-US': 'https://factoryjet.com/services/shopify-maintenance-services',
+    'en-GB': 'https://factoryjet.com/uk/shopify-maintenance-services',
+    'en-AU': 'https://factoryjet.com/au/shopify-maintenance-services',
+    'x-default': 'https://factoryjet.com/services/shopify-maintenance-services',
+  },
+  'shopify-plus-b2b': {
+    'en-US': 'https://factoryjet.com/services/shopify-plus-b2b',
+    'en-GB': 'https://factoryjet.com/uk/shopify-plus-b2b',
+    'x-default': 'https://factoryjet.com/services/shopify-plus-b2b',
+  },
+  'website-maintenance': {
+    'en-US': 'https://factoryjet.com/services/website-maintenance',
+    'en-GB': 'https://factoryjet.com/uk/website-maintenance',
+    'en-AU': 'https://factoryjet.com/au/website-maintenance',
+    'x-default': 'https://factoryjet.com/services/website-maintenance',
+  },
+  'b2b-ecommerce': {
+    'en-US': 'https://factoryjet.com/b2b-ecommerce',
+    'en-GB': 'https://factoryjet.com/uk/b2b-ecommerce',
+    'en-AU': 'https://factoryjet.com/au/b2b-ecommerce',
+    'x-default': 'https://factoryjet.com/b2b-ecommerce',
+  },
+  'shopify-plus': {
+    'en-US': 'https://factoryjet.com/services/shopify-plus-agency',
+    'en-GB': 'https://factoryjet.com/uk/shopify-plus',
+    'en-AU': 'https://factoryjet.com/au/shopify-plus',
+    'x-default': 'https://factoryjet.com/services/shopify-plus-agency',
+  },
+  'shopify-migration': {
+    'en-US': 'https://factoryjet.com/services/shopify-migration-agency',
+    'en-GB': 'https://factoryjet.com/uk/shopify-migration',
+    'en-AU': 'https://factoryjet.com/au/shopify-migration',
+    'x-default': 'https://factoryjet.com/services/shopify-migration-agency',
+  },
+  'woocommerce': {
+    'en-US': 'https://factoryjet.com/services/woocommerce-development',
+    'en-GB': 'https://factoryjet.com/uk/woocommerce',
+    'en-AU': 'https://factoryjet.com/au/woocommerce',
+    'x-default': 'https://factoryjet.com/services/woocommerce-development',
+  },
+  'ecommerce-consultant': {
+    'en-GB': 'https://factoryjet.com/uk/ecommerce-consultant',
+    'en-AU': 'https://factoryjet.com/au/ecommerce-consultant',
+    'x-default': 'https://factoryjet.com/uk/ecommerce-consultant',
+  },
+  'ecommerce-redesign': {
+    'en-GB': 'https://factoryjet.com/uk/ecommerce-redesign',
+    'en-AU': 'https://factoryjet.com/au/ecommerce-redesign',
+    'x-default': 'https://factoryjet.com/uk/ecommerce-redesign',
+  },
+  'shopify-xero-integration': {
+    'en-GB': 'https://factoryjet.com/uk/shopify-xero-integration',
+    'en-AU': 'https://factoryjet.com/au/shopify-xero-integration',
+    'x-default': 'https://factoryjet.com/uk/shopify-xero-integration',
+  },
+} as const

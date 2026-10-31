@@ -17,7 +17,7 @@ interface Firm {
   name: string;
   url: string;
   source: string;
-  group: 'shopify' | 'magento' | 'catalogue' | 'links' | 'commerce';
+  group: 'shopify' | 'magento' | 'catalogue' | 'links' | 'senior' | 'commerce';
   based: string;
   type: string;
   platforms: string;
@@ -41,7 +41,7 @@ const FIRMS: Firm[] = [
     type: 'Shopify and Shopify Plus agency with an in-house SEO team',
     platforms: 'Shopify and Shopify Plus only',
     clients: 'Carex, Chelsea Football Club, Volkswagen, Unilever, Scandibørn',
-    what: 'Eastside Co builds on Shopify and runs SEO for Shopify stores only, with its SEO specialists working next to its Shopify developers. Its SEO page names the problems Shopify creates: duplicate pages from variants and filters, and the structured data a theme outputs. It also covers hreflang through Shopify Markets for stores selling abroad. It says it was one of the first three UK agencies accredited as a Shopify Plus Partner and has completed more than 60 migrations.',
+    what: 'Eastside Co builds on Shopify and sells Shopify SEO services for Shopify stores only, with its SEO specialists working next to its Shopify developers. Its SEO page names the problems Shopify creates: duplicate pages from variants and filters, and the structured data a theme outputs. It also covers hreflang through Shopify Markets for stores selling abroad. It says it was one of the first three UK agencies accredited as a Shopify Plus Partner and has completed more than 60 migrations.',
     price: 'No SEO price published. The contact form shows project budgets from £5,000 to £100,000 for any type of project.',
     bestFor: 'A Shopify or Shopify Plus store that wants developers and SEO people in the same building.',
     ask: 'Which of the 60+ migrations it lists came from your current platform, and what organic traffic did that store keep in the first three months.',
@@ -178,7 +178,7 @@ const FIRMS: Firm[] = [
     name: 'Glass Digital',
     url: 'https://glass.digital/',
     source: 'https://glass.digital/about-us/',
-    group: 'links',
+    group: 'senior',
     based: 'Durham (Belmont Business Park), single office',
     type: '13-person agency running SEO, GEO, PPC and affiliate for UK ecommerce brands, trading since 2014',
     platforms: 'No platform list; a Magento 1 to Magento 2 migration is named in a client testimonial',
@@ -198,9 +198,9 @@ const FIRMS: Firm[] = [
     based: 'Works remotely with UK clients and schedules calls in UK business hours',
     type: 'Ecommerce build and SEO team; 500+ businesses served since 2014',
     platforms: 'Shopify and Shopify Plus, WooCommerce, Magento (Adobe Commerce) and BigCommerce',
-    clients: 'Small and mid-size online stores',
+    clients: 'DTF (Shopify), Mannik (WooCommerce), Sow Easy (WooCommerce) and GPSUK (Commerceflo)',
     what: 'FactoryJet builds and supports online stores, and the same developers carry out the SEO fixes. On Shopify that means editing Liquid templates directly: canonical tags, filter pages that waste crawl budget, theme duplicates and content that only appears after JavaScript runs. Engagements cover a technical crawl and fix list in month one, category keyword mapping and copy, product structured data, Core Web Vitals, editorial links and GA4 revenue tracking. FactoryJet is a registered Shopify Partner. Marketplace listings on Amazon or eBay are scoped separately.',
-    price: 'No rate card. The price is fixed in writing after a free audit call, and engagements run month to month.',
+    price: 'No rate card. Each phase has a fixed price, quoted in writing after a free audit call. Changes are quoted and approved per request, and there is no monthly minimum.',
     bestFor: 'A store that wants the people who write the SEO plan to also change the code.',
     ask: 'To see the fix list for your own store from the free audit before you agree to anything.',
     covers: { facets: 'yes', migrations: 'yes', schema: 'yes', merchant: 'yes', ai: 'yes' },
@@ -210,12 +210,12 @@ const FIRMS: Firm[] = [
 const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
   {
     key: 'shopify',
-    heading: 'Which UK ecommerce SEO agencies suit a Shopify or Shopify Plus store?',
+    heading: 'Best Shopify SEO agencies in the UK',
     intro: 'Shopify creates its own SEO problems: the same product at two web addresses, filter pages Google can crawl without end, and limits on what you can change in the theme. These three show Shopify work on their own sites. Eastside Co does nothing but Shopify.',
   },
   {
     key: 'magento',
-    heading: 'Which agencies know Magento, Adobe Commerce and other large platforms?',
+    heading: 'Best Magento and Adobe Commerce SEO agencies in the UK',
     intro: 'Magento (now Adobe Commerce) and Salesforce Commerce Cloud stores tend to be bigger and more custom, so SEO fixes often need a developer. One of these two is a Magento build agency with SEO; the other is an SEO agency with deep Adobe Commerce and Salesforce pages.',
   },
   {
@@ -225,8 +225,13 @@ const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
   },
   {
     key: 'links',
-    heading: 'Which agencies focus on links, or on smaller senior teams?',
-    intro: 'Two different answers to the same gap. One is a large digital PR shop for stores that need links to compete for big category terms. The other is a 13-person team that works only with UK ecommerce brands and offers revenue-share terms.',
+    heading: 'Which agency focuses on links for big category terms?',
+    intro: 'Some stores have a sound site but too few links from other websites to rank for the biggest category searches. Reboot Online is an 80-person SEO and digital PR agency built around that job.',
+  },
+  {
+    key: 'senior',
+    heading: 'Which agency offers a small senior team?',
+    intro: 'Glass Digital has 13 people, works only with UK ecommerce brands, and offers revenue-share terms on some accounts.',
   },
   {
     key: 'commerce',
@@ -254,13 +259,15 @@ const ALSO_CHECKED: { name: string; url: string; note: string }[] = [
   { name: 'Propeller', url: 'https://www.propeller.co.uk/services/ecommerce-seo', note: 'London agency (Islington) mostly known for hospitality, and a Shopify Plus Partner. Its ecommerce SEO page covers faceted navigation, schema and redirects. No price published.' },
   { name: 'JDR Group', url: 'https://www.jdrgroup.co.uk/ecommerce-seo', note: 'Derby agency and HubSpot partner working with ecommerce businesses since 2004. Its ecommerce SEO page names no platform. No set packages.' },
   { name: 'Aware Digital and Studio36 Digital', url: 'https://www.awaredigital.co.uk/', note: 'Both rank on page one for "ecommerce seo agency uk", but both sites refused our requests on 21 October 2026, so we could not check them live and left them out.' },
+  { name: 'Rise at Seven', url: 'https://riseatseven.com/', note: 'Named in Google UK’s AI Overview for "ecommerce seo agency uk" on 21 October 2026, but the AI Overview linked that name to a ClickSlice list page that returned HTTP 410 that day. Rise at Seven is profiled in our general list of the best SEO agencies in the UK, so we did not repeat it here.' },
+  { name: 'ClickSlice', url: 'https://www.clickslice.co.uk/', note: 'London SEO agency, also named in the same AI Overview. It published one of the five lists we tallied, with itself first. That list returned HTTP 410 on 21 October 2026, so we read the archived copy of 11 May 2026 and used it as a source, not a candidate.' },
   { name: 'Absolute Digital Media', url: 'https://absolutedigitalmedia.co.uk/', note: 'Its site timed out on every request on 21 October 2026, so it is not profiled.' },
 ];
 
 const FAQS: FAQItem[] = [
   {
     q: 'Which is the best ecommerce SEO agency in the UK?',
-    a: 'It depends on your platform and size. For a Shopify store, Eastside Co, StudioHawk UK and s360 UK (formerly Reload Digital) show Shopify ecommerce work on their own sites. For Magento or Adobe Commerce, Envisage Digital and Polaris. For big catalogues and migrations, Edge45, Bring Digital and Seed. For links, Reboot Online. FactoryJet, which wrote this list, suits stores that want the same team to plan the SEO and change the code.',
+    a: 'It depends on your platform and size: Eastside Co, StudioHawk UK and s360 UK for Shopify; Envisage Digital and Polaris for Magento or Adobe Commerce; Edge45, Bring Digital and Seed for big catalogues; Reboot Online for links. FactoryJet, which wrote this list, suits stores that want the same team to plan the SEO and change the code.',
   },
   {
     q: 'What does an ecommerce SEO agency do?',
@@ -268,11 +275,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'How much does ecommerce SEO cost in the UK?',
-    a: 'Published UK guides put ecommerce SEO at roughly £1,500 to £10,000 or more a month. Ren Hao SEO lists ecommerce work at £1,500 to £8,000+ a month, and Gorilla Marketing says £2,000 for smaller stores up to £10,000+ for competitive retail brands, both read on 21 October 2026. Of the agencies here, Polaris publishes £3,000 to £19,500 a month by tier and Reboot Online a £2,000 monthly minimum.',
-  },
-  {
-    q: 'Which UK ecommerce SEO agencies publish their prices?',
-    a: 'Few do. On 21 October 2026, Polaris published monthly bands of £3,000 to £5,000, £6,500 to £10,000 and £12,500 to £19,500, plus projects from £5,450 + VAT. Reboot Online published a £2,000 monthly minimum. Victory Digital published packages from £980 to £3,920 a month, and Yellowball gave two different starting prices, £1,500 and £2,000 a month. Edge45 and Envisage Digital show budget bands on their enquiry forms.',
+    a: 'Published UK guides put ecommerce SEO at roughly £1,500 to £10,000 or more a month. Ren Hao SEO lists ecommerce work at £1,500 to £8,000+ a month and Gorilla Marketing says £2,000 to £10,000+, both read on 21 October 2026. Few agencies print a price. Polaris publishes monthly bands from £3,000 to £19,500 plus projects from £5,450 + VAT, Reboot Online a £2,000 monthly minimum, and Victory Digital packages from £980 to £3,920 a month.',
   },
   {
     q: 'Is it worth paying an agency for ecommerce SEO?',
@@ -280,7 +283,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'How long does ecommerce SEO take to work?',
-    a: 'Expect months, not weeks. In FactoryJet’s own work, technical and on-page fixes usually move rankings first, at around six to eight weeks. Category pages on competitive searches take three to four months, and organic revenue that outpaces paid channels normally takes six to nine. Google’s own guidance says no one can guarantee a first-place ranking, so treat any agency that promises one as a warning sign.',
+    a: 'Expect several months. Technical fixes, such as cleaning up filter pages and duplicate product addresses, usually move rankings first. Category pages on competitive searches take longer, because they also need copy and links. Google’s own guidance says no one can guarantee a first-place ranking, so treat any agency that promises one as a warning sign, and ask for a dated plan of what goes live each month.',
   },
   {
     q: 'What is faceted navigation, and why does it matter for SEO?',
@@ -304,7 +307,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Which agency suits a WooCommerce store?',
-    a: 'None of the ten profiled here is a WooCommerce specialist, but several name it. Edge45, Polaris and Envisage Digital list WooCommerce among their platforms, and StudioHawk names it as a common platform. Yellowball, a London WordPress and WooCommerce build agency, has an ecommerce SEO page and publishes starting prices. On WooCommerce, much of the SEO set-up runs through a plugin such as Yoast or Rank Math, so ask who configures it.',
+    a: 'If you want a WooCommerce SEO agency, note that none of the ten profiled here specialises in it, but several name it. Edge45, Polaris and Envisage Digital list WooCommerce among their platforms, and StudioHawk names it as a common platform. Yellowball, a London WordPress and WooCommerce build agency, has an ecommerce SEO page and publishes starting prices. On WooCommerce, much of the SEO set-up runs through a plugin such as Yoast or Rank Math, so ask who configures it.',
   },
   {
     q: 'Can an ecommerce SEO agency help with Amazon listings?',
@@ -316,11 +319,11 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Will AI Overviews take traffic from my online shop?',
-    a: 'Some, mostly on research searches. Ofcom found about 30% of UK searches now show an AI Overview, and 53% of adults say they see them often. On buying searches Google usually shows product listings and shopping results as well, so the effect on category pages is smaller. Google says there are no extra requirements to appear in AI Overviews beyond normal SEO, so product data and category content still do the work.',
+    a: 'Some, mostly on research searches. Ofcom’s Online Nation 2025 report found about 30% of UK searches now show an AI Overview, and 53% of adults say they see them often. On buying searches Google usually shows product listings and shopping results as well, so the effect on category pages is smaller. Google says there are no extra requirements to appear in AI Overviews beyond normal SEO, so product data and category content still do the work.',
   },
   {
     q: 'Is SEO dead now that people use AI to search?',
-    a: 'No. Google says the same SEO practices apply to AI Overviews and AI Mode, with no special optimisation needed. Ofcom found 82% of UK adults use Google Search, which handles about 3 billion UK searches a month. AI assistants also read web pages, so a store with clear product data and named mentions on other sites is easier for them to recommend. What changes is measurement: track AI referrals in GA4 alongside Google.',
+    a: 'No. Google says the same SEO practices apply to AI Overviews and AI Mode, with no special optimisation needed. Ofcom’s Online Nation 2025 report found 82% of UK adults use Google Search, which handles about 3 billion UK searches a month. AI assistants also read web pages, so a store with clear product data and named mentions on other sites is easier for them to recommend. What changes is measurement: track AI referrals in GA4 alongside Google.',
   },
   {
     q: 'Can ChatGPT do SEO for my store?',
@@ -336,7 +339,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Should I sign a 12-month ecommerce SEO contract?',
-    a: 'Only if you have seen the work first. StudioHawk UK says it does not use lock-in contracts, FactoryJet works month to month, and Victory Digital sells 3 and 6 month terms. Yellowball’s SEO terms say 3-month rolling terms with at least 60 days’ notice. A long contract makes most sense for a platform migration, where the work runs on a fixed plan. Get the notice period in writing.',
+    a: 'Only if you have seen the work first. StudioHawk UK says it does not use lock-in contracts, FactoryJet has no monthly minimum, and Victory Digital sells 3 and 6 month terms. Yellowball’s SEO terms say 3-month rolling terms with at least 60 days’ notice. A long contract makes most sense for a platform migration, where the work runs on a fixed plan. Get the notice period in writing.',
   },
   {
     q: 'Do I need a London ecommerce SEO agency?',
@@ -347,12 +350,16 @@ const FAQS: FAQItem[] = [
     a: 'An ecommerce agency usually designs and builds the store. An ecommerce SEO agency works on getting that store found in search. Some firms do both: Eastside Co, Envisage Digital and FactoryJet build stores and run SEO, which means fixes can go straight into the code. Pure SEO agencies such as StudioHawk UK and Edge45 rely on your developer or theme to make some changes.',
   },
   {
-    q: 'How is this list different from your list of the best SEO agencies in the UK?',
-    a: 'Our general UK list covers SEO firms for every kind of business, from local trades to enterprise brands. This list is only about online stores and has no firm in common with it apart from FactoryJet. Every agency here has an ecommerce SEO page or an ecommerce client list on its own site, and we checked what that page says about filters, migrations, product schema, Merchant Center and AI search.',
+    q: 'How do I know if my ecommerce SEO agency is doing a good job?',
+    a: 'Check four things each month. Organic revenue in GA4 for category and product pages, against the same month last year. Clicks and indexed pages in Search Console, where a sudden drop in indexed products is an early warning. A dated list of fixes that went live, not only recommendations. And a reason for each change: Google’s guide to hiring an SEO says a good one explains its recommendations.',
+  },
+  {
+    q: 'Should I hire a freelancer or an agency for ecommerce SEO?',
+    a: 'A freelancer can suit a small store with one clear job, such as an audit or category copy, where a monthly agency minimum like Reboot Online’s £2,000 would buy more than you need. An agency suits a store that needs several skills at once: a developer for filter pages and redirects, a writer for category copy and digital PR for links. Either way, ask who changes the code and get the notice period in writing.',
   },
   {
     q: 'Why is FactoryJet on its own list?',
-    a: 'Because we do this work, and leaving ourselves out would hide that from you. We put FactoryJet last, labelled it, and used the same profile format as everyone else, with facts taken from our own service page. Four of the four agency-written lists we read put their own firm first. Read every list on this topic, ours included, knowing who wrote it.',
+    a: 'Because we do this work, and leaving ourselves out would hide that from you. We put FactoryJet last, labelled it, and used the same profile format as everyone else, with facts taken from our own service page. All four agency-written lists we read put their own firm first. Read every list on this topic, ours included, knowing who wrote it.',
   },
 ];
 
@@ -365,6 +372,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 22, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '26 min read',
   imageUrl: `${IMG}.webp`,
   imageAlt:
@@ -372,7 +380,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Best Ecommerce SEO Agencies UK (2026): 10 Compared',
     description:
-      'Ten UK ecommerce SEO agencies for Shopify, Magento and big catalogues, checked on their own sites on 21 Oct 2026, with the prices they publish.',
+      'Ten UK ecommerce SEO agencies and companies for Shopify, Magento and big catalogues, checked on their own sites on 21 Oct 2026, with published prices.',
   },
   keyTakeaways: [
     'There is no single best ecommerce SEO agency in the UK. Match the firm to your platform and size: Shopify (Eastside Co, StudioHawk UK, s360 UK), Magento and Adobe Commerce (Envisage Digital, Polaris), big catalogues and migrations (Edge45, Bring Digital, Seed), links or a small senior team (Reboot Online, Glass Digital).',
@@ -382,6 +390,7 @@ export const post: BlogPost = {
     'Three of the ten outside firms name all five ecommerce jobs on their own pages (faceted navigation, migrations, product schema, Merchant Center and AI search): Eastside Co, Edge45 and Seed. Polaris names four and sells migrations as a separate service. Only four name faceted navigation.',
   ],
   faqs: FAQS,
+  hideExcerptOnPage: true,
   content: (
     <>
       <script
@@ -393,8 +402,8 @@ export const post: BlogPost = {
             '@id': `${PAGE_URL}#agencies`,
             name: 'UK ecommerce SEO agencies compared (2026)',
             itemListOrder: 'https://schema.org/ItemListUnordered',
-            numberOfItems: FIRMS.length,
-            itemListElement: FIRMS.map((a, i) => ({
+            numberOfItems: FIRMS.filter((a) => a.group !== 'commerce').length,
+            itemListElement: FIRMS.filter((a) => a.group !== 'commerce').map((a, i) => ({
               '@type': 'ListItem',
               position: i + 1,
               name: a.name,
@@ -404,55 +413,59 @@ export const post: BlogPost = {
         }}
       />
 
-      <div className="bg-amber-50 border border-amber-200 p-5 rounded-lg mb-8">
-        <p className="font-semibold text-amber-900 mb-1">The short answer</p>
-        <p className="text-amber-800 mb-3">
-          The best ecommerce SEO agency in the UK is the one that knows your platform and can show a result on a store like yours. On a Shopify store, look at Eastside Co, StudioHawk UK and s360 UK. On Magento or Adobe Commerce, Envisage Digital and Polaris. With a big catalogue or a platform move coming, Edge45, Bring Digital and Seed. If you mainly need links, Reboot Online; for a small senior team with revenue-share terms, Glass Digital.
+      <div className="not-prose rounded-xl border border-gray-200 border-l-4 border-l-[#B23E13] bg-[#FAFAF7] p-5 mb-8">
+        <p className="font-semibold text-[#0F0F12] mb-1">The short answer</p>
+        <p className="text-[#3A3A38] mb-3">
+          The best ecommerce SEO company in the UK is the agency that knows your platform and shows results on stores like yours. Shopify: Eastside Co, StudioHawk UK, s360 UK. Magento or Adobe Commerce: Envisage Digital, Polaris. Big catalogues or a platform move: Edge45, Bring Digital, Seed. Links: Reboot Online. A small senior team: Glass Digital.
         </p>
-        <p className="text-amber-800">
-          We read every firm&rsquo;s own website on 21 October 2026. Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and is on it, last.
+        <p className="text-[#3A3A38]">
+          We read every firm&rsquo;s site on 21 October 2026. FactoryJet wrote this guide and is listed last.
         </p>
       </div>
 
       <p className="mb-4">
-        Search still sells products in the UK. Online sales were <strong>27.3% of all UK retail in August 2026</strong> (<a href="https://www.ons.gov.uk/businessindustryandtrade/retailindustry/timeseries/j4mc/drsi" className={link} rel="noopener" target="_blank">ONS series J4MC</a>), and Ofcom found that <strong>about 30% of UK searches now show an AI Overview</strong> (<a href="https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025" className={link} rel="noopener" target="_blank">Ofcom Online Nation 2025</a>). An ecommerce SEO agency&rsquo;s job is to get your category and product pages into both.
+        Search still sells products in the UK. Online sales were <strong>27.3% of all UK retail in August 2026</strong>{' '}(<a href="https://www.ons.gov.uk/businessindustryandtrade/retailindustry/timeseries/j4mc/drsi" className={link} rel="noopener" target="_blank">ONS series J4MC</a>), and Ofcom found that <strong>about 30% of UK searches now show an AI Overview</strong>{' '}(<a href="https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025" className={link} rel="noopener" target="_blank">Ofcom Online Nation 2025</a>). An ecommerce SEO agency&rsquo;s job is to get your category and product pages into both.
       </p>
       <p className="mb-4">
-        Search Google UK for &ldquo;ecommerce seo agency uk&rdquo; and many of the top results are lists of agencies. We opened seven of them on 21 October 2026. One blocked us, one no longer exists (it returns HTTP 410) and one had no list, so we read the archived copy of the missing one and five in total. <strong>All four lists written by agencies put their own firm in first place.</strong> Between them the five named 60 agencies, and only 7 appeared on more than one list. Google&rsquo;s AI Overview for the same search quoted a price of &ldquo;£750 to £3,000+&rdquo; a month; the only page we found with that range was one of those self-ranking lists, which gives no source for it.
+        Search Google UK for &ldquo;ecommerce seo agency uk&rdquo; and many of the top results are lists of agencies. We opened seven of them on 21 October 2026. One blocked us, one no longer exists (it returns HTTP 410) and one had no list, so we read the archived copy of the missing one and five in total. <strong>All four lists written by agencies put their own firm in first place.</strong>{' '}Between them the five named 60 agencies, and only 7 appeared on more than one list. Google&rsquo;s AI Overview for the same search quoted a price of &ldquo;£750 to £3,000+&rdquo; a month; the only page we found with that range was one of those self-ranking lists, which gives no source for it.
       </p>
       <p className="mb-4">
         So this guide starts from each agency&rsquo;s own website. For every firm we noted where it is based, which platforms it names, what its ecommerce SEO page actually covers, one result it publishes for an ecommerce client, and any price it prints. Every fact is dated and linked.
       </p>
       <p className="mb-4">
-        <strong>A note on who wrote this.</strong> FactoryJet builds online stores and runs <a href="/uk/ecommerce-seo" className={link}>ecommerce SEO for UK stores</a>, so we are on this list, in the last group. Listing yourself is common on pages like this; it is a good reason to read every list, ours included, with care. This list shares no firm with our <a href="/blog/best-seo-agencies-uk" className={link}>list of the best SEO agencies in the UK</a> apart from us: that one covers every kind of business, this one only online stores.
+        <strong>A note on who wrote this.</strong>{' '}FactoryJet builds online stores and runs <a href="/uk/ecommerce-seo" className={link}>ecommerce SEO for UK stores</a>, so we are on this list, in the last group. Listing yourself is common on pages like this; it is a good reason to read every list, ours included, with care. This list shares no firm with our <a href="/blog/best-seo-agencies-uk" className={link}>list of the best SEO agencies in the UK</a>{' '}apart from us: that one covers every kind of business, this one only online stores.
       </p>
       <p className="mb-6">
-        A few terms first. <strong>Category pages</strong> (also called collection or PLP pages) list products of one type, like &ldquo;women&rsquo;s trainers&rdquo;. <strong>Faceted navigation</strong> is the set of filters on those pages. A <strong>migration</strong> is moving the store to a new platform, domain or URL structure. <strong>Product schema</strong> is code that tells Google a product&rsquo;s price, stock and reviews. <strong>Google Merchant Center</strong> is where you send product data so items can appear in Google&rsquo;s shopping results. <strong>GEO</strong> (generative engine optimisation) means work aimed at AI answers such as ChatGPT and Google AI Overviews.
+        A few terms first. <strong>Category pages</strong>{' '}(also called collection or PLP pages) list products of one type, like &ldquo;women&rsquo;s trainers&rdquo;. <strong>Faceted navigation</strong>{' '}is the set of filters on those pages. A <strong>migration</strong>{' '}is moving the store to a new platform, domain or URL structure. <strong>Product schema</strong>{' '}is code that tells Google a product&rsquo;s price, stock and reviews. <strong>Google Merchant Center</strong>{' '}is where you send product data so items can appear in Google&rsquo;s shopping results. <strong>GEO</strong>{' '}(generative engine optimisation) means work aimed at AI answers such as ChatGPT and Google AI Overviews.
+      </p>
+      <p className="mb-6">
+        A few more come up in the profiles. <strong>Crawl budget</strong>{' '}is how many of your pages Google will fetch in a given period, and filter pages can use it up. A <strong>canonical tag</strong>{' '}tells Google which of two near-identical pages is the main one. <strong>Hreflang</strong>{' '}tags tell Google which country or language version of a page to show. <strong>Liquid</strong>{' '}is the code Shopify themes are written in. <strong>Core Web Vitals</strong>{' '}are Google&rsquo;s measures of how fast and steady a page feels to load. <strong>GA4</strong>{' '}is Google Analytics 4. <strong>DR</strong>{' '}(Domain Rating) is Ahrefs&rsquo; 0 to 100 score for the strength of a site&rsquo;s links, and <strong>PageRank</strong>{' '}is Google&rsquo;s name for the value a link passes between pages.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The UK ecommerce SEO agencies at a glance</h2>
       <p className="mb-4">
         Scan this first. Find the rows that match your platform and size, then read those profiles in full.
       </p>
-      <div className="overflow-x-auto mb-8 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-sm text-gray-600 mb-2">Swipe sideways to see every column.</p>
+      <div className="mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 760 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Agency</th>
+              <th className="p-3 text-left border border-gray-700">Best for</th>
               <th className="p-3 text-left border border-gray-700">Where based</th>
               <th className="p-3 text-left border border-gray-700">Type</th>
               <th className="p-3 text-left border border-gray-700">Platforms named</th>
-              <th className="p-3 text-left border border-gray-700">Best for</th>
             </tr>
           </thead>
           <tbody>
             {FIRMS.map((a) => (
               <tr key={a.name} className={a.name.startsWith('FactoryJet') ? 'bg-orange-50' : 'odd:bg-white even:bg-gray-50'}>
                 <td className="p-3 border border-gray-200 font-semibold align-top">{a.name}</td>
+                <td className="p-3 border border-gray-200 align-top">{a.bestFor}</td>
                 <td className="p-3 border border-gray-200 align-top">{a.based}</td>
                 <td className="p-3 border border-gray-200 align-top">{a.type}</td>
                 <td className="p-3 border border-gray-200 align-top">{a.platforms}</td>
-                <td className="p-3 border border-gray-200 align-top">{a.bestFor}</td>
               </tr>
             ))}
           </tbody>
@@ -461,20 +474,21 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How we built this list</h2>
       <ol className="list-decimal pl-6 mb-6 space-y-2">
-        <li><strong>Start from the search results.</strong> We pulled Google UK results and the &ldquo;People also ask&rdquo; questions for 16 ecommerce SEO searches on 21 October 2026, including &ldquo;ecommerce seo agency uk&rdquo;, &ldquo;shopify seo agency&rdquo;, &ldquo;magento seo agency&rdquo; and &ldquo;ecommerce seo cost uk&rdquo;.</li>
-        <li><strong>Read the lists that rank.</strong> We counted which agencies each list names and where each publisher put itself.</li>
-        <li><strong>Check each agency on its own site.</strong> We checked 19 agencies&rsquo; ecommerce SEO, about, contact and pricing pages on 21 October 2026. Every description below comes from those pages and links to them.</li>
-        <li><strong>Keep only ecommerce work.</strong> A firm made the main list if its own site shows an ecommerce SEO service and named ecommerce clients. The firms we checked but did not profile are listed further down, with the reason.</li>
-        <li><strong>No scores we cannot prove.</strong> We have not hired these firms, so there are no star ratings or rankings. We say who each one suits and give one question worth asking it.</li>
-        <li><strong>Prices only from the firm.</strong> Where a firm prints a price, a minimum or a budget band, we copy it exactly and link the page. We never guess another company&rsquo;s price.</li>
+        <li><strong>Start from the search results.</strong>{' '}We pulled Google UK results and the &ldquo;People also ask&rdquo; questions for 16 ecommerce SEO searches on 21 October 2026, including &ldquo;ecommerce seo agency uk&rdquo;, &ldquo;shopify seo agency&rdquo;, &ldquo;magento seo agency&rdquo; and &ldquo;ecommerce seo cost uk&rdquo;.</li>
+        <li><strong>Read the lists that rank.</strong>{' '}We counted which agencies each list names and where each publisher put itself.</li>
+        <li><strong>Check each agency on its own site.</strong>{' '}We checked 19 agencies&rsquo; ecommerce SEO, about, contact and pricing pages on 21 October 2026. Every description below comes from those pages and links to them.</li>
+        <li><strong>Keep only ecommerce work.</strong>{' '}A firm made the main list if its own site shows an ecommerce SEO service and named ecommerce clients. The firms we checked but did not profile are listed further down, with the reason.</li>
+        <li><strong>No scores we cannot prove.</strong>{' '}We have not hired these firms, so there are no star ratings or rankings. We say who each one suits and give one question worth asking it.</li>
+        <li><strong>Prices only from the firm.</strong>{' '}Where a firm prints a price, a minimum or a budget band, we copy it exactly and link the page. We never guess another company&rsquo;s price.</li>
       </ol>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What each agency&rsquo;s ecommerce SEO page covers</h2>
       <p className="mb-4">
         Five jobs separate ecommerce SEO from ordinary SEO: controlling filter pages, moving platforms safely, product schema, Merchant Center product data and visibility in AI answers. This table shows which of the five each firm names on its own ecommerce SEO pages. &ldquo;Not named&rdquo; means we did not find it on the pages we read, not that the firm cannot do it, so ask.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-sm text-gray-600 mb-2">Swipe sideways to see every column.</p>
+      <div className="mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 720 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Agency</th>
@@ -506,13 +520,8 @@ export const post: BlogPost = {
           {FIRMS.filter((a) => a.group === g.key).map((a) => (
             <section key={a.name} className="mb-8">
               <h3 className="text-xl font-bold mt-6 mb-2">{a.name}</h3>
-              <p className="text-sm text-gray-600 mb-3">
-                <strong>Based:</strong> {a.based}. <strong>Type:</strong> {a.type}.
-              </p>
               <p className="mb-3">{a.what}</p>
               <ul className="list-disc pl-6 mb-3 space-y-1">
-                <li><strong>Best for:</strong> {a.bestFor}</li>
-                <li><strong>Platforms named:</strong> {a.platforms}</li>
                 <li><strong>Ecommerce clients named on its site:</strong> {a.clients}</li>
                 {a.proof ? <li><strong>A result it publishes:</strong> {a.proof}</li> : null}
                 <li><strong>Price:</strong> {a.price}</li>
@@ -539,15 +548,15 @@ export const post: BlogPost = {
                 </figure>
               )}
               {a.name === 'Seed' && (
-                <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8 not-prose">
-                  <p className="font-semibold text-orange-900 mb-2">Not sure which of these fits your store?</p>
-                  <p className="text-orange-800 mb-3">
+                <aside aria-label="Free ecommerce SEO audit" className="not-prose my-10 rounded-xl border border-gray-200 border-l-4 border-l-[#B23E13] bg-[#FAFAF7] px-5 py-6 md:px-8">
+                  <p className="font-semibold text-xl text-[#0F0F12] mb-2">Not sure which of these fits your store?</p>
+                  <p className="text-[#3A3A38] mb-4">
                     Our free ecommerce SEO audit crawls your store and names the ten to twenty pages worth fixing first, whoever you hire to fix them.
                   </p>
-                  <a href="/uk/ecommerce-seo" className="inline-block bg-[#B23E13] text-white px-5 py-2 rounded font-semibold hover:bg-[#9A3510] transition-colors">
-                    Get a free ecommerce SEO audit
+                  <a href="/uk/ecommerce-seo" className="inline-flex items-center rounded-full bg-[#B23E13] px-6 py-3 font-semibold text-white no-underline hover:opacity-90">
+                    Book a free ecommerce SEO audit
                   </a>
-                </div>
+                </aside>
               )}
             </section>
           ))}
@@ -581,11 +590,12 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How much does an ecommerce SEO agency cost in the UK?</h2>
       <p className="mb-4">
-        Usually £1,500 to £10,000 or more a month, depending on catalogue size and competition. Two UK pricing guides we read on 21 October 2026 give ecommerce-specific ranges: <a href="https://renhaoseo.com/uk/compare/seo-pricing/" className={link} rel="noopener" target="_blank">Ren Hao SEO</a> puts ecommerce work at &ldquo;£1,500–£8,000+/mo&rdquo;, and <a href="https://blog.gorilla.marketing/how-much-does-seo-cost/" className={link} rel="noopener" target="_blank">Gorilla Marketing</a> says monthly budgets &ldquo;range from £2,000 for smaller stores to £10,000+ for competitive retail brands&rdquo;. <a href="https://whitehat-seo.co.uk/blog/seo-package-prices" className={link} rel="noopener" target="_blank">Whitehat SEO&rsquo;s UK pricing guide</a> (updated 29 July 2026) adds that competitive sectors, ecommerce among them, carry 30 to 50% pricing premiums, and that a large legacy catalogue can need £5,000 to £15,000 of upfront fixes first.
+        Usually £1,500 to £10,000 or more a month, depending on catalogue size and competition. Two UK pricing guides we read on 21 October 2026 give ecommerce-specific ranges: <a href="https://renhaoseo.com/uk/compare/seo-pricing/" className={link} rel="noopener" target="_blank">Ren Hao SEO</a>{' '}puts ecommerce work at £1,500 to £8,000+ a month, and <a href="https://blog.gorilla.marketing/how-much-does-seo-cost/" className={link} rel="noopener" target="_blank">Gorilla Marketing</a>{' '}says monthly budgets &ldquo;range from £2,000 for smaller stores to £10,000+ for competitive retail brands&rdquo;. <a href="https://whitehat-seo.co.uk/blog/seo-package-prices" className={link} rel="noopener" target="_blank">Whitehat SEO&rsquo;s UK pricing guide</a>{' '}(updated 29 July 2026) adds that competitive sectors, ecommerce among them, carry 30 to 50% pricing premiums, and that a large legacy catalogue can need £5,000 to £15,000 of upfront fixes first.
       </p>
       <p className="mb-4">Here is what the agencies themselves print, copied exactly:</p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-sm text-gray-600 mb-2">Swipe sideways to see every column.</p>
+      <div className="mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 600 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Agency</th>
@@ -643,12 +653,12 @@ export const post: BlogPost = {
 
       <h3 className="text-xl font-bold mt-6 mb-3">Faceted navigation and crawl control</h3>
       <p className="mb-4">
-        Filters build new web addresses for every combination of size, colour and price. Google&rsquo;s <a href="https://developers.google.com/search/docs/crawling-indexing/crawling-managing-faceted-navigation" className={link} rel="noopener" target="_blank">faceted navigation guide</a> (updated 18 December 2025) says these can create infinite URL spaces and lead to overcrawling. It gives two routes: block filter pages from being crawled if they do not need to rank, or follow its rules for the ones that should. A good agency crawls your store first, because there are always more filter pages than the owner expects, and keeps the filters people actually search for (&ldquo;black leather sofa&rdquo;) open to Google.
+        Filters build new web addresses for every combination of size, colour and price. Google&rsquo;s <a href="https://developers.google.com/search/docs/crawling-indexing/crawling-managing-faceted-navigation" className={link} rel="noopener" target="_blank">faceted navigation guide</a>{' '}(updated 18 December 2025) says these can create infinite URL spaces and lead to overcrawling. It gives two routes: block filter pages from being crawled if they do not need to rank, or follow its rules for the ones that should. A good agency crawls your store first, because there are always more filter pages than the owner expects, and keeps the filters people actually search for (&ldquo;black leather sofa&rdquo;) open to Google.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">Migrations without losing rankings</h3>
       <p className="mb-4">
-        Moving from WooCommerce or Magento to Shopify is where stores lose the most organic revenue in one go. Google&rsquo;s <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" className={link} rel="noopener" target="_blank">site move guide</a> (updated 20 August 2026) recommends permanent server redirects such as 301 and 308, says they do not lose PageRank, and advises against redirect chains. The work is a full map of old to new addresses, tested before launch, then weeks of Search Console checks. We wrote a longer guide on <a href="/blog/ecommerce-replatforming-without-losing-seo-2026" className={link}>replatforming without losing SEO</a>, and if the move is to Shopify, see our <a href="/uk/shopify-migration" className={link}>UK Shopify migration service</a>.
+        Moving from WooCommerce or Magento to Shopify is where stores lose the most organic revenue in one go. Google&rsquo;s <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" className={link} rel="noopener" target="_blank">site move guide</a>{' '}(updated 20 August 2026) recommends permanent server redirects such as 301 and 308, says they do not lose PageRank, and advises against redirect chains. The work is a full map of old to new addresses, tested before launch, then weeks of Search Console checks. We wrote a longer guide on <a href="/blog/ecommerce-replatforming-without-losing-seo-2026" className={link}>replatforming without losing SEO</a>, and if the move is to Shopify, see our <a href="/uk/shopify-migration" className={link}>UK Shopify migration service</a>.
       </p>
       <figure className="my-8 not-prose">
         <img
@@ -665,44 +675,38 @@ export const post: BlogPost = {
 
       <h3 className="text-xl font-bold mt-6 mb-3">Product schema</h3>
       <p className="mb-4">
-        Google&rsquo;s <a href="https://developers.google.com/search/docs/appearance/structured-data/product" className={link} rel="noopener" target="_blank">product structured data guide</a> splits it in two: product snippets for pages where people cannot buy (reviews, comparisons), and merchant listings for pages where they can. Merchant listing markup can carry sizing, shipping and returns details. On a store, that means merchant listing markup on every product page, with price and stock that match what the page shows.
+        Google&rsquo;s <a href="https://developers.google.com/search/docs/appearance/structured-data/product" className={link} rel="noopener" target="_blank">product structured data guide</a>{' '}splits it in two: product snippets for pages where people cannot buy (reviews, comparisons), and merchant listings for pages where they can. Merchant listing markup can carry sizing, shipping and returns details. On a store, that means merchant listing markup on every product page, with price and stock that match what the page shows.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">Google Merchant Center and free listings</h3>
       <p className="mb-4">
-        Products can appear in Google&rsquo;s shopping results without paying for ads. Google&rsquo;s <a href="https://support.google.com/merchants/answer/9199328" className={link} rel="noopener" target="_blank">free listings help page</a> says eligible products may show on Search, Images, Lens, YouTube, Gemini, the Shopping tab and Business Profiles. It also says turning the setting on gives permission to show products but does not guarantee they will appear, and that matching depends on the data you send. Feed quality is SEO work now, and five of the ten outside agencies above name it.
+        Products can appear in Google&rsquo;s shopping results without paying for ads. Google&rsquo;s <a href="https://support.google.com/merchants/answer/9199328" className={link} rel="noopener" target="_blank">free listings help page</a>{' '}says eligible products may show on Search, Images, Lens, YouTube, Gemini, the Shopping tab and Business Profiles. It also says turning the setting on gives permission to show products but does not guarantee they will appear, and that matching depends on the data you send. Feed quality is SEO work now, and five of the ten outside agencies above name it.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">AI Overviews for product searches</h3>
       <p className="mb-4">
-        Google&rsquo;s <a href="https://developers.google.com/search/docs/appearance/ai-features" className={link} rel="noopener" target="_blank">guide to AI features</a> says there are &ldquo;no additional requirements&rdquo; to appear in AI Overviews or AI Mode beyond normal SEO. Ofcom found about 30% of UK searches show an AI Overview. For a store, the same groundwork helps in both: accurate product data, category copy that answers buying questions (&ldquo;which oak table seats eight?&rdquo;), and your brand named on sites you do not own. Ask an agency how it measures AI referrals in GA4, not only rankings.
+        Google&rsquo;s <a href="https://developers.google.com/search/docs/appearance/ai-features" className={link} rel="noopener" target="_blank">guide to AI features</a>{' '}says there are &ldquo;no additional requirements&rdquo; to appear in AI Overviews or AI Mode beyond normal SEO. Ofcom found about 30% of UK searches show an AI Overview. For a store, the same groundwork helps in both: accurate product data, category copy that answers buying questions (&ldquo;which oak table seats eight?&rdquo;), and your brand named on sites you do not own. Ask an agency how it measures AI referrals in GA4, not only rankings.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How to choose an ecommerce SEO agency in the UK</h2>
       <p className="mb-4">
-        Start with your platform, because SEO fixes on Shopify, Magento and WooCommerce are made in different places. Then check proof: one published result on a store like yours, with revenue or organic traffic, not only rankings. Google&rsquo;s own advice on <a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo" className={link} rel="noopener" target="_blank">hiring an SEO</a> (updated 5 June 2026) is to ask for examples of past work and how results will be explained, to give Search Console read access only at first, and to walk away from anyone who guarantees first place.
+        Start with your platform, because SEO fixes on Shopify, Magento and WooCommerce are made in different places. Then check proof: one published result on a store like yours, with revenue or organic traffic, not only rankings. Google&rsquo;s own advice on <a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo" className={link} rel="noopener" target="_blank">hiring an SEO</a>{' '}(updated 5 June 2026) is to ask for examples of past work and how results will be explained, to give Search Console read access only at first, and to walk away from anyone who guarantees first place.
       </p>
       <p className="mb-4">
         Add four ecommerce questions. Who changes the code on our store? What will you do about our filter pages? How do you measure organic revenue in GA4? What is the notice period? The answer to the first one matters most: an SEO plan that waits months for a developer earns nothing in the meantime.
       </p>
       <p className="mb-6">
-        If you run a Shopify store and are choosing a build partner as well, our list of <a href="/blog/best-shopify-plus-agencies-uk-2026" className={link}>Shopify Plus agencies for UK brands</a> covers 15 firms by buyer type, and our <a href="/uk/shopify-seo" className={link}>Shopify SEO service</a> sets out the Shopify-specific fixes.
+        If you run a Shopify store and are choosing a build partner as well, our list of <a href="/blog/best-shopify-plus-agencies-uk-2026" className={link}>Shopify Plus agencies for UK brands</a>{' '}covers 15 firms by buyer type, and our <a href="/uk/shopify-seo" className={link}>Shopify SEO service</a>{' '}sets out the Shopify-specific fixes.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Sources</h2>
       <p className="mb-4">
-        All read on 21 October 2026: each agency&rsquo;s own pages, linked in its profile and in the tables above; <a href="https://www.ons.gov.uk/businessindustryandtrade/retailindustry/timeseries/j4mc/drsi" className={link} rel="noopener" target="_blank">ONS internet sales as a share of retail, series J4MC</a> (August 2026 value); <a href="https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025" className={link} rel="noopener" target="_blank">Ofcom Online Nation 2025</a>; Google Search Central on <a href="https://developers.google.com/search/docs/crawling-indexing/crawling-managing-faceted-navigation" className={link} rel="noopener" target="_blank">faceted navigation</a>, <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" className={link} rel="noopener" target="_blank">site moves</a>, <a href="https://developers.google.com/search/docs/appearance/structured-data/product" className={link} rel="noopener" target="_blank">product structured data</a>, <a href="https://developers.google.com/search/docs/appearance/ai-features" className={link} rel="noopener" target="_blank">AI features</a> and <a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo" className={link} rel="noopener" target="_blank">hiring an SEO</a>; <a href="https://support.google.com/merchants/answer/9199328" className={link} rel="noopener" target="_blank">Google Merchant Center free listings</a>; and the price guides from <a href="https://renhaoseo.com/uk/compare/seo-pricing/" className={link} rel="noopener" target="_blank">Ren Hao SEO</a>, <a href="https://blog.gorilla.marketing/how-much-does-seo-cost/" className={link} rel="noopener" target="_blank">Gorilla Marketing</a> and <a href="https://whitehat-seo.co.uk/blog/seo-package-prices" className={link} rel="noopener" target="_blank">Whitehat SEO</a>. The lists we tallied were published by 6S Marketers, 5MS, Charle, ClickSlice (archived copy, 11 May 2026) and RevenueBase.
+        All read on 21 October 2026: each agency&rsquo;s own pages, linked in its profile and in the tables above; <a href="https://www.ons.gov.uk/businessindustryandtrade/retailindustry/timeseries/j4mc/drsi" className={link} rel="noopener" target="_blank">ONS internet sales as a share of retail, series J4MC</a>{' '}(August 2026 value); <a href="https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025" className={link} rel="noopener" target="_blank">Ofcom Online Nation 2025</a>; Google Search Central on <a href="https://developers.google.com/search/docs/crawling-indexing/crawling-managing-faceted-navigation" className={link} rel="noopener" target="_blank">faceted navigation</a>, <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" className={link} rel="noopener" target="_blank">site moves</a>, <a href="https://developers.google.com/search/docs/appearance/structured-data/product" className={link} rel="noopener" target="_blank">product structured data</a>, <a href="https://developers.google.com/search/docs/appearance/ai-features" className={link} rel="noopener" target="_blank">AI features</a>{' '}and <a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo" className={link} rel="noopener" target="_blank">hiring an SEO</a>; <a href="https://support.google.com/merchants/answer/9199328" className={link} rel="noopener" target="_blank">Google Merchant Center free listings</a>; and the price guides from <a href="https://renhaoseo.com/uk/compare/seo-pricing/" className={link} rel="noopener" target="_blank">Ren Hao SEO</a>, <a href="https://blog.gorilla.marketing/how-much-does-seo-cost/" className={link} rel="noopener" target="_blank">Gorilla Marketing</a>{' '}and <a href="https://whitehat-seo.co.uk/blog/seo-package-prices" className={link} rel="noopener" target="_blank">Whitehat SEO</a>. The lists we tallied were published by 6S Marketers, 5MS, Charle, ClickSlice (archived copy, 11 May 2026) and RevenueBase.
       </p>
 
-      <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8">
-        <p className="font-semibold text-orange-900 mb-2">Want a second opinion on your shortlist?</p>
-        <p className="text-orange-800 mb-3">
-          Send us your store. We will crawl it, tell you what is costing you organic revenue, and fix the price in writing before any work starts.
-        </p>
-        <a href="/uk/ecommerce-seo" className="inline-block bg-[#B23E13] text-white px-5 py-2 rounded font-semibold hover:bg-[#9A3510] transition-colors">
-          See our UK ecommerce SEO service
-        </a>
-      </div>
+      <p className="mb-6">
+        <strong>Want a second opinion on your shortlist?</strong>{' '}Send us your store through our <a href="/uk/ecommerce-seo" className={link}>free ecommerce SEO audit</a>. We crawl it, tell you what is costing you organic revenue, and quote a fixed price in writing before any work starts.
+      </p>
     </>
   ),
 };

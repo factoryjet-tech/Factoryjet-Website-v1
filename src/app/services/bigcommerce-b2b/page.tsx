@@ -12,6 +12,7 @@ import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator
 import B2bWholesaleCalculator from '@/components/commerce/B2bWholesaleCalculator';
 import Net30PaymentComparison from '@/components/commerce/Net30PaymentComparison';
 import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-10-29';
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     description: 'Build enterprise B2B portals with BigCommerce B2B Edition, automated RFQ workflows, and ERP connectors.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/services/bigcommerce-b2b' },
+  alternates: { canonical: 'https://factoryjet.com/services/bigcommerce-b2b', languages: twinAlternates['bigcommerce-b2b'] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 

@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/shopify-ai-agents, built 2026-10-29.
@@ -34,10 +35,11 @@ import '../ai-agents/ai-agents.css';
       boxes for "shopify sidekick" and "shopify ai" fed the basics FAQs. */
 
 const CANONICAL = 'https://factoryjet.com/uk/shopify-ai-agents';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
+const UPDATED_LABEL = '31 October 2026';
 const READ_ON = '29 October 2026';
-const TITLE = 'Shopify AI Agents UK: Custom Agents for Store Ops | FactoryJet';
-const H1 = 'Shopify AI Agents for UK Stores: Custom Agents That Work Your Orders, Returns, Stock and Books';
+const TITLE = 'Shopify AI Agents UK: Orders, Returns, Stock | FactoryJet';
+const H1 = 'Shopify AI Agents for UK Stores: Orders, Returns, Stock and Books';
 const DESCRIPTION =
   'Custom Shopify AI agents for UK stores: marketplace orders, trade POs, returns, Linnworks or Brightpearl stock and Xero or Sage checks. Demo on your data first.';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
@@ -80,6 +82,9 @@ const SRC = {
   ecAiFramework: { label: 'European Commission: AI Act regulatory framework', url: 'https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai' },
   royalMailDev: { label: 'Royal Mail Developer Portal', url: 'https://developer.royalmail.net/' },
   cloudswitched: { label: 'Cloudswitched: AI software development cost UK 2026', url: 'https://www.cloudswitched.com/blog/ai-software-development-cost-uk-2026' },
+  shopifyAgentic: { label: 'Shopify Help: Agentic storefronts', url: 'https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts' },
+  gorgiasApp: { label: 'Shopify App Store: Gorgias: AI Helpdesk & Chat', url: 'https://apps.shopify.com/helpdesk' },
+  loopApp: { label: 'Shopify App Store: Loop Returns & Exchanges', url: 'https://apps.shopify.com/loop-returns' },
 } as const;
 
 type SrcKey = keyof typeof SRC;
@@ -119,7 +124,7 @@ const AGENT_JOBS: { title: string; trigger: string; body: string; guard: string;
   {
     title: 'Books and payout check agent',
     trigger: 'Every payout, and on every sync error',
-    body: 'Compares Shopify orders, refunds and payouts with what reached Xero, Sage 50, Sage 200, Sage Intacct, QuickBooks UK, Dynamics 365 Business Central, NetSuite or Odoo. When a sale is missing or posted at the wrong VAT rate, it explains the gap in plain words and drafts the correction for your finance team to approve.',
+    body: 'Compares Shopify orders, refunds and payouts with what reached your ledger: Xero, Sage, QuickBooks UK, Business Central, NetSuite or Odoo. When a sale is missing or posted at the wrong VAT rate, it explains the gap in plain words and drafts the correction for your finance team to approve.',
     guard: 'Read-only on the ledger until a person approves a fix.',
     systems: 'Xero, Sage, QuickBooks UK, Business Central, NetSuite, Odoo',
   },
@@ -145,7 +150,7 @@ const OWNERS: { record: string; owner: string; agent: string }[] = [
 
 /* Sidekick, Flow, an app or a custom agent. */
 const ROUTES: { feat: string; sidekick: string; flow: string; app: string; fj: string }[] = [
-  { feat: 'What it is', sidekick: 'Shopify’s AI assistant inside your admin', flow: 'Shopify’s free rule-based automation app', app: 'A ready-made product for one job', fj: 'An agent built for your rules and systems' },
+  { feat: 'What it is', sidekick: 'Shopify’s AI assistant inside your admin', flow: 'Shopify’s free rule-based automation app', app: 'A ready-made product for one job, such as Gorgias AI Agent for support or Loop Returns', fj: 'An agent built for your rules and systems' },
   { feat: 'Who starts it', sidekick: 'A person typing in the admin', flow: 'A store event and a rule', app: 'Depends on the app', fj: 'A store event, an email or a timer' },
   { feat: 'Reads systems outside Shopify', sidekick: 'Through Shopify and its apps', flow: 'Through connected apps', app: 'The ones the maker supports', fj: 'Any with an API or export: Xero, Sage, Linnworks, couriers' },
   { feat: 'Handles messy input such as PDFs and emails', sidekick: 'When a person pastes it in', flow: 'No, rules only', app: 'Sometimes', fj: 'Yes, with a test set from your own data' },
@@ -178,7 +183,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'basics',
     question: 'What is a Shopify AI agent?',
     answer:
-      'It is software that does a store job in several steps, using a language model to read messy input and Shopify’s official API to act. A trade PO arrives by email; the agent reads it, finds the buyer, matches the lines and builds a draft order. A chatbot answers questions. An agent prepares work and hands it to your team, under limits you set.',
+      'It is software that does a store job in several steps, using a language model to read messy input and Shopify’s official API to act. A trade purchase order (PO) arrives by email; the agent reads it, finds the buyer, matches the lines and builds a draft order. It prepares work and hands it to your team, under limits you set.',
   },
   {
     category: 'basics',
@@ -188,15 +193,21 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'basics',
+    question: 'Is a Shopify AI agent the same as an AI chatbot for Shopify?',
+    answer:
+      'No. An AI chatbot for Shopify sits on your store and answers shoppers’ questions in a chat window. A Shopify AI agent works behind the scenes for your team. It starts when an order, email or timer fires, reads systems such as Linnworks or Xero, and prepares drafts, tags and corrections. One store can run both: the chatbot talks to customers, the agent clears the back office.',
+  },
+  {
+    category: 'basics',
     question: 'Should we use Shopify Flow or a custom AI agent?',
     answer:
-      'Shopify’s help centre says Flow is free on the Basic, Grow, Advanced and Plus plans. It runs a fixed action when a store event matches a rule, such as tagging every order over £500 for a manual check. Flow cannot open a trade buyer’s PDF purchase order and work out which company price list each line belongs to. That part is agent work. In a typical UK set-up, Flow does the tagging and the agent does the reading.',
+      'Shopify’s help centre says Flow is free on the Basic, Grow, Advanced and Plus plans. It runs a fixed action when a store event matches a rule, such as tagging every order over £500 for a manual check. Flow cannot open a trade buyer’s PDF purchase order and work out which company price list each line belongs to. In a typical UK set-up, Flow does the tagging and the agent does the reading.',
   },
   {
     category: 'basics',
     question: 'Which jobs should a UK Shopify store give an AI agent first?',
     answer:
-      'Marketplace order exceptions, trade POs that arrive by email and where-is-my-parcel replies are the usual UK starting points, followed by stock counts that disagree between Shopify and Linnworks. A quick test: the job comes up a few dozen times a week, the facts it needs sit in Shopify or the order inbox, and your team can mark each result right or wrong at a glance. Refunds, trade credit and postings to Xero come later, once the first agent has a record on your own data.',
+      'Start with marketplace order exceptions, trade POs that arrive by email or where-is-my-parcel replies. Stock counts that disagree between Shopify and Linnworks come next. A good first job comes up a few dozen times a week, needs facts that sit in Shopify or the order inbox, and gives results your team can mark right or wrong at a glance. Refunds, trade credit and postings to Xero come later.',
   },
   {
     category: 'basics',
@@ -206,7 +217,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'basics',
-    question: 'What is Shopify’s API, and which one does an agent use?',
+    question: 'Which Shopify API does an AI agent use?',
     answer:
       'An API is the official door one piece of software uses to read and change data in another. Shopify’s developer site says its REST Admin API became legacy on 1 October 2024, and that from 1 April 2025 all new public apps must be built only on the GraphQL Admin API. We build new agents on GraphQL for that reason.',
   },
@@ -221,7 +232,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'uk',
     question: 'Does an AI agent affect Making Tax Digital for VAT?',
     answer:
-      'It can help or hurt, depending on how it moves data. HMRC’s VAT Notice 700/22 says a digital link needs no manual intervention, lists API transfer and CSV import among accepted links, and says copy and paste is not a digital link. So an agent that writes corrections through the accounting API keeps the chain digital. Ask your accountant to check the whole set-up.',
+      'Only through how it moves data. HMRC’s VAT Notice 700/22 says a digital link needs no manual intervention, lists API transfer and CSV import among accepted links, and says copy and paste is not a digital link. So an agent that writes corrections through the accounting API keeps the chain digital. Ask your accountant to check the whole set-up.',
   },
   {
     category: 'uk',
@@ -239,13 +250,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'uk',
     question: 'Does UK GDPR let an AI agent decide refunds or trade credit on its own?',
     answer:
-      'Be careful here. The ICO’s draft guidance, updated on 31 March 2026 to reflect the Data (Use and Access) Act 2025, covers decisions based solely on automated processing that have a legal or similarly significant effect on a person. It lists safeguards such as human intervention and the right to contest. Our default keeps a person on every money decision, so that question rarely arises. Your lawyer decides the rest.',
+      'Not by default on our builds: a person signs off every money decision. The ICO’s draft guidance, updated on 31 March 2026 to reflect the Data (Use and Access) Act 2025, covers decisions based solely on automated processing that have a legal or similarly significant effect on a person. It lists safeguards such as human intervention and the right to contest. Your lawyer advises on your case.',
   },
   {
     category: 'uk',
     question: 'We sell into the EU. Does the EU AI Act apply to us?',
     answer:
-      'It can. Article 2 of the AI Act covers providers and deployers based outside the EU where the output of the AI system is used in the Union. Article 50 says systems meant to talk directly with people must tell them they are dealing with AI, unless that is obvious. The European Commission says these transparency rules come into effect in August 2026. Take legal advice for your case.',
+      'Yes, if the agent’s output is used in the EU. Article 2 of the AI Act covers providers and deployers based outside the EU where the output of the AI system is used in the Union. Article 50 says systems meant to talk directly with people must tell them they are dealing with AI, unless that is obvious. The European Commission says these rules come into effect in August 2026. Take legal advice.',
   },
   {
     category: 'uk',
@@ -270,13 +281,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'build',
     question: 'What if a webhook arrives twice, or never arrives, on a busy sale day?',
     answer:
-      'Picture Boxing Day, with orders landing every few seconds. Shopify’s developer docs warn that one webhook can be delivered more than once, that events within a topic can arrive out of order and that delivery is not always guaranteed. A repeat is matched on its X-Shopify-Webhook-Id header and dropped. Before acting, the agent fetches the order fresh from Shopify. A sweep on a timer compares recent orders with what the agent has handled, so a lost event is picked up on the next run.',
+      'Shopify’s developer docs warn that one webhook can be delivered more than once, that events within a topic can arrive out of order and that delivery is not always guaranteed. A repeat is matched on its X-Shopify-Webhook-Id header and dropped. The agent re-reads the order from Shopify before acting. A sweep on a timer compares recent orders with what the agent has handled, so a lost event is caught on the next run.',
   },
   {
     category: 'build',
     question: 'Will a busy agent slow down our other Shopify apps?',
     answer:
-      'It should not, if it is paced. Shopify gives each app and store pair its own allowance on the GraphQL Admin API: 100 points a second on standard plans, 200 on Advanced and 1,000 on Plus, refilled continuously. A single query cannot exceed 1,000 points. We size each agent’s queries to stay well inside its allowance, so peak trading days do not hit the limit.',
+      'No, because each agent is paced. Shopify gives each app and store pair its own allowance on the GraphQL Admin API: 100 points a second on standard plans, 200 on Advanced and 1,000 on Plus, refilled continuously. A single query cannot exceed 1,000 points. We size each agent’s queries to stay well inside its allowance, so peak trading days do not hit the limit.',
   },
   {
     category: 'build',
@@ -311,7 +322,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'working',
-    question: 'We have a written brief or an RFP. What should it include?',
+    question: 'What should a Shopify AI agent brief or RFP include?',
     answer:
       'Send it as it is; we read every brief. The useful parts are the job you want handled, your Shopify plan, every system involved (for example Xero, Linnworks, Royal Mail), a week of volumes, what goes wrong today and who approves money decisions. If you are running a formal tender, include the scoring criteria and deadline, and we answer in that format.',
   },
@@ -363,8 +374,9 @@ const jsonLd = {
       author: {
         '@type': 'Person',
         name: 'Bhavesh Barot',
+        '@id': 'https://factoryjet.com/#bhavesh-barot',
         jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
+        url: 'https://factoryjet.com/author/bhavesh-barot',
         sameAs: [
           'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
           'https://github.com/factoryjet-tech',
@@ -389,7 +401,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['shopify-ai-agents'] },
   openGraph: {
     title: TITLE,
     description:
@@ -454,8 +466,8 @@ export default function ShopifyAiAgentsUKPage() {
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="who"><a href="/author/bhavesh-barot" style={{ color: 'inherit' }}><b>Bhavesh Barot</b></a>, Founder &amp; CEO, FactoryJet<br /><span>500+ businesses served since 2014</span></div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -500,20 +512,29 @@ export default function ShopifyAiAgentsUKPage() {
                 happen under your rules, and prepares the work through Shopify’s official API. For UK stores the
                 common jobs are marketplace order exceptions, trade POs, returns inside the 14-day cancellation
                 window, stock checks against the warehouse system and payout checks against Xero or Sage.
+                FactoryJet is an ecommerce and AI services company that has served 500+ businesses since 2014,
+                and it designs, builds and supports these agents for UK Shopify stores.
               </p>
             </div>
             <Sources ids={['shopifyRest', 'govDistance']} />
             <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms we use a lot</span>
+              <span className="lab">Terms we use a lot</span>
               <p>
                 A <b>webhook</b> is a message Shopify sends the moment something happens, such as a new order. A
                 <b> draft order</b> is an order a person still has to confirm before it counts. A <b>test set</b> is
                 a batch of your real past cases, each with the right answer written down, used to score the agent
                 before anyone trusts it.
               </p>
+              <p className="mt-4">
+                A <b>trade PO</b> (purchase order) is the order form a business buyer sends you. A <b>SKU</b> is your
+                code for one product. A <b>3PL</b> is an outside warehouse that stores and ships stock for you.
+                <b> GraphQL</b> is the current way apps talk to Shopify’s Admin API. A <b>reconciliation job</b> is a
+                check on a timer that compares two lists and reports what is missing. A <b>prompt injection</b> is
+                an instruction hidden in an email or file that tries to make the AI do something it should not.
+              </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              The model is the small part of the job. The large part is the plumbing a UK store already runs:
+              Most of the build work sits in the systems a UK store already runs, and less of it in the AI model:
               marketplace feeds, a warehouse count that disagrees with Shopify by eleven units, a VAT rate set wrong
               on one product, a courier status that says delivered when the customer says otherwise. We scope that
               plumbing first, because it decides whether an agent saves your team time or creates new work.
@@ -585,7 +606,8 @@ export default function ShopifyAiAgentsUKPage() {
                 changes for a person to approve.
               </p>
             </div>
-            <div className="card mt-8" tabIndex={0} role="region" aria-label="Record owners table" style={{ padding: 0, overflowX: 'auto' }}>
+            <p className="md:hidden mt-6" style={srcNote}>Swipe sideways to see every column.</p>
+            <div className="card mt-8" tabIndex={0} role="region" aria-label="Record owners table" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 760 }}>
                 <thead>
                   <tr>
@@ -636,8 +658,8 @@ export default function ShopifyAiAgentsUKPage() {
               <h3 className="mt-4">UK GDPR: a person on decisions that matter</h3>
               <p>
                 The ICO’s draft guidance on automated decision-making, updated on 31 March 2026 to reflect the Data
-                (Use and Access) Act 2025, covers decisions made solely by automated processing that have a legal or
-                similarly significant effect on someone. Refusing a trade customer credit could be one. The
+                (Use and Access) Act 2025. It covers decisions made solely by automated processing that have a legal
+                or similarly significant effect on someone. Refusing a trade customer credit could be one. The
                 guidance lists safeguards such as human intervention and a way to contest. Our agents keep a person
                 on those decisions by default.
               </p>
@@ -698,7 +720,7 @@ export default function ShopifyAiAgentsUKPage() {
                   <li><b>Drafts and tags by default.</b> Live changes only where you approve them.</li>
                   <li><b>Money stays with people.</b> Refunds and price changes sit behind a rule, and a person signs off anything above your limit.</li>
                   <li><b>A spend cap on the model.</b> A loop cannot run up a bill.</li>
-                  <li><b>An off switch.</b> Your team can stop the agent without calling us.</li>
+                  <li><b>An off switch.</b> Uninstalling the custom app from your Shopify admin stops the agent’s token at once, with no call to us.</li>
                   <li><b>A full log.</b> Every input and every change, kept in an account you control.</li>
                   <li><b>Prompt-injection tests.</b> Instructions hidden in a customer email are tested before launch.</li>
                 </ul>
@@ -717,14 +739,15 @@ export default function ShopifyAiAgentsUKPage() {
               say so on the first call. A custom agent earns its place when the job crosses Shopify and a UK
               system it does not reach on its own.
             </p>
-            <div className="card mt-8" tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto' }}>
+            <p className="md:hidden mt-6" style={srcNote}>Swipe sideways to see every column, including the custom agent.</p>
+            <div className="card mt-8" tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 900 }}>
                 <thead>
                   <tr>
                     <th>Question</th>
                     <th>Shopify Sidekick</th>
                     <th>Shopify Flow</th>
-                    <th>Ready-made app</th>
+                    <th>Ready-made app (for example Gorgias, Loop)</th>
                     <th className="fj">Custom agent (FactoryJet)</th>
                   </tr>
                 </thead>
@@ -748,7 +771,23 @@ export default function ShopifyAiAgentsUKPage() {
               <a href="/uk/shopify-development" style={inlineLink}>Shopify development in the UK</a> or{' '}
               <a href="/uk/shopify-plus" style={inlineLink}>Shopify Plus</a>.
             </p>
-            <Sources ids={['shopifySidekick', 'shopifyFlow']} />
+            <p className="mt-4" style={{ maxWidth: 820 }}>
+              A ready-made app is the faster start when your job is the common one it was built for. Gorgias sells
+              an AI Agent inside its Shopify helpdesk app for customer messages, and Loop Returns handles returns and
+              exchanges. Both install from the Shopify App Store. A custom agent fits when the job
+              depends on your own rules, trade price lists or a UK system such as Sage or Linnworks.
+            </p>
+            <Sources ids={['shopifySidekick', 'shopifyFlow', 'gorgiasApp', 'loopApp']} />
+
+            <h3 className="mt-10" style={{ maxWidth: 780 }}>Agentic commerce on Shopify versus an operations agent</h3>
+            <p className="mt-4" style={{ maxWidth: 820 }}>
+              Agentic commerce means AI assistants that find and buy products for shoppers. Shopify’s help centre
+              says its agentic storefronts let customers discover and buy your products in AI channels, and that
+              the feature is active by default for eligible stores. It names ChatGPT, Google AI Mode and Gemini,
+              Microsoft Copilot and Meta surfaces. That work sits on the selling side. The agents on this page sit
+              on the operations side: they handle the orders, returns and stock checks those sales create.
+            </p>
+            <Sources ids={['shopifyAgentic']} />
           </div>
         </section>
 
@@ -832,9 +871,9 @@ export default function ShopifyAiAgentsUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">Send a brief</span>
-                <h2>Have a brief or an RFP? Send it as it is.</h2>
+                <h2>What to send for a Shopify AI agent quote</h2>
                 <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Written briefs get the fastest, most exact answer. A page of notes is enough. If you are running a
+                  Send your brief or RFP as it is. Written briefs get the fastest, most exact answer. A page of notes is enough. If you are running a
                   formal tender, include the scoring criteria and the deadline, and we reply in your format.
                 </p>
                 <div className="mt-8">
@@ -886,7 +925,7 @@ export default function ShopifyAiAgentsUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">Method</span>
-              <h2>Sources, read on {READ_ON}</h2>
+              <h3 style={{ fontSize: 24 }}>Sources, read on {READ_ON}</h3>
               <p className="lead mt-4">
                 Every Shopify rule, plan detail, UK and EU rule and price range on this page was read on the pages
                 below on that day. Platforms and regulators change their pages, so open the link before you act on
@@ -906,10 +945,18 @@ export default function ShopifyAiAgentsUKPage() {
         {/* 14. FAQ */}
         <section className="sec-lg dot-grid" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Shopify AI agent questions from UK store teams</h2>
             </div>
+            <nav className="faq-pill-nav" aria-label="FAQ topics">
+              {FAQ_CATEGORIES.map((c) => (
+                <a key={c.key} href={`#faq-${c.key}`}>
+                  {c.label}
+                  <span className="pill-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
+                </a>
+              ))}
+            </nav>
             <div className="faq-grid">
               <aside className="faq-sidebar">
                 <span className="faq-sidebar-topics">Topics</span>
@@ -922,7 +969,7 @@ export default function ShopifyAiAgentsUKPage() {
                   ))}
                 </nav>
                 <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Ask the founder a question" region="uk" modalVariant="default" btnVariant="secondary-light" />
+                  <ModalCTAButton label="Send my brief" region="uk" modalVariant="default" btnVariant="secondary-light" />
                   <p>Bhavesh replies within one business day.</p>
                 </div>
               </aside>
@@ -947,6 +994,10 @@ export default function ShopifyAiAgentsUKPage() {
                     ))}</ul>
                   </div>
                 ))}
+                <div className="md:hidden">
+                  <ModalCTAButton label="Send my brief" region="uk" modalVariant="default" btnVariant="secondary-light" />
+                  <p style={{ fontSize: 13, color: T.n400, marginTop: 8 }}>Bhavesh replies within one business day.</p>
+                </div>
               </div>
             </div>
           </div>

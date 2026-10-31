@@ -7,12 +7,14 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import AuFaq from '../components/AuFaq';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
 
 const CANONICAL = 'https://factoryjet.com/au/crm-ai-agents';
-const UPDATED = '2026-10-29';
+const PUBLISHED = '2026-10-29';
+const UPDATED = '2026-10-31';
 const TITLE = 'CRM AI Agents Australia | HubSpot & Salesforce | FactoryJet';
 const H1 = 'CRM AI Agents Australia: HubSpot and Salesforce Agents for Your Sales Team';
 const DESCRIPTION =
@@ -64,6 +66,13 @@ const SRC_HUBSPOT_DC = 'https://www.hubspot.com/data-centers';
 // accept the agreement to receive an authentication GUID; uses include ABN validation and
 // keeping stored ABN details current. Fetched 29 Oct 2026.
 const SRC_ABN_LOOKUP = 'https://abr.business.gov.au/Tools/WebServices';
+// HubSpot AI product page: names Agent Hub ("HubSpot's home for every agent running your
+// go-to-market"), Agent Builder, and agents incl. Prospecting Agent, Customer Agent, Data Agent.
+// Fetched 31 Oct 2026.
+const SRC_HUBSPOT_AI = 'https://www.hubspot.com/products/artificial-intelligence';
+// Salesforce Agentforce page: "the AI agent platform"; "MuleSoft API connectors to connect Agents
+// to any system". Fetched 31 Oct 2026.
+const SRC_AGENTFORCE = 'https://www.salesforce.com/agentforce/';
 /* Build-only market ranges, fetched and read 29 Oct 2026. Flowtivity, "How Much Does an AI Agent
    Cost in 2026? Australian Pricing Guide" (5 March 2026), AUD, "early 2026": "Lead qualification
    and follow-up" "$8,000 - $20,000"; multi-step agents covering lead qualification and CRM updates
@@ -86,12 +95,16 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   // ── Basics ──
   { category: 'basics', question: 'What are AI agents in a CRM system?',
     answer: 'A CRM AI agent is software that reads records in HubSpot or Salesforce, works out the next step and then does it, or suggests it to a person. Typical jobs are scoring a new lead, proposing a deal stage, logging an email thread to the right account and drafting a follow-up. An AI model handles the reading and writing. Written rules decide which fields it may change and which actions wait for your rep.' },
-  { category: 'basics', question: 'Can an AI agent change records in HubSpot or Salesforce directly?',
-    answer: 'Yes, through each CRM’s official API. In HubSpot the agent runs as an app installed in your portal with only the scopes it needs. In Salesforce it signs in as its own integration user with a permission set you approve. We agree, field by field, what it may write. Everything else stays read-only, and every change is logged with the old value, the new value and the reason.' },
-  { category: 'basics', question: 'Should we use HubSpot Breeze or Salesforce Agentforce instead of a custom agent?',
-    answer: 'Use them when the work stays inside one CRM: Breeze and Agentforce are the agents HubSpot and Salesforce sell inside their own products. A custom agent earns its place when the job crosses systems: checking an unpaid invoice in Xero before a renewal call, or reading stock in Cin7 before quoting. You also get approval rules written for your team and code you own outright.' },
-  { category: 'basics', question: 'Is AI replacing the CRM?',
-    answer: 'No. The CRM stays the record your managers report from and your board trusts. What changes is who keeps it current. An agent logs the call, fills the empty industry field and proposes the next stage, so the pipeline report reflects what happened this week. Reps still own the relationship. They spend less time typing into HubSpot or Salesforce after every conversation.' },
+  { category: 'basics', question: 'How do you integrate AI agents with a CRM?',
+    answer: 'Through the CRM’s official API, with a login of the agent’s own. In HubSpot the agent runs as an app installed in your portal with only the scopes it needs. In Salesforce it signs in as its own integration user, with a permission set (the list of objects and fields it may touch) that your administrator approves. We agree, field by field, what it may write. Everything else stays read-only, and every change is logged with the old value, the new value and the reason.' },
+  { category: 'basics', question: 'Does HubSpot have an AI agent?',
+    answer: 'It has several. HubSpot’s AI product page lists a Prospecting Agent, a Customer Agent and a Data Agent among others, plus tools for building your own, all managed from what HubSpot calls Agent Hub. These work well when the job stays inside HubSpot. A custom agent fits when the job also needs Xero, MYOB, Cin7 or a second CRM before it acts.',
+    links: [{ href: SRC_HUBSPOT_AI, label: 'HubSpot: AI agents and Agent Hub' }] },
+  { category: 'basics', question: 'Can Salesforce integrate with AI?',
+    answer: 'Yes, two ways. Salesforce sells Agentforce, which it calls its AI agent platform, and its page says MuleSoft API connectors can link those agents to other systems. Or an outside agent signs in to your org as an integration user and works through the Salesforce API. Pick Agentforce for work that lives in Salesforce. A custom agent suits jobs that start in HubSpot or need the ledger first.',
+    links: [{ href: SRC_AGENTFORCE, label: 'Salesforce: Agentforce' }] },
+  { category: 'basics', question: 'What is an AI CRM, and do we need a new one?',
+    answer: 'An AI CRM is a CRM with AI built in to log activity, score leads and draft emails. You rarely need to switch. HubSpot and Salesforce already ship AI features, and an agent can add the rest to the CRM you run today. The CRM stays the record your managers report from. What changes is who keeps it current: the agent logs the call and proposes the next stage, and reps keep the relationship.' },
   { category: 'basics', question: 'Do we need a CRM agent or an AI SDR?',
     answer: 'An AI SDR goes after new business: first emails to prospects, fast replies to inbound enquiries and meetings booked into a rep’s calendar. A CRM agent maintains what you already hold, so contacts, companies and deals stay correct and keep moving. Both draft or send commercial messages, so both need consent, sender and unsubscribe checks under the Spam Act. Australian teams often run the pair from one shared set of scoring rules.' },
 
@@ -99,14 +112,14 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'jobs', question: 'Which sales tasks suit a CRM agent first?',
     answer: 'Start where reps lose the most hours each week. For most Australian B2B teams that is one of four jobs: scoring inbound leads from web forms and trade show lists, logging emails and calls to the right deal, keeping deal stages honest before the Monday pipeline meeting, or drafting follow-ups after a quote. We build one job first, measure it against your own CRM numbers, then add the next.' },
   { category: 'jobs', question: 'Can the agent qualify leads against our Australian ideal customer profile?',
-    answer: 'Yes. Your sales leader writes the profile in plain English, such as wholesale buyers in Victoria and New South Wales with more than 20 staff, or distributors already stocking a named brand. For each new contact the agent compares the enquiry, the buyer’s own website and any earlier emails with that profile. It assigns a status and an owner, and adds a two-line reason the rep reads before calling.' },
+    answer: 'It can. Your sales leader writes the profile in plain English, such as wholesale buyers in Victoria and New South Wales with more than 20 staff, or distributors already stocking a named brand. For each new contact the agent compares the enquiry, the buyer’s own website and any earlier emails with that profile. It assigns a status and an owner, and adds a two-line reason the rep reads before calling.' },
   { category: 'jobs', question: 'Can the agent check ABNs on new company records?',
-    answer: 'Yes. The Australian Business Register offers free ABN Lookup web services once you register and receive an access key. The agent can validate the ABN a buyer types into a form and keep stored ABN details on the company record current. A record whose ABN fails the check goes to a review list instead of straight to a rep or to Xero.',
+    answer: 'The Australian Business Register offers free ABN Lookup web services once you register and receive an access key. The agent can validate the ABN a buyer types into a form and keep stored ABN details on the company record current. A record whose ABN fails the check goes to a review list instead of straight to a rep or to Xero.',
     links: [{ href: SRC_ABN_LOOKUP, label: 'ABR: ABN Lookup web services' }] },
   { category: 'jobs', question: 'Can it bring Xero or MYOB invoice data into HubSpot or Salesforce?',
-    answer: 'Yes, read-only by default. Before a renewal or upsell call, the agent can show the account’s open and overdue invoices from Xero, MYOB Business or MYOB Acumatica on the company record, with the last payment date. Account managers stop ringing customers who are two invoices behind with a new offer. Writing back to the ledger, such as raising a draft invoice, needs its own approval rule.' },
+    answer: 'Yes, read-only by default. Before a renewal or upsell call, the agent can show the account’s open and overdue invoices from Xero, MYOB Business or MYOB Acumatica on the company record, with the last payment date. Account managers stop ringing customers who are two invoices behind with a new offer. If you already run a HubSpot Xero integration app, the agent reads what it syncs instead of building a second copy. Writing back to the ledger, such as raising a draft invoice, needs its own approval rule.' },
   { category: 'jobs', question: 'We run HubSpot for marketing and Salesforce for sales. Can one agent handle both?',
-    answer: 'Yes. A common Australian set-up is HubSpot for marketing and Salesforce for the sales team. The agent picks up campaign activity from HubSpot and writes it to the paired Salesforce lead or opportunity through one shared ID, which keeps the two records matched. Before any build we write down which system owns each field. That stops the two CRMs overwriting each other at two in the morning.' },
+    answer: 'One agent can. A common Australian set-up is HubSpot for marketing and Salesforce for the sales team. The agent picks up campaign activity from HubSpot and writes it to the paired Salesforce lead or opportunity through one shared ID, which keeps the two records matched. Before any build we write down which system owns each field. That stops the two CRMs overwriting each other at two in the morning.' },
   { category: 'jobs', question: 'Will the agent send emails or SMS to customers on its own?',
     answer: 'Not unless you switch it on. By default it drafts the email inside the CRM and a rep reviews and sends it. Later, a team may switch on automatic sending for one narrow message, like confirming a meeting a contact booked on your site. Any automatic send first checks consent and unsubscribe status, includes your sender details, and is logged on the record.' },
 
@@ -115,7 +128,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes. The Act applies to anyone who sends, or causes to be sent, a commercial electronic message with an Australian link, and it covers email, SMS and instant messages. Using software does not change who is responsible. Each message needs consent, clear details of who authorised it and how to contact them, and a working unsubscribe option. We build those three checks into the agent before it drafts anything.',
     links: [{ href: SRC_SPAM_ACT, label: 'Spam Act 2003, Federal Register of Legislation' }] },
   { category: 'rules', question: 'Can the agent email contacts we found on a company website?',
-    answer: 'Only in a narrow case. Under Schedule 2 of the Spam Act, consent cannot be inferred just because an address was published. The exception is an address published conspicuously for a person or a role, where the message is relevant to that person’s work and the page does not say they want no unsolicited commercial messages. A buyer address on a distributor’s contact page may qualify for a relevant trade offer. Bought lists usually do not. The agent records which basis applies to each contact.' },
+    answer: 'Only in a narrow case. Under Schedule 2 of the Spam Act, consent cannot be inferred only because an address was published. The exception is an address published conspicuously for a person or a role, where the message is relevant to that person’s work and the page does not say they want no unsolicited commercial messages. A buyer address on a distributor’s contact page may qualify for a relevant trade offer. Bought lists usually do not. The agent records which basis applies to each contact.' },
   { category: 'rules', question: 'How quickly must we stop emailing someone who unsubscribes?',
     answer: 'Under Schedule 2 of the Spam Act, a withdrawal of consent takes effect at the end of five business days from the day the unsubscribe message was sent. The unsubscribe address in each message must keep working for at least 30 days after sending. We sync unsubscribe status across HubSpot, Salesforce and any sending tool, so a contact who opts out in one system is blocked in all of them.' },
   { category: 'rules', question: 'Does the Spam Act cover calls made by an AI voice agent?',
@@ -125,9 +138,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'HubSpot lists Australia among its five data centre locations, and its data centre page says existing paid customers can move their data to a new data centre through account settings at no charge. Free-only accounts default to the United States. For Salesforce, ask your account executive which region your org runs in. The AI model can also run in a cloud account you choose.',
     links: [{ href: SRC_HUBSPOT_DC, label: 'HubSpot data centre locations' }] },
   { category: 'rules', question: 'Do the privacy changes starting in December 2026 affect lead scoring?',
-    answer: 'They might. Starting 10 December 2026, APP 1 asks for your privacy policy to cover computer programs that use personal information when making decisions that could significantly affect a person’s rights or interests. Scoring a business lead may fall short of that test, but credit, pricing or account decisions are closer. We document which decisions each agent makes, so your privacy officer can judge and update the policy.',
+    answer: 'Possibly. Starting 10 December 2026, Australian Privacy Principle 1 (APP 1) asks for your privacy policy to cover computer programs that use personal information when making decisions that could significantly affect a person’s rights or interests. Scoring a business lead may fall short of that test, but credit, pricing or account decisions are closer. We document which decisions each agent makes, so your privacy officer can judge and update the policy.',
     links: [{ href: SRC_OAIC_APP1, label: 'OAIC, APP guidelines chapter 1' }] },
-  { category: 'rules', question: 'Which AI model runs the agent, and who holds the contract?',
+  { category: 'rules', question: 'Which AI model runs the agent?',
     answer: 'Claude, GPT and Gemini are all options, and we pick one for each job. The model can only call the CRM actions our code defines, and our code checks each action before it reaches HubSpot or Salesforce. The model account can sit in your own Anthropic, OpenAI or Google Cloud account, under business terms your company signs, so customer records pass through a contract you control. FactoryJet is independent of all three providers.' },
 
   // ── Process ──
@@ -136,9 +149,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'process', question: 'Can we watch the agent on our own records before signing?',
     answer: 'Yes. Before any contract, we run the agent on a sample of your own records, with names masked if you prefer. The session shows what it would decide for each record, the reason behind it, the point where a person takes over, and the exact fields it would touch. Sales leaders usually spot a missing rule in that session, which is cheaper to fix now than after launch.' },
   { category: 'process', question: 'How long does a HubSpot or Salesforce agent take to build?',
-    answer: 'A single job such as HubSpot lead scoring typically reaches go-live one to three weeks after you sign the scope. Two CRMs, an accounting connection or several jobs at once take longer, and the written scope shows dated milestones for each. Work starts in a HubSpot test portal or Salesforce sandbox, and you get a weekly demo inside your own CRM.' },
-  { category: 'process', question: 'Do you work in Australian business hours?',
-    answer: 'Yes. We run CRM agent projects remotely with screen-share workshops, a shared scope document and weekly demos, and we book calls inside Australian business hours from Perth to Sydney. The founder joins the scoping call and reviews the approval rules before launch. Your sales operations or RevOps lead is the person we work with week to week.' },
+    answer: 'It depends on the job count and the systems involved. One job in one CRM is the shortest build. Two CRMs, an accounting connection or several jobs at once take longer, and the written scope shows a dated milestone for each one before you sign. Work starts in a HubSpot test portal or Salesforce sandbox, and you get a weekly demo inside your own CRM.' },
 
   // ── Cost ──
   { category: 'cost', question: 'How much does a CRM AI agent cost in Australia?',
@@ -150,7 +161,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'cost', question: 'Are there ongoing fees after launch?',
     answer: 'Only if you ask for support. You can hold the AI model and hosting accounts in your company’s name and pay those providers directly, at cost and without our markup. A defect that appears after go-live is fixed free during the cover period written into the scope. Past that period, we price each change on its own, you approve it first, and nothing is billed as a monthly minimum.' },
   { category: 'cost', question: 'Who owns the agent once it is built?',
-    answer: 'Your company owns all of it from the first commit. The repository is created in your company’s own code account. The HubSpot app or the Salesforce integration user is registered to your organisation. Prompts and approval rules live in a plain-English document your team edits. A Salesforce administrator you hire later, or another partner, receives everything needed to run and change the agent.' },
+    answer: 'Your company owns all of it from the first commit. The repository is created in your company’s own code account. The HubSpot app or the Salesforce integration user is registered to your organisation. Prompts and approval rules live in a plain-English document your team edits. If you ever move to another partner, they receive everything needed to run and change the agent. Until then, FactoryJet can keep looking after hosting, model updates and fixes, each change quoted first.' },
 ];
 
 /* ─── What a CRM agent does (capability cards) ─── */
@@ -190,11 +201,11 @@ const BUILD_STEPS: { n: string; t: string; d: string; out: string }[] = [
     d: 'We build against a HubSpot test account or a Salesforce sandbox, never your live data first, and connect Xero, MYOB or your ERP read-only.',
     out: 'A weekly demo inside your own CRM, and code in your repository.' },
   { n: '05', t: 'Launch in suggestion mode',
-    d: 'The agent suggests and drafts. Reps approve, edit or reject each action, and we review the numbers with your RevOps lead every week.',
+    d: 'In suggestion mode the agent proposes and drafts but changes nothing alone. Reps approve, edit or reject each action, and we review the numbers every week with your RevOps lead (the person who runs your sales systems and reporting).',
     out: 'Accepted, edited and wrong counts from your own CRM, not ours.' },
   { n: '06', t: 'Loosen rules and hand over',
-    d: 'Low-risk actions move to automatic once the review numbers support it. High-risk ones stay with a person. You get the documentation and the keys.',
-    out: 'A live agent you own, with optional support quoted per change.' },
+    d: 'Low-risk actions move to automatic once the review numbers support it. High-risk ones stay with a person. You get the documentation and the access keys.',
+    out: 'A live agent you own. If you want, FactoryJet keeps managing the servers, model accounts, API changes and fixes, each change quoted first.' },
 ];
 
 /* ─── House terms ─── */
@@ -252,7 +263,7 @@ const jsonLd = {
       headline: H1,
       description: DESCRIPTION,
       inLanguage: 'en-AU',
-      datePublished: UPDATED,
+      datePublished: PUBLISHED,
       dateModified: UPDATED,
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="true"]'] },
       breadcrumb: { '@id': `${CANONICAL}#breadcrumb` },
@@ -284,7 +295,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['crm-ai-agents'] },
   openGraph: {
     title: TITLE,
     description:
@@ -293,6 +304,11 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_AU',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: TITLE,
+    description: DESCRIPTION,
   },
   robots: { index: true, follow: true },
 };
@@ -324,19 +340,6 @@ const JOB_ICONS = [
   'M12 3 4 7v5c0 5 8 9 8 9s8-4 8-9V7l-8-4Zm-3 9 2 2 4-4',
   'M9 15 15 9M8 11l-2 2a4 4 0 0 0 6 6l2-2M16 13l2-2a4 4 0 0 0-6-6l-2 2',
 ] as const;
-
-/* Australian search demand, DataForSEO Google Ads search volume, location 2036, language en.
-   Re-run 29 Oct 2026 for review; raw JSON saved outside the repo (scratchpad
-   crm_ai_agents_au_volumes_2026_10_29.json). 'salesforce agentforce' and 'hubspot ai agent' returned
-   no volume on the re-run and were dropped. Bar widths are each volume / 880. */
-const DEMAND: { kw: string; v: string; w: string; kd: string }[] = [
-  { kw: 'agentforce', v: '880', w: '100%', kd: 'Salesforce buyers researching the vendor agent' },
-  { kw: 'hubspot ai', v: '170', w: '19%', kd: 'HubSpot customers comparing options' },
-  { kw: 'hubspot xero integration', v: '140', w: '16%', kd: 'Sales and finance data in one place' },
-  { kw: 'ai crm', v: '140', w: '16%', kd: 'Mixed intent, high CPC' },
-  { kw: 'ai sales agent', v: '90', w: '10%', kd: 'Buyer intent' },
-  { kw: 'hubspot salesforce integration', v: '70', w: '8%', kd: 'Two-CRM companies' },
-];
 
 export default function CrmAiAgentsAUPage() {
   return (
@@ -371,10 +374,10 @@ export default function CrmAiAgentsAUPage() {
                 all of them, with Spam Act checks before every draft and your rep approving what matters. You own the code.
               </p>
               <HeroInlineForm region="au" source="au_crm_ai_agents_hero" submitLabel="See a demo on my data" />
-              <p className="au-note">Working software on your own data before you sign. Founder replies within 24 hours.</p>
+              <p className="au-note">Working software on your own data before you sign.</p>
             </div>
 
-            <form className="specpanel" aria-label="What each CRM agent checks before it acts">
+            <form className="specpanel" role="group" aria-label="What each CRM agent checks before it acts">
               <div className="specpanel-bar">
                 <span className="statusdot"></span>
                 <span>INCLUDED · WHAT EACH CRM AGENT CHECKS</span>
@@ -448,7 +451,7 @@ export default function CrmAiAgentsAUPage() {
         <div className="wrap byline">
           <div className="av">BB</div>
           <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST (GEO) ═══ */}
@@ -466,6 +469,11 @@ export default function CrmAiAgentsAUPage() {
                     leads, logs emails and calls, proposes deal stages and drafts follow-ups, inside rules your sales
                     leader writes.</span> In Australia it also has to respect the Spam Act 2003 on every email or SMS it
                     drafts, which means checking consent, sender details and unsubscribe status first.
+                  </p>
+                  <p data-speakable="true">
+                    FactoryJet builds custom CRM AI agents for Australian sales teams on HubSpot and Salesforce, with
+                    reads from Xero, MYOB, NetSuite and Cin7, and shows the agent working on your own records before
+                    you sign.
                   </p>
                 </div>
                 <div className="fact">
@@ -488,19 +496,6 @@ export default function CrmAiAgentsAUPage() {
                     before it acts, or when you want approval rules and code that belong to you.
                   </p>
                 </div>
-              </div>
-              <div className="demand">
-                <div className="demand-head"><span>Australia · Monthly Search Demand</span><b>DataForSEO</b></div>
-                <ul>
-                  {DEMAND.map((r) => (
-                    <li key={r.kw} className="demand-row">
-                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
-                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                      <div className="demand-kd">{r.kd}</div>
-                    </li>
-                  ))}
-                </ul>
-                <p className="demand-src">Source: DataForSEO, Google Ads search volume, Australia, October 2026</p>
               </div>
             </div>
           </div>
@@ -535,10 +530,10 @@ export default function CrmAiAgentsAUPage() {
             <div className="section-head plat-head">
               <div>
                 <div className="eyebrow">Where the agent reads and writes</div>
-                <h2>Connected to HubSpot, Salesforce, Xero, MYOB and the rest of your stack</h2>
+                <h2>Which systems can a CRM AI agent connect to?</h2>
               </div>
               <p>
-                We deliver HubSpot and Salesforce integrations through each platform’s official API, with a separate
+                The agent connects to HubSpot and Salesforce through each platform’s official API, with a separate
                 login that holds only the access the job needs. Accounting, stock and courier systems connect read-only
                 unless a written rule says the agent may write.
               </p>
@@ -575,16 +570,17 @@ export default function CrmAiAgentsAUPage() {
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
                   Section 16 bans sending a commercial message without the account-holder’s consent. Schedule 2 says
-                  consent is express, or reasonably inferred from conduct and business relationships. It cannot be
-                  inferred just because an address was published, except a conspicuously published work or role
-                  address, and then only for messages relevant to that person’s job, where the page does not say they want no unsolicited commercial messages.
+                  consent is express, or reasonably inferred from conduct and business relationships. A published
+                  address alone does not count as consent. There is one exception: a work or role address shown
+                  clearly on a website. Even then, the message must relate to that person’s job. And the page must
+                  not say they refuse unsolicited commercial messages.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><div>
                   <p>
                     Section 17 requires each message to identify who authorised it, with contact details likely to stay
-                    valid for at least 30 days. Section 18 requires a clear unsubscribe option that keeps working for at
-                    least 30 days after sending, and Schedule 2 makes an unsubscribe take effect within five business
-                    days. The OAIC notes that where the Spam Act applies, APP 7 of the Privacy Act steps back.
+                    valid for at least 30 days. Section 18 requires a clear unsubscribe option that keeps working for the
+                    same 30 days. The OAIC notes that where the Spam Act applies, Australian Privacy Principle 7
+                    (APP 7, the Privacy Act rule on direct marketing) steps back.
                   </p>
                   <p className="au-note">
                     Sources: <a href={SRC_SPAM_ACT} {...extLink}>Spam Act 2003, Federal Register of Legislation</a>;{' '}
@@ -673,7 +669,7 @@ export default function CrmAiAgentsAUPage() {
 
         <div className="au-midcta">
           <MidPageCTA
-            headline={'Which CRM job is costing your reps the most hours?'}
+            headline={'Find the CRM job that costs your reps the most hours.'}
             sub={'Send your CRM edition, the first job and the systems around it. On a short call with the founder we will tell you whether a custom agent, Breeze or Agentforce, or a simple workflow is the right answer, and set up a demo on your own records.'}
             label={'See a demo on my data'}
           />
@@ -685,7 +681,7 @@ export default function CrmAiAgentsAUPage() {
             <div className="section-head plat-head">
               <div>
                 <div className="eyebrow">How we work</div>
-                <h2>Terms for a CRM agent build</h2>
+                <h2>What terms apply to a CRM agent build?</h2>
               </div>
               <p>
                 Have a brief or an RFP? Send it as it is. We reply to each point in writing, and you never fill in a
@@ -714,8 +710,9 @@ export default function CrmAiAgentsAUPage() {
                 Match the option to the job, not the other way round.
               </p>
             </div>
-            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
-              <table>
+            <p className="md:hidden au-note" style={{ marginBottom: 8 }}>Swipe sideways to see every column.</p>
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 740 }}>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -746,11 +743,11 @@ export default function CrmAiAgentsAUPage() {
               <div className="eyebrow">Scope, not packages</div>
               <h2>How much does a CRM AI agent cost in Australia?</h2>
               <p className="lead">
-                <a href={SRC_FLOWTIVITY} {...extLink}>Flowtivity’s March 2026 Australian guide</a> puts lead
-                qualification and follow-up agents at A$8,000 to A$20,000, and multi-step agents that also update the
-                CRM at A$15,000 to A$35,000. <a href={SRC_WVD} {...extLink}>Web Video Digital’s August 2026 guide</a>{' '}
-                puts custom agents at A$15,000 to A$150,000. Neither says whether its figures include GST. These are
-                market ranges, not our prices: FactoryJet quotes a fixed price in writing after a short scoping call.
+                Published Australian guides put a lead qualification agent at A$8,000 to A$20,000 (
+                <a href={SRC_FLOWTIVITY} {...extLink}>Flowtivity, March 2026</a>) and custom agents at up to
+                A$150,000 (<a href={SRC_WVD} {...extLink}>Web Video Digital, August 2026</a>). Those are market
+                ranges, not our prices. FactoryJet quotes a fixed price per phase, in writing, after a short scoping
+                call. The FAQ below gives the full ranges.
               </p>
             </div>
             <div className="au-split">
@@ -788,17 +785,16 @@ export default function CrmAiAgentsAUPage() {
             <div className="factswrap">
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
-                  From 10 December 2026, APP 1 requires a privacy policy to describe computer programs that use
+                  From 10 December 2026, Australian Privacy Principle 1 (APP 1) requires a privacy policy to describe computer programs that use
                   personal information to make, or help make, decisions that could significantly affect a person’s
                   rights or interests. Scoring a trade lead may sit below that line. Credit holds, pricing tiers and
                   account closures sit closer to it. Each agent we build comes with a plain list of the decisions it
                   makes, ready for your privacy officer.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
-                  HubSpot lists Australia among its five data centre locations, and paid accounts can move their data
-                  there through account settings at no charge. For Salesforce, ask your account executive which region
-                  your org runs in. The AI model can run in a cloud account you choose, so records only pass through
-                  contracts your company signed.
+                  Paid HubSpot accounts can move their data to HubSpot’s Australian data centre (see the FAQ below).
+                  The AI model can run in a cloud account you choose, so records only pass through contracts your
+                  company signed.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><div>
                   <p>
@@ -836,7 +832,7 @@ export default function CrmAiAgentsAUPage() {
               </p>
               <p>
                 On Monday the manager approves a short list of suggested moves instead of chasing eight people. The
-                reps still own every account. They just stop retyping the week into Salesforce.
+                reps still own every account. They stop retyping the week into Salesforce.
               </p>
             </div>
             <div className="au-panel">
@@ -933,6 +929,8 @@ export default function CrmAiAgentsAUPage() {
               <a href={SRC_OAIC_APP1} {...extLink}>OAIC, APP 1 guidelines</a>
               <a href={SRC_HUBSPOT_DC} {...extLink}>HubSpot data centres</a>
               <a href={SRC_ABN_LOOKUP} {...extLink}>ABR, ABN Lookup web services</a>
+              <a href={SRC_HUBSPOT_AI} {...extLink}>HubSpot, AI agents and Agent Hub</a>
+              <a href={SRC_AGENTFORCE} {...extLink}>Salesforce, Agentforce</a>
               <a href={SRC_FLOWTIVITY} {...extLink}>Flowtivity, AI agent pricing guide</a>
               <a href={SRC_WVD} {...extLink}>Web Video Digital, AI agent cost</a>
             </div>

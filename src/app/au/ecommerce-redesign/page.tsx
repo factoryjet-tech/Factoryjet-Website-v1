@@ -8,16 +8,17 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ecommerce-redesign';
 const PUBLISHED = '2026-10-29';
-const UPDATED = '2026-10-29';
-const TITLE = 'Ecommerce Website Redesign Australia | Shopify Store Redesign | FactoryJet';
+const UPDATED = '2026-10-31';
+const TITLE = 'Ecommerce Website Redesign Australia | FactoryJet';
 const H1 = 'Ecommerce Website Redesign Australia: Rebuild the Store, Keep the Orders Coming';
 const DESCRIPTION =
-  'Ecommerce website redesign for Australian stores that already trade. A draft on your own products before you sign, with Xero, Afterpay and Australia Post retested.';
+  'Ecommerce website redesign services for Australian stores that already trade: a draft on your own products before you sign, and Xero and Afterpay retested.';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -55,6 +56,9 @@ const SRC_SPARK = 'https://www.sparkinteract.com.au/web/website-redesign-costs-a
 // AUD$25,000" and "custom designed and developed Ecommerce websites generally
 // starting at AUD$35,000". GST status not stated.
 const SRC_REDBACK = 'https://www.rb.com.au/blog/how-much-does-a-website-cost-in-australia/';
+// BetaKit, 18 Mar 2021: Maropost "has acquired Australia-based Neto for $58
+// million CAD". Fetched 2026-10-31.
+const SRC_NETO = 'https://betakit.com/after-bootstrapping-its-way-to-profitability-maropost-acquires-neto-for-58-million-cad/';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema). Questions shaped by
        DataForSEO Australia data pulled 2026-10-29 (search volume + People Also
@@ -70,21 +74,21 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── Redesign or replatform ──
   { category: 'basics', question: 'What does an ecommerce website redesign cover for an Australian store?',
-    answer: 'It covers the parts shoppers touch: the theme, menus, collection pages, product pages, search, filters, cart and the phone layout. The platform, product records, customer accounts and order history stay where they are. For an Australian store we also retest the parts that sit behind the design, such as Afterpay or Zip messaging, shipping rates, GST display and the order sync into Xero or MYOB.' },
+    answer: 'It covers the parts shoppers touch: the theme, menus, collection pages, product pages, search, filters, cart and the phone layout. The platform, product records, customer accounts and order history stay where they are. That is the gap between this and a small business website redesign, which mostly changes pages and copy. For an Australian store we also retest Afterpay or Zip messaging, shipping rates, GST display and the order sync into Xero or MYOB.' },
+  { category: 'basics', question: 'Do we need a refresh or a full redesign, and how often should a store be redesigned?',
+    answer: 'A refresh changes what sits inside the current theme: banners, photos, colours, fonts and copy. A redesign rebuilds the templates themselves, such as the product page, collection filters and cart. There is no fixed schedule for either. Plan a redesign when your own data points at the shop front: phone shoppers leaving product pages, filters that cannot sort your range, or a theme your developer struggles to update. If only the look feels dated, a refresh is usually enough.' },
   { category: 'basics', question: 'How do we tell whether we need a redesign or a new platform?',
-    answer: 'Ask what is actually blocking sales. If shoppers struggle with pages, filters or checkout on a phone, the fix is a redesign. If your team keeps paying for workarounds because the platform cannot hold trade pricing, multiple warehouses or your catalogue size, a platform move may be cheaper over time. We answer this on the first call by looking at the live store with you.',
+    answer: 'Ask what is blocking sales. If shoppers struggle with pages, filters or checkout on a phone, the fix is a redesign. If your team keeps paying for workarounds because the platform cannot hold trade pricing, multiple warehouses or your catalogue size, a platform move may be cheaper over time. We answer this on the first call by looking at the live store with you.',
     links: [{ href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' }] },
   { category: 'basics', question: 'Can you redesign our Shopify store while it keeps taking orders?',
-    answer: 'Yes. Shopify lets you duplicate a theme and work on the copy while the live one keeps selling. We build the redesign in that copy, load it with your real products, and send you a preview link. Launch is a theme publish at a quiet hour. Your old theme stays in the admin as a fallback, inside the 20-theme limit Shopify sets.' },
-  { category: 'basics', question: 'Can ChatGPT redesign our online store for us?',
-    answer: 'It can help with parts of the job. It writes draft product copy, suggests menu structures and explains theme code. It cannot test a real checkout with Afterpay, check that a refund lands correctly in Xero, map hundreds of old web addresses, or take responsibility when a sale fails at 9pm. Use it to speed up writing, and let an accountable team handle the build and the testing.' },
+    answer: 'Yes. A Shopify store redesign starts in a duplicate theme: Shopify lets you copy a theme and work on it while the live one keeps selling. We build the redesign in that copy, load it with your real products, and send you a preview link. Launch is a theme publish at a quiet hour. Your old theme stays in the admin as a fallback, inside the 20-theme limit Shopify sets.' },
   { category: 'basics', question: 'Which platforms do you redesign?',
-    answer: 'An Australian store on Shopify or Shopify Plus usually has Afterpay or Zip, a Xero or MYOB connector and an Australia Post or Sendle app plugged in, and we redesign around all of them. We do the same for WooCommerce, BigCommerce, Adobe Commerce (Magento) and headless Next.js stores, where those links are often plugins or custom code. On Shopify we work as a registered Shopify Partner. When the platform itself is what holds sales back, the move and the new design go into one project with one launch.',
-    links: [{ href: '/au/shopify-development', label: 'Shopify development in Australia' }] },
+    answer: 'We redesign Shopify and Shopify Plus stores, WooCommerce stores on WordPress, BigCommerce, Adobe Commerce (Magento) and headless stores, where the shop front is a separate Next.js site that reads from the platform. Stores on Neto, the Australian platform Maropost bought in 2021, often ask whether to redesign or move. We answer that on the first call. When the platform is what holds sales back, the move and the new design ship as one project.',
+    links: [{ href: '/au/shopify-development', label: 'Shopify development in Australia' }, { href: SRC_NETO, label: 'BetaKit, Maropost acquires Neto (March 2021)' }] },
 
   // ── Rankings and redirects ──
   { category: 'search', question: 'Will a redesign drop our Google rankings?',
-    answer: 'Some movement is normal. Google says visibility may fluctuate temporarily during a site move and that rankings settle over time. Lasting drops come from broken old addresses or ranking pages that lose their content. So before design starts we list every URL that earns clicks or links, keep the ones we can, and send each changed one to its closest new page in a single hop.' },
+    answer: 'Some movement is normal. Google says visibility may fluctuate temporarily during a site move and that rankings settle over time. Lasting drops come from broken old addresses or ranking pages that lose their content. To redesign without losing SEO, before design starts we list every URL that earns clicks or links, keep the ones we can, and send each changed one to its closest new page in a single hop.' },
   { category: 'search', question: 'How long do redirects need to stay live after the new store launches?',
     answer: 'Google recommends keeping redirects for as long as possible, generally at least one year, and suggests keeping them indefinitely for visitors who saved old links. The usual way they disappear is a later clean-up, a new developer or a second platform move that removes rows nobody recognised. We hand over the full redirect list so your team knows which rows must stay.' },
   { category: 'search', question: 'How long does Google take to settle after a redesigned store goes live?',
@@ -98,11 +102,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Cost and timing ──
   { category: 'cost', question: 'How much does an ecommerce website redesign cost in Australia?',
-    answer: 'Published Australian figures vary with scope. Spark Interact, a Sydney agency, lists agency ecommerce redesigns at $40,000 to $75,000 or more, and freelancer ones at $8,500 to $20,000 or more. Redback Solutions in Newcastle lists theme-based ecommerce sites at AUD$15,000 to AUD$25,000, with custom builds from AUD$35,000. Neither page says whether GST is included. FactoryJet quotes a fixed price in writing after a short scoping call.' },
+    answer: 'Published Australian figures for ecommerce website redesign services vary with scope. Spark Interact, a Sydney agency, lists agency ecommerce redesigns at $40,000 to $75,000 or more, and freelancer ones at $8,500 to $20,000 or more. Redback Solutions in Newcastle lists new theme-based ecommerce builds at AUD$15,000 to AUD$25,000, with new custom builds from AUD$35,000. Neither page says whether GST is included. FactoryJet quotes a fixed price in writing after a short scoping call.' },
   { category: 'cost', question: 'Why do redesign quotes for the same store differ so much?',
     answer: 'Because each agency is quoting a different job. One quote may adapt an existing theme and leave integrations alone. Another may include custom templates, a redirect map, retesting Xero, Afterpay and shipping, product photography and a month of checks after launch. Ask each agency to list what is in and what is out, line by line, and whether the figure is ex or inc GST, then compare like with like.' },
   { category: 'cost', question: 'How long does an ecommerce redesign take?',
-    answer: 'Plan back from the trading dates that matter. A custom theme takes 3 to 5 weeks, so a store that wants it live before the Christmas trade should start by early October. Add Shopify Plus features, subscriptions, B2B trade pricing or a platform move and it becomes 5 to 8 weeks. A headless store or one with a lot of custom code needs 8 to 14 weeks. We fix the dates for your photos, copy and sign-offs in week one, because those are what slip.' },
+    answer: 'Plan back from the trading dates that matter, such as the Christmas trade or EOFY sales in June. A custom theme takes 3 to 5 weeks. Shopify Plus features, subscriptions, B2B trade pricing or a platform move make it 5 to 8 weeks. A headless store or one with a lot of custom code needs 8 to 14 weeks. We fix the dates for your photos, copy and sign-offs in week one, because those are what slip.' },
+  { category: 'cost', question: 'Should we hire an agency, a freelancer or redesign the store ourselves?',
+    answer: 'Spark Interact, a Sydney agency, puts freelancer ecommerce redesigns at $8,500 to $20,000 or more and agency ones at $40,000 to $75,000 or more. A freelancer suits a theme refresh with few connected systems. An agency suits a store where Xero, stock sync, couriers and redirects all need retesting. Doing it yourself on a duplicated Shopify theme costs your own time, and every test in the systems table on this page still applies.' },
   { category: 'cost', question: 'Can we split the redesign into phases?',
     answer: 'Yes. If you want the site left alone through November and December, or kept clear of your EOFY sales in June, we cut the work to fit around those dates: one phase can ship in the quiet weeks after January, the next before the June sales, and the rest once trading settles. Each phase is scoped, priced and signed on its own, and the store works normally between them.' },
 
@@ -124,14 +130,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'working', question: 'Can we see the redesign before we sign?',
     answer: 'Yes. Working software on your own data before you sign. We build a draft of your key templates inside a copy of your own theme, on your real products, and send you a preview link. Live shoppers never see it. You tap through a product page and the cart on your own phone, then decide. After that, each phase is scoped, priced and signed on its own.' },
   { category: 'working', question: 'What should we put in a redesign brief or RFP?',
-    answer: 'Your platform and plan, the systems the store talks to (accounting, stock, shipping, payments, marketplaces), your top-selling ranges, what is not working and how you know, any dates you cannot move such as a launch or the Christmas trade, and who signs off. Attach it after the first step of the form on this page. A written brief gets a faster and firmer answer than a call alone.' },
+    answer: 'An RFP (request for proposal) is a written brief that asks agencies to quote. Include your platform and plan, the systems the store talks to (accounting, stock, shipping, payments, marketplaces), your top-selling ranges, what is not working and how you know, any dates you cannot move such as a launch or the Christmas trade, and who signs off. Attach it after the first step of the form on this page. A written brief gets a faster and firmer answer than a call alone.' },
   { category: 'working', question: 'Who owns the new theme and code?',
     answer: 'You do, from day one. The redesigned theme is published in your store, and its source code lives in a repository registered to your business. Paid apps, hosting and any AI tools can be billed to your own accounts at cost, and we add no markup. If you later switch agencies or hire your own developer, they start with everything and need nothing from us.' },
   { category: 'working', question: 'What happens if something breaks after launch?',
     answer: 'Defects are fixed inside the build price for a cover period we agree before work starts. After that, support is optional. Each change is quoted and approved before we start it, and there is no monthly minimum. You can book a single check before a big sale, such as Black Friday, and nothing else.',
     links: [{ href: '/au/website-maintenance', label: 'Website care in Australia' }] },
-  { category: 'working', question: 'Can you run a redesign for a store outside Sydney or Melbourne?',
-    answer: 'Yes. We work with established online stores across Australia, from Sydney and Melbourne to Brisbane, Perth, Adelaide and regional towns. You review progress on a preview link inside your own admin and talk it through with us on scheduled calls, so where your warehouse sits makes no difference. Calls are scheduled in Australian business hours, and the founder is involved in every project.' },
 ];
 
 /* ─── Eight things a trading store must not lose in a redesign ─────── */
@@ -143,7 +147,7 @@ const KEEP_ITEMS: { n: string; t: string; d: string }[] = [
   { n: '05', t: 'Stock from Cin7, Unleashed or your ERP', d: 'SKUs and variants frozen during the project, so stock sync with Cin7, Unleashed, NetSuite or Odoo keeps matching item for item.' },
   { n: '06', t: 'Marketplace feeds', d: 'Feeds to Amazon.com.au, eBay or Bunnings Marketplace listed at the start, with the product fields that must not change written down.' },
   { n: '07', t: 'Customer accounts and reviews', d: 'Logins, order history, saved addresses and product reviews stay in place, because they belong to the platform, not the theme.' },
-  { n: '08', t: 'Purchase tracking', d: 'GA4 and ad platform purchase events checked against platform sales after launch, so a new theme does not quietly stop recording revenue.' },
+  { n: '08', t: 'Purchase tracking', d: 'GA4 (Google Analytics 4) and ad platform purchase events checked against platform sales after launch, so a new theme does not quietly stop recording revenue.' },
 ];
 
 const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
@@ -170,7 +174,7 @@ const STACK_ROWS: { sys: string; risk: string; test: string }[] = [
 
 /* ─── Numbered project steps ──────────────────────────────────────── */
 const STEPS: { t: string; d: string }[] = [
-  { t: '01 · Read the brief and the live store', d: 'You send a brief or RFP, or tell us on a call. We look at the live store on a phone, your analytics and Search Console, and list every system the store talks to. You leave the call knowing whether you need a redesign, a refresh or a platform move.' },
+  { t: '01 · Read the brief and the live store', d: 'You send a brief or RFP (request for proposal), or tell us on a call. We look at the live store on a phone, your analytics and Search Console, and list every system the store talks to. You leave the call knowing whether you need a redesign, a refresh or a platform move.' },
   { t: '02 · Draft on your own data', d: 'We build a draft of the product and collection templates in a copy of your theme, on your real products. You open the preview link on your own phone before you sign anything.' },
   { t: '03 · Scope and fixed price per phase', d: 'A written scope for each phase with what is in, what is out and the price, so your finance team can approve one step at a time. Each phase is signed on its own.' },
   { t: '04 · Redirect map and integration list', d: 'Every URL that earns clicks or links gets a row. Every connection, from Xero to Australia Post to your marketplace feeds, gets an owner and a test before launch.' },
@@ -271,7 +275,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['ecommerce-redesign'] },
   openGraph: {
     title: TITLE,
     description:
@@ -353,7 +357,6 @@ export default function EcommerceRedesignAUPage() {
               <div className="specpanel-bar">
                 <span className="statusdot"></span>
                 <span>REDESIGN · WHAT STAYS, WHAT CHANGES</span>
-                <span className="sys"><span>Shopify, WooCommerce, BigCommerce</span><span>Adobe Commerce</span></span>
               </div>
               <div className="specpanel-body" role="radiogroup" aria-label="Explore what stays and what changes">
                 <label className="specrow run">
@@ -405,8 +408,8 @@ export default function EcommerceRedesignAUPage() {
 
         <div className="wrap byline">
           <div className="av">BB</div>
-          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="who"><a href="/about"><b>Bhavesh Barot</b></a>, Founder &amp; CEO<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST DEFINITION (GEO) ═══ */}
@@ -492,8 +495,9 @@ export default function EcommerceRedesignAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap" role="region" tabIndex={0} aria-label="ecommerce redesign systems retest table">
-              <table>
+            <p className="md:hidden tablenote">Swipe sideways to see every column.</p>
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="ecommerce redesign systems retest table" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
                     <th>System</th>
@@ -509,7 +513,7 @@ export default function EcommerceRedesignAUPage() {
               </table>
             </div>
             <p className="tablenote">
-              Running Shopify? A duplicated theme lets the redesign happen beside the live one, per{' '}
+              On Shopify, a duplicated theme lets the redesign happen beside the live one, per{' '}
               <a href={SRC_SHOPIFY_DUPLICATE} {...extLink}>Shopify Help Center, duplicating themes</a>, checked 29 October 2026.
             </p>
           </div>
@@ -517,7 +521,7 @@ export default function EcommerceRedesignAUPage() {
 
         <div className="au-midcta">
           <MidPageCTA
-            headline={'Want to see your own store redesigned before you commit?'}
+            headline={'See your own store redesigned before you commit'}
             sub={'Send the store address and the systems it talks to. We build a draft of your product and collection templates on your real products and send you a preview link.'}
             label={'See a draft of my store'}
           />
@@ -539,12 +543,12 @@ export default function EcommerceRedesignAUPage() {
                 <ul className="trigrows">
                   <li><span className="m">Custom-theme redesign</span><span className="n">same platform, standard integrations</span><span className="t">3 to 5 weeks</span></li>
                   <li><span className="m">Advanced redesign</span><span className="n">Shopify Plus, B2B, subscriptions or a platform move</span><span className="t">5 to 8 weeks</span></li>
-                  <li><span className="m">Headless or heavily custom</span><span className="n">Next.js or Hydrogen front end</span><span className="t">8 to 14 weeks</span></li>
+                  <li><span className="m">Headless or heavily custom</span><span className="n">a separate Next.js or Hydrogen (Shopify&apos;s own framework) front end</span><span className="t">8 to 14 weeks</span></li>
                   <li><span className="m">Draft of your templates</span><span className="n">on your own products</span><span className="t">Before you sign</span></li>
                 </ul>
               </div>
             </div>
-            <div className="timeline">
+            <div className="timeline timeline-3">
               {STEPS.map((s) => {
                 const [idx, title] = s.t.split(' · ');
                 return (
@@ -566,7 +570,7 @@ export default function EcommerceRedesignAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Search, through launch</div>
-              <h2>Keeping Google rankings through an Australian store redesign</h2>
+              <h2>How to redesign an ecommerce store without losing SEO</h2>
             </div>
             <div className="factswrap">
               <div className="factlist">
@@ -618,7 +622,7 @@ export default function EcommerceRedesignAUPage() {
                 <div className="fact"><div className="sec">§02</div><div>
                   <p>
                     We list every form and script the new theme adds, so your adviser can check the privacy policy
-                    against what the store actually collects before launch. We are not lawyers, and we will not tell
+                    against what the store collects before launch. We are not lawyers, and we will not tell
                     you what the policy should say.
                   </p>
                   <p className="au-note">
@@ -645,11 +649,11 @@ export default function EcommerceRedesignAUPage() {
             <div className="section-head plat-head">
               <div>
                 <div className="eyebrow">Send us your brief</div>
-                <h2>Have a redesign brief or RFP? Send it before the call</h2>
+                <h2>Send your redesign brief or RFP before the call</h2>
               </div>
               <p>
                 Established stores that send a written brief get a firmer answer, faster. Attach it after the first
-                step of the form on this page, as a PDF or Word file. No brief yet? These six lines are enough.
+                step of the form on this page, as a PDF or Word file. Without a written brief, these six lines are enough.
               </p>
             </div>
             <div className="platlist" role="list">
@@ -697,7 +701,7 @@ export default function EcommerceRedesignAUPage() {
             <div className="section-head plat-head">
               <div>
                 <div className="eyebrow">Work we have done</div>
-                <h2>Shopify stores we have designed and are building</h2>
+                <h2>Shopify stores we have shipped and are building</h2>
               </div>
               <p>
                 These are stores we have worked on in the United States, on the same platform most Australian
@@ -751,8 +755,8 @@ export default function EcommerceRedesignAUPage() {
                 <ul className="trigrows">
                   <li><span className="m">Agency ecommerce redesign</span><span className="n">Spark Interact, Sydney, Aug 2024</span><span className="t">$40,000 to $75,000+</span></li>
                   <li><span className="m">Freelancer ecommerce redesign</span><span className="n">Spark Interact, Sydney, Aug 2024</span><span className="t">$8,500 to $20,000+</span></li>
-                  <li><span className="m">Theme-based ecommerce site</span><span className="n">Redback Solutions, Newcastle, Nov 2023</span><span className="t">AUD$15,000 to AUD$25,000</span></li>
-                  <li><span className="m">Custom ecommerce site</span><span className="n">Redback Solutions, Newcastle, Nov 2023</span><span className="t">From AUD$35,000</span></li>
+                  <li><span className="m">Theme-based ecommerce site (new build)</span><span className="n">Redback Solutions, Newcastle, Nov 2023</span><span className="t">AUD$15,000 to AUD$25,000</span></li>
+                  <li><span className="m">Custom ecommerce site (new build)</span><span className="n">Redback Solutions, Newcastle, Nov 2023</span><span className="t">From AUD$35,000</span></li>
                 </ul>
                 <p className="au-note">
                   Sources: <a href={SRC_SPARK} {...extLink}>Spark Interact, website redesign costs Australia</a> and{' '}
@@ -768,7 +772,7 @@ export default function EcommerceRedesignAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Related FactoryJet services</div>
-              <h2>Before and after the redesign</h2>
+              <h2>Related ecommerce services in Australia</h2>
             </div>
             <ul className="agentdir-grid">
               {SIBLINGS.map((s) => (
@@ -804,6 +808,7 @@ export default function EcommerceRedesignAUPage() {
               <a href={SRC_SHOPIFY_DUPLICATE} {...extLink}>Shopify Help Center, duplicating themes</a>
               <a href={SRC_SPARK} {...extLink}>Spark Interact, website redesign costs Australia</a>
               <a href={SRC_REDBACK} {...extLink}>Redback Solutions, website cost in Australia</a>
+              <a href={SRC_NETO} {...extLink}>BetaKit, Maropost acquires Neto</a>
             </div>
           </div>
         </section>

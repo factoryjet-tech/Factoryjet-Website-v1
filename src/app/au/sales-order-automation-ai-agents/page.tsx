@@ -8,6 +8,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
@@ -42,8 +43,9 @@ import '../au-hub.css';
    3. No FactoryJet prices. The only figures are Flowtivity's AUD market ranges
       for a BUILD, and Flowtivity does not say whether they include GST. Nothing
       here says what an agent costs to run or look after (rule of 11 Oct 2026).
-   4. Nothing here says where the FactoryJet team is. No client is named and no
-      client is presented as Australian. The experience line is Bhavesh's own
+   4. Nothing here says where the FactoryJet team is. One client is named (Sow
+      Easy, in the approved Odoo wording: tested against staging, launch still
+      ahead) and no client is presented as Australian. The experience line is Bhavesh's own
       statement (Odoo, NetSuite, SAP Business One, ERPNext, custom ERPs; EDI
       and punchout), framed as work we have done, not Australian work.
    5. Schema: Service + BreadcrumbList + WebPage + FAQPage. FAQPage mainEntity
@@ -52,13 +54,13 @@ import '../au-hub.css';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL = 'https://factoryjet.com/au/sales-order-automation-ai-agents';
-const UPDATED = '2026-10-29';
-const TITLE = 'Sales Order Automation Australia | AI Order Entry for Xero & MYOB';
+const UPDATED = '2026-10-31';
+const TITLE = 'AI Sales Order Automation Australia: Xero, MYOB, Cin7';
 const HERO_H1_LEAD = 'AI Sales Order Automation for Australian Trade Suppliers:';
 const HERO_H1_EMPHASIS = 'Emailed POs Into Draft Orders';
 const H1 = `${HERO_H1_LEAD} ${HERO_H1_EMPHASIS}`;
 const DESCRIPTION =
-  'We build AI agents that turn purchase orders emailed by Australian trade customers into draft sales orders in Xero, MYOB, Cin7 Core, Unleashed or your ERP.';
+  'Sales order automation for Australian suppliers: AI agents turn emailed purchase orders into draft sales orders in Xero, MYOB, Cin7 Core or Unleashed.';
 const IMG = '/images/us/sales-order-automation-ai-agents';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD. */
@@ -112,6 +114,24 @@ const SRC_APP8 =
 // $30,000, 4 to 8 weeks; "Multi-system workflow automation" $20,000 to $50,000+,
 // 6 to 12 weeks. AUD. GST basis not stated.
 const SRC_FLOWTIVITY = 'https://flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026/';
+// Order automation products, each described from its own site on 31 Oct 2026.
+// Conexiom home: "Automate orders and invoices with AI". Esker order management:
+// orders from email, EDI, portals, ecommerce, punchout; checked against ERP data;
+// a certified SAP connector (Oracle EBS not confirmed on 31 Oct recheck, removed). Rossum: AI agents for document
+// processing, "Sales Orders" listed as a document type. Parseur: "turns PDFs,
+// scans, emails and images into accurate, structured data". No prices used.
+const SRC_CONEXIOM = 'https://www.conexiom.com/';
+const SRC_ESKER = 'https://www.esker.com/solutions/order-management/';
+const SRC_ROSSUM = 'https://rossum.ai/';
+const SRC_PARSEUR = 'https://parseur.com/';
+
+/* Four intake methods compared. Qualitative only, from how each method works. */
+const INTAKE: { m: string; fmt: string; setup: string; bad: string; best: string }[] = [
+  { m: 'Emailed PO read by an AI agent', fmt: 'The customer, any layout', setup: 'A part number table and written rules per customer', bad: 'Orders with no PO number or no clear customer', best: 'Many trade accounts that each email their own PDF or spreadsheet' },
+  { m: 'OCR or document capture software', fmt: 'The customer, read through templates or a trained model', setup: 'Templates or training per layout, then a connector to your system', bad: 'New layouts and rules the product does not offer', best: 'High volume from layouts that rarely change' },
+  { m: 'EDI', fmt: 'The buyer, in a fixed electronic format', setup: 'An EDI provider and mapping per trading partner', bad: 'Small accounts that will never set it up', best: 'A few large retail accounts that require it' },
+  { m: 'Customer portal or B2B store', fmt: 'You, through your own order screens', setup: 'A trade store with customer pricing and logins', bad: 'Customers who keep emailing out of habit', best: 'Repeat orders from customers willing to log in' },
+];
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -136,28 +156,29 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'What comes first, the order or the invoice?',
     answer: 'The order. The customer sends a purchase order, you create the sales order, you pick and dispatch the goods, and then you invoice. Some businesses invoice at the point of order for prepaid accounts, but trade customers on 30-day terms expect the invoice after delivery, quoting their PO number. Keeping that order of events is one reason the agent drafts orders and leaves invoicing to your normal process.' },
   { category: 'basics', question: 'Can AI do order entry from emailed purchase orders?',
-    answer: 'Yes, for the reading and the keying. A modern AI model can read a PDF from a customer’s ERP, a spreadsheet with their own part numbers, or an email that says “same as last week plus two cartons”. What it cannot know on its own is your price for that customer, your stock or your credit terms. That is why the agent checks your system before it drafts, and why a person approves the result.' },
-  { category: 'basics', question: 'What are the steps in the sales order process?',
+    answer: 'Yes, for the reading and the keying. A modern AI model can read a PDF from a customer’s ERP, a spreadsheet with their own part numbers, or an email that says “same as last week plus two cartons”. What it cannot know on its own is your price for that customer, your stock or your credit terms. That is why the agent checks your system before it drafts, and why a person approves the result. AI order processing done this way is order entry automation with a person still signing off.' },
+  { category: 'basics', question: 'What are the steps in sales order processing?',
     answer: 'Receive the purchase order. Identify the customer and their PO number. Match each line to your items and units. Check price, stock and credit. Create the sales order. Confirm it to the customer with a date. Pick, pack and dispatch with Australia Post, StarTrack or your carrier. Invoice, quoting the PO number. Our agent covers the first six steps and hands dispatch and invoicing to your existing process.' },
 
   // ── Systems ──
-  { category: 'systems', question: 'Does Xero have sales orders?',
+  { category: 'systems', question: 'Does Xero have sales orders, and how does a Xero sales order work?',
     answer: 'Not as a separate record. We searched Xero’s published Accounting API specification on 29 October 2026 and found no sales order object. It does have quotes, with statuses including DRAFT, ACCEPTED and INVOICED, and sales invoices that can be saved as DRAFT. So on plain Xero the agent writes an accepted quote or a draft invoice. Wholesalers who need real sales orders usually run an inventory app such as Cin7 Core or Unleashed beside Xero.',
     links: [{ href: SRC_XERO_SPEC, label: 'Xero Accounting API specification' }] },
   { category: 'systems', question: 'Can I make a purchase order in Xero?',
     answer: 'Yes. Xero’s API specification lists endpoints that retrieve, create and update purchase orders. That matters for order automation when a customer order needs stock you do not hold: the agent can draft the purchase order to your supplier in Xero at the same time as the customer’s order, and your buyer approves both. Nothing is sent to a supplier without a person signing off.',
     links: [{ href: SRC_XERO_SPEC, label: 'Xero Accounting API specification' }] },
-  { category: 'systems', question: 'Does it work with MYOB?',
+  { category: 'systems', question: 'Does it work with MYOB sales orders?',
     answer: 'Yes, subject to your MYOB edition. MYOB’s Sale Order documentation says API access is available to AccountRight and new Essentials files, and lists reading, creating, updating and deleting orders in Item, Service, Professional, TimeBilling and Miscellaneous layouts. Whether your file has sale orders in the Item layout, with inventory, depends on the edition you run, so we check it on the scoping call. Where it does, the agent creates the order as Open and your team converts it to an invoice when the goods go out.',
     links: [{ href: SRC_MYOB_API, label: 'MYOB Business API overview' }, { href: SRC_MYOB_ORDER, label: 'MYOB Sale Order endpoint' }] },
   { category: 'systems', question: 'Does it work with Cin7 Core or Unleashed?',
     answer: 'Yes, and both suit this job. Cin7 Core’s developer documentation says a sale order created through its API can only be saved as DRAFT or AUTHORISED, so the agent saves DRAFT and your team authorises. Unleashed’s API lets sales orders be listed, viewed, created and updated, and requires an order status on each one. We set the status your team already uses for orders waiting on a check.',
     links: [{ href: SRC_CIN7_CORE, label: 'Cin7 Core API' }, { href: SRC_UNLEASHED, label: 'Unleashed API: Sales Orders' }] },
   { category: 'systems', question: 'What about NetSuite, Odoo or a custom ERP?',
-    answer: 'Yes, we have built order flows on each of them. The first job on any ERP is finding where an order can wait for a person: a draft, a pending approval status or a review list we build. If a custom ERP has no API, we look at its import files or a read-only database view before anything else.' },
+    answer: 'Yes, we have built order flows on each of them. The first job on any ERP is finding where an order can wait for a person: a draft, a pending approval status or a review list we build. If a custom ERP has no API, we look at its import files or a read-only database view before anything else.',
+    links: [{ href: '/au/erp-ai-agents', label: 'ERP AI agents in Australia' }, { href: '/au/netsuite-ai-agents', label: 'NetSuite AI agents in Australia' }] },
   { category: 'systems', question: 'What about orders from our Shopify store or marketplaces?',
     answer: 'Those usually need no reading at all. Orders from a Shopify store or from marketplaces such as Amazon.com.au, Bunnings Marketplace or Kogan reach your inventory system as structured records through the connector you already run. This page is about the orders that arrive as documents: trade customers, builders, retailers and resellers who email a PO. If your web store needs work, see our ecommerce development page.',
-    links: [{ href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' }] },
+    links: [{ href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' }, { href: '/au/shopify-xero-integration', label: 'Shopify and Xero integration' }, { href: '/au/b2b-ecommerce', label: 'B2B ecommerce in Australia' }] },
 
   // ── Tax, GST, EDI ──
   { category: 'tax', question: 'How does the agent handle GST on purchase order prices?',
@@ -235,7 +256,8 @@ const jsonLd = {
         '@type': 'Person',
         name: 'Bhavesh Barot',
         jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
+        '@id': 'https://factoryjet.com/#bhavesh-barot',
+        url: 'https://factoryjet.com/author/bhavesh-barot',
         sameAs: [
           'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
           'https://github.com/factoryjet-tech',
@@ -263,7 +285,7 @@ export const metadata: Metadata = {
   // No x-default here: the US twin (/services/sales-order-automation-ai-agents)
   // is the global page. It still needs an en-AU alternate pointing here, which
   // is outside this folder.
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['sales-order-automation-ai-agents'] },
   openGraph: {
     title: TITLE,
     description:
@@ -330,6 +352,7 @@ const BUILD_STEPS: { n: string; t: string; d: string }[] = [
 
 const SIBLINGS: { href: string; t: string; d: string }[] = [
   { href: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'The other side of the same paperwork: supplier invoices read, checked and drafted as bills in Xero or MYOB.' },
+  { href: '/au/accounts-receivable-automation', t: 'Accounts receivable automation', d: 'What happens after the order ships: invoices sent, payments matched and overdue accounts followed up.' },
   { href: '/au/ai-agents', t: 'AI agents for Australian businesses', d: 'Agents for other back-office jobs across Xero, MYOB, HubSpot and Microsoft 365.' },
   { href: '/au/ai-development', t: 'AI development and integration', d: 'Larger builds: ERP and inventory integrations with AI inside them.' },
   { href: '/au/ai-consulting', t: 'AI consulting', d: 'Not sure order entry is the right first job? A short assessment ranks the options.' },
@@ -375,7 +398,7 @@ export default function SalesOrderAutomationAUPage() {
                 draft sales order for your team to approve. We build and support it, and you own the code.
               </p>
               <HeroInlineForm region="au" source="au_sales_order_automation_hero" submitLabel="See a demo on my data" />
-              <p className="au-note">Working software on your own data before you sign. Founder replies within 24 hours.</p>
+              <p className="au-note">Working software on your own data before you sign.</p>
             </div>
 
             <form
@@ -442,8 +465,8 @@ export default function SalesOrderAutomationAUPage() {
 
         <div className="wrap byline">
           <div className="av">BB</div>
-          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="who"><a href="/author/bhavesh-barot"><b>Bhavesh Barot</b></a>, Founder &amp; CEO, FactoryJet<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST DEFINITION (GEO) ═══ */}
@@ -459,9 +482,11 @@ export default function SalesOrderAutomationAUPage() {
                   <p data-speakable="true">
                     <span className="stat">Sales order automation reads the purchase orders your customers email, checks
                     them against your price list, stock and credit terms, and creates the sales order in your system as a
-                    draft, so nobody retypes it.</span> For an Australian supplier that also means comparing prices on the
+                    draft, so nobody retypes it.</span>{' '}For an Australian supplier that also means comparing prices on the
                     right GST basis, carrying the customer&rsquo;s ABN and PO number through to the tax invoice, and
-                    working with the order record your software actually has. Xero&rsquo;s API lists none, so the design matters.
+                    working with the order record your software has. Xero&rsquo;s published API has no sales order
+                    record, so in Xero the agent leaves an accepted quote or a draft invoice instead. The same job is also
+                    called automated order processing, or purchase order automation when seen from the customer&rsquo;s side.
                   </p>
                 </div>
                 <div className="fact">
@@ -469,8 +494,8 @@ export default function SalesOrderAutomationAUPage() {
                   <div>
                     <div className="factlabel">Four terms we use a lot</div>
                     <p>
-                      A <b>purchase order</b> (PO) is the customer&rsquo;s document saying what they want and at what
-                      price. A <b>sales order</b> is your record that you have agreed to supply it. A <b>draft</b> is an
+                      A <b>purchase order</b>{' '}(PO) is the customer&rsquo;s document saying what they want and at what
+                      price. A <b>sales order</b>{' '}is your record that you have agreed to supply it. A <b>draft</b>{' '}is an
                       order saved in your system that nobody has approved yet. An <b>AI agent</b>, on this page, is a
                       program that opens each emailed PO, works out what the customer wants and keys a draft into your
                       system, stopping at any step your rules say a person must check.
@@ -499,12 +524,13 @@ export default function SalesOrderAutomationAUPage() {
         <section className="section capabilities" id="capabilities">
           <div className="wrap">
             <div className="section-head">
-              <div className="eyebrow">What the order agent actually does</div>
+              <div className="eyebrow">What the order agent does</div>
               <h2>Six jobs between the orders inbox and an approved sales order</h2>
               <p className="lead">
                 You decide which jobs the agent does for each customer. We suggest starting with collecting, reading
                 and matching for your twenty busiest accounts, then adding checks and draft confirmations once the
-                results on those accounts hold up.
+                results on those accounts hold up. The collecting and reading steps use the same methods as our{' '}
+                <a href="/au/document-intake-ai-agents">document intake agents</a>.
               </p>
             </div>
             <div className="capgrid">
@@ -522,11 +548,11 @@ export default function SalesOrderAutomationAUPage() {
             <div className="agentdir-group chg-group">
               <div className="agentdir-label"><span className="capid">GRP‑01</span><h3>What stays with your order desk</h3></div>
               <ul className="chg-list">
-                <li><span><b>Approving each order.</b> The agent drafts; a person approves.</span></li>
-                <li><span><b>Price exceptions.</b> Anything outside the tolerance your sales lead set.</span></li>
-                <li><span><b>Credit holds.</b> Your accounts team decides whether an order on hold ships.</span></li>
-                <li><span><b>Changes after approval.</b> Shown beside the order, decided by a person.</span></li>
-                <li><span><b>The customer relationship.</b> Calls, disputes and favours stay with your team.</span></li>
+                <li><span><b>Approving each order.</b>{' '}The agent drafts; a person approves.</span></li>
+                <li><span><b>Price exceptions.</b>{' '}Anything outside the tolerance your sales lead set.</span></li>
+                <li><span><b>Credit holds.</b>{' '}Your accounts team decides whether an order on hold ships.</span></li>
+                <li><span><b>Changes after approval.</b>{' '}Shown beside the order, decided by a person.</span></li>
+                <li><span><b>The customer relationship.</b>{' '}Calls, disputes and favours stay with your team.</span></li>
               </ul>
             </div>
           </div>
@@ -543,8 +569,9 @@ export default function SalesOrderAutomationAUPage() {
                 team dispatches and invoices today, so nothing about their day changes except the typing.
               </p>
             </div>
-            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable table of where draft orders land in each system">
-              <table>
+            <p className="md:hidden au-note">Swipe sideways to see every column.</p>
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable table of where draft orders land in each system" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
                     <th>System</th>
@@ -568,9 +595,67 @@ export default function SalesOrderAutomationAUPage() {
               <a href={SRC_XERO_SPEC} {...extLink}>Xero Accounting API specification</a>,{' '}
               <a href={SRC_MYOB_API} {...extLink}>MYOB Business API overview</a>,{' '}
               <a href={SRC_MYOB_ORDER} {...extLink}>MYOB Sale Order endpoint</a>,{' '}
-              <a href={SRC_CIN7_CORE} {...extLink}>Cin7 Core API</a> and{' '}
+              <a href={SRC_CIN7_CORE} {...extLink}>Cin7 Core API</a>{' '}and{' '}
               <a href={SRC_UNLEASHED} {...extLink}>Unleashed Sales Orders API</a>. QuickBooks and Acumatica files are
-              scoped on the first call, once we have seen which order records your edition offers.
+              scoped on the first call, once we have seen which order records your edition offers. So are Pronto Xi,
+              MYOB Advanced and Microsoft Dynamics 365 Business Central.
+            </p>
+          </div>
+        </section>
+
+        {/* ═══ INTAKE METHODS COMPARED + BUY OR BUILD ═══ */}
+        <section className="section integrations" id="intake-methods">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">Four ways orders get in</div>
+              <h2>Emailed POs, OCR software, EDI or a portal: which order intake fits which customer?</h2>
+              <p className="lead">
+                Most suppliers end up running two or three of these side by side. The question is which customers
+                go where, and who does the work to set each one up.
+              </p>
+            </div>
+            <p className="md:hidden au-note">Swipe sideways to see every column.</p>
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable table comparing four ways purchase orders reach a supplier" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 760 }}>
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Who sets the format</th>
+                    <th>Setup effort</th>
+                    <th>What it handles badly</th>
+                    <th className="fj">Best for</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {INTAKE.map((r) => (
+                    <tr key={r.m}>
+                      <th scope="row">{r.m}</th>
+                      <td>{r.fmt}</td>
+                      <td>{r.setup}</td>
+                      <td>{r.bad}</td>
+                      <td className="fj">{r.best}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h3 style={{ marginTop: 40 }}>Buy order automation software, or build an agent?</h3>
+            <p>
+              Ready-made products exist, and for some suppliers they are the right answer.{' '}
+              <a href={SRC_CONEXIOM} {...extLink}>Conexiom</a> says it automates orders and invoices with AI.{' '}
+              <a href={SRC_ESKER} {...extLink}>Esker</a> says its order management product takes orders from email,
+              EDI, portals and other channels, checks them against ERP data, and offers a certified SAP connector.{' '}
+              <a href={SRC_ROSSUM} {...extLink}>Rossum</a> sells AI agents for document processing and lists sales
+              orders as a document type.{' '}
+              <a href={SRC_PARSEUR} {...extLink}>Parseur</a> turns PDFs, scans and emails into structured data for
+              the apps you already use.
+            </p>
+            <p>
+              A product fits when your system has a ready connector and your rules are close to its defaults. A
+              custom agent fits when the work sits in your own rules: per-customer GST basis, inners against cartons,
+              a part number table built from your past orders, or Xero with no sales order record. Ask any vendor,
+              us included, to run a trial on your own past POs before you choose.
             </p>
           </div>
         </section>
@@ -608,20 +693,20 @@ export default function SalesOrderAutomationAUPage() {
             <div className="factswrap">
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
-                  <b>The order feeds the tax invoice.</b> The agent never issues invoices, but whatever it records on the
+                  <b>The order feeds the tax invoice.</b>{' '}The agent never issues invoices, but whatever it records on the
                   sales order flows onto the invoice your team sends after dispatch. The ATO lists seven details a tax
                   invoice must show for taxable sales under $1,000, and from $1,000 it must also show the buyer&rsquo;s
                   identity or ABN. Trade orders often pass $1,000, so the agent records the customer&rsquo;s legal name
                   and ABN on every order.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
-                  <b>Customers can ask for one within 28 days.</b> The ATO says that if a customer asks for a tax invoice
+                  <b>Customers can ask for one within 28 days.</b>{' '}The ATO says that if a customer asks for a tax invoice
                   you must provide one within 28 days, unless the sale is $82.50 including GST or less. Orders with the
                   right customer details and PO number make that a quick reprint.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><div>
                   <p>
-                    <b>Peppol rewards a clean PO number.</b> The ATO describes Peppol as Australia&rsquo;s common standard
+                    <b>Peppol rewards a clean PO number.</b>{' '}The ATO describes Peppol as Australia&rsquo;s common standard
                     and network for eInvoicing, with over 400,000 Australian businesses on it, and says buyers on it do
                     not need to enter or scan invoices by hand. Their software matches your invoice to their purchase
                     order, which only works if the PO number you captured is exact.
@@ -636,12 +721,12 @@ export default function SalesOrderAutomationAUPage() {
               <div className="au-panel">
                 <div className="eyebrow">What the agent puts on every draft order</div>
                 <ol className="au-numlist">
-                  <li><span><b>Customer&rsquo;s legal name and ABN.</b> Matched to the record on file.</span></li>
-                  <li><span><b>Their PO number, exactly.</b> In the reference field your invoice prints.</span></li>
-                  <li><span><b>GST basis of the PO.</b> Ex or inc, recorded per customer.</span></li>
-                  <li><span><b>Delivery address and date.</b> As written, with any site notes.</span></li>
-                  <li><span><b>The original PO.</b> Attached, so anyone can check the source.</span></li>
-                  <li><span><b>Every flag.</b> What did not match and why, at the top of the draft.</span></li>
+                  <li><span><b>Customer&rsquo;s legal name and ABN.</b>{' '}Matched to the record on file.</span></li>
+                  <li><span><b>Their PO number, exactly.</b>{' '}In the reference field your invoice prints.</span></li>
+                  <li><span><b>GST basis of the PO.</b>{' '}Ex or inc, recorded per customer.</span></li>
+                  <li><span><b>Delivery address and date.</b>{' '}As written, with any site notes.</span></li>
+                  <li><span><b>The original PO.</b>{' '}Attached, so anyone can check the source.</span></li>
+                  <li><span><b>Every flag.</b>{' '}What did not match and why, at the top of the draft.</span></li>
                 </ol>
               </div>
             </div>
@@ -693,7 +778,7 @@ export default function SalesOrderAutomationAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">How we work</div>
-              <h2>Terms for an order automation project, and how to send us a brief</h2>
+              <h2>What terms apply to an order automation project?</h2>
             </div>
             <div className="au-split">
               <div>
@@ -728,7 +813,7 @@ export default function SalesOrderAutomationAUPage() {
               <div className="eyebrow">Scope, not packages</div>
               <h2>How much does sales order automation cost in Australia?</h2>
               <p className="lead">
-                <a href={SRC_FLOWTIVITY} {...extLink}>Flowtivity&rsquo;s March 2026 Australian pricing guide</a> puts
+                <a href={SRC_FLOWTIVITY} {...extLink}>Flowtivity&rsquo;s March 2026 Australian pricing guide</a>{' '}puts
                 document processing and data entry agents at A$12,000 to A$30,000, and multi-system workflow automation
                 at A$20,000 to A$50,000 or more. The guide does not say whether those figures include GST. They are
                 market ranges, not our prices: we quote the build, and any support you choose, as fixed prices in
@@ -739,30 +824,24 @@ export default function SalesOrderAutomationAUPage() {
               <div>
                 <h3>What moves the scope</h3>
                 <ol className="au-numlist">
-                  <li><span><b>How many customers send their own layouts.</b> Ten busy accounts is a different job from three hundred occasional ones.</span></li>
-                  <li><span><b>Part number cross-referencing.</b> How many customers order by their own codes, and how clean your past orders are.</span></li>
-                  <li><span><b>Checks against your system.</b> Price, GST basis, stock, credit and minimums each add rules and tests.</span></li>
-                  <li><span><b>Where the order lands.</b> Xero needs more design than a system with a real sales order record.</span></li>
-                  <li><span><b>Confirmations and EDI.</b> Draft replies to customers, and any EDI accounts beside the email ones.</span></li>
+                  <li><span><b>How many customers send their own layouts.</b>{' '}Ten busy accounts is a different job from three hundred occasional ones.</span></li>
+                  <li><span><b>Part number cross-referencing.</b>{' '}How many customers order by their own codes, and how clean your past orders are.</span></li>
+                  <li><span><b>Checks against your system.</b>{' '}Price, GST basis, stock, credit and minimums each add rules and tests.</span></li>
+                  <li><span><b>Where the order lands.</b>{' '}Xero needs more design than a system with a real sales order record.</span></li>
+                  <li><span><b>Confirmations and EDI.</b>{' '}Draft replies to customers, and any EDI accounts beside the email ones.</span></li>
                 </ol>
                 <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               </div>
-              <div className="demand">
-                <div className="demand-head"><span>Australia · Monthly Search Demand</span><b>DataForSEO</b></div>
-                <ul>
-                  {[
-                    { kw: 'xero quotes', v: '140', w: '100%', kd: 'Xero quote feature' },
-                    { kw: 'xero purchase orders', v: '110', w: '79%', kd: 'Xero purchase order feature' },
-                    { kw: 'edi australia', v: '20', w: '14%', kd: 'EDI in Australia' },
-                  ].map((r) => (
-                    <li key={r.kw} className="demand-row">
-                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
-                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                      <div className="demand-kd">{r.kd}</div>
-                    </li>
-                  ))}
-                </ul>
-                <p className="demand-src">Source: DataForSEO, Google Ads volume, Australia, pulled 29 October 2026</p>
+              <div className="au-panel">
+                <div className="eyebrow">Why Xero needs more design</div>
+                <p>
+                  Xero&rsquo;s published Accounting API gives a quote six statuses: DRAFT, SENT, DECLINED, ACCEPTED,
+                  INVOICED and DELETED. It has no sales order record. So on plain Xero we agree with you which of
+                  these marks an order that is waiting for dispatch, usually an accepted quote or a draft invoice.
+                </p>
+                <p className="au-note">
+                  Source: <a href={SRC_XERO_SPEC} {...extLink}>Xero Accounting API specification</a>, searched 29 October 2026.
+                </p>
               </div>
             </div>
           </div>
@@ -773,7 +852,7 @@ export default function SalesOrderAutomationAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Work we have done</div>
-              <h2>Order work inside ERPs, EDI and trade catalogues</h2>
+              <h2>Which ERPs and EDI setups has FactoryJet built order automation on?</h2>
             </div>
             <div className="factswrap">
               <div className="factlist">
@@ -781,14 +860,21 @@ export default function SalesOrderAutomationAUPage() {
                   Our ERP order work covers Odoo, NetSuite, SAP Business One, ERPNext and custom systems, on both the
                   buying and the selling side, plus RFQ automation and day-to-day bookkeeping. EDI links and punchout
                   catalogues sit in the same toolkit, which suits a supplier whose big accounts trade by EDI while the
-                  rest still email PDFs.
+                  rest still email PDFs. Where the store and the ERP also need joining, see our{' '}
+                  <a href="/au/ecommerce-erp-integration">ecommerce and ERP integration</a> work.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
+                  <b>One example:</b>{' '}Sow Easy, a B2B distributor. We are building a WooCommerce trade store that reads
+                  stock, pricing and SKUs (product codes) from Odoo, so trade orders placed there will arrive as structured
+                  records. The store and the Odoo link are being tested on staging, and launch is still ahead.{' '}
+                  <a href="/case-studies/sow-easy-distributor-portal">Read the case study</a>.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
                   FactoryJet has served more than 500 businesses since 2014. Australian order desk projects run on video
                   workshops and shared order samples, with calls in Australian business hours for Sydney, Melbourne,
                   Brisbane, Perth, Adelaide and regional suppliers.
                 </p></div>
-                <div className="fact"><div className="sec">§03</div><p>
+                <div className="fact"><div className="sec">§04</div><p>
                   Put these to any order automation provider, us included. Will you score a trial per customer on our
                   own past POs? How do you tell an ex GST PO from an inc GST one? What happens when a customer orders in
                   inners and we sell in cartons? How do you catch a PO that arrives twice? Which AI providers see our

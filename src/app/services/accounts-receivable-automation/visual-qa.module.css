@@ -35,3 +35,18 @@
   .page div:has(> table) { scrollbar-width: auto; }
   .page p[class*="font-fj-body"][class*="text-slate-500"] { font-size: 1rem !important; }
 }
+/* Mobile table cue (QA 2026-10-31): the shared ComparisonTable wrapper already scrolls; add momentum scroll and a visible hint on small screens only. */
+.page div[role="region"]:has(> table) { -webkit-overflow-scrolling: touch; overflow-x: auto; }
+@media (max-width: 767px) {
+  .page div[role="region"]:has(> table)::before {
+    content: 'Swipe sideways to see every column.';
+    display: block;
+    position: sticky;
+    left: 0;
+    padding: 0.625rem 1rem;
+    font-family: var(--font-geist-mono, ui-monospace, monospace);
+    font-size: 0.75rem;
+    color: #4A4A45;
+    border-bottom: 1px solid #D9D9D2;
+  }
+}

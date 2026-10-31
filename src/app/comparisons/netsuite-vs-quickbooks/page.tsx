@@ -11,10 +11,11 @@ import '@/components/v2/PlatformPage.css';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/ecommerce-erp-integration';
 const PAGE_URL = 'https://factoryjet.com/comparisons/netsuite-vs-quickbooks';
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_PUBLISHED = '2026-10-29';
+const PAGE_MODIFIED = '2026-10-31';
 const PAGE_TITLE = 'NetSuite vs QuickBooks: When to Switch (2026)';
 const PAGE_DESCRIPTION =
-  'NetSuite vs QuickBooks for stores and distributors: user limits, inventory, multi-entity, Shopify sync and the 7 signs you have outgrown QuickBooks. Sources checked 29 Oct 2026.';
+  'NetSuite vs QuickBooks Online and Enterprise: user limits, inventory, multi-entity, Shopify sync and 7 signs you have outgrown QuickBooks. Checked Oct 2026.';
 
 /* Official sources, each fetched and read on 2026-10-29.
    NetSuite's own pricing and OneWorld product pages returned HTTP 403 to our fetch that day,
@@ -32,7 +33,19 @@ const SRC = {
   nsSubsidiaries: 'https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N268563.html',
   nsConsolidated: 'https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N278654.html',
   nsShopify: 'https://apps.shopify.com/oracle-netsuite',
+  xeroPricing: 'https://www.xero.com/us/pricing-plans/',
+  bcPricing: 'https://www.microsoft.com/en-us/dynamics-365/products/business-central/pricing',
+  acumaticaPricing: 'https://www.acumatica.com/pricing/',
+  odooPricing: 'https://www.odoo.com/pricing',
+  erpnext: 'https://frappe.io/erpnext',
 } as const;
+
+/* One trail, used by both the visible breadcrumb and BreadcrumbList schema. */
+const CRUMBS = [
+  { name: 'Home', href: 'https://factoryjet.com' },
+  { name: 'Ecommerce ERP Integration', href: 'https://factoryjet.com/services/ecommerce-erp-integration' },
+  { name: 'NetSuite vs QuickBooks', href: PAGE_URL },
+] as const;
 
 const LINK = { color: 'var(--pp-orange-dark)', textDecoration: 'underline' } as const;
 const INLINK = { color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' } as const;
@@ -110,7 +123,7 @@ const FAQ_ITEMS = [
     category: 'fit',
     question: 'What are the downsides of using NetSuite?',
     answer:
-      'Cost and dependence on outside help. NetSuite is licensed through Oracle on a quote, and its pricing page would not load for us on 29 October 2026. Setup runs as a project with milestones. Many changes need an admin or a partner who knows SuiteScript (NetSuite’s scripting language). Some reports also do not support consolidation, per Oracle’s own help center, so check the ones you need.',
+      'Cost and dependence on outside help. NetSuite is licensed through Oracle on a quote, not a public price list. Setup runs as a project with milestones. Many changes need an admin or a partner who knows SuiteScript (NetSuite’s scripting language). Oracle’s own help center says some reports do not support consolidation and show one subsidiary at a time, so check the ones you need.',
   },
   {
     category: 'fit',
@@ -120,7 +133,7 @@ const FAQ_ITEMS = [
   },
   {
     category: 'fit',
-    question: 'What are ERP systems similar to NetSuite?',
+    question: 'What are the main NetSuite alternatives?',
     answer:
       'The systems mid-size companies usually shortlist next to NetSuite are Sage Intacct, Microsoft Dynamics 365 Business Central, Acumatica and Odoo. Sage Intacct is strongest on finance. Business Central fits companies already on Microsoft 365. Acumatica and Odoo cover inventory and manufacturing with different licence models. The store side of the project looks much the same whichever one you pick.',
   },
@@ -136,7 +149,7 @@ const FAQ_ITEMS = [
     category: 'cost',
     question: 'How much does NetSuite cost compared with QuickBooks?',
     answer:
-      'On 29 October 2026 Intuit’s pricing page listed QuickBooks Online Plus at $140 a month and Advanced at $340 a month, with a three-month half-price offer for new customers. NetSuite does not work that way. Oracle quotes a licence based on modules, users and subsidiaries, and we could not open NetSuite’s pricing page that day, so we publish no NetSuite figure.',
+      'On 29 October 2026 Intuit’s pricing page listed QuickBooks Online Plus at $140 a month and Advanced at $340 a month, with a three-month half-price offer for new customers. NetSuite does not work that way. Oracle quotes a licence based on modules, users and subsidiaries, so this page shows no NetSuite list price.',
   },
   {
     category: 'cost',
@@ -172,9 +185,9 @@ const FAQ_ITEMS = [
   },
   {
     category: 'switch',
-    question: 'How long will QuickBooks Enterprise be around?',
+    question: 'Is QuickBooks Enterprise going away?',
     answer:
-      'We found no end date on the Intuit pages we read on 29 October 2026. When Intuit stopped selling new US subscriptions to Desktop Pro Plus, Premier Plus and Mac Plus after September 30, 2024, it stated that QuickBooks Enterprise was not affected, and its Enterprise pricing page still sold Gold, Platinum and Diamond on 29 October 2026. Base the move on your entities, users and stock, since a shutdown date is not on the table today.',
+      'No end date is announced on the Intuit pages we read on 29 October 2026. When Intuit stopped selling new US Desktop Pro Plus, Premier Plus and Mac Plus subscriptions after September 30, 2024, it said Enterprise was not affected. Gold, Platinum and Diamond were still on sale that day. So base the move on your entities, users and stock, not on a shutdown date.',
   },
   {
     category: 'switch',
@@ -187,6 +200,12 @@ const FAQ_ITEMS = [
     question: 'Can we move our QuickBooks history into NetSuite?',
     answer:
       'Yes, but most companies do not move every transaction. The usual pattern is opening balances on the go-live date, open invoices and bills, and the customer, vendor and item lists, with one or two years of summary history for reports. Full transaction history stays in QuickBooks, kept read-only for audits. Decide the cut-off date before anyone builds a sync.',
+  },
+  {
+    category: 'switch',
+    question: 'How long does a QuickBooks to NetSuite migration take?',
+    answer:
+      'It depends on your entity count, channels and how much history you move, so we give no stock figure. Plan four stages: a field list, the NetSuite setup, the rebuilt store and app syncs, and one closed month with both systems running side by side. That last stage alone takes a full month, because finance has to close it in both.',
   },
   {
     category: 'switch',
@@ -204,27 +223,21 @@ const FAQ_ITEMS = [
   },
   {
     category: 'sync',
-    question: 'Does NetSuite have a Shopify connector?',
+    question: 'Is there a NetSuite Shopify connector?',
     answer:
       'Yes. Oracle NetSuite publishes the NetSuite ERP Connector on the Shopify App Store, and its listing says it syncs product, pricing, inventory, sales order and fulfillment data, with order, coupon and gift certificate sync in the plan features. It is a monthly subscription billed through Shopify. Custom sync is needed when your rules go past what the connector maps.',
   },
   {
     category: 'sync',
-    question: 'Can WooCommerce connect to NetSuite?',
+    question: 'Can WooCommerce connect to NetSuite like Shopify does?',
     answer:
-      'Yes. WooCommerce exposes orders, products and stock through its REST API and webhooks, and NetSuite accepts records through SuiteTalk web services. The link can run through middleware such as Celigo or through a custom service. The design choices match Shopify: which system owns price and stock, which subsidiary each order belongs to, and how refunds post.',
+      'Yes. WooCommerce exposes orders, products and stock through its REST API and webhooks, and NetSuite accepts records through SuiteTalk web services (NetSuite’s API for other systems). The link can run through middleware (a connector service that sits between the two systems) such as Celigo, or through a custom service. The design choices match Shopify: which system owns price and stock, which subsidiary each order belongs to, and how refunds post.',
   },
   {
     category: 'sync',
     question: 'Should store orders post to the ERP one by one or as a daily summary?',
     answer:
       'Post one by one if you need order-level margin, customer history or returns traced to the original sale. Post a daily summary if order volume is high and finance only needs totals by channel. Intuit’s own Shopify connector posts each sale and refund, then groups them into a payout deposit. Pick the pattern before the build starts, because it shapes every mapping.',
-  },
-  {
-    category: 'sync',
-    question: 'Is FactoryJet a NetSuite or Intuit partner?',
-    answer:
-      'No. FactoryJet is not a NetSuite reseller, an Oracle partner or an Intuit partner, and we earn nothing from either licence. We build the integrations: store to ERP, wholesale portal to ERP, and the AI agents that work on ERP records. That means we can tell you to stay on QuickBooks when the numbers say so.',
   },
 ];
 
@@ -245,16 +258,18 @@ const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': `${PAGE_URL}#webpage`,
-  name: 'NetSuite vs QuickBooks: When to Switch and What It Changes (2026)',
+  name: PAGE_TITLE,
   description: PAGE_DESCRIPTION,
   url: PAGE_URL,
+  datePublished: PAGE_PUBLISHED,
   dateModified: PAGE_MODIFIED,
   inLanguage: 'en-US',
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
     jobTitle: 'Founder & Principal Commerce Architect',
-    url: 'https://factoryjet.com',
+    url: 'https://factoryjet.com/about',
+    sameAs: ['https://www.linkedin.com/in/bhavesh-ai-gtm-expert'],
   },
   publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   about: [
@@ -266,11 +281,7 @@ const WEBPAGE_SCHEMA = {
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Comparisons', item: 'https://factoryjet.com/best-ecommerce-platforms' },
-    { '@type': 'ListItem', position: 3, name: 'NetSuite vs QuickBooks', item: PAGE_URL },
-  ],
+  itemListElement: CRUMBS.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.href })),
 };
 
 const STATS = [
@@ -308,7 +319,7 @@ const SIGNS = [
   },
   {
     t: 'Month-end consolidation happens in a spreadsheet.',
-    d: 'If someone exports a trial balance from each company file and adds them up in Excel, that is the job NetSuite OneWorld does in its reports, translating each subsidiary into the parent’s currency.',
+    d: 'If someone exports a trial balance (a list of every account’s balance) from each company file and adds them up in Excel, that is the job NetSuite OneWorld does in its reports, translating each subsidiary into the parent’s currency.',
   },
   {
     t: 'Stock lives in a separate app.',
@@ -355,7 +366,23 @@ export default function NetsuiteVsQuickbooksPage() {
           <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
-                <p className="pp-eyebrow">ERP comparison · Updated 29 October 2026</p>
+                <nav aria-label="Breadcrumb" style={{ marginBottom: '14px', fontFamily: 'var(--pp-mono)', fontSize: '11.5px', color: 'var(--pp-muted)' }}>
+                  <ol style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', listStyle: 'none', margin: 0, padding: 0 }}>
+                    {CRUMBS.map((c, i) => (
+                      <li key={c.href}>
+                        {i < CRUMBS.length - 1 ? (
+                          <>
+                            <a href={c.href.replace('https://factoryjet.com', '') || '/'} style={{ color: 'var(--pp-muted)', textDecoration: 'underline' }}>{c.name}</a>
+                            <span aria-hidden="true" style={{ marginLeft: '6px' }}>/</span>
+                          </>
+                        ) : (
+                          <span aria-current="page">{c.name}</span>
+                        )}
+                      </li>
+                    ))}
+                  </ol>
+                </nav>
+                <p className="pp-eyebrow">ERP comparison · Updated 31 October 2026</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '20ch' }}>
                   NetSuite vs QuickBooks: When to Switch and What It Changes (2026)
                 </h1>
@@ -387,7 +414,7 @@ export default function NetsuiteVsQuickbooksPage() {
                     background: 'var(--pp-tint)',
                     padding: '14px',
                     textAlign: 'center',
-                    fontFamily: 'var(--pp-disp)',
+                    fontFamily: 'var(--pp-display)',
                     fontWeight: 700,
                     color: 'var(--pp-ink)',
                     marginBottom: '18px',
@@ -400,7 +427,7 @@ export default function NetsuiteVsQuickbooksPage() {
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
                   <div style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#FAF8F5', padding: '14px 12px' }}>
-                    <b style={{ fontFamily: 'var(--pp-disp)', fontSize: '14px', display: 'block', color: 'var(--pp-ink)', borderBottom: '1px solid var(--pp-line)', paddingBottom: '6px' }}>QuickBooks Online</b>
+                    <b style={{ fontFamily: 'var(--pp-display)', fontSize: '14px', display: 'block', color: 'var(--pp-ink)', borderBottom: '1px solid var(--pp-line)', paddingBottom: '6px' }}>QuickBooks Online</b>
                     <ul style={{ fontSize: '12px', color: 'var(--pp-body)', marginTop: '8px', paddingLeft: '14px', display: 'grid', gap: '4px' }}>
                       <li>One company per subscription</li>
                       <li>5 users on Plus, 25 on Advanced</li>
@@ -409,7 +436,7 @@ export default function NetsuiteVsQuickbooksPage() {
                     </ul>
                   </div>
                   <div style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#FAF8F5', padding: '14px 12px' }}>
-                    <b style={{ fontFamily: 'var(--pp-disp)', fontSize: '14px', display: 'block', color: 'var(--pp-ink)', borderBottom: '1px solid var(--pp-line)', paddingBottom: '6px' }}>NetSuite OneWorld</b>
+                    <b style={{ fontFamily: 'var(--pp-display)', fontSize: '14px', display: 'block', color: 'var(--pp-ink)', borderBottom: '1px solid var(--pp-line)', paddingBottom: '6px' }}>NetSuite OneWorld</b>
                     <ul style={{ fontSize: '12px', color: 'var(--pp-body)', marginTop: '8px', paddingLeft: '14px', display: 'grid', gap: '4px' }}>
                       <li>Up to 250 subsidiaries</li>
                       <li>Consolidated reports</li>
@@ -428,6 +455,8 @@ export default function NetsuiteVsQuickbooksPage() {
                     fontFamily: 'var(--pp-mono)',
                     fontSize: '10.5px',
                     display: 'flex',
+                    flexWrap: 'wrap',
+                    gap: '8px 16px',
                     alignItems: 'center',
                     justifyContent: 'space-between',
                   }}
@@ -448,9 +477,9 @@ export default function NetsuiteVsQuickbooksPage() {
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">// the short answer</p>
             <p style={{ marginTop: '10px', fontSize: '19px', lineHeight: 1.55, color: 'var(--pp-ink)' }}>
-              Stay on QuickBooks while you run one company, a few users and simple stock. Move to NetSuite when you run several
-              legal entities, close the month in spreadsheets, or sell wholesale and retail from shared stock. QuickBooks bills
-              each company separately. NetSuite OneWorld consolidates up to 250 subsidiaries in one account.
+              In the QuickBooks vs NetSuite choice, stay on QuickBooks while you run one company with simple stock. Move to
+              NetSuite when you run several legal entities or sell wholesale and retail from shared stock. QuickBooks bills each
+              company separately. NetSuite OneWorld consolidates up to 250 subsidiaries in one account.
             </p>
           </div>
         </section>
@@ -475,11 +504,14 @@ export default function NetsuiteVsQuickbooksPage() {
             <p className="pp-mlabel">// side by side, with sources</p>
             <h2 style={{ marginTop: '10px' }}>NetSuite vs QuickBooks: what each one covers</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              Every row comes from Intuit or Oracle pages we read on 29 October 2026. Where a vendor page would not load, the cell
-              says so instead of guessing.
+              This covers NetSuite vs QuickBooks Online and NetSuite vs QuickBooks Enterprise. Every vendor row comes from
+              Intuit or Oracle pages we read on 29 October 2026.
             </p>
-            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
-              <table className="pp-table">
+            <p className="md:hidden" style={{ marginTop: '20px', fontFamily: 'var(--pp-mono)', fontSize: '12px', color: 'var(--pp-muted)' }}>
+              Swipe sideways to see every column.
+            </p>
+            <div style={{ marginTop: '12px', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="pp-table" style={{ minWidth: '720px' }}>
                 <thead>
                   <tr>
                     <th>Item</th>
@@ -491,7 +523,7 @@ export default function NetsuiteVsQuickbooksPage() {
                 <tbody>
                   <tr className="me">
                     <td className="name">Accounting scope</td>
-                    <td>Books, invoices, bills and bank feeds. Classes and locations: 40 on Plus, unlimited on Advanced</td>
+                    <td>Books, invoices, bills and bank feeds. Classes and locations (tags that split reports by division or store): 40 on Plus, unlimited on Advanced</td>
                     <td>An ERP: accounting, orders, purchasing and inventory in one system</td>
                     <td><Ext href={SRC.qboPricing}>Intuit pricing</Ext>, checked 29 Oct 2026</td>
                   </tr>
@@ -522,7 +554,7 @@ export default function NetsuiteVsQuickbooksPage() {
                   <tr>
                     <td className="name">List price</td>
                     <td>Online Plus $140/mo, Advanced $340/mo (three-month half-price offer for new customers)</td>
-                    <td>Quoted by Oracle. NetSuite’s pricing page returned an error to our fetch, so no figure here</td>
+                    <td>Quoted by Oracle on modules, users and subsidiaries. No public list price is used here</td>
                     <td><Ext href={SRC.qboPricing}>Intuit pricing</Ext>, checked 29 Oct 2026</td>
                   </tr>
                   <tr className="me">
@@ -569,7 +601,7 @@ export default function NetsuiteVsQuickbooksPage() {
             <ul className="pp-bento" style={{ marginTop: '32px', listStyle: 'none', padding: 0 }}>
               {SOURCED.map((s) => (
                 <li className="pp-card" key={s.v}>
-                  <div style={{ fontFamily: 'var(--pp-disp)', fontWeight: 800, fontSize: '36px', color: 'var(--pp-orange-dark)', letterSpacing: '-.03em', lineHeight: 1 }}>{s.v}</div>
+                  <div style={{ fontFamily: 'var(--pp-display)', fontWeight: 800, fontSize: '36px', color: 'var(--pp-orange-dark)', letterSpacing: '-.03em', lineHeight: 1 }}>{s.v}</div>
                   <p style={{ marginTop: '10px', fontSize: '15px', color: 'var(--pp-body)' }}>{s.d}</p>
                   <a
                     href={s.href}
@@ -588,7 +620,7 @@ export default function NetsuiteVsQuickbooksPage() {
         {/* ── Store sync ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// the part nobody budgets for</p>
+            <p className="pp-mlabel">// what happens to the store sync</p>
             <h2 style={{ marginTop: '10px' }}>What moving does to your Shopify or WooCommerce sync</h2>
             <div style={{ margin: '24px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 12px 36px rgba(0,0,0,0.06)' }}>
               <Image
@@ -606,19 +638,21 @@ export default function NetsuiteVsQuickbooksPage() {
                 (<Ext href={SRC.qboShopify}>Intuit help</Ext>). On go-live day that app has nowhere to write. Every order, refund,
                 fee and payout has to land in NetSuite instead, mapped to the right subsidiary.
               </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Four decisions to make before anyone builds</h3>
+              <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Four decisions to make before anyone builds</h3>
               <ol style={{ margin: '14px 0', paddingLeft: '20px', display: 'grid', gap: '8px' }}>
                 <li><strong>Who owns stock and price.</strong> Usually NetSuite owns both and the store reads them. Write it down per field.</li>
                 <li><strong>Which subsidiary each order belongs to.</strong> By store, by ship-from warehouse, or by customer type. OneWorld needs an answer for every order.</li>
                 <li><strong>Order by order, or a daily summary.</strong> Order-level posting keeps margin and returns traceable. A daily summary keeps volume down.</li>
                 <li><strong>Connector or custom.</strong> Oracle’s NetSuite ERP Connector covers products, pricing, inventory, sales orders and fulfillments (<Ext href={SRC.nsShopify}>Shopify App Store</Ext>). Bundles, wholesale rules or a second channel usually need custom logic around it.</li>
               </ol>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>WooCommerce works the same way</h3>
+              <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>WooCommerce works the same way</h3>
               <p>
-                WooCommerce exposes orders, products and stock through its REST API and webhooks. The four decisions above do not
-                change. Only the store side of the code does.
+                WooCommerce exposes orders, products and stock through its REST API (a standard way for other software to read
+                and write store data) and webhooks (alerts the store sends the moment an order changes). The four decisions
+                above do not change. Only the store side of the code does, and our{' '}
+                <a href="/services/woocommerce-development" style={INLINK}>WooCommerce development</a> team builds that side.
               </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Run both for one closed month</h3>
+              <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Run both for one closed month</h3>
               <p>
                 Keep QuickBooks receiving store data for one full month after NetSuite goes live, then compare totals by channel,
                 tax and payout. Finance signs off on the match, and QuickBooks goes read-only. Staying on QuickBooks for now? Our{' '}
@@ -626,7 +660,9 @@ export default function NetsuiteVsQuickbooksPage() {
                 sync you have. Moving? See{' '}
                 <a href="/services/ecommerce-erp-integration" style={INLINK}>ecommerce ERP integration</a> for the store side, and{' '}
                 <a href="/services/netsuite-ai-agents" style={INLINK}>NetSuite AI agents</a> for what can run inside NetSuite once
-                records flow.
+                records flow. Our guide to{' '}
+                <a href="/blog/ai-agents-for-finance-accounting-teams-2026" style={INLINK}>AI agents for finance and accounting teams</a>{' '}
+                covers the month-end tasks those agents take on.
               </p>
             </div>
           </div>
@@ -634,9 +670,9 @@ export default function NetsuiteVsQuickbooksPage() {
 
         {/* ── Mid-page CTA ── */}
         <MidPageCTA
-          headline="Send your field list. We map the move and quote each phase at a fixed price."
+          headline="Scope your QuickBooks to NetSuite move from one field list"
           sub="List the stores, entities, warehouses and apps that touch QuickBooks today. We reply with what moves, what gets rebuilt and the order we would do it in."
-          label="Send my field list"
+          label="Get my move scoped"
           note="Bhavesh replies within 24 hours."
         />
 
@@ -644,20 +680,20 @@ export default function NetsuiteVsQuickbooksPage() {
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">// cost, without guessing</p>
-            <h2 style={{ marginTop: '10px' }}>What a QuickBooks to NetSuite move costs, and what drives it</h2>
+            <h2 style={{ marginTop: '10px' }}>NetSuite pricing vs QuickBooks pricing: what we could verify</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                We keep a sheet of market price ranges, each tied to a published source we fetched. None of its 35 rows covers an
-                ERP move or a store to ERP integration, so this page gives no market range for either. A number without a source
-                would be a guess.
+                We found no published market range for a QuickBooks to NetSuite move that we could verify, so we price from your
+                field list.
               </p>
               <p>
                 What we can state: on 29 October 2026 Intuit listed QuickBooks Online Plus at $140 a month and Advanced at $340 a
                 month, with a three-month half-price offer for new customers (<Ext href={SRC.qboPricing}>Intuit pricing</Ext>).
                 Remember that each QuickBooks Online company is billed on its own (<Ext href={SRC.qboCompanies}>Intuit help</Ext>),
-                so multiply by your entity count. NetSuite is licensed on an Oracle quote, and its pricing page did not load for us.
+                so multiply by your entity count. NetSuite is sold on an Oracle quote built from modules, users and subsidiaries.
+                Its pricing page blocked our fetch on 29 October 2026, so this page gives no NetSuite figure.
               </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>The cost drivers</h3>
+              <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>The cost drivers</h3>
               <ul style={{ margin: '14px 0', paddingLeft: '20px', display: 'grid', gap: '8px' }}>
                 <li><strong>Licence:</strong> modules, users and subsidiaries, quoted by Oracle.</li>
                 <li><strong>Setup:</strong> chart of accounts, subsidiaries, roles and opening balances, quoted by Oracle or a NetSuite partner.</li>
@@ -666,9 +702,64 @@ export default function NetsuiteVsQuickbooksPage() {
                 <li><strong>History:</strong> opening balances only is the cheapest path. Each extra year of history you move adds checking time.</li>
               </ul>
               <p>
-                FactoryJet quotes a fixed price in writing after a short scoping call, for the integration work only. We do not
-                sell or mark up the NetSuite licence.
+                FactoryJet quotes a fixed price per phase, in writing, for the integration work only. Changes are quoted and
+                approved per request, and there is no monthly minimum. We do not sell or mark up the NetSuite licence.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Migration timeline ── */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">// the move, in order</p>
+            <h2 style={{ marginTop: '10px' }}>How long does a QuickBooks to NetSuite migration take?</h2>
+            <div className="pp-editorial" style={{ marginTop: '20px' }}>
+              <p>
+                We give no stock duration, because entity count, channels and history size change it more than anything else.
+                What does not change is the order. Each stage below has to finish before the next one starts, and the last stage
+                always takes one full closed month.
+              </p>
+              <ol style={{ margin: '14px 0', paddingLeft: '20px', display: 'grid', gap: '8px' }}>
+                <li><strong>Field list.</strong> Every store, entity, warehouse and app that writes to QuickBooks today, and the fields each one sends.</li>
+                <li><strong>NetSuite setup.</strong> Chart of accounts, subsidiaries, roles and opening balances, done by Oracle or a NetSuite partner.</li>
+                <li><strong>Sync rebuild.</strong> Store, wholesale and app connections rewired to post into NetSuite, mapped to the right subsidiary.</li>
+                <li><strong>One closed month in parallel.</strong> Both systems receive the same data until finance signs off on matching totals.</li>
+              </ol>
+              <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Check two things before you set a go-live date</h3>
+              <p>
+                First, reports. Oracle’s help center says some NetSuite reports do not support consolidation and show one
+                subsidiary at a time (<Ext href={SRC.nsConsolidated}>Oracle help</Ext>). List the month-end reports your finance team
+                runs and confirm each one before the cut-over.
+              </p>
+              <p>
+                Second, your QuickBooks edition. Intuit stopped selling new US subscriptions to Desktop Pro Plus, Premier Plus,
+                Mac Plus and Enhanced Payroll after September 30, 2024, and said Desktop Enterprise was not affected
+                (<Ext href={SRC.qbStopSell}>Intuit</Ext>). A company on one of those older desktop editions is often moving
+                anyway, so the timing question becomes which system to land on.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Alternatives ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">// other names on the shortlist</p>
+            <h2 style={{ marginTop: '10px' }}>QuickBooks alternatives and NetSuite alternatives to shortlist</h2>
+            <div className="pp-editorial" style={{ marginTop: '20px' }}>
+              <p>
+                NetSuite is not the only step up from QuickBooks. Each line below comes from the vendor’s own page, read on 29 or 31
+                October 2026. Whichever you pick, the store sync still has to be rebuilt for it.
+              </p>
+              <ul style={{ margin: '14px 0', paddingLeft: '20px', display: 'grid', gap: '8px' }}>
+                <li><strong>Xero.</strong> Charges no per-user licence fees on its US plans, and multi-currency is included only on the Established plan (<Ext href={SRC.xeroPricing}>Xero pricing</Ext>).</li>
+                <li><strong>Intuit Enterprise Suite.</strong> Intuit’s pricing page describes it as built for multi-entity organizations, so it keeps you with Intuit (<Ext href={SRC.qboPricing}>Intuit pricing</Ext>).</li>
+                <li><strong>Microsoft Dynamics 365 Business Central.</strong> Lists Essentials at $80 and Premium at $110 per user a month, paid yearly, with manufacturing only in Premium (<Ext href={SRC.bcPricing}>Microsoft pricing</Ext>).</li>
+                <li><strong>Acumatica.</strong> Prices by the applications you run and the resources you use, not by user seats, and advertises unlimited users (<Ext href={SRC.acumaticaPricing}>Acumatica pricing</Ext>).</li>
+                <li><strong>Odoo.</strong> Offers a free plan for one app with unlimited users. Its pricing page also says that adding companies to a database moves you to the paid Custom plan (<Ext href={SRC.odooPricing}>Odoo pricing</Ext>).</li>
+                <li><strong>ERPNext.</strong> Describes itself as 100% open-source ERP software you can use, modify or resell (<Ext href={SRC.erpnext}>Frappe</Ext>).</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -677,11 +768,11 @@ export default function NetsuiteVsQuickbooksPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// what you own</p>
-            <h2 style={{ marginTop: '10px' }}>The code, the accounts and the data stay yours.</h2>
+            <h2 style={{ marginTop: '10px' }}>What you own after a NetSuite integration</h2>
             <ul className="pp-bento n5" style={{ marginTop: '32px', listStyle: 'none', padding: 0 }}>
               {TERMS.map((x) => (
                 <li className="pp-card" key={x.t}>
-                  <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '16px', color: 'var(--pp-ink)', marginBottom: '6px' }}>{x.t}</h3>
+                  <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '16px', color: 'var(--pp-ink)', marginBottom: '6px' }}>{x.t}</h3>
                   <p style={{ fontSize: '14.5px', color: 'var(--pp-body)' }}>{x.d}</p>
                 </li>
               ))}
@@ -712,10 +803,10 @@ export default function NetsuiteVsQuickbooksPage() {
                 <h2 style={{ margin: '12px 0 16px' }}>Stay on QuickBooks or move to NetSuite?</h2>
                 <p className="pp-lead" style={{ maxWidth: '44ch' }}>
                   Book a call with our founder. We go through your entities, channels and the apps tied to QuickBooks, then lay out
-                  both paths. FactoryJet quotes a fixed price in writing after a short scoping call.
+                  both paths. FactoryJet quotes a fixed price per phase, in writing, after the call.
                 </p>
                 <div style={{ marginTop: '24px' }}>
-                  <a className="pp-primary" href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                  <a className="pp-primary" href={CALENDLY} target="_blank" rel="noopener noreferrer" style={{ background: '#B23E13', borderColor: '#B23E13' }}>
                     Book a 30-Minute Scoping Call
                   </a>
                 </div>
@@ -743,8 +834,8 @@ export default function NetsuiteVsQuickbooksPage() {
                 </div>
                 <blockquote>
                   FactoryJet builds integrations between stores, wholesale portals and ERPs, and AI agents that work on ERP
-                  records. We are not a NetSuite reseller, an Oracle partner or an Intuit partner, and we earn nothing from either
-                  licence. If QuickBooks still fits, we will say so.
+                  records. We sell the integration work, not the software licence, so we earn nothing from NetSuite or QuickBooks.
+                  If QuickBooks still fits, we will say so.
                 </blockquote>
                 <div className="rate">
                   <a href="/services/ecommerce-erp-integration" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>

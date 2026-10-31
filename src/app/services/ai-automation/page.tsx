@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-import { usServiceAlternates } from '@/data/hreflangMap';
+import { twinAlternates } from '@/data/hreflangMap';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: CANONICAL_URL,
-    languages: usServiceAlternates['ai-automation'],
+    languages: twinAlternates['ai-automation'],
   },
   robots: {
     index: true,

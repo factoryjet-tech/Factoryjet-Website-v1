@@ -11,7 +11,7 @@ import type { ReactNode, CSSProperties } from 'react';
  * one tween. Same motion: opacity 0 -> 1 and 28px rise over 0.55s, GSAP's
  * power2.out curve (= cubic-bezier(0.33, 1, 0.68, 1)), starting when the top of
  * the element reaches 88% of the viewport. The element stays visible in the SSR
- * HTML until JS hydrates. Elements already in view animate immediately.
+ * HTML until JS hydrates. Elements already in view or above it are never hidden.
  *
  * Anti-slop rules: no bounce, no spring physics, no elastic. Simple
  * ease-out with 0.6s duration max.
@@ -59,6 +59,11 @@ export default function MotionFadeUp({
         });
       });
     };
+
+    // Fail open: only hide what sits below the viewport. Anything already on
+    // screen or scrolled past (anchor jumps, restored scroll, full-page capture)
+    // stays visible instead of waiting on an observer that may never fire.
+    if (el.getBoundingClientRect().top < window.innerHeight) return;
 
     el.style.opacity = '0';
     el.style.transform = 'translateY(28px)';

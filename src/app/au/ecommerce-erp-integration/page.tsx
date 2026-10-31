@@ -7,6 +7,7 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 
@@ -47,11 +48,11 @@ import '../au-page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ecommerce-erp-integration';
 const PUBLISHED = '2026-10-29';
-const UPDATED = '2026-10-29';
-const TITLE = 'Ecommerce ERP Integration Australia | Xero, MYOB | FactoryJet';
+const UPDATED = '2026-10-31';
+const TITLE = 'Ecommerce ERP Integration Australia | MYOB, NetSuite, Cin7';
 const H1 = 'Ecommerce ERP Integration in Australia, With GST Right on Every Order and Refund';
 const DESCRIPTION =
-  'Ecommerce ERP integration for Australian stores on Xero, MYOB, NetSuite, Cin7, Unleashed or Odoo. Orders, stock, payouts, refunds and GST that reconcile at BAS time.';
+  'ERP integration for Australian Shopify and WooCommerce stores on Xero, MYOB, NetSuite, Cin7 or Odoo. Orders, stock, refunds and GST that match at BAS time.';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
@@ -97,6 +98,7 @@ const SRC_UNLEASHED = 'https://intercom.help/unleashed-support/en/articles/11582
 // to Shopify after each order synchronization."
 // Shopify App Store, NetSuite ERP Connector, developer Oracle NetSuite: "automatically syncs
 // product, pricing, inventory, sales order, and fulfillment data between NetSuite ERP and Shopify".
+// Plan list names "Price & Quantity Sync (real-time option)" and "Real-time Order Sync" (checked 31 Oct 2026).
 const SRC_NETSUITE_APP = 'https://apps.shopify.com/oracle-netsuite';
 const SRC_ODOO = 'https://www.odoo.com/documentation/19.0/applications/sales/sales/shopify_connector.html';
 // A2X, Xero page: "Instead of posting individual orders, A2X creates a summary entry",
@@ -136,10 +138,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'No. A CRM (customer relationship management system) tracks leads, contacts and sales conversations. An ERP tracks what you buy, make, hold and sell, plus the money behind it. For a store the ERP is usually the system that owns stock and trade prices, while a CRM such as HubSpot holds the marketing history. The two often share customer records through a link of their own.' },
 
   // ── GST, invoices and refunds ──
-  { category: 'gst', question: 'How should GST flow from our store into Xero or MYOB?',
-    answer: 'Every product needs a tax code that matches the one in your books: GST on income for taxable lines, GST-free for exempt lines, and a clear rule for shipping charges that your accountant approves. We map each store tax setting to a ledger tax code before the first sync, then test carts that mix taxable, GST-free and discounted lines.' },
+  { category: 'gst', question: 'How should Shopify GST flow into Xero or MYOB?',
+    answer: 'The same rules apply to Shopify GST and WooCommerce GST. Every product needs a tax code that matches the one in your books: GST on income for taxable lines, GST-free for exempt lines, and a clear rule for shipping charges that your accountant approves. We map each store tax setting to a ledger tax code before the first sync, then test carts that mix taxable, GST-free and discounted lines.' },
   { category: 'gst', question: 'How are refunds and returns handled for GST in the sync?',
-    answer: 'A refund should reverse the exact GST charged on the original line, at the rate and code used that day. We post refunds against the same tax code as the sale, and partial refunds pro rata. The ATO says you need a valid adjustment note before you can make a decreasing adjustment, unless the adjustment is for GST of $75 or less. For trade customers, the ERP should issue that note automatically when a credit is raised.' },
+    answer: 'A refund should reverse the exact GST charged on the original line, at the rate and code used that day. We post refunds against the same tax code as the sale, and a partial refund reverses only the GST on the items sent back. The ATO says you need a valid adjustment note before you can make a decreasing adjustment, unless the adjustment is for GST of $75 or less. For trade customers, the ERP should issue that note automatically when a credit is raised.' },
   { category: 'gst', question: 'Do our online orders need to be tax invoices?',
     answer: 'Only when the customer asks, and then fast. The ATO says that if a customer asks for a tax invoice you must provide one within 28 days, unless the sale is $82.50 or less including GST. Sales of $1,000 or more must also show the buyer’s identity or ABN. We make the order email or the ERP invoice carry every required detail, so a trade buyer’s request never needs manual work.' },
   { category: 'gst', question: 'Why is the GST in Xero a few cents different from the store?',
@@ -152,7 +154,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   // ── Xero, MYOB, Cin7 and the rest ──
   { category: 'systems', question: 'Does Shopify integrate with Xero in Australia?',
     answer: 'Yes, through apps or a custom link, and the setup matters more than the app. The common routes are a payout summary app such as A2X, an inventory system such as Cin7 or Unleashed that posts to Xero for you, or a custom link when your rules do not fit either. Before anything syncs, decide whether orders go in one by one or as summaries, and agree tax codes and clearing accounts with your bookkeeper.',
-    links: [{ href: '/au/shopify-development', label: 'Shopify development in Australia' }] },
+    links: [{ href: '/au/shopify-xero-integration', label: 'Shopify Xero integration in Australia' }] },
   { category: 'systems', question: 'Is there a Shopify app for MYOB?',
     answer: 'Yes. MYOB’s own support page connects Shopify to MYOB Business through Amaka. It says sales can sync as one summarised invoice or separate invoices, and that bills are created automatically for third-party fees. Syncs run once a day, and MYOB Business Lite users need to upgrade to see the sales orders. For MYOB Acumatica or AccountRight files, or rules Amaka cannot express, we build or configure a different route.' },
   { category: 'systems', question: 'Should Cin7 or Shopify be the master for stock?',
@@ -160,9 +162,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'systems', question: 'How does Unleashed connect to Shopify?',
     answer: 'Through Unleashed’s own Shopify integration. Unleashed’s support guide says stock syncs from Unleashed to Shopify at intervals you configure, and that each Shopify variant needs a unique SKU matching the Unleashed product code. So the first job is a SKU audit: duplicates and blank SKUs in Shopify are the usual reason a sync fails. Unleashed then passes stock movements for sales on to your accounting system.' },
   { category: 'systems', question: 'Can you connect our store to NetSuite or Odoo?',
-    answer: 'Yes. Oracle NetSuite publishes a NetSuite ERP Connector on the Shopify App Store, and Odoo has its own Shopify Connector. We work with either or build a custom link. Odoo’s documentation says its Shopify Connector pulls orders every 10 minutes by default and pushes stock to Shopify after each pull. That suits most catalogues, but a flash sale on fast stock may need a shorter cycle. For NetSuite we choose between Oracle’s connector, an integration platform or custom code based on your order volume and pricing rules.' },
-  { category: 'systems', question: 'Can marketplace orders from Amazon.com.au, eBay, Kogan or Bunnings Marketplace go into the same ERP?',
-    answer: 'Yes, and they should. Every channel draws from one stock count, or you oversell. Each marketplace order comes into the ERP tagged by channel, so margin reports show what Amazon or Bunnings Marketplace sales cost you after fees. Each marketplace pays out separately, so each one gets its own clearing account in Xero or MYOB. We set the channel rules in your ERP or inventory system rather than in each marketplace.' },
+    answer: 'Yes. Oracle NetSuite publishes a NetSuite ERP Connector on the Shopify App Store, and Odoo has its own Shopify Connector. We work with either or build a custom link. Odoo’s documentation says its Shopify Connector pulls orders every 10 minutes by default and pushes stock to Shopify after each pull. That suits most catalogues, but a flash sale on fast stock may need a shorter cycle. For NetSuite we choose between Oracle’s connector, an integration platform or custom code based on your order volume and pricing rules.',
+    links: [{ href: '/au/netsuite-ai-agents', label: 'NetSuite AI agents in Australia' }] },
+  { category: 'systems', question: 'Can marketplace orders go into the same ERP as our store?',
+    answer: 'Yes, and they should. Orders from Amazon.com.au, eBay, Kogan and Bunnings Marketplace draw from the same stock count as your store, or you oversell. Each marketplace order comes into the ERP tagged by channel, so margin reports show what Amazon or Bunnings Marketplace sales cost you after fees. Each marketplace pays out separately, so each one gets its own clearing account in Xero or MYOB. An Amazon Xero integration or an eBay Xero integration works the same way: each settlement posts to that marketplace’s clearing account, with fees split out. We set the channel rules in your ERP or inventory system rather than in each marketplace.' },
   { category: 'systems', question: 'How do Afterpay, Zip and Stripe payouts reconcile?',
     answer: 'Payment providers usually deposit sales net of their fees and refunds, often covering several days of orders, so a deposit rarely equals one day of sales. We give Shopify Payments, Stripe, Afterpay, Zip and PayPal a clearing account each. Sales post into the clearing account gross, fees and refunds come out of it, and the deposit clears it to zero. If a clearing account is not zero at month end, something is missing.' },
 
@@ -171,6 +174,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Published Australian ranges are wide. Exodigital puts typical integrations at AUD $5,000 to $40,000 each, and AUD $4,000 to $15,000 for a Shopify or WooCommerce link. Insiteful puts a custom Shopify and ERP build at AUD $25,000 to $80,000 and NetSuite implementation consulting at AUD $50,000 to $250,000. Neither says whether GST is included. FactoryJet quotes a fixed price per phase in writing after a scoping call.' },
   { category: 'choose', question: 'When is a ready-made connector enough, and when is custom better?',
     answer: 'A connector is enough when it moves each record in the direction your owner map says, syncs often enough for your stock, handles your tax codes and fits your order volume. Custom wins when one of those fails: trade price lists the connector cannot read, bundles that must split into components, several warehouses with allocation rules, or marketplaces the connector does not support. Often the answer is a connector plus one small custom piece.' },
+  { category: 'choose', question: 'Who builds ecommerce ERP integrations in Australia?',
+    answer: 'Four kinds of team, and many projects mix them. The system makers publish their own connectors: Cin7, Unleashed and Odoo each document a Shopify integration, and Oracle NetSuite lists one on the Shopify App Store. App makers such as A2X and Amaka sell ready-made links to Xero or MYOB. Firms such as Exodigital and Insiteful publish Australian price ranges for this work. Development teams like ours set up a connector or write a custom link when the rules do not fit.' },
   { category: 'choose', question: 'How long does an ERP integration take?',
     answer: 'Plan backwards from a BAS quarter. Going live on the first day of a quarter keeps each BAS inside one setup, so the build and testing need to finish before then. Clean-up sets most of the pace: duplicate SKUs, products with no GST setting and tax codes nobody uses any more. Before go-live we replay past weeks of real orders and check the GST totals against the BAS you already lodged. The written timeline follows the signed owner map.' },
 
@@ -179,8 +184,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes, and that is the test we suggest. Pick the awkward cases from your own catalogue: a cart with a GST-free item next to a taxable one, a discount code, an Afterpay order, a partial refund. We run them through a test copy of your books and your bookkeeper reads the tax code on every line it posts. No contract is signed until those lines look right to them.' },
   { category: 'working', question: 'Can we send a brief, field list or RFP instead of booking a call?',
     answer: 'Yes, through the form on this page. The most useful Australian brief names the tax codes you use today, whether you lodge BAS monthly or quarterly, every marketplace you sell on, and each payment provider, including Afterpay and Zip. Add a recent payout statement and one month of exported orders if you can. Those let us spot the GST and clearing account problems before a call.' },
-  { category: 'working', question: 'We are moving from Xero to NetSuite, or MYOB to Cin7. Can the store keep selling?',
-    answer: 'Yes. The store keeps posting to the old system while the new one is set up, so sales and GST keep reaching the books. We rewrite the owner map for the new system, build the link against a sandbox, replay real orders through it, and switch over on a quiet day at the start of a BAS period so each quarter sits in one system.' },
+  { category: 'working', question: 'Can our store keep selling while we change accounting or ERP systems?',
+    answer: 'Yes, whether you are moving from Xero to NetSuite or from MYOB to Cin7. The store keeps posting to the old system while the new one is set up, so sales and GST keep reaching the books. We rewrite the owner map for the new system, build the link against a sandbox, replay real orders through it, and switch over on a quiet day at the start of a BAS period so each quarter sits in one system.' },
   { category: 'working', question: 'Who looks after the integration after launch?',
     answer: 'We do, if you want us to. Defects found after launch are fixed inside the build price for a cover period agreed before work starts. After that, support is optional, with no monthly minimum: each change is quoted and approved first. The code, the documentation and every account stay in your name, so another team or your own staff can take over at any point.',
     links: [{ href: '/au/website-maintenance', label: 'Store and website care in Australia' }] },
@@ -251,7 +256,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['ecommerce-erp-integration'] },
   openGraph: {
     title: TITLE,
     description:
@@ -280,7 +285,7 @@ const HERO_ICONS = [
 
 /* The systems we connect, and what each one usually owns. */
 const SYSTEMS: { n: string; t: string; d: string; icon: string }[] = [
-  { n: '01', t: 'Xero', d: 'The ledger most Australian bookkeepers work in. It gets payout summaries or trade invoices, tax codes and clearing accounts. Xero suggests a limit of 4,000 tracked items, so bigger catalogues keep stock elsewhere.', icon: 'M5 3h14v18H5V3Zm3 4h8m-8 4h8m-8 4h5' },
+  { n: '01', t: 'Xero', d: 'A ledger many Australian bookkeepers work in. It gets payout summaries or trade invoices, tax codes and clearing accounts. Xero suggests a limit of 4,000 tracked items, so bigger catalogues keep stock elsewhere.', icon: 'M5 3h14v18H5V3Zm3 4h8m-8 4h8m-8 4h5' },
   { n: '02', t: 'MYOB Business and MYOB Acumatica', d: 'MYOB Business links to Shopify through Amaka on a daily sync. MYOB Acumatica, the mid-market ERP, needs a connector or a custom link that respects its own item and tax setup.', icon: 'M4 6h16v12H4V6Zm0 4h16M8 14h3' },
   { n: '03', t: 'NetSuite', d: 'For groups with several entities, warehouses or trade price lists. NetSuite owns products, prices, customers and stock, and the store becomes a sales channel feeding it.', icon: 'M4 20h16M6 16V9m4 7V5m4 11v-6m4 6V8' },
   { n: '04', t: 'Cin7 Core (formerly DEAR) and Cin7 Omni', d: 'Inventory and order management between the store and Xero or QuickBooks. Cin7 Core pushes stock to Shopify on every change, so Cin7 is the master and Shopify keeps a copy.', icon: 'M3 7l9-4 9 4-9 4-9-4Zm0 5 9 4 9-4M3 17l9 4 9-4' },
@@ -314,8 +319,22 @@ const STAGES: { t: string; d: string }[] = [
   { t: '07 · Handover and optional support', d: 'Written documentation of every field, rule and account, code in a repository in your name, and defect cover agreed before work started. Ongoing support is optional, with each change quoted first.' },
 ];
 
+/* Ready-made connectors, each row restating the maker's own page (SRC_* above). */
+const CONNECTOR_ROWS: { c: string; sys: string; dir: string; freq: string; s: string; u: string }[] = [
+  { c: 'Cin7 Core Shopify integration', sys: 'Cin7 Core and Shopify', dir: 'Stock from Cin7 Core to Shopify, never back', freq: 'On every stock change', s: 'Cin7 Core Help', u: SRC_CIN7_STOCK },
+  { c: 'Unleashed Shopify integration', sys: 'Unleashed and Shopify', dir: 'Stock from Unleashed to Shopify', freq: 'At intervals you set', s: 'Unleashed Support', u: SRC_UNLEASHED },
+  { c: 'Amaka (MYOB’s Shopify route)', sys: 'Shopify and MYOB Business', dir: 'Sales into MYOB, with bills for third-party fees', freq: 'Once a day', s: 'MYOB support', u: SRC_MYOB_SHOPIFY },
+  { c: 'Odoo Shopify Connector', sys: 'Odoo and Shopify', dir: 'Orders into Odoo, stock back to Shopify', freq: 'Orders every 10 minutes by default', s: 'Odoo 19 documentation', u: SRC_ODOO },
+  { c: 'NetSuite ERP Connector', sys: 'Oracle NetSuite and Shopify', dir: 'Products, prices, stock, sales orders and fulfilment synced', freq: 'Real-time options on some plans', s: 'Shopify App Store', u: SRC_NETSUITE_APP },
+  { c: 'A2X for Xero', sys: 'Shopify and Xero', dir: 'One summary entry per payout into Xero', freq: 'Per payout period', s: 'A2X', u: SRC_A2X },
+];
+
 /* Related AU pages (routes verified in src/app/au and sitemap-au on 29 Oct 2026). */
 const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
+  { href: '/au/shopify-xero-integration', t: 'Shopify Xero integration Australia', d: 'The Shopify and Xero pairing on its own: payout summaries, tax codes and clearing accounts for each provider.', go: 'Explore Shopify and Xero →' },
+  { href: '/au/woocommerce', t: 'WooCommerce development Australia', d: 'WooCommerce stores and trade portals, built to read stock and prices from the ERP behind them.', go: 'Explore WooCommerce →' },
+  { href: '/au/b2b-ecommerce', t: 'B2B ecommerce Australia', d: 'Trade ordering with customer price lists, ABNs and payment terms pulled from your ERP.', go: 'Explore B2B ecommerce →' },
+  { href: '/au/erp-ai-agents', t: 'ERP AI agents', d: 'Agents that read and update records in your ERP once the store link is in place.', go: 'Explore ERP agents →' },
   { href: '/au/shopify-development', t: 'Shopify development Australia', d: 'New stores, Shopify Plus, B2B and migrations, with Xero, MYOB and courier links built in from day one.', go: 'Explore Shopify →' },
   { href: '/au/ecommerce-development', t: 'Ecommerce development Australia', d: 'Choosing between Shopify, WooCommerce, BigCommerce and Maropost for a catalogue with an ERP behind it.', go: 'Explore ecommerce →' },
   { href: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'The other side of the ledger: supplier invoices read, matched to purchase orders and routed for approval in Xero or MYOB.', go: 'Explore AP automation →' },
@@ -418,8 +437,8 @@ export default function EcommerceErpIntegrationAUPage() {
 
         <div className="wrap byline">
           <div className="av">BB</div>
-          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="who"><b><a href="/about">Bhavesh Barot</a></b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST DEFINITION (GEO) → Family A facts ═══ */}
@@ -448,7 +467,10 @@ export default function EcommerceErpIntegrationAUPage() {
                       An <b>owner map</b> is a table saying which system is the source of truth for each record. A{' '}
                       <b>clearing account</b> stands in for one payment provider, such as Afterpay or Shopify Payments.
                       When the provider’s deposit lands in your bank, that account should read $0. A <b>tax code</b> is the label that tells your
-                      ledger whether a line carries GST.
+                      ledger whether a line carries GST. A <b>SKU</b> (stock keeping unit) is the unique code for one product
+                      variant. A <b>3PL</b> (third-party logistics provider) is an outside warehouse that packs and ships
+                      orders for you. An <b>API call</b> is one request one system sends another, such as “give me
+                      today’s orders”.
                     </p>
                   </div>
                 </div>
@@ -483,7 +505,7 @@ export default function EcommerceErpIntegrationAUPage() {
               <div className="eyebrow">The Australian stack</div>
               <h2>The systems we connect, and what each one should own</h2>
               <p className="lead">
-                These eight systems cover most Australian store stacks. The pairing decides the route: Shopify to
+                These are the eight groups of systems we connect for Australian stores. The pairing decides the route: Shopify to
                 Xero through a payout app is a different job from Shopify to NetSuite with trade price lists and three
                 warehouses.
               </p>
@@ -523,13 +545,14 @@ export default function EcommerceErpIntegrationAUPage() {
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><p>
                   <b>Trade invoices and rounding.</b> Sales of $1,000 or more need the buyer’s identity or ABN on the
-                  tax invoice, so trade accounts carry their ABN from the ERP into each order. The ATO also allows two
+                  tax invoice, so trade accounts carry their ABN from the ERP into each order. The{' '}
+                  <a href={SRC_ATO_INVOICES} {...extLink}>ATO’s tax invoice guidance</a> also allows two
                   rounding rules, and when the store and Xero pick different ones the GST drifts by cents. We choose one,
                   match both systems, and route any leftover cent to a rounding account.
                 </p></div>
                 <div className="fact"><div className="sec">§04</div><div>
                   <p>
-                    <b>eInvoicing.</b> The ATO says Australia has adopted Peppol as its common eInvoicing standard. If
+                    <b>eInvoicing.</b> The <a href={SRC_ATO_INVOICES} {...extLink}>ATO says</a> Australia has adopted Peppol as its common eInvoicing standard. If
                     your larger trade customers ask for eInvoices, the order has to reach the ERP complete, with ABN,
                     purchase order number and tax per line, so the ERP can send it.
                   </p>
@@ -569,8 +592,9 @@ export default function EcommerceErpIntegrationAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap" role="region" tabIndex={0} aria-label="Owner map for an ecommerce ERP integration">
-              <table>
+            <p className="md:hidden tablenote">Swipe sideways to see every column.</p>
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="Owner map for an ecommerce ERP integration" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 740 }}>
                 <thead>
                   <tr>
                     <th>Record</th>
@@ -641,20 +665,44 @@ export default function EcommerceErpIntegrationAUPage() {
                 </ul>
               </div>
             </div>
+            <h3 style={{ marginTop: 40 }}>Ready-made connectors compared</h3>
+            <p className="md:hidden tablenote">Swipe sideways to see every column.</p>
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="Ready-made ecommerce ERP connectors compared" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 740 }}>
+                <thead>
+                  <tr>
+                    <th>Connector</th>
+                    <th>Systems</th>
+                    <th>Direction</th>
+                    <th>How often</th>
+                    <th>Source</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {CONNECTOR_ROWS.map((r) => (
+                    <tr key={r.c}><th scope="row">{r.c}</th><td>{r.sys}</td><td>{r.dir}</td><td>{r.freq}</td><td><a href={r.u} {...extLink}>{r.s}</a></td></tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="tablenote">
+              Each row restates the maker’s own page, read 29 October 2026. Check the page again before you buy, because
+              connector settings change.
+            </p>
           </div>
         </section>
 
         {/* ═══ NUMBERED PROJECT STEPS → timeline ═══ */}
         <section className="section process" id="how-a-project-runs">
           <div className="wrap">
-            <div className="section-head">
+            <div className="section-head head-stack">
               <div className="eyebrow">How a project runs</div>
               <h2>Seven steps from first call to a link your bookkeeper trusts</h2>
               <p className="lead">
                 Open each step to see what happens and what we need from you.
               </p>
             </div>
-            <div className="timeline">
+            <div className="timeline timeline-4">
               {STAGES.map((s) => {
                 const [idx, title] = s.t.split(' · ');
                 return (
@@ -677,10 +725,10 @@ export default function EcommerceErpIntegrationAUPage() {
             <div className="section-head plat-head">
               <div>
                 <div className="eyebrow">How we work with you</div>
-                <h2>The code, the accounts and the data stay yours</h2>
+                <h2>What terms apply to an integration project?</h2>
               </div>
               <p>
-                These terms apply to every integration we build, whichever systems sit on each side.
+                The code, the accounts and the data stay yours. These terms apply to every integration we build, whichever systems sit on each side.
               </p>
             </div>
             <div className="platlist" role="list">
@@ -693,7 +741,7 @@ export default function EcommerceErpIntegrationAUPage() {
             <div className="au-split">
               <div>
                 <h3>Send us a brief or an RFP</h3>
-                <p>
+                <p style={{ marginTop: 10 }}>
                   Already written a brief, an RFP or a field list? Send it through the form. The reply is a fixed price
                   per phase in writing, or a note that a ready-made connector covers it.
                 </p>
@@ -766,21 +814,20 @@ export default function EcommerceErpIntegrationAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">After launch</div>
-              <h2>The integration nobody owns is the one that breaks</h2>
+              <h2>What happens after the integration goes live?</h2>
               <p className="lead">
-                In a typical failure, an agency sets up a link and then stops answering for it. Two years later an app update
-                changes a tax setting, refunds start posting twice, and nobody knows which system was meant to own
-                stock.
+                The integration nobody owns is the one that breaks. Connectors change their settings, and a store that
+                grows past Xero’s 5,000 sales invoices a month needs a different posting design.
               </p>
               <p className="lead">
-                We work the other way. The engineers who build your link support it, the handover documents every field
-                and rule, and the code sits in a repository in your name. Support is optional and quoted per change.
+                The engineers who build your link support it. Support is optional and quoted per change.
               </p>
             </div>
             <div className="platlist" role="list">
               <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Watch</h3></div><p className="plat-build">Clearing accounts and stock counts checked daily in the first weeks after go-live, with failed records flagged to a person.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Fix</h3></div><p className="plat-build">Defects fixed inside the build price for the agreed cover period, by the engineers who built the link.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Extend</h3></div><p className="plat-build">A new marketplace, a second warehouse, Peppol eInvoices or an AI agent on top, each scoped and quoted on its own.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Hand over</h3></div><p className="plat-build">Written documentation of every field and rule, with the code in a repository in your name, so another team can take over.</p></div>
             </div>
           </div>
         </section>
@@ -790,7 +837,7 @@ export default function EcommerceErpIntegrationAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Related FactoryJet services</div>
-              <h2>Beyond the integration</h2>
+              <h2>Which other services connect to your store and ERP?</h2>
             </div>
             <ul className="agentdir-grid">
               {SIBLINGS.map((s) => (
@@ -849,7 +896,7 @@ export default function EcommerceErpIntegrationAUPage() {
             </div>
             <div className="ctas">
               <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
-              <a className="btn btn-ghost" href="/au/shopify-development">See Shopify development</a>
+              <ModalCTAButton label="Send my brief" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-ghost" />
             </div>
           </div>
         </section>

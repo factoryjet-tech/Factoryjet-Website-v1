@@ -5,6 +5,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/odoo-ai-agents, built 2026-10-29.
@@ -35,7 +36,8 @@ import '../ai-agents/ai-agents.css';
    Ask boxes for "odoo ai" and "odoo making tax digital". */
 
 const CANONICAL = 'https://factoryjet.com/uk/odoo-ai-agents';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
+const UPDATED_LABEL = '31 October 2026';
 const READ_ON = '29 October 2026';
 const TITLE = 'Odoo AI Agents UK: Built for UK VAT and MTD | FactoryJet';
 const H1 = 'Odoo AI Agents for UK Firms, With VAT and MTD Left Intact';
@@ -126,7 +128,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'odoo',
-    question: 'What is an Odoo AI agent, in plain English?',
+    question: 'What is an Odoo AI agent?',
     answer:
       'A helper inside Odoo that understands typed requests and uses Odoo tools to act on them. You give it instructions, reference material such as PDFs, and skills. Odoo 20 lists eight built-in skills, including Create Records and Update Records. An agent with no skills can answer questions but cannot change your data. A custom agent does the same kind of work from outside Odoo, through its API.',
   },
@@ -221,11 +223,11 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'rules',
     question: 'Is an Odoo AI agent safe under UK GDPR?',
     answer:
-      'It can be designed to be. The agent signs in as its own bot user with the narrowest access the job needs, which Odoo’s API page recommends, so it cannot read payroll or HR records it has no use for. Its key expires within three months. The ICO publishes guidance on AI and data protection and a risk toolkit, and we work through it with your data protection lead before launch.',
+      'It can be designed to be. The agent signs in as its own bot user with the narrowest access the job needs, which Odoo’s API page recommends, so it cannot read payroll or HR records it has no use for. Its key expires within three months. The ICO publishes guidance on AI and data protection and a risk toolkit. We work through it with your data protection lead before launch, starting with a written list of the Odoo records the bot user may read.',
   },
   {
     category: 'rules',
-    question: 'Does the Data (Use and Access) Act 2025 change anything?',
+    question: 'Does the UK Data (Use and Access) Act 2025 affect an AI agent?',
     answer:
       'Yes, and most of it is already in force. GOV.UK says the Act received Royal Assent on 19 June 2025, and that the Commencement No. 6 Regulations brought most of the data protection provisions in Part 5 into force on 5 February 2026. For agents that draft orders and bills for a person to confirm, two habits carry over unchanged: take only the data the job needs, and keep a named person answerable for each decision.',
   },
@@ -240,19 +242,19 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'working',
     question: 'How much does an Odoo AI agent project cost in the UK?',
     answer:
-      'It depends on the job and on how much of your Odoo is already in shape. Softomate Solutions, a London Odoo agency, puts UK Odoo implementations at £8,000 to £120,000 in its 2026 guide, and says five or more integrations add £15,000 to £40,000. FactoryJet quotes a fixed price in writing after a short scoping call.',
+      'It depends on the job and on how much of your Odoo is already in shape. The nearest public UK figures are for setting up Odoo itself, not for an agent: Softomate Solutions, a London Odoo agency, puts UK Odoo implementations at £8,000 to £120,000 in its 2026 guide, and says five or more integrations add £15,000 to £40,000. An agent on a working Odoo is a smaller, separate job. FactoryJet quotes a fixed price per phase, in writing, after a short scoping call. Changes are quoted and approved per request, with no monthly minimum.',
   },
   {
     category: 'working',
-    question: 'Should we hire an Odoo partner or an AI agent builder?',
+    question: 'Should we hire an Odoo partner in the UK or an AI agent builder?',
     answer:
-      'It depends on where the work sits. Odoo lists its UK Gold partners on its own site, and a partner is the natural call for setting up Odoo itself, its UK localisation and the AI app. An AI agent builder such as FactoryJet suits work that starts outside Odoo, such as an inbox of trade orders, or crosses two systems. Many firms use both, with one named owner for each job.',
+      'It depends on where the work sits. Odoo lists its Gold partners in the UK on its own site, and an Odoo partner is the natural call for setting up Odoo itself, its UK localisation and the AI app. An AI agent builder such as FactoryJet suits work that starts outside Odoo, such as an inbox of trade orders, or crosses two systems. Many firms use both, with one named owner for each job.',
   },
   {
     category: 'working',
-    question: 'Can we see it working before we sign?',
+    question: 'How long does an Odoo AI agent take, and can we see it first?',
     answer:
-      'Yes. Before a contract, we run working software on your own data. For an Odoo agent we take three or four real documents you have already processed, such as a trade order and two supplier invoices, and show the drafts the agent produces beside what your team posted. If the drafts are wrong, you have spent nothing.',
+      'It runs in three stages, and you see it working in the first. Stage one is a demo before any contract: we put three or four documents your team already posted, such as a trade order and two supplier invoices, through a first version and show its drafts beside your real entries. Stage two is the build, on a copy of your database. Stage three is a parallel run for an agreed number of weeks, and go-live waits for your accountant’s sign-off. We give a dated plan once the first job is scoped.',
   },
   {
     category: 'working',
@@ -264,18 +266,18 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'working',
     question: 'What happens to our agent when Odoo releases a new version?',
     answer:
-      'We test it again. Odoo 19.0 came out in September 2025 and 20.0 in September 2026, and Odoo Online receives in-between versions every two to three months. The API key the agent uses can last three months at most, so renewal goes in the calendar from day one. If you choose support, the same team handles both, with each change quoted and approved first.',
+      'We test it again. Odoo 19.0 came out in September 2025 and 20.0 in September 2026, and Odoo Online receives in-between versions every two to three months. The API key the agent uses can last three months at most, so renewal goes in the calendar from day one. If you choose support, the same team handles both, with each change quoted and approved first and no monthly minimum.',
   },
 ];
 
 /* What Odoo's UK localisation does already. Each row restates Odoo's UK
    fiscal localisation page as read on 2026-10-29. */
-const UK_MODULES: { module: string; does: string; agent: string }[] = [
-  { module: 'UK Accounting (l10n_uk)', does: 'A CT600-ready chart of accounts and a VAT100-ready tax structure. UK taxes are created automatically with their accounts.', agent: 'The agent uses these taxes. It never invents one.' },
-  { module: 'UK Accounting Reports (l10n_uk_reports)', does: 'UK reports, and the VAT return sent to HMRC over the MTD VAT API with a Send to HMRC button.', agent: 'Stays with your accountant. The agent prepares the entries behind the return.' },
-  { module: 'UK BACS Payment Files (l10n_uk_bacs)', does: 'Bacs files for supplier batch payments and customer direct debits.', agent: 'The agent can propose a payment batch. A person validates it.' },
-  { module: 'UK Construction Industry Scheme (l10n_uk_reports_cis)', does: 'Sends the CIS monthly return to HMRC and adds a CIS deduction report.', agent: 'The agent reads subcontractor invoices into draft bills.' },
-  { module: 'UK HMRC API (l10n_uk_hmrc)', does: 'The HMRC basics the other modules use.', agent: 'No change. The agent never holds HMRC credentials.' },
+const UK_MODULES: { module: string; code: string; does: string; agent: string }[] = [
+  { module: 'UK Accounting', code: 'l10n_uk', does: 'A CT600-ready chart of accounts (CT600 is the Company Tax Return) and a VAT100-ready tax structure (VAT100 is the VAT return layout). UK taxes are created automatically with their accounts.', agent: 'The agent uses these taxes. It never invents one.' },
+  { module: 'UK Accounting Reports', code: 'l10n_uk_reports', does: 'UK reports, and the VAT return sent to HMRC over the MTD VAT API with a Send to HMRC button.', agent: 'Stays with your accountant. The agent prepares the entries behind the return.' },
+  { module: 'UK BACS Payment Files', code: 'l10n_uk_bacs', does: 'Bacs files for supplier batch payments and customer direct debits.', agent: 'The agent can propose a payment batch. A person validates it.' },
+  { module: 'UK Construction Industry Scheme', code: 'l10n_uk_reports_cis', does: 'Sends the CIS monthly return to HMRC and adds a CIS deduction report.', agent: 'The agent reads subcontractor invoices into draft bills.' },
+  { module: 'UK HMRC API', code: 'l10n_uk_hmrc', does: 'The HMRC basics the other modules use.', agent: 'No change. The agent never holds HMRC credentials.' },
 ];
 
 /* Jobs. One card each. */
@@ -326,8 +328,8 @@ const JOBS: { n: string; t: string; b: string; items: string[]; sources: SrcKey[
   },
   {
     n: '05',
-    t: 'Odoo beside Xero, Sage or Linnworks',
-    b: 'Some UK firms run Odoo for stock and orders while the books stay in Xero or Sage, or Linnworks runs the channels. The agent keeps the two sides in step.',
+    t: 'Odoo beside Xero, Sage, Linnworks or your web store',
+    b: 'Some UK firms run Odoo for stock and orders while the books stay in Xero or Sage, Linnworks runs the channels, or a Shopify or WooCommerce store feeds orders into Odoo. The agent keeps the two sides in step.',
     items: [
       'One owner named for each number: stock, price, customer, ledger',
       'Mismatches listed for a person each morning, never fixed silently',
@@ -351,7 +353,7 @@ const JOBS: { n: string; t: string; b: string; items: string[]; sources: SrcKey[
 const ROUTES: { feat: string; app: string; mcp: string; custom: string }[] = [
   { feat: 'Where it lives', app: 'Inside Odoo, in the AI app', mcp: 'In an AI tool on someone’s computer, such as Claude Code or Codex, talking to your database', custom: 'On a server you own, connected to Odoo through the JSON-2 API' },
   { feat: 'What starts it', app: 'A chat, a record or an Odoo automation', mcp: 'A person typing a request', custom: 'Whatever arrives: an inbox, a marketplace, a courier update' },
-  { feat: 'How it is paid for', app: 'Odoo AI credits, bought in Odoo', mcp: 'The AI tool’s own plan, plus your Odoo plan', custom: 'A fixed build price, quoted in writing' },
+  { feat: 'How it is paid for', app: 'Odoo AI credits, bought in Odoo', mcp: 'The AI tool’s own plan, plus your Odoo plan', custom: 'A fixed price per phase, quoted in writing' },
   { feat: 'Writes to Odoo', app: 'Through the Create Records and Update Records skills', mcp: 'Only after someone exposes the write tools in Odoo’s settings', custom: 'Drafts only, through a bot user with narrow access' },
   { feat: 'UK VAT and MTD', app: 'Uses your UK localisation as it stands', mcp: 'Uses your UK localisation as it stands', custom: 'Uses your UK localisation, with tax mapping signed off by your accountant' },
   { feat: 'Good fit when', app: 'The job starts and ends inside Odoo', mcp: 'One person wants to ask Odoo questions from their own AI tool', custom: 'The work starts outside Odoo, crosses two systems, or follows rules of your own' },
@@ -361,7 +363,7 @@ const ROUTES: { feat: string; app: string; mcp: string; custom: string }[] = [
 const STEPS: { n: string; t: string; d: string }[] = [
   { n: '01', t: 'Read your Odoo', d: 'Version, hosting, plan, installed apps and the UK modules in use. Each database lists its own models on its /doc page, so we read yours before promising anything.' },
   { n: '02', t: 'Check what Odoo already does', d: 'Bill reading, the UK localisation, Amazon Connector, Sendcloud. If a built-in feature covers the job, we tell you to switch it on and stop there.' },
-  { n: '03', t: 'Pick one job and agree its rules', d: 'One task, such as trade orders from email. Your team’s rules for it go on paper, with the VAT mapping signed off by your accountant and a named person who confirms each draft.' },
+  { n: '03', t: 'Pick one job and agree its rules', d: 'One task, such as trade orders from email. Your team’s rules for it are written down and signed off, with the VAT mapping signed off by your accountant and a named person who confirms each draft.' },
   { n: '04', t: 'Try it on last month’s paperwork', d: 'Before a contract, three or four orders or bills your team has already posted go through a first version. You hold its drafts up against the real entries, line by line and VAT code by VAT code.' },
   { n: '05', t: 'Work away from live', d: 'All building happens on a copy of your database that is never connected to HMRC. We test the UK taxes there, and the CIS set-up if you use it. The agent signs in as a bot user whose API key has a fixed end date.' },
   { n: '06', t: 'A parallel run your accountant signs off', d: 'For an agreed number of weeks your team posts as usual while the agent drafts the same documents, and we go through every mismatch together. Go-live waits until your accountant has signed off the VAT on those drafts.' },
@@ -434,7 +436,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['odoo-ai-agents'] },
   openGraph: {
     title: TITLE,
     description:
@@ -499,8 +501,8 @@ export default function OdooAiAgentsUKPage() {
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="who"><b><a href="/about" style={{ color: 'inherit', textDecoration: 'underline' }}>Bhavesh Barot</a></b>, Founder & CEO<br /><span>500+ businesses served since 2014</span></div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className={styles.heroForm} style={{ maxWidth: 560 }}>
@@ -538,7 +540,7 @@ export default function OdooAiAgentsUKPage() {
         {/* 2. ANSWER-FIRST DEFINITION */}
         <section className="sec">
           <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
+            <div className="def" style={{ maxWidth: 720 }} data-speakable="true">
               <span className="lab">What does an Odoo AI agent do for a UK business?</span>
               <p>
                 It reads work that arrives outside Odoo, such as an emailed trade order or a supplier invoice, and
@@ -548,13 +550,17 @@ export default function OdooAiAgentsUKPage() {
               </p>
             </div>
             <Sources ids={['odooAgents', 'odooRelease20', 'odooApi']} />
-            <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms we use a lot</span>
+            <div className="def mt-6" style={{ maxWidth: 720 }}>
+              <span className="lab">Terms we use on this page</span>
               <p>
                 The <b>UK localisation</b> is the set of Odoo modules that add the UK chart of accounts, UK taxes
                 and the link to HMRC. <b>Making Tax Digital</b>, or MTD, is HMRC’s rule that VAT records are kept
                 in software and returns are sent from it. A <b>bot user</b> is an Odoo login made only for the
-                agent, with the least access its job needs.
+                agent, with the least access its job needs. <b>Record rules</b> are Odoo settings that limit which
+                records a user can see. <b>OCR</b> is software that reads the text on a scanned or PDF document.
+                The <b>JSON-2 API</b> is the door Odoo 19 and 20 open for outside software. <b>Odoo.sh</b> is
+                Odoo’s cloud hosting that accepts custom modules. <b>Bacs</b> is the UK bank scheme behind direct
+                debits and supplier batch payments.
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
@@ -574,7 +580,7 @@ export default function OdooAiAgentsUKPage() {
                 { v: '500+', t: 'businesses served by FactoryJet since it was founded in 2014', s: 'About FactoryJet', u: '/about' },
                 { v: 'Custom', t: 'is the only Odoo plan where outside software can reach your data through the API', s: 'Odoo docs, External JSON-2 API', u: SRC.odooApi.url },
                 { v: '3 months', t: 'is the longest an Odoo API key can last, so an agent’s key is renewed on a timetable', s: 'Odoo docs, External JSON-2 API', u: SRC.odooApi.url },
-                { v: '3 months', t: 'late is the point after which Odoo can no longer send a VAT return to HMRC', s: 'Odoo docs, UK localisation', u: SRC.odooUk.url },
+                { v: 'One', t: 'company and one user can be connected to HMRC at a time from an Odoo database', s: 'Odoo docs, UK localisation', u: SRC.odooUk.url },
               ].map((r) => (
                 <li key={r.t}>
                   <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
@@ -599,7 +605,8 @@ export default function OdooAiAgentsUKPage() {
                 UK modules in the form they expect.
               </p>
             </div>
-            <div className={`card mt-10 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Odoo UK modules and the agent" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={3}>
+            <p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className={`card mt-10 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Odoo UK modules and the agent" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={3}>
                 <thead>
                   <tr>
                     <th>Odoo UK module</th>
@@ -610,7 +617,7 @@ export default function OdooAiAgentsUKPage() {
                 <tbody>
                   {UK_MODULES.map((m) => (
                     <tr key={m.module}>
-                      <td className="feat">{m.module}</td>
+                      <td className="feat">{m.module}<br /><span style={{ fontFamily: T.fm, fontSize: 12, color: T.n400, wordBreak: 'break-all', overflowWrap: 'anywhere' }}>{m.code}</span></td>
                       <td>{m.does}</td>
                       <td className="fj">{m.agent}</td>
                     </tr>
@@ -715,10 +722,12 @@ export default function OdooAiAgentsUKPage() {
               <h2>Odoo’s AI app, its MCP server, or a custom agent: which suits a UK firm</h2>
               <p className="lead mt-4">
                 All three use the same UK localisation underneath. They differ in where the agent lives and
-                who answers for it when something goes wrong.
+                who answers for it when something goes wrong. An Odoo partner in the UK usually sets up the
+                first route; the third is the work FactoryJet does.
               </p>
             </div>
-            <div className={`card mt-10 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Three routes to an AI agent in Odoo" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 900 }} data-columns={4}>
+            <p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className={`card mt-10 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Three routes to an AI agent in Odoo" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 900 }} data-columns={4}>
                 <thead>
                   <tr>
                     <th>Question</th>
@@ -769,7 +778,7 @@ export default function OdooAiAgentsUKPage() {
                 <div className="stack mt-4">
                   <p style={{ fontSize: 14 }}>
                     <b>UK GDPR.</b> The ICO publishes guidance on applying UK GDPR to AI systems and an AI and data
-                    protection risk toolkit. We work through it with your data protection lead before launch.
+                    protection risk toolkit. We work through it with your data protection lead before launch, starting with a written list of the Odoo records the bot user may read.
                   </p>
                   <p style={{ fontSize: 14 }}>
                     <b>Data (Use and Access) Act 2025.</b> GOV.UK says it received Royal Assent on 19 June 2025, and
@@ -792,7 +801,7 @@ export default function OdooAiAgentsUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">Work we can show</span>
-              <h2>UK trade and wholesale work, on Odoo and beside it</h2>
+              <h2>UK wholesale client work: Sow Easy with Odoo, GPSUK on Commerceflo</h2>
             </div>
             <ul className="col-2 mt-10">
               <li className="plat-card">
@@ -822,8 +831,8 @@ export default function OdooAiAgentsUKPage() {
             </ul>
             <p className="mt-6" style={{ maxWidth: 780 }}>
               Odoo is one of several ERPs we build agents for, and our{' '}
-              <a href="/services/erp-ai-agents" style={inlineLink}>ERP AI agents</a> page covers the others. Our{' '}
-              <a href="/services/odoo-ai-agents" style={inlineLink}>Odoo AI agent development</a> page goes deeper on
+              <a href="/uk/erp-ai-agents" style={inlineLink}>UK ERP AI agents</a> page covers the others. Our{' '}
+              <a href="/services/odoo-ai-agents" style={inlineLink}>US Odoo AI agent page</a> goes deeper on
               Odoo 19 and 20 themselves.
             </p>
           </div>
@@ -835,7 +844,7 @@ export default function OdooAiAgentsUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">How the work is agreed</span>
-                <h2>Terms, in the order you will meet them</h2>
+                <h2>Odoo AI agent project terms: a demo first, a fixed price per phase</h2>
                 <ul className="scope-list yes-list mt-6" style={{ maxWidth: 600 }}>
                   <li><b>A demo before you sign.</b> Working software on your own Odoo data before any contract.</li>
                   <li><b>A fixed price for each phase.</b> Every phase is scoped, priced and signed on its own, so you can stop after the first.</li>
@@ -881,7 +890,7 @@ export default function OdooAiAgentsUKPage() {
                 <img src={`${IMG}/planning-wall-notes.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="Two colleagues seen from behind stand at a wall of blank yellow paper notes while one of them points to a single orange note" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
-                    Step three in practice: every rule a person follows today goes on the wall, and the one that
+                    Step three in practice: every rule a person follows today is written down and signed off, and the one that
                     matters most for VAT gets marked before anything is built.
                   </p>
                 </div>
@@ -911,7 +920,7 @@ export default function OdooAiAgentsUKPage() {
                 Established companies with Odoo in place and a team that confirms orders and bills every day.
               </p>
             </div>
-            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Who this is for"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="svc-card"><th><h3>Wholesale and distribution</h3></th><td><p className="mt-4">Retail and trade customers email purchase orders all day. Each becomes a draft quotation at that account’s prices.</p></td></tr><tr className="svc-card"><th><h3>Manufacturers</h3></th><td><p className="mt-4">Supplier bills for materials and carriage arrive in every format. The agent matches them to purchase orders and receipts.</p></td></tr><tr className="svc-card"><th><h3>Construction contractors</h3></th><td><p className="mt-4">Subcontractor invoices drafted into bills for Odoo’s CIS module, checked before the monthly return.</p></td></tr><tr className="svc-card"><th><h3>Multi-channel sellers</h3></th><td><p className="mt-4">Amazon.co.uk, eBay UK, OnBuy and your own store, with order exceptions held for a person instead of failing quietly.</p></td></tr></tbody></table></div>
+            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Who this is for"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="svc-card"><th><h3>Wholesale and distribution</h3></th><td><p className="mt-4">Retail and trade customers email purchase orders all day. Each becomes a draft quotation at that account’s prices.</p></td></tr><tr className="svc-card"><th><h3>Manufacturers</h3></th><td><p className="mt-4">Supplier bills for materials and carriage arrive as PDFs, scans and spreadsheets. The agent matches each one to its Odoo purchase order and goods receipt before a person posts it.</p></td></tr><tr className="svc-card"><th><h3>Construction contractors</h3></th><td><p className="mt-4">Subcontractor invoices drafted into bills for Odoo’s CIS module, checked before the monthly return.</p></td></tr><tr className="svc-card"><th><h3>Multi-channel sellers</h3></th><td><p className="mt-4">Amazon.co.uk, eBay UK, OnBuy and your own store, with order exceptions held for a person instead of failing quietly.</p></td></tr></tbody></table></div>
             <p className="mt-8" style={{ maxWidth: 780 }}>
               Related UK pages: <a href="/uk/ai-agents" style={inlineLink}>AI agent development in the UK</a>,{' '}
               <a href="/uk/accounts-payable-automation" style={inlineLink}>accounts payable automation</a> for supplier
@@ -948,7 +957,7 @@ export default function OdooAiAgentsUKPage() {
         {/* 14. FAQ */}
         <section className="sec-lg dot-grid" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Odoo AI agent questions from UK finance and operations teams</h2>
             </div>
@@ -964,8 +973,8 @@ export default function OdooAiAgentsUKPage() {
                   ))}
                 </nav>
                 <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Ask the founder a question" region="uk" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Bhavesh replies within one business day.</p>
+                  <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="secondary-light" />
+                  <p>Bhavesh replies within 24 hours.</p>
                 </div>
               </aside>
 
@@ -1000,7 +1009,7 @@ export default function OdooAiAgentsUKPage() {
             <span className="eyebrow">Next step</span>
             <h2>See your own Odoo orders and bills drafted before you sign</h2>
             <p className="mt-4">
-              Send your name and work email. Bhavesh replies within one business day to set up a short call about
+              Send your name and work email. Bhavesh replies within 24 hours to set up a short call about
               your Odoo, your UK set-up and the first job. You leave knowing whether Odoo’s own AI covers it or a
               custom agent is the better route.
             </p>

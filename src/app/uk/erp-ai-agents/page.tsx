@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/erp-ai-agents, built 2026-10-29.
@@ -36,12 +37,14 @@ import '../ai-agents/ai-agents.css';
    and "erp ai" in the same pull. */
 
 const CANONICAL = 'https://factoryjet.com/uk/erp-ai-agents';
-const UPDATED = '2026-10-29';
+const PUBLISHED = '2026-10-29';
+const UPDATED = '2026-10-31';
 const READ_ON = '29 October 2026';
-const TITLE = 'AI Agents for ERP UK: Sage, Xero, NetSuite, Odoo | FactoryJet';
+const UPDATED_LABEL = '31 October 2026';
+const TITLE = 'ERP AI Agents UK: Sage, Xero, NetSuite, Odoo | FactoryJet';
 const H1 = 'ERP AI Agents for UK Businesses: Drafts in Sage, NetSuite, Odoo or Xero';
 const DESCRIPTION =
-  'AI agents built inside Sage, NetSuite, Business Central, Odoo and Xero for UK firms. They draft quotes, orders and bills; your team approves before anything posts.';
+  'AI agents inside Sage, NetSuite, Business Central, Odoo and Xero for UK firms. They draft quotes, orders and bills. Your team approves before anything posts.';
 const IMG = '/images/us/services/erp-ai-agents';
 
 /* Design tokens, copied by value from ../ai-agents/ai-agents.css so inline
@@ -86,6 +89,9 @@ const SRC = {
   euAiActTimeline: { label: 'European Commission: AI Act, regulatory framework and timeline', url: 'https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai' },
   leverx: { label: 'LeverX: AI agent development cost UK (4 October 2026)', url: 'https://leverx.com/en-gb/blog/ai-agent-development-cost-uk' },
   fulminous: { label: 'Fulminous: AI agent development cost UK (updated 23 September 2026)', url: 'https://fulminous.co.uk/ai-agent-development-cost-uk' },
+  dext: { label: 'Dext: Prepare, document capture and publishing', url: 'https://dext.com/en/products/prepare' },
+  powerAutomate: { label: 'Microsoft Learn: Power Automate home page', url: 'https://learn.microsoft.com/en-us/power-automate/getting-started' },
+  zapier: { label: 'Zapier: How it works', url: 'https://zapier.com/how-it-works' },
 } as const;
 
 type SrcKey = keyof typeof SRC;
@@ -117,7 +123,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'basics',
     question: 'How is a custom ERP agent different from the Copilot features our ERP already has?',
     answer:
-      'Built-in assistants cover the jobs their maker chose, in the way the maker chose. Microsoft’s FAQ says the Business Central Sales Order Agent works only with sales quotes and orders, up to 15 item lines, and reads email from a shared Exchange inbox. A custom agent is built around your process: purchase orders, supplier bills, marketplace orders, a second system such as Linnworks, or your own approval chain. Many firms use both.',
+      'Built-in assistants cover the jobs their maker chose, in the way the maker chose. Microsoft’s FAQ says the Business Central Sales Order Agent works only with sales quotes and orders, and reads email from a shared Exchange inbox. A custom agent is built around your process: purchase orders, supplier bills, marketplace orders, a second system such as Linnworks, or your own approval chain. Many firms use both.',
   },
   {
     category: 'basics',
@@ -130,7 +136,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'systems',
     question: 'Does Business Central have an AI agent for sales orders?',
     answer:
-      'Yes. Microsoft’s documentation describes the Sales Order Agent: it watches a mailbox, finds the customer, checks stock, creates a sales quote and, once the customer confirms, converts it into an order. It always creates a quote first, because quotes do not affect planning or stock. Designated users approve every outgoing email. Microsoft says it is billed in Copilot Credits, so set up billing before you switch it on.',
+      'Yes. Microsoft’s documentation describes the Sales Order Agent: it watches a mailbox, finds the customer, checks stock, creates a sales quote and, once the customer confirms, converts it into an order. It always creates a quote first, because quotes do not affect planning or stock. Designated users approve every outgoing email. Microsoft says it is billed in Copilot Credits, its own usage units, so set up billing before you switch it on.',
   },
   {
     category: 'systems',
@@ -140,9 +146,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'systems',
-    question: 'Does Xero have an AI?',
+    question: 'What is Xero AI, and what does JAX do?',
     answer:
-      'Yes. Xero calls it JAX, short for Just Ask Xero. Xero’s September 2025 release describes it automating bank reconciliations, data entry and getting paid. Its July 2026 release from Xerocon London describes document capture and automatic bank matching, and says checks on bills before payment are coming, with no date given. It also describes payment follow-ups and XeroForce, a natural-language builder for custom agents that connect Xero to other apps. Neither release gives UK-specific dates for each feature.',
+      'Xero AI goes by the name JAX, short for Just Ask Xero. Xero’s September 2025 release describes JAX automating bank reconciliations, data entry and getting paid. Its July 2026 Xerocon London release adds document capture, bank matching, payment follow-ups and XeroForce, a plain-English builder for agents that link Xero to other apps. It says checks on bills before payment are coming, with no date. Neither release gives UK dates per feature.',
   },
   {
     category: 'systems',
@@ -154,13 +160,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'systems',
     question: 'Is Sage Copilot the same as Microsoft Copilot?',
     answer:
-      'No. They come from different companies. Sage Copilot is the name Sage uses for its own AI assistant. Microsoft Copilot is Microsoft’s, and in Business Central Microsoft documents agents such as the Sales Order Agent, which drafts quotes and orders from customer emails. If you run Sage 50, Sage 200 or Sage Intacct, ask Sage or your reseller in writing which Copilot features your edition and licence include, then plan any custom agent around the gaps.',
+      'No. They come from different companies. Sage Copilot is the name Sage uses for its own AI assistant. Microsoft Copilot is Microsoft’s, and in Business Central Microsoft documents the Sales Order Agent, which drafts quotes and orders from customer emails. If you run Sage 50, Sage 200 or Sage Intacct, ask Sage or your reseller in writing which Copilot features your licence includes, then plan a custom agent around the gaps.',
   },
   {
     category: 'systems',
     question: 'Which is better for AI, Xero or Sage?',
     answer:
-      'Neither wins on AI alone. Pick the accounting system on fit: your size, stock, number of companies, your accountant’s preference and the reports you need. Xero documents its own assistant, JAX, and Sage names its assistant Sage Copilot. A custom agent works with either, provided we can reach the records it needs through an API or a file export. On the scoping call we list what your edition exposes before any choice is made.',
+      'Pick the accounting system on fit first: stock, number of companies, your accountant’s preference and the reports you need. On AI, one difference is public. Xero’s July 2026 release describes XeroForce, a builder for your own agents linked to other apps. Sage names its assistant Sage Copilot, and we could not read Sage’s own pages to compare features. A custom agent works with either, through an API or a file export.',
   },
   {
     category: 'systems',
@@ -170,9 +176,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'systems',
-    question: 'Can an outside agent connect to Odoo?',
+    question: 'Can ChatGPT, Claude or our own AI agent connect to Odoo?',
     answer:
-      'Yes. Odoo 19 documents an External JSON-2 API, called at /json/2/ followed by the model and method, using API keys. The same page says the older XML-RPC and JSON-RPC addresses are scheduled for removal in Odoo 22, in autumn 2028, and in Odoo Online 21.1, in winter 2027. Anything new should be built on JSON-2, and older integrations need a rewrite on the calendar. Odoo also says the External API is not available on One App Free or Standard plans, so check your plan first.',
+      'Yes, through Odoo’s External JSON-2 API, which uses API keys. Odoo 19’s documentation says the older XML-RPC and JSON-RPC addresses (the earlier ways in) are removed in Odoo Online 21.1 in winter 2027 and Odoo 22 in autumn 2028. Build anything new on JSON-2. Odoo also says the External API is not available on One App Free or Standard plans, so check your plan first.',
   },
   {
     category: 'systems',
@@ -209,9 +215,15 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'rules',
     question: 'Does the EU AI Act apply to a UK company?',
     answer:
-      'It can. Article 2 of the Act covers providers placing AI systems on the EU market wherever they are established, and providers and deployers in a third country where the output is used in the Union. A UK wholesaler using an agent only on its own UK books is a different case from one whose agent emails quotes to EU buyers. The European Commission says the Act became applicable on 2 August 2026, with some exceptions.',
+      'It can. Article 2 covers firms outside the EU that build an AI system (providers) or use one (deployers) where its output is used in the Union. A UK wholesaler running an agent only on its own UK books differs from one whose agent emails quotes to EU buyers. The European Commission says the Act became applicable on 2 August 2026, with some exceptions.',
   },
   // Working with us
+  {
+    category: 'working',
+    question: 'Who builds AI agents for Sage or Xero in the UK?',
+    answer:
+      'FactoryJet designs, builds and supports custom AI agents for UK businesses on Sage, Xero, NetSuite, Business Central and Odoo. Our ERP work covers Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs, on RFQ automation (requests for quotation), daily bookkeeping and purchase and sales order generation. We work beside your ERP partner and your accountant, and we show working software on your own data before you sign.',
+  },
   {
     category: 'working',
     question: 'How much does an ERP AI agent cost to build in the UK?',
@@ -222,7 +234,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'working',
     question: 'How long does an ERP agent take to build?',
     answer:
-      'It depends on the job and on access. An agent that reads and answers is quicker than one that writes orders. The slow part is often outside the code: a test copy of your ERP, a role for the agent, sign-off from whoever owns the system, and your accountant agreeing the posting rules. LeverX’s UK guide lists 5 to 9 weeks for a single workflow. Our timeline goes in writing with the quote.',
+      'LeverX’s UK guide lists 5 to 9 weeks for a single-workflow agent and 10 to 18 weeks for a multi-step agent with integrations. An agent that only reads and answers is quicker than one that writes orders. The slow part is often access: a test copy of your ERP, a role for the agent, sign-off from the system owner and your accountant agreeing the posting rules. Our timeline goes in writing with the quote.',
   },
   {
     category: 'working',
@@ -291,9 +303,9 @@ const JOBS: { n: string; t: string; d: string; items: string[] }[] = [
     t: 'Quote requests to draft quotes',
     d: 'A trade buyer emails a list of parts or products. The agent builds the quote from your price lists and stock, and your estimator sends it.',
     items: [
-      'Reads the email body and attachments, whether the list is typed, a PDF or a spreadsheet',
-      'Matches each line to an item code. A line it cannot match is flagged, never guessed',
-      'Applies that account’s price list, discounts and lead times from the ERP',
+      'Typed lists, PDFs and spreadsheets in the email or its attachments all count as input',
+      'Each line is matched to an item code. A line it cannot match is flagged, never guessed',
+      'That account’s price list, discounts and lead times come straight from the ERP',
     ],
   },
   {
@@ -301,10 +313,10 @@ const JOBS: { n: string; t: string; d: string; items: string[] }[] = [
     t: 'Customer purchase orders to sales orders',
     d: 'Orders arrive by email, EDI or a portal. The agent turns each into a draft sales order and checks it against the account.',
     items: [
-      'Compares the buyer’s price with yours and flags any difference',
-      'Checks credit limit and overdue balance before the order is released',
-      'Attaches the original PO so the approver sees both side by side',
-      'Picks up the buyer’s PO number for the invoice later',
+      'A buyer’s price that differs from yours gets a flag',
+      'Credit limit and overdue balance are checked before the order is released',
+      'The approver sees the original PO and the draft side by side',
+      'The buyer’s PO number is carried through to the invoice later',
     ],
   },
   {
@@ -312,8 +324,8 @@ const JOBS: { n: string; t: string; d: string; items: string[] }[] = [
     t: 'Purchase orders to suppliers',
     d: 'Stock falls to its reorder point, or a job needs material. The agent drafts the purchase order for your buyer to approve.',
     items: [
-      'Uses the supplier, price and lead time your ERP already holds',
-      'Reads the supplier’s confirmation and flags a changed date or quantity',
+      'Supplier, price and lead time come from what your ERP already holds',
+      'When the supplier confirms, a changed date or quantity is flagged',
     ],
   },
   {
@@ -321,9 +333,9 @@ const JOBS: { n: string; t: string; d: string; items: string[] }[] = [
     t: 'Supplier bills to draft bills',
     d: 'A PDF bill lands in the accounts inbox. The agent reads it, checks the VAT details and matches it to the PO and goods received.',
     items: [
-      'Checks the fields HMRC lists for a full VAT invoice, and flags a missing VAT number',
-      'Matches bill, purchase order and delivery, the check accountants call a three-way match',
-      'Suggests the nominal code from how your team coded that supplier before',
+      'HMRC’s fields for a full VAT invoice are checked, and a missing VAT number is flagged',
+      'Bill, purchase order and delivery are checked against each other, the check accountants call a three-way match',
+      'The nominal code is suggested from how your team coded that supplier before',
     ],
   },
   {
@@ -331,9 +343,9 @@ const JOBS: { n: string; t: string; d: string; items: string[] }[] = [
     t: 'Payouts and remittances matched',
     d: 'Money from Stripe, GoCardless, Klarna or Clearpay reaches the bank as lines your bookkeeper has to tie back to sales, refunds and fees. The agent prepares that matching.',
     items: [
-      'Splits each payout into sales, refunds and fees for a clearing account',
-      'Pairs customer remittance advice with the open invoices it pays',
-      'Lists what it could not match, with the reason, at the top of the batch',
+      'Each payout is split into sales, refunds and fees in a clearing account (a holding account that should net to zero)',
+      'Customer remittance advice is paired with the open invoices it pays',
+      'Anything unmatched sits at the top of the batch, with the reason',
     ],
   },
 ];
@@ -345,21 +357,21 @@ const SYSTEMS: { name: string; maker: string; door: string; says: string; source
     name: 'Dynamics 365 Business Central',
     maker: 'Microsoft',
     door: 'Built-in Sales Order Agent, plus your own agent beside it',
-    says: 'Microsoft’s Sales Order Agent reads customer emails from a monitored mailbox, finds the customer by email address, checks stock and creates a sales quote first, then an order once the customer confirms. A designated user reviews every outgoing message. Its FAQ lists the edges: up to 15 item lines, no invoices, credit memos or purchase orders, and no posting.',
+    says: 'Microsoft’s Sales Order Agent reads customer emails from a monitored mailbox, finds the customer by email address, checks stock and creates a sales quote first, then an order once the customer confirms. A designated user reviews every outgoing message. Its FAQ lists the edges: no invoices, credit memos or purchase orders, and no posting. The comparison table below has the rest.',
     sources: ['bcAgent', 'bcFaq'],
   },
   {
     name: 'NetSuite',
     maker: 'Oracle',
     door: 'AI Connector Service and MCP Standard Tools',
-    says: 'Oracle says NetSuite has adopted the Model Context Protocol and supplies a free SuiteApp, MCP Standard Tools, for working with NetSuite data. Its FAQ names Claude Pro and ChatGPT as supported AI clients, says the connector is not a paid feature, and says it does not support Administrator roles. The agent needs a role of its own.',
+    says: 'Oracle says NetSuite has adopted the Model Context Protocol (MCP, a shared standard for plugging AI tools into business software) and supplies a free SuiteApp, MCP Standard Tools, for working with NetSuite data. Its FAQ names Claude Pro and ChatGPT as supported AI clients, says the connector is not a paid feature, and says it does not support Administrator roles. The agent needs a role of its own.',
     sources: ['nsConnector', 'nsFaq'],
   },
   {
     name: 'Odoo',
     maker: 'Odoo',
     door: 'External JSON-2 API and the Odoo 19 AI app',
-    says: 'Odoo 19 has its own AI agents, built from topics (instructions and tools) and sources (the data they refer to). Without topics, Odoo says an agent can only give information, not change the database. For an outside agent, version 19 documents the External JSON-2 API. The older XML-RPC and JSON-RPC addresses go in Odoo Online 21.1 (winter 2027) and Odoo 22 (autumn 2028). Odoo says the External API is not available on One App Free or Standard plans, so check your plan first.',
+    says: 'Odoo AI in version 19 includes its own agents, built from topics (instructions and tools) and sources (the data they refer to). Without topics, Odoo says an agent can only give information, not change the database. For an outside agent, version 19 documents the External JSON-2 API. The older XML-RPC and JSON-RPC routes go in Odoo Online 21.1 (winter 2027) and Odoo 22 (autumn 2028).',
     sources: ['odooAgents', 'odooApi'],
   },
   {
@@ -373,7 +385,7 @@ const SYSTEMS: { name: string; maker: string; door: string; says: string; source
     name: 'Sage 50, Sage 200 and Sage Intacct',
     maker: 'Sage',
     door: 'Whatever your edition and licence expose',
-    says: 'Three products with different routes in, and Sage’s own assistant goes by the name Sage Copilot. For a custom agent we start by listing what your edition and licence expose: an API, a database your reseller can open for reading, or a scheduled export. The write-back route is agreed in writing with you and your Sage partner first.',
+    says: 'Three products with different routes in. When buyers ask about Sage AI, the assistant Sage itself names is Sage Copilot. For a custom agent we start by listing what your edition and licence expose: an API, a database your reseller can open for reading, or a scheduled export. The write-back route is agreed in writing with you and your Sage partner first.',
     sources: [],
   },
   {
@@ -395,6 +407,39 @@ const COMPARE: { feat: string; builtin: string; custom: string }[] = [
   { feat: 'Posting', builtin: 'Does not post documents', custom: 'Posts only after a named person approves' },
   { feat: 'Extending it', builtin: 'Partners cannot extend it yet, per Microsoft’s FAQ', custom: 'Your code, in your repository, changed when your process changes' },
   { feat: 'Who supports it', builtin: 'Microsoft and your Business Central partner', custom: 'FactoryJet, with you owning the code' },
+];
+
+/* Four kinds of tool a UK finance or sales team weighs. Each tool named in the
+   middle two rows is described only as its maker's page says, read 2026-10-31. */
+const TOOL_KINDS: { kind: string; examples: string; good: string; limit: string; sources: SrcKey[] }[] = [
+  {
+    kind: 'Assistant built into your ERP',
+    examples: 'Business Central Sales Order Agent, Xero JAX, Odoo AI, Sage Copilot',
+    good: 'Switched on inside the system you already pay for, and supported by its maker',
+    limit: 'Covers the jobs its maker chose. Microsoft lists what its agent will not do',
+    sources: ['bcFaq', 'xeroLondon', 'odooAgents'],
+  },
+  {
+    kind: 'Bill and receipt capture tool',
+    examples: 'Dext',
+    good: 'Dext says it passes structured data from receipts and invoices to your accounting software, and nothing is published without your review',
+    limit: 'Built for bills and receipts, so quotes and sales orders sit outside it',
+    sources: ['dext'],
+  },
+  {
+    kind: 'Workflow tool',
+    examples: 'Microsoft Power Automate, Zapier',
+    good: 'Microsoft describes Power Automate as automated workflows between apps. Zapier says it connects 9,000+ apps',
+    limit: 'Your team designs and maintains each flow, and the reading of messy documents is up to you',
+    sources: ['powerAutomate', 'zapier'],
+  },
+  {
+    kind: 'Custom agent',
+    examples: 'Built by FactoryJet, owned by you',
+    good: 'Shaped around your documents, your approval chain and every system in the chain',
+    limit: 'A build project with a fixed price per phase, so start with the one job worth proving',
+    sources: [],
+  },
 ];
 
 /* JSON-LD. The Organization is referenced by @id only and is defined once,
@@ -431,7 +476,7 @@ const jsonLd = {
       headline: H1,
       description: DESCRIPTION,
       inLanguage: 'en-GB',
-      datePublished: UPDATED,
+      datePublished: PUBLISHED,
       dateModified: UPDATED,
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="true"]'] },
       author: {
@@ -462,7 +507,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['erp-ai-agents'] },
   openGraph: {
     title: TITLE,
     description:
@@ -481,10 +526,10 @@ const srcLink = { textDecoration: 'underline' } as const;
 const inlineLink = { textDecoration: 'underline', color: T.ink, fontWeight: 600 } as const;
 
 /* Small source line. Every id comes from the SRC map above. */
-function Sources({ ids }: { ids: SrcKey[] }) {
+function Sources({ ids, on = READ_ON }: { ids: SrcKey[]; on?: string }) {
   return (
     <p style={srcNote}>
-      Sources, read on {READ_ON}:{' '}
+      Sources, read on {on}:{' '}
       {ids.map((id, i) => (
         <span key={id}>
           {i > 0 ? '; ' : ''}
@@ -527,8 +572,8 @@ export default function ErpAiAgentsUKPage() {
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="who"><b>Bhavesh Barot</b>, Founder &amp; CEO<br /><span>500+ businesses served since 2014. ERP work on Odoo, NetSuite, SAP Business One and ERPNext</span></div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -568,20 +613,22 @@ export default function ErpAiAgentsUKPage() {
             <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
               <span className="lab">What does an ERP AI agent do for a UK business?</span>
               <p>
-                It reads the documents that arrive all day, such as quote requests, customer purchase orders and
-                supplier bills, looks up your ERP and saves a draft quote, order or bill. A person approves it, and
-                only then does it post through the ERP’s own API. Microsoft, Odoo, Xero and Sage now offer AI
-                assistants of their own, and Oracle offers a connector for outside AI tools. A custom agent covers
-                the jobs and systems those do not.
+                AI in ERP means software that reads quote requests, customer purchase orders and supplier bills,
+                looks up your ERP and saves a draft quote, order or bill. A person approves it before it posts.
+                Microsoft, Odoo, Xero and Sage now ship assistants of their own, and Oracle offers a connector for
+                outside AI tools. FactoryJet builds custom agents for the jobs and systems those do not cover, with
+                ERP work on Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs.
               </p>
             </div>
             <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms we use a lot</span>
+              <span className="lab">Terms we use a lot</span>
               <p>
                 An <b>API</b> is the documented door one piece of software uses to read or write records in another.
                 A <b>draft</b> is a record saved in your ERP but not yet posted, so it changes nothing in stock or the
                 ledger. A <b>three-way match</b> is the check that a supplier bill agrees with the purchase order and
-                the goods you received.
+                the goods you received. A <b>SKU</b> is the stock code for one product. <b>EDI</b> (electronic data
+                interchange) is a fixed file format big buyers use to send orders system to system. <b>MCP</b>, the
+                Model Context Protocol, is a shared standard for plugging AI tools into business software.
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
@@ -598,7 +645,7 @@ export default function ErpAiAgentsUKPage() {
             <ul className="col-4" style={{ gap: 20 }}>
               {[
                 { v: '500+', t: 'businesses served by FactoryJet since it was founded in 2014', s: 'About FactoryJet', u: '/about' },
-                { v: '15', t: 'item lines per sales document is the limit Microsoft gives for its Business Central Sales Order Agent', s: 'Microsoft Learn, Sales Order Agent FAQ', u: SRC.bcFaq.url },
+                { v: '2 Aug 2026', t: 'is when the European Commission says the EU AI Act became applicable, with some exceptions and later dates for high-risk systems', s: 'European Commission, AI Act timeline', u: SRC.euAiActTimeline.url },
                 { v: '2027', t: 'is when Odoo says its old XML-RPC and JSON-RPC addresses are removed in Odoo Online 21.1 (winter 2027), with Odoo 22 following in autumn 2028', s: 'Odoo 19, External JSON-2 API', u: SRC.odooApi.url },
                 { v: 'API', t: 'transfer is on HMRC’s list of accepted digital links for Making Tax Digital; copy and paste is not', s: 'GOV.UK, VAT Notice 700/22', u: SRC.govMtd.url },
               ].map((r) => (
@@ -635,7 +682,8 @@ export default function ErpAiAgentsUKPage() {
                 </div>
               </div>
             </div>
-            <div className="card mt-10" tabIndex={0} role="region" aria-label="Who keeps what" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 760 }} data-columns={3}>
+            <p className="md:hidden mt-8" style={srcNote}>Swipe sideways to see every column.</p>
+            <div className="card mt-10" tabIndex={0} role="region" aria-label="Who keeps what" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 640 }} data-columns={3}>
                 <thead>
                   <tr>
                     <th>Job</th>
@@ -669,8 +717,8 @@ export default function ErpAiAgentsUKPage() {
               </p>
             </div>
             <ul className="col-2 mt-10">
-              {JOBS.map((j) => (
-                <li key={j.n} className="card">
+              {JOBS.map((j, i) => (
+                <li key={j.n} className="card" style={i === JOBS.length - 1 && JOBS.length % 2 === 1 ? { gridColumn: '1 / -1' } : undefined}>
                   <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small }}>{j.n}</span>
                   <h3 className="mt-2">{j.t}</h3>
                   <p className="mt-4">{j.d}</p>
@@ -688,9 +736,10 @@ export default function ErpAiAgentsUKPage() {
               If your orders start in a Shopify store and end in Xero, see{' '}
               <a href="/uk/shopify-xero-integration" style={inlineLink}>Shopify Xero integration</a>. For trade
               buyers ordering online at their own prices, see{' '}
-              <a href="/uk/b2b-ecommerce" style={inlineLink}>B2B ecommerce</a>.
+              <a href="/uk/b2b-ecommerce" style={inlineLink}>B2B ecommerce</a>. If the first problem is getting
+              orders, stock and prices to sync between your store and your ERP at all, start with{' '}
+              <a href="/uk/ecommerce-erp-integration" style={inlineLink}>ecommerce ERP integration in the UK</a>.
             </p>
-            <Sources ids={['govVat700', 'govVatCheck']} />
           </div>
         </section>
 
@@ -722,7 +771,8 @@ export default function ErpAiAgentsUKPage() {
             <p className="mt-8" style={{ maxWidth: 820 }}>
               Payments and couriers sit in the same chain. Payout reports from Stripe, GoCardless, Klarna or
               Clearpay, and dispatch data from Royal Mail, DPD or Evri, become inputs the agent reads. It drafts
-              the matching entries, and your team approves them.
+              the matching entries, and your team approves them. Running Odoo on its own? See our page on{' '}
+              <a href="/uk/odoo-ai-agents" style={inlineLink}>Odoo AI agents in the UK</a>.
             </p>
           </div>
         </section>
@@ -736,33 +786,28 @@ export default function ErpAiAgentsUKPage() {
                 <h2>Making Tax Digital, VAT invoices, UK GDPR and the EU AI Act</h2>
                 <div className="stack mt-6">
                   <p>
-                    <b>Making Tax Digital.</b> HMRC’s VAT Notice 700/22 says Making Tax Digital requires all
-                    VAT-registered businesses to keep records digitally, and that data moving between software must
-                    travel by digital link. API transfer is on HMRC’s accepted list. Copy and paste is not. An agent
-                    that writes to your ERP through its API keeps the chain digital, where a person retyping a bill
-                    would break it.
+                    <b>Making Tax Digital.</b> Under{' '}
+                    <a href={SRC.govMtd.url} target="_blank" rel="noopener noreferrer" style={inlineLink}>VAT Notice 700/22</a>,
+                    data moving between your software must travel by digital link, and API transfer counts. An agent
+                    that writes through your ERP’s API keeps the chain digital. A person retyping a bill breaks it.
                   </p>
                   <p>
-                    <b>VAT invoices.</b> VAT Notice 700, paragraph 16.3.1, lists what a full VAT invoice must show,
-                    including a unique number, the time of supply, the supplier’s VAT registration number, the VAT
-                    rate and pre-VAT amount for each line, and the total VAT in sterling. The bills agent checks for
-                    each field and flags what is missing. GOV.UK’s VAT number checker confirms whether a number is
-                    valid and who it belongs to.
+                    <b>VAT invoices.</b> The bills agent checks each field{' '}
+                    <a href={SRC.govVat700.url} target="_blank" rel="noopener noreferrer" style={inlineLink}>VAT Notice 700</a>{' '}
+                    lists for a full VAT invoice and flags what is missing. The FAQ below lists the fields.
                   </p>
                   <p>
-                    <b>UK GDPR.</b> GOV.UK says the Data (Use and Access) Act 2025, given Royal Assent on 19 June
-                    2025, creates a more permissive framework for automated decisions with significant effects, with
-                    safeguards: people are told, can challenge the decision and can obtain human intervention. The
-                    agents on this page keep a person on every decision, which is the simplest position to defend.
+                    <b>UK GDPR.</b> The agents on this page keep a person on every decision. The{' '}
+                    <a href={SRC.govDuaa.url} target="_blank" rel="noopener noreferrer" style={inlineLink}>Data (Use and Access) Act 2025</a>{' '}
+                    rules on solely automated decisions are covered in the FAQ.
                   </p>
                   <p>
-                    <b>The EU AI Act.</b> Article 2 reaches providers and deployers outside the EU where the output
-                    of an AI system is used in the Union. A UK firm whose agent sends quotes to buyers in Dublin or
-                    Rotterdam should take advice. The European Commission says the Act became applicable on 2 August
-                    2026, with some exceptions and later dates for high-risk systems.
+                    <b>The EU AI Act.</b>{' '}
+                    <a href={SRC.euAiActScope.url} target="_blank" rel="noopener noreferrer" style={inlineLink}>Article 2</a>{' '}
+                    can reach a UK firm whose agent sends quotes to buyers in Dublin or Rotterdam. Take advice if
+                    that is you.
                   </p>
                 </div>
-                <Sources ids={['govMtd', 'govVat700', 'govVatCheck', 'govDuaa', 'euAiActScope', 'euAiActTimeline']} />
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">Who decides what</span>
@@ -795,7 +840,8 @@ export default function ErpAiAgentsUKPage() {
                 Microsoft’s agent. We will tell you so on the first call.
               </p>
             </div>
-            <div className="card mt-10" tabIndex={0} role="region" aria-label="Built-in agent compared with a custom agent" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 760 }} data-columns={3}>
+            <p className="md:hidden mt-8" style={srcNote}>Swipe sideways to see every column.</p>
+            <div className="card mt-10" tabIndex={0} role="region" aria-label="Built-in agent compared with a custom agent" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 640 }} data-columns={3}>
                 <thead>
                   <tr>
                     <th>Question</th>
@@ -815,6 +861,36 @@ export default function ErpAiAgentsUKPage() {
               </table>
             </div>
             <Sources ids={['bcAgent', 'bcFaq']} />
+
+            <div style={{ maxWidth: 820 }} className="mt-10">
+              <h3>Built-in assistant, bill-capture tool, workflow tool or custom agent</h3>
+              <p className="mt-4">
+                Buyers often weigh four kinds of tool at once. Many firms end up with two of them side by side.
+              </p>
+            </div>
+            <p className="md:hidden mt-8" style={srcNote}>Swipe sideways to see every column.</p>
+            <div className="card mt-6" tabIndex={0} role="region" aria-label="Four kinds of ERP automation tool compared" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 640 }} data-columns={4}>
+                <thead>
+                  <tr>
+                    <th>Kind of tool</th>
+                    <th>Examples</th>
+                    <th>Where it fits</th>
+                    <th>Where it stops</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {TOOL_KINDS.map((r) => (
+                    <tr key={r.kind}>
+                      <td className="feat">{r.kind}</td>
+                      <td>{r.examples}</td>
+                      <td>{r.good}</td>
+                      <td>{r.limit}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <Sources ids={TOOL_KINDS.flatMap((r) => r.sources)} on="29 and 31 October 2026" />
           </div>
         </section>
 
@@ -825,8 +901,10 @@ export default function ErpAiAgentsUKPage() {
               <span className="eyebrow">UK work we can show</span>
               <h2>One ERP link and one quote-to-order trade store, for two UK clients</h2>
               <p className="lead mt-4">
-                An agent is only as good as the link underneath it. Sow Easy is that ERP link, still in build:
-                WooCommerce reading stock and prices from Odoo. GPSUK is the trade flow an agent would feed: a Commerceflo
+                Our ERP work covers Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs, on RFQ automation,
+                daily bookkeeping and purchase and sales order generation. Two UK clients can be named here. An
+                agent is only as good as the link underneath it. Sow Easy is that ERP link, tested against Odoo’s
+                staging system with launch still ahead: WooCommerce reading stock and prices from Odoo. GPSUK is the trade flow an agent would feed: a Commerceflo
                 store where account pricing and quote-to-order run natively.
               </p>
             </div>
@@ -836,8 +914,8 @@ export default function ErpAiAgentsUKPage() {
                 <h3 className="mt-2">A trade store that reads stock, prices and SKUs from Odoo</h3>
                 <p className="mt-4">
                   A WordPress WooCommerce trade store joined to Odoo, with Odoo as the single source for stock,
-                  pricing and product codes. The Odoo link is still in build and is being tested against Odoo’s
-                  staging system before launch.
+                  pricing and product codes. The Odoo integration is tested against Odoo’s staging system, and
+                  launch is still ahead.
                 </p>
                 <p className="mt-4"><a href="/case-studies/sow-easy-distributor-portal" style={inlineLink}>Read the Sow Easy case study</a></p>
               </li>
@@ -860,25 +938,21 @@ export default function ErpAiAgentsUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">What UK builds cost</span>
-                <h2>Two published UK market ranges for building an ERP agent</h2>
+                <h2>What does an ERP AI agent cost to build in the UK?</h2>
                 <div className="stack mt-6">
                   <p>
-                    Fulminous, a development firm with a London office, puts a back-office agent that covers data entry, invoice
-                    processing and multi-system workflows at £30,000 to £90,000, excluding VAT, in a guide last
-                    updated on 23 September 2026. It names integrations as the biggest single driver of cost.
-                  </p>
-                  <p>
-                    LeverX’s UK guide, published on 4 October 2026, gives £10,000 to £30,000 for a single-workflow
-                    agent built in 5 to 9 weeks, and £30,000 to £80,000 for a multi-step agent with integrations
-                    built in 10 to 18 weeks. LeverX calls these indicative market benchmarks and does not say
-                    whether they include VAT.
+                    <a href={SRC.fulminous.url} target="_blank" rel="noopener noreferrer" style={inlineLink}>Fulminous’s UK guide</a>{' '}
+                    (updated 23 September 2026) puts a back-office agent at £30,000 to £90,000, excluding VAT, and
+                    names integrations as the biggest single driver of cost.{' '}
+                    <a href={SRC.leverx.url} target="_blank" rel="noopener noreferrer" style={inlineLink}>LeverX’s UK guide</a>{' '}
+                    (4 October 2026) gives £10,000 to £30,000 for one workflow and £30,000 to £80,000 for a
+                    multi-step agent with integrations, and calls these indicative benchmarks.
                   </p>
                   <p>
                     These are market figures, not our prices. FactoryJet quotes a fixed price per phase in writing
                     after a short scoping call, starting with the smallest job worth proving.
                   </p>
                 </div>
-                <Sources ids={['fulminous', 'leverx']} />
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">What moves the price</span>
@@ -922,11 +996,11 @@ export default function ErpAiAgentsUKPage() {
                 </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src={`${IMG}/finance-desk-review.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="Two people seen from behind sit at a desk and look at a monitor showing grey bars and one orange bar, with an orange folder on the desk" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src={`${IMG}/finance-desk-review.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="Two people seen from behind sit at a desk and look at a monitor showing grey bars and one orange bar, with an orange folder on the desk" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block', background: '#FAFAF7' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
-                    Every draft carries its source document. The approver sees the supplier’s PDF and the agent’s
-                    bill side by side, and approves, edits or rejects.
+                    In the first weeks live, your approvers and our team read the agent’s log together: how many
+                    drafts it saved, and which it flagged for a person.
                   </p>
                 </div>
               </div>
@@ -939,7 +1013,7 @@ export default function ErpAiAgentsUKPage() {
                 { n: '04', t: 'Show a first version on your data', d: 'Before a contract, a first version drafts your real documents in a test copy of your ERP. You compare its drafts with what your team sent or posted.' },
                 { n: '05', t: 'Fix the price and build phase one', d: 'A fixed price in writing for the first job. We build the draft, the approval step, the log and the flags for anything it cannot match.' },
                 { n: '06', t: 'Test the hard cases in a sandbox', d: 'A part-delivered PO, a credit note, a bill with no VAT number, a price below your floor, an unknown SKU. Each must be flagged, never posted.' },
-                { n: '07', t: 'Go live with a person on every draft, then stay on', d: 'For the first weeks we read the log beside your approvers. After that the same team supports the agent, and you own the code.' },
+                { n: '07', t: 'Go live with a person on every draft, then stay on', d: 'For the first weeks we read the log beside your approvers. After that, support is optional: each change is quoted and approved, and you own the code.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
@@ -992,11 +1066,12 @@ export default function ErpAiAgentsUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">Method</span>
-              <h2>Sources, read on {READ_ON}</h2>
+              <h3>Sources, read on {READ_ON}</h3>
               <p className="lead mt-4">
                 We read Microsoft Learn, Oracle, Odoo and Xero for the agent features, HMRC’s VAT notices for
                 Making Tax Digital, the European Commission and GOV.UK for the AI and data law, and the LeverX and
-                Fulminous guides for cost, all on that date. Makers change agent features between releases, so
+                Fulminous guides for cost, all on that date. The Dext, Power Automate and Zapier pages were read on
+                31 October 2026. Makers change agent features between releases, so
                 check the maker’s page against your own edition before you plan around one. For Sage editions we state no feature beyond the name of Sage’s assistant: ask
                 Sage or your reseller what your licence includes.
               </p>
@@ -1014,7 +1089,7 @@ export default function ErpAiAgentsUKPage() {
         {/* 15. FAQ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ textAlign: 'left', maxWidth: 820 }}>
               <span className="eyebrow">FAQ</span>
               <h2>ERP AI agent questions from UK finance, sales and operations teams</h2>
             </div>

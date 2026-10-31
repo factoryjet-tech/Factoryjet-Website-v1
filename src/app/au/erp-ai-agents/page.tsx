@@ -8,6 +8,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
@@ -45,11 +46,12 @@ import '../au-hub.css';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL = 'https://factoryjet.com/au/erp-ai-agents';
-const UPDATED = '2026-10-29';
+const PUBLISHED = '2026-10-29';
+const UPDATED = '2026-10-31';
 const TITLE = 'ERP AI Agents Australia | Xero, MYOB, NetSuite, Odoo';
 const H1 = 'AI Agents for ERP in Australia: Inside Xero, MYOB, NetSuite and Odoo';
 const DESCRIPTION =
-  'AI agents built inside Xero, MYOB, NetSuite and Odoo for Australian businesses. They draft orders, bills and purchase orders for your team to approve. You own the code.';
+  'AI agents inside Xero, MYOB, NetSuite and Odoo for Australian businesses. They draft orders, bills and POs for your team to approve. You own the code.';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD. */
 const crumbs = [
@@ -113,6 +115,16 @@ const SRC_OAIC_APP1 =
 // automation $10,000 to $25,000 (4 to 8 weeks); full implementation $15,000 to
 // $50,000+. "figures are in AUD". GST basis not stated.
 const SRC_FLOWTIVITY = 'https://flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026/';
+// Read 2026-10-31. Dext AU home page: "intelligent bookkeeping automation
+// platform" that captures receipts, invoices and expenses; integrates with
+// QuickBooks Online, Xero, Sage, Zoho and more.
+const SRC_DEXT = 'https://dext.com/au';
+// Hubdoc home page: document capture; "Works with" Xero, QuickBooks Online;
+// creates transactions in Xero and QuickBooks Online with the source attached.
+const SRC_HUBDOC = 'https://www.hubdoc.com/';
+// ApprovalMax home page: "The approval engine behind your AP process";
+// integrates with Xero, QuickBooks Online and NetSuite.
+const SRC_APPROVALMAX = 'https://www.approvalmax.com/';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────────── */
 const FAQ_CATEGORIES = [
@@ -131,8 +143,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     links: [{ href: SRC_XERO_ANTHROPIC, label: 'Xero media release, 27 March 2026' }] },
   { category: 'basics', question: 'What is the best AI for ERP?',
     answer: 'Start with what your system already supports, then pick a model for the job. For NetSuite, Oracle names Claude Pro and ChatGPT as clients that work with its AI Connector Service today. Xero is partnering with Anthropic, the maker of Claude. For a custom agent we choose the model with you, based on the task, how messy the documents are and where your data is allowed to go.' },
-  { category: 'basics', question: 'Can ChatGPT do my bookkeeping?',
-    answer: 'A chatbot on its own should not run your books. A custom agent can take the repetitive layer: lining up Stripe or Afterpay payouts against orders, finding the purchase order behind each supplier bill, and proposing a GST code from your past coding. The result is a queue of drafts for your bookkeeper, who still approves every line and still owns the BAS.' },
+  { category: 'basics', question: 'Can AI bookkeeping or ChatGPT do my books?',
+    answer: 'A chatbot on its own should not run your books. AI bookkeeping that works is narrower. A custom agent can take the repetitive layer: lining up Stripe or Afterpay payouts against orders, finding the purchase order behind each supplier bill, and proposing a GST code from your past coding. The result is a queue of drafts for your bookkeeper, who still approves every line and still owns the BAS.' },
   { category: 'basics', question: 'Is it safe to put bank statements into ChatGPT?',
     answer: 'Not into a free, public chatbot. A bank statement names the people and businesses you pay and are paid by, and the OAIC’s AI guidance tells organisations to keep personal information out of publicly available generative AI tools. A custom agent is different: it runs under business terms, sees only the fields its job needs, signs in with its own limited login and logs every lookup. Bank data then stays inside a setup you control.',
     links: [{ href: SRC_OAIC_AI, label: 'OAIC guidance on AI products' }] },
@@ -141,35 +153,35 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Systems ──
   { category: 'systems', question: 'Can ChatGPT or Claude integrate with Xero?',
-    answer: 'Yes, through Xero’s own MCP server. Xero publishes it on GitHub under the MIT licence, and the README lists tools to list contacts, invoices and bank transactions, create invoices and quotes, and update draft invoices. Any MCP-capable AI client can use it. We use the same route for custom agents, with OAuth scopes limited to the records the job needs. Payroll and Single Touch Payroll reporting stay in your payroll app.',
+    answer: 'Yes, through the Xero API and Xero’s own MCP server. Xero publishes the MCP server on GitHub under the MIT licence, and the README lists tools to list contacts, invoices and bank transactions, create invoices and quotes, and update draft invoices. Any MCP-capable AI client can use it. We use the same route for custom agents, with OAuth scopes (the list of record types a login is allowed to touch) limited to the records the job needs. Payroll and Single Touch Payroll reporting stay in your payroll app.',
     links: [{ href: SRC_XERO_MCP, label: 'Xero MCP server on GitHub' }] },
   { category: 'systems', question: 'What is the Xero MCP server?',
-    answer: 'MCP, the Model Context Protocol, is an open standard for connecting AI applications to outside systems. Xero’s MCP server is its implementation for Xero, published on GitHub. It signs in either with a Custom Connection, where you set a client ID and secret, or with a bearer token for working across several Xero organisations. Its tools cover reading, creating and updating accounting records, so the permissions you grant matter.' },
-  { category: 'systems', question: 'What is JAX in Xero?',
+    answer: 'MCP, the Model Context Protocol, is an open standard for connecting AI applications to outside systems. Xero’s MCP server is its implementation for Xero, published on GitHub. It signs in either with a Custom Connection, where you set a client ID and secret, or with a bearer token (a temporary access key passed with each request) for working across several Xero organisations. Its tools cover reading, creating and updating accounting records, so the permissions you grant matter.' },
+  { category: 'systems', question: 'What is Xero AI (JAX), and how is a custom agent different?',
     answer: 'JAX is the name Xero gives its own AI. In its March 2026 release Xero called JAX its AI superagent and said it would handle tasks such as predicting cash flow gaps and identifying unpaid invoices. JAX works inside Xero. A custom agent is for jobs that cross systems, such as turning an emailed purchase order into a Cin7 sales order and a Xero invoice, with your own approval rules.' },
   { category: 'systems', question: 'Can an AI agent work with MYOB?',
-    answer: 'Yes. One Business API covers AccountRight, Essentials and MYOB Business, per MYOB’s developer pages, and new Australian customers are now put on MYOB Business rather than the older two. An agent can read and draft records there under its own access. For mid-sized businesses on MYOB Acumatica, MYOB’s cloud ERP formerly called MYOB Advanced, we confirm the connection your edition allows during scoping.',
+    answer: 'Yes, through the MYOB API. One Business API covers AccountRight, Essentials and MYOB Business, per MYOB’s developer pages, and new Australian customers are now put on MYOB Business rather than the older two. An agent can read and draft records there under its own access. For mid-sized businesses on MYOB Acumatica, MYOB’s cloud ERP formerly called MYOB Advanced, we confirm the connection your edition allows during scoping.',
     links: [{ href: SRC_MYOB_API, label: 'MYOB Business API documentation' }] },
   { category: 'systems', question: 'Does NetSuite have AI?',
-    answer: 'Yes. NetSuite now speaks the Model Context Protocol, according to Oracle’s help centre, and ships a SuiteApp called MCP Standard Tools for working with your NetSuite data, with the option to build your own tools. Oracle does not charge for the connector or that SuiteApp, per its FAQ; the cost sits with your AI client subscription, if any. We build custom tools on top when a job needs rules the standard set lacks.',
+    answer: 'Yes. NetSuite now speaks the Model Context Protocol, according to Oracle’s help centre, and ships a SuiteApp (an add-on installed inside NetSuite) called MCP Standard Tools for working with your NetSuite data, with the option to build your own tools. Oracle does not charge for the connector or that SuiteApp, per its FAQ; the cost sits with your AI client subscription, if any. We build custom tools on top when a job needs rules the standard set lacks.',
     links: [{ href: SRC_NS_FAQ, label: 'Oracle: NetSuite AI Connector Service FAQ' }] },
-  { category: 'systems', question: 'What does NetSuite need switched on for an AI agent?',
-    answer: 'Oracle lists two features, Server SuiteScript and OAuth 2.0, plus the MCP Server Connection permission on the role the agent uses. The standard tools also need REST Web Services if the agent creates or updates records. Oracle blocks the connection for Administrator and for roles with full permissions, which forces a narrower role. We set up a dedicated role with only the record types the job touches.',
+  { category: 'systems', question: 'How do I connect an AI agent to NetSuite?',
+    answer: 'Switch on what Oracle lists: two features, Server SuiteScript (NetSuite’s own scripting) and OAuth 2.0 (a standard sign-in method for apps), plus the MCP Server Connection permission on the role the agent uses. The standard tools also need REST Web Services (NetSuite’s web API) if the agent creates or updates records. Oracle blocks the connection for Administrator and for roles with full permissions, which forces a narrower role. We set up a dedicated role with only the record types the job touches.',
     links: [{ href: SRC_NS_PERMS, label: 'Oracle: required features and permissions' }] },
   { category: 'systems', question: 'Does Odoo have AI agents?',
     answer: 'Yes, in Odoo 19. Odoo’s documentation calls an agent a smart assistant that understands natural language and performs tasks, built from topics, which hold its instructions and tools, and sources, which hold its reference material. Creating agents needs the AI app installed. For agents that live outside Odoo, check your plan first: Odoo says its external API is only available on Custom pricing plans.',
     links: [{ href: SRC_ODOO_AGENTS, label: 'Odoo 19 documentation: AI agents' }] },
   { category: 'systems', question: 'We have an old Odoo integration. Will it keep working?',
-    answer: 'Check which API it uses. Odoo’s developer docs give the XML-RPC and JSON-RPC endpoints an end date: Odoo Online 21.1 in 2027, then Odoo 22 in 2028. Anything new should use the External JSON-2 API, which takes a bearer API key. If your current connector uses the old endpoints, we can move it across while building the agent.',
+    answer: 'Check which API it uses. Odoo’s developer docs give the XML-RPC and JSON-RPC endpoints (the two older ways programs talk to Odoo) an end date: Odoo Online 21.1 in 2027, then Odoo 22 in 2028. Anything new should use the External JSON-2 API, which takes a bearer API key. If your current connector uses the old endpoints, we can move it across while building the agent.',
     links: [{ href: SRC_ODOO_API, label: 'Odoo 19: External JSON-2 API' }] },
-  { category: 'systems', question: 'Do you work with Cin7, Unleashed and QuickBooks?',
+  { category: 'systems', question: 'Can an AI agent work with Cin7 or Unleashed?',
     answer: 'Yes. Many Australian wholesalers keep stock in Cin7 Core, formerly DEAR, or Unleashed, with Xero or MYOB holding the books. Some run QuickBooks Online instead. An agent often sits between them, turning an order into a sales order in the inventory system and an invoice in the accounts. We check which connection each system offers on your plan before quoting.' },
 
   // ── Rules ──
   { category: 'rules', question: 'Does the Privacy Act apply to an ERP AI agent?',
     answer: 'Yes, if your business is covered by the Privacy Act 1988 and the agent handles personal information. Customer names and delivery addresses on a sales order are personal information, and the OAIC’s guidance says your obligations follow that data into the AI and into the drafts it writes back. We map which fields each agent sees before building, and keep everything else out of its reach.',
     links: [{ href: SRC_OAIC_AI, label: 'OAIC guidance on AI products' }] },
-  { category: 'rules', question: 'Do credit-limit or account-approval agents fall under the December 2026 privacy rules?',
+  { category: 'rules', question: 'Is a credit-limit agent covered by the December 2026 privacy rules?',
     answer: 'They might. From 10 December 2026, APP 1.7 requires covered businesses to explain in their privacy policy when a computer program uses personal information to make, or substantially help make, a decision that could significantly affect someone’s rights or interests. An agent that drafts a sales order for approval is unlikely to be that. One that sets credit limits or refuses accounts might be. We document what each agent decides so your adviser can judge.',
     links: [{ href: SRC_OAIC_APP1, label: 'OAIC APP guidelines, chapter 1' }] },
   { category: 'rules', question: 'Will the agent code GST and lodge our BAS?',
@@ -194,8 +206,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
 /* ─── Systems the agent works inside. Each restates the maker's page. ─── */
 const SYSTEMS: { t: string; d: string; src?: { href: string; label: string } }[] = [
-  { t: 'Xero', d: 'Xero publishes an MCP server on GitHub with tools to list, create and update accounting records, including draft invoices and quotes. It also announced a multi-year partnership with Anthropic on 27 March 2026. We build on Xero’s own connections and give the agent a role scoped to the job.', src: { href: SRC_XERO_MCP, label: 'Xero MCP server' } },
-  { t: 'MYOB Business and AccountRight', d: 'Agents draft bills, invoices and sales orders through MYOB’s Business API, and your team approves each one inside MYOB. The agent gets a login of its own, separate from any staff member’s.', src: { href: SRC_MYOB_API, label: 'MYOB Business API' } },
+  { t: 'Xero', d: 'Through the Xero API and Xero’s own MCP server, published on GitHub, an agent can list, create and update accounting records, including draft invoices and quotes. Xero also announced a multi-year partnership with Anthropic on 27 March 2026. We build each Xero integration on those official connections and give the agent a role scoped to the job.', src: { href: SRC_XERO_MCP, label: 'Xero MCP server' } },
+  { t: 'MYOB Business and AccountRight', d: 'Agents draft bills, invoices and sales orders through the MYOB API (MYOB Business API), and your team approves each one inside MYOB. The agent gets a login of its own, separate from any staff member’s.', src: { href: SRC_MYOB_API, label: 'MYOB Business API' } },
   { t: 'MYOB Acumatica', d: 'MYOB’s cloud ERP for mid-sized businesses, formerly MYOB Advanced, covering finance, stock and projects in one system. The edition and licence you hold decide the connection; we confirm it in scoping.', src: { href: SRC_MYOB_ACUMATICA, label: 'MYOB Acumatica' } },
   { t: 'NetSuite', d: 'Oracle has adopted the Model Context Protocol for NetSuite and ships MCP Standard Tools as a free SuiteApp. The role the agent signs in with sets what it can reach, so we design that role first, record type by record type.', src: { href: SRC_NS_FAQ, label: 'Oracle NetSuite AI Connector FAQ' } },
   { t: 'Odoo', d: 'Odoo 19 has its own AI agents, built from topics and sources. Outside agents use the External JSON-2 API, which Odoo says is only available on Custom pricing plans. The older RPC endpoints are due for removal in Odoo 22 and Odoo Online 21.1.', src: { href: SRC_ODOO_API, label: 'Odoo External JSON-2 API' } },
@@ -216,7 +228,7 @@ const JOBS: { t: string; d: string }[] = [
 const TERMS: { t: string; d: string }[] = [
   { t: 'A demo on your data before you sign', d: 'Working software on a sample of your real documents, so you judge the drafts, not a slide deck.' },
   { t: 'Fixed price per phase', d: 'Each phase is scoped, priced and signed on its own. You can stop after any of them.' },
-  { t: 'You own the code from day one', d: 'Code, prompts and integrations sit in your repository. Nothing depends on a FactoryJet login.' },
+  { t: 'You own the code from day one', d: 'Everything we write sits in your repository. Nothing depends on a FactoryJet login.' },
   { t: 'Your accounts, at cost', d: 'The AI model and hosting can run in your own accounts at cost, with no markup from us.' },
   { t: 'Defects fixed inside the build price', d: 'For a cover period we agree in writing before work starts.' },
   { t: 'Support is optional', d: 'Each change is quoted and approved. No monthly minimum. We can keep managing the servers, models and connections if you want us to.' },
@@ -233,10 +245,10 @@ const BUILD_STEPS: { n: string; t: string; d: string; out: string }[] = [
   { n: '07', t: 'Go live and keep it working', d: 'ERPs release updates and model makers retire versions. Odoo has already set removal dates for its older APIs. We watch the logs, re-test after changes and fix what breaks, inside the defect cover period and after it if you choose.', out: 'A live agent you own, with the team that built it on call.' },
 ];
 
-/* ─── Work on the same platforms (not Australian clients; not all finished) ─── */
+/* ─── Work on the same platforms (not Australian clients; not all finished). No results claimed. ─── */
 const WORK: { who: string; kind: string; what: string; href: string; cta: string }[] = [
   { who: 'Sow Easy', kind: 'B2B distribution · WooCommerce and Odoo', what: 'A WooCommerce trade store being joined to Odoo, with Odoo as the master for stock, pricing and product identifiers. It is being tested against Odoo’s staging system; launch is still ahead. The same Odoo connection work sits under an Odoo AI agent.', href: '/case-studies/sow-easy-distributor-portal', cta: 'Read the case study' },
-  { who: 'Two QuickBooks projects, unnamed', kind: 'Shopify · QuickBooks Online and Enterprise', what: 'One Shopify store being joined to QuickBooks Online and one to QuickBooks Enterprise, both in progress. We cannot name either client.', href: '/services/erp-ai-agents', cta: 'See our ERP agent work' },
+  { who: 'Two Shopify + QuickBooks projects', kind: 'Shopify · QuickBooks Online and Enterprise', what: 'Both in progress: one Shopify store being joined to QuickBooks Online, the other to QuickBooks Enterprise, so orders reach the books without retyping.', href: '/services/erp-ai-agents', cta: 'See our ERP agent work' },
 ];
 
 /* ─── Internal links: live AU routes (checked on disk 2026-10-29) + US page ─── */
@@ -282,21 +294,12 @@ const jsonLd = {
       headline: H1,
       description: DESCRIPTION,
       inLanguage: 'en-AU',
-      datePublished: UPDATED,
+      datePublished: PUBLISHED,
       dateModified: UPDATED,
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="true"]'] },
       breadcrumb: { '@id': `${CANONICAL}#breadcrumb` },
       about: { '@id': `${CANONICAL}#service` },
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
-        sameAs: [
-          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-          'https://github.com/factoryjet-tech',
-        ],
-      },
+      author: { '@id': 'https://factoryjet.com/#bhavesh-barot' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
     {
@@ -314,7 +317,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['erp-ai-agents'] },
   openGraph: {
     title: TITLE,
     description:
@@ -444,8 +447,8 @@ export default function ErpAiAgentsAUPage() {
 
         <div className="wrap byline">
           <div className="av">BB</div>
-          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="who"><a href="/author/bhavesh-barot"><b>Bhavesh Barot</b></a>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST (GEO) ═══ */}
@@ -462,18 +465,22 @@ export default function ErpAiAgentsAUPage() {
                     <span className="stat">An ERP AI agent reads the documents that start your office work, such as a
                     customer purchase order or a supplier bill, and drafts the matching record in Xero, MYOB, NetSuite or
                     Odoo.</span> A named person approves each draft before it posts. The agent signs in with its own
-                    limited role, and every lookup and write is logged.
+                    limited role, and every lookup and write is logged. FactoryJet builds custom ERP AI agents for
+                    Australian businesses on Xero, MYOB, MYOB Acumatica, NetSuite and Odoo, and shows each agent working
+                    on your own documents before you sign.
                   </p>
                 </div>
                 <div className="fact">
                   <div className="sec">§02</div>
                   <div>
-                    <div className="factlabel">Three terms, in plain English</div>
+                    <div className="factlabel">Five terms, in plain English</div>
                     <p>
                       An <b>ERP</b> (enterprise resource planning system) is the software that holds your stock, orders
                       and money in one place. An <b>API</b> is the published set of requests one program can send another to fetch
                       records or add new ones. <b>MCP</b>, the Model Context Protocol, is an open standard that lets AI
-                      tools make those requests. Xero, NetSuite and Odoo all now publish ways for AI to connect.
+                      tools make those requests. An <b>OAuth scope</b> is one permission on a login, such as read invoices,
+                      so the agent can reach only what it is granted. A <b>SuiteApp</b> is an add-on installed inside
+                      NetSuite. Xero, NetSuite and Odoo all now publish ways for AI to connect.
                     </p>
                   </div>
                 </div>
@@ -560,7 +567,7 @@ export default function ErpAiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Who keeps what</div>
-              <h2>The ERP keeps the record. The agent drafts. A person approves.</h2>
+              <h2>What can an ERP AI agent change without a person approving it?</h2>
             </div>
             <div className="factswrap">
               <div className="factlist">
@@ -594,7 +601,7 @@ export default function ErpAiAgentsAUPage() {
         {/* ═══ PROCESS ═══ */}
         <section className="section process" id="how-we-build">
           <div className="wrap">
-            <div className="section-head">
+            <div className="section-head head-stack">
               <div className="eyebrow">How a project runs</div>
               <h2>From your brief to a live ERP agent, in seven steps</h2>
               <p className="lead">
@@ -620,8 +627,9 @@ export default function ErpAiAgentsAUPage() {
         <div className="au-midcta">
           <MidPageCTA
             headline={'Send us one week of purchase orders or supplier bills'}
-            sub={'We will run them through a first version of the agent and show you its drafts beside what your team entered. Tell us which systems you run, and the founder replies within 24 hours.'}
+            sub={'We will run them through a first version of the agent and show you its drafts beside what your team entered. Tell us which systems you run.'}
             label={'See a demo on my data'}
+            note="The founder replies within 24 hours." 
           />
         </div>
 
@@ -667,7 +675,7 @@ export default function ErpAiAgentsAUPage() {
             <div className="section-head plat-head">
               <div>
                 <div className="eyebrow">Terms</div>
-                <h2>How we work on ERP agent projects</h2>
+                <h2>ERP AI agent project terms: demo, fixed price, code ownership</h2>
               </div>
               <p>
                 The same terms on every project, written into the proposal. An ERP agent needs re-testing each time
@@ -746,25 +754,29 @@ export default function ErpAiAgentsAUPage() {
               <h2>Built-in ERP AI vs an off-the-shelf app vs a custom agent</h2>
               <p className="lead">
                 Start with what your system already gives you. A custom agent earns its place when the job crosses
-                systems or needs your own approval rules.
+                systems or needs your own approval rules. Off-the-shelf here means tools such as{' '}
+                <a href={SRC_DEXT} {...extLink}>Dext</a> and <a href={SRC_HUBDOC} {...extLink}>Hubdoc</a>, which capture
+                bills and receipts into Xero or QuickBooks Online, and <a href={SRC_APPROVALMAX} {...extLink}>ApprovalMax</a>,
+                an accounts payable approval tool for Xero, QuickBooks Online and NetSuite.
               </p>
             </div>
-            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
-              <table>
+            <p className="md:hidden" style={{ fontSize: 13, margin: '0 0 8px', color: '#4A4A45' }}>Swipe sideways to see every column.</p>
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 740 }}>
                 <thead>
                   <tr>
                     <th>What you get</th>
                     <th className="fj">Custom agent (FactoryJet)</th>
                     <th>Built-in AI (JAX, Odoo AI, NetSuite connector)</th>
-                    <th>Off-the-shelf app</th>
+                    <th>Off-the-shelf app (Dext, Hubdoc, ApprovalMax)</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><th scope="row">Best fit</th><td className="fj">Jobs that cross Xero, Cin7, a store and marketplaces</td><td>Questions and tasks inside one system</td><td>One standard task, such as bill capture</td></tr>
+                  <tr><th scope="row">Best fit</th><td className="fj">Jobs that cross Xero, Cin7, a store and marketplaces</td><td>Questions and tasks inside one system</td><td>One standard task, such as bill capture or bill approval</td></tr>
                   <tr><th scope="row">Your approval rules</th><td className="fj">Written with you, per record type</td><td>The maker’s settings</td><td>The app’s settings</td></tr>
                   <tr><th scope="row">Works across systems</th><td className="fj">Yes, by design</td><td>Mostly within its own system</td><td>Usually two systems</td></tr>
-                  <tr><th scope="row">Demo on your data first</th><td className="fj">Before you sign</td><td>Trial in your account</td><td>Free trial</td></tr>
-                  <tr><th scope="row">Who owns it</th><td className="fj">You: code, prompts, integrations</td><td>The ERP maker</td><td>The app vendor</td></tr>
+                  <tr><th scope="row">Demo on your data first</th><td className="fj">Before you sign</td><td>Included or add-on, try it in your own system</td><td>Varies by vendor, often a trial</td></tr>
+                  <tr><th scope="row">Who owns it</th><td className="fj">You: the repository</td><td>The ERP maker</td><td>The app vendor</td></tr>
                   <tr><th scope="row">Support after launch</th><td className="fj">Same team, optional, no monthly minimum</td><td>The maker’s support</td><td>The vendor’s help desk</td></tr>
                 </tbody>
               </table>
@@ -775,15 +787,16 @@ export default function ErpAiAgentsAUPage() {
         {/* ═══ COST ═══ */}
         <section className="section au-top" id="cost">
           <div className="wrap">
-            <div className="section-head">
+            <div className="section-head head-split">
               <div className="eyebrow">Cost</div>
-              <h2>How much does an ERP AI agent cost in Australia?</h2>
-              <p className="lead">
-                <a href={SRC_FLOWTIVITY} {...extLink}>Flowtivity’s March 2026 Australian guide</a> puts multi-system
-                workflow automation at A$20,000 to A$50,000 or more over 6 to 12 weeks, and customer service
-                automation at A$10,000 to A$25,000 over 4 to 8 weeks. Market ranges, not FactoryJet prices. Where a
-                project lands depends mostly on the four things below.
-              </p>
+              <div>
+                <h2>How much does an ERP AI agent cost in Australia?</h2>
+                <p className="lead">
+                  <a href={SRC_FLOWTIVITY} {...extLink}>Flowtivity’s March 2026 Australian guide</a> puts multi-system
+                  workflow automation at A$20,000 to A$50,000 or more over 6 to 12 weeks. That is a market range, not a
+                  FactoryJet price. Where a project lands depends mostly on the four things below.
+                </p>
+              </div>
             </div>
             <div className="au-split">
               <div>
@@ -818,8 +831,11 @@ export default function ErpAiAgentsAUPage() {
                 <h2>ERP integration work on Odoo and QuickBooks</h2>
               </div>
               <p>
-                These are not Australian clients. They are the same platforms an Australian ERP agent connects to, and
-                the connection work is where most of the effort in an agent project goes. No results are claimed here.
+                Connection work on the same platforms an Australian ERP agent uses, which is where most of the effort in
+                an agent project goes. Our ERP agent work covers RFQ automation, daily bookkeeping and the generation of
+                purchase and sales orders, on Odoo, NetSuite, SAP Business One, ERPNext and custom-built ERPs. Before
+                any contract we show working software on the buyer’s own data: for one prospect, a demo pricing agent
+                ran on their own rule book and re-priced a job they had already quoted.
               </p>
             </div>
             <div className="platlist" role="list">

@@ -27,44 +27,47 @@ const SRC = {
   vatRates: 'https://www.gov.uk/vat-rates',
   googleSeo: 'https://developers.google.com/search/docs/fundamentals/do-i-need-seo',
   googleAi: 'https://developers.google.com/search/docs/appearance/ai-features',
+  googleGenAi: 'https://developers.google.com/search/docs/fundamentals/using-gen-ai-content',
+  gscPerformance: 'https://support.google.com/webmasters/answer/7576553',
+  screamingFrog: 'https://www.screamingfrog.co.uk/seo-spider/pricing/',
 } as const;
 
 const faqs: FAQItem[] = [
   {
     q: 'How much does SEO cost in the UK?',
-    a: 'Most UK businesses pay between £500 and £5,000 a month for SEO in 2026, usually before VAT. That is the band Gorilla Marketing and LOCALiQ both publish. Ren Hao SEO puts most managed retainers at £1,500 to £5,000 with a median near £2,500 (updated October 2026). Local-only work can start near £300, and enterprise programmes run past £10,000 a month.',
-  },
-  {
-    q: 'How much is SEO per month in the UK?',
-    a: 'Plan on roughly £500 to £3,000 a month for a small or local business and £3,000 to £8,000 for a mid-size one, using Gorilla Marketing\'s 2026 bands. Below £500 a month you get upkeep, a report and a little content. Dandy Marketing, updated September 2026, gives a wider average of £500 to £6,000 a month.',
+    a: 'Most UK businesses pay between £500 and £5,000 a month for SEO in 2026, usually before VAT. That is the band Gorilla Marketing and LOCALiQ both publish. Ren Hao SEO puts most managed retainers at £1,500 to £5,000 with a median near £2,500 (updated October 2026). Dandy Marketing gives a wider £500 to £6,000. Local-only work can start near £300, and enterprise programmes run past £10,000 a month.',
   },
   {
     q: 'What is a typical SEO retainer in the UK?',
-    a: 'A typical managed SEO retainer in the UK is £1,500 to £5,000 a month, with a median around £2,500, according to Ren Hao SEO\'s October 2026 pricing page. One national agency, LOCALiQ, publishes its own tiers at £1,300 to £2,000, £2,000 to £2,750 and £2,750 upward. Terms vary: Ren Hao SEO works month to month, while Gorilla Marketing warns against agencies that insist on 12-month minimum contracts before they have proven anything.',
+    a: 'A typical managed SEO retainer in the UK is £1,500 to £5,000 a month, with a median around £2,500, according to Ren Hao SEO\'s October 2026 pricing page. LOCALiQ publishes its own tiers at £1,300 to £2,000, £2,000 to £2,750 and £2,750 upward. Ren Hao SEO works month to month, while Gorilla Marketing warns against agencies that insist on 12-month minimum contracts before they have proven anything.',
   },
   {
     q: 'How much should SEO cost for a small business?',
-    a: 'A small UK business should expect £500 to £1,500 a month for local SEO that shows results, and £1,500 to £3,000 for steady growth with regular content and links. Those are Gorilla Marketing\'s two lower budget bands. Expert Sure found published starting prices as low as £185 a month for narrowly scoped local packages, excluding VAT, which buy far less work.',
+    a: 'A small UK business should expect £500 to £1,500 a month for local SEO that shows results, and £1,500 to £3,000 for steady growth with regular content and links. Those are Gorilla Marketing\'s two lower budget bands. Expert Sure found published starting prices as low as £185 a month for narrow local packages, excluding VAT, which buy far less work.',
+  },
+  {
+    q: 'What is the best SEO package or agency for a small business?',
+    a: 'There is no single best one. The best package for a small business names the pages and fixes it will start with, reports enquiries rather than activity, and lets you leave on short notice. For a local firm that usually sits in Gorilla Marketing\'s £500 to £1,500 band. Our guide to UK SEO agencies compares named firms if you want a shortlist.',
+  },
+  {
+    q: 'What are the four types of SEO?',
+    a: 'The four types most UK guides use are on-page SEO (the words, titles and layout of each page), technical SEO (speed, crawling and site structure), off-page SEO (links and mentions on other sites) and local SEO (your Google Business Profile, reviews and town pages). Most retainers mix all four. Ask a provider how its hours split between them.',
   },
   {
     q: 'How much does local SEO cost in the UK?',
-    a: 'Local SEO in the UK usually costs £300 to £2,000 a month. Muve Marketing gives £300 to £700 for single-location support, £700 to £1,500 for broader ongoing work and £1,500 or more for multi-location campaigns (August 2026). Gorilla Marketing puts most local retainers at £500 to £2,000. Cost rises with the number of locations and how crowded your trade is.',
+    a: 'Local SEO in the UK usually costs £300 to £2,000 a month. Muve Marketing gives £300 to £700 for one location, £700 to £1,500 for broader ongoing work and £1,500 or more for multi-location campaigns (August 2026). Gorilla Marketing puts most local retainers at £500 to £2,000. Cost rises with the number of locations and how crowded your trade is.',
   },
   {
     q: 'How much does ecommerce SEO cost in the UK?',
-    a: 'Ecommerce SEO in the UK typically costs £1,500 to £10,000 or more a month. Ren Hao SEO lists ecommerce work at £1,500 to £8,000+ and Gorilla Marketing at £2,000 for smaller stores up to £10,000+ for competitive retailers. A Shopify store with 50 products costs far less than a retailer with 10,000 SKUs, because every category page needs its own work.',
+    a: 'Ecommerce SEO in the UK typically costs £1,500 to £10,000 or more a month. Ren Hao SEO lists ecommerce work at £1,500 to £8,000+ and Gorilla Marketing at £2,000 for smaller stores up to £10,000+ for competitive retailers. A Shopify store with 50 products costs far less than a retailer with 10,000 products, because every category page needs its own work.',
   },
   {
     q: 'How much does B2B SEO cost in the UK?',
-    a: 'B2B SEO for professional services such as legal, accounting and financial advice usually starts at £1,500 to £5,000 a month, and SaaS companies typically spend £3,000 to £8,000, according to Gorilla Marketing. B2B costs more than local SEO because buyers search fewer, more technical terms and the content needs real expertise. Regulated sectors such as finance and health often need £5,000 a month or more.',
+    a: 'B2B SEO for professional services such as legal, accounting and financial advice usually starts at £1,500 to £5,000 a month, and SaaS companies typically spend £3,000 to £8,000, according to Gorilla Marketing. B2B costs more than local SEO because buyers search fewer, more technical terms and the content needs real expertise. Finance and health often need £5,000 a month or more.',
   },
   {
     q: 'How much does an SEO audit cost in the UK?',
     a: 'A one-off SEO audit in the UK usually costs £1,000 to £5,000, depending on site size (Itamar Blauer, July 2026). Ren Hao SEO puts audits and migrations at £2,000 to £8,000. Whitehat SEO publishes an Essential website audit at £2,500 excluding VAT, as reported by Expert Sure. A free automated score report is a different product and does not replace a manual audit.',
-  },
-  {
-    q: 'How much does on-page SEO cost?',
-    a: 'On-page SEO is rarely sold alone in the UK; it sits inside entry packages. Auto-SEO lists managed entry packages focused on on-page fixes, technical SEO and reporting at £200 to £500 a month. Done properly on a small site, on-page work is often a one-off project inside an audit, then upkeep inside a retainer. Ask how many pages a quote covers each month.',
   },
   {
     q: 'How much does an SEO consultant charge per hour in the UK?',
@@ -79,10 +82,6 @@ const faqs: FAQItem[] = [
     a: 'LOCALiQ says a mid-level SEO manager costs upwards of £35,000 a year before benefits, tools and training. Gorilla Marketing gives £35,000 to £70,000 a year in salary, plus £200 to £500 a month for enterprise SEO tools. One hire rarely covers technical work, content and link earning equally well, so most small firms still buy some outside help.',
   },
   {
-    q: 'Does SEO cost more in London?',
-    a: 'Yes, usually. Gorilla Marketing says London agencies typically charge 20 to 40 per cent more than regional firms for equivalent work. A London business also often faces more rivals for the same searches, which needs more hours. You do not have to hire in London to rank in London; what matters is the scope of work, not where the agency sits.',
-  },
-  {
     q: 'Do UK SEO prices include VAT?',
     a: 'Usually not. Ren Hao SEO says UK SEO is typically quoted excluding VAT, and the starting prices Expert Sure lists all exclude it. The standard UK VAT rate is 20 per cent. A provider must register once its taxable turnover passes £90,000, so a small freelancer may not charge VAT at all. If your business is VAT-registered you can usually reclaim it.',
   },
@@ -95,40 +94,44 @@ const faqs: FAQItem[] = [
     a: 'Because most of the price is skilled hours, and good SEO needs several skills at once: technical fixes, writing, link earning and reporting. Ren Hao SEO says a £2,500 a month programme typically buys 25 to 35 senior hours, two to four substantial pages and a steady flow of earned links. A crowded market needs more of all three to overtake sites that started years earlier.',
   },
   {
-    q: 'Do you have to pay for SEO?',
-    a: 'No. Google says it never accepts payment to include or rank a site in its organic results. You pay for the work, either in your own time or in fees. Many owners do the basics themselves: a complete Google Business Profile, one clear page per service, good page titles and a steady flow of reviews. Google Search Console is free.',
-  },
-  {
-    q: 'Can I do SEO myself for free?',
-    a: 'Yes, the first steps cost nothing but time. Claim your Google Business Profile, write one useful page per service and location, fix page titles, and ask happy customers for reviews. Auto-SEO puts DIY tool subscriptions at £20 to £150 a month if you want software help. Most owners stall at technical fixes and earning links, which is where paid help usually starts to pay for itself.',
+    q: 'Do you have to pay for SEO, or can I do it myself for free?',
+    a: 'You do not have to pay. Google says it never accepts payment to rank a site in its unpaid results, and Google Search Console is free. You can claim your Google Business Profile, write one useful page per service, fix page titles and ask for reviews. Screaming Frog\'s SEO Spider checks up to 500 pages free, or £199 a year for a licence (checked 31 October 2026). Most owners stall at technical fixes and links.',
   },
   {
     q: 'Is paying for SEO worth it?',
-    a: 'It is worth it when the extra customers it brings are worth more than the fee. Expert Sure works through an example: a £1,000 a month retainer plus extras costs £9,720 over six months, so at £300 profit per customer the business needs 33 extra customers in that time. Run the same sum with your own numbers before you sign anything.',
+    a: 'It is worth it when the extra customers it brings are worth more than the fee. Expert Sure works through an example: £9,000 of cash spend over six months plus £720 of staff review time comes to £9,720, so at £300 profit per customer the business needs 33 extra customers in that time. Run the same sum with your own numbers before you sign anything.',
   },
   {
     q: 'How much should I budget for SEO as a share of revenue?',
-    a: 'Gorilla Marketing cites a common guideline of 5 to 10 per cent of revenue on marketing, with part of that going to SEO. On that basis a business turning over £500,000 a year might spend £2,000 to £4,000 a month on SEO. Treat it as a starting point and check it against what one new customer is worth to you.',
+    a: 'Gorilla Marketing cites a common guideline of 5 to 10 per cent of revenue on all marketing, with SEO one part of that. On that basis a business turning over £500,000 a year would spend about £2,000 to £4,000 a month on marketing in total, so the SEO share is lower. Check it against what one new customer is worth to you.',
   },
   {
     q: 'How long does SEO take to pay back?',
-    a: 'LOCALiQ says you will typically see meaningful movement in rankings and traffic within three to six months of a well-run campaign, depending on your starting point. Expert Sure uses a six-month planning window but says it is not a prediction that SEO will pay back by then. Local campaigns in low-competition trades move fastest; new sites in crowded national markets move slowest.',
+    a: 'SEO pays back once the profit from extra customers passes what you have spent. In Expert Sure\'s example that means 33 extra customers from £9,720 over six months, and Expert Sure says six months is a planning window, not a promise. LOCALiQ says meaningful movement in rankings and traffic typically shows within three to six months, so payback usually comes after that.',
+  },
+  {
+    q: 'How can I tell if my SEO is working?',
+    a: 'Open the Performance report in Google Search Console. It shows clicks, impressions, click-through rate and average position for each search and page, over the past three months by default. If impressions rise first and clicks follow, the work is landing. Then check enquiries and sales from search in your analytics, because rankings alone do not pay the bills.',
+  },
+  {
+    q: 'Can ChatGPT do SEO?',
+    a: 'It can help, but it cannot do the job alone. Google says generative AI is useful for research and for adding structure to original content, and warns that using it to make many pages without adding value may break its scaled content abuse policy. ChatGPT cannot fix your site\'s code, earn links or check your Search Console data. A person still has to review every page for accuracy.',
   },
   {
     q: 'Is SEO dead now with AI?',
-    a: 'No. Google says pages need no special optimisation beyond normal search requirements to appear in its AI Overviews and AI Mode, so the same work still counts. On 21 October 2026 we found Google AI Overviews on 2 of 8 UK SEO cost searches we checked. The format matters more now, because assistants quote pages with clear answers, sourced numbers and named facts.',
+    a: 'No. Google says pages need no special optimisation beyond normal search requirements to appear in its AI Overviews and AI Mode, so the same work still counts. On 21 October 2026 we found Google AI Overviews on 2 of 8 UK SEO cost searches we checked. Assistants quote pages with clear answers, sourced numbers and named facts.',
   },
   {
     q: 'Does AI SEO or GEO cost extra in the UK?',
     a: 'Sometimes, and there is no standard price. Some providers fold AI visibility checks into existing retainers; others sell AI SEO, also called GEO (generative engine optimisation), as an add-on. Ask what the fee buys: tracking only, or new content, technical changes and outreach. Ren Hao SEO notes that providers with no AI search capability may be cheaper because they offer less.',
   },
   {
-    q: 'What is the 80/20 rule for SEO?',
-    a: 'It means a small share of your pages and fixes produces most of your results. In practice: your top service pages, your Google Business Profile and a handful of technical faults usually matter more than hundreds of keywords. Use it to judge a quote. A good proposal names the few pages and fixes it will start with, rather than listing everything it could do.',
+    q: 'Does SEO cost more in London?',
+    a: 'Yes, usually. Gorilla Marketing says London agencies typically charge 20 to 40 per cent more than regional firms for equivalent work. A London business also often faces more rivals for the same searches, which needs more hours. You do not have to hire in London to rank in London. The scope of work matters more than where the agency sits.',
   },
   {
     q: 'What SEO practices should I avoid paying for?',
-    a: 'Avoid guaranteed rankings, which Google says no one can promise, and bulk links: LOCALiQ tells buyers to ask where "50 links a month for £200" come from. Avoid mass AI-written pages nobody edits, directory submissions sold as results, and any deal where the provider owns your Search Console or Business Profile. Those cost you twice: once to buy, once to undo.',
+    a: 'Avoid guaranteed rankings, which Google says no one can promise, and bulk links: LOCALiQ tells buyers to ask where "50 links a month for £200" come from. Avoid mass AI-written pages nobody edits, directory submissions sold as results, and any deal where the provider owns your Search Console or Business Profile. You pay once to buy these and again to undo them.',
   },
 ];
 
@@ -224,8 +227,10 @@ const serpRows = [
 
 const linkCls = 'text-[#B23E13] font-semibold underline';
 const extLinkProps = { target: '_blank', rel: 'noopener noreferrer nofollow', className: 'text-[#B23E13] underline' } as const;
-const h2Cls = 'text-2xl md:text-3xl font-display font-bold text-gray-900 mt-12 mb-4';
+const h2Cls = 'text-2xl md:text-3xl font-fj-display font-extrabold tracking-[-0.03em] text-gray-900 mt-12 mb-4';
 const h3Cls = 'text-xl font-bold text-gray-900 mt-8 mb-3';
+const tableWrapStyle = { overflowX: 'auto', WebkitOverflowScrolling: 'touch' } as const;
+const tableCls = 'w-full min-w-[640px] border-collapse bg-white text-sm';
 const pCls = 'mb-4 text-gray-700 leading-relaxed';
 const thCls = 'p-3.5 text-left font-semibold';
 const tdCls = 'p-3.5';
@@ -248,11 +253,11 @@ export const post: BlogPost = {
   slug: 'seo-cost-uk-2026',
   title: 'How Much Does SEO Cost in the UK? 2026 Prices by Business Type',
   excerpt:
-    'What SEO costs in the UK in 2026, in pounds: monthly retainers for local, ecommerce and B2B businesses, one-off audits, hourly and day rates, freelancer vs agency vs in-house, VAT, red flags in cheap packages and what AI search changes. Every figure is a published UK range with its source and date.',
+    'Most UK businesses pay £500 to £5,000 a month for SEO in 2026, usually before VAT. Here are UK prices by business type, audit and hourly rates, VAT and red flags, each from a published source with its date.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 21, 2026',
-  dateModified: 'Oct 21, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '17 min read',
   imageUrl: '/blog-images/seo-cost-uk-2026-hero.webp',
   imageAlt:
@@ -274,11 +279,11 @@ export const post: BlogPost = {
     <>
       {/* Answer-first block */}
       <div className="answer-first bg-[#FFF3EE] border-l-4 border-[#F05A28] p-5 md:p-6 rounded-r-xl mb-8">
-        <p className="font-bold text-gray-900 text-base md:text-lg mb-2">The short answer: how much SEO costs per month in the UK</p>
+        <h2 className="font-fj-display font-extrabold tracking-[-0.03em] text-gray-900 text-lg md:text-xl mb-2">How much does SEO cost per month in the UK?</h2>
         <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-          Most UK businesses pay <strong>£500 to £5,000 a month</strong> for SEO in 2026, usually before VAT
+          Most UK businesses pay <strong>£500 to £5,000 a month</strong>{' '}for SEO in 2026, usually before VAT
           (Gorilla Marketing and LOCALiQ). Managed retainers cluster at £1,500 to £5,000, with a median near{' '}
-          <strong>£2,500 a month</strong> (Ren Hao SEO, updated 15 October 2026). Local SEO starts near £300 a month;
+          <strong>£2,500 a month</strong>{' '}(Ren Hao SEO, updated 15 October 2026). Local SEO starts near £300 a month;
           ecommerce and enterprise work runs past £10,000.
         </p>
         <p className="text-xs text-gray-500 mt-3">
@@ -293,16 +298,18 @@ export const post: BlogPost = {
         by side, by type of business and type of project, so you can tell which kind of quote you are holding.
       </p>
       <p className={pCls}>
-        A few terms, once. <strong>SEO</strong> (search engine optimisation) is the work that helps your website show
-        up in Google&apos;s unpaid results. A <strong>retainer</strong> is a fixed monthly fee for ongoing work. An{' '}
-        <strong>SEO audit</strong> is a one-off check of your site that lists what stops it ranking.{' '}
-        <strong>Link earning</strong> means getting other real websites to link to yours. <strong>GEO</strong>{' '}
+        A few terms, once. <strong>SEO</strong>{' '}(search engine optimisation) is the work that helps your website show
+        up in Google&apos;s unpaid results. A <strong>retainer</strong>{' '}is a fixed monthly fee for ongoing work. An{' '}
+        <strong>SEO audit</strong>{' '}is a one-off check of your site that lists what stops it ranking.{' '}
+        <strong>Link earning</strong>{' '}means getting other real websites to link to yours. <strong>GEO</strong>{' '}
         (generative engine optimisation) is work aimed at being named in AI answers from ChatGPT, Perplexity and
-        Google&apos;s AI Overviews.
+        Google&apos;s AI Overviews. A <strong>SKU</strong>{' '}is one product line in a shop&apos;s catalogue.{' '}
+        <strong>Citations</strong>{' '}are listings of your business name, address and phone number on other sites.{' '}
+        <strong>Digital PR</strong>{' '}means getting news and trade sites to write about you and link to you.
       </p>
 
       <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 md:p-6 mb-8">
-        <p className="font-bold text-gray-900 mb-2">How we built this guide</p>
+        <h3 className="font-bold text-gray-900 mb-2">How we built this guide</h3>
         <p className="text-sm md:text-base text-gray-700 leading-relaxed">
           On 21 October 2026 we pulled Google&apos;s UK desktop results for eight SEO cost searches through
           DataForSEO, including &ldquo;seo cost uk&rdquo;, &ldquo;seo packages uk&rdquo;, &ldquo;seo cost per month
@@ -318,7 +325,7 @@ export const post: BlogPost = {
         <ol className="list-decimal pl-5 space-y-1 text-gray-700 text-sm md:text-base">
           <li><a href="#seo-cost-by-business-type" className="text-[#B23E13] underline">SEO cost in the UK by type of business</a></li>
           <li><a href="#seo-cost-by-project-type" className="text-[#B23E13] underline">Audits, projects, hourly rates and in-house hires</a></li>
-          <li><a href="#what-each-budget-buys" className="text-[#B23E13] underline">What each monthly SEO budget buys</a></li>
+          <li><a href="#what-each-budget-buys" className="text-[#B23E13] underline">UK SEO packages: what each monthly budget buys</a></li>
           <li><a href="#what-drives-cost" className="text-[#B23E13] underline">7 things that drive an SEO quote up or down</a></li>
           <li><a href="#vat" className="text-[#B23E13] underline">VAT on UK SEO prices</a></li>
           <li><a href="#red-flags" className="text-[#B23E13] underline">8 red flags in cheap SEO packages</a></li>
@@ -337,8 +344,9 @@ export const post: BlogPost = {
         how strong the sites you must overtake are. Here is SEO pricing in the UK as monthly retainer ranges, from the
         guides that publish it by business type.
       </p>
-      <div className="overflow-x-auto my-6 border border-gray-200 rounded-xl shadow-sm">
-        <table className="min-w-full border-collapse bg-white text-sm">
+      <p className="md:hidden text-xs text-gray-500 mt-6 -mb-4">Swipe sideways to see every column.</p>
+      <div className="overflow-x-auto my-6 border border-gray-200 rounded-xl shadow-sm" style={tableWrapStyle}>
+        <table className={tableCls}>
           <caption className="text-left text-xs text-gray-500 p-3">
             Typical UK SEO prices per month, GBP, usually before VAT. Read on each source page on 21 October 2026.
           </caption>
@@ -369,7 +377,7 @@ export const post: BlogPost = {
         retailer.
       </p>
       <p className={pCls}>
-        Two more data points frame the market. <a href={SRC.dandy} {...extLinkProps}>Dandy Marketing</a> (updated 12
+        Two more data points frame the market. <a href={SRC.dandy} {...extLinkProps}>Dandy Marketing</a>{' '}(updated 12
         September 2026) puts the average at £500 to £6,000 a month and notes that a plumber does not need £6,000 of
         SEO while an ecommerce site entering a new market might. At the cheap end,{' '}
         <a href={SRC.autoseo} {...extLinkProps}>Auto-SEO</a>, which sells an automated SEO tool, lists managed agency
@@ -378,7 +386,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-6 text-gray-700 leading-relaxed">
         One national agency publishes its own tiers, which shows where a mid-market UK agency sits.{' '}
-        <a href={SRC.localiq} {...extLinkProps}>LOCALiQ</a> (14 May 2026) prices campaigns at £1,300 to £2,000 a month
+        <a href={SRC.localiq} {...extLinkProps}>LOCALiQ</a>{' '}(14 May 2026) prices campaigns at £1,300 to £2,000 a month
         (Foundations), £2,000 to £2,750 (Growth) and £2,750 upward (Enterprise), each with a six-month strategy
         document and monthly reporting.
       </p>
@@ -406,8 +414,9 @@ export const post: BlogPost = {
         Not every SEO purchase is a retainer. If you need a diagnosis, a site move or advice for your own team, you buy
         a project, a day or an hour. Here are the published UK prices for each.
       </p>
-      <div className="overflow-x-auto my-6 border border-gray-200 rounded-xl shadow-sm">
-        <table className="min-w-full border-collapse bg-white text-sm">
+      <p className="md:hidden text-xs text-gray-500 mt-6 -mb-4">Swipe sideways to see every column.</p>
+      <div className="overflow-x-auto my-6 border border-gray-200 rounded-xl shadow-sm" style={tableWrapStyle}>
+        <table className={tableCls}>
           <caption className="text-left text-xs text-gray-500 p-3">
             Typical UK SEO project and time-based prices, GBP, usually before VAT. Read on 21 October 2026.
           </caption>
@@ -433,16 +442,17 @@ export const post: BlogPost = {
       </div>
       <p className={pCls}>
         An audit is the cheapest way to find out whether you need a £500 retainer or a £5,000 one. Check what the fee
-        includes: <a href={SRC.expertsure} {...extLinkProps}>Expert Sure</a> (12 September 2026) warns that a manual
+        includes: <a href={SRC.expertsure} {...extLinkProps}>Expert Sure</a>{' '}(12 September 2026) warns that a manual
         audit covering technical SEO, speed and mobile should not be compared with a free automated score report. Our
-        guide to <a href="/blog/seo-audit-cost-2026" className={linkCls}>what an SEO audit costs</a> covers scope in
-        more depth, and our <a href="/uk/seo-audit" className={linkCls}>UK SEO audit service</a> shows what a written
+        guide to <a href="/blog/seo-audit-cost-2026" className={linkCls}>what an SEO audit costs</a>{' '}covers scope in
+        more depth, and our <a href="/uk/seo-audit" className={linkCls}>UK SEO audit service</a>{' '}shows what a written
         fix list looks like.
       </p>
 
       <h3 className={h3Cls}>SEO agency cost vs freelancer vs in-house</h3>
-      <div className="overflow-x-auto my-6 border border-gray-200 rounded-xl shadow-sm">
-        <table className="min-w-full border-collapse bg-white text-sm">
+      <p className="md:hidden text-xs text-gray-500 mt-6 -mb-4">Swipe sideways to see every column.</p>
+      <div className="overflow-x-auto my-6 border border-gray-200 rounded-xl shadow-sm" style={tableWrapStyle}>
+        <table className={tableCls}>
           <thead className="bg-gray-900 text-white">
             <tr>
               <th className={thCls}>Option</th>
@@ -472,7 +482,7 @@ export const post: BlogPost = {
             </tr>
             <tr>
               <td className={`${tdCls} font-semibold text-gray-900`}>Do it yourself</td>
-              <td className={tdCls}>Your time; Search Console and Business Profile are free</td>
+              <td className={tdCls}>Your time; <a href="https://search.google.com/search-console/about" {...extLinkProps}>Search Console</a>{' '}and Business Profile are free; <a href={SRC.screamingFrog} {...extLinkProps}>Screaming Frog</a>{' '}crawls 500 URLs free or costs £199 a year (31 October 2026)</td>
               <td className={tdCls}>Full control, no fees</td>
               <td className={tdCls}>Most owners stall at technical fixes and links</td>
             </tr>
@@ -487,10 +497,10 @@ export const post: BlogPost = {
 
       {/* Section: what each budget buys */}
       <h2 id="what-each-budget-buys" className={h2Cls}>
-        What each monthly SEO budget buys
+        UK SEO packages: what each monthly budget buys
       </h2>
       <p className={pCls}>
-        The gap between price bands is a gap in hours. <a href={SRC.renhao} {...extLinkProps}>Ren Hao SEO</a> gives a
+        SEO packages in the UK are priced in bands, and the gap between bands is a gap in hours. <a href={SRC.renhao} {...extLinkProps}>Ren Hao SEO</a>{' '}gives a
         useful yardstick: at the £2,500 median, a healthy programme shows around 25 to 35 senior hours, two to four
         substantial pages and a steady flow of earned links a month. Open each band to see what the UK guides say you
         should get.
@@ -502,12 +512,12 @@ export const post: BlogPost = {
           </summary>
           <div className="mt-3 text-gray-700 leading-relaxed text-sm md:text-base space-y-2">
             <p>
-              <strong>What you get:</strong> basic on-page tweaks, a monthly report and a little content, according to{' '}
+              <strong>What you get:</strong>{' '}basic on-page tweaks, a monthly report and a little content, according to{' '}
               <a href={SRC.gorilla} {...extLinkProps}>Gorilla Marketing</a>. Narrow local packages, such as DPOM from
               £185 a month (via Expert Sure), cover a Business Profile, citations and local page work.
             </p>
             <p>
-              <strong>Suits:</strong> one location in a quiet trade, where upkeep is all you need.
+              <strong>Suits:</strong>{' '}one location in a quiet trade, where upkeep is all you need.
             </p>
           </div>
         </details>
@@ -517,12 +527,12 @@ export const post: BlogPost = {
           </summary>
           <div className="mt-3 text-gray-700 leading-relaxed text-sm md:text-base space-y-2">
             <p>
-              <strong>What you get:</strong> keyword research, technical fixes, some content and light link earning.
+              <strong>What you get:</strong>{' '}keyword research, technical fixes, some content and light link earning.
               Gorilla calls this the band where local and small businesses start seeing real results; the agency has
               to prioritise, because hours are limited.
             </p>
             <p>
-              <strong>Suits:</strong> local service businesses, clinics and trades covering one town or a few.
+              <strong>Suits:</strong>{' '}local service businesses, clinics and trades covering one town or a few.
             </p>
           </div>
         </details>
@@ -532,12 +542,12 @@ export const post: BlogPost = {
           </summary>
           <div className="mt-3 text-gray-700 leading-relaxed text-sm md:text-base space-y-2">
             <p>
-              <strong>What you get:</strong> regular content, ongoing technical monitoring, steady link earning and
+              <strong>What you get:</strong>{' '}regular content, ongoing technical monitoring, steady link earning and
               strategic oversight, with reporting on what is working. Gorilla calls it the sweet spot for many small
               and medium businesses; Ren Hao&apos;s growth band of £1,500 to £5,000 starts here.
             </p>
             <p>
-              <strong>Suits:</strong> firms competing across a city or region, B2B service firms, smaller online
+              <strong>Suits:</strong>{' '}firms competing across a city or region, B2B service firms, smaller online
               stores.
             </p>
           </div>
@@ -548,11 +558,11 @@ export const post: BlogPost = {
           </summary>
           <div className="mt-3 text-gray-700 leading-relaxed text-sm md:text-base space-y-2">
             <p>
-              <strong>What you get:</strong> a coordinated team of strategist, writers, link builders and technical
+              <strong>What you get:</strong>{' '}a coordinated team of strategist, writers, link builders and technical
               specialists, working across several keyword groups, often at national level.
             </p>
             <p>
-              <strong>Suits:</strong> ecommerce stores with many categories, SaaS companies, multi-location brands.
+              <strong>Suits:</strong>{' '}ecommerce stores with many categories, SaaS companies, multi-location brands.
             </p>
           </div>
         </details>
@@ -562,11 +572,11 @@ export const post: BlogPost = {
           </summary>
           <div className="mt-3 text-gray-700 leading-relaxed text-sm md:text-base space-y-2">
             <p>
-              <strong>What you get:</strong> senior strategy, large content programmes, digital PR and dedicated
+              <strong>What you get:</strong>{' '}senior strategy, large content programmes, digital PR and dedicated
               resource. Ren Hao&apos;s enterprise band runs to £25,000+ a month.
             </p>
             <p>
-              <strong>Suits:</strong> national retailers, finance and health brands, large catalogues.
+              <strong>Suits:</strong>{' '}national retailers, finance and health brands, large catalogues.
             </p>
           </div>
         </details>
@@ -575,9 +585,9 @@ export const post: BlogPost = {
       <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 md:p-6 mb-8">
         <p className="font-bold text-gray-900 mb-3">Which band fits you? Tick what applies.</p>
         <ul className="space-y-2 text-sm md:text-base text-gray-700">
-          <li className="flex items-start gap-2"><span className="text-[#B23E13] font-bold">&#10003;</span><span>Customers find you by searching a service plus a town: start in the <strong>£500 to £1,500</strong> band. See <a href="/uk/local-seo" className={linkCls}>local SEO in the UK</a>.</span></li>
+          <li className="flex items-start gap-2"><span className="text-[#B23E13] font-bold">&#10003;</span><span>Customers find you by searching a service plus a town: start in the <strong>£500 to £1,500</strong>{' '}band. See <a href="/uk/local-seo" className={linkCls}>local SEO in the UK</a>.</span></li>
           <li className="flex items-start gap-2"><span className="text-[#B23E13] font-bold">&#10003;</span><span>You sell to other businesses across the UK, with a few high-value services: plan for <strong>£1,500 to £5,000</strong>.</span></li>
-          <li className="flex items-start gap-2"><span className="text-[#B23E13] font-bold">&#10003;</span><span>You run an online store with dozens of categories: budget <strong>£2,000 upward</strong>. See <a href="/uk/ecommerce-seo" className={linkCls}>ecommerce SEO</a> and <a href="/uk/shopify-seo" className={linkCls}>Shopify SEO</a>.</span></li>
+          <li className="flex items-start gap-2"><span className="text-[#B23E13] font-bold">&#10003;</span><span>You run an online store with dozens of categories: budget <strong>£2,000 upward</strong>. See <a href="/uk/ecommerce-seo" className={linkCls}>ecommerce SEO</a>{' '}and <a href="/uk/shopify-seo" className={linkCls}>Shopify SEO</a>.</span></li>
           <li className="flex items-start gap-2"><span className="text-[#B23E13] font-bold">&#10003;</span><span>Your site is slow, was rebuilt recently or lost traffic: buy an <strong>audit first</strong>, then decide.</span></li>
         </ul>
       </div>
@@ -585,7 +595,7 @@ export const post: BlogPost = {
       {/* Mid-page CTA */}
       <div className="bg-white border-2 border-[#F05A28] rounded-2xl p-6 md:p-8 my-10">
         <p className="text-xs font-mono uppercase tracking-wider text-[#B23E13] mb-2">Before you sign an SEO package</p>
-        <p className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">
+        <p className="text-xl md:text-2xl font-fj-display font-extrabold tracking-[-0.03em] text-gray-900 mb-3">
           Find out what your site needs, then compare quotes
         </p>
         <p className="text-gray-700 leading-relaxed mb-5">
@@ -608,31 +618,31 @@ export const post: BlogPost = {
       </h2>
       <ol className="list-decimal pl-6 space-y-3 mb-6 text-gray-700">
         <li>
-          <strong>How crowded your searches are.</strong> Gorilla Marketing names scope and competition as the
+          <strong>How crowded your searches are.</strong>{' '}Gorilla Marketing names scope and competition as the
           biggest cost drivers. A Bath dog groomer and a London personal injury firm do not need the same number of hours.
         </li>
         <li>
-          <strong>Where you start.</strong> A site with years of links and clean code needs less repair than a new
+          <strong>Where you start.</strong>{' '}A site with years of links and clean code needs less repair than a new
           one. If competitors have invested for years, closing the gap costs more.
         </li>
         <li>
-          <strong>How many pages need work.</strong> Ecommerce costs more because every category and product page
+          <strong>How many pages need work.</strong>{' '}Ecommerce costs more because every category and product page
           is a page to rank. Gorilla contrasts a 50-product Shopify store with a 10,000-SKU retailer.
         </li>
         <li>
-          <strong>How many locations you target.</strong> Muve Marketing moves multi-location campaigns into its
+          <strong>How many locations you target.</strong>{' '}Muve Marketing moves multi-location campaigns into its
           £1,500+ band because each place needs its own page and listing.
         </li>
         <li>
-          <strong>Your sector.</strong> Gorilla puts health and finance, where Google applies stricter checks on
+          <strong>Your sector.</strong>{' '}Gorilla puts health and finance, where Google applies stricter checks on
           &ldquo;Your Money or Your Life&rdquo; content, at £5,000 a month or more.
         </li>
         <li>
-          <strong>Who does the work.</strong> Senior hours cost more. The same headline fee can buy a senior
+          <strong>Who does the work.</strong>{' '}Senior hours cost more. The same headline fee can buy a senior
           specialist or a junior on a busy account.
         </li>
         <li>
-          <strong>Where the agency sits.</strong> Gorilla says London agencies typically charge 20 to 40 per cent
+          <strong>Where the agency sits.</strong>{' '}Gorilla says London agencies typically charge 20 to 40 per cent
           more than regional firms for equivalent work.
         </li>
       </ol>
@@ -659,8 +669,8 @@ export const post: BlogPost = {
       <p className={pCls}>
         Read SEO prices in the UK as before VAT unless they say otherwise. Ren Hao SEO says UK SEO is typically quoted
         excluding VAT, and the starting prices Expert Sure lists all exclude it. The standard rate is{' '}
-        <a href={SRC.vatRates} {...extLinkProps}>20 per cent</a> (GOV.UK). A provider must register for VAT once its
-        taxable turnover passes <a href={SRC.vatThreshold} {...extLinkProps}>£90,000</a> (GOV.UK), so a small
+        <a href={SRC.vatRates} {...extLinkProps}>20 per cent</a>{' '}(GOV.UK). A provider must register for VAT once its
+        taxable turnover passes <a href={SRC.vatThreshold} {...extLinkProps}>£90,000</a>{' '}(GOV.UK), so a small
         freelancer may charge none.
       </p>
       <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 md:p-6 mb-8">
@@ -680,18 +690,18 @@ export const post: BlogPost = {
         Affordable SEO and low cost SEO services can be useful when the scope is small and honest. These signs suggest it is neither.
       </p>
       <ol className="list-decimal pl-6 space-y-2 mb-6 text-gray-700">
-        <li><strong>Guaranteed rankings.</strong> Google&apos;s <a href={SRC.googleSeo} {...extLinkProps}>advice on hiring an SEO</a> says no one can guarantee a number-one ranking on Google.</li>
-        <li><strong>Bulk links for a small fee.</strong> LOCALiQ tells buyers offered 50 links a month for £200 to ask where they come from.</li>
-        <li><strong>Full service at a rock-bottom price.</strong> Gorilla Marketing asks who does the work on a £300 a month full-service campaign; the answer is usually a checklist and an automated report.</li>
-        <li><strong>Everything for under £750.</strong> Ren Hao SEO says that outside a single-location local campaign, that budget funds one of content, technical work or links, not all three.</li>
-        <li><strong>A price before anyone looks at your site.</strong> A quote on a first call cannot know whether you need one fix or a year of work.</li>
-        <li><strong>Reports full of activity.</strong> Directory submissions and keyword counts are not outcomes; ask for enquiries and sales from search.</li>
-        <li><strong>The provider owns your accounts.</strong> You should own your Search Console, Analytics and Google Business Profile.</li>
-        <li><strong>A long lock-in before anything is proven.</strong> Gorilla Marketing flags agencies that insist on 12-month minimum contracts up front. Check the notice period too: Expert Sure found DPOM gives 31 days and Terrier 60.</li>
+        <li><strong>Guaranteed rankings.</strong>{' '}Google&apos;s <a href={SRC.googleSeo} {...extLinkProps}>advice on hiring an SEO</a>{' '}says no one can guarantee a number-one ranking on Google.</li>
+        <li><strong>Bulk links for a small fee.</strong>{' '}LOCALiQ tells buyers offered 50 links a month for £200 to ask where they come from.</li>
+        <li><strong>Full service at a rock-bottom price.</strong>{' '}Gorilla Marketing asks who does the work on a £300 a month full-service campaign; the answer is usually a checklist and an automated report.</li>
+        <li><strong>Everything for under £750.</strong>{' '}Ren Hao SEO says that outside a single-location local campaign, that budget funds one of content, technical work or links, not all three.</li>
+        <li><strong>A price before anyone looks at your site.</strong>{' '}A quote on a first call cannot know whether you need one fix or a year of work.</li>
+        <li><strong>Reports full of activity.</strong>{' '}Directory submissions and keyword counts are not outcomes; ask for enquiries and sales from search.</li>
+        <li><strong>The provider owns your accounts.</strong>{' '}You should own your Search Console, Analytics and Google Business Profile.</li>
+        <li><strong>A long lock-in before anything is proven.</strong>{' '}Gorilla Marketing flags agencies that insist on 12-month minimum contracts up front. Check the notice period too: Expert Sure found DPOM gives 31 days and Terrier 60.</li>
       </ol>
       <p className="mb-6 text-gray-700 leading-relaxed">
         If you want a shortlist rather than a checklist, our{' '}
-        <a href="/blog/best-seo-agencies-uk" className={linkCls}>guide to UK SEO agencies</a> compares named firms.
+        <a href="/blog/best-seo-agencies-uk" className={linkCls}>guide to UK SEO agencies</a>{' '}compares named firms.
       </p>
 
       {/* Section: AI search */}
@@ -705,7 +715,7 @@ export const post: BlogPost = {
       </p>
       <p className={pCls}>
         Start with Google&apos;s own position. Its{' '}
-        <a href={SRC.googleAi} {...extLinkProps}>guidance on AI features</a> says there are no additional requirements
+        <a href={SRC.googleAi} {...extLinkProps}>guidance on AI features</a>{' '}says there are no additional requirements
         to appear in AI Overviews or AI Mode, and no special optimisations needed beyond normal search requirements. So
         an &ldquo;AI SEO&rdquo; fee for Google alone should buy the same sound work, done well.
       </p>
@@ -718,17 +728,17 @@ export const post: BlogPost = {
       </p>
       <p className={pCls}>What to ask for in a 2026 proposal:</p>
       <ol className="list-decimal pl-6 space-y-2 mb-4 text-gray-700">
-        <li><strong>Pages that answer the questions buyers ask,</strong> with numbers, sources and dates in the first lines.</li>
-        <li><strong>Structured data</strong> that matches what is on the page, especially for FAQs and services.</li>
-        <li><strong>Tracking of AI answers</strong> for your key questions in ChatGPT, Perplexity and Google, reported next to rankings.</li>
-        <li><strong>Mentions on other real sites,</strong> because assistants name businesses that other sources name.</li>
+        <li><strong>Pages that answer the questions buyers ask,</strong>{' '}with numbers, sources and dates in the first lines.</li>
+        <li><strong>Structured data</strong>{' '}that matches what is on the page, especially for FAQs and services.</li>
+        <li><strong>Tracking of AI answers</strong>{' '}for your key questions in ChatGPT, Perplexity and Google, reported next to rankings.</li>
+        <li><strong>Mentions on other real sites,</strong>{' '}because assistants name businesses that other sources name.</li>
       </ol>
       <p className="mb-6 text-gray-700 leading-relaxed">
-        <a href={SRC.renhao} {...extLinkProps}>Ren Hao SEO</a> notes that providers with no AI search capability may be
+        <a href={SRC.renhao} {...extLinkProps}>Ren Hao SEO</a>{' '}notes that providers with no AI search capability may be
         cheaper because they offer less. You can see where you stand today with our free{' '}
         <a href="/ai-visibility-checker" className={linkCls}>AI visibility checker</a>. Our{' '}
-        <a href="/uk/ai-seo" className={linkCls}>AI SEO service for UK businesses</a> explains the work, and our list
-        of <a href="/blog/best-ai-seo-agencies-uk" className={linkCls}>AI SEO agencies in the UK</a> compares
+        <a href="/uk/ai-seo" className={linkCls}>AI SEO service for UK businesses</a>{' '}explains the work, and our list
+        of <a href="/blog/best-ai-seo-agencies-uk" className={linkCls}>AI SEO agencies in the UK</a>{' '}compares
         providers.
       </p>
 
@@ -742,7 +752,7 @@ export const post: BlogPost = {
         can compare; we have not reviewed their services, and the list leaves out a LinkedIn post.
       </p>
       <div className="overflow-x-auto my-6 border border-gray-200 rounded-xl shadow-sm">
-        <table className="min-w-full border-collapse bg-white text-sm">
+        <table className="w-full min-w-full border-collapse bg-white text-sm">
           <thead className="bg-gray-900 text-white">
             <tr>
               <th className={thCls}>Site</th>
@@ -772,15 +782,16 @@ export const post: BlogPost = {
         How to set your SEO budget in 5 steps
       </h2>
       <ol className="list-decimal pl-6 space-y-3 mb-6 text-gray-700">
-        <li><strong>Work out what a customer is worth.</strong> Use profit per customer over a year, not one sale.</li>
-        <li><strong>Know your close rate.</strong> If you win one enquiry in four, you need four enquiries per new customer.</li>
+        <li><strong>Work out what a customer is worth.</strong>{' '}Use profit per customer over a year, not one sale.</li>
+        <li><strong>Know your close rate.</strong>{' '}If you win one enquiry in four, you need four enquiries per new customer.</li>
         <li>
-          <strong>Find your break-even.</strong> Expert Sure&apos;s worked example: £9,720 over six months (a £1,000
-          retainer, £1,200 of developer work, £300 a month of content and staff time) at £300 profit per customer
-          needs 32.4, so 33, extra customers. At one in four enquiries converting, that is about 132 extra enquiries.
+          <strong>Find your break-even.</strong>{' '}Expert Sure&apos;s worked example costs £9,720 over six months: a
+          £1,000 a month retainer (£6,000), £1,200 of developer work, £300 a month of content (£1,800) and four hours a
+          month of staff review time at £30 an hour (£720). At £300 profit per customer that needs 32.4, so 33, extra
+          customers. At one in four enquiries converting, that is about 132 extra enquiries.
         </li>
-        <li><strong>Check it is realistic.</strong> Google Search Console shows how often you already appear for your services. A few extra enquiries a month is a sensible first target.</li>
-        <li><strong>Ask for a phased plan.</strong> Separate one-off repairs from ongoing work, so you can stop after the first phase if it does not deliver.</li>
+        <li><strong>Check it is realistic.</strong>{' '}Google Search Console shows how often you already appear for your services. A few extra enquiries a month is a sensible first target.</li>
+        <li><strong>Ask for a phased plan.</strong>{' '}Separate one-off repairs from ongoing work, so you can stop after the first phase if it does not deliver.</li>
       </ol>
       <p className="mb-6 text-gray-700 leading-relaxed">
         Most sites take months to move. Our{' '}
@@ -788,7 +799,7 @@ export const post: BlogPost = {
         sets expectations. If your website needs replacing before SEO can work, our{' '}
         <a href="/blog/ecommerce-website-cost-uk-2026" className={linkCls}>ecommerce website cost guide for the UK</a>{' '}
         covers the build. Buying in the US or Australia? See our{' '}
-        <a href="/blog/seo-cost-small-business-2026" className={linkCls}>US small business SEO cost guide</a> and{' '}
+        <a href="/blog/seo-cost-small-business-2026" className={linkCls}>US small business SEO cost guide</a>{' '}and{' '}
         <a href="/blog/seo-cost-australia-2026" className={linkCls}>SEO cost guide for Australia</a>.
       </p>
 
@@ -805,22 +816,17 @@ export const post: BlogPost = {
         Our focus is ecommerce stores, AI-ready websites and service businesses that want to be found in Google and in
         AI assistants. We design, build and fix the site, run the SEO, and support it after launch, and you own
         everything: the site, the content and the accounts. FactoryJet was founded in 2014 and has worked with more
-        than 500 businesses, including B2B wholesaler Bombay Petals and direct-to-consumer brand Belle Maison.
+        than 500 businesses, including GPSUK (on Commerceflo), DTF (on Shopify) and Mannik (on WooCommerce).
       </p>
       <p className="mb-6 text-gray-700 leading-relaxed">
         Start with our <a href="/uk/seo" className={linkCls}>SEO services in the UK</a>, see everything we do on{' '}
         <a href="/uk" className={linkCls}>FactoryJet UK</a>, or{' '}
-        <a href="/contact" className={linkCls}>talk to the founder</a> about your site.
+        <a href="/contact" className={linkCls}>talk to the founder</a>{' '}about your site.
       </p>
 
       {/* Author box */}
       <div className="bg-white border border-gray-200 rounded-xl p-5 md:p-6 my-8">
-        <p className="text-sm text-gray-700 leading-relaxed">
-          <strong className="text-gray-900">About the author.</strong> Bhavesh Barot is the Founder &amp; CEO of
-          FactoryJet. He has spent more than a decade building commerce websites and search programs, and leads the
-          team that builds and supports ecommerce stores, AI agents and SEO for UK, US and Australian businesses.
-        </p>
-        <p className="text-xs text-gray-500 mt-3">
+        <p className="text-xs text-gray-500">
           Price sources fetched and read on 21 October 2026:{' '}
           <a href={SRC.gorilla} {...extLinkProps}>Gorilla Marketing</a>,{' '}
           <a href={SRC.localiq} {...extLinkProps}>LOCALiQ</a>,{' '}
@@ -830,7 +836,11 @@ export const post: BlogPost = {
           <a href={SRC.itamar} {...extLinkProps}>Itamar Blauer</a>,{' '}
           <a href={SRC.expertsure} {...extLinkProps}>Expert Sure</a>,{' '}
           <a href={SRC.autoseo} {...extLinkProps}>Auto-SEO</a>; VAT from{' '}
-          <a href={SRC.vatRates} {...extLinkProps}>GOV.UK</a>. Published prices change; confirm with each provider.
+          <a href={SRC.vatRates} {...extLinkProps}>GOV.UK</a>. Checked on 31 October 2026:{' '}
+          <a href={SRC.gscPerformance} {...extLinkProps}>Search Console Performance report</a>,{' '}
+          <a href={SRC.googleGenAi} {...extLinkProps}>Google on generative AI content</a>{' '}and{' '}
+          <a href={SRC.screamingFrog} {...extLinkProps}>Screaming Frog pricing</a>. Published prices change; confirm
+          with each provider.
         </p>
       </div>
 

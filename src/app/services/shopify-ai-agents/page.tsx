@@ -7,6 +7,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import ShopifyAiAgentsSections, { AGENT_JOBS, SHOPIFY_AI_H1_EMPHASIS, SHOPIFY_AI_H1_LEAD, shopifyAiBreadcrumbs } from '@/components/v2/ShopifyAiAgentsSections';
 import { SHOPIFY_AI_FAQS } from '@/components/v2/ShopifyAiAgentsFaqs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { twinAlternates } from '@/data/hreflangMap';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/shopify-ai-agents: custom AI agents for Shopify store operations, US.
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: PAGE_URL,
-    languages: { 'en-US': PAGE_URL, 'x-default': PAGE_URL },
+    languages: twinAlternates['shopify-ai-agents'],
   },
   robots: {
     index: true,

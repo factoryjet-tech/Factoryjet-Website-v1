@@ -8,7 +8,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import WebsiteMaintenanceSections, { wmBreadcrumbs, CAPABILITIES, PROVIDERS } from '@/components/v2/WebsiteMaintenanceSections';
 import { WM_FAQS } from '@/components/v2/WebsiteMaintenanceFaqs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
-import { websiteMaintenanceAlternates } from '@/data/hreflangMap';
+import { twinAlternates } from '@/data/hreflangMap';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/website-maintenance: general website maintenance hub for the US.
@@ -27,8 +27,8 @@ import { websiteMaintenanceAlternates } from '@/data/hreflangMap';
    the FAQPage JSON-LD below. Service offers come from CAPABILITIES and the ItemList from
    PROVIDERS, the same arrays the page renders. Every schema const declared here is
    rendered into a script tag; do not add one without wiring it up.
-   Hreflang: websiteMaintenanceAlternates in src/data/hreflangMap.ts, reciprocal with
-   /au/website-maintenance (en-US, en-AU; x-default = this page).
+   Hreflang: twinAlternates['website-maintenance'] in src/data/hreflangMap.ts, reciprocal
+   with /uk and /au/website-maintenance (x-default = this page).
 ───────────────────────────────────────────────────────────────────────────── */
 
 const PAGE_URL = 'https://factoryjet.com/services/website-maintenance';
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: PAGE_URL,
-    languages: websiteMaintenanceAlternates,
+    languages: twinAlternates['website-maintenance'],
   },
   robots: {
     index: true,

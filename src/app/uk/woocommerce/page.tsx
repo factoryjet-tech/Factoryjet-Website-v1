@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/woocommerce';
@@ -200,7 +201,7 @@ export const metadata: Metadata = {
   title: 'WooCommerce Agency UK | WooCommerce Developers | FactoryJet',
   description:
     'WooCommerce agency for UK shops. WooCommerce developers for new stores, custom plugins, speed fixes, Xero and courier integrations, and ongoing support.',
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['woocommerce'] },
   openGraph: {
     title: 'WooCommerce Agency UK | WooCommerce Developers | FactoryJet',
     description:

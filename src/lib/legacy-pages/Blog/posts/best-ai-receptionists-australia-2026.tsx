@@ -235,7 +235,11 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'How much does an AI receptionist cost in Australia?',
-    a: 'Published entry plans on 21 October 2026 ran from A$20 a month plus GST for 10 calls (OfficeHQ MyAI) and A$49 a month ex GST for 60 minutes (Johnni, Voxworks) up to about A$1,500 a month for 2,500 minutes (MayaAI). Most mid-size plans sat between A$149 and A$499 a month. Check whether a plan counts calls or minutes, and whether GST is included.',
+    a: 'Published entry plans on 21 October 2026 ran from A$20 a month plus GST for 10 calls (OfficeHQ MyAI) to A$249 a month plus GST for 600 minutes (Nexwin). Top plans reach about A$1,500 a month for 2,500 minutes (MayaAI). Most mid-size plans sat between A$149 and A$499 a month. Before you compare an AI receptionist price, check whether the plan counts calls or minutes, and whether GST is included.',
+  },
+  {
+    q: 'How much is an AI receptionist worth to my business?',
+    a: 'Count before you buy. Take last month’s phone log and add up the calls you missed, the calls that came after hours, and the voicemails nobody returned that day. Then ask how many of those callers would have booked a job or an appointment. If that number of jobs is worth more than the monthly plan, the receptionist pays its way. If you rarely miss a call, it may not.',
   },
   {
     q: 'What is the cheapest AI receptionist in Australia?',
@@ -262,6 +266,10 @@ const FAQS: FAQItem[] = [
     a: 'Your calls forward to the AI. It answers in a natural voice, works out what the caller wants, asks the questions you set, checks your calendar or job software, and books, takes a message or transfers to a person. It then sends you a summary by text or email. The quality depends on the questions and rules you give it, so expect to tune it in the first two weeks.',
   },
   {
+    q: 'What is the best AI receptionist for tradies in Australia?',
+    a: 'Pick by your job software. On ServiceM8 or Simpro, Sophiie lists a two-way sync with both, while Johnni connects them as a quoted custom add-on. On AroFlo or Fergus, Voxworks names them on its trades page. On Tradify, none of the 13 names it, so the practical route is an AI receptionist for tradies that books into Google Calendar, which Tradify connects to. Johnni, Nexwin and Voxworks all list Google Calendar.',
+  },
+  {
     q: 'Which AI receptionist works with ServiceM8?',
     a: 'Sophiie lists a two-way ServiceM8 sync. AIssie, Miyai (Growth plan), Nexwin and AiDial list ServiceM8 too, Johnni connects it as a quoted custom add-on, and Valory lists it as an integration to discuss. OneBookPlus says it does not connect to ServiceM8. ServiceM8’s public add-on directory listed no AI receptionist on 21 October 2026, so ask each vendor what its connection writes into a job.',
   },
@@ -270,12 +278,12 @@ const FAQS: FAQItem[] = [
     a: 'Lyngo, MayaAI and AiDial all name Cliniko on their own sites. Cliniko’s own connected-apps directory listed eleven AI receptionist or AI phone products on 21 October 2026, including Lyngo, Aeva, BookedSolid and Solium AI. Ask whether the product books straight into your Cliniko diary or only sends you a request to book.',
   },
   {
-    q: 'Is there an AI receptionist for Core Practice or Dental4Windows?',
-    a: 'None of the 13 products we profiled names Core Practice or Dental4Windows (Centaur) on its own site. Core Practice’s marketplace listed DentalFlo AI, Lumie and Patientdesk.ai on 21 October 2026, and its developer access is for approved partners only. If you need one of those systems, start with the marketplace, or ask a builder whether they hold partner access.',
+    q: 'What is the best AI receptionist for dentists in Australia?',
+    a: 'Start with your practice software. None of the 13 products we profiled names Core Practice or Dental4Windows (Centaur) on its own site. Core Practice’s own marketplace listed DentalFlo AI, Lumie and Patientdesk.ai on 21 October 2026. Among the 13, MayaAI, Valory and Miyai name dental practices as customers they serve, but none names a dental practice system. Ask any AI receptionist for dentists whether it books into your diary or only emails the front desk.',
   },
   {
     q: 'Which AI receptionist works with Tradify?',
-    a: 'None of the products we checked names Tradify as a standard connection. Waboom says it has wired Tradify as custom work. Tradify’s own connections page named only Xero, QuickBooks, Stripe and Google Calendar on 21 October 2026, and we found no public developer API. The practical route today is a receptionist that books into Google Calendar, which Tradify connects to.',
+    a: 'None of the 13 products we profiled names Tradify as a standard connection. Waboom, a New Zealand company, says its agent reads project schedules from Tradify. Tradify’s own connections page named only Xero, QuickBooks, Stripe and Google Calendar on 21 October 2026, and we found no public developer API. The practical route today is a receptionist that books into Google Calendar, which Tradify connects to.',
   },
   {
     q: 'Which AI medical receptionist is best in Australia?',
@@ -311,19 +319,15 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Are AI receptionists legit?',
-    a: 'The ones on this list are real Australian businesses. Each shows an Australian company, ABN or address on its own site, except Johnni and Nexwin, which state where they are based without an ABN on the pages we read. Ask for the legal entity on your invoice, read the terms on lock-in and setup fees, and use the free trial before paying.',
+    a: 'The ones on this list are real Australian businesses. Each shows an Australian company, ABN or address on its own site, except Johnni and Nexwin, which state where they are based without an ABN on the pages we read. Ask for the ABN on your invoice before paying, read the terms on lock-in and setup fees, and use the free trial before paying.',
   },
   {
     q: 'When is a custom AI receptionist better than an app?',
-    a: 'When your calls depend on rules no app can hold, such as job priority by suburb, quote logic, or several systems at once. Also when your software is not on any product’s list, or when you need control over where data goes. A custom build costs more up front; market guides put a single-purpose voice agent at roughly US$3,000 to US$12,000 to build. Those are market ranges, not our prices.',
+    a: 'When your calls depend on rules no app can hold, such as job priority by suburb, quote logic, or several systems at once. Also when your software is not on any product’s list, or when you need control over where data goes. FactoryJet builds these for one business at a time and does not sell an app. A custom build costs more up front; Groovy Web’s July 2026 guide puts a single-purpose voice agent at US$3,000 to US$12,000 to build. That is a market range, not our price.',
   },
   {
     q: 'How long does it take to set up an AI receptionist?',
     a: 'A self-serve product can answer calls the same day you sign up, once you forward your number and write its greeting and questions. Plan on two weeks of listening to recordings and adjusting before you trust it after hours. Managed services such as Valory, and products with a scope of work such as AiDial, take longer because someone designs the call flow with you first.',
-  },
-  {
-    q: 'Does FactoryJet sell an AI receptionist app?',
-    a: 'No. We design, build and support custom AI receptionists for one business at a time, wired into that business’s job or practice software and handover rules, and you own what we build. We show it working on your own call types before you sign. If an app above already fits your software and calls, it will be quicker to start with that.',
   },
 ];
 
@@ -336,7 +340,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 22, 2026',
-  dateModified: 'Oct 22, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '18 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageAlt:
@@ -344,7 +348,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Best AI Receptionists Australia 2026: 13 Compared',
     description:
-      'AI receptionists sold in Australia compared: list prices with GST, ServiceM8 and Cliniko connections, where call data is kept, and who each suits.',
+      'AI receptionists sold in Australia compared, from A$20 a month + GST: ServiceM8 and Cliniko connections, where call data is kept, and who each suits.',
   },
   keyTakeaways: [
     'There is no single best AI receptionist in Australia. Choose by the software you already use: job software for trades, practice software for clinics.',
@@ -367,16 +371,16 @@ export const post: BlogPost = {
               url: PAGE_URL,
               name: 'Best AI Receptionists in Australia (2026): 13 Compared, Plus Us',
               description:
-                'AI receptionists sold in Australia compared: list prices with GST, ServiceM8 and Cliniko connections, where call data is kept, and who each suits.',
+                'AI receptionists sold in Australia compared, from A$20 a month + GST: ServiceM8 and Cliniko connections, where call data is kept, and who each suits.',
               inLanguage: 'en-AU',
               datePublished: '2026-10-22',
-              dateModified: '2026-10-22',
+              dateModified: '2026-10-31',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI receptionist software in Australia' },
               speakable: {
                 '@type': 'SpeakableSpecification',
-                cssSelector: ['#answer-first', 'h1', 'h2'],
+                cssSelector: ['#answer-first', 'h1'],
               },
             },
             {
@@ -397,7 +401,7 @@ export const post: BlogPost = {
       />
 
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
-        <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
+        <p className="text-xs font-mono uppercase tracking-wider text-[#B23E13] mb-2" style={{ fontFamily: 'var(--font-geist-mono), ui-monospace, monospace' }}>The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
           The best AI receptionist in Australia is the one that books into the software you already use. For trades on ServiceM8 or Simpro, start with Sophiie, then Johnni, Nexwin and AIssie. For allied health on Cliniko or Nookal, Lyngo and MayaAI. For GP practices on Best Practice, MayaAI and HealthEngine Helen. If your data must stay onshore, AiDial. If you want it set up and run for you, Valory.
         </p>
@@ -406,21 +410,8 @@ export const post: BlogPost = {
         </p>
       </div>
 
-      <figure className="mb-8 not-prose">
-        <img
-          src={`${IMG}-hero.webp`}
-          width={1400}
-          height={933}
-          fetchPriority="high"
-          decoding="async"
-          alt="Over the shoulder of a Brisbane tradesman in a navy polo sitting in the open side door of his white van, checking a simple list on his phone under a jacaranda tree"
-          className="w-full h-auto rounded-xl"
-        />
-        <figcaption className="text-sm text-gray-600 mt-2">The calls an AI receptionist catches are the ones you cannot take: on the tools, with a patient, or after hours.</figcaption>
-      </figure>
-
       <p className="mb-4">
-        &ldquo;AI receptionist australia&rdquo; gets about 480 Google searches a month, at A$16.22 a click for advertisers (Google Ads data, pulled 21 October 2026). On the same day we ran that search and 13 more like it in Google Australia: &ldquo;ai receptionist for tradies&rdquo;, &ldquo;ai receptionist for dental clinic&rdquo;, &ldquo;ai receptionist cliniko&rdquo;, &ldquo;ai receptionist servicem8&rdquo; and others. Google showed an AI Overview on all 14. The first page for the main phrase held seven product pages and three guides: two from companies that sell AI receptionists and one from an AI agency.
+        On 21 October 2026 we ran 14 searches in Google Australia, such as &ldquo;ai receptionist australia&rdquo;, &ldquo;ai receptionist for tradies&rdquo;, &ldquo;ai receptionist for dental clinic&rdquo; and &ldquo;ai receptionist cliniko&rdquo;. The first page for the main phrase held seven product pages (Sophiie, AiDial, OneBookPlus, Miyai, AutoReception, Voxworks and Johnni) and three guides: two from companies that sell AI receptionists (Hey Jodie, VerticalAI) and one from an AI agency (Aivy). Most of those lists are written by a vendor about its own market. This one names the software each product connects to and prints every published price with its GST wording.
       </p>
       <p className="mb-4">
         So we read the products themselves. For each one we opened its homepage, pricing page, integrations page and terms on 21 October 2026, and wrote down only what it says about itself: who runs it, what it does, which software it connects to, where it keeps call data, and its list price with the GST wording exactly as printed. Thirteen get a full profile. Five more get a short note saying why they are not profiled.
@@ -432,13 +423,17 @@ export const post: BlogPost = {
       <p className="mb-6">
         Three terms in plain English. An <strong>AI receptionist</strong> is software that answers your business phone in a natural voice, asks the questions you set and books, takes a message or transfers the call. A <strong>warm transfer</strong> means the AI tells your team member who is calling and why before connecting them. <strong>Job software</strong> (ServiceM8, Simpro, Tradify) and <strong>practice software</strong> (Cliniko, Halaxy, Best Practice, Core Practice) hold your bookings, and the receptionist is only as useful as its connection to them.
       </p>
+      <p className="mb-6">
+        Four more you will see below. An <strong>ABN</strong> or <strong>ACN</strong> is the Australian Business Number or Australian Company Number that shows who you are paying. A <strong>CRM</strong> is the system that holds your customer list and sales pipeline. An <strong>API</strong> or <strong>webhook</strong> is the doorway one piece of software uses to send data into another.
+      </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The shortlist at a glance</h2>
       <p className="mb-4">
-        Find your software in the third column first. Then read those profiles in full.
+        Find your software in the &ldquo;Connects to&rdquo; column first. Then read those profiles in full.
       </p>
-      <div className="overflow-x-auto mb-8 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-sm text-gray-600 mb-2 not-prose">Swipe sideways to see every column.</p>
+      <div className="overflow-x-auto mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 720 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Product</th>
@@ -485,7 +480,6 @@ export const post: BlogPost = {
           <ul className="list-disc pl-6 mb-3 space-y-1">
             <li><strong>Best for:</strong> {p.bestFor}</li>
             <li><strong>Connects to:</strong> {p.connects}</li>
-            <li><strong>Published price:</strong> {p.price}</li>
             <li><strong>Worth asking them:</strong> {p.ask}</li>
           </ul>
           <p className="text-sm text-gray-600">
@@ -536,8 +530,9 @@ export const post: BlogPost = {
       <p className="mb-4">
         Eleven of the 13 products publish prices. We copied them exactly on 21 October 2026, sorted by entry price. These are each product&rsquo;s own list prices, not FactoryJet prices. Sophiie and HealthEngine Helen quote after a demo.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-sm text-gray-600 mb-2 not-prose">Swipe sideways to see every column.</p>
+      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 820 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Product</th>
@@ -576,7 +571,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Which software each AI receptionist connects to</h2>
       <p className="mb-4">
-        This is where the products differ most, and where most buyers choose wrong. A receptionist that only texts you a summary still leaves you typing the job in at 9pm. Here is what each product names on its own site, grouped by the software Australian businesses told Google they use.
+        This is where the products differ most. A receptionist that only texts you a summary still leaves you typing the job in at 9pm. Here is what each product names on its own site, grouped by the software Australian businesses told Google they use.
       </p>
       <div className="overflow-x-auto mb-4 not-prose">
         <table className="w-full border-collapse text-sm">
@@ -602,7 +597,14 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-6">
-        We also opened the software makers&rsquo; own directories that day. Cliniko&rsquo;s connected-apps page listed eleven AI receptionist or AI phone products. Core Practice&rsquo;s marketplace listed three (DentalFlo AI, Lumie and Patientdesk.ai), and its developer access is for approved partners only. ServiceM8&rsquo;s public add-on directory listed no AI receptionist at all; its only phone item was its own ServiceM8 Phone. Tradify&rsquo;s connections page named Xero, QuickBooks, Stripe and Google Calendar, and we found no public developer API. So for allied health you have plenty of choice, and for trades on ServiceM8 you should ask each vendor exactly what its connection writes into a job.
+        We also opened the software makers&rsquo; own directories that day.{' '}
+        <a href="https://www.cliniko.com/connected-apps/" className="text-[#B23E13] underline" rel="noopener" target="_blank">Cliniko&rsquo;s connected-apps page</a>{' '}listed eleven AI receptionist or AI phone products.{' '}
+        <a href="https://www.corepractice.com.au/marketplace/apps/" className="text-[#B23E13] underline" rel="noopener" target="_blank">Core Practice&rsquo;s marketplace</a>{' '}listed three (DentalFlo AI, Lumie and Patientdesk.ai), and its developer access is for approved partners only.{' '}
+        <a href="https://www.servicem8.com/addons" className="text-[#B23E13] underline" rel="noopener" target="_blank">ServiceM8&rsquo;s public add-on directory</a>{' '}listed no AI receptionist at all; its only phone item was its own ServiceM8 Phone. Tradify&rsquo;s connections page named Xero, QuickBooks, Stripe and Google Calendar, and we found no public developer API. Outside our list,{' '}
+        <a href="https://www.waboom.ai/ai-voice-agents/construction/au" className="text-[#B23E13] underline" rel="noopener" target="_blank">Waboom says its agent reads project schedules from Tradify</a>. So for allied health you have plenty of choice, and for trades on ServiceM8 you should ask each vendor exactly what its connection writes into a job.
+      </p>
+      <p className="mb-6">
+        Two pairs are worth comparing head to head. <strong>Sophiie vs Johnni:</strong> Sophiie lists a two-way ServiceM8 and Simpro sync but publishes no price; Johnni publishes every plan from A$49 a month ex GST, but connects ServiceM8 and Simpro only as a quoted add-on. <strong>Lyngo vs MayaAI:</strong> both book into Cliniko; Lyngo bills by the call and adds Nookal and Splose, while MayaAI bills by the minute, adds Halaxy and Best Practice, and offers a month free with no card.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">When a custom AI receptionist fits better than an app</h2>
@@ -656,59 +658,45 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How to choose an AI receptionist in Australia: 7 steps</h2>
       <ol className="list-decimal pl-6 mb-6 space-y-2">
-        <li><strong>Count last month&rsquo;s calls.</strong> Total calls, average length, and how many came after hours. That tells you whether a per-call or per-minute plan suits you.</li>
-        <li><strong>Start from your software.</strong> Use the connections table above to cut the list to two or three.</li>
+        <li><strong>Count last month&rsquo;s calls.</strong> Total calls, average length, and how many came after hours. Six products here bill by the minute and three by the call, so this decides which plan type suits you.</li>
+        <li><strong>Start from your software.</strong> Use the connections table above to cut the list to two or three. On ServiceM8, for example, only Sophiie lists a two-way sync.</li>
         <li><strong>Write your five most common calls and one awkward one.</strong> A new booking, a reschedule, a price question, an urgent job, a complaint.</li>
-        <li><strong>Run the free trials side by side.</strong> Ring each with those six calls, from a noisy place, with a strong accent if you can.</li>
+        <li><strong>Run the free trials side by side.</strong> Ring each with those six calls, from a noisy place, with a strong accent if you can. MayaAI&rsquo;s month-long trial needs no card; Nexwin&rsquo;s seven-day trial does.</li>
         <li><strong>Check what lands in your software.</strong> A booked job, a draft job, or only an email? Check the transfer too: did your phone ring, and did you know who was calling?</li>
         <li><strong>Get the unit, GST, setup fee and exit in writing.</strong> Plus where call data is processed.</li>
         <li><strong>Go live after hours first.</strong> Listen to a week of recordings before you let it answer during the day.</li>
       </ol>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">Six warning signs</h2>
+      <h2 className="text-2xl font-bold mt-10 mb-4">What warning signs should you watch for?</h2>
       <ul className="list-disc pl-6 mb-6 space-y-2">
         <li>&ldquo;Integrates with ServiceM8&rdquo; with no word on what it writes into the job.</li>
         <li>A plan with no included minutes or calls printed next to the price.</li>
-        <li>No legal entity, ABN or ACN anywhere on the site.</li>
+        <li>No legal entity, ABN or ACN anywhere on the site, and none on the invoice when you ask.</li>
         <li>No trial and no money-back period on a self-serve product.</li>
         <li>A promise that callers will never know it is AI. The OAIC says to identify AI tools as AI.</li>
         <li>No answer to &ldquo;where are my calls processed?&rdquo;</li>
       </ul>
 
-      <h2 id="what-else-ranks" className="text-2xl font-bold mt-10 mb-4">What else ranks for &ldquo;ai receptionist australia&rdquo;, and how this list differs</h2>
+      <h2 className="text-2xl font-bold mt-10 mb-4">Where FactoryJet fits</h2>
       <p className="mb-4">
-        These pages held the top ten of Google Australia for &ldquo;ai receptionist australia&rdquo; on 21 October 2026:
+        We are FactoryJet. We have served 500+ businesses since 2014, most of that time building online stores and the operations behind them. We design, build, integrate and support custom AI receptionists and AI agents, and you own everything we build. Bhavesh, our founder, reads every request.
       </p>
-      <ul className="list-disc pl-6 mb-4 space-y-2">
-        <li><strong>sophiie.ai</strong>, <strong>aidial.com.au</strong>, <strong>onebookplus.com.au</strong>, <strong>miyai.ai</strong>, <strong>autoreception.com.au</strong>, <strong>voxworks.ai</strong> and <strong>johnni.ai</strong>: product pages</li>
-        <li><strong>heyjodie.com</strong>: Best AI Receptionist Australia 2026, Prices and 24/7 Cover (a vendor guide)</li>
-        <li><strong>aivy.com.au</strong>: AI receptionist Australia, 2026 small business guide (an AI agency&rsquo;s guide)</li>
-        <li><strong>verticalai.com.au</strong>: Best AI receptionist Australia, cost and picks 2026</li>
-      </ul>
+      <p className="mb-4">
+        How we work: we show working software on your own call types before you sign. Each phase has a fixed price, quoted in writing. Changes are quoted and approved per request, with no monthly minimum. The AI and hosting can run in your own accounts at cost.
+      </p>
       <p className="mb-6">
-        For &ldquo;best ai receptionist australia&rdquo;, page 1 added best-of pages from chaty.ai, basicsolutions.com.au, nexwin.com.au and aidial.com.au. Most of these lists are written by a vendor about its own market. This one names the software each product connects to, prints every published price with its GST wording, states where each keeps call data, and puts its author last.
+        Choose a product above if it already books into your software and handles your calls; it will be live sooner. Choose us if your software is not on anyone&rsquo;s list, or if your call rules are too complex for an app to hold. See our{' '}
+        <a href="/au/ai-receptionist" className="text-[#B23E13] underline">AI receptionist service for Australia</a>, or start at the{' '}
+        <a href="/au" className="text-[#B23E13] underline">FactoryJet Australia hub</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Other lists and guides</h2>
       <p className="mb-6">
-        Outside Australia, or comparing US and UK products too? Read our guide to the{' '}
-        <a href="/blog/best-ai-receptionist-small-business" className="text-[#B23E13] underline">best AI receptionist for small business</a>. If you want an agency to build AI into your business more widely, see our list of the{' '}
-        <a href="/blog/best-ai-agencies-australia-2026" className="text-[#B23E13] underline">best AI agencies in Australia</a>. Tradies whose website needs work as well can see our{' '}
+        Comparing US and UK products too? Read our guide to the{' '}
+        <a href="/blog/best-ai-receptionist-small-business" className="text-[#B23E13] underline">best AI receptionist for small business</a>. For an agency to build AI into your business more widely, see the{' '}
+        <a href="/blog/best-ai-agencies-australia-2026" className="text-[#B23E13] underline">best AI agencies in Australia</a>. Tradies can also see our{' '}
         <a href="/au/websites-for-tradies" className="text-[#B23E13] underline">websites for tradies</a>, and dental practices our{' '}
         <a href="/au/dental-website-design" className="text-[#B23E13] underline">dental website design</a>.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-10 mb-4">Where FactoryJet fits</h2>
-      <p className="mb-4">
-        We are FactoryJet. We have served 500+ businesses since 2014, most of that time building online stores and the operations behind them. We design, build, integrate and support custom AI receptionists and AI agents, and you own everything we build. Our founder, Bhavesh Barot, is involved in every project.
-      </p>
-      <p className="mb-4">
-        How we work: we show working software on your own call types before you sign. Each phase is scoped and priced in writing on its own. The AI and hosting can run in your own accounts at cost, and we can keep managing the servers, AI models and updates for you if you want that. Any support is quoted per change, with no monthly minimum.
-      </p>
-      <p className="mb-6">
-        Choose a product above if it already books into your software and handles your calls; it will be live sooner. Choose us if your software is not on anyone&rsquo;s list, your call rules are complex, or you need control of where the data goes. See our{' '}
-        <a href="/au/ai-receptionist" className="text-[#B23E13] underline">AI receptionist service for Australia</a>, or start at the{' '}
-        <a href="/au" className="text-[#B23E13] underline">FactoryJet Australia hub</a>.
       </p>
 
       <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8 not-prose">

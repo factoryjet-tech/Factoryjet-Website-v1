@@ -30,8 +30,11 @@ import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
    - No client is named. None of the clients cleared for naming on 29 Oct 2026
      is a Shopify plus HubSpot project, so naming one here would imply work we
      did not do on this pairing.
-   - No FactoryJet prices. The only dollar figure is a sourced market hourly
-     rate, inside the one cost FAQ answer. No running or upkeep costs.
+   - No FactoryJet prices. The only dollar figures are CartCoders' market
+     integration range and hourly rate, inside the one cost FAQ answer, with
+     CartCoders in the Sources list. No running or upkeep costs.
+   - The TEST_ORDERS table is our own test plan, not a client result. Do not
+     add client metrics to it without Bhavesh confirming them.
    - Mirrors /services/shopify-quickbooks-integration for components and
      schema. Its page-local CSS module and diagram were not copied; this page
      uses Tailwind classes only.
@@ -45,9 +48,10 @@ import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
 const CANONICAL_URL = 'https://factoryjet.com/services/shopify-hubspot-integration';
 const PAGE_TITLE = 'Shopify HubSpot Integration Services | FactoryJet';
 const PAGE_DESC =
-  'Shopify HubSpot integration for Shopify and Shopify Plus brands. When the native app is enough, and when B2B, variants, deals or attribution need a custom build.';
+  'Shopify HubSpot integration for Shopify and Shopify Plus brands. When the native app is enough, and when B2B, variants, deals or attribution need custom work.';
 const PAGE_PUBLISHED = '2026-10-29';
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_MODIFIED = '2026-10-31';
+const CHECKED_ON_2 = '31 Oct 2026';
 const CHECKED_ON = '29 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -193,6 +197,16 @@ const SRC = {
     label: 'CartCoders: Shopify Developer Cost Breakdown for 2026',
     url: 'https://cartcoders.com/blog/shopify-development/shopify-developer-cost-hourly-rate-project-pricing/',
   },
+  zapier: {
+    short: 'Zapier: HubSpot and Shopify',
+    label: 'Zapier: HubSpot + Shopify integrations, read 31 Oct 2026',
+    url: 'https://zapier.com/apps/hubspot/integrations/shopify',
+  },
+  make: {
+    short: 'Make: HubSpot CRM and Shopify',
+    label: 'Make: HubSpot CRM and Shopify integration, read 31 Oct 2026',
+    url: 'https://www.make.com/en/integrations/hubspotcrm/shopify',
+  },
 } as const;
 
 type SrcKey = keyof typeof SRC;
@@ -230,7 +244,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'native',
     question: 'Does the HubSpot Shopify integration sync product variants?',
     answer:
-      "No. HubSpot's help article says Shopify product variants can't sync to HubSpot. If you sell one shirt in five sizes, HubSpot sees one product, not five. That matters when sales reps quote by size or pack, or when reports need sales by variant. A custom integration can write each variant as its own product, or carry the variant on each line item.",
+      "No. Per HubSpot, Shopify product variants can't sync to HubSpot. If you sell one shirt in five sizes, HubSpot sees one product, not five. That matters when sales reps quote by size or pack, or when reports need sales by variant. A custom integration can write each variant as its own product, or carry the variant on each line item.",
   },
   {
     category: 'native',
@@ -242,7 +256,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'native',
     question: 'Can I connect more than one Shopify store to HubSpot?',
     answer:
-      "Yes. HubSpot's help article says that once your first store is connected, you can connect additional Shopify stores from the Shopify app page. Before you do, decide how customers who buy from two stores should look in HubSpot. Contacts match on email address, so one person becomes one contact, while their orders from each store sit on that record.",
+      "Yes. Once your first store is connected, HubSpot says you can connect additional Shopify stores from the Shopify app page. Before you do, decide how customers who buy from two stores should look in HubSpot. Contacts match on email address, so one person becomes one contact, while their orders from each store sit on that record.",
   },
   // ── When to build custom ─────────────────────────────────────────
   {
@@ -273,7 +287,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'custom',
     question: 'Can HubSpot send changes back to Shopify orders?',
     answer:
-      "Not with HubSpot's own app. Its help article says Shopify orders can't be changed in your HubSpot account, as they sync one way from Shopify to HubSpot. If reps need to edit a wholesale order, add a note the warehouse sees, or create a draft order from a HubSpot quote, that is custom work through Shopify's Admin API.",
+      "Not with HubSpot's own app. Its help article says Shopify orders can't be changed in your HubSpot account, as they sync one way from Shopify to HubSpot. If reps need to edit a wholesale order, add a note the warehouse sees, or create a draft order from a HubSpot quote, that is custom work through Shopify's Admin API, the interface apps use to change store data.",
   },
   {
     category: 'custom',
@@ -283,9 +297,9 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
   {
     category: 'custom',
-    question: 'How do you handle subscription and wholesale orders?',
+    question: 'Does HubSpot track Shopify subscription renewals?',
     answer:
-      "HubSpot's Shopify article does not mention subscriptions, so renewals arrive as ordinary orders. For subscription brands we tag renewals, keep the subscription status on the contact or a custom object, and trigger HubSpot workflows when a subscription pauses or is cancelled. For wholesale, we tie each order to the company and its deal, so reps see reorders without searching.",
+      "Not as renewals. HubSpot's Shopify article does not mention subscriptions, so renewals arrive as ordinary orders. For subscription brands we tag renewals, keep the subscription status on the contact or a custom object, and trigger HubSpot workflows when a subscription pauses or is cancelled. For wholesale, we tie each order to the company and its deal, so reps see reorders without searching.",
   },
   // ── Data and reporting ───────────────────────────────────────────
   {
@@ -293,6 +307,12 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Why does the integration create duplicate contacts?',
     answer:
       "HubSpot matches contacts by email address. Its help article says orders from customers without an email address sync as orders with no linked contact, and that records you already imported into either app may sync again and create duplicates. We clean the contact list before connecting, set an email rule, and merge duplicates that already exist.",
+  },
+  {
+    category: 'data',
+    question: 'Why is my HubSpot Shopify integration not syncing?',
+    answer:
+      "Start with four checks. The person who installed it must be a Super Admin or have App Marketplace permissions in HubSpot. After the first sync, HubSpot says records sync within 10 minutes of a change, so give it that long. The sync must still be on in the CRM syncs tab, because turning it off stops every record. Last, look at the record itself. An order with no customer email arrives with no contact, and companies only sync on Shopify Plus.",
   },
   {
     category: 'data',
@@ -304,7 +324,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'data',
     question: 'What happens when I delete a record in one system?',
     answer:
-      "Nothing in the other system. HubSpot's help article says a product deleted in Shopify is not deleted in HubSpot, a company deleted in HubSpot is not deleted in Shopify, and a customer deleted in Shopify keeps its contact in HubSpot. That protects data, but it leaves stale records. We set a written rule for archiving them.",
+      "Nothing in the other system. A product deleted in Shopify is not deleted in HubSpot, a company deleted in HubSpot is not deleted in Shopify, and a customer deleted in Shopify keeps its contact in HubSpot, per HubSpot's help article. That protects data, but it leaves stale records. We set a written rule for archiving them.",
   },
   {
     category: 'data',
@@ -323,13 +343,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'How much does a custom Shopify HubSpot integration cost?',
     answer:
-      "It depends on the gaps. HubSpot's own app is listed for all plans, and custom field mappings need Data Hub Starter or higher. For custom work, Shopify developers in the US and Canada typically charge $120 to $200 an hour, according to CartCoders' 2026 rate guide. FactoryJet quotes a fixed price in writing after a short scoping call.",
+      "It depends on the gaps. HubSpot's own app is listed for all plans, and custom field mappings need Data Hub Starter or higher. CartCoders' 2026 rate guide puts a typical third-party integration at $500 to $6,000, and Shopify developers in the US and Canada at $120 to $200 an hour. FactoryJet quotes a fixed price per phase in writing after a short scoping call.",
   },
   {
     category: 'working',
     question: 'How long does a Shopify HubSpot integration take?',
     answer:
-      'Installing the native app is a same-day job. A custom integration is a project, and the time goes into three things: cleaning contacts and products, agreeing what each field means, and testing with sample orders. The timeline goes in writing with the quote, and each phase is scoped and signed on its own.',
+      "HubSpot's own app installs from the App Marketplace, and after the first sync HubSpot says records sync within 10 minutes of a change. A custom build takes longer. The biggest driver is how messy your contact and product lists are today. Next comes the number of fields that need an agreed owner, then the number of order types you want tested. We put the timeline in writing with the quote, and each phase is scoped and signed on its own.",
   },
   {
     category: 'working',
@@ -338,10 +358,10 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
       'Yes. Before a contract, we show working software on your own data. For this kind of project that means a sample of your own orders and customers moving from a test store into a HubSpot sandbox or test portal, so your team can check the records, deals and properties it creates.',
   },
   {
-    category: 'working',
-    question: 'Can I send you a brief or an RFP?',
+    category: 'custom',
+    question: 'Should I use Zapier, Make or a custom build to connect Shopify and HubSpot?',
     answer:
-      'Yes, and it speeds things up. Use the form on this page with your name and email. The next step lets you upload a brief or RFP as a PDF or Word file, and tell us your Shopify plan and HubSpot hubs in the message box. Bhavesh, the founder, reads it and replies within 24 hours with questions or a route.',
+      "Zapier and Make suit a few simple rules, such as a new Shopify order creating a HubSpot contact. Zapier lists a Shopify New Order trigger with line item support and a HubSpot Create Contact action. Make lists HubSpot triggers such as Watch Deals and Shopify actions such as Create an order, and says it requires no coding skills. Neither page describes deduplication or field ownership, so you design those rules yourself. A custom build fits when B2B, variants or deals need many rules kept in step.",
   },
   {
     category: 'working',
@@ -464,7 +484,7 @@ const GAPS: ReadonlyArray<{ n: string; t: string; b: string; fix: string; source
   {
     n: '08',
     t: 'Attribution through checkout',
-    b: "HubSpot's tracking code goes on the store. Shopify checkout tracking runs through sandboxed web pixels.",
+    b: "HubSpot's tracking code goes on the store. Shopify checkout tracking runs through web pixels, small tracking scripts Shopify loads in a sandbox walled off from the page.",
     fix: 'We test what reaches HubSpot from first visit to paid order, then add a pixel and order properties where it drops.',
     sources: ['hsConnect', 'shopifyPixels'],
   },
@@ -474,7 +494,7 @@ const GAPS: ReadonlyArray<{ n: string; t: string; b: string; fix: string; source
    a fixed monthly, a warranty day count or an uptime promise. ── */
 const TERMS: ReadonlyArray<{ t: string; d: string }> = [
   { t: 'Demo before you sign', d: 'Working software on your own data, a sample of your orders in a HubSpot test portal, before any contract.' },
-  { t: 'Fixed price per phase', d: 'Each phase is scoped, priced and signed on its own. No open hourly meter.' },
+  { t: 'Fixed price per phase', d: 'Each phase is scoped and quoted in writing as a fixed price. Changes are quoted and approved per request.' },
   { t: 'Your code, your accounts', d: 'Code and repository are yours from day one. Hosting can run in your own account at cost, with no markup from us.' },
   { t: 'Defect cover in the build price', d: 'Defects found after launch are fixed for a cover period agreed before work starts.' },
   { t: 'No monthly minimum', d: 'Support after launch is optional. Each change is quoted and approved before we do it.' },
@@ -514,6 +534,31 @@ const PROCESS: ReadonlyArray<{ n: string; t: string; b: string }> = [
   },
 ];
 
+/* ── Test orders. Our own pre-launch test plan (process step 05). These are
+   checks we run, not results from a client project. ── */
+const TEST_ORDERS: ReadonlyArray<{ order: string; check: string }> = [
+  {
+    order: 'Retail order, new customer',
+    check: 'One contact, matched on email, with one order and its line items. No second contact for the same person.',
+  },
+  {
+    order: 'B2B order on payment terms',
+    check: 'The order sits on the right company and its deal, and the company record shows the catalog and terms.',
+  },
+  {
+    order: 'Refund',
+    check: 'The fields your signed field-owner sheet says a refund should change have changed, and nothing else has.',
+  },
+  {
+    order: 'Subscription renewal',
+    check: 'Tagged as a renewal on the same contact, with the subscription status updated where your team reads it.',
+  },
+  {
+    order: 'Guest checkout',
+    check: "With an email, it joins or creates one contact. Without one, HubSpot's app logs an order with no contact, so we check where your rule sends it.",
+  },
+];
+
 /* ── Comparison: custom integration vs native app plus mappings vs native app ── */
 const COMPARE_COLUMNS: ReadonlyArray<ComparisonColumn> = [
   { label: 'Custom integration built by FactoryJet', isFactoryJet: true },
@@ -540,7 +585,7 @@ const COMPARE_ROWS: ReadonlyArray<ComparisonRow> = [
   },
   {
     feature: 'HubSpot plan needed',
-    values: ['Any plan; Enterprise only for custom objects', 'Data Hub Starter or higher', 'Listed for all plans'],
+    values: ['Any HubSpot plan; custom objects need Enterprise, per HubSpot', 'Data Hub Starter or higher, per HubSpot', 'Listed for all plans, per HubSpot'],
   },
   {
     feature: 'Right call when',
@@ -607,7 +652,7 @@ export default function ShopifyHubSpotIntegrationPage() {
               <div className="min-w-0 lg:col-span-7">
                 <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#F05A28]/30 bg-white px-3 py-1.5">
                   <span className="font-fj-mono text-xs font-bold tracking-wide text-[#B23E13]">
-                    SHOPIFY HUBSPOT INTEGRATION &middot; US, UK, AU
+                    SHOPIFY HUBSPOT INTEGRATION
                   </span>
                 </div>
 
@@ -622,7 +667,15 @@ export default function ShopifyHubSpotIntegrationPage() {
                 <p className="mt-4 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600">
                   HubSpot&rsquo;s own app covers customers and orders. We set it up where it fits, and build the
                   rest when you sell B2B, need variants or deals, or want to know which campaign paid for an order.
-                  Send us your brief or RFP and you get a fixed quote in writing.
+                  Send us your brief or RFP (request for proposal) and you get a fixed quote in writing.
+                </p>
+
+                <p className="mt-4 max-w-2xl font-fj-mono text-xs leading-relaxed text-fj-neutral-600">
+                  By{' '}
+                  <Link href="/author/bhavesh-barot" className="underline underline-offset-4">
+                    Bhavesh Barot
+                  </Link>
+                  , founder of FactoryJet since 2014, who built its tech himself. Updated {PAGE_MODIFIED}.
                 </p>
 
                 <div className="mt-6">
@@ -680,8 +733,8 @@ export default function ShopifyHubSpotIntegrationPage() {
                     ))}
                   </ul>
                   <p className="mt-4 font-fj-body text-[13px] leading-snug text-fj-neutral-600">
-                    Not on the list: product variants, metafields, deals, subscriptions and B2B catalogs. Those are
-                    the gaps we build for.
+                    The app leaves out product variants, metafields (extra fields a store adds to products or
+                    orders), deals, subscriptions and B2B catalogs. Those are the gaps we build for.
                   </p>
                   <SourceLinks ids={['hsConnect']} />
                 </figure>
@@ -698,12 +751,11 @@ export default function ShopifyHubSpotIntegrationPage() {
                 Short answer
               </div>
               <p className="font-fj-body text-base leading-relaxed text-fj-ink sm:text-lg">
-                Yes, Shopify connects to HubSpot. HubSpot&rsquo;s own integration syncs customers, companies and
-                products both ways, and sends orders and abandoned checkouts from Shopify into HubSpot. It is enough
-                for a store selling direct to consumers. You need a custom integration when company sync has to work
-                below Shopify Plus, or when your team needs product variants, metafields, deals from orders,
-                subscription status or campaign source on each order. HubSpot&rsquo;s help article lists none of those
-                (as read on {CHECKED_ON}).
+                Yes, Shopify connects to HubSpot. HubSpot&rsquo;s own integration, called Shopify Data Sync, syncs
+                customers, companies and products both ways, and sends orders and abandoned checkouts from Shopify
+                into HubSpot. That is enough for a store selling direct to consumers. You need a custom integration
+                when company sync has to work below Shopify Plus, or when your team needs product variants,
+                metafields, deals from orders, subscription status or campaign source on each order.
               </p>
               <SourceLinks ids={['hsConnect', 'shopifyB2bHelp']} />
             </div>
@@ -715,13 +767,13 @@ export default function ShopifyHubSpotIntegrationPage() {
           <div className="mx-auto max-w-[1120px] px-4 sm:px-6 md:px-8">
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
               <div className="lg:col-span-4">
-                <p className="fj-eyebrow">Start with what is free</p>
+                <p className="fj-eyebrow">Start with HubSpot&rsquo;s own app</p>
                 <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
                   What HubSpot&rsquo;s Shopify app does, in HubSpot&rsquo;s words.
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   HubSpot calls it Shopify Data Sync. You install it from the HubSpot App Marketplace. HubSpot says you
-                  need Super Admin or App Marketplace permissions to do it, and that the install adds HubSpot&rsquo;s
+                  need Super Admin (HubSpot&rsquo;s top user role) or App Marketplace permissions to do it, and that the install adds HubSpot&rsquo;s
                   tracking code to your store.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
@@ -729,8 +781,8 @@ export default function ShopifyHubSpotIntegrationPage() {
                   need at least a Data Hub Starter subscription.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink">
-                  We tell buyers to install it before paying anyone. Then the gaps are real ones your team has hit,
-                  not guesses.
+                  We tell buyers to install it before paying anyone. Then you pay only for gaps your team has hit in
+                  daily use.
                 </p>
                 <SourceLinks ids={['hsConnect']} />
               </div>
@@ -838,7 +890,7 @@ export default function ShopifyHubSpotIntegrationPage() {
               <div className="lg:col-span-5">
                 <p className="fj-eyebrow">How we work</p>
                 <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-                  The terms, before you ask.
+                  Our terms for a Shopify HubSpot project.
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   Customer and order data is what your marketing and sales teams run on. You should own the code that
@@ -905,6 +957,52 @@ export default function ShopifyHubSpotIntegrationPage() {
           </div>
         </section>
 
+        {/* 6b. TEST ORDERS. Our own test plan from process step 05. Not a client result. */}
+        <section className="border-t border-fj-neutral-200 bg-fj-cream py-16 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-4 sm:px-6 md:px-8">
+            <p className="fj-eyebrow">Before go live</p>
+            <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
+              Five test orders we run before a Shopify HubSpot sync goes live.
+            </h2>
+            <p className="mt-4 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
+              This is the test plan from step 05. Each order goes from a test store into a HubSpot test portal. Your
+              team checks the records it creates and signs off each row before we switch on the live store.
+            </p>
+            <p className="mt-6 font-fj-body text-sm text-fj-neutral-600 md:hidden">Swipe sideways to see every column.</p>
+            <div
+              className="mt-3 rounded-2xl border border-fj-neutral-200 bg-white md:mt-6"
+              style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}
+            >
+              <table className="w-full border-collapse text-left" style={{ minWidth: 560 }}>
+                <caption className="sr-only">Test orders and what each should create in HubSpot</caption>
+                <thead>
+                  <tr className="border-b border-fj-neutral-200 bg-fj-cream">
+                    <th scope="col" className="px-4 py-3 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600 sm:px-6">
+                      Test order
+                    </th>
+                    <th scope="col" className="px-4 py-3 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600 sm:px-6">
+                      What we check in HubSpot
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {TEST_ORDERS.map((row) => (
+                    <tr key={row.order} className="border-b border-fj-neutral-200 last:border-b-0 align-top">
+                      <th scope="row" className="w-[34%] px-4 py-4 font-fj-display text-base font-semibold text-fj-ink sm:px-6">
+                        {row.order}
+                      </th>
+                      <td className="px-4 py-4 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600 sm:px-6">
+                        {row.check}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <SourceLinks ids={['hsConnect']} />
+          </div>
+        </section>
+
         {/* 7. COMPARISON */}
         <ComparisonTable
           eyebrow="How the routes compare"
@@ -950,6 +1048,7 @@ export default function ShopifyHubSpotIntegrationPage() {
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   Every HubSpot and Shopify fact on this page was read from the vendor pages listed here on that day.
+                  The Zapier and Make pages, and the CartCoders integration range, were read on {CHECKED_ON_2}.
                   Vendors update their apps and plans, so check the linked page before you act on one.
                 </p>
                 <p className="mt-6 font-fj-mono text-xs leading-relaxed text-fj-neutral-600">

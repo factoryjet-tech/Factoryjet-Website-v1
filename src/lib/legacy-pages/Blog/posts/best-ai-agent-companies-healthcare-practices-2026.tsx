@@ -218,12 +218,12 @@ const FIRMS: Firm[] = [
     group: 'Us',
     based: 'Serves US practices, with calls in US business hours',
     type: 'AI services company that builds custom agents',
-    clients: 'Medical practices, dental clinics and hospital departments',
-    systems: 'Epic, Cerner, Dentrix and athenahealth, with two-way booking sync, plus eClinicalWorks and other systems',
-    what: 'We build custom AI agents that start at the front desk phone. They book and move appointments, check insurance eligibility, text intake forms, take refill requests in English and Spanish, and hand emergencies to your staff. Replies come in under 500 milliseconds. Our healthcare page says most practices go live in four to six weeks.',
+    clients: 'Medical practices and dental clinics',
+    systems: 'We connect the agent to your EHR or practice management system through its API, such as Epic, Cerner, Dentrix or athenahealth. Which actions write back to your schedule is confirmed in writing for each project',
+    what: 'We build custom AI agents that start at the front desk phone. They can book and move appointments, check insurance eligibility, text intake forms, take refill requests in English and Spanish, and hand emergencies to your staff. The timeline is quoted for each project after a scoping call.',
     compliance: 'Our healthcare agents run under a signed Business Associate Agreement, as our healthcare page states.',
     bestFor: 'Practices that want a custom phone agent tied to their own EHR, which they own.',
-    ask: 'To see the agent working on your own schedule and call types before you sign a contract.',
+    ask: 'Can you show the agent booking into our own schedule, on our call types, before we sign?',
   },
 ];
 
@@ -261,30 +261,30 @@ const GROUP_LABEL: Record<Group, string> = {
 // are the companies' own figures, not FactoryJet prices.
 const PRICES: { firm: string; figure: string; source: string }[] = [
   { firm: 'Keragon', figure: 'Starter $149 a month ($99 a month billed yearly), Professional $399 ($269 yearly), Scale Up $1,499 ($995 yearly), Enterprise custom. 14-day free trial', source: 'https://www.keragon.com/pricing' },
-  { firm: 'ScienceSoft', figure: 'Healthcare agentic AI development from $50,000+ for a bounded workflow agent to $1,000,000+ for a multi-part solution; $50,000 to $150,000+ for a bounded workflow agent', source: 'https://www.scnsoft.com/healthcare/artificial-intelligence/agentic-ai' },
+  { firm: 'ScienceSoft', figure: 'Healthcare agentic AI development $50,000 to $150,000+ for a bounded workflow agent; up to $1,000,000+ for a multi-part solution', source: 'https://www.scnsoft.com/healthcare/artificial-intelligence/agentic-ai' },
   { firm: 'Technology Rivers', figure: 'A basic healthcare app could start at around $20,000; advanced apps can pass $100,000. This is its figure for apps in general, not a stated agent price', source: 'https://technologyrivers.com/services/healthcare/' },
 ];
 
 const HHS_BAA_URL = 'https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html';
 const HHS_CLOUD_URL = 'https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html';
-const AMA_URL = 'https://www.ama-assn.org/practice-management/digital-health/2-3-physicians-are-using-health-ai-78-2023';
+const EPIC_PATIENTS_URL = 'https://www.epic.com/software/ai-patients/';
 
 const FAQS: FAQItem[] = [
   {
     q: 'Which companies build AI agents for healthcare practices?',
-    a: 'For phone and front desk agents a practice subscribes to, look at Assort Health, Arini (dental), Sully.ai and Keragon. For health systems, Notable and Kore.ai. For ambient scribes, Suki and Abridge. To have an agent built for you, Light-it, ScienceSoft, Technology Rivers, EffectiveSoft or FactoryJet. We read every company on its own website on 23 October 2026.',
+    a: 'Phone and front desk agents: Assort Health, Arini (dental), Sully.ai and Keragon. Health systems: Notable and Kore.ai. Ambient scribes: Suki and Abridge. Custom builds: Light-it, ScienceSoft, Technology Rivers, EffectiveSoft and FactoryJet. We read each one on its own website on 23 October 2026.',
   },
   {
     q: 'What are the best AI agents for healthcare?',
     a: 'It depends on the job. For answering patient calls, Assort Health, Arini and Sully.ai sell ready-made agents. For notes, Suki and Abridge draft them from the visit. For automations you set up yourself, Keragon. For one workflow built around your own EHR and phone setup, a development firm. Pick the job first, then compare the companies that do it.',
   },
   {
-    q: 'What is a common application of AI agents in healthcare?',
+    q: 'What jobs do practices hand to AI agents most often?',
     a: 'Answering patient calls is the most common one sold to practices. The phone agents on this page book and move appointments, answer routine questions, take refill requests and route urgent calls to staff. Drafting clinical notes from the visit is the other common use. Prior authorization prep and insurance eligibility checks are newer and growing.',
   },
   {
-    q: 'What are some examples of AI agents in healthcare?',
-    a: 'AI agents in healthcare examples from the companies on this page: Assort Health’s agent answers calls for scheduling, triage, referrals and refills. Arini answers dental practice calls and books appointments. Suki drafts notes, orders and patient instructions from the visit. Kore.ai lists prior authorization and lab result agents. Technology Rivers lists a voice reception agent and a clinical records summarizer it has built.',
+    q: 'Can you give examples of AI agents in healthcare?',
+    a: 'Here are examples from the companies on this page. Assort Health’s agent answers calls for scheduling, triage, referrals and refills. Arini answers dental practice calls and books appointments. Suki drafts notes, orders and patient instructions from the visit. Kore.ai lists prior authorization and lab result agents. Technology Rivers lists a voice reception agent and a clinical records summarizer it has built.',
   },
   {
     q: 'What AI agents are HIPAA compliant?',
@@ -300,7 +300,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Can an AI agent answer calls for a dental practice?',
-    a: 'Yes. Arini is built for dental practices and dental groups. It says it answers every call, books appointments and passes calls to staff only when needed. Keragon lists Open Dental and Dentrix Ascend among its connections. FactoryJet builds dental phone agents that sync with Dentrix. Ask any vendor to show bookings landing in your own practice management system.',
+    a: 'Yes. Arini is built for dental practices and dental groups. It says it answers every call, books appointments and passes calls to staff only when needed. Keragon lists Open Dental and Dentrix Ascend among its connections. FactoryJet builds dental phone agents that connect to the practice management system, such as Dentrix, through its API. Ask any vendor to show bookings landing in your own practice management system.',
   },
   {
     q: 'Which EHRs do healthcare AI agents connect to?',
@@ -319,16 +319,16 @@ const FAQS: FAQItem[] = [
     a: 'An ambient scribe listens to the visit, with consent, and drafts the clinical note for the clinician to review and sign. Suki says it also drafts orders and patient instructions. Abridge lists documentation for billing and nursing as well. A scribe does not answer phones, so a practice often uses one alongside a front desk agent.',
   },
   {
-    q: 'How many physicians use AI today?',
-    a: 'The American Medical Association reported in February 2025 that 66% of physicians used health AI in 2024, up from 38% in 2023, in a survey of nearly 1,200 physicians. That counts any health AI use, not only agents. It shows most physicians have tried AI tools, which makes a front desk agent an easier conversation with clinical staff.',
+    q: 'Are doctors already using AI tools?',
+    a: 'Most are. The American Medical Association reported in February 2025 that 66% of physicians used health AI in 2024, up from 38% in 2023, in a survey of nearly 1,200 physicians. That counts any health AI use, from scribes to research tools, not only agents.',
   },
   {
     q: 'Can AI agents handle prior authorization?',
-    a: 'Some companies say so. Kore.ai lists prior authorization among its provider agents. ScienceSoft describes prior authorization agents that prepare submission packets for staff to review. Technology Rivers lists an authorization agent it has built. In each case staff still review the packet. Ask which payers and portals the agent has worked with.',
+    a: 'Some companies say so. Kore.ai lists prior authorization among its provider agents. ScienceSoft describes prior authorization agents that prepare submission packets for staff to review. Technology Rivers lists an authorization agent it has built. ScienceSoft says staff review the packet; ask the others whether theirs do, and ask which payers and portals the agent has worked with.',
   },
   {
     q: 'Can an AI agent check a patient’s insurance eligibility?',
-    a: 'Yes. Light-it says its agents handle eligibility checks. FactoryJet’s healthcare agents check insurance eligibility during the call. Ask how the check runs: through your clearinghouse, your practice management system or a payer portal, and what the agent tells the patient when the check fails.',
+    a: 'Yes. Light-it says its agents handle eligibility checks. FactoryJet builds front desk agents that can run the check during the call. Ask how the check runs: through your clearinghouse, your practice management system or a payer portal, and what the agent tells the patient when the check fails.',
   },
   {
     q: 'Will an AI agent replace our front desk staff?',
@@ -340,15 +340,15 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'What should a practice ask before buying a healthcare AI agent?',
-    a: 'Ask whether the vendor signs a BAA. Ask which EHR it writes to, not only reads. Ask what happens to an urgent call and how fast a person picks it up. Ask to hear recordings of real calls on your call types. Ask who owns the call data and whether it trains models on it. Ask what the agent costs at your call volume.',
+    a: 'Start with the contract: will the vendor sign a BAA, who owns the call data, and does it train models on that data? Then check the fit. Which EHR does it write to, not only read, and what does it cost at your call volume? Last, hear it work: recordings of real calls on your call types, and a test of how fast an urgent call reaches a person.',
   },
   {
     q: 'Can an AI agent write appointments into Epic or athenahealth?',
-    a: 'Some say they can. Sully.ai says it reads and writes appointments on most major EHRs and names Epic and athenahealth. Assort claims an athenahealth connection. FactoryJet syncs bookings both ways with Epic, Cerner, Dentrix and athenahealth. Epic connections can need extra approval steps, so ask how long yours will take.',
+    a: 'Some say they can. Sully.ai says it reads and writes appointments on most major EHRs and names Epic and athenahealth. Assort claims an athenahealth connection. FactoryJet builds agents that connect to the EHR scheduling API and confirms in writing which actions write back. Epic connections can need extra approval steps, so ask how long yours will take.',
   },
   {
     q: 'How long does it take to set up a healthcare AI agent?',
-    a: 'Subscription tools say setup is fast; Keragon says automations take minutes, not weeks. A phone agent connected to your EHR takes longer because the connection and your call rules need testing. FactoryJet’s healthcare page says most practices go live in four to six weeks, with more time for larger EHRs such as Epic.',
+    a: 'Subscription tools say setup is fast; Keragon says automations take minutes, not weeks. A phone agent connected to your EHR takes longer because the connection and your call rules need testing. Larger EHRs such as Epic can add approval steps. Ask each vendor for a written timeline for your EHR before you sign.',
   },
   {
     q: 'Are AI agents safe for urgent or emergency calls?',
@@ -360,7 +360,15 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Does FactoryJet build AI agents for healthcare practices?',
-    a: 'Yes. FactoryJet builds custom AI agents for US medical practices, dental clinics and hospital departments, starting at the front desk phone. They book appointments, check eligibility, text intake forms, take refill requests and hand emergencies to staff, with two-way sync to Epic, Cerner, Dentrix and athenahealth. The practice owns what FactoryJet builds.',
+    a: 'Yes. FactoryJet builds custom AI agents for US medical practices and dental clinics, starting at the front desk phone. They can book appointments, check eligibility, text intake forms, take refill requests and hand emergencies to staff. Each agent connects to the practice’s EHR through its API, and the practice owns what FactoryJet builds.',
+  },
+  {
+    q: 'Does Epic have its own AI agent?',
+    a: 'Yes. On epic.com, read on 31 October 2026, Epic names three AI assistants: Emmie for patients in MyChart and by text, Art for clinicians, and Penny for revenue cycle and operations. Epic says patients can text Emmie to schedule or reschedule appointments. We left Epic off this list because these run only inside Epic. Sully.ai, Notable, Kore.ai and Suki name Epic as a system they connect to.',
+  },
+  {
+    q: 'Is there a medical version of ChatGPT for practices?',
+    a: 'Before staff paste patient details into any chatbot, ChatGPT included, ask the vendor whether it will sign a BAA for the exact plan you use. HHS says a vendor handling patient information for you needs a written BAA. A chat assistant also differs from the agents on this page: it answers staff questions, while a front desk agent takes patient calls and books into your EHR.',
   },
 ];
 
@@ -375,7 +383,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 23, 2026',
-  dateModified: 'Oct 23, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '21 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
@@ -389,7 +397,6 @@ export const post: BlogPost = {
     'Every fact about every company was read on its own website on 23 October 2026. Compliance lines are each company’s own words. Nobody paid to be listed, and the order is not a ranking.',
     'HHS says any vendor that handles patient information for a practice needs a written Business Associate Agreement, even a cloud provider storing encrypted data it cannot read.',
     'Only one subscription company publishes prices: Keragon, from $149 to $1,499 a month. ScienceSoft puts a bounded custom agent at $50,000 to $150,000 or more.',
-    'The AMA reported that 66% of physicians used health AI in 2024, up from 38% in 2023.',
     'Ask every vendor which EHR it writes to, not only reads, and what happens to an urgent call.',
   ],
   faqs: FAQS,
@@ -408,11 +415,11 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-23',
-              dateModified: '2026-10-23',
+              dateModified: '2026-10-31',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'Companies that build AI agents for healthcare practices in the United States' },
-              speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#answer-first', 'h1', 'h2'] },
+              speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#answer-first', 'h1'] },
             },
             {
               '@context': 'https://schema.org',
@@ -440,7 +447,7 @@ export const post: BlogPost = {
           We read all 13 companies on their own websites on 23 October 2026: where each is based, what its agent does, which EHRs it names, what it says about HIPAA and BAAs, and any price it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
         </p>
         <p className="text-gray-800 leading-relaxed">
-          Short on time? <a href="/contact" className={link}>Tell us your EHR and the calls you miss</a> and the founder will tell you which kind of company fits.
+          <a href="/contact" className={link}>Tell us your EHR and the calls you miss</a>, and the founder will tell you which kind of company fits.
         </p>
       </div>
 
@@ -461,22 +468,27 @@ export const post: BlogPost = {
         Every profile below links to its sources.
       </p>
       <p className="mb-4">
-        <strong>Who wrote this.</strong> FactoryJet builds custom AI agents for practices, so we are on this list. Nobody paid to be included, the order is not a ranking, and our entry uses the same format as every other company. Read every vendor list with its author in mind, including this one.
+        <strong>Who wrote this.</strong> FactoryJet builds custom AI agents for practices and wrote this list. Read every vendor list with its author in mind, including this one.
       </p>
       <p className="mb-6">
-        A few terms in plain English. An <strong>AI agent</strong> is software that understands a request and takes an action, such as booking an appointment. An <strong>EHR</strong> (electronic health record) is the system that holds patient charts and schedules, such as Epic or athenahealth. <strong>HIPAA</strong> is the US law that protects patient information. A <strong>BAA</strong> (Business Associate Agreement) is the contract a vendor signs before it may handle that information for you. An <strong>ambient scribe</strong> listens to the visit and drafts the note.
+        A few terms in plain English. An <strong>AI agent</strong> is software that understands a request and takes an action, such as booking an appointment. An <strong>EHR</strong> (electronic health record) is the system that holds patient charts and schedules, such as Epic or athenahealth. <strong>HIPAA</strong> is the US law that protects patient information. A <strong>BAA</strong> (Business Associate Agreement) is the contract a vendor signs before it may handle that information for you. An <strong>ambient scribe</strong> listens to the visit and drafts the note. <strong>Agentic AI</strong> is the industry name for AI that carries out steps on its own, like an agent, instead of only answering a question.
+      </p>
+      <p className="mb-6">
+        Terms you will see in the profiles. <strong>SOC 2</strong> is an outside audit of how a company protects customer data. <strong>HITRUST</strong> is a security certification common in US healthcare. <strong>ISO 27001</strong> is an international standard for running information security. <strong>HITECH</strong> is a 2009 US law that tightened HIPAA enforcement and breach rules. <strong>FHIR</strong> is a standard format EHRs use to share data with other software. <strong>Write-back</strong> means the agent saves the booking or note into your EHR, not only reads from it. The <strong>revenue cycle</strong> is the billing work from insurance check to payment, and a <strong>clearinghouse</strong> passes claims and eligibility checks between a practice and insurers. On this page, Notable lists revenue cycle agents and Sully.ai and EffectiveSoft list medical coding, the closest things here to medical billing AI agents.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The shortlist at a glance</h2>
       <p className="mb-4">Find the rows that match the job you want done and the EHR you run, then read those profiles in full.</p>
-      <div className="overflow-x-auto mb-8 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden mb-2 text-sm text-gray-600 not-prose">Swipe sideways to see every column.</p>
+      <div className="mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 720 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Company</th>
               <th className="p-3 text-left border border-gray-700">Group</th>
               <th className="p-3 text-left border border-gray-700">What it is</th>
               <th className="p-3 text-left border border-gray-700">Where based</th>
+              <th className="p-3 text-left border border-gray-700">Publishes a price</th>
             </tr>
           </thead>
           <tbody>
@@ -486,6 +498,7 @@ export const post: BlogPost = {
                 <td className="p-3 border border-gray-200 align-top">{GROUP_LABEL[f.group]}</td>
                 <td className="p-3 border border-gray-200 align-top">{f.type}</td>
                 <td className="p-3 border border-gray-200 align-top">{f.based}</td>
+                <td className="p-3 border border-gray-200 align-top">{PRICES.some((p) => p.firm === f.name) ? 'Yes, see price table' : 'No, quotes per buyer'}</td>
               </tr>
             ))}
           </tbody>
@@ -494,10 +507,10 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How we built this list</h2>
       <ol className="list-decimal pl-6 mb-6 space-y-2">
-        <li><strong>Start from the buyer&rsquo;s question.</strong> &ldquo;AI agents for healthcare&rdquo; and &ldquo;healthcare AI agents&rdquo; each get about 170 US Google searches a month, and &ldquo;AI voice agents for healthcare&rdquo; about 90 (DataForSEO, October 2026). Smaller variants such as &ldquo;AI healthcare agents&rdquo; and &ldquo;AI agents healthcare&rdquo; add a few dozen more. Google showed an AI answer on five of the six related searches we checked.</li>
+        <li><strong>Start from the buyer&rsquo;s question.</strong> We began with what practices ask: which companies build AI agents for healthcare, which are HIPAA compliant, what they cost and which EHRs they connect to.</li>
         <li><strong>Start from the companies AI answers name.</strong> We took the companies cited in those 28 answers and sorted them by what they sell.</li>
         <li><strong>Keep only companies with a US base on their own site.</strong> A press page, footer address, privacy policy or contact page counts. A logo does not.</li>
-        <li><strong>Keep only companies a practice can buy from.</strong> We left out EHR vendors whose agents work only inside their own record system, because using them means changing your EHR.</li>
+        <li><strong>Keep only companies a practice can buy from.</strong> We left out EHR vendors whose agents work only inside their own record system, because using them means changing your EHR. Epic&rsquo;s own assistants, such as <a href={EPIC_PATIENTS_URL} className={link} rel="noopener" target="_blank">Emmie for patients</a>, sit in this group.</li>
         <li><strong>Quote compliance in the company&rsquo;s own words.</strong> We do not assess anyone&rsquo;s HIPAA status. Where a company made no claim in the pages we read, we say so.</li>
         <li><strong>No scores we cannot prove.</strong> We have not bought these products, so there are no ratings. We say who each suits and one question worth asking.</li>
         <li><strong>Prices only from the company.</strong> Where a company publishes a price, we quote it and link the page.</li>
@@ -593,12 +606,13 @@ export const post: BlogPost = {
         <a href="/contact" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">Talk to the Founder</a>
       </div>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">What these companies publish about price</h2>
+      <h2 className="text-2xl font-bold mt-10 mb-4">How much do healthcare AI agents cost? What the companies publish</h2>
       <p className="mb-4">
         Most healthcare AI companies quote after a demo. On the pages we read on 23 October 2026, three of the 12 other companies published a figure. We copied them exactly. They are each company&rsquo;s own figures, not FactoryJet prices.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden mb-2 text-sm text-gray-600 not-prose">Swipe sideways to see every column.</p>
+      <div className="mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Company</th>
@@ -650,74 +664,36 @@ export const post: BlogPost = {
       </figure>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How to choose a healthcare AI agent company: 7 steps</h2>
-      <div className="space-y-3 mb-8 not-prose">
-        <details className="rounded-xl border border-gray-200 p-4">
-          <summary className="font-semibold cursor-pointer">1. Count the calls you miss and why</summary>
-          <p className="mt-3 text-gray-700">Pull a week of phone data. Note how many calls go unanswered, at what hours, and what callers wanted: booking, refills, directions, billing. That list is your agent&rsquo;s job description.</p>
-        </details>
-        <details className="rounded-xl border border-gray-200 p-4">
-          <summary className="font-semibold cursor-pointer">2. Ask for the BAA first</summary>
-          <p className="mt-3 text-gray-700">No BAA, no pilot. HHS guidance is clear that a vendor handling patient information is a business associate.</p>
-        </details>
-        <details className="rounded-xl border border-gray-200 p-4">
-          <summary className="font-semibold cursor-pointer">3. Check your EHR is on the list, with write-back</summary>
-          <p className="mt-3 text-gray-700">An agent that cannot write the appointment into your schedule creates a task for staff instead of removing one.</p>
-        </details>
-        <details className="rounded-xl border border-gray-200 p-4">
-          <summary className="font-semibold cursor-pointer">4. Test the urgent-call handoff</summary>
-          <p className="mt-3 text-gray-700">Call the demo line with chest pain, a child&rsquo;s fever and an angry billing question. Time how fast a person picks up and what the caller hears meanwhile.</p>
-        </details>
-        <details className="rounded-xl border border-gray-200 p-4">
-          <summary className="font-semibold cursor-pointer">5. Listen to real recordings</summary>
-          <p className="mt-3 text-gray-700">Ask for recordings of real patient calls, with consent, on call types like yours. Accents, background noise and older callers matter.</p>
-        </details>
-        <details className="rounded-xl border border-gray-200 p-4">
-          <summary className="font-semibold cursor-pointer">6. Decide rent or build</summary>
-          <p className="mt-3 text-gray-700">Rent when your calls are standard and the vendor already fits your EHR. Build when they are not, or when you want to own the agent and its data.</p>
-        </details>
-        <details className="rounded-xl border border-gray-200 p-4">
-          <summary className="font-semibold cursor-pointer">7. Start with one job</summary>
-          <p className="mt-3 text-gray-700">Launch on after-hours booking or refills first. Add the next job once staff trust the first.</p>
-        </details>
-      </div>
-
-      <h2 className="text-2xl font-bold mt-10 mb-4">How widely physicians use AI</h2>
-      <p className="mb-6">
-        The American Medical Association <a href={AMA_URL} className={link} rel="noopener" target="_blank">reported in February 2025</a> that 66% of physicians said they used health AI in 2024, up from 38% in 2023, in a survey of nearly 1,200 physicians. That figure covers any health AI use, from scribes to research tools. It means most clinicians in a practice have tried an AI tool, so a front desk agent is less of a leap than it was two years ago.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-10 mb-4">What else ranks for &quot;healthcare ai agents&quot;, and how this guide differs</h2>
-      <p className="mb-4">
-        These are the business sites on Google&rsquo;s first page for &ldquo;healthcare ai agents&rdquo; in the US when we checked on 23 October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not reviewed their services, and the list leaves out forums.
-      </p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="bg-gray-800 text-white">
-              <th className="p-3 text-left border border-gray-700">Site</th>
-              <th className="p-3 text-left border border-gray-700">Page title shown in Google</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ['themomentum.ai', 'AI Agents for Healthcare: Architecture and Safety Guide'],
-              ['sparxitsolutions.com', 'AI Agents in Healthcare: Use Cases, Benefits & Future ...'],
-              ['hyro.ai', 'Healthcare AI Agent Platform | HIPAA-Compliant Solution'],
-              ['activepieces.com', 'AI Agents for Healthcare: Adoption and Use Cases'],
-              ['kanerika.com', 'Top 10 AI Agents for Healthcare in 2026'],
-              ['athenahealth.com', 'The Rise of Agentic AI in Healthcare'],
-            ].map(([site, title]) => (
-              <tr key={site} className="odd:bg-white even:bg-gray-50">
-                <td className="p-3 border border-gray-200 font-semibold align-top">{site}</td>
-                <td className="p-3 border border-gray-200 align-top">{title}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <p className="mb-6">
-        Most of these explain AI agents in healthcare in general or sell one platform. This page sorts 13 companies a US practice can actually buy from by the job they do, and quotes each one&rsquo;s own words on EHRs, BAAs and price, each linked to the page we read.
-      </p>
+      <ol className="space-y-3 mb-8 not-prose list-none pl-0">
+        <li className="rounded-xl border border-gray-200 p-4">
+          <p className="font-semibold">1. Count the calls you miss and why</p>
+          <p className="mt-2 text-gray-700">Pull a week of phone data. Note how many calls go unanswered, at what hours, and what callers wanted: booking, refills, directions, billing. That list is your agent&rsquo;s job description.</p>
+        </li>
+        <li className="rounded-xl border border-gray-200 p-4">
+          <p className="font-semibold">2. Ask for the BAA first</p>
+          <p className="mt-2 text-gray-700">No BAA, no pilot. HHS guidance is clear that a vendor handling patient information is a business associate.</p>
+        </li>
+        <li className="rounded-xl border border-gray-200 p-4">
+          <p className="font-semibold">3. Check your EHR is on the list, with write-back</p>
+          <p className="mt-2 text-gray-700">An agent that cannot write the appointment into your schedule creates a task for staff instead of removing one.</p>
+        </li>
+        <li className="rounded-xl border border-gray-200 p-4">
+          <p className="font-semibold">4. Test the urgent-call handoff</p>
+          <p className="mt-2 text-gray-700">Call the demo line with chest pain, a child&rsquo;s fever and an angry billing question. Time how fast a person picks up and what the caller hears meanwhile.</p>
+        </li>
+        <li className="rounded-xl border border-gray-200 p-4">
+          <p className="font-semibold">5. Listen to real recordings</p>
+          <p className="mt-2 text-gray-700">Ask for recordings of real patient calls, with consent, on call types like yours. Accents, background noise and older callers matter.</p>
+        </li>
+        <li className="rounded-xl border border-gray-200 p-4">
+          <p className="font-semibold">6. Decide rent or build</p>
+          <p className="mt-2 text-gray-700">Rent when your calls are standard and the vendor already fits your EHR. Build when they are not, or when you want to own the agent and its data.</p>
+        </li>
+        <li className="rounded-xl border border-gray-200 p-4">
+          <p className="font-semibold">7. Start with one job</p>
+          <p className="mt-2 text-gray-700">Launch on after-hours booking or refills first. Add the next job once staff trust the first.</p>
+        </li>
+      </ol>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What FactoryJet builds for healthcare practices</h2>
       <p className="mb-4">
@@ -729,7 +705,7 @@ export const post: BlogPost = {
         <li><strong>Dental groups.</strong> Agents for multi-location dental groups. See <a href="/services/dental-support-organization-ai-agents" className={link}>AI agents for dental support organizations</a>.</li>
       </ul>
       <p className="mb-6">
-        We quote a fixed price in writing after a short scoping call, and we can show the agent working on your own schedule and call types before you sign. You own everything we build. If you are comparing a ready-made receptionist with a custom one, read <a href="/blog/best-ai-receptionist-small-business" className={link}>the best AI receptionists for small businesses</a> and <a href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026" className={link}>AI voice agents vs human answering services</a>.
+        We quote a fixed price per phase, in writing, after a short scoping call. Changes are quoted and approved per request, and there is no monthly minimum. We can show the agent working on your own schedule and call types before you sign. You own everything we build. If you are comparing a ready-made receptionist with a custom one, read <a href="/blog/best-ai-receptionist-small-business" className={link}>the best AI receptionists for small businesses</a> and <a href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026" className={link}>AI voice agents vs human answering services</a>.
       </p>
 
       <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 mb-8 not-prose">

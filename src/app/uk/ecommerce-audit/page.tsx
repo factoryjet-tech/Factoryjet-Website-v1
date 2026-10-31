@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/ecommerce-audit, built 2026-10-29.
@@ -33,11 +34,12 @@ import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-audit';
 const UPDATED = '2026-10-29';
+const MODIFIED = '2026-10-31';
 const READ_ON = '29 October 2026';
 const TITLE = 'Free Ecommerce Audit UK for Trading Stores | FactoryJet';
-const H1 = 'Free Ecommerce Audit UK: A Ranked Fix List for Stores That Already Trade, From the Checkout to Xero';
+const H1 = 'Free Ecommerce Audit UK: A Ranked Fix List From the Checkout to Xero';
 const DESCRIPTION =
-  'Free ecommerce audit for established UK online stores: checkout and CMA price rules, speed, marketplaces, Xero, Sage or NetSuite links, couriers and tracking. A ranked fix list.';
+  'Free ecommerce website audit for trading UK stores: checkout, CMA pricing, speed, marketplaces, stock, couriers and Xero or Sage links, ranked by value.';
 
 /* Design values, copied from ../ai-agents/ai-agents.css so inline styles stay
    on-system without CSS custom property references in this file. */
@@ -110,23 +112,25 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What is an ecommerce audit?',
     answer: 'An ecommerce audit is a written check of a live online store and the systems behind it. We test the checkout, page speed, product data, marketplaces, tracking, and the links to stock, couriers and accounts. Every finding comes with evidence you can open yourself, the likely cost of leaving it, and the effort to fix it. The output is one ranked list, so your team knows what to do on Monday.' },
   { category: 'basics', question: 'How do you do a store audit?',
-    answer: 'Start with data, then walk the store as a buyer. We read analytics, Search Console and a month of orders and returns. Then we place real orders on a phone and a laptop, refund one, and follow each order through stock, the courier label and the accounting entry. Last, we interview the people who run the shop. Gaps between what the data says and what staff describe are where most findings sit.' },
+    answer: 'Start with data, then walk the store as a buyer. We read analytics, Search Console and a month of orders and returns. Then we place real orders on a phone and a laptop, refund one, and follow each order through stock, the courier label and the accounting entry. Last, we interview the people who run the shop. We write down every gap between what the data says and what staff describe.' },
   { category: 'basics', question: 'Who is this ecommerce audit for?',
-    answer: 'Established UK businesses with a store that already takes orders every day: brands, retailers, wholesalers and manufacturers selling direct or to trade. Typical clients run more than one channel, such as their own site plus Amazon.co.uk or eBay, and an accounting or ERP system behind it. If the store is not live yet, a launch plan is a better first step than an audit.' },
+    answer: 'Established UK businesses with a store that already takes orders every day: brands, retailers, wholesalers and manufacturers selling direct or to trade. It fits best when you sell on more than one channel, such as your own site plus Amazon.co.uk or eBay, with an accounting or ERP system behind it. If the store is not live yet, a launch plan is a better first step than an audit.' },
   { category: 'basics', question: 'How is this different from an SEO audit?',
     answer: 'An SEO audit asks whether search engines can find and rank your pages. An ecommerce audit asks whether the business behind those pages makes money on each order: checkout, pricing display, stock accuracy, courier costs, refunds and the books. Search is one section of ours. If search turns out to be your biggest gap, our UK SEO audit goes deeper on crawling, indexing and AI search visibility.' },
-  { category: 'basics', question: 'Is an automated audit tool enough?',
-    answer: 'A tool is a sensible first check. It can flag slow pages, missing tags and broken links in minutes. It cannot place an order, see that a Klarna refund never reached Xero, or notice that staff retype Amazon orders into Sage every morning. Those are the findings that cost an established store the most, and they need a person who follows the order end to end.' },
+  { category: 'basics', question: 'Can ChatGPT or an automated tool audit my store?',
+    answer: 'Either is a sensible first check. A crawler such as Screaming Frog and a speed test such as Google PageSpeed Insights will, between them, flag slow pages, missing tags and broken links in minutes, and ChatGPT can explain what those reports mean. Neither can place an order, see that a Klarna refund never reached Xero, or notice that staff retype Amazon orders into Sage every morning. Those gaps need a person who follows the order end to end.' },
 
   // ── What we check ──
   { category: 'scope', question: 'Which platforms do you audit?',
     answer: 'Shopify and Shopify Plus, WooCommerce, Adobe Commerce (Magento), BigCommerce and custom storefronts. Behind the store we read Xero, Sage 50, Sage 200 and Sage Intacct, QuickBooks UK, NetSuite, Dynamics 365 Business Central and Odoo, plus Brightpearl, Linnworks and Mintsoft for orders and stock. The method stays the same on every platform. The weak points differ, so the checklist adjusts.' },
   { category: 'scope', question: 'Why is my Shopify store running so slowly?',
     answer: 'Common causes are apps that each load their own scripts, oversized product images and a theme that renders too much before the first product appears. Google’s Web Vitals guidance says the main content should appear within 2.5 seconds and a tap should get a response within 200 milliseconds, measured at the 75th percentile. We name the scripts and images behind each miss.' },
+  { category: 'scope', question: 'What does a Shopify store audit check?',
+    answer: 'A Shopify audit uses the same ten areas, plus checks that only apply on Shopify. We list every installed app and the scripts each one loads, test the theme on a phone, and follow Shopify Payments payouts into Xero or Sage. If you sell to trade buyers or to other countries, we check how prices and stock are set for each group. Each finding names the app, setting or theme file behind it.' },
   { category: 'scope', question: 'Do you check marketplaces such as Amazon.co.uk, eBay and OnBuy?',
-    answer: 'Yes. We compare listings, prices and stock across your own store and Amazon.co.uk, eBay UK, OnBuy, ManoMano or the B&Q marketplace, wherever you sell. The usual findings are oversells from slow stock syncs, fees that make one channel lose money once returns are counted, and marketplace sales reaching the books as one lump with no VAT split.' },
+    answer: 'Yes. We compare listings, prices and stock across your own store and Amazon.co.uk, eBay UK, OnBuy, ManoMano or the B&Q marketplace, wherever you sell. We look for oversells from slow stock syncs, fees that make one channel lose money once returns are counted, and marketplace sales reaching the books as one lump with no VAT split.' },
   { category: 'scope', question: 'Do you look at payments and refunds?',
-    answer: 'Yes. We map how Stripe, PayPal, Shopify Payments, Klarna, Clearpay and GoCardless pay out, and whether each payout, fee and refund lands in the books against the right sale. Buy now, pay later refunds and part refunds are where the numbers drift most often. We also check which payment options appear on a phone at checkout, because a missing wallet is an easy sale to lose.' },
+    answer: 'Yes. We map how Stripe, PayPal, Shopify Payments, Klarna, Clearpay and GoCardless pay out, and whether each payout, fee and refund lands in the books against the right sale. Our test orders include a buy now, pay later refund and a part refund, so we can see whether each one lands against the original sale. We also check which payment options appear on a phone at checkout, because a missing wallet is an easy sale to lose.' },
   { category: 'scope', question: 'Do you check couriers and delivery promises?',
     answer: 'Yes. We compare the delivery dates and prices shown on product pages and at checkout with what Royal Mail, DPD, Evri or your 3PL (the outside warehouse that picks and posts your orders) actually deliver. We look at cut-off times, how labels are created, how tracking reaches the customer and what a returned parcel costs, because delivery promises drive both conversion and complaints.' },
   { category: 'scope', question: 'Can you audit a B2B or trade store?',
@@ -141,7 +145,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Yes. The ICO says the Data (Use and Access) Act 2025 lets you set some cookies without consent, including ones that collect statistical information. Its guidance also says that exception does not cover online advertising, such as ad measurement. We list every tag your store fires, sort each into analytics or advertising, and check your banner. Your data protection lead makes the final call.' },
   { category: 'uk', question: 'How does Making Tax Digital affect an online store?',
     answer: 'HMRC’s VAT Notice 700/22 says records moved between software must use digital links, such as an API transfer or a CSV import, and that copy and paste does not count. We look for the places a person types sales, marketplace payouts or refunds from one screen into Xero, Sage or QuickBooks by hand. Your accountant confirms the fix against the notice.' },
-  { category: 'uk', question: 'Do you check VAT on sales to the EU and the EU AI Act?',
+  { category: 'uk', question: 'Do you check how we sell to shoppers in the EU?',
     answer: 'We map how EU orders are priced, taxed and shipped, and where that information sits in your systems, then hand the questions to your accountant, because VAT treatment depends on your set-up. If your store uses an AI chatbot or recommendations for EU shoppers, we list it so your legal team can check it against EU rules, including the EU AI Act. Both calls belong to a qualified adviser, and the report says so.' },
 
   // ── Cost and terms ──
@@ -153,8 +157,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Three inputs set the timeline: how many systems an order passes through, how fast the read-only logins arrive, and whether trade ordering is in scope. Each extra system adds another hop to trace with test orders. Logins that take a week to arrive add a week. We put the agreed dates in writing with the scope, before work starts.' },
   { category: 'cost', question: 'What access do you need, and is our data safe?',
     answer: 'Read-only access is enough: analytics, Search Console, the store admin as a staff user and a viewer login for the accounting system. We never need write access to audit. You can remove every login the day the report lands. If a test order is needed, we agree it with you first and refund it, so it does not distort your sales or stock figures.' },
-  { category: 'cost', question: 'What are your terms?',
-    answer: 'The audit is free, and its scope is agreed in writing before work starts. If you then ask us to fix things, each phase is scoped, priced and signed on its own. You own the code and the repository from day one, defects are fixed inside the build price for an agreed cover period, and support is optional, quoted per change, with no monthly minimum.' },
+  { category: 'cost', question: 'What do we sign up to if we hire you after the audit?',
+    answer: 'The audit is free, and its scope is agreed in writing before work starts. If you then ask us to fix things, each phase has a fixed price, quoted in writing and signed on its own. Changes are quoted and approved per request. You own the code and the repository from day one, defects are fixed inside the build price for an agreed cover period, and support is optional, quoted per change, with no monthly minimum.' },
 
   // ── After the report ──
   { category: 'after', question: 'What do we get at the end?',
@@ -162,7 +166,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'after', question: 'Do we have to use FactoryJet to fix the findings?',
     answer: 'No. The report is written so your own developers, your current agency or a freelancer can act on it. If you hire us for the fixes, the same people who wrote the report do the work, priced phase by phase, and nothing starts until you sign that phase.' },
   { category: 'after', question: 'What if the audit says we should replatform?',
-    answer: 'We say so only when the evidence points there, and we show what staying would cost next to what moving would involve: redirects, customer accounts, order history and every integration. Most audits end with fixes on the current platform. When a move is right, our Shopify migration team plans redirects and data first, so rankings and order history survive the switch.' },
+    answer: 'We say so only when the evidence points there, and we show what staying would cost next to what moving would involve: redirects, customer accounts, order history and every integration. We recommend a move only when fixing in place would cost more than moving. When a move is right, our Shopify migration team plans redirects and data first, so rankings and order history survive the switch.' },
 ];
 
 /* ─── The audit, area by area (listicle) ─────────────────────────────── */
@@ -174,7 +178,7 @@ const AREAS: { n: string; t: string; d: string }[] = [
   { n: '05', t: 'Product data and search', d: 'Titles, variants, GTINs (the barcode numbers marketplaces ask for), stock messages and structured data. The same data feeds Google Shopping, marketplaces and AI answers, so one fix pays three times.' },
   { n: '06', t: 'Stock between every channel', d: 'Where the stock number lives (Shopify, Linnworks, Brightpearl, Mintsoft, Odoo or the ERP), how often each channel reads it, and how many oversells and cancellations that caused last month.' },
   { n: '07', t: 'Orders into the books', d: 'Each sale, refund, fee and payout followed into Xero, Sage, QuickBooks UK, NetSuite or Business Central. We mark every manual step, which also matters for HMRC digital links.' },
-  { n: '08', t: 'Couriers, labels and returns', d: 'Royal Mail, DPD, Evri or your 3PL: delivery promises against real transit times, label creation, tracking emails and the cost of a returned parcel.' },
+  { n: '08', t: 'Couriers, labels and returns', d: 'Royal Mail, DPD, Evri or your 3PL (the outside warehouse that picks and posts orders): delivery promises against real transit times, label creation, tracking emails and the cost of a returned parcel.' },
   { n: '09', t: 'Tracking, cookies and consent', d: 'Every tag the store fires, sorted into analytics or advertising, checked against the ICO’s guidance, and tested to see whether purchases are counted once and only once.' },
   { n: '10', t: 'The platform’s next three years', d: 'Whether the current platform carries your plans for trade, new markets or more channels, or whether the fixes are turning into workarounds.' },
 ];
@@ -214,13 +218,14 @@ const jsonLd = {
       description: DESCRIPTION,
       inLanguage: 'en-GB',
       datePublished: UPDATED,
-      dateModified: UPDATED,
+      dateModified: MODIFIED,
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="true"]'] },
       author: {
         '@type': 'Person',
         name: 'Bhavesh Barot',
         jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
+        '@id': 'https://factoryjet.com/#bhavesh-barot',
+        url: 'https://factoryjet.com/author/bhavesh-barot',
         sameAs: [
           'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
           'https://github.com/factoryjet-tech',
@@ -245,7 +250,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['ecommerce-audit'] },
   openGraph: {
     title: TITLE,
     description:
@@ -296,23 +301,20 @@ export default function EcommerceAuditUKPage() {
             <div className="col-6040">
               <div>
                 <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />Ecommerce Audit UK</span>
-                  <span className="chip">Stores Already Trading</span>
-                  <span className="chip">Checkout to Xero</span>
+                  <span className="chip"><span className="dot dot-orange" />Free ecommerce audit</span>
+                  <span className="chip">For UK stores already trading</span>
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  Your store takes orders every day. Sales have flattened, or the team spends mornings fixing what the
-                  systems got wrong overnight. We audit the whole chain: the checkout on a phone, prices against CMA
-                  rules, Amazon.co.uk and eBay listings, stock in Linnworks or Brightpearl, Royal Mail and DPD labels,
-                  and every sale and refund as it lands in Xero, Sage or NetSuite. You get one list, ranked by what
-                  each fix is worth.
+                  Your store takes orders every day, but sales have flattened or staff fix overnight errors each
+                  morning. We follow real orders from the checkout on a phone to the sale in Xero, Sage or NetSuite.
+                  You get one list, ranked by what each fix is worth.
                 </p>
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses since 2014</span></div>
-                  <div className="upd">Last updated<br />29 October 2026</div>
+                  <div className="who"><a href="/author/bhavesh-barot" style={{ color: 'inherit' }}><b>Bhavesh Barot</b></a>, Founder<br /><span>500+ businesses since 2014</span></div>
+                  <div className="upd">Last updated<br />31 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -336,7 +338,7 @@ export default function EcommerceAuditUKPage() {
                     <div className="scorecard-val" style={{ fontSize: 15 }}>Traced</div>
                   </div>
                   <div className="scorecard-row">
-                    <div><div className="scorecard-metric">UK rule checks</div><div className="scorecard-note">CMA pricing, returns, cookies, MTD links</div></div>
+                    <div><div className="scorecard-metric">UK rule checks</div><div className="scorecard-note">CMA pricing, returns, cookies, HMRC digital links</div></div>
                     <div className="scorecard-val" style={{ fontSize: 15 }}>Listed</div>
                   </div>
                   <div className="scorecard-row">
@@ -353,9 +355,9 @@ export default function EcommerceAuditUKPage() {
         <section className="sec">
           <div className="wrap">
             <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What does an ecommerce audit cover for a UK store that already trades?</span>
+              <span className="lab">What does an ecommerce website audit cover for a UK store that already trades?</span>
               <p>
-                An ecommerce audit for a trading UK store follows real orders from the checkout to the bank. It tests
+                An ecommerce website audit for a trading UK store follows real orders from the checkout to the bank. It tests
                 speed, checkout and price display against Google and CMA guidance, compares stock and listings across
                 marketplaces, and traces each sale, refund and payout into Xero, Sage, QuickBooks or the ERP. The
                 result is a written list of fixes, ranked by value and effort, with the evidence for each.
@@ -401,8 +403,8 @@ export default function EcommerceAuditUKPage() {
                 <span className="eyebrow">When an audit pays for itself</span>
                 <h2>Signs a trading store needs an audit before it needs more traffic</h2>
                 <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Buying more traffic into a store with a leak only makes the leak bigger. Common signs a trading
-                  store needs an audit.
+                  Buying more traffic into a store with a leak only makes the leak bigger. Each of the six signs
+                  below points to a different leak.
                 </p>
                 <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
                   <li><b>Revenue grew, margin did not.</b> Marketplace fees, returns and courier surcharges ate the extra orders, and nobody can show profit by channel.</li>
@@ -426,7 +428,9 @@ export default function EcommerceAuditUKPage() {
               For the bigger strategic questions, our <a href="/uk/ecommerce-consultant" style={inlineLink}>UK ecommerce
               consultant</a> service is the better fit. If the audit shows the design is the real problem, the work moves
               to an <a href="/uk/ecommerce-redesign" style={inlineLink}>ecommerce redesign</a>. If only search is weak,
-              the <a href="/uk/seo-audit" style={inlineLink}>UK SEO audit</a> goes deeper there.
+              the <a href="/uk/seo-audit" style={inlineLink}>UK SEO audit</a> goes deeper there. Fixes that need new
+              store code go to our <a href="/uk/shopify-development" style={inlineLink}>Shopify development</a> or{' '}
+              <a href="/uk/ecommerce-development" style={inlineLink}>UK ecommerce development</a> teams.
             </p>
           </div>
         </section>
@@ -436,7 +440,7 @@ export default function EcommerceAuditUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 740 }}>
               <span className="eyebrow">What we check</span>
-              <h2>Ten areas we audit, in the order we audit them</h2>
+              <h2>Ten areas an ecommerce website audit should cover, in the order we check them</h2>
               <p className="lead mt-4">
                 Money first, because the rest of the list is ranked by it. Every area ends with findings you can check
                 yourself: an order number, a screenshot, a log line or a report export.
@@ -495,8 +499,8 @@ export default function EcommerceAuditUKPage() {
               <h3 className="mt-4">4. Cookies and analytics (ICO)</h3>
               <p>
                 The ICO says the Data (Use and Access) Act 2025 lets organisations set some cookies without consent,
-                including ones that collect statistical information. Its guidance adds conditions: the data must be
-                aggregate, users must get clear information and a simple, free way to object, and the exception does
+                including ones that collect statistical information. Its guidance sets conditions. The data must be
+                aggregate, and users must get clear information plus a simple, free way to object. The exception does
                 not apply to online advertising, including ad measurement. We list every tag your store fires and
                 sort it into one side or the other.
               </p>
@@ -512,7 +516,7 @@ export default function EcommerceAuditUKPage() {
         {/* ═══ 7. MID-PAGE CTA ═══ */}
         <MidPageCTA
           headline={'Want the order traced through your own systems?'}
-          sub={'Send the store address, the channels you sell on and the systems behind them. We reply with a written scope for your free audit. Attach your brief or RFP at step 2.'}
+          sub={'Send the store address, the channels you sell on and the systems behind them. We reply with a written scope for your free audit. Attach your brief or request for proposal (RFP) at step 2.'}
           label={'Scope my store audit'}
         />
 
@@ -573,7 +577,7 @@ export default function EcommerceAuditUKPage() {
                 </div>
               </div>
               <div className="card card-top-orange">
-                <span className="eyebrow">Have a brief or an RFP? Send it</span>
+                <span className="eyebrow">Have a brief or a request for proposal? Send it</span>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Your brief, RFP or tender document</div><div className="scorecard-note">PDF or Word, attach at step 2 of the form</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>1</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Channels you sell on</div><div className="scorecard-note">own store, marketplaces, trade</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>2</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Systems behind the store</div><div className="scorecard-note">accounts, ERP, stock, 3PL, couriers</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>3</div></div>
@@ -589,7 +593,7 @@ export default function EcommerceAuditUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">UK work behind the method</span>
-              <h2>Two trade stores where the order chain is the job</h2>
+              <h2>UK trade store projects behind this audit method</h2>
               <p className="lead mt-4">
                 Both projects are about what happens after the click: account prices, stock held in another system,
                 and orders that must reach the back office without retyping. That is the part of a store most audits
@@ -603,13 +607,15 @@ export default function EcommerceAuditUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Sow Easy, WooCommerce joined to Odoo</h3>
-                <p className="mt-4">A wholesale store on WordPress WooCommerce that reads stock, pricing and SKUs from Odoo. The Odoo link is still being built, and every change is tried on a staging copy before it goes near live orders. <a href="/case-studies/sow-easy-distributor-portal" style={inlineLink}>Read the Sow Easy case study</a>.</p>
+                <p className="mt-4">A wholesale store on WordPress WooCommerce, built to read stock, pricing and SKUs (product codes) from Odoo. The Odoo link is tested against Odoo’s staging system, and launch is still ahead. <a href="/case-studies/sow-easy-distributor-portal" style={inlineLink}>Read the Sow Easy case study</a>.</p>
               </li>
             </ul>
             <p className="mt-8" style={{ maxWidth: 820 }}>
               For trade ordering in more depth, see <a href="/uk/b2b-ecommerce" style={inlineLink}>B2B ecommerce in the UK</a>.
               Where an audit finds Shopify sales reaching Xero as one line, the fix usually sits in a{' '}
-              <a href="/uk/shopify-xero-integration" style={inlineLink}>Shopify Xero integration</a>.
+              <a href="/uk/shopify-xero-integration" style={inlineLink}>Shopify Xero integration</a>. When orders
+              have to reach Sage, NetSuite, Business Central or Odoo, the work is{' '}
+              <a href="/uk/ecommerce-erp-integration" style={inlineLink}>ecommerce ERP integration</a>.
             </p>
           </div>
         </section>
@@ -622,8 +628,9 @@ export default function EcommerceAuditUKPage() {
             <p className="lead mt-4" style={{ maxWidth: 760 }}>
               Each has a use. The difference is how far past the storefront each one looks.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
-              <table className="cmp-table">
+            <p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -643,8 +650,10 @@ export default function EcommerceAuditUKPage() {
               </table>
             </div>
             <p className="mt-6" style={{ maxWidth: 820 }}>
-              The table reflects how each option usually works for UK stores in October 2026. It rates no named tool
-              or agency.
+              The table reflects how each option usually works for UK stores in October 2026. Automated audit tool
+              means crawlers and speed tests such as{' '}
+              <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer" style={inlineLink}>Google PageSpeed Insights</a>,
+              Screaming Frog, Semrush Site Audit or Ahrefs Site Audit. The table does not score any one of them.
             </p>
           </div>
         </section>
@@ -691,9 +700,9 @@ export default function EcommerceAuditUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">Method</span>
-              <h2>Sources, read on {READ_ON}</h2>
+              <h2>Where every rule and figure on this page comes from</h2>
               <p className="lead mt-4">
-                Every rule, threshold and price on this page was read on the pages below that day. Regulators update
+                Every rule, threshold and price on this page was read on the pages below on {READ_ON}. Regulators update
                 guidance and agencies change prices, so open the linked page before you act on a figure.
               </p>
             </div>
@@ -710,7 +719,7 @@ export default function EcommerceAuditUKPage() {
         {/* ═══ 14. FAQ ═══ */}
         <section className="sec-lg dot-grid" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Ecommerce audit questions from UK retailers, brands and wholesalers</h2>
             </div>
@@ -760,7 +769,7 @@ export default function EcommerceAuditUKPage() {
         <section className="dark-sec">
           <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
             <span className="eyebrow">Next step</span>
-            <h2>Find the fixes your store is already paying for</h2>
+            <p style={{ fontFamily: T.fd, fontWeight: 700, fontSize: 'clamp(1.75rem,3.5vw,2.625rem)', lineHeight: 1.15, letterSpacing: '-0.025em', color: '#fff' }}>Find the fixes your store is already paying for</p>
             <p className="mt-4">
               Send your name and work email. The founder replies within 24 hours to book a scope call about your
               channels, your systems and what is going wrong. You leave with a written scope for a free audit, and no

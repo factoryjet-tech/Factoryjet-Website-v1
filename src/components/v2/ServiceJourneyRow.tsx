@@ -10,8 +10,7 @@ import MotionFadeUp from './MotionFadeUp';
  *   - Desktop timeline: a continuous gradient connector line spans all 5
  *     circles via absolute positioning — sits below the circles (z-0) so
  *     circles (z-10) read as nodes on the line
- *   - Circle badges: ambient glow ring (box-shadow spread + blur), solid
- *     fj-jet-blue fill with white number — "energy node" treatment
+ *   - Circle badges: flat 5px ring, solid fill with white number (no glow)
  *   - Closing note: flanked by gradient rules (editorial web pattern)
  *   - Headline: tighter clamp matching StrategicDarkSection / IndustriesGrid
  *
@@ -152,15 +151,14 @@ export default function ServiceJourneyRow({
 
                   {/* ── Circle node ──────────────────────────────────── */}
                   {/*
-                   * Ambient glow: two-layer box-shadow — a spread ring at low
-                   * opacity creates the "energy node" halo; inner blur adds
-                   * the bloom. z-10 ensures circles sit above the connector line.
+                   * Flat ring only (the 22px bloom glow was removed 2026-10-31,
+                   * banned by CLAUDE.md). z-10 keeps circles above the connector line.
                    */}
                   <div
                     className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full font-fj-mono text-[0.875rem] font-bold text-white"
                     style={{
                       background: '#B23E13',
-                      boxShadow: '0 0 0 5px rgba(178,62,19,0.12), 0 0 22px rgba(178,62,19,0.32)',
+                      boxShadow: '0 0 0 5px rgba(178,62,19,0.12)',
                     }}
                     aria-hidden="true"
                   >
@@ -189,17 +187,12 @@ export default function ServiceJourneyRow({
                   </h3>
 
                   {/* ── Description card ─────────────────────────────── */}
-                  {/*
-                   * Subtle glassmorphism card on white: bg slightly off-white
-                   * with a blue-tinted border. Creates depth and clearly
-                   * separates description from the title above.
-                   */}
+                  {/* Flat white card with a neutral border. */}
                   <div
                     className="mt-3 rounded-xl p-4"
                     style={{
-                      background: 'linear-gradient(160deg, #FFFFFF 0%, #FDF6F3 100%)',
-                      border: '1px solid rgba(240,90,40,0.10)',
-                      boxShadow: '0 2px 8px rgba(240,90,40,0.05)',
+                      background: '#FFFFFF',
+                      border: '1px solid #E7E5E0',
                     }}
                   >
                     <p

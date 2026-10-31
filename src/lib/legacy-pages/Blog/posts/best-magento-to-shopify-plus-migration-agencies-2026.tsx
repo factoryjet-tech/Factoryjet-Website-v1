@@ -243,11 +243,11 @@ const FIRMS: Firm[] = [
     type: 'Commerce and AI services company',
     clients: 'Brands and wholesalers whose store must stay in step with QuickBooks or an ERP',
     systems: 'Magento, Adobe Commerce, Salesforce Commerce Cloud, BigCommerce, WooCommerce, QuickBooks, NetSuite, Odoo, SAP Business One, ERPNext, EDI',
-    timeline: '8 to 14 weeks for a full replatform',
+    timeline: '5 to 8 weeks for B2B, subscriptions or heavy data cleanup; 8 to 14 weeks for headless or custom builds',
     what: 'We move Magento and Adobe Commerce stores to Shopify Plus and connect the new store to the accounting or ERP system behind it. We publish our migration runbook, the published cost ranges and Adobe’s end-of-support dates on our Magento to Shopify page. We quote a fixed price in writing after a short scoping call, and you own everything we build.',
     seo: 'Our runbook includes a URL inventory, a redirect map and checks after launch. See the runbook on our Magento to Shopify page.',
     bestFor: 'Stores that want the migration, the ERP or QuickBooks connection and AI agents for store work from one team.',
-    ask: 'To see working software on your own data before you sign a contract.',
+    ask: 'Can we see working software on our own data before we sign a contract?',
   },
 ];
 
@@ -258,7 +258,7 @@ const GROUP_HEADING: Record<Group, string> = {
   'Enterprise Adobe Commerce': 'Agencies for enterprise Adobe Commerce to Shopify Plus migrations',
   'B2B and ERP-heavy stores': 'Magento to Shopify migration services for B2B and ERP-connected stores',
   'Mid-market stores': 'Magento to Shopify Plus migration agencies for mid-market brands',
-  'Smaller single-site stores': 'Migration help for smaller, single-site Magento stores',
+  'Smaller single-site stores': 'Help with migration from Magento to Shopify for smaller, single-site stores',
   Us: 'Magento to Shopify Plus with QuickBooks, ERP and AI agents: FactoryJet',
 };
 
@@ -302,7 +302,6 @@ const SUPPORT: { version: string; standard: string; extended: string }[] = [
 const SHOPIFY_MIGRATE_URL = 'https://help.shopify.com/en/manual/migrating-to-shopify';
 const STORE_MIGRATION_APP_URL = 'https://apps.shopify.com/store-migration';
 const PLUS_HELP_URL = 'https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan';
-const DIRECTORY_MIGRATION_URL = 'https://www.shopify.com/partners/directory/services/store-setup/migrate-from-another-platform?locationCodes=us';
 
 const tierCount = (t: string): number => FIRMS.filter((f) => f.group !== 'Us' && f.tier === t).length;
 
@@ -317,11 +316,11 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Which partner should migrate us from Salesforce Commerce Cloud to Shopify Plus?',
-    a: 'Eight firms on this page say they migrate from Salesforce Commerce Cloud: SDG, Domaine, Anatta, Shero Commerce, Netalico, Command C, Ruby Digital Agency and Black Belt Commerce. Domaine names Laura Mercier and Command C names Title Nine as moves from Salesforce Commerce Cloud to Shopify Plus. FactoryJet also runs these moves. Ask each firm for a finished Salesforce Commerce Cloud project with the same order system as yours.',
+    a: 'Six firms on this page name Salesforce Commerce Cloud as a source platform: Domaine, Anatta, Netalico, Command C, Ruby Digital Agency and Black Belt Commerce. Domaine names Laura Mercier and Command C names Title Nine as moves from Salesforce Commerce Cloud to Shopify Plus. FactoryJet also runs these moves. Ask each firm for a finished Salesforce Commerce Cloud project with the same order system as yours.',
   },
   {
     q: 'How much does it cost to migrate from Magento to Shopify?',
-    a: 'The Magento to Shopify migration cost rises with complexity. Ruby Digital Agency starts at $3,500 for one Adobe Commerce website selling direct. Solo Media Group gives a starting point of about $15,000 to $20,000. Anatta charges $2,500 for a migration audit, credited. Most firms quote after discovery. Shopify Plus itself is $2,300 a month on a three-year term or $2,500 on a one-year term in the US.',
+    a: 'The Magento to Shopify migration cost rises with complexity. Ruby Digital Agency starts at $3,500 for one Adobe Commerce website selling direct. Solo Media Group gives two figures on one page: projects start at about $20,000, and its FAQ says around $15,000. Anatta charges $2,500 for a migration audit, credited. Most firms quote after discovery. LitExtension, a migration tool vendor, says a Shopify Plus migration may start from around $10,000 and can exceed $200,000, and it rates Magento as a high-complexity source. Shopify Plus itself is $2,300 a month on a three-year term or $2,500 on a one-year term in the US.',
   },
   {
     q: 'How long does a Magento to Shopify migration take?',
@@ -333,7 +332,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Can Shopify’s free Store Migration app import from Magento?',
-    a: 'No. On 23 October 2026 the app listing named Square, WooCommerce, Etsy, Wix, Amazon, eBay, Clover and Lightspeed as source platforms, with product and customer data uploaded from CSV files. Magento and Adobe Commerce were not on the list. Magento stores usually move with a paid third-party Magento to Shopify migration app, custom scripts or a partner’s own tools.',
+    a: 'No. On 23 October 2026 the app listing named Square, WooCommerce, Etsy, Wix, Amazon, eBay, Clover and Lightspeed as source platforms, with product and customer data uploaded from CSV files. Magento and Adobe Commerce were not on the list. Magento stores usually move with a third-party tool such as Cart2Cart, LitExtension or Matrixify, custom scripts or a partner’s own tools. Each of those three publishes a Magento to Shopify page, linked in the data section below.',
   },
   {
     q: 'Will I lose search traffic when I move from Magento to Shopify?',
@@ -352,20 +351,32 @@ const FAQS: FAQItem[] = [
     a: 'Adobe still ships and supports it. Adobe released Adobe Commerce 2.4.9 on May 12, 2026, with standard support to May 31, 2029. Older versions are closer to the end: 2.4.7 loses standard support on May 31, 2027. Adobe says that from June 1, 2027 it will stop maintaining cloud environments on unsupported versions and may suspend their traffic.',
   },
   {
+    q: 'Is Magento free?',
+    a: 'Magento Open Source has no license fee. Adobe publishes it on GitHub under the Open Software License 3.0. Running it still costs money: hosting, extensions, developers and security patches. Adobe Commerce, the paid edition, carries a license on top. Shopify Plus folds hosting and patching into its monthly fee of $2,300 on a three-year term or $2,500 on a one-year term in the US.',
+  },
+  {
+    q: 'What are the disadvantages of staying on Magento?',
+    a: 'You keep paying for hosting, patches and extension updates, and you must upgrade on Adobe’s schedule. Standard support for 2.4.7 ends May 31, 2027, and 2.4.6 lost it on August 11, 2026. From June 1, 2027 Adobe says it will stop maintaining cloud environments on unsupported versions and may suspend their traffic. A store on 2.4.8 or 2.4.9 has support to 2028 or 2029.',
+  },
+  {
+    q: 'What are the downsides of moving from Magento to Shopify?',
+    a: 'Nearly every URL changes, so each one with traffic needs a 301 redirect. Customer passwords usually do not move. Extensions do not move either, so each becomes a Shopify feature, an app or custom code. Product attributes need remodelling. Shopify Plus costs $2,300 to $2,500 a month in the US, and some larger businesses pay a variable fee instead.',
+  },
+  {
     q: 'What is Magento called now?',
     a: 'Adobe sells the paid edition as Adobe Commerce. The free, self-hosted edition is Magento Open Source. Agencies use both names, so a page offering Adobe Commerce to Shopify migration covers Magento 2 stores too. Magento 1 reached its end of life years ago. For a Magento 1 to Shopify migration, Shero Commerce, SDG and Solo Media Group all say they handle Magento 1 stores.',
   },
   {
     q: 'When does Adobe Commerce 2.4.7 support end?',
-    a: 'Adobe’s lifecycle page, read on 23 October 2026, says standard support for Adobe Commerce 2.4.7 ends May 31, 2027, and extended support ends May 31, 2028. Version 2.4.6 lost standard support on August 11, 2026. If your store runs 2.4.7 or older, a migration started in 2026 can finish before standard support runs out.',
+    a: 'Adobe’s lifecycle page, read on 23 October 2026, says standard support for Adobe Commerce 2.4.7 ends May 31, 2027, and extended support ends May 31, 2028. Version 2.4.6 lost standard support on August 11, 2026. A store on 2.4.7 that starts a migration in 2026 can finish before May 31, 2027. A store on 2.4.6 or older is already outside standard support.',
   },
   {
-    q: 'Do I need Shopify Plus, or will a standard Shopify plan do after Magento?',
-    a: 'It depends on checkout rules, B2B and the number of stores. Shopify Plus adds checkout customization, unlimited B2B catalogs and expansion stores. A store with one price list and standard checkout may not need it. Shopify lists Plus at $2,300 a month on a three-year term or $2,500 a month on a one-year term in the US, and some larger businesses pay a variable fee instead.',
+    q: 'Is Shopify Plus worth it in 2026, or will a standard plan do after Magento?',
+    a: 'Plus is worth it when you need checkout rules, B2B or several stores. Shopify Plus adds checkout customization, unlimited B2B catalogs and expansion stores. A store with one price list and standard checkout may not need it. Shopify lists Plus at $2,300 a month on a three-year term or $2,500 a month on a one-year term in the US, and some larger businesses pay a variable fee instead.',
   },
   {
     q: 'What does a Shopify partner tier tell me about a migration agency?',
-    a: 'A tier shows how much Shopify business a partner brings in and keeps. Shopify has five tiers: Registered, Select, Plus, Premier and Platinum. A tier is a fair sign of scale. It does not show whether the firm has moved a Magento store like yours, so check the tier, then ask for a finished migration with the same extensions and back-office systems.',
+    a: 'A tier shows how much Shopify business a partner brings in and keeps. Each profile in Shopify’s partner directory shows it, and the 10 firms here with a profile show Plus, Premier or Platinum. A tier is a fair sign of scale. It does not show whether the firm has moved a Magento store like yours, so check the tier, then ask for a finished migration with the same extensions and back-office systems.',
   },
   {
     q: 'How many Shopify partners offer store migration in the US?',
@@ -373,11 +384,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Should I use a migration app or hire a Magento to Shopify migration agency?',
-    a: 'Use an app when the store is simple: one website, standard products, few extensions and no ERP. Hire a partner when you have custom modules, B2B pricing, configurable products, an ERP or years of URLs that bring search traffic. The data move is the easy part. Redirects, integrations and remodelled product attributes are where projects fail.',
-  },
-  {
-    q: 'What does a Magento to Shopify migration agency actually do?',
-    a: 'It audits the Magento store, plans which features become standard Shopify, apps or custom code, and maps product attributes to Shopify fields. It moves products, customers and orders, builds or adapts the theme, rebuilds integrations, maps every old URL to a redirect, tests, launches and watches rankings afterwards. Firms differ most on the audit and the redirect work.',
+    a: 'Use an app when the store is simple: one website, standard products, few extensions and no ERP. Hire a partner when you have custom modules, B2B pricing, configurable products, an ERP or years of URLs that bring search traffic. Anatta calls Magento product data the heaviest cleanup of any source, and Shero Commerce says ERP connections must be rebuilt, so most of the time goes there.',
   },
   {
     q: 'What happens to my Magento extensions when I move to Shopify?',
@@ -412,20 +419,21 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 23, 2026',
-  dateModified: 'Oct 23, 2026',
+  dateModified: 'Oct 31, 2026',
+  hideExcerptOnPage: true,
   readTime: '22 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
     'A woman in a rust knit sweater and a man in a denim shirt stand at a wooden table moving blank white cards from a grey tray into a white tray beside an orange stapler',
   meta: {
-    title: 'Magento to Shopify Migration Agencies 2026 | FactoryJet',
+    title: 'Best Magento to Shopify Migration Agencies 2026 | FactoryJet',
     description: META_DESCRIPTION,
   },
   keyTakeaways: [
     'No single Magento to Shopify migration agency suits every store. Match the firm to your store: enterprise Adobe Commerce, B2B with an ERP, a mid-market brand, or one website selling direct.',
-    'Every fact about every firm was read on its own website and its Shopify partner directory profile on 23 October 2026. Nobody paid to be listed, and the order is not a ranking.',
+    'Every fact about every firm was read on its own website on 23 October 2026, and on its Shopify partner directory profile where one exists (10 of the 11 other firms). Nobody paid to be listed, and the order is not a ranking.',
     'Published timelines run from 10 to 14 weeks for a simple store to 24 to 36 weeks for enterprise Adobe Commerce with ERP work.',
-    'Three firms publish a price: Ruby Digital Agency (from $3,500 for one website), Solo Media Group (about $15,000 to $20,000 to start) and Anatta ($2,500 audit, credited).',
+    'Three firms publish a price: Ruby Digital Agency (from $3,500 for one website), Solo Media Group (one line says from about $20,000, its FAQ says around $15,000) and Anatta ($2,500 audit, credited).',
     'Shopify’s free Store Migration app does not list Magento as a source. Magento moves need a paid app, scripts or a partner.',
     'Adobe Commerce 2.4.7 loses standard support on May 31, 2027. Version 2.4.6 already lost it on August 11, 2026.',
   ],
@@ -445,7 +453,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-23',
-              dateModified: '2026-10-23',
+              dateModified: '2026-10-31',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'Magento to Shopify Plus migration agencies for US brands' },
@@ -471,10 +479,10 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          Hire for the Magento store you have. For enterprise Adobe Commerce, SDG, Domaine or Anatta. For B2B and ERP-heavy stores, Shero Commerce, ECommerce Partners or Fyresite. For mid-market brands, Netalico, Solo Media Group or Command C. For one website selling direct, Ruby Digital Agency or Black Belt Commerce. For a store tied to QuickBooks or an ERP with AI agents, FactoryJet.
+          For a migration from Magento to Shopify, hire for the store you have. For enterprise Adobe Commerce, SDG, Domaine or Anatta. For B2B and ERP-heavy stores, Shero Commerce, ECommerce Partners or Fyresite. For mid-market brands, Netalico, Solo Media Group or Command C. For one website selling direct, Ruby Digital Agency or Black Belt Commerce. For a store tied to QuickBooks or an ERP with AI agents, FactoryJet.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          We read all 12 firms on their own websites on 23 October 2026, and the other 11 in Shopify&rsquo;s partner directory as well: where each is based, its tier, the systems it names, its timeline, how it handles redirects and any price it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
+          We read all 12 firms on their own websites on 23 October 2026, and 10 of the other 11 in Shopify&rsquo;s partner directory as well (ECommerce Partners has no profile we could find): where each is based, its tier, the systems it names, its timeline, how it handles redirects and any price it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
         </p>
         <p className="text-gray-800 leading-relaxed">
           Short on time? <a href="/contact" className={link}>Send us your Magento version, extensions and ERP</a> and the founder will tell you which kind of firm fits your move.
@@ -485,19 +493,20 @@ export const post: BlogPost = {
         On 22 October 2026 we asked ChatGPT, Claude, Gemini, Perplexity and Google&rsquo;s AI answers two buyer questions, each several times: &ldquo;Who should I hire to migrate from Magento to Shopify Plus?&rdquo; and &ldquo;Which partner should migrate us from Salesforce Commerce Cloud to Shopify Plus?&rdquo; We collected 56 answers. They linked to 153 different pages. Of the 546 links, 206 went to list pages like this one.
       </p>
       <p className="mb-4">
-        So we did the slow part. We started from the firms those answers named, kept only those with a US base and a real Magento to Shopify service, and opened each firm&rsquo;s own migration page and its Shopify directory profile. We dropped nine firms: five are based in Canada or the UK, one lists no US office, and three do not offer this migration. Every profile below links to its sources.
+        So we did the slow part. We started from the firms those answers named, kept only those with a US base and a real Magento to Shopify service, and opened each firm&rsquo;s own migration page and, where one exists, its Shopify directory profile. We dropped nine firms. Makro Agency and Taylor Sicard are based in Canada. Superco and Unified are in London, and Swanky lists teams in the UK and Australia. Turnaround Commerce lists no US office. UncannyCS, eSEOspace and OnTap Group showed no Magento to Shopify service on the pages we read. Every profile below links to its sources.
       </p>
       <p className="mb-4">
         <strong>Who wrote this.</strong> FactoryJet moves Magento stores to Shopify Plus, so we are on this list. Nobody paid to be included, the order is not a ranking, and our entry uses the same format as every other firm. Read every agency list with its author in mind, including this one.
       </p>
       <p className="mb-6">
-        A few terms in plain English. <strong>Magento</strong> is the ecommerce platform Adobe now sells as <strong>Adobe Commerce</strong>; the free edition is Magento Open Source. <strong>Shopify Plus</strong> is Shopify&rsquo;s plan for high-volume businesses. A <strong>migration</strong> or replatform moves your products, customers, orders and web addresses from one platform to another. A <strong>301 redirect</strong> sends an old web address to its new page so shoppers and search engines follow it. An <strong>ERP</strong> is the system that holds orders, stock and accounts.
+        A few terms in plain English. <strong>Magento</strong> is the ecommerce platform Adobe now sells as <strong>Adobe Commerce</strong>; the free edition is Magento Open Source. <strong>Shopify Plus</strong> is Shopify&rsquo;s plan for high-volume businesses. A <strong>migration</strong> or replatform moves your products, customers, orders and web addresses from one platform to another. A <strong>301 redirect</strong> sends an old web address to its new page so shoppers and search engines follow it. An <strong>ERP</strong> is the system that holds orders, stock and accounts. A <strong>metafield</strong> is an extra field Shopify adds to a product, customer or order for data its standard fields do not hold. A <strong>store view</strong> is Magento&rsquo;s way of running one store in several languages or regions. A <strong>canonical tag</strong> tells search engines which address is the main copy of a page. <strong>Cutover</strong> is the moment the old store stops taking orders and the new one starts, and <strong>rollback</strong> is the plan to switch back if launch goes wrong. <a href="https://shopify.dev/docs/apps/build/functions" className={link} rel="noopener" target="_blank">Shopify Functions</a>{' '}are small pieces of custom code that change how discounts, shipping or checkout work.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The shortlist at a glance</h2>
       <p className="mb-4">Find the rows that match your store and the systems you run, then read those profiles in full.</p>
-      <div className="overflow-x-auto mb-8 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
+      <div className="overflow-x-auto mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Firm</th>
@@ -523,21 +532,25 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How we built this list</h2>
       <ol className="list-decimal pl-6 mb-6 space-y-2">
-        <li><strong>Start from buyers&rsquo; own questions.</strong> The two questions above are how buyers ask. &ldquo;Migration from Magento to Shopify&rdquo; gets about 210 US Google searches a month, and &ldquo;Magento to Shopify migration services&rdquo; about 50 (DataForSEO, October 2026). Google showed an AI answer on all six migration searches we checked.</li>
+        <li><strong>Start from buyers&rsquo; own questions.</strong> The two questions above are how buyers ask. Google showed an AI answer on all six migration searches we checked.</li>
         <li><strong>Start from the firms AI answers name.</strong> We took the agencies cited in those 56 answers, then added firms that rank on Google for the same searches.</li>
         <li><strong>Keep only US-based firms with a real migration service.</strong> Each firm shows a US base on its own site or Shopify profile, and has a page describing Magento or Adobe Commerce to Shopify work.</li>
-        <li><strong>Read two sources for each firm.</strong> The firm&rsquo;s own migration page, and its Shopify partner directory profile for tier and location. Both opened on 23 October 2026.</li>
+        <li><strong>Read two sources for each firm.</strong> The firm&rsquo;s own migration page, and its Shopify partner directory profile for tier and location where one exists. Both opened on 23 October 2026.</li>
         <li><strong>Report claims as claims.</strong> Project counts, timelines and client names are each firm&rsquo;s own, and we say so.</li>
         <li><strong>No scores we cannot prove.</strong> We have not hired these firms, so there are no star ratings. We say who each suits and one question worth asking it.</li>
         <li><strong>Prices only from the firm.</strong> Where a firm publishes a migration or audit price on its own site, we quote it and link the page.</li>
       </ol>
+      <p className="mb-6">
+        Google&rsquo;s US first page for &ldquo;magento to shopify migration agency&rdquo; on 23 October 2026 was mostly migration guides and single-agency service pages, so this page compares 12 US firms side by side instead.
+      </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Why now: Adobe Commerce support dates</h2>
       <p className="mb-4">
         Many Magento owners start looking because of support dates. These rows come from <a href={ADOBE_LIFECYCLE_URL} className={link} rel="noopener" target="_blank">Adobe&rsquo;s Commerce lifecycle policy</a>, read on 23 October 2026. Adobe says each version gets three years of standard support from its release.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
+      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Version</th>
@@ -558,6 +571,9 @@ export const post: BlogPost = {
       </div>
       <p className="mb-6">
         Adobe also says that from June 1, 2027 it will stop maintaining Adobe Commerce cloud environments that run unsupported versions and may suspend their traffic. The table covers Adobe Commerce; the page says nothing about Magento Open Source. With published migration timelines of 10 to 36 weeks, a store on 2.4.7 that starts in early 2027 has little room. For the full comparison, read <a href="/comparisons/shopify-plus-vs-magento" className={link}>Shopify Plus vs Magento</a>.
+      </p>
+      <p className="mb-6">
+        <strong>Stay or move.</strong> A store on 2.4.8 or 2.4.9 has standard support until 2028 or 2029, so it can plan a move without a deadline. A store on 2.4.7 or older, especially on Adobe Commerce cloud, should start the move now or budget for an Adobe upgrade first.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best Magento to Shopify Plus migration agencies, profiled</h2>
@@ -650,8 +666,9 @@ export const post: BlogPost = {
       <p className="mb-4">
         Most firms quote after an audit or discovery call. On the pages we read on 23 October 2026, three of the 11 other firms publish a figure. We copied them exactly. They are each firm&rsquo;s own figures, not FactoryJet prices or a market survey.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
+      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Firm</th>
@@ -673,18 +690,19 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
-        <strong>How to read this.</strong> Ruby Digital Agency prices the simplest case, one Adobe Commerce website selling direct, and quotes B2B and ERP stores separately. Solo Media Group gives two starting figures on the same page, so ask which applies. Anatta prices the audit and quotes the migration afterwards. The other eight firms show no figure on the pages we read.
+        Ruby prices only the simplest case. Solo Media Group gives two figures, so ask which applies. Anatta prices the audit, not the migration. The other eight firms show no figure.
       </p>
       <p className="mb-6">
-        The platform is a separate bill. <a href={PLUS_HELP_URL} className={link} rel="noopener" target="_blank">Shopify&rsquo;s Plus plan page</a> lists $2,300 a month on a three-year term or $2,500 a month on a one-year term in the US, with a variable fee for some larger businesses. For the published market ranges for a whole migration, see our <a href="/replatforming/magento-to-shopify" className={link}>Magento to Shopify Plus migration cost and timeline page</a> and the <a href="/tools/replatforming-cost-calculator" className={link}>replatforming cost calculator</a>.
+        The platform is a separate bill. <a href={PLUS_HELP_URL} className={link} rel="noopener" target="_blank">Shopify&rsquo;s Plus plan page</a> lists $2,300 a month on a three-year term or $2,500 a month on a one-year term in the US, with a variable fee for some larger businesses. For the whole migration, <a href="https://litextension.com/blog/shopify-plus-migration-cost/" className={link} rel="noopener" target="_blank">LitExtension&rsquo;s cost guide</a>{' '}says a Shopify Plus migration may start from around $10,000 and can exceed $200,000, and rates Magento and Adobe Commerce as high-complexity sources. For more published market ranges for a whole migration, see our <a href="/replatforming/magento-to-shopify" className={link}>Magento to Shopify Plus migration cost and timeline page</a> and the <a href="/tools/replatforming-cost-calculator" className={link}>replatforming cost calculator</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What moves in a Magento to Shopify data migration, and what does not</h2>
       <p className="mb-4">
-        <a href={SHOPIFY_MIGRATE_URL} className={link} rel="noopener" target="_blank">Shopify&rsquo;s migration help page</a> sets the order: products, then customers, then historical orders. It lists apps as an option for products, customers, historical orders, gift cards and store credit, blogs and pages. Shopify&rsquo;s free <a href={STORE_MIGRATION_APP_URL} className={link} rel="noopener" target="_blank">Store Migration app</a> does not list Magento as a source, so Magento stores move with a paid app, scripts or a partner&rsquo;s own tools. Magento to Shopify product migration is usually the hardest part. Here is what the firms on this page say about each kind of data.
+        <a href={SHOPIFY_MIGRATE_URL} className={link} rel="noopener" target="_blank">Shopify&rsquo;s migration help page</a> sets the order: products, then customers, then historical orders. It lists apps as an option for products, customers, historical orders, gift cards and store credit, blogs and pages. Shopify&rsquo;s free <a href={STORE_MIGRATION_APP_URL} className={link} rel="noopener" target="_blank">Store Migration app</a>{' '}does not list Magento as a source. Magento stores move with a third-party tool such as <a href="https://www.shopping-cart-migration.com/shopping-cart-migration-options/1066-magento-to-shopify-migration" className={link} rel="noopener" target="_blank">Cart2Cart</a>,{' '}<a href="https://litextension.com/shopify-migration/magento-to-shopify-migration.html" className={link} rel="noopener" target="_blank">LitExtension</a>{' '}or <a href="https://matrixify.app/migrate-to-shopify/magento/" className={link} rel="noopener" target="_blank">Matrixify</a>, with scripts, or with a partner&rsquo;s own tools. Magento to Shopify product migration is usually the hardest part. Here is what the firms on this page say about each kind of data.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
+      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Data</th>
@@ -714,7 +732,7 @@ export const post: BlogPost = {
           alt="A woman in a white blouse opens an orange folder on an oak desk while a plain grey folder and a plain blue folder lie closed beside it"
           className="w-full h-auto rounded-xl"
         />
-        <figcaption className="text-sm text-gray-600 mt-2">Send the same one-page brief to three firms. Three proposals for one brief are easy to compare.</figcaption>
+        <figcaption className="text-sm text-gray-600 mt-2">Send each firm the same brief, with your Magento version, extension list and ERP, so every quote covers the same scope.</figcaption>
       </figure>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Which Magento to Shopify migration agency fits your store</h2>
@@ -727,7 +745,7 @@ export const post: BlogPost = {
         <tr><th scope="row">&ldquo;We do $5M to $50M and our search traffic matters most.&rdquo;</th><td>Netalico. Solo Media Group if you want a published starting price.</td></tr>
         <tr><th scope="row">&ldquo;We want a written plan before we commit to a build.&rdquo;</th><td>Command C, or Anatta&rsquo;s paid audit.</td></tr>
         <tr><th scope="row">&ldquo;We have one Adobe Commerce website and a modest budget.&rdquo;</th><td>Ruby Digital Agency, or Black Belt Commerce for an SEO-led team.</td></tr>
-        <tr><th scope="row">&ldquo;We are leaving Salesforce Commerce Cloud, not Magento.&rdquo;</th><td>Command C, Domaine or Netalico name it. See our <a href="/replatforming/salesforce-commerce-cloud-to-shopify-plus" className={link}>Salesforce Commerce Cloud to Shopify Plus guide</a>.</td></tr>
+        <tr><th scope="row">&ldquo;We are leaving Salesforce Commerce Cloud, not Magento.&rdquo;</th><td>Domaine and Command C name finished moves. Anatta, Netalico, Ruby Digital Agency and Black Belt Commerce also list it. See our <a href="/replatforming/salesforce-commerce-cloud-to-shopify-plus" className={link}>Salesforce Commerce Cloud to Shopify Plus guide</a>.</td></tr>
         <tr><th scope="row">&ldquo;The new store must stay in step with QuickBooks or our ERP, and we want AI agents on order work.&rdquo;</th><td>FactoryJet builds the store, the connection and the agents as one project. See <a href="/services/ecommerce-erp-integration" className={link}>ecommerce ERP integration</a> and <a href="/services/shopify-ai-agents" className={link}>Shopify AI agents</a>.</td></tr>
       </tbody></table>
 
@@ -735,7 +753,7 @@ export const post: BlogPost = {
       <div className="space-y-3 mb-8 not-prose">
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">1. Write down your Magento version, extensions and systems</summary>
-          <p className="mt-3 text-gray-700">List the Magento or Adobe Commerce version, every extension and what it does, the ERP, accounting and warehouse systems, the number of products and store views, and any B2B price lists. Firms give far better answers to one real page than to &ldquo;we want to move to Shopify&rdquo;. Our <a href="/blog/magento-to-shopify-plus-migration-checklist-2026" className={link}>Magento to Shopify migration checklist</a> has the full list.</p>
+          <p className="mt-3 text-gray-700">List the Magento or Adobe Commerce version, every extension and what it does, the ERP, accounting and warehouse systems, the number of products and store views, and any B2B price lists. Our <a href="/blog/magento-to-shopify-plus-migration-checklist-2026" className={link}>Magento to Shopify migration checklist</a> has the full list.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">2. Check your support deadline</summary>
@@ -773,44 +791,6 @@ export const post: BlogPost = {
         <li><strong>Who owns the theme code, the custom apps and the accounts at the end?</strong> The answer should be you, in writing.</li>
       </ol>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">How many Shopify partners offer migration in the US</h2>
-      <p className="mb-6">
-        On 23 October 2026 the <a href={DIRECTORY_MIGRATION_URL} className={link} rel="noopener" target="_blank">Shopify partner directory&rsquo;s store migration listing</a> showed 916 partners with the United States filter on, and 4,214 with no location filter. The filter may include partners that only list the US as a supported location. The 12 firms on this page all show a US base, and each describes Magento, Adobe Commerce or Salesforce Commerce Cloud migrations on its own site or Shopify profile. Use the directory to check a tier; use the firm&rsquo;s own case studies to check the fit.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-10 mb-4">What else ranks for &quot;magento to shopify migration agency&quot;, and how this guide differs</h2>
-      <p className="mb-4">
-        These are the business sites on Google&rsquo;s first page for &ldquo;magento to shopify migration agency&rdquo; in the US when we checked on 23 October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not reviewed their services, and the list leaves out social and video sites.
-      </p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="bg-gray-800 text-white">
-              <th className="p-3 text-left border border-gray-700">Site</th>
-              <th className="p-3 text-left border border-gray-700">Page title shown in Google</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ['shopify.com', 'Magento to Shopify Migration: The Complete Guide (2026)'],
-              ['unified.co', 'We are Unified, experts in Magento to Shopify migration'],
-              ['ecomheroes.dev', 'Top Ten Best Magento to Shopify Migration Agencies for ...'],
-              ['thegenielab.com', 'Migrating from Magento to Shopify Plus: Key Steps Explained'],
-              ['seventhtriangle.com', 'Magento to Shopify Migration Guide for Successful Store ...'],
-              ['makroagency.com', 'Magento to Shopify Migration Deep Dive'],
-            ].map(([site, title]) => (
-              <tr key={site} className="odd:bg-white even:bg-gray-50">
-                <td className="p-3 border border-gray-200 font-semibold align-top">{site}</td>
-                <td className="p-3 border border-gray-200 align-top">{title}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <p className="mb-6">
-        Most of these are guides to the migration itself or a single agency&rsquo;s service page. This page compares 12 US firms side by side on the facts a buyer checks: Shopify tier, published timeline, redirect method, data handled and published price, each linked to the page we read.
-      </p>
-
       <h2 className="text-2xl font-bold mt-10 mb-4">What FactoryJet does on a Magento to Shopify Plus move</h2>
       <p className="mb-4">
         We are FactoryJet. We have served 500+ businesses, most of them in commerce: online stores, B2B ordering and the operations behind them. Our founder, Bhavesh Barot, is involved in every project. We are a registered Shopify Partner.
@@ -823,7 +803,7 @@ export const post: BlogPost = {
         <li><strong>AI agents.</strong> Agents for order exceptions, emailed purchase orders and returns, with approval steps. See <a href="/services/shopify-ai-agents" className={link}>Shopify AI agents</a>.</li>
       </ul>
       <p className="mb-4">
-        A full replatform usually takes 8 to 14 weeks. We quote a fixed price in writing after a short scoping call, and we can show working software on your own data before you sign. You own everything we build. If you also want to stay on Magento for now, we support that too: see <a href="/services/magento-development" className={link}>Magento development</a>.
+        A move with B2B, subscriptions or heavy data cleanup usually takes 5 to 8 weeks. A headless or custom build usually takes 8 to 14 weeks. We quote a fixed price in writing after a short scoping call, and we can show working software on your own data before you sign. You own everything we build. If you also want to stay on Magento for now, we support that too: see <a href="/services/magento-development" className={link}>Magento development</a>.
       </p>
       <p className="mb-6">
         Related reading: <a href="/blog/best-shopify-plus-agencies-usa-2026" className={link}>the best Shopify Plus agencies for US brands</a>, <a href="/blog/shopify-plus-migration-cost-2026" className={link}>what a Shopify Plus migration costs</a> and <a href="/blog/magento-to-shopify-plus-migration-checklist-2026" className={link}>the Magento to Shopify Plus migration checklist</a>.
@@ -832,9 +812,9 @@ export const post: BlogPost = {
       <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 mb-8 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">If you are still working out the move</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          Send us your Magento version, your extension list and the systems the store must talk to. On a free call, the founder will tell you whether you need Shopify Plus, what the migration involves and which kind of firm fits.
+          Send us your Magento version, your extension list and the systems the store must talk to. On a free call, the founder will tell you whether you need Shopify Plus, what the migration involves and which kind of firm fits. Our <a href="/replatforming/magento-to-shopify" className={link}>Magento to Shopify runbook</a>{' '}shows every step first.
         </p>
-        <a href="/replatforming/magento-to-shopify" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">See our Magento to Shopify runbook</a>
+        <a href="/contact" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">Book a free call with the founder</a>
       </div>
     </>
   ),

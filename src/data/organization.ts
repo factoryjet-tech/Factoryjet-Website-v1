@@ -30,7 +30,7 @@ export const ORG_DESCRIPTION =
   'FactoryJet is an ecommerce and AI services company. We design, build, implement and support online stores, B2B portals, AI agents, AI search and SEO, and websites for DTC and B2B brands, and the client owns everything we build.';
 
 export const ORG_DISAMBIGUATION =
-  'FactoryJet started in India in 2014 as a B2B marketplace for construction materials and now runs the same brand as an ecommerce and AI services company. It is one company, not several.';
+  'FactoryJet started in 2014 as a B2B marketplace for construction materials and now runs the same brand as an ecommerce and AI services company. It is one company, not several.';
 
 export const ORG_SAME_AS: ReadonlyArray<string> = [
   'https://www.linkedin.com/company/factoryjet',

@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/shopify-maintenance-services, built 2026-10-29.
@@ -15,9 +16,10 @@ import '../ai-agents/ai-agents.css';
    2. No FactoryJet price, rate, retainer figure or running-cost number, and no
       market price range either: no UK source we read gave a retainer range we
       could cite. Support is described as optional and quoted in writing.
-   3. Client proof is limited to GPSUK (Commerceflo, live) and Sow Easy
-      (WooCommerce plus Odoo, still in build). Neither is Shopify work and the
-      copy never presents them as Shopify work.
+   3. Client proof is limited to DTF Virginia (Shopify theme build, US; facts as
+      on /services/shopify-development), GPSUK (Commerceflo, live) and Sow Easy
+      (WooCommerce plus Odoo, tested on Odoo staging, launch still ahead). Each
+      card names its platform. Never claim we maintain DTF unless confirmed.
    4. Structure mirrors /uk/ecommerce-consultant (imports, components, CSS,
       schema). The copy is written fresh for this page.
    5. The FAQ schema is generated from FAQ_ITEMS, the same array the visible
@@ -25,11 +27,13 @@ import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/shopify-maintenance-services';
 const UPDATED = '2026-10-29';
+const PAGE_MODIFIED = '2026-10-31';
+const MODIFIED_ON = '31 October 2026';
 const READ_ON = '29 October 2026';
-const TITLE = 'Shopify Maintenance Services UK | Support Retainers | FactoryJet';
-const H1 = 'Shopify Maintenance Services UK: Support for Established Shopify and Shopify Plus Stores';
+const TITLE = 'Shopify Maintenance and Support UK | FactoryJet';
+const H1 = 'Shopify Maintenance Services UK for Established Stores';
 const DESCRIPTION =
-  'Shopify and Shopify Plus maintenance for UK stores: theme and app upkeep, Xero, Sage and Linnworks links, peak trading prep. Optional support, no monthly minimum.';
+  'Shopify maintenance for UK stores: theme and app upkeep, Xero, Sage and Linnworks links, Shopify deadlines and peak trading checks. No monthly minimum.';
 
 /* Design tokens, copied by value from ../ai-agents/ai-agents.css so inline
    styles stay on-system without CSS custom property references in this file. */
@@ -65,6 +69,10 @@ const SRC = {
   hmrcDigitalLinks: { label: 'HMRC: VAT Notice 700/22, Making Tax Digital for VAT', url: 'https://www.gov.uk/government/publications/vat-notice-70022-making-tax-digital-for-vat/vat-notice-70022-making-tax-digital-for-vat' },
   hmrcMtdWho: { label: 'GOV.UK: when a business must follow Making Tax Digital for VAT', url: 'https://www.gov.uk/guidance/check-when-a-business-must-follow-the-rules-for-making-tax-digital-for-vat' },
   icoExceptions: { label: 'ICO: storage and access technologies, what are the exceptions?', url: 'https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/' },
+  /* The three entries below were read on 2026-10-31. */
+  shopifyFunctions: { label: 'Shopify Dev: Shopify Functions (read 31 October 2026)', url: 'https://shopify.dev/docs/apps/build/functions' },
+  checkoutExt: { label: 'Shopify Dev: checkout UI extensions (read 31 October 2026)', url: 'https://shopify.dev/docs/api/checkout-ui-extensions' },
+  webPixels: { label: 'Shopify Dev: web pixels (read 31 October 2026)', url: 'https://shopify.dev/docs/apps/build/marketing-analytics/pixels' },
 } as const;
 type SrcKey = keyof typeof SRC;
 const SOURCE_KEYS = Object.keys(SRC) as SrcKey[];
@@ -89,6 +97,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Start with what changed. Most faults on an established store follow a theme edit, a new app, an app update or a content change, so the change log usually points to the cause within minutes. If nothing changed on your side, check Shopify’s status page for a platform incident. If checkout or payments are failing, treat it as urgent: test an order on a phone, then roll back the latest change while the cause is found.' },
   { category: 'basics', question: 'Can you take over a Shopify store another agency built?',
     answer: 'Yes. This is a common starting point. The first job is an onboarding audit: we back up the live theme, list every app, script, webhook and integration, and note what nobody documented. You end up with a written map of your own store, which is useful even if you later move the work elsewhere. We do not need the previous agency’s help to start.' },
+  { category: 'basics', question: 'What happens in the first weeks of Shopify maintenance?',
+    answer: 'Onboarding runs in a fixed order. We agree the scope in writing, then you add us as a collaborator with the permissions you choose. Next we put the live theme under version control and list every app, script tag, webhook, API version and integration. Faults touching checkout, payments or order sync get fixed first, with a test order after each fix. Then each Shopify deadline gets a dated plan. The length depends on how many systems your store feeds, and we state it in the scope.' },
   { category: 'basics', question: 'Do you need our Shopify owner password to maintain the store?',
     answer: 'No. Shopify lets you add a collaborator account for a Shopify Partner to work on your store, and the permissions you set control which sections of the store that account can reach. Your owner login and password are never shared. When the work ends, the collaborator account is removed. Your developers, accountant and warehouse partner keep their own logins.' },
 
@@ -109,20 +119,20 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // ── Retainers, terms and cost ──
   { category: 'terms', question: 'How much does Shopify maintenance cost in the UK?',
     answer: 'It depends on the store, so we do not publish a figure. The cost drivers are how many apps and custom features you run, how many systems connect to Shopify (Xero, Sage, Linnworks, Brightpearl, a 3PL, marketplaces), whether you are on Shopify Plus with checkout extensions, and how much new work you want alongside the fixes. FactoryJet quotes the build and any support you choose as fixed prices in writing after a short scoping call.' },
-  { category: 'terms', question: 'Do we have to sign a monthly minimum?',
-    answer: 'No. Support is something you choose, and there is no monthly minimum unless you ask for one. Many clients pay per change: you describe the job, we quote it, you approve it, we do it. Others want a standing allowance of time each month so urgent work starts without a fresh quote. Either way the terms are in writing before work begins, and you can stop.' },
+  { category: 'terms', question: 'Is a retainer or pay per fix better for a Shopify store?',
+    answer: 'Pay per fix suits a store that changes little: you describe the job, we quote it, you approve it, we do it. A standing allowance of time suits a store with frequent changes or many connected systems, because urgent work starts without waiting for a fresh quote. Either way there is no monthly minimum unless you ask for one, the terms are in writing before work begins, and you can stop.' },
   { category: 'terms', question: 'Are your quotes in pounds, and is VAT included?',
-    answer: 'Quotes for UK clients are written in pounds sterling, and the quote shows VAT on its own line where it applies, so your finance team sees the figure before and after VAT. Each phase is scoped, priced and signed on its own, so a support allowance never hides inside a build price. If a third-party app or tool is needed, it sits in your own account at its list price.' },
+    answer: 'Quotes for UK clients are written in pounds sterling, and the quote shows VAT on its own line where it applies, so your finance team sees the figure before and after VAT. Each phase gets its own fixed price in writing, so a support allowance never hides inside a build price. If a third-party app or tool is needed, it sits in your own account at its list price.' },
   { category: 'terms', question: 'Who owns the code and the store after you work on it?',
     answer: 'You do, from day one. Theme code, custom apps, integration code and documentation all belong to you, and stay in your Shopify account and your code repository. Hosting for any custom link can run in your own cloud account at cost, with no markup. If you end support, nothing is switched off and nothing needs to be handed back, because nothing was ever held by us.' },
   { category: 'terms', question: 'How fast do you respond when the store breaks?',
-    answer: 'We agree the response times in writing during scoping, matched to how your store trades, rather than printing one promise for every client. What every arrangement shares is a separate urgent route, so a failed checkout never waits behind a banner change, and a rule that checkout, payment and order sync faults come first. The founder replies to new enquiries within 24 hours.' },
+    answer: 'Urgent faults go through a separate route, so a failed checkout never waits behind a banner change. Checkout, payment and order sync faults always come first. The exact response time for your store is written into the support terms during scoping, matched to the hours you trade. The founder replies to new enquiries within 24 hours.' },
   { category: 'terms', question: 'What should we send before the first call?',
     answer: 'A short brief is enough. Tell us your Shopify plan, roughly how many orders you take a month, the apps you rely on, and the systems the store connects to: accounting, stock, warehouse, couriers and marketplaces. Add the last three things that broke and what you would build next if you had the time. If you already have an RFP or tender document, send that instead and we will answer it point by point.' },
 
   // ── UK systems, tax and data rules ──
   { category: 'uk', question: 'Can you look after our Xero, Sage or QuickBooks link?',
-    answer: 'Yes. On most established UK stores the order flow into accounting is the part that breaks first and costs the most when it does. We maintain connector apps and custom links to Xero, Sage 50, Sage 200, Sage Intacct, QuickBooks UK, NetSuite, Dynamics 365 Business Central and Odoo. For Xero specifically, our Shopify Xero integration page covers VAT, payouts and stock in detail.' },
+    answer: 'Yes. On most established UK stores the order flow into accounting is the part that breaks first and costs the most when it does. We can look after connector apps, and custom links that connect Shopify to Xero, Sage, QuickBooks UK, NetSuite, Dynamics 365 Business Central or Odoo through each system’s API. For Xero specifically, our Shopify Xero integration page covers VAT, payouts and stock in detail.' },
   { category: 'uk', question: 'Does Making Tax Digital affect how our Shopify store is maintained?',
     answer: 'It can. GOV.UK says all VAT-registered businesses should now be signed up for Making Tax Digital for VAT. HMRC’s VAT Notice 700/22 says records must be kept digitally and data moved between programs by digital links; copy and paste does not count. If a broken connector leaves your team retyping Shopify sales into the books, that gap matters. We map it, and your accountant confirms the rules.' },
   { category: 'uk', question: 'Do UK cookie rules still need a banner for Shopify analytics?',
@@ -130,19 +140,21 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'uk', question: 'Can you keep Linnworks, Brightpearl or Mintsoft in step with Shopify?',
     answer: 'Yes. Order management and warehouse systems talk to Shopify through webhooks, messages Shopify sends when an order or product changes. Shopify’s developer documentation says a failing webhook is retried up to eight times in four hours, and if failures persist the subscription is removed. After that, orders silently stop arriving. We watch for those failures and fix the endpoint before stock drifts.' },
   { category: 'uk', question: 'Do you support stores selling on Amazon.co.uk, eBay and OnBuy?',
-    answer: 'Yes. Marketplace channels add listings, stock and order sync that must stay in step with Shopify, or you oversell. We maintain the connectors and the product data behind Amazon.co.uk, eBay UK, OnBuy, ManoMano and the B&Q marketplace, plus the courier links for Royal Mail, DPD and Evri, and payment set-ups with Shopify Payments, Klarna, Clearpay and GoCardless for trade accounts.' },
+    answer: 'Yes. Marketplace channels add listings, stock and order sync that must stay in step with Shopify, or you oversell. We can look after the connector apps and product data that link Shopify to Amazon.co.uk, eBay UK and OnBuy, plus courier label apps for Royal Mail, DPD and Evri, and payment set-ups with Shopify Payments, Klarna and Clearpay.' },
   { category: 'uk', question: 'Do you only maintain Shopify stores?',
-    answer: 'No. Shopify and Shopify Plus are the focus of this page, but the same team supports WooCommerce, Magento and Commerceflo stores. We are building Sow Easy’s WooCommerce trade store with Odoo as the master for stock and pricing, and we built GPSUK’s trade storefront on Commerceflo, where our SEO and AI search work continues. If your business runs more than one store platform, one team can look after all of them.' },
+    answer: 'No. Shopify and Shopify Plus are the focus of this page, but the same team works on WooCommerce and Commerceflo stores. We are building Sow Easy’s WooCommerce trade store with Odoo as the master for stock and pricing, and we built GPSUK’s trade storefront on Commerceflo, where our SEO and AI search work continues. If your business runs more than one store platform, one team can look after all of them.' },
 ];
 
 /* ─── Named UK Shopify support providers (open self-disclosure, ItemList).
-       Each note is based on the company’s own website, fetched 2026-10-29. ── */
-const PROVIDERS: { name: string; note: string }[] = [
+       Each note is based on the company’s own website, fetched 2026-10-29
+       (Charle added 2026-10-31; every url re-checked that day). ── */
+const PROVIDERS: { name: string; note: string; url?: string }[] = [
   { name: 'FactoryJet', note: 'That is us. Shopify and Shopify Plus maintenance with the integration work behind the store: Xero, Sage, Linnworks, marketplaces and couriers. Optional support with no monthly minimum, changes quoted and approved, and you own every line of code.' },
-  { name: 'Visualsoft', note: 'Describes itself as the UK’s unified retail agency. Builds Shopify stores, including multi-site migrations, and offers ongoing support from a support desk it says is open 8am to 8pm every day of the year.' },
-  { name: 'Pixel Kicks', note: 'A Manchester ecommerce agency that builds, migrates, markets and supports Shopify stores, and also works on WordPress and WooCommerce, with ongoing Shopify support services.' },
-  { name: 'We Manage Web', note: 'A Preston, Lancashire company that manages existing Shopify, WordPress and WooCommerce sites: routine upkeep, quick fixes, speed work and conversion changes.' },
-  { name: 'Envisage Digital', note: 'A Bournemouth agency offering Shopify design, theme and app development, migrations, integrations, SEO, headless builds and Shopify Plus services, alongside Shopify support.' },
+  { name: 'Visualsoft', note: 'Describes itself as the UK’s unified retail agency. Builds Shopify stores, including multi-site migrations, and offers ongoing support from a support desk it says is open 8am to 8pm every day of the year.', url: 'https://www.visualsoft.co.uk/' },
+  { name: 'Charle', note: 'A Shopify and Shopify Plus agency with a London office. Its HelpDesk service covers ongoing store maintenance, theme updates, speed work and day-to-day fixes, from a UK-based team.', url: 'https://www.charle.co.uk/services/support-and-maintenance/' },
+  { name: 'Pixel Kicks', note: 'A Manchester ecommerce agency that builds, migrates, markets and supports Shopify stores, and also works on WordPress and WooCommerce, with ongoing Shopify support services.', url: 'https://www.pixelkicks.co.uk/services/shopify-support-services/' },
+  { name: 'We Manage Web', note: 'A Preston, Lancashire company that manages existing Shopify, WordPress and WooCommerce sites: routine upkeep, quick fixes, speed work and conversion changes.', url: 'https://wemanageweb.co.uk/services/shopify/' },
+  { name: 'Envisage Digital', note: 'A Bournemouth agency offering Shopify design, theme and app development, migrations, integrations, SEO, headless builds and Shopify Plus services, alongside Shopify support.', url: 'https://www.envisagedigital.co.uk/shopify-services/shopify-support/' },
 ];
 
 /* ─── JSON-LD. The Organization is defined once, sitewide; this page only
@@ -179,7 +191,7 @@ const jsonLd = {
       headline: H1,
       inLanguage: 'en-GB',
       datePublished: UPDATED,
-      dateModified: UPDATED,
+      dateModified: PAGE_MODIFIED,
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="true"]'] },
       author: {
         '@type': 'Person',
@@ -220,11 +232,10 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'en-US': 'https://factoryjet.com/services/shopify-maintenance-services', 'x-default': 'https://factoryjet.com/services/shopify-maintenance-services' } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['shopify-maintenance-services'] },
   openGraph: {
     title: TITLE,
-    description:
-      'Support retainers for established UK Shopify and Shopify Plus stores. Theme and app upkeep, Shopify platform deadlines, Xero, Sage and Linnworks links, and peak trading prep. You own the code.',
+    description: DESCRIPTION,
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
@@ -275,16 +286,15 @@ export default function ShopifyMaintenanceServicesUKPage() {
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  Your store is past launch. It takes real orders, it runs a long list of apps, and it feeds Xero or Sage,
-                  Linnworks or Brightpearl, Royal Mail and DPD, and a seller account on Amazon.co.uk. Whoever built it
-                  has moved on. FactoryJet looks after established UK Shopify and Shopify Plus stores: theme and app
-                  upkeep, Shopify’s platform deadlines, the links behind the shop and the checks before peak trading.
+                  Your Shopify or Shopify Plus store takes real orders, runs a long list of apps and feeds Xero or Sage,
+                  Linnworks and your couriers. Whoever built it has moved on. FactoryJet looks after the theme, the apps,
+                  Shopify’s platform deadlines and the links behind the shop.
                 </p>
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses since 2014</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="who"><a href="/about" style={{ textDecoration: 'underline' }}><b>Bhavesh Barot</b></a>, Founder &amp; CEO<br /><span>500+ businesses since 2014</span></div>
+                  <div className="upd">Last updated<br />{MODIFIED_ON}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -334,7 +344,7 @@ export default function ShopifyMaintenanceServicesUKPage() {
               </p>
             </div>
             <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms we use a lot</span>
+              <span className="lab">Three Shopify terms, in plain words</span>
               <p>
                 A <b>collaborator account</b> is Shopify’s way of letting an outside partner into your admin with the
                 permissions you choose, so no password is shared. A <b>webhook</b> is a message Shopify sends to
@@ -374,7 +384,8 @@ export default function ShopifyMaintenanceServicesUKPage() {
         {/* ═══ 4. WHAT THE WORK COVERS ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
+            <div className="col-4060">
+            <div>
               <span className="eyebrow">What we look after</span>
               <h2>What Shopify maintenance covers for an established UK store</h2>
               <p className="lead mt-4">
@@ -382,7 +393,7 @@ export default function ShopifyMaintenanceServicesUKPage() {
                 check on every established store.
               </p>
             </div>
-            <ul className="col-3 mt-12">
+            <ul className="col-2">
               <li className="svc-card">
                 <h3>Checkout and payments</h3>
                 <p className="mt-4">Shopify Payments, Klarna and Clearpay at checkout, GoCardless for trade accounts, discount rules and delivery rates. After any change to payments, shipping or discounts we place a test order before customers find the fault.</p>
@@ -417,9 +428,11 @@ export default function ShopifyMaintenanceServicesUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Shopify Plus and B2B</h3>
-                <p className="mt-4">Checkout extensions, Shopify Functions, B2B company accounts and trade price lists kept in step with your ERP. See <a href="/uk/shopify-plus">Shopify Plus</a> and <a href="/uk/b2b-ecommerce">B2B ecommerce</a> for the build side.</p>
+                <p className="mt-4">Checkout extensions, which add custom blocks and logic to Shopify checkout. Shopify Functions, custom code Shopify runs for rules such as a new discount type or a hidden payment option. B2B company accounts and trade price lists kept in step with your ERP, the system that runs your stock, orders and finance. See <a href="/uk/shopify-plus">Shopify Plus</a> and <a href="/uk/b2b-ecommerce">B2B ecommerce</a> for the build side.</p>
+                <Sources ids={['checkoutExt', 'shopifyFunctions']} />
               </li>
             </ul>
+            </div>
           </div>
         </section>
 
@@ -436,7 +449,8 @@ export default function ShopifyMaintenanceServicesUKPage() {
                     Shopify’s changelog says that from 1 October 2026 apps can no longer create or update them,
                     although existing ones keep running. From 1 March 2027 Shopify stops injecting them into
                     storefronts at all. The replacements are app embed blocks, which you switch on in the theme
-                    editor, and web pixels for tracking. An app that has not moved by then simply stops working on
+                    editor, and web pixels for tracking. A web pixel is a small tracking script that Shopify runs in
+                    a sealed-off sandbox, so it can record visits without touching the page itself. An app that has not moved by then simply stops working on
                     the page.
                   </p>
                   <p>
@@ -458,7 +472,7 @@ export default function ShopifyMaintenanceServicesUKPage() {
                     first. We go further and keep it under version control.
                   </p>
                 </div>
-                <Sources ids={['scriptTags', 'apiVersions', 'webhooks', 'shopifyThemes']} />
+                <Sources ids={['scriptTags', 'apiVersions', 'webhooks', 'shopifyThemes', 'webPixels']} />
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">Dates on our watch list</span>
@@ -485,7 +499,7 @@ export default function ShopifyMaintenanceServicesUKPage() {
             <div className="col-2 mt-10" style={{ gap: 20 }}>
               <div className="card">
                 <h3>Shopify Support helps with</h3>
-                <ul className="scope-list mt-4">
+                <ul className="scope-list yes-list mt-4">
                   <li>Account and platform questions by chat, 24/7, on every plan</li>
                   <li>Inbound phone and email on Shopify Plus and Retail, with email typically answered within 48 hours</li>
                   <li>Apps made by Shopify</li>
@@ -494,7 +508,7 @@ export default function ShopifyMaintenanceServicesUKPage() {
               </div>
               <div className="card">
                 <h3>Shopify Support does not cover</h3>
-                <ul className="scope-list mt-4">
+                <ul className="scope-list no-list mt-4">
                   <li>Most custom code issues, unless you are on Shopify Plus or are a Shopify Partner</li>
                   <li>Third-party apps and sales channels, which their developers support</li>
                   <li>Paid third-party themes, which the theme developer supports</li>
@@ -518,11 +532,13 @@ export default function ShopifyMaintenanceServicesUKPage() {
             <span className="eyebrow">Side by side</span>
             <h2 style={{ maxWidth: 760 }}>Agency support vs freelance developer vs in-house hire vs Shopify Support alone</h2>
             <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              UK merchants keep a Shopify store running in four common ways. Each suits someone. The table compares
-              them on what decides whether a Friday afternoon outage gets fixed.
+              UK merchants keep a Shopify store running in four common ways: an agency, a freelance Shopify expert in
+              the UK, an in-house hire, or Shopify Support alone. The table compares them on what decides whether a
+              Friday afternoon outage gets fixed.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
-              <table className="cmp-table">
+            <p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="cmp-table" style={{ minWidth: 760 }}>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -567,7 +583,7 @@ export default function ShopifyMaintenanceServicesUKPage() {
                   <li><b>Running costs stay in your accounts, at cost.</b> Hosting for a custom link and any paid tools can sit in your own accounts with no markup from us.</li>
                   <li><b>Defects in our own work are fixed inside the build price</b> for a cover period agreed in writing before work starts.</li>
                   <li><b>Support is optional, with no monthly minimum.</b> Each change is quoted and approved before we start, or you choose a standing allowance of time.</li>
-                  <li><b>Each phase is scoped, priced and signed on its own.</b> Quotes are in pounds sterling, with VAT shown on its own line where it applies.</li>
+                  <li><b>Each phase gets its own fixed price, quoted in writing.</b> Quotes are in pounds sterling, with VAT shown on its own line where it applies.</li>
                 </ul>
                 <p className="mt-6" style={{ maxWidth: 560 }}>
                   FactoryJet quotes any build, and any support you choose, as fixed prices in writing after a short
@@ -649,17 +665,19 @@ export default function ShopifyMaintenanceServicesUKPage() {
                     consent. Your legal adviser makes the final call.
                   </p>
                   <p>
-                    <b>Speed.</b> Google’s Web Vitals targets are a Largest Contentful Paint within 2.5 seconds, an
-                    Interaction to Next Paint of 200 milliseconds or less, and a Cumulative Layout Shift of 0.1 or
-                    less, measured at the 75th percentile of page loads. Apps are the usual reason a store drifts
-                    past them, so we re-measure after every app change.
+                    <b>Speed.</b> Google sets three Web Vitals targets. Largest Contentful Paint, the time until the
+                    main content shows, should be 2.5 seconds or less. Interaction to Next Paint, how fast the page
+                    reacts to a tap or click, should be 200 milliseconds or less. Cumulative Layout Shift, how much
+                    the page jumps while it loads, should be 0.1 or less. Google checks each one at the 75th
+                    percentile of page loads, so three visits in four must pass. Apps are the usual reason a store
+                    drifts past them, so we re-measure after every app change.
                   </p>
                 </div>
                 <Sources ids={['hmrcMtdWho', 'hmrcDigitalLinks', 'icoExceptions', 'webVitals']} />
                 <p style={srcNote}>We are not tax advisers or lawyers: we map the questions and you confirm them with your accountant or adviser.</p>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/shopify-plus/shopify-plus-packing.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A bright UK packing station with parcels, mailers and a laptop showing an order list while an order is packed" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/uk/shopify-plus/shopify-plus-packing.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A bright UK packing station with parcels, mailers and a laptop showing an order list while an order is packed" style={{ width: '100%', height: 'auto', aspectRatio: '3 / 2', objectFit: 'cover', background: T.n200, borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
                     The packing bench tells you more about a store’s health than the homepage does. If labels are
@@ -679,18 +697,27 @@ export default function ShopifyMaintenanceServicesUKPage() {
               <h2>Support for established UK merchants, wholesalers and multi-channel brands</h2>
               <p className="lead mt-4">
                 FactoryJet was founded in 2014 and has worked with more than 500 businesses, most of them in
-                commerce. The founder, Bhavesh Barot, is involved in every engagement. Two UK clients show our
-                commerce and ERP work, on platforms other than Shopify.
+                commerce. One Shopify build and two UK trade projects show the work, each labelled with its
+                platform.
               </p>
             </div>
-            <ul className="col-3 mt-12">
-              <li className="svc-card"><h3>GPSUK</h3><p className="mt-4">A UK promotional products supplier. We built its trade storefront on Commerceflo, where business buyers log in, see their own account pricing and move from quote to order. It is live, and our SEO and AI search work for it continues. <a href="/case-studies/gpsuk-promotional-products">Read the GPSUK case study</a>.</p></li>
-              <li className="svc-card"><h3>Sow Easy</h3><p className="mt-4">A UK wholesale client. We are building its WooCommerce trade store with Odoo as the master for stock, pricing and product codes, tested against Odoo’s staging system before launch. <a href="/case-studies/sow-easy-distributor-portal">Read the Sow Easy case study</a>.</p></li>
-              <li className="svc-card"><h3>Multi-channel brands</h3><p className="mt-4">Shopify plus Amazon.co.uk, eBay or OnBuy, with stock held in Linnworks or Brightpearl. Most of the risk sits in the sync between them.</p></li>
-              <li className="svc-card"><h3>Shopify Plus merchants</h3><p className="mt-4">Stores with checkout extensions, Shopify Functions and several storefronts, where one bad deploy touches every market.</p></li>
-              <li className="svc-card"><h3>Wholesale and trade sellers</h3><p className="mt-4">Trade accounts on payment terms, GoCardless collections and price lists that must match the ERP to the penny.</p></li>
-              <li className="svc-card"><h3>Stores after a migration</h3><p className="mt-4">Brands that moved to Shopify and now need someone to own the redirects, the apps and the links. See <a href="/uk/shopify-migration">Shopify migration</a>.</p></li>
-            </ul>
+            <div className="col-6040 mt-12">
+              <ul className="stack">
+                {/* DTF Virginia: naming approved 2026-10-29; facts as on /services/shopify-development. */}
+                <li className="svc-card"><h3>DTF Virginia (Shopify, United States)</h3><p className="mt-4">A custom Shopify theme for a print shop in Hampton, Virginia that sells DTF transfers, patches and stickers. Buyers build their own gang sheets (one print sheet packed with many designs) at each transfer size, and resellers can sign up for an account. <a href="https://dtfvirginia.com/" target="_blank" rel="noopener noreferrer">See the live store</a>.</p></li>
+                <li className="svc-card"><h3>GPSUK (Commerceflo, UK)</h3><p className="mt-4">A UK promotional products supplier. We built its trade storefront on Commerceflo, where business buyers log in, see their own account pricing and move from quote to order. It is live, and our SEO and AI search work for it continues. <a href="/case-studies/gpsuk-promotional-products">Read the GPSUK case study</a>.</p></li>
+                <li className="svc-card"><h3>Sow Easy (WooCommerce and Odoo, UK)</h3><p className="mt-4">A UK wholesale client. We are building its WooCommerce trade store with Odoo as the master for stock, pricing and product codes. It is tested against Odoo’s staging system, and launch is still ahead. <a href="/case-studies/sow-easy-distributor-portal">Read the Sow Easy case study</a>.</p></li>
+              </ul>
+              <div className="card card-top-orange">
+                <span className="eyebrow">Stores we take on</span>
+                <p className="mt-4">
+                  Multi-channel brands, Shopify Plus merchants, trade sellers and stores fresh from a move to
+                  Shopify. Each fails in its own place: the marketplace stock sync, a checkout extension deploy that
+                  touches every market, a trade price list that no longer matches the ERP, or the redirects after
+                  a <a href="/uk/shopify-migration" style={{ textDecoration: 'underline' }}>Shopify migration</a>.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -702,8 +729,10 @@ export default function ShopifyMaintenanceServicesUKPage() {
                 <span className="eyebrow">The honest field</span>
                 <h2>UK Shopify support and maintenance providers worth knowing</h2>
                 <p className="lead mt-4">
-                  These firms appeared in UK Google results for Shopify support and maintenance searches on{' '}
-                  {READ_ON}. Each note is based on the company’s own website. Talk to a few.
+                  To compare one Shopify support agency with another, start with these firms. Each appeared in UK
+                  Google results for Shopify support and maintenance searches on {READ_ON}. Charle was added on{' '}
+                  {MODIFIED_ON}. Each note is based on the
+                  company’s own website, linked below. Talk to a few.
                 </p>
                 <ul className="stack mt-8">
                   {PROVIDERS.map((a, i) => (
@@ -712,6 +741,9 @@ export default function ShopifyMaintenanceServicesUKPage() {
                       <div>
                         <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                         <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
+                        {a.url && (
+                          <p style={srcNote}><a href={a.url} target="_blank" rel="noopener noreferrer" style={srcLink}>Read on {a.name}’s own site</a></p>
+                        )}
                       </div>
                     </li>
                   ))}
@@ -750,7 +782,8 @@ export default function ShopifyMaintenanceServicesUKPage() {
               <h2>Sources, read on {READ_ON}</h2>
               <p className="lead mt-4">
                 Every Shopify date, count and support rule, and every HMRC and ICO point on this page, was read on
-                the pages below on that day. Shopify changes its platform every quarter and regulators update their
+                the pages below on that day; the three Shopify Dev pages marked 31 October 2026 were read on that
+                date. Shopify changes its platform every quarter and regulators update their
                 guidance, so open the linked page before you act on a detail.
               </p>
             </div>
@@ -767,7 +800,7 @@ export default function ShopifyMaintenanceServicesUKPage() {
         {/* ═══ 15. FAQ ═══ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Shopify maintenance questions from UK merchants</h2>
             </div>
@@ -820,7 +853,7 @@ export default function ShopifyMaintenanceServicesUKPage() {
             <h2>Hand over the upkeep of your Shopify store before peak trading</h2>
             <p className="mt-4">
               Send your name and work email. The founder replies within 24 hours to set up a short call about your
-              store, your apps and the systems it feeds. You leave knowing what we would fix first and how the
+              apps and the systems your store feeds. You leave knowing what we would fix first and how the
               support would be quoted. No obligation.
             </p>
             <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>

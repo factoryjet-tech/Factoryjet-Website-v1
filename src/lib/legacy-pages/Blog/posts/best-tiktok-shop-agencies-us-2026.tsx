@@ -7,13 +7,15 @@ const PAGE_URL = `https://factoryjet.com/blog/${SLUG}`;
 const IMG = `/images/blog/${SLUG}`;
 const TITLE = 'Best TikTok Shop Agencies for US Brands (2026): 13 Compared, Including Us';
 const META_DESCRIPTION =
-  'Compare 13 US TikTok Shop agencies: specialists and marketplace agencies that run Amazon and Walmart too. Partner claims, channels and published fees.';
+  'Compare 13 US TikTok Shop agencies, from TikTok specialists to marketplace agencies that also run Amazon and Walmart: where each is based and what it publishes.';
 
 // Every fact about every agency below was read on that agency's own website on
 // 23 October 2026 (URL in `source`, `hqSource` where the location came from
-// another page). TikTok Shop Partner status is each agency's own claim: TikTok's
-// partner directory sits inside Seller Center behind a login, so none could be
-// checked on a TikTok page. Not paid placement; the order is NOT a ranking.
+// another page). TikTok Shop Partner status is each agency's own claim: the TSP
+// Directory sits inside Seller Center behind a login, so none could be checked on
+// a public TikTok Shop page. TikTok's public Marketing Partners directory
+// (partners.tiktok.com) is a separate ads program and was not checked per agency.
+// Not paid placement; the order is NOT a ranking.
 // The ItemList schema maps from this same array, so the list and schema cannot drift.
 type Group = 'TikTok Shop specialists' | 'Marketplace agencies' | 'Us';
 
@@ -232,12 +234,12 @@ const FIRMS: Firm[] = [
     tsp: 'None claimed',
     based: 'Serves US brands, with calls in US business hours',
     type: 'Commerce and AI services company',
-    clients: 'US brands that sell on their own Shopify store and on marketplaces',
+    clients: 'DTF (Shopify store) and Mannik (WooCommerce store). We show working software on your own products before you sign',
     channels: 'TikTok Shop, Shopify, Amazon, Walmart, Target Plus, with one catalog and stock count across them',
-    what: 'We set up TikTok Shop in Seller Center, list your products, connect your Shopify store and set shipping and return rules. Then we find creators, run TikTok Shop ads and LIVE selling, and handle the daily work. Because we also build the systems behind the store, we keep TikTok Shop, Shopify, Amazon and Walmart on one catalog and one inventory count. Every engagement starts with a free audit.',
+    what: 'We set up TikTok Shop in Seller Center, list your products, connect your Shopify store and set shipping and return rules. Then we find creators, run TikTok Shop ads and handle the daily work. Because we also build the systems behind the store, we keep TikTok Shop, Shopify, Amazon and Walmart on one catalog and one inventory count. Every engagement starts with a free audit.',
     fee: 'Quoted after the free audit',
     bestFor: 'Brands that want TikTok Shop run on the same catalog and stock system as their store and marketplaces.',
-    ask: 'To see your products and stock flowing between Shopify and TikTok Shop before you commit.',
+    ask: 'Can you show our own products and stock moving between Shopify and TikTok Shop before we sign?',
   },
 ];
 
@@ -269,15 +271,17 @@ const TSP_TIERS_URL = 'https://partner.tiktokshop.com/docv2/page/68411b45314d250
 const TSP_REGISTER_URL = 'https://partner.tiktokshop.com/docv2/page/683f1353f979330480b82080';
 const TAP_URL = 'https://partner.tiktokshop.com/docv2/page/us-tiktok-shop-affiliate-partner-tap';
 const PARTNER_CENTER_URL = 'https://partner.tiktokshop.com/';
+// TikTok's own announcement of its Marketing Partners program and directory.
+const MARKETING_PARTNERS_URL = 'https://ads.tiktok.com/business/en/blog/introducing-marketing-technology-partners';
 
 const FAQS: FAQItem[] = [
   {
     q: 'What is the best TikTok Shop agency for US brands?',
-    a: 'It depends on what you need run. For a TikTok Shop management agency, MediaLabs, The Brand Buddies or Top Growth Marketing. For the creator and affiliate side only, Hamster Garage. To run TikTok Shop with Amazon and Walmart, Pattern, Velocity Sellers, Eva Commerce, Sequence Commerce, Marketplace Velocity, CoreTrex, ASL Ecommerce or Darkroom. FactoryJet runs TikTok Shop on one catalog with Shopify and marketplaces.',
+    a: 'For a TikTok Shop specialist, MediaLabs, The Brand Buddies or Top Growth Marketing. For creators and affiliates only, Hamster Garage. To run TikTok Shop with Amazon and Walmart, Pattern, Velocity Sellers, Eva Commerce, Sequence Commerce, Marketplace Velocity, CoreTrex, ASL Ecommerce or Darkroom. FactoryJet runs TikTok Shop on one catalog with Shopify and marketplaces. Pick by what you need run every day.',
   },
   {
     q: 'Which agency manages omnichannel selling on Shopify, Amazon, Walmart and TikTok Shop?',
-    a: 'Velocity Sellers, Marketplace Velocity, CoreTrex, Sequence Commerce, ASL Ecommerce and Darkroom all name Shopify, Amazon, Walmart and TikTok Shop on their own pages. Eva Commerce names Amazon, Shopify and TikTok Shop and lists Walmart as expansion. FactoryJet runs all four on one catalog and one inventory count. Ask each which channel its team works on daily.',
+    a: 'Velocity Sellers, Marketplace Velocity, CoreTrex, Sequence Commerce, ASL Ecommerce and Darkroom name all four on their own pages. Eva Commerce lists Walmart as expansion. FactoryJet runs all four on one catalog and one inventory count. Ask each which channel its team works on daily.',
   },
   {
     q: 'What is a TikTok Shop agency, and what does it do?',
@@ -285,7 +289,11 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'How much does a TikTok Shop agency cost?',
-    a: 'Four agencies here publish fees. The Brand Buddies charges $2,500 to $10,000 a month. Top Growth Marketing says $2,000 to $10,000 a month. Eva Commerce starts full service at $2,500 a month. Sequence Commerce starts at $900 a month. Creator commission, product samples and ad spend are usually billed on top.',
+    a: 'Four of the 12 other agencies here publish a fee, and the published monthly fees run from $900 (Sequence Commerce) to $10,000 (The Brand Buddies and Top Growth Marketing). The fee table on this page links each one. Creator commission, product samples and ad spend are usually billed on top.',
+  },
+  {
+    q: 'How much commission does TikTok Shop itself charge?',
+    a: 'TikTok calls it a referral fee. Its US referral fee policy listed 6% of each completed order in most categories when we checked on 17 September 2026, with no monthly fee. Some August 2026 articles report a rise to 8%, which we could not confirm on a TikTok page, so check the rate in your Seller Center. The agency fee comes on top.',
   },
   {
     q: 'How do TikTok Shop agencies get paid?',
@@ -301,7 +309,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'How can I check if a TikTok Shop partner agency is real?',
-    a: 'TikTok Shop agency partners are found through Seller Center. TikTok’s Partner Center says sellers can find partners through a TSP Directory and matchmaking, but we found no public directory page outside the logged-in Seller Center. So log in to your Seller Center and look the agency up in the App and Service Store before you sign. Every partner claim on this page is the agency’s own.',
+    a: 'Log in to your Seller Center and look the agency up in the App and Service Store, where TikTok lists TikTok Shop Partners. TikTok also runs a public Marketing Partners directory at partners.tiktok.com, but that covers its ads partner program, which is separate. An agency can be in one and not the other. Every partner claim on this page is the agency’s own.',
   },
   {
     q: 'What is the TikTok Shop Affiliate Partner program?',
@@ -313,19 +321,19 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Is a TikTok Shop agency legit?',
-    a: 'Many are, but check three things. Look the agency up in your Seller Center’s App and Service Store. Ask for a named TikTok Shop client and call them. Keep ownership of and admin access to your own shop, as Eva Commerce’s FAQ advises. Be wary of revenue claims with no period, baseline or client name.',
+    a: 'The 12 other agencies here are real businesses with a US base on their own sites. To test one, look it up in your Seller Center’s App and Service Store, then ask for a named TikTok Shop client you can call. Keep ownership of and admin access to your own shop, as Eva Commerce’s FAQ advises. Distrust revenue claims with no period, baseline or client name.',
   },
   {
     q: 'How do I find a TikTok Shop agency?',
-    a: 'Start with this list, then check each agency’s partner claim in your Seller Center. Decide first whether you want a TikTok specialist or a marketplace agency that already runs your Amazon or Walmart. Ask three agencies the same questions and compare the answers before the fees.',
+    a: 'Decide first whether you want a TikTok specialist or a marketplace agency that already runs your Amazon or Walmart. Pick two or three from this list, check each partner claim in your Seller Center, and ask them the same questions before you compare fees.',
   },
   {
     q: 'Can you provide a list of TikTok Shop agencies in the US?',
-    a: 'Here is a TikTok Shop agency list of 12 agencies with a US base, plus FactoryJet: MediaLabs (Miami), The Brand Buddies (California), Top Growth Marketing (Los Angeles), Hamster Garage (Chicago), Pattern (Lehi, Utah), Velocity Sellers (Jericho, New York), Eva Commerce (San Diego), Sequence Commerce (New York office), Marketplace Velocity (Elyria, Ohio), CoreTrex (Arkansas), ASL Ecommerce and Darkroom (New York).',
+    a: 'This page profiles 12 agencies with a US base, plus FactoryJet: MediaLabs (Miami), The Brand Buddies (California), Top Growth Marketing (Los Angeles), Hamster Garage (Chicago), Pattern (Lehi, Utah), Velocity Sellers (Jericho, New York), Eva Commerce (San Diego), Sequence Commerce (New York office), Marketplace Velocity (Elyria, Ohio), CoreTrex (Arkansas), ASL Ecommerce (US warehouses), Darkroom (New York) and FactoryJet.',
   },
   {
     q: 'What is a TikTok Shop creator agency?',
-    a: 'A TikTok Shop agency for creators, sometimes called a TikTok Shop creator agency partner, recruits and manages the creators who post videos and LIVE streams selling your products, usually through TikTok’s Affiliate Partner program. Hamster Garage works mainly on this side. MediaLabs says it manages 3,000+ creators and Sequence Commerce names a 100K+ creator network.',
+    a: 'It recruits and manages the creators who post videos and LIVE streams selling your products, usually through TikTok’s Affiliate Partner program. Hamster Garage works mainly on this side. MediaLabs says it manages 3,000+ creators and Sequence Commerce names a 100K+ creator network.',
   },
   {
     q: 'Who manages the TikTok Shop day to day?',
@@ -337,15 +345,15 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'What is GMV Max on TikTok Shop?',
-    a: 'GMV Max is a TikTok Shop ad campaign type that several agencies on this page run, including MediaLabs, The Brand Buddies, Top Growth Marketing and Velocity Sellers. GMV stands for gross merchandise value, the total value of products sold. Ask an agency how it splits budget between GMV Max, Spark Ads and creator commissions.',
+    a: 'GMV Max is TikTok’s automated TikTok Shop ad campaign: TikTok’s help center says it picks the products, creative and placements most likely to lead to a purchase, and it can use affiliate videos. GMV means gross merchandise value, the total value of products sold. MediaLabs, The Brand Buddies, Top Growth Marketing and Velocity Sellers all say they run it.',
   },
   {
     q: 'Can one agency run TikTok Shop and Amazon together?',
-    a: 'Yes. Pattern, Velocity Sellers, Eva Commerce, Sequence Commerce, Marketplace Velocity, CoreTrex, ASL Ecommerce and Darkroom all name both. The risk is that TikTok becomes a side project for an Amazon team. Ask how many people work on TikTok Shop daily and for which current client.',
+    a: 'Yes. All eight marketplace agencies on this page name both. The risk is that TikTok becomes a side project for an Amazon team. Ask how many people work on TikTok Shop daily and for which current client.',
   },
   {
     q: 'What is a TikTok Shop LIVE agency?',
-    a: 'It is an agency that runs LIVE shopping streams, where a host sells products in real time on TikTok. Pattern and Velocity Sellers list LIVE on their TikTok Shop pages, and FactoryJet runs LIVE selling too. Ask who hosts, how often, and what a stream sold for a brand like yours.',
+    a: 'It is an agency that runs LIVE shopping streams, where a host sells products in real time on TikTok. Pattern and Velocity Sellers list LIVE on their TikTok Shop pages. Ask who hosts, how often, and what a stream sold for a brand like yours.',
   },
   {
     q: 'What should I ask a TikTok Shop agency before signing?',
@@ -353,11 +361,15 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'How does TikTok Shop stock stay in sync with Shopify and Amazon?',
-    a: 'Through a connection that keeps one inventory count across channels, either an app or a custom integration. Without it, a product can sell out on Amazon and keep selling on TikTok Shop. FactoryJet keeps TikTok Shop, Shopify, Amazon and Walmart on one catalog and one stock count. Ask any agency which tool it uses and how often it syncs.',
+    a: 'Through a connection that keeps one inventory count across channels, either an app or a custom integration. Without it, a product can sell out on Amazon and keep selling on TikTok Shop. Ask any agency which tool it uses and how often it syncs.',
   },
   {
     q: 'Does FactoryJet run TikTok Shop for US brands?',
-    a: 'Yes. FactoryJet sets up TikTok Shop in Seller Center, connects it to Shopify, finds creators, runs TikTok Shop ads and LIVE selling, and handles daily work for US brands. It also keeps TikTok Shop, Shopify, Amazon and Walmart on one catalog and one inventory count. Every engagement starts with a free audit.',
+    a: 'Yes. FactoryJet sets up TikTok Shop in Seller Center, connects it to Shopify, finds creators, runs TikTok Shop ads and handles daily work for US brands. It keeps TikTok Shop, Shopify, Amazon and Walmart on one catalog and one inventory count. Every engagement starts with a free audit.',
+  },
+  {
+    q: 'How long does a TikTok Shop agency take to show results?',
+    a: 'Only two agencies here publish a timeframe. Eva Commerce describes a 180-day plan in three phases. Sequence Commerce claims an average 285% revenue lift in the first 90 days, with no baseline given. The Brand Buddies says $50K a day is normal at scale but gives no timeframe. Ask for the month a named client made its first steady sales.',
   },
 ];
 
@@ -368,11 +380,11 @@ export const post: BlogPost = {
   slug: SLUG,
   title: TITLE,
   excerpt:
-    'A fact-checked guide to TikTok Shop agencies for US brands, split into TikTok specialists and marketplace agencies that also run Amazon and Walmart. Partner claims, channels and published fees for each, read on 23 October 2026, plus how TikTok Shop Partner tiers work. FactoryJet is on the list and says so.',
+    'A fact-checked guide to TikTok Shop agencies for US brands, split into TikTok specialists and marketplace agencies that also run Amazon and Walmart. Each profile was read on the agency’s own site on 23 October 2026, with how TikTok Shop Partner tiers work. FactoryJet is on the list and says so.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 23, 2026',
-  dateModified: 'Oct 23, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '20 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
@@ -384,9 +396,9 @@ export const post: BlogPost = {
   keyTakeaways: [
     'TikTok Shop agencies split into TikTok specialists and marketplace agencies that started on Amazon or Walmart. Pick by what you need run every day.',
     'Every fact about every agency was read on its own site on 23 October 2026. Nobody paid to be listed, and the order is not a ranking.',
-    'Partner badges are self-reported here. TikTok’s partner directory sits inside Seller Center, so check any agency there before you sign.',
+    'Partner badges are self-reported here. The TikTok Shop Partner directory sits inside Seller Center; TikTok’s public partners.tiktok.com directory is a separate ads program. Check Seller Center before you sign.',
     'US TikTok Shop Partner tiers run V0 to V5, scored 80% on sales and 20% on quality. Platinum needs $300,000 in daily sales.',
-    'Four agencies publish fees: The Brand Buddies ($2,500 to $10,000 a month), Top Growth Marketing ($2,000 to $10,000), Eva Commerce (from $2,500) and Sequence Commerce (from $900).',
+    'Four of the 12 other agencies publish a fee, from $900 a month at Sequence Commerce to $10,000 a month at the top of two ranges. TikTok’s own referral fee comes on top.',
     'Six agencies name Shopify, Amazon, Walmart and TikTok Shop together. Ask which one their team works on every day.',
   ],
   faqs: FAQS,
@@ -405,7 +417,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-23',
-              dateModified: '2026-10-23',
+              dateModified: '2026-10-31',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'TikTok Shop agencies for brands in the United States' },
@@ -437,7 +449,7 @@ export const post: BlogPost = {
           We read all 13 agencies on their own websites on 23 October 2026: where each is based, which channels it runs, what it claims about TikTok partner status and any fee it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
         </p>
         <p className="text-gray-800 leading-relaxed">
-          Short on time? <a href="/contact" className={link}>Tell us what you sell and where</a> and the founder will tell you which kind of agency fits.
+          Short on time? <a href="/contact" className={link}>Tell us what you sell and where</a>. Bhavesh, our founder, reads every request.
         </p>
       </div>
 
@@ -454,21 +466,21 @@ export const post: BlogPost = {
         <li><strong>No US office:</strong> Initiators lists the UK and Pakistan only.</li>
       </ul>
       <p className="mb-4">
-        <strong>Who wrote this.</strong> FactoryJet runs TikTok Shop for US brands, so we are on this list. Nobody paid to be included, the order is not a ranking, and our entry uses the same format as every other agency.
+        Other names rank on Google for &ldquo;tiktok shop agency&rdquo; but are not profiled here. The Social Shepherd and Avenue Z rank with list pages of other agencies, going by the titles Google showed. inBeat, Nonsensical, AFM, TokShop and The Influencer Marketing Factory came up in our research but we did not read their sites for this edition, so we make no claim about them.
       </p>
       <p className="mb-6">
-        A few terms in plain English. <strong>TikTok Shop</strong> lets people buy products inside TikTok. <strong>Seller Center</strong> is the dashboard where a brand runs its shop. A <strong>TikTok Shop Partner</strong>, or TSP, is an agency registered with TikTok to serve sellers. <strong>Creators</strong> or <strong>affiliates</strong> post videos that sell your products for a commission. <strong>GMV</strong> means gross merchandise value, the total value of products sold. <strong>LIVE</strong> means selling in a live stream.
+        A few terms in plain English. <strong>TikTok Shop</strong> lets people buy products inside TikTok. <strong>Seller Center</strong> is the dashboard where a brand runs its shop. A <strong>TikTok Shop Partner</strong>, or TSP, is an agency registered with TikTok to serve sellers. <strong>Creators</strong> or <strong>affiliates</strong> post videos that sell your products for a commission. <strong>GMV</strong> means gross merchandise value, the total value of products sold. <strong>GMV Max</strong> is TikTok&rsquo;s <a href="https://ads.tiktok.com/help/article/about-gmv-max-campaigns-in-tiktok-ads-manager" className={link} rel="noopener" target="_blank">automated Shop ad campaign</a>, and <strong>Spark Ads</strong> are <a href="https://ads.tiktok.com/business/library/SparkAds.pdf" className={link} rel="noopener" target="_blank">ads made from existing TikTok posts</a>, yours or a creator&rsquo;s with permission. <strong>LIVE</strong> means selling in a live stream. A <strong>3PL</strong> is a third-party warehouse that ships your orders. <strong>Blended ROAS</strong> is sales divided by ad spend across every channel together. <strong>Retail media</strong> means ads sold by a store, such as Amazon or Walmart.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The shortlist at a glance</h2>
-      <p className="mb-4">Find the rows that match the channels you sell on, then read those profiles in full.</p>
-      <div className="overflow-x-auto mb-8 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="mb-4">Find the rows that match how you sell, then read those profiles in full. Fees are in the fee table further down.</p>
+      <p className="md:hidden text-sm text-gray-600 mb-2">Swipe sideways to see every column.</p>
+      <div className="mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 560 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Agency</th>
               <th className="p-3 text-left border border-gray-700">Type</th>
-              <th className="p-3 text-left border border-gray-700">Published fee</th>
               <th className="p-3 text-left border border-gray-700">Where based</th>
             </tr>
           </thead>
@@ -477,7 +489,6 @@ export const post: BlogPost = {
               <tr key={f.name} className={f.group === 'Us' ? 'bg-orange-50' : 'odd:bg-white even:bg-gray-50'}>
                 <td className="p-3 border border-gray-200 font-semibold align-top">{f.name}</td>
                 <td className="p-3 border border-gray-200 align-top">{GROUP_LABEL[f.group]}</td>
-                <td className="p-3 border border-gray-200 align-top">{f.fee}</td>
                 <td className="p-3 border border-gray-200 align-top">{f.based}</td>
               </tr>
             ))}
@@ -487,10 +498,10 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How we built this list</h2>
       <ol className="list-decimal pl-6 mb-6 space-y-2">
-        <li><strong>Start from buyers&rsquo; searches.</strong> &ldquo;TikTok Shop agency&rdquo; and &ldquo;TikTok Shop agencies&rdquo; each get about 590 US Google searches a month, and &ldquo;best TikTok Shop agency&rdquo; about 50 (DataForSEO, October 2026). Variants such as &ldquo;TikTok Shop agency USA&rdquo; and &ldquo;top TikTok Shop agencies&rdquo; add about 40 more. Google showed an AI answer on all six searches we checked.</li>
+        <li><strong>Start from buyers&rsquo; questions.</strong> We used the questions US buyers type, such as &ldquo;best TikTok Shop agency&rdquo; and &ldquo;TikTok Shop agency USA&rdquo;. Google showed an AI answer on all six such searches we checked.</li>
         <li><strong>Start from the agencies AI answers name.</strong> We took the agencies cited in those 28 answers and checked what each actually sells.</li>
         <li><strong>Keep only US-based agencies with a TikTok Shop service.</strong> A US city, address or office on the agency&rsquo;s own site counts.</li>
-        <li><strong>Report partner status as a claim.</strong> TikTok&rsquo;s partner directory sits inside the logged-in Seller Center, so we could not check any badge on a TikTok page.</li>
+        <li><strong>Report partner status as a claim.</strong> The TikTok Shop Partner directory sits inside the logged-in Seller Center, so we could not check any TikTok Shop badge on a public TikTok page.</li>
         <li><strong>Report results as claims.</strong> Revenue figures are each agency&rsquo;s own. We note when one has no period, baseline or client name.</li>
         <li><strong>No scores we cannot prove.</strong> We have not hired these agencies. We say who each suits and one question worth asking.</li>
         <li><strong>Fees only from the agency.</strong> Where an agency publishes a fee, we quote it and link the page.</li>
@@ -507,7 +518,11 @@ export const post: BlogPost = {
         <li><strong>Creator agencies.</strong> Under the US <a href={TAP_URL} className={link} rel="noopener" target="_blank">Affiliate Partner program</a>, the seller sets the agency&rsquo;s commission and the agency sets the creators&rsquo; share, paid through TikTok&rsquo;s tool.</li>
       </ul>
       <p className="mb-6">
-        <a href={PARTNER_CENTER_URL} className={link} rel="noopener" target="_blank">Partner Center</a> says sellers can find partners through a TSP Directory, but we found no public page for it outside Seller Center. Of the 12 other agencies here, five claim a TikTok Shop partner badge of some kind. Before you sign, log in to Seller Center and look the agency up yourself.
+        <a href={PARTNER_CENTER_URL} className={link} rel="noopener" target="_blank">Partner Center</a> says sellers can find partners through a TSP Directory. That TikTok Shop partner list lives inside Seller Center, and we found no public copy of it. Of the 12 other agencies here, five claim a TikTok Shop partner badge of some kind.
+      </p>
+      <h3 className="text-xl font-bold mt-6 mb-2">Two TikTok partner directories, two programs</h3>
+      <p className="mb-6">
+        TikTok also runs a public <a href={MARKETING_PARTNERS_URL} className={link} rel="noopener" target="_blank">Marketing Partners</a> program, with a directory anyone can open at partners.tiktok.com. That program badges agencies and tools for TikTok ads, and in 2025 it added a Shop Ads focus area. A Marketing Partner badge says something about ads work. It does not make an agency a TikTok Shop Partner. Before you sign, log in to Seller Center and look the agency up in the App and Service Store yourself.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best TikTok Shop agencies for US brands, profiled</h2>
@@ -524,6 +539,9 @@ export const post: BlogPost = {
               return (
                 <div key={f.name} className="mb-8">
                   <h4 className="text-lg font-bold mt-6 mb-2">{n}. {f.name}</h4>
+                  <p className="mb-2">
+                    <span className="inline-block rounded-full border border-gray-300 bg-white px-3 py-1 text-xs font-semibold text-gray-700">{GROUP_LABEL[f.group]}</span>
+                  </p>
                   <p className="text-sm text-gray-600 mb-3">
                     <strong>Based:</strong> {f.based}. <strong>Type:</strong> {f.type}.
                   </p>
@@ -555,7 +573,8 @@ export const post: BlogPost = {
                   loading="lazy"
                   decoding="async"
                   alt="A woman with wavy brown hair in an olive jumpsuit sits on a sofa holding a plain white mug in one hand and a phone in the other"
-                  className="w-full h-auto rounded-xl"
+                  className="w-full h-auto rounded-xl bg-gray-100"
+                  style={{ aspectRatio: '3 / 2' }}
                 />
                 <figcaption className="text-sm text-gray-600 mt-2">Creators sell on TikTok Shop. Ask every agency how many creators posted for a brand like yours last quarter, not how many are on its list.</figcaption>
               </figure>
@@ -569,7 +588,8 @@ export const post: BlogPost = {
                   loading="lazy"
                   decoding="async"
                   alt="A man with a short beard in a navy apron folds a plain brown mailer box at a packing bench with stacked boxes behind him and an orange tape dispenser beside him"
-                  className="w-full h-auto rounded-xl"
+                  className="w-full h-auto rounded-xl bg-gray-100"
+                  style={{ aspectRatio: '3 / 2' }}
                 />
                 <figcaption className="text-sm text-gray-600 mt-2">A viral video is only good news if the order ships. Ask who packs TikTok Shop orders and how fast.</figcaption>
               </figure>
@@ -581,33 +601,15 @@ export const post: BlogPost = {
       <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 my-8 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">If you want TikTok Shop run with your store</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          Our <a href="/services/tiktok-shop-agency" className={link}>TikTok Shop agency service</a> starts with a free audit of your products and channels. The founder joins the first call.
+          Our <a href="/services/tiktok-shop-agency" className={link}>TikTok Shop agency service</a> starts with a free audit of your products and channels. Bhavesh, our founder, reads every request.
         </p>
-        <a href="/contact" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">Talk to the Founder</a>
+        <a href="/contact" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">Book a free audit</a>
       </div>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Which agency manages omnichannel selling on Shopify, Amazon, Walmart and TikTok Shop?</h2>
       <p className="mb-4">
-        That is how one buyer put it. Here is which agencies name all four channels on their own pages, read on 23 October 2026.
+        That is how one buyer put it. We checked which agencies name all four channels on their own pages on 23 October 2026. Each profile above lists every channel the agency names.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="bg-gray-800 text-white">
-              <th className="p-3 text-left border border-gray-700">Agency</th>
-              <th className="p-3 text-left border border-gray-700">Channels it names</th>
-            </tr>
-          </thead>
-          <tbody>
-            {FIRMS.filter((f) => f.group !== 'TikTok Shop specialists').map((f) => (
-              <tr key={f.name} className={f.group === 'Us' ? 'bg-orange-50' : 'odd:bg-white even:bg-gray-50'}>
-                <td className="p-3 border border-gray-200 font-semibold align-top">{f.name}</td>
-                <td className="p-3 border border-gray-200 align-top">{f.channels}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
       <p className="mb-6">
         Six name Shopify, Amazon, Walmart and TikTok Shop together: Velocity Sellers, Marketplace Velocity, CoreTrex, Sequence Commerce, ASL Ecommerce and Darkroom. Eva Commerce lists Walmart as expansion, and Pattern leads with Amazon and 70+ marketplaces. The hard part is stock: a product that sells out on Amazon must stop selling on TikTok Shop. Ask each agency how it keeps one inventory count. See our <a href="/omnichannel-commerce" className={link}>omnichannel commerce</a> and <a href="/marketplace-management" className={link}>marketplace management</a> pages, and our guide to <a href="/blog/tiktok-shop-amazon-shopify-plus-multi-channel-inventory-sync-2026" className={link}>syncing inventory across TikTok Shop, Amazon and Shopify Plus</a>.
       </p>
@@ -620,17 +622,19 @@ export const post: BlogPost = {
           loading="lazy"
           decoding="async"
           alt="A woman with glasses and a white shirt sits at a desk looking at a monitor showing four groups of coloured bars, beside an orange notebook"
-          className="w-full h-auto rounded-xl"
+          className="w-full h-auto rounded-xl bg-gray-100"
+          style={{ aspectRatio: '3 / 2' }}
         />
         <figcaption className="text-sm text-gray-600 mt-2">Four channels, one stock count. Ask any agency to show sales and inventory for every channel on one screen.</figcaption>
       </figure>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">What TikTok Shop agencies publish about fees</h2>
+      <h2 className="text-2xl font-bold mt-10 mb-4">How much does a TikTok Shop agency charge?</h2>
       <p className="mb-4">
         On the pages we read on 23 October 2026, four of the 12 other agencies publish a fee. We copied them exactly. They are each agency&rsquo;s own figures, not FactoryJet prices.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-sm text-gray-600 mb-2">Swipe sideways to see every column.</p>
+      <div className="mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 600 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Agency</th>
@@ -647,7 +651,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-6">
-        <strong>How to read this.</strong> A retainer is the agency&rsquo;s fee only. Creator commission, free product samples and ad spend come on top, and they can exceed the fee. MediaLabs says it passes creator pay and ad spend through at cost. For TikTok&rsquo;s own fees and what agencies charge in more detail, read <a href="/blog/tiktok-shop-fees-and-agency-cost-2026" className={link}>TikTok Shop fees and agency cost</a>.
+        <strong>How to read this.</strong> A retainer is the agency&rsquo;s fee only. Creator commission, free product samples and ad spend come on top, and they can exceed the fee. MediaLabs says it passes creator pay and ad spend through at cost. TikTok also takes its own referral fee on each order. For TikTok&rsquo;s own fees and what agencies charge in more detail, read <a href="/blog/tiktok-shop-fees-and-agency-cost-2026" className={link}>TikTok Shop fees and agency cost</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Which TikTok Shop agency fits your brand</h2>
@@ -667,27 +671,27 @@ export const post: BlogPost = {
       <div className="space-y-3 mb-8 not-prose">
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">1. Check your product fits a short video</summary>
-          <p className="mt-3 text-gray-700">TikTok Shop sells products people can understand in a few seconds. If yours needs a long explanation, start small. Our guide on <a href="/blog/how-to-sell-on-tiktok-shop-2026" className={link}>how to sell on TikTok Shop</a> covers the basics.</p>
+          <p className="mt-3 text-gray-700">TikTok Shop sells products people can understand in a few seconds. Pattern, for one, names health, beauty, home and kitchen, and electronics as its focus. If yours needs a long explanation, start small. Our guide on <a href="/blog/how-to-sell-on-tiktok-shop-2026" className={link}>how to sell on TikTok Shop</a> covers the basics.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">2. Decide what the agency runs every day</summary>
-          <p className="mt-3 text-gray-700">Seller Center, creators, ads, LIVE, fulfillment. Write down which of these you want off your plate.</p>
+          <p className="mt-3 text-gray-700">The 12 other agencies split clearly. ASL Ecommerce covers operations and shipping but not creators. Hamster Garage covers creators but not ads. Top Growth Marketing leans toward ads over Seller Center work. Write down which jobs you want off your plate, then match.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">3. Check the partner badge in Seller Center</summary>
-          <p className="mt-3 text-gray-700">Look the agency up in the App and Service Store in your own Seller Center. A badge on a website is a claim until you see it there.</p>
+          <p className="mt-3 text-gray-700">Five of the 12 other agencies claim a TikTok partner badge, and we could check none of them on a public TikTok Shop page. Look the agency up in the App and Service Store in your own Seller Center.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">4. Ask for a named TikTok Shop result</summary>
-          <p className="mt-3 text-gray-700">A client name, a period and a baseline. Several agencies here show only agency-wide or Amazon numbers.</p>
+          <p className="mt-3 text-gray-700">A client name, a period and a baseline. Eva Commerce, CoreTrex and ASL Ecommerce name no client on the pages we read, and Velocity Sellers shows no TikTok-specific result.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">5. Add up the full monthly cost</summary>
-          <p className="mt-3 text-gray-700">Fee plus creator commission plus samples plus ad spend. Compare totals, not retainers.</p>
+          <p className="mt-3 text-gray-700">Only four of the 12 other agencies publish a fee. Add creator commission, samples, ad spend and TikTok&rsquo;s referral fee, then compare totals, not retainers.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">6. Settle stock and fulfillment</summary>
-          <p className="mt-3 text-gray-700">Who ships TikTok orders, how fast, and how stock stays in sync with your other channels.</p>
+          <p className="mt-3 text-gray-700">ASL Ecommerce ships from its own warehouses. Velocity Sellers names Fulfilled by TikTok, Amazon multi-channel fulfillment or a 3PL. Ask who ships TikTok orders, how fast, and how stock stays in sync with your other channels.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">7. Keep ownership of the shop</summary>
@@ -697,10 +701,10 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What else ranks for &quot;tiktok shop agency&quot;, and how this guide differs</h2>
       <p className="mb-4">
-        These are the business sites on Google&rsquo;s first page for &ldquo;tiktok shop agency&rdquo; in the US when we checked on 23 October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not reviewed their services, and TikTok&rsquo;s own pages are left out.
+        These are the business sites on Google&rsquo;s first page for &ldquo;tiktok shop agency&rdquo; in the US when we checked on 23 October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not reviewed their services. TikTok&rsquo;s own pages, including its Marketing Partners directory, are left out.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <div className="mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ width: '100%' }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Site</th>
@@ -717,7 +721,7 @@ export const post: BlogPost = {
               ['darkroomagency.com', 'TikTok Shop Agency for E-commerce Brands | Darkroom'],
             ].map(([site, title]) => (
               <tr key={site} className="odd:bg-white even:bg-gray-50">
-                <td className="p-3 border border-gray-200 font-semibold align-top">{site}</td>
+                <td className="p-3 border border-gray-200 font-semibold align-top [overflow-wrap:anywhere]" style={{ width: '38%' }}>{site}</td>
                 <td className="p-3 border border-gray-200 align-top">{title}</td>
               </tr>
             ))}
@@ -725,29 +729,29 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-6">
-        Most of these are a single agency&rsquo;s service page or a list written by an agency. This page compares 13 US agencies on partner claims, channels and published fees, explains TikTok&rsquo;s partner tiers from TikTok&rsquo;s own pages, and links every fact to the page we read.
+        Most of these are a single agency&rsquo;s service page or a list written by an agency. This page reads 13 US agencies on their own sites, from where each is based to what it charges, explains TikTok&rsquo;s partner tiers from TikTok&rsquo;s own pages, and links every fact to the page we read.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What FactoryJet does on TikTok Shop</h2>
       <p className="mb-4">
-        We are FactoryJet. We have served 500+ businesses, most of them in commerce. Our founder, Bhavesh Barot, is involved in every account.
+        We are FactoryJet. We have served 500+ businesses, most of them in commerce. Bhavesh, our founder, reads every request.
       </p>
       <ul className="list-disc pl-6 mb-4 space-y-2">
         <li><strong>Setup.</strong> Seller Center, product listings, Shopify connection, shipping and return rules. See <a href="/services/tiktok-shop-agency" className={link}>TikTok Shop agency</a>.</li>
-        <li><strong>Growth.</strong> Creators, TikTok Shop ads and LIVE selling.</li>
+        <li><strong>Growth.</strong> Creators and TikTok Shop ads.</li>
         <li><strong>One catalog.</strong> TikTok Shop, Shopify, Amazon and Walmart on one product list and one stock count. See <a href="/marketplace-management" className={link}>marketplace management</a>.</li>
         <li><strong>AI agents.</strong> Agents that help with order exceptions and marketplace listing updates, with approval steps. See <a href="/services/ecommerce-ai-agents" className={link}>ecommerce AI agents</a>.</li>
       </ul>
       <p className="mb-6">
-        Every engagement starts with a free audit, and we quote in writing. Related reading: <a href="/blog/best-shopify-plus-agencies-usa-2026" className={link}>the best Shopify Plus agencies for US brands</a> and <a href="/blog/best-omnichannel-commerce-solution-shopify-plus-2026" className={link}>the best omnichannel commerce setup on Shopify Plus</a>.
+        Every engagement starts with a free audit. Each phase has a fixed price, quoted in writing; changes are quoted and approved per request, and there is no monthly minimum. Related reading: <a href="/blog/how-to-sell-on-tiktok-shop-2026" className={link}>how to sell on TikTok Shop</a>, <a href="/blog/tiktok-shop-fees-and-agency-cost-2026" className={link}>TikTok Shop fees and agency cost</a>, <a href="/blog/tiktok-shop-amazon-shopify-plus-multi-channel-inventory-sync-2026" className={link}>inventory sync across TikTok Shop, Amazon and Shopify Plus</a> and <a href="/blog/best-shopify-plus-agencies-usa-2026" className={link}>the best Shopify Plus agencies for US brands</a>.
       </p>
 
       <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 mb-8 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">If you are still deciding</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          Tell us what you sell, where you sell it and who ships it. On a free call, the founder will tell you whether a TikTok specialist, a marketplace agency or one team for every channel fits best.
+          Tell us what you sell, where you sell it and who ships it. The free audit says whether a TikTok specialist, a marketplace agency or one team for every channel fits best.
         </p>
-        <a href="/services/tiktok-shop-agency" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">See our TikTok Shop service</a>
+        <a href="/contact" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">Book a free audit</a>
       </div>
     </>
   ),

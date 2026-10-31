@@ -16,6 +16,7 @@ import '../au-hub.css';
    Both files are imported read-only; nothing in /au/ai-agents is changed by this page. */
 import '../ai-agents/visual.css';
 import { ExecutionPath, ExecutionJobDiagram } from '../ai-agents/ExecutionDiagram';
+import { twinAlternates } from '@/data/hreflangMap';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /au/document-intake-ai-agents, built 2026-10-29.
@@ -65,8 +66,8 @@ import { ExecutionPath, ExecutionJobDiagram } from '../ai-agents/ExecutionDiagra
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL = 'https://factoryjet.com/au/document-intake-ai-agents';
-const UPDATED = '2026-10-29';
-const TITLE = 'AI Document Processing Australia | Intake Agents | FactoryJet';
+const UPDATED = '2026-10-31';
+const TITLE = 'AI Document Processing Australia: Intake Agents | FactoryJet';
 const H1 = 'AI Document Processing in Australia: Intake Agents for Xero, MYOB and Your ERP';
 const DESCRIPTION =
   'We build AI document intake agents for Australian businesses. Orders, dockets and forms are read, checked and filed as drafts in Xero, MYOB or your ERP.';
@@ -129,6 +130,30 @@ const SRC_FLOWTIVITY = 'https://flowtivity.ai/blog/ai-agent-cost-pricing-guide-a
 // 80,000". GST basis not stated.
 const SRC_WVD = 'https://webvideodigital.com.au/custom-ai-agent-cost-in-australia/';
 
+/* ─── Vendor sources, each read 2026-10-31 ─────────────────────────── */
+// AWS: Textract "Automatically extract printed text, handwriting, layout
+// elements, and data from any document" (re-read 2026-10-31).
+const SRC_TEXTRACT = 'https://aws.amazon.com/textract/';
+// Google Cloud: "Document AI is a document processing and understanding
+// platform"; lists "Digitize: OCR", Enterprise Document OCR and Form Parser.
+const SRC_GOOGLE_DOCAI = 'https://docs.cloud.google.com/document-ai/docs/overview';
+// Microsoft Learn: Azure Document Intelligence "is a machine-learning based OCR
+// and intelligent document processing service".
+const SRC_AZURE_DI = 'https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/overview';
+// Xero AU store-files page (xero.com/au/hubdoc/ 301-redirects here on
+// 2026-10-31): smart document capture "is available to customers on all Xero
+// small business pricing plans"; Grow plan listed as "basic extraction".
+const SRC_XERO_PLANS = 'https://www.xero.com/au/accounting-software/store-files/';
+// Dext AU: "an intelligent bookkeeping automation platform" that "automates the
+// capture, processing and storage of receipts, invoices and business
+// documents"; links to "QuickBooks Online, Xero, Sage, Zoho and more".
+const SRC_DEXT = 'https://dext.com/au';
+// ABBYY Vantage meta description: "Intelligent Document Processing software".
+const SRC_ABBYY = 'https://www.abbyy.com/vantage/';
+// Nanonets meta description: automates accounts payable, claims and order
+// management "and delivers clean data to systems of record like SAP, Salesforce".
+const SRC_NANONETS = 'https://nanonets.com/';
+
 const US_PAGE = '/services/document-intake-ai-agents';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
@@ -148,10 +173,11 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes. Intelligent document processing, usually shortened to IDP, is the industry name for document reading that uses AI rather than fixed templates. Older tools needed a template drawn for every supplier or customer layout. IDP uses machine learning, and now large language models, to find a PO number or a delivery address wherever it sits on the page. The name sounds grand. The job is reading paperwork accurately and saying when it is not sure.' },
   { category: 'basics', question: 'What’s the difference between OCR and IDP?',
     answer: 'Optical character recognition (OCR) converts a scanned image into characters a computer can search. It can hand you every word on a delivery docket and still have no idea which one is the PO number. IDP goes further: it decides that one number is the order total and another is an ABN, checks them, and maps them to fields in your system. Most IDP systems use OCR as their first step. OCR alone suits searchable archives. IDP suits documents that must become records.' },
-  { category: 'basics', question: 'What is document automation software?',
-    answer: 'The phrase covers two different jobs, which confuses many searches. One is generating documents, such as contracts or quotes built from a template. The other, which this page is about, is reading documents that arrive and turning them into data. If a vendor says document automation, ask which direction they mean. We build the reading side: intake from inbox, portal or scanner into Xero, MYOB or your ERP.' },
+  { category: 'basics', question: 'Some customers still order with old item codes. Can the agent cope?',
+    answer: 'Yes, if your team keeps a mapping table of old codes to current ones. The agent looks up each code on the order, swaps in the current code it maps to, and shows both on the draft so a person can see the change. A code with no match in the table is never guessed. The order waits in the review queue, and once your team adds that code to the table, the next order with it goes through.' },
   { category: 'basics', question: 'Which AI is best for document processing?',
-    answer: 'No single model wins for every document. The cloud reading services from Amazon, Google and Microsoft are strong on forms and tables, and general models from OpenAI, Anthropic and Google are good at messy layouts and free text. We pick per document type, test the options against a batch of your real paperwork, and choose on measured accuracy and where the data is processed. The best choice for a delivery docket may differ from a credit application.' },
+    answer: 'No single model wins for every document. Amazon Textract, Google Document AI and Azure AI Document Intelligence are cloud reading services built for text, forms and tables. General models from OpenAI, Anthropic and Google cope well with messy layouts and free text. We test the options against a batch of your real paperwork and choose on measured accuracy and where the data is processed. A delivery docket may need a different reader from a credit application.',
+    links: [{ href: SRC_TEXTRACT, label: 'Amazon Textract' }, { href: SRC_GOOGLE_DOCAI, label: 'Google Document AI overview' }, { href: SRC_AZURE_DI, label: 'Azure AI Document Intelligence overview' }] },
   { category: 'basics', question: 'Can ChatGPT read a PDF and do our data entry?',
     answer: 'It can read many PDFs well, and it is a good way to see what AI makes of your paperwork. It is a poor home for the real job. Someone still has to upload each file, check the answer and type it into your system. The OAIC also recommends, as best practice, keeping personal information out of publicly available generative AI tools. A business intake agent runs on business terms and files into your system with a log.',
     links: [{ href: SRC_OAIC_AI, label: 'OAIC, privacy and commercially available AI products' }] },
@@ -162,8 +188,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'systems', question: 'Doesn’t Xero already read documents by itself?',
     answer: 'Partly. Xero’s smart document capture reads documents sent to Xero by email, app or upload and has the details ready for review. Xero’s July 2026 post names receipts, bills and statements, and says the feature is rolling out in beta in Australia and New Zealand. If your documents are bills and receipts for Xero, try it first. A custom agent fits documents Xero does not handle, such as customer orders, forms or dockets.',
     links: [{ href: SRC_XERO_SDC, label: 'Xero, smart document capture' }] },
-  { category: 'systems', question: 'Should we use Hubdoc or Dext instead of a custom agent?',
-    answer: 'If the job is getting bookkeeping documents into your accounting software, look first at subscription capture apps such as Dext, or Hubdoc, which comes with many Xero plans. Either is quicker to start than any build. A custom agent makes sense when the documents are not bookkeeping paperwork, when the record belongs in an ERP or inventory system, or when each document must be checked against your own price lists, customers or stock before anything is created.' },
+  { category: 'systems', question: 'Xero smart document capture, Hubdoc or Dext: which should we use?',
+    answer: 'For bookkeeping paperwork, start with what you already pay for. Xero says smart document capture is on all its small business plans, with basic extraction on Grow. On 31 October 2026, Xero’s Australian Hubdoc page redirected to that capture page. Dext calls itself a bookkeeping automation platform for receipts, invoices and business documents, and links to Xero, QuickBooks Online and Sage. A custom agent fits orders, dockets and forms bound for an ERP.',
+    links: [{ href: SRC_XERO_PLANS, label: 'Xero, smart document capture plans' }, { href: SRC_DEXT, label: 'Dext Australia' }] },
   { category: 'systems', question: 'Can an agent turn emailed purchase orders into sales orders in MYOB?',
     answer: 'Yes. MYOB’s Business API works with AccountRight, new Essentials and MYOB Business files, and its Sale Order endpoint takes new orders with a status of Open or ConvertedToInvoice. There is no draft status, so an Open order is live. The agent reads the customer’s PDF, matches the customer and each item code, checks the price against your list and holds the order in its review queue. Only when a person approves it does the agent create it in MYOB as Open.',
     links: [{ href: SRC_MYOB_ORDER, label: 'MYOB Business API, Sale Order' }] },
@@ -186,7 +213,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Privacy ──
   { category: 'privacy', question: 'Does the Privacy Act apply to documents the agent reads?',
-    answer: 'If your business is covered by the Privacy Act 1988 and the documents hold personal information, yes. Application forms, sole trader orders and delivery details often do. APP 11 requires reasonable steps to protect that information, and since the Privacy and Other Legislation Amendment Act 2024, the OAIC says those steps include both technical and organisational measures. We build access limits, encryption and a deletion schedule into the agent and document them for you.',
+    answer: 'If your business is covered by the Privacy Act 1988 and the documents hold personal information, yes. Application forms, sole trader orders and delivery details often do. APP 11 requires reasonable steps to protect that information, and since the Privacy and Other Legislation Amendment Act 2024, the OAIC says those steps include both technical and organisational measures. For example, the agent gets its own login, and that login can open only the inboxes and folders the job needs.',
     links: [{ href: SRC_OAIC_APP11, label: 'OAIC, APP 11 guidelines' }] },
   { category: 'privacy', question: 'Can our documents stay in Australia?',
     answer: 'Often, yes. The agent’s own code, storage and logs can run in an Australian cloud region in your account. Some AI models are only offered from overseas regions. Under APP 8, before personal information goes to an overseas recipient you must take reasonable steps to make sure it does not breach the APPs, and you remain accountable for what that recipient does. We show you where each document travels before the build starts.',
@@ -214,7 +241,7 @@ const AGENT_JOBS: { n: string; t: string; d: string }[] = [
   { n: '01', t: 'Collects from every place paperwork lands', d: 'A shared orders inbox, a customer portal upload, a scanner folder or a courier app export. The agent watches each one, so nobody forwards PDFs around before work can start.' },
   { n: '02', t: 'Splits and sorts the pile', d: 'One email can carry three orders and a remittance. A scanned batch can hold twenty dockets. The agent cuts files into single documents and labels each by type before anything is read.' },
   { n: '03', t: 'Reads the fields you name', d: 'Customer, PO number, delivery address, item codes, quantities, prices, ABN, signature present or missing. You choose the fields per document type; the agent reads only those.' },
-  { n: '04', t: 'Checks them against your own records', d: 'Is this a known customer? Does item code 40-118 exist? Is the price inside the customer’s price list? Does the ABN match ABN Lookup? Checks run against your system before a record is drafted.' },
+  { n: '04', t: 'Checks them against your own records', d: 'Before a record is drafted, the agent confirms in your system that the customer is known, item code 40-118 exists, the price sits inside that customer’s price list and the ABN matches ABN Lookup.' },
   { n: '05', t: 'Sends unsure fields to a person', d: 'Each field carries a score. Below your bar, the document goes to a review queue with the original page beside it. A person confirms or fixes it, and the correction is logged.' },
   { n: '06', t: 'Files a draft in the right system', d: 'A sales order in NetSuite, a contact with the application attached in Xero, a receipt record in Cin7 Core or Unleashed. Where a system has a draft state, the agent uses it. MYOB sale orders have none, so they wait in the review queue until a person approves them.' },
   { n: '07', t: 'Keeps the original with the record', d: 'The source document is attached to, or linked from, the record it created, so anyone can see what arrived and what was entered, months later.' },
@@ -233,7 +260,7 @@ const INDUSTRIES: { t: string; d: ReactNode }[] = [
 
 /* ─── Where the agent files (platform rows) ─── */
 const INTEGRATIONS: { t: string; d: ReactNode }[] = [
-  { t: 'Xero', d: 'Contacts, quotes, draft invoices and attachments for documents Xero’s own capture does not cover. Bills and receipts are often better left to Xero’s smart document capture.' },
+  { t: 'Xero', d: 'Contacts, quotes, draft invoices and attachments for the documents Xero’s own capture does not cover.' },
   { t: 'MYOB Business and AccountRight', d: <>Sale orders, customers and items through the MYOB Business API (sale orders have no draft status, so each waits in the review queue for approval before it is created as Open), which <a href={SRC_MYOB_API} target="_blank" rel="noopener noreferrer nofollow">works with AccountRight, new Essentials and MYOB Business files</a>.</> },
   { t: 'MYOB Acumatica and NetSuite', d: 'Sales orders, item receipts and customer records in mid-market ERPs, each through a separate login for the agent with only the access the job needs.' },
   { t: 'Odoo, Cin7 Core and Unleashed', d: 'Sales and purchase orders, stock receipts and delivery records in the inventory systems Australian wholesalers and brands run.' },
@@ -276,6 +303,7 @@ const RELATED: { h: string; t: string; d: string }[] = [
   { h: '/au/ai-development', t: 'AI development', d: 'Larger builds: AI inside your product, custom apps and deeper ERP work.' },
   { h: '/au/ecommerce-development', t: 'Ecommerce development', d: 'B2B and DTC stores connected to the same ERP your orders land in.' },
   { h: US_PAGE, t: 'Document intake agents (US)', d: 'The same service for US businesses, with US platforms and sources.' },
+  { h: '/uk/document-intake-ai-agents', t: 'Document intake agents (UK)', d: 'The same service for UK businesses, with UK platforms and sources.' },
 ];
 
 /* ─── JSON-LD ─── */
@@ -345,7 +373,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['document-intake-ai-agents'] },
   openGraph: {
     title: TITLE,
     description:
@@ -492,10 +520,10 @@ export default function DocumentIntakeAiAgentsAUPage() {
         <div className="ledger">
           <div className="wrap">
             {[
-              { v: 'Beta', t: 'Xero’s built-in smart document capture for receipts, bills and statements is rolling out in Australia', s: 'Xero, July 2026', u: SRC_XERO_SDC },
-              { v: 'Free', t: 'ABN Lookup web services let software validate an ABN and pre-fill forms after registration', s: 'Australian Business Register', u: SRC_ABN_WS },
-              { v: 'APP 11.3', t: 'reasonable steps to protect personal information now include technical and organisational measures', s: 'OAIC, APP 11', u: SRC_OAIC_APP11 },
-              { v: 'ATO', t: 'is Australia’s Peppol Authority; Peppol eInvoices arrive as structured data, with no page to read', s: 'OpenPeppol', u: SRC_PEPPOL_AUTH },
+              { v: 'In beta', t: 'Xero’s built-in smart document capture for receipts, bills and statements is rolling out in Australia in beta.', s: 'Xero, July 2026', u: SRC_XERO_SDC },
+              { v: 'Free', t: 'ABN Lookup web services let software validate an ABN and pre-fill forms after registration.', s: 'Australian Business Register', u: SRC_ABN_WS },
+              { v: 'APP 11.3', t: 'Reasonable steps to protect personal information now include technical and organisational measures.', s: 'OAIC, APP 11', u: SRC_OAIC_APP11 },
+              { v: 'Peppol', t: 'The ATO is Australia’s Peppol Authority. Peppol eInvoices arrive as structured data, with no page to read.', s: 'OpenPeppol', u: SRC_PEPPOL_AUTH },
             ].map((r) => (
               <div className="ledgercell" key={r.t}>
                 <div className="k"><a href={r.u} {...extLink}>{r.s}</a></div>
@@ -510,8 +538,8 @@ export default function DocumentIntakeAiAgentsAUPage() {
 
         <div className="wrap byline">
           <div className="av">BB</div>
-          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="who"><b><a href="/about">Bhavesh Barot</a></b>, Founder<br /><span>ERP builds on Odoo, NetSuite, SAP Business One and ERPNext. 500+ businesses served.</span></div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST (GEO) ═══ */}
@@ -527,9 +555,11 @@ export default function DocumentIntakeAiAgentsAUPage() {
                   <p data-speakable="true">
                     <span className="stat">A document intake agent reads the paperwork that arrives at your business, such as customer
                     purchase orders, delivery dockets and trade account applications, checks each field against your own
-                    records, and files a draft in Xero, MYOB or your ERP for a person to confirm.</span> Fields it is unsure
-                    of go to a review queue with the original page beside them, so a messy scan slows down instead of
-                    turning into a wrong record.
+                    records, and files a draft in Xero, MYOB or your ERP for a person to confirm.</span> It is a form of
+                    intelligent document processing (IDP). Fields it is unsure of go to a review queue with the original
+                    page beside them, so a messy scan slows down instead of turning into a wrong record. FactoryJet builds
+                    custom document intake agents for Australian wholesalers, manufacturers, freight firms and trade
+                    suppliers, filing into Xero, MYOB, NetSuite, Odoo, Cin7 Core or Unleashed.
                   </p>
                 </div>
                 <div className="fact">
@@ -548,7 +578,8 @@ export default function DocumentIntakeAiAgentsAUPage() {
                   <div className="sec">§03</div>
                   <p>
                     Supplier invoices are their own job, with ATO tax invoice checks and approval routing, and we cover
-                    them on our <a href="/au/accounts-payable-automation">accounts payable automation</a> page. This page
+                    them on our <a href="/au/accounts-payable-automation">accounts payable automation</a> page, which is
+                    also where invoice OCR for supplier bills lives. This page
                     is about the rest of the pile: the orders, dockets, forms and certificates that never fit a bookkeeping
                     app, and usually end up retyped by the most experienced person in the office.
                   </p>
@@ -729,9 +760,9 @@ export default function DocumentIntakeAiAgentsAUPage() {
         <div className="au-midcta">
           <MidPageCTA
             headline={'Send ten of your messiest documents and watch the agent read them'}
-            sub={'Tell us which paperwork your team retypes and where it ends up. The founder replies within 24 hours, and the demo runs on your own documents before you sign anything.'}
+            sub={'Tell us which paperwork your team retypes and where it ends up. The demo runs on your own documents before you sign anything.'}
             label={'See a demo on my data'}
-            note={'Replies within 24 hours.'}
+            note={''}
           />
         </div>
 
@@ -740,7 +771,7 @@ export default function DocumentIntakeAiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Terms</div>
-              <h2>How we work, and what to send us</h2>
+              <h2>What terms apply, and what should you send for a quote?</h2>
               <p className="lead">
                 These terms apply to every intake build. If you have a brief or an RFP, send it as it is. If you do not,
                 the list on the right is all we need to scope the job and price it.
@@ -749,14 +780,14 @@ export default function DocumentIntakeAiAgentsAUPage() {
             <div className="au-split">
               <div>
                 <ol className="au-numlist">
-                  <li><span><b>Demo on your data before you sign.</b> An early agent reads a batch of your real documents, and you compare its fields with your team’s.</span></li>
-                  <li><span><b>Fixed price per phase.</b> Each phase is scoped, priced in writing and signed on its own. You can stop after any phase.</span></li>
-                  <li><span><b>You own it from day one.</b> The code and repository, the rules, the test documents and the logs are yours.</span></li>
-                  <li><span><b>Your accounts, at cost.</b> AI and hosting can run in accounts in your name, paid directly, with no markup through us.</span></li>
-                  <li><span><b>Defect cover inside the build price.</b> Defects are fixed at no charge for a cover period agreed before work starts.</span></li>
-                  <li><span><b>Support is optional.</b> Each change is quoted and approved before we start, with no monthly minimum. We can keep managing the servers, models and connections if you want us to.</span></li>
+                  <li><span><b>Demo on your data before you sign.</b></span></li>
+                  <li><span><b>Fixed price per phase,</b> quoted in writing. You can stop after any phase.</span></li>
+                  <li><span><b>You own it from day one:</b> code, rules, test documents and logs.</span></li>
+                  <li><span><b>Your AI and hosting accounts,</b> at cost, with no markup.</span></li>
+                  <li><span><b>Defect cover inside the build price.</b></span></li>
+                  <li><span><b>Changes quoted and approved per request,</b> with no monthly minimum.</span></li>
                 </ol>
-                <ModalCTAButton label="Send us your brief" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+                <ModalCTAButton label="Send us your brief" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" style={{ background: '#C2440F' }} />
               </div>
               <div className="au-panel">
                 <div className="eyebrow">What to put in a brief or RFP</div>
@@ -778,14 +809,15 @@ export default function DocumentIntakeAiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head head-stack">
               <div className="eyebrow">Side by side</div>
-              <h2>Built-in capture vs a rented IDP platform vs a custom intake agent</h2>
+              <h2>Built-in capture vs an intelligent document processing (IDP) platform vs a custom intake agent</h2>
               <p className="lead">
                 Each one is the right answer for someone. Rent first when your documents are bookkeeping paperwork. Build
                 when the documents, the checks or the destination are particular to your business.
               </p>
             </div>
-            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
-              <table>
+            <p className="md:hidden" style={{ marginTop: 24, fontSize: 13, color: 'var(--body)' }}>Swipe sideways to see every column.</p>
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 1060 }}>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -806,9 +838,45 @@ export default function DocumentIntakeAiAgentsAUPage() {
               </table>
             </div>
             <p className="tablenote">
-              Built-in capture example: <a href={SRC_XERO_SDC} {...extLink}>Xero smart document capture</a>, which Xero says reads
-              receipts, bills and statements and is rolling out in beta in Australia and New Zealand.
+              Built-in capture example: <a href={SRC_XERO_SDC} {...extLink}>Xero smart document capture</a>. Rented IDP
+              platform examples: <a href={SRC_ABBYY} {...extLink}>ABBYY Vantage</a> and{' '}
+              <a href={SRC_NANONETS} {...extLink}>Nanonets</a>.
             </p>
+          </div>
+        </section>
+
+        {/* ═══ OCR SOFTWARE VS CLOUD AI VS AGENT ═══ */}
+        <section className="section au-top" id="ocr-vs-agent">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">Reading is one layer</div>
+              <h2>OCR software, Google Document AI or a custom intake agent: which do you need?</h2>
+            </div>
+            <div className="au-prose" style={{ maxWidth: 760 }}>
+              <p>
+                Plain OCR software turns a scan into searchable text. That suits an archive of old dockets you want to
+                search by PO number. It cannot tell you which number on the page is the PO number.
+              </p>
+              <p>
+                The cloud services add AI OCR on top. AWS says <a href={SRC_TEXTRACT} {...extLink}>Amazon Textract</a>{' '}
+                extracts printed text, handwriting, layout elements and data from documents. Google lists OCR and a Form
+                Parser inside <a href={SRC_GOOGLE_DOCAI} {...extLink}>Document AI</a>. Microsoft describes{' '}
+                <a href={SRC_AZURE_DI} {...extLink}>Azure AI Document Intelligence</a> as an OCR and intelligent document
+                processing service. All three are building blocks for developers. None of them knows your customers,
+                item codes or price lists.
+              </p>
+              <p>
+                A custom intake agent uses one of these readers for the PDF data extraction step. It then adds the part
+                that belongs to your business: checks against your own records, a review queue built around your team,
+                and a draft in Xero, MYOB or your ERP. We test two or three readers on a batch of your documents and pick
+                one on measured field accuracy.
+              </p>
+              <p>
+                Invoice OCR for supplier bills is covered on our{' '}
+                <a href="/au/accounts-payable-automation">accounts payable automation</a> page. Vendor descriptions on this
+                page were read on 31 October 2026.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -860,11 +928,9 @@ export default function DocumentIntakeAiAgentsAUPage() {
                   the Australian Privacy Principles apply to all of it, including while an AI model reads it.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
-                  APP 11 asks for reasonable steps to protect personal information from misuse, interference, loss and
-                  unauthorised access, and to destroy or de-identify it once it is no longer needed. APP 11.3, added by the
-                  Privacy and Other Legislation Amendment Act 2024, says those steps include both technical and
-                  organisational measures. For an intake agent that means encryption, access limits and a deletion schedule,
-                  written down.
+                  APP 11 asks for reasonable steps to protect personal information, and to destroy or de-identify it once
+                  it is no longer needed. Since the 2024 amendment, APP 11.3 says those steps are both technical and
+                  organisational. The privacy questions in the FAQ below set out what that means for an intake agent.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><div>
                   <p>
@@ -904,11 +970,9 @@ export default function DocumentIntakeAiAgentsAUPage() {
               <h2>How much does AI document processing cost in Australia?</h2>
               <p className="lead">
                 <a href={SRC_FLOWTIVITY} {...extLink}>Flowtivity’s March 2026 Australian guide</a> puts document processing
-                and data entry builds at A$12,000 to A$30,000, taking 4 to 8 weeks.{' '}
-                <a href={SRC_WVD} {...extLink}>Web Video Digital’s August 2026 guide</a> puts custom AI agents in general at
-                A$15,000 to A$150,000, with most small and mid-size projects at A$30,000 to A$80,000. Neither guide says
-                whether GST is included, so compare quotes ex GST. These are market ranges, not our prices. FactoryJet quotes
-                a fixed price in writing after a short scoping call.
+                and data entry builds at A$12,000 to A$30,000, taking 4 to 8 weeks. That is a market range, not our price,
+                and the cost question in the FAQ adds a second guide and the GST caveat. FactoryJet quotes a fixed price
+                per phase in writing after a short scoping call.
               </p>
             </div>
             <div className="au-split">
@@ -919,7 +983,7 @@ export default function DocumentIntakeAiAgentsAUPage() {
                   <li><span><b>Several document types.</b> Orders, dockets and applications sharing one review queue, one log and one set of privacy controls.</span></li>
                   <li><span><b>Optional support.</b> Changes quoted and approved one at a time, with no monthly minimum.</span></li>
                 </ol>
-                <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+                <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" style={{ background: '#C2440F' }} />
               </div>
               <div className="au-panel">
                 <div className="eyebrow">What moves the scope</div>
@@ -942,16 +1006,15 @@ export default function DocumentIntakeAiAgentsAUPage() {
           <div className="wrap au-split">
             <div className="au-prose">
               <div className="eyebrow">Work we have done</div>
-              <h2>Document work at the ERP end, where the record has to be right</h2>
+              <h2>What ERP and document work has FactoryJet done?</h2>
               <p>
                 Our ERP projects on Odoo, NetSuite, SAP Business One, ERPNext and custom systems have included RFQ
                 automation, daily bookkeeping, and purchase and sales orders raised by software. Every one of them hinged on
                 paperwork. A supplier quote request or a customer’s order had to be read correctly before the ERP could act on it.
               </p>
               <p>
-                We build Xero and HubSpot integrations, and for Sow Easy, a distributor, we connected a WooCommerce store to
-                Odoo. FactoryJet has served more than 500 businesses since 2014, so the ERP side of an intake agent, the
-                part that decides whether an order is valid, is familiar ground.
+                We build Xero and HubSpot integrations. For Sow Easy we built a WooCommerce to Odoo integration, tested
+                against Odoo’s staging system, with launch still ahead. FactoryJet has served more than 500 businesses.
               </p>
               <p>
                 The same service for US businesses, with US platforms and sources, is on our{' '}
@@ -1011,7 +1074,7 @@ export default function DocumentIntakeAiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Related services</div>
-              <h2>Other pages that may fit your paperwork better</h2>
+              <h2>Which other FactoryJet service fits your paperwork?</h2>
             </div>
             <div className="agentdir-group">
               <div className="agentdir-label">
@@ -1039,7 +1102,6 @@ export default function DocumentIntakeAiAgentsAUPage() {
           items={FAQ_ITEMS}
           heading="AI document processing: questions Australian businesses ask"
           askLabel="Still have a question? Ask the founder →"
-          askNote="Replies within 24 hours."
         />
 
         {/* ═══ SOURCES → references ═══ */}
@@ -1057,7 +1119,16 @@ export default function DocumentIntakeAiAgentsAUPage() {
               <a href={SRC_OAIC_AI} {...extLink}>OAIC, privacy and AI products</a>
               <a href={SRC_FLOWTIVITY} {...extLink}>Flowtivity, Australian AI agent pricing</a>
               <a href={SRC_WVD} {...extLink}>Web Video Digital, AI agent cost</a>
+              <a href={SRC_TEXTRACT} {...extLink}>Amazon Textract</a>
+              <a href={SRC_GOOGLE_DOCAI} {...extLink}>Google Document AI overview</a>
+              <a href={SRC_AZURE_DI} {...extLink}>Azure AI Document Intelligence overview</a>
+              <a href={SRC_XERO_PLANS} {...extLink}>Xero, smart document capture plans</a>
+              <a href={SRC_DEXT} {...extLink}>Dext Australia</a>
+              <a href={SRC_ABBYY} {...extLink}>ABBYY Vantage</a>
+              <a href={SRC_NANONETS} {...extLink}>Nanonets</a>
+              <span aria-hidden="true" />
             </div>
+            <style>{'.aiAgentPage #references .refs { grid-template-columns: repeat(2, minmax(0, 1fr)); } @media (max-width: 820px) { .aiAgentPage #references .refs { grid-template-columns: 1fr; } }'}</style>
           </div>
         </section>
 
@@ -1073,7 +1144,7 @@ export default function DocumentIntakeAiAgentsAUPage() {
               </p>
             </div>
             <div className="ctas">
-              <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" style={{ background: '#C2440F' }} />
               <a className="btn btn-ghost" href="/au/accounts-payable-automation">Supplier invoices instead</a>
             </div>
           </div>

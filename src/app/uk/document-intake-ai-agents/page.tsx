@@ -5,6 +5,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/document-intake-ai-agents, built 2026-10-29.
@@ -40,12 +41,14 @@ import '../ai-agents/ai-agents.css';
       FAQ renders. Never add a second list of questions. */
 
 const CANONICAL = 'https://factoryjet.com/uk/document-intake-ai-agents';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
+const UPDATED_LABEL = '31 October 2026';
 const READ_ON = '29 October 2026';
-const TITLE = 'Intelligent Document Processing UK: Custom Agents | FactoryJet';
+const IDP_READ_ON = '31 October 2026';
+const TITLE = 'Intelligent Document Processing UK: AI Agents | FactoryJet';
 const H1 = 'Document Intake AI Agents for UK Businesses: Invoices, Delivery Notes and Forms Read Into Xero, Sage or Your ERP';
 const DESCRIPTION =
-  'Document intake agents for UK firms: supplier invoices, delivery notes, purchase orders and forms read, checked against your records and filed into Xero, Sage, NetSuite or Odoo.';
+  'Intelligent document processing for UK firms: AI agents read invoices, delivery notes, POs and forms, check them and file them in Xero, Sage or your ERP.';
 const IMG = '/images/us/document-intake-ai-agents';
 
 /* Design values, copied from ../ai-agents/ai-agents.css so inline styles stay
@@ -85,6 +88,11 @@ const SRC = {
   azureLimits: { label: 'Microsoft Learn: Document Intelligence service quotas and limits', url: 'https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/service-limits' },
   fulminous: { label: 'Fulminous: AI agent development cost UK', url: 'https://fulminous.co.uk/ai-agent-development-cost-uk' },
   leverx: { label: 'LeverX UK: AI agent development cost', url: 'https://leverx.com/en-gb/blog/ai-agent-development-cost-uk' },
+  textract: { label: 'AWS documentation: Set quotas in Amazon Textract', url: 'https://docs.aws.amazon.com/textract/latest/dg/limits-document.html' },
+  googleDocAi: { label: 'Google Cloud documentation: Document AI processor list', url: 'https://docs.cloud.google.com/document-ai/docs/processors-list' },
+  rossum: { label: 'Rossum: pricing', url: 'https://rossum.ai/pricing/' },
+  abbyy: { label: 'ABBYY Vantage documentation: introduction', url: 'https://docs.abbyy.com/vantage/introduction' },
+  nanonets: { label: 'Nanonets: pricing', url: 'https://nanonets.com/pricing' },
 } as const;
 
 type SrcKey = keyof typeof SRC;
@@ -116,7 +124,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'basics',
     question: 'What’s the difference between OCR and IDP?',
     answer:
-      'OCR (optical character recognition) converts a scanned or photographed page into plain text. On its own it cannot tell the VAT figure from the carriage charge. IDP, intelligent document processing, adds the next steps: it names the document, pulls out the fields you care about, checks them and passes them to the system that keeps the record. OCR is one step inside IDP.',
+      'OCR (optical character recognition) converts a scanned or photographed page into plain text. On its own it cannot tell the VAT figure from the carriage charge. IDP, intelligent document processing, adds the next steps: it names the document, pulls out the fields you care about, checks them and passes them to the system that keeps the record. OCR is one step inside IDP, and AI invoice processing is IDP applied to supplier bills only.',
   },
   {
     category: 'basics',
@@ -128,7 +136,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'basics',
     question: 'Which AI is best for document processing?',
     answer:
-      'The one that reads your own documents best, so test it on a sample. Cloud reading services set hard limits worth knowing first. Microsoft’s Document Intelligence, on its Standard tier, takes PDFs and JPEG, PNG, BMP, TIFF and HEIF images up to 500 MB and analyses up to 2,000 pages in one request. We pick the model per document type after the sample test, and you can swap it later.',
+      'The one that reads your own documents best, so test it on a sample. We compare model families such as OpenAI’s GPT, Anthropic’s Claude and Google’s Gemini, plus dedicated reading services, on your paper. Those services set hard limits worth knowing first. Microsoft’s Document Intelligence, on its Standard tier, takes PDFs and JPEG, PNG, BMP, TIFF and HEIF images up to 500 MB and analyses up to 2,000 pages in one request. We pick per document type after the test, and you can swap later.',
   },
   // Rent a tool or build
   {
@@ -141,13 +149,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'rent',
     question: 'Do Dext and AutoEntry suit delivery notes, POs and forms?',
     answer:
-      'Both price by the bookkeeping document: Dext at £24.17 a month billed annually (£290 a year), excluding VAT, for 250 documents a month and 5 users, and AutoEntry by credits from £15.45 a month for 50. Our UK accounts payable automation page compares them on supplier invoices. A delivery note, customer PO or credit form is a different job, because it has to be checked against an order, a price list or a credit limit that an accounts package does not hold.',
+      'Not well. They suit receipts, supplier bills and statements going into Xero, Sage or QuickBooks, priced by the bookkeeping document: Dext from £24.17 a month billed annually, AutoEntry from £15.45 a month for 50 credits, both excluding VAT. A delivery note, customer PO or credit form has to be checked against something an accounts package does not hold, such as a purchase order and goods-in record in your ERP, a buyer’s price list or a credit limit. That is where a custom agent earns its build. So is a result that lands in two systems, say Sage 200 for the ledger and Linnworks for the return.',
   },
   {
     category: 'rent',
-    question: 'When is Dext, AutoEntry or Hubdoc enough, and when do we need a custom agent?',
+    question: 'Is document automation the same as AI document processing?',
     answer:
-      'Rent when the documents are receipts, supplier bills and statements, and the only destination is Xero, Sage or QuickBooks. Build when the document has to be checked against something an accounts package does not hold: a purchase order and goods-in record in your ERP, a customer’s price list, a courier consignment, a credit limit. Build too when the result lands in two systems, say Sage 200 for the ledger and Linnworks for the return.',
+      'No. Document automation is the wider term: any software that moves a document through its steps without retyping, using templates, rules and approvals. AI document processing is the reading step inside it, where a model pulls fields from a layout it has not seen before. A document intake agent uses both. AI reads the page, and plain rules check it against your ledger, route it and file it. Most of the work in a build sits in those rules.',
   },
   {
     category: 'rent',
@@ -184,7 +192,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'rules',
     question: 'How long must we keep the documents the agent reads?',
     answer:
-      'GOV.UK says VAT records must be kept for at least 6 years, or 10 years for businesses using the VAT One Stop Shop or MOSS schemes. That includes every invoice you receive, as the original or an electronic copy. The agent files the image where your team already keeps records, in your own storage, with a link from the ledger entry so an inspector can trace one to the other.',
+      'GOV.UK says VAT records must be kept for at least 6 years, or 10 years for businesses using the VAT One Stop Shop (OSS) or its older version, the Mini One Stop Shop (MOSS), which let a seller account for EU VAT through one return. That includes every invoice you receive, as the original or an electronic copy. The agent files the image where your team already keeps records, in your own storage, with a link from the ledger entry so an inspector can trace one to the other.',
   },
   {
     category: 'rules',
@@ -196,20 +204,20 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'rules',
     question: 'How do UK GDPR and the Data (Use and Access) Act 2025 affect an intake agent?',
     answer:
-      'The ICO says the Act opens up the full range of lawful bases for significant automated decisions, provided you keep appropriate safeguards, and that this does not extend to special category data. Its June 2026 update says all the Act’s data protection provisions are now in force. Our design keeps a person on any decision about an individual, such as refusing a credit account. Your data protection lead decides the lawful basis.',
+      'The ICO says the Act opens up the full range of lawful bases (the legal reasons UK GDPR lets you use personal data) for significant automated decisions, provided you keep appropriate safeguards. This does not extend to special category data, such as health, ethnicity or religion. Its June 2026 update says all the Act’s data protection provisions are now in force. Our design keeps a person on any decision about an individual, such as refusing a credit account. Your data protection lead decides the lawful basis.',
   },
   {
     category: 'rules',
     question: 'We sell into the EU. Does the EU AI Act apply to us?',
     answer:
-      'It can. Article 2 covers providers placing AI systems on the EU market wherever they are based, and providers and deployers in a third country where the output of the AI system is used in the Union. A UK firm whose agent only reads its own supplier paperwork for its own UK ledger is a different case from one whose output reaches EU customers. Ask your legal adviser which applies to you.',
+      'It can. Article 2 covers providers placing AI systems on the EU market wherever they are based, and providers and deployers (the firms that use an AI system in their own work) in a third country where the output of the AI system is used in the Union. A UK firm whose agent only reads its own supplier paperwork for its own UK ledger is a different case from one whose output reaches EU customers. Ask your legal adviser which applies to you.',
   },
   // Reading the paper
   {
     category: 'reading',
     question: 'Can it read handwritten delivery notes and phone photos from drivers?',
     answer:
-      'Often, and the useful answer comes from your own paper. A printed Royal Mail, DPD or Evri proof of delivery reads well. A signed note with quantities corrected in biro, photographed in a van, is harder. We feed a batch of your old notes to the agent, score its reading against your goods-in team’s entries, and set it to flag any quantity it cannot read with confidence rather than guess.',
+      'Often, and the useful answer comes from your own paper. A clean printed Royal Mail, DPD or Evri proof of delivery is the easier case. A signed note with quantities corrected in biro, photographed in a van, is harder. We feed a batch of your old notes to the agent, score its reading against your goods-in team’s entries, and set it to flag any quantity it cannot read with confidence rather than guess.',
   },
   {
     category: 'reading',
@@ -250,9 +258,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'working',
-    question: 'Have you done systems work for UK companies?',
+    question: 'Who have you worked with in the UK?',
     answer:
-      'Yes. GPSUK, a UK promotional products supplier, runs its trade storefront on Commerceflo, built by FactoryJet, where business buyers see their own account prices and move from quote to order without retyping. Sow Easy, a UK wholesale distributor, is having its WooCommerce trade store built with Odoo as the source of stock, prices and SKUs; the Odoo link is being tested on staging.',
+      'Two UK clients we can name. GPSUK, a promotional products supplier, runs its trade storefront on Commerceflo, built by FactoryJet, where business buyers see their own account prices and move from quote to order without retyping. For Sow Easy, a wholesale distributor, FactoryJet is building a WooCommerce trade store with Odoo as the source of stock, prices and SKUs. The Odoo integration is tested against Odoo’s staging system, and launch is still ahead.',
   },
 ];
 
@@ -267,7 +275,7 @@ const DOCS: { doc: string; from: string; check: string; lands: string }[] = [
   },
   {
     doc: 'Delivery note or proof of delivery',
-    from: 'Driver photo, goods-in scan, or a Royal Mail, DPD or Evri POD',
+    from: 'Driver photo, goods-in scan, or a Royal Mail, DPD or Evri proof of delivery (POD)',
     check: 'Purchase order lines, quantities and any shortage noted in pen',
     lands: 'A goods-received record in your ERP or Mintsoft, never a bill',
   },
@@ -347,6 +355,47 @@ const TOOLS: { name: string; maker: string; price: string; reads: string; suits:
   },
 ];
 
+/* Dedicated IDP platforms. Each fact read on the maker's own page on 2026-10-31. */
+const IDP: { name: string; maker: string; fact: string; sources: SrcKey[]; on?: string }[] = [
+  {
+    name: 'Rossum',
+    maker: 'Rossum',
+    fact: 'Four plans: Starter, Business, Enterprise and Ultimate. Only Starter shows a price, starting at $18,000 a year; the others are quoted. Pricing is based on pages or documents processed.',
+    sources: ['rossum'],
+  },
+  {
+    name: 'ABBYY Vantage',
+    maker: 'ABBYY',
+    fact: 'Works through trained units ABBYY calls skills. Its documentation lists invoice skills and purchase order skills for accounts payable, and over 100 built-in skills for common document types.',
+    sources: ['abbyy'],
+  },
+  {
+    name: 'Nanonets',
+    maker: 'Nanonets',
+    fact: 'Priced per block run: $0.30 a run for data extraction, $0.10 for classification or validation, $0.02 for routing or export, with $50 of free credits to start.',
+    sources: ['nanonets'],
+  },
+  {
+    name: 'Amazon Textract',
+    maker: 'AWS',
+    fact: 'Reads JPEG, PNG, PDF and TIFF files. Asynchronous jobs take PDFs up to 500 MB and 3,000 pages. Handwriting is read in English only.',
+    sources: ['textract'],
+  },
+  {
+    name: 'Google Document AI',
+    maker: 'Google Cloud',
+    fact: 'Its Invoice Parser extracts header fields such as invoice ID, dates, totals and supplier, plus line items. Online requests handle up to 15 pages; batch requests up to 200.',
+    sources: ['googleDocAi'],
+  },
+  {
+    name: 'Azure Document Intelligence',
+    maker: 'Microsoft',
+    fact: 'On its Standard tier it takes PDFs and JPEG, PNG, BMP, TIFF and HEIF images up to 500 MB and analyses up to 2,000 pages in one request.',
+    sources: ['azureLimits'],
+    on: READ_ON,
+  },
+];
+
 /* Comparison rows. Product cells restate the makers' own pages. */
 const COMPARE: { feat: string; hubdoc: string; dext: string; autoentry: string; erp: string; fj: string }[] = [
   {
@@ -371,7 +420,7 @@ const COMPARE: { feat: string; hubdoc: string; dext: string; autoentry: string; 
     dext: 'Your accounts package',
     autoentry: 'Your accounts package',
     erp: 'Open purchase orders in the ERP',
-    fj: 'Whatever holds the truth: ERP, WMS, price lists, courier data',
+    fj: 'Whatever holds the truth: ERP, warehouse management system (WMS), price lists, courier data',
   },
   {
     feat: 'Where results go',
@@ -395,7 +444,7 @@ const COMPARE: { feat: string; hubdoc: string; dext: string; autoentry: string; 
 const BREAKS: { t: string; d: string }[] = [
   { t: 'Quantities corrected in biro', d: 'A driver signs for 18 cartons, not 20, and writes it over the printed number. The agent reads the printed figure, sees ink over it and sends that line to goods-in instead of trusting either value.' },
   { t: 'A delivery note filed as a bill', d: 'It looks like an invoice and carries prices. It is not a VAT invoice, so the agent holds it as a receipt of goods and waits for the real invoice.' },
-  { t: 'A euro invoice from an EU supplier', d: 'No UK VAT on the face, a different number format (1.234,56) and sometimes a reverse charge note. The agent reads the currency and sends the VAT treatment to your accountant’s rule, not its own guess.' },
+  { t: 'A euro invoice from an EU supplier', d: 'No UK VAT on the face, a different number format (1.234,56) and sometimes a reverse charge note (the buyer, not the seller, accounts for the VAT). The agent reads the currency and sends the VAT treatment to your accountant’s rule, not its own guess.' },
   { t: 'Buyer part numbers', d: 'A trade customer orders “BLU-500” and you stock it as 10045. The agent learns the mapping per customer and asks once for any code it has not seen.' },
   { t: 'One PDF, a day of paper', d: 'Goods-in scans everything at five o’clock into a single file. The agent splits it by page and document before it reads a single field.' },
   { t: 'A supplier changes bank details', d: 'A new sort code on an otherwise normal invoice is never filed automatically. It goes to a named person, every time, whatever the confidence score.' },
@@ -476,7 +525,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['document-intake-ai-agents'] },
   openGraph: {
     title: TITLE,
     description:
@@ -533,7 +582,7 @@ export default function DocumentIntakeAiAgentsUKPage() {
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  Your accounts inbox, your goods-in scanner and your sales office all retype the same paper into
+                  Your accounts inbox and your goods-in scanner both feed people who retype the same paper into
                   Xero, Sage 200, NetSuite, Business Central or Odoo. FactoryJet builds an agent that reads each
                   document, checks it against your own records and files it, with a person reviewing anything it is
                   unsure of. You see it on your own documents before you sign, and you own what we build.
@@ -542,13 +591,13 @@ export default function DocumentIntakeAiAgentsUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className={styles.heroForm} style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="uk" source="uk_document_intake_ai_agents_hero" service="Document Intake AI Agents" submitLabel="See a demo on my data" />
+                  <HeroInlineForm region="uk" source="uk_document_intake_ai_agents_hero" service="Document Intake AI Agents" submitLabel="See a demo on my data" trustText="Bhavesh replies within one business day." />
                   <p style={{ fontSize: 13.5, color: T.ink, marginTop: 10 }}>
-                    Working software on your own data before you sign. Bhavesh replies within one business day.
+                    Working software on your own data before you sign.
                   </p>
                 </div>
               </div>
@@ -582,10 +631,10 @@ export default function DocumentIntakeAiAgentsUKPage() {
         {/* 2. ANSWER-FIRST DEFINITION */}
         <section className="sec">
           <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
+            <div className="def" style={{ maxWidth: 720 }} data-speakable="true">
               <span className="lab">What does a document intake agent do for a UK business?</span>
               <p>
-                It reads inbound paperwork the way a clerk would. Supplier invoices, delivery notes, customer
+                It does intelligent document processing: it reads inbound paperwork the way a clerk would. Supplier invoices, delivery notes, customer
                 purchase orders, credit account forms and returns are picked up from an inbox or scanner, named,
                 read, checked against your ERP or accounts package and filed. HMRC accepts a scanned invoice in
                 place of the paper original when the stored image keeps every detail needed for VAT, unless you
@@ -593,7 +642,7 @@ export default function DocumentIntakeAiAgentsUKPage() {
               </p>
             </div>
             <Sources ids={['govMtd']} />
-            <div className="def mt-6" style={{ maxWidth: 940 }}>
+            <div className="def mt-6" style={{ maxWidth: 720 }}>
               <span className="lab">Three terms we use a lot</span>
               <p>
                 A <b>system of record</b> is the software that holds the official version of a number, such as
@@ -636,14 +685,15 @@ export default function DocumentIntakeAiAgentsUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">Seven kinds of paper</span>
-              <h2>Which UK documents an intake agent reads, what it checks, and where each one lands</h2>
+              <h2>Intelligent document processing for UK paperwork: what an agent reads, checks and files</h2>
               <p className="lead mt-4">
                 The supplier invoice gets the attention, but it is one document in seven. Wholesalers, distributors
                 and multichannel brands handle all of these every week, and most of them are checked against
                 something other than the accounts package.
               </p>
             </div>
-            <div className={`card mt-10 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Documents an intake agent reads" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 900 }} data-columns={4}>
+            <p className="md:hidden mt-6" style={srcNote}>Swipe sideways to see every column.</p>
+            <div className={`card mt-10 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Documents an intake agent reads" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 900 }} data-columns={4}>
               <thead>
                 <tr>
                   <th>Document</th>
@@ -666,7 +716,12 @@ export default function DocumentIntakeAiAgentsUKPage() {
             <p className="mt-6" style={{ maxWidth: 780 }}>
               If supplier invoices and their approval are the whole job, our page on{' '}
               <a href="/uk/accounts-payable-automation" style={inlineLink}>accounts payable automation in the UK</a>{' '}
-              goes deeper on VAT invoice checks, approvals and payment runs.
+              goes deeper on VAT invoice checks, approvals and payment runs. When customer purchase orders are
+              the main job, see{' '}
+              <a href="/uk/sales-order-automation-ai-agents" style={inlineLink}>sales order automation AI agents</a>.
+              For agents built around one ERP, see{' '}
+              <a href="/uk/netsuite-ai-agents" style={inlineLink}>NetSuite AI agents</a> and{' '}
+              <a href="/uk/odoo-ai-agents" style={inlineLink}>Odoo AI agents</a>.
             </p>
           </div>
         </section>
@@ -764,16 +819,16 @@ export default function DocumentIntakeAiAgentsUKPage() {
               <span className="eyebrow">Rent first</span>
               <h2>Five document capture tools UK finance teams already pay for, with list prices read on {READ_ON}</h2>
               <p className="lead mt-4">
-                Dext, Hubdoc and AutoEntry are searched for far more often in the UK than any phrase about document
-                processing. If one of them, or the reader inside your ERP, covers your paperwork, use it. We sell
+                Dext, Hubdoc and AutoEntry are the names UK finance teams already know. If one of them, or the
+                reader inside your ERP, covers your paperwork, use it. We sell
                 none of them. For supplier invoices alone, our{' '}
                 <a href="/uk/accounts-payable-automation" style={inlineLink}>UK accounts payable automation</a>{' '}
                 page goes further; this section is about everything else that lands in the inbox.
               </p>
             </div>
             <ul className="col-2 mt-10">
-              {TOOLS.map((c) => (
-                <li key={c.name} className="plat-card">
+              {TOOLS.map((c, i) => (
+                <li key={c.name} className="plat-card" style={i === TOOLS.length - 1 && TOOLS.length % 2 === 1 ? { gridColumn: '1 / -1' } : undefined}>
                   <div className="plat-top">
                     <h3 className="plat-name">{c.name}</h3>
                     <span className="plat-pill">{c.maker}</span>
@@ -786,8 +841,9 @@ export default function DocumentIntakeAiAgentsUKPage() {
               ))}
             </ul>
 
-            <h3 className="mt-12" style={{ maxWidth: 820 }}>Hubdoc, Dext, AutoEntry, the reader in your ERP and a custom agent, side by side</h3>
-            <div className={`card mt-6 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 980 }} data-columns={6}>
+            <h3 className="mt-12" style={{ maxWidth: 820 }}>Hubdoc vs Dext vs AutoEntry vs your ERP vs a custom agent</h3>
+            <p className="md:hidden mt-6" style={srcNote}>Swipe sideways to see every column.</p>
+            <div className={`card mt-6 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 980 }} data-columns={6}>
               <thead>
                 <tr>
                   <th>&nbsp;</th>
@@ -818,10 +874,43 @@ export default function DocumentIntakeAiAgentsUKPage() {
           </div>
         </section>
 
+        {/* 7b. DEDICATED IDP PLATFORMS */}
+        <section className="sec-lg dot-grid" id="idp-platforms">
+          <div className="wrap">
+            <div style={{ maxWidth: 760 }}>
+              <span className="eyebrow">Licensed IDP platforms</span>
+              <h2>Rossum, ABBYY, Nanonets, Textract and Document AI: when to license an IDP platform instead</h2>
+              <p className="lead mt-4">
+                These are reading engines, sold to teams that wire them into their own systems. Each one leaves the
+                checks against your own records for you to build.
+              </p>
+            </div>
+            <ul className="col-2 mt-10">
+              {IDP.map((c, i) => (
+                <li key={c.name} className="plat-card" style={i === IDP.length - 1 && IDP.length % 2 === 1 ? { gridColumn: '1 / -1' } : undefined}>
+                  <div className="plat-top">
+                    <h3 className="plat-name">{c.name}</h3>
+                    <span className="plat-pill">{c.maker}</span>
+                  </div>
+                  <p className="mt-2">{c.fact}</p>
+                  <Sources ids={c.sources} on={c.on ?? IDP_READ_ON} />
+                </li>
+              ))}
+            </ul>
+            <p className="mt-8" style={{ maxWidth: 780 }}>
+              License one of these when you have high volumes of one document type and a team that can wire it to
+              your ERP. A custom agent fits better when the hard part is checking the page against your records: a
+              delivery note against goods-in, or a buyer’s PO against their price list. An agent can also be built on
+              top of one of these services, so you may end up using both.
+            </p>
+          </div>
+        </section>
+
         <MidPageCTA
           headline={'Tell us which documents your team dreads. We show you what an agent makes of them.'}
           sub={'Name the delivery notes, purchase orders or forms that slow you down. After the first call we ask for about ten examples by email, with personal details removed if you prefer, and come back with a plain verdict (Hubdoc, Dext, AutoEntry, your ERP or a custom agent) and, where a build makes sense, a fixed price in writing.'}
           label={'See a demo on my data'}
+          note={'Bhavesh replies within one business day.'}
         />
 
         {/* 8. RENT OR BUILD */}
@@ -893,7 +982,7 @@ export default function DocumentIntakeAiAgentsUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">UK work we can name</span>
-                <h2>Two UK clients whose systems work sits underneath intake</h2>
+                <h2>GPSUK on Commerceflo and Sow Easy on WooCommerce with Odoo: UK systems work an intake agent depends on</h2>
                 <div className="stack mt-6">
                   <p>
                     <b>GPSUK</b> supplies promotional products to UK businesses. FactoryJet built its trade
@@ -903,19 +992,18 @@ export default function DocumentIntakeAiAgentsUKPage() {
                   </p>
                   <p>
                     <b>Sow Easy</b> is a UK wholesale distributor. FactoryJet is building its WooCommerce trade
-                    store with Odoo as the single source of stock, prices and SKUs. The store and the Odoo link are
-                    being tested on staging before launch.{' '}
+                    store with Odoo as the single source of stock, prices and SKUs. The Odoo integration is tested
+                    against Odoo’s staging system, and launch is still ahead.{' '}
                     <a href="/case-studies/sow-easy-distributor-portal" style={inlineLink}>Read the Sow Easy case study</a>.
                   </p>
                   <p>
                     The rule both projects follow is the one an intake agent depends on: one system owns each
-                    record, and every other system reads from it. Beyond these two, FactoryJet has worked on Odoo,
-                    NetSuite, SAP Business One, ERPNext and custom ERPs, including request-for-quote automation,
-                    daily bookkeeping and purchase and sales order generation.
+                    record, and every other system reads from it. Neither project is an intake build, and we do not
+                    claim an intake result for either. Your sample test is the proof we offer for intake.
                   </p>
                 </div>
               </div>
-              <div className="card" style={{ padding: 8 }}>
+              <div className="card" style={{ padding: 8, background: '#F4F4F0' }}>
                 <img src={`${IMG}/sorting-paper-three-trays.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="A woman with short grey hair in a dark green cardigan places a sheet of paper into an orange wire tray between two white trays on a long pale wood table, beside a tall stack of paper" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
               </div>
             </div>
@@ -962,8 +1050,7 @@ export default function DocumentIntakeAiAgentsUKPage() {
               <span className="eyebrow">Who this is for</span>
               <h2>Document intake for UK wholesalers, manufacturers, multichannel brands and multi-entity groups</h2>
               <p className="lead mt-4">
-                Established companies with a finance team, a goods-in team and a sales office, each retyping paper
-                into a different screen.
+                Established companies where finance and goods-in each retype paper into a different screen.
               </p>
             </div>
             <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Who this is for"><table className={styles.comparisonTable} data-comparison-layout><tbody>
@@ -997,10 +1084,8 @@ export default function DocumentIntakeAiAgentsUKPage() {
                   <li>Each phase is scoped, priced and signed on its own.</li>
                 </ul>
                 <p className="mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short
-                  scoping call. Published UK market ranges: £30,000 to £90,000 before VAT for a back-office agent
-                  handling data entry and invoice processing in Fulminous’s guide, and £10,000 to £30,000 for one
-                  workflow in LeverX’s, which does not state its VAT treatment. Those are their ranges, not ours.
+                  Each phase has a fixed price, quoted in writing after a short scoping call. Published UK market
+                  ranges for a build, from Fulminous and LeverX, are in the FAQ under cost.
                 </p>
                 <Sources ids={['leverx', 'fulminous']} />
                 <div className="mt-8">
@@ -1027,10 +1112,10 @@ export default function DocumentIntakeAiAgentsUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">Method</span>
-              <h2>Sources, read on {READ_ON}</h2>
+              <h2>Sources, read on 29 and 31 October 2026</h2>
               <p className="lead mt-4">
                 Every price, plan limit, product feature and rule on this page was read on the pages below on that
-                day. Search volumes are DataForSEO figures for the United Kingdom, pulled the same day. Prices move,
+                day, and the IDP platform facts on {IDP_READ_ON}. Prices move,
                 and HMRC, the ICO and the EU change their guidance, so open the linked page before you act on a figure.
               </p>
             </div>
@@ -1047,7 +1132,7 @@ export default function DocumentIntakeAiAgentsUKPage() {
         {/* 15. FAQ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Document intake questions from UK finance, operations and sales teams</h2>
             </div>
@@ -1100,7 +1185,7 @@ export default function DocumentIntakeAiAgentsUKPage() {
             <h2>Stop retyping the same paper into three systems</h2>
             <p className="mt-4">
               Leave a name and a work email. Within one business day Bhavesh books a short call to go through your
-              document types, your systems and who checks what today. You leave knowing whether a rented tool
+              document types and your systems. You leave knowing whether a rented tool
               or a custom agent is the right job.
             </p>
             <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>

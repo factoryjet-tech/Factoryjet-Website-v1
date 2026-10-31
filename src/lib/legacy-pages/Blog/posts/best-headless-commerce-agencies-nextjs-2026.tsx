@@ -227,17 +227,17 @@ const FIRMS: Firm[] = [
     name: 'FactoryJet (that is us)',
     url: 'https://factoryjet.com/',
     source: 'https://factoryjet.com/services/headless-shopify-development',
-    partner: 'Registered Shopify Partner',
+    partner: 'Not stated on this page',
     group: 'Us',
     based: 'Serves US clients, with calls in US business hours',
     type: 'Commerce and AI services company',
-    clients: 'Direct-to-consumer and B2B brands that also need ERP, QuickBooks or AI agent work',
+    clients: 'We can name DTF (Shopify) and GPSUK (Commerceflo). This page does not name a headless Next.js storefront client of ours, so ask us for one',
     frameworks: 'Next.js with the App Router and React Server Components',
     backends: 'Shopify and Shopify Plus through the Storefront API, BigCommerce, Commerceflo by FactoryJet',
     cms: 'Sanity',
     what: 'We build headless storefronts in Next.js on Shopify, BigCommerce or Commerceflo by FactoryJet, with Sanity for content. Shopify keeps checkout, so Shop Pay and its fraud checks stay. We connect the store to QuickBooks or an ERP and can add AI agents for order work. We can show a working draft built with your own products before you sign.',
     bestFor: 'Brands that want the storefront, the back-office connections and AI agents from one team.',
-    ask: 'To see a working draft of your store, with your own products, before you sign a contract.',
+    ask: 'Which headless Next.js storefront have you shipped, and can we open it on a phone?',
   },
 ];
 
@@ -285,7 +285,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'What is the best headless commerce agency?',
-    a: 'No neutral body ranks them. Vercel’s partner directory shows tiers for agencies that build on Next.js, and Shopify and BigCommerce directories show theirs. A tier shows scale, not fit. Pick by the platform you will keep behind the storefront, then ask each agency for a live headless store on that platform that you can open on your own phone.',
+    a: 'It depends on your platform. On Shopify, look at 1Digital Agency, IWD Agency or Naturaily. On BigCommerce, look at MAK Digital Design, Mira Commerce or Calashock. For one large agency, look at Codal or Americaneagle. No neutral body ranks them, and a Vercel tier shows scale more than fit. Pick by the platform you will keep behind the storefront, then ask each agency for a live headless store on that platform that you can open on your own phone.',
   },
   {
     q: 'What is headless commerce?',
@@ -301,7 +301,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Should a headless store use Next.js or Shopify Hydrogen?',
-    a: 'Hydrogen is Shopify’s own framework and deploys to Shopify’s Oxygen hosting. Next.js works with any backend and has a larger developer pool. MAK says it prefers Hydrogen or Catalyst where the platform maintains them and Next.js elsewhere; 1Digital defaults to Next.js and offers Hydrogen and Catalyst too. Ask an agency why it picked one for your store, not which it prefers in general.',
+    a: 'Hydrogen is Shopify’s own framework and deploys to Shopify’s Oxygen hosting. Next.js works with any backend and any host. MAK says it prefers Hydrogen or Catalyst where the platform maintains them and Next.js elsewhere; 1Digital defaults to Next.js and offers Hydrogen and Catalyst too. Ask an agency why it would pick one for your store in particular.',
   },
   {
     q: 'What is BigCommerce Catalyst?',
@@ -317,7 +317,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Is headless Shopify worth it?',
-    a: 'It is worth it when the theme blocks something you need: page speed you cannot reach, a design the theme cannot hold, or content from several systems on one page. It is not worth it for a standard catalog that a good theme already serves well, because you will pay to build and maintain more code. Ask an agency to name the limit you are hitting.',
+    a: 'It is worth it when the theme blocks something you need, such as a custom product builder or one page that mixes content from your CMS and your ERP. It is not worth it for a standard catalog that a good theme already serves well, because you will pay to build and maintain more code. Ask an agency to name the limit you are hitting.',
   },
   {
     q: 'How much does Shopify headless cost?',
@@ -326,6 +326,18 @@ const FAQS: FAQItem[] = [
   {
     q: 'What are the disadvantages of headless commerce?',
     a: 'More code to own. Shopify apps and theme features that inject into a theme do not work on a custom front end without rework. Content editors need a CMS set up for them. Every change to the storefront needs a developer. The gains are speed and design control, so headless pays off only when those matter enough to fund the upkeep.',
+  },
+  {
+    q: 'What are the downsides of a headless CMS for a store?',
+    a: 'Your editors lose the theme editor they know. Each page type has to be modelled in the CMS before anyone can edit it, and previews need extra setup to show the real storefront. You also pay for one more system and one more login. Ask the agency to show the editing screen your team will use before you sign.',
+  },
+  {
+    q: 'Can a headless Shopify store keep Shopify checkout?',
+    a: 'Yes. Shopify’s Storefront API gives every cart a checkoutUrl field. Shopify’s docs say that URL sends the buyer through Shopify’s web checkout, so a Next.js storefront can hand off to the same checkout a theme store uses. If the storefront signs the customer in first, the checkout opens signed in. The storefront should fetch the URL when the buyer is ready to pay.',
+  },
+  {
+    q: 'Are there open-source headless commerce platforms?',
+    a: 'Yes. Medusa’s core code is under the MIT license, per its GitHub repository. Saleor is under the BSD-3-Clause license and calls itself a composable, headless commerce API. Open source means you can host and change the code yourself, and you also own hosting, security patches and upgrades. 1Digital and FocusReactive name Medusa on their headless pages, and 1Digital names Saleor.',
   },
   {
     q: 'Which headless CMS works best for ecommerce?',
@@ -341,7 +353,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Does a headless storefront improve Core Web Vitals?',
-    a: 'It can, because the agency controls every script on the page. Google’s web.dev guidance sets good scores at Largest Contentful Paint within 2.5 seconds, Interaction to Next Paint at 200 milliseconds or less and Cumulative Layout Shift at 0.1 or less, measured at the 75th percentile. Ask for field data from a live headless store, not a lab score.',
+    a: 'It can, because the agency controls every script on the page. Google’s web.dev guidance sets good scores at Largest Contentful Paint within 2.5 seconds, Interaction to Next Paint at 200 milliseconds or less and Cumulative Layout Shift at 0.1 or less, measured at the 75th percentile. Ask for field data, meaning numbers from real shoppers, from a live headless store.',
   },
   {
     q: 'What is a headless e-commerce development company?',
@@ -380,13 +392,13 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 23, 2026',
-  dateModified: 'Oct 23, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '20 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
     'Seen from behind, a woman with a short black bob and a man with curly hair sit at a desk facing two monitors that show grids of simple product tiles, beside an orange desk lamp',
   meta: {
-    title: 'Headless Commerce Agencies for Next.js 2026 | FactoryJet',
+    title: 'Best Next.js Headless Commerce Agencies 2026 | FactoryJet',
     description: META_DESCRIPTION,
   },
   keyTakeaways: [
@@ -413,7 +425,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-23',
-              dateModified: '2026-10-23',
+              dateModified: '2026-10-31',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'Headless commerce agencies that build Next.js storefronts' },
@@ -468,11 +480,15 @@ export const post: BlogPost = {
       <p className="mb-6">
         A few terms in plain English. <strong>Headless commerce</strong> means the storefront is separate code that talks to the commerce platform behind the scenes. <strong>Next.js</strong> is a popular framework for building that storefront. <strong>Hydrogen</strong> is Shopify&rsquo;s own headless framework, and <strong>Catalyst</strong> is BigCommerce&rsquo;s, which is built on Next.js. A <strong>headless CMS</strong> is where your team edits pages and content. <strong>Vercel</strong> is the company behind Next.js, and it lists partner agencies by tier.
       </p>
+      <p className="mb-6">
+        A few more terms you will see in the profiles. The <strong>App Router</strong> is the newer way Next.js organises pages, and <strong>React Server Components</strong> build parts of a page on the server so less code reaches the shopper&rsquo;s phone. The <strong>Storefront API</strong> is how a custom front end asks Shopify for products and carts. Shopify&rsquo;s and BigCommerce&rsquo;s storefront APIs both use <strong>GraphQL</strong>, a query format where the storefront asks for exactly the fields it needs. <strong>Oxygen</strong> is Shopify&rsquo;s hosting for Hydrogen stores. A <strong>composable backend</strong> is one assembled from separate services, such as commercetools or Medusa. <strong>Total Blocking Time</strong> measures how long a page is frozen while scripts run.
+      </p>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">The shortlist at a glance</h2>
+      <h2 className="text-2xl font-bold mt-10 mb-4">Headless commerce development companies at a glance</h2>
       <p className="mb-4">Find the rows that match the platform you run, then read those profiles in full.</p>
-      <div className="overflow-x-auto mb-8 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
+      <div className="mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Agency</th>
@@ -496,7 +512,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How we built this list</h2>
       <ol className="list-decimal pl-6 mb-6 space-y-2">
-        <li><strong>Start from buyers&rsquo; searches.</strong> &ldquo;Next.js ecommerce&rdquo; gets about 90 US Google searches a month, and &ldquo;headless e commerce development company&rdquo; and &ldquo;headless commerce development services&rdquo; about 70 each (DataForSEO, October 2026). Google showed an AI answer on all six headless searches we checked.</li>
+        <li><strong>Start from buyers&rsquo; questions.</strong> Buyers ask for a headless commerce development company, for headless commerce development services and about Next.js ecommerce. Google showed an AI answer on all six headless searches we checked in October 2026.</li>
         <li><strong>Start from the agencies AI answers name.</strong> We took the agencies cited in those 27 answers and added commerce agencies from <a href={VERCEL_PARTNERS_URL} className={link} rel="noopener" target="_blank">Vercel&rsquo;s partner directory</a>.</li>
         <li><strong>Keep only real headless commerce work on Next.js.</strong> A Next.js badge was not enough; the agency had to show or describe a headless store.</li>
         <li><strong>Prefer US agencies.</strong> We kept at most three based abroad, and only those that name a US client or office.</li>
@@ -507,8 +523,9 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What the platforms themselves ship for headless</h2>
       <p className="mb-4">Before you pick an agency, know what your platform already gives it. These rows come from each platform&rsquo;s own pages, read on 23 October 2026.</p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
+      <div className="mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 600 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Platform</th>
@@ -525,6 +542,9 @@ export const post: BlogPost = {
       </div>
       <p className="mb-6">
         In plain words: on Shopify, an agency can build in Hydrogen or in Next.js; on BigCommerce, Catalyst is already Next.js. Ask why an agency picks one for your store. MAK says it prefers the platform&rsquo;s own framework where one exists; 1Digital defaults to Next.js.
+      </p>
+      <p className="mb-6">
+        Other headless options exist, such as Elastic Path and Salesforce Commerce Cloud as backends and Alokai as a storefront layer. None of them appears in the backends or frameworks these 12 agencies name in their profiles below, so ask directly if your store runs on one.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best headless commerce agencies for Next.js, profiled</h2>
@@ -553,7 +573,7 @@ export const post: BlogPost = {
                     </a>
                     {f.hqSource && f.hqSource !== f.source && (
                       <>
-                        {' '}| Location:{' '}
+                        {' '}| Location source:{' '}
                         <a href={f.hqSource} className={link} rel="noopener" target="_blank">
                           {f.hqSource.replace('https://', '').split('/')[0]}
                         </a>
@@ -605,10 +625,11 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What these agencies publish about price and timeline</h2>
       <p className="mb-4">
-        Most headless commerce agencies quote after a call. On the pages we read on 23 October 2026, one of the 11 other agencies publishes a build price and two publish a timeline. We copied them exactly. They are each agency&rsquo;s own figures, not FactoryJet prices.
+        Most headless commerce agencies quote after a call. On the pages we read on 23 October 2026, one of the 11 other agencies publishes a build price and two publish a timeline. We copied them exactly. Each figure is the agency&rsquo;s own.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
+      <div className="mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Agency</th>
@@ -656,7 +677,7 @@ export const post: BlogPost = {
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">4. Ask which framework and why</summary>
-          <p className="mt-3 text-gray-700">Next.js, Hydrogen or Catalyst. A good answer refers to your store, your team and your hosting, not the agency&rsquo;s habit.</p>
+          <p className="mt-3 text-gray-700">Next.js, Hydrogen or Catalyst. A good answer refers to your store, your team and your hosting.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">5. See the CMS your editors will use</summary>
@@ -685,47 +706,19 @@ export const post: BlogPost = {
         <figcaption className="text-sm text-gray-600 mt-2">Review the proposal against your one-page brief: platform, limit, CMS, apps, hosting and ownership.</figcaption>
       </figure>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">Speed is the usual reason, so measure it</h2>
+      <h2 className="text-2xl font-bold mt-10 mb-4">How to measure Next.js ecommerce speed</h2>
       <p className="mb-6">
-        Most brands go headless for speed. <a href={WEB_VITALS_URL} className={link} rel="noopener" target="_blank">Google&rsquo;s web.dev guidance</a> sets good Core Web Vitals at Largest Contentful Paint within 2.5 seconds, Interaction to Next Paint at 200 milliseconds or less and Cumulative Layout Shift at 0.1 or less, measured at the 75th percentile of real page loads. Ask each agency for the field data from a live headless store they built, not a lab score from a test tool, and compare it with your current store.
+        Speed claims are easy to make and easy to check. <a href={WEB_VITALS_URL} className={link} rel="noopener" target="_blank">Google&rsquo;s web.dev guidance</a> sets good Core Web Vitals at Largest Contentful Paint within 2.5 seconds, Interaction to Next Paint at 200 milliseconds or less and Cumulative Layout Shift at 0.1 or less, measured at the 75th percentile of real page loads (three in four visits must hit the target). Field data comes from real shoppers; lab data comes from one test run on one machine. Ask each agency for field data from a live headless store they built, and compare it with your current store.
       </p>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">What else ranks for &quot;headless commerce agency&quot;, and how this guide differs</h2>
-      <p className="mb-4">
-        These are the business sites on Google&rsquo;s first page for &ldquo;headless commerce agency&rdquo; in the US when we checked on 23 October 2026 (DataForSEO), with the title Google showed for each. We list them so you can compare; we have not reviewed their services.
-      </p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="bg-gray-800 text-white">
-              <th className="p-3 text-left border border-gray-700">Site</th>
-              <th className="p-3 text-left border border-gray-700">Page title shown in Google</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ['avexdesigns.com', 'Headless Commerce Agency | Enterprise E-commerce'],
-              ['iwdagency.com', 'Headless Commerce Development | Hydrogen & Next.js'],
-              ['1digitalagency.com', 'Headless Commerce Storefronts on Next.js - for Any Backend'],
-              ['elasticpath.com', 'What Is Headless Commerce? Benefits & Examples'],
-              ['anatta.io', 'Headless Commerce Development Agency - Anatta'],
-              ['ditinteractive.com', 'Top Headless Commerce Development Agencies in USA ...'],
-            ].map(([site, title]) => (
-              <tr key={site} className="odd:bg-white even:bg-gray-50">
-                <td className="p-3 border border-gray-200 font-semibold align-top">{site}</td>
-                <td className="p-3 border border-gray-200 align-top">{title}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <h2 className="text-2xl font-bold mt-10 mb-4">What else ranks for &ldquo;headless commerce agency&rdquo;, and how this guide differs</h2>
       <p className="mb-6">
-        Most of these are single-agency service pages or explainers. This page compares 12 agencies on the facts that decide a headless build: framework, commerce backend, CMS, where the team sits and what it publishes, each linked to the page we read.
+        On 23 October 2026, Google&rsquo;s first US page for &ldquo;headless commerce agency&rdquo; showed six business sites (DataForSEO): avexdesigns.com, iwdagency.com, 1digitalagency.com, elasticpath.com, anatta.io and ditinteractive.com. Most are single-agency service pages or explainers. Anatta and Avex Designs were not in the starting set we drew from the 27 AI answers and Vercel&rsquo;s directory, so we have not profiled them yet; read their pages with the same questions. This page compares 12 agencies on framework, commerce backend, CMS, where the team sits and what it publishes, each linked to the page we read.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What FactoryJet builds headless</h2>
       <p className="mb-4">
-        We are FactoryJet. We have served 500+ businesses, most of them in commerce. Our founder, Bhavesh Barot, is involved in every project. We are a registered Shopify Partner.
+        We are FactoryJet. We have served 500+ businesses, most of them in commerce. Our founder, Bhavesh Barot, is involved in every project.
       </p>
       <ul className="list-disc pl-6 mb-4 space-y-2">
         <li><strong>Storefronts.</strong> Next.js with the App Router on Shopify, BigCommerce or Commerceflo, with Sanity for content. See <a href="/services/headless-shopify-development" className={link}>headless Shopify development</a> and <a href="/headless-commerce" className={link}>headless commerce</a>.</li>
@@ -741,7 +734,7 @@ export const post: BlogPost = {
         <p className="text-gray-800 leading-relaxed mb-3">
           Send us your store and the one thing your theme cannot do. On a free call, the founder will tell you whether a better theme would do the job, or whether headless is worth the extra code.
         </p>
-        <a href="/headless-commerce" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">See our headless commerce work</a>
+        <a href="/contact" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">Book the free call</a>
       </div>
     </>
   ),

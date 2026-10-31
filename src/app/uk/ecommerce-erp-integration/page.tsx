@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/ecommerce-erp-integration, built 2026-10-29.
@@ -12,7 +13,8 @@ import '../ai-agents/ai-agents.css';
    1. Every third-party fact (connector scope, API limits, VAT and Making Tax
       Digital rules, a UK agency's stated timeline) was read on the maker's,
       agency's or regulator's own page on 2026-10-29 and links to it through
-      the SRC map below. Re-read the page before changing a claim.
+      the SRC map below. Patchworks, Celigo and Zynk were added on 2026-10-31
+      and carry their own read date in SRC. Re-read the page before changing a claim.
    2. No FactoryJet price, and no running or support cost of any kind. We found
       no named UK agency or vendor publishing a GBP range for this job that we
       could read in full on 2026-10-29, so the cost answer carries no number.
@@ -30,10 +32,11 @@ import '../ai-agents/ai-agents.css';
       integration" 30, "magento erp integration" 30, "shopify erp" 30. */
 
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-erp-integration';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
+const UPDATED_LABEL = '31 October 2026';
 const READ_ON = '29 October 2026';
-const TITLE = 'Ecommerce ERP Integration UK: Sage, NetSuite, Odoo | FactoryJet';
-const H1 = 'Ecommerce ERP Integration for UK Businesses: Store and ERP Agreeing on Stock, Prices, Orders and VAT';
+const TITLE = 'Ecommerce ERP Integration UK: Sage, NetSuite | FactoryJet';
+const H1 = 'Ecommerce ERP Integration for UK Stores and Wholesalers';
 const DESCRIPTION =
   'Ecommerce ERP integration for UK firms: Shopify, BigCommerce, WooCommerce or Adobe Commerce linked to Sage, NetSuite, Business Central, Odoo or Brightpearl.';
 
@@ -75,10 +78,15 @@ const SRC = {
   shopifyLimits: { label: 'Shopify Dev: GraphQL Admin API rate limits', url: 'https://shopify.dev/docs/apps/build/apis/graphql-admin/rate-limits' },
   wooWebhooks: { label: 'WooCommerce: Webhooks', url: 'https://woocommerce.com/document/webhooks/' },
   linnworks: { label: 'Linnworks: integrations', url: 'https://www.linnworks.com/integrations/' },
+  patchworks: { label: 'Patchworks: retail iPaaS', url: 'https://patchworks.io/', on: '31 October 2026' },
+  celigo: { label: 'Celigo: integration platform', url: 'https://www.celigo.com/', on: '31 October 2026' },
+  zynkSage50: { label: 'Zynk documentation: Shopify and Sage 50 UK solution', url: 'https://docs.zynk.com/workflow/solutions/shopify/sage-50-uk/index.html', on: '31 October 2026' },
 } as const;
 
 type SrcKey = keyof typeof SRC;
 const SOURCE_KEYS = Object.keys(SRC) as SrcKey[];
+/* Sources added after the first build carry their own read date. */
+const srcOn = (id: SrcKey): string | undefined => (SRC[id] as { on?: string }).on;
 
 /* FAQ source of truth (drives the visible FAQ and the FAQ schema).
    Question wording draws on Google question boxes for "ecommerce erp
@@ -101,21 +109,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'basics',
-    question: 'What is an ERP system for ecommerce?',
-    answer:
-      'An ERP is the back office: products, stock in each warehouse, purchase orders, trade customers, invoices and the ledger. For a store, it is usually where the truth about stock and trade prices lives. Names UK sellers use include Sage 200, Sage Intacct, NetSuite, Microsoft Dynamics 365 Business Central, Odoo and Brightpearl. The store shows that data to buyers and sends orders back.',
-  },
-  {
-    category: 'basics',
-    question: 'What does a store to ERP link look like for a UK wholesaler?',
-    answer:
-      'A wholesaler sells on WooCommerce and runs stock in Odoo. A trade buyer logs in, sees their own price from Odoo, and orders 40 cases. The order lands in Odoo as a sales order with the right VAT code. Odoo picks it, the courier label prints, and the tracking number goes back to the store.',
-  },
-  {
-    category: 'basics',
     question: 'Which ERP should a UK online retailer pick?',
     answer:
-      'In most cases, the one your finance and warehouse teams already run. Replacing an ERP to suit a website is a far bigger project than linking the two. For a fresh choice, test three points first: does the maker publish a connector for your store platform, does a UK partner support it near you, and can it hold your trade price lists. This page lists the connectors we read.',
+      'In most cases, the one your finance and warehouse teams already run. Replacing an ERP to suit a website is a far bigger project than linking the two. For a fresh choice, test three points first: does the maker publish a connector for your store platform, does a UK partner support it near you, and can it hold your trade price lists. Business Central, NetSuite, Odoo and Brightpearl each publish a Shopify connector; NetSuite also has one for BigCommerce.',
   },
   {
     category: 'basics',
@@ -128,13 +124,19 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'systems',
     question: 'Does Shopify integrate with Microsoft Dynamics 365 Business Central?',
     answer:
-      'Yes. Microsoft’s own documentation describes a Shopify Connector app for Business Central, preinstalled on all new sign-ups and trials, and says you can connect one or more Shopify stores. It also notes that the connector’s refresh token stays valid for up to 90 days without a successful refresh; past that, the shop has to be reconnected. We check the connector’s settings against your rules before building anything beside it.',
+      'Yes. Microsoft’s own documentation describes a Shopify Connector app for Business Central, preinstalled on all new sign-ups and trials, and says you can connect one or more Shopify stores. It also notes that the connector’s refresh token (the key that keeps the two systems signed in to each other) stays valid for up to 90 days without a successful refresh; past that, the shop has to be reconnected. We check the connector’s settings against your rules before building anything beside it.',
   },
   {
     category: 'systems',
-    question: 'Can NetSuite take orders from a UK Shopify or BigCommerce store?',
+    question: 'Does BigCommerce or Shopify integrate with NetSuite?',
     answer:
-      'Yes, and Oracle makes the connector itself. For Shopify, it sits in the Shopify App Store and covers products, prices, stock, sales orders and fulfilment, for online stores and Shopify POS alike. BigCommerce stores get an Oracle connector of their own on that platform’s marketplace. When the connector cannot follow a rule, such as trade price breaks or a bundle split, we build that part as a custom link.',
+      'Yes, and Oracle makes both connectors itself. The Shopify one sits in the Shopify App Store and covers products, prices, stock, sales orders and fulfilment, for online stores and Shopify POS alike. BigCommerce stores get the NetSuite Connector by Oracle NetSuite on the BigCommerce App Marketplace. When a connector cannot follow a rule, such as trade price breaks or a bundle split, we build that part as a custom link.',
+  },
+  {
+    category: 'systems',
+    question: 'Can Magento or Adobe Commerce connect to an ERP?',
+    answer:
+      'Yes. Limely, an agency in Chester, describes Sage 200 integrations for Magento 2 that carry orders, stock, trade accounts with credit limits, customer pricing and nominal codes. Patchworks, a UK integration platform, also names Magento 2 beside NetSuite, Sage and Microsoft Dynamics on its own site. For Adobe Commerce we write the same eight-record owner map first, then pick the connector or build the gaps.',
   },
   {
     category: 'systems',
@@ -144,9 +146,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'systems',
-    question: 'Can Sage 200 connect to Shopify or Magento?',
+    question: 'Can Sage 200 or Sage 50 connect to Shopify?',
     answer:
-      'Yes, through a connector or a custom build. Limely, an agency in Chester, describes Sage 200 integrations for both Shopify and Magento 2 that carry orders, stock, trade accounts with credit limits, customer pricing and nominal codes, and says Sage 200 integrations typically take six to ten weeks. The posting rules (which nominal code each line hits) come from your accountant or Sage partner.',
+      'Yes, through a connector or a custom build. Limely, a Chester agency, describes Sage 200 integrations for Shopify and Magento 2 that carry orders, stock, trade accounts with credit limits, customer pricing and nominal codes. For Sage 50, Zynk’s Shopify and Sage 50 UK solution moves customers, products and sales orders into Sage 50, and stock levels back to Shopify. Your accountant or Sage partner sets which nominal code each line hits.',
   },
   {
     category: 'systems',
@@ -162,9 +164,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'systems',
-    question: 'How is Shopify Plus different for an ERP link?',
+    question: 'Do I need Shopify Plus for an ERP integration?',
     answer:
-      'Mostly in speed. Shopify’s developer documentation lists GraphQL Admin API limits of 100 points a second on standard plans, 200 on Advanced, 1,000 on Shopify Plus and 2,000 on Shopify for enterprise. A Plus store can push a full price list or a stock count through ten times faster than a standard one. That matters for wholesalers with thousands of SKUs and customer-specific prices.',
+      'No, but Plus gives the link more room. Shopify’s developer documentation lists GraphQL Admin API limits (the cap on how much data an app can read or write each second, counted in points) of 100 points a second on standard plans, 200 on Advanced, 1,000 on Shopify Plus and 2,000 on Shopify for enterprise. So a Plus store gets ten times the API allowance of a standard one. That matters for wholesalers with thousands of SKUs and customer-specific prices.',
   },
   {
     category: 'systems',
@@ -195,7 +197,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'vat',
     question: 'How long must we keep the VAT records the link creates?',
     answer:
-      'GOV.UK says at least six years, or ten if you use the VAT One Stop Shop scheme. That covers the orders, credit notes and invoices the link writes into your ERP. It is also why we log every record the link moves, with the time and the source, so an auditor can trace any figure back to the store order it came from.',
+      'GOV.UK says at least six years, or ten if you use the VAT One Stop Shop scheme (an HMRC scheme for reporting VAT on certain sales to EU consumers). That covers the orders, credit notes and invoices the link writes into your ERP. It is also why we log every record the link moves, with the time and the source, so an auditor can trace any figure back to the store order it came from.',
   },
   {
     category: 'vat',
@@ -214,7 +216,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'working',
     question: 'How much does ecommerce ERP integration cost in the UK?',
     answer:
-      'It depends on how many records move, in which direction, and how many rules no connector covers. A Business Central or NetSuite connector with light set-up is a small job. A custom link carrying trade prices, bundles and marketplace orders is a project. FactoryJet quotes a fixed price in writing after a short scoping call, phase by phase, so you see the cost before you commit.',
+      'Three things set the price: how many records move, in which direction, and how many rules no connector covers. A Business Central or NetSuite connector with light set-up is a small job. A custom link carrying trade prices, bundles and marketplace orders is a project. FactoryJet quotes a fixed price in writing after a short scoping call, phase by phase, so you see the cost before you commit.',
   },
   {
     category: 'working',
@@ -232,7 +234,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'working',
     question: 'Can we send a written brief or RFP first?',
     answer:
-      'Yes, and serious buyers usually do. Send your written brief, an RFP, a field list or an export of the records you move today. Name the store platform, the ERP and its version, any warehouse or marketplace tool, and your order volume. The reply carries an owner map for every record and a fixed price for each phase, or the name of the maker’s connector if that already does the whole job.',
+      'Yes. Send your written brief, an RFP, a field list or an export of the records you move today. Name the store platform, the ERP and its version, any warehouse or marketplace tool, and your order volume. The reply carries an owner map for every record and a fixed price for each phase, or the name of the maker’s connector if that already does the whole job.',
   },
   {
     category: 'working',
@@ -263,39 +265,51 @@ const OWNERS: { record: string; owner: string; flow: string; note: string }[] = 
 
 /* Store and ERP pairs. Each cell restates the maker's or agency's own page,
    read on 2026-10-29. */
-const PAIRS: { erp: string; ready: string; watch: string; sources: SrcKey[] }[] = [
+const PAIRS: { erp: string; stores: string; maker: string; ready: string; watch: string; sources: SrcKey[] }[] = [
   {
     erp: 'Microsoft Dynamics 365 Business Central',
+    stores: 'Shopify',
+    maker: 'Microsoft',
     ready: 'Microsoft’s Shopify Connector, preinstalled on new sign-ups and trials; it connects one or more Shopify stores.',
     watch: 'The refresh token stays valid for up to 90 days without a successful refresh. Past that, the shop must be reconnected.',
     sources: ['bcShopify'],
   },
   {
     erp: 'Oracle NetSuite',
+    stores: 'Shopify, BigCommerce',
+    maker: 'Oracle',
     ready: 'Oracle’s own app for Shopify (product, pricing, inventory, sales order and fulfilment data) and its NetSuite Connector for BigCommerce.',
     watch: 'Trade price breaks, bundles and multi-company rules outside the connector’s settings need custom work beside it.',
     sources: ['nsShopify', 'nsBigCommerce'],
   },
   {
     erp: 'Odoo',
+    stores: 'Shopify',
+    maker: 'Odoo',
     ready: 'Odoo’s Shopify connector syncs orders, products, inventory, deliveries, returns and refunds.',
     watch: 'Runs on scheduled jobs, not real-time webhooks. When Odoo handles deliveries, returns started in Shopify do not sync automatically.',
     sources: ['odooShopify'],
   },
   {
     erp: 'Brightpearl',
+    stores: 'Shopify, Shopify POS',
+    maker: 'Brightpearl',
     ready: 'Shopify and Shopify POS stay as the storefront; Brightpearl runs inventory, orders, purchasing and fulfilment.',
     watch: 'The Shopify refund follows once returned stock is received, so agree that timing with your accountant.',
     sources: ['brightpearlShopify'],
   },
   {
     erp: 'Sage 200',
+    stores: 'Shopify, Magento 2',
+    maker: 'Agencies and connector firms',
     ready: 'Connectors and agency builds for Shopify and Magento 2. Limely in Chester lists orders, stock, trade accounts, pricing and nominal codes.',
     watch: 'Limely says Sage 200 integrations typically take six to ten weeks. Nominal codes come from your accountant.',
     sources: ['limelySage'],
   },
   {
     erp: 'Xero (accounts only)',
+    stores: 'Shopify, WooCommerce',
+    maker: 'App makers',
     ready: 'Free and paid connector apps for Shopify and WooCommerce. We compare them on our Shopify Xero integration page.',
     watch: 'Xero holds the books. Stock and trade prices usually need a warehouse system or an ERP beside it.',
     sources: [],
@@ -367,7 +381,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['ecommerce-erp-integration'] },
   openGraph: {
     title: TITLE,
     description:
@@ -388,13 +402,15 @@ const inlineLink = { textDecoration: 'underline', color: T.ink, fontWeight: 600 
 /* Small source line. Every id comes from the SRC map above. */
 function Sources({ ids }: { ids: SrcKey[] }) {
   if (ids.length === 0) return null;
+  const headDate = srcOn(ids[0]) ?? READ_ON;
   return (
     <p style={srcNote}>
-      Sources, read on {READ_ON}:{' '}
+      Sources, read on {headDate}:{' '}
       {ids.map((id, i) => (
         <span key={id}>
           {i > 0 ? '; ' : ''}
           <a href={SRC[id].url} target="_blank" rel="noopener noreferrer" style={srcLink}>{SRC[id].label}</a>
+          {(srcOn(id) ?? READ_ON) !== headDate ? ` (read ${srcOn(id) ?? READ_ON})` : ''}
         </span>
       ))}
       .
@@ -426,16 +442,20 @@ export default function EcommerceErpIntegrationUKPage() {
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
                   Your store runs on Shopify, Shopify Plus, BigCommerce, WooCommerce or Adobe Commerce. Your stock,
-                  trade prices and ledger sit in Sage, NetSuite, Business Central, Odoo or Brightpearl. Somebody on
-                  your team is retyping orders or fixing stock counts every morning. FactoryJet builds the link
-                  between the two, at a fixed price per phase, and the code is yours.
+                  trade prices and ledger sit in Sage, NetSuite, Business Central, Odoo or Brightpearl. FactoryJet
+                  builds the link so the two agree on stock, prices, orders and VAT, at a fixed price per phase,
+                  and the code is yours.
                 </p>
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
+                <p className="mt-4" style={{ maxWidth: 560, fontSize: 14, color: T.n400 }}>
+                  Bhavesh Barot founded FactoryJet in 2014 and replies to every scoping request himself.{' '}
+                  <a href="/about" style={inlineLink}>More about FactoryJet</a>.
+                </p>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
                   <HeroInlineForm region="uk" source="uk_ecommerce_erp_integration_hero" service="Ecommerce ERP Integration" submitLabel="Scope my ERP link" />
@@ -451,16 +471,16 @@ export default function EcommerceErpIntegrationUKPage() {
                     <div className="scorecard-val" style={{ fontSize: 15 }}>8 records</div>
                   </div>
                   <div className="scorecard-row">
-                    <div><div className="scorecard-metric">VAT code on each order line</div><div className="scorecard-note">mapped once by your accountant</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>20 / 5 / 0</div>
+                    <div><div className="scorecard-metric">VAT code on each order line</div><div className="scorecard-note">standard, reduced or zero, mapped once by your accountant</div></div>
+                    <div className="scorecard-val" style={{ fontSize: 15 }}>3 rates</div>
                   </div>
                   <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Refunds as credit notes</div><div className="scorecard-note">at the original sale&rsquo;s rate</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Credited</div>
+                    <div><div className="scorecard-metric">Digital link types a store link can use</div><div className="scorecard-note">API, automated transfer, XML or CSV files, per VAT Notice 700/22</div></div>
+                    <div className="scorecard-val" style={{ fontSize: 15 }}>3 kinds</div>
                   </div>
                   <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Demo on your own data</div><div className="scorecard-note">before a contract is signed</div></div>
-                    <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>First</div>
+                    <div><div className="scorecard-metric">Demo on your own data</div><div className="scorecard-note">about ten of your real SKUs, before a contract is signed</div></div>
+                    <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>10 SKUs</div>
                   </div>
                 </div>
               </div>
@@ -482,18 +502,25 @@ export default function EcommerceErpIntegrationUKPage() {
             </div>
             <Sources ids={['bcShopify', 'nsShopify', 'odooShopify', 'brightpearlShopify']} />
             <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms we use a lot</span>
+              <span className="lab">Terms we use a lot</span>
               <p>
                 An <b>ERP</b> (enterprise resource planning software) is the back office: stock, purchasing, trade
                 customers, invoices and the ledger. A <b>connector</b> is a ready-made app that moves a fixed set of
                 records between two systems. An <b>owner map</b> is the one-page list that names, for each record,
                 the single system where it is created and edited.
               </p>
+              <p className="mt-4">
+                A <b>nominal code</b> is the ledger account a sale, fee or refund posts to. The <b>tax point</b> is
+                the date that decides which VAT period a sale belongs to. A <b>webhook</b> is a notice one system
+                sends another the moment a record changes. A <b>clearing account</b> holds money a payment provider
+                owes you until the payout reaches your bank. A <b>3PL</b> is a third-party warehouse that stores and
+                ships your stock for you.
+              </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              The connector is rarely where these projects fail. They fail when the store and the ERP both believe
-              they own the stock figure, or when a refund posts at 20% against a sale that was zero-rated. So we
-              write the owner map first, with your finance lead and your ERP partner, and choose the tooling after.
+              These projects fail when the store and the ERP both believe they own the stock figure, or when a
+              refund posts at 20% against a sale that was zero-rated. So we write the owner map first, with your
+              finance lead and your ERP partner, and choose the tooling after.
             </p>
           </div>
         </section>
@@ -541,7 +568,8 @@ export default function EcommerceErpIntegrationUKPage() {
                 </div>
               </div>
             </div>
-            <div className="card mt-10" tabIndex={0} role="region" aria-label="Record owner map" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={4}>
+            <p className="md:hidden mt-8" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-10" tabIndex={0} role="region" aria-label="Record owner map" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={4}>
                 <thead>
                   <tr>
                     <th>Record</th>
@@ -573,11 +601,32 @@ export default function EcommerceErpIntegrationUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 800 }}>
               <span className="eyebrow">The systems</span>
-              <h2>Sage, NetSuite, Business Central, Odoo and Brightpearl: what ships ready-made, and what to watch</h2>
+              <h2>Shopify ERP integration with Sage, NetSuite, Business Central, Odoo and Brightpearl</h2>
               <p className="lead mt-4">
-                Each line below restates the maker&rsquo;s or agency&rsquo;s own page, read on {READ_ON}. The left column
-                is what you get without custom code. The right column is where we usually find the gap.
+                Each line below restates the maker&rsquo;s or agency&rsquo;s own page, read on {READ_ON}. &ldquo;Ready-made&rdquo;
+                is what you get without custom code. &ldquo;Watch for&rdquo; is where we usually find the gap.
               </p>
+            </div>
+            <p className="md:hidden mt-8" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-8" tabIndex={0} role="region" aria-label="ERP connectors by store platform" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="cmp-table" style={{ minWidth: 640 }} data-columns={3}>
+                <thead>
+                  <tr>
+                    <th>ERP or accounts system</th>
+                    <th className="fj">Store platforms covered</th>
+                    <th>Who makes the connector</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {PAIRS.map((p) => (
+                    <tr key={p.erp}>
+                      <td className="feat">{p.erp}</td>
+                      <td className="fj">{p.stores}</td>
+                      <td>{p.maker}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
             <ul className="col-2 mt-10">
               {PAIRS.map((p) => (
@@ -595,7 +644,7 @@ export default function EcommerceErpIntegrationUKPage() {
               <h3>The store side matters too</h3>
               <p>
                 <b>Shopify and Shopify Plus.</b> Shopify&rsquo;s developer documentation sets GraphQL Admin API limits
-                by plan: 100 points a second on standard plans, 200 on Advanced, 1,000 on Shopify Plus and 2,000 on
+                by plan, counted in points (a measure of how much data an app reads or writes): 100 points a second on standard plans, 200 on Advanced, 1,000 on Shopify Plus and 2,000 on
                 Shopify for enterprise. A wholesaler pushing 8,000 customer prices overnight feels that difference.
               </p>
               <p>
@@ -660,7 +709,7 @@ export default function EcommerceErpIntegrationUKPage() {
         </section>
 
         <MidPageCTA
-          headline={'Send your owner map, or let us draft it from one week of orders.'}
+          headline={'Scoping your ecommerce ERP integration: send your owner map, or let us draft it from one week of orders.'}
           sub={'Tell us the store platform, the ERP and its version, and any warehouse or marketplace tool in between. We reply with a record-by-record map and a fixed price for each phase, or tell you the maker’s connector is enough.'}
           label={'Scope my ERP link'}
         />
@@ -676,32 +725,34 @@ export default function EcommerceErpIntegrationUKPage() {
                 every channel, or stock and VAT drift apart within a week.
               </p>
             </div>
-            <ul className="col-3 mt-10">
-              <li className="card">
+            <div className="col-6040 mt-10">
+              <div className="card">
                 <h3>Marketplaces</h3>
                 <p className="mt-4">
                   Amazon.co.uk, eBay UK, OnBuy and the B&amp;Q marketplace each send their own
                   orders. Some firms route them through a multichannel tool such as Linnworks, which lists Amazon,
                   eBay and Shopify among its integrations. Either way, one system owns stock for all of them.
                 </p>
-              </li>
-              <li className="card">
-                <h3>Payments</h3>
-                <p className="mt-4">
-                  Shopify Payments, Stripe, GoCardless, Klarna and Clearpay each pay out on their own schedule, with
-                  their own fees taken first. Each gets its own clearing account in the ERP, so every payout matches
-                  one bank line and a gap points at one provider.
-                </p>
-              </li>
-              <li className="card">
-                <h3>Warehouses and couriers</h3>
-                <p className="mt-4">
-                  Where Mintsoft, Linnworks or a 3PL picks the orders, we decide with you whether it or the ERP owns
-                  stock. Royal Mail, DPD or Evri tracking numbers go back to the store order, so the customer email
-                  and the ERP agree.
-                </p>
-              </li>
-            </ul>
+              </div>
+              <ul className="stack">
+                <li className="card">
+                  <h3>Payments</h3>
+                  <p className="mt-4">
+                    Shopify Payments, Stripe, GoCardless, Klarna and Clearpay each pay out on their own schedule, with
+                    their own fees taken first. Each gets its own clearing account in the ERP, so every payout matches
+                    one bank line and a gap points at one provider.
+                  </p>
+                </li>
+                <li className="card">
+                  <h3>Warehouses and couriers</h3>
+                  <p className="mt-4">
+                    Where Mintsoft, Linnworks or a 3PL (third-party warehouse) picks the orders, we decide with you
+                    whether it or the ERP owns stock. Royal Mail, DPD or Evri tracking numbers go back to the store
+                    order, so the customer email and the ERP agree.
+                  </p>
+                </li>
+              </ul>
+            </div>
             <Sources ids={['linnworks']} />
           </div>
         </section>
@@ -720,7 +771,16 @@ export default function EcommerceErpIntegrationUKPage() {
                     early, before any custom quote.
                   </p>
                   <p>
+                    A third route sits between the two: an <b>integration platform (iPaaS)</b>, a hosted service that
+                    runs ready-made flows between many systems. Patchworks, a UK firm, pitches
+                    its iPaaS at retailers and names Shopify, Magento 2, BigCommerce, NetSuite, Sage and
+                    Microsoft Dynamics on its site. Celigo says it started as an iPaaS and lists Shopify, Amazon,
+                    NetSuite and Microsoft Dynamics 365. We test an
+                    iPaaS against the owner map the same way we test a connector.
+                  </p>
+                  <p>
                     Custom work earns its fee where your business has a rule that no connector setting can express.
+                    In B2B ecommerce ERP integration, those rules are usually about trade buyers.
                   </p>
                 </div>
                 <ul className="scope-list yes-list mt-4" style={{ maxWidth: 600 }}>
@@ -731,6 +791,13 @@ export default function EcommerceErpIntegrationUKPage() {
                   <li><b>Pay on account.</b> Credit limits and terms from the ERP deciding at checkout whether a trade buyer can order without a card.</li>
                   <li><b>An older or customised ERP.</b> Sage 200 with custom fields, or an Odoo instance with its own modules, where the standard connector expects the default set-up.</li>
                 </ul>
+                <Sources ids={['patchworks', 'celigo']} />
+                <p className="mt-6" style={{ maxWidth: 600 }}>
+                  <b>On Sage 50?</b> Third-party tools fill the gap. Zynk&rsquo;s documentation for its Shopify and Sage
+                  50 UK solution moves customers, products and sales orders into Sage 50, and sends stock levels back
+                  to Shopify.
+                </p>
+                <Sources ids={['zynkSage50']} />
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">A rule of thumb</span>
@@ -757,7 +824,7 @@ export default function EcommerceErpIntegrationUKPage() {
                 <p className="mt-4">
                   A B2B distributor selling to trade buyers, with stock, pricing and product data in Odoo. We are
                   building its WooCommerce trade store with Odoo supplying stock levels, prices and SKUs, so Odoo stays
-                  the single source. It has not launched: store and Odoo link are under test on staging.
+                  the single source. It has not launched: the store and the Odoo link are still under test on staging.
                 </p>
                 <p className="mt-4"><a href="/case-studies/sow-easy-distributor-portal" style={inlineLink}>Read the Sow Easy case study</a></p>
               </li>
@@ -814,7 +881,7 @@ export default function EcommerceErpIntegrationUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">Terms</span>
-                <h2>How the engagement works</h2>
+                <h2>Terms for a UK ecommerce ERP integration project</h2>
                 <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
                   <li><b>Working software before you sign.</b> We show the link on your own data first.</li>
                   <li><b>Fixed price per phase.</b> Each phase is scoped, priced and signed on its own.</li>
@@ -862,7 +929,7 @@ export default function EcommerceErpIntegrationUKPage() {
               <span className="eyebrow">Method</span>
               <h2>Sources, read on {READ_ON}</h2>
               <p className="lead mt-4">
-                We opened each page below on that date and read the words behind every connector scope, API limit,
+                We opened each page below on that date, or on the date shown beside it, and read the words behind every connector scope, API limit,
                 timeline and tax point we quote. Makers update connectors and HMRC updates guidance, so check the
                 live page before acting.
               </p>
@@ -871,6 +938,7 @@ export default function EcommerceErpIntegrationUKPage() {
               {SOURCE_KEYS.map((k) => (
                 <li key={k} style={{ fontSize: 14 }}>
                   <a href={SRC[k].url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: T.ink }}>{SRC[k].label}</a>
+                  {srcOn(k) ? ` (read ${srcOn(k)})` : ''}
                 </li>
               ))}
             </ul>
@@ -880,7 +948,7 @@ export default function EcommerceErpIntegrationUKPage() {
         {/* 13. FAQ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Ecommerce ERP integration questions from UK finance and ecommerce teams</h2>
             </div>
@@ -897,7 +965,7 @@ export default function EcommerceErpIntegrationUKPage() {
                 </nav>
                 <div className="faq-sidebar-cta">
                   <ModalCTAButton label="Ask the founder a question" region="uk" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Bhavesh replies within one business day.</p>
+                  <p>Bhavesh replies within 24 hours.</p>
                 </div>
               </aside>
 
@@ -930,9 +998,9 @@ export default function EcommerceErpIntegrationUKPage() {
         <section className="dark-sec">
           <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
             <span className="eyebrow">Next step</span>
-            <h2>Make your store and your ERP agree on every order</h2>
+            <h2>Book a scoping call for your store to ERP link</h2>
             <p className="mt-4">
-              Leave a name and a work email. Within one business day Bhavesh books a short call on your store, your
+              Leave a name and a work email. Within 24 hours Bhavesh replies to book a short call on your store, your
               ERP and the eight records between them. By the end you know whether the maker&rsquo;s connector will
               do, or which parts need custom work, and what each phase costs.
             </p>

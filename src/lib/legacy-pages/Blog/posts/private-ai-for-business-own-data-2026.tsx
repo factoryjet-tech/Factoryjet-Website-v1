@@ -45,6 +45,12 @@ const SRC = {
   dpf: 'https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en',
   aiAct50: 'https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50',
   aiAct113: 'https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113',
+  omnibus: 'https://eur-lex.europa.eu/eli/reg/2026/1744/oj',
+  copilotPricing: 'https://www.microsoft.com/en-us/microsoft-365-copilot/pricing',
+  claudePricing: 'https://claude.com/pricing',
+  vllm: 'https://docs.vllm.ai/',
+  ollama: 'https://ollama.com/',
+  pgvector: 'https://github.com/pgvector/pgvector',
   scalacode: 'https://www.scalacode.com/blog/rag-development-cost/',
   raftlabs: 'https://www.raftlabs.com/blog/rag-development-cost',
 };
@@ -54,8 +60,10 @@ const IMG = '/images/blog/private-ai-for-business-own-data-2026';
 
 function Table({ head, rows }: { head: string[]; rows: React.ReactNode[][] }) {
   return (
-    <div className="overflow-x-auto my-6">
-      <table className="w-full border-collapse text-sm">
+    <div className="my-6">
+      <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
+      <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <table className="w-full border-collapse text-sm" style={{ minWidth: head.length > 3 ? 720 : 560 }}>
         <thead>
           <tr className="bg-gray-800 text-white">
             {head.map((h) => (
@@ -73,6 +81,7 @@ function Table({ head, rows }: { head: string[]; rows: React.ReactNode[][] }) {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }
@@ -100,7 +109,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Will ChatGPT keep my data private?',
-    a: "It depends on the plan. Business plans (Business, Enterprise, API) do not train on your data by default. Consumer accounts work differently and have their own settings, so staff pasting customer data into a personal ChatGPT login is the real leak in most companies. Give people a business account and a written rule on what may go in it.",
+    a: "It depends on the plan. Business plans (Business, Enterprise, API) do not train on your data by default. Consumer accounts work differently and have their own settings, so customer data pasted into a personal ChatGPT login sits outside your admin controls. Give people a business account and a written rule on what may go in it.",
   },
   {
     q: 'What is the difference between ChatGPT and ChatGPT Enterprise?',
@@ -116,7 +125,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Is Gemini for Google Workspace private?',
-    a: "Google's Workspace privacy hub says your content is not reviewed or used for model training outside your domain without permission, and admins set how long Gemini prompts are kept, from 90 days to indefinitely. Google also says Gemini in Workspace can support HIPAA workloads and holds FedRAMP High. It suits companies already living in Gmail, Docs and Drive.",
+    a: "Google's Workspace privacy hub says your content is not reviewed or used for model training outside your domain without permission, and admins set how long Gemini prompts are kept, from 90 days to indefinitely. Google also says Gemini in Workspace can support HIPAA workloads and holds FedRAMP High. The same hub lists SOC 1, 2 and 3 and ISO/IEC 27001 for Gemini in Workspace.",
   },
   {
     q: 'What is the most private way to use GPT or Claude models?',
@@ -143,8 +152,8 @@ const faqs: FAQItem[] = [
     a: "RAG, short for retrieval-augmented generation, means the AI looks up passages from your own documents before it answers, then writes the answer from those passages and can show which file each fact came from. Your documents stay in a store you control. The model only sees the few passages fetched for each question, and it is not retrained on them.",
   },
   {
-    q: 'What are the 5 steps of RAG?',
-    a: "1. Collect and clean the documents. 2. Split them into short passages and turn each into a searchable vector. 3. When someone asks a question, find the most relevant passages, filtered by what that person is allowed to see. 4. Send the question plus those passages to the model. 5. Return the answer with links to the source passages, and log it.",
+    q: 'Can a private AI only show staff the files they are allowed to see?',
+    a: "Yes, if the retrieval step checks permissions. Each passage in the search index carries the access rules of the file it came from, and the assistant only fetches passages the person asking may open. Microsoft Copilot does this with your existing Microsoft 365 permissions. A custom RAG build has to copy those rules from SharePoint, Drive or your CRM and test them before launch.",
   },
   {
     q: 'Is RAG better than training a model on our own data?',
@@ -152,7 +161,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Is there a HIPAA compliant AI?',
-    a: "No AI tool, including a HIPAA compliant ChatGPT setup, is compliant on its own. What you need is a vendor that will sign a business associate agreement (BAA) for the specific product, plus your own safeguards. OpenAI signs BAAs for the API and ChatGPT for Healthcare, Anthropic for the API and for Claude Enterprise once HIPAA mode is switched on, and AWS lists Bedrock as HIPAA eligible.",
+    a: "No AI tool is HIPAA compliant on its own. What you need is a vendor that will sign a business associate agreement (BAA) for the specific product, plus your own safeguards. OpenAI signs BAAs for the API and ChatGPT for Healthcare, Anthropic for the API and for Claude Enterprise once HIPAA mode is switched on, and AWS lists Bedrock as HIPAA eligible.",
   },
   {
     q: 'Do UK companies need a DPIA before using AI on personal data?',
@@ -164,11 +173,15 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'What does the EU AI Act require for a private AI assistant?',
-    a: "For most internal assistants, little beyond transparency. Article 50 has applied since 2 August 2026: AI systems that talk to people must tell them they are dealing with AI unless it is obvious. GDPR still governs the data itself, so you need an Article 28 processor contract with the vendor and a valid basis for any transfer outside the EU.",
+    a: "Transparency, for most internal assistants. Article 50 has applied since 2 August 2026: AI systems that talk to people must tell them they are dealing with AI unless it is obvious. GDPR still governs the data itself, so you need an Article 28 processor contract with the vendor and a valid basis for any transfer outside the EU.",
   },
   {
     q: 'How much does a private AI system cost to build?',
     a: "Market ranges, not our prices: ScalaCode's July 2026 guide puts a basic RAG system at $10,000 to $25,000, production RAG at $25,000 to $60,000 and enterprise agentic RAG at $60,000 to $150,000 or more. RaftLabs gives $12,000 to $30,000 for simple document Q&A. FactoryJet quotes a fixed price in writing after a short scoping call.",
+  },
+  {
+    q: 'How much do business AI seats cost per user?',
+    a: "Vendor list prices, read on 31 October 2026: Microsoft 365 Copilot Business lists at $21 per user a month on a yearly plan, cut to $18 for the first year on sign-ups from 1 July to 31 December 2026, or $25.20 month to month. Claude Team is $20 a seat a month billed yearly for 2 to 150 seats. Claude Enterprise is $20 a seat a month, 20 seats minimum, plus usage at API rates. Check each vendor's page before you buy.",
   },
   {
     q: 'Which private AI option is best for a small business?',
@@ -181,11 +194,11 @@ export const post: BlogPost = {
   slug: 'private-ai-for-business-own-data-2026',
   title: 'Private AI for Business: 9 Ways to Use AI on Your Own Data, Compared (2026)',
   excerpt:
-    'What private AI actually means, and how ChatGPT Enterprise, Microsoft Copilot, Claude for Work, Gemini, Amazon Bedrock, Azure OpenAI, Vertex AI, self-hosted Llama or Mistral, and RAG compare on training, retention, region and encryption, with US, UK, Australian and EU rules, a table by company size and red flags.',
+    'Nine ways to use AI on your own data, from ChatGPT Enterprise to self-hosted Llama, compared on training, retention, region and encryption, with US, UK, Australian and EU rules.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 22, 2026',
-  dateModified: 'Oct 22, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '16 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
@@ -200,8 +213,8 @@ export const post: BlogPost = {
     'Check five things for each option: training use, retention, data region, encryption, and access control. "Private" on a sales page covers some of them, rarely all.',
     'Business seats (ChatGPT, Copilot, Claude, Gemini) are the fastest route. A model in your own AWS, Azure or Google Cloud account is the most private route most companies need. Self-hosting is for data that cannot leave your network.',
     'RAG connects the AI to your own documents without retraining it, respects permissions and shows sources. It sits on top of any of the options.',
-    'No AI tool is HIPAA compliant by itself. You need a BAA for the specific product: OpenAI names the API and ChatGPT for Healthcare, not ChatGPT Enterprise.',
-    'Outside the US: UK firms often need a DPIA and an IDTA, Australian firms must meet APP 8 for overseas vendors, and EU AI Act Article 50 transparency has applied since 2 August 2026.',
+    'No AI tool is HIPAA compliant by itself. You need a business associate agreement (BAA) for the specific product. OpenAI names the API and ChatGPT for Healthcare, not ChatGPT Enterprise.',
+    'Outside the US, UK firms often need a data protection impact assessment (DPIA) and an International Data Transfer Agreement (IDTA). Australian firms must meet Australian Privacy Principle 8 (APP 8) for overseas vendors. EU AI Act Article 50 transparency has applied since 2 August 2026.',
     'Market build ranges for a private RAG system run from about $10,000 for a basic setup to $150,000 or more for enterprise scale (ScalaCode, July 2026).',
   ],
   faqs,
@@ -211,11 +224,10 @@ export const post: BlogPost = {
       <div className="bg-white border-2 border-[#E5DFD7] rounded-xl p-6 sm:p-8 mb-10">
         <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-3">The short answer</p>
         <p className="text-lg leading-relaxed mb-0">
-          <strong>Private AI for business</strong> means your prompts and files are not used to train the vendor&apos;s
-          model, are kept only as long as you allow, stay in a region you choose, are encrypted, and are visible only to
-          people you authorise. In 2026 most companies get there with a GPT, Claude or Gemini model inside their own AWS,
-          Azure or Google Cloud account, connected to their documents with RAG. Self-host an open model only when data
-          cannot leave your network.
+          <strong>Private AI for business</strong>{' '}means the vendor does not train on your prompts and files, keeps them
+          only as long as you allow, stores them in your chosen region, encrypts them, and shows them only to people you
+          authorise. Most companies get there with a GPT, Claude or Gemini model inside their AWS, Azure or Google Cloud
+          account, linked to their files with RAG. Self-host an open model only when data cannot leave your network.
         </p>
       </div>
 
@@ -229,13 +241,9 @@ export const post: BlogPost = {
       </div>
 
       <p>
-        In the US, &quot;private ai&quot; is searched about 40,500 times a month and &quot;private ai for business&quot;
-        2,400 times, with advertisers paying $45.23 a click for the second; &quot;hipaa compliant ai&quot; adds 6,600
-        searches (DataForSEO, 22 October 2026). The buyers behind those searches are usually an operations, IT or
-        compliance lead who has found staff pasting customer data into personal AI accounts and needs a safe option by
-        next quarter. They want secure AI for business, and most private AI solutions on the market describe one route
-        only. This guide compares nine options on the same five tests, from ChatGPT Team (now ChatGPT Business) to on
-        premise AI.
+        The usual buyer is an operations, IT or compliance lead who has found staff pasting customer data into personal
+        AI accounts. Most vendor pages describe one route. This guide compares nine, from ChatGPT Business (formerly
+        ChatGPT Team) to models on your own servers, on the same five tests.
       </p>
 
       <h2 id="what-private-means">What &quot;private&quot; actually means: the five tests</h2>
@@ -244,14 +252,14 @@ export const post: BlogPost = {
         the answer from the vendor&apos;s terms, not the sales deck.
       </p>
       <ol className="list-decimal pl-6 space-y-3 mb-6">
-        <li><strong>Training use.</strong> Are your prompts, files or answers used to train or improve the vendor&apos;s models? By default, and after any setting change?</li>
-        <li><strong>Retention.</strong> How long does the vendor keep prompts and answers, who sets that, and is there a zero data retention (ZDR) option, meaning nothing is stored after the answer is returned?</li>
-        <li><strong>Data region.</strong> Where is data stored and where is it processed? Can you pin both to the US, UK, EU or Australia? This is what AI data residency means in a contract.</li>
-        <li><strong>Encryption.</strong> Is data encrypted at rest and in transit, and can you hold your own encryption keys (customer-managed keys)?</li>
-        <li><strong>Access control.</strong> Can the AI only see what each user is already allowed to see, with single sign-on and a log of every question and answer?</li>
+        <li><strong>Training use.</strong>{' '}Are your prompts, files or answers used to train or improve the vendor&apos;s models? By default, and after any setting change?</li>
+        <li><strong>Retention.</strong>{' '}How long does the vendor keep prompts and answers, who sets that, and is there a zero data retention (ZDR) option, meaning nothing is stored after the answer is returned?</li>
+        <li><strong>Data region.</strong>{' '}Where is data stored and where is it processed? Can you pin both to the US, UK, EU or Australia? This is what AI data residency means in a contract.</li>
+        <li><strong>Encryption.</strong>{' '}Is data encrypted at rest and in transit, and can you hold your own encryption keys (customer-managed keys)?</li>
+        <li><strong>Access control.</strong>{' '}Can the AI only see what each user is already allowed to see, with single sign-on and a log of every question and answer?</li>
       </ol>
       <p>
-        The fifth test is the one most companies fail, and it is not the vendor&apos;s fault. If every employee can open
+        The fifth test depends on your own file permissions, not on the vendor. If every employee can open
         the HR folder, an AI assistant connected to that folder will happily summarise salaries for anyone who asks.
       </p>
 
@@ -278,8 +286,8 @@ export const post: BlogPost = {
 
       <h3 id="seats">1 to 4: business AI seats (fastest, least control)</h3>
       <p>
-        <strong>ChatGPT Enterprise and Business.</strong> OpenAI&apos;s{' '}
-        <a href={SRC.openaiEnterprise} {...ext}>enterprise privacy page</a> says: &quot;By default, we do not use your
+        <strong>ChatGPT Enterprise and Business.</strong>{' '}OpenAI&apos;s{' '}
+        <a href={SRC.openaiEnterprise} {...ext}>enterprise privacy page</a>{' '}says: &quot;By default, we do not use your
         business data for training our models.&quot; Enterprise adds AES-256 encryption at rest, TLS 1.2 or higher in
         transit, customer-held keys, SOC 2 Type 2 and ISO/IEC 27001, and data at rest in ten regions including the US,
         UK, Europe and Australia for eligible customers. The <a href={SRC.openaiBusiness} {...ext}>business data page</a>{' '}
@@ -287,7 +295,7 @@ export const post: BlogPost = {
         covered for patient data.
       </p>
       <p>
-        <strong>Microsoft Copilot.</strong> <a href={SRC.copilot} {...ext}>Microsoft&apos;s Copilot privacy page</a> says
+        <strong>Microsoft Copilot.</strong>{' '}<a href={SRC.copilot} {...ext}>Microsoft&apos;s Copilot privacy page</a>{' '}says
         prompts, responses and data accessed through Microsoft Graph &quot;aren&apos;t used to train foundation
         LLMs&quot;. Copilot respects the permissions users already have, which is both its strength and its risk. EU calls
         stay in the EU Data Boundary, with the exception Microsoft names for Anthropic models used inside Copilot. If you
@@ -295,15 +303,15 @@ export const post: BlogPost = {
         <a href="/blog/copilot-studio-vs-custom-ai-agents-2026">Copilot Studio vs custom AI agents</a>.
       </p>
       <p>
-        <strong>Claude for Work (Team and Enterprise).</strong> Anthropic&apos;s{' '}
-        <a href={SRC.claudeTraining} {...ext}>privacy centre</a> says it will not use inputs or outputs from commercial
-        products, including Claude for Work, to train models unless you explicitly opt in. Two details matter: zero data
+        <strong>Claude for Work (Claude Team and Claude Enterprise).</strong>{' '}Anthropic&apos;s{' '}
+        <a href={SRC.claudeTraining} {...ext}>privacy centre</a>{' '}says it will not use inputs or outputs from commercial
+        products, including Claude for Work, to train models unless you explicitly opt in. Zero data
         retention <a href={SRC.claudeZdr} {...ext}>covers the API and Claude Code on Enterprise, not chat</a>, and a{' '}
-        <a href={SRC.claudeBaa} {...ext}>BAA covers Claude Enterprise</a> only after the primary owner switches on HIPAA
+        <a href={SRC.claudeBaa} {...ext}>BAA covers Claude Enterprise</a>{' '}only after the primary owner switches on HIPAA
         mode.
       </p>
       <p>
-        <strong>Gemini for Google Workspace.</strong> Google&apos;s <a href={SRC.gemini} {...ext}>Workspace privacy hub</a>{' '}
+        <strong>Gemini for Google Workspace.</strong>{' '}Google&apos;s <a href={SRC.gemini} {...ext}>Workspace privacy hub</a>{' '}
         says content is not used for model training outside your domain without permission, lets admins keep Gemini
         prompts from 90 days to indefinitely, and lists SOC 1, 2 and 3, ISO/IEC 27001 and FedRAMP High.
       </p>
@@ -316,31 +324,31 @@ export const post: BlogPost = {
       </p>
       <ul className="list-disc pl-6 space-y-3 mb-6">
         <li>
-          <strong>Amazon Bedrock.</strong> AWS&apos;s <a href={SRC.bedrock} {...ext}>Bedrock FAQ</a> says your content
+          <strong>Amazon Bedrock.</strong>{' '}AWS&apos;s <a href={SRC.bedrock} {...ext}>Bedrock FAQ</a>{' '}says your content
           &quot;is not used to improve the base models and is not shared with any model providers&quot;, is encrypted in
           transit and at rest, and can use your own keys. AWS lists Bedrock as{' '}
           <a href={SRC.bedrockSecurity} {...ext}>HIPAA eligible and in scope for ISO and SOC</a>. It runs Claude, Llama,
           Mistral and others.
         </li>
         <li>
-          <strong>Azure OpenAI (Azure AI Foundry).</strong> Microsoft&apos;s{' '}
-          <a href={SRC.azure} {...ext}>data privacy page</a> says prompts and completions are not used to train any
+          <strong>Azure OpenAI (Azure AI Foundry).</strong>{' '}Microsoft&apos;s{' '}
+          <a href={SRC.azure} {...ext}>data privacy page</a>{' '}says prompts and completions are not used to train any
           generative AI foundation models without your permission, encrypts with AES-256 by default with a customer
           managed key option, and keeps data in your chosen geography unless you pick a Global or Data Zone deployment.
         </li>
         <li>
-          <strong>Google Vertex AI.</strong> Google&apos;s <a href={SRC.vertex} {...ext}>data governance page</a> says
+          <strong>Google Vertex AI.</strong>{' '}Google&apos;s <a href={SRC.vertex} {...ext}>data governance page</a>{' '}says
           Google won&apos;t use your data to train or fine-tune models without prior permission. Its{' '}
-          <a href={SRC.vertexResidency} {...ext}>residency list</a> includes the UK (europe-west2) and Australia
-          (australia-southeast1), which matters for the compliance section below. One trap: a <code>global</code>{' '}
-          endpoint carries no residency promise.
+          <a href={SRC.vertexResidency} {...ext}>residency list</a>{' '}includes the UK (europe-west2) and Australia
+          (australia-southeast1), which matters for the compliance section below. A <code>global</code>{' '}
+          endpoint carries no residency promise, so pick a regional one.
         </li>
       </ul>
       <p>
-        Direct APIs sit between seats and cloud. The <a href={SRC.openaiApi} {...ext}>OpenAI API</a> does not train on
-        API data, keeps abuse-monitoring logs up to 30 days, and offers regional storage including the UK and Australia
-        (non-US regions need OpenAI&apos;s approval for zero data retention or modified abuse monitoring, and newer
-        models carry a 10% uplift there). The <a href={SRC.claudeResidency} {...ext}>Anthropic API</a> offers US-only or
+        Direct APIs sit between seats and cloud. The <a href={SRC.openaiApi} {...ext}>OpenAI API</a>{' '}does not train on
+        API data, keeps abuse-monitoring logs up to 30 days, and offers regional storage including the UK and Australia.
+        Outside the US, zero data retention or modified abuse monitoring needs OpenAI&apos;s approval, and newer models
+        cost 10% more there. The <a href={SRC.claudeResidency} {...ext}>Anthropic API</a>{' '}offers US-only or
         global processing, with US-only priced at 1.1 times standard, so UK, EU and Australian buyers who need data held
         in-country usually reach Claude through Bedrock or Vertex instead.
       </p>
@@ -360,38 +368,42 @@ export const post: BlogPost = {
         </figcaption>
       </figure>
 
-      <h3 id="self-hosted">8: self-hosted open models such as Llama and Mistral (most control, most work)</h3>
+      <h3 id="self-hosted">8: a private LLM on your own servers (self-hosted Llama or Mistral; most control, most work)</h3>
       <p>
         An open-weight model is a model file you download and run on your own servers or cloud machines. Nothing goes to
-        an AI vendor, which is why &quot;on premise llm&quot; and &quot;self hosted llm&quot; draw 2,900 and 3,600 US
-        searches a month. In exchange you own the hardware, security patches, upgrades and evaluation, and open models
+        an AI vendor. In exchange you own the hardware, security patches, upgrades and evaluation, and open models
         often trail the best API models on hard reasoning.
+      </p>
+      <p>
+        Teams usually serve these models with open-source tools such as{' '}
+        <a href={SRC.vllm} {...ext}>vLLM</a>{' '}or <a href={SRC.ollama} {...ext}>Ollama</a>. Llama and Mistral are the
+        two families covered below. Qwen, DeepSeek and Google&apos;s Gemma are other open-weight families, each under its
+        own licence, so read the licence before you build on one.
       </p>
       <ul className="list-disc pl-6 space-y-2 mb-6">
         <li>
-          <strong>Llama 4 (Meta).</strong> The <a href={SRC.llama} {...ext}>licence</a> allows commercial use, requires
+          <strong>Llama 4 (Meta).</strong>{' '}The <a href={SRC.llama} {...ext}>licence</a>{' '}allows commercial use, requires
           companies over 700 million monthly active users to request a licence from Meta, and asks you to show
           &quot;Built with Llama&quot; where you use it.
         </li>
         <li>
-          <strong>Mistral.</strong> Mistral says its <a href={SRC.mistral} {...ext}>Mistral 3 models</a> are &quot;released
+          <strong>Mistral.</strong>{' '}Mistral says its <a href={SRC.mistral} {...ext}>Mistral 3 models</a>{' '}are &quot;released
           under the Apache 2.0 license&quot;, a permissive licence with no user cap. Some other Mistral models carry
           different licences, including one non-commercial voice model, so check each model card.
         </li>
       </ul>
 
-      <h2 id="rag">Option 9, RAG: how private AI answers from your own documents</h2>
+      <h2 id="rag">Option 9, RAG (retrieval-augmented generation): how private AI answers from your own documents</h2>
       <p>
-        RAG (retrieval augmented generation) is how an AI answers from your contracts, policies, product sheets or
-        tickets without being retrained on them. &quot;rag&quot; alone draws 74,000 US searches a month, mostly from
-        people learning the term. Here is the business version, in five steps:
+        RAG is how an AI answers from your contracts, policies, product sheets or tickets without being retrained on
+        them. Here is the business version, in five steps:
       </p>
       <ol className="list-decimal pl-6 space-y-3 mb-6">
-        <li><strong>Collect.</strong> Pull documents from SharePoint, Google Drive, your ERP, CRM or help desk, and drop duplicates and stale versions.</li>
-        <li><strong>Index.</strong> Split each document into short passages and store a searchable version (a vector) in a database inside your own cloud account.</li>
-        <li><strong>Retrieve, with permissions.</strong> When someone asks, fetch only the passages that person is allowed to see. This is where most DIY builds leak.</li>
-        <li><strong>Answer.</strong> Send the question and those few passages to the model you chose above. The model sees snippets, not your whole library.</li>
-        <li><strong>Cite and log.</strong> Show which document each fact came from, and log the question, the passages and the answer for audit.</li>
+        <li><strong>Collect.</strong>{' '}Pull documents from SharePoint, Google Drive, your ERP, CRM or help desk, and drop duplicates and stale versions.</li>
+        <li><strong>Index.</strong>{' '}Split each document into short passages and store a searchable version (a vector) in a database inside your own cloud account. Common choices are{' '}<a href={SRC.pgvector} {...ext}>pgvector</a>{' '}on PostgreSQL, Azure AI Search, Vertex AI Vector Search, Amazon OpenSearch Service and Pinecone.</li>
+        <li><strong>Retrieve, with permissions.</strong>{' '}When someone asks, fetch only the passages that person is allowed to see. Skip this filter and the assistant can quote files the person asking could never open.</li>
+        <li><strong>Answer.</strong>{' '}Send the question and those few passages to the model you chose above. The model sees snippets, not your whole library.</li>
+        <li><strong>Cite and log.</strong>{' '}Show which document each fact came from, and log the question, the passages and the answer for audit.</li>
       </ol>
       <p>
         RAG beats fine-tuning (retraining a model on your data) for most business knowledge: it updates the moment a file
@@ -420,23 +432,33 @@ export const post: BlogPost = {
       <h2 id="compliance">Compliance by country: US, UK, Australia, EU</h2>
       <p>
         Each of these rules asks two things: know where the data goes, and hold the right contract with whoever stores
-        it. AI data privacy law differs by country, and GDPR AI questions in the UK and EU turn on the same two points.
+        it. The laws differ by country, but UK GDPR and EU GDPR turn on the same two points.
       </p>
       <Table
         head={['Country', 'Rule that bites', 'What it means for private AI']}
         rows={[
-          ['US (healthcare)', <><a href={SRC.hhs} {...ext}>HHS cloud computing guidance</a> under HIPAA</>, 'A cloud provider holding patient data is a business associate even if it stores only encrypted data and lacks the key. You need a signed BAA for the exact product.'],
-          ['US (B2B buyers)', <><a href={SRC.soc2} {...ext}>SOC 2</a> (AICPA)</>, 'An audit report, not a law, covering security, availability, processing integrity, confidentiality and privacy. Enterprise customers will ask for your vendor\'s report.'],
+          ['US (healthcare)', <><a href={SRC.hhs} {...ext}>HHS cloud computing guidance</a>{' '}under HIPAA</>, 'A cloud provider holding patient data is a business associate even if it stores only encrypted data and lacks the key. You need a signed BAA for the exact product.'],
+          ['US (B2B buyers)', <><a href={SRC.soc2} {...ext}>SOC 2</a>{' '}(AICPA)</>, 'An audit report, not a law, covering security, availability, processing integrity, confidentiality and privacy. Enterprise customers will ask for your vendor\'s report.'],
           ['UK', <><a href={SRC.icoAi} {...ext}>ICO AI guidance</a>, <a href={SRC.icoDpia} {...ext}>DPIA rules</a>, <a href={SRC.icoTransfers} {...ext}>transfer rules</a></>, 'AI is listed as an innovative technology trigger for a DPIA alongside one other factor. Data stored outside the UK needs a transfer mechanism such as the IDTA plus a transfer risk assessment. The ICO notes its AI guidance is under review after the Data (Use and Access) Act.'],
-          ['Australia', <><a href={SRC.oaicApp8} {...ext}>APP 8</a> and <a href={SRC.oaicAi} {...ext}>OAIC AI guidance</a></>, 'Before personal information goes to an overseas vendor, take reasonable steps so it is handled to Australian standards. The OAIC says not to enter personal information into publicly available AI tools.'],
+          ['Australia', <><a href={SRC.oaicApp8} {...ext}>APP 8</a>{' '}and <a href={SRC.oaicAi} {...ext}>OAIC AI guidance</a></>, 'Before personal information goes to an overseas vendor, take reasonable steps so it is handled to Australian standards. The OAIC says not to enter personal information into publicly available AI tools.'],
           ['EU', <><a href={SRC.gdpr28} {...ext}>GDPR Article 28</a>, <a href={SRC.dpf} {...ext}>EU-US Data Privacy Framework</a>, <a href={SRC.aiAct50} {...ext}>AI Act Article 50</a></>, 'A processor contract with the vendor; US transfers can rely on the Data Privacy Framework if the vendor is certified. Article 50 transparency (tell people they are talking to AI) has applied since 2 August 2026.'],
         ]}
       />
       <p>
         On the EU dates: the AI Act Service Desk shows the Act applying from 2 August 2026 under{' '}
-        <a href={SRC.aiAct113} {...ext}>Article 113</a>. The 2026 Digital Omnibus, Regulation (EU) 2026/1744, moved the
+        <a href={SRC.aiAct113} {...ext}>Article 113</a>. The 2026 Digital Omnibus,{' '}
+        <a href={SRC.omnibus} {...ext}>Regulation (EU) 2026/1744</a>, in force since 27 July 2026, moved the
         high-risk deadlines to 2 December 2027 and 2 August 2028 but left Article 50 on 2 August 2026. A private internal
         assistant is rarely high-risk; one used for hiring or credit decisions can be.
+      </p>
+
+      <h3 id="hipaa">HIPAA compliant AI: which products sign a BAA</h3>
+      <p>
+        HHS treats a cloud provider that holds patient data as a business associate, so a US healthcare company needs a
+        signed BAA for the exact product it uses. Per the vendor pages above, OpenAI offers BAAs for the API and
+        ChatGPT for Healthcare, not ChatGPT Enterprise. Anthropic covers its API and Claude Enterprise once HIPAA mode is
+        on. AWS lists Amazon Bedrock as HIPAA eligible. Google says Gemini in Workspace can support HIPAA workloads. For
+        Copilot, Azure OpenAI and Vertex AI, check the BAA terms in your existing Microsoft or Google Cloud agreement.
       </p>
 
       <h2 id="by-size">Which option fits your company size</h2>
@@ -467,7 +489,12 @@ export const post: BlogPost = {
 
       <h2 id="cost">Private AI cost: what a build costs (market ranges)</h2>
       <p>
-        Seats are priced per user by each vendor. A custom private assistant over your documents is a build project.
+        Seats are priced per user by each vendor. On 31 October 2026,{' '}
+        <a href={SRC.copilotPricing} {...ext}>Microsoft&apos;s pricing page</a>{' '}listed Microsoft 365 Copilot Business
+        at $21 per user a month on a yearly plan ($18 for the first year under a promotion running to 31 December 2026), and{' '}
+        <a href={SRC.claudePricing} {...ext}>Anthropic&apos;s pricing page</a>{' '}listed Claude Team and Claude Enterprise
+        seats at $20 a month billed yearly, with Enterprise usage billed on top at API rates. A custom private assistant
+        over your documents is a build project.
         These are published market ranges, not our prices:
       </p>
       <Table
@@ -493,12 +520,12 @@ export const post: BlogPost = {
         <li>They cannot link to the clause that says your data is not used for training.</li>
         <li>&quot;Private&quot; means a password on a shared consumer account.</li>
         <li>No answer on retention, or retention only the vendor can change.</li>
-        <li>A <code>global</code> or unspecified region when your rules need the UK, EU or Australia.</li>
+        <li>A <code>global</code>{' '}or unspecified region when your rules need the UK, EU or Australia.</li>
         <li>A BAA promised for a product the model maker does not list as covered.</li>
         <li>The AI sees every document regardless of who is asking.</li>
         <li>No log of questions, sources and answers you can export.</li>
         <li>You do not own the code, prompts, index and test set at the end of the project. Our{' '}
-          <a href="/blog/ai-agent-development-contract-checklist-2026">AI development contract checklist</a> covers the clauses.</li>
+          <a href="/blog/ai-agent-development-contract-checklist-2026">AI development contract checklist</a>{' '}covers the clauses.</li>
       </ol>
 
       <h2 id="questions">Seven questions to ask before you sign</h2>
@@ -518,22 +545,21 @@ export const post: BlogPost = {
         <a href="/blog/ai-agent-governance-policy-mid-sized-companies-2026">AI governance policy</a>.
       </p>
 
-      <h2 id="what-else-ranks">What else ranks for &quot;private ai for business&quot;, and how this guide differs</h2>
+      <h2 id="what-else-ranks">Other private AI vendors and guides, and how they differ</h2>
       <p>
-        These are the business sites on Google&apos;s first page for &quot;private ai for business&quot; in the US when
-        we checked on 22 October 2026 (DataForSEO), with the title Google showed. We list them so you can compare; we
-        have not reviewed their services, and the list leaves out forums.
+        A US buyer searching Google for private AI on 22 October 2026 found these business pages on the first page. We
+        list them so you can compare. We have not reviewed their services, and the list leaves out forums.
       </p>
       <Table
-        head={['Site', 'Page title shown in Google']}
+        head={['Site', 'What they sell', 'Page title shown in Google']}
         rows={[
-          ['coresite.com', 'Private AI: The Smart Choice for Many Enterprises'],
-          ['digitalrealty.com', 'What is Private AI? The Next Step in Privacy-First Innovation'],
-          ['cloudera.com', 'What Is Private AI?'],
-          ['wezom.com', 'Private AI for Business: How to Protect Sensitive Data in AI'],
-          ['hpe.com', 'What is Private AI? | Glossary'],
-          ['teradata.com', 'What Is Private AI? The Enterprise Playbook'],
-          ['suse.com', 'Private AI: Securing Innovation for the Future of Enterprise'],
+          ['coresite.com', 'Data centre colocation', 'Private AI: The Smart Choice for Many Enterprises'],
+          ['digitalrealty.com', 'Data centre colocation', 'What is Private AI? The Next Step in Privacy-First Innovation'],
+          ['cloudera.com', 'Data platform software', 'What Is Private AI?'],
+          ['wezom.com', 'Software development agency', 'Private AI for Business: How to Protect Sensitive Data in AI'],
+          ['hpe.com', 'Servers and hardware', 'What is Private AI? | Glossary'],
+          ['teradata.com', 'Data analytics platform', 'What Is Private AI? The Enterprise Playbook'],
+          ['suse.com', 'Linux and container platform software', 'Private AI: Securing Innovation for the Future of Enterprise'],
         ]}
       />
       <p>
@@ -552,28 +578,31 @@ export const post: BlogPost = {
       </p>
       <p>
         See <a href="/services/llm-development">LLM development</a>,{' '}
-        <a href="/services/ai-agent-development">AI agent development</a> and{' '}
+        <a href="/services/ai-agent-development">AI agent development</a>{' '}and{' '}
         <a href="/services/ai-integration-services">AI integration services</a>.
       </p>
 
       <h2 id="sources">Sources</h2>
-      <p className="text-sm text-gray-600">Pages opened and read on 22 October 2026.</p>
+      <p className="text-sm text-gray-600">Pages opened and read on 22 October 2026 unless marked otherwise.</p>
       <ul className="list-disc pl-6 space-y-1 text-sm mb-8">
-        <li><a href={SRC.openaiEnterprise} {...ext}>OpenAI, Enterprise privacy</a> and <a href={SRC.openaiBusiness} {...ext}>Business data privacy, security and compliance</a></li>
+        <li><a href={SRC.openaiEnterprise} {...ext}>OpenAI, Enterprise privacy</a>{' '}and <a href={SRC.openaiBusiness} {...ext}>Business data privacy, security and compliance</a></li>
         <li><a href={SRC.openaiApi} {...ext}>OpenAI, Data controls in the OpenAI platform</a></li>
         <li><a href={SRC.copilot} {...ext}>Microsoft Learn, Data, privacy and security for Microsoft Copilot</a></li>
         <li><a href={SRC.claudeTraining} {...ext}>Anthropic privacy centre: model training</a>, <a href={SRC.claudeZdr} {...ext}>zero data retention</a>, <a href={SRC.claudeBaa} {...ext}>BAAs</a>; <a href={SRC.claudeResidency} {...ext}>Claude API data residency</a></li>
         <li><a href={SRC.gemini} {...ext}>Google Workspace, Generative AI in Google Workspace privacy hub</a></li>
-        <li><a href={SRC.bedrock} {...ext}>AWS, Amazon Bedrock FAQs</a> and <a href={SRC.bedrockSecurity} {...ext}>Bedrock security and compliance</a></li>
+        <li><a href={SRC.bedrock} {...ext}>AWS, Amazon Bedrock FAQs</a>{' '}and <a href={SRC.bedrockSecurity} {...ext}>Bedrock security and compliance</a></li>
         <li><a href={SRC.azure} {...ext}>Microsoft Learn, Data, privacy and security for Azure OpenAI</a></li>
-        <li><a href={SRC.vertex} {...ext}>Google Cloud, Vertex AI data governance</a> and <a href={SRC.vertexResidency} {...ext}>data residency</a></li>
+        <li><a href={SRC.vertex} {...ext}>Google Cloud, Vertex AI data governance</a>{' '}and <a href={SRC.vertexResidency} {...ext}>data residency</a></li>
         <li><a href={SRC.llama} {...ext}>Meta, Llama 4 Community License</a>; <a href={SRC.mistral} {...ext}>Mistral AI, Introducing Mistral 3</a></li>
         <li><a href={SRC.hhs} {...ext}>US HHS, Guidance on HIPAA and Cloud Computing</a>; <a href={SRC.soc2} {...ext}>AICPA, SOC 2</a></li>
         <li><a href={SRC.icoAi} {...ext}>ICO, Guidance on AI and data protection</a>, <a href={SRC.icoDpia} {...ext}>When do we need to do a DPIA?</a>, <a href={SRC.icoTransfers} {...ext}>International transfers</a></li>
         <li><a href={SRC.oaicApp8} {...ext}>OAIC, APP guidelines chapter 8</a>; <a href={SRC.oaicAi} {...ext}>OAIC, Guidance on privacy and commercially available AI products</a></li>
-        <li><a href={SRC.gdpr28} {...ext}>GDPR Article 28</a>; <a href={SRC.dpf} {...ext}>European Commission, EU-US data transfers</a>; <a href={SRC.aiAct50} {...ext}>AI Act Service Desk, Article 50</a> and <a href={SRC.aiAct113} {...ext}>Article 113</a></li>
+        <li><a href={SRC.gdpr28} {...ext}>GDPR Article 28</a>; <a href={SRC.dpf} {...ext}>European Commission, EU-US data transfers</a>; <a href={SRC.aiAct50} {...ext}>AI Act Service Desk, Article 50</a>{' '}and <a href={SRC.aiAct113} {...ext}>Article 113</a></li>
         <li><a href={SRC.scalacode} {...ext}>ScalaCode, RAG development cost</a>; <a href={SRC.raftlabs} {...ext}>RaftLabs, RAG development cost</a></li>
-        <li>Our own measurement: US search volumes, click prices, People Also Ask questions and the first-page results, DataForSEO, 22 October 2026</li>
+        <li><a href={SRC.omnibus} {...ext}>EUR-Lex, Regulation (EU) 2026/1744 (Digital Omnibus on AI)</a></li>
+        <li><a href={SRC.copilotPricing} {...ext}>Microsoft 365 Copilot pricing</a>; <a href={SRC.claudePricing} {...ext}>Claude pricing</a>{' '}(both read 31 October 2026)</li>
+        <li><a href={SRC.vllm} {...ext}>vLLM documentation</a>; <a href={SRC.ollama} {...ext}>Ollama</a>; <a href={SRC.pgvector} {...ext}>pgvector</a></li>
+        <li>Google first-page results for the comparison table, checked through DataForSEO on 22 October 2026</li>
       </ul>
 
       <div className="bg-[#FAF8F5] border-2 border-[#E5DFD7] p-6 sm:p-8 rounded-xl my-10 shadow-sm">

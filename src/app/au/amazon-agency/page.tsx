@@ -8,17 +8,18 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/amazon-agency';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
 /* Title and H1 shaped by DataForSEO Google Ads volumes, Australia, 29 Oct 2026:
    "amazon seller central australia" 1,300, "amazon fba australia" 480, "sell on amazon australia" 390,
    "amazon advertising australia" 260, "amazon agency" 70, "amazon vendor central australia" 70,
    "amazon account management" 50, "amazon agency australia" 10 (CPC A$6.69, competition HIGH). */
-const TITLE = 'Amazon Agency Australia | Amazon.com.au Ads & Listings | FactoryJet';
-const H1 = 'Amazon Agency Australia: Amazon.com.au Ads, Listings and Stock Sync for Established Brands';
+const TITLE = 'Amazon Agency Australia: Ads, Listings, FBA | FactoryJet';
+const H1 = 'Amazon Agency Australia for Established Brands';
 const DESCRIPTION =
   'Amazon agency for Australian brands on Amazon.com.au: Sponsored Ads, listings, Brand Registry, FBA, and stock synced with Shopify, Xero, MYOB and Cin7.';
 
@@ -53,6 +54,11 @@ const SRC_MCF = 'https://sell.amazon.com.au/fba-mcf';
 // credit on referral fees on the first $1,500,000 in eligible branded sales (up to $75,000 in value), plus a
 // $75 Sponsored Ads credit.
 const SRC_BRAND = 'https://sell.amazon.com.au/brand-registry';
+// Amazon Australia, seller registration guide (read 31 Oct 2026): company registration number "can be your
+// Australian Business Number (ABN) or your Australian Company Number (ACN)"; government-issued ID, chargeable
+// credit card, bank account, proof of residential address from the last 180 days, tax information; identity
+// verification "usually takes four business days or less", by instant photo check or video call.
+const SRC_REG = 'https://sell.amazon.com.au/sell/registration-guide';
 // Amazon Ads, Sponsored Products (en-au): "cost-per-click (CPC) ads"; "no monthly or upfront fees"; daily
 // budget; AU listed among eligible countries.
 const SRC_ADS = 'https://advertising.amazon.com/en-au/solutions/products/sponsored-products';
@@ -81,14 +87,17 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'Is it easy to sell on Amazon Australia?',
     answer: 'Opening a Seller Central account is easy. Selling profitably is harder. You compete on search placement, price, delivery speed and reviews, often against the same product from other sellers. The work that decides results is unglamorous: accurate listings, a stock feed that never oversells, ads tuned to margin, and a fulfilment choice that suits your product size. Established brands with a catalogue and their own store usually have the most to gain.' },
   { category: 'basics', question: 'Is selling on Amazon worth it in 2026 for an established Australian brand?',
-    answer: 'It is worth testing if your products are easy to ship, you can protect your margin after fees, and you can keep stock accurate across channels. Amazon brings shoppers who already search there, and FBA listings can show the Prime shipping logo. It is a poor fit if your margin is thin after the referral fee and fulfilment, or if resellers already undercut you on the same items. We work this out with your numbers before you commit.' },
+    answer: 'It is worth testing if your products are easy to ship, you can protect your margin after fees, and you can keep stock accurate across channels. Amazon brings shoppers who already search there, and FBA listings can show the Prime shipping logo. It is a poor fit if your margin is thin after the referral fee and fulfilment, or if resellers already undercut you. We check this with your numbers before you commit.' },
   { category: 'basics', question: 'What are the disadvantages of selling on Amazon?',
     answer: 'Four come up most. Fees take a share of every sale. You control less of the customer relationship than on your own store. Other sellers can list against your products, which is why Brand Registry matters. And account health rules are strict, so late shipments or listing errors can suppress products. None of these rule Amazon out. They decide how you set it up, which products you list, and how you fulfil.' },
   { category: 'basics', question: 'Which is better, Amazon or Shopify?',
-    answer: 'They do different jobs, so most established brands run both. Shopify is your own store: your brand, your customer data, your checkout. Amazon.com.au is a marketplace where shoppers already search, with fees and rules set by Amazon. The real question is how they share one stock pool. We connect them so an order on either side updates stock everywhere, and Amazon can even fulfil your Shopify orders through Multi-Channel Fulfilment.',
+    answer: 'They do different jobs, so most established brands run both. Shopify is your own store, with your brand and your customer data. Amazon.com.au is a marketplace where shoppers already search, with fees and rules set by Amazon. The real question is how they share one stock pool. We connect them so an order on either side updates stock everywhere, and Amazon can even fulfil your Shopify orders through Multi-Channel Fulfilment.',
     links: [{ href: '/au/shopify-development', label: 'Shopify development in Australia' }] },
   { category: 'basics', question: 'Do I need Amazon Brand Registry in Australia?',
-    answer: 'If you own a brand, yes. Amazon says you need a pending or registered trade mark from the government office of a country with an Amazon store, and in some cases a pending application is enough. Registry unlocks A+ Content, a Brand Store, Brand Analytics and Sponsored Brands ads, plus tools to report sellers who infringe your brand. Without a trade mark, Amazon points brands to its IP Accelerator program of vetted legal providers.' },
+    answer: 'If you own a brand, yes. Amazon says you need a pending or registered trade mark from the government office of a country with an Amazon store, and in some cases a pending application is enough. Registry gives you A+ Content, a Brand Store, Brand Analytics and Sponsored Brands ads, plus tools to report sellers who infringe your brand. Without a trade mark, Amazon points brands to its IP Accelerator program of vetted legal providers.' },
+  { category: 'basics', question: 'How do I set up Amazon Seller Central in Australia?',
+    answer: 'Amazon’s Australian registration guide asks for your ABN or ACN, a government-issued ID such as a passport or driver’s licence, a chargeable credit card, a bank account for payouts, proof of address from the last 180 days, and tax details. Pick the Professional plan at A$49.95 a month excluding GST if you plan to advertise. Amazon says identity checks usually take four business days or less. Apply for Brand Registry once the account is live.',
+    links: [{ href: SRC_REG, label: 'Amazon Australia seller registration guide' }] },
 
   // ── Fees and agency cost ──
   { category: 'cost', question: 'How much does it cost to sell on Amazon Australia?',
@@ -96,7 +105,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'cost', question: 'How much does Amazon take from a $100 sale?',
     answer: 'The referral fee alone on an A$100 sale is usually A$6 to A$15, because Amazon says most referral fees sit between 6% and 15%, set by category. Fulfilment is extra: FBA charges per unit by size and weight, plus storage. Then add your share of the monthly plan and any ad cost for that sale. Work it out per product, because a small, light item and a bulky one give different answers.' },
   { category: 'cost', question: 'How much does an Amazon agency cost in Australia?',
-    answer: 'eStore Factory, an Amazon agency with an office in Niddrie, Victoria, published a guide on 16 October 2026 putting Amazon PPC agency fees in Australia at $1,000 to $10,000 a month: around $1,000 to $3,000 for small sellers, $3,000 to $6,000 for medium to large businesses, and $6,000 to $10,000 or more for high-volume brands. The guide quotes dollars without naming the currency and does not say whether GST or ad spend is included. FactoryJet quotes a fixed price in writing after a short scoping call.' },
+    answer: 'Expect $1,000 to $10,000 a month for Amazon PPC management, per a 16 October 2026 guide from eStore Factory, an Amazon agency in Niddrie, Victoria. Small sellers sit near the bottom of that range and high-volume brands near the top. The guide does not name the currency or say whether GST or ad spend is included. FactoryJet quotes a fixed price in writing after a short scoping call.',
+    links: [{ href: SRC_RANGE, label: 'eStore Factory, Amazon PPC agency cost in Australia' }] },
   { category: 'cost', question: 'How do Amazon ads charge in Australia?',
     answer: 'Sponsored Products are cost-per-click ads, so you pay when a shopper clicks, not when the ad shows. Amazon Ads says there are no monthly or upfront fees for Sponsored Products, and you set a daily budget so spend stays within a cap. The craft is in the structure: which search terms you bid on, how much each is worth to your margin, and when to stop paying for a term that never converts.' },
   { category: 'cost', question: 'Why is my FBA fee so high?',
@@ -112,23 +122,26 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'ops', question: 'Can Amazon fulfil orders from our Shopify or WooCommerce store?',
     answer: 'Yes, through Amazon Multi-Channel Fulfilment. Amazon’s Australian page says MCF fulfils orders from your own website or other marketplaces using stock already in its centres, in unbranded packaging at no extra fee. It lists Shopify, Magento and WooCommerce among supported connections, and any other site can connect through the Selling Partner API. We set the routing rules so the right orders go to Amazon and the rest to your warehouse.' },
   { category: 'ops', question: 'Can you sync Amazon with Xero or MYOB?',
-    answer: 'Yes. The hard part is not the connection but the accounting. An Amazon payout is sales minus referral fees, FBA fees, ad charges and refunds, often across many orders. We record gross sales, each fee type and GST separately through a clearing account, then match the payout to the bank feed. Your bookkeeper signs off on the mapping before anything syncs, so the numbers reconcile at month end.' },
+    answer: 'Yes. The connection is the easy part. The accounting is where it goes wrong. An Amazon payout is sales minus referral fees, FBA fees, ad charges and refunds, often across many orders. We record gross sales, each fee type and GST separately through a clearing account, then match the payout to the bank feed. Your bookkeeper signs off on the mapping before anything syncs, so the numbers reconcile at month end.' },
   { category: 'ops', question: 'Can you keep Amazon stock in step with Cin7, Unleashed or NetSuite?',
     answer: 'Yes. We agree first which system owns stock, usually your inventory system such as Cin7 Core, Cin7 Omni, Unleashed, NetSuite or Odoo, then feed Amazon from it with a safety buffer per product. Orders flow back so stock drops everywhere at once. The same feed can cover eBay Australia, Kogan or Bunnings Marketplace, and one sale on any of them reduces the count everywhere.' },
   { category: 'ops', question: 'What happens if another seller hijacks our listing?',
-    answer: 'With Brand Registry, you can report sellers who infringe your trade mark or sell counterfeits through Amazon’s Report a Violation tool, and eligible brands can apply for Project Zero or Transparency, Amazon’s product authentication program. We document each case with the trade mark details, test buys and listing evidence Amazon asks for, then track it until it closes. Prevention matters too: tight listing control makes hijacks easier to spot.' },
+    answer: 'With Brand Registry, you can report sellers who infringe your trade mark or sell counterfeits through Amazon’s Report a Violation tool, and eligible brands can apply for two more programs. Project Zero lets a brand remove counterfeit listings itself. Transparency puts a unique code on each unit so Amazon can check it is genuine. We document each case with the trade mark details, test buys and listing evidence Amazon asks for, then track it until it closes. Prevention matters too: tight listing control makes hijacks easier to spot.' },
 
   // ── Working with us ──
   { category: 'agency', question: 'Who owns the Seller Central account and the ad account?',
     answer: 'You do, always. Seller Central, the Amazon Ads account, Brand Registry and every listing stay in your company’s name. We work as added users with the permissions the job needs, and you can remove us at any time. Any integration code we write, such as a stock feed or Xero mapping, sits in a repository you own from day one, with documentation your next developer can read.' },
   { category: 'agency', question: 'Do we have to sign a long Amazon management contract?',
     answer: 'No. Set-up work, such as a catalogue rebuild, Brand Registry or a stock integration, is scoped and priced as fixed phases, each signed on its own. If you want us to keep running ads and the account month to month, that is an option you choose, priced in writing after the audit, with each change approved and no monthly minimum. Defects in anything we build are fixed inside the build price.' },
-  { category: 'agency', question: 'What should our brief or RFP for an Amazon agency include?',
-    answer: 'Five things help most: your catalogue size and top sellers, whether you sell on Amazon.com.au today and on which plan, how you fulfil now, the systems you run (Shopify, Xero, MYOB, Cin7 or an ERP), and what success looks like in a year. Margin targets per product beat revenue targets. Send it through the form on this page, and we reply with questions or a scoped first phase.' },
+  { category: 'agency', question: 'What does Amazon account management include?',
+    answer: 'With us it covers the weekly work that keeps a Seller Central account earning: Sponsored Ads bids and search terms, listing fixes, stock checks that flag low FBA inventory early, account health alerts, and Report a Violation cases. You get a monthly report that ends at profit per product. Management is optional, priced in writing, with each change approved and no monthly minimum.' },
+  { category: 'agency', question: 'How do I choose the best Amazon agency in Australia?',
+    answer: 'Ask every agency the six questions in our checklist on this page. The short version: they report profit per product, every account stays in your company name, they can connect Amazon to your stock and accounting systems, and they know Amazon.com.au rules such as GST on fees and the five postcodes FBA skips. Get the first phase priced in writing before you sign anything.',
+    links: [{ href: '#checklist', label: 'Six questions to ask any Amazon agency' }] },
   { category: 'agency', question: 'Which size of brand do you work with?',
-    answer: 'Established Australian brands and distributors with a catalogue already selling elsewhere: on their own Shopify or WooCommerce store, through wholesale, or in retail. Typical buyers are adding Amazon.com.au as a channel, fixing an account that grew messy, or connecting Amazon to stock and accounting systems. Our first phase is usually an audit and a connected catalogue, not a quick ads campaign.' },
+    answer: 'Established Australian brands and distributors with a catalogue already selling elsewhere: on their own Shopify or WooCommerce store, through wholesale, or in retail. Typical buyers are adding Amazon.com.au as a channel, fixing an account that grew messy, or connecting Amazon to stock and accounting systems. Our first phase is usually an audit and a connected catalogue.' },
   { category: 'agency', question: 'How do we get started?',
-    answer: 'Use the form on this page with your name and work email, or attach a brief. Within 24 hours the founder, Bhavesh Barot, writes back to set up a call on your catalogue, your channels and your stack. Before you sign, we show you work on your own data, such as rewritten listings for a few top products or a stock feed running on a copy, so you can judge us on output.' },
+    answer: 'Use the form on this page with your name and work email, or attach a brief. Within 24 hours the founder, Bhavesh Barot, writes back to set up a call on your catalogue and your stack. Before you sign, we show you work on your own data, such as rewritten listings for a few top products or a stock feed running on a copy, so you can judge us on output.' },
 ];
 
 /* ─── JSON-LD ────────────────────────────────────────────────────── */
@@ -195,7 +208,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['amazon-agency'] },
   openGraph: {
     title: TITLE,
     description:
@@ -232,8 +245,8 @@ const HERO_ICONS = [
 const JOBS: { n: string; t: string; d: string; icon: string }[] = [
   { n: '01', t: 'Account audit before any spend', d: 'We read your Seller Central health, suppressed and stranded listings, search term reports, fee lines and stock age. You get a written list of what is losing money, ranked by dollars, before we touch a campaign.', icon: 'M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14Zm9 16-4-4' },
   { n: '02', t: 'Listings written for Australian shoppers', d: 'Titles, bullet points, backend search terms and images rewritten with Australian spelling and the terms people here type into Amazon.com.au. A listing that converts makes every ad dollar after it cheaper.', icon: 'M6 3h12v18H6V3Zm3 4h6m-6 4h6m-6 4h4' },
-  { n: '03', t: 'Sponsored Ads tuned to margin', d: 'Sponsored Products, Sponsored Brands and Sponsored Display, structured by product and search intent. Bids follow what each sale is worth after the referral fee and fulfilment, not a blanket target.', icon: 'M4 19h16M7 16V9m5 7V5m5 11v-4' },
-  { n: '04', t: 'Brand Registry and A+ Content', d: 'Enrolment using your Australian trade mark or a pending application, then A+ Content and a Brand Store, so your product pages look like your brand and not a reseller’s copy.', icon: 'M12 3 4 7v6c0 4 3.5 7 8 8 4.5-1 8-4 8-8V7l-8-4Z' },
+  { n: '03', t: 'Sponsored Ads tuned to margin', d: 'Sponsored Products, Sponsored Brands and Sponsored Display, structured by product and search intent. Bids follow what each sale is worth after the referral fee and fulfilment.', icon: 'M4 19h16M7 16V9m5 7V5m5 11v-4' },
+  { n: '04', t: 'Brand Registry and A+ Content', d: 'Enrolment using your Australian trade mark or a pending application, then A+ Content and a Brand Store, so your product pages look like your brand.', icon: 'M12 3 4 7v6c0 4 3.5 7 8 8 4.5-1 8-4 8-8V7l-8-4Z' },
   { n: '05', t: 'FBA, Multi-Channel or your own couriers', d: 'A fulfilment plan per product. FBA for fast, small sellers. Your warehouse with Australia Post, StarTrack or Sendle for bulky lines. Multi-Channel Fulfilment when Amazon should also ship your Shopify orders.', icon: 'M3 7h11v9H3V7Zm11 3h4l3 3v3h-7M7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z' },
   { n: '06', t: 'One stock pool across channels', d: 'Amazon fed from the system that owns stock: Cin7, Unleashed, NetSuite, Odoo or Shopify. Orders flow back so the same unit is never sold on Amazon, eBay Australia and your own store at once.', icon: 'M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3M18 3v4h-4M6 21v-4h4' },
   { n: '07', t: 'Payouts that reconcile in Xero or MYOB', d: 'Each payout split into sales, referral fees, FBA fees, ad charges, refunds and GST, posted through a clearing account and matched to the bank feed. Your bookkeeper approves the mapping first.', icon: 'M5 3h14v18H5V3Zm3 4h8m-8 4h2m4 0h2m-8 4h2m4 0h2' },
@@ -266,6 +279,9 @@ const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
   { href: '/au/ecommerce-seo', t: 'Ecommerce SEO Australia', d: 'Organic search for your own store, so Amazon is one channel and not the only one.', go: 'Explore ecommerce SEO →' },
   { href: '/au/ai-agents', t: 'AI agents for Australian businesses', d: 'Agents that answer order questions and update records across your store and back office.', go: 'Explore AI agents →' },
   { href: '/au/website-maintenance', t: 'Website maintenance Australia', d: 'Support for the store and integrations after launch, with changes approved one by one.', go: 'Explore maintenance →' },
+  { href: '/au/shopify-xero-integration', t: 'Shopify Xero integration Australia', d: 'Orders, payouts and GST from your store posted into Xero, ready for your bookkeeper.', go: 'Explore Xero integration →' },
+  { href: '/au/ecommerce-erp-integration', t: 'Ecommerce ERP integration Australia', d: 'Stock, orders and customers kept in step between your store and your ERP.', go: 'Explore ERP integration →' },
+  { href: '/uk/amazon-agency', t: 'Amazon agency for UK brands', d: 'Our Amazon.co.uk service for brands selling into the United Kingdom.', go: 'See the UK service →' },
   { href: '/services/amazon-agency', t: 'Amazon agency for US brands', d: 'Our Amazon.com service for brands selling into the United States.', go: 'See the US service →' },
 ];
 
@@ -364,7 +380,7 @@ export default function AmazonAgencyAUPage() {
               { v: 'A$49.95', t: 'a month, excluding GST, for Amazon’s Professional selling plan on Amazon.com.au', s: 'Amazon Australia, pricing', u: SRC_PRICING },
               { v: '6% to 15%', t: 'where Amazon says most referral fees sit, charged on each sale by category', s: 'Amazon Australia, pricing', u: SRC_PRICING },
               { v: '5', t: 'remote postcodes FBA does not deliver to, so those orders need a second route', s: 'Amazon Australia, FBA', u: SRC_FBA },
-              { v: 'TM', t: 'a pending or registered trade mark is the entry ticket to Brand Registry', s: 'Amazon Australia, Brand Registry', u: SRC_BRAND },
+              { v: 'A$75,000', t: 'the most a registered brand can get from Amazon’s 5% referral-fee credit for new sellers', s: 'Amazon Australia, Brand Registry', u: SRC_BRAND },
             ].map((r) => (
               <div className="ledgercell" key={r.t}>
                 <div className="k"><a href={r.u} {...extLink}>{r.s}</a></div>
@@ -379,8 +395,8 @@ export default function AmazonAgencyAUPage() {
 
         <div className="wrap byline">
           <div className="av">BB</div>
-          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="who"><b><a href="/about">Bhavesh Barot</a></b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST DEFINITION (GEO) ═══ */}
@@ -416,25 +432,25 @@ export default function AmazonAgencyAUPage() {
                 <div className="fact">
                   <div className="sec">§03</div>
                   <p>
-                    Most Amazon agencies sell ad management. The brands that call us usually have a second problem
-                    the ads cannot fix: stock that oversells because Amazon is updated by hand, or a payout made of
+                    Many Amazon agencies focus on ad management. Many Amazon sellers have a second problem the ads
+                    cannot fix: stock that oversells because Amazon is updated by hand, or a payout made of
                     sales, fees, refunds and GST that nobody can reconcile. We do both halves, because ads on a
                     channel your back office cannot see cost more than they earn.
                   </p>
                 </div>
               </div>
               <div className="au-panel">
-                <div className="eyebrow">Search demand, Australia</div>
+                <div className="eyebrow">What Australian sellers ask first</div>
                 <ul className="trigrows">
-                  <li><span className="m">amazon seller central australia</span><span className="t">1,300 a month</span></li>
-                  <li><span className="m">amazon fba australia</span><span className="t">480 a month</span></li>
-                  <li><span className="m">sell on amazon australia</span><span className="t">390 a month</span></li>
-                  <li><span className="m">amazon advertising australia</span><span className="t">260 a month</span></li>
-                  <li><span className="m">amazon vendor central australia</span><span className="t">70 a month</span></li>
+                  <li><span className="m">How do I set up Seller Central in Australia?</span><span className="t">Set-up</span></li>
+                  <li><span className="m">Should we use FBA or ship it ourselves?</span><span className="t">Fulfilment</span></li>
+                  <li><span className="m">How much does Amazon take from a sale?</span><span className="t">Fees</span></li>
+                  <li><span className="m">How do Amazon ads charge?</span><span className="t">Ads</span></li>
+                  <li><span className="m">Can Amazon sync with Xero or MYOB?</span><span className="t">Systems</span></li>
                 </ul>
                 <p className="au-note">
-                  Source: DataForSEO, Google Ads search volume, Australia, read 29 October 2026. Far more Australians
-                  search for how Amazon works than for an agency, which is why this page answers those questions first.
+                  Based on Australian Google search data we read on 29 October 2026, far more Australians ask how
+                  Amazon works than ask about agencies, so this page answers those questions first.
                 </p>
               </div>
             </div>
@@ -470,15 +486,16 @@ export default function AmazonAgencyAUPage() {
             <div className="section-head head-split">
               <div className="eyebrow">FBA or your own couriers</div>
               <div>
-                <h2>FBA, Multi-Channel Fulfilment or shipping it yourself</h2>
+                <h2>Amazon FBA in Australia vs Multi-Channel Fulfilment vs shipping it yourself</h2>
                 <p className="lead">
                   The fulfilment choice changes your fees, your delivery promise and which system has to know about
                   stock. Here is how the three options compare on what Amazon’s Australian pages say today.
                 </p>
               </div>
             </div>
-            <div className="tablewrap" role="region" tabIndex={0} aria-label="amazon fulfilment comparison">
-              <table>
+            <p className="md:hidden" style={{ fontSize: 13, margin: '0 0 8px' }}>Swipe sideways to see every column.</p>
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="amazon fulfilment comparison" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 720 }}>
                 <thead>
                   <tr>
                     <th>What matters</th>
@@ -493,7 +510,7 @@ export default function AmazonAgencyAUPage() {
                   <tr><th scope="row">Packaging</th><td className="fj">Amazon’s</td><td>Unbranded by default, no extra fee</td><td>Yours</td></tr>
                   <tr><th scope="row">Prime shipping logo</th><td className="fj">FBA listings eligible</td><td>Not an Amazon listing</td><td>Check Amazon’s current programs</td></tr>
                   <tr><th scope="row">Storage cost</th><td className="fj">By cubic metre, plus long-term fees after 365 days</td><td>Same stock pool as FBA</td><td>Your own warehouse cost</td></tr>
-                  <tr><th scope="row">Remote postcodes 2898, 2899, 4875, 6798, 6799</th><td className="fj">Not serviced</td><td>Not serviced (Amazon gave notice it would stop)</td><td>Your carrier’s coverage</td></tr>
+                  <tr><th scope="row">Remote postcodes 2898, 2899, 4875, 6798, 6799</th><td className="fj">Not serviced</td><td>Being withdrawn: Amazon’s MCF page says it will stop serving them, with no date given</td><td>Your carrier’s coverage</td></tr>
                   <tr><th scope="row">Connects to</th><td className="fj">Seller Central</td><td>Shopify, Magento, WooCommerce, or the Selling Partner API</td><td>Your inventory and shipping apps</td></tr>
                 </tbody>
               </table>
@@ -506,11 +523,11 @@ export default function AmazonAgencyAUPage() {
             <div className="au-split">
               <div>
                 <h3>What we usually recommend</h3>
-                <p>
-                  FBA for small, fast-moving products where the Prime logo lifts conversion. Your own warehouse for
-                  bulky, heavy or slow lines, where long-term storage fees would eat the margin. A routing rule for
-                  the five remote postcodes, so those orders go to your own courier without anyone checking by hand.
-                </p>
+                <ul>
+                  <li>FBA for small, fast-moving products where the Prime logo lifts conversion.</li>
+                  <li>Your own warehouse for bulky, heavy or slow lines, where long-term storage fees would eat the margin.</li>
+                  <li>A routing rule for the five remote postcodes, so those orders go to your own courier without anyone checking by hand.</li>
+                </ul>
               </div>
               <div>
                 <h3>When Multi-Channel Fulfilment earns its place</h3>
@@ -542,7 +559,7 @@ export default function AmazonAgencyAUPage() {
                 <img src="/images/au/visual-pass-2026-10-03/shopify-development/dispatch-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/dispatch-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/dispatch-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="Courier satchels being loaded into a white van at a seller's own warehouse, for orders that skip FBA" />
               </VisualSlot>
             </div>
-            <div className="timeline">
+            <div className="timeline timeline-3">
               {STEPS.map((s) => {
                 const [idx, title] = s.t.split(' · ');
                 return (
@@ -578,7 +595,8 @@ export default function AmazonAgencyAUPage() {
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
                   The first decision is ownership. One system owns stock, usually Cin7 Core, Cin7 Omni, Unleashed,
-                  NetSuite, Odoo or Shopify itself. Amazon reads from it, with a buffer per product so a sync delay
+                  NetSuite, Odoo or Shopify itself, connected the way our{' '}
+                  <a href="/au/ecommerce-erp-integration">ecommerce ERP integration work</a> sets out. Amazon reads from it, with a buffer per product so a sync delay
                   never oversells. Orders flow back, so stock drops on your website, on eBay Australia, Kogan or
                   Bunnings Marketplace at the same moment.
                 </p></div>
@@ -587,7 +605,8 @@ export default function AmazonAgencyAUPage() {
                   refunds. Amazon states its fees in AUD and excluding GST, so we post each fee type and its GST to
                   its own account in Xero, MYOB Business, MYOB Acumatica or QuickBooks Online through a clearing
                   account, then match the deposit to the bank feed. Your bookkeeper approves the chart of accounts
-                  mapping before the first sync.
+                  mapping before the first sync. See how we run{' '}
+                  <a href="/au/shopify-xero-integration">Shopify and Xero integration in Australia</a>.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><p>
                   The third is your own store. If you run Shopify or WooCommerce, Amazon’s Multi-Channel Fulfilment
@@ -619,7 +638,7 @@ export default function AmazonAgencyAUPage() {
             <div className="section-head plat-head">
               <div>
                 <div className="eyebrow">How we work</div>
-                <h2>Terms for an Amazon engagement</h2>
+                <h2>How we price and run an Amazon engagement</h2>
               </div>
               <p>
                 These are the same terms we use on every FactoryJet project. They are written so you can compare
@@ -627,7 +646,7 @@ export default function AmazonAgencyAUPage() {
               </p>
             </div>
             <div className="platlist" role="list">
-              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Work on your data before you sign</h3></div><p className="plat-build">Rewritten listings for a few top products, or a stock feed running on a copy of your catalogue. You judge the output, not a pitch deck.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Work on your data before you sign</h3></div><p className="plat-build">Rewritten listings for a few top products, or a stock feed running on a copy of your catalogue. You judge the output.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Fixed price per phase</h3></div><p className="plat-build">Each phase is scoped, priced and signed on its own, with written exclusions. No phase starts until you approve it.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>You own every account and the code</h3></div><p className="plat-build">Seller Central, Amazon Ads, Brand Registry and the integration repository stay in your company name from day one. Hosting for any integration can run in your own cloud account, at cost, with no markup.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Defects fixed inside the build price</h3></div><p className="plat-build">For a cover period agreed before work starts, anything we built that breaks is ours to fix.</p></div>
@@ -738,6 +757,25 @@ export default function AmazonAgencyAUPage() {
                 </div>
               ))}
             </div>
+            <h3 style={{ marginTop: 40 }}>Four kinds of Amazon help, compared</h3>
+            <p className="md:hidden" style={{ fontSize: 13, margin: '8px 0' }}>Swipe sideways to see every column.</p>
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="amazon provider types comparison" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', marginTop: 12 }}>
+              <table style={{ minWidth: 640 }}>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Usually covers</th>
+                    <th>Watch for</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">PPC-only agency</th><td>Sponsored Ads bids, search terms and reports</td><td>Ad results that never reach profit per product, and no help with stock or payouts</td></tr>
+                  <tr><th scope="row">Full-service agency</th><td>Ads, listings, Brand Registry, account health and casework</td><td>Whether it can connect Amazon to Cin7, Xero or MYOB, or stops at Seller Central</td></tr>
+                  <tr><th scope="row">Freelancer</th><td>One skill, such as listing copy or ad set-up</td><td>Cover when they are away, and who holds account access</td></tr>
+                  <tr><th scope="row">In-house hire</th><td>Day-to-day account work inside your team</td><td>One person carrying ads, listings, stock and fees alone</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
 
@@ -746,7 +784,7 @@ export default function AmazonAgencyAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Related FactoryJet services</div>
-              <h2>Beyond Amazon.com.au</h2>
+              <h2>Related services for Australian brands selling on Amazon</h2>
             </div>
             <ul className="agentdir-grid">
               {SIBLINGS.map((s) => (
@@ -781,6 +819,7 @@ export default function AmazonAgencyAUPage() {
               <a href={SRC_FBA} {...extLink}>Amazon Australia, Fulfilment by Amazon</a>
               <a href={SRC_MCF} {...extLink}>Amazon Australia, Multi-Channel Fulfilment</a>
               <a href={SRC_BRAND} {...extLink}>Amazon Australia, Brand Registry</a>
+              <a href={SRC_REG} {...extLink}>Amazon Australia, seller registration guide</a>
               <a href={SRC_ADS} {...extLink}>Amazon Ads, Sponsored Products</a>
               <a href={SRC_RANGE} {...extLink}>eStore Factory, Amazon PPC agency cost in Australia</a>
             </div>
@@ -795,12 +834,12 @@ export default function AmazonAgencyAUPage() {
               <h2>Make Amazon.com.au a channel your back office can see</h2>
               <p>
                 Leave your name and work email. Within 24 hours the founder writes back to arrange a call on your
-                products, your channels and the systems you run. No spam, no obligation.
+                products and the systems you run. No spam, no obligation.
               </p>
             </div>
             <div className="ctas">
               <ModalCTAButton label="See my listings rewritten" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
-              <a className="btn btn-ghost" href="/au/ecommerce-development">See ecommerce development</a>
+              <a href="/au/ecommerce-development" style={{ alignSelf: 'center', textDecoration: 'underline' }}>Or see ecommerce development</a>
             </div>
           </div>
         </section>

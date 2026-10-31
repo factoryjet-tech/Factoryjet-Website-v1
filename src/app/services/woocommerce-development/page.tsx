@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-import { woocommerceDevelopmentAlternates } from '@/data/hreflangMap';
+import { twinAlternates } from '@/data/hreflangMap';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/woocommerce-development',
-    languages: woocommerceDevelopmentAlternates,
+    languages: twinAlternates['woocommerce'],
   },
   robots: {
     index: true,

@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/shopify-edi-integration, built 2026-10-29.
@@ -37,12 +38,13 @@ import '../ai-agents/ai-agents.css';
       FAQ renders. Never add a second list of questions. */
 
 const CANONICAL = 'https://factoryjet.com/uk/shopify-edi-integration';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
+const UPDATED_LABEL = '31 October 2026';
 const READ_ON = '29 October 2026';
-const TITLE = 'Shopify EDI Integration UK: EANCOM, Tradacoms, GS1 | FactoryJet';
-const H1 = 'Shopify EDI Integration for UK Suppliers: Retailer and Distributor Orders Into Shopify, Despatch Advice and Invoices Back Out';
+const TITLE = 'Shopify EDI Integration UK: EANCOM & Tradacoms | FactoryJet';
+const H1 = 'Shopify EDI Integration for UK Suppliers';
 const DESCRIPTION =
-  'Shopify EDI integration for UK suppliers to retailers and distributors: EANCOM orders into Shopify, despatch advice and VAT invoices back, linked to Xero, Sage or your ERP.';
+  'Shopify EDI integration for UK suppliers: EANCOM orders from retailers into Shopify, despatch advice and VAT invoices back, linked to Xero, Sage or your ERP.';
 
 /* Design values, copied from ../ai-agents/ai-agents.css so inline styles stay
    on-system without CSS custom property references in this file. */
@@ -115,7 +117,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'basics',
     question: 'What is EDI in the UK?',
     answer:
-      'EDI means electronic data interchange. GS1 UK describes it as the automated exchange of business documents, such as purchase orders, invoices and shipping notices, between different computer systems. The standards GS1 UK supports are GS1 EANCOM, GS1 XML, GS1 UN/CEFACT XML Profiles and GS1 EDI Business Terms, and some older links use Tradacoms. Nobody retypes an order from a PDF or an email: the buyer’s system sends it, and yours reads it.',
+      'EDI means electronic data interchange, and in UK retail EDI is how most large buyers send orders. GS1 UK describes it as the automated exchange of business documents, such as purchase orders, invoices and shipping notices, between different computer systems. The standards GS1 UK supports are GS1 EANCOM, GS1 XML, GS1 UN/CEFACT XML Profiles and GS1 EDI Business Terms, and some older links use Tradacoms. Nobody retypes an order from a PDF or an email: the buyer’s system sends it, and yours reads it.',
   },
   {
     category: 'basics',
@@ -139,13 +141,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'basics',
     question: 'What is the difference between API and EDI integration?',
     answer:
-      'EDI is a fixed message format agreed between trading partners, often carried by an EDI provider. An API is a way for one program to ask another for data directly, which is how Shopify, Xero and most ERPs are reached. A Shopify EDI link uses both. The EDIFACT message arrives from the buyer, and the link turns it into Shopify API calls, such as creating a draft order with the buyer’s purchase order number.',
+      'EDI is a fixed message format agreed between trading partners, often carried by an EDI provider. An API is a way for one program to ask another for data directly, which is how Shopify, Xero and most ERPs are reached. A Shopify EDI link, like most ecommerce EDI, uses both. The EDIFACT message arrives from the buyer, and the link turns it into Shopify API calls, such as creating a draft order with the buyer’s purchase order number.',
   },
   {
     category: 'basics',
-    question: 'What has replaced EDI?',
+    question: 'How do EDI messages travel: AS2, a VAN or SFTP?',
     answer:
-      'Nothing has, for UK retail and wholesale ordering. GS1 UK still publishes EANCOM and GS1 XML as its EDI standards. What is changing is invoicing. The government’s e-invoicing consultation response says all VAT invoices must be issued as e-invoices from 2029, for business and government buyers, with the standards still to be set. Suppliers that already send EDI invoices start from a good position.',
+      'The message format and the way it travels are two separate choices. AS2, set out in RFC 4130, sends EDI files over the web with a digital signature, encryption and a signed receipt back. A VAN, or value-added network, is a provider’s mailbox service that passes files between trading partners. SFTP is a secure file drop both sides log in to. Your buyer’s EDI guide names the one it uses.',
   },
   {
     category: 'basics',
@@ -211,7 +213,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'shopify',
-    question: 'Can EDI orders reach Xero, Sage or NetSuite as well as Shopify?',
+    question: 'Can NetSuite EDI orders, or Xero and Sage ones, run alongside Shopify?',
     answer:
       'Yes. The order can go to Shopify, and the invoice and stock movement to Xero, Sage 50, Sage 200, Sage Intacct, QuickBooks, NetSuite, Dynamics 365 Business Central or Odoo. Warehouse systems such as Linnworks, Mintsoft or Brightpearl can sit in the chain too. The first job is naming one master for orders and one for stock, so goods come off the shelf once and the invoice is raised once.',
   },
@@ -219,7 +221,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'shopify',
     question: 'What happens if a Shopify webhook is missed?',
     answer:
-      'The link has to notice and catch up. Shopify’s developer documentation says webhook delivery is not always guaranteed, that ordering is not guaranteed, and that an app should not rely on webhooks alone. It recommends reconciliation jobs that fetch data from Shopify on a schedule. We build one into every EDI link, so a despatch advice or an invoice is never left unsent because one notification went missing.',
+      'The link has to notice and catch up. A webhook is the alert Shopify sends when something changes, such as a new fulfilment. Shopify’s developer documentation says webhook delivery is not always guaranteed, that ordering is not guaranteed, and that an app should not rely on webhooks alone. It recommends reconciliation jobs: scheduled checks that fetch data from Shopify and compare it. We build one into every EDI link, so a missing notification does not leave a despatch advice or an invoice unsent.',
   },
   {
     category: 'shopify',
@@ -232,13 +234,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'working',
     question: 'How much does Shopify EDI integration cost in the UK?',
     answer:
-      'The EDI provider and the build are priced separately. XEDI, a UK provider, listed plans on 29 October 2026 at £128, £256 and £348 per trading partner a month, with usage charged on top. Those three are web-portal tiers: XEDI’s comparison table ticks Shopify and WooCommerce integration only on Enterprise, which is custom-priced. The page does not say whether VAT is added. We could not verify a published GBP range for the build from a named UK agency, so FactoryJet quotes its work as a fixed price in writing after a short scoping call.',
+      'The EDI provider and the build are priced separately. On 29 October 2026, XEDI, a UK provider, listed web-portal plans at £128, £256 and £348 per trading partner a month, plus usage. Its comparison table ticks Shopify integration only on Enterprise, which is custom-priced. We found no published GBP build range from a named UK agency. FactoryJet quotes the build as a fixed price per phase, in writing, after a short scoping call.',
   },
   {
     category: 'working',
     question: 'How long does it take to go live with EDI on Shopify?',
     answer:
-      'Mostly on your buyer’s timetable. Each buyer has its own testing, with sample orders and invoices passed back and forth before it switches you to live. Mapping your products to GTINs and your delivery points to GLNs takes time of its own. We put the timeline in the written quote, set against the go-live date your buyer has given you.',
+      'It depends on four steps, and three are not ours. Your team supplies the GTIN for each product and the GLN for each delivery point. Your EDI provider sets up the mailbox for each buyer. We build and show the link on your own data. Then the buyer runs its own test cycle and decides when you go live. The written quote sets our part against the go-live date your buyer gave you.',
   },
   {
     category: 'working',
@@ -250,13 +252,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'working',
     question: 'Who owns the link, and who looks after it?',
     answer:
-      'You own the code and the repository from day one. Hosting can run in your own accounts, at cost, with no markup. Defects are fixed inside the build price for a cover period agreed before work starts. Support is optional: FactoryJet quotes the build, and any support you choose, as fixed prices, and each change is quoted and approved with no monthly minimum.',
+      'You own the code and the repository from day one. Hosting can run in your own accounts, at cost, with no markup. Defects are fixed inside the build price for a cover period agreed before work starts. Support is optional. The build is a fixed price per phase, quoted in writing. Each change is quoted and approved per request, and there is no monthly minimum.',
   },
   {
     category: 'working',
     question: 'We already have an EDI provider and a 3PL. Can you build around them?',
     answer:
-      'Yes. If you already trade through an EDI provider, we build on it rather than move you. Your provider keeps carrying messages to and from buyers, and your warehouse or 3PL keeps packing orders. We build what joins them: Shopify, your accounts and your stock system each receiving and sending what the buyer’s guide asks for.',
+      'Yes. If you already trade through an EDI provider, we build on it rather than move you. Your provider keeps carrying messages to and from buyers, and your warehouse or 3PL (the outside logistics firm that stores and ships your stock) keeps packing orders. We build what joins them: Shopify, your accounts and your stock system each receiving and sending what the buyer’s guide asks for.',
   },
 ];
 
@@ -354,11 +356,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: {
     canonical: CANONICAL,
-    languages: {
-      'en-GB': CANONICAL,
-      'en-US': 'https://factoryjet.com/services/shopify-edi-integration',
-      'x-default': 'https://factoryjet.com/services/shopify-edi-integration',
-    },
+    languages: twinAlternates['shopify-edi-integration'],
   },
   openGraph: {
     title: TITLE,
@@ -372,6 +370,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const scList = { listStyle: 'none', margin: 0, padding: 0 } as const;
 const srcNote = { fontFamily: T.fm, fontSize: 12, color: T.n400, marginTop: 12 } as const;
 const srcLink = { textDecoration: 'underline' } as const;
 const inlineLink = { textDecoration: 'underline', color: T.ink, fontWeight: 600 } as const;
@@ -415,7 +414,8 @@ export default function ShopifyEdiIntegrationUKPage() {
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  A UK retailer, wholesaler or distributor has said yes to your range, and its buying system will send
+                  Retailer and distributor orders come into Shopify. Despatch advice and invoices go back out. A UK
+                  retailer, wholesaler or distributor has said yes to your range, and its buying system will send
                   purchase orders by EDI. FactoryJet connects those orders to Shopify, and to the Xero, Sage, NetSuite,
                   Business Central or Odoo set-up behind it. Order responses, despatch advice and VAT invoices go back
                   in the format your buyer’s guide asks for.
@@ -424,7 +424,7 @@ export default function ShopifyEdiIntegrationUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -432,24 +432,26 @@ export default function ShopifyEdiIntegrationUKPage() {
                 </div>
               </div>
 
-              <div className="card card-top-orange">
+              <div className="card card-top-orange" style={{ position: 'sticky', top: 96 }}>
                 <span className="eyebrow">The four messages most UK suppliers meet first</span>
-                <div className="scorecard-row">
+                <ul style={scList}>
+                <li className="scorecard-row">
                   <div><div className="scorecard-metric">ORDERS: purchase order</div><div className="scorecard-note">buyer to you, lands as a Shopify draft order</div></div>
                   <div className="scorecard-val" style={{ fontSize: 15 }}>In</div>
-                </div>
-                <div className="scorecard-row">
+                </li>
+                <li className="scorecard-row">
                   <div><div className="scorecard-metric">ORDRSP: order response</div><div className="scorecard-note">lines accepted, changed or refused</div></div>
                   <div className="scorecard-val" style={{ fontSize: 15 }}>Out</div>
-                </div>
-                <div className="scorecard-row">
+                </li>
+                <li className="scorecard-row">
                   <div><div className="scorecard-metric">DESADV: despatch advice</div><div className="scorecard-note">what is on each SSCC-labelled pallet</div></div>
                   <div className="scorecard-val" style={{ fontSize: 15 }}>Out</div>
-                </div>
-                <div className="scorecard-row">
+                </li>
+                <li className="scorecard-row">
                   <div><div className="scorecard-metric">INVOIC: invoice</div><div className="scorecard-note">VAT shown separately, line by line</div></div>
                   <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>Out</div>
-                </div>
+                </li>
+                </ul>
                 <p style={{ fontSize: 12.5, marginTop: 10 }}>
                   Message names from the UN/EDIFACT directory. EANCOM, the GS1 subset of UN/EDIFACT, uses the same
                   names.
@@ -482,9 +484,9 @@ export default function ShopifyEdiIntegrationUKPage() {
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Switching on an EDI mailbox is the quick part. The work is deciding what happens when a 40-line order
-              arrives for a store GLN you have never seen, at a case size Shopify sells as single units, on terms your
-              accounts system has to chase. We write those rules down with you first, before any message is mapped.
+              Before any message is mapped, we write down with you what happens when a 40-line order arrives for a
+              store GLN you have never seen, at a case size Shopify sells as single units, on terms your accounts
+              system has to chase. Those rules take longer to agree than the EDI mailbox takes to switch on.
             </p>
           </div>
         </section>
@@ -494,7 +496,7 @@ export default function ShopifyEdiIntegrationUKPage() {
           <div className="wrap">
             <ul className="col-4" style={{ gap: 20 }}>
               {[
-                { v: '500+', t: 'businesses served by FactoryJet since it was founded in 2014', s: 'About FactoryJet', u: '/about' },
+                { v: '2022', t: 'is the year GS1 says the EANCOM standards files were last updated', s: 'GS1, EANCOM', u: SRC.gs1Eancom.url },
                 { v: '1998', t: 'is the year since which GS1 UK says no new Tradacoms message types have been developed', s: 'GS1 UK, Tradacoms', u: SRC.gs1ukTradacoms.url },
                 { v: '1 July 2017', t: 'is the date GS1 UK stopped supporting Tradacoms and backed EANCOM and GS1 XML', s: 'GS1 UK, ending support', u: SRC.gs1ukTradacomsEnd.url },
                 { v: '2029', t: 'is when the government says all VAT invoices must be issued as e-invoices', s: 'GOV.UK, e-invoicing response', u: SRC.govEinvoice.url },
@@ -542,10 +544,12 @@ export default function ShopifyEdiIntegrationUKPage() {
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">Status as GS1 UK and GS1 describe it</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">EANCOM</div><div className="scorecard-note">GS1 subset of UN/EDIFACT, files updated 2022</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Supported</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">GS1 XML</div><div className="scorecard-note">actively developed, used worldwide</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Supported</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Tradacoms</div><div className="scorecard-note">early 1980s, no new messages since 1998</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Legacy</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">ANSI X12</div><div className="scorecard-note">the US format, numbered documents</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>US buyers</div></div>
+                <ul style={scList}>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">EANCOM</div><div className="scorecard-note">GS1 subset of UN/EDIFACT, files updated 2022</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Supported</div></li>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">GS1 XML</div><div className="scorecard-note">actively developed, used worldwide</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Supported</div></li>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">Tradacoms</div><div className="scorecard-note">early 1980s, no new messages since 1998</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Legacy</div></li>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">ANSI X12</div><div className="scorecard-note">the US format, numbered documents</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>US buyers</div></li>
+                </ul>
                 <p style={{ fontSize: 12.5, marginTop: 10 }}>
                   RFC 4130 names X12 and UN/EDIFACT as the two EDI formats it carries. For X12 work, see our{' '}
                   <a href="/services/shopify-edi-integration" style={inlineLink}>US Shopify EDI integration page</a>.
@@ -566,7 +570,8 @@ export default function ShopifyEdiIntegrationUKPage() {
                 buyers start with the first four. The rest depend on the account.
               </p>
             </div>
-            <div className="card mt-10" tabIndex={0} role="region" aria-label="EDIFACT messages and Shopify" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={4}>
+            <p className="md:hidden mt-6" style={srcNote}>Swipe sideways to see every column.</p>
+            <div className="card mt-10" tabIndex={0} role="region" aria-label="EDIFACT messages and Shopify" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={4}>
               <thead>
                 <tr>
                   <th>Message</th>
@@ -605,7 +610,8 @@ export default function ShopifyEdiIntegrationUKPage() {
                 pallet gets invoiced twice. The list below is where we start, and yours is agreed in writing.
               </p>
             </div>
-            <div className="card mt-10" tabIndex={0} role="region" aria-label="Record owners" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 760 }} data-columns={3}>
+            <p className="md:hidden mt-6" style={srcNote}>Swipe sideways to see every column.</p>
+            <div className="card mt-10" tabIndex={0} role="region" aria-label="Record owners" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 760 }} data-columns={3}>
               <thead>
                 <tr>
                   <th>Record</th>
@@ -639,7 +645,7 @@ export default function ShopifyEdiIntegrationUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">VAT and e-invoicing</span>
-                <h2>VAT invoices, Making Tax Digital and the 2029 e-invoicing change</h2>
+                <h2>EDI invoicing in the UK: VAT, Making Tax Digital and the 2029 e-invoicing change</h2>
                 <div className="stack mt-6">
                   <p>
                     <b>What the invoice carries.</b> GOV.UK says VAT invoices must include your VAT number and show
@@ -656,10 +662,15 @@ export default function ShopifyEdiIntegrationUKPage() {
                   <p>
                     <b>2029.</b> The government’s response to its e-invoicing consultation, updated 26 November 2025,
                     says all VAT invoices must be issued as e-invoices from 2029. That covers invoices to businesses
-                    and to government, not to consumers. It says the government has focused on a decentralised model and will
-                    develop standards for interoperability, and it names EDIFACT among the formats businesses use
-                    today. The same response says public bodies already have to accept e-invoices that comply with
-                    BS EN 16931.
+                    and to government, not to consumers. It names EDIFACT among the formats businesses use today.
+                  </p>
+                  <p>
+                    The response says the government has focused on a decentralised model. Businesses send
+                    e-invoices directly through their chosen software providers, rather than through a central
+                    government platform. It will develop standards for interoperability, so that
+                    different invoicing systems can read each other’s files. Public bodies already have to accept
+                    e-invoices that comply with BS EN 16931, a standard the response points to for cross-border
+                    compatibility.
                   </p>
                   <p>
                     Because the UK standard is not set yet, we keep the invoice output separate from the order rules.
@@ -670,10 +681,12 @@ export default function ShopifyEdiIntegrationUKPage() {
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">What VAT Notice 700/22 accepts as a digital link</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">API transfer</div><div className="scorecard-note">how Shopify and most accounts systems are reached</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Accepted</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Automated data transfer</div><div className="scorecard-note">an EDI provider passing messages on</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Accepted</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">XML or CSV import and export</div><div className="scorecard-note">download from one system, upload to another</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Accepted</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Copy and paste, or retyping</div><div className="scorecard-note">HMRC does not count it</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Not a link</div></div>
+                <ul style={scList}>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">API transfer</div><div className="scorecard-note">how Shopify and most accounts systems are reached</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Accepted</div></li>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">Automated data transfer</div><div className="scorecard-note">an EDI provider passing messages on</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Accepted</div></li>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">XML or CSV import and export</div><div className="scorecard-note">download from one system, upload to another</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Accepted</div></li>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">Copy and paste, or retyping</div><div className="scorecard-note">HMRC does not count it</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Not a link</div></li>
+                </ul>
               </div>
             </div>
           </div>
@@ -709,10 +722,12 @@ export default function ShopifyEdiIntegrationUKPage() {
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">One UK provider’s list prices, read on {READ_ON}</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">XEDI Growth</div><div className="scorecard-note">receive orders, send invoices</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£128</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">XEDI Scale</div><div className="scorecard-note">adds despatch notices and SKU mapping</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£256</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">XEDI Advanced</div><div className="scorecard-note">adds automated invoice reconciliation</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£348</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">XEDI Enterprise</div><div className="scorecard-note">Shopify, ERP and API integration</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Custom</div></div>
+                <ul style={scList}>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">XEDI Growth</div><div className="scorecard-note">receive orders, send invoices</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£128</div></li>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">XEDI Scale</div><div className="scorecard-note">adds despatch notices and SKU mapping</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£256</div></li>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">XEDI Advanced</div><div className="scorecard-note">adds automated invoice reconciliation</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£348</div></li>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">XEDI Enterprise</div><div className="scorecard-note">Shopify, ERP and API integration</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Custom</div></li>
+                </ul>
                 <p style={{ fontSize: 12.5, marginTop: 10 }}>
                   Per trading partner, per month, with usage charged on top. The pricing page does not say whether VAT
                   is added. Growth, Scale and Advanced are web-portal plans. XEDI’s comparison table lists Shopify
@@ -737,8 +752,8 @@ export default function ShopifyEdiIntegrationUKPage() {
               <span className="eyebrow">Where links break</span>
               <h2>Five places a Shopify EDI link needs its own rules</h2>
               <p className="lead mt-4">
-                The messages are standard. Your catalogue, delivery points and accounts are not. These are the five
-                rules we write down before mapping a single field.
+                Your catalogue, delivery points and accounts are specific to your business, even when the messages
+                follow a standard. These are the five rules we write down before mapping a single field.
               </p>
             </div>
             <div className="stack mt-10" style={{ maxWidth: 820 }}>
@@ -768,9 +783,10 @@ export default function ShopifyEdiIntegrationUKPage() {
               </p>
               <h3 className="mt-6">5. A missed webhook must not mean a missed invoice</h3>
               <p>
-                Shopify’s developer documentation says webhook delivery is not always guaranteed, ordering is not
-                guaranteed, and apps should run reconciliation jobs that fetch data on a schedule. Every EDI link we
-                build has one, so a fulfilment that was never announced still produces its despatch advice and
+                A webhook is the alert Shopify sends to another system when something changes, such as an order being
+                fulfilled. Shopify’s developer documentation says webhook delivery is not always guaranteed, ordering
+                is not guaranteed, and apps should run reconciliation jobs: scheduled checks that fetch the data from
+                Shopify and compare it. Every EDI link we build has one, so a fulfilment that was never announced still produces its despatch advice and
                 invoice.
               </p>
             </div>
@@ -783,7 +799,7 @@ export default function ShopifyEdiIntegrationUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 820 }}>
               <span className="eyebrow">UK trade work</span>
-              <h2>Two UK trade builds where the same record-owner work came first</h2>
+              <h2>UK trade integration work: GPSUK on Commerceflo and Sow Easy on Odoo</h2>
               <p className="lead mt-4">
                 Neither is a Shopify store. Both turned on the question an EDI link turns on: which system owns stock,
                 prices and the order.
@@ -835,11 +851,13 @@ export default function ShopifyEdiIntegrationUKPage() {
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">Running a tender? Send the RFP. Otherwise, send these</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Your buyers</div><div className="scorecard-note">retailers and distributors, live or about to go live</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>1</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Each buyer’s EDI guide</div><div className="scorecard-note">format, versions, test steps</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>2</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">A sample order file</div><div className="scorecard-note">EANCOM or Tradacoms, from the guide</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>3</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Your systems</div><div className="scorecard-note">Shopify plan, accounts, ERP, warehouse</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>4</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">The go-live date</div><div className="scorecard-note">the one your buyer gave you</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>5</div></div>
+                <ul style={scList}>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">Your buyers</div><div className="scorecard-note">retailers and distributors, live or about to go live</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>1</div></li>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">Each buyer’s EDI guide</div><div className="scorecard-note">format, versions, test steps</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>2</div></li>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">A sample order file</div><div className="scorecard-note">EANCOM or Tradacoms, from the guide</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>3</div></li>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">Your systems</div><div className="scorecard-note">Shopify plan, accounts, ERP, warehouse</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>4</div></li>
+                  <li className="scorecard-row"><div><div className="scorecard-metric">The go-live date</div><div className="scorecard-note">the one your buyer gave you</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>5</div></li>
+                </ul>
                 <div className="mt-6">
                   <ModalCTAButton label="Send my EDI brief" region="uk" modalVariant="default" btnVariant="primary-light" />
                 </div>
@@ -866,7 +884,7 @@ export default function ShopifyEdiIntegrationUKPage() {
                 { n: '04', t: 'Choose the lightest route that fits', d: 'Your current EDI provider and its Shopify connector come first. We quote custom work only for the rules a connector cannot follow, as a fixed price in writing.' },
                 { n: '05', t: 'Show it on your own data', d: 'Before a contract, a sample order from the buyer’s guide arrives in a test store, and the order response, despatch advice and invoice it would send are laid out for you to check.' },
                 { n: '06', t: 'Pass the buyer’s tests', d: 'A changed order, a part delivery, an unknown GLN, a zero-rated line and a rejected message all go through, then the buyer’s own test cycle.' },
-                { n: '07', t: 'Go live and watch the first orders', d: 'For the first weeks we check every order against its despatch advice and invoice. If you choose support, the team that built the link looks after it. The code and the map are yours either way.' },
+                { n: '07', t: 'Go live and check each early order line by line', d: 'For each early live order we compare the ORDERS lines with the Shopify order, the DESADV SSCCs with the warehouse labels, and the INVOIC totals with the invoice in your accounts system. Any APERAK rejection raises an alert to a named person. If you choose support, the team that built the link looks after it. The code and the map are yours either way.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
@@ -887,10 +905,10 @@ export default function ShopifyEdiIntegrationUKPage() {
               <span className="eyebrow">Who this is for</span>
               <h2>UK brands, manufacturers and wholesalers supplying trade buyers by EDI</h2>
             </div>
-            <ul className="col-3 mt-10">
-              <li className="card"><h3>Brands that won a retail listing</h3><p className="mt-4">You sell on Shopify and a UK retailer has asked for EANCOM orders, despatch advice and invoices before the first delivery.</p></li>
-              <li className="card"><h3>Food, drink and household makers</h3><p className="mt-4">Several grocers or wholesalers, each with its own guide, case sizes and delivery points, all feeding one Shopify store.</p></li>
-              <li className="card"><h3>Distributors and manufacturers</h3><p className="mt-4">Trade customers whose buying systems send purchase orders, with stock in an ERP and invoices raised in Sage, NetSuite or Business Central.</p></li>
+            <ul className="stack mt-10" style={{ ...scList, maxWidth: 820 }}>
+              <li className="card"><h3>Brands that won a retail listing</h3><p className="mt-4">You sell on Shopify and a UK retailer has asked for EANCOM orders, despatch advice and invoices before the first delivery. Your first rule: every variant the retailer can order needs the GTIN it orders by, before the first ORDERS message arrives.</p></li>
+              <li className="card"><h3>Food, drink and household makers</h3><p className="mt-4">Several grocers or wholesalers, each with its own guide, case sizes and delivery points, all feeding one Shopify store. Your first rule: an outer case of 12 carries its own GTIN, and the link multiplies it into singles for Shopify.</p></li>
+              <li className="card"><h3>Distributors and manufacturers</h3><p className="mt-4">Trade customers whose buying systems send purchase orders, with stock in an ERP and invoices raised in Sage, NetSuite or Business Central. Your first rule: the ERP stays the one master for stock, so goods come off the shelf once.</p></li>
             </ul>
             <p className="mt-8" style={{ maxWidth: 780 }}>
               For the store itself, see <a href="/uk/shopify-plus" style={inlineLink}>Shopify Plus in the UK</a> or{' '}
@@ -909,8 +927,7 @@ export default function ShopifyEdiIntegrationUKPage() {
               <h2>Sources, read on {READ_ON}</h2>
               <p className="lead mt-4">
                 Every standard, tax rule, platform feature and list price on this page was read on the pages below on
-                that day. Search figures in the page notes come from DataForSEO for the United Kingdom, pulled the
-                same day. Prices move and HMRC sets the tax rules, so open the linked page before you act on one.
+                that day. Prices move and HMRC sets the tax rules, so open the linked page before you act on one.
               </p>
             </div>
             <ul className="col-2 mt-8" style={{ gap: 10 }}>
@@ -943,7 +960,7 @@ export default function ShopifyEdiIntegrationUKPage() {
                 </nav>
                 <div className="faq-sidebar-cta">
                   <ModalCTAButton label="Ask the founder a question" region="uk" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Bhavesh replies within one business day.</p>
+                  <p>Bhavesh replies within 24 hours.</p>
                 </div>
               </aside>
 
@@ -978,13 +995,12 @@ export default function ShopifyEdiIntegrationUKPage() {
             <span className="eyebrow">Next step</span>
             <h2>Take your next retailer order straight into Shopify</h2>
             <p className="mt-4">
-              Send your name and work email. Bhavesh replies within one business day to set up a short call about your
+              Send your name and work email. Bhavesh replies within 24 hours to set up a short call about your
               buyers, their EDI guides and the systems behind your store. You leave the call knowing which route fits
               and what the first phase covers.
             </p>
             <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="Scope my EDI link" region="uk" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/contact" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Contact us</a>
             </div>
           </div>
         </section>

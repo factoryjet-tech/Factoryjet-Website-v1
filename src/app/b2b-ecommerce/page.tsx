@@ -13,6 +13,7 @@ import B2bWholesaleCalculator from '@/components/commerce/B2bWholesaleCalculator
 import Net30PaymentComparison from '@/components/commerce/Net30PaymentComparison';
 import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -49,10 +50,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/b2b-ecommerce',
-    languages: {
-      'en-US': 'https://factoryjet.com/b2b-ecommerce',
-      'x-default': 'https://factoryjet.com/b2b-ecommerce',
-    },
+    languages: twinAlternates['b2b-ecommerce'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };

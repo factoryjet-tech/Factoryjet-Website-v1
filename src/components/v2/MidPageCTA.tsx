@@ -36,7 +36,7 @@ export default function MidPageCTA({
   sub,
   label = 'Talk to the founder',
   href = '/contact',
-  note = 'Bhavesh replies within one business day.',
+  note = 'Bhavesh replies within 24 hours.',
 }: MidPageCTAProps) {
   return (
     <section className="bg-[#FAFAF7] border-y border-gray-100 py-12 md:py-16">

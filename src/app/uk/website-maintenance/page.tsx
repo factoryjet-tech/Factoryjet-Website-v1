@@ -4,7 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
-import { websiteMaintenanceAlternates } from '@/data/hreflangMap';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/website-maintenance, built 2026-10-29.
@@ -24,12 +24,15 @@ import '../ai-agents/ai-agents.css';
       schema graph, footer). */
 
 const CANONICAL = 'https://factoryjet.com/uk/website-maintenance';
-const UPDATED = '2026-10-29';
+const PUBLISHED = '2026-10-29';
+const UPDATED = '2026-10-31';
+const UPDATED_LABEL = '31 October 2026';
 const READ_ON = '29 October 2026';
-const TITLE = 'Website Maintenance Services UK | Stores and B2B | FactoryJet';
-const H1 = 'Website Maintenance for UK Businesses: Updates Tested on Staging and Integrations Checked Every Month';
+const READ_ON_HOSTS = '31 October 2026';
+const TITLE = 'Website Maintenance Services UK | Stores & B2B | FactoryJet';
+const H1 = 'Website Maintenance for UK Stores and B2B Sites, With Every Update Tested First';
 const DESCRIPTION =
-  'Website maintenance for UK stores and B2B sites: updates tested on staging, restorable backups, security patching and checks on your Xero, Sage or Linnworks links.';
+  'Website maintenance for UK stores and B2B sites: updates tested on staging, backups we restore, security patching and checks on Xero, Sage or Linnworks links.';
 
 /* Design tokens, copied by value from ../ai-agents/ai-agents.css so inline
    styles stay on-system without CSS custom property references in this file. */
@@ -81,6 +84,13 @@ const SRC = {
   // £300 a month; comprehensive management with SEO, content and development £500 to £2,000-plus a month.
   // VAT not stated.
   redevolution: { label: 'Red Evolution, website management cost in the UK (Jun 2026)', url: 'https://www.redevolution.com/blog/how-much-does-website-management-cost-in-the-uk' },
+  // Read 2026-10-31. Kinsta docs: "All plugins and themes are updated, including inactive ones." Screenshots
+  // compared before and after each update; on a detected change "Kinsta automatically restores a backup
+  // taken before the update"; up to five test URLs. No mention of checkout, order or integration tests.
+  kinsta: { label: 'Kinsta, Automatic Updates docs', url: 'https://kinsta.com/docs/wordpress-hosting/wordpress-plugins-themes/wordpress-plugins-themes-automatic-updates/' },
+  // Read 2026-10-31. WP Engine UK page: full backup before changes; chosen pages compared desktop and mobile;
+  // "Automatic rollback the moment a visual test fails"; checkout and cart URLs can be included in the visual test.
+  wpengine: { label: 'WP Engine, Smart Plugin Manager', url: 'https://wpengine.com/gb/smart-plugin-manager/' },
 } as const;
 
 type SrcKey = keyof typeof SRC;
@@ -102,6 +112,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'If it earns money, yes. Software around your site changes every month whether you touch it or not. PHP 8.2 loses security support on 31 December 2026, and Shopify ships a new API version every three months. A site left alone for a year usually has a backlog of updates that are riskier to apply all at once.' },
   { category: 'basics', question: 'What is the difference between website maintenance and website management services?',
     answer: 'The words overlap, and UK agencies use them loosely. Maintenance usually means keeping the site safe and working: updates, backups, security and fixes. Management often adds the work of changing the site: new pages, content, campaign landing pages and reporting. Ask any provider for a written list of tasks. The list tells you more than the name of the plan.' },
+  { category: 'basics', question: 'Who maintains a website, and is that a webmaster’s job?',
+    answer: 'On most UK business sites, three parties share it. The host runs the server. The owner or an in-house marketer edits content. A developer or agency handles updates, code and integrations. “Webmaster” is an older name for one person doing all three. Whoever does it, put the split in writing, so a failed update or a broken Xero sync has a named owner.' },
+  { category: 'basics', question: 'How often should a website be maintained?',
+    answer: 'At least once a month, with urgent security fixes going out sooner. Cyber Essentials sets 14 days for fixes to critical or high-risk flaws. Plugin and theme updates, a backup restore test and a traced test order fit a monthly cycle. Bigger jobs, such as a PHP upgrade, are planned a few times a year around your trading calendar.' },
   { category: 'basics', question: 'What is a website care plan, and is it worth paying for?',
     answer: 'A care plan is a monthly maintenance service sold as a named package, often with tiers. Cheaper tiers are mostly automated updates and backups. Higher tiers add developer time, testing and change requests. The useful questions are whether updates are tested on a copy of the site before going live, and whether anyone ever restores a backup to prove it works. If both happen every month, it is worth paying for.' },
   { category: 'basics', question: 'Can you maintain a site that a different agency built?',
@@ -111,9 +125,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── Cost, VAT and pricing ──
   { category: 'cost', question: 'How much does website maintenance cost in the UK?',
-    answer: 'Rattlesnake, a London studio, sampled 15 UK providers in August 2026 and found entry care plans at £15 to £59 a month, managed business care at £60 to £149, and ecommerce or advanced CMS care at £99 to £249 a month or a custom quote. Those are market figures, not our prices. VAT treatment varied between providers in the sample.' },
+    answer: 'Rattlesnake, a London studio, sampled 15 UK providers in August 2026 and found entry care plans at £15 to £59 a month, managed business care at £60 to £149, and ecommerce or advanced CMS care at about £100 to £250 a month or a custom quote. Those are market figures, not our prices. VAT treatment varied between providers in the sample.' },
   { category: 'cost', question: 'How much do website maintenance packages cost for an online store?',
-    answer: 'In Rattlesnake’s August 2026 sample of 15 UK providers, care for stores, memberships and integrated platforms sat at £99 to £249 a month or a custom quote, and development retainers for revenue-critical sites at £149 to £379 or more. Stores cost more because checkout, payments and stock sync need testing after every update. Each system the store talks to adds work.' },
+    answer: 'In Rattlesnake’s August 2026 sample of 15 UK providers, care for stores, memberships and integrated platforms sat at about £100 to £250 a month or a custom quote, and development retainers for revenue-critical sites at £149 to £379 or more. Stores cost more because checkout, payments and stock sync need testing after every update. Each system the store talks to adds work.' },
   { category: 'cost', question: 'Are UK maintenance prices quoted with or without VAT?',
     answer: 'Both, which is why like-for-like comparison is hard. In Rattlesnake’s sample of 15 published plans, some providers quoted plus VAT, one included it and several did not say. At the standard 20% rate, a £79 fee before VAT becomes £94.80. Ask every provider for a figure that states VAT either way before you compare.' },
   { category: 'cost', question: 'Why do some agencies charge £500 a month or more?',
@@ -122,9 +136,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'There is no FactoryJet rate card on this page, because two sites on the same platform can need different care. After a free check of your site, FactoryJet quotes the takeover work and any ongoing support you choose as fixed prices in writing. Changes outside that scope are quoted and approved one at a time, with no monthly minimum for work you do not use.' },
 
   // ── Platforms and integrations ──
-  { category: 'systems', question: 'Do you maintain WordPress and WooCommerce sites?',
-    answer: 'Yes. WordPress and WooCommerce need the most care, because plugins are the usual way in for attackers and the usual cause of a broken checkout. WordPress.org recommends PHP 8.3 or newer, and says PHP 7.4-era versions have reached end of life and may expose a site to security vulnerabilities. We plan PHP upgrades on a staging copy, test the plugins against them, then move the live site.' },
-  { category: 'systems', question: 'Do you look after Magento and Shopify stores as well?',
+  { category: 'systems', question: 'Do you offer WordPress support and WooCommerce maintenance?',
+    answer: 'Yes. WordPress maintenance and WooCommerce care take the most work, because plugins are the usual way in for attackers and the usual cause of a broken checkout. WordPress.org recommends PHP 8.3 or newer, and says PHP 7.4-era versions have reached end of life and may expose a site to security vulnerabilities. PHP.net ends security support for PHP 8.2 on 31 December 2026. We plan each PHP upgrade on a staging copy, test the plugins against it, then move the live site.' },
+  { category: 'systems', question: 'Do you provide Magento support and look after Shopify stores?',
     answer: 'Yes. Magento and Adobe Commerce need security patches and extension updates applied with care, and we have a separate UK Magento page for that work. Shopify patches its own platform, but custom apps, theme code and integrations still need planned updates as Shopify retires API versions, each supported for at least 12 months. Custom Next.js and headless builds are covered too.' },
   { category: 'systems', question: 'Our store talks to Xero, Sage or Linnworks. Is that part of maintenance?',
     answer: 'It should be, and it is the part most care plans leave out. A plugin update can quietly stop orders reaching Xero, Sage, QuickBooks, NetSuite, Business Central, Odoo, Brightpearl, Linnworks or Mintsoft, and nobody notices until month end. We check those links after each update by following a real test order through to the other system and comparing the totals.' },
@@ -132,16 +146,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'If staff fill the gap by copying totals across by hand, that step is no longer a digital link. HMRC’s VAT Notice 700/22 says copy and paste does not count as one, while API transfer and CSV import do. Fixing a broken connector quickly, rather than working around it for weeks, keeps your VAT records inside the rules. Confirm any VAT question with your accountant.' },
   { category: 'systems', question: 'Do you check marketplace, payment and courier connections?',
     answer: 'Yes, where they run through your site. That covers stock and order feeds to Amazon.co.uk, eBay UK, OnBuy, ManoMano and the B&Q marketplace, payments through Stripe, GoCardless, Klarna and Clearpay, and labels and tracking from Royal Mail, DPD and Evri. Each one is a place an update can break something, so each one is on the monthly test list.' },
-  { category: 'systems', question: 'What does PHP 8.2 reaching end of support mean for our site?',
-    answer: 'PHP is the language WordPress, WooCommerce and Magento run on. PHP.net lists 31 December 2026 as the end of security support for version 8.2, so flaws found after that date will not be fixed. Ask your host which version your site uses today. If the answer is 8.2 or lower, book the upgrade to 8.3 or 8.4 well before that date, prove it on staging, and keep January for trading.' },
 
   // ── Security and UK rules ──
   { category: 'security', question: 'How quickly should security updates be applied?',
     answer: 'The NCSC’s Cyber Essentials requirements, version 3.3 from April 2026, say updates fixing flaws the vendor rates critical or high risk must be applied within 14 days of release. Off-the-shelf web applications are in scope by default; bespoke custom code is out of scope. Even if you are not certified, 14 days is a sensible ceiling for a site that handles customer data or payments.' },
   { category: 'security', question: 'What happens if our website is hacked?',
     answer: 'First we stop the damage, switching the site to a holding page if that is safer, put back the last copy we know is clean, trace how the attacker got in and shut that route, rotate every password and key, and ask Google to review any warnings. If personal data may have been exposed, the ICO says a notifiable breach must be reported without undue delay and no later than 72 hours after you become aware. That decision is yours, and we give you the facts fast.' },
-  { category: 'security', question: 'How common are cyber attacks on UK businesses?',
-    answer: 'Common, and more so for larger firms. The government’s Cyber security breaches survey 2025/2026, published in April 2026, found 43% of UK businesses reported a breach or attack in the previous 12 months, rising to 65% of medium businesses and 69% of large ones. A website is one of the most visible entry points, which is why patching it cannot wait.' },
   { category: 'security', question: 'Does maintenance cover UK GDPR and cookie consent?',
     answer: 'We maintain the technical parts: the cookie banner works and blocks tags until consent, forms send data only where they should, old admin users are removed and backups are stored securely. We do not give legal advice. Your privacy notice and the decisions about what data you collect stay with you and your adviser, and we make the site match what you decide.' },
 
@@ -173,6 +183,18 @@ const jsonLd = {
         'Website maintenance for established UK businesses on WordPress, WooCommerce, Magento, Shopify and custom code: updates tested on staging, restorable backups, security patching, checks on links to Xero, Sage, Linnworks and couriers, fixes, changes and takeover of sites other agencies built. Accounts stay in the client’s name.',
     },
     {
+      '@type': 'Person',
+      '@id': 'https://factoryjet.com/#bhavesh-barot',
+      name: 'Bhavesh Barot',
+      jobTitle: 'Founder and Chief Technical Architect',
+      url: 'https://factoryjet.com/about',
+      worksFor: { '@id': 'https://factoryjet.com/#organization' },
+      sameAs: [
+        'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+        'https://github.com/factoryjet-tech',
+      ],
+    },
+    {
       '@type': 'BreadcrumbList',
       '@id': `${CANONICAL}#breadcrumb`,
       itemListElement: crumbs.map((c, i) => ({
@@ -189,19 +211,10 @@ const jsonLd = {
       name: TITLE,
       headline: H1,
       inLanguage: 'en-GB',
-      datePublished: UPDATED,
+      datePublished: PUBLISHED,
       dateModified: UPDATED,
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="true"]'] },
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
-        sameAs: [
-          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-          'https://github.com/factoryjet-tech',
-        ],
-      },
+      author: { '@id': 'https://factoryjet.com/#bhavesh-barot' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
       about: { '@id': `${CANONICAL}#service` },
       breadcrumb: { '@id': `${CANONICAL}#breadcrumb` },
@@ -221,7 +234,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { ...websiteMaintenanceAlternates, 'en-GB': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['website-maintenance'] },
   openGraph: {
     title: TITLE,
     description:
@@ -232,6 +245,12 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: '/images/uk/woocommerce/woocommerce-og.webp', width: 1200, height: 630, alt: 'A UK shop owner and a web developer looking at an online store on a laptop in a bright workshop' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ['/images/uk/woocommerce/woocommerce-og.webp'],
+  },
   robots: { index: true, follow: true },
 };
 
@@ -240,10 +259,10 @@ const srcLink = { textDecoration: 'underline' } as const;
 const inlineLink = { textDecoration: 'underline', color: T.ink, fontWeight: 600 } as const;
 
 /* Small source line. Every id comes from the SRC map above. */
-function Sources({ ids }: { ids: SrcKey[] }) {
+function Sources({ ids, on = READ_ON }: { ids: SrcKey[]; on?: string }) {
   return (
     <p style={srcNote}>
-      Sources, read on {READ_ON}:{' '}
+      Sources, read on {on}:{' '}
       {ids.map((id, i) => (
         <span key={id}>
           {i > 0 ? '; ' : ''}
@@ -274,7 +293,6 @@ export default function WebsiteMaintenanceUKPage() {
                 <div className="flex-wrap mb-6">
                   <span className="chip"><span className="dot dot-orange" />UK Website Maintenance</span>
                   <span className="chip">WordPress, Magento, Shopify</span>
-                  <span className="chip">Xero, Sage, Linnworks</span>
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
@@ -286,8 +304,8 @@ export default function WebsiteMaintenanceUKPage() {
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="who"><a href="/author/bhavesh-barot" style={{ color: 'inherit' }}><b>Bhavesh Barot</b></a>, Founder<br /><span>500+ businesses served since 2014</span></div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -335,12 +353,14 @@ export default function WebsiteMaintenanceUKPage() {
             </div>
             <Sources ids={['ce']} />
             <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms we use a lot</span>
+              <span className="lab">Five terms we use a lot</span>
               <p>
                 A <b>staging site</b> is a hidden duplicate of your website, invisible to customers, where updates are
                 tried first. A <b>plugin</b> (or app, or extension) is an add-on that gives a site a feature, such as a
                 payment method or a Xero connector. An <b>integration</b> is the link that moves data between your
-                site and another system, such as orders into Sage or stock from Linnworks.
+                site and another system, such as orders into Sage or stock from Linnworks. An <b>API</b> is the
+                doorway one system offers so another can read or send data, and platforms release new versions of it
+                over time. <b>CVSS</b> is the common 0 to 10 score for how serious a security flaw is.
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
@@ -382,23 +402,31 @@ export default function WebsiteMaintenanceUKPage() {
                 it earning, and they are where a site with real orders differs from a brochure site.
               </p>
             </div>
-            <ul className="col-3 mt-12">
+            <div className="col-4060 mt-12">
+            <div>
+            <span className="eyebrow">Keeps it safe</span>
+            <ul className="stack mt-4">
               <li className="svc-card">
                 <h3>Tested updates</h3>
                 <p className="mt-4">WordPress core, themes, plugins, Magento patches, Shopify app changes and code libraries, applied to staging first, tested against your forms and checkout, then moved to the live site.</p>
               </li>
               <li className="svc-card">
                 <h3>Backups we restore</h3>
-                <p className="mt-4">A copy of files and database taken on a set timetable, kept off your server, and put back onto a test copy every month. We restore one to a test copy every month, so the first restore is not the day you need it.</p>
+                <p className="mt-4">A copy of files and database taken on a set timetable, kept off your server, and restored to a test copy every month, so the first restore is not the day you need it.</p>
               </li>
               <li className="svc-card">
                 <h3>Security patching</h3>
-                <p className="mt-4">Critical and high-risk fixes inside the 14 days Cyber Essentials sets, plugin vulnerability checks, admin user reviews, two-factor logins and removal of software that no longer gets fixes.</p>
+                <p className="mt-4">Critical and high-risk fixes inside the Cyber Essentials deadline, plugin vulnerability checks, admin user reviews, two-factor logins and removal of software that no longer gets fixes.</p>
               </li>
               <li className="svc-card">
                 <h3>Hosting and PHP upgrades</h3>
-                <p className="mt-4">Server software kept on supported versions. PHP 8.2 loses security support on 31 December 2026, so we plan the move to 8.3 or 8.4 on staging well before that date.</p>
+                <p className="mt-4">Server software kept on supported versions. Each PHP move, such as 8.2 to 8.3 or 8.4, is tried on staging well before the old version loses security fixes.</p>
               </li>
+            </ul>
+            </div>
+            <div>
+            <span className="eyebrow">Keeps it earning</span>
+            <ul className="col-2 mt-4">
               <li className="svc-card">
                 <h3>Integration checks</h3>
                 <p className="mt-4">A real test order followed into Xero, Sage (50, 200 or Intacct), QuickBooks, NetSuite, Business Central, Odoo or Brightpearl, and stock checked against Linnworks or Mintsoft. See our <a href="/uk/shopify-xero-integration">Shopify Xero integration</a> page for one of these links in depth.</p>
@@ -415,11 +443,13 @@ export default function WebsiteMaintenanceUKPage() {
                 <h3>Changes and small builds</h3>
                 <p className="mt-4">New landing pages, product templates, edits to forms and modest new features, handled by people who already know your code. Anything larger is quoted as a fixed price first.</p>
               </li>
-              <li className="svc-card">
-                <h3>Help when it goes wrong</h3>
-                <p className="mt-4">If the site is hacked or goes down, we restore, find the cause and close it. If personal data may be involved, you get the facts quickly, because the ICO clock is 72 hours.</p>
+              <li className="svc-card" style={{ gridColumn: '1 / -1' }}>
+                <h3>Website support when it goes wrong</h3>
+                <p className="mt-4">If the site is hacked or goes down, we restore, find the cause and close it. If personal data may be involved, you get the facts quickly, because the ICO reporting clock starts when you become aware.</p>
               </li>
             </ul>
+            </div>
+            </div>
           </div>
         </section>
 
@@ -477,12 +507,12 @@ export default function WebsiteMaintenanceUKPage() {
             </div>
             <ol className="stack mt-10" style={{ maxWidth: 900 }}>
               {[
-                { n: '01', t: 'A free check of your site', d: 'From the outside, with no logins: platform and versions, PHP, SSL, visible plugins, speed on key pages and obvious security gaps. You get it in plain English, urgent items first.' },
+                { n: '01', t: 'A free check of your site', d: 'From the outside, with no logins: platform and versions, PHP, the SSL certificate behind the padlock, visible plugins, speed on key pages and obvious security gaps. You get it in plain English, urgent items first.' },
                 { n: '02', t: 'Access and ownership', d: 'We confirm the domain, hosting, store and licences sit in your company’s name, collect logins you can remove later, and plan moves for anything still held by the old agency.' },
                 { n: '03', t: 'A full inventory', d: 'Every plugin, app, theme customisation and scheduled task, plus every system the site talks to: accounts, stock, marketplaces, payments and couriers, with who owns each record.' },
                 { n: '04', t: 'Backup and a restore test', d: 'A complete backup taken and restored on a staging copy. Until a restore has worked once, no update is applied to anything.' },
                 { n: '05', t: 'Urgent fixes, quoted first', d: 'A PHP release past its support date, plugins their authors no longer update, former staff still holding admin logins, a contact form that fails quietly. Each fix is listed with a fixed price in writing, and you approve it before we start.' },
-                { n: '06', t: 'The monthly cycle', d: 'Updates on staging, tests on forms, checkout and a traced test order, then the live release with a fresh backup ready. Security fixes rated critical go out within 14 days.' },
+                { n: '06', t: 'The monthly cycle', d: 'Updates on staging, tests on forms, checkout and a traced test order, then the live release with a fresh backup ready. Security fixes rated critical go out inside the Cyber Essentials deadline.' },
                 { n: '07', t: 'A written report and a review', d: 'Every change made, every problem spotted, and the questions only you can answer. Every few months we review the scope with you, because a site that changes needs different care.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
@@ -513,8 +543,9 @@ export default function WebsiteMaintenanceUKPage() {
               Each option suits someone. For a site that takes orders and feeds back-office systems, the rows that
               matter most are testing, integrations and cover when someone is away.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
-              <table className="cmp-table">
+            <p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 11, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="cmp-table" style={{ minWidth: 760 }}>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -539,6 +570,15 @@ export default function WebsiteMaintenanceUKPage() {
               These mix well. Plenty of UK businesses keep a good host for the server, an in-house marketer for
               content, and bring us in for the developer side. What matters is a written split of who owns which job.
             </p>
+            <p className="mt-4" style={{ maxWidth: 820 }}>
+              Some managed WordPress hosts now test plugin updates for you. Kinsta’s Automatic Updates add-on updates
+              all plugins and themes, compares screenshots before and after, and restores a backup if a change is
+              detected. WP Engine’s Smart Plugin Manager takes a full backup first, compares chosen pages on desktop and
+              mobile, and rolls back when a visual test fails; you can add checkout and cart pages to that test. Both
+              check how pages look. Neither page describes following an order into Xero, Sage or a courier, which is
+              the gap a maintenance team fills.
+            </p>
+            <Sources ids={['kinsta', 'wpengine']} on={READ_ON_HOSTS} />
           </div>
         </section>
 
@@ -573,7 +613,7 @@ export default function WebsiteMaintenanceUKPage() {
                 <span className="eyebrow">UK market bands, per month</span>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Entry care</div><div className="scorecard-note">brochure sites, simple WordPress</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£15 to £59</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Managed business care</div><div className="scorecard-note">lead-generation sites, frequent changes</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£60 to £149</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Ecommerce or advanced CMS</div><div className="scorecard-note">stores, memberships, integrations</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£99 to £249 or quote</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Ecommerce or advanced CMS</div><div className="scorecard-note">stores, memberships, integrations</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>About £100 to £250 or quote</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Development retainer</div><div className="scorecard-note">revenue-critical, evolving sites</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£149 to £379+ or quote</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Full management</div><div className="scorecard-note">adds SEO, content, development (Red Evolution)</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£500 to £2,000+</div></div>
                 <p style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>First four rows: Rattlesnake, September 2026. VAT treatment varies by provider.</p>
@@ -590,7 +630,7 @@ export default function WebsiteMaintenanceUKPage() {
                 <span className="eyebrow">How we work with you</span>
                 <h2>Terms for website maintenance with FactoryJet</h2>
                 <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  FactoryJet has served 500+ businesses since 2014, most of them in commerce. We design, build and
+                  FactoryJet has served 500+ businesses since 2014. We design, build and
                   support stores and B2B sites, and maintenance is part of that same contract. We work
                   remotely with UK businesses and hold calls in UK business hours.
                 </p>
@@ -632,10 +672,10 @@ export default function WebsiteMaintenanceUKPage() {
                 <div className="stack mt-6">
                   <p>
                     <b>Patch inside 14 days.</b> The NCSC’s Cyber Essentials requirements, version 3.3 from April 2026,
-                    say updates that fix flaws a vendor rates critical or high risk, or that score 7 or above on the
-                    CVSS v3 scale, must be applied within 14 days of release. Software that no longer gets fixes must
-                    be removed. Off-the-shelf web applications are in scope by default, which would normally take in
-                    platforms such as WordPress, WooCommerce and Magento; bespoke custom code is out of scope.
+                    say updates that fix critical or high-risk flaws must be applied within 14 days of release. A flaw
+                    counts if the vendor rates it critical or high, or if it scores 7 or more on CVSS v3. Software that
+                    no longer gets fixes must be removed. Off-the-shelf web applications, such as WordPress,
+                    WooCommerce and Magento, are normally in scope. Bespoke custom code is out of scope.
                   </p>
                   <p>
                     <b>Breaches have a 72-hour clock.</b> The ICO says a notifiable personal data breach must be
@@ -673,12 +713,14 @@ export default function WebsiteMaintenanceUKPage() {
               <h2>Platforms we maintain, and UK sites we work on</h2>
               <div className="stack mt-6">
                 <p>
-                  <b>WordPress and WooCommerce</b> get the most attention, because plugins carry the most risk. See our{' '}
+                  <b>WordPress and WooCommerce</b> get the most attention, because plugins carry the most risk, so
+                  WordPress support is the largest share of the work. See our{' '}
                   <a href="/uk/woocommerce" style={inlineLink}>UK WooCommerce</a> page. <b>Magento and Adobe Commerce</b>{' '}
-                  need patches applied with care, covered on our <a href="/uk/magento" style={inlineLink}>UK Magento</a>{' '}
-                  page. <b>Shopify and Shopify Plus</b> stores need app, theme and integration care as API versions
-                  retire; see <a href="/uk/shopify-development" style={inlineLink}>Shopify development in the UK</a>.
-                  Custom Next.js and headless builds are covered too.
+                  need patches applied with care; Magento support is covered on our{' '}
+                  <a href="/uk/magento" style={inlineLink}>UK Magento</a> page. <b>Shopify and Shopify Plus</b>{' '}
+                  stores need app, theme and integration care as API versions retire; see{' '}
+                  <a href="/uk/shopify-maintenance-services" style={inlineLink}>Shopify maintenance services in the UK</a>.
+                  Custom Next.js and headless builds (a custom front end on a separate store engine) are covered too.
                 </p>
                 <p>
                   If maintenance has become patching a site that no longer fits the business, a rebuild may cost less
@@ -688,75 +730,47 @@ export default function WebsiteMaintenanceUKPage() {
                 </p>
               </div>
             </div>
-            <ul className="col-3 mt-10">
+            <div className="col-6040 mt-10">
+            <ul className="col-2">
               <li className="svc-card">
                 <h3>GPSUK</h3>
                 <p className="mt-4">A UK promotional products supplier. We built its trade storefront on Commerceflo, where business buyers log in, see their own account pricing and move from quote to order. It is live, and our SEO and AI search work on it continues. <a href="/case-studies/gpsuk-promotional-products">Read the case study</a>.</p>
               </li>
               <li className="svc-card">
                 <h3>Sow Easy</h3>
-                <p className="mt-4">A UK wholesale client. We are building a WordPress WooCommerce trade store that reads stock, pricing and SKUs from Odoo. The store and the Odoo link are being tested on staging, and launch is still ahead. <a href="/case-studies/sow-easy-distributor-portal">Read the case study</a>.</p>
-              </li>
-              <li className="svc-card">
-                <h3>Why they matter here</h3>
-                <p className="mt-4">Both are sites where the store and the back office must agree. That is the same discipline monthly maintenance needs: every update is tested against the systems behind the site, not only the pages in front.</p>
+                <p className="mt-4">A UK wholesale client. We are building a WordPress WooCommerce trade store that reads stock, pricing and SKUs (product codes) from Odoo. The store and the Odoo link are being tested on staging, and launch is still ahead. <a href="/case-studies/sow-easy-distributor-portal">Read the case study</a>.</p>
               </li>
             </ul>
+            <div className="svc-card">
+                <h3>Why they matter here</h3>
+                <p className="mt-4">Both are sites where the store and the back office must agree. Monthly maintenance needs the same habit: every update is tested against the systems behind the site as well as the pages.</p>
+            </div>
+            </div>
           </div>
         </section>
 
-        {/* ═══ 12. DEMAND PANEL ═══ */}
+        {/* ═══ 12. BUYER QUESTIONS ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">What UK buyers search for</span>
-                <h2>How UK businesses look for website maintenance</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Searches split between people who want the work done and people trying to price it. “Website
-                    maintenance packages” and “website maintenance cost” together draw 280 searches a month in the UK,
-                    which is why this page shows the market bands with their sources rather than a vague “it depends”.
-                  </p>
-                  <p>
-                    “Website management services” draws more searches than “website maintenance company”. The work
-                    overlaps, so we answer both: maintenance keeps the site safe, and changes and small builds come from
-                    the same team when you need them.
-                  </p>
-                </div>
-              </div>
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>UK · Monthly Search Demand</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                    {[
-                      { kw: 'website maintenance', v: '480', w: '100%', kd: 'The head term' },
-                      { kw: 'website maintenance services', v: '320', w: '67%', kd: 'Buyer intent' },
-                      { kw: 'website management services', v: '210', w: '44%', kd: 'Wider scope' },
-                      { kw: 'website maintenance packages', v: '170', w: '35%', kd: 'Comparing plans' },
-                      { kw: 'website support', v: '140', w: '29%', kd: 'Help needed now' },
-                      { kw: 'website maintenance cost', v: '110', w: '23%', kd: 'Pricing stage' },
-                      { kw: 'website maintenance uk', v: '90', w: '19%', kd: 'Buyer intent, UK' },
-                      { kw: 'wordpress maintenance', v: '90', w: '19%', kd: 'Platform-specific' },
-                    ].map((r) => (
-                      <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
-                        <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                        <div className="demand-kd">{r.kd}</div>
-                      </li>
-                    ))}
-                  </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, Google Ads volumes, United Kingdom, read {READ_ON}</p>
-                </div>
+            <div style={{ maxWidth: 780 }}>
+              <span className="eyebrow">What UK buyers ask first</span>
+              <h2>What UK buyers ask before they choose a maintenance provider</h2>
+              <div className="stack mt-6">
+                <p>
+                  Two questions come first: what the work covers, and what it costs. That is why this page lists the
+                  nine monthly jobs and shows the market bands with their sources, rather than a vague “it depends”.
+                </p>
+                <p>
+                  Many buyers also ask for website management services, or plain website support when something has
+                  already broken. The work overlaps, so we answer both. Maintenance keeps the site safe, and changes and
+                  small builds come from the same team when you need them.
+                </p>
               </div>
             </div>
             <div className="flex-wrap mt-8">
               <a className="city-pill" href="/uk/woocommerce">WooCommerce UK</a>
               <a className="city-pill" href="/uk/magento">Magento UK</a>
-              <a className="city-pill" href="/uk/shopify-development">Shopify development UK</a>
+              <a className="city-pill" href="/uk/shopify-maintenance-services">Shopify maintenance UK</a>
               <a className="city-pill" href="/uk/shopify-xero-integration">Shopify Xero integration UK</a>
               <a className="city-pill" href="/uk/ecommerce-redesign">Ecommerce redesign UK</a>
               <a className="city-pill" href="/services/website-maintenance">Website maintenance (US)</a>
@@ -767,7 +781,7 @@ export default function WebsiteMaintenanceUKPage() {
         {/* ═══ 13. FAQ (canonical Linear Minimal) ═══ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Website maintenance questions UK businesses ask us</h2>
             </div>

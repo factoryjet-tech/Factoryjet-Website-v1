@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/sales-order-automation-ai-agents, built 2026-10-29.
@@ -26,12 +27,13 @@ import '../ai-agents/ai-agents.css';
       FAQ renders. Never add a second list of questions. */
 
 const CANONICAL = 'https://factoryjet.com/uk/sales-order-automation-ai-agents';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
+const UPDATED_LABEL = '31 October 2026';
 const READ_ON = '29 October 2026';
 const TITLE = 'Sales Order Automation UK: AI for Emailed POs | FactoryJet';
-const H1 = 'Sales Order Automation for UK Trade Suppliers: AI Agents That Turn Emailed Purchase Orders into Draft Sales Orders';
+const H1 = 'Sales Order Automation for UK Trade Suppliers';
 const DESCRIPTION =
-  'AI agents that read the purchase orders UK trade customers email you and write draft sales orders in Sage 200, Business Central, NetSuite, Odoo, Brightpearl or Xero for your team to approve.';
+  'AI agents that read emailed purchase orders from UK trade customers and save draft sales orders in Sage, Business Central, NetSuite, Odoo or Xero for approval.';
 
 /* Design tokens, copied by value from ../ai-agents/ai-agents.css so inline
    styles stay on-system without CSS custom property references in this file. */
@@ -111,7 +113,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What is the difference between a PO and a sales order?',
     answer: 'The purchase order comes from your customer. It is their request: these items, this quantity, this price, delivered by this date. The sales order is yours. It is the record in your ERP that you have accepted the request and will supply it. Most UK suppliers copy the customer’s PO number into the sales order so the invoice can quote it later, and that copying step is exactly what an order agent drafts for you.' },
   { category: 'basics', question: 'What are the steps involved in the sales order process?',
-    answer: 'For a trade supplier the usual run is: the order arrives, someone keys it as a sales order, the order is checked against price, stock and the account’s credit limit, it is approved and acknowledged to the customer, then picked, packed and dispatched with Royal Mail, DPD, Evri or a pallet carrier, and finally invoiced. An order agent works on the first three steps. People keep the approval, and the warehouse keeps the rest.' },
+    answer: 'For a trade supplier the usual run is: the order arrives, someone keys it as a sales order, the order is checked against stock and the account’s credit limit, it is approved and acknowledged to the customer, then picked, packed and dispatched with Royal Mail, DPD, Evri or a pallet carrier, and finally invoiced. An order agent works on the first three steps. People keep the approval, and the warehouse keeps the rest.' },
   { category: 'basics', question: 'Who prepares a sales order?',
     answer: 'In most UK wholesalers and manufacturers it is a sales order processor, a customer service team or an internal sales rep, and in smaller firms the finance person does it between other jobs. With an agent in place that person stops keying and starts reviewing. The agent prepares the draft with the customer, lines and prices filled in, and the same person checks it and approves it in the ERP they already use.' },
   { category: 'basics', question: 'Are sales orders the same as invoices?',
@@ -119,21 +121,24 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What is an example of order processing done by an AI agent?',
     answer: 'Say a garden centre group emails a two-page PDF purchase order for 40 lines, using its own product codes. The agent reads it, finds the account, translates each customer code into your SKU, checks each price against that customer’s price list and each quantity against stock, and writes a draft sales order. Three lines show a price below the agreed list, so the draft is held with those lines highlighted for your team.' },
 
+  { category: 'basics', question: 'Is purchase order automation the same as sales order automation?',
+    answer: 'They are two sides of one document. Sales order automation, this page, handles the POs your customers send you and turns them into sales orders. Purchase order automation usually means the buying side: raising POs to your suppliers and matching their invoices against them. The same agent pattern does both jobs. Our accounts payable automation page covers the supplier side.' },
+
   // ── Systems ──
   { category: 'systems', question: 'Does Xero have sales orders?',
     answer: 'Not as a separate record. Xero’s own published API file has paths for quotes, invoices and purchase orders, with none for a sales order. A Xero quote moves through draft, sent, accepted and invoiced, so many UK firms on Xero treat an accepted quote as the order. Our agent can write the customer’s PO into a draft Xero quote with the reference attached. If you need stock allocation and part shipments, an inventory app or ERP usually sits beside Xero.' },
   { category: 'systems', question: 'Can an agent create sales orders in Dynamics 365 Business Central?',
     answer: 'Yes. Microsoft’s Business Central API documentation lists a create method for sales orders, a field for the customer’s external document number, a requested delivery date, and a status that can be Draft, In Review or Open. So the agent writes each order as a draft with the customer’s PO number in that field, and your team releases it. We read your environment first, because extensions often add required fields.' },
   { category: 'systems', question: 'Does it work with Sage 50, Sage 200 and Sage Intacct?',
-    answer: 'We work with all three, and the edition decides the route. Sage’s own UK knowledge base says the Sales Orders module in Sage 50 Accounts is only in the Professional edition, where dispatching an order creates the sales invoice. Sage 200 and Sage Intacct setups depend on the modules and add-ons you license. In the first week we confirm what your edition exposes, and we tell you plainly if the route is weaker than you expected.' },
+    answer: 'Yes. The edition decides the route. Sage’s own UK knowledge base says the Sales Orders module in Sage 50 Accounts is only in the Professional edition, where dispatching an order creates the sales invoice. Sage 200 and Sage Intacct setups depend on the modules and add-ons you license. In the first week we confirm what your edition exposes, and we tell you plainly if the route is weaker than you expected.' },
   { category: 'systems', question: 'Can it write orders into Odoo?',
-    answer: 'Yes, as quotations that your team confirms into sales orders. Check your plan first. Odoo’s developer documentation limits external API access to Custom pricing plans and rules out One App Free and Standard. If you are on Standard, moving to Custom is a cost to weigh before the build. We work on Odoo now for Sow Easy, a UK wholesale client.' },
+    answer: 'Yes, as quotations that your team confirms into sales orders. Check your plan first. Odoo’s developer documentation limits external API access to Custom pricing plans and rules out One App Free and Standard. If you are on Standard, moving to Custom is a cost to weigh before the build. Our Odoo link for Sow Easy, a UK wholesale client, is tested against Odoo’s staging system, with launch still ahead.' },
   { category: 'systems', question: 'We use Brightpearl, Linnworks or Mintsoft. Where does the agent fit?',
     answer: 'Brightpearl’s API documentation says its order message can create sales orders, so the agent can write trade orders straight into Brightpearl beside your web and marketplace orders. Linnworks and Mintsoft usually sit downstream as order hubs or warehouse systems. In those setups the agent writes to whichever system owns the order and price list, and the existing link carries it on to picking and the courier label.' },
   { category: 'systems', question: 'What about NetSuite and QuickBooks?',
-    answer: 'Both, with different records. On NetSuite the agent writes the order where your own approval roles already sit, so release happens the way it does today. QuickBooks setups in the UK vary more, and some firms run an inventory app beside QuickBooks that owns the orders. We look at your actual account, edition and add-ons before promising which record the agent will write, and we put that answer in the written quote.' },
+    answer: 'Both can be reached through their APIs, and the record differs. On NetSuite the agent writes the order where your own approval roles already sit, so release happens the way it does today. QuickBooks setups in the UK vary more, and some firms run an inventory app beside QuickBooks that owns the orders. We look at your actual account, edition and add-ons before promising which record the agent will write, and we put that answer in the written quote.' },
   { category: 'systems', question: 'Do marketplace orders from Amazon.co.uk, eBay or OnBuy need this?',
-    answer: 'Usually not. Orders from Amazon.co.uk, eBay UK, OnBuy or the B&Q marketplace already arrive as structured data through a connector, so nobody retypes them. The agent is for the orders that come in as PDFs, spreadsheets and typed emails from trade accounts. It can share the same price, stock and SKU checks, so both routes end up in the ERP in the same shape.' },
+    answer: 'Usually not. Orders from Amazon.co.uk, eBay UK, OnBuy or the B&Q marketplace already arrive as structured data through a connector, so nobody retypes them. The agent is for the orders trade accounts email in. It can share the same SKU checks, so both routes end up in the ERP in the same shape.' },
 
   // ── How the agent behaves ──
   { category: 'agent', question: 'How accurate is AI at reading purchase orders?',
@@ -145,7 +150,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'agent', question: 'Can the agent send order acknowledgements to customers?',
     answer: 'Yes, once a person has approved the order. The acknowledgement is built from the approved sales order, not from the customer’s PO, so it shows what you have agreed to supply: items, prices, quantities and the dispatch date. If you are sending fewer than were ordered, splitting the delivery or offering a substitute, the email says so in plain words before it goes.' },
   { category: 'agent', question: 'Will it ever confirm an order without a person checking it?',
-    answer: 'Only if you decide that it should, for cases you name. At launch every draft waits for approval. Once a few weeks of drafts have been checked by your team, some clients let repeat orders from known accounts, inside a value limit, go straight through. That decision is written down, can be reversed, and never covers a new customer, a new item or a price exception.' },
+    answer: 'Only if you decide that it should, for cases you name. At launch every draft waits for approval. Once a few weeks of drafts have been checked, you can choose to let repeat orders from known accounts, inside a value limit, go straight through. That decision is written down, can be reversed, and never covers a new customer, a new item or a price exception.' },
 
   // ── UK rules and data ──
   { category: 'uk', question: 'Does Making Tax Digital affect how orders reach our accounts?',
@@ -230,11 +235,11 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['sales-order-automation-ai-agents'] },
   openGraph: {
     title: TITLE,
     description:
-      'Your trade customers email PDFs and spreadsheets. We build the AI agent that turns them into draft sales orders in your ERP, checked against price, stock and credit, for your team to approve.',
+      'Your trade customers email PDFs and spreadsheets. We build the AI agent that turns them into draft sales orders in your ERP, checked against your price lists, for your team to approve.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
@@ -271,17 +276,16 @@ export default function SalesOrderAutomationUKPage() {
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  Your trade customers send orders as PDFs, spreadsheets and typed emails, each in their own layout and
-                  with their own product codes. Someone on your team keys every one into Sage 200, Business Central,
-                  NetSuite, Odoo, Brightpearl or Xero. FactoryJet builds the AI agent that reads those orders, checks
-                  them against your prices, stock and credit limits, and leaves a draft sales order for that same
-                  person to approve.
+                  We build AI agents that turn emailed purchase orders into draft sales orders. Your trade customers send
+                  PDFs, spreadsheets and typed emails. The agent checks each one against your prices, stock and credit
+                  limits, then saves a draft in Sage, Business Central, NetSuite, Odoo, Brightpearl or Xero for your team
+                  to approve.
                 </p>
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses since 2014</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="who"><a href="/about" style={{ textDecoration: 'underline' }}><b>Bhavesh Barot</b></a>, Founder<br /><span>500+ businesses since 2014</span></div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -327,19 +331,23 @@ export default function SalesOrderAutomationUKPage() {
             <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
               <span className="lab">What is sales order automation for a UK trade supplier?</span>
               <p>
-                Sales order automation takes the purchase order a customer sends and creates the matching sales order in your ERP or accounting
-                system without anyone retyping it. An AI agent reads the PO in whatever layout it arrives, matches the
-                account and the product codes, checks price, stock and credit, and saves a draft. A person on your
+                Sales order automation, also called AI order processing or automated order entry, takes the purchase
+                order a customer sends and creates the matching sales order in your ERP or accounting system without
+                anyone retyping it. An AI agent reads the PO in whatever layout it arrives, matches the account and the
+                product codes, checks each line against that account’s price list, and saves a draft. A person on your
                 team approves it, and anything unusual reaches them first with the reason attached.
               </p>
             </div>
             <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Four terms used on this page</span>
+              <span className="lab">Six terms used on this page</span>
               <p>
                 A <b>purchase order (PO)</b> is the order your customer sends you. A <b>sales order</b> is your record
                 in the ERP that you will supply it. An <b>ERP</b> is the system that runs your stock, orders and
                 finance, such as Sage 200 or Business Central. A <b>cross-reference</b> is the list that translates a
-                customer’s own product code into your SKU, the code your stock system uses.
+                customer’s own product code into your SKU, the code your stock system uses. <b>EDI</b> (electronic
+                data interchange) is a fixed format that large retailers use to send orders straight from their system
+                to yours. An <b>API</b> is the door a piece of software opens so another program can read and write
+                its records without a person typing.
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
@@ -389,7 +397,7 @@ export default function SalesOrderAutomationUKPage() {
                 { n: '02', t: 'Finds the account', d: 'It matches the sender, the bill-to and the delivery address to the right customer record, including branches that order under a parent account.' },
                 { n: '03', t: 'Translates every product code', d: 'Customer codes, old catalogue numbers and plain descriptions become your SKUs through a cross-reference built from orders your team has already matched.' },
                 { n: '04', t: 'Checks price, pack size and stock', d: 'Each line is compared with that account’s price list, your case quantities and live stock, so a wrong price or a short line shows up before the order is accepted.' },
-                { n: '05', t: 'Checks credit and terms', d: 'An account on stop or over its limit is held for your credit controller, not quietly entered.' },
+                { n: '05', t: 'Checks credit and terms', d: 'An account on stop or over its limit goes to your credit controller before anything is entered.' },
                 { n: '06', t: 'Writes the draft', d: 'The sales order is saved as a draft in your ERP with the customer’s PO number, requested delivery date, delivery service (Royal Mail, DPD, Evri or pallet) and the original attached.' },
                 { n: '07', t: 'Hands it to a person', d: 'Clean drafts go to the approval list. Drafts with a problem go to a separate list with the reason beside each flagged line. Approval stays inside your ERP.' },
               ].map((s) => (
@@ -420,7 +428,7 @@ export default function SalesOrderAutomationUKPage() {
                 <div className="stack mt-6">
                   <p>
                     <b>Dynamics 365 Business Central.</b> Microsoft’s API reference lists a create method for sales
-                    orders, a field for the customer’s external document number and a status of Draft, In Review or
+                    orders, a field for the external document number (the customer’s own PO number) and a status of Draft, In Review or
                     Open. That maps cleanly onto how we want the agent to behave: write a draft, put the PO number
                     where your invoice will pick it up, and leave release to your team.
                   </p>
@@ -444,8 +452,8 @@ export default function SalesOrderAutomationUKPage() {
                     the agent follows your normal route to the ledger.
                   </p>
                   <p>
-                    <b>Sage 200 and Sage Intacct, NetSuite, QuickBooks, Linnworks and Mintsoft.</b> We work
-                    with each, and the record the agent writes depends on your edition and add-ons. Where Linnworks or
+                    <b>Sage 200 and Sage Intacct, NetSuite, QuickBooks, Linnworks and Mintsoft.</b> The record
+                    the agent writes depends on your edition and add-ons, and we confirm it in week one. Where Linnworks or
                     Mintsoft runs the warehouse, the agent writes to the system that owns the price list and your
                     current link carries the order to picking and the courier label.
                   </p>
@@ -495,8 +503,8 @@ export default function SalesOrderAutomationUKPage() {
                 </p>
                 <p>
                   Large retail customers who insist on EDI are a third route. An EDI network carries those orders as
-                  data, and we can connect that network to your ERP with the same price and stock checks the emailed
-                  orders get.
+                  data, so they need no reading. Whether the same price and stock checks can run on them depends on how
+                  your EDI provider passes orders to your ERP, and we scope that separately.
                 </p>
               </div>
             </div>
@@ -504,7 +512,7 @@ export default function SalesOrderAutomationUKPage() {
         </section>
 
         <MidPageCTA
-          headline={'How many trade orders does your team key by hand each week?'}
+          headline={'Send a sample of past orders and see the drafts an agent would have written'}
           sub={'Send us a sample of real purchase orders and the sales orders keyed from them. On a short call with the founder we show you what an agent would have drafted, and which lines it would have flagged.'}
           label={'See a demo on my data'}
         />
@@ -555,8 +563,9 @@ export default function SalesOrderAutomationUKPage() {
               Four ways UK suppliers cut order keying. Each is right for someone, and the best answer is often two of
               them together.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
-              <table className="cmp-table">
+            <p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see all four options.</p>
+            <div className="card mt-8" tabIndex={0} role="region" aria-label="Comparison of four ways to automate sales order entry" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="cmp-table" style={{ minWidth: 820 }}>
                 <thead>
                   <tr>
                     <th>What you need</th>
@@ -634,8 +643,8 @@ export default function SalesOrderAutomationUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">Terms</span>
-                <h2>How we work with UK suppliers on an order agent</h2>
-                <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
+                <h2>Terms for a UK sales order automation project</h2>
+                <ul className="scope-list num-list mt-10" style={{ maxWidth: 580 }}>
                   <li><b>A demo on your data before you sign.</b> Working software running over your own past purchase orders, with each draft next to the order your team keyed.</li>
                   <li><b>Fixed price per phase.</b> Each phase is scoped, priced and signed on its own, so the pilot does not commit you to the full build.</li>
                   <li><b>You own it from day one.</b> The code, the repository, the cross-reference and the test orders are yours. AI and hosting can run in your own accounts at cost, with no markup.</li>
@@ -701,12 +710,12 @@ export default function SalesOrderAutomationUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">Writing a brief or an RFP?</span>
-                <h2>Send us your brief, or these six things</h2>
+                <h2>What to put in a sales order automation brief or RFP</h2>
                 <p className="lead mt-4" style={{ maxWidth: 560 }}>
                   If you have a written brief or an RFP, attach it to the form and we reply to it point by point. If
                   not, these six answers let us price the pilot accurately on the first call.
                 </p>
-                <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
+                <ul className="scope-list num-list mt-10" style={{ maxWidth: 580 }}>
                   <li><b>Your ERP or accounting system</b>, its edition, and whether it is cloud or on your own server.</li>
                   <li><b>Orders per week</b> that arrive by email, and roughly how many trade accounts send them.</li>
                   <li><b>Formats you receive:</b> PDF, Excel, CSV, email body, scans or photos.</li>
@@ -738,7 +747,7 @@ export default function SalesOrderAutomationUKPage() {
         {/* ═══ 13. FAQ ═══ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Sales order automation questions UK suppliers ask</h2>
             </div>
@@ -788,7 +797,7 @@ export default function SalesOrderAutomationUKPage() {
         <section className="dark-sec">
           <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
             <span className="eyebrow">Next step</span>
-            <h2>See your own purchase orders become draft sales orders</h2>
+            <h2>A sales order automation demo on your own purchase orders</h2>
             <p className="mt-4">
               Send your name and work email. The founder replies within 24 hours to book a short call about your ERP,
               your trade accounts and how orders reach you today. Then we run a demo over a sample of your past orders,

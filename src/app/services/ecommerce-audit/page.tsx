@@ -12,6 +12,7 @@ import ComparisonTable, { type ComparisonColumn, type ComparisonRow } from '@/co
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import { twinAlternates } from '@/data/hreflangMap';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/ecommerce-audit, built 2026-09-20.
@@ -63,10 +64,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: CANONICAL_URL,
-    languages: {
-      'en-US': CANONICAL_URL,
-      'x-default': CANONICAL_URL,
-    },
+    languages: twinAlternates['ecommerce-audit'],
   },
   openGraph: {
     type: 'website',

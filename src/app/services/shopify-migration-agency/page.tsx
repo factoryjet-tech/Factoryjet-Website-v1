@@ -10,6 +10,7 @@ import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-10-21';
@@ -18,7 +19,7 @@ const CANONICAL = 'https://factoryjet.com/services/shopify-migration-agency';
 export const metadata: Metadata = {
   title: 'Shopify Migration Agency | Zero-Downtime | FactoryJet.',
   description: 'Shopify migration agency. Zero-downtime database ETL replatforming from Magento, WooCommerce, and BigCommerce to Shopify Plus with 100% SEO retention.',
-  alternates: { canonical: CANONICAL },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['shopify-migration'] },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

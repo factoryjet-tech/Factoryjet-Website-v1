@@ -15,6 +15,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
 
 import AgentLoopDiagram from './AgentLoopDiagram';
+import { twinAlternates } from '@/data/hreflangMap';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/erp-ai-agents, built 2026-10-09.
@@ -104,10 +105,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: CANONICAL_URL,
-    languages: {
-      'en-US': CANONICAL_URL,
-      'x-default': CANONICAL_URL,
-    },
+    languages: twinAlternates['erp-ai-agents'],
   },
   openGraph: {
     type: 'website',

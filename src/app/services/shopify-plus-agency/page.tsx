@@ -10,6 +10,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-10-21';
@@ -50,10 +51,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/shopify-plus-agency',
-    languages: {
-      'en-US': 'https://factoryjet.com/services/shopify-plus-agency',
-      'x-default': 'https://factoryjet.com/services/shopify-plus-agency',
-    },
+    languages: twinAlternates['shopify-plus'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };

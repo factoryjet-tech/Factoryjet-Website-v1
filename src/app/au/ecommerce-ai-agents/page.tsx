@@ -8,6 +8,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
@@ -37,7 +38,7 @@ import '../au-hub.css';
       prices. Neither source says whether its AUD figures include GST; the page says so.
    4. No running, model, hosting or retainer figures (rule of 11 Oct 2026).
    5. No client is presented as Australian. The proof block names platform-matched
-      work and says plainly that none of it is an Australian store.
+      work only and never calls it Australian.
    6. Nothing says where the FactoryJet team is.
 
    Schema: Service (areaServed Australia) + BreadcrumbList + WebPage/Article + FAQPage.
@@ -45,8 +46,8 @@ import '../au-hub.css';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL = 'https://factoryjet.com/au/ecommerce-ai-agents';
-const UPDATED = '2026-10-29';
-const TITLE = 'AI for Ecommerce Australia | Ecommerce AI Agents | FactoryJet';
+const UPDATED = '2026-10-31';
+const TITLE = 'AI Agents for Ecommerce Australia | FactoryJet';
 const H1 = 'Ecommerce AI Agents for Australian Online Stores and Marketplaces';
 const DESCRIPTION =
   'AI agents for Australian online stores: order questions, returns, marketplace listings and stock, wired into Shopify, Xero, MYOB and Australia Post.';
@@ -89,6 +90,16 @@ const SRC_OAIC_APP1 =
 // 5 March 2026, AUD, GST not stated: "Customer service automation $10,000 - $25,000",
 // "Multi-system workflow automation $20,000 - $50,000+".
 const SRC_FLOWTIVITY = 'https://flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026/';
+// Shopify Help Center, Sidekick (fetched 2026-10-31): "the Shopify AI-powered commerce
+// assistant"; chat "from any page in your Shopify admin"; builds Shopify Flow workflows,
+// edits orders, writes product descriptions; "presents changes for your review before applying them".
+const SRC_SIDEKICK = 'https://help.shopify.com/en/manual/shopify-admin/productivity-tools/sidekick';
+// Gorgias AI Agent product page (fetched 2026-10-31): "24/7 customer support automation",
+// Shopify and BigCommerce integrations, unified helpdesk inbox.
+const SRC_GORGIAS = 'https://www.gorgias.com/ai-agent';
+// Linnworks home page (fetched 2026-10-31): "Create and update listings across marketplaces";
+// "Every sale on Amazon, eBay, Shopify, or any of 100+ channels updates your stock instantly."
+const SRC_LINNWORKS = 'https://www.linnworks.com/';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -101,7 +112,7 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── Basics (Google People Also Ask, Australia, 29 Oct 2026) ──
   { category: 'basics', question: 'What are AI agents in ecommerce?',
-    answer: 'An ecommerce AI agent is a program that reads something arriving at your store, such as a customer email, a return request or a wholesale order PDF, looks up the facts in your systems, and then does or drafts the next step. It might write the reply, raise the refund or update a marketplace listing. The difference from a chatbot is that it acts inside Shopify, Xero or your stock system, within limits you set.' },
+    answer: 'An ecommerce AI agent is a program that reads something arriving at your store, such as a customer email, a return request or a wholesale order PDF, looks up the facts in your systems, and then does or drafts the next step. It might write the reply, raise the refund or update a marketplace listing. An ecommerce chatbot only answers questions. An agent also acts inside Shopify, Xero or your stock system, within limits you set.' },
   { category: 'basics', question: 'Which AI agents are best for e-commerce?',
     answer: 'The ones that do a single high-volume job inside the systems you already pay for. For most established Australian stores that means order status and delivery questions, returns checked against your policy, marketplace listing updates, and stock alerts with draft purchase orders. Agents sold as running the whole store tend to disappoint. Pick the job your team repeats most each week and start there.' },
   { category: 'basics', question: 'How can AI be used in e-commerce?',
@@ -116,52 +127,56 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Systems ──
   { category: 'systems', question: 'Which store platforms do your agents work with?',
-    answer: 'Shopify and Shopify Plus, WooCommerce, BigCommerce, Adobe Commerce (Magento) and Maropost Commerce Cloud, the platform formerly called Neto. The agent connects through each platform’s own API with a key made only for it, so it can read orders and draft changes without a staff login. If your store is headless or custom, the back-office agent works the same way because it never touches the storefront.',
+    answer: 'Shopify and Shopify Plus, WooCommerce, BigCommerce, Adobe Commerce (Magento) and Maropost Commerce Cloud, the platform formerly called Neto. The agent connects through each platform’s own API with a key made only for it, so it can read orders and draft changes without a staff login. If your store is headless (a custom front end on top of the platform) or fully custom, the back-office agent works the same way because it never touches the storefront.',
     links: [{ href: '/au/shopify-development', label: 'Shopify development in Australia' }] },
   { category: 'systems', question: 'Can the agent work with Xero, MYOB or QuickBooks?',
-    answer: 'Yes. Xero is the most common link we see in Australian stores, then MYOB Business, MYOB Acumatica and QuickBooks Online. Typical agent jobs are matching marketplace payouts and refunds to invoices, coding supplier bills with the right GST treatment for your bookkeeper to approve, and chasing overdue trade accounts. Nothing posts to the ledger on its own: the agent drafts and a person approves.',
+    answer: 'Yes. Xero, MYOB Business, MYOB Acumatica and QuickBooks Online are the usual accounting links in Australian store stacks. Typical agent jobs are matching marketplace payouts and refunds to invoices, coding supplier bills with the right GST treatment for your bookkeeper to approve, and chasing overdue trade accounts. Nothing posts to the ledger on its own: the agent drafts and a person approves.',
     links: [{ href: '/au/accounts-payable-automation', label: 'Accounts payable automation' }] },
   { category: 'systems', question: 'Do you work with NetSuite, Odoo, Cin7 Core or Unleashed?',
-    answer: 'Yes. Once a store carries thousands of SKUs or sells wholesale, stock usually lives in an inventory or ERP system such as Cin7 Core (formerly DEAR), Cin7 Omni, Unleashed, NetSuite or Odoo. We agree which system owns stock, cost price and customer pricing before the agent writes anything. Then it reads stock from that system and drafts orders back into it, so the store and the warehouse never disagree.' },
+    answer: 'Yes. Once a store carries thousands of SKUs (stock codes, one per product variant) or sells wholesale, stock usually lives in an inventory or ERP system (the business software that runs stock, buying and orders) such as Cin7 Core (formerly DEAR), Cin7 Omni, Unleashed, NetSuite or Odoo. We agree which system owns stock, cost price and customer pricing before the agent writes anything. Then it reads stock from that system and drafts orders back into it, so the store and the warehouse never disagree.',
+    links: [{ href: '/au/ecommerce-erp-integration', label: 'Ecommerce ERP integration in Australia' }] },
   { category: 'systems', question: 'Can an AI agent manage our Amazon.com.au and eBay listings?',
     answer: 'It can prepare and submit listing updates through each marketplace’s seller API, and it is good at the tedious part: rewriting titles and attributes to each channel’s rules and fixing listings that get rejected. Amazon’s Selling Partner API lists Australia as its own marketplace in the Far East region, so the agent works against that marketplace’s rules, not the US ones. We keep a person on any price change.',
     links: [{ href: SRC_AMAZON, label: 'Amazon SP-API marketplace IDs' }] },
-  { category: 'systems', question: 'What about Kogan, Bunnings Marketplace and THE ICONIC?',
-    answer: 'Each one has its own seller onboarding, product data rules and integration route, and some only accept stock and orders through an approved connector. We start by reading what the marketplace allows a seller to automate, then build the agent around that route. The common jobs are the same across all of them: listing data that passes review first time, stock kept in step, and buyer messages sorted.' },
+  { category: 'systems', question: 'Can an AI agent handle Kogan, Bunnings Marketplace and THE ICONIC listings?',
+    answer: 'Kogan, Bunnings Marketplace and THE ICONIC each have their own seller onboarding, product data rules and integration route, and some only accept stock and orders through an approved connector. We start by reading what the marketplace allows a seller to automate, then build the agent around that route. The common jobs are the same across all of them: listing data that passes review first time, stock kept in step, and buyer messages sorted.' },
   { category: 'systems', question: 'Can an agent answer where-is-my-order questions using Australia Post tracking?',
-    answer: 'Yes, and it is usually the first job we build. Plan for one limit. Australia Post says its Track Items API allows 10 requests a minute with up to 10 tracking IDs each, so an agent cannot fetch tracking fresh for every question in a busy week. We store tracking events as they arrive and answer from that record. StarTrack and Sendle orders are handled through their own connections.',
+    answer: 'Yes, and it is often the best first job, because the volume is high and the answer sits in data you already hold. Plan for one limit. Australia Post says its Track Items API allows 10 requests a minute with up to 10 tracking IDs each, so an agent cannot fetch tracking fresh for every question in a busy week. We store tracking events as they arrive and answer from that record. StarTrack and Sendle orders are handled through their own connections.',
     links: [{ href: SRC_AUSPOST, label: 'Australia Post: Track Items API limits' }] },
   { category: 'systems', question: 'Can the agent handle Afterpay, Zip and Stripe refunds?',
-    answer: 'Yes. The agent reads the return, tests it against your policy and lines up the refund on the payment method the shopper used. Afterpay’s API documents one refund call for a full or partial refund, and it can be retried safely when the retry reuses the first request’s requestId and merchantReference. That matters for an agent, because a retried call must never refund twice. We build every refund path so a person approves before money moves.',
+    answer: 'Yes. The agent reads the return, tests it against your policy and lines up the refund on the payment method the shopper used. Afterpay’s API documents one refund call for a full or partial refund, and it can be retried safely when the retry sends the same two reference codes as the first try (Afterpay calls them requestId and merchantReference). That matters for an agent, because a retried call must never refund twice. We build every refund path so a person approves before money moves.',
     links: [{ href: SRC_AFTERPAY, label: 'Afterpay API: create refund' }] },
 
   // ── Privacy and safety ──
   { category: 'privacy', question: 'Does the Privacy Act apply to an ecommerce AI agent?',
-    answer: 'Yes, when your business falls under the Privacy Act 1988 and the agent handles customer names, addresses or order histories. A delivery address or a past order is personal information the moment it reaches the model, per OAIC guidance on AI products. So a where-is-my-order agent checks the shopper’s email and order number before it shares any order details, reads only the order it was asked about, and logs what it saw. We also confirm which AI provider processes the data before building.',
+    answer: 'Yes, when your business falls under the Privacy Act 1988 and the agent handles customer names, addresses or order histories. OAIC guidance on AI products says privacy duties apply to any personal information put into an AI system. So a where-is-my-order agent checks the shopper’s email and order number first. It reads only that order and logs what it saw. We name the AI provider that processes the data before building.',
     links: [{ href: SRC_OAIC_AI, label: 'OAIC: privacy and commercially available AI' }] },
   { category: 'privacy', question: 'Do we have to tell shoppers they are chatting with AI?',
     answer: 'OAIC guidance asks businesses to make sure any chatbot or other AI tool facing the public is clearly identified as AI, and that privacy policies explain how the business uses AI. We label the chat as an AI assistant, show how to reach a person, and give you wording for your privacy policy. Your adviser should still review the final policy.' },
   { category: 'privacy', question: 'What changes for ecommerce agents on 10 December 2026?',
-    answer: 'If your business is covered by the Privacy Act, then from 10 December 2026, under changes made by the Privacy and Other Legislation Amendment Act 2024, APP 1 requires your privacy policy to describe the kinds of personal information used and the kinds of decisions made by computer programs that could significantly affect a person’s rights or interests. Most businesses under A$3 million turnover are exempt. An agent that refuses refunds or blocks accounts by itself may fall in scope. We document what each agent decides so the policy can say so accurately.',
+    answer: 'The change comes from the Privacy and Other Legislation Amendment Act 2024. From 10 December 2026, APP 1 asks covered businesses to say more in their privacy policy. It must describe the personal information used, and the kinds of decisions computer programs make that could significantly affect a person. Most businesses under A$3 million turnover are exempt. An agent that refuses refunds or blocks accounts by itself may fall in scope, so we document what each agent decides.',
     links: [{ href: SRC_OAIC_APP1, label: 'OAIC: APP 1 guidelines' }] },
   { category: 'privacy', question: 'Is it safe to give an AI agent access to our store?',
     answer: 'Safety comes from the access you grant, so each agent gets its own API key with the least permission the job needs, starts read-only, and logs every action with what it saw. Refunds, price changes, discount codes and account changes stay behind a person until the logs show the agent follows your rules. There is one switch that pauses it, and you hold it.' },
 
   // ── Cost, briefs and working with us ──
   { category: 'working', question: 'How much does an ecommerce AI agent cost to build in Australia?',
-    answer: 'For a store, the price moves with three things: how many sales channels the agent covers, whether it only reads or also writes back to your ERP or accounting system, and how much product data needs cleaning first. A support agent that reads Shopify and Australia Post sits at the low end. One that writes stock to Cin7 across four marketplaces costs more, because every write needs testing. Flowtivity’s March 2026 guide lists customer service automation at A$10,000 to A$25,000, GST not stated. That is a market range, not our price; we quote a fixed price in writing after a short scoping call.',
+    answer: 'Flowtivity’s March 2026 Australian guide lists customer service automation at A$10,000 to A$25,000 and multi-system workflow automation at A$20,000 to A$50,000 or more, GST not stated. A support agent that only reads Shopify and Australia Post sits near the first range. One that writes stock to Cin7 across four marketplaces sits nearer the second, because every write needs testing. These are market ranges, not our prices. We quote a fixed price in writing after a short scoping call.',
     links: [{ href: SRC_FLOWTIVITY, label: 'Flowtivity, AU pricing guide (March 2026)' }, { href: '/au/ai-agents#cost', label: 'More published AU agent cost ranges' }] },
-  { category: 'working', question: 'Should we buy an app or have a custom agent built?',
-    answer: 'If an app handles the job out of the box, use the app. Helpdesk tools such as Gorgias answer standard policy questions well. Commission a custom agent when the work depends on your own policies, spans two systems such as Shopify and Cin7, or touches money. Many stores run both: an app for front-line chat and a custom agent for returns, trade orders and marketplace listings.',
+  { category: 'working', question: 'Should we use Shopify’s own AI or a custom Shopify AI agent?',
+    answer: 'Start with what you already pay for. Shopify describes Sidekick as an AI assistant inside your Shopify admin that can build Shopify Flow workflows, edit orders and write product descriptions, and it shows changes for your review first. A custom Shopify AI agent earns its cost when the job spans Shopify and another system, such as Cin7, Xero or a marketplace seller centre, or depends on your own returns rules. Many stores run both.',
+    links: [{ href: SRC_SIDEKICK, label: 'Shopify Help Center: Sidekick' }] },
+  { category: 'working', question: 'Should we buy a helpdesk AI app or have a custom agent built?',
+    answer: 'If an app handles the job out of the box, use the app. Helpdesk tools such as Gorgias answer standard policy questions well. Commission a custom agent when the work depends on your own policies, spans two systems such as Shopify and Cin7, or touches money.',
     links: [{ href: '/au/ai-customer-service', label: 'AI customer service in Australia' }] },
   { category: 'working', question: 'Can we see it working before we sign?',
     answer: 'Yes. Before any contract we run a first version on your own data: a sample of real order emails, return requests or rejected listings from last month. You see the agent’s drafts next to what your team actually sent. If the drafts are not good enough to save your team time, you have lost an hour, and we will tell you so.' },
   { category: 'working', question: 'What should our brief or RFP include?',
-    answer: 'Name the job, the volume and the systems. For example: 600 delivery questions a week, Shopify Plus, Cin7 Core, Xero, Australia Post and StarTrack, replies in Gorgias. Add who approves what today, any wholesale or marketplace channels, and your timeline. A one-page brief is enough. Send it through the form and we reply with questions or a written scope.' },
+    answer: 'An RFP is a formal request for proposal from your buying team; a plain brief works just as well. Name the job, the volume and the systems. For example: 600 delivery questions a week, Shopify Plus, Cin7 Core, Xero, Australia Post and StarTrack, replies in Gorgias. Add who approves what today, any wholesale or marketplace channels, and your timeline. A one-page brief is enough. Send it through the form and we reply with questions or a written scope.' },
   { category: 'working', question: 'How long does an ecommerce AI agent take to build?',
     answer: 'A single agent on a platform with a good API, such as a delivery-question agent on Shopify with Australia Post tracking, usually reaches a supervised pilot in a few weeks. Agents that touch an ERP, several marketplaces or messy product data take longer. We give you a timeline in writing after the mapping stage, once we have seen the real data.' },
-  { category: 'working', question: 'Who owns the agent, and what happens after launch?',
-    answer: 'You own the code and the repository from day one. The AI and hosting can run in your own accounts at cost, with no markup from us. Defects are fixed inside the build price for a cover period agreed before work starts. Support after that is optional: each change is quoted and approved, with no monthly minimum, and each phase is scoped, priced and signed on its own.' },
+  { category: 'working', question: 'Who owns the ecommerce AI agent, and what happens after launch?',
+    answer: 'You own the code and the repository from day one. The AI and hosting can run in your own accounts at cost, with no markup from us. Defects are fixed inside the build price for a cover period agreed before work starts. Support after that is optional. Each change is quoted and approved per request, and there is no monthly minimum. Each phase has its own fixed price, quoted in writing.' },
 ];
 
 /* ─── Jobs an ecommerce agent does in an Australian store ─── */
@@ -169,8 +184,8 @@ const AGENT_JOBS: { n: string; t: string; d: string }[] = [
   { n: '01', t: 'Delivery questions answered from tracking', d: 'Reads the order, matches it to Australia Post, StarTrack or Sendle events already stored, and replies in your helpdesk with the real status. Missed deliveries and damaged parcels go to a person with the history attached.' },
   { n: '02', t: 'Returns checked against your policy', d: 'Reads the customer’s own words and photos, checks the order date and item against your returns policy, and prepares the refund, exchange or store credit on Afterpay, Zip or Stripe for approval.' },
   { n: '03', t: 'Marketplace listings that pass review', d: 'Rewrites titles, bullet points and attributes from your master product data to the rules of Amazon.com.au, eBay, Kogan or Bunnings Marketplace, and fixes listings that bounce back rejected.' },
-  { n: '04', t: 'Stock alerts with a draft purchase order', d: 'Watches stock in Shopify, Cin7 Core or Unleashed against your reorder points and supplier lead times, and drafts the purchase order for your buyer to send.' },
-  { n: '05', t: 'Wholesale orders from email and PDF', d: 'Turns a stockist’s emailed order or PDF into a draft sales order at that customer’s price list, flags lines it cannot match, and waits for your sales rep to confirm.' },
+  { n: '04', t: 'AI inventory management: stock alerts with a draft purchase order', d: 'Watches stock in Shopify, Cin7 Core or Unleashed against your reorder points and supplier lead times, and drafts the purchase order for your buyer to send.' },
+  { n: '05', t: 'Wholesale orders from email and PDF', d: 'Turns a stockist’s emailed order or PDF into a draft sales order at that customer’s price list, flags lines it cannot match, and waits for your sales rep to confirm. Trade stores with their own B2B portal follow the same path.' },
   { n: '06', t: 'Payouts and refunds matched in Xero or MYOB', d: 'Lines up marketplace and payment payouts with orders, fees and refunds so the bookkeeper reconciles from a short exception list.' },
   { n: '07', t: 'Product data cleaned before launch day', d: 'Finds missing sizes, weights, barcodes and care details across the catalogue and drafts the fixes in a spreadsheet your team approves before anything changes in the store.' },
   { n: '08', t: 'Buyer messages sorted across seller centres', d: 'Collects messages from each marketplace’s seller inbox, answers the routine ones from order data, and queues the rest by urgency for your team.' },
@@ -196,6 +211,14 @@ const SYSTEMS: { t: string; d: string }[] = [
   { t: 'Payments', d: 'Afterpay, Zip and Stripe, with every refund path behind a person’s approval.' },
   { t: 'Couriers', d: 'Australia Post, StarTrack and Sendle, with tracking stored as events arrive so replies stay inside the carrier’s limits.' },
   { t: 'Helpdesk and inbox', d: 'Gorgias, Zendesk, Freshdesk, Gmail and Outlook. The agent drafts where your team already replies.' },
+];
+
+/* ─── Options compared (each cell from the vendor's own page, fetched 2026-10-31) ─── */
+const OPTION_ROWS: { o: string; well: string; stops: string; pick: string; src?: string }[] = [
+  { o: 'Shopify Sidekick', well: 'AI assistant inside the Shopify admin: builds Shopify Flow workflows, edits orders, writes product descriptions, and shows changes for review first.', stops: 'It works from the Shopify admin, so a job that also needs Cin7, Xero or a seller centre needs another tool.', pick: 'Your work starts and ends inside Shopify.', src: SRC_SIDEKICK },
+  { o: 'Gorgias AI Agent', well: 'Customer support automation around the clock, in a helpdesk inbox connected to Shopify or BigCommerce.', stops: 'It answers in the helpdesk. Your own back-office rules across other systems are a separate job.', pick: 'Most of the load is front-line customer questions.', src: SRC_GORGIAS },
+  { o: 'Linnworks', well: 'Multichannel inventory and orders: creates and updates listings across marketplaces and updates stock when a sale lands.', stops: 'It syncs fields and routes orders. Reading messages, rewriting rejected listings or checking returns is not its job.', pick: 'Stock and orders drift across many channels.', src: SRC_LINNWORKS },
+  { o: 'Custom ecommerce AI agent', well: 'Reads and drafts across your exact stack, such as Shopify, Cin7, Xero, Australia Post and Afterpay, under approval rules you set.', stops: 'It costs a build, and it is only worth it for a job your team repeats every week.', pick: 'The job spans two or more systems or touches money.' },
 ];
 
 /* ─── Approval split (rendered as a table) ─── */
@@ -236,6 +259,9 @@ const RELATED: { h: string; t: string; d: string }[] = [
   { h: '/au/shopify-development', t: 'Shopify development', d: 'Shopify and Shopify Plus builds, migrations and B2B, with Xero, MYOB and courier links.' },
   { h: '/au/ecommerce-development', t: 'Ecommerce development', d: 'Platform choice and full store builds for Australian brands before agents come in.' },
   { h: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'Supplier bills read into draft Xero or MYOB entries for the finance team to approve.' },
+  { h: '/au/ecommerce-erp-integration', t: 'Ecommerce ERP integration', d: 'Store, marketplace and stock data kept in step with your ERP or inventory system before an agent works on top.' },
+  { h: '/au/b2b-ecommerce', t: 'B2B ecommerce', d: 'Trade portals with customer price lists and account ordering, where wholesale order agents fit.' },
+  { h: '/uk/ecommerce-ai-agents', t: 'Ecommerce AI agents (UK)', d: 'The same service for UK stores and marketplaces.' },
   { h: '/services/ecommerce-ai-agents', t: 'Ecommerce AI agents (US)', d: 'The same service for US stores, with WooCommerce, BigCommerce and Adobe Commerce detail.' },
 ];
 
@@ -282,7 +308,7 @@ const jsonLd = {
         '@type': 'Person',
         name: 'Bhavesh Barot',
         jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
+        url: 'https://factoryjet.com/author/bhavesh-barot',
         sameAs: [
           'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
           'https://github.com/factoryjet-tech',
@@ -305,7 +331,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['ecommerce-ai-agents'] },
   openGraph: {
     title: TITLE,
     description:
@@ -426,8 +452,8 @@ export default function EcommerceAiAgentsAUPage() {
           <div className="wrap">
             {[
               { v: '10 / min', t: 'requests allowed on Australia Post’s Track Items API, with up to 10 tracking IDs each', s: 'Australia Post Developer Centre', u: SRC_AUSPOST },
-              { v: 'AU', t: 'Amazon lists Australia as its own Selling Partner API marketplace, in the Far East region', s: 'Amazon SP-API', u: SRC_AMAZON },
-              { v: 'Full or part', t: 'Afterpay’s refund call covers both, and is safe to retry when the retry reuses the first requestId and merchantReference', s: 'Afterpay API reference', u: SRC_AFTERPAY },
+              { v: 'A39IBJ37TRP1C6', t: 'is the marketplace ID Amazon gives Australia in its Selling Partner API, listed in the Far East region', s: 'Amazon SP-API', u: SRC_AMAZON },
+              { v: 'Full or part', t: 'Afterpay’s refund call covers both, and is safe to retry when the retry sends the same two reference codes as the first try', s: 'Afterpay API reference', u: SRC_AFTERPAY },
               { v: '10 Dec 2026', t: 'privacy policies of businesses covered by the Privacy Act must describe the kinds of decisions computer programs make with personal information', s: 'OAIC, APP 1', u: SRC_OAIC_APP1 },
             ].map((r) => (
               <div className="ledgercell" key={r.t}>
@@ -443,8 +469,8 @@ export default function EcommerceAiAgentsAUPage() {
 
         <div className="wrap byline">
           <div className="av">BB</div>
-          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="who"><a href="/author/bhavesh-barot"><b>Bhavesh Barot</b></a>, Founder &amp; CEO<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST (GEO) ═══ */}
@@ -462,6 +488,8 @@ export default function EcommerceAiAgentsAUPage() {
                     tracking in your own systems, and drafts the next step for your team to approve.</span> In an Australian
                     store that usually means delivery questions answered from Australia Post or StarTrack events, returns
                     checked against your policy, Amazon.com.au and eBay listings fixed, and payouts matched in Xero or MYOB.
+                    FactoryJet builds these ecommerce automation agents for Australian stores on Shopify, WooCommerce and
+                    BigCommerce, and runs a demo on your own orders before you sign.
                   </p>
                 </div>
                 <div className="fact">
@@ -545,7 +573,7 @@ export default function EcommerceAiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Marketplace automation</div>
-              <h2>Agents for Amazon.com.au, eBay, Kogan, Bunnings Marketplace and THE ICONIC</h2>
+              <h2>Marketplace automation for Amazon.com.au, eBay, Kogan, Bunnings Marketplace and THE ICONIC</h2>
             </div>
             <div className="factswrap">
               <div className="factlist">
@@ -583,10 +611,46 @@ export default function EcommerceAiAgentsAUPage() {
           </div>
         </section>
 
+        {/* ═══ OPTIONS → table ═══ */}
+        <section className="section comparison" id="options">
+          <div className="wrap">
+            <div className="section-head head-stack">
+              <div className="eyebrow">App or custom agent</div>
+              <h2>Shopify Sidekick, Gorgias, Linnworks or a custom AI agent?</h2>
+              <p className="lead">
+                Many stores need no custom build at all. This is where each option fits, from each vendor’s own description.
+              </p>
+            </div>
+            <p className="md:hidden" style={{ fontSize: 13, margin: '0 0 8px', opacity: 0.75 }}>Swipe sideways to see every column.</p>
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="Ecommerce AI options compared" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 760 }}>
+                <thead>
+                  <tr>
+                    <th>Option</th>
+                    <th>What it does well</th>
+                    <th>Where it stops</th>
+                    <th className="fj">Pick it when</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {OPTION_ROWS.map((r) => (
+                    <tr key={r.o}>
+                      <th scope="row">{r.src ? <a href={r.src} {...extLink}>{r.o}</a> : r.o}</th>
+                      <td>{r.well}</td>
+                      <td>{r.stops}</td>
+                      <td className="fj">{r.pick}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         {/* ═══ APPROVAL SPLIT → table ═══ */}
         <section className="section comparison" id="approval">
           <div className="wrap">
-            <div className="section-head">
+            <div className="section-head head-stack">
               <div className="eyebrow">Human in the loop</div>
               <h2>What the agent does alone, and what waits for a person</h2>
               <p className="lead">
@@ -594,8 +658,9 @@ export default function EcommerceAiAgentsAUPage() {
                 it right. Refunds and ledger entries stay with a person by default.
               </p>
             </div>
-            <div className="tablewrap" role="region" tabIndex={0} aria-label="Approval split for an ecommerce AI agent">
-              <table>
+            <p className="md:hidden" style={{ fontSize: 13, margin: '0 0 8px', opacity: 0.75 }}>Swipe sideways to see every column.</p>
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="Approval split for an ecommerce AI agent" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
                     <th>Job</th>
@@ -612,7 +677,7 @@ export default function EcommerceAiAgentsAUPage() {
             </div>
             <p className="tablenote">
               Refunds on Afterpay can be full or partial, and the <a href={SRC_AFTERPAY} {...extLink}>Afterpay refund call</a> is
-              safe to retry when the retry reuses the first request’s requestId and merchantReference. We build every refund path around that, so a retry never
+              safe to retry when the retry sends the same two reference codes (requestId and merchantReference) as the first try. We build every refund path around that, so a retry never
               pays twice.
             </p>
           </div>
@@ -639,7 +704,7 @@ export default function EcommerceAiAgentsAUPage() {
                 </ul>
               </div>
             </div>
-            <div className="timeline">
+            <div className="timeline timeline-4">
               {STEPS.map((s) => {
                 const [idx, title] = s.t.split(' · ');
                 return (
@@ -669,7 +734,7 @@ export default function EcommerceAiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Send us your brief</div>
-              <h2>Send your brief or RFP as it is</h2>
+              <h2>What should an ecommerce AI agent brief include?</h2>
             </div>
             <div className="factswrap">
               <div className="factlist">
@@ -705,7 +770,7 @@ export default function EcommerceAiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Terms</div>
-              <h2>How we work with Australian stores</h2>
+              <h2>Contract terms for an ecommerce AI agent project</h2>
               <p className="lead">
                 The same terms on every project, written into the scope before work starts.
               </p>
@@ -727,10 +792,9 @@ export default function EcommerceAiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Work on the same platforms</div>
-              <h2>Store and back-office work on the same platforms</h2>
+              <h2>WooCommerce, Shopify and Odoo work we have done</h2>
               <p className="lead">
-                None of these is an Australian client. We show them because the platforms match the stack many Australian
-                stores run.
+                Store and back-office work on the platforms many Australian stores run.
               </p>
             </div>
             <div className="platlist" role="list">
@@ -762,10 +826,10 @@ export default function EcommerceAiAgentsAUPage() {
                   an AI label and a way to reach a person.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><p>
-                  If your business is covered by the Privacy Act (most businesses under A$3 million turnover are exempt),
-                  then from 10 December 2026, under the Privacy and Other Legislation Amendment Act 2024, APP 1 requires
-                  privacy policies to describe the kinds of personal information used and the kinds of decisions made by
-                  computer programs that could significantly affect a person’s rights or interests. An agent that refuses a refund or blocks an account by itself may be one.
+                  Most businesses under A$3 million turnover are exempt from the Privacy Act. For covered businesses, the
+                  Privacy and Other Legislation Amendment Act 2024 changes APP 1 from 10 December 2026. Privacy policies
+                  must then describe the personal information used and the kinds of decisions computer programs make that
+                  could significantly affect a person. An agent that refuses a refund or blocks an account by itself may be one.
                   We record what each agent decides so your policy can say so. We are not lawyers; your adviser signs off.
                 </p></div>
               </div>
@@ -791,15 +855,16 @@ export default function EcommerceAiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">What it costs to build</div>
-              <h2>Published Australian ranges for building an AI agent</h2>
+              <h2>How much does an ecommerce AI agent cost in Australia?</h2>
             </div>
             <div className="au-split">
               <div>
                 <p>
                   An ecommerce agent costs more when it covers more sales channels, when it writes to your ERP or accounting
                   system instead of only reading, and when product data has to be cleaned before any channel will accept it.
-                  For a starting point, Flowtivity’s March 2026 guide lists customer service automation at A$10,000 to
-                  A$25,000, GST not stated. The <a href="/au/ai-agents#cost">AI agents page</a> lists more published ranges.
+                  Flowtivity’s March 2026 guide lists customer service automation at A$10,000 to A$25,000, and
+                  multi-system workflow automation at A$20,000 to A$50,000 or more, GST not stated. A store agent that
+                  writes across several channels and an ERP sits closer to the second range. The <a href="/au/ai-agents#cost">AI agents page</a> lists more published ranges.
                 </p>
                 <p>
                   These are market ranges, not our prices. FactoryJet quotes a fixed price in writing after a short scoping
@@ -829,7 +894,7 @@ export default function EcommerceAiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Related FactoryJet services</div>
-              <h2>Around the store agent</h2>
+              <h2>Related ecommerce and AI services in Australia</h2>
             </div>
             <ul className="agentdir-grid">
               {RELATED.map((s) => (
@@ -857,8 +922,11 @@ export default function EcommerceAiAgentsAUPage() {
         {/* ═══ SOURCES ═══ */}
         <section className="section referencesSection references" id="references">
           <div className="wrap">
-            <div className="eyebrow">Sources, checked 29 October 2026</div>
+            <div className="eyebrow">Sources, checked 29 to 31 October 2026</div>
             <div className="refs">
+              <a href={SRC_SIDEKICK} {...extLink}>Shopify Help Center, Sidekick</a>
+              <a href={SRC_GORGIAS} {...extLink}>Gorgias, AI Agent</a>
+              <a href={SRC_LINNWORKS} {...extLink}>Linnworks, multichannel inventory</a>
               <a href={SRC_AUSPOST} {...extLink}>Australia Post, Track Items API limits</a>
               <a href={SRC_AFTERPAY} {...extLink}>Afterpay API, create refund</a>
               <a href={SRC_AMAZON} {...extLink}>Amazon SP-API, marketplace IDs</a>

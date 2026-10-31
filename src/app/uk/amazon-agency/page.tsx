@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/amazon-agency, built 2026-10-29.
@@ -26,12 +27,13 @@ import '../ai-agents/ai-agents.css';
       FAQ renders. Never add a second list of questions. */
 
 const CANONICAL = 'https://factoryjet.com/uk/amazon-agency';
-const UPDATED = '2026-10-29';
+const PUBLISHED = '2026-10-29';
+const UPDATED = '2026-10-31';
 const READ_ON = '29 October 2026';
 const TITLE = 'Amazon Agency UK: Seller Central, FBA, EU | FactoryJet';
-const H1 = 'Amazon Agency UK: Seller Central, FBA and Amazon EU, Joined to the Systems Your Business Already Runs';
+const H1 = 'Amazon Agency UK: Seller Central, FBA and Amazon EU, Joined to Your Systems';
 const DESCRIPTION =
-  'Amazon agency for established UK brands: Amazon.co.uk listings, Brand Registry, FBA, ads and EU expansion, wired into Linnworks, Xero, Sage or your ERP.';
+  'Amazon agency for established UK brands: Amazon.co.uk listings, Brand Registry, FBA, ads and EU expansion, linked to your order hub, Xero, Sage or your ERP.';
 
 /* Design tokens, copied by value from ../ai-agents/ai-agents.css so inline
    styles stay on-system without CSS custom property references in this file. */
@@ -81,7 +83,7 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // ── Amazon agency basics ──
   { category: 'basics', question: 'What does an Amazon agency do for a UK brand?',
-    answer: 'It takes ownership of the work that decides whether Amazon.co.uk makes you money: the catalogue and listings, Brand Registry, FBA stock planning, advertising, account health cases and the reporting behind them. A good one also handles the plumbing, meaning how Amazon orders, stock and fees reach your order system and your accounts. That second half is where Amazon sellers often lose hours every week, rekeying orders and unpicking settlements.' },
+    answer: 'It takes ownership of the work that decides whether Amazon.co.uk makes you money: the catalogue and listings, Brand Registry, FBA stock planning, advertising, account health cases and the reporting behind them. A good one also handles the plumbing, meaning how Amazon orders, stock and fees reach your order system and your accounts. If orders are rekeyed by hand, that second half is where the hours go.' },
   { category: 'basics', question: 'What is Amazon account management?',
     answer: 'Account management is the day-to-day running of a Seller Central account. It covers listing fixes, suppressed or stranded products, cases with Seller Support, policy warnings, stock and restock decisions, and keeping the account health dashboard clean. For an established brand it also means someone senior watching the numbers weekly, so a pricing error or a hijacked listing is caught in hours rather than discovered at month end.' },
   { category: 'basics', question: 'Is selling on Amazon worth it in 2026?',
@@ -89,9 +91,11 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What are the downsides of selling on Amazon?',
     answer: 'You give up some control. Amazon owns the customer relationship, sets the fee card, decides on account health, and lets other sellers list against your products unless your brand is protected. Fees stack up across referral, fulfilment, storage and ads. Cash also arrives on Amazon’s payout schedule, not yours. None of this rules Amazon out. It means the channel needs watching like any other wholesale customer.' },
   { category: 'basics', question: 'Which is better, Amazon or Shopify?',
-    answer: 'They do different jobs. Amazon brings shoppers who are already searching, at the price of fees and less control. Your own Shopify, WooCommerce or Magento store keeps the customer data and the margin, but you pay to bring traffic in. Most established UK brands run both, with stock and pricing held in one place so the two never contradict each other. We help with either side.' },
+    answer: 'They do different jobs. Amazon brings shoppers who are already searching, at the price of fees and less control. Your own Shopify, WooCommerce or Magento store keeps the customer data and the margin, but you pay to bring traffic in. Most established UK brands run both. A Shopify Amazon integration, or one through your order hub, holds stock and price in one place so the two stores agree.' },
   { category: 'basics', question: 'Should we use Seller Central or Vendor Central?',
     answer: 'Seller Central means you sell to shoppers yourself and set the price. Vendor Central means Amazon buys stock from you like a wholesaler and resells it. Most UK sellers run Seller Central because it keeps control of price and stock with them. Some run both. We work in either, and the right answer depends on your margins, how much control you want and how Amazon approaches you.' },
+  { category: 'basics', question: 'Do we need an Amazon consultant or a full Amazon agency?',
+    answer: 'An Amazon consultant usually advises: audits the account, writes a plan and hands it to your team. A full Amazon agency, sometimes called an Amazon marketing agency, also does the work, from listings and Amazon advertising to stock and account health. If someone in-house can carry out the plan, a consultant may be enough. We can do either, one phase at a time.' },
 
   // ── VAT, HMRC and EU rules ──
   { category: 'tax', question: 'Do we need to be VAT registered to sell on Amazon UK?',
@@ -117,17 +121,17 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'ops', question: 'Why are our FBA fees so high?',
     answer: 'Usually one of three reasons. A product’s packaging pushes it into a bigger size or weight band than it needs. Slow sellers sit in Amazon warehouses for months and collect storage charges. Or returns on one or two lines eat the margin. Amazon publishes its fee card in Seller Central. We match your actual charges against it, product by product, and show which lines to repack, move to FBM or stop.' },
   { category: 'ops', question: 'Can you connect Amazon to Linnworks, Brightpearl or our ERP?',
-    answer: 'Yes. Amazon orders and stock usually need to reach an order hub such as Linnworks, Brightpearl or Mintsoft, and from there an ERP like NetSuite, Dynamics 365 Business Central, Sage 200 or Odoo. Where an off-the-shelf connector does the job we set it up. Where it does not, we build the missing link and you own the code.' },
+    answer: 'Usually, yes. Amazon orders and stock tend to reach an order hub such as Linnworks, Brightpearl or Mintsoft, and from there an ERP. We connect to these systems through their APIs or the connector they already offer. We check each one against your own account during scoping, before we quote, and tell you plainly if a link will not work. You own any code we write.' },
   { category: 'ops', question: 'Do you run Amazon ads?',
-    answer: 'Yes. We structure Sponsored Products, Sponsored Brands and Sponsored Display around the products that make money, then judge them on profit after fees, not on ad sales alone. Advertising sits inside the project, alongside listings and stock, because ads pointed at a weak listing or a product about to run out waste budget. If you already have a good ads team, we can leave ads with them.' },
+    answer: 'Yes. We structure Sponsored Products, Sponsored Brands and Sponsored Display around the products that make money, then judge them on profit after fees, not on ad sales alone. We report ACoS (ad spend as a share of ad sales) and TACoS (ad spend as a share of all sales) next to profit. Advertising sits inside the project, alongside listings and stock, because ads pointed at a weak listing or a product about to run out waste budget. If you already have a good ads team, we can leave ads with them.' },
   { category: 'ops', question: 'Do you also manage eBay UK, OnBuy and other marketplaces?',
     answer: 'Yes. Many UK brands sell across Amazon.co.uk, eBay UK and OnBuy, and some add ManoMano or the B&Q marketplace for the right categories. The hard part is keeping stock, prices and product data consistent across all of them. We usually solve that once, in your order hub or ERP, then add channels one at a time so nothing oversells.' },
 
   // ── Cost and working with us ──
   { category: 'working', question: 'How much does an Amazon agency cost in the UK?',
-    answer: 'Models vary. RippleEffect, a UK and US Amazon consultancy, publishes a monthly retainer sized by catalogue plus sales commission falling from 4% to 1.5% across bands. Its worked example, a brand selling £50,000 a month with about 30 SKUs, comes to £4,250 a month with a £1,500 onboarding fee for an existing account (£2,500 for a new launch) and a 12-month initial term. The page does not say whether VAT is included. FactoryJet quotes a fixed price in writing after scoping.' },
+    answer: 'Models vary. RippleEffect, a UK and US Amazon consultancy, publishes a monthly retainer sized by catalogue plus sales commission falling from 4% to 1.5% across bands. Its worked example, a brand selling £50,000 a month with about 30 SKUs, comes to £4,250 a month with a £1,500 onboarding fee for an existing account (£2,500 for a new launch) and a 12-month initial term. FactoryJet quotes a fixed price in writing after scoping.' },
   { category: 'working', question: 'Which Amazon agency is best in the UK?',
-    answer: 'The best one is the one that fits your gap. Havas Market suits brands wanting a large media network. RippleEffect publishes its prices and works on commission. Margin Business targets established brands across the UK, EU and Gulf. FactoryJet fits brands whose problem spans Amazon and the systems behind it: listings and ads, plus Linnworks, Xero or ERP links. Ask each for named people and a sample report.' },
+    answer: 'The best one is the one that fits your gap. Havas Market suits brands wanting a large media network. RippleEffect publishes its prices and works on commission. Margin Business targets established brands across the UK, EU and Gulf. FactoryJet fits brands whose problem spans Amazon and the systems behind it: listings and ads, plus the links into an order hub, Xero or an ERP. Ask each for named people and a sample report.' },
   { category: 'working', question: 'Do we have to sign a long contract?',
     answer: 'No. Each phase is scoped, priced and signed on its own, so you can stop after any of them. You own the listings, the data, any code and the accounts it runs in. Defects in what we build are fixed inside the build price for a cover period agreed before work starts. If you want us to keep running the account afterwards, that is optional, with no monthly minimum.' },
   { category: 'working', question: 'What should we send you to get a quote?',
@@ -139,14 +143,14 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 /* ─── Named UK Amazon agencies (open self-disclosure, ItemList). Each note is
        based on the company’s own website, read 2026-10-29. ─────────────── */
 const AGENCIES: { name: string; note: string }[] = [
-  { name: 'Havas Market', note: 'Part of the Havas Media Network. Its UK site lists Amazon account management, advertising, listing and SEO work, Amazon DSP, reporting and international expansion consulting.' },
+  { name: 'Havas Market', note: 'Part of the Havas Media Network. Its UK site lists Amazon account management, advertising, listing and SEO work, Amazon DSP (Amazon’s display and video ad buying tool), reporting and international expansion consulting.' },
   { name: 'RippleEffect', note: 'A UK and US Amazon growth consultancy covering strategy, operations, PPC and DSP. It publishes its pricing: a catalogue-sized retainer plus a commission on sales that steps down as sales grow.' },
   { name: 'Margin Business', note: 'Describes itself as an Amazon agency for established brands, offering PPC, listings, Amazon SEO, A+ Content, account management and expansion across the US, UK, EU and Gulf marketplaces.' },
   { name: 'PPC Geeks', note: 'A UK paid search agency with a dedicated Amazon Ads service page, suited to brands that want advertising handled by a PPC specialist.' },
 ];
 
 const FACTORYJET_NOTE =
-  'Amazon.co.uk and Amazon EU listings, Brand Registry, FBA and FBM planning and ads, built alongside the links into Linnworks, Brightpearl, Xero, Sage or your ERP. Fixed price per phase, and optional support with no monthly minimum.';
+  'Amazon.co.uk and Amazon EU listings, Brand Registry, FBA and FBM planning and ads, plus the links from Amazon into your order hub, Xero, Sage or your ERP through their APIs. Fixed price per phase, quoted in writing. Changes quoted and approved per request, with no monthly minimum.';
 
 /* ─── JSON-LD. The Organization is defined once, sitewide; this page only
        references it by @id and never redefines it. ─────────────────────── */
@@ -181,7 +185,7 @@ const jsonLd = {
       name: TITLE,
       headline: H1,
       inLanguage: 'en-GB',
-      datePublished: UPDATED,
+      datePublished: PUBLISHED,
       dateModified: UPDATED,
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="true"]'] },
       author: {
@@ -225,16 +229,12 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: {
     canonical: CANONICAL,
-    languages: {
-      'en-US': 'https://factoryjet.com/services/amazon-agency',
-      'en-GB': CANONICAL,
-      'x-default': 'https://factoryjet.com/services/amazon-agency',
-    },
+    languages: twinAlternates['amazon-agency'],
   },
   openGraph: {
     title: TITLE,
     description:
-      'Amazon.co.uk and Amazon EU for established UK brands: listings, Brand Registry, FBA, ads and GPSR details, joined to Linnworks, Xero, Sage or your ERP. Fixed price per phase.',
+      'Amazon.co.uk and Amazon EU for established UK brands: listings, Brand Registry, FBA, ads and GPSR details, linked to your order hub, Xero, Sage or your ERP. Fixed price per phase.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
@@ -252,7 +252,7 @@ const STEPS = [
   { n: '02', t: 'Map the systems', d: 'We draw how an Amazon order travels today: into Linnworks, Brightpearl or Mintsoft, out to Royal Mail, DPD or Evri, and into Xero, Sage, QuickBooks or your ERP. Every manual step and every overnight export goes on the map.' },
   { n: '03', t: 'Show you work on your own data', d: 'Before you sign, we rewrite a handful of your real listings or run a sample order sync, so you can judge the work. No charge for this step.' },
   { n: '04', t: 'Scope and price the first phase', d: 'You get a written scope with a fixed price for one phase only. Typical first phases: a catalogue and Brand Registry clean-up, an FBA and FBM split, or the order and settlement link into your books.' },
-  { n: '05', t: 'Fix the catalogue', d: 'Titles, bullet points, images, variations, backend search terms and A+ Content, written in British English for Amazon.co.uk, with GTINs and brand details checked so listings stop breaking.' },
+  { n: '05', t: 'Fix the catalogue and Amazon SEO', d: 'Titles, bullet points, images, variations, backend search terms and A+ Content, written in British English for Amazon.co.uk, with GTINs and brand details checked so listings stop breaking.' },
   { n: '06', t: 'Set up stock, fulfilment and ads', d: 'Restock rules, the FBA and FBM split, and an ads structure built around the products that earn money after fees. Spend goes on lines that have stock and a listing that converts.' },
   { n: '07', t: 'Join Amazon to your books', d: 'Settlements split into sales, refunds, fees and ad charges with the right VAT codes, so your Making Tax Digital return is built from clean data. Off-the-shelf connector first, custom link only where it falls short.' },
   { n: '08', t: 'Expand into Amazon EU, if it pays', d: 'Translated listings, GPSR responsible person details on each EU listing, and a Pan-European FBA or ship-from-UK plan agreed with your tax adviser before any stock moves.' },
@@ -281,20 +281,20 @@ export default function AmazonAgencyUKPage() {
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  You already sell on Amazon.co.uk. Orders drop into Linnworks or Brightpearl, the books live in Xero,
-                  Sage or Business Central, and every settlement takes someone half a day to reconcile. Now the board
-                  wants Germany and France. FactoryJet fixes the listings, Brand Registry, FBA and ads, and joins Amazon
-                  to the systems behind it, so growth on Amazon does not mean more spreadsheets.
+                  You already sell on Amazon.co.uk. Orders drop into Linnworks or Brightpearl, and the books live in
+                  Xero, Sage or Business Central. If each settlement takes hours to reconcile by hand, that cost grows
+                  with every new store. Now the board wants Germany and France. We fix the listings, Brand Registry,
+                  FBA and ads, then connect Amazon to your books and order hub. You own what we build.
                 </p>
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses since 2014</span></div>
-                  <div className="upd">Last updated<br />29 October 2026</div>
+                  <div className="who"><a href="/about"><b>Bhavesh Barot</b></a>, Founder &amp; CEO<br /><span>500+ businesses since 2014</span></div>
+                  <div className="upd">Last updated<br />31 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="uk" source="uk_amazon_agency_hero" submitLabel="See a draft of my Amazon listings" />
+                  <HeroInlineForm region="uk" source="uk_amazon_agency_hero" submitLabel="See my listings draft" />
                   <p style={{ fontSize: 13, color: T.n400, marginTop: 10 }}>
                     Working examples on your own listings before you sign. Founder replies within 24 hours.
                   </p>
@@ -310,8 +310,8 @@ export default function AmazonAgencyUKPage() {
                     <div className="scorecard-val" style={{ fontSize: 15 }}>Visible</div>
                   </div>
                   <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Settlements in your books</div><div className="scorecard-note">split by VAT code, ready for MTD</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Automatic</div>
+                    <div><div className="scorecard-metric">Settlements in your books</div><div className="scorecard-note">split by VAT code, ready for Making Tax Digital (MTD)</div></div>
+                    <div className="scorecard-val" style={{ fontSize: 15 }}>Reconciled</div>
                   </div>
                   <div className="scorecard-row">
                     <div><div className="scorecard-metric">Amazon EU decision</div><div className="scorecard-note">Pan-EU FBA or ship from the UK</div></div>
@@ -330,9 +330,10 @@ export default function AmazonAgencyUKPage() {
               <span className="lab">What does an Amazon agency do for an established UK brand?</span>
               <p>
                 An Amazon agency runs the work that decides whether Amazon.co.uk and the EU stores make a profit:
-                listings, Brand Registry, FBA stock, advertising and account health. FactoryJet adds the part most
-                Amazon agencies leave to you: connecting Amazon orders, stock and settlements to your order hub,
-                accounting software and ERP, so the numbers agree everywhere.
+                listings, Brand Registry, FBA stock, advertising and account health. An Amazon consultant advises on
+                that work; an Amazon marketing agency also does it. FactoryJet adds the part many Amazon agencies
+                leave to you: connecting Amazon orders, stock and settlements to your order hub, accounting software
+                and ERP, so the numbers agree everywhere.
               </p>
             </div>
             <div className="def mt-6" style={{ maxWidth: 940 }}>
@@ -340,7 +341,7 @@ export default function AmazonAgencyUKPage() {
               <p>
                 <b>Seller Central</b> is the dashboard where you list and sell to Amazon shoppers yourself.{' '}
                 <b>FBA</b> (Fulfilled by Amazon) means Amazon stores, picks and ships your stock;{' '}
-                <b>FBM</b> (Fulfilled by Merchant) means you or your 3PL ship it. <b>Pan-European FBA</b> is Amazon’s
+                <b>FBM</b> (Fulfilled by Merchant) means you or your 3PL (a third-party warehouse) ship it. <b>Pan-European FBA</b> is Amazon’s
                 programme for holding stock in several EU countries. A <b>settlement</b> is Amazon’s payout report,
                 which mixes sales, refunds and fees in one figure.
               </p>
@@ -361,7 +362,7 @@ export default function AmazonAgencyUKPage() {
                 { v: '£25', t: 'a month, excluding VAT, for Amazon UK’s Professional selling plan', s: 'Amazon UK', u: SRC.amzPricing.url },
                 { v: '8% to 15%', t: 'where most Amazon UK referral fees sit, by category', s: 'Amazon UK', u: SRC.amzPricing.url },
                 { v: '£90,000', t: 'taxable turnover in 12 months: the UK VAT registration threshold', s: 'GOV.UK', u: SRC.vatThreshold.url },
-                { v: '13 Dec 2024', t: 'EU GPSR in effect: EU sales need a responsible operator in the EU or NI', s: 'business.gov.uk', u: SRC.gpsr.url },
+                { v: '13 Dec 2024', t: 'EU product safety rules (GPSR) in effect: EU sales need a responsible operator in the EU or NI', s: 'business.gov.uk', u: SRC.gpsr.url },
               ].map((r) => (
                 <li key={r.t}>
                   <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
@@ -380,14 +381,14 @@ export default function AmazonAgencyUKPage() {
               <span className="eyebrow">What we take on</span>
               <h2>Amazon agency services for UK brands, front of house and back office</h2>
               <p className="lead mt-4">
-                Most Amazon agencies in the UK stop at the listing and the ad account. Most integration firms never
-                open Seller Central. The trouble usually sits between the two, so we cover both.
+                Many Amazon agencies in the UK stop at the listing and the ad account. Many integration firms rarely
+                work inside Seller Central. The trouble often sits between the two, so we cover both.
               </p>
             </div>
             <ul className="col-3 mt-12">
               <li className="svc-card">
                 <h3>Catalogue and listings</h3>
-                <p className="mt-4">Titles, bullets, images, variations and A+ Content written for Amazon.co.uk shoppers in British English, with GTINs, brand fields and categories checked so listings stop getting suppressed or merged.</p>
+                <p className="mt-4">Titles, bullets, images, variations and A+ Content (the richer images and text brands can add to a product page) written for Amazon.co.uk shoppers in British English, with GTINs (the barcode numbers on each product), brand fields and categories checked so listings stop getting suppressed or merged.</p>
               </li>
               <li className="svc-card">
                 <h3>Brand Registry and protection</h3>
@@ -398,16 +399,16 @@ export default function AmazonAgencyUKPage() {
                 <p className="mt-4">Which lines belong in Amazon’s warehouses and which ship from your own stock or 3PL with Royal Mail, DPD or Evri. Restock rules that stop stockouts on best sellers and storage bills on slow ones.</p>
               </li>
               <li className="svc-card">
-                <h3>Amazon ads</h3>
-                <p className="mt-4">Sponsored Products, Sponsored Brands and Sponsored Display, structured around products that earn money after fees and reported on profit, not ad sales.</p>
+                <h3>Amazon advertising and PPC management</h3>
+                <p className="mt-4">Sponsored Products, Sponsored Brands and Sponsored Display, structured around products that earn money after fees. We report profit first, with ACoS and TACoS beside it, not ad sales alone.</p>
               </li>
               <li className="svc-card">
                 <h3>Account health</h3>
-                <p className="mt-4">Policy warnings, stranded stock, listing errors and Seller Support cases worked through by someone who reads the account every week, not at month end.</p>
+                <p className="mt-4">Policy warnings, stranded stock, lost Buy Box, listing errors and Seller Support cases worked through by someone who reads the account every week, not at month end.</p>
               </li>
               <li className="svc-card">
                 <h3>Order hub and ERP links</h3>
-                <p className="mt-4">Amazon orders and stock flowing through Linnworks, Brightpearl or Mintsoft into NetSuite, Dynamics 365 Business Central, Sage 200, Sage Intacct or Odoo, without anyone retyping them.</p>
+                <p className="mt-4">We connect Amazon to order hubs such as Linnworks, Brightpearl or Mintsoft, and to ERPs such as NetSuite, Business Central, Sage or Odoo, through their APIs, with one master record for stock and price. See our <a href="/uk/ecommerce-erp-integration">UK ecommerce ERP integration</a> page.</p>
               </li>
               <li className="svc-card">
                 <h3>Settlements into the books</h3>
@@ -526,7 +527,7 @@ export default function AmazonAgencyUKPage() {
         </section>
 
         <MidPageCTA
-          headline={'Selling on Amazon.co.uk and losing hours to settlements?'}
+          headline={'One settlement export shows where your Amazon hours go'}
           sub={'Send us one recent settlement export and tell us which order hub and accounting system you run. On a short call we show where the hours go and what a fixed-price first phase would cover.'}
           label={'Book my Amazon review call'}
           note="The founder replies within 24 hours."
@@ -541,8 +542,9 @@ export default function AmazonAgencyUKPage() {
               Four common ways UK brands staff their Amazon channel. Each suits someone. The rows below are the ones
               that decide whether Amazon stays profitable as it grows.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
-              <table className="cmp-table">
+            <p className="md:hidden mt-6" style={{ fontSize: 13, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="cmp-table" style={{ minWidth: 680 }}>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -555,7 +557,7 @@ export default function AmazonAgencyUKPage() {
                 <tbody>
                   <tr><td className="feat">Listings and catalogue</td><td className="fj"><span className="yes">Yes</span></td><td><span className="yes">Yes</span></td><td><span className="no">Rarely</span></td><td><span className="partial">Depends on the hire</span></td></tr>
                   <tr><td className="feat">Amazon ads</td><td className="fj"><span className="yes">Yes, judged on profit</span></td><td><span className="yes">Yes</span></td><td><span className="yes">Core skill</span></td><td><span className="partial">Depends on the hire</span></td></tr>
-                  <tr><td className="feat">Linnworks, ERP and accounting links</td><td className="fj"><span className="yes">Built and owned by you</span></td><td><span className="no">Usually left to you</span></td><td><span className="no">No</span></td><td><span className="partial">Needs a developer too</span></td></tr>
+                  <tr><td className="feat">Linnworks, ERP and accounting links</td><td className="fj"><span className="yes">Built by us, owned by you</span></td><td><span className="no">Often left to you</span></td><td><span className="no">No</span></td><td><span className="partial">Needs a developer too</span></td></tr>
                   <tr><td className="feat">Amazon EU and GPSR</td><td className="fj"><span className="yes">Planned with your adviser</span></td><td><span className="partial">Varies</span></td><td><span className="no">No</span></td><td><span className="partial">One person’s experience</span></td></tr>
                   <tr><td className="feat">Other UK marketplaces</td><td className="fj"><span className="yes">eBay UK, OnBuy and more</span></td><td><span className="partial">Some do</span></td><td><span className="no">No</span></td><td><span className="partial">If time allows</span></td></tr>
                   <tr><td className="feat">How it is priced</td><td className="fj"><span className="yes">Fixed price per phase</span></td><td><span className="partial">Retainer, often plus commission</span></td><td><span className="partial">Hourly or share of spend</span></td><td><span className="partial">Salary and recruiting</span></td></tr>
@@ -610,7 +612,7 @@ export default function AmazonAgencyUKPage() {
                   <li><b>Support is optional.</b> If you want us to keep running the account or the links, each change is quoted and approved, with no monthly minimum.</li>
                 </ul>
                 <div className="mt-8">
-                  <ModalCTAButton label="See a draft of my Amazon listings" region="uk" modalVariant="default" btnVariant="primary-light" />
+                  <ModalCTAButton label="See my listings draft" region="uk" modalVariant="default" btnVariant="primary-light" />
                 </div>
               </div>
               <div className="card card-top-orange">
@@ -637,27 +639,29 @@ export default function AmazonAgencyUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">UK client work</span>
-              <h2>Back-office work for UK sellers, the half of Amazon most agencies skip</h2>
+              <h2>UK client work on stock and price systems</h2>
               <p className="lead mt-4">
                 Two UK clients whose projects show the systems side of what we do. Neither is an Amazon project. Both
                 deal with the same problem an Amazon channel creates: one source of truth for stock and price, and
                 buyers who see the right numbers.
               </p>
             </div>
-            <ul className="col-3 mt-10">
+            <div className="col-6040 mt-10">
+            <ul className="stack">
               <li className="svc-card">
                 <h3>GPSUK</h3>
-                <p className="mt-4">A UK promotional products supplier. We built its trade storefront on Commerceflo, where business buyers log in, see their own account prices and move from quote to order without retyping. Live, with SEO and AI search work continuing. <a href="/case-studies/gpsuk-promotional-products">Read the GPSUK case study</a>.</p>
+                <p className="mt-4">A UK promotional products supplier. We built its trade storefront on Commerceflo, where business buyers log in, see their own account prices and move from quote to order without retyping. Live. <a href="/case-studies/gpsuk-promotional-products">Read the GPSUK case study</a>.</p>
               </li>
               <li className="svc-card">
                 <h3>Sow Easy</h3>
                 <p className="mt-4">A UK wholesale distributor. We are building a WordPress WooCommerce trade store that reads stock, pricing and SKUs from Odoo, so Odoo stays the master record. The Odoo link is being tested on staging and launch is still ahead. <a href="/case-studies/sow-easy-distributor-portal">Read the Sow Easy case study</a>.</p>
               </li>
-              <li className="svc-card">
+            </ul>
+            <div className="svc-card">
                 <h3>Why it matters on Amazon</h3>
                 <p className="mt-4">An Amazon channel is one more place stock and price must agree. The same rule applies: pick one master record, usually your ERP or order hub, and make Amazon read from it. For trade buyers alongside Amazon, see <a href="/uk/b2b-ecommerce">B2B ecommerce in the UK</a>.</p>
-              </li>
-            </ul>
+            </div>
+            </div>
           </div>
         </section>
 
@@ -667,7 +671,7 @@ export default function AmazonAgencyUKPage() {
             <div style={{ maxWidth: 820 }}>
               <div>
                 <span className="eyebrow">What UK Amazon agencies charge</span>
-                <h2>A published UK price page, so you can compare quotes</h2>
+                <h2>How much does an Amazon agency cost in the UK?</h2>
                 <div className="stack mt-6">
                   <p>
                     RippleEffect publishes its prices. On {READ_ON} its pricing page described a
@@ -727,7 +731,7 @@ export default function AmazonAgencyUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">Beyond Amazon</span>
-              <h2>Amazon is one channel. Your own store and your systems are the rest.</h2>
+              <h2>How Amazon fits with your own store and your systems</h2>
               <div className="stack mt-6">
                 <p>
                   A brand selling on Amazon often runs its own store too, and the two work best when they share one
@@ -745,6 +749,7 @@ export default function AmazonAgencyUKPage() {
                 <a className="city-pill" href="/uk/ecommerce-consultant">Ecommerce consultant UK</a>
                 <a className="city-pill" href="/uk/ecommerce-development">Ecommerce development UK</a>
                 <a className="city-pill" href="/uk/shopify-xero-integration">Shopify Xero integration</a>
+                <a className="city-pill" href="/uk/ecommerce-erp-integration">Ecommerce ERP integration UK</a>
                 <a className="city-pill" href="/uk/b2b-ecommerce">B2B ecommerce UK</a>
                 <a className="city-pill" href="/uk/ecommerce-seo">Ecommerce SEO UK</a>
                 <a className="city-pill" href="/services/amazon-agency">Amazon agency US</a>
@@ -756,7 +761,7 @@ export default function AmazonAgencyUKPage() {
         {/* ═══ 14. FAQ (canonical Linear Minimal) ═══ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Amazon agency questions UK brands ask us</h2>
             </div>
@@ -831,7 +836,7 @@ export default function AmazonAgencyUKPage() {
               you sign anything.
             </p>
             <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="See a draft of my Amazon listings" region="uk" modalVariant="default" btnVariant="primary-light" />
+              <ModalCTAButton label="See my listings draft" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/uk/ecommerce-consultant" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See ecommerce consulting</a>
             </div>
           </div>

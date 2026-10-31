@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/headless-shopify-development, built 2026-10-29.
@@ -18,17 +19,19 @@ import '../ai-agents/ai-agents.css';
       prices and one UK agency's published headless range (Imaginaire), named
       and linked. Neither page says whether VAT is included, and the copy says so.
    3. Client proof: GPSUK (Commerceflo) and Sow Easy (WooCommerce plus Odoo,
-      still in build). Neither is Shopify work and the copy never says it is.
+      launch still ahead). Neither is Shopify work and the copy never says it is.
+      DTF Virginia is US Shopify theme work, labelled as such, not headless.
    4. Structure mirrors /uk/ecommerce-consultant and /uk/shopify-xero-integration
       (imports, components, CSS, schema). The copy is written fresh for this page.
    5. The FAQ schema is generated from FAQ_ITEMS, the same array the visible FAQ
       renders. Never add a second list of questions. */
 
 const CANONICAL = 'https://factoryjet.com/uk/headless-shopify-development';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
+const UPDATED_LABEL = '31 October 2026';
 const READ_ON = '29 October 2026';
 const TITLE = 'Headless Shopify Development UK | FactoryJet';
-const H1 = 'Headless Shopify Development for UK Brands: Hydrogen or Next.js Storefronts on Shopify’s Own Checkout';
+const H1 = 'Headless Shopify Development for UK Brands';
 const DESCRIPTION =
   'Headless Shopify for UK retailers: Hydrogen or Next.js storefronts, Shopify checkout kept, Xero, Linnworks and couriers untouched. Fixed quote per phase.';
 const IMG = '/images/us/headless-shopify';
@@ -67,6 +70,8 @@ const SRC = {
   icoCookies: { label: 'ICO: guidance on the use of storage and access technologies', url: 'https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/' },
   icoExceptions: { label: 'ICO: what are the exceptions?', url: 'https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/' },
   mtd: { label: 'GOV.UK: software for Making Tax Digital for VAT', url: 'https://www.gov.uk/guidance/find-software-thats-compatible-with-making-tax-digital-for-vat' },
+  markets: { label: 'Shopify Dev: Shopify Markets with the Storefront API (read 31 October 2026)', url: 'https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/markets' },
+  metaobjects: { label: 'Shopify Dev: dynamic content with metaobjects in Hydrogen (read 31 October 2026)', url: 'https://shopify.dev/docs/storefronts/headless/hydrogen/cookbook/metaobjects' },
   imaginaire: { label: 'Imaginaire (Nottingham): headless Shopify development', url: 'https://www.imaginaire.co.uk/ecommerce/headless-shopify-development/' },
 } as const;
 
@@ -74,9 +79,9 @@ type SrcKey = keyof typeof SRC;
 const SOURCE_KEYS = Object.keys(SRC) as SrcKey[];
 
 /* FAQ source of truth (drives the visible FAQ and the FAQ schema).
-   Questions draw on Google People Also Ask and related searches for
-   "headless shopify" and "shopify hydrogen", pulled for the United Kingdom on
-   2026-10-29 (DataForSEO), plus the questions UK buyers send in briefs. */
+   Questions come from the questions UK buyers send in briefs and from the
+   topics in the head terms "headless shopify" and "shopify hydrogen". No
+   search-data file was saved for this page, so none is claimed. */
 const FAQ_CATEGORIES = [
   { key: 'basics', label: 'Headless Shopify basics' },
   { key: 'cost', label: 'Cost and timeline' },
@@ -97,7 +102,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'basics',
     question: 'What is Shopify Hydrogen?',
     answer:
-      'Hydrogen is Shopify’s own framework for headless shops. Shopify’s documentation calls Hydrogen projects React Router apps preconfigured with Shopify features, and says it provides ready-made components wired to Shopify data. The design of your shop is still built for you. Most Hydrogen shops run on Oxygen, Shopify’s edge hosting, which Shopify says is available at no extra charge on paid plans.',
+      'Hydrogen is Shopify’s own framework for headless shops. Shopify’s documentation calls Hydrogen projects React Router apps preconfigured with Shopify features (React Router is a common open-source toolkit for building web apps), and says it provides ready-made components wired to Shopify data. The design is still custom: Hydrogen gives the building blocks, and we build your pages on them. Most Hydrogen shops run on Oxygen, Shopify’s edge hosting, which Shopify says is available at no extra charge on paid plans.',
   },
   {
     category: 'basics',
@@ -122,6 +127,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     question: 'When is headless Shopify the wrong choice?',
     answer:
       'When a good Online Store 2.0 theme already does the job. If your pages are standard product and collection templates, your apps depend on theme blocks and nobody on your side owns code, headless adds cost without a return you can measure. We say so on the first call and point you to theme work on our UK Shopify development page instead.',
+  },
+  {
+    category: 'basics',
+    question: 'Which headless CMS should we use with Shopify?',
+    answer:
+      'Pick the CMS by who edits and how much content you publish. Shopify’s own content entries, called metaobjects, can feed a Hydrogen site, and Shopify publishes a recipe for building section-based pages with them, so a small content team may need no extra system. A brand publishing buying guides every week often wants a separate headless CMS with a visual editor. We recommend one after seeing your content plan.',
   },
   // Cost and timeline
   {
@@ -153,7 +164,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'build',
     question: 'Does checkout change on headless Shopify?',
     answer:
-      'No. Buyers still pay in Shopify’s checkout. Shopify’s documentation says the cart returns a checkout URL that redirects customers through Shopify’s web checkout, and that a cart carrying a customer token opens a logged-in checkout. Payment methods you already offer at Shopify checkout stay where they are, and orders land in your Shopify admin exactly as today.',
+      'No. Buyers still pay in Shopify’s checkout. Shopify’s documentation says the cart returns a checkout URL that redirects customers through Shopify’s web checkout, and that a cart carrying a customer token (a code that proves which customer is signed in) opens a logged-in checkout. Payment methods you already offer at Shopify checkout stay where they are, and orders land in your Shopify admin exactly as today.',
   },
   {
     category: 'build',
@@ -165,19 +176,31 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'build',
     question: 'Can a headless storefront handle a Black Friday spike?',
     answer:
-      'Shopify’s Storefront API reference says requests from real buyers are not subject to a fixed request-per-minute limit, and that checkout creation and automated traffic are throttled. So the data layer scales with shoppers. What we test is your own front end and hosting: page caching, image sizes and the third-party scripts that slow a busy sale day.',
+      'Shopify’s Storefront API reference says requests from real buyers are not subject to a fixed request-per-minute limit, and that checkout creation and automated traffic are throttled, which means slowed down once they pass a set rate. So the data layer scales with shoppers. What we test is your own front end and hosting: page caching, image sizes, search and filter calls, and the third-party scripts that slow a busy sale day.',
   },
   {
     category: 'build',
     question: 'Does headless Shopify improve Core Web Vitals?',
     answer:
-      'It can, but it is not automatic. Google’s web.dev guidance sets good thresholds at 2.5 seconds for Largest Contentful Paint, 200 milliseconds for Interaction to Next Paint and 0.1 for Cumulative Layout Shift, measured at the 75th percentile of page loads. A headless build gives you control of every script on the page. Heavy tracking tags can still undo that, so we budget them.',
+      'It can, but it is not automatic. Google’s web.dev guidance sets good thresholds at 2.5 seconds for Largest Contentful Paint, 200 milliseconds for Interaction to Next Paint and 0.1 for Cumulative Layout Shift, measured at the 75th percentile of page loads, so three in four visits must hit the mark. A headless build gives you control of every script on the page. Heavy tracking tags can still undo that, so we budget them.',
   },
   {
     category: 'build',
     question: 'Who edits content once the headless store is live?',
     answer:
       'Your marketing team, without a developer. We set up a headless CMS, or structured content fields, so landing pages, banners and buying guides are edited in a visual editor and published on a schedule. Product data stays in Shopify. We agree which system owns each kind of content in writing before the build, so nobody edits the same thing in two places.',
+  },
+  {
+    category: 'build',
+    question: 'Can one headless Shopify store sell to the UK and the EU?',
+    answer:
+      'Yes, through Shopify Markets. Shopify’s documentation says merchants can set product prices per country in the Shopify admin, and that the Storefront API can query international prices and set the country and language of a cart and checkout. So a UK shopper sees pounds and a French shopper sees euros from one catalogue. We build the country picker and test prices in each market.',
+  },
+  {
+    category: 'build',
+    question: 'Will going headless hurt our Google rankings?',
+    answer:
+      'It can if old URLs break or pages load blank for search engines. We map every old product, collection and blog URL to its new address with a permanent 301 redirect, render pages on the server so the HTML carries the words, and copy titles, descriptions and product structured data across. After launch we watch Search Console for crawl errors through the first weeks.',
   },
   // UK rules
   {
@@ -215,7 +238,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'working',
     question: 'Can you work alongside our in-house developers or current agency?',
     answer:
-      'Yes. Many UK retailers keep an in-house developer or a marketing agency. We agree the split at scoping: who owns the storefront code, who owns the CMS, who runs paid media tags. Your developers get access to the repository and review rights from the start, so there is no separate handover project at the end.',
+      'Yes. We agree the split at scoping and write it into the phase one scope: who owns the storefront code and who runs paid media tags. Your developers get access to the repository and review rights from the start, so there is no separate handover project at the end.',
   },
   {
     category: 'working',
@@ -352,7 +375,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['headless-shopify-development'] },
   openGraph: {
     title: TITLE,
     description:
@@ -409,17 +432,15 @@ export default function HeadlessShopifyDevelopmentUKPage() {
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  Your UK store has outgrown its theme. Content pages fight the theme editor, apps stack scripts on
-                  every product page, and a second market or a trade catalogue does not fit the templates. Meanwhile
-                  Xero or Sage, Linnworks or Mintsoft, and your Royal Mail, DPD and Evri labels all work. FactoryJet
-                  rebuilds the front end on Hydrogen or Next.js and leaves Shopify running orders and checkout, so the
-                  back office you rely on carries on untouched.
+                  Hydrogen or Next.js storefronts for UK brands that have outgrown their theme, on Shopify’s own
+                  checkout. Shopify keeps orders, so Xero or Sage, Linnworks or Mintsoft, and your Royal Mail, DPD and
+                  Evri labels carry on untouched.
                 </p>
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="who"><a href="/about" style={{ color: 'inherit' }}><b>Bhavesh Barot</b></a>, Founder &amp; CEO<br /><span>500+ businesses served</span></div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -453,7 +474,7 @@ export default function HeadlessShopifyDevelopmentUKPage() {
         <section className="sec">
           <div className="wrap">
             <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What is headless Shopify development, and who is it for in the UK?</span>
+              <h2 className="lab" style={{ fontWeight: 500, lineHeight: 1.5 }}>What is headless Shopify development, and who is it for in the UK?</h2>
               <p>
                 Headless Shopify development replaces the Liquid theme with a separate front end, usually built on
                 Shopify Hydrogen or Next.js, that reads products and carts through Shopify’s Storefront API. Shoppers
@@ -523,7 +544,9 @@ export default function HeadlessShopifyDevelopmentUKPage() {
                 <div className="scorecard-row"><div><div className="scorecard-metric">Storefront widgets</div><div className="scorecard-note">reviews, wishlists, bundle builders</div></div><div className="scorecard-val" style={{ color: T.small, fontSize: 14 }}>Rebuilt</div></div>
               </div>
             </div>
-            <div className="card mt-10" tabIndex={0} role="region" aria-label="What stays in Shopify" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 760 }}>
+            <div className="mt-10" />
+            <p className="md:hidden" style={{ ...srcNote, marginTop: 0, marginBottom: 8 }}>Swipe sideways to see every column.</p>
+            <div className="card" tabIndex={0} role="region" aria-label="What stays in Shopify" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 760 }}>
                 <thead>
                   <tr>
                     <th>Area</th>
@@ -561,7 +584,9 @@ export default function HeadlessShopifyDevelopmentUKPage() {
                 and Oxygen. This table answers those in one place.
               </p>
             </div>
-            <div className="card mt-8" tabIndex={0} role="region" aria-label="Hydrogen, Next.js and Liquid compared" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 860 }}>
+            <div className="mt-8" />
+            <p className="md:hidden" style={{ ...srcNote, marginTop: 0, marginBottom: 8 }}>Swipe sideways to see every column.</p>
+            <div className="card" tabIndex={0} role="region" aria-label="Hydrogen, Next.js and Liquid compared" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 860 }}>
                 <thead>
                   <tr>
                     <th>Question</th>
@@ -695,7 +720,7 @@ export default function HeadlessShopifyDevelopmentUKPage() {
                   Prices only compare when the scope does. Put these questions to every agency you talk to, us
                   included, and compare the answers line by line.
                 </p>
-                <ul className="scope-list mt-4">
+                <ul className="scope-list num-list mt-4">
                   {AGENCY_QUESTIONS.map((a) => (
                     <li key={a}>{a}</li>
                   ))}
@@ -733,7 +758,7 @@ export default function HeadlessShopifyDevelopmentUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">Send a brief</span>
-                <h2>Have a brief or an RFP? Send it, and we answer it line by line</h2>
+                <h2>What to put in a headless Shopify brief or RFP</h2>
                 <p className="lead mt-4" style={{ maxWidth: 560 }}>
                   The fastest quotes come from written briefs. If you are running a tender, upload your RFP with the
                   form and we reply to every requirement in your format. If you have no brief yet, the list on the
@@ -792,11 +817,12 @@ export default function HeadlessShopifyDevelopmentUKPage() {
         <section className="sec-lg" id="uk-work">
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">UK work on other platforms</span>
-              <h2>Commerce we have built for UK businesses</h2>
+              <span className="eyebrow">Our work, labelled by platform</span>
+              <h2>Commerce we have built: UK trade stores and a US Shopify store</h2>
               <p className="lead mt-4">
-                Neither project below is a Shopify build. Both show trade buyers ordering at their own prices from a
-                storefront we built, one on Commerceflo and one on WooCommerce reading stock and prices from Odoo.
+                The two UK projects below are not Shopify builds. Both show trade buyers ordering at their own prices,
+                one on Commerceflo and one on WooCommerce reading stock and prices from Odoo. Our Shopify example is
+                a US store on a custom theme, not a headless build.
               </p>
             </div>
             <ul className="col-2 mt-8">
@@ -807,10 +833,20 @@ export default function HeadlessShopifyDevelopmentUKPage() {
               </li>
               <li className="card">
                 <h3>Sow Easy</h3>
-                <p className="mt-4">A UK wholesale client: a WordPress WooCommerce trade store with Odoo as the source of stock, pricing and SKUs. The Odoo link is still in build and being tested on staging.</p>
+                <p className="mt-4">A UK wholesale client: a WordPress WooCommerce trade store with Odoo as the source of stock, pricing and SKUs. The Odoo integration is tested against Odoo’s staging system, launch still ahead.</p>
                 <p className="mt-4"><a href="/case-studies/sow-easy-distributor-portal" style={inlineLink}>Read the Sow Easy case study</a></p>
               </li>
             </ul>
+            {/* DTF Virginia: naming approved 2026-10-29; facts as on /services/shopify-development. */}
+            <div className="card mt-6">
+              <h3>DTF Virginia (Shopify, United States)</h3>
+              <p className="mt-4">
+                A custom Shopify theme for a print shop in Hampton, Virginia that sells DTF transfers, patches and
+                stickers. Buyers build their own gang sheets (one print sheet packed with many designs) at each
+                transfer size, and resellers can sign up for an account.
+              </p>
+              <p className="mt-4"><a href="https://dtfvirginia.com/" target="_blank" rel="noopener noreferrer" style={inlineLink}>See the live store</a></p>
+            </div>
             <p className="mt-8" style={{ maxWidth: 780 }}>
               Related UK pages: <a href="/uk/shopify-plus" style={inlineLink}>Shopify Plus</a>,{' '}
               <a href="/uk/shopify-migration" style={inlineLink}>moving a store to Shopify</a>,{' '}

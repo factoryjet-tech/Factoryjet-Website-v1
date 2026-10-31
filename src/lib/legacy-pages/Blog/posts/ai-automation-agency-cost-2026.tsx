@@ -58,8 +58,10 @@ const IMG = '/blog-images/ai-automation-agency-cost-2026';
 
 function Table({ head, rows }: { head: string[]; rows: React.ReactNode[][] }) {
   return (
-    <div className="overflow-x-auto my-6">
-      <table className="w-full border-collapse text-sm">
+    <div className="my-6">
+      <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
+      <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <table className="w-full border-collapse text-sm" style={{ minWidth: head.length > 3 ? '720px' : '560px' }}>
         <thead>
           <tr className="bg-gray-800 text-white">
             {head.map((h) => (
@@ -77,6 +79,7 @@ function Table({ head, rows }: { head: string[]; rows: React.ReactNode[][] }) {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }
@@ -104,12 +107,16 @@ const faqs: FAQItem[] = [
     a: 'A fixed project fits one defined job with a clear end. A retainer fits a steady stream of new workflows and changes. TwoCore’s guide (9 September 2026) gives a rule of thumb: under one change a month, buy projects; two to eight changes a month, a retainer usually works better. Whichever you pick, get the scope, the owner of the code and the exit terms in writing.',
   },
   {
-    q: 'How much does AI implementation cost?',
-    a: 'Layer3 Labs’ consulting price guide (updated 9 September 2026) splits it into three steps: a workflow discovery engagement at $2,000 to $5,000, a production workflow at $5,000 to $25,000, and a full enterprise AI system at $50,000 to $200,000 or more. Inside the middle band, it puts a Zapier workflow joining two software tools at $5,000 to $8,000 and a workflow that talks to a legacy ERP or practice system through a custom API at $15,000 to $25,000.',
+    q: 'How much does AI implementation cost for a business?',
+    a: 'Layer3 Labs’ consulting price guide (updated 9 September 2026) splits it into three steps: discovery at $2,000 to $5,000, a production workflow at $5,000 to $25,000, and a full enterprise AI system at $50,000 to $200,000 or more. Almost no business trains its own model. Implementation means building on an existing model such as GPT or Claude, connected to your own systems. ProductCrafters (modified 20 May 2026) puts custom AI agent development at $5,000 to more than $180,000.',
   },
   {
-    q: 'How much does it cost to develop AI for a business?',
-    a: 'Almost no business trains its own model. Developing AI usually means building an agent or workflow on top of an existing model such as GPT or Claude, connected to your own systems. ProductCrafters (modified 20 May 2026) puts custom AI agent development at $5,000 to more than $180,000. Our AI agent cost guide breaks that range down by scope and phase.',
+    q: 'How long does an AI automation project take?',
+    a: 'Layer3 Labs (updated 2 July 2026) puts one workflow at two to four weeks, three to six connected workflows at six to twelve weeks, and a whole function such as finance or support at three to six months. CMARIX puts a custom support assistant connected to one to three systems at 8 to 14 weeks. Slow reviews on your side stretch every one of these, so book your testers before the build starts.',
+  },
+  {
+    q: 'Who owns the workflows after an AI automation project ends?',
+    a: 'Whoever the contract says. Layer3 Labs lists silence on ownership of the code and accounts as a red flag. Before you sign, get three things in writing: you own the code and the workflows, the platform and AI accounts sit in your name or move to you at the end, and the agency hands over the credentials and notes your team needs to run it without them.',
   },
   {
     q: 'How much does AI cost for a business per month?',
@@ -142,7 +149,7 @@ const faqs: FAQItem[] = [
   // By job
   {
     q: 'How much does AI customer support automation cost?',
-    a: 'A custom AI support assistant that connects to one to three of your systems costs $30,000 to $80,000 and takes 8 to 14 weeks to build, according to CMARIX (updated 2 September 2026). Rented options charge per conversation instead: Salesforce lists Agentforce at $2 per conversation on its pricing page, read 21 October 2026. A single support deflection workflow is cheaper, inside Layer3 Labs’ $5,000 to $25,000 band for one production workflow.',
+    a: 'A custom AI support assistant that connects to one to three of your systems costs $30,000 to $80,000 and takes 8 to 14 weeks to build, according to CMARIX (updated 2 September 2026). Rented options charge per conversation instead: Salesforce lists Agentforce at $2 per conversation on its pricing page, read 21 October 2026. A single deflection workflow (one that answers a common question so it never reaches a person) is cheaper, inside Layer3 Labs’ $5,000 to $25,000 band for one production workflow.',
   },
   {
     q: 'How much does sales and CRM automation cost?',
@@ -158,25 +165,25 @@ const faqs: FAQItem[] = [
   },
   // Drivers and risk
   {
-    q: 'Why do AI automation quotes vary so much?',
+    q: 'Why did one agency quote me $5,000 and another $20,000 for the same automation?',
     a: 'Layer3 Labs names data quality, the number of integrations and the amount of custom logic as the biggest drivers, and says quotes for the same workflow can differ by more than 400% between a freelancer and a large consultancy. Sandlabs, writing for Australia, adds A$3,000 to A$8,000 per integration and 20% to 40% for security or compliance work. Line up quotes by what each one includes, item by item.',
   },
   {
     q: 'What are the red flags in an AI automation agency quote?',
-    a: 'Layer3 Labs lists six: no written scope or deliverables, hourly-only billing on work you could define, no word on who owns the code and accounts at the end, promised results with no measurement plan, long lock-in terms with no exit clause, and no plan for data privacy. Add one more: no working demo on your own data before you sign.',
+    a: 'Layer3 Labs lists six, led by no written scope, hourly-only billing on work you could define, and no word on who owns the code at the end. Add a seventh: no working demo on your own data before you sign.',
   },
   {
     q: 'Is an AI automation agency cheaper than hiring in-house?',
-    a: 'For the first few builds it usually is. Layer3 Labs puts a senior in-house automation engineer at $120,000 to $200,000 or more a year in loaded cost, against $5,000 to $75,000 for an agency project. In-house starts to make sense once AI work is continuous. Our guide to agency, in-house or freelancer works through the decision by company size, with salary sources for the US, UK and Australia.',
+    a: 'For the first few builds it usually is: Layer3 Labs puts a senior in-house automation engineer at $120,000 to $200,000 or more a year in loaded cost (salary plus benefits, tax and tools), against $5,000 to $75,000 for an agency project. In-house starts to make sense once AI work is continuous.',
   },
   // Country notes
   {
     q: 'How much does an AI automation agency cost in the UK?',
-    a: 'Crox, a UK firm, puts connected automation for one process at £5,000 to £25,000 as a one-off project in its August 2026 guide: £5,000 to £10,000 for a well-scoped process on mainstream tools, and £15,000 to £25,000 for multi-system work or regulated data. Off-the-shelf assistants sit at about £15 to £60 a user a month. Check whether each quote includes 20% VAT before you compare.',
+    a: 'Crox, a UK firm, puts connected automation for one process at £5,000 to £25,000 as a one-off project in its August 2026 guide. Check whether each quote includes 20% VAT before you compare.',
   },
   {
     q: 'How much does an AI automation agency cost in Australia?',
-    a: 'Sandlabs (9 May 2026) puts a simple single-workflow automation at A$5,000 to A$15,000 and a production AI agent at A$15,000 to A$40,000. Flowtivity (March 2026) prices by job: lead qualification A$8,000 to A$20,000, customer service automation A$10,000 to A$25,000, and multi-system workflows A$20,000 to A$50,000 or more. Ask whether a quote includes the 10% GST.',
+    a: 'Sandlabs (9 May 2026) puts a simple single-workflow automation at A$5,000 to A$15,000 and a production AI agent at A$15,000 to A$40,000. Ask whether a quote includes the 10% GST.',
   },
   {
     q: 'Does FactoryJet publish its AI automation prices?',
@@ -193,20 +200,21 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 22, 2026',
-  dateModified: 'Oct 22, 2026',
-  readTime: '17 min read',
+  dateModified: 'Oct 31, 2026',
+  readTime: '14 min read',
+  hideExcerptOnPage: true,
   imageUrl: `${IMG}-hero.webp`,
   imageAlt:
     'In a cabinet workshop office with a glass wall onto the shop floor, an older man in a work apron and a younger woman in a cream sweater compare two printed quotes beside a laptop showing two grey columns, one outlined in orange.',
   meta: {
-    title: 'AI Automation Agency Cost 2026: Project vs Retainer, US',
+    title: 'AI Automation Agency Cost in 2026: Projects vs Retainers',
     description:
       'AI automation agency cost in 2026: $5,000 to $75,000 a project, $3,000 to $20,000 a month on retainer. By company size and job, with platform prices.',
   },
   keyTakeaways: [
     'US AI automation agencies charge $5,000 to $75,000 a project and $3,000 to $20,000 a month on retainer, according to Layer3 Labs (updated 2 July 2026).',
     'One workflow costs $5,000 to $15,000, three to six connected workflows $15,000 to $50,000, and a whole function $50,000 to $150,000 or more (Layer3 Labs).',
-    'Agencies that print their prices start lower: Aumiqx’s survey of 48 agencies (23 September 2026) found a median entry price of $1,000 per workflow. Real quotes land higher once scope is known.',
+    'Agencies that print their prices start lower: Aumiqx collected prices from 48 agencies (23 September 2026), and among the 21 that print a per-workflow price, the median entry price was $1,000. Real quotes land higher once scope is known.',
     'Monthly agency spend runs $1,000 to $3,500 for small businesses, $4,000 to $12,000 for mid-market and $15,000 to $60,000 or more for enterprises, according to Codewave.',
     'The platform is the small line: on 21 October 2026 n8n Cloud started at €20 a month, Zapier at $19.99, Make at $9, and ChatGPT Business and Claude Team at $20 a seat billed annually.',
     'Quotes for the same workflow can differ by more than 400% between a freelancer and a large consultancy (Layer3 Labs). Data quality, integration count and custom logic explain most of it.',
@@ -228,13 +236,13 @@ export const post: BlogPost = {
       </div>
 
       <div className="bg-[#FAF8F5] border-l-4 border-[#B23E13] p-5 rounded-r-lg mb-10">
-        <p className="text-sm text-[#1F2937] leading-relaxed mb-2">
+        <p className="text-sm text-[#1F2937] leading-relaxed mb-2 max-w-none">
           <strong>These are market ranges and list prices, not our prices.</strong> FactoryJet is an AI automation
           agency, so weigh this page with that in mind. Every dollar figure is either a range from a named 2026 guide or
           a vendor&apos;s own list price, and every page behind them was opened and read on 21 October 2026. Each source
           is linked where it first appears and again at the end.
         </p>
-        <p className="text-sm text-[#1F2937] leading-relaxed mb-0">
+        <p className="text-sm text-[#1F2937] leading-relaxed mb-0 max-w-none">
           <strong>How we made this page.</strong> We read the top Google results and the People Also Ask boxes for six
           US cost searches on 21 October 2026 (DataForSEO), and the pages AI assistants cited when we asked them about
           AI agency costs in the US, UK and Australia on 18 October 2026. Most price guides in this market come from
@@ -242,6 +250,12 @@ export const post: BlogPost = {
         </p>
       </div>
 
+      <p>
+        An AI automation agency is a firm that designs, builds and connects software workflows in which an AI model
+        does part of the job, such as reading an invoice or answering a customer. Our guide to{' '}
+        <a href="/blog/what-does-an-ai-automation-agency-do">what an AI automation agency does</a> covers the work
+        itself; this page covers what it costs.
+      </p>
       <p>
         Two numbers for the same thing. Aumiqx, which collected the published prices of 48 automation agencies, found
         the median agency starts a single workflow at $1,000. Layer3 Labs, describing what US agencies quote once the
@@ -257,8 +271,8 @@ export const post: BlogPost = {
       <p>
         We are FactoryJet, an AI services company that designs, builds, implements and supports AI agents and
         automations. FactoryJet was founded in 2014 by Bhavesh Barot and has served more than 500 businesses. We build
-        on n8n and in code, and connect to HubSpot, Salesforce, Shopify, NetSuite, Odoo, SAP Business One, Xero and
-        custom ERPs.
+        on <a href="/n8n-automation">n8n</a> and in code, and connect to HubSpot, Salesforce, Shopify, NetSuite, Odoo,
+        SAP Business One and custom ERPs through their APIs.
       </p>
 
       <h2 id="at-a-glance">AI automation agency cost at a glance (US, 2026)</h2>
@@ -275,21 +289,6 @@ export const post: BlogPost = {
         ]}
       />
 
-      <figure className="my-8">
-        <img src={`${IMG}-hero.webp`}
-          alt="In a cabinet workshop office with a glass wall onto the shop floor, an older man in a work apron and a younger woman in a cream sweater compare two printed quotes beside a laptop showing two grey columns, one outlined in orange."
-          width={1200}
-          height={800}
-          loading="lazy"
-          decoding="async"
-          className="w-full h-auto rounded-xl border border-gray-200"
-        />
-        <figcaption className="text-xs text-gray-500 mt-2">
-          Two quotes for the same workflow can differ several times over. Compare what each one includes before you
-          compare the totals.
-        </figcaption>
-      </figure>
-
       <h2 id="pricing-models">Project vs retainer: the four ways AI automation agencies charge</h2>
       <p>
         Layer3 Labs groups agency pricing into four models. Most firms quote one of the first two. The model tells you
@@ -304,7 +303,7 @@ export const post: BlogPost = {
           ['Hourly', '$100 to $300 an hour', 'Small tasks with no clear spec yet', 'Open-ended hours and surprise bills'],
         ]}
       />
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-gray-600 mb-6">
         Ranges and risks from <a href={SRC.layer3} {...ext}>Layer3 Labs</a> (updated 2 July 2026). Codewave puts
         fixed-fee projects at $10,000 to $75,000 or more and retainers at $1,000 to $12,000 a month, in its{' '}
         <a href={SRC.codewave} {...ext}>agency pricing guide</a> (August 2026).
@@ -359,7 +358,7 @@ export const post: BlogPost = {
             'Mid-size company (50 to 1,000 staff)',
             '$15,000 to $50,000 for three to six connected workflows (Layer3 Labs)',
             '$4,000 to $12,000 (Codewave)',
-            'An ERP or CRM write-back, approval steps, several departments',
+            'Writing records back into an ERP or CRM, approval steps, several departments',
           ],
           [
             'Enterprise (1,000+ staff)',
@@ -369,7 +368,7 @@ export const post: BlogPost = {
           ],
         ]}
       />
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-gray-600 mb-6">
         Sources: <a href={SRC.layer3} {...ext}>Layer3 Labs</a> (2 July 2026),{' '}
         <a href={SRC.codewave} {...ext}>Codewave</a> (modified 10 August 2026),{' '}
         <a href={SRC.aumiqx} {...ext}>Aumiqx</a> (23 September 2026). The staff bands are ours; the sources use
@@ -409,7 +408,7 @@ export const post: BlogPost = {
             'Customer support (answering, triage, order status)',
             '$30,000 to $80,000 for an AI assistant connected to 1 to 3 systems, 8 to 14 weeks; one deflection workflow from $5,000',
             <span key="s1"><a href={SRC.cmarix} {...ext}>CMARIX</a> (2 Sep 2026); <a href={SRC.layer3Rates} {...ext}>Layer3 Labs</a></span>,
-            'Salesforce Agentforce: $2 per conversation, or Flex Credits at $500 per 100,000',
+            'Salesforce Agentforce: $2 per conversation, or Flex Credits (credits used up per AI action) at $500 per 100,000',
           ],
           [
             'Sales ops (lead routing, CRM updates, follow-ups)',
@@ -449,7 +448,7 @@ export const post: BlogPost = {
         <h3 className="text-lg font-bold mb-3">See a demo on your own data before you sign</h3>
         <p className="mb-4">
           Bring one workflow and a sample of the data behind it. We will build a small working version on that data so
-          you can judge the result, then quote the build as a fixed price in writing. Founder replies within 24 hours.
+          you can judge the result, then quote the build as a fixed price in writing. Bhavesh replies within 24 hours.
         </p>
         <a
           href="/contact"
@@ -473,7 +472,7 @@ export const post: BlogPost = {
           [<a key="p4" href={SRC.chatgptBusiness} {...ext}>ChatGPT Business</a>, '$20 a user a month billed annually, $25 monthly (standard seat)', 'Premium seat $100 annually or $125 monthly. Read in OpenAI’s help centre; chatgpt.com showed local currency to us'],
           [<a key="p5" href={SRC.claude} {...ext}>Claude (Anthropic)</a>, 'Pro $17 a month billed annually or $20 monthly; Team $20 a seat billed annually or $25 monthly', 'Team premium seat $100 or $125. Enterprise $20 a seat a month plus usage, 20-seat minimum'],
           [<a key="p6" href={SRC.hubspot} {...ext}>HubSpot Sales Hub</a>, 'Free for up to 2 users; Professional from $90 to $100 a seat a month by billing option; Enterprise from $150', 'Required one-time onboarding: $1,500 Professional, $3,500 Enterprise. Extra HubSpot Credits $0.010 each'],
-          [<a key="p7" href={SRC.salesCloud} {...ext}>Salesforce Sales Cloud</a>, 'Starter Suite $25, Pro Suite $100 a user a month; Core $195, Advanced $395, Max $550 billed annually', <span key="p7n"><a href={SRC.agentforce} {...ext}>Agentforce</a>: $2 per conversation, Flex Credits $500 per 100,000, add-ons from $125 a user a month</span>],
+          [<a key="p7" href={SRC.salesCloud} {...ext}>Salesforce Sales Cloud</a>, 'Starter Suite $25, Pro Suite $100 a user a month; Core $195, Advanced $395, Max $550 billed annually', <span key="p7n"><a href={SRC.agentforce} {...ext}>Agentforce</a>: $2 per conversation, Flex Credits (credits used up per AI action) $500 per 100,000, add-ons from $125 a user a month</span>],
           [<a key="p8" href={SRC.shopify} {...ext}>Shopify</a>, 'Basic $29, Grow $79, Advanced $299 a month paid yearly; Plus $2,300 a month on a three-year term', 'From Shopify’s US cost guide; the pricing page showed local currency to us'],
         ]}
       />
@@ -555,7 +554,7 @@ export const post: BlogPost = {
           className="w-full h-auto rounded-xl border border-gray-200"
         />
         <figcaption className="text-xs text-gray-500 mt-2">
-          Ownership of the code, the data terms and the exit clause belong in the contract, not in a follow-up email.
+          Read the contract for a demo clause as closely as the price: a slide deck is not a demo.
         </figcaption>
       </figure>
 
@@ -612,30 +611,27 @@ export const post: BlogPost = {
         If you are budgeting a first AI product rather than an internal workflow, our{' '}
         <a href="/blog/ai-mvp-development-cost-2026">AI MVP development cost guide</a> is the closer match, and for a
         single custom agent see{' '}
-        <a href="/blog/what-is-an-ai-agent-cost-2026">how much it costs to build an AI agent</a>.
+        <a href="/blog/what-is-an-ai-agent-cost-2026">how much it costs to build an AI agent</a>. To draw up a shortlist
+        of firms to ask for quotes, see our lists of the{' '}
+        <a href="/blog/best-ai-automation-agencies-usa-2026">best AI automation agencies in the USA</a> and the{' '}
+        <a href="/blog/best-ai-automation-agencies-uk-2026">best AI automation agencies in the UK</a>.
       </p>
 
-      <h2 id="what-ranks">What the pages assistants cite say, and what they leave out</h2>
+      <h2 id="what-ranks">What other cost guides leave out</h2>
       <p>
-        On 21 October 2026, Google&apos;s top results for &quot;ai automation agency cost&quot; were bakedwith.com,
-        a Reddit thread, Voiceflow, Leanware, Fiverr, a YouTube video and Apex Solved. For &quot;how much does ai
-        automation cost&quot; they were Qarbon, Reddit, WebFX, Codewave and Nevtech. Five of the six searches we checked
-        returned results, and all five showed an AI Overview. When we asked AI assistants about agency costs on 18 October 2026, the cost page cited most often
-        was TwoCore&apos;s, named in 9 answers across four engines.
-      </p>
-      <p>
-        The pages share a shape: a range for projects, a range for retainers, a comparison with hiring, and five to ten
-        FAQs. Two gaps stood out. Few US pages split the price by the job being automated, and none we read put platform list
-        prices next to agency ranges with the date each was read. Sourcing is also uneven. TwoCore credits its retainer
-        bands by company size to Digital Agency Network; we could not find those bands on the page it links to when we
-        read it on 21 October 2026, so we left them out. Fiverr&apos;s marketplace averages ($75 to $520 a project) price
-        gig work rather than agency projects, which is why they sit far below every other source here.
+        When we asked AI assistants about agency costs on 18 October 2026, the cost page cited most often was
+        TwoCore&apos;s, named in 9 answers across four engines. Few US guides we read split the price by the job being
+        automated, and none put platform list prices next to agency ranges with the date each was read. TwoCore credits
+        its retainer bands by company size to Digital Agency Network; we could not find those bands on the page it
+        links to on 21 October 2026, so we left them out. Fiverr&apos;s marketplace averages ($75 to $520 a project)
+        price gig work rather than agency projects, which is why they sit far below every other source here.
       </p>
 
       <h2 id="factoryjet">How FactoryJet prices AI automation work</h2>
       <p>
         We design, build, implement and support AI automations and agents, on n8n and in code, with the integrations
-        they need: HubSpot, Salesforce, Shopify, NetSuite, Odoo, SAP Business One, ERPNext, Xero, EDI and WhatsApp. We
+        they need. We connect to HubSpot, Salesforce, Shopify, NetSuite, Odoo, SAP Business One and ERPNext through their
+        APIs. We
         do not publish a price list, because the systems involved set the number. Our terms are written for the buyer
         this page is for:
       </p>
@@ -651,20 +647,10 @@ export const post: BlogPost = {
         FactoryJet quotes a fixed price in writing after a short scoping call. We keep managing the servers, AI models,
         APIs and maintenance after launch if you want us to, so your team does not have to. See{' '}
         <a href="/services/ai-automation">AI automation</a> and{' '}
-        <a href="/services/ai-agent-development">AI agent development</a>, or our pages for{' '}
+        <a href="/services/ai-agent-development">AI agent development</a>,{' '}
+        <a href="/services/ai-integration-services">AI integration services</a>, or our pages for{' '}
         <a href="/uk/ai-development">UK</a> and <a href="/au/ai-development">Australian</a> buyers.
       </p>
-
-      <div className="bg-[#FAF8F5] border border-[#E5DFD7] rounded-xl p-6 my-10">
-        <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-3">More 2026 cost and decision guides</p>
-        <ul className="mb-0">
-          <li><a href="/blog/what-is-an-ai-agent-cost-2026">How much it costs to build an AI agent</a>: build ranges by scope, and when renting beats building.</li>
-          <li><a href="/blog/ai-agency-vs-in-house-vs-freelancer-2026">AI agency, in-house engineer or freelancer</a>: the decision by company size.</li>
-          <li><a href="/blog/questions-to-ask-ai-development-company-2026">Questions to ask an AI development company</a>: and the red flags in the answers.</li>
-          <li><a href="/blog/ai-consultant-cost-2026">AI consultant cost in 2026</a>: US hourly, day and project rates.</li>
-          <li><a href="/blog/enterprise-ai-agent-cost-2026">Enterprise AI agent cost in 2026</a>: build ranges and what drives them.</li>
-        </ul>
-      </div>
 
       <h2 id="sources">Sources</h2>
       <p className="text-sm text-gray-600">Every page below was opened and read on 21 October 2026.</p>
@@ -699,7 +685,7 @@ export const post: BlogPost = {
         </h3>
         <p className="text-[#4B5563] text-base leading-relaxed mb-6">
           Tell us the workflow, the systems behind it and who on your team will own it. We will show a working version on
-          your own data, then quote the build as a fixed price in writing. You own the code from day one. Founder replies
+          your own data, then quote the build as a fixed price in writing. You own the code from day one. Bhavesh replies
           within 24 hours.
         </p>
         <div className="flex flex-wrap items-center gap-4">

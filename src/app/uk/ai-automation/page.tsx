@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/ai-automation, built 2026-10-29.
@@ -34,12 +35,14 @@ import '../ai-agents/ai-agents.css';
    "n8n vs zapier", "zapier agency", "ai automation" and "n8n agency". */
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-automation';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
+const UPDATED_LABEL = '31 October 2026';
 const READ_ON = '29 October 2026';
+const READ_ON_2 = '31 October 2026';
 const TITLE = 'AI Workflow Automation UK: n8n, Make and Zapier | FactoryJet';
 const H1 = 'AI Workflow Automation for UK Operations Teams';
 const DESCRIPTION =
-  'Workflow automation for UK operations teams in n8n, Make or Zapier. Orders, payouts, supplier bills and VAT records moved between Xero, Sage, Linnworks and your ERP.';
+  'Workflow automation for UK teams in n8n, Make or Zapier. Orders, payouts, supplier bills and VAT records moved between Xero, Sage, Linnworks and your ERP.';
 
 /* Design values, copied from ../ai-agents/ai-agents.css so inline styles stay
    on-system without CSS custom property references in this file. */
@@ -80,6 +83,10 @@ const SRC = {
   augustovaIndex: { label: 'Augustova: UK AI Price Index', url: 'https://www.augustova.co.uk/uk-ai-price-index' },
   aiConsultancy: { label: 'The AI Consultancy: workflow automation', url: 'https://theaiconsultancy.ai/services/workflow-automation' },
   ronins: { label: 'Ronins: AI agency', url: 'https://www.ronins.co.uk/ai-agency/' },
+  sage50Dev: { label: 'Sage UK knowledge base: Sage 50 Accounts, development basics (read 31 October 2026)', url: 'https://gb-kb.sage.com/portal/app/portlets/results/viewsolution.jsp?solutionid=200518071050312' },
+  intacctWs: { label: 'Sage Intacct Developer: XML Web Services (read 31 October 2026)', url: 'https://developer.intacct.com/web-services/' },
+  msPowerAutomate: { label: 'Microsoft Learn: Power Automate home page (read 31 October 2026)', url: 'https://learn.microsoft.com/en-us/power-automate/getting-started' },
+  msDesktopFlows: { label: 'Microsoft Learn: Introduction to desktop flows (read 31 October 2026)', url: 'https://learn.microsoft.com/en-us/power-automate/desktop-flows/introduction' },
 } as const;
 
 type SrcKey = keyof typeof SRC;
@@ -116,7 +123,7 @@ const CHAINS: { t: string; d: string }[] = [
   },
   {
     t: 'ERP and shop kept in step',
-    d: 'Stock, prices and SKUs flow from NetSuite, Business Central, Odoo or Brightpearl to the shop and marketplaces, with one system named as the owner of each number so two copies never argue.',
+    d: 'Stock, prices and SKUs (stock codes) flow from NetSuite, Business Central, Odoo or Brightpearl to the shop and marketplaces, with one system named as the owner of each number so two copies never argue.',
   },
   {
     t: 'Monday numbers without a spreadsheet session',
@@ -158,7 +165,6 @@ const TOOLS_CMP: { feat: string; n8n: string; make: string; zapier: string }[] =
    deliberately left out. */
 const RANGES: { firm: string; job: string; range: string; vat: string; src: SrcKey }[] = [
   { firm: 'The AI Consultancy', job: 'No-code automation with no AI step', range: '£1,500 to £5,000 one-off', vat: 'Ex VAT, stated on the page', src: 'aiConsultancy' },
-  { firm: 'Augustova', job: 'Single automation: one chosen task, automated end to end', range: '£595', vat: 'Ex VAT, stated on the page', src: 'augustovaPricing' },
   { firm: 'Augustova', job: 'AI agents and automation: one repetitive job run by an AI agent', range: '£4,000 to £15,000', vat: 'Ex VAT, stated on the page', src: 'augustovaPricing' },
   { firm: 'The AI Consultancy', job: 'No-code workflow with an AI step', range: '£5,000 to £15,000 one-off', vat: 'Ex VAT, stated on the page', src: 'aiConsultancy' },
   { firm: 'Augustova', job: 'Custom AI system: several agents sharing data and hand-offs', range: '£8,000 to £25,000', vat: 'Ex VAT, stated on the page', src: 'augustovaPricing' },
@@ -182,7 +188,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'basics',
     question: 'What is AI automation for a business?',
     answer:
-      'It is a set of workflows that move records between the systems you already run, so an order, an invoice or a payout is keyed in once and then travels on its own. Most steps follow a fixed rule. AI is added only where a step has to read something messy, such as a PDF purchase order or a customer email.',
+      'AI automation is a set of workflows that move records between the systems you already run, so an order, an invoice or a payout is keyed in once and then travels on its own. Most steps follow a fixed rule. AI is added only where a step has to read something messy, such as a PDF purchase order or a customer email.',
+  },
+  {
+    category: 'basics',
+    question: 'What does an AI automation agency do?',
+    answer:
+      'An AI automation agency maps how a job moves between your systems today, then builds the workflows in a tool that suits the volume, inside accounts you own. Before go-live it tests the awkward cases, such as part refunds or a rejected courier address, and sets an alert on every step that can fail. Good agencies also tell you which steps need no AI at all.',
   },
   {
     category: 'basics',
@@ -211,6 +223,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'tools',
+    question: 'Where does Microsoft Power Automate fit next to n8n, Make and Zapier?',
+    answer:
+      'Microsoft describes Power Automate as a service for automated workflows between apps and services. Its desktop flows extend its robotic process automation (RPA), software that works through screens the way a person would, to legacy desktop apps. That helps when an old system has no API. Screen steps can break when a screen changes, so we prefer an API wherever a system offers one.',
+  },
+  {
+    category: 'tools',
     question: 'Is n8n risky for a business to run?',
     answer:
       'The risk sits less in the tool than in who looks after it. n8n’s own documentation says you can self-host it on your own infrastructure, on premises or in a private cloud, using Docker Compose or other methods. Self-hosting means someone owns updates, backups, credentials and monitoring. If you choose it, we set those up in writing and can keep managing the servers after launch, or hand the runbook to your IT team.',
@@ -223,16 +241,16 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'tools',
-    question: 'We already have zaps built by a freelancer. Can you take them over?',
+    question: 'We already have zaps, Make scenarios or an n8n setup built by a freelancer. Can you take them over?',
     answer:
-      'Yes. We start with an inventory: every zap or scenario, what triggers it, which accounts it logs in with and what breaks if it stops. That list usually shows a few that can be retired, a few to merge, and one or two that carry real business risk with no alert when they fail. We then quote the tidy-up or the move to n8n as a fixed price.',
+      'Yes. We start with an inventory: every zap, scenario or n8n workflow, what triggers it, which accounts it logs in with and what breaks if it stops. That list usually shows a few that can be retired, a few to merge, and one or two that carry real business risk with no alert when they fail. We then quote the tidy-up or the move to n8n as a fixed price.',
   },
   // UK systems
   {
     category: 'systems',
     question: 'Can you connect Sage 50, Sage 200 or Sage Intacct to our other systems?',
     answer:
-      'Yes, and the route depends on which Sage you run. Sage 50, Sage 200 and Sage Intacct connect in different ways, so we check your version and hosting on the scoping call before promising a design. Whichever package it is, your accountant still sets the account and VAT code for each kind of line, and the workflow follows that map.',
+      'Yes, and the route depends on the edition. Sage says its Sage 50 Accounts developer tools, Sage Data Objects, are Windows libraries open only to members of its UK Developer Programme. Sage Intacct offers XML Web Services. For Sage 200 we confirm your version and hosting on the scoping call before promising a design. Your accountant still sets the account and VAT code for each kind of line.',
   },
   {
     category: 'systems',
@@ -248,15 +266,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'systems',
-    question: 'Do you work with NetSuite, Business Central, Odoo and Brightpearl?',
+    question: 'Can you connect NetSuite, Business Central, Odoo and Brightpearl to the shop?',
     answer:
       'Yes. In a business that runs one of these, it is usually the record for stock, prices and customers, and the shop and marketplaces follow it. The workflow work is deciding which system owns each number and then building the sync around that decision. For Sow Easy, a UK wholesale client, we are building a WooCommerce trade store that reads stock, pricing and SKUs from Odoo, now in testing on staging.',
-  },
-  {
-    category: 'systems',
-    question: 'Can courier tracking reach customers without anyone copying it?',
-    answer:
-      'Yes. When Royal Mail, DPD or Evri returns a tracking number for a label, the workflow writes it to the order, sends it to the marketplace or shop that sold the item, and triggers the customer email. Failed bookings, such as an address the courier rejects, go to a named person in your team with the reason, so the parcel is fixed before the cut-off.',
   },
   // MTD, GDPR, AI Act
   {
@@ -288,13 +300,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'cost',
     question: 'How much does AI automation cost in the UK?',
     answer:
-      'Published UK ranges, read on 29 October 2026: Augustova lists £595 for a single automation of one chosen task, £4,000 to £15,000 for one repetitive job run by an AI agent, and £8,000 to £25,000 for a custom system of several agents sharing data and hand-offs, all ex VAT. The AI Consultancy lists £5,000 to £15,000 for a no-code workflow with an AI step and £10,000 to £30,000 for self-hosted n8n with AI, also ex VAT. FactoryJet quotes a fixed price in writing after a short scoping call.',
-  },
-  {
-    category: 'cost',
-    question: 'Are the prices on this page with or without VAT?',
-    answer:
-      'The ranges are restated exactly as each agency publishes them. Augustova and The AI Consultancy both say their prices exclude VAT. Ronins does not say. When you compare quotes, ask each supplier to state VAT treatment in writing. Your FactoryJet quote states it in writing too.',
+      'Published UK ranges, read on 29 October 2026: Augustova lists £4,000 to £15,000 for one repetitive job run by an AI agent, and £8,000 to £25,000 for a custom system of several agents sharing data and hand-offs, both ex VAT. The AI Consultancy lists £5,000 to £15,000 for a no-code workflow with an AI step and £10,000 to £30,000 for self-hosted n8n with AI, also ex VAT. Ronins lists £12,000 to £30,000 for a proof of concept and does not state VAT. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'cost',
@@ -323,7 +329,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'working',
-    question: 'What should our brief or RFP include?',
+    question: 'What should our brief or request for proposal (RFP) include?',
     answer:
       'One page is enough to start. Name the workflow, what starts it, every system it touches with the version you run, how often it happens, who handles it today and what a mistake costs. Add three real examples, including one awkward case. Add it on the form’s second screen, or send your formal RFP, and we reply with a written scope and a fixed price per phase.',
   },
@@ -374,9 +380,10 @@ const jsonLd = {
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="true"]'] },
       author: {
         '@type': 'Person',
+        '@id': 'https://factoryjet.com/author/bhavesh-barot#person',
         name: 'Bhavesh Barot',
         jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
+        url: 'https://factoryjet.com/author/bhavesh-barot',
         sameAs: [
           'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
           'https://github.com/factoryjet-tech',
@@ -400,7 +407,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['ai-automation'] },
   openGraph: {
     title: TITLE,
     description:
@@ -468,8 +475,8 @@ export default function AiAutomationUKPage() {
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="who"><b><a href="/author/bhavesh-barot" style={{ textDecoration: 'underline' }}>Bhavesh Barot</a></b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -481,7 +488,7 @@ export default function AiAutomationUKPage() {
                     trustText="Working software on your own data before you sign. Founder replies within one business day."
                   />
                   <p className="mt-4" style={{ fontSize: 14, maxWidth: 560 }}>
-                    If you hold a process document, a written brief or a formal RFP, add it on the second screen of the
+                    If you hold a process document, a written brief or a formal RFP (request for proposal), add it on the second screen of the
                     form and the reply comes back as a phased scope.
                   </p>
                 </div>
@@ -523,7 +530,7 @@ export default function AiAutomationUKPage() {
             <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
               <span className="lab">What is AI workflow automation for a UK operations team?</span>
               <p>
-                It is a set of workflows that pass orders, payouts, bills and stock between the systems a business
+                AI workflow automation is a set of workflows that pass orders, payouts, bills and stock between the systems a business
                 already runs, such as Xero, Sage, Linnworks and an ERP, so nobody keys the same record twice. Most
                 steps follow fixed rules. AI handles only the steps that read documents or emails. FactoryJet builds
                 them in n8n, Make or Zapier, in accounts the client owns.
@@ -539,7 +546,7 @@ export default function AiAutomationUKPage() {
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              If you already run a few zaps or scenarios, the usual trouble is one of them failing quietly on a
+              If you already run a few zaps (Zapier workflows) or scenarios (Make workflows), the usual trouble is one of them failing quietly on a
               Friday, so the VAT figures are short on Monday. So the first thing we
               design is what happens when a step fails, and the second is which system owns each number.
             </p>
@@ -652,7 +659,8 @@ export default function AiAutomationUKPage() {
                 feature list: a 12-step workflow that runs 3,000 times a month is priced differently on each.
               </p>
             </div>
-            <div className="card mt-10" tabIndex={0} role="region" aria-label="n8n, Make and Zapier compared" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={4}>
+            <p className="md:hidden mt-8" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-10" tabIndex={0} role="region" aria-label="n8n, Make and Zapier compared" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={4}>
                 <thead>
                   <tr>
                     <th>Question</th>
@@ -678,6 +686,33 @@ export default function AiAutomationUKPage() {
               from building in all three.
             </p>
             <Sources ids={['n8nPricing', 'n8nHosting', 'makePricing', 'zapierPricing']} />
+            <div className="stack mt-10" style={{ maxWidth: 780 }}>
+              <h3>n8n vs Zapier vs Make for a UK business</h3>
+              <p>
+                Start from the billing unit in the table. A short, linear job between popular apps usually fits
+                Zapier, and a Zapier agency is the right call if your team already lives there. Branching
+                jobs that operations staff want to read suit Make.com. Long, high-volume chains, or data that must
+                stay on servers you name, point to n8n automation, self-hosted or on n8n Cloud.
+              </p>
+              <p>
+                Hiring an n8n agency matters most when you self-host, because someone has to own the server
+                updates and the backups. Building in-house works when you have a developer with time to keep the
+                workflows alive after launch.
+              </p>
+              <h3 className="mt-6">Where Microsoft Power Automate fits</h3>
+              <p>
+                Microsoft describes Power Automate as a service for automated workflows between apps and services.
+                Its desktop flows extend its robotic process automation (RPA), meaning software that works through
+                screens the way a person would, to repetitive desktop tasks and legacy apps. That suits an old
+                system with no API. Screen steps can break when a screen changes, so we use an API wherever the
+                system offers one.
+              </p>
+              <p style={srcNote}>
+                Sources, read on {READ_ON_2}:{' '}
+                <a href={SRC.msPowerAutomate.url} target="_blank" rel="noopener noreferrer" style={srcLink}>Microsoft Learn: Power Automate home page</a>;{' '}
+                <a href={SRC.msDesktopFlows.url} target="_blank" rel="noopener noreferrer" style={srcLink}>Microsoft Learn: Introduction to desktop flows</a>.
+              </p>
+            </div>
             <p className="mt-6" style={{ maxWidth: 780 }}>
               For a longer side-by-side, read our{' '}
               <a href="/blog/n8n-vs-zapier-vs-make-ai-workflow-automation-2026" style={inlineLink}>n8n vs Zapier vs Make guide</a>.
@@ -719,11 +754,12 @@ export default function AiAutomationUKPage() {
               <h3 className="mt-6">The EU AI Act, for UK firms that sell into the EU</h3>
               <p>
                 Article 2 of the AI Act reaches providers placing AI systems on the EU market wherever they are
-                based, and providers and deployers outside the EU where the system’s output is used in the EU. The
+                based, and providers and deployers (businesses that use an AI system) outside the EU where the system’s output is used in the EU. The
                 European Commission says the transparency rules apply from August 2026. Under Article 50, people
                 who interact with an AI system should be told so, unless it is obvious. For a UK seller on Zalando
-                or ManoMano with an AI step that writes to EU customers, the practical answer is simple: label it.
-                High-risk rules for Annex III uses are dated 2 December 2027 on the Commission’s page. In our
+                or ManoMano with an AI step that writes to EU customers, that means telling those customers the
+                messages come from AI. High-risk rules for the uses listed in Annex III, such as hiring and credit
+                scoring, are dated 2 December 2027 on the Commission’s page. In our
                 reading, most back-office workflows fall outside them. Your legal team makes the call; we build so they can.
               </p>
               <Sources ids={['aiActArt2', 'aiActArt50', 'ecAiAct']} />
@@ -732,9 +768,9 @@ export default function AiAutomationUKPage() {
         </section>
 
         <MidPageCTA
-          headline={'Name one workflow and the systems it crosses. We reply with the build.'}
-          sub={'Tell us what starts it, the systems and versions involved, and how often it runs. On a short call we say whether it needs AI at all, which tool fits, and we quote a fixed price for the first phase.'}
-          label={'See a demo on my data'}
+          headline={'One UK workflow, scoped and priced before you sign'}
+          sub={'Tell us what starts it, the systems and versions involved, and how often it runs. On a short call we say whether any step needs AI and quote a fixed price for the first phase.'}
+          label={'Book a scoping call'}
           note={'Bhavesh replies within one business day.'}
         />
 
@@ -761,7 +797,8 @@ export default function AiAutomationUKPage() {
                 <Sources ids={['augustovaIndex']} />
               </div>
             </div>
-            <div className="card mt-10" tabIndex={0} role="region" aria-label="UK AI automation build ranges" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={4}>
+            <p className="md:hidden mt-8" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-10" tabIndex={0} role="region" aria-label="UK AI automation build ranges" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={4}>
                 <thead>
                   <tr>
                     <th>Agency</th>
@@ -800,7 +837,7 @@ export default function AiAutomationUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">UK client work</span>
-              <h2>Two UK trade businesses we build for</h2>
+              <h2>UK trade builds where records move between systems without retyping</h2>
             </div>
             <ul className="col-2 mt-10">
               <li className="card">
@@ -834,7 +871,7 @@ export default function AiAutomationUKPage() {
               <span className="eyebrow">How a project runs</span>
               <h2>Six steps from your brief to a supported workflow</h2>
               <p className="lead mt-4">
-                Your accountant joins step three. Your DPO or IT lead joins step four if personal data or self-hosting
+                Your accountant joins step three. Your data protection officer (DPO) or IT lead joins step four if personal data or self-hosting
                 is involved.
               </p>
             </div>
@@ -844,7 +881,7 @@ export default function AiAutomationUKPage() {
                 { n: '02', t: 'The workflow on your own data, before you sign', d: 'We run a few of your real orders, payouts or bills through the proposed steps, with names removed if you prefer, and show every record it writes and every case it hands to a person.' },
                 { n: '03', t: 'Posting rules and owners agreed in writing', d: 'Your accountant names the account and VAT code for each kind of entry. Each record gets one owning system. Both go on a single page that you sign.' },
                 { n: '04', t: 'A fixed price for each phase', d: 'Each phase is scoped, priced and signed on its own, with a dated schedule. Data location, credentials and any self-hosting are written into the scope.' },
-                { n: '05', t: 'Build, test the awkward cases, go live', d: 'Part refunds, a zero-rated line, a rejected courier address and a duplicate webhook all run through before live data. Every failed step alerts email or Slack.' },
+                { n: '05', t: 'Build, test the awkward cases, go live', d: 'Part refunds, a zero-rated line, a rejected courier address and a duplicate webhook (the automatic message one system sends another when something happens) all run through before live data. Every failed step alerts email or Slack.' },
                 { n: '06', t: 'Defect cover, then support only if you want it', d: 'Defects are fixed inside the build price for a cover period agreed before work starts. After that, each change is quoted and approved first, with no monthly minimum.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
@@ -872,8 +909,7 @@ export default function AiAutomationUKPage() {
               <div className="card card-top-orange" id="brief">
                 <span className="eyebrow">Send us a brief or an RFP</span>
                 <p className="mt-4" style={{ fontSize: 14.5 }}>
-                  One page is enough. Serious buyers usually send this, and it lets us reply with a scope rather than
-                  a sales call.
+                  One page is enough, and it lets us reply with a scope rather than a sales call.
                 </p>
                 <div className="scorecard-row"><div><div className="scorecard-metric">The workflow and its trigger</div><div className="scorecard-note">what starts it, what ends it</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>1</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Every system, with version</div><div className="scorecard-note">e.g. Sage 200 on premises, Linnworks</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>2</div></div>
@@ -910,11 +946,11 @@ export default function AiAutomationUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">Method</span>
-              <h2>Sources, read on {READ_ON}</h2>
+              <h2>Sources and the dates we read them</h2>
               <p className="lead mt-4">
                 Every law, tax rule, tool billing rule and market range on this page was read on the pages below on
-                that day. Prices and guidance change, so open the linked page before you act on a figure. Search
-                volumes are from DataForSEO for the United Kingdom on the same day.
+                {' '}{READ_ON}. The Sage and Microsoft pages were read on {READ_ON_2}. Prices and guidance change, so
+                open the linked page before you act on a figure.
               </p>
             </div>
             <ul className="col-2 mt-8" style={{ gap: 10 }}>
@@ -930,7 +966,7 @@ export default function AiAutomationUKPage() {
         {/* 13. FAQ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>AI automation questions from UK operations and finance teams</h2>
             </div>
@@ -983,8 +1019,8 @@ export default function AiAutomationUKPage() {
             <h2>Pick one workflow. We will show it running on your records.</h2>
             <p className="mt-4">
               Send your name and work email, and attach a brief if you have one. Bhavesh answers within one business
-              day and books a short call about the workflow, the systems it crosses and where your data may live. You
-              leave knowing whether it needs AI, which tool fits, and what the first phase costs.
+              day and books a short call about the workflow and where your data may live. You leave knowing which tool
+              fits and what the first phase costs.
             </p>
             <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-dark" />

@@ -13,6 +13,7 @@ import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
+import { twinAlternates } from '@/data/hreflangMap';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/accounts-receivable-automation, built 2026-10-22.
@@ -41,17 +42,18 @@ import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
      products from each maker's own page and (b) two market ranges for a
      BUILD inside one cost FAQ (Layer3 Labs, ProductCrafters).
    - Rule of 2026-10-11 (Bhavesh): nothing here says what a custom agent costs
-     to run or maintain. Upkeep is described only as: build and ongoing
-     support quoted as fixed prices in writing, and FactoryJet keeps managing
-     the servers, AI models, API connections and upkeep.
+     to run or maintain. Terms are the house terms: fixed price per phase,
+     quoted in writing; changes quoted and approved per request; no monthly
+     minimum. Optional upkeep covers the servers, AI models and API connections.
    - No labour-replacement framing. The agent drafts, matches and flags; the
      client's people keep credit decisions, disputes, write-offs and calls.
    - Nothing here says where the FactoryJet team is or is not.
    - Experience claim is Bhavesh's statement of 2026-10-09 (NetSuite, Odoo,
      SAP Business One, ERPNext, custom ERPs; RFQ automation, daily
      bookkeeping, purchase and sales order generation) plus Xero work
-     confirmed 2026-10-11. No client named, no result claimed, no partner
-     status raised. Business Central is named as a system the agent can
+     confirmed 2026-10-11. One client named (Sow Easy, WooCommerce + Odoo,
+     store and Odoo link being tested on staging, launch still ahead; not AR work).
+     No result claimed, no partner status raised. Business Central is named as a system the agent can
      connect to through Microsoft's documented API, not as past work.
    - The eight products restate each maker's own page. We have not tested
      them and we sell none of them.
@@ -65,11 +67,11 @@ import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL_URL = 'https://factoryjet.com/services/accounts-receivable-automation';
-const PAGE_TITLE = 'Accounts Receivable Automation Built on Your Books | FactoryJet';
+const PAGE_TITLE = 'Accounts Receivable Automation with AI | FactoryJet';
 const PAGE_DESC =
-  'We design, build and support an AI agent that sends payment reminders, matches customer payments to invoices and flags disputes on your QuickBooks, Xero, NetSuite or Business Central.';
+  'An AI agent for accounts receivable automation: payment reminders, cash application and dispute cases on QuickBooks, Xero, NetSuite or Business Central.';
 const PAGE_PUBLISHED = '2026-10-22';
-const PAGE_MODIFIED = '2026-10-22';
+const PAGE_MODIFIED = '2026-10-31';
 const CHECKED_ON = '22 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -98,10 +100,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: CANONICAL_URL,
-    languages: {
-      'en-US': CANONICAL_URL,
-      'x-default': CANONICAL_URL,
-    },
+    languages: twinAlternates['accounts-receivable-automation'],
   },
   openGraph: {
     type: 'website',
@@ -420,7 +419,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'systems',
     question: 'Can QuickBooks automate accounts receivable?',
     answer:
-      'Partly. Intuit says QuickBooks Online can send a first, second and third reminder, each up to 90 days before or after the due date, and only for invoices you have already emailed from QuickBooks. QuickBooks Online Advanced can use workflows instead. In the API, one payment can be applied to several invoices and credit memos, or left unapplied as a credit, which is where an agent does its matching.',
+      'Partly. Intuit says QuickBooks Online can send a first, second and third reminder, each up to 90 days before or after the due date, and only for invoices you have already emailed from QuickBooks. QuickBooks Online Advanced can use workflows instead. In the API, one payment can be applied to several invoices and credit memos (notes that lower what a customer owes), or left unapplied as a credit. That is where an agent does its matching.',
   },
   {
     category: 'systems',
@@ -432,7 +431,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'systems',
     question: 'Does NetSuite have accounts receivable automation?',
     answer:
-      "Yes, for reminders. Oracle's Dunning Letters SuiteApp sets up an automated dunning process and sends reminder letters by procedure and level. Oracle lists cases where a letter is not sent, such as paused dunning or no change in level. Oracle also says dunning procedures can be created only in the user interface, not by CSV, SOAP web services or SuiteScript. Our NetSuite AI agents page covers the wider picture.",
+      "Yes, for reminders. Oracle's Dunning Letters SuiteApp sets up an automated dunning process and sends reminder letters by procedure and level. Oracle lists cases where a letter is not sent, such as paused dunning or no change in level. Oracle also says you have to set dunning procedures up by hand on NetSuite's screens. They cannot be imported from a file or created by code. Our NetSuite AI agents page covers the wider picture.",
   },
   {
     category: 'systems',
@@ -457,25 +456,25 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'ai',
     question: 'Can AI do accounts receivable?',
     answer:
-      'It can do the reading, matching and drafting. It should not make the decisions. In the agents we build, AI reads remittances, emails and short-payment notes, suggests which invoices a payment belongs to, and drafts reminder emails in your words. A person approves anything unclear, decides on credit holds and settles disputes. The built-in tools work the same way: Business Central marks low-confidence matches for review.',
+      'It can do the reading, matching and drafting. It should not make the decisions. In the agents we build, AI reads remittances and short-payment notes, suggests which invoices a payment belongs to, and drafts reminders in your words. Matching a payment that carries an invoice number was rule-based long before AI. The new part is reading messy emails and PDFs. A person still approves unclear matches, credit holds and disputes.',
+  },
+  {
+    category: 'basics',
+    question: 'What is invoice-to-cash, and how is it different from order-to-cash?',
+    answer:
+      'Invoice-to-cash is every step from sending an invoice to closing it as paid: delivery, reminders, receiving the payment, cash application and settling any dispute. Order-to-cash is wider. It starts when the customer places the order and adds the credit check, fulfilment and invoicing in front. Most AR automation sits in the invoice-to-cash part, because that is where payments and paperwork stop lining up.',
   },
   {
     category: 'ai',
-    question: 'Is AI going to take over accounts receivable?',
+    question: 'What is an AI collections agent?',
     answer:
-      'No. It changes where the hours go. Matching a payment with a clear invoice number was rule-based long before AI. What is new is reading messy remittances and customer emails. The work that stays human is the work that needs judgement and a relationship: deciding whether a key customer goes on hold, agreeing a payment plan, and settling a deduction your sales team half-promised.',
+      'It is software that does the routine follow-up on unpaid invoices. For business customers it sends reminders, answers "can you resend the invoice" emails, attaches statements and flags accounts that need a call. In our builds it sends email only, in the tone you approve, and stops as soon as a customer raises a dispute. Calls and payment plans stay with your team. Consumer debts come under extra rules.',
   },
   {
-    category: 'ai',
-    question: 'Can AI do collections?',
+    category: 'basics',
+    question: 'What is the difference between accounts receivable and accounts payable automation?',
     answer:
-      'For business customers, an agent can send reminders, answer "can you resend the invoice" emails, attach statements and flag accounts that need a call. In our builds it writes and sends email only, in the tone you approve, and it stops reminding as soon as a customer raises a dispute. Phone calls to customers stay with your team. Debts owed by consumers come under extra rules, covered in the next section.',
-  },
-  {
-    category: 'ai',
-    question: 'Is there a ChatGPT for accounting?',
-    answer:
-      'Not one that can be trusted on its own. A chat app does not know your open invoices, your customers or your credit rules, and nothing checks its work. The same kind of AI model does useful AR work inside a proper setup: a limited sign-in to your books, written rules, a log of every email and match, and a person approving what is unclear.',
+      'Accounts receivable is money customers owe you. Accounts payable is money you owe suppliers. AR automation sends invoices, chases payment and matches the cash coming in. AP automation reads supplier invoices, checks them against orders and routes them for approval before money goes out. Both read documents and match them to the ledger, but the controls differ. Our accounts payable automation page covers the supplier side.',
   },
   // ── Collection rules ─────────────────────────────────────────────
   {
@@ -495,7 +494,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'How much does a custom AR agent cost to build?',
     answer:
-      "It depends on how many systems the agent reads and writes, and how many rules it follows. US agencies typically charge $5,000 to $15,000 for a single-workflow build, according to Layer3 Labs' 2026 guide, and $15,000 to $50,000 for several workflows. ProductCrafters puts custom AI agents of every kind at roughly $5,000 to more than $180,000. FactoryJet quotes a fixed price in writing after a short scoping call.",
+      "It depends on how many systems the agent reads and writes, and how many rules it follows. US agencies typically charge $5,000 to $15,000 for a single-workflow build, according to Layer3 Labs' 2026 guide, and $15,000 to $50,000 for several workflows. ProductCrafters puts custom AI agents of every kind at roughly $5,000 to more than $180,000. FactoryJet quotes a fixed price per phase, in writing, after a short scoping call.",
   },
   {
     category: 'working',
@@ -513,7 +512,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'Who owns the agent, and who looks after it?',
     answer:
-      'You own it. The code, the written rules and the test data are yours, and it can run in your own cloud account. FactoryJet quotes the build, and any support you choose, as fixed prices in writing. After launch we keep managing the servers, the AI models, the API connections and the upkeep, so your finance team does not have to. If you move the work elsewhere later, everything goes with you.',
+      'You own it. The code, the written rules and the test data are yours, and it can run in your own cloud account. The build is a fixed price per phase, quoted in writing. Support is optional: each change is quoted and approved before work starts, and there is no monthly minimum. If you choose support, we manage the servers, the AI models and the API connections after launch. If you move the work elsewhere, everything goes with you.',
   },
 ];
 
@@ -530,7 +529,7 @@ const faqSchema = {
 /* ── Hero figure: what happens to one customer invoice. Orange rows are the
    agent we build. Black-outline rows are the client's people and system. ── */
 const HERO_FLOW: ReadonlyArray<{ n: string; t: string; b: string; who: 'agent' | 'person' }> = [
-  { n: '01', t: 'Sent.', b: 'The invoice goes out from your accounting system, with a pay link if you take card or ACH.', who: 'agent' },
+  { n: '01', t: 'Sent.', b: 'The invoice goes out from your accounting system, with a pay link if you take card or ACH (a bank-to-bank transfer).', who: 'agent' },
   { n: '02', t: 'Reminded.', b: 'Before and after the due date, in your words, and never to a customer with an open dispute.', who: 'agent' },
   { n: '03', t: 'Matched.', b: 'The payment and its remittance are matched to the invoices they pay.', who: 'agent' },
   { n: '04', t: 'Flagged.', b: 'Short payments, deductions and disputes are gathered into one case with the papers attached.', who: 'agent' },
@@ -560,14 +559,14 @@ const JOBS: ReadonlyArray<Job> = [
       'Sends it from your accounting system, so reminders and tracking work afterwards',
       "Uses the customer's AP mailbox or portal, not the buyer who placed the order",
     ],
-    note: 'Intuit says QuickBooks Online sends automatic reminders only for invoices you have already emailed from QuickBooks. An invoice exported as a PDF and sent by hand never gets a reminder.',
+    note: 'An invoice exported as a PDF and sent by hand usually falls outside the built-in reminder schedule. The QuickBooks card below gives Intuit\'s exact rule.',
     sources: ['qbReminders'],
     span: 'lg:col-span-7',
   },
   {
     n: '02',
     title: 'Reminders and dunning: firm, polite, and stopped when they should be',
-    body: 'Dunning is the sequence of reminders that grows firmer as an invoice gets later. Most systems have it. The trouble is when it fires at the wrong customer.',
+    body: 'Automated collections starts with payment reminders that grow firmer as an invoice gets later. Most systems send them. The trouble starts when one fires at the wrong customer.',
     items: [
       'Sends reminders before and after the due date, by level, in wording you approve',
       'Skips any customer with an open dispute or a payment already in the bank',
@@ -588,7 +587,7 @@ const JOBS: ReadonlyArray<Job> = [
       'Applies one payment across several invoices, or leaves it unapplied as a credit when nothing fits',
       'Shows a person every match it is unsure of, with the bank line and the remittance side by side',
     ],
-    note: "Microsoft's matching order in Business Central is name and bank details first, then document number, then amount, with a Low, Medium or High confidence on each. Stripe matches bank transfers to invoices by reference code and amount, and leaves what it cannot match in the customer balance.",
+    note: 'Business Central and Stripe both match by rules and leave a remainder for a person. The worked example below the six cards shows where an agent picks up.',
     sources: ['bcRules', 'stripeBankTransfer'],
     span: 'lg:col-span-5',
   },
@@ -608,7 +607,7 @@ const JOBS: ReadonlyArray<Job> = [
   },
   {
     n: '05',
-    title: 'Credit holds: flagged, not imposed',
+    title: 'Credit holds: the agent flags, your credit lead decides',
     body: 'A credit hold stops new orders for a customer who is over their limit or too far behind.',
     items: [
       'Watches each balance against the limit and the age of the oldest open invoice',
@@ -660,7 +659,7 @@ const SYSTEMS: ReadonlyArray<{
   {
     name: 'Oracle NetSuite',
     kind: 'From Oracle · Dunning Letters SuiteApp',
-    says: 'Oracle says the Dunning Letters SuiteApp sets up an automated dunning process and sends reminder letters before payment is due. Procedures set the levels and timing, by customer, invoice or invoice group. Letters are not sent when dunning is paused, the minimum interval is not met or the level has not changed. Procedures can be created only in the user interface, not by CSV, SOAP or SuiteScript.',
+    says: 'Oracle says the Dunning Letters SuiteApp sets up an automated dunning process and sends reminder letters before payment is due. Procedures set the levels and timing, by customer, invoice or invoice group. Letters are not sent when dunning is paused, the minimum interval is not met or the level has not changed. You have to set procedures up by hand on NetSuite\'s screens. They cannot be imported from a file or created by code.',
     sources: ['nsDunning', 'nsDunningAuto', 'nsDunningProcs'],
     span: 'lg:col-span-5',
   },
@@ -681,7 +680,7 @@ const SYSTEMS: ReadonlyArray<{
   {
     name: 'Odoo',
     kind: 'Built in · follow-up levels',
-    says: "Odoo's documentation describes follow-up levels by days overdue that send an email, a letter or a text message, and an Automatic option for the reminder. Odoo notes that letters and text messages need In-App Purchase credits. On the bank side, Odoo's reconciliation models pre-select matching entries for each bank transaction.",
+    says: "Odoo's documentation describes follow-up levels by days overdue that send an email, a letter or a text message, and an Automatic option for the reminder. Odoo notes that letters and text messages need In-App Purchase credits, which are paid credits bought inside Odoo. On the bank side, Odoo's reconciliation models pre-select matching entries for each bank transaction.",
     sources: ['odooFollowUp', 'odooRecon'],
     span: 'lg:col-span-6',
   },
@@ -743,7 +742,7 @@ const SIZE_ROWS: ReadonlyArray<ComparisonRow> = [
     values: [
       'One QuickBooks Online or Xero file, a few people doing AR part time',
       'An ERP such as NetSuite, Business Central, SAP Business One or Odoo, and an AR lead',
-      'Several entities or ledgers, lockbox files from banks, customer AP portals',
+      'Several entities or ledgers, lockbox files (the bank\'s list of checks it received for you), customer AP portals',
     ],
   },
   {
@@ -825,7 +824,7 @@ const COMPARE_ROWS: ReadonlyArray<ComparisonRow> = [
     values: [
       'Inside your subscription, or as a paid plan or add-on',
       'A monthly subscription, often per user, or a share of each paid invoice',
-      'A fixed price for the build and a fixed price for ongoing support, both quoted in writing',
+      'A fixed price for the build, quoted in writing. Support is optional, each change quoted and approved, no monthly minimum',
     ],
   },
   {
@@ -856,7 +855,7 @@ const RED_FLAGS: ReadonlyArray<{ t: string; b: string; sources: ReadonlyArray<Sr
   },
   {
     t: 'Invoices sent outside the system',
-    b: 'Intuit says QuickBooks sends automatic reminders only for invoices emailed from QuickBooks. A PDF sent by hand is invisible to the reminder schedule.',
+    b: 'A PDF sent by hand is invisible to the QuickBooks reminder schedule, as the QuickBooks card above explains. Ask how your invoices leave the system today.',
     sources: ['qbReminders'],
   },
   {
@@ -866,7 +865,7 @@ const RED_FLAGS: ReadonlyArray<{ t: string; b: string; sources: ReadonlyArray<Sr
   },
   {
     t: 'Setup that has to be rebuilt by hand',
-    b: 'Oracle says NetSuite dunning procedures can be created only in the user interface, not by CSV, SOAP or SuiteScript. Plan the levels on paper before anyone clicks.',
+    b: 'NetSuite dunning procedures have to be set up by hand on its screens, as the NetSuite card above explains. Plan the levels on paper before anyone clicks.',
     sources: ['nsDunningProcs'],
   },
   {
@@ -876,7 +875,7 @@ const RED_FLAGS: ReadonlyArray<{ t: string; b: string; sources: ReadonlyArray<Sr
   },
   {
     t: 'Collections rules copied from consumer debt',
-    b: 'Regulation F and the FDCPA are written for consumer debt. A vendor selling "compliant AI collections" for business invoices may be solving the wrong problem, and one selling it for consumer debt needs your counsel in the room.',
+    b: 'Regulation F and the FDCPA are written for consumer debt, as the note on collection rules explains. A vendor selling "compliant AI collections" for business invoices may be solving the wrong problem.',
     sources: ['fdcpaDef', 'regF'],
   },
   {
@@ -886,8 +885,8 @@ const RED_FLAGS: ReadonlyArray<{ t: string; b: string; sources: ReadonlyArray<Sr
   },
 ];
 
-/* ── Our experience, stated plainly. No client is named on this page and no
-   result is claimed. ── */
+/* ── Our experience, stated plainly. One client is named (Sow Easy, from the
+   permitted list) with its true status. No result is claimed. ── */
 const EXPERIENCE: ReadonlyArray<{ t: string; kind: string; what: string; href: string; cta: string; span: string }> = [
   {
     t: 'What we have worked on',
@@ -900,23 +899,23 @@ const EXPERIENCE: ReadonlyArray<{ t: string; kind: string; what: string; href: s
   {
     t: 'What you see before you sign',
     kind: 'A demo on your own data',
-    what: 'Before a contract, we show working software on your own data. For accounts receivable that means payments and remittances your team has already applied, run through a first version so you can compare its matches with theirs.',
+    what: 'For accounts receivable, the demo is a first version run on payments and remittances your team has already applied. You compare its matches with theirs, line by line.',
     href: '/contact',
     cta: 'Ask for a demo on your payments',
     span: 'lg:col-span-5',
   },
   {
     t: 'Proof you can check',
-    kind: 'Public case studies',
-    what: 'Client projects with public case studies are on our case studies page.',
-    href: '/case-studies',
-    cta: 'See all case studies',
+    kind: 'Sow Easy · WooCommerce and Odoo',
+    what: "Sow Easy is a B2B distributor that runs stock, pricing and product data in Odoo. We are building its WooCommerce trade store with Odoo as the source of stock, prices and SKUs. The store and the Odoo link are being tested on a staging site, and launch is still ahead. It is ecommerce and ERP work, not an AR build.",
+    href: '/case-studies/sow-easy-distributor-portal',
+    cta: 'Read the Sow Easy case study',
     span: 'lg:col-span-5',
   },
   {
     t: 'Who looks after it',
-    kind: 'Managed after launch',
-    what: 'FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call. After launch we keep managing the servers, the AI models, the API connections and the upkeep, so your finance team does not have to.',
+    kind: 'Support you choose',
+    what: 'Each build phase is a fixed price, quoted in writing after a short scoping call. Support after launch is optional. Each change is quoted and approved per request, and there is no monthly minimum.',
     href: '/services/ai-agent-monitoring',
     cta: 'See monitoring and support',
     span: 'lg:col-span-7',
@@ -1121,7 +1120,8 @@ export default function AccountsReceivableAutomationPage() {
                 </h1>
 
                 <p className={`${styles.heroLead} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}>
-                  FactoryJet is a services company.
+                  FactoryJet is a services company that designs, builds and supports an AI agent for your accounts
+                  receivable, on the books you already keep.
                 </p>
 
                 <div className={`${styles.heroForm} mt-6`}>
@@ -1135,12 +1135,12 @@ export default function AccountsReceivableAutomationPage() {
                 </div>
 
                 <p className={`${styles.heroDetails} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}>
-                  We design, build and support an AI agent that sends your invoices and payment reminders, matches
+                  The agent sends your invoices and payment reminders, matches
                   each customer payment to the invoices it pays, gathers the papers for disputes and short payments,
                   and flags accounts for a credit hold. It works on QuickBooks, Xero, NetSuite, Business Central, SAP
                   Business One or Odoo, and on Stripe and your bank feed. Your team keeps every credit decision,
-                  dispute and write-off. You own what we build, and you get a fixed quote in writing before work
-                  starts.
+                  dispute and write-off. You own what we build, and each phase has a fixed price, quoted in writing
+                  before work starts.
                 </p>
 
                 <div className="mt-5">
@@ -1224,6 +1224,13 @@ export default function AccountsReceivableAutomationPage() {
                 hours usually go somewhere else: the payment with no invoice number, the remittance in a PDF, the
                 customer who paid short with no note. That is where a built agent earns its place.
               </p>
+              <p className="mt-4 font-fj-mono text-xs leading-relaxed text-fj-neutral-600">
+                Written by{' '}
+                <Link href="/author/bhavesh-barot" className="underline underline-offset-4">
+                  Bhavesh Barot
+                </Link>
+                , Founder of FactoryJet (founded 2014). Updated {PAGE_MODIFIED}.
+              </p>
             </div>
           </div>
         </section>
@@ -1232,8 +1239,8 @@ export default function AccountsReceivableAutomationPage() {
         <section className="border-b border-fj-neutral-200 bg-fj-cream py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p className="fj-eyebrow">Six jobs</p>
-            <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-              Six jobs an AR agent does, from invoice to cash.
+            <h2 className="mt-4 font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink sm:text-4xl">
+              What an AI accounts receivable agent does, from invoice to cash.
             </h2>
             <p className="mt-4 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
               Each card says what the agent does and what is worth knowing about the systems around it. A remittance
@@ -1245,7 +1252,7 @@ export default function AccountsReceivableAutomationPage() {
               .
             </p>
 
-            <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
+            <div className="mt-12 grid grid-cols-1 items-start gap-6 lg:grid-cols-12">
               {JOBS.map((s) => (
                 <div key={s.n} className={`rounded-2xl border border-fj-neutral-200 bg-white p-7 ${s.span}`}>
                   <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-fj-cream font-fj-mono text-sm font-bold text-[#B23E13]">
@@ -1268,6 +1275,42 @@ export default function AccountsReceivableAutomationPage() {
                 </div>
               ))}
             </div>
+
+            <div className="mt-10 grid grid-cols-1 gap-8 rounded-2xl border-2 border-[#F05A28]/25 bg-white p-6 sm:p-8 lg:grid-cols-12">
+              <div className="lg:col-span-5">
+                <div className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">
+                  Worked example &middot; invented figures
+                </div>
+                <h3 className="mt-3 font-fj-display text-xl font-semibold text-fj-ink">
+                  Cash application on one payment that covers three invoices and comes up short.
+                </h3>
+                <p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">
+                  A customer sends one ACH payment of $9,450 and emails a PDF remittance listing invoices 1041 for
+                  $4,200, 1042 for $3,150 and 1047 for $2,400. Those add up to $9,750, so the payment is $300 short.
+                  The figures are made up to show the method. They are not from a client.
+                </p>
+              </div>
+              <ol className="grid gap-3 lg:col-span-7">
+                <li className="rounded-xl border border-fj-neutral-200 bg-fj-cream px-5 py-4 font-fj-body text-[15px] leading-relaxed text-fj-ink">
+                  <span className="font-semibold">1. Invoice number first.</span> All three numbers on the remittance
+                  are open in the ledger, so the agent proposes those three.
+                </li>
+                <li className="rounded-xl border border-fj-neutral-200 bg-fj-cream px-5 py-4 font-fj-body text-[15px] leading-relaxed text-fj-ink">
+                  <span className="font-semibold">2. Customer and amount next.</span> The sender name on the bank line
+                  matches the customer record, which confirms who paid.
+                </li>
+                <li className="rounded-xl border border-fj-neutral-200 bg-fj-cream px-5 py-4 font-fj-body text-[15px] leading-relaxed text-fj-ink">
+                  <span className="font-semibold">3. The gap.</span> $9,750 minus $9,450 leaves $300. The remittance
+                  says &ldquo;damaged carton.&rdquo; The agent proposes $4,200 and $3,150 in full and $2,100 on 1047,
+                  leaves $300 open on 1047, and opens a deduction case with the delivery proof attached.
+                </li>
+                <li className="rounded-xl border border-[#14110F] bg-white px-5 py-4 font-fj-body text-[15px] leading-relaxed text-fj-ink">
+                  <span className="font-semibold">4. A person decides.</span> Your AR lead approves the match and
+                  decides whether the $300 becomes a credit or goes back to the customer. Reminders on 1047 pause
+                  while the case is open.
+                </li>
+              </ol>
+            </div>
           </div>
         </section>
 
@@ -1275,13 +1318,14 @@ export default function AccountsReceivableAutomationPage() {
         <section className="border-b border-fj-neutral-200 bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p className="fj-eyebrow">Before anyone builds</p>
-            <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
+            <h2 className="mt-4 font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink sm:text-4xl">
               What QuickBooks, Xero, NetSuite, Business Central, SAP Business One and Odoo already do.
             </h2>
             <p className="mt-4 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
               Each card restates the maker&rsquo;s own pages, as read on {CHECKED_ON}. If one of these already does
               your job, you do not need a build, and we will tell you so. Where an agent is worth building, it
-              connects through the same API the card names. For the ERP side in more depth, see{' '}
+              connects through the system&rsquo;s API, the documented connection other software uses to read and
+              write data. Each card names it. For the ERP side in more depth, see{' '}
               <Link href="/services/erp-ai-agents" className="font-semibold text-fj-ink underline underline-offset-4">
                 AI agents for ERP systems
               </Link>
@@ -1343,6 +1387,7 @@ export default function AccountsReceivableAutomationPage() {
           headline="Tell us where your payments get stuck. We will say if your system already handles it."
           sub="Send your accounting system, how customers pay you and how remittances arrive. We reply with what the built-in tools cover, which AR product we would look at in your place, what we would build, and a fixed quote if there is work for us."
           label="Scope my AR agent"
+          note="Founder replies within 24 hours."
         />
 
         {/* 6. WHAT STAYS WITH A PERSON + COLLECTION RULES */}
@@ -1351,11 +1396,11 @@ export default function AccountsReceivableAutomationPage() {
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
               <div className="lg:col-span-5">
                 <p className="fj-eyebrow">People decide</p>
-                <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-                  Five decisions that stay with your people in every build.
+                <h2 className="mt-4 font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink sm:text-4xl">
+                  What AI collections automation should never decide.
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  Collecting money touches your best customers. The agent does the reading, matching and drafting,
+                  Five decisions stay with your people in every build. Collecting money touches your best customers. The agent does the reading, matching and drafting,
                   and it logs every email and every match. Anything that changes what a customer owes, or how you
                   treat them, goes to a named person.
                 </p>
@@ -1393,7 +1438,7 @@ export default function AccountsReceivableAutomationPage() {
           lead="Sizes are described by setup, not by a revenue line, because a ten-person distributor can have more remittances than a hundred-person agency."
           columns={SIZE_COLUMNS}
           rows={SIZE_ROWS}
-          footer="Our own guidance from scoping AR and ERP work. Your scoping call starts from how your payments actually arrive."
+          footer="Our own guidance from scoping AR and ERP work. Your scoping call starts from how your payments arrive today."
           scrollRegionLabel="Accounts receivable automation options by company size"
         />
 
@@ -1401,7 +1446,7 @@ export default function AccountsReceivableAutomationPage() {
         <section className="border-b border-fj-neutral-200 bg-fj-cream py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p className="fj-eyebrow">Red flags</p>
-            <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
+            <h2 className="mt-4 font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink sm:text-4xl">
               Eight red flags when you buy or build AR automation.
             </h2>
             <p className="mt-4 max-w-2xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
@@ -1424,12 +1469,12 @@ export default function AccountsReceivableAutomationPage() {
         <section className="border-b border-fj-neutral-200 bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p className="fj-eyebrow">Our experience</p>
-            <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-              What we have done on accounting systems, stated plainly.
+            <h2 className="mt-4 font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink sm:text-4xl">
+              Our accounting and ERP experience, stated plainly.
             </h2>
             <p className="mt-4 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
-              FactoryJet was founded in 2014 and has served more than 500 businesses. You see working software on
-              your own payments before we ask you to sign anything.
+              FactoryJet was founded in 2014 and has served more than 500 businesses. Business Central is a system
+              we connect to through Microsoft&rsquo;s documented API. It is not on our list of past work.
             </p>
             <ul className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-12">
               {EXPERIENCE.map((w) => (
@@ -1460,8 +1505,8 @@ export default function AccountsReceivableAutomationPage() {
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
               <div className="lg:col-span-4">
                 <p className="fj-eyebrow">Who this is for</p>
-                <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-                  Built for teams that match payments to invoices by hand today.
+                <h2 className="mt-4 font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink sm:text-4xl">
+                  Which businesses need accounts receivable automation?
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   The trade changes the paperwork. The job is the same in each one. Money arrives, someone works out
@@ -1496,9 +1541,9 @@ export default function AccountsReceivableAutomationPage() {
         <section className="bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-4">
+              <div className="lg:sticky lg:top-24 lg:col-span-4 lg:self-start">
                 <p className="fj-eyebrow">Process</p>
-                <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
+                <h2 className="mt-4 font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink sm:text-4xl">
                   How we design, build and support an AR agent.
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
@@ -1545,10 +1590,10 @@ export default function AccountsReceivableAutomationPage() {
         <section id="ar-products" className="border-t border-fj-neutral-200 bg-fj-cream py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-4">
+              <div className="lg:sticky lg:top-24 lg:col-span-4 lg:self-start">
                 <p className="fj-eyebrow">Off-the-shelf options</p>
-                <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-                  Eight AR automation products a US search shows.
+                <h2 className="mt-4 font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink sm:text-4xl">
+                  AR automation software: eight products a US search shows.
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   We wrote this list and we sell none of these. Each one came up in US Google results for accounts
@@ -1557,7 +1602,8 @@ export default function AccountsReceivableAutomationPage() {
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   One of the eight publishes a price, two quote on request and five gave none on the page we read. We
-                  have not tested these products, and the order is not a ranking.
+                  have not tested these products, and the order is not a ranking. Other tools buyers often compare,
+                  such as Esker, Tesorio, Chaser and Quadient, were not read for this list.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink">
                   Where a built agent differs is fit. It follows the rules you wrote across the systems you already
@@ -1589,7 +1635,7 @@ export default function AccountsReceivableAutomationPage() {
         <section className="border-y border-fj-neutral-200 bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p className="fj-eyebrow">Next to this page</p>
-            <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
+            <h2 className="mt-4 font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink sm:text-4xl">
               Related AI agent services and guides.
             </h2>
             <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12">
@@ -1614,7 +1660,7 @@ export default function AccountsReceivableAutomationPage() {
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
               <div className="lg:col-span-4">
                 <p className="fj-eyebrow">Method</p>
-                <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
+                <h2 className="mt-4 font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink sm:text-4xl">
                   Sources, checked on {CHECKED_ON}.
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
@@ -1625,7 +1671,7 @@ export default function AccountsReceivableAutomationPage() {
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   The FAQ questions are the ones Google showed for 12 accounts receivable searches in the US that day,
-                  pulled through DataForSEO. Search figures are US monthly averages from DataForSEO.
+                  pulled through DataForSEO.
                 </p>
                 <p className="mt-6 font-fj-mono text-xs leading-relaxed text-fj-neutral-600">
                   Reviewed and updated {PAGE_MODIFIED} &middot;{' '}

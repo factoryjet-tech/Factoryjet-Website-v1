@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Link from 'next/link';
 import { Megaphone, Search, ClipboardList, LayoutTemplate, ShieldCheck, Workflow, Check } from 'lucide-react';
 
-import { usServiceAlternates } from '@/data/hreflangMap';
+import { twinAlternates } from '@/data/hreflangMap';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: URL,
-    languages: usServiceAlternates['amazon-agency'],
+    languages: twinAlternates['amazon-agency'],
   },
   robots: {
     index: true,

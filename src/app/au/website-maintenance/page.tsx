@@ -12,7 +12,7 @@ import { StagingRelease, CarePath } from './CareVisuals';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import './page.css';
-import { websiteMaintenanceAlternates } from '@/data/hreflangMap';
+import { twinAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/au/website-maintenance';
 const UPDATED = '2026-10-21';
@@ -339,7 +339,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: websiteMaintenanceAlternates },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['website-maintenance'] },
   openGraph: {
     title: TITLE,
     description:

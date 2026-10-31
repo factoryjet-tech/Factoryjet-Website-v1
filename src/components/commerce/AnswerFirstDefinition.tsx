@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Sparkles } from 'lucide-react';
+import { BookOpen, CheckCircle2 } from 'lucide-react';
 
 interface AnswerFirstDefinitionProps {
   term: string;
@@ -60,16 +60,7 @@ export default function AnswerFirstDefinition({
           }}
         >
           <BookOpen size={12} />
-          Technical Definition.
-        </span>
-        <span
-          style={{
-            fontFamily: 'var(--pp-mono, monospace)',
-            fontSize: '10.5px',
-            color: 'var(--pp-muted, #78716C)',
-          }}
-        >
-          AI Citation Standard.
+          Definition
         </span>
       </div>
 
@@ -122,8 +113,8 @@ export default function AnswerFirstDefinition({
               gap: '6px',
             }}
           >
-            <Sparkles size={13} color="#F05A28" />
-            Key Architecture Takeaways.
+            <CheckCircle2 size={13} color="#B23E13" />
+            Key takeaways
           </div>
           <ul style={{ margin: 0, paddingLeft: '18px', display: 'grid', gap: '6px' }}>
             {keyTakeaways.map((takeaway, idx) => (
@@ -154,8 +145,7 @@ export default function AnswerFirstDefinition({
           paddingTop: '10px',
         }}
       >
-        <span>Reference: {citationSource}.</span>
-        <span>FactoryJet Verified Architecture.</span>
+        <span>Source: {citationSource}.</span>
       </div>
     </div>
   );

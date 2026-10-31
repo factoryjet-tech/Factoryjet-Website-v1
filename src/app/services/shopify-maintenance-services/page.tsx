@@ -11,6 +11,7 @@ import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import JsonLd from '@/components/JsonLd';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_URL = 'https://factoryjet.com/services/shopify-maintenance-services';
@@ -212,10 +213,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/shopify-maintenance-services',
-    languages: {
-      'en-US': 'https://factoryjet.com/services/shopify-maintenance-services',
-      'x-default': 'https://factoryjet.com/services/shopify-maintenance-services',
-    },
+    languages: twinAlternates['shopify-maintenance-services'],
   },
   robots: {
     index: true,

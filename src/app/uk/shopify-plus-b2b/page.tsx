@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/shopify-plus-b2b, built 2026-10-29.
@@ -29,12 +30,13 @@ import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/shopify-plus-b2b';
 const PUBLISHED = '2026-10-29';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
 const READ_ON = '29 October 2026';
-const TITLE = 'Shopify Plus B2B Agency UK | Trade Accounts, Net Terms | FactoryJet';
+const ALT_READ_ON = '31 October 2026';
+const TITLE = 'Shopify Plus B2B Agency UK | Net Terms, VAT | FactoryJet';
 const H1 = 'Shopify Plus B2B for UK Wholesalers: Trade Accounts, Price Lists, Net Terms and VAT Set Up Properly';
 const DESCRIPTION =
-  'Shopify B2B for UK wholesalers and brands: trade accounts, price lists, net terms, VAT numbers and ERP sync with Xero, Sage or Business Central. Draft first.';
+  'Shopify B2B for UK wholesalers and brands: trade accounts, price lists, net terms, VAT numbers and a link to your accounts system or ERP. Draft first.';
 
 /* Design tokens, copied by value from ../ai-agents/ai-agents.css so inline
    styles stay on-system without CSS custom property references in this file. */
@@ -106,11 +108,19 @@ const SRC_MTD = 'https://www.gov.uk/guidance/making-tax-digital-for-vat';
 // months of the time of supply; official or commercial evidence; Northern
 // Ireland to EU follows separate rules.
 const SRC_EXPORT = 'https://www.gov.uk/guidance/vat-on-goods-exported-from-the-uk-notice-703';
+// SparkLayer home page, read 2026-10-31: "builds proper wholesale into a
+// brand's existing online store"; works with Shopify, BigCommerce,
+// WooCommerce, Adobe Commerce and Wix; free Basic plan (Shopify only) has up
+// to 3 price lists, paid plans unlimited price lists.
+const SRC_SPARKLAYER = 'https://www.sparklayer.io/';
+// B2B Wave home page, read 2026-10-31: its own B2B storefront and order
+// management; footer lists Shopify, Xero and QuickBooks Online integrations.
+const SRC_B2BWAVE = 'https://www.b2bwave.com/';
 
 /* House terms, approved wording (2026-10-16), worded for UK trade stores. */
 const HOUSE_TERMS = [
   { t: 'A draft of your trade store before you sign', d: 'We build a working draft on Shopify with your own products, one real trade customer and one of your price lists, so your sales team can click through it before anything is agreed.' },
-  { t: 'Fixed price per phase', d: 'Each phase is scoped, priced and signed on its own, in writing. Nothing is billed by the hour unless you ask for a change later.' },
+  { t: 'Fixed price per phase', d: 'Each phase is scoped and given a fixed price, quoted in writing, before it starts. Changes are quoted and approved per request.' },
   { t: 'You own the code', d: 'The theme, any Shopify Functions and the integration code sit in your own repository from day one. Shopify and app fees are billed to your own accounts, at cost, with no markup.' },
   { t: 'Defect cover inside the build price', d: 'Defects found after launch are fixed inside the build price, for a cover period we agree before work starts.' },
   { t: 'Support only if you want it', d: 'After that, support is optional. Each change is quoted and approved before we do it.' },
@@ -129,12 +139,16 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // ── Shopify B2B basics ──
   { category: 'basics', question: 'What is Shopify B2B?',
     answer: 'Shopify B2B is the set of trade-selling tools built into Shopify itself. You set each trade customer up as a company, add its sites as locations, give its staff logins, and attach catalogues that hold that customer’s products and prices. Payment terms, purchase order numbers and quick reorders sit on top. Retail and trade can run from the same admin, product data and stock.' },
+  { category: 'basics', question: 'Is Shopify a B2B or B2C platform?',
+    answer: 'Both. Shopify started as a B2C platform, meaning it sells to consumers, and B2B is now built into the same admin. Shopify’s help centre lists B2B on the Basic, Grow, Advanced and Plus plans. One store can show retail prices to the public and trade prices and terms to logged-in company buyers, from one set of products and one stock pool.' },
+  { category: 'basics', question: 'How do you set up B2B on Shopify?',
+    answer: 'In Shopify’s own order: create each trade customer as a company, add its sites as locations, and add the buyers who may order. Then build catalogues with that customer’s products and prices, and set payment terms and VAT numbers on each location. For a handful of accounts you can do this by hand. For hundreds, we load them in bulk and check every price against your current list.' },
   { category: 'basics', question: 'Can you do wholesale on Shopify?',
     answer: 'Yes. Shopify’s help centre says B2B is available on the Basic, Grow, Advanced and Shopify Plus plans. Starter and Retail are not on that list. What changes between plans is depth: how many catalogues you can run, whether a catalogue can be tied to one company, and whether you can take deposits and part payments. For a UK wholesaler with dozens of negotiated price lists, those limits decide the plan.' },
   { category: 'basics', question: 'Do I need Shopify Plus for B2B?',
     answer: 'Not always. On Basic, Grow and Advanced you get companies, locations, net terms, quantity rules and price breaks, but only three active B2B catalogues and no catalogue assigned directly to one company. Plus removes the catalogue cap and adds direct company catalogues, deposits, partial payments and payment requests per fulfilment. If each trade account has its own negotiated prices, you will usually need Plus.' },
   { category: 'basics', question: 'Is Shopify B2B worth it?',
-    answer: 'It is worth it when your trade orders still arrive by email, phone or spreadsheet and someone retypes them. Moving those buyers to self-serve ordering with their own prices and terms saves admin and errors on every order. It is less useful if you have five trade accounts and nothing changes week to week. We tell you which side of that line you sit on during scoping.' },
+    answer: 'It is worth it when your trade orders still arrive by email, phone or spreadsheet and someone retypes them. Moving those buyers to a self-serve B2B portal with their own prices and terms saves admin and errors on every order. It is less useful if you have five trade accounts and nothing changes week to week. We tell you which side of that line you sit on during scoping.' },
   { category: 'basics', question: 'Can retail and trade customers share one Shopify store?',
     answer: 'Yes. A blended store shows retail prices to the public and trade prices, terms and catalogues to logged-in company buyers, with one stock pool and one set of product data. Some brands prefer a separate trade store, for a different look, a different catalogue or stricter access. Shopify Plus supports nine expansion stores, and one of them can host a separate trade site.' },
   { category: 'basics', question: 'What is the downside of Shopify for B2B?',
@@ -150,15 +164,15 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'money', question: 'How do VAT numbers work for trade accounts on Shopify?',
     answer: 'Each company location can hold a tax registration number. Shopify’s help centre says that for stores using Shopify Tax, the field becomes VAT number for locations with UK or EU shipping addresses, and Shopify Tax validates the number once it is entered. Tax collection and exemptions are then managed per location. We map which of your accounts need which treatment and confirm it with your accountant.' },
   { category: 'money', question: 'Do our trade buyers need a full VAT invoice?',
-    answer: 'Usually, yes. HMRC’s VAT Notice 700/21 says a VAT-registered business must issue a VAT invoice when it makes standard or reduced rate supplies to another VAT-registered person, normally within 30 days. A full invoice carries set details, including your VAT number, unit prices and the VAT total in sterling. A simplified invoice is allowed only at £250 or less including VAT. We decide which system issues it.' },
+    answer: 'Usually, yes. Take a VAT-registered salon that orders £600 of stock including VAT. That is over HMRC’s £250 limit for a simplified invoice, so it needs a full VAT invoice with your VAT number, unit prices and the VAT total. A £180 top-up order could take a simplified one. Many wholesalers simply issue a full invoice on every trade order from their accounts system, and we set Shopify up to pass each order there.' },
   { category: 'money', question: 'Does HMRC check Shopify sales?',
     answer: 'HMRC checks your VAT returns and records, not Shopify as such. GOV.UK says all VAT-registered businesses should now be signed up for Making Tax Digital for VAT. In plain terms, your VAT records should be digital. For a trade store, that means every Shopify order, refund and credit note should reach Xero, Sage or your ERP without being retyped. That link is usually part of our build.' },
   { category: 'money', question: 'Can we sell to trade buyers in the EU from a UK Shopify store?',
-    answer: 'Yes, and the VAT side needs planning. HMRC Notice 703 says goods exported from the UK can be zero-rated only if they leave, and you hold official or commercial evidence of export, within three months of the supply. Shopify can show EU accounts their own catalogue. Northern Ireland to EU movements follow separate rules. We set up the store; your accountant confirms the treatment.' },
+    answer: 'Yes. Shopify can give EU trade accounts their own catalogue and prices in euros. The VAT question is evidence: to zero-rate the sale under HMRC Notice 703, you need proof the goods left the UK, such as the courier’s export record. So we make sure each EU order keeps its tracking and export paperwork linked to the order. Northern Ireland follows separate rules, and your accountant confirms the treatment.' },
 
   // ── ERP, accounting and channels ──
   { category: 'systems', question: 'Can you connect Shopify B2B to Xero, Sage or Business Central?',
-    answer: 'Yes. We connect Shopify to Xero, QuickBooks UK, Sage 50, Sage 200, Sage Intacct, Dynamics 365 Business Central, NetSuite and Odoo, and to stock tools such as Brightpearl, Linnworks and Mintsoft. The first step is deciding which system owns each record: trade prices, stock, credit limits and invoices. The link then moves each record one way, from its owner, so nobody keeps two copies in step.' },
+    answer: 'Yes, where the system has an API, which is the door other software uses to read and write its data. Our own ERP integration work includes Odoo, NetSuite, SAP Business One and ERPNext. For Xero, Sage or Business Central, we check during scoping which connection your version offers. The first step is deciding which system owns each record: trade prices, stock, credit limits and invoices. The link then moves each record one way, from its owner.' },
   { category: 'systems', question: 'Which system should own our trade prices?',
     answer: 'Whichever one your sales and finance teams already trust. For most UK wholesalers that is the ERP or accounts system, because invoices and margin reports come from there. Shopify then receives the price lists and shows them in each company’s catalogue. If prices are kept in spreadsheets today, we clean them up once, during the project, and load them into the system that will own them.' },
   { category: 'systems', question: 'Can our sales reps place orders for trade customers?',
@@ -172,11 +186,11 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'project', question: 'How much does Shopify B2B cost?',
     answer: 'Two parts. Shopify’s UK pricing page lists Plus from £1,800 a month, and Shopify says larger businesses may pay a variable platform fee that differs for B2B and D2C. The page does not say whether that figure includes VAT, so check your invoice. The build depends on accounts, price lists, systems and custom rules. FactoryJet quotes a fixed price in writing after a short scoping call.' },
   { category: 'project', question: 'What should our brief or RFP include?',
-    answer: 'Five things help us quote accurately: how many trade accounts you have and how many distinct price lists, the payment terms you offer, the systems that hold prices, stock and invoices, the channels and couriers you use, and any rules that are hard today, such as pallet freight or approvals. A sample price list and a recent trade order export help most. Send what you have, even half-finished.' },
+    answer: 'Six things help us quote accurately. How many trade accounts you have and how many sites each has. How many distinct price lists you keep. The payment terms you offer. The systems that hold prices, stock and invoices. The channels and couriers you use. Any rules that are hard today, such as pallet freight or approvals. A sample price list and a recent trade order export help most.' },
   { category: 'project', question: 'Can you move us off a wholesale app or tag-based set-up?',
     answer: 'Yes. Many UK stores run trade through customer tags and a pricing app. We export the accounts, rebuild them as companies with locations and buyers, turn tag-based prices into catalogues, and test every account’s prices against your current figures before switching. We plan the switch for a quiet trading day with a written rollback step.' },
   { category: 'project', question: 'Will we see something before we sign?',
-    answer: 'Yes. Before you commit, we build a working draft on Shopify with your own products, one real trade account and one of your price lists. Your sales team can log in as that buyer, see the prices and terms, and place a test order. It is the quickest way to find out whether native B2B fits the way your customers buy, before anyone signs a contract.' },
+    answer: 'Yes, a live demo on your own data. Before you commit, we build a working draft on Shopify with your own products, one real trade account and one of your price lists. Your sales team can log in as that buyer, see the prices and terms, and place a test order. It is the quickest way to find out whether native B2B fits the way your customers buy, before anyone signs a contract.' },
   { category: 'project', question: 'What happens after launch?',
     answer: 'Defects found after launch are fixed inside the build price for a cover period we agree before work starts. You own the code, the repository and the Shopify accounts. After that, support is optional: each change is quoted and approved before we do it, and there is no monthly minimum. You can come back for a quoted change when you add a channel, a system or a price structure.' },
 ];
@@ -195,7 +209,7 @@ const jsonLd = {
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
       url: CANONICAL,
       description:
-        'Shopify B2B and Shopify Plus B2B for UK wholesalers and brands: trade accounts as companies, price lists, net terms, VAT numbers and invoices, and links to Xero, Sage, Business Central, NetSuite, Odoo and stock tools.',
+        'Shopify B2B and Shopify Plus B2B for UK wholesalers and brands: trade accounts as companies, price lists, net terms, VAT numbers and invoices, and links to UK accounts systems and ERPs.',
     },
     {
       '@type': 'BreadcrumbList',
@@ -246,7 +260,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['shopify-plus-b2b'] },
   openGraph: {
     title: TITLE,
     description:
@@ -312,7 +326,7 @@ export default function ShopifyPlusB2BUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses since 2014</span></div>
-                  <div className="upd">Last updated<br />29 October 2026</div>
+                  <div className="upd">Last updated<br />31 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -321,7 +335,7 @@ export default function ShopifyPlusB2BUKPage() {
                     source="uk_shopify_plus_b2b_hero"
                     service="Shopify Plus B2B"
                     submitLabel="See a draft of my trade store"
-                    trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+                    trustText="Working software on your own data before you sign. Bhavesh replies within 24 hours."
                   />
                 </div>
               </div>
@@ -369,16 +383,21 @@ export default function ShopifyPlusB2BUKPage() {
                 Shopify Plus B2B is Shopify’s built-in trade selling, on its top plan. Each trade customer becomes a
                 company with locations and buyers, sees its own catalogue and prices, and can pay on terms from net 7
                 to net 90. Plus adds unlimited catalogues, catalogues tied to one company, deposits and part payments.
-                Basic, Grow and Advanced carry a lighter version with three catalogues.
+                Basic, Grow and Advanced carry a lighter version with three catalogues. FactoryJet is a Shopify B2B
+                agency for UK wholesalers and brands: we set up trade accounts, price lists, net terms and VAT numbers
+                on Shopify, and link the store to your accounts system or ERP.
               </p>
             </div>
             <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Four terms we use a lot</span>
+              <span className="lab">Terms we use a lot</span>
               <p>
                 A <b>catalogue</b> is a list of products and prices that only certain trade customers can see. <b>Net
                 30</b> means the buyer pays within 30 days of ordering. A <b>company location</b> is one site of a trade
                 customer, such as a branch, with its own delivery address and VAT number. An <b>ERP</b> is the system
-                that runs your stock, orders and finance, such as Business Central or NetSuite.
+                that runs your stock, orders and finance, such as Business Central or NetSuite. A <b>SKU</b> is a
+                product’s stock code. A <b>3PL</b> is a third-party warehouse that packs and ships for you. <b>D2C</b>{' '}
+                means selling direct to consumers, in other words retail. A <b>vaulted card</b> is a card a trade buyer
+                saves on file to pay later orders.
               </p>
             </div>
           </div>
@@ -408,13 +427,14 @@ export default function ShopifyPlusB2BUKPage() {
         <section className="sec-lg">
           <div className="wrap">
             <span className="eyebrow">Plan choice</span>
-            <h2 style={{ maxWidth: 780 }}>Do you need Shopify Plus for B2B? What Shopify’s own plan table says</h2>
+            <h2 style={{ maxWidth: 780 }}>Shopify B2B features by plan: do you need Shopify Plus?</h2>
             <p className="lead mt-4" style={{ maxWidth: 780 }}>
               Shopify B2B now runs on Basic, Grow, Advanced and Plus. That changes the first question in a UK trade
               project. The real test is how many price lists you keep and whether any account pays a deposit. Here is
               the split, restated from Shopify’s help centre on {READ_ON}.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }} tabIndex={0} role="region" aria-label="Shopify B2B features by plan">
+            <p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }} tabIndex={0} role="region" aria-label="Shopify B2B features by plan">
               <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
@@ -456,6 +476,40 @@ export default function ShopifyPlusB2BUKPage() {
           </div>
         </section>
 
+        {/* ═══ 4b. NATIVE B2B VS APPS VS OTHER PLATFORMS ═══ */}
+        <section className="sec">
+          <div className="wrap">
+            <span className="eyebrow">Other routes</span>
+            <h2 style={{ maxWidth: 780 }}>Native Shopify B2B, B2B apps such as SparkLayer and B2B Wave, or another platform</h2>
+            <div className="stack mt-6" style={{ maxWidth: 820 }}>
+              <p>
+                <b>Native Shopify B2B</b> keeps trade inside Shopify’s own admin, with the plan limits shown above. Nothing
+                extra to license, and Shopify maintains it.
+              </p>
+              <p>
+                <b>SparkLayer</b> adds wholesale ordering to a store you already run. Its site says it works with
+                Shopify, BigCommerce, WooCommerce, Adobe Commerce and Wix. Its free Basic plan, on Shopify only, allows
+                up to three price lists; its paid plans allow unlimited price lists. That can matter on Basic, Grow or
+                Advanced, where Shopify’s own cap is three catalogues.
+              </p>
+              <p>
+                <b>B2B Wave</b> is a separate B2B ordering platform with its own trade storefront. Its site lists
+                integrations with Shopify, Xero and QuickBooks Online. Your trade buyers then order on a site that is
+                not your Shopify store.
+              </p>
+              <p>
+                If your trade side needs punchout to a buyer’s purchasing system or multi-step quoting, a different
+                platform may fit better. Our <a href="/uk/b2b-ecommerce">UK B2B ecommerce</a> page covers those
+                builds. We are not tied to one answer, and the draft before you sign shows whether native B2B is enough.
+              </p>
+            </div>
+            <p style={srcNote}>
+              Sources: <a href={SRC_SPARKLAYER} {...ext} style={srcLink}>SparkLayer</a>;{' '}
+              <a href={SRC_B2BWAVE} {...ext} style={srcLink}>B2B Wave</a>. Read {ALT_READ_ON}. App plans change; check each vendor before you choose.
+            </p>
+          </div>
+        </section>
+
         {/* ═══ 5. WHAT WE BUILD ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
@@ -464,11 +518,11 @@ export default function ShopifyPlusB2BUKPage() {
               <h2>What we set up in a UK Shopify B2B project</h2>
               <p className="lead mt-4">
                 Native B2B gives you the parts. The work is fitting them to how your trade customers already buy and how
-                your finance team already gets paid. These are the eight pieces we build most often.
+                your finance team already gets paid. These are the nine pieces we build most often.
               </p>
             </div>
-            <ul className="col-3 mt-12">
-              <li className="svc-card">
+            <ul className="col-2 mt-12">
+              <li className="svc-card" style={{ gridColumn: '1 / -1' }}>
                 <h3>Trade accounts as companies</h3>
                 <p className="mt-4">We move every trade customer across in bulk: the company, each branch as a location with its own delivery address, and the people allowed to order. Location-level permissions decide who can only order and who can manage the account.</p>
               </li>
@@ -486,7 +540,7 @@ export default function ShopifyPlusB2BUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Ordering rules</h3>
-                <p className="mt-4">Case packs, minimums and price breaks with Shopify’s quantity rules. Basket-wide rules, such as a minimum order value per account or a pallet surcharge, written as Shopify Functions that you own.</p>
+                <p className="mt-4">Case packs, minimums and price breaks with Shopify’s quantity rules. Basket-wide rules, such as a minimum order value per account or a pallet surcharge, written as Shopify Functions (small pieces of custom checkout code) that you own.</p>
               </li>
               <li className="svc-card">
                 <h3>Fast reordering</h3>
@@ -498,7 +552,7 @@ export default function ShopifyPlusB2BUKPage() {
               </li>
               <li className="svc-card">
                 <h3>ERP and accounting link</h3>
-                <p className="mt-4">Orders, refunds and credit notes into Xero, Sage, Business Central, NetSuite or Odoo; prices, stock and credit back to Shopify. See our <a href="/uk/shopify-xero-integration">Shopify Xero integration</a> page for the payout and VAT detail.</p>
+                <p className="mt-4">Orders, refunds and credit notes into your accounts system or ERP through its API; prices, stock and credit back to Shopify. See our <a href="/uk/shopify-xero-integration">Shopify Xero integration</a> page for the payout and VAT detail.</p>
               </li>
               <li className="svc-card">
                 <h3>Retail and trade together</h3>
@@ -615,11 +669,12 @@ export default function ShopifyPlusB2BUKPage() {
             <span className="eyebrow">UK systems</span>
             <h2 style={{ maxWidth: 780 }}>Which system owns each trade record: the question we settle first</h2>
             <p className="lead mt-4" style={{ maxWidth: 780 }}>
-              The most common integration fault is simple to state. Two systems both think they own the price or the stock.
-              We agree one owner per record before writing any integration code. This is the pattern we start from, and
-              we change it to match your business.
+              Integrations break most often when two systems both think they own the price or the stock. So we agree one
+              owner per record before writing any integration code. The table shows the pattern we start from. We change it
+              to match your business.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }} tabIndex={0} role="region" aria-label="Record ownership between Shopify and UK back-office systems">
+            <p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }} tabIndex={0} role="region" aria-label="Record ownership between Shopify and UK back-office systems">
               <table className="cmp-table" style={{ minWidth: 760 }}>
                 <thead>
                   <tr>
@@ -681,7 +736,7 @@ export default function ShopifyPlusB2BUKPage() {
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">Our engagement terms</span>
-                <ul className="scope-list mt-4">
+                <ul className="scope-list yes-list mt-4">
                   {HOUSE_TERMS.map((h) => (
                     <li key={h.t}><b>{h.t}.</b> {h.d}</li>
                   ))}
@@ -707,7 +762,7 @@ export default function ShopifyPlusB2BUKPage() {
                 { n: '02', t: 'Build the draft on your data', d: 'A working Shopify draft with your products, one real trade account and its prices. Your sales team logs in as that buyer and places a test order.' },
                 { n: '03', t: 'Agree record owners', d: 'A one-page map of which system owns prices, stock, credit, invoices and accounts, signed off by sales and finance before integration work begins.' },
                 { n: '04', t: 'Move the accounts and prices', d: 'Companies, locations, buyers, catalogues, terms and VAT numbers loaded in bulk, then every account’s prices checked against your current figures.' },
-                { n: '05', t: 'Connect the back office', d: 'Orders, refunds and credit notes into Xero, Sage, Business Central, NetSuite or Odoo; prices, stock and credit back to Shopify. Tested against a copy, not live.' },
+                { n: '05', t: 'Connect the back office', d: 'Orders, refunds and credit notes into your accounts system or ERP; prices, stock and credit back to Shopify. Tested against a copy, not live.' },
                 { n: '06', t: 'Pilot with a few friendly accounts', d: 'Three to five trusted trade customers order for real while the old route stays open, so issues surface with people who will tell you.' },
                 { n: '07', t: 'Switch everyone and stay on', d: 'Invite emails, a short buyer guide, and a quiet-day switch with a written rollback. Defects found after launch are fixed inside the build price for the agreed cover period.' },
               ].map((s) => (
@@ -729,7 +784,7 @@ export default function ShopifyPlusB2BUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">Send us your brief</span>
-                <h2>Have a brief or an RFP? Send it as it is</h2>
+                <h2>What a Shopify B2B brief or RFP should include</h2>
                 <div className="stack mt-6">
                   <p>
                     A written brief that names your systems lets us quote fastest. If yours is
@@ -774,7 +829,7 @@ export default function ShopifyPlusB2BUKPage() {
         {/* ═══ 12. FAQ ═══ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Shopify B2B questions from UK wholesalers and their finance teams</h2>
             </div>
@@ -791,13 +846,13 @@ export default function ShopifyPlusB2BUKPage() {
                 </nav>
                 <div className="faq-sidebar-cta">
                   <ModalCTAButton label="Still have a question? Ask the founder →" region="uk" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Replies within 24 hours.</p>
+                  <p>Bhavesh replies within 24 hours.</p>
                 </div>
               </aside>
 
               <div>
-                {FAQ_CATEGORIES.map((c) => (
-                  <div key={c.key} id={`faq-${c.key}`} style={{ marginBottom: 40 }}>
+                {FAQ_CATEGORIES.map((c, ci) => (
+                  <div key={c.key} id={`faq-${c.key}`} style={{ marginBottom: ci === FAQ_CATEGORIES.length - 1 ? 0 : 40 }}>
                     <div className="faq-cat-header">
                       <span className="faq-cat-bar" />
                       <p className="faq-cat-label">{c.label}</p>
@@ -846,7 +901,7 @@ export default function ShopifyPlusB2BUKPage() {
             <span className="eyebrow">Next step</span>
             <h2>See one of your trade accounts ordering on Shopify</h2>
             <p className="mt-4">
-              Send your name, work email and, if you have it, a price list or brief. The founder replies within 24 hours.
+              Send your name, work email and, if you have it, a price list or brief. Bhavesh replies within 24 hours.
               We build a draft with one real account and tell you plainly whether you need Plus.
             </p>
             <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>

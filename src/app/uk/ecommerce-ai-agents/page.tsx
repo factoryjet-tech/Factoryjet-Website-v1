@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -22,6 +23,8 @@ import '../ai-agents/ai-agents.css';
    agents for ecommerce" returned no UK volume. Google's UK question boxes for
    "how much does an ai chatbot cost uk" included "How much does it cost to
    develop an AI chatbot?" and "Is ChatGPT a chatbot or an AI agent?".
+   2026-10-31 QA pass: H1, title and meta shortened; OnBuy, Etsy, Gorgias and
+   Intercom Fin facts read on their own docs on 31 October 2026.
 
    Truth rules for anyone editing this file:
    1. Every law, tax rule, platform fact and price below was read on the linked
@@ -29,7 +32,7 @@ import '../ai-agents/ai-agents.css';
    2. Prices are market ranges from two named UK firms, in the cost FAQ only.
       Never FactoryJet prices. Never a figure for what an agent costs to run.
    3. Client proof: GPSUK (Commerceflo) and Sow Easy (WooCommerce + Odoo, Odoo
-      link still in build) only, as src/data/case-studies/index.ts describes
+      link in build and being tested on staging, launch still ahead) only, as src/data/case-studies/index.ts describes
       them. No metrics.
    4. Nothing on the page says where the FactoryJet team is.
 
@@ -38,12 +41,14 @@ import '../ai-agents/ai-agents.css';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-ai-agents';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
+const UPDATED_LABEL = '31 October 2026';
 const READ_ON = '29 October 2026';
-const TITLE = 'AI Agents for Ecommerce UK: Stores and Marketplaces | FactoryJet';
-const H1 = 'Ecommerce AI Agents for UK Online Retailers: Your Store, Your Marketplaces and the Back Office Behind Them';
+const READ_ON_2 = '31 October 2026';
+const TITLE = 'Ecommerce AI Agents UK: Stores, Amazon & eBay | FactoryJet';
+const H1 = 'Ecommerce AI Agents for UK Online Retailers';
 const DESCRIPTION =
-  'We design, build and support AI agents for UK online retailers on any platform: order and returns questions, Amazon.co.uk and eBay listings, trade quotes, stock and Xero.';
+  'AI agents for UK online retailers on any platform: order and returns questions, Amazon.co.uk and eBay listings, trade quotes, stock and Xero.';
 
 /* Design tokens, copied by value from ../ai-agents/ai-agents.css so inline
    styles stay on-system without CSS custom property references in this file. */
@@ -84,6 +89,10 @@ const SRC = {
   linnworksApi: { label: 'Linnworks API reference: overview', url: 'https://apidocs.linnworks.net/reference/overview' },
   softomateCost: { label: 'Softomate Solutions: AI chatbot development cost in the UK', url: 'https://www.softomatesolutions.com/blog/ai-chatbot-development-cost-uk/' },
   cloudswitchedCost: { label: 'Cloudswitched: AI software development cost in the UK, 2026', url: 'https://www.cloudswitched.com/blog/ai-software-development-cost-uk-2026' },
+  onbuyApi: { label: `OnBuy API documentation v2 (read ${READ_ON_2})`, url: 'https://docs.api.onbuy.com/view/metadata/TzeRqAj9' },
+  etsyApi: { label: `Etsy Open API v3 documentation (read ${READ_ON_2})`, url: 'https://developers.etsy.com/documentation/' },
+  gorgiasAi: { label: `Gorgias: AI Agent (read ${READ_ON_2})`, url: 'https://www.gorgias.com/ai-agent' },
+  intercomFin: { label: `Fin by Intercom (read ${READ_ON_2})`, url: 'https://fin.ai/' },
 } as const;
 
 type SrcKey = keyof typeof SRC;
@@ -102,36 +111,36 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // ── Ecommerce AI agents ──
   { category: 'basics', question: 'What is an ecommerce AI agent?',
     answer: 'It is software that does one store job from start to finish. It reads a customer email, a return request, a trade order or a stock report, looks the facts up in your own systems, and prepares the answer, refund, quote or purchase order. A person approves anything that moves money or changes a price. We build each one for your store, and you own it.' },
-  { category: 'basics', question: 'Is ChatGPT a chatbot or an AI agent?',
-    answer: 'A plain ChatGPT chat answers what you type. It does not hold your store’s API keys, your returns rules or your approval steps. An ecommerce agent is built around a model like it and given those: read access to your orders, a courier tracking lookup, a way to save a draft refund, and rules about when to stop and ask a person. That part is the build.' },
+  { category: 'basics', question: 'Is an ecommerce chatbot the same as an AI agent?',
+    answer: 'No. An ecommerce chatbot, including a plain ChatGPT chat, answers what you type. It holds none of your store’s API keys, returns rules or approval steps. An ecommerce agent is built around a model like it and given those: read access to your orders, a courier tracking lookup, a way to save a draft refund, and rules about when to stop and ask a person. Giving it those things is the build.' },
   { category: 'basics', question: 'How is AI used in ecommerce by UK retailers?',
-    answer: 'Mostly in four places. Customer service, where most messages are about orders, deliveries and returns. Product data, where listings for Amazon.co.uk, eBay and your own store have to say the same thing. Trade sales, where buyers email orders that someone retypes. And the back office, where orders, stock and payouts have to reach Xero or Sage. We start with whichever costs your team the most hours.' },
+    answer: 'We look at four places first. Customer service: questions about orders, deliveries and returns. Product data, where listings for Amazon.co.uk, eBay and your own store have to say the same thing. Trade sales, where buyers email orders that someone retypes. And the back office, where orders, stock and payouts have to reach Xero or Sage. We start with whichever costs your team the most hours.' },
   { category: 'basics', question: 'Should we buy an AI app or have a custom agent built?',
-    answer: 'Buy the app if it already does the job. Helpdesk tools and your platform’s own AI features handle plenty of standard questions. A custom agent makes sense when the job follows your own rules, crosses two systems such as Shopify and Linnworks, or covers a marketplace the apps ignore. Many stores run both: an app on chat and a built agent on returns or trade orders.' },
+    answer: 'Buy the app if it already does the job. Helpdesk AI such as the Gorgias AI Agent or Intercom’s Fin, which also works inside Zendesk, handles plenty of standard questions. A custom agent makes sense when the job follows your own rules, crosses two systems such as Shopify and Linnworks, or covers a marketplace the apps ignore. Many stores run both: an app on chat and a built agent on returns or trade orders.' },
 
   // ── Store and marketplace jobs ──
-  { category: 'jobs', question: 'Can an AI agent answer where-is-my-order questions for Royal Mail, DPD and Evri parcels?',
-    answer: 'Yes, and it is usually the first job we build. The agent finds the order, reads the tracking number and courier from your store or your shipping software, checks the latest status and replies in the channel the customer used. It only reads data, so the risk is low. We still make it confirm who is asking before it shares an address or a delivery detail.' },
+  { category: 'jobs', question: 'Can an AI agent answer “where is my order?” messages?',
+    answer: 'Yes, and we usually suggest it as the first job. It works the same for Royal Mail, DPD and Evri parcels. The agent finds the order, reads the tracking number and courier from your store or your shipping software, checks the latest status and replies in the channel the customer used. It only reads data, so the risk is low. We still make it confirm who is asking before it shares an address or a delivery detail.' },
   { category: 'jobs', question: 'Can an agent handle returns and refunds under UK rules?',
     answer: 'It can check each request against your returns policy and the UK cancellation window, then prepare the refund. GOV.UK says customers can cancel most online orders up to 14 days after delivery, and up to 12 months if you never told them about that right. The agent dates every request from the delivery date. A person approves the refund before money goes back through Stripe, Klarna or Clearpay.' },
   { category: 'jobs', question: 'Can an AI agent manage our Amazon.co.uk and eBay listings?',
     answer: 'It can draft and send listing changes through each marketplace’s own API. Amazon’s documentation warns that attributes left out of a full listing update may be dropped, so our agent uses partial updates and previews errors first. On eBay, an inventory item with a SKU must exist before an offer, and the published offer is what becomes the live listing. Price changes stay with a person.' },
   { category: 'jobs', question: 'What about UK marketplaces other than Amazon and eBay?',
-    answer: 'Each marketplace has its own seller integration and its own product data rules. Before we quote, we read the integration terms for your seller account and check whether your existing channel software, such as Linnworks or Brightpearl, already lists there. The agent then works on the product data and order flow behind those channels, whichever tool publishes the listing.' },
+    answer: 'Each marketplace has its own seller integration and its own product data rules. OnBuy publishes an API for products, listings by SKU and order export, and Etsy’s Open API v3 covers inventory, sales orders and shop management. Before we quote, we read the integration terms for your seller account and check whether your existing channel software, such as Linnworks or Brightpearl, already lists there. The agent then works on the product data and order flow behind those channels, whichever tool publishes the listing.' },
   { category: 'jobs', question: 'Can an agent handle trade quotes and repeat orders?',
-    answer: 'Yes. Trade buyers often email a list of codes and quantities. The agent matches each line to a product, applies that account’s price list, checks stock and saves a draft quote or order for your sales team to send. GPSUK, a UK promotional products supplier, runs its trade store on Commerceflo, where business buyers reorder at their own account prices. The agent work sits on the same kind of data.' },
+    answer: 'Trade buyers often email a list of codes and quantities. The agent matches each line to a product, applies that account’s price list, checks stock and saves a draft quote or order for your sales team to send. GPSUK, a UK promotional products supplier, runs its trade store on Commerceflo, where business buyers reorder at their own account prices. The agent work sits on the same kind of data.' },
   { category: 'jobs', question: 'Can an agent draft purchase orders when stock runs low?',
     answer: 'It can. The agent reads stock on hand and recent sales from wherever stock lives, which for many UK sellers is Linnworks, Brightpearl, Mintsoft or an ERP, compares them with the reorder points you set, and drafts a purchase order for your buyer to approve. It never sends a supplier order on its own until you have seen enough correct drafts to change that rule.' },
 
   // ── Your systems and safety ──
   { category: 'systems', question: 'Which ecommerce platforms do you build agents for?',
-    answer: 'Shopify and Shopify Plus, WooCommerce, Adobe Commerce (Magento), BigCommerce, Commerceflo and custom or headless stores. A back-office agent talks to the platform through its admin API, so the platform matters less than you might expect. A customer-facing agent has to fit your theme or front end, which is where most of the platform-specific work sits.' },
+    answer: 'Shopify and Shopify Plus, WooCommerce, Adobe Commerce (Magento), BigCommerce, Commerceflo and custom or headless stores. A back-office agent talks to the platform through its admin API, the back-office door to orders and products, so the platform matters less than you might expect. A customer-facing agent has to fit your theme or front end, which is where most of the platform-specific work sits.' },
   { category: 'systems', question: 'Can the agent work with Linnworks, Brightpearl or Mintsoft?',
-    answer: 'Yes, through their APIs. Brightpearl’s API documentation covers sales orders, products and price lists, goods-in and goods-out notes, stock transfers and journals. Linnworks publishes an API for building applications on Linnworks data. When one of these is already the record for stock and orders, the agent reads from it and writes drafts back to it, so your team keeps working in the screen they know.' },
+    answer: 'Through their APIs. Brightpearl’s API documentation covers sales orders, products and price lists, goods-in and goods-out notes, stock transfers and journals. Linnworks publishes an API for building applications on Linnworks data. When one of these is already the record for stock and orders, the agent reads from it and writes drafts back to it, so your team keeps working in the screen they know.' },
   { category: 'systems', question: 'Can the agent post orders into Xero, Sage or QuickBooks?',
-    answer: 'Yes, and for VAT that link matters. HMRC’s Making Tax Digital notice says copy and paste is not a digital link, and that manually moving data between software is not acceptable once it is part of your VAT records. An agent that moves order, refund and fee data by API keeps that chain digital. Your accountant decides which accounts and tax codes each entry posts to.' },
+    answer: 'It can, and for VAT that link matters. HMRC’s Making Tax Digital notice says copy and paste is not a digital link, and that manually moving data between software is not acceptable once it is part of your VAT records. An agent that moves order, refund and fee data by API keeps that chain digital. Your accountant decides which accounts and tax codes each entry posts to.' },
   { category: 'systems', question: 'We run NetSuite, Business Central or Odoo. Can an agent use it?',
-    answer: 'Yes. For larger UK sellers the ERP, not the store, usually holds stock, customer prices and credit terms. The agent reads those from NetSuite, Dynamics 365 Business Central, Odoo or Sage Intacct and writes draft orders back. Sow Easy, a UK wholesale client, has a WooCommerce trade store where Odoo stays the master for stock, pricing and product codes. That Odoo link is still being built and tested.' },
+    answer: 'Yes. In many UK businesses the ERP (the back-office system for stock, buying and accounts) holds stock, customer prices and credit terms, and the store copies them. The agent reads those facts from NetSuite, Dynamics 365 Business Central, Odoo or Sage Intacct and writes draft quotes and sales orders back for your team to check. Credit over a customer’s limit always goes to a person.' },
   { category: 'systems', question: 'Is it safe to give an AI agent access to our store and payments?',
     answer: 'It is as safe as the key it is given. Each agent gets its own API key with the least access its job needs, starts read-only, and logs every action. Refunds, discounts, price changes and anything touching Stripe, GoCardless, Klarna or Clearpay wait for a person. If the agent misbehaves you can switch off one key without touching the rest of your setup.' },
 
@@ -141,19 +150,19 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'rules', question: 'Do we have to tell customers they are talking to an AI?',
     answer: 'For shoppers in the EU, plan on it. Article 50 of the EU AI Act says AI systems that talk directly with people must be designed so those people are told they are dealing with an AI, unless that is obvious from the context. The Act’s published timeline applies Article 50 from 2 August 2026. Our shopper-facing agents say they are an AI in their first message, for UK and EU customers alike.' },
   { category: 'rules', question: 'Does the EU AI Act apply to a UK online store?',
-    answer: 'It can. Article 2 covers providers placing AI systems on the EU market wherever they are based, and providers and deployers outside the EU where the system’s output is used in the EU. A UK store whose chat agent answers shoppers in Ireland, France or Germany is in that picture. We are not lawyers, so we map where your agents touch EU customers and you confirm the position with your adviser.' },
+    answer: 'It can. Article 2 covers providers placing AI systems on the EU market wherever they are based, and providers and deployers (businesses using an AI system) outside the EU where the system’s output is used in the EU. A UK store whose chat agent answers shoppers in Ireland, France or Germany is in that picture. We are not lawyers, so we map where your agents touch EU customers and you confirm the position with your adviser.' },
 
   // ── Cost and working with us ──
   { category: 'working', question: 'How much does it cost to build an AI agent for a UK online store?',
     answer: 'UK market ranges vary widely. Softomate Solutions, a London agency, lists £15,000 to £40,000 for an advanced build with deep CRM and ERP integration, and £40,000 or more for multiple agents, and its page notes that prices exclude VAT. Cloudswitched, a London IT services firm, lists £15,000 to £40,000 for a reactive agent and £35,000 to £80,000 for a task agent, without saying whether VAT is included. FactoryJet quotes a fixed price in writing after a short scoping call.' },
   { category: 'working', question: 'Can we see it working before we sign?',
-    answer: 'Yes. Before any contract we show working software on your own data. For a store agent that usually means twenty or thirty of your real customer emails, return requests or trade orders run through a first version, with its drafts set beside what your team actually sent. You judge it on your own cases, not on a sales demo.' },
+    answer: 'Before any contract we show working software on your own data. For a store agent that usually means twenty or thirty of your real customer emails, return requests or trade orders run through a first version, with its drafts set beside what your team actually sent. You judge it on your own cases.' },
   { category: 'working', question: 'What should we send you to get a quote?',
     answer: 'A short written brief is best, and an RFP is welcome. Name the job you want the agent to do first, the systems it touches (store platform, marketplaces, channel or stock software, accounting or ERP, helpdesk), your rough monthly order and message volumes, and what a person must still approve. Attach a few anonymised examples. With that we can come back with a fixed quote for the first phase.' },
   { category: 'working', question: 'Who owns the agent, and what happens after launch?',
     answer: 'You own the code and the repository from day one. Defects are fixed inside the build price for a cover period agreed before work starts. Support after that is optional, each change is quoted and approved, and there is no monthly minimum. If you want, we keep managing the servers, AI models, API connections and maintenance, and FactoryJet quotes that support as a fixed price in writing.' },
   { category: 'working', question: 'Have you worked with UK commerce businesses before?',
-    answer: 'Yes. GPSUK, a UK supplier of branded promotional products, runs its trade storefront on Commerceflo, built by FactoryJet, so business buyers reorder at their own account prices. Sow Easy, a UK wholesale client, has a WordPress WooCommerce store linked to Odoo, with the Odoo integration still in build. FactoryJet has worked with more than 500 businesses since 2014, most of them in commerce.' },
+    answer: 'Yes. GPSUK, a UK supplier of branded promotional products, runs its trade storefront on Commerceflo, built by FactoryJet, so business buyers reorder at their own account prices. FactoryJet has worked with more than 500 businesses since 2014.' },
 ];
 
 /* ─── JSON-LD. The Organization is defined once, sitewide; this page only
@@ -222,7 +231,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['ecommerce-ai-agents'] },
   openGraph: {
     title: TITLE,
     description:
@@ -244,7 +253,7 @@ const inlineLink = { textDecoration: 'underline', color: T.ink, fontWeight: 600 
 function Sources({ ids }: { ids: SrcKey[] }) {
   return (
     <p style={srcNote}>
-      Sources, read on {READ_ON}:{' '}
+      Sources, read on {READ_ON} unless marked:{' '}
       {ids.map((id, i) => (
         <span key={id}>
           {i > 0 ? '; ' : ''}
@@ -279,7 +288,8 @@ export default function EcommerceAiAgentsUKPage() {
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  Your store sells on its own site, on Amazon.co.uk and eBay, and maybe to trade accounts. Orders
+                  We build agents for your store, your marketplaces and the back office behind them. Your store sells
+                  on its own site, on Amazon.co.uk and eBay, and maybe to trade accounts. Orders
                   pass through Linnworks, Brightpearl or Mintsoft, leave with Royal Mail, DPD or Evri, and end up in
                   Xero or Sage. FactoryJet builds AI agents that work across that chain: answering order and returns
                   questions, keeping listings right, drafting trade quotes and purchase orders. A person approves
@@ -288,8 +298,8 @@ export default function EcommerceAiAgentsUKPage() {
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses since 2014</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="who"><a href="/author/bhavesh-barot" style={{ color: 'inherit', textDecoration: 'underline' }}><b>Bhavesh Barot</b></a>, Founder<br /><span>500+ businesses since 2014</span></div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -298,13 +308,13 @@ export default function EcommerceAiAgentsUKPage() {
                     source="uk_ecommerce_ai_agents_hero"
                     service="Ecommerce AI Agents"
                     submitLabel="See a demo on my data"
-                    trustText="Working software on your own data before you sign. Founder replies within 24 hours."
+                    trustText="Working software on your own data before you sign. Bhavesh replies within 24 hours."
                   />
                 </div>
               </div>
 
               <div className="card card-top-orange">
-                <span className="eyebrow">Jobs UK stores hand an agent first</span>
+                <span className="eyebrow">Jobs we suggest handing an agent first</span>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Where is my parcel?</div><div className="scorecard-note">Royal Mail, DPD and Evri tracking, read only</div></div>
                   <div className="scorecard-val" style={{ fontSize: 15 }}>Answer</div>
@@ -339,16 +349,19 @@ export default function EcommerceAiAgentsUKPage() {
                 An ecommerce AI agent takes one repeated store job, such as a delivery question, a return, a listing
                 update or a trade order, looks up the facts in your store, marketplaces and back-office systems, and
                 prepares the reply or the change. Low-risk answers go straight out. Refunds, prices and supplier
-                orders wait for a person. FactoryJet builds these agents for any platform, and the client owns them.
+                orders wait for a person. This is the kind of AI for ecommerce we build: one job at a time, inside the
+                systems you already run, on any platform, and owned by the client.
               </p>
             </div>
             <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms we use a lot</span>
+              <span className="lab">Five terms we use a lot</span>
               <p>
                 An <b>API</b> is the official door a system offers other software, so an agent can read an order
                 without anyone logging in. An <b>API key</b> is the pass for that door, and it decides what the
                 agent may see and change. A <b>digital link</b> is HMRC’s name for data moving between software with
-                nobody retyping or pasting it.
+                nobody retyping or pasting it. An <b>ERP</b> is the back-office system that holds stock, buying and
+                accounts in one place, such as NetSuite or Odoo. A <b>SKU</b> is the stock code you give each product
+                and each size or colour of it.
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
@@ -382,15 +395,16 @@ export default function EcommerceAiAgentsUKPage() {
         {/* ═══ 4. JOBS WE BUILD ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
+            <div className="col-4060">
+            <div>
               <span className="eyebrow">What the agents do</span>
-              <h2>Nine store jobs we build AI agents for</h2>
+              <h2>AI in ecommerce: nine store jobs we build agents for</h2>
               <p className="lead mt-4">
-                Each agent does one job well before it gets a second. These are the jobs UK sellers bring to us most,
-                roughly in the order they tend to build them.
+                Each agent does one job well before it gets a second. The jobs are listed roughly in the order we
+                suggest building them, starting with the ones that only read data.
               </p>
             </div>
-            <ul className="col-3 mt-12">
+            <ul style={{ display: 'grid', gap: 16 }}>
               <li className="svc-card">
                 <h3>Delivery questions</h3>
                 <p className="mt-4">The agent reads the order, the courier and the tracking number, checks the latest Royal Mail, DPD or Evri status and replies by email, chat or marketplace message. It confirms who is asking before sharing an address.</p>
@@ -408,8 +422,8 @@ export default function EcommerceAiAgentsUKPage() {
                 <p className="mt-4">On eBay’s Inventory API an item record with your SKU comes first, then an offer, and publishing the offer creates the live listing. The agent keeps the item data clean so offers publish without errors.</p>
               </li>
               <li className="svc-card">
-                <h3>Other UK marketplaces</h3>
-                <p className="mt-4">Each other marketplace you sell on has its own product rules and integration route. We read the integration terms for your seller account before we quote, and the agent prepares the product data behind it, whichever connector publishes it.</p>
+                <h3>OnBuy, Etsy and other UK marketplaces</h3>
+                <p className="mt-4">OnBuy’s API covers products, listings priced and stocked by SKU, and order export. Etsy’s Open API v3 covers inventory, sales orders and shop management. For any other marketplace we read the integration terms for your seller account before we quote, and the agent prepares the product data behind it.</p>
               </li>
               <li className="svc-card">
                 <h3>Trade quotes and reorders</h3>
@@ -425,10 +439,11 @@ export default function EcommerceAiAgentsUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Customer service triage</h3>
-                <p className="mt-4">Messages are sorted by what they need: answered, drafted for a person, or escalated. For a support desk built around agents, see <a href="/uk/ai-customer-service" style={inlineLink}>AI customer service</a>.</p>
+                <p className="mt-4">Messages arriving in your helpdesk, such as Gorgias or Zendesk, are sorted by what they need: answered, drafted for a person, or escalated. Any message about a chargeback, a complaint or a product safety problem goes straight to a person. For a support desk built around agents, see <a href="/uk/ai-customer-service" style={inlineLink}>AI customer service</a>.</p>
               </li>
             </ul>
-            <Sources ids={['amzMarketplaces', 'amzListings', 'ebayInventory', 'govDistance']} />
+            </div>
+            <Sources ids={['amzMarketplaces', 'amzListings', 'ebayInventory', 'onbuyApi', 'etsyApi', 'govDistance']} />
           </div>
         </section>
 
@@ -438,11 +453,12 @@ export default function EcommerceAiAgentsUKPage() {
             <span className="eyebrow">Your systems</span>
             <h2 style={{ maxWidth: 780 }}>What the agent reads, what it drafts, and what stays with your team</h2>
             <p className="lead mt-4" style={{ maxWidth: 780 }}>
-              The same rule runs through every system: read freely, write drafts, and leave money and prices to a
-              person until the logs show the agent follows your rules.
+              The same rule runs through every system. The agent reads what it needs and writes drafts. Money and
+              prices stay with a person until the logs show the agent follows your rules.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
-              <table className="cmp-table">
+            <p className="md:hidden" style={{ ...srcNote, marginTop: 24 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
                     <th>System</th>
@@ -525,15 +541,17 @@ export default function EcommerceAiAgentsUKPage() {
             <span className="eyebrow">Side by side</span>
             <h2 style={{ maxWidth: 760 }}>Off-the-shelf AI app or a custom ecommerce agent</h2>
             <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              We tell plenty of UK sellers to start with an app. This is how we decide which way a job should go.
+              For plenty of jobs we suggest starting with an app. This is how we decide whether a job needs a custom
+              agent or simpler ecommerce automation from a tool you can buy.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
-              <table className="cmp-table">
+            <p className="md:hidden" style={{ ...srcNote, marginTop: 24 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="cmp-table" style={{ minWidth: 560 }}>
                 <thead>
                   <tr>
                     <th>Question</th>
                     <th className="fj">Custom agent (FactoryJet)</th>
-                    <th>Helpdesk or platform AI app</th>
+                    <th>Helpdesk AI app (Gorgias, Intercom Fin)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -546,6 +564,12 @@ export default function EcommerceAiAgentsUKPage() {
                 </tbody>
               </table>
             </div>
+            <p className="mt-6" style={{ maxWidth: 820 }}>
+              Gorgias sells an AI Agent built for ecommerce support that connects to Shopify and BigCommerce. Intercom
+              sells Fin, a customer-facing AI agent that works in Intercom and also inside Zendesk, Salesforce and other
+              helpdesks. Either is a sound first step for standard questions.
+            </p>
+            <Sources ids={['gorgiasAi', 'intercomFin']} />
           </div>
         </section>
 
@@ -565,8 +589,8 @@ export default function EcommerceAiAgentsUKPage() {
                   </p>
                   <p>
                     <b>Sow Easy</b> is a UK wholesale client with a WordPress WooCommerce trade store, where Odoo stays
-                    the master for stock, pricing and product codes. The Odoo integration is still in build and being
-                    tested on staging. <a href="/case-studies/sow-easy-distributor-portal" style={inlineLink}>Read the Sow Easy case study</a>.
+                    the master for stock, pricing and product codes. The build is in progress: the store and the
+                    Odoo link are being tested on staging, and launch is still ahead.{' '}<a href="/case-studies/sow-easy-distributor-portal" style={inlineLink}>Read the Sow Easy case study</a>.
                   </p>
                   <p>
                     Neither is described here as an AI agent project. They show the part that decides whether an
@@ -606,7 +630,7 @@ export default function EcommerceAiAgentsUKPage() {
                 { n: '02', t: 'Write down who owns each fact', d: 'Stock, prices, tracking, refunds and customer details each get one home: the store, Linnworks, the ERP or Xero. Where two systems disagree, the map says which wins.' },
                 { n: '03', t: 'Agree the keys and the approvals', d: 'Each system gets an API key made for the agent, with the least access it needs. We list every action that waits for a person, and you sign that list.' },
                 { n: '04', t: 'Show it on your own data', d: 'Before a contract, a first version runs on twenty or thirty of your real cases, with its drafts beside what your team sent. You decide from that.' },
-                { n: '05', t: 'Build and test on a copy', d: 'The agent is built against a staging store or sandbox accounts. Awkward cases go through first: a part refund, a Klarna order, an EU customer, a missing SKU.' },
+                { n: '05', t: 'Build and test on a copy', d: 'The agent is built against a staging store or sandbox accounts, which are test copies with no real customers or money. Awkward cases go through first: a part refund, a Klarna order, an EU customer, a missing SKU.' },
                 { n: '06', t: 'Run beside the team', d: 'For the first weeks the agent drafts and your team sends. We compare the two daily and adjust the rules where they differ.' },
                 { n: '07', t: 'Go live and stay on', d: 'Low-risk answers go out on their own. Money and prices stay with a person until you change that rule. The same team supports the agent, and you own the code.' },
               ].map((s) => (
@@ -659,7 +683,7 @@ export default function EcommerceAiAgentsUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">Related</span>
-              <h2>Agents across the business, and the store underneath them</h2>
+              <h2>Related UK pages: AI agents, customer service, Xero and B2B stores</h2>
               <div className="stack mt-6">
                 <p>
                   If the agent is part of a wider plan outside the store, our <a href="/uk/ai-agents" style={inlineLink}>UK AI agents</a> page
@@ -687,9 +711,10 @@ export default function EcommerceAiAgentsUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">Method</span>
-              <h2>Sources, read on {READ_ON}</h2>
+              <h2>Sources and the dates we read them</h2>
               <p className="lead mt-4">
-                Every rule, platform fact and price range on this page was read on the pages below on that day. Laws
+                Every rule, platform fact and price range on this page was read on the pages below on {READ_ON}, or on
+                the date shown beside the source. Laws
                 change and vendors update their pages, so open the linked page before you act on a figure.
               </p>
             </div>
@@ -706,7 +731,7 @@ export default function EcommerceAiAgentsUKPage() {
         {/* ═══ 13. FAQ (canonical Linear Minimal) ═══ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Ecommerce AI agent questions from UK retailers and their finance teams</h2>
             </div>
@@ -723,7 +748,7 @@ export default function EcommerceAiAgentsUKPage() {
                 </nav>
                 <div className="faq-sidebar-cta">
                   <ModalCTAButton label="Still have a question? Ask the founder →" region="uk" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Replies within 24 hours.</p>
+                  <p>Bhavesh replies within 24 hours.</p>
                 </div>
               </aside>
 
@@ -749,6 +774,10 @@ export default function EcommerceAiAgentsUKPage() {
                 ))}
               </div>
             </div>
+            <div className="md:hidden mt-6">
+              <ModalCTAButton label="Still have a question? Ask the founder →" region="uk" modalVariant="default" btnVariant="secondary-light" />
+              <p style={srcNote}>Bhavesh replies within 24 hours.</p>
+            </div>
           </div>
         </section>
 
@@ -758,7 +787,7 @@ export default function EcommerceAiAgentsUKPage() {
             <span className="eyebrow">Ready when you are</span>
             <h2>See an agent work on your own orders before you sign</h2>
             <p className="mt-4">
-              Send your name and work email, or a brief. The founder replies within 24 hours to agree one job and
+              Send your name and work email, or a brief. Bhavesh replies within 24 hours to agree one job and
               the systems it touches, then we run a first version on your real examples. No obligation.
             </p>
             <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>

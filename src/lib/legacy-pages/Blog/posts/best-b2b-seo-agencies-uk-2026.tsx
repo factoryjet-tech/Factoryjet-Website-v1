@@ -73,9 +73,9 @@ const FIRMS: Firm[] = [
     type: 'SEO and GEO agency, working since 2009, with B2B, SaaS and fintech practices',
     sectors: 'SaaS and martech, fintech, IT and cloud, consulting, manufacturing and wholesale',
     clients: 'Thomson Reuters, Sodexo, CACI, Sidetrade, Reachdesk, Abacum, Liquidline, Milton Park',
-    what: 'Polaris has the deepest B2B case library of any firm here, with named work for Thomson Reuters, Sodexo, CACI and several fintech and SaaS brands. Its B2B page says it puts lead quality over volume, maps real customer use cases and targets competitive gaps, and covers Google AI Overviews and other AI search. It runs migrations as a separate practice and publishes a migration case study for a UK manufacturer. It also publishes its prices, which few B2B firms do.',
+    what: 'Polaris names eight B2B clients on the pages we read, including Thomson Reuters, Sodexo, CACI and several fintech and SaaS brands. Its B2B page says it puts lead quality over volume, maps real customer use cases and targets competitive gaps, and covers Google AI Overviews and other AI search. It runs migrations as a separate practice and publishes a migration case study for a UK manufacturer. It also publishes its prices, which few B2B firms do.',
     proof: 'Reachdesk: "420% increase in Leads". Johnson Analytica, a UK manufacturer of testing products: organic sessions "increased by 317% month on month" after a rebrand migration to a new domain.',
-    price: 'Published: "SME campaigns range from £3,000 - £5,000 per month", "SCA packages range from £6,500 - £10,000 per month" (the tier it describes for established B2B businesses), "ENT packages range from £12,500 - £19,500 per month", and projects "starting from £5,450 + VAT".',
+    price: 'Published: "SME campaigns range from £3,000 - £5,000 per month", "SCA packages range from £6,500 - £10,000 per month" (the tier it describes for established B2B businesses), "ENT packages range from £12,500 - £19,500 per month" (its enterprise tier), and projects "starting from £5,450 + VAT".',
     bestFor: 'An established B2B or SaaS firm with a sales team waiting on leads and a budget of £3,000 a month or more.',
     ask: 'Which of its three tiers your site falls into, and who on that tier writes the content for your sales team’s topics.',
     covers: { bofu: 'no', migrations: 'yes', ai: 'yes', leads: 'yes' },
@@ -89,7 +89,7 @@ const FIRMS: Firm[] = [
     type: 'B2B PR, content and SEO agency, doing B2B SEO since 2008',
     sectors: 'Technology, SaaS and professional services, plus industrial and third-sector clients',
     clients: 'Automation Consultants, Compleat Software, Access Self Storage',
-    what: 'Definition joins SEO to B2B PR, so links and mentions come from press work as well as outreach. Its keyword research includes interviews with your subject matter experts and sales team, which is how B2B content gets the detail buyers look for. Its one-off audit checks over 100 factors, including canonicals, redirect chains, hreflang and JavaScript rendering, and every retained client gets one. It says over 70% of its own leads come through search. It names AI search and GEO as part of the work.',
+    what: 'Definition joins SEO to B2B PR, so links and mentions come from press work as well as outreach. Its keyword research includes interviews with your subject matter experts and sales team, which is how B2B content gets the detail buyers look for. Its one-off audit checks over 100 factors, including canonicals, redirect chains, hreflang (tags that tell Google which country or language a page is for) and JavaScript rendering, and every retained client gets one. It says over 70% of its own leads come through search. It names AI search and GEO as part of the work.',
     proof: 'Compleat Software’s Chief Growth Officer, quoted on the page: the PR-led SEO "resulted in record high keyword rankings and increases in organic traffic and organic leads". The page gives no figures for that result.',
     price: 'Published rate: the monthly fee is "based on a blended agency rate of £140 per hour". Project work is available "for the right budget".',
     bestFor: 'A professional services or tech firm whose experts have plenty to say and want SEO and PR run as one programme.',
@@ -121,7 +121,7 @@ const FIRMS: Firm[] = [
     type: 'B2B marketing agency and HubSpot Diamond Partner, established 2011',
     sectors: 'UK B2B companies, especially those running HubSpot or WordPress',
     clients: 'No client names on the pages we read; it shows a 5.0 rating from 40 reviews on HubSpot’s partner directory',
-    what: 'Whitehat runs SEO, answer engine optimisation and GEO as one programme and tracks what search brings in through HubSpot to closed deals, so you can see revenue by page rather than rankings alone. It also sells fixed-price website audits, and the enterprise audit covers multi-domain and international SEO, migration planning and a quarterly re-audit. Its founder, Clwyd Probert, started the London HubSpot User Group, which it says now has more than 2,000 members. It calls itself deliberately lean, with senior people doing the work.',
+    what: 'Whitehat runs SEO, answer engine optimisation and GEO as one programme. It tracks what search brings in through HubSpot all the way to closed deals, so you can see revenue by page. It also sells fixed-price website audits. The enterprise audit covers multi-domain and international SEO, migration planning and a quarterly re-audit. Its founder, Clwyd Probert, started the London HubSpot User Group, which it says now has more than 2,000 members. It calls itself deliberately lean, with senior people doing the work.',
     price: 'Published: SEO "starts from £1,967 per month" for retainers and "from £2,967 per month for premium campaigns with content creation included", on "30-day rolling contracts". Website audits are £2,500 (Essential), £4,500 (Comprehensive) and £7,500+ (Enterprise).',
     bestFor: 'A B2B firm on HubSpot that wants SEO tied to deals in its CRM, on a short notice period.',
     ask: 'What the gap between the £1,967 and £2,967 tiers buys in content each month, and how it attributes a closed deal to a page.',
@@ -136,7 +136,7 @@ const FIRMS: Firm[] = [
     type: 'SEO, GEO and PPC agency, founded in 2009, with over 80 specialists',
     sectors: 'Manufacturing, construction, logistics, software, legal, finance and other B2B sectors',
     clients: 'DHL, Office Reality, a Rotherham seating manufacturer and an industrial pump manufacturer (the last two unnamed)',
-    what: 'The SEO Works has sector pages for B2B and for manufacturing, and its manufacturing case studies are the strongest of any firm here. Its B2B page says mid-funnel buyers look for comparison pages and service breakdowns and bottom-of-funnel buyers need clear service pages, trust signals and strong calls to action, and it targets the long, question-based searches that big rivals ignore. It runs migrations and GEO, and tracks share of voice in Google AI Overviews. It is the one firm here that also appears on our general and AI SEO lists for the UK.',
+    what: 'The SEO Works has sector pages for B2B and for manufacturing, and it publishes results for two manufacturers, a Rotherham seating maker and an industrial pump maker. Its B2B page says mid-funnel buyers look for comparison pages and service breakdowns. It says bottom-of-funnel buyers need clear service pages, trust signals and strong calls to action, and it targets the long, question-based searches that big rivals ignore. It runs migrations and GEO, and tracks share of voice (how often you are named against rivals) in Google AI Overviews. It is the one firm here that also appears on our general and AI SEO lists for the UK.',
     proof: 'A Rotherham cinema and stadium seating manufacturer now holds "60.6% share of voice in AI Overviews" for its priority terms. An industrial pump manufacturer "doubled organic traffic" and won a six figure contract.',
     price: 'No price published.',
     bestFor: 'A UK manufacturer or industrial supplier that wants a large SEO team with proof in its own sector.',
@@ -201,7 +201,7 @@ const FIRMS: Firm[] = [
     sectors: 'SaaS, manufacturing, technology and services',
     clients: 'No B2B client names on the pages we read',
     what: 'Bulldog is a links business first. It says it has run 400 campaigns over 11 years and built more than 20,000 backlinks and 500 PR placements. Its B2B SEO page is unusually specific about sales pages: it lists pricing and consultation landing pages, better calls to action for demo requests, and SEO tracking joined to HubSpot, Salesforce or Zoho. It prices links per placement rather than as a retainer. Google’s AI Overview named it.',
-    proof: 'Its pricing page says the backlinks it built over the past six months averaged a domain rating of 51.',
+    proof: 'Its pricing page says the backlinks it built over the past six months averaged a domain rating of 51 (Ahrefs’ 0 to 100 score for the strength of a site’s links).',
     price: 'Published: "£200 per backlink", PR "publication placements for £450 a pop", and "£200 per brand mention" when a journalist does not link.',
     bestFor: 'A B2B site whose pages are in good shape but which lacks links from trade and industry publications.',
     ask: 'Which trade publications in your sector it has placed links on, and which of your pages those links would point at.',
@@ -215,8 +215,9 @@ const FIRMS: Firm[] = [
     based: 'Works remotely with UK clients and schedules calls in UK business hours',
     type: 'Founder-led SEO consultancy with its own developers; 500+ businesses served since 2014',
     sectors: 'Professional services, B2B wholesale and manufacturing, ecommerce',
-    clients: 'B2B wholesaler Bombay Petals, among the businesses named on our UK SEO page',
-    what: 'FactoryJet runs SEO with one senior person accountable from audit to results, and the same team writes and builds the pages, so fixes ship in server-rendered HTML that Google and AI crawlers can read. For B2B that means comparison, pricing and use-case pages built for the questions buyers ask, entity and schema work for AI answers, and reporting on rankings, organic traffic, enquiries and where you appear in ChatGPT, Gemini, Perplexity and AI Overviews. Work is sold as a fixed-price milestone project, a monthly retainer or booked advisory sessions.',
+    clients: 'No B2B SEO client is named in this profile; ask us for a reference in your sector',
+    what: 'FactoryJet runs SEO with one senior person accountable from audit to results, and the same team writes and builds the pages, so fixes ship as plain HTML that Google and AI crawlers can read without running scripts. For B2B that means comparison, pricing and use-case pages built for the questions buyers ask, entity and schema work for AI answers, and reporting on rankings, organic traffic, enquiries and where you appear in ChatGPT, Gemini, Perplexity and AI Overviews. Each phase has a fixed price, quoted in writing. Changes are quoted and approved per request, and there is no monthly minimum.',
+    proof: 'No SEO result is published in this profile. Across all its work, FactoryJet has served 500+ businesses since 2014, delivers 97% of projects on time and holds a 4.9 average review rating.',
     price: 'No rate card. The price is fixed in writing after a free audit call, which covers twelve checks written up in plain English.',
     bestFor: 'A B2B firm that wants the person who writes the SEO plan to also build the pages.',
     ask: 'To see the twelve-check audit of your own site before you agree to anything.',
@@ -227,8 +228,8 @@ const FIRMS: Firm[] = [
 const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
   {
     key: 'saas',
-    heading: 'Which UK B2B SEO agencies suit SaaS and tech companies?',
-    intro: 'Software buyers compare products before they ever speak to sales, so SaaS SEO lives on comparison pages, category terms such as "payroll software" and content for each stage of a long evaluation. These three show SaaS work on their own sites.',
+    heading: 'Which B2B SaaS SEO agency in the UK suits software and tech firms?',
+    intro: 'Software buyers compare products before they ever speak to sales, so SaaS SEO lives on comparison pages, category terms such as "payroll software" and content for each stage of a long evaluation. These three show SaaS work on their own sites. Pick Gripped if you want SEO run beside paid and LinkedIn work, and Polaris if you want an SEO-led agency with printed price tiers.',
   },
   {
     key: 'services',
@@ -238,7 +239,7 @@ const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
   {
     key: 'industrial',
     heading: 'Which agencies show SEO work for UK manufacturers?',
-    intro: 'Manufacturing searches are small in volume but large in value: a few dozen searches a month for a specialist part can lead to a six-figure order. These two publish named manufacturing results on their own sites.',
+    intro: 'Manufacturing searches are small in volume but large in value. The SEO Works says one pump manufacturer won a six-figure contract after its SEO work. These two publish named manufacturing results on their own sites.',
   },
   {
     key: 'full',
@@ -283,19 +284,19 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'What does a B2B SEO agency do?',
-    a: 'It gets your business found when other companies search for what you sell, and turns those visits into enquiries your sales team can use. The work covers keyword research tied to the buying process, pages that answer evaluation questions such as comparisons and pricing, technical fixes, links from trade press, visibility in AI answers, and reporting on leads rather than traffic. Good ones interview your sales team first.',
+    a: 'It gets your business found when other companies search for what you sell, and turns those visits into enquiries your sales team can use. The work covers keyword research tied to the buying process, pages that answer evaluation questions such as comparisons and pricing, technical fixes, links from trade press, visibility in AI answers, and reporting on leads. Good ones interview your sales team first.',
   },
   {
     q: 'How much does B2B SEO cost in the UK?',
     a: 'Most UK B2B SEO costs about £1,500 to £5,000 a month, with SaaS and enterprise work higher. Rudo’s 2026 guide says retainers run from around £1,500 at entry level to £5,000 or more, with enterprise reaching £10,000 to £25,000+. Gorilla Marketing puts professional services at £1,500 to £5,000 and growing SaaS at £3,000 to £8,000. Both were read on 22 October 2026.',
   },
   {
-    q: 'Which UK B2B SEO agencies publish their prices?',
-    a: 'On 22 October 2026: Polaris (£3,000 to £5,000, £6,500 to £10,000 and £12,500 to £19,500 a month by tier, projects from £5,450 + VAT), Whitehat SEO (from £1,967 a month, premium from £2,967), Gripped (from £3,500 a month plus project fees), Definition (a blended rate of £140 an hour), Twogether Digital (£800, £1,700 and £4,500 packages) and Bulldog (£200 per backlink). The others quote per job.',
+    q: 'How do I measure ROI from B2B SEO?',
+    a: 'Join your analytics to your CRM, so each deal shows where its first visit came from. Then compare the revenue from deals that started with organic search against what you paid the agency. Whitehat SEO tracks this through HubSpot to closed deals, Bulldog names HubSpot, Salesforce and Zoho, and Definition reports inbound leads and cost per acquisition. With a six-month sales cycle, judge ROI over a year.',
   },
   {
     q: 'How is B2B SEO different from B2C SEO?',
-    a: 'B2B searches are fewer and worth more. A term searched 50 times a month by procurement managers can matter more than one searched 5,000 times by consumers. Several people sign off a B2B purchase over weeks or months, so you need pages for each of them: technical detail for engineers, pricing and risk for finance, and comparisons for whoever builds the shortlist. Success is measured in qualified leads and pipeline.',
+    a: 'B2B searches are fewer and worth more. The SEO Works says one pump manufacturer doubled its organic traffic and won a six-figure contract. Several people sign off a B2B purchase over weeks or months, so you need pages for each of them: technical detail for engineers, pricing and risk for finance, and comparisons for whoever builds the shortlist. Success is measured in qualified leads and pipeline.',
   },
   {
     q: 'How long does B2B SEO take to work?',
@@ -306,7 +307,7 @@ const FAQS: FAQItem[] = [
     a: 'Usually, if buyers research suppliers online and one new client is worth thousands. Organic leads keep arriving after the work stops, unlike paid clicks, and Google’s AI Overviews now show on about 30% of UK searches, according to Ofcom, so being the cited source matters too. It is not worth it if your market is a few dozen named accounts you already know: account-based sales will reach them faster.',
   },
   {
-    q: 'Which agency is best for SaaS SEO in the UK?',
+    q: 'Which B2B SaaS SEO agency is best in the UK?',
     a: 'Three firms here show SaaS work on their own sites. MRS Digital won a European Search Award in 2024 for Staffology, the payroll software brand. Polaris publishes SaaS cases for Reachdesk and Abacum. Gripped works only with SaaS, tech and IT firms and runs SEO beside paid and account-based marketing. Position Digital also has a SaaS free-trial case study.',
   },
   {
@@ -323,11 +324,11 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Which GEO agency is best for B2B SaaS?',
-    a: 'Look for published AI search results in B2B. The SEO Works shows a 60.6% AI Overview share for a manufacturer and a 287% rise in AI Overview citations for DHL. Push Group took BRITA’s B2B division to first in AI Overviews. Position Digital got a recruiter into AI Overviews for 17 keywords. For SaaS specifically, MRS tracks brands across ChatGPT and Gripped has a separate AI search page.',
+    a: 'On the pages we read, none of the three SaaS firms showed an AI search result for a named SaaS client. MRS Digital says it tracks client brands across ChatGPT as well as Google, and Gripped has a separate AI search page. Outside SaaS, The SEO Works shows a 60.6% AI Overview share of voice for a manufacturer, Push Group took BRITA’s B2B division to first in AI Overviews, and Position Digital got a recruiter into AI Overviews for 17 keywords. Ask any SaaS shortlist for a result like those.',
   },
   {
     q: 'Do B2B buyers use AI to research suppliers?',
-    a: 'Many already see AI answers whether they ask for them or not. Ofcom found that about 30% of UK searches show an AI Overview and 53% of adults say they see them often. Agencies we read report it from their own client data: Push Group found only two AI-driven conversions on BRITA’s site before its work, both from ChatGPT. Treat AI answers as a second shop window next to Google results.',
+    a: 'Many already see AI answers whether they ask for them or not. Ofcom found that about 30% of UK searches show an AI Overview and 53% of adults say they see them often. Treat AI answers as a second shop window next to Google results.',
   },
   {
     q: 'Is SEO dead now with AI?',
@@ -358,8 +359,8 @@ const FAQS: FAQItem[] = [
     a: 'Not before you have seen the first work. Whitehat SEO works on 30-day rolling contracts, Ink Digital on rolling monthly terms, Rank Revenue with no contracts, and Push Group says it does not require yearly contracts. Gripped asks clients to give a strategy at least 90 days. A fixed term makes sense for a migration with a set plan. Get the notice period in writing.',
   },
   {
-    q: 'Do I need a London B2B SEO agency?',
-    a: 'No. B2B SEO is national, so the agency’s sector knowledge matters more than its postcode. Several firms here are outside London: The SEO Works in Sheffield, JDR Group in Derby, Hallam in Nottingham, Definition in Leeds as well as London, MRS Digital in Fleet and Polaris in Buckinghamshire. Choose on proof in your sector, then check they can meet your team when you need them to.',
+    q: 'Which B2B SEO companies are based outside London?',
+    a: 'Seven firms here have a base outside London, and you do not need a London agency, because B2B SEO is national. They are The SEO Works in Sheffield, JDR Group in Derby, Hallam in Nottingham, Definition in Leeds as well as London, MRS Digital in Fleet, Polaris in Buckinghamshire and Bulldog in Chelmsford as well as London. None of the firms we profiled is based in Manchester. Choose on proof in your sector, then check they can meet your team when you need them to.',
   },
   {
     q: 'Should I hire a B2B SEO consultant or an agency?',
@@ -370,38 +371,35 @@ const FAQS: FAQItem[] = [
     a: 'Google suggests asking for examples of past work, what results to expect and when, and how changes will be explained; it also says no one can guarantee a first-place ranking. Add four B2B questions. Will you interview our sales team? Which comparison and pricing pages will you build? How will you report leads rather than traffic? What is the notice period? Each profile above ends with one more.',
   },
   {
-    q: 'How is this list different from your other UK SEO lists?',
-    a: 'Our general UK SEO list covers firms for every kind of business, our AI SEO list covers GEO specialists, and our ecommerce list covers online stores. This one is only about firms that sell to other businesses. Every agency here has a B2B, SaaS, manufacturing or professional services page on its own site. The SEO Works appears on the general and AI lists too; Polaris also appears on the ecommerce list.',
-  },
-  {
-    q: 'Why is FactoryJet on its own list?',
-    a: 'Because we do this work, and leaving ourselves out would hide that from you. We put FactoryJet last, labelled it, and used the same profile format as everyone else, with facts taken from our own UK SEO page. All three agency-written lists we read put their own firm first. Read every list on this topic, ours included, knowing who wrote it.',
+    q: 'Polaris or Gripped: which suits a B2B SaaS company?',
+    a: 'Gripped works only with SaaS, tech and IT firms and runs SEO beside paid search, LinkedIn and account-based marketing, from £3,500 a month plus project fees across channels. Polaris is an SEO and GEO agency that prints SEO price tiers from £3,000 a month and publishes a 420% rise in leads for Reachdesk. Choose Gripped for one team across channels and Polaris for an SEO-led programme with a printed price.',
   },
 ];
 
 export const post: BlogPost = {
   id: '830',
   slug: 'best-b2b-seo-agencies-uk-2026',
-  title: 'Best B2B SEO Agencies in the UK (2026): 11 Checked',
+  title: 'Best B2B SEO Agencies in the UK (2026): 11 Checked, Plus FactoryJet',
   excerpt:
     'Eleven UK B2B SEO agencies for SaaS, professional services and manufacturers, each checked on its own website on 22 October 2026: where it is based, the sectors it names, what its B2B SEO pages cover, one published result and any price it prints. FactoryJet wrote this list and is on it, last.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 22, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '24 min read',
   imageUrl: `${IMG}.webp`,
   imageAlt:
     'Three colleagues at an oak meeting table review a laptop showing a grid of grey rows and blue blocks, a woman in a burgundy blouse pointing at the screen while a bearded older man holds a sheet and a younger woman in a teal jumper takes notes',
   meta: {
-    title: 'Best B2B SEO Agencies UK (2026): 11 Compared',
+    title: 'Best B2B SEO Agencies UK (2026): 11 Checked, Plus Us',
     description:
-      'Eleven UK B2B SEO agencies for SaaS, professional services and manufacturers, checked on their own sites on 22 Oct 2026, with the prices they publish.',
+      '11 UK B2B SEO agencies for SaaS, professional services and manufacturers, plus FactoryJet, checked on their own sites on 22 Oct 2026, with published prices.',
   },
   keyTakeaways: [
     'There is no single best B2B SEO agency in the UK. Match the firm to your sector: SaaS and tech (Gripped, MRS Digital, Polaris), professional services (Definition, Position Digital, Whitehat SEO), manufacturing (The SEO Works, JDR Group), wider B2B marketing teams (Push Group, Hallam), or links (Bulldog Digital Media).',
     'Every fact below was read on each firm’s own website on 22 October 2026. Nobody paid to be here, the order is not a ranking, and FactoryJet, which wrote the list, is last.',
     'We read four lists that rank for this search. All three written by agencies put their own firm first, and between them the four named 32 firms, only 5 of them more than once.',
-    'Six of the firms we checked print a price. Polaris publishes £3,000 to £19,500 a month by tier, Whitehat SEO from £1,967, Gripped from £3,500 plus project fees, and Definition a blended £140 an hour. UK guides put most B2B SEO at £1,500 to £5,000 a month.',
+    'Six of the firms we checked print a price, listed in the cost section below. UK guides put most B2B SEO at £1,500 to £5,000 a month.',
     'Only three of the eleven outside firms name comparison, pricing or demo pages on their B2B SEO pages, the pages B2B buyers use to build a shortlist: Gripped, The SEO Works and Bulldog.',
   ],
   faqs: FAQS,
@@ -430,7 +428,7 @@ export const post: BlogPost = {
       <div className="bg-amber-50 border border-amber-200 p-5 rounded-lg mb-8">
         <p className="font-semibold text-amber-900 mb-1">The short answer</p>
         <p className="text-amber-800 mb-3">
-          The best B2B SEO agency in the UK is the one that can show a result in your sector and report it as leads, not traffic. For SaaS and tech, look at Gripped, MRS Digital and Polaris. For law, accountancy, consulting and recruitment, Definition, Position Digital and Whitehat SEO. For manufacturers, The SEO Works and JDR Group. Push Group and Hallam run SEO inside wider B2B marketing teams, and Bulldog Digital Media sells links by the piece.
+          The best B2B SEO agency in the UK is the one that can show a result in your sector and report it as leads and sales. For SaaS and tech, look at Gripped, MRS Digital and Polaris. For law, accountancy, consulting and recruitment, Definition, Position Digital and Whitehat SEO. For manufacturers, The SEO Works and JDR Group. Push Group and Hallam run SEO inside wider B2B marketing teams, and Bulldog Digital Media sells links by the piece.
         </p>
         <p className="text-amber-800">
           We read every firm&rsquo;s own website on 22 October 2026. Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and is on it, last.
@@ -450,15 +448,16 @@ export const post: BlogPost = {
         <strong>A note on who wrote this.</strong> FactoryJet runs <a href="/uk/seo" className={link}>SEO for UK businesses</a>, B2B firms included, so we are on this list, in the last group. That is a good reason to read every list, ours included, with care. Our <a href="/blog/best-seo-agencies-uk" className={link}>list of the best SEO agencies in the UK</a> covers every kind of business, our <a href="/blog/best-ai-seo-agencies-uk" className={link}>UK AI SEO and GEO list</a> covers AI search specialists, and our <a href="/blog/best-ecommerce-seo-agencies-uk-2026" className={link}>UK ecommerce SEO list</a> covers online stores. This one is only about firms that sell to other businesses.
       </p>
       <p className="mb-6">
-        A few terms first. <strong>B2B SEO</strong> is SEO for companies whose customers are other companies. The <strong>ICP</strong> (ideal customer profile) is the kind of company you most want to sell to. <strong>Bottom-of-funnel pages</strong> are the ones buyers read just before they get in touch: comparisons, pricing, &ldquo;how we work&rdquo; and case studies. <strong>Pipeline</strong> is the value of deals your sales team is working on. <strong>GEO</strong> (generative engine optimisation) is work aimed at being cited in AI answers such as ChatGPT and Google AI Overviews.
+        A few terms first. <strong>B2B SEO</strong> is SEO for companies whose customers are other companies. The <strong>ICP</strong> (ideal customer profile) is the kind of company you most want to sell to. <strong>Bottom-of-funnel pages</strong> are the ones buyers read just before they get in touch: comparisons, pricing, &ldquo;how we work&rdquo; and case studies. <strong>Pipeline</strong> is the value of deals your sales team is working on. <strong>GEO</strong> (generative engine optimisation) is work aimed at being cited in AI answers such as ChatGPT and Google AI Overviews. <strong>AEO</strong> (answer engine optimisation) is another name for much the same work. <strong>Share of voice</strong> is how often you are named for a set of searches compared with your rivals.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The UK B2B SEO agencies at a glance</h2>
       <p className="mb-4">
         Scan this first. Find the rows that match your sector, then read those profiles in full.
       </p>
-      <div className="overflow-x-auto mb-8 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-sm text-gray-600 mb-2">Swipe sideways to see every column.</p>
+      <div className="overflow-x-auto mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 820 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Agency</th>
@@ -497,8 +496,9 @@ export const post: BlogPost = {
       <p className="mb-4">
         Four jobs separate B2B SEO from ordinary SEO: pages for buyers who are comparing suppliers, moving a site without losing rankings, showing up in AI answers, and reporting results as leads or pipeline. This table shows which of the four each firm names on the B2B pages we read. &ldquo;Not named&rdquo; means we did not find it there, not that the firm cannot do it, so ask.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-sm text-gray-600 mb-2">Swipe sideways to see every column.</p>
+      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 680 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Agency</th>
@@ -550,9 +550,9 @@ export const post: BlogPost = {
               </p>
               {a.name === 'Whitehat SEO' && (
                 <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8 not-prose">
-                  <p className="font-semibold text-orange-900 mb-2">Not sure which of these fits your firm?</p>
+                  <p className="font-semibold text-orange-900 mb-2">Our free audit checks your site against twelve points</p>
                   <p className="text-orange-800 mb-3">
-                    Our free SEO audit runs twelve checks on your site, including whether ChatGPT and Google&rsquo;s AI Overviews name you, and tells you which pages to fix first, whoever you hire to fix them.
+                    It covers your rankings and pages, including whether ChatGPT and Google&rsquo;s AI Overviews name you, and tells you which pages to fix first, whoever you hire to fix them.
                   </p>
                   <a href="/uk/seo" className="inline-block bg-[#B23E13] text-white px-5 py-2 rounded font-semibold hover:bg-[#9A3510] transition-colors">
                     Get a free UK SEO audit
@@ -605,11 +605,12 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How much does a B2B SEO agency cost in the UK?</h2>
       <p className="mb-4">
-        Usually £1,500 to £5,000 a month, more for SaaS and enterprise. Three UK guides we read on 22 October 2026 agree on the core range. <a href="https://rudo.co.uk/insights/articles/b2b-seo-cost-uk/" className={link} rel="noopener" target="_blank">Rudo</a> says most UK B2B retainers &ldquo;run from around £1,500 a month at the entry level to £5,000 or more for established programmes, with enterprise engagements reaching £10,000–£25,000-plus&rdquo;. <a href="https://blog.gorilla.marketing/how-much-does-seo-cost/" className={link} rel="noopener" target="_blank">Gorilla Marketing</a> puts professional services at &ldquo;£1,500-£5,000/month minimum for meaningful progress&rdquo; and says &ldquo;£3,000-£8,000/month are typical for growing SaaS companies&rdquo;. <a href="https://whitehat-seo.co.uk/digital-services-pricing" className={link} rel="noopener" target="_blank">Whitehat SEO</a> says most UK B2B companies spend £2,000 to £8,000 a month across two or three channels.
+        B2B SEO services in the UK usually cost £1,500 to £5,000 a month, more for SaaS and enterprise. Three UK guides we read on 22 October 2026 agree on the core range. <a href="https://rudo.co.uk/insights/articles/b2b-seo-cost-uk/" className={link} rel="noopener" target="_blank">Rudo</a> says most UK B2B retainers &ldquo;run from around £1,500 a month at the entry level to £5,000 or more for established programmes&rdquo;, with enterprise work at £10,000 to £25,000-plus. <a href="https://blog.gorilla.marketing/how-much-does-seo-cost/" className={link} rel="noopener" target="_blank">Gorilla Marketing</a> puts professional services at &ldquo;£1,500-£5,000/month minimum for meaningful progress&rdquo; and says &ldquo;£3,000-£8,000/month are typical for growing SaaS companies&rdquo;. <a href="https://whitehat-seo.co.uk/digital-services-pricing" className={link} rel="noopener" target="_blank">Whitehat SEO</a> says most UK B2B companies spend £2,000 to £8,000 a month across two or three channels.
       </p>
       <p className="mb-4">Here is what the agencies themselves print, copied exactly:</p>
-      <div className="overflow-x-auto mb-4 not-prose">
-        <table className="w-full border-collapse text-sm">
+      <p className="md:hidden text-sm text-gray-600 mb-2">Swipe sideways to see every column.</p>
+      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Agency</th>
@@ -652,7 +653,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-6">
-        The other firms publish no SEO price. Definition&rsquo;s hourly rate makes a useful yardstick: at £140 an hour, a £3,000 month buys about 21 hours of agency time, so ask any agency how many hours, pages and links your fee covers. For the full picture by business type, including audits, day rates and VAT, see our <a href="/blog/seo-cost-uk-2026" className={link}>guide to SEO cost in the UK</a>.
+        The other firms publish no SEO price. Ask any agency what your fee covers each month. For the full picture by business type, including audits, day rates and VAT, see our <a href="/blog/seo-cost-uk-2026" className={link}>guide to SEO cost in the UK</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What a B2B SEO engagement should cover</h2>
@@ -662,7 +663,7 @@ export const post: BlogPost = {
 
       <h3 className="text-xl font-bold mt-6 mb-3">Content built around the accounts you want</h3>
       <p className="mb-4">
-        Account-based SEO starts from your ideal customer profile, not a keyword tool. If your best clients are mid-size logistics firms, the content should answer the questions their operations directors, finance leads and IT teams ask, in their words. Definition interviews clients&rsquo; subject matter experts and sales teams before writing, and Gripped says it will tell you if your ideal customer profile is too broad. Expect fewer, longer pages than a B2C plan, each written for a role in the buying group, with case studies from the same sector.
+        Account-based SEO starts from your ideal customer profile. The content should answer the questions each role in the buying group asks, in their words. Definition interviews clients&rsquo; subject matter experts and sales teams before writing, and Gripped says it will tell you if your ideal customer profile is too broad.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">Comparison and pricing pages</h3>
@@ -694,7 +695,7 @@ export const post: BlogPost = {
 
       <h3 className="text-xl font-bold mt-6 mb-3">Reporting in leads and pipeline</h3>
       <p className="mb-4">
-        Rankings and traffic are early signs, not results. Ask for reporting that follows an organic visit to a form fill, then to a sales conversation, then to a deal, which usually means joining your analytics to your CRM. Whitehat SEO tracks this through HubSpot, Bulldog names HubSpot, Salesforce and Zoho, and Definition reports inbound leads and cost per acquisition. With a sales cycle of six months, the first closed deal from SEO may arrive well after the first ranking.
+        Rankings and traffic are early signs. Leads and deals are the results. Ask for reporting that follows an organic visit to a form fill, then to a sales conversation, then to a deal, which usually means joining your analytics to your CRM. Whitehat SEO tracks this through HubSpot, Bulldog names HubSpot, Salesforce and Zoho, and Definition reports inbound leads and cost per acquisition. With a sales cycle of six months, the first closed deal from SEO may arrive well after the first ranking.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How to choose a B2B SEO agency in the UK</h2>
@@ -714,7 +715,7 @@ export const post: BlogPost = {
       </p>
 
       <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8">
-        <p className="font-semibold text-orange-900 mb-2">Want a second opinion on your shortlist?</p>
+        <p className="font-semibold text-orange-900 mb-2">Get a second opinion on your shortlist</p>
         <p className="text-orange-800 mb-3">
           Send us your site and the proposals you have. We will check where you rank and where AI answers name you, tell you which pages your buyers are missing, and fix the price in writing before any work starts.
         </p>

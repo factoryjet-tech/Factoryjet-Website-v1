@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/netsuite-ai-agents, built 2026-10-29.
@@ -28,7 +29,10 @@ import '../ai-agents/ai-agents.css';
       (imports, components, CSS, schema). The copy is written fresh for the UK.
    6. The FAQ schema is generated from FAQ_ITEMS, the same array the visible
       FAQ renders. Never add a second list of questions.
-   7. Search data: DataForSEO, United Kingdom, 2026-10-29. "netsuite uk" 70 a
+   7. Ask Oracle and NetSuite Next facts (nsAskOracle, nsNextFaq) were read on
+      docs.oracle.com on 2026-10-31. Oracle gives no country list there, so the
+      page claims no UK availability for them.
+   8. Search data: DataForSEO, United Kingdom, 2026-10-29. "netsuite uk" 70 a
       month, "netsuite ai" 50, "netsuite partner uk" 50, "netsuite ap
       automation" 30, "netsuite making tax digital" 10. Question wording draws
       on the People Also Ask boxes for "netsuite making tax digital" and
@@ -36,12 +40,14 @@ import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/netsuite-ai-agents';
 const PUBLISHED = '2026-10-29';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
+const UPDATED_LABEL = '31 October 2026';
+const AUTHOR_URL = 'https://factoryjet.com/author/bhavesh-barot';
 const READ_ON = '29 October 2026';
 const TITLE = 'NetSuite AI Agents UK: VAT, MTD and Approvals | FactoryJet';
-const H1 = 'NetSuite AI Agents for UK Companies: Bills, Orders and Quotes Drafted in Pounds With VAT';
+const H1 = 'NetSuite AI Agents for UK Companies';
 const DESCRIPTION =
-  'AI agents inside Oracle NetSuite for UK subsidiaries and UK-led groups: bills, orders and quotes in pounds with VAT, built around MTD and approvals. Demo first.';
+  'AI agents inside Oracle NetSuite for UK subsidiaries and UK-led groups: bills, orders and quotes in pounds with VAT, built around MTD and approvals.';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 
 /* Design values, copied from ../ai-agents/ai-agents.css so inline styles stay
@@ -76,6 +82,8 @@ const SRC = {
   nsRisks: { label: 'Oracle NetSuite Help Center: Associated Risks, Controls, and Mitigation Strategies', url: `${NS}/article_9002708453.html` },
   nsConcurrency: { label: 'Oracle NetSuite Help Center: AI Connector Service and Concurrency Governance', url: `${NS}/section_0827103226.html` },
   nsBest: { label: 'Oracle NetSuite Help Center: Best Practices for MCP Standard Tools SuiteApp', url: `${NS}/article_1017113407.html` },
+  nsAskOracle: { label: 'Oracle NetSuite Help Center: Ask Oracle', url: `${NS}/article_5100902387.html` },
+  nsNextFaq: { label: 'Oracle NetSuite Help Center: NetSuite Next FAQ', url: `${NS}/article_7130219835.html` },
   nsGenAi: { label: 'Oracle NetSuite Help Center: Generative AI Feature Availability in NetSuite', url: `${NS}/article_3132707887.html` },
   nsBillLimits: { label: 'Oracle NetSuite Help Center: Bill Capture Considerations', url: `${NS}/article_0417034348.html` },
   nsIpa: { label: 'Oracle NetSuite Help Center: Intelligent Payment Automation', url: `${NS}/article_8155141819.html` },
@@ -111,7 +119,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'connector',
     question: 'Does Oracle NetSuite use AI?',
     answer:
-      'Yes, in several places. Oracle lists Text Enhance and Enriched Bank Data as available everywhere, in all languages NetSuite supports. Bill Capture is listed for the United States only. Separately, the NetSuite AI Connector Service lets an outside AI client such as Claude or ChatGPT work with your records. A custom agent is the third route, for a job with rules that belong to your business.',
+      'Yes, in several places. Oracle lists Text Enhance and Enriched Bank Data as available everywhere, in all languages NetSuite supports. Bill Capture is listed for the United States only. Ask Oracle, the chat assistant in NetSuite Next, is being released in phases, so Oracle says it may not be in your account yet. Separately, the NetSuite AI Connector Service lets an outside AI client such as Claude or ChatGPT work with your records. A custom agent is the third route, for a job with rules that belong to your business.',
   },
   {
     category: 'connector',
@@ -148,13 +156,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'uk',
     question: 'Can a UK subsidiary use NetSuite Intelligent Payment Automation?',
     answer:
-      'Not to pay its own suppliers in pounds. Oracle’s limitations page says only companies with US business subsidiaries can use the SuiteApp to pay vendors in the United States, that bill payments are in US dollars only, and that it works only in a production account. In a OneWorld group, the US entity can use it while the UK entity pays another way.',
-  },
-  {
-    category: 'uk',
-    question: 'How do UK companies pay suppliers from NetSuite?',
-    answer:
-      'Oracle’s United Kingdom setup guide points to the Electronic Bank Payments SuiteApp, which it says enables bank payments of vendor bills, employee expenses, commissions, customer refunds and customer payments within the UK. An agent can prepare the bills and flag the odd ones before the payment run. Approving the run and releasing the money stay with named people on your finance team.',
+      'Not to pay its own suppliers in pounds. Oracle’s limitations page says only companies with US business subsidiaries can use the SuiteApp to pay vendors in the United States, that bill payments are in US dollars only, and that it works only in a production account. In a OneWorld group, the US entity can use it. The UK entity usually pays through the Electronic Bank Payments SuiteApp, which Oracle’s UK setup guide lists for bank payments of vendor bills, expenses and refunds within the UK.',
   },
   {
     category: 'uk',
@@ -215,7 +217,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'agents',
     question: 'Is NetSuite better than Xero for a growing UK business?',
     answer:
-      'It depends on the shape of the company: how many legal entities, currencies and warehouses you run, and who else in the group works in the same ledger. We do not sell licences for either, so we have no stake in the answer. Our part starts once the ledger is chosen. If you are on Xero, our Shopify Xero integration page covers that side. If you are on NetSuite, this page does.',
+      'NetSuite tends to suit a company with several legal entities, currencies or warehouses, or one whose group already works in NetSuite. Xero tends to suit a single UK company with simpler books. We do not sell licences for either, so we have no stake in the answer. Our part starts once the ledger is chosen. If you are on Xero, our Shopify Xero integration page covers that side. If you are on NetSuite, this page does.',
   },
   // Data, roles and the law
   {
@@ -234,7 +236,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'data',
     question: 'Does the EU AI Act affect a UK company that sells into the EU?',
     answer:
-      'Ask your counsel, because it depends on what the system does and who it faces. The European Commission says the Act became applicable on 2 August 2026, with some exceptions, and that its transparency rules took effect in August 2026. One example it gives: people using a chatbot should be made aware they are talking to a machine. Back-office agents that draft bills for staff are a different case from a customer chat.',
+      'It can, if the system faces people in the EU. The European Commission says the Act became applicable on 2 August 2026, with some exceptions, and that its transparency rules took effect in August 2026. One example it gives: people using a chatbot should be made aware they are talking to a machine. A back-office agent that drafts bills for your staff is a different case. Your counsel decides which rules apply.',
   },
   {
     category: 'data',
@@ -245,9 +247,15 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // Cost and working with us
   {
     category: 'working',
-    question: 'How much does a NetSuite AI agent cost in the UK?',
+    question: 'How much does a NetSuite AI agent cost in the UK, and how long does it take?',
     answer:
-      'The clearest UK figures we found are from LeverX, in a guide dated 4 October 2026. It puts a single-workflow agent at £10,000 to £30,000 over 5 to 9 weeks, a multi-step agent with integrations at £30,000 to £80,000 over 10 to 18 weeks, and an enterprise multi-agent system at £80,000 to £200,000 or more. LeverX does not say whether VAT is included, and the bands are not NetSuite-specific. FactoryJet quotes a fixed price per phase in writing after a short scoping call.',
+      'LeverX, in a UK guide dated 4 October 2026, puts a single-workflow agent at £10,000 to £30,000 over 5 to 9 weeks. Those are LeverX’s market bands for any agent, not NetSuite figures. The cost section on this page lists all three bands. FactoryJet quotes a fixed price per phase in writing after a short scoping call, and shows a first version on your data before you sign.',
+  },
+  {
+    category: 'working',
+    question: 'Do we need a NetSuite partner to add an AI agent?',
+    answer:
+      'No. The agent works inside the NetSuite account you already have, under a role your administrator creates for it. If a NetSuite partner looks after your licences and set-up today, they keep doing that. They are welcome on the scoping call, so the agent’s role, SuiteApps and approval set-up fit what they already run.',
   },
   {
     category: 'working',
@@ -277,6 +285,12 @@ const SHIPS: { name: string; where: string; uk: string; sources: SrcKey[] }[] = 
     where: 'Free SuiteApp',
     uk: 'Record, report, saved search and query tools. Oracle says AI clients usually handle about 5,000 rows per call.',
     sources: ['nsFaq'],
+  },
+  {
+    name: 'Ask Oracle (NetSuite Next)',
+    where: 'Released in phases. Oracle says it may not be in your account yet',
+    uk: 'A chat assistant for questions about your data. Your administrator sees a banner once the account is eligible.',
+    sources: ['nsAskOracle', 'nsNextFaq'],
   },
   {
     name: 'Bill Capture',
@@ -318,7 +332,7 @@ const JOBS: { n: string; title: string; body: string; items: string[]; note: str
     body: 'UK suppliers email PDFs in pounds, EU suppliers in euros. Each one becomes a draft vendor bill in NetSuite, held until someone approves it.',
     items: [
       'Reads the supplier, invoice number, VAT number, net, VAT and gross, and the VAT rate on each line',
-      'Finds the purchase order and item receipt, so NetSuite’s 3 Way Match workflow can check them',
+      'Finds the purchase order and item receipt, so NetSuite’s 3 Way Match workflow (bill, order and goods received must agree) can check them',
       'Flags a supplier whose bank details differ from the vendor record, and holds the bill',
       'Suggests the account, department and tax code from how your team coded that supplier before',
     ],
@@ -332,7 +346,7 @@ const JOBS: { n: string; title: string; body: string; items: string[]; note: str
     items: [
       'Matches the customer, the delivery address and each item, and flags a line it cannot match',
       'Checks the customer’s price against NetSuite and names the line where they differ',
-      'Sets an External ID so the same email cannot create a second order',
+      'Sets an External ID, a unique reference from the source document, so the same email cannot create a second order',
     ],
     note: 'Saved as Pending Approval. Oracle says such an order must be approved by someone with the right permissions before NetSuite processes it.',
     sources: ['nsSoApprove', 'nsBest'],
@@ -368,7 +382,7 @@ const JOBS: { n: string; title: string; body: string; items: string[]; note: str
     body: 'A week before the VAT return, the agent reads the period’s transactions and lists the ones whose tax code looks out of line.',
     items: [
       'A zero-rated code on a supplier who normally charges 20%',
-      'An overseas service bought with no reverse charge code, or an import with no postponed VAT accounting code',
+      'An overseas service bought with no reverse charge code, or an import with no postponed VAT accounting code (import VAT declared on the return, not paid at the border)',
       'A sales invoice missing a tax code',
       'A bill whose VAT does not equal net times rate, to the penny',
       'Credits posted at a different rate from the invoice they reverse',
@@ -382,7 +396,7 @@ const JOBS: { n: string; title: string; body: string; items: string[]; note: str
 const GUARDS: { rule: string; keeper: string; note: string; sources: SrcKey[] }[] = [
   { rule: 'No Administrator role', keeper: 'NetSuite enforces', note: 'The connector will not run under Administrator or a full-permission role.', sources: ['nsPerms'] },
   { rule: 'A log of every call', keeper: 'NetSuite enforces', note: 'The Execution Log is kept 21 days in production and 7 days in a sandbox.', sources: ['nsFaq'] },
-  { rule: 'Shared API capacity', keeper: 'NetSuite enforces', note: 'The connector uses whatever concurrency your other integrations have not been allocated.', sources: ['nsConcurrency'] },
+  { rule: 'Shared API capacity', keeper: 'NetSuite enforces', note: 'The connector uses whatever concurrency (the number of API requests NetSuite runs at once) your other integrations have not been allocated.', sources: ['nsConcurrency'] },
   { rule: 'One role per agent, read-only first', keeper: 'We set up', note: 'Oracle advises separate roles per tool and read-only or low-impact tools during first evaluation.', sources: ['nsRisks'] },
   { rule: 'An External ID on every record', keeper: 'We set up', note: 'Oracle’s best practice when a tool creates a record. Oracle says it helps prevent duplicate records.', sources: ['nsBest'] },
   { rule: 'Our own log, kept longer', keeper: 'We set up', note: 'What arrived, what was read, what was saved and who approved it, kept for your audit period.', sources: ['govVatRecords'] },
@@ -432,7 +446,7 @@ const jsonLd = {
         '@type': 'Person',
         name: 'Bhavesh Barot',
         jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
+        url: AUTHOR_URL,
         sameAs: [
           'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
           'https://github.com/factoryjet-tech',
@@ -457,7 +471,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['netsuite-ai-agents'] },
   openGraph: {
     title: TITLE,
     description:
@@ -483,7 +497,7 @@ function Sources({ ids }: { ids: SrcKey[] }) {
       {ids.map((id, i) => (
         <span key={id}>
           {i > 0 ? '; ' : ''}
-          <a href={SRC[id].url} target="_blank" rel="noopener noreferrer" style={srcLink}>{SRC[id].label}</a>
+          <a href={SRC[id].url} target="_blank" rel="noopener noreferrer" style={srcLink}>{SRC[id].label.replace('Oracle NetSuite Help Center: ', 'Oracle: ')}</a>
         </span>
       ))}
       .
@@ -514,7 +528,7 @@ export default function NetSuiteAiAgentsUKPage() {
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 580 }}>
-                  You run the UK arm of a group on NetSuite OneWorld, or your UK business moved onto NetSuite from
+                  Bills, orders and quotes drafted in pounds with VAT, for your team to approve. You run the UK arm of a group on NetSuite OneWorld, or your UK business moved onto NetSuite from
                   Sage 200 or Xero. Supplier invoices still arrive as PDFs, trade orders as emails, and orders from
                   Shopify, Amazon.co.uk or Linnworks pass through on their way to the ledger. FactoryJet builds AI
                   agents that turn those documents into vendor bills, sales orders and estimates in NetSuite, coded
@@ -523,15 +537,15 @@ export default function NetSuiteAiAgentsUKPage() {
 
                 <div className="byline mt-6" style={{ maxWidth: 580 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />{READ_ON}</div>
+                  <div className="who"><a href="/author/bhavesh-barot" style={{ fontWeight: 700, textDecoration: 'underline' }}>Bhavesh Barot</a>, Founder<br /><span>500+ businesses served since 2014</span></div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 580 }}>
-                  <HeroInlineForm region="uk" source="uk_netsuite_ai_agents_hero" service="NetSuite AI Agents" submitLabel="See a demo on my data" />
+                  <HeroInlineForm region="uk" source="uk_netsuite_ai_agents_hero" service="NetSuite AI Agents" submitLabel="See a demo on my data" trustText="Founder replies within one business day. No spam, no obligation." />
                 </div>
                 <p style={{ fontSize: 13.5, color: T.n400, marginTop: 10, maxWidth: 580 }}>
-                  Working software on your own data before you sign. Founder replies within one business day.
+                  Working software on your own data before you sign.
                 </p>
               </div>
 
@@ -551,7 +565,7 @@ export default function NetSuiteAiAgentsUKPage() {
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">AI Connector Service</div><div className="scorecard-note">Claude or ChatGPT, non-admin role</div></div>
-                  <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>Not paid</div>
+                  <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>No charge from Oracle</div>
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Agent built for your rules</div><div className="scorecard-note">drafts in pounds, person approves</div></div>
@@ -570,7 +584,7 @@ export default function NetSuiteAiAgentsUKPage() {
               <span className="lab">Can a UK company use AI agents inside NetSuite?</span>
               <p>
                 Yes. Oracle’s AI Connector Service lets Claude or ChatGPT work with NetSuite records under a limited
-                role, and Oracle says it is not a paid feature. Two of Oracle’s finance AI tools stop at the US
+                role. Two of Oracle’s finance AI tools stop at the US
                 border: Bill Capture is listed for the United States only, and Intelligent Payment Automation pays
                 in US dollars only. A UK subsidiary that wants supplier invoices and orders drafted automatically
                 usually needs a custom agent, built around VAT, Making Tax Digital and its own approvals.
@@ -589,8 +603,8 @@ export default function NetSuiteAiAgentsUKPage() {
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
               If a US parent chose NetSuite and set it up around US habits, the UK team inherits a ledger where two
-              of Oracle’s finance AI tools do not reach it. Moving system is rarely the answer. One agent on one job,
-              built for how a UK finance team codes, approves and files, usually is.
+              of Oracle’s finance AI tools do not reach it. Changing systems rarely fixes that. One agent on one job,
+              built for how a UK finance team codes and approves bills, usually does.
             </p>
           </div>
         </section>
@@ -601,7 +615,7 @@ export default function NetSuiteAiAgentsUKPage() {
             <ul className="col-4" style={{ gap: 20 }}>
               {[
                 { v: '500+', t: 'businesses served by FactoryJet since it was founded in 2014', s: 'About FactoryJet', u: '/about' },
-                { v: 'US only', t: 'is where Oracle lists Bill Capture, its AI that reads vendor bills', s: 'Oracle, Bill Capture considerations', u: SRC.nsBillLimits.url },
+                { v: '10,000', t: 'bank transactions is the most Oracle’s Enriched Bank Data matches in one rule run', s: 'Oracle, Generative AI feature availability', u: SRC.nsGenAi.url },
                 { v: '6 years', t: 'is the minimum GOV.UK sets for keeping VAT records, 10 under the One Stop Shop schemes', s: 'GOV.UK, Keeping VAT records', u: SRC.govVatRecords.url },
                 { v: '21 days', t: 'is how long Oracle keeps the AI connector’s Execution Log in production', s: 'Oracle, AI Connector FAQ', u: SRC.nsFaq.url },
               ].map((r) => (
@@ -627,7 +641,8 @@ export default function NetSuiteAiAgentsUKPage() {
                 can, we say so and the project gets smaller.
               </p>
             </div>
-            <div className="card mt-10" tabIndex={0} role="region" aria-label="NetSuite AI features and UK availability" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={3}>
+            <p className="md:hidden mt-8" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-10" tabIndex={0} role="region" aria-label="NetSuite AI features and UK availability" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={3}>
                 <thead>
                   <tr>
                     <th>Oracle feature</th>
@@ -650,7 +665,7 @@ export default function NetSuiteAiAgentsUKPage() {
             <p className="mt-6" style={{ maxWidth: 800 }}>
               The gap sits in accounts payable. A US sister company can have bills read by Bill Capture and paid
               through BILL. The UK company next to it in the same OneWorld account usually keys its supplier invoices
-              by hand or through a separate capture tool, and pays through Electronic Bank Payments. That gap is where a custom agent earns its place. For
+              by hand or through a separate capture tool, and pays through Electronic Bank Payments. That gap is where NetSuite AP automation with a custom agent earns its place. For
               supplier bills on other UK ledgers too, see our{' '}
               <a href="/uk/accounts-payable-automation" style={inlineLink}>UK accounts payable automation</a> page.
             </p>
@@ -690,6 +705,14 @@ export default function NetSuiteAiAgentsUKPage() {
               Stripe, GoCardless, Klarna or Clearpay settlement. For trade storefronts that feed NetSuite, see{' '}
               <a href="/uk/b2b-ecommerce" style={inlineLink}>B2B ecommerce in the UK</a>.
             </p>
+            <p className="mt-4" style={{ maxWidth: 800 }}>
+              Jobs 01 and 02 also run on other ledgers. See{' '}
+              <a href="/uk/document-intake-ai-agents" style={inlineLink}>document intake AI agents</a> for invoices and
+              forms,{' '}
+              <a href="/uk/sales-order-automation-ai-agents" style={inlineLink}>sales order automation</a> for trade
+              orders, and <a href="/uk/erp-ai-agents" style={inlineLink}>ERP AI agents in the UK</a> for NetSuite
+              automation alongside Odoo, SAP Business One and other ERPs.
+            </p>
           </div>
         </section>
 
@@ -714,8 +737,8 @@ export default function NetSuiteAiAgentsUKPage() {
                     must use digital links, and it lists API transfer and automated data transfer among the links it
                     accepts. An agent that writes a vendor bill into NetSuite through its API keeps that chain
                     digital. Keying a supplier invoice in by hand is also allowed: HMRC accepts manually entered
-                    purchase invoice data as the first record (Notice 700/22, Example 1). So the agent is not what
-                    makes you compliant. What it changes is fewer keying errors and bills drafted faster.
+                    purchase invoice data as the first record (Notice 700/22, Example 1). So MTD compliance does not
+                    depend on the agent. The agent cuts keying errors and drafts bills faster.
                   </p>
                   <p>
                     One catch for testing. Oracle says the MTD feature does not run in sandbox accounts, because HMRC
@@ -758,7 +781,8 @@ export default function NetSuiteAiAgentsUKPage() {
                 Three are enforced by NetSuite whatever we do. Three we set up. Two stay with your team for good.
               </p>
             </div>
-            <div className="card mt-10" tabIndex={0} role="region" aria-label="Guardrails on a NetSuite agent" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 760 }} data-columns={3}>
+            <p className="md:hidden mt-8" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-10" tabIndex={0} role="region" aria-label="Guardrails on a NetSuite agent" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 760 }} data-columns={3}>
                 <thead>
                   <tr>
                     <th>Guardrail</th>
@@ -811,7 +835,7 @@ export default function NetSuiteAiAgentsUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">Who builds it</span>
-                <h2>ERP work behind this page, and two UK trade businesses we work with</h2>
+                <h2>Who builds NetSuite agents for UK teams, and what ERP work sits behind it?</h2>
                 <div className="stack mt-6">
                   <p>
                     FactoryJet has worked on NetSuite, Odoo, SAP Business One, ERPNext and custom ERPs, on RFQ
@@ -822,8 +846,8 @@ export default function NetSuiteAiAgentsUKPage() {
                     Two UK trade businesses we work with, on other platforms. <b>GPSUK</b> sells promotional
                     products to business buyers through a trade storefront we built on Commerceflo, where buyers log
                     in and see their own account prices. <b>Sow Easy</b>, a UK wholesale distributor, is getting a
-                    WooCommerce trade store that reads stock, pricing and SKUs from Odoo. That build is in progress
-                    and being tested on staging.
+                    WooCommerce trade store that reads stock, pricing and SKUs from Odoo. The Odoo integration is
+                    tested against Odoo’s staging system, and launch is still ahead.
                   </p>
                 </div>
                 <p className="mt-6" style={{ maxWidth: 600 }}>
@@ -835,12 +859,12 @@ export default function NetSuiteAiAgentsUKPage() {
                 </p>
               </div>
               <div className="card card-top-orange">
-                <span className="eyebrow">Systems UK NetSuite users connect</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Shops and marketplaces</div><div className="scorecard-note">Shopify, Amazon.co.uk, eBay UK, OnBuy, ManoMano</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Orders</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Stock and dispatch</div><div className="scorecard-note">Linnworks, Brightpearl, Mintsoft</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Stock</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Couriers</div><div className="scorecard-note">Royal Mail, DPD, Evri</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Costs</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Payments</div><div className="scorecard-note">Stripe, GoCardless, Klarna, Clearpay</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Settlements</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Ledgers before NetSuite</div><div className="scorecard-note">Sage 50, Sage 200, Xero, QuickBooks</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>History</div></div>
+                <span className="eyebrow">What an agent can read from each system</span>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Shops and marketplaces</div><div className="scorecard-note">Shopify, Amazon.co.uk, eBay UK: order lines and customer, to draft the sales order</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Orders</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Stock and dispatch</div><div className="scorecard-note">Linnworks, Brightpearl, Mintsoft: dispatch files, to check what shipped against the order</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Stock</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Couriers</div><div className="scorecard-note">Royal Mail, DPD, Evri: courier invoices, to draft the freight bill</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Costs</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Payments</div><div className="scorecard-note">Stripe, GoCardless, Klarna, Clearpay: settlement reports, to match fees and payouts</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Settlements</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Ledgers before NetSuite</div><div className="scorecard-note">Sage 50, Sage 200, Xero: past coding, to suggest the account and tax code</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>History</div></div>
               </div>
             </div>
           </div>
@@ -941,7 +965,8 @@ export default function NetSuiteAiAgentsUKPage() {
               <p className="lead mt-4">
                 Every Oracle feature, limit and requirement on this page was read on Oracle’s own help centre on
                 that day, and every tax and data rule on the HMRC, GOV.UK, ICO or European Commission page below.
-                Oracle releases NetSuite updates through the year, so open the linked page before you act on one.
+                The two Ask Oracle and NetSuite Next pages were added on {UPDATED_LABEL}. Oracle releases NetSuite
+                updates through the year, so open the linked page before you act on one.
               </p>
             </div>
             <ul className="col-2 mt-8" style={{ gap: 10 }}>
@@ -957,7 +982,7 @@ export default function NetSuiteAiAgentsUKPage() {
         {/* 12. FAQ */}
         <section className="sec-lg dot-grid" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>NetSuite AI questions from UK finance teams and their administrators</h2>
             </div>

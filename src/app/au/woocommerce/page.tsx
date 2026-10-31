@@ -7,15 +7,16 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/woocommerce';
-const UPDATED = '2026-10-29';
-const TITLE = 'WooCommerce Developers Australia | WooCommerce Agency | FactoryJet';
-const H1 = 'WooCommerce Development for Australian Businesses That Sell Through Xero, MYOB and a Warehouse';
+const UPDATED = '2026-10-31';
+const TITLE = 'WooCommerce Developers & Agency Australia | FactoryJet';
+const H1 = 'WooCommerce Development for Australian Businesses on Xero, MYOB and a Warehouse';
 const DESCRIPTION =
-  'WooCommerce developers for established Australian businesses: store rebuilds, B2B trade portals, Xero, MYOB, Cin7 and Unleashed sync, Afterpay, Zip and Australia Post.';
+  'WooCommerce developers for established Australian stores: rebuilds, B2B trade portals, Xero, MYOB and Cin7 sync, Afterpay, Zip and Australia Post.';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -56,6 +57,8 @@ const SRC_ZIP = 'https://wordpress.org/plugins/zipmoney-payments-woocommerce/';
 // consumed in Australia"; register if "your business has a GST turnover of $75,000 or more".
 // (ato.gov.au returned 403 to our fetch on 2026-10-29, so the government business portal is cited.)
 const SRC_BGA = 'https://business.gov.au/registrations/register-for-taxes/register-for-goods-and-services-tax-gst';
+// OAIC, about the Notifiable Data Breaches scheme (same URL cited on /au/website-maintenance).
+const SRC_OAIC_NDB = 'https://www.oaic.gov.au/privacy/notifiable-data-breaches/about-the-notifiable-data-breaches-scheme';
 // Market range (build only), WP Creative, Sydney WordPress agency, "How Much Does a Website Cost in
 // Australia?", updated 28 August 2026: eCommerce Website "AUD $10,000 – $50,000+"; Premium tier
 // "AUD $25,000 – $100,000+" for "Established businesses & eCommerce brands built to scale". The page
@@ -74,13 +77,13 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── Hiring a WooCommerce developer ──
   { category: 'hiring', question: 'What does a WooCommerce developer actually do?',
-    answer: 'A WooCommerce developer writes and fixes the code behind a WordPress store. Day to day that means custom plugins, theme templates, checkout changes, and the connections that carry orders into Xero or MYOB and stock back from Cin7 or Unleashed. On an established store the bigger job is often subtraction: finding which of the 40 installed plugins are slowing checkout or clashing, and replacing three of them with one small piece of code you own.' },
+    answer: 'A WooCommerce developer writes and fixes the code behind a WordPress store. Day to day that means custom plugins, theme templates, checkout changes, and the connections that carry orders into Xero or MYOB and stock back from Cin7 or Unleashed. On an established store the bigger job is often subtraction: finding which of the dozens of installed plugins are slowing checkout or clashing, and replacing three of them with one small piece of code you own.' },
   { category: 'hiring', question: 'How do I choose a WooCommerce agency in Australia?',
     answer: 'Ask three things before price. First, show us a live WooCommerce store you connected to accounting or stock software, and explain what syncs which way. Second, how do you test plugin updates before they touch the live store? Third, who owns the code, the hosting account and the admin logins when the project ends? An agency that answers all three plainly is worth a scoping call.' },
   { category: 'hiring', question: 'Is a freelancer enough, or do we need a WooCommerce agency?',
-    answer: 'Start with how much of the business runs through the store. A freelancer is a sensible choice for one contained job, such as a new product field or a broken shipping rule. When the store feeds Xero, a warehouse system and trade accounts, ask what happens in an EOFY or Click Frenzy week if that one person is away. Any agency you shortlist should name a second engineer who knows your store and show how code is reviewed before it reaches checkout.' },
+    answer: 'A freelancer suits one contained job, such as a new product field or a broken shipping rule. When the store feeds Xero, a warehouse system and trade accounts, ask what happens in an EOFY or Click Frenzy week if that one person is away. Any agency you shortlist should name a second engineer who knows your store and show how code is reviewed before it reaches checkout.' },
   { category: 'hiring', question: 'How much does WooCommerce development cost in Australia?',
-    answer: 'Published Australian ranges are wide. WP Creative, a Sydney WordPress agency, puts an ecommerce website at AUD $10,000 to $50,000 or more, and a premium build for established ecommerce brands at AUD $25,000 to $100,000 or more (updated 28 August 2026; the guide does not say whether GST is included). Integrations, trade pricing and data migration push a store up those bands. FactoryJet quotes a fixed price in writing after a short scoping call.',
+    answer: 'Published Australian ranges are wide. WP Creative, a Sydney WordPress agency, puts an ecommerce website at AUD $10,000 to $50,000 or more, and a premium build for established ecommerce brands at AUD $25,000 to $100,000 or more (updated 28 August 2026; the guide does not say whether GST is included). Integrations, trade pricing and data migration push a store up those bands. FactoryJet quotes a fixed price per phase in writing. Changes are quoted and approved per request, with no monthly minimum.',
     links: [{ href: SRC_WPCREATIVE, label: 'WP Creative website cost guide' }] },
   { category: 'hiring', question: 'Our previous WooCommerce developer has gone quiet. Can you take over?',
     answer: 'Yes. This is a common way our WooCommerce work starts. First we confirm that the hosting account, the domain and the payment gateway logins sit in your company’s name, because nobody can work safely without them. Then a written health check covers plugins and premium licences, custom code, the staging setup, speed and the Xero or MYOB sync, with risks ranked by what can stop orders. Urgent fixes come before anything new.' },
@@ -90,7 +93,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes. Woo’s own Xero extension creates an invoice in Xero for each order and applies the payment to it, sending product, shipping, discount and tax lines across. Its product page does not mention stock sync, so if stock lives in Xero or another system you need a separate decision about which system owns stock. Many established stores also prefer daily summary entries over one invoice per order, which needs a different connector or a small custom integration.',
     links: [{ href: SRC_XERO, label: 'Woo Xero extension' }] },
   { category: 'systems', question: 'Does WooCommerce work with MYOB?',
-    answer: 'It can, through third-party connectors or a custom integration using MYOB’s API. The setup question is the same as with Xero: do orders arrive as individual invoices or as a daily summary, where do Afterpay and Stripe fees land, and how is a refund recorded? MYOB Business suits most mid-sized stores. If you run MYOB Acumatica, treat it as an ERP project with its own data owner rules, not a plugin install.' },
+    answer: 'It can, through third-party connectors or a custom integration using MYOB’s API. The setup question is the same as with Xero: do orders arrive as individual invoices or as a daily summary, where do Afterpay and Stripe fees land, and how is a refund recorded? MYOB Business suits most mid-sized stores. If you run MYOB Acumatica, plan it as an ERP project with its own data owner rules. A plugin alone will not cover it.' },
   { category: 'systems', question: 'Can WooCommerce sync stock with Cin7, Unleashed or Odoo?',
     answer: 'Yes. Cin7 Core (formerly DEAR), Cin7 Omni, Unleashed, Odoo and NetSuite can all hold stock and prices while WooCommerce displays them and sends orders back. The rule we hold to is one owner per field. If both the website and the inventory system can change a stock level, they will eventually disagree. We map every field, name its owner in writing, and add an alert when a sync fails instead of letting it fail silently.' },
   { category: 'systems', question: 'How do I connect WooCommerce to Australia Post or StarTrack?',
@@ -102,7 +105,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   // ── Trade, GST and marketplaces ──
   { category: 'b2b', question: 'Is WooCommerce good for B2B wholesale in Australia?',
     answer: 'For many distributors and manufacturers, yes. A WooCommerce trade portal can hide prices from guests, give each account its own price list, show trade prices ex-GST, enforce minimum quantities, accept purchase order numbers and offer pay on account. Where it gets hard is a large catalogue with thousands of customer-specific prices. Then the prices should live in your ERP or inventory system and the store should read them.',
-    links: [{ href: '/au/ecommerce-development', label: 'B2B ecommerce in Australia' }] },
+    links: [{ href: '/au/b2b-ecommerce', label: 'B2B ecommerce in Australia' }] },
   { category: 'b2b', question: 'How should GST be set up in WooCommerce?',
     answer: 'WooCommerce tax settings cover the 10% GST rate, GST-free products, and whether prices are entered and shown including or excluding tax. Retail stores usually show GST-inclusive prices. Trade portals often show ex-GST prices to logged-in business buyers. The setting is easy. What breaks is the hand-off to accounting, so we agree the tax codes with your bookkeeper and check that Xero or MYOB receives the same totals the order shows.' },
   { category: 'b2b', question: 'Can WooCommerce list our products on Amazon.com.au, eBay or Kogan?',
@@ -113,28 +116,33 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Speed, hosting and privacy ──
   { category: 'running', question: 'Why is our WooCommerce store slow?',
-    answer: 'Usually one of four causes: hosting that is too small, plugins that load on every page, a heavy page builder theme, or years of order and session data in the database. Paying for a bigger server mostly hides the problem for a few months. Our first step is a measurement that names the specific plugins and database queries costing time. Older stores also gain from moving orders to High-Performance Order Storage, which WooCommerce has enabled by default on new installs since version 8.2.',
+    answer: 'Usually one of four causes: hosting that is too small, plugins that load on every page, a heavy page builder theme, or years of order and session data in the database. A bigger server mostly hides the problem for a few months. We start by measuring which plugins and database queries cost time. Older stores also gain from High-Performance Order Storage, on by default for new installs since WooCommerce 8.2.',
     links: [{ href: SRC_HPOS, label: 'WooCommerce HPOS documentation' }] },
   { category: 'running', question: 'What server specification should our WooCommerce hosting meet?',
-    answer: 'WooCommerce’s published minimums for version 10.8 and later are WordPress 6.9, PHP 8.3, MySQL 8.0 or MariaDB 10.6, HTTPS and a 256 MB WordPress memory limit. Treat those as the floor. A store taking steady orders also needs object caching, a staging copy, tested backups and enough server room for sale days. We usually recommend an Australian data centre so pages load fast for local shoppers, with the hosting account in your name.',
+    answer: 'WooCommerce’s published minimums for version 10.8 and later are WordPress 6.9, PHP 8.3, MySQL 8.0 or MariaDB 10.6, HTTPS and a 256 MB WordPress memory limit. Treat those as the floor. A store taking steady orders also needs object caching (keeping common database answers in memory), a staging copy, tested backups and enough server room for sale days. We usually recommend an Australian data centre so pages load fast for local shoppers, with the hosting account in your name.',
     links: [{ href: SRC_REQS, label: 'WooCommerce server requirements' }] },
   { category: 'running', question: 'How often does WooCommerce need updating?',
     answer: 'Plan on something most weeks. The WooCommerce release calendar puts core releases about five weeks apart, with security fixes possible in between, and WordPress, the theme and each plugin keep their own timetables. Premium plugins also stop updating when a licence lapses, which is a common way a store ends up stuck on old versions. We test each batch on a staging copy with a real checkout, apply it in a quiet hour, and keep a written log.',
     links: [{ href: SRC_RELEASE, label: 'WooCommerce release calendar' }] },
   { category: 'running', question: 'Does the Privacy Act apply to our WooCommerce store?',
-    answer: 'If your annual turnover has been over $3 million in any financial year since 2002, the Privacy Act applies. The OAIC defines a small business as one with annual turnover of $3 million or less, and some businesses are covered regardless of turnover, including health service providers and businesses trading in personal information. A store holds names, addresses, phone numbers and order history, so we limit admin access, remove plugins that copy customer data offsite without need, and keep a written list of where that data goes.',
+    answer: 'The OAIC defines a small business as one with annual turnover of $3 million or less, so a store above that line is generally covered by the Privacy Act. Some businesses are covered whatever their turnover, including health service providers and businesses trading in personal information. A store holds names, addresses and order history, so we limit admin access, remove plugins that copy customer data offsite, and list where that data goes.',
     links: [{ href: SRC_OAIC, label: 'OAIC guidance on small business' }] },
   { category: 'running', question: 'Is WooCommerce secure enough for an established business?',
-    answer: 'For an Australian store, security is partly a legal question. If the Privacy Act covers your business, a data breach likely to cause serious harm must be reported to the OAIC and to affected customers under the Notifiable Data Breaches scheme. Card numbers normally stay with Stripe, Afterpay or Zip, so the exposure is names, addresses and order history. We cut unused plugins, give each admin a separate login with two-factor sign-in, and restore a backup to prove it works.' },
+    answer: 'For an Australian store, security is partly a legal question. If the Privacy Act covers your business, a data breach likely to cause serious harm must be reported to the OAIC and to affected customers under the Notifiable Data Breaches scheme. Card numbers normally stay with Stripe, Afterpay or Zip, so the exposure is names, addresses and order history. We cut unused plugins, give each admin a separate login with two-factor sign-in, and restore a backup to prove it works.',
+    links: [{ href: SRC_OAIC_NDB, label: 'OAIC, Notifiable Data Breaches scheme' }] },
 
   // ── WooCommerce or Shopify ──
   { category: 'platform', question: 'Is WooCommerce or Shopify better for an Australian business?',
     answer: 'Start with where your stock and prices live. If Cin7, Unleashed or an ERP owns them, either platform can read them, and the choice comes down to who runs the software. WooCommerce keeps the code and database in your hands and sits well beside a large WordPress content site. Shopify runs hosting and checkout for you, with trade pricing through Shopify Plus or apps. FactoryJet builds on both platforms, so neither answer earns us more.',
     links: [{ href: '/au/shopify-development', label: 'Shopify development in Australia' }] },
   { category: 'platform', question: 'Should we move from WooCommerce to Shopify?',
-    answer: 'List what the store connects to first: Afterpay, Zip, Xero or MYOB, Australia Post or Sendle, and your inventory system. Then check that each one has a working Shopify connection that handles your GST setup and trade accounts. If every one does, and WordPress hosting and plugins are draining your attention, moving is reasonable. If the trade portal or checkout depends on custom code, a health check and a few weeks of fixes on the current store usually gives a clearer answer.' },
+    answer: 'List what the store connects to first: Afterpay, Zip, Xero or MYOB, Australia Post or Sendle, and your inventory system. Check that each has a working Shopify connection that handles your GST setup and trade accounts. If every one does, and WordPress hosting and plugins drain your attention, moving is reasonable. If the trade portal or checkout depends on custom code, a health check on the current store usually gives a clearer answer.',
+    links: [{ href: '/au/shopify-migration', label: 'Shopify migration in Australia' }] },
   { category: 'platform', question: 'Will we lose Google rankings if we rebuild or migrate a WooCommerce store?',
-    answer: 'Not if the move is planned around your web addresses. We crawl the current site, list every URL that earns traffic, keep titles and content that rank, and map each old address to its new one with a 301 redirect. Shopify uses fixed URL patterns such as /products/, so a WooCommerce to Shopify move needs a fuller redirect map than a rebuild on WooCommerce. We watch Search Console daily for the first weeks.',
+    answer: 'Not if the move is planned around your web addresses. We crawl the current site, list every URL that earns traffic, keep titles and content that rank, and map each old address to its new one with a 301 redirect, the permanent forwarding rule search engines follow. Shopify uses fixed URL patterns such as /products/, so a move to Shopify, or off Magento (now Adobe Commerce), needs a fuller map. We watch Search Console daily for the first weeks.',
+    links: [{ href: '/au/ecommerce-seo', label: 'Ecommerce SEO in Australia' }] },
+  { category: 'platform', question: 'Do you do SEO for WooCommerce stores?',
+    answer: 'Yes. WooCommerce SEO on an established store is mostly category pages, product data and speed. Category pages need their own copy instead of a bare product grid. Product titles and attributes need to match what buyers type. Slow plugins and heavy images get fixed, because speed affects both rankings and checkout. When URLs change in a rebuild, every old address gets a redirect so rankings carry across.',
     links: [{ href: '/au/ecommerce-seo', label: 'Ecommerce SEO in Australia' }] },
 ];
 
@@ -202,7 +210,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['woocommerce'] },
   openGraph: {
     title: TITLE,
     description:
@@ -226,21 +234,21 @@ const H1_LEAD = H1.slice(0, H1.lastIndexOf(H1_EMPHASIS)).trimEnd();
 const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
 
 /* Eight jobs, each one a situation an established Australian store brings to us. */
-const JOBS: { n: string; t: string; d: string; icon: string }[] = [
+const JOBS: { n: string; t: string; d: string; icon: string; link?: { href: string; label: string } }[] = [
   { n: '01', t: 'Steady a store that breaks on every update', d: 'A health check, a staging copy, then fixes in order of what can stop orders. Clashing plugins get replaced by one small piece of code you own.', icon: 'M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-4Zm-3 9 2 2 4-4' },
   { n: '02', t: 'Orders into Xero or MYOB the way your bookkeeper wants', d: 'Per-order invoices or daily summaries, Afterpay and Stripe fees to the right accounts, refunds that reverse cleanly. Signed off by the person who reconciles it.', icon: 'M5 3h14v18H5V3Zm3 4h8m-8 4h2m4 0h2m-8 4h2m4 0h2' },
   { n: '03', t: 'Stock and prices from Cin7, Unleashed, Odoo or NetSuite', d: 'One system owns each field, written down before any code. The store reads stock and price, sends orders back, and alerts someone when a sync fails.', icon: 'M4 7h16v12H4V7Zm4-4h8v4H8V3Zm-1 9h4m-4 3h7' },
   { n: '04', t: 'A trade portal for stockists and account customers', d: 'Hidden prices for guests, account price lists shown ex-GST, minimum quantities, purchase order numbers and pay on account for approved buyers.', icon: 'M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6' },
-  { n: '05', t: 'Checkout with Afterpay, Zip and Stripe', d: 'Each payment method tested with a real order and a refund, and the payment messaging on product pages kept useful rather than noisy.', icon: 'M3 6h18v12H3V6Zm0 4h18M7 15h4' },
+  { n: '05', t: 'Checkout with Afterpay, Zip and Stripe', d: 'Each payment method tested with a real order and a refund, with the instalment message on product pages kept to one short line.', icon: 'M3 6h18v12H3V6Zm0 4h18M7 15h4' },
   { n: '06', t: 'Australia Post, StarTrack and Sendle shipping', d: 'Rates by weight, size and postcode, labels printed from the order, tracking written back. Bulky items and remote postcodes priced so you stop losing margin on them.', icon: 'M3 7h11v9H3V7Zm11 3h4l3 3v3h-7M7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z' },
-  { n: '07', t: 'Marketplace listings from one product catalogue', d: 'Feeds to Amazon.com.au, eBay, Kogan, Bunnings Marketplace or THE ICONIC, with orders flowing back to one place and stock held by one owner.', icon: 'M4 6h16M4 12h16M4 18h10' },
+  { n: '07', t: 'Marketplace listings from one product catalogue', d: 'Feeds to Amazon.com.au, eBay, Kogan, Bunnings Marketplace or THE ICONIC, with orders flowing back to one place and stock held by one owner.', icon: 'M4 6h16M4 12h16M4 18h10', link: { href: '/au/amazon-agency', label: 'Amazon marketplace services in Australia' } },
   { n: '08', t: 'Speed work on stores with years of data', d: 'Measured before and after: plugin load, slow database queries, image weight and a move to High-Performance Order Storage where the store still uses the old order tables.', icon: 'M4 16a8 8 0 1 1 16 0m-8 0 4-5' },
 ];
 
 /* Numbered project steps. Titles carry their number ("01 · Your brief"). */
 const STEPS: { t: string; d: string }[] = [
   { t: '01 · Your brief or RFP', d: 'Send what you have: a written brief, a tender document, a spreadsheet of plugins, or a list of what keeps breaking. If you have none, a 30 minute call with the founder covers it and we write the brief back to you.' },
-  { t: '02 · A draft on your own data', d: 'Before you sign anything, we show working software built with your products or a copy of your store: a draft trade portal, a sync running against a sandbox Xero file, or the fixed checkout. You judge the work, not a slide deck.' },
+  { t: '02 · A draft on your own data', d: 'Before you sign anything, we show working software built with your products or a copy of your store: a draft trade portal, a sync running against a sandbox Xero file, or the fixed checkout. You judge working software before any contract.' },
   { t: '03 · Fixed price per phase, in writing', d: 'Each phase is scoped, priced and signed on its own. Phase one is often the health check and urgent fixes. You can stop after any phase and keep everything built so far.' },
   { t: '04 · Build on staging', d: 'All work happens on a staging copy while the live store keeps trading. Integrations are tested against sandbox accounts in Xero, MYOB or your inventory system before they touch real data.' },
   { t: '05 · Launch and defect cover', d: 'We switch over at a quiet hour and watch the first orders with you. Defects are fixed inside the build price for a cover period agreed before work starts.' },
@@ -248,6 +256,8 @@ const STEPS: { t: string; d: string }[] = [
 ];
 
 const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
+  { href: '/au/b2b-ecommerce', t: 'B2B ecommerce Australia', d: 'Trade portals, account pricing and quick order forms for distributors and manufacturers.', go: 'Explore B2B ecommerce →' },
+  { href: '/au/ecommerce-erp-integration', t: 'Ecommerce ERP integration Australia', d: 'Field maps and syncs between your store and NetSuite, Odoo, Cin7 or another ERP.', go: 'Explore ERP integration →' },
   { href: '/au/ecommerce-development', t: 'Ecommerce development Australia', d: 'Comparing WooCommerce with Shopify, BigCommerce, Adobe Commerce and Maropost for your catalogue and systems.', go: 'Explore ecommerce →' },
   { href: '/au/shopify-development', t: 'Shopify development Australia', d: 'When Shopify or Shopify Plus fits better, including migrations from WooCommerce with every URL redirected.', go: 'Explore Shopify →' },
   { href: '/au/website-maintenance', t: 'Website maintenance Australia', d: 'Tested updates, backups and checkout checks for WordPress and WooCommerce stores.', go: 'Explore maintenance →' },
@@ -300,22 +310,22 @@ export default function WooCommerceAUPage() {
               </div>
               <div className="specpanel-body">
                 <div className="specrow run">
-                  <span className="idx">before you sign</span>
+                  <span className="idx">Before signing</span>
                   <span className="title">A draft on your own data</span>
                   <span className="tag">Demo first</span>
                 </div>
                 <div className="specrow run">
-                  <span className="idx">scoped and signed one at a time</span>
+                  <span className="idx">Per phase</span>
                   <span className="title">Fixed price per phase</span>
                   <span className="tag">In writing</span>
                 </div>
                 <div className="specrow run">
-                  <span className="idx">inside the build price</span>
+                  <span className="idx">Build price</span>
                   <span className="title">Defect cover after launch</span>
                   <span className="tag">Included</span>
                 </div>
                 <div className="specrow hold">
-                  <span className="idx">repo, hosting and logins in your name</span>
+                  <span className="idx">Your name</span>
                   <span className="title">Code and accounts</span>
                   <span className="tag">Yours</span>
                 </div>
@@ -347,8 +357,8 @@ export default function WooCommerceAUPage() {
 
         <div className="wrap byline">
           <div className="av">BB</div>
-          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="who"><b><a href="https://www.linkedin.com/in/bhavesh-ai-gtm-expert/" {...extLink}>Bhavesh Barot</a></b>, Founder<br /><span>500+ businesses served since 2014.</span></div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST DEFINITION (GEO) ═══ */}
@@ -362,28 +372,32 @@ export default function WooCommerceAUPage() {
                 <div className="sec">§01</div>
                 <p data-speakable="true">
                   <span className="stat">A WooCommerce developer builds and looks after a store that runs on WordPress.</span>{' '}
-                  For an Australian business past its first few years, most of that work sits behind the storefront:
-                  orders reaching Xero or MYOB with GST and payment fees recorded correctly, stock and prices read from
-                  Cin7, Unleashed, Odoo or NetSuite, trade buyers seeing their own ex-GST prices, and Australia Post or
-                  StarTrack labels printing from the order.
+                  WooCommerce is a free plugin that turns a WordPress site into a store. For an Australian business
+                  past its first few years, most of the work sits behind the storefront. Orders reach Xero or MYOB
+                  with GST and payment fees recorded correctly. Stock and prices come from Cin7, Unleashed, Odoo or
+                  NetSuite. Trade buyers see their own ex-GST prices, and Australia Post or StarTrack labels print
+                  from the order.
                 </p>
               </div>
               <div className="fact">
                 <div className="sec">§02</div>
                 <div>
-                  <div className="factlabel">Three terms on this page</div>
+                  <div className="factlabel">Five terms on this page</div>
                   <p>
                     A <b>plugin</b> is an add-on that gives WordPress a new feature; WooCommerce itself is one. An{' '}
                     <b>integration</b> is the code that moves records between WooCommerce and your other software, for
                     example a paid order becoming a Xero invoice. <b>Staging</b> is a private copy of your store where changes are tested before
-                    real customers see them.
+                    real customers see them. An <b>ERP</b> (enterprise resource planning system), such as NetSuite or
+                    Odoo, is the software that runs stock, buying and finance in one place. <b>HPOS</b>, short for
+                    High-Performance Order Storage, is WooCommerce’s newer way of keeping orders in their own database
+                    tables.
                   </p>
                 </div>
               </div>
               <div className="fact">
                 <div className="sec">§03</div>
                 <p>
-                  WooCommerce costs nothing to download, and WordPress.org counts it on 7+ million active sites. That popularity is why so many stores end up with 30 to 60 plugins from different
+                  WooCommerce costs nothing to download, and WordPress.org counts it on 7+ million active sites. That popularity is why so many stores end up with dozens of plugins from different
                   authors. Our first job on an established store is deciding which ones to keep, which to replace with
                   a small custom plugin, and which system should own each piece of data.
                 </p>
@@ -403,15 +417,15 @@ export default function WooCommerceAUPage() {
                 booked twice in Xero, a stockist who gave up and phoned, or an update that took checkout down.
               </p>
             </div>
-            <div className="capgrid">
+            <ul className="capgrid" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
               {JOBS.map((s, i) => (
-                <div key={s.n} className={`cap cap-${i + 1}`}>
+                <li key={s.n} className={`cap cap-${i + 1}`}>
                   <div className="caphead"><span className="capid">JOB‑{s.n}</span><svg {...CAP_ICON}><path d={s.icon} /></svg></div>
                   <h3>{s.t}</h3>
-                  <p>{s.d}</p>
-                </div>
+                  <p>{s.d}{s.link && <>{' '}See <a href={s.link.href}>{s.link.label}</a>.</>}</p>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -436,7 +450,8 @@ export default function WooCommerceAUPage() {
                   MYOB Business, QuickBooks Online and Odoo follow the same pattern with different connectors. NetSuite
                   and MYOB Acumatica are ERP projects: customers, price lists and stock usually live there, and the
                   store reads them. For each system we write a one-page field map listing what moves, in which
-                  direction, how often, and who gets the alert when a sync fails.
+                  direction, how often, and who gets the alert when a sync fails. Our{' '}
+                  <a href="/au/ecommerce-erp-integration">ecommerce ERP integration</a> page covers that work in more detail.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><p>
                   Payments and shipping close the loop. Afterpay publishes its own{' '}
@@ -483,7 +498,7 @@ export default function WooCommerceAUPage() {
                 </ul>
               </div>
             </div>
-            <div className="timeline">
+            <div className="timeline timeline-3">
               {STEPS.map((s) => {
                 const [idx, title] = s.t.split(' · ');
                 return (
@@ -519,14 +534,14 @@ export default function WooCommerceAUPage() {
                 make the quotes line up, whether you send them to us or to anyone else.
               </p>
             </div>
-            <div className="platlist" role="list">
-              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Systems and owners.</h3></div><p className="plat-build">Accounting, inventory, ERP, CRM and carriers by name, and which one you treat as the truth for stock and price.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Catalogue shape.</h3></div><p className="plat-build">Number of products and variants, bundles, made-to-order items, and how often prices change.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Customer types.</h3></div><p className="plat-build">Retail only, or trade accounts too, with ex-GST pricing, payment terms and purchase order numbers.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Current plugin list.</h3></div><p className="plat-build">Copy it from Tools &gt; Site Health &gt; Info in the WordPress admin, or screenshot the Plugins screen. It tells a developer more in five minutes than an hour of description.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">05</span><div className="plat-name"><h3>What is breaking now.</h3></div><p className="plat-build">Missed syncs, slow pages, failed updates, abandoned checkouts. Dates and screenshots help.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">06</span><div className="plat-name"><h3>Deadlines that matter.</h3></div><p className="plat-build">EOFY, a trade show, a Black Friday or Click Frenzy sale, or the date a contract with your old developer ends.</p></div>
-            </div>
+            <ol className="platlist" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+              <li className="plat plat-2col"><span className="capid">01</span><div className="plat-name"><h3>Systems and owners.</h3></div><p className="plat-build">Accounting, inventory, ERP, CRM and carriers by name, and which one you treat as the truth for stock and price.</p></li>
+              <li className="plat plat-2col"><span className="capid">02</span><div className="plat-name"><h3>Catalogue shape.</h3></div><p className="plat-build">Number of products and variants, bundles, made-to-order items, and how often prices change.</p></li>
+              <li className="plat plat-2col"><span className="capid">03</span><div className="plat-name"><h3>Customer types.</h3></div><p className="plat-build">Retail only, or trade accounts too, with ex-GST pricing, payment terms and purchase order numbers.</p></li>
+              <li className="plat plat-2col"><span className="capid">04</span><div className="plat-name"><h3>Current plugin list.</h3></div><p className="plat-build">Copy it from Tools &gt; Site Health &gt; Info in the WordPress admin, or screenshot the Plugins screen. It tells a developer more in five minutes than an hour of description.</p></li>
+              <li className="plat plat-2col"><span className="capid">05</span><div className="plat-name"><h3>What is breaking now.</h3></div><p className="plat-build">Missed syncs, slow pages, failed updates, abandoned checkouts. Dates and screenshots help.</p></li>
+              <li className="plat plat-2col"><span className="capid">06</span><div className="plat-name"><h3>Deadlines that matter.</h3></div><p className="plat-build">EOFY, a trade show, a Black Friday or Click Frenzy sale, or the date a contract with your old developer ends.</p></li>
+            </ol>
             <div className="au-split">
               <div>
                 <p>
@@ -561,8 +576,9 @@ export default function WooCommerceAUPage() {
                 usually where stock and prices should live.
               </p>
             </div>
-            <div className="tablewrap" role="region" tabIndex={0} aria-label="WooCommerce route comparison">
-              <table>
+            <p className="md:hidden" style={{ fontSize: 13, margin: '0 0 8px' }}>Swipe sideways to see every column.</p>
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="WooCommerce route comparison" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 720 }}>
                 <thead>
                   <tr>
                     <th>What matters</th>
@@ -575,7 +591,7 @@ export default function WooCommerceAUPage() {
                   <tr><th scope="row">Best when</th><td className="fj">The store works but syncs and updates fail</td><td>The theme or plugin stack is past saving</td><td>You want hosting and checkout run for you</td></tr>
                   <tr><th scope="row">Custom trade pricing and logic</th><td className="fj">Kept</td><td>Rebuilt cleanly</td><td>Shopify Plus B2B or apps</td></tr>
                   <tr><th scope="row">Content and blog on WordPress</th><td className="fj">Kept</td><td>Kept</td><td>Migrated</td></tr>
-                  <tr><th scope="row">URL changes and redirects</th><td className="fj">None</td><td>Few</td><td>Many, full redirect map</td></tr>
+                  <tr><th scope="row">URL changes and redirects</th><td className="fj">None</td><td>Few</td><td>Many, full redirect map (see <a href="/au/shopify-migration">Shopify migration</a>)</td></tr>
                   <tr><th scope="row">Hosting and updates</th><td className="fj">Your host, tested updates</td><td>Your host, tested updates</td><td>Run by Shopify</td></tr>
                   <tr><th scope="row">Who owns the code</th><td className="fj">You</td><td>You</td><td>You own the theme; Shopify runs the platform</td></tr>
                 </tbody>
@@ -604,14 +620,14 @@ export default function WooCommerceAUPage() {
                 GST. FactoryJet quotes a fixed price in writing after a short scoping call.
               </p>
             </div>
-            <div className="platlist" role="list">
-              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Integrations.</h3></div><p className="plat-build">Each connected system, from Xero to NetSuite, adds mapping, sandbox testing and failure alerts.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Trade features.</h3></div><p className="plat-build">Account price lists, ex-GST display, payment terms and quick order forms.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Data migration.</h3></div><p className="plat-build">Years of orders, customers and reviews, and how cleanly the old store kept them.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Plugin clean-up.</h3></div><p className="plat-build">How many plugins can go, and how many need replacing with custom code.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">05</span><div className="plat-name"><h3>Design scope.</h3></div><p className="plat-build">A refreshed theme versus a new design system for retail and trade.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">06</span><div className="plat-name"><h3>Marketplaces.</h3></div><p className="plat-build">Whether WooCommerce or your inventory system feeds Amazon.com.au, eBay and Kogan.</p></div>
-            </div>
+            <ol className="platlist" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+              <li className="plat plat-2col"><span className="capid">01</span><div className="plat-name"><h3>Integrations.</h3></div><p className="plat-build">Each connected system, from Xero to NetSuite, adds mapping, sandbox testing and failure alerts.</p></li>
+              <li className="plat plat-2col"><span className="capid">02</span><div className="plat-name"><h3>Trade features.</h3></div><p className="plat-build">Account price lists, ex-GST display, payment terms and quick order forms.</p></li>
+              <li className="plat plat-2col"><span className="capid">03</span><div className="plat-name"><h3>Data migration.</h3></div><p className="plat-build">Years of orders, customers and reviews, and how cleanly the old store kept them.</p></li>
+              <li className="plat plat-2col"><span className="capid">04</span><div className="plat-name"><h3>Plugin clean-up.</h3></div><p className="plat-build">How many plugins can go, and how many need replacing with custom code.</p></li>
+              <li className="plat plat-2col"><span className="capid">05</span><div className="plat-name"><h3>Design scope.</h3></div><p className="plat-build">A refreshed theme versus a new design system for retail and trade.</p></li>
+              <li className="plat plat-2col"><span className="capid">06</span><div className="plat-name"><h3>Marketplaces.</h3></div><p className="plat-build">Whether WooCommerce or your inventory system feeds Amazon.com.au, eBay and Kogan.</p></li>
+            </ol>
           </div>
         </section>
 
@@ -648,45 +664,32 @@ export default function WooCommerceAUPage() {
           </div>
         </section>
 
-        {/* ═══ DEMAND → panel ═══ */}
-        <section className="section" id="demand">
+        {/* ═══ CITIES → panel ═══ */}
+        <section className="section" id="cities">
           <div className="wrap">
             <div className="au-split">
               <div>
                 <div className="eyebrow">Sydney, Melbourne, Brisbane and the rest</div>
                 <h2>WooCommerce developers for Australian businesses in every capital</h2>
                 <p>
-                  Australians search for a WooCommerce developer by city more often than by country. For a
-                  WooCommerce project nobody needs to be in the room. Workshops happen over video, progress sits on a
-                  board you can open any time, you get one named lead engineer, and calls are booked in your
-                  business hours, whether that is Sydney, Melbourne, Brisbane, Adelaide or Perth time.
+                  A WooCommerce project does not need anyone in the room. Workshops happen over video, and progress
+                  sits on a board you can open any time.
                 </p>
-                <p>
-                  The searches also say what buyers want next to the store: Xero and Australia Post connections show up
-                  as often as the developer searches themselves.
+                <p style={{ marginTop: 16 }}>
+                  You get one named lead engineer, and calls are booked in your business hours. That holds in{' '}
+                  <a href="/au/sydney">Sydney</a>, <a href="/au/melbourne">Melbourne</a>,{' '}
+                  <a href="/au/brisbane">Brisbane</a>, <a href="/au/adelaide">Adelaide</a> or Perth.
                 </p>
               </div>
-              <div className="demand">
-                <div className="demand-head"><span>Australia · Monthly Search Demand</span><b>DataForSEO</b></div>
-                <ul>
-                  {[
-                    { kw: 'woocommerce developer melbourne', v: '70', w: '100%', kd: 'Local intent' },
-                    { kw: 'woocommerce web design', v: '70', w: '100%', kd: 'Buyer intent' },
-                    { kw: 'woocommerce xero', v: '70', w: '100%', kd: 'Integration' },
-                    { kw: 'woocommerce developer sydney', v: '50', w: '71%', kd: 'Local intent' },
-                    { kw: 'woocommerce australia post', v: '50', w: '71%', kd: 'Integration' },
-                    { kw: 'woocommerce developer', v: '40', w: '57%', kd: 'Buyer intent' },
-                    { kw: 'woocommerce developer brisbane', v: '40', w: '57%', kd: 'Local intent' },
-                    { kw: 'woocommerce support', v: '30', w: '43%', kd: 'After launch' },
-                  ].map((r) => (
-                    <li key={r.kw} className="demand-row">
-                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
-                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                      <div className="demand-kd">{r.kd}</div>
-                    </li>
-                  ))}
+              <div className="au-panel">
+                <div className="eyebrow">Call hours follow your clock</div>
+                <ul className="trigrows">
+                  <li><span className="m">Sydney, Melbourne, Canberra</span><span className="n">AEST, AEDT in summer</span><span className="t">Your hours</span></li>
+                  <li><span className="m">Brisbane</span><span className="n">AEST all year</span><span className="t">Your hours</span></li>
+                  <li><span className="m">Adelaide</span><span className="n">ACST, ACDT in summer</span><span className="t">Your hours</span></li>
+                  <li><span className="m">Perth</span><span className="n">AWST all year</span><span className="t">Your hours</span></li>
                 </ul>
-                <p className="demand-src">Source: DataForSEO, Google Ads volumes for Australia, pulled 29 October 2026</p>
+                <p className="au-note">Workshops, reviews and launch checks are all booked in your local time.</p>
               </div>
             </div>
           </div>
@@ -706,18 +709,18 @@ export default function WooCommerceAUPage() {
               </p>
               <p className="lead">
                 We set stores up so those problems cannot build up. Licences are bought in your name, custom work
-                lives in a child theme or a small plugin you own, and staging is part of the hosting from day one.
+                lives in a child theme (a thin layer on top of the main theme) or a small plugin you own, and staging is part of the hosting from day one.
                 The handover lists every plugin, licence and integration with its renewal date. Support is optional,
                 each change is quoted and approved first, and there is no monthly minimum. See what our{' '}
                 <a href="/au/website-maintenance">website maintenance in Australia</a> covers.
               </p>
             </div>
-            <div className="platlist" role="list">
-              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Licences</h3></div><p className="plat-build">Premium plugin and theme licences held in your account, with renewal dates in the handover so updates never stop quietly.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Child theme</h3></div><p className="plat-build">Custom templates kept in a child theme or a small plugin, so a theme update cannot overwrite them.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Staging</h3></div><p className="plat-build">A private copy of the store on your hosting, refreshed before each batch of updates and each new feature.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Changes</h3></div><p className="plat-build">Trade features, speed work and campaign pages ahead of EOFY or Click Frenzy, each quoted and approved before work starts.</p></div>
-            </div>
+            <ul className="platlist" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+              <li className="plat plat-2col"><span className="capid">01</span><div className="plat-name"><h3>Licences</h3></div><p className="plat-build">Premium plugin and theme licences held in your account, with renewal dates in the handover so updates never stop quietly.</p></li>
+              <li className="plat plat-2col"><span className="capid">02</span><div className="plat-name"><h3>Child theme</h3></div><p className="plat-build">Custom templates kept in a child theme or a small plugin, so a theme update cannot overwrite them.</p></li>
+              <li className="plat plat-2col"><span className="capid">03</span><div className="plat-name"><h3>Staging</h3></div><p className="plat-build">A private copy of the store on your hosting, refreshed before each batch of updates and each new feature.</p></li>
+              <li className="plat plat-2col"><span className="capid">04</span><div className="plat-name"><h3>Changes</h3></div><p className="plat-build">Trade features, speed work and campaign pages ahead of EOFY or Click Frenzy, each quoted and approved before work starts.</p></li>
+            </ul>
           </div>
         </section>
 
@@ -726,7 +729,7 @@ export default function WooCommerceAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Related FactoryJet services</div>
-              <h2>Beyond the WooCommerce build</h2>
+              <h2>Other FactoryJet services for Australian WooCommerce stores</h2>
             </div>
             <ul className="agentdir-grid">
               {SIBLINGS.map((s) => (
@@ -778,8 +781,9 @@ export default function WooCommerceAUPage() {
               <div className="eyebrow">Ready when you are</div>
               <h2>See a draft of your WooCommerce store before you sign anything</h2>
               <p>
-                Send your name and work email, or your brief. Within 24 hours the founder writes back with times
-                for a call on your store, the systems around it and what a first phase would cover. No spam, no obligation.
+                Open the form and send your name, work email and a few lines on the store. Within 24 hours the
+                founder writes back with times for a call on your store, the systems around it and what a first
+                phase would cover. No spam, no obligation.
               </p>
             </div>
             <div className="ctas">

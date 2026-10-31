@@ -4,6 +4,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/crm-ai-agents, built 2026-10-29.
@@ -25,12 +26,12 @@ import '../ai-agents/ai-agents.css';
       FAQ renders. Never add a second list of questions. */
 
 const CANONICAL = 'https://factoryjet.com/uk/crm-ai-agents';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
 const READ_ON = '29 October 2026';
-const TITLE = 'AI Agents for HubSpot and Salesforce UK | CRM AI Agents | FactoryJet';
-const H1 = 'CRM AI Agents for UK Sales Teams on HubSpot and Salesforce, Built Around UK GDPR and PECR';
+const TITLE = 'Salesforce & HubSpot AI Agents for UK Sales | FactoryJet';
+const H1 = 'CRM AI Agents for UK Sales Teams on HubSpot and Salesforce';
 const DESCRIPTION =
-  'Custom AI agents for UK sales teams on HubSpot or Salesforce: lead scoring, deal updates, call logging and follow-up drafts, with PECR outreach rules checked against ICO guidance.';
+  'Custom HubSpot and Salesforce AI agents for UK sales teams: lead scoring, deal updates and call logging, with PECR checks. See it on your own records first.';
 
 /* Design tokens, copied by value from ../ai-agents/ai-agents.css. */
 const T = {
@@ -39,6 +40,8 @@ const T = {
   n400: '#6E6E68',
   orange: '#FF5C00',
   green: '#047857',
+  amber: '#B45309',
+  red: '#B91C1C',
   small: '#B23E13',
   fm: "'Geist Mono',monospace",
   fd: "'Plus Jakarta Sans',sans-serif",
@@ -118,6 +121,12 @@ const SRC = {
     url: 'https://leverx.com/en-gb/blog/ai-agent-development-cost-uk',
     label: 'LeverX, AI agent development cost UK (4 October 2026)',
   },
+  // Companies House public data API: search and company profile endpoints for
+  // companies and LLPs on the UK register. Sole traders are not on the register.
+  companiesHouse: {
+    url: 'https://developer.company-information.service.gov.uk/',
+    label: 'Companies House, public data API',
+  },
 } as const;
 type SrcKey = keyof typeof SRC;
 
@@ -134,9 +143,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What is a CRM AI agent?',
     answer: 'It is a piece of software that works inside your CRM the way a careful sales administrator would. It reads a new lead, an email reply or a call note, decides what should change on the record, and either makes that change or asks a person to approve it. The AI model reads and writes the text. Your written rules decide what it may touch.' },
   { category: 'basics', question: 'Should we use HubSpot Breeze or Salesforce Agentforce instead of a custom agent?',
-    answer: 'Use the vendor agents when the job starts and ends inside one CRM and their settings match your process. HubSpot lists a Customer agent, a Prospecting agent and a Data agent. Salesforce prices Agentforce in the UK per conversation, by Flex Credits or per user. A custom agent earns its place when the job crosses into Xero, Sage, NetSuite or a helpdesk, or when you want your own approval rules and code.' },
+    answer: 'Use the vendor agents when the job starts and ends inside one CRM and their settings match your process. HubSpot lists a Customer agent, a Prospecting agent and a Data agent. Salesforce prices Agentforce in the UK per conversation or by Flex Credits. A custom agent earns its place when the job crosses into Xero, Sage, NetSuite or a helpdesk, or when you want your own approval rules and code.' },
   { category: 'basics', question: 'How is a CRM agent different from an AI SDR?',
-    answer: 'An AI SDR, short for sales development representative, writes to people who are not yet in conversation with you and tries to book meetings. A CRM agent looks after records you already hold: scoring, logging, updating stages and drafting replies. In the UK the SDR job carries more PECR risk, because it sends the first message. Many teams start with the CRM agent for that reason.' },
+    answer: 'An AI SDR, short for sales development representative, writes to people who are not yet in conversation with you and tries to book meetings. A CRM agent looks after records you already hold: scoring, logging, updating stages and drafting replies. People also call this an AI sales agent. In the UK the SDR job carries more PECR risk, because it sends the first message. We recommend starting with the CRM agent for that reason.' },
   { category: 'basics', question: 'Which CRMs do you build agents for?',
     answer: 'Mostly HubSpot and Salesforce. When the brief calls for it, we also connect agents to Microsoft Dynamics 365 Sales, Zoho CRM or Pipedrive through their APIs. If your marketing runs in HubSpot and your sales team works in Salesforce, one agent can read one and update the other with a shared record ID.' },
   { category: 'basics', question: 'Do we need HubSpot Professional or Enterprise?',
@@ -144,9 +153,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── What the agent does ──
   { category: 'jobs', question: 'Can an AI agent qualify leads in HubSpot or Salesforce?',
-    answer: 'Yes, and it is the most common first job. When a form fill or chat creates a contact, the agent reads the answers and the company website, scores the lead against rules your sales director writes in plain English, sets the owner and status, and leaves a two-line note explaining the score. It also marks whether the address looks like a corporate or an individual subscriber for PECR.' },
+    answer: 'Yes, and it is the job we recommend building first. When a form fill or chat creates a contact, the agent reads the answers and the company website, scores the lead against rules your sales director writes in plain English, sets the owner and status, and leaves a two-line note explaining the score. It also marks whether the address looks like a corporate or an individual subscriber for PECR.' },
   { category: 'jobs', question: 'Will the agent change deal stages without asking?',
-    answer: 'Only where you say so in writing. Most UK teams start with suggestions: the agent reads a reply or call note, proposes the next stage with the evidence attached, and the deal owner clicks to accept. After a few weeks of reviewed suggestions you can let early, low-value moves happen alone. Moves to Closed Won, and anything above a deal value you set, stay with a person.' },
+    answer: 'Only where you say so in writing. We recommend starting with suggestions: the agent reads a reply or call note, proposes the next stage with the evidence attached, and the deal owner clicks to accept. After a few weeks of reviewed suggestions you can let early, low-value moves happen alone. Moves to Closed Won, and anything above a deal value you set, stay with a person.' },
   { category: 'jobs', question: 'Can it log Teams calls, Outlook emails and meetings to the right record?',
     answer: 'Yes. The agent takes the email thread, the call transcript or the meeting notes, matches them to the contact, company and deal, and logs an activity with a short summary and next steps. Where two records look equally likely, it does not pick one. The item goes to a review queue, which keeps the CRM honest and avoids notes landing on the wrong customer.' },
   { category: 'jobs', question: 'Can the agent read Xero or Sage before a sales call?',
@@ -176,9 +185,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'project', question: 'How much does a CRM AI agent cost in the UK?',
     answer: 'Market figures, not ours: LeverX’s UK guide of 4 October 2026 puts a single-workflow agent at £10,000 to £30,000 and a multi-step agent with integrations at £30,000 to £80,000, as indicative benchmarks. It does not say whether VAT is included. FactoryJet quotes a fixed price per phase in writing after a short scoping call, and states whether VAT applies to your invoice.' },
   { category: 'project', question: 'How long does a HubSpot or Salesforce agent take to build?',
-    answer: 'It depends on the job. One focused job, such as lead scoring in HubSpot, is the shortest build. Two CRMs, several jobs or a finance system in the loop take longer. Either way, the written scope carries dated milestones, and every week you see the agent working in your own sandbox or test account.' },
+    answer: 'Market figures, not ours: LeverX’s UK guide of 4 October 2026 puts a single-workflow agent at 5 to 9 weeks and a multi-step agent with integrations at 10 to 18 weeks. One focused job, such as lead scoring in HubSpot, sits at the short end. Two CRMs or a finance system in the loop take longer. Our written scope carries dated milestones, and you see the agent in your own sandbox every week.' },
   { category: 'project', question: 'Can we see the agent work before we sign anything?',
-    answer: 'Yes. We run it on a sample of your own records, with names removed if your data protection officer prefers. You see each decision, the reason it gave, the fields it would change and the places it would stop and ask a person. That demo is the point where most buyers decide, so we do it before the contract.' },
+    answer: 'Yes. We run it on a sample of your own records, with names removed if your data protection officer prefers. You see each decision, the reason it gave, the fields it would change and the places it would stop and ask a person. You should see that before you commit money, so we run the demo before the contract.' },
   { category: 'project', question: 'What should our brief or RFP include?',
     answer: 'Your CRM and edition, the first job you want done, roughly how many leads or deals move each week, the other systems involved, such as Xero, Sage or NetSuite, and who signs off the agent’s actions. Add your DPO or privacy lead’s name if you have one. If procurement has already written an RFP, send it unchanged and we answer it point by point.' },
   { category: 'project', question: 'Who owns the agent once it is built?',
@@ -223,9 +232,10 @@ const jsonLd = {
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="true"]'] },
       author: {
         '@type': 'Person',
+        '@id': 'https://factoryjet.com/#bhavesh-barot',
         name: 'Bhavesh Barot',
         jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
+        url: 'https://factoryjet.com/author/bhavesh-barot',
         sameAs: [
           'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
           'https://github.com/factoryjet-tech',
@@ -250,7 +260,8 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  authors: [{ name: 'Bhavesh Barot', url: 'https://factoryjet.com/author/bhavesh-barot' }],
+  alternates: { canonical: CANONICAL, languages: twinAlternates['crm-ai-agents'] },
   openGraph: {
     title: TITLE,
     description:
@@ -304,19 +315,20 @@ export default function CrmAiAgentsUKPage() {
                   <span className="chip"><span className="dot dot-orange" />UK CRM AI Agents</span>
                   <span className="chip">HubSpot</span>
                   <span className="chip">Salesforce</span>
+                  <span className="chip">UK GDPR and PECR</span>
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
                   Your sales team works in HubSpot or Salesforce. Your invoices live in Xero, Sage or NetSuite. Leads
-                  sit unscored over the weekend, call notes from Teams never reach the deal, and nobody is sure which
-                  contacts are sole traders that PECR protects. FactoryJet builds AI agents that do that CRM work for
-                  your team, under approval rules you write, and you own the code.
+                  sit unscored over the weekend, and nobody is sure which contacts are sole traders that PECR protects.
+                  FactoryJet builds a HubSpot AI agent or a Salesforce AI agent that does that CRM work for your team,
+                  under approval rules you write, and you own the code.
                 </p>
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses since 2014</span></div>
-                  <div className="upd">Last updated<br />29 October 2026</div>
+                  <div className="who"><b><a href="/author/bhavesh-barot" style={{ color: 'inherit' }}>Bhavesh Barot</a></b>, Founder<br /><span>500+ businesses since 2014</span></div>
+                  <div className="upd">Last updated<br />31 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -328,23 +340,23 @@ export default function CrmAiAgentsUKPage() {
                 <span className="eyebrow">What the agent does in your CRM</span>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Scores every new lead</div><div className="scorecard-note">with a written reason on the record</div></div>
-                  <div className="scorecard-val" style={{ fontSize: 15 }}>Alone</div>
+                  <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>Alone</div>
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Tags PECR subscriber type</div><div className="scorecard-note">corporate body, sole trader or partnership</div></div>
-                  <div className="scorecard-val" style={{ fontSize: 15 }}>Alone</div>
+                  <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>Alone</div>
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Proposes deal stage moves</div><div className="scorecard-note">the owner accepts in one click</div></div>
-                  <div className="scorecard-val" style={{ fontSize: 15 }}>Approved</div>
+                  <div className="scorecard-val" style={{ color: T.amber, fontSize: 15 }}>Approved</div>
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Drafts the follow-up email</div><div className="scorecard-note">a rep edits and sends it</div></div>
-                  <div className="scorecard-val" style={{ fontSize: 15 }}>Approved</div>
+                  <div className="scorecard-val" style={{ color: T.amber, fontSize: 15 }}>Approved</div>
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Merges or deletes records</div><div className="scorecard-note">duplicates go to a review list</div></div>
-                  <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>Never</div>
+                  <div className="scorecard-val" style={{ color: T.red, fontSize: 15 }}>Never</div>
                 </div>
                 <p style={{ fontSize: 13, marginTop: 12 }}>
                   Working software on your own data before you sign. Founder replies within 24 hours.
@@ -365,14 +377,22 @@ export default function CrmAiAgentsUKPage() {
                 the UK it should also know who it may email: PECR lets you email a limited company address without
                 consent, but treats sole traders and some partnerships as individuals.
               </p>
+              <p className="mt-4">
+                FactoryJet is an AI agent development company that builds Salesforce and HubSpot AI agents for UK
+                sales teams. Buyers who search for a Salesforce AI consultant get the scoping advice and the build
+                from the same team.
+              </p>
             </div>
             <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms on this page</span>
+              <span className="lab">Terms on this page</span>
               <p>
                 <b>PECR</b> is the Privacy and Electronic Communications Regulations, the UK rules on marketing by
                 email, text and phone. <b>UK GDPR</b> is the main UK law on personal data, and it still applies when a
                 business email names a person. A <b>corporate subscriber</b> is a company, LLP or public body, as
-                opposed to a sole trader or one of the partnerships PECR treats as an individual.
+                opposed to a sole trader or one of the partnerships PECR treats as an individual. A <b>data protection
+                officer (DPO)</b> is the person who advises your company on UK GDPR. A <b>lawful basis</b> is the legal
+                reason UK GDPR lets you use someone’s data, such as consent or legitimate interests. <b>Scopes</b> are
+                the permissions a CRM app is granted, ticked one by one.
               </p>
             </div>
           </div>
@@ -385,7 +405,7 @@ export default function CrmAiAgentsUKPage() {
               {[
                 { v: '£17.5m', t: 'or 4% of global turnover: the ICO’s maximum PECR fine after the Data (Use and Access) Act', s: 'ICO, June 2025', u: SRC.duaaNews.url },
                 { v: 'Individuals', t: 'is how PECR treats sole traders and some partnerships, so consent rules apply to them', s: 'ICO guide to PECR', u: SRC.pecrEmail.url },
-                { v: 'Aug 2026', t: 'EU AI Act transparency rules have applied since this date: people must know they are talking to a machine', s: 'European Commission', u: SRC.aiActEc.url },
+                { v: 'Aug 2026', t: 'is when the EU AI Act transparency rules took effect, so people must know when they are talking to a machine', s: 'European Commission', u: SRC.aiActEc.url },
                 { v: 'Germany', t: 'is where HubSpot hosts EU-region accounts, on AWS. No UK region is listed', s: 'HubSpot Knowledge Base', u: SRC.hubspotHosting.url },
               ].map((r) => (
                 <li key={r.v}>
@@ -403,10 +423,11 @@ export default function CrmAiAgentsUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">The work an agent takes on</span>
-              <h2>Six CRM jobs UK sales teams ask us to build first</h2>
+              <h2>Six CRM jobs we recommend building first</h2>
               <p className="lead mt-4">
-                Each job can be built alone and priced as its own phase. Most UK buyers start with the first one,
-                because unscored leads are the cheapest problem to see and the quickest to fix.
+                Each job can be built alone and priced as its own phase. A HubSpot AI agent or a Salesforce AI agent
+                can take on any of them. We recommend starting with the first one, because unscored leads are the
+                cheapest problem to see and the quickest to fix.
               </p>
             </div>
             <ul className="col-3 mt-12">
@@ -416,7 +437,7 @@ export default function CrmAiAgentsUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Tag PECR subscriber type</h3>
-                <p className="mt-4">Limited company, LLP, sole trader or partnership. The agent sets a field from the domain, the company name and your records, so a sequence tool can exclude individual subscribers who never consented. Unclear cases go to a person.</p>
+                <p className="mt-4">Limited company, LLP, sole trader or partnership. The agent sets a field from the domain, a <a href={SRC.companiesHouse.url} target="_blank" rel="noopener noreferrer" style={inlineLink}>Companies House</a> lookup and your records, so a sequence tool can exclude individual subscribers who never consented. Unclear cases go to a person.</p>
               </li>
               <li className="svc-card">
                 <h3>Propose deal stage changes</h3>
@@ -454,8 +475,8 @@ export default function CrmAiAgentsUKPage() {
                   </p>
                   <p>
                     <b>Every message.</b> You must not hide your identity, and you must give a valid address so people
-                    can opt out. The ICO recommends keeping a do-not-email list of businesses that object. Our agents
-                    write opt-outs back to the CRM the same day, so HubSpot or Salesforce stays the single suppression
+                    can opt out. The ICO recommends keeping a do-not-email list of businesses that object. The agent
+                    writes opt-outs back to the CRM the same day, so HubSpot or Salesforce stays the single suppression
                     list.
                   </p>
                   <p>
@@ -464,7 +485,7 @@ export default function CrmAiAgentsUKPage() {
                     not cover prospects or bought-in lists.
                   </p>
                   <p>
-                    <b>The Data (Use and Access) Act 2025.</b> It received Royal Assent on 19 June 2025. The ICO says it
+                    <b>The Data (Use and Access) Act 2025 (DUAA).</b> It received Royal Assent on 19 June 2025. The ICO says it
                     clarifies that direct marketing can be a legitimate interest, widens the lawful bases for
                     significant automated decisions with safeguards, and lets the ICO fine up to £17.5 million or 4%
                     of global turnover under PECR. The ICO’s DUAA guide says all data protection provisions are now in
@@ -473,8 +494,8 @@ export default function CrmAiAgentsUKPage() {
                   <p>
                     <b>Named people at companies.</b> PECR may allow the email, but UK GDPR still governs
                     jane.smith@company.co.uk. You need a lawful basis, usually legitimate interests, and a privacy
-                    notice that covers enrichment. We are not lawyers: we build the controls and your DPO or solicitor
-                    signs off the policy.
+                    notice that covers enrichment. We are not lawyers: we build the controls and your data protection
+                    officer or solicitor signs off the policy.
                   </p>
                 </div>
                 <Sources ids={['pecrEmail', 'duaaNews', 'duaaGuide']} />
@@ -503,8 +524,9 @@ export default function CrmAiAgentsUKPage() {
                 a plain-English file in your repository, so your sales director can read them without a developer.
               </p>
             </div>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
-              <table className="cmp-table">
+<p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 11, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
                     <th>Action</th>
@@ -527,6 +549,11 @@ export default function CrmAiAgentsUKPage() {
               In HubSpot the agent connects through an app whose scopes a super admin ticks one by one, with its own
               access token that can be rotated if it leaks. In Salesforce it gets a dedicated user with only the
               permissions the job needs. Either way, the agent cannot see objects outside its job.
+            </p>
+            <p className="mt-4" style={{ maxWidth: 820, fontFamily: T.fm, fontSize: 13 }}>
+              Example rule, as it reads in the file: “The agent may move a deal from Discovery to Proposal when the
+              buyer asks for a quote in writing. It may not move any deal worth more than £20,000.” Your sales
+              director sets the stages and the value.
             </p>
             <Sources ids={['hubspotPrivateApps']} />
           </div>
@@ -576,11 +603,13 @@ export default function CrmAiAgentsUKPage() {
             <span className="eyebrow">Side by side</span>
             <h2 style={{ maxWidth: 760 }}>Custom agent, HubSpot Breeze or Salesforce Agentforce, or a Zapier flow</h2>
             <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              All three are sensible in the right place. The question is whether the job stays inside one CRM or
-              crosses into the systems your finance and service teams run.
+              All three are sensible in the right place. The question is whether the job stays inside one CRM, such
+              as HubSpot Sales Hub or Salesforce Sales Cloud, or crosses into the systems your finance and service
+              teams run. Simple CRM workflow automation, such as copying a form field, rarely needs an agent at all.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
-              <table className="cmp-table">
+<p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 11, color: T.n400 }}>Swipe sideways to see every column.</p>
+            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
                     <th>Question</th>
@@ -619,7 +648,7 @@ export default function CrmAiAgentsUKPage() {
                 <h2>The UK systems a CRM agent usually has to read</h2>
                 <div className="stack mt-6">
                   <p>
-                    A sales record is only half the story. The other half sits in <b>Xero</b>, <b>Sage 50</b>,
+                    Payment and stock data sits outside the CRM, in <b>Xero</b>, <b>Sage 50</b>,
                     <b> Sage 200</b> or <b>Sage Intacct</b>, <b>QuickBooks</b>, <b>NetSuite</b> or <b>Dynamics 365
                     Business Central</b>, and for product businesses in <b>Odoo</b>, <b>Brightpearl</b>, <b>Linnworks</b>{' '}
                     or <b>Mintsoft</b>. An agent that can see an overdue invoice, a stock shortage or a failed
@@ -636,6 +665,14 @@ export default function CrmAiAgentsUKPage() {
                     source, Salesforce the opportunity value, Xero the credit position. The agent never lets two
                     systems overwrite each other.
                   </p>
+                  <p>
+                    If finance is the main gap, see our <a href="/uk/erp-ai-agents" style={inlineLink}>UK ERP AI agents</a>,{' '}
+                    <a href="/uk/netsuite-ai-agents" style={inlineLink}>NetSuite AI agents</a> and{' '}
+                    <a href="/uk/odoo-ai-agents" style={inlineLink}>Odoo AI agents</a> pages. For chasing overdue
+                    invoices, see <a href="/uk/accounts-receivable-automation" style={inlineLink}>accounts receivable
+                    automation</a>. For orders that arrive by email or PDF, see{' '}
+                    <a href="/uk/sales-order-automation-ai-agents" style={inlineLink}>sales order automation</a>.
+                  </p>
                 </div>
               </div>
               <div className="card card-top-orange">
@@ -648,8 +685,8 @@ export default function CrmAiAgentsUKPage() {
                   </p>
                   <p style={{ fontSize: 14 }}>
                     <b>Sow Easy</b> is a UK wholesale client. We are building its WordPress WooCommerce trade store with
-                    Odoo as the master for stock, pricing and SKUs. The Odoo link is being tested on staging and launch
-                    is still ahead. <a href="/case-studies/sow-easy-distributor-portal" style={inlineLink}>Read the Sow Easy case study</a>.
+                    Odoo as the master for stock, pricing and SKUs. The Odoo integration is still being tested on a staging
+                    system, and launch is still ahead. <a href="/case-studies/sow-easy-distributor-portal" style={inlineLink}>Read the Sow Easy case study</a>.
                   </p>
                   <p style={{ fontSize: 13, color: T.n400 }}>
                     Neither project is a CRM agent. Both are the same kind of work: deciding which system owns each
@@ -736,10 +773,10 @@ export default function CrmAiAgentsUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 740 }}>
               <span className="eyebrow">Who this is for</span>
-              <h2>Established UK companies with a sales team and a CRM that has drifted</h2>
+              <h2>Which UK sales teams a CRM AI agent suits</h2>
               <p className="lead mt-4">
-                FactoryJet was founded in 2014 and has worked with more than 500 businesses. Bhavesh Barot, the
-                founder, is involved in every engagement. These are the UK teams that send us CRM briefs.
+                FactoryJet was founded in 2014 and has worked with more than 500 businesses. The founder, Bhavesh
+                Barot, replies to every brief. These are the UK teams this service is built for.
               </p>
             </div>
             <ul className="col-3 mt-12">
@@ -784,7 +821,7 @@ export default function CrmAiAgentsUKPage() {
         {/* ═══ 14. FAQ ═══ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>HubSpot and Salesforce agent questions from UK sales and compliance leads</h2>
             </div>

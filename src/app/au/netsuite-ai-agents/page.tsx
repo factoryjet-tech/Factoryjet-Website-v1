@@ -7,6 +7,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import AuFaq from '../components/AuFaq';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
@@ -60,8 +61,9 @@ import '../au-hub.css';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL = 'https://factoryjet.com/au/netsuite-ai-agents';
-const UPDATED = '2026-10-29';
-const TITLE = 'NetSuite AI Agents Australia | AI Connector & AP | FactoryJet';
+const PUBLISHED = '2026-10-29';
+const UPDATED = '2026-10-31';
+const TITLE = 'NetSuite AI Agents Australia | AP Automation | FactoryJet';
 const H1 = 'NetSuite AI Agents for Australian Businesses: Built Into Your Account';
 const DESCRIPTION =
   'Custom AI agents inside Oracle NetSuite for Australian companies: supplier bills, sales orders and marketplace exceptions your team approves. Demo first.';
@@ -107,6 +109,10 @@ const SRC_EINVOICING = 'https://business.gov.au/finance/payments-and-invoicing/e
 const SRC_FLOWTIVITY = 'https://flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026/';
 // Web Video Digital (5 Aug 2026): AUD 15,000 to AUD 150,000; most SMB projects AUD 30,000 to AUD 80,000.
 const SRC_WVD = 'https://webvideodigital.com.au/custom-ai-agent-cost-in-australia/';
+// Third-party AP tools with a NetSuite integration on the vendor's own page, checked 31 Oct 2026.
+const SRC_TIPALTI = 'https://tipalti.com/integrations/netsuite/';
+const SRC_STAMPLI = 'https://www.stampli.com/erp/oracle-netsuite/';
+const SRC_APPROVALMAX = 'https://www.approvalmax.com/integrations/netsuite';
 
 /* ─── FAQ source of truth (drives the visible FAQ AND the FAQPage schema) ─── */
 const FAQ_CATEGORIES = [
@@ -119,13 +125,13 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── NetSuite AI in Australia ──
   { category: 'oracle', question: 'Does NetSuite have AI that works in Australia?',
-    answer: 'Some of it. The NetSuite AI Connector Service, which lets Claude or ChatGPT work with your records, has requirements that list features and permissions, with no country named. Two accounts payable features do name one: Oracle says Bill Capture is available only in the United States, and Intelligent Payment Automation pays US vendors in US dollars. Ask Oracle arrives with NetSuite Next, which Oracle is releasing to customers in phases.',
+    answer: 'Yes, partly. The NetSuite AI Connector Service, which lets Claude or ChatGPT work with your records, names no country in its requirements, only features and permissions. Two accounts payable features are limited to the US: Oracle says Bill Capture is available only in the United States, and Intelligent Payment Automation pays only US vendors, in US dollars. Ask Oracle comes with NetSuite Next, which Oracle is releasing to customers in phases.',
     links: [{ href: SRC_BILL_LIMITS, label: 'Oracle: Bill Capture considerations' }, { href: SRC_ASK_ORACLE, label: 'Oracle: Ask Oracle' }] },
   { category: 'oracle', question: 'Can Australian companies use NetSuite Bill Capture?',
     answer: 'Not today. Oracle’s Bill Capture considerations page states that the feature is available only in the United States. An Australian AP team on NetSuite still keys supplier invoices or uses an outside tool. That is the gap a custom agent fills: it reads the PDF, checks the ABN and GST against the vendor record, and saves a draft vendor bill for your team to approve.',
     links: [{ href: SRC_BILL_LIMITS, label: 'Oracle: Bill Capture considerations' }] },
-  { category: 'oracle', question: 'What is NetSuite Intelligent Payment Automation, and does it pay Australian suppliers?',
-    answer: 'It is an Oracle SuiteApp that runs vendor payments through BILL without leaving NetSuite. Oracle’s limitations page says only companies with US business subsidiaries can use it, only to pay vendors in the United States, and only in US dollars. It also cannot run in sandbox, development or Release Preview accounts. An Australian group with a US subsidiary could use it for that subsidiary’s US vendors. For AUD supplier payments, Australian companies keep their existing bank file or payment process.',
+  { category: 'oracle', question: 'Can NetSuite Intelligent Payment Automation pay our Australian suppliers?',
+    answer: 'No, only US vendors. It is an Oracle SuiteApp that runs vendor payments through BILL, a US payments company, without leaving NetSuite. Oracle’s limitations page says only companies with US business subsidiaries can use it, only to pay vendors in the United States, and only in US dollars. It also cannot run in sandbox, development or Release Preview accounts. An Australian group with a US subsidiary could use it for that subsidiary’s US vendors. For AUD supplier payments, Australian companies keep their existing bank file or payment process.',
     links: [{ href: SRC_IPA_LIMITS, label: 'Oracle: Intelligent Payment Automation limitations' }] },
   { category: 'oracle', question: 'How much does the NetSuite AI Connector cost?',
     answer: 'Nothing extra from Oracle. Its FAQ describes the AI Connector Service as not a paid feature, and lists the MCP Standard Tools SuiteApp as free to install. Your AI client is a separate subscription; Oracle lists Claude Pro and ChatGPT as currently supported. A custom agent built on top of NetSuite is a build project, priced on scope. Market ranges for those builds are further down this page.',
@@ -142,7 +148,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Jobs ──
   { category: 'jobs', question: 'What is a NetSuite AI agent?',
-    answer: 'A piece of software, built for your account, that handles one repeated office job in NetSuite. It watches an inbox, a folder or a channel feed, reads what arrives, looks up your vendors, items and customer pricing, and saves a pending transaction. A named person approves it. The agent works through a NetSuite role made just for it, so it can only touch what that role allows.' },
+    answer: 'A NetSuite AI agent is a piece of software, built for your account, that handles one repeated office job in NetSuite. It watches an inbox, a folder or a channel feed, reads what arrives, looks up your vendors, items and customer pricing, and saves a pending transaction. A named person approves it. The agent works through a NetSuite role made just for it, so it can only touch what that role allows.' },
   { category: 'jobs', question: 'Can an AI agent process supplier invoices in NetSuite for Australian GST?',
     answer: 'Yes, as a draft. The agent reads the invoice, matches the supplier by ABN, checks the GST amount against the tax code on the vendor and item, and matches the bill to the purchase order and item receipt. Anything that does not match goes to your AP lead with the difference highlighted. It never posts or pays a bill without a person approving it.',
     links: [{ href: '/au/accounts-payable-automation', label: 'Accounts payable automation in Australia' }] },
@@ -154,14 +160,14 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     links: [{ href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' }] },
   { category: 'jobs', question: 'Can an agent watch StarTrack, Australia Post or Sendle deliveries?',
     answer: 'Yes, if the carrier tracking reaches NetSuite or a system the agent can read. The agent checks item fulfilments that have stalled, compares them with carrier tracking and flags parcels that will miss the promised date. It drafts the customer update and, for a lost parcel, the claim details. Your customer service lead decides what gets sent.' },
-  { category: 'jobs', question: 'Can it help with BAS preparation in NetSuite?',
+  { category: 'jobs', question: 'Can an agent help us get our BAS ready in NetSuite?',
     answer: 'It can tidy the inputs, never lodge. Oracle says NetSuite calculates each BAS box, and that any BAS NetSuite produces is for record-keeping only. An agent can flag transactions with a missing or odd GST code, suppliers without an ABN, and bills coded to the wrong period, so your accountant reviews a cleaner ledger before lodging with the ATO.',
     links: [{ href: SRC_BAS, label: 'Oracle: Business Activity Statement report' }] },
   { category: 'jobs', question: 'Can an AI agent send e-invoices over Peppol from NetSuite?',
     answer: 'The agent does not replace your e-invoicing provider. business.gov.au explains that eInvoices travel over the Peppol network through ATO-approved service providers, so NetSuite needs one of those connections. Where you have it, an agent can check outgoing invoices for missing ABNs or purchase order numbers before they leave, and flag rejected ones for your AR team.',
     links: [{ href: SRC_EINVOICING, label: 'business.gov.au: eInvoicing' }] },
   { category: 'jobs', question: 'Can an agent connect NetSuite with Shopify, Cin7 or a Xero subsidiary?',
-    answer: 'Yes. Many Australian groups run NetSuite at head office with Shopify for direct sales, Cin7 Core in a warehouse, or Xero in a smaller entity. The agent reads from each through its official API and reconciles the gaps: orders in Shopify with no NetSuite record, stock counts that disagree, intercompany invoices that were never matched. It reports the gaps and drafts fixes.',
+    answer: 'Yes. A NetSuite Shopify integration usually already syncs orders; the agent works on what it misses. Many Australian groups run NetSuite at head office with Shopify for direct sales, Cin7 Core in a warehouse, or Xero in a smaller entity. The agent reads from each through its official API and reconciles the gaps: orders in Shopify with no NetSuite record, stock counts that disagree, intercompany invoices that were never matched. It reports the gaps and drafts fixes.',
     links: [{ href: '/au/shopify-development', label: 'Shopify development in Australia' }] },
 
   // ── Control, privacy, audit ──
@@ -171,11 +177,11 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'control', question: 'Does the Privacy Act apply to a NetSuite AI agent?',
     answer: 'Yes, if your business is covered by the Privacy Act 1988 and the agent handles personal information, such as customer contacts or staff records. OAIC guidance covers both what goes into an AI tool and anything personal that comes back out of it. We map which fields the agent sees and keep it to the minimum the job needs.',
     links: [{ href: SRC_OAIC_AI, label: 'OAIC: privacy and commercially available AI products' }] },
-  { category: 'control', question: 'What changes on 10 December 2026 for automated decisions?',
-    answer: 'From 10 December 2026, new APP 1 rules, which came from the Privacy and Other Legislation Amendment Act 2024, mean your privacy policy must describe any program that uses personal information in a decision with a significant effect on a person. If an agent decides credit holds or customer pricing, that may apply. We document each decision an agent makes so your privacy adviser can judge.',
+  { category: 'control', question: 'Do the 10 December 2026 privacy changes affect our NetSuite agent?',
+    answer: 'They may. From 10 December 2026, new APP 1 rules, which came from the Privacy and Other Legislation Amendment Act 2024, mean your privacy policy must describe any program that uses personal information in a decision with a significant effect on a person. If an agent decides credit holds or customer pricing, that may apply. We document each decision an agent makes so your privacy adviser can judge.',
     links: [{ href: SRC_OAIC_APP1, label: 'OAIC: APP guidelines chapter 1' }] },
   { category: 'control', question: 'How do our auditors see what the agent did?',
-    answer: 'Two records. Oracle keeps an Execution Log for connector calls, with a retention of 21 days for production accounts and 7 for a sandbox, per its FAQ. Audit trails usually need to last longer, so every agent we build also writes its own log of what it read, what it saved and who approved it, kept for as long as your retention policy requires.',
+    answer: 'Two records. Oracle keeps an Execution Log for connector calls, with a retention of 21 days for production accounts and 7 for a sandbox, per its FAQ. Audit trails usually need to last longer, so every agent we build also writes its own log of each record it read or saved and the person who approved it, kept for as long as your retention policy requires.',
     links: [{ href: SRC_CONNECTOR_FAQ, label: 'Oracle: AI Connector Service FAQ' }] },
 
   // ── Cost and working with us ──
@@ -184,28 +190,30 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     links: [{ href: SRC_FLOWTIVITY, label: 'Flowtivity: AI agent cost in Australia' }, { href: SRC_WVD, label: 'Web Video Digital: custom AI agent cost' }] },
   { category: 'working', question: 'Can we see it working before we sign?',
     answer: 'Yes. Before any contract, we run a first version of the agent on your own documents: a batch of supplier invoices your team has already entered, or customer purchase orders you have already keyed. You compare its drafts with what your team did, line by line. If it does not match well enough, you have spent nothing and we tell you why.' },
+  { category: 'working', question: 'How long does a NetSuite AI agent take to build?',
+    answer: 'It depends on the job, so we date it in writing rather than guess. After the demo on your documents, the fixed quote for the first phase states its start date, its end date and what you get at the end. The usual first phase is one job, such as supplier invoices to draft vendor bills. Later jobs are dated in their own quotes, once the first phase is live.' },
   { category: 'working', question: 'What should we send you to get a quote?',
     answer: 'A short brief or RFP is ideal. Tell us your NetSuite edition and subsidiaries, the one job you want handled first, how many documents a week it involves, and the other systems it touches, such as Shopify, Cin7, a 3PL or your bank. Ten real sample documents with sensitive details removed let us quote a fixed price, with no guesswork.' },
   { category: 'working', question: 'Do you replace our NetSuite partner?',
-    answer: 'No. Your NetSuite partner or in-house administrator keeps looking after configuration, SuiteFlow workflows and upgrades. We build the agent around the account as they have set it up, working in your sandbox first, and agree with them which saved searches, roles and scripts the agent depends on. The agent’s code and notes live in a separate repository, so your partner can see exactly what it touches.' },
+    answer: 'No. Your NetSuite partner in Australia, or your in-house administrator, keeps looking after configuration and upgrades, including SuiteFlow workflows. We build the agent around the account as they have set it up, working in your sandbox first, and agree with them which saved searches and scripts the agent depends on. The agent’s code and notes live in a separate repository, so your partner can see exactly what it touches.' },
   { category: 'working', question: 'Who owns the agent, and who supports it after launch?',
     answer: 'You own the code and the repository from day one. The AI account and hosting can sit in your own accounts at cost, with no markup. Defects are fixed inside the build price for a cover period agreed before work starts. After that, support is optional: each change is quoted and approved first, with no monthly minimum. We can keep managing the servers and models for you if you prefer.' },
 ];
 
 /* ─── What Oracle ships, checked for Australia ─── */
 const ORACLE_ROWS: { m: string; n: string; t: string; u: string }[] = [
-  { m: 'NetSuite AI Connector Service', n: 'Claude, ChatGPT and other MCP clients read and update records', t: 'Not a paid feature', u: SRC_CONNECTOR_FAQ },
+  { m: 'NetSuite AI Connector Service', n: 'Claude, ChatGPT and other AI tools that use MCP (Model Context Protocol) read and update records', t: 'Not a paid feature', u: SRC_CONNECTOR_FAQ },
   { m: 'Connector role rules', n: 'Administrator and full-permission roles cannot connect', t: 'Oracle rule', u: SRC_CONNECTOR_PERMS },
   { m: 'Bill Capture', n: 'scans vendor bills into drafts', t: 'US only', u: SRC_BILL_LIMITS },
-  { m: 'Intelligent Payment Automation', n: 'pays vendors from NetSuite via BILL', t: 'US vendors, USD', u: SRC_IPA_LIMITS },
+  { m: 'Intelligent Payment Automation', n: 'pays vendors from NetSuite via BILL, a US payments company', t: 'US vendors, USD', u: SRC_IPA_LIMITS },
   { m: 'ANZ Localization SuiteApp', n: 'BAS with SuiteTax, TPAR, Payment Times Report, Supplier ABN List', t: 'Free, managed', u: SRC_ANZ_INSTALL },
-  { m: 'JCurve and JCurve Financials', n: 'no Server SuiteScript or SuiteCloud Development Framework', t: 'Check first', u: SRC_ANZ_LIMITS },
+  { m: 'JCurve and JCurve Financials', n: 'no Server SuiteScript (scripts that run on NetSuite’s servers) or SuiteCloud Development Framework', t: 'Check first', u: SRC_ANZ_LIMITS },
 ];
 
 /* ─── Six jobs we build first ─── */
-const JOBS: { n: string; t: string; d: string }[] = [
-  { n: '01', t: 'Supplier invoices to draft vendor bills', d: 'The agent reads each PDF from the AP inbox, finds the vendor by ABN, checks GST against the tax code and matches the bill to its purchase order and receipt. Clean bills wait in a queue for one-click approval. Mismatches go to your AP lead with the difference shown.' },
-  { n: '02', t: 'Customer purchase orders to pending sales orders', d: 'Retail and trade buyers send orders as PDFs, spreadsheets and email bodies. The agent maps their codes to your items, applies the customer’s price level, checks stock by location and saves a Pending Approval sales order.' },
+const JOBS: { n: string; t: string; d: string; href?: string; link?: string }[] = [
+  { n: '01', t: 'NetSuite AP automation: supplier invoices to draft vendor bills', d: 'The agent reads each PDF from the AP inbox, finds the vendor by ABN, checks GST against the tax code and matches the bill to its purchase order and receipt. Clean bills wait in a queue for one-click approval. Mismatches go to your AP lead with the difference shown.' },
+  { n: '02', t: 'Customer purchase orders to pending sales orders', d: 'Retail and trade buyers send orders as PDFs, spreadsheets and email bodies. The agent maps their codes to your items, applies the customer’s price level, checks stock by location and saves a Pending Approval sales order.', href: '/au/sales-order-automation-ai-agents', link: 'Sales order automation in Australia' },
   { n: '03', t: 'Marketplace and store order exceptions', d: 'Orders from Amazon.com.au, eBay Australia, Kogan, Bunnings Marketplace, THE ICONIC or your Shopify store that failed to import, carry an unmapped SKU or a wrong price. The agent drafts the fix for your channel manager.' },
   { n: '04', t: 'Courier and fulfilment follow-up', d: 'Stalled item fulfilments checked against StarTrack, Australia Post or Sendle tracking. Late parcels flagged before the customer calls, with a drafted update and, where needed, the claim details ready.' },
   { n: '05', t: 'RFQs and quotes as NetSuite estimates', d: 'A buyer’s request for quote is read, each line matched to an item, contract or tier pricing applied, and an estimate, NetSuite’s word for a quote, saved for your sales team to check and send.' },
@@ -215,10 +223,10 @@ const JOBS: { n: string; t: string; d: string }[] = [
 /* ─── Build steps ─── */
 const BUILD_STEPS: { n: string; t: string; d: string; out: string }[] = [
   { n: '01', t: 'Read your brief and sample documents',
-    d: 'You send a brief or RFP and around ten real documents with sensitive details removed. We read them before the first call, so the call is about your process, not our pitch.',
+    d: 'You send a brief or RFP and around ten real documents with sensitive details removed. We read them before the first call, so the call goes straight to how your team works today.',
     out: 'A written list of questions and the job we think should go first.' },
   { n: '02', t: 'Check what Oracle already gives you',
-    d: 'We confirm your edition, SuiteTax status, ANZ Localization setup and whether the AI Connector Service can be switched on. If a free Oracle feature or a SuiteFlow workflow does the job, we tell you and stop there.',
+    d: 'We confirm your edition, SuiteTax status, ANZ Localization setup and whether the AI Connector Service can be switched on. If a free Oracle feature or a SuiteFlow workflow (NetSuite’s point-and-click automation tool) does the job, we tell you and stop there.',
     out: 'A one-page fit note: Oracle feature, workflow, or custom agent.' },
   { n: '03', t: 'Demo on your data, before you sign',
     d: 'A first version of the agent runs on your sample documents in a sandbox or a copy of the data. You compare its drafts with what your team actually entered.',
@@ -248,6 +256,8 @@ const TERMS: { t: string; d: string }[] = [
 
 /* ─── Related AU pages (routes checked in src/app/au on 29 Oct 2026) ─── */
 const RELATED: { h: string; t: string; d: string }[] = [
+  { h: '/au/erp-ai-agents', t: 'ERP AI agents', d: 'Agents for NetSuite, Odoo, SAP Business One and other ERPs, with a person approving each transaction.' },
+  { h: '/au/sales-order-automation-ai-agents', t: 'Sales order automation', d: 'Customer purchase orders from email and PDF turned into pending sales orders.' },
   { h: '/au/ai-agents', t: 'AI agents in Australia', d: 'Agents for Xero, MYOB, HubSpot, ServiceM8 and Microsoft 365, with the same approval rules.' },
   { h: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'Supplier invoice capture and approval for Xero and MYOB businesses.' },
   { h: '/au/ai-development', t: 'AI development', d: 'Larger builds: AI inside your own product, apps and data platforms.' },
@@ -289,7 +299,7 @@ const jsonLd = {
       headline: H1,
       description: DESCRIPTION,
       inLanguage: 'en-AU',
-      datePublished: UPDATED,
+      datePublished: PUBLISHED,
       dateModified: UPDATED,
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="true"]'] },
       breadcrumb: { '@id': `${CANONICAL}#breadcrumb` },
@@ -299,10 +309,7 @@ const jsonLd = {
         name: 'Bhavesh Barot',
         jobTitle: 'Founder & CEO',
         url: 'https://factoryjet.com/about',
-        sameAs: [
-          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-          'https://github.com/factoryjet-tech',
-        ],
+        sameAs: ['https://www.linkedin.com/in/bhavesh-ai-gtm-expert/'],
       },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
@@ -325,11 +332,7 @@ export const metadata: Metadata = {
      (same shape as aiDevelopmentAlternates in src/data/hreflangMap). */
   alternates: {
     canonical: CANONICAL,
-    languages: {
-      'en-US': 'https://factoryjet.com/services/netsuite-ai-agents',
-      'en-AU': CANONICAL,
-      'x-default': 'https://factoryjet.com/services/netsuite-ai-agents',
-    },
+    languages: twinAlternates['netsuite-ai-agents'],
   },
   openGraph: {
     title: TITLE,
@@ -381,15 +384,15 @@ export default function NetSuiteAiAgentsAUPage() {
                 Your company outgrew Xero or MYOB and moved to NetSuite, yet your AP team still keys supplier
                 invoices by hand, because Oracle’s Bill Capture works only in the United States. Orders arrive from
                 Amazon.com.au, Bunnings Marketplace, Shopify and trade buyers’ PDFs, and StarTrack exceptions land in
-                someone’s inbox. We build AI agents inside your NetSuite account that draft the bills, orders and
-                fixes. Your team approves each one.
+                someone’s inbox. We build AI agents inside your NetSuite account that draft bills, sales orders,
+                courier updates and marketplace fixes. Your team approves each one.
               </p>
               <HeroInlineForm
                 region="au"
                 source="au_netsuite_ai_agents_hero"
                 submitLabel="See a demo on my data"
                 service="NetSuite AI Agents"
-                trustText="Your own invoices, run through the agent before any contract. The founder replies within a day."
+                trustText="Your own invoices, run through the agent before any contract. The founder replies within 24 hours."
               />
             </div>
 
@@ -401,18 +404,18 @@ export default function NetSuiteAiAgentsAUPage() {
               </div>
               <div className="specpanel-body">
                 <div className="specrow run">
-                  <span className="idx">before any contract</span>
-                  <span className="title">Demo on your own documents</span>
+                  <span className="idx">01</span>
+                  <span className="title">Demo on your own documents, before any contract</span>
                   <span className="tag">First</span>
                 </div>
                 <div className="specrow run">
-                  <span className="idx">never Administrator</span>
-                  <span className="title">A NetSuite role made for the agent</span>
+                  <span className="idx">02</span>
+                  <span className="title">A NetSuite role made for the agent, never Administrator</span>
                   <span className="tag">Scoped</span>
                 </div>
                 <div className="specrow hold">
-                  <span className="idx">code, scripts and repo</span>
-                  <span className="title">Owned by you from day one</span>
+                  <span className="idx">03</span>
+                  <span className="title">Code and repository owned by you from day one</span>
                   <span className="tag">Yours</span>
                 </div>
               </div>
@@ -443,8 +446,8 @@ export default function NetSuiteAiAgentsAUPage() {
 
         <div className="wrap byline">
           <div className="av">BB</div>
-          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="who"><b><a href="/about">Bhavesh Barot</a></b>, Founder<br /><span>500+ businesses served since 2014. Builds AI agents on NetSuite, Odoo, SAP Business One and ERPNext.</span></div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER FIRST ═══ */}
@@ -458,7 +461,7 @@ export default function NetSuiteAiAgentsAUPage() {
                 <div className="sec">§01</div>
                 <p data-speakable="true">
                   <span className="stat">A NetSuite AI agent takes one repeated job, such as turning supplier invoices into
-                  vendor bills, and does the reading, matching and data entry inside your NetSuite account.</span> It works
+                  vendor bills, and does the reading and the data entry inside your NetSuite account.</span> It works
                   under its own role with limited permissions, saves each transaction as a draft or pending record, and
                   waits for a named person to approve it.
                 </p>
@@ -476,9 +479,9 @@ export default function NetSuiteAiAgentsAUPage() {
               <div className="fact">
                 <div className="sec">§03</div>
                 <p>
-                  What Oracle does give Australian accounts is free: the <a href={SRC_CONNECTOR_FAQ} {...extLink}>AI
+                  For NetSuite Australia accounts, what Oracle does give is free: the <a href={SRC_CONNECTOR_FAQ} {...extLink}>AI
                   Connector Service</a> for Claude and ChatGPT, and the <a href={SRC_ANZ_INSTALL} {...extLink}>ANZ Localization
-                  SuiteApp</a> for Payment Times and TPAR reporting, plus BAS on SuiteTax accounts. A custom agent sits on top of both. It
+                  SuiteApp</a> for Payment Times and TPAR (Taxable Payments Annual Report) reporting, plus BAS on accounts that use SuiteTax, NetSuite’s tax engine. A custom agent sits on top of both. It
                   starts work when a document arrives, without anyone typing a prompt.
                 </p>
               </div>
@@ -526,7 +529,7 @@ export default function NetSuiteAiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Where Australian NetSuite teams lose hours</div>
-              <h2>Where an agent earns its keep first in an Australian NetSuite account</h2>
+              <h2>Which NetSuite jobs should an agent take on first in Australia?</h2>
               <p className="lead">
                 Each one starts with a document or a feed your team already handles by hand, and ends with a
                 transaction a person approves in NetSuite.
@@ -538,6 +541,7 @@ export default function NetSuiteAiAgentsAUPage() {
                   <div className="caphead"><span className="capid">JOB‑{j.n}</span></div>
                   <h3>{j.t}</h3>
                   <p>{j.d}</p>
+                  {j.href && <p><a href={j.href}>{j.link} →</a></p>}
                 </div>
               ))}
             </div>
@@ -549,7 +553,7 @@ export default function NetSuiteAiAgentsAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Who decides what</div>
-              <h2>The agent drafts. Your team approves anything that moves money.</h2>
+              <h2>Who approves what a NetSuite agent drafts?</h2>
             </div>
             <div className="factlist">
               <div className="fact"><div className="sec">§01</div><p>
@@ -575,7 +579,7 @@ export default function NetSuiteAiAgentsAUPage() {
         {/* ═══ PROCESS ═══ */}
         <section className="section process" id="how-we-build">
           <div className="wrap">
-            <div className="section-head">
+            <div className="section-head head-stack">
               <div className="eyebrow">How a NetSuite agent project runs</div>
               <h2>Seven steps from your brief to a live NetSuite agent</h2>
               <p className="lead">
@@ -616,15 +620,16 @@ export default function NetSuiteAiAgentsAUPage() {
                 Each is the right answer for some job. Match the option to the work, then decide who builds it.
               </p>
             </div>
-            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
-              <table>
+            <p className="md:hidden" style={{ fontSize: 13, margin: '0 0 8px' }}>Swipe sideways to see all four options.</p>
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 760 }}>
                 <thead>
                   <tr>
                     <th>What you need</th>
                     <th className="fj">Custom agent (FactoryJet)</th>
                     <th>AI Connector + Claude or ChatGPT</th>
                     <th>SuiteFlow or SuiteScript by your partner</th>
-                    <th>Third-party AP tool</th>
+                    <th>Third-party AP tool (Tipalti, Stampli, ApprovalMax)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -637,6 +642,13 @@ export default function NetSuiteAiAgentsAUPage() {
                 </tbody>
               </table>
             </div>
+            <p style={{ marginTop: 16 }}>
+              Tipalti, Stampli and ApprovalMax each list a NetSuite integration on their own pages:{' '}
+              <a href={SRC_TIPALTI} {...extLink}>Tipalti</a>,{' '}
+              <a href={SRC_STAMPLI} {...extLink}>Stampli</a> and{' '}
+              <a href={SRC_APPROVALMAX} {...extLink}>ApprovalMax</a> (checked 31 October 2026). Ask each vendor how
+              it handles Australian GST codes and ABNs before you shortlist it.
+            </p>
           </div>
         </section>
 
@@ -645,22 +657,24 @@ export default function NetSuiteAiAgentsAUPage() {
           <div className="wrap au-split">
             <div className="au-prose">
               <div className="eyebrow">Work we have done</div>
-              <h2>ERP agent work behind this page, and the terms we work on</h2>
+              <h2>What ERP agent work have we done?</h2>
               <p>
                 Our ERP agent work covers RFQ automation, daily bookkeeping and the generation of purchase and sales
                 orders, on NetSuite as well as Odoo, SAP Business One, ERPNext and custom-built ERPs. FactoryJet has served more than 500
-                businesses since 2014, with more than a decade of commerce work.
+                businesses since 2014, with more than a decade of commerce work. Projects run the same way for a team in
+                Sydney, Melbourne, Brisbane, Perth or Adelaide: video calls, and all build work inside your NetSuite sandbox.
               </p>
               <p>
                 <b>Send us a brief or an RFP.</b> One page is enough: your NetSuite edition and subsidiaries, the job
                 you want handled first, weekly volumes, and the systems around NetSuite, such as Shopify, Cin7 Core, a
-                3PL, Xero in a smaller entity, or Afterpay and Stripe settlements. Add ten sample documents with
+                third-party logistics (3PL) warehouse, Xero in a smaller entity, or Afterpay and Stripe settlements. Add ten sample documents with
                 sensitive details removed. We reply with questions, then a fixed price for the first phase.
               </p>
-              <ModalCTAButton label="Send my brief" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <ModalCTAButton label="Send my brief" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-ghost" />
             </div>
             <div className="au-panel">
               <div className="eyebrow">Terms</div>
+              <h3>The terms we work on</h3>
               <ol className="au-numlist">
                 {TERMS.map((t) => (
                   <li key={t.t}><span><b>{t.t}.</b> {t.d}</span></li>
@@ -688,12 +702,12 @@ export default function NetSuiteAiAgentsAUPage() {
             <div className="au-panel">
               <div className="eyebrow">What moves a NetSuite quote</div>
               <ul className="trigrows">
-                <li><span className="m">Record types the agent writes to</span><span className="t">Reach</span></li>
-                <li><span className="m">Subsidiaries, currencies and tax codes</span><span className="t">Setup</span></li>
-                <li><span className="m">How varied the incoming documents are</span><span className="t">Handling</span></li>
-                <li><span className="m">Systems outside NetSuite</span><span className="t">Integrations</span></li>
-                <li><span className="m">Approval and audit log needs</span><span className="t">Control</span></li>
-                <li><span className="m">Demo on your data</span><span className="t">Before you sign</span></li>
+                <li><span className="m">Record types the agent writes to</span><span className="n">vendor bills only, or bills plus sales orders and item fulfilments</span><span className="t">Reach</span></li>
+                <li><span className="m">Subsidiaries, currencies and tax codes</span><span className="n">one subsidiary in AUD, or three billing in AUD, NZD and USD</span><span className="t">Setup</span></li>
+                <li><span className="m">How varied the incoming documents are</span><span className="n">one supplier layout, or hundreds of suppliers each with their own PDF</span><span className="t">Handling</span></li>
+                <li><span className="m">Systems outside NetSuite</span><span className="n">NetSuite alone, or NetSuite plus Shopify, Cin7 Core and a 3PL</span><span className="t">Integrations</span></li>
+                <li><span className="m">Approval and audit log needs</span><span className="n">one approver, or approval limits by amount with a log kept for your full retention period</span><span className="t">Control</span></li>
+                <li><span className="m">Demo on your data</span><span className="n">every quote follows a run on your own sample documents</span><span className="t">Before you sign</span></li>
               </ul>
             </div>
           </div>
@@ -721,7 +735,7 @@ export default function NetSuiteAiAgentsAUPage() {
               <div className="fact"><div className="sec">§03</div><p>
                 From 10 December 2026, the <a href={SRC_OAIC_APP1} {...extLink}>new APP 1 rules</a> that followed the
                 Privacy and Other Legislation Amendment Act 2024 make a privacy policy disclose where software uses personal
-                information to reach decisions that significantly affect people. An agent that sets credit holds or customer pricing
+                information in decisions that significantly affect people. An agent that sets credit holds or customer pricing
                 may fall in scope, so each agent ships with a written record of what it decides. We are not lawyers; your
                 adviser makes the call.
               </p></div>
@@ -777,7 +791,7 @@ export default function NetSuiteAiAgentsAUPage() {
               </p>
             </div>
             <div className="ctas">
-              <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="primary-light" className="btn btn-primary" />
               <a className="btn btn-ghost" href="/au/ai-consulting">Start with AI consulting</a>
             </div>
           </div>

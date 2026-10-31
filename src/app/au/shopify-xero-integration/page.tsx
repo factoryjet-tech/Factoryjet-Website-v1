@@ -7,6 +7,7 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 
@@ -34,14 +35,14 @@ import '../au-page.css';
       visible FAQ renders. Never add a second list of questions. */
 
 const CANONICAL = 'https://factoryjet.com/au/shopify-xero-integration';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
 const READ_ON = '29 October 2026';
-const TITLE = 'Shopify Xero Integration Australia | GST & Payouts | FactoryJet';
+const TITLE = 'Shopify Xero Integration AU | GST & Payouts | FactoryJet';
 const H1_LEAD = 'Shopify Xero Integration for Australian Sellers:';
 const H1_EMPHASIS = 'GST, Payouts, Afterpay and Stock That Reconcile';
 const H1 = `${H1_LEAD} ${H1_EMPHASIS}`;
 const DESCRIPTION =
-  'Shopify Xero integration for established Australian stores: GST mapped line by line, Shopify and Afterpay payouts cleared to the cent, stock owned by one system.';
+  'Shopify Xero integration for established Australian stores: GST mapped per line, Shopify and Afterpay payouts cleared to the cent, stock owned by one system.';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD. */
 const crumbs = [
@@ -116,7 +117,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'How do I connect Shopify to Xero?',
     answer: 'The install takes minutes from the Xero App Store. The work is the agreement with your bookkeeper first. Pick a start date at the beginning of a BAS period so no quarter is split between two methods. Write down the GST map: taxable lines, GST-free lines, exports and fees, each against a Xero tax rate. Choose summary or per-sale posting. Then let the first week post and have your bookkeeper tick the deposits off in the bank feed.' },
   { category: 'basics', question: 'Should we post a daily summary or every Shopify order to Xero?',
-    answer: 'For retail volume, a daily summary, which is the option Xero’s listing points busy stores towards. Posting each sale gives Xero a record per buyer and per product, which suits trade accounts you invoice and chase by name. Plenty of established sellers run both: retail orders as one summary a day, wholesale orders as individual invoices with payment terms and the buyer’s ABN.' },
+    answer: 'For retail volume, a daily summary, which is the option Xero’s listing points busy stores towards. Posting each sale gives Xero a record per buyer and per product, which suits trade accounts you invoice and chase by name. You can run both: retail orders as one summary a day, wholesale orders as individual invoices with payment terms and the buyer’s ABN.' },
   { category: 'basics', question: 'How much Shopify history can the Xero integration bring across?',
     answer: 'Xero’s listing says it can sync up to 90 days of historical data. That covers one quarter, roughly a BAS period, but not a financial year. If you are catching up further back, or moving from MYOB or spreadsheets part way through the year, agree a cut-over date with your accountant and bring older periods in as journals, so no sale is counted twice.' },
   { category: 'basics', question: 'Is Xero’s free Shopify integration enough for a larger store?',
@@ -150,20 +151,21 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Stock, MYOB and other systems ──
   { category: 'stock', question: 'Should stock live in Shopify, Xero or our inventory system?',
-    answer: 'In one of them, never two. Cin7 Core’s help centre asks you to switch off Xero inventory tracking, because Cin7 Core will not work with it. Many Australian sellers run Cin7 Core or Unleashed for stock, so Xero receives the financial entries and Shopify receives the available quantity. We write down which system owns stock, prices and product data before anything is connected.' },
+    answer: 'In one of them, never two. Cin7 Core’s help centre asks you to switch off Xero inventory tracking, because Cin7 Core will not work with it. If you run Cin7 Core or Unleashed for stock, Xero receives the financial entries and Shopify receives the available quantity. We write down which system owns stock, prices and product data before anything is connected.' },
   { category: 'stock', question: 'How does cost of goods sold get into Xero from Shopify?',
     answer: 'It has to come from wherever your unit costs live. A2X says it can post a cost of goods sold entry to Xero from SKU costs you upload. Cin7 Core and Unleashed carry cost from purchasing. A custom link can read cost from your inventory system or ERP. Without a cost entry, Xero shows sales but not gross margin, and stock on the balance sheet drifts.' },
-  { category: 'stock', question: 'Can you connect Shopify to MYOB instead of Xero?',
-    answer: 'Yes. We connect Shopify to MYOB Business and MYOB Acumatica as well as Xero and QuickBooks Online. The scoping questions are the same: summary or per-order posting, GST mapping, one clearing account per gateway, refunds against the original tax rate, and one owner for stock. If you are choosing between Xero and MYOB at the same time, your bookkeeper’s preference should weigh heavily.' },
+  { category: 'stock', question: 'Can you build a Shopify MYOB integration instead of Xero?',
+    answer: 'A Shopify MYOB integration is scoped the same way, through MYOB’s API. MYOB’s developer site says AccountRight, Essentials and MYOB Business all work with that API. The questions match a Xero build: summary or per-order posting, GST mapping, one clearing account per gateway, refunds at the original tax rate, and one owner for stock. If you are weighing Xero vs MYOB for a Shopify store, start with your bookkeeper’s preference and the apps you already run.',
+    links: [{ href: 'https://developer.myob.com/api/myob-business-api/v2/', label: 'MYOB Developer: MYOB Business API' }] },
   { category: 'stock', question: 'We run NetSuite or Odoo. Where does Xero fit?',
     answer: 'If NetSuite or Odoo already holds your general ledger, Shopify should post there and Xero usually drops out of the order flow. Where a group keeps Xero for one entity and an ERP for another, each Shopify store posts to the books of the entity that sells. Either way the posting rules are the same, and we agree them with your finance team first.' },
 
   // ── Cost and working with us ──
   { category: 'working', question: 'How much does a Shopify Xero integration cost in Australia?',
-    answer: 'Xero’s own integration is free on all Xero plans, per its listing. Connector apps charge by volume: A2X says its plans depend on Shopify order volume and features. For custom work, Hatchet, a Perth software company which describes itself as a Xero Development Partner, wrote in September 2026 that each integration typically adds $5,000 to $20,000 to a build; the article does not say whether GST is included. FactoryJet quotes a fixed price in writing after a short scoping call.',
+    answer: 'Xero’s own integration is free on all Xero plans, per its listing. Connector apps charge by volume: A2X says its plans depend on Shopify order volume and features. For custom work, Perth software company Hatchet wrote in September 2026 that each integration typically adds $5,000 to $20,000 to a build (see the cost section). FactoryJet quotes a fixed price in writing after a short scoping call.',
     links: [{ href: '/au/shopify-development', label: 'Shopify development in Australia' }] },
-  { category: 'working', question: 'When is a custom Shopify Xero link worth paying for?',
-    answer: 'When your rules have no setting in an app: trade invoices with the buyer’s ABN, stock held in Cin7 Core or an ERP, several entities, marketplace settlements or bundles that must post as their parts. Volume matters too. Xero allows each connected app 60 API calls a minute for each organisation, five at a time, plus a daily cap, so a big sale day needs queued, batched writes.' },
+  { category: 'working', question: 'Does Xero have an API for a custom Shopify integration?',
+    answer: 'Yes. Custom Xero integrations use Xero’s API (application programming interface, the door one system uses to read and write data in another). Xero allows each connected app 60 calls a minute for each organisation, five at a time, plus a daily cap, so a big sale day needs queued, batched writes. A custom link earns its cost when your rules have no app setting: trade invoices with the buyer’s ABN, stock in Cin7 Core or an ERP, several entities, or marketplace settlements.' },
   { category: 'working', question: 'Who owns the integration once it is built?',
     answer: 'You do. The code and the repository are yours from day one, and the link can run in your own hosting and Xero accounts, at cost with no markup. Defects are fixed inside the build price for a cover period we agree before work starts. Support after that is optional: each change is quoted and approved, and there is no monthly minimum.' },
   { category: 'working', question: 'What should our brief or RFP include?',
@@ -186,7 +188,7 @@ const GAPS: { n: string; t: string; d: string; src?: SrcKey }[] = [
 const STEPS: { t: string; d: string }[] = [
   { t: '01 · Scoping call and a books check', d: 'A short call with the founder, then we read one recent month of Shopify, Afterpay and marketplace payouts against your Xero file and list every line that does not reconcile. You leave knowing which route fits: Xero’s own integration, a connector app, or a custom link.' },
   { t: '02 · Posting rules on one page', d: 'Accounts for sales, shipping, discounts, refunds and fees; a Xero tax rate for every Shopify tax; one clearing account per gateway; summary or per-order posting; one owner for stock and cost. Your bookkeeper signs it off before any build starts, and each phase gets its own fixed price.' },
-  { t: '03 · A demo on your own data', d: 'We run last month’s orders through the link into a test copy of your books and show you the result before you sign: payouts cleared, GST split, Afterpay matched. If it does not reconcile on your data, you have lost nothing.' },
+  { t: '03 · A demo on your own data', d: 'We run last month’s orders through the link into a test copy of your books and show you the result before you sign: payouts cleared, GST split, Afterpay matched and refunds reversed at the original rate. If it does not reconcile on your data, you have lost nothing.' },
   { t: '04 · Build and the awkward cases', d: 'Mixed GST carts, orders to New Zealand, partial refunds after a payout, chargebacks, Afterpay refunds, bundles, gift cards and a sale-day burst that has to queue inside Xero’s API limits. We test every case on purpose before go-live.' },
   { t: '05 · Parallel month and cut-over', d: 'The new link runs beside your current method for a full month and the two are compared to the cent. Your accountant picks the cut-over date, so no order posts twice and no period is missed.' },
   { t: '06 · Handover and support', d: 'Written posting rules, a run book for month end, the code in your repository and the link in your accounts. Defects inside the agreed cover period are fixed in the build price. After that, support is optional and quoted per change.' },
@@ -205,7 +207,8 @@ const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
   { href: '/au/shopify-development', t: 'Shopify development Australia', d: 'New stores, Shopify Plus, B2B and migrations, with Afterpay, Zip, Australia Post and accounting connected from launch.', go: 'Explore Shopify →' },
   { href: '/au/ecommerce-development', t: 'Ecommerce development Australia', d: 'Platform choice and builds for stores that sell retail, wholesale and through marketplaces.', go: 'Explore ecommerce →' },
   { href: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'The other side of the books: supplier invoices read into Xero or MYOB, matched to purchase orders and routed for approval.', go: 'Explore AP automation →' },
-  { href: '/au/ai-agents', t: 'AI agents for Australian businesses', d: 'Agents we build to answer order questions, chase exceptions and update records across Shopify and your back office.', go: 'Explore AI agents →' },
+  { href: '/au/ai-agents', t: 'AI agents for Australian businesses', d: 'Agents we build to answer order questions, chase payout exceptions in Xero and update records across Shopify and your back office.', go: 'Explore AI agents →' },
+  { href: '/au/woocommerce', t: 'WooCommerce development Australia', d: 'Stores on WooCommerce face the same WooCommerce Xero questions: GST per line, one clearing account per gateway, one owner for stock.', go: 'Explore WooCommerce →' },
   { href: '/au/website-maintenance', t: 'Website and store maintenance', d: 'Ongoing care for the store and the integrations behind it, quoted per change.', go: 'Explore maintenance →' },
 ];
 
@@ -273,7 +276,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['shopify-xero-integration'] },
   openGraph: {
     title: TITLE,
     description:
@@ -337,8 +340,7 @@ export default function ShopifyXeroIntegrationAUPage() {
               <p className="lead">
                 You sell on Shopify, your books are in Xero, and month end still means a spreadsheet. Shopify
                 Payments, Afterpay, Zip and PayPal each pay on their own schedule, GST-free lines sit in taxable
-                carts, and Cin7 Core or Unleashed disagrees with Xero about stock. We connect Shopify to Xero (or
-                MYOB) so every payout clears to the cent and your bookkeeper signs off the BAS without rework.
+                carts, and Cin7 Core or Unleashed disagrees with Xero about stock. We connect Shopify to Xero so every payout clears to the cent and your bookkeeper signs off the BAS without rework.
               </p>
               <HeroInlineForm region="au" source="au_shopify_xero_integration_hero" submitLabel="See it on my data" />
             </div>
@@ -350,7 +352,7 @@ export default function ShopifyXeroIntegrationAUPage() {
               <div className="specpanel-bar">
                 <span className="statusdot"></span>
                 <span>RECONCILED · WHAT THE LINK FIXES</span>
-                <span className="sys"><span>Shopify</span><span>Xero or MYOB</span></span>
+                <span className="sys"><span>Shopify</span><span>Xero</span></span>
               </div>
               <div className="workflow-controls">
                 <label className="workflow-toggle" title="Pause or resume the animation">
@@ -413,7 +415,7 @@ export default function ShopifyXeroIntegrationAUPage() {
         <div className="wrap byline">
           <div className="av">BB</div>
           <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST DEFINITION (GEO) ═══ */}
@@ -449,8 +451,7 @@ export default function ShopifyXeroIntegrationAUPage() {
                   <p>
                     Xero already offers a free Shopify integration on all plans. It handles plain retail well. This page
                     is for the businesses it does not fully fit: established sellers with a bookkeeper or finance team,
-                    several payment gateways, a wholesale channel, marketplace sales or an inventory system. Those are
-                    the stores where a month end still takes two days.
+                    several payment gateways, a wholesale channel, marketplace sales or an inventory system.
                   </p>
                 </div>
               </div>
@@ -497,8 +498,9 @@ export default function ShopifyXeroIntegrationAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap" role="region" tabIndex={0} aria-label="Shopify Xero integration routes compared">
-              <table>
+            <p className="md:hidden tablenote">Swipe sideways to see every column.</p>
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="Shopify Xero integration routes compared" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 740 }}>
                 <thead>
                   <tr>
                     <th>What you need</th>
@@ -538,7 +540,9 @@ export default function ShopifyXeroIntegrationAUPage() {
               <div>
                 <h3>When a custom link pays for itself</h3>
                 <p>
-                  Stockists on 30-day terms who need tax invoices with their ABN. Stock in Cin7 Core or Unleashed.
+                  Stockists on 30-day terms who need tax invoices with their ABN (see{' '}
+                  <a href="/au/b2b-ecommerce">B2B ecommerce</a> and{' '}
+                  <a href="/au/accounts-receivable-automation">accounts receivable automation</a>). Stock in Cin7 Core or Unleashed.
                   Amazon.com.au, eBay, Kogan, Bunnings Marketplace or THE ICONIC alongside Shopify. Two entities, or an
                   Australian and a New Zealand store. Bundles that must post as their parts. Each of those is a rule to
                   test against any app before you buy it.
@@ -640,7 +644,7 @@ export default function ShopifyXeroIntegrationAUPage() {
                   <li><span className="m">Exports, including New Zealand</span><span className="t">GST-free rate</span></li>
                   <li><span className="m">Shipping charged to the buyer</span><span className="t">Usually taxed like the goods</span></li>
                   <li><span className="m">Shopify and app fees</span><span className="t">Expense with GST</span></li>
-                  <li><span className="m">Afterpay fees</span><span className="t">Expense, GST per your merchant statement</span></li>
+                  <li><span className="m">Afterpay fees</span><span className="t">Expense, GST per statement</span></li>
                   <li><span className="m">Trade orders of $1,000 or more</span><span className="t">Invoice with ABN</span></li>
                 </ul>
                 <p className="au-note">
@@ -666,17 +670,17 @@ export default function ShopifyXeroIntegrationAUPage() {
               <p>
                 Cin7 Core’s own help centre tells users to switch off Xero inventory tracking, which Cin7 Core
                 does not work with (<a href={SRC.cin7Xero.url} {...extLink}>Cin7 Core Help</a>). That is the right
-                instinct for most Australian sellers with an inventory tool: Shopify shows what is available, the
+                instinct for any seller with an inventory tool: Shopify shows what is available, the
                 inventory system counts it and costs it, and Xero records the value.
               </p>
             </div>
-            <div className="platlist" role="list">
-              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Cin7 Core or Unleashed</h3></div><p className="plat-build">Stock, purchasing and cost live here. Shopify receives available quantities, Xero receives sales, purchases and cost of goods sold. Bundles post as their parts.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>NetSuite, Odoo or MYOB Acumatica</h3></div><p className="plat-build">The ERP holds the ledger, so Shopify posts there and Xero leaves the order flow, unless one entity in the group still runs Xero.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>MYOB Business or QuickBooks Online</h3></div><p className="plat-build">Same posting rules, different ledger. If you are moving to Xero at the same time, your accountant sets the cut-over date.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Australia Post, StarTrack, Sendle and 3PLs</h3></div><p className="plat-build">Freight the customer pays is usually taxed like the goods it carries; on mixed carts your accountant sets the apportionment. Freight you pay the courier should arrive as a bill, kept apart from sales.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">05</span><div className="plat-name"><h3>Marketplaces</h3></div><p className="plat-build">Amazon.com.au, eBay, Kogan, Bunnings Marketplace and THE ICONIC each settle with their own fees. Each gets a clearing account and a channel tag in Xero.</p></div>
-            </div>
+            <ul className="platlist" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+              <li className="plat plat-2col"><span className="capid">01</span><div className="plat-name"><h3>Cin7 Core or Unleashed</h3></div><p className="plat-build">Stock, purchasing and cost live here. Shopify receives available quantities, Xero receives sales, purchases and cost of goods sold. Bundles post as their parts.</p></li>
+              <li className="plat plat-2col"><span className="capid">02</span><div className="plat-name"><h3>NetSuite, Odoo or MYOB Acumatica</h3></div><p className="plat-build">The ERP holds the ledger, so Shopify posts there and Xero leaves the order flow, unless one entity in the group still runs Xero. See{' '}<a href="/au/ecommerce-erp-integration">ecommerce ERP integration</a>.</p></li>
+              <li className="plat plat-2col"><span className="capid">03</span><div className="plat-name"><h3>MYOB Business or QuickBooks Online</h3></div><p className="plat-build">Same posting rules, different ledger. If you are moving to Xero at the same time, your accountant sets the cut-over date.</p></li>
+              <li className="plat plat-2col"><span className="capid">04</span><div className="plat-name"><h3>Australia Post, StarTrack, Sendle and 3PLs</h3></div><p className="plat-build">Freight the customer pays is usually taxed like the goods it carries; on mixed carts your accountant sets the apportionment. Freight you pay the courier should arrive as a bill, kept apart from sales.</p></li>
+              <li className="plat plat-2col"><span className="capid">05</span><div className="plat-name"><h3>Marketplaces</h3></div><p className="plat-build">Amazon.com.au, eBay, Kogan, Bunnings Marketplace and THE ICONIC each settle with their own fees. Each gets a clearing account and a channel tag in Xero.</p></li>
+            </ul>
           </div>
         </section>
 
@@ -702,7 +706,7 @@ export default function ShopifyXeroIntegrationAUPage() {
                 </ul>
               </div>
             </div>
-            <div className="timeline">
+            <div className="timeline timeline-3">
               {STEPS.map((s) => {
                 const [idx, title] = s.t.split(' · ');
                 return (
@@ -728,19 +732,19 @@ export default function ShopifyXeroIntegrationAUPage() {
                 <h2>How we work on a Shopify Xero project</h2>
               </div>
               <p>
-                The agencies that build an integration and then stop answering are the reason most finance teams
-                distrust the next one. These terms apply to every phase.
+                Five terms apply to every phase of a Shopify Xero project, from the scoping call to support after
+                go-live.
               </p>
             </div>
-            <div className="platlist" role="list">
+            <ul className="platlist" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
               {TERMS.map((t) => (
-                <div key={t.n} className="plat plat-2col" role="listitem">
+                <li key={t.n} className="plat plat-2col">
                   <span className="capid">{t.n}</span>
                   <div className="plat-name"><h3>{t.t}</h3></div>
                   <p className="plat-build">{t.d}</p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -762,8 +766,9 @@ export default function ShopifyXeroIntegrationAUPage() {
                 <div className="fact"><div className="sec">§02</div><p>
                   For custom work, Hatchet, a Perth software company that describes itself as a Xero Development
                   Partner, wrote on 8 September 2026 that each integration typically adds $5,000 to $20,000 to a
-                  build, depending on the quality of the API and how much data mapping is involved (<a href={SRC.hatchet.url} {...extLink}>Hatchet</a>). The article does not say whether GST is
-                  included. A Shopify to Xero link with Afterpay, marketplaces and an inventory system touches several
+                  build (<a href={SRC.hatchet.url} {...extLink}>Hatchet</a>). The figure depends on the quality of the
+                  API, the link software uses to talk to another system, and on how much data mapping (matching fields
+                  between the two) is involved. The article does not say whether GST is included. A Shopify to Xero link with Afterpay, marketplaces and an inventory system touches several
                   of those connections.
                 </p></div>
                 <div className="fact"><div className="sec">§03</div><p>
@@ -792,7 +797,7 @@ export default function ShopifyXeroIntegrationAUPage() {
             <div className="section-head plat-head">
               <div>
                 <div className="eyebrow">Have a brief or RFP?</div>
-                <h2>Send it. A one-page brief gets you a sharper quote</h2>
+                <h2>What to put in a Shopify Xero integration brief or RFP</h2>
               </div>
               <p>
                 Finance and operations teams that send a written brief get a scoped answer on the first call instead
@@ -800,12 +805,12 @@ export default function ShopifyXeroIntegrationAUPage() {
                 running a tender, we will answer it in the format you set.
               </p>
             </div>
-            <div className="platlist" role="list">
-              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Systems</h3></div><p className="plat-build">Shopify plan, Xero or MYOB edition, inventory system, ERP, 3PL, and any app already syncing.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Volumes and channels</h3></div><p className="plat-build">Orders a month and on your biggest sale day, each payment gateway, each marketplace and each Shopify store.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Tax and entities</h3></div><p className="plat-build">Which products are GST-free, whether you export, and which entity sells what.</p></div>
-              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>The pain today</h3></div><p className="plat-build">What breaks at month end, how long reconciliation takes, and who signs off the BAS.</p></div>
-            </div>
+            <ul className="platlist" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+              <li className="plat plat-2col"><span className="capid">01</span><div className="plat-name"><h3>Systems</h3></div><p className="plat-build">Shopify plan, Xero or MYOB edition, inventory system, ERP, 3PL, and any app already syncing.</p></li>
+              <li className="plat plat-2col"><span className="capid">02</span><div className="plat-name"><h3>Volumes and channels</h3></div><p className="plat-build">Orders a month and on your biggest sale day, each payment gateway, each marketplace and each Shopify store.</p></li>
+              <li className="plat plat-2col"><span className="capid">03</span><div className="plat-name"><h3>Tax and entities</h3></div><p className="plat-build">Which products are GST-free, whether you export, and which entity sells what.</p></li>
+              <li className="plat plat-2col"><span className="capid">04</span><div className="plat-name"><h3>The pain today</h3></div><p className="plat-build">What breaks at month end, how long reconciliation takes, and who signs off the BAS.</p></li>
+            </ul>
             <div className="ctas">
               <ModalCTAButton label="Send my brief" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
             </div>
@@ -817,7 +822,7 @@ export default function ShopifyXeroIntegrationAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Related FactoryJet services</div>
-              <h2>Around the Shopify Xero link</h2>
+              <h2>Related services for Shopify and Xero stores in Australia</h2>
             </div>
             <ul className="agentdir-grid">
               {SIBLINGS.map((s) => (
@@ -860,14 +865,14 @@ export default function ShopifyXeroIntegrationAUPage() {
           <div className="wrap">
             <div>
               <div className="eyebrow">Ready when you are</div>
-              <h2>Close the month in Xero without the spreadsheet</h2>
+              <h2>Get your Shopify payouts reconciling in Xero</h2>
               <p>
                 Leave your name and work email. Within 24 hours the founder writes back to set up a call about your
                 gateways, channels and stock, then shows you the link working on your own data before you sign.
               </p>
             </div>
             <div className="ctas">
-              <ModalCTAButton label="Book my Shopify Xero scoping call" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <ModalCTAButton label="Book my Shopify Xero scoping call" region="au" modalVariant="default" btnVariant="primary-light" className="btn btn-primary" />
               <a className="btn btn-ghost" href="/au/shopify-development">See Shopify development</a>
             </div>
           </div>

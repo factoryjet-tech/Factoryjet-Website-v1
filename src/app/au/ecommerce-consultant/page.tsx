@@ -8,20 +8,21 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ecommerce-consultant';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
 /* DataForSEO, Australia (location 2036), Google Ads volumes pulled 29 Oct 2026:
    "ecommerce consultant", "ecommerce consulting" and "ecommerce consultancy" 40 a
    month each (CPC about A$32), "ecommerce consulting australia" 20, "shopify
    consultant" 20. The title carries the two head terms. */
-const TITLE = 'Ecommerce Consultant Australia | Ecommerce Consulting | FactoryJet';
+const TITLE = 'Ecommerce Consultant & Consulting Australia | FactoryJet';
 const H1 = 'Ecommerce Consultant Australia for Stores That Already Trade';
 const DESCRIPTION =
-  'Ecommerce consulting for established Australian stores: margin by channel, Xero and MYOB sync, Cin7 stock, marketplaces and replatforming. A demo on your data first.';
+  'Ecommerce consulting for Australian stores: margin by channel, Xero and MYOB sync, Cin7 stock, marketplaces and replatforming. Demo on your data first.';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -76,9 +77,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'Is ecommerce still profitable in 2026?',
     answer: 'It can be, but profit now depends on the costs behind each order more than on sales volume. Marketplace commission, buy now pay later fees, card fees, returns and shipping to regional postcodes all come out of the same margin. The stores that stay profitable know their profit per order by channel and stop selling where it turns negative. Working that number out is usually the first thing we do in an audit.' },
   { category: 'basics', question: 'What are the main disadvantages of ecommerce for an established business?',
-    answer: 'The common ones are margin lost to fees and returns, stock that drifts out of step across channels, rising advertising costs, more customer data to protect, and manual admin that grows with every new channel. None of them are reasons to stop selling online. Each one is a fixable process problem, and most of our audit findings for Australian stores fall into one of those five groups.' },
+    answer: 'The common ones are margin lost to fees and returns, stock that drifts out of step across channels, rising advertising costs, more customer data to protect, and manual admin that grows with every new channel. Each one is a process problem that can be fixed, and an audit sorts its findings into those five groups so you can see which one costs you most.' },
   { category: 'basics', question: 'What is the 80/20 rule in ecommerce?',
-    answer: 'It is the observation that a small share of products, customers or channels usually produces most of the revenue or profit. It is a rule of thumb. In an audit we test it on your own order data: which SKUs, channels and customer groups carry the margin, and which ones cost more to sell than they bring in. That list often decides where the first fixes go.' },
+    answer: 'It is the observation that a small share of products, customers or channels usually produces most of the revenue or profit. It is a rule of thumb. In an audit we test it on your own order data: which SKUs (stock keeping units, the code for each product variant), channels and customer groups carry the margin, and which ones cost more to sell than they bring in. That list often decides where the first fixes go.' },
 
   // ── Choosing a consultant ──
   { category: 'choosing', question: 'When should we hire a consultant instead of a developer?',
@@ -92,13 +93,14 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'choosing', question: 'Is an ecommerce consultant worth the money?',
     answer: 'It is worth it when the advice changes a decision you were about to make with real money: a replatform, a new marketplace, a new ERP or a bigger ad budget. It is rarely worth it as a general health check with no decision attached. Before we start, we ask which decision the work should inform. If there is none, we usually suggest a smaller, cheaper piece of work instead.' },
   { category: 'choosing', question: 'If FactoryJet does the audit, are we locked into FactoryJet for the build?',
-    answer: 'No. The plan belongs to you, and we write it so your own developers, a freelancer or another agency can act on it. Plenty of clients hand us the build anyway, since we have already traced where the problems sit. Either way, each phase is scoped, priced and signed on its own, so agreeing to an audit never commits you to a build.' },
+    answer: 'No. The plan belongs to you, and we write it so your own developers, a freelancer or another agency can act on it. If you do hand us the build, the people who traced the problem scope the fix. Either way, each phase is scoped, priced and signed on its own, so agreeing to an audit never commits you to a build.' },
 
   // ── Cost and timing ──
   { category: 'cost', question: 'How much does an ecommerce consultant cost in Australia?',
-    answer: 'Melbourne agency eCommerce Circle puts Australian consultants and strategists at roughly $130 to $300+ an hour, and a defined consulting project at $5,000 to $50,000+, citing 2026 Australian agency pricing guides. It calls the ranges indicative and does not say whether GST is included, so ask every quote to show GST on its own line. FactoryJet quotes a fixed price in writing after a short scoping call.' },
+    answer: 'Melbourne agency eCommerce Circle puts Australian consultants and strategists at roughly $130 to $300+ an hour, and a defined consulting project at $5,000 to $50,000+, citing 2026 Australian agency pricing guides. It calls the ranges indicative and does not say whether GST is included, so ask every quote to show GST on its own line. FactoryJet quotes a fixed price in writing after a short scoping call.',
+    links: [{ href: SRC_COST, label: 'Source: eCommerce Circle, consultant costs (market ranges, not our prices)' }] },
   { category: 'cost', question: 'What decides the price of an ecommerce audit?',
-    answer: 'Five things move it most: the count of channels you sell through, the systems wired to the store, the size and shape of the catalogue, whether a replatform is on the table, and whether we stop at the plan or carry on to build. One Shopify site with one warehouse and Xero is a smaller job than a brand on three marketplaces with an ERP, a 3PL and trade customers.' },
+    answer: 'Five things move it most: the count of channels you sell through, the systems wired to the store, the size and shape of the catalogue, whether a replatform is on the table, and whether we stop at the plan or carry on to build. One Shopify site with one warehouse and Xero is a smaller job than a brand on three marketplaces with an ERP, a 3PL (a third-party warehouse that packs and ships for you) and trade customers.' },
   { category: 'cost', question: 'How long does an ecommerce audit take?',
     answer: 'It depends on access more than on effort. Once we have read-only access to the store, the accounting file, the inventory system and the marketplace accounts, the review moves quickly. Waiting on logins is the usual delay. We agree the timeline in writing on the first call, and we tell you upfront which parts depend on your team or your current agency.' },
   { category: 'cost', question: 'Do you charge a monthly retainer?',
@@ -106,19 +108,23 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 
   // ── Australian systems and rules ──
   { category: 'systems', question: 'Our Shopify payouts never match Xero. Can you fix that?',
-    answer: 'Usually, yes. A payout from Shopify Payments, Afterpay or Zip bundles several days of orders, with fees and refunds already taken off, so it never equals one day of sales. The cure is to post sales, fees, refunds and GST as separate lines into a holding account in Xero, and let each bank deposit clear against it. We agree the posting rules with your bookkeeper first, then test a full month.' },
+    answer: 'Usually, yes. A payout from Shopify Payments, Afterpay or Zip bundles several days of orders, with fees and refunds already taken off, so it never equals one day of sales. The cure is to post sales, fees, refunds and GST as separate lines into a holding account in Xero, and let each bank deposit clear against it. We agree the posting rules with your bookkeeper first, then test a full month.',
+    links: [{ href: '/au/shopify-xero-integration', label: 'Shopify and Xero integration in Australia' }] },
   { category: 'systems', question: 'Should we move stock management into Cin7 Core or Unleashed?',
     answer: 'Move when stock lives in more than one place and nobody trusts the numbers: several warehouses, a 3PL, marketplaces, assembled or bundled products, or purchase orders to suppliers. Both are common choices for Australian product businesses and both connect to Xero. The harder decision is which system owns stock, prices and product data. We settle that first, because a second source of truth causes most overselling.' },
   { category: 'systems', question: 'We run MYOB Acumatica or NetSuite. Can our store connect to it?',
-    answer: 'Yes. Most of these links use an off-the-shelf connector; the rest need a short piece of custom code. The first job is a written list of who is the master record for customers, prices, stock and invoices, then a choice of what syncs straight away and what can run in a nightly batch. We build and test on staging copies first, so your live store and your books keep trading while the connection is proven.' },
+    answer: 'Usually, yes. For NetSuite or MYOB Acumatica, we confirm on the scoping call which connector or custom route fits your setup, and put that in writing before any quote. Either way, the first job is a written list of who is the master record for customers, prices, stock and invoices. We build and test on staging copies, so your live store and your books keep trading.',
+    links: [{ href: '/au/ecommerce-erp-integration', label: 'Ecommerce and ERP integration in Australia' }] },
   { category: 'systems', question: 'Should we sell on Amazon.com.au, eBay, Kogan or Bunnings Marketplace?',
-    answer: 'Only where the margin survives the marketplace’s fees and your shipping cost. Before adding a channel, we model profit per order on your best sellers, check whether your stock system can feed that marketplace without manual updates, and work out who will handle its customer messages. Some brands do well on one marketplace and should skip the rest. The answer comes from your numbers.' },
+    answer: 'Only where the margin survives the marketplace’s fees and your shipping cost. Before adding a channel, we model profit per order on your best sellers, check whether your stock system can feed that marketplace without manual updates, and work out who will handle its customer messages. Some brands do well on one marketplace and should skip the rest. The answer comes from your numbers.',
+    links: [{ href: '/au/amazon-agency', label: 'Amazon.com.au marketplace services' }] },
   { category: 'systems', question: 'Do we need e-invoicing through Peppol for our trade customers?',
     answer: 'Peppol is the network accounting systems use to send invoices directly to each other instead of by email. Xero says registering for it to receive eInvoices is free to set up, and those invoices arrive as draft bills ready for approval. If larger trade or government customers ask you for it, the change sits in your accounting setup, so we plan it alongside your store and order flow. Check your obligations with your accountant.' },
   { category: 'systems', question: 'Does the Privacy Act apply to our online store?',
-    answer: 'The OAIC defines a small business as one with an annual turnover of $3 million or less, and the Privacy Act generally covers businesses above that. Some smaller businesses are covered regardless, including health service providers and those trading in personal information. Most established stores we work with are over the line. An audit lists every app that receives customer data, which is the first thing your adviser will ask for.' },
+    answer: 'The OAIC defines a small business as one with an annual turnover of $3 million or less, and the Privacy Act generally covers businesses above that. Some smaller businesses are covered regardless, including health service providers and those trading in personal information. Many established stores trade above that line. An audit lists every app that receives customer data, which is the first thing your adviser will ask for.' },
   { category: 'systems', question: 'Our Shopify Plus discounts stopped working this year. Why?',
-    answer: 'The most common cause is the end of Shopify Scripts. Shopify’s help centre says Scripts were deprecated as of 30 June 2026 and points stores to Shopify Functions instead. Many Plus stores ran tiered discounts, free gift rules and hidden shipping options through Scripts. If those rules went quiet mid-year, an audit lists each one, and a developer rebuilds them as Functions and tests them at checkout.' },
+    answer: 'The most common cause is the end of Shopify Scripts. Shopify’s help centre says Scripts were deprecated as of 30 June 2026 and points stores to Shopify Functions instead. Many Plus stores ran tiered discounts, free gift rules and hidden shipping options through Scripts. If those rules went quiet mid-year, an audit lists each one, and a developer rebuilds them as Functions (small pieces of code Shopify runs inside its own checkout) and tests them there.',
+    links: [{ href: '/au/shopify-plus', label: 'Shopify Plus services in Australia' }] },
 
   // ── Working with FactoryJet ──
   { category: 'working', question: 'Can we see something working before we sign?',
@@ -134,7 +140,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
        taken from Google Australia results for "ecommerce consultant australia"
        and "ecommerce consulting services" (DataForSEO, 29 Oct 2026). ───────── */
 const CONSULTANCIES: { name: string; note: string }[] = [
-  { name: 'FactoryJet', note: 'That is us. Ecommerce consulting with a delivery team behind it: audits, replatforming plans, Xero, MYOB, Cin7 and ERP integration, marketplaces and trade ordering, then the build and support if you want them.' },
+  { name: 'FactoryJet', note: 'Ecommerce consulting with a delivery team behind it: audits, replatforming plans, integration planning for Xero, MYOB, Cin7 and ERPs, marketplaces and trade ordering, then the build and support if you want them.' },
   { name: 'Renio', note: 'A consultancy listing Sydney and Melbourne, with Brisbane, Adelaide, Perth and US cities on its site. It names Shopify, commercetools, marketplaces and POS, and shows NetSuite and Cin7 logos.' },
   { name: 'Comma Consulting', note: 'An Australian ecommerce consultancy listing strategy planning, UX design, website audits, replatforming, B2B ecommerce and coaching.' },
   { name: 'Sell Good Consulting', note: 'A Melbourne consultancy offering one-on-one mentoring, ecommerce audits, strategy and operational planning, migration advice and a fractional Head of E-Commerce.' },
@@ -215,7 +221,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['ecommerce-consultant'] },
   openGraph: {
     title: TITLE,
     description:
@@ -250,15 +256,15 @@ const HERO_ICONS = [
 ] as const;
 
 /* Ten things the audit checks. */
-const AUDIT_ITEMS: { n: string; t: string; d: string }[] = [
+const AUDIT_ITEMS: { n: string; t: string; d: string; link?: { href: string; label: string } }[] = [
   { n: '01', t: 'Profit per order, by channel', d: 'Your own site, Amazon.com.au, eBay, Kogan, Bunnings Marketplace or THE ICONIC, each with its commission, Afterpay or Zip fees, card fees, returns and freight taken out. Revenue rankings and profit rankings rarely match.' },
-  { n: '02', t: 'How orders land in Xero or MYOB', d: 'One invoice per order or a daily summary, how GST and fees are posted, and whether refunds and payouts reconcile without someone fixing them by hand every month.' },
+  { n: '02', t: 'How orders land in Xero or MYOB', d: 'One invoice per order or a daily summary, how GST and fees are posted, and whether refunds and payouts reconcile without someone fixing them by hand every month.', link: { href: '/au/shopify-xero-integration', label: 'How we connect Shopify and Xero' } },
   { n: '03', t: 'Which system owns stock', d: 'Shopify, Cin7 Core, Unleashed, NetSuite, Odoo or a spreadsheet. We trace how often each channel updates and where oversells and phantom stock come from.' },
   { n: '04', t: 'Marketplace listings and their data', d: 'Titles, attributes, images and prices across every marketplace, and whether they come from one product record or get retyped per channel.' },
   { n: '05', t: 'The checkout, on a phone', d: 'We buy something. Payment options (Afterpay, Zip, Stripe or Shopify Payments), delivery estimates, forced accounts and surprise costs all get logged, step by step.' },
   { n: '06', t: 'Freight cost by postcode', d: 'Australia Post, StarTrack, Sendle or a 3PL, matched against what customers pay. Regional and remote postcodes are where free shipping thresholds quietly lose money.' },
-  { n: '07', t: 'Platform headroom', d: 'Whether Shopify, WooCommerce, Magento or Maropost can carry the next few years, what is propping it up (apps, plugins, custom code), and what a move would involve.' },
-  { n: '08', t: 'Trade and wholesale ordering', d: 'Stockists ordering by email, price lists in spreadsheets, payment terms tracked by memory. We map it, and note where Peppol eInvoicing would come into play.' },
+  { n: '07', t: 'Platform headroom', d: 'Whether Shopify, WooCommerce, Magento or Maropost can carry the next few years, what is propping it up (apps, plugins, custom code), and what a move would involve.', link: { href: '/au/shopify-migration', label: 'Shopify migration in Australia' } },
+  { n: '08', t: 'Trade and wholesale ordering', d: 'Stockists ordering by email, price lists in spreadsheets, payment terms tracked by memory. We map it, and note where Peppol eInvoicing would come into play.', link: { href: '/au/b2b-ecommerce', label: 'B2B ecommerce and trade portals' } },
   { n: '09', t: 'Search and AI answers', d: 'Category and product rankings on Google, technical faults, and whether ChatGPT, Perplexity and Google AI Overviews mention your brand when buyers ask.' },
   { n: '10', t: 'Where customer data goes', d: 'Every app that receives names, addresses and order history. Above the Privacy Act turnover threshold, this list is the starting point for your obligations.' },
 ];
@@ -309,10 +315,10 @@ const BRIEF_ITEMS: { m: string; t: string }[] = [
 /* House terms. */
 const TERMS: { t: string; d: string }[] = [
   { t: 'A demo on your data before you sign', d: 'Working software on your own orders, stock or books, so you judge the fix before you pay for the build.' },
-  { t: 'A fixed price per phase', d: 'Each phase is scoped, priced and signed on its own, and you can stop after any of them.' },
+  { t: 'A fixed price per phase', d: 'Each phase is scoped, priced and quoted in writing, and you can stop after any of them.' },
   { t: 'You own it from day one', d: 'The code, the repository, the documentation and the accounts are yours. Hosting and AI can run in your accounts at cost, with no markup.' },
   { t: 'Defects fixed inside the build price', d: 'For a cover period we agree before work starts, written into the scope.' },
-  { t: 'Support is optional', d: 'Each change is quoted and approved first, with no monthly minimum.' },
+  { t: 'Support is optional', d: 'Each change is quoted and approved per request, with no monthly minimum.' },
 ];
 
 const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
@@ -351,13 +357,13 @@ export default function EcommerceConsultantAUPage() {
               <div className="eyebrow">Ecommerce Consultant Australia</div>
               <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
               <p className="lead">
-                Your store takes orders every day. The trouble sits behind it: Shopify or WooCommerce orders keyed
-                into Xero or MYOB by hand, stock in Cin7 or Unleashed that never matches Amazon.com.au or eBay, trade
-                buyers still ordering by email, and freight to regional postcodes eating the margin. FactoryJet is an
-                ecommerce consultant for established Australian businesses. We find what to fix first, show it working
-                on your own data, and our team can build it.
+                Your store takes orders every day. The trouble sits behind it. Orders get keyed into Xero or MYOB by
+                hand. Stock in Cin7 or Unleashed never matches Amazon.com.au or eBay. Trade buyers still order by
+                email, and freight to regional postcodes eats the margin. FactoryJet is an ecommerce consultant for
+                established Australian businesses. We find what to fix first, show it working on your own data, and
+                our team can build it.
               </p>
-              <HeroInlineForm region="au" source="au_ecommerce_consultant_hero" submitLabel="Book my ecommerce review call" />
+              <HeroInlineForm region="au" source="au_ecommerce_consultant_hero" submitLabel="Book my review call" />
             </div>
 
             <form
@@ -419,7 +425,7 @@ export default function EcommerceConsultantAUPage() {
               { v: '$3m', t: 'annual turnover above which the Privacy Act generally covers a business; some smaller ones are covered anyway', s: 'OAIC, Small business', u: SRC_OAIC },
               { v: '30 Jun 2026', t: 'Shopify Scripts deprecated; old Plus checkout rules stopped running. Shopify Functions replace them', s: 'Shopify Help Center', u: SRC_SCRIPTS },
               { v: 'Free', t: 'to set up Peppol eInvoicing in Xero; received eInvoices arrive as draft bills ready for approval', s: 'Xero Australia', u: SRC_XERO_EINVOICE },
-              { v: '$5k to $50k+', t: 'for a defined ecommerce consulting project in Australia, indicative, GST basis not stated', s: 'eCommerce Circle, Melbourne', u: SRC_COST },
+              { v: '$5k to $50k+', t: 'market range, not our price: a defined ecommerce consulting project in Australia, indicative, GST basis not stated', s: 'eCommerce Circle, Melbourne', u: SRC_COST },
             ].map((r) => (
               <div className="ledgercell" key={r.t}>
                 <div className="k"><a href={r.u} {...extLink}>{r.s}</a></div>
@@ -435,7 +441,7 @@ export default function EcommerceConsultantAUPage() {
         <div className="wrap byline">
           <div className="av">BB</div>
           <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />29 October 2026</div>
+          <div className="upd">Last updated<br />31 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST DEFINITION (GEO) ═══ */}
@@ -498,15 +504,15 @@ export default function EcommerceConsultantAUPage() {
                 workarounds are.
               </p>
             </div>
-            <div className="capgrid">
+            <ol className="capgrid" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {AUDIT_ITEMS.map((s, i) => (
-                <div key={s.n} className={`cap cap-${i + 1}`}>
+                <li key={s.n} className={`cap cap-${i + 1}`}>
                   <div className="caphead"><span className="capid">CHK‑{s.n}</span><svg {...CAP_ICON}><path d={AUDIT_ICONS[i]} /></svg></div>
                   <h3>{s.t}</h3>
-                  <p>{s.d}</p>
-                </div>
+                  <p>{s.d}{s.link && <>{' '}<a href={s.link.href}>{s.link.label}</a>.</>}</p>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -520,12 +526,13 @@ export default function EcommerceConsultantAUPage() {
                 <p className="lead">
                   A consultant earns their fee when the cause of a problem is unclear or the decision is expensive to
                   reverse. When the fix is obvious, brief a developer and save the audit. This is how we would sort
-                  the requests we hear most from Australian stores.
+                  six common requests.
                 </p>
               </div>
             </div>
-            <div className="tablewrap" role="region" tabIndex={0} aria-label="Who to call first by situation">
-              <table>
+            <p className="md:hidden" style={{ fontSize: 13, margin: '0 0 8px' }}>Swipe sideways to see every column.</p>
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="Who to call first by situation" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
                     <th>Situation</th>
@@ -540,6 +547,12 @@ export default function EcommerceConsultantAUPage() {
                 </tbody>
               </table>
             </div>
+            <p style={{ marginTop: 20, maxWidth: '70ch' }}>
+              Two narrower versions of this job come up often. A Shopify consultant answers a question about one
+              platform, such as rebuilding retired Scripts on <a href="/au/shopify-plus">Shopify Plus</a>. A B2B
+              ecommerce consultant maps stockist pricing and terms before a <a href="/au/b2b-ecommerce">trade portal</a>{' '}
+              is built. Both start with the same audit of your orders and systems.
+            </p>
             <div className="au-split">
               <div>
                 <h3>Why we can be blunt about this</h3>
@@ -575,7 +588,7 @@ export default function EcommerceConsultantAUPage() {
                 </p>
               </div>
               <div className="au-panel">
-                <div className="eyebrow">Systems we work with in Australia</div>
+                <div className="eyebrow">Systems Australian stores ask us about</div>
                 <ul className="trigrows">
                   <li><span className="m">Accounting</span><span className="n">Xero, MYOB Business, MYOB Acumatica, QuickBooks</span><span className="t">Books</span></li>
                   <li><span className="m">Inventory and ERP</span><span className="n">Cin7 Core, Cin7 Omni, Unleashed, NetSuite, Odoo</span><span className="t">Stock</span></li>
@@ -604,7 +617,7 @@ export default function EcommerceConsultantAUPage() {
           <MidPageCTA
             headline={'Not sure which fix in your store comes first?'}
             sub={'Tell us your channels, your systems and what is going wrong. On a short call the founder will tell you where he would look first, and whether an audit is worth paying for at all.'}
-            label={'Book my ecommerce review call'}
+            label={'Book my review call'}
           />
         </div>
 
@@ -655,15 +668,15 @@ export default function EcommerceConsultantAUPage() {
                 the scope you sign.
               </p>
             </div>
-            <div className="platlist" role="list">
+            <ol className="platlist" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {TERMS.map((t, i) => (
-                <div key={t.t} className="plat plat-2col" role="listitem">
+                <li key={t.t} className="plat plat-2col">
                   <span className="capid">{String(i + 1).padStart(2, '0')}</span>
                   <div className="plat-name"><h3>{t.t}</h3></div>
                   <p className="plat-build">{t.d}</p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -767,7 +780,7 @@ export default function EcommerceConsultantAUPage() {
                 <div className="plat-name"><h3>DTF Virginia</h3><span className="plat-flag">Shopify</span></div>
                 <p className="plat-build">
                   A custom Shopify theme for a print shop in Hampton, Virginia that sells DTF transfers, patches and
-                  stickers. Buyers build their own gang sheets at each transfer size, and resellers can sign up for an
+                  stickers. Buyers build their own gang sheets (one print sheet packed with many designs) at each transfer size, and resellers can sign up for an
                   account. <a href="https://dtfvirginia.com/" {...extLink}>See the live store</a>.
                 </p>
               </div>
@@ -822,9 +835,8 @@ export default function EcommerceConsultantAUPage() {
             <div className="factswrap">
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
-                  Consulting work happens in your order data and your systems. We run workshops by video, share screens to
-                  walk through orders and reconciliations, and send written findings you can forward to your
-                  accountant or board. Calls are booked in your business hours, Perth included.
+                  Consulting work happens in your order data and your systems, so the audit runs the same way in every
+                  state, with written findings you can forward to your accountant or board.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
                   What does change by state is freight. A brand shipping from a Sydney or Melbourne warehouse reaches
@@ -832,28 +844,11 @@ export default function EcommerceConsultantAUPage() {
                   regional Queensland pays more to reach the east coast, so freight rules and free shipping thresholds
                   get a closer look in the audit.
                 </p></div>
-                <div className="fact"><div className="sec">§03</div>
-                  <div className="demand">
-                    <div className="demand-head"><span>Australia · Monthly Search Demand</span><b>DataForSEO</b></div>
-                    <ul>
-                      {[
-                        { kw: 'ecommerce consultant', v: '40', w: '100%', kd: 'Buyer intent' },
-                        { kw: 'ecommerce consulting', v: '40', w: '100%', kd: 'Buyer intent' },
-                        { kw: 'ecommerce consultancy', v: '40', w: '100%', kd: 'Buyer intent' },
-                        { kw: 'ecommerce consulting australia', v: '20', w: '50%', kd: 'Local intent' },
-                        { kw: 'shopify consultant', v: '20', w: '50%', kd: 'Platform intent' },
-                        { kw: 'b2b ecommerce consultant', v: '10', w: '25%', kd: 'Trade sellers' },
-                      ].map((r) => (
-                        <li key={r.kw} className="demand-row">
-                          <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
-                          <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                          <div className="demand-kd">{r.kd}</div>
-                        </li>
-                      ))}
-                    </ul>
-                    <p className="demand-src">Source: DataForSEO, Google Ads volumes, Australia, October 2026</p>
-                  </div>
-                </div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  City pages cover local detail for stores in <a href="/au/sydney">Sydney</a>,{' '}
+                  <a href="/au/melbourne">Melbourne</a> and <a href="/au/brisbane">Brisbane</a>. The consulting work
+                  and the terms are the same in each.
+                </p></div>
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" src={null}
                 subject="The owner of a homewares and gift shop on a video call with his ecommerce team from the back room of his store">
@@ -868,7 +863,7 @@ export default function EcommerceConsultantAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Related FactoryJet services in Australia</div>
-              <h2>Where the plan goes next</h2>
+              <h2>Related ecommerce services for Australian stores</h2>
               <p className="lead">
                 Outside Australia? Our <a href="/ecommerce-consulting">ecommerce consulting service for US brands</a> covers
                 the same work for American stores and systems.
@@ -924,7 +919,7 @@ export default function EcommerceConsultantAUPage() {
               </p>
             </div>
             <div className="ctas">
-              <ModalCTAButton label="Book my ecommerce review call" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <ModalCTAButton label="Book my review call" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               <a className="btn btn-ghost" href="/au/ecommerce-development">See ecommerce development</a>
             </div>
           </div>

@@ -15,6 +15,7 @@ import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-10-29';
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     description: 'Build high-converting wholesale portals with Shopify Plus native B2B features, custom price rules, and ERP integrations.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/services/shopify-plus-b2b' },
+  alternates: { canonical: 'https://factoryjet.com/services/shopify-plus-b2b', languages: twinAlternates['shopify-plus-b2b'] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 

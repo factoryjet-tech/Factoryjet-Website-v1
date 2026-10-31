@@ -5,6 +5,7 @@ import Footer from '../sections/Footer';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 /* /uk/accounts-receivable-automation, built 2026-10-29.
@@ -44,10 +45,10 @@ import '../ai-agents/ai-agents.css';
       FAQ renders. Never add a second list of questions. */
 
 const CANONICAL = 'https://factoryjet.com/uk/accounts-receivable-automation';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
 const READ_ON = '29 October 2026';
-const TITLE = 'Accounts Receivable Automation UK | Credit Control Agent | FactoryJet';
-const H1 = 'Accounts Receivable Automation UK: Credit Control That Chases on Time, Matches Remittances and Works Out Late Payment Interest';
+const TITLE = 'Accounts Receivable Automation UK: Credit Control Agent';
+const H1 = 'Accounts Receivable Automation UK: Credit Control That Chases on Time and Matches Every Remittance';
 const DESCRIPTION =
   'Accounts receivable automation for UK credit control on Xero, Sage, QuickBooks, Business Central or Odoo: reminders, remittance matching, statutory interest.';
 
@@ -58,7 +59,6 @@ const T = {
   n200: '#E5E5E0',
   n400: '#6E6E68',
   orange: '#FF5C00',
-  green: '#047857',
   small: '#B23E13',
   fm: "'Geist Mono',monospace",
   fd: "'Plus Jakarta Sans',sans-serif",
@@ -94,6 +94,8 @@ const SRC = {
   chaser: { label: 'Chaser: features and integrations', url: 'https://www.chaserhq.com/' },
   chaserPricing: { label: 'Chaser: pricing', url: 'https://www.chaserhq.com/chaser-pricing' },
   gocardlessPricing: { label: 'GoCardless: pricing', url: 'https://gocardless.com/pricing/' },
+  satago: { label: 'Satago: credit control, risk insights and invoice finance', url: 'https://www.satago.com/' },
+  kolleno: { label: 'Kolleno: order-to-cash platform', url: 'https://www.kolleno.com/' },
 } as const;
 
 type SrcKey = keyof typeof SRC;
@@ -126,7 +128,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'basics',
     question: 'What are the 5 Cs of accounts receivable management?',
     answer:
-      'They are a checklist credit teams use before giving a customer terms: character (their record of paying), capacity (cash to pay you), capital (what the business is worth), collateral (security you could fall back on) and conditions (the trade and the economy around them). For large UK customers there is a public check on the first one: GOV.UK publishes how long large businesses take to pay their suppliers.',
+      'They are a checklist credit teams use before giving a customer terms: character (their record of paying), capacity (cash to pay you), capital (what the business is worth), collateral (security you could fall back on) and conditions (the trade and the economy around them). For large UK customers there is a public check on character: GOV.UK publishes how long each large business takes to pay its suppliers. An agent can pull that figure when the account is opened.',
   },
   {
     category: 'basics',
@@ -149,9 +151,15 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'law',
+    question: 'How do I calculate late payment interest in the UK?',
+    answer:
+      'Use GOV.UK’s method, the same one a late payment interest calculator runs. Multiply the debt by the statutory rate (8% plus the Bank Rate on the reference date) for a year’s interest. Divide by 365 for a daily figure, then multiply by the days late. A £12,000 invoice 45 days late at 11.75% gives £1,410 a year, £3.86 a day and £173.70 in all, before the £100 fixed sum.',
+  },
+  {
+    category: 'law',
     question: 'What is the Late Payment of Commercial Debts Act?',
     answer:
-      'It is the 1998 Act that lets you, as the supplier, add charges to an invoice another business pays late, even if your contract says nothing about it. You can add statutory interest for each day late. You can add one fixed sum per invoice: £40 under £1,000, £70 up to £9,999.99, and £100 from £10,000. Reasonable recovery costs can go on top. An agent can work the figures out. Deciding to claim stays with you.',
+      'It is the 1998 Act that lets you, as the supplier, add charges to an invoice another business pays late, even if your contract says nothing about it. You can add statutory interest for each day late. You can add one fixed sum per payment: £40 under £1,000, £70 from £1,000 to £9,999.99, and £100 from £10,000. Reasonable recovery costs can go on top. An agent can work the figures out. Deciding to claim stays with you.',
   },
   {
     category: 'law',
@@ -177,12 +185,6 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer:
       'Yes, for large companies. GOV.UK runs a public search of payment practices reports, showing the average time a large business takes to pay suppliers and the share of payments it makes late. Large means at least two of £54 million turnover, £27 million balance sheet or 250 employees, and reports come at least every six months. We can have the agent pull that figure when a new trade account is opened.',
   },
-  {
-    category: 'law',
-    question: 'Does credit control software affect Making Tax Digital for VAT?',
-    answer:
-      'Only where it moves VAT records between products. HMRC’s VAT Notice 700/22 accepts API transfer, automated data transfer and CSV import and export as digital links, and says copy and paste does not count. An agent that reads and writes your ledger by API is on that list. Interest invoices and credit notes it drafts land in the ledger directly, with nobody retyping figures. Your accountant checks the whole chain.',
-  },
   // Xero, Sage, QuickBooks and ERPs
   {
     category: 'systems',
@@ -200,7 +202,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     category: 'systems',
     question: 'Does Sage handle credit control?',
     answer:
-      'Sage 200 does, in its own way. Sage’s help pages describe debtor letters of increasing severity attached to due date periods, chosen from the oldest overdue item, plus sanctions such as cutting a credit limit or putting an account on hold so no more invoices can be raised. Chaser lists Sage 50 UK, Sage 200 and Sage Intacct among its integrations. An agent can read the same ledger by API.',
+      'Sage 200 does, in its own way. Sage’s help pages describe debtor letters of increasing severity attached to due date periods, chosen from the oldest overdue item, plus sanctions such as cutting a credit limit or putting an account on hold so no more invoices can be raised. For Sage 50, Satago lists a Sage 50 Accounts connection for automated chasing. An agent can read and write either ledger by API.',
   },
   {
     category: 'systems',
@@ -222,9 +224,15 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   },
   {
     category: 'systems',
-    question: 'Can customers pay by Direct Debit straight from the invoice?',
+    question: 'What is the best credit control software for a UK business?',
     answer:
-      'Yes, through the payment providers your ledger supports. Xero’s UK page says its pay now button takes Direct Debit through GoCardless. GoCardless lists UK Direct Debit fees from 1% plus 20p, capped at £4, on its Standard plan, with an extra 0.3% on transactions over £2,000, all excluding VAT. Collected Direct Debits still need matching to invoices, and the agent posts them with the rest.',
+      'It depends on your ledger and your mess. As their own sites read on 31 October 2026: Chaser chases by email, SMS and phone and connects to Xero, Sage, QuickBooks and more. Satago adds credit scores and invoice finance on Sage, Xero and QuickBooks. Kolleno adds AI cash application and dispute tracking on NetSuite, Dynamics, Xero and Sage. A built agent fits rules none of them cover.',
+  },
+  {
+    category: 'systems',
+    question: 'Should we outsource credit control or automate it?',
+    answer:
+      'Outsourced credit control means an outside team chases your customers, usually in your name, by phone and email. It suits a business with nobody in-house to chase. Automation suits a team that has a credit controller but loses the week to reminders and remittances. Chaser’s Care plans mix the two, adding an AR specialist to the software. Your people still own disputes either way.',
   },
   // What the agent does
   {
@@ -257,12 +265,6 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     question: 'Who owns the agent, and who looks after it?',
     answer:
       'You own the code and the repository from day one. AI and hosting can run in your own accounts, at cost with no markup. Defects are fixed inside the build price for a cover period agreed before work starts. Support is optional: each change is quoted and approved, with no monthly minimum. FactoryJet quotes the build, and any support you choose, as fixed prices in writing.',
-  },
-  {
-    category: 'working',
-    question: 'What should we send you to scope a credit control project?',
-    answer:
-      'Your ledger and plan, the number of open invoices and trade customers, your standard payment terms, one aged debtors report and three real remittances, including a messy one. If you have a written brief or an RFP, attach it in the second step of the form on this page (PDF or Word, up to 5 MB). Each phase is then scoped, priced and signed on its own.',
   },
 ];
 
@@ -378,7 +380,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['accounts-receivable-automation'] },
   openGraph: {
     title: TITLE,
     description:
@@ -435,8 +437,8 @@ export default function AccountsReceivableAutomationUKPage() {
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  Your trade customers are on 30 or 60-day terms, your aged debtors report runs to several pages, and
-                  remittances arrive as PDFs that cover six invoices and short-pay one. FactoryJet builds a credit
+                  Your trade customers are on 30 or 60-day terms, and remittances arrive as PDFs that cover six
+                  invoices and short-pay one. FactoryJet builds a credit
                   control agent on the ledger you already run (Xero, Sage 50 or 200, QuickBooks, Business Central,
                   NetSuite or Odoo) that chases on your terms, matches each payment and leaves every decision with your
                   team.
@@ -444,17 +446,17 @@ export default function AccountsReceivableAutomationUKPage() {
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+                  <div className="who"><b><a href="/about" style={{ textDecoration: 'underline' }}>Bhavesh Barot</a></b>, Founder<br /><span>500+ businesses served since 2014</span></div>
                   <div className="upd">Last updated<br />{READ_ON}</div>
                 </div>
 
                 <div className={styles.heroForm} style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="uk" source="uk_accounts_receivable_automation_hero" service="Accounts Receivable Automation" submitLabel="See a demo on my data" />
+                  <HeroInlineForm region="uk" source="uk_accounts_receivable_automation_hero" service="Accounts Receivable Automation" submitLabel="See a demo on my data" trustText="Bhavesh replies within 24 hours. No spam, no obligation." />
                 </div>
               </div>
 
               <div className="card card-top-orange">
-                <span className="eyebrow">One overdue £12,000 trade invoice, 45 days late</span>
+                <span className="eyebrow">Late payment interest calculator: one £12,000 trade invoice, 45 days late</span>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Statutory interest rate</div><div className="scorecard-note">8% plus Bank Rate of 3.75%</div></div>
                   <div className="scorecard-val" style={{ fontSize: 15 }}>11.75%</div>
@@ -473,7 +475,7 @@ export default function AccountsReceivableAutomationUKPage() {
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">On the final reminder</div><div className="scorecard-note">drafted by the agent, sent by your team</div></div>
-                  <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>£273.70</div>
+                  <div className="scorecard-val" style={{ fontSize: 15 }}>£273.70</div>
                 </div>
                 <p style={{ fontSize: 12.5, marginTop: 8 }}>
                   Our arithmetic, for illustration, using GOV.UK’s method and the 3.75% Bank Rate in force on 30 June 2026.
@@ -487,7 +489,7 @@ export default function AccountsReceivableAutomationUKPage() {
         {/* 2. ANSWER-FIRST DEFINITION */}
         <section className="sec">
           <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
+            <div className="def" style={{ maxWidth: 680 }} data-speakable="true">
               <span className="lab">What does accounts receivable automation do for a UK business?</span>
               <p>
                 It sends approved payment reminders before and after each due date, matches incoming payments and
@@ -497,18 +499,20 @@ export default function AccountsReceivableAutomationUKPage() {
               </p>
             </div>
             <Sources ids={['govLate', 'govInterest', 'govCosts']} />
-            <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms we use a lot</span>
+            <div className="def mt-6" style={{ maxWidth: 680 }}>
+              <span className="lab">Five terms we use a lot</span>
               <p>
                 <b>Credit control</b> is the UK name for managing customers who buy on terms, from the credit limit to
-                the last reminder. A <b>remittance advice</b> is the email or PDF a customer sends with a BACS payment listing the
-                invoices it settles. <b>Statutory interest</b> is the interest the law lets one business charge another for paying
-                late, whether or not the contract mentions it.
+                the last reminder. An <b>aged debtors report</b> lists who owes you money, grouped by how many days each invoice is
+                overdue. A <b>remittance advice</b> is the email or PDF a customer sends with a BACS payment (a UK
+                bank-to-bank transfer) listing the invoices it settles. <b>Statutory interest</b> is the interest the law lets one business charge another for paying
+                late, whether or not the contract mentions it. <b>DSO</b> (days sales outstanding) is the average number of
+                days it takes customers to pay you after the invoice goes out.
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Sending reminders is the solved part. Xero, QuickBooks, Sage 200, Business Central and Odoo all send
-              them. The time goes on what comes back: a reply saying the PO number was wrong, a remittance listing
+              Sending reminders is the solved part of invoice chasing. Xero, QuickBooks, Sage 200, Business Central
+              and Odoo all send them, and most accounts receivable software starts there. The time goes on what comes back: a reply saying the PO number was wrong, a remittance listing
               invoices from three months, a payment £312 short with no explanation. Those are what we scope first.
             </p>
           </div>
@@ -546,7 +550,8 @@ export default function AccountsReceivableAutomationUKPage() {
                 will use. The split below is the one we propose on day one.
               </p>
             </div>
-            <div className={`card mt-10 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Credit control cycle" style={{ padding: 0, overflowX: 'auto' }}><table className="cmp-table" style={{ minWidth: 760 }} data-columns={3}>
+            <p className="md:hidden mt-8" style={srcNote}>Swipe sideways to see every column.</p>
+            <div className={`card mt-10 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Credit control cycle" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 760 }} data-columns={3}>
                 <thead>
                   <tr>
                     <th>Stage</th>
@@ -577,7 +582,7 @@ export default function AccountsReceivableAutomationUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">Late Payment of Commercial Debts Act</span>
-                <h2>Statutory interest and fixed sums: what the law allows and how the agent works it out</h2>
+                <h2>Late payment interest calculator rules: what the law allows and how the agent works it out</h2>
                 <div className="stack mt-6">
                   <p>
                     <b>When a payment is late.</b> GOV.UK says that with no agreed date, a business payment is late 30
@@ -607,7 +612,7 @@ export default function AccountsReceivableAutomationUKPage() {
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">Fixed recovery sums, per late payment</span>
-                <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Fixed recovery sums"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="scorecard-row"><th><div><div className="scorecard-metric">Debt up to £999.99</div><div className="scorecard-note">one sum per payment</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>£40</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">£1,000 to £9,999.99</div><div className="scorecard-note">one sum per payment</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>£70</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">£10,000 or more</div><div className="scorecard-note">one sum per payment</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>£100</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Reasonable recovery costs</div><div className="scorecard-note">for each attempt to recover</div></div></th><td><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>On top</div></td></tr></tbody></table></div>
+                <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Fixed recovery sums"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="scorecard-row"><th><div><div className="scorecard-metric">Debt up to £999.99</div><div className="scorecard-note">one sum per payment</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>£40</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">£1,000 to £9,999.99</div><div className="scorecard-note">one sum per payment</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>£70</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">£10,000 or more</div><div className="scorecard-note">one sum per payment</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>£100</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Reasonable recovery costs</div><div className="scorecard-note">for each attempt to recover</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>On top</div></td></tr></tbody></table></div>
                 <p style={{ fontSize: 12.5, marginTop: 8 }}>
                   Planning notes, not legal advice. Your contract may set its own late payment terms.
                 </p>
@@ -659,8 +664,8 @@ export default function AccountsReceivableAutomationUKPage() {
               <h2>Xero, QuickBooks, Sage 200, Business Central and Odoo: what each already does, and what the agent adds</h2>
               <p className="lead mt-4">
                 Switch on what your ledger already offers before paying for anything. Each line restates the maker’s
-                own page as read on {READ_ON}. We also work with Sage 50, Sage Intacct and NetSuite ledgers, and connect order systems such as Brightpearl, Linnworks and Mintsoft where the invoice
-                starts life.
+                own page as read on {READ_ON}. The agent can also connect to Sage 50, Sage Intacct and NetSuite through their APIs, and to an
+                order system with an API where the invoice starts life.
               </p>
             </div>
             <ul className="col-2 mt-10">
@@ -684,8 +689,8 @@ export default function AccountsReceivableAutomationUKPage() {
           <div className="wrap">
             <div className="col-6040">
               <div>
-                <span className="eyebrow">Rent or build</span>
-                <h2>A credit control product, or an agent built on your ledger</h2>
+                <span className="eyebrow">Rent, outsource or build</span>
+                <h2>A credit control product, outsourced credit control, or an agent built on your ledger</h2>
                 <div className="stack mt-6">
                   <p>
                     <b>Renting.</b> Chaser is a UK credit control product. Its site lists email, SMS and automated phone
@@ -693,7 +698,15 @@ export default function AccountsReceivableAutomationUKPage() {
                     Sage 200, Sage Intacct, Microsoft Dynamics 365 Business Central, NetSuite, Odoo, SAP, AccountsIQ
                     and Stripe. Its UK plans were listed at £199 a month (Compact, up to £4 million
                     annual revenue), £599 (Core, up to £10 million) and £899 (Complete, up to £100 million), with
-                    cheaper rates billed yearly. The page does not say whether VAT is included.
+                    cheaper rates billed yearly. The page does not say whether VAT is included. Satago, a London
+                    firm, offers automated chasing emails, customer credit scores and invoice finance, connecting to
+                    Sage, Xero and QuickBooks. Kolleno lists AI payment matching, dispute tracking and DSO reporting,
+                    connecting to NetSuite, QuickBooks, MS Dynamics, Xero and Sage.
+                  </p>
+                  <p>
+                    <b>Outsourcing.</b> Outsourced credit control puts an outside team on the phone and email to your
+                    customers, usually in your name. It suits a business with nobody in-house to chase. Chaser’s Care
+                    plans add an AR specialist to its software, which sits between renting and outsourcing.
                   </p>
                   <p>
                     <b>Building.</b> A built agent suits a business whose rules no product setting covers: credit
@@ -706,14 +719,14 @@ export default function AccountsReceivableAutomationUKPage() {
                     support you choose, as fixed prices in writing after a short scoping call.
                   </p>
                 </div>
-                <Sources ids={['chaser', 'chaserPricing', 'gocardlessPricing']} />
+                <Sources ids={['chaser', 'chaserPricing', 'satago', 'kolleno', 'gocardlessPricing']} on={`${READ_ON} (Satago and Kolleno on 31 October 2026)`} />
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">A rule of thumb</span>
-                <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Rent or build"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="scorecard-row"><th><div><div className="scorecard-metric">Most payments carry an invoice reference</div><div className="scorecard-note">use the reminders you already pay for</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Native</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Xero, QuickBooks or Sage, standard terms</div><div className="scorecard-note">a product with a portal fits</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Rent</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">PDF remittances from big retailers</div><div className="scorecard-note">reading and splitting across invoices</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Several companies, one credit limit</div><div className="scorecard-note">group exposure across ledgers</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Your own approval steps on any ERP</div><div className="scorecard-note">holds, write-offs and sign-off your way</div></div></th><td><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Build</div></td></tr></tbody></table></div>
+                <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Rent, outsource or build"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="scorecard-row"><th><div><div className="scorecard-metric">Most payments carry an invoice reference</div><div className="scorecard-note">use the reminders you already pay for</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Native</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Xero, QuickBooks or Sage, standard terms</div><div className="scorecard-note">a product with a portal fits</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Rent</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Nobody in-house to chase</div><div className="scorecard-note">calls matter more than emails</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Outsource</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">PDF remittances from big retailers</div><div className="scorecard-note">reading and splitting across invoices</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Several companies, one credit limit</div><div className="scorecard-note">group exposure across ledgers</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></td></tr><tr className="scorecard-row"><th><div><div className="scorecard-metric">Your own approval steps on any ERP</div><div className="scorecard-note">holds, write-offs and sign-off your way</div></div></th><td><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></td></tr></tbody></table></div>
                 <p style={{ fontSize: 12.5, marginTop: 8 }}>
-                  GoCardless lists UK Direct Debit from 1% plus 20p, capped at £4, on Standard, excluding VAT. Both
-                  routes collect through providers like it.
+                  GoCardless lists UK Direct Debit from 1% plus 20p, capped at £4, on Standard, excluding VAT. Every
+                  route collects through providers like it.
                 </p>
               </div>
             </div>
@@ -722,7 +735,7 @@ export default function AccountsReceivableAutomationUKPage() {
 
         <MidPageCTA
           headline={'Send one aged debtors report and three remittances. We show you the agent on them.'}
-          sub={'Tell us your ledger, your standard terms and how many trade customers you invoice. On a short call we say whether your ledger’s own reminders, a credit control product or a built agent is the right job. If it is a build, you see it working on your data before you sign.'}
+          sub={'Tell us your ledger, your standard terms and how many trade customers you invoice. On a short call we say whether your ledger’s own reminders, a credit control product, an outsourced team or a built agent is the right job. If it is a build, you see it working on your data before you sign.'}
           label={'See a demo on my data'}
         />
 
@@ -738,8 +751,8 @@ export default function AccountsReceivableAutomationUKPage() {
                 HMRC’s VAT Notice 700/18 lets you reclaim the VAT on a debt that is never paid, on conditions: you have
                 already paid that VAT to HMRC, you have written the debt off into a separate bad debt account, and it has
                 stayed unpaid for 6 months from the later of the due date and the supply date. You must claim within 4
-                years and 6 months. On the Cash Accounting Scheme the relief is unnecessary, because you only pay VAT on
-                what you receive. The agent lists every invoice crossing the 6-month line before each VAT return, for
+                years and 6 months. On the Cash Accounting Scheme (where you pay VAT only when your customer pays you) the
+                relief is unnecessary. The agent lists every invoice crossing the 6-month line before each VAT return, for
                 your accountant to decide on.
               </p></td></tr>
               <tr><th><b>Making Tax Digital.</b></th><td><p>
@@ -869,7 +882,9 @@ export default function AccountsReceivableAutomationUKPage() {
                   <a href="/uk/b2b-ecommerce" style={inlineLink}>B2B ecommerce in the UK</a> and{' '}
                   <a href="/uk/woocommerce" style={inlineLink}>WooCommerce development</a>. For supplier bills on the
                   same ledger, see <a href="/uk/accounts-payable-automation" style={inlineLink}>accounts payable automation</a>.
-                  For other finance agents, see <a href="/uk/ai-agents" style={inlineLink}>AI agents for UK businesses</a>.
+                  For other finance agents, see <a href="/uk/ai-agents" style={inlineLink}>AI agents for UK businesses</a>,{' '}
+                  <a href="/uk/erp-ai-agents" style={inlineLink}>ERP AI agents</a> and{' '}
+                  <a href="/uk/odoo-ai-agents" style={inlineLink}>Odoo AI agents</a>.
                   US readers can see our{' '}
                   <a href="/services/accounts-receivable-automation" style={inlineLink}>accounts receivable automation page for the US</a>.
                 </p>
@@ -883,7 +898,7 @@ export default function AccountsReceivableAutomationUKPage() {
                 <div className="scorecard-row"><div><div className="scorecard-metric">One aged debtors report</div><div className="scorecard-note">names can be removed</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>2</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Three real remittances</div><div className="scorecard-note">including a messy one</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>3</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Your standard payment terms</div><div className="scorecard-note">and the customers on special ones</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>4</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Your credit controller</div><div className="scorecard-note">they are welcome on the call</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>5</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Your credit controller</div><div className="scorecard-note">they are welcome on the call</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>5</div></div>
               </div>
             </div>
           </div>
@@ -897,7 +912,7 @@ export default function AccountsReceivableAutomationUKPage() {
               <h2>Sources, read on {READ_ON}</h2>
               <p className="lead mt-4">
                 Every law, rate, VAT rule, product feature and list price on this page was read on the pages below on
-                that day. Bank Rate and list prices move, and the rules are HMRC’s and Parliament’s to change, so open
+                that day, except Satago and Kolleno, read on 31 October 2026. Bank Rate and list prices move, and the rules are HMRC’s and Parliament’s to change, so open
                 the linked page before you act on a figure. Legal and tax lines are planning notes, not advice.
               </p>
             </div>
@@ -914,7 +929,7 @@ export default function AccountsReceivableAutomationUKPage() {
         {/* 15. FAQ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <span className="eyebrow">FAQ</span>
               <h2>Credit control and accounts receivable questions from UK finance teams</h2>
             </div>
@@ -931,7 +946,7 @@ export default function AccountsReceivableAutomationUKPage() {
                 </nav>
                 <div className="faq-sidebar-cta">
                   <ModalCTAButton label="Ask the founder a question" region="uk" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Bhavesh replies within one business day.</p>
+                  <p>Bhavesh replies within 24 hours.</p>
                 </div>
               </aside>
 
@@ -966,9 +981,9 @@ export default function AccountsReceivableAutomationUKPage() {
             <span className="eyebrow">Next step</span>
             <h2>Get paid on the terms you agreed</h2>
             <p className="mt-4">
-              Send your name and work email. Bhavesh replies within one business day to set up a short call about your
-              ledger, your terms and the remittances that eat your week. You leave knowing whether your ledger’s own
-              reminders, a product or a built agent is the right job.
+              Send your name and work email. Bhavesh replies within 24 hours to set up a short call about your
+              ledger and the remittances that eat your week. You leave knowing whether your ledger’s own reminders, a
+              product, an outsourced team or a built agent is the right job.
             </p>
             <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-light" />

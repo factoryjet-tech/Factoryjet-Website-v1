@@ -12,6 +12,7 @@ import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-10-10';
@@ -20,7 +21,7 @@ const CANONICAL = 'https://factoryjet.com/services/headless-shopify-development'
 export const metadata: Metadata = {
   title: 'Headless Shopify Agency: Next.js 15 | FactoryJet',
   description: 'Headless Shopify Plus development agency. We engineer sub-second Next.js 15 storefronts with Shopify Storefront API, Sanity CMS, and zero app bloat.',
-  alternates: { canonical: CANONICAL },
+  alternates: { canonical: CANONICAL, languages: twinAlternates['headless-shopify-development'] },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
