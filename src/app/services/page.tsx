@@ -44,6 +44,7 @@ export const metadata: Metadata = {
   description: PAGE_DESC,
   alternates: { canonical: CANONICAL_URL },
   openGraph: {
+    locale: 'en_US',
     title: PAGE_TITLE,
     description: PAGE_DESC,
     url: CANONICAL_URL,

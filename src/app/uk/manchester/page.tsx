@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL },
   },
   openGraph: {
+    locale: 'en_GB',
     title: 'SEO Agency Manchester | Web Design, AI SEO | FactoryJet',
     description:
       'SEO, local search and fast Next.js web design for Manchester businesses. Fixed-price milestones and 100% code ownership.',

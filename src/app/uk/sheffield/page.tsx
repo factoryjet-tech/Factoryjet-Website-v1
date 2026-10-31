@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL },
   },
   openGraph: {
+    locale: 'en_GB',
     title: 'SEO Agency Sheffield | Local SEO and Web Design | FactoryJet',
     description:
       'Local SEO, technical SEO and fast Next.js websites for Sheffield and South Yorkshire businesses. Clear monthly reporting, full code ownership.',
