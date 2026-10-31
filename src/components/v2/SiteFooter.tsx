@@ -29,7 +29,7 @@ export interface SiteFooterColumn {
   links: ReadonlyArray<SiteFooterLink>;
 }
 
-export type SiteFooterLocale = 'us' | 'in' | 'uae' | 'au';
+export type SiteFooterLocale = 'us' | 'gb' | 'in' | 'uae' | 'au';
 
 /**
  * Region switcher.
@@ -56,6 +56,7 @@ const REGIONS: ReadonlyArray<{ label: string; href: string }> = [
 
 const REGION_LABEL: Record<SiteFooterLocale, string> = {
   us: 'United States',
+  gb: 'United Kingdom',
   in: 'India',
   uae: 'United Arab Emirates',
   au: 'Australia',
@@ -173,6 +174,8 @@ const LOCALE_COLUMNS: Record<SiteFooterLocale, ReadonlyArray<SiteFooterColumn>> 
   uae: UAE_COLUMNS,
   us:  US_FOOTER_COLUMNS, // US is the primary domain: its footer must never fall back to India routes
   au:  AU_FOOTER_COLUMNS,
+  // UK guides on /blog use the US directory; 'gb' only switches the region label.
+  gb:  US_FOOTER_COLUMNS,
 };
 
 /** @deprecated kept for backwards-compat — callers should pass locale prop instead.

@@ -96,6 +96,8 @@
 .aiAgentPage.auPage .trigrows .m { font-size: 14px; font-weight: 600; color: var(--ink); }
 .aiAgentPage.auPage .trigrows .n { grid-column: 1; font-size: 13px; color: var(--muted); }
 .aiAgentPage.auPage .trigrows .t { grid-column: 2; grid-row: 1 / span 2; align-self: center; font-family: var(--mono); font-size: 10px; color: var(--accent-text); border: 1px solid var(--line); border-radius: 4px; padding: 4px 7px; background: white; }
+/* Long pills wrap instead of squeezing the label column at 390px (31 Oct QA). */
+.aiAgentPage.auPage .trigrows .t { max-width: 18ch; overflow-wrap: anywhere; text-align: center; }
 
 /* Tables: highlighted FactoryJet column (US highlights a row; AU tables put options in columns) */
 .aiAgentPage.auPage :is(th,td).fj { background: var(--accent-wash); }
@@ -134,6 +136,7 @@
 .aiAgentPage.auPage .au-split { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 40px 64px; align-items: start; margin-top: 36px; }
 .aiAgentPage.auPage .au-split > div > p { color: var(--body); font-size: 15px; line-height: 1.75; }
 .aiAgentPage.auPage .au-split .btn { margin-top: 26px; }
+.aiAgentPage.auPage .au-split h3 + p { margin-top: 10px; }
 .aiAgentPage.auPage .demand { border: 1px solid var(--line); border-radius: 10px; background: white; }
 .aiAgentPage.auPage .demand-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--line); font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .aiAgentPage.auPage .demand-head b { color: var(--accent-text); font-weight: 500; }

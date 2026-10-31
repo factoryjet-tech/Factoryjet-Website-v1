@@ -806,7 +806,7 @@ export default function NetsuiteVsQuickbooksPage() {
                   both paths. FactoryJet quotes a fixed price per phase, in writing, after the call.
                 </p>
                 <div style={{ marginTop: '24px' }}>
-                  <a className="pp-primary" href={CALENDLY} target="_blank" rel="noopener noreferrer" style={{ background: '#B23E13', borderColor: '#B23E13' }}>
+                  <a className="pp-primary" href={CALENDLY} target="_blank" rel="noopener noreferrer">
                     Book a 30-Minute Scoping Call
                   </a>
                 </div>

@@ -150,9 +150,19 @@ export default function ComparisonTable({
           </MotionFadeUp>
         )}
 
+        {/* The table is min-w-[720px], so phones only see the first column or two
+            until they scroll. Say so above the table, where the reader looks first
+            (31 Oct QA). Hidden from screen readers: the region label covers it. */}
+        <p
+          className="mt-10 font-fj-mono text-xs uppercase tracking-[0.08em] text-fj-neutral-600 md:hidden"
+          aria-hidden="true"
+        >
+          Swipe sideways to see every column &rarr;
+        </p>
+
         {/* Table wrapper, horizontal scroll on narrow viewports */}
         <div
-          className="mt-12 overflow-x-auto"
+          className="mt-3 overflow-x-auto md:mt-12"
           tabIndex={scrollRegionLabel ? 0 : undefined}
           role={scrollRegionLabel ? 'region' : undefined}
           aria-label={scrollRegionLabel}

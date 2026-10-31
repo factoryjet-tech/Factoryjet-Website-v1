@@ -196,7 +196,9 @@ export default async function Page({ params }: Props) {
       </main>
       {isAuGuide(resolvedParams.slug)
         ? <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} />
-        : <SiteFooter linkColumns={US_FOOTER_COLUMNS} />}
+        : isUkGuide(resolvedParams.slug)
+          ? <SiteFooter locale="gb" linkColumns={US_FOOTER_COLUMNS} />
+          : <SiteFooter linkColumns={US_FOOTER_COLUMNS} />}
     </>
   )
 }

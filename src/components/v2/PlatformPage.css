@@ -790,14 +790,16 @@
   justify-content: center;
   gap: 8px;
   padding: 14px 28px;
-  background-color: #F05A28;
+  /* #B23E13, not #F05A28: white on #F05A28 is 3.39:1 and 15px bold is not large
+     text, so it fails AA. White on #B23E13 is 5.85:1 (31 Oct QA). */
+  background-color: #B23E13;
   color: #ffffff !important;
   font-family: var(--pp-font);
   font-size: 15px;
   font-weight: 700;
   border-radius: 10px;
   text-decoration: none !important;
-  box-shadow: 0 4px 14px rgba(240, 90, 40, 0.25);
+  box-shadow: 0 4px 14px rgba(15, 15, 18, 0.10);
   transition: all 0.25s ease;
   cursor: pointer;
   border: none;
@@ -806,9 +808,9 @@
 .pp-page .pp-primary:hover,
 .platpage .pp-btn-orange:hover,
 .pp-page .pp-btn-orange:hover {
-  background-color: #C94A1A;
+  background-color: #9A3510;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(240, 90, 40, 0.35);
+  box-shadow: 0 8px 20px rgba(15, 15, 18, 0.14);
 }
 
 .platpage .pp-btn-ghost,

@@ -378,7 +378,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200 py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 text-center">
-            <div className="flex items-center justify-center gap-4 md:gap-6 mb-5 md:mb-6">
+            <div className="flex items-center justify-center gap-4 md:gap-6">
                 <ShareButton title={post.title} slug={post.slug} />
                 <div className="h-6 md:h-8 w-px bg-gray-200" aria-hidden="true"></div>
                 <a
@@ -400,7 +400,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
                   <Linkedin className="w-4 h-4 md:w-5 md:h-5" aria-hidden="true" />
                 </a>
             </div>
-            <p className="text-gray-500 text-xs md:text-sm font-medium">&copy; 2026 FactoryJet. Designed for Growth.</p>
+            {/* The copyright line that sat here duplicated SiteFooter's (31 Oct QA). */}
         </div>
       </footer>
     </div>
