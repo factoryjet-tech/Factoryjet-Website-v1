@@ -57,8 +57,8 @@ const MIGRATION_PLATFORMS = [
     link: '/replatforming/magento-to-shopify',
     badge: 'High Enterprise Demand',
     pain: 'Costly cloud hosting bills reach $4,000 to $15,000 monthly. Teams battle endless PHP security patches and fragile extensions. Slow catalog rendering hurts conversions.',
-    solution: 'Automated database ETL converts complex EAV catalogs into clean Shopify metafields. Multipass preserves customer passwords. Brands lower ongoing ownership costs by 70%.',
-    keyStats: ['70% lower TCO.', 'Zero server patching.', 'Sub-second checkout.'],
+    solution: 'Automated database ETL converts complex EAV catalogs into clean Shopify metafields. Customer records and past orders move with them.',
+    keyStats: ['Hosting run by Shopify.', 'Zero server patching.', 'Sub-second checkout.'],
   },
   {
     name: 'WooCommerce / WordPress',
@@ -123,9 +123,9 @@ const MIGRATION_DATA_PROTOCOLS = [
     points: ['Variant attribute preservation.', 'Media asset CDN transfer.', 'Custom metadata schema mapping.'],
   },
   {
-    title: 'Customer Passwords & Historical Auth Continuity.',
-    desc: 'We use Shopify Plus Multipass and token bridges to preserve password hashes. Customers log in smoothly post-migration with no reset emails needed.',
-    points: ['Zero customer login friction.', 'Loyalty point & credit migration.', 'Encrypted customer data transfer.'],
+    title: 'Customer Accounts & Sign-in After the Move.',
+    desc: 'Shopify cannot import passwords from another store, so we move the customer records, addresses and past orders, and set up sign-in by email code. A short email before launch tells customers how to sign in.',
+    points: ['Customer records and past orders.', 'Loyalty point & credit migration.', 'Encrypted customer data transfer.'],
   },
   {
     title: 'Historical Orders, Invoices & Tax Reconciliation.',
@@ -148,11 +148,11 @@ const ENTERPRISE_ETL_DATA = [
     validation: 'Automated SKU counts verify variant parity. Image assets pass CDN delivery checks.',
   },
   {
-    entity: 'Customer Accounts & Passwords.',
-    source: 'Legacy customer database tables, bcrypt / Argon2 / SHA-256 password hashes, historical addresses.',
-    destination: 'Shopify Plus Multipass API & Customer Account SSO tokens.',
-    transformation: 'We bridge legacy password hashes to Shopify Multipass. Customers avoid forced password resets.',
-    validation: 'We test logins across 500 sample accounts. Every sample profile authenticates cleanly.',
+    entity: 'Customer Accounts.',
+    source: 'Legacy customer database tables, historical addresses, marketing consent and order history.',
+    destination: 'Shopify customer records, linked to their imported orders.',
+    transformation: 'Passwords stay behind, because Shopify cannot import them. Customers sign in with their email address and a one-time code.',
+    validation: 'We check customer counts and sample order histories against the old store, and test sign-in before launch.',
   },
   {
     entity: 'Historical Orders & Invoices.',
@@ -217,7 +217,7 @@ const MIGRATION_ROADMAP = [
     desc: 'We migrate past orders, tax records, and tracking codes. Customer accounts and subscription contracts transfer cleanly.',
     deliverables: [
       'Historical order records and invoice data. Full financial settlement settlement.',
-      'Customer profile migration. Shopify Multipass frictionless login configuration.',
+      'Customer profile migration. Sign-in by email code, plus the pre-launch customer email.',
       'Subscription contract migration. Recharge, Skio, or native Shopify Subscriptions.',
       'Loyalty points and reward balances transferred. Zero customer balance loss.',
     ],
@@ -272,7 +272,7 @@ const FAQS = [
   },
   {
     question: "Can existing customers log into Shopify without resetting their passwords?",
-    answer: "Yes. On Shopify Plus, we implement Multipass auth and secure token bridging. Existing customers keep their original credentials. They log in smoothly on their first visit without disruptive password reset emails.",
+    answer: "No, and no agency can change that. Shopify's help page on importing customers says passwords are encrypted outside Shopify and cannot be migrated from another store. Customer records, addresses and past orders do move. On Shopify's current customer accounts nobody needs a password: a customer types their email address and gets a one-time six-digit code. Multipass, the Shopify Plus feature once used to carry logins across, is no longer available to new stores. We send customers a short email before launch so they know how to sign in.",
   },
   {
     question: "What happens to customer loyalty points and store credit during migration?",
@@ -411,7 +411,7 @@ export default function ShopifyMigrationPage() {
             Enterprise Shopify Migration Agency: Zero Downtime. Zero SEO Loss.
           </h1>
           <p className="pp-hero-sub">
-            Migrate your store from Magento, WooCommerce, BigCommerce, or Salesforce to Shopify Plus. We run automated database ETL. We preserve passwords and map 301 redirects. ERPs sync with zero downtime and full data integrity.
+            Migrate your store from Magento, WooCommerce, BigCommerce, or Salesforce to Shopify Plus. We run automated database ETL. We move customer accounts and map 301 redirects. ERPs sync with zero downtime and full data integrity.
           </p>
 
           <div className="pp-hero-ctas" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.25rem', width: '100%', maxWidth: '580px', margin: '0 auto' }}>
@@ -467,7 +467,7 @@ export default function ShopifyMigrationPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', color: '#cbd5e1', lineHeight: '1.8', fontSize: '1.05rem' }}>
               <div>
                 <p style={{ marginBottom: '1.25rem' }}>
-                  Over <strong>68% of enterprise replatforming projects</strong> face severe post-launch issues. Brands suffer sudden search traffic drops of 30% to 60%. Broken accounts force messy customer password resets. Missing order records paralyze customer support. Unplanned launch downtime costs hundreds of thousands in lost revenue.
+                  Replatforming projects often go wrong after launch. Search traffic falls when old URLs break. Customers who were never told how to sign in get locked out. Missing order records paralyze customer support. Unplanned launch downtime costs hundreds of thousands in lost revenue.
                 </p>
                 <p>
                   These failures stem from flawed migration engineering, not the destination platform. Many agencies rely on generic migration apps or unverified CSV exports. These tools truncate custom product metafields. They break parent-child variant links and fail to map complex URL hierarchies. Before you shortlist a partner, you can{' '}
@@ -483,7 +483,7 @@ export default function ShopifyMigrationPage() {
                   <strong>FactoryJet treats replatforming as a disciplined software engineering process.</strong> We build custom, auditable database ETL pipelines in Python and Node.js. Our scripts extract raw data from legacy MySQL, PostgreSQL, or Oracle databases. We sanitize attributes and load records cleanly via Shopify Plus GraphQL APIs.
                 </p>
                 <p>
-                  We use <strong>Shopify Multipass auth</strong> to keep customer password hashes intact. We validate 1:1 301 redirects at the edge. Coverage reaches 100% of historical URLs. We run live delta sync during cutover. This guarantees zero downtime and protects search rankings.
+                  We set up <strong>sign-in by email code</strong> and tell customers how it works before launch. We validate 1:1 301 redirects at the edge. Coverage reaches 100% of historical URLs. We run live delta sync during cutover. This guarantees zero downtime and protects search rankings.
                 </p>
                 <p style={{ marginTop: '1.25rem' }}>
                   When the move also needs a new storefront, our{' '}

@@ -88,8 +88,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // ── Choosing a Shopify Plus agency ──
   { category: 'agency', question: 'What is a Shopify Plus agency?',
     answer: 'A Shopify Plus agency designs, builds, migrates and supports stores on the Plus plan. The useful ones do the engineering below the theme: checkout extensions, Shopify Functions, B2B set-up, multi-store and Markets configuration, and integrations with ERP and warehouse systems. A standard Shopify agency can build a beautiful theme. A Plus agency should also be comfortable with that back-end work.' },
-  { category: 'agency', question: 'Are you a Shopify Plus Partner?',
-    answer: 'No. FactoryJet does not hold Shopify Plus Partner status or any Shopify partner badge, and we will not pretend otherwise. We are an independent ecommerce engineering team that builds, migrates and supports Shopify and Shopify Plus stores. You do not need a badged partner to run a Plus store, but if your procurement requires one, Shopify’s partner directory lists them.' },
+  { category: 'agency', question: 'Do I need a Shopify Plus Partner to run a Plus store?',
+    answer: 'No. Shopify runs a partner programme, and agencies that meet its criteria can show partner tiers. It is a useful signal, not a requirement: any competent developer can work on a Plus store once you give them staff or collaborator access. What matters more is whether the team has already done the B2B, checkout and integration work your store needs. If your procurement asks for a badged partner, Shopify’s partner directory lists them.' },
   { category: 'agency', question: 'Is there a Shopify Plus agency in the UK?',
     answer: 'Yes, many. Names that show up often in UK searches include Charle, Imaginaire, Eastside Co and Swanky, and we list them on this page with a short note on each. FactoryJet also works with UK merchants. The right choice depends on whether you want a large accredited partner with a marketing arm, or a senior engineering team focused on build and support.' },
   { category: 'agency', question: 'Do you work with brands in London?',
@@ -136,7 +136,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
    Each note is based on the company's own homepage, fetched 2026-09-24.
    Partner tiers are quoted as the agency's own claim. */
 const PLUS_AGENCIES: { name: string; note: string }[] = [
-  { name: 'FactoryJet', note: 'That is us. An independent ecommerce engineering team that builds, migrates and supports Shopify Plus stores for UK brands, with a focus on B2B, checkout, Shopify Functions and ERP and warehouse integrations. We are not a Shopify Plus Partner and hold no Shopify badge. We also build on Magento, so our platform advice is not tied to one option.' },
+  { name: 'FactoryJet', note: 'That is us. An independent ecommerce engineering team that builds, migrates and supports Shopify Plus stores for UK brands, with a focus on B2B, checkout, Shopify Functions and ERP and warehouse integrations. We also build on Magento, so our platform advice is not tied to one option.' },
   { name: 'Charle', note: 'A London Shopify agency with offices in Manchester and New York that describes itself as a Shopify Plus Partner. Offers store design and builds, migrations, SEO, Klaviyo email and SMS, conversion work and support retainers, and runs its own recommendations platform called CSignal.' },
   { name: 'Imaginaire', note: 'A Nottingham ecommerce agency that describes itself as a Shopify Plus Partner. Covers design and build, migrations from Magento and WooCommerce, headless Shopify, SEO, PPC and conversion optimisation, with a four-stage method from understanding to ongoing improvement.' },
   { name: 'Eastside Co', note: 'A London agency with offices in New York and Dubai that describes itself as a Shopify Platinum Partner and a Shopify Plus Partner. Offers Shopify design and development, Plus migrations, app development, marketing and priority support packages.' },
@@ -784,7 +784,6 @@ export default function ShopifyPlusUKPage() {
                   <tr><td className="feat">Best for</td><td>Big brand-led rebuilds with marketing attached</td><td>Small, clearly defined jobs</td><td className="fj">Plus builds and migrations heavy on B2B, checkout and integrations</td><td>Brands with constant, daily development needs</td></tr>
                   <tr><td className="feat">Who does the work</td><td><span className="partial">Varies by project and stage</span></td><td><span className="yes">The person you hired</span></td><td className="fj"><span className="yes">The same senior engineers throughout</span></td><td><span className="yes">Your own staff</span></td></tr>
                   <tr><td className="feat">Cover for holidays and peaks</td><td><span className="yes">Large team</span></td><td><span className="no">One person</span></td><td className="fj"><span className="yes">More than one engineer knows your store</span></td><td><span className="partial">Depends on team size</span></td></tr>
-                  <tr><td className="feat">Shopify partner badges</td><td><span className="yes">Usually</span></td><td><span className="partial">Sometimes</span></td><td className="fj"><span className="no">None claimed by us</span></td><td><span className="no">Not applicable</span></td></tr>
                   <tr><td className="feat">Platform advice</td><td><span className="partial">Often Shopify-only</span></td><td><span className="partial">Depends on the person</span></td><td className="fj"><span className="yes">We also build on Magento, so no reason to push Plus</span></td><td><span className="partial">Tied to what the team knows</span></td></tr>
                   <tr><td className="feat">ERP and 3PL integration depth</td><td><span className="partial">Often via partners</span></td><td><span className="partial">Varies</span></td><td className="fj"><span className="yes">Built and supported by us</span></td><td><span className="partial">Varies</span></td></tr>
                   <tr><td className="feat">After launch</td><td><span className="partial">Support tier or handover</span></td><td><span className="partial">If they are free</span></td><td className="fj"><span className="yes">Monthly support from the same team</span></td><td><span className="yes">Always there</span></td></tr>
@@ -795,9 +794,8 @@ export default function ShopifyPlusUKPage() {
               <p>
                 A word on the Shopify Plus Partner badge. Shopify runs a partner programme, and agencies that meet
                 its criteria can show partner tiers. It is a useful signal. It is not a requirement: any
-                competent developer can work on a Plus store once you grant them access. FactoryJet does not hold a
-                Shopify Plus Partner badge. If your procurement needs one, pick from the partners below, and we will
-                happily tell you so on a call.
+                competent developer can work on a Plus store once you grant them access. If your procurement needs
+                a badged partner, pick from the partners below.
               </p>
               <p>
                 If you are not sure yet what you need, an independent view helps before you commit to any agency.
@@ -879,7 +877,7 @@ export default function ShopifyPlusUKPage() {
                       { kw: 'shopify plus', v: '720', w: '100%', kd: 'The platform itself' },
                       { kw: 'shopify plus cost', v: '320', w: '44%', kd: 'Answered above, qualitatively' },
                       { kw: 'shopify plus agency', v: '210', w: '29%', kd: 'The head term' },
-                      { kw: 'shopify plus partner', v: '110', w: '15%', kd: 'We explain the badge honestly' },
+                      { kw: 'shopify plus partner', v: '110', w: '15%', kd: 'What the badge means' },
                       { kw: 'shopify plus support', v: '110', w: '15%', kd: 'Monthly support retainer' },
                       { kw: 'shopify vs shopify plus', v: '90', w: '13%', kd: 'The comparison table' },
                       { kw: 'shopify plus agency uk', v: '40', w: '6%', kd: 'This page' },
