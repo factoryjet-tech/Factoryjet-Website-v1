@@ -12,6 +12,7 @@ import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/ai-agents-for-real-estate: the REAL ESTATE VERTICAL application of
@@ -763,6 +764,7 @@ export default function AiAgentsForRealEstatePage() {
       <SiteHeader />
 
       <main style={{ backgroundColor: CREAM }}>
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
         {/* ─── 1. HERO ─────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden">

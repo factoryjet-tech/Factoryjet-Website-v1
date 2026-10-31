@@ -9,6 +9,7 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/chemical-pharmaceutical-ai-agents';
 const PAGE_TITLE = 'Chemical & Pharma AI Agents | GxP & SDS | FactoryJet';
@@ -349,6 +350,7 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
       <SiteHeader />
 
       <main className="min-h-screen bg-white text-[#14110F]">
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* HERO SECTION */}

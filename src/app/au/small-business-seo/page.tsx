@@ -938,7 +938,7 @@ export default function SmallBusinessSeoAUPage() {
 
       </main>
       </div>
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Websites, ecommerce, SEO and AI agents for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} />
     </>
   );
 }

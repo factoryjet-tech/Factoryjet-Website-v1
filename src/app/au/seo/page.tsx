@@ -1113,7 +1113,7 @@ export default function AuSeoPage() {
       </main>
       </div>
 
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} />
     </>
   );
 }

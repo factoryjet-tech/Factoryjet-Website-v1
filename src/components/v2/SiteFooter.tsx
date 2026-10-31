@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
+import { AU_FOOTER_COLUMNS, AU_FOOTER_FEATURED_COLUMNS } from '@/data/auFooterColumns';
+import { UK_FOOTER_COLUMNS, UK_FOOTER_FEATURED_COLUMNS } from '@/data/ukFooterColumns';
 import { RECOGNITION_PROFILES } from '@/data/recognitionProfiles';
 import Wordmark from './Wordmark';
 import UsSiteFooter from './UsSiteFooter';
@@ -174,8 +175,7 @@ const LOCALE_COLUMNS: Record<SiteFooterLocale, ReadonlyArray<SiteFooterColumn>> 
   uae: UAE_COLUMNS,
   us:  US_FOOTER_COLUMNS, // US is the primary domain: its footer must never fall back to India routes
   au:  AU_FOOTER_COLUMNS,
-  // UK guides on /blog use the US directory; 'gb' only switches the region label.
-  gb:  US_FOOTER_COLUMNS,
+  gb:  UK_FOOTER_COLUMNS,
 };
 
 /** @deprecated kept for backwards-compat — callers should pass locale prop instead.
@@ -236,12 +236,18 @@ export default function SiteFooter({
   const currentRegion = REGION_LABEL[locale] ?? 'United States';
   const surfaceClass = isDark ? 'border-white/10 bg-white/[0.03]' : 'border-fj-neutral-200 bg-white/60';
 
-  // Only the US canonical directory gets the compact redesign. Explicit local
-  // columns and all AU / UAE / India footers retain their existing presentation.
-  if (resolvedColumns === US_FOOTER_COLUMNS) {
+  // US, UK and AU share the primary site's footer (2026-10-31): same component,
+  // same columns, regional links. UAE and India footers keep their presentation.
+  const compact = resolvedColumns === US_FOOTER_COLUMNS ? null
+    : resolvedColumns === UK_FOOTER_COLUMNS ? UK_FOOTER_FEATURED_COLUMNS
+    : resolvedColumns === AU_FOOTER_COLUMNS ? AU_FOOTER_FEATURED_COLUMNS
+    : undefined;
+  if (compact !== undefined) {
     return <UsSiteFooter logoText={logoText} tagline={tagline} copyright={copyright}
       bottomLinks={bottomLinks} regions={REGIONS} currentRegion={currentRegion}
-      isDark={isDark} showRecognition={showRecognition} className={className} />;
+      isDark={isDark} showRecognition={showRecognition} className={className}
+      {...(compact && { columns: resolvedColumns, featured: compact })}
+      recognitionHeading={locale === 'us' ? 'Recognized on' : 'Recognised on'} />;
   }
 
   return (

@@ -39,7 +39,8 @@
 .us-footer__directory > summary { display: flex; justify-content: space-between; align-items: center; gap: 24px; min-height: 56px; font-size: 14px; font-weight: 600; }
 .us-footer__directory > summary:hover { color: var(--uf-accent); }
 .us-footer :is(.us-footer__directory, .us-footer__mobile-group)[open] > summary .us-footer__plus { display: none; }
-.us-footer__directory-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 32px; padding: 16px 0 32px; }
+/* Column count comes from the data: 5 for the US, 6 for UK and AU (their cities). */
+.us-footer__directory-grid { display: grid; grid-template-columns: repeat(var(--uf-dir-cols, 5), minmax(0, 1fr)); gap: 32px; padding: 16px 0 32px; }
 .us-footer__directory-grid .us-footer__heading { min-height: 40px; margin-bottom: 12px; }
 .us-footer__directory-grid a { display: block; color: var(--uf-body); font-size: 14px; line-height: 1.6; padding: 6px 0; }
 .us-footer__recognition { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 16px 0; }

@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* /uk/shopify-ai-agents, built 2026-10-29.
 
@@ -443,6 +444,7 @@ export default function ShopifyAiAgentsUKPage() {
 
       <div className="uk-aiagents">
       <main>
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
         <Breadcrumbs items={crumbs} />
 

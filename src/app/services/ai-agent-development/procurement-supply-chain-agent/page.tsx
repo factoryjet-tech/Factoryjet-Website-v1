@@ -11,6 +11,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Metadata
@@ -353,6 +354,7 @@ export default function ProcurementSupplyChainAgentPage() {
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* ── Hero ── */}

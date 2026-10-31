@@ -16,6 +16,7 @@ import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
 
 import OdooRoutesDiagram from './OdooRoutesDiagram';
 import { twinAlternates } from '@/data/hreflangMap';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/odoo-ai-agents, built 2026-10-09.
@@ -1198,6 +1199,7 @@ export default function OdooAiAgentsPage() {
       <SiteHeader />
 
       <main className={`${styles.page} min-h-screen bg-fj-cream text-fj-ink`}>
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* 1. HERO */}

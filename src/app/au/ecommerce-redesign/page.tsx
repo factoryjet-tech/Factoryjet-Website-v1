@@ -833,7 +833,7 @@ export default function EcommerceRedesignAUPage() {
 
       </main>
       </div>
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce redesigns, builds, AI agents and AI search for established Australian businesses. You own the code, and support is optional." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} />
     </>
   );
 }

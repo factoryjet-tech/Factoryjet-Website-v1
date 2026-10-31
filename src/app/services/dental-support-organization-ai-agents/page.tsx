@@ -10,6 +10,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/dental-support-organization-ai-agents';
 const PAGE_TITLE = 'AI Receptionist Agents for Dental Support Organizations | FactoryJet';
@@ -383,6 +384,7 @@ export default function DentalSupportOrganizationAiAgentsPage() {
       <SiteHeader />
 
       <main className="min-h-screen bg-white text-[#14110F]">
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* HERO SECTION */}

@@ -1,7 +1,8 @@
+import type { CSSProperties } from 'react';
 import Link from 'next/link';
 import { US_FOOTER_COLUMNS, US_FOOTER_FEATURED_COLUMNS } from '@/data/usFooterColumns';
 import { RECOGNITION_PROFILES } from '@/data/recognitionProfiles';
-import type { SiteFooterLink } from './SiteFooter';
+import type { SiteFooterColumn, SiteFooterLink } from './SiteFooter';
 import Wordmark from './Wordmark';
 import './UsSiteFooter.css';
 
@@ -15,12 +16,19 @@ interface UsSiteFooterProps {
   isDark: boolean;
   showRecognition: boolean;
   className: string;
+  /** Full directory and its compact view. Default: the US sets. UK and AU pass
+   *  their own so every region renders this same footer (2026-10-31). */
+  columns?: ReadonlyArray<SiteFooterColumn>;
+  featured?: ReadonlyArray<SiteFooterColumn>;
+  recognitionHeading?: string;
 }
 
 /** Static, progressively disclosed navigation. All original links and labels
  * remain in the HTML; no JavaScript is needed to browse the full directory. */
 export default function UsSiteFooter({ logoText, tagline, copyright, bottomLinks,
-  regions, currentRegion, isDark, showRecognition, className }: UsSiteFooterProps) {
+  regions, currentRegion, isDark, showRecognition, className,
+  columns = US_FOOTER_COLUMNS, featured = US_FOOTER_FEATURED_COLUMNS,
+  recognitionHeading = 'Recognized on' }: UsSiteFooterProps) {
   return (
     <footer className={`us-footer ${isDark ? 'us-footer--dark' : ''} ${className}`.trim()}>
       <div className="us-footer__inner">
@@ -38,7 +46,7 @@ export default function UsSiteFooter({ logoText, tagline, copyright, bottomLinks
         </div>
 
         <nav aria-label="Footer navigation" className="us-footer__featured">
-          {US_FOOTER_FEATURED_COLUMNS.map((column) => (
+          {featured.map((column) => (
             <div key={column.heading}>
               <p className="us-footer__heading">{column.heading}</p>
               <ul>
@@ -54,7 +62,7 @@ export default function UsSiteFooter({ logoText, tagline, copyright, bottomLinks
             the desktop navigation from both layout and accessibility tree;
             both views use the same original link objects and require no JS. */}
         <nav aria-label="Footer navigation" className="us-footer__mobile-navigation">
-          {US_FOOTER_FEATURED_COLUMNS.map((column) => (
+          {featured.map((column) => (
             <details key={column.heading} className="us-footer__mobile-group">
               <summary>
                 {column.heading}
@@ -76,8 +84,9 @@ export default function UsSiteFooter({ logoText, tagline, copyright, bottomLinks
               <path d="M3 9h12" /><path className="us-footer__plus" d="M9 3v12" />
             </svg>
           </summary>
-          <nav aria-label="Complete footer directory" className="us-footer__directory-grid">
-            {US_FOOTER_COLUMNS.map((column) => (
+          <nav aria-label="Complete footer directory" className="us-footer__directory-grid"
+            style={{ '--uf-dir-cols': columns.length } as CSSProperties}>
+            {columns.map((column) => (
               <div key={column.heading}>
                 <p className="us-footer__heading">{column.heading}</p>
                 <ul>{column.links.map((link) => (
@@ -90,7 +99,7 @@ export default function UsSiteFooter({ logoText, tagline, copyright, bottomLinks
 
         {showRecognition && (
           <div className="us-footer__recognition">
-            <p className="us-footer__heading">Recognized on</p>
+            <p className="us-footer__heading">{recognitionHeading}</p>
             <ul>{RECOGNITION_PROFILES.map((profile) => (
               <li key={profile.href}><a href={profile.href} target="_blank" rel="noopener noreferrer">{profile.label}</a></li>
             ))}</ul>

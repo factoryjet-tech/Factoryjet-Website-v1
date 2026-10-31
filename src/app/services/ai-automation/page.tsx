@@ -11,6 +11,7 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/ai-automation
@@ -338,6 +339,7 @@ export default function UsAiAutomationPage() {
       <SiteHeader />
 
       <main className="bg-fj-cream">
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* 1. HERO (light) */}

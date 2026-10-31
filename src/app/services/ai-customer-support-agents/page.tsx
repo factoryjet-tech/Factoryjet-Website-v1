@@ -11,6 +11,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const PAGE_MODIFIED = '2026-10-29';
@@ -697,6 +698,7 @@ export default function AiCustomerSupportAgentsPage() {
       <SiteHeader locale="us" />
 
       <main className="pp-page">
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* HERO SECTION */}

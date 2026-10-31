@@ -18,6 +18,7 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -552,6 +553,7 @@ export default function AIMarketingAgentUSPage() {
       <BreadcrumbSchema items={BREADCRUMB_ITEMS} />
 
       <main className="bg-fj-cream">
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
       <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}

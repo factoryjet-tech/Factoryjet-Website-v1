@@ -17,6 +17,7 @@ import '../au-hub.css';
 import '../ai-agents/visual.css';
 import { ExecutionPath, ExecutionJobDiagram } from '../ai-agents/ExecutionDiagram';
 import { twinAlternates } from '@/data/hreflangMap';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /au/document-intake-ai-agents, built 2026-10-29.
@@ -448,6 +449,7 @@ export default function DocumentIntakeAiAgentsAUPage() {
         </div>
       </nav>
       <main id="au-content">
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
         {/* ═══ HERO (copy + inline form left, spec panel right) ═══ */}
         <section className="hero" id="hero">
@@ -1154,7 +1156,7 @@ export default function DocumentIntakeAiAgentsAUPage() {
       </main>
       </div>
 
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} />
     </>
   );
 }

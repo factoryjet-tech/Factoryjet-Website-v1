@@ -10,6 +10,7 @@ import FAQ, { type FAQItem } from '@/components/v2/FAQ';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services: the US services hub.
@@ -311,6 +312,7 @@ export default function USServicesHubPage() {
       <SiteHeader />
 
       <main className="bg-fj-cream">
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* 1. HERO (light) */}

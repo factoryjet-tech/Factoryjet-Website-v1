@@ -15,6 +15,7 @@ import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import { FOUNDER_ID } from '@/data/organization';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -568,6 +569,7 @@ export default function CrmAiAgentsPage() {
       />
 
       <main className="bg-fj-cream">
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}

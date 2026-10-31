@@ -11,6 +11,7 @@ import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const CANONICAL = 'https://factoryjet.com/au/accounts-receivable-automation';
 const PUBLISHED = '2026-10-29';
@@ -327,6 +328,7 @@ export default function AccountsReceivableAutomationAUPage() {
         </div>
       </nav>
       <main id="au-content">
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
         {/* ═══ HERO (copy + inline form left, spec panel right) ═══ */}
         <section className="hero" id="hero">
@@ -863,7 +865,7 @@ export default function AccountsReceivableAutomationAUPage() {
 
       </main>
       </div>
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} />
     </>
   );
 }

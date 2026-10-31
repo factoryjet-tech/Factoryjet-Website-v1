@@ -10,6 +10,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-receptionist';
 const PAGE_TITLE = 'AI Receptionist | Custom 24/7 AI Phone Answering | FactoryJet';
@@ -442,6 +443,7 @@ export default function AiReceptionistPage() {
       <SiteHeader />
 
       <main className="min-h-screen bg-white text-[#14110F]">
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* HERO SECTION */}

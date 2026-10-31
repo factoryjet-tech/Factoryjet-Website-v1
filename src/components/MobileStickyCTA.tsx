@@ -7,6 +7,8 @@
  * returned. This bar stays pinned, appears after the hero (scrollY > 480), and
  * gives two tap targets: WhatsApp (already a tracked, converting channel) and
  * "Get my quote" which opens the existing contact modal (region from the path).
+ * A page can relabel the button with <StickyCtaLabel> (AI agent pages use
+ * "See a demo on my data"); the action stays the same contact modal.
  * Mobile-only (md:hidden). Mounted once via app/us/layout.tsx.
  */
 
@@ -18,6 +20,8 @@ import { whatsappHref } from '@/utils/whatsappHref';
 export default function MobileStickyCTA() {
   const { openModal } = useContactModal();
   const [show, setShow] = useState(false);
+  // Pages that lead with another offer say so with <StickyCtaLabel> (2026-10-31).
+  const [cta, setCta] = useState({ label: 'Get my quote', title: 'Free quote' });
   const pathname = usePathname();
   const isHomepage = pathname === '/';
   // Tag the lead with the market of the page it came from (was hardcoded 'us',
@@ -30,6 +34,12 @@ export default function MobileStickyCTA() {
       setShow(false);
       return;
     }
+
+    const marker = document.querySelector('[data-sticky-cta-label]');
+    setCta({
+      label: marker?.getAttribute('data-sticky-cta-label') || 'Get my quote',
+      title: marker?.getAttribute('data-sticky-cta-title') || 'Free quote',
+    });
 
     // Stay hidden while a hero inline form is on screen: at 390px the bar
     // covered its last field and submit button (31 Oct QA, 9 UK/AU pages).
@@ -72,7 +82,7 @@ export default function MobileStickyCTA() {
         style={{ background: '#16181d', paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))', boxShadow: '0 -8px 24px rgba(15,33,56,0.22)' }}
       >
         <div className="min-w-0 flex-1 text-white">
-          <div style={{ fontSize: '13px', fontWeight: 700, lineHeight: 1.2 }}>Free quote</div>
+          <div style={{ fontSize: '13px', fontWeight: 700, lineHeight: 1.2 }}>{cta.title}</div>
           <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.62)' }}>Founder replies in 24h</div>
         </div>
 
@@ -96,7 +106,7 @@ export default function MobileStickyCTA() {
           className="font-fj-display inline-flex shrink-0 items-center gap-1.5 text-white"
           style={{ background: '#B23E13', fontWeight: 700, fontSize: '14px', minHeight: 44, padding: '11px 16px', borderRadius: '999px', whiteSpace: 'nowrap' }}
         >
-          Get my quote
+          {cta.label}
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
             <path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>

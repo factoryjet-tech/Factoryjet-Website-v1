@@ -137,6 +137,11 @@
 .aiAgentPage.auPage .au-split > div > p { color: var(--body); font-size: 15px; line-height: 1.75; }
 .aiAgentPage.auPage .au-split .btn { margin-top: 26px; }
 .aiAgentPage.auPage .au-split h3 + p { margin-top: 10px; }
+/* Section rhythm matched to the US pages (2026-10-31). The shared .section rule is
+   clamp(68px,8vw,112px); measured live at 1440px, AU pages had a median 253-258px of
+   blank space between sections against 145-163px on their US twins (NetSuite, CRM,
+   Shopify Plus). 64px brought /au/netsuite-ai-agents to 162px vs 163px on the US page. */
+.aiAgentPage.auPage .section { padding: clamp(48px,5vw,64px) 0; }
 .aiAgentPage.auPage .demand { border: 1px solid var(--line); border-radius: 10px; background: white; }
 .aiAgentPage.auPage .demand-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--line); font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .aiAgentPage.auPage .demand-head b { color: var(--accent-text); font-weight: 500; }

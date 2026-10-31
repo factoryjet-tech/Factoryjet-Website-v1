@@ -23,9 +23,12 @@
 // COUNTRY-LEVEL LANDING PAGES
 // ===========================================================================
 
-/** Full 3-locale cluster for home pages: / ↔ /us ↔ /uae */
+/** Home-page cluster: / (US) ↔ /uae ↔ /uk ↔ /au.
+ *  No en-IN (2026-10-31): it pointed at "/", the US homepage, so the set claimed
+ *  two regions for one URL. India has no root page; Indian searchers fall back to
+ *  x-default ("/"), which is where en-IN sent them anyway. /uk dropped the same
+ *  entry on 2026-08-25, so the cluster was also no longer reciprocal. */
 export const homeAlternates = {
-  'en-IN': 'https://factoryjet.com',
   'en-US': 'https://factoryjet.com',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
@@ -41,7 +44,6 @@ export const homeAlternates = {
  * to /us asymmetric vs India's en-US → /us back-pointer.
  */
 export const usHubAlternates = {
-  'en-IN': 'https://factoryjet.com',
   'en-US': 'https://factoryjet.com',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
@@ -56,7 +58,6 @@ export const usHubAlternates = {
  * hreflang). Added 2026-06-11 with the AU market launch.
  */
 export const auHubAlternates = {
-  'en-IN': 'https://factoryjet.com',
   'en-US': 'https://factoryjet.com',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',

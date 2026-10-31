@@ -5,6 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
+import { UK_FOOTER_COLUMNS } from '@/data/ukFooterColumns';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import { BlogPostPage } from '@/pages/Blog/components/BlogPostPage'
 import { POSTS } from '@/pages/Blog/posts'
@@ -197,7 +198,7 @@ export default async function Page({ params }: Props) {
       {isAuGuide(resolvedParams.slug)
         ? <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} />
         : isUkGuide(resolvedParams.slug)
-          ? <SiteFooter locale="gb" linkColumns={US_FOOTER_COLUMNS} />
+          ? <SiteFooter locale="gb" linkColumns={UK_FOOTER_COLUMNS} />
           : <SiteFooter linkColumns={US_FOOTER_COLUMNS} />}
     </>
   )

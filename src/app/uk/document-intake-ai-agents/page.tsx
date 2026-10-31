@@ -7,6 +7,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* /uk/document-intake-ai-agents, built 2026-10-29.
 
@@ -567,6 +568,7 @@ export default function DocumentIntakeAiAgentsUKPage() {
 
       <div className="uk-aiagents">
       <main className={styles.page}>
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
         <Breadcrumbs items={crumbs} />
 

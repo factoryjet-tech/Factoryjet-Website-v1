@@ -16,6 +16,7 @@ import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
 
 import OwnerMapDiagram from './OwnerMapDiagram';
 import { twinAlternates } from '@/data/hreflangMap';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/ecommerce-erp-integration, built 2026-10-11.
@@ -1126,6 +1127,7 @@ export default function EcommerceErpIntegrationPage() {
       <SiteHeader />
 
       <main className={`${styles.page} min-h-screen bg-fj-cream text-fj-ink`}>
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* 1. HERO */}

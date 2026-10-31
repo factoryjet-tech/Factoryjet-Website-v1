@@ -9,6 +9,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/automotive-ai-voice-agents';
 const PAGE_TITLE = 'Automotive AI Voice Agents & Dealership BDC | FactoryJet';
@@ -345,6 +346,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
       <SiteHeader />
 
       <main className="min-h-screen bg-white text-[#14110F]">
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* HERO SECTION */}

@@ -11,6 +11,7 @@ import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /au/shopify-ai-agents: custom AI agents for Australian Shopify store OPERATIONS.
@@ -397,6 +398,7 @@ export default function ShopifyAiAgentsAUPage() {
         </div>
       </nav>
       <main id="au-content">
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
         {/* ═══ HERO: copy + inline form left, spec panel right ═══ */}
         <section className="hero" id="hero">
@@ -935,7 +937,7 @@ export default function ShopifyAiAgentsAUPage() {
       </main>
       </div>
 
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} />
     </>
   );
 }

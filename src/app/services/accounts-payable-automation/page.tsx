@@ -13,6 +13,7 @@ import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/accounts-payable-automation, built 2026-10-11.
@@ -1239,6 +1240,7 @@ export default function AccountsPayableAutomationPage() {
       <SiteHeader />
 
       <main className={`${styles.page} min-h-screen bg-fj-cream text-fj-ink`}>
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* 1. HERO */}

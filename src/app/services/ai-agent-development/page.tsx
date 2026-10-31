@@ -6,6 +6,7 @@ import JsonLd from '@/components/JsonLd';
 import { ORG_ID } from '@/data/organization';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const url = 'https://factoryjet.com/services/ai-agent-development';
 // Title and description follow US demand measured 2026-10-05 (DataForSEO):
@@ -70,6 +71,7 @@ export default function AiAgentDevelopmentPage() {
       <JsonLd id="ai-agent-service-schema" data={serviceSchema} />
       <BreadcrumbSchema items={breadcrumbs} />
       <SiteHeader cta={{ label: 'See a demo on my data', href: '/contact' }} />
+        <StickyCtaLabel label="See a demo on my data" title="Demo first" />
       <AiAgentDevelopmentSections />
       <SiteFooter />
     </>

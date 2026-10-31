@@ -7,6 +7,7 @@ import { ORG_ID } from '@/data/organization';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import '@/components/v2/AiAgentDevelopmentSections.css';
+import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* Claude AI agent development (W2-4, built 2026-10-29, QA fixes 2026-10-31).
    Demand: buyer question N18 ("who builds agents on Claude / the Anthropic API")
@@ -344,6 +345,7 @@ export default function ClaudeAiAgentDevelopmentPage() {
           </div>
         </nav>
         <main id="claude-agent-content">
+          <StickyCtaLabel label="See a demo on my data" title="Demo first" />
           <section className="hero" id="hero">
             <div className="wrap hero-grid">
               <div className="hero-copy">
