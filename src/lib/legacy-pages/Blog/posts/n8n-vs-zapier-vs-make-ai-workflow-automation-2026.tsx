@@ -254,7 +254,8 @@ export const post: BlogPost = {
       </div>
 
       <p className="mb-6">
-        For growing mid-market companies, the savings from self-hosting n8n completely fund the engineering investment within 2 to 4 months of deployment.
+        For growing mid-market companies, the savings from self-hosting n8n completely fund the engineering investment within 2 to 4 months of deployment. To put a number on the build side of that sum, see{' '}
+        <a href="/blog/ai-automation-agency-cost-2026" className="text-orange-600 underline">what an AI automation agency costs in 2026</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">4. Data Privacy, Compliance &amp; Enterprise Security Standards</h2>

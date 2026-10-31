@@ -29,7 +29,7 @@
 
 .uk-aiagents h1 {font-size:clamp(2.25rem,5vw,3.5rem);font-weight:800}
 
-.uk-aiagents h2 {font-size:clamp(1.75rem,3.5vw,2.625rem);font-weight:700}
+.uk-aiagents h2 {font-size:clamp(1.75rem,3.5vw,2.625rem);font-weight:800}
 
 .uk-aiagents h3 {font-size:clamp(1.1rem,2vw,1.375rem);font-weight:700}
 
@@ -236,7 +236,7 @@
   transition:border-color .2s,box-shadow .2s;
 }
 
-.uk-aiagents .svc-card:hover {border-color:var(--orange);box-shadow:0 4px 20px rgba(255,92,0,.1)}
+.uk-aiagents .svc-card:hover {border-color:var(--orange);box-shadow:0 4px 20px rgba(15,15,18,.08)}
 
 
 /* ─── Comparison table ─── */

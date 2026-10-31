@@ -51,7 +51,7 @@ const PAGE_TITLE = 'Shopify EDI Integration Services | FactoryJet';
 const PAGE_DESC =
   'Shopify EDI integration for brands selling to retailers and B2B stores taking EDI orders. The 850, 855, 856 and 810 explained, with five EDI products compared.';
 const PAGE_PUBLISHED = '2026-10-11';
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-31';
 const CHECKED_ON = '11 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -1228,7 +1228,15 @@ export default function ShopifyEdiIntegrationPage() {
                   <Link href="/b2b-ecommerce" className="font-semibold text-fj-ink underline underline-offset-4">
                     B2B ecommerce
                   </Link>
-                  .
+                  . If a buyer&rsquo;s procurement team wants to shop your catalog from inside their own system, that
+                  is a{' '}
+                  <Link
+                    href="/b2b-ecommerce/punchout-catalog"
+                    className="font-semibold text-fj-ink underline underline-offset-4"
+                  >
+                    punchout catalog
+                  </Link>
+                  . Punchout fills the cart, and EDI carries the purchase orders and invoices after it.
                 </p>
               </div>
 

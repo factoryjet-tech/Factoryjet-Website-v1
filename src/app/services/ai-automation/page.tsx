@@ -41,7 +41,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/ai-automation';
 const PAGE_TITLE = 'AI Automation Agency in the USA | FactoryJet';
 const PAGE_DESC =
   'AI automation for operations teams: orders, invoices, leads and reports that move between your tools without retyping. Built in n8n, Make or Zapier. Fixed price in writing, and you own every workflow.';
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_MODIFIED = '2026-10-31';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const LAYER3_URL = 'https://www.layer3labs.io/roi/ai-automation-agency-cost';
 
@@ -650,7 +650,7 @@ export default function UsAiAutomationPage() {
                   <Link href="/blog/best-ai-automation-agencies-usa-2026" className="font-semibold text-[#B23E13] underline underline-offset-2">
                     best AI automation agencies in the US
                   </Link>{' '}
-                  compares 14 firms, including us.{' '}Budgeting first? Our <Link href="/blog/ai-automation-agency-cost-2026" className="font-semibold text-[#B23E13] underline underline-offset-2">AI automation agency cost guide</Link> has project and retainer ranges by company size.
+                  compares 14 firms, including us.{' '}Budgeting first? Our <Link href="/blog/ai-automation-agency-cost-2026" className="font-semibold text-[#B23E13] underline underline-offset-2">AI automation agency cost guide</Link> has project and retainer ranges by company size.{' '}Buying in the UK? See our <Link href="/uk/ai-automation" className="font-semibold text-[#B23E13] underline underline-offset-2">AI automation services for UK businesses</Link>.
                 </p>
               </div>
             </div>

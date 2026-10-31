@@ -123,7 +123,7 @@ export function BlogMidPageCTA({ offer }: { offer: Pick<BlogLeadOffer, 'service'
           Talk to the founder
           <span aria-hidden="true">&rarr;</span>
         </Link>
-        <span className="text-sm text-[#4A4A45]">Bhavesh replies within one business day.</span>
+        <span className="text-sm text-[#4A4A45]">Bhavesh replies within 24 hours.</span>
       </div>
     </aside>
   );

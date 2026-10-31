@@ -27,7 +27,7 @@ import '../ai-agents/ai-agents.css';
       FAQ renders. Never add a second list of questions. */
 
 const CANONICAL = 'https://factoryjet.com/uk/shopify-xero-integration';
-const UPDATED = '2026-10-21';
+const UPDATED = '2026-10-31';
 const READ_ON = '11 October 2026';
 /* The bundles, discounts, stock and Cin7 Core / Unleashed facts were read on
    the makers' own pages on 2026-10-21 (Xero Developer and Cin7 Core help in a
@@ -845,7 +845,9 @@ export default function ShopifyXeroIntegrationUKPage() {
                 </p></td></tr><tr><th><b>Refunds.</b></th><td><p>GOV.UK says that when a customer returns goods you settle the balance with a
                   replacement invoice or a credit or debit note, and that you record these in your accounts. In
                   the link, a refund posts as a credit at the same VAT rate as the sale it reverses. It waits in
-                  the clearing account until Shopify takes it out of a payout.
+                  the clearing account until Shopify takes it out of a payout. For AI agents that work on orders
+                  and refunds before they post, see{' '}
+                  <a href="/uk/ecommerce-ai-agents" style={inlineLink}>ecommerce AI agents in the UK</a>.
                 </p></td></tr><tr><th><b>Fees.</b></th><td><p>Shopify’s help centre says that in the United Kingdom a 0% tax rate, which it
                   calls a reverse charge, applies to Shopify Payments processing fees, and that you need to
                   maintain your own tax records for them. Which Xero tax rate that maps to is your accountant’s
@@ -1059,7 +1061,8 @@ export default function ShopifyXeroIntegrationUKPage() {
                   FactoryJet builds these links, and the same team supports them after launch. For the store
                   itself, see <a href="/uk/shopify-development" style={inlineLink}>Shopify development in the UK</a>,{' '}
                   <a href="/uk/shopify-plus" style={inlineLink}>Shopify Plus</a> or{' '}
-                  <a href="/uk/shopify-migration" style={inlineLink}>moving a store to Shopify</a>.
+                  <a href="/uk/shopify-migration" style={inlineLink}>moving a store to Shopify</a>. For agents that
+                  work inside the store, see <a href="/uk/shopify-ai-agents" style={inlineLink}>Shopify AI agents</a>.
                 </p>
               </div>
               <div className="card card-top-orange">
@@ -1221,13 +1224,18 @@ export default function ShopifyXeroIntegrationUKPage() {
               <a href="/uk/ecommerce-development" style={inlineLink}>ecommerce development in the UK</a>,{' '}
               <a href="/uk/shopify-development" style={inlineLink}>Shopify development</a> and{' '}
               <a href="/uk/woocommerce" style={inlineLink}>WooCommerce development</a>. For trade buyers, see{' '}
-              <a href="/uk/b2b-ecommerce" style={inlineLink}>B2B ecommerce</a>. For supplier bills paid out of the
+              <a href="/uk/b2b-ecommerce" style={inlineLink}>B2B ecommerce</a> and{' '}
+              <a href="/uk/shopify-plus-b2b" style={inlineLink}>Shopify B2B trade accounts on net terms</a>. For supplier bills paid out of the
               same Xero, see <a href="/uk/accounts-payable-automation" style={inlineLink}>accounts payable automation</a>,
               and for chasing the trade invoices you raise, see{' '}
               <a href="/uk/accounts-receivable-automation" style={inlineLink}>accounts receivable automation</a>.
               If you run Sage, NetSuite or Odoo rather than Xero, see{' '}
               <a href="/uk/ecommerce-erp-integration" style={inlineLink}>ecommerce ERP integration</a>, and for AI that
               works across those systems, see <a href="/uk/ai-integration-services" style={inlineLink}>AI integration services in the UK</a>.
+              There are also{' '}
+              <a href="/uk/erp-ai-agents" style={inlineLink}>AI agents that draft bills and orders inside Xero</a>,
+              and for other repeat back-office work, see{' '}
+              <a href="/uk/ai-automation" style={inlineLink}>AI automation in the UK</a>.
               If your books are in QuickBooks, see{' '}
               <a href="/services/shopify-quickbooks-integration" style={inlineLink}>Shopify QuickBooks integration</a>.
             </p>
@@ -1252,7 +1260,8 @@ export default function ShopifyXeroIntegrationUKPage() {
                 <p className="mt-6" style={{ maxWidth: 560 }}>
                   FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short
                   scoping call. For a custom link we can keep managing the servers, APIs and maintenance, so your
-                  team does not have to.
+                  team does not have to. For upkeep of the store itself, see{' '}
+                  <a href="/uk/shopify-maintenance-services" style={inlineLink}>Shopify maintenance services in the UK</a>.
                 </p>
                 <div className="mt-8">
                   <ModalCTAButton label="Scope my Xero link" region="uk" modalVariant="default" btnVariant="primary-light" />

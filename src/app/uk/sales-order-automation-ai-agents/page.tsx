@@ -388,7 +388,9 @@ export default function SalesOrderAutomationUKPage() {
               <p className="lead mt-4">
                 Take a typical Monday: a builders’ merchant emails a PDF, a salon chain sends a spreadsheet, and a
                 long-standing customer types eight lines into the body of an email. Each one goes through the same
-                seven checks before anyone sees it.
+                seven checks before anyone sees it. Supplier invoices, delivery notes and forms that land in the same
+                inbox are handled by{' '}
+                <a href="/uk/document-intake-ai-agents" style={{ textDecoration: 'underline' }}>document intake AI agents</a>.
               </p>
             </div>
             <ol className="stack mt-10" style={{ maxWidth: 900 }}>
@@ -438,7 +440,7 @@ export default function SalesOrderAutomationUKPage() {
                     shipments usually run an inventory app beside Xero, and the agent writes there instead.
                   </p>
                   <p>
-                    <b>Odoo.</b> The agent writes a quotation that your team confirms into a sales order. Odoo’s
+                    <b><a href="/uk/odoo-ai-agents" style={{ textDecoration: 'underline' }}>Odoo</a>.</b> The agent writes a quotation that your team confirms into a sales order. Odoo’s
                     developer documentation limits external API access to Custom pricing plans, ruling out One App
                     Free and Standard, so we check your plan in the first call.
                   </p>
@@ -452,7 +454,7 @@ export default function SalesOrderAutomationUKPage() {
                     the agent follows your normal route to the ledger.
                   </p>
                   <p>
-                    <b>Sage 200 and Sage Intacct, NetSuite, QuickBooks, Linnworks and Mintsoft.</b> The record
+                    <b>Sage 200 and Sage Intacct,{' '}<a href="/uk/netsuite-ai-agents" style={{ textDecoration: 'underline' }}>NetSuite</a>, QuickBooks, Linnworks and Mintsoft.</b> The record
                     the agent writes depends on your edition and add-ons, and we confirm it in week one. Where Linnworks or
                     Mintsoft runs the warehouse, the agent writes to the system that owns the price list and your
                     current link carries the order to picking and the courier label.
@@ -732,6 +734,7 @@ export default function SalesOrderAutomationUKPage() {
                   <a className="city-pill" href="/uk/accounts-payable-automation">Accounts payable automation UK</a>
                   <a className="city-pill" href="/uk/shopify-xero-integration">Shopify Xero integration UK</a>
                   <a className="city-pill" href="/uk/ai-development">AI development UK</a>
+                  <a className="city-pill" href="/uk/crm-ai-agents">CRM AI agents UK</a>
                   <a className="city-pill" href="/services/sales-order-automation-ai-agents">Sales order automation (US)</a>
                 </div>
                 <p className="mt-6" style={{ fontSize: 14 }}>

@@ -206,6 +206,8 @@ const TERMS: { n: string; t: string; d: string }[] = [
 const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
   { href: '/au/shopify-development', t: 'Shopify development Australia', d: 'New stores, Shopify Plus, B2B and migrations, with Afterpay, Zip, Australia Post and accounting connected from launch.', go: 'Explore Shopify →' },
   { href: '/au/ecommerce-development', t: 'Ecommerce development Australia', d: 'Platform choice and builds for stores that sell retail, wholesale and through marketplaces.', go: 'Explore ecommerce →' },
+  { href: '/au/shopify-plus', t: 'Shopify Plus agency in Australia', d: 'Plus builds and upgrades for stores whose order volume, B2B price lists or multiple entities make the Xero posting rules matter more.', go: 'Explore Shopify Plus →' },
+  { href: '/au/amazon-agency', t: 'Amazon agency Australia', d: 'Selling on Amazon.com.au, with Amazon payouts reconciled in Xero alongside your Shopify payouts.', go: 'Explore Amazon →' },
   { href: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'The other side of the books: supplier invoices read into Xero or MYOB, matched to purchase orders and routed for approval.', go: 'Explore AP automation →' },
   { href: '/au/ai-agents', t: 'AI agents for Australian businesses', d: 'Agents we build to answer order questions, chase payout exceptions in Xero and update records across Shopify and your back office.', go: 'Explore AI agents →' },
   { href: '/au/woocommerce', t: 'WooCommerce development Australia', d: 'Stores on WooCommerce face the same WooCommerce Xero questions: GST per line, one clearing account per gateway, one owner for stock.', go: 'Explore WooCommerce →' },

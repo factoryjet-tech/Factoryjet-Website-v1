@@ -225,6 +225,7 @@ const PLATFORM_ROWS: { what: string; shopify: string; plus: string; other: strin
 const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
   { href: '/au/ecommerce-development', t: 'Ecommerce development Australia', d: 'New stores and replatforms for Australian brands selling direct to consumers as well as to trade.', go: 'Explore ecommerce →' },
   { href: '/au/shopify-development', t: 'Shopify development Australia', d: 'Shopify and Shopify Plus builds, migrations and Shopify B2B set up with Xero or MYOB.', go: 'Explore Shopify →' },
+  { href: '/au/shopify-plus', t: 'Shopify Plus agency in Australia', d: 'Shopify Plus builds for wholesalers who need catalogues set per company and more than three active B2B catalogues.', go: 'Explore Shopify Plus →' },
   { href: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'Supplier bills, tax invoice checks and Peppol eInvoices handled before they reach Xero or MYOB.', go: 'Explore AP automation →' },
   { href: '/au/ai-agents', t: 'AI agents for Australian businesses', d: 'AI agents that read emailed trade orders and enter them into your portal or ERP for a person to approve.', go: 'Explore AI agents →' },
   { href: '/au/website-maintenance', t: 'Website maintenance Australia', d: 'Updates, fixes and changes after launch, quoted and approved one request at a time.', go: 'Explore maintenance →' },
@@ -542,7 +543,8 @@ export default function B2bEcommerceAUPage() {
                 Before any design, we agree which system is the single owner of customers, price lists, stock,
                 credit limits and invoices. The portal then reads from that owner and writes orders back. Get this
                 wrong and two systems hold two different prices for the same customer, and the sales team stops
-                trusting the portal.
+                trusting the portal. If your store runs on Shopify and Xero holds the books, our page on{' '}
+                <a href="/au/shopify-xero-integration">Shopify Xero integration</a> covers that connection.
               </p>
             </div>
             <div className="platlist" role="list">
@@ -571,9 +573,10 @@ export default function B2bEcommerceAUPage() {
                 <h2>Shopify B2B vs Shopify Plus vs BigCommerce or Adobe Commerce vs a custom portal</h2>
                 <p className="lead">
                   We are not tied to one platform. Here is how the usual options compare for an Australian wholesaler.
-                  The Shopify columns come from Shopify’s own help centre; the last row is our view. WooCommerce
-                  can also run a trade store: the Sow Easy store further down this page is WooCommerce, with Odoo
-                  behind it.
+                  The Shopify columns come from Shopify’s own help centre; the last row is our view.{' '}
+                  <a href="/au/woocommerce">WooCommerce</a> can also run a trade store: the Sow Easy store further
+                  down this page is WooCommerce, with Odoo behind it. If your current store is moving onto Shopify,
+                  see our page on <a href="/au/shopify-migration">Shopify migration in Australia</a>.
                 </p>
               </div>
             </div>

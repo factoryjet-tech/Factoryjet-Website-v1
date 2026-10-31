@@ -28,7 +28,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 11, 2026',
-  dateModified: 'Oct 21, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '13 min read',
   imageUrl: '/blog-images/best-seo-agencies-uk-2026.webp',
   meta: {
@@ -281,7 +281,10 @@ export const post: BlogPost = {
         doesn&apos;t exist when the same people build the site and run the SEO. For online stores,
         our{' '}
         <a href="/uk/ecommerce-seo" className="text-orange-600 underline">ecommerce SEO agency UK</a>{' '}
-        page sets out the category, product page and migration work. Where competitors
+        page sets out the category, product page and migration work. If you sell to other
+        businesses on a long sales cycle, our separate shortlist of the{' '}
+        <a href="/blog/best-b2b-seo-agencies-uk-2026" className="text-orange-600 underline">best B2B SEO agencies in the UK</a>{' '}
+        compares the specialists in that segment. Where competitors
         beat us: enterprise media integration (Brainlabs, Croud) and ecommerce migrations at massive
         scale (NOVOS).{' '}
         <a href="/uk/seo" className="text-orange-600 underline">See our UK SEO service →</a>

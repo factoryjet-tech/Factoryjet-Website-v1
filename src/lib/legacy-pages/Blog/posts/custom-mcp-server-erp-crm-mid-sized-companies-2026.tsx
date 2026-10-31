@@ -150,7 +150,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 18, 2026',
-  dateModified: 'Oct 18, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '13 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
@@ -338,7 +338,8 @@ export const post: BlogPost = {
         backend through an API built alongside the server; see{' '}
         <a href="/blog/agentforce-pricing-vs-custom-ai-agent-2026">Agentforce pricing vs a custom AI agent</a>. On
         Microsoft 365, <a href="/blog/copilot-studio-vs-custom-ai-agents-2026">Copilot Studio can call an MCP server</a>{' '}
-        as a tool, so the same back end can serve a Microsoft front end.
+        as a tool, so the same back end can serve a Microsoft front end. If the agent itself runs on Claude, see{' '}
+        <a href="/services/claude-ai-agent-development">Claude AI agent development</a>.
       </p>
 
       <h2 id="what-else-ranks">What else ranks for &quot;custom mcp server&quot;, and how this guide differs</h2>

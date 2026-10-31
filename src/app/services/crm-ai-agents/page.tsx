@@ -929,6 +929,10 @@ export default function CrmAiAgentsPage() {
                     <a href="/services/ai-agent-monitoring" className={LINK_CLASS}>AI agent monitoring</a> for
                     watching an agent&apos;s actions and errors after launch.
                   </li>
+                  <li>
+                    <a href="/uk/crm-ai-agents" className={LINK_CLASS}>CRM AI agents in the UK</a> if
+                    your sales team works out of the UK.
+                  </li>
                 </ul>
               </div>
             </div>

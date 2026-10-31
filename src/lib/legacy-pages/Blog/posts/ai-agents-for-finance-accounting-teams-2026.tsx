@@ -147,7 +147,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 18, 2026',
-  dateModified: 'Oct 18, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '13 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
@@ -322,6 +322,7 @@ export const post: BlogPost = {
       </p>
       <p>
         See <a href="/services/accounts-payable-automation">accounts payable automation</a>,{' '}
+        <a href="/services/accounts-receivable-automation">accounts receivable automation</a>,{' '}
         <a href="/services/document-intake-ai-agents">document intake AI agents</a>,{' '}
         <a href="/services/erp-ai-agents">AI agents for ERP systems</a> and{' '}
         <a href="/services/ai-integration-services">AI integration services</a>. Purchasing teams should also read{' '}

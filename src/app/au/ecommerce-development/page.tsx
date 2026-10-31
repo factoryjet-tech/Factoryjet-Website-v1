@@ -15,7 +15,7 @@ import '../au-hub.css';
 import './visual.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ecommerce-development';
-const UPDATED = '2026-10-10';
+const UPDATED = '2026-10-31';
 const TITLE = 'Ecommerce Agency & Development Australia | FactoryJet';
 const DESCRIPTION =
   'FactoryJet is an ecommerce agency for Australia. Ecommerce design, development and support for Shopify, WooCommerce, Adobe Commerce and B2B stores. You own it.';
@@ -428,7 +428,7 @@ const HUB_MORE: { h: string; t: string; d: string; l: string }[] = [
 /* Related AU services (was the six hover cards). */
 const RELATED: { h: string; t: string; d: string; l: string }[] = [
   { h: '/au/shopify-development', t: 'Shopify development Australia', d: 'Shopify and Shopify Plus themes, apps, B2B and migrations to Shopify, in depth.', l: 'See Shopify development →' },
-  { h: '/au/ai-agents', t: 'AI agents for your store', d: 'Agents that answer order questions, update listings and chase stock, connected to your systems.', l: 'See AI agents →' },
+  { h: '/au/ecommerce-ai-agents', t: 'Ecommerce AI agents', d: 'AI agents for online stores that answer order questions, update listings and chase stock, connected to your systems.', l: 'See ecommerce AI agents →' },
   { h: '/au/ai-seo', t: 'AI SEO', d: 'Getting your brand and products named in ChatGPT, Perplexity and Google AI Overviews.', l: 'See AI SEO →' },
   { h: '/au/seo', t: 'SEO services', d: 'Ecommerce SEO for category and product pages, technical fixes and content that ranks.', l: 'See SEO Australia →' },
   { h: '/au/ai-development', t: 'AI development', d: 'AI built into your ERP, CRM or store: product data, search and support workflows.', l: 'See AI development →' },
@@ -991,7 +991,8 @@ export default function EcommerceDevelopmentAUPage() {
                       <p>{s.d}</p>
                       {i === MIGRATION_STEPS.length - 1 ? (
                         <p>
-                          For platform-specific moves, see our <a href="/replatforming">replatforming guides</a>{' '}
+                          Moving to Shopify? See <a href="/au/shopify-migration">Shopify migration in Australia</a>.
+                          For other platform-specific moves, see our <a href="/replatforming">replatforming guides</a>{' '}
                           and the <a href="/blog/magento-to-shopify-plus-migration-checklist-2026">Magento to Shopify Plus migration checklist</a>.
                         </p>
                       ) : null}
@@ -1144,7 +1145,10 @@ export default function EcommerceDevelopmentAUPage() {
                 </ol>
                 <p>
                   For WooCommerce and Shopify stores, our <a href="/au/website-maintenance">monthly website maintenance plan</a> covers
-                  tested updates, checkout testing and backups. Once orders grow,{' '}
+                  tested updates, checkout testing and backups. For Shopify stores on their own, see{' '}
+                  <a href="/au/shopify-maintenance-services">Shopify maintenance and support in Australia</a>. Not sure
+                  what to fix first? Start with an{' '}
+                  <a href="/au/ecommerce-consultant">ecommerce consultant review</a> of your current store. Once orders grow,{' '}
                   <a href="/au/ai-customer-service">AI customer service for online stores</a> can take the
                   order-status and returns questions off your team.
                 </p>

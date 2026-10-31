@@ -43,7 +43,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 11, 2026',
-  dateModified: 'Oct 21, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '13 min read',
   imageUrl: '/blog-images/best-ai-seo-agencies-uk-2026.webp',
   meta: {
@@ -173,6 +173,10 @@ export const post: BlogPost = {
         . Hiring in India? Use the{' '}
         <a href="/blog/best-ai-seo-agencies-india" className="text-orange-600 underline">
           India list
+        </a>
+        . Hiring in Australia? Use the{' '}
+        <a href="/blog/best-ai-seo-agencies-australia-2026" className="text-orange-600 underline">
+          best AI SEO agencies in Australia
         </a>
         . Same discipline, completely different shortlist.
       </p>

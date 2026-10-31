@@ -12,7 +12,7 @@ import CityLinksUK from '@/components/v2/CityLinksUK';
 import './web-design.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/web-design';
-const UPDATED = '2026-10-21';
+const UPDATED = '2026-10-31';
 
 /* ─── Breadcrumb source of truth (drives the visible trail AND the JSON-LD) ───
    One array only. Never hand-copy a second BreadcrumbList literal: a trail the
@@ -440,7 +440,7 @@ export default function WebDesignUKPage() {
               </li>
               <li className="card">
                 <h3>Ownership and maintainability</h3>
-                <p className="mt-4">Clean, documented code pushed to your GitHub, built so any competent developer can pick it up later. You are never locked into one agency to keep your own website running.</p>
+                <p className="mt-4">Clean, documented code pushed to your GitHub, built so any competent developer can pick it up later. You are never locked into one agency to keep your own website running. If you would rather hand that work over, our{' '}<a href="/uk/website-maintenance" style={{ color: "#B23E13", textDecoration: "underline", textUnderlineOffset: 2 }}>UK website maintenance service</a>{' '}covers ongoing care after launch.</p>
               </li>
             </ul>
           </div>
@@ -732,7 +732,7 @@ export default function WebDesignUKPage() {
               <li className="svc-card"><h3>Ecommerce Website Design</h3><p className="mt-4">Ecommerce web design and Shopify stores built to convert, from the product page through to the checkout, with mobile treated as the main screen rather than an afterthought.</p></li>
               <li className="svc-card"><h3>Landing Page Design</h3><p className="mt-4">Campaign and paid-traffic pages engineered for a single, measurable conversion, so you can tell which advert earned the enquiry rather than guessing.</p></li>
               <li className="svc-card"><h3>Web App Development</h3><p className="mt-4">Dashboards, portals, booking systems and custom internal tools, built by a web development company that ships production code rather than prototypes.</p></li>
-              <li className="svc-card"><h3>Website Redesign</h3><p className="mt-4">Modernise a dated or slow site without losing the rankings you have already earned, with every old address mapped to a new one before anything goes live.</p></li>
+              <li className="svc-card"><h3>Website Redesign</h3><p className="mt-4">Modernise a dated or slow site without losing the rankings you have already earned, with every old address mapped to a new one before anything goes live. Running an online shop? See our{' '}<a href="/uk/ecommerce-redesign" style={{ color: "#B23E13", textDecoration: "underline", textUnderlineOffset: 2 }}>ecommerce website redesign service</a>.</p></li>
               <li className="svc-card"><h3>WordPress Web Design</h3><p className="mt-4">Editable business website design your team can update in-house, with no developer on standby and no plugin stack quietly slowing the site down.</p></li>
             </ul>
           </div>

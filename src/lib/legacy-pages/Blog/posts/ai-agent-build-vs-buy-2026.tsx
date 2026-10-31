@@ -19,7 +19,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 19, 2026',
-  dateModified: 'Oct 21, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '16 min read',
   imageUrl: '/blog-images/build-ai-agents-small-business-diy-vs-agency-2026-hero.webp',
   imageAlt: 'A business team comparing a configurable agent builder with a custom development route',
@@ -370,7 +370,11 @@ export const post: BlogPost = {
         <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">
           AI agent cost guide
         </a>{' '}
-        covers what it costs to rent one or have one built.
+        covers what it costs to rent one or have one built, and our guide to{' '}
+        <a href="/blog/how-long-to-implement-an-ai-agent-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">
+          how long an AI agent takes to implement
+        </a>{' '}
+        covers the timeline in more detail.
       </p>
 
       {/* Comparison table */}

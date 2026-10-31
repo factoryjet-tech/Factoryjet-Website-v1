@@ -6,13 +6,13 @@
  * The /us audit found 0 mobile conversions: the CTA scrolled away and never
  * returned. This bar stays pinned, appears after the hero (scrollY > 480), and
  * gives two tap targets: WhatsApp (already a tracked, converting channel) and
- * "Get my quote" which opens the existing contact modal (region 'us').
+ * "Get my quote" which opens the existing contact modal (region from the path).
  * Mobile-only (md:hidden). Mounted once via app/us/layout.tsx.
  */
 
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { useContactModal } from '@/context/ContactModalContext';
+import { useContactModal, type ModalRegion } from '@/context/ContactModalContext';
 import { whatsappHref } from '@/utils/whatsappHref';
 
 export default function MobileStickyCTA() {
@@ -20,6 +20,9 @@ export default function MobileStickyCTA() {
   const [show, setShow] = useState(false);
   const pathname = usePathname();
   const isHomepage = pathname === '/';
+  // Tag the lead with the market of the page it came from (was hardcoded 'us',
+  // so UK and AU leads arrived labelled US). Fixed 2026-10-31.
+  const region: ModalRegion = pathname?.startsWith('/uk') ? 'uk' : pathname?.startsWith('/au') ? 'au' : 'us';
   const waHref = whatsappHref("Hi FactoryJet, I'd like a free quote for my project.", pathname);
 
   useEffect(() => {
@@ -28,11 +31,27 @@ export default function MobileStickyCTA() {
       return;
     }
 
-    const onScroll = () => setShow(window.scrollY > 480);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [isHomepage]);
+    // Stay hidden while a hero inline form is on screen: at 390px the bar
+    // covered its last field and submit button (31 Oct QA, 9 UK/AU pages).
+    const visibleForms = new Set<Element>();
+    const update = () => setShow(window.scrollY > 480 && visibleForms.size === 0);
+    const forms = document.querySelectorAll('[data-hero-inline-form]');
+    const io =
+      forms.length && typeof IntersectionObserver !== 'undefined'
+        ? new IntersectionObserver((entries) => {
+            entries.forEach((e) => (e.isIntersecting ? visibleForms.add(e.target) : visibleForms.delete(e.target)));
+            update();
+          })
+        : null;
+    forms.forEach((el) => io?.observe(el));
+
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', update);
+      io?.disconnect();
+    };
+  }, [isHomepage, pathname]);
 
   // The homepage owns an IntersectionObserver-driven bar tied to its inline
   // commerce-audit form. Never stack this global quote bar on top of it.
@@ -73,7 +92,7 @@ export default function MobileStickyCTA() {
 
         <button
           type="button"
-          onClick={() => openModal('us')}
+          onClick={() => openModal(region)}
           className="font-fj-display inline-flex shrink-0 items-center gap-1.5 text-white"
           style={{ background: '#B23E13', fontWeight: 700, fontSize: '14px', minHeight: 44, padding: '11px 16px', borderRadius: '999px', whiteSpace: 'nowrap' }}
         >

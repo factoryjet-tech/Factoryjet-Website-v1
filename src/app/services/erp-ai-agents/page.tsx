@@ -76,7 +76,7 @@ const PAGE_TITLE = 'AI Agents for ERP: Odoo, NetSuite, SAP Business One | Factor
 const PAGE_DESC =
   'We design, build and support AI agents inside Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs. They draft quotes, orders and bookkeeping for approval.';
 const PAGE_PUBLISHED = '2026-10-09';
-const PAGE_MODIFIED = '2026-10-11';
+const PAGE_MODIFIED = '2026-10-31';
 const CHECKED_ON = '9 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -943,6 +943,7 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/netsuite-ai-agents', t: 'NetSuite AI agents', b: 'The NetSuite page: the AI Connector Service, MCP tools and custom agents.' },
   { href: '/services/odoo-ai-agents', t: 'Odoo AI agents', b: 'The Odoo page: what Odoo 19 and 20 ship, and where a custom agent fits.' },
   { href: '/services/accounts-payable-automation', t: 'Accounts payable automation', b: 'An agent that reads, matches, codes and routes vendor invoices on your own books.' },
+  { href: '/services/accounts-receivable-automation', t: 'Accounts receivable automation', b: 'An agent that matches customer payments to open invoices and drafts reminders for approval.' },
   { href: '/services/sales-order-automation-ai-agents', t: 'Sales and purchase order automation', b: 'Customer purchase orders turned into draft sales orders, and purchase orders drafted for suppliers.' },
   { href: '/services/ai-inventory-management-agents', t: 'AI inventory management agents', b: 'Agents that flag low stock and draft purchase orders for approval.' },
   { href: '/services/document-intake-ai-agents', t: 'Document intake AI agents', b: 'Inbound PDFs, scans and email attachments read and checked against your records.' },

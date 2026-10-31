@@ -8,7 +8,7 @@ import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-consultant';
-const UPDATED = '2026-10-21';
+const UPDATED = '2026-10-31';
 const TITLE = 'Ecommerce Consultant UK | Advice You Can Build | FactoryJet';
 const H1 = 'Ecommerce Consultant UK: Senior Advice on What to Fix First, and a Team That Can Build It';
 
@@ -391,7 +391,7 @@ export default function EcommerceConsultantUKPage() {
               </li>
               <li className="svc-card">
                 <h3>B2B trade ordering</h3>
-                <p className="mt-4">Trade accounts, customer-specific price lists, bulk and repeat orders, credit terms and invoices. We advise on whether your current store can handle trade customers or whether a separate portal makes more sense.</p>
+                <p className="mt-4">Trade accounts, customer-specific price lists, bulk and repeat orders, credit terms and invoices. We advise on whether your current store can handle trade customers or whether a separate portal makes more sense. If you sell on Shopify, see our <a href="/uk/shopify-plus-b2b">Shopify Plus B2B</a> page for trade pricing and company accounts.</p>
               </li>
               <li className="svc-card">
                 <h3>Integrations</h3>

@@ -521,7 +521,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 11, 2026',
-  dateModified: 'Oct 11, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '24 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
@@ -554,7 +554,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-11',
-              dateModified: '2026-10-11',
+              dateModified: '2026-10-31',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'BigCommerce agencies and developers in the United States' },
@@ -925,7 +925,7 @@ export const post: BlogPost = {
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">3. Choose a theme or a headless storefront</summary>
-          <p className="mt-3 text-gray-700">A Stencil theme is quicker to launch and simpler to look after. A headless storefront on <a href={CATALYST_DOCS_URL} className={link} rel="noopener" target="_blank">Catalyst</a> gives full control of design and speed, and it needs developers to change it. Ask each firm which it recommends for you and why. Our page on <a href="/headless-commerce" className={link}>headless commerce</a> explains the trade-off.</p>
+          <p className="mt-3 text-gray-700">A Stencil theme is quicker to launch and simpler to look after. A headless storefront on <a href={CATALYST_DOCS_URL} className={link} rel="noopener" target="_blank">Catalyst</a> gives full control of design and speed, and it needs developers to change it. Ask each firm which it recommends for you and why. Our page on <a href="/headless-commerce" className={link}>headless commerce</a> explains the trade-off, and our guide to <a href="/blog/best-headless-commerce-agencies-nextjs-2026" className={link}>headless commerce agencies that build on Next.js</a> compares firms that build storefronts like these.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">4. Shortlist by buyer type, then check the directory</summary>

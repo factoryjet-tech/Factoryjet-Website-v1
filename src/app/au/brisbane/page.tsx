@@ -20,7 +20,7 @@ import '../au-city.css';
    720 · seo consultant / expert brisbane 590 · brisbane web designer 480 · web design
    agency brisbane 390 · local seo brisbane 390. Title and H1 intent kept from the
    previous version of this page. */
-const UPDATED = '2026-10-21';
+const UPDATED = '2026-10-31';
 const TITLE = 'Web Design & SEO Brisbane | Fast Sites | FactoryJet';
 const H1 = 'Web design and SEO for Brisbane businesses';
 const DESCRIPTION =
@@ -813,7 +813,8 @@ export default function BrisbanePage() {
                 <div className="fact"><div className="sec">§03</div><p>
                   For store builds, see our <a href="/au/ecommerce-development">ecommerce development service in Australia</a>.
                   If you are on or moving to Shopify, see <a href="/au/shopify-development">Shopify development for Australian businesses</a>;
-                  we are a registered Shopify Partner.
+                  we are a registered Shopify Partner. For WordPress stores, see{' '}
+                  <a href="/au/woocommerce">WooCommerce development in Australia</a>.
                 </p></div>
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"

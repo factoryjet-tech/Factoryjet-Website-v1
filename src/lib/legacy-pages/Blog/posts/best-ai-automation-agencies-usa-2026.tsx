@@ -489,7 +489,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-09',
-              dateModified: '2026-10-11',
+              dateModified: '2026-10-31',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI and workflow automation agencies in the United States' },
@@ -692,7 +692,7 @@ export const post: BlogPost = {
         <strong>How to read this.</strong> The low figures buy a few hours of an engineer or one scoped setup. The high figures buy a workflow that crosses several systems, with testing and handover. Epiphany Dynamics says on its pricing page that it does not publish a price list and quotes a fixed price after a free audit. E2M Solutions sells monthly plans. The other six firms show no price for their work on the pages we read.
       </p>
       <p className="mb-6">
-        Two costs sit outside most of these figures: the subscription for the automation tool, and AI usage paid to the model provider. For day rates and what consultants charge, read our <a href="/blog/ai-consultant-cost-2026" className={link}>AI consultant cost guide</a>. FactoryJet does not publish a rate card; we give a fixed quote in writing after a short scoping call.
+        Two costs sit outside most of these figures: the subscription for the automation tool, and AI usage paid to the model provider. For day rates and what consultants charge, read our <a href="/blog/ai-consultant-cost-2026" className={link}>AI consultant cost guide</a>. For the build side, see our breakdown of <a href="/blog/ai-automation-agency-cost-2026" className={link}>what an AI automation agency costs in 2026</a>. FactoryJet does not publish a rate card; we give a fixed quote in writing after a short scoping call.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">We want to add AI automation to our business. Which agency can help?</h2>

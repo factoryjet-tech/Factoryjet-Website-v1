@@ -12,7 +12,7 @@ import './shopify-seo.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/uk/shopify-seo';
-const UPDATED = '2026-10-21';
+const UPDATED = '2026-10-31';
 
 /* ─── Breadcrumb source of truth. ONE array feeds both the visible trail and the JSON-LD,
        so the two can never drift apart. Never hand-copy a second version of this. ─── */
@@ -1180,6 +1180,9 @@ export default function ShopifySeoPage() {
       </a></li>
       <li><a href="/uk/shopify-development" className="blog-card">
         <p><strong>Shopify development, UK.</strong> For building or rebuilding the store itself rather than tuning one that already exists. &#8594;</p>
+      </a></li>
+      <li><a href="/blog/best-ecommerce-seo-agencies-uk-2026" className="blog-card">
+        <p><strong>Best ecommerce SEO agencies in the UK (2026).</strong> Ten UK ecommerce SEO agencies checked side by side, for when you want to compare several agencies before choosing who works on your store. &#8594;</p>
       </a></li>
     </ul>
 

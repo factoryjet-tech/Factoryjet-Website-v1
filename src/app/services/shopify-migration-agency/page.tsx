@@ -13,7 +13,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-10-31';
 const CANONICAL = 'https://factoryjet.com/services/shopify-migration-agency';
 
 export const metadata: Metadata = {
@@ -470,7 +470,11 @@ export default function ShopifyMigrationPage() {
                   Over <strong>68% of enterprise replatforming projects</strong> face severe post-launch issues. Brands suffer sudden search traffic drops of 30% to 60%. Broken accounts force messy customer password resets. Missing order records paralyze customer support. Unplanned launch downtime costs hundreds of thousands in lost revenue.
                 </p>
                 <p>
-                  These failures stem from flawed migration engineering, not the destination platform. Many agencies rely on generic migration apps or unverified CSV exports. These tools truncate custom product metafields. They break parent-child variant links and fail to map complex URL hierarchies.
+                  These failures stem from flawed migration engineering, not the destination platform. Many agencies rely on generic migration apps or unverified CSV exports. These tools truncate custom product metafields. They break parent-child variant links and fail to map complex URL hierarchies. Before you shortlist a partner, you can{' '}
+                  <Link href="/blog/best-magento-to-shopify-plus-migration-agencies-2026" style={{ color: '#ffffff', textDecoration: 'underline', textUnderlineOffset: 3 }}>
+                    compare Magento to Shopify Plus migration agencies
+                  </Link>{' '}
+                  side by side.
                 </p>
               </div>
 

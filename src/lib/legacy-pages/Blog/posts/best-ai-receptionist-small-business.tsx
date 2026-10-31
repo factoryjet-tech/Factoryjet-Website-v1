@@ -40,7 +40,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 7, 2026',
-  dateModified: 'Oct 21, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '20 min read',
   imageUrl: '/blog-images/best-ai-receptionist-small-business.webp',
   imageAlt:
@@ -271,7 +271,7 @@ export const post: BlogPost = {
       <figure className="my-8"><img src="/images/blog/best-ai-receptionist-small-business/human-call-handoff.webp" alt="Two people talking at a desk with a headset and a closed laptop." width={1200} height={800} loading="lazy" decoding="async" className="w-full h-auto rounded-xl" /></figure>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Firms that build custom AI voice agents</h2>
-      <p className="mb-4">A build firm designs the agent around your calls and connects it to your systems. You hire it for a project, where the companies above sell a product or a platform. The five firms below describe custom voice agent work on their own sites. They are grouped by the buyer each site addresses and listed in no ranked order.</p>
+      <p className="mb-4">A build firm designs the agent around your calls and connects it to your systems. You hire it for a project, where the companies above sell a product or a platform. The five firms below describe custom voice agent work on their own sites. They are grouped by the buyer each site addresses and listed in no ranked order. More build firms are reviewed in our <a href="/blog/best-ai-voice-agent-development-companies-2026" className="text-orange-600 underline">AI voice agent development companies compared</a>.</p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">For large companies in banking, insurance, healthcare and contact centers</h3>
       <p className="mb-4"><strong>Intellectyx</strong> states that it &quot;builds enterprise AI voice agents for healthcare, finance, and call centres&quot;. Its service page lists voice agents for customer service, sales calls, lead qualification and surveys, with CRM, ERP and helpdesk integrations and a fallback to human agents. It names four sectors: retail and ecommerce, health care, contact centers, and banking and finance. See <a href="https://www.intellectyx.com/ai-voice-agent-development/" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">Intellectyx AI voice agent services</a>.</p>
@@ -298,7 +298,7 @@ export const post: BlogPost = {
       <table className={[styles.profileFacts, styles.orderedFacts].join(' ')}><tbody><tr><th scope="row"><strong>What is the published price at my call volume, in writing, including extra calls or minutes?</strong></th><td> The headline rate and the bill are often different numbers.</td></tr><tr><th scope="row"><strong>What happens when the AI cannot handle the call?</strong></th><td> Ask to hear the handoff to a person.</td></tr><tr><th scope="row"><strong>Which of my systems does it write into, and have you made that exact connection before?</strong></th><td> An agent that cannot write to your scheduler creates a second inbox.</td></tr><tr><th scope="row"><strong>How long do you keep call records, and will you sign a business associate agreement if I need one?</strong></th><td> Ask before you need it.</td></tr><tr><th scope="row"><strong>Can I hear a recording of it handling a call like mine?</strong></th><td> Two minutes of audio tells you more than a price table.</td></tr></tbody></table>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Related reading</h2>
-      <p className="mb-4">For the wider choice between AI and people on the phone, read our <a href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026" className="text-orange-600 underline">guide to AI voice agents versus human answering services</a>. For medical and dental practices, where patient privacy rules and practice software change the choice, see <a href="/blog/how-much-does-an-ai-medical-receptionist-cost-2026" className="text-orange-600 underline">what an AI medical receptionist costs</a>.</p>
+      <p className="mb-4">For the wider choice between AI and people on the phone, read our <a href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026" className="text-orange-600 underline">guide to AI voice agents versus human answering services</a>. For medical and dental practices, where patient privacy rules and practice software change the choice, see <a href="/blog/how-much-does-an-ai-medical-receptionist-cost-2026" className="text-orange-600 underline">what an AI medical receptionist costs</a>. For a business in Australia, see our <a href="/blog/best-ai-receptionists-australia-2026" className="text-orange-600 underline">Australian AI receptionist comparison</a>.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">How this list was made</h2>
       <p className="mb-4">Every price and company description on this page was read on that company&apos;s own site on 11 October 2026. Prices are quoted as published, in the vendor&apos;s own units. Where the pages we read carried no price, the entry carries none.</p>

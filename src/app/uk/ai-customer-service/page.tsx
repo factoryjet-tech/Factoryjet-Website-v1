@@ -8,7 +8,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-customer-service';
-const UPDATED = '2026-10-11';
+const UPDATED = '2026-10-31';
 const TITLE = 'AI Customer Service UK | Custom Support Agents | FactoryJet';
 const H1 = 'AI Customer Service UK: Agents That Answer, Act in Your Systems and Hand Over to Your Team';
 const DESCRIPTION =
@@ -732,7 +732,7 @@ export default function AiCustomerServiceUKPage() {
                 </div>
                 <ul className="scope-list mt-6" style={{ maxWidth: 600 }}>
                   <li><b>Helpdesks.</b> Zendesk, Intercom, Gorgias, Freshdesk and HubSpot each publish an API for tickets or conversations, so the agent drafts and replies inside the tool your team already uses.</li>
-                  <li><b>Shops.</b> Order, delivery and returns data from Shopify and WooCommerce.</li>
+                  <li><b>Shops.</b> Order, delivery and returns data from Shopify and WooCommerce. For agents that also handle store work beyond support, see{' '}<a href="/uk/ecommerce-ai-agents">ecommerce AI agents for UK online shops</a>.</li>
                   <li><b>Accounts.</b> Xero, for copy invoices, statements and payment questions from verified customers.</li>
                   <li><b>ERP.</b> Odoo, NetSuite, SAP Business One, ERPNext or a custom system, for stock, lead times and order status. FactoryJet has worked on all of them.</li>
                   <li><b>Channels.</b> Web chat and email first. WhatsApp and an AI voice agent for phone calls can share the same approved answers.</li>

@@ -8,7 +8,7 @@ import '../ai-agents/ai-agents.css';
 import { aiConsultingAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-consulting';
-const UPDATED = '2026-10-21';
+const UPDATED = '2026-10-31';
 const TITLE = 'AI Consultancy UK | Consultants Who Also Build | FactoryJet';
 const H1 = 'AI Consultancy UK: Strategy That Ends in a Working System, Not a Slide Deck';
 
@@ -281,7 +281,7 @@ export default function AiConsultingUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ projects delivered</span></div>
-                  <div className="upd">Last updated<br />10 October 2026</div>
+                  <div className="upd">Last updated<br />31 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -534,10 +534,12 @@ export default function AiConsultingUKPage() {
                     When the plan calls for a build, the work moves straight into our{' '}
                     <a href="/uk/ai-agents">UK AI agent development service</a>, with the same people. For more
                     depth on how we build agents, see our{' '}
-                    <a href="/services/ai-agent-development">AI agent development hub</a>. Wider AI builds, such as
-                    integrating AI into your CRM or ERP, run through our{' '}
-                    <a href="/uk/ai-development">UK AI development service</a>, and if the plan points at your phones,
-                    see our <a href="/uk/ai-receptionist">AI receptionist for UK businesses</a>.
+                    <a href="/services/ai-agent-development">AI agent development hub</a>. Wider AI builds run
+                    through our <a href="/uk/ai-development">UK AI development service</a>. If the job is connecting
+                    AI to the CRM or ERP you already run, see our{' '}
+                    <a href="/uk/ai-integration-services">AI integration services</a>, and if it is taking repeat
+                    admin off your team, see our <a href="/uk/ai-automation">UK AI automation service</a>. If the
+                    plan points at your phones, see our <a href="/uk/ai-receptionist">AI receptionist for UK businesses</a>.
                   </p>
                 </div>
               </div>

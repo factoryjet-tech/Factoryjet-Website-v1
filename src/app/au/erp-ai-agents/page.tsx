@@ -254,6 +254,8 @@ const WORK: { who: string; kind: string; what: string; href: string; cta: string
 /* ─── Internal links: live AU routes (checked on disk 2026-10-29) + US page ─── */
 const RELATED: { h: string; t: string; d: string }[] = [
   { h: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'One job in depth: supplier invoices read into Xero or MYOB, matched and sent for approval.' },
+  { h: '/au/accounts-receivable-automation', t: 'Accounts receivable automation', d: 'The other side of the books: customer invoices, payment matching and overdue follow-up.' },
+  { h: '/au/netsuite-ai-agents', t: 'NetSuite AI agents', d: 'NetSuite on its own page, starting with supplier bills and accounts payable inside NetSuite.' },
   { h: '/au/ai-agents', t: 'AI agents and automation', d: 'The broader page: agents for enquiries, CRMs, job systems and Microsoft 365.' },
   { h: '/au/ai-consulting', t: 'AI consulting', d: 'Not sure which job to start with? A readiness assessment ranks the options.' },
   { h: '/au/ecommerce-development', t: 'Ecommerce development', d: 'When the agent needs a store or a B2B portal to work with.' },
@@ -547,6 +549,11 @@ export default function ErpAiAgentsAUPage() {
                     <div>
                       <h3>{j.t}</h3>
                       <p>{j.d}</p>
+                      {i === 0 ? (
+                        <p className="au-note">
+                          See <a href="/au/sales-order-automation-ai-agents">sales order automation with AI agents</a> for this job in depth.
+                        </p>
+                      ) : null}
                       {i === 2 ? (
                         <p className="au-note">
                           See <a href="/au/accounts-payable-automation">accounts payable automation for Xero and MYOB</a>. Peppol background: <a href={SRC_EINVOICING} {...extLink}>business.gov.au, eInvoicing</a>.

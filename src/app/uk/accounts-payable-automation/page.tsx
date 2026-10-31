@@ -8,7 +8,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/accounts-payable-automation';
-const UPDATED = '2026-10-11';
+const UPDATED = '2026-10-31';
 const TITLE = 'Accounts Payable Automation UK | AI Invoice Agent | FactoryJet';
 const H1 = 'Accounts Payable Automation UK: Supplier Invoices Read, Checked, Matched and Routed for Approval';
 const DESCRIPTION =
@@ -953,7 +953,9 @@ export default function AccountsPayableAutomationUKPage() {
                 FactoryJet has delivered Xero integrations and has worked on NetSuite, Odoo, SAP Business One, ERPNext
                 and custom ERPs, on jobs that include daily bookkeeping and purchase and sales orders. If your stock
                 and orders sit in a store as well as a ledger, see our{' '}
-                <a href="/uk/shopify-xero-integration">Shopify and Xero integration service</a>.
+                <a href="/uk/shopify-xero-integration">Shopify and Xero integration service</a>. For agents
+                that work inside the ledger beyond supplier bills, see{' '}
+                <a href="/uk/erp-ai-agents">ERP AI agents in the UK</a>.
               </p>
             </div>
           </div>
@@ -1155,8 +1157,11 @@ export default function AccountsPayableAutomationUKPage() {
               Accounts payable is one job an agent can take on. For the wider picture, see our{' '}
               <a href="/uk/ai-agents">UK AI agent development service</a> and{' '}
               <a href="/uk/ai-development">AI development and integration</a>. If you are still deciding where AI
-              would pay off first, start with <a href="/uk/ai-consulting">AI consulting</a>. For the money coming
-              in, see <a href="/uk/accounts-receivable-automation">accounts receivable automation for UK firms</a>. For
+              would pay off first, start with <a href="/uk/ai-consulting">AI consulting</a>, or see how{' '}
+              <a href="/uk/ai-automation">AI automation for UK businesses</a> covers other back-office work. For the
+              money coming in, see <a href="/uk/accounts-receivable-automation">accounts receivable automation for UK firms</a>.
+              On the customer side, where orders arrive rather than supplier invoices, see{' '}
+              <a href="/uk/sales-order-automation-ai-agents">sales order automation AI agents</a>. For
               delivery notes, statements and other paperwork beyond invoices, see{' '}
               <a href="/uk/document-intake-ai-agents">document intake AI agents</a>. If your ledger is NetSuite or Odoo,
               see <a href="/uk/netsuite-ai-agents">NetSuite AI agents for UK companies</a> and{' '}

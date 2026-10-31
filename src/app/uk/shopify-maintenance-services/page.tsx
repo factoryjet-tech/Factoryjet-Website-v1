@@ -760,7 +760,8 @@ export default function ShopifyMaintenanceServicesUKPage() {
             <p style={{ maxWidth: 820 }}>
               Building or rebuilding rather than maintaining? See <a href="/uk/shopify-development">Shopify development in
               the UK</a>. For US stores, see our <a href="/services/shopify-maintenance-services">Shopify maintenance
-              services</a> page.
+              services</a> page. Running a site that is not on Shopify? See our{' '}
+              <a href="/uk/website-maintenance">website maintenance for WordPress, Magento and custom UK sites</a>.
             </p>
             <div className="flex-wrap mt-6">
               <a className="city-pill" href="/uk/shopify-development">Shopify development UK</a>

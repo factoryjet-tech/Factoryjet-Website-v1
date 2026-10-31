@@ -15,7 +15,7 @@ import './page.css';
 import { aiConsultingAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-consulting';
-const UPDATED = '2026-10-21';
+const UPDATED = '2026-10-31';
 /* 21 Oct 2026 (AU plan R3): Sydney and Melbourne promoted into the title and into their own H2s,
    for "ai consultant sydney" and "ai consulting melbourne" (110 AU searches a month each), instead of
    building separate city AI pages. */
@@ -274,6 +274,7 @@ const NEXT_STEPS: { href: string; t: string; d: string }[] = [
   { href: '/au/ai-integration-services', t: 'AI integration services in Australia', d: 'When the plan is to connect AI to the systems you already run, rather than replace them.' },
   { href: '/au/sales-order-automation-ai-agents', t: 'AI sales order automation', d: 'When trade buyers email purchase orders that staff retype into your ERP by hand.' },
   { href: '/au/accounts-receivable-automation', t: 'Accounts receivable automation', d: 'When overdue invoices and debtor follow-up take up hours in Xero or MYOB each week.' },
+  { href: '/au/crm-ai-agents', t: 'AI agents for your CRM', d: 'When leads, follow-ups and contact records in your CRM are kept up to date by hand.' },
 ];
 
 /* ─── JSON-LD ────────────────────────────────────────────────────── */
@@ -874,7 +875,7 @@ export default function AiConsultingAUPage() {
               <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Professional services</h3></div><p className="plat-build">Accounting practices, law firms, recruiters and agencies. Drafting, document review, client onboarding and time recording are common first use cases. Accounting firms that also need a better site can see our <a href="/au/accountant-website-design">accountant website design</a> page.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Trades and field services</h3></div><p className="plat-build">Builders, electricians, plumbers and maintenance firms. Quoting, job booking, after-hours calls and turning site notes into invoices in Xero or MYOB.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Wholesalers and distributors</h3></div><p className="plat-build">Order entry from emailed purchase orders, stock questions, supplier chasing and freight updates, often around an ERP nobody wants to replace.</p></div>
-              <div className="plat plat-2col plat-own" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Ecommerce brands</h3></div><p className="plat-build">Customer service, returns under the Australian Consumer Law, product data and marketplace listings. This is our home ground; see our <a href="/au">Australian services hub</a>.</p></div>
+              <div className="plat plat-2col plat-own" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Ecommerce brands</h3></div><p className="plat-build">Customer service, returns under the Australian Consumer Law, product data and marketplace listings. This is our home ground; see our <a href="/au">Australian services hub</a>. If you are not sure what to fix first in the store itself, start with an <a href="/au/ecommerce-consultant">ecommerce consultant review</a>.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">05</span><div className="plat-name"><h3>Property and real estate</h3></div><p className="plat-build">Agencies, strata managers and developers. Tenant and buyer enquiries, maintenance requests and document handling, with care over personal information. For the website side, see <a href="/au/real-estate-websites">real estate website design</a>.</p></div>
               <div className="plat plat-2col" role="listitem"><span className="capid">06</span><div className="plat-name"><h3>Clinics and allied health</h3></div><p className="plat-build">On the admin side only: bookings, referrals, letters and inbox triage. Health information is sensitive information under the Privacy Act, so the privacy work comes first. NDIS providers face the same care; their websites are covered on our <a href="/au/ndis-website-design">NDIS website design</a> page.</p></div>
             </div>

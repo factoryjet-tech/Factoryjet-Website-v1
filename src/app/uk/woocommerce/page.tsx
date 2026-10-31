@@ -8,7 +8,7 @@ import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/woocommerce';
-const UPDATED = '2026-10-10';
+const UPDATED = '2026-10-31';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -417,7 +417,9 @@ export default function WooCommerceUKPage() {
             <p className="mt-8" style={{ maxWidth: 820 }}>
               Need search visibility as well as a working store? Our <a href="/uk/ecommerce-seo">UK ecommerce SEO</a> service
               handles WooCommerce SEO, from product page structure to category content. For a full redesign rather than
-              development work, see our <a href="/uk/web-design">UK web design</a> service.
+              development work, see our <a href="/uk/web-design">UK web design</a> service. To have software agents
+              answer order questions or tidy product data in the store, see our{' '}
+              <a href="/uk/ecommerce-ai-agents">UK ecommerce AI agents</a> service.
             </p>
           </div>
         </section>
@@ -477,7 +479,7 @@ export default function WooCommerceUKPage() {
                   <p style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.12em', textTransform: 'uppercase', color: '#B23E13', marginBottom: 4 }}>Stock, ERP and marketing</p>
                   <ul className="int-group">
                     <li><b>Stock and inventory tools.</b> Linnworks, Brightpearl and similar tools kept in step across WooCommerce and marketplaces.</li>
-                    <li><b>ERP systems.</b> An ERP runs finance, stock and orders in one place. We connect WooCommerce so prices and stock come from it.</li>
+                    <li><b>ERP systems.</b> An ERP runs finance, stock and orders in one place. We connect WooCommerce so prices and stock come from it. Our <a href="/uk/ecommerce-erp-integration">UK ecommerce ERP integration</a> page covers how those syncs are built.</li>
                     <li><b>Email and payments.</b> Klaviyo events for email flows, plus setting up and debugging payment gateways such as Stripe and PayPal.</li>
                   </ul>
                 </div>

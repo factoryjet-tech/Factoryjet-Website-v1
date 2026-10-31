@@ -167,7 +167,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
                     height={48}
                     loading="lazy"
                     decoding="async"
-                    className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white shadow-[0_0_30px_-5px_rgba(240,90,40,0.3)]"
+                    className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white shadow-sm"
                   />
                   <div className="absolute bottom-0 right-0 w-2.5 h-2.5 md:w-3 md:h-3 bg-green-500 border-2 border-white rounded-full" aria-hidden="true"></div>
                 </div>
@@ -207,7 +207,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
 
               {/* Introduction/Excerpt */}
               {!post.hideExcerptOnPage && (
-                <p className="text-base md:text-xl lg:text-2xl text-gray-600 leading-relaxed mb-8 md:mb-10 font-serif italic border-l-4 border-jetOrange pl-4 md:pl-6 py-2 bg-gray-50/50 rounded-r-lg">
+                <p className="text-base md:text-xl lg:text-2xl text-gray-600 leading-relaxed mb-8 md:mb-10 font-fj-body border-l-4 border-jetOrange pl-4 md:pl-6 py-2 bg-gray-50/50 rounded-r-lg">
                   "{post.excerpt}"
                 </p>
               )}

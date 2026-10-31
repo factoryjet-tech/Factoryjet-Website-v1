@@ -8,7 +8,7 @@ import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/b2b-ecommerce';
-const UPDATED = '2026-09-24';
+const UPDATED = '2026-10-31';
 const TITLE = 'B2B Ecommerce Agency UK | Trade Portals & ERP | FactoryJet';
 const H1 = 'B2B Ecommerce Agency UK: Trade Portals Built Around Your Prices, Credit Terms and ERP';
 const DESCRIPTION =
@@ -495,9 +495,9 @@ export default function B2bEcommerceUKPage() {
               </table>
             </div>
             <ul className="col-3 mt-10">
-              <li className="svc-card"><h3>Leaning to Shopify Plus?</h3><p className="mt-4">Shopify Plus B2B is our most common recommendation for UK wholesalers who also sell DTC. See our <a href="/uk/shopify-development">Shopify development in the UK</a>.</p></li>
+              <li className="svc-card"><h3>Leaning to Shopify Plus?</h3><p className="mt-4">Shopify Plus B2B is our most common recommendation for UK wholesalers who also sell DTC. See our <a href="/uk/shopify-development">Shopify development in the UK</a>, or <a href="/uk/shopify-ai-agents">Shopify AI agents for UK stores</a> for trade POs and stock checks.</p></li>
               <li className="svc-card"><h3>Leaning to Magento?</h3><p className="mt-4">The native B2B module comes with Adobe Commerce, not Magento Open Source. For complex trade rules, see our <a href="/uk/magento">Magento and Adobe Commerce agency in the UK</a>.</p></li>
-              <li className="svc-card"><h3>Thinking headless?</h3><p className="mt-4">Headless means a custom front end on top of any of these platforms. It suits multi-brand or configurator-heavy businesses. For everyone else, it is extra cost you can skip.</p></li>
+              <li className="svc-card"><h3>Thinking headless?</h3><p className="mt-4">Headless means a custom front end on top of any of these platforms. It suits multi-brand or configurator-heavy businesses. For everyone else, it is extra cost you can skip. On Shopify, see our <a href="/uk/headless-shopify-development">headless Shopify development in the UK</a>.</p></li>
             </ul>
           </div>
         </section>
@@ -582,7 +582,7 @@ export default function B2bEcommerceUKPage() {
               </p>
             </div>
             <ul className="col-3 mt-12">
-              <li className="card"><h3>Start with the regulars</h3><p className="mt-4">Your top repeat buyers get invites first, with their past orders already loaded so their usual order is one click away. Early wins build the habit.</p></li>
+              <li className="card"><h3>Start with the regulars</h3><p className="mt-4">Your top repeat buyers get invites first, with their past orders already loaded so their usual order is one click away. Early wins build the habit. For AI that drafts trade quotes and answers order questions, see our <a href="/uk/ecommerce-ai-agents">ecommerce AI agents for UK retailers</a>.</p></li>
               <li className="card"><h3>Keep the phone open</h3><p className="mt-4">Nobody is forced online. Your sales team places phone orders through the same portal, so every order lands in one place and customers see it in their history.</p></li>
               <li className="card"><h3>Turn emailed POs into orders</h3><p className="mt-4">For customers who only send PDF purchase orders, we can add AI that reads the PO and drafts the order for your team to check. See our <a href="/uk/ai-agents">UK AI agent development</a>, or the dedicated <a href="/uk/sales-order-automation-ai-agents">sales order automation for UK trade suppliers</a>.</p></li>
               <li className="card"><h3>Move your old website safely</h3><p className="mt-4">If you already have a website, we migrate products, customers and order history, and set up redirects so your search rankings carry over.</p></li>

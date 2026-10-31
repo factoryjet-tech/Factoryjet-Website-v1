@@ -7,8 +7,8 @@ import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import './ecommerce-development.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-development';
-const UPDATED = '2026-10-10';
-const UPDATED_LABEL = '10 October 2026';
+const UPDATED = '2026-10-31';
+const UPDATED_LABEL = '31 October 2026';
 
 const TITLE = 'Ecommerce Agency UK: Ecommerce Website Design | FactoryJet';
 const DESCRIPTION =
@@ -134,7 +134,7 @@ const PLATFORMS: { name: string; href: string; fit: string; catalogue: string; b
   { name: 'Shopify Plus', href: '/uk/shopify-plus', fit: 'High-volume and multi-store brands', catalogue: 'Large', b2b: 'Built-in B2B features', runs: 'Shopify hosts and patches it', watch: 'Only worth it once standard plans limit you' },
   { name: 'WooCommerce', href: '/uk/woocommerce', fit: 'Content-heavy brands on WordPress', catalogue: 'Small to medium', b2b: 'Via plugins', runs: 'You, or us, on your hosting', watch: 'Needs real speed and security upkeep' },
   { name: 'Magento (Adobe Commerce)', href: '/uk/magento', fit: 'Complex, multi-store and B2B catalogues', catalogue: 'Large to very large', b2b: 'Strong, especially Adobe Commerce', runs: 'You, or us, on your hosting', watch: 'Needs specialist developers and upkeep' },
-  { name: 'Custom or headless', href: '', fit: 'Unusual logic, many channels, top speed', catalogue: 'Any', b2b: 'Built exactly to your rules', runs: 'You, or us, on your hosting', watch: 'Most engineering, so only when needed' },
+  { name: 'Custom or headless', href: '/uk/headless-shopify-development', fit: 'Unusual logic, many channels, top speed', catalogue: 'Any', b2b: 'Built exactly to your rules', runs: 'You, or us, on your hosting', watch: 'Most engineering, so only when needed' },
 ];
 
 /* ─── Typical timelines (our own project ranges, not promises) ──────── */
@@ -890,7 +890,7 @@ export default function EcommerceDevelopmentUKPage() {
             <ul className="col-2 mt-12">
               <li className="svc-card">
                 <h3>DTC and consumer brands</h3>
-                <p className="mt-4">Brands selling direct to consumers who need a fast, trustworthy store and a checkout that does not leak sales. We build for conversion first, brand second, because a beautiful store that does not sell is not doing its job.</p>
+                <p className="mt-4">Brands selling direct to consumers who need a fast, trustworthy store and a checkout that does not leak sales. We build for conversion first, brand second, because a beautiful store that does not sell is not doing its job. If your current store already takes orders but loses them, start with an <a href="/uk/ecommerce-redesign" style={linkStyle}>ecommerce website redesign</a>.</p>
               </li>
               <li className="svc-card">
                 <h3>B2B and wholesale brands</h3>
@@ -902,7 +902,7 @@ export default function EcommerceDevelopmentUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Scaling multi-channel retailers</h3>
-                <p className="mt-4">Brands selling across their own site, Amazon, and marketplaces like TikTok Shop, who need a store and stock system that stays in sync everywhere they sell. See our <a href="/uk/amazon-agency" style={linkStyle}>Amazon agency for UK sellers</a>.</p>
+                <p className="mt-4">Brands selling across their own site, Amazon, and marketplaces like TikTok Shop, who need a store and stock system that stays in sync everywhere they sell. See our <a href="/uk/amazon-agency" style={linkStyle}>Amazon agency for UK sellers</a>, and our <a href="/uk/ecommerce-ai-agents" style={linkStyle}>ecommerce AI agents for UK retailers</a> for Amazon.co.uk and eBay listings, stock and order questions.</p>
               </li>
             </ul>
           </div>

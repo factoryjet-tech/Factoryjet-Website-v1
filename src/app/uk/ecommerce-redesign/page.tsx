@@ -724,6 +724,8 @@ export default function EcommerceRedesignUKPage() {
               <a className="city-pill" href="/uk/shopify-plus">Shopify Plus UK</a>
               <a className="city-pill" href="/uk/ecommerce-audit">Free ecommerce audit UK</a>
               <a className="city-pill" href="/blog/website-redesign-cost-uk-2026-complete-pricing-guide">UK website redesign cost guide</a>
+              <a className="city-pill" href="/services/website-redesign">Website redesign in the US</a>
+              <a className="city-pill" href="/au/ecommerce-redesign">Ecommerce redesign in Australia</a>
               <a className="city-pill" href="/uk">FactoryJet UK</a>
             </div>
           </div>

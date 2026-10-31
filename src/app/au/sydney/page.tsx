@@ -25,7 +25,7 @@ import '../au-city.css';
    fetched 2026-09-24: website design sydney 2,400 · web design sydney 1,000 · sydney web designer 880.
 
    Every third-party fact on this page was read on its owner’s page on 2026-10-11. */
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
 const TITLE = 'Ecommerce Website Development & Web Design Sydney | FactoryJet';
 const H1 = 'Ecommerce website development and web design in Sydney';
 const DESCRIPTION =
@@ -448,7 +448,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'For most small and mid-sized stores, yes. Shopify describes itself as one place to sell online and in person, with payments and fulfilment run from one place. It stops fitting when pricing, quoting or ordering rules are unusual enough that apps pile up to work around the platform. If three or more apps exist only to bend the checkout, compare a custom build.' },
   { category: 'platforms', question: 'Who is Shopify’s biggest competitor?',
     answer: 'It depends on the store. For a business already on WordPress it is WooCommerce, which is open source and built on WordPress. For large catalogues and complex B2B rules it is Adobe Commerce, which many people still call Magento. Sydney search data puts the three close together: about 90 monthly searches for a WooCommerce developer, 50 for Shopify developers and 40 for a Magento developer.',
-    links: [{ href: '/blog/best-ecommerce-platform-australia-2026', label: 'Best ecommerce platform in Australia guide' }] },
+    links: [{ href: '/au/woocommerce', label: 'WooCommerce development for Australian stores' }, { href: '/blog/best-ecommerce-platform-australia-2026', label: 'Best ecommerce platform in Australia guide' }] },
   { category: 'platforms', question: 'Do people still use Magento?',
     answer: 'Yes. Adobe released Adobe Commerce 2.4.9 on 12 May 2026, and about 40 searches a month in Sydney are for a Magento developer. Rival Ecommerce, One Click Media and Convert Digital all advertise Magento or Adobe Commerce work for Sydney stores. It suits large catalogues, several stores on one back end and complex B2B rules. For a small store it is usually more platform than the job needs.' },
   { category: 'platforms', question: 'Is Magento end of life?',

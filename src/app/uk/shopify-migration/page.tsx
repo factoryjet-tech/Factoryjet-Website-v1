@@ -9,7 +9,7 @@ import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/shopify-migration';
-const UPDATED = '2026-10-11';
+const UPDATED = '2026-10-31';
 const TITLE = 'Shopify Migration Service UK: Magento, WooCommerce | FactoryJet';
 const DESCRIPTION =
   'Shopify migration for UK stores on Magento, WooCommerce, BigCommerce or a custom cart. Sourced UK price ranges, redirect limits and what will not carry over.';
@@ -808,7 +808,9 @@ export default function ShopifyMigrationUKPage() {
                 </ul>
                 <p className="mt-6" style={{ fontSize: 13 }}>
                   Trade buyers follow a separate path. Shopify’s launch checklist says a B2B customer assigned
-                  to a company can be sent an invitation email to start placing orders.
+                  to a company can be sent an invitation email to start placing orders. Our{' '}
+                  <a href="/uk/shopify-plus-b2b">UK Shopify Plus B2B</a> page covers setting up trade accounts
+                  on Shopify in more depth.
                 </p>
               </div>
             </div>
@@ -1004,9 +1006,9 @@ export default function ShopifyMigrationUKPage() {
                   <li><b>A free migration review.</b> A short look at your platform, catalogue, address patterns and connected systems, ending in a written list of what is simple and what is hard.</li>
                   <li><b>A fixed price in writing.</b> Quoted after a short scoping call, before any work starts.</li>
                   <li><b>Working software before you sign.</b> We show working software on your own data before a contract.</li>
-                  <li><b>A build measured in weeks.</b> A store build that includes a migration takes 5 to 8 weeks. Headless or custom builds take 8 to 14 weeks.</li>
+                  <li><b>A build measured in weeks.</b> A store build that includes a migration takes 5 to 8 weeks. <a href="/uk/headless-shopify-development">Headless Shopify builds</a> or custom builds take 8 to 14 weeks.</li>
                   <li><b>Ownership.</b> You own the store, the theme code and every login.</li>
-                  <li><b>Support after launch.</b> We stay on, with the build and the ongoing support both quoted as fixed prices in writing.</li>
+                  <li><b>Support after launch.</b> We stay on, with the build and the ongoing{' '}<a href="/uk/shopify-maintenance-services">Shopify maintenance and support</a>{' '}both quoted as fixed prices in writing.</li>
                 </ul>
 
                 <div className="mt-8">

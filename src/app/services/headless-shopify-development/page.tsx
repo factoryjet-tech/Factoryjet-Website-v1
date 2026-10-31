@@ -15,7 +15,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-10-10';
+const PAGE_MODIFIED = '2026-10-31';
 const CANONICAL = 'https://factoryjet.com/services/headless-shopify-development';
 
 export const metadata: Metadata = {
@@ -588,7 +588,8 @@ export default function HeadlessShopifyPage() {
                 An objective architectural comparison across performance, development velocity, marketing flexibility, and total cost of ownership. For the longer versions, read{' '}
                 <Link href="/comparisons/shopify-plus-vs-custom-headless-nextjs" style={{ textDecoration: 'underline' }}>Shopify Plus vs a custom Next.js storefront</Link>{' '}
                 and{' '}
-                <Link href="/comparisons/headless-commerce-vs-monolithic" style={{ textDecoration: 'underline' }}>headless vs monolithic commerce</Link>.
+                <Link href="/comparisons/headless-commerce-vs-monolithic" style={{ textDecoration: 'underline' }}>headless vs monolithic commerce</Link>. If you are shortlisting vendors, see our roundup of{' '}
+                <Link href="/blog/best-headless-commerce-agencies-nextjs-2026" style={{ textDecoration: 'underline' }}>headless commerce agencies that build on Next.js</Link>.
               </p>
             </div>
 

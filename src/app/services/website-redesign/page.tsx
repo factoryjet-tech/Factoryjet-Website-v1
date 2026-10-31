@@ -78,7 +78,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_MODIFIED = '2026-10-31';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -999,6 +999,12 @@ export default function WebsiteRedesignPage() {
               </a>
               <a href="/replatforming/squarespace-to-shopify" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
                 <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Outgrowing Squarespace Commerce? The Squarespace to Shopify migration steps</p>
+              </a>
+              <a href="/uk/ecommerce-redesign" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Selling in the UK? Ecommerce redesign for UK online stores</p>
+              </a>
+              <a href="/au/ecommerce-redesign" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Selling in Australia? Ecommerce redesign for Australian online stores</p>
               </a>
             </div>
           </div>

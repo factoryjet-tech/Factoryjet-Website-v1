@@ -17,7 +17,7 @@ import '@/components/v2/PlatformPage.css';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 // datePublished keeps the value it already had. Only the modified date moves.
 const PAGE_PUBLISHED = '2026-10-05';
-const PAGE_MODIFIED = '2026-10-11';
+const PAGE_MODIFIED = '2026-10-31';
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-agent-monitoring';
 const PAGE_TITLE = 'AI Agent Monitoring, Support & Maintenance | FactoryJet';
 const PAGE_DESCRIPTION =
@@ -875,7 +875,11 @@ export default function AiAgentMonitoringPage() {
                   <SourceLink href={SRC_ANTHROPIC_DEPRECATIONS}>Anthropic&apos;s model deprecations page</SourceLink>, checked September 17, 2026. None is a bug in your agent, yet each one breaks agents nobody is watching.
                 </p>
                 <p className="mt-4 text-base text-[#46403B] leading-relaxed">
-                  What we do: log every model ID and API version your agent uses with its retirement date, then test and switch well before each deadline.
+                  What we do: log every model ID and API version your agent uses with its retirement date, then test and switch well before each deadline. If your agent runs on Claude, our{' '}
+                  <Link href="/services/claude-ai-agent-development" className={LINK_CLASS}>
+                    Claude AI agent development
+                  </Link>{' '}
+                  service covers new builds on Anthropic&apos;s models.
                 </p>
               </div>
 

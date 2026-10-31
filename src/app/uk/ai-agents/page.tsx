@@ -7,7 +7,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import './ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-agents';
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -553,7 +553,7 @@ export default function AiAgentsUKPage() {
               </li>
               <li className="svc-card">
                 <h3>AI integration services</h3>
-                <p className="mt-4">Connecting AI to the systems UK teams already run, for example HubSpot, Salesforce, Microsoft Dynamics 365, Xero, Sage, Zendesk, Shopify, Microsoft 365, and Google Workspace, so the agent reads and writes real records instead of living in a separate chat window.</p>
+                <p className="mt-4">Connecting AI to the systems UK teams already run, for example HubSpot, Salesforce, Microsoft Dynamics 365, Xero, Sage, Zendesk, Shopify, Microsoft 365, and Google Workspace, so the agent reads and writes real records instead of living in a separate chat window. See <a href="/uk/ai-integration-services" style={{ textDecoration: 'underline' }}>AI integration services for UK businesses</a>.</p>
               </li>
               <li className="svc-card">
                 <h3>AI receptionists and phone agents</h3>
@@ -565,7 +565,7 @@ export default function AiAgentsUKPage() {
               </li>
               <li className="svc-card">
                 <h3>Internal knowledge and operations agents</h3>
-                <p className="mt-4">Agents your own staff talk to: answering process questions from your handbook, preparing reports, matching invoices, or chasing suppliers. Less glamorous than a chatbot, and often the biggest time saving. For supplier invoices, see <a href="/uk/accounts-payable-automation" style={{ textDecoration: 'underline' }}>accounts payable automation for UK finance teams</a>.</p>
+                <p className="mt-4">Agents your own staff talk to: answering process questions from your handbook, preparing reports, matching invoices, or chasing suppliers. Less glamorous than a chatbot, and often the biggest time saving. For supplier invoices, see <a href="/uk/accounts-payable-automation" style={{ textDecoration: 'underline' }}>accounts payable automation for UK finance teams</a>. For purchase orders that arrive by email, see <a href="/uk/sales-order-automation-ai-agents" style={{ textDecoration: 'underline' }}>sales order automation AI agents</a>.</p>
               </li>
             </ul>
             <p className="mt-8" style={{ maxWidth: 760 }}>
@@ -727,7 +727,7 @@ export default function AiAgentsUKPage() {
             <ul className="col-3 mt-12">
               <li className="svc-card">
                 <h3>Ecommerce and DTC brands</h3>
-                <p className="mt-4">Order status, returns, and stock questions that eat up your support inbox. We build agents that answer them directly, and can work alongside your <a href="/uk/ecommerce-seo">ecommerce SEO</a> if visibility is also part of the goal.</p>
+                <p className="mt-4">Order status, returns, and stock questions that eat up your support inbox. We build agents that answer them directly, and can work alongside your <a href="/uk/ecommerce-seo">ecommerce SEO</a> if visibility is also part of the goal. For Shopify stores, see <a href="/uk/shopify-ai-agents" style={{ textDecoration: 'underline' }}>Shopify AI agents for UK brands</a>.</p>
               </li>
               <li className="svc-card">
                 <h3>Professional services and B2B</h3>
@@ -833,6 +833,7 @@ export default function AiAgentsUKPage() {
                   <a className="city-pill" href="/uk/leeds">AI Agents Leeds</a>
                   <a className="city-pill" href="/uk/ai-seo">AI SEO</a>
                   <a className="city-pill" href="/uk/erp-ai-agents">ERP AI agents UK</a>
+                  <a className="city-pill" href="/uk/netsuite-ai-agents">NetSuite AI agents UK</a>
                   <a className="city-pill" href="/uk/crm-ai-agents">CRM AI agents for HubSpot and Salesforce</a>
                   <a className="city-pill" href="/uk/ecommerce-ai-agents">Ecommerce AI agents UK</a>
                   <a className="city-pill" href="/uk/document-intake-ai-agents">Document intake AI agents UK</a>

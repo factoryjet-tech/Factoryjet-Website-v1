@@ -56,7 +56,7 @@ const PAGE_TITLE = 'Shopify QuickBooks Integration Services | FactoryJet';
 const PAGE_DESC =
   'Shopify QuickBooks integration for Online, Desktop and Enterprise. Keep items, stock and prices in step, with orders, fees and payouts in your books.';
 const PAGE_PUBLISHED = '2026-10-08';
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_MODIFIED = '2026-10-31';
 const CHECKED_ON = '8 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -735,6 +735,7 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/ai-integration-services', t: 'AI integration services', b: 'When the next system to connect is an AI agent.' },
   { href: '/services/erp-ai-agents', t: 'ERP AI agents', b: 'Agents that draft quotes, orders and bookkeeping batches inside your ERP.' },
   { href: '/services/accounts-payable-automation', t: 'Accounts payable automation for QuickBooks', b: 'An agent that reads, matches, codes and routes vendor invoices on your own books.' },
+  { href: '/services/accounts-receivable-automation', t: 'Accounts receivable automation', b: 'An agent for payment reminders, cash application and disputes on unpaid wholesale invoices in QuickBooks.' },
   { href: '/services/ecommerce-erp-integration', t: 'Ecommerce ERP integration', b: 'The same link for NetSuite, Odoo, SAP Business One and ERPNext, on Shopify and other store platforms.' },
   { href: '/services/shopify-edi-integration', t: 'Shopify EDI integration', b: 'Purchase orders from retailers brought into Shopify as orders.' },
   { href: '/uk/shopify-xero-integration', t: 'Shopify Xero integration for UK sellers', b: 'The same job for UK stores that keep their books in Xero.' },

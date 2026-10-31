@@ -1064,7 +1064,9 @@ export default function DocumentIntakeAiAgentsUKPage() {
               <a href="/uk/shopify-xero-integration" style={inlineLink}>Shopify Xero integration</a>. For trade
               ordering portals, see <a href="/uk/b2b-ecommerce" style={inlineLink}>B2B ecommerce in the UK</a>.
               The US version of this service is at{' '}
-              <a href="/services/document-intake-ai-agents" style={inlineLink}>document intake AI agents</a>.
+              <a href="/services/document-intake-ai-agents" style={inlineLink}>document intake AI agents</a>, and
+              the Australian version is at{' '}
+              <a href="/au/document-intake-ai-agents" style={inlineLink}>document intake AI agents in Australia</a>.
             </p>
           </div>
         </section>

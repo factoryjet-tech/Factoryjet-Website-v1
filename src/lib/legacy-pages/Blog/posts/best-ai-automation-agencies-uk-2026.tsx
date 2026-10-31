@@ -439,7 +439,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-GB',
               datePublished: '2026-10-11',
-              dateModified: '2026-10-11',
+              dateModified: '2026-10-31',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI automation agencies in the United Kingdom' },
@@ -679,7 +679,7 @@ export const post: BlogPost = {
         <strong>How to read this.</strong> The small figures buy one workflow between two or three tools. The larger ones buy a discovery phase, a proof of concept on your own data or a system in production. Only two of the eight pages say where VAT stands: Antek Automation quotes prices excluding VAT, and OpScaling adds VAT to its hourly rate. GOV.UK gives the <a href="https://www.gov.uk/vat-rates" className="text-[#B23E13] underline" rel="noopener" target="_blank">standard VAT rate as 20%</a>, so ask the other six before you compare totals.
       </p>
       <p className="mb-6">
-        For sourced market ranges covering agents, chatbots, receptionists and consulting day rates, read our <a href="/blog/ai-cost-uk-2026" className="text-[#B23E13] underline">AI cost guide for the UK (2026)</a>. FactoryJet does not publish a rate card. We quote the build, and any support you choose, as fixed prices in writing after a short scoping call.
+        For sourced market ranges covering agents, chatbots, receptionists and consulting day rates, read our <a href="/blog/ai-cost-uk-2026" className="text-[#B23E13] underline">AI cost guide for the UK (2026)</a>. For project and retainer ranges by company size and job, see our <a href="/blog/ai-automation-agency-cost-2026" className="text-[#B23E13] underline">AI automation agency cost guide</a>. FactoryJet does not publish a rate card. We quote the build, and any support you choose, as fixed prices in writing after a short scoping call.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Which kind of UK automation firm fits your business?</h2>

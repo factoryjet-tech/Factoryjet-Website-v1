@@ -79,7 +79,7 @@ const PAGE_TITLE = 'Odoo AI Agent Development for Odoo 19 and 20 | FactoryJet';
 const PAGE_DESC =
   'We design, build and support AI agents inside Odoo 19 and Odoo 20. They draft quotations, sales orders, purchase orders and bills for a person to approve.';
 const PAGE_PUBLISHED = '2026-10-09';
-const PAGE_MODIFIED = '2026-10-11';
+const PAGE_MODIFIED = '2026-10-31';
 const CHECKED_ON = '9 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -1485,7 +1485,14 @@ export default function OdooAiAgentsPage() {
 </div>
             <p className="mt-6 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
               These are the jobs we are asked for most. The same pattern fits others: read what arrives, look up Odoo,
-              draft, confirm. If your books sit in QuickBooks, see{' '}
+              draft, confirm. For chasing customer invoices and matching the payments that come in, see{' '}
+              <Link
+                href="/services/accounts-receivable-automation"
+                className="font-semibold text-fj-ink underline underline-offset-4"
+              >
+                accounts receivable automation
+              </Link>
+              . If your books sit in QuickBooks, see{' '}
               <Link
                 href="/services/shopify-quickbooks-integration"
                 className="font-semibold text-fj-ink underline underline-offset-4"

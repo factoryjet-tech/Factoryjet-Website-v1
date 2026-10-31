@@ -19,7 +19,7 @@ import '../au-city.css';
    1,000 · melbourne web designer 720 · web design company / agency melbourne 590.
    Title and H1 intent kept from the previous version of this page (it already carries
    "web design" + "SEO consultant" + "Melbourne"). */
-const UPDATED = '2026-10-29';
+const UPDATED = '2026-10-31';
 
 /* Ecommerce FAQs added 2026-10-29 (P14) with the "Ecommerce website development in
    Melbourne" section. They are appended to the faqData.ts array here, and the result
@@ -877,7 +877,8 @@ export default function MelbournePage() {
                 <div className="fact"><div className="sec">§03</div><p>
                   For store builds, see our <a href="/au/ecommerce-development">ecommerce development service in Australia</a>.
                   If you are on or moving to Shopify, see <a href="/au/shopify-development">Shopify development for Australian businesses</a>;
-                  we are a registered Shopify Partner.
+                  we are a registered Shopify Partner. If you want to stay on WooCommerce, see{' '}
+                  <a href="/au/woocommerce">WooCommerce development in Australia</a>.
                 </p></div>
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"

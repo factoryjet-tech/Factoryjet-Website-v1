@@ -81,7 +81,7 @@ const PAGE_TITLE = 'NetSuite AI Agents, AI Connector and MCP | FactoryJet';
 const PAGE_DESC =
   'We design, build and support AI agents inside Oracle NetSuite. What the free AI Connector Service and MCP tools do, and when a custom agent is the right call.';
 const PAGE_PUBLISHED = '2026-10-09';
-const PAGE_MODIFIED = '2026-10-11';
+const PAGE_MODIFIED = '2026-10-31';
 const CHECKED_ON = '9 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -1154,6 +1154,9 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/erp-ai-agents', t: 'AI agents for ERP systems', b: 'The overview: Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs on one page.' },
   { href: '/services/odoo-ai-agents', t: 'Odoo AI agents', b: 'The same work inside Odoo.' },
   { href: '/services/sales-order-automation-ai-agents', t: 'Sales order automation for NetSuite', b: 'Emailed, PDF and EDI purchase orders turned into draft sales orders for approval.' },
+  { href: '/services/accounts-receivable-automation', t: 'Accounts receivable automation', b: 'Customer invoices, payment matching and reminders handled by an agent, with people approving.' },
+  { href: '/services/claude-ai-agent-development', t: 'Claude AI agent development', b: 'Custom agents built on Claude, for jobs the NetSuite connector alone does not cover.' },
+  { href: '/uk/netsuite-ai-agents', t: 'NetSuite AI agents in the UK', b: 'The same NetSuite work, written for UK businesses.' },
   { href: '/services/ai-agent-development', t: 'AI agent development', b: 'Custom agents for support, sales and operations, beyond NetSuite.' },
   { href: '/services/ai-agent-monitoring', t: 'AI agent monitoring and support', b: 'Watching, re-testing and fixing an agent after launch.' },
   { href: '/blog/ai-agents-erp-netsuite-odoo-sap-business-one-2026', t: 'Guide: AI agents inside your ERP', b: 'The longer read on NetSuite, Odoo and SAP Business One.' },

@@ -933,7 +933,9 @@ export default function AiAutomationUKPage() {
                 Deciding where AI fits before you build? See{' '}
                 <a href="/uk/ai-consulting" style={inlineLink}>AI consulting in the UK</a>. Selling to trade buyers
                 online? See <a href="/uk/b2b-ecommerce" style={inlineLink}>B2B ecommerce</a>. Need agent steps that
-                judge rather than follow rules? See <a href="/uk/ai-agents" style={inlineLink}>AI agents</a>. Buying
+                judge rather than follow rules? See <a href="/uk/ai-agents" style={inlineLink}>AI agents</a>. Adding an AI
+                model to software you already run? See{' '}
+                <a href="/uk/ai-integration-services" style={inlineLink}>AI integration services</a>. Buying
                 for a US entity as well? See our{' '}
                 <a href="/services/ai-automation" style={inlineLink}>AI automation page for the US</a>.
               </p>

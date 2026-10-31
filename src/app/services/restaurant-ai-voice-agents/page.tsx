@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/restaurant-ai-voice-agent
 const PAGE_TITLE = 'Restaurant AI Voice Agents & Phone Ordering | FactoryJet';
 const PAGE_DESC =
   'Custom 24/7 AI voice phone ordering for US restaurants, pizzerias & franchises. Direct Toast, Square & Clover POS order injection. Zero missed calls. Get audit.';
-const PAGE_MODIFIED = '2026-10-11';
+const PAGE_MODIFIED = '2026-10-31';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -1113,7 +1113,11 @@ export default function RestaurantAiVoiceAgentsPage() {
                   <Link href="/services/ai-agent-development" className="underline hover:text-[#F05A28]">
                     AI agent development
                   </Link>{' '}
-                  work to see the other industries we build for. Need your restaurant&rsquo;s website redone too? See our{' '}
+                  work to see the other industries we build for. Still choosing a builder? Read our{' '}
+                  <Link href="/blog/best-ai-voice-agent-development-companies-2026" className="underline hover:text-[#F05A28]">
+                    AI voice agent development companies compared
+                  </Link>{' '}
+                  guide. Need your restaurant&rsquo;s website redone too? See our{' '}
                   <Link href="/services/restaurant-website-design" className="underline hover:text-[#F05A28]">
                     restaurant website design
                   </Link>{' '}

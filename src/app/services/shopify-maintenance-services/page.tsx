@@ -15,7 +15,7 @@ import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_URL = 'https://factoryjet.com/services/shopify-maintenance-services';
-const PAGE_MODIFIED = '2026-09-17';
+const PAGE_MODIFIED = '2026-10-31';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const PAGE_TITLE = 'Shopify Maintenance Services & Retainers | FactoryJet';
 const PAGE_DESCRIPTION =
@@ -1486,8 +1486,9 @@ export default function ShopifyMaintenanceServicesPage() {
                   <InLink href="/services/shopify-theme-development">Shopify theme development</InLink>,{' '}
                   <InLink href="/services/shopify-plus-agency">Shopify Plus agency</InLink>,{' '}
                   <InLink href="/services/shopify-plus-b2b">Shopify Plus B2B</InLink>,{' '}
-                  <InLink href="/replatforming/magento-to-shopify">Magento to Shopify</InLink> and{' '}
-                  <InLink href="/commerceflo">Commerceflo</InLink>.
+                  <InLink href="/replatforming/magento-to-shopify">Magento to Shopify</InLink>,{' '}
+                  <InLink href="/commerceflo">Commerceflo</InLink> and{' '}
+                  <InLink href="/uk/shopify-maintenance-services">Shopify maintenance services in the UK</InLink>.
                 </p>
               </div>
               <div style={{ ...CARD_STYLE, padding: '26px' }}>

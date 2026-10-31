@@ -158,7 +158,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 17, 2026',
-  dateModified: 'Oct 17, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '15 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
@@ -425,7 +425,8 @@ export const post: BlogPost = {
         quotes a fixed price in writing after a short scoping call, and the demo on your own data comes before you sign.
         For build costs in more detail, read our guide to{' '}
         <a href="/blog/what-is-an-ai-agent-cost-2026">what an AI agent costs</a>. Once the proof of concept passes, see{' '}
-        <a href="/blog/ai-mvp-development-cost-2026">what an AI MVP costs</a> to build in 2026.
+        <a href="/blog/ai-mvp-development-cost-2026">what an AI MVP costs</a> to build in 2026, and our guide to{' '}
+        <a href="/blog/how-long-to-implement-an-ai-agent-2026">how long an AI agent takes to implement</a>.
       </p>
 
       <h2 id="what-else-ranks">What else ranks for &quot;ai proof of concept&quot;, and how this guide differs</h2>

@@ -58,7 +58,7 @@ const PAGE_TITLE = 'Ecommerce ERP Integration Services | FactoryJet';
 const PAGE_DESC =
   'Ecommerce ERP integration for Shopify, BigCommerce, WooCommerce and Adobe Commerce stores on QuickBooks, NetSuite, Odoo, SAP Business One or ERPNext.';
 const PAGE_PUBLISHED = '2026-10-11';
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_MODIFIED = '2026-10-31';
 const CHECKED_ON = '11 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -1472,14 +1472,31 @@ export default function EcommerceErpIntegrationPage() {
                   >
                     ecommerce for manufacturers
                   </Link>{' '}
-                  covers stores for companies that make what they sell. Running SuiteCommerce on NetSuite today? See{' '}
+                  covers stores for companies that make what they sell. If your buyers order from their own
+                  procurement system, our{' '}
+                  <Link
+                    href="/b2b-ecommerce/punchout-catalog"
+                    className="font-semibold text-fj-ink underline underline-offset-4"
+                  >
+                    punchout catalog
+                  </Link>{' '}
+                  page covers punchout purchase orders that land in the ERP as sales orders. Running SuiteCommerce on
+                  NetSuite today? See{' '}
                   <Link
                     href="/replatforming/netsuite-suitecommerce-to-shopify-plus"
                     className="font-semibold text-fj-ink underline underline-offset-4"
                   >
                     NetSuite SuiteCommerce to Shopify Plus
                   </Link>
-                  , which keeps NetSuite as the ERP and moves only the storefront.
+                  , which keeps NetSuite as the ERP and moves only the storefront. Selling from the UK? The UK version
+                  of this page is{' '}
+                  <Link
+                    href="/uk/ecommerce-erp-integration"
+                    className="font-semibold text-fj-ink underline underline-offset-4"
+                  >
+                    ecommerce ERP integration in the UK
+                  </Link>
+                  .
                 </p>
               </div>
 
@@ -1614,7 +1631,15 @@ export default function EcommerceErpIntegrationPage() {
                   <Link href="/services/erp-ai-agents" className="font-semibold text-fj-ink underline underline-offset-4">
                     ERP AI agents
                   </Link>{' '}
-                  for quotes, purchase orders and bookkeeping drafted inside the ERP.
+                  for quotes, purchase orders and bookkeeping drafted inside the ERP. If your sales team works in
+                  HubSpot, see{' '}
+                  <Link
+                    href="/services/shopify-hubspot-integration"
+                    className="font-semibold text-fj-ink underline underline-offset-4"
+                  >
+                    Shopify HubSpot integration
+                  </Link>{' '}
+                  for passing store orders and customers to the CRM.
                 </p>
                 <img
                   src={`${IMG}/field-mapping-cards.webp`}

@@ -256,6 +256,7 @@ const TERMS: { t: string; d: string }[] = [
 const RELATED: { h: string; t: string; d: string }[] = [
   { h: '/au/ai-agents', t: 'AI agents and automation', d: 'The wider AI automation agency page: agents for finance, trades, clinics and property as well as retail.' },
   { h: '/au/ai-customer-service', t: 'AI customer service', d: 'Chat and email answers inside Gorgias, Zendesk or HubSpot, for stores that start at the front line.' },
+  { h: '/au/shopify-ai-agents', t: 'Shopify AI agents', d: 'Operations agents built for Shopify and Shopify Plus stores, for brands that sell mainly through Shopify.' },
   { h: '/au/shopify-development', t: 'Shopify development', d: 'Shopify and Shopify Plus builds, migrations and B2B, with Xero, MYOB and courier links.' },
   { h: '/au/ecommerce-development', t: 'Ecommerce development', d: 'Platform choice and full store builds for Australian brands before agents come in.' },
   { h: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'Supplier bills read into draft Xero or MYOB entries for the finance team to approve.' },

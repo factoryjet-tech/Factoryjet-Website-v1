@@ -298,6 +298,7 @@ const BUILD_STEPS: { n: string; t: string; d: string; out: string }[] = [
 /* ─── Related pages (agentdir) ─── */
 const RELATED: { h: string; t: string; d: string }[] = [
   { h: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'Supplier invoices read, checked against ATO tax invoice rules and drafted as bills in Xero or MYOB.' },
+  { h: '/au/sales-order-automation-ai-agents', t: 'Sales order automation', d: 'Emailed customer purchase orders turned into draft sales orders in Xero, MYOB, Cin7 Core or Unleashed.' },
   { h: '/au/ai-agents', t: 'AI agents and automation', d: 'Agents for other repeated jobs across Xero, HubSpot, ServiceM8 and Microsoft 365.' },
   { h: '/au/ai-consulting', t: 'AI consulting', d: 'Not sure which paperwork to start with? A readiness assessment ranks the options.' },
   { h: '/au/ai-development', t: 'AI development', d: 'Larger builds: AI inside your product, custom apps and deeper ERP work.' },

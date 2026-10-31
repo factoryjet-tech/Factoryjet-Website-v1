@@ -732,6 +732,8 @@ export default function EcommerceErpIntegrationUKPage() {
                   Amazon.co.uk, eBay UK, OnBuy and the B&amp;Q marketplace each send their own
                   orders. Some firms route them through a multichannel tool such as Linnworks, which lists Amazon,
                   eBay and Shopify among its integrations. Either way, one system owns stock for all of them.
+                  Selling on Amazon too? See our{' '}
+                  <a href="/uk/amazon-agency" style={inlineLink}>UK Amazon agency</a> page.
                 </p>
               </div>
               <ul className="stack">
@@ -918,6 +920,12 @@ export default function EcommerceErpIntegrationUKPage() {
               <a href="/uk/woocommerce" style={inlineLink}>WooCommerce development</a> and our{' '}
               <a href="/uk/ecommerce-consultant" style={inlineLink}>UK ecommerce consultant</a> service. Selling in the
               US as well? See <a href="/services/ecommerce-erp-integration" style={inlineLink}>ecommerce ERP integration for US stores</a>.
+              Once the store and ERP agree, our{' '}
+              <a href="/uk/erp-ai-agents" style={inlineLink}>ERP AI agents</a> work inside that system, with
+              pages for <a href="/uk/netsuite-ai-agents" style={inlineLink}>NetSuite AI agents</a> and{' '}
+              <a href="/uk/odoo-ai-agents" style={inlineLink}>Odoo AI agents</a>. For links between AI models and
+              the rest of your software, see{' '}
+              <a href="/uk/ai-integration-services" style={inlineLink}>AI integration services</a>.
             </p>
           </div>
         </section>

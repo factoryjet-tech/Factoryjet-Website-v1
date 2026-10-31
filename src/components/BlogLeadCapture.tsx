@@ -30,7 +30,9 @@ const TRUST = 'Bhavesh, our founder, reads every request and usually replies wit
 
 export default function BlogLeadCapture({ slug, offer, placement = 'article' }: BlogLeadCaptureProps) {
   const side = placement === 'sidebar';
-  const Heading = side ? 'h3' : 'h2';
+  // A styled <p>, not a heading: the lead card was the first H2 on every post,
+  // ahead of the real content (31 Oct QA, finding A1/A3).
+  const Heading = 'p';
   return (
     <section className={side ? 'blog-lead blog-lead-side' : 'blog-lead'} aria-label={offer.heading}>
       <p className="blog-lead-eyebrow">{offer.eyebrow}</p>

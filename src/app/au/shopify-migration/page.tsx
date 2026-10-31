@@ -314,6 +314,7 @@ const PLATFORMS: { n: string; name: string; d: string; src: string; srcLabel: st
 const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
   { href: '/au/shopify-development', t: 'Shopify development Australia', d: 'New Shopify and Shopify Plus stores, custom themes, B2B and integrations, when you are building rather than moving.', go: 'Explore Shopify development →' },
   { href: '/au/ecommerce-development', t: 'Ecommerce development Australia', d: 'Not settled on Shopify yet? We compare it with the alternatives for your catalogue, channels and systems first.', go: 'Explore ecommerce →' },
+  { href: '/au/shopify-plus', t: 'Shopify Plus agency in Australia', d: 'Moving to Shopify Plus rather than standard Shopify: B2B, checkout changes and higher order volume.', go: 'Explore Shopify Plus →' },
   { href: '/au/ecommerce-seo', t: 'Ecommerce SEO Australia', d: 'Rankings protected before, during and after the move, then collection pages and content that win new traffic.', go: 'Explore ecommerce SEO →' },
   { href: '/au/website-maintenance', t: 'Website and store care', d: 'Optional support after launch: fixes, app updates and new sections, each change quoted and approved.', go: 'Explore store care →' },
   { href: '/au', t: 'FactoryJet Australia', d: 'Everything we do for Australian businesses: ecommerce, AI agents, websites and AI search.', go: 'Visit the Australia hub →' },
@@ -466,7 +467,9 @@ export default function ShopifyMigrationAUPage() {
                     hanging off it: brands and wholesalers whose platform has become slow or costly to
                     patch. If you are launching a brand new store instead, our{' '}
                     <a href="/au/shopify-development">Shopify development for Australian stores</a> is the better
-                    starting point.
+                    starting point. Not sure the platform is the problem? An{' '}
+                    <a href="/au/ecommerce-consultant">ecommerce consultant review for Australian stores</a> sorts
+                    out what to fix first.
                   </p>
                 </div>
               </div>
@@ -777,7 +780,8 @@ export default function ShopifyMigrationAUPage() {
               <div>
                 <h3>Platforms we know from the inside</h3>
                 <p>
-                  We also build on WooCommerce, so we know its data from the builder’s side. We are building Sow
+                  We also build on WooCommerce, so we know its data from the builder’s side (see our{' '}
+                  <a href="/au/woocommerce">WooCommerce development in Australia</a> page). We are building Sow
                   Easy’s trade store on WooCommerce, with stock, prices and SKUs coming from Odoo. That store has not
                   launched yet.
                 </p>

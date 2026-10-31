@@ -71,7 +71,7 @@ const PAGE_TITLE = 'Sales & Purchase Order Automation AI Agents | FactoryJet';
 const PAGE_DESC =
   'We design, build and support AI agents that turn emailed, PDF and EDI purchase orders into ERP sales orders, and draft your purchase orders to suppliers.';
 const PAGE_PUBLISHED = '2026-10-11';
-const PAGE_MODIFIED = '2026-10-11';
+const PAGE_MODIFIED = '2026-10-31';
 const CHECKED_ON = '11 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -1232,6 +1232,8 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/ai-agent-development/procurement-supply-chain-agent', t: 'Procurement and supply chain agent', b: 'The buying side on its own page.' },
   { href: '/services/shopify-quickbooks-integration', t: 'Shopify QuickBooks integration', b: 'Items, stock and prices kept in step between a store and QuickBooks.' },
   { href: '/services/ai-agent-monitoring', t: 'AI agent monitoring and support', b: 'What happens after launch: watching, re-testing and fixing.' },
+  { href: '/uk/sales-order-automation-ai-agents', t: 'Sales order automation AI agents in the UK', b: 'The same order-reading agent, on the page written for UK buyers.' },
+  { href: '/au/sales-order-automation-ai-agents', t: 'Sales order automation AI agents in Australia', b: 'The same order-reading agent, on the page written for Australian buyers.' },
 ];
 
 /** Small inline source links. Same visual pattern as /services/netsuite-ai-agents.

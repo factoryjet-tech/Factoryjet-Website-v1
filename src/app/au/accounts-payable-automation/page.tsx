@@ -14,7 +14,7 @@ import '../au-page.css';
 import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/accounts-payable-automation';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-31';
 const TITLE = 'Accounts Payable Automation Australia | Xero & MYOB';
 /* Visible hero heading and schema headline are the same text. */
 const HERO_H1_LEAD = 'Accounts Payable Automation for Australian Businesses';
@@ -344,6 +344,8 @@ const SIBLINGS: { href: string; t: string; d: string }[] = [
   { href: '/au/accounts-receivable-automation', t: 'Accounts receivable automation', d: 'Debtor follow-up and payment reminders inside Xero and MYOB, for the money coming in.' },
   { href: '/au/document-intake-ai-agents', t: 'AI document processing', d: 'Intake agents for dockets, forms and purchase orders as well as supplier bills, feeding Xero, MYOB or your ERP.' },
   { href: '/au/erp-ai-agents', t: 'ERP AI agents', d: 'Agents that work inside Xero, MYOB, NetSuite and Odoo for finance and operations tasks.' },
+  { href: '/au/sales-order-automation-ai-agents', t: 'Sales order automation', d: 'The other side of the same paperwork: agents that turn emailed customer purchase orders into draft sales orders in Xero, MYOB, Cin7 Core or Unleashed.' },
+  { href: '/au/crm-ai-agents', t: 'CRM AI agents', d: 'Agents built into HubSpot or Salesforce for lead scoring and deal updates, with Xero and MYOB data alongside.' },
   { href: '/au/netsuite-ai-agents', t: 'NetSuite AI agents', d: 'For businesses on NetSuite: agents built into your account, with approvals set by your finance team.' },
 ];
 
@@ -570,7 +572,9 @@ export default function AccountsPayableAutomationAUPage() {
               <h2>Xero and MYOB integration for accounts payable: what the agent reads and what it does</h2>
               <p className="lead">
                 Your team keeps working in Xero or MYOB. The agent connects through each product’s published API, with
-                only the access each step needs, and never has access to make payments.
+                only the access each step needs, and never has access to make payments. Selling online as well? Our{' '}
+                <a href="/au/shopify-xero-integration">Shopify Xero integration</a> page covers sending store orders,
+                payouts and fees into the same Xero file.
               </p>
             </div>
             <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">

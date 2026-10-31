@@ -10,7 +10,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'September 17, 2026',
-  dateModified: 'Oct 11, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '17 min read',
   imageUrl: '/images/ai-support/support-ops-ticket-dashboard.jpg',
   imageAlt:
@@ -1037,7 +1037,14 @@ export const post: BlogPost = {
         <li>
           <strong>Returns or warranty rules are yours alone.</strong> Serial number checks, proof of
           purchase, condition grading and partial refunds by product line are code, not a setting,
-          and a custom agent enforces them as hard limits.
+          and a custom agent enforces them as hard limits. Our guide to{' '}
+          <a
+            href="/blog/ai-agent-shopify-plus-returns-refunds-2026"
+            className="text-[#B23E13] hover:underline"
+          >
+            automating Shopify Plus returns and refunds
+          </a>{' '}
+          compares the apps and shows where a person must still approve.
         </li>
         <li>
           <strong>You need to own the data path:</strong> which model provider, where logs live, how

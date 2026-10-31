@@ -742,7 +742,8 @@ export default function AmazonAgencyUKPage() {
                 </p>
                 <p>
                   Selling into the US as well? Our <a href="/services/amazon-agency">US Amazon agency</a> page covers
-                  Amazon.com.
+                  Amazon.com. For Amazon.com.au, see our{' '}
+                  <a href="/au/amazon-agency">Australian Amazon agency</a> page.
                 </p>
               </div>
               <div className="flex-wrap mt-6">

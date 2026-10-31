@@ -8,7 +8,7 @@ import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/shopify-plus';
-const UPDATED = '2026-09-24';
+const UPDATED = '2026-10-31';
 const TITLE = 'Shopify Plus Agency UK | Builds and Migrations | FactoryJet';
 const DESCRIPTION =
   'Shopify Plus agency in the UK for new builds, migrations to Plus, B2B and checkout work. Straight advice on Shopify Plus cost and when plain Shopify is enough.';
@@ -712,7 +712,9 @@ export default function ShopifyPlusUKPage() {
                   <p>
                     We build integrations to handle failure properly: retries when a system is busy, alerts when a
                     sync stops, and a clear log of what moved. That is the difference between an integration you
-                    trust and one your team double-checks every morning.
+                    trust and one your team double-checks every morning. Our page on{' '}
+                    <a href="/uk/ecommerce-erp-integration">ecommerce ERP integration for UK businesses</a> covers
+                    the ERP side in more depth.
                   </p>
                 </div>
                 <div className="card mt-8" style={{ padding: 8 }}>
@@ -747,7 +749,8 @@ export default function ShopifyPlusUKPage() {
                   <ul className="int-group">
                     <li><b>Klaviyo.</b> Browsing, basket and order events for email and SMS flows.</li>
                     <li><b>Gorgias.</b> Customer service with order data beside every ticket.</li>
-                    <li><b>AI agents.</b> Custom <a href="/uk/ai-agents">AI agents</a> that answer order questions from live Shopify data, built for you and owned by you.</li>
+                    <li><b>AI agents.</b> Custom <a href="/uk/ai-agents">AI agents</a> that answer order questions from live Shopify data, built for you and owned by you. See{' '}
+                      <a href="/uk/shopify-ai-agents">Shopify AI agents for UK stores</a>.</li>
                   </ul>
                 </div>
               </div>

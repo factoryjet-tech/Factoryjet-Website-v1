@@ -18,7 +18,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_MODIFIED = '2026-10-31';
 
 /* House terms, approved wording (2026-10-16). Same terms as /services/ai-automation. */
 const HOUSE_TERMS = [
@@ -994,7 +994,9 @@ export default function ShopifyPlusB2BPage() {
                   </div>
                 </div>
                 <p style={{ marginTop: '20px', fontSize: '13.5px', color: 'var(--pp-muted)' }}>
-                  Explore related capabilities: <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce platforms</Link>, <Link href="/services/shopify-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Shopify store development</Link>, <Link href="/services/shopify-edi-integration" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>EDI orders from B2B customers</Link>, <Link href="/services/shopify-hubspot-integration" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Shopify HubSpot integration for B2B companies and deals</Link>, <Link href="/agentic-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>agentic commerce</Link>, and <Link href="/services/ai-agent-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>AI agent operations</Link>.
+                  Explore related capabilities: <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce platforms</Link>, <Link href="/services/shopify-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Shopify store development</Link>, <Link href="/services/shopify-edi-integration" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>EDI orders from B2B customers</Link>, <Link href="/services/shopify-hubspot-integration" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Shopify HubSpot integration for B2B companies and deals</Link>, <Link href="/agentic-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>agentic commerce</Link>, and <Link href="/services/ai-agent-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>AI agent operations</Link>. If a customer buys through Coupa or SAP Ariba, see our{' '}
+                  <Link href="/b2b-ecommerce/punchout-catalog" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>punchout catalog integration</Link>. Selling to trade buyers in Britain? Read the{' '}
+                  <Link href="/uk/shopify-plus-b2b" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>UK Shopify Plus B2B page</Link>.
                 </p>
               </div>
               {/* B2B proof, 2026-10-29: GPSUK (Commerceflo) and Sow Easy (WordPress

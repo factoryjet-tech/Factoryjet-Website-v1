@@ -488,7 +488,8 @@ export default function WalmartMarketplaceAgencyPage() {
               <div className="wmp-crystal" style={{ padding: '24px' }}>
                 <h3 className="disp" style={{ fontSize: 20, marginBottom: 12 }}>Omnichannel marketplace sync.</h3>
                 <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
-                  We unify Walmart Marketplace with Amazon Seller Central and Amazon Vendor Central. We also connect TikTok Shop.
+                  We unify Walmart Marketplace with Amazon Seller Central and Amazon Vendor Central. We also connect TikTok Shop. If you are comparing partners for that channel, see our list of the{' '}
+                  <Link href="/blog/best-tiktok-shop-agencies-us-2026" className="wmp-inline-link">best TikTok Shop agencies in the US</Link>.
                 </p>
                 <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
                   Integrate your catalog with Shopify, Shopify Plus, BigCommerce, WooCommerce, and Magento.

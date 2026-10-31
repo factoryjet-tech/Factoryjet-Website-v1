@@ -71,7 +71,7 @@ const PAGE_TITLE = 'AI Document Processing Agents Built for You | FactoryJet';
 const PAGE_DESC =
   'FactoryJet designs, builds and supports a document intake agent that reads your PDFs, scans and email attachments, checks each field and files the result.';
 const PAGE_PUBLISHED = '2026-10-11';
-const PAGE_MODIFIED = '2026-10-11';
+const PAGE_MODIFIED = '2026-10-31';
 const CHECKED_ON = '11 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -1163,6 +1163,8 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/insurance-ai-agents', t: 'AI agents for insurance', b: 'Claim calls, quote details and certificate requests for agencies, MGAs and small carriers.' },
   { href: '/services/ai-automation', t: 'AI workflow automation', b: 'The steps before and after the document, joined into one process.' },
   { href: '/services/ai-agent-development/rfq-bidding-agent', t: 'RFQ automation agent', b: 'Inbound requests for quote read, matched to your catalogue and drafted for approval.' },
+  { href: '/services/claude-ai-agent-development', t: 'Claude AI agent development', b: 'Agents built on Anthropic Claude, the model family that reads PDFs directly as described above.' },
+  { href: '/au/document-intake-ai-agents', t: 'Document intake AI agents in Australia', b: 'The same document reading work, written for Australian businesses.' },
   { href: '/blog/ai-agent-build-vs-buy-2026', t: 'Guide: build or buy an AI agent', b: 'The rent-or-build choice on this page, for agents of every kind.' },
 ];
 

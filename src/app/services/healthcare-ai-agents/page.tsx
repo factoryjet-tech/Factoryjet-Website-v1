@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/healthcare-ai-agents';
 const PAGE_TITLE = 'Healthcare AI Agents & Medical Receptionists | FactoryJet';
 const PAGE_DESC =
   'Custom HIPAA-compliant healthcare AI agents and medical voice receptionists for US practices, dental clinics, and hospitals. Real EHR sync. Get an audit.';
-const PAGE_MODIFIED = '2026-10-18';
+const PAGE_MODIFIED = '2026-10-31';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -388,7 +388,7 @@ export default function HealthcareAiAgentsPage() {
                   </span></h1>
 
                 <p className="text-lg sm:text-xl text-[#46403B] font-normal leading-relaxed mb-8 max-w-2xl">
-                  FactoryJet builds custom AI agents for US medical practices, dental clinics and hospital departments. Our healthcare agents start at the front desk phone. They book and move appointments, check insurance eligibility, text intake forms, take refill requests and hand emergencies to your staff. Replies come in under 500 milliseconds, and every booking syncs both ways with Epic, Cerner, Dentrix and AthenaHealth.
+                  FactoryJet builds custom AI agents for US medical practices and dental clinics. Our healthcare agents start at the front desk phone. They book and move appointments, check insurance eligibility, text intake forms, take refill requests and hand emergencies to your staff. Each agent connects to your EHR or practice management system through its API, and we confirm in writing which actions write back.
                 </p>
 
                 <div className="mb-8">

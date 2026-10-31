@@ -29,6 +29,9 @@ export interface MidPageCTAProps {
   href?: string;
   /** Optional reassurance line under the button. */
   note?: string;
+  /** Element for the headline. Defaults to a styled <p> so the CTA band stays out of the
+   *  page's H2 outline (31 Oct QA, finding A3 on 11 pages). Pass 'h2' to opt back in. */
+  headingAs?: 'h2' | 'p';
 }
 
 export default function MidPageCTA({
@@ -37,6 +40,7 @@ export default function MidPageCTA({
   label = 'Talk to the founder',
   href = '/contact',
   note = 'Bhavesh replies within 24 hours.',
+  headingAs: Heading = 'p',
 }: MidPageCTAProps) {
   return (
     <section className="bg-[#FAFAF7] border-y border-gray-100 py-12 md:py-16">
@@ -45,9 +49,9 @@ export default function MidPageCTA({
           <p className="font-fj-mono text-xs font-semibold uppercase tracking-widest text-[#B23E13]">
             Next step
           </p>
-          <h2 className="mt-3 font-fj-display text-2xl md:text-3xl font-bold text-[#0F0F12]">
+          <Heading className="mt-3 font-fj-display text-2xl md:text-3xl font-bold text-[#0F0F12]">
             {headline}
-          </h2>
+          </Heading>
           <p className="mt-3 max-w-2xl font-fj-body text-base leading-relaxed text-[#3A3A38]">
             {sub}
           </p>

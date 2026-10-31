@@ -15,7 +15,7 @@ import './page.css';
 import './visual.css';
 
 const CANONICAL = 'https://factoryjet.com/au/shopify-development';
-const UPDATED = '2026-09-25';
+const UPDATED = '2026-10-31';
 const TITLE = 'Shopify Agency Australia | Shopify Developers | FactoryJet';
 const H1 = 'Shopify Agency Australia: Shopify Developers Who Stay After Launch';
 const DESCRIPTION =
@@ -679,6 +679,8 @@ export default function ShopifyDevelopmentAUPage() {
                   Shopify migration service moves all of it across in a planned order. Weighing Shopify against
                   Maropost, BigCommerce or WooCommerce first? Read{' '}
                   <a href="/blog/best-ecommerce-platform-australia-2026">which ecommerce platform suits an Australian store</a>.
+                  If WooCommerce still fits your business, our{' '}
+                  <a href="/au/woocommerce">WooCommerce developers in Australia</a> can work on the store you have.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
                   We migrate products, variants, images, customer accounts, order history where you need it,
@@ -692,7 +694,8 @@ export default function ShopifyDevelopmentAUPage() {
                   move also involves a new platform decision, our{' '}
                   <a href="/au/ecommerce-development">ecommerce development team in Australia</a> can compare Shopify
                   with the alternatives first. Our <a href="/au/ecommerce-seo">Shopify SEO agency</a> team
-                  protects rankings before, during and after the move.
+                  protects rankings before, during and after the move. Not sure what to fix first? Start with an{' '}
+                  <a href="/au/ecommerce-consultant">ecommerce consultant review for Australian stores</a>.
                 </p></div>
               </div>
               <div className="au-panel">
@@ -741,7 +744,10 @@ export default function ShopifyDevelopmentAUPage() {
             </ul>
             <p>
               Many stores add an AI agent that answers where-is-my-order and returns questions inside Gorgias or
-              Zendesk; see <a href="/au/ai-customer-service">AI customer service for Shopify stores</a>.
+              Zendesk; see <a href="/au/ai-customer-service">AI customer service for Shopify stores</a>. For agents
+              that handle order exceptions, reorders and payout checks, see{' '}
+              <a href="/au/shopify-ai-agents">Shopify AI agents for Australian stores</a>, or{' '}
+              <a href="/au/ecommerce-ai-agents">ecommerce AI agents across stores and marketplaces</a>.
             </p>
           </div>
         </section>
@@ -871,7 +877,7 @@ export default function ShopifyDevelopmentAUPage() {
               <details open className="ventry">
                 <summary><h3>Pick a Shopify agency like us if…</h3><span className="chev" aria-hidden="true">+</span></summary>
                 <ul className="chg-list chg-list-1col">
-                  <li><span>You are launching a new store, redesigning, or moving to Shopify from another platform.</span></li>
+                  <li><span>You are launching a new store, <a href="/au/ecommerce-redesign">redesigning an ecommerce store</a> that already trades, or moving to Shopify from another platform.</span></li>
                   <li><span>Orders need to reach Xero, MYOB, an ERP or a warehouse correctly.</span></li>
                   <li><span>You sell wholesale as well as retail, or are weighing up Shopify Plus.</span></li>
                   <li><span>You want one accountable team before and after launch.</span></li>

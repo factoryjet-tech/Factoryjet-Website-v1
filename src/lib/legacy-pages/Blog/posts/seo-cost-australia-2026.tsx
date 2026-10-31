@@ -793,7 +793,10 @@ export const post: BlogPost = {
         Sources for the dollar figures: <a href={SRC.seoprices} {...extLinkProps}>SEOPrices.com.au</a>,{' '}
         <a href={SRC.dnhq} {...extLinkProps}>Digital Nomads HQ</a> and{' '}
         <a href={SRC.studiohawk} {...extLinkProps}>StudioHawk</a>, September 2026. We have not listed an in-house
-        salary because we could not verify a current Australian figure for this role.
+        salary because we could not verify a current Australian figure for this role. If you have decided to
+        hire an agency, our list of the{' '}
+        <a href="/blog/best-seo-agencies-australia-2026" className={linkCls}>best SEO agencies in Australia</a>{' '}
+        compares named providers.
       </p>
 
       {/* Section: what a package should include (listicle) */}

@@ -7,7 +7,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/magento';
-const UPDATED = '2026-10-21';
+const UPDATED = '2026-10-31';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -430,7 +430,7 @@ export default function MagentoUKPage() {
               </li>
               <li className="card">
                 <h3>Magento integration</h3>
-                <p className="mt-4">Connecting Magento to your ERP, stock, product data and email systems so orders, stock levels and prices flow on their own. Built to handle failures properly, with alerts when a sync stops.</p>
+                <p className="mt-4">Connecting Magento to your ERP, stock, product data and email systems so orders, stock levels and prices flow on their own. Built to handle failures properly, with alerts when a sync stops. The same work on other platforms sits on our <a href="/uk/ecommerce-erp-integration">UK ecommerce ERP integration</a> page.</p>
               </li>
               <li className="card">
                 <h3>Magento website development</h3>

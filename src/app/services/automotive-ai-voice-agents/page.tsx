@@ -14,7 +14,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/automotive-ai-voice-agent
 const PAGE_TITLE = 'Automotive AI Voice Agents & Dealership BDC | FactoryJet';
 const PAGE_DESC =
   'Custom automotive AI voice agents for US car dealerships, collision centers & parts counters. 24/7 service BDC booking with direct CDK, Reynolds & Tekion sync.';
-const PAGE_MODIFIED = '2026-10-11';
+const PAGE_MODIFIED = '2026-10-31';
 
 /** Single source for the breadcrumb trail. Feeds both the visible <Breadcrumbs>
  *  component and the BreadcrumbList JSON-LD below, so the two can never drift. */
@@ -1119,6 +1119,10 @@ export default function AutomotiveAiVoiceAgentsPage() {
               . Or run your own numbers with the{' '}
               <Link href="/tools/ai-agent-roi-calculator" className="text-[#F05A28] font-semibold hover:underline">
                 AI agent ROI calculator
+              </Link>
+              . If you are shortlisting a build partner, read{' '}
+              <Link href="/blog/best-ai-voice-agent-development-companies-2026" className="text-[#F05A28] font-semibold hover:underline">
+                AI voice agent development companies compared
               </Link>
               .
             </p>

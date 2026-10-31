@@ -295,11 +295,13 @@ const INTEGRATIONS: { sys: string; reads: string; does: string }[] = [
 
 const SIBLINGS: { href: string; t: string; d: string }[] = [
   { href: '/au/accounts-payable-automation', t: 'Accounts payable automation', d: 'The other side of the ledger: supplier invoices read, checked and routed for approval in Xero or MYOB.' },
+  { href: '/au/sales-order-automation-ai-agents', t: 'Sales order automation', d: 'Where the invoice starts: emailed purchase orders turned into draft sales orders in Xero, MYOB, Cin7 Core or Unleashed.' },
   { href: '/au/ai-agents', t: 'AI agent development', d: 'Agents for other back-office jobs, from quote follow-up to order processing, built into the tools you run.' },
   { href: '/au/ai-development', t: 'AI development and integration', d: 'Custom Xero, MYOB, CRM and ERP integrations with AI built in, for work beyond receivables.' },
   { href: '/au/ai-consulting', t: 'AI consulting', d: 'A short assessment of where AI will pay off across your finance and operations work.' },
   { href: '/au/ecommerce-development', t: 'Ecommerce development', d: 'B2B ordering and trade portals for Australian wholesalers, where many receivables start.' },
   { href: '/services/accounts-receivable-automation', t: 'AR automation in the US', d: 'Our US page, covering QuickBooks, NetSuite, Business Central and US collection rules.' },
+  { href: '/uk/accounts-receivable-automation', t: 'AR automation in the UK', d: 'Our UK page, covering credit control and debtor follow-up for UK businesses.' },
 ];
 
 const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
@@ -678,7 +680,10 @@ export default function AccountsReceivableAutomationAUPage() {
                 </p>
                 <p>
                   See also our <a href="/au/accounts-payable-automation">accounts payable automation</a> page for
-                  Australian businesses, which covers the supplier side of the same Xero or MYOB file.
+                  Australian businesses, which covers the supplier side of the same Xero or MYOB file. If your
+                  invoices start as online store orders, our{' '}
+                  <a href="/au/shopify-xero-integration">Shopify Xero integration</a> page covers getting those orders
+                  and payments into Xero.
                 </p>
               </div>
             </div>

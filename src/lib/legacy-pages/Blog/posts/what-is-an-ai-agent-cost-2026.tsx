@@ -158,7 +158,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 19, 2026',
-  dateModified: 'Oct 18, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '16 min read',
   imageUrl: '/blog-images/what-is-an-ai-agent-cost-2026.webp',
   imageAlt:
@@ -634,7 +634,8 @@ export const post: BlogPost = {
         <a href="/blog/enterprise-ai-agents-mid-sized-companies-buy-or-build-2026">enterprise AI agents for mid-sized
         companies</a> covers what to buy and what to build, and{' '}
         <a href="/blog/ai-proof-of-concept-to-production-2026">AI proof of concept to production</a> covers how to scope
-        the first paid step.
+        the first paid step. For the calendar side of the budget, see{' '}
+        <a href="/blog/how-long-to-implement-an-ai-agent-2026">how long an AI agent takes to implement</a>.
       </p>
 
       <h2 id="sources">Sources</h2>

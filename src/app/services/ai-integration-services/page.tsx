@@ -75,7 +75,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_MODIFIED = '2026-10-31';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -766,7 +766,11 @@ export default function AIIntegrationServicesPage() {
                 ))}
               </div>
               <p>
-                Most businesses spend months evaluating AI tools and signing up for pilots. Most never ship anything meaningful. The faster path is simple. Keep the tools your team already knows. Add AI capabilities directly via API. Your sales team stays in HubSpot. Your support team stays in Zendesk. The AI operates automatically behind the scenes.
+                Most businesses spend months evaluating AI tools and signing up for pilots. Most never ship anything meaningful. The faster path is simple. Keep the tools your team already knows. Add AI capabilities directly via API. Your sales team stays in HubSpot. Your support team stays in Zendesk. The AI operates automatically behind the scenes. If your store data needs to reach HubSpot first, see our{' '}
+                <a href="/services/shopify-hubspot-integration" className="font-semibold underline underline-offset-2 text-[#B23E13]">
+                  Shopify HubSpot integration
+                </a>
+                {' '}service.
               </p>
               <p>
                 If the job needs more than one app, answers from your own documents or a custom interface, see our{' '}

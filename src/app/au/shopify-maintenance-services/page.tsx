@@ -127,7 +127,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes, and most support work starts that way. The first job is reading what the last team left: theme edits, app settings, connector logins and any private apps. You get a written list sorted into urgent, fragile and healthy. One thing we check early is any Xero or 3PL connector that no one has owned since launch. You keep the documentation we write, whether or not you keep us on afterwards.' },
   { category: 'choose', question: 'Do you support Shopify Plus, B2B and multiple stores?',
     answer: 'Yes. We look after Plus checkout extensions, the Shopify Functions that replaced Scripts, native B2B with company accounts and price lists, and the extra Plus stores brands open for New Zealand shoppers or trade buyers. Multi-store setups need extra care, because a theme or app change in one store often has to be repeated in the others. We keep a single change log across all of them so nothing drifts.',
-    links: [{ href: '/au/shopify-development', label: 'Shopify Plus and B2B builds' }] },
+    links: [{ href: '/au/shopify-plus', label: 'Shopify Plus agency in Australia' }, { href: '/au/shopify-development', label: 'Shopify Plus and B2B builds' }] },
 
   // ── How we work with you ──
   { category: 'working', question: 'Do you need our Shopify owner login?',

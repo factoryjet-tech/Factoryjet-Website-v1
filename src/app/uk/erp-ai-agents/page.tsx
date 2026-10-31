@@ -739,6 +739,10 @@ export default function ErpAiAgentsUKPage() {
               <a href="/uk/b2b-ecommerce" style={inlineLink}>B2B ecommerce</a>. If the first problem is getting
               orders, stock and prices to sync between your store and your ERP at all, start with{' '}
               <a href="/uk/ecommerce-erp-integration" style={inlineLink}>ecommerce ERP integration in the UK</a>.
+              When the quote request or order starts as a deal in your CRM, see{' '}
+              <a href="/uk/crm-ai-agents" style={inlineLink}>CRM AI agents in the UK</a>. To connect an AI model
+              to the other systems around your ERP, see{' '}
+              <a href="/uk/ai-integration-services" style={inlineLink}>AI integration services in the UK</a>.
             </p>
           </div>
         </section>
@@ -772,7 +776,8 @@ export default function ErpAiAgentsUKPage() {
               Payments and couriers sit in the same chain. Payout reports from Stripe, GoCardless, Klarna or
               Clearpay, and dispatch data from Royal Mail, DPD or Evri, become inputs the agent reads. It drafts
               the matching entries, and your team approves them. Running Odoo on its own? See our page on{' '}
-              <a href="/uk/odoo-ai-agents" style={inlineLink}>Odoo AI agents in the UK</a>.
+              <a href="/uk/odoo-ai-agents" style={inlineLink}>Odoo AI agents in the UK</a>. On NetSuite, see{' '}
+              <a href="/uk/netsuite-ai-agents" style={inlineLink}>NetSuite AI agents in the UK</a>.
             </p>
           </div>
         </section>

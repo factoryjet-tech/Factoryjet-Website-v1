@@ -188,7 +188,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 26, 2026',
-  dateModified: 'Oct 21, 2026',
+  dateModified: 'Oct 31, 2026',
   readTime: '18 min read',
   imageUrl: '/blog-images/ai-cost-australia-2026-hero.webp',
   imageAlt:
@@ -718,6 +718,8 @@ export const post: BlogPost = {
         So the typical Australian market range for an off-the-shelf AI receptionist in September 2026 is{' '}
         <strong>about A$49 to A$499 a month</strong>, plus setup fees from nothing to around A$1,000 and per-minute overage.
         Because some providers quote GST-inclusive and others ex-GST, add 10 percent to the ex-GST plans before comparing.
+        To compare these providers on features as well as price, see our{' '}
+        <a href="/blog/best-ai-receptionists-australia-2026">guide to the best AI receptionists in Australia</a>.
       </p>
 
       <figure className="my-8">

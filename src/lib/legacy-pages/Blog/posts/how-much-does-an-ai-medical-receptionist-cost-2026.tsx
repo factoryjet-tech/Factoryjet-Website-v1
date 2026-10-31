@@ -327,7 +327,8 @@ export const post: BlogPost = {
       <p>
         This guide has covered what drives the cost of a custom build, so it is worth saying plainly that for many practices that is the wrong answer. Off-the-shelf AI receptionist products start around $79 a month flat, and if your intake is standard and your practice management software is mainstream, one of them will be live faster and cheaper than anything custom. We compared eight of them on published pricing in{' '}
         <Link href="/blog/best-ai-receptionist-small-business" className="text-[#F05A28] underline">the best AI receptionists for small business</Link>. For healthcare-specific vendors, including dental receptionists, scribes and custom builders, see{' '}
-        <Link href="/blog/best-ai-agent-companies-healthcare-practices-2026" className="text-[#F05A28] underline">13 companies that build AI agents for healthcare practices</Link>.
+        <Link href="/blog/best-ai-agent-companies-healthcare-practices-2026" className="text-[#F05A28] underline">13 companies that build AI agents for healthcare practices</Link>. If your practice is in Australia, we compare local options in{' '}
+        <Link href="/blog/best-ai-receptionists-australia-2026" className="text-[#F05A28] underline">the best AI receptionists in Australia</Link>.
       </p>
       <p>
         Healthcare is where that comparison can invert, though, and it is why this page exists separately. One popular developer platform lists HIPAA as a $2,000 a month add-on, which turns the cheapest per-minute option into one of the most expensive for a small practice. Price the compliance before you price the minutes. To choose between a human answering service, an off-the-shelf AI receptionist product and a custom voice agent, see our{' '}
