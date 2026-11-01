@@ -297,6 +297,7 @@ export const post: BlogPost = {
   dateModified: 'Oct 31, 2026',
   readTime: '16 min read',
   imageUrl: `${IMG}-hero.webp`,
+  imageFit: 'contain',
   imageAlt:
     'Over the shoulder of a Brisbane cafe owner in a charcoal apron reading an AI chat answer on his laptop at the counter after closing, holding an orange mug',
   meta: {
