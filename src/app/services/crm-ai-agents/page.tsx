@@ -7,8 +7,7 @@ import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
+import type { ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import FAQ from '@/components/v2/FAQ';
@@ -16,6 +15,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import { FOUNDER_ID } from '@/data/organization';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
+import './page.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -568,7 +568,7 @@ export default function CrmAiAgentsPage() {
         cta={{ label: 'See a demo on my data', modal: true, region: 'us' }}
       />
 
-      <main className="bg-fj-cream">
+      <main className="crm-visual-page bg-fj-cream">
         <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
@@ -583,7 +583,7 @@ export default function CrmAiAgentsPage() {
                 submitLabel="See a demo on my data"
                 trustText="Working software on your own data before you sign. Bhavesh replies within 24 hours."
               />
-              <p className="mt-3 max-w-[540px] font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">
+              <p className="mt-3 max-w-[540px] font-fj-body text-[1rem] leading-[1.5] text-fj-neutral-600">
                 Have a brief or RFP? Attach it at step 2. We scope, price and sign each phase on its own.
               </p>
             </>
@@ -596,7 +596,7 @@ export default function CrmAiAgentsPage() {
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
                 className="font-fj-mono font-medium uppercase text-[#B23E13]"
-                style={{ fontSize: '11px', letterSpacing: '0.14em' }}
+                style={{ fontSize: '12px', letterSpacing: '0.14em' }}
               >
                 ONE LEAD, FOUR ACTIONS
               </p>
@@ -611,15 +611,15 @@ export default function CrmAiAgentsPage() {
                   'Deal created at Discovery. Stage changes later need the owner\'s one-click approval.',
                 ].map((step, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
+                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[12px] font-bold text-[#B23E13]">
                       {i + 1}
                     </span>
-                    <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">{step}</p>
+                    <p className="font-fj-body text-[1rem] leading-[1.5] text-fj-neutral-600">{step}</p>
                   </li>
                 ))}
               </ol>
               <div className="mt-6 border-t border-fj-neutral-100 pt-6">
-                <p className="font-fj-body text-[0.8125rem] text-fj-neutral-600">
+                <p className="font-fj-body text-[1rem] text-fj-neutral-600">
                   Illustration of a typical lead flow. Your rules and fields set the real steps.
                 </p>
               </div>
@@ -686,7 +686,7 @@ export default function CrmAiAgentsPage() {
               ].map((t) => (
                 <li key={t.stat} className="rounded-2xl border border-fj-neutral-200 bg-white p-5 text-left">
                   <p className="font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink">{t.stat}</p>
-                  <p className="mt-1 font-fj-body text-[0.9375rem] leading-relaxed text-fj-neutral-600">{t.label}</p>
+                  <p className="mt-1 font-fj-body text-[1rem] leading-relaxed text-fj-neutral-600">{t.label}</p>
                 </li>
               ))}
             </ul>
@@ -694,13 +694,31 @@ export default function CrmAiAgentsPage() {
         </section>
 
         {/* ── 4. WHAT THE AGENT DOES ───────────────────────────────────────── */}
-        <IndustriesGrid
-          variant="cards"
-          eyebrow="WHAT WE BUILD"
-          headline="Six CRM jobs an AI agent can take on"
-          lead="Start with one. Each job is scoped and priced as its own phase, so you can prove it on your data before adding the next."
-          sectors={AGENT_JOBS}
-        />
+        <section className="crm-jobs bg-fj-cream py-14 md:py-20">
+          <div className="crm-section-inner">
+            <div className="crm-section-intro">
+              <div>
+                <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '12px', letterSpacing: '0.14em' }}>WHAT WE BUILD</p>
+                <h2 className="fj-display mt-3 font-extrabold text-fj-ink">Six CRM jobs an AI agent can take on</h2>
+                <p className="mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>Start with one. Each job is scoped and priced as its own phase, so you can prove it on your data before adding the next.</p>
+              </div>
+              <picture className="crm-photo ">
+              <source type="image/avif" srcSet="/images/us/crm-ai-agents/sales-pipeline-review-640.avif 640w, /images/us/crm-ai-agents/sales-pipeline-review-960.avif 960w, /images/us/crm-ai-agents/sales-pipeline-review-1280.avif 1280w" sizes="(min-width: 1120px) 408px, (min-width: 768px) 38vw, calc(100vw - 48px)" />
+              <source type="image/webp" srcSet="/images/us/crm-ai-agents/sales-pipeline-review-640.webp 640w, /images/us/crm-ai-agents/sales-pipeline-review-960.webp 960w, /images/us/crm-ai-agents/sales-pipeline-review-1280.webp 1280w" sizes="(min-width: 1120px) 408px, (min-width: 768px) 38vw, calc(100vw - 48px)" />
+              <img src="/images/us/crm-ai-agents/sales-pipeline-review-960.webp" srcSet="/images/us/crm-ai-agents/sales-pipeline-review-640.webp 640w, /images/us/crm-ai-agents/sales-pipeline-review-960.webp 960w, /images/us/crm-ai-agents/sales-pipeline-review-1280.webp 1280w" sizes="(min-width: 1120px) 408px, (min-width: 768px) 38vw, calc(100vw - 48px)" width="1536" height="1024" loading="lazy" decoding="async" alt="A man wearing a headset reviews coloured pipeline cards on a monitor." />
+            </picture>
+            </div>
+            <ul className="crm-job-grid">
+              {AGENT_JOBS.map((job) => (
+                <li key={job.name} className="crm-job-card">
+                  <h3 className="fj-display font-bold text-fj-ink">{job.name}</h3>
+                  <p className="mt-3 font-fj-body text-fj-neutral-600">{job.description}</p>
+                  <p className="mt-4 font-fj-mono uppercase text-fj-neutral-600">{job.example}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* ── 5. HOW IT CONNECTS ───────────────────────────────────────────── */}
         <ServiceExplanation
@@ -774,11 +792,17 @@ export default function CrmAiAgentsPage() {
             </>
           }
           rightSlot={
+            <div className="crm-connection-media">
+              <picture className="crm-photo ">
+              <source type="image/avif" srcSet="/images/us/crm-ai-agents/crm-field-mapping-640.avif 640w, /images/us/crm-ai-agents/crm-field-mapping-960.avif 960w, /images/us/crm-ai-agents/crm-field-mapping-1280.avif 1280w" sizes="(min-width: 1120px) 408px, (min-width: 1024px) 38vw, calc(100vw - 48px)" />
+              <source type="image/webp" srcSet="/images/us/crm-ai-agents/crm-field-mapping-640.webp 640w, /images/us/crm-ai-agents/crm-field-mapping-960.webp 960w, /images/us/crm-ai-agents/crm-field-mapping-1280.webp 1280w" sizes="(min-width: 1120px) 408px, (min-width: 1024px) 38vw, calc(100vw - 48px)" />
+              <img src="/images/us/crm-ai-agents/crm-field-mapping-960.webp" srcSet="/images/us/crm-ai-agents/crm-field-mapping-640.webp 640w, /images/us/crm-ai-agents/crm-field-mapping-960.webp 960w, /images/us/crm-ai-agents/crm-field-mapping-1280.webp 1280w" sizes="(min-width: 1120px) 408px, (min-width: 1024px) 38vw, calc(100vw - 48px)" width="1536" height="1024" loading="lazy" decoding="async" alt="Two people connect groups of blank index cards with grey thread on a table." />
+            </picture>
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
               <div className="border-b border-fj-neutral-100 px-7 py-4">
                 <p
                   className="font-fj-mono font-medium uppercase text-fj-neutral-600"
-                  style={{ fontSize: '11px', letterSpacing: '0.14em' }}
+                  style={{ fontSize: '12px', letterSpacing: '0.14em' }}
                 >
                   Approval rules we set with you
                 </p>
@@ -786,32 +810,55 @@ export default function CrmAiAgentsPage() {
               <ul className="divide-y divide-fj-neutral-100 px-7">
                 {APPROVAL_RULES.map((r) => (
                   <li key={r.action} className="py-4">
-                    <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '0.9375rem', lineHeight: 1.3 }}>
+                    <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '1rem', lineHeight: 1.3 }}>
                       {r.action}
                     </p>
-                    <p className="mt-1 font-fj-body text-fj-neutral-600" style={{ fontSize: '0.875rem', lineHeight: 1.5 }}>
+                    <p className="mt-1 font-fj-body text-fj-neutral-600" style={{ fontSize: '1rem', lineHeight: 1.5 }}>
                       {r.rule}
                     </p>
                   </li>
                 ))}
               </ul>
               <div className="border-t border-fj-neutral-100 px-7 py-4">
-                <p className="font-fj-body text-[0.8125rem] text-fj-neutral-600">
+                <p className="font-fj-body text-[1rem] text-fj-neutral-600">
                   Every action is logged with the old value, the new value and the reason.
                 </p>
               </div>
+            </div>
             </div>
           }
         />
 
         {/* ── 6. HOW A PROJECT RUNS ────────────────────────────────────────── */}
-        <ServiceJourneyRow
-          eyebrow="HOW A PROJECT RUNS"
-          headline="From your brief to a live CRM agent in five steps"
-          lead="The agent earns trust in stages. It suggests first, and acts alone only where the review numbers from your own CRM support it."
-          stages={CRM_JOURNEY_STAGES}
-          closingNote="5 STEPS · DEMO BEFORE YOU SIGN · ONE FIXED PRICE PER PHASE"
-        />
+        <section className="crm-process py-10 md:py-14" style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.055) 1px, transparent 1px)', backgroundSize: '28px 28px', backgroundColor: '#FFFFFF' }}>
+          <div className="crm-section-inner">
+            <div className="crm-process-intro">
+              <p className="fj-eyebrow">HOW A PROJECT RUNS</p>
+              <h2 className="fj-display mt-3 font-extrabold text-fj-ink">From your brief to a live CRM agent in five steps</h2>
+              <p className="mt-4 max-w-[580px] font-fj-body text-fj-neutral-600">The agent earns trust in stages. It suggests first, and acts alone only where the review numbers from your own CRM support it.</p>
+            </div>
+            <div className="crm-process-layout">
+              <ol className="crm-stage-list">
+                {CRM_JOURNEY_STAGES.map((stage) => (
+                  <li key={stage.number} className="crm-stage">
+                    <div className="crm-stage-number font-fj-mono" aria-hidden="true">{stage.number}</div>
+                    <div>
+                      <p className="font-fj-mono font-semibold uppercase text-[#B23E13]" aria-hidden="true">STAGE {stage.number}</p>
+                      <h3 className="fj-display mt-2 font-bold text-fj-ink">{stage.title}</h3>
+                      <p className="mt-3 font-fj-body text-fj-neutral-600">{stage.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              <picture className="crm-photo crm-process-photo">
+              <source type="image/avif" srcSet="/images/us/crm-ai-agents/crm-draft-approval-640.avif 640w, /images/us/crm-ai-agents/crm-draft-approval-960.avif 960w, /images/us/crm-ai-agents/crm-draft-approval-1280.avif 1280w" sizes="(min-width: 1120px) 408px, (min-width: 1024px) 38vw, calc(100vw - 48px)" />
+              <source type="image/webp" srcSet="/images/us/crm-ai-agents/crm-draft-approval-640.webp 640w, /images/us/crm-ai-agents/crm-draft-approval-960.webp 960w, /images/us/crm-ai-agents/crm-draft-approval-1280.webp 1280w" sizes="(min-width: 1120px) 408px, (min-width: 1024px) 38vw, calc(100vw - 48px)" />
+              <img src="/images/us/crm-ai-agents/crm-draft-approval-960.webp" srcSet="/images/us/crm-ai-agents/crm-draft-approval-640.webp 640w, /images/us/crm-ai-agents/crm-draft-approval-960.webp 960w, /images/us/crm-ai-agents/crm-draft-approval-1280.webp 1280w" sizes="(min-width: 1120px) 408px, (min-width: 1024px) 38vw, calc(100vw - 48px)" width="1536" height="1024" loading="lazy" decoding="async" alt="A woman reviews grey draft blocks on a tablet at a desk." />
+            </picture>
+            </div>
+            <p className="crm-process-note font-fj-mono font-medium uppercase text-fj-neutral-600" aria-hidden="true">5 STEPS · DEMO BEFORE YOU SIGN · ONE FIXED PRICE PER PHASE</p>
+          </div>
+        </section>
 
         {/* ── 7. MID-PAGE CTA ──────────────────────────────────────────────── */}
         <MidPageCTA
@@ -842,7 +889,7 @@ export default function CrmAiAgentsPage() {
                   <li key={t.title} className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-5">
                     <p className="font-fj-mono text-xs font-bold text-[#B23E13]">{String(i + 1).padStart(2, '0')}</p>
                     <h3 className="fj-display mt-2 text-lg font-bold text-fj-ink">{t.title}</h3>
-                    <p className="mt-1.5 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{t.body}</p>
+                    <p className="mt-1.5 font-fj-body text-[16px] leading-relaxed text-fj-neutral-600">{t.body}</p>
                   </li>
                 ))}
               </ol>
@@ -859,7 +906,7 @@ export default function CrmAiAgentsPage() {
           rows={COMPARISON_ROWS}
           scrollRegionLabel="Comparison of a custom agent, a CRM vendor agent and a Zapier workflow"
           footer={
-            <div className="font-fj-body text-[0.8125rem] leading-relaxed text-fj-neutral-600">
+            <div className="font-fj-body text-[1rem] leading-relaxed text-fj-neutral-600">
               <p className="md:hidden">Swipe the table sideways to see every column.</p>
               <p className="mt-2">
                 Vendor details checked on 31 October 2026 against:{' '}
@@ -956,7 +1003,7 @@ export default function CrmAiAgentsPage() {
             <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.14em] text-fj-neutral-600">
               SOURCES FOR THE ANSWERS ABOVE, CHECKED 31 OCTOBER 2026
             </p>
-            <ul className="mt-3 space-y-2 font-fj-body text-[0.9375rem] leading-relaxed text-fj-neutral-600">
+            <ul className="mt-3 space-y-2 font-fj-body text-[1rem] leading-relaxed text-fj-neutral-600">
               {MARKET_PRICE_SOURCES.map((src) => (
                 <li key={src.url}>
                   <a href={src.url} target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>
