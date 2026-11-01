@@ -60,7 +60,7 @@ export default function WebDesignValueCalculator({
       <div className="pp-wrap">
         <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
           <div className="rv-badge" style={{ marginBottom: '14px' }}>
-            <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+            <svg className="rv-badge-icon" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
               <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
             </svg>
             <span>Interactive Website Performance ROI</span>

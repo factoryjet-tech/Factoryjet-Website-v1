@@ -17,7 +17,6 @@ import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
-import CityLinksUK from '@/components/v2/CityLinksUK';
 
 import { ukMetadata } from "./metadata";
 import { ukSchemas, UK_CRUMBS } from "./schema";
@@ -118,7 +117,8 @@ export default function UKPage() {
 
         <FAQ />
 
-        <CityLinksUK />
+        {/* 2026-11-01: CityLinksUK removed here. It repeated the Cities and
+            Services sections; all 21 UK city roots are in the footer. */}
 
         <section className="sec-lg" style={{ backgroundColor: "#F6F6F9", padding: "48px 0", borderTop: "1px solid #E6E6EC" }}>
           <div className="wrap" style={{ maxWidth: 1120, margin: "0 auto", padding: "0 16px" }}>
