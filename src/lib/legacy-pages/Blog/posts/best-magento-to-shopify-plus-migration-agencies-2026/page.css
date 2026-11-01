@@ -1,0 +1,36 @@
+.fj-magento-migration-visual { min-width: 0; color: #46403B; font-size: 16px; line-height: 1.8; overflow-wrap: break-word; }
+.fj-magento-migration-visual :is(h2, h3, h4) { text-align: left; text-wrap: balance; color: #14110F; scroll-margin-top: 112px; }
+.fj-magento-migration-visual h2 { margin-block: clamp(2.5rem, 5vw, 4rem) 1.1rem; font-size: clamp(1.375rem, 1.9vw, 1.875rem); line-height: 1.28; letter-spacing: -0.025em; }
+.fj-magento-migration-visual h3 { margin-top: 2.5rem; font-size: clamp(1.25rem, 1.8vw, 1.5rem); line-height: 1.35; }
+.fj-magento-migration-visual h4 { font-size: clamp(1.125rem, 1.6vw, 1.375rem); line-height: 1.4; }
+.fj-magento-migration-visual :is(p, li, td, th, summary) { font-size: 1rem; text-wrap: pretty; }
+.fj-magento-migration-visual :is(p, li) { line-height: 1.8; }
+.fj-magento-migration-visual :is(.text-xs, [class*='uppercase']) { font-size: 0.875rem; }
+.fj-magento-migration-visual .fj-migration-profile { margin-block: 1.75rem 2.5rem; padding-top: 1.25rem; border-top: 1px solid #E7DED6; }
+.fj-magento-migration-visual table { max-width: 100%; }
+.fj-magento-migration-visual.fj-magento-migration-visual .fj-migration-table-scroll { border: 1px solid #E7DED6; border-radius: 16px; overflow-x: auto; max-width: 100%; overscroll-behavior-inline: contain; }
+.fj-magento-migration-visual.fj-magento-migration-visual .fj-migration-table-scroll > table { display: table; overflow: visible; margin: 0; border: 0; border-radius: 0; }
+.fj-magento-migration-visual .fj-migration-table-scroll :is(th, td) { line-height: 1.65; vertical-align: top; }
+.fj-magento-migration-visual figure { margin-block: clamp(2rem, 4vw, 3rem); }
+.fj-magento-migration-visual picture { display: block; overflow: hidden; border-radius: clamp(14px, 2vw, 22px); border: 1px solid #E7DED6; box-shadow: 0 3px 8px rgb(20 17 15 / 3%), 0 18px 36px -28px rgb(20 17 15 / 24%); }
+.fj-magento-migration-visual picture img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; margin: 0; border-radius: 0; box-shadow: none; }
+.fj-magento-migration-visual figcaption { margin-top: 0.875rem; color: #6E635A; font-size: 0.875rem; line-height: 1.65; }
+.fj-magento-migration-visual details { border-color: #E7DED6; border-radius: 14px; }
+.fj-magento-migration-visual summary { min-height: 44px; cursor: pointer; display: list-item; align-content: center; line-height: 1.6; }
+.fj-magento-migration-visual :is(a, summary):focus-visible { outline: 2px solid #14110F; outline-offset: 4px; border-radius: 3px; }
+.fj-magento-migration-visual li + li { margin-top: 0.65rem; }
+@media (max-width: 639px) {
+  .fj-magento-migration-visual { font-size: 16px; }
+  .fj-magento-migration-visual :is(p, li, td, th, summary) { font-size: 16px; }
+  .fj-magento-migration-visual :is(.text-xs, [class*='uppercase']) { font-size: 14px; }
+  .fj-magento-migration-visual figcaption { font-size: 16px; }
+  .fj-magento-migration-visual .fj-migration-table-scroll table { min-width: 640px; }
+}
+
+.fj-magento-migration-visual.fj-magento-migration-visual .fj-migration-table-scroll:focus-within { outline: 2px solid #14110F; outline-offset: 4px; }
+
+.fj-magento-migration-visual.fj-magento-migration-visual .fj-migration-table-scroll > table:focus-visible { outline: 2px solid #14110F; outline-offset: -3px; }
+
+@media (max-width: 1024px) {
+  .fj-magento-migration-visual a { display: inline-block; min-height: 44px; min-width: 44px; max-width: 100%; overflow-wrap: anywhere; word-break: normal; }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import './best-magento-to-shopify-plus-migration-agencies-2026/page.css';
 import styles from './best-magento-to-shopify-plus-migration-agencies-2026.visual-qa.module.css';
 import type { BlogPost, FAQItem } from '../data.types';
 
@@ -439,7 +440,7 @@ export const post: BlogPost = {
   ],
   faqs: FAQS,
   content: (
-    <>
+    <div className="fj-magento-migration-visual">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -481,13 +482,14 @@ export const post: BlogPost = {
         <p className="text-gray-800 leading-relaxed mb-3">
           For a migration from Magento to Shopify, hire for the store you have. For enterprise Adobe Commerce, SDG, Domaine or Anatta. For B2B and ERP-heavy stores, Shero Commerce, ECommerce Partners or Fyresite. For mid-market brands, Netalico, Solo Media Group or Command C. For one website selling direct, Ruby Digital Agency or Black Belt Commerce. For a store tied to QuickBooks or an ERP with AI agents, FactoryJet.
         </p>
-        <p className="text-gray-800 leading-relaxed mb-3">
+      </div>
+
+      <p className="text-gray-800 leading-relaxed mb-3">
           We read all 12 firms on their own websites on 23 October 2026, and 10 of the other 11 in Shopify&rsquo;s partner directory as well (ECommerce Partners has no profile we could find): where each is based, its tier, the systems it names, its timeline, how it handles redirects and any price it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
         </p>
         <p className="text-gray-800 leading-relaxed">
           Short on time? <a href="/contact" className={link}>Send us your Magento version, extensions and ERP</a> and the founder will tell you which kind of firm fits your move.
         </p>
-      </div>
 
       <p className="mb-4">
         On 22 October 2026 we asked ChatGPT, Claude, Gemini, Perplexity and Google&rsquo;s AI answers two buyer questions, each several times: &ldquo;Who should I hire to migrate from Magento to Shopify Plus?&rdquo; and &ldquo;Which partner should migrate us from Salesforce Commerce Cloud to Shopify Plus?&rdquo; We collected 56 answers. They linked to 153 different pages. Of the 546 links, 206 went to list pages like this one.
@@ -505,7 +507,7 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-10 mb-4">The shortlist at a glance</h2>
       <p className="mb-4">Find the rows that match your store and the systems you run, then read those profiles in full.</p>
       <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className="fj-migration-table-scroll overflow-x-auto mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -549,7 +551,7 @@ export const post: BlogPost = {
         Many Magento owners start looking because of support dates. These rows come from <a href={ADOBE_LIFECYCLE_URL} className={link} rel="noopener" target="_blank">Adobe&rsquo;s Commerce lifecycle policy</a>, read on 23 October 2026. Adobe says each version gets three years of standard support from its release.
       </p>
       <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className="fj-migration-table-scroll overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -590,7 +592,7 @@ export const post: BlogPost = {
             {inGroup.map((f) => {
               const n = FIRMS.indexOf(f) + 1;
               return (
-                <div key={f.name} className="mb-8">
+                <div key={f.name} className="fj-migration-profile mb-8">
                   <h4 className="text-lg font-bold mt-6 mb-2">{n}. {f.name}</h4>
                   <p className="text-sm text-gray-600 mb-3">
                     <strong>Based:</strong> {f.based}. <strong>Type:</strong> {f.type}. <strong>Shopify partner tier:</strong> {f.tier}.
@@ -624,29 +626,57 @@ export const post: BlogPost = {
             })}
             {g === 'B2B and ERP-heavy stores' && (
               <figure className="my-8 not-prose">
-                <img
-                  src={`${IMG}/replatform.webp`}
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                  decoding="async"
-                  alt="A man in a green work shirt carries a plain cardboard box from old dark wooden shelves toward new pale metal shelves, with an orange tape gun on a stool"
-                  className="w-full h-auto rounded-xl"
-                />
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcSet={`${IMG}/catalog-attribute-mapping-640.avif 640w, ${IMG}/catalog-attribute-mapping-960.avif 960w, ${IMG}/catalog-attribute-mapping-1280.avif 1280w`}
+                    sizes="(min-width: 1280px) 680px, (min-width: 1024px) 56vw, (min-width: 768px) calc(100vw - 112px), calc(100vw - 72px)"
+                  />
+                  <source
+                    type="image/webp"
+                    srcSet={`${IMG}/catalog-attribute-mapping-640.webp 640w, ${IMG}/catalog-attribute-mapping-960.webp 960w, ${IMG}/catalog-attribute-mapping-1280.webp 1280w`}
+                    sizes="(min-width: 1280px) 680px, (min-width: 1024px) 56vw, (min-width: 768px) calc(100vw - 112px), calc(100vw - 72px)"
+                  />
+                  <img
+                    src={`${IMG}/catalog-attribute-mapping-1280.webp`}
+                    srcSet={`${IMG}/catalog-attribute-mapping-640.webp 640w, ${IMG}/catalog-attribute-mapping-960.webp 960w, ${IMG}/catalog-attribute-mapping-1280.webp 1280w`}
+                    sizes="(min-width: 1280px) 680px, (min-width: 1024px) 56vw, (min-width: 768px) calc(100vw - 112px), calc(100vw - 72px)"
+                    width={1280}
+                    height={853}
+                    loading="lazy"
+                    decoding="async"
+                    alt="Two people compare plumbing product grids while sorting blank index cards beside unbranded fittings."
+                    className="w-full h-auto rounded-xl"
+                  />
+                </picture>
                 <figcaption className="text-sm text-gray-600 mt-2">A migration is a stock move for your data. Every product, price list, customer and order needs a place on the new shelf before it leaves the old one.</figcaption>
               </figure>
             )}
             {g === 'Mid-market stores' && (
               <figure className="my-8 not-prose">
-                <img
-                  src={`${IMG}/redirects.webp`}
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                  decoding="async"
-                  alt="A woman with a short silver bob and a cream cardigan sits at a desk looking at a monitor showing two columns of grey boxes joined by thin lines, with an orange sticky note pad beside her"
-                  className="w-full h-auto rounded-xl"
-                />
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcSet={`${IMG}/redirect-map-review-640.avif 640w, ${IMG}/redirect-map-review-960.avif 960w, ${IMG}/redirect-map-review-1280.avif 1280w`}
+                    sizes="(min-width: 1280px) 680px, (min-width: 1024px) 56vw, (min-width: 768px) calc(100vw - 112px), calc(100vw - 72px)"
+                  />
+                  <source
+                    type="image/webp"
+                    srcSet={`${IMG}/redirect-map-review-640.webp 640w, ${IMG}/redirect-map-review-960.webp 960w, ${IMG}/redirect-map-review-1280.webp 1280w`}
+                    sizes="(min-width: 1280px) 680px, (min-width: 1024px) 56vw, (min-width: 768px) calc(100vw - 112px), calc(100vw - 72px)"
+                  />
+                  <img
+                    src={`${IMG}/redirect-map-review-1280.webp`}
+                    srcSet={`${IMG}/redirect-map-review-640.webp 640w, ${IMG}/redirect-map-review-960.webp 960w, ${IMG}/redirect-map-review-1280.webp 1280w`}
+                    sizes="(min-width: 1280px) 680px, (min-width: 1024px) 56vw, (min-width: 768px) calc(100vw - 112px), calc(100vw - 72px)"
+                    width={1280}
+                    height={853}
+                    loading="lazy"
+                    decoding="async"
+                    alt="A woman writes on blank paper beside a monitor showing two linked columns of grey blocks and an orange folder."
+                    className="w-full h-auto rounded-xl"
+                  />
+                </picture>
                 <figcaption className="text-sm text-gray-600 mt-2">A redirect map pairs every old Magento address with its new Shopify page. Ask to see it before any data moves.</figcaption>
               </figure>
             )}
@@ -667,7 +697,7 @@ export const post: BlogPost = {
         Most firms quote after an audit or discovery call. On the pages we read on 23 October 2026, three of the 11 other firms publish a figure. We copied them exactly. They are each firm&rsquo;s own figures, not FactoryJet prices or a market survey.
       </p>
       <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className="fj-migration-table-scroll overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -701,7 +731,7 @@ export const post: BlogPost = {
         <a href={SHOPIFY_MIGRATE_URL} className={link} rel="noopener" target="_blank">Shopify&rsquo;s migration help page</a> sets the order: products, then customers, then historical orders. It lists apps as an option for products, customers, historical orders, gift cards and store credit, blogs and pages. Shopify&rsquo;s free <a href={STORE_MIGRATION_APP_URL} className={link} rel="noopener" target="_blank">Store Migration app</a>{' '}does not list Magento as a source. Magento stores move with a third-party tool such as <a href="https://www.shopping-cart-migration.com/shopping-cart-migration-options/1066-magento-to-shopify-migration" className={link} rel="noopener" target="_blank">Cart2Cart</a>,{' '}<a href="https://litextension.com/shopify-migration/magento-to-shopify-migration.html" className={link} rel="noopener" target="_blank">LitExtension</a>{' '}or <a href="https://matrixify.app/migrate-to-shopify/magento/" className={link} rel="noopener" target="_blank">Matrixify</a>, with scripts, or with a partner&rsquo;s own tools. Magento to Shopify product migration is usually the hardest part. Here is what the firms on this page say about each kind of data.
       </p>
       <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className="fj-migration-table-scroll overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -723,15 +753,29 @@ export const post: BlogPost = {
       </div>
 
       <figure className="my-8 not-prose">
-        <img
-          src={`${IMG}/compare.webp`}
-          width={1200}
-          height={800}
-          loading="lazy"
-          decoding="async"
-          alt="A woman in a white blouse opens an orange folder on an oak desk while a plain grey folder and a plain blue folder lie closed beside it"
-          className="w-full h-auto rounded-xl"
-        />
+        <picture>
+          <source
+            type="image/avif"
+            srcSet={`${IMG}/product-data-mapping-640.avif 640w, ${IMG}/product-data-mapping-960.avif 960w, ${IMG}/product-data-mapping-1280.avif 1280w`}
+            sizes="(min-width: 1280px) 680px, (min-width: 1024px) 56vw, (min-width: 768px) calc(100vw - 112px), calc(100vw - 72px)"
+          />
+          <source
+            type="image/webp"
+            srcSet={`${IMG}/product-data-mapping-640.webp 640w, ${IMG}/product-data-mapping-960.webp 960w, ${IMG}/product-data-mapping-1280.webp 1280w`}
+            sizes="(min-width: 1280px) 680px, (min-width: 1024px) 56vw, (min-width: 768px) calc(100vw - 112px), calc(100vw - 72px)"
+          />
+          <img
+            src={`${IMG}/product-data-mapping-1280.webp`}
+            srcSet={`${IMG}/product-data-mapping-640.webp 640w, ${IMG}/product-data-mapping-960.webp 960w, ${IMG}/product-data-mapping-1280.webp 1280w`}
+            sizes="(min-width: 1280px) 680px, (min-width: 1024px) 56vw, (min-width: 768px) calc(100vw - 112px), calc(100vw - 72px)"
+            width={1280}
+            height={853}
+            loading="lazy"
+            decoding="async"
+            alt="Two people review bowl photographs and blank cards beside two monitors displaying grids of bowls."
+            className="w-full h-auto rounded-xl"
+          />
+        </picture>
         <figcaption className="text-sm text-gray-600 mt-2">Send each firm the same brief, with your Magento version, extension list and ERP, so every quote covers the same scope.</figcaption>
       </figure>
 
@@ -816,6 +860,6 @@ export const post: BlogPost = {
         </p>
         <a href="/contact" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">Book a free call with the founder</a>
       </div>
-    </>
+    </div>
   ),
 };
