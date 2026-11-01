@@ -1,45 +1,166 @@
-/* Existing profile facts, shown as an accessible label/value table. */
-:global(.blog-post .blog-prose) .profileFacts {
+/* Only this post imports this module. Repeated root specificity preserves the
+   shared template rules elsewhere while containing these editorial overrides. */
+.tiktokVisual {
+  min-width: 0;
+  color: #46403B;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.tiktokVisual :is(h2, h3, h4) {
+  text-wrap: balance;
+  scroll-margin-top: 104px;
+}
+.tiktokVisual > h2 {
+  margin-top: clamp(2.25rem, 4vw, 3.5rem);
+  margin-bottom: 1rem;
+  font-size: clamp(1.375rem, 1.25rem + 0.6vw, 2rem);
+  line-height: 1.25;
+}
+.tiktokVisual h3 {
+  font-size: clamp(1.125rem, 1rem + 0.6vw, 1.5rem);
+  line-height: 1.3;
+}
+.tiktokVisual h4 {
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  line-height: 1.3;
+}
+.tiktokVisual.tiktokVisual :is(p, li, th, td, summary) {
+  font-size: 16px;
+  line-height: 1.75;
+}
+.tiktokVisual p {
+  text-wrap: pretty;
+}
+.tiktokVisual p[class*='uppercase'] {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.tiktokVisual .profileCard {
+  margin: 1.5rem 0 2rem;
+  padding: clamp(1rem, 2.5vw, 1.75rem);
+  border: 1px solid #E5E7EB;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+}
+.tiktokVisual .profileCard h4 {
+  margin-top: 0;
+}
+.tiktokVisual.tiktokVisual.tiktokVisual .profileFacts {
   display: table;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   margin: 1rem 0 1.5rem;
-  background-color: #FFFFFF;
   border: 1px solid #E5E7EB;
   border-radius: 12px;
+  background-color: #FFFFFF;
   overflow: hidden;
 }
-:global(.blog-post .blog-prose) .profileFacts :is(th, td) {
+.tiktokVisual.tiktokVisual .profileFacts :is(th, td) {
   min-width: 0;
   max-width: none;
   padding: 14px 16px;
   vertical-align: top;
   text-align: left;
-  line-height: 1.65;
   font-weight: 400;
   border-bottom: 1px solid #E5E7EB;
-  word-break: normal;
   overflow-wrap: break-word;
+  word-break: normal;
 }
-:global(.blog-post .blog-prose) .profileFacts th:first-child {
+.tiktokVisual.tiktokVisual .profileFacts th:first-child {
   position: static;
   width: 31%;
+  min-width: 0;
+  max-width: none;
   font-weight: 700;
+  box-shadow: none;
 }
-:global(.blog-post .blog-prose) .profileFacts tr:last-child :is(th, td) { border-bottom: 0; }
-:global(.blog-post .blog-prose) .profileFacts p:last-child { margin-bottom: 0; }
-@media (max-width: 639px) {
-  :global(.blog-post .blog-prose) .profileFacts,
-  :global(.blog-post .blog-prose) .profileFacts :is(tbody, tr, th, td) { display: block; width: 100%; }
-  :global(.blog-post .blog-prose) .profileFacts th:first-child { width: 100%; padding: 14px 16px 2px; border-bottom: 0; }
-  :global(.blog-post .blog-prose) .profileFacts td { padding: 2px 16px 14px; }
+.tiktokVisual.tiktokVisual .profileFacts td:first-child {
+  position: static;
+  box-shadow: none;
 }
-
-/* Existing buyer need and named agency choices, compared without adding copy. */
-:global(.blog-post .blog-prose) .choiceFacts th:first-child { width: 40%; font-weight: 600; }
-/* Preserve the ordered-list markers on the same existing criteria. */
-:global(.blog-post .blog-prose) .orderedFacts tbody { counter-reset: existing-criterion; }
-:global(.blog-post .blog-prose) .orderedFacts tr { counter-increment: existing-criterion; }
-:global(.blog-post .blog-prose) .orderedFacts th:first-child::before { content: counter(existing-criterion) ". "; font-weight: 400; }
-@media (max-width: 639px) { :global(.blog-post .blog-prose) .choiceFacts th:first-child { width: 100%; } }
+.tiktokVisual .profileFacts tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+.tiktokVisual .profileFacts p:last-child {
+  margin-bottom: 0;
+}
+.tiktokVisual.tiktokVisual .choiceFacts th:first-child {
+  width: 40%;
+  font-weight: 600;
+}
+.tiktokVisual.tiktokVisual table thead tr {
+  background-color: #FFF8F5;
+  color: #14110F;
+}
+.tiktokVisual.tiktokVisual table thead th {
+  border-color: #E5E7EB;
+}
+.tiktokVisual.tiktokVisual table:focus-visible {
+  outline: 2px solid #B23E13;
+  outline-offset: -3px;
+}
+.tiktokVisual figure {
+  margin: clamp(1.75rem, 4vw, 2.75rem) 0;
+}
+.tiktokVisual picture {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px #14110F05, 0 12px 28px #14110F0A;
+}
+.tiktokVisual picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+}
+.tiktokVisual figcaption {
+  margin-top: 0.75rem;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #46403B;
+  text-wrap: pretty;
+}
+.tiktokVisual summary {
+  min-height: 44px;
+  padding-block: 10px;
+}
+.tiktokVisual summary:focus-visible {
+  outline: 2px solid #B23E13;
+  outline-offset: 3px;
+}
+@media (max-width: 767px) {
+  .tiktokVisual .profileCard {
+    padding: 1rem;
+  }
+  .tiktokVisual.tiktokVisual.tiktokVisual .profileFacts,
+  .tiktokVisual.tiktokVisual .profileFacts :is(tbody, tr, th, td) {
+    display: block;
+    width: 100%;
+  }
+  .tiktokVisual.tiktokVisual .profileFacts th:first-child {
+    width: 100%;
+    padding: 14px 12px 2px;
+    border-bottom: 0;
+  }
+  .tiktokVisual.tiktokVisual .profileFacts td {
+    padding: 2px 12px 14px;
+  }
+  .tiktokVisual picture {
+    border-radius: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .tiktokVisual a {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+}

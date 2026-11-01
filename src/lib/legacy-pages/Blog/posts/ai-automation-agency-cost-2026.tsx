@@ -1,5 +1,6 @@
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
+import './ai-automation-agency-cost-2026/page.css';
 
 /*
  * AI automation agency cost (US first, with UK and Australia notes), 2026. DRAFTED 21 Oct 2026,
@@ -58,14 +59,14 @@ const IMG = '/blog-images/ai-automation-agency-cost-2026';
 
 function Table({ head, rows }: { head: string[]; rows: React.ReactNode[][] }) {
   return (
-    <div className="my-6">
+    <div className="fj-cost-table my-6">
       <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
-      <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className="fj-cost-table-scroll" tabIndex={0} style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
       <table className="w-full border-collapse text-sm" style={{ minWidth: head.length > 3 ? '720px' : '560px' }}>
         <thead>
           <tr className="bg-gray-800 text-white">
             {head.map((h) => (
-              <th key={h} className="p-3 text-left border border-gray-700">{h}</th>
+              <th key={h} scope="col" className="p-3 text-left border border-gray-700">{h}</th>
             ))}
           </tr>
         </thead>
@@ -222,7 +223,7 @@ export const post: BlogPost = {
   ],
   faqs,
   content: (
-    <article>
+    <article className="fj-cost-2026">
       {/* Answer-first block */}
       <div className="bg-white border-2 border-[#E5DFD7] rounded-xl p-6 sm:p-8 mb-10">
         <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-3">The short answer</p>
@@ -325,15 +326,21 @@ export const post: BlogPost = {
         the clauses.
       </p>
 
-      <figure className="my-8">
-        <img src={`${IMG}-models.webp`}
-          alt="In a bright meeting room, a woman with shoulder-length red hair in an olive blazer draws two boxes joined by an arrow on a whiteboard with an orange marker while a young man in a grey hoodie watches from the table."
-          width={1200}
-          height={800}
+      <figure className="fj-cost-photo my-8">
+        <picture>
+          <source type="image/avif" srcSet="/images/blog/ai-automation-agency-cost-2026/project-retainer-quotes-640.avif 640w, /images/blog/ai-automation-agency-cost-2026/project-retainer-quotes-960.avif 960w, /images/blog/ai-automation-agency-cost-2026/project-retainer-quotes-1280.avif 1280w" sizes="(min-width: 1280px) 414px, (min-width: 1024px) calc(41.333vw - 115.32px), (min-width: 768px) calc(62vw - 85.56px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+          <source type="image/webp" srcSet="/images/blog/ai-automation-agency-cost-2026/project-retainer-quotes-640.webp 640w, /images/blog/ai-automation-agency-cost-2026/project-retainer-quotes-960.webp 960w, /images/blog/ai-automation-agency-cost-2026/project-retainer-quotes-1280.webp 1280w" sizes="(min-width: 1280px) 414px, (min-width: 1024px) calc(41.333vw - 115.32px), (min-width: 768px) calc(62vw - 85.56px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+        <img src="/images/blog/ai-automation-agency-cost-2026/project-retainer-quotes-960.webp"
+          srcSet="/images/blog/ai-automation-agency-cost-2026/project-retainer-quotes-640.webp 640w, /images/blog/ai-automation-agency-cost-2026/project-retainer-quotes-960.webp 960w, /images/blog/ai-automation-agency-cost-2026/project-retainer-quotes-1280.webp 1280w"
+          sizes="(min-width: 1280px) 414px, (min-width: 1024px) calc(41.333vw - 115.32px), (min-width: 768px) calc(62vw - 85.56px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)"
+          alt="Two people compare a thin stack of papers and an open binder beside four trays of coloured cards."
+          width={1280}
+          height={853}
           loading="lazy"
           decoding="async"
           className="w-full h-auto rounded-xl border border-gray-200"
         />
+        </picture>
         <figcaption className="text-xs text-gray-500 mt-2">
           A fixed project prices one defined job. A retainer prices a team&apos;s time for the next ones.
         </figcaption>
@@ -381,15 +388,21 @@ export const post: BlogPost = {
         <a href="/blog/enterprise-ai-agent-cost-2026">enterprise AI agent cost guide</a>.
       </p>
 
-      <figure className="my-8">
-        <img src={`${IMG}-sizes.webp`}
-          alt="Seen from behind on a warehouse mezzanine, a man in rimless glasses and a navy pullover and a woman with a short white pixie cut in a burgundy cardigan study a monitor showing three grey bars of different heights."
-          width={1200}
-          height={800}
+      <figure className="fj-cost-photo my-8">
+        <picture>
+          <source type="image/avif" srcSet="/images/blog/ai-automation-agency-cost-2026/distributor-scope-approvals-640.avif 640w, /images/blog/ai-automation-agency-cost-2026/distributor-scope-approvals-960.avif 960w, /images/blog/ai-automation-agency-cost-2026/distributor-scope-approvals-1280.avif 1280w" sizes="(min-width: 1280px) 414px, (min-width: 1024px) calc(41.333vw - 115.32px), (min-width: 768px) calc(62vw - 85.56px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+          <source type="image/webp" srcSet="/images/blog/ai-automation-agency-cost-2026/distributor-scope-approvals-640.webp 640w, /images/blog/ai-automation-agency-cost-2026/distributor-scope-approvals-960.webp 960w, /images/blog/ai-automation-agency-cost-2026/distributor-scope-approvals-1280.webp 1280w" sizes="(min-width: 1280px) 414px, (min-width: 1024px) calc(41.333vw - 115.32px), (min-width: 768px) calc(62vw - 85.56px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+        <img src="/images/blog/ai-automation-agency-cost-2026/distributor-scope-approvals-960.webp"
+          srcSet="/images/blog/ai-automation-agency-cost-2026/distributor-scope-approvals-640.webp 640w, /images/blog/ai-automation-agency-cost-2026/distributor-scope-approvals-960.webp 960w, /images/blog/ai-automation-agency-cost-2026/distributor-scope-approvals-1280.webp 1280w"
+          sizes="(min-width: 1280px) 414px, (min-width: 1024px) calc(41.333vw - 115.32px), (min-width: 768px) calc(62vw - 85.56px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)"
+          alt="Three people compare papers and an open binder at a desk with several trays and pipe storage behind them."
+          width={1280}
+          height={853}
           loading="lazy"
           decoding="async"
           className="w-full h-auto rounded-xl border border-gray-200"
         />
+        </picture>
         <figcaption className="text-xs text-gray-500 mt-2">
           A mid-size distributor pays more than a shop for the same workflow mainly because the ERP and the approvals
           come with it.
@@ -544,15 +557,21 @@ export const post: BlogPost = {
         <a href="/blog/why-ai-agent-projects-fail-2026">guide to why AI agent projects fail</a>.
       </p>
 
-      <figure className="my-8">
-        <img src={`${IMG}-redflags.webp`}
-          alt="In a quiet home office with a window onto trees, a woman with long dark wavy hair in a white linen shirt reads a stapled contract with a pen in her hand, an orange mug beside her."
-          width={1200}
-          height={800}
+      <figure className="fj-cost-photo my-8">
+        <picture>
+          <source type="image/avif" srcSet="/images/blog/ai-automation-agency-cost-2026/automation-contract-records-640.avif 640w, /images/blog/ai-automation-agency-cost-2026/automation-contract-records-960.avif 960w, /images/blog/ai-automation-agency-cost-2026/automation-contract-records-1280.avif 1280w" sizes="(min-width: 1280px) 414px, (min-width: 1024px) calc(41.333vw - 115.32px), (min-width: 768px) calc(62vw - 85.56px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+          <source type="image/webp" srcSet="/images/blog/ai-automation-agency-cost-2026/automation-contract-records-640.webp 640w, /images/blog/ai-automation-agency-cost-2026/automation-contract-records-960.webp 960w, /images/blog/ai-automation-agency-cost-2026/automation-contract-records-1280.webp 1280w" sizes="(min-width: 1280px) 414px, (min-width: 1024px) calc(41.333vw - 115.32px), (min-width: 768px) calc(62vw - 85.56px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+        <img src="/images/blog/ai-automation-agency-cost-2026/automation-contract-records-960.webp"
+          srcSet="/images/blog/ai-automation-agency-cost-2026/automation-contract-records-640.webp 640w, /images/blog/ai-automation-agency-cost-2026/automation-contract-records-960.webp 960w, /images/blog/ai-automation-agency-cost-2026/automation-contract-records-1280.webp 1280w"
+          sizes="(min-width: 1280px) 414px, (min-width: 1024px) calc(41.333vw - 115.32px), (min-width: 768px) calc(62vw - 85.56px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)"
+          alt="Two people match papers with compact cards bearing grey fields and orange blocks beside an open binder and a black tray."
+          width={1280}
+          height={853}
           loading="lazy"
           decoding="async"
           className="w-full h-auto rounded-xl border border-gray-200"
         />
+        </picture>
         <figcaption className="text-xs text-gray-500 mt-2">
           Read the contract for a demo clause as closely as the price: a slide deck is not a demo.
         </figcaption>

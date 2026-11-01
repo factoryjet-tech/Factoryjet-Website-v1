@@ -52,6 +52,7 @@
 .fj-au-receptionist-compare :is(a, table):focus-visible { outline: 2px solid #B23E13; outline-offset: 4px; }
 .fj-au-receptionist-compare > div:last-child > a { min-height: 44px; }
 @media (max-width: 767px) {
+  .fj-au-receptionist-compare .fj-au-receptionist-table.fj-au-receptionist-table :is(th, td):first-child { position: static; }
   .fj-au-receptionist-compare :is(p, li, th, td, figcaption) { font-size: 16px; }
   .fj-au-receptionist-compare #answer-first > p:first-child { font-size: 12px; }
   .fj-au-receptionist-compare > h2 { font-size: 25px; }

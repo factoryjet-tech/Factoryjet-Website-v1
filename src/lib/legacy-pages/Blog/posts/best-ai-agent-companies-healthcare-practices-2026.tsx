@@ -401,7 +401,7 @@ export const post: BlogPost = {
   ],
   faqs: FAQS,
   content: (
-    <>
+    <div className={styles.healthcareArticle}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -443,13 +443,13 @@ export const post: BlogPost = {
         <p className="text-gray-800 leading-relaxed mb-3">
           Pick the job first. For phone and front desk agents you subscribe to, Assort Health, Arini (dental), Sully.ai or Keragon. For health systems, Notable or Kore.ai. For notes drafted from the visit, Suki or Abridge. To have an agent built around your own EHR, Light-it, ScienceSoft, Technology Rivers, EffectiveSoft or FactoryJet.
         </p>
-        <p className="text-gray-800 leading-relaxed mb-3">
+      </div>
+      <p className="text-gray-800 leading-relaxed mb-3">
           We read all 13 companies on their own websites on 23 October 2026: where each is based, what its agent does, which EHRs it names, what it says about HIPAA and BAAs, and any price it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
         </p>
         <p className="text-gray-800 leading-relaxed">
           <a href="/contact" className={link}>Tell us your EHR and the calls you miss</a>, and the founder will tell you which kind of company fits.
         </p>
-      </div>
 
       <p className="mb-4">
         On 22 October 2026 we asked ChatGPT, Claude, Gemini, Perplexity and Google&rsquo;s AI answers the same question several times: &ldquo;Which companies build AI agents for healthcare practices?&rdquo; We collected 28 answers. They linked to 129 different pages, and 162 of the 391 links went to list pages. The answers mixed software products, development firms and electronic health record vendors without saying which was which.
@@ -506,7 +506,7 @@ export const post: BlogPost = {
       </div>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How we built this list</h2>
-      <ol className="list-decimal pl-6 mb-6 space-y-2">
+      <ol className={`${styles.researchSteps} list-decimal pl-6 mb-6 space-y-2`}>
         <li><strong>Start from the buyer&rsquo;s question.</strong> We began with what practices ask: which companies build AI agents for healthcare, which are HIPAA compliant, what they cost and which EHRs they connect to.</li>
         <li><strong>Start from the companies AI answers name.</strong> We took the companies cited in those 28 answers and sorted them by what they sell.</li>
         <li><strong>Keep only companies with a US base on their own site.</strong> A press page, footer address, privacy policy or contact page counts. A logo does not.</li>
@@ -542,7 +542,7 @@ export const post: BlogPost = {
             {inGroup.map((f) => {
               const n = FIRMS.indexOf(f) + 1;
               return (
-                <div key={f.name} className="mb-8">
+                <div key={f.name} className={styles.companyProfile}>
                   <h4 className="text-lg font-bold mt-6 mb-2">{n}. {f.name}</h4>
                   <p className="text-sm text-gray-600 mb-3">
                     <strong>Based:</strong> {f.based}. <strong>Type:</strong> {f.type}.
@@ -568,29 +568,41 @@ export const post: BlogPost = {
             })}
             {g === 'Front desk and phone' && (
               <figure className="my-8 not-prose">
-                <img
-                  src={`${IMG}/phone.webp`}
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                  decoding="async"
-                  alt="A man in a white coat at a dental clinic reception counter holds a black desk phone to his ear while looking at a monitor with coloured calendar blocks, beside an orange cup of pens"
-                  className="w-full h-auto rounded-xl"
-                />
+                <picture>
+                  <source type="image/avif" srcSet={`${IMG}/dental-phone-scheduling-640.avif 640w, ${IMG}/dental-phone-scheduling-960.avif 960w, ${IMG}/dental-phone-scheduling-1280.avif 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.67vw - 162px), (min-width: 768px) calc(100vw - 114px), calc(100vw - 66px)" />
+                  <source type="image/webp" srcSet={`${IMG}/dental-phone-scheduling-640.webp 640w, ${IMG}/dental-phone-scheduling-960.webp 960w, ${IMG}/dental-phone-scheduling-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.67vw - 162px), (min-width: 768px) calc(100vw - 114px), calc(100vw - 66px)" />
+                  <img
+                    src={`${IMG}/dental-phone-scheduling-960.webp`}
+                    srcSet={`${IMG}/dental-phone-scheduling-640.webp 640w, ${IMG}/dental-phone-scheduling-960.webp 960w, ${IMG}/dental-phone-scheduling-1280.webp 1280w`}
+                    sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.67vw - 162px), (min-width: 768px) calc(100vw - 114px), calc(100vw - 66px)"
+                    width={1536}
+                    height={1024}
+                    loading="lazy"
+                    decoding="async"
+                    alt="A man speaks into a telephone handset beside blank appointment tiles at a dental reception counter."
+                    className={styles.sectionPhoto}
+                  />
+                </picture>
                 <figcaption className="text-sm text-gray-600 mt-2">Most practices start with the phone. Ask every vendor to show a booking landing in your own schedule, not a demo calendar.</figcaption>
               </figure>
             )}
             {g === 'Clinical documentation' && (
               <figure className="my-8 not-prose">
-                <img
-                  src={`${IMG}/visit.webp`}
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                  decoding="async"
-                  alt="A physician in a navy cardigan talks with an older man in a beige jacket across a small desk, with a tablet lying face down and an orange mug beside it"
-                  className="w-full h-auto rounded-xl"
-                />
+                <picture>
+                  <source type="image/avif" srcSet={`${IMG}/ambient-scribe-consultation-640.avif 640w, ${IMG}/ambient-scribe-consultation-960.avif 960w, ${IMG}/ambient-scribe-consultation-1280.avif 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.67vw - 162px), (min-width: 768px) calc(100vw - 114px), calc(100vw - 66px)" />
+                  <source type="image/webp" srcSet={`${IMG}/ambient-scribe-consultation-640.webp 640w, ${IMG}/ambient-scribe-consultation-960.webp 960w, ${IMG}/ambient-scribe-consultation-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.67vw - 162px), (min-width: 768px) calc(100vw - 114px), calc(100vw - 66px)" />
+                  <img
+                    src={`${IMG}/ambient-scribe-consultation-960.webp`}
+                    srcSet={`${IMG}/ambient-scribe-consultation-640.webp 640w, ${IMG}/ambient-scribe-consultation-960.webp 960w, ${IMG}/ambient-scribe-consultation-1280.webp 1280w`}
+                    sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.67vw - 162px), (min-width: 768px) calc(100vw - 114px), calc(100vw - 66px)"
+                    width={1536}
+                    height={1024}
+                    loading="lazy"
+                    decoding="async"
+                    alt="A clinician listens to a patient seen from behind beside a face down tablet in an exam room."
+                    className={styles.sectionPhoto}
+                  />
+                </picture>
                 <figcaption className="text-sm text-gray-600 mt-2">An ambient scribe works in the exam room, not at the front desk. The clinician still reviews and signs the note.</figcaption>
               </figure>
             )}
@@ -651,20 +663,26 @@ export const post: BlogPost = {
       </tbody></table>
 
       <figure className="my-8 not-prose">
-        <img
-          src={`${IMG}/manager.webp`}
-          width={1200}
-          height={800}
-          loading="lazy"
-          decoding="async"
-          alt="A man in glasses and a light grey sweater reads printed pages at a desk with an open orange folder and a laptop"
-          className="w-full h-auto rounded-xl"
-        />
+        <picture>
+                  <source type="image/avif" srcSet={`${IMG}/practice-manager-scheduling-640.avif 640w, ${IMG}/practice-manager-scheduling-960.avif 960w, ${IMG}/practice-manager-scheduling-1280.avif 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.67vw - 162px), (min-width: 768px) calc(100vw - 114px), calc(100vw - 66px)" />
+                  <source type="image/webp" srcSet={`${IMG}/practice-manager-scheduling-640.webp 640w, ${IMG}/practice-manager-scheduling-960.webp 960w, ${IMG}/practice-manager-scheduling-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.67vw - 162px), (min-width: 768px) calc(100vw - 114px), calc(100vw - 66px)" />
+                  <img
+                    src={`${IMG}/practice-manager-scheduling-960.webp`}
+                    srcSet={`${IMG}/practice-manager-scheduling-640.webp 640w, ${IMG}/practice-manager-scheduling-960.webp 960w, ${IMG}/practice-manager-scheduling-1280.webp 1280w`}
+                    sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.67vw - 162px), (min-width: 768px) calc(100vw - 114px), calc(100vw - 66px)"
+                    width={1536}
+                    height={1024}
+                    loading="lazy"
+                    decoding="async"
+                    alt="A woman compares blank sheets beside coloured scheduling tiles in a medical practice office."
+                    className={styles.sectionPhoto}
+                  />
+                </picture>
         <figcaption className="text-sm text-gray-600 mt-2">Read the BAA and the EHR list before the demo. Those two documents rule out most vendors faster than any feature list.</figcaption>
       </figure>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How to choose a healthcare AI agent company: 7 steps</h2>
-      <ol className="space-y-3 mb-8 not-prose list-none pl-0">
+      <ol className={`${styles.selectionSteps} mb-8 not-prose list-none pl-0`}>
         <li className="rounded-xl border border-gray-200 p-4">
           <p className="font-semibold">1. Count the calls you miss and why</p>
           <p className="mt-2 text-gray-700">Pull a week of phone data. Note how many calls go unanswered, at what hours, and what callers wanted: booking, refills, directions, billing. That list is your agent&rsquo;s job description.</p>
@@ -715,6 +733,6 @@ export const post: BlogPost = {
         </p>
         <a href="/services/healthcare-ai-agents" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">See our healthcare AI agents</a>
       </div>
-    </>
+    </div>
   ),
 };

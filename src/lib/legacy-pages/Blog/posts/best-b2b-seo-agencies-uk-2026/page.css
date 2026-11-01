@@ -22,6 +22,7 @@
   .fj-b2b-uk-2026 a:not([class*="bg-"]) { display: inline-block; min-height: 44px; min-width: 44px; max-width: 100%; align-content: center; vertical-align: baseline; }
 }
 @media (max-width: 767px) {
+  .fj-b2b-uk-2026 .fj-b2b-uk-table table :is(th, td):first-child { position: static; }
   .fj-b2b-uk-2026 :is(p, li, th, td, figcaption) { font-size: 1rem; }
   .fj-b2b-uk-2026 h2[class] { font-size: 1.5rem; }
 }

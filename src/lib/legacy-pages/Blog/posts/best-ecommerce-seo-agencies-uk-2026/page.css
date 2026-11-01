@@ -178,3 +178,9 @@
 .uk-ecommerce-seo-guide .uk-commerce-table.uk-commerce-table thead th:first-child {
   background: #14110F;
 }
+
+@media (max-width: 767px) {
+  .uk-ecommerce-seo-guide .uk-commerce-table.uk-commerce-table :is(th, td):first-child {
+    position: static;
+  }
+}

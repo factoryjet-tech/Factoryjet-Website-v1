@@ -43,3 +43,119 @@
 :global(.blog-post .blog-prose) .orderedFacts tr { counter-increment: existing-criterion; }
 :global(.blog-post .blog-prose) .orderedFacts th:first-child::before { content: counter(existing-criterion) ". "; font-weight: 400; }
 @media (max-width: 639px) { :global(.blog-post .blog-prose) .choiceFacts th:first-child { width: 100%; } }
+
+/* Page-local editorial treatment; shared blog chrome remains untouched. */
+.visualRoot {
+  min-width: 0;
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.visualRoot :is(h2, h3, h4) {
+  max-width: 100%;
+  text-align: left;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  scroll-margin-top: 6rem;
+  letter-spacing: -0.025em;
+}
+.visualRoot h2 {
+  margin-block: clamp(2.75rem, 5vw, 4.25rem) 1.125rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.2;
+}
+.visualRoot h3 { line-height: 1.35; }
+.visualRoot h4 { font-size: clamp(1.125rem, 2vw, 1.375rem); line-height: 1.35; }
+.visualRoot :is(p, li, td, th, summary, figcaption) {
+  font-size: 1rem;
+  text-wrap: pretty;
+}
+.visualRoot p { line-height: 1.8; }
+.visualRoot :is(p, li, td, th) { overflow-wrap: break-word; }
+.visualRoot a { color: #B23E13; text-underline-offset: 0.2em; }
+.visualRoot a:focus-visible,
+.visualRoot summary:focus-visible {
+  outline: 2px solid #B23E13;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+.visualRoot .profile {
+  margin-block: 1.75rem 2.5rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid #E5E7EB;
+}
+.visualRoot .profile h4 { margin-top: 0; }
+.visualRoot .profile > p:last-child a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.visualRoot .tableFrame {
+  max-width: 100%;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: #9CA3AF #F9FAFB;
+}
+.visualRoot .tableFrame:focus-visible {
+  outline: 2px solid #B23E13;
+  outline-offset: 4px;
+}
+.visualRoot .tableFrame table { margin: 0; }
+.visualRoot .tableFrame thead tr { background: #F9FAFB; color: #111827; }
+.visualRoot .tableFrame th { border-color: #E5E7EB; }
+.visualRoot .tableFrame :is(th, td) { line-height: 1.65; }
+.visualRoot figure { margin-block: clamp(2rem, 4vw, 3rem); }
+.visualRoot picture {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+  border-radius: clamp(16px, 2vw, 24px);
+  box-shadow: 0 2px 4px #11182705, 0 12px 28px #1118270a;
+}
+.visualRoot picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+  box-shadow: none;
+}
+.visualRoot figcaption {
+  max-width: 60ch;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid #E5E7EB;
+  line-height: 1.65;
+  color: #4B5563;
+}
+.visualRoot details { padding: 0; border-radius: 16px; }
+.visualRoot summary {
+  min-height: 48px;
+  padding: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.visualRoot details > p { margin: 0; padding: 0 1rem 1.25rem; }
+.visualRoot details[open] { border-color: #9CA3AF; }
+@media (max-width: 1024px) {
+  .visualRoot a { min-height: 44px; min-width: 44px; display: inline-block; vertical-align: baseline; }
+}
+@media (max-width: 639px) {
+  .visualRoot .tableFrame { border-radius: 12px; }
+  .visualRoot h3 { font-size: 1.125rem; }
+}
+
+.visualRoot a[class*="text-white"] { color: #FFFFFF; }
+
+.visualRoot .profile h4 { font-weight: 800; }
+
+.visualRoot .tableFrame table:focus-visible {
+  outline: 2px solid #B23E13;
+  outline-offset: -3px;
+}

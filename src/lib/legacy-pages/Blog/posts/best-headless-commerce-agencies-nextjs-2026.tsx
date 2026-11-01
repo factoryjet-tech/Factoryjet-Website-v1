@@ -411,7 +411,7 @@ export const post: BlogPost = {
   ],
   faqs: FAQS,
   content: (
-    <>
+    <div className={styles.visualRoot}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -453,13 +453,13 @@ export const post: BlogPost = {
         <p className="text-gray-800 leading-relaxed mb-3">
           Pick by the platform behind the storefront. On Shopify and other backends, 1Digital Agency, IWD Agency, The Frontend Company or Epic Design Labs. On BigCommerce, MAK Digital Design or Mira Commerce. For a large agency, Codal or Americaneagle. Abroad with US clients, Calashock, Naturaily or FocusReactive. For a storefront tied to an ERP or QuickBooks with AI agents, FactoryJet.
         </p>
+      </div>
         <p className="text-gray-800 leading-relaxed mb-3">
           We read all 12 agencies on 23 October 2026, on their own sites or their Vercel partner listings: where each is based, the frameworks, backends and CMS it names, its Vercel tier and any price it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
         </p>
         <p className="text-gray-800 leading-relaxed">
           Short on time? <a href="/contact" className={link}>Tell us your platform and what your theme cannot do</a> and the founder will tell you whether headless is worth it for you.
         </p>
-      </div>
 
       <p className="mb-4">
         On 22 October 2026 we asked ChatGPT, Claude, Gemini, Perplexity and Google&rsquo;s AI answers the same question several times: &ldquo;Who builds headless commerce storefronts with Next.js?&rdquo; We collected 27 answers. They linked to 116 different pages; 71 of the 314 links went to list pages, and many others went to framework docs and templates rather than agencies.
@@ -487,7 +487,7 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-10 mb-4">Headless commerce development companies at a glance</h2>
       <p className="mb-4">Find the rows that match the platform you run, then read those profiles in full.</p>
       <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
-      <div className="mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className={`mb-8 not-prose ${styles.tableFrame}`} style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -524,7 +524,7 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-10 mb-4">What the platforms themselves ship for headless</h2>
       <p className="mb-4">Before you pick an agency, know what your platform already gives it. These rows come from each platform&rsquo;s own pages, read on 23 October 2026.</p>
       <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
-      <div className="mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className={`mb-4 not-prose ${styles.tableFrame}`} style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 600 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -559,7 +559,7 @@ export const post: BlogPost = {
             {inGroup.map((f) => {
               const n = FIRMS.indexOf(f) + 1;
               return (
-                <div key={f.name} className="mb-8">
+                <div key={f.name} className={`mb-8 ${styles.profile}`}>
                   <h4 className="text-lg font-bold mt-6 mb-2">{n}. {f.name}</h4>
                   <p className="text-sm text-gray-600 mb-3">
                     <strong>Based:</strong> {f.based}. <strong>Type:</strong> {f.type}. <strong>Directory status:</strong> {f.partner}.
@@ -585,29 +585,21 @@ export const post: BlogPost = {
             })}
             {g === 'US agencies, Shopify and more' && (
               <figure className="my-8 not-prose">
-                <img
-                  src={`${IMG}/speed.webp`}
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                  decoding="async"
-                  alt="A hand wearing an orange watch strap holds a phone over a wooden desk, its screen showing three stacked coloured rectangles like a shop page"
-                  className="w-full h-auto rounded-xl"
-                />
+                <picture>
+                  <source type="image/avif" srcSet={`${IMG}/storefront-phone-validation-640.avif 640w, ${IMG}/storefront-phone-validation-960.avif 960w, ${IMG}/storefront-phone-validation-1280.avif 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+                  <source type="image/webp" srcSet={`${IMG}/storefront-phone-validation-640.webp 640w, ${IMG}/storefront-phone-validation-960.webp 960w, ${IMG}/storefront-phone-validation-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+                  <img src={`${IMG}/storefront-phone-validation-960.webp`} srcSet={`${IMG}/storefront-phone-validation-640.webp 640w, ${IMG}/storefront-phone-validation-960.webp 960w, ${IMG}/storefront-phone-validation-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" width={1280} height={853} loading="lazy" decoding="async" alt="A man compares unbranded homewares storefronts on a phone and a separate monitor beside ceramic bowls and a canvas bag." className="w-full h-auto rounded-xl" />
+                </picture>
                 <figcaption className="text-sm text-gray-600 mt-2">Judge a headless store on a phone, on a normal connection. Ask every agency for a live store you can open yourself.</figcaption>
               </figure>
             )}
             {g === 'Large US agencies' && (
               <figure className="my-8 not-prose">
-                <img
-                  src={`${IMG}/whiteboard.webp`}
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                  decoding="async"
-                  alt="A woman with a long braid and an olive jacket draws boxes joined by arrows on a whiteboard in orange marker while a man and a woman at a meeting table watch"
-                  className="w-full h-auto rounded-xl"
-                />
+                <picture>
+                  <source type="image/avif" srcSet={`${IMG}/commerce-system-planning-640.avif 640w, ${IMG}/commerce-system-planning-960.avif 960w, ${IMG}/commerce-system-planning-1280.avif 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+                  <source type="image/webp" srcSet={`${IMG}/commerce-system-planning-640.webp 640w, ${IMG}/commerce-system-planning-960.webp 960w, ${IMG}/commerce-system-planning-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+                  <img src={`${IMG}/commerce-system-planning-960.webp`} srcSet={`${IMG}/commerce-system-planning-640.webp 640w, ${IMG}/commerce-system-planning-960.webp 960w, ${IMG}/commerce-system-planning-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" width={1280} height={853} loading="lazy" decoding="async" alt="Two people arrange blank cards beside separate displays showing homewares product photos and grey bars." className="w-full h-auto rounded-xl" />
+                </picture>
                 <figcaption className="text-sm text-gray-600 mt-2">A headless store is several systems: storefront, commerce platform, CMS and search. Ask the agency to draw yours before it quotes.</figcaption>
               </figure>
             )}
@@ -628,7 +620,7 @@ export const post: BlogPost = {
         Most headless commerce agencies quote after a call. On the pages we read on 23 October 2026, one of the 11 other agencies publishes a build price and two publish a timeline. We copied them exactly. Each figure is the agency&rsquo;s own.
       </p>
       <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
-      <div className="mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className={`mb-4 not-prose ${styles.tableFrame}`} style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -694,15 +686,11 @@ export const post: BlogPost = {
       </div>
 
       <figure className="my-8 not-prose">
-        <img
-          src={`${IMG}/review.webp`}
-          width={1200}
-          height={800}
-          loading="lazy"
-          decoding="async"
-          alt="A man with a grey beard in a cream sweater and a woman with a blonde ponytail in a navy shirt look at an open laptop on a meeting table beside an orange notebook"
-          className="w-full h-auto rounded-xl"
-        />
+        <picture>
+          <source type="image/avif" srcSet={`${IMG}/storefront-proposal-review-640.avif 640w, ${IMG}/storefront-proposal-review-960.avif 960w, ${IMG}/storefront-proposal-review-1280.avif 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+          <source type="image/webp" srcSet={`${IMG}/storefront-proposal-review-640.webp 640w, ${IMG}/storefront-proposal-review-960.webp 960w, ${IMG}/storefront-proposal-review-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+          <img src={`${IMG}/storefront-proposal-review-960.webp`} srcSet={`${IMG}/storefront-proposal-review-640.webp 640w, ${IMG}/storefront-proposal-review-960.webp 960w, ${IMG}/storefront-proposal-review-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" width={1280} height={853} loading="lazy" decoding="async" alt="Two people compare plain paper briefs beside printed product layouts and unbranded homewares samples." className="w-full h-auto rounded-xl" />
+        </picture>
         <figcaption className="text-sm text-gray-600 mt-2">Review the proposal against your one-page brief: platform, limit, CMS, apps, hosting and ownership.</figcaption>
       </figure>
 
@@ -736,6 +724,6 @@ export const post: BlogPost = {
         </p>
         <a href="/contact" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">Book the free call</a>
       </div>
-    </>
+    </div>
   ),
 };

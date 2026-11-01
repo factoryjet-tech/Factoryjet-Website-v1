@@ -1,4 +1,5 @@
 import React from 'react';
+import './how-long-to-implement-an-ai-agent-2026/page.css';
 import type { BlogPost, FAQItem } from '../data.types';
 
 const SLUG = 'how-long-to-implement-an-ai-agent-2026';
@@ -181,7 +182,7 @@ export const post: BlogPost = {
   ],
   faqs: FAQS,
   content: (
-    <>
+    <div className="fj-agent-timeline">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -226,7 +227,7 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-10 mb-4">AI agent implementation timelines, side by side</h2>
       <p className="mb-4">Each row is copied from the publisher&rsquo;s own page, read on 24 October 2026.</p>
       <p className="md:hidden text-xs text-gray-600 mb-2">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div tabIndex={0} className="fj-timeline-table overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: '640px' }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -257,7 +258,7 @@ export const post: BlogPost = {
         Building an AI agent takes 3 to 16 weeks from kickoff to unsupervised work, depending on the job it does, per WizeB.{' '}
         <a href={WIZEB_URL} className={link} rel="noopener" target="_blank">WizeB&rsquo;s timeline page</a>, dated 16 October 2026, is the only one we read that breaks the time down by the kind of agent. Its figures run from kickoff to the agent working unsupervised on most of the volume.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
+      <div tabIndex={0} className="fj-timeline-table overflow-x-auto mb-4 not-prose">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -280,7 +281,11 @@ export const post: BlogPost = {
       </p>
 
       <figure className="my-8 not-prose">
-        <img src={`${IMG}/pilot.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="A man with a beard in a light blue shirt sits at a desk looking at a monitor that shows two boxes joined by an arrow and a green tick, beside an orange mug" className="w-full h-auto rounded-xl" />
+        <picture className="fj-timeline-picture">
+          <source type="image/avif" srcSet={`${IMG}/order-agent-duration-planning-640.avif 640w, ${IMG}/order-agent-duration-planning-960.avif 960w, ${IMG}/order-agent-duration-planning-1280.avif 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" />
+          <source type="image/webp" srcSet={`${IMG}/order-agent-duration-planning-640.webp 640w, ${IMG}/order-agent-duration-planning-960.webp 960w, ${IMG}/order-agent-duration-planning-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" />
+          <img src={`${IMG}/order-agent-duration-planning-1280.webp`} srcSet={`${IMG}/order-agent-duration-planning-640.webp 640w, ${IMG}/order-agent-duration-planning-960.webp 960w, ${IMG}/order-agent-duration-planning-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" width={1280} height={853} loading="lazy" decoding="async" alt="A man moves a grey block on a wall planner above plumbing parts and trays of blank sheets." className="w-full h-auto rounded-xl" />
+        </picture>
         <figcaption className="text-sm text-gray-600 mt-2">A pilot answers one question: does the agent do this job well enough on real data? Everything after that is making it safe to rely on.</figcaption>
       </figure>
 
@@ -288,7 +293,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         <a href={KLEVERE_URL} className={link} rel="noopener" target="_blank">Klevere AI</a>{' '}publishes the most detailed phase plan we read, for a small or mid-sized business&rsquo;s first agent. We use its timings and add what each stage produces.
       </p>
-      <ol className="list-decimal pl-6 mb-6 space-y-2">
+      <ol className="fj-timeline-stages list-decimal pl-6 mb-6 space-y-2">
         <li><strong>Discovery, 1 to 2 weeks.</strong>{' '}Pick the job, write down its rules and exceptions, and collect real past examples.</li>
         <li><strong>Design, 3 to 5 days.</strong>{' '}Decide which systems the agent reads and writes, and where a person approves.</li>
         <li><strong>Build, 2 to 4 weeks.</strong>{' '}Build the agent and its connections, and test it on the past examples.</li>
@@ -328,7 +333,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Ready-made agent or custom build: which is faster?</h2>
       <p className="md:hidden text-xs text-gray-600 mb-2">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div tabIndex={0} className="fj-timeline-table overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: '560px' }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -350,7 +355,11 @@ export const post: BlogPost = {
       </p>
 
       <figure className="my-8 not-prose">
-        <img src={`${IMG}/review.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="A woman with a high ponytail in a white shirt and a man with grey hair in a camel jacket read printed pages at a meeting table beside an orange folder" className="w-full h-auto rounded-xl" />
+        <picture className="fj-timeline-picture">
+          <source type="image/avif" srcSet={`${IMG}/order-parallel-run-handoff-640.avif 640w, ${IMG}/order-parallel-run-handoff-960.avif 960w, ${IMG}/order-parallel-run-handoff-1280.avif 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" />
+          <source type="image/webp" srcSet={`${IMG}/order-parallel-run-handoff-640.webp 640w, ${IMG}/order-parallel-run-handoff-960.webp 960w, ${IMG}/order-parallel-run-handoff-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" />
+          <img src={`${IMG}/order-parallel-run-handoff-1280.webp`} srcSet={`${IMG}/order-parallel-run-handoff-640.webp 640w, ${IMG}/order-parallel-run-handoff-960.webp 960w, ${IMG}/order-parallel-run-handoff-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" width={1280} height={853} loading="lazy" decoding="async" alt="A woman holds a gasket beside a monitor of grey blocks while a man waits across a parts counter." className="w-full h-auto rounded-xl" />
+        </picture>
         <figcaption className="text-sm text-gray-600 mt-2">The parallel run is where people check the agent&rsquo;s work before it acts alone. Skipping it saves two weeks and risks the project.</figcaption>
       </figure>
 
@@ -367,7 +376,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">An AI agent implementation example: emailed purchase orders</h2>
       <p className="mb-4">Here is an illustrative plan, not a client project, for one common job: a wholesale distributor that receives purchase orders by email and types them into its ERP (enterprise resource planning system, such as NetSuite, SAP Business One or Odoo, where orders, stock and invoices live).</p>
-      <div className="overflow-x-auto mb-4 not-prose">
+      <div tabIndex={0} className="fj-timeline-table overflow-x-auto mb-4 not-prose">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -389,7 +398,11 @@ export const post: BlogPost = {
       </p>
 
       <figure className="my-8 not-prose">
-        <img src={`${IMG}/launch.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="A woman with curly brown hair in a green fleece points at a monitor showing rising coloured bars while a man in a grey polo shirt watches, in a warehouse office with an orange hard hat on a shelf" className="w-full h-auto rounded-xl" />
+        <picture className="fj-timeline-picture">
+          <source type="image/avif" srcSet={`${IMG}/wholesale-purchase-order-draft-640.avif 640w, ${IMG}/wholesale-purchase-order-draft-960.avif 960w, ${IMG}/wholesale-purchase-order-draft-1280.avif 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" />
+          <source type="image/webp" srcSet={`${IMG}/wholesale-purchase-order-draft-640.webp 640w, ${IMG}/wholesale-purchase-order-draft-960.webp 960w, ${IMG}/wholesale-purchase-order-draft-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" />
+          <img src={`${IMG}/wholesale-purchase-order-draft-1280.webp`} srcSet={`${IMG}/wholesale-purchase-order-draft-640.webp 640w, ${IMG}/wholesale-purchase-order-draft-960.webp 960w, ${IMG}/wholesale-purchase-order-draft-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" width={1280} height={853} loading="lazy" decoding="async" alt="A woman compares blank sheets between grey trays at a counter beside copper plumbing fittings." className="w-full h-auto rounded-xl" />
+        </picture>
         <figcaption className="text-sm text-gray-600 mt-2">Go-live starts the tuning period. Watch the exceptions it sends to people every week.</figcaption>
       </figure>
 
@@ -414,6 +427,6 @@ export const post: BlogPost = {
         </p>
         <a href="/services/ai-agent-development" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">See our AI agent service</a>
       </div>
-    </>
+    </div>
   ),
 };
