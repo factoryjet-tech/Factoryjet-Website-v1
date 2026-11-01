@@ -270,4 +270,8 @@
   .crm-visual-page button {
     font-size: 16px !important;
   }
+  .crm-visual-page [data-hero-inline-form] .mt-2\.5.font-fj-body,
+  .crm-visual-page [data-hero-inline-form] .mt-2\.5.font-fj-body > span {
+    font-size: 16px !important;
+  }
 }
