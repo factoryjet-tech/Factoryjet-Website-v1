@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -11,6 +10,7 @@ import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
+import './page.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const PAGE_MODIFIED = '2026-10-31';
@@ -273,16 +273,16 @@ export default function PunchoutCatalogPage() {
 
       <SiteHeader cta={{ label: 'Talk to the founder', modal: true, region: 'us' }} />
 
-      <main className="platpage">
+      <main className="platpage fj-punchout-visual">
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
         {/* ── Hero ── */}
         <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>
           <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)', position: 'relative' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
+            <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid pc-hero-grid">
               <div>
                 <p className="pp-eyebrow">B2B e-commerce · Punchout</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  Punchout catalog development for distributors and manufacturers.
+                  Punchout catalog development for distributors <span className="pc-keep">and manufacturers.</span>
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '50ch' }}>
                   A large customer has told you they only buy through Coupa, SAP Ariba, Jaggaer or Oracle, and they
@@ -290,7 +290,7 @@ export default function PunchoutCatalogPage() {
                   Adobe Commerce or custom store into their procurement system, with their contract prices on screen
                   and their purchase orders landing in your ERP.
                 </p>
-                <p style={{ margin: '0 0 18px', fontFamily: 'var(--pp-mono)', fontSize: '12px', color: 'var(--pp-muted)' }}>
+                <p className="pc-byline" style={{ margin: '0 0 18px', fontFamily: 'var(--pp-mono)', fontSize: '12px', color: 'var(--pp-muted)' }}>
                   By{' '}
                   <a href="https://www.linkedin.com/in/bhavesh-ai-gtm-expert/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--pp-muted)', textDecoration: 'underline' }}>Bhavesh Barot</a>
                   , Founder &amp; CEO · Updated <time dateTime={PAGE_MODIFIED}>{PAGE_MODIFIED_LABEL}</time>
@@ -332,7 +332,7 @@ export default function PunchoutCatalogPage() {
         {/* ── Answer first ── */}
         <section className="pp-sec">
           <div className="pp-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'start' }} className="pp-herogrid">
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'start' }} className="pp-herogrid pc-answer-grid">
               <div>
                 <p className="pp-mlabel">// the short answer</p>
                 <h2 style={{ marginTop: '10px' }}>What is a punchout catalog?</h2>
@@ -354,6 +354,7 @@ export default function PunchoutCatalogPage() {
                   </p>
                 </div>
               </div>
+              <div className="pc-answer-media">
               <AnswerFirstDefinition
                 term="Punchout catalog"
                 definition="A punchout catalog is a supplier's live online store opened from inside a buyer's procurement system (Coupa, SAP Ariba, Jaggaer, Oracle or SAP). The buyer shops with contract prices, the cart returns to their system as a requisition for approval, and the approved purchase order is sent back to the supplier, usually over cXML or SAP's OCI."
@@ -364,6 +365,12 @@ export default function PunchoutCatalogPage() {
                 ]}
                 citationSource="FactoryJet, from Coupa supplier documentation and cxml.org (Oct 2026)"
               />
+                <picture className="pc-picture">
+                  <source type="image/avif" srcSet="/images/us/punchout-catalog/procurement-buyer-industrial-catalog-640.avif 640w, /images/us/punchout-catalog/procurement-buyer-industrial-catalog-960.avif 960w, /images/us/punchout-catalog/procurement-buyer-industrial-catalog-1280.avif 1280w" sizes="(max-width: 860px) calc(100vw - 40px), (max-width: 1180px) calc((100vw - 88px) * .42), 459px" />
+                  <source type="image/webp" srcSet="/images/us/punchout-catalog/procurement-buyer-industrial-catalog-640.webp 640w, /images/us/punchout-catalog/procurement-buyer-industrial-catalog-960.webp 960w, /images/us/punchout-catalog/procurement-buyer-industrial-catalog-1280.webp 1280w" sizes="(max-width: 860px) calc(100vw - 40px), (max-width: 1180px) calc((100vw - 88px) * .42), 459px" />
+                  <img src="/images/us/punchout-catalog/procurement-buyer-industrial-catalog-960.webp" srcSet="/images/us/punchout-catalog/procurement-buyer-industrial-catalog-640.webp 640w, /images/us/punchout-catalog/procurement-buyer-industrial-catalog-960.webp 960w, /images/us/punchout-catalog/procurement-buyer-industrial-catalog-1280.webp 1280w" sizes="(max-width: 860px) calc(100vw - 40px), (max-width: 1180px) calc((100vw - 88px) * .42), 459px" width={1536} height={1024} alt="A buyer reviews a catalog of metal pipe fittings on a monitor beside sample parts." loading="lazy" decoding="async" />
+                </picture>
+              </div>
             </div>
           </div>
         </section>
@@ -385,7 +392,15 @@ export default function PunchoutCatalogPage() {
               <a href={SRC_AMAZON_PUNCHOUT} target="_blank" rel="noopener noreferrer" style={linkStyle}>its punchout page</a>{' '}
               says buyers start in their e-procurement system and route the cart back for approval.
             </p>
-            <ol className="pp-bento" style={{ marginTop: '36px' }}>
+            <div className="pc-round-layout">
+              <div className="pc-sticky-media">
+                <picture className="pc-picture">
+                  <source type="image/avif" srcSet="/images/us/punchout-catalog/engineer-procurement-round-trip-640.avif 640w, /images/us/punchout-catalog/engineer-procurement-round-trip-960.avif 960w, /images/us/punchout-catalog/engineer-procurement-round-trip-1280.avif 1280w" sizes="(max-width: 860px) calc(100vw - 40px), (max-width: 1180px) calc((100vw - 88px) * .4), 437px" />
+                  <source type="image/webp" srcSet="/images/us/punchout-catalog/engineer-procurement-round-trip-640.webp 640w, /images/us/punchout-catalog/engineer-procurement-round-trip-960.webp 960w, /images/us/punchout-catalog/engineer-procurement-round-trip-1280.webp 1280w" sizes="(max-width: 860px) calc(100vw - 40px), (max-width: 1180px) calc((100vw - 88px) * .4), 437px" />
+                  <img src="/images/us/punchout-catalog/engineer-procurement-round-trip-960.webp" srcSet="/images/us/punchout-catalog/engineer-procurement-round-trip-640.webp 640w, /images/us/punchout-catalog/engineer-procurement-round-trip-960.webp 960w, /images/us/punchout-catalog/engineer-procurement-round-trip-1280.webp 1280w" sizes="(max-width: 860px) calc(100vw - 40px), (max-width: 1180px) calc((100vw - 88px) * .4), 437px" width={1536} height={1024} alt="Two people review six connected boxes on a whiteboard beside metal pipe elbows." loading="lazy" decoding="async" />
+                </picture>
+              </div>
+            <ol className="pp-bento pc-round-list" style={{ marginTop: '36px' }}>
               {ROUND_TRIP.map((r, i) => (
                 <li className="pp-card" key={r.t}>
                   <span className="ic" aria-hidden="true" style={{ fontFamily: 'var(--pp-mono)', fontSize: '15px' }}>{String(i + 1).padStart(2, '0')}</span>
@@ -393,6 +408,7 @@ export default function PunchoutCatalogPage() {
                 </li>
               ))}
             </ol>
+            </div>
           </div>
         </section>
 
@@ -405,7 +421,7 @@ export default function PunchoutCatalogPage() {
               Your customer picks the method. Their supplier enablement guide will name the procurement system and
               the level they expect. Here is what each one means for your store.
             </p>
-            <p className="md:hidden" style={{ marginTop: '20px', fontFamily: 'var(--pp-mono)', fontSize: '12px', color: 'var(--pp-muted)' }}>Swipe sideways to see every column.</p>
+            <p className="md:hidden pc-table-cue" style={{ marginTop: '20px', fontFamily: 'var(--pp-mono)', fontSize: '12px', color: 'var(--pp-muted)' }}>Swipe sideways to see every column.</p>
             <div style={{ marginTop: '28px', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="pp-table" style={{ minWidth: '720px' }}>
                 <thead>
@@ -435,7 +451,7 @@ export default function PunchoutCatalogPage() {
               Each procurement system has its own supplier steps. Here is what the vendors&apos; own documentation
               says, checked on 31 Oct 2026.
             </p>
-            <div style={{ marginTop: '28px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '16px' }}>
+            <div className="pc-bento" style={{ marginTop: '28px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '16px' }}>
               <article className="pp-card">
                 <h3>Coupa punchout</h3>
                 <p style={{ marginTop: '10px' }}>
@@ -477,7 +493,7 @@ export default function PunchoutCatalogPage() {
             <p className="pp-mlabel">// what we build</p>
             <h2 style={{ marginTop: '10px' }}>Eight parts of a punchout integration we build</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '60ch' }}>Your customer&apos;s test script checks each of these eight pieces, not only the punchout URL.</p>
-            <ul className="pp-bento n8" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(4,1fr)' }}>
+            <ul className="pp-bento n8 pc-bento" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(4,1fr)' }}>
               {BUILD.map((f) => (
                 <li className="pp-card" key={f.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)', fontSize: '15px' }}>{f.t}</h3><p>{f.d}</p>
@@ -490,17 +506,7 @@ export default function PunchoutCatalogPage() {
         {/* ── By platform ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'center' }} className="pp-herogrid">
-              <div style={{ borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 24px 48px -28px rgba(20,17,15,0.28)' }}>
-                <Image
-                  src="/images/us/b2b/b2b-erp-integration.webp"
-                  alt="Dashboards showing a B2B store connected to procurement, ERP and inventory systems"
-                  width={600}
-                  height={480}
-                  loading="lazy"
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                />
-              </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'center' }} className="pp-herogrid pc-platform-layout">
               <div>
                 <p className="pp-mlabel">// store platforms</p>
                 <h2 style={{ marginTop: '10px' }}>Punchout on the store you already run</h2>
@@ -540,7 +546,7 @@ export default function PunchoutCatalogPage() {
               There are three ways to add punchout to a store. The examples below are named from each vendor&apos;s own
               page, checked on 31 Oct 2026.
             </p>
-            <p className="md:hidden" style={{ marginTop: '20px', fontFamily: 'var(--pp-mono)', fontSize: '12px', color: 'var(--pp-muted)' }}>Swipe sideways to see every column.</p>
+            <p className="md:hidden pc-table-cue" style={{ marginTop: '20px', fontFamily: 'var(--pp-mono)', fontSize: '12px', color: 'var(--pp-muted)' }}>Swipe sideways to see every column.</p>
             <div style={{ marginTop: '28px', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="pp-table" style={{ minWidth: '720px' }}>
                 <thead>
@@ -612,12 +618,12 @@ export default function PunchoutCatalogPage() {
               These are published market figures, not FactoryJet prices. FactoryJet quotes a fixed price in writing
               after a short scoping call, once we have read your customer&apos;s requirements.
             </p>
-            <ul className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento pc-bento" style={{ marginTop: '36px' }}>
               {SOURCED.map((s) => (
                 <li className="pp-card" key={s.v}>
                   <div style={{ fontFamily: 'var(--pp-display)', fontWeight: 800, fontSize: '30px', lineHeight: 1, color: 'var(--pp-orange-dark)', letterSpacing: '-0.03em' }}>{s.v}</div>
                   <p style={{ marginTop: '10px' }}>{s.d}</p>
-                  <a href={s.href} target="_blank" rel="noopener noreferrer" style={{ marginTop: '12px', display: 'inline-block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)', textDecoration: 'underline' }}>Source: {s.src}</a>
+                  <a className="pc-source" href={s.href} target="_blank" rel="noopener noreferrer" style={{ marginTop: '12px', display: 'inline-block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)', textDecoration: 'underline' }}>Source: {s.src}</a>
                 </li>
               ))}
             </ul>
@@ -639,10 +645,10 @@ export default function PunchoutCatalogPage() {
                     <div aria-hidden="true" style={{ position: 'absolute', left: '15px', top: '32px', bottom: 0, width: '2px', background: 'var(--pp-line)' }} />
                   )}
                   <div style={{ flex: 'none', width: '32px', height: '32px', borderRadius: '50%', border: '2px solid var(--pp-orange)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#fff', zIndex: 1 }}>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '10px', fontWeight: 700, color: 'var(--pp-orange-dark)' }}>{s.n}</span>
+                    <span className="pc-step-number" style={{ fontFamily: 'var(--pp-mono)', fontSize: '10px', fontWeight: 700, color: 'var(--pp-orange-dark)' }}>{s.n}</span>
                   </div>
                   <div style={{ paddingTop: '4px' }}>
-                    <h3 style={{ fontFamily: 'var(--pp-display)', fontWeight: 700, fontSize: '16px', color: 'var(--pp-ink)', margin: 0 }}>{s.t}</h3>
+                    <h3 style={{ fontFamily: 'var(--pp-display)', fontWeight: 700, fontSize: '16px', color: 'var(--pp-ink)', margin: 0 }}>{s.t.split(' ').slice(0, -2).join(' ')}{' '}<span className="pc-keep">{s.t.split(' ').slice(-2).join(' ')}</span></h3>
                     <p style={{ marginTop: '4px', fontSize: '14.5px', lineHeight: 1.55, color: 'var(--pp-body)' }}>{s.d}</p>
                   </div>
                 </div>
@@ -656,7 +662,7 @@ export default function PunchoutCatalogPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// how we work</p>
             <h2 style={{ marginTop: '10px' }}>Punchout project terms: fixed price per phase, no monthly minimum</h2>
-            <ul className="pp-bento n5" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento n5 pc-bento" style={{ marginTop: '36px' }}>
               {TERMS.map((t) => (
                 <li className="pp-card" key={t.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{t.t}</h3><p>{t.d}</p>
@@ -675,7 +681,7 @@ export default function PunchoutCatalogPage() {
               Punchout depends on the same pieces as any B2B store: company accounts, contract prices and orders that
               land in the ERP. Two B2B builds with that work, one live and one in progress:
             </p>
-            <div style={{ marginTop: '28px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '16px' }}>
+            <div className="pc-bento" style={{ marginTop: '28px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '16px' }}>
               <article className="pp-card">
                 <p className="pp-mlabel">GPSUK · Commerceflo</p>
                 <h3>Account pricing for trade buyers</h3>
@@ -684,7 +690,7 @@ export default function PunchoutCatalogPage() {
               </article>
               <article className="pp-card">
                 <p className="pp-mlabel">Sow Easy · WooCommerce + Odoo</p>
-                <h3>Trade store connected to Odoo (in progress)</h3>
+                <h3>Trade store connected to Odoo <span className="pc-keep">(in progress)</span></h3>
                 <p className="pp-lead" style={{ marginTop: '16px', fontSize: '15px' }}>WooCommerce ordering for a distributor, being connected to Odoo so trade orders and stock live in one place instead of two. Being tested on staging before launch.</p>
                 <Link href="/case-studies/sow-easy-distributor-portal" className="rv-btn-secondary" style={{ marginTop: '18px' }}>Read the Sow Easy case study →</Link>
               </article>
@@ -702,7 +708,7 @@ export default function PunchoutCatalogPage() {
 
         {/* ── CTA ── */}
         <section className="pp-sec tint" id="final-cta">
-          <div className="pp-wrap" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'start' }}>
+          <div className="pp-wrap pc-final-layout" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'start' }}>
             <div>
               <h2 style={{ maxWidth: '22ch' }}>Get on your customer&apos;s approved supplier list</h2>
               <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '52ch' }}>
@@ -726,9 +732,16 @@ export default function PunchoutCatalogPage() {
                 <Link href="/services/ecommerce-erp-integration" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>ERP integration</Link>, and{' '}
                 <Link href="/services/shopify-edi-integration" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>EDI integration for Shopify</Link>.
               </p>
+              <div className="pc-final-photo">
+                <picture className="pc-picture">
+                  <source type="image/avif" srcSet="/images/us/punchout-catalog/industrial-parts-order-picking-640.avif 640w, /images/us/punchout-catalog/industrial-parts-order-picking-960.avif 960w, /images/us/punchout-catalog/industrial-parts-order-picking-1280.avif 1280w" sizes="(max-width: 860px) calc(100vw - 40px), (max-width: 1180px) calc((100vw - 96px) * .58), 629px" />
+                  <source type="image/webp" srcSet="/images/us/punchout-catalog/industrial-parts-order-picking-640.webp 640w, /images/us/punchout-catalog/industrial-parts-order-picking-960.webp 960w, /images/us/punchout-catalog/industrial-parts-order-picking-1280.webp 1280w" sizes="(max-width: 860px) calc(100vw - 40px), (max-width: 1180px) calc((100vw - 96px) * .58), 629px" />
+                  <img src="/images/us/punchout-catalog/industrial-parts-order-picking-960.webp" srcSet="/images/us/punchout-catalog/industrial-parts-order-picking-640.webp 640w, /images/us/punchout-catalog/industrial-parts-order-picking-960.webp 960w, /images/us/punchout-catalog/industrial-parts-order-picking-1280.webp 1280w" sizes="(max-width: 860px) calc(100vw - 40px), (max-width: 1180px) calc((100vw - 96px) * .58), 629px" width={1536} height={1024} alt="A warehouse worker lifts a carton of metal fittings beside an order cart." loading="lazy" decoding="async" />
+                </picture>
+              </div>
             </div>
-            <div style={{ border: '1px solid var(--pp-line)', borderRadius: '20px', padding: '28px', background: '#fff', boxShadow: '0 12px 32px -16px rgba(20,17,15,0.18)' }}>
-              <p style={{ fontFamily: 'var(--pp-display)', fontWeight: 800, fontSize: '22px', letterSpacing: '-0.01em', color: 'var(--pp-ink)', margin: 0 }}>Why suppliers choose FactoryJet</p>
+            <div className="pc-proof-panel" style={{ border: '1px solid var(--pp-line)', borderRadius: '20px', padding: '28px', background: '#fff', boxShadow: '0 12px 32px -16px rgba(20,17,15,0.18)' }}>
+              <h3 style={{ fontFamily: 'var(--pp-display)', fontWeight: 800, fontSize: '22px', letterSpacing: '-0.01em', color: 'var(--pp-ink)', margin: 0 }}>Why suppliers choose FactoryJet</h3>
               <p style={{ marginTop: '8px', fontFamily: 'var(--pp-mono)', fontSize: '11px' }}>
                 <a href="/case-studies" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>See real, named client case studies →</a>
               </p>

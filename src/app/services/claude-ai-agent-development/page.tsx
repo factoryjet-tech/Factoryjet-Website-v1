@@ -8,6 +8,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
+import './page.css';
 
 /* Claude AI agent development (W2-4, built 2026-10-29, QA fixes 2026-10-31).
    Demand: buyer question N18 ("who builds agents on Claude / the Anthropic API")
@@ -333,7 +334,7 @@ export default function ClaudeAiAgentDevelopmentPage() {
       <BreadcrumbSchema items={breadcrumbs} />
       <style>{PAGE_STYLE}</style>
       <SiteHeader cta={{ label: 'See a demo on my data', href: '#tell-us' }} />
-      <div className="aiAgentPage">
+      <div className="aiAgentPage claudeVisualPage">
         <nav className="crumbs" aria-label="Breadcrumb">
           <div className="wrap">
             {breadcrumbs.map((item, index) => (
@@ -441,6 +442,11 @@ export default function ClaudeAiAgentDevelopmentPage() {
               <div className="section-head">
                 <div className="eyebrow">§ Jobs</div>
                 <h2>Six Jobs We Build Claude Agents to Do</h2>
+                <picture className="claudeSectionPhoto">
+                  <source type="image/avif" srcSet="/images/us/claude-ai-agent-development/reply-approval-queue-640.avif 640w, /images/us/claude-ai-agent-development/reply-approval-queue-960.avif 960w, /images/us/claude-ai-agent-development/reply-approval-queue-1280.avif 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(38vw - 26px), 460px" />
+                  <source type="image/webp" srcSet="/images/us/claude-ai-agent-development/reply-approval-queue-640.webp 640w, /images/us/claude-ai-agent-development/reply-approval-queue-960.webp 960w, /images/us/claude-ai-agent-development/reply-approval-queue-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(38vw - 26px), 460px" />
+                  <img src="/images/us/claude-ai-agent-development/reply-approval-queue-960.webp" srcSet="/images/us/claude-ai-agent-development/reply-approval-queue-640.webp 640w, /images/us/claude-ai-agent-development/reply-approval-queue-960.webp 960w, /images/us/claude-ai-agent-development/reply-approval-queue-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(38vw - 26px), 460px" width="1536" height="1024" loading="lazy" decoding="async" alt="A woman reviews a queue of grey reply blocks beside blank paper and metal fittings at a standing desk." />
+                </picture>
               </div>
               <ol className="factlist" style={LIST_RESET}>
                 {JOBS.map((job, i) => (
@@ -521,6 +527,11 @@ export default function ClaudeAiAgentDevelopmentPage() {
               <div className="section-head">
                 <div className="eyebrow">§ Data</div>
                 <h2>How Your Data Moves Through a Claude Agent</h2>
+                <picture className="claudeSectionPhoto">
+                  <source type="image/avif" srcSet="/images/us/claude-ai-agent-development/agent-data-permissions-review-640.avif 640w, /images/us/claude-ai-agent-development/agent-data-permissions-review-960.avif 960w, /images/us/claude-ai-agent-development/agent-data-permissions-review-1280.avif 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(38vw - 26px), 460px" />
+                  <source type="image/webp" srcSet="/images/us/claude-ai-agent-development/agent-data-permissions-review-640.webp 640w, /images/us/claude-ai-agent-development/agent-data-permissions-review-960.webp 960w, /images/us/claude-ai-agent-development/agent-data-permissions-review-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(38vw - 26px), 460px" />
+                  <img src="/images/us/claude-ai-agent-development/agent-data-permissions-review-960.webp" srcSet="/images/us/claude-ai-agent-development/agent-data-permissions-review-640.webp 640w, /images/us/claude-ai-agent-development/agent-data-permissions-review-960.webp 960w, /images/us/claude-ai-agent-development/agent-data-permissions-review-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(38vw - 26px), 460px" width="1536" height="1024" loading="lazy" decoding="async" alt="Two people discuss blank cards beside a whiteboard of empty boxes joined by arrows." />
+                </picture>
               </div>
               <ol className="factlist" style={LIST_RESET}>
                 {DATA_STEPS.slice(0, 2).map((step, i) => (
@@ -555,6 +566,12 @@ export default function ClaudeAiAgentDevelopmentPage() {
                   one work.
                 </p>
               </div>
+              <div className="claudeProcessBody">
+                <picture className="claudeSectionPhoto claudeProcessPhoto">
+                  <source type="image/avif" srcSet="/images/us/claude-ai-agent-development/five-phase-agent-workshop-640.avif 640w, /images/us/claude-ai-agent-development/five-phase-agent-workshop-960.avif 960w, /images/us/claude-ai-agent-development/five-phase-agent-workshop-1280.avif 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(39.6vw - 27px), 480px" />
+                  <source type="image/webp" srcSet="/images/us/claude-ai-agent-development/five-phase-agent-workshop-640.webp 640w, /images/us/claude-ai-agent-development/five-phase-agent-workshop-960.webp 960w, /images/us/claude-ai-agent-development/five-phase-agent-workshop-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(39.6vw - 27px), 480px" />
+                  <img src="/images/us/claude-ai-agent-development/five-phase-agent-workshop-960.webp" srcSet="/images/us/claude-ai-agent-development/five-phase-agent-workshop-640.webp 640w, /images/us/claude-ai-agent-development/five-phase-agent-workshop-960.webp 960w, /images/us/claude-ai-agent-development/five-phase-agent-workshop-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(39.6vw - 27px), 480px" width="1536" height="1024" loading="lazy" decoding="async" alt="Three people review five columns of blank notes around a table with two plain laptops." />
+                </picture>
               <ol className="timeline" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
                 {PHASES.map((p, i) => (
                   <li className="tnode" key={p.title}>
@@ -564,6 +581,7 @@ export default function ClaudeAiAgentDevelopmentPage() {
                   </li>
                 ))}
               </ol>
+              </div>
               <div className="timelineAction">
                 <a className="btn btn-primary" href="#tell-us">See a demo on my data</a>
               </div>
