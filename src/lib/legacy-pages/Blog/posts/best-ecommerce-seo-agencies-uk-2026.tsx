@@ -377,6 +377,7 @@ export const post: BlogPost = {
   dateModified: 'Oct 31, 2026',
   readTime: '26 min read',
   imageUrl: `${IMG}.webp`,
+  imageFit: 'contain',
   imageAlt:
     'A woman in a dark green jumper sits at a monitor showing a grid of vase photos while a red-haired man in a grey hoodie holds a cream vase beside her, with shelves of vases and folded linen behind them',
   meta: {
