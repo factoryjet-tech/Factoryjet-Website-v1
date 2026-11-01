@@ -168,6 +168,11 @@
 }
 
 @media (max-width: 480px) {
+  .claudeVisualPage [data-hero-inline-form] > div > .font-fj-body > span {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
   .claudeVisualPage .hero h1 {
     font-size: clamp(31px, 8.6vw, 38px);
     line-height: 1.1;
