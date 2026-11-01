@@ -1,4 +1,5 @@
 import React from 'react';
+import './seo-cost-uk-2026/page.css';
 import type { BlogPost, FAQItem } from '../data.types';
 
 // UK page plan 2026-10-21 (docs/reports/2026-10-21-uk-page-plan.md), new page 1: UK SEO cost guide.
@@ -276,7 +277,7 @@ export const post: BlogPost = {
   ],
   faqs,
   content: (
-    <>
+    <div className="fj-seo-cost-uk-visual">
       {/* Answer-first block */}
       <div className="answer-first bg-[#FFF3EE] border-l-4 border-[#F05A28] p-5 md:p-6 rounded-r-xl mb-8">
         <h2 className="font-fj-display font-extrabold tracking-[-0.03em] text-gray-900 text-lg md:text-xl mb-2">How much does SEO cost per month in the UK?</h2>
@@ -286,11 +287,11 @@ export const post: BlogPost = {
           <strong>£2,500 a month</strong>{' '}(Ren Hao SEO, updated 15 October 2026). Local SEO starts near £300 a month;
           ecommerce and enterprise work runs past £10,000.
         </p>
-        <p className="text-xs text-gray-500 mt-3">
-          Typical UK market ranges from eight published sources, each fetched and read on 21 October 2026. Sources
-          are linked in the tables below. These are not FactoryJet prices.
-        </p>
       </div>
+      <p className="fj-seo-cost-source-note text-xs text-gray-500 mt-3">
+        Typical UK market ranges from eight published sources, each fetched and read on 21 October 2026. Sources
+        are linked in the tables below. These are not FactoryJet prices.
+      </p>
 
       <p className={pCls}>
         Ask three UK providers for SEO prices and you can get £185, £1,300 and &ldquo;let&apos;s talk&rdquo;. All
@@ -320,7 +321,7 @@ export const post: BlogPost = {
         </p>
       </div>
 
-      <div className="bg-gray-50 p-6 rounded-2xl mb-8 border border-gray-200">
+      <div className="fj-seo-cost-contents bg-gray-50 p-6 rounded-2xl mb-8 border border-gray-200">
         <p className="text-lg font-bold mb-3 text-gray-900">What this guide covers</p>
         <ol className="list-decimal pl-5 space-y-1 text-gray-700 text-sm md:text-base">
           <li><a href="#seo-cost-by-business-type" className="text-[#B23E13] underline">SEO cost in the UK by type of business</a></li>
@@ -392,15 +393,21 @@ export const post: BlogPost = {
       </p>
 
       <figure className="my-8">
-        <img
-          src="/blog-images/seo-cost-uk-2026-review.webp"
-          alt="Two colleagues in a bright office looking over an open laptop that shows a simple rising chart"
-          width={1200}
-          height={800}
-          loading="lazy"
-          decoding="async"
-          className="w-full h-auto rounded-xl border border-gray-200"
-        />
+        <picture>
+          <source type="image/avif" srcSet="/images/blog/seo-cost-uk-2026/uk-shop-seo-report-review-640.avif 640w, /images/blog/seo-cost-uk-2026/uk-shop-seo-report-review-960.avif 960w, /images/blog/seo-cost-uk-2026/uk-shop-seo-report-review-1280.avif 1280w" sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)" />
+          <source type="image/webp" srcSet="/images/blog/seo-cost-uk-2026/uk-shop-seo-report-review-640.webp 640w, /images/blog/seo-cost-uk-2026/uk-shop-seo-report-review-960.webp 960w, /images/blog/seo-cost-uk-2026/uk-shop-seo-report-review-1280.webp 1280w" sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)" />
+          <img
+            src="/images/blog/seo-cost-uk-2026/uk-shop-seo-report-review-1280.webp"
+            srcSet="/images/blog/seo-cost-uk-2026/uk-shop-seo-report-review-640.webp 640w, /images/blog/seo-cost-uk-2026/uk-shop-seo-report-review-960.webp 960w, /images/blog/seo-cost-uk-2026/uk-shop-seo-report-review-1280.webp 1280w"
+            sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)"
+            alt="A man and a woman compare plain report blocks and ceramic product photographs at a wooden table."
+            width={1280}
+            height={853}
+            loading="lazy"
+            decoding="async"
+            className="w-full h-auto rounded-xl border border-gray-200"
+          />
+        </picture>
         <figcaption className="text-xs text-gray-500 mt-2">
           A useful monthly report ties ranking changes to enquiries and sales, in plain English.
         </figcaption>
@@ -505,7 +512,7 @@ export const post: BlogPost = {
         substantial pages and a steady flow of earned links a month. Open each band to see what the UK guides say you
         should get.
       </p>
-      <div className="space-y-3 mb-6">
+      <div className="fj-seo-cost-budget-grid space-y-3 mb-6">
         <details className="bg-white border border-gray-200 rounded-xl p-4 md:p-5 group" open>
           <summary className="font-semibold text-gray-900 cursor-pointer group-open:text-[#B23E13]">
             Under £500 a month
@@ -593,7 +600,7 @@ export const post: BlogPost = {
       </div>
 
       {/* Mid-page CTA */}
-      <div className="bg-white border-2 border-[#F05A28] rounded-2xl p-6 md:p-8 my-10">
+      <div className="fj-seo-cost-cta bg-white border-2 border-[#F05A28] rounded-2xl p-6 md:p-8 my-10">
         <p className="text-xs font-mono uppercase tracking-wider text-[#B23E13] mb-2">Before you sign an SEO package</p>
         <p className="text-xl md:text-2xl font-fj-display font-extrabold tracking-[-0.03em] text-gray-900 mb-3">
           Find out what your site needs, then compare quotes
@@ -648,15 +655,21 @@ export const post: BlogPost = {
       </ol>
 
       <figure className="my-8">
-        <img
-          src="/blog-images/seo-cost-uk-2026-store.webp"
-          alt="Two staff in a bright small warehouse, one taping a cardboard parcel shut and the other holding a barcode scanner"
-          width={1200}
-          height={800}
-          loading="lazy"
-          decoding="async"
-          className="w-full h-auto rounded-xl border border-gray-200"
-        />
+        <picture>
+          <source type="image/avif" srcSet="/images/blog/seo-cost-uk-2026/uk-ecommerce-page-inventory-640.avif 640w, /images/blog/seo-cost-uk-2026/uk-ecommerce-page-inventory-960.avif 960w, /images/blog/seo-cost-uk-2026/uk-ecommerce-page-inventory-1280.avif 1280w" sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)" />
+          <source type="image/webp" srcSet="/images/blog/seo-cost-uk-2026/uk-ecommerce-page-inventory-640.webp 640w, /images/blog/seo-cost-uk-2026/uk-ecommerce-page-inventory-960.webp 960w, /images/blog/seo-cost-uk-2026/uk-ecommerce-page-inventory-1280.webp 1280w" sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)" />
+          <img
+            src="/images/blog/seo-cost-uk-2026/uk-ecommerce-page-inventory-1280.webp"
+            srcSet="/images/blog/seo-cost-uk-2026/uk-ecommerce-page-inventory-640.webp 640w, /images/blog/seo-cost-uk-2026/uk-ecommerce-page-inventory-960.webp 960w, /images/blog/seo-cost-uk-2026/uk-ecommerce-page-inventory-1280.webp 1280w"
+            sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)"
+            alt="A woman and a man sort notebook product photographs beside a paper site map at a work table."
+            width={1280}
+            height={853}
+            loading="lazy"
+            decoding="async"
+            className="w-full h-auto rounded-xl border border-gray-200"
+          />
+        </picture>
         <figcaption className="text-xs text-gray-500 mt-2">
           Ecommerce SEO costs more because every category and product page needs its own work.
         </figcaption>
@@ -847,7 +860,7 @@ export const post: BlogPost = {
       {/* Further reading */}
       <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-10">
         <p className="text-lg font-bold text-gray-900 mb-3">Related UK guides and services</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+        <div className="fj-seo-cost-related grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
           <a href="/uk/seo" className="text-[#B23E13] hover:underline">SEO services in the UK</a>
           <a href="/uk/local-seo" className="text-[#B23E13] hover:underline">Local SEO in the UK</a>
           <a href="/uk/ecommerce-seo" className="text-[#B23E13] hover:underline">Ecommerce SEO for UK stores</a>
@@ -858,6 +871,6 @@ export const post: BlogPost = {
           <a href="/blog/local-seo-uk-small-businesses-map-pack" className="text-[#B23E13] hover:underline">Local SEO and the Google map pack (UK)</a>
         </div>
       </div>
-    </>
+    </div>
   ),
 };
