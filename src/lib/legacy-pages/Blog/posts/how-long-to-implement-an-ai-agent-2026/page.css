@@ -54,6 +54,11 @@
   margin-block: 1.25rem 1.5rem;
 }
 
+.fj-agent-timeline .fj-timeline-table:focus-within {
+  outline: 2px solid #B23E13;
+  outline-offset: 4px;
+}
+
 .fj-agent-timeline .fj-timeline-table table.w-full {
   display: table;
   width: 100%;
