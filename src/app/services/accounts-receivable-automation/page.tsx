@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import styles from './visual-qa.module.css';
+import './page.css';
 import Link from 'next/link';
 
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -929,25 +930,25 @@ const EXPERIENCE: ReadonlyArray<{ t: string; kind: string; what: string; href: s
 const INDUSTRIES: ReadonlyArray<{ img: string; alt: string; t: string; b: string }> = [
   {
     img: `${IMG}/distributor-credit-desk.webp`,
-    alt: 'A man in a forest green quarter zip sweater talks on a phone at his desk while looking at a monitor, with shelves of brown cartons behind a glass wall',
+    alt: 'A man compares a remittance sheet with three invoice sheets beside a delivery sheet and a carton with three brass fittings and an empty compartment.',
     t: 'Wholesale distributors',
     b: 'Customers pay many invoices in one amount and send the remittance by email. Deductions for short deliveries need proof from the warehouse.',
   },
   {
     img: `${IMG}/manufacturer-remittance-match.webp`,
-    alt: 'A woman in a mustard cardigan holds a sheet of paper and an orange pen while comparing it with a monitor at a standing desk above a factory floor',
+    alt: 'A woman compares a remittance sheet with three supporting sheets beside a tray with three metal parts and an empty compartment.',
     t: 'Manufacturers',
     b: 'Large customers pay through their own AP portals on their own terms. Each short payment is matched to the order, the shipment and the price agreed.',
   },
   {
-    img: `${IMG}/agency-owner-review.webp`,
-    alt: 'A man with a grey goatee and rolled sleeves reads a tablet at a pale oak table in a small studio, with an open notebook with an orange cover beside him',
+    img: `${IMG}/agency-milestone-invoice-review.webp`,
+    alt: 'A man compares three invoice sheets with a timesheet grid beside a remittance sheet and a cardboard building model.',
     t: 'Agencies and professional services',
     b: 'Invoices go out by milestone or timesheet. The same few clients pay late, and reminders need to sound like the owner, not a system.',
   },
   {
     img: `${IMG}/controller-month-end.webp`,
-    alt: 'Seen from behind, a woman with a short grey bob and a younger man in a navy polo look at a monitor on a meeting table next to an orange folder',
+    alt: 'Two women compare a remittance sheet and open invoice sheets beside a separate grey dispute folder and a clipped stack of paired sheets.',
     t: 'Finance teams and controllers',
     b: 'Unmatched cash and open disputes are the last things to clear at month end. The agent works them down every day instead.',
   },
@@ -1102,7 +1103,7 @@ export default function AccountsReceivableAutomationPage() {
 
       <SiteHeader />
 
-      <main className={`${styles.page} min-h-screen bg-fj-cream text-fj-ink`}>
+      <main className={`${styles.page} fj-ar-visual min-h-screen bg-fj-cream text-fj-ink`}>
         <StickyCtaLabel label="See a demo on my data" title="Demo first" />
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
@@ -1320,7 +1321,7 @@ export default function AccountsReceivableAutomationPage() {
         <section className="border-b border-fj-neutral-200 bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p className="fj-eyebrow">Before anyone builds</p>
-            <h2 className="mt-4 font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink sm:text-4xl">
+            <h2 className="ar-systems-heading mt-4 font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink sm:text-4xl">
               What QuickBooks, Xero, NetSuite, Business Central, SAP Business One and Odoo already do.
             </h2>
             <p className="mt-4 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
@@ -1502,12 +1503,12 @@ export default function AccountsReceivableAutomationPage() {
         </section>
 
         {/* 10. WHO THIS IS FOR */}
-        <section className="border-b border-fj-neutral-200 bg-fj-cream py-16 md:py-20">
+        <section className="ar-industries-section border-b border-fj-neutral-200 bg-fj-cream py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-4">
+            <div className="ar-industries-layout grid grid-cols-1 gap-10 lg:grid-cols-12">
+              <div className="ar-industries-intro lg:col-span-4">
                 <p className="fj-eyebrow">Who this is for</p>
-                <h2 className="mt-4 font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink sm:text-4xl">
+                <h2 className="ar-industry-heading mt-4 font-fj-display text-3xl font-extrabold tracking-[-0.03em] text-fj-ink sm:text-4xl">
                   Which businesses need accounts receivable automation?
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
@@ -1516,18 +1517,31 @@ export default function AccountsReceivableAutomationPage() {
                 </p>
               </div>
 
-              <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:col-span-8">
-                {INDUSTRIES.map((ind) => (
-                  <li key={ind.t} className="overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white">
-                    <img
-                      src={ind.img}
-                      alt={ind.alt}
-                      width={1200}
-                      height={800}
-                      loading="lazy"
-                      decoding="async"
-                      className="aspect-[3/2] w-full object-cover"
-                    />
+              <ul className="ar-industry-grid grid grid-cols-1 gap-5 sm:grid-cols-2 lg:col-span-8">
+                {INDUSTRIES.map((ind, i) => (
+                  <li key={ind.t} className="ar-industry-card overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white">
+                    <picture className="ar-photo">
+                      <source
+                        type="image/avif"
+                        srcSet={`${ind.img.replace('.webp', '-640.avif')} 640w, ${ind.img.replace('.webp', '-960.avif')} 960w, ${ind.img.replace('.webp', '-1280.avif')} 1280w`}
+                        sizes={i % 2 === 0 ? "(min-width: 1120px) 604px, (min-width: 768px) calc(58.333vw - 49px), (min-width: 640px) calc((100vw - 68px) / 2), calc(100vw - 48px)" : "(min-width: 1120px) 432px, (min-width: 768px) calc(41.667vw - 35px), (min-width: 640px) calc((100vw - 68px) / 2), calc(100vw - 48px)"}
+                      />
+                      <source
+                        type="image/webp"
+                        srcSet={`${ind.img.replace('.webp', '-640.webp')} 640w, ${ind.img.replace('.webp', '-960.webp')} 960w, ${ind.img.replace('.webp', '-1280.webp')} 1280w`}
+                        sizes={i % 2 === 0 ? "(min-width: 1120px) 604px, (min-width: 768px) calc(58.333vw - 49px), (min-width: 640px) calc((100vw - 68px) / 2), calc(100vw - 48px)" : "(min-width: 1120px) 432px, (min-width: 768px) calc(41.667vw - 35px), (min-width: 640px) calc((100vw - 68px) / 2), calc(100vw - 48px)"}
+                      />
+                      <img
+                        src={ind.img.replace('.webp', '-960.webp')}
+                        srcSet={`${ind.img.replace('.webp', '-640.webp')} 640w, ${ind.img.replace('.webp', '-960.webp')} 960w, ${ind.img.replace('.webp', '-1280.webp')} 1280w`}
+                        sizes={i % 2 === 0 ? "(min-width: 1120px) 604px, (min-width: 768px) calc(58.333vw - 49px), (min-width: 640px) calc((100vw - 68px) / 2), calc(100vw - 48px)" : "(min-width: 1120px) 432px, (min-width: 768px) calc(41.667vw - 35px), (min-width: 640px) calc((100vw - 68px) / 2), calc(100vw - 48px)"}
+                        alt={ind.alt}
+                        width={1280}
+                        height={800}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </picture>
                     <div className="p-5">
                       <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{ind.t}</h3>
                       <p className="mt-1.5 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{ind.b}</p>
@@ -1561,15 +1575,28 @@ export default function AccountsReceivableAutomationPage() {
                   </Link>
                   .
                 </p>
-                <img
-                  src={`${IMG}/rules-whiteboard.webp`}
-                  alt="A red haired woman in a teal shirt and a bald man with glasses in a tan cardigan, seen from slightly behind, line up a row of blank white cards with one orange card on a long table"
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                  decoding="async"
-                  className="mt-6 aspect-[3/2] w-full rounded-2xl border border-fj-neutral-200 object-cover"
-                />
+                <picture className="ar-photo ar-process-picture">
+                  <source
+                    type="image/avif"
+                    srcSet={`${IMG}/ar-payment-match-review-640.avif 640w, ${IMG}/ar-payment-match-review-960.avif 960w, ${IMG}/ar-payment-match-review-1280.avif 1280w`}
+                    sizes="(min-width: 1120px) 326px, (min-width: 1024px) calc(33.333vw - 48px), (min-width: 768px) calc(100vw - 64px), calc(100vw - 48px)"
+                  />
+                  <source
+                    type="image/webp"
+                    srcSet={`${IMG}/ar-payment-match-review-640.webp 640w, ${IMG}/ar-payment-match-review-960.webp 960w, ${IMG}/ar-payment-match-review-1280.webp 1280w`}
+                    sizes="(min-width: 1120px) 326px, (min-width: 1024px) calc(33.333vw - 48px), (min-width: 768px) calc(100vw - 64px), calc(100vw - 48px)"
+                  />
+                  <img
+                    src={`${IMG}/ar-payment-match-review-960.webp`}
+                    srcSet={`${IMG}/ar-payment-match-review-640.webp 640w, ${IMG}/ar-payment-match-review-960.webp 960w, ${IMG}/ar-payment-match-review-1280.webp 1280w`}
+                    sizes="(min-width: 1120px) 326px, (min-width: 1024px) calc(33.333vw - 48px), (min-width: 768px) calc(100vw - 64px), calc(100vw - 48px)"
+                    alt="A woman and a man compare a remittance sheet and three invoice sheets with a highlighted row on a monitor."
+                    width={1280}
+                    height={800}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <ol className="grid gap-4 lg:col-span-8">
                 {PROCESS.map((p) => (

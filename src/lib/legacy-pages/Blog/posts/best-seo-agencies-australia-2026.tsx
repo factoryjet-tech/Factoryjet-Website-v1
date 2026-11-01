@@ -1,8 +1,10 @@
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
+import './best-seo-agencies-australia-2026/page.css';
 
 const PAGE_URL = 'https://factoryjet.com/blog/best-seo-agencies-australia-2026';
 const IMG = '/blog-images/best-seo-agencies-australia-2026';
+const PHOTO = '/images/blog/best-seo-agencies-australia-2026';
 
 // HOW THIS LIST WAS BUILT (22 October 2026)
 // 1. On 9 Oct 2026 we put one buyer question, "Which SEO agencies in Australia are best for small
@@ -305,7 +307,7 @@ export const post: BlogPost = {
   ],
   faqs: FAQS,
   content: (
-    <>
+    <div className="au-smb-seo-guide">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -349,7 +351,10 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          The best SEO company in Australia for a small business depends on your size and budget. For a large national team, look at StudioHawk, Supple Digital and Gorilla 360. For an SEO-only specialist, Safari Digital or Red Search in Sydney. For a published starting price, Webomaze in Melbourne (from A$700 a month) and Digital Marketing Tribe in Sydney and Adelaide (from A$1,200 a month plus GST). In Perth, Bloom Digital; on the Sunshine Coast, Digital Nomads HQ.
+          The best SEO company in Australia for a small business depends on your size and budget. For a large national team, look at StudioHawk, Supple Digital and Gorilla 360. For an SEO-only specialist, Safari Digital or Red Search in Sydney.
+        </p>
+        <p className="text-gray-800 leading-relaxed mb-3">
+          For a published starting price, Webomaze in Melbourne (from A$700 a month) and Digital Marketing Tribe in Sydney and Adelaide (from A$1,200 a month plus GST). In Perth, Bloom Digital; on the Sunshine Coast, Digital Nomads HQ.
         </p>
         <p className="text-gray-800 leading-relaxed">
           We started from the agencies AI tools themselves name for small businesses, then read each firm&rsquo;s own website on 22 October 2026. Nobody paid to be listed. The order is not a ranking. FactoryJet is last, and labelled.
@@ -373,7 +378,7 @@ export const post: BlogPost = {
         Find the rows that match your size and your state, then read those profiles in full.
       </p>
       <p className="md:hidden text-xs text-gray-600 mb-2 not-prose">Swipe sideways to see every column.</p>
-      <div className="mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className="au-smb-seo-guide__table-scroll mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 720 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -412,7 +417,8 @@ export const post: BlogPost = {
       </p>
 
       {FIRMS.map((f, i) => (
-        <section key={f.name} className="mb-8">
+        <React.Fragment key={f.name}>
+        <section className="au-smb-seo-guide__profile mb-8">
           <h3 className="text-xl font-bold mt-6 mb-2">{i + 1}. {f.name}</h3>
           <p className="text-sm text-gray-600 mb-3">
             <strong>Based:</strong> {f.based}. <strong>Type:</strong> {f.type}.
@@ -432,21 +438,27 @@ export const post: BlogPost = {
               </>
             )}
           </p>
+        </section>
+          {i === 2 && (
+            <figure className="au-smb-seo-guide__media my-8 not-prose">
+              <picture>
+                <source type="image/avif" srcSet={`${PHOTO}/physio-local-catchment-review-640.avif 640w, ${PHOTO}/physio-local-catchment-review-960.avif 960w, ${PHOTO}/physio-local-catchment-review-1280.avif 1280w`} sizes="(min-width: 1280px) 691px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" />
+                <source type="image/webp" srcSet={`${PHOTO}/physio-local-catchment-review-640.webp 640w, ${PHOTO}/physio-local-catchment-review-960.webp 960w, ${PHOTO}/physio-local-catchment-review-1280.webp 1280w`} sizes="(min-width: 1280px) 691px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" />
+                <img src={`${PHOTO}/physio-local-catchment-review-960.webp`} srcSet={`${PHOTO}/physio-local-catchment-review-640.webp 640w, ${PHOTO}/physio-local-catchment-review-960.webp 960w, ${PHOTO}/physio-local-catchment-review-1280.webp 1280w`} sizes="(min-width: 1280px) 691px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A man in a light blue polo compares two printed street and square grid diagrams at a desk beside a treatment table." />
+              </picture>
+            </figure>
+          )}
           {f.name === 'Digital Nomads HQ' && (
-            <figure className="my-8 not-prose">
-              <img
-                src={`${IMG}-report.webp`}
-                width={1200}
-                height={800}
-                loading="lazy"
-                decoding="async"
-                alt="A bald man in his 60s with a grey beard and an olive linen shirt and a red-haired woman in a white t-shirt reading printed bar charts at a pale timber table in a bright meeting room"
-                className="w-full h-auto rounded-xl"
-              />
+            <figure className="au-smb-seo-guide__media my-8 not-prose">
+              <picture>
+                <source type="image/avif" srcSet={`${PHOTO}/cafe-local-enquiry-report-640.avif 640w, ${PHOTO}/cafe-local-enquiry-report-960.avif 960w, ${PHOTO}/cafe-local-enquiry-report-1280.avif 1280w`} sizes="(min-width: 1280px) 691px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" />
+                <source type="image/webp" srcSet={`${PHOTO}/cafe-local-enquiry-report-640.webp 640w, ${PHOTO}/cafe-local-enquiry-report-960.webp 960w, ${PHOTO}/cafe-local-enquiry-report-1280.webp 1280w`} sizes="(min-width: 1280px) 691px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" />
+                <img src={`${PHOTO}/cafe-local-enquiry-report-960.webp`} srcSet={`${PHOTO}/cafe-local-enquiry-report-640.webp 640w, ${PHOTO}/cafe-local-enquiry-report-960.webp 960w, ${PHOTO}/cafe-local-enquiry-report-1280.webp 1280w`} sizes="(min-width: 1280px) 691px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 768px) calc(100vw - 114px), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman in a navy apron reviews printed street and square grid diagrams at a cafe counter beside plain cups and a closed laptop." />
+              </picture>
               <figcaption className="text-sm text-gray-600 mt-2">Ask to see a real monthly report before you sign. The useful ones start with calls and enquiries, not rankings.</figcaption>
             </figure>
           )}
-        </section>
+        </React.Fragment>
       ))}
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Four more firms that passed the same checks</h2>
@@ -467,7 +479,7 @@ export const post: BlogPost = {
         Most Australian SEO agencies quote after a call. Three of the ten we profiled publish a price or a minimum on their own sites. We copied them exactly on 22 October 2026. These are each firm&rsquo;s own figures, not FactoryJet prices.
       </p>
       <p className="md:hidden text-xs text-gray-600 mb-2 not-prose">Swipe sideways to see every column.</p>
-      <div className="mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className="au-smb-seo-guide__table-scroll mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 600 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -576,6 +588,6 @@ export const post: BlogPost = {
           See our small business SEO plan
         </a>
       </div>
-    </>
+    </div>
   ),
 };

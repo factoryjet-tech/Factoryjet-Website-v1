@@ -1,4 +1,5 @@
 import React from 'react';
+import './best-ai-seo-agencies-australia-2026/page.css';
 import type { BlogPost, FAQItem } from '../data.types';
 
 const PAGE_URL = 'https://factoryjet.com/blog/best-ai-seo-agencies-australia-2026';
@@ -312,7 +313,7 @@ export const post: BlogPost = {
   ],
   faqs: FAQS,
   content: (
-    <>
+    <div className="fj-au-ai-seo-2026">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -382,7 +383,7 @@ export const post: BlogPost = {
         Find the rows that match your size and your state, then read those profiles in full.
       </p>
       <p className="md:hidden text-xs text-gray-600 mb-2 not-prose">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className="overflow-x-auto mb-8 not-prose fj-ai-seo-table" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 720 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -421,7 +422,7 @@ export const post: BlogPost = {
       </p>
 
       {FIRMS.map((f, i) => (
-        <section key={f.name} className="mb-8">
+        <section key={f.name} className="mb-8 fj-ai-seo-profile">
           <h3 className="text-xl font-bold mt-6 mb-2">{i + 1}. {f.name}</h3>
           <p className="text-sm text-gray-600 mb-3">
             <strong>Based:</strong> {f.based}. <strong>Type:</strong> {f.type}.
@@ -437,15 +438,20 @@ export const post: BlogPost = {
           </p>
           {f.name === 'Prosperity Media' && (
             <figure className="my-8 not-prose">
-              <img
-                src={`${IMG}-workshop.webp`}
-                width={1200}
-                height={800}
-                loading="lazy"
-                decoding="async"
-                alt="Two colleagues seen from behind in a bright Perth meeting room, a white-haired woman in a green cardigan and a younger woman in a pale blue shirt, reviewing a simple bar chart on a wall screen"
-                className="w-full h-auto rounded-xl"
-              />
+              <picture className="fj-ai-seo-photo">
+                <source type="image/avif" srcSet="/images/blog/best-ai-seo-agencies-australia-2026/lighting-retailer-answer-report-640.avif 640w, /images/blog/best-ai-seo-agencies-australia-2026/lighting-retailer-answer-report-960.avif 960w, /images/blog/best-ai-seo-agencies-australia-2026/lighting-retailer-answer-report-1280.avif 1280w" sizes="(min-width: 1280px) 691px, (min-width: 1024px) calc(66.6667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+                <source type="image/webp" srcSet="/images/blog/best-ai-seo-agencies-australia-2026/lighting-retailer-answer-report-640.webp 640w, /images/blog/best-ai-seo-agencies-australia-2026/lighting-retailer-answer-report-960.webp 960w, /images/blog/best-ai-seo-agencies-australia-2026/lighting-retailer-answer-report-1280.webp 1280w" sizes="(min-width: 1280px) 691px, (min-width: 1024px) calc(66.6667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+                <img
+                  src="/images/blog/best-ai-seo-agencies-australia-2026/lighting-retailer-answer-report-960.webp"
+                  srcSet="/images/blog/best-ai-seo-agencies-australia-2026/lighting-retailer-answer-report-640.webp 640w, /images/blog/best-ai-seo-agencies-australia-2026/lighting-retailer-answer-report-960.webp 960w, /images/blog/best-ai-seo-agencies-australia-2026/lighting-retailer-answer-report-1280.webp 1280w"
+                  sizes="(min-width: 1280px) 691px, (min-width: 1024px) calc(66.6667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)"
+                  width={1536}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  alt="A woman in a grey shirt reviews three panels of grey bars on a monitor beside a blank sheet and an orange folder in a lighting showroom."
+                />
+              </picture>
               <figcaption className="text-sm text-gray-600 mt-2">Ask any agency to show you the monthly report before you sign. The useful ones show which AI answers named you, not only rankings.</figcaption>
             </figure>
           )}
@@ -470,7 +476,7 @@ export const post: BlogPost = {
         Most AI SEO agencies quote after a call. Six of the 18 firms on this list publish figures on their own sites. We copied them exactly on 21 October 2026. These are each firm&rsquo;s own prices, not FactoryJet prices.
       </p>
       <p className="md:hidden text-xs text-gray-600 mb-2 not-prose">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className="overflow-x-auto mb-4 not-prose fj-ai-seo-table" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 600 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -532,15 +538,20 @@ export const post: BlogPost = {
       </ul>
 
       <figure className="my-8 not-prose">
-        <img
-          src={`${IMG}-compare.webp`}
-          width={1200}
-          height={800}
-          loading="lazy"
-          decoding="async"
-          alt="A man in a sage-green shirt laying out two blank stacks of paper side by side on a white Melbourne desk, placing an orange sticky note beside one, with a closed laptop, a fern and a flat white"
-          className="w-full h-auto rounded-xl"
-        />
+        <picture className="fj-ai-seo-photo">
+                <source type="image/avif" srcSet="/images/blog/best-ai-seo-agencies-australia-2026/renovation-owner-proposals-640.avif 640w, /images/blog/best-ai-seo-agencies-australia-2026/renovation-owner-proposals-960.avif 960w, /images/blog/best-ai-seo-agencies-australia-2026/renovation-owner-proposals-1280.avif 1280w" sizes="(min-width: 1280px) 691px, (min-width: 1024px) calc(66.6667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+                <source type="image/webp" srcSet="/images/blog/best-ai-seo-agencies-australia-2026/renovation-owner-proposals-640.webp 640w, /images/blog/best-ai-seo-agencies-australia-2026/renovation-owner-proposals-960.webp 960w, /images/blog/best-ai-seo-agencies-australia-2026/renovation-owner-proposals-1280.webp 1280w" sizes="(min-width: 1280px) 691px, (min-width: 1024px) calc(66.6667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+                <img
+                  src="/images/blog/best-ai-seo-agencies-australia-2026/renovation-owner-proposals-960.webp"
+                  srcSet="/images/blog/best-ai-seo-agencies-australia-2026/renovation-owner-proposals-640.webp 640w, /images/blog/best-ai-seo-agencies-australia-2026/renovation-owner-proposals-960.webp 960w, /images/blog/best-ai-seo-agencies-australia-2026/renovation-owner-proposals-1280.webp 1280w"
+                  sizes="(min-width: 1280px) 691px, (min-width: 1024px) calc(66.6667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)"
+                  width={1536}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  alt="A man in a navy shirt compares two sheets of grey and orange bars beside tile samples and an orange mug at a wooden desk."
+                />
+              </picture>
         <figcaption className="text-sm text-gray-600 mt-2">Put two proposals side by side and compare the unit: prompts tracked, hours a month, or pages rewritten.</figcaption>
       </figure>
 
@@ -613,6 +624,6 @@ export const post: BlogPost = {
           Check your AI visibility free
         </a>
       </div>
-    </>
+    </div>
   ),
 };
