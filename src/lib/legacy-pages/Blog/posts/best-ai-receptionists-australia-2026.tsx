@@ -1,4 +1,5 @@
 import React from 'react';
+import './best-ai-receptionists-australia-2026/page.css';
 import type { BlogPost, FAQItem } from '../data.types';
 
 const PAGE_URL = 'https://factoryjet.com/blog/best-ai-receptionists-australia-2026';
@@ -359,7 +360,7 @@ export const post: BlogPost = {
   ],
   faqs: FAQS,
   content: (
-    <>
+    <div className="fj-au-receptionist-compare">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -427,12 +428,12 @@ export const post: BlogPost = {
         Four more you will see below. An <strong>ABN</strong> or <strong>ACN</strong> is the Australian Business Number or Australian Company Number that shows who you are paying. A <strong>CRM</strong> is the system that holds your customer list and sales pipeline. An <strong>API</strong> or <strong>webhook</strong> is the doorway one piece of software uses to send data into another.
       </p>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">The shortlist at a glance</h2>
+      <h2 id="fj-au-receptionist-shortlist" className="text-2xl font-bold mt-10 mb-4">The shortlist at a glance</h2>
       <p className="mb-4">
         Find your software in the &ldquo;Connects to&rdquo; column first. Then read those profiles in full.
       </p>
       <p className="md:hidden text-sm text-gray-600 mb-2 not-prose">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div role="region" tabIndex={0} aria-labelledby="fj-au-receptionist-shortlist" className="fj-au-receptionist-table overflow-x-auto mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 720 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -471,7 +472,7 @@ export const post: BlogPost = {
       </p>
 
       {PRODUCTS.map((p, i) => (
-        <section key={p.name} className="mb-8">
+        <section key={p.name} className="fj-au-receptionist-profile mb-8">
           <h3 className="text-xl font-bold mt-6 mb-2">{i + 1}. {p.name}</h3>
           <p className="text-sm text-gray-600 mb-3">
             <strong>Who runs it:</strong> {p.company}. <strong>Type:</strong> {p.type}.
@@ -487,29 +488,21 @@ export const post: BlogPost = {
           </p>
           {p.name === 'Voxworks' && (
             <figure className="my-8 not-prose">
-              <img
-                src={`${IMG}-tradie.webp`}
-                width={1200}
-                height={800}
-                loading="lazy"
-                decoding="async"
-                alt="An Adelaide tradeswoman in a teal work shirt and grey cap holding a coiled garden hose beside her white ute while she reads a simple message on her phone"
-                className="w-full h-auto rounded-xl"
-              />
+              <picture>
+                <source type="image/avif" srcSet="/images/blog/best-ai-receptionists-australia-2026/trade-call-handoff-640.avif 640w, /images/blog/best-ai-receptionists-australia-2026/trade-call-handoff-960.avif 960w, /images/blog/best-ai-receptionists-australia-2026/trade-call-handoff-1280.avif 1280w" sizes="(min-width: 1280px) 689px, (min-width: 1024px) calc(66.6667vw - 163.667px), (min-width: 768px) calc(100vw - 116px), calc(100vw - 68px)" />
+                <source type="image/webp" srcSet="/images/blog/best-ai-receptionists-australia-2026/trade-call-handoff-640.webp 640w, /images/blog/best-ai-receptionists-australia-2026/trade-call-handoff-960.webp 960w, /images/blog/best-ai-receptionists-australia-2026/trade-call-handoff-1280.webp 1280w" sizes="(min-width: 1280px) 689px, (min-width: 1024px) calc(66.6667vw - 163.667px), (min-width: 768px) calc(100vw - 116px), calc(100vw - 68px)" />
+                <img src="/images/blog/best-ai-receptionists-australia-2026/trade-call-handoff-960.webp" srcSet="/images/blog/best-ai-receptionists-australia-2026/trade-call-handoff-640.webp 640w, /images/blog/best-ai-receptionists-australia-2026/trade-call-handoff-960.webp 960w, /images/blog/best-ai-receptionists-australia-2026/trade-call-handoff-1280.webp 1280w" sizes="(min-width: 1280px) 689px, (min-width: 1024px) calc(66.6667vw - 163.667px), (min-width: 768px) calc(100vw - 116px), calc(100vw - 68px)" width={1536} height={1024} loading="lazy" decoding="async" alt="An electrical contractor takes a telephone call beside a message panel and a job calendar in an Adelaide workshop office." />
+              </picture>
               <figcaption className="text-sm text-gray-600 mt-2">Trade products differ most in what happens after the call: a text summary, a booked job, or a job written into your software.</figcaption>
             </figure>
           )}
           {p.name === 'HealthEngine Helen' && (
             <figure className="my-8 not-prose">
-              <img
-                src={`${IMG}-clinic.webp`}
-                width={1200}
-                height={800}
-                loading="lazy"
-                decoding="async"
-                alt="Seen from behind, a receptionist in a mustard cardigan at a bright Melbourne physiotherapy clinic checks a colour-blocked appointment calendar on her monitor while the desk phone sits idle"
-                className="w-full h-auto rounded-xl"
-              />
+              <picture>
+                <source type="image/avif" srcSet="/images/blog/best-ai-receptionists-australia-2026/clinic-booking-handoff-640.avif 640w, /images/blog/best-ai-receptionists-australia-2026/clinic-booking-handoff-960.avif 960w, /images/blog/best-ai-receptionists-australia-2026/clinic-booking-handoff-1280.avif 1280w" sizes="(min-width: 1280px) 689px, (min-width: 1024px) calc(66.6667vw - 163.667px), (min-width: 768px) calc(100vw - 116px), calc(100vw - 68px)" />
+                <source type="image/webp" srcSet="/images/blog/best-ai-receptionists-australia-2026/clinic-booking-handoff-640.webp 640w, /images/blog/best-ai-receptionists-australia-2026/clinic-booking-handoff-960.webp 960w, /images/blog/best-ai-receptionists-australia-2026/clinic-booking-handoff-1280.webp 1280w" sizes="(min-width: 1280px) 689px, (min-width: 1024px) calc(66.6667vw - 163.667px), (min-width: 768px) calc(100vw - 116px), calc(100vw - 68px)" />
+                <img src="/images/blog/best-ai-receptionists-australia-2026/clinic-booking-handoff-960.webp" srcSet="/images/blog/best-ai-receptionists-australia-2026/clinic-booking-handoff-640.webp 640w, /images/blog/best-ai-receptionists-australia-2026/clinic-booking-handoff-960.webp 960w, /images/blog/best-ai-receptionists-australia-2026/clinic-booking-handoff-1280.webp 1280w" sizes="(min-width: 1280px) 689px, (min-width: 1024px) calc(66.6667vw - 163.667px), (min-width: 768px) calc(100vw - 116px), calc(100vw - 68px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A receptionist takes a telephone call while a clinician points to an appointment slot at a Melbourne clinic desk." />
+              </picture>
               <figcaption className="text-sm text-gray-600 mt-2">For clinics, the useful test is simple: does the booking appear in your practice software, or only in an email to the front desk?</figcaption>
             </figure>
           )}
@@ -526,12 +519,12 @@ export const post: BlogPost = {
         ))}
       </ul>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">What AI receptionists cost in Australia: published list prices</h2>
+      <h2 id="fj-au-receptionist-prices" className="text-2xl font-bold mt-10 mb-4">What AI receptionists cost in Australia: published list prices</h2>
       <p className="mb-4">
         Eleven of the 13 products publish prices. We copied them exactly on 21 October 2026, sorted by entry price. These are each product&rsquo;s own list prices, not FactoryJet prices. Sophiie and HealthEngine Helen quote after a demo.
       </p>
       <p className="md:hidden text-sm text-gray-600 mb-2 not-prose">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div role="region" tabIndex={0} aria-labelledby="fj-au-receptionist-prices" className="fj-au-receptionist-table overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 820 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -569,11 +562,11 @@ export const post: BlogPost = {
         <a href="/blog/how-much-does-an-ai-medical-receptionist-cost-2026" className="text-[#B23E13] underline">how much an AI medical receptionist costs</a>.
       </p>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">Which software each AI receptionist connects to</h2>
+      <h2 id="fj-au-receptionist-connections" className="text-2xl font-bold mt-10 mb-4">Which software each AI receptionist connects to</h2>
       <p className="mb-4">
         This is where the products differ most. A receptionist that only texts you a summary still leaves you typing the job in at 9pm. Here is what each product names on its own site, grouped by the software Australian businesses told Google they use.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
+      <div role="region" tabIndex={0} aria-labelledby="fj-au-receptionist-connections" className="fj-au-receptionist-table overflow-x-auto mb-4 not-prose">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -711,6 +704,6 @@ export const post: BlogPost = {
           See a demo on my calls
         </a>
       </div>
-    </>
+    </div>
   ),
 };
