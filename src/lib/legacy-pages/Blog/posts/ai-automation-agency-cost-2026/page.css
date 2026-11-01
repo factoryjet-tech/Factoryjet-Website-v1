@@ -37,6 +37,7 @@
 
 .fj-cost-2026 .fj-cost-table { min-width: 0; margin: 1.5rem 0 1.75rem; }
 .fj-cost-2026 .fj-cost-table-scroll { max-width: 100%; border-radius: 14px; overscroll-behavior-x: contain; }
+.fj-cost-2026 .fj-cost-table-scroll:focus-within { outline: 2px solid #B23E13; outline-offset: 4px; }
 .fj-cost-2026 .fj-cost-table table { display: table; max-width: none; width: 100%; margin: 0; overflow: visible; border-radius: 0; font-size: 16px; }
 .fj-cost-2026 .fj-cost-table :is(th, td) { padding: 16px; min-width: 150px; line-height: 1.6; text-wrap: pretty; }
 .fj-cost-2026 .fj-cost-table th { font-weight: 700; }
