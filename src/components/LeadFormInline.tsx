@@ -223,7 +223,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
               Phone <span className="text-slate-500 font-normal">(optional)</span>
             </label>
             <input type="tel" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)}
-              placeholder={region === 'us' ? '(555) 000-0000' : region === 'uk' ? '+44 7700 000000' : '+91 98XXX XXXXX'}
+              placeholder={region === 'us' ? '(555) 000-0000' : region === 'uk' ? '+44 7700 000000' : 'Your phone number'}
               autoComplete="tel" className={inputCls} />
           </div>
           <div>

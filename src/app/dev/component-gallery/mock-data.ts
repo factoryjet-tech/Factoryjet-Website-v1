@@ -39,7 +39,7 @@ export const mockHero: HeroSectionProps = {
   },
   secondaryCta: {
     label: 'WhatsApp Us',
-    href: 'https://wa.me/919699977699',
+    href: 'https://wa.me/16504442422',
   },
   serviceVariant: 'web-design',
   city: 'London',
@@ -505,6 +505,6 @@ export const mockFinalCTAAnchor: FinalCTAAnchorProps = {
   },
   whatsappCta: {
     label: 'Or message on WhatsApp',
-    href: 'https://wa.me/919699977699',
+    href: 'https://wa.me/16504442422',
   },
 };

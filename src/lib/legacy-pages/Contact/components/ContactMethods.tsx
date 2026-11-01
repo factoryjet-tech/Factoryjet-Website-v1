@@ -63,11 +63,11 @@ const ContactMethods: React.FC = () => {
             <p className="text-slate-600 mb-6 flex-grow">Speak directly with a knowledgeable team member (not a receptionist). Get immediate answers.</p>
             
             <div className="space-y-3 mb-6 md:mb-8 text-sm text-slate-500">
-               <p className="font-bold text-xl sm:text-2xl text-slate-900">+91 96999 77699</p>
+               <p className="font-bold text-xl sm:text-2xl text-slate-900">+1 650 444 2422</p>
                <p className="text-xs">Wait Time: &lt;2 mins during business hours</p>
             </div>
 
-            <a href="tel:+919699977699" className="w-full py-3 bg-white border-2 border-slate-200 text-slate-700 font-semibold rounded-lg hover:border-jetOrange hover:text-jetOrange transition-colors text-center">
+            <a href="tel:+16504442422" className="w-full py-3 bg-white border-2 border-slate-200 text-slate-700 font-semibold rounded-lg hover:border-jetOrange hover:text-jetOrange transition-colors text-center">
               Call Now
             </a>
           </motion.div>
@@ -85,11 +85,11 @@ const ContactMethods: React.FC = () => {
             <p className="text-slate-600 mb-6 flex-grow">Quick questions, sharing documents, or ongoing communication. Response within 30 minutes.</p>
             
             <div className="space-y-3 mb-6 md:mb-8 text-sm text-slate-500">
-               <p className="font-bold text-xl sm:text-2xl text-slate-900">+91 96999 77699</p>
+               <p className="font-bold text-xl sm:text-2xl text-slate-900">+1 650 444 2422</p>
                <p className="text-xs">Share screenshots & docs easily</p>
             </div>
 
-            <a href="https://wa.me/919699977699?text=Hi%20FactoryJet" onClick={trackWhatsAppConversion} className="w-full py-3 bg-whatsapp text-white font-semibold rounded-lg hover:bg-whatsapp-hover transition-colors flex items-center justify-center gap-2">
+            <a href="https://wa.me/16504442422?text=Hi%20FactoryJet" onClick={trackWhatsAppConversion} className="w-full py-3 bg-whatsapp text-white font-semibold rounded-lg hover:bg-whatsapp-hover transition-colors flex items-center justify-center gap-2">
               <MessageCircle className="w-5 h-5" /> Chat on WhatsApp
             </a>
           </motion.div>

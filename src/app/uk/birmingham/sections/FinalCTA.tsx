@@ -192,7 +192,7 @@ export default function FinalCTA() {
               </span>
             </UkAuditButton>
             <a
-              href="https://wa.me/919699977699"
+              href="https://wa.me/16504442422"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2"

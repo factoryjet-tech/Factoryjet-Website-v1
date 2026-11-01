@@ -81,7 +81,7 @@ export default function FinalCTA() {
             {/* Contact details */}
             <div className="flex flex-col" style={{ gap: "12px" }}>
               <a
-                href="https://wa.me/919699977699"
+                href="https://wa.me/16504442422"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 transition-opacity duration-200 hover:opacity-80"

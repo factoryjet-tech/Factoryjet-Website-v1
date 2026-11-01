@@ -17,21 +17,16 @@
  * prerender and hydration, so it cannot cause a hydration mismatch.
  */
 
-/** India number: India, UK, UAE and Australia pages. */
-export const WHATSAPP_NUMBER = '919699977699';
-/** US number (+1 650 444 2422), confirmed by Bhavesh 2026-09-30: US and default pages. */
+/** US number (+1 650 444 2422), confirmed by Bhavesh 2026-09-30. */
 export const WHATSAPP_NUMBER_US = '16504442422';
 
 /*
- * Pages for markets other than the US keep the India number. Everything else is
- * a US or default-market page and gets the US number, so a US buyer is not
- * asked to message a +91 number (flagged in the 2026-09-29 lead audit).
+ * 2026-11-01: every page now uses the US number. The India number was retired
+ * site-wide on Bhavesh's instruction: a +91 number states where the team is.
+ * The pathname argument is kept so existing callers need no change.
  */
-const NON_US_PATH =
-  /^\/(in|uk|uae|ae|au|web-design|seo|digital-marketing|ai-seo|shopify-development|wordpress-development|n8n-automation|whatsapp-chatbot)(\/|$)|^\/services\/ecommerce-development\/[^/]+/;
-
-export function whatsappNumberFor(pathname?: string | null): string {
-  return pathname && NON_US_PATH.test(pathname) ? WHATSAPP_NUMBER : WHATSAPP_NUMBER_US;
+export function whatsappNumberFor(_pathname?: string | null): string {
+  return WHATSAPP_NUMBER_US;
 }
 
 export function whatsappHref(message: string, pathname?: string | null): string {

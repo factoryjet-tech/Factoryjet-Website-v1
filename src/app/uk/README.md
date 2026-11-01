@@ -137,7 +137,7 @@ All animations use GSAP with ScrollTrigger:
 **All contact info is verified and standardized:**
 
 - **Email**: `connect@factoryjet.com`
-- **WhatsApp**: `https://wa.me/919699977699` (number: +91 96999 77699)
+- **WhatsApp**: `https://wa.me/16504442422` (number: +1 650 444 2422)
 - **Form Modal**: "Get Your Free Digital Audit" 3-step form
 
 ### Form Details
@@ -280,7 +280,7 @@ Interactions
 ☐ Form validation works (required fields)
 ☐ Form can close (Escape key or close button)
 ☐ All links work (city links, service links)
-☐ WhatsApp links open: wa.me/919699977699
+☐ WhatsApp links open: wa.me/16504442422
 ☐ Email link works: connect@factoryjet.com
 
 Performance
@@ -402,4 +402,4 @@ Total: **~915 KB** for complete page
 
 **Last Updated**: April 16, 2026  
 **Status**: ✅ Production Ready  
-**Contact**: connect@factoryjet.com | WhatsApp: wa.me/919699977699
+**Contact**: connect@factoryjet.com | WhatsApp: wa.me/16504442422

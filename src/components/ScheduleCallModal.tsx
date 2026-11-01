@@ -406,7 +406,7 @@ const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      placeholder="+91 XXXXX XXXXX"
+                      placeholder="Your phone number"
                       className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-jet-blue focus:border-jet-blue outline-none transition-all"
                     />
                   </div>

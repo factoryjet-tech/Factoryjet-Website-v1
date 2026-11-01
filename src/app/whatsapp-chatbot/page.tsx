@@ -987,7 +987,7 @@ export default function WhatsAppChatbotINPage() {
             headline="535 Million People Are On WhatsApp. Is Your Business Ready?"
             sub="Get a free WhatsApp chatbot demo built for your business. No commitment, no fluff, just a working prototype in 48 hours showing exactly how automation would work for your specific use case. Fixed price, 7-day delivery, 30-day support included."
             primaryCta={{ label: 'Book My Free Demo', modal: true, region: 'in' }}
-            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
+            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/16504442422' }}
             objectionHandler="Fixed price. 7-day delivery. India-specific stack. 30-day post-launch support included."
           />
         </div>

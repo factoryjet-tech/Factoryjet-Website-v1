@@ -66,10 +66,10 @@ const Hero: React.FC = () => {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
           <div className="flex gap-4 w-full sm:w-auto">
-            <a href="tel:+919699977699" className="flex-1 sm:flex-none px-4 py-3 sm:px-6 sm:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-semibold transition-all text-center">
+            <a href="tel:+16504442422" className="flex-1 sm:flex-none px-4 py-3 sm:px-6 sm:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-semibold transition-all text-center">
               Call Us Now
             </a>
-            <a href="https://wa.me/919699977699?text=Hi%20FactoryJet" onClick={trackWhatsAppConversion} className="flex-1 sm:flex-none px-4 py-3 sm:px-6 sm:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-semibold transition-all text-center">
+            <a href="https://wa.me/16504442422?text=Hi%20FactoryJet" onClick={trackWhatsAppConversion} className="flex-1 sm:flex-none px-4 py-3 sm:px-6 sm:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-semibold transition-all text-center">
               WhatsApp Us
             </a>
           </div>

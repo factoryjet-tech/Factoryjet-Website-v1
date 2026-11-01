@@ -1290,7 +1290,7 @@ export default function SheffieldPage() {
                 <div className="flex flex-col gap-4">
                   {[
                     { label: "Email",     value: "connect@factoryjet.com",   href: "mailto:connect@factoryjet.com" },
-                    { label: "WhatsApp",  value: "Message us on WhatsApp",   href: "https://wa.me/919699977699" },
+                    { label: "WhatsApp",  value: "Message us on WhatsApp",   href: "https://wa.me/16504442422" },
                   ].map((c) => (
                     <a key={c.label} href={c.href} rel="noopener noreferrer" className="flex items-start gap-4 group">
                       <span className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#9CA3AF] w-[74px] flex-shrink-0 pt-[2px]">

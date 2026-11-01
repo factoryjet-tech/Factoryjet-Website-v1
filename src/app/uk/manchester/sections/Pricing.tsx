@@ -249,7 +249,7 @@ export default function Pricing() {
               Get Your Free Quote →
             </UkAuditButton>
             <a
-              href="https://wa.me/919699977699"
+              href="https://wa.me/16504442422"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-lg font-semibold text-center transition-all duration-200 border border-solid border-[#E5E7EB] text-[#374151] hover:border-[#B23E13] hover:text-[#B23E13]"

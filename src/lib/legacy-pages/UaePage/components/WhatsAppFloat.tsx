@@ -19,7 +19,7 @@ const WhatsAppIcon: React.FC<{ size?: number; className?: string }> = ({
 const WhatsAppFloat: React.FC = () => {
   return (
     <a
-      href="https://wa.me/919699977699?text=Hi%20FactoryJet%20Dubai"
+      href="https://wa.me/16504442422?text=Hi%20FactoryJet%20Dubai"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 whatsapp-animate bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#20bd5a] transition-colors flex items-center justify-center group"

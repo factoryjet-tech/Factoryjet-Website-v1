@@ -82,7 +82,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
                             Get Free Consultation <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                         </button>
                         <a
-                            href="https://wa.me/919699977699?text=Hi%20FactoryJet%20Dubai"
+                            href="https://wa.me/16504442422?text=Hi%20FactoryJet%20Dubai"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Contact us via WhatsApp"
