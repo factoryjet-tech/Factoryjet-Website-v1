@@ -168,6 +168,12 @@
   max-width: 190px;
 }
 
+@media (max-width: 767px) {
+  .au-smb-seo-guide.au-smb-seo-guide .au-smb-seo-guide__table-scroll :is(th, td):first-child {
+    position: static;
+  }
+}
+
 @container au-smb-seo (min-width: 640px) {
   .au-smb-seo-guide .au-smb-seo-guide__profile {
     display: grid;
