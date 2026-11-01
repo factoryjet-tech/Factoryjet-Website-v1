@@ -344,6 +344,7 @@ export const post: BlogPost = {
   dateModified: 'Oct 31, 2026',
   readTime: '18 min read',
   imageUrl: `${IMG}-hero.webp`,
+  imageFit: 'contain',
   imageAlt:
     'Over the shoulder of a Brisbane tradesman in a navy polo sitting in the open side door of his white van, checking a simple list on his phone under a jacaranda tree',
   meta: {
