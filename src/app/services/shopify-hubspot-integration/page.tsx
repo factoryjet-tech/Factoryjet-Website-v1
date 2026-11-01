@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import './page.css';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -643,7 +642,7 @@ export default function ShopifyHubSpotIntegrationPage() {
 
       <SiteHeader />
 
-      <main className="fj-shh-visual min-h-screen bg-fj-cream text-fj-ink">
+      <main className="min-h-screen bg-fj-cream text-fj-ink">
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* 1. HERO */}
@@ -766,7 +765,7 @@ export default function ShopifyHubSpotIntegrationPage() {
         {/* 3. THE NATIVE APP */}
         <section className="border-b border-fj-neutral-200 bg-fj-cream py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-4 sm:px-6 md:px-8">
-            <div className="fj-shh-native-grid grid grid-cols-1 gap-10 lg:grid-cols-12">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
               <div className="lg:col-span-4">
                 <p className="fj-eyebrow">Start with HubSpot&rsquo;s own app</p>
                 <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
@@ -837,8 +836,6 @@ export default function ShopifyHubSpotIntegrationPage() {
         {/* 4. THE GAPS */}
         <section className="border-b border-fj-neutral-200 bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-4 sm:px-6 md:px-8">
-            <div className="fj-shh-intro-grid">
-              <div>
             <p className="fj-eyebrow">When to build custom</p>
             <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
               Eight signs you have outgrown the native app.
@@ -851,23 +848,6 @@ export default function ShopifyHubSpotIntegrationPage() {
               </Link>{' '}
               page.
             </p>
-
-              </div>
-                <picture className="fj-shh-photo">
-                  <source type="image/avif" srcSet="/images/us/shopify-hubspot-integration/product-variant-contact-review-640.avif 640w, /images/us/shopify-hubspot-integration/product-variant-contact-review-960.avif 960w, /images/us/shopify-hubspot-integration/product-variant-contact-review-1280.avif 1280w" sizes="(min-width: 1024px) 430px, (min-width: 768px) 80vw, calc(100vw - 32px)" />
-                  <source type="image/webp" srcSet="/images/us/shopify-hubspot-integration/product-variant-contact-review-640.webp 640w, /images/us/shopify-hubspot-integration/product-variant-contact-review-960.webp 960w, /images/us/shopify-hubspot-integration/product-variant-contact-review-1280.webp 1280w" sizes="(min-width: 1024px) 430px, (min-width: 768px) 80vw, calc(100vw - 32px)" />
-                  <img
-                    src="/images/us/shopify-hubspot-integration/product-variant-contact-review-960.webp"
-                    srcSet="/images/us/shopify-hubspot-integration/product-variant-contact-review-640.webp 640w, /images/us/shopify-hubspot-integration/product-variant-contact-review-960.webp 960w, /images/us/shopify-hubspot-integration/product-variant-contact-review-1280.webp 1280w"
-                    sizes="(min-width: 1024px) 430px, (min-width: 768px) 80vw, calc(100vw - 32px)"
-                    width="1536"
-                    height="1024"
-                    alt="A woman compares a grid of shirt variants with contact rows on two monitors."
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-            </div>
 
             <ol className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-12">
               {GAPS.map((g, i) => (
@@ -980,8 +960,6 @@ export default function ShopifyHubSpotIntegrationPage() {
         {/* 6b. TEST ORDERS. Our own test plan from process step 05. Not a client result. */}
         <section className="border-t border-fj-neutral-200 bg-fj-cream py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-4 sm:px-6 md:px-8">
-            <div className="fj-shh-intro-grid">
-              <div>
             <p className="fj-eyebrow">Before go live</p>
             <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
               Five test orders we run before a Shopify HubSpot sync goes live.
@@ -990,22 +968,6 @@ export default function ShopifyHubSpotIntegrationPage() {
               This is the test plan from step 05. Each order goes from a test store into a HubSpot test portal. Your
               team checks the records it creates and signs off each row before we switch on the live store.
             </p>
-              </div>
-                <picture className="fj-shh-photo">
-                  <source type="image/avif" srcSet="/images/us/shopify-hubspot-integration/five-sample-order-check-640.avif 640w, /images/us/shopify-hubspot-integration/five-sample-order-check-960.avif 960w, /images/us/shopify-hubspot-integration/five-sample-order-check-1280.avif 1280w" sizes="(min-width: 1024px) 430px, (min-width: 768px) 80vw, calc(100vw - 32px)" />
-                  <source type="image/webp" srcSet="/images/us/shopify-hubspot-integration/five-sample-order-check-640.webp 640w, /images/us/shopify-hubspot-integration/five-sample-order-check-960.webp 960w, /images/us/shopify-hubspot-integration/five-sample-order-check-1280.webp 1280w" sizes="(min-width: 1024px) 430px, (min-width: 768px) 80vw, calc(100vw - 32px)" />
-                  <img
-                    src="/images/us/shopify-hubspot-integration/five-sample-order-check-960.webp"
-                    srcSet="/images/us/shopify-hubspot-integration/five-sample-order-check-640.webp 640w, /images/us/shopify-hubspot-integration/five-sample-order-check-960.webp 960w, /images/us/shopify-hubspot-integration/five-sample-order-check-1280.webp 1280w"
-                    sizes="(min-width: 1024px) 430px, (min-width: 768px) 80vw, calc(100vw - 32px)"
-                    width="1536"
-                    height="1024"
-                    alt="A packer checks five plain sample order boxes against rows on a tablet."
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-            </div>
             <p className="mt-6 font-fj-body text-sm text-fj-neutral-600 md:hidden">Swipe sideways to see every column.</p>
             <div
               className="mt-3 rounded-2xl border border-fj-neutral-200 bg-white md:mt-6"
@@ -1056,7 +1018,7 @@ export default function ShopifyHubSpotIntegrationPage() {
         <section className="border-y border-fj-neutral-200 bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-4 sm:px-6 md:px-8">
             <p className="fj-eyebrow">Next to this page</p>
-            <h2 className="fj-shh-related-heading mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
+            <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
               Related integration services.
             </h2>
             <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12">
@@ -1126,7 +1088,6 @@ export default function ShopifyHubSpotIntegrationPage() {
         />
 
         {/* 11. FINAL CTA */}
-        <div className="fj-shh-final-grid">
         <FinalCTA
           variant="light"
           eyebrow="Shopify HubSpot integration"
@@ -1136,23 +1097,6 @@ export default function ShopifyHubSpotIntegrationPage() {
           secondaryCta={{ label: 'Talk to the founder', href: '/contact' }}
           objectionHandler="Registered Shopify Partner. Demo on your data before you sign. Fixed price per phase. You own the code."
         />
-          <div className="fj-shh-final-media">
-                <picture className="fj-shh-photo">
-                  <source type="image/avif" srcSet="/images/us/shopify-hubspot-integration/sales-order-timeline-call-640.avif 640w, /images/us/shopify-hubspot-integration/sales-order-timeline-call-960.avif 960w, /images/us/shopify-hubspot-integration/sales-order-timeline-call-1280.avif 1280w" sizes="(min-width: 1024px) 430px, (min-width: 768px) 80vw, calc(100vw - 32px)" />
-                  <source type="image/webp" srcSet="/images/us/shopify-hubspot-integration/sales-order-timeline-call-640.webp 640w, /images/us/shopify-hubspot-integration/sales-order-timeline-call-960.webp 960w, /images/us/shopify-hubspot-integration/sales-order-timeline-call-1280.webp 1280w" sizes="(min-width: 1024px) 430px, (min-width: 768px) 80vw, calc(100vw - 32px)" />
-                  <img
-                    src="/images/us/shopify-hubspot-integration/sales-order-timeline-call-960.webp"
-                    srcSet="/images/us/shopify-hubspot-integration/sales-order-timeline-call-640.webp 640w, /images/us/shopify-hubspot-integration/sales-order-timeline-call-960.webp 960w, /images/us/shopify-hubspot-integration/sales-order-timeline-call-1280.webp 1280w"
-                    sizes="(min-width: 1024px) 430px, (min-width: 768px) 80vw, calc(100vw - 32px)"
-                    width="1536"
-                    height="1024"
-                    alt="A man on a headset call looks at an order timeline beside plain shipping boxes."
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-          </div>
-        </div>
       </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
