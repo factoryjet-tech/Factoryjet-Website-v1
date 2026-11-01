@@ -1,0 +1,27 @@
+/* This article alone; shared blog templates and page surfaces stay untouched. */
+.fj-b2b-uk-2026 { display: flow-root; min-width: 0; }
+.fj-b2b-uk-2026 :is(p, li) { line-height: 1.75; text-wrap: pretty; }
+.fj-b2b-uk-2026 h2[class] { margin-top: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 1rem; font-size: clamp(1.5rem, 2.6vw, 2.125rem); line-height: 1.18; text-wrap: balance; scroll-margin-top: 7rem; }
+.fj-b2b-uk-2026 h3[class] { font-size: clamp(1.25rem, 1.8vw, 1.5rem); line-height: 1.25; text-wrap: balance; scroll-margin-top: 7rem; }
+.fj-b2b-uk-2026 .fj-b2b-uk-group { margin-top: clamp(2.5rem, 4vw, 3.5rem); }
+.fj-b2b-uk-2026 .fj-b2b-uk-profile { padding-top: clamp(1.25rem, 2vw, 1.75rem); padding-bottom: .5rem; border-top: 1px solid #E5E7EB; }
+.fj-b2b-uk-2026 .fj-b2b-uk-profile > h3 { margin-top: 0; margin-bottom: .75rem; }
+.fj-b2b-uk-2026 .fj-b2b-uk-facts { margin-top: 1.25rem; padding-left: 1.25rem; }
+.fj-b2b-uk-2026 .fj-b2b-uk-facts > li + li { margin-top: .75rem; }
+.fj-b2b-uk-2026 div.fj-b2b-uk-table[class] { width: 100%; max-width: 100%; overflow: auto; overscroll-behavior-inline: contain; border: 1px solid #E5E7EB; border-radius: 1rem; }
+.fj-b2b-uk-2026 div.fj-b2b-uk-table > table { display: table; max-width: none; margin: 0; border: 0; border-radius: 0; overflow: visible; }
+.fj-b2b-uk-2026 .fj-b2b-uk-table table:focus-visible { outline: 2px solid #B23E13; outline-offset: -3px; }
+.fj-b2b-uk-2026 .fj-b2b-uk-table :is(th, td) { vertical-align: top; line-height: 1.6; }
+.fj-b2b-uk-2026 figure { margin-block: clamp(1.75rem, 3vw, 2.5rem); }
+.fj-b2b-uk-2026 picture { display: block; overflow: hidden; border: 1px solid #E5E7EB; border-radius: 1.125rem; box-shadow: 0 2px 5px rgba(20, 17, 15, .035), 0 14px 28px -20px rgba(20, 17, 15, .16); }
+.fj-b2b-uk-2026 picture img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; border-radius: inherit; }
+.fj-b2b-uk-2026 figcaption { margin-top: .75rem; line-height: 1.6; }
+.fj-b2b-uk-2026 a { overflow-wrap: anywhere; text-underline-offset: 3px; }
+.fj-b2b-uk-2026 a[class*="bg-"] { display: inline-flex; min-height: 44px; align-items: center; line-height: 1.4; }
+@media (max-width: 1024px) {
+  .fj-b2b-uk-2026 a:not([class*="bg-"]) { display: inline-block; min-height: 44px; min-width: 44px; max-width: 100%; align-content: center; vertical-align: baseline; }
+}
+@media (max-width: 767px) {
+  .fj-b2b-uk-2026 :is(p, li, th, td, figcaption) { font-size: 1rem; }
+  .fj-b2b-uk-2026 h2[class] { font-size: 1.5rem; }
+}
