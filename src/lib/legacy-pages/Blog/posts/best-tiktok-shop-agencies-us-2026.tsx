@@ -403,7 +403,7 @@ export const post: BlogPost = {
   ],
   faqs: FAQS,
   content: (
-    <>
+    <div className={styles.tiktokVisual}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -445,13 +445,13 @@ export const post: BlogPost = {
         <p className="text-gray-800 leading-relaxed mb-3">
           Pick by what you need run every day. For a TikTok Shop specialist, MediaLabs, The Brand Buddies or Top Growth Marketing; for creators and affiliates only, Hamster Garage. To run TikTok Shop alongside Amazon and Walmart, Pattern, Velocity Sellers, Eva Commerce, Sequence Commerce, Marketplace Velocity, CoreTrex, ASL Ecommerce or Darkroom. For TikTok Shop on one catalog with Shopify and marketplaces, FactoryJet.
         </p>
-        <p className="text-gray-800 leading-relaxed mb-3">
-          We read all 13 agencies on their own websites on 23 October 2026: where each is based, which channels it runs, what it claims about TikTok partner status and any fee it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
-        </p>
-        <p className="text-gray-800 leading-relaxed">
-          Short on time? <a href="/contact" className={link}>Tell us what you sell and where</a>. Bhavesh, our founder, reads every request.
-        </p>
       </div>
+      <p className="text-gray-800 leading-relaxed mb-3">
+        We read all 13 agencies on their own websites on 23 October 2026: where each is based, which channels it runs, what it claims about TikTok partner status and any fee it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
+      </p>
+      <p className="text-gray-800 leading-relaxed mb-6">
+        Short on time? <a href="/contact" className={link}>Tell us what you sell and where</a>. Bhavesh, our founder, reads every request.
+      </p>
 
       <p className="mb-4">
         On 22 October 2026 we asked ChatGPT, Claude, Gemini, Perplexity and Google&rsquo;s AI answers the same question several times: &ldquo;What is the best TikTok Shop agency for US brands?&rdquo; We collected 28 answers. They linked to 81 different pages, and 284 of the 351 links, about four in five, went to &ldquo;best agencies&rdquo; list pages.
@@ -537,7 +537,7 @@ export const post: BlogPost = {
             {inGroup.map((f) => {
               const n = FIRMS.indexOf(f) + 1;
               return (
-                <div key={f.name} className="mb-8">
+                <div key={f.name} className={styles.profileCard}>
                   <h4 className="text-lg font-bold mt-6 mb-2">{n}. {f.name}</h4>
                   <p className="mb-2">
                     <span className="inline-block rounded-full border border-gray-300 bg-white px-3 py-1 text-xs font-semibold text-gray-700">{GROUP_LABEL[f.group]}</span>
@@ -566,31 +566,39 @@ export const post: BlogPost = {
             })}
             {g === 'TikTok Shop specialists' && (
               <figure className="my-8 not-prose">
-                <img
-                  src={`${IMG}/creator.webp`}
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                  decoding="async"
-                  alt="A woman with wavy brown hair in an olive jumpsuit sits on a sofa holding a plain white mug in one hand and a phone in the other"
-                  className="w-full h-auto rounded-xl bg-gray-100"
-                  style={{ aspectRatio: '3 / 2' }}
-                />
+                <picture>
+                  <source type="image/avif" srcSet={`${IMG}/creator-skincare-video-640.avif 640w, ${IMG}/creator-skincare-video-960.avif 960w, ${IMG}/creator-skincare-video-1280.avif 1280w`} sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.6667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)" />
+                  <source type="image/webp" srcSet={`${IMG}/creator-skincare-video-640.webp 640w, ${IMG}/creator-skincare-video-960.webp 960w, ${IMG}/creator-skincare-video-1280.webp 1280w`} sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.6667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)" />
+                  <img
+                    src={`${IMG}/creator-skincare-video-960.webp`}
+                    srcSet={`${IMG}/creator-skincare-video-640.webp 640w, ${IMG}/creator-skincare-video-960.webp 960w, ${IMG}/creator-skincare-video-1280.webp 1280w`}
+                    sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.6667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)"
+                    width={1536}
+                    height={1024}
+                    loading="lazy"
+                    decoding="async"
+                    alt="A woman opens a plain cream jar while a phone on a tripod films the product beside a ring light."
+                  />
+                </picture>
                 <figcaption className="text-sm text-gray-600 mt-2">Creators sell on TikTok Shop. Ask every agency how many creators posted for a brand like yours last quarter, not how many are on its list.</figcaption>
               </figure>
             )}
             {g === 'Marketplace agencies' && (
               <figure className="my-8 not-prose">
-                <img
-                  src={`${IMG}/packing.webp`}
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                  decoding="async"
-                  alt="A man with a short beard in a navy apron folds a plain brown mailer box at a packing bench with stacked boxes behind him and an orange tape dispenser beside him"
-                  className="w-full h-auto rounded-xl bg-gray-100"
-                  style={{ aspectRatio: '3 / 2' }}
-                />
+                <picture>
+                  <source type="image/avif" srcSet={`${IMG}/skincare-order-packing-640.avif 640w, ${IMG}/skincare-order-packing-960.avif 960w, ${IMG}/skincare-order-packing-1280.avif 1280w`} sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.6667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)" />
+                  <source type="image/webp" srcSet={`${IMG}/skincare-order-packing-640.webp 640w, ${IMG}/skincare-order-packing-960.webp 960w, ${IMG}/skincare-order-packing-1280.webp 1280w`} sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.6667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)" />
+                  <img
+                    src={`${IMG}/skincare-order-packing-960.webp`}
+                    srcSet={`${IMG}/skincare-order-packing-640.webp 640w, ${IMG}/skincare-order-packing-960.webp 960w, ${IMG}/skincare-order-packing-1280.webp 1280w`}
+                    sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.6667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)"
+                    width={1536}
+                    height={1024}
+                    loading="lazy"
+                    decoding="async"
+                    alt="A man wraps an amber bottle in white tissue inside a cardboard mailer beside plain bottles and an orange tape gun."
+                  />
+                </picture>
                 <figcaption className="text-sm text-gray-600 mt-2">A viral video is only good news if the order ships. Ask who packs TikTok Shop orders and how fast.</figcaption>
               </figure>
             )}
@@ -615,16 +623,20 @@ export const post: BlogPost = {
       </p>
 
       <figure className="my-8 not-prose">
-        <img
-          src={`${IMG}/channels.webp`}
-          width={1200}
-          height={800}
-          loading="lazy"
-          decoding="async"
-          alt="A woman with glasses and a white shirt sits at a desk looking at a monitor showing four groups of coloured bars, beside an orange notebook"
-          className="w-full h-auto rounded-xl bg-gray-100"
-          style={{ aspectRatio: '3 / 2' }}
-        />
+        <picture>
+          <source type="image/avif" srcSet={`${IMG}/short-video-inventory-check-640.avif 640w, ${IMG}/short-video-inventory-check-960.avif 960w, ${IMG}/short-video-inventory-check-1280.avif 1280w`} sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.6667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)" />
+          <source type="image/webp" srcSet={`${IMG}/short-video-inventory-check-640.webp 640w, ${IMG}/short-video-inventory-check-960.webp 960w, ${IMG}/short-video-inventory-check-1280.webp 1280w`} sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.6667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)" />
+          <img
+            src={`${IMG}/short-video-inventory-check-960.webp`}
+            srcSet={`${IMG}/short-video-inventory-check-640.webp 640w, ${IMG}/short-video-inventory-check-960.webp 960w, ${IMG}/short-video-inventory-check-1280.webp 1280w`}
+            sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.6667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)"
+            width={1536}
+            height={1024}
+            loading="lazy"
+            decoding="async"
+            alt="A woman holds an amber bottle beside a monitor with product columns, a phone showing a bottle and an empty stock tray."
+          />
+                </picture>
         <figcaption className="text-sm text-gray-600 mt-2">Four channels, one stock count. Ask any agency to show sales and inventory for every channel on one screen.</figcaption>
       </figure>
 
@@ -753,6 +765,6 @@ export const post: BlogPost = {
         </p>
         <a href="/contact" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">Book a free audit</a>
       </div>
-    </>
+    </div>
   ),
 };

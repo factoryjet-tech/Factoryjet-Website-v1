@@ -1,0 +1,261 @@
+/* Only the UK SEO cost post imports this stylesheet. */
+.fj-seo-cost-uk-visual {
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.75;
+  container-type: inline-size;
+}
+
+.fj-seo-cost-uk-visual :is(h2, h3) {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  scroll-margin-top: 112px;
+  scroll-margin-bottom: 96px;
+}
+
+.fj-seo-cost-uk-visual > h2 {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.fj-seo-cost-uk-visual > h3 {
+  font-size: clamp(1.125rem, 1.8vw, 1.375rem);
+  line-height: 1.3;
+}
+
+.fj-seo-cost-uk-visual :is(p, li) {
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+
+.fj-seo-cost-uk-visual :is(p, ul, ol, table, details, .text-sm) {
+  font-size: 1rem;
+}
+
+.fj-seo-cost-uk-visual :is(figcaption, caption, .fj-seo-cost-source-note, p.text-xs) {
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  color: #4b5563;
+}
+
+.fj-seo-cost-uk-visual .answer-first {
+  margin-bottom: 0;
+  padding: clamp(1.125rem, 2.5vw, 1.75rem);
+  border-radius: 0 1rem 1rem 0;
+  border-left-color: #d1d5db;
+}
+
+.fj-seo-cost-uk-visual .answer-first h2 {
+  font-size: clamp(1.125rem, 1.8vw, 1.375rem);
+  line-height: 1.3;
+}
+
+.fj-seo-cost-uk-visual .fj-seo-cost-source-note {
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.fj-seo-cost-uk-visual .overflow-x-auto {
+  max-width: 100%;
+  margin-block: 1.75rem;
+  border-color: #e5e7eb;
+  border-radius: 1rem;
+  scrollbar-width: thin;
+  overscroll-behavior-inline: contain;
+}
+
+.fj-seo-cost-uk-visual .overflow-x-auto:focus-visible {
+  outline: 2px solid #B23E13;
+  outline-offset: -3px;
+}
+
+.fj-seo-cost-uk-visual table {
+  text-align: left;
+  line-height: 1.65;
+}
+
+.fj-seo-cost-uk-visual thead {
+  background: #f9fafb;
+  color: #111827;
+}
+
+.fj-seo-cost-uk-visual :is(th, td) {
+  padding: 1rem;
+  vertical-align: top;
+}
+
+.fj-seo-cost-uk-visual tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.fj-seo-cost-uk-visual td.whitespace-nowrap {
+  white-space: normal;
+  min-width: 9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.fj-seo-cost-uk-visual table a {
+  display: inline-flex;
+  align-items: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.fj-seo-cost-uk-visual figure {
+  margin-block: clamp(2rem, 4vw, 3rem);
+}
+
+.fj-seo-cost-uk-visual picture {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  background: #f9fafb;
+  box-shadow: 0 2px 4px rgb(17 24 39 / 0.025), 0 12px 28px rgb(17 24 39 / 0.06);
+}
+
+.fj-seo-cost-uk-visual picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1280 / 853;
+  object-fit: cover;
+  object-position: top;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.fj-seo-cost-uk-visual figcaption {
+  margin-top: 0.75rem;
+}
+
+.fj-seo-cost-uk-visual .fj-seo-cost-budget-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+}
+
+.fj-seo-cost-uk-visual .fj-seo-cost-budget-grid > details {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border-color: #e5e7eb;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.fj-seo-cost-uk-visual details summary {
+  min-height: 52px;
+  padding: 1rem 1.25rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.fj-seo-cost-uk-visual details summary::marker {
+  color: #B23E13;
+}
+
+.fj-seo-cost-uk-visual details > div {
+  margin-top: 0;
+  padding: 0 1.25rem 1.25rem;
+}
+
+.fj-seo-cost-uk-visual details[open] {
+  border-color: #d1d5db;
+}
+
+.fj-seo-cost-uk-visual .fj-seo-cost-contents ol {
+  margin-bottom: 0;
+}
+
+.fj-seo-cost-uk-visual .fj-seo-cost-contents a {
+  display: block;
+  min-height: 44px;
+  padding-block: 0.5rem;
+}
+
+.fj-seo-cost-uk-visual .fj-seo-cost-related {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.25rem 1.5rem;
+}
+
+.fj-seo-cost-uk-visual .fj-seo-cost-related a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding-block: 0.5rem;
+}
+
+.fj-seo-cost-uk-visual .fj-seo-cost-cta {
+  border-color: #e5e7eb;
+  border-left: 4px solid #d1d5db;
+}
+
+.fj-seo-cost-uk-visual .fj-seo-cost-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 48px;
+}
+
+.fj-seo-cost-uk-visual :is(a, summary):focus-visible {
+  outline: 2px solid #B23E13;
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+.fj-seo-cost-uk-visual details summary:focus-visible {
+  outline-offset: -3px;
+}
+
+@container (min-width: 560px) {
+  .fj-seo-cost-uk-visual .fj-seo-cost-budget-grid {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+
+  .fj-seo-cost-uk-visual .fj-seo-cost-budget-grid > details:first-child {
+    grid-column: 1 / -1;
+    background: #f9fafb;
+  }
+
+  .fj-seo-cost-uk-visual .fj-seo-cost-related {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .fj-seo-cost-uk-visual > h2 {
+    font-size: clamp(1.375rem, 5.8vw, 1.625rem);
+  }
+
+  .fj-seo-cost-uk-visual .fj-seo-cost-budget-grid,
+  .fj-seo-cost-uk-visual .fj-seo-cost-related {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .fj-seo-cost-uk-visual a {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 767px) {
+  .fj-seo-cost-uk-visual :is(figcaption, p.fj-seo-cost-source-note),
+  .fj-seo-cost-uk-visual > div.my-8 > p.text-xs {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}

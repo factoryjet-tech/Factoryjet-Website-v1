@@ -43,3 +43,54 @@
 :global(.blog-post .blog-prose) .orderedFacts tr { counter-increment: existing-criterion; }
 :global(.blog-post .blog-prose) .orderedFacts th:first-child::before { content: counter(existing-criterion) ". "; font-weight: 400; }
 @media (max-width: 639px) { :global(.blog-post .blog-prose) .choiceFacts th:first-child { width: 100%; } }
+
+/* Page-owned editorial layout. Existing text and reading order remain unchanged. */
+.healthcareArticle { min-width: 0; }
+.healthcareArticle > h2 {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.15;
+  text-wrap: balance;
+  scroll-margin-top: 7rem;
+}
+.healthcareArticle :is(p, li) { text-wrap: pretty; line-height: 1.75; }
+.healthcareArticle :is(h3, h4) { text-wrap: balance; scroll-margin-top: 7rem; }
+.healthcareArticle a:focus-visible { outline: 2px solid #B23E13; outline-offset: 4px; }
+.healthcareArticle table[tabindex]:focus-visible { outline: 2px solid #B23E13; outline-offset: -3px; }
+.healthcareArticle .companyProfile {
+  margin: 1.5rem 0 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #E5E7EB;
+}
+.healthcareArticle .companyProfile h4 { margin-top: 0; }
+.healthcareArticle .sectionPhoto {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid #E5E7EB;
+  border-radius: clamp(16px, 2vw, 24px);
+  box-shadow: 0 2px 4px rgb(20 17 15 / 0.03), 0 16px 28px -20px rgb(20 17 15 / 0.22);
+}
+.healthcareArticle figure { margin-block: clamp(1.5rem, 4vw, 2.5rem); }
+.healthcareArticle figcaption { margin-top: .75rem; line-height: 1.65; color: #4B5563; }
+.healthcareArticle .researchSteps { padding-left: 1.4rem; }
+.healthcareArticle .researchSteps > li { margin-block: 1rem; padding-left: .25rem; }
+.healthcareArticle .selectionSteps { display: grid; gap: 1rem; max-width: none; }
+.healthcareArticle .selectionSteps > li { margin: 0; padding: clamp(1rem, 2vw, 1.5rem); }
+.healthcareArticle .selectionSteps > li > p:first-child { line-height: 1.4; }
+@media (min-width: 768px) {
+  .healthcareArticle .selectionSteps { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+  .healthcareArticle .selectionSteps > li:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 1024px) {
+  .healthcareArticle a { display: inline-block; min-width: 44px; min-height: 44px; max-width: 100%; padding-block: 8px; vertical-align: middle; overflow-wrap: anywhere; }
+}
+@media (max-width: 767px) {
+  .healthcareArticle :is(p, li, th, td, figcaption) { font-size: 16px; }
+  .healthcareArticle p[class*='uppercase'] { font-size: 12px; }
+  .healthcareArticle .companyProfile { padding-top: 1.25rem; }
+}

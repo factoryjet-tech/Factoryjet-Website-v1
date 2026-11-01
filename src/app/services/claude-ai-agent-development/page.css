@@ -1,0 +1,207 @@
+.claudeVisualPage {
+  --accent-text: #B23E13;
+}
+
+.claudeVisualPage :is(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+.claudeVisualPage :is(p, dd) {
+  text-wrap: pretty;
+}
+
+.claudeVisualPage :is(a, button, input, select, textarea, summary):focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 4px;
+}
+
+.claudeVisualPage .claudeSectionPhoto {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: clamp(16px, 2vw, 24px);
+  box-shadow: 0 2px 6px rgb(20 17 15 / 3%), 0 18px 38px -28px rgb(20 17 15 / 24%);
+}
+
+.claudeVisualPage .claudeSectionPhoto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+}
+
+.claudeVisualPage .facts .section-head .claudeSectionPhoto {
+  margin-top: clamp(24px, 3vw, 36px);
+}
+
+.claudeVisualPage .claudeProcessBody {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(32px, 5vw, 76px);
+  align-items: start;
+}
+
+.claudeVisualPage .claudeProcessBody .timeline {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 30px;
+}
+
+.claudeVisualPage .claudeProcessBody .timeline::before {
+  left: 22px;
+  top: 0;
+  bottom: 0;
+  right: auto;
+  height: auto;
+  width: 1px;
+}
+
+.claudeVisualPage .claudeProcessBody .tnode {
+  min-height: 66px;
+  padding-left: 72px;
+}
+
+.claudeVisualPage .claudeProcessBody .tnode .idx {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.claudeVisualPage .claudeProcessBody .tnode h3 {
+  margin-top: 0;
+  padding-top: 3px;
+}
+
+.claudeVisualPage .claudeProcessBody .tnode p {
+  font-size: 16px;
+}
+
+.claudeVisualPage .process .section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 18px clamp(32px, 5vw, 76px);
+  align-items: start;
+}
+
+.claudeVisualPage .process .section-head .eyebrow {
+  grid-column: 1 / -1;
+}
+
+.claudeVisualPage .process .section-head p {
+  margin-top: 0;
+}
+
+@media (min-width: 821px) {
+  .claudeVisualPage .facts .section-head,
+  .claudeVisualPage .claudeProcessPhoto {
+    position: sticky;
+    top: 112px;
+  }
+
+  .claudeVisualPage .facts .wrap {
+    column-gap: clamp(32px, 5vw, 76px);
+  }
+
+  .claudeVisualPage .facts .wrap > p {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .claudeVisualPage main :is(p, dd, li, th, td, input, button) {
+    font-size: 16px !important;
+  }
+
+  .claudeVisualPage :is(.btn, .refs a, .qtext, .ledgercell .v) {
+    font-size: 16px;
+  }
+
+  .claudeVisualPage :is(.eyebrow, .vtag, .capid, .systags span, .idx, .qid, .faq-category, .ledgercell .k, .summaryrow dt, .claudeSwipeHint) {
+    font-size: 12px;
+  }
+
+  .claudeVisualPage .crumbs a,
+  .claudeVisualPage main a {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+    align-content: center;
+    vertical-align: baseline;
+  }
+
+  .claudeVisualPage .faq-catnav a {
+    display: flex;
+    align-items: center;
+  }
+
+  .claudeVisualPage .actions .btn {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .claudeVisualPage .refs a {
+    padding-top: 16px;
+  }
+}
+
+@media (max-width: 820px) {
+  .claudeVisualPage .claudeProcessBody,
+  .claudeVisualPage .process .section-head {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .claudeVisualPage .process .section-head .eyebrow {
+    grid-column: auto;
+  }
+
+  .claudeVisualPage .claudeProcessPhoto {
+    position: static;
+  }
+
+  .claudeVisualPage .facts .section-head .claudeSectionPhoto {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .claudeVisualPage .hero h1 {
+    font-size: clamp(31px, 8.6vw, 38px);
+    line-height: 1.1;
+    max-width: none;
+    letter-spacing: -0.035em;
+  }
+
+  .claudeVisualPage h2,
+  .claudeVisualPage .finalcta h2 {
+    font-size: clamp(28px, 7.8vw, 35px);
+  }
+
+  .claudeVisualPage .actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .claudeVisualPage .actions .btn {
+    justify-content: space-between;
+    font-size: 16px;
+  }
+
+  .claudeVisualPage .capgrid > .cap,
+  .claudeVisualPage .ventry {
+    min-width: 0;
+  }
+
+  .claudeVisualPage .section-head,
+  .claudeVisualPage .summarycard,
+  .claudeVisualPage .tablewrap {
+    min-width: 0;
+  }
+
+  .claudeVisualPage main {
+    padding-bottom: 64px;
+  }
+}
