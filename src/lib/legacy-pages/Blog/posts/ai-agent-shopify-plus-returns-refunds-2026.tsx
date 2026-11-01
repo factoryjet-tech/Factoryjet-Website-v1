@@ -1,4 +1,5 @@
 import React from 'react';
+import './ai-agent-shopify-plus-returns-refunds-2026/page.css';
 import type { BlogPost, FAQItem } from '../data.types';
 
 const SLUG = 'ai-agent-shopify-plus-returns-refunds-2026';
@@ -195,7 +196,7 @@ export const post: BlogPost = {
   ],
   faqs: FAQS,
   content: (
-    <>
+    <div className="fj-returns-2026">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -256,7 +257,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         <a href={RETURNS_APPS_URL} className={link} rel="noopener" target="_blank">Shopify says</a> returns are managed only through the GraphQL Admin API, and only fulfilled items can be returned. These are the calls any returns app or agent uses, read on shopify.dev on 24 October 2026.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
+      <div tabIndex={0} className="fj-returns-table overflow-x-auto mb-4 not-prose">
         <table className="w-full border-collapse text-sm">
           <thead><tr className="bg-gray-800 text-white"><th className={th}>API call</th><th className={th}>What it does</th></tr></thead>
           <tbody>
@@ -273,15 +274,19 @@ export const post: BlogPost = {
         In plain words, a return moves from REQUESTED to OPEN to CLOSED, and the refund can be issued as the return closes. Shopify also fires a refunds/create webhook when a refund is created, which is how an ERP or accounting system learns about it.
       </p>
 
-      <figure className="my-8 not-prose">
-        <img src={`${IMG}/inspect.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="A man with a grey goatee and a navy apron holds up a plain white sneaker to check its sole at an inspection bench beside an orange bin" className="w-full h-auto rounded-xl" />
+      <figure className="fj-returns-photo my-8 not-prose">
+        <picture>
+          <source type="image/avif" srcSet={`${IMG}/returned-sneaker-inspection-640.avif 640w, ${IMG}/returned-sneaker-inspection-960.avif 960w, ${IMG}/returned-sneaker-inspection-1280.avif 1280w`} sizes="(max-width: 639px) calc(100vw - 66px), (max-width: 767px) calc(100vw - 82px), (max-width: 1023px) calc(100vw - 114px), (max-width: 1279px) calc(66.6667vw - 162px), 692px" />
+          <source type="image/webp" srcSet={`${IMG}/returned-sneaker-inspection-640.webp 640w, ${IMG}/returned-sneaker-inspection-960.webp 960w, ${IMG}/returned-sneaker-inspection-1280.webp 1280w`} sizes="(max-width: 639px) calc(100vw - 66px), (max-width: 767px) calc(100vw - 82px), (max-width: 1023px) calc(100vw - 114px), (max-width: 1279px) calc(66.6667vw - 162px), 692px" />
+          <img src={`${IMG}/returned-sneaker-inspection-960.webp`} srcSet={`${IMG}/returned-sneaker-inspection-640.webp 640w, ${IMG}/returned-sneaker-inspection-960.webp 960w, ${IMG}/returned-sneaker-inspection-1280.webp 1280w`} sizes="(max-width: 639px) calc(100vw - 66px), (max-width: 767px) calc(100vw - 82px), (max-width: 1023px) calc(100vw - 114px), (max-width: 1279px) calc(66.6667vw - 162px), 692px" width={1200} height={800} loading="lazy" decoding="async" alt="A man with a grey goatee and a navy apron holds up a plain white sneaker to check its sole at an inspection bench beside an orange bin" className="w-full h-auto rounded-xl" />
+        </picture>
         <figcaption className="text-sm text-gray-600 mt-2">Inspection is the step an AI agent cannot do. Decide which refunds wait for it and which do not.</figcaption>
       </figure>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What to automate and what to keep with people</h2>
       <p className="md:hidden text-xs text-gray-600 mb-2 not-prose">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-        <table className="w-full border-collapse text-sm" style={{ minWidth: 560 }}>
+      <div tabIndex={0} className="fj-returns-table overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="w-full border-collapse text-sm">
           <thead><tr className="bg-gray-800 text-white"><th className={th}>Step</th><th className={th}>Automate it?</th><th className={th}>Why</th></tr></thead>
           <tbody>
             <tr className="odd:bg-white even:bg-gray-50"><td className={`${td} font-semibold`}>Check window, final-sale status and order</td><td className={td}>Yes</td><td className={td}>Pure rules against Shopify data.</td></tr>
@@ -302,8 +307,8 @@ export const post: BlogPost = {
         Each row comes from the product&rsquo;s own site or Shopify App Store listing, read on 24 October 2026 (Return Prime and eesel AI on 31 October). They are the vendors&rsquo; claims, not our tests. The order is not a ranking.
       </p>
       <p className="md:hidden text-xs text-gray-600 mb-2 not-prose">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-        <table className="w-full border-collapse text-sm" style={{ minWidth: 960 }}>
+      <div tabIndex={0} className="fj-returns-table overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table className="fj-returns-vendors w-full border-collapse text-sm">
           <thead><tr className="bg-gray-800 text-white"><th className={th}>Product</th><th className={th}>Type</th><th className={th}>What it says it automates</th><th className={th}>Human approval</th><th className={th}>Runs on</th><th className={th}>Published price (USD)</th></tr></thead>
           <tbody>
             {PRODUCTS.map((p) => (
@@ -323,7 +328,7 @@ export const post: BlogPost = {
         <strong>How to read this.</strong>{' '}The returns platforms run the return and apply rules you set. The AI support agents sit in the helpdesk. Only Macha and Yuma describe a human control on refunds in detail, and Gorgias&rsquo;s own actions article lists no Shopify refund action for its AI Agent. If refunds are what you want automated, ask each vendor to show the refund step and the limit that stops it.
       </p>
 
-      <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 my-8 not-prose">
+      <div className="fj-returns-cta rounded-2xl border border-gray-200 bg-gray-50 p-6 my-8 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">If your returns touch an ERP or warehouse system</p>
         <p className="text-gray-800 leading-relaxed mb-3">
           We build a returns and exchanges agent for your store, as part of our <a href="/services/shopify-ai-agents" className={link}>Shopify AI agents</a> work. It checks your rules, prepares the return and asks a person to approve refunds above your limit. The founder joins the first call.
@@ -331,13 +336,17 @@ export const post: BlogPost = {
         <a href="/contact" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">Talk to the Founder</a>
       </div>
 
-      <figure className="my-8 not-prose">
-        <img src={`${IMG}/screen.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="A woman with long braids in a cream cardigan sits at a desk looking at a monitor that lists grey rows marked with green and orange dots, beside an orange notebook" className="w-full h-auto rounded-xl" />
+      <figure className="fj-returns-photo my-8 not-prose">
+        <picture>
+          <source type="image/avif" srcSet={`${IMG}/returns-support-queue-640.avif 640w, ${IMG}/returns-support-queue-960.avif 960w, ${IMG}/returns-support-queue-1280.avif 1280w`} sizes="(max-width: 639px) calc(100vw - 66px), (max-width: 767px) calc(100vw - 82px), (max-width: 1023px) calc(100vw - 114px), (max-width: 1279px) calc(66.6667vw - 162px), 692px" />
+          <source type="image/webp" srcSet={`${IMG}/returns-support-queue-640.webp 640w, ${IMG}/returns-support-queue-960.webp 960w, ${IMG}/returns-support-queue-1280.webp 1280w`} sizes="(max-width: 639px) calc(100vw - 66px), (max-width: 767px) calc(100vw - 82px), (max-width: 1023px) calc(100vw - 114px), (max-width: 1279px) calc(66.6667vw - 162px), 692px" />
+          <img src={`${IMG}/returns-support-queue-960.webp`} srcSet={`${IMG}/returns-support-queue-640.webp 640w, ${IMG}/returns-support-queue-960.webp 960w, ${IMG}/returns-support-queue-1280.webp 1280w`} sizes="(max-width: 639px) calc(100vw - 66px), (max-width: 767px) calc(100vw - 82px), (max-width: 1023px) calc(100vw - 114px), (max-width: 1279px) calc(66.6667vw - 162px), 692px" width={1200} height={800} loading="lazy" decoding="async" alt="A woman checks a grey cardigan beside an open carton and a monitor with grey rows and green and orange dots." className="w-full h-auto rounded-xl" />
+        </picture>
         <figcaption className="text-sm text-gray-600 mt-2">A good returns agent sorts the queue: green for routine cases it handled, orange for the ones waiting on a person.</figcaption>
       </figure>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How an AI returns agent works on Shopify Plus, step by step</h2>
-      <ol className="list-decimal pl-6 mb-6 space-y-2">
+      <ol className="fj-returns-steps list-decimal pl-6 mb-6 space-y-2">
         <li><strong>Request.</strong> The customer asks in chat, email or the order status page. Shopify records it with returnRequest, sets the status to REQUESTED and fires the returns/request webhook, which is the agent&rsquo;s cue to start.</li>
         <li><strong>Check.</strong> The agent finds the order and checks the window, final-sale status and the reason against your rules.</li>
         <li><strong>Decide.</strong> Clear cases are approved with returnApproveRequest, which sets the status to OPEN and fires returns/approve, and a label is sent. Declines fire returns/decline. Unclear ones go to a person with the reason.</li>
@@ -356,7 +365,7 @@ export const post: BlogPost = {
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Buy a returns app, or build a custom returns agent?</h2>
-      <div className="overflow-x-auto mb-4 not-prose">
+      <div tabIndex={0} className="fj-returns-table overflow-x-auto mb-4 not-prose">
         <table className="w-full border-collapse text-sm">
           <thead><tr className="bg-gray-800 text-white"><th className={th}>Your situation</th><th className={th}>Best fit</th></tr></thead>
           <tbody>
@@ -369,13 +378,17 @@ export const post: BlogPost = {
         </table>
       </div>
 
-      <figure className="my-8 not-prose">
-        <img src={`${IMG}/restock.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="A man in a charcoal t-shirt places a folded grey sweater into a white bin on a metal shelf in a stockroom with an orange step stool" className="w-full h-auto rounded-xl" />
+      <figure className="fj-returns-photo my-8 not-prose">
+        <picture>
+          <source type="image/avif" srcSet={`${IMG}/returned-knitwear-restock-640.avif 640w, ${IMG}/returned-knitwear-restock-960.avif 960w, ${IMG}/returned-knitwear-restock-1280.avif 1280w`} sizes="(max-width: 639px) calc(100vw - 66px), (max-width: 767px) calc(100vw - 82px), (max-width: 1023px) calc(100vw - 114px), (max-width: 1279px) calc(66.6667vw - 162px), 692px" />
+          <source type="image/webp" srcSet={`${IMG}/returned-knitwear-restock-640.webp 640w, ${IMG}/returned-knitwear-restock-960.webp 960w, ${IMG}/returned-knitwear-restock-1280.webp 1280w`} sizes="(max-width: 639px) calc(100vw - 66px), (max-width: 767px) calc(100vw - 82px), (max-width: 1023px) calc(100vw - 114px), (max-width: 1279px) calc(66.6667vw - 162px), 692px" />
+          <img src={`${IMG}/returned-knitwear-restock-960.webp`} srcSet={`${IMG}/returned-knitwear-restock-640.webp 640w, ${IMG}/returned-knitwear-restock-960.webp 960w, ${IMG}/returned-knitwear-restock-1280.webp 1280w`} sizes="(max-width: 639px) calc(100vw - 66px), (max-width: 767px) calc(100vw - 82px), (max-width: 1023px) calc(100vw - 114px), (max-width: 1279px) calc(66.6667vw - 162px), 692px" width={1200} height={800} loading="lazy" decoding="async" alt="A man in a charcoal t-shirt places a folded grey sweater into a white bin on a metal shelf in a stockroom with an orange step stool" className="w-full h-auto rounded-xl" />
+        </picture>
         <figcaption className="text-sm text-gray-600 mt-2">A return is only finished when the item is back on the shelf and the stock count in Shopify and the ERP agree.</figcaption>
       </figure>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How to set up Shopify returns automation: 7 steps</h2>
-      <ol className="list-decimal pl-6 mb-6 space-y-2">
+      <ol className="fj-returns-steps list-decimal pl-6 mb-6 space-y-2">
         <li><strong>Write the policy as rules.</strong> Window, final-sale items, who pays shipping, restocking fee, and what counts as damage.</li>
         <li><strong>Set it in Shopify first.</strong> Turn on self-serve returns and return rules, so every tool reads the same policy.</li>
         <li><strong>Pick the refund limit.</strong> The amount below which a refund can go out without a person.</li>
@@ -389,7 +402,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         These are the business sites on Google&rsquo;s first page for &ldquo;shopify plus returns automation&rdquo; in the US when we checked on 24 October 2026 (DataForSEO), with the title Google showed. We list them so you can compare; we have not reviewed their products, and the list leaves out forums.
       </p>
-      <div className="overflow-x-auto mb-4 not-prose">
+      <div tabIndex={0} className="fj-returns-table overflow-x-auto mb-4 not-prose">
         <table className="w-full table-fixed border-collapse text-sm">
           <colgroup><col style={{ width: '35%' }} /><col style={{ width: '65%' }} /></colgroup>
           <thead><tr className="bg-gray-800 text-white"><th className={th}>Site</th><th className={th}>Page title shown in Google</th></tr></thead>
@@ -428,13 +441,13 @@ export const post: BlogPost = {
         We connect it to the ERP or warehouse system when the decision needs that data, and we can show it working on your own orders before you sign. See also <a href="/services/ecommerce-ai-agents" className={link}>ecommerce AI agents</a>, <a href="/services/shopify-plus-agency" className={link}>Shopify Plus development</a>, <a href="/blog/how-long-to-implement-an-ai-agent-2026" className={link}>how long an AI agent takes to implement</a> and <a href="/blog/ai-agents-for-customer-service-mid-sized-companies-2026" className={link}>AI agents for customer service</a>.
       </p>
 
-      <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 mb-8 not-prose">
+      <div className="fj-returns-cta rounded-2xl border border-gray-200 bg-gray-50 p-6 mb-8 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">Want to see it on your own returns?</p>
         <p className="text-gray-800 leading-relaxed mb-3">
           Send us your return policy and a week of return requests. The founder will show which ones an agent could handle, which should stay with a person, and whether an app alone would do.
         </p>
         <a href="/contact" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">Talk to the Founder</a>
       </div>
-    </>
+    </div>
   ),
 };

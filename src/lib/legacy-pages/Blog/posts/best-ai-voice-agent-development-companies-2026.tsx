@@ -1,5 +1,6 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
+import './best-ai-voice-agent-development-companies-2026/page.css';
 
 /**
  * Voice agent DEVELOPMENT companies (firms you hire to build a custom voice agent).
@@ -172,21 +173,32 @@ export const post: BlogPost = {
     'Test every builder on your own call recordings: latency, the hand-off to a person, consent handling and the write-back to your CRM.',
   ],
   faqs,
-  content: <>
+  content: <div className="fj-voice-builders-2026">
     <p className="text-lg leading-relaxed mb-6"><strong>The best AI voice agent development company is the one that can play your own call recordings through a working agent, pass a caller to a person with notes attached and write the result into your CRM.</strong> Nine firms that build custom voice agents are compared below, with what each builds, the platforms its page names and who it fits.</p>
     <p className="mb-6">FactoryJet publishes this article and is one of the nine. The order is alphabetical. We read every company&apos;s own voice agent page on 29 October 2026 and describe only what it says. We have not hired the other eight or tested them on the same calls. If you want a ready-made AI receptionist or a platform to build on yourself, our <a href="/blog/best-ai-receptionist-small-business" className="text-[#B23E13] underline">list of AI receptionists and voice agent platforms</a> covers those with their published prices.</p>
 
     <h2 className="text-2xl font-bold mt-10 mb-4">Nine voice AI companies that build custom agents</h2>
     <p className="mb-4">Many voice AI companies sell a platform. The nine below are AI voice agent development companies. A firm that sells AI voice agent development services builds the agent for you and connects it to your phone system, CRM and booking tools. You hire it for a project. Each entry links to the company&apos;s own voice agent page.</p>
-    <ol className="list-decimal pl-6 space-y-6 mb-8">
+    <picture className="voice-integration-picture">
+      <source type="image/avif" srcSet="/images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-640.avif 640w, /images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-960.avif 960w, /images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-1280.avif 1280w" sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.6667vw - 164px), (min-width: 640px) calc(100vw - 116px), calc(100vw - 68px)" />
+      <source type="image/webp" srcSet="/images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-640.webp 640w, /images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-960.webp 960w, /images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-1280.webp 1280w" sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.6667vw - 164px), (min-width: 640px) calc(100vw - 116px), calc(100vw - 68px)" />
+      <img src="/images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-1280.webp" srcSet="/images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-640.webp 640w, /images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-960.webp 960w, /images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-1280.webp 1280w" sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.6667vw - 164px), (min-width: 640px) calc(100vw - 116px), calc(100vw - 68px)" width={1280} height={853} loading="lazy" decoding="async" alt="A woman uses a headset beside a man holding a telephone handset and a monitor with plain booking blocks." />
+    </picture>
+    <ol className="voice-company-list list-decimal pl-6 space-y-6 mb-8">
       {VOICE_COMPANIES.map(c => (
         <li key={c.name}>
           <h3 className="text-xl font-bold mb-2">{c.name}</h3>
+          <div className="voice-company-grid">
+          <div>
           <p className="mb-2"><strong>What it builds:</strong> {c.builds}</p>
           <p className="mb-2"><strong>Platforms its page names:</strong> {c.platforms}</p>
+          </div>
+          <div>
           <p className="mb-2"><strong>Who it fits:</strong> {c.fit}.</p>
           <p className="mb-2">{c.detail}</p>
-          <a href={c.url} className="text-[#B23E13] underline">Read {c.name}&apos;s voice agent page</a>
+          <a href={c.url} className="voice-company-source text-[#B23E13] underline">Read {c.name}&apos;s voice agent page</a>
+          </div>
+          </div>
         </li>
       ))}
     </ol>
@@ -194,7 +206,7 @@ export const post: BlogPost = {
     <h2 className="text-2xl font-bold mt-10 mb-4">Comparison table: voice agent builders side by side</h2>
     <p id="voice-compare-caption" className="text-left mb-2 px-3 pt-2 text-sm">What each firm&apos;s own page said on 29 October 2026</p>
     <p className="md:hidden text-xs text-gray-600 mb-2">Swipe sideways to see every column.</p>
-    <div className="mb-8" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+    <div className="voice-table-scroll mb-8" tabIndex={0} aria-labelledby="voice-compare-caption" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
       <table className="w-full text-sm border-collapse" style={{ minWidth: 640 }} aria-labelledby="voice-compare-caption">
         <thead>
           <tr>{['Company', 'Tools named', 'Who it fits'].map(t => <th className="border p-3 text-left" scope="col" key={t}>{t}</th>)}</tr>
@@ -214,7 +226,7 @@ export const post: BlogPost = {
 
     <h2 className="text-2xl font-bold mt-10 mb-4">Build firm, platform or ready-made product</h2>
     <p className="mb-4">Three kinds of company use the words &quot;AI voice agent&quot;. Pick the kind before you pick the company.</p>
-    <ul className="list-disc pl-6 space-y-3 mb-6">
+    <ul className="voice-routes list-disc pl-6 space-y-3 mb-6">
       <li><strong>Ready-made AI receptionist.</strong> You sign up, load your hours and FAQs, and forward your number. Fastest route for a small office with standard calls.</li>
       <li><strong>Developer platform (Retell AI, Vapi, Bland AI, <a href="https://synthflow.ai/" className="text-[#B23E13] underline" target="_blank" rel="noopener noreferrer">Synthflow</a>).</strong> Your own developer builds AI phone agents on the platform and connects a phone number. You pay the platform for every minute. Speech companies such as Deepgram also sell a <a href="https://deepgram.com/product/voice-agent-api" className="text-[#B23E13] underline" target="_blank" rel="noopener noreferrer">Voice Agent API</a> that handles listening, the model call and the spoken reply in one connection.</li>
       <li><strong>Development firm (the nine above).</strong> The firm designs the calls and builds the agent. It connects the agent to your phone system and CRM and supports it after launch, and you own what is built.</li>
@@ -229,7 +241,7 @@ export const post: BlogPost = {
 
     <h2 className="text-2xl font-bold mt-10 mb-4">How to evaluate a voice agent builder</h2>
     <p className="mb-4">Give every firm the same five tests. Their answers will separate a demo from an agent you can put on a live line.</p>
-    <ol className="list-decimal pl-6 space-y-3 mb-6">
+    <ol className="voice-evaluation list-decimal pl-6 space-y-3 mb-6">
       {EVAL_STEPS.map(s => <li key={s.t}><strong>{s.t}</strong> {s.d}</li>)}
     </ol>
     <p className="mb-6">For the wider vetting list, send each firm the <a href="/blog/questions-to-ask-ai-development-company-2026" className="text-[#B23E13] underline">15 questions to ask an AI development company</a>.</p>
@@ -237,9 +249,9 @@ export const post: BlogPost = {
     <h2 className="text-2xl font-bold mt-10 mb-4">What a custom AI voice agent costs to build</h2>
     <p className="mb-4">These are build ranges published by three firms that sell this work. They are in US dollars, they cover the build only, and none of them is a FactoryJet price. We re-read each source on 29 October 2026.</p>
     <p className="md:hidden text-xs text-gray-600 mb-2">Swipe sideways to see every column.</p>
-    <div className="mb-4" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+    <div className="voice-table-scroll mb-4" tabIndex={0} aria-labelledby="voice-cost-caption" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
       <table className="w-full text-sm border-collapse" style={{ minWidth: 560 }}>
-        <caption className="text-left mb-3 px-3 pt-2">Published 2026 build ranges for custom AI voice agents</caption>
+        <caption id="voice-cost-caption" className="text-left mb-3 px-3 pt-2">Published 2026 build ranges for custom AI voice agents</caption>
         <thead>
           <tr>{['Source', 'Published build ranges'].map(t => <th className="border p-3 text-left" scope="col" key={t}>{t}</th>)}</tr>
         </thead>
@@ -260,7 +272,7 @@ export const post: BlogPost = {
     <p className="mb-6">Inbound calls, where the customer rings you, are a different case, but recording consent still applies, and some US states require every party to agree. Outside the US, check local rules on recording and marketing calls. Ask every builder to show where the agent discloses that it is an AI, where it records consent and how it handles &quot;stop calling me&quot;. This is not legal advice; check your use with counsel.</p>
 
     <h2 className="text-2xl font-bold mt-10 mb-4">Voice agents FactoryJet builds by industry</h2>
-    <ul className="list-disc pl-6 space-y-3 mb-6">
+    <ul className="voice-industries list-disc pl-6 space-y-3 mb-6">
       <li><a href="/services/ai-call-center-agents" className="text-[#B23E13] underline">AI call center agents</a>: agents that work beside your existing contact center platform and pass calls to your team with notes attached.</li>
       <li><a href="/services/restaurant-ai-voice-agents" className="text-[#B23E13] underline">Restaurant AI voice agents</a>: orders, bookings and catering inquiries for restaurant groups.</li>
       <li><a href="/services/automotive-ai-voice-agents" className="text-[#B23E13] underline">Automotive AI voice agents</a>: service booking and parts orders for dealerships.</li>
@@ -282,5 +294,5 @@ export const post: BlogPost = {
       <p className="mb-3">Send a few call recordings with names removed, or your top call reasons. We build a working demo on your data before you sign anything, then quote a fixed price in writing. You own the code.</p>
       <a href="/contact" className="inline-block bg-[#B23E13] text-white font-semibold rounded-md px-5 py-3 hover:opacity-90">See a demo on my data</a>
     </div>
-  </>,
+  </div>,
 };

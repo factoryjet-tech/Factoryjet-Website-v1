@@ -1,5 +1,6 @@
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
+import './private-ai-for-business-own-data-2026/page.css';
 
 /*
  * Private AI for business: nine ways to use AI on your own data, compared (US first, UK/AU/EU compliance). Written 22 Oct 2026.
@@ -62,7 +63,7 @@ function Table({ head, rows }: { head: string[]; rows: React.ReactNode[][] }) {
   return (
     <div className="my-6">
       <p className="md:hidden text-xs text-gray-500 mb-2">Swipe sideways to see every column.</p>
-      <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className="fj-private-table" tabIndex={0} style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
       <table className="w-full border-collapse text-sm" style={{ minWidth: head.length > 3 ? 720 : 560 }}>
         <thead>
           <tr className="bg-gray-800 text-white">
@@ -219,7 +220,7 @@ export const post: BlogPost = {
   ],
   faqs,
   content: (
-    <article>
+    <article className="fj-private-ai-2026">
       {/* Answer-first block */}
       <div className="bg-white border-2 border-[#E5DFD7] rounded-xl p-6 sm:p-8 mb-10">
         <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-3">The short answer</p>
@@ -251,7 +252,7 @@ export const post: BlogPost = {
         Vendors use &quot;private&quot; and &quot;secure&quot; loosely. Ask these five questions of every option, and get
         the answer from the vendor&apos;s terms, not the sales deck.
       </p>
-      <ol className="list-decimal pl-6 space-y-3 mb-6">
+      <ol className="fj-private-tests list-decimal pl-6 space-y-3 mb-6">
         <li><strong>Training use.</strong>{' '}Are your prompts, files or answers used to train or improve the vendor&apos;s models? By default, and after any setting change?</li>
         <li><strong>Retention.</strong>{' '}How long does the vendor keep prompts and answers, who sets that, and is there a zero data retention (ZDR) option, meaning nothing is stored after the answer is returned?</li>
         <li><strong>Data region.</strong>{' '}Where is data stored and where is it processed? Can you pin both to the US, UK, EU or Australia? This is what AI data residency means in a contract.</li>
@@ -353,16 +354,21 @@ export const post: BlogPost = {
         in-country usually reach Claude through Bedrock or Vertex instead.
       </p>
 
-      <figure className="my-8">
-        <img
-          src={`${IMG}/options.webp`}
-          alt="Seen from behind, a woman in a mustard turtleneck points at the second of four boxes drawn on a whiteboard, outlined in orange, while a grey-bearded man in a green shirt watches."
-          width={1200}
-          height={800}
-          loading="lazy"
-          decoding="async"
-          className="w-full h-auto rounded-xl border border-gray-200"
-        />
+      <figure className="fj-private-photo my-8">
+        <picture>
+          <source type="image/avif" srcSet={`${IMG}/server-cabinet-cable-review-640.avif 640w, ${IMG}/server-cabinet-cable-review-960.avif 960w, ${IMG}/server-cabinet-cable-review-1280.avif 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+          <source type="image/webp" srcSet={`${IMG}/server-cabinet-cable-review-640.webp 640w, ${IMG}/server-cabinet-cable-review-960.webp 960w, ${IMG}/server-cabinet-cable-review-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+          <img
+            src={`${IMG}/server-cabinet-cable-review-960.webp`}
+            srcSet={`${IMG}/server-cabinet-cable-review-640.webp 640w, ${IMG}/server-cabinet-cable-review-960.webp 960w, ${IMG}/server-cabinet-cable-review-1280.webp 1280w`}
+            sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)"
+            alt="A man checks cables beside a plain server cabinet while a woman holds a closed document folder in the doorway."
+            width={1536}
+            height={1024}
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
         <figcaption className="text-xs text-gray-500 mt-2">
           Pick where the model runs before you pick the model: seats, your own cloud, or your own servers.
         </figcaption>
@@ -398,7 +404,7 @@ export const post: BlogPost = {
         RAG is how an AI answers from your contracts, policies, product sheets or tickets without being retrained on
         them. Here is the business version, in five steps:
       </p>
-      <ol className="list-decimal pl-6 space-y-3 mb-6">
+      <ol className="fj-private-process list-decimal pl-6 space-y-3 mb-6">
         <li><strong>Collect.</strong>{' '}Pull documents from SharePoint, Google Drive, your ERP, CRM or help desk, and drop duplicates and stale versions.</li>
         <li><strong>Index.</strong>{' '}Split each document into short passages and store a searchable version (a vector) in a database inside your own cloud account. Common choices are{' '}<a href={SRC.pgvector} {...ext}>pgvector</a>{' '}on PostgreSQL, Azure AI Search, Vertex AI Vector Search, Amazon OpenSearch Service and Pinecone.</li>
         <li><strong>Retrieve, with permissions.</strong>{' '}When someone asks, fetch only the passages that person is allowed to see. Skip this filter and the assistant can quote files the person asking could never open.</li>
@@ -472,16 +478,21 @@ export const post: BlogPost = {
         ]}
       />
 
-      <figure className="my-8">
-        <img
-          src={`${IMG}/sizes.webp`}
-          alt="Three colleagues talk at a pale wood table: a woman with dark wavy hair in a white blouse, a white-haired man in a navy cardigan behind a laptop, and a red-haired woman in a grey hoodie, with an orange binder on the table."
-          width={1200}
-          height={800}
-          loading="lazy"
-          decoding="async"
-          className="w-full h-auto rounded-xl border border-gray-200"
-        />
+      <figure className="fj-private-photo my-8">
+        <picture>
+          <source type="image/avif" srcSet={`${IMG}/binder-file-tray-review-640.avif 640w, ${IMG}/binder-file-tray-review-960.avif 960w, ${IMG}/binder-file-tray-review-1280.avif 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+          <source type="image/webp" srcSet={`${IMG}/binder-file-tray-review-640.webp 640w, ${IMG}/binder-file-tray-review-960.webp 960w, ${IMG}/binder-file-tray-review-1280.webp 1280w`} sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)" />
+          <img
+            src={`${IMG}/binder-file-tray-review-960.webp`}
+            srcSet={`${IMG}/binder-file-tray-review-640.webp 640w, ${IMG}/binder-file-tray-review-960.webp 960w, ${IMG}/binder-file-tray-review-1280.webp 1280w`}
+            sizes="(min-width: 1280px) 692px, (min-width: 1024px) calc(66.667vw - 162px), (min-width: 640px) calc(100vw - 114px), calc(100vw - 66px)"
+            alt="A woman reviews a binder of blank pages while a man points to an orange folder in separate file trays beside a plain black server tower."
+            width={1536}
+            height={1024}
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
         <figcaption className="text-xs text-gray-500 mt-2">
           The data rule comes first: what may go into AI, who can see the answers, and where it is stored.
         </figcaption>

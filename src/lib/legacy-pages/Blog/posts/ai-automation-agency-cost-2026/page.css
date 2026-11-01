@@ -1,0 +1,86 @@
+.fj-cost-2026 {
+  min-width: 0;
+  color: #46403B;
+  font-size: 16px;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.fj-cost-2026 > h2 {
+  margin: clamp(2.25rem, 4vw, 3.5rem) 0 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #E5DFD7;
+  color: #1F2937;
+  font-size: clamp(25px, 2.5vw, 34px);
+  line-height: 1.18;
+  text-wrap: balance;
+  scroll-margin-top: 120px;
+}
+
+.fj-cost-2026 > h3 {
+  margin: 1.75rem 0 .7rem;
+  color: #1F2937;
+  font-size: clamp(20px, 1.6vw, 23px);
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.fj-cost-2026 :is(p, li) { text-wrap: pretty; }
+.fj-cost-2026 > p { margin: 0 0 1.2rem; }
+.fj-cost-2026 > :is(ol, ul) { margin-bottom: 1.75rem; }
+.fj-cost-2026 :is(a, strong) { overflow-wrap: anywhere; }
+.fj-cost-2026 a:not([class*='bg-']) { color: #B23E13; text-decoration: underline; text-underline-offset: 3px; }
+.fj-cost-2026 :is(a, button, [tabindex]):focus-visible { outline: 2px solid #B23E13; outline-offset: 4px; border-radius: 3px; }
+.fj-cost-2026 :is(p, li, th, td, figcaption) { font-size: 16px; }
+.fj-cost-2026 :is([class*='text-xs'], [class*='uppercase']) { font-size: 12px; }
+.fj-cost-2026 [class*='text-[#B23E13]'] { color: #B23E13; }
+
+.fj-cost-2026 .fj-cost-table { min-width: 0; margin: 1.5rem 0 1.75rem; }
+.fj-cost-2026 .fj-cost-table-scroll { max-width: 100%; border-radius: 14px; overscroll-behavior-x: contain; }
+.fj-cost-2026 .fj-cost-table-scroll:focus-within { outline: 2px solid #B23E13; outline-offset: 4px; }
+.fj-cost-2026 .fj-cost-table table { display: table; max-width: none; width: 100%; margin: 0; overflow: visible; border-radius: 0; font-size: 16px; }
+.fj-cost-2026 .fj-cost-table :is(th, td) { padding: 16px; min-width: 150px; line-height: 1.6; text-wrap: pretty; }
+.fj-cost-2026 .fj-cost-table th { font-weight: 700; }
+.fj-cost-2026 .fj-cost-table :is(th, td):first-child { min-width: 176px; max-width: 210px; overflow-wrap: normal; }
+.fj-cost-2026 .fj-cost-table td { vertical-align: top; }
+.fj-cost-2026 .fj-cost-table th:first-child { background: #1F2937; }
+.fj-cost-2026 .fj-cost-table tr:nth-child(odd) td:first-child { background: #FFFFFF; }
+.fj-cost-2026 .fj-cost-table tr:nth-child(even) td:first-child { background: #F9FAFB; }
+.fj-cost-2026 .fj-cost-table p { margin-bottom: .75rem; color: #4B5563; font-size: 12px; }
+
+.fj-cost-2026 .fj-cost-photo { margin: clamp(1.75rem, 4vw, 2.5rem) 0; min-width: 0; }
+.fj-cost-2026 .fj-cost-photo picture { display: block; min-width: 0; }
+.fj-cost-2026 .fj-cost-photo img { display: block; width: 100%; height: auto; margin: 0; object-fit: cover; object-position: top; border: 1px solid #E5DFD7; border-radius: 18px; box-shadow: 0 2px 4px #1F29370A, 0 12px 24px #1F29370D; }
+.fj-cost-2026 .fj-cost-photo figcaption { margin-top: 1rem; color: #4B5563; font-size: 16px; line-height: 1.65; }
+
+.fj-cost-2026 #cost-drivers + p + ol > li,
+.fj-cost-2026 #red-flags + p + ul > li,
+.fj-cost-2026 #how-to-budget + ol > li {
+  padding: 14px 0 14px 8px;
+  border-bottom: 1px solid #E5DFD7;
+  margin-top: 0;
+}
+
+.fj-cost-2026 #factoryjet + p + ul > li { padding-block: 7px; }
+.fj-cost-2026 #sources + p + ul { line-height: 1.75; }
+
+@media (min-width: 768px) {
+  .fj-cost-2026 .fj-cost-photo { display: grid; grid-template-columns: minmax(0, 62fr) minmax(0, 38fr); gap: 24px; align-items: center; }
+  .fj-cost-2026 .fj-cost-photo figcaption { margin: 0; padding: 8px 0 8px 18px; border-left: 2px solid #E5DFD7; }
+  .fj-cost-2026 #cost-drivers + p + ol,
+  .fj-cost-2026 #how-to-budget + ol { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); column-gap: 36px; row-gap: 10px; }
+}
+
+@media (max-width: 1024px) {
+  .fj-cost-2026 a:not([class*='bg-']) { display: inline-block; min-width: 44px; min-height: 44px; max-width: 100%; padding-block: 8px; }
+}
+
+@media (max-width: 767px) {
+  .fj-cost-2026 > h2 { font-size: 25px; line-height: 1.2; margin-top: 2.25rem; }
+  .fj-cost-2026 > #platforms { font-size: 20px; }
+  .fj-cost-2026 > :is(ol, ul) { padding-left: 1.35rem; }
+  .fj-cost-2026 .fj-cost-table :is(th, td) { padding: 14px; }
+  .fj-cost-2026 .fj-cost-table :is(th, td):first-child { min-width: 136px; max-width: 164px; }
+  .fj-cost-2026 .fj-cost-photo img { border-radius: 14px; }
+  .fj-cost-2026 > div:last-child a { min-height: 48px; }
+}
