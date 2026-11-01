@@ -1,0 +1,180 @@
+.uk-ecommerce-seo-guide {
+  min-width: 0;
+  container-type: inline-size;
+  container-name: uk-commerce-guide;
+  color: #46403B;
+  font-size: clamp(16px, 1.1vw, 18px);
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+.uk-ecommerce-seo-guide :is(h2, h3) {
+  color: #14110F;
+  text-align: left;
+  text-wrap: balance;
+  scroll-margin-top: 112px;
+}
+.uk-ecommerce-seo-guide h2 {
+  max-width: 28ch;
+  margin-top: clamp(40px, 5vw, 64px);
+  margin-bottom: 20px;
+  font-size: clamp(26px, 2.6vw, 36px);
+  line-height: 1.18;
+}
+.uk-ecommerce-seo-guide h3 {
+  font-size: clamp(21px, 1.6vw, 24px);
+  line-height: 1.28;
+}
+.uk-ecommerce-seo-guide :is(p, li) {
+  text-wrap: pretty;
+}
+.uk-ecommerce-seo-guide p {
+  line-height: 1.75;
+}
+.uk-ecommerce-seo-guide :is(p.text-sm, td, th) {
+  font-size: 16px;
+}
+.uk-ecommerce-seo-guide a {
+  color: #B23E13;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.uk-ecommerce-seo-guide a:focus-visible {
+  outline: 2px solid #B23E13;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+.uk-ecommerce-seo-guide .uk-commerce-profile {
+  padding: clamp(20px, 3vw, 32px) 0;
+  margin: 0;
+  border-top: 1px solid #E7DED6;
+}
+.uk-ecommerce-seo-guide .uk-commerce-profile h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.uk-ecommerce-seo-guide .uk-commerce-profile > ul {
+  padding-left: 1.3em;
+}
+.uk-ecommerce-seo-guide .uk-commerce-profile > ul > li + li {
+  margin-top: 10px;
+}
+.uk-ecommerce-seo-guide .uk-commerce-profile > p:last-child {
+  margin-bottom: 0;
+}
+.uk-ecommerce-seo-guide .uk-commerce-table {
+  max-width: 100%;
+  border: 1px solid #E7DED6;
+  border-radius: 18px;
+  box-shadow: 0 2px 3px rgb(20 17 15 / 2%), 0 12px 28px rgb(20 17 15 / 4%);
+  overscroll-behavior-inline: contain;
+}
+.uk-ecommerce-seo-guide .uk-commerce-table table {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.uk-ecommerce-seo-guide .uk-commerce-table th {
+  background: #14110F;
+  color: #FFFFFF;
+}
+.uk-ecommerce-seo-guide .uk-commerce-table :is(th, td) {
+  padding: 16px;
+  border-color: #E7DED6;
+}
+.uk-ecommerce-seo-guide .uk-commerce-table:focus-visible {
+  outline: 2px solid #B23E13;
+  outline-offset: 4px;
+}
+.uk-ecommerce-seo-guide .uk-commerce-method {
+  padding-left: 1.4em;
+}
+.uk-ecommerce-seo-guide .uk-commerce-method > li {
+  margin: 0;
+  padding: 16px 0 16px 8px;
+  border-top: 1px solid #E7DED6;
+}
+.uk-ecommerce-seo-guide .uk-commerce-method > li::marker {
+  font-weight: 800;
+  color: #B23E13;
+}
+.uk-ecommerce-seo-guide .uk-commerce-picture {
+  margin: clamp(28px, 4vw, 40px) 0;
+}
+.uk-ecommerce-seo-guide .uk-commerce-picture picture {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #E7DED6;
+  border-radius: clamp(16px, 2vw, 24px);
+  box-shadow: 0 2px 3px rgb(20 17 15 / 3%), 0 16px 32px rgb(20 17 15 / 5%);
+}
+.uk-ecommerce-seo-guide .uk-commerce-picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0;
+  box-shadow: none;
+}
+.uk-ecommerce-seo-guide .uk-commerce-picture figcaption {
+  margin-top: 12px;
+  color: #6E635A;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.uk-ecommerce-seo-guide aside a {
+  min-height: 48px;
+  color: #FFFFFF;
+  text-align: left;
+}
+@container uk-commerce-guide (min-width: 640px) {
+  .uk-ecommerce-seo-guide .uk-commerce-method {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    column-gap: 36px;
+    row-gap: 12px;
+  }
+}
+@media (max-width: 639px) {
+  .uk-ecommerce-seo-guide .uk-commerce-table :is(th, td) {
+    padding: 14px 12px;
+  }
+  .uk-ecommerce-seo-guide h2 {
+    max-width: none;
+  }
+}
+
+.uk-ecommerce-seo-guide .uk-commerce-profile > p.text-sm > a {
+  display: block;
+  min-height: 44px;
+  padding-block: 8px;
+}
+.uk-ecommerce-seo-guide .uk-commerce-table td > a {
+  display: inline-flex;
+  align-items: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+.uk-ecommerce-seo-guide .uk-commerce-table.uk-commerce-table > table:focus-visible {
+  outline: 2px solid #B23E13;
+  outline-offset: -3px;
+}
+
+/* Restore a single native scroll region despite the frozen blog-table overrides. */
+.uk-ecommerce-seo-guide .uk-commerce-table.uk-commerce-table {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.uk-ecommerce-seo-guide .uk-commerce-table.uk-commerce-table > table {
+  display: table;
+  min-width: 100%;
+  max-width: none;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  isolation: auto;
+}
+.uk-ecommerce-seo-guide .uk-commerce-table.uk-commerce-table thead th:first-child {
+  background: #14110F;
+}

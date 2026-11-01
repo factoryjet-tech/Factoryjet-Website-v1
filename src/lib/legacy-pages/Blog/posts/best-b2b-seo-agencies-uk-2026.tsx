@@ -1,8 +1,10 @@
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
+import './best-b2b-seo-agencies-uk-2026/page.css';
 
 const PAGE_URL = 'https://factoryjet.com/blog/best-b2b-seo-agencies-uk-2026';
 const IMG = '/blog-images/best-b2b-seo-agencies-uk-2026';
+const INLINE_IMG = '/images/blog/best-b2b-seo-agencies-uk-2026';
 const link = 'text-[#B23E13] underline';
 
 // Every fact about every firm below was read on that firm's own website on
@@ -404,7 +406,7 @@ export const post: BlogPost = {
   ],
   faqs: FAQS,
   content: (
-    <>
+    <div className="fj-b2b-uk-2026">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -428,7 +430,10 @@ export const post: BlogPost = {
       <div className="bg-amber-50 border border-amber-200 p-5 rounded-lg mb-8">
         <p className="font-semibold text-amber-900 mb-1">The short answer</p>
         <p className="text-amber-800 mb-3">
-          The best B2B SEO agency in the UK is the one that can show a result in your sector and report it as leads and sales. For SaaS and tech, look at Gripped, MRS Digital and Polaris. For law, accountancy, consulting and recruitment, Definition, Position Digital and Whitehat SEO. For manufacturers, The SEO Works and JDR Group. Push Group and Hallam run SEO inside wider B2B marketing teams, and Bulldog Digital Media sells links by the piece.
+          The best B2B SEO agency in the UK is the one that can show a result in your sector and report it as leads and sales. For SaaS and tech, look at Gripped, MRS Digital and Polaris. For law, accountancy, consulting and recruitment, Definition, Position Digital and Whitehat SEO.
+        </p>
+        <p className="text-amber-800 mb-3">
+          For manufacturers, The SEO Works and JDR Group. Push Group and Hallam run SEO inside wider B2B marketing teams, and Bulldog Digital Media sells links by the piece.
         </p>
         <p className="text-amber-800">
           We read every firm&rsquo;s own website on 22 October 2026. Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and is on it, last.
@@ -456,15 +461,15 @@ export const post: BlogPost = {
         Scan this first. Find the rows that match your sector, then read those profiles in full.
       </p>
       <p className="md:hidden text-sm text-gray-600 mb-2">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className="fj-b2b-uk-table overflow-x-auto mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 820 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
-              <th className="p-3 text-left border border-gray-700">Agency</th>
-              <th className="p-3 text-left border border-gray-700">Where based</th>
-              <th className="p-3 text-left border border-gray-700">Type</th>
-              <th className="p-3 text-left border border-gray-700">B2B sectors named</th>
-              <th className="p-3 text-left border border-gray-700">Best for</th>
+              <th scope="col" className="p-3 text-left border border-gray-700">Agency</th>
+              <th scope="col" className="p-3 text-left border border-gray-700">Where based</th>
+              <th scope="col" className="p-3 text-left border border-gray-700">Type</th>
+              <th scope="col" className="p-3 text-left border border-gray-700">B2B sectors named</th>
+              <th scope="col" className="p-3 text-left border border-gray-700">Best for</th>
             </tr>
           </thead>
           <tbody>
@@ -497,13 +502,13 @@ export const post: BlogPost = {
         Four jobs separate B2B SEO from ordinary SEO: pages for buyers who are comparing suppliers, moving a site without losing rankings, showing up in AI answers, and reporting results as leads or pipeline. This table shows which of the four each firm names on the B2B pages we read. &ldquo;Not named&rdquo; means we did not find it there, not that the firm cannot do it, so ask.
       </p>
       <p className="md:hidden text-sm text-gray-600 mb-2">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className="fj-b2b-uk-table overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 680 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
-              <th className="p-3 text-left border border-gray-700">Agency</th>
+              <th scope="col" className="p-3 text-left border border-gray-700">Agency</th>
               {COVER_COLS.map((c) => (
-                <th key={c.key} className="p-3 text-left border border-gray-700">{c.label}</th>
+                <th key={c.key} scope="col" className="p-3 text-left border border-gray-700">{c.label}</th>
               ))}
             </tr>
           </thead>
@@ -524,17 +529,17 @@ export const post: BlogPost = {
       </p>
 
       {GROUPS.map((g) => (
-        <div key={g.key}>
+        <div key={g.key} className="fj-b2b-uk-group">
           <h2 className="text-2xl font-bold mt-10 mb-4">{g.heading}</h2>
           <p className="mb-6">{g.intro}</p>
           {FIRMS.filter((a) => a.group === g.key).map((a) => (
-            <section key={a.name} className="mb-8">
+            <section key={a.name} className="fj-b2b-uk-profile mb-8">
               <h3 className="text-xl font-bold mt-6 mb-2">{a.name}</h3>
               <p className="text-sm text-gray-600 mb-3">
                 <strong>Based:</strong> {a.based}. <strong>Type:</strong> {a.type}.
               </p>
               <p className="mb-3">{a.what}</p>
-              <ul className="list-disc pl-6 mb-3 space-y-1">
+              <ul className="fj-b2b-uk-facts list-disc pl-6 mb-3 space-y-1">
                 <li><strong>Best for:</strong> {a.bestFor}</li>
                 <li><strong>B2B sectors named:</strong> {a.sectors}</li>
                 <li><strong>Clients named on its site:</strong> {a.clients}</li>
@@ -561,15 +566,29 @@ export const post: BlogPost = {
               )}
               {a.name === 'The SEO Works' && (
                 <figure className="my-8 not-prose">
-                  <img
-                    src={`${IMG}-factory.webp`}
-                    width={1200}
-                    height={800}
-                    loading="lazy"
-                    decoding="async"
-                    alt="On a bright factory floor, a man in glasses and an orange high-visibility vest looks at a tablet while a woman with a grey bob and safety glasses on her head points towards a large grey machine"
-                    className="w-full h-auto rounded-xl"
-                  />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      srcSet={[640, 960, 1280].map((width) => `${INLINE_IMG}/manufacturer-search-proposal-${width}.avif ${width}w`).join(', ')}
+                      sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)"
+                    />
+                    <source
+                      type="image/webp"
+                      srcSet={[640, 960, 1280].map((width) => `${INLINE_IMG}/manufacturer-search-proposal-${width}.webp ${width}w`).join(', ')}
+                      sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)"
+                    />
+                    <img
+                      src={`${INLINE_IMG}/manufacturer-search-proposal-960.webp`}
+                      srcSet={[640, 960, 1280].map((width) => `${INLINE_IMG}/manufacturer-search-proposal-${width}.webp ${width}w`).join(', ')}
+                      sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)"
+                      width={1536}
+                      height={1024}
+                      loading="lazy"
+                      decoding="async"
+                      alt="A woman and a man review grey bars on a monitor beside a plain sheet and two metal pump housings."
+                      className="w-full h-auto rounded-xl"
+                    />
+                  </picture>
                   <figcaption className="text-sm text-gray-600 mt-2">Manufacturing searches are small in number. The people making them are often engineers with a part number and a budget.</figcaption>
                 </figure>
               )}
@@ -582,12 +601,12 @@ export const post: BlogPost = {
       <p className="mb-4">
         These firms came up in the search results or in other lists. We read their sites on the same day and kept the notes here so you can see what was checked, not only what made the cut.
       </p>
-      <div className="overflow-x-auto mb-8 not-prose">
+      <div className="fj-b2b-uk-table overflow-x-auto mb-8 not-prose">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="bg-gray-800 text-white">
-              <th className="p-3 text-left border border-gray-700">Agency</th>
-              <th className="p-3 text-left border border-gray-700">What we found on 22 October 2026</th>
+              <th scope="col" className="p-3 text-left border border-gray-700">Agency</th>
+              <th scope="col" className="p-3 text-left border border-gray-700">What we found on 22 October 2026</th>
             </tr>
           </thead>
           <tbody>
@@ -609,13 +628,13 @@ export const post: BlogPost = {
       </p>
       <p className="mb-4">Here is what the agencies themselves print, copied exactly:</p>
       <p className="md:hidden text-sm text-gray-600 mb-2">Swipe sideways to see every column.</p>
-      <div className="overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className="fj-b2b-uk-table overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 640 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
-              <th className="p-3 text-left border border-gray-700">Agency</th>
-              <th className="p-3 text-left border border-gray-700">What its site says</th>
-              <th className="p-3 text-left border border-gray-700">Kind of figure</th>
+              <th scope="col" className="p-3 text-left border border-gray-700">Agency</th>
+              <th scope="col" className="p-3 text-left border border-gray-700">What its site says</th>
+              <th scope="col" className="p-3 text-left border border-gray-700">Kind of figure</th>
             </tr>
           </thead>
           <tbody>
@@ -681,15 +700,29 @@ export const post: BlogPost = {
         Buyers now ask assistants questions such as &ldquo;which payroll software suits a 200-person firm?&rdquo; or &ldquo;who supplies auditorium seating in the UK?&rdquo;. Google&rsquo;s <a href="https://developers.google.com/search/docs/appearance/ai-features" className={link} rel="noopener" target="_blank">guide to AI features</a> says there are &ldquo;no additional requirements&rdquo; to appear in AI Overviews or AI Mode beyond normal SEO, so the same pages do the work: clear answers near the top, facts a model can quote, and your name on trade and review sites you do not own. The SEO Works&rsquo; seating manufacturer case is a good model: one well-structured page per buying question, then tracking which answers name you and which name a rival.
       </p>
       <figure className="my-8 not-prose">
-        <img
-          src={`${IMG}-answers.webp`}
-          width={1200}
-          height={800}
-          loading="lazy"
-          decoding="async"
-          alt="Seen from behind her shoulder, a woman with short copper-red hair and glasses in a green shirt reads a monitor showing a column of grey chat bubbles beside three blue rows, with an orange folder on the desk"
-          className="w-full h-auto rounded-xl"
-        />
+        <picture>
+          <source
+            type="image/avif"
+            srcSet={[640, 960, 1280].map((width) => `${INLINE_IMG}/auditorium-supplier-answer-${width}.avif ${width}w`).join(', ')}
+            sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)"
+          />
+          <source
+            type="image/webp"
+            srcSet={[640, 960, 1280].map((width) => `${INLINE_IMG}/auditorium-supplier-answer-${width}.webp ${width}w`).join(', ')}
+            sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)"
+          />
+          <img
+            src={`${INLINE_IMG}/auditorium-supplier-answer-960.webp`}
+            srcSet={[640, 960, 1280].map((width) => `${INLINE_IMG}/auditorium-supplier-answer-${width}.webp ${width}w`).join(', ')}
+            sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)"
+            width={1536}
+            height={1024}
+            loading="lazy"
+            decoding="async"
+            alt="A woman holds a sheet of grey blocks beside a monitor, an auditorium chair and two fabric swatches."
+            className="w-full h-auto rounded-xl"
+          />
+        </picture>
         <figcaption className="text-sm text-gray-600 mt-2">An assistant&rsquo;s shortlist is built from pages it can read and quote. If your comparison page does not exist, a rival&rsquo;s will be quoted instead.</figcaption>
       </figure>
 
@@ -723,6 +756,6 @@ export const post: BlogPost = {
           See our UK SEO service
         </a>
       </div>
-    </>
+    </div>
   ),
 };
