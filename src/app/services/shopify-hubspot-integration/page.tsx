@@ -766,7 +766,7 @@ export default function ShopifyHubSpotIntegrationPage() {
         {/* 3. THE NATIVE APP */}
         <section className="border-b border-fj-neutral-200 bg-fj-cream py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-4 sm:px-6 md:px-8">
-            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+            <div className="fj-shh-native-grid grid grid-cols-1 gap-10 lg:grid-cols-12">
               <div className="lg:col-span-4">
                 <p className="fj-eyebrow">Start with HubSpot&rsquo;s own app</p>
                 <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
@@ -1056,7 +1056,7 @@ export default function ShopifyHubSpotIntegrationPage() {
         <section className="border-y border-fj-neutral-200 bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-4 sm:px-6 md:px-8">
             <p className="fj-eyebrow">Next to this page</p>
-            <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
+            <h2 className="fj-shh-related-heading mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
               Related integration services.
             </h2>
             <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12">

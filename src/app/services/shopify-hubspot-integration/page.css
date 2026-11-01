@@ -141,3 +141,19 @@
     line-height: 1.35;
   }
 }
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .fj-shh-visual .fj-shh-native-grid > :first-child {
+    grid-column: span 5 / span 5;
+  }
+
+  .fj-shh-visual .fj-shh-native-grid > :last-child {
+    grid-column: span 7 / span 7;
+  }
+}
+
+@media (max-width: 374px) {
+  .fj-shh-visual .fj-shh-related-heading {
+    letter-spacing: -0.025em;
+  }
+}
