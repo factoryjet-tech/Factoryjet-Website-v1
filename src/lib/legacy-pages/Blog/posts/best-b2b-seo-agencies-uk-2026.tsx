@@ -390,6 +390,7 @@ export const post: BlogPost = {
   dateModified: 'Oct 31, 2026',
   readTime: '24 min read',
   imageUrl: `${IMG}.webp`,
+  imageFit: 'contain',
   imageAlt:
     'Three colleagues at an oak meeting table review a laptop showing a grid of grey rows and blue blocks, a woman in a burgundy blouse pointing at the screen while a bearded older man holds a sheet and a younger woman in a teal jumper takes notes',
   meta: {
