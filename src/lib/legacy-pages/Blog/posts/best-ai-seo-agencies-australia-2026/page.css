@@ -114,3 +114,9 @@
     vertical-align: baseline;
   }
 }
+
+@media (max-width: 767px) {
+  .fj-au-ai-seo-2026 .fj-ai-seo-table table :is(th, td):first-child {
+    position: static;
+  }
+}
