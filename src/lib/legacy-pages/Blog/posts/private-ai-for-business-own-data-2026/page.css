@@ -58,6 +58,11 @@
   overscroll-behavior-inline: contain;
 }
 
+.fj-private-ai-2026 .fj-private-table:focus-within {
+  outline: 2px solid #B23E13;
+  outline-offset: 4px;
+}
+
 .fj-private-ai-2026 .fj-private-table > table {
   display: table;
   width: 100%;
