@@ -1,8 +1,10 @@
 import React from 'react';
+import './best-ecommerce-seo-agencies-uk-2026/page.css';
 import type { BlogPost, FAQItem } from '../data.types';
 
 const PAGE_URL = 'https://factoryjet.com/blog/best-ecommerce-seo-agencies-uk-2026';
 const IMG = '/blog-images/best-ecommerce-seo-agencies-uk-2026';
+const PHOTO = '/images/blog/best-ecommerce-seo-agencies-uk-2026';
 const link = 'text-[#B23E13] underline';
 
 // Every fact about every firm below was read on that firm's own website on
@@ -392,7 +394,7 @@ export const post: BlogPost = {
   faqs: FAQS,
   hideExcerptOnPage: true,
   content: (
-    <>
+    <div className="uk-ecommerce-seo-guide">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -442,12 +444,12 @@ export const post: BlogPost = {
         A few more come up in the profiles. <strong>Crawl budget</strong>{' '}is how many of your pages Google will fetch in a given period, and filter pages can use it up. A <strong>canonical tag</strong>{' '}tells Google which of two near-identical pages is the main one. <strong>Hreflang</strong>{' '}tags tell Google which country or language version of a page to show. <strong>Liquid</strong>{' '}is the code Shopify themes are written in. <strong>Core Web Vitals</strong>{' '}are Google&rsquo;s measures of how fast and steady a page feels to load. <strong>GA4</strong>{' '}is Google Analytics 4. <strong>DR</strong>{' '}(Domain Rating) is Ahrefs&rsquo; 0 to 100 score for the strength of a site&rsquo;s links, and <strong>PageRank</strong>{' '}is Google&rsquo;s name for the value a link passes between pages.
       </p>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">The UK ecommerce SEO agencies at a glance</h2>
+      <h2 id="uk-commerce-at-glance" className="text-2xl font-bold mt-10 mb-4">The UK ecommerce SEO agencies at a glance</h2>
       <p className="mb-4">
         Scan this first. Find the rows that match your platform and size, then read those profiles in full.
       </p>
       <p className="md:hidden text-sm text-gray-600 mb-2">Swipe sideways to see every column.</p>
-      <div className="mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div tabIndex={0} role="region" aria-labelledby="uk-commerce-at-glance" className="uk-commerce-table mb-8 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 760 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -473,7 +475,7 @@ export const post: BlogPost = {
       </div>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How we built this list</h2>
-      <ol className="list-decimal pl-6 mb-6 space-y-2">
+      <ol className="list-decimal pl-6 mb-6 space-y-2 uk-commerce-method">
         <li><strong>Start from the search results.</strong>{' '}We pulled Google UK results and the &ldquo;People also ask&rdquo; questions for 16 ecommerce SEO searches on 21 October 2026, including &ldquo;ecommerce seo agency uk&rdquo;, &ldquo;shopify seo agency&rdquo;, &ldquo;magento seo agency&rdquo; and &ldquo;ecommerce seo cost uk&rdquo;.</li>
         <li><strong>Read the lists that rank.</strong>{' '}We counted which agencies each list names and where each publisher put itself.</li>
         <li><strong>Check each agency on its own site.</strong>{' '}We checked 19 agencies&rsquo; ecommerce SEO, about, contact and pricing pages on 21 October 2026. Every description below comes from those pages and links to them.</li>
@@ -482,12 +484,12 @@ export const post: BlogPost = {
         <li><strong>Prices only from the firm.</strong>{' '}Where a firm prints a price, a minimum or a budget band, we copy it exactly and link the page. We never guess another company&rsquo;s price.</li>
       </ol>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">What each agency&rsquo;s ecommerce SEO page covers</h2>
+      <h2 id="uk-commerce-coverage" className="text-2xl font-bold mt-10 mb-4">What each agency&rsquo;s ecommerce SEO page covers</h2>
       <p className="mb-4">
         Five jobs separate ecommerce SEO from ordinary SEO: controlling filter pages, moving platforms safely, product schema, Merchant Center product data and visibility in AI answers. This table shows which of the five each firm names on its own ecommerce SEO pages. &ldquo;Not named&rdquo; means we did not find it on the pages we read, not that the firm cannot do it, so ask.
       </p>
       <p className="md:hidden text-sm text-gray-600 mb-2">Swipe sideways to see every column.</p>
-      <div className="mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div tabIndex={0} role="region" aria-labelledby="uk-commerce-coverage" className="uk-commerce-table mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 720 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -514,11 +516,11 @@ export const post: BlogPost = {
       </p>
 
       {GROUPS.map((g) => (
-        <div key={g.key}>
+        <div key={g.key} className="uk-commerce-group">
           <h2 className="text-2xl font-bold mt-10 mb-4">{g.heading}</h2>
           <p className="mb-6">{g.intro}</p>
           {FIRMS.filter((a) => a.group === g.key).map((a) => (
-            <section key={a.name} className="mb-8">
+            <section key={a.name} className="mb-8 uk-commerce-profile">
               <h3 className="text-xl font-bold mt-6 mb-2">{a.name}</h3>
               <p className="mb-3">{a.what}</p>
               <ul className="list-disc pl-6 mb-3 space-y-1">
@@ -534,16 +536,22 @@ export const post: BlogPost = {
                 </a>
               </p>
               {a.name === 'Polaris Agency' && (
-                <figure className="my-8 not-prose">
-                  <img
-                    src={`${IMG}-filters.webp`}
-                    width={1200}
-                    height={800}
-                    loading="lazy"
-                    decoding="async"
-                    alt="Seen over his shoulder, a man with short twists in a rust overshirt works on a laptop showing a column of filter checkboxes beside a grid of product tiles, with two plain shoe boxes on the desk"
-                    className="w-full h-auto rounded-xl"
-                  />
+                <figure className="my-8 not-prose uk-commerce-picture">
+                  <picture>
+                    <source type="image/avif" srcSet={`${PHOTO}/retailer-catalogue-filters-640.avif 640w, ${PHOTO}/retailer-catalogue-filters-960.avif 960w, ${PHOTO}/retailer-catalogue-filters-1280.avif 1280w`} sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)" />
+                    <source type="image/webp" srcSet={`${PHOTO}/retailer-catalogue-filters-640.webp 640w, ${PHOTO}/retailer-catalogue-filters-960.webp 960w, ${PHOTO}/retailer-catalogue-filters-1280.webp 1280w`} sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)" />
+                    <img
+                      src={`${PHOTO}/retailer-catalogue-filters-1280.webp`}
+                      srcSet={`${PHOTO}/retailer-catalogue-filters-640.webp 640w, ${PHOTO}/retailer-catalogue-filters-960.webp 960w, ${PHOTO}/retailer-catalogue-filters-1280.webp 1280w`}
+                      sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)"
+                      width={1280}
+                      height={853}
+                      loading="lazy"
+                      decoding="async"
+                      alt="A woman and a man arrange shoe product photographs into groups beside plain shoeboxes at a packing bench."
+                      className="w-full h-auto rounded-xl"
+                    />
+                  </picture>
                   <figcaption className="text-sm text-gray-600 mt-2">Every tick in a filter column can create a new web address. Deciding which of them Google should crawl is most of faceted navigation SEO.</figcaption>
                 </figure>
               )}
@@ -563,11 +571,11 @@ export const post: BlogPost = {
         </div>
       ))}
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">Other agencies we checked</h2>
+      <h2 id="uk-commerce-checked" className="text-2xl font-bold mt-10 mb-4">Other agencies we checked</h2>
       <p className="mb-4">
         These firms came up in the search results or in other lists. We read their sites on the same day and kept the notes here so you can see what was checked, not only what made the cut.
       </p>
-      <div className="overflow-x-auto mb-8 not-prose">
+      <div tabIndex={0} role="region" aria-labelledby="uk-commerce-checked" className="uk-commerce-table overflow-x-auto mb-8 not-prose">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -588,13 +596,13 @@ export const post: BlogPost = {
         </table>
       </div>
 
-      <h2 className="text-2xl font-bold mt-10 mb-4">How much does an ecommerce SEO agency cost in the UK?</h2>
+      <h2 id="uk-commerce-prices" className="text-2xl font-bold mt-10 mb-4">How much does an ecommerce SEO agency cost in the UK?</h2>
       <p className="mb-4">
         Usually £1,500 to £10,000 or more a month, depending on catalogue size and competition. Two UK pricing guides we read on 21 October 2026 give ecommerce-specific ranges: <a href="https://renhaoseo.com/uk/compare/seo-pricing/" className={link} rel="noopener" target="_blank">Ren Hao SEO</a>{' '}puts ecommerce work at £1,500 to £8,000+ a month, and <a href="https://blog.gorilla.marketing/how-much-does-seo-cost/" className={link} rel="noopener" target="_blank">Gorilla Marketing</a>{' '}says monthly budgets &ldquo;range from £2,000 for smaller stores to £10,000+ for competitive retail brands&rdquo;. <a href="https://whitehat-seo.co.uk/blog/seo-package-prices" className={link} rel="noopener" target="_blank">Whitehat SEO&rsquo;s UK pricing guide</a>{' '}(updated 29 July 2026) adds that competitive sectors, ecommerce among them, carry 30 to 50% pricing premiums, and that a large legacy catalogue can need £5,000 to £15,000 of upfront fixes first.
       </p>
       <p className="mb-4">Here is what the agencies themselves print, copied exactly:</p>
       <p className="md:hidden text-sm text-gray-600 mb-2">Swipe sideways to see every column.</p>
-      <div className="mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div tabIndex={0} role="region" aria-labelledby="uk-commerce-prices" className="uk-commerce-table mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <table className="w-full border-collapse text-sm" style={{ minWidth: 600 }}>
           <thead>
             <tr className="bg-gray-800 text-white">
@@ -660,16 +668,22 @@ export const post: BlogPost = {
       <p className="mb-4">
         Moving from WooCommerce or Magento to Shopify is where stores lose the most organic revenue in one go. Google&rsquo;s <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" className={link} rel="noopener" target="_blank">site move guide</a>{' '}(updated 20 August 2026) recommends permanent server redirects such as 301 and 308, says they do not lose PageRank, and advises against redirect chains. The work is a full map of old to new addresses, tested before launch, then weeks of Search Console checks. We wrote a longer guide on <a href="/blog/ecommerce-replatforming-without-losing-seo-2026" className={link}>replatforming without losing SEO</a>, and if the move is to Shopify, see our <a href="/uk/shopify-migration" className={link}>UK Shopify migration service</a>.
       </p>
-      <figure className="my-8 not-prose">
-        <img
-          src={`${IMG}-migration.webp`}
-          width={1200}
-          height={800}
-          loading="lazy"
-          decoding="async"
-          alt="An older woman with short grey hair and glasses on a cord checks boxes on white shelving with a clipboard, while a man in a black t-shirt and orange beanie holds a tablet beside her in a bright stockroom"
-          className="w-full h-auto rounded-xl"
-        />
+      <figure className="my-8 not-prose uk-commerce-picture">
+        <picture>
+          <source type="image/avif" srcSet={`${PHOTO}/retailer-product-migration-640.avif 640w, ${PHOTO}/retailer-product-migration-960.avif 960w, ${PHOTO}/retailer-product-migration-1280.avif 1280w`} sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)" />
+          <source type="image/webp" srcSet={`${PHOTO}/retailer-product-migration-640.webp 640w, ${PHOTO}/retailer-product-migration-960.webp 960w, ${PHOTO}/retailer-product-migration-1280.webp 1280w`} sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)" />
+          <img
+            src={`${PHOTO}/retailer-product-migration-1280.webp`}
+            srcSet={`${PHOTO}/retailer-product-migration-640.webp 640w, ${PHOTO}/retailer-product-migration-960.webp 960w, ${PHOTO}/retailer-product-migration-1280.webp 1280w`}
+            sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.667vw - 164px), (min-width: 768px) calc(100vw - 116px), (min-width: 640px) calc(100vw - 84px), calc(100vw - 68px)"
+            width={1280}
+            height={853}
+            loading="lazy"
+            decoding="async"
+            alt="A woman and a man compare ceramic product photographs on two monitors beside a packing bench."
+            className="w-full h-auto rounded-xl"
+          />
+        </picture>
         <figcaption className="text-sm text-gray-600 mt-2">A migration is a stock check for web addresses. Every product and category page needs a new home, or its rankings go with it.</figcaption>
       </figure>
 
@@ -707,6 +721,6 @@ export const post: BlogPost = {
       <p className="mb-6">
         <strong>Want a second opinion on your shortlist?</strong>{' '}Send us your store through our <a href="/uk/ecommerce-seo" className={link}>free ecommerce SEO audit</a>. We crawl it, tell you what is costing you organic revenue, and quote a fixed price in writing before any work starts.
       </p>
-    </>
+    </div>
   ),
 };
