@@ -1,0 +1,186 @@
+.au-smb-seo-guide {
+  min-width: 0;
+  max-width: 100%;
+  container: au-smb-seo / inline-size;
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: left;
+}
+
+.au-smb-seo-guide :is(p, li, td, th, figcaption) {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.au-smb-seo-guide p {
+  text-wrap: pretty;
+}
+
+.au-smb-seo-guide > h2 {
+  margin-block: clamp(2.75rem, 5vw, 4rem) 1.1rem;
+  font-size: clamp(1.4375rem, 2.5vw, 2rem);
+  line-height: 1.23;
+  text-wrap: balance;
+  scroll-margin-top: 7rem;
+}
+
+.au-smb-seo-guide h3 {
+  font-size: clamp(1.25rem, 2.1vw, 1.5rem);
+  line-height: 1.3;
+  text-wrap: balance;
+  scroll-margin-top: 7rem;
+}
+
+.au-smb-seo-guide :is(ul, ol) {
+  padding-left: 1.35rem;
+}
+
+.au-smb-seo-guide > :is(ul, ol) > li + li {
+  margin-top: 0.9rem;
+}
+
+.au-smb-seo-guide a {
+  display: inline-block;
+  max-width: 100%;
+  min-width: 44px;
+  min-height: 44px;
+  padding-block: 0.5rem;
+  overflow-wrap: anywhere;
+  vertical-align: baseline;
+}
+
+.au-smb-seo-guide a:not([class*='bg-']) {
+  color: #B23E13;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.au-smb-seo-guide a:focus-visible {
+  outline: 2px solid #B23E13;
+  outline-offset: 4px;
+}
+
+.au-smb-seo-guide.au-smb-seo-guide .au-smb-seo-guide__table-scroll > table:focus-visible {
+  outline: 2px solid #B23E13;
+  outline-offset: -3px;
+}
+
+.au-smb-seo-guide #answer-first {
+  padding: clamp(1.1rem, 3vw, 1.75rem);
+  border-radius: 1.25rem;
+  border-color: #E5E7EB;
+}
+
+.au-smb-seo-guide #answer-first > p:first-child {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.au-smb-seo-guide .au-smb-seo-guide__profile {
+  min-width: 0;
+  margin-block: 1.5rem;
+  padding: clamp(1.1rem, 3vw, 1.75rem);
+  border: 1px solid #E5E7EB;
+  border-radius: 1.25rem;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgb(15 15 18 / 0.03), 0 8px 24px rgb(15 15 18 / 0.025);
+}
+
+.au-smb-seo-guide .au-smb-seo-guide__profile > h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.au-smb-seo-guide .au-smb-seo-guide__profile > p:first-of-type {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #E5E7EB;
+  color: #4B5563;
+}
+
+.au-smb-seo-guide .au-smb-seo-guide__profile > p:last-of-type {
+  margin-bottom: 0;
+  overflow-wrap: anywhere;
+  color: #4B5563;
+}
+
+.au-smb-seo-guide .au-smb-seo-guide__profile > ul > li + li {
+  margin-top: 0.75rem;
+}
+
+.au-smb-seo-guide .au-smb-seo-guide__media {
+  margin-block: clamp(2rem, 4vw, 3rem);
+}
+
+.au-smb-seo-guide .au-smb-seo-guide__media picture {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+  border-radius: 1.25rem;
+  background: #F3F4F6;
+  box-shadow: 0 1px 2px rgb(15 15 18 / 0.04), 0 12px 28px rgb(15 15 18 / 0.045);
+}
+
+.au-smb-seo-guide .au-smb-seo-guide__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+}
+
+.au-smb-seo-guide .au-smb-seo-guide__media figcaption {
+  margin-top: 0.9rem;
+  color: #4B5563;
+}
+
+.au-smb-seo-guide.au-smb-seo-guide .au-smb-seo-guide__table-scroll {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  border: 1px solid #E5E7EB;
+  border-radius: 1rem;
+  scrollbar-color: #9CA3AF #F3F4F6;
+}
+
+.au-smb-seo-guide.au-smb-seo-guide .au-smb-seo-guide__table-scroll > table {
+  display: table;
+  max-width: none;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+}
+
+.au-smb-seo-guide.au-smb-seo-guide .au-smb-seo-guide__table-scroll :is(th, td) {
+  min-width: 140px;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  vertical-align: top;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.au-smb-seo-guide.au-smb-seo-guide .au-smb-seo-guide__table-scroll :is(th, td):first-child {
+  min-width: 144px;
+  max-width: 190px;
+}
+
+@container au-smb-seo (min-width: 640px) {
+  .au-smb-seo-guide .au-smb-seo-guide__profile {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    column-gap: 1.5rem;
+  }
+
+  .au-smb-seo-guide .au-smb-seo-guide__profile > :is(h3, p:first-of-type, p:last-of-type) {
+    grid-column: 1 / -1;
+  }
+
+  .au-smb-seo-guide .au-smb-seo-guide__profile > ul {
+    padding-left: 1.5rem;
+    border-left: 1px solid #E5E7EB;
+  }
+}
