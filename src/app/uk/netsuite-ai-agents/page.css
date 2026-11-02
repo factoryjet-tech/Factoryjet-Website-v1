@@ -93,3 +93,4 @@
 .uk-netsuite-visual .us-footer summary:focus-visible { outline: 3px solid #F5F5F1; outline-offset: 4px; }
 .uk-netsuite-visual .us-footer .us-footer__region > ul a:focus-visible { outline-color: #B23E13; }
 .uk-netsuite-visual main .stats-band .col-4 > li > div { color: var(--orange2) !important; }
+.uk-netsuite-visual main .faq-sidebar-nav .faq-nav-count { color: var(--n600); }
