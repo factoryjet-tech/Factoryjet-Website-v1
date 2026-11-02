@@ -1,0 +1,105 @@
+.fj-so6 h1,
+.fj-so6 h2,
+.fj-so6 h3 { text-wrap: balance; }
+.fj-so6 main p { text-wrap: pretty; }
+.fj-so6 main p:not(.faq-cat-label):not(.font-fj-display):not(.font-fj-mono) { font-size: 16px !important; }
+.fj-so6 main p[style*="font-family"],
+.fj-so6 .faq-sidebar-cta p { font-size: 12px !important; }
+.fj-so6 .eyebrow,
+.fj-so6 .lab,
+.fj-so6 .scorecard-note,
+.fj-so6 .faq-cat-label,
+.fj-so6 .faq-sidebar-topics,
+.fj-so6 .faq-nav-count,
+.fj-so6 .byline .upd { font-size: 12px; }
+.fj-so6 .scorecard-note,
+.fj-so6 .byline .upd,
+.fj-so6 main p[style*="font-family"] { color: #5B5B55 !important; }
+.fj-so6 .scorecard-metric,
+.fj-so6 .scope-list li,
+.fj-so6 .cmp-table td,
+.fj-so6 .cmp-table th { font-size: 16px; }
+.fj-so6 .dark-sec .eyebrow { color: #DDDAD5; }
+.fj-so6 .dark-sec p { color: #DDDAD5; }
+.fj-so6 .byline .av { background: #B23E13; }
+.fj-so6 .fj-so-photo { display: block; width: 100%; overflow: hidden; border: 1px solid var(--n200); border-radius: clamp(16px, 2.2vw, 24px); box-shadow: 0 2px 5px rgba(15,15,18,.04), 0 14px 32px rgba(15,15,18,.06); }
+.fj-so6 .fj-so-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; }
+.fj-so6 .fj-so-scope-layout,
+.fj-so6 .fj-so-final-layout { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
+.fj-so6 .fj-so-scope-layout > *,
+.fj-so6 .fj-so-final-layout > * { min-width: 0; }
+.fj-so6 .fj-so-scope-layout { align-items: center; }
+.fj-so6 .fj-so-final-layout { align-items: center; }
+.fj-so6 .fj-so-final-copy { text-align: left; }
+.fj-so6 .fj-so-order-content .card { padding: clamp(18px, 2.4vw, 28px); }
+.fj-so6 .city-pill,
+.fj-so6 .btn,
+.fj-so6 main button,
+.fj-so6 .faq-sidebar-nav a { min-height: 44px; }
+.fj-so6 .city-pill { display: inline-flex; align-items: center; white-space: normal; }
+.fj-so6 main :is(a,button,input,summary,[tabindex]):focus-visible { outline: 3px solid #B23E13; outline-offset: 4px; }
+.fj-so6 main :is(section,[id]) { scroll-margin-top: 112px; }
+@media (max-width: 900px) {
+    .fj-so6 .fj-so-scope-layout,
+  .fj-so6 .fj-so-final-layout { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .fj-so6 .fj-so-photo { max-width: 720px; }
+  .fj-so6 .scorecard-row { flex-wrap: wrap; gap: 8px 16px; }
+}
+@media (max-width: 480px) {
+  .fj-so6 h1 { font-size: clamp(1.8rem, 8vw, 2.15rem) !important; }
+  .fj-so6 h2 { font-size: clamp(1.35rem, 5.9vw, 1.55rem) !important; }
+  .fj-so6 .byline { flex-wrap: wrap; }
+  .fj-so6 .byline .upd { text-align: left; margin-left: 49px; }
+  .fj-so6 .chip { min-height: 32px; max-width: 100%; font-size: 12px; white-space: normal; }
+  .fj-so6 .card { min-width: 0; }
+  .fj-so6 .dark-sec { padding-bottom: 112px; }
+}
+
+.fj-so6 .stats-band a { font-size: 12px !important; }
+.fj-so6 .faq-cat-label,
+.fj-so6 .faq-sidebar-cta a,
+.fj-so6 .faq-item[open] summary .q-text { color: #B23E13; }
+
+.fj-so6 .fj-so-order-photo { max-width: 100%; }
+@media (max-width: 1024px) {
+  .fj-so6 main a {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+    max-width: 100%;
+    padding-block: 10px;
+    vertical-align: middle;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .fj-so6 footer a { min-width: 44px; min-height: 44px; max-width: 100%; }
+  .fj-so6 main .city-pill,
+  .fj-so6 main .btn { display: inline-flex; align-items: center; }
+  .fj-so6 .byline .who a { padding-block: 12px; }
+}
+
+.fj-so6 .q-text { font-size: 16px; }
+.fj-so6 main input:not([aria-hidden="true"]) { font-size: 16px; min-height: 44px; }
+
+.fj-so6 footer.us-footer {
+  --uf-ink: var(--cream);
+  --uf-body: var(--n200);
+  --uf-muted: var(--n200);
+  --uf-surface: var(--dark);
+  --uf-accent: var(--cream);
+  color: var(--uf-ink);
+  text-align: left;
+}
+.fj-so6 footer.us-footer a,
+.fj-so6 footer.us-footer summary,
+.fj-so6 footer.us-footer :is(h2,h3,h4) { color: var(--uf-ink); }
+.fj-so6 footer.us-footer p { color: var(--uf-body); }
+.fj-so6 footer.us-footer summary::after { content: none; }
+.fj-so6 footer.us-footer p { font-size: 16px; }
+.fj-so6 .city-pill:hover { background: #B23E13; border-color: #B23E13; color: #FFFFFF; }
+.fj-so6 .def .lab,
+.fj-so6 .faq-sidebar-nav .faq-nav-count,
+.fj-so6 .scope-list.num-list li::before { font-size: 12px; }
+.fj-so6 .dark-sec :is(a,button):focus-visible { outline-color: var(--cream); }
+
+.fj-so6 main form[data-hero-inline-form] input[aria-hidden="true"][tabindex="-1"] { visibility: hidden; }

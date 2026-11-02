@@ -7,6 +7,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* /uk/document-intake-ai-agents, built 2026-10-29.
@@ -567,7 +568,7 @@ export default function DocumentIntakeAiAgentsUKPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="uk-aiagents">
-      <main className={styles.page}>
+      <main className={`${styles.page} uk-document-intake-visual`}>
         <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
         <Breadcrumbs items={crumbs} />
@@ -605,7 +606,6 @@ export default function DocumentIntakeAiAgentsUKPage() {
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <img src={`${IMG}/order-desk-paper-orders.webp`} width={1200} height={800} fetchPriority="high" decoding="async" alt="A man with short dark hair and a beard, in a navy polo shirt, lays a sheet of paper on a stack at a wooden counter, with an orange stapler on the counter and shelves of plain cardboard cartons behind him" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What happens to each document</span>
                   <div className="scorecard-row">
@@ -715,6 +715,7 @@ export default function DocumentIntakeAiAgentsUKPage() {
                 ))}
               </tbody>
             </table></div>
+            <div className="intake-editorial intake-overview">
             <p className="mt-6" style={{ maxWidth: 780 }}>
               If supplier invoices and their approval are the whole job, our page on{' '}
               <a href="/uk/accounts-payable-automation" style={inlineLink}>accounts payable automation in the UK</a>{' '}
@@ -725,6 +726,12 @@ export default function DocumentIntakeAiAgentsUKPage() {
               <a href="/uk/netsuite-ai-agents" style={inlineLink}>NetSuite AI agents</a> and{' '}
               <a href="/uk/odoo-ai-agents" style={inlineLink}>Odoo AI agents</a>.
             </p>
+              <picture className="intake-photo">
+                  <source type="image/avif" srcSet="/images/uk/document-intake-ai-agents/accounts-assistant-three-trays-640.avif 640w, /images/uk/document-intake-ai-agents/accounts-assistant-three-trays-960.avif 960w, /images/uk/document-intake-ai-agents/accounts-assistant-three-trays-1280.avif 1280w" sizes="(min-width: 1120px) 446px, (min-width: 900px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
+                  <source type="image/webp" srcSet="/images/uk/document-intake-ai-agents/accounts-assistant-three-trays-640.webp 640w, /images/uk/document-intake-ai-agents/accounts-assistant-three-trays-960.webp 960w, /images/uk/document-intake-ai-agents/accounts-assistant-three-trays-1280.webp 1280w" sizes="(min-width: 1120px) 446px, (min-width: 900px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
+                  <img src="/images/uk/document-intake-ai-agents/accounts-assistant-three-trays-640.webp" srcSet="/images/uk/document-intake-ai-agents/accounts-assistant-three-trays-640.webp 640w, /images/uk/document-intake-ai-agents/accounts-assistant-three-trays-960.webp 960w, /images/uk/document-intake-ai-agents/accounts-assistant-three-trays-1280.webp 1280w" sizes="(min-width: 1120px) 446px, (min-width: 900px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" width={1536} height={1024} loading="lazy" decoding="async" alt="An accounts assistant sorts A4 paperwork into three metal trays beside a monitor at a desk." />
+                </picture>
+            </div>
           </div>
         </section>
 
@@ -782,7 +789,7 @@ export default function DocumentIntakeAiAgentsUKPage() {
               <span className="eyebrow">Rules that change the design</span>
               <h2>E-invoicing from 2029, UK GDPR after the Data (Use and Access) Act, and the EU AI Act</h2>
             </div>
-            <ul className="col-3 mt-10">
+            <ul className="col-3 mt-10 intake-rules-bento">
               <li className="card">
                 <h3>E-invoicing from 2029</h3>
                 <p className="mt-4">
@@ -967,7 +974,13 @@ export default function DocumentIntakeAiAgentsUKPage() {
                 live.
               </p>
             </div>
-            <ul className="col-2 mt-10">
+            <div className="intake-editorial intake-paperwork">
+              <picture className="intake-photo">
+                  <source type="image/avif" srcSet="/images/uk/document-intake-ai-agents/crumpled-delivery-note-review-640.avif 640w, /images/uk/document-intake-ai-agents/crumpled-delivery-note-review-960.avif 960w, /images/uk/document-intake-ai-agents/crumpled-delivery-note-review-1280.avif 1280w" sizes="(min-width: 1120px) 446px, (min-width: 900px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
+                  <source type="image/webp" srcSet="/images/uk/document-intake-ai-agents/crumpled-delivery-note-review-640.webp 640w, /images/uk/document-intake-ai-agents/crumpled-delivery-note-review-960.webp 960w, /images/uk/document-intake-ai-agents/crumpled-delivery-note-review-1280.webp 1280w" sizes="(min-width: 1120px) 446px, (min-width: 900px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
+                  <img src="/images/uk/document-intake-ai-agents/crumpled-delivery-note-review-640.webp" srcSet="/images/uk/document-intake-ai-agents/crumpled-delivery-note-review-640.webp 640w, /images/uk/document-intake-ai-agents/crumpled-delivery-note-review-960.webp 960w, /images/uk/document-intake-ai-agents/crumpled-delivery-note-review-1280.webp 1280w" sizes="(min-width: 1120px) 446px, (min-width: 900px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A man checks a crumpled delivery note beside a clipboard and trays of A4 paperwork." />
+                </picture>
+            <ul className="col-2 mt-10 intake-breaks-list">
               {BREAKS.map((b) => (
                 <li key={b.t} className="card">
                   <h3>{b.t}</h3>
@@ -975,13 +988,14 @@ export default function DocumentIntakeAiAgentsUKPage() {
                 </li>
               ))}
             </ul>
+            </div>
           </div>
         </section>
 
         {/* 10. UK PROOF */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="intake-proof">
               <div>
                 <span className="eyebrow">UK work we can name</span>
                 <h2>GPSUK on Commerceflo and Sow Easy on WooCommerce with Odoo: UK systems work an intake agent depends on</h2>
@@ -1004,9 +1018,6 @@ export default function DocumentIntakeAiAgentsUKPage() {
                     claim an intake result for either. Your sample test is the proof we offer for intake.
                   </p>
                 </div>
-              </div>
-              <div className="card" style={{ padding: 8, background: '#F4F4F0' }}>
-                <img src={`${IMG}/sorting-paper-three-trays.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="A woman with short grey hair in a dark green cardigan places a sheet of paper into an orange wire tray between two white trays on a long pale wood table, beside a tall stack of paper" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
               </div>
             </div>
           </div>
@@ -1184,7 +1195,8 @@ export default function DocumentIntakeAiAgentsUKPage() {
 
         {/* 16. FINAL CTA (the only dark section) */}
         <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+          <div className="wrap intake-editorial intake-final">
+            <div>
             <span className="eyebrow">Next step</span>
             <h2>Stop retyping the same paper into three systems</h2>
             <p className="mt-4">
@@ -1192,10 +1204,16 @@ export default function DocumentIntakeAiAgentsUKPage() {
               document types and your systems. You leave knowing whether a rented tool
               or a custom agent is the right job.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8" style={{ display: 'flex', justifyContent: 'flex-start', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/contact" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Contact us</a>
             </div>
+            </div>
+              <picture className="intake-photo">
+                  <source type="image/avif" srcSet="/images/uk/document-intake-ai-agents/goods-in-paperwork-handover-640.avif 640w, /images/uk/document-intake-ai-agents/goods-in-paperwork-handover-960.avif 960w, /images/uk/document-intake-ai-agents/goods-in-paperwork-handover-1280.avif 1280w" sizes="(min-width: 1120px) 446px, (min-width: 900px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
+                  <source type="image/webp" srcSet="/images/uk/document-intake-ai-agents/goods-in-paperwork-handover-640.webp 640w, /images/uk/document-intake-ai-agents/goods-in-paperwork-handover-960.webp 960w, /images/uk/document-intake-ai-agents/goods-in-paperwork-handover-1280.webp 1280w" sizes="(min-width: 1120px) 446px, (min-width: 900px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
+                  <img src="/images/uk/document-intake-ai-agents/goods-in-paperwork-handover-640.webp" srcSet="/images/uk/document-intake-ai-agents/goods-in-paperwork-handover-640.webp 640w, /images/uk/document-intake-ai-agents/goods-in-paperwork-handover-960.webp 960w, /images/uk/document-intake-ai-agents/goods-in-paperwork-handover-1280.webp 1280w" sizes="(min-width: 1120px) 446px, (min-width: 900px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A man hands A4 delivery paperwork to a receiving clerk across a goods-in counter." />
+                </picture>
           </div>
         </section>
 
