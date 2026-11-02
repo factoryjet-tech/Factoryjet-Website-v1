@@ -1,0 +1,377 @@
+.fj-uk-plusb2b main {
+  min-width: 0;
+  padding-bottom: 24px;
+}
+
+.fj-uk-plusb2b main h1,
+.fj-uk-plusb2b main h2,
+.fj-uk-plusb2b main h3 {
+  text-wrap: balance;
+  overflow-wrap: normal;
+  font-weight: 800;
+}
+
+.fj-uk-plusb2b main h1 {
+  font-size: clamp(2rem, 3.3vw, 3.25rem);
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+}
+
+.fj-uk-plusb2b main p {
+  font-size: 16px !important;
+  text-wrap: pretty;
+}
+
+.fj-uk-plusb2b main .lead {
+  font-size: clamp(1rem, 1.4vw, 1.125rem) !important;
+}
+
+.fj-uk-plusb2b main .fj-plus-source {
+  font-size: 12px !important;
+  line-height: 1.8;
+}
+
+.fj-uk-plusb2b main .eyebrow,
+.fj-uk-plusb2b main .chip,
+.fj-uk-plusb2b main .scorecard-note,
+.fj-uk-plusb2b main .byline .upd,
+.fj-uk-plusb2b main .def .lab,
+.fj-uk-plusb2b main .faq-cat-label,
+.fj-uk-plusb2b main .faq-sidebar-topics,
+.fj-uk-plusb2b main .faq-nav-count {
+  font-size: 12px !important;
+  line-height: 1.6;
+}
+
+.fj-uk-plusb2b main .eyebrow,
+.fj-uk-plusb2b main .faq-cat-label,
+.fj-uk-plusb2b main .faq-item[open] .q-text {
+  color: #B23E13;
+}
+
+.fj-uk-plusb2b main .scorecard-metric,
+.fj-uk-plusb2b main .q-text,
+.fj-uk-plusb2b main .faq-ans p,
+.fj-uk-plusb2b main .cmp-table td {
+  font-size: 16px;
+}
+
+.fj-uk-plusb2b main .cmp-table th {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.fj-uk-plusb2b main .col-6040 > *,
+.fj-uk-plusb2b main .col-2 > *,
+.fj-uk-plusb2b main .fj-plus-final > * {
+  min-width: 0;
+}
+
+.fj-uk-plusb2b main .card,
+.fj-uk-plusb2b main .svc-card {
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgb(15 15 18 / 3%), 0 8px 24px rgb(15 15 18 / 3%);
+}
+
+.fj-uk-plusb2b main .fj-plus-build-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: start;
+  gap: clamp(24px, 3vw, 40px);
+}
+
+.fj-uk-plusb2b main .fj-plus-build-cards {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  margin: 0;
+}
+
+.fj-uk-plusb2b main .fj-plus-build-cards .svc-card {
+  padding: clamp(18px, 2vw, 26px);
+}
+
+.fj-uk-plusb2b main .fj-plus-photo {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border: 1px solid var(--n200);
+  border-radius: clamp(18px, 2vw, 28px);
+  box-shadow: 0 2px 4px rgb(15 15 18 / 4%), 0 14px 32px rgb(15 15 18 / 6%);
+}
+
+.fj-uk-plusb2b main .fj-plus-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+}
+
+.fj-uk-plusb2b main .fj-plus-terms-media {
+  display: grid;
+  gap: 24px;
+  min-width: 0;
+}
+
+.fj-uk-plusb2b main .fj-plus-process {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 20px;
+  max-width: none !important;
+  list-style: none;
+  padding: 0;
+}
+
+.fj-uk-plusb2b main .fj-plus-process > li:nth-child(3n + 1) {
+  grid-column: 1 / -1;
+}
+
+.fj-uk-plusb2b main .fj-plus-process h3 {
+  font-size: clamp(1.125rem, 1.6vw, 1.375rem) !important;
+  line-height: 1.35;
+}
+
+.fj-uk-plusb2b main .fj-plus-final {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+  text-align: left;
+}
+
+.fj-uk-plusb2b main .fj-plus-final p {
+  color: rgb(255 255 255 / 80%);
+}
+
+.fj-uk-plusb2b main .fj-plus-final .fj-plus-photo {
+  border-color: rgb(255 255 255 / 20%);
+}
+
+.fj-uk-plusb2b main a:focus-visible,
+.fj-uk-plusb2b main button:focus-visible,
+.fj-uk-plusb2b main input:focus-visible,
+.fj-uk-plusb2b main summary:focus-visible,
+.fj-uk-plusb2b main [tabindex]:focus-visible {
+  outline: 2px solid #B23E13;
+  outline-offset: 4px;
+}
+
+.fj-uk-plusb2b main [id] {
+  scroll-margin-top: 112px;
+}
+
+@media (min-width: 960px) {
+  .fj-uk-plusb2b main .fj-plus-sticky {
+    position: sticky;
+    top: 112px;
+  }
+}
+
+@media (max-width: 959px) {
+  .fj-uk-plusb2b main .fj-plus-build-layout,
+  .fj-uk-plusb2b main .fj-plus-final {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fj-uk-plusb2b main .fj-plus-build-cards {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .fj-uk-plusb2b main a,
+  .fj-uk-plusb2b main button,
+  .fj-uk-plusb2b main summary,
+  .fj-uk-plusb2b main input {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .fj-uk-plusb2b main a {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .fj-uk-plusb2b main .faq-sidebar-nav a {
+    display: flex;
+  }
+
+  .fj-uk-plusb2b main .stats-band a {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .fj-uk-plusb2b main .fj-plus-build-cards,
+  .fj-uk-plusb2b main .fj-plus-process {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fj-uk-plusb2b main .fj-plus-process > li {
+    display: block !important;
+    padding: 20px;
+  }
+
+  .fj-uk-plusb2b main .fj-plus-process > li > span {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .fj-uk-plusb2b main .byline {
+    flex-wrap: wrap;
+  }
+
+  .fj-uk-plusb2b main .byline .upd {
+    margin-left: 49px;
+    text-align: left;
+  }
+
+  .fj-uk-plusb2b main .sec-lg {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+
+  .fj-uk-plusb2b main .fj-plus-hero {
+    padding-top: 28px !important;
+  }
+
+  .fj-uk-plusb2b main .scorecard-row {
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .fj-uk-plusb2b main .scorecard-val {
+    max-width: 35%;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 430px) {
+  .fj-uk-plusb2b main h1 {
+    font-size: clamp(1.375rem, 6.1vw, 1.5rem) !important;
+    line-height: 1.2;
+  }
+}
+
+.fj-uk-plusb2b main p.font-fj-display {
+  font-size: clamp(1.5rem, 3vw, 2rem) !important;
+  font-weight: 800;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.fj-uk-plusb2b main p.font-fj-mono {
+  font-size: 12px !important;
+}
+
+.fj-uk-plusb2b main .byline .av {
+  background: #B23E13;
+}
+
+.fj-uk-plusb2b main .dark-sec .eyebrow {
+  color: #FFFFFF;
+}
+
+.fj-uk-plusb2b footer p,
+.fj-uk-plusb2b footer a,
+.fj-uk-plusb2b footer summary {
+  font-size: 16px !important;
+}
+
+.fj-uk-plusb2b footer a,
+.fj-uk-plusb2b footer summary {
+  min-height: 44px;
+  min-width: 44px;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+}
+
+.fj-uk-plusb2b footer a:focus-visible,
+.fj-uk-plusb2b footer summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.fj-uk-plusb2b main .dark-sec a:focus-visible,
+.fj-uk-plusb2b main .dark-sec button:focus-visible {
+  outline-color: #FFFFFF;
+}
+
+.fj-uk-plusb2b main .col-4 > li > div {
+  color: #F05A28 !important;
+}
+
+.fj-uk-plusb2b main .scope-list li {
+  font-size: 16px !important;
+}
+
+.fj-uk-plusb2b main .fj-plus-build-cards .svc-card:nth-child(7) h3 {
+  white-space: nowrap;
+}
+
+.fj-uk-plusb2b footer.us-footer {
+  --uf-ink: #FAFAF7;
+  --uf-body: #E7DED6;
+  --uf-muted: #C1B7AD;
+  --uf-line: #48403B;
+  --uf-accent: #FAFAF7;
+  color: var(--uf-ink);
+}
+
+.fj-uk-plusb2b footer.us-footer p,
+.fj-uk-plusb2b footer.us-footer a,
+.fj-uk-plusb2b footer.us-footer summary {
+  color: var(--uf-body) !important;
+}
+
+.fj-uk-plusb2b footer.us-footer .us-footer__heading,
+.fj-uk-plusb2b footer.us-footer .us-footer__verification {
+  color: var(--uf-muted) !important;
+}
+
+.fj-uk-plusb2b footer.us-footer .us-footer__wordmark {
+  color: var(--uf-ink);
+}
+
+.fj-uk-plusb2b footer.us-footer a:hover,
+.fj-uk-plusb2b footer.us-footer summary:hover {
+  color: #FFFFFF !important;
+}
+
+.fj-uk-plusb2b footer.us-footer a:focus-visible,
+.fj-uk-plusb2b footer.us-footer summary:focus-visible {
+  outline: 2px solid #FAFAF7;
+  outline-offset: 4px;
+}
+
+.fj-uk-plusb2b footer.us-footer summary::after,
+.fj-uk-plusb2b footer.us-footer details[open] summary::after {
+  content: none;
+}
+
+.fj-uk-plusb2b footer.us-footer .us-footer__region > ul a {
+  color: #14110F !important;
+}
+
+.fj-uk-plusb2b footer.us-footer .us-footer__region > ul a:hover {
+  color: #B23E13 !important;
+}
+
+.fj-uk-plusb2b footer.us-footer .us-footer__region > ul a:focus-visible {
+  outline-color: #14110F;
+}
+
+@media (max-width: 767px) {
+  .fj-uk-plusb2b footer {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}
+
+.fj-uk-plusb2b main details.faq-item[open] > summary::after {
+  content: none;
+}
