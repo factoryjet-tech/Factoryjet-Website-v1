@@ -25,7 +25,8 @@
 .fj-uk-crm-visual main .q-text { font-size: 16px; }
 .fj-uk-crm-visual main .cmp-table th { font-size: 12px; }
 .fj-uk-crm-visual main .byline .who { font-size: 14px; }
-.fj-uk-crm-visual main .byline .av { background: #F05A28; }
+.fj-uk-crm-visual main .byline .av { background: #F05A28; color: var(--ink); }
+.fj-uk-crm-visual main .stats-band .col-4 > li > div { color: var(--orange2) !important; }
 .fj-uk-crm-visual main .scope-list.num-list li::before { font-size: 12px; }
 .fj-uk-crm-visual main .fj-crm-step-number { color: #B23E13 !important; }
 .fj-uk-crm-visual main .wrap > *,
