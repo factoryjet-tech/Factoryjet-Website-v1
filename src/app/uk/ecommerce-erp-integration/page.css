@@ -2,7 +2,7 @@
 .uk-erp-visual main h1 { font-size: clamp(1.875rem, 4.25vw, 3rem); text-wrap: balance; }
 .uk-erp-visual main h2 { font-size: clamp(1.5rem, 3vw, 2.5rem); text-wrap: balance; }
 .uk-erp-visual main h3 { text-wrap: balance; }
-.uk-erp-visual main p { font-size: 16px !important; text-wrap: pretty; }
+.uk-erp-visual main p:where(:not(.font-fj-display,.font-fj-mono)) { font-size: 16px !important; text-wrap: pretty; }
 .uk-erp-visual main .lead { font-size: 17px !important; }
 .uk-erp-visual main .eyebrow, .uk-erp-visual main .chip, .uk-erp-visual main .scorecard-note, .uk-erp-visual main .byline .upd, .uk-erp-visual main .byline .who span { font-size: 12px; }
 .uk-erp-visual main .sec-lg { padding-block: clamp(48px, 6vw, 88px); }
@@ -24,7 +24,7 @@
   .uk-erp-visual #erp-connectors .col-2 { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
 }
 @media (max-width: 1024px) {
-  .uk-erp-visual main p, .uk-erp-visual main li, .uk-erp-visual main td, .uk-erp-visual main .scorecard-metric, .uk-erp-visual main .plat-best { font-size: 16px !important; }
+  .uk-erp-visual main p:where(:not(.font-fj-display,.font-fj-mono)), .uk-erp-visual main li, .uk-erp-visual main td, .uk-erp-visual main .scorecard-metric, .uk-erp-visual main .plat-best { font-size: 16px !important; }
   .uk-erp-visual main .eyebrow, .uk-erp-visual main .chip, .uk-erp-visual main .scorecard-note, .uk-erp-visual main .faq-cat-label, .uk-erp-visual main .faq-sidebar-topics, .uk-erp-visual main th { font-size: 12px; }
   .uk-erp-visual main .scorecard-row { align-items: flex-start; }
   .uk-erp-visual main .scorecard-val { max-width: 30%; overflow-wrap: anywhere; }
