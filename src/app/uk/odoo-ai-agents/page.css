@@ -5,6 +5,7 @@
 .fj-uk-odoo-visual main .q-text { font-size: 16px; }
 .fj-uk-odoo-visual main .stats-band .col-4 > li > div { color: var(--orange2) !important; }
 .fj-uk-odoo-visual main .byline .av { color: var(--ink); }
+.fj-uk-odoo-visual main .faq-sidebar-nav .faq-nav-count { color: var(--n600); }
 .fj-uk-odoo-visual .faq-sidebar-nav a { min-height: 44px; min-width: 44px; }
 .fj-uk-odoo-visual :is(section, [id^="faq-"]) { scroll-margin-block-start: 112px; }
 .fj-uk-odoo-visual :is(p, li, td, th, dd, dt) { font-size: 16px !important; }
