@@ -35,6 +35,10 @@
   color: var(--uf-ink);
 }
 
+.uk-headless-visual-7 footer.us-footer a {
+  min-height: 44px;
+}
+
 .uk-headless-visual-7 footer.us-footer p,
 .uk-headless-visual-7 footer.us-footer a,
 .uk-headless-visual-7 footer.us-footer summary {
