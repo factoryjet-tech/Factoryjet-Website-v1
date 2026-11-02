@@ -77,6 +77,7 @@ const nextConfig = {
 
   // Experimental optimizations
   experimental: {
+    cpus: 1,
     // NOTE (2026-07-07): 'firebase', 'firebase/firestore', 'firebase/app' were
     // REMOVED from this list. optimizePackageImports rewrites barrel imports and
     // fragments firebase's side-effectful service registration; under Next 16's
@@ -88,7 +89,12 @@ const nextConfig = {
     // Firebase is small and modular; it does not need this optimization. Do NOT
     // re-add firebase here. (See src/firebase.ts createDb for the defensive guard.)
     optimizePackageImports: ['lucide-react', 'framer-motion'],
-    // CSS delivery: external cached <link rel="stylesheet"> (Next default).
+    // Re-evaluated against the current 190KB shared utility sheet on 2026-11-02.
+    // Six blocking stylesheet requests delayed cold mobile text paint. Native
+    // inlining preserves CSS order and all font settings; verify the compiled
+    // preview on the UK service pages and representative regional pages.
+    inlineCss: true,
+    // Historical baseline: external cached <link rel="stylesheet"> (Next default).
     //   2026-06-02: inlineCss:true was REVERTED. It inlined the entire ~278KB
     //   sitewide Tailwind utility bundle into every page's HTML. On desktop this
     //   is free (PSI desktop = 100), but on throttled mobile (Slow 4G + 4x CPU)
