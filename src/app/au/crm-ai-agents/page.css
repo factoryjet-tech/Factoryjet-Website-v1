@@ -1,0 +1,66 @@
+.crm-au-visual.aiAgentPage.auPage :is(h1, h2, h3) { text-wrap: balance; }
+.crm-au-visual.aiAgentPage.auPage :is(p, li) { text-wrap: pretty; }
+.crm-au-visual.aiAgentPage.auPage .crm-media { display: block; margin: 0; min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: clamp(14px, 2vw, 22px); box-shadow: 0 3px 8px -6px rgb(20 17 15 / 18%), 0 24px 42px -34px rgb(20 17 15 / 32%); }
+.crm-au-visual.aiAgentPage.auPage .crm-media img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; }
+.crm-au-visual.aiAgentPage.auPage .crm-jobs-head { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: center; gap: clamp(28px, 5vw, 64px); margin-bottom: clamp(28px, 4vw, 48px); }
+.crm-au-visual.aiAgentPage.auPage .crm-jobs-head .section-head { max-width: none; margin: 0; }
+.crm-au-visual.aiAgentPage.auPage .crm-approval-media { grid-column: 1; grid-row: 2; align-self: start; position: sticky; top: 112px; margin-top: 28px; }
+.crm-au-visual.aiAgentPage.auPage .crm-example-side { display: grid; gap: 24px; min-width: 0; }
+.crm-au-visual.aiAgentPage.auPage #worked-example .au-split { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+.crm-au-visual.aiAgentPage.auPage :is(.fact p, .cap p, .plat-build, .trigrows .m, .trigrows .n, .au-numlist li, .tnode p, .ventry p, .ans, .agentdir-l) { font-size: 16px; }
+.crm-au-visual.aiAgentPage.auPage :is(.eyebrow, .capid, .idx, .tag, .sys, .specpanel-bar, .specpanel-foot, .ledgercell .k, .factlabel, .trigrows .t, .byline .upd, .faq-category, .qid, .faq-nav-count, .faqsrc, .agentdir-count) { font-size: 12px; }
+.crm-au-visual.aiAgentPage.auPage :is(.workflow-toggle, .workflow-replay) { width: 44px; height: 44px; }
+.crm-au-visual.aiAgentPage.auPage .workflow-controls { gap: 8px; }
+.crm-au-visual.aiAgentPage.auPage .specrow:nth-child(even) { margin-left: 0; }
+.crm-au-visual.aiAgentPage.auPage .au-prose p { font-size: 16px; }
+.crm-au-visual.aiAgentPage.auPage .au-split .au-numlist li { font-size: 16px; }
+.crm-au-visual.aiAgentPage.auPage .lead { font-size: 16px; }
+.crm-au-visual.aiAgentPage.auPage :is(button, summary, input, .btn):focus-visible { outline: 2px solid var(--accent-text); outline-offset: 4px; }
+@media (max-width: 820px) {
+  .crm-au-visual.aiAgentPage.auPage .crm-jobs-head { grid-template-columns: minmax(0, 1fr); }
+  .crm-au-visual.aiAgentPage.auPage .crm-approval-media { position: static; grid-column: auto; grid-row: auto; margin-top: 28px; }
+  .crm-au-visual.aiAgentPage.auPage #worked-example .au-split { grid-template-columns: minmax(0, 1fr); }
+  .crm-au-visual.aiAgentPage.auPage .crm-media { max-width: 640px; }
+  .crm-au-visual.aiAgentPage.auPage .crumbs a { display: inline-flex; align-items: center; min-height: 44px; }
+  .crm-au-visual.aiAgentPage.auPage :is(.refs a, .faq-catnav a) { min-height: 44px; }
+}
+@media (max-width: 480px) {
+  .crm-au-visual.aiAgentPage.auPage .hero h1 { font-size: clamp(27px, 7.3vw, 35px); max-width: none; line-height: 1.15; }
+  .crm-au-visual.aiAgentPage.auPage .specpanel-body { padding: 24px 14px; }
+  .crm-au-visual.aiAgentPage.auPage .specrow { width: 100%; grid-template-columns: 30px minmax(0, 1fr); column-gap: 9px; }
+  .crm-au-visual.aiAgentPage.auPage .workflow-icon { width: 30px; height: 34px; }
+  .crm-au-visual.aiAgentPage.auPage .specrow .tag { grid-column: 2; grid-row: auto; justify-self: start; margin-top: 8px; }
+  .crm-au-visual.aiAgentPage.auPage .specrow .idx { letter-spacing: 0; }
+  .crm-au-visual.aiAgentPage.auPage .specrow .title { font-size: 16px; }
+  .crm-au-visual.aiAgentPage.auPage .specpanel-bar .sys { margin-left: 0; width: 100%; }
+  .crm-au-visual.aiAgentPage.auPage :is(.fact, .trigrows li) { column-gap: 10px; }
+  .crm-au-visual.aiAgentPage.auPage .fact { grid-template-columns: 32px minmax(0, 1fr); }
+}
+
+/* Keep prose, table content and form controls legible without changing copy. */
+.crm-au-visual.aiAgentPage.auPage main :is(p, td, tbody th, input, button) { font-size: 16px; }
+.crm-au-visual.aiAgentPage.auPage :is(.ledgercell .v, .byline .who, .specrow .title, .agentdir-t, .faq-catnav a, .faq-ask p, .refs a) { font-size: 16px; }
+.crm-au-visual.aiAgentPage.auPage thead th { font-size: 12px; }
+.crm-au-visual.aiAgentPage.auPage .au-midcta section > div > div > p:first-child { font-size: 12px; }
+.crm-au-visual.aiAgentPage.auPage .au-midcta section > div > div > p:nth-child(2) { font-size: clamp(24px, 2.6vw, 32px); line-height: 1.2; margin-top: 12px; }
+.crm-au-visual.aiAgentPage.auPage [data-hero-inline-form] > div > div:has(> span) { font-size: 16px !important; }
+.crm-au-visual.aiAgentPage.auPage .timeline .tnode:last-child .idx { color: var(--ink); }
+.crm-au-visual.aiAgentPage.auPage .btn-primary:hover { color: white; background: var(--accent-text); }
+.crm-au-visual.aiAgentPage.auPage .au-midcta a { background: var(--accent-text); color: white; }
+.crm-au-visual.aiAgentPage.auPage :is(.workflow-select, .workflow-pause) { inset: 0; width: 100%; height: 100%; margin: 0; clip-path: none; opacity: 0; cursor: pointer; z-index: 1; }
+.crm-au-visual.aiAgentPage.auPage .crm-approval-media { margin-bottom: 28px; }
+/* The live DOM ends this unique root immediately before footer.us-footer. */
+.crm-au-visual.aiAgentPage.auPage + .us-footer { --uf-accent: #B23E13; }
+@media (max-width: 1024px) {
+  .crm-au-visual.aiAgentPage.auPage main :is(p a, .ledgercell .k a, .faqsrc, .refs a) { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; max-width: 100%; }
+  .crm-au-visual.aiAgentPage.auPage :is(.tnode summary, .ventry summary, .faqitem summary) { min-height: 44px; }
+  .crm-au-visual.aiAgentPage.auPage .faq-catnav a { min-width: 44px; min-height: 44px; }
+  .crm-au-visual.aiAgentPage.auPage + .us-footer :is(p, a, summary, .us-footer__bottom) { font-size: 16px; }
+  .crm-au-visual.aiAgentPage.auPage + .us-footer :is(a, summary) { min-width: 44px; min-height: 44px; }
+  .crm-au-visual.aiAgentPage.auPage + .us-footer .us-footer__heading { font-size: 12px; }
+  .crm-au-visual.aiAgentPage.auPage + .us-footer .us-footer__recognition a { padding-inline: 2px; }
+}
+
+.crm-au-visual.aiAgentPage.auPage .au-numlist li::before { font-size: 12px; }
+.crm-au-visual.aiAgentPage.auPage .qtext { font-size: 16px; }
+.crm-au-visual.aiAgentPage.auPage .au-midcta span.font-fj-body { font-size: 16px; }
