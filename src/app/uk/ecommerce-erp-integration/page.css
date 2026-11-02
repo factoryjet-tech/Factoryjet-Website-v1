@@ -82,3 +82,6 @@
 @media (max-width: 767px) {
   .uk-erp-visual main :is(input:not([type="hidden"]), select, textarea) { font-size: 16px !important; }
 }
+
+.uk-erp-visual main .stats-band li > div { color: #F05A28 !important; }
+.uk-erp-visual main .faq-cat-label { color: #B23E13 !important; }
