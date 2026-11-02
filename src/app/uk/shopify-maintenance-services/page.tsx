@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 
 /* /uk/shopify-maintenance-services, built 2026-10-29.
 
@@ -250,7 +251,7 @@ const srcLink = { textDecoration: 'underline' } as const;
 
 function Sources({ ids }: { ids: SrcKey[] }) {
   return (
-    <p style={srcNote}>
+    <p className="mtn-source-note" style={srcNote}>
       Sources, read on {READ_ON}:{' '}
       {ids.map((id, i) => (
         <span key={id}>
@@ -269,13 +270,13 @@ export default function ShopifyMaintenanceServicesUKPage() {
       <script id="ld-uk-shopify-maintenance-services" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents uk-shopify-maintenance">
       <main>
 
         <Breadcrumbs items={crumbs} />
 
         {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+        <section className="sec-lg dot-grid mtn-hero" style={{ position: 'relative' }}>
           <div className="wrap">
             <div className="col-6040">
               <div>
@@ -305,8 +306,7 @@ export default function ShopifyMaintenanceServicesUKPage() {
                 </p>
               </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/shopify-development/shopify-development-team.webp" width={1200} height={800} fetchPriority="high" decoding="async" alt="Two colleagues in a bright UK office reviewing a wireframe of an online shop page on a large wall screen" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+              <div className="card mtn-hero-card" style={{ padding: 8 }}>
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">How the support works</span>
                   <div className="scorecard-row">
@@ -384,7 +384,7 @@ export default function ShopifyMaintenanceServicesUKPage() {
         {/* ═══ 4. WHAT THE WORK COVERS ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div className="col-4060">
+            <div className="col-4060 mtn-coverage">
             <div>
               <span className="eyebrow">What we look after</span>
               <h2>What Shopify maintenance covers for an established UK store</h2>
@@ -392,8 +392,13 @@ export default function ShopifyMaintenanceServicesUKPage() {
                 A store with a few hundred orders a week fails in predictable places. These are the nine areas we
                 check on every established store.
               </p>
+              <picture className="mtn-photo">
+                <source type="image/avif" srcSet="/images/uk/shopify-maintenance-services/storefront-testing-desk-640.avif 640w, /images/uk/shopify-maintenance-services/storefront-testing-desk-960.avif 960w, /images/uk/shopify-maintenance-services/storefront-testing-desk-1280.avif 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) min(640px, calc(100vw - 48px)), 440px" />
+                <source type="image/webp" srcSet="/images/uk/shopify-maintenance-services/storefront-testing-desk-640.webp 640w, /images/uk/shopify-maintenance-services/storefront-testing-desk-960.webp 960w, /images/uk/shopify-maintenance-services/storefront-testing-desk-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) min(640px, calc(100vw - 48px)), 440px" />
+                <img src="/images/uk/shopify-maintenance-services/storefront-testing-desk-960.webp" srcSet="/images/uk/shopify-maintenance-services/storefront-testing-desk-640.webp 640w, /images/uk/shopify-maintenance-services/storefront-testing-desk-960.webp 960w, /images/uk/shopify-maintenance-services/storefront-testing-desk-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) min(640px, calc(100vw - 48px)), 440px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman checks the same plain homeware product grid on a phone and laptop at a desk in a British office." />
+              </picture>
             </div>
-            <ul className="col-2">
+            <ul className="col-2 mtn-services">
               <li className="svc-card">
                 <h3>Checkout and payments</h3>
                 <p className="mt-4">Shopify Payments, Klarna and Clearpay at checkout, GoCardless for trade accounts, discount rules and delivery rates. After any change to payments, shipping or discounts we place a test order before customers find the fault.</p>
@@ -617,6 +622,12 @@ export default function ShopifyMaintenanceServicesUKPage() {
                 during your busiest week.
               </p>
             </div>
+            <div className="mtn-takeover">
+              <picture className="mtn-photo">
+                <source type="image/avif" srcSet="/images/uk/shopify-maintenance-services/upkeep-handover-checklist-640.avif 640w, /images/uk/shopify-maintenance-services/upkeep-handover-checklist-960.avif 960w, /images/uk/shopify-maintenance-services/upkeep-handover-checklist-1280.avif 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) min(640px, calc(100vw - 48px)), 440px" />
+                <source type="image/webp" srcSet="/images/uk/shopify-maintenance-services/upkeep-handover-checklist-640.webp 640w, /images/uk/shopify-maintenance-services/upkeep-handover-checklist-960.webp 960w, /images/uk/shopify-maintenance-services/upkeep-handover-checklist-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) min(640px, calc(100vw - 48px)), 440px" />
+                <img src="/images/uk/shopify-maintenance-services/upkeep-handover-checklist-960.webp" srcSet="/images/uk/shopify-maintenance-services/upkeep-handover-checklist-640.webp 640w, /images/uk/shopify-maintenance-services/upkeep-handover-checklist-960.webp 960w, /images/uk/shopify-maintenance-services/upkeep-handover-checklist-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) min(640px, calc(100vw - 48px)), 440px" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people review a sheet of blank grey checklist rows beside unlabelled folders and cartons in a British clothing office." />
+              </picture>
             <ol className="stack mt-10" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Read your brief and agree the scope', d: 'We read what you send, ask what is missing, and agree in writing which stores, apps and systems are in scope and how changes will be quoted.' },
@@ -636,6 +647,7 @@ export default function ShopifyMaintenanceServicesUKPage() {
                 </li>
               ))}
             </ol>
+            </div>
             <Sources ids={['shopifyCollab']} />
           </div>
         </section>
@@ -674,10 +686,9 @@ export default function ShopifyMaintenanceServicesUKPage() {
                   </p>
                 </div>
                 <Sources ids={['hmrcMtdWho', 'hmrcDigitalLinks', 'icoExceptions', 'webVitals']} />
-                <p style={srcNote}>We are not tax advisers or lawyers: we map the questions and you confirm them with your accountant or adviser.</p>
+                <p className="mtn-source-note mtn-disclaimer" style={srcNote}>We are not tax advisers or lawyers: we map the questions and you confirm them with your accountant or adviser.</p>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/shopify-plus/shopify-plus-packing.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A bright UK packing station with parcels, mailers and a laptop showing an order list while an order is packed" style={{ width: '100%', height: 'auto', aspectRatio: '3 / 2', objectFit: 'cover', background: T.n200, borderRadius: 12, display: 'block' }} />
+              <div className="card mtn-note" style={{ padding: 8 }}>
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
                     The packing bench tells you more about a store’s health than the homepage does. If labels are
@@ -742,13 +753,13 @@ export default function ShopifyMaintenanceServicesUKPage() {
                         <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                         <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
                         {a.url && (
-                          <p style={srcNote}><a href={a.url} target="_blank" rel="noopener noreferrer" style={srcLink}>Read on {a.name}’s own site</a></p>
+                          <p className="mtn-source-note" style={srcNote}><a href={a.url} target="_blank" rel="noopener noreferrer" style={srcLink}>Read on {a.name}’s own site</a></p>
                         )}
                       </div>
                     </li>
                   ))}
                 </ul>
-                <p style={srcNote}>Listing is not endorsement.</p>
+                <p className="mtn-source-note" style={srcNote}>Listing is not endorsement.</p>
               </div>
             </div>
           </div>
@@ -788,7 +799,7 @@ export default function ShopifyMaintenanceServicesUKPage() {
                 guidance, so open the linked page before you act on a detail.
               </p>
             </div>
-            <ul className="col-2 mt-8" style={{ gap: 10 }}>
+            <ul className="col-2 mt-8 mtn-source-list" style={{ gap: 10 }}>
               {SOURCE_KEYS.map((k) => (
                 <li key={k} style={{ fontSize: 14 }}>
                   <a href={SRC[k].url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: T.ink }}>{SRC[k].label}</a>
@@ -849,7 +860,8 @@ export default function ShopifyMaintenanceServicesUKPage() {
 
         {/* ═══ 16. FINAL CTA (the only dark section) ═══ */}
         <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+          <div className="wrap mtn-final" style={{ textAlign: 'center', maxWidth: 640 }}>
+            <div>
             <span className="eyebrow">Next step</span>
             <h2>Hand over the upkeep of your Shopify store before peak trading</h2>
             <p className="mt-4">
@@ -857,10 +869,16 @@ export default function ShopifyMaintenanceServicesUKPage() {
               apps and the systems your store feeds. You leave knowing what we would fix first and how the
               support would be quoted. No obligation.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8 mtn-actions" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="Scope my support plan" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/uk/shopify-development" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See Shopify development</a>
             </div>
+          </div>
+            <picture className="mtn-photo">
+                <source type="image/avif" srcSet="/images/uk/shopify-maintenance-services/peak-trading-packing-640.avif 640w, /images/uk/shopify-maintenance-services/peak-trading-packing-960.avif 960w, /images/uk/shopify-maintenance-services/peak-trading-packing-1280.avif 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) min(640px, calc(100vw - 48px)), 440px" />
+                <source type="image/webp" srcSet="/images/uk/shopify-maintenance-services/peak-trading-packing-640.webp 640w, /images/uk/shopify-maintenance-services/peak-trading-packing-960.webp 960w, /images/uk/shopify-maintenance-services/peak-trading-packing-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) min(640px, calc(100vw - 48px)), 440px" />
+                <img src="/images/uk/shopify-maintenance-services/peak-trading-packing-960.webp" srcSet="/images/uk/shopify-maintenance-services/peak-trading-packing-640.webp 640w, /images/uk/shopify-maintenance-services/peak-trading-packing-960.webp 960w, /images/uk/shopify-maintenance-services/peak-trading-packing-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) min(640px, calc(100vw - 48px)), 440px" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people check blank packing sheets and seal unlabelled cartons in a British packing room in autumn light." />
+              </picture>
           </div>
         </section>
 
