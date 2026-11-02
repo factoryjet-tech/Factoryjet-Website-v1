@@ -201,13 +201,24 @@
 }
 @media (max-width: 480px) {
   .uk-workflow-visual main .byline {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    align-items: start;
+    gap: 8px 11px;
+  }
+  .uk-workflow-visual main .byline .av {
+    grid-column: 1;
+    grid-row: 1;
   }
   .uk-workflow-visual main .byline .who {
-    flex: 1;
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
   }
   .uk-workflow-visual main .byline .upd {
-    margin-left: 49px;
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 0;
     text-align: left;
   }
 }
