@@ -340,7 +340,7 @@ export default function ShopifyPlusAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage au-plus-visual-11">
+      <div className="aiAgentPage auPage">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -522,12 +522,6 @@ export default function ShopifyPlusAUPage() {
                 These six come up most, and Plus is the right answer to some of them, not all.
               </p>
             </div>
-            <div className="plus-situations-layout">
-            <picture className="plus-visual-frame">
-              <source type="image/avif" srcSet="/images/au/shopify-plus/dtc-homewares-catalogue-studio-640.avif 640w, /images/au/shopify-plus/dtc-homewares-catalogue-studio-960.avif 960w, /images/au/shopify-plus/dtc-homewares-catalogue-studio-1280.avif 1280w" sizes="(max-width: 820px) min(620px, calc(100vw - 40px)), (max-width: 1100px) 680px, 480px" />
-              <source type="image/webp" srcSet="/images/au/shopify-plus/dtc-homewares-catalogue-studio-640.webp 640w, /images/au/shopify-plus/dtc-homewares-catalogue-studio-960.webp 960w, /images/au/shopify-plus/dtc-homewares-catalogue-studio-1280.webp 1280w" sizes="(max-width: 820px) min(620px, calc(100vw - 40px)), (max-width: 1100px) 680px, 480px" />
-              <img src="/images/au/shopify-plus/dtc-homewares-catalogue-studio-1280.webp" srcSet="/images/au/shopify-plus/dtc-homewares-catalogue-studio-640.webp 640w, /images/au/shopify-plus/dtc-homewares-catalogue-studio-960.webp 960w, /images/au/shopify-plus/dtc-homewares-catalogue-studio-1280.webp 1280w" sizes="(max-width: 820px) min(620px, calc(100vw - 40px)), (max-width: 1100px) 680px, 480px" width={1280} height={853} loading="lazy" decoding="async" alt="Two people arrange plain ceramic bowls and folded linen in a daylight product studio." />
-            </picture>
             <ul className="capgrid">
               {SITUATIONS.map((s, i) => (
                 <li key={s.n} className={`cap cap-plain cap-${i + 1}`}>
@@ -547,7 +541,6 @@ export default function ShopifyPlusAUPage() {
                 </li>
               ))}
             </ul>
-            </div>
           </div>
         </section>
 
@@ -645,12 +638,6 @@ export default function ShopifyPlusAUPage() {
                 that way.
               </p>
             </div>
-            <div className="plus-build-layout">
-            <picture className="plus-visual-frame">
-              <source type="image/avif" srcSet="/images/au/shopify-plus/developer-storefront-systems-displays-640.avif 640w, /images/au/shopify-plus/developer-storefront-systems-displays-960.avif 960w, /images/au/shopify-plus/developer-storefront-systems-displays-1280.avif 1280w" sizes="(max-width: 820px) min(620px, calc(100vw - 40px)), (max-width: 1100px) 680px, 480px" />
-              <source type="image/webp" srcSet="/images/au/shopify-plus/developer-storefront-systems-displays-640.webp 640w, /images/au/shopify-plus/developer-storefront-systems-displays-960.webp 960w, /images/au/shopify-plus/developer-storefront-systems-displays-1280.webp 1280w" sizes="(max-width: 820px) min(620px, calc(100vw - 40px)), (max-width: 1100px) 680px, 480px" />
-              <img src="/images/au/shopify-plus/developer-storefront-systems-displays-1280.webp" srcSet="/images/au/shopify-plus/developer-storefront-systems-displays-640.webp 640w, /images/au/shopify-plus/developer-storefront-systems-displays-960.webp 960w, /images/au/shopify-plus/developer-storefront-systems-displays-1280.webp 1280w" sizes="(max-width: 820px) min(620px, calc(100vw - 40px)), (max-width: 1100px) 680px, 480px" width={1280} height={853} loading="lazy" decoding="async" alt="A man reviews product photographs and a grey block diagram on two separate monitors." />
-            </picture>
             <ol className="platlist">
               {BUILDS.map((b, i) => (
                 <li key={b.t} className="plat plat-2col">
@@ -660,7 +647,6 @@ export default function ShopifyPlusAUPage() {
                 </li>
               ))}
             </ol>
-            </div>
             <p className="sub-note">
               Shopify’s help centre confirms that B2B runs on the Basic, Grow, Advanced and Plus plans, and that one
               store can serve both trade and retail customers. See <a href={SRC_B2B} {...extLink}>Shopify B2B</a>.
@@ -916,11 +902,6 @@ export default function ShopifyPlusAUPage() {
                 himself within 24 hours and sets up a call on your catalogue, your trade customers and your systems.
               </p>
             </div>
-            <picture className="plus-visual-frame">
-              <source type="image/avif" srcSet="/images/au/shopify-plus/bedding-catalogue-merchandising-review-640.avif 640w, /images/au/shopify-plus/bedding-catalogue-merchandising-review-960.avif 960w, /images/au/shopify-plus/bedding-catalogue-merchandising-review-1280.avif 1280w" sizes="(max-width: 820px) min(620px, calc(100vw - 40px)), (max-width: 1100px) calc((100vw - 92px) * 5 / 12), (max-width: 1264px) calc((100vw - 120px) * 5 / 12), 476.667px" />
-              <source type="image/webp" srcSet="/images/au/shopify-plus/bedding-catalogue-merchandising-review-640.webp 640w, /images/au/shopify-plus/bedding-catalogue-merchandising-review-960.webp 960w, /images/au/shopify-plus/bedding-catalogue-merchandising-review-1280.webp 1280w" sizes="(max-width: 820px) min(620px, calc(100vw - 40px)), (max-width: 1100px) calc((100vw - 92px) * 5 / 12), (max-width: 1264px) calc((100vw - 120px) * 5 / 12), 476.667px" />
-              <img src="/images/au/shopify-plus/bedding-catalogue-merchandising-review-1280.webp" srcSet="/images/au/shopify-plus/bedding-catalogue-merchandising-review-640.webp 640w, /images/au/shopify-plus/bedding-catalogue-merchandising-review-960.webp 960w, /images/au/shopify-plus/bedding-catalogue-merchandising-review-1280.webp 1280w" sizes="(max-width: 820px) min(620px, calc(100vw - 40px)), (max-width: 1100px) calc((100vw - 92px) * 5 / 12), (max-width: 1264px) calc((100vw - 120px) * 5 / 12), 476.667px" width={1280} height={853} loading="lazy" decoding="async" alt="Two people compare folded bedding samples with product photographs on a large monitor." />
-            </picture>
             <div className="ctas">
               <ModalCTAButton label="See a draft of my store" region="au" modalVariant="default" btnVariant="primary-light" className="btn btn-primary" />
               <a className="btn btn-ghost" href="/au/shopify-development">See Shopify development</a>
