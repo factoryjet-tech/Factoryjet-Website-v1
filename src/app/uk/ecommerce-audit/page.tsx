@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 
 /* /uk/ecommerce-audit, built 2026-10-29.
 
@@ -271,7 +272,7 @@ const inlineLink = { textDecoration: 'underline', color: T.ink, fontWeight: 600 
 /* Small source line. Every id comes from the SRC map above. */
 function Sources({ ids }: { ids: SrcKey[] }) {
   return (
-    <p style={srcNote}>
+    <p className="audit-source-note" style={srcNote}>
       Sources, read on {READ_ON}:{' '}
       {ids.map((id, i) => (
         <span key={id}>
@@ -290,7 +291,7 @@ export default function EcommerceAuditUKPage() {
       <script id="ld-uk-ecommerce-audit" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents uk-audit-visual">
       <main>
 
         <Breadcrumbs items={crumbs} />
@@ -325,8 +326,7 @@ export default function EcommerceAuditUKPage() {
                 </div>
               </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/services/ecommerce-audit-hero.webp" width={1600} height={1067} fetchPriority="high" decoding="async" alt="A merchant reviewing an online store checkout and order dashboard on a laptop during an ecommerce audit" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+              <div className="card audit-report-card" style={{ padding: 8 }}>
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What the report hands you</span>
                   <div className="scorecard-row">
@@ -415,6 +415,12 @@ export default function EcommerceAuditUKPage() {
                   <li><b>An agency wants to rebuild everything.</b> You want an evidence-led view of what is broken before you sign a six-figure replatform.</li>
                 </ul>
               </div>
+              <div className="audit-signs-media">
+                <picture className="audit-picture">
+                  <source type="image/avif" srcSet="/images/uk/ecommerce-audit/store-owner-phone-640.avif 640w, /images/uk/ecommerce-audit/store-owner-phone-960.avif 960w, /images/uk/ecommerce-audit/store-owner-phone-1280.avif 1280w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 430px" />
+                  <source type="image/webp" srcSet="/images/uk/ecommerce-audit/store-owner-phone-640.webp 640w, /images/uk/ecommerce-audit/store-owner-phone-960.webp 960w, /images/uk/ecommerce-audit/store-owner-phone-1280.webp 1280w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 430px" />
+                  <img src="/images/uk/ecommerce-audit/store-owner-phone-960.webp" srcSet="/images/uk/ecommerce-audit/store-owner-phone-640.webp 640w, /images/uk/ecommerce-audit/store-owner-phone-960.webp 960w, /images/uk/ecommerce-audit/store-owner-phone-1280.webp 1280w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 430px" width={1536} height={1024} decoding="async" loading="lazy" alt="A woman checks a plain phone at a homewares shop counter beside a ceramic bowl and blank paper." />
+                </picture>
               <div className="card card-top-orange">
                 <span className="eyebrow">Audit, consultant or rebuild?</span>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Store trades, something leaks</div><div className="scorecard-note">you need the evidence first</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Audit</div></div>
@@ -422,6 +428,7 @@ export default function EcommerceAuditUKPage() {
                 <div className="scorecard-row"><div><div className="scorecard-metric">The design itself is the problem</div><div className="scorecard-note">old theme, poor mobile layout</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Redesign</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Only search is weak</div><div className="scorecard-note">crawling, indexing, AI answers</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>SEO audit</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Not live yet</div><div className="scorecard-note">nothing to measure</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Launch plan</div></div>
+              </div>
               </div>
             </div>
             <p className="mt-8" style={{ maxWidth: 900 }}>
@@ -446,7 +453,15 @@ export default function EcommerceAuditUKPage() {
                 yourself: an order number, a screenshot, a log line or a report export.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <div className="audit-editorial mt-10">
+              <div className="audit-media">
+                <picture className="audit-picture">
+                  <source type="image/avif" srcSet="/images/uk/ecommerce-audit/order-evidence-counter-640.avif 640w, /images/uk/ecommerce-audit/order-evidence-counter-960.avif 960w, /images/uk/ecommerce-audit/order-evidence-counter-1280.avif 1280w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 430px" />
+                  <source type="image/webp" srcSet="/images/uk/ecommerce-audit/order-evidence-counter-640.webp 640w, /images/uk/ecommerce-audit/order-evidence-counter-960.webp 960w, /images/uk/ecommerce-audit/order-evidence-counter-1280.webp 1280w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 430px" />
+                  <img src="/images/uk/ecommerce-audit/order-evidence-counter-960.webp" srcSet="/images/uk/ecommerce-audit/order-evidence-counter-640.webp 640w, /images/uk/ecommerce-audit/order-evidence-counter-960.webp 960w, /images/uk/ecommerce-audit/order-evidence-counter-1280.webp 1280w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 430px" width={1536} height={1024} decoding="async" loading="lazy" alt="Two people compare blank order papers and a plain parcel at a kitchenware packing counter." />
+                </picture>
+              </div>
+              <ol className="stack audit-list">
               {AREAS.map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
@@ -457,6 +472,7 @@ export default function EcommerceAuditUKPage() {
                 </li>
               ))}
             </ol>
+            </div>
           </div>
         </section>
 
@@ -506,7 +522,7 @@ export default function EcommerceAuditUKPage() {
               </p>
             </div>
             <Sources ids={['cmaPrice', 'cmaNews', 'distance', 'mtd', 'icoDuaa', 'icoExceptions']} />
-            <p style={srcNote}>
+            <p className="audit-source-note" style={srcNote}>
               We are not lawyers or tax advisers. We find where the store and these rules meet, and your legal team or
               accountant makes the call.
             </p>
@@ -531,7 +547,15 @@ export default function EcommerceAuditUKPage() {
                 change. Your finance lead joins us for steps four and seven.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <div className="audit-editorial mt-10">
+              <div className="audit-media">
+                <picture className="audit-picture">
+                  <source type="image/avif" srcSet="/images/uk/ecommerce-audit/analyst-audit-checklist-640.avif 640w, /images/uk/ecommerce-audit/analyst-audit-checklist-960.avif 960w, /images/uk/ecommerce-audit/analyst-audit-checklist-1280.avif 1280w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 430px" />
+                  <source type="image/webp" srcSet="/images/uk/ecommerce-audit/analyst-audit-checklist-640.webp 640w, /images/uk/ecommerce-audit/analyst-audit-checklist-960.webp 960w, /images/uk/ecommerce-audit/analyst-audit-checklist-1280.webp 1280w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 430px" />
+                  <img src="/images/uk/ecommerce-audit/analyst-audit-checklist-960.webp" srcSet="/images/uk/ecommerce-audit/analyst-audit-checklist-640.webp 640w, /images/uk/ecommerce-audit/analyst-audit-checklist-960.webp 960w, /images/uk/ecommerce-audit/analyst-audit-checklist-1280.webp 1280w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 430px" width={1536} height={1024} decoding="async" loading="lazy" alt="A man compares pottery product photos with a checklist of grey rows and orange ticks on two monitors." />
+                </picture>
+              </div>
+              <ol className="stack audit-list">
               {[
                 { n: '01', t: 'Scope call with the founder', d: 'Channels, systems, order volume and what worries you. We agree what is in scope and the timeline, in writing, before any login is shared. The audit is free.' },
                 { n: '02', t: 'Read-only access', d: 'Analytics, Search Console, the store admin as a staff user, a viewer login for the books and, where relevant, Linnworks, Brightpearl or Mintsoft. No write access, ever.' },
@@ -550,6 +574,7 @@ export default function EcommerceAuditUKPage() {
                 </li>
               ))}
             </ol>
+            </div>
           </div>
         </section>
 
@@ -629,7 +654,7 @@ export default function EcommerceAuditUKPage() {
               Each has a use. The difference is how far past the storefront each one looks.
             </p>
             <p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <div className="card mt-8 audit-table-scroll" tabIndex={0} style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
@@ -706,7 +731,7 @@ export default function EcommerceAuditUKPage() {
                 guidance and agencies change prices, so open the linked page before you act on a figure.
               </p>
             </div>
-            <ul className="col-2 mt-8" style={{ gap: 10 }}>
+            <ul className="col-2 mt-8 audit-source-list" style={{ gap: 10 }}>
               {SOURCE_KEYS.map((k) => (
                 <li key={k} style={{ fontSize: 14 }}>
                   <a href={SRC[k].url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: T.ink }}>{SRC[k].label}</a>
@@ -767,15 +792,15 @@ export default function EcommerceAuditUKPage() {
 
         {/* ═══ 15. FINAL CTA (the only dark section) ═══ */}
         <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+          <div className="wrap" style={{ textAlign: 'left', maxWidth: 1120 }}>
             <span className="eyebrow">Next step</span>
-            <p style={{ fontFamily: T.fd, fontWeight: 700, fontSize: 'clamp(1.75rem,3.5vw,2.625rem)', lineHeight: 1.15, letterSpacing: '-0.025em', color: '#fff' }}>Find the fixes your store is already paying for</p>
+            <p className="audit-final-title" style={{ fontFamily: T.fd, fontWeight: 700, fontSize: 'clamp(1.75rem,3.5vw,2.625rem)', lineHeight: 1.15, letterSpacing: '-0.025em', color: '#fff' }}>Find the fixes your store is already paying for</p>
             <p className="mt-4">
               Send your name and work email. The founder replies within 24 hours to book a scope call about your
               channels, your systems and what is going wrong. You leave with a written scope for a free audit, and no
               obligation to hire us for the fixes.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8" style={{ display: 'flex', justifyContent: 'flex-start', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="Scope my store audit" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/uk/shopify-migration" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Thinking of replatforming?</a>
             </div>
