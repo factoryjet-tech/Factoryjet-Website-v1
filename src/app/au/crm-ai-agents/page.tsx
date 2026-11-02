@@ -11,6 +11,7 @@ import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const CANONICAL = 'https://factoryjet.com/au/crm-ai-agents';
@@ -350,7 +351,7 @@ export default function CrmAiAgentsAUPage() {
 
       <SiteHeader locale="au" logoHref="/au" />
 
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage crm-au-visual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -506,6 +507,7 @@ export default function CrmAiAgentsAUPage() {
         {/* ═══ WHAT THE AGENT DOES → capgrid ═══ */}
         <section className="section capabilities" id="what-it-does">
           <div className="wrap">
+            <div className="crm-jobs-head">
             <div className="section-head">
               <div className="eyebrow">Six jobs, built one at a time</div>
               <h2>What a HubSpot or Salesforce AI agent does for your reps</h2>
@@ -513,6 +515,12 @@ export default function CrmAiAgentsAUPage() {
                 Each job can be built and priced on its own. Most Australian teams start with lead scoring or activity
                 logging, then add the next job once the first one shows its numbers in your own CRM.
               </p>
+            </div>
+            <picture className="crm-media">
+              <source type="image/avif" srcSet="/images/au/crm-ai-agents/sales-representative-pipeline-640.avif 640w, /images/au/crm-ai-agents/sales-representative-pipeline-960.avif 960w, /images/au/crm-ai-agents/sales-representative-pipeline-1280.avif 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(41.667vw - 53.333px), 474px" />
+              <source type="image/webp" srcSet="/images/au/crm-ai-agents/sales-representative-pipeline-640.webp 640w, /images/au/crm-ai-agents/sales-representative-pipeline-960.webp 960w, /images/au/crm-ai-agents/sales-representative-pipeline-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(41.667vw - 53.333px), 474px" />
+              <img src="/images/au/crm-ai-agents/sales-representative-pipeline-960.webp" srcSet="/images/au/crm-ai-agents/sales-representative-pipeline-640.webp 640w, /images/au/crm-ai-agents/sales-representative-pipeline-960.webp 960w, /images/au/crm-ai-agents/sales-representative-pipeline-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(41.667vw - 53.333px), 474px" width="1536" height="1024" alt="A sales representative wearing a headset reviews blank pipeline cards on a monitor beside catering equipment." loading="lazy" decoding="async" />
+            </picture>
             </div>
             <div className="capgrid">
               {AGENT_JOBS.map((j, i) => (
@@ -613,6 +621,11 @@ export default function CrmAiAgentsAUPage() {
               <div className="eyebrow">Approval rules</div>
               <h2>Your sales leader decides what the agent may change alone</h2>
             </div>
+            <picture className="crm-media crm-approval-media">
+              <source type="image/avif" srcSet="/images/au/crm-ai-agents/sales-leader-draft-approval-640.avif 640w, /images/au/crm-ai-agents/sales-leader-draft-approval-960.avif 960w, /images/au/crm-ai-agents/sales-leader-draft-approval-1280.avif 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(40vw - 56px), 450px" />
+              <source type="image/webp" srcSet="/images/au/crm-ai-agents/sales-leader-draft-approval-640.webp 640w, /images/au/crm-ai-agents/sales-leader-draft-approval-960.webp 960w, /images/au/crm-ai-agents/sales-leader-draft-approval-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(40vw - 56px), 450px" />
+              <img src="/images/au/crm-ai-agents/sales-leader-draft-approval-960.webp" srcSet="/images/au/crm-ai-agents/sales-leader-draft-approval-640.webp 640w, /images/au/crm-ai-agents/sales-leader-draft-approval-960.webp 960w, /images/au/crm-ai-agents/sales-leader-draft-approval-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(40vw - 56px), 450px" width="1536" height="1024" alt="A woman reviews a draft represented by grey bars on a tablet beside a pipeline display." loading="lazy" decoding="async" />
+            </picture>
             <div className="factswrap">
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
@@ -837,6 +850,12 @@ export default function CrmAiAgentsAUPage() {
                 reps still own every account. They stop retyping the week into Salesforce.
               </p>
             </div>
+            <div className="crm-example-side">
+            <picture className="crm-media">
+              <source type="image/avif" srcSet="/images/au/crm-ai-agents/brisbane-wholesale-pipeline-640.avif 640w, /images/au/crm-ai-agents/brisbane-wholesale-pipeline-960.avif 960w, /images/au/crm-ai-agents/brisbane-wholesale-pipeline-1280.avif 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(41.667vw - 53.333px), 474px" />
+              <source type="image/webp" srcSet="/images/au/crm-ai-agents/brisbane-wholesale-pipeline-640.webp 640w, /images/au/crm-ai-agents/brisbane-wholesale-pipeline-960.webp 960w, /images/au/crm-ai-agents/brisbane-wholesale-pipeline-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(41.667vw - 53.333px), 474px" />
+              <img src="/images/au/crm-ai-agents/brisbane-wholesale-pipeline-960.webp" srcSet="/images/au/crm-ai-agents/brisbane-wholesale-pipeline-640.webp 640w, /images/au/crm-ai-agents/brisbane-wholesale-pipeline-960.webp 960w, /images/au/crm-ai-agents/brisbane-wholesale-pipeline-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(41.667vw - 53.333px), 474px" width="1536" height="1024" alt="Three people arrange blank pipeline cards at a desk beside shelves of plumbing fittings and plain cartons." loading="lazy" decoding="async" />
+            </picture>
             <div className="au-panel">
               <div className="eyebrow">Systems in this example</div>
               <ul className="trigrows">
@@ -846,6 +865,7 @@ export default function CrmAiAgentsAUPage() {
                 <li><span className="m">Cin7 stock on hand</span><span className="t">Read</span></li>
                 <li><span className="m">Follow-up emails</span><span className="t">Rep sends</span></li>
               </ul>
+            </div>
             </div>
           </div>
         </section>
