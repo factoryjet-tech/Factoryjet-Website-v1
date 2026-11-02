@@ -6,7 +6,6 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
-import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* /uk/ai-automation, built 2026-10-29.
@@ -448,7 +447,7 @@ export default function AiAutomationUKPage() {
       <script id="ld-uk-ai-automation" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents uk-workflow-visual">
+      <div className="uk-aiagents">
       <main>
         <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
@@ -587,7 +586,7 @@ export default function AiAutomationUKPage() {
                 is the bar for automating anything.
               </p>
             </div>
-            <ul className="col-2 mt-10 wf-chain-bento">
+            <ul className="col-2 mt-10">
               {CHAINS.map((c) => (
                 <li key={c.t} className="card">
                   <h3>{c.t}</h3>
@@ -595,8 +594,7 @@ export default function AiAutomationUKPage() {
                 </li>
               ))}
             </ul>
-            <div className="card mt-10 wf-systems">
-              <div>
+            <div className="card mt-10">
               <span className="eyebrow">Systems we connect for UK teams</span>
               <ul className="stack mt-4">
                 {SYSTEMS.map((g) => (
@@ -611,12 +609,6 @@ export default function AiAutomationUKPage() {
                 For the Shopify and Xero pairing in detail, see{' '}
                 <a href="/uk/shopify-xero-integration" style={inlineLink}>Shopify Xero integration</a>.
               </p>
-              </div>
-              <picture className="wf-photo">
-                <source type="image/avif" srcSet="/images/uk/ai-automation/workflow-order-printer-coordinator-640.avif 640w, /images/uk/ai-automation/workflow-order-printer-coordinator-960.avif 960w, /images/uk/ai-automation/workflow-order-printer-coordinator-1280.avif 1280w" sizes="(min-width: 1120px) 388px, (min-width: 900px) calc(40vw - 52px), (min-width: 768px) calc(100vw - 104px), calc(100vw - 76px)" />
-                <source type="image/webp" srcSet="/images/uk/ai-automation/workflow-order-printer-coordinator-640.webp 640w, /images/uk/ai-automation/workflow-order-printer-coordinator-960.webp 960w, /images/uk/ai-automation/workflow-order-printer-coordinator-1280.webp 1280w" sizes="(min-width: 1120px) 388px, (min-width: 900px) calc(40vw - 52px), (min-width: 768px) calc(100vw - 104px), calc(100vw - 76px)" />
-                <img src="/images/uk/ai-automation/workflow-order-printer-coordinator-640.webp" srcSet="/images/uk/ai-automation/workflow-order-printer-coordinator-640.webp 640w, /images/uk/ai-automation/workflow-order-printer-coordinator-960.webp 960w, /images/uk/ai-automation/workflow-order-printer-coordinator-1280.webp 1280w" sizes="(min-width: 1120px) 388px, (min-width: 900px) calc(40vw - 52px), (min-width: 768px) calc(100vw - 104px), calc(100vw - 76px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman sorts printed A4 records into trays beside an order printer and a monitor of coloured cards." />
-              </picture>
             </div>
           </div>
         </section>
@@ -624,8 +616,8 @@ export default function AiAutomationUKPage() {
         {/* 5. AUTOMATE OR AGENT */}
         <section className="sec-lg">
           <div className="wrap">
-            <div className="col-6040 wf-rules-layout">
-              <div className="wf-rule-copy">
+            <div className="col-6040">
+              <div>
                 <span className="eyebrow">Rules first, AI second</span>
                 <h2>Which steps need AI, and which need a plain rule</h2>
                 <div className="stack mt-6">
@@ -647,19 +639,12 @@ export default function AiAutomationUKPage() {
                   </p>
                 </div>
               </div>
-              <div className="wf-rule-support">
-                <picture className="wf-photo">
-                <source type="image/avif" srcSet="/images/uk/ai-automation/workflow-rules-ai-card-sort-640.avif 640w, /images/uk/ai-automation/workflow-rules-ai-card-sort-960.avif 960w, /images/uk/ai-automation/workflow-rules-ai-card-sort-1280.avif 1280w" sizes="(min-width: 1120px) 410px, (min-width: 900px) calc(40vw - 32px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
-                <source type="image/webp" srcSet="/images/uk/ai-automation/workflow-rules-ai-card-sort-640.webp 640w, /images/uk/ai-automation/workflow-rules-ai-card-sort-960.webp 960w, /images/uk/ai-automation/workflow-rules-ai-card-sort-1280.webp 1280w" sizes="(min-width: 1120px) 410px, (min-width: 900px) calc(40vw - 32px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
-                <img src="/images/uk/ai-automation/workflow-rules-ai-card-sort-640.webp" srcSet="/images/uk/ai-automation/workflow-rules-ai-card-sort-640.webp 640w, /images/uk/ai-automation/workflow-rules-ai-card-sort-960.webp 960w, /images/uk/ai-automation/workflow-rules-ai-card-sort-1280.webp 1280w" sizes="(min-width: 1120px) 410px, (min-width: 900px) calc(40vw - 32px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people sort blank index cards beside uniform and irregular A4 documents on a meeting table." />
-              </picture>
               <div className="card card-top-orange">
                 <span className="eyebrow">A quick sort</span>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Payout matched to bank line</div><div className="scorecard-note">same steps every time</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Rule</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Tracking sent to the marketplace</div><div className="scorecard-note">fixed fields, fixed order</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Rule</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Scanned PDF purchase order</div><div className="scorecard-note">read, then a person approves</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>AI step</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Mixed return and reorder email</div><div className="scorecard-note">has to pick an action</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Agent</div></div>
-              </div>
               </div>
             </div>
           </div>
@@ -680,10 +665,10 @@ export default function AiAutomationUKPage() {
             <div className="card mt-10" tabIndex={0} role="region" aria-label="n8n, Make and Zapier compared" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={4}>
                 <thead>
                   <tr>
-                    <th scope="col">Question</th>
-                    <th scope="col">n8n</th>
-                    <th scope="col">Make</th>
-                    <th scope="col">Zapier</th>
+                    <th>Question</th>
+                    <th>n8n</th>
+                    <th>Make</th>
+                    <th>Zapier</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -818,10 +803,10 @@ export default function AiAutomationUKPage() {
             <div className="card mt-10" tabIndex={0} role="region" aria-label="UK AI automation build ranges" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 820 }} data-columns={4}>
                 <thead>
                   <tr>
-                    <th scope="col">Agency</th>
-                    <th scope="col">Job described</th>
-                    <th scope="col" className="fj">Published range</th>
-                    <th scope="col">VAT</th>
+                    <th>Agency</th>
+                    <th>Job described</th>
+                    <th className="fj">Published range</th>
+                    <th>VAT</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -892,7 +877,7 @@ export default function AiAutomationUKPage() {
                 is involved.
               </p>
             </div>
-            <ol className="stack mt-10 wf-process" style={{ maxWidth: 900 }}>
+            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'A scoping call with the founder', d: 'Bhavesh asks which Sage or Xero edition you run, whether it is hosted or on premises, and which postings your accountant signs off. From those answers he says if any step needs AI, and whether n8n, Make or Zapier suits the volume.' },
                 { n: '02', t: 'The workflow on your own data, before you sign', d: 'We run a few of your real orders, payouts or bills through the proposed steps, with names removed if you prefer, and show every record it writes and every case it hands to a person.' },
@@ -1033,8 +1018,7 @@ export default function AiAutomationUKPage() {
 
         {/* 14. FINAL CTA (the only dark section) */}
         <section className="dark-sec">
-          <div className="wrap wf-final">
-            <div>
+          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
             <span className="eyebrow">Next step</span>
             <h2>Pick one workflow. We will show it running on your records.</h2>
             <p className="mt-4">
@@ -1042,16 +1026,10 @@ export default function AiAutomationUKPage() {
               day and books a short call about the workflow and where your data may live. You leave knowing which tool
               fits and what the first phase costs.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'flex-start', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-dark" />
               <a className="btn btn-outline" href="/contact" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Contact us</a>
             </div>
-            </div>
-            <picture className="wf-photo">
-                <source type="image/avif" srcSet="/images/uk/ai-automation/workflow-records-demo-room-640.avif 640w, /images/uk/ai-automation/workflow-records-demo-room-960.avif 960w, /images/uk/ai-automation/workflow-records-demo-room-1280.avif 1280w" sizes="(min-width: 1120px) 410px, (min-width: 900px) calc(40vw - 32px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
-                <source type="image/webp" srcSet="/images/uk/ai-automation/workflow-records-demo-room-640.webp 640w, /images/uk/ai-automation/workflow-records-demo-room-960.webp 960w, /images/uk/ai-automation/workflow-records-demo-room-1280.webp 1280w" sizes="(min-width: 1120px) 410px, (min-width: 900px) calc(40vw - 32px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
-                <img src="/images/uk/ai-automation/workflow-records-demo-room-640.webp" srcSet="/images/uk/ai-automation/workflow-records-demo-room-640.webp 640w, /images/uk/ai-automation/workflow-records-demo-room-960.webp 960w, /images/uk/ai-automation/workflow-records-demo-room-1280.webp 1280w" sizes="(min-width: 1120px) 410px, (min-width: 900px) calc(40vw - 32px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people view coloured record groups on a wall display beside three trays of A4 paperwork." />
-              </picture>
           </div>
         </section>
 
