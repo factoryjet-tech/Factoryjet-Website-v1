@@ -72,7 +72,7 @@
 
 /* Instructions and supporting prose are body text, including non-p elements. */
 .crm-au-visual.aiAgentPage.auPage :is(.specpanel-foot, .trigrows .m, .trigrows .n, .byline .who, .byline .who span) { font-size: 16px; }
-.crm-au-visual.aiAgentPage.auPage .byline .av { color: #14110F; font-size: 12px; }
+.crm-au-visual.aiAgentPage.auPage .byline .av { color: #FFFFFF; font-size: 12px; }
 .crm-au-visual.aiAgentPage.auPage .hold .workflow-icon { color: #14110F; }
 .crm-au-visual.aiAgentPage.auPage .timeline .tnode:last-child .idx { color: #14110F; }
 
