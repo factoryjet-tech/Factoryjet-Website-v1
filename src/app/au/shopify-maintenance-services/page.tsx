@@ -7,7 +7,6 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
-import VisualSlot from '../components/VisualSlot';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
@@ -293,7 +292,7 @@ export default function ShopifyMaintenanceAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage au-maintenance-visual-11">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -428,10 +427,7 @@ export default function ShopifyMaintenanceAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto" src={null}
-                subject="An online store dispatch desk with an order dashboard on a laptop, a label printer and courier satchels">
-                <img src="/images/au/shopify-development/shopify-development-integrations.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An online store's dispatch desk: an order dashboard on the laptop, a label printer feeding out a shipping label and a stack of courier satchels ready to go" />
-              </VisualSlot>
+
             </div>
           </div>
         </section>
@@ -439,6 +435,7 @@ export default function ShopifyMaintenanceAUPage() {
         {/* ═══ LISTICLE: TEN JOBS → capgrid ═══ */}
         <section className="section capabilities" id="what-we-maintain">
           <div className="wrap">
+            <div className="maintenance-section-intro">
             <div className="section-head">
               <div className="eyebrow">Shopify support, itemised</div>
               <h2>Ten jobs we do on Australian Shopify stores</h2>
@@ -447,6 +444,12 @@ export default function ShopifyMaintenanceAUPage() {
                 whether an established store keeps trading through a platform change, an app update or a busy
                 Black Friday weekend.
               </p>
+            </div>
+              <picture className="maintenance-photo maintenance-jobs-photo">
+                <source type="image/avif" srcSet="/images/au/shopify-maintenance-services/cross-device-theme-test-640.avif 640w, /images/au/shopify-maintenance-services/cross-device-theme-test-960.avif 960w, /images/au/shopify-maintenance-services/cross-device-theme-test-1280.avif 1280w" sizes="(max-width: 820px) min(calc(100vw - 40px), 620px), (max-width: 1280px) 40vw, 480px" />
+                <source type="image/webp" srcSet="/images/au/shopify-maintenance-services/cross-device-theme-test-640.webp 640w, /images/au/shopify-maintenance-services/cross-device-theme-test-960.webp 960w, /images/au/shopify-maintenance-services/cross-device-theme-test-1280.webp 1280w" sizes="(max-width: 820px) min(calc(100vw - 40px), 620px), (max-width: 1280px) 40vw, 480px" />
+                <img src="/images/au/shopify-maintenance-services/cross-device-theme-test-960.webp" srcSet="/images/au/shopify-maintenance-services/cross-device-theme-test-640.webp 640w, /images/au/shopify-maintenance-services/cross-device-theme-test-960.webp 960w, /images/au/shopify-maintenance-services/cross-device-theme-test-1280.webp 1280w" sizes="(max-width: 820px) min(calc(100vw - 40px), 620px), (max-width: 1280px) 40vw, 480px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman compares ceramic product pages on a phone and laptop at a packing workbench." />
+              </picture>
             </div>
             <div className="capgrid">
               {JOBS.map((s, i) => (
@@ -605,11 +608,8 @@ export default function ShopifyMaintenanceAUPage() {
 
         {/* ═══ INTEGRATIONS → definition module ═══ */}
         <section className="definition" id="integrations">
-          <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image" src={null}
-              subject="A Shopify developer checking a product page on her phone against the desktop version on her laptop">
-              <img src="/images/au/visual-pass-2026-10-03/shopify-development/mobile-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/mobile-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/mobile-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="eager" fetchPriority="low" decoding="async" alt="A Shopify developer checking a product page on her phone against the desktop version on her laptop" />
-            </VisualSlot>
+          <div className="maintenance-release-note">
+
             <p className="figcap">
               After each release we check the store on a phone first, then on a desktop. Google reports Core Web
               Vitals for mobile and desktop separately, so we test both.
@@ -666,6 +666,12 @@ export default function ShopifyMaintenanceAUPage() {
                   </p>
                 </div></div>
               </div>
+              <div className="maintenance-access-media">
+                <picture className="maintenance-photo maintenance-access-photo">
+                <source type="image/avif" srcSet="/images/au/shopify-maintenance-services/owner-access-review-640.avif 640w, /images/au/shopify-maintenance-services/owner-access-review-960.avif 960w, /images/au/shopify-maintenance-services/owner-access-review-1280.avif 1280w" sizes="(max-width: 820px) min(calc(100vw - 40px), 620px), (max-width: 1280px) 40vw, 480px" />
+                <source type="image/webp" srcSet="/images/au/shopify-maintenance-services/owner-access-review-640.webp 640w, /images/au/shopify-maintenance-services/owner-access-review-960.webp 960w, /images/au/shopify-maintenance-services/owner-access-review-1280.webp 1280w" sizes="(max-width: 820px) min(calc(100vw - 40px), 620px), (max-width: 1280px) 40vw, 480px" />
+                <img src="/images/au/shopify-maintenance-services/owner-access-review-960.webp" srcSet="/images/au/shopify-maintenance-services/owner-access-review-640.webp 640w, /images/au/shopify-maintenance-services/owner-access-review-960.webp 960w, /images/au/shopify-maintenance-services/owner-access-review-1280.webp 1280w" sizes="(max-width: 820px) min(calc(100vw - 40px), 620px), (max-width: 1280px) 40vw, 480px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman points to grey access rows on a laptop beside folded clothing and plain cartons." />
+              </picture>
               <div className="au-panel">
                 <div className="eyebrow">What stays in your name</div>
                 <ul className="trigrows">
@@ -676,6 +682,7 @@ export default function ShopifyMaintenanceAUPage() {
                   <li><span className="m">Our access</span><span className="t">Collaborator</span></li>
                 </ul>
               </div>
+              </div>
             </div>
           </div>
         </section>
@@ -685,7 +692,7 @@ export default function ShopifyMaintenanceAUPage() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Shopify retainer or pay per job</div>
-              <h2>Retainer, pay-per-job support or an in-house developer</h2>
+              <h2>Retainer, pay-per-job support or an <span className="maintenance-keep">in-house developer</span></h2>
               <p className="lead">
                 A retainer is what some agencies sell as a Shopify maintenance package or care plan. Each model suits a different store. Two questions settle it: how many changes you ship a month, and how many
                 systems hang off Shopify.
@@ -848,6 +855,11 @@ export default function ShopifyMaintenanceAUPage() {
                 that fits. No obligation.
               </p>
             </div>
+            <picture className="maintenance-photo maintenance-final-photo">
+                <source type="image/avif" srcSet="/images/au/shopify-maintenance-services/maintained-store-dispatch-640.avif 640w, /images/au/shopify-maintenance-services/maintained-store-dispatch-960.avif 960w, /images/au/shopify-maintenance-services/maintained-store-dispatch-1280.avif 1280w" sizes="(max-width: 820px) min(calc(100vw - 40px), 620px), (max-width: 1280px) 40vw, 480px" />
+                <source type="image/webp" srcSet="/images/au/shopify-maintenance-services/maintained-store-dispatch-640.webp 640w, /images/au/shopify-maintenance-services/maintained-store-dispatch-960.webp 960w, /images/au/shopify-maintenance-services/maintained-store-dispatch-1280.webp 1280w" sizes="(max-width: 820px) min(calc(100vw - 40px), 620px), (max-width: 1280px) 40vw, 480px" />
+                <img src="/images/au/shopify-maintenance-services/maintained-store-dispatch-960.webp" srcSet="/images/au/shopify-maintenance-services/maintained-store-dispatch-640.webp 640w, /images/au/shopify-maintenance-services/maintained-store-dispatch-960.webp 960w, /images/au/shopify-maintenance-services/maintained-store-dispatch-1280.webp 1280w" sizes="(max-width: 820px) min(calc(100vw - 40px), 620px), (max-width: 1280px) 40vw, 480px" width={1536} height={1024} loading="lazy" decoding="async" alt="A man seals a plain carton beside ceramic bowls and blank courier satchels." />
+              </picture>
             <div className="ctas">
               <ModalCTAButton label="Book my Shopify store review" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               <a className="btn btn-ghost" href="#brief">See what to send us</a>

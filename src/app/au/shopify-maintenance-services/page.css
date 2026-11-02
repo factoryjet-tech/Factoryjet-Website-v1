@@ -1,28 +1,100 @@
 /* /au/shopify-maintenance-services add-ons on top of AiAgentDevelopmentSections.css + ../au-page.css.
-   Scoped to .aiAgentPage.auPage; tokens only from the Family A system, no new colours.
-   Rules mirror src/app/au/shopify-development/page.css so both Shopify pages read the same. */
+   Scoped to .aiAgentPage.auPage.au-maintenance-visual-11; tokens only from the Family A system, no new colours.
+   All rules belong to this route only. */
 
-.aiAgentPage.auPage .chg-list.chg-list-1col { grid-template-columns: minmax(0,1fr); }
-.aiAgentPage.auPage .definition-copy .chg-list { margin: 22px 0; }
-.aiAgentPage.auPage details.ventry .chg-list { margin-top: 12px; }
-.aiAgentPage.auPage details.ventry .chg-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .chg-list.chg-list-1col { grid-template-columns: minmax(0,1fr); }
+.aiAgentPage.auPage.au-maintenance-visual-11 .definition-copy .chg-list { margin: 22px 0; }
+.aiAgentPage.auPage.au-maintenance-visual-11 details.ventry .chg-list { margin-top: 12px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 details.ventry .chg-list li:last-child { border-bottom: 0; padding-bottom: 0; }
 
-.aiAgentPage.auPage .au-split h3 { font-size: 22px; line-height: 1.25; margin-bottom: 14px; }
-.aiAgentPage.auPage .au-split > div > p + p { margin-top: 14px; }
-.aiAgentPage.auPage .au-panel-intro { font-size: 14px; color: var(--body); line-height: 1.65; }
-.aiAgentPage.auPage .au-panel .au-note { margin-top: 12px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .au-split h3 { font-size: 22px; line-height: 1.25; margin-bottom: 14px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .au-split > div > p + p { margin-top: 14px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .au-panel-intro { font-size: 14px; color: var(--body); line-height: 1.65; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .au-panel .au-note { margin-top: 12px; }
 
-.aiAgentPage.auPage .agentdir-more { display: block; margin-top: 10px; font-family: var(--mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-text); }
+.aiAgentPage.auPage.au-maintenance-visual-11 .agentdir-more { display: block; margin-top: 10px; font-family: var(--mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-text); }
 
-.aiAgentPage.auPage .refs { grid-template-columns: repeat(4,minmax(0,1fr)); row-gap: 22px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .refs { grid-template-columns: repeat(4,minmax(0,1fr)); row-gap: 22px; }
 
 @media (max-width: 820px) {
-  .aiAgentPage.auPage .refs { grid-template-columns: 1fr; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .refs { grid-template-columns: 1fr; }
 }
 
 /* 2026-10-31 QA: stat numbers never wrap; swipe hint above wide tables on small screens only. */
-.aiAgentPage.auPage .ledger-number { white-space: nowrap; }
-.aiAgentPage.auPage .swipe-hint { display: none; margin: 0 0 8px; font-size: 13px; color: var(--body); }
+.aiAgentPage.auPage.au-maintenance-visual-11 .ledger-number { white-space: nowrap; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .swipe-hint { display: none; margin: 0 0 8px; font-size: 13px; color: var(--body); }
 @media (max-width: 767px) {
-  .aiAgentPage.auPage .swipe-hint { display: block; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .swipe-hint { display: block; }
 }
+
+/* Batch 11: editorial media, readable type and contained interaction targets. */
+.aiAgentPage.auPage.au-maintenance-visual-11 { --accent-text: #B23E13; }
+.aiAgentPage.auPage.au-maintenance-visual-11 :is(h1,h2,h3) { text-wrap: balance; }
+.aiAgentPage.auPage.au-maintenance-visual-11 p { text-wrap: pretty; }
+.aiAgentPage.auPage.au-maintenance-visual-11 :is(section,[id]) { scroll-margin-top: 112px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 :is(a,button,summary,input):focus-visible { outline: 2px solid var(--accent-text); outline-offset: 4px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 :is(.lead,.fact p,.cap p,.tnode p,.ans,.qtext,.chg-list li,.agentdir-t,.agentdir-l,.au-panel-intro,.definition-copy p,.au-split p,.finalcta p,.hero-copy p,.ledgercell .v) { font-size: 16px; line-height: 1.75; }
+.aiAgentPage.auPage.au-maintenance-visual-11 :is(.eyebrow,.capid,.factlabel,.faq-category,.qid,.faq-nav-count,.agentdir-more,.ledgercell .k,.upd,.specpanel-bar,.specpanel-foot,.specrow .idx,.specrow .tag,.sys,.sys span) { font-size: 12px; line-height: 1.6; }
+.aiAgentPage.auPage.au-maintenance-visual-11 :is(.trigrows .m,.trigrows .n,.byline .who,.byline .who span,.vlog .section-head p) { font-size: 16px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 :is(.trigrows .t,.specrow .title,.figcap,.tablenote,.au-note,.swipe-hint,.faq-ask p) { font-size: 14px; line-height: 1.7; }
+.aiAgentPage.auPage.au-maintenance-visual-11 :is(.figcap,.tablenote,.au-note) { font-size: 16px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 tbody :is(th,td) { font-size: 16px; padding: 20px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 thead th { font-size: 12px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 :is(.btn,button,input) { font-size: 16px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 :is(.btn-primary,[data-hero-inline-form] button[type='submit'],.au-midcta button) { color: #FFFFFF; background: var(--accent-text); }
+.aiAgentPage.auPage.au-maintenance-visual-11 :is(.btn-primary,[data-hero-inline-form] button[type='submit'],.au-midcta button):hover { background: var(--ink); color: #FFFFFF; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .faq-nav-count { color: var(--body); }
+.aiAgentPage.auPage.au-maintenance-visual-11 :is(.specrow,.specrow::before,.specrow .tag::after,.statusdot) { animation: none; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .specrow { cursor: default; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .specrow:hover { transform: none; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .maintenance-section-intro { display: grid; grid-template-columns: minmax(0,7fr) minmax(0,5fr); gap: clamp(24px,4vw,64px); align-items: center; margin-bottom: clamp(28px,4vw,48px); }
+.aiAgentPage.auPage.au-maintenance-visual-11 .maintenance-section-intro .section-head { max-width: none; margin: 0; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .maintenance-photo { display: block; width: 100%; min-width: 0; aspect-ratio: 3 / 2; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 2px 4px rgb(20 17 15 / .035), 0 18px 40px -28px rgb(20 17 15 / .25); }
+.aiAgentPage.auPage.au-maintenance-visual-11 .maintenance-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .maintenance-access-media { grid-column: 1; grid-row: 2; display: grid; gap: 24px; align-self: start; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .facts .maintenance-access-media .au-panel { position: static; top: auto; margin: 0; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .maintenance-release-note { align-self: start; border-left: 2px solid var(--line); padding-left: 24px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .maintenance-release-note .figcap { margin: 0; color: var(--body); }
+.aiAgentPage.auPage.au-maintenance-visual-11 .definition { grid-template-columns: minmax(0,4fr) minmax(0,6fr); align-items: start; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .finalcta .wrap { display: grid; grid-template-columns: minmax(0,7fr) minmax(0,5fr); gap: 32px clamp(24px,4vw,64px); align-items: start; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .finalcta .ctas { grid-column: 1; margin: 0; align-self: start; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .maintenance-final-photo { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .agentdir .agentdir-grid { grid-template-columns: minmax(0,7fr) minmax(0,5fr); }
+.aiAgentPage.auPage.au-maintenance-visual-11 .tnode h3 { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .tnode h3 .chev { flex: 0 0 24px; }
+
+@media (max-width: 1024px) {
+  .aiAgentPage.auPage.au-maintenance-visual-11 :is(a,button,summary,input) { min-height: 44px; min-width: 44px; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 :is(p,li,.who,.ledgercell,.refs,.crumbs) a { display: inline-flex; align-items: center; vertical-align: middle; max-width: 100%; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .faq-catnav a { display: flex; align-items: center; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .refs a { padding-bottom: 16px; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .btn { white-space: normal; text-align: center; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .trigrows li { grid-template-columns: minmax(0,1fr); }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .trigrows .t { grid-column: 1; grid-row: auto; justify-self: start; max-width: 100%; }
+}
+
+@media (max-width: 820px) {
+  .aiAgentPage.auPage.au-maintenance-visual-11 :is(.maintenance-section-intro,.definition,.finalcta .wrap) { grid-template-columns: minmax(0,1fr); }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .maintenance-access-media { grid-column: 1; grid-row: auto; margin-top: 24px; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .maintenance-final-photo { grid-column: 1; grid-row: auto; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .finalcta .ctas { grid-column: 1; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .maintenance-photo { max-width: 760px; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .definition { gap: 28px; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .agentdir .agentdir-grid { grid-template-columns: minmax(0,1fr); }
+  .aiAgentPage.auPage.au-maintenance-visual-11 #retainer-or-per-job h2 { font-size: clamp(26px,5.8vw,36px); max-width: 100%; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .specpanel-bar { align-items: flex-start; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .sys { flex-wrap: wrap; margin-left: 0; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .specpanel-body { padding: 20px 14px; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .specrow { width: 100%; margin-left: 0; grid-template-columns: 32px minmax(0,1fr); gap: 8px; padding: 14px 12px; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .specrow .workflow-icon { width: 32px; height: 32px; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .specrow .tag { grid-column: 2; grid-row: auto; justify-self: start; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .specrow::after { left: 27px; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .byline { gap: 12px; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .byline .upd { margin-left: 48px; text-align: left; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .au-panel { padding: 24px; }
+  .aiAgentPage.auPage.au-maintenance-visual-11 .finalcta { padding-bottom: 112px; }
+}
+.aiAgentPage.auPage.au-maintenance-visual-11 main p { font-size: 16px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 :is(.refs a,.faq-catnav a) { font-size: 16px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .faqsrc { font-size: 12px; }
+.aiAgentPage.auPage.au-maintenance-visual-11 .maintenance-keep { white-space: nowrap; }
