@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -272,7 +273,7 @@ export default function EcommerceAiAgentsUKPage() {
       <script id="ld-uk-ecommerce-ai-agents" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents uk-ecommerce-visual">
       <main>
         <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
@@ -397,8 +398,8 @@ export default function EcommerceAiAgentsUKPage() {
         {/* ═══ 4. JOBS WE BUILD ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div className="col-4060">
-            <div>
+            <div className="col-4060 ec-jobs">
+            <div className="ec-jobs-intro">
               <span className="eyebrow">What the agents do</span>
               <h2>AI in ecommerce: nine store jobs we build agents for</h2>
               <p className="lead mt-4">
@@ -445,6 +446,13 @@ export default function EcommerceAiAgentsUKPage() {
               </li>
             </ul>
             </div>
+            <div className="ec-fulfilment-media mt-10">
+              <picture className="ec-photo">
+                <source type="image/avif" srcSet="/images/uk/ecommerce-ai-agents/online-retail-fulfilment-bench-640.avif 640w, /images/uk/ecommerce-ai-agents/online-retail-fulfilment-bench-960.avif 960w, /images/uk/ecommerce-ai-agents/online-retail-fulfilment-bench-1280.avif 1280w, /images/uk/ecommerce-ai-agents/online-retail-fulfilment-bench-1600.avif 1600w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1120px) calc(100vw - 48px), 1072px" />
+                <source type="image/webp" srcSet="/images/uk/ecommerce-ai-agents/online-retail-fulfilment-bench-640.webp 640w, /images/uk/ecommerce-ai-agents/online-retail-fulfilment-bench-960.webp 960w, /images/uk/ecommerce-ai-agents/online-retail-fulfilment-bench-1280.webp 1280w, /images/uk/ecommerce-ai-agents/online-retail-fulfilment-bench-1600.webp 1600w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1120px) calc(100vw - 48px), 1072px" />
+                <img src="/images/uk/ecommerce-ai-agents/online-retail-fulfilment-bench-960.webp" srcSet="/images/uk/ecommerce-ai-agents/online-retail-fulfilment-bench-640.webp 640w, /images/uk/ecommerce-ai-agents/online-retail-fulfilment-bench-960.webp 960w, /images/uk/ecommerce-ai-agents/online-retail-fulfilment-bench-1280.webp 1280w, /images/uk/ecommerce-ai-agents/online-retail-fulfilment-bench-1600.webp 1600w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1120px) calc(100vw - 48px), 1072px" width="1536" height="1024" alt="A woman packs a folded tea towel into a plain parcel beside outgoing boxes and an open return parcel." loading="lazy" decoding="async" />
+              </picture>
+            </div>
             <Sources ids={['amzMarketplaces', 'amzListings', 'ebayInventory', 'onbuyApi', 'etsyApi', 'govDistance']} />
           </div>
         </section>
@@ -452,21 +460,30 @@ export default function EcommerceAiAgentsUKPage() {
         {/* ═══ 5. SYSTEMS TABLE ═══ */}
         <section className="sec-lg">
           <div className="wrap">
+            <div className="ec-systems-intro">
+            <div>
             <span className="eyebrow">Your systems</span>
             <h2 style={{ maxWidth: 780 }}>What the agent reads, what it drafts, and what stays with your team</h2>
             <p className="lead mt-4" style={{ maxWidth: 780 }}>
               The same rule runs through every system. The agent reads what it needs and writes drafts. Money and
               prices stay with a person until the logs show the agent follows your rules.
             </p>
+            </div>
+            <picture className="ec-photo">
+                <source type="image/avif" srcSet="/images/uk/ecommerce-ai-agents/customer-service-draft-approval-640.avif 640w, /images/uk/ecommerce-ai-agents/customer-service-draft-approval-960.avif 960w, /images/uk/ecommerce-ai-agents/customer-service-draft-approval-1280.avif 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 420px" />
+                <source type="image/webp" srcSet="/images/uk/ecommerce-ai-agents/customer-service-draft-approval-640.webp 640w, /images/uk/ecommerce-ai-agents/customer-service-draft-approval-960.webp 960w, /images/uk/ecommerce-ai-agents/customer-service-draft-approval-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 420px" />
+                <img src="/images/uk/ecommerce-ai-agents/customer-service-draft-approval-960.webp" srcSet="/images/uk/ecommerce-ai-agents/customer-service-draft-approval-640.webp 640w, /images/uk/ecommerce-ai-agents/customer-service-draft-approval-960.webp 960w, /images/uk/ecommerce-ai-agents/customer-service-draft-approval-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 420px" width="1536" height="1024" alt="A woman reviews grey rows on a monitor beside an open return parcel containing a scarf." loading="lazy" decoding="async" />
+              </picture>
+            </div>
             <p className="md:hidden" style={{ ...srcNote, marginTop: 24 }}>Swipe sideways to see every column.</p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <div className="card mt-8" tabIndex={0} style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
-                    <th>System</th>
-                    <th className="fj">The agent reads</th>
-                    <th>The agent drafts</th>
-                    <th>A person approves</th>
+                    <th scope="col">System</th>
+                    <th scope="col" className="fj">The agent reads</th>
+                    <th scope="col">The agent drafts</th>
+                    <th scope="col">A person approves</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -547,13 +564,13 @@ export default function EcommerceAiAgentsUKPage() {
               agent or simpler ecommerce automation from a tool you can buy.
             </p>
             <p className="md:hidden" style={{ ...srcNote, marginTop: 24 }}>Swipe sideways to see every column.</p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <div className="card mt-8" tabIndex={0} style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 560 }}>
                 <thead>
                   <tr>
-                    <th>Question</th>
-                    <th className="fj">Custom agent (FactoryJet)</th>
-                    <th>Helpdesk AI app (Gorgias, Intercom Fin)</th>
+                    <th scope="col">Question</th>
+                    <th scope="col" className="fj">Custom agent (FactoryJet)</th>
+                    <th scope="col">Helpdesk AI app (Gorgias, Intercom Fin)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -785,17 +802,24 @@ export default function EcommerceAiAgentsUKPage() {
 
         {/* ═══ 14. FINAL CTA (the only dark section) ═══ */}
         <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+          <div className="wrap ec-final-grid">
+            <div>
             <span className="eyebrow">Ready when you are</span>
             <h2>See an agent work on your own orders before you sign</h2>
             <p className="mt-4">
               Send your name and work email, or a brief. Bhavesh replies within 24 hours to agree one job and
               the systems it touches, then we run a first version on your real examples. No obligation.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8" style={{ display: 'flex', justifyContent: 'flex-start', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/uk/ai-agents" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See AI agents UK</a>
             </div>
+            </div>
+            <picture className="ec-photo">
+                <source type="image/avif" srcSet="/images/uk/ecommerce-ai-agents/order-returns-demo-review-640.avif 640w, /images/uk/ecommerce-ai-agents/order-returns-demo-review-960.avif 960w, /images/uk/ecommerce-ai-agents/order-returns-demo-review-1280.avif 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 420px" />
+                <source type="image/webp" srcSet="/images/uk/ecommerce-ai-agents/order-returns-demo-review-640.webp 640w, /images/uk/ecommerce-ai-agents/order-returns-demo-review-960.webp 960w, /images/uk/ecommerce-ai-agents/order-returns-demo-review-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 420px" />
+                <img src="/images/uk/ecommerce-ai-agents/order-returns-demo-review-960.webp" srcSet="/images/uk/ecommerce-ai-agents/order-returns-demo-review-640.webp 640w, /images/uk/ecommerce-ai-agents/order-returns-demo-review-960.webp 960w, /images/uk/ecommerce-ai-agents/order-returns-demo-review-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 420px" width="1536" height="1024" alt="Three people compare an order card display with a scarf in an open parcel on a meeting table." loading="lazy" decoding="async" />
+              </picture>
           </div>
         </section>
 

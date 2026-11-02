@@ -1,0 +1,247 @@
+.uk-ecommerce-visual main {
+  padding-bottom: 0;
+}
+
+.uk-ecommerce-visual main h1,
+.uk-ecommerce-visual main h2,
+.uk-ecommerce-visual main h3 {
+  text-wrap: balance;
+}
+
+.uk-ecommerce-visual main p {
+  font-size: 16px !important;
+  text-wrap: pretty;
+}
+
+.uk-ecommerce-visual main p.lead {
+  font-size: clamp(17px, 1.35vw, 18px) !important;
+}
+
+.uk-ecommerce-visual main .def .lab,
+.uk-ecommerce-visual main .eyebrow,
+.uk-ecommerce-visual main .chip,
+.uk-ecommerce-visual main .scorecard-note,
+.uk-ecommerce-visual main .byline .upd,
+.uk-ecommerce-visual main .faq-sidebar-topics,
+.uk-ecommerce-visual main .faq-nav-count,
+.uk-ecommerce-visual main .faq-cat-label {
+  font-size: 12px !important;
+}
+
+.uk-ecommerce-visual main .scope-list li,
+.uk-ecommerce-visual main .col-2 > li,
+.uk-ecommerce-visual main .scorecard-metric,
+.uk-ecommerce-visual main .scorecard-val,
+.uk-ecommerce-visual main .q-text,
+.uk-ecommerce-visual main .cmp-table td {
+  font-size: 16px !important;
+}
+
+.uk-ecommerce-visual main .cmp-table th {
+  font-size: 12px;
+}
+
+.uk-ecommerce-visual main .stats-band a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 12px !important;
+}
+
+.uk-ecommerce-visual main :is(.city-pill, .btn, button, input, summary, .faq-sidebar-nav a) {
+  min-height: 44px;
+}
+
+.uk-ecommerce-visual main .city-pill {
+  align-items: center;
+  font-size: 16px;
+}
+
+.uk-ecommerce-visual main :is(a, button, input, summary, [tabindex="0"]):focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.uk-ecommerce-visual main .dark-sec :is(a, button):focus-visible {
+  outline-color: var(--cream);
+}
+
+.uk-ecommerce-visual main :is(section, [id^="faq-"]) {
+  scroll-margin-top: 104px;
+}
+
+.uk-ecommerce-visual .ec-photo {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border: 1px solid var(--n200);
+  border-radius: clamp(18px, 2.2vw, 28px);
+  box-shadow: 0 2px 4px rgb(15 15 18 / 4%), 0 16px 36px rgb(15 15 18 / 7%);
+}
+
+.uk-ecommerce-visual .ec-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+}
+
+.uk-ecommerce-visual .ec-jobs {
+  gap: clamp(28px, 4vw, 64px);
+}
+
+.uk-ecommerce-visual .ec-jobs-intro {
+  position: sticky;
+  top: 112px;
+}
+
+.uk-ecommerce-visual .ec-jobs .svc-card {
+  border-radius: 20px;
+  padding: clamp(22px, 2.3vw, 32px);
+}
+
+.uk-ecommerce-visual .ec-systems-intro,
+.uk-ecommerce-visual .ec-final-grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  align-items: center;
+  gap: clamp(28px, 4vw, 56px);
+}
+
+.uk-ecommerce-visual .ec-systems-intro > div,
+.uk-ecommerce-visual .ec-final-grid > div {
+  min-width: 0;
+}
+
+.uk-ecommerce-visual .ec-final-grid {
+  text-align: left;
+}
+
+.uk-ecommerce-visual .ec-final-grid .ec-photo {
+  border-color: rgb(255 255 255 / 18%);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 16px 36px rgb(0 0 0 / 16%);
+}
+
+.uk-ecommerce-visual main .dark-sec .eyebrow {
+  color: var(--cream);
+}
+
+@media (max-width: 960px) {
+  .uk-ecommerce-visual .ec-jobs-intro {
+    position: static;
+  }
+
+  .uk-ecommerce-visual .ec-systems-intro,
+  .uk-ecommerce-visual .ec-final-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .uk-ecommerce-visual main .sec-lg,
+  .uk-ecommerce-visual main .dark-sec {
+    padding-block: clamp(44px, 8vw, 64px) !important;
+  }
+
+  .uk-ecommerce-visual main .dark-sec {
+    padding-bottom: calc(clamp(44px, 8vw, 64px) + 128px) !important;
+  }
+
+  .uk-ecommerce-visual main .col-6040,
+  .uk-ecommerce-visual main .col-4060 {
+    gap: 32px;
+  }
+
+  .uk-ecommerce-visual main .byline {
+    flex-wrap: wrap;
+  }
+
+  .uk-ecommerce-visual main .byline .upd {
+    text-align: left;
+  }
+}
+
+.uk-ecommerce-visual main .faq-cat-label {
+  color: #B23E13;
+}
+
+.uk-ecommerce-visual main input {
+  font-size: 16px !important;
+}
+
+@media (max-width: 1024px) {
+  .uk-ecommerce-visual main a:not([hidden]):not(.hidden) {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    vertical-align: middle;
+  }
+}
+
+.uk-ecommerce-visual footer a {
+  min-width: 44px;
+}
+
+.uk-ecommerce-visual main .faq-item[open] summary .q-text,
+.uk-ecommerce-visual main .faq-sidebar-cta a {
+  color: #B23E13;
+}
+
+.uk-ecommerce-visual main .city-pill:hover {
+  background: #B23E13;
+  border-color: #B23E13;
+  color: #FFFFFF;
+}
+
+.uk-ecommerce-visual main .stats-band li > div {
+  color: var(--orange2) !important;
+}
+
+.uk-ecommerce-visual main .byline .av {
+  background: #B23E13;
+}
+
+.uk-ecommerce-visual footer.us-footer {
+  --uf-ink: var(--cream);
+  --uf-body: var(--n200);
+  --uf-muted: var(--n200);
+  --uf-surface: var(--dark);
+  --uf-accent: var(--cream);
+  color: var(--uf-body);
+  text-align: left;
+}
+
+.uk-ecommerce-visual footer.us-footer a,
+.uk-ecommerce-visual footer.us-footer summary {
+  min-width: 44px;
+  min-height: 44px;
+  color: var(--uf-body);
+}
+
+.uk-ecommerce-visual footer.us-footer a:hover,
+.uk-ecommerce-visual footer.us-footer summary:hover,
+.uk-ecommerce-visual footer.us-footer .us-footer__heading {
+  color: var(--uf-ink);
+}
+
+.uk-ecommerce-visual footer.us-footer p {
+  color: var(--uf-body);
+  font-size: 16px;
+}
+
+.uk-ecommerce-visual footer.us-footer summary::after {
+  content: none;
+}
+
+.uk-ecommerce-visual main form[data-hero-inline-form] input[aria-hidden="true"][tabindex="-1"] {
+  visibility: hidden;
+}
