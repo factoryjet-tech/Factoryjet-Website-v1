@@ -7,12 +7,12 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import AuFaq from '../components/AuFaq';
+import VisualSlot from '../components/VisualSlot';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
-import './page.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /au/erp-ai-agents, built 2026-10-29. Australian version of
@@ -358,7 +358,7 @@ export default function ErpAiAgentsAUPage() {
 
       <SiteHeader locale="au" logoHref="/au" />
 
-      <div className="aiAgentPage auPage auErpVisual9">
+      <div className="aiAgentPage auPage">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -498,6 +498,8 @@ export default function ErpAiAgentsAUPage() {
                   </p>
                 </div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+                subject="A wholesale operations manager in a Melbourne warehouse office comparing an emailed purchase order with the draft sales order an AI agent prepared" />
             </div>
           </div>
         </section>
@@ -563,13 +565,8 @@ export default function ErpAiAgentsAUPage() {
                   </div>
                 ))}
               </div>
-              <figure className="erp-photo factphoto">
-                <picture>
-                  <source type="image/avif" srcSet="/images/au/erp-ai-agents/supplier-bill-drafts-640.avif 640w, /images/au/erp-ai-agents/supplier-bill-drafts-960.avif 960w, /images/au/erp-ai-agents/supplier-bill-drafts-1280.avif 1280w" sizes="(min-width: 1264px) 448px, (min-width: 1100px) 38vw, (min-width: 701px) 620px, calc(100vw - 40px)" />
-                  <source type="image/webp" srcSet="/images/au/erp-ai-agents/supplier-bill-drafts-640.webp 640w, /images/au/erp-ai-agents/supplier-bill-drafts-960.webp 960w, /images/au/erp-ai-agents/supplier-bill-drafts-1280.webp 1280w" sizes="(min-width: 1264px) 448px, (min-width: 1100px) 38vw, (min-width: 701px) 620px, calc(100vw - 40px)" />
-                  <img src="/images/au/erp-ai-agents/supplier-bill-drafts-960.webp" srcSet="/images/au/erp-ai-agents/supplier-bill-drafts-640.webp 640w, /images/au/erp-ai-agents/supplier-bill-drafts-960.webp 960w, /images/au/erp-ai-agents/supplier-bill-drafts-1280.webp 1280w" sizes="(min-width: 1264px) 448px, (min-width: 1100px) 38vw, (min-width: 701px) 620px, calc(100vw - 40px)" width="1536" height="1024" loading="lazy" decoding="async" alt="An accounts officer compares two supplier bills with rows on a desktop monitor beside trays of plumbing fittings." />
-                </picture>
-              </figure>
+              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto"
+                subject="A Brisbane bookkeeper approving a batch of supplier bills an AI agent drafted in Xero, with GST codes suggested on each line" />
             </div>
           </div>
         </section>
@@ -604,13 +601,8 @@ export default function ErpAiAgentsAUPage() {
                   </ul>
                 </div></div>
               </div>
-              <figure className="erp-photo factphoto">
-                <picture>
-                  <source type="image/avif" srcSet="/images/au/erp-ai-agents/finance-draft-approval-640.avif 640w, /images/au/erp-ai-agents/finance-draft-approval-960.avif 960w, /images/au/erp-ai-agents/finance-draft-approval-1280.avif 1280w" sizes="(min-width: 1264px) 448px, (min-width: 1100px) 38vw, (min-width: 701px) 620px, calc(100vw - 40px)" />
-                  <source type="image/webp" srcSet="/images/au/erp-ai-agents/finance-draft-approval-640.webp 640w, /images/au/erp-ai-agents/finance-draft-approval-960.webp 960w, /images/au/erp-ai-agents/finance-draft-approval-1280.webp 1280w" sizes="(min-width: 1264px) 448px, (min-width: 1100px) 38vw, (min-width: 701px) 620px, calc(100vw - 40px)" />
-                  <img src="/images/au/erp-ai-agents/finance-draft-approval-960.webp" srcSet="/images/au/erp-ai-agents/finance-draft-approval-640.webp 640w, /images/au/erp-ai-agents/finance-draft-approval-960.webp 960w, /images/au/erp-ai-agents/finance-draft-approval-1280.webp 1280w" sizes="(min-width: 1264px) 448px, (min-width: 1100px) 38vw, (min-width: 701px) 620px, calc(100vw - 40px)" width="1536" height="1024" loading="lazy" decoding="async" alt="A man reviews a tablet beside paired paper records and document trays in a sunlit office." />
-                </picture>
-              </figure>
+              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto"
+                subject="A Sydney finance manager approving a draft purchase order an AI agent prepared in NetSuite, on a laptop beside a printed supplier quote" />
             </div>
           </div>
         </section>
@@ -936,13 +928,6 @@ export default function ErpAiAgentsAUPage() {
                 demo on a sample of your documents. No spam, no obligation.
               </p>
             </div>
-              <figure className="erp-photo erp-demo-photo">
-                <picture>
-                  <source type="image/avif" srcSet="/images/au/erp-ai-agents/order-bill-demo-640.avif 640w, /images/au/erp-ai-agents/order-bill-demo-960.avif 960w, /images/au/erp-ai-agents/order-bill-demo-1280.avif 1280w" sizes="(min-width: 1264px) 448px, (min-width: 1100px) 38vw, (min-width: 701px) 620px, calc(100vw - 40px)" />
-                  <source type="image/webp" srcSet="/images/au/erp-ai-agents/order-bill-demo-640.webp 640w, /images/au/erp-ai-agents/order-bill-demo-960.webp 960w, /images/au/erp-ai-agents/order-bill-demo-1280.webp 1280w" sizes="(min-width: 1264px) 448px, (min-width: 1100px) 38vw, (min-width: 701px) 620px, calc(100vw - 40px)" />
-                  <img src="/images/au/erp-ai-agents/order-bill-demo-960.webp" srcSet="/images/au/erp-ai-agents/order-bill-demo-640.webp 640w, /images/au/erp-ai-agents/order-bill-demo-960.webp 960w, /images/au/erp-ai-agents/order-bill-demo-1280.webp 1280w" sizes="(min-width: 1264px) 448px, (min-width: 1100px) 38vw, (min-width: 701px) 620px, calc(100vw - 40px)" width="1536" height="1024" loading="lazy" decoding="async" alt="Three people compare paper records with paired draft cards on a monitor beside trays of metal fasteners." />
-                </picture>
-              </figure>
             <div className="ctas">
               <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               <a className="btn btn-ghost" href="/au/ai-agents">See all AI agent work</a>

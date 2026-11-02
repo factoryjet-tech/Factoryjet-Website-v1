@@ -11,7 +11,6 @@ import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
-import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -363,7 +362,7 @@ export default function NetSuiteAiAgentsAUPage() {
 
       <SiteHeader locale="au" logoHref="/au" />
 
-      <div className="aiAgentPage auPage au-netsuite-visual">
+      <div className="aiAgentPage auPage">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -530,7 +529,6 @@ export default function NetSuiteAiAgentsAUPage() {
         {/* ═══ JOBS ═══ */}
         <section className="section capabilities" id="jobs">
           <div className="wrap">
-            <div className="ns-jobs-intro">
             <div className="section-head">
               <div className="eyebrow">Where Australian NetSuite teams lose hours</div>
               <h2>Which NetSuite jobs should an agent take on first in Australia?</h2>
@@ -538,12 +536,6 @@ export default function NetSuiteAiAgentsAUPage() {
                 Each one starts with a document or a feed your team already handles by hand, and ends with a
                 transaction a person approves in NetSuite.
               </p>
-            </div>
-            <picture className="ns-photo">
-              <source type="image/avif" srcSet="/images/au/netsuite-ai-agents/supplier-bill-matching-640.avif 640w, /images/au/netsuite-ai-agents/supplier-bill-matching-960.avif 960w, /images/au/netsuite-ai-agents/supplier-bill-matching-1280.avif 1280w" sizes="(min-width: 1280px) 480px, (min-width: 1081px) 40vw, (min-width: 821px) 720px, (min-width: 661px) 620px, calc(100vw - 40px)" />
-              <source type="image/webp" srcSet="/images/au/netsuite-ai-agents/supplier-bill-matching-640.webp 640w, /images/au/netsuite-ai-agents/supplier-bill-matching-960.webp 960w, /images/au/netsuite-ai-agents/supplier-bill-matching-1280.webp 1280w" sizes="(min-width: 1280px) 480px, (min-width: 1081px) 40vw, (min-width: 821px) 720px, (min-width: 661px) 620px, calc(100vw - 40px)" />
-              <img src="/images/au/netsuite-ai-agents/supplier-bill-matching-960.webp" srcSet="/images/au/netsuite-ai-agents/supplier-bill-matching-640.webp 640w, /images/au/netsuite-ai-agents/supplier-bill-matching-960.webp 960w, /images/au/netsuite-ai-agents/supplier-bill-matching-1280.webp 1280w" sizes="(min-width: 1280px) 480px, (min-width: 1081px) 40vw, (min-width: 821px) 720px, (min-width: 661px) 620px, calc(100vw - 40px)" width={1280} height={853} loading="lazy" decoding="async" alt="A woman compares two paper forms with rows on a desktop monitor." />
-            </picture>
             </div>
             <div className="capgrid">
               {JOBS.map((j, i) => (
@@ -564,11 +556,6 @@ export default function NetSuiteAiAgentsAUPage() {
             <div className="section-head">
               <div className="eyebrow">Who decides what</div>
               <h2>Who approves what a NetSuite agent drafts?</h2>
-              <picture className="ns-photo">
-                <source type="image/avif" srcSet="/images/au/netsuite-ai-agents/controller-draft-approval-640.avif 640w, /images/au/netsuite-ai-agents/controller-draft-approval-960.avif 960w, /images/au/netsuite-ai-agents/controller-draft-approval-1280.avif 1280w" sizes="(min-width: 1280px) 450px, (min-width: 821px) calc(40vw - 56px), (min-width: 551px) 510px, calc(100vw - 40px)" />
-                <source type="image/webp" srcSet="/images/au/netsuite-ai-agents/controller-draft-approval-640.webp 640w, /images/au/netsuite-ai-agents/controller-draft-approval-960.webp 960w, /images/au/netsuite-ai-agents/controller-draft-approval-1280.webp 1280w" sizes="(min-width: 1280px) 450px, (min-width: 821px) calc(40vw - 56px), (min-width: 551px) 510px, calc(100vw - 40px)" />
-                <img src="/images/au/netsuite-ai-agents/controller-draft-approval-960.webp" srcSet="/images/au/netsuite-ai-agents/controller-draft-approval-640.webp 640w, /images/au/netsuite-ai-agents/controller-draft-approval-960.webp 960w, /images/au/netsuite-ai-agents/controller-draft-approval-1280.webp 1280w" sizes="(min-width: 1280px) 450px, (min-width: 821px) calc(40vw - 56px), (min-width: 551px) 510px, calc(100vw - 40px)" width={1280} height={853} loading="lazy" decoding="async" alt="A woman reviews a queue on a monitor beside three paper forms." />
-              </picture>
             </div>
             <div className="factlist">
               <div className="fact"><div className="sec">§01</div><p>
@@ -797,7 +784,6 @@ export default function NetSuiteAiAgentsAUPage() {
         {/* ═══ FINAL CTA ═══ */}
         <section className="finalcta" id="finalcta">
           <div className="wrap">
-            <div className="ns-final-copy">
             <div>
               <div className="eyebrow">Ready when you are</div>
               <h2>See a NetSuite agent draft your own supplier bills</h2>
@@ -810,12 +796,6 @@ export default function NetSuiteAiAgentsAUPage() {
               <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="primary-light" className="btn btn-primary" />
               <a className="btn btn-ghost" href="/au/ai-consulting">Start with AI consulting</a>
             </div>
-            </div>
-            <picture className="ns-photo">
-              <source type="image/avif" srcSet="/images/au/netsuite-ai-agents/finance-team-supplier-bill-demo-640.avif 640w, /images/au/netsuite-ai-agents/finance-team-supplier-bill-demo-960.avif 960w, /images/au/netsuite-ai-agents/finance-team-supplier-bill-demo-1280.avif 1280w" sizes="(min-width: 1280px) 480px, (min-width: 1081px) 40vw, (min-width: 821px) 720px, (min-width: 661px) 620px, calc(100vw - 40px)" />
-              <source type="image/webp" srcSet="/images/au/netsuite-ai-agents/finance-team-supplier-bill-demo-640.webp 640w, /images/au/netsuite-ai-agents/finance-team-supplier-bill-demo-960.webp 960w, /images/au/netsuite-ai-agents/finance-team-supplier-bill-demo-1280.webp 1280w" sizes="(min-width: 1280px) 480px, (min-width: 1081px) 40vw, (min-width: 821px) 720px, (min-width: 661px) 620px, calc(100vw - 40px)" />
-              <img src="/images/au/netsuite-ai-agents/finance-team-supplier-bill-demo-960.webp" srcSet="/images/au/netsuite-ai-agents/finance-team-supplier-bill-demo-640.webp 640w, /images/au/netsuite-ai-agents/finance-team-supplier-bill-demo-960.webp 960w, /images/au/netsuite-ai-agents/finance-team-supplier-bill-demo-1280.webp 1280w" sizes="(min-width: 1280px) 480px, (min-width: 1081px) 40vw, (min-width: 821px) 720px, (min-width: 661px) 620px, calc(100vw - 40px)" width={1280} height={853} loading="lazy" decoding="async" alt="Three people compare paper forms with document shapes on a monitor." />
-            </picture>
           </div>
         </section>
 

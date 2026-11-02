@@ -12,7 +12,6 @@ import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
-import './page.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /au/shopify-ai-agents: custom AI agents for Australian Shopify store OPERATIONS.
@@ -387,7 +386,7 @@ export default function ShopifyAiAgentsAUPage() {
 
       <SiteHeader locale="au" logoHref="/au" />
 
-      <div className="aiAgentPage auPage au-shopify-agents-visual">
+      <div className="aiAgentPage auPage">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -549,7 +548,6 @@ export default function ShopifyAiAgentsAUPage() {
         {/* ═══ THE AGENTS → capgrid ═══ */}
         <section className="section capabilities" id="agents">
           <div className="wrap">
-            <div className="shopify-section-intro">
             <div className="section-head">
               <div className="eyebrow">Seven jobs we build agents for</div>
               <h2>Shopify AI agents for Australian store operations</h2>
@@ -557,12 +555,6 @@ export default function ShopifyAiAgentsAUPage() {
                 Each card is one job with one written limit. Most stores start with one of the first five and add the
                 next once the first has run for a month.
               </p>
-            </div>
-              <picture className="shopify-photo">
-                <source type="image/avif" srcSet="/images/au/shopify-ai-agents/packing-store-orders-640.avif 640w, /images/au/shopify-ai-agents/packing-store-orders-960.avif 960w, /images/au/shopify-ai-agents/packing-store-orders-1280.avif 1280w" sizes="(min-width: 1400px) 474.667px, (min-width: 1264px) calc(498px - 1.666667vw), (min-width: 900px) calc(40vw - 28.667px), (min-width: 844px) 778px, (min-width: 821px) calc(100vw - 66px), (min-width: 660px) 618px, calc(100vw - 42px)" />
-                <source type="image/webp" srcSet="/images/au/shopify-ai-agents/packing-store-orders-640.webp 640w, /images/au/shopify-ai-agents/packing-store-orders-960.webp 960w, /images/au/shopify-ai-agents/packing-store-orders-1280.webp 1280w" sizes="(min-width: 1400px) 474.667px, (min-width: 1264px) calc(498px - 1.666667vw), (min-width: 900px) calc(40vw - 28.667px), (min-width: 844px) 778px, (min-width: 821px) calc(100vw - 66px), (min-width: 660px) 618px, calc(100vw - 42px)" />
-                <img src="/images/au/shopify-ai-agents/packing-store-orders-1280.webp" srcSet="/images/au/shopify-ai-agents/packing-store-orders-640.webp 640w, /images/au/shopify-ai-agents/packing-store-orders-960.webp 960w, /images/au/shopify-ai-agents/packing-store-orders-1280.webp 1280w" sizes="(min-width: 1400px) 474.667px, (min-width: 1264px) calc(498px - 1.666667vw), (min-width: 900px) calc(40vw - 28.667px), (min-width: 844px) 778px, (min-width: 821px) calc(100vw - 66px), (min-width: 660px) 618px, calc(100vw - 42px)" width={1280} height={853} loading="lazy" decoding="async" alt="Two people pack folded garments into plain cartons beside a separate returns tray." />
-              </picture>
             </div>
             <div className="capgrid">
               {AGENT_JOBS.map((j, i) => (
@@ -588,6 +580,7 @@ export default function ShopifyAiAgentsAUPage() {
                 Four tools, four different jobs. The most avoidable cost is building an agent for a job Flow already does for free.
               </p>
             </div>
+            <style>{'.sai-swipe{display:none;font-size:13px;color:var(--muted);margin:0 0 8px}@media (max-width:767px){.sai-swipe{display:block}}'}</style>
             <p className="sai-swipe">Swipe sideways to see every column.</p>
             <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison of Shopify AI options" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table style={{ minWidth: 740 }}>
@@ -651,7 +644,6 @@ export default function ShopifyAiAgentsAUPage() {
               <h2>What the agent does alone, and what waits for your team</h2>
             </div>
             <div className="factswrap">
-              <div className="shopify-approval-story">
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
                   Each agent comes with one page that sorts its actions into three groups: free to do, needs sign-off,
@@ -665,12 +657,6 @@ export default function ShopifyAiAgentsAUPage() {
                   event ID and skips repeats rather than tagging or drafting twice.{' '}
                   <a href={SRC_WEBHOOK_DUPES} {...extLink}>shopify.dev ↗</a>
                 </p></div>
-              </div>
-                <picture className="shopify-photo">
-                <source type="image/avif" srcSet="/images/au/shopify-ai-agents/store-return-approval-640.avif 640w, /images/au/shopify-ai-agents/store-return-approval-960.avif 960w, /images/au/shopify-ai-agents/store-return-approval-1280.avif 1280w" sizes="(min-width: 1400px) 665.333px, (min-width: 1264px) calc(698px - 2.333333vw), (min-width: 900px) calc(56vw - 39.333px), (min-width: 844px) 778px, (min-width: 821px) calc(100vw - 66px), (min-width: 660px) 618px, calc(100vw - 42px)" />
-                <source type="image/webp" srcSet="/images/au/shopify-ai-agents/store-return-approval-640.webp 640w, /images/au/shopify-ai-agents/store-return-approval-960.webp 960w, /images/au/shopify-ai-agents/store-return-approval-1280.webp 1280w" sizes="(min-width: 1400px) 665.333px, (min-width: 1264px) calc(698px - 2.333333vw), (min-width: 900px) calc(56vw - 39.333px), (min-width: 844px) 778px, (min-width: 821px) calc(100vw - 66px), (min-width: 660px) 618px, calc(100vw - 42px)" />
-                <img src="/images/au/shopify-ai-agents/store-return-approval-1280.webp" srcSet="/images/au/shopify-ai-agents/store-return-approval-640.webp 640w, /images/au/shopify-ai-agents/store-return-approval-960.webp 960w, /images/au/shopify-ai-agents/store-return-approval-1280.webp 1280w" sizes="(min-width: 1400px) 665.333px, (min-width: 1264px) calc(698px - 2.333333vw), (min-width: 900px) calc(56vw - 39.333px), (min-width: 844px) 778px, (min-width: 821px) calc(100vw - 66px), (min-width: 660px) 618px, calc(100vw - 42px)" width={1280} height={853} loading="lazy" decoding="async" alt="A woman reviews return cards on a tablet beside an opened parcel." />
-              </picture>
               </div>
               <div className="au-panel">
                 <div className="eyebrow">A typical split</div>
@@ -945,11 +931,6 @@ export default function ShopifyAiAgentsAUPage() {
               <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               <a className="btn btn-ghost" href="/au/shopify-development">See Shopify development</a>
             </div>
-            <picture className="shopify-photo">
-                <source type="image/avif" srcSet="/images/au/shopify-ai-agents/store-order-demo-640.avif 640w, /images/au/shopify-ai-agents/store-order-demo-960.avif 960w, /images/au/shopify-ai-agents/store-order-demo-1280.avif 1280w" sizes="(min-width: 1400px) 474.667px, (min-width: 1264px) calc(498px - 1.666667vw), (min-width: 900px) calc(40vw - 28.667px), (min-width: 844px) 778px, (min-width: 821px) calc(100vw - 66px), (min-width: 660px) 618px, calc(100vw - 42px)" />
-                <source type="image/webp" srcSet="/images/au/shopify-ai-agents/store-order-demo-640.webp 640w, /images/au/shopify-ai-agents/store-order-demo-960.webp 960w, /images/au/shopify-ai-agents/store-order-demo-1280.webp 1280w" sizes="(min-width: 1400px) 474.667px, (min-width: 1264px) calc(498px - 1.666667vw), (min-width: 900px) calc(40vw - 28.667px), (min-width: 844px) 778px, (min-width: 821px) calc(100vw - 66px), (min-width: 660px) 618px, calc(100vw - 42px)" />
-                <img src="/images/au/shopify-ai-agents/store-order-demo-1280.webp" srcSet="/images/au/shopify-ai-agents/store-order-demo-640.webp 640w, /images/au/shopify-ai-agents/store-order-demo-960.webp 960w, /images/au/shopify-ai-agents/store-order-demo-1280.webp 1280w" sizes="(min-width: 1400px) 474.667px, (min-width: 1264px) calc(498px - 1.666667vw), (min-width: 900px) calc(40vw - 28.667px), (min-width: 844px) 778px, (min-width: 821px) calc(100vw - 66px), (min-width: 660px) 618px, calc(100vw - 42px)" width={1280} height={853} loading="lazy" decoding="async" alt="Two people review order cards on a monitor beside folded clothing and blank order sheets." />
-              </picture>
           </div>
         </section>
 
