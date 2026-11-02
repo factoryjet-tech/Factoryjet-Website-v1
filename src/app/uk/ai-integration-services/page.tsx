@@ -6,7 +6,6 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
-import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* /uk/ai-integration-services, built 2026-10-29.
@@ -404,7 +403,7 @@ export default function AiIntegrationServicesUKPage() {
       <script id="ld-uk-ai-integration-services" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents fj-uk-integration">
+      <div className="uk-aiagents">
       <main>
         <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
@@ -531,12 +530,8 @@ export default function AiIntegrationServicesUKPage() {
                   first, and the question we answer before quoting.
                 </p>
               </div>
-              <div className="card fj-integration-media-card" style={{ padding: 8 }}>
-                <picture className="fj-integration-photo">
-                  <source type="image/avif" srcSet="/images/uk/ai-integration-services/it-lead-system-connections-640.avif 640w, /images/uk/ai-integration-services/it-lead-system-connections-960.avif 960w, /images/uk/ai-integration-services/it-lead-system-connections-1280.avif 1280w" sizes="(max-width: 768px) calc(100vw - 50px), (max-width: 960px) calc(100vw - 66px), 420px" />
-                  <source type="image/webp" srcSet="/images/uk/ai-integration-services/it-lead-system-connections-640.webp 640w, /images/uk/ai-integration-services/it-lead-system-connections-960.webp 960w, /images/uk/ai-integration-services/it-lead-system-connections-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 50px), (max-width: 960px) calc(100vw - 66px), 420px" />
-                  <img src="/images/uk/ai-integration-services/it-lead-system-connections-960.webp" srcSet="/images/uk/ai-integration-services/it-lead-system-connections-640.webp 640w, /images/uk/ai-integration-services/it-lead-system-connections-960.webp 960w, /images/uk/ai-integration-services/it-lead-system-connections-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 50px), (max-width: 960px) calc(100vw - 66px), 420px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman compares grey record rows and order cards on two separate monitors." />
-                </picture>
+              <div className="card" style={{ padding: 8 }}>
+                <img src={`${IMG}/ai-development-engineer.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet AI engineer at a desk with two monitors showing the connected building blocks of a custom AI system" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
                     Each connection gets the narrowest permission that does the job. An AI that drafts credit-control
@@ -582,7 +577,7 @@ export default function AiIntegrationServicesUKPage() {
                 drafting. The person keeps the decision.
               </p>
             </div>
-            <ul className="col-2 mt-10 fj-integration-jobs">
+            <ul className="col-2 mt-10">
               <li className="svc-card">
                 <h3>Supplier bills into Xero or Sage</h3>
                 <p className="mt-4">A PDF bill arrives by email. The AI reads supplier, lines and VAT, finds the matching purchase order, proposes the nominal code and tax rate, and parks a draft bill. Your bookkeeper approves or corrects it, and the correction is logged. See also <a href="/uk/accounts-payable-automation" style={inlineLink}>accounts payable automation</a> and, for reading bills and forms of every kind, <a href="/uk/document-intake-ai-agents" style={inlineLink}>document intake AI agents</a>.</p>
@@ -735,11 +730,6 @@ export default function AiIntegrationServicesUKPage() {
                     before any model reads a record.
                   </p>
                 </div>
-                <picture className="fj-integration-photo fj-integration-proof-photo">
-                  <source type="image/avif" srcSet="/images/uk/ai-integration-services/trade-counter-order-records-640.avif 640w, /images/uk/ai-integration-services/trade-counter-order-records-960.avif 960w, /images/uk/ai-integration-services/trade-counter-order-records-1280.avif 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 590px" />
-                  <source type="image/webp" srcSet="/images/uk/ai-integration-services/trade-counter-order-records-640.webp 640w, /images/uk/ai-integration-services/trade-counter-order-records-960.webp 960w, /images/uk/ai-integration-services/trade-counter-order-records-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 590px" />
-                  <img src="/images/uk/ai-integration-services/trade-counter-order-records-960.webp" srcSet="/images/uk/ai-integration-services/trade-counter-order-records-640.webp 640w, /images/uk/ai-integration-services/trade-counter-order-records-960.webp 960w, /images/uk/ai-integration-services/trade-counter-order-records-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 960px) calc(100vw - 48px), 590px" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people examine a blank sheet at a trade counter beside shelves of pipe fittings." />
-                </picture>
               </div>
               <div className="card card-top-orange">
                 <span className="eyebrow">Our terms</span>
@@ -767,12 +757,6 @@ export default function AiIntegrationServicesUKPage() {
                 steps two and five.
               </p>
             </div>
-            <div className="fj-integration-process">
-              <picture className="fj-integration-photo">
-                  <source type="image/avif" srcSet="/images/uk/ai-integration-services/integration-record-ownership-review-640.avif 640w, /images/uk/ai-integration-services/integration-record-ownership-review-960.avif 960w, /images/uk/ai-integration-services/integration-record-ownership-review-1280.avif 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 960px) min(640px, calc(100vw - 48px)), 420px" />
-                  <source type="image/webp" srcSet="/images/uk/ai-integration-services/integration-record-ownership-review-640.webp 640w, /images/uk/ai-integration-services/integration-record-ownership-review-960.webp 960w, /images/uk/ai-integration-services/integration-record-ownership-review-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 960px) min(640px, calc(100vw - 48px)), 420px" />
-                  <img src="/images/uk/ai-integration-services/integration-record-ownership-review-960.webp" srcSet="/images/uk/ai-integration-services/integration-record-ownership-review-640.webp 640w, /images/uk/ai-integration-services/integration-record-ownership-review-960.webp 960w, /images/uk/ai-integration-services/integration-record-ownership-review-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 960px) min(640px, calc(100vw - 48px)), 420px" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people review boxes and arrows on a whiteboard beside a stack of paper." />
-                </picture>
             <ol className="stack mt-10" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Pick one job and its measure', d: 'One job a person does between two systems, such as coding supplier bills, with a measure everyone accepts: time per bill or bills waiting at month end.' },
@@ -792,7 +776,6 @@ export default function AiIntegrationServicesUKPage() {
                 </li>
               ))}
             </ol>
-            </div>
           </div>
         </section>
 
@@ -802,7 +785,7 @@ export default function AiIntegrationServicesUKPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">Send a brief</span>
-                <h2 style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 'clamp(1.5rem,3vw,2.25rem)', lineHeight: 1.15, letterSpacing: '-0.03em', color: T.ink, marginTop: 8 }}>Have a brief or an RFP? Send it, and we reply with questions</h2>
+                <p style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 'clamp(1.5rem,3vw,2.25rem)', lineHeight: 1.15, letterSpacing: '-0.03em', color: T.ink, marginTop: 8 }}>Have a brief or an RFP? Send it, and we reply with questions</p>
                 <p className="lead mt-4" style={{ maxWidth: 560 }}>
                   Written briefs get faster, sharper answers. Email yours to{' '}
                   <a href="mailto:connect@factoryjet.com" style={inlineLink}>connect@factoryjet.com</a>, or send the
@@ -815,7 +798,7 @@ export default function AiIntegrationServicesUKPage() {
                   kind of work, published by another firm, are in the FAQ below.
                 </p>
                 <div className="mt-8">
-                  <ModalCTAButton label="Send my brief" region="uk" modalVariant="default" btnVariant="primary-light" className="fj-integration-primary" />
+                  <ModalCTAButton label="Send my brief" region="uk" modalVariant="default" btnVariant="primary-light" />
                 </div>
               </div>
               <div className="card card-top-orange">
@@ -864,7 +847,7 @@ export default function AiIntegrationServicesUKPage() {
                 days. Rules and plans change, so open the linked page before you act on one.
               </p>
             </div>
-            <ul className="col-2 mt-8 fj-integration-sources" style={{ gap: 10 }}>
+            <ul className="col-2 mt-8" style={{ gap: 10 }}>
               {SOURCE_KEYS.map((k) => (
                 <li key={k} style={{ fontSize: 14 }}>
                   <a href={SRC[k].url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: T.ink }}>{SRC[k].label}</a>
@@ -924,17 +907,17 @@ export default function AiIntegrationServicesUKPage() {
         </section>
 
         {/* 13. FINAL CTA (the only dark section) */}
-        <section className="dark-sec fj-integration-final">
+        <section className="dark-sec">
           <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
             <span className="eyebrow">Next step</span>
-            <h2 style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 'clamp(1.5rem,3vw,2.25rem)', lineHeight: 1.15, letterSpacing: '-0.03em', color: '#fff', marginTop: 8 }}>Stop retyping between Sage, your ERP and your order system</h2>
+            <p style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 'clamp(1.5rem,3vw,2.25rem)', lineHeight: 1.15, letterSpacing: '-0.03em', color: '#fff', marginTop: 8 }}>Stop retyping between Sage, your ERP and your order system</p>
             <p className="mt-4">
               Send your name and work email, or your brief. Bhavesh replies within 24 hours to set up a short
               call about your systems and the job you want AI to take on. You leave the call knowing whether it fits,
               and what the first phase would include.
             </p>
             <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-light" className="fj-integration-primary" />
+              <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/contact" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Send my brief</a>
             </div>
           </div>
