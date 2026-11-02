@@ -1,0 +1,135 @@
+/* Only this page imports these overrides. */
+.fj-uk-redesign main { min-width: 0; }
+.fj-uk-redesign main .wrap { padding-inline: 24px; }
+.fj-uk-redesign main h1,
+.fj-uk-redesign main h2,
+.fj-uk-redesign main h3 { text-wrap: balance; }
+.fj-uk-redesign main p { font-size: 16px; text-wrap: pretty; }
+.fj-uk-redesign main .lead { font-size: clamp(1rem, 1.35vw, 1.125rem); }
+.fj-uk-redesign main .sec { padding-block: clamp(2.75rem, 5vw, 4.25rem); }
+.fj-uk-redesign main .sec-lg { padding-block: clamp(3.5rem, 7vw, 6rem); }
+.fj-uk-redesign main .col-6040 { gap: clamp(2rem, 4vw, 4rem); }
+.fj-uk-redesign main .col-6040 > *,
+.fj-uk-redesign main .redesign-signs-layout > *,
+.fj-uk-redesign main .redesign-final-layout > * { min-width: 0; }
+.fj-uk-redesign main .card { border-radius: 22px; box-shadow: 0 1px 2px rgb(15 15 18 / 4%), 0 10px 28px rgb(15 15 18 / 4%); }
+.fj-uk-redesign main .redesign-scorecard { margin-top: 4.5rem; border-top: 3px solid var(--orange2); padding: clamp(1rem, 2vw, 1.75rem) !important; }
+.fj-uk-redesign main .redesign-scorecard > div { padding: 0 !important; }
+.fj-uk-redesign main .redesign-scorecard .scorecard-row { padding-block: 1.5rem; gap: 1rem; }
+.fj-uk-redesign main .redesign-photo { display: block; overflow: hidden; border: 1px solid var(--n200); border-radius: 20px; background: var(--white); }
+.fj-uk-redesign main .redesign-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; }
+.fj-uk-redesign main .redesign-signs-layout { display: grid; grid-template-columns: 5fr 7fr; align-items: start; gap: clamp(1.5rem, 3.5vw, 3rem); }
+.fj-uk-redesign main .redesign-signs-list { max-width: none !important; gap: 1rem; }
+.fj-uk-redesign main .redesign-signs-list .card { padding: clamp(1.25rem, 2vw, 1.75rem); }
+.fj-uk-redesign main .redesign-signs-list .card > span { color: #B23E13 !important; }
+.fj-uk-redesign main .redesign-map { padding: 8px !important; }
+.fj-uk-redesign main .redesign-map > div { padding: 1rem !important; }
+.fj-uk-redesign main .redesign-process-list { max-width: none !important; gap: 0; border-top: 1px solid var(--n200); }
+.fj-uk-redesign main .redesign-process-list .card { display: grid; grid-template-columns: 5fr 7fr; align-items: baseline; gap: 2rem; padding: 1.75rem 0; border: 0; border-bottom: 1px solid var(--n200); border-radius: 0; box-shadow: none; background: transparent; }
+.fj-uk-redesign main .redesign-process-list p { margin-top: 0; }
+.fj-uk-redesign main .redesign-final-layout { display: grid; grid-template-columns: 7fr 5fr; align-items: center; gap: clamp(2rem, 4vw, 4rem); text-align: left; }
+.fj-uk-redesign main .redesign-final .eyebrow { color: var(--white); }
+.fj-uk-redesign main .redesign-final p { color: #E5E5E0; }
+.fj-uk-redesign main .eyebrow,
+.fj-uk-redesign main .chip,
+.fj-uk-redesign main .lab,
+.fj-uk-redesign main .scorecard-note,
+.fj-uk-redesign main .byline .upd,
+.fj-uk-redesign main .faq-sidebar-topics,
+.fj-uk-redesign main .faq-nav-count,
+.fj-uk-redesign main .faq-cat-label { font-size: 12px; }
+.fj-uk-redesign main .faq-cat-label,
+.fj-uk-redesign main .faq-sidebar-cta a,
+.fj-uk-redesign main .faq-item[open] summary .q-text { color: #B23E13; }
+.fj-uk-redesign main .byline .av { background: var(--ink); color: var(--white); }
+.fj-uk-redesign main .byline .who,
+.fj-uk-redesign main .scorecard-metric,
+.fj-uk-redesign main .scorecard-val { font-size: 16px !important; }
+.fj-uk-redesign main .byline { flex-wrap: wrap; }
+.fj-uk-redesign main .scorecard-row { gap: 1rem; }
+.fj-uk-redesign main .scorecard-row > * { min-width: 0; }
+.fj-uk-redesign main .scorecard-val { flex-shrink: 0; }
+.fj-uk-redesign main p a { display: inline-block; min-height: 44px; min-width: 44px; max-width: 100%; padding-block: 8px; vertical-align: baseline; }
+.fj-uk-redesign main .redesign-source-note,
+.fj-uk-redesign main .redesign-source-note a { font-size: 12px !important; line-height: 1.8; }
+.fj-uk-redesign main .cmp-table th { font-size: 12px; }
+.fj-uk-redesign main .cmp-table td { font-size: 16px; }
+.fj-uk-redesign main .faq-sidebar-nav a,
+.fj-uk-redesign main .city-pill,
+.fj-uk-redesign main .btn,
+.fj-uk-redesign main button,
+.fj-uk-redesign main nav[aria-label="Breadcrumb"] a,
+.fj-uk-redesign main .byline a { min-height: 44px; min-width: 44px; }
+.fj-uk-redesign main nav[aria-label="Breadcrumb"] a,
+.fj-uk-redesign main .byline a { display: inline-flex; align-items: center; }
+.fj-uk-redesign main .city-pill { display: inline-flex; align-items: center; font-size: 16px; white-space: normal; }
+.fj-uk-redesign main .city-pill:hover { background: #B23E13; border-color: #B23E13; color: var(--white); }
+.fj-uk-redesign main .btn-outline:hover { color: #B23E13; }
+.fj-uk-redesign main input { min-height: 44px; font-size: 16px; }
+.fj-uk-redesign main .faq-grid > * { min-width: 0; }
+.fj-uk-redesign main .faq-item summary { min-height: 56px; font-size: 16px; }
+.fj-uk-redesign main details.faq-item[open] > summary::after { content: none; }
+.fj-uk-redesign main :is(a, button, input, summary):focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.fj-uk-redesign main .dark-sec :is(a, button):focus-visible { outline-color: var(--white); }
+.fj-uk-redesign main [id] { scroll-margin-top: 110px; }
+.fj-uk-redesign footer p,
+.fj-uk-redesign footer a { font-size: 16px; }
+.fj-uk-redesign footer a { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; }
+.fj-uk-redesign footer summary { min-height: 44px; font-size: 16px; }
+/* Reviewer correction R2: the inherited footer stays dark; its own tokens must match. */
+.fj-uk-redesign footer.us-footer {
+  --uf-ink: #FAFAF7;
+  --uf-body: #E5E5E0;
+  --uf-muted: #D4D4CE;
+  --uf-line: #48403B;
+  --uf-accent: #FAFAF7;
+  color: #FAFAF7;
+}
+.fj-uk-redesign footer.us-footer p { color: #E5E5E0; }
+.fj-uk-redesign footer.us-footer a,
+.fj-uk-redesign footer.us-footer summary { color: #FAFAF7; }
+.fj-uk-redesign footer.us-footer a:hover { color: #FAFAF7; text-decoration: underline; text-underline-offset: 3px; }
+.fj-uk-redesign footer.us-footer .us-footer__heading { color: #D4D4CE; font-size: 12px; }
+.fj-uk-redesign footer.us-footer .us-footer__tagline,
+.fj-uk-redesign footer.us-footer .us-footer__verification { color: #E5E5E0; font-size: 16px; }
+.fj-uk-redesign footer.us-footer :is(a, summary):focus-visible { outline: 2px solid #FAFAF7; outline-offset: 4px; }
+.fj-uk-redesign footer.us-footer summary::after { content: none !important; display: none; }
+.fj-uk-redesign footer.us-footer summary::marker { content: ''; }
+.fj-uk-redesign footer.us-footer .us-footer__wordmark { color: #FAFAF7; }
+/* Existing region popover remains white and needs its own dark foreground. */
+.fj-uk-redesign footer.us-footer .us-footer__region > ul a { color: #14110F; }
+.fj-uk-redesign footer.us-footer .us-footer__region > ul a:hover { color: #B23E13; }
+.fj-uk-redesign footer.us-footer .us-footer__region > ul a:focus-visible { outline-color: #14110F; }
+/* R3/R4: target the actual rendered children, including opened FAQ answers. */
+.fj-uk-redesign main .redesign-table-scroll:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.fj-uk-redesign main .def .lab { font-size: 12px; }
+.fj-uk-redesign main .faq-item summary .q-text,
+.fj-uk-redesign main .faq-item .faq-ans p { font-size: 16px; }
+.fj-uk-redesign main .faq-sidebar-nav .faq-nav-count,
+.fj-uk-redesign main .faq-sidebar-cta p { font-size: 12px; }
+@media (min-width: 961px) {
+  .fj-uk-redesign main .redesign-signs-layout .redesign-media,
+  .fj-uk-redesign main .redesign-map { position: sticky; top: 104px; }
+}
+@media (max-width: 960px) {
+  .fj-uk-redesign main .redesign-signs-layout,
+  .fj-uk-redesign main .redesign-final-layout { grid-template-columns: 1fr; }
+  .fj-uk-redesign main .redesign-scorecard { margin-top: 0; }
+}
+@media (max-width: 767px) {
+  .fj-uk-redesign main .scope-list.num-list > li,
+  .fj-uk-redesign main .scope-list.num-list > li b { font-size: 16px; }
+  .fj-uk-redesign footer { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+  .fj-uk-redesign main .wrap { padding-inline: 20px; }
+  .fj-uk-redesign main .sec-lg { padding-block: 3.5rem !important; }
+  .fj-uk-redesign main h1 { font-size: clamp(1.75rem, 6.5vw, 2.4rem) !important; line-height: 1.14; }
+  .fj-uk-redesign main h2 { font-size: clamp(1.5rem, 5.6vw, 2rem) !important; line-height: 1.22; }
+  .fj-uk-redesign main h3 { font-size: 18px !important; line-height: 1.35; }
+  .fj-uk-redesign main .redesign-signs-list .card { display: grid !important; grid-template-columns: 1fr; gap: .5rem !important; }
+  .fj-uk-redesign main .redesign-process-list .card { grid-template-columns: 1fr; gap: .75rem; }
+  .fj-uk-redesign main .card { padding: 20px; }
+  .fj-uk-redesign main .byline { gap: 8px; }
+  .fj-uk-redesign main .byline .upd { margin-left: 46px; text-align: left; }
+  .fj-uk-redesign main .btn { font-size: 16px !important; white-space: normal; }
+  .fj-uk-redesign main .dark-sec { padding-block: 3.5rem; }
+}

@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-redesign';
 const PUBLISHED = '2026-10-29';
@@ -257,13 +258,13 @@ export default function EcommerceRedesignUKPage() {
       <script id="ld-uk-ecommerce-redesign" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents fj-uk-redesign">
       <main>
 
         <Breadcrumbs items={crumbs} />
 
         {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+        <section className="sec-lg dot-grid redesign-hero" style={{ position: 'relative' }}>
           <div className="wrap">
             <div className="col-6040">
               <div>
@@ -294,8 +295,7 @@ export default function EcommerceRedesignUKPage() {
                 </div>
               </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/shopify-migration/shopify-migration-test-store.webp" width={1200} height={800} fetchPriority="high" decoding="async" alt="Seen from behind, a woman and a man at a desk review a draft store layout on a laptop screen" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+              <div className="card redesign-scorecard" style={{ padding: 8 }}>
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What stays, what changes</span>
                   <div className="scorecard-row">
@@ -343,7 +343,7 @@ export default function EcommerceRedesignUKPage() {
         </section>
 
         {/* ═══ 3. SIX SIGNS (LISTICLE) ═══ */}
-        <section className="sec-lg dot-grid">
+        <section className="sec-lg dot-grid redesign-signs">
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">Before you change platform</span>
@@ -354,10 +354,18 @@ export default function EcommerceRedesignUKPage() {
                 using the store on a phone for ten minutes.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <div className="redesign-signs-layout mt-10">
+              <div className="redesign-media">
+                <picture className="redesign-photo">
+                  <source type="image/avif" srcSet="/images/uk/ecommerce-redesign/shop-owner-phone-640.avif 640w, /images/uk/ecommerce-redesign/shop-owner-phone-960.avif 960w, /images/uk/ecommerce-redesign/shop-owner-phone-1280.avif 1280w" sizes="(min-width: 1120px) 430px, (min-width: 961px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 40px)" />
+                  <source type="image/webp" srcSet="/images/uk/ecommerce-redesign/shop-owner-phone-640.webp 640w, /images/uk/ecommerce-redesign/shop-owner-phone-960.webp 960w, /images/uk/ecommerce-redesign/shop-owner-phone-1280.webp 1280w" sizes="(min-width: 1120px) 430px, (min-width: 961px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 40px)" />
+                  <img src="/images/uk/ecommerce-redesign/shop-owner-phone-960.webp" srcSet="/images/uk/ecommerce-redesign/shop-owner-phone-640.webp 640w, /images/uk/ecommerce-redesign/shop-owner-phone-960.webp 960w, /images/uk/ecommerce-redesign/shop-owner-phone-1280.webp 1280w" sizes="(min-width: 1120px) 430px, (min-width: 961px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 40px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman checks a plain phone behind a homewares shop counter." />
+                </picture>
+              </div>
+            <ol className="stack redesign-signs-list" style={{ maxWidth: 900 }}>
               {SIGNS.map((s, i) => (
                 <li key={s.t} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{String(i + 1).padStart(2, '0')}</span>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{String(i + 1).padStart(2, '0')}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
@@ -365,6 +373,7 @@ export default function EcommerceRedesignUKPage() {
                 </li>
               ))}
             </ol>
+            </div>
             <p className="mt-8" style={{ maxWidth: 900 }}>
               If none of the six fit, and the trouble is trade pricing the platform cannot hold, an app bill that keeps
               growing, or software near the end of support, the answer may be a move. Our <a href="/uk/shopify-migration">UK
@@ -374,7 +383,7 @@ export default function EcommerceRedesignUKPage() {
         </section>
 
         {/* ═══ 4. REDESIGN WITHOUT LOSING RANKINGS ═══ */}
-        <section className="sec-lg">
+        <section className="sec-lg redesign-rankings">
           <div className="wrap">
             <div className="col-6040">
               <div>
@@ -413,7 +422,7 @@ export default function EcommerceRedesignUKPage() {
                     going gets traced to a page and fixed the same day.
                   </p>
                 </div>
-                <p style={srcNote}>
+                <p className="redesign-source-note" style={srcNote}>
                   Sources, read on 29 and 31 October 2026:{' '}
                   <a href={SRC_GOOGLE_MOVE} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Google Search Central, site moves with URL changes</a>;{' '}
                   <a href={SRC_SHOPIFY_REDIRECTS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Shopify Help Center, URL redirects</a>;{' '}
@@ -421,8 +430,12 @@ export default function EcommerceRedesignUKPage() {
                   <a href={SRC_SHOPIFY_JSON} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Shopify.dev, JSON templates</a>.
                 </p>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/shopify-migration/shopify-migration-redirect-map.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A woman pins cards joined by orange string in a tree shape on a cork board while a colleague holds more cards" style={{ width: '100%', height: 'auto', aspectRatio: '3 / 2', background: T.n200, borderRadius: 12, display: 'block' }} />
+              <div className="card redesign-map" style={{ padding: 8 }}>
+                <picture className="redesign-photo">
+                  <source type="image/avif" srcSet="/images/uk/ecommerce-redesign/redesign-url-mapping-640.avif 640w, /images/uk/ecommerce-redesign/redesign-url-mapping-960.avif 960w, /images/uk/ecommerce-redesign/redesign-url-mapping-1280.avif 1280w" sizes="(min-width: 1120px) 430px, (min-width: 961px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 40px)" />
+                  <source type="image/webp" srcSet="/images/uk/ecommerce-redesign/redesign-url-mapping-640.webp 640w, /images/uk/ecommerce-redesign/redesign-url-mapping-960.webp 960w, /images/uk/ecommerce-redesign/redesign-url-mapping-1280.webp 1280w" sizes="(min-width: 1120px) 430px, (min-width: 961px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 40px)" />
+                  <img src="/images/uk/ecommerce-redesign/redesign-url-mapping-960.webp" srcSet="/images/uk/ecommerce-redesign/redesign-url-mapping-640.webp 640w, /images/uk/ecommerce-redesign/redesign-url-mapping-960.webp 960w, /images/uk/ecommerce-redesign/redesign-url-mapping-1280.webp 1280w" sizes="(min-width: 1120px) 430px, (min-width: 961px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 40px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman positions blank cards connected by thread while a man studies the pinboard." />
+                </picture>
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">Every row in the map</span>
                   <div className="scorecard-row"><div className="scorecard-metric">Old URL and its clicks</div><div className="scorecard-val" style={{ fontSize: 14 }}>Search Console</div></div>
@@ -445,7 +458,7 @@ export default function EcommerceRedesignUKPage() {
               much they put your rankings at risk. Redesign and replatform timelines are the ranges we work to on our own projects.
             </p>
             <p className="md:hidden mt-8" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <div className="card mt-8 redesign-table-scroll" tabIndex={0} style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
@@ -480,7 +493,7 @@ export default function EcommerceRedesignUKPage() {
               often leaves out.
             </p>
             <p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
-            <div className="card mt-6" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <div className="card mt-6 redesign-table-scroll" tabIndex={0} style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
@@ -506,7 +519,7 @@ export default function EcommerceRedesignUKPage() {
         </section>
 
         {/* ═══ 5b. PROCESS ═══ */}
-        <section className="sec-lg">
+        <section className="sec-lg redesign-process">
           <div className="wrap">
             <div style={{ maxWidth: 820 }}>
               <span className="eyebrow">Step by step</span>
@@ -516,7 +529,7 @@ export default function EcommerceRedesignUKPage() {
                 comes before any design.
               </p>
             </div>
-            <ol className="stack mt-8" style={{ maxWidth: 900 }}>
+            <ol className="stack mt-8 redesign-process-list" style={{ maxWidth: 900 }}>
               <li className="card">
                 <h3 style={{ fontSize: 18 }}>1. Review the store and its numbers</h3>
                 <p className="mt-2">We read GA4 conversion by device, run the top templates through PageSpeed Insights and list the pages that earn clicks in Search Console.</p>
@@ -623,7 +636,7 @@ export default function EcommerceRedesignUKPage() {
               </p>
             </div>
             <p className="md:hidden mt-8" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch', maxWidth: 900 }}>
+            <div className="card mt-8 redesign-table-scroll" tabIndex={0} style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch', maxWidth: 900 }}>
               <table className="cmp-table" style={{ minWidth: 560 }}>
                 <thead>
                   <tr>
@@ -653,7 +666,7 @@ export default function EcommerceRedesignUKPage() {
                 our <a href="/blog/website-redesign-cost-uk-2026-complete-pricing-guide">UK website redesign cost guide</a>.
               </p>
             </div>
-            <p style={srcNote}>
+            <p className="redesign-source-note" style={srcNote}>
               Sources, read on 29 October 2026:{' '}
               <a href={SRC_WHITO} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Whito, website design costs UK 2026</a>;{' '}
               <a href={SRC_SPOTDEV} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>SpotDev, website redesign cost UK</a>.
@@ -732,17 +745,28 @@ export default function EcommerceRedesignUKPage() {
         </section>
 
         {/* ═══ 11. FINAL CTA (the only dark section) ═══ */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+        <section className="dark-sec redesign-final">
+          <div className="wrap">
+            <div className="redesign-final-layout">
+            <div>
             <span className="eyebrow">Ready when you are</span>
             <h2>See your store redesigned on your own products</h2>
             <p className="mt-4">
               Send your name, work email and store address. The founder replies within 24 hours with what we would
               change first and how the draft theme would work. No spam, no obligation.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="See a draft of my store" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/uk/shopify-migration" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Moving platform instead?</a>
+            </div>
+            </div>
+            <div className="redesign-media">
+              <picture className="redesign-photo">
+                  <source type="image/avif" srcSet="/images/uk/ecommerce-redesign/product-shoot-draft-store-640.avif 640w, /images/uk/ecommerce-redesign/product-shoot-draft-store-960.avif 960w, /images/uk/ecommerce-redesign/product-shoot-draft-store-1280.avif 1280w" sizes="(min-width: 1120px) 430px, (min-width: 961px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 40px)" />
+                  <source type="image/webp" srcSet="/images/uk/ecommerce-redesign/product-shoot-draft-store-640.webp 640w, /images/uk/ecommerce-redesign/product-shoot-draft-store-960.webp 960w, /images/uk/ecommerce-redesign/product-shoot-draft-store-1280.webp 1280w" sizes="(min-width: 1120px) 430px, (min-width: 961px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 40px)" />
+                  <img src="/images/uk/ecommerce-redesign/product-shoot-draft-store-960.webp" srcSet="/images/uk/ecommerce-redesign/product-shoot-draft-store-640.webp 640w, /images/uk/ecommerce-redesign/product-shoot-draft-store-960.webp 960w, /images/uk/ecommerce-redesign/product-shoot-draft-store-1280.webp 1280w" sizes="(min-width: 1120px) 430px, (min-width: 961px) 40vw, (min-width: 768px) calc(100vw - 48px), calc(100vw - 40px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman arranges ceramics beside a laptop displaying a grid of product photographs." />
+                </picture>
+            </div>
             </div>
           </div>
         </section>
