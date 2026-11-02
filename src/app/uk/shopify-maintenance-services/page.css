@@ -1,0 +1,91 @@
+.uk-shopify-maintenance main { overflow-wrap:anywhere; }
+.uk-shopify-maintenance main :is(h1,h2,h3) { text-wrap:balance; }
+.uk-shopify-maintenance main p { font-size:16px !important; text-wrap:pretty; }
+.uk-shopify-maintenance main li { font-size:16px !important; }
+.uk-shopify-maintenance main .lead { font-size:clamp(1.0625rem,1.4vw,1.125rem) !important; }
+.uk-shopify-maintenance main :is(.eyebrow,.chip,.lab,.scorecard-note,.byline .who,.byline .upd,.faq-sidebar-topics,.faq-nav-count,.faq-cat-label) { font-size:12px !important; }
+.uk-shopify-maintenance main .mtn-source-note { font-size:12px !important; line-height:1.8; }
+.uk-shopify-maintenance main .mtn-source-note a { display:inline-block; min-height:44px; align-content:center; }
+.uk-shopify-maintenance main :is(.scorecard-metric,.q-text,.faq-ans p) { font-size:16px; }
+.uk-shopify-maintenance main .scorecard-row { gap:14px; }
+.uk-shopify-maintenance main .scorecard-val { color:#B23E13; flex-shrink:0; }
+.uk-shopify-maintenance main .stats-band a { font-size:12px !important; display:inline-block; min-height:44px; align-content:center; }
+.uk-shopify-maintenance main :is(.city-pill,.btn,.faq-sidebar-nav a) { min-height:44px; align-content:center; }
+.uk-shopify-maintenance main .faq-sidebar-nav a { font-size:16px; }
+.uk-shopify-maintenance main :is(a,button,input,select,textarea,summary):focus-visible { outline:2px solid #B23E13; outline-offset:4px; }
+.uk-shopify-maintenance main [id] { scroll-margin-top:110px; }
+.uk-shopify-maintenance main .mtn-photo { display:block; margin:28px 0 0; overflow:hidden; border:1px solid var(--n200); border-radius:20px; box-shadow:0 2px 6px rgba(15,15,18,.03),0 16px 32px rgba(15,15,18,.06); }
+.uk-shopify-maintenance main .mtn-photo img { display:block; width:100%; height:auto; aspect-ratio:3 / 2; object-fit:cover; object-position:top; }
+.uk-shopify-maintenance main .mtn-hero { padding-block:clamp(36px,5vw,64px); }
+.uk-shopify-maintenance main .mtn-hero .col-6040 { gap:clamp(28px,4vw,56px); }
+.uk-shopify-maintenance main .mtn-hero-card { padding:clamp(20px,2.5vw,32px) !important; border-radius:20px; margin-top:52px; }
+.uk-shopify-maintenance main .mtn-hero-card > div { padding:0 !important; }
+.uk-shopify-maintenance main .mtn-coverage { gap:40px; }
+.uk-shopify-maintenance main .mtn-services { grid-template-columns:7fr 5fr; }
+.uk-shopify-maintenance main .mtn-services > li:nth-child(3n) { grid-column:1 / -1; }
+.uk-shopify-maintenance main .mtn-services > li { border-radius:16px; }
+.uk-shopify-maintenance main .mtn-services > li:nth-child(4n+1) { background:var(--orange-bg); }
+.uk-shopify-maintenance main .mtn-takeover { display:grid; grid-template-columns:5fr 7fr; gap:clamp(28px,4vw,56px); align-items:start; }
+.uk-shopify-maintenance main .mtn-takeover > .mtn-photo { margin-top:40px; position:sticky; top:110px; }
+.uk-shopify-maintenance main .mtn-takeover ol { min-width:0; }
+.uk-shopify-maintenance main .mtn-note { padding:clamp(24px,3vw,40px) !important; border-left:3px solid #B23E13; }
+.uk-shopify-maintenance main .mtn-final { display:grid; grid-template-columns:7fr 5fr; gap:clamp(28px,4vw,56px); max-width:1120px !important; text-align:left !important; align-items:center; }
+.uk-shopify-maintenance main .mtn-final .mtn-photo { margin-top:0; border-color:rgba(255,255,255,.2); }
+.uk-shopify-maintenance main .mtn-final .mtn-actions { justify-content:flex-start !important; }
+.uk-shopify-maintenance main .dark-sec .eyebrow { color:#fff; }
+.uk-shopify-maintenance main .dark-sec p { color:rgba(255,255,255,.8); }
+@media (max-width:1024px) {
+.uk-shopify-maintenance main .mtn-coverage { grid-template-columns:1fr !important; }
+.uk-shopify-maintenance main .mtn-coverage > div:first-child { max-width:740px; }
+.uk-shopify-maintenance main .mtn-coverage .mtn-photo { max-width:640px; }
+.uk-shopify-maintenance main .mtn-takeover { grid-template-columns:1fr; }
+.uk-shopify-maintenance main .mtn-takeover > .mtn-photo { position:static; max-width:640px; }
+.uk-shopify-maintenance main .mtn-final { grid-template-columns:1fr; }
+.uk-shopify-maintenance main .mtn-final .mtn-photo { max-width:640px; }
+}
+@media (max-width:768px) {
+.uk-shopify-maintenance main :is(.col-6040,.col-4060) { gap:28px; }
+.uk-shopify-maintenance main .mtn-hero { padding-block:32px !important; }
+.uk-shopify-maintenance main .mtn-hero-card { margin-top:0; }
+.uk-shopify-maintenance main h1 { font-size:clamp(1.65rem,5.7vw,2.5rem) !important; }
+.uk-shopify-maintenance main h2 { font-size:clamp(1.4rem,4.9vw,2rem) !important; }
+.uk-shopify-maintenance main .mtn-services { grid-template-columns:1fr; }
+.uk-shopify-maintenance main .mtn-services > li:nth-child(3n) { grid-column:auto; }
+.uk-shopify-maintenance main .mtn-photo { border-radius:16px; }
+.uk-shopify-maintenance main .mtn-takeover > .mtn-photo { margin-top:28px; }
+.uk-shopify-maintenance main .stats-band .col-4 { gap:24px 16px !important; }
+.uk-shopify-maintenance main .byline { flex-wrap:wrap; }
+.uk-shopify-maintenance main .byline .upd { text-align:left; margin-left:0; }
+.uk-shopify-maintenance main .dark-sec { padding-block:48px; }
+.uk-shopify-maintenance main .btn { font-size:16px !important; }
+}
+
+.uk-shopify-maintenance main .cmp-table th { font-size:12px; }
+.uk-shopify-maintenance main .cmp-table td { font-size:16px; }
+.uk-shopify-maintenance main h3 > span { font-size:12px !important; }
+.uk-shopify-maintenance main .mtn-source-list a { display:block; min-height:44px; align-content:center; }
+.uk-shopify-maintenance main button { font-size:16px !important; }
+.uk-shopify-maintenance main .byline .av { background:var(--ink); }
+.uk-shopify-maintenance main .stats-band li > div { color:#F05A28 !important; }
+.uk-shopify-maintenance main input { font-size:16px !important; }
+/* The inherited UK footer remains dark; its shared light-theme ink needs local correction. */
+.uk-shopify-maintenance footer.us-footer { --uf-ink:var(--cream); --uf-body:var(--n200); --uf-muted:var(--n200); --uf-line:var(--n600); --uf-surface:var(--dark); --uf-accent:var(--white); color:var(--uf-ink); text-align:left; }
+.uk-shopify-maintenance footer.us-footer .us-footer__tagline { font-size:16px; color:var(--uf-body); }
+.uk-shopify-maintenance footer.us-footer .us-footer__heading { font-size:12px; color:var(--uf-muted); }
+.uk-shopify-maintenance footer.us-footer .us-footer__verification { font-size:12px; color:var(--uf-muted); }
+.uk-shopify-maintenance footer.us-footer .us-footer__bottom { font-size:12px; color:var(--uf-muted); }
+.uk-shopify-maintenance footer.us-footer a { font-size:16px; color:var(--uf-body); }
+.uk-shopify-maintenance footer.us-footer a:is(:hover,:focus-visible) { color:var(--uf-ink); text-decoration:underline; text-underline-offset:3px; }
+.uk-shopify-maintenance footer.us-footer .us-footer__bottom .us-footer__identity > p { color:var(--uf-muted); font-size:12px; }
+.uk-shopify-maintenance footer.us-footer summary { color:var(--uf-ink); font-size:16px; min-height:44px; }
+.uk-shopify-maintenance footer.us-footer summary::after { content:none; }
+.uk-shopify-maintenance footer.us-footer :is(a,summary):focus-visible { outline:2px solid var(--cream); outline-offset:4px; }
+@media (max-width:1024px) {
+.uk-shopify-maintenance footer.us-footer a { min-height:44px; }
+.uk-shopify-maintenance footer.us-footer .us-footer__featured a,
+.uk-shopify-maintenance footer.us-footer .us-footer__directory-grid a { display:flex; align-items:center; }
+}
+.uk-shopify-maintenance footer.us-footer details[open] > summary::after { content:none; }
+
+.uk-shopify-maintenance main .mtn-disclaimer { font-size:16px !important; }
+.uk-shopify-maintenance main .def p { font-size:clamp(1.0625rem,1.4vw,1.125rem) !important; }

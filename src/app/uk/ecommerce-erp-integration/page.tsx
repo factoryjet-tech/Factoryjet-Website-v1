@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 
 /* /uk/ecommerce-erp-integration, built 2026-10-29.
 
@@ -404,7 +405,7 @@ function Sources({ ids }: { ids: SrcKey[] }) {
   if (ids.length === 0) return null;
   const headDate = srcOn(ids[0]) ?? READ_ON;
   return (
-    <p style={srcNote}>
+    <p className="erp-source-note" style={srcNote}>
       Sources, read on {headDate}:{' '}
       {ids.map((id, i) => (
         <span key={id}>
@@ -424,7 +425,7 @@ export default function EcommerceErpIntegrationUKPage() {
       <script id="ld-uk-ecommerce-erp-integration" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents uk-erp-visual">
       <main>
 
         <Breadcrumbs items={crumbs} />
@@ -463,7 +464,6 @@ export default function EcommerceErpIntegrationUKPage() {
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/b2b-ecommerce/b2b-ecommerce-warehouse.webp" width={1200} height={800} fetchPriority="high" decoding="async" alt="Warehouse staff checking a store order on a tablet against stock on the racks, the moment an ERP link has to get right" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">Agreed in writing before any code</span>
                   <div className="scorecard-row">
@@ -559,7 +559,11 @@ export default function EcommerceErpIntegrationUKPage() {
                 </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/shopify-xero-integration/shopify-xero-record-owners.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two colleagues sorting blank sticky notes into a store column and an ERP column while mapping which system owns each record" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <picture className="erp-photo">
+                  <source type="image/avif" srcSet="/images/uk/ecommerce-erp-integration/record-owner-mapping-640.avif 640w, /images/uk/ecommerce-erp-integration/record-owner-mapping-960.avif 960w, /images/uk/ecommerce-erp-integration/record-owner-mapping-1280.avif 1280w" sizes="(max-width: 767px) calc(100vw - 50px), (max-width: 960px) calc(100vw - 66px), (max-width: 1120px) calc(41.667vw - 65px), 402px" />
+                  <source type="image/webp" srcSet="/images/uk/ecommerce-erp-integration/record-owner-mapping-640.webp 640w, /images/uk/ecommerce-erp-integration/record-owner-mapping-960.webp 960w, /images/uk/ecommerce-erp-integration/record-owner-mapping-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 50px), (max-width: 960px) calc(100vw - 66px), (max-width: 1120px) calc(41.667vw - 65px), 402px" />
+                  <img src="/images/uk/ecommerce-erp-integration/record-owner-mapping-960.webp" srcSet="/images/uk/ecommerce-erp-integration/record-owner-mapping-640.webp 640w, /images/uk/ecommerce-erp-integration/record-owner-mapping-960.webp 960w, /images/uk/ecommerce-erp-integration/record-owner-mapping-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 50px), (max-width: 960px) calc(100vw - 66px), (max-width: 1120px) calc(41.667vw - 65px), 402px" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people sort blank index cards into two columns at a wholesale order desk." />
+                </picture>
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
                     Left side for what the store owns, right side for what the ERP owns. A record that lands on
@@ -590,7 +594,7 @@ export default function EcommerceErpIntegrationUKPage() {
                 </tbody>
               </table>
             </div>
-            <p style={srcNote}>
+            <p className="erp-source-note" style={srcNote}>
               This is our opening proposal. Your version gets signed line by line before development starts.
             </p>
           </div>
@@ -725,7 +729,12 @@ export default function EcommerceErpIntegrationUKPage() {
                 every channel, or stock and VAT drift apart within a week.
               </p>
             </div>
-            <div className="col-6040 mt-10">
+            <div className="erp-channel-grid mt-10">
+              <picture className="erp-photo erp-dispatch-photo">
+                  <source type="image/avif" srcSet="/images/uk/ecommerce-erp-integration/courier-stock-reconciliation-640.avif 640w, /images/uk/ecommerce-erp-integration/courier-stock-reconciliation-960.avif 960w, /images/uk/ecommerce-erp-integration/courier-stock-reconciliation-1280.avif 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), (max-width: 1120px) calc(58.333vw - 42px), 612px" />
+                  <source type="image/webp" srcSet="/images/uk/ecommerce-erp-integration/courier-stock-reconciliation-640.webp 640w, /images/uk/ecommerce-erp-integration/courier-stock-reconciliation-960.webp 960w, /images/uk/ecommerce-erp-integration/courier-stock-reconciliation-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), (max-width: 1120px) calc(58.333vw - 42px), 612px" />
+                  <img src="/images/uk/ecommerce-erp-integration/courier-stock-reconciliation-960.webp" srcSet="/images/uk/ecommerce-erp-integration/courier-stock-reconciliation-640.webp 640w, /images/uk/ecommerce-erp-integration/courier-stock-reconciliation-960.webp 960w, /images/uk/ecommerce-erp-integration/courier-stock-reconciliation-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), (max-width: 1120px) calc(58.333vw - 42px), 612px" width={1536} height={1024} loading="lazy" decoding="async" alt="A man compares blank papers with cartons while a woman moves a courier cage." />
+                </picture>
               <div className="card">
                 <h3>Marketplaces</h3>
                 <p className="mt-4">
@@ -942,7 +951,7 @@ export default function EcommerceErpIntegrationUKPage() {
                 live page before acting.
               </p>
             </div>
-            <ul className="col-2 mt-8" style={{ gap: 10 }}>
+            <ul className="col-2 mt-8 erp-source-list" style={{ gap: 10 }}>
               {SOURCE_KEYS.map((k) => (
                 <li key={k} style={{ fontSize: 14 }}>
                   <a href={SRC[k].url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: T.ink }}>{SRC[k].label}</a>
@@ -1004,7 +1013,8 @@ export default function EcommerceErpIntegrationUKPage() {
 
         {/* 14. FINAL CTA (the only dark section) */}
         <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+          <div className="wrap erp-cta-grid">
+            <div className="erp-cta-copy">
             <span className="eyebrow">Next step</span>
             <h2>Book a scoping call for your store to ERP link</h2>
             <p className="mt-4">
@@ -1012,10 +1022,16 @@ export default function EcommerceErpIntegrationUKPage() {
               ERP and the eight records between them. By the end you know whether the maker&rsquo;s connector will
               do, or which parts need custom work, and what each phase costs.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8" style={{ display: 'flex', justifyContent: 'flex-start', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="Scope my ERP link" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/contact" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Contact us</a>
             </div>
+            </div>
+            <picture className="erp-photo">
+                  <source type="image/avif" srcSet="/images/uk/ecommerce-erp-integration/store-erp-scoping-call-640.avif 640w, /images/uk/ecommerce-erp-integration/store-erp-scoping-call-960.avif 960w, /images/uk/ecommerce-erp-integration/store-erp-scoping-call-1280.avif 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), (max-width: 1120px) calc(40vw - 20px), 427px" />
+                  <source type="image/webp" srcSet="/images/uk/ecommerce-erp-integration/store-erp-scoping-call-640.webp 640w, /images/uk/ecommerce-erp-integration/store-erp-scoping-call-960.webp 960w, /images/uk/ecommerce-erp-integration/store-erp-scoping-call-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), (max-width: 1120px) calc(40vw - 20px), 427px" />
+                  <img src="/images/uk/ecommerce-erp-integration/store-erp-scoping-call-960.webp" srcSet="/images/uk/ecommerce-erp-integration/store-erp-scoping-call-640.webp 640w, /images/uk/ecommerce-erp-integration/store-erp-scoping-call-960.webp 960w, /images/uk/ecommerce-erp-integration/store-erp-scoping-call-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), (max-width: 1120px) calc(40vw - 20px), 427px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman looks at a laptop beside blank index cards and plain papers." />
+                </picture>
           </div>
         </section>
 
