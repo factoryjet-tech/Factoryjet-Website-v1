@@ -28,3 +28,97 @@
 
 /* Section heads with a paragraph beside the h2: top-align so the right column has no empty band above it */
 .aiAgentPage.auPage.auMigration .plat-head { align-items: start; }
+
+/* Page-owned documentary sections. No shared selector or token is changed. */
+.aiAgentPage.auPage.auMigration .migration-photo { display: block; min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: var(--panel); box-shadow: 0 2px 5px rgb(20 17 15 / .035), 0 20px 44px -30px rgb(20 17 15 / .25); }
+.aiAgentPage.auPage.auMigration .migration-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; }
+.aiAgentPage.auPage.auMigration .migration-platform-layout { display: grid; grid-template-columns: minmax(0,5fr) minmax(0,7fr); gap: 48px; align-items: start; }
+.aiAgentPage.auPage.auMigration .migration-platform-photo { position: sticky; top: 112px; }
+.aiAgentPage.auPage.auMigration .migration-platform-layout .plat { grid-template-columns: 36px minmax(0,1fr); gap: 12px 16px; padding: 26px 0; }
+.aiAgentPage.auPage.auMigration .migration-platform-layout .plat .plat-build { grid-column: 2; }
+.aiAgentPage.auPage.auMigration #australian-stack > .wrap { display: block; }
+.aiAgentPage.auPage.auMigration #australian-stack .section-head { max-width: 860px; margin-bottom: 32px; }
+.aiAgentPage.auPage.auMigration .migration-stack-photo { margin-bottom: 44px; }
+.aiAgentPage.auPage.auMigration #australian-stack .factswrap { display: grid; grid-template-columns: minmax(0,7fr) minmax(0,5fr); gap: 48px; align-items: start; }
+.aiAgentPage.auPage.auMigration #australian-stack .factlist { grid-column: 1; grid-row: auto; }
+.aiAgentPage.auPage.auMigration #australian-stack .au-panel { grid-column: 2; grid-row: auto; }
+.aiAgentPage.auPage.auMigration .finalcta > .wrap { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); gap: 48px; align-items: start; }
+.aiAgentPage.auPage.auMigration .migration-final-copy { min-width: 0; }
+.aiAgentPage.auPage.auMigration .finalcta h2 { max-width: 23ch; font-size: clamp(32px,3.4vw,44px); }
+.aiAgentPage.auPage.auMigration .finalcta .ctas { margin-top: 28px; }
+.aiAgentPage.auPage.auMigration .finalcta .ctas .btn { margin-top: 0; }
+.aiAgentPage.auPage.auMigration .agentdir .agentdir-grid { grid-template-columns: minmax(0,1.15fr) minmax(0,1fr); }
+
+/* Stabilise the small mono rows before the font swaps in. */
+.aiAgentPage.auPage.auMigration .hero-grid { align-items: start; }
+.aiAgentPage.auPage.auMigration .specpanel-bar { display: grid; grid-template-columns: 7px minmax(0,1fr); gap: 10px; font-size: 12px; line-height: 1.6; }
+.aiAgentPage.auPage.auMigration .sys { grid-column: 2; display: flex; flex-wrap: wrap; width: auto; margin-left: 0; font-size: 12px; line-height: 1.6; }
+.aiAgentPage.auPage.auMigration .sys span { max-width: 100%; }
+.aiAgentPage.auPage.auMigration .specrow { grid-template-columns: 38px minmax(0,1fr); width: 100%; min-height: 124px; margin-left: 0; gap: 6px 12px; }
+.aiAgentPage.auPage.auMigration .specrow:nth-child(even) { margin-left: 0; }
+.aiAgentPage.auPage.auMigration .specrow .idx { grid-column: 2; grid-row: 1; font-size: 12px; line-height: 1.6; }
+.aiAgentPage.auPage.auMigration .specrow .title { grid-column: 2; grid-row: 2; font-size: 16px; line-height: 1.5; }
+.aiAgentPage.auPage.auMigration .specrow .tag { grid-column: 2; grid-row: 3; justify-self: start; font-size: 12px; line-height: 1.6; }
+.aiAgentPage.auPage.auMigration .specrow .workflow-icon { grid-column: 1; grid-row: 1 / span 3; width: 38px; height: 38px; }
+.aiAgentPage.auPage.auMigration .specrow:not(:last-child)::before,
+.aiAgentPage.auPage.auMigration .specrow:not(:last-child)::after { left: 32px; }
+.aiAgentPage.auPage.auMigration .specpanel-foot { min-height: 112px; font-size: 12px; line-height: 1.7; }
+.aiAgentPage.auPage.auMigration .workflow-toggle,
+.aiAgentPage.auPage.auMigration .workflow-replay { width: 44px; height: 44px; }
+
+/* The existing dark-orange token passes white small-text contrast. */
+.aiAgentPage.auPage.auMigration .btn-primary,
+.aiAgentPage.auPage.auMigration .au-midcta a { color: white; background: var(--accent-text); }
+.aiAgentPage.auPage.auMigration .btn-primary:hover,
+.aiAgentPage.auPage.auMigration .au-midcta a:hover { color: white; background: var(--ink); }
+.aiAgentPage.auPage.auMigration :is(h1,h2,h3) { text-wrap: balance; }
+.aiAgentPage.auPage.auMigration p { text-wrap: pretty; }
+.aiAgentPage.auPage.auMigration :is(p, .plat-build, .au-panel-intro, .ans, .agentdir-l, .agentdir-t, .qtext, .ledgercell .v, .trigrows .m, tbody th, tbody td) { font-size: 16px; }
+.aiAgentPage.auPage.auMigration :is(.eyebrow, .factlabel, .capid, .ledgercell .k, .trigrows .t, .faq-nav-count, .faq-category, .qid, .faqsrc, .agentdir-more, .byline .upd) { font-size: 12px; }
+.aiAgentPage.auPage.auMigration .au-midcta p.font-fj-display { font-size: clamp(24px,2.6vw,32px); line-height: 1.25; }
+.aiAgentPage.auPage.auMigration .au-midcta p.font-fj-mono { font-size: 12px; }
+.aiAgentPage.auPage.auMigration thead th { font-size: 12px; }
+.aiAgentPage.auPage.auMigration .btn,
+.aiAgentPage.auPage.auMigration [data-hero-inline-form] button { font-size: 16px; }
+.aiAgentPage.auPage.auMigration .au-midcta span.font-fj-body { font-size: 16px; }
+.aiAgentPage.auPage.auMigration p[style] { font-size: 16px !important; }
+
+@media (max-width: 1024px) {
+  .aiAgentPage.auPage.auMigration :is(main, .crumbs) a { display: inline-block; min-width: 44px; min-height: 44px; padding-block: 8px; line-height: 1.75; vertical-align: baseline; }
+  .aiAgentPage.auPage.auMigration .agentdir-grid a { display: block; }
+  .aiAgentPage.auPage.auMigration .faq-catnav a { display: flex; align-items: center; }
+  .aiAgentPage.auPage.auMigration .refs a { padding-top: 20px; }
+  .aiAgentPage.auPage.auMigration .hero-grid { grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); gap: 32px; }
+  .aiAgentPage.auPage.auMigration .specpanel-body { padding: 24px 16px; }
+  .aiAgentPage.auPage.auMigration .specrow { padding: 14px 10px; gap: 6px 10px; }
+  .aiAgentPage.auPage.auMigration .specrow:not(:last-child)::before,
+  .aiAgentPage.auPage.auMigration .specrow:not(:last-child)::after { left: 28px; }
+}
+
+@media (max-width: 820px) {
+  .aiAgentPage.auPage.auMigration .hero-grid { grid-template-columns: minmax(0,1fr); gap: 40px; }
+  .aiAgentPage.auPage.auMigration .migration-platform-layout,
+  .aiAgentPage.auPage.auMigration #australian-stack .factswrap,
+  .aiAgentPage.auPage.auMigration .finalcta > .wrap { grid-template-columns: minmax(0,1fr); gap: 32px; }
+  .aiAgentPage.auPage.auMigration .migration-platform-photo { position: static; }
+  .aiAgentPage.auPage.auMigration #australian-stack .au-panel { grid-column: 1; margin-top: 0; }
+  .aiAgentPage.auPage.auMigration .migration-photo { border-radius: 18px; }
+  .aiAgentPage.auPage.auMigration .agentdir .agentdir-grid { grid-template-columns: minmax(0,1fr); }
+  .aiAgentPage.auPage.auMigration .specpanel-foot { min-height: 0; }
+  .aiAgentPage.auPage.auMigration .specrow { min-height: 132px; }
+  .aiAgentPage.auPage.auMigration .specpanel-bar { padding: 18px 16px; }
+  .aiAgentPage.auPage.auMigration .trigrows li { grid-template-columns: minmax(0,1fr); gap: 8px; }
+  .aiAgentPage.auPage.auMigration .trigrows .t { grid-column: 1; grid-row: auto; justify-self: start; }
+}
+
+@media (max-width: 430px) {
+  .aiAgentPage.auPage.auMigration h2,
+  .aiAgentPage.auPage.auMigration .facts h2,
+  .aiAgentPage.auPage.auMigration .faqHeading { font-size: clamp(25px,6.5vw,28px); line-height: 1.2; }
+  .aiAgentPage.auPage.auMigration .finalcta h2 { font-size: 28px; }
+  .aiAgentPage.auPage.auMigration .migration-platform-layout .plat { grid-template-columns: 28px minmax(0,1fr); gap: 10px; }
+  .aiAgentPage.auPage.auMigration .fact { grid-template-columns: 28px minmax(0,1fr); gap: 12px; }
+  .aiAgentPage.auPage.auMigration .faqitem summary { grid-template-columns: 28px minmax(0,1fr) 24px; gap: 10px; }
+  .aiAgentPage.auPage.auMigration .ans { margin-left: 0; }
+  .aiAgentPage.auPage.auMigration .finalcta .ctas .btn { width: 100%; padding-inline: 14px; }
+}
