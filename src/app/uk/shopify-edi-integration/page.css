@@ -33,6 +33,7 @@
 .uk-edi-visual .faq-cat-label { font-size: 12px; }
 .uk-edi-visual .faq-cat-label { color: #B23E13; }
 .uk-edi-visual .faq-item[open] summary .q-text { color: #B23E13; }
+.uk-edi-visual main .faq-sidebar-nav .faq-nav-count { color: var(--n600); }
 .uk-edi-visual .edi-sources a { display: inline-flex; align-items: center; min-height: 44px; }
 .uk-edi-visual .stats-band a { display: inline-flex; align-items: center; min-height: 44px; }
 .uk-edi-visual .stats-band li > div { color: #F05A28 !important; }
@@ -42,6 +43,7 @@
 .uk-edi-visual .faq-sidebar-nav a,
 .uk-edi-visual .faq-item summary { min-height: 44px; }
 .uk-edi-visual main [id] { scroll-margin-top: 104px; }
+.uk-edi-visual main nav[aria-label="Breadcrumb"] a:hover { opacity: 1; }
 .uk-edi-visual main a:focus-visible,
 .uk-edi-visual main button:focus-visible,
 .uk-edi-visual main input:focus-visible,
@@ -53,7 +55,7 @@
   .uk-edi-visual .edi-ownership-intro .edi-photo { margin-top: 0; }
   .uk-edi-visual h1 { font-size: clamp(32px, 7.8vw, 42px); }
   .uk-edi-visual h2 { font-size: clamp(23px, 5.5vw, 32px); line-height: 1.2; }
-  .uk-edi-visual main p { font-size: 16px !important; }
+  .uk-edi-visual main p:where(:not(.font-fj-display,.font-fj-mono)) { font-size: 16px !important; }
   .uk-edi-visual main input:not([aria-hidden="true"]) { font-size: 16px; }
   .uk-edi-visual main p[style*="Geist Mono"],
   .uk-edi-visual main p[style*="font-family"],

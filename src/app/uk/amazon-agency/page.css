@@ -1,6 +1,6 @@
 .uk-amazon-visual main { min-width: 0; padding-bottom: 40px; }
 .uk-amazon-visual main :is(h1,h2,h3) { text-wrap: balance; overflow-wrap: break-word; }
-.uk-amazon-visual main p { text-wrap: pretty; font-size: 16px !important; }
+.uk-amazon-visual main p:where(:not(.font-fj-display,.font-fj-mono)) { text-wrap: pretty; font-size: 16px !important; }
 .uk-amazon-visual main .lead { font-size: clamp(17px,1.35vw,19px) !important; }
 .uk-amazon-visual main li { font-size: 16px; }
 .uk-amazon-visual main .sec-lg { padding-block: clamp(48px,7vw,96px); }
@@ -74,10 +74,12 @@
 .uk-amazon-visual footer.us-footer details { border-color: var(--uf-line); }
 .uk-amazon-visual footer.us-footer :is(a,summary):focus-visible { outline-color: var(--uf-ink); }
 .uk-amazon-visual main h2 { font-size: clamp(1.4rem,2.8vw,2.375rem); }
-.uk-amazon-visual main :is(.faq-sidebar-cta a,.faq-item[open] .q-text) { color: #B23E13; }
+.uk-amazon-visual main .faq-item[open] summary .q-text { color: #B23E13; }
 .uk-amazon-visual main .city-pill:hover { background: #B23E13; border-color: #B23E13; color: #fff; }
-.uk-amazon-visual main .btn-primary:hover { background: #B23E13; }
 .uk-amazon-visual main .btn-outline:hover { border-color: #B23E13; color: #B23E13; }
 .uk-amazon-visual main .dark-sec .btn-outline:hover { border-color: #fff; color: #fff; }
 .uk-amazon-visual main .def .lab { font-size: 12px; }
 .uk-amazon-visual .stats-band li > div { color: #F05A28 !important; }
+.uk-amazon-visual main .faq-sidebar-nav .faq-nav-count { color: var(--n600); }
+.uk-amazon-visual main .byline .av { color: var(--ink); }
+.uk-amazon-visual main nav[aria-label="Breadcrumb"] a:hover { opacity: 1; }
