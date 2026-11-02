@@ -238,6 +238,19 @@
 }
 
 @media (max-width: 560px) {
+  .aiAgentPage.auPage.au-xero-visual-11 .hero .eyebrow {
+    min-height: 40px;
+    line-height: 20px;
+  }
+
+  .aiAgentPage.auPage.au-xero-visual-11 #au-content .lead {
+    font-size: 16px;
+  }
+
+  .aiAgentPage.auPage.au-xero-visual-11 #au-content [data-hero-inline-form] input:is([type='text'], [type='email'], [type='tel']) {
+    font-size: 16px;
+  }
+
   .aiAgentPage.auPage.au-xero-visual-11 .hero {
     padding-block: 20px 44px;
   }
