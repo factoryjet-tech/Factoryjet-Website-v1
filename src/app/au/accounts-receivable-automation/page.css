@@ -1,0 +1,131 @@
+/* Only the accounts receivable page consumes these visual and readability rules. */
+.auReceivablesVisual10 .aiAgentPage.auPage main :is(p, li, td, th) {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.auReceivablesVisual10 .aiAgentPage.auPage main .au-split .au-numlist li,
+.auReceivablesVisual10 .aiAgentPage.auPage main [data-hero-inline-form] :is(input:not([aria-hidden="true"]), button[type="submit"]),
+.auReceivablesVisual10 .aiAgentPage.auPage main .au-midcta .font-fj-body { font-size: 16px; }
+.auReceivablesVisual10 .aiAgentPage.auPage :is(h1, h2, h3) { text-wrap: balance; }
+.auReceivablesVisual10 .aiAgentPage.auPage p { text-wrap: pretty; }
+.auReceivablesVisual10 .aiAgentPage.auPage .hero h1 {
+  font-size: clamp(36px, 3.5vw, 50px);
+  line-height: 1.1;
+  max-width: none;
+}
+.auReceivablesVisual10 .aiAgentPage.auPage :is(.eyebrow, .capid, .factlabel, .idx, .tag, .sys, .sys span, .specpanel-bar, .specpanel-foot, .faq-category, .faq-nav-count, .faqsrc, .tableSubLabel, .qid, .upd, .plat-flag, .vtag, .ledgercell .k, .trigrows .t) {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.auReceivablesVisual10 .aiAgentPage.auPage :is(.ledgercell .v, .byline .who, .agentdir-t, .agentdir-l, .trigrows .m, .qtext) {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.auReceivablesVisual10 .aiAgentPage.auPage .au-numlist li::before { font-size: 12px; }
+.auReceivablesVisual10 .aiAgentPage.auPage :is(p, .ledgercell .k, .byline .who, .plat-name h3) a {
+  display: inline-block;
+  max-width: 100%;
+  min-width: 44px;
+  min-height: 44px;
+  padding-block: 10px;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+.auReceivablesVisual10 .aiAgentPage.auPage .crumbs a {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+}
+.auReceivablesVisual10 .aiAgentPage.auPage main .faq-catnav a { min-width: 44px; min-height: 44px; }
+.auReceivablesVisual10 .aiAgentPage.auPage :is(.workflow-toggle, .workflow-replay) { width: 44px; height: 44px; }
+.auReceivablesVisual10 .aiAgentPage.auPage .specpanel-bar { gap: 10px; }
+.auReceivablesVisual10 .aiAgentPage.auPage .specpanel-body { padding: 24px 18px; }
+.auReceivablesVisual10 .aiAgentPage.auPage .specrow {
+  grid-template-columns: 32px minmax(0, 1fr);
+  width: 100%;
+  margin-left: 0;
+  gap: 5px 12px;
+  padding: 16px;
+}
+.auReceivablesVisual10 .aiAgentPage.auPage .specrow .workflow-icon { grid-column: 1; grid-row: 1 / 4; width: 32px; height: 32px; }
+.auReceivablesVisual10 .aiAgentPage.auPage .specrow :is(.idx, .title, .tag) { grid-column: 2; grid-row: auto; }
+.auReceivablesVisual10 .aiAgentPage.auPage .specrow .title { font-size: 16px; }
+.auReceivablesVisual10 .aiAgentPage.auPage .specrow .tag { justify-self: start; }
+.auReceivablesVisual10 .aiAgentPage.auPage .specrow:not(:last-child)::after { left: 31px; }
+.auReceivablesVisual10 .aiAgentPage.auPage .specrow:not(:last-child)::before { left: 29px; }
+.auReceivablesVisual10 .aiAgentPage.auPage .ar-photo {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 3px 8px -5px rgba(20, 17, 15, .12), 0 22px 40px -30px rgba(20, 17, 15, .23);
+  aspect-ratio: 3 / 2;
+}
+.auReceivablesVisual10 .aiAgentPage.auPage .ar-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+}
+.auReceivablesVisual10 .aiAgentPage.auPage .ar-jobs-editorial {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  gap: clamp(24px, 3vw, 44px);
+  align-items: start;
+}
+.auReceivablesVisual10 .aiAgentPage.auPage .ar-jobs-editorial > .ar-photo { position: sticky; top: 112px; }
+.auReceivablesVisual10 .aiAgentPage.auPage .ar-jobs-editorial .capgrid { grid-template-columns: 1fr; gap: 16px; }
+.auReceivablesVisual10 .aiAgentPage.auPage .ar-jobs-editorial .capgrid > .cap:nth-child(n) { grid-column: auto; padding: 26px 28px; }
+.auReceivablesVisual10 .aiAgentPage.auPage .ar-media-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  gap: clamp(28px, 4vw, 60px);
+  align-items: center;
+  margin-bottom: 38px;
+}
+.auReceivablesVisual10 .aiAgentPage.auPage .ar-media-intro > .section-head { display: block; margin: 0; max-width: none; }
+.auReceivablesVisual10 .aiAgentPage.auPage .ar-media-intro > .section-head h2 { margin-top: 16px; }
+.auReceivablesVisual10 .aiAgentPage.auPage .timeline.timeline-4 {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  gap: 28px 48px;
+}
+.auReceivablesVisual10 .aiAgentPage.auPage .timeline.timeline-4::before,
+.auReceivablesVisual10 .aiAgentPage.auPage .timeline.timeline-4 .tnode::before { display: none; }
+.auReceivablesVisual10 .aiAgentPage.auPage .timeline .tnode summary { min-height: 44px; padding-block: 8px; }
+.auReceivablesVisual10 .aiAgentPage.auPage main .process .tnode:last-child .idx { background: var(--accent-text); color: #fff; }
+.auReceivablesVisual10 .aiAgentPage.auPage .agentdir .agentdir-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+.auReceivablesVisual10 .aiAgentPage.auPage .finalcta > .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  gap: clamp(28px, 4vw, 60px);
+  align-items: center;
+}
+.auReceivablesVisual10 .aiAgentPage.auPage .finalcta h2 { max-width: none; font-size: clamp(30px, 3.2vw, 44px); }
+.auReceivablesVisual10 .aiAgentPage.auPage .finalcta .ctas { margin-top: 26px; }
+.auReceivablesVisual10 .aiAgentPage.auPage .byline .av { background: var(--accent-text); color: #fff; }
+.auReceivablesVisual10 .aiAgentPage.auPage :is(details[open] h3, .faqitem[open] .qtext, .faqsrc) { color: var(--accent-text); }
+.auReceivablesVisual10 .aiAgentPage.auPage .faq-nav-count { color: var(--body); }
+.auReceivablesVisual10 .aiAgentPage.auPage :is(a, button, input, summary):focus-visible { outline: 2px solid var(--accent-text); outline-offset: 4px; }
+.auReceivablesVisual10 footer.us-footer :is(.us-footer__tagline, .us-footer__verification) { font-size: 16px; }
+@media (max-width: 900px) {
+  .auReceivablesVisual10 .aiAgentPage.auPage :is(.ar-jobs-editorial, .ar-media-intro, .finalcta > .wrap) { grid-template-columns: 1fr; }
+  .auReceivablesVisual10 .aiAgentPage.auPage .ar-jobs-editorial > .ar-photo { position: static; }
+  .auReceivablesVisual10 .aiAgentPage.auPage :is(.ar-media-intro, .ar-jobs-editorial, .finalcta > .wrap) > .ar-photo { max-width: 640px; }
+  .auReceivablesVisual10 .aiAgentPage.auPage .ar-jobs-editorial { gap: 28px; }
+  .auReceivablesVisual10 .aiAgentPage.auPage .timeline.timeline-4 { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .auReceivablesVisual10 .aiAgentPage.auPage .hero h1 { font-size: clamp(25px, 7.1vw, 31px); line-height: 1.14; }
+  .auReceivablesVisual10 .aiAgentPage.auPage .hero h1 .hero-emphasis { display: block; }
+  .auReceivablesVisual10 .aiAgentPage.auPage h2 { font-size: clamp(24px, 6.3vw, 28px); line-height: 1.2; max-width: none; }
+  .auReceivablesVisual10 .aiAgentPage.auPage .finalcta h2 { font-size: clamp(26px, 6.8vw, 30px); }
+  .auReceivablesVisual10 .aiAgentPage.auPage .specpanel-body { padding-inline: 12px; }
+  .auReceivablesVisual10 .aiAgentPage.auPage .specpanel-bar { padding: 18px; }
+  .auReceivablesVisual10 .aiAgentPage.auPage .specpanel-bar .sys { margin-left: 0; flex-wrap: wrap; }
+  .auReceivablesVisual10 .aiAgentPage.auPage .agentdir .agentdir-grid { grid-template-columns: 1fr; }
+  .auReceivablesVisual10 .aiAgentPage.auPage .ar-photo { border-radius: 16px; }
+}
