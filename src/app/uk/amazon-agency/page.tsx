@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 
 /* /uk/amazon-agency, built 2026-10-29.
 
@@ -41,7 +42,7 @@ const T = {
   ink: '#0F0F12',
   n200: '#E5E5E0',
   n400: '#6E6E68',
-  orange: '#FF5C00',
+  orange: '#F05A28',
   green: '#047857',
   small: '#B23E13',
   fm: "'Geist Mono',monospace",
@@ -244,7 +245,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
+const srcNote = { fontFamily: T.fm, fontSize: 12, color: T.n400, marginTop: 12 } as const;
 const srcLink = { textDecoration: 'underline' } as const;
 
 const STEPS = [
@@ -264,7 +265,7 @@ export default function AmazonAgencyUKPage() {
       <script id="ld-uk-amazon-agency" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents uk-amazon-visual">
       <main>
 
         <Breadcrumbs items={crumbs} />
@@ -272,7 +273,7 @@ export default function AmazonAgencyUKPage() {
         {/* ═══ 1. HERO ═══ */}
         <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
           <div className="wrap">
-            <div className="col-6040">
+            <div className="col-6040 amazon-hero-grid">
               <div>
                 <div className="flex-wrap mb-6">
                   <span className="chip"><span className="dot dot-orange" />UK Amazon Agency</span>
@@ -301,8 +302,7 @@ export default function AmazonAgencyUKPage() {
                 </div>
               </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/service-ecommerce-order-packing-bench.webp" width={1200} height={900} fetchPriority="high" decoding="async" alt="Two people at a packing bench in a bright stockroom, one boxing a grey jumper, the other checking an order on a phone beside a parcel scale" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+              <div className="card amazon-hero-card" style={{ padding: 8 }}>
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What changes</span>
                   <div className="scorecard-row">
@@ -377,15 +377,22 @@ export default function AmazonAgencyUKPage() {
         {/* ═══ 4. WHAT WE RUN ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
+            <div className="amazon-service-intro">
+              <div>
               <span className="eyebrow">What we take on</span>
               <h2>Amazon agency services for UK brands, front of house and back office</h2>
               <p className="lead mt-4">
                 Many Amazon agencies in the UK stop at the listing and the ad account. Many integration firms rarely
                 work inside Seller Central. The trouble often sits between the two, so we cover both.
               </p>
+              </div>
+              <picture className="amazon-photo">
+                <source type="image/avif" srcSet="/images/uk/amazon-agency/catalogue-and-settlements-office-640.avif 640w, /images/uk/amazon-agency/catalogue-and-settlements-office-960.avif 960w, /images/uk/amazon-agency/catalogue-and-settlements-office-1280.avif 1280w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1279px) 40vw, 480px" />
+                <source type="image/webp" srcSet="/images/uk/amazon-agency/catalogue-and-settlements-office-640.webp 640w, /images/uk/amazon-agency/catalogue-and-settlements-office-960.webp 960w, /images/uk/amazon-agency/catalogue-and-settlements-office-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1279px) 40vw, 480px" />
+                <img src="/images/uk/amazon-agency/catalogue-and-settlements-office-960.webp" srcSet="/images/uk/amazon-agency/catalogue-and-settlements-office-640.webp 640w, /images/uk/amazon-agency/catalogue-and-settlements-office-960.webp 960w, /images/uk/amazon-agency/catalogue-and-settlements-office-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1279px) 40vw, 480px" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people compare plain ceramic samples with product photos and grey order rows on separate monitors." />
+              </picture>
             </div>
-            <ul className="col-3 mt-12">
+            <ul className="col-3 mt-12 amazon-service-bento">
               <li className="svc-card">
                 <h3>Catalogue and listings</h3>
                 <p className="mt-4">Titles, bullets, images, variations and A+ Content (the richer images and text brands can add to a product page) written for Amazon.co.uk shoppers in British English, with GTINs (the barcode numbers on each product), brand fields and categories checked so listings stop getting suppressed or merged.</p>
@@ -484,13 +491,20 @@ export default function AmazonAgencyUKPage() {
         {/* ═══ 6. AMAZON EU FROM THE UK ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div style={{ maxWidth: 820 }}>
+            <div className="amazon-eu-intro">
+              <div>
               <span className="eyebrow">Amazon EU from the UK</span>
               <h2>Selling on Amazon Germany, France and the EU from a UK base</h2>
               <p className="lead mt-4">
                 Since Brexit there is no single route. A UK brand chooses between shipping from UK stock and holding
                 stock inside the EU, and each choice brings different paperwork.
               </p>
+              </div>
+              <picture className="amazon-photo">
+                <source type="image/avif" srcSet="/images/uk/amazon-agency/uk-eu-dispatch-routes-640.avif 640w, /images/uk/amazon-agency/uk-eu-dispatch-routes-960.avif 960w, /images/uk/amazon-agency/uk-eu-dispatch-routes-1280.avif 1280w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1279px) 40vw, 480px" />
+                <source type="image/webp" srcSet="/images/uk/amazon-agency/uk-eu-dispatch-routes-640.webp 640w, /images/uk/amazon-agency/uk-eu-dispatch-routes-960.webp 960w, /images/uk/amazon-agency/uk-eu-dispatch-routes-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1279px) 40vw, 480px" />
+                <img src="/images/uk/amazon-agency/uk-eu-dispatch-routes-960.webp" srcSet="/images/uk/amazon-agency/uk-eu-dispatch-routes-640.webp 640w, /images/uk/amazon-agency/uk-eu-dispatch-routes-960.webp 960w, /images/uk/amazon-agency/uk-eu-dispatch-routes-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1279px) 40vw, 480px" width={1536} height={1024} loading="lazy" decoding="async" alt="A man checks an A4 sheet beside individual parcels and a separate pallet of plain cartons in a warehouse." />
+              </picture>
             </div>
             <div className="stack mt-8" style={{ maxWidth: 820 }}>
               <h3>1. Ship from the UK</h3>
@@ -583,7 +597,7 @@ export default function AmazonAgencyUKPage() {
                 them with everything we built in your hands.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="stack mt-10 amazon-steps" style={{ maxWidth: 900 }}>
               {STEPS.map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
@@ -705,7 +719,7 @@ export default function AmazonAgencyUKPage() {
                 says on its own website. Talk to two or three and ask each one who will run your account.
               </p>
             </div>
-            <ul className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ul className="stack mt-10 amazon-agencies" style={{ maxWidth: 900 }}>
               {AGENCIES.map((a, i) => (
                 <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 30 }}>{i + 1}</span>
@@ -809,7 +823,7 @@ export default function AmazonAgencyUKPage() {
         </section>
 
         {/* ═══ 15. SOURCES ═══ */}
-        <section className="sec">
+        <section className="sec amazon-sources">
           <div className="wrap">
             <div style={{ maxWidth: 900 }}>
               <span className="eyebrow">Sources</span>
@@ -828,7 +842,9 @@ export default function AmazonAgencyUKPage() {
 
         {/* ═══ 16. FINAL CTA (the only dark section) ═══ */}
         <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+          <div className="wrap amazon-final-wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+            <div className="amazon-final-grid">
+              <div>
             <span className="eyebrow">Ready when you are</span>
             <h2>Find out where your Amazon channel loses money</h2>
             <p className="mt-4">
@@ -836,9 +852,16 @@ export default function AmazonAgencyUKPage() {
               Amazon stores, your systems and what is going wrong, and we show you work on your own listings before
               you sign anything.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8 amazon-final-actions" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="See my listings draft" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/uk/ecommerce-consultant" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See ecommerce consulting</a>
+            </div>
+              </div>
+              <picture className="amazon-photo">
+                <source type="image/avif" srcSet="/images/uk/amazon-agency/marketplace-profit-review-640.avif 640w, /images/uk/amazon-agency/marketplace-profit-review-960.avif 960w, /images/uk/amazon-agency/marketplace-profit-review-1280.avif 1280w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1279px) 40vw, 480px" />
+                <source type="image/webp" srcSet="/images/uk/amazon-agency/marketplace-profit-review-640.webp 640w, /images/uk/amazon-agency/marketplace-profit-review-960.webp 960w, /images/uk/amazon-agency/marketplace-profit-review-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1279px) 40vw, 480px" />
+                <img src="/images/uk/amazon-agency/marketplace-profit-review-960.webp" srcSet="/images/uk/amazon-agency/marketplace-profit-review-640.webp 640w, /images/uk/amazon-agency/marketplace-profit-review-960.webp 960w, /images/uk/amazon-agency/marketplace-profit-review-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1279px) 40vw, 480px" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people review unlabelled bars on a monitor beside plain product cartons and stacks of paper." />
+              </picture>
             </div>
           </div>
         </section>
