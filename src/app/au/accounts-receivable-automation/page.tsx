@@ -12,7 +12,6 @@ import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
-import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/accounts-receivable-automation';
 const PUBLISHED = '2026-10-29';
@@ -311,7 +310,7 @@ const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', st
 
 export default function AccountsReceivableAutomationAUPage() {
   return (
-    <div className="auReceivablesVisual10">
+    <>
       <script id="ld-au-accounts-receivable-automation" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <style>{`.ara-swipe{display:none;margin:0 0 10px;font-size:13px;color:var(--muted)}@media (max-width:767px){.ara-swipe{display:block}}`}</style>
@@ -504,14 +503,6 @@ export default function AccountsReceivableAutomationAUPage() {
                 reply sorting, then add payment matching once a month of results has been checked.
               </p>
             </div>
-            <div className="ar-jobs-editorial">
-            <picture className="ar-photo">
-              <source type="image/avif" srcSet="/images/au/accounts-receivable-automation/credit-officer-debtor-followup-640.avif 640w, /images/au/accounts-receivable-automation/credit-officer-debtor-followup-960.avif 960w, /images/au/accounts-receivable-automation/credit-officer-debtor-followup-1280.avif 1280w" sizes="(min-width: 1280px) 470px, (min-width: 901px) 40vw, (min-width: 701px) 640px, calc(100vw - 40px)" />
-              <source type="image/webp" srcSet="/images/au/accounts-receivable-automation/credit-officer-debtor-followup-640.webp 640w, /images/au/accounts-receivable-automation/credit-officer-debtor-followup-960.webp 960w, /images/au/accounts-receivable-automation/credit-officer-debtor-followup-1280.webp 1280w" sizes="(min-width: 1280px) 470px, (min-width: 901px) 40vw, (min-width: 701px) 640px, calc(100vw - 40px)" />
-              <img src="/images/au/accounts-receivable-automation/credit-officer-debtor-followup-960.webp" srcSet="/images/au/accounts-receivable-automation/credit-officer-debtor-followup-640.webp 640w, /images/au/accounts-receivable-automation/credit-officer-debtor-followup-960.webp 960w, /images/au/accounts-receivable-automation/credit-officer-debtor-followup-1280.webp 1280w" sizes="(min-width: 1280px) 470px, (min-width: 901px) 40vw, (min-width: 701px) 640px, calc(100vw - 40px)"
-                width="1536" height="1024" loading="lazy" decoding="async"
-                alt="A woman holds a telephone handset and checks a paper beside a monitor showing grey rows and an orange row." />
-            </picture>
             <div className="capgrid">
               {JOBS.map((j, i) => {
                 const n = String(i + 1).padStart(2, '0');
@@ -523,7 +514,6 @@ export default function AccountsReceivableAutomationAUPage() {
                   </div>
                 );
               })}
-            </div>
             </div>
             <div className="agentdir-group chg-group">
               <div className="agentdir-label"><span className="capid">GRP‑01</span><h3>What stays with your people</h3></div>
@@ -542,7 +532,6 @@ export default function AccountsReceivableAutomationAUPage() {
         {/* ═══ INTEGRATIONS TABLE ═══ */}
         <section className="section integrations" id="integrations">
           <div className="wrap">
-            <div className="ar-media-intro">
             <div className="section-head">
               <div className="eyebrow">Works inside the tools you already use</div>
               <h2>Xero and MYOB integration for receivables: what the agent reads and what it does</h2>
@@ -550,14 +539,6 @@ export default function AccountsReceivableAutomationAUPage() {
                 Reminders, history notes and payment records land in the same Xero or MYOB file your team already works in,
                 through each product’s published API and with the least access each job needs.
               </p>
-            </div>
-            <picture className="ar-photo">
-              <source type="image/avif" srcSet="/images/au/accounts-receivable-automation/bookkeeper-receivables-integration-640.avif 640w, /images/au/accounts-receivable-automation/bookkeeper-receivables-integration-960.avif 960w, /images/au/accounts-receivable-automation/bookkeeper-receivables-integration-1280.avif 1280w" sizes="(min-width: 1280px) 470px, (min-width: 901px) 40vw, (min-width: 701px) 640px, calc(100vw - 40px)" />
-              <source type="image/webp" srcSet="/images/au/accounts-receivable-automation/bookkeeper-receivables-integration-640.webp 640w, /images/au/accounts-receivable-automation/bookkeeper-receivables-integration-960.webp 960w, /images/au/accounts-receivable-automation/bookkeeper-receivables-integration-1280.webp 1280w" sizes="(min-width: 1280px) 470px, (min-width: 901px) 40vw, (min-width: 701px) 640px, calc(100vw - 40px)" />
-              <img src="/images/au/accounts-receivable-automation/bookkeeper-receivables-integration-960.webp" srcSet="/images/au/accounts-receivable-automation/bookkeeper-receivables-integration-640.webp 640w, /images/au/accounts-receivable-automation/bookkeeper-receivables-integration-960.webp 960w, /images/au/accounts-receivable-automation/bookkeeper-receivables-integration-1280.webp 1280w" sizes="(min-width: 1280px) 470px, (min-width: 901px) 40vw, (min-width: 701px) 640px, calc(100vw - 40px)"
-                width="1536" height="1024" loading="lazy" decoding="async"
-                alt="A silver haired woman and a man compare sheets of grey rows beside a laptop showing linked groups of grey records and an orange mug." />
-            </picture>
             </div>
             <p className="ara-swipe">Swipe sideways to see every column.</p>
             <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable integrations table" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
@@ -643,7 +624,6 @@ export default function AccountsReceivableAutomationAUPage() {
         {/* ═══ HOW WE BUILD IT → process timeline ═══ */}
         <section className="section process" id="how-we-build">
           <div className="wrap">
-            <div className="ar-media-intro">
             <div className="section-head head-stack">
               <div className="eyebrow">How a project runs</div>
               <h2>How we build your accounts receivable agent, in eight steps</h2>
@@ -651,14 +631,6 @@ export default function AccountsReceivableAutomationAUPage() {
                 Step two is working software on your own invoices before any contract. Open a step
                 to see what happens in it.
               </p>
-            </div>
-            <picture className="ar-photo">
-              <source type="image/avif" srcSet="/images/au/accounts-receivable-automation/finance-manager-reminder-approval-640.avif 640w, /images/au/accounts-receivable-automation/finance-manager-reminder-approval-960.avif 960w, /images/au/accounts-receivable-automation/finance-manager-reminder-approval-1280.avif 1280w" sizes="(min-width: 1280px) 470px, (min-width: 901px) 40vw, (min-width: 701px) 640px, calc(100vw - 40px)" />
-              <source type="image/webp" srcSet="/images/au/accounts-receivable-automation/finance-manager-reminder-approval-640.webp 640w, /images/au/accounts-receivable-automation/finance-manager-reminder-approval-960.webp 960w, /images/au/accounts-receivable-automation/finance-manager-reminder-approval-1280.webp 1280w" sizes="(min-width: 1280px) 470px, (min-width: 901px) 40vw, (min-width: 701px) 640px, calc(100vw - 40px)" />
-              <img src="/images/au/accounts-receivable-automation/finance-manager-reminder-approval-960.webp" srcSet="/images/au/accounts-receivable-automation/finance-manager-reminder-approval-640.webp 640w, /images/au/accounts-receivable-automation/finance-manager-reminder-approval-960.webp 960w, /images/au/accounts-receivable-automation/finance-manager-reminder-approval-1280.webp 1280w" sizes="(min-width: 1280px) 470px, (min-width: 901px) 40vw, (min-width: 701px) 640px, calc(100vw - 40px)"
-                width="1536" height="1024" loading="lazy" decoding="async"
-                alt="A man touches a grey rectangle on a tablet beside two trays of blank paper and an orange folder." />
-            </picture>
             </div>
             <div className="timeline timeline-4">
               {BUILD_STEPS.map((s) => (
@@ -876,7 +848,6 @@ export default function AccountsReceivableAutomationAUPage() {
         {/* ═══ FINAL CTA (light) ═══ */}
         <section className="finalcta" id="finalcta">
           <div className="wrap">
-            <div className="ar-final-copy">
             <div>
               <div className="eyebrow">Ready when you are</div>
               <h2>Fewer 90-day debtors, and disputes in the right hands</h2>
@@ -889,20 +860,12 @@ export default function AccountsReceivableAutomationAUPage() {
               <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               <a className="btn btn-ghost" href="/au/ai-agents">See all AI agent work</a>
             </div>
-            </div>
-            <picture className="ar-photo">
-              <source type="image/avif" srcSet="/images/au/accounts-receivable-automation/wholesale-dispatch-debtor-review-640.avif 640w, /images/au/accounts-receivable-automation/wholesale-dispatch-debtor-review-960.avif 960w, /images/au/accounts-receivable-automation/wholesale-dispatch-debtor-review-1280.avif 1280w" sizes="(min-width: 1280px) 470px, (min-width: 901px) 40vw, (min-width: 701px) 640px, calc(100vw - 40px)" />
-              <source type="image/webp" srcSet="/images/au/accounts-receivable-automation/wholesale-dispatch-debtor-review-640.webp 640w, /images/au/accounts-receivable-automation/wholesale-dispatch-debtor-review-960.webp 960w, /images/au/accounts-receivable-automation/wholesale-dispatch-debtor-review-1280.webp 1280w" sizes="(min-width: 1280px) 470px, (min-width: 901px) 40vw, (min-width: 701px) 640px, calc(100vw - 40px)" />
-              <img src="/images/au/accounts-receivable-automation/wholesale-dispatch-debtor-review-960.webp" srcSet="/images/au/accounts-receivable-automation/wholesale-dispatch-debtor-review-640.webp 640w, /images/au/accounts-receivable-automation/wholesale-dispatch-debtor-review-960.webp 960w, /images/au/accounts-receivable-automation/wholesale-dispatch-debtor-review-1280.webp 1280w" sizes="(min-width: 1280px) 470px, (min-width: 901px) 40vw, (min-width: 701px) 640px, calc(100vw - 40px)"
-                width="1536" height="1024" loading="lazy" decoding="async"
-                alt="A man passes a blank sheet through a dispatch window to a woman beside paper trays and an orange folder." />
-            </picture>
           </div>
         </section>
 
       </main>
       </div>
       <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} />
-    </div>
+    </>
   );
 }
