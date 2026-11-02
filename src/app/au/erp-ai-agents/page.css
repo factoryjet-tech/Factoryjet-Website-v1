@@ -1,0 +1,97 @@
+/* The existing route surface, fonts, content and shared components are unchanged. */
+.auErpVisual9.aiAgentPage.auPage { --accent-text: #B23E13; }
+.auErpVisual9.aiAgentPage.auPage :is(h1, h2, h3) { text-wrap: balance; }
+.auErpVisual9.aiAgentPage.auPage :is(p, li) { text-wrap: pretty; }
+.auErpVisual9.aiAgentPage.auPage :is(.wrap, .hero-copy, .factlist, .plat-name, .plat-build, .au-panel, .ctas) { min-width: 0; }
+.auErpVisual9.aiAgentPage.auPage :is(section, [id^="faq-"]) { scroll-margin-top: 112px; }
+.auErpVisual9.aiAgentPage.auPage :is(button, input, a, summary, .tablewrap):focus-visible { outline: 2px solid var(--accent-text); outline-offset: 4px; }
+.auErpVisual9.aiAgentPage.auPage :is(.lead, .fact p, .plat-build, .plat-head p, .au-split > div > p, .au-panel p, .au-numlist li, .ans, .tnode p, .ledgercell .v, .agentdir-l, .refs a, .byline .who) { font-size: 16px; line-height: 1.75; }
+.auErpVisual9.aiAgentPage.auPage :is(.eyebrow, .factlabel, .idx, .tag, .sys, .sec, .capid, .qid, .faq-nav-count, .faq-category, .agentdir-count, .ledgercell .k, .specpanel-bar, .specpanel-foot, .byline .upd, .trigrows .t, .trigrows .n) { font-size: 12px; }
+.auErpVisual9.aiAgentPage.auPage .au-numlist li::before { font-size: 12px; }
+.auErpVisual9.aiAgentPage.auPage :is(.trigrows .m, .qtext, .agentdir-t, .btn) { font-size: 16px; }
+.auErpVisual9.aiAgentPage.auPage .au-note { font-size: 16px; }
+.auErpVisual9.aiAgentPage.auPage :is(.statusdot, .specrow) { animation: none; }
+.auErpVisual9.aiAgentPage.auPage .specpanel { box-shadow: 0 4px 8px -6px #14110f18, 0 20px 44px -30px #14110f30; }
+.auErpVisual9.aiAgentPage.auPage .specrow { grid-template-columns: 38px minmax(0, 1fr); }
+.auErpVisual9.aiAgentPage.auPage .specrow .idx { grid-column: 2; grid-row: 1; }
+.auErpVisual9.aiAgentPage.auPage .specrow .title { grid-column: 2; grid-row: 2; font-size: 16px; }
+.auErpVisual9.aiAgentPage.auPage .specrow .tag { grid-column: 2; grid-row: 3; width: fit-content; margin-top: 4px; }
+.auErpVisual9.aiAgentPage.auPage .workflow-icon { grid-row: 1 / span 3; }
+.auErpVisual9.aiAgentPage.auPage .specpanel-bar { gap: 10px; }
+.auErpVisual9.aiAgentPage.auPage .sys { flex-wrap: wrap; }
+.auErpVisual9.aiAgentPage.auPage .erp-photo { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: clamp(16px, 2vw, 26px); background: var(--panel); box-shadow: 0 2px 5px #14110f05, 0 18px 38px -28px #14110f35; }
+.auErpVisual9.aiAgentPage.auPage .erp-photo picture { display: block; aspect-ratio: 3 / 2; }
+.auErpVisual9.aiAgentPage.auPage .erp-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; }
+.auErpVisual9.aiAgentPage.auPage .erp-photo.factphoto { margin: 0; top: 112px; }
+.auErpVisual9.aiAgentPage.auPage .facts .wrap { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); gap: 32px clamp(32px, 5vw, 68px); }
+.auErpVisual9.aiAgentPage.auPage .fact { padding-block: 26px; }
+.auErpVisual9.aiAgentPage.auPage .au-split { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+.auErpVisual9.aiAgentPage.auPage .timeline.timeline-4 { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 18px 28px; }
+.auErpVisual9.aiAgentPage.auPage .timeline-4 .tnode::before, .auErpVisual9.aiAgentPage.auPage .timeline-4::before { display: none; }
+.auErpVisual9.aiAgentPage.auPage .timeline .tnode { padding: 24px; border: 1px solid var(--line); border-radius: 16px; }
+.auErpVisual9.aiAgentPage.auPage .tnode summary { min-height: 52px; }
+.auErpVisual9.aiAgentPage.auPage .tnode h3 { margin-top: 16px; font-size: 20px; }
+.auErpVisual9.aiAgentPage.auPage .tnode .idx { position: static; }
+.auErpVisual9.aiAgentPage.auPage .tablewrap { max-width: 100%; overscroll-behavior-x: contain; }
+.auErpVisual9.aiAgentPage.auPage thead th { font-size: 12px; }
+.auErpVisual9.aiAgentPage.auPage tbody :is(th, td) { font-size: 16px; }
+.auErpVisual9.aiAgentPage.auPage .agentdir .agentdir-grid.au-grid-2 { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+.auErpVisual9.aiAgentPage.auPage .agentdir-grid a { min-height: 112px; }
+.auErpVisual9.aiAgentPage.auPage .faq-catnav a { min-height: 44px; font-size: 16px; }
+.auErpVisual9.aiAgentPage.auPage .faqsrc { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; font-size: 12px; }
+.auErpVisual9.aiAgentPage.auPage .refs a { display: flex; align-items: center; min-height: 52px; padding-top: 14px; padding-bottom: 14px; }
+.auErpVisual9.aiAgentPage.auPage .refs a::after { top: 13px; }
+.auErpVisual9.aiAgentPage.auPage :is(.crumbs a, .ledgercell .k a, .byline .who a) { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; }
+.auErpVisual9.aiAgentPage.auPage .finalcta .wrap { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 28px clamp(32px, 4vw, 64px); align-items: start; }
+.auErpVisual9.aiAgentPage.auPage .finalcta .wrap > div:first-child { grid-column: 1; grid-row: 1; }
+.auErpVisual9.aiAgentPage.auPage .erp-demo-photo { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+.auErpVisual9.aiAgentPage.auPage .finalcta .ctas { grid-column: 1; grid-row: 2; margin: 0; }
+.auErpVisual9.aiAgentPage.auPage .au-midcta a { color: #FFFFFF; min-height: 48px; font-size: 16px; }
+.auErpVisual9.aiAgentPage.auPage .au-midcta a:hover { opacity: 1; }
+.auErpVisual9.aiAgentPage.auPage .au-midcta span.font-fj-body.text-sm { font-size: 16px; }
+.auErpVisual9.aiAgentPage.auPage .btn-primary { background: var(--ink); color: #FFFFFF; }
+.auErpVisual9.aiAgentPage.auPage .btn-primary:hover { background: var(--accent-text); color: #FFFFFF; }
+.auErpVisual9.aiAgentPage.auPage .btn-ghost { color: var(--ink); }
+.auErpVisual9.aiAgentPage.auPage [data-hero-inline-form] :is(input:not([aria-hidden="true"]), button) { font-size: 16px; }
+.auErpVisual9.aiAgentPage.auPage [data-hero-inline-form] > div > div:has(> span) { font-size: 16px !important; }
+.auErpVisual9.aiAgentPage.auPage [data-hero-inline-form] :is([role="alert"], [role="status"]) { font-size: 16px; }
+.auErpVisual9.aiAgentPage.auPage + .us-footer { --uf-accent: #B23E13; }
+.auErpVisual9.aiAgentPage.auPage + .us-footer :is(.us-footer__tagline, .us-footer__contact, .us-footer__featured a, .us-footer__mobile-group a, .us-footer__mobile-group > summary, .us-footer__directory > summary, .us-footer__directory-grid a, .us-footer__recognition a, .us-footer__verification, .us-footer__bottom, .us-footer__region a) { font-size: 16px; }
+.auErpVisual9.aiAgentPage.auPage + .us-footer :is(.us-footer__featured a, .us-footer__directory-grid a, .us-footer__recognition a) { min-height: 44px; }
+@media (max-width: 1099px) {
+  .auErpVisual9.aiAgentPage.auPage .facts .wrap { display: block; }
+  .auErpVisual9.aiAgentPage.auPage .facts .section-head { margin-bottom: 30px; max-width: 740px; }
+  .auErpVisual9.aiAgentPage.auPage .erp-photo.factphoto { position: static; max-width: 620px; margin-top: 32px; }
+  .auErpVisual9.aiAgentPage.auPage .finalcta .wrap { display: block; }
+  .auErpVisual9.aiAgentPage.auPage .erp-demo-photo { max-width: 620px; margin-block: 28px; }
+  .auErpVisual9.aiAgentPage.auPage .finalcta .ctas { margin-top: 28px; }
+  .auErpVisual9.aiAgentPage.auPage .plat.plat-2col { grid-template-columns: 44px minmax(0, 3fr) minmax(0, 7fr); }
+  .auErpVisual9.aiAgentPage.auPage .plat h3 { font-size: 20px; }
+}
+@media (max-width: 820px) {
+  .auErpVisual9.aiAgentPage.auPage .au-split, .auErpVisual9.aiAgentPage.auPage .timeline.timeline-4, .auErpVisual9.aiAgentPage.auPage .agentdir .agentdir-grid.au-grid-2 { grid-template-columns: 1fr; }
+  .auErpVisual9.aiAgentPage.auPage .plat.plat-2col { grid-template-columns: 1fr; }
+  .auErpVisual9.aiAgentPage.auPage .hero h1 { max-width: none; }
+  .auErpVisual9.aiAgentPage.auPage .tnode .idx { position: static; }
+  .auErpVisual9.aiAgentPage.auPage .specrow { width: 100%; margin-left: 0; }
+  .auErpVisual9.aiAgentPage.auPage .specrow .title { font-size: 16px; }
+  .auErpVisual9.aiAgentPage.auPage + .us-footer .us-footer__inner { padding-bottom: calc(132px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (max-width: 700px) {
+  .auErpVisual9.aiAgentPage.auPage .hero h1 { font-size: clamp(32px, 8.2vw, 40px); line-height: 1.12; letter-spacing: -.035em; }
+  .auErpVisual9.aiAgentPage.auPage :is(h2, .facts h2, .faqHeading, .finalcta h2) { font-size: clamp(26px, 6.5vw, 34px); line-height: 1.18; }
+  .auErpVisual9.aiAgentPage.auPage .hero .lead { font-size: 16px; }
+  .auErpVisual9.aiAgentPage.auPage .fact { grid-template-columns: 34px minmax(0, 1fr); gap: 10px; }
+  .auErpVisual9.aiAgentPage.auPage .tnode { padding: 20px; }
+  .auErpVisual9.aiAgentPage.auPage .faqitem summary { grid-template-columns: 30px minmax(0, 1fr) 24px; }
+  .auErpVisual9.aiAgentPage.auPage .ans { margin-left: 0; }
+  .auErpVisual9.aiAgentPage.auPage .faq-catnav { align-items: stretch; }
+  .auErpVisual9.aiAgentPage.auPage .faq-catnav a { width: 100%; }
+  .auErpVisual9.aiAgentPage.auPage .trigrows li { grid-template-columns: minmax(0, 1fr) auto; }
+  .auErpVisual9.aiAgentPage.auPage .trigrows .n { grid-column: 1; }
+  .auErpVisual9.aiAgentPage.auPage .trigrows .t { grid-column: 2; grid-row: 1 / span 2; align-self: center; max-width: 12ch; white-space: normal; }
+  .auErpVisual9.aiAgentPage.auPage .finalcta .ctas .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .auErpVisual9.aiAgentPage.auPage *, .auErpVisual9.aiAgentPage.auPage *::before, .auErpVisual9.aiAgentPage.auPage *::after { animation: none; transition: none; }
+}

@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* /uk/erp-ai-agents, built 2026-10-29.
@@ -548,7 +549,7 @@ export default function ErpAiAgentsUKPage() {
       <script id="ld-uk-erp-ai-agents" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents fj-uk-erp-visual">
       <main>
         <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
@@ -583,8 +584,7 @@ export default function ErpAiAgentsUKPage() {
                 </div>
               </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src={`${IMG}/wholesale-warehouse-aisle.webp`} width={1200} height={800} fetchPriority="high" decoding="async" alt="A man in a green polo shirt lifts a plain cardboard box from a shelf in a warehouse aisle beside an orange hand truck" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+              <div className="card fj-erp-hero-scorecard" style={{ padding: 8 }}>
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What the agent drafts, and who signs it off</span>
                   <div className="scorecard-row">
@@ -675,7 +675,11 @@ export default function ErpAiAgentsUKPage() {
                 </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src={`${IMG}/planning-the-agent.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="A man in a charcoal sweater and a woman in a teal shirt look down at a row of blank index cards on a table, one of them orange" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <picture className="fj-erp-photo">
+                  <source type="image/avif" srcSet="/images/uk/erp-ai-agents/finance-director-draft-approval-640.avif 640w, /images/uk/erp-ai-agents/finance-director-draft-approval-960.avif 960w, /images/uk/erp-ai-agents/finance-director-draft-approval-1280.avif 1280w" sizes="(max-width: 720px) calc(100vw - 60px), (max-width: 960px) min(640px, calc(100vw - 68px)), 440px" />
+                  <source type="image/webp" srcSet="/images/uk/erp-ai-agents/finance-director-draft-approval-640.webp 640w, /images/uk/erp-ai-agents/finance-director-draft-approval-960.webp 960w, /images/uk/erp-ai-agents/finance-director-draft-approval-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 60px), (max-width: 960px) min(640px, calc(100vw - 68px)), 440px" />
+                  <img src="/images/uk/erp-ai-agents/finance-director-draft-approval-960.webp" srcSet="/images/uk/erp-ai-agents/finance-director-draft-approval-640.webp 640w, /images/uk/erp-ai-agents/finance-director-draft-approval-960.webp 960w, /images/uk/erp-ai-agents/finance-director-draft-approval-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 60px), (max-width: 960px) min(640px, calc(100vw - 68px)), 440px" width={1280} height={853} loading="lazy" decoding="async" alt="A woman reviews a tablet beside blank cards and A4 documents on a desk." />
+                </picture>
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
                     One card per record. Each card names the system that owns it and the person who approves
@@ -710,15 +714,22 @@ export default function ErpAiAgentsUKPage() {
         {/* 5. THE JOBS */}
         <section className="sec-lg" id="jobs">
           <div className="wrap">
-            <div style={{ maxWidth: 780 }}>
+            <div className="col-6040 fj-erp-jobs-intro">
+              <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">What the agents do</span>
               <h2>Five jobs an ERP agent drafts for a UK sales office or accounts team</h2>
               <p className="lead mt-4">
                 Most clients start with one. Pick the job your team retypes most often, prove it on your own
                 documents, then add the next.
               </p>
+              </div>
+              <picture className="fj-erp-photo">
+                  <source type="image/avif" srcSet="/images/uk/erp-ai-agents/sales-office-order-drafts-640.avif 640w, /images/uk/erp-ai-agents/sales-office-order-drafts-960.avif 960w, /images/uk/erp-ai-agents/sales-office-order-drafts-1280.avif 1280w" sizes="(max-width: 720px) calc(100vw - 42px), (max-width: 960px) min(640px, calc(100vw - 50px)), 440px" />
+                  <source type="image/webp" srcSet="/images/uk/erp-ai-agents/sales-office-order-drafts-640.webp 640w, /images/uk/erp-ai-agents/sales-office-order-drafts-960.webp 960w, /images/uk/erp-ai-agents/sales-office-order-drafts-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 42px), (max-width: 960px) min(640px, calc(100vw - 50px)), 440px" />
+                  <img src="/images/uk/erp-ai-agents/sales-office-order-drafts-960.webp" srcSet="/images/uk/erp-ai-agents/sales-office-order-drafts-640.webp 640w, /images/uk/erp-ai-agents/sales-office-order-drafts-960.webp 960w, /images/uk/erp-ai-agents/sales-office-order-drafts-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 42px), (max-width: 960px) min(640px, calc(100vw - 50px)), 440px" width={1280} height={853} loading="lazy" decoding="async" alt="Two people compare A4 documents at an order desk beside copper pipe samples." />
+                </picture>
             </div>
-            <ul className="col-2 mt-10">
+            <ul className="col-2 mt-10 fj-erp-jobs-grid">
               {JOBS.map((j, i) => (
                 <li key={j.n} className="card" style={i === JOBS.length - 1 && JOBS.length % 2 === 1 ? { gridColumn: '1 / -1' } : undefined}>
                   <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small }}>{j.n}</span>
@@ -1003,7 +1014,11 @@ export default function ErpAiAgentsUKPage() {
                 </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src={`${IMG}/finance-desk-review.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="Two people seen from behind sit at a desk and look at a monitor showing grey bars and one orange bar, with an orange folder on the desk" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block', background: '#FAFAF7' }} />
+                <picture className="fj-erp-photo">
+                  <source type="image/avif" srcSet="/images/uk/erp-ai-agents/erp-build-approval-mapping-640.avif 640w, /images/uk/erp-ai-agents/erp-build-approval-mapping-960.avif 960w, /images/uk/erp-ai-agents/erp-build-approval-mapping-1280.avif 1280w" sizes="(max-width: 720px) calc(100vw - 60px), (max-width: 960px) min(640px, calc(100vw - 68px)), 440px" />
+                  <source type="image/webp" srcSet="/images/uk/erp-ai-agents/erp-build-approval-mapping-640.webp 640w, /images/uk/erp-ai-agents/erp-build-approval-mapping-960.webp 960w, /images/uk/erp-ai-agents/erp-build-approval-mapping-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 60px), (max-width: 960px) min(640px, calc(100vw - 68px)), 440px" />
+                  <img src="/images/uk/erp-ai-agents/erp-build-approval-mapping-960.webp" srcSet="/images/uk/erp-ai-agents/erp-build-approval-mapping-640.webp 640w, /images/uk/erp-ai-agents/erp-build-approval-mapping-960.webp 960w, /images/uk/erp-ai-agents/erp-build-approval-mapping-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 60px), (max-width: 960px) min(640px, calc(100vw - 68px)), 440px" width={1280} height={853} loading="lazy" decoding="async" alt="Two people review empty boxes on a whiteboard beside document trays and a closed laptop." />
+                </picture>
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
                     In the first weeks live, your approvers and our team read the agent’s log together: how many
@@ -1012,7 +1027,7 @@ export default function ErpAiAgentsUKPage() {
                 </div>
               </div>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="stack mt-10 fj-erp-process-grid" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Collect a week of real documents', d: 'Quote requests, customer POs or supplier bills, with what your team did with each. That pile is the brief, and it shows us the awkward cases early.' },
                 { n: '02', t: 'Write the map of owners and approvers', d: 'One owner per record, one approver per job, and the nominal codes and VAT rates your accountant signs off. Nothing is built before this page is agreed.' },

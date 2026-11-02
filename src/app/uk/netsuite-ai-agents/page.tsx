@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* /uk/netsuite-ai-agents, built 2026-10-29.
@@ -493,7 +494,7 @@ const inlineLink = { textDecoration: 'underline', color: T.ink, fontWeight: 600 
 /* Small source line. Every id comes from the SRC map above. */
 function Sources({ ids }: { ids: SrcKey[] }) {
   return (
-    <p style={srcNote}>
+    <p className="ns-source-note" style={srcNote}>
       Sources, read on {READ_ON}:{' '}
       {ids.map((id, i) => (
         <span key={id}>
@@ -512,7 +513,7 @@ export default function NetSuiteAiAgentsUKPage() {
       <script id="ld-uk-netsuite-ai-agents" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents uk-netsuite-visual">
       <main>
         <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
@@ -677,7 +678,8 @@ export default function NetSuiteAiAgentsUKPage() {
         {/* 5. JOBS */}
         <section className="sec-lg" id="jobs">
           <div className="wrap">
-            <div style={{ maxWidth: 800 }}>
+            <div className="ns-editorial">
+              <div style={{ maxWidth: 800 }}>
               <span className="eyebrow">Five jobs</span>
               <h2>Five NetSuite jobs we build agents for, in the order UK finance teams usually ask</h2>
               <p className="lead mt-4">
@@ -685,7 +687,13 @@ export default function NetSuiteAiAgentsUKPage() {
                 paid or filed by software.
               </p>
             </div>
-            <ul className="col-2 mt-10">
+              <picture className="ns-photo">
+                <source type="image/avif" srcSet="/images/uk/netsuite-ai-agents/supplier-invoice-desk-640.avif 640w, /images/uk/netsuite-ai-agents/supplier-invoice-desk-960.avif 960w, /images/uk/netsuite-ai-agents/supplier-invoice-desk-1280.avif 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 720px, 440px" />
+                <source type="image/webp" srcSet="/images/uk/netsuite-ai-agents/supplier-invoice-desk-640.webp 640w, /images/uk/netsuite-ai-agents/supplier-invoice-desk-960.webp 960w, /images/uk/netsuite-ai-agents/supplier-invoice-desk-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 720px, 440px" />
+                <img src="/images/uk/netsuite-ai-agents/supplier-invoice-desk-960.webp" srcSet="/images/uk/netsuite-ai-agents/supplier-invoice-desk-640.webp 640w, /images/uk/netsuite-ai-agents/supplier-invoice-desk-960.webp 960w, /images/uk/netsuite-ai-agents/supplier-invoice-desk-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 720px, 440px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman compares paper sheets beside two document trays and a monitor showing grey rows with one orange row." />
+              </picture>
+            </div>
+            <ul className="col-2 ns-jobs mt-10">
               {JOBS.map((j) => (
                 <li key={j.n} className="card">
                   <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 14, color: T.small }}>{j.n}</span>
@@ -776,12 +784,19 @@ export default function NetSuiteAiAgentsUKPage() {
         {/* 7. GUARDRAILS */}
         <section className="sec-lg" id="guardrails">
           <div className="wrap">
-            <div style={{ maxWidth: 800 }}>
+            <div className="ns-editorial">
+              <div style={{ maxWidth: 800 }}>
               <span className="eyebrow">Roles, logs and approvals</span>
               <h2>Eight guardrails on every NetSuite agent, and who keeps each one</h2>
               <p className="lead mt-4">
                 Three are enforced by NetSuite whatever we do. Three we set up. Two stay with your team for good.
               </p>
+            </div>
+              <picture className="ns-photo">
+                <source type="image/avif" srcSet="/images/uk/netsuite-ai-agents/approval-queue-review-640.avif 640w, /images/uk/netsuite-ai-agents/approval-queue-review-960.avif 960w, /images/uk/netsuite-ai-agents/approval-queue-review-1280.avif 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 720px, 440px" />
+                <source type="image/webp" srcSet="/images/uk/netsuite-ai-agents/approval-queue-review-640.webp 640w, /images/uk/netsuite-ai-agents/approval-queue-review-960.webp 960w, /images/uk/netsuite-ai-agents/approval-queue-review-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 720px, 440px" />
+                <img src="/images/uk/netsuite-ai-agents/approval-queue-review-960.webp" srcSet="/images/uk/netsuite-ai-agents/approval-queue-review-640.webp 640w, /images/uk/netsuite-ai-agents/approval-queue-review-960.webp 960w, /images/uk/netsuite-ai-agents/approval-queue-review-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 720px, 440px" width={1536} height={1024} loading="lazy" decoding="async" alt="A man reviews grey rows with one orange row on a monitor beside paper trays and an orange mug." />
+              </picture>
             </div>
             <p className="md:hidden mt-8" style={{ fontFamily: T.fm, fontSize: 12, color: T.n400 }}>Swipe sideways to see every column.</p>
             <div className="card mt-10" tabIndex={0} role="region" aria-label="Guardrails on a NetSuite agent" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 760 }} data-columns={3}>
@@ -883,7 +898,7 @@ export default function NetSuiteAiAgentsUKPage() {
                 three and six.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="stack ns-process mt-10" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Read one month of the documents', d: 'We take a month of the supplier invoices, purchase orders or RFQs the job covers and list every variation: currencies, VAT rates, credit notes, missing PO numbers, multi-page PDFs.' },
                 { n: '02', t: 'Check what Oracle already gives you', d: 'With your administrator we check your edition, SuiteTax or not, the SuiteApps installed and what the AI connector can already answer. Anything Oracle covers comes off the scope.' },
@@ -1032,7 +1047,8 @@ export default function NetSuiteAiAgentsUKPage() {
 
         {/* 13. FINAL CTA (the only dark section) */}
         <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+          <div className="wrap ns-final-layout">
+            <div>
             <span className="eyebrow">Next step</span>
             <h2>See a NetSuite agent draft your own supplier invoices</h2>
             <p className="mt-4">
@@ -1040,10 +1056,16 @@ export default function NetSuiteAiAgentsUKPage() {
               your NetSuite account, your UK entities and the job you want off your team’s desk. You leave knowing
               whether Oracle’s own tools cover it or an agent is the right job.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8" style={{ display: 'flex', justifyContent: 'flex-start', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/uk/ai-agents" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See UK AI agents</a>
             </div>
+            </div>
+            <picture className="ns-photo">
+                <source type="image/avif" srcSet="/images/uk/netsuite-ai-agents/supplier-invoice-demo-640.avif 640w, /images/uk/netsuite-ai-agents/supplier-invoice-demo-960.avif 960w, /images/uk/netsuite-ai-agents/supplier-invoice-demo-1280.avif 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 720px, 440px" />
+                <source type="image/webp" srcSet="/images/uk/netsuite-ai-agents/supplier-invoice-demo-640.webp 640w, /images/uk/netsuite-ai-agents/supplier-invoice-demo-960.webp 960w, /images/uk/netsuite-ai-agents/supplier-invoice-demo-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 720px, 440px" />
+                <img src="/images/uk/netsuite-ai-agents/supplier-invoice-demo-960.webp" srcSet="/images/uk/netsuite-ai-agents/supplier-invoice-demo-640.webp 640w, /images/uk/netsuite-ai-agents/supplier-invoice-demo-960.webp 960w, /images/uk/netsuite-ai-agents/supplier-invoice-demo-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 720px, 440px" width={1536} height={1024} loading="lazy" decoding="async" alt="Three people compare paper sheets with grey rows and an orange row on a wall display in a meeting room." />
+              </picture>
           </div>
         </section>
 
