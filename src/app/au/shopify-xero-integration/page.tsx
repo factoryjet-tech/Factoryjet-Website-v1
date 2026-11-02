@@ -10,6 +10,7 @@ import AuFaq from '../components/AuFaq';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import './page.css';
 
 /* /au/shopify-xero-integration, built 2026-10-29.
 
@@ -320,7 +321,7 @@ export default function ShopifyXeroIntegrationAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage au-xero-visual-11">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -464,6 +465,7 @@ export default function ShopifyXeroIntegrationAUPage() {
         {/* ═══ WHERE THE TWO SYSTEMS DISAGREE → capgrid ═══ */}
         <section className="section capabilities" id="gaps">
           <div className="wrap">
+            <div className="au-xero-media-head">
             <div className="section-head">
               <div className="eyebrow">Why the numbers drift</div>
               <h2>Six places Shopify and Xero disagree in an Australian store</h2>
@@ -471,6 +473,12 @@ export default function ShopifyXeroIntegrationAUPage() {
                 None of these show up on a quiet Tuesday. They show up at BAS time, when the clearing account will
                 not reach zero and nobody can say which payout holds the difference.
               </p>
+            </div>
+              <picture className="au-xero-photo">
+                <source type="image/avif" srcSet="/images/au/shopify-xero-integration/month-end-exceptions-640.avif 640w, /images/au/shopify-xero-integration/month-end-exceptions-960.avif 960w, /images/au/shopify-xero-integration/month-end-exceptions-1280.avif 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(40vw - 26.67px), (max-width: 1400px) calc(500px - 1.667vw), 477px" />
+                <source type="image/webp" srcSet="/images/au/shopify-xero-integration/month-end-exceptions-640.webp 640w, /images/au/shopify-xero-integration/month-end-exceptions-960.webp 960w, /images/au/shopify-xero-integration/month-end-exceptions-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(40vw - 26.67px), (max-width: 1400px) calc(500px - 1.667vw), 477px" />
+                <img src="/images/au/shopify-xero-integration/month-end-exceptions-960.webp" srcSet="/images/au/shopify-xero-integration/month-end-exceptions-640.webp 640w, /images/au/shopify-xero-integration/month-end-exceptions-960.webp 960w, /images/au/shopify-xero-integration/month-end-exceptions-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(40vw - 26.67px), (max-width: 1400px) calc(500px - 1.667vw), 477px" width="1536" height="1024" alt="A bookkeeper compares blank settlement sheets beside a laptop and receipts tray in a homewares back office." loading="lazy" decoding="async" />
+              </picture>
             </div>
             <div className="capgrid">
               {GAPS.map((g, i) => (
@@ -583,6 +591,12 @@ export default function ShopifyXeroIntegrationAUPage() {
                   clearing account is at zero, the month is reconciled.
                 </p></div>
               </div>
+              <div className="au-xero-side-media">
+                <picture className="au-xero-photo">
+                <source type="image/avif" srcSet="/images/au/shopify-xero-integration/settlement-review-640.avif 640w, /images/au/shopify-xero-integration/settlement-review-960.avif 960w, /images/au/shopify-xero-integration/settlement-review-1280.avif 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1080px) calc(40vw - 43.2px), (max-width: 1264px) calc(40vw - 56px), 450px" />
+                <source type="image/webp" srcSet="/images/au/shopify-xero-integration/settlement-review-640.webp 640w, /images/au/shopify-xero-integration/settlement-review-960.webp 960w, /images/au/shopify-xero-integration/settlement-review-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1080px) calc(40vw - 43.2px), (max-width: 1264px) calc(40vw - 56px), 450px" />
+                <img src="/images/au/shopify-xero-integration/settlement-review-960.webp" srcSet="/images/au/shopify-xero-integration/settlement-review-640.webp 640w, /images/au/shopify-xero-integration/settlement-review-960.webp 960w, /images/au/shopify-xero-integration/settlement-review-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1080px) calc(40vw - 43.2px), (max-width: 1264px) calc(40vw - 56px), 450px" width="1536" height="1024" alt="Two people review grey reconciliation rows on a monitor beside separate trays of blank settlement sheets." loading="lazy" decoding="async" />
+              </picture>
               <div className="au-panel">
                 <div className="eyebrow">One clearing account each</div>
                 <ul className="trigrows">
@@ -597,6 +611,7 @@ export default function ShopifyXeroIntegrationAUPage() {
                   <a href={SRC.shopifyFees.url} {...extLink}>Shopify Help, payout fees</a>,{' '}
                   <a href={SRC.afterpayFees.url} {...extLink}>Afterpay, merchant fees</a>.
                 </p>
+              </div>
               </div>
             </div>
           </div>
@@ -708,6 +723,12 @@ export default function ShopifyXeroIntegrationAUPage() {
                 </ul>
               </div>
             </div>
+            <div className="au-xero-process-media">
+              <picture className="au-xero-photo">
+                <source type="image/avif" srcSet="/images/au/shopify-xero-integration/reconciled-month-end-desk-640.avif 640w, /images/au/shopify-xero-integration/reconciled-month-end-desk-960.avif 960w, /images/au/shopify-xero-integration/reconciled-month-end-desk-1280.avif 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(40vw - 26.67px), (max-width: 1400px) calc(500px - 1.667vw), 477px" />
+                <source type="image/webp" srcSet="/images/au/shopify-xero-integration/reconciled-month-end-desk-640.webp 640w, /images/au/shopify-xero-integration/reconciled-month-end-desk-960.webp 960w, /images/au/shopify-xero-integration/reconciled-month-end-desk-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(40vw - 26.67px), (max-width: 1400px) calc(500px - 1.667vw), 477px" />
+                <img src="/images/au/shopify-xero-integration/reconciled-month-end-desk-960.webp" srcSet="/images/au/shopify-xero-integration/reconciled-month-end-desk-640.webp 640w, /images/au/shopify-xero-integration/reconciled-month-end-desk-960.webp 960w, /images/au/shopify-xero-integration/reconciled-month-end-desk-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(40vw - 26.67px), (max-width: 1400px) calc(500px - 1.667vw), 477px" width="1536" height="1024" alt="Matched stacks of blank settlement sheets sit beside a closed laptop and sorted folders at an empty bookkeeping desk." loading="lazy" decoding="async" />
+              </picture>
             <div className="timeline timeline-3">
               {STEPS.map((s) => {
                 const [idx, title] = s.t.split(' · ');
@@ -721,6 +742,7 @@ export default function ShopifyXeroIntegrationAUPage() {
                   </details>
                 );
               })}
+            </div>
             </div>
           </div>
         </section>
