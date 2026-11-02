@@ -12,6 +12,7 @@ import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -62,7 +63,7 @@ const HERO_H1_EMPHASIS = 'Emailed POs Into Draft Orders';
 const H1 = `${HERO_H1_LEAD} ${HERO_H1_EMPHASIS}`;
 const DESCRIPTION =
   'Sales order automation for Australian suppliers: AI agents turn emailed purchase orders into draft sales orders in Xero, MYOB, Cin7 Core or Unleashed.';
-const IMG = '/images/us/sales-order-automation-ai-agents';
+const IMG = '/images/au/sales-order-automation-ai-agents';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD. */
 const crumbs = [
@@ -368,7 +369,7 @@ const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', st
 
 export default function SalesOrderAutomationAUPage() {
   return (
-    <>
+    <div className="auSalesOrderVisual10">
       <script id="ld-au-sales-order-automation" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
@@ -481,15 +482,20 @@ export default function SalesOrderAutomationAUPage() {
               <div className="factlist">
                 <div className="fact">
                   <div className="sec">§01</div>
+                  <div>
                   <p data-speakable="true">
                     <span className="stat">Sales order automation reads the purchase orders your customers email, checks
                     them against your price list, stock and credit terms, and creates the sales order in your system as a
                     draft, so nobody retypes it.</span>{' '}For an Australian supplier that also means comparing prices on the
                     right GST basis, carrying the customer&rsquo;s ABN and PO number through to the tax invoice, and
-                    working with the order record your software has. Xero&rsquo;s published API has no sales order
+                    working with the order record your software has.
+                  </p>
+                  <p>
+                    Xero&rsquo;s published API has no sales order
                     record, so in Xero the agent leaves an accepted quote or a draft invoice instead. The same job is also
                     called automated order processing, or purchase order automation when seen from the customer&rsquo;s side.
                   </p>
+                  </div>
                 </div>
                 <div className="fact">
                   <div className="sec">§02</div>
@@ -514,10 +520,6 @@ export default function SalesOrderAutomationAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto" src={null}
-                subject="An order desk team member sorting printed customer purchase orders into two piles on a counter in front of shelves of cartons">
-                <img src={`${IMG}/order-desk-paper-orders.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="An order desk team member in a navy polo shirt sorts printed purchase orders into two piles on a wooden counter, with an orange binder beside her and shelves of brown cartons behind" />
-              </VisualSlot>
             </div>
           </div>
         </section>
@@ -525,6 +527,7 @@ export default function SalesOrderAutomationAUPage() {
         {/* ═══ SIX JOBS + WHAT STAYS WITH PEOPLE ═══ */}
         <section className="section capabilities" id="capabilities">
           <div className="wrap">
+            <div className="sov-section-media">
             <div className="section-head">
               <div className="eyebrow">What the order agent does</div>
               <h2>Six jobs between the orders inbox and an approved sales order</h2>
@@ -534,6 +537,14 @@ export default function SalesOrderAutomationAUPage() {
                 results on those accounts hold up. The collecting and reading steps use the same methods as our{' '}
                 <a href="/au/document-intake-ai-agents">document intake agents</a>.
               </p>
+            </div>
+              <figure className="sov-photo">
+                <picture className="sov-picture">
+                  <source type="image/avif" srcSet={`${IMG}/australian-trade-order-desk-640.avif 640w, ${IMG}/australian-trade-order-desk-960.avif 960w, ${IMG}/australian-trade-order-desk-1280.avif 1280w`} sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 40vw, 480px" />
+                  <source type="image/webp" srcSet={`${IMG}/australian-trade-order-desk-640.webp 640w, ${IMG}/australian-trade-order-desk-960.webp 960w, ${IMG}/australian-trade-order-desk-1280.webp 1280w`} sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 40vw, 480px" />
+                  <img src={`${IMG}/australian-trade-order-desk-960.webp`} srcSet={`${IMG}/australian-trade-order-desk-640.webp 640w, ${IMG}/australian-trade-order-desk-960.webp 960w, ${IMG}/australian-trade-order-desk-1280.webp 1280w`} sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 40vw, 480px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman compares two sheets of paper with grey rows on a monitor at an electrical supply counter." />
+                </picture>
+              </figure>
             </div>
             <div className="capgrid">
               {JOBS.map((j, i) => {
@@ -563,6 +574,7 @@ export default function SalesOrderAutomationAUPage() {
         {/* ═══ SYSTEMS TABLE ═══ */}
         <section className="section integrations" id="systems">
           <div className="wrap">
+            <div className="sov-section-media">
             <div className="section-head">
               <div className="eyebrow">Works inside the software you already run</div>
               <h2>Where the draft sales order lands in Xero, MYOB, Cin7 Core, Unleashed and ERPs</h2>
@@ -570,6 +582,14 @@ export default function SalesOrderAutomationAUPage() {
                 Each system gives a waiting order a different home. Before we build, we pick the one that fits how your
                 team dispatches and invoices today, so nothing about their day changes except the typing.
               </p>
+            </div>
+              <figure className="sov-photo">
+                <picture className="sov-picture">
+                  <source type="image/avif" srcSet={`${IMG}/australian-stockroom-order-count-640.avif 640w, ${IMG}/australian-stockroom-order-count-960.avif 960w, ${IMG}/australian-stockroom-order-count-1280.avif 1280w`} sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 40vw, 480px" />
+                  <source type="image/webp" srcSet={`${IMG}/australian-stockroom-order-count-640.webp 640w, ${IMG}/australian-stockroom-order-count-960.webp 960w, ${IMG}/australian-stockroom-order-count-1280.webp 1280w`} sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 40vw, 480px" />
+                  <img src={`${IMG}/australian-stockroom-order-count-960.webp`} srcSet={`${IMG}/australian-stockroom-order-count-640.webp 640w, ${IMG}/australian-stockroom-order-count-960.webp 960w, ${IMG}/australian-stockroom-order-count-1280.webp 1280w`} sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 40vw, 480px" width={1536} height={1024} loading="lazy" decoding="async" alt="A man checks a white plumbing fitting against a sheet on a clipboard beside wooden stockroom shelves." />
+                </picture>
+              </figure>
             </div>
             <p className="md:hidden au-note">Swipe sideways to see every column.</p>
             <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable table of where draft orders land in each system" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
@@ -663,13 +683,7 @@ export default function SalesOrderAutomationAUPage() {
         </section>
 
         {/* ═══ WHERE IT BREAKS → definition module ═══ */}
-        <section className="definition" id="where-it-breaks">
-          <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image" src={null}
-              subject="A stockroom worker checking a carton on a shelf against a clipboard before a reorder">
-              <img src={`${IMG}/stockroom-reorder-count.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="A man with white hair and a short white beard in a light blue shirt holds a clipboard and touches a white box on a wooden shelf in a stockroom, with an orange step stool behind him" />
-            </VisualSlot>
-          </div>
+        <section className="definition sov-mistakes" id="where-it-breaks">
           <div className="definition-copy">
             <div className="eyebrow">Where order automation goes wrong</div>
             <h2>Five mistakes we design out before the agent sees a live order</h2>
@@ -747,10 +761,14 @@ export default function SalesOrderAutomationAUPage() {
                   your own orders do not convince you. Open a step for the detail.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap" src={null}
+              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" className="sov-process-photo" captionClassName="figcap" src={null}
                 subject="Two colleagues at a white table laying out a row of white rule cards, one holding an orange card"
                 caption="Step three is paper first: price tolerances, GST basis and credit holds agreed with your sales lead before any code.">
-                <img src={`${IMG}/team-sorting-order-rules.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="A woman in a mustard sweater and a man in a charcoal shirt, seen from behind, stand at a white table where she lays out a row of white cards and he holds one orange card" />
+                <picture className="sov-picture">
+                  <source type="image/avif" srcSet={`${IMG}/australian-team-order-rules-640.avif 640w, ${IMG}/australian-team-order-rules-960.avif 960w, ${IMG}/australian-team-order-rules-1280.avif 1280w`} sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 40vw, 480px" />
+                  <source type="image/webp" srcSet={`${IMG}/australian-team-order-rules-640.webp 640w, ${IMG}/australian-team-order-rules-960.webp 960w, ${IMG}/australian-team-order-rules-1280.webp 1280w`} sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 40vw, 480px" />
+                  <img src={`${IMG}/australian-team-order-rules-960.webp`} srcSet={`${IMG}/australian-team-order-rules-640.webp 640w, ${IMG}/australian-team-order-rules-960.webp 960w, ${IMG}/australian-team-order-rules-1280.webp 1280w`} sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 40vw, 480px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman and a man arrange blank cards on a table beside building material samples." />
+                </picture>
               </VisualSlot>
             </div>
             <div className="timeline timeline-4">
@@ -883,10 +901,6 @@ export default function SalesOrderAutomationAUPage() {
                   orders, and in which country? Get the answers in writing.
                 </p></div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" src={null}
-                subject="A warehouse picker pushing a cart with an orange tote along an aisle and reaching into a grey bin">
-                <img src={`${IMG}/picker-cart-warehouse-aisle.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="A man in a grey T-shirt pushes a steel cart holding an orange plastic tote and a clipboard along a warehouse aisle and reaches into a grey bin on the shelving" />
-              </VisualSlot>
             </div>
           </div>
         </section>
@@ -935,6 +949,13 @@ export default function SalesOrderAutomationAUPage() {
                 emailed orders, in the system you already run. No spam, no obligation.
               </p>
             </div>
+            <figure className="sov-photo sov-final-photo">
+              <picture className="sov-picture">
+                  <source type="image/avif" srcSet={`${IMG}/australian-picker-order-trolley-640.avif 640w, ${IMG}/australian-picker-order-trolley-960.avif 960w, ${IMG}/australian-picker-order-trolley-1280.avif 1280w`} sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 40vw, 480px" />
+                  <source type="image/webp" srcSet={`${IMG}/australian-picker-order-trolley-640.webp 640w, ${IMG}/australian-picker-order-trolley-960.webp 960w, ${IMG}/australian-picker-order-trolley-1280.webp 1280w`} sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 40vw, 480px" />
+                  <img src={`${IMG}/australian-picker-order-trolley-960.webp`} srcSet={`${IMG}/australian-picker-order-trolley-640.webp 640w, ${IMG}/australian-picker-order-trolley-960.webp 960w, ${IMG}/australian-picker-order-trolley-1280.webp 1280w`} sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 40vw, 480px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman holds a warehouse trolley and rests one hand on a plain carton beside shelves of stock." />
+                </picture>
+            </figure>
             <div className="ctas">
               <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               <a className="btn btn-ghost" href="/au/ai-agents">See all AI agent work</a>
@@ -945,6 +966,6 @@ export default function SalesOrderAutomationAUPage() {
       </main>
       </div>
       <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} />
-    </>
+    </div>
   );
 }

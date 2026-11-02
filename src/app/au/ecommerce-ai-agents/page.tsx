@@ -7,11 +7,11 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import AuFaq from '../components/AuFaq';
-import VisualSlot from '../components/VisualSlot';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -367,7 +367,7 @@ const HERO_ICONS = [
 
 export default function EcommerceAiAgentsAUPage() {
   return (
-    <>
+    <div className="fj-au-ecom-visual">
       <script id="ld-au-ecommerce-ai-agents" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
@@ -486,14 +486,18 @@ export default function EcommerceAiAgentsAUPage() {
               <div className="factlist">
                 <div className="fact">
                   <div className="sec">§01</div>
-                  <p data-speakable="true">
-                    <span className="stat">An ecommerce AI agent reads what arrives at your store, looks up the order, stock or
-                    tracking in your own systems, and drafts the next step for your team to approve.</span> In an Australian
-                    store that usually means delivery questions answered from Australia Post or StarTrack events, returns
-                    checked against your policy, Amazon.com.au and eBay listings fixed, and payouts matched in Xero or MYOB.
-                    FactoryJet builds these ecommerce automation agents for Australian stores on Shopify, WooCommerce and
-                    BigCommerce, and runs a demo on your own orders before you sign.
-                  </p>
+                  <div>
+                    <p data-speakable="true">
+                      <span className="stat">An ecommerce AI agent reads what arrives at your store, looks up the order, stock or
+                      tracking in your own systems, and drafts the next step for your team to approve.</span> In an Australian
+                      store that usually means delivery questions answered from Australia Post or StarTrack events, returns
+                      checked against your policy, Amazon.com.au and eBay listings fixed, and payouts matched in Xero or MYOB.
+                    </p>
+                    <p>
+                      FactoryJet builds these ecommerce automation agents for Australian stores on Shopify, WooCommerce and
+                      BigCommerce, and runs a demo on your own orders before you sign.
+                    </p>
+                  </div>
                 </div>
                 <div className="fact">
                   <div className="sec">§02</div>
@@ -517,10 +521,7 @@ export default function EcommerceAiAgentsAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto" src={null}
-                subject="A customer service team member in an online store back office working through an order inbox an AI agent has already sorted">
-                <img src="/images/au/ai-agents/ai-agents-orders.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a team member in an online store back office working through an order inbox that an AI agent has already sorted and drafted" />
-              </VisualSlot>
+
             </div>
           </div>
         </section>
@@ -528,6 +529,7 @@ export default function EcommerceAiAgentsAUPage() {
         {/* ═══ EIGHT JOBS → capgrid ═══ */}
         <section className="section capabilities" id="jobs">
           <div className="wrap">
+            <div className="ecom-section-intro">
             <div className="section-head">
               <div className="eyebrow">AI agents for ecommerce, by job</div>
               <h2>Eight jobs an AI agent takes off an Australian store team</h2>
@@ -535,6 +537,12 @@ export default function EcommerceAiAgentsAUPage() {
                 Each one is a job your team already does by hand, between two or more systems, many times a week. We
                 build one first, prove it on your numbers, then add the next.
               </p>
+            </div>
+              <picture className="ecom-photo">
+                <source type="image/avif" srcSet="/images/au/ecommerce-ai-agents/returns-packing-bench-640.avif 640w, /images/au/ecommerce-ai-agents/returns-packing-bench-960.avif 960w, /images/au/ecommerce-ai-agents/returns-packing-bench-1280.avif 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1280px) 42vw, 500px" />
+                <source type="image/webp" srcSet="/images/au/ecommerce-ai-agents/returns-packing-bench-640.webp 640w, /images/au/ecommerce-ai-agents/returns-packing-bench-960.webp 960w, /images/au/ecommerce-ai-agents/returns-packing-bench-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1280px) 42vw, 500px" />
+                <img src="/images/au/ecommerce-ai-agents/returns-packing-bench-960.webp" srcSet="/images/au/ecommerce-ai-agents/returns-packing-bench-640.webp 640w, /images/au/ecommerce-ai-agents/returns-packing-bench-960.webp 960w, /images/au/ecommerce-ai-agents/returns-packing-bench-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1280px) 42vw, 500px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman checks a ceramic vase beside an open return carton at a packing bench." />
+              </picture>
             </div>
             <div className="capgrid">
               {AGENT_JOBS.map((j, i) => (
@@ -577,6 +585,11 @@ export default function EcommerceAiAgentsAUPage() {
             <div className="section-head">
               <div className="eyebrow">Marketplace automation</div>
               <h2>Marketplace automation for Amazon.com.au, eBay, Kogan, Bunnings Marketplace and THE ICONIC</h2>
+              <picture className="ecom-photo">
+                <source type="image/avif" srcSet="/images/au/ecommerce-ai-agents/marketplace-channel-stockroom-640.avif 640w, /images/au/ecommerce-ai-agents/marketplace-channel-stockroom-960.avif 960w, /images/au/ecommerce-ai-agents/marketplace-channel-stockroom-1280.avif 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1280px) 36vw, 430px" />
+                <source type="image/webp" srcSet="/images/au/ecommerce-ai-agents/marketplace-channel-stockroom-640.webp 640w, /images/au/ecommerce-ai-agents/marketplace-channel-stockroom-960.webp 960w, /images/au/ecommerce-ai-agents/marketplace-channel-stockroom-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1280px) 36vw, 430px" />
+                <img src="/images/au/ecommerce-ai-agents/marketplace-channel-stockroom-960.webp" srcSet="/images/au/ecommerce-ai-agents/marketplace-channel-stockroom-640.webp 640w, /images/au/ecommerce-ai-agents/marketplace-channel-stockroom-960.webp 960w, /images/au/ecommerce-ai-agents/marketplace-channel-stockroom-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1280px) 36vw, 430px" width={1536} height={1024} loading="lazy" decoding="async" alt="A man counts ceramic bowls beside four shelving bays of plain cartons." />
+              </picture>
             </div>
             <div className="factswrap">
               <div className="factlist">
@@ -653,6 +666,7 @@ export default function EcommerceAiAgentsAUPage() {
         {/* ═══ APPROVAL SPLIT → table ═══ */}
         <section className="section comparison" id="approval">
           <div className="wrap">
+            <div className="ecom-section-intro ecom-approval-intro">
             <div className="section-head head-stack">
               <div className="eyebrow">Human in the loop</div>
               <h2>What the agent does alone, and what waits for a person</h2>
@@ -660,6 +674,12 @@ export default function EcommerceAiAgentsAUPage() {
                 This is the starting split we propose. You can move a row to automatic once the logs show the agent gets
                 it right. Refunds and ledger entries stay with a person by default.
               </p>
+            </div>
+              <picture className="ecom-photo">
+                <source type="image/avif" srcSet="/images/au/ecommerce-ai-agents/support-reply-approval-640.avif 640w, /images/au/ecommerce-ai-agents/support-reply-approval-960.avif 960w, /images/au/ecommerce-ai-agents/support-reply-approval-1280.avif 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1280px) 42vw, 500px" />
+                <source type="image/webp" srcSet="/images/au/ecommerce-ai-agents/support-reply-approval-640.webp 640w, /images/au/ecommerce-ai-agents/support-reply-approval-960.webp 960w, /images/au/ecommerce-ai-agents/support-reply-approval-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1280px) 42vw, 500px" />
+                <img src="/images/au/ecommerce-ai-agents/support-reply-approval-960.webp" srcSet="/images/au/ecommerce-ai-agents/support-reply-approval-640.webp 640w, /images/au/ecommerce-ai-agents/support-reply-approval-960.webp 960w, /images/au/ecommerce-ai-agents/support-reply-approval-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1280px) 42vw, 500px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman reviews grey draft rows on a monitor beside an opened return carton." />
+              </picture>
             </div>
             <p className="md:hidden" style={{ fontSize: 13, margin: '0 0 8px', opacity: 0.75 }}>Swipe sideways to see every column.</p>
             <div className="tablewrap" role="region" tabIndex={0} aria-label="Approval split for an ecommerce AI agent" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
@@ -961,6 +981,6 @@ export default function EcommerceAiAgentsAUPage() {
       </main>
       </div>
       <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} />
-    </>
+    </div>
   );
 }

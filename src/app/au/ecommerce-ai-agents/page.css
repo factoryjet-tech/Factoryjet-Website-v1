@@ -1,0 +1,222 @@
+/* This route owns these overrides; shared AU templates remain unchanged. */
+.fj-au-ecom-visual .aiAgentPage.auPage {
+  --accent-text: #B23E13;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage main :is(p, li, td, th) {
+  font-size: 16px;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage :is(h1, h2, h3) {
+  text-wrap: balance;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage p {
+  text-wrap: pretty;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .hero-emphasis {
+  background: none;
+  color: var(--accent-text);
+  -webkit-text-fill-color: currentColor;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage :is(.eyebrow, .specpanel-bar, .specpanel-foot, .sys, .idx, .tag, .capid, .factlabel, .ledgercell .k, .byline .upd, .qid, .faq-category, .faq-nav-count, .trigrows .t) {
+  font-size: 12px;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .specrow .title {
+  font-size: 14px;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .specpanel-bar {
+  gap: 10px;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .specrow {
+  min-height: 72px;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 4px 10px;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .specrow .tag {
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: start;
+  padding: 2px 6px;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .statusdot,
+.fj-au-ecom-visual .aiAgentPage.auPage .specrow,
+.fj-au-ecom-visual .aiAgentPage.auPage .specrow::before,
+.fj-au-ecom-visual .aiAgentPage.auPage .specrow .tag::after {
+  animation: none;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .trigrows .m,
+.fj-au-ecom-visual .aiAgentPage.auPage .ledgercell .v {
+  font-size: 16px;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .ecom-section-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 64px);
+  margin-bottom: 42px;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .ecom-section-intro .section-head {
+  max-width: none;
+  margin: 0;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .ecom-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 3px 6px -4px rgb(20 17 15 / 12%), 0 20px 40px -28px rgb(20 17 15 / 22%);
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .ecom-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage #marketplaces .section-head {
+  position: sticky;
+  top: 112px;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage #marketplaces .ecom-photo {
+  margin-top: 28px;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage #approval .head-stack h2 {
+  max-width: none;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .tablewrap {
+  max-width: 100%;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .fact {
+  grid-template-columns: 32px minmax(0, 1fr);
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .faqitem[open] .qtext {
+  color: var(--accent-text);
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .faq-nav-count {
+  color: #46403B;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage :is(.crumbs a, .ledgercell .k a, .who a, .fact p a, .plat-build a, .au-note a, .tablenote a, .au-split p a, .faqsrc) {
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  max-width: 100%;
+  padding-block: 10px;
+  overflow-wrap: anywhere;
+  vertical-align: baseline;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage :is(.refs a, .faq-catnav a, .agentdir-grid a, summary, button) {
+  min-width: 44px;
+  min-height: 44px;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage :is(a, button, input, summary):focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 4px;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .specrow:has(:focus-visible) {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 4px;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .btn-primary:hover {
+  background: var(--accent-text);
+  color: #FFFFFF;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .btn-ghost:hover {
+  color: var(--ink);
+}
+.fj-au-ecom-visual .aiAgentPage.auPage :is(section, [id^='faq-']) {
+  scroll-margin-top: 112px;
+}
+@media (max-width: 1024px) {
+  .fj-au-ecom-visual :is(.us-footer__tagline, .us-footer__verification) {
+    font-size: 16px;
+  }
+  .fj-au-ecom-visual .aiAgentPage.auPage :is(.agentdir-t, .agentdir-l, .plat-name h3) {
+    font-size: 16px;
+  }
+  .fj-au-ecom-visual .aiAgentPage.auPage :is(.hero input:not(.workflow-select), .hero button, .btn) {
+    font-size: 16px;
+  }
+  .fj-au-ecom-visual .aiAgentPage.auPage main p.md\:hidden {
+    font-size: 16px !important;
+    opacity: 1 !important;
+  }
+}
+@media (max-width: 820px) {
+  .fj-au-ecom-visual .aiAgentPage.auPage .ecom-section-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+  .fj-au-ecom-visual .aiAgentPage.auPage .ecom-section-intro .ecom-photo {
+    max-width: 620px;
+  }
+  .fj-au-ecom-visual .aiAgentPage.auPage #marketplaces .section-head {
+    position: static;
+  }
+  .fj-au-ecom-visual .aiAgentPage.auPage .hero h1 {
+    font-size: clamp(30px, 7.5vw, 48px);
+    line-height: 1.12;
+    max-width: none;
+  }
+  .fj-au-ecom-visual .aiAgentPage.auPage :is(h2, .facts h2) {
+    font-size: clamp(25px, 6.2vw, 38px);
+    line-height: 1.2;
+  }
+  .fj-au-ecom-visual .aiAgentPage.auPage .specpanel-bar .sys {
+    width: 100%;
+    margin-left: 0;
+  }
+  .fj-au-ecom-visual .aiAgentPage.auPage .ledger .wrap {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .fj-au-ecom-visual .aiAgentPage.auPage .ledgercell {
+    border-right: 0;
+    border-top: 1px solid var(--line);
+    padding: 24px 0;
+  }
+  .fj-au-ecom-visual .aiAgentPage.auPage .ledgercell:first-child {
+    border-top: 0;
+  }
+  .fj-au-ecom-visual .aiAgentPage.auPage .byline .upd {
+    max-width: 110px;
+  }
+  .fj-au-ecom-visual .aiAgentPage.auPage .byline .who {
+    font-size: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fj-au-ecom-visual .aiAgentPage.auPage *,
+  .fj-au-ecom-visual .aiAgentPage.auPage *::before,
+  .fj-au-ecom-visual .aiAgentPage.auPage *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Initial live-style preflight found smaller shared FAQ and CTA type. */
+.fj-au-ecom-visual .aiAgentPage.auPage .faqitem .faqsrc {
+  font-size: 12px;
+}
+.fj-au-ecom-visual .aiAgentPage.auPage .faqitem .qtext,
+.fj-au-ecom-visual .aiAgentPage.auPage .au-midcta .font-fj-body {
+  font-size: 16px;
+}
+/* Reviewer HEAD360: keep the frozen marketplace heading within four lines. */
+@media (max-width: 380px) {
+  .fj-au-ecom-visual .aiAgentPage.auPage #marketplaces h2 {
+    font-size: 22px;
+  }
+}
+/* C1 prepush gate: small white process text needs the darker accent fill. */
+.fj-au-ecom-visual .aiAgentPage.auPage .tnode:last-child .idx {
+  background: var(--accent-text);
+}
+/* Measured comparison links need a full touch target at phone/tablet widths. */
+@media (max-width: 1024px) {
+  .fj-au-ecom-visual .aiAgentPage.auPage main table a {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    max-width: 100%;
+  }
+}
