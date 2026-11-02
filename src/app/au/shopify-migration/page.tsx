@@ -507,12 +507,6 @@ export default function ShopifyMigrationAUPage() {
                 Here is what is specific to each.
               </p>
             </div>
-            <div className="migration-platform-layout">
-              <picture className="migration-photo migration-platform-photo">
-                <source type="image/avif" srcSet="/images/au/shopify-migration/old-new-catalogue-mapping-640.avif 640w, /images/au/shopify-migration/old-new-catalogue-mapping-960.avif 960w, /images/au/shopify-migration/old-new-catalogue-mapping-1280.avif 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc((100vw - 112px) * .42), 483px" />
-                <source type="image/webp" srcSet="/images/au/shopify-migration/old-new-catalogue-mapping-640.webp 640w, /images/au/shopify-migration/old-new-catalogue-mapping-960.webp 960w, /images/au/shopify-migration/old-new-catalogue-mapping-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc((100vw - 112px) * .42), 483px" />
-                <img src="/images/au/shopify-migration/old-new-catalogue-mapping-960.webp" srcSet="/images/au/shopify-migration/old-new-catalogue-mapping-640.webp 640w, /images/au/shopify-migration/old-new-catalogue-mapping-960.webp 960w, /images/au/shopify-migration/old-new-catalogue-mapping-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc((100vw - 112px) * .42), 483px" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people arrange product photographs in two catalogue groups on a table." />
-              </picture>
             <div className="platlist" role="list">
               {PLATFORMS.map((p) => (
                 <div key={p.n} className="plat plat-2col" role="listitem">
@@ -523,7 +517,6 @@ export default function ShopifyMigrationAUPage() {
                   </p>
                 </div>
               ))}
-            </div>
             </div>
           </div>
         </section>
@@ -666,11 +659,6 @@ export default function ShopifyMigrationAUPage() {
               <div className="eyebrow">The systems around the store</div>
               <h2>Reconnecting Xero, MYOB, Cin7, Afterpay and your marketplaces</h2>
             </div>
-            <picture className="migration-photo migration-stack-photo">
-                <source type="image/avif" srcSet="/images/au/shopify-migration/accounts-stock-reconnection-640.avif 640w, /images/au/shopify-migration/accounts-stock-reconnection-960.avif 960w, /images/au/shopify-migration/accounts-stock-reconnection-1280.avif 1280w, /images/au/shopify-migration/accounts-stock-reconnection-1600.avif 1600w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(100vw - 64px), 1200px" />
-                <source type="image/webp" srcSet="/images/au/shopify-migration/accounts-stock-reconnection-640.webp 640w, /images/au/shopify-migration/accounts-stock-reconnection-960.webp 960w, /images/au/shopify-migration/accounts-stock-reconnection-1280.webp 1280w, /images/au/shopify-migration/accounts-stock-reconnection-1600.webp 1600w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(100vw - 64px), 1200px" />
-                <img src="/images/au/shopify-migration/accounts-stock-reconnection-960.webp" srcSet="/images/au/shopify-migration/accounts-stock-reconnection-640.webp 640w, /images/au/shopify-migration/accounts-stock-reconnection-960.webp 960w, /images/au/shopify-migration/accounts-stock-reconnection-1280.webp 1280w, /images/au/shopify-migration/accounts-stock-reconnection-1600.webp 1600w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(100vw - 64px), 1200px" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people compare grey rows on sheets beside an open box containing two bowls." />
-              </picture>
             <div className="factswrap">
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
@@ -901,7 +889,6 @@ export default function ShopifyMigrationAUPage() {
         {/* ═══ FINAL CTA (light) ═══ */}
         <section className="finalcta" id="finalcta">
           <div className="wrap">
-            <div className="migration-final-copy">
             <div>
               <div className="eyebrow">Ready when you are</div>
               <h2>Move to Shopify with your sales and your rankings intact</h2>
@@ -914,12 +901,6 @@ export default function ShopifyMigrationAUPage() {
               <ModalCTAButton label="See a draft of my store" region="au" modalVariant="default" btnVariant="primary-light" className="btn btn-primary" />
               <a href="/au/shopify-development" style={{ alignSelf: 'center', textDecoration: 'underline', textUnderlineOffset: 3 }}>Building a new store instead? See Shopify development</a>
             </div>
-            </div>
-            <picture className="migration-photo migration-final-photo">
-                <source type="image/avif" srcSet="/images/au/shopify-migration/migration-launch-check-640.avif 640w, /images/au/shopify-migration/migration-launch-check-960.avif 960w, /images/au/shopify-migration/migration-launch-check-1280.avif 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc((100vw - 112px) * .45), 518px" />
-                <source type="image/webp" srcSet="/images/au/shopify-migration/migration-launch-check-640.webp 640w, /images/au/shopify-migration/migration-launch-check-960.webp 960w, /images/au/shopify-migration/migration-launch-check-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc((100vw - 112px) * .45), 518px" />
-                <img src="/images/au/shopify-migration/migration-launch-check-960.webp" srcSet="/images/au/shopify-migration/migration-launch-check-640.webp 640w, /images/au/shopify-migration/migration-launch-check-960.webp 960w, /images/au/shopify-migration/migration-launch-check-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc((100vw - 112px) * .45), 518px" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people check linked product photographs on a sheet beside a monitor showing the same clothing." />
-              </picture>
           </div>
         </section>
 
