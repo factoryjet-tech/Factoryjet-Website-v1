@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 
 /* /uk/shopify-edi-integration, built 2026-10-29.
 
@@ -397,7 +398,7 @@ export default function ShopifyEdiIntegrationUKPage() {
       <script id="ld-uk-shopify-edi-integration" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents uk-edi-visual">
       <main>
 
         <Breadcrumbs items={crumbs} />
@@ -543,6 +544,11 @@ export default function ShopifyEdiIntegrationUKPage() {
                 <Sources ids={['gs1Eancom', 'gs1ukEdi', 'gs1ukTradacoms', 'gs1ukTradacomsEnd']} />
               </div>
               <div className="card card-top-orange">
+                <picture className="edi-photo edi-standards-photo">
+                  <source type="image/avif" srcSet="/images/uk/shopify-edi-integration/supplier-purchase-order-review-640.avif 640w, /images/uk/shopify-edi-integration/supplier-purchase-order-review-960.avif 960w, /images/uk/shopify-edi-integration/supplier-purchase-order-review-1280.avif 1280w" sizes="(min-width: 1120px) 360px, (min-width: 961px) calc(42vw - 105px), (min-width: 768px) calc(100vw - 106px), calc(100vw - 74px)" />
+                  <source type="image/webp" srcSet="/images/uk/shopify-edi-integration/supplier-purchase-order-review-640.webp 640w, /images/uk/shopify-edi-integration/supplier-purchase-order-review-960.webp 960w, /images/uk/shopify-edi-integration/supplier-purchase-order-review-1280.webp 1280w" sizes="(min-width: 1120px) 360px, (min-width: 961px) calc(42vw - 105px), (min-width: 768px) calc(100vw - 106px), calc(100vw - 74px)" />
+                  <img src="/images/uk/shopify-edi-integration/supplier-purchase-order-review-960.webp" srcSet="/images/uk/shopify-edi-integration/supplier-purchase-order-review-640.webp 640w, /images/uk/shopify-edi-integration/supplier-purchase-order-review-960.webp 960w, /images/uk/shopify-edi-integration/supplier-purchase-order-review-1280.webp 1280w" sizes="(min-width: 1120px) 360px, (min-width: 961px) calc(42vw - 105px), (min-width: 768px) calc(100vw - 106px), calc(100vw - 74px)" width="1536" height="1024" alt="A woman reviews an order sheet beside a ring binder at a wholesale order desk." loading="lazy" decoding="async" />
+                </picture>
                 <span className="eyebrow">Status as GS1 UK and GS1 describe it</span>
                 <ul style={scList}>
                   <li className="scorecard-row"><div><div className="scorecard-metric">EANCOM</div><div className="scorecard-note">GS1 subset of UN/EDIFACT, files updated 2022</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Supported</div></li>
@@ -602,13 +608,20 @@ export default function ShopifyEdiIntegrationUKPage() {
         {/* 6. RECORD OWNERS AND LOCAL SYSTEMS */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div style={{ maxWidth: 820 }}>
+            <div className="edi-ownership-intro">
+              <div>
               <span className="eyebrow">Start with owners</span>
               <h2>Who owns each record when EDI, Shopify and your accounts all touch the same order</h2>
               <p className="lead mt-4">
                 An EDI order touches three or four systems before it is paid. Each record needs one home, or the same
                 pallet gets invoiced twice. The list below is where we start, and yours is agreed in writing.
               </p>
+              </div>
+              <picture className="edi-photo">
+                  <source type="image/avif" srcSet="/images/uk/shopify-edi-integration/distribution-pallet-order-check-640.avif 640w, /images/uk/shopify-edi-integration/distribution-pallet-order-check-960.avif 960w, /images/uk/shopify-edi-integration/distribution-pallet-order-check-1280.avif 1280w" sizes="(min-width: 1120px) 410px, (min-width: 769px) calc(38.4vw - 19.2px), (min-width: 768px) calc(38.4vw - 12.8px), calc(100vw - 32px)" />
+                  <source type="image/webp" srcSet="/images/uk/shopify-edi-integration/distribution-pallet-order-check-640.webp 640w, /images/uk/shopify-edi-integration/distribution-pallet-order-check-960.webp 960w, /images/uk/shopify-edi-integration/distribution-pallet-order-check-1280.webp 1280w" sizes="(min-width: 1120px) 410px, (min-width: 769px) calc(38.4vw - 19.2px), (min-width: 768px) calc(38.4vw - 12.8px), calc(100vw - 32px)" />
+                  <img src="/images/uk/shopify-edi-integration/distribution-pallet-order-check-960.webp" srcSet="/images/uk/shopify-edi-integration/distribution-pallet-order-check-640.webp 640w, /images/uk/shopify-edi-integration/distribution-pallet-order-check-960.webp 960w, /images/uk/shopify-edi-integration/distribution-pallet-order-check-1280.webp 1280w" sizes="(min-width: 1120px) 410px, (min-width: 769px) calc(38.4vw - 19.2px), (min-width: 768px) calc(38.4vw - 12.8px), calc(100vw - 32px)" width="1536" height="1024" alt="A man checks a clipboard beside plain cartons on a pallet in a loading bay." loading="lazy" decoding="async" />
+                </picture>
             </div>
             <p className="md:hidden mt-6" style={srcNote}>Swipe sideways to see every column.</p>
             <div className="card mt-10" tabIndex={0} role="region" aria-label="Record owners" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 760 }} data-columns={3}>
@@ -930,7 +943,7 @@ export default function ShopifyEdiIntegrationUKPage() {
                 that day. Prices move and HMRC sets the tax rules, so open the linked page before you act on one.
               </p>
             </div>
-            <ul className="col-2 mt-8" style={{ gap: 10 }}>
+            <ul className="col-2 mt-8 edi-sources" style={{ gap: 10 }}>
               {SOURCE_KEYS.map((k) => (
                 <li key={k} style={{ fontSize: 14 }}>
                   <a href={SRC[k].url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: T.ink }}>{SRC[k].label}</a>
@@ -991,7 +1004,8 @@ export default function ShopifyEdiIntegrationUKPage() {
 
         {/* 16. FINAL CTA (the only dark section) */}
         <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+          <div className="wrap edi-final">
+            <div>
             <span className="eyebrow">Next step</span>
             <h2>Take your next retailer order straight into Shopify</h2>
             <p className="mt-4">
@@ -999,9 +1013,15 @@ export default function ShopifyEdiIntegrationUKPage() {
               buyers, their EDI guides and the systems behind your store. You leave the call knowing which route fits
               and what the first phase covers.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8 edi-final-actions">
               <ModalCTAButton label="Scope my EDI link" region="uk" modalVariant="default" btnVariant="primary-light" />
             </div>
+            </div>
+            <picture className="edi-photo">
+                  <source type="image/avif" srcSet="/images/uk/shopify-edi-integration/retailer-order-warehouse-picking-640.avif 640w, /images/uk/shopify-edi-integration/retailer-order-warehouse-picking-960.avif 960w, /images/uk/shopify-edi-integration/retailer-order-warehouse-picking-1280.avif 1280w" sizes="(min-width: 1120px) 410px, (min-width: 769px) calc(38.4vw - 19.2px), (min-width: 768px) calc(38.4vw - 12.8px), calc(100vw - 32px)" />
+                  <source type="image/webp" srcSet="/images/uk/shopify-edi-integration/retailer-order-warehouse-picking-640.webp 640w, /images/uk/shopify-edi-integration/retailer-order-warehouse-picking-960.webp 960w, /images/uk/shopify-edi-integration/retailer-order-warehouse-picking-1280.webp 1280w" sizes="(min-width: 1120px) 410px, (min-width: 769px) calc(38.4vw - 19.2px), (min-width: 768px) calc(38.4vw - 12.8px), calc(100vw - 32px)" />
+                  <img src="/images/uk/shopify-edi-integration/retailer-order-warehouse-picking-960.webp" srcSet="/images/uk/shopify-edi-integration/retailer-order-warehouse-picking-640.webp 640w, /images/uk/shopify-edi-integration/retailer-order-warehouse-picking-960.webp 960w, /images/uk/shopify-edi-integration/retailer-order-warehouse-picking-1280.webp 1280w" sizes="(min-width: 1120px) 410px, (min-width: 769px) calc(38.4vw - 19.2px), (min-width: 768px) calc(38.4vw - 12.8px), calc(100vw - 32px)" width="1536" height="1024" alt="A woman checks a clipboard while selecting a plain carton beside a warehouse trolley." loading="lazy" decoding="async" />
+                </picture>
           </div>
         </section>
 
