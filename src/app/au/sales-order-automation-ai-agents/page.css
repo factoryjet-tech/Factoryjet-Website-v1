@@ -1,0 +1,387 @@
+.auSalesOrderVisual10 .aiAgentPage.auPage {
+  --accent-text: #B23E13;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage :is(h1, h2, h3) {
+  text-wrap: balance;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage :is(p, li, td, tbody th, .lead, .stat, .agentdir-t, .agentdir-l, .qtext, .trigrows .m, .trigrows .n, .ledgercell .v) {
+  font-size: 16px;
+  line-height: 1.75;
+  overflow-wrap: break-word;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage :is(.eyebrow, .capid, .factlabel, .faq-category, .faq-nav-count, .qid, .sec, .specpanel-foot, .specpanel-bar, .specpanel-bar .sys span, .specrow .idx, .specrow .tag, .ledgercell .k, .byline .upd, .trigrows .t, thead th, .faqsrc) {
+  font-size: 12px;
+  line-height: 1.65;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage main .au-split .au-numlist li {
+  font-size: 16px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .au-midcta .font-fj-body {
+  font-size: 16px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .au-numlist li::before {
+  font-size: 12px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage :is(.specrow .title, .figcap, .btn, .faq-catnav a) {
+  font-size: 16px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage :is(.tablenote, .au-note, .au-panel p, .tnode p, .faq-ask p, .ans, .section-head p, .cap p, .fact p) {
+  font-size: 16px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage [data-hero-inline-form] :is(input, button) {
+  min-height: 48px;
+  font-size: 16px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage [data-hero-inline-form] .mt-2\.5 {
+  font-size: 16px !important;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .hero {
+  padding-block: clamp(32px, 4vw, 52px) clamp(56px, 6vw, 76px);
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .hero-grid {
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(32px, 4vw, 56px);
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .hero h1 {
+  font-size: clamp(38px, 4vw, 54px);
+  line-height: 1.1;
+  letter-spacing: -.035em;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .specpanel {
+  min-width: 0;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .specpanel-bar {
+  gap: 8px;
+  padding: 18px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .specpanel-bar .sys {
+  margin-left: 0;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .specpanel-body {
+  padding: 24px 18px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .specrow {
+  grid-template-columns: 38px minmax(0, 1fr);
+  width: 100%;
+  margin-left: 0;
+  min-height: 100px;
+  gap: 6px 12px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .specrow .workflow-icon {
+  grid-row: 1 / span 3;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .specrow .tag {
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: start;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage :is(.specrow, .specrow::before, .specrow .tag::after, .statusdot) {
+  animation: none;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .specrow:not(:last-child)::after {
+  left: 36px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .sov-section-media {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+  margin-bottom: clamp(32px, 4vw, 48px);
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .sov-section-media .section-head {
+  margin: 0;
+  max-width: none;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .sov-photo {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .sov-picture {
+  display: block;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: clamp(16px, 2vw, 24px);
+  box-shadow: 0 3px 7px -5px rgba(20,17,15,.18), 0 20px 36px -30px rgba(20,17,15,.24);
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .sov-picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+  filter: none;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .sov-process-photo {
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  overflow: visible;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .process .head-media {
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .sov-mistakes {
+  display: block;
+  margin-top: clamp(56px, 6vw, 88px);
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .sov-mistakes .definition-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 20px clamp(32px, 5vw, 64px);
+  align-items: start;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .sov-mistakes .eyebrow {
+  grid-column: 1;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .sov-mistakes h2 {
+  grid-column: 1;
+  margin: 0;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .sov-mistakes p {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .sov-mistakes .trigrows {
+  grid-column: 2;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .capgrid > .cap {
+  border-radius: 18px;
+  padding: clamp(24px, 3vw, 36px);
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .agentdir .agentdir-grid {
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 16px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .agentdir-grid a {
+  border-radius: 16px;
+  padding-block: 22px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .timeline.timeline-4 {
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 0 40px;
+  border-top: 1px solid var(--line);
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .timeline::before,
+.auSalesOrderVisual10 .aiAgentPage.auPage .timeline .tnode::before {
+  display: none;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .tnode {
+  padding-block: 22px;
+  border-bottom: 1px solid var(--line);
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .tnode summary {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  min-height: 46px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .tnode h3 {
+  margin: 0;
+  padding-right: 26px;
+  font-size: 21px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .tnode p {
+  margin-left: 64px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .faqwrap {
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(32px, 5vw, 64px);
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .faqHeading {
+  font-size: clamp(28px, 2.8vw, 38px);
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .finalcta .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 32px clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .finalcta h2 {
+  max-width: none;
+  font-size: clamp(28px, 3.5vw, 44px);
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .finalcta .ctas {
+  grid-column: 1;
+  margin: 0;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage :is(a, summary, button, input):focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 4px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage main > section[id] {
+  scroll-margin-top: 112px;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .tnode:last-child .idx {
+  background: var(--accent-text);
+  color: white;
+}
+.auSalesOrderVisual10 .aiAgentPage.auPage .faqsrc {
+  display: inline-flex;
+  align-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  max-width: 100%;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 1080px) {
+  .auSalesOrderVisual10 .aiAgentPage.auPage :is(.hero-grid, .faqwrap) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .hero h1 {
+    max-width: 28ch;
+    font-size: clamp(32px, 4.7vw, 46px);
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .specpanel {
+    max-width: 680px;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .faqintro {
+    position: static;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .faq-catnav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage :is(p, li, .who, .ledgercell .k) a,
+  .auSalesOrderVisual10 .aiAgentPage.auPage .crumbs a,
+  .auSalesOrderVisual10 .us-footer a,
+  .auSalesOrderVisual10 .us-footer summary {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    max-width: 100%;
+    vertical-align: middle;
+    overflow-wrap: anywhere;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage :is(.btn, .faq-catnav a, .tnode summary, .faqitem summary) {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .auSalesOrderVisual10 .us-footer :is(.us-footer__tagline, .us-footer__verification) {
+    font-size: 16px;
+  }
+}
+@media (max-width: 900px) {
+  .auSalesOrderVisual10 .aiAgentPage.auPage .tnode {
+    padding-inline: 0;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .tnode .idx {
+    position: static;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .tnode summary h3 {
+    display: block;
+    position: relative;
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    padding: 0 34px 0 0;
+    font-size: clamp(18px, 2.6vw, 21px);
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .tnode summary h3 .chev {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+  }
+}
+@media (max-width: 820px) {
+  .auSalesOrderVisual10 .aiAgentPage.auPage :is(.sov-section-media, .process .head-media, .finalcta .wrap, .sov-mistakes .definition-copy, .agentdir .agentdir-grid, .timeline.timeline-4) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .sov-section-media .sov-photo {
+    max-width: 720px;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .sov-mistakes :is(.eyebrow, h2, p, .trigrows),
+  .auSalesOrderVisual10 .aiAgentPage.auPage .finalcta .ctas {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .finalcta .ctas .btn {
+    margin-top: 0;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .facts .wrap {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .facts :is(.section-head, .factlist) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .sov-mistakes {
+    width: min(100% - 40px, 1200px);
+  }
+}
+@media (max-width: 600px) {
+  .auSalesOrderVisual10 .aiAgentPage.auPage .hero h1 {
+    max-width: none;
+    font-size: clamp(24px, 6.4vw, 28px);
+    line-height: 1.14;
+    letter-spacing: -.03em;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage :is(h2, .facts h2, .faqHeading, .finalcta h2) {
+    font-size: clamp(23px, 6.4vw, 28px);
+    line-height: 1.2;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .hero .eyebrow {
+    font-size: 12px;
+    letter-spacing: .05em;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .specpanel-bar {
+    padding: 16px;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .specpanel-body {
+    padding: 22px 14px;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .specrow {
+    grid-template-columns: 30px minmax(0, 1fr);
+    padding: 12px;
+    gap: 6px 10px;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .specrow .workflow-icon {
+    width: 30px;
+    height: 34px;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .specrow .idx {
+    letter-spacing: .02em;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .specrow .title {
+    font-size: 16px;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .specrow:not(:last-child)::after {
+    left: 26px;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .byline .upd {
+    margin-left: 48px;
+    text-align: left;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .fact {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 10px;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .faqitem summary {
+    grid-template-columns: 30px minmax(0, 1fr) 24px;
+    gap: 8px;
+  }
+  .auSalesOrderVisual10 .aiAgentPage.auPage .ans {
+    margin-left: 38px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .auSalesOrderVisual10 .aiAgentPage.auPage *,
+  .auSalesOrderVisual10 .aiAgentPage.auPage *::before,
+  .auSalesOrderVisual10 .aiAgentPage.auPage *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
