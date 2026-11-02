@@ -7,11 +7,11 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import AuFaq from '../components/AuFaq';
-import VisualSlot from '../components/VisualSlot';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-integration-services';
@@ -325,7 +325,7 @@ const RELATED: { h: string; t: string; d: string }[] = [
 
 export default function AiIntegrationServicesAUPage() {
   return (
-    <>
+    <div className="fj-au-integration-b10">
       <script id="ld-au-ai-integration-services" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
@@ -481,10 +481,7 @@ export default function AiIntegrationServicesAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/ai-agents/platforms-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/platforms-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/platforms-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
-                subject="A bookkeeper comparing a paper supplier invoice with the draft bill an AI integration prepared in the accounting system"
-                imageAlt="A bookkeeper compares a paper supplier invoice with the draft bill an AI integration prepared on his second monitor"
-                caption="The integration prepares the draft bill. The bookkeeper checks it and approves. Nothing posts on its own." />
+              <p className="figcap retained-caption">The integration prepares the draft bill. The bookkeeper checks it and approves. Nothing posts on its own.</p>
             </div>
           </div>
         </section>
@@ -502,6 +499,7 @@ export default function AiIntegrationServicesAUPage() {
                 The system itself stays the record of truth, and your team keeps the final say.
               </p>
             </div>
+            <div className="integration-systems-layout">
             <ul className="platlist" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
               {SYSTEMS.map((c, i) => (
                 <li key={c.t} className="plat plat-2col">
@@ -514,6 +512,14 @@ export default function AiIntegrationServicesAUPage() {
                 </li>
               ))}
             </ul>
+              <figure className="integration-photo integration-systems-photo">
+                <picture>
+                  <source type="image/avif" srcSet="/images/au/ai-integration-services/connected-systems-order-desk-640.avif 640w, /images/au/ai-integration-services/connected-systems-order-desk-960.avif 960w, /images/au/ai-integration-services/connected-systems-order-desk-1280.avif 1280w" sizes="(max-width: 1024px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" />
+                  <source type="image/webp" srcSet="/images/au/ai-integration-services/connected-systems-order-desk-640.webp 640w, /images/au/ai-integration-services/connected-systems-order-desk-960.webp 960w, /images/au/ai-integration-services/connected-systems-order-desk-1280.webp 1280w" sizes="(max-width: 1024px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" />
+                  <img src="/images/au/ai-integration-services/connected-systems-order-desk-960.webp" srcSet="/images/au/ai-integration-services/connected-systems-order-desk-640.webp 640w, /images/au/ai-integration-services/connected-systems-order-desk-960.webp 960w, /images/au/ai-integration-services/connected-systems-order-desk-1280.webp 1280w" sizes="(max-width: 1024px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman compares grey record rows and product tiles on two monitors beside plain lighting components." />
+                </picture>
+              </figure>
+            </div>
           </div>
         </section>
 
@@ -604,6 +610,7 @@ export default function AiIntegrationServicesAUPage() {
                 you can pause or walk away between phases.
               </p>
             </div>
+            <div className="integration-process-layout">
             <div className="timeline timeline-4">
               {STEPS.map((s) => (
                 <details key={s.n} className="tnode">
@@ -615,6 +622,14 @@ export default function AiIntegrationServicesAUPage() {
                   <p><b>You get:</b> {s.out}</p>
                 </details>
               ))}
+            </div>
+              <figure className="integration-photo integration-process-photo">
+                <picture>
+                  <source type="image/avif" srcSet="/images/au/ai-integration-services/integration-phases-workshop-640.avif 640w, /images/au/ai-integration-services/integration-phases-workshop-960.avif 960w, /images/au/ai-integration-services/integration-phases-workshop-1280.avif 1280w" sizes="(max-width: 1024px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" />
+                  <source type="image/webp" srcSet="/images/au/ai-integration-services/integration-phases-workshop-640.webp 640w, /images/au/ai-integration-services/integration-phases-workshop-960.webp 960w, /images/au/ai-integration-services/integration-phases-workshop-1280.webp 1280w" sizes="(max-width: 1024px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" />
+                  <img src="/images/au/ai-integration-services/integration-phases-workshop-960.webp" srcSet="/images/au/ai-integration-services/integration-phases-workshop-640.webp 640w, /images/au/ai-integration-services/integration-phases-workshop-960.webp 960w, /images/au/ai-integration-services/integration-phases-workshop-1280.webp 1280w" sizes="(max-width: 1024px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" width={1536} height={1024} loading="lazy" decoding="async" alt="A man gestures at seven blank rectangles on a whiteboard while a woman holds a plain folder." />
+                </picture>
+              </figure>
             </div>
           </div>
         </section>
@@ -865,6 +880,13 @@ export default function AiIntegrationServicesAUPage() {
               <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               <a className="btn btn-ghost" href="/au/ai-development">See AI development</a>
             </div>
+              <figure className="integration-photo integration-demo-photo">
+                <picture>
+                  <source type="image/avif" srcSet="/images/au/ai-integration-services/buyer-integration-demo-640.avif 640w, /images/au/ai-integration-services/buyer-integration-demo-960.avif 960w, /images/au/ai-integration-services/buyer-integration-demo-1280.avif 1280w" sizes="(max-width: 1024px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" />
+                  <source type="image/webp" srcSet="/images/au/ai-integration-services/buyer-integration-demo-640.webp 640w, /images/au/ai-integration-services/buyer-integration-demo-960.webp 960w, /images/au/ai-integration-services/buyer-integration-demo-1280.webp 1280w" sizes="(max-width: 1024px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" />
+                  <img src="/images/au/ai-integration-services/buyer-integration-demo-960.webp" srcSet="/images/au/ai-integration-services/buyer-integration-demo-640.webp 640w, /images/au/ai-integration-services/buyer-integration-demo-960.webp 960w, /images/au/ai-integration-services/buyer-integration-demo-1280.webp 1280w" sizes="(max-width: 1024px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" width={1536} height={1024} loading="lazy" decoding="async" alt="Three adults review two panels of grey rows on a monitor at a meeting table." />
+                </picture>
+              </figure>
           </div>
         </section>
 
@@ -872,6 +894,6 @@ export default function AiIntegrationServicesAUPage() {
       </div>
 
       <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} />
-    </>
+    </div>
   );
 }
