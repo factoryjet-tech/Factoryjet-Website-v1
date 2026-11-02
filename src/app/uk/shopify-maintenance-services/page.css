@@ -1,6 +1,6 @@
 .uk-shopify-maintenance main { overflow-wrap:anywhere; }
 .uk-shopify-maintenance main :is(h1,h2,h3) { text-wrap:balance; }
-.uk-shopify-maintenance main p { font-size:16px !important; text-wrap:pretty; }
+.uk-shopify-maintenance main p:where(:not(.font-fj-display,.font-fj-mono)) { font-size:16px !important; text-wrap:pretty; }
 .uk-shopify-maintenance main li { font-size:16px !important; }
 .uk-shopify-maintenance main .lead { font-size:clamp(1.0625rem,1.4vw,1.125rem) !important; }
 .uk-shopify-maintenance main :is(.eyebrow,.chip,.lab,.scorecard-note,.byline .who,.byline .upd,.faq-sidebar-topics,.faq-nav-count,.faq-cat-label) { font-size:12px !important; }
