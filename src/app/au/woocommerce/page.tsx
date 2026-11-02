@@ -10,7 +10,6 @@ import AuFaq from '../components/AuFaq';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
-import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/woocommerce';
 const UPDATED = '2026-10-31';
@@ -274,7 +273,7 @@ export default function WooCommerceAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage au-woo-visual-11">
+      <div className="aiAgentPage auPage">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -410,7 +409,6 @@ export default function WooCommerceAUPage() {
         {/* ═══ LISTICLE: EIGHT JOBS → capgrid ═══ */}
         <section className="section capabilities" id="what-we-build">
           <div className="wrap">
-            <div className="woo-jobs-intro">
             <div className="section-head">
               <div className="eyebrow">WooCommerce development, itemised</div>
               <h2>Eight WooCommerce jobs established stores bring to us</h2>
@@ -418,12 +416,6 @@ export default function WooCommerceAUPage() {
                 These jobs usually start behind the storefront: an order that never reached the warehouse, a refund
                 booked twice in Xero, a stockist who gave up and phoned, or an update that took checkout down.
               </p>
-            </div>
-            <picture className="woo-photo woo-jobs-photo">
-              <source type="image/avif" srcSet="/images/au/woocommerce/trade-order-review-640.avif 640w, /images/au/woocommerce/trade-order-review-960.avif 960w, /images/au/woocommerce/trade-order-review-1280.avif 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc((100vw - 112px) * 0.416667), 480px" />
-              <source type="image/webp" srcSet="/images/au/woocommerce/trade-order-review-640.webp 640w, /images/au/woocommerce/trade-order-review-960.webp 960w, /images/au/woocommerce/trade-order-review-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc((100vw - 112px) * 0.416667), 480px" />
-              <img src="/images/au/woocommerce/trade-order-review-1280.webp" srcSet="/images/au/woocommerce/trade-order-review-640.webp 640w, /images/au/woocommerce/trade-order-review-960.webp 960w, /images/au/woocommerce/trade-order-review-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc((100vw - 112px) * 0.416667), 480px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman and a man compare brass fittings with product photographs on a laptop at an order desk." />
-            </picture>
             </div>
             <ul className="capgrid" style={{ listStyle: 'none', margin: 0, padding: 0 }}>
               {JOBS.map((s, i) => (
@@ -445,11 +437,6 @@ export default function WooCommerceAUPage() {
               <h2>Connecting WooCommerce to the systems Australian businesses run</h2>
             </div>
             <div className="factswrap">
-              <picture className="woo-photo woo-integration-photo">
-                <source type="image/avif" srcSet="/images/au/woocommerce/warehouse-books-handoff-640.avif 640w, /images/au/woocommerce/warehouse-books-handoff-960.avif 960w, /images/au/woocommerce/warehouse-books-handoff-1280.avif 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc((100vw - 112px) * 0.416667), 480px" />
-                <source type="image/webp" srcSet="/images/au/woocommerce/warehouse-books-handoff-640.webp 640w, /images/au/woocommerce/warehouse-books-handoff-960.webp 960w, /images/au/woocommerce/warehouse-books-handoff-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc((100vw - 112px) * 0.416667), 480px" />
-                <img src="/images/au/woocommerce/warehouse-books-handoff-1280.webp" srcSet="/images/au/woocommerce/warehouse-books-handoff-640.webp 640w, /images/au/woocommerce/warehouse-books-handoff-960.webp 960w, /images/au/woocommerce/warehouse-books-handoff-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc((100vw - 112px) * 0.416667), 480px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman brings a tray of brass couplings to a man sitting beside product photographs and blank paper." />
-              </picture>
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
                   Accounting comes first because it is where errors get expensive. Woo’s own{' '}
@@ -589,7 +576,7 @@ export default function WooCommerceAUPage() {
                 usually where stock and prices should live.
               </p>
             </div>
-            <p className="md:hidden" style={{ fontSize: 16, margin: '0 0 8px' }}>Swipe sideways to see every column.</p>
+            <p className="md:hidden" style={{ fontSize: 13, margin: '0 0 8px' }}>Swipe sideways to see every column.</p>
             <div className="tablewrap" role="region" tabIndex={0} aria-label="WooCommerce route comparison" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table style={{ minWidth: 720 }}>
                 <thead>
@@ -803,11 +790,6 @@ export default function WooCommerceAUPage() {
               <ModalCTAButton label="See a draft of my store" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               <a className="btn btn-ghost" href="/au/ecommerce-development">See ecommerce development</a>
             </div>
-            <picture className="woo-photo woo-draft-photo">
-              <source type="image/avif" srcSet="/images/au/woocommerce/product-catalogue-shoot-640.avif 640w, /images/au/woocommerce/product-catalogue-shoot-960.avif 960w, /images/au/woocommerce/product-catalogue-shoot-1280.avif 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc((100vw - 112px) * 0.416667), 480px" />
-              <source type="image/webp" srcSet="/images/au/woocommerce/product-catalogue-shoot-640.webp 640w, /images/au/woocommerce/product-catalogue-shoot-960.webp 960w, /images/au/woocommerce/product-catalogue-shoot-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc((100vw - 112px) * 0.416667), 480px" />
-              <img src="/images/au/woocommerce/product-catalogue-shoot-1280.webp" srcSet="/images/au/woocommerce/product-catalogue-shoot-640.webp 640w, /images/au/woocommerce/product-catalogue-shoot-960.webp 960w, /images/au/woocommerce/product-catalogue-shoot-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc((100vw - 112px) * 0.416667), 480px" width={1536} height={1024} loading="lazy" decoding="async" alt="Three brass fittings stand on a white photography backdrop beside a product contact sheet." />
-            </picture>
           </div>
         </section>
 
