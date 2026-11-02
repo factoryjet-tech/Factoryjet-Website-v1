@@ -11,7 +11,6 @@ import VisualSlot from '../components/VisualSlot';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
-import './page.css';
 
 /* Same engineering visuals and page-owned styles as /au/ai-agents (mirrored template).
    Both files are imported read-only; nothing in /au/ai-agents is changed by this page. */
@@ -432,7 +431,7 @@ const JOB_SUBJECTS = [
 
 export default function DocumentIntakeAiAgentsAUPage() {
   return (
-    <div className="fj-intake-b10">
+    <>
       <script id="ld-au-document-intake-ai-agents" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
@@ -556,19 +555,15 @@ export default function DocumentIntakeAiAgentsAUPage() {
               <div className="factlist">
                 <div className="fact">
                   <div className="sec">§01</div>
-                  <div>
                   <p data-speakable="true">
                     <span className="stat">A document intake agent reads the paperwork that arrives at your business, such as customer
                     purchase orders, delivery dockets and trade account applications, checks each field against your own
-                    records, and files a draft in Xero, MYOB or your ERP for a person to confirm.</span>
-                  </p>
-                  <p>It is a form of
+                    records, and files a draft in Xero, MYOB or your ERP for a person to confirm.</span> It is a form of
                     intelligent document processing (IDP). Fields it is unsure of go to a review queue with the original
                     page beside them, so a messy scan slows down instead of turning into a wrong record. FactoryJet builds
                     custom document intake agents for Australian wholesalers, manufacturers, freight firms and trade
                     suppliers, filing into Xero, MYOB, NetSuite, Odoo, Cin7 Core or Unleashed.
                   </p>
-                  </div>
                 </div>
                 <div className="fact">
                   <div className="sec">§02</div>
@@ -593,7 +588,10 @@ export default function DocumentIntakeAiAgentsAUPage() {
                   </p>
                 </div>
               </div>
-
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+                subject="An Adelaide bookkeeper comparing a paper document with the draft record an AI agent prepared on his second monitor">
+                <img src="/images/au/visual-pass-2026-10-03/ai-agents/platforms-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/platforms-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/platforms-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 480px" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an Adelaide bookkeeper comparing a paper document with the draft record an AI agent prepared on his second monitor" />
+              </VisualSlot>
             </div>
           </div>
         </section>
@@ -645,13 +643,8 @@ export default function DocumentIntakeAiAgentsAUPage() {
                   </div>
                 ))}
               </div>
-              <figure className="intake-photo factphoto">
-                <picture>
-                  <source type="image/avif" srcSet="/images/au/document-intake-ai-agents/document-intake-trays-640.avif 640w, /images/au/document-intake-ai-agents/document-intake-trays-960.avif 960w, /images/au/document-intake-ai-agents/document-intake-trays-1280.avif 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" />
-                  <source type="image/webp" srcSet="/images/au/document-intake-ai-agents/document-intake-trays-640.webp 640w, /images/au/document-intake-ai-agents/document-intake-trays-960.webp 960w, /images/au/document-intake-ai-agents/document-intake-trays-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" />
-                  <img src="/images/au/document-intake-ai-agents/document-intake-trays-960.webp" srcSet="/images/au/document-intake-ai-agents/document-intake-trays-640.webp 640w, /images/au/document-intake-ai-agents/document-intake-trays-960.webp 960w, /images/au/document-intake-ai-agents/document-intake-trays-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman sorts A4 paperwork into three trays at a desk beside a wholesale storeroom." />
-                </picture>
-              </figure>
+              <VisualSlot page={PAGE_KEY} slot="facts-2" src={null} kind="photo" ratio="3:2" className="factphoto"
+                subject="A warehouse supervisor in a Sydney distribution centre checking a signed delivery docket against the order on a tablet" />
             </div>
           </div>
         </section>
@@ -726,13 +719,8 @@ export default function DocumentIntakeAiAgentsAUPage() {
                   </ul>
                 </div></div>
               </div>
-              <figure className="intake-photo factphoto">
-                <picture>
-                  <source type="image/avif" srcSet="/images/au/document-intake-ai-agents/held-order-review-640.avif 640w, /images/au/document-intake-ai-agents/held-order-review-960.avif 960w, /images/au/document-intake-ai-agents/held-order-review-1280.avif 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" />
-                  <source type="image/webp" srcSet="/images/au/document-intake-ai-agents/held-order-review-640.webp 640w, /images/au/document-intake-ai-agents/held-order-review-960.webp 960w, /images/au/document-intake-ai-agents/held-order-review-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" />
-                  <img src="/images/au/document-intake-ai-agents/held-order-review-960.webp" srcSet="/images/au/document-intake-ai-agents/held-order-review-640.webp 640w, /images/au/document-intake-ai-agents/held-order-review-960.webp 960w, /images/au/document-intake-ai-agents/held-order-review-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" width={1536} height={1024} loading="lazy" decoding="async" alt="A man reviews two panels of grey document rows with orange highlights on a monitor." />
-                </picture>
-              </figure>
+              <VisualSlot page={PAGE_KEY} slot="facts-3" src={null} kind="photo" ratio="3:2" className="factphoto"
+                subject="A Brisbane customer service lead confirming a held purchase order in a review queue, the original PDF open beside the draft" />
             </div>
           </div>
         </section>
@@ -753,7 +741,9 @@ export default function DocumentIntakeAiAgentsAUPage() {
                   signed on its own, so you can stop after any of them.
                 </p>
               </div>
-
+              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/accounts-payable-automation/process-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/accounts-payable-automation/process-640.webp 640w, /images/au/visual-pass-2026-10-03/accounts-payable-automation/process-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2"
+                subject="A warehouse supervisor in hi-vis workwear and a bookkeeper at an Australian trade supplier sorting printed documents into piles by type on a meeting table, laptop screen facing them, no readable text or logos"
+                imageAlt="A warehouse supervisor and a bookkeeper at an Australian trade supplier sorting printed documents into piles by type" />
             </div>
             <div className="timeline timeline-4">
               {BUILD_STEPS.map((s) => (
@@ -1052,13 +1042,10 @@ export default function DocumentIntakeAiAgentsAUPage() {
         {/* ═══ WORKED EXAMPLE → definition module ═══ */}
         <section className="definition" id="worked-example">
           <div>
-            <figure className="intake-photo definition-image">
-                <picture>
-                  <source type="image/avif" srcSet="/images/au/document-intake-ai-agents/victorian-hardware-counter-640.avif 640w, /images/au/document-intake-ai-agents/victorian-hardware-counter-960.avif 960w, /images/au/document-intake-ai-agents/victorian-hardware-counter-1280.avif 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" />
-                  <source type="image/webp" srcSet="/images/au/document-intake-ai-agents/victorian-hardware-counter-640.webp 640w, /images/au/document-intake-ai-agents/victorian-hardware-counter-960.webp 960w, /images/au/document-intake-ai-agents/victorian-hardware-counter-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" />
-                  <img src="/images/au/document-intake-ai-agents/victorian-hardware-counter-960.webp" srcSet="/images/au/document-intake-ai-agents/victorian-hardware-counter-640.webp 640w, /images/au/document-intake-ai-agents/victorian-hardware-counter-960.webp 960w, /images/au/document-intake-ai-agents/victorian-hardware-counter-1280.webp 1280w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 38vw, 456px" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people sort paper orders at a hardware counter beside bins of plumbing fittings." />
-                </picture>
-              </figure>
+            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+              subject="A customer service team member in a back office working through an order inbox an AI agent has already sorted">
+              <img src="/images/au/ai-agents/ai-agents-orders.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a customer service team member in a back office, working through an order inbox an AI agent has already sorted" />
+            </VisualSlot>
           </div>
           <div className="definition-copy">
             <div className="eyebrow">What good looks like</div>
@@ -1170,6 +1157,6 @@ export default function DocumentIntakeAiAgentsAUPage() {
       </div>
 
       <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} />
-    </div>
+    </>
   );
 }
