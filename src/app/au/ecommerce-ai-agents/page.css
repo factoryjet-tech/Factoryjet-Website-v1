@@ -127,7 +127,7 @@
   scroll-margin-top: 112px;
 }
 @media (max-width: 1024px) {
-  .fj-au-ecom-visual :is(.us-footer__tagline, .us-footer__verification) {
+  .fj-au-ecom-visual footer.us-footer :is(.us-footer__tagline, .us-footer__verification) {
     font-size: 16px;
   }
   .fj-au-ecom-visual .aiAgentPage.auPage :is(.agentdir-t, .agentdir-l, .plat-name h3) {
