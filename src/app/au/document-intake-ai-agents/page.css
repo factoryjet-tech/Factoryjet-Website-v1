@@ -62,7 +62,7 @@
 .fj-intake-b10 .aiAgentPage.auPage main .au-numlist li::before { font-size: 12px; }
 .fj-intake-b10 .aiAgentPage.auPage main .hero :is(input, button[type="submit"]) { font-size: 16px; }
 @media (max-width: 1024px) {
-  .fj-intake-b10 .us-footer__tagline, .fj-intake-b10 .us-footer__verification { font-size: 16px; }
+  .fj-intake-b10 footer.us-footer .us-footer__tagline, .fj-intake-b10 footer.us-footer .us-footer__verification { font-size: 16px; }
 }
 @media (max-width: 380px) {
   .fj-intake-b10 .aiAgentPage.auPage main #industries .fact h3 { font-size: 18px; }

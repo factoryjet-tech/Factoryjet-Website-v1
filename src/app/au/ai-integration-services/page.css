@@ -39,7 +39,7 @@
 .fj-au-integration-b10 .aiAgentPage.auPage .finalcta .wrap > div { min-width: 0; grid-column: 1; }
 .fj-au-integration-b10 .aiAgentPage.auPage .finalcta .ctas { margin: 0; }
 .fj-au-integration-b10 .aiAgentPage.auPage .integration-demo-photo { grid-column: 2; grid-row: 1 / span 2; }
-.fj-au-integration-b10 .us-footer__tagline, .fj-au-integration-b10 .us-footer__verification { font-size: 16px; }
+.fj-au-integration-b10 footer.us-footer .us-footer__tagline, .fj-au-integration-b10 footer.us-footer .us-footer__verification { font-size: 16px; }
 .fj-au-integration-b10 .aiAgentPage.auPage .faqsrc { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; font-size: 16px; }
 .fj-au-integration-b10 .aiAgentPage.auPage [data-hero-inline-form] input:not([aria-hidden="true"]), .fj-au-integration-b10 .aiAgentPage.auPage [data-hero-inline-form] button { font-size: 16px; }
 .fj-au-integration-b10 .aiAgentPage.auPage .au-midcta .font-fj-body { font-size: 16px; }
