@@ -80,3 +80,4 @@
 .uk-amazon-visual main .btn-outline:hover { border-color: #B23E13; color: #B23E13; }
 .uk-amazon-visual main .dark-sec .btn-outline:hover { border-color: #fff; color: #fff; }
 .uk-amazon-visual main .def .lab { font-size: 12px; }
+.uk-amazon-visual .stats-band li > div { color: #F05A28 !important; }

@@ -35,6 +35,7 @@
 .uk-edi-visual .faq-item[open] summary .q-text { color: #B23E13; }
 .uk-edi-visual .edi-sources a { display: inline-flex; align-items: center; min-height: 44px; }
 .uk-edi-visual .stats-band a { display: inline-flex; align-items: center; min-height: 44px; }
+.uk-edi-visual .stats-band li > div { color: #F05A28 !important; }
 .uk-edi-visual .byline .av { background: #B23E13; }
 .uk-edi-visual .scorecard-metric { font-size: 16px; }
 .uk-edi-visual .chip { letter-spacing: .06em; }
