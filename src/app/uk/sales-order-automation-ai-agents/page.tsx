@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* /uk/sales-order-automation-ai-agents, built 2026-10-29.
@@ -260,7 +261,7 @@ export default function SalesOrderAutomationUKPage() {
       <script id="ld-uk-sales-order-automation-ai-agents" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents fj-so6">
       <main>
         <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
@@ -302,7 +303,6 @@ export default function SalesOrderAutomationUKPage() {
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/b2b-ecommerce/b2b-ecommerce-warehouse.webp" width={1200} height={800} fetchPriority="high" decoding="async" alt="Two colleagues in a UK warehouse aisle checking a trade order on a tablet, between racks of boxed stock" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What reaches your approver</span>
                   <div className="scorecard-row">
@@ -395,7 +395,8 @@ export default function SalesOrderAutomationUKPage() {
                 <a href="/uk/document-intake-ai-agents" style={{ textDecoration: 'underline' }}>document intake AI agents</a>.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <div className="fj-so-order-content mt-10">
+            <ol className="stack" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Picks the order out of the mailbox', d: 'It watches the shared orders address, separates real orders from chasers, delivery queries and remittances, and reads attachments in PDF, Excel, CSV or the email body itself.' },
                 { n: '02', t: 'Finds the account', d: 'It matches the sender, the bill-to and the delivery address to the right customer record, including branches that order under a parent account.' },
@@ -406,7 +407,7 @@ export default function SalesOrderAutomationUKPage() {
                 { n: '07', t: 'Hands it to a person', d: 'Clean drafts go to the approval list. Drafts with a problem go to a separate list with the reason beside each flagged line. Approval stays inside your ERP.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
@@ -419,6 +420,12 @@ export default function SalesOrderAutomationUKPage() {
               drafts. Approving an order, editing a price list or taking a customer off stop are outside its rights. Those stay with your
               people, and the log shows every draft it wrote and why.
             </p>
+              <picture className="fj-so-photo fj-so-order-photo mt-10">
+                <source type="image/avif" srcSet="/images/uk/sales-order-automation-ai-agents/trade-purchase-order-approval-640.avif 640w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-approval-960.avif 960w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-approval-1280.avif 1280w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-approval-1600.avif 1600w" sizes="(min-width: 1120px) 1072px, (min-width: 769px) calc(100vw - 48px), calc(100vw - 32px)" />
+                <source type="image/webp" srcSet="/images/uk/sales-order-automation-ai-agents/trade-purchase-order-approval-640.webp 640w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-approval-960.webp 960w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-approval-1280.webp 1280w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-approval-1600.webp 1600w" sizes="(min-width: 1120px) 1072px, (min-width: 769px) calc(100vw - 48px), calc(100vw - 32px)" />
+                <img src="/images/uk/sales-order-automation-ai-agents/trade-purchase-order-approval-960.webp" srcSet="/images/uk/sales-order-automation-ai-agents/trade-purchase-order-approval-640.webp 640w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-approval-960.webp 960w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-approval-1280.webp 1280w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-approval-1600.webp 1600w" sizes="(min-width: 1120px) 1072px, (min-width: 769px) calc(100vw - 48px), calc(100vw - 32px)" width={1536} height={1024} alt="A woman compares an A4 purchase order with a draft form at a plumbing supplier order desk." loading="lazy" decoding="async" />
+              </picture>
+            </div>
           </div>
         </section>
 
@@ -487,7 +494,7 @@ export default function SalesOrderAutomationUKPage() {
 
         {/* ═══ 6. CHANNELS THAT DO NOT NEED IT ═══ */}
         <section className="sec-lg dot-grid">
-          <div className="wrap">
+          <div className="wrap fj-so-scope-layout">
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">Scope it honestly</span>
               <h2>Which orders need an agent, and which already arrive as data</h2>
@@ -512,6 +519,11 @@ export default function SalesOrderAutomationUKPage() {
                 </p>
               </div>
             </div>
+            <picture className="fj-so-photo">
+                <source type="image/avif" srcSet="/images/uk/sales-order-automation-ai-agents/trade-dispatch-paper-orders-640.avif 640w, /images/uk/sales-order-automation-ai-agents/trade-dispatch-paper-orders-960.avif 960w, /images/uk/sales-order-automation-ai-agents/trade-dispatch-paper-orders-1280.avif 1280w" sizes="(min-width: 1120px) 427px, (min-width: 901px) 38vw, (min-width: 752px) 720px, calc(100vw - 32px)" />
+                <source type="image/webp" srcSet="/images/uk/sales-order-automation-ai-agents/trade-dispatch-paper-orders-640.webp 640w, /images/uk/sales-order-automation-ai-agents/trade-dispatch-paper-orders-960.webp 960w, /images/uk/sales-order-automation-ai-agents/trade-dispatch-paper-orders-1280.webp 1280w" sizes="(min-width: 1120px) 427px, (min-width: 901px) 38vw, (min-width: 752px) 720px, calc(100vw - 32px)" />
+                <img src="/images/uk/sales-order-automation-ai-agents/trade-dispatch-paper-orders-960.webp" srcSet="/images/uk/sales-order-automation-ai-agents/trade-dispatch-paper-orders-640.webp 640w, /images/uk/sales-order-automation-ai-agents/trade-dispatch-paper-orders-960.webp 960w, /images/uk/sales-order-automation-ai-agents/trade-dispatch-paper-orders-1280.webp 1280w" sizes="(min-width: 1120px) 427px, (min-width: 901px) 38vw, (min-width: 752px) 720px, calc(100vw - 32px)" width={1536} height={1024} alt="A man sorts an A4 order folder beside plain boxes and cable pallets at a trade dispatch bench." loading="lazy" decoding="async" />
+              </picture>
           </div>
         </section>
 
@@ -697,7 +709,7 @@ export default function SalesOrderAutomationUKPage() {
                 { n: '06', t: 'Hand-over or support', d: 'You get the code, the rules and the documentation. FactoryJet can keep running it with changes quoted one by one, or your own team takes it on.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
@@ -800,7 +812,8 @@ export default function SalesOrderAutomationUKPage() {
 
         {/* ═══ 14. FINAL CTA (the only dark section) ═══ */}
         <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+          <div className="wrap fj-so-final-layout">
+            <div className="fj-so-final-copy">
             <span className="eyebrow">Next step</span>
             <h2>A sales order automation demo on your own purchase orders</h2>
             <p className="mt-4">
@@ -808,10 +821,16 @@ export default function SalesOrderAutomationUKPage() {
               your trade accounts and how orders reach you today. Then we run a demo over a sample of your past orders,
               before you sign anything.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8" style={{ display: 'flex', justifyContent: 'flex-start', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/uk/ai-agents" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See AI agents UK</a>
             </div>
+            </div>
+            <picture className="fj-so-photo">
+                <source type="image/avif" srcSet="/images/uk/sales-order-automation-ai-agents/trade-purchase-order-demo-640.avif 640w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-demo-960.avif 960w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-demo-1280.avif 1280w" sizes="(min-width: 1120px) 427px, (min-width: 901px) 38vw, (min-width: 752px) 720px, calc(100vw - 32px)" />
+                <source type="image/webp" srcSet="/images/uk/sales-order-automation-ai-agents/trade-purchase-order-demo-640.webp 640w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-demo-960.webp 960w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-demo-1280.webp 1280w" sizes="(min-width: 1120px) 427px, (min-width: 901px) 38vw, (min-width: 752px) 720px, calc(100vw - 32px)" />
+                <img src="/images/uk/sales-order-automation-ai-agents/trade-purchase-order-demo-960.webp" srcSet="/images/uk/sales-order-automation-ai-agents/trade-purchase-order-demo-640.webp 640w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-demo-960.webp 960w, /images/uk/sales-order-automation-ai-agents/trade-purchase-order-demo-1280.webp 1280w" sizes="(min-width: 1120px) 427px, (min-width: 901px) 38vw, (min-width: 752px) 720px, calc(100vw - 32px)" width={1536} height={1024} alt="Two people compare an A4 purchase order with draft order rows on a wall screen beside a trade stockroom." loading="lazy" decoding="async" />
+              </picture>
           </div>
         </section>
 
