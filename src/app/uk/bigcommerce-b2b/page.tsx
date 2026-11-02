@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 
 /* /uk/bigcommerce-b2b, built 2026-10-29.
 
@@ -271,7 +272,7 @@ export default function BigCommerceB2BUKPage() {
       <script id="ld-uk-bigcommerce-b2b" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents fj-uk-bigcommerce">
       <main>
 
         <Breadcrumbs items={crumbs} />
@@ -404,7 +405,15 @@ export default function BigCommerceB2BUKPage() {
                 configure and connect.
               </p>
             </div>
-            <ul className="col-2 mt-12">
+            <div className="fj-bc-build-layout mt-12">
+              <div className="fj-bc-sticky-media">
+              <picture className="fj-bc-photo">
+                <source type="image/avif" srcSet="/images/uk/bigcommerce-b2b/trade-buyer-hardware-catalogue-640.avif 640w, /images/uk/bigcommerce-b2b/trade-buyer-hardware-catalogue-960.avif 960w, /images/uk/bigcommerce-b2b/trade-buyer-hardware-catalogue-1280.avif 1280w" sizes="(min-width: 1280px) 520px, (min-width: 960px) 43vw, calc(100vw - 40px)" />
+                <source type="image/webp" srcSet="/images/uk/bigcommerce-b2b/trade-buyer-hardware-catalogue-640.webp 640w, /images/uk/bigcommerce-b2b/trade-buyer-hardware-catalogue-960.webp 960w, /images/uk/bigcommerce-b2b/trade-buyer-hardware-catalogue-1280.webp 1280w" sizes="(min-width: 1280px) 520px, (min-width: 960px) 43vw, calc(100vw - 40px)" />
+                <img src="/images/uk/bigcommerce-b2b/trade-buyer-hardware-catalogue-960.webp" srcSet="/images/uk/bigcommerce-b2b/trade-buyer-hardware-catalogue-640.webp 640w, /images/uk/bigcommerce-b2b/trade-buyer-hardware-catalogue-960.webp 960w, /images/uk/bigcommerce-b2b/trade-buyer-hardware-catalogue-1280.webp 1280w" sizes="(min-width: 1280px) 520px, (min-width: 960px) 43vw, calc(100vw - 40px)" width="1280" height="853" alt="A man reviews photographs of brackets and plumbing fittings on a laptop beside matching samples." loading="lazy" decoding="async" />
+              </picture>
+              </div>
+            <ul className="fj-bc-build-list">
               <li className="svc-card">
                 <h3>Company accounts and buyer roles</h3>
                 <p className="mt-4">One account per trade customer, with parent and branch companies where a group buys for several sites. Each buyer gets a role, so a site manager can order and only a finance contact can pay invoices.</p>
@@ -438,6 +447,7 @@ export default function BigCommerceB2BUKPage() {
                 <p className="mt-4">A public storefront can run on the same account for retail shoppers, with Klarna and Clearpay available through BigCommerce Payments in the UK. Amazon.co.uk, eBay UK or OnBuy sit alongside it. All of them read one stock figure, so trade orders are never oversold.</p>
               </li>
             </ul>
+            </div>
             <p style={srcNote}>
               B2B Edition features described as listed in the <a href={SRC_B2B_HELP} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>BigCommerce Help Center</a> and the <a href={SRC_B2B_PRESS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>BigCommerce March 2025 B2B release</a>; Klarna and Clearpay from <a href={SRC_BC_PAYMENTS_UK} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>BigCommerce’s UK payments announcement</a>. Payment providers and marketplaces are confirmed against your BigCommerce plan during scoping.
             </p>
@@ -447,16 +457,25 @@ export default function BigCommerceB2BUKPage() {
         {/* ═══ 5. WHICH SYSTEM OWNS WHAT ═══ */}
         <section className="sec-lg">
           <div className="wrap">
+            <div className="fj-bc-stock-intro">
+              <div>
             <span className="eyebrow">One owner per piece of data</span>
-            <h2 style={{ maxWidth: 760 }}>Which UK system owns stock, prices and credit in a BigCommerce B2B build</h2>
+            <h2 id="fj-bc-stock-title" style={{ maxWidth: 760 }}>Which UK system owns stock, prices and credit in a BigCommerce B2B build</h2>
             <p className="lead mt-4" style={{ maxWidth: 760 }}>
               In our integration work, most problems come from data ownership. When two systems both think they own
               a customer’s price, the buyer sees one number and the invoice shows another. This is how the jobs
               usually split for the systems UK distributors run. Your setup may differ, and we confirm it on the
               scoping call.
             </p>
+              </div>
+              <picture className="fj-bc-photo">
+                <source type="image/avif" srcSet="/images/uk/bigcommerce-b2b/warehouse-manager-stock-scanner-640.avif 640w, /images/uk/bigcommerce-b2b/warehouse-manager-stock-scanner-960.avif 960w, /images/uk/bigcommerce-b2b/warehouse-manager-stock-scanner-1280.avif 1280w" sizes="(min-width: 1280px) 520px, (min-width: 960px) 43vw, calc(100vw - 40px)" />
+                <source type="image/webp" srcSet="/images/uk/bigcommerce-b2b/warehouse-manager-stock-scanner-640.webp 640w, /images/uk/bigcommerce-b2b/warehouse-manager-stock-scanner-960.webp 960w, /images/uk/bigcommerce-b2b/warehouse-manager-stock-scanner-1280.webp 1280w" sizes="(min-width: 1280px) 520px, (min-width: 960px) 43vw, calc(100vw - 40px)" />
+                <img src="/images/uk/bigcommerce-b2b/warehouse-manager-stock-scanner-960.webp" srcSet="/images/uk/bigcommerce-b2b/warehouse-manager-stock-scanner-640.webp 640w, /images/uk/bigcommerce-b2b/warehouse-manager-stock-scanner-960.webp 960w, /images/uk/bigcommerce-b2b/warehouse-manager-stock-scanner-1280.webp 1280w" sizes="(min-width: 1280px) 520px, (min-width: 960px) 43vw, calc(100vw - 40px)" width="1280" height="853" alt="A woman uses a handheld scanner beside racking of plain cartons in a warehouse." loading="lazy" decoding="async" />
+              </picture>
+            </div>
             <p className="md:hidden mt-6" style={srcNote}>Swipe sideways to see every column.</p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <div className="card mt-8 fj-bc-table-scroll" tabIndex={0} role="region" aria-labelledby="fj-bc-stock-title" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
@@ -586,7 +605,7 @@ export default function BigCommerceB2BUKPage() {
                 quote once we have seen how your ERP exposes its data.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="fj-bc-process mt-10">
               {[
                 { n: '01', t: 'Read how you trade today', d: 'We take a week of real trade orders, your price structure and your payment terms, and list every way an order reaches you now: email, phone, rep visit, EDI (order files sent straight from the customer’s system) or a spreadsheet.' },
                 { n: '02', t: 'Agree which system owns what', d: 'For each piece of data (customer, price, stock, credit, invoice) we name the master system. This page’s table is where that conversation starts.' },
@@ -648,13 +667,13 @@ export default function BigCommerceB2BUKPage() {
         <section className="sec-lg">
           <div className="wrap">
             <span className="eyebrow">Platform comparison</span>
-            <h2 style={{ maxWidth: 760 }}>BigCommerce vs Shopify, WooCommerce and Adobe Commerce for B2B</h2>
+            <h2 id="fj-bc-comparison-title" style={{ maxWidth: 760 }}>BigCommerce vs Shopify, WooCommerce and Adobe Commerce for B2B</h2>
             <p className="lead mt-4" style={{ maxWidth: 760 }}>
               Each cell below comes from the vendor’s own documentation. Where a vendor page did not cover a
               feature, the cell says so, and we check it during scoping.
             </p>
             <p className="md:hidden mt-6" style={srcNote}>Swipe sideways to see every column.</p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <div className="card mt-8 fj-bc-table-scroll" tabIndex={0} role="region" aria-labelledby="fj-bc-comparison-title" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 720 }}>
                 <thead>
                   <tr>
@@ -798,17 +817,24 @@ export default function BigCommerceB2BUKPage() {
 
         {/* ═══ 13. FINAL CTA (the only dark section) ═══ */}
         <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+          <div className="wrap fj-bc-final">
+            <div>
             <span className="eyebrow">Ready when you are</span>
             <h2>See your trade portal on BigCommerce before you sign</h2>
             <p className="mt-4">
               Send your name and work email, and your brief if you have one. The founder replies within 24 hours to
               book a short call about your trade accounts, your ERP and the date you are working towards.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="See a draft of my trade portal" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/uk/b2b-ecommerce" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See B2B ecommerce UK</a>
             </div>
+            </div>
+            <picture className="fj-bc-photo">
+                <source type="image/avif" srcSet="/images/uk/bigcommerce-b2b/trade-portal-catalogue-review-640.avif 640w, /images/uk/bigcommerce-b2b/trade-portal-catalogue-review-960.avif 960w, /images/uk/bigcommerce-b2b/trade-portal-catalogue-review-1280.avif 1280w" sizes="(min-width: 1280px) 520px, (min-width: 960px) 43vw, calc(100vw - 40px)" />
+                <source type="image/webp" srcSet="/images/uk/bigcommerce-b2b/trade-portal-catalogue-review-640.webp 640w, /images/uk/bigcommerce-b2b/trade-portal-catalogue-review-960.webp 960w, /images/uk/bigcommerce-b2b/trade-portal-catalogue-review-1280.webp 1280w" sizes="(min-width: 1280px) 520px, (min-width: 960px) 43vw, calc(100vw - 40px)" />
+                <img src="/images/uk/bigcommerce-b2b/trade-portal-catalogue-review-960.webp" srcSet="/images/uk/bigcommerce-b2b/trade-portal-catalogue-review-640.webp 640w, /images/uk/bigcommerce-b2b/trade-portal-catalogue-review-960.webp 960w, /images/uk/bigcommerce-b2b/trade-portal-catalogue-review-1280.webp 1280w" sizes="(min-width: 1280px) 520px, (min-width: 960px) 43vw, calc(100vw - 40px)" width="1280" height="853" alt="A woman and a man review hardware product photographs on a separate monitor beside matching samples." loading="lazy" decoding="async" />
+              </picture>
           </div>
         </section>
 

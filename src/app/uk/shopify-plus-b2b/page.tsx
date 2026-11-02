@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 
 /* /uk/shopify-plus-b2b, built 2026-10-29.
 
@@ -300,13 +301,13 @@ export default function ShopifyPlusB2BUKPage() {
       <script id="ld-uk-shopify-plus-b2b" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents fj-uk-plusb2b">
       <main>
 
         <Breadcrumbs items={crumbs} />
 
         {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+        <section className="sec-lg dot-grid fj-plus-hero" style={{ position: 'relative' }}>
           <div className="wrap">
             <div className="col-6040">
               <div>
@@ -366,7 +367,7 @@ export default function ShopifyPlusB2BUKPage() {
                   <div><div className="scorecard-metric">Credit limit and balance</div><div className="scorecard-note">held in your accounts system</div></div>
                   <div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>We link it</div>
                 </div>
-                <p style={srcNote}>
+                <p className="fj-plus-source" style={srcNote}>
                   Plan split from <a href={SRC_PLAN_FEATURES} {...ext} style={srcLink}>Shopify Help, B2B features by plan</a>, read {READ_ON}.
                 </p>
               </div>
@@ -468,7 +469,7 @@ export default function ShopifyPlusB2BUKPage() {
                 migrations more widely.
               </p>
             </div>
-            <p style={srcNote}>
+            <p className="fj-plus-source" style={srcNote}>
               Sources: <a href={SRC_PLAN_FEATURES} {...ext} style={srcLink}>Shopify Help, Shopify B2B features by plan</a>;{' '}
               <a href={SRC_B2B} {...ext} style={srcLink}>Shopify Help, Shopify B2B</a>;{' '}
               <a href={SRC_PLUS_PLAN} {...ext} style={srcLink}>Shopify Help, Shopify Plus plan</a>. Read {READ_ON}. Shopify changes plan features; re-check before you choose.
@@ -503,7 +504,7 @@ export default function ShopifyPlusB2BUKPage() {
                 builds. We are not tied to one answer, and the draft before you sign shows whether native B2B is enough.
               </p>
             </div>
-            <p style={srcNote}>
+            <p className="fj-plus-source" style={srcNote}>
               Sources: <a href={SRC_SPARKLAYER} {...ext} style={srcLink}>SparkLayer</a>;{' '}
               <a href={SRC_B2BWAVE} {...ext} style={srcLink}>B2B Wave</a>. Read {ALT_READ_ON}. App plans change; check each vendor before you choose.
             </p>
@@ -521,7 +522,15 @@ export default function ShopifyPlusB2BUKPage() {
                 your finance team already gets paid. These are the nine pieces we build most often.
               </p>
             </div>
-            <ul className="col-2 mt-12">
+            <div className="fj-plus-build-layout mt-12">
+              <div className="fj-plus-sticky">
+                <picture className="fj-plus-photo">
+                  <source type="image/avif" srcSet="/images/uk/shopify-plus-b2b/builders-merchant-trade-tablet-640.avif 640w, /images/uk/shopify-plus-b2b/builders-merchant-trade-tablet-960.avif 960w, /images/uk/shopify-plus-b2b/builders-merchant-trade-tablet-1280.avif 1280w" sizes="(min-width: 1200px) 430px, (min-width: 960px) 38vw, (min-width: 768px) 640px, calc(100vw - 32px)" />
+                  <source type="image/webp" srcSet="/images/uk/shopify-plus-b2b/builders-merchant-trade-tablet-640.webp 640w, /images/uk/shopify-plus-b2b/builders-merchant-trade-tablet-960.webp 960w, /images/uk/shopify-plus-b2b/builders-merchant-trade-tablet-1280.webp 1280w" sizes="(min-width: 1200px) 430px, (min-width: 960px) 38vw, (min-width: 768px) 640px, calc(100vw - 32px)" />
+                  <img src="/images/uk/shopify-plus-b2b/builders-merchant-trade-tablet-960.webp" srcSet="/images/uk/shopify-plus-b2b/builders-merchant-trade-tablet-640.webp 640w, /images/uk/shopify-plus-b2b/builders-merchant-trade-tablet-960.webp 960w, /images/uk/shopify-plus-b2b/builders-merchant-trade-tablet-1280.webp 1280w" sizes="(min-width: 1200px) 430px, (min-width: 960px) 38vw, (min-width: 768px) 640px, calc(100vw - 32px)" width="1536" height="1024" alt="A woman reviews plumbing fittings on a tablet at a builders merchant counter." loading="lazy" decoding="async" />
+                </picture>
+              </div>
+            <ul className="col-2 fj-plus-build-cards">
               <li className="svc-card" style={{ gridColumn: '1 / -1' }}>
                 <h3>Trade accounts as companies</h3>
                 <p className="mt-4">We move every trade customer across in bulk: the company, each branch as a location with its own delivery address, and the people allowed to order. Location-level permissions decide who can only order and who can manage the account.</p>
@@ -559,6 +568,7 @@ export default function ShopifyPlusB2BUKPage() {
                 <p className="mt-4">One stock pool across your retail store, trade accounts and marketplaces such as Amazon.co.uk, eBay UK and OnBuy, so a trade order never sells stock a marketplace already took.</p>
               </li>
             </ul>
+            </div>
           </div>
         </section>
 
@@ -588,13 +598,19 @@ export default function ShopifyPlusB2BUKPage() {
                     overdue balance there can stop new orders on terms in Shopify.
                   </p>
                 </div>
-                <p style={srcNote}>
+                <p className="fj-plus-source" style={srcNote}>
                   Sources: <a href={SRC_TERMS} {...ext} style={srcLink}>Shopify Help, payment terms</a>;{' '}
                   <a href={SRC_LATE} {...ext} style={srcLink}>GOV.UK, late commercial payments</a>;{' '}
                   <a href={SRC_INTEREST} {...ext} style={srcLink}>GOV.UK, charging interest on commercial debt</a>. Read {READ_ON}.
                   We are not solicitors: we set the store up to match the terms your contracts already use.
                 </p>
               </div>
+              <div className="fj-plus-terms-media">
+                <picture className="fj-plus-photo">
+                  <source type="image/avif" srcSet="/images/uk/shopify-plus-b2b/credit-controller-a4-statements-640.avif 640w, /images/uk/shopify-plus-b2b/credit-controller-a4-statements-960.avif 960w, /images/uk/shopify-plus-b2b/credit-controller-a4-statements-1280.avif 1280w" sizes="(min-width: 1200px) 430px, (min-width: 960px) 38vw, (min-width: 768px) 640px, calc(100vw - 32px)" />
+                  <source type="image/webp" srcSet="/images/uk/shopify-plus-b2b/credit-controller-a4-statements-640.webp 640w, /images/uk/shopify-plus-b2b/credit-controller-a4-statements-960.webp 960w, /images/uk/shopify-plus-b2b/credit-controller-a4-statements-1280.webp 1280w" sizes="(min-width: 1200px) 430px, (min-width: 960px) 38vw, (min-width: 768px) 640px, calc(100vw - 32px)" />
+                  <img src="/images/uk/shopify-plus-b2b/credit-controller-a4-statements-960.webp" srcSet="/images/uk/shopify-plus-b2b/credit-controller-a4-statements-640.webp 640w, /images/uk/shopify-plus-b2b/credit-controller-a4-statements-960.webp 960w, /images/uk/shopify-plus-b2b/credit-controller-a4-statements-1280.webp 1280w" sizes="(min-width: 1200px) 430px, (min-width: 960px) 38vw, (min-width: 768px) 640px, calc(100vw - 32px)" width="1536" height="1024" alt="A man sorts A4 account sheets into trays beside an orange folder." loading="lazy" decoding="async" />
+                </picture>
               <div className="card card-top-orange">
                 <span className="eyebrow">How we map terms to accounts</span>
                 <div className="scorecard-row"><div><div className="scorecard-metric">New trade applicant</div><div className="scorecard-note">no credit check yet</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Card only</div></div>
@@ -603,6 +619,7 @@ export default function ShopifyPlusB2BUKPage() {
                 <div className="scorecard-row"><div><div className="scorecard-metric">Large or bespoke order</div><div className="scorecard-note">Plus plan</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Deposit first</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Balance overdue in Xero or Sage</div><div className="scorecard-note">read from accounts</div></div><div className="scorecard-val" style={{ color: T.small, fontSize: 14 }}>Terms paused</div></div>
                 <p style={{ fontSize: 13, color: T.n400, marginTop: 10 }}>An example set-up, not advice. Your credit policy decides the rows.</p>
+              </div>
               </div>
             </div>
           </div>
@@ -648,7 +665,7 @@ export default function ShopifyPlusB2BUKPage() {
                 separate rules. We map the flows; your accountant confirms the treatment.
               </p>
             </div>
-            <p style={srcNote}>
+            <p className="fj-plus-source" style={srcNote}>
               Sources: <a href={SRC_COMPANIES} {...ext} style={srcLink}>Shopify Help, B2B companies</a>;{' '}
               <a href={SRC_VAT_INVOICE} {...ext} style={srcLink}>HMRC, VAT Notice 700/21</a>;{' '}
               <a href={SRC_MTD} {...ext} style={srcLink}>GOV.UK, Making Tax Digital for VAT</a>;{' '}
@@ -756,7 +773,7 @@ export default function ShopifyPlusB2BUKPage() {
                 Each phase is scoped, priced and signed on its own. You can stop after any step and keep what was built.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="fj-plus-process mt-10" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Read the brief and a real order', d: 'We read your brief, one trade price list and a recent trade order export, then confirm on a call which plan you need and why.' },
                 { n: '02', t: 'Build the draft on your data', d: 'A working Shopify draft with your products, one real trade account and its prices. Your sales team logs in as that buyer and places a test order.' },
@@ -808,7 +825,7 @@ export default function ShopifyPlusB2BUKPage() {
                 <div className="mt-8">
                   <ModalCTAButton label="Send my B2B brief" region="uk" modalVariant="default" btnVariant="primary-light" />
                 </div>
-                <p style={srcNote}>
+                <p className="fj-plus-source" style={srcNote}>
                   Sources: <a href={SRC_PLUS_PRICING} {...ext} style={srcLink}>Shopify UK, Plus pricing</a>;{' '}
                   <a href={SRC_PLUS_PLAN} {...ext} style={srcLink}>Shopify Help, Plus plan</a>. Read {READ_ON}.
                 </p>
@@ -897,17 +914,24 @@ export default function ShopifyPlusB2BUKPage() {
 
         {/* ═══ 14. FINAL CTA (the only dark section) ═══ */}
         <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+          <div className="wrap fj-plus-final">
+            <div>
             <span className="eyebrow">Next step</span>
             <h2>See one of your trade accounts ordering on Shopify</h2>
             <p className="mt-4">
               Send your name, work email and, if you have it, a price list or brief. Bhavesh replies within 24 hours.
               We build a draft with one real account and tell you plainly whether you need Plus.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8" style={{ display: 'flex', justifyContent: 'flex-start', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="See a draft of my trade store" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/uk/shopify-plus" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See Shopify Plus UK</a>
             </div>
+            </div>
+            <picture className="fj-plus-photo">
+                  <source type="image/avif" srcSet="/images/uk/shopify-plus-b2b/trade-account-catalogue-review-640.avif 640w, /images/uk/shopify-plus-b2b/trade-account-catalogue-review-960.avif 960w, /images/uk/shopify-plus-b2b/trade-account-catalogue-review-1280.avif 1280w" sizes="(min-width: 1200px) 430px, (min-width: 960px) 38vw, (min-width: 768px) 640px, calc(100vw - 32px)" />
+                  <source type="image/webp" srcSet="/images/uk/shopify-plus-b2b/trade-account-catalogue-review-640.webp 640w, /images/uk/shopify-plus-b2b/trade-account-catalogue-review-960.webp 960w, /images/uk/shopify-plus-b2b/trade-account-catalogue-review-1280.webp 1280w" sizes="(min-width: 1200px) 430px, (min-width: 960px) 38vw, (min-width: 768px) 640px, calc(100vw - 32px)" />
+                  <img src="/images/uk/shopify-plus-b2b/trade-account-catalogue-review-960.webp" srcSet="/images/uk/shopify-plus-b2b/trade-account-catalogue-review-640.webp 640w, /images/uk/shopify-plus-b2b/trade-account-catalogue-review-960.webp 960w, /images/uk/shopify-plus-b2b/trade-account-catalogue-review-1280.webp 1280w" sizes="(min-width: 1200px) 430px, (min-width: 960px) 38vw, (min-width: 768px) 640px, calc(100vw - 32px)" width="1536" height="1024" alt="Two people review a catalogue of pipe fittings on a laptop beside physical samples." loading="lazy" decoding="async" />
+                </picture>
           </div>
         </section>
 
