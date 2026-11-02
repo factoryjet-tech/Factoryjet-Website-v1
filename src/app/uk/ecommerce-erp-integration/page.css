@@ -87,5 +87,5 @@
 .uk-erp-visual main .faq-cat-label { color: #B23E13 !important; }
 
 @media (max-width: 1024px) {
-  .uk-erp-visual footer.us-footer a { min-height: 44px; }
+  .uk-erp-visual footer.us-footer a { min-height: 44px; min-width: 44px; }
 }
