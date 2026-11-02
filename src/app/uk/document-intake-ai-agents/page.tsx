@@ -673,7 +673,7 @@ export default function DocumentIntakeAiAgentsUKPage() {
                 { v: '2,000', t: 'pages is the most Microsoft’s Document Intelligence analyses in one request on its Standard tier', s: 'Microsoft Learn, service limits', u: SRC.azureLimits.url },
               ].map((r) => (
                 <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
+                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: '#F05A28' }}>{r.v}</div>
                   <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
                   <a href={r.u} {...(r.u.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})} className={styles.citation} style={{ fontFamily: T.fm, fontSize: 12, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
                 </li>
@@ -855,18 +855,18 @@ export default function DocumentIntakeAiAgentsUKPage() {
             <div className={`card mt-6 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 980 }} data-columns={6}>
               <thead>
                 <tr>
-                  <th>&nbsp;</th>
-                  <th>Hubdoc</th>
-                  <th>Dext</th>
-                  <th>AutoEntry</th>
-                  <th>Odoo or Business Central</th>
-                  <th className="fj">Custom agent built by FactoryJet</th>
+                  <th scope="col">&nbsp;</th>
+                  <th scope="col">Hubdoc</th>
+                  <th scope="col">Dext</th>
+                  <th scope="col">AutoEntry</th>
+                  <th scope="col">Odoo or Business Central</th>
+                  <th scope="col" className="fj">Custom agent built by FactoryJet</th>
                 </tr>
               </thead>
               <tbody>
                 {COMPARE.map((r) => (
                   <tr key={r.feat}>
-                    <td className="feat">{r.feat}</td>
+                    <th scope="row" className="feat">{r.feat}</th>
                     <td>{r.hubdoc}</td>
                     <td>{r.dext}</td>
                     <td>{r.autoentry}</td>

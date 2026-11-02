@@ -2,6 +2,21 @@
   visibility: hidden;
 }
 
+.uk-document-intake-visual #tools .cmp-table tbody th[scope="row"] {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--n100);
+  color: var(--ink);
+  font-family: var(--fb);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.uk-document-intake-visual #tools .cmp-table tbody tr:last-child th[scope="row"] {
+  border-bottom: none;
+}
+
 .uk-document-intake-visual .intake-editorial {
   display: grid;
   grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
