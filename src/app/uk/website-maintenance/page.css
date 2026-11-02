@@ -1,5 +1,5 @@
 .uk-website-maintenance-visual main h1,.uk-website-maintenance-visual main h2,.uk-website-maintenance-visual main h3 {text-wrap:balance}
-.uk-website-maintenance-visual main p {text-wrap:pretty;font-size:16px;line-height:1.75}
+.uk-website-maintenance-visual main p:where(:not(.font-fj-display,.font-fj-mono)) {text-wrap:pretty;font-size:16px;line-height:1.75}
 .uk-website-maintenance-visual main li {font-size:16px;line-height:1.65}
 .uk-website-maintenance-visual main .wrap {min-width:0}
 .uk-website-maintenance-visual main .col-6040,.uk-website-maintenance-visual main .col-4060 {gap:clamp(28px,4vw,56px)}
@@ -45,7 +45,7 @@
 }
 @media (max-width:767px) {
 .uk-website-maintenance-visual main h1 {font-size:clamp(1.65rem,6.1vw,2rem)!important;line-height:1.17!important}
-.uk-website-maintenance-visual main p,.uk-website-maintenance-visual main .lead,.uk-website-maintenance-visual main .faq-ans p {font-size:16px!important;line-height:1.75}
+.uk-website-maintenance-visual main p:where(:not(.font-fj-display,.font-fj-mono)),.uk-website-maintenance-visual main .lead,.uk-website-maintenance-visual main .faq-ans p:where(:not(.font-fj-display,.font-fj-mono)) {font-size:16px!important;line-height:1.75}
 .uk-website-maintenance-visual main h2 {font-size:clamp(1.4rem,5.9vw,1.7rem)!important;line-height:1.25}
 .uk-website-maintenance-visual main .wm-earning-jobs {grid-template-columns:1fr!important}
 .uk-website-maintenance-visual main .wm-earning-jobs .svc-card {grid-column:auto!important}
@@ -92,3 +92,9 @@
 .uk-website-maintenance-visual main [style*="font-size:10"],.uk-website-maintenance-visual main [style*="font-size:11"] {font-size:12px!important}
 
 .uk-website-maintenance-visual .stats-band li > div {color:#F05A28!important}
+
+.uk-website-maintenance-visual main .faq-item[open] summary .q-text {color:#B23E13}
+.uk-website-maintenance-visual main .faq-sidebar-nav .faq-nav-count {color:var(--n600)}
+.uk-website-maintenance-visual main .city-pill:hover {background:#B23E13;border-color:#B23E13;color:#fff}
+
+.uk-website-maintenance-visual main nav[aria-label="Breadcrumb"] a:hover {opacity:1}
