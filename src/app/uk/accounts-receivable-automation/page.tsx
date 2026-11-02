@@ -7,6 +7,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* /uk/accounts-receivable-automation, built 2026-10-29.
@@ -421,7 +422,7 @@ export default function AccountsReceivableAutomationUKPage() {
       <script id="ld-uk-accounts-receivable-automation" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents uk-ar-visual">
       <main className={styles.page}>
         <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
@@ -556,9 +557,9 @@ export default function AccountsReceivableAutomationUKPage() {
             <div className={`card mt-10 ${styles.tableBox}`} tabIndex={0} role="region" aria-label="Credit control cycle" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table className="cmp-table" style={{ minWidth: 760 }} data-columns={3}>
                 <thead>
                   <tr>
-                    <th>Stage</th>
-                    <th className="fj">What the agent does</th>
-                    <th>What your team keeps</th>
+                    <th scope="col">Stage</th>
+                    <th scope="col" className="fj">What the agent does</th>
+                    <th scope="col">What your team keeps</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -575,6 +576,13 @@ export default function AccountsReceivableAutomationUKPage() {
             <p style={srcNote}>
               Timings are examples. Yours come from your own payment terms, read from the ledger customer by customer.
             </p>
+            <div className="ar-cycle-media mt-10">
+              <picture className="ar-photo">
+              <source type="image/avif" srcSet="/images/uk/accounts-receivable-automation/credit-controller-payment-call-640.avif 640w, /images/uk/accounts-receivable-automation/credit-controller-payment-call-960.avif 960w, /images/uk/accounts-receivable-automation/credit-controller-payment-call-1280.avif 1280w, /images/uk/accounts-receivable-automation/credit-controller-payment-call-1600.avif 1600w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1120px) calc(100vw - 48px), 1072px" />
+              <source type="image/webp" srcSet="/images/uk/accounts-receivable-automation/credit-controller-payment-call-640.webp 640w, /images/uk/accounts-receivable-automation/credit-controller-payment-call-960.webp 960w, /images/uk/accounts-receivable-automation/credit-controller-payment-call-1280.webp 1280w, /images/uk/accounts-receivable-automation/credit-controller-payment-call-1600.webp 1600w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1120px) calc(100vw - 48px), 1072px" />
+              <img src="/images/uk/accounts-receivable-automation/credit-controller-payment-call-640.webp" srcSet="/images/uk/accounts-receivable-automation/credit-controller-payment-call-640.webp 640w, /images/uk/accounts-receivable-automation/credit-controller-payment-call-960.webp 960w, /images/uk/accounts-receivable-automation/credit-controller-payment-call-1280.webp 1280w, /images/uk/accounts-receivable-automation/credit-controller-payment-call-1600.webp 1600w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1120px) calc(100vw - 48px), 1072px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman uses a telephone while reviewing grey invoice rows on a monitor beside A4 paperwork." />
+            </picture>
+            </div>
           </div>
         </section>
 
@@ -626,9 +634,11 @@ export default function AccountsReceivableAutomationUKPage() {
         {/* 6. REMITTANCE MATCHING */}
         <section className="sec-lg dot-grid" id="remittance-matching">
           <div className="wrap">
-            <div style={{ maxWidth: 820 }}>
+            <div>
               <span className="eyebrow">Cash allocation</span>
               <h2>Remittance matching: one bank receipt, six invoices and a short payment</h2>
+              <div className="ar-remittance-grid">
+              <div>
               <div className="stack mt-6">
                 <p>
                   A builders’ merchant pays £18,460 on a Friday by bank transfer. The reference on the bank line is the
@@ -654,6 +664,13 @@ export default function AccountsReceivableAutomationUKPage() {
                 </p>
               </div>
               <Sources ids={['bcReconcile', 'odooFollowUp', 'xeroInvoices']} />
+              </div>
+              <picture className="ar-photo">
+              <source type="image/avif" srcSet="/images/uk/accounts-receivable-automation/remittance-invoice-allocation-640.avif 640w, /images/uk/accounts-receivable-automation/remittance-invoice-allocation-960.avif 960w, /images/uk/accounts-receivable-automation/remittance-invoice-allocation-1280.avif 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 420px" />
+              <source type="image/webp" srcSet="/images/uk/accounts-receivable-automation/remittance-invoice-allocation-640.webp 640w, /images/uk/accounts-receivable-automation/remittance-invoice-allocation-960.webp 960w, /images/uk/accounts-receivable-automation/remittance-invoice-allocation-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 420px" />
+              <img src="/images/uk/accounts-receivable-automation/remittance-invoice-allocation-640.webp" srcSet="/images/uk/accounts-receivable-automation/remittance-invoice-allocation-640.webp 640w, /images/uk/accounts-receivable-automation/remittance-invoice-allocation-960.webp 960w, /images/uk/accounts-receivable-automation/remittance-invoice-allocation-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 420px" width={1536} height={1024} loading="lazy" decoding="async" alt="A man matches a blank remittance slip to grouped A4 invoice sheets at a desk." />
+            </picture>
+              </div>
             </div>
           </div>
         </section>
@@ -670,7 +687,7 @@ export default function AccountsReceivableAutomationUKPage() {
                 order system with an API where the invoice starts life.
               </p>
             </div>
-            <ul className="col-2 mt-10">
+            <ul className="col-2 mt-10 ar-ledger-bento">
               {LEDGERS.map((l) => (
                 <li key={l.name} className="plat-card">
                   <div className="plat-top">
@@ -845,6 +862,7 @@ export default function AccountsReceivableAutomationUKPage() {
                 Your credit controller is in the room for steps two, five and seven. Your accountant signs off step three.
               </p>
             </div>
+            <div className="ar-build-grid">
             <figure className={styles.processFigure} data-process-flow aria-label="How we build a credit control agent, in seven steps"><ol className={`stack mt-10 ${styles.processFlow}`} style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Read your aged debtors and a month of receipts', d: 'We take one aged debtors report, a month of bank receipts and a sample of real remittances, and list every kind of payment and reply inside them. That list is the brief.' },
@@ -864,6 +882,12 @@ export default function AccountsReceivableAutomationUKPage() {
                 </li>
               ))}
             </ol></figure>
+            <div className="ar-build-media"><picture className="ar-photo">
+              <source type="image/avif" srcSet="/images/uk/accounts-receivable-automation/credit-control-rules-meeting-640.avif 640w, /images/uk/accounts-receivable-automation/credit-control-rules-meeting-960.avif 960w, /images/uk/accounts-receivable-automation/credit-control-rules-meeting-1280.avif 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 420px" />
+              <source type="image/webp" srcSet="/images/uk/accounts-receivable-automation/credit-control-rules-meeting-640.webp 640w, /images/uk/accounts-receivable-automation/credit-control-rules-meeting-960.webp 960w, /images/uk/accounts-receivable-automation/credit-control-rules-meeting-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 420px" />
+              <img src="/images/uk/accounts-receivable-automation/credit-control-rules-meeting-640.webp" srcSet="/images/uk/accounts-receivable-automation/credit-control-rules-meeting-640.webp 640w, /images/uk/accounts-receivable-automation/credit-control-rules-meeting-960.webp 960w, /images/uk/accounts-receivable-automation/credit-control-rules-meeting-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 420px" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people compare invoice sheets and a remittance slip beside an open laptop at a meeting table." />
+            </picture></div>
+            </div>
           </div>
         </section>
 
@@ -979,7 +1003,8 @@ export default function AccountsReceivableAutomationUKPage() {
 
         {/* 16. FINAL CTA (the only dark section) */}
         <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+          <div className="wrap ar-final-grid">
+            <div>
             <span className="eyebrow">Next step</span>
             <h2>Get paid on the terms you agreed</h2>
             <p className="mt-4">
@@ -987,10 +1012,16 @@ export default function AccountsReceivableAutomationUKPage() {
               ledger and the remittances that eat your week. You leave knowing whether your ledger’s own reminders, a
               product, an outsourced team or a built agent is the right job.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8" style={{ display: 'flex', justifyContent: 'flex-start', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/contact" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Contact us</a>
             </div>
+            </div>
+            <picture className="ar-photo">
+              <source type="image/avif" srcSet="/images/uk/accounts-receivable-automation/distribution-credit-control-window-640.avif 640w, /images/uk/accounts-receivable-automation/distribution-credit-control-window-960.avif 960w, /images/uk/accounts-receivable-automation/distribution-credit-control-window-1280.avif 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 420px" />
+              <source type="image/webp" srcSet="/images/uk/accounts-receivable-automation/distribution-credit-control-window-640.webp 640w, /images/uk/accounts-receivable-automation/distribution-credit-control-window-960.webp 960w, /images/uk/accounts-receivable-automation/distribution-credit-control-window-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 420px" />
+              <img src="/images/uk/accounts-receivable-automation/distribution-credit-control-window-640.webp" srcSet="/images/uk/accounts-receivable-automation/distribution-credit-control-window-640.webp 640w, /images/uk/accounts-receivable-automation/distribution-credit-control-window-960.webp 960w, /images/uk/accounts-receivable-automation/distribution-credit-control-window-1280.webp 1280w" sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 420px" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman reviews paperwork beside a dispatch window while a man waits with a document wallet." />
+            </picture>
           </div>
         </section>
 
