@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 
 /* /uk/website-maintenance, built 2026-10-29.
 
@@ -280,7 +281,7 @@ export default function WebsiteMaintenanceUKPage() {
       <script id="ld-uk-website-maintenance" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents uk-website-maintenance-visual">
       <main>
 
         <Breadcrumbs items={crumbs} />
@@ -313,8 +314,7 @@ export default function WebsiteMaintenanceUKPage() {
                 </div>
               </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/woocommerce/woocommerce-developer.webp" width={1200} height={800} fetchPriority="high" decoding="async" alt="A web developer at a tidy desk in a bright UK office working through code on a large monitor, with an orange mug beside the keyboard" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+              <div className="card wm-hero-scorecard" style={{ padding: 8 }}>
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What a month of care checks</span>
                   <div className="scorecard-row">
@@ -394,18 +394,25 @@ export default function WebsiteMaintenanceUKPage() {
         {/* ═══ 4. WHAT WE COVER ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
+            <div className="wm-cover-heading">
+              <div>
               <span className="eyebrow">In plain words</span>
               <h2>What our website maintenance services cover</h2>
               <p className="lead mt-4">
                 Nine jobs, done every month and written down. The first four keep the site safe. The last five keep
                 it earning, and they are where a site with real orders differs from a brochure site.
               </p>
+              </div>
+              <picture className="wm-photo">
+                  <source type="image/avif" srcSet="/images/uk/website-maintenance/staging-update-two-monitors-640.avif 640w, /images/uk/website-maintenance/staging-update-two-monitors-960.avif 960w, /images/uk/website-maintenance/staging-update-two-monitors-1280.avif 1280w" sizes="(min-width: 1200px) 440px, (min-width: 1025px) 40vw, (min-width: 752px) 720px, calc(100vw - 32px)" />
+                  <source type="image/webp" srcSet="/images/uk/website-maintenance/staging-update-two-monitors-640.webp 640w, /images/uk/website-maintenance/staging-update-two-monitors-960.webp 960w, /images/uk/website-maintenance/staging-update-two-monitors-1280.webp 1280w" sizes="(min-width: 1200px) 440px, (min-width: 1025px) 40vw, (min-width: 752px) 720px, calc(100vw - 32px)" />
+                  <img src="/images/uk/website-maintenance/staging-update-two-monitors-960.webp" srcSet="/images/uk/website-maintenance/staging-update-two-monitors-640.webp 640w, /images/uk/website-maintenance/staging-update-two-monitors-960.webp 960w, /images/uk/website-maintenance/staging-update-two-monitors-1280.webp 1280w" sizes="(min-width: 1200px) 440px, (min-width: 1025px) 40vw, (min-width: 752px) 720px, calc(100vw - 32px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A man compares a grid of products and grey rows on two monitors beside a blank checklist." />
+                </picture>
             </div>
             <div className="col-4060 mt-12">
             <div>
             <span className="eyebrow">Keeps it safe</span>
-            <ul className="stack mt-4">
+            <ul className="stack mt-4 wm-safe-jobs">
               <li className="svc-card">
                 <h3>Tested updates</h3>
                 <p className="mt-4">WordPress core, themes, plugins, Magento patches, Shopify app changes and code libraries, applied to staging first, tested against your forms and checkout, then moved to the live site.</p>
@@ -426,7 +433,7 @@ export default function WebsiteMaintenanceUKPage() {
             </div>
             <div>
             <span className="eyebrow">Keeps it earning</span>
-            <ul className="col-2 mt-4">
+            <ul className="col-2 mt-4 wm-earning-jobs">
               <li className="svc-card">
                 <h3>Integration checks</h3>
                 <p className="mt-4">A real test order followed into Xero, Sage (50, 200 or Intacct), QuickBooks, NetSuite, Business Central, Odoo or Brightpearl, and stock checked against Linnworks or Mintsoft. See our <a href="/uk/shopify-xero-integration">Shopify Xero integration</a> page for one of these links in depth.</p>
@@ -460,6 +467,11 @@ export default function WebsiteMaintenanceUKPage() {
               <div>
                 <span className="eyebrow">The part care plans skip</span>
                 <h2>Why a UK site that looks fine can still be losing orders</h2>
+                <div className="wm-loss-photo"><picture className="wm-photo">
+                  <source type="image/avif" srcSet="/images/uk/website-maintenance/owner-phone-form-check-640.avif 640w, /images/uk/website-maintenance/owner-phone-form-check-960.avif 960w, /images/uk/website-maintenance/owner-phone-form-check-1280.avif 1280w" sizes="(min-width: 1200px) 620px, (min-width: 961px) 54vw, calc(100vw - 32px)" />
+                  <source type="image/webp" srcSet="/images/uk/website-maintenance/owner-phone-form-check-640.webp 640w, /images/uk/website-maintenance/owner-phone-form-check-960.webp 960w, /images/uk/website-maintenance/owner-phone-form-check-1280.webp 1280w" sizes="(min-width: 1200px) 620px, (min-width: 961px) 54vw, calc(100vw - 32px)" />
+                  <img src="/images/uk/website-maintenance/owner-phone-form-check-960.webp" srcSet="/images/uk/website-maintenance/owner-phone-form-check-640.webp 640w, /images/uk/website-maintenance/owner-phone-form-check-960.webp 960w, /images/uk/website-maintenance/owner-phone-form-check-1280.webp 1280w" sizes="(min-width: 1200px) 620px, (min-width: 961px) 54vw, calc(100vw - 32px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman checks a phone beside a parts tray and a blank checklist at a trade counter." />
+                </picture></div>
                 <div className="stack mt-6">
                   <p>
                     <b>Connectors break silently.</b> A store can take payment perfectly while the order never
@@ -505,7 +517,7 @@ export default function WebsiteMaintenanceUKPage() {
                 until step five, and you see a written check of your own site before you sign anything.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="stack mt-10 wm-takeover" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'A free check of your site', d: 'From the outside, with no logins: platform and versions, PHP, the SSL certificate behind the padlock, visible plugins, speed on key pages and obvious security gaps. You get it in plain English, urgent items first.' },
                 { n: '02', t: 'Access and ownership', d: 'We confirm the domain, hosting, store and licences sit in your company’s name, collect logins you can remove later, and plan moves for anything still held by the old agency.' },
@@ -692,8 +704,12 @@ export default function WebsiteMaintenanceUKPage() {
                 <Sources ids={['ce', 'ico', 'csbs']} />
                 <p style={srcNote}>We are not lawyers. We keep the site patched and give you the facts; reporting decisions and legal advice stay with you and your adviser.</p>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/magento/magento-team.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Three members of a web engineering team planning a site and its connected systems on a whiteboard in a bright office" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+              <div className="card wm-security-card" style={{ padding: 8 }}>
+                <picture className="wm-photo">
+                  <source type="image/avif" srcSet="/images/uk/website-maintenance/it-lead-update-review-640.avif 640w, /images/uk/website-maintenance/it-lead-update-review-960.avif 960w, /images/uk/website-maintenance/it-lead-update-review-1280.avif 1280w" sizes="(min-width: 1200px) 440px, (min-width: 961px) 40vw, calc(100vw - 32px)" />
+                  <source type="image/webp" srcSet="/images/uk/website-maintenance/it-lead-update-review-640.webp 640w, /images/uk/website-maintenance/it-lead-update-review-960.webp 960w, /images/uk/website-maintenance/it-lead-update-review-1280.webp 1280w" sizes="(min-width: 1200px) 440px, (min-width: 961px) 40vw, calc(100vw - 32px)" />
+                  <img src="/images/uk/website-maintenance/it-lead-update-review-960.webp" srcSet="/images/uk/website-maintenance/it-lead-update-review-640.webp 640w, /images/uk/website-maintenance/it-lead-update-review-960.webp 960w, /images/uk/website-maintenance/it-lead-update-review-1280.webp 1280w" sizes="(min-width: 1200px) 440px, (min-width: 961px) 40vw, calc(100vw - 32px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman reviews a calendar grid beside a disconnected computer and a blank checklist." />
+                </picture>
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
                     Before the first update, we draw every system your site talks to on one page. The monthly test
@@ -730,7 +746,7 @@ export default function WebsiteMaintenanceUKPage() {
                 </p>
               </div>
             </div>
-            <div className="col-6040 mt-10">
+            <div className="col-6040 mt-10 wm-proof">
             <ul className="col-2">
               <li className="svc-card">
                 <h3>GPSUK</h3>
