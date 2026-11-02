@@ -90,3 +90,5 @@
 
 /* Source references retain their label sizing on tablets and desktops too. */
 .uk-website-maintenance-visual main [style*="font-size:10"],.uk-website-maintenance-visual main [style*="font-size:11"] {font-size:12px!important}
+
+.uk-website-maintenance-visual .stats-band li > div {color:#F05A28!important}
