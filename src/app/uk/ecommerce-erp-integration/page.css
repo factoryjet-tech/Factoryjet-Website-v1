@@ -85,3 +85,7 @@
 
 .uk-erp-visual main .stats-band li > div { color: #F05A28 !important; }
 .uk-erp-visual main .faq-cat-label { color: #B23E13 !important; }
+
+@media (max-width: 1024px) {
+  .uk-erp-visual footer.us-footer a { min-height: 44px; }
+}
