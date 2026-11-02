@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* /uk/crm-ai-agents, built 2026-10-29.
@@ -283,7 +284,7 @@ const inlineLink = { textDecoration: 'underline', color: T.ink, fontWeight: 600 
 /* Small source line. Every id comes from the SRC map above. */
 function Sources({ ids }: { ids: SrcKey[] }) {
   return (
-    <p style={srcNote}>
+    <p className="fj-crm-source" style={srcNote}>
       Sources, read on {READ_ON}:{' '}
       {ids.map((id, i) => (
         <span key={id}>
@@ -302,7 +303,7 @@ export default function CrmAiAgentsUKPage() {
       <script id="ld-uk-crm-ai-agents" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents fj-uk-crm-visual">
       <main>
         <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
@@ -423,7 +424,8 @@ export default function CrmAiAgentsUKPage() {
         {/* ═══ 4. SIX JOBS ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
+            <div className="fj-crm-editorial">
+              <div>
               <span className="eyebrow">The work an agent takes on</span>
               <h2>Six CRM jobs we recommend building first</h2>
               <p className="lead mt-4">
@@ -431,8 +433,14 @@ export default function CrmAiAgentsUKPage() {
                 can take on any of them. We recommend starting with the first one, because unscored leads are the
                 cheapest problem to see and the quickest to fix.
               </p>
+              </div>
+              <picture className="fj-crm-photo">
+                <source type="image/avif" srcSet="/images/uk/crm-ai-agents/sales-rep-pipeline-review-640.avif 640w, /images/uk/crm-ai-agents/sales-rep-pipeline-review-960.avif 960w, /images/uk/crm-ai-agents/sales-rep-pipeline-review-1280.avif 1280w" sizes="(max-width: 768px) min(720px, calc(100vw - 32px)), (max-width: 1024px) min(720px, calc(100vw - 48px)), (max-width: 1120px) calc(40vw - 20px), (max-width: 1400px) calc(446.667px - 1.667vw), 423.333px" />
+                <source type="image/webp" srcSet="/images/uk/crm-ai-agents/sales-rep-pipeline-review-640.webp 640w, /images/uk/crm-ai-agents/sales-rep-pipeline-review-960.webp 960w, /images/uk/crm-ai-agents/sales-rep-pipeline-review-1280.webp 1280w" sizes="(max-width: 768px) min(720px, calc(100vw - 32px)), (max-width: 1024px) min(720px, calc(100vw - 48px)), (max-width: 1120px) calc(40vw - 20px), (max-width: 1400px) calc(446.667px - 1.667vw), 423.333px" />
+                <img src="/images/uk/crm-ai-agents/sales-rep-pipeline-review-960.webp" srcSet="/images/uk/crm-ai-agents/sales-rep-pipeline-review-640.webp 640w, /images/uk/crm-ai-agents/sales-rep-pipeline-review-960.webp 960w, /images/uk/crm-ai-agents/sales-rep-pipeline-review-1280.webp 1280w" sizes="(max-width: 768px) min(720px, calc(100vw - 32px)), (max-width: 1024px) min(720px, calc(100vw - 48px)), (max-width: 1120px) calc(40vw - 20px), (max-width: 1400px) calc(446.667px - 1.667vw), 423.333px" width="1536" height="1024" alt="A sales representative wearing a headset reviews coloured pipeline cards at a desk." loading="lazy" decoding="async" />
+              </picture>
             </div>
-            <ul className="col-3 mt-12">
+            <ul className="col-3 mt-12 fj-crm-cards">
               <li className="svc-card">
                 <h3>Score and route new leads</h3>
                 <p className="mt-4">A web form, LinkedIn lead form or chat creates a contact. The agent reads the answers and the company’s site, scores against your ideal-customer rules, sets owner and lead status, and writes why. Works on HubSpot contacts and Salesforce leads.</p>
@@ -518,15 +526,22 @@ export default function CrmAiAgentsUKPage() {
         {/* ═══ 6. APPROVAL RULES ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
+            <div className="fj-crm-editorial">
+              <div>
               <span className="eyebrow">Approval rules</span>
               <h2>What the agent may change alone, and what waits for a person</h2>
               <p className="lead mt-4">
                 You sign these rules off before launch. They are written per action and per field, and they live in
                 a plain-English file in your repository, so your sales director can read them without a developer.
               </p>
+              </div>
+              <picture className="fj-crm-photo">
+                <source type="image/avif" srcSet="/images/uk/crm-ai-agents/sales-manager-draft-approval-640.avif 640w, /images/uk/crm-ai-agents/sales-manager-draft-approval-960.avif 960w, /images/uk/crm-ai-agents/sales-manager-draft-approval-1280.avif 1280w" sizes="(max-width: 768px) min(720px, calc(100vw - 32px)), (max-width: 1024px) min(720px, calc(100vw - 48px)), (max-width: 1120px) calc(40vw - 20px), (max-width: 1400px) calc(446.667px - 1.667vw), 423.333px" />
+                <source type="image/webp" srcSet="/images/uk/crm-ai-agents/sales-manager-draft-approval-640.webp 640w, /images/uk/crm-ai-agents/sales-manager-draft-approval-960.webp 960w, /images/uk/crm-ai-agents/sales-manager-draft-approval-1280.webp 1280w" sizes="(max-width: 768px) min(720px, calc(100vw - 32px)), (max-width: 1024px) min(720px, calc(100vw - 48px)), (max-width: 1120px) calc(40vw - 20px), (max-width: 1400px) calc(446.667px - 1.667vw), 423.333px" />
+                <img src="/images/uk/crm-ai-agents/sales-manager-draft-approval-960.webp" srcSet="/images/uk/crm-ai-agents/sales-manager-draft-approval-640.webp 640w, /images/uk/crm-ai-agents/sales-manager-draft-approval-960.webp 960w, /images/uk/crm-ai-agents/sales-manager-draft-approval-1280.webp 1280w" sizes="(max-width: 768px) min(720px, calc(100vw - 32px)), (max-width: 1024px) min(720px, calc(100vw - 48px)), (max-width: 1120px) calc(40vw - 20px), (max-width: 1400px) calc(446.667px - 1.667vw), 423.333px" width="1536" height="1024" alt="A sales manager reviews a draft message on a tablet beside a sales notebook." loading="lazy" decoding="async" />
+              </picture>
             </div>
-<p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 11, color: T.n400 }}>Swipe sideways to see every column.</p>
+<p className="md:hidden mt-6 fj-crm-table-hint" style={{ fontFamily: T.fm, fontSize: 11, color: T.n400 }}>Swipe sideways to see every column.</p>
             <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
@@ -582,7 +597,7 @@ export default function CrmAiAgentsUKPage() {
                 { n: '06', t: 'Launch on suggestions, then loosen', d: 'The agent suggests before it acts. We review accepted, edited and wrong suggestions with your sales ops lead, and widen the rules only where the numbers support it.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
+                  <span className="fj-crm-step-number" style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
@@ -609,7 +624,7 @@ export default function CrmAiAgentsUKPage() {
               as HubSpot Sales Hub or Salesforce Sales Cloud, or crosses into the systems your finance and service
               teams run. Simple CRM workflow automation, such as copying a form field, rarely needs an agent at all.
             </p>
-<p className="md:hidden mt-6" style={{ fontFamily: T.fm, fontSize: 11, color: T.n400 }}>Swipe sideways to see every column.</p>
+<p className="md:hidden mt-6 fj-crm-table-hint" style={{ fontFamily: T.fm, fontSize: 11, color: T.n400 }}>Swipe sideways to see every column.</p>
             <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
@@ -703,7 +718,8 @@ export default function CrmAiAgentsUKPage() {
         {/* ═══ 10. EU AI ACT + DATA LOCATION ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div style={{ maxWidth: 820 }}>
+            <div className="fj-crm-editorial">
+              <div>
               <span className="eyebrow">Selling into Europe</span>
               <h2>The EU AI Act, HubSpot data regions and where the model runs</h2>
               <div className="stack mt-6">
@@ -727,6 +743,12 @@ export default function CrmAiAgentsUKPage() {
                 </p>
               </div>
               <Sources ids={['aiActArt2', 'aiActEc', 'hubspotHosting']} />
+              </div>
+              <picture className="fj-crm-photo fj-crm-photo-sticky">
+                <source type="image/avif" srcSet="/images/uk/crm-ai-agents/crm-data-location-review-640.avif 640w, /images/uk/crm-ai-agents/crm-data-location-review-960.avif 960w, /images/uk/crm-ai-agents/crm-data-location-review-1280.avif 1280w" sizes="(max-width: 768px) min(720px, calc(100vw - 32px)), (max-width: 1024px) min(720px, calc(100vw - 48px)), (max-width: 1120px) calc(40vw - 20px), (max-width: 1400px) calc(446.667px - 1.667vw), 423.333px" />
+                <source type="image/webp" srcSet="/images/uk/crm-ai-agents/crm-data-location-review-640.webp 640w, /images/uk/crm-ai-agents/crm-data-location-review-960.webp 960w, /images/uk/crm-ai-agents/crm-data-location-review-1280.webp 1280w" sizes="(max-width: 768px) min(720px, calc(100vw - 32px)), (max-width: 1024px) min(720px, calc(100vw - 48px)), (max-width: 1120px) calc(40vw - 20px), (max-width: 1400px) calc(446.667px - 1.667vw), 423.333px" />
+                <img src="/images/uk/crm-ai-agents/crm-data-location-review-960.webp" srcSet="/images/uk/crm-ai-agents/crm-data-location-review-640.webp 640w, /images/uk/crm-ai-agents/crm-data-location-review-960.webp 960w, /images/uk/crm-ai-agents/crm-data-location-review-1280.webp 1280w" sizes="(max-width: 768px) min(720px, calc(100vw - 32px)), (max-width: 1024px) min(720px, calc(100vw - 48px)), (max-width: 1120px) calc(40vw - 20px), (max-width: 1400px) calc(446.667px - 1.667vw), 423.333px" width="1536" height="1024" alt="Two people review plain documents in a glass meeting room." loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
         </section>
@@ -760,7 +782,7 @@ export default function CrmAiAgentsUKPage() {
                 <div className="scorecard-row"><div><div className="scorecard-metric">Single-workflow agent</div><div className="scorecard-note">5 to 9 weeks</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£10K to £30K</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Multi-step agent with integrations</div><div className="scorecard-note">10 to 18 weeks</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£30K to £80K</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Enterprise multi-agent system</div><div className="scorecard-note">5 to 9 months</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£80K to £200K+</div></div>
-                <p style={srcNote}>
+                <p className="fj-crm-source" style={srcNote}>
                   Indicative UK benchmarks from <a href={SRC.leverx.url} target="_blank" rel="noopener noreferrer" style={srcLink}>LeverX, 4 October 2026</a>,
                   which says they are not its own fixed prices. The guide does not say whether VAT is included. These
                   are not FactoryJet prices.
@@ -781,7 +803,7 @@ export default function CrmAiAgentsUKPage() {
                 Barot, replies to every brief. These are the UK teams this service is built for.
               </p>
             </div>
-            <ul className="col-3 mt-12">
+            <ul className="col-3 mt-12 fj-crm-cards">
               <li className="svc-card"><h3>B2B services firms</h3><p className="mt-4">Consultancies, agencies and IT providers with ten or more reps in HubSpot, where inbound leads wait too long for a first reply.</p></li>
               <li className="svc-card"><h3>Manufacturers and distributors</h3><p className="mt-4">Salesforce or Dynamics for accounts, Sage or NetSuite for orders, and reps who need the credit position before a quote.</p></li>
               <li className="svc-card"><h3>Wholesalers and trade brands</h3><p className="mt-4">Stockists ordering online and by phone, with a CRM that never sees the web orders. Often joined to our <a href="/uk/b2b-ecommerce">B2B ecommerce</a> work.</p></li>

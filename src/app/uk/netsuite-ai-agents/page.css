@@ -1,0 +1,95 @@
+/* NetSuite UK page only. No shared template changes. */
+.uk-netsuite-visual main { min-width: 0; }
+.uk-netsuite-visual main input { font-size: 16px; }
+.uk-netsuite-visual main h1,
+.uk-netsuite-visual main h2,
+.uk-netsuite-visual main h3 { text-wrap: balance; }
+.uk-netsuite-visual main p { font-size: 16px !important; text-wrap: pretty; }
+.uk-netsuite-visual main .lead,
+.uk-netsuite-visual main .def p { font-size: 17px !important; }
+.uk-netsuite-visual main .ns-source-note { font-size: 12px !important; }
+.uk-netsuite-visual main li,
+.uk-netsuite-visual main .scope-list li,
+.uk-netsuite-visual main .cmp-table td,
+.uk-netsuite-visual main .q-text,
+.uk-netsuite-visual main .faq-ans p { font-size: 16px !important; }
+.uk-netsuite-visual main .eyebrow,
+.uk-netsuite-visual main .chip,
+.uk-netsuite-visual main .scorecard-note,
+.uk-netsuite-visual main .def .lab,
+.uk-netsuite-visual main .faq-sidebar-topics,
+.uk-netsuite-visual main .faq-nav-count,
+.uk-netsuite-visual main .faq-cat-label,
+.uk-netsuite-visual main .byline .upd { font-size: 12px !important; }
+.uk-netsuite-visual main .faq-cat-label { color: #B23E13; }
+.uk-netsuite-visual main .byline .av { background: #B23E13; }
+.uk-netsuite-visual main .scorecard-row { gap: 12px; align-items: flex-start; }
+.uk-netsuite-visual main .scorecard-row > div:first-child { min-width: 0; }
+.uk-netsuite-visual main .scorecard-val { max-width: 42%; text-align: right; flex-shrink: 1; }
+.uk-netsuite-visual main .card { border-radius: 22px; box-shadow: 0 2px 4px rgba(15,15,18,.025), 0 16px 36px -28px rgba(15,15,18,.18); }
+.uk-netsuite-visual main .ns-editorial { display: grid; grid-template-columns: minmax(0,7fr) minmax(0,5fr); align-items: center; gap: clamp(24px,4vw,56px); }
+.uk-netsuite-visual main .ns-editorial > div { min-width: 0; }
+.uk-netsuite-visual main .ns-photo { display: block; width: 100%; aspect-ratio: 3 / 2; overflow: hidden; border: 1px solid var(--n200); border-radius: clamp(18px,2vw,28px); box-shadow: 0 2px 5px rgba(15,15,18,.04), 0 24px 48px -36px rgba(15,15,18,.26); }
+.uk-netsuite-visual main .ns-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.uk-netsuite-visual main .ns-jobs { grid-template-columns: minmax(0,7fr) minmax(0,5fr); align-items: stretch; }
+.uk-netsuite-visual main .ns-jobs > li:last-child { grid-column: 1 / -1; }
+.uk-netsuite-visual main .ns-process { position: relative; border-left: 1px solid var(--n200); padding-left: clamp(16px,3vw,32px); }
+.uk-netsuite-visual main .ns-process > li { position: relative; }
+.uk-netsuite-visual main .ns-process > li::before { content: ''; position: absolute; width: 9px; height: 9px; border-radius: 50%; left: calc(clamp(16px,3vw,32px) * -1 - 5px); top: 34px; background: #B23E13; border: 2px solid var(--cream); }
+.uk-netsuite-visual main .ns-final-layout { display: grid; grid-template-columns: minmax(0,7fr) minmax(0,5fr); align-items: center; gap: clamp(24px,4vw,56px); text-align: left; }
+.uk-netsuite-visual main .ns-final-layout .ns-photo { border-color: rgba(255,255,255,.22); }
+.uk-netsuite-visual main .dark-sec p { color: #D6D6D1; }
+.uk-netsuite-visual main .dark-sec .eyebrow { color: var(--cream); }
+.uk-netsuite-visual main a:focus-visible,
+.uk-netsuite-visual main button:focus-visible,
+.uk-netsuite-visual main input:focus-visible,
+.uk-netsuite-visual main summary:focus-visible,
+.uk-netsuite-visual main [tabindex]:focus-visible { outline: 3px solid #B23E13; outline-offset: 4px; }
+.uk-netsuite-visual main .dark-sec a:focus-visible,
+.uk-netsuite-visual main .dark-sec button:focus-visible { outline-color: var(--cream); }
+.uk-netsuite-visual main [id] { scroll-margin-top: 112px; }
+@media (max-width: 1023px) {
+  .uk-netsuite-visual main .ns-editorial,
+  .uk-netsuite-visual main .ns-final-layout { grid-template-columns: 1fr; }
+  .uk-netsuite-visual main .ns-photo { max-width: 720px; }
+  .uk-netsuite-visual main .ns-jobs { grid-template-columns: 1fr; }
+  .uk-netsuite-visual main .ns-jobs > li:last-child { grid-column: auto; }
+}
+@media (max-width: 1024px) {
+  .uk-netsuite-visual main a { min-width: 44px; min-height: 44px; }
+  .uk-netsuite-visual main p a,
+  .uk-netsuite-visual main .byline a,
+  .uk-netsuite-visual main .stats-band a,
+  .uk-netsuite-visual main ul > li > a { display: inline-flex; align-items: center; max-width: 100%; vertical-align: baseline; }
+  .uk-netsuite-visual main nav a { display: flex; align-items: center; }
+  .uk-netsuite-visual main button,
+  .uk-netsuite-visual main input,
+  .uk-netsuite-visual main summary { min-height: 44px; }
+  .uk-netsuite-visual main .byline { flex-wrap: wrap; }
+  .uk-netsuite-visual main .byline .who { min-width: 0; }
+  .uk-netsuite-visual main .byline .upd { margin-left: 49px; text-align: left; }
+}
+@media (max-width: 767px) {
+  .uk-netsuite-visual main .card { padding: clamp(20px,5vw,28px); }
+  .uk-netsuite-visual main .cmp-table th { font-size: 12px; }
+  .uk-netsuite-visual main .byline .who { font-size: 12px; }
+  .uk-netsuite-visual main nav[aria-label="Breadcrumb"] li { font-size: 16px; }
+  .uk-netsuite-visual main .ns-source-note a { overflow-wrap: anywhere; }
+}
+
+/* Preserve the UK template dark footer and repair its light-theme foregrounds. */
+.uk-netsuite-visual .us-footer { --uf-ink: #F5F5F1; --uf-body: #D7D7D2; --uf-muted: #BDBDB7; --uf-line: #484848; --uf-accent: #F5F5F1; color: #F5F5F1; text-align: left; }
+.uk-netsuite-visual .us-footer p { color: #D7D7D2; font-size: 16px; }
+.uk-netsuite-visual .us-footer .us-footer__heading { color: #BDBDB7; font-size: 12px; }
+.uk-netsuite-visual .us-footer .us-footer__wordmark { color: #F5F5F1; }
+.uk-netsuite-visual .us-footer a { color: #D7D7D2; min-width: 44px; min-height: 44px; font-size: 16px; }
+.uk-netsuite-visual .us-footer a:hover { color: #FFFFFF; text-decoration: underline; }
+.uk-netsuite-visual .us-footer summary { color: #F5F5F1; min-width: 44px; min-height: 44px; font-size: 16px; }
+.uk-netsuite-visual .us-footer .us-footer__verification { color: #BDBDB7; }
+.uk-netsuite-visual .us-footer .us-footer__region > ul { --uf-ink: #14110F; --uf-body: #46403B; --uf-muted: #6E635A; --uf-accent: #B23E13; color: #14110F; }
+.uk-netsuite-visual .us-footer .us-footer__region > ul a { color: #46403B; }
+.uk-netsuite-visual .us-footer .us-footer__region > ul a:hover { color: #14110F; }
+.uk-netsuite-visual .us-footer a:focus-visible,
+.uk-netsuite-visual .us-footer summary:focus-visible { outline: 3px solid #F5F5F1; outline-offset: 4px; }
+.uk-netsuite-visual .us-footer .us-footer__region > ul a:focus-visible { outline-color: #B23E13; }
+.uk-netsuite-visual main .stats-band .col-4 > li > div { color: var(--orange2) !important; }
