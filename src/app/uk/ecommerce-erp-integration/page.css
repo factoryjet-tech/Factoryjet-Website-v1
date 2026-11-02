@@ -89,3 +89,10 @@
 @media (max-width: 1024px) {
   .uk-erp-visual footer.us-footer a { min-height: 44px; min-width: 44px; }
 }
+
+.uk-erp-visual .faq-item[open] summary .q-text, .uk-erp-visual .faq-sidebar-cta a { color: #B23E13 !important; }
+.uk-erp-visual .faq-sidebar-nav .faq-nav-count { color: var(--n600); font-size: 12px !important; }
+.uk-erp-visual .byline .av { color: var(--ink); }
+@media (max-width: 767px) {
+  .uk-erp-visual .faq-item summary .q-text { font-size: 16px !important; }
+}
