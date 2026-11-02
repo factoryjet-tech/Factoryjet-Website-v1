@@ -17,6 +17,9 @@ import ConditionalContactModal from '../components/ConditionalContactModal'
 import ProductionAnalytics from '../components/ProductionAnalytics'
 import { ORGANIZATION_SCHEMA } from '@/data/organization';
 
+// Fonts keep their existing optional display and fallback settings. Eager font
+// preloads competed with the blocking CSS on cold mobile connections; let the
+// stylesheet request each face when it is used instead.
 // Plus Jakarta Sans — primary display font (Sprint 8, replaces Clash Display).
 // Geometric humanist sans: precise yet warm, professional for US SMB market.
 // Used for all headings, hero text, and display-size copy site-wide.
@@ -24,7 +27,7 @@ const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-plus-jakarta',
   display: 'optional',
-  preload: true,
+  preload: false,
   weight: ['400', '500', '600', '700', '800'],
   fallback: ['system-ui', 'sans-serif'],
   adjustFontFallback: false,
@@ -35,7 +38,7 @@ const inter = Inter({
   variable: '--font-inter',
   display: 'optional',
   weight: ['400', '500', '600', '700'],
-  preload: true,
+  preload: false,
   fallback: ['system-ui', 'arial'],
   adjustFontFallback: false,
 })
