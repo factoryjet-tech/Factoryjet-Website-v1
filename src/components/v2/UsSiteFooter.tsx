@@ -4,6 +4,7 @@ import { US_FOOTER_COLUMNS, US_FOOTER_FEATURED_COLUMNS } from '@/data/usFooterCo
 import { RECOGNITION_PROFILES } from '@/data/recognitionProfiles';
 import type { SiteFooterColumn, SiteFooterLink } from './SiteFooter';
 import Wordmark from './Wordmark';
+import FooterRegionSwitcher from './FooterRegionSwitcher';
 import './UsSiteFooter.css';
 
 interface UsSiteFooterProps {
@@ -110,7 +111,7 @@ export default function UsSiteFooter({ logoText, tagline, copyright, bottomLinks
         <div className="us-footer__bottom">
           <div className="us-footer__identity">
             <p>{copyright}</p>
-            <details className="us-footer__region">
+            <FooterRegionSwitcher>
               <summary>
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.3" aria-hidden="true">
                   <circle cx="8" cy="8" r="6.3" /><ellipse cx="8" cy="8" rx="2.7" ry="6.3" /><path d="M1.9 6h12.2M1.9 10h12.2" />
@@ -123,7 +124,7 @@ export default function UsSiteFooter({ logoText, tagline, copyright, bottomLinks
               <ul>{regions.map((region) => (
                 <li key={region.href}><Link href={region.href} aria-current={region.label === currentRegion ? 'page' : undefined}>{region.label}</Link></li>
               ))}</ul>
-            </details>
+            </FooterRegionSwitcher>
           </div>
           {bottomLinks && bottomLinks.length > 0 && (
             <nav aria-label="Legal"><ul className="us-footer__legal">{bottomLinks.map((link) => (
