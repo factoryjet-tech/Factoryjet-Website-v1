@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* /uk/shopify-ai-agents, built 2026-10-29.
@@ -423,7 +424,7 @@ const inlineLink = { textDecoration: 'underline', color: T.ink, fontWeight: 600 
 /* Small source line. Every id comes from the SRC map above. */
 function Sources({ ids }: { ids: SrcKey[] }) {
   return (
-    <p style={srcNote}>
+    <p className="shopify-source-note" style={srcNote}>
       Sources, read on {READ_ON}:{' '}
       {ids.map((id, i) => (
         <span key={id}>
@@ -442,7 +443,7 @@ export default function ShopifyAiAgentsUKPage() {
       <script id="ld-uk-shopify-ai-agents" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents fj-uk-shopify-visual">
       <main>
         <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
@@ -567,6 +568,7 @@ export default function ShopifyAiAgentsUKPage() {
         {/* 4. THE AGENTS (LISTICLE) */}
         <section className="sec-lg dot-grid" id="agents">
           <div className="wrap">
+            <div className="shopify-visual-intro">
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">What we build</span>
               <h2>Six AI agents we build for UK Shopify stores</h2>
@@ -575,7 +577,13 @@ export default function ShopifyAiAgentsUKPage() {
                 one, prove it on your own data, then add the next.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 940 }}>
+            <picture className="shopify-section-photo">
+              <source type="image/avif" srcSet="/images/uk/shopify-ai-agents/store-order-packing-check-640.avif 640w, /images/uk/shopify-ai-agents/store-order-packing-check-960.avif 960w, /images/uk/shopify-ai-agents/store-order-packing-check-1280.avif 1280w" sizes="(max-width: 899px) calc(100vw - 32px), (max-width: 1119px) calc((100vw - 88px) * 0.4167), 430px" />
+              <source type="image/webp" srcSet="/images/uk/shopify-ai-agents/store-order-packing-check-640.webp 640w, /images/uk/shopify-ai-agents/store-order-packing-check-960.webp 960w, /images/uk/shopify-ai-agents/store-order-packing-check-1280.webp 1280w" sizes="(max-width: 899px) calc(100vw - 32px), (max-width: 1119px) calc((100vw - 88px) * 0.4167), 430px" />
+              <img src="/images/uk/shopify-ai-agents/store-order-packing-check-960.webp" srcSet="/images/uk/shopify-ai-agents/store-order-packing-check-640.webp 640w, /images/uk/shopify-ai-agents/store-order-packing-check-960.webp 960w, /images/uk/shopify-ai-agents/store-order-packing-check-1280.webp 1280w" sizes="(max-width: 899px) calc(100vw - 32px), (max-width: 1119px) calc((100vw - 88px) * 0.4167), 430px" width={1280} height={853} loading="lazy" decoding="async" alt="Two people check orders and pack a bowl in a parcel at a workbench." />
+            </picture>
+            </div>
+            <ol className="stack mt-10 shopify-jobs-grid" style={{ maxWidth: 940 }}>
               {AGENT_JOBS.map((job, i) => (
                 <li key={job.title} className="card">
                   <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 13, color: T.small }}>{String(i + 1).padStart(2, '0')} · {job.trigger}</span>
@@ -599,6 +607,7 @@ export default function ShopifyAiAgentsUKPage() {
         {/* 5. WHO OWNS EACH RECORD */}
         <section className="sec-lg">
           <div className="wrap">
+            <div className="shopify-visual-intro">
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">Start with owners</span>
               <h2>Which UK system owns each record, and what the agent may do with it</h2>
@@ -608,7 +617,13 @@ export default function ShopifyAiAgentsUKPage() {
                 changes for a person to approve.
               </p>
             </div>
-            <p className="md:hidden mt-6" style={srcNote}>Swipe sideways to see every column.</p>
+            <picture className="shopify-section-photo">
+              <source type="image/avif" srcSet="/images/uk/shopify-ai-agents/stock-room-record-check-640.avif 640w, /images/uk/shopify-ai-agents/stock-room-record-check-960.avif 960w, /images/uk/shopify-ai-agents/stock-room-record-check-1280.avif 1280w" sizes="(max-width: 899px) calc(100vw - 32px), (max-width: 1119px) calc((100vw - 88px) * 0.4167), 430px" />
+              <source type="image/webp" srcSet="/images/uk/shopify-ai-agents/stock-room-record-check-640.webp 640w, /images/uk/shopify-ai-agents/stock-room-record-check-960.webp 960w, /images/uk/shopify-ai-agents/stock-room-record-check-1280.webp 1280w" sizes="(max-width: 899px) calc(100vw - 32px), (max-width: 1119px) calc((100vw - 88px) * 0.4167), 430px" />
+              <img src="/images/uk/shopify-ai-agents/stock-room-record-check-960.webp" srcSet="/images/uk/shopify-ai-agents/stock-room-record-check-640.webp 640w, /images/uk/shopify-ai-agents/stock-room-record-check-960.webp 960w, /images/uk/shopify-ai-agents/stock-room-record-check-1280.webp 1280w" sizes="(max-width: 899px) calc(100vw - 32px), (max-width: 1119px) calc((100vw - 88px) * 0.4167), 430px" width={1280} height={853} loading="lazy" decoding="async" alt="A person holds a scanner beside shelves of boxes and bowls." />
+            </picture>
+            </div>
+            <p className="md:hidden mt-6 shopify-source-note" style={srcNote}>Swipe sideways to see every column.</p>
             <div className="card mt-8" tabIndex={0} role="region" aria-label="Record owners table" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 760 }}>
                 <thead>
@@ -741,7 +756,7 @@ export default function ShopifyAiAgentsUKPage() {
               say so on the first call. A custom agent earns its place when the job crosses Shopify and a UK
               system it does not reach on its own.
             </p>
-            <p className="md:hidden mt-6" style={srcNote}>Swipe sideways to see every column, including the custom agent.</p>
+            <p className="md:hidden mt-6 shopify-source-note" style={srcNote}>Swipe sideways to see every column, including the custom agent.</p>
             <div className="card mt-8" tabIndex={0} role="region" aria-label="Comparison table" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 900 }}>
                 <thead>
@@ -859,7 +874,7 @@ export default function ShopifyAiAgentsUKPage() {
                 <div className="scorecard-row"><div><div className="scorecard-metric">Tier 1: Reactive Agent</div><div className="scorecard-note">Cloudswitched’s label</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£15,000 to £40,000</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Tier 2: Task Agent</div><div className="scorecard-note">Cloudswitched’s label</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£35,000 to £80,000</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Tier 3: Reasoning Agent</div><div className="scorecard-note">Cloudswitched’s label</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>£70,000 to £150,000</div></div>
-                <p style={srcNote}>
+                <p className="shopify-source-note" style={srcNote}>
                   Source, read on {READ_ON}: <a href={SRC.cloudswitched.url} target="_blank" rel="noopener noreferrer" style={srcLink}>{SRC.cloudswitched.label}</a>. FactoryJet quotes a fixed price in writing after a short scoping call.
                 </p>
               </div>
@@ -904,7 +919,7 @@ export default function ShopifyAiAgentsUKPage() {
                 Step four comes before any contract. Each phase after it has its own fixed price.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="stack mt-10 shopify-process" style={{ maxWidth: 900 }}>
               {STEPS.map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
@@ -934,7 +949,7 @@ export default function ShopifyAiAgentsUKPage() {
                 a figure.
               </p>
             </div>
-            <ul className="col-2 mt-8" style={{ gap: 10 }}>
+            <ul className="col-2 mt-8 shopify-source-list" style={{ gap: 10 }}>
               {SOURCE_KEYS.map((k) => (
                 <li key={k} style={{ fontSize: 14 }}>
                   <a href={SRC[k].url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: T.ink }}>{SRC[k].label}</a>
@@ -1007,7 +1022,8 @@ export default function ShopifyAiAgentsUKPage() {
 
         {/* 15. FINAL CTA (the only dark section) */}
         <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+          <div className="wrap shopify-demo-split">
+            <div>
             <span className="eyebrow">Next step</span>
             <h2>See an agent work on your own Shopify orders</h2>
             <p className="mt-4">
@@ -1015,10 +1031,16 @@ export default function ShopifyAiAgentsUKPage() {
               the job, your Shopify plan and the UK systems around it. Before you sign anything, you see the agent
               run on your own data.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
               <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/contact" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Contact us</a>
             </div>
+            </div>
+            <picture className="shopify-section-photo">
+              <source type="image/avif" srcSet="/images/uk/shopify-ai-agents/store-order-demo-review-640.avif 640w, /images/uk/shopify-ai-agents/store-order-demo-review-960.avif 960w, /images/uk/shopify-ai-agents/store-order-demo-review-1280.avif 1280w" sizes="(max-width: 899px) calc(100vw - 32px), (max-width: 1119px) calc((100vw - 88px) * 0.4167), 430px" />
+              <source type="image/webp" srcSet="/images/uk/shopify-ai-agents/store-order-demo-review-640.webp 640w, /images/uk/shopify-ai-agents/store-order-demo-review-960.webp 960w, /images/uk/shopify-ai-agents/store-order-demo-review-1280.webp 1280w" sizes="(max-width: 899px) calc(100vw - 32px), (max-width: 1119px) calc((100vw - 88px) * 0.4167), 430px" />
+              <img src="/images/uk/shopify-ai-agents/store-order-demo-review-960.webp" srcSet="/images/uk/shopify-ai-agents/store-order-demo-review-640.webp 640w, /images/uk/shopify-ai-agents/store-order-demo-review-960.webp 960w, /images/uk/shopify-ai-agents/store-order-demo-review-1280.webp 1280w" sizes="(max-width: 899px) calc(100vw - 32px), (max-width: 1119px) calc((100vw - 88px) * 0.4167), 430px" width={1280} height={853} loading="lazy" decoding="async" alt="Two people review order cards on a monitor beside an open parcel." />
+            </picture>
           </div>
         </section>
 

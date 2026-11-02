@@ -7,6 +7,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* /uk/odoo-ai-agents, built 2026-10-29.
@@ -477,7 +478,7 @@ export default function OdooAiAgentsUKPage() {
       <script id="ld-uk-odoo-ai-agents" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents fj-uk-odoo-visual">
       <main className={styles.page}>
         <StickyCtaLabel label="See a demo on my data" title="Demo first" />
 
@@ -514,7 +515,7 @@ export default function OdooAiAgentsUKPage() {
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <img src={`${IMG}/trade-counter-order.webp`} width={1200} height={800} fetchPriority="high" decoding="async" alt="At a wooden trade counter a man in a dark green work shirt passes a plain cardboard box to a woman in a mustard jacket, with stocked shelves behind him" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What changes, and what stays</span>
                   <div className="scorecard-row">
@@ -627,7 +628,7 @@ export default function OdooAiAgentsUKPage() {
                 </tbody>
               </table>
             </div>
-            <ul className="col-3 mt-10">
+            <ul className="col-3 mt-10 odoo-localisation-cards">
               <li className="card"><h3>Only UK companies submit</h3><p className="mt-4">Odoo’s UK page says only UK-based companies can submit reports to HMRC. A group with a non-UK parent in the same database plans around that.</p></li>
               <li className="card"><h3>One HMRC login at a time</h3><p className="mt-4">One company and one user can be connected to HMRC at once. Several UK entities in one database means resetting the connection before each filing.</p></li>
               <li className="card"><h3>Late returns leave Odoo</h3><p className="mt-4">Odoo only fetches open obligations from the last three months. A return later than that is filed by contacting HMRC directly.</p></li>
@@ -674,6 +675,7 @@ export default function OdooAiAgentsUKPage() {
         {/* 6. JOBS */}
         <section className="sec-lg dot-grid" id="jobs">
           <div className="wrap">
+            <div className="odoo-editorial">
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">The work</span>
               <h2>Six jobs UK firms on Odoo give an AI agent first</h2>
@@ -683,7 +685,13 @@ export default function OdooAiAgentsUKPage() {
                 and its drafts match what people would have posted.
               </p>
             </div>
-            <ul className="col-2 mt-10">
+              <picture className="odoo-photo">
+                  <source type="image/avif" srcSet="/images/uk/odoo-ai-agents/trade-counter-draft-order-640.avif 640w, /images/uk/odoo-ai-agents/trade-counter-draft-order-960.avif 960w, /images/uk/odoo-ai-agents/trade-counter-draft-order-1280.avif 1280w" sizes="(min-width: 1120px) 434px, (min-width: 1024px) calc(41.6667vw - 33.3333px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
+                  <source type="image/webp" srcSet="/images/uk/odoo-ai-agents/trade-counter-draft-order-640.webp 640w, /images/uk/odoo-ai-agents/trade-counter-draft-order-960.webp 960w, /images/uk/odoo-ai-agents/trade-counter-draft-order-1280.webp 1280w" sizes="(min-width: 1120px) 434px, (min-width: 1024px) calc(41.6667vw - 33.3333px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
+                  <img src="/images/uk/odoo-ai-agents/trade-counter-draft-order-960.webp" srcSet="/images/uk/odoo-ai-agents/trade-counter-draft-order-640.webp 640w, /images/uk/odoo-ai-agents/trade-counter-draft-order-960.webp 960w, /images/uk/odoo-ai-agents/trade-counter-draft-order-1280.webp 1280w" sizes="(min-width: 1120px) 434px, (min-width: 1024px) calc(41.6667vw - 33.3333px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A trade counter clerk accepts a purchase order while checking a copper fitting." />
+                </picture>
+            </div>
+            <ul className="col-2 mt-10 odoo-jobs-list">
               {JOBS.map((j) => (
                 <li key={j.n} className="plat-card">
                   <div className="plat-top">
@@ -775,6 +783,12 @@ export default function OdooAiAgentsUKPage() {
                 </ul>
                 <Sources ids={['odooApi']} />
               </div>
+              <div className="odoo-controls-media">
+                <picture className="odoo-photo">
+                  <source type="image/avif" srcSet="/images/uk/odoo-ai-agents/operations-draft-approval-640.avif 640w, /images/uk/odoo-ai-agents/operations-draft-approval-960.avif 960w, /images/uk/odoo-ai-agents/operations-draft-approval-1280.avif 1280w" sizes="(min-width: 1120px) 434px, (min-width: 1024px) calc(41.6667vw - 33.3333px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
+                  <source type="image/webp" srcSet="/images/uk/odoo-ai-agents/operations-draft-approval-640.webp 640w, /images/uk/odoo-ai-agents/operations-draft-approval-960.webp 960w, /images/uk/odoo-ai-agents/operations-draft-approval-1280.webp 1280w" sizes="(min-width: 1120px) 434px, (min-width: 1024px) calc(41.6667vw - 33.3333px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
+                  <img src="/images/uk/odoo-ai-agents/operations-draft-approval-960.webp" srcSet="/images/uk/odoo-ai-agents/operations-draft-approval-640.webp 640w, /images/uk/odoo-ai-agents/operations-draft-approval-960.webp 960w, /images/uk/odoo-ai-agents/operations-draft-approval-1280.webp 1280w" sizes="(min-width: 1120px) 434px, (min-width: 1024px) calc(41.6667vw - 33.3333px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman reviews a draft queue on a monitor beside a tray of A4 papers." />
+                </picture>
               <div className="card card-top-orange">
                 <span className="eyebrow">UK and EU rules worth a line in the brief</span>
                 <div className="stack mt-4">
@@ -793,6 +807,7 @@ export default function OdooAiAgentsUKPage() {
                   </p>
                 </div>
                 <Sources ids={['icoAi', 'govDuaa', 'euAiAct']} />
+              </div>
               </div>
             </div>
           </div>
@@ -889,7 +904,7 @@ export default function OdooAiAgentsUKPage() {
                 </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src={`${IMG}/planning-wall-notes.webp`} width={1200} height={800} loading="lazy" decoding="async" alt="Two colleagues seen from behind stand at a wall of blank yellow paper notes while one of them points to a single orange note" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
                     Step three in practice: every rule a person follows today is written down and signed off, and the one that
@@ -915,6 +930,7 @@ export default function OdooAiAgentsUKPage() {
         {/* 12. WHO IT IS FOR */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
+            <div className="odoo-editorial">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">Who this is for</span>
               <h2>Odoo AI agents for UK wholesalers, manufacturers, contractors and multi-channel sellers</h2>
@@ -922,7 +938,13 @@ export default function OdooAiAgentsUKPage() {
                 Established companies with Odoo in place and a team that confirms orders and bills every day.
               </p>
             </div>
-            <div className={styles.comparisonBox} tabIndex={0} role="region" aria-label="Who this is for"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="svc-card"><th><h3>Wholesale and distribution</h3></th><td><p className="mt-4">Retail and trade customers email purchase orders all day. Each becomes a draft quotation at that account’s prices.</p></td></tr><tr className="svc-card"><th><h3>Manufacturers</h3></th><td><p className="mt-4">Supplier bills for materials and carriage arrive as PDFs, scans and spreadsheets. The agent matches each one to its Odoo purchase order and goods receipt before a person posts it.</p></td></tr><tr className="svc-card"><th><h3>Construction contractors</h3></th><td><p className="mt-4">Subcontractor invoices drafted into bills for Odoo’s CIS module, checked before the monthly return.</p></td></tr><tr className="svc-card"><th><h3>Multi-channel sellers</h3></th><td><p className="mt-4">Amazon.co.uk, eBay UK, OnBuy and your own store, with order exceptions held for a person instead of failing quietly.</p></td></tr></tbody></table></div>
+              <picture className="odoo-photo">
+                  <source type="image/avif" srcSet="/images/uk/odoo-ai-agents/manufacturing-supplier-receipt-review-640.avif 640w, /images/uk/odoo-ai-agents/manufacturing-supplier-receipt-review-960.avif 960w, /images/uk/odoo-ai-agents/manufacturing-supplier-receipt-review-1280.avif 1280w" sizes="(min-width: 1120px) 434px, (min-width: 1024px) calc(41.6667vw - 33.3333px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
+                  <source type="image/webp" srcSet="/images/uk/odoo-ai-agents/manufacturing-supplier-receipt-review-640.webp 640w, /images/uk/odoo-ai-agents/manufacturing-supplier-receipt-review-960.webp 960w, /images/uk/odoo-ai-agents/manufacturing-supplier-receipt-review-1280.webp 1280w" sizes="(min-width: 1120px) 434px, (min-width: 1024px) calc(41.6667vw - 33.3333px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" />
+                  <img src="/images/uk/odoo-ai-agents/manufacturing-supplier-receipt-review-960.webp" srcSet="/images/uk/odoo-ai-agents/manufacturing-supplier-receipt-review-640.webp 640w, /images/uk/odoo-ai-agents/manufacturing-supplier-receipt-review-960.webp 960w, /images/uk/odoo-ai-agents/manufacturing-supplier-receipt-review-1280.webp 1280w" sizes="(min-width: 1120px) 434px, (min-width: 1024px) calc(41.6667vw - 33.3333px), (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A production manager compares supplier paperwork and metal fittings beside a laptop in a small manufacturing unit." />
+                </picture>
+            </div>
+            <div className={`${styles.comparisonBox} odoo-audience-table`} tabIndex={0} role="region" aria-label="Who this is for"><table className={styles.comparisonTable} data-comparison-layout><tbody><tr className="svc-card"><th><h3>Wholesale and distribution</h3></th><td><p className="mt-4">Retail and trade customers email purchase orders all day. Each becomes a draft quotation at that account’s prices.</p></td></tr><tr className="svc-card"><th><h3>Manufacturers</h3></th><td><p className="mt-4">Supplier bills for materials and carriage arrive as PDFs, scans and spreadsheets. The agent matches each one to its Odoo purchase order and goods receipt before a person posts it.</p></td></tr><tr className="svc-card"><th><h3>Construction contractors</h3></th><td><p className="mt-4">Subcontractor invoices drafted into bills for Odoo’s CIS module, checked before the monthly return.</p></td></tr><tr className="svc-card"><th><h3>Multi-channel sellers</h3></th><td><p className="mt-4">Amazon.co.uk, eBay UK, OnBuy and your own store, with order exceptions held for a person instead of failing quietly.</p></td></tr></tbody></table></div>
             <p className="mt-8" style={{ maxWidth: 780 }}>
               Related UK pages: <a href="/uk/ai-agents" style={inlineLink}>AI agent development in the UK</a>,{' '}
               <a href="/uk/accounts-payable-automation" style={inlineLink}>accounts payable automation</a> for supplier
@@ -946,7 +968,7 @@ export default function OdooAiAgentsUKPage() {
                 the linked page before acting on a detail.
               </p>
             </div>
-            <ul className="col-2 mt-8" style={{ gap: 10 }}>
+            <ul className="col-2 mt-8 odoo-source-list" style={{ gap: 10 }}>
               {SOURCE_KEYS.map((k) => (
                 <li key={k} style={{ fontSize: 14 }}>
                   <a href={SRC[k].url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: T.ink }}>{SRC[k].label}</a>
@@ -1006,8 +1028,8 @@ export default function OdooAiAgentsUKPage() {
         </section>
 
         {/* 15. FINAL CTA (the only dark section) */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+        <section className="dark-sec odoo-final-cta">
+          <div className="wrap odoo-final-inner">
             <span className="eyebrow">Next step</span>
             <h2>See your own Odoo orders and bills drafted before you sign</h2>
             <p className="mt-4">
@@ -1015,7 +1037,7 @@ export default function OdooAiAgentsUKPage() {
               your Odoo, your UK set-up and the first job. You leave knowing whether Odoo’s own AI covers it or a
               custom agent is the better route.
             </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <div className="mt-8 odoo-final-actions">
               <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/contact" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Contact us</a>
             </div>

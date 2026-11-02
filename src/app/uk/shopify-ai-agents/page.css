@@ -1,0 +1,269 @@
+.fj-uk-shopify-visual main {
+  overflow-wrap: break-word;
+}
+
+.fj-uk-shopify-visual main .wrap {
+  padding-inline: clamp(16px, 2.5vw, 24px);
+}
+
+.fj-uk-shopify-visual main :is(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+.fj-uk-shopify-visual main h1 {
+  font-size: clamp(1.875rem, 4.6vw, 3.5rem);
+}
+
+.fj-uk-shopify-visual main h2 {
+  font-size: clamp(1.5rem, 3.3vw, 2.625rem);
+}
+
+.fj-uk-shopify-visual main :is(p, li, td) {
+  font-size: 16px !important;
+}
+
+.fj-uk-shopify-visual main p {
+  text-wrap: pretty;
+}
+
+.fj-uk-shopify-visual main .lead {
+  font-size: clamp(1.0625rem, 1.3vw, 1.1875rem) !important;
+}
+
+.fj-uk-shopify-visual main :is(.eyebrow, .chip, .lab, .scorecard-note, .faq-sidebar-topics, .faq-cat-label, .faq-nav-count, .pill-count) {
+  font-size: 12px !important;
+}
+
+.fj-uk-shopify-visual main :is(.eyebrow, .lab, .faq-cat-label) {
+  color: #B23E13;
+}
+
+.fj-uk-shopify-visual main .shopify-source-note {
+  font-size: 12px !important;
+  line-height: 1.8;
+}
+
+.fj-uk-shopify-visual main .cmp-table th {
+  font-size: 12px;
+}
+
+.fj-uk-shopify-visual main .scope-list li::before,
+.fj-uk-shopify-visual main .scope-list.num-list li::before {
+  font-size: 12px;
+}
+
+.fj-uk-shopify-visual main .scorecard-metric {
+  font-size: 16px;
+}
+
+.fj-uk-shopify-visual main .q-text {
+  font-size: 16px;
+}
+
+.fj-uk-shopify-visual main .scorecard-val {
+  font-size: 16px !important;
+  max-width: 100%;
+}
+
+.fj-uk-shopify-visual main .byline {
+  flex-wrap: wrap;
+}
+
+.fj-uk-shopify-visual main .byline .av {
+  background: var(--ink);
+}
+
+.fj-uk-shopify-visual main .byline .who {
+  font-size: 16px;
+  min-width: 0;
+  flex: 1 1 180px;
+}
+
+.fj-uk-shopify-visual main .byline .who span {
+  font-size: 12px;
+}
+
+.fj-uk-shopify-visual main .byline .upd {
+  font-size: 12px;
+}
+
+.fj-uk-shopify-visual main :is(.col-6040, .col-4060, .col-2, .faq-grid) > * {
+  min-width: 0;
+}
+
+.fj-uk-shopify-visual main :is(.sec, .sec-lg, .dark-sec) {
+  padding-block: clamp(48px, 6vw, 80px);
+}
+
+.fj-uk-shopify-visual main .shopify-visual-intro,
+.fj-uk-shopify-visual main .shopify-demo-split {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(24px, 3vw, 40px);
+  align-items: center;
+  text-align: left;
+}
+
+.fj-uk-shopify-visual main .shopify-section-photo {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--n200);
+  border-radius: clamp(18px, 2vw, 28px);
+  box-shadow: 0 2px 5px rgb(15 15 18 / 4%), 0 16px 36px -20px rgb(15 15 18 / 22%);
+}
+
+.fj-uk-shopify-visual main .shopify-section-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+}
+
+.fj-uk-shopify-visual main .shopify-jobs-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 20px;
+  max-width: none !important;
+}
+
+.fj-uk-shopify-visual main .shopify-jobs-grid > * + * {
+  margin-top: 0;
+}
+
+.fj-uk-shopify-visual main .shopify-jobs-grid > :first-child,
+.fj-uk-shopify-visual main .shopify-jobs-grid > :last-child {
+  grid-column: 1 / -1;
+}
+
+.fj-uk-shopify-visual main .shopify-jobs-grid .card {
+  padding: clamp(20px, 2.6vw, 32px);
+  border-radius: 22px;
+  box-shadow: 0 1px 3px rgb(15 15 18 / 4%), 0 12px 28px -24px rgb(15 15 18 / 24%);
+}
+
+.fj-uk-shopify-visual main .shopify-process {
+  max-width: 940px !important;
+}
+
+.fj-uk-shopify-visual main .shopify-process > li {
+  border-radius: 20px;
+  padding: clamp(20px, 2.5vw, 28px);
+}
+
+.fj-uk-shopify-visual main .shopify-source-list a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  min-width: 44px;
+  overflow-wrap: anywhere;
+}
+
+.fj-uk-shopify-visual main :is(button, input, summary, [role="button"]) {
+  min-height: 44px;
+  font-size: 16px;
+}
+
+.fj-uk-shopify-visual main :is(.faq-sidebar-nav a, .faq-pill-nav a) {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.fj-uk-shopify-visual main :is([id], section) {
+  scroll-margin-top: 100px;
+}
+
+.fj-uk-shopify-visual main :is(a, button, input, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.fj-uk-shopify-visual main .dark-sec .eyebrow {
+  color: var(--cream);
+}
+
+.fj-uk-shopify-visual main .dark-sec :is(a, button):focus-visible {
+  outline-color: var(--cream);
+}
+
+.fj-uk-shopify-visual footer.us-footer {
+  --uf-ink: var(--cream);
+  --uf-body: var(--n200);
+  --uf-muted: var(--n200);
+  --uf-accent: var(--cream);
+  color: var(--cream);
+  text-align: left;
+}
+
+.fj-uk-shopify-visual footer.us-footer :is(p, a, summary) {
+  color: var(--n200);
+}
+
+.fj-uk-shopify-visual footer.us-footer .us-footer__tagline {
+  font-size: 16px;
+}
+
+.fj-uk-shopify-visual footer.us-footer :is(a, summary) {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.fj-uk-shopify-visual footer.us-footer a:hover {
+  color: var(--cream);
+}
+
+.fj-uk-shopify-visual footer.us-footer :is(a, summary):focus-visible {
+  outline-color: var(--cream);
+}
+
+.fj-uk-shopify-visual footer.us-footer .us-footer__region > ul a {
+  color: var(--ink);
+}
+
+.fj-uk-shopify-visual footer.us-footer .us-footer__region > ul a:hover {
+  color: var(--n600);
+}
+
+.fj-uk-shopify-visual footer.us-footer .us-footer__region > ul a:focus-visible {
+  outline-color: var(--ink);
+}
+
+@media (max-width: 899px) {
+  .fj-uk-shopify-visual main .shopify-visual-intro,
+  .fj-uk-shopify-visual main .shopify-demo-split,
+  .fj-uk-shopify-visual main .shopify-jobs-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fj-uk-shopify-visual main .shopify-section-photo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fj-uk-shopify-visual main a:not(.btn) {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    min-width: 44px;
+    max-width: 100%;
+    padding-block: 8px;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 480px) {
+  .fj-uk-shopify-visual main .scorecard-row {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 8px 16px;
+  }
+
+  .fj-uk-shopify-visual main .byline .upd {
+    margin-left: 49px;
+    text-align: left;
+  }
+}
