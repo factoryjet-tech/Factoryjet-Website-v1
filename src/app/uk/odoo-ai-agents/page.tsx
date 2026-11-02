@@ -933,7 +933,7 @@ export default function OdooAiAgentsUKPage() {
             <div className="odoo-editorial">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">Who this is for</span>
-              <h2>Odoo AI agents for UK wholesalers, manufacturers, contractors and multi-channel sellers</h2>
+              <h2>Odoo AI agents for UK wholesalers, manufacturers, contractors and <span style={{ whiteSpace: 'nowrap' }}>multi-channel sellers</span></h2>
               <p className="lead mt-4">
                 Established companies with Odoo in place and a team that confirms orders and bills every day.
               </p>
