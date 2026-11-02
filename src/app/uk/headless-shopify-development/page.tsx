@@ -6,6 +6,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
+import './page.css';
 
 /* /uk/headless-shopify-development, built 2026-10-29.
 
@@ -415,13 +416,13 @@ export default function HeadlessShopifyDevelopmentUKPage() {
       <script id="ld-uk-headless-shopify-development" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="uk-aiagents">
+      <div className="uk-aiagents uk-headless-visual-7">
       <main>
 
         <Breadcrumbs items={crumbs} />
 
         {/* 1. HERO */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+        <section className="sec-lg dot-grid headless-hero" style={{ position: 'relative' }}>
           <div className="wrap">
             <div className="col-6040">
               <div>
@@ -449,7 +450,6 @@ export default function HeadlessShopifyDevelopmentUKPage() {
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <img src={`${IMG}/hero-storefront-engineer-two-monitors.webp`} width={1024} height={1024} fetchPriority="high" decoding="async" alt="A man at a wooden desk facing two monitors, one showing a shop page with shoe tiles and one showing green line charts" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What moves and what stays</span>
                   <div className="scorecard-row">
@@ -471,8 +471,9 @@ export default function HeadlessShopifyDevelopmentUKPage() {
         </section>
 
         {/* 2. ANSWER-FIRST DEFINITION */}
-        <section className="sec">
-          <div className="wrap">
+        <section className="sec headless-definition">
+          <div className="wrap headless-editorial">
+            <div className="headless-copy">
             <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
               <h2 className="lab" style={{ fontWeight: 500, lineHeight: 1.5 }}>What is headless Shopify development, and who is it for in the UK?</h2>
               <p>
@@ -499,6 +500,12 @@ export default function HeadlessShopifyDevelopmentUKPage() {
               charge shown on the product page. We write that list before we quote, and every line on it gets a
               decision.
             </p>
+            </div>
+            <picture className="headless-photo headless-sticky">
+                <source type="image/avif" srcSet="/images/uk/headless-shopify-development/engineer-separated-storefront-640.avif 640w, /images/uk/headless-shopify-development/engineer-separated-storefront-960.avif 960w, /images/uk/headless-shopify-development/engineer-separated-storefront-1280.avif 1280w" sizes="(min-width: 1120px) 430px, (min-width: 900px) calc(40vw - 20px), (min-width: 768px) 720px, calc(100vw - 32px)" />
+                <source type="image/webp" srcSet="/images/uk/headless-shopify-development/engineer-separated-storefront-640.webp 640w, /images/uk/headless-shopify-development/engineer-separated-storefront-960.webp 960w, /images/uk/headless-shopify-development/engineer-separated-storefront-1280.webp 1280w" sizes="(min-width: 1120px) 430px, (min-width: 900px) calc(40vw - 20px), (min-width: 768px) 720px, calc(100vw - 32px)" />
+                <img src="/images/uk/headless-shopify-development/engineer-separated-storefront-960.webp" srcSet="/images/uk/headless-shopify-development/engineer-separated-storefront-640.webp 640w, /images/uk/headless-shopify-development/engineer-separated-storefront-960.webp 960w, /images/uk/headless-shopify-development/engineer-separated-storefront-1280.webp 1280w" sizes="(min-width: 1120px) 430px, (min-width: 900px) calc(40vw - 20px), (min-width: 768px) 720px, calc(100vw - 32px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman reviews ceramic product photos and grey bars on two separate monitors in a catalogue workroom." />
+              </picture>
           </div>
         </section>
 
@@ -632,7 +639,6 @@ export default function HeadlessShopifyDevelopmentUKPage() {
                 </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src={`${IMG}/architecture-whiteboard-four-layers.webp`} width={1200} height={896} loading="lazy" decoding="async" alt="A woman drawing four stacked boxes joined by arrows on a whiteboard while a man beside her holds a tablet" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
                     Four layers on one page: the front end, the Storefront API, Shopify checkout and the back office.
@@ -791,7 +797,8 @@ export default function HeadlessShopifyDevelopmentUKPage() {
                 fixed price.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <div className="headless-editorial mt-10">
+            <ol className="stack headless-steps" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Audit the store you have', d: 'We list every template, app, script and connection on the live theme, and mark each one keep, rebuild, replace or drop. This list is the scope.' },
                 { n: '02', t: 'Draw the four layers', d: 'Front end, Storefront API, Shopify checkout and back office, with an owner for each box and each kind of content. You sign the drawing before anything is built.' },
@@ -810,6 +817,12 @@ export default function HeadlessShopifyDevelopmentUKPage() {
                 </li>
               ))}
             </ol>
+            <picture className="headless-photo headless-sticky">
+                <source type="image/avif" srcSet="/images/uk/headless-shopify-development/four-layer-store-planning-640.avif 640w, /images/uk/headless-shopify-development/four-layer-store-planning-960.avif 960w, /images/uk/headless-shopify-development/four-layer-store-planning-1280.avif 1280w" sizes="(min-width: 1120px) 430px, (min-width: 900px) calc(40vw - 20px), (min-width: 768px) 720px, calc(100vw - 32px)" />
+                <source type="image/webp" srcSet="/images/uk/headless-shopify-development/four-layer-store-planning-640.webp 640w, /images/uk/headless-shopify-development/four-layer-store-planning-960.webp 960w, /images/uk/headless-shopify-development/four-layer-store-planning-1280.webp 1280w" sizes="(min-width: 1120px) 430px, (min-width: 900px) calc(40vw - 20px), (min-width: 768px) 720px, calc(100vw - 32px)" />
+                <img src="/images/uk/headless-shopify-development/four-layer-store-planning-960.webp" srcSet="/images/uk/headless-shopify-development/four-layer-store-planning-640.webp 640w, /images/uk/headless-shopify-development/four-layer-store-planning-960.webp 960w, /images/uk/headless-shopify-development/four-layer-store-planning-1280.webp 1280w" sizes="(min-width: 1120px) 430px, (min-width: 900px) calc(40vw - 20px), (min-width: 768px) 720px, calc(100vw - 32px)" width={1536} height={1024} loading="lazy" decoding="async" alt="Two people discuss four blank layers on a whiteboard beside a table of plain papers." />
+              </picture>
+            </div>
           </div>
         </section>
 
@@ -928,8 +941,9 @@ export default function HeadlessShopifyDevelopmentUKPage() {
         </section>
 
         {/* 14. FINAL CTA (the only dark section) */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
+        <section className="dark-sec headless-final">
+          <div className="wrap headless-editorial">
+            <div className="headless-copy">
             <span className="eyebrow">Next step</span>
             <h2>See your own catalogue on a headless front end before you sign</h2>
             <p className="mt-4">
@@ -941,6 +955,12 @@ export default function HeadlessShopifyDevelopmentUKPage() {
               <ModalCTAButton label="See a draft of my store" region="uk" modalVariant="default" btnVariant="primary-light" />
               <a className="btn btn-outline" href="/contact" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Contact us</a>
             </div>
+            </div>
+            <picture className="headless-photo">
+                <source type="image/avif" srcSet="/images/uk/headless-shopify-development/merchandiser-catalogue-tablet-640.avif 640w, /images/uk/headless-shopify-development/merchandiser-catalogue-tablet-960.avif 960w, /images/uk/headless-shopify-development/merchandiser-catalogue-tablet-1280.avif 1280w" sizes="(min-width: 1120px) 430px, (min-width: 900px) calc(40vw - 20px), (min-width: 768px) 720px, calc(100vw - 32px)" />
+                <source type="image/webp" srcSet="/images/uk/headless-shopify-development/merchandiser-catalogue-tablet-640.webp 640w, /images/uk/headless-shopify-development/merchandiser-catalogue-tablet-960.webp 960w, /images/uk/headless-shopify-development/merchandiser-catalogue-tablet-1280.webp 1280w" sizes="(min-width: 1120px) 430px, (min-width: 900px) calc(40vw - 20px), (min-width: 768px) 720px, calc(100vw - 32px)" />
+                <img src="/images/uk/headless-shopify-development/merchandiser-catalogue-tablet-960.webp" srcSet="/images/uk/headless-shopify-development/merchandiser-catalogue-tablet-640.webp 640w, /images/uk/headless-shopify-development/merchandiser-catalogue-tablet-960.webp 960w, /images/uk/headless-shopify-development/merchandiser-catalogue-tablet-1280.webp 1280w" sizes="(min-width: 1120px) 430px, (min-width: 900px) calc(40vw - 20px), (min-width: 768px) 720px, calc(100vw - 32px)" width={1536} height={1024} loading="lazy" decoding="async" alt="A woman holds a tablet displaying linen product photos beside folded fabrics on a packing counter." />
+              </picture>
           </div>
         </section>
 
