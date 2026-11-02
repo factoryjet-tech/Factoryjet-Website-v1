@@ -15,7 +15,7 @@
  *   - All GA4/GTM events preserved (form_start, form_step, form_submit/success/error).
  */
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useId } from 'react';
 import {
   X,
   Send,
@@ -111,6 +111,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const ContactFormModal: React.FC = () => {
   const { isOpen, region, variant, closeModal } = useContactModal();
+  const formId = useId();
   const services =
     variant === 'ai' ? aiServices : variant === 'seo' ? seoServices : defaultServices;
 
@@ -334,7 +335,7 @@ const ContactFormModal: React.FC = () => {
             className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
               s === step ? 'bg-[#B23E13] text-white scale-110'
               : s < step ? 'bg-[#10B981] text-white'
-              : 'bg-slate-200 text-slate-500'
+              : 'bg-slate-200 text-slate-700'
             }`}
           >
             {s < step ? <CheckCircle size={16} /> : s}
@@ -394,50 +395,50 @@ const ContactFormModal: React.FC = () => {
       </div>
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-2 sm:col-span-1">
-          <label className="block text-sm font-medium text-slate-700 mb-1.5">Full Name *</label>
+          <label htmlFor={`${formId}-name`} className="block text-sm font-medium text-slate-700 mb-1.5">Full Name *</label>
           <input
-            type="text" name="name" value={formData.name} onChange={handleInputChange}
+            type="text" id={`${formId}-name`} name="name" value={formData.name} onChange={handleInputChange}
             placeholder="John Doe" required autoComplete="name"
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm"
+            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-base"
           />
         </div>
         <div className="col-span-2 sm:col-span-1">
-          <label className="block text-sm font-medium text-slate-700 mb-1.5">Email Address *</label>
+          <label htmlFor={`${formId}-email`} className="block text-sm font-medium text-slate-700 mb-1.5">Email Address *</label>
           <input
-            type="email" name="email" value={formData.email} onChange={handleInputChange}
+            type="email" id={`${formId}-email`} name="email" value={formData.email} onChange={handleInputChange}
             placeholder="john@company.com" required autoComplete="email"
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm"
+            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-base"
           />
         </div>
         <div className="col-span-2 sm:col-span-1">
-          <label className="block text-sm font-medium text-slate-700 mb-1.5">
+          <label htmlFor={`${formId}-phone`} className="block text-sm font-medium text-slate-700 mb-1.5">
             Phone <span className="text-slate-500 font-normal">(optional, for a faster callback)</span>
           </label>
           <input
-            type="tel" name="phone" value={formData.phone} onChange={handleInputChange}
+            type="tel" id={`${formId}-phone`} name="phone" value={formData.phone} onChange={handleInputChange}
             placeholder={region === 'us' ? '(555) 000-0000' : region === 'au' ? '+61 400 000 000' : '+44 7700 000000'} autoComplete="tel"
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm"
+            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-base"
           />
         </div>
         <div className="col-span-2 sm:col-span-1">
-          <label className="block text-sm font-medium text-slate-700 mb-1.5">
+          <label htmlFor={`${formId}-company`} className="block text-sm font-medium text-slate-700 mb-1.5">
             Company <span className="text-slate-500 font-normal">(optional)</span>
           </label>
           <input
-            type="text" name="company" value={formData.company} onChange={handleInputChange}
+            type="text" id={`${formId}-company`} name="company" value={formData.company} onChange={handleInputChange}
             placeholder="Acme Inc." autoComplete="organization"
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm"
+            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-base"
           />
         </div>
         <div className="col-span-2">
-          <label className="block text-sm font-medium text-slate-700 mb-1.5">
+          <label htmlFor={`${formId}-message`} className="block text-sm font-medium text-slate-700 mb-1.5">
             Anything we should know? <span className="text-slate-500 font-normal">(optional)</span>
           </label>
           <textarea
-            name="message" value={formData.message} onChange={handleInputChange}
+            id={`${formId}-message`} name="message" value={formData.message} onChange={handleInputChange}
             placeholder="A sentence about your project, timeline, or goals…"
             rows={3}
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm resize-none"
+            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-base resize-none"
           />
         </div>
       </div>
@@ -456,7 +457,7 @@ const ContactFormModal: React.FC = () => {
       <div ref={turnstile.containerRef} className="empty:hidden" />
 
       {error && (
-        <div className="bg-red-50 text-red-600 px-4 py-3 rounded-xl text-sm">{error}</div>
+        <div role="alert" className="bg-red-50 text-red-600 px-4 py-3 rounded-xl text-sm">{error}</div>
       )}
 
       <div className="flex gap-3 pt-2">
@@ -469,7 +470,7 @@ const ContactFormModal: React.FC = () => {
         <button
           type="submit" disabled={isSubmitting}
           onClick={() => { if (!canSubmit()) trackFormError('contact_form', 'validation_incomplete'); }}
-          className="flex-1 bg-[#B23E13] text-white py-3 rounded-xl font-bold transition-all hover:bg-[#d44d1f] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className="flex-1 bg-[#B23E13] text-white py-3 rounded-xl font-bold transition-all hover:bg-[#9A3510] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           {isSubmitting ? (
             <><Loader2 size={18} className="animate-spin" />Sending…</>
@@ -506,7 +507,7 @@ const ContactFormModal: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           /* GTM auto-fires book_call_click (GA4) + the Book-Call Ads conversion on any calendly.com click. */
-          className="inline-flex items-center justify-center gap-2 w-full bg-[#B23E13] text-white py-3 rounded-xl font-bold text-sm transition-all hover:bg-[#d44d1f] mb-3"
+          className="inline-flex items-center justify-center gap-2 w-full bg-[#B23E13] text-white py-3 rounded-xl font-bold text-sm transition-all hover:bg-[#9A3510] mb-3"
         >
           Book a 30-min call now
         </a>
@@ -531,7 +532,7 @@ const ContactFormModal: React.FC = () => {
 
   return (
     <div
-      className="fj-contact-modal-overlay fixed inset-0 z-[9999] flex items-center justify-center p-4"
+      className="fj-contact-modal-overlay fixed inset-0 z-[10010] flex items-center justify-center p-4"
       style={{ animation: 'fadeIn 0.2s ease-out' }}
       onClick={handleClose}
     >
@@ -552,14 +553,14 @@ const ContactFormModal: React.FC = () => {
         {/* Close button */}
         <button
           type="button" onClick={handleClose}
-          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors z-10"
+          className="absolute top-4 right-4 w-11 h-11 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors z-10"
           aria-label="Close contact form"
         >
           <X size={18} className="text-slate-600" />
         </button>
 
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#B23E13] to-[#9A3510] px-6 py-8 text-center rounded-t-2xl">
+        <div className="bg-gradient-to-r from-[#B23E13] to-[#9A3510] pl-6 pr-16 py-8 text-center rounded-t-2xl">
           <h2 id="contact-modal-title" className="text-2xl font-bold text-white mb-1">Let's Build Something Great</h2>
           <p className="text-white/90 text-sm">No commitment. Free consultation.</p>
         </div>
@@ -581,6 +582,8 @@ const ContactFormModal: React.FC = () => {
         @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
         @keyframes slideUp { from { opacity: 0; transform: translateY(16px) scale(0.97) } to { opacity: 1; transform: translateY(0) scale(1) } }
         .animate-fadeIn { animation: fadeIn 0.2s ease-out }
+        .fj-contact-modal-panel :is(a, button, input, textarea):focus-visible { outline: 2px solid #B23E13; outline-offset: 3px; }
+        .fj-contact-modal-panel > button:focus-visible { outline-color: #fff; }
         @media (prefers-reduced-motion: reduce) {
           .fj-contact-modal-overlay, .fj-contact-modal-panel, .fj-contact-modal-panel .animate-fadeIn { animation: none !important; }
           .fj-contact-modal-panel * { transition-duration: 0s !important; }

@@ -93,7 +93,14 @@ export function MegaNavDesktop({ hubs: SERVICE_HUBS = US_HUBS, menus: SIMPLE_MEN
   };
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(null); };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        if (rootRef.current?.contains(document.activeElement)) {
+          rootRef.current.querySelector<HTMLButtonElement>('.mn-top[aria-expanded="true"]')?.focus();
+        }
+        setOpen(null);
+      }
+    };
     const onDown = (e: MouseEvent) => { if (rootRef.current && !rootRef.current.contains(e.target as Node)) setOpen(null); };
     document.addEventListener('keydown', onKey);
     document.addEventListener('mousedown', onDown);

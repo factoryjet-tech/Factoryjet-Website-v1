@@ -529,7 +529,7 @@ export default function CrmAiAgentsUKPage() {
             <div className="fj-crm-editorial">
               <div>
               <span className="eyebrow">Approval rules</span>
-              <h2>What the agent may change alone, and what waits for a person</h2>
+              <h2 id="crm-permissions-heading">What the agent may change alone, and what waits for a person</h2>
               <p className="lead mt-4">
                 You sign these rules off before launch. They are written per action and per field, and they live in
                 a plain-English file in your repository, so your sales director can read them without a developer.
@@ -542,7 +542,7 @@ export default function CrmAiAgentsUKPage() {
               </picture>
             </div>
 <p className="md:hidden mt-6 fj-crm-table-hint" style={{ fontFamily: T.fm, fontSize: 11, color: T.n400 }}>Swipe sideways to see every column.</p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <div className="card mt-8" tabIndex={0} role="region" aria-labelledby="crm-permissions-heading" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
                   <tr>
@@ -618,14 +618,14 @@ export default function CrmAiAgentsUKPage() {
         <section className="sec-lg dot-grid">
           <div className="wrap">
             <span className="eyebrow">Side by side</span>
-            <h2 style={{ maxWidth: 760 }}>Custom agent, HubSpot Breeze or Salesforce Agentforce, or a Zapier flow</h2>
+            <h2 id="crm-comparison-heading" style={{ maxWidth: 760 }}>Custom agent, HubSpot Breeze or Salesforce Agentforce, or a Zapier flow</h2>
             <p className="lead mt-4" style={{ maxWidth: 760 }}>
               All three are sensible in the right place. The question is whether the job stays inside one CRM, such
               as HubSpot Sales Hub or Salesforce Sales Cloud, or crosses into the systems your finance and service
               teams run. Simple CRM workflow automation, such as copying a form field, rarely needs an agent at all.
             </p>
 <p className="md:hidden mt-6 fj-crm-table-hint" style={{ fontFamily: T.fm, fontSize: 11, color: T.n400 }}>Swipe sideways to see every column.</p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <div className="card mt-8" tabIndex={0} role="region" aria-labelledby="crm-comparison-heading" style={{ padding: 0, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table className="cmp-table" style={{ minWidth: 640 }}>
                 <thead>
                   <tr>

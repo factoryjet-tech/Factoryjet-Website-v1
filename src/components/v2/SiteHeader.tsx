@@ -100,7 +100,7 @@ function ModernSiteHeader({
             {/* Logo */}
             <Link
               href={logoHref}
-              className="flex-shrink-0 text-fj-ink"
+              className="inline-flex min-h-11 min-w-11 flex-shrink-0 items-center text-fj-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B23E13]"
               aria-label={logoText}
             >
               <Wordmark label={null} className="h-[19px] w-auto md:h-[21px]" />
@@ -149,7 +149,7 @@ function ModernSiteHeader({
         data-dialog-backdrop
         aria-hidden="true"
         onClick={() => setMobileOpen(false)}
-        className={`fixed inset-0 z-40 bg-fj-ink/25 backdrop-blur-sm transition-opacity motion-reduce:transition-none duration-300 md:hidden ${
+        className={`fixed inset-0 z-[10000] bg-fj-ink/25 backdrop-blur-sm transition-opacity motion-reduce:transition-none duration-300 md:hidden ${
           mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       />
@@ -165,7 +165,7 @@ function ModernSiteHeader({
         aria-modal={mobileOpen ? true : undefined}
         aria-label="Navigation menu"
         style={{ visibility: mobileOpen ? 'visible' : 'hidden' }}
-        className={`fixed right-0 top-0 z-50 flex h-[100dvh] w-[88vw] max-w-[360px] flex-col bg-white shadow-2xl transition-transform motion-reduce:transition-none duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] md:hidden ${
+        className={`fixed right-0 top-0 z-[10001] flex h-[100dvh] w-[88vw] max-w-[360px] flex-col bg-white shadow-2xl transition-transform motion-reduce:transition-none duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] md:hidden ${
           mobileOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -174,7 +174,7 @@ function ModernSiteHeader({
           <Link
             href={logoHref}
             onClick={() => setMobileOpen(false)}
-            className="text-fj-ink"
+            className="inline-flex min-h-11 min-w-11 items-center text-fj-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B23E13]"
             aria-label={logoText}
           >
             <Wordmark label={null} className="h-[18px] w-auto" />

@@ -15,14 +15,14 @@
 
 /* Top triggers */
 .mn-tops { display: flex; align-items: center; gap: 2px; }
-.mn-top { display: inline-flex; align-items: center; gap: 4px; border: 0; background: none; border-radius: 8px; padding: 8px 12px; font: 400 14.5px var(--mn-sans); color: var(--mn-ink); cursor: pointer; }
+.mn-top { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; gap: 4px; border: 0; background: none; border-radius: 8px; padding: 8px 12px; font: 400 14.5px var(--mn-sans); color: var(--mn-ink); cursor: pointer; }
 .mn-top svg { color: #9A8F86; transition: transform .2s ease; }
 .mn-top:hover, .mn-top[aria-expanded="true"] { background: #F1EEEA; color: var(--mn-accent-text); }
 .mn-top[aria-expanded="true"] svg { transform: rotate(180deg); color: var(--mn-accent); }
 
 /* Floating panel, positioned against the sticky header */
 .mn-scrim { position: absolute; top: 100%; left: 0; right: 0; height: 100vh; background: rgba(20,17,15,.12); }
-.mn-panel { position: absolute; top: calc(100% + 8px); left: 0; right: 0; z-index: 2; width: min(100% - 48px, 1100px); margin-inline: auto; background: #fff; border: 1px solid var(--mn-line); border-radius: 14px; box-shadow: 0 28px 60px -34px rgba(20,17,15,.45); overflow: hidden; animation: mn-drop .16s ease-out; font-family: var(--mn-sans); color: var(--mn-ink); text-align: left; }
+.mn-panel { position: absolute; top: calc(100% + 8px); left: 0; right: 0; z-index: 2; width: min(100% - 48px, 1100px); margin-inline: auto; background: #fff; border: 1px solid var(--mn-line); border-radius: 14px; box-shadow: 0 28px 60px -34px rgba(20,17,15,.45); max-height: calc(100dvh - 96px); overflow-y: auto; overscroll-behavior: contain; animation: mn-drop .16s ease-out; font-family: var(--mn-sans); color: var(--mn-ink); text-align: left; }
 @keyframes mn-drop { from { opacity: 0; transform: translateY(-6px); } }
 .mn-grid { display: grid; grid-template-columns: 250px minmax(0,1fr) 240px; }
 .mn-grid-simple { grid-template-columns: minmax(0,1fr) 240px; }
@@ -113,3 +113,7 @@
   .mn-panel { animation: none; }
   .mn *, .mnm * { transition: none !important; }
 }
+
+/* Keyboard and coarse-pointer targets retain the same labels and destinations. */
+.mn :is(a, button), .mnm :is(a, button) { min-height: 44px; min-width: 44px; }
+.mn-more, .mn-fnote a { display: inline-flex; align-items: center; }

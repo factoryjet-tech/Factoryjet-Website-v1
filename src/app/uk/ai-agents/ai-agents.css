@@ -582,3 +582,33 @@
 }
 .uk-aiagents .int-group li:last-child {border-bottom:none}
 .uk-aiagents .int-group li b {color:var(--ink);font-weight:600}
+
+/* The modern shared footer keeps this template's existing dark surface.
+   Give it the matching foreground tokens and reset its light region popup. */
+.uk-aiagents footer.us-footer {
+  --uf-ink: #fafaf7;
+  --uf-body: #e7ded6;
+  --uf-muted: #c1b7ad;
+  --uf-line: #48403b;
+  --uf-surface: var(--dark);
+  --uf-accent: #ff8a4c;
+  color: var(--uf-ink);
+  padding: 0;
+  text-align: left;
+}
+.uk-aiagents footer.us-footer :is(p, a, summary, .us-footer__wordmark) { color: var(--uf-body); }
+.uk-aiagents footer.us-footer :is(.us-footer__heading, .us-footer__verification, .us-footer__bottom) { color: var(--uf-muted); }
+.uk-aiagents footer.us-footer :is(a, summary):focus-visible { outline-color: var(--uf-ink); }
+.uk-aiagents footer.us-footer .us-footer__region > ul {
+  --uf-ink: #14110f;
+  --uf-body: #46403b;
+  --uf-muted: #6e635a;
+  --uf-surface: #fff;
+  --uf-accent: #b23e13;
+  color: var(--uf-ink);
+  background: var(--uf-surface);
+}
+.uk-aiagents footer.us-footer .us-footer__region > ul a { color: var(--uf-body); }
+.uk-aiagents footer.us-footer .us-footer__region > ul a:focus-visible { outline-color: var(--uf-accent); }
+
+.uk-aiagents [role="region"][tabindex="0"]:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
