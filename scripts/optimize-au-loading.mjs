@@ -40,9 +40,12 @@ function initialCss(css, classes, interactiveSource, parse) {
   const tree = parse(css);
   tree.walkRules(rule => {
     if (rule.parent.type === 'atrule' && /keyframes$/i.test(rule.parent.name)) return;
-    if (mixedModules && !rule.selector.includes(',')) {
-      const module = rule.selector.match(moduleClass);
-      if (module && !classes.has(module[1])) rule.remove();
+    if (mixedModules) {
+      const unusedModule = rule.selectors.every(selector => {
+        const module = selector.match(moduleClass);
+        return module && !classes.has(module[1]);
+      });
+      if (unusedModule) rule.remove();
       return;
     }
     if (!utilities) return;
