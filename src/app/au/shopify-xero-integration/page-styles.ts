@@ -1,3 +1,10 @@
+// Inline the route stylesheet to remove its blocking request.
+// Keep monospace label metrics stable while the existing font loads.
+export default String.raw`
+.aiAgentPage.auPage.au-xero-visual-11 {
+  --font-geist-mono: "Geist Mono", ui-monospace, Consolas, monospace;
+}
+
 .aiAgentPage.auPage.au-xero-visual-11 .hero-grid {
   align-items: start;
 }
@@ -312,3 +319,4 @@
     white-space: normal;
   }
 }
+`;
