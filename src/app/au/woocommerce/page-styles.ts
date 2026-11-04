@@ -1,4 +1,10 @@
+// Inline the small route stylesheet to avoid a blocking request.
+export default String.raw`
 /* Only /au/woocommerce owns this stylesheet and root. */
+.au-woo-visual-11.aiAgentPage.auPage {
+  /* Keep the existing Geist Mono face, with a monospace fallback while it loads. */
+  --font-geist-mono: "Geist Mono", ui-monospace, Consolas, monospace;
+}
 .au-woo-visual-11.aiAgentPage.auPage :is(h1, h2, h3) { text-wrap: balance; }
 .au-woo-visual-11.aiAgentPage.auPage h2 { font-size: clamp(26px, 3.2vw, 42px); line-height: 1.16; }
 .au-woo-visual-11.aiAgentPage.auPage h3 { font-size: clamp(19px, 1.7vw, 23px); line-height: 1.3; }
@@ -11,7 +17,7 @@
 .au-woo-visual-11.aiAgentPage.auPage .hero { padding-block: 44px 64px; }
 .au-woo-visual-11.aiAgentPage.auPage .hero-grid { align-items: start; }
 .au-woo-visual-11.aiAgentPage.auPage .hero h1 { font-size: clamp(36px, 4vw, 56px); line-height: 1.1; }
-.au-woo-visual-11.aiAgentPage.auPage .hero .lead { line-height: 1.65; }
+.au-woo-visual-11.aiAgentPage.auPage .hero .lead { max-inline-size: 34rem; line-height: 1.65; }
 .au-woo-visual-11.aiAgentPage.auPage .specpanel-bar {
   container: woo-panel-header / inline-size;
   display: grid;
@@ -110,9 +116,37 @@
   .au-woo-visual-11.aiAgentPage.auPage .trigrows .t { grid-column: 1; grid-row: auto; justify-self: start; max-width: 100%; }
 }
 
+@media (min-width: 821px) and (max-width: 1080px) {
+  .au-woo-visual-11.aiAgentPage.auPage [data-hero-inline-form] > div > .flex-col[class~="gap-2.5"] {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .au-woo-visual-11.aiAgentPage.auPage [data-hero-inline-form] > div > .flex-col[class~="gap-2.5"] > button[type="submit"] {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1080px) {
+  .au-woo-visual-11.aiAgentPage.auPage .hero h1 {
+    max-inline-size: 12.85em;
+    min-block-size: 4.4em;
+    font-size: 38px;
+  }
+
+  .au-woo-visual-11.aiAgentPage.auPage .hero .lead { min-block-size: 11.55em; }
+}
+
 @media (max-width: 480px) {
   .au-woo-visual-11.aiAgentPage.auPage .hero { padding-block: 28px 48px; }
-  .au-woo-visual-11.aiAgentPage.auPage .hero h1 { max-width: none; font-size: clamp(24px, 6.7vw, 32px); line-height: 1.12; margin-block: 18px 20px; }
+  .au-woo-visual-11.aiAgentPage.auPage .hero h1 {
+    max-inline-size: 12.85em;
+    min-block-size: 4.48em;
+    font-size: clamp(24px, 6.7vw, 32px);
+    line-height: 1.12;
+    margin-block: 18px 20px;
+  }
+  .au-woo-visual-11.aiAgentPage.auPage .hero .lead { min-block-size: 14.85em; }
   .au-woo-visual-11.aiAgentPage.auPage h2 { font-size: clamp(24px, 6vw, 28px); }
   .au-woo-visual-11.aiAgentPage.auPage .hero-grid { gap: 32px; }
   .au-woo-visual-11.aiAgentPage.auPage .capgrid > .cap { padding: 24px; }
@@ -122,6 +156,11 @@
   .au-woo-visual-11.aiAgentPage.auPage .faqitem summary { grid-template-columns: 30px minmax(0, 1fr) 26px; gap: 10px; }
 }
 
+@media (max-width: 375px) {
+  .au-woo-visual-11.aiAgentPage.auPage .hero .lead { min-block-size: 16.5em; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .au-woo-visual-11.aiAgentPage.auPage :is(.cap, .btn, .specrow, .chev) { animation: none; transition: none; }
 }
+`;
