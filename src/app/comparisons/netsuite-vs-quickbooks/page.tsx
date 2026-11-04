@@ -6,7 +6,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import MidPageCTA from '@/components/v2/MidPageCTA';
-import '@/components/v2/PlatformPage.css';
+import { platformStyles } from './platform-styles';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const PHOTO_DIR = '/images/us/netsuite-vs-quickbooks';
@@ -378,12 +378,6 @@ const TERMS = [
 
 // Page-scoped styles are included in the static HTML without a stylesheet request.
 const COMPARISON_STYLES = `
-.nqb-page.platpage {
-  --pp-orange-dark: #B23E13;
-}
-.nqb-page .pp-sec > .pp-wrap > :is(.pp-mlabel, h2, .pp-lead) {
-  animation: none;
-}
 .nqb-page :is(h1, h2, h3) {
   text-wrap: balance;
 }
@@ -396,7 +390,7 @@ const COMPARISON_STYLES = `
 .nqb-page .nqb-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-  align-items: center;
+  align-items: start;
   gap: clamp(30px, 5vw, 56px);
 }
 .nqb-page .nqb-hero h1 {
@@ -663,6 +657,32 @@ const COMPARISON_STYLES = `
     grid-column: auto;
   }
 }
+@media (min-width: 861px) {
+  .nqb-page .nqb-hero-card {
+    margin-top: 36px;
+  }
+  .nqb-page .pp-eyebrow span:first-child {
+    display: inline-block;
+    min-inline-size: 120px;
+  }
+}
+@media (min-width: 1180px) {
+  .nqb-page .nqb-hero h1 {
+    max-inline-size: 612px;
+  }
+  .nqb-page .nqb-hero h1 span {
+    display: block;
+    white-space: nowrap;
+  }
+  .nqb-page .nqb-hero-card-footer {
+    display: grid;
+  }
+}
+@media (max-width: 860px) {
+  .nqb-page .nqb-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 @media (max-width: 480px) {
   .nqb-page .nqb-hero-wrap {
     padding-top: 24px;
@@ -680,6 +700,15 @@ const COMPARISON_STYLES = `
     grid-template-columns: minmax(0, 1fr);
   }
 }
+@media (390px <= width <= 480px) {
+  .nqb-page .nqb-hero h1 {
+    font-size: 29px;
+  }
+  .nqb-page .nqb-hero h1 span {
+    display: block;
+    white-space: nowrap;
+  }
+}
 @media (max-width: 409px) {
   .nqb-page .nqb-hero-lead {
     min-block-size: 7lh;
@@ -690,14 +719,14 @@ const COMPARISON_STYLES = `
 export default function NetsuiteVsQuickbooksPage() {
   return (
     <>
+      <style data-nqb-styles>{platformStyles + COMPARISON_STYLES}</style>
       <script id="ns-qb-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
       <script id="ns-qb-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="ns-qb-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-      <main className="platpage nqb-page">
-        <style>{COMPARISON_STYLES}</style>
+      <main className="nqb-page">
         {/* ── Hero ── */}
         <section className="pp-dotgrid">
           <div className="pp-wrap nqb-hero-wrap">
@@ -719,9 +748,11 @@ export default function NetsuiteVsQuickbooksPage() {
                     ))}
                   </ol>
                 </nav>
-                <p className="pp-eyebrow">ERP comparison<span> · Updated 31 October 2026</span></p>
+                <p className="pp-eyebrow"><span>ERP comparison</span><span> · Updated 31 October 2026</span></p>
                 <h1>
-                  NetSuite vs QuickBooks: When to Switch and What It Changes (2026)
+                  <span>NetSuite vs QuickBooks:</span>{' '}
+                  <span>When to Switch and</span>{' '}
+                  <span>What It Changes (2026)</span>
                 </h1>
                 <p className="pp-lead nqb-hero-lead">
                   QuickBooks Online gives you one company per subscription and up to 25 users on Advanced
@@ -1095,6 +1126,7 @@ export default function NetsuiteVsQuickbooksPage() {
                 headline="Frequently asked questions about NetSuite vs QuickBooks"
                 categories={FAQ_CATEGORIES}
                 items={FAQ_ITEMS}
+                animate={false}
               />
             </div>
           </div>
