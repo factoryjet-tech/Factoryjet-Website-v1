@@ -1,0 +1,185 @@
+.redesign-visual.auPage .redesign-photo {
+  display: block;
+  min-width: 0;
+}
+
+.redesign-visual.auPage .redesign-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--accent-wash);
+  box-shadow: 0 22px 45px -32px rgb(20 17 15 / 40%);
+}
+
+.redesign-visual.auPage #facts .factlist {
+  grid-row: 1;
+}
+
+.redesign-visual.auPage .redesign-keep-intro,
+.redesign-visual.auPage #finalcta .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: clamp(24px, 4vw, 60px);
+  align-items: center;
+}
+
+.redesign-visual.auPage .redesign-keep-intro {
+  margin-bottom: clamp(28px, 4vw, 52px);
+}
+
+.redesign-visual.auPage .redesign-keep-intro .section-head {
+  margin-bottom: 0;
+}
+
+.redesign-visual.auPage #keep .capgrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.redesign-visual.auPage #keep .cap p {
+  margin-bottom: 0;
+}
+
+.redesign-visual.auPage #rankings .redesign-seo-photo {
+  margin: 0;
+  position: static;
+}
+
+.redesign-visual.auPage #steps .head-media {
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+}
+
+.redesign-visual.auPage #steps .tnode:last-child .idx {
+  background: var(--accent-text);
+}
+
+.redesign-visual.auPage #finalcta .wrap {
+  column-gap: clamp(24px, 4vw, 60px);
+  row-gap: 24px;
+}
+
+.redesign-visual.auPage #finalcta .redesign-photo {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+}
+
+.redesign-visual.auPage #finalcta .ctas {
+  margin: 0;
+}
+
+.redesign-visual.auPage :is(a, button, summary, input, .tablewrap):focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 4px;
+  scroll-margin-block: 112px;
+}
+
+.redesign-visual.auPage :is(.statusdot, .specrow),
+.redesign-visual.auPage .specrow::before,
+.redesign-visual.auPage .specrow .tag::after {
+  animation: none;
+}
+
+@media (max-width: 1024px) {
+  .redesign-visual.auPage :is(
+    .crumbs .wrap > a, .refs a, .faq-catnav a, .ans-links a,
+    .ledgercell .k a, .byline .who a, #work .plat-build a
+  ) {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    max-width: 100%;
+  }
+
+  .redesign-visual.auPage :is(.tnode summary, .faqitem summary) {
+    min-height: 44px;
+  }
+
+  .redesign-visual.auPage .refs a {
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 820px) {
+  .redesign-visual.auPage .redesign-keep-intro,
+  .redesign-visual.auPage #finalcta .wrap,
+  .redesign-visual.auPage #steps .head-media {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .redesign-visual.auPage #finalcta .redesign-photo {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .redesign-visual.auPage #rankings .redesign-seo-photo {
+    margin-top: 32px;
+  }
+
+  .redesign-visual.auPage :is(
+    .lead, .fact p, .cap p, .tnode p, .plat-build, .ledgercell .v,
+    .chg-list li, .trigrows .m, .trigrows .n, tbody th, tbody td,
+    .tablenote, .au-note, .figcap, .agentdir-t, .agentdir-l, .ans,
+    .qtext, .refs a, .faq-ask p, .byline .who, .specrow .title,
+    .au-midcta .text-sm, .au-split > div > p, [data-hero-inline-form] :is(input, button)
+  ) {
+    font-size: 16px;
+  }
+
+  .redesign-visual.auPage :is(
+    .eyebrow, .factlabel, .capid, .plat-flag, .ledgercell .k,
+    .specpanel-bar, .specpanel-foot, .specrow .idx, .specrow .tag,
+    .trigrows .t, thead th, .faq-category, .qid, .faq-nav-count,
+    .faqsrc, .byline .upd, .agentdir-more
+  ) {
+    font-size: 12px;
+  }
+
+  .redesign-visual.auPage .specrow {
+    grid-template-columns: 38px minmax(0, 1fr);
+  }
+
+  .redesign-visual.auPage .specrow :is(.idx, .title, .tag) {
+    grid-column: 2;
+  }
+
+  .redesign-visual.auPage .specrow .tag {
+    grid-row: auto;
+    justify-self: start;
+    margin-top: 3px;
+  }
+
+  .redesign-visual.auPage .specrow .workflow-icon {
+    grid-row: 1 / span 3;
+  }
+
+  .redesign-visual.auPage .trigrows .t {
+    grid-row: auto;
+    grid-column: 1;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 480px) {
+  .redesign-visual.auPage .hero h1 {
+    font-size: clamp(28px, 7.4vw, 34px);
+    max-width: none;
+  }
+
+  .redesign-visual.auPage :is(.section h2, #finalcta h2) {
+    font-size: clamp(25px, 6.6vw, 30px);
+    max-width: none;
+  }
+
+  .redesign-visual.auPage #finalcta .btn {
+    max-width: 100%;
+    white-space: normal;
+  }
+}

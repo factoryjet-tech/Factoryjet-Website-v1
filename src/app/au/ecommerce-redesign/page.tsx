@@ -7,10 +7,10 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
-import VisualSlot from '../components/VisualSlot';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ecommerce-redesign';
 const PUBLISHED = '2026-10-29';
@@ -291,9 +291,23 @@ export const metadata: Metadata = {
 
 const extLink = { target: '_blank', rel: 'noopener noreferrer nofollow' } as const;
 
-/* Visual slot page key (route without /au/). Not in VisualSlot's generated list,
-   so every slot below passes its existing artwork explicitly. */
 const PAGE_KEY = 'ecommerce-redesign';
+const REDESIGN_PHOTO_SIZES = '(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(38.4vw - 25.6px), 460px';
+const REDESIGN_SEO_PHOTO_SIZES = '(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1080px) calc(40vw - 43.2px), (max-width: 1264px) calc(40vw - 56px), 450px';
+
+function RedesignPhoto({ name, alt, sizes = REDESIGN_PHOTO_SIZES }: { name: string; alt: string; sizes?: string }) {
+  const path = `/images/au/ecommerce-redesign/${name}`;
+  const srcSet = (format: string) => `${path}-640.${format} 640w, ${path}-960.${format} 960w, ${path}-1280.${format} 1280w`;
+
+  return (
+    <picture className="redesign-photo">
+      <source type="image/avif" srcSet={srcSet('avif')} sizes={sizes} />
+      <source type="image/webp" srcSet={srcSet('webp')} sizes={sizes} />
+      <img src={`${path}-960.webp`} srcSet={srcSet('webp')} sizes={sizes}
+        width={960} height={640} loading="lazy" decoding="async" alt={alt} />
+    </picture>
+  );
+}
 
 /* H1 split for the Family A hero emphasis. Same string as H1 (schema headline). */
 const H1_EMPHASIS = 'Keep the Orders Coming';
@@ -313,7 +327,7 @@ export default function EcommerceRedesignAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage redesign-visual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -452,9 +466,6 @@ export default function EcommerceRedesignAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/ecommerce-development/facts-1536.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/facts-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ecommerce-development/facts-1536.webp 1536w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" className="factphoto"
-                subject="A store owner reviewing product pages on her online store at a timber desk"
-                imageAlt="A store owner reviewing product pages on her online store, seen over her shoulder at a bright timber desk" />
             </div>
           </div>
         </section>
@@ -462,23 +473,27 @@ export default function EcommerceRedesignAUPage() {
         {/* ═══ LISTICLE: EIGHT THINGS NOT TO LOSE → capgrid ═══ */}
         <section className="section capabilities" id="keep">
           <div className="wrap">
-            <div className="section-head">
-              <div className="eyebrow">What a redesign must not break</div>
-              <h2>Eight parts of a trading Australian store we protect in every redesign</h2>
-              <p className="lead">
-                A redesign quote can list only templates and pages. A store that already turns over real money has more to
-                lose than that. Each of these eight gets an owner and a test before the new theme is published.
-              </p>
+            <div className="redesign-keep-intro">
+              <div className="section-head">
+                <div className="eyebrow">What a redesign must not break</div>
+                <h2>Eight parts of a trading Australian store we protect in every redesign</h2>
+                <p className="lead">
+                  A redesign quote can list only templates and pages. A store that already turns over real money has more to
+                  lose than that. Each of these eight gets an owner and a test before the new theme is published.
+                </p>
+              </div>
+              <RedesignPhoto name="mobile-checkout-test"
+                alt="A woman checks a phone beside folded linen and an unmarked carton on a packing bench." />
             </div>
-            <div className="capgrid">
+            <ul className="capgrid" role="list">
               {KEEP_ITEMS.map((s, i) => (
-                <div key={s.n} className={`cap cap-${i + 1}`}>
+                <li key={s.n} className={`cap cap-${i + 1}`}>
                   <div className="caphead"><span className="capid">KEEP‑{s.n}</span><svg {...CAP_ICON}><path d={KEEP_ICONS[i]} /></svg></div>
                   <h3>{s.t}</h3>
                   <p>{s.d}</p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -597,10 +612,11 @@ export default function EcommerceRedesignAUPage() {
                   </p>
                 </div></div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/ecommerce-development/process-1536.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/process-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/process-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ecommerce-development/process-1536.webp 1536w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
-                subject="A designer sketching mobile product page wireframes in a paper sketchbook, a phone and closed laptop beside him"
-                imageAlt="A designer sketching mobile product page wireframes in a paper sketchbook, with a phone and a closed laptop beside him"
-                caption="Phone first. The product page layout is settled as plain boxes before anyone picks a colour, so the redirect map and the templates are planned together." />
+              <figure className="factphoto redesign-seo-photo">
+                <RedesignPhoto name="redirect-map-swatches" sizes={REDESIGN_SEO_PHOTO_SIZES}
+                  alt="Two people match cards with pairs of linen swatches on a worktable." />
+                <figcaption className="figcap">Phone first. The product page layout is settled as plain boxes before anyone picks a colour, so the redirect map and the templates are planned together.</figcaption>
+              </figure>
             </div>
           </div>
         </section>
@@ -828,6 +844,8 @@ export default function EcommerceRedesignAUPage() {
               <ModalCTAButton label="See a draft of my store" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               <a className="btn btn-ghost" href="/au/ecommerce-development">See ecommerce development</a>
             </div>
+            <RedesignPhoto name="product-template-preview"
+              alt="A man looks at a draft product page showing the blue cushion beside his monitor." />
           </div>
         </section>
 
