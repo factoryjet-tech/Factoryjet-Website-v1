@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { Fragment } from 'react';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -11,8 +13,13 @@ import VisualSlot from '../components/VisualSlot';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
-import '../au-hub.css';
-import './page.css';
+
+// The static export can deliver these two small stylesheets with the page HTML.
+// Read the original CSS at build time so the shared rules have one source.
+const consultantStyles = [
+  'src/app/au/au-hub.css',
+  'src/app/au/ecommerce-consultant/page.css',
+].map((file) => readFileSync(join(process.cwd(), file), 'utf8')).join('\n');
 
 const CANONICAL = 'https://factoryjet.com/au/ecommerce-consultant';
 const UPDATED = '2026-10-31';
@@ -354,6 +361,7 @@ export default function EcommerceConsultantAUPage() {
       <script id="ld-au-ecommerce-consultant" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
+      <style data-fj-consultant-css>{consultantStyles}</style>
       <SiteHeader locale="au" logoHref="/au" />
       <div className="aiAgentPage auPage au-consultant">
       <nav className="crumbs" aria-label="Breadcrumb">
