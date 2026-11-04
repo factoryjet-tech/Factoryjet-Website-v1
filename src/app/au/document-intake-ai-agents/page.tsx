@@ -8,14 +8,8 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
-import '@/components/v2/AiAgentDevelopmentSections.css';
-import '../au-page.css';
-import '../au-hub.css';
-import pageStyles from './page-styles';
+import './page.css';
 
-/* Same engineering visuals and page-owned styles as /au/ai-agents (mirrored template).
-   Both files are imported read-only; nothing in /au/ai-agents is changed by this page. */
-import '../ai-agents/visual.css';
 import { ExecutionPath, ExecutionJobDiagram } from '../ai-agents/ExecutionDiagram';
 import { twinAlternates } from '@/data/hreflangMap';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
@@ -433,7 +427,6 @@ const JOB_SUBJECTS = [
 export default function DocumentIntakeAiAgentsAUPage() {
   return (
     <div className="fj-intake-b10">
-      <style>{pageStyles}</style>
       <script id="ld-au-document-intake-ai-agents" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 

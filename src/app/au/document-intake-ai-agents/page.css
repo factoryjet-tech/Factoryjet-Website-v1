@@ -1,6 +1,9 @@
-// Inline the small route stylesheet so it does not add a blocking request.
-// Match Geist Mono with a monospace fallback to keep label widths stable.
-export default String.raw`
+/* Keep the existing AU styles in the route entry so the build can bundle them. */
+@import "../../../components/v2/AiAgentDevelopmentSections.css";
+@import "../au-page.css";
+@import "../au-hub.css";
+@import "../ai-agents/visual.css";
+
 .fj-intake-b10 {
   --font-geist-mono: "Geist Mono", ui-monospace, Consolas, monospace;
 }
@@ -94,4 +97,3 @@ export default String.raw`
     width: 100%;
   }
 }
-`;
