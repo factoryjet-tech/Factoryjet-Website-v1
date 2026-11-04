@@ -38,6 +38,7 @@ export interface SiteHeaderProps {
   locale?: SiteHeaderLocale;
   logoText?: string;
   logoHref?: string;
+  prefetchLogo?: boolean;
   /** @deprecated SiteHeader now manages its own mega-nav. This prop is ignored. */
   navLinks?: ReadonlyArray<CtaItem>;
   /** Pass a custom CTA item to override the default modal CTA. */
@@ -49,6 +50,7 @@ function ModernSiteHeader({
   locale = 'us',
   logoText = 'FactoryJet',
   logoHref = '/',
+  prefetchLogo,
   cta,
   className = '',
 }: SiteHeaderProps) {
@@ -100,6 +102,7 @@ function ModernSiteHeader({
             {/* Logo */}
             <Link
               href={logoHref}
+              prefetch={prefetchLogo}
               className="inline-flex min-h-11 min-w-11 flex-shrink-0 items-center text-fj-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B23E13]"
               aria-label={logoText}
             >
@@ -173,6 +176,7 @@ function ModernSiteHeader({
         <div className="flex h-16 flex-shrink-0 items-center justify-between border-b border-fj-neutral-100 px-5">
           <Link
             href={logoHref}
+            prefetch={prefetchLogo}
             onClick={() => setMobileOpen(false)}
             className="inline-flex min-h-11 min-w-11 items-center text-fj-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B23E13]"
             aria-label={logoText}

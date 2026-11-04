@@ -15,7 +15,8 @@ export const interactionFiles = [
 ];
 
 const stylesheet = /<link\b(?=[^>]*\srel="stylesheet")(?=[^>]*\shref="(\/_next\/static\/css\/[a-z0-9]+\.css)")[^>]*>/gi;
-const singleUtility = /^\.((?:[\w-]|\\[^a-fA-F0-9\n\r])+)(?::(?:hover|focus|focus-visible|active|disabled|checked|first-child|last-child|placeholder-shown|:placeholder|:before|:after))*$/;
+const singleUtility = /^\.((?:[\w-]|\\(?:[a-f\d]{1,6}(?:\r\n|[\t\n\f\r ])?|[^a-f\d\n\f\r]))+)(?::(?:hover|focus|focus-visible|focus-within|active|disabled|checked|first-child|last-child|placeholder-shown|:placeholder|:before|:after))*$/i;
+const cssEscape = /\\(?:([a-f\d]{1,6})(?:\r\n|[\t\n\f\r ])?|([^\n\f\r]))/gi;
 const activate = "this.media='all';const initial=this.previousElementSibling;if(initial?.hasAttribute('data-fj-comparison-critical'))initial.remove()";
 
 function renderedClasses(html) {
@@ -34,10 +35,21 @@ function reduceUtilities(css, classes, interactionSource, parse) {
   const tree = parse(css);
   tree.walkRules(rule => {
     if (rule.parent.type === 'atrule' && /keyframes$/i.test(rule.parent.name)) return;
-    const match = rule.selector.match(singleUtility);
-    if (!match) return;
-    const name = match[1].replace(/\\([^a-fA-F0-9\n\r])/g, '$1');
-    if (!classes.has(name) && !interactionSource.includes(name)) rule.remove();
+    // A declaration may be shared by several utilities. Keep the rule if any
+    // selector is used or if we cannot identify its class unambiguously.
+    const unused = rule.selectors.every(selector => {
+      const match = selector.match(singleUtility);
+      if (!match) return false;
+      const name = match[1].replace(cssEscape, (_, hex, char) => {
+        if (!hex) return char;
+        const code = Number.parseInt(hex, 16);
+        return code > 0 && code <= 0x10ffff && (code < 0xd800 || code > 0xdfff)
+          ? String.fromCodePoint(code)
+          : '\ufffd';
+      });
+      return !classes.has(name) && !interactionSource.includes(name);
+    });
+    if (unused) rule.remove();
   });
   return tree.toString();
 }

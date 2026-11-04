@@ -729,7 +729,7 @@ export default function NetsuiteVsQuickbooksPage() {
       <script id="ns-qb-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="ns-qb-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-      <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+      <SiteHeader navLinks={[]} prefetchLogo={false} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="nqb-page">
         {/* ── Hero ── */}
