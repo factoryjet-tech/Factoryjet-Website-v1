@@ -116,6 +116,18 @@
   scroll-margin-block: 112px 16px;
 }
 
+@media (max-width: 450px) {
+  /* Match the x-heights of Plus Jakarta Sans 800 and Inter 400 so the
+     mobile hero keeps its line count when those fonts become available. */
+  .aiAgentPage.auPage.au-consultant .hero h1 {
+    font-size-adjust: 0.546;
+  }
+
+  .aiAgentPage.auPage.au-consultant .hero .lead {
+    font-size-adjust: 0.5459;
+  }
+}
+
 @media (max-width: 1024px) {
   .aiAgentPage.auPage.au-consultant :is(.workflow-toggle, .workflow-replay) {
     width: 44px;
