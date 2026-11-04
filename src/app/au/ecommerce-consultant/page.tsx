@@ -12,6 +12,7 @@ import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
+import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ecommerce-consultant';
 const UPDATED = '2026-10-31';
@@ -330,6 +331,23 @@ const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
   { href: '/au', t: 'FactoryJet Australia', d: 'Everything we do for Australian businesses: ecommerce, AI agents, websites and AI search.', go: 'Visit the Australia hub →' },
 ];
 
+function ConsultantPhoto({ slot, file, alt }: { slot: string; file: string; alt: string }) {
+  const path = `/images/au/ecommerce-consultant/${file}`;
+  const avif = `${path}-640.avif 640w, ${path}-960.avif 960w, ${path}-1280.avif 1280w`;
+  const webp = `${path}-640.webp 640w, ${path}-960.webp 960w, ${path}-1280.webp 1280w`;
+  const sizes = '(max-width: 660px) calc(100vw - 42px), (max-width: 820px) 618px, (max-width: 1264px) calc(41.667vw - 48.667px), 478px';
+
+  return (
+    <VisualSlot page={PAGE_KEY} slot={slot} kind="photo" ratio="3:2" className="consultant-photo" subject={alt} src={null}>
+      <picture>
+        <source type="image/avif" srcSet={avif} sizes={sizes} />
+        <source type="image/webp" srcSet={webp} sizes={sizes} />
+        <img src={`${path}-960.webp`} srcSet={webp} sizes={sizes} width={960} height={640} decoding="async" loading="lazy" alt={alt} />
+      </picture>
+    </VisualSlot>
+  );
+}
+
 export default function EcommerceConsultantAUPage() {
   return (
     <>
@@ -337,7 +355,7 @@ export default function EcommerceConsultantAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage au-consultant">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -484,10 +502,6 @@ export default function EcommerceConsultantAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto" src={null}
-                subject="An operations manager at an online homewares brand checking synced orders on her laptop beside a label printer and courier satchels">
-                <img src="/images/au/ecommerce-development/ecommerce-development-packing.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An operations manager at an online homewares brand checking synced orders on her laptop, with a label printer and courier satchels ready beside her" />
-              </VisualSlot>
             </div>
           </div>
         </section>
@@ -495,14 +509,21 @@ export default function EcommerceConsultantAUPage() {
         {/* ═══ LISTICLE: TEN AUDIT CHECKS → capgrid ═══ */}
         <section className="section capabilities" id="audit">
           <div className="wrap">
-            <div className="section-head">
-              <div className="eyebrow">The ecommerce audit, itemised</div>
-              <h2>Ten things we check in an Australian store before recommending anything</h2>
-              <p className="lead">
-                Every check uses your own data: orders, payouts, stock movements, freight invoices and search results.
-                We also sit with the people who pack, reconcile and answer customers, because they know where the
-                workarounds are.
-              </p>
+            <div className="consultant-split consultant-section-intro">
+              <div className="section-head">
+                <div className="eyebrow">The ecommerce audit, itemised</div>
+                <h2>Ten things we check in an Australian store before recommending anything</h2>
+                <p className="lead">
+                  Every check uses your own data: orders, payouts, stock movements, freight invoices and search results.
+                  We also sit with the people who pack, reconcile and answer customers, because they know where the
+                  workarounds are.
+                </p>
+              </div>
+              <ConsultantPhoto
+                slot="audit"
+                file="shop-owner-audit"
+                alt="Two women compare a laptop screen with a sheet of paper at a homewares shop counter."
+              />
             </div>
             <ol className="capgrid" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {AUDIT_ITEMS.map((s, i) => (
@@ -530,7 +551,7 @@ export default function EcommerceConsultantAUPage() {
                 </p>
               </div>
             </div>
-            <p className="md:hidden" style={{ fontSize: 13, margin: '0 0 8px' }}>Swipe sideways to see every column.</p>
+            <p className="md:hidden" style={{ margin: '0 0 8px' }}>Swipe sideways to see every column.</p>
             <div className="tablewrap" role="region" tabIndex={0} aria-label="Who to call first by situation" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table style={{ minWidth: 640 }}>
                 <thead>
@@ -578,7 +599,7 @@ export default function EcommerceConsultantAUPage() {
         {/* ═══ PROJECT STEPS → timeline ═══ */}
         <section className="section process" id="how-it-works">
           <div className="wrap">
-            <div className="head-media">
+            <div className="consultant-split consultant-section-intro">
               <div className="section-head">
                 <div className="eyebrow">How an engagement runs</div>
                 <h2>Seven steps, from your brief to working fixes</h2>
@@ -587,6 +608,13 @@ export default function EcommerceConsultantAUPage() {
                   consulting work. Five to seven only happen if you ask us to build.
                 </p>
               </div>
+              <ConsultantPhoto
+                slot="process"
+                file="ecommerce-fix-planning"
+                alt="Two people arrange blank cards beside packing supplies on a stockroom table."
+              />
+            </div>
+            <div className="consultant-process">
               <div className="au-panel">
                 <div className="eyebrow">Systems Australian stores ask us about</div>
                 <ul className="trigrows">
@@ -597,18 +625,18 @@ export default function EcommerceConsultantAUPage() {
                   <li><span className="m">Freight</span><span className="n">Australia Post, StarTrack, Sendle, 3PLs</span><span className="t">Delivery</span></li>
                 </ul>
               </div>
-            </div>
-            <div className="timeline timeline-4">
-              {STEPS.map((s) => (
-                <details key={s.n} className="tnode">
-                  <summary>
-                    <div className="idx">{s.n}</div>
-                    <h3>{s.t}<span className="chev" aria-hidden="true">+</span></h3>
-                  </summary>
-                  <p>{s.d}</p>
-                  <p><b>You get:</b> {s.out}</p>
-                </details>
-              ))}
+              <div className="timeline timeline-4">
+                {STEPS.map((s) => (
+                  <details key={s.n} className="tnode">
+                    <summary>
+                      <div className="idx">{s.n}</div>
+                      <h3>{s.t}<span className="chev" aria-hidden="true">+</span></h3>
+                    </summary>
+                    <p>{s.d}</p>
+                    <p><b>You get:</b> {s.out}</p>
+                  </details>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -750,10 +778,6 @@ export default function EcommerceConsultantAUPage() {
                   </p>
                 </div></div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" src={null}
-                subject="A trade customer and a sales rep in a wholesale showroom looking at a trade ordering portal on a tablet">
-                <img src="/images/au/visual-pass-2026-10-03/ecommerce-development/trade-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/trade-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/trade-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="A trade customer and a sales rep in a wholesale showroom looking at a trade ordering portal on a tablet" />
-              </VisualSlot>
             </div>
           </div>
         </section>
@@ -850,10 +874,6 @@ export default function EcommerceConsultantAUPage() {
                   and the terms are the same in each.
                 </p></div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" src={null}
-                subject="The owner of a homewares and gift shop on a video call with his ecommerce team from the back room of his store">
-                <img src="/images/au/visual-pass-2026-10-03/ecommerce-development/remote-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/remote-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/remote-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a homewares and gift shop on a video call with his ecommerce team from the back room of his store, seen over his shoulder" />
-              </VisualSlot>
             </div>
           </div>
         </section>
@@ -908,20 +928,27 @@ export default function EcommerceConsultantAUPage() {
 
         {/* ═══ FINAL CTA (light) ═══ */}
         <section className="finalcta" id="finalcta">
-          <div className="wrap">
-            <div>
-              <div className="eyebrow">Ready when you are</div>
-              <h2>Get a ranked fix list for your store, then see the first fix working on your data</h2>
-              <p>
-                Send your name and work email. The founder replies within 24 hours to book a short call about your
-                channels, your systems and the decision in front of you. No obligation, and no monthly minimum if you
-                choose to work with us.
-              </p>
+          <div className="wrap consultant-split">
+            <div className="consultant-final-copy">
+              <div>
+                <div className="eyebrow">Ready when you are</div>
+                <h2>Get a ranked fix list for your store, then see the first fix working on your data</h2>
+                <p>
+                  Send your name and work email. The founder replies within 24 hours to book a short call about your
+                  channels, your systems and the decision in front of you. No obligation, and no monthly minimum if you
+                  choose to work with us.
+                </p>
+              </div>
+              <div className="ctas">
+                <ModalCTAButton label="Book my review call" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+                <a className="btn btn-ghost" href="/au/ecommerce-development">See ecommerce development</a>
+              </div>
             </div>
-            <div className="ctas">
-              <ModalCTAButton label="Book my review call" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
-              <a className="btn btn-ghost" href="/au/ecommerce-development">See ecommerce development</a>
-            </div>
+            <ConsultantPhoto
+              slot="finalcta"
+              file="store-owner-ranked-report"
+              alt="A man reads a report at a kitchenware shop counter beside wrapped parcels."
+            />
           </div>
         </section>
 
