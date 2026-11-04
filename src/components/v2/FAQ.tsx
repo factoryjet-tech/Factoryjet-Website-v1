@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { Heading } from './Heading';
-import MotionFadeUp from './MotionFadeUp';
+import MotionFadeUp, { type MotionFadeUpProps } from './MotionFadeUp';
 
 /**
  * FAQ — v2.1 FAQ block, Linear Minimal edition.
@@ -58,6 +58,12 @@ export interface FAQProps {
   /** Section background utility class. Defaults to the cream brand background;
    *  pass e.g. "bg-white" for white-background pages. */
   bgClassName?: string;
+  /** Set false to render native FAQ content without scroll observers. */
+  animate?: boolean;
+}
+
+function StaticBlock({ children, className }: MotionFadeUpProps) {
+  return <div className={className ?? ''}>{children}</div>;
 }
 
 /* ─── Chevron icon ──────────────────────────────────────────────────────── */
@@ -131,7 +137,9 @@ export default function FAQ({
   categories,
   items,
   bgClassName = 'bg-fj-cream',
+  animate = true,
 }: FAQProps) {
+  const FadeUp = animate ? MotionFadeUp : StaticBlock;
   const hasCats = !!categories?.length;
 
   /* Group items by category.
@@ -163,7 +171,7 @@ export default function FAQ({
     return (
       <section className={`${bgClassName} py-14 md:py-20`}>
         <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-          <MotionFadeUp className="mx-auto max-w-[760px] text-center">
+          <FadeUp className="mx-auto max-w-[760px] text-center">
             {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
             <Heading as={headlineAs} size="h3" className={`text-fj-ink ${eyebrow ? 'mt-6' : ''}`}>
               {headline}
@@ -173,10 +181,10 @@ export default function FAQ({
                 {lead}
               </p>
             )}
-          </MotionFadeUp>
+          </FadeUp>
           <div className="mt-16 grid grid-cols-1 gap-x-16 md:grid-cols-2">
             {items.map((item, i) => (
-              <MotionFadeUp key={i} delay={(i % 2) * 0.1}>
+              <FadeUp key={i} delay={(i % 2) * 0.1}>
                 <article data-faq-item className="border-t border-fj-neutral-200 py-7">
                   <Heading as="h3" size="h4" className="text-fj-ink" data-faq-question>
                     {item.question}
@@ -188,7 +196,7 @@ export default function FAQ({
                     {item.answer}
                   </p>
                 </article>
-              </MotionFadeUp>
+              </FadeUp>
             ))}
           </div>
         </div>
@@ -202,7 +210,7 @@ export default function FAQ({
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
 
         {/* ── Section header (full-width) ──────────────────────────────── */}
-        <MotionFadeUp>
+        <FadeUp>
           {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
           <Heading
             as={headlineAs}
@@ -216,7 +224,7 @@ export default function FAQ({
               {lead}
             </p>
           )}
-        </MotionFadeUp>
+        </FadeUp>
 
         {/* ── Mobile: horizontal pill nav ──────────────────────────────── */}
         <div className="mt-8 lg:hidden">
@@ -320,7 +328,7 @@ export default function FAQ({
                     id={`faq-${cat.key}`}
                     className="scroll-mt-28"
                   >
-                    <MotionFadeUp delay={ci * 0.04}>
+                    <FadeUp delay={ci * 0.04}>
                       {/* Category header, thin orange accent bar + label */}
                       <div className="mb-1 flex items-center gap-3 pb-4">
                         <div
@@ -341,7 +349,7 @@ export default function FAQ({
                         {/* Bottom border on last item */}
                         <div className="border-t border-fj-neutral-200" />
                       </div>
-                    </MotionFadeUp>
+                    </FadeUp>
                   </div>
                 );
               })}
