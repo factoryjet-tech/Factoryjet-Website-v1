@@ -1,4 +1,6 @@
-/* /au/shopify-maintenance-services add-ons on top of AiAgentDevelopmentSections.css + ../au-page.css.
+// Inline the route stylesheet to remove its blocking request.
+// Use the peer route mono fallback to stabilize label widths.
+export default String.raw`/* /au/shopify-maintenance-services add-ons on top of AiAgentDevelopmentSections.css + ../au-page.css.
    Scoped to .aiAgentPage.auPage.au-maintenance-visual-11; tokens only from the Family A system, no new colours.
    All rules belong to this route only. */
 
@@ -28,7 +30,7 @@
 }
 
 /* Batch 11: editorial media, readable type and contained interaction targets. */
-.aiAgentPage.auPage.au-maintenance-visual-11 { --accent-text: #B23E13; }
+.aiAgentPage.auPage.au-maintenance-visual-11 { --accent-text: #B23E13; --font-geist-mono: "Geist Mono", ui-monospace, Consolas, monospace; }
 .aiAgentPage.auPage.au-maintenance-visual-11 :is(h1,h2,h3) { text-wrap: balance; }
 .aiAgentPage.auPage.au-maintenance-visual-11 p { text-wrap: pretty; }
 .aiAgentPage.auPage.au-maintenance-visual-11 :is(section,[id]) { scroll-margin-top: 112px; }
@@ -133,3 +135,4 @@
     grid-column: 1 / -1;
   }
 }
+`;
