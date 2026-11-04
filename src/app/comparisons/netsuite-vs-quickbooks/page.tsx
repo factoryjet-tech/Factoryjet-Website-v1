@@ -666,6 +666,11 @@ const COMPARISON_STYLES = `
     min-inline-size: 120px;
   }
 }
+@media (861px <= width <= 900px) {
+  .nqb-page .nqb-crumbs li:last-child {
+    flex-basis: 100%;
+  }
+}
 @media (min-width: 1180px) {
   .nqb-page .nqb-hero h1 {
     max-inline-size: 612px;
