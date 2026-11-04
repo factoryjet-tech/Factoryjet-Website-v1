@@ -1,3 +1,10 @@
+// Inline the small route stylesheet so it does not add a blocking request.
+// Match Geist Mono with a monospace fallback to keep label widths stable.
+export default String.raw`
+.auSalesOrderVisual10 {
+  --font-geist-mono: "Geist Mono", ui-monospace, Consolas, monospace;
+}
+
 .auSalesOrderVisual10 .aiAgentPage.auPage {
   --accent-text: #B23E13;
 }
@@ -390,3 +397,4 @@
     transition: none !important;
   }
 }
+`;

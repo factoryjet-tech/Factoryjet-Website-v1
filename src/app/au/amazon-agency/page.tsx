@@ -7,10 +7,10 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
-import VisualSlot from '../components/VisualSlot';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/amazon-agency';
 const UPDATED = '2026-10-31';
@@ -225,6 +225,21 @@ const extLink = { target: '_blank', rel: 'noopener noreferrer nofollow' } as con
 
 /* Visual slot page key (route without /au/). */
 const PAGE_KEY = 'amazon-agency';
+const PHOTO_SIZES = '(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(38.4vw - 25.6px), 460px';
+
+function AmazonAgencyPhoto({ name, alt }: { name: string; alt: string }) {
+  const path = `/images/au/amazon-agency/${name}`;
+  const srcSet = (format: string) => `${path}-640.${format} 640w, ${path}-960.${format} 960w, ${path}-1280.${format} 1280w`;
+
+  return (
+    <picture className="amazon-photo">
+      <source type="image/avif" srcSet={srcSet('avif')} sizes={PHOTO_SIZES} />
+      <source type="image/webp" srcSet={srcSet('webp')} sizes={PHOTO_SIZES} />
+      <img src={`${path}-960.webp`} srcSet={srcSet('webp')} sizes={PHOTO_SIZES}
+        width={960} height={640} loading="lazy" decoding="async" alt={alt} />
+    </picture>
+  );
+}
 
 /* H1 split for the Family A hero emphasis. Same string as H1 (schema headline); only the
    closing phrase is wrapped in .hero-emphasis. */
@@ -292,7 +307,7 @@ export default function AmazonAgencyAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage amazon-visual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -460,13 +475,17 @@ export default function AmazonAgencyAUPage() {
         {/* ═══ LISTICLE: WHAT WE RUN → capgrid ═══ */}
         <section className="section capabilities" id="what-we-run">
           <div className="wrap">
-            <div className="section-head">
-              <div className="eyebrow">Amazon.com.au, itemised</div>
-              <h2>Eight jobs we run on Amazon.com.au for Australian brands</h2>
-              <p className="lead">
-                Half of this list is marketing and half is plumbing. An agency that only does the first half leaves
-                you with ads pointing at stock your systems cannot see.
-              </p>
+            <div className="amazon-visual-intro">
+              <div className="section-head">
+                <div className="eyebrow">Amazon.com.au, itemised</div>
+                <h2>Eight jobs we run on Amazon.com.au for Australian brands</h2>
+                <p className="lead">
+                  Half of this list is marketing and half is plumbing. An agency that only does the first half leaves
+                  you with ads pointing at stock your systems cannot see.
+                </p>
+              </div>
+              <AmazonAgencyPhoto name="listing-sample-shelves"
+                alt="A woman checks a felt drawer organiser on a photo backdrop beside shelves of matching samples." />
             </div>
             <div className="capgrid">
               {JOBS.map((s, i) => (
@@ -483,17 +502,21 @@ export default function AmazonAgencyAUPage() {
         {/* ═══ FULFILMENT COMPARISON → table ═══ */}
         <section className="section comparison" id="fulfilment">
           <div className="wrap">
-            <div className="section-head head-split">
-              <div className="eyebrow">FBA or your own couriers</div>
-              <div>
-                <h2>Amazon FBA in Australia vs Multi-Channel Fulfilment vs shipping it yourself</h2>
-                <p className="lead">
-                  The fulfilment choice changes your fees, your delivery promise and which system has to know about
-                  stock. Here is how the three options compare on what Amazon’s Australian pages say today.
-                </p>
+            <div className="amazon-visual-intro">
+              <div className="section-head">
+                <div className="eyebrow">FBA or your own couriers</div>
+                <div>
+                  <h2>Amazon FBA in Australia vs Multi-Channel Fulfilment vs shipping it yourself</h2>
+                  <p className="lead">
+                    The fulfilment choice changes your fees, your delivery promise and which system has to know about
+                    stock. Here is how the three options compare on what Amazon’s Australian pages say today.
+                  </p>
+                </div>
               </div>
+              <AmazonAgencyPhoto name="plain-cartons-fulfilment"
+                alt="A warehouse worker looks into an open carton beside a pallet and parcel cages." />
             </div>
-            <p className="md:hidden" style={{ fontSize: 13, margin: '0 0 8px' }}>Swipe sideways to see every column.</p>
+            <p className="md:hidden amazon-table-guide" style={{ margin: '0 0 8px' }}>Swipe sideways to see every column.</p>
             <div className="tablewrap" role="region" tabIndex={0} aria-label="amazon fulfilment comparison" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table style={{ minWidth: 720 }}>
                 <thead>
@@ -553,11 +576,7 @@ export default function AmazonAgencyAUPage() {
                   listings and stock that are already right.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap" src={null}
-                subject="An online store team member handing courier satchels to a driver loading a van outside their warehouse"
-                caption="Bulky or slow lines often ship best from your own warehouse. We set the routing so each order takes the cheaper path.">
-                <img src="/images/au/visual-pass-2026-10-03/shopify-development/dispatch-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/dispatch-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/dispatch-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="Courier satchels being loaded into a white van at a seller's own warehouse, for orders that skip FBA" />
-              </VisualSlot>
+              <p className="figcap">Bulky or slow lines often ship best from your own warehouse. We set the routing so each order takes the cheaper path.</p>
             </div>
             <div className="timeline timeline-3">
               {STEPS.map((s) => {
@@ -758,7 +777,7 @@ export default function AmazonAgencyAUPage() {
               ))}
             </div>
             <h3 style={{ marginTop: 40 }}>Four kinds of Amazon help, compared</h3>
-            <p className="md:hidden" style={{ fontSize: 13, margin: '8px 0' }}>Swipe sideways to see every column.</p>
+            <p className="md:hidden amazon-table-guide" style={{ margin: '8px 0' }}>Swipe sideways to see every column.</p>
             <div className="tablewrap" role="region" tabIndex={0} aria-label="amazon provider types comparison" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', marginTop: 12 }}>
               <table style={{ minWidth: 640 }}>
                 <thead>
@@ -841,6 +860,8 @@ export default function AmazonAgencyAUPage() {
               <ModalCTAButton label="See my listings rewritten" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               <a href="/au/ecommerce-development" style={{ alignSelf: 'center', textDecoration: 'underline' }}>Or see ecommerce development</a>
             </div>
+            <AmazonAgencyPhoto name="marketplace-payout-reconciliation"
+              alt="Two people look at a bar chart beside two trays of paper and a plain parcel." />
           </div>
         </section>
 

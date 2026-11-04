@@ -1,3 +1,10 @@
+// Inline the small route stylesheet so it does not add a blocking request.
+// Match Geist Mono with a monospace fallback to keep label widths stable.
+export default String.raw`
+.fj-intake-b10 {
+  --font-geist-mono: "Geist Mono", ui-monospace, Consolas, monospace;
+}
+
 .fj-intake-b10 .aiAgentPage :is(h1, h2, h3) { text-wrap: balance; }
 .fj-intake-b10 .aiAgentPage p { text-wrap: pretty; }
 .fj-intake-b10 .aiAgentPage :is(.hero-grid, .factlist, .head-media, .au-split, .plat, .definition-copy, .faqintro, .faqlist) { min-width: 0; }
@@ -87,3 +94,4 @@
     width: 100%;
   }
 }
+`;

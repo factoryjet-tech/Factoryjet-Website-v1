@@ -11,7 +11,7 @@ import VisualSlot from '../components/VisualSlot';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
-import './page.css';
+import pageStyles from './page-styles';
 
 /* Same engineering visuals and page-owned styles as /au/ai-agents (mirrored template).
    Both files are imported read-only; nothing in /au/ai-agents is changed by this page. */
@@ -433,6 +433,7 @@ const JOB_SUBJECTS = [
 export default function DocumentIntakeAiAgentsAUPage() {
   return (
     <div className="fj-intake-b10">
+      <style>{pageStyles}</style>
       <script id="ld-au-document-intake-ai-agents" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 

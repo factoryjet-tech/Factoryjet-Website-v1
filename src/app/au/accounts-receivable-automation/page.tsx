@@ -12,7 +12,7 @@ import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
-import './page.css';
+import pageStyles from './page-styles';
 
 const CANONICAL = 'https://factoryjet.com/au/accounts-receivable-automation';
 const PUBLISHED = '2026-10-29';
@@ -312,6 +312,7 @@ const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', st
 export default function AccountsReceivableAutomationAUPage() {
   return (
     <div className="auReceivablesVisual10">
+      <style>{pageStyles}</style>
       <script id="ld-au-accounts-receivable-automation" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <style>{`.ara-swipe{display:none;margin:0 0 10px;font-size:13px;color:var(--muted)}@media (max-width:767px){.ara-swipe{display:block}}`}</style>

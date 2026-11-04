@@ -10,6 +10,7 @@ import AuFaq from '../components/AuFaq';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -346,6 +347,31 @@ const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
   { href: '/services/ecommerce-erp-integration', t: 'Ecommerce ERP integration (US guide)', d: 'Our wider guide to store and ERP links, including SAP Business One, ERPNext, EDI and Shopify API limits.', go: 'Read the US guide →' },
 ];
 
+const erpPhotoSizes = '(max-width: 660px) calc(100vw - 40px), (max-width: 820px) 620px, (max-width: 1264px) calc(40vw - 42px), 464px';
+
+function ErpSectionPhoto({ name, alt }: { name: string; alt: string }) {
+  const base = `/images/au/ecommerce-erp-integration/${name}`;
+  const sources = (format: string) =>
+    [640, 960, 1280].map((width) => `${base}-${width}.${format} ${width}w`).join(', ');
+
+  return (
+    <picture className="erpSectionPhoto">
+      <source type="image/avif" srcSet={sources('avif')} sizes={erpPhotoSizes} />
+      <source type="image/webp" srcSet={sources('webp')} sizes={erpPhotoSizes} />
+      <img
+        src={`${base}-960.webp`}
+        srcSet={sources('webp')}
+        sizes={erpPhotoSizes}
+        width={960}
+        height={640}
+        loading="lazy"
+        decoding="async"
+        alt={alt}
+      />
+    </picture>
+  );
+}
+
 export default function EcommerceErpIntegrationAUPage() {
   return (
     <>
@@ -567,16 +593,22 @@ export default function EcommerceErpIntegrationAUPage() {
                   </p>
                 </div></div>
               </div>
-              <div className="au-panel">
-                <div className="eyebrow">Every test run includes</div>
-                <ul className="trigrows">
-                  <li><span className="m">Taxable and GST-free lines in one cart</span><span className="t">Coded</span></li>
-                  <li><span className="m">Discount code across mixed lines</span><span className="t">Split</span></li>
-                  <li><span className="m">Shipping on a mixed cart</span><span className="t">Coded</span></li>
-                  <li><span className="m">Partial refund</span><span className="t">Same code</span></li>
-                  <li><span className="m">Trade order over $1,000</span><span className="t">ABN shown</span></li>
-                  <li><span className="m">Payout with fees and a refund</span><span className="t">Clears to $0</span></li>
-                </ul>
+              <div className="erpMediaRail">
+                <ErpSectionPhoto
+                  name="month-end-gst-receipts"
+                  alt="A woman works at a laptop beside receipts, a document tray and an orange folder."
+                />
+                <div className="au-panel">
+                  <div className="eyebrow">Every test run includes</div>
+                  <ul className="trigrows">
+                    <li><span className="m">Taxable and GST-free lines in one cart</span><span className="t">Coded</span></li>
+                    <li><span className="m">Discount code across mixed lines</span><span className="t">Split</span></li>
+                    <li><span className="m">Shipping on a mixed cart</span><span className="t">Coded</span></li>
+                    <li><span className="m">Partial refund</span><span className="t">Same code</span></li>
+                    <li><span className="m">Trade order over $1,000</span><span className="t">ABN shown</span></li>
+                    <li><span className="m">Payout with fees and a refund</span><span className="t">Clears to $0</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -585,9 +617,9 @@ export default function EcommerceErpIntegrationAUPage() {
         {/* ═══ OWNER MAP → table ═══ */}
         <section className="section comparison" id="owner-map">
           <div className="wrap">
-            <div className="section-head head-split">
-              <div className="eyebrow">The owner map</div>
+            <div className="section-head erpOwnerIntro">
               <div>
+                <div className="eyebrow">The owner map</div>
                 <h2>Which system owns each record</h2>
                 <p className="lead">
                   The usual fault in a broken integration is two systems that both think they own stock, or prices, or
@@ -595,6 +627,10 @@ export default function EcommerceErpIntegrationAUPage() {
                   will differ, and it gets written down and signed before anything is built.
                 </p>
               </div>
+              <ErpSectionPhoto
+                name="store-erp-field-map"
+                alt="Two people examine two groups of index cards beside a sample carton."
+              />
             </div>
             <p className="md:hidden tablenote">Swipe sideways to see every column.</p>
             <div className="tablewrap" role="region" tabIndex={0} aria-label="Owner map for an ecommerce ERP integration" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
@@ -890,18 +926,22 @@ export default function EcommerceErpIntegrationAUPage() {
         {/* ═══ FINAL CTA (light) ═══ */}
         <section className="finalcta" id="finalcta">
           <div className="wrap">
-            <div>
+            <div className="erpCloseCopy">
               <div className="eyebrow">Ready when you are</div>
               <h2>Get a store and a set of books that agree with each other</h2>
               <p>
                 Send your name and work email, or your brief. The founder replies within 24 hours to book a short call
                 about your store, your systems and the right route for the link. No spam, no obligation.
               </p>
+              <div className="ctas">
+                <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+                <ModalCTAButton label="Send my brief" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-ghost" />
+              </div>
             </div>
-            <div className="ctas">
-              <ModalCTAButton label="See a demo on my data" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
-              <ModalCTAButton label="Send my brief" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-ghost" />
-            </div>
+            <ErpSectionPhoto
+              name="dispatch-books-order-check"
+              alt="A man looks at a monitor beside dispatch paperwork with cartons behind a warehouse window."
+            />
           </div>
         </section>
 

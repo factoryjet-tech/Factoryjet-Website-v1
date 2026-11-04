@@ -1,0 +1,154 @@
+.auErpVisual #gst > .wrap {
+  display: block;
+}
+
+.auErpVisual #gst .section-head {
+  margin-bottom: clamp(24px, 4vw, 42px);
+  max-width: 740px;
+}
+
+.auErpVisual #gst .factswrap,
+.auErpVisual #owner-map .erpOwnerIntro,
+.auErpVisual #finalcta > .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.auErpVisual #gst .factlist {
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.auErpVisual #gst .erpMediaRail {
+  display: grid;
+  min-width: 0;
+  gap: 22px;
+}
+
+.auErpVisual #gst .erpMediaRail .au-panel {
+  margin: 0;
+}
+
+.auErpVisual #owner-map .erpOwnerIntro {
+  align-items: center;
+}
+
+.auErpVisual #owner-map .tablewrap {
+  max-width: 100%;
+}
+
+.auErpVisual #finalcta > .wrap {
+  align-items: center;
+}
+
+.auErpVisual #finalcta .ctas {
+  margin-top: 28px;
+}
+
+.auErpVisual .erpSectionPhoto {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: clamp(12px, 2vw, 22px);
+  box-shadow: 0 14px 32px -24px rgb(20 17 15 / 25%);
+}
+
+.auErpVisual .erpSectionPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.auErpVisual main :is(a, button, input, summary, .tablewrap) {
+  scroll-margin-block: 112px 76px;
+}
+
+.auErpVisual main :is(a, button, summary, .tablewrap):focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 3px;
+}
+
+.auErpVisual main .tnode:last-child .idx {
+  background: var(--accent-text);
+}
+
+.auErpVisual main .specpanel :is(.statusdot, .specrow) {
+  animation: none;
+}
+
+.auErpVisual main .specpanel .specrow {
+  cursor: default;
+  transform: none;
+}
+
+.auErpVisual main .specpanel .specrow::before,
+.auErpVisual main .specpanel .tag::after {
+  animation: none;
+}
+
+@media (max-width: 1024px) {
+  .auErpVisual :is(.crumbs, main .ledgercell .k, main .byline .who) a {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .auErpVisual main :is(.refs a, .faq-catnav a, .agentdir-grid a, .faqsrc, .btn, summary) {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .auErpVisual main .faqsrc {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 820px) {
+  .auErpVisual #gst .factswrap,
+  .auErpVisual #owner-map .erpOwnerIntro,
+  .auErpVisual #finalcta > .wrap {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .auErpVisual main .hero h1 {
+    max-width: none;
+    font-size: clamp(28px, 7.4vw, 42px);
+  }
+
+  .aiAgentPage.auPage.auErpVisual main :is(.qtext, .plat-build, .chg-list li, .tablenote, .au-note, .hero .lead, .fact p, .cap p, .tnode p, .plat p, .ventry p, .section-head .lead, .agentdir-label p, .faqintro p, .faq-ask p, .faqitem .ans, .finalcta p, .ledgercell .v, .trigrows .m, .trigrows .n, .agentdir-l, .agentdir-t, .refs a, tbody td, tbody th) {
+    font-size: 16px;
+  }
+
+  .aiAgentPage.auPage.auErpVisual main :is(.faqsrc, .eyebrow, .capid, .factlabel, .faq-category, .faq-nav-count, .faqitem .qid, .byline .upd, .ledgercell .k, .agentdir-count, .specpanel-bar, .specpanel-foot, .specpanel .sys, .specpanel .idx, .specpanel .tag, .trigrows .t, thead th) {
+    font-size: 12px;
+  }
+
+  .auErpVisual main .specpanel .sys {
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+
+  .auErpVisual main .specrow .title {
+    font-size: 16px;
+  }
+
+  .auErpVisual main .specrow .tag {
+    grid-column: 2;
+    grid-row: auto;
+    justify-self: start;
+  }
+
+  .auErpVisual main .agentdir-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
