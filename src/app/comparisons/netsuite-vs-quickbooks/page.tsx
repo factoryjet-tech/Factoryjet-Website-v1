@@ -9,7 +9,8 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const IMG = '/images/us/ecommerce-erp-integration';
+const PHOTO_DIR = '/images/us/netsuite-vs-quickbooks';
+const PHOTO_SIZES = '(min-width: 1180px) 434px, (min-width: 960px) calc(38vw - 16px), (min-width: 700px) 660px, calc(100vw - 40px)';
 const PAGE_URL = 'https://factoryjet.com/comparisons/netsuite-vs-quickbooks';
 const PAGE_PUBLISHED = '2026-10-29';
 const PAGE_MODIFIED = '2026-10-31';
@@ -55,6 +56,30 @@ function Ext({ href, children }: { href: string; children: ReactNode }) {
     <a href={href} target="_blank" rel="noopener noreferrer" style={LINK}>
       {children}
     </a>
+  );
+}
+
+function SectionPhoto({ name, alt }: { name: string; alt: string }) {
+  const base = `${PHOTO_DIR}/${name}`;
+  const avif = `${base}-640.avif 640w, ${base}-960.avif 960w, ${base}-1280.avif 1280w`;
+  const webp = `${base}-640.webp 640w, ${base}-960.webp 960w, ${base}-1280.webp 1280w`;
+
+  return (
+    <picture className="nqb-photo">
+      <source type="image/avif" srcSet={avif} sizes={PHOTO_SIZES} />
+      <source type="image/webp" srcSet={webp} sizes={PHOTO_SIZES} />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`${base}-960.webp`}
+        srcSet={webp}
+        sizes={PHOTO_SIZES}
+        alt={alt}
+        width={960}
+        height={640}
+        decoding="async"
+        loading="lazy"
+      />
+    </picture>
   );
 }
 
@@ -351,6 +376,317 @@ const TERMS = [
   { t: 'Each phase signed on its own', d: 'Every phase is scoped, priced and signed separately, so you can stop after any one of them.' },
 ];
 
+// Page-scoped styles are included in the static HTML without a stylesheet request.
+const COMPARISON_STYLES = `
+.nqb-page.platpage {
+  --pp-orange-dark: #B23E13;
+}
+.nqb-page .pp-sec > .pp-wrap > :is(.pp-mlabel, h2, .pp-lead) {
+  animation: none;
+}
+.nqb-page :is(h1, h2, h3) {
+  text-wrap: balance;
+}
+.nqb-page :is(.pp-lead, .pp-editorial p, .nqb-steps li, .nqb-cards p) {
+  text-wrap: pretty;
+}
+.nqb-page .nqb-hero-wrap {
+  padding-block: clamp(34px, 6vh, 80px);
+}
+.nqb-page .nqb-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(30px, 5vw, 56px);
+}
+.nqb-page .nqb-hero h1 {
+  margin: 14px 0 12px;
+  max-inline-size: 590px;
+  font-size: clamp(31px, 5vw, 54px);
+}
+.nqb-page .nqb-crumbs {
+  margin-bottom: 8px;
+  font: 12px/18px var(--pp-mono);
+  color: var(--pp-muted);
+}
+.nqb-page .nqb-crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+}
+.nqb-page .nqb-crumbs li {
+  white-space: nowrap;
+}
+.nqb-page .nqb-crumbs a {
+  display: inline-flex;
+  align-items: center;
+  min-inline-size: 44px;
+  min-block-size: 44px;
+}
+.nqb-page .pp-eyebrow {
+  line-height: 18px;
+  letter-spacing: .09em;
+}
+.nqb-page .nqb-hero-lead {
+  max-inline-size: 580px;
+  min-block-size: 5lh;
+}
+.nqb-page [data-hero-inline-form] {
+  container: nqb-form / inline-size;
+}
+.nqb-page [data-hero-inline-form] :is(input[autocomplete="name"], input[autocomplete="email"], button[type="submit"]) {
+  font-size: 16px;
+}
+.nqb-page :is(a, button, input, summary, [tabindex="0"]):focus-visible {
+  outline: 2px solid var(--pp-orange-dark);
+  outline-offset: 3px;
+}
+.nqb-page :is(a, button, input, summary, [tabindex="0"], #final-cta) {
+  scroll-margin-block: 112px 86px;
+}
+.nqb-page .nqb-hero-card {
+  border: 1px solid var(--pp-line);
+  border-radius: 20px;
+  background: #fff;
+  padding: clamp(16px, 2.2vw, 26px);
+  box-shadow: 0 18px 50px -24px rgba(20, 17, 15, .2);
+}
+.nqb-page .nqb-hero-card-header {
+  border-bottom: 1px solid var(--pp-line);
+  padding-bottom: 14px;
+  font: 800 20px/1.25 var(--pp-display);
+}
+.nqb-page .nqb-hero-card-header small,
+.nqb-page .nqb-hero-card-footer {
+  color: var(--pp-muted);
+  font: 12px/1.5 var(--pp-mono);
+}
+.nqb-page .nqb-hero-card-header small {
+  display: block;
+  margin-top: 4px;
+  color: var(--pp-orange-dark);
+}
+.nqb-page .nqb-hero-card-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  gap: 14px;
+  margin-block: 16px;
+}
+.nqb-page .nqb-hero-card-columns > div {
+  border: 1px solid var(--pp-line);
+  border-radius: 12px;
+  background: #FAF8F5;
+  padding: 14px;
+}
+.nqb-page .nqb-hero-card-columns ul {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+  color: var(--pp-body);
+  line-height: 1.45;
+}
+.nqb-page .nqb-hero-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 12px;
+  border-top: 1px solid var(--pp-line);
+  padding-top: 12px;
+}
+.nqb-page :is(.pp-mlabel, .pp-stat span, .founder span, .pp-proof .top span) {
+  font-size: 12px;
+}
+.nqb-page .nqb-table {
+  margin-top: 14px;
+  overflow-x: auto;
+  border: 1px solid var(--pp-line);
+  border-radius: 14px;
+}
+.nqb-page .nqb-table .pp-table {
+  font-size: 16px;
+  line-height: 1.55;
+}
+.nqb-page .nqb-table .pp-table :is(th, td) {
+  padding-inline: 12px;
+}
+.nqb-page .nqb-table .pp-table thead th {
+  font-size: 12px;
+}
+.nqb-page .nqb-table .pp-table tbody th {
+  border-bottom: 1px solid var(--pp-line);
+  padding-block: 16px;
+  background: #fff;
+  color: var(--pp-ink);
+  font: 700 16px/1.55 var(--pp-display);
+  letter-spacing: normal;
+  text-transform: none;
+  vertical-align: top;
+}
+.nqb-page .nqb-table .pp-table .me th {
+  background: var(--pp-tint);
+}
+.nqb-page .nqb-feature {
+  display: grid;
+  gap: clamp(24px, 5vw, 56px);
+  margin-top: clamp(22px, 4vw, 38px);
+}
+.nqb-page .nqb-photo {
+  display: block;
+  inline-size: min(100%, 660px);
+  align-self: start;
+  overflow: hidden;
+  border-radius: clamp(16px, 2vw, 24px);
+  box-shadow: 0 0 0 1px var(--pp-line), 0 16px 34px -18px rgba(20, 17, 15, .28);
+}
+.nqb-page .nqb-photo img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+}
+.nqb-page :is(.pp-editorial, .nqb-steps) {
+  max-inline-size: 70ch;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--pp-body);
+}
+.nqb-page .pp-editorial > p + p {
+  margin-top: 1em;
+}
+.nqb-page .pp-editorial > h3 + p {
+  margin-top: .35em;
+}
+.nqb-page :is(.nqb-steps > li, .pp-editorial > :is(ol, ul) > li) {
+  border-top: 1px solid var(--pp-line);
+  padding-block: 12px;
+}
+.nqb-page :is(.nqb-steps, .pp-editorial) strong {
+  color: var(--pp-ink);
+}
+.nqb-page .nqb-cards {
+  display: grid;
+  gap: 16px;
+  margin-top: clamp(24px, 4vw, 34px);
+}
+.nqb-page .nqb-cards .pp-card {
+  display: flex;
+  flex-direction: column;
+}
+.nqb-page .nqb-cards .pp-card:hover {
+  transform: none;
+}
+.nqb-page .nqb-cards .pp-card p,
+.nqb-page .pp-proof blockquote,
+.nqb-page .founder b,
+.nqb-page .pp-primary {
+  font-size: 16px;
+}
+.nqb-page .nqb-citation,
+.nqb-page .pp-proof .rate a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
+}
+.nqb-page .nqb-citation {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-block: 8px;
+  color: var(--pp-muted);
+  text-decoration: underline;
+  font: 12px/1.5 var(--pp-mono);
+}
+.nqb-page .pp-faqsec .overflow-x-auto {
+  flex-wrap: wrap;
+  overflow: visible;
+}
+.nqb-page .pp-faqsec :is(a, summary) {
+  min-block-size: 44px;
+  min-inline-size: 44px;
+}
+.nqb-page .pp-faqsec :is([data-faq-answer], [data-faq-question] > span:first-child) {
+  font-size: 16px;
+}
+.nqb-page .pp-faqsec :is(a > span[aria-hidden], .font-fj-mono) {
+  font-size: 12px;
+}
+.nqb-page .pp-faqsec :is(.text-fj-neutral-300, .text-fj-neutral-400, .text-fj-neutral-500) {
+  color: var(--pp-muted);
+}
+.nqb-page .pp-faqsec [id^="faq-"] {
+  scroll-margin-top: 112px;
+}
+@container nqb-form (max-width: 499px) {
+  .nqb-page [data-hero-inline-form] div:has(> input[autocomplete="email"]) {
+    flex-direction: column;
+  }
+  .nqb-page [data-hero-inline-form] :is(input[autocomplete="name"], input[autocomplete="email"]) {
+    inline-size: 100%;
+    flex: none;
+  }
+}
+@media (min-width: 640px) {
+  .nqb-page .nqb-cards {
+    grid-template-columns: minmax(0, 1.16fr) minmax(0, 1fr);
+  }
+  .nqb-page .nqb-cards > li:first-child {
+    grid-column: 1 / -1;
+  }
+}
+@media (min-width: 960px) {
+  .nqb-page .nqb-feature {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+  .nqb-page .nqb-feature > .nqb-photo {
+    position: sticky;
+    top: 104px;
+    grid-area: 1 / 2;
+  }
+  .nqb-page .nqb-feature > :is(.pp-editorial, .nqb-steps) {
+    grid-area: 1 / 1;
+  }
+  .nqb-page .nqb-feature-reverse {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  }
+  .nqb-page .nqb-feature-reverse > .nqb-photo {
+    grid-column: 1;
+  }
+  .nqb-page .nqb-feature-reverse > .pp-editorial {
+    grid-column: 2;
+  }
+  .nqb-page .nqb-facts {
+    grid-template-columns: minmax(0, 1.38fr) minmax(0, 1.08fr) minmax(0, 1fr);
+  }
+  .nqb-page .nqb-facts > li:first-child {
+    grid-column: auto;
+  }
+}
+@media (max-width: 480px) {
+  .nqb-page .nqb-hero-wrap {
+    padding-top: 24px;
+  }
+  .nqb-page .nqb-crumbs li:last-child {
+    flex-basis: 100%;
+  }
+  .nqb-page .pp-eyebrow span {
+    display: block;
+  }
+  .nqb-page .nqb-hero-lead {
+    min-block-size: 6lh;
+  }
+  .nqb-page .nqb-hero-card-columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 409px) {
+  .nqb-page .nqb-hero-lead {
+    min-block-size: 7lh;
+  }
+}
+`;
+
 export default function NetsuiteVsQuickbooksPage() {
   return (
     <>
@@ -360,14 +696,15 @@ export default function NetsuiteVsQuickbooksPage() {
 
       <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-      <main className="platpage">
+      <main className="platpage nqb-page">
+        <style>{COMPARISON_STYLES}</style>
         {/* ── Hero ── */}
         <section className="pp-dotgrid">
-          <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
+          <div className="pp-wrap nqb-hero-wrap">
+            <div className="pp-herogrid nqb-hero">
               <div>
-                <nav aria-label="Breadcrumb" style={{ marginBottom: '14px', fontFamily: 'var(--pp-mono)', fontSize: '11.5px', color: 'var(--pp-muted)' }}>
-                  <ol style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', listStyle: 'none', margin: 0, padding: 0 }}>
+                <nav aria-label="Breadcrumb" className="nqb-crumbs">
+                  <ol>
                     {CRUMBS.map((c, i) => (
                       <li key={c.href}>
                         {i < CRUMBS.length - 1 ? (
@@ -382,11 +719,11 @@ export default function NetsuiteVsQuickbooksPage() {
                     ))}
                   </ol>
                 </nav>
-                <p className="pp-eyebrow">ERP comparison · Updated 31 October 2026</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '20ch' }}>
+                <p className="pp-eyebrow">ERP comparison<span> · Updated 31 October 2026</span></p>
+                <h1>
                   NetSuite vs QuickBooks: When to Switch and What It Changes (2026)
                 </h1>
-                <p className="pp-lead" style={{ maxWidth: '50ch' }}>
+                <p className="pp-lead nqb-hero-lead">
                   QuickBooks Online gives you one company per subscription and up to 25 users on Advanced
                   (<Ext href={SRC.qboPricing}>Intuit</Ext>). NetSuite OneWorld runs up to 250 subsidiaries in one account
                   (<Ext href={SRC.nsSubsidiaries}>Oracle</Ext>). This page shows where the line sits, and what a move does to your
@@ -396,48 +733,26 @@ export default function NetsuiteVsQuickbooksPage() {
               </div>
 
               {/* Visual comparison graphic */}
-              <div
-                role="img"
-                aria-label="NetSuite vs QuickBooks comparison showing entities, users, inventory and store sync on each system."
-                style={{
-                  border: '1px solid var(--pp-line)',
-                  borderRadius: '18px',
-                  background: '#fff',
-                  padding: '24px',
-                  boxShadow: '0 18px 50px rgba(20,17,15,.08)',
-                }}
-              >
-                <div
-                  style={{
-                    border: '1.5px solid var(--pp-orange)',
-                    borderRadius: '12px',
-                    background: 'var(--pp-tint)',
-                    padding: '14px',
-                    textAlign: 'center',
-                    fontFamily: 'var(--pp-display)',
-                    fontWeight: 700,
-                    color: 'var(--pp-ink)',
-                    marginBottom: '18px',
-                  }}
-                >
-                  Where each one stops
-                  <small style={{ display: 'block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-orange-dark)', fontWeight: 600, marginTop: '2px' }}>
+              <div className="nqb-hero-card" role="group" aria-labelledby="nqb-hero-comparison">
+                <div className="nqb-hero-card-header">
+                  <b id="nqb-hero-comparison">Where each one stops</b>
+                  <small>
                     QuickBooks (accounting) vs NetSuite (ERP)
                   </small>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
-                  <div style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#FAF8F5', padding: '14px 12px' }}>
-                    <b style={{ fontFamily: 'var(--pp-display)', fontSize: '14px', display: 'block', color: 'var(--pp-ink)', borderBottom: '1px solid var(--pp-line)', paddingBottom: '6px' }}>QuickBooks Online</b>
-                    <ul style={{ fontSize: '12px', color: 'var(--pp-body)', marginTop: '8px', paddingLeft: '14px', display: 'grid', gap: '4px' }}>
+                <div className="nqb-hero-card-columns">
+                  <div>
+                    <b>QuickBooks Online</b>
+                    <ul>
                       <li>One company per subscription</li>
                       <li>5 users on Plus, 25 on Advanced</li>
                       <li>Stock quantity on Plus and up</li>
                       <li>Set up in days</li>
                     </ul>
                   </div>
-                  <div style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#FAF8F5', padding: '14px 12px' }}>
-                    <b style={{ fontFamily: 'var(--pp-display)', fontSize: '14px', display: 'block', color: 'var(--pp-ink)', borderBottom: '1px solid var(--pp-line)', paddingBottom: '6px' }}>NetSuite OneWorld</b>
-                    <ul style={{ fontSize: '12px', color: 'var(--pp-body)', marginTop: '8px', paddingLeft: '14px', display: 'grid', gap: '4px' }}>
+                  <div>
+                    <b>NetSuite OneWorld</b>
+                    <ul>
                       <li>Up to 250 subsidiaries</li>
                       <li>Consolidated reports</li>
                       <li>Orders, stock and books together</li>
@@ -445,26 +760,8 @@ export default function NetsuiteVsQuickbooksPage() {
                     </ul>
                   </div>
                 </div>
-                <div
-                  style={{
-                    marginTop: '16px',
-                    padding: '10px 14px',
-                    background: '#14110F',
-                    borderRadius: '10px',
-                    color: '#fff',
-                    fontFamily: 'var(--pp-mono)',
-                    fontSize: '10.5px',
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: '8px 16px',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <div>
-                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10B981', display: 'inline-block', marginRight: '6px' }} />
-                    Store to ERP sync
-                  </div>
+                <div className="nqb-hero-card-footer">
+                  <div>Store to ERP sync</div>
                   <div>Field map first · Fixed price per phase</div>
                 </div>
               </div>
@@ -502,7 +799,7 @@ export default function NetsuiteVsQuickbooksPage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// side by side, with sources</p>
-            <h2 style={{ marginTop: '10px' }}>NetSuite vs QuickBooks: what each one covers</h2>
+            <h2 id="nqb-comparison-table" style={{ marginTop: '10px' }}>NetSuite vs QuickBooks: what each one covers</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
               This covers NetSuite vs QuickBooks Online and NetSuite vs QuickBooks Enterprise. Every vendor row comes from
               Intuit or Oracle pages we read on 29 October 2026.
@@ -510,61 +807,61 @@ export default function NetsuiteVsQuickbooksPage() {
             <p className="md:hidden" style={{ marginTop: '20px', fontFamily: 'var(--pp-mono)', fontSize: '12px', color: 'var(--pp-muted)' }}>
               Swipe sideways to see every column.
             </p>
-            <div style={{ marginTop: '12px', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-              <table className="pp-table" style={{ minWidth: '720px' }}>
+            <div className="nqb-table" role="region" aria-labelledby="nqb-comparison-table" tabIndex={0}>
+              <table className="pp-table">
                 <thead>
                   <tr>
-                    <th>Item</th>
-                    <th>QuickBooks Online / Enterprise</th>
-                    <th>NetSuite</th>
-                    <th>Source</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">QuickBooks Online / Enterprise</th>
+                    <th scope="col">NetSuite</th>
+                    <th scope="col">Source</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="me">
-                    <td className="name">Accounting scope</td>
+                    <th scope="row">Accounting scope</th>
                     <td>Books, invoices, bills and bank feeds. Classes and locations (tags that split reports by division or store): 40 on Plus, unlimited on Advanced</td>
                     <td>An ERP: accounting, orders, purchasing and inventory in one system</td>
                     <td><Ext href={SRC.qboPricing}>Intuit pricing</Ext>, checked 29 Oct 2026</td>
                   </tr>
                   <tr>
-                    <td className="name">Inventory</td>
+                    <th scope="row">Inventory</th>
                     <td>Online: quantity tracking on Plus and Advanced only. Enterprise: Advanced Inventory on Platinum and Diamond only</td>
                     <td>Inventory is part of the core ERP, shared across subsidiaries</td>
                     <td><Ext href={SRC.qboInventory}>Intuit inventory help</Ext> and <Ext href={SRC.qbEnterprise}>Enterprise pricing</Ext>, checked 29 Oct 2026</td>
                   </tr>
                   <tr className="me">
-                    <td className="name">Multi-entity</td>
+                    <th scope="row">Multi-entity</th>
                     <td>Each Online company needs its own paid subscription; users and lists are not shared</td>
                     <td>OneWorld: up to 250 subsidiaries, consolidated reports in the parent’s base currency</td>
                     <td><Ext href={SRC.qboCompanies}>Intuit</Ext>, <Ext href={SRC.nsSubsidiaries}>Oracle</Ext> and <Ext href={SRC.nsConsolidated}>Oracle consolidation</Ext>, checked 29 Oct 2026</td>
                   </tr>
                   <tr>
-                    <td className="name">Users</td>
+                    <th scope="row">Users</th>
                     <td>Online: 5 on Plus, 25 on Advanced. Enterprise: up to 30 on Gold and Platinum, 40 on Diamond</td>
                     <td>Licensed per user on an Oracle quote</td>
                     <td><Ext href={SRC.qboPricing}>Intuit</Ext> and <Ext href={SRC.qbEnterprise}>Intuit Enterprise</Ext>, checked 29 Oct 2026</td>
                   </tr>
                   <tr className="me">
-                    <td className="name">Ecommerce sync</td>
+                    <th scope="row">Ecommerce sync</th>
                     <td>Intuit’s Shopify connector imports each sale and refund, then groups them into a payout deposit</td>
                     <td>Oracle’s NetSuite ERP Connector syncs products, pricing, inventory, sales orders and fulfillments with Shopify</td>
                     <td><Ext href={SRC.qboShopify}>Intuit help</Ext> and <Ext href={SRC.nsShopify}>Shopify App Store</Ext>, checked 29 Oct 2026</td>
                   </tr>
                   <tr>
-                    <td className="name">List price</td>
+                    <th scope="row">List price</th>
                     <td>Online Plus $140/mo, Advanced $340/mo (three-month half-price offer for new customers)</td>
                     <td>Quoted by Oracle on modules, users and subsidiaries. No public list price is used here</td>
                     <td><Ext href={SRC.qboPricing}>Intuit pricing</Ext>, checked 29 Oct 2026</td>
                   </tr>
                   <tr className="me">
-                    <td className="name">Implementation effort</td>
+                    <th scope="row">Implementation effort</th>
                     <td>Self-serve. Many small companies set it up with their bookkeeper</td>
                     <td>A project with Oracle or a partner, plus re-wiring every app that talked to QuickBooks</td>
                     <td>Our scoping experience</td>
                   </tr>
                   <tr>
-                    <td className="name">Who it fits</td>
+                    <th scope="row">Who it fits</th>
                     <td>One company, a small finance team, one or two sales channels, simple stock</td>
                     <td>Several entities, shared stock across channels, wholesale terms, a growing finance team</td>
                     <td>Our scoping experience</td>
@@ -577,19 +874,25 @@ export default function NetsuiteVsQuickbooksPage() {
 
         {/* ── 7 signs ── */}
         <section className="pp-sec tint">
-          <div className="pp-wrap pp-narrow">
+          <div className="pp-wrap">
             <p className="pp-mlabel">// the checklist</p>
             <h2 style={{ marginTop: '10px' }}>7 signs you have outgrown QuickBooks</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '64ch' }}>
               One sign is a nuisance. Two or more, and the workarounds cost more each month than a scoping call.
             </p>
-            <ol style={{ margin: '24px 0 0', paddingLeft: '22px', display: 'grid', gap: '16px' }}>
-              {SIGNS.map((s) => (
-                <li key={s.t} style={{ color: 'var(--pp-body)', fontSize: '15.5px', lineHeight: 1.6 }}>
-                  <strong style={{ color: 'var(--pp-ink)' }}>{s.t}</strong> {s.d}
-                </li>
-              ))}
-            </ol>
+            <div className="nqb-feature">
+              <SectionPhoto
+                name="month-end-controller"
+                alt="A person at a desk looks at two monitors with spreadsheet grids beside a stack of folders."
+              />
+              <ol className="nqb-steps">
+                {SIGNS.map((s) => (
+                  <li key={s.t}>
+                    <strong>{s.t}</strong> {s.d}
+                  </li>
+                ))}
+              </ol>
+            </div>
           </div>
         </section>
 
@@ -598,16 +901,16 @@ export default function NetsuiteVsQuickbooksPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// sourced figures</p>
             <h2 style={{ marginTop: '10px' }}>Three limits that usually decide the move</h2>
-            <ul className="pp-bento" style={{ marginTop: '32px', listStyle: 'none', padding: 0 }}>
+            <ul className="nqb-cards nqb-facts">
               {SOURCED.map((s) => (
                 <li className="pp-card" key={s.v}>
                   <div style={{ fontFamily: 'var(--pp-display)', fontWeight: 800, fontSize: '36px', color: 'var(--pp-orange-dark)', letterSpacing: '-.03em', lineHeight: 1 }}>{s.v}</div>
-                  <p style={{ marginTop: '10px', fontSize: '15px', color: 'var(--pp-body)' }}>{s.d}</p>
+                  <p>{s.d}</p>
                   <a
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ display: 'inline-block', marginTop: '10px', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)', textDecoration: 'underline' }}
+                    className="nqb-citation"
                   >
                     {s.src}
                   </a>
@@ -619,51 +922,48 @@ export default function NetsuiteVsQuickbooksPage() {
 
         {/* ── Store sync ── */}
         <section className="pp-sec tint">
-          <div className="pp-wrap pp-narrow">
+          <div className="pp-wrap">
             <p className="pp-mlabel">// what happens to the store sync</p>
             <h2 style={{ marginTop: '10px' }}>What moving does to your Shopify or WooCommerce sync</h2>
-            <div style={{ margin: '24px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 12px 36px rgba(0,0,0,0.06)' }}>
-              <Image
-                src={`${IMG}/field-mapping-cards.webp`}
-                alt="Two people at a table join two columns of blank white cards with lengths of orange yarn"
-                width={1200}
-                height={800}
-                style={{ width: '100%', height: 'auto', display: 'block' }}
+            <div className="nqb-feature nqb-feature-reverse">
+              <SectionPhoto
+                name="order-sync-packing-desk"
+                alt="A laptop and a printer tray with blank packing slips sit on a desk beside two warehouse sorting lanes."
               />
-            </div>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                Your store sync today writes to QuickBooks. Intuit’s own Shopify connector, for example, imports each sale as a
-                payment, each refund as its own transaction, and groups them into a payout deposit
-                (<Ext href={SRC.qboShopify}>Intuit help</Ext>). On go-live day that app has nowhere to write. Every order, refund,
-                fee and payout has to land in NetSuite instead, mapped to the right subsidiary.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Four decisions to make before anyone builds</h3>
-              <ol style={{ margin: '14px 0', paddingLeft: '20px', display: 'grid', gap: '8px' }}>
-                <li><strong>Who owns stock and price.</strong> Usually NetSuite owns both and the store reads them. Write it down per field.</li>
-                <li><strong>Which subsidiary each order belongs to.</strong> By store, by ship-from warehouse, or by customer type. OneWorld needs an answer for every order.</li>
-                <li><strong>Order by order, or a daily summary.</strong> Order-level posting keeps margin and returns traceable. A daily summary keeps volume down.</li>
-                <li><strong>Connector or custom.</strong> Oracle’s NetSuite ERP Connector covers products, pricing, inventory, sales orders and fulfillments (<Ext href={SRC.nsShopify}>Shopify App Store</Ext>). Bundles, wholesale rules or a second channel usually need custom logic around it.</li>
-              </ol>
-              <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>WooCommerce works the same way</h3>
-              <p>
-                WooCommerce exposes orders, products and stock through its REST API (a standard way for other software to read
-                and write store data) and webhooks (alerts the store sends the moment an order changes). The four decisions
-                above do not change. Only the store side of the code does, and our{' '}
-                <a href="/services/woocommerce-development" style={INLINK}>WooCommerce development</a> team builds that side.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Run both for one closed month</h3>
-              <p>
-                Keep QuickBooks receiving store data for one full month after NetSuite goes live, then compare totals by channel,
-                tax and payout. Finance signs off on the match, and QuickBooks goes read-only. Staying on QuickBooks for now? Our{' '}
-                <a href="/services/shopify-quickbooks-integration" style={INLINK}>Shopify QuickBooks integration</a> service fixes the
-                sync you have. Moving? See{' '}
-                <a href="/services/ecommerce-erp-integration" style={INLINK}>ecommerce ERP integration</a> for the store side, and{' '}
-                <a href="/services/netsuite-ai-agents" style={INLINK}>NetSuite AI agents</a> for what can run inside NetSuite once
-                records flow. Our guide to{' '}
-                <a href="/blog/ai-agents-for-finance-accounting-teams-2026" style={INLINK}>AI agents for finance and accounting teams</a>{' '}
-                covers the month-end tasks those agents take on.
-              </p>
+              <div className="pp-editorial">
+                <p>
+                  Your store sync today writes to QuickBooks. Intuit’s own Shopify connector, for example, imports each sale as a
+                  payment, each refund as its own transaction, and groups them into a payout deposit
+                  (<Ext href={SRC.qboShopify}>Intuit help</Ext>). On go-live day that app has nowhere to write. Every order, refund,
+                  fee and payout has to land in NetSuite instead, mapped to the right subsidiary.
+                </p>
+                <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Four decisions to make before anyone builds</h3>
+                <ol style={{ margin: '14px 0', paddingLeft: '20px', display: 'grid', gap: '8px' }}>
+                  <li><strong>Who owns stock and price.</strong> Usually NetSuite owns both and the store reads them. Write it down per field.</li>
+                  <li><strong>Which subsidiary each order belongs to.</strong> By store, by ship-from warehouse, or by customer type. OneWorld needs an answer for every order.</li>
+                  <li><strong>Order by order, or a daily summary.</strong> Order-level posting keeps margin and returns traceable. A daily summary keeps volume down.</li>
+                  <li><strong>Connector or custom.</strong> Oracle’s NetSuite ERP Connector covers products, pricing, inventory, sales orders and fulfillments (<Ext href={SRC.nsShopify}>Shopify App Store</Ext>). Bundles, wholesale rules or a second channel usually need custom logic around it.</li>
+                </ol>
+                <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>WooCommerce works the same way</h3>
+                <p>
+                  WooCommerce exposes orders, products and stock through its REST API (a standard way for other software to read
+                  and write store data) and webhooks (alerts the store sends the moment an order changes). The four decisions
+                  above do not change. Only the store side of the code does, and our{' '}
+                  <a href="/services/woocommerce-development" style={INLINK}>WooCommerce development</a> team builds that side.
+                </p>
+                <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Run both for one closed month</h3>
+                <p>
+                  Keep QuickBooks receiving store data for one full month after NetSuite goes live, then compare totals by channel,
+                  tax and payout. Finance signs off on the match, and QuickBooks goes read-only. Staying on QuickBooks for now? Our{' '}
+                  <a href="/services/shopify-quickbooks-integration" style={INLINK}>Shopify QuickBooks integration</a> service fixes the
+                  sync you have. Moving? See{' '}
+                  <a href="/services/ecommerce-erp-integration" style={INLINK}>ecommerce ERP integration</a> for the store side, and{' '}
+                  <a href="/services/netsuite-ai-agents" style={INLINK}>NetSuite AI agents</a> for what can run inside NetSuite once
+                  records flow. Our guide to{' '}
+                  <a href="/blog/ai-agents-for-finance-accounting-teams-2026" style={INLINK}>AI agents for finance and accounting teams</a>{' '}
+                  covers the month-end tasks those agents take on.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -711,33 +1011,39 @@ export default function NetsuiteVsQuickbooksPage() {
 
         {/* ── Migration timeline ── */}
         <section className="pp-sec tint">
-          <div className="pp-wrap pp-narrow">
+          <div className="pp-wrap">
             <p className="pp-mlabel">// the move, in order</p>
             <h2 style={{ marginTop: '10px' }}>How long does a QuickBooks to NetSuite migration take?</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                We give no stock duration, because entity count, channels and history size change it more than anything else.
-                What does not change is the order. Each stage below has to finish before the next one starts, and the last stage
-                always takes one full closed month.
-              </p>
-              <ol style={{ margin: '14px 0', paddingLeft: '20px', display: 'grid', gap: '8px' }}>
-                <li><strong>Field list.</strong> Every store, entity, warehouse and app that writes to QuickBooks today, and the fields each one sends.</li>
-                <li><strong>NetSuite setup.</strong> Chart of accounts, subsidiaries, roles and opening balances, done by Oracle or a NetSuite partner.</li>
-                <li><strong>Sync rebuild.</strong> Store, wholesale and app connections rewired to post into NetSuite, mapped to the right subsidiary.</li>
-                <li><strong>One closed month in parallel.</strong> Both systems receive the same data until finance signs off on matching totals.</li>
-              </ol>
-              <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Check two things before you set a go-live date</h3>
-              <p>
-                First, reports. Oracle’s help center says some NetSuite reports do not support consolidation and show one
-                subsidiary at a time (<Ext href={SRC.nsConsolidated}>Oracle help</Ext>). List the month-end reports your finance team
-                runs and confirm each one before the cut-over.
-              </p>
-              <p>
-                Second, your QuickBooks edition. Intuit stopped selling new US subscriptions to Desktop Pro Plus, Premier Plus,
-                Mac Plus and Enhanced Payroll after September 30, 2024, and said Desktop Enterprise was not affected
-                (<Ext href={SRC.qbStopSell}>Intuit</Ext>). A company on one of those older desktop editions is often moving
-                anyway, so the timing question becomes which system to land on.
-              </p>
+            <div className="nqb-feature">
+              <SectionPhoto
+                name="finance-cutover-calendar"
+                alt="Three people study a wall calendar with gray and blue blocks."
+              />
+              <div className="pp-editorial">
+                <p>
+                  We give no stock duration, because entity count, channels and history size change it more than anything else.
+                  What does not change is the order. Each stage below has to finish before the next one starts, and the last stage
+                  always takes one full closed month.
+                </p>
+                <ol style={{ margin: '14px 0', paddingLeft: '20px', display: 'grid', gap: '8px' }}>
+                  <li><strong>Field list.</strong> Every store, entity, warehouse and app that writes to QuickBooks today, and the fields each one sends.</li>
+                  <li><strong>NetSuite setup.</strong> Chart of accounts, subsidiaries, roles and opening balances, done by Oracle or a NetSuite partner.</li>
+                  <li><strong>Sync rebuild.</strong> Store, wholesale and app connections rewired to post into NetSuite, mapped to the right subsidiary.</li>
+                  <li><strong>One closed month in parallel.</strong> Both systems receive the same data until finance signs off on matching totals.</li>
+                </ol>
+                <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Check two things before you set a go-live date</h3>
+                <p>
+                  First, reports. Oracle’s help center says some NetSuite reports do not support consolidation and show one
+                  subsidiary at a time (<Ext href={SRC.nsConsolidated}>Oracle help</Ext>). List the month-end reports your finance team
+                  runs and confirm each one before the cut-over.
+                </p>
+                <p>
+                  Second, your QuickBooks edition. Intuit stopped selling new US subscriptions to Desktop Pro Plus, Premier Plus,
+                  Mac Plus and Enhanced Payroll after September 30, 2024, and said Desktop Enterprise was not affected
+                  (<Ext href={SRC.qbStopSell}>Intuit</Ext>). A company on one of those older desktop editions is often moving
+                  anyway, so the timing question becomes which system to land on.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -769,11 +1075,11 @@ export default function NetsuiteVsQuickbooksPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// what you own</p>
             <h2 style={{ marginTop: '10px' }}>What you own after a NetSuite integration</h2>
-            <ul className="pp-bento n5" style={{ marginTop: '32px', listStyle: 'none', padding: 0 }}>
+            <ul className="nqb-cards">
               {TERMS.map((x) => (
                 <li className="pp-card" key={x.t}>
-                  <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: '16px', color: 'var(--pp-ink)', marginBottom: '6px' }}>{x.t}</h3>
-                  <p style={{ fontSize: '14.5px', color: 'var(--pp-body)' }}>{x.d}</p>
+                  <h3>{x.t}</h3>
+                  <p>{x.d}</p>
                 </li>
               ))}
             </ul>
@@ -795,7 +1101,7 @@ export default function NetsuiteVsQuickbooksPage() {
         </section>
 
         {/* ── Final CTA + disclosure ── */}
-        <section className="pp-sec tint">
+        <section className="pp-sec tint" id="final-cta">
           <div className="pp-wrap">
             <div className="pp-ctagrid">
               <div className="pp-cta">
@@ -817,7 +1123,7 @@ export default function NetsuiteVsQuickbooksPage() {
                     width={46}
                     height={46}
                     quality={95}
-                    style={{ width: '46px', height: '46px', flexShrink: 0, borderRadius: '50%', objectFit: 'cover', border: '1.5px solid var(--pp-orange)' }}
+                    style={{ width: '46px', height: '46px', flexShrink: 0, borderRadius: '50%', objectFit: 'cover', border: '1.5px solid var(--pp-line)' }}
                   />
                   <div>
                     <b>Bhavesh Barot</b>
