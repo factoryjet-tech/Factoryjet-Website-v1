@@ -1,0 +1,181 @@
+.amazon-visual.auPage .amazon-photo {
+  display: block;
+  min-width: 0;
+}
+
+.amazon-visual.auPage .amazon-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--accent-wash);
+  box-shadow: 0 20px 40px -28px rgb(20 17 15 / 40%);
+}
+
+.amazon-visual.auPage .amazon-visual-intro,
+.amazon-visual.auPage #finalcta .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 60px);
+}
+
+.amazon-visual.auPage .amazon-visual-intro {
+  margin-bottom: clamp(28px, 4vw, 52px);
+}
+
+.amazon-visual.auPage .amazon-visual-intro .section-head {
+  display: block;
+  margin: 0;
+}
+
+.amazon-visual.auPage #fulfilment .section-head h2 {
+  margin-top: 16px;
+}
+
+.amazon-visual.auPage #finalcta .wrap {
+  row-gap: 24px;
+}
+
+.amazon-visual.auPage #finalcta .amazon-photo {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.amazon-visual.auPage #finalcta .ctas {
+  margin: 0;
+}
+
+.amazon-visual.auPage #how-a-project-runs .head-media {
+  align-items: end;
+}
+
+.amazon-visual.auPage #how-a-project-runs .head-media .figcap {
+  align-self: end;
+  margin: 0;
+  padding: 12px 0 12px 20px;
+  border-left: 1px solid var(--line-strong);
+}
+
+.amazon-visual.auPage :is(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+.amazon-visual.auPage :is(.lead, .fact p, .cap p) {
+  text-wrap: pretty;
+}
+
+.amazon-visual.auPage :is(a, button, summary, input, .tablewrap):focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 3px;
+  scroll-margin-block: 112px;
+}
+
+.amazon-visual.auPage .amazon-table-guide {
+  font-size: 16px;
+}
+
+.amazon-visual.auPage .tnode:last-child .idx {
+  background-color: var(--accent-text);
+}
+
+@media (max-width: 1024px) {
+  .amazon-visual.auPage :is(
+    .crumbs a, .ledgercell .k a, .byline a, .refs a, .tablenote a,
+    .faq-catnav a, .ans-links a, #finalcta .ctas a
+  ) {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    max-width: 100%;
+  }
+
+  .amazon-visual.auPage .refs a {
+    padding-bottom: 8px;
+  }
+
+  .amazon-visual.auPage :is(.workflow-toggle, .workflow-replay) {
+    width: 44px;
+    height: 44px;
+  }
+
+  .amazon-visual.auPage :is(.tnode summary, .faqitem summary) {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 820px) {
+  .amazon-visual.auPage .amazon-visual-intro,
+  .amazon-visual.auPage #finalcta .wrap {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .amazon-visual.auPage #finalcta .amazon-photo {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .amazon-visual.auPage :is(
+    .lead, .fact p, .cap p, .tnode p, .plat-build, .ledgercell .v, .trigrows .m,
+    .au-split :is(p, li), .comparison tbody :is(td, th), .section tbody :is(td, th),
+    .tablenote, .au-note, .figcap, .agentdir-t, .agentdir-l, .ans,
+    .qtext, .refs a, .faq-ask p, .byline .who, .specrow .title,
+    .hero .btn, .au-midcta .text-sm, [data-hero-inline-form] :is(input, button)
+  ) {
+    font-size: 16px;
+  }
+
+  .amazon-visual.auPage :is(
+    .eyebrow, .factlabel, .capid, .plat-flag, .ledgercell .k, .specpanel-bar,
+    .specpanel-foot, .specpanel-bar .sys, .specrow .idx, .specrow .tag,
+    .trigrows .t, thead th, .faq-category, .qid, .faq-nav-count, .faqsrc,
+    .byline .upd, .agentdir-more
+  ) {
+    font-size: 12px;
+  }
+
+  .amazon-visual.auPage .specrow {
+    grid-template-columns: 38px minmax(0, 1fr);
+  }
+
+  .amazon-visual.auPage .specrow :is(.idx, .title, .tag) {
+    grid-column: 2;
+  }
+
+  .amazon-visual.auPage .specrow .tag {
+    grid-row: auto;
+    justify-self: start;
+    margin-top: 3px;
+  }
+
+  .amazon-visual.auPage .specrow .workflow-icon {
+    grid-row: 1 / span 3;
+  }
+
+  .amazon-visual.auPage .trigrows .t {
+    grid-row: auto;
+    grid-column: 1;
+    justify-self: start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .amazon-visual.auPage .hero h1 {
+    font-size: clamp(30px, 8vw, 38px);
+  }
+
+  .amazon-visual.auPage :is(.section h2, #finalcta h2) {
+    font-size: clamp(25px, 6.6vw, 30px);
+  }
+
+  .amazon-visual.auPage #finalcta .btn {
+    max-width: 100%;
+    white-space: normal;
+  }
+}
