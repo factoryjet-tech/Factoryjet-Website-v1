@@ -7,7 +7,6 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
-import VisualSlot from '../components/VisualSlot';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
@@ -320,6 +319,23 @@ const PAGE_KEY = 'b2b-ecommerce';
 const H1_EMPHASIS = 'Wholesalers and Manufacturers';
 const H1_LEAD = H1.slice(0, H1.lastIndexOf(H1_EMPHASIS)).trimEnd();
 
+const PHOTO_WIDTHS = [640, 960, 1280];
+
+function TradePhoto({ file, alt }: { file: string; alt: string }) {
+  const path = `/images/au/b2b-ecommerce/${file}`;
+  const sizes = '(max-width: 660px) calc(100vw - 42px), (max-width: 820px) 618px, (max-width: 1264px) calc(38.4vw - 27.6px), (max-width: 1400px) calc(478px - 1.6vw), 456px';
+  const srcSet = (format: 'avif' | 'webp') =>
+    PHOTO_WIDTHS.map((width) => `${path}-${width}.${format} ${width}w`).join(', ');
+
+  return (
+    <picture className="trade-photo">
+      <source type="image/avif" srcSet={srcSet('avif')} sizes={sizes} />
+      <source type="image/webp" srcSet={srcSet('webp')} sizes={sizes} />
+      <img src={`${path}-960.webp`} srcSet={srcSet('webp')} sizes={sizes} width={960} height={640} loading="lazy" decoding="async" alt={alt} />
+    </picture>
+  );
+}
+
 const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
 const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
 
@@ -349,7 +365,7 @@ export default function B2bEcommerceAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage au-b2b-ecommerce">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -499,11 +515,9 @@ export default function B2bEcommerceAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap" src={null}
-                subject="Shop owner at her counter placing a repeat wholesale order on a tablet through her supplier's trade portal"
-                caption={<>The stockist’s side of a trade portal: her account prices, her usual lines, and last month’s order ready to repeat.</>}>
-                <img src="/images/au/shopify-development/shopify-development-b2b.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Shop owner at her counter placing a repeat wholesale order for ceramic vases on a tablet, using her supplier's trade portal" />
-              </VisualSlot>
+              <p className="figcap trade-fact-note">
+                The stockist’s side of a trade portal: her account prices, her usual lines, and last month’s order ready to repeat.
+              </p>
             </div>
           </div>
         </section>
@@ -511,13 +525,19 @@ export default function B2bEcommerceAUPage() {
         {/* ═══ LISTICLE: WHAT A TRADE PORTAL COVERS → capgrid ═══ */}
         <section className="section capabilities" id="portal">
           <div className="wrap">
-            <div className="section-head">
-              <div className="eyebrow">Trade portal, itemised</div>
-              <h2>Eight things a working Australian trade portal has to do</h2>
-              <p className="lead">
-                These eight cover what a wholesale brief tends to ask for. Each one moves a step out of email and
-                spreadsheets, and each one has to agree with the numbers in your accounting system.
-              </p>
+            <div className="trade-photo-split trade-section-intro">
+              <div className="section-head">
+                <div className="eyebrow">Trade portal, itemised</div>
+                <h2>Eight things a working Australian trade portal has to do</h2>
+                <p className="lead">
+                  These eight cover what a wholesale brief tends to ask for. Each one moves a step out of email and
+                  spreadsheets, and each one has to agree with the numbers in your accounting system.
+                </p>
+              </div>
+              <TradePhoto
+                file="trade-buyer-workshop-catalogue"
+                alt="A trade buyer browses a grid of brass fittings on a tablet at a workshop desk."
+              />
             </div>
             <div className="capgrid">
               {PORTAL_ITEMS.map((s, i) => (
@@ -534,18 +554,24 @@ export default function B2bEcommerceAUPage() {
         {/* ═══ AUSTRALIAN SYSTEMS → ruled rows ═══ */}
         <section className="section platforms" id="systems">
           <div className="wrap">
-            <div className="section-head plat-head">
-              <div>
-                <div className="eyebrow">Xero, MYOB, Cin7, Unleashed, ERP</div>
-                <h2>Which system owns your prices and stock decides the build</h2>
+            <div className="trade-photo-split trade-section-intro">
+              <div className="section-head plat-head">
+                <div>
+                  <div className="eyebrow">Xero, MYOB, Cin7, Unleashed, ERP</div>
+                  <h2>Which system owns your prices and stock decides the build</h2>
+                </div>
+                <p>
+                  Before any design, we agree which system is the single owner of customers, price lists, stock,
+                  credit limits and invoices. The portal then reads from that owner and writes orders back. Get this
+                  wrong and two systems hold two different prices for the same customer, and the sales team stops
+                  trusting the portal. If your store runs on Shopify and Xero holds the books, our page on{' '}
+                  <a href="/au/shopify-xero-integration">Shopify Xero integration</a> covers that connection.
+                </p>
               </div>
-              <p>
-                Before any design, we agree which system is the single owner of customers, price lists, stock,
-                credit limits and invoices. The portal then reads from that owner and writes orders back. Get this
-                wrong and two systems hold two different prices for the same customer, and the sales team stops
-                trusting the portal. If your store runs on Shopify and Xero holds the books, our page on{' '}
-                <a href="/au/shopify-xero-integration">Shopify Xero integration</a> covers that connection.
-              </p>
+              <TradePhoto
+                file="wholesale-stock-racking"
+                alt="A worker checks stock on a handheld screen beside warehouse racks filled with rubber gaskets."
+              />
             </div>
             <div className="platlist" role="list">
               {SYSTEMS.map((s, i) => (
@@ -580,16 +606,16 @@ export default function B2bEcommerceAUPage() {
                 </p>
               </div>
             </div>
-            <p className="md:hidden" style={{ fontSize: 13, margin: '0 0 8px' }}>Swipe sideways to see every column.</p>
+            <p className="md:hidden trade-table-guide">Swipe sideways to see every column.</p>
             <div className="tablewrap" role="region" tabIndex={0} aria-label="B2B ecommerce platform comparison" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
               <table style={{ minWidth: 760 }}>
                 <thead>
                   <tr>
-                    <th>What you need</th>
-                    <th>Shopify B2B (Basic to Advanced)</th>
-                    <th>Shopify Plus</th>
-                    <th>BigCommerce or Adobe Commerce</th>
-                    <th className="fj">Custom portal on your ERP</th>
+                    <th scope="col">What you need</th>
+                    <th scope="col">Shopify B2B (Basic to Advanced)</th>
+                    <th scope="col">Shopify Plus</th>
+                    <th scope="col">BigCommerce or Adobe Commerce</th>
+                    <th scope="col" className="fj">Custom portal on your ERP</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -760,16 +786,10 @@ export default function B2bEcommerceAUPage() {
 
         {/* ═══ BRIEF / RFP ASK → definition module ═══ */}
         <section className="definition" id="brief">
-          <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image" src={null}
-              subject="Warehouse packing bench with incoming orders on a laptop, a label printer and piled courier satchels">
-              <img src="/images/au/shopify-development/shopify-development-integrations.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Warehouse packing bench where a laptop shows incoming orders while a printer produces a shipping label beside piled courier satchels" />
-            </VisualSlot>
-            <p className="figcap">
-              One order traced from the buyer’s email to the dispatch desk and the invoice tells us more than a
-              forty-page requirements document.
-            </p>
-          </div>
+          <p className="figcap trade-brief-note">
+            One order traced from the buyer’s email to the dispatch desk and the invoice tells us more than a
+            forty-page requirements document.
+          </p>
           <div className="definition-copy">
             <div className="eyebrow">Send us your brief</div>
             <h2>Already have a brief, tender or request for proposal (RFP)? Send it.</h2>
@@ -921,7 +941,7 @@ export default function B2bEcommerceAUPage() {
 
         {/* ═══ FINAL CTA (light) ═══ */}
         <section className="finalcta" id="finalcta">
-          <div className="wrap">
+          <div className="wrap trade-photo-split">
             <div>
               <div className="eyebrow">Ready when you are</div>
               <h2>Get trade orders out of the inbox and into your books</h2>
@@ -930,11 +950,15 @@ export default function B2bEcommerceAUPage() {
                 founder, answers within 24 hours. If the fit is right, the next step is a draft portal loaded with
                 your own products and one of your price lists.
               </p>
+              <div className="ctas">
+                <ModalCTAButton label="See a draft of my trade portal" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+                <a className="btn btn-ghost" href="/au/ecommerce-development">See ecommerce development</a>
+              </div>
             </div>
-            <div className="ctas">
-              <ModalCTAButton label="See a draft of my trade portal" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
-              <a className="btn btn-ghost" href="/au/ecommerce-development">See ecommerce development</a>
-            </div>
+            <TradePhoto
+              file="trade-orders-sales-desk"
+              alt="A sales office worker checks printed order sheets against a monitor beside a dispatch counter."
+            />
           </div>
         </section>
 
