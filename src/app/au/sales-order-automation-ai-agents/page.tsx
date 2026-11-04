@@ -9,10 +9,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
 import { twinAlternates } from '@/data/hreflangMap';
-import '@/components/v2/AiAgentDevelopmentSections.css';
-import '../au-page.css';
-import '../au-hub.css';
-import pageStyles from './page-styles';
+import './page.css';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -370,7 +367,6 @@ const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', st
 export default function SalesOrderAutomationAUPage() {
   return (
     <div className="auSalesOrderVisual10">
-      <style>{pageStyles}</style>
       <script id="ld-au-sales-order-automation" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
