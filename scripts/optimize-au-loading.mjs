@@ -8,7 +8,10 @@ import routes from '../src/data/auLoadingRoutes.json' with { type: 'json' };
 const stylesheet = /<link\b(?=[^>]*\srel="stylesheet")(?=[^>]*\shref="(\/_next\/static\/css\/[a-z0-9]+\.css)")[^>]*>/gi;
 const simpleClass = /^\.((?:[\w-]|\\[^a-fA-F0-9\n\r])+)(?::(?:hover|focus|focus-visible|active|disabled|checked|first-child|last-child|placeholder-shown|:placeholder|:before|:after))*$/;
 const moduleClass = /^\.(visual-qa_[\w-]+__[\w-]+)(?=$|[\s:.#[>+~])/;
-const activate = "const s=this.previousElementSibling;const ready=()=>{if(s?.hasAttribute('data-fj-critical'))s.remove()};const existing=[...document.querySelectorAll('link[rel=stylesheet]')].find(l=>l.href===this.href&&!l.disabled&&(!l.media||matchMedia(l.media).matches));if(existing){if(existing.sheet)ready();else existing.addEventListener('load',ready,{once:true});this.remove()}else{this.onload=ready;this.setAttribute('data-precedence','next');this.rel='stylesheet';this.removeAttribute('as')}";
+const smallSheetLimit = 8 * 1024;
+const smallSheetBudget = 16 * 1024;
+const unsafeInline = /<\/style|@(?:import|charset)\b|image-set\(|url\(\s*["']?(?!["']|\/|data:|https?:|#)/i;
+const activate = "this.removeAttribute('media');const s=this.previousElementSibling;if(s?.hasAttribute('data-fj-critical'))s.remove()";
 
 export const interactionFiles = [
   'src/components/v2/SiteHeader.tsx',
@@ -35,7 +38,7 @@ function renderedClasses(html) {
 function initialCss(css, classes, interactiveSource, parse) {
   const utilities = css.startsWith('*,:after,:before{--tw-');
   const mixedModules = css.includes('.visual-qa_page');
-  if ((!utilities && !mixedModules) || /<\/style|@import|url\(\s*["']?(?!["']|\/|data:|https?:|#)/i.test(css)) return null;
+  if (!utilities && !mixedModules) return null;
 
   const tree = parse(css);
   tree.walkRules(rule => {
@@ -65,16 +68,26 @@ export function optimizeDocument(pathname, html, readCss, parse, interactiveSour
   const classes = renderedClasses(html);
   if (!classes.size) return { html, sheets: [] };
   const sheets = [];
+  let smallSheetBytes = 0;
   const end = html.indexOf('</head>');
   const head = html.slice(0, end).replace(stylesheet, (tag, href) => {
-    if (/\s(?:media|onload)=/.test(tag) || !tag.includes('data-precedence="next"')) return tag;
+    if (/\s(?:media|onload|integrity|nonce|crossorigin)(?:=|\s|\/?>)/i.test(tag) ||
+        !tag.includes('data-precedence="next"')) return tag;
     const css = readCss(href);
-    const critical = initialCss(css, classes, interactiveSource, parse);
-    if (!critical) return tag;
-    sheets.push({ href, fullGzip: gzipSync(css).length, criticalGzip: gzipSync(critical).length });
-    const asyncLink = tag.replace('rel="stylesheet"', 'rel="preload" as="style" fetchpriority="low"')
-      .replace(/\sdata-precedence="next"/, '')
-      .replace(/\/?\s*>$/, ` onload="${activate}"/>`);
+    if (unsafeInline.test(css)) return tag;
+    const fullGzip = gzipSync(css).length;
+    let critical = initialCss(css, classes, interactiveSource, parse);
+    if (!critical) {
+      // Retain every rule in a small sheet so the first paint and early interactions
+      // have the same cascade before the cached, original stylesheet takes over.
+      if (/@font-face\b/i.test(css) || css.length > 32 * 1024 || fullGzip > smallSheetLimit ||
+          smallSheetBytes + fullGzip > smallSheetBudget) return tag;
+      critical = css;
+      smallSheetBytes += fullGzip;
+    }
+    sheets.push({ href, fullGzip, criticalGzip: gzipSync(critical).length });
+    // Preserve React's stylesheet identity and cascade slot during hydration.
+    const asyncLink = tag.replace(/\/?\s*>$/, ` media="not all" fetchpriority="low" onload="${activate}"/>`);
     return `<style data-fj-critical>${critical}</style>${asyncLink}<noscript>${tag}</noscript>`;
   });
   return { html: head + html.slice(end), sheets };
