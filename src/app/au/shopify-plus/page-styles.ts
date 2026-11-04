@@ -1,3 +1,10 @@
+// Inline the small route stylesheet so it does not add a blocking request.
+// Match Geist Mono with a monospace fallback to keep label widths stable.
+export default String.raw`
+.au-plus-visual-11.aiAgentPage.auPage {
+  --font-geist-mono: "Geist Mono", ui-monospace, Consolas, monospace;
+}
+
 /* /au/shopify-plus add-ons on top of AiAgentDevelopmentSections.css + ../au-page.css.
    Scoped to .au-plus-visual-11.aiAgentPage.auPage; tokens only from the Family A system, no new colours.
    Rules mirror /au/shopify-development/page.css so both Shopify pages read the same. */
@@ -185,6 +192,14 @@
 }
 @media (min-width: 821px) and (max-width: 1080px) {
   .au-plus-visual-11.aiAgentPage.auPage .hero-grid { align-items: start; }
+  .au-plus-visual-11.aiAgentPage.auPage .hero [data-hero-inline-form] input:is([type='text'], [type='email']) { padding-inline: 12px; }
+}
+
+/* Reserve the two eyebrow lines and ten lead lines seen during narrow phone font settlement. */
+@media (max-width: 375px) {
+  .au-plus-visual-11.aiAgentPage.auPage .hero .eyebrow { min-block-size: 3.2em; }
+  .au-plus-visual-11.aiAgentPage.auPage .hero .eyebrow::before { flex: none; }
+  .au-plus-visual-11.aiAgentPage.auPage .hero .lead { min-block-size: 17.5em; }
 }
 
 .au-plus-visual-11.aiAgentPage.auPage .au-midcta p.font-fj-display { font-size: clamp(24px,2.6vw,32px); line-height: 1.2; }
@@ -192,3 +207,4 @@
 /* Reviewer correction: size the disclosure itself and keep the final counter readable. */
 .au-plus-visual-11.aiAgentPage.auPage details.tnode > summary { min-height: 44px; }
 .au-plus-visual-11.aiAgentPage.auPage .tnode:last-child .idx { background: var(--accent-text); color: var(--panel); }
+`;
