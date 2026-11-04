@@ -1,3 +1,10 @@
+// Inline the small route stylesheet so it does not add a blocking request.
+// Match Geist Mono with a monospace fallback to keep label widths stable.
+export default String.raw`
+.auReceivablesVisual10 {
+  --font-geist-mono: "Geist Mono", ui-monospace, Consolas, monospace;
+}
+
 /* Only the accounts receivable page consumes these visual and readability rules. */
 .auReceivablesVisual10 .aiAgentPage.auPage main :is(p, li, td, th) {
   font-size: 16px;
@@ -133,3 +140,4 @@
   .auReceivablesVisual10 .aiAgentPage.auPage .agentdir .agentdir-grid { grid-template-columns: 1fr; }
   .auReceivablesVisual10 .aiAgentPage.auPage .ar-photo { border-radius: 16px; }
 }
+`;
