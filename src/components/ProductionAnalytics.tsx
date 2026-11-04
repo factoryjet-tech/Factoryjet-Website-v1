@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { captureLeadAttribution } from '@/utils/leadAttribution';
+import auLoadingRoutes from '@/data/auLoadingRoutes.json';
 
 /**
  * ProductionAnalytics — loads the GTM container ONLY, and ONLY on the production
@@ -62,16 +63,21 @@ export default function ProductionAnalytics() {
     let idleId: number | undefined;
     let timeoutId: ReturnType<typeof setTimeout> | undefined;
 
-    const load = () => {
+    const load = (interactive = false) => {
       cleanup();
       if (document.querySelector('script[data-fj-gtm]')) return;
       (w.dataLayer as unknown[]).push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
       const gtm = document.createElement('script');
       gtm.async = true;
+      const path = window.location.pathname.replace(/\/$/, '');
+      if (!interactive && auLoadingRoutes.includes(path)) {
+        gtm.setAttribute('fetchpriority', 'low');
+      }
       gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PKWD8SHF';
       gtm.setAttribute('data-fj-gtm', '1');
       document.head.appendChild(gtm);
     };
+    const loadOnInteraction = () => load(true);
 
     // Two animation frames guarantee the first paint has happened before GTM starts,
     // so its ~350 KB of scripts never compete with the hero text (LCP) on slow phones.
@@ -79,7 +85,7 @@ export default function ProductionAnalytics() {
       requestAnimationFrame(() =>
         requestAnimationFrame(() => {
           if ('requestIdleCallback' in window) {
-            idleId = window.requestIdleCallback(load, { timeout: 2000 });
+            idleId = window.requestIdleCallback(() => load(), { timeout: 2000 });
           } else {
             timeoutId = setTimeout(load, 1500);
           }
@@ -88,13 +94,13 @@ export default function ProductionAnalytics() {
     };
 
     function cleanup() {
-      events.forEach((e) => window.removeEventListener(e, load));
+      events.forEach((e) => window.removeEventListener(e, loadOnInteraction));
       window.removeEventListener('load', scheduleIdle);
       if (idleId !== undefined && 'cancelIdleCallback' in window) window.cancelIdleCallback(idleId);
       if (timeoutId !== undefined) clearTimeout(timeoutId);
     }
 
-    events.forEach((e) => window.addEventListener(e, load, { once: true, passive: true }));
+    events.forEach((e) => window.addEventListener(e, loadOnInteraction, { once: true, passive: true }));
     if (document.readyState === 'complete') scheduleIdle();
     else window.addEventListener('load', scheduleIdle, { once: true });
 
