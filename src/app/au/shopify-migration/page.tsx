@@ -10,7 +10,7 @@ import AuFaq from '../components/AuFaq';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
-import './page.css';
+import pageStyles from './page-styles';
 
 const CANONICAL = 'https://factoryjet.com/au/shopify-migration';
 const UPDATED = '2026-10-29';
@@ -329,6 +329,7 @@ export default function ShopifyMigrationAUPage() {
 
       <SiteHeader locale="au" logoHref="/au" />
       <div className="aiAgentPage auPage auMigration">
+        <style>{pageStyles}</style>
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (

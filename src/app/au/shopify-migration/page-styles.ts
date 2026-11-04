@@ -1,3 +1,10 @@
+// Inline the small route stylesheet so it does not add a blocking request.
+// Match Geist Mono with a monospace fallback to keep label widths stable.
+export default String.raw`
+.aiAgentPage.auPage.auMigration {
+  --font-geist-mono: "Geist Mono", ui-monospace, Consolas, monospace;
+}
+
 /* /au/shopify-migration add-ons on top of AiAgentDevelopmentSections.css + ../au-page.css.
    Scoped to .aiAgentPage.auPage.auMigration; tokens only from the Family A system, no new colours.
    The first block mirrors ../shopify-development/page.css, re-scoped to this route. */
@@ -148,3 +155,4 @@
   .aiAgentPage.auPage.auMigration .ans { margin-left: 0; }
   .aiAgentPage.auPage.auMigration .finalcta .ctas .btn { width: 100%; padding-inline: 14px; }
 }
+`;
