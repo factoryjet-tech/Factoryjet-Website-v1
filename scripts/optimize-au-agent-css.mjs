@@ -1,4 +1,5 @@
 /** Keep the first render on the three AU agent pages off the full utility stylesheet. */
+import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -11,7 +12,7 @@ export const routes = [
 
 const stylesheet = /<link\b(?=[^>]*\srel="stylesheet")(?=[^>]*\shref="(\/_next\/static\/css\/[a-z0-9]+\.css)")[^>]*>/gi;
 const simpleClass = /^\.((?:[\w-]|\\[^a-fA-F0-9\n\r])+)(?::(?:hover|focus|focus-visible|active|disabled|checked|first-child|last-child|placeholder-shown|:placeholder|:before|:after))*$/;
-const activate = "const s=this.previousElementSibling;const ready=()=>{if(s?.hasAttribute('data-fj-critical'))s.remove()};const existing=[...document.querySelectorAll('link[rel=stylesheet]')].find(l=>l.href===this.href&&!l.disabled&&(!l.media||matchMedia(l.media).matches));if(existing){if(existing.sheet)ready();else existing.addEventListener('load',ready,{once:true});this.remove()}else{this.onload=ready;this.setAttribute('data-precedence','next');this.rel='stylesheet';this.removeAttribute('as')}";
+const activate = "this.media='all';const initial=this.previousElementSibling;if(initial?.hasAttribute('data-fj-critical'))initial.remove()";
 
 export const interactionFiles = [
   'src/components/v2/SiteHeader.tsx',
@@ -66,11 +67,20 @@ export function optimizeDocument(pathname, html, readCss, parse, interactiveSour
     const css = readCss(href);
     const critical = initialCss(css, classes, interactiveSource, parse);
     if (!critical) return tag;
-    sheets.push({ href, fullGzip: gzipSync(css).length, criticalGzip: gzipSync(critical).length });
-    const asyncLink = tag.replace('rel="stylesheet"', 'rel="preload" as="style" fetchpriority="low"')
-      .replace(/\sdata-precedence="next"/, '')
-      .replace(/\/?\s*>$/, ` onload="${activate}"/>`);
-    return `<style data-fj-critical>${critical}</style>${asyncLink}<noscript>${tag}</noscript>`;
+    const hash = createHash('sha256').update(critical).digest('hex').slice(0, 16);
+    const initialHref = `/_next/static/css/fj-au-initial-${hash}.css`;
+    sheets.push({
+      href,
+      initialHref,
+      initialCss: critical,
+      fullGzip: gzipSync(css).length,
+      criticalGzip: gzipSync(critical).length,
+    });
+    const initialLink = tag.replace(href, initialHref).replace(/\/?\s*>$/, ' data-fj-critical=""/>');
+    // Print stylesheets download without blocking the screen. Retain the
+    // original href and precedence so Next can reuse it during navigation.
+    const fullLink = tag.replace(/\/?\s*>$/, ` media="print" fetchpriority="low" onload="${activate}"/>`);
+    return `${initialLink}${fullLink}<noscript>${tag}</noscript>`;
   });
   return { html: head + html.slice(end), sheets };
 }
@@ -93,8 +103,15 @@ async function main() {
       mkdirSync(dirname(control), { recursive: true });
       writeFileSync(control, source);
     }
-    if (result.sheets.length) writeFileSync(file, result.html);
-    console.log('optimize-au-loading', route, JSON.stringify(result.sheets));
+    if (result.sheets.length) {
+      for (const { initialHref, initialCss } of result.sheets) {
+        writeFileSync(out + initialHref, initialCss);
+      }
+      writeFileSync(file, result.html);
+    }
+    console.log('optimize-au-loading', route, JSON.stringify(
+      result.sheets.map(({ initialCss, ...metrics }) => metrics),
+    ));
   }
 }
 
