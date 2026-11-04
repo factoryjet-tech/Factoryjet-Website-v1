@@ -126,12 +126,12 @@ export default String.raw`/* /au/shopify-maintenance-services add-ons on top of 
 }
 
 @media (min-width: 640px) {
-  .aiAgentPage.auPage.au-maintenance-visual-11 [data-hero-inline-form] > div > div:has(> input[type='email']) {
+  .aiAgentPage.auPage.au-maintenance-visual-11 [data-hero-inline-form] > div > div:has(> input[type=email]) {
     display: grid;
     grid-template-columns: repeat(2,minmax(0,1fr));
   }
 
-  .aiAgentPage.auPage.au-maintenance-visual-11 [data-hero-inline-form] > div > div:has(> input[type='email']) > button[type='submit'] {
+  .aiAgentPage.auPage.au-maintenance-visual-11 [data-hero-inline-form] > div > div:has(> input[type=email]) > button[type='submit'] {
     grid-column: 1 / -1;
   }
 }

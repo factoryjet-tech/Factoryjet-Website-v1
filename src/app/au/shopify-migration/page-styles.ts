@@ -141,7 +141,7 @@ export default String.raw`
 }
 
 @media (max-width: 639px) {
-  .aiAgentPage.auPage.auMigration .hero-copy [data-hero-inline-form] input:is([type="text"], [type="email"]):not([aria-hidden="true"]) { font-size: 16px; }
+  .aiAgentPage.auPage.auMigration .hero-copy [data-hero-inline-form] input:is([type="text"], [type=email]):not([aria-hidden="true"]) { font-size: 16px; }
 }
 
 @media (max-width: 430px) {

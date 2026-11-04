@@ -265,7 +265,7 @@ export default String.raw`
     font-size: 16px;
   }
 
-  .aiAgentPage.auPage.au-xero-visual-11 #au-content [data-hero-inline-form] input:is([type='text'], [type='email'], [type='tel']) {
+  .aiAgentPage.auPage.au-xero-visual-11 #au-content [data-hero-inline-form] input:is([type='text'], [type=email], [type='tel']) {
     font-size: 16px;
   }
 

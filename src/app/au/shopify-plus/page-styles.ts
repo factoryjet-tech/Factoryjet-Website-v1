@@ -192,7 +192,7 @@ export default String.raw`
 }
 @media (min-width: 821px) and (max-width: 1080px) {
   .au-plus-visual-11.aiAgentPage.auPage .hero-grid { align-items: start; }
-  .au-plus-visual-11.aiAgentPage.auPage .hero [data-hero-inline-form] input:is([type='text'], [type='email']) { padding-inline: 12px; }
+  .au-plus-visual-11.aiAgentPage.auPage .hero [data-hero-inline-form] input:is([type='text'], [type=email]) { padding-inline: 12px; }
 }
 
 /* Reserve the two eyebrow lines and ten lead lines seen during narrow phone font settlement. */
