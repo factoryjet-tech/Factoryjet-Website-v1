@@ -133,6 +133,10 @@
   .aiAgentPage.auPage.auMigration .specpanel-bar > .sys > span:first-child { min-block-size: 0; }
 }
 
+@media (max-width: 639px) {
+  .aiAgentPage.auPage.auMigration .hero-copy [data-hero-inline-form] input:is([type="text"], [type="email"]):not([aria-hidden="true"]) { font-size: 16px; }
+}
+
 @media (max-width: 430px) {
   .aiAgentPage.auPage.auMigration h2,
   .aiAgentPage.auPage.auMigration .facts h2,
