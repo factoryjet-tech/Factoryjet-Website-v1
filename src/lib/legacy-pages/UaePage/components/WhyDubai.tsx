@@ -32,7 +32,7 @@ const WhyDubai: React.FC = () => {
             {/* Intro Paragraph */}
             <div className="max-w-4xl mx-auto text-center mb-16">
                 <p className="text-[16px] md:text-[18px] text-[#334155] leading-relaxed font-normal">
-                    The UAE's digital landscape is rapidly evolving, with 99% internet penetration and 95% mobile usage creating unprecedented opportunities for SMBs. The UAE's Vision 2030 emphasizes digital innovation, making professional web presence not just beneficial but essential for business survival and growth.
+                    The UAE's digital market is changing fast, with 99% internet penetration and 95% mobile usage creating unprecedented opportunities for SMBs. The UAE's Vision 2030 emphasizes digital innovation, making professional web presence not just beneficial but essential for business survival and growth.
                 </p>
             </div>
 

@@ -214,7 +214,10 @@ export default function CityHubPage({ city }: CityHubPageProps) {
   const CANONICAL = `https://factoryjet.com/uk/${city.slug}`
   const depth = getCityDepth(city.slug)
   const market = getCityMarket(city.slug)
-  const faqs = buildFaqs(city, market)
+  const copy = depth?.copy
+  // Per-city answer rewrites (only Plymouth today) are merged here, so the visible
+  // FAQ and the FAQPage schema below still read one array.
+  const faqs = buildFaqs(city, market).map((f) => ({ ...f, a: copy?.faqAnswers?.[f.q] ?? f.a }))
   const topTerm = market?.terms?.[0]
 
   const faqSchema = {
@@ -304,9 +307,13 @@ export default function CityHubPage({ city }: CityHubPageProps) {
                 Web design and digital work for {city.name} businesses
               </h1>
               <p className="mt-6 max-w-[58ch] font-fj-body text-[1.0625rem] leading-[1.65] text-fj-neutral-600">
-                Websites, online stores, SEO and AI agents for the roughly {fmt(city.businesses)} businesses
-                trading in {city.name}. Senior people on the build, a fixed written scope before work starts,
-                and you own everything at the end.
+                {copy?.heroLead ?? (
+                  <>
+                    Websites, online stores, SEO and AI agents for the roughly {fmt(city.businesses)} businesses
+                    trading in {city.name}. Senior people on the build, a fixed written scope before work starts,
+                    and you own everything at the end.
+                  </>
+                )}
               </p>
               <ul className="mt-7 flex flex-wrap gap-x-7 gap-y-3">
                 {['You own the code and the data', 'Fixed written scope up front', 'No long-term contract', 'Senior people on the build'].map((t) => (
@@ -333,9 +340,13 @@ export default function CityHubPage({ city }: CityHubPageProps) {
                 run on, remotely, with a fixed written scope agreed before any work starts.
               </p>
               <p className="mt-5 max-w-[74ch] font-fj-body text-[1rem] leading-[1.75] text-fj-neutral-600">
-                You own the code, the domain and the data on day one. There is no retainer you cannot
-                leave and no platform you are locked into. If what you need is smaller than what you
-                asked for, we say so before quoting rather than after.
+                {copy?.answerFirstNote ?? (
+                  <>
+                    You own the code, the domain and the data on day one. There is no retainer you cannot
+                    leave and no platform you are locked into. If what you need is smaller than what you
+                    asked for, we say so before quoting rather than after.
+                  </>
+                )}
               </p>
             </div>
           </section>
@@ -347,9 +358,13 @@ export default function CityHubPage({ city }: CityHubPageProps) {
             <div className="mx-auto max-w-[1160px]">
               <h2 className={H2}>What {city.name} businesses actually search for</h2>
               <p className={LEAD}>
-                Measured monthly search volume in the UK for city-level terms, pulled from Google Ads
-                keyword data. Competition is the advertiser competition band for the term, not how hard
-                it is to rank.
+                {copy?.termsLead ?? (
+                  <>
+                    Measured monthly search volume in the UK for city-level terms, pulled from Google Ads
+                    keyword data. Competition is the advertiser competition band for the term, not how hard
+                    it is to rank.
+                  </>
+                )}
               </p>
               <div className="mt-8 overflow-x-auto">
                 <table className="w-full min-w-[520px] border-collapse text-left">
@@ -384,9 +399,13 @@ export default function CityHubPage({ city }: CityHubPageProps) {
             <div className="mx-auto max-w-[1160px]">
               <h2 className={H2}>Who else ranks for web design in {city.name}</h2>
               <p className={LEAD}>
-                The agencies currently holding page-one positions for &ldquo;web design {city.name.toLowerCase()}&rdquo;,
-                with their live position. We would rather name them than pretend the market is empty.
-                Get more than one quote, and if another team fits your project better, that is a good outcome.
+                {copy?.competitorsLead ?? (
+                  <>
+                    The agencies currently holding page-one positions for &ldquo;web design {city.name.toLowerCase()}&rdquo;,
+                    with their live position. We would rather name them than pretend the market is empty.
+                    Get more than one quote, and if another team fits your project better, that is a good outcome.
+                  </>
+                )}
               </p>
               <ol className="mt-8 flex flex-col gap-3">
                 {market.competitors.map((c) => (
@@ -532,8 +551,12 @@ export default function CityHubPage({ city }: CityHubPageProps) {
           <div className="mx-auto max-w-[1160px]">
             <h2 className={H2}>Larger employers in the area</h2>
             <p className={LEAD}>
-              Context rather than a client list. These are the organisations setting local salary levels and
-              pulling technical people into the city.
+              {copy?.employersLead ?? (
+                <>
+                  Context rather than a client list. These are the organisations setting local salary levels and
+                  pulling technical people into the city.
+                </>
+              )}
             </p>
             <ul className="mt-7 flex flex-wrap gap-2.5">
               {city.keyEmployers.map((e) => <li key={e} className={PILL}>{e}</li>)}
@@ -547,7 +570,7 @@ export default function CityHubPage({ city }: CityHubPageProps) {
             market sections above had to scroll to one extreme or the other. */}
         <MidPageCTA
           headline={`Thinking about a new site for your ${city.name} business?`}
-          sub={`Send us your current URL. We will come back with the three things costing you the most enquiries in ${city.name}, and what it would take to fix them.`}
+          sub={copy?.midCtaSub ?? `Send us your current URL. We will come back with the three things costing you the most enquiries in ${city.name}, and what it would take to fix them.`}
           label={'Get a free site review'}
         />
 
@@ -557,7 +580,11 @@ export default function CityHubPage({ city }: CityHubPageProps) {
             <div className="mx-auto max-w-[1160px]">
               <h2 className={H2}>Business districts and parks in {city.name}</h2>
               <p className={LEAD}>
-                Where the commercial activity actually sits, which is not always the same as the city centre.
+                {copy?.districtsLead ?? (
+                  <>
+                    Where the commercial activity actually sits, which is not always the same as the city centre.
+                  </>
+                )}
               </p>
               <ul className="mt-7 flex flex-wrap gap-2.5">
                 {depth.businessDistricts.map((d) => <li key={d} className={PILL}>{d}</li>)}
@@ -571,8 +598,12 @@ export default function CityHubPage({ city }: CityHubPageProps) {
           <div className="mx-auto max-w-[1160px]">
             <h2 className={H2}>Areas of {city.name} we work across</h2>
             <p className={LEAD}>
-              Delivery is remote, so where you sit in the city changes nothing about cost or timeline. These
-              are simply the areas clients have come from so far.
+              {copy?.areasLead ?? (
+                <>
+                  Delivery is remote, so where you sit in the city changes nothing about cost or timeline. These
+                  are simply the areas clients have come from so far.
+                </>
+              )}
             </p>
             <ul className="mt-7 flex flex-wrap gap-2.5">
               {city.cityAreas.map((a) => <li key={a} className={PILL}>{a}</li>)}
@@ -586,8 +617,12 @@ export default function CityHubPage({ city }: CityHubPageProps) {
             <div className="mx-auto max-w-[1160px]">
               <h2 className={H2}>Towns and areas near {city.name} we also serve</h2>
               <p className={LEAD}>
-                Most businesses here trade across a wider catchment than the city boundary, and search
-                behaves the same way.
+                {copy?.catchmentLead ?? (
+                  <>
+                    Most businesses here trade across a wider catchment than the city boundary, and search
+                    behaves the same way.
+                  </>
+                )}
               </p>
               <ul className="mt-7 flex flex-wrap gap-2.5">
                 {depth.servingAreas.map((a) => <li key={a} className={PILL}>{a}</li>)}
@@ -602,7 +637,11 @@ export default function CityHubPage({ city }: CityHubPageProps) {
             <div className="mx-auto max-w-[1160px]">
               <h2 className={H2}>Universities and research institutions</h2>
               <p className={LEAD}>
-                A steady source of spin-outs, research groups and short-cycle project work in this city.
+                {copy?.institutionsLead ?? (
+                  <>
+                    A steady source of spin-outs, research groups and short-cycle project work in this city.
+                  </>
+                )}
               </p>
               <ul className="mt-7 flex flex-wrap gap-2.5">
                 {depth.institutions.map((i) => <li key={i} className={PILL}>{i}</li>)}

@@ -775,7 +775,7 @@ export default function NdisWebsiteDesignAUPage() {
           <div className="wrap">
             <div className="section-head plat-head">
               <div>
-                <div className="eyebrow">The honest landscape</div>
+                <div className="eyebrow">The honest comparison</div>
                 <h2>NDIS website design and marketing options in Australia</h2>
               </div>
               <p>

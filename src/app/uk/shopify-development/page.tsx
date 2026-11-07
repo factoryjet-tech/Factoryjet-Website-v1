@@ -1026,7 +1026,7 @@ export default function ShopifyDevelopmentPage() {
 <section className="sec-lg" style={{ background: 'var(--white)' }}>
   <div className="wrap">
     <div style={{ maxWidth: '760px' }}>
-      <span className="eyebrow">THE HONEST LANDSCAPE</span>
+      <span className="eyebrow">THE HONEST COMPARISON</span>
       <h2 style={{ marginTop: '12px' }}>UK Shopify agencies and Shopify partners worth knowing</h2>
       <p className="lead mt-4">
         We are one option, not the only one. These Shopify agencies show up when people search for

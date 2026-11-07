@@ -981,7 +981,7 @@ export default function AiReceptionistAUPage() {
           <div className="wrap">
             <div className="section-head plat-head">
               <div>
-                <div className="eyebrow">The honest landscape</div>
+                <div className="eyebrow">The honest comparison</div>
                 <h2>Australian AI receptionist and virtual receptionist providers worth knowing</h2>
               </div>
               <p>

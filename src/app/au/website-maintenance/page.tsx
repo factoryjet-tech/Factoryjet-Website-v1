@@ -16,10 +16,10 @@ import { twinAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/au/website-maintenance';
 const UPDATED = '2026-10-21';
-const TITLE = 'Website Maintenance Services & Packages Australia | FactoryJet';
+const TITLE = 'Website Maintenance Services & Plans Australia | FactoryJet';
 const H1 = 'Website Maintenance Services for Australian Businesses: Updates, Security, Backups and Changes, Handled';
 const DESCRIPTION =
-  'Website maintenance packages for Australian WordPress and Shopify sites, described by scope, with sourced AUD market ranges: tested updates, backups, security and fixes.';
+  'Website maintenance packages for Australian WordPress and Shopify sites, with sourced AUD market ranges: tested updates, backups, security and fixes.';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD. */
 const crumbs = [
@@ -980,7 +980,7 @@ export default function WebsiteMaintenanceAUPage() {
           <div className="wrap">
             <div className="section-head plat-head">
               <div>
-                <div className="eyebrow">The honest landscape</div>
+                <div className="eyebrow">The honest comparison</div>
                 <h2>Australian website maintenance providers worth knowing</h2>
               </div>
               <p>

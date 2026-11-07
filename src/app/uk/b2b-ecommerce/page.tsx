@@ -748,7 +748,7 @@ export default function B2bEcommerceUKPage() {
         <section className="sec-lg dot-grid">
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
+              <span className="eyebrow">The honest comparison</span>
               <h2>UK B2B ecommerce agencies worth knowing</h2>
               <p className="lead mt-4">
                 We are one option, not the only one. These UK agencies show up when people search for a B2B

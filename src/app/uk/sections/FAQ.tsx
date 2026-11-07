@@ -117,7 +117,7 @@ export default function FAQ() {
         .fj-cat-pills { -ms-overflow-style: none; scrollbar-width: none; }
 
         /* Accordion: CSS-only transition. Answer is ALWAYS in the DOM, we
-           just collapse max-height and fade opacity. This is crucial for
+           just collapse max-height and fade opacity. This is important for
            AI crawlers that read HTML source, not computed styles. */
         [data-acc-panel] {
           max-height: 0;

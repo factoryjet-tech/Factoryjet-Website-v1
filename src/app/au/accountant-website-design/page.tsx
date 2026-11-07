@@ -882,7 +882,7 @@ export default function AccountantWebsiteDesignAUPage() {
           <div className="wrap">
             <div className="section-head plat-head">
               <div>
-                <div className="eyebrow">The honest landscape</div>
+                <div className="eyebrow">The honest comparison</div>
                 <h2>Accountant website design and SEO providers in Australia</h2>
               </div>
               <p>

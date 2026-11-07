@@ -914,7 +914,7 @@ export default function AiAgentsUKPage() {
         <section className="sec-lg dot-grid">
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
+              <span className="eyebrow">The honest comparison</span>
               <h2>UK AI automation and agent agencies worth knowing</h2>
               <p className="lead mt-4">
                 We would rather tell you the truth than pretend we are the only option. Here are teams doing

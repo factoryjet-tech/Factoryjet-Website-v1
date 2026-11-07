@@ -82,7 +82,7 @@ const SRC = {
   // quote; development retainer £149 to £379+ or a quote. VAT treatment varies by provider; 20% example.
   rattlesnake: { label: 'Rattlesnake, website maintenance cost UK (Sep 2026)', url: 'https://www.rsnake.co.uk/blog/website-maintenance-cost-uk-what-you-should-actually-be-paying-in-2026' },
   // Red Evolution (offices in Aberdeen, Edinburgh and London), updated 11/06/2026: basic management £50 to
-  // £300 a month; comprehensive management with SEO, content and development £500 to £2,000-plus a month.
+  // £300 a month; full management with SEO, content and development £500 to £2,000-plus a month.
   // VAT not stated.
   redevolution: { label: 'Red Evolution, website management cost in the UK (Jun 2026)', url: 'https://www.redevolution.com/blog/how-much-does-website-management-cost-in-the-uk' },
   // Read 2026-10-31. Kinsta docs: "All plugins and themes are updated, including inactive ones." Screenshots

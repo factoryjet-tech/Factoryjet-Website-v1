@@ -58,7 +58,7 @@ export default function DigitalLandscape() {
   return (
     <section
       id="digital-landscape"
-      aria-label="The UK digital landscape in 2026"
+      aria-label="The UK digital market in 2026"
       className="relative w-full"
       style={{ backgroundColor: "#FFFFFF", maxWidth: "100vw" }}
     >
@@ -78,7 +78,7 @@ export default function DigitalLandscape() {
               textTransform: "uppercase",
             }}
           >
-            The UK Digital Landscape in 2026
+            The UK Digital Market in 2026
           </p>
 
           <h2
@@ -191,7 +191,7 @@ export default function DigitalLandscape() {
               >
                 <Image
                   src="/images/uk/uk-landscape.jpg"
-                  alt="Modern UK technology and business landscape, London glass office towers at daylight"
+                  alt="Modern UK technology and business district, London glass office towers at daylight"
                   fill
                   sizes="(min-width: 1024px) 45vw, 100vw"
                   className="object-cover"

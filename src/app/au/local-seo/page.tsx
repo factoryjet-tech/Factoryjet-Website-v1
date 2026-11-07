@@ -873,7 +873,7 @@ export default function LocalSeoAUPage() {
           <div className="wrap">
             <div className="section-head plat-head">
               <div>
-                <div className="eyebrow">The honest landscape</div>
+                <div className="eyebrow">The honest comparison</div>
                 <h2>Local SEO agencies Australian businesses compare</h2>
               </div>
               <p>

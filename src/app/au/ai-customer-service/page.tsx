@@ -934,7 +934,7 @@ export default function AiCustomerServiceAUPage() {
           <div className="wrap">
             <div className="section-head plat-head">
               <div>
-                <div className="eyebrow">The honest landscape</div>
+                <div className="eyebrow">The honest comparison</div>
                 <h2>AI customer service options Australian businesses compare</h2>
               </div>
               <p>
