@@ -984,7 +984,7 @@ export default function SeoUKPage() {
                 this page, and he is the person who replies when you use the form on it.
               </p>
               <ul className="fact-list mt-6" style={{ maxWidth: 760 }}>
-                <li><b>What he does day to day:</b> technical audits, page structure, schema, internal linking, and measurement across UK, US, and India accounts.</li>
+                <li><b>What he does day to day:</b> technical audits, page structure, schema, internal linking, and measurement across UK and US accounts.</li>
                 <li><b>How to check:</b> profiles below, and a free audit of your own site that you can judge on its merits before committing to anything.</li>
                 <li><b>What he will not do:</b> guarantee a ranking, buy links in bulk, or hand your account to someone you have not met.</li>
               </ul>

@@ -29,7 +29,7 @@ const App: React.FC = () => {
             Web &amp; Digital Insights for <span className="text-[#F05A28]">Growing Brands</span>
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl">
-            Expert strategies on web design, e-commerce, AI, and digital growth for SMBs across India and the US.
+            Expert strategies on web design, e-commerce, AI, and digital growth for small and mid-sized businesses.
           </p>
         </div>
       </header>

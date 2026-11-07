@@ -440,7 +440,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'f5', question: 'Why is SEO harder in London than in the rest of the UK?',
     answer: 'Because the competition is denser than anywhere else in the country. ONS counted 538,000 VAT or PAYE registered businesses in London in March 2025, which is 19.7 per cent of every business in the UK. The firms holding page one for London terms have usually spent years earning links, so the realistic route in is the specific, lower-competition terms first.' },
   { category: 'f5', question: 'Can you help a London startup on a tight budget?',
-    answer: 'Yes. We offer affordable website design routes for early-stage London startups, then scale the site and SEO as you grow. You still own everything we build from day one, so nothing has to be rebuilt when the budget grows.' },
+    answer: 'Yes. We offer smaller, fixed-price website design routes for early-stage London startups, then scale the site and SEO as you grow. You still own everything we build from day one, so nothing has to be rebuilt when the budget grows.' },
 ];
 
 /* ─── JSON-LD @graph ─────────────────────────────────────────────────── */

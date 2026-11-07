@@ -155,7 +155,7 @@ export default function DigitalLandscape() {
               <p>
                 This gap represents one of the largest business opportunities
                 in UK digital services today. The companies that bridge it,
-                that make AI accessible, affordable, and practical for British
+                that make AI accessible and practical for British
                 SMBs, will define the next era of UK business technology.
                 That is exactly what FactoryJet was built to do.
               </p>

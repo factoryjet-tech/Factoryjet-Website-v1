@@ -550,7 +550,7 @@ export default function SmallBusinessWebDesignPage() {
         formSlot={<HeroInlineForm region="us" source="us_services_small_business_website_design_hero" />}
           eyebrow="SMALL BUSINESS WEBSITE DESIGN"
           headline="A website your customers trust. Built in 7 days. Fixed price, scoped to your build."
-          lead="Custom-designed (not a template), mobile-first, Lighthouse 95+ performance, full SEO setup, and delivered to your domain in 7 days. 500+ small businesses served across the US, UK, UAE and India."
+          lead="Custom-designed (not a template), mobile-first, Lighthouse 95+ performance, full SEO setup, and delivered to your domain in 7 days. 500+ small businesses served across the US, UK and UAE."
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
@@ -610,7 +610,7 @@ export default function SmallBusinessWebDesignPage() {
         />
 
         {/* -- 2. LOGO BAR ---------------------------------------------------- */}
-        <LogoBar tagline="500+ small businesses across the US, UK, UAE and India trust FactoryJet, from Austin and Miami to Denver, Nashville, and Portland" />
+        <LogoBar tagline="500+ small businesses across the US, UK and UAE trust FactoryJet, from Austin and Miami to Denver, Nashville, and Portland" />
 
         {/* -- 3. TRUST BLOCK ----------------------------------------------─-- */}
         <BigThreeTrustBlock
@@ -718,7 +718,7 @@ export default function SmallBusinessWebDesignPage() {
         {/* -- 5. INDUSTRIES WE SERVE --------------------------------------─-- */}
         <IndustriesGrid
           eyebrow="INDUSTRIES WE SERVE"
-          headline="We've Built Websites for 500+ Small Businesses Across the US, UK, UAE and India"
+          headline="We've Built Websites for 500+ Small Businesses Across the US, UK and UAE"
         />
 
         {/* -- 6. WHY US AGENCIES AREN'T THE ANSWER ------------------------─-- */}

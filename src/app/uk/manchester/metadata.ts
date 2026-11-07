@@ -14,7 +14,6 @@ export const manchesterMetadata: Metadata = {
     "web design agency manchester",
     "website designer manchester",
     "web development manchester",
-    "affordable web design manchester",
     "professional web design manchester",
     "custom website manchester",
     "next.js developer manchester",

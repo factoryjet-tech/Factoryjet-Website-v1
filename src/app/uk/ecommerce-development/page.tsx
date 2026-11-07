@@ -575,8 +575,7 @@ export default function EcommerceDevelopmentUKPage() {
                     and the founder, Bhavesh Barot, stays involved on every build, not just the pitch.
                   </p>
                   <p>
-                    FactoryJet was founded in 2014 and has served 500+ businesses across the UK, the US, the UAE and
-                    India, with more than a decade in commerce. That includes B2B work like Bombay Petals and DTC
+                    FactoryJet was founded in 2014 and has served 500+ businesses across the UK, the US and the UAE, with more than a decade in commerce. That includes B2B work like Bombay Petals and DTC
                     brands like Belle Maison. The standard does not drop because a project is smaller: same code
                     quality, same review, and full ownership of everything we build.
                   </p>

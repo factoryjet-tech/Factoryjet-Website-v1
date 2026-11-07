@@ -264,7 +264,7 @@ export const post: BlogPost = {
         <div>
           <p className="font-semibold text-gray-900">Bhavesh Barot</p>
           <p className="text-sm text-gray-600">
-            Founder, FactoryJet. Bhavesh has led web development, e-commerce, and technical SEO programs for 500+ small businesses across the US, UK, UAE, and India. He specializes in Generative Engine Optimization (GEO) that earns real-world AI citations.
+            Founder, FactoryJet. Bhavesh has led web development, e-commerce, and technical SEO programs for 500+ small businesses across the US, UK and UAE. He specializes in Generative Engine Optimization (GEO) that earns real-world AI citations.
           </p>
         </div>
       </div>

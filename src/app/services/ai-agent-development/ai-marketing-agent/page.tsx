@@ -967,6 +967,7 @@ export default function AIMarketingAgentUSPage() {
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
           headline="What founders say about working with FactoryJet"
+          region="us"
         />
 
                 {/* ── Enterprise Security & Governance Architecture ── */}

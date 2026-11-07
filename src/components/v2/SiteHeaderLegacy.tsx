@@ -180,7 +180,7 @@ const US_SEO_SERVICES = [
   { icon: ShoppingCart,  label: 'E-commerce SEO',     href: '/services/ecommerce-seo',      desc: 'Product & collection SEO' },
   { icon: TrendingUp,    label: 'Shopify SEO',        href: '/services/shopify-seo',        desc: 'Rank your Shopify store' },
   { icon: Search,        label: 'SEO Audit',          href: '/services/seo-audit',          desc: 'Free technical site check' },
-  { icon: Store,         label: 'Small Business SEO', href: '/services/small-business-seo', desc: 'Affordable managed SEO' },
+  { icon: Store,         label: 'Small Business SEO', href: '/services/small-business-seo', desc: 'Month-to-month managed SEO' },
 ] as const;
 
 // Industry SEO verticals (US) — sub-group in the SEO mega column + mobile drawer

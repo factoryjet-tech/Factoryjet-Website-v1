@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Can FactoryJet build an ecommerce store for my Denver CO business?',
-      a: 'Yes. FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses, with 7-day delivery on a standard 50-product Shopify setup. Every build gets a fixed price in writing after a short scoping call, and larger catalogues and custom integrations are scoped the same way. Our scope includes custom theme configuration, product upload with SEO-optimized titles and descriptions, Colorado sales tax configuration, Google Shopping feed setup, Product JSON-LD schema, Lighthouse 95+ optimization, and 30 days post-launch support. We\'ve served 500+ businesses across the US, UK, UAE and India, including clients in Colorado and the Mountain West. Get a free quote with a PageSpeed proof link at factoryjet.com/contact.',
+      a: 'Yes. FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses, with 7-day delivery on a standard 50-product Shopify setup. Every build gets a fixed price in writing after a short scoping call, and larger catalogues and custom integrations are scoped the same way. Our scope includes custom theme configuration, product upload with SEO-optimized titles and descriptions, Colorado sales tax configuration, Google Shopping feed setup, Product JSON-LD schema, Lighthouse 95+ optimization, and 30 days post-launch support. We\'ve served 500+ businesses across the US, UK and UAE, including clients in Colorado and the Mountain West. Get a free quote with a PageSpeed proof link at factoryjet.com/contact.',
     },
   ],
   content: (

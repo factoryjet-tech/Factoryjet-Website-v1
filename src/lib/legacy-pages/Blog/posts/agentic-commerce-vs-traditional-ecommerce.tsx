@@ -952,7 +952,7 @@ export const post: BlogPost = {
       <p className="mb-4 text-gray-800">
         <em>
           Bhavesh Barot is the founder of FactoryJet. His team builds and runs ecommerce stores for
-          brands in the US, UK, India and the UAE. If you want the market view behind this article,
+          brands in the US, UK and UAE. If you want the market view behind this article,
           start with{' '}
           <a href="/blog/what-is-agentic-commerce" className="text-[#B23E13] underline">
             what is agentic commerce

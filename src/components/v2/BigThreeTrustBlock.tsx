@@ -24,7 +24,7 @@ import Link from 'next/link';
  */
 const DEFAULT_DESCRIPTION =
   'Websites designed and built for US small businesses, Shopify stores, ' +
-  'B2B companies, and DTC brands. Affordable web design services, ' +
+  'B2B companies, and DTC brands. Web design services ' +
   'at a fixed, transparent price, your codebase delivered in full, ' +
   'and 7-day delivery.';
 

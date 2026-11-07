@@ -52,7 +52,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
       },
       {
         q: 'Is affordable SEO for small business actually worth it?',
-        a: `Yes, when the budget goes to the right moves. Affordable SEO does not mean cutting corners. It means spending on the handful of fixes that bring calls and leads, and skipping the busywork bigger agencies bill for. For most owners, one new customer a month covers the engagement, and SEO compounds, so the cost per lead keeps falling.`,
+        a: `Yes, when the budget goes to the right moves. A small budget does not mean cutting corners. It means spending on the handful of fixes that bring calls and leads, and skipping the busywork bigger agencies bill for. For most owners, one new customer a month covers the engagement, and SEO compounds, so the cost per lead keeps falling.`,
       },
       {
         q: 'Do you lock me into a long contract?',
@@ -144,7 +144,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
       },
       {
         q: 'Is SEO worth it for a very small or new business?',
-        a: `Often it is the best money a small business spends, because organic traffic does not stop when you stop paying like ads do. We start with the affordable, high-impact fixes so a new business sees movement without a big budget.`,
+        a: `Often it is the best money a small business spends, because organic traffic does not stop when you stop paying like ads do. We start with the small, high-impact fixes so a new business sees movement without a big budget.`,
       },
       {
         q: 'Can you help if I have tried SEO before and it did not work?',
@@ -163,13 +163,13 @@ const FAQ_FLAT = FAQ_GROUPS.flatMap((g) => g.items);
 export const metadata: Metadata = {
   title: 'Small Business SEO Services USA | FactoryJet',
   description:
-    'Small business SEO company for US businesses. Affordable SEO services bringing calls and leads from Google. Founder-led, month-to-month, transparent reporting.',
+    'Small business SEO company for US businesses. SEO scoped to your budget that brings calls and leads from Google. Founder-led, month-to-month, clear reporting.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Small Business SEO Services in the US: More Customers from Google | FactoryJet',
     description:
-      'A small business SEO agency for US businesses, offering affordable SEO services. Website, local, and content SEO scoped to your budget. Founder-led, month-to-month, reported in calls and leads.',
+      'A small business SEO agency for US businesses. Website, local, and content SEO scoped to your budget. Founder-led, month-to-month, reported in calls and leads.',
     url: 'https://factoryjet.com/services/small-business-seo',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet small business SEO services for US businesses' }],
     locale: 'en_US',
@@ -178,7 +178,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Small Business SEO Services in the US: More Customers from Google | FactoryJet',
     description:
-      'Affordable small business SEO services that bring calls and customers from Google. Founder-led, month-to-month, reported in leads.',
+      'Small business SEO services that bring calls and customers from Google. Founder-led, month-to-month, reported in leads.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -208,7 +208,7 @@ const serviceSchema = {
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'Country', name: 'United States' },
   serviceType:
-    'Small Business SEO / Affordable SEO Services / Local SEO for Small Business / On-Page SEO / Content SEO / SEO Consulting',
+    'Small Business SEO / Local SEO for Small Business / On-Page SEO / Content SEO / SEO Consulting',
   description:
     'US-focused small business SEO services that bring calls and customers from Google. Website and on-page SEO, Google Business Profile, and content, scoped to a small business budget. Founder-led, month-to-month, reported in calls and leads.',
   url: 'https://factoryjet.com/services/small-business-seo',
@@ -273,7 +273,7 @@ const PERSONAS = [
   { mk: 'mk-l', kk: 'Professional', h: 'B2B & professional services', p: 'Accountants, agencies, and consultants. Rank for the high-intent searches that fill your pipeline.' },
   { mk: 'mk-o', kk: 'Online', h: 'Small online stores', p: 'Product and category pages that rank, so a small catalog competes with the big names on the searches that convert.' },
   { mk: 'mk-g', kk: 'Multi-location', h: 'Growing small chains', p: 'Two to ten locations, each optimized to compete in its own market without competing with each other.' },
-  { mk: 'mk-l', kk: 'Solo & startup', h: 'New & solo businesses', p: 'Just getting started. We lead with affordable, high-impact fixes so you see movement without a big budget.' },
+  { mk: 'mk-l', kk: 'Solo & startup', h: 'New & solo businesses', p: 'Just getting started. We lead with small, high-impact fixes so you see movement without a big budget.' },
 ];
 
 const SCORE_ROWS = ['Who runs your SEO', 'Monthly cost', 'Small-business focus', 'What we report', 'Website fixes included', 'Contract terms'];
@@ -577,7 +577,7 @@ export default function SmallBusinessSeoServicePage() {
                 Small business SEO that brings you <span className="it">more customers</span>
               </h1>
               <p className="lead rise d3">
-                Affordable SEO for small business owners who want calls and customers from Google, not a confusing
+                SEO for small business owners who want calls and customers from Google, not a confusing
                 report. We do the handful of things that actually move rankings, then show you the leads it brought in.
                 Founder-led, month-to-month, no jargon. <b>That is the whole job.</b>
               </p>
@@ -636,7 +636,7 @@ export default function SmallBusinessSeoServicePage() {
         {/* 3. LOGOS */}
         <div className="logobar">
           <div className="wrap">
-            <div className="lbl">Trusted by founders across India and the UK</div>
+            <div className="lbl">Trusted by founders</div>
             <div className="logos">
               {['Belle Maison', 'Formative', 'Impulse', 'GPSUK', 'Sow Easy', 'Shevvaa'].map((n) => (
                 <span key={n} style={{ whiteSpace: 'nowrap' }}>{n}</span>
@@ -1028,10 +1028,10 @@ export default function SmallBusinessSeoServicePage() {
           <span className="orb" />
           <div className="wrap rep-grid">
             <div>
-              <div className="eyebrow eyebrow-warm">Affordable, not cheap</div>
+              <div className="eyebrow eyebrow-warm">Priced for small businesses</div>
               <h2 style={{ marginTop: 14 }}>The best SEO for small business <span className="it">pays for itself</span></h2>
               <p className="lead">
-                Affordable SEO does not mean cutting corners. It means spending your budget on the few moves that bring
+                A small budget does not mean cutting corners. It means spending your budget on the few moves that bring
                 customers, and skipping the busywork agencies bill for. For most owners, one new customer a month covers
                 the whole engagement, and it compounds from there.
               </p>
@@ -1082,7 +1082,7 @@ export default function SmallBusinessSeoServicePage() {
               </p>
               <ul className="feat-list">
                 <li><span className="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="4" /><path d="M5 20c0-3.5 3-5 7-5s7 1.5 7 5" /></svg></span><div>Founder-led strategy<small>Not handed to a junior team</small></div></li>
-                <li><span className="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 3v18h18M7 14l4-4 3 3 5-6" /></svg></span><div>Affordable and results-first<small>Budget spent on what brings customers</small></div></li>
+                <li><span className="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 3v18h18M7 14l4-4 3 3 5-6" /></svg></span><div>Results-first<small>Budget spent on what brings customers</small></div></li>
                 <li><span className="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6L9 17l-5-5" /></svg></span><div>500+ businesses served<small>4.9 / 5 average Google review rating</small></div></li>
               </ul>
               <div className="byline">Reviewed &amp; updated {REVIEWED_DATE} &middot; Bhavesh Barot, Founder</div>

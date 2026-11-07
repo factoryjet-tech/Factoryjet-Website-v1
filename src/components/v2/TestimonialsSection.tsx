@@ -200,6 +200,8 @@ export default function TestimonialsSection({
   region = 'in',
 }: TestimonialsSectionProps) {
   const isUS = region === 'us';
+  // City and country tags show only on India pages (founder decision 2026-11-07).
+  const isIN = region === 'in';
 
   const testimonials = TESTIMONIALS;
   const liveProjects = LIVE_PROJECTS;
@@ -317,7 +319,7 @@ export default function TestimonialsSection({
                         color: 'rgba(245,245,242,0.72)',
                       }}
                     >
-                      {t.role}{isUS ? '' : ` · ${t.city}`}
+                      {t.role}{isIN ? ` · ${t.city}` : ''}
                     </p>
                   </div>
                 </div>
@@ -549,7 +551,7 @@ export default function TestimonialsSection({
                         {p.url}
                       </p>
                     </div>
-                    {p.highlight ? (
+                    {isIN && p.highlight ? (
                       <span
                         className="shrink-0 font-fj-mono font-semibold"
                         style={{

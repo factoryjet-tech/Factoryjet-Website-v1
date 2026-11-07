@@ -161,7 +161,6 @@ const COST_GUIDES: ReadonlyArray<{ group: string; links: ReadonlyArray<{ href: s
     { href: '/blog/seo-cost-australia-2026', label: 'SEO cost, Australia' },
     { href: '/blog/ai-cost-australia-2026', label: 'AI cost, Australia' },
     { href: '/blog/hire-ai-developers-australia-cost-2026', label: 'Hiring AI developers, Australia' },
-    { href: '/blog/website-development-cost-india-2026', label: 'Website development cost, India' },
     { href: '/blog/hidden-cost-of-cheap-websites-india', label: 'The hidden cost of cheap websites' },
   ] },
   { group: 'Calculators, comparisons and migrations', links: [

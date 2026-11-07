@@ -62,7 +62,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
       },
       {
         q: 'Do you offer local SEO services for small businesses?',
-        a: 'Yes. Local SEO services for small businesses are a core part of what we do, and we keep them affordable by focusing on the handful of profile, review, and citation fixes that produce the most calls first, instead of a long invoice of busywork. Single-location owners are welcome.',
+        a: 'Yes. Local SEO services for small businesses are a core part of what we do, and we keep the scope tight by focusing on the handful of profile, review, and citation fixes that produce the most calls first, instead of a long invoice of busywork. Single-location owners are welcome.',
       },
       {
         q: 'How do I choose the best local SEO company?',
@@ -668,7 +668,7 @@ export default function LocalSeoServicePage() {
         {/* 3. LOGOS */}
         <div className="logobar">
           <div className="wrap">
-            <div className="lbl">Trusted by founders across India and the UK</div>
+            <div className="lbl">Trusted by founders</div>
             <div className="logos">
               {['Belle Maison', 'Formative', 'Impulse', 'GPSUK', 'Sow Easy', 'Shevvaa'].map((n) => (
                 <span key={n} style={{ whiteSpace: 'nowrap' }}>{n}</span>

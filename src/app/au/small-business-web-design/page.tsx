@@ -569,7 +569,7 @@ export default function SmallBusinessWebDesignAUPage() {
               <div>
                 <h2>Small business website design packages: four sizes, and which one fits you</h2>
                 <p className="lead">
-                  Affordable web design for small business starts with choosing the right size. Most “small
+                  Keeping small business web design within budget starts with choosing the right size. Most “small
                   business website design packages” fall into four sizes. We scope every site to one of
                   these, then quote a fixed price for it after a short call. The table compares what changes from one
                   size to the next; prices depend on your scope, so they are in the cost guide, not here.

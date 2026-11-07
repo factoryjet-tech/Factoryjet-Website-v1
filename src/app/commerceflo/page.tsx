@@ -521,7 +521,7 @@ export default function CommercefloPage() {
                 <p className="pp-mlabel">Belle Maison · DTC + B2B</p>
                 <h3 style={{ marginTop: '8px' }}>One storefront for retail shoppers and trade buyers</h3>
                 <p>
-                  A storefront for a Mumbai wholesale distributor of artificial plants and decor. Retail shoppers browse the
+                  A storefront for a wholesale distributor of artificial plants and decor. Retail shoppers browse the
                   catalog, while trade accounts use account-based pricing and quote-to-order workflows.
                 </p>
                 <p style={{ marginTop: '14px' }}>

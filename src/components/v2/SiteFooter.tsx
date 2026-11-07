@@ -234,6 +234,8 @@ export default function SiteFooter({
   const bottomLinks = bottomRow.links ?? DEFAULT_BOTTOM_ROW.links;
 
   const currentRegion = REGION_LABEL[locale] ?? 'United States';
+  // India is listed only in the India footer (founder decision 2026-11-07).
+  const regions = locale === 'in' ? REGIONS : REGIONS.filter((r) => r.label !== 'India');
   const surfaceClass = isDark ? 'border-white/10 bg-white/[0.03]' : 'border-fj-neutral-200 bg-white/60';
 
   // US, UK and AU share the primary site's footer (2026-10-31): same component,
@@ -244,7 +246,7 @@ export default function SiteFooter({
     : undefined;
   if (compact !== undefined) {
     return <UsSiteFooter logoText={logoText} tagline={tagline} copyright={copyright}
-      bottomLinks={bottomLinks} regions={REGIONS} currentRegion={currentRegion}
+      bottomLinks={bottomLinks} regions={regions} currentRegion={currentRegion}
       isDark={isDark} showRecognition={showRecognition} className={className}
       {...(compact && { columns: resolvedColumns, featured: compact })}
       recognitionHeading={locale === 'us' ? 'Recognized on' : 'Recognised on'} />;
@@ -343,7 +345,7 @@ export default function SiteFooter({
             <ul
               className={`absolute bottom-full left-0 z-30 mb-2 min-w-[220px] overflow-hidden rounded-xl border py-1.5 shadow-xl ${isDark ? 'border-white/10 bg-fj-charcoal' : 'border-fj-neutral-200 bg-white'}`}
             >
-              {REGIONS.map((r) => (
+              {regions.map((r) => (
                 <li key={r.href}>
                   <Link
                     href={r.href}

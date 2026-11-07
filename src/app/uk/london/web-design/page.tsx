@@ -88,7 +88,7 @@ const FAQ_CATEGORIES = [
 
 const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'getting-started', question: 'How much does web design cost in London?',
-    answer: 'It depends on scope: the number of pages, ecommerce website design versus a marketing site, and any integrations you need. We do not charge central London day rates and we do not sell fixed packages, because a five-page brochure site and a 200-product store are different jobs. You get a fixed quote after a short call, plus affordable website design London options for startups on a tight budget. There are no surprise invoices later.' },
+    answer: 'It depends on scope: the number of pages, ecommerce website design versus a marketing site, and any integrations you need. We do not charge central London day rates and we do not sell fixed packages, because a five-page brochure site and a 200-product store are different jobs. You get a fixed quote after a short call, plus smaller website design London options for startups on a tight budget. There are no surprise invoices later.' },
   { category: 'getting-started', question: 'How long does a London web design project take?',
     answer: 'A standard custom web design London project runs about four weeks from brief to launch. We also offer express delivery of up to a five-page site in seven days. Larger ecommerce and web-app builds are scoped individually, so the timeline stays honest rather than optimistic.' },
   { category: 'getting-started', question: 'Do I own the website and the code when it is finished?',
@@ -641,7 +641,7 @@ export default function LondonWebDesignPage() {
               </div>
               <div className="card">
                 <h3>Greater London</h3>
-                <p className="mt-4">From Croydon to Richmond, local service businesses need small business web design London that is found by their own neighbourhood first, then the wider city. We build affordable, fast sites tuned for local search and phone enquiries.</p>
+                <p className="mt-4">From Croydon to Richmond, local service businesses need small business web design London that is found by their own neighbourhood first, then the wider city. We build fast sites on a fixed quote, tuned for local search and phone enquiries.</p>
               </div>
             </div>
           </div>
@@ -972,7 +972,7 @@ export default function LondonWebDesignPage() {
                   <p>
                     We do not publish a fixed price, because a fixed price for &quot;a website&quot; is either padded to cover
                     the worst case or too thin to deliver the real one. Instead you get a fixed quote after a short
-                    call, once we know the scope. We do not charge central London day rates, we offer affordable web
+                    call, once we know the scope. We do not charge central London day rates, we offer smaller web
                     design London routes for startups, and we agree the scope up front so there are no change-order
                     surprises halfway through. If you have been comparing a cheap website design London quote against a
                     full custom build, we will be straight about which one fits your goal.

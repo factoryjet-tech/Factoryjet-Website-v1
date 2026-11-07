@@ -793,6 +793,7 @@ export default function AISchedulingAgentUSPage() {
         <TestimonialsSection
           eyebrow="CLIENT RESULTS."
           headline="What founders say about working with FactoryJet."
+          region="us"
         />
 
         {/* ── Enterprise Security & Scheduling Governance Architecture ── */}

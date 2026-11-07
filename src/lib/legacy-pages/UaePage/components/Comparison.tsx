@@ -9,7 +9,7 @@ const features = [
   { 
     icon: DollarSign, 
     label: "Cost Strategy", 
-    fj: "Affordable & Transparent", 
+    fj: "Fixed & Transparent", 
     trad: "Expensive Retainers", 
     free: "Hidden Costs",
   },
@@ -87,7 +87,7 @@ const Comparison: React.FC<ComparisonProps> = ({ onOpenModal }) => {
             <div className="p-6"></div> {/* Empty top-left */}
             <div className="p-6 text-center z-10">
                 <h3 className="text-2xl font-bold text-white">FactoryJet UAE</h3>
-                <p className="text-sm text-[#FF6B35] font-medium mt-1">Premium & Affordable</p>
+                <p className="text-sm text-[#FF6B35] font-medium mt-1">Premium, Fixed-Price</p>
             </div>
             <div className="p-6 text-center z-10 flex flex-col justify-end pb-4">
                 <h3 className="text-lg font-bold text-gray-400">Traditional Agencies</h3>

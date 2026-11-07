@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Why should a Nashville small business choose FactoryJet over a local Nashville agency?',
-      a: "The honest answer: if in-person meetings and a local account manager matter more than budget, a local Nashville agency makes sense. If you want Lighthouse 95+ performance, 7-day delivery, full technical SEO, WCAG 2.2 compliance, and a fixed price quoted in writing after scoping, FactoryJet delivers equivalent or better technical outcomes at 60–70% lower cost. We've served 500+ small businesses across the US, UK, UAE and India, and provide named US client references you can call. Get a free quote at factoryjet.com/contact.",
+      a: "The honest answer: if in-person meetings and a local account manager matter more than budget, a local Nashville agency makes sense. If you want Lighthouse 95+ performance, 7-day delivery, full technical SEO, WCAG 2.2 compliance, and a fixed price quoted in writing after scoping, FactoryJet delivers equivalent or better technical outcomes at 60–70% lower cost. We've served 500+ small businesses across the US, UK and UAE, and provide named US client references you can call. Get a free quote at factoryjet.com/contact.",
     },
   ],
   content: (
@@ -165,7 +165,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Delivers for Nashville SMBs</h2>
       <p className="mb-4">
-        FactoryJet has served 500+ businesses across the US, UK, UAE and India, including US small businesses in hospitality, healthcare, retail, and professional services. For Nashville SMBs, we deliver: custom Next.js builds (never templates), Lighthouse 95+ on every project, WCAG 2.2 Level AA compliance, full technical SEO including schema markup and XML sitemaps, 7-day delivery on 5-page sites, US business-hour project management, and full code ownership at project completion.
+        FactoryJet has served 500+ businesses across the US, UK and UAE, including US small businesses in hospitality, healthcare, retail, and professional services. For Nashville SMBs, we deliver: custom Next.js builds (never templates), Lighthouse 95+ on every project, WCAG 2.2 Level AA compliance, full technical SEO including schema markup and XML sitemaps, 7-day delivery on 5-page sites, US business-hour project management, and full code ownership at project completion.
       </p>
       <p className="mb-4">
         Websites, Shopify stores and monthly maintenance are each quoted at a fixed price in writing after a short scoping call.

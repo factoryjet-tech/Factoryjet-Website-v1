@@ -1573,8 +1573,7 @@ export default function EcommerceDevelopmentPage() {
             {/* India city pages. This page is the canonical parent for
                 /services/ecommerce-development/[city], which are India markets and are
                 listed in sitemap-india. Added 2026-07-26: all 13 had zero inbound links. */}
-            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mt-12 mb-3">Serving India.</p>
-            <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">E-Commerce Development Services in India.</h2>
+            <h2 className="text-2xl font-bold text-[#0F0F12] mt-12 mb-6">E-Commerce Development Services in India.</h2>
             <div className="flex flex-wrap gap-3">
               {[
                 { city: 'Mumbai', slug: 'mumbai' },

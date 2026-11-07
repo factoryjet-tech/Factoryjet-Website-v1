@@ -1120,7 +1120,7 @@ export default function EcommerceMarketingAgencyPage() {
                   Bhavesh Barot, Founder of FactoryJet
                 </h2>
                 <p className="font-fj-body text-[14.5px] leading-[1.6] text-[#4A4A45]">
-                  Twelve years building and growing commerce for more than 500 businesses across the US, UK, and India. Every
+                  Twelve years building and growing commerce for more than 500 businesses across the US and UK. Every
                   marketing engagement is run by FactoryJet&rsquo;s senior in-house team, not passed to subcontractors. You talk
                   to the people who are actually in your ad accounts.
                 </p>

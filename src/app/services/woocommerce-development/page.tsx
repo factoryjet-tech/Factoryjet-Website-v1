@@ -164,7 +164,7 @@ const JOURNEY_STAGES: ServiceJourneyStage[] = [
 const PROOF_CASES = [
   {
     client: 'Belle Maison',
-    market: 'Wholesale distributor, Mumbai',
+    market: 'Wholesale distributor',
     platform: 'Built on Commerceflo',
     what: 'One storefront for retail shoppers and trade buyers. Trade accounts log in, see their own prices, and turn a quote into an order without anyone retyping it.',
     href: '/case-studies/belle-maison-ecommerce-success',
@@ -205,7 +205,7 @@ const STATS = [
   {
     value: '97%',
     label: 'of projects delivered on time or early.',
-    microcopy: '500+ projects delivered for businesses in the US, the UK, the UAE and India.',
+    microcopy: '500+ projects delivered for businesses in the US, the UK and the UAE.',
     categoryLabel: 'ON-TIME DELIVERY.',
   },
 ];
@@ -598,7 +598,7 @@ export default function WoocommerceDevelopmentPage() {
         />
 
         {/* -- 2. LOGO BAR ---------------------------------------------------- */}
-        <LogoBar tagline="500+ projects delivered for businesses in the US, the UK, the UAE and India" />
+        <LogoBar tagline="500+ projects delivered for businesses in the US, the UK and the UAE" />
 
         {/* ── 2. SHORT ANSWER + PROOF ──────────────────────────────────────── */}
         {/* Replaces the hero image band and BigThreeTrustBlock (whose showcase
@@ -684,7 +684,7 @@ export default function WoocommerceDevelopmentPage() {
                   ))}
                 </div>
                 <p className="mt-5 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
-                  500+ projects delivered for businesses in the US, the UK, the UAE and India.{' '}
+                  500+ projects delivered for businesses in the US, the UK and the UAE.{' '}
                   <Link href="/case-studies" className="font-medium text-[#B23E13] underline underline-offset-2">
                     See all case studies
                   </Link>

@@ -466,7 +466,7 @@ export default function EcommerceSeoServicePage() {
         {/* 3. LOGOS */}
         <div className="logobar">
           <div className="wrap">
-            <div className="lbl">Trusted by founders across India and the UK</div>
+            <div className="lbl">Trusted by founders</div>
             <div className="logos" data-reveal>
               {['Belle Maison', 'Formative', 'Impulse', 'GPSUK', 'Sow Easy', 'Shevvaa'].map((n) => (
                 <span key={n} style={{ whiteSpace: 'nowrap' }}>{n}</span>
