@@ -19,7 +19,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'Ecommerce SEO Services in India | Get Your Store Found | FactoryJet',
+  title: 'Ecommerce SEO Services in India | Rank Products | FactoryJet',
   description:
     'Ecommerce SEO services in India to get your product and category pages found on Google so more people buy. Works with Shopify, WooCommerce, and custom stores.',
   keywords: [
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce SEO Services in India | Get Your Store Found | FactoryJet',
+    title: 'Ecommerce SEO Services in India | Rank Products | FactoryJet',
     description:
-      'Ecommerce SEO services in India to get your product and category pages found on Google so more people buy. We work on the pages that sell, tidy big stores, and show your reviews in Google. Works with Shopify, WooCommerce, and custom stores. No long contracts.',
+      'Ecommerce SEO services in India to get product and category pages found on Google. We fix the pages that sell and show your reviews in Google results.',
     url: 'https://factoryjet.com/seo/ecommerce-seo',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet Ecommerce SEO Services in India' }],
     locale: 'en_IN',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Ecommerce SEO Services in India | FactoryJet',
-    description: 'Ecommerce SEO to get your product and category pages found on Google so more people buy. We work on the pages that sell and show your reviews in Google. No long contracts.',
+    description: 'Ecommerce SEO to get your product and category pages found on Google so more people buy. We fix the pages that sell. No long contracts.',
     images: ['https://factoryjet.com/images/services/seo.webp'],
   },
   alternates: { canonical: 'https://factoryjet.com/seo/ecommerce-seo', languages: seoSubServiceAlternatesIN['ecommerce-seo'] },

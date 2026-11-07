@@ -19,9 +19,9 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'SEO Company in Delhi | Best SEO Services Delhi NCR | FactoryJet',
+  title: 'SEO Company in Delhi NCR | Best SEO Services | FactoryJet',
   description:
-    'Looking for the best SEO company in Delhi? FactoryJet delivers SEO services in Delhi NCR, local SEO, technical SEO, ecommerce SEO, export SEO, and link building. No long contracts. Book a free call.',
+    'SEO company in Delhi NCR for exporters, traders and local businesses: local, technical, ecommerce and export SEO plus link building. No long contracts.',
   keywords: [
     'seo company in delhi',
     'seo company in delhi ncr',
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Company in Delhi | Best SEO Services Delhi NCR | FactoryJet',
+    title: 'SEO Company in Delhi NCR | Best SEO Services | FactoryJet',
     description:
-      'Expert SEO services in Delhi NCR, local SEO, technical SEO, ecommerce SEO, and link building. 500+ businesses, 4.9-star Google rating. No long contracts. Start with a free check.',
+      'SEO services in Delhi NCR: local, technical and ecommerce SEO plus link building. 500+ businesses, 4.9-star Google rating. No long contracts. Free check.',
     url: 'https://factoryjet.com/seo/delhi',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Company in Delhi NCR' }],
     locale: 'en_IN',
@@ -187,7 +187,7 @@ const DELHI_FAQ_ITEMS = [
     category: 'getting-started',
     question: 'Do I need a Delhi-based SEO agency or can I work with someone remote?',
     answer:
-      'You need someone who understands how Delhi buyers search and what the NCR competitive landscape looks like, not someone physically in Connaught Place. We are not based in Delhi, but we understand Delhi\'s three distinct buyer markets (export, wholesale/pan-India, and local), and we have done SEO across these verticals. Our advantage: 12 years of experience, a small senior team, and no junior on your account.',
+      'You need someone who understands how Delhi buyers search and what NCR competition looks like, not someone physically in Connaught Place. We understand Delhi\'s three distinct buyer markets (export, wholesale/pan-India, and local), and we have done SEO across these verticals. Our advantage: 12 years of experience, a small senior team, and no junior on your account.',
   },
   /* ── Our SEO Services ─────────────────────────────────────────── */
   {
@@ -644,7 +644,7 @@ export default function SeoDelhi() {
           variant="cards"
           eyebrow="DELHI NCR AREAS WE COVER"
           headline="SEO Services Across Every Major Delhi NCR Business Zone"
-          lead="From the wholesale corridors of Chandni Chowk to the IT parks of Noida and the corporate towers of Gurugram: each part of NCR has its own competitive landscape and search patterns."
+          lead="From the wholesale corridors of Chandni Chowk to the IT parks of Noida and the corporate towers of Gurugram: each part of NCR has its own competition and search patterns."
           sectors={[
             {
               name: 'Connaught Place & Central Delhi',

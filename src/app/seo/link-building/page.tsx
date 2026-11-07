@@ -19,7 +19,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'Link Building Services in India | Real Links, No Spam | FactoryJet',
+  title: 'Link Building Services in India | Real Links | FactoryJet',
   description:
     'Link building services in India that earn real links from trusted websites, the safe way, through digital PR, guest articles, and helpful content. No spam.',
   keywords: [
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Link Building Services in India | Real Links, No Spam | FactoryJet',
+    title: 'Link Building Services in India | Real Links | FactoryJet',
     description:
-      'Link building services in India that earn real links from trusted websites, the safe way. As an off page SEO and backlink building company, we use digital PR, guest articles, and helpful content. No spammy tricks, no long contracts.',
+      'Link building services in India that earn real links from trusted sites, the safe way: off page SEO through digital PR, guest articles and helpful content.',
     url: 'https://factoryjet.com/seo/link-building',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet Link Building Services in India' }],
     locale: 'en_IN',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Link Building Services in India | FactoryJet',
-    description: 'Off page SEO and backlink building that earns real links from trusted websites, the safe way. Digital PR, guest articles, helpful content. No spam, no long contracts.',
+    description: 'Off page SEO and backlink building that earns real links from trusted websites. Digital PR, guest articles, helpful content. No spam, no long contracts.',
     images: ['https://factoryjet.com/images/services/seo.webp'],
   },
   alternates: { canonical: 'https://factoryjet.com/seo/link-building', languages: seoSubServiceAlternatesIN['link-building'] },

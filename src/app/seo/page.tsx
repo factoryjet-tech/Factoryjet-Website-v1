@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'SEO Company in India | AI-Native SEO Agency | FactoryJet',
     description:
-      'SEO company in India helping small businesses in Mumbai, Bangalore, Pune and 19 cities show up on Google: the map, the normal results, and the new AI answers. No long contracts. Simple reports. 500+ sites done.',
+      'SEO company in India helping small businesses in Mumbai, Bangalore, Pune and 19 cities show up on the Google map, normal results and AI answers. No lock-in.',
     url: 'https://factoryjet.com/seo',
     images: [
       {

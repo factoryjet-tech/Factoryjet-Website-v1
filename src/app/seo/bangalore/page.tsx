@@ -18,9 +18,9 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'SEO Company in Bangalore | Best SEO Services Bengaluru | FactoryJet',
+  title: 'SEO Company in Bangalore | Best SEO Services | FactoryJet',
   description:
-    'Looking for the best SEO company in Bangalore? FactoryJet delivers SEO services in Bangalore, technical SEO, local SEO, B2B SEO for tech companies, ecommerce SEO, and link building. No long contracts. Book a free call.',
+    'SEO company in Bangalore for tech firms, startups, D2C brands and local businesses: technical, local, B2B and ecommerce SEO plus link building. No lock-in.',
   keywords: [
     'seo company in bangalore',
     'seo company bangalore',
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Company in Bangalore | Best SEO Services Bengaluru | FactoryJet',
+    title: 'SEO Company in Bangalore | Best SEO Services | FactoryJet',
     description:
-      'Expert SEO services in Bangalore, local SEO, technical SEO, B2B content SEO for tech companies, and ecommerce SEO. 500+ businesses, 4.9-star Google rating. No long contracts. Start with a free check.',
+      'SEO services in Bangalore: local, technical, B2B content and ecommerce SEO. 500+ businesses, 4.9-star Google rating. No long contracts. Start with a free check.',
     url: 'https://factoryjet.com/seo/bangalore',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Company in Bangalore' }],
     locale: 'en_IN',
@@ -191,7 +191,7 @@ const BANGALORE_FAQ_ITEMS = [
     category: 'getting-started',
     question: 'Do I need a Bangalore-based SEO agency?',
     answer:
-      "You need someone who understands how Bangalore tech and B2B buyers research, not someone physically in Koramangala. We are not based in Bangalore, but we understand B2B content SEO, the SaaS buyer journey, and the kind of technical credibility that matters to Bangalore's digitally sophisticated audience. Our advantage: senior people, no lock-in, and a track record across 500+ businesses.",
+      "You need someone who understands how Bangalore tech and B2B buyers research, not someone physically in Koramangala. We understand B2B content SEO, the SaaS buyer journey, and the kind of technical credibility that matters to Bangalore's digitally sophisticated audience. Our advantage: senior people, no lock-in, and a track record across 500+ businesses.",
   },
   /* ── Our SEO Services ─────────────────────────────────────────── */
   {
@@ -616,8 +616,8 @@ export default function SeoBangalore() {
             },
             {
               icon: '02',
-              title: 'Technical quality unlocks everything else.',
-              body: 'Bangalore startups often have sophisticated products on technically weak sites, poor Core Web Vitals, crawlability issues, missing structured data. Fixing these unlocks fast ranking movement. We have seen Bangalore sites jump multiple pages in 60 days from technical fixes alone.',
+              title: 'Technical quality comes first.',
+              body: 'Bangalore startups often have sophisticated products on technically weak sites, poor Core Web Vitals, crawlability issues, missing structured data. Fixing these often moves rankings fast. We have seen Bangalore sites jump multiple pages in 60 days from technical fixes alone.',
             },
             {
               icon: '03',
@@ -641,7 +641,7 @@ export default function SeoBangalore() {
           variant="cards"
           eyebrow="BANGALORE AREAS WE COVER"
           headline="SEO Services Across Every Major Bangalore Business Zone"
-          lead="From the startup density of Koramangala to the IT parks of Whitefield and Electronic City: each Bangalore zone has its own competitive landscape and buyer behaviour. We know the difference."
+          lead="From the startup density of Koramangala to the IT parks of Whitefield and Electronic City: each Bangalore zone has its own competition and buyer behaviour. We know the difference."
           sectors={[
             {
               name: 'Koramangala',

@@ -27,11 +27,11 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'WordPress Development India | FactoryJet',
   description:
-    'Professional WordPress development in India. Custom themes, WooCommerce, speed optimization & SEO. Fixed-price, scoped after a free call. 7-day delivery. 500+ websites built.',
+    'WordPress development in India: custom themes, WooCommerce, speed and SEO. Fixed-price, scoped after a free call. 7-day delivery. 500+ websites built.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'WordPress Development India | Custom WordPress Sites | FactoryJet',
+    title: 'WordPress Development India | Custom Sites | FactoryJet',
     description:
       'Custom WordPress development for Indian SMBs. WooCommerce with Razorpay + GST. Speed optimization. SEO-ready. 7-day delivery.',
     url: 'https://factoryjet.com/wordpress-development',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'WordPress Development India | Custom WordPress Sites | FactoryJet',
+    title: 'WordPress Development India | Custom Sites | FactoryJet',
     description:
       'Custom WordPress development for Indian SMBs. WooCommerce + Razorpay + GST built in. 7-day delivery.',
     images: ['https://factoryjet.com/images/services/card-wordpress.webp'],

@@ -25,9 +25,9 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'n8n Automation India | Workflow Automation Company | FactoryJet',
+  title: 'n8n Automation India | Workflow Automation | FactoryJet',
   description:
-    'n8n workflow automation for Indian businesses. Connect Razorpay, WhatsApp, Zoho, Tally, Shopify & 400+ tools. Self-hosted or cloud. Fixed-price, scoped after a free call. 7-day delivery.',
+    'n8n workflow automation for Indian businesses. Connect Razorpay, WhatsApp, Zoho, Tally, Shopify and 400+ tools, self-hosted or cloud. 7-day delivery.',
   keywords: [
     'n8n India',
     'workflow automation India',
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'n8n Automation India | Workflow Automation Company | FactoryJet',
+    title: 'n8n Automation India | Workflow Automation | FactoryJet',
     description:
-      'n8n workflow automation for Indian businesses. Connect Razorpay, WhatsApp, Zoho, Tally, Shopify & 400+ tools. Self-hosted or cloud. Fixed-price, scoped after a free call. 7-day delivery.',
+      'n8n workflow automation for Indian businesses. Connect Razorpay, WhatsApp, Zoho, Tally, Shopify and 400+ tools, self-hosted or cloud. 7-day delivery.',
     url: 'https://factoryjet.com/n8n-automation',
     images: [
       {
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'n8n Automation India | Workflow Automation Company | FactoryJet',
+    title: 'n8n Automation India | Workflow Automation | FactoryJet',
     description:
       'n8n workflow automation for Indian businesses. Connect Razorpay, WhatsApp, Zoho, Tally & 400+ tools. Self-hosted. 7-day delivery.',
     images: ['https://factoryjet.com/images/services/card-automation.webp'],
@@ -512,7 +512,7 @@ const N8N_FAQ_ITEMS = [
     category: 'support',
     question: 'Will I be able to manage and edit the workflows myself?',
     answer:
-      "Yes, n8n has a visual drag-and-drop workflow editor that non-technical users can navigate for simple edits. We provide a recorded walkthrough of your specific workflows and documentation explaining what each node does. For routine changes (updating an email template within a workflow, changing a Slack channel destination, adding an extra approval step) most clients self-manage after the first 30 days. Complex changes, new integrations, major logic overhauls, custom node development, are typically better handled by FactoryJet.",
+      "Yes, n8n has a visual drag-and-drop workflow editor that non-technical users can use for simple edits. We provide a recorded walkthrough of your specific workflows and documentation explaining what each node does. For routine changes (updating an email template within a workflow, changing a Slack channel destination, adding an extra approval step) most clients self-manage after the first 30 days. Complex changes, new integrations, major logic overhauls, custom node development, are typically better handled by FactoryJet.",
   },
   {
     category: 'support',

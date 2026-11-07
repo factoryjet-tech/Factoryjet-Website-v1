@@ -23,9 +23,9 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'WhatsApp Chatbot Development India | WhatsApp Business API Integration | FactoryJet',
+  title: 'WhatsApp Chatbot Development India | FactoryJet',
   description:
-    'Build WhatsApp chatbots for your India business. Automate orders, support, lead capture with WhatsApp Business API. Fixed-price, scoped after a free call. 7-day delivery. 500+ businesses served.',
+    'WhatsApp chatbots for Indian businesses on the WhatsApp Business API: orders, support and lead capture. Fixed-price, scoped after a free call. 7-day delivery.',
   keywords: [
     'WhatsApp chatbot development India',
     'WhatsApp Business API India',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'WhatsApp Chatbot Development India | FactoryJet',
     description:
-      'WhatsApp chatbots built for Indian businesses, automate support, orders, lead capture & payments. Fixed-price, scoped after a free call. 7-day delivery. Hindi, Tamil, Telugu & more.',
+      'WhatsApp chatbots for Indian businesses: support, orders, lead capture and payments. Fixed price after a free call. 7-day delivery. Hindi, Tamil, Telugu, more.',
     url: 'https://factoryjet.com/whatsapp-chatbot',
     images: [
       {

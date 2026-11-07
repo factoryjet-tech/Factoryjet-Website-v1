@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'SEO Company in Ahmedabad | Best SEO Services | FactoryJet',
     description:
-      'SEO company in Ahmedabad for pharma and denim exporters, chemical makers, and engineering firms. Win orders from abroad, win across India, and get named in Google AI answers. No long contracts. Serving Changodar, Vatva, Sanand, and SG Highway.',
+      'SEO company in Ahmedabad for pharma and denim exporters, chemical makers and engineering firms. Win orders abroad, across India and in Google AI answers.',
     url: 'https://factoryjet.com/seo/ahmedabad',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Company in Ahmedabad' }],
     locale: 'en_IN',
@@ -108,11 +108,11 @@ const speakableSchema = {
 };
 
 const AHM_JOURNEY: ServiceJourneyStage[] = [
-  { number: '01', title: 'Check', description: 'A full check of your Ahmedabad site: how fast it loads, whether Google can find and read it, the links pointing to you, and where you stand against the pharma, denim, or chemical rivals you lose deals to. In plain words. (Week 1)' },
+  { number: '01', title: 'Check', description: 'We audit your Ahmedabad site for load speed, crawl and indexing gaps, and backlinks, then compare it with the pharma, denim or chemical suppliers who win the orders you miss. Written in plain words. (Week 1)' },
   { number: '02', title: 'Plan', description: 'An Ahmedabad search plan tied to sales: simple English searches that win orders from abroad for pharma and textiles, all-India searches for chemicals and engineering, and the top three businesses on the map for city services. (Week 1 to 2)' },
-  { number: '03', title: 'Build', description: 'We fix the technical side first: the hidden code that helps Google understand your site, speed, and the links between pages. Then we improve the pages that win you customers, plus your free Google listing. (Week 2 to 4)' },
-  { number: '04', title: 'Content & Links', description: 'Content planned with AI and written by a real editor for your buyer, plus real links from genuine Indian and overseas sites. No spammy link tricks, no bought links. (Ongoing)' },
-  { number: '05', title: 'Report', description: 'A one-page monthly report. The searches that moved, visits that turn into customers, the leads we can trace, and the next three things. (Monthly)' },
+  { number: '03', title: 'Build', description: 'Technical repairs come first: page speed, crawl errors, internal links, and the markup that tells Google what a product or grade is. Next we rework your best enquiry pages and your free Google listing. (Week 2 to 4)' },
+  { number: '04', title: 'Content & Links', description: 'Each month we publish what your buyers look for, such as approval details for pharma or fabric specs for denim, drafted with AI and finished by an editor. Links come from real Indian and overseas sites, never bought. (Ongoing)' },
+  { number: '05', title: 'Report', description: 'One page each month: searches that moved, visits that became enquiries, leads traced to Google, and the next three tasks. (Monthly)' },
 ];
 
 const AHM_FAQ_CATEGORIES = [
@@ -124,39 +124,39 @@ const AHM_FAQ_CATEGORIES = [
 ];
 
 const AHM_FAQ_ITEMS = [
-  { category: 'pricing', question: 'How much does SEO cost in Ahmedabad?', answer: 'We do not sell fixed packages. We look at what you need and only charge for work that moves you up Google. The price depends on how competitive your market is and how much work your site needs, so we give you an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' },
-  { category: 'pricing', question: 'How long until I see SEO results in Ahmedabad?', answer: 'Brand and local-map searches usually move in 30 to 60 days. Tough export and business-to-business searches take four to six months, because you win them with strong content and trust. We show early signs of progress from week one, so you can see things heading the right way before the sales arrive.' },
-  { category: 'pricing', question: 'Why is FactoryJet different from other Ahmedabad SEO agencies?', answer: 'We are a small team that uses AI plus senior people, with no big office or sales floor to pay for. AI does the research and reports at scale; experienced people do the strategy, writing, and technical work that moves rankings. You pay for the work, not the overheads.' },
-  { category: 'pricing', question: 'Do you require a long-term contract?', answer: 'No. SEO runs month to month, with 30 days notice to pause or stop. We keep Ahmedabad clients by showing real progress, not by tying them to a 12-month deal.' },
-  { category: 'included', question: 'What does an Ahmedabad SEO plan include?', answer: 'The technical side (a fast site Google can read), better pages that win customers, and the right search plan for your market, whether that is selling abroad, winning across India, or local. Bigger plans add content, real links, and getting picked up by Google AI answers, plus a monthly call and a one-page report.' },
-  { category: 'included', question: 'Do you build content that overseas buyers trust?', answer: 'Yes. For pharma, denim, and textile exporters we write clear, simple English about your approvals, what you can make, and how you deliver, laid out the way overseas buyers and sourcing agents look for. This wins orders from abroad, and it is also what Google AI answers quote.' },
+  { category: 'pricing', question: 'How much does SEO cost in Ahmedabad?', answer: 'Price follows the work your site needs and how hard your market is. A Changodar pharma exporter chasing US buyers needs more work than a clinic on CG Road. We run a free check first, then quote one exact monthly figure in writing. There are no fixed packages. Billing is month to month, and 30 days notice ends it.' },
+  { category: 'pricing', question: 'How long until I see SEO results in Ahmedabad?', answer: 'Your brand name and map listing tend to climb within 30 to 60 days. Export and trade searches, where you compete with suppliers from other countries, need four to six months of content and trust building. From week one you see early markers, such as new pages Google starts to show, well before orders follow.' },
+  { category: 'pricing', question: 'Why is FactoryJet different from other Ahmedabad SEO agencies?', answer: 'FactoryJet runs lean. AI handles research and reporting at volume. Senior people handle strategy, writing and technical fixes, the parts that move rankings. There is no large office or sales floor built into your fee, so your money goes into the work.' },
+  { category: 'pricing', question: 'Do you require a long-term contract?', answer: 'None. Plans renew each month and stop with 30 days notice. If we cannot show an Ahmedabad client progress, we do not deserve a 12-month lock-in.' },
+  { category: 'included', question: 'What does an Ahmedabad SEO plan include?', answer: 'Every plan fixes the technical base so Google can read a fast site, improves the pages that bring enquiries, and sets a search plan for where you sell: overseas, across India, or in the city. Larger plans add content, earned links and work on Google AI answers. You also get a monthly call and a one-page report.' },
+  { category: 'included', question: 'Do you build content that overseas buyers trust?', answer: 'Yes. Pharma, denim and textile buyers abroad check approvals, capacity and delivery record before they ask for a quote. We set those facts out in plain English, in the order sourcing agents read them. That earns export enquiries, and it is the material Google AI answers tend to quote.' },
   { category: 'included', question: 'Can you handle catalogue and product SEO for business buyers?', answer: 'Yes. For chemical, dye, and engineering suppliers we sort out the category, product, and detail pages, add the hidden code that helps Google understand your products, and go after the searches buyers use (by supplier, grade, and use). We work on WordPress, Shopify, and custom sites.' },
-  { category: 'included', question: 'Do you write the content?', answer: 'We do. AI builds the first outline; a real editor turns it into writing that sounds human and answers the buyer question directly. You approve every piece before it goes live.' },
-  { category: 'technical', question: 'Do you help me show up in Google AI answers?', answer: 'Yes. Even export and business buyers now start their research in AI search. We lay out content as clear questions and answers, add the hidden code that builds trust, and write facts AI can quote, so Google AI answers, ChatGPT, and Perplexity name your business. It is part of every plan, not an extra.' },
-  { category: 'technical', question: "What's the difference between technical SEO and on-page SEO?", answer: 'Technical SEO is the plumbing: a fast site Google can find, read, and trust, plus the hidden code that helps Google understand your site. On-page SEO is what people see on each page, like headings, words, and the links between pages. You need both, so we fix the plumbing first, then improve the pages.' },
-  { category: 'technical', question: 'Will SEO work on my WordPress, Shopify, or custom site?', answer: 'Yes, we work with whatever you have. We know WordPress and Shopify inside out, and can often work directly on modern custom sites too. Our first check finds anything about your setup that needs care, so there are no surprises.' },
-  { category: 'technical', question: 'Do you fix site speed?', answer: 'Yes. A fast site both ranks better and turns more visitors into customers, so it is part of the technical work, never an optional extra. We make your site quick on mobile, since most searches in India happen on a phone.' },
-  { category: 'local', question: 'Can you do SEO for an Ahmedabad pharma or denim exporter selling globally?', answer: 'Yes, and it is a different job from local SEO. Exporters need the simple English searches that overseas buyers use, content that shows you follow the rules and can deliver, and a place in Google AI answers and ChatGPT. We chase orders from buyers abroad, not "near me" searches.' },
+  { category: 'included', question: 'Do you write the content?', answer: 'Yes. AI drafts the outline. An editor then writes for your buyer, whether a sourcing agent or a plant purchase head, in plain language. Nothing goes live until you approve it.' },
+  { category: 'technical', question: 'Do you help me show up in Google AI answers?', answer: 'Yes, on every plan. Export and trade buyers often ask ChatGPT or Perplexity for a supplier shortlist before they search Google. We structure pages as questions and answers, add trust markup, and state facts an AI can quote, so your firm has a chance to be named.' },
+  { category: 'technical', question: "What's the difference between technical SEO and on-page SEO?", answer: 'Technical SEO is what Google sees under the hood: speed, crawling, and the markup that explains your products. On-page SEO is what a buyer sees: headings, copy and links between pages. We fix the first, then the second, because good pages on a broken site do not rank.' },
+  { category: 'technical', question: 'Will SEO work on my WordPress, Shopify, or custom site?', answer: 'Yes. WordPress and Shopify are routine for us, and most modern custom builds are workable too. The free check flags anything about your setup that needs extra care before we start.' },
+  { category: 'technical', question: 'Do you fix site speed?', answer: 'Yes, as part of the technical work. Most Indian searches happen on phones, and many overseas buyers open your catalogue on mobile too. A quick site ranks better and turns more visitors into enquiries.' },
+  { category: 'local', question: 'Can you do SEO for an Ahmedabad pharma or denim exporter selling globally?', answer: 'Yes. That is separate work from local SEO. Overseas buyers search in plain English for suppliers, want proof of compliance and capacity, and more and more ask ChatGPT or Google AI for names. We target those buyers, not "near me" searches in the city.' },
   { category: 'local', question: 'Do you handle pan-India B2B SEO for a chemical or dye maker in Vatva or Naroda?', answer: 'Yes. Chemical, dye, and intermediate makers sell all over India, so we go after the searches buyers across India use (by supplier, grade, and use), build the product and detail pages they look for, and add the trust signals that win orders.' },
   { category: 'local', question: 'Can you do SEO for auto-parts or engineering suppliers around Sanand?', answer: 'Yes. We go after the searches that bring in long buyer checks from car makers and big firms, build content that earns trust, and make sure your site shows up when a buying team looks for an approved supplier, in India or abroad.' },
   { category: 'local', question: 'Do you cover Gandhinagar and GIFT City businesses?', answer: 'Yes. We treat Gandhinagar and GIFT City as part of the wider Ahmedabad area, with separate targeting for the banks and finance firms there, alongside your Ahmedabad presence.' },
-  { category: 'reporting', question: 'What does your monthly report look like?', answer: 'One page, a five-minute read. The searches that moved and why, visits that turn into customers, the leads we can trace to Google, and the exact three things we are doing next month.' },
-  { category: 'reporting', question: 'Do I own the content and links you build?', answer: 'Yes, all of it. Every page, plan, and piece lives on your own website and is yours to keep. If you stop working with us, you keep everything. There is no special software you must keep paying for to hold your rankings.' },
-  { category: 'reporting', question: 'How do you measure success?', answer: 'By leads and sales, not rankings for their own sake. We agree the searches that matter and what counts as a lead up front, set up Google’s free tools properly, and report on the numbers that map to your sales.' },
-  { category: 'reporting', question: 'Who works on my Ahmedabad account?', answer: 'A small, senior team. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work, not a junior who got your account on day two.' },
+  { category: 'reporting', question: 'What does your monthly report look like?', answer: 'A single page you can read in five minutes: which searches moved and why, visits that became enquiries, leads traced back to Google, and the three tasks for next month.' },
+  { category: 'reporting', question: 'Do I own the content and links you build?', answer: 'Yes. Pages, plans and links sit on your website and stay yours if you leave. No tool or licence of ours is needed to keep your rankings.' },
+  { category: 'reporting', question: 'How do you measure success?', answer: 'Enquiries and orders, with rankings as a means to them. Before work starts we agree which searches count and what a lead looks like, set up Google’s free tools, then report against those numbers.' },
+  { category: 'reporting', question: 'Who works on my Ahmedabad account?', answer: 'Senior people only. FactoryJet is founder-led, so the person setting your strategy is the person you speak to. Your account is never handed to a junior after the first call.' },
 
   // Money-query coverage, added 2026-06-11
   {
     category: 'pricing',
     question: 'Who is the best SEO agency in Ahmedabad?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case as the best SEO company in Ahmedabad: the same engineers who build fast websites run the SEO services in Ahmedabad clients pay for, with a clear monthly report and no long contract. The best SEO services in Ahmedabad pass three checks: a plan in simple words, results with real numbers, and the price in writing. We also run local SEO services in Ahmedabad, the best local SEO services in Ahmedabad manage your Google Business Profile every week, not once a quarter.',
+      'For small and mid-size firms, FactoryJet is a strong choice for the best SEO company in Ahmedabad: one team builds fast sites and runs the SEO services in Ahmedabad clients pay for, with a monthly report and no lock-in. Judge any provider of the best SEO services in Ahmedabad on three things: a plan in plain words, results with real numbers, and a written price. Our local SEO services in Ahmedabad cover your Google Business Profile too, and the best local SEO services in Ahmedabad update it every week, not once a quarter.',
   },
   {
     category: 'pricing',
     question: 'Should I hire SEO expert in Ahmedabad or work with an agency?',
     answer:
-      'Both can work. If you hire SEO expert in Ahmedabad alone, you get one set of skills, and SEO needs technical work, writing, and links together. A small senior team gives you all three for a similar monthly cost. Whichever way you go, ask for one example with real numbers before you pay.',
+      'Either can work. Hire SEO expert in Ahmedabad on your own and you get one person’s skills, while SEO needs technical fixes, writing and links at once. A small senior team covers all three for a similar monthly spend. Ask for one result with real numbers before you pay anyone.',
   },
 ];
 
@@ -178,13 +178,13 @@ const AHM_COMPARISON_COLUMNS = [
 ] as const;
 
 const AHM_COMPARISON_ROWS = [
-  { feature: 'Long contracts', values: ['None, monthly', '6 to 12 months typical', 'Varies', 'N/A'] },
+  { feature: 'Contract length', values: ['Monthly, no lock-in', 'Often 6 to 12 months', 'Varies', 'N/A'] },
   { feature: 'Plan for abroad, all-India, and local', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'Gets you into Google AI answers', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'Fast site Google can read', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'Real links, no spammy tricks', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'Reports you can actually read', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="no" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'You keep all content & links', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="yes" />, <CompareIcon key="diy" kind="yes" />] },
+  { feature: 'Work on Google AI answers', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'Technical fixes and speed', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'Earned links only', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'One-page monthly report', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="no" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'You own everything built', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="yes" />, <CompareIcon key="diy" kind="yes" />] },
 ];
 
 export default function AhmedabadSeoPage() {
@@ -318,22 +318,22 @@ export default function AhmedabadSeoPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Ahmedabad Businesses Choose FactoryJet for SEO"
-          lead="Ahmedabad SEO agencies sell 12-month contracts, junior managers, and reports nobody reads. FactoryJet uses AI plus senior people, is founder-led, works month to month, and understands selling abroad and to other businesses, not just shops."
+          lead="Many Ahmedabad agencies sell 12-month contracts run by junior managers. FactoryJet pairs AI with senior people, is founder-led, bills monthly, and knows how export and trade buyers search."
           pillars={[
-            { icon: '01', title: 'AI plus real people, built for the new Google.', body: 'Even export and business buyers now start in AI search. We get you ready for Google AI answers and ChatGPT from day one, while most local agencies are still chasing ten blue links.' },
-            { icon: '02', title: 'No dodgy tricks. Ever.', body: 'No spammy link tricks, no bought links, no throwaway pages. For a pharma or engineering brand, a Google punishment is a trust problem with overseas buyers and regulators. We build SEO that lasts.' },
-            { icon: '03', title: 'Month to month. Reports you read.', body: 'One page a month. The searches that moved, the visits that turned into customers, the leads we can trace, and the next three things. No lock-in, no jargon, no vanity numbers.' },
+            { icon: '01', title: 'Ready for AI search.', body: 'Export and trade buyers now ask AI tools for supplier shortlists. We prepare your pages for Google AI answers and ChatGPT from the first month, while many local agencies still report only on the ten blue links.' },
+            { icon: '02', title: 'Clean links only.', body: 'No link networks, paid links or thin pages. A Google penalty would hurt a pharma or engineering firm with the overseas buyers and regulators who audit it, so we only build what holds up.' },
+            { icon: '03', title: 'Monthly terms, one-page reports.', body: 'Each month you read one page: searches that moved, visits that became enquiries, leads we traced, and the next three tasks. No lock-in and no jargon.' },
           ]}
         />
 
-        <ServiceJourneyRow eyebrow="OUR SEO PROCESS" headline="How We Run Your Ahmedabad SEO, Step by Step" lead="We check before we plan. We fix the basics before we add content. And we report from week one." stages={AHM_JOURNEY} closingNote="5 STEPS · AI PLUS REAL PEOPLE · MONTH TO MONTH · NO SPAMMY LINKS · ABROAD + ALL-INDIA + LOCAL" />
+        <ServiceJourneyRow eyebrow="OUR SEO PROCESS" headline="How We Run Your Ahmedabad SEO, Step by Step" lead="Audit first, plan second. Technical fixes come before new content, and reporting starts in week one." stages={AHM_JOURNEY} closingNote="5 STEPS · AI WITH SENIOR PEOPLE · MONTHLY TERMS · EARNED LINKS ONLY · EXPORT + ALL-INDIA + LOCAL" />
 
         <section className="relative overflow-hidden bg-fj-cream py-14 md:py-20">
           <div className="pointer-events-none absolute inset-0 opacity-[0.5]" aria-hidden="true" style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
             <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RECENT WORK</p>
             <h2 className="fj-display mt-3 font-semibold text-fj-ink" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}>Ahmedabad SEO results are on the way</h2>
-            <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>We are putting together real SEO results, with rankings, visits, and leads, from live FactoryJet work in Gujarat and across India. It all sits on the same work behind 500+ websites we have built, at a 4.9 average Google review rating.</p>
+            <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>Ahmedabad case studies with rankings, visits and enquiries are being written up from live FactoryJet work in Gujarat and across India. They draw on the same team behind 500+ websites we have built, rated 4.9 on average on Google.</p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a href="/portfolio" className="inline-flex items-center gap-2 rounded-full border border-fj-ink/15 bg-white px-6 py-3 font-fj-body font-semibold text-fj-ink transition hover:border-[#F05A28] hover:text-[#F05A28]" style={{ fontSize: '0.9375rem' }}>See our website portfolio →</a>
             </div>
@@ -343,11 +343,11 @@ export default function AhmedabadSeoPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Ahmedabad Agency vs. Freelancer vs. DIY"
-          lead="There are four ways to do SEO in Ahmedabad. Here is the honest comparison: contracts, what you actually get, and what you keep at the end."
+          lead="Four ways to get SEO done in Ahmedabad, compared on contract length, what you get, and what you keep."
           pullQuote={{ stat: 'No lock-in', caption: 'month-to-month SEO with the abroad and all-India business plan most Ahmedabad agencies do not run.' }}
           columns={AHM_COMPARISON_COLUMNS}
           rows={AHM_COMPARISON_ROWS}
-          footer="FactoryJet SEO plans run month to month, with 30 days notice to pause or stop."
+          footer="Plans are monthly. Give 30 days notice to pause or stop."
         />
 
         <IndustriesGrid variant="cards"
@@ -366,7 +366,7 @@ export default function AhmedabadSeoPage() {
 
         <TestimonialsSection eyebrow="CLIENT RESULTS" headline="What India's founders say about working with FactoryJet" region="in" />
 
-        <FAQ eyebrow="FREQUENTLY ASKED QUESTIONS" headline="SEO Questions from Ahmedabad Businesses" lead="The questions we answer on every Ahmedabad SEO call, here in plain words." categories={AHM_FAQ_CATEGORIES} items={AHM_FAQ_ITEMS} />
+        <FAQ eyebrow="FREQUENTLY ASKED QUESTIONS" headline="SEO Questions from Ahmedabad Businesses" lead="What Ahmedabad exporters and manufacturers ask us most, answered in plain words." categories={AHM_FAQ_CATEGORIES} items={AHM_FAQ_ITEMS} />
 
         <FinalCTA
           variant="dark"
@@ -375,17 +375,17 @@ export default function AhmedabadSeoPage() {
           sub="Ahmedabad businesses sell to the world and across India, and your buyers research on Google and AI before they ever call. Start with a free check, and we will show you exactly where you stand, whether you export pharma from Changodar, supply chemicals from Vatva, or run a clinic on SG Highway."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
-          objectionHandler="No long contracts. You keep everything we build. Reports you'll read in five minutes."
+          objectionHandler="Monthly terms. Everything we build is yours. A report you can read in five minutes."
         />
         {/* Hub link-back (silo fix, 31 Jul 2026) */}
         <section className="border-t border-fj-ink/10 bg-fj-cream px-6 py-10 md:px-8">
           <div className="mx-auto max-w-3xl">
             <p className="text-base leading-relaxed text-fj-ink/75">
-              We work well beyond Ahmedabad. See{' '}
+              If you also sell beyond Gujarat, read about{' '}
               <a href="/seo" className="font-semibold text-[#B23E13] underline underline-offset-2">
                 our SEO services in India
               </a>{' '}
-              and how we run a national programme.
+              for plans that cover the whole country.
             </p>
           </div>
         </section>

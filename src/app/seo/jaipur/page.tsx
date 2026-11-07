@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'SEO Company in Jaipur | Best SEO Services | FactoryJet',
     description:
-      'SEO company in Jaipur for gem and jewellery exporters, handicraft brands, hotels, and IT firms. Win abroad, win the top three businesses on the map, and get named in Google AI answers. No lock-in. Serving Johari Bazaar, Sitapura, Sanganer, and MI Road.',
+      'SEO company in Jaipur for gem and jewellery exporters, handicraft brands, hotels and IT firms. Win abroad, on the local map and in Google AI answers.',
     url: 'https://factoryjet.com/seo/jaipur',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Company in Jaipur' }],
     locale: 'en_IN',
@@ -107,11 +107,11 @@ const speakableSchema = {
 };
 
 const JAI_JOURNEY: ServiceJourneyStage[] = [
-  { number: '01', title: 'Check', description: 'A full check of your Jaipur site: how fast it loads, whether Google can read it, the links pointing to you, and where you stand against the Johari Bazaar, Sitapura, or Sanganer rivals you lose deals to. In plain words. (Week 1)' },
+  { number: '01', title: 'Check', description: 'We review your Jaipur site for speed, indexing and links, and set it against the Johari Bazaar, Sitapura or Sanganer firms that take your enquiries. You get the findings in plain words. (Week 1)' },
   { number: '02', title: 'Plan', description: 'A Jaipur search plan tied to sales: the simple English searches that win overseas orders for gems and handicrafts, booking and travel searches for tourism, and the Google AI answers your rivals have not claimed. (Week 1 to 2)' },
-  { number: '03', title: 'Build', description: 'We fix the technical side first: the hidden code, speed, and links between pages. Then we improve the pages that win you customers, your catalogue pages, and your free Google listing. (Week 2 to 4)' },
-  { number: '04', title: 'Content & Links', description: 'Content planned with AI and written by a real editor for your buyer, plus real links from genuine Indian and overseas sites. No spammy link tricks, no bought links. (Ongoing)' },
-  { number: '05', title: 'Report', description: 'A one-page monthly report. The searches that moved, visits that turn into customers, the enquiries and bookings we can trace, and the next three things. (Monthly)' },
+  { number: '03', title: 'Build', description: 'First the technical base: markup, speed and internal links. Then the pages that bring enquiries, your catalogue or room pages, and your free Google listing. (Week 2 to 4)' },
+  { number: '04', title: 'Content & Links', description: 'Buyer guides, collection pages and travel content planned with AI and written by an editor, plus links earned from real Indian and overseas sites. Nothing bought, no link schemes. (Ongoing)' },
+  { number: '05', title: 'Report', description: 'Your monthly page covers moved searches, visits that became enquiries or bookings, what we traced to Google, and three next steps. (Monthly)' },
 ];
 
 const JAI_FAQ_CATEGORIES = [
@@ -123,39 +123,39 @@ const JAI_FAQ_CATEGORIES = [
 ];
 
 const JAI_FAQ_ITEMS = [
-  { category: 'pricing', question: 'How much does SEO cost in Jaipur?', answer: 'We do not sell fixed packages. We look at what you need and only charge for work that moves you up Google. The price depends on how competitive your market is and how much work your site needs, so we give you an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' },
-  { category: 'pricing', question: 'How long until I see SEO results in Jaipur?', answer: 'Brand and local-map searches usually move in 30 to 60 days. Tough export and category searches take four to six months, because they are won on strong content and trust. We show early signs of progress from week one, so you can see things heading the right way before the sales arrive.' },
-  { category: 'pricing', question: 'Why is FactoryJet different from other Jaipur SEO agencies?', answer: 'We are a small team that uses AI plus senior people, with no big office or sales floor to pay for. AI does the research and reports at scale; experienced people do the strategy, writing, and technical work that moves rankings. You pay for the work, not the overheads.' },
-  { category: 'pricing', question: 'Do you require a long-term contract?', answer: 'No. SEO runs month to month, with 30 days notice to pause or stop. We keep Jaipur clients by showing real progress, not by tying them to a 12-month deal.' },
-  { category: 'included', question: 'What does a Jaipur SEO plan include?', answer: 'The technical side (a fast site Google can read), better pages that win customers, and the right search plan for your market, whether that is selling abroad, tourism, or local. Bigger plans add content, real links, and getting picked up by Google AI answers, plus a monthly call and a one-page report.' },
+  { category: 'pricing', question: 'How much does SEO cost in Jaipur?', answer: 'Each Jaipur quote is built from a free audit. A Sitapura gem exporter targeting US wholesale buyers needs different work from a heritage hotel chasing direct bookings, so we price after we see your site and rivals. You get one monthly figure in writing, pay month to month, and can stop on 30 days notice.' },
+  { category: 'pricing', question: 'How long until I see SEO results in Jaipur?', answer: 'Searches for your own name and your map listing usually improve in 30 to 60 days. Category and export searches, such as a buyer abroad looking for a coloured gemstone supplier, take four to six months because trust and content take time to build. Early movement shows up in your report from the first week.' },
+  { category: 'pricing', question: 'Why is FactoryJet different from other Jaipur SEO agencies?', answer: 'Two things. AI does the heavy research and reporting, while senior people do the strategy, copy and fixes. We also carry no big office or sales team, so the fee pays for work on your site.' },
+  { category: 'pricing', question: 'Do you require a long-term contract?', answer: 'No contract term. Billing runs month to month and 30 days notice stops it. Jaipur clients stay because the report shows progress.' },
+  { category: 'included', question: 'What does a Jaipur SEO plan include?', answer: 'A Jaipur plan starts with a fast, readable site, then better pages for enquiries or bookings, and a search plan for your buyers, whether they sit abroad, arrive as tourists, or live in the city. Higher plans add content, earned links and Google AI answer work, with a monthly call and a one-page report.' },
   { category: 'included', question: 'Do you build content and catalogues overseas buyers trust?', answer: 'Yes. For gem, jewellery, and handicraft exporters we write clear, simple English about who you are, what you can make, and the certificates you hold, set out the way overseas buyers and sourcing agents expect. This wins enquiries from abroad, and it is also what AI answers quote.' },
   { category: 'included', question: 'Can you build an ecommerce or catalogue store for an exporter?', answer: 'Yes. We sort out category and product pages, add the hidden product details Google reads, and go after the searches your overseas and wholesale buyers use. We work on Shopify and custom stores, so we can improve the store you already run or help you build one that ranks.' },
-  { category: 'included', question: 'Do you write the content?', answer: 'We do. AI builds the first outline; a real editor turns it into writing that sounds human and answers the buyer question directly. You approve every piece before it goes live.' },
-  { category: 'technical', question: 'Do you help me show up in Google AI answers?', answer: 'Yes. Overseas buyers and travellers now often start their research with an AI answer. We lay out content as clear questions and answers, add the hidden code that builds trust, and write facts AI can quote, so Google AI answers, ChatGPT, and Perplexity name your business. It is part of every plan, not an extra.' },
-  { category: 'technical', question: "What's the difference between technical SEO and on-page SEO?", answer: 'Technical SEO is the plumbing: a fast site Google can find, read, and trust. On-page SEO is what people see on each page, like headings, words, and the links between pages. You need both, so we fix the plumbing first, then improve the pages.' },
-  { category: 'technical', question: 'Will SEO work on my WordPress, Shopify, or custom site?', answer: 'Yes, we work with whatever you have. We know WordPress and Shopify inside out, and can often work directly on modern custom sites too. Our first check finds anything about your setup that needs care, so there are no surprises.' },
-  { category: 'technical', question: 'Do you fix site speed?', answer: 'Yes. A fast site both ranks better and turns more visitors into customers, so it is part of the technical work, never an optional extra. We make your site quick on mobile, since most Indian and overseas searches happen on a phone.' },
+  { category: 'included', question: 'Do you write the content?', answer: 'Yes. AI sketches the outline, then an editor writes copy a buyer or traveller can trust. You sign off each piece before it is published.' },
+  { category: 'technical', question: 'Do you help me show up in Google AI answers?', answer: 'Yes, and it is included in every plan. Travellers planning a trip and buyers sourcing jewellery often ask an AI tool first. We write pages as clear questions and answers, add trust markup and quotable facts, so ChatGPT, Perplexity and Google AI answers can name you.' },
+  { category: 'technical', question: "What's the difference between technical SEO and on-page SEO?", answer: 'Technical SEO covers speed, whether Google can crawl every page, and code that describes your products or rooms. On-page SEO covers the visible parts: headings, text and internal links. We sort the technical base first and then the pages.' },
+  { category: 'technical', question: 'Will SEO work on my WordPress, Shopify, or custom site?', answer: 'Yes. Many Jaipur exporters run Shopify or WordPress, and we know both well. Custom builds are usually fine too. Our audit lists any setup issue before work begins.' },
+  { category: 'technical', question: 'Do you fix site speed?', answer: 'Yes. Buyers abroad and tourists on the move mostly browse on phones, so mobile speed is part of the technical work in every plan. Faster pages rank higher and turn more visits into enquiries.' },
   { category: 'local', question: 'Can you do SEO for a Jaipur gems, jewellery, or handicraft exporter selling to the US and EU?', answer: 'Yes, and it is a different game from local SEO. Exporters need the simple English searches that overseas buyers use, content about who you are and what you can make so buyers and sourcing agents trust you, and a presence in AI answers like ChatGPT and Google. We chase orders from abroad, not "near me" searches.' },
   { category: 'local', question: 'Do you do SEO for Jaipur hotels and tourism businesses?', answer: 'Yes. Tourists in Jaipur come from both India and abroad, so we go after booking and travel searches, sort out your free Google listing and the map, help you collect reviews, and add the hidden code that helps hotels and tour operators win direct bookings instead of losing them to the big booking sites.' },
   { category: 'local', question: 'Can you handle global SEO for an IT firm at Mahindra World City?', answer: 'Yes. For IT and ITeS firms we mix searches that win work from abroad with trust across India and locally. We go after the searches that describe your services and skills, and build the case-study content big buyers expect.' },
   { category: 'local', question: 'Do you cover the Walled City, Sitapura, and Sanganer areas?', answer: 'Yes. We match your SEO to where you work, whether that is shops in the Walled City and MI Road, the Sitapura SEZ gems and IT cluster, or the Sanganer and Bagru block-print hubs, with separate targeting and a free Google listing for each.' },
-  { category: 'reporting', question: 'What does your monthly report look like?', answer: 'One page, a five-minute read. The searches that moved and why, visits that turn into customers, the enquiries and bookings we can trace to Google, and the exact three things we are doing next month.' },
-  { category: 'reporting', question: 'Do I own the content and links you build?', answer: 'Yes, all of it. Every page, plan, and piece lives on your own website and is yours to keep. If you stop working with us, you keep everything. There is no special software you must keep paying for to hold your rankings.' },
-  { category: 'reporting', question: 'How do you measure success?', answer: 'By enquiries, bookings, and sales, not rankings for their own sake. We agree the searches that matter and what counts as a lead up front, set up Google’s free tools properly, and report on the numbers that map to your sales.' },
-  { category: 'reporting', question: 'Who works on my Jaipur account?', answer: 'A small, senior team. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work, not a junior who got your account on day two.' },
+  { category: 'reporting', question: 'What does your monthly report look like?', answer: 'Five minutes, one page: searches that moved, visits that became enquiries or bookings, what we traced to Google, and next month’s three priorities.' },
+  { category: 'reporting', question: 'Do I own the content and links you build?', answer: 'All of it. The pages and links live on your site and stay with you if you leave. You never pay for our software to keep your rankings.' },
+  { category: 'reporting', question: 'How do you measure success?', answer: 'Enquiries, bookings and sales. Rankings matter only when they bring those. We agree target searches and what counts as a lead at the start, set up Google’s free tools, and report on those figures.' },
+  { category: 'reporting', question: 'Who works on my Jaipur account?', answer: 'A small senior group. FactoryJet is founder-led, so strategy and technical work come from the people on your calls, never a junior handed your account in week one.' },
 
   // Money-query coverage, added 2026-06-11
   {
     category: 'pricing',
     question: 'Who is the best SEO agency in Jaipur?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case as the best SEO company in Jaipur: the same engineers who build fast websites run the SEO services in Jaipur clients pay for, with a clear monthly report and no long contract. The best SEO services in Jaipur pass three checks: a plan in simple words, results with real numbers, and the price in writing. We also run local SEO services in Jaipur, the best local SEO services in Jaipur manage your Google Business Profile every week, not once a quarter.',
+      'For small and mid-size firms, FactoryJet is a fair pick for the best SEO company in Jaipur. The engineers who build fast websites also run the SEO services in Jaipur our clients pay for, with a monthly report and no lock-in. Any shortlist of the best SEO services in Jaipur should pass three tests: a plain-word plan, results with real numbers, and a written price. We run local SEO services in Jaipur as well, and the best local SEO services in Jaipur update your Google Business Profile weekly, not once a quarter.',
   },
   {
     category: 'pricing',
     question: 'Should I hire SEO expert in Jaipur or work with an agency?',
     answer:
-      'Both can work. If you hire SEO expert in Jaipur alone, you get one set of skills, and SEO needs technical work, writing, and links together. A small senior team gives you all three for a similar monthly cost. Whichever way you go, ask for one example with real numbers before you pay.',
+      'It depends on scope. Hire SEO expert in Jaipur alone and you buy one skill set, while rankings need technical fixes, writing and links together. A small senior team gives you all three for roughly the same monthly cost. Before paying either, ask to see one result with real numbers.',
   },
 ];
 
@@ -177,13 +177,13 @@ const JAI_COMPARISON_COLUMNS = [
 ] as const;
 
 const JAI_COMPARISON_ROWS = [
-  { feature: 'Long contracts', values: ['None, monthly', '6 to 12 months typical', 'Varies', 'N/A'] },
+  { feature: 'Lock-in period', values: ['None', '6 to 12 months is common', 'Varies', 'N/A'] },
   { feature: 'Plan for selling abroad in simple English', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'Gets you into Google AI answers', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'Fast site Google can read', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'Named in AI search results', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'Quick, crawlable site', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
   { feature: 'Top three on the map + free Google listing', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="yes" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'Reports you can actually read', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="no" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'You keep all content & links', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="yes" />, <CompareIcon key="diy" kind="yes" />] },
+  { feature: 'Plain-English reporting', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="no" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'Content and links stay yours', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="yes" />, <CompareIcon key="diy" kind="yes" />] },
 ];
 
 export default function JaipurSeoPage() {
@@ -219,7 +219,7 @@ export default function JaipurSeoPage() {
           headline="The SEO Company in Jaipur That Brings Leads, Not Just Vanity Numbers"
           lead="Jaipur is an export city wrapped in a tourist city. It is the world's largest place for cutting coloured gemstones, the home of Sanganeri and Bagru block-print, and a Pink City that drew over six lakh visitors from abroad last year. Gem and handicraft exporters in Sitapura and Sanganer sell to the US and Europe, hotels serve travellers from everywhere, and IT firms at Mahindra World City work for clients all over the world. One generic SEO plan suits none of them. We match your SEO to the market you actually sell to, with monthly reports you can read in five minutes."
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
-          trustItems={['Picked up by Google AI answers', 'No long contracts', '500+ sites done']}
+          trustItems={['Named in Google AI answers', 'Monthly terms', '500+ sites done']}
           rightSlot={<HeroBrowserMockup badgeLabel="Wins abroad" badgeCity="Jaipur" />}
         />
 
@@ -316,22 +316,22 @@ export default function JaipurSeoPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Jaipur Businesses Choose FactoryJet for SEO"
-          lead="Jaipur SEO agencies sell 12-month contracts, junior managers, and reports nobody reads. FactoryJet uses AI plus senior people, is founder-led, works month to month, and knows the difference between winning a US wholesale buyer and winning a walk-in."
+          lead="Jaipur agencies often sell 12-month contracts handled by junior staff. FactoryJet pairs AI with senior people, is founder-led, bills monthly, and plans differently for a US wholesale buyer than for a walk-in."
           pillars={[
-            { icon: '01', title: 'AI plus real people, built for the new Google.', body: 'Overseas buyers and travellers now often start their research with an AI answer. We get you ready for Google AI answers and ChatGPT from day one so your business gets named, while most local agencies are still chasing ten blue links.' },
-            { icon: '02', title: 'No dodgy tricks. Ever.', body: 'No spammy link networks, no bought links, no throwaway pages. For an exporter, a Google punishment can cost you trust abroad. We build SEO that lasts, with a solid technical base, real content, and real links.' },
-            { icon: '03', title: 'Month to month. Reports you read.', body: 'One page a month. The searches that moved, the visits that turned into customers, the enquiries and bookings we can trace, and the next three things. No lock-in, no jargon, no vanity numbers.' },
+            { icon: '01', title: 'Named in AI answers.', body: 'Gem buyers abroad and travellers planning a Rajasthan trip often begin with an AI answer. From day one we shape your pages so Google AI answers and ChatGPT can name you, while most local agencies chase only the blue links.' },
+            { icon: '02', title: 'Safe, earned links.', body: 'We do not use link networks, paid links or throwaway pages. One Google penalty can cost an exporter its credibility with buyers abroad. Our work rests on a sound technical base, real content and real links.' },
+            { icon: '03', title: 'Pay monthly, read one page.', body: 'Your report fits on one page: moved searches, enquiries and bookings we traced, and the next three steps. You can stop any month, and there is no jargon.' },
           ]}
         />
 
-        <ServiceJourneyRow eyebrow="OUR SEO PROCESS" headline="How We Run Your Jaipur SEO, Step by Step" lead="We check before we plan. We fix the basics before we add content. And we report from week one." stages={JAI_JOURNEY} closingNote="5 STEPS · AI PLUS REAL PEOPLE · MONTH TO MONTH · NO SPAMMY LINKS · ABROAD + TOURISM + LOCAL" />
+        <ServiceJourneyRow eyebrow="OUR SEO PROCESS" headline="How We Run Your Jaipur SEO, Step by Step" lead="We look before we plan, repair the base before we publish, and send a report from the first week." stages={JAI_JOURNEY} closingNote="5 STEPS · AI + SENIOR TEAM · PAY MONTHLY · NO BOUGHT LINKS · EXPORT + TOURISM + LOCAL" />
 
         <section className="relative overflow-hidden bg-fj-cream py-14 md:py-20">
           <div className="pointer-events-none absolute inset-0 opacity-[0.5]" aria-hidden="true" style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
             <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RECENT WORK</p>
             <h2 className="fj-display mt-3 font-semibold text-fj-ink" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}>Jaipur SEO results are on the way</h2>
-            <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>We are putting together real SEO results, with rankings, visits, and enquiries, from live FactoryJet work in Rajasthan and across India. It all sits on the same work behind 500+ websites we have built, at a 4.9 average Google review rating.</p>
+            <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>Write-ups of FactoryJet SEO work in Rajasthan and other states, with rankings, visits and enquiries, are in progress. The same team has built 500+ websites and holds a 4.9 average Google review rating.</p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a href="/portfolio" className="inline-flex items-center gap-2 rounded-full border border-fj-ink/15 bg-white px-6 py-3 font-fj-body font-semibold text-fj-ink transition hover:border-[#F05A28] hover:text-[#F05A28]" style={{ fontSize: '0.9375rem' }}>See our website portfolio →</a>
             </div>
@@ -341,11 +341,11 @@ export default function JaipurSeoPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Jaipur Agency vs. Freelancer vs. DIY"
-          lead="There are four ways to do SEO in Jaipur. Here is the honest comparison: contracts, what you actually get, and what you keep at the end."
+          lead="How the four options for SEO in Jaipur compare: contract terms, the work you get, and who owns it at the end."
           pullQuote={{ stat: 'No lock-in', caption: 'month-to-month SEO with the simple-English, sell-abroad plan most Jaipur agencies do not run.' }}
           columns={JAI_COMPARISON_COLUMNS}
           rows={JAI_COMPARISON_ROWS}
-          footer="FactoryJet SEO plans run month to month, with 30 days notice to pause or stop."
+          footer="Monthly billing. Pause or cancel with 30 days notice."
         />
 
         <IndustriesGrid variant="cards"
@@ -364,7 +364,7 @@ export default function JaipurSeoPage() {
 
         <TestimonialsSection eyebrow="CLIENT RESULTS" headline="What India's founders say about working with FactoryJet" region="in" />
 
-        <FAQ eyebrow="FREQUENTLY ASKED QUESTIONS" headline="SEO Questions from Jaipur Businesses" lead="The questions we answer on every Jaipur SEO call, here in plain words." categories={JAI_FAQ_CATEGORIES} items={JAI_FAQ_ITEMS} />
+        <FAQ eyebrow="FREQUENTLY ASKED QUESTIONS" headline="SEO Questions from Jaipur Businesses" lead="What Jaipur exporters, hoteliers and shop owners ask before they start, answered plainly." categories={JAI_FAQ_CATEGORIES} items={JAI_FAQ_ITEMS} />
 
         <FinalCTA
           variant="dark"
@@ -373,13 +373,13 @@ export default function JaipurSeoPage() {
           sub="Your buyers are in New York, in London, and on a phone planning a Jaipur trip, and they all start on Google or AI. Start with a free check, and we will show you exactly where you stand, whether you export from Sitapura, print in Sanganer, or run a heritage hotel in the Walled City."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
-          objectionHandler="No long contracts. You keep everything we build. Reports you'll read in five minutes."
+          objectionHandler="Cancel any month. Keep every page and link. Read your report in five minutes."
         />
         {/* Hub link-back (silo fix, 31 Jul 2026) */}
         <section className="border-t border-fj-ink/10 bg-fj-cream px-6 py-10 md:px-8">
           <div className="mx-auto max-w-3xl">
             <p className="text-base leading-relaxed text-fj-ink/75">
-              We work well beyond Jaipur. See{' '}
+              For firms selling outside Rajasthan, see{' '}
               <a href="/seo" className="font-semibold text-[#B23E13] underline underline-offset-2">
                 what our SEO company in India covers
               </a>{' '}

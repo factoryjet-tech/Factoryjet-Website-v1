@@ -31,9 +31,9 @@ import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI SEO Company in India: AI SEO Agency, GEO + AEO | FactoryJet',
+  title: 'AI SEO Company in India | GEO + AEO Agency | FactoryJet',
   description:
-    'AI SEO company in India. We make ChatGPT, Perplexity, Gemini and Google AI Overviews name your business when buyers ask which company to trust, with per-engine citation proof every month. GEO and AEO included.',
+    'AI SEO company in India. We make ChatGPT, Perplexity, Gemini and Google AI Overviews name your business, with per-engine citation proof every month.',
   keywords: [
     'ai seo company india',
     'ai seo agency in india',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI SEO Company in India: AI SEO Agency, GEO + AEO | FactoryJet',
+    title: 'AI SEO Company in India | GEO + AEO Agency | FactoryJet',
     description:
       '10 crore Indians ask ChatGPT every week. AI SEO makes the AI answers say your name, with per-engine citation proof every month. No long contracts.',
     url: 'https://factoryjet.com/ai-seo',
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI SEO Company in India: AI SEO Agency, GEO + AEO | FactoryJet',
+    title: 'AI SEO Company in India | GEO + AEO Agency | FactoryJet',
     description:
       '10 crore Indians ask ChatGPT every week. AI SEO makes the AI answers say your name, with per-engine proof every month.',
     images: ['https://factoryjet.com/og-default.png'],

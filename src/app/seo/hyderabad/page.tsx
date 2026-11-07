@@ -18,9 +18,9 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'SEO Company in Hyderabad | Best SEO Services Hyderabad | FactoryJet',
+  title: 'SEO Company in Hyderabad | Best SEO Services | FactoryJet',
   description:
-    'Looking for the best SEO company in Hyderabad? FactoryJet delivers SEO services in Hyderabad, technical SEO, local SEO, B2B pharma & IT SEO, ecommerce SEO. No long contracts. Book a free call.',
+    'SEO company in Hyderabad for pharma, IT, real estate and local businesses: technical, local, B2B and ecommerce SEO. No long contracts. Book a free call.',
   keywords: [
     'seo company in hyderabad',
     'seo company hyderabad',
@@ -184,7 +184,7 @@ const HYD_FAQ_ITEMS = [
     category: 'getting-started',
     question: 'Do I need a Hyderabad-based SEO agency?',
     answer:
-      "You need someone who understands Hyderabad's buyer mix and competitive landscape, not necessarily someone sitting in Madhapur. We are not based in Hyderabad, but we understand the city's pharma and IT buyer patterns, the role of Genome Valley and HITEC City in defining the B2B market, and what it takes to rank for Hyderabad searches.",
+      "You need someone who understands Hyderabad's buyer mix and competition, not necessarily someone sitting in Madhapur. We understand the city's pharma and IT buyer patterns, the role of Genome Valley and HITEC City in defining the B2B market, and what it takes to rank for Hyderabad searches.",
   },
   {
     category: 'services',
@@ -485,7 +485,7 @@ export default function SeoHyderabad() {
           variant="cards"
           eyebrow="HYDERABAD INDUSTRIES WE SERVE"
           headline="SEO Services Built for the Industries That Drive Hyderabad"
-          lead="Each Hyderabad industry has its own buyer journey, keyword set, and competitive landscape. We do not sell generic plans."
+          lead="Each Hyderabad industry has its own buyer journey, keyword set, and competition. We do not sell generic plans."
           sectors={[
             { name: 'Pharma & Biotech', description: 'Genome Valley companies, API manufacturers, CROs, and medical devices. B2B content for procurement and R&D buyers, pharma publication links, regulatory-compliant copy.' },
             { name: 'IT & Software', description: 'HITEC City and Gachibowli tech companies. B2B content marketing, technical SEO for complex sites, and link building from credible Indian tech sources.' },
@@ -528,7 +528,7 @@ export default function SeoHyderabad() {
           lead="Looking for a specific type of SEO? We cover the full stack."
           sectors={[
             { name: 'Local SEO', description: 'Google map rankings, GBP management, "near me" searches, and area pages across all Hyderabad zones.', linkLabel: 'Explore local SEO', linkHref: '/seo/local-seo' },
-            { name: 'Technical SEO', description: 'Site speed, Core Web Vitals, crawl errors, schema | the foundation that unlocks everything else, especially in a low-KD market like Hyderabad.', linkLabel: 'Explore technical SEO', linkHref: '/seo/technical-seo' },
+            { name: 'Technical SEO', description: 'Site speed, Core Web Vitals, crawl errors, schema | the foundation everything else rests on, especially in a low-KD market like Hyderabad.', linkLabel: 'Explore technical SEO', linkHref: '/seo/technical-seo' },
             { name: 'Ecommerce SEO', description: 'Product pages, category structure, Shopify and WooCommerce, and the keywords Hyderabad shoppers use before they buy.', linkLabel: 'Explore ecommerce SEO', linkHref: '/seo/ecommerce-seo' },
             { name: 'Link Building', description: 'Editorial links from trusted Indian pharma publications, IT directories, and local business sources | the authority signal Google relies on.', linkLabel: 'Explore link building', linkHref: '/seo/link-building' },
             { name: 'SEO Audit', description: 'Find what is blocking your Hyderabad site | technical issues, content gaps, or competitor advantages | and get a clear action list.', linkLabel: 'Explore SEO audit', linkHref: '/seo/seo-audit' },

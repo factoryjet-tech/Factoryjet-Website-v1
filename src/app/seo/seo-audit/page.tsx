@@ -19,7 +19,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'SEO Audit Services in India | Free Website Check | FactoryJet',
+  title: 'SEO Audit Services in India | Free Site Check | FactoryJet',
   description:
     'SEO audit services in India: a full website health check that shows why you are not ranking and what to fix first, in plain English. Free first check.',
   keywords: [
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Audit Services in India | Free Website Check | FactoryJet',
+    title: 'SEO Audit Services in India | Free Site Check | FactoryJet',
     description:
-      'Free SEO audit and full website SEO audit from FactoryJet. We run a complete health check of your website and show you exactly why you are not ranking and what to fix first, in plain English, ranked by what matters most. Start with a free first check, no strings.',
+      'Free SEO audit from FactoryJet: a full health check of your website that shows why you are not ranking and what to fix first, in plain English.',
     url: 'https://factoryjet.com/seo/seo-audit',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Audit Services in India' }],
     locale: 'en_IN',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'SEO Audit Services in India | FactoryJet',
-    description: 'Free SEO audit and full website SEO audit. We show you exactly why you are not ranking and what to fix first, in plain English, ranked by what matters most. Free first check, no strings.',
+    description: 'Free SEO audit. We show you why you are not ranking and what to fix first, in plain English, ranked by what matters most. No strings.',
     images: ['https://factoryjet.com/images/services/seo.webp'],
   },
   alternates: { canonical: 'https://factoryjet.com/seo/seo-audit', languages: seoSubServiceAlternatesIN['seo-audit'] },

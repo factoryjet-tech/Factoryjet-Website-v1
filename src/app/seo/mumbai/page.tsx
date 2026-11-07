@@ -18,9 +18,9 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'SEO Company in Mumbai, India | Best SEO Services Mumbai | FactoryJet',
+  title: 'SEO Company in Mumbai India | Best SEO Services | FactoryJet',
   description:
-    'Looking for the best SEO company in Mumbai? FactoryJet delivers expert SEO services in Mumbai, local SEO, technical SEO, ecommerce SEO, and link building. No long contracts. Book a free call.',
+    'SEO company in Mumbai for local businesses, D2C brands and enterprise: local, technical and ecommerce SEO plus link building. No long contracts. Free call.',
   keywords: [
     'seo company in mumbai india',
     'seo services in mumbai',
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Company in Mumbai, India | Best SEO Services Mumbai | FactoryJet',
+    title: 'SEO Company in Mumbai India | Best SEO Services | FactoryJet',
     description:
-      'Expert SEO services in Mumbai, local SEO, technical SEO, ecommerce SEO, and link building. 500+ businesses, 4.9-star Google rating. No long contracts. Start with a free check.',
+      'SEO services in Mumbai: local, technical and ecommerce SEO plus link building. 500+ businesses, 4.9-star Google rating. No long contracts. Free check.',
     url: 'https://factoryjet.com/seo/mumbai',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Company in Mumbai India' }],
     locale: 'en_IN',
@@ -184,7 +184,7 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'getting-started',
     question: 'Do I need a Mumbai-based agency or can I work with someone remote?',
     answer:
-      'You need someone who understands how Mumbai buyers search and which neighbourhoods matter to your business, not someone physically in Andheri. We are not based in Mumbai, but we have delivered SEO across BFSI, real estate, fashion, F&B, and healthcare clients. Our advantage: 12 years of experience, a small senior team, and no junior on your account. We also cost less than a mid-size Mumbai agency, without the lock-in.',
+      'You need someone who understands how Mumbai buyers search and which neighbourhoods matter to your business, not someone physically in Andheri. We have delivered SEO across BFSI, real estate, fashion, F&B, and healthcare clients. Our advantage: 12 years of experience, a small senior team, and no junior on your account. We also cost less than a mid-size Mumbai agency, without the lock-in.',
   },
   /* ── Our SEO Services ─────────────────────────────────────────── */
   {
@@ -683,7 +683,7 @@ export default function SeoMumbaiPage() {
           variant="cards"
           eyebrow="MUMBAI AREAS WE COVER"
           headline="SEO Services Across Every Major Mumbai Business Zone"
-          lead="From the financial towers of BKC to the street-level retail of Andheri, each Mumbai area has its own competitive landscape, buyer behaviour, and search patterns. We know the difference."
+          lead="From the financial towers of BKC to the street-level retail of Andheri, each Mumbai area has its own competition, buyer behaviour, and search patterns. We know the difference."
           sectors={[
             {
               name: 'BKC & Bandra',

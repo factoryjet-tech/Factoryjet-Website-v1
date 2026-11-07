@@ -18,9 +18,9 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'SEO Company in Chennai | Best SEO Services Chennai | FactoryJet',
+  title: 'SEO Company in Chennai | Best SEO Services | FactoryJet',
   description:
-    'Looking for the best SEO company in Chennai? FactoryJet delivers SEO services in Chennai, technical SEO, local SEO, manufacturing & auto B2B SEO, ecommerce SEO. No long contracts. Book a free call.',
+    'SEO company in Chennai for manufacturing, auto, IT and local businesses: technical, local, B2B and ecommerce SEO. No long contracts. Book a free call.',
   keywords: [
     'seo company in chennai',
     'seo company chennai',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'SEO Company in Chennai | Best SEO Services | FactoryJet',
     description:
-      'Expert SEO services in Chennai, local SEO, technical SEO, manufacturing & auto B2B SEO, and ecommerce SEO. 500+ businesses, 4.9-star Google rating. No long contracts.',
+      'SEO services in Chennai: local, technical, manufacturing and auto B2B, and ecommerce SEO. 500+ businesses, 4.9-star Google rating. No long contracts.',
     url: 'https://factoryjet.com/seo/chennai',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Company in Chennai' }],
     locale: 'en_IN',
@@ -184,7 +184,7 @@ const CHN_FAQ_ITEMS = [
     category: 'getting-started',
     question: 'Do I need a Chennai-based SEO agency?',
     answer:
-      "You need someone who understands Chennai's buyer mix, manufacturing procurement teams, auto OEM suppliers, IT services buyers, and local Tamil Nadu consumers. We are not based in Chennai, but we understand the city's industrial economy, the OMR IT corridor, and what B2B content needs to do in Tamil Nadu's market. Our advantage: 12 years of experience, senior team, and month-to-month billing.",
+      "You need someone who understands Chennai's buyer mix, manufacturing procurement teams, auto OEM suppliers, IT services buyers, and local Tamil Nadu consumers. We understand the city's industrial economy, the OMR IT corridor, and what B2B content needs to do in Tamil Nadu's market. Our advantage: 12 years of experience, senior team, and month-to-month billing.",
   },
   {
     category: 'services',
