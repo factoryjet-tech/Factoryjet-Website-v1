@@ -15,9 +15,9 @@ export const post: BlogPost = {
   imageAlt:
     'A small business owner in her boutique in India checking marketing results on her phone, with a laptop showing her online store',
   meta: {
-    title: 'Digital Marketing for Small Businesses in India: A Simple Guide',
+    title: 'Digital Marketing for Small Businesses in India (Guide)',
     description:
-      'Digital marketing for a small business in India, explained in plain words: which channels bring real enquiries, a 6-step starter plan, the agencies to know, and honest answers to common questions.',
+      'Digital marketing for a small business in India in plain words: which channels bring enquiries, a 6-step starter plan, agencies to know and common questions.',
   },
   keyTakeaways: [
     'Digital marketing just means getting your business found and chosen online: on Google, on maps, on social apps, on WhatsApp, and now inside AI answers like ChatGPT. You do not need all of it. You need the two or three channels where your buyers actually are.',

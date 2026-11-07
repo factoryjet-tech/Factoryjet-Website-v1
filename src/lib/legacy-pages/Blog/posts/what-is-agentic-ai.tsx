@@ -117,9 +117,9 @@ export const post: BlogPost = {
   imageUrl: '/blog-images/what-is-agentic-ai.webp',
   imageAlt: 'A team working together, illustrating agentic AI systems that plan and complete tasks',
   meta: {
-    title: 'What Is Agentic AI? Definition, Examples, and Use Cases (2026)',
+    title: 'What Is Agentic AI? Definition, Examples, Use Cases (2026)',
     description:
-      'What is agentic AI in simple terms? A plain-English definition, how it works, real examples, use cases by function, and what it costs and takes to build in 2026.',
+      'What is agentic AI in simple terms? A plain-English definition, how it works, real examples, use cases by function, and what it costs to build in 2026.',
   },
   keyTakeaways: [
     'Agentic AI is software that takes action to complete a goal, where generative AI only produces content. It plans, uses tools, and carries out multi-step tasks with limited supervision.',

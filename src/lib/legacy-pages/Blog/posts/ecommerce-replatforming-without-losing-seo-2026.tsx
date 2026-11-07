@@ -133,7 +133,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Ecommerce Replatforming Without Losing SEO: 2026 Guide',
     description:
-      'How to move your online store to a new platform without losing Google rankings: 301 redirect maps, Shopify URL rules, content carry-over, launch-day checklist, cost drivers and 24 buyer FAQs.',
+      'Move your store to a new platform without losing Google rankings: 301 redirect maps, Shopify URL rules, content carry-over, launch-day checks and cost drivers.',
   },
   keyTakeaways: [
     'Rankings drop after a replatform for fixable reasons: broken old URLs, missing product text and titles, lost structured data, or a staging noindex left on at launch.',

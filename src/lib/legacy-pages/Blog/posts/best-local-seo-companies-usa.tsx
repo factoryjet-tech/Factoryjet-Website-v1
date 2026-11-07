@@ -34,7 +34,7 @@ export const post: BlogPost = {
   meta: {
     title: 'The 8 Best Local SEO Companies in the USA (2026), Compared',
     description:
-      'Which local SEO company should you hire? We compared eight US local SEO agencies on map pack capability, contract terms and published pricing. Disclosure: we are on the list at number eight.',
+      'We compared eight US local SEO agencies on map pack capability, contract terms and published pricing. Disclosure: we are on the list at number eight.',
   },
   keyTakeaways: [
     'Our researched 2026 shortlist: Thrive Agency, Searchbloom, WebFX, SmartSites, HigherVisibility, Victorious, Funnel Boost Media, and FactoryJet (disclosed self-inclusion, placed eighth).',

@@ -16,7 +16,7 @@ export const post: BlogPost = {
   meta: {
     title: 'BigCommerce vs Shopify 2026 Fee Change | FactoryJet',
     description:
-      'BigCommerce updated its pricing June 1, 2026: new Open Payment Provider fees and lower GMV caps. The complete cost math for US small businesses choosing between platforms.',
+      'BigCommerce changed its pricing on June 1, 2026: new Open Payment Provider fees and lower GMV caps. The full cost math for US small businesses choosing one.',
   },
   keyTakeaways: [
     'BigCommerce made three changes on June 1, 2026: plan renames, lower GMV caps (Core drops from $50K to $30K/year, Growth from $180K to $100K/year), and a new Open Payment Provider fee of 0.6–2.0% for non-Embedded processors.',

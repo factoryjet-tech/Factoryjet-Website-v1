@@ -13,7 +13,7 @@ export const post: BlogPost = {
   readTime: '12 min read',
   imageUrl: '/blog-images/web-design-denver-co-small-business-2026-hero.webp',
   meta: {
-    title: 'Web Design Denver CO: 2026 Pricing & Agency Guide for Small Businesses',
+    title: 'Web Design Denver CO: 2026 Small Business Pricing Guide',
     description:
       'Denver CO small business web design costs, what outdoor and tech startups need, local vs remote agency comparison, and how to get Lighthouse 95+ in 7 days.',
   },

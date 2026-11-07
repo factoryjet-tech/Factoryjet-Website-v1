@@ -186,7 +186,7 @@ export const post: BlogPost = {
   imageAlt:
     'Seen from behind, a woman with short silver hair in a navy blazer points a pen at a monitor showing a stacked grey layout on the left and a branching orange and grey flow on the right, while a bearded man in a light blue shirt watches, an orange notebook on the table.',
   meta: {
-    title: 'Copilot Studio vs Custom AI Agents: Pricing (2026)',
+    title: 'Copilot Studio Pricing 2026 vs Custom AI Agents',
     description:
       'Microsoft Copilot Studio pricing as of October 2026, what the credits buy, its limits, and when a custom AI agent is the better call for a mid-sized company.',
   },
@@ -206,9 +206,9 @@ export const post: BlogPost = {
       <div className="bg-white border-2 border-[#E5DFD7] rounded-xl p-6 sm:p-8 mb-10">
         <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-3">The short answer</p>
         <p className="text-lg leading-relaxed mb-0">
-          Use <strong>Microsoft Copilot Studio</strong> when the agent serves your own staff inside Microsoft 365, answers
-          from SharePoint and Teams, and those staff already hold Microsoft 365 Copilot licences, because Microsoft does not
-          charge credits for their internal use. Have a <strong>custom AI agent</strong> built when it faces customers at
+          <strong>Microsoft Copilot Studio</strong> pricing starts at $200 a month for a pack of 25,000 Copilot Credits, or
+          pay-as-you-go through Azure (list prices, October 2026). Staff who already hold Microsoft 365 Copilot licences use
+          internal agents at no credit charge. Have a <strong>custom AI agent</strong> built when it faces customers at
           volume, needs systems outside Microsoft, or must control the model and logic.
         </p>
       </div>

@@ -43,7 +43,7 @@ export const post: BlogPost = {
   imageUrl: "/blog-images/best-wordpress-development-companies-australia-2026-hero.webp",
   meta: {
     // 21 Oct 2026 (AU plan quick win): CTR rewrite for "wordpress developer australia" (pos. 4.9, 242 impressions, 0 clicks).
-    title: "WordPress Developers in Australia: 6 Compared, 2026 Costs",
+    title: "WordPress Developer Australia: 6 Compared, 2026 Costs",
     description: "Need a WordPress developer in Australia? Six firms checked on their own sites, sourced 2026 AUD build ranges from $2,500, and what to put in the contract.",
   },
   keyTakeaways: [
@@ -84,7 +84,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        The best WordPress developer for an Australian small business is one that builds Australian rules into the site from day one, puts speed targets in writing, shows you live sites you can test, and is still around to update the site next year. Australian price guides put a professional WordPress site at roughly $3,000 to $15,000 in 2026, depending on size. Below are six companies whose WordPress services we checked on their own websites, including us, and the checklist to choose between them.
+        To hire a WordPress developer in Australia, pick one that builds Australian rules into the site from day one, puts speed targets in writing, shows you live sites you can test, and will still update the site next year. Australian price guides put a professional WordPress site at roughly $3,000 to $15,000 in 2026, depending on size. Below are six companies we checked, including us, and a checklist to choose.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What Australian Small Businesses Need from WordPress Developers in 2026</h2>

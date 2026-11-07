@@ -14,9 +14,9 @@ export const post: BlogPost = {
   imageUrl: '/blog-images/best-omnichannel-commerce-solution-shopify-plus-2026.webp',
   imageAlt: 'A retail associate using a tablet point-of-sale system on a store counter while helping a customer, representing omnichannel retail for Shopify Plus',
   meta: {
-    title: 'Best Omnichannel Commerce Solution for Shopify Plus (2026 Guide)',
+    title: 'Best Omnichannel Commerce Solution for Shopify Plus (2026)',
     description:
-      'A neutral, vendor-by-vendor comparison of the real omnichannel tools for Shopify Plus: Shopify POS Pro, Fluent Commerce, HotWax Commerce, Brightpearl, NetSuite, Feedonomics, Extensiv, Linnworks, and more.',
+      'A vendor-by-vendor comparison of omnichannel tools for Shopify Plus: Shopify POS Pro, Fluent Commerce, HotWax, Brightpearl, NetSuite, Feedonomics and more.',
   },
   keyTakeaways: [
     'There is no one "best" omnichannel solution for Shopify Plus. The right tool depends on which specific problem you are solving: unified inventory, order routing, in-store POS, back-office accounting, or marketplace listings.',

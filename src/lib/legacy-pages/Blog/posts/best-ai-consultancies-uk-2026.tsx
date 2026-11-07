@@ -483,7 +483,7 @@ export const post: BlogPost = {
   imageAlt:
     'Over-the-shoulder view of a woman at an oak desk looking at a laptop that shows six coloured cards, three of them ticked, with a notepad, an orange mug and brick terraced houses outside the window',
   meta: {
-    title: 'Best AI Consultancies UK & London 2026: 14 Compared | FactoryJet',
+    title: 'Best AI Consultancies UK & London 2026: 14 Compared',
     description: META_DESCRIPTION,
   },
   keyTakeaways: [

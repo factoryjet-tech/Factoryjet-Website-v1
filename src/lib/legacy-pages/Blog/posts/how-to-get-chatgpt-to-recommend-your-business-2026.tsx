@@ -100,9 +100,9 @@ export const post: BlogPost = {
   readTime: '12 min read',
   imageUrl: '/blog-images/how-to-get-chatgpt-to-recommend-your-business-2026.webp',
   meta: {
-    title: 'How to Get ChatGPT to Recommend Your Business in 2026 (Proven Playbook)',
+    title: 'How to Get ChatGPT to Recommend Your Business in 2026',
     description:
-      'ChatGPT recommends businesses based on specific signals, not just SEO. Here is the exact playbook US small businesses use to show up when buyers ask AI for recommendations.',
+      'ChatGPT recommends businesses based on specific signals beyond SEO. The playbook US small businesses use to show up when buyers ask AI for recommendations.',
   },
   keyTakeaways: [
     'ChatGPT, Gemini, and Perplexity recommend businesses based on brand authority signals, third-party mentions, review volume, structured content, and citation frequency, not paid placement.',

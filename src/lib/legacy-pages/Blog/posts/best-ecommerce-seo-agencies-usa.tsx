@@ -34,9 +34,9 @@ export const post: BlogPost = {
   imageAlt:
     'Comparison of the eight best ecommerce SEO agencies in the USA for 2026, showing technical catalogue capability and specialisation',
   meta: {
-    title: 'The 8 Best Ecommerce SEO Agencies in the USA (2026), Compared',
+    title: 'The 8 Best Ecommerce SEO Agencies in the USA (2026)',
     description:
-      'Which ecommerce SEO agency should you hire? We compared eight US agencies on faceted navigation, crawl budget, product schema and catalogue depth. Disclosure: we are on the list at number eight.',
+      'We compared eight US ecommerce SEO agencies on faceted navigation, crawl budget, product schema and catalogue depth. Disclosure: we are on the list at number 8.',
   },
   keyTakeaways: [
     'Ecommerce SEO is a technical catalogue discipline, not content marketing. Faceted navigation, crawl budget, product schema, out-of-stock URL handling and pagination are where stores win or lose, and none of them appear in a normal SEO proposal.',

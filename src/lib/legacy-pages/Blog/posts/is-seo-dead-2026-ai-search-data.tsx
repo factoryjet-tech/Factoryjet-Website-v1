@@ -106,7 +106,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Is SEO Dead in 2026? What the AI Search Data Actually Says',
     description:
-      "Is SEO dead in 2026? The short answer: no, but it has changed significantly. Here's what the real traffic data from AI Overviews, ChatGPT, and Perplexity shows about organic search in 2026.",
+      "Is SEO dead in 2026? No, but it has changed. What traffic data from AI Overviews, ChatGPT and Perplexity shows about organic search in 2026.",
   },
   keyTakeaways: [
     'SEO is not dead. Google processes over 8.5 billion searches per day in 2026, and organic search drives more traffic than any other digital channel for most small businesses.',

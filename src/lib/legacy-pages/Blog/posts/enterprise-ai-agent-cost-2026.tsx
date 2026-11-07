@@ -186,7 +186,7 @@ export const post: BlogPost = {
   imageAlt:
     'In a glass-walled meeting room above an open-plan office, a woman in a green blazer and a bald man in a white shirt compare two thick printed proposal binders of grey bar charts at a high table.',
   meta: {
-    title: 'Enterprise AI Agent Cost in 2026: Build Ranges and What Drives Them',
+    title: 'Enterprise AI Agent Cost 2026: Build Ranges and Drivers',
     description:
       'What an enterprise AI agent costs to build in 2026, from named sources, and what audit logs, human approval, SSO and security review add to scope.',
   },

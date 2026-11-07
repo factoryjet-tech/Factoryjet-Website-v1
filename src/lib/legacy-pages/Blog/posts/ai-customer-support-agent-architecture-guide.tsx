@@ -14,7 +14,7 @@ export const post: BlogPost = {
   readTime: '19 min read',
   imageUrl: '/blog-images/ai-customer-support-agent-architecture.webp',
   meta: {
-    title: 'AI Customer Support Agent Architecture & Integration Guide (2026)',
+    title: 'AI Customer Support Agent Architecture Guide (2026)',
     description:
       'Engineering guide to AI customer support agents: connect Zendesk, Intercom and Gorgias to Shopify, NetSuite and carrier APIs. Guardrails, costs and timelines.',
   },

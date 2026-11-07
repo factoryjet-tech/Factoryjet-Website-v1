@@ -13,7 +13,7 @@ export const post: BlogPost = {
   readTime: '13 min read',
   imageUrl: '/blog-images/ai-agents-small-business-usa-2026-hero.webp',
   meta: {
-    title: 'AI Agents for Small Business USA: 2026 Guide to ROI & Implementation',
+    title: 'AI Agents for Small Business USA: 2026 ROI Guide',
     description:
       'What AI agents actually do for US small businesses, real ROI examples, cost breakdown, and how to deploy your first AI agent in 7 days. No tech team required.',
   },

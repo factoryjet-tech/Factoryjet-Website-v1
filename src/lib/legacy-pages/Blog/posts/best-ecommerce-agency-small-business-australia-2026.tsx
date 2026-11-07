@@ -71,8 +71,8 @@ export const post: BlogPost = {
   readTime: '13 min read',
   imageUrl: "/blog-images/best-ecommerce-agency-small-business-australia-2026-hero.webp",
   meta: {
-    title: "Best Ecommerce Agencies in Australia (2026): Shopify Plus",
-    description: "Eight ecommerce agencies in Australia, the Shopify Plus partners in Melbourne and Sydney, and B2B and agentic commerce picks, checked on their own sites in October 2026.",
+    title: "Best Ecommerce Agency in Australia (2026): 8 Compared",
+    description: "Eight ecommerce agencies in Australia, Shopify Plus partners in Melbourne and Sydney, and B2B and agentic commerce picks, checked on their own sites, Oct 2026.",
   },
   keyTakeaways: [
     "Australian price guides put an ecommerce store build at roughly $5,000 to $25,000 (WolfIQ, 2026 guide) or $8,000 to $25,000+ (Keen to Design, April 2026). These are typical Australian market ranges, not FactoryJet prices.",
@@ -128,7 +128,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        The best ecommerce agency in Australia, for a first Shopify store or a Shopify Plus, B2B or agentic commerce build, is the one that builds GST, Afterpay, Australia Post rates and Australian Consumer Law wording into the first version of your store, shows you live stores in your category, and is still answering your messages six months after launch. Australian price guides put a store build at roughly $5,000 to $25,000 in 2026. Below we compare eight agencies, including FactoryJet, and give you the questions that separate them.
+        The best ecommerce agency in Australia is the one that builds GST, Afterpay, Australia Post rates and Australian Consumer Law wording into your first store, shows you live stores in your category, and still answers your messages six months after launch. Australian price guides put a store build at roughly $5,000 to $25,000 in 2026. Below we compare eight agencies, including FactoryJet.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Why Australian Stores Need AI-Native and Agentic Commerce in 2026</h2>

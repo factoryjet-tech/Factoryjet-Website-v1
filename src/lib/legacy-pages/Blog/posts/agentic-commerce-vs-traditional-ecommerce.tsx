@@ -15,9 +15,9 @@ export const post: BlogPost = {
   imageAlt:
     'A smartphone showing a product page beside a small voice assistant device, representing the shift from a shopper browsing a store themselves to an AI agent buying on their behalf',
   meta: {
-    title: 'Agentic Commerce vs Traditional Ecommerce: What Actually Changes',
+    title: 'Agentic Commerce vs Traditional Ecommerce: What Changes',
     description:
-      'The real difference between ecommerce and agentic commerce, explained for store owners: machine-readable product data, schema, agent checkout and payment rails, fraud, and what to fix first.',
+      'Ecommerce vs agentic commerce for store owners: machine-readable product data, schema, agent checkout, payment rails, fraud and what to fix first.',
   },
   keyTakeaways: [
     'Traditional ecommerce is built for a human who lands on your page and decides. Agentic commerce is built for an AI agent that reads your data, compares you against rivals, and buys on the shopper\'s behalf. Same store, a completely different reader.',
@@ -54,7 +54,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What is the Agentic Commerce Protocol?',
-      a: 'It is an open standard for how an AI agent, a buyer and a business complete a purchase together. Stripe and OpenAI codeveloped it and announced it in late September 2025, and it is published under an Apache 2.0 open source license. In practice it covers three things: how your product data is exposed to an agent, how a cart and checkout are handled, and how payment credentials are passed as a secure token so the business can charge the buyer. Crucially, you stay the merchant of record and keep control of what can be sold and how it is fulfilled.',
+      a: 'It is an open standard for how an AI agent, a buyer and a business complete a purchase together. Stripe and OpenAI codeveloped it and announced it in late September 2025, and it is published under an Apache 2.0 open source license. In practice it covers three things: how your product data is exposed to an agent, how a cart and checkout are handled, and how payment credentials are passed as a secure token so the business can charge the buyer. You stay the merchant of record and keep control of what can be sold and how it is fulfilled.',
     },
     {
       q: 'Do I have to rebuild my store for agentic commerce?',

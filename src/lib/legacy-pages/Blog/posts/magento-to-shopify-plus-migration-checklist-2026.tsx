@@ -20,7 +20,7 @@ export const post: BlogPost = {
   keyTakeaways: [
     'Retiring a self-hosted Magento 2 or Adobe Commerce store takes server hosting, security patching and dependency upgrades off your team. Adobe makes merchants responsible for keeping PHP, MariaDB, OpenSearch and Redis on supported versions.',
     'Magento stores customer passwords as one-way hashes (SHA-256, or Argon2 on newer versions), and Shopify says passwords cannot be migrated with a CSV. Send account activation emails, or use new customer accounts with one-time sign-in codes. Multipass needs Shopify Plus and only works with legacy customer accounts, which Shopify B2B cannot use.',
-    'Preserving SEO link equity requires a comprehensive pre-migration crawl of all legacy Magento URLs, generating a 1-to-1 301 redirect map for deep category and product paths.',
+    'Preserving SEO link equity requires a full pre-migration crawl of all legacy Magento URLs, generating a 1-to-1 301 redirect map for deep category and product paths.',
     'Complex configurable products and custom EAV attribute sets must be restructured to fit Shopify limits of three options and 2,048 variants per product, with the remaining data in metafields.',
     'B2B customer groups, volume pricing and Net 30 payment terms map to Shopify B2B companies, catalogs, quantity price breaks and payment terms. Shopify Plus adds unlimited catalogs and catalogs assigned directly to a company.',
     'Delta migration is the critical cutover protocol: syncing all new orders, customers, and inventory adjustments created on Magento during final staging build windows.',
@@ -37,7 +37,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How do you prevent organic search ranking drops during the Magento cutover?',
-      a: 'We crawl every indexable URL on the Magento store, map comprehensive 1-to-1 301 redirects to corresponding Shopify paths, replicate existing meta titles, descriptions, and H1s, and preserve Schema.org structured data markup.',
+      a: 'We crawl every indexable URL on the Magento store, map complete 1-to-1 301 redirects to corresponding Shopify paths, replicate existing meta titles, descriptions, and H1s, and preserve Schema.org structured data markup.',
     },
     {
       q: 'Can historical order records and invoices be migrated into Shopify Plus?',

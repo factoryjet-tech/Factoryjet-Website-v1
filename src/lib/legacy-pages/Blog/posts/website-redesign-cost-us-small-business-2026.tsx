@@ -13,9 +13,9 @@ export const post: BlogPost = {
   readTime: '13 min read',
   imageUrl: '/blog-images/website-redesign-cost-us-small-business-2026-hero.webp',
   meta: {
-    title: 'Website Redesign Cost for US Small Businesses in 2026 | FactoryJet',
+    title: 'Website Redesign Cost for US Small Businesses in 2026',
     description:
-      'Website redesign costs for US SMBs range from $2,000 to $25,000 in 2026. What drives the price, when to redesign vs. refresh, and how to get Lighthouse 95+ results at remote-team pricing.',
+      'US small business website redesigns cost $2,000 to $25,000 in 2026. What drives the price, redesign vs refresh, and how to get Lighthouse 95+ results.',
   },
   keyTakeaways: [
     'US small business website redesigns cost $3,500–$25,000 from domestic agencies and $2,000–$6,000 from remote-with-US-support agencies: the same Lighthouse 95+ outcome at 60–70% less cost.',

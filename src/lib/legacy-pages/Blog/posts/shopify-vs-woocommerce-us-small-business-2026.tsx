@@ -14,9 +14,9 @@ export const post: BlogPost = {
   readTime: '11 min read',
   imageUrl: '/blog-images/shopify-vs-woocommerce-us-small-business-2026.webp',
   meta: {
-    title: 'Compare Shopify vs WooCommerce for US Small Businesses: 2026 Platform Guide',
+    title: 'Shopify vs WooCommerce for US Small Businesses (2026)',
     description:
-      'Compare Shopify vs WooCommerce for your US small business: sales tax automation, US payment processors, Black Friday readiness, platform fees, and which platform fits your revenue model in 2026.',
+      'Shopify vs WooCommerce for US small businesses: sales tax automation, US payment processors, Black Friday readiness, platform fees and fit for your revenue.',
   },
   keyTakeaways: [
     'Shopify is the right default for most US small businesses doing under $1M/year, fast to launch, managed hosting, Shopify Payments handles PCI compliance, and the app ecosystem covers nearly every use case.',
@@ -98,7 +98,7 @@ export const post: BlogPost = {
         Shopify is the safer default for most US small businesses doing under $1M in annual revenue. You launch in days, payments work out of the box through Shopify Payments (Stripe under the hood), sales tax across all 50 states is built in, and the app ecosystem solves nearly every problem you'll run into in your first three years. The trade-off is recurring cost: $39-$399/month plus apps, plus a transaction fee if you ever stray from Shopify Payments.
       </p>
       <p className="mb-4">
-        WooCommerce is the right choice when you've outgrown Shopify's pricing, want full ownership of your store, run content-heavy SEO, or need custom B2B features Shopify only unlocks on Shopify Plus ($2,300+/month). You'll pay $25-$80/month for hosting and a one-time $2,000-$5,000 to build it properly, then nothing extra on each sale. The trade-off is responsibility: you (or your agency) own updates, security, and performance.
+        WooCommerce is the right choice when you've outgrown Shopify's pricing, want full ownership of your store, run content-heavy SEO, or need custom B2B features Shopify only offers on Shopify Plus ($2,300+/month). You'll pay $25-$80/month for hosting and a one-time $2,000-$5,000 to build it properly, then nothing extra on each sale. The trade-off is responsibility: you (or your agency) own updates, security, and performance.
       </p>
       <p className="mb-4">
         Both platforms can ship a beautiful, fast, conversion-optimized store. The decision rarely comes down to design or features, it comes down to how much operational responsibility you want, and how much you're spending in platform fees right now.
@@ -203,7 +203,7 @@ export const post: BlogPost = {
         Third, you need custom B2B functionality: wholesale pricing tiers, net-30 invoice terms, customer-specific catalogs, RFQ (request-for-quote) workflows, or minimum order quantities by customer group. Shopify gates most of this behind Shopify Plus ($2,300+/month). WooCommerce supports it natively or through low-cost plugins like Wholesale Suite ($148/year) or B2BKing ($149/year).
       </p>
       <p className="mb-4">
-        Fourth, your acquisition strategy depends on organic search and content marketing. WooCommerce runs on WordPress, which powers roughly 43% of the web and was built for content publishing. You get full URL structure control, unlimited blog flexibility, and seamless integration between product pages and educational content, important if you're targeting US informational search queries like "best [product category] for [use case]" alongside transactional ones.
+        Fourth, your acquisition strategy depends on organic search and content marketing. WooCommerce runs on WordPress, which powers roughly 43% of the web and was built for content publishing. You get full URL structure control, unlimited blog flexibility, and tight integration between product pages and educational content, important if you're targeting US informational search queries like "best [product category] for [use case]" alongside transactional ones.
       </p>
       <p className="mb-4">
         Fifth, you want full code and data ownership. WooCommerce is open-source software running on your own hosting account. If your hosting provider raises prices, you move. If you want to migrate to a different theme, you do it without paying anyone. If you stop paying for any service, you still own every customer record, product image, and line of code. Shopify is a rental, convenient, but you don't own the storefront.

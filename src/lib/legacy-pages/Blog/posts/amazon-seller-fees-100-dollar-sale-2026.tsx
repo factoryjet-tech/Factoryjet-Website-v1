@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: 'What is the difference between the $39.99 and $0.99 plans?',
-    a: 'Professional costs $39.99 a month, covers unlimited listings, and unlocks bulk listing tools, Automate Pricing, Amazon Ads, Amazon Business B2B selling, Brand Registry features and the selling APIs. Individual costs $0.99 for every item sold, has no monthly fee, and includes none of those. If advertising is part of the plan at all, you need Professional from day one, because Individual cannot run ads.',
+    a: 'Professional costs $39.99 a month, covers unlimited listings, and adds bulk listing tools, Automate Pricing, Amazon Ads, Amazon Business B2B selling, Brand Registry features and the selling APIs. Individual costs $0.99 for every item sold, has no monthly fee, and includes none of those. If advertising is part of the plan at all, you need Professional from day one, because Individual cannot run ads.',
   },
   {
     q: 'How much are Amazon FBA fees?',
@@ -68,7 +68,7 @@ const faqs = [
   },
   {
     q: 'Why is my Amazon fee category different from what shoppers see?',
-    a: 'Amazon assigns a fee category based on the product itself, and it does not always match the browse category customers navigate through. Amazon states this in its own fee schedule. Sellers routinely budget from the browse node and then get billed at a different rate. Check the fee category before you set the price, not after the first settlement report.',
+    a: 'Amazon assigns a fee category based on the product itself, and it does not always match the browse category customers browse in. Amazon states this in its own fee schedule. Sellers routinely budget from the browse node and then get billed at a different rate. Check the fee category before you set the price, not after the first settlement report.',
   },
   {
     q: 'Can I reduce my Amazon fees?',

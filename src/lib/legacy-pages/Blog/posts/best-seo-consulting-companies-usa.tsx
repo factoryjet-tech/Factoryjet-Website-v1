@@ -31,9 +31,9 @@ export const post: BlogPost = {
   imageAlt:
     'Comparison of the best SEO consulting companies and independent consultants in the USA for 2026, showing specialisation and engagement model',
   meta: {
-    title: 'The 10 Best SEO Consulting Companies in the USA (2026), Compared',
+    title: 'The 10 Best SEO Consulting Companies in the USA (2026)',
     description:
-      'Which SEO consultant should you hire? We compared five US consulting firms and four independent consultants on specialisation, engagement model and AI search depth. Disclosure: we are on the list at number ten.',
+      'Five US SEO consulting firms and four independent consultants compared on specialisation, engagement model and AI search depth. We are on the list at number 10.',
   },
   keyTakeaways: [
     'SEO consulting is two different products. Firms give you a team that can also execute. Independent consultants give you one senior brain that usually will not execute. Choosing the wrong one is the most common and most expensive mistake here.',

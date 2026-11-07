@@ -14,7 +14,7 @@ export const post: BlogPost = {
   imageUrl: '/blog-images/website-development-cost-india-2026-hero.webp',
   isFeatured: false,
   meta: {
-    title: 'Website Development Cost in India 2026: Complete INR Breakdown | FactoryJet',
+    title: 'Website Development Cost in India 2026: INR Breakdown',
     description:
       'How much does a website cost in India in 2026? Honest INR price ranges from ₹15,000 basic sites to ₹10L+ enterprise builds, with every hidden cost exposed.',
   },

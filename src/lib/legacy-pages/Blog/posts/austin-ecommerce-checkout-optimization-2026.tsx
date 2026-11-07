@@ -14,9 +14,9 @@ export const post: BlogPost = {
   readTime: '10 min read',
   imageUrl: '/blog-images/austin-ecommerce-checkout-optimization-2026.webp',
   meta: {
-    title: 'Austin Ecommerce Checkout Optimization & Conversion Tactics 2026',
+    title: 'Austin Ecommerce Checkout Optimization Tactics 2026',
     description:
-      'A 2026 playbook for Austin DTC brands and boutiques: 8 checkout-optimization wins for Shopify and WooCommerce, conversion tracking that survives SXSW/F1/UT traffic spikes, Texas sales tax automation, and boutique-specific UX patterns that lift mobile conversion.',
+      '8 checkout fixes for Austin DTC brands on Shopify and WooCommerce, tracking that survives SXSW, F1 and UT traffic spikes, and Texas sales tax automation.',
   },
   keyTakeaways: [
     'Austin ecommerce traffic skews heavily mobile thanks to SXSW, F1, ACL, UT-driven weekend buying, and South Congress and Domain foot-to-phone behavior, which means checkout friction costs Austin operators more revenue than equivalent stores in less event-driven cities.',
@@ -46,7 +46,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Is a one-page checkout always better than a multi-step checkout for Austin stores?',
-      a: "Usually yes on Shopify, where the modern one-page checkout is now the default and is well-optimized on mobile. On WooCommerce the answer is more nuanced: a single-page checkout via CheckoutWC, Cartflows, or Funnelkit typically outperforms the default multi-step Woo checkout by 10–25%, but only if the page is properly load-tuned and the form is laid out with clear visual hierarchy. The principle behind both: every additional page in a checkout flow is an opportunity for the customer to bail. Reducing visible steps without sacrificing trust signals is the goal.",
+      a: "Usually yes on Shopify, where the modern one-page checkout is now the default and is well-optimized on mobile. On WooCommerce the answer is less simple: a single-page checkout via CheckoutWC, Cartflows, or Funnelkit typically outperforms the default multi-step Woo checkout by 10–25%, but only if the page is properly load-tuned and the form is laid out with clear visual hierarchy. The principle behind both: every additional page in a checkout flow is an opportunity for the customer to bail. Reducing visible steps without sacrificing trust signals is the goal.",
     },
     {
       q: 'When does it make sense to add an AI chatbot or AI agent for cart recovery?',
@@ -67,7 +67,7 @@ export const post: BlogPost = {
         <h2 className="text-lg font-bold mb-3">Table of Contents</h2>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
           <li>Why Austin Ecommerce Under-Converts (and What to Do About It)</li>
-          <li>Austin&apos;s Ecommerce Landscape: SoCo, East Austin, Domain, UT</li>
+          <li>Austin&apos;s Ecommerce Market: SoCo, East Austin, Domain, UT</li>
           <li>The 8 Checkout-Optimization Wins Every Austin Store Should Ship</li>
           <li>Conversion Tracking That Actually Catches Austin Festival Traffic</li>
           <li>AI-Assisted Conversion: When a Chatbot Makes Sense</li>
@@ -95,7 +95,7 @@ export const post: BlogPost = {
         The good news: most of the wins are configuration, not custom code. The rest of this post is the specific list.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Austin&apos;s Ecommerce Landscape: SoCo, East Austin, Domain, UT</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">Austin&apos;s Ecommerce Market: SoCo, East Austin, Domain, UT</h2>
       <p className="mb-4">
         Austin&apos;s ecommerce scene clusters into a handful of neighborhoods, and each one shapes the storefront work we do for operators in it.
       </p>

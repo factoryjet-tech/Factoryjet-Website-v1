@@ -13,9 +13,9 @@ export const post: BlogPost = {
   readTime: '10 min read',
   imageUrl: '/blog-images/ai-chatbots-vs-ai-agents-business.webp',
   meta: {
-    title: 'AI Chatbots vs AI Agents: Which Does Your Business Need? (2026)',
+    title: 'AI Chatbots vs AI Agents: Which Does Your Business Need?',
     description:
-      'AI chatbots vs AI agents explained for US small businesses: real differences, side-by-side comparison, costs ($2K–$75K), and decision criteria for picking the right one in 2026.',
+      'AI chatbots vs AI agents for US small businesses: the real differences, a side-by-side comparison, costs ($2K–$75K) and how to pick the right one in 2026.',
   },
   keyTakeaways: [
     'AI chatbots respond to questions in a single turn, like a smart FAQ widget. AI agents complete multi-step tasks across multiple tools, like a junior employee that finishes the job, not just answers the door.',

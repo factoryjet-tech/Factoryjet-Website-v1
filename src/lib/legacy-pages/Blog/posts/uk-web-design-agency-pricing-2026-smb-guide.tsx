@@ -33,8 +33,8 @@ export const post: BlogPost = {
   readTime: '9 min read',
   imageUrl: "/blog-images/uk-web-design-agency-pricing-2026-smb-guide-hero.webp",
   meta: {
-    title: "How Much Does a Website Cost in the UK in 2026? Prices by Type",
-    description: "Most UK businesses pay £3,000 to £6,000 for a website in 2026. Prices by project type, a 10-page example, freelancer vs agency rates, and yearly costs to own one.",
+    title: "How Much Does a Website Cost in the UK in 2026?",
+    description: "Most UK businesses pay £3,000 to £6,000 for a website in 2026. Prices by project type, a 10-page example, freelancer vs agency rates and yearly costs to own.",
   },
   keyTakeaways: [
     "Most UK businesses pay £3,000 to £6,000 for a professionally built website (Whito, updated 19 October 2026).",

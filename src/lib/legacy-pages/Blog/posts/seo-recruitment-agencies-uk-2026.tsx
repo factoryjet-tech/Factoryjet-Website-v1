@@ -42,7 +42,7 @@ export const post: BlogPost = {
   imageUrl: "/blog-images/seo-recruitment-agencies-uk-2026-hero.webp",
   meta: {
     title: "SEO for Recruitment Agencies (UK): 2026 Guide",
-    description: "SEO for UK recruitment agencies, with real Google AI Overview examples from 21 October 2026, JobPosting rules from Google, and the pages that win client enquiries.",
+    description: "SEO for UK recruitment agencies: real Google AI Overview examples from 21 October 2026, Google's JobPosting rules, and the pages that win client enquiries.",
   },
   keyTakeaways: [
     "On 21 October 2026 we ran 6 recruitment searches on Google UK. Employer questions about fees triggered an AI Overview; \"[sector] recruitment agency [city]\" searches showed a map pack instead.",

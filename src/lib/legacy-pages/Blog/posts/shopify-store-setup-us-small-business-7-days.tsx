@@ -13,9 +13,9 @@ export const post: BlogPost = {
   readTime: '12 min read',
   imageUrl: '/blog-images/shopify-store-setup-us-small-business-7-days-hero.webp',
   meta: {
-    title: 'Launch a Shopify Store in 7 Days: US Small Business Guide 2026',
+    title: 'Launch a Shopify Store in 7 Days: US Small Business Guide',
     description:
-      'Exact 7-day Shopify launch timeline for US small businesses. Day-by-day breakdown, what\'s included, common blockers, and what professional setup costs. FactoryJet delivers in 7 days.',
+      'A 7-day Shopify launch timeline for US small businesses: day-by-day steps, what\'s included, common blockers and what setup costs. FactoryJet delivers in 7 days.',
   },
   keyTakeaways: [
     'A professionally built Shopify store can launch in 7 days when the client supplies product data, images, and brand assets at project kickoff, content delays are the #1 timeline killer.',

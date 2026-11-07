@@ -164,9 +164,9 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   imageUrl: '/images/blog/ai-voice-agent-vs-human-answering-service.jpg',
   meta: {
-    title: 'How Much Does an AI Voice Agent Cost in 2026? Prices Compared',
+    title: 'AI Voice Agent Cost in 2026: Prices Compared',
     description:
-      'AI voice agent cost in 2026: custom builds $3,000 to $150,000+ by size, Retell AI $0.07 to $0.31 a minute, Dialzara from $29 a month, Ruby from $250. Prices read 21 Oct.',
+      'AI voice agent cost in 2026: custom builds $3,000 to $150,000+, Retell AI $0.07 to $0.31 a minute, Dialzara from $29 a month, Ruby from $250. Read 21 Oct.',
   },
   keyTakeaways: [
     'Building a custom AI voice agent in 2026 costs $3,000 to $12,000 for one job with one integration, per Groovy Web, and $25,000 to $50,000 for a mid-tier agent with CRM integration and several call types, per Master of Code Global. Master of Code Global puts multilingual, compliance-heavy builds at $50,000 to $150,000 and up.',

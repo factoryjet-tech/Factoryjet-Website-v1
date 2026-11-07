@@ -14,9 +14,9 @@ export const post: BlogPost = {
   imageUrl: '/blog-images/how-to-sell-on-walmart-marketplace-2026.webp',
   imageAlt: 'Hands scanning a plain cardboard box at a warehouse packing bench, representing the inventory and fulfilment work behind selling on a large online marketplace',
   meta: {
-    title: 'How to Sell on Walmart Marketplace in 2026: Step-by-Step Guide',
+    title: 'How to Sell on Walmart Marketplace in 2026: Seller Guide',
     description:
-      'A practical 2026 guide to selling on Walmart Marketplace in the US: the seller application and approval process, fees, WFS vs shipping yourself, Walmart Connect ads, and winning the Featured Offer.',
+      'Selling on Walmart Marketplace in 2026: the seller application and approval, fees, WFS vs shipping yourself, Walmart Connect ads and winning the Featured Offer.',
   },
   keyTakeaways: [
     'Walmart Marketplace is application-based, not open registration. You apply through Walmart Marketplace Seller Center, and Walmart reviews your business standing, product category, and catalog quality before granting access, commonly taking a few days to a few weeks.',

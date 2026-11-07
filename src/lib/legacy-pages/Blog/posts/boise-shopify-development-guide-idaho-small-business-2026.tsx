@@ -13,9 +13,9 @@ export const post: BlogPost = {
   readTime: '9 min read',
   imageUrl: '/blog-images/boise-shopify-development-guide-idaho-small-business-2026.webp',
   meta: {
-    title: 'Boise Shopify Development Guide for Idaho Small Businesses 2026',
+    title: 'Boise Shopify Development Guide for Idaho Small Business',
     description:
-      'A 2026 Shopify development guide for Boise, Idaho small businesses, when custom Shopify beats off-the-shelf, Treasure Valley local pickup setup, BSU football and outdoor-season traffic patterns, Idaho sales tax automation, and realistic build timelines.',
+      'Shopify development for Boise small businesses in 2026: when custom beats off-the-shelf, Treasure Valley local pickup, Idaho sales tax and realistic timelines.',
   },
   keyTakeaways: [
     "Boise's commerce mix, outdoor recreation gear, craft food and drink, North End and Hyde Park boutiques, and Eagle/Meridian/Garden City makers, has different Shopify needs than a generic SMB ecommerce build.",
@@ -66,7 +66,7 @@ export const post: BlogPost = {
         <h2 className="text-lg font-bold mb-3">Table of Contents</h2>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
           <li>Why Boise Is Having Its Ecommerce Moment</li>
-          <li>The Treasure Valley Commerce Landscape</li>
+          <li>The Treasure Valley Commerce Market</li>
           <li>Why Boise SMBs Are Picking Shopify Over WooCommerce and Wix</li>
           <li>When Custom Shopify Development Beats an Off-the-Shelf Theme</li>
           <li>What a Real Boise Shopify Build Includes</li>
@@ -92,7 +92,7 @@ export const post: BlogPost = {
         At the same time, the Boise agency market is built around $15K-plus engagements and 6–14 week build cycles. For a Boise SMB doing $500K to $5M and wanting to launch or relaunch a Shopify store this quarter, the math frequently does not work locally, and that is the gap FactoryJet was built to fill.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">The Treasure Valley Commerce Landscape</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">The Treasure Valley Commerce Market</h2>
       <p className="mb-4">
         Boise's commerce mix clusters into a handful of neighborhoods and submarkets, each with different Shopify needs.
       </p>

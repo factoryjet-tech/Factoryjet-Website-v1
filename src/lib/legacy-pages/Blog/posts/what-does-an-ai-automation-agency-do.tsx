@@ -152,7 +152,7 @@ export const post: BlogPost = {
   imageAlt: "A small AI assistant device on a dashboard, illustrating how AI automation quietly runs routine business workflows in the background",
   meta: {
     title: "What Does an AI Automation Agency Actually Do? (2026 Guide)",
-    description: "A plain-English guide to what AI automation agencies really do for US small businesses: workflow discovery, what to automate, integrations, testing, handover and monitoring.",
+    description: "What AI automation agencies do for US small businesses, in plain English: workflow discovery, what to automate, integrations, testing, handover and monitoring.",
   },
   keyTakeaways: [
     "The job is roughly four fifths plumbing and one fifth AI: mapping how your team really works, then connecting software to the tools you already pay for.",

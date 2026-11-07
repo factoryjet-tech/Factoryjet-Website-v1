@@ -148,7 +148,7 @@ export const post: BlogPost = {
   meta: {
     title: 'The Best AI for Ecommerce in 2026: What Actually Works',
     description:
-      'No single best AI for ecommerce exists. A job-by-job guide to what works today in product content, search, support, forecasting, ads, and personalisation, and what is still hype.',
+      'No single best AI for ecommerce exists. A job-by-job guide to what works in product content, search, support, forecasting, ads and personalisation.',
   },
   keyTakeaways: [
     'There is no best AI for ecommerce. There are six jobs, and a different category of tool wins each one.',

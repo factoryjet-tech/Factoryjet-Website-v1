@@ -126,7 +126,7 @@ export const post: BlogPost = {
   meta: {
     title: 'How to Choose an Ecommerce Development Agency (2026 Guide)',
     description:
-      'A vendor-neutral, plain-language guide to evaluating and hiring an ecommerce development agency: the real questions to ask, how to read a portfolio, engagement models, red flags, and 23 buyer FAQs.',
+      'A vendor-neutral guide to hiring an ecommerce development agency: questions to ask, how to read a portfolio, engagement models, red flags and 23 buyer FAQs.',
   },
   keyTakeaways: [
     'This guide is for any business (DTC, B2B, any platform) evaluating an ecommerce development agency, not a comparison of specific agencies. It is a framework you can run against anyone on your shortlist.',

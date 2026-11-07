@@ -97,7 +97,7 @@ export const post: BlogPost = {
   readTime: "14 min read",
   imageUrl: "/blog-images/best-ai-agent-development-companies-small-business-2026.webp",
   meta: {
-    "title": TITLE,
+    "title": `${PROVIDERS.length} Best AI Agent Developers for Small Business (2026)`,
     "description": DESCRIPTION
   },
   keyTakeaways: [

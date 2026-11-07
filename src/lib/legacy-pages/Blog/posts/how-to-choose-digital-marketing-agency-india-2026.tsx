@@ -118,9 +118,9 @@ export const post: BlogPost = {
   imageAlt:
     'A business owner reviewing marketing analytics and reports with a digital marketing team in a bright Indian office',
   meta: {
-    title: 'How to Choose the Best Digital Marketing Agency in India (2026)',
+    title: 'How to Choose a Digital Marketing Agency in India (2026)',
     description:
-      'A plain-English guide to choosing a digital marketing agency in India: the checks, the questions to ask, the red flags, real agencies named honestly, and 24 buyer FAQs.',
+      'A plain-English guide to choosing a digital marketing agency in India: checks, questions to ask, red flags, real agencies named and 24 buyer FAQs.',
   },
   keyTakeaways: [
     'Choose on fit, not on a "best" label. Start from the one number you want to move, then judge every agency on proof for a business like yours, a named person on your account, and a plain monthly report.',

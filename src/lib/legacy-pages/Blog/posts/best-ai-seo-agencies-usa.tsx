@@ -15,7 +15,7 @@ export const post: BlogPost = {
   imageAlt: "Map of the United States with AI answer cards and a magnifying glass over a storefront, showing how AI search picks which US businesses to recommend",
   meta: {
     title: "Best AI SEO Agency in the USA: 12 Top Picks for 2026",
-    description: "Which AI SEO agency should you hire? 12 top US AI SEO and AEO agencies compared on services, tools and contract terms, checked Sep 2026. Our own spot is disclosed.",
+    description: "12 US AI SEO and AEO agencies compared on services, tools and contract terms, checked Sep 2026, to help you pick one. Our own spot on the list is disclosed.",
   },
   keyTakeaways: [
     "Short answer: hire the AI SEO agency whose strength matches your gap. iPullRank for enterprise technical work, Siege Media for content-led growth, Omniscient Digital for B2B software, OuterBox for online stores, FactoryJet (our own agency, disclosed) for small and mid-sized US businesses that want month-to-month terms.",

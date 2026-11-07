@@ -413,7 +413,7 @@ export const post: BlogPost = {
   imageAlt:
     'A woman with auburn hair in a green jumper sorts blank pastel cards into five groups on an oak table, with a joinery workshop visible through the doorway behind her',
   meta: {
-    title: 'Best AI Automation Agencies UK 2026: 13 Compared | FactoryJet',
+    title: 'Best AI Automation Agencies UK 2026: 13 Compared',
     description: META_DESCRIPTION,
   },
   keyTakeaways: [

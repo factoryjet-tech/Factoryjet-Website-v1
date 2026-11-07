@@ -502,7 +502,7 @@ export const post: BlogPost = {
   imageAlt:
     'A woman in a mustard sweater and a man in a navy overshirt stand at a wooden table in a clothing studio sorting blank white cards into three piles beside an orange mug',
   meta: {
-    title: 'Best Shopify Plus Agencies USA 2026: 14 Compared | FactoryJet',
+    title: 'Best Shopify Plus Agencies USA 2026: 14 Compared',
     description: META_DESCRIPTION,
   },
   keyTakeaways: [

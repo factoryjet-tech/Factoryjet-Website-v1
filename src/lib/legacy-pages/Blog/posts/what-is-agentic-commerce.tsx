@@ -224,7 +224,7 @@ export const post: BlogPost = {
   meta: {
     title: 'What Is Agentic Commerce? A Plain-English Guide (2026)',
     description:
-      'Agentic commerce is online shopping where an AI agent searches, compares and buys for you. Plain definition, real examples, the companies building it, the risks, and how to make your store agent-ready.',
+      'Agentic commerce is online shopping where an AI agent searches, compares and buys for you. Definition, examples, who builds it, risks and how to be agent-ready.',
   },
   keyTakeaways: [
     'Agentic commerce is online shopping where an AI agent acts on the shopper’s behalf: it searches, compares, chooses and completes the purchase using credentials the shopper already approved.',
