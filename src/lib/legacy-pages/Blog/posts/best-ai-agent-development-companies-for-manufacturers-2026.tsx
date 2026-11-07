@@ -5,12 +5,12 @@ import type { BlogPost, FAQItem } from '../data.types';
 const SLUG = 'best-ai-agent-development-companies-for-manufacturers-2026';
 const PAGE_URL = `https://factoryjet.com/blog/${SLUG}`;
 const IMG = `/images/blog/${SLUG}`;
-const TITLE = 'Best AI Agent Development Companies for Manufacturers (2026): 14 AI Manufacturing Companies Compared';
+const TITLE = 'Best AI Agent Development Companies for Manufacturers (2026): 17 AI Manufacturing Companies Compared';
 const META_DESCRIPTION =
-  'Compare 14 AI manufacturing companies for 2026 by what you buy: plant-floor AI, quote and order software, or a custom agent on your ERP. Each checked at source.';
+  'The best AI agent development companies for manufacturers in 2026: 17 firms grouped by plant-floor AI, quote and order software or custom agents. Checked 8 Nov.';
 
 // Every fact about every company below was read on that company's own website
-// on 11 October 2026 (URL in `source`, plus `moreSources` where other facts
+// on 8 November 2026 (URL in `source`, plus `moreSources` where other facts
 // came from further pages on the same site). Nothing here is paid
 // placement. The order is NOT a ranking; companies are grouped by the kind of
 // purchase a manufacturer or distributor is making.
@@ -50,7 +50,7 @@ const FIRMS: Firm[] = [
     type: 'Industrial Copilots and AI agents inside Siemens automation, engineering and design software',
     clients: 'Industrial companies in process and discrete industries',
     systems: 'TIA Portal, NX CAD, Insights Hub, Teamcenter, Siemens Xcelerator',
-    what: 'Siemens announced AI agents for industrial automation at Automate 2025 in Detroit, in a press release dated 12 May 2025. It separates Industrial Copilots, the assistants people talk to, from the AI agents that do the work behind them, with an orchestrator that hands tasks to specialized agents. Its copilots cover design, planning, engineering, operations and services. The engineering copilot writes automation code for TIA Portal from plain-language requests. Siemens also said it plans a marketplace for its own and third-party agents on Siemens Xcelerator, and says its Industrial Copilot was developed in partnership with Microsoft.',
+    what: 'Siemens announced AI agents for industrial automation at Automate 2025 in Detroit, in a press release dated 12 May 2025. It separates Industrial Copilots, the assistants people talk to, from the AI agents that do the work behind them, with an orchestrator that hands tasks to specialized agents. Siemens says its Industrial Copilots support every phase of the industrial value chain, from design and planning to operations and service. The engineering copilot writes automation code for TIA Portal from plain-language requests. Siemens also said it plans a marketplace for its own and third-party agents on Siemens Xcelerator, and says its Industrial Copilot was developed in partnership with Microsoft.',
     bestFor: 'Plants and machine builders already standardized on Siemens controls and engineering software.',
     ask: 'Which copilots and agents are generally available for the software versions you run today, and which are still in pre-release.',
   },
@@ -67,7 +67,7 @@ const FIRMS: Firm[] = [
     type: 'Cloud MES (the system that tracks production on the shop floor) with AI built in',
     clients: 'Discrete, hybrid and regulated manufacturers',
     systems: 'Plex MES; its page names ERP, PLM and supply chain systems as data sources',
-    what: 'Rockwell Automation sells the Plex Smart Manufacturing Platform, which it describes as a multi-tenant SaaS MES with embedded AI. Its agentic AI page describes agents for production orders, resource management, material handling, quality control and maintenance that share information across the plant. Rockwell says agentic AI is only as effective as the data it receives, so connected equipment and an MES come first. Its roadmap starts with connecting production equipment and ends with wider autonomous decisions as confidence grows.',
+    what: 'Rockwell Automation sells the Plex Smart Manufacturing Platform, which it describes as a multi-tenant SaaS MES with embedded AI. Its agentic AI page describes agents for production orders, resource management, material handling, quality control and maintenance that share information across the plant. It also describes production agents that read live OEE, run rate, inventory and schedules to surface issues and recommend next steps. Rockwell says agentic AI is only as effective as the data it receives, so connected equipment and an MES come first. Its roadmap starts with connecting production equipment and ends with wider autonomous decisions as confidence grows.',
     bestFor: 'Manufacturers that want AI inside the system that already runs production, quality and maintenance.',
     ask: 'Which of the agents on that page are shipping features of Plex today, and which describe where the product is heading.',
   },
@@ -81,7 +81,7 @@ const FIRMS: Firm[] = [
     type: 'Industrial data platform plus a low-code workbench for building AI agents',
     clients: 'Energy, process manufacturing and other industrial companies',
     systems: 'Cognite Data Fusion and Cognite Atlas AI; time-series data, events, documents and engineering models',
-    what: 'Cognite calls itself an AI company that delivers industrial software. Cognite Data Fusion pulls plant data into what it calls an Industrial Knowledge Graph: time-series readings, events, documents, visual data and engineering models. Cognite Atlas AI is a low-code workbench where a digital team builds agents on that data from preconfigured templates. Its page shows a root cause analysis agent and a troubleshooting agent for rotating equipment, and says agents can run on any cloud with any language model.',
+    what: 'Cognite calls itself an AI company that delivers industrial software. Cognite Data Fusion pulls plant data into what it calls an Industrial Knowledge Graph: time-series readings, events, documents, visual data and engineering models. Cognite Atlas AI, which Cognite calls a low-code industrial AI agents workbench, is where a digital team builds agents on that data. Its page describes preconfigured industrial agents, purpose-built tools and reusable AI skills, all grounded in the knowledge graph, and links to an advanced troubleshooting solution area.',
     bestFor: 'Asset-heavy and process plants with an in-house digital team and data spread across many systems.',
     ask: 'How much of your plant data has to be modelled in Cognite Data Fusion before the first agent is useful.',
   },
@@ -97,6 +97,20 @@ const FIRMS: Firm[] = [
     what: 'MachineMetrics connects machines, operators and the ERP, and calls the result a next-generation MES built for discrete manufacturing. It says more than 10,000 machines are connected to it. Its platform, MaximaOS, covers scheduling, work orders, downtime and OEE, a measure of how much planned machine time ends up making good parts. Its assistant, Max AI, answers plain-language questions from live machine data, writes shift summaries and flags anomalies before they become scrap. Maintenance work orders can open in your CMMS, the system that tracks maintenance jobs.',
     bestFor: 'Machine shops and discrete manufacturers that want machine data and AI answers without building a data platform first.',
     ask: 'Which of your machine controls connect out of the box, and what the ERP connection needs from your side.',
+  },
+  {
+    name: 'C3 AI',
+    url: 'https://c3.ai/industries/manufacturing',
+    source: 'https://c3.ai/industries/manufacturing',
+    moreSources: ['https://c3.ai/products/c3-agentic-ai-platform', 'https://c3.ai/contact-us'],
+    group: 'Plant floor and industrial data',
+    company: 'Headquarters in Redwood City, California; its contact page lists further US offices including Houston, Atlanta and Minneapolis',
+    type: 'Packaged enterprise AI applications for reliability, process optimization and demand planning, on its own agentic AI platform',
+    clients: 'Large industrial manufacturers; its manufacturing page names Dow, Holcim, Nucor, Bloom Energy and Flint Hills Resources',
+    systems: 'Its platform page lists connectors for SAP, Oracle, Salesforce, OSI PI, Microsoft, AWS IoT, Databricks and Snowflake',
+    what: 'C3 AI sells ready-built AI applications for manufacturers. C3 AI Reliability brings sensor, maintenance and operational data together to predict equipment failures weeks before they occur, and its product tour shows failure mode recommendations for root cause analysis and direct work order creation. C3 AI Process Optimization recommends process conditions in near real time from AI and physics-based models, and C3 AI Demand Planning turns forecasts into production plans. The applications run on the C3 Agentic AI Platform, whose page lists an agent workbench, an agent registry, planning and retrieval agents, and MCP and A2A integrations. For work the applications do not cover, it offers C3 Code to build your own.',
+    bestFor: 'Large, asset-heavy manufacturers that want packaged AI for uptime, process yield and demand planning across many plants.',
+    ask: 'Which of your historians and maintenance systems connect out of the box, and how long the first application took at a plant like yours.',
   },
   {
     name: 'Paperless Parts',
@@ -123,10 +137,10 @@ const FIRMS: Firm[] = [
     moreSources: ['https://conexiom.com/about', 'https://conexiom.com/contact/'],
     group: 'Ready-made quote and order software',
     company: 'Corporate headquarters in Vancouver, Canada, with offices in Chicago, Kitchener, London and Munich',
-    type: 'Order automation software for purchase orders, RFQs and invoices',
+    type: 'Order automation software for purchase orders, quotes and invoices',
     clients: 'Manufacturers and distributors; it says more than 600 brands use it',
-    systems: 'Pre-built integrations with more than 40 ERPs',
-    what: 'Conexiom turns orders, RFQs, acknowledgements and invoices that arrive as PDFs, spreadsheets or emails into data your ERP can accept. It captures the document, validates it against your ERP, corrects errors and passes it on. It says it processes more than 1.5 billion line items a year, that implementation averages 30 days and that your ERP needs no changes. Its site says it is SOC 2 Type II certified.',
+    systems: 'Native integrations with more than 40 ERPs',
+    what: 'Conexiom turns quotes, orders, acknowledgements and invoices that arrive as PDFs, spreadsheets or emails into data your ERP can accept. It captures the document, validates it against your ERP, corrects errors and passes it on. It says it processes more than 1.5 billion line items a year, that implementation averages 30 days and that your ERP needs no changes. Its site says it is SOC 2 Type II certified.',
     bestFor: 'Manufacturers and distributors with a high volume of emailed purchase orders that staff key into an ERP.',
     ask: 'How it handles your messiest customer order formats, and what happens to a line it cannot match.',
   },
@@ -139,8 +153,8 @@ const FIRMS: Firm[] = [
     company: 'Cambridge, Massachusetts',
     type: 'AI sales platform for distributors: CRM, product data, ecommerce AI, and order and quote entry',
     clients: 'Distributors, from family-owned to publicly traded',
-    systems: 'Its own CRM and product information manager, plus your catalog and ERP',
-    what: 'Proton builds software only for distributors. Its order and quote entry tool reads an inbound request, matches the products to your catalog, applies your contract pricing and sourcing rules, and drafts the quote or order. A rep reviews and approves it, and then it goes into the ERP. The same platform has a CRM, a product information manager and ecommerce AI. Its site lists pricing AI and inventory AI as coming soon.',
+    systems: 'Its own CRM and product information manager, plus your catalog and ERP; its FAQ says it connects to any ERP, and its example shows a quote saved to Prophet 21',
+    what: 'Proton describes itself as AI software for wholesale distributors. Its order and quote entry tool reads inbound requests from email, PDFs, spreadsheets, voicemails and photos, matches descriptions, nicknames and customer or competitor part numbers to your catalog, applies customer contract pricing, and drafts the quote or order. A rep reviews and approves it, and then it goes into the ERP. The same platform has a CRM, a product information manager and ecommerce AI. Its site lists pricing AI and inventory AI as early access.',
     bestFor: 'Distributors whose inside sales team spends its day typing quotes and orders from emails.',
     ask: 'Which ERPs it writes orders into today, and how it learns your contract pricing.',
   },
@@ -152,9 +166,9 @@ const FIRMS: Firm[] = [
     group: 'Custom AI agent builders',
     company: 'Los Angeles headquarters in Pasadena, California, and a Denver office. It says it has operated for 16+ years',
     type: 'Custom agents configured from pre-built manufacturing blueprints',
-    clients: 'Enterprise manufacturers; its site cites a global construction equipment maker and an automotive components manufacturer',
+    clients: 'Enterprise manufacturers; its site cites a global construction equipment manufacturer and an automotive and industrial components manufacturer, both unnamed',
     systems: 'ERP, CPQ, dealer management, PLM and MES',
-    what: 'Intellectyx offers nine families of pre-built agent blueprints for manufacturing, which it configures around your ERP, CPQ (the tool that prices configured products), dealer and PLM systems. The families include sales operations and order management, dealer and distribution networks, aftermarket parts and service, sourcing, pricing and plant operations. It says a first solution can reach production in as little as 90 days and publishes an indicative 90-day plan. After launch it runs the agents under a managed service it calls AgentOps.',
+    what: 'Intellectyx offers nine families of pre-built agent blueprints for manufacturing, which it configures around your ERP, CPQ (the tool that prices configured products), dealer and PLM systems. The families include sales operations and order management, dealer and distribution networks, aftermarket parts and service, sourcing, pricing and plant operations. It says a first solution could reach production in as little as 90 days, depending on data readiness, integration complexity and approval cycles, and publishes a 90-day plan it labels indicative only. After launch it runs the agents under its AI managed services, with an operations layer it calls AgentOps.',
     bestFor: 'Larger manufacturers with dealer networks, aftermarket parts and several enterprise systems to connect.',
     ask: 'How much of the blueprint fits your process as it stands, and what the 90 days assume about your data.',
   },
@@ -194,8 +208,8 @@ const FIRMS: Firm[] = [
     group: 'Custom AI agent builders',
     company: 'Says it has built AI products since 2022 and is trusted across 450+ builds by the LowCode Agency team. Founder and CEO: Jesus Vargas',
     type: 'AI consulting and implementation for the office work around production',
-    clients: 'Mid-market manufacturers; its site frames the full engagement for companies of $5 million and up',
-    systems: 'Your ERP; it offers Claude and OpenAI consulting',
+    clients: 'Mid-market manufacturers; its manufacturing page says the right starting point depends on your workflows, ERP and data, not your headcount or revenue',
+    systems: 'Your ERP; it says it is a Claude (Anthropic) partner and a select OpenAI partner',
     what: 'Phos AI Labs says it builds and governs AI systems that run RFQ triage, purchase order processing, quality and corrective-action paperwork, shift reports and knowledge capture inside your existing operation. It draws a firm line: every physical action, spec sign-off and safety decision stays with a qualified person. Its page argues that the fastest and safest wins sit upstream in the office, in RFQ triage and purchase order entry, while predictive maintenance takes the headlines. It says it identifies the right starting point in two weeks.',
     bestFor: 'Mid-market manufacturers that want a consultant to pick the first office workflow and then build it.',
     ask: 'Which ERPs it has written quotes or orders into, and who looks after the system after the first build.',
@@ -206,11 +220,11 @@ const FIRMS: Firm[] = [
     source: 'https://markovate.com/manufacturing-ai-agents/',
     moreSources: ['https://markovate.com/contact-us/'],
     group: 'Custom AI agent builders',
-    company: 'Lists offices in Toronto, San Francisco and Gurugram',
+    company: 'Lists offices in Schaumburg, Illinois, Toronto, San Francisco and Gurugram',
     type: 'Drawing-reading agents as a product, plus custom agent development',
     clients: 'Manufacturing teams that estimate parts or projects from engineering drawings',
     systems: 'DWG, DXF, STEP and PDF drawings; ERP, PLM and CRM',
-    what: 'Markovate builds manufacturing agents that read drawings, validate bills of materials and automate production, inventory and maintenance workflows. Its product, AI Blueprint Classifier, runs on a catalog of agents it calls CADIAM. One turns a drawing into a costed quote ready for the ERP. Another reads tolerances and surface finish off a part drawing. A third compares two drawing revisions and flags what changed. It also runs a scoped pilot on your own data, usually within a few weeks, and says it holds ISO 9001:2015 and ISO/IEC 27001:2022 certification.',
+    what: 'Markovate builds manufacturing agents that read drawings, validate bills of materials and automate production, inventory and maintenance workflows. Its product, AI Blueprint Classifier, runs on a catalog of agents it calls CADIAM, which includes P&ID, BOM, takeoff, compare, search, insights, quote and GD&T agents. One turns a drawing into a costed quote ready for the ERP. Another reads tolerances and surface finish off a part drawing. A third compares two drawing revisions and flags what changed. It also runs a scoped pilot on your own data, usually within a few weeks, and says it holds ISO 9001:2015 and ISO/IEC 27001:2022 certification.',
     bestFor: 'Manufacturers whose quotes start from an engineering drawing and who want a ready-made starting point.',
     ask: 'How the quote agent gets your rates and margins, and what a person checks before a quote goes out.',
   },
@@ -227,6 +241,33 @@ const FIRMS: Firm[] = [
     what: 'LeewayHertz offers manufacturing AI consulting and development: strategy, proofs of concept, custom solutions, model fine-tuning, integration, and agent or copilot development. Its page also shows ready-made ZBrain agents for manufacturers, most of them on the purchasing side: supplier performance monitoring, supplier risk assessment, contract compliance review and penalty clause identification. Its contact page carries the news that The Hackett Group acquired it.',
     bestFor: 'Larger manufacturers that want a broad AI engineering team, especially for procurement and supplier work.',
     ask: 'Which parts of your project would be custom code and which would run on its ZBrain platform.',
+  },
+  {
+    name: 'ThirdEye Data',
+    url: 'https://thirdeyedata.ai/industries/manufacturing/',
+    source: 'https://thirdeyedata.ai/industries/manufacturing/',
+    group: 'Custom AI agent builders',
+    company: 'Head office in San Jose, California, with delivery centers it lists in India and Canada',
+    type: 'Custom AI engineering for plant operations: predictive maintenance, vision inspection, anomaly detection and forecasting',
+    clients: 'Manufacturers; its project references include a plywood manufacturer, an electronic connector manufacturer and aircraft component maintenance',
+    systems: 'Sensor data, machine logs, existing cameras and production lines, and planning workflows',
+    what: 'ThirdEye Data calls itself a full-stack AI development company and describes its manufacturing work as applied AI systems that integrate directly into production environments. Its manufacturing page lists seven solutions: predictive maintenance, computer vision quality inspection, product lifecycle prediction, automated product counting, production line anomaly detection, worker safety monitoring, and inventory and supply forecasting. It says each can be built on its own or combined, depending on plant maturity and data readiness. AI agent development and agentic document workflow automation appear among its wider services. For safety monitoring, it says human oversight remains central.',
+    bestFor: 'Plants that want a custom build for machine, vision or forecasting work instead of a packaged platform.',
+    ask: 'Which of its manufacturing builds were agents that act in your systems, and which were prediction or vision models.',
+  },
+  {
+    name: 'Master of Code Global',
+    url: 'https://masterofcode.com/manufacturing-ai-consulting',
+    source: 'https://masterofcode.com/manufacturing-ai-consulting',
+    moreSources: ['https://masterofcode.com/ai-agent-development-services'],
+    group: 'Custom AI agent builders',
+    company: 'Lists offices in Redwood City, California, and Winnipeg, Canada. Says it has 20+ years in business and 1,000+ projects delivered',
+    type: 'AI consulting and custom development for manufacturing, from roadmap to plant-wide rollout',
+    clients: 'Manufacturers moving AI from pilot to plant-wide use; its manufacturing case studies include predictive maintenance and aviation parts sourcing',
+    systems: 'MES, ERP, SCADA and IoT platforms',
+    what: 'Master of Code Global offers AI consulting for manufacturers that covers strategy, use-case design, systems and data architecture, implementation, and scaling from pilot to plant-wide rollout. It starts with a readiness assessment of your data, workforce and integrations, and says it delivers an AI roadmap in four weeks with a 90-day activation plan. Its integration work connects MES, ERP, SCADA and IoT platforms into one data layer. Use cases on its page include predictive maintenance, vision quality control, anomaly detection, supply chain and inventory optimization, and production scheduling. Its agent development page says it builds agents that work inside your existing enterprise systems, and it says it is ISO 27001 certified.',
+    bestFor: 'Manufacturers that want a consultant to rank AI use cases first and then build the chosen ones.',
+    ask: 'Which manufacturing agents it has running in production, beyond the case studies on its page.',
   },
   {
     name: 'FactoryJet (that is us)',
@@ -268,12 +309,12 @@ const GROUP_HEADING: Record<Group, string> = {
 
 const GROUP_INTRO: Record<Group, string> = {
   'Plant floor and industrial data':
-    'Companies whose AI works on machines, sensors and production data. Two are automation suppliers, one is an industrial data platform and one connects machine tools. You buy a platform or a module, and it needs connected machines to be useful.',
+    'Companies whose AI works on machines, sensors and production data. Two are automation suppliers, one is an industrial data platform, one sells packaged enterprise AI applications and one connects machine tools. You buy a platform or a module, and it needs connected machines to be useful.',
   'Ready-made quote and order software':
     'Products you subscribe to and configure. All three work on the office side: quotes from part files, emailed purchase orders, and quotes and orders for distributors. Each connects to an ERP and publishes no price on the pages we read.',
   'Custom AI agent builders':
-    'Firms that build an agent around your own process and systems. Each one names manufacturing on its own site. They differ in size and in where they start: enterprise blueprints, drawings, procurement, or the office paperwork around production.',
-  Us: 'FactoryJet wrote this list and builds this kind of agent, so it is on the list. The entry follows the same format as every other.',
+    'Firms that build an agent around your own process and systems. Each one names manufacturing on its own site. They differ in size and in where they start: enterprise blueprints, drawings, procurement, plant data, or the office paperwork around production.',
+  Us: 'FactoryJet wrote this list and builds this kind of agent, so it is listed here, separately and last. The entry follows the same format as every other.',
 };
 
 // Eight jobs AI agents do for manufacturers and distributors, and which
@@ -307,19 +348,19 @@ const JOBS: { job: string; systems: string; agent: string; who: string }[] = [
     job: 'Machine monitoring and maintenance',
     systems: 'Machine controls, sensors, MES, CMMS',
     agent: 'Watches machine data, flags anomalies and opens maintenance work',
-    who: 'MachineMetrics, Siemens, Rockwell Automation',
+    who: 'MachineMetrics, Siemens, Rockwell Automation, C3 AI, ThirdEye Data',
   },
   {
     job: 'Root cause and troubleshooting',
     systems: 'Plant data platform, documents, engineering models',
     agent: 'Gathers the data and documents for a fault and suggests likely causes',
-    who: 'Cognite, Siemens',
+    who: 'C3 AI, Siemens, Rockwell Automation, ThirdEye Data',
   },
   {
     job: 'Production scheduling',
     systems: 'MES, ERP',
     agent: 'Re-plans work orders when a machine, a material or a customer priority changes',
-    who: 'Rockwell Automation, MachineMetrics',
+    who: 'Rockwell Automation, MachineMetrics, C3 AI, Master of Code Global',
   },
   {
     job: 'Dealer, parts and service',
@@ -329,36 +370,36 @@ const JOBS: { job: string; systems: string; agent: string; who: string }[] = [
   },
 ];
 
-// Market reference for a custom build. Page published 24 Feb 2026, modified 20 May 2026; re-opened 11 Oct 2026.
+// Market reference for a custom build. Page published 24 Feb 2026; re-opened 8 Nov 2026, headline range still $5K to $180K+.
 const BUILD_COST_URL = 'https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent/';
-// NIST Manufacturing Extension Partnership and the CSIA integrator directory, both opened 11 Oct 2026.
+// NIST Manufacturing Extension Partnership and the CSIA integrator directory, both re-opened 8 Nov 2026.
 const NIST_MEP_URL = 'https://www.nist.gov/mep';
 const CSIA_URL = 'https://controlsys.org/find-an-integrator/';
 
 const FAQS: FAQItem[] = [
   {
     q: 'Who are the best AI agent development companies for manufacturers?',
-    a: 'It depends on where the work sits. For agents built around your own quoting, order and ERP process, the builders we checked are Intellectyx, USM Business Systems, Xcelacore, Phos AI Labs, Markovate, LeewayHertz and FactoryJet. For AI on machines and production data, look at Siemens, Rockwell Automation, Cognite and MachineMetrics. For ready-made quote and order software, Paperless Parts, Conexiom and Proton.ai. We read all 14 on their own websites on 11 October 2026.',
+    a: 'It depends on where the work sits. For agents built around your own quoting, order and ERP process, the builders we checked are Intellectyx, USM Business Systems, Xcelacore, Phos AI Labs, Markovate, LeewayHertz, ThirdEye Data and Master of Code Global, with FactoryJet, which wrote this list, listed separately. For AI on machines and production data, look at Siemens, Rockwell Automation, Cognite, MachineMetrics and C3 AI. For ready-made quote and order software, Paperless Parts, Conexiom and Proton.ai. We re-read all 17 on their own websites on 8 November 2026.',
   },
   {
     q: 'I want to hire AI agent developers for factory automation. Who should I call?',
-    a: 'First check which kind of automation you mean. For machine controllers, robots and SCADA screens, hire a control system integrator; the Control System Integrators Association runs a directory of them. For AI close to the machines, Siemens, Rockwell Automation, Cognite and MachineMetrics sell it as software. For agents that handle RFQs, quotes, purchase orders and ERP entry, hire a custom builder such as Phos AI Labs, Markovate, Intellectyx or FactoryJet.',
+    a: 'First check which kind of automation you mean. For machine controllers, robots and SCADA screens, hire a control system integrator; the Control System Integrators Association runs a directory of them. For AI close to the machines, Siemens, Rockwell Automation, Cognite, MachineMetrics and C3 AI sell it as software. For agents that handle RFQs, quotes, purchase orders and ERP entry, hire a custom builder such as Phos AI Labs, Markovate, Intellectyx or FactoryJet.',
   },
   {
     q: 'Who offers AI consulting for workflow automation in manufacturing companies?',
-    a: 'There are three routes. NIST runs the Manufacturing Extension Partnership, which it says has nearly 1,400 advisors and experts at more than 450 service locations for small and medium-sized manufacturers. Specialist firms such as Phos AI Labs and Xcelacore advise and then build. FactoryJet starts with one workflow, such as RFQ to quote, maps it, checks ERP access and quotes the build as a fixed price. For company-wide programs, see our list of AI consulting firms in the USA.',
+    a: 'There are three routes. NIST runs the Manufacturing Extension Partnership, which it says has nearly 1,400 advisors and experts at more than 450 service locations for small and medium-sized manufacturers. Specialist firms such as Phos AI Labs, Master of Code Global and Xcelacore advise and then build. FactoryJet starts with one workflow, such as RFQ to quote, maps it, checks ERP access and quotes the build as a fixed price. For company-wide programs, see our list of AI consulting firms in the USA.',
   },
   {
     q: 'What are the top AI manufacturing companies in the USA?',
-    a: 'Lists online mix three kinds of company. Industrial software vendors with US offices on their own sites include MachineMetrics in Northampton, Massachusetts, and Cognite, which lists a Phoenix headquarters. Quote and order software comes from Paperless Parts in Boston, Proton.ai in Cambridge, Massachusetts, and Conexiom, which has a Chicago office. Custom builders with US offices include Intellectyx in Pasadena, USM Business Systems in Ashburn, Virginia, and Xcelacore near Chicago. FactoryJet works remotely with US manufacturers and distributors.',
+    a: 'Lists online mix three kinds of company. Industrial software vendors with US offices on their own sites include MachineMetrics in Northampton, Massachusetts, C3 AI in Redwood City, California, and Cognite, which lists a Phoenix headquarters. Quote and order software comes from Paperless Parts in Boston, Proton.ai in Cambridge, Massachusetts, and Conexiom, which has a Chicago office. Custom builders with US offices include Intellectyx in Pasadena, USM Business Systems in Ashburn, Virginia, and Xcelacore near Chicago. FactoryJet works remotely with US manufacturers and distributors.',
   },
   {
     q: 'What companies use AI for manufacturing?',
-    a: 'Vendor sites name some. MachineMetrics publishes case studies from Harvey Performance and Hamilton on machine monitoring. Siemens describes Electronics Factory Erlangen using its Industrial Copilot for maintenance troubleshooting. Proton.ai quotes distributors including Vallen, MSC and Benco Dental. Paperless Parts says more than 800 manufacturers use its quoting software, and Conexiom says more than 600 brands use its order automation. Every one of these is a claim from the vendor site, read on 11 October 2026.',
+    a: 'Vendor sites name some. MachineMetrics publishes case studies from Harvey Performance and Hamilton on machine monitoring. Siemens describes Electronics Factory Erlangen using its Industrial Copilot for maintenance troubleshooting. C3 AI names Dow, Holcim and Nucor on its manufacturing page. Proton.ai quotes distributors including Vallen, MSC and Benco Dental. Paperless Parts says more than 800 manufacturers use its quoting software, and Conexiom says more than 600 brands use its order automation. Every one of these is a claim from the vendor site, re-read on 8 November 2026.',
   },
   {
     q: 'Which AI is best for the manufacturing industry?',
-    a: 'No single AI is best, because the jobs differ. For machine uptime and production data, the fit is software built on machine signals, such as MachineMetrics, Siemens Industrial Copilot or Plex from Rockwell Automation. For quoting from part files, Paperless Parts. For emailed purchase orders, Conexiom or Proton.ai. For a process with your own rules and exceptions, a custom agent on your ERP. Start from the task, then pick the tool.',
+    a: 'No single AI is best, because the jobs differ. For machine uptime and production data, the fit is software built on machine signals, such as MachineMetrics, Siemens Industrial Copilot, Plex from Rockwell Automation or C3 AI Reliability. For quoting from part files, Paperless Parts. For emailed purchase orders, Conexiom or Proton.ai. For a process with your own rules and exceptions, a custom agent on your ERP. Start from the task, then pick the tool.',
   },
   {
     q: 'What are some examples of how artificial intelligence is used in manufacturing?',
@@ -394,11 +435,11 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'How long does it take to build an AI agent for a manufacturer?',
-    a: 'Published timelines, read on 11 October 2026: Markovate says a scoped pilot usually runs within a few weeks. Intellectyx says a first solution can reach production in as little as 90 days. USM Business Systems quotes four to six months for implementation. Conexiom, a ready-made product, says implementation averages 30 days. At FactoryJet a pilot on one workflow usually takes two to four weeks and a production build six to twelve. ERP access is the biggest variable.',
+    a: 'Published timelines, re-read on 8 November 2026: Markovate says a scoped pilot usually runs within a few weeks. Intellectyx says a first solution could reach production in as little as 90 days, depending on data readiness. USM Business Systems quotes four to six months for implementation. Conexiom, a ready-made product, says implementation averages 30 days. At FactoryJet a pilot on one workflow usually takes two to four weeks and a production build six to twelve. ERP access is the biggest variable.',
   },
   {
     q: 'Which ERP systems can AI agents work with?',
-    a: 'Most ERPs that expose an API or allow file exchange. Products publish lists: Paperless Parts names JobBOSS, E2 Shop, Epicor, Global Shop Solutions and Infor SyteLine among others, and Conexiom says it has pre-built integrations with more than 40 ERPs. Custom builders connect to what you run. FactoryJet has worked on Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs. Ask any company which version of your ERP it has connected before.',
+    a: 'Most ERPs that expose an API or allow file exchange. Products publish lists: Paperless Parts names JobBOSS, E2 Shop, Epicor, Global Shop Solutions and Infor SyteLine among others, and Conexiom says it has native integrations with more than 40 ERPs. Custom builders connect to what you run. FactoryJet has worked on Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs. Ask any company which version of your ERP it has connected before.',
   },
   {
     q: 'Which companies build RFQ and quoting agents for manufacturers?',
@@ -406,7 +447,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Which companies build AI agents for distributors?',
-    a: 'Proton.ai builds only for distributors: its order and quote entry tool drafts quotes and orders from inbound requests, alongside a CRM and product data tools. Conexiom automates orders and invoices for manufacturers and distributors. Xcelacore names industrial distributors and wholesalers among the businesses it works with. FactoryJet builds order agents, EDI and punchout integrations and B2B ordering portals for distributors on the ERP they already run.',
+    a: 'Proton.ai describes itself as AI software for wholesale distributors: its order and quote entry tool drafts quotes and orders from inbound requests, alongside a CRM and product data tools. Conexiom automates orders and invoices for manufacturers and distributors. Xcelacore names industrial distributors and wholesalers among the businesses it works with. FactoryJet builds order agents, EDI and punchout integrations and B2B ordering portals for distributors on the ERP they already run.',
   },
   {
     q: 'What is EDI, and does an AI agent replace it?',
@@ -453,20 +494,20 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 11, 2026',
-  dateModified: 'Oct 11, 2026',
+  dateModified: 'Nov 8, 2026',
   readTime: '22 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
     'A woman in safety glasses at a steel bench in a machine shop holds a small machined aluminium bracket up to the light, with three more brackets, a calliper and an orange mug on the bench',
   meta: {
-    title: 'AI Agent Development Companies for Manufacturers 2026',
+    title: 'Best AI Agent Development Companies for Manufacturers 2026',
     description: META_DESCRIPTION,
   },
   keyTakeaways: [
     'Manufacturers buy two different things under the name AI agent: AI for machines and production data, and agents for office work such as RFQs, quotes and orders. Decide which one you need before you compare companies.',
-    'We read 14 companies on their own websites on 11 October 2026 and grouped them by the kind of purchase. Nobody paid to be listed, and the order is not a ranking.',
-    'Four sell plant-floor and industrial-data AI: Siemens, Rockwell Automation, Cognite and MachineMetrics. Three sell ready-made quote and order software: Paperless Parts, Conexiom and Proton.ai.',
-    'Seven build custom agents and name manufacturing: Intellectyx, USM Business Systems, Xcelacore, Phos AI Labs, Markovate, LeewayHertz and FactoryJet.',
+    'We re-read 17 companies on their own websites on 8 November 2026 and grouped them by the kind of purchase. FactoryJet wrote this list and lists itself separately, nobody paid to be listed, and the order is not a ranking.',
+    'Five sell plant-floor and industrial-data AI: Siemens, Rockwell Automation, Cognite, MachineMetrics and C3 AI. Three sell ready-made quote and order software: Paperless Parts, Conexiom and Proton.ai.',
+    'Eight other firms build custom agents and name manufacturing: Intellectyx, USM Business Systems, Xcelacore, Phos AI Labs, Markovate, LeewayHertz, ThirdEye Data and Master of Code Global. FactoryJet builds them too and has its own group.',
     'All seven of the manufacturing lists we read that AI assistants cite rank their own publisher first, and none mentions EDI, punchout or order entry. Treat every list, including this one, as a starting point.',
   ],
   faqs: FAQS,
@@ -485,7 +526,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-11',
-              dateModified: '2026-10-11',
+              dateModified: '2026-11-08',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'Companies that build AI agents for manufacturers and distributors' },
@@ -514,10 +555,13 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          The best AI agent development company for a manufacturer depends on where the work sits. For machines and production data: Siemens, Rockwell Automation, Cognite or MachineMetrics. For ready-made quote and order software: Paperless Parts, Conexiom or Proton.ai. For a custom agent on your ERP: Intellectyx, USM Business Systems, Xcelacore, Phos AI Labs, Markovate, LeewayHertz or FactoryJet.
+          FactoryJet wrote this list, lists itself separately in the last group, and the order is not a ranking.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          We read all 14 companies on their own websites on 11 October 2026: what each sells, which systems it names and who it says it serves. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
+          The best AI agent development company for a manufacturer depends on where the work sits. For machines and production data: Siemens, Rockwell Automation, Cognite, MachineMetrics or C3 AI. For ready-made quote and order software: Paperless Parts, Conexiom or Proton.ai. For a custom agent built around your process: Intellectyx, USM Business Systems, Xcelacore, Phos AI Labs, Markovate, LeewayHertz, ThirdEye Data or Master of Code Global.
+        </p>
+        <p className="text-gray-800 leading-relaxed mb-3">
+          We re-read all 17 companies on their own websites on 8 November 2026: what each sells, which systems it names and who it says it serves. Nobody paid to be listed.
         </p>
         <p className="text-gray-800 leading-relaxed">
           If you are short on time, <a href="/contact" className={link}>tell us the one quoting or order task your team repeats most</a> and we will tell you which kind of company fits.
@@ -531,10 +575,13 @@ export const post: BlogPost = {
         On 11 October we read seven of the manufacturing lists those answers cited, from five publishers. All seven rank the publisher first. The phrase &ldquo;predictive maintenance&rdquo; appears 59 times across the seven pages. EDI, punchout, order entry and sales orders appear in none of them.
       </p>
       <p className="mb-4">
+        On 7 November we asked &ldquo;Who are the best AI agent development companies for manufacturers?&rdquo; again, 14 times across ChatGPT, Claude, Gemini, Perplexity and Google&rsquo;s AI answers. The answers cited 77 pages on 54 websites, and the pages cited most often were lists of companies. Intellectyx was named in 11 of the 14 answers. Three companies the answers named were missing from our list: C3 AI, ThirdEye Data and Master of Code Global. We checked each on its own site and added all three.
+      </p>
+      <p className="mb-4">
         That matters because manufacturers buy two different things under the name &ldquo;AI agent&rdquo;. One works on the plant floor, with machines, sensors and production data. The other works in the office, on RFQs, quotes, purchase orders and the ERP. Five of the seven lists we read put the publisher in one ranking with global consultancies or automation suppliers such as Accenture, IBM and Siemens. A plant manager and a sales operations manager would each have to read past most of the page to find a name that fits.
       </p>
       <p className="mb-4">
-        So we sorted them. We opened each company&rsquo;s own website, wrote down only what the company says about itself, and grouped the 14 by the kind of purchase. Every profile links to its source.
+        So we sorted them. We opened each company&rsquo;s own website, wrote down only what the company says about itself, and grouped the 17 by the kind of purchase. Every profile links to its source.
       </p>
       <p className="mb-4">
         <strong>A note on who wrote this.</strong> FactoryJet designs, builds and supports AI agents for the quoting and order side of manufacturing and distribution, so we are on this list, in the last group. Our entry follows the same format as every other. Read every list with that in mind, including this one.
@@ -638,9 +685,9 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-10 mb-4">How we built this list</h2>
       <ol className="list-decimal pl-6 mb-6 space-y-2">
         <li><strong>Start with what buyers ask.</strong> The three questions came from our own buyer-question research. &ldquo;AI manufacturing companies&rdquo; and six close phrasings get about 440 US Google searches a month between them (DataForSEO, October 2026). Google showed an AI Overview on all seven when we checked on 11 October.</li>
-        <li><strong>Read the lists assistants cite.</strong> We read seven, from five publishers, to see who gets named and what is missing. We did not copy them.</li>
+        <li><strong>Read the lists assistants cite.</strong> We read seven, from five publishers, to see who gets named and what is missing. We did not copy them. A company named in AI answers joined the list only after we read its own site.</li>
         <li><strong>Sort by the purchase.</strong> A company went into a group only when its own site describes that kind of product or service for manufacturers or distributors.</li>
-        <li><strong>Read the source, not the summary.</strong> Every description comes from the company&rsquo;s own pages, opened on 11 October 2026. Numbers such as customer counts are the company&rsquo;s own claims, and we say so.</li>
+        <li><strong>Read the source, not the summary.</strong> Every description comes from the company&rsquo;s own pages, first opened on 11 October 2026 and re-opened on 8 November 2026, when we corrected what had changed. Numbers such as customer counts are the company&rsquo;s own claims, and we say so.</li>
         <li><strong>No scores we cannot prove.</strong> A star rating would need a work history with every company, so this list carries none. We say who each one suits and one question worth asking it.</li>
         <li><strong>Leave the global consultancies to their own list.</strong> Accenture and IBM each appear on three of the seven lists we read. They run company-wide programs, which is a different purchase. See our list of <a href="/blog/best-ai-consulting-firms-usa-2026" className={link}>AI consulting firms in the USA</a>.</li>
       </ol>
@@ -729,7 +776,7 @@ export const post: BlogPost = {
       <div className="grid gap-3 mb-8 not-prose">
         <div className="rounded-xl border border-gray-200 p-4">
           <p className="font-semibold mb-1">&ldquo;A machine goes down and we find out an hour later.&rdquo;</p>
-          <p className="text-gray-700 text-sm">A plant-floor vendor. MachineMetrics for machine shops and discrete plants. Siemens or Rockwell Automation if you already run their automation.</p>
+          <p className="text-gray-700 text-sm">A plant-floor vendor. MachineMetrics for machine shops and discrete plants. Siemens or Rockwell Automation if you already run their automation. C3 AI for large fleets of critical assets.</p>
         </div>
         <div className="rounded-xl border border-gray-200 p-4">
           <p className="font-semibold mb-1">&ldquo;Our plant data sits in a dozen systems and engineers cannot find it.&rdquo;</p>
@@ -795,7 +842,7 @@ export const post: BlogPost = {
         Factory automation in the strict sense means PLCs (the controllers that run machines), robots and SCADA screens. The people who program those are control system integrators. The <a href={CSIA_URL} className={link} rel="noopener" target="_blank">Control System Integrators Association</a> runs a directory it calls the Industrial Automation Exchange, and says it holds thousands of integrators and suppliers.
       </p>
       <p className="mb-4">
-        AI agent developers work one layer up, on the data and documents around the machines. The four vendors in the first group sell agents that sit close to production. The builders in the third group, and FactoryJet, write agents for quoting, orders and ERP work. Four questions sort a developer into the right trade:
+        AI agent developers work one layer up, on the data and documents around the machines. The five vendors in the first group sell agents that sit close to production. The builders in the third group, and FactoryJet, write agents for quoting, orders and ERP work. Four questions sort a developer into the right trade:
       </p>
       <ul className="list-disc pl-6 mb-6 space-y-2">
         <li>Which system will the agent read from, and which will it write to?</li>
@@ -812,7 +859,7 @@ export const post: BlogPost = {
         <strong>A public program.</strong> NIST runs the <a href={NIST_MEP_URL} className={link} rel="noopener" target="_blank">Manufacturing Extension Partnership</a> through state-designated centers. It says the program has nearly 1,400 manufacturing advisors and experts at more than 450 service locations, and that its mission is small and medium-sized US manufacturers.
       </p>
       <p className="mb-4">
-        <strong>A specialist that advises and then builds.</strong> Phos AI Labs says it finds the right starting point in two weeks. Xcelacore offers consulting alongside development. FactoryJet&rsquo;s <a href="/services/ai-consulting" className={link}>AI consulting</a> starts with one workflow, such as RFQ to quote: we record how many you handle and how long each takes, then check your ERP edition, API access and permissions in a sandbox.
+        <strong>A specialist that advises and then builds.</strong> Phos AI Labs says it finds the right starting point in two weeks. Master of Code Global says it delivers an AI roadmap in four weeks. Xcelacore offers consulting alongside development. FactoryJet&rsquo;s <a href="/services/ai-consulting" className={link}>AI consulting</a> starts with one workflow, such as RFQ to quote: we record how many you handle and how long each takes, then check your ERP edition, API access and permissions in a sandbox.
       </p>
       <p className="mb-4">
         <strong>A large consultancy.</strong> For a program across several plants with formal governance, see our list of <a href="/blog/best-ai-consulting-firms-usa-2026" className={link}>AI consulting firms in the USA</a>.
