@@ -39,6 +39,26 @@ export interface CityDepth {
   sectorNotes: { sector: string; note: string }[]
   /** Project shapes that recur in this city, given its economy. */
   commonProjects: { title: string; note: string }[]
+  /**
+   * Optional per-city rewrites of template prose. Set only where Google flagged a
+   * city root as a near-duplicate (Plymouth, "Crawled, not indexed", 2026-11-07).
+   * Every field falls back to the shared template text when absent, so cities
+   * without `copy` render exactly as before. `faqAnswers` is keyed by the rendered
+   * question text; the visible FAQ and FAQPage schema both read the merged array.
+   */
+  copy?: {
+    heroLead?: string
+    answerFirstNote?: string
+    termsLead?: string
+    competitorsLead?: string
+    employersLead?: string
+    districtsLead?: string
+    areasLead?: string
+    catchmentLead?: string
+    institutionsLead?: string
+    midCtaSub?: string
+    faqAnswers?: Record<string, string>
+  }
 }
 
 export const CITY_DEPTH: Record<string, CityDepth> = {
@@ -306,6 +326,41 @@ export const CITY_DEPTH: Record<string, CityDepth> = {
       { title: 'Wide-catchment service sites', note: 'Built for Devon and east Cornwall, not one city.' },
       { title: 'Seasonal hospitality booking', note: 'Holding up through a short, intense season.' },
     ],
+    copy: {
+      heroLead: 'Websites, online stores, SEO and AI agents for businesses in Britain’s Ocean City, from Barbican restaurants to engineering firms in the Devonport dockyard supply chain. Senior people build it, the scope is fixed in writing first, and everything is yours at the end.',
+      answerFirstNote: 'You own the code, the domain and the data from day one. Plymouth firms often sell well past the city boundary, across the Tamar into Cornwall and out through the South Hams, so we plan the site around that whole catchment. If you need less than you asked for, we tell you before we quote.',
+      termsLead: 'Monthly UK search volume for Plymouth terms, taken from Google Ads keyword data. The competition column shows how many advertisers bid on a term. It says little about how hard the term is to rank for organically.',
+      competitorsLead: 'These Plymouth agencies hold page-one spots for “web design plymouth” right now, shown with their live positions. Ask a few of them to quote too. If one suits your project better than we do, go with them.',
+      employersLead: 'Plymouth’s larger employers lean towards defence, the naval base at Devonport and the university. They set local pay and draw engineers and researchers to the city. We list them for context. They are not our clients.',
+      districtsLead: 'Plymouth’s commercial activity is spread out: the hospital and business parks up at Derriford, industrial estates on the edge of the city, and offices around Sutton Harbour.',
+      areasLead: 'From the Hoe and the Barbican across to the Devonport side of the city. We deliver remotely, so cost and timeline are the same wherever your office is.',
+      catchmentLead: 'Plymouth sits on the edge of Devon with Cornwall across the Tamar, so many firms here sell into both counties. Search follows the same pattern, which is why nearby town names belong on a Plymouth site.',
+      institutionsLead: 'The University of Plymouth is known for marine science and engineering, and the city’s marine research groups produce spin-outs and project work that need clear, fast websites.',
+      midCtaSub: 'Share your website address. We will look at it the way a customer in Plymouth or east Cornwall would, then send back the three changes most likely to bring in more enquiries.',
+      faqAnswers: {
+        'Do you work with businesses in Plymouth?': 'Yes, across Plymouth and the rest of Devon, plus east Cornwall over the Tamar. We work remotely, over video calls and shared documents. That keeps senior people on your project instead of putting an office on your bill.',
+        'Which Plymouth areas do you cover?': 'Every part of the city, from the City Centre and the Hoe to the Barbican, Sutton Harbour and Devonport. Delivery is remote, so a firm on the waterfront and one up at Derriford get the same price and the same timeline.',
+        'What kinds of Plymouth businesses do you usually build for?': 'Plymouth leans on maritime and defence, tourism and hospitality, and professional services, so most work takes one of three shapes. Defence and marine suppliers need sites that prove credibility fast. Hospitality needs booking that copes with the summer peak. Service firms covering a wide rural area need enquiry sites built around the towns they reach.',
+        'How many businesses are there in Plymouth?': 'The city dataset we use puts it at about 11,000 active businesses, around 10,000 of them SMEs, in a city of roughly 260,000 people with an economy near £8.8bn. SMEs are the part of that market we build for.',
+        'Is the Plymouth market competitive for search?': 'It depends on the term. Broad terms like “web design plymouth” are fought over by the agencies named on this page. Searches that pair a service with a nearby town, such as Saltash, Ivybridge or Tavistock, usually face far less competition and carry clearer intent. We show you which of those your budget can reach before you commit.',
+        'Do I need a local Plymouth agency?': 'Only if someone has to be on site, and building a website does not need that. What counts is whether the team understands how Plymouth trades, from the dockyard supply chain to the summer visitor season, and whether they pick up the phone.',
+        'How long does a website take to build?': 'A simple brochure site for a Plymouth business usually takes a few weeks from brief to launch. Stores, and anything that connects to systems you already run, take longer, because the effort goes into data and integration. After scoping you get a phased plan with milestones.',
+        'What does a website cost?': 'That depends on scope, the number of pages and how many systems need to connect. A short call is enough to scope it. You then get a fixed written proposal before any work begins. We do not print prices on a page that cannot know what you need.',
+        'Do I own the website when it is finished?': 'Yes, all of it: the code, the domain, the hosting account and the data. You pay us no subscription and nothing is locked in. If you later move to another team, in Plymouth or anywhere else, everything is handed over.',
+        'Is it a custom build or a template?': 'Custom. We design from your content and goals, not from a theme. Where an established platform is the better commercial choice, such as Shopify for a store, we recommend it rather than building from scratch to make the job bigger.',
+        'Can you rebuild my existing site without losing rankings?': 'Yes. This is the step most rebuilds get wrong. Before the build starts, every indexed URL is mapped to its new address. Redirects go in as single hops, and we check Search Console coverage every day for the first weeks after launch. Losing the redirect map can cost more than the redesign saves.',
+        'Will I be able to update the site myself?': 'Yes. At handover you get a short training session and plain-English notes. Changing your opening hours for the summer season or posting a news item should not need us.',
+        'Do you do SEO as well as the build?': 'Yes. Clean markup, fast pages and a sensible URL structure give a new site a far better start than SEO added later. Our UK SEO work is set out on the SEO hub.',
+        'Can you help us rank for Plymouth searches specifically?': 'Yes. That is local SEO, which is a separate job from national SEO: a fully completed Google Business Profile, consistent local citations, real pages for each service and town you cover, and reviews. For a firm selling across Plymouth, the South Hams and east Cornwall, it is usually the best-value search work there is.',
+        'What is AI SEO, and do I need it?': 'It means showing up when someone asks ChatGPT or Google’s AI Overview a question, for example which Plymouth firms do a particular job, instead of typing a keyword. In practice it is good SEO plus content that is easy to quote: clear structure and direct answers. Anyone selling it as a secret separate discipline is overselling.',
+        'Do you build online stores?': 'Yes, on Shopify, WooCommerce, Adobe Commerce and headless setups. We choose the platform from your catalogue size, any trade or B2B rules, and what has to connect. Our own preferences do not come into it.',
+        'What are AI agents in a business context?': 'Software that handles repetitive work, such as answering routine enquiries, keeping stock in step across channels or following up quotes. For a small Plymouth team that frees up hours each week. People still make the judgement calls.',
+        'What happens after launch?': 'Run it yourself, or keep us on for support and improvements. Nothing rolls into a retainer automatically. In a month where nothing needs doing, you should not be paying us.',
+        'Do you require a long-term contract?': 'No. Builds are scoped and priced as projects, and any ongoing support runs month to month.',
+        'What is happening in the Plymouth market right now?': 'The headline project is the £300M Plymouth Waterfront development, expected to create 800 maritime sector jobs. The same dataset puts local digital business growth at about 15% YoY and tech jobs in the area at around 3,500. The biggest employers include the MOD Naval Base, the University of Plymouth and Babcock International.',
+        'How do we start?': 'Send a short brief or book a call. We look at what you have now, what the site has to do and what fits the budget, then send a written, scoped proposal. You are under no obligation, and nobody will push you to decide during the call.',
+      },
+    },
   },
 
   southampton: {

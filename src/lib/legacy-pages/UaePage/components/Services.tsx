@@ -5,7 +5,7 @@ const services = [
   {
     title: "WordPress Development",
     priceNote: "Fixed-price, scoped to your build",
-    description: "As a leading WordPress design agency, we build sites that power 43% of the web. Perfect for businesses needing a robust CMS. We are the wordpress website design company of choice for content-rich sites.",
+    description: "As a leading WordPress design agency, we build sites that power 43% of the web. Perfect for businesses needing a dependable CMS. We are the wordpress website design company of choice for content-rich sites.",
     bestFor: "SMBs, content-heavy sites, blogging businesses",
     features: ["Custom themes", "Plugin integration", "SEO optimization", "Blog management", "E-commerce (WooCommerce)"],
     timeline: "2-5 weeks",
@@ -31,7 +31,7 @@ const services = [
     bestFor: "Tech startups, interactive experiences, modern brands",
     features: ["Component-based", "AI tools", "Real-time collaboration", "React foundation"],
     timeline: "4-7 weeks",
-    keyBenefit: "Cutting-edge interactivity and modern tech stack",
+    keyBenefit: "Rich interactivity and a modern tech stack",
     accentColor: "#10B981",
     Icon: Layers
   },
@@ -59,7 +59,7 @@ const Services: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-[clamp(28px,4vw,42px)] font-bold text-navy mb-6">Comprehensive Web Development Services in Dubai</h2>
+          <h2 className="text-[clamp(28px,4vw,42px)] font-bold text-navy mb-6">Full Web Development Services in Dubai</h2>
           <div className="h-[3px] w-[60px] bg-secondary mx-auto mb-6 rounded-full"></div>
           <p className="text-lg text-gray-600">From <strong>simple website for small business</strong> to complex portals, we do it all.</p>
         </div>

@@ -9,7 +9,7 @@ import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/accounts-payable-automation';
 const UPDATED = '2026-10-31';
-const TITLE = 'Accounts Payable Automation UK | AI Invoice Agent | FactoryJet';
+const TITLE = 'Accounts Payable Automation UK | Invoice AI | FactoryJet';
 const H1 = 'Accounts Payable Automation UK: Supplier Invoices Read, Checked, Matched and Routed for Approval';
 const DESCRIPTION =
   'Accounts payable automation for UK finance teams. An AI agent reads supplier invoices, checks VAT details, matches POs and posts draft bills to your ledger.';

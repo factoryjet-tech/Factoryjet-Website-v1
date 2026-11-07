@@ -77,7 +77,7 @@ const GENERAL_FAQS = [
   },
   {
     q: "Do I need a Manchester-based web designer?",
-    a: "No. What you need is a web design team that understands Manchester's market, competitive landscape, and customer behaviour, and delivers a website that performs on every technical metric. FactoryJet serves Manchester businesses remotely with UK-hours availability, direct engineer access, and deep local market research baked into every project.",
+    a: "No. What you need is a web design team that understands Manchester's market, competitors and customer behaviour, and delivers a website that performs on every technical metric. FactoryJet serves Manchester businesses remotely with UK-hours availability, direct engineer access, and deep local market research baked into every project.",
   },
 ];
 

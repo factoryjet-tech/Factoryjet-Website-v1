@@ -10,7 +10,7 @@ import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/shopify-migration';
 const UPDATED = '2026-10-31';
-const TITLE = 'Shopify Migration Service UK: Magento, WooCommerce | FactoryJet';
+const TITLE = 'Shopify Migration UK: Magento, WooCommerce | FactoryJet';
 const DESCRIPTION =
   'Shopify migration for UK stores on Magento, WooCommerce, BigCommerce or a custom cart. Sourced UK price ranges, redirect limits and what will not carry over.';
 const H1 = 'Shopify Migration for UK Stores: Magento, WooCommerce, BigCommerce and Custom Carts';

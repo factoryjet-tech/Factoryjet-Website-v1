@@ -814,7 +814,7 @@ export default function AiReceptionistUKPage() {
         <section className="sec-lg">
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
+              <span className="eyebrow">The honest comparison</span>
               <h2>UK AI receptionist and call answering providers worth knowing</h2>
               <p className="lead mt-4">
                 We are one option, not the only one. These UK providers show up when people search for an AI

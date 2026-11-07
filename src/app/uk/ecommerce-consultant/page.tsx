@@ -859,7 +859,7 @@ export default function EcommerceConsultantUKPage() {
         <section className="sec-lg dot-grid">
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
+              <span className="eyebrow">The honest comparison</span>
               <h2>UK ecommerce consultants and consultancies worth knowing</h2>
               <p className="lead mt-4">
                 We are one option, not the only one. These UK ecommerce consultants and firms show up when people

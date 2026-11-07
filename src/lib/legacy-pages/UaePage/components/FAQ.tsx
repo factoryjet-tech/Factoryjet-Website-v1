@@ -8,7 +8,7 @@ export const faqData = [
   },
   {
     question: "What platforms do you recommend?",
-    answer: "We recommend WordPress for ease of use and content management, Shopify for robust e-commerce growth, and Next.js/React for high-performance, custom requirements. We select the stack that best fits your business goals."
+    answer: "We recommend WordPress for ease of use and content management, Shopify for growing e-commerce stores, and Next.js/React for high-performance, custom requirements. We select the stack that best fits your business goals."
   },
   {
     question: "Do you provide Arabic language support?",

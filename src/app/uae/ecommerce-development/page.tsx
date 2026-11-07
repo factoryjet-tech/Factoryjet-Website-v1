@@ -141,7 +141,7 @@ const jsonLd = {
       '@type': ['WebPage', 'Article'],
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'Best Ecommerce Development Company in Dubai, UAE | FactoryJet',
+      name: 'Best Ecommerce Development Company Dubai, UAE | FactoryJet',
       headline: "Dubai's Most Trusted Ecommerce Development Company",
       inLanguage: 'en-AE',
       datePublished: UPDATED,
@@ -177,12 +177,12 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: 'Best Ecommerce Development Company in Dubai, UAE | FactoryJet',
+  title: 'Best Ecommerce Development Company Dubai, UAE | FactoryJet',
   description:
-    'FactoryJet builds fast, conversion-first ecommerce stores for UAE brands on Shopify, WooCommerce and Magento, with Tabby and Tamara built in. You own the code. Free consult.',
+    'FactoryJet builds fast ecommerce stores for UAE brands on Shopify, WooCommerce and Magento, with Tabby and Tamara built in. You own the code. Free consult.',
   alternates: { canonical: CANONICAL, languages: ecommerceDevelopmentAlternatesUAE },
   openGraph: {
-    title: 'Best Ecommerce Development Company in Dubai, UAE | FactoryJet',
+    title: 'Best Ecommerce Development Company Dubai, UAE | FactoryJet',
     description:
       'A UAE ecommerce development agency building fast, conversion-first stores on Shopify, WooCommerce, Magento, and custom or headless stacks, with Tabby and Tamara built in. You own the code.',
     url: CANONICAL,
@@ -200,7 +200,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Ecommerce Development Company in Dubai, UAE | FactoryJet',
+    title: 'Best Ecommerce Development Company Dubai, UAE | FactoryJet',
     description:
       'A UAE ecommerce development agency building fast, conversion-first Shopify, WooCommerce and Magento stores, with Tabby and Tamara built in.',
     images: ['https://factoryjet.com/og-default.png'],
@@ -635,7 +635,7 @@ export default function EcommerceDevelopmentUAEPage() {
         <section className="sec-lg dot-grid">
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
+              <span className="eyebrow">The honest comparison</span>
               <h2>UAE ecommerce development and Shopify agencies worth knowing</h2>
               <p className="lead mt-4">
                 We would rather tell you the truth than pretend we are the only option. Here are agencies doing

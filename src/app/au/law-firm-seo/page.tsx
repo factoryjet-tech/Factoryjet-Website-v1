@@ -1036,7 +1036,7 @@ export default function LawFirmSeoAUPage() {
           <div className="wrap">
             <div className="section-head plat-head">
               <div>
-                <div className="eyebrow">The honest landscape</div>
+                <div className="eyebrow">The honest comparison</div>
                 <h2>Law firm SEO and website providers Australian firms compare</h2>
               </div>
               <p>

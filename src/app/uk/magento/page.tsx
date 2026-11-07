@@ -185,7 +185,7 @@ const jsonLd = {
       '@type': ['WebPage', 'Article'],
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'Magento Agency UK | Adobe Commerce Developers & Support | FactoryJet',
+      name: 'Magento Agency UK | Adobe Commerce Support | FactoryJet',
       headline: 'Magento Agency UK: Senior Magento and Adobe Commerce Developers Who Stay After Launch',
       inLanguage: 'en-GB',
       datePublished: '2026-09-24',
@@ -226,12 +226,12 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: 'Magento Agency UK | Adobe Commerce Developers & Support | FactoryJet',
+  title: 'Magento Agency UK | Adobe Commerce Support | FactoryJet',
   description:
     'Magento agency for UK stores. Senior Magento and Adobe Commerce developers for support, upgrades, Hyvä rebuilds and integrations. We stay after launch.',
   alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
   openGraph: {
-    title: 'Magento Agency UK | Adobe Commerce Developers & Support | FactoryJet',
+    title: 'Magento Agency UK | Adobe Commerce Support | FactoryJet',
     description:
       'A Magento agency for UK merchants already on Magento 2 or Adobe Commerce. Senior developers for support, security patching, version upgrades, Hyvä front-end rebuilds, extension clean-up and ERP integrations. Free Magento health check.',
     url: CANONICAL,
@@ -780,7 +780,7 @@ export default function MagentoUKPage() {
         <section className="sec-lg">
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
+              <span className="eyebrow">The honest comparison</span>
               <h2>UK Magento agencies worth knowing</h2>
               <p className="lead mt-4">
                 We would rather you compared than guessed. These are Magento agencies that show up again and

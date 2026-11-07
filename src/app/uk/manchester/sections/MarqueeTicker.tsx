@@ -3,7 +3,7 @@
  *
  * Light band as of 2026-08-25, and role="marquee" is gone: that is not a real
  * ARIA role, so assistive tech ignored it and validators flagged it. The second
- * copy of the list exists only to make the loop seamless, so it is aria-hidden.
+ * copy of the list exists only to make the loop gapless, so it is aria-hidden.
  */
 
 const ITEMS = [

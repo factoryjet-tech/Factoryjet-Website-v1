@@ -10,7 +10,7 @@ const AgencyInfo: React.FC = () => {
       content: "Our AI-native methodology doesn't replace human expertise, it amplifies it. AI handles repetitive technical tasks, code optimization, and testing automation while our expert designers focus on innovation, user experience, and business strategy."
     },
     {
-      title: "Comprehensive Optimization",
+      title: "Full Optimization",
       content: "Every website is optimized for the complete discovery ecosystem: SEO for Google rankings, GEO for AI search engines like Perplexity, AEO for featured snippets, and AIO ensuring accurate brand representation in ChatGPT and Claude."
     },
     {
@@ -86,7 +86,7 @@ const AgencyInfo: React.FC = () => {
                        icon: Zap,
                        color: "bg-blue-100 text-primary",
                        title: "AI-Native Approach",
-                       desc: "While traditional agencies use manual processes, we leverage AI-enhanced workflows that enable expert designers to work at unprecedented speed."
+                       desc: "While traditional agencies use manual processes, we use AI-enhanced workflows that enable expert designers to work at unprecedented speed."
                     },
                     {
                        icon: Rocket,

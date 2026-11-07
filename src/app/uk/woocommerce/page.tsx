@@ -791,7 +791,7 @@ export default function WooCommerceUKPage() {
         <section className="sec-lg">
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
+              <span className="eyebrow">The honest comparison</span>
               <h2>UK WooCommerce agencies and developers worth knowing</h2>
               <p className="lead mt-4">
                 We would rather you compared than guessed. These are WooCommerce development companies and resources

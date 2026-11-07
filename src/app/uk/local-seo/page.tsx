@@ -835,7 +835,7 @@ export default function LocalSeoUKPage() {
         <section className="sec-lg">
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
+              <span className="eyebrow">The honest comparison</span>
               <h2>UK local SEO agencies worth knowing</h2>
               <p className="lead mt-4">
                 We would rather be straight with you than pretend we are the only option. These UK agencies do real

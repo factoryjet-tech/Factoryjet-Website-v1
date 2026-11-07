@@ -68,7 +68,7 @@ export default function LogoMarquee({
         aria-hidden="true"
       >
         {/*
-         * Seamless loop mechanics:
+         * Gapless loop mechanics:
          *   - Track contains 2 identical sets of logos side-by-side.
          *   - gap-16 (64 px) is uniform across all items including the
          *     set-1 → set-2 junction, so the seam is invisible.
@@ -96,7 +96,7 @@ export default function LogoMarquee({
             </div>
           ))}
 
-          {/* ── Set 2 (identical duplicate, creates the seamless loop) ── */}
+          {/* ── Set 2 (identical duplicate, creates the gapless loop) ── */}
           {LOGOS.map((logo) => (
             <div key={`b-${logo.src}`} className="logo-item flex-shrink-0">
               {/* alt="" on duplicates, they are purely decorative repeats */}

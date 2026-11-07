@@ -43,7 +43,7 @@ const pricingData: Record<PricingCategory, PricingTier[]> = {
       features: [
         "Up to 15 Custom Pages",
         "Advanced Design & Animations",
-        "Comprehensive SEO Optimization",
+        "Full SEO Optimization",
         "Blog Setup with 5 Posts",
         "Advanced Forms & Automation",
         "60 Days Support"

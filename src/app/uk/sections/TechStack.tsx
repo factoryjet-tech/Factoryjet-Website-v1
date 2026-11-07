@@ -272,7 +272,7 @@ export default function TechStack() {
             The technology your website is built on determines how fast it
             loads, how well it ranks, and how effectively it converts visitors
             into customers. Most UK web agencies still build on WordPress and
-            PHP, technology that was cutting-edge in 2010. FactoryJet builds
+            PHP, technology that was new in 2010. FactoryJet builds
             exclusively on the modern stack that the world’s best technology
             companies use, and we believe this matters more than most
             businesses realise.
@@ -332,7 +332,7 @@ export default function TechStack() {
           role="presentation"
           aria-hidden="true"
         >
-          {/* Two copies so the marquee loops seamlessly */}
+          {/* Two copies so the marquee loops without a gap */}
           {[0, 1].map((i) => (
             <div key={i} className="flex items-center">
               <CodeLine />

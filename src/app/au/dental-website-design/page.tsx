@@ -935,7 +935,7 @@ export default function DentalWebsiteDesignAUPage() {
           <div className="wrap">
             <div className="section-head plat-head">
               <div>
-                <div className="eyebrow">The honest landscape</div>
+                <div className="eyebrow">The honest comparison</div>
                 <h2>Australian dental website design and dental SEO providers worth knowing</h2>
               </div>
               <p>

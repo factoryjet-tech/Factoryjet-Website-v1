@@ -1037,7 +1037,7 @@ export default function EcommerceSeoAUPage() {
           <div className="wrap">
             <div className="section-head plat-head">
               <div>
-                <div className="eyebrow">The honest landscape</div>
+                <div className="eyebrow">The honest comparison</div>
                 <h2>Australian ecommerce SEO and Shopify SEO agencies worth knowing</h2>
               </div>
               <p>

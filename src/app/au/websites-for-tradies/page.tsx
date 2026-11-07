@@ -1061,7 +1061,7 @@ export default function WebsitesForTradiesAUPage() {
           <div className="wrap">
             <div className="section-head plat-head">
               <div>
-                <div className="eyebrow">The honest landscape</div>
+                <div className="eyebrow">The honest comparison</div>
                 <h2>Australian companies that build websites for tradies</h2>
               </div>
               <p>

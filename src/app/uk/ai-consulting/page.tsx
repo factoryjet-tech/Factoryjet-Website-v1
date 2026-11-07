@@ -721,7 +721,7 @@ export default function AiConsultingUKPage() {
         <section className="sec-lg dot-grid">
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
+              <span className="eyebrow">The honest comparison</span>
               <h2>AI consultancies for UK businesses worth knowing</h2>
               <p className="lead mt-4">
                 We are one option, not the only one. These are AI consulting firms for UK businesses that show up when people search

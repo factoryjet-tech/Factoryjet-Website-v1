@@ -1061,7 +1061,7 @@ export default function ShopifyDevelopmentAUPage() {
           <div className="wrap">
             <div className="section-head plat-head">
               <div>
-                <div className="eyebrow">The honest landscape</div>
+                <div className="eyebrow">The honest comparison</div>
                 <h2>Australian Shopify agencies worth knowing</h2>
               </div>
               <p>

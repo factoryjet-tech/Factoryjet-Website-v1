@@ -26,7 +26,7 @@ import '../au-city.css';
 
    Every third-party fact on this page was read on its owner’s page on 2026-10-11. */
 const UPDATED = '2026-10-31';
-const TITLE = 'Ecommerce Website Development & Web Design Sydney | FactoryJet';
+const TITLE = 'Ecommerce Development & Web Design Sydney | FactoryJet';
 const H1 = 'Ecommerce website development and web design in Sydney';
 const DESCRIPTION =
   'Ecommerce website development, Shopify builds, web design and AI consulting for Sydney businesses. Fixed quotes and a demo before you sign. You own everything.';
