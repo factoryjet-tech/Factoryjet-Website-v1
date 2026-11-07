@@ -15,14 +15,14 @@ const PAGE_MODIFIED = '2026-08-24';
 const CANONICAL = 'https://factoryjet.com/cleveland/web-design';
 
 export const metadata: Metadata = {
-  title: 'Cleveland Web Design Agency | Fast Next.js Sites | FactoryJet',
+  title: 'Cleveland Web Design Agency | Next.js Sites | FactoryJet',
   description:
     'Cleveland web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Cleveland OH businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Cleveland Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Cleveland Web Design Agency | Next.js Sites | FactoryJet',
     description:
       'Cleveland web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Cleveland OH businesses.',
     url: CANONICAL,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cleveland Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Cleveland Web Design Agency | Next.js Sites | FactoryJet',
     description: 'Custom Next.js web design in Cleveland OH. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -124,7 +124,7 @@ const INDUSTRY_SHOWCASE = [
     image: '/images/us/services/law-firm-seo/hero.webp',
     alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
-      'Comprehensive practice area content architecture and case result portfolios',
+      'Full practice area content architecture and case result portfolios',
       'Attorney profile schema with state bar admissions and verified credentials',
       'Secure lead capture workflows routing inquiries to the correct partner instantly',
     ],
@@ -138,7 +138,7 @@ const INDUSTRY_SHOWCASE = [
     alt: 'A restaurant guest reading a menu on her phone while a server sets a table behind her',
     points: [
       'Sub-second mobile menu rendering with dietary and allergy filter badges',
-      'Seamless OpenTable and Resy reservation embeds with zero page lag',
+      'Built-in OpenTable and Resy reservation embeds with zero page lag',
       'Automated local schema capturing weekend foot traffic and group booking inquiries',
     ],
   },
@@ -177,7 +177,7 @@ const ROADMAP_STEPS = [
     title: 'Strategy, Sitemaps & Figma High-Fidelity UI Prototyping',
     desc: 'We define your core customer conversion funnel, map the site architecture, and deliver high-fidelity Figma prototypes for desktop and mobile devices for your direct review.',
     deliverables: [
-      'Comprehensive conversion strategy and sitemap blueprint',
+      'Full conversion strategy and sitemap blueprint',
       'High-fidelity interactive Figma desktop and mobile UI prototypes',
       'Typography, color palette, and bespoke design system component library',
       'Initial content outline and asset preparation checklist',
@@ -210,7 +210,7 @@ const ROADMAP_STEPS = [
     title: '30-Day Full Warranty & Ongoing Engineering Support',
     desc: 'We stand behind our code with a complete 30-day post-launch warranty covering any bug fixes, technical adjustments, or content revisions to ensure total peace of mind.',
     deliverables: [
-      '30-day comprehensive bug fix and code adjustment guarantee',
+      '30-day bug fix and code adjustment guarantee',
       'Post-launch Core Web Vitals and speed monitoring validation',
       'Direct communication channel with senior technical engineers',
       'Optional month-to-month growth and feature expansion retainers',
@@ -311,7 +311,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build B2B websites for Cleveland manufacturers and industrial suppliers?',
     answer:
-      'Yes. We build high-conversion B2B websites tailored for Cleveland manufacturers, precision machinists, and chemical suppliers, complete with downloadable spec sheets, technical capability matrices, and seamless RFQ inquiry forms.',
+      'Yes. We build high-conversion B2B websites tailored for Cleveland manufacturers, precision machinists, and chemical suppliers, complete with downloadable spec sheets, technical capability matrices, and simple RFQ inquiry forms.',
   },
   {
     category: 'local',
@@ -756,7 +756,7 @@ export default function ClevelandWebDesignPage() {
           <WebDesignArchitectureBlueprint
             badge="// CLEVELAND MODERN WEB ARCHITECTURE BLUEPRINT"
             title="High-Performance Frontend: From Code to Conversion"
-            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together seamlessly."
+            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together smoothly."
             city="Cleveland"
             ctaLabel="Get a Fixed-Price Quote"
             region="us"
@@ -920,7 +920,7 @@ export default function ClevelandWebDesignPage() {
             </h2>
             
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear timeline, and interactive Figma preview.
+              Tell us about your brand goals. We will provide a full fixed-price proposal, clear timeline, and interactive Figma preview.
             </p>
             
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>

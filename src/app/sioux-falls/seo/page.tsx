@@ -15,24 +15,24 @@ const PAGE_MODIFIED = '2026-10-22';
 const CANONICAL = 'https://factoryjet.com/sioux-falls/seo';
 
 export const metadata: Metadata = {
-  title: 'SEO Agency for Sioux Falls, SD Businesses | FactoryJet',
+  title: 'Sioux Falls, SD SEO Services | Month-to-Month | FactoryJet',
   description:
-    'SEO for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
+    'SEO services for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Agency for Sioux Falls, SD Businesses | FactoryJet',
+    title: 'Sioux Falls, SD SEO Services | Month-to-Month | FactoryJet',
     description:
-      'SEO for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
+      'SEO services for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'SEO for Sioux Falls, SD businesses by FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Agency for Sioux Falls, SD Businesses | FactoryJet',
-    description: 'SEO for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
+    title: 'Sioux Falls, SD SEO Services | Month-to-Month | FactoryJet',
+    description: 'SEO services for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     image: '/images/services/healthcare-seo.webp',
     alt: 'A clinician working on a laptop that shows charts in a clinic office',
     points: [
-      'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
+      'Full schema for Physician, MedicalClinic, and MedicalSpecialty',
       'HIPAA-aware appointment scheduling and instant click-to-call mobile buttons',
       'Post-visit SMS review request workflows',
     ],
@@ -406,7 +406,7 @@ const SERVICE_SCHEMA = {
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Local SEO, Technical SEO & Generative Engine Optimization',
   description:
-    'SEO for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
+    'SEO services for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
   areaServed: { '@type': 'State', name: 'South Dakota' },
 };
 
@@ -414,7 +414,7 @@ const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'SEO Agency for Sioux Falls, SD Businesses | FactoryJet',
-  description: 'SEO for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
+  description: 'SEO services for Sioux Falls, SD businesses, reported in calls and form submissions. Google Business Profile and service page work. Month-to-month terms.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   citation: SOURCES.map((src) => ({ '@type': 'CreativeWork', name: src.title, url: src.url })),
@@ -471,7 +471,7 @@ export default function SiouxFallsSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  FactoryJet works on your Google Business Profile, your service pages and how AI tools describe you, so Sioux Falls buyers find you on Google and in ChatGPT. Reports start with calls and form fills.
+                  FactoryJet provides SEO services for Sioux Falls, SD businesses, covering your Google Business Profile, your service pages and how AI tools describe you, so buyers find you on Google and in ChatGPT. Reports start with calls and form fills.
                 </p>
 
                 <div className="rv-actions">

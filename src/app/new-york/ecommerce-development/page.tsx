@@ -16,24 +16,24 @@ const PAGE_MODIFIED = '2026-10-04';
 const CANONICAL = 'https://factoryjet.com/new-york/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Best New York Ecommerce Agency | Top Shopify Plus & Headless | FactoryJet',
+  title: 'Best New York Ecommerce Agency | Shopify Plus | FactoryJet',
   description:
     'Best New York ecommerce development agency. Top headless Shopify Plus, Next.js storefronts, sub-second checkouts, and custom B2B wholesale portals in NYC.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best New York Ecommerce Agency | Top Shopify Plus & Headless | FactoryJet',
+    title: 'Best New York Ecommerce Agency | Shopify Plus | FactoryJet',
     description:
-      'Premier New York ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for NYC brands.',
+      'New York ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for NYC brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'New York Ecommerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best New York Ecommerce Agency | Top Shopify Plus & Headless | FactoryJet',
-    description: 'Custom headless Shopify Plus and Next.js ecommerce development in New York City. Sub-second performance, full IP code ownership, and a fixed quote before work starts.',
+    title: 'Best New York Ecommerce Agency | Shopify Plus | FactoryJet',
+    description: 'Headless Shopify Plus and Next.js ecommerce development in New York City. Sub-second performance, full IP code ownership and a fixed quote before work starts.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   // noindex,follow per the 2026-10-21 index quality audit; page stays live, links stay followable.
@@ -122,7 +122,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'B2B Wholesale, Food & Beverage Supply Chain',
     headline: 'Enterprise Wholesale Portals for Garment District & Queens Distributors',
     description:
-      'Apparel manufacturers, gourmet food importers, and specialty beverage distributors across Midtown and Long Island City require comprehensive B2B wholesale engines. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, customer group tier pricing, and real-time ERP inventory syncing.',
+      'Apparel manufacturers, gourmet food importers, and specialty beverage distributors across Midtown and Long Island City require full B2B wholesale engines. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, customer group tier pricing, and real-time ERP inventory syncing.',
     image: '/images/us/new-york/ecommerce/card-wholesale-dry-goods-trolley.webp',
     alt: 'A wholesaler lifting a plain sack of rice onto a flatbed trolley while a chef in a striped apron steadies a stack of plain cartons',
     points: [
@@ -298,7 +298,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'How do you guarantee zero downtime during DNS launch cutover?',
     answer:
-      'We run dual-stack delta synchronizations on launch night, ensuring every order placed on the legacy store during the DNS propagation window is captured and transferred seamlessly.',
+      'We run dual-stack delta synchronizations on launch night, ensuring every order placed on the legacy store during the DNS propagation window is captured and transferred cleanly.',
   },
   {
     category: 'timeline',
@@ -316,7 +316,7 @@ const FAQ_ITEMS = [
     category: 'tech',
     question: 'How do you preserve our hard-earned SEO rankings and organic backlinks during migration?',
     answer:
-      'We implement comprehensive 1-to-1 301 redirect maps for every legacy URL, preserve structured schema markup, replicate metadata hierarchies, and monitor Google Search Console indexing continuously.',
+      'We implement full 1-to-1 301 redirect maps for every legacy URL, preserve structured schema markup, replicate metadata hierarchies, and monitor Google Search Console indexing continuously.',
   },
   {
     category: 'tech',
@@ -364,7 +364,7 @@ const FAQ_ITEMS = [
     category: 'ownership',
     question: 'What warranty and post-launch support do you provide?',
     answer:
-      'Every engagement includes a 30-day comprehensive post-launch warranty covering bug fixes, performance monitoring, and hands-on operational training for your internal ecommerce team.',
+      'Every engagement includes a 30-day post-launch warranty covering bug fixes, performance monitoring, and hands-on operational training for your internal ecommerce team.',
   },
   {
     category: 'ownership',
@@ -809,7 +809,7 @@ export default function NewYorkEcommerceDevelopmentPage() {
         <EnterpriseArchitectureBlueprint
             badge="// NEW YORK COMMERCE STACK &amp; HEADLESS BLUEPRINT"
             title="Headless Next.js 15 to Shopify Plus Engine"
-            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, Shopify Storefront API, and Cloudflare edge caching operate together seamlessly."
+            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, Shopify Storefront API, and Cloudflare edge caching operate together smoothly."
             legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
             targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
             ctaLabel="Get a Fixed-Price Quote"

@@ -118,7 +118,7 @@ const INDUSTRY_SHOWCASE = [
     image: '/images/us/services/dental-seo/hero.webp',
     alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
-      'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
+      'Full schema for Physician, MedicalClinic, and MedicalSpecialty',
       'HIPAA-aware conversion forms and click-to-call mobile buttons',
       'Automated review generation workflows following patient visits',
     ],

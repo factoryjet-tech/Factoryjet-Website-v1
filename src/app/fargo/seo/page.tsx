@@ -15,14 +15,14 @@ const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/fargo/seo';
 
 export const metadata: Metadata = {
-  title: 'SEO Agency for Fargo, ND Businesses | FactoryJet',
+  title: 'SEO in Fargo, ND | Red River Valley Businesses | FactoryJet',
   description:
     'SEO for Fargo, ND farm equipment dealers, contractors, clinics and law firms across the Red River Valley. No long-term contract.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Agency for Fargo, ND Businesses | FactoryJet',
+    title: 'SEO in Fargo, ND | Red River Valley Businesses | FactoryJet',
     description:
       'SEO for Fargo, ND farm equipment dealers, contractors, clinics and law firms across the Red River Valley. No long-term contract.',
     url: CANONICAL,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Agency for Fargo, ND Businesses | FactoryJet',
+    title: 'SEO in Fargo, ND | Red River Valley Businesses | FactoryJet',
     description: 'SEO for Fargo, ND farm equipment dealers, contractors, clinics and law firms across the Red River Valley. No long-term contract.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -440,7 +440,7 @@ export default function FargoSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  We work on your Google Business Profile, your service pages and your listings so customers searching in Fargo and the Red River Valley can find you.
+                  Our SEO for Fargo, ND businesses covers your Google Business Profile, your service pages and your listings, so customers searching in Fargo and the Red River Valley can find you.
                 </p>
 
                 <div className="rv-actions">

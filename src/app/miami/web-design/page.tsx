@@ -15,14 +15,14 @@ const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/miami/web-design';
 
 export const metadata: Metadata = {
-  title: 'Best Miami Web Design Agency | Top Next.js Websites | FactoryJet',
+  title: 'Best Miami Web Design Agency | Next.js Websites | FactoryJet',
   description:
-    'Best Miami web design agency. Top custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for South Florida businesses.',
+    'Miami web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for South Florida businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Miami Web Design Agency | Top Next.js Websites | FactoryJet',
+    title: 'Best Miami Web Design Agency | Next.js Websites | FactoryJet',
     description:
       'Premier Miami web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for South Florida businesses.',
     url: CANONICAL,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Miami Web Design Agency | Top Next.js Websites | FactoryJet',
+    title: 'Best Miami Web Design Agency | Next.js Websites | FactoryJet',
     description: 'Custom Next.js web design in Miami FL. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -219,7 +219,7 @@ const ROADMAP_STEPS = [
   {
     phase: 'Phase 04',
     title: 'Core Web Vitals QA, Handoff & Launch',
-    desc: 'We execute comprehensive multi-device cross-browser testing, verify 95+ Lighthouse scores, transfer all code, and go live.',
+    desc: 'We execute full multi-device cross-browser testing, verify 95+ Lighthouse scores, transfer all code, and go live.',
     deliverables: ['95+ Google Lighthouse verification', 'Cross-browser device QA testing', 'Full GitHub & Figma asset transfer', 'Recorded video training & 30-day warranty'],
   },
 ];
@@ -796,7 +796,7 @@ export default function MiamiWebDesignPage() {
           <WebDesignArchitectureBlueprint
             badge="// MIAMI MODERN WEB ARCHITECTURE BLUEPRINT"
             title="High-Performance Frontend: From Code to Conversion"
-            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together seamlessly."
+            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together smoothly."
             city="Miami"
             ctaLabel="Get a Fixed-Price Quote"
             region="us"
@@ -961,7 +961,7 @@ export default function MiamiWebDesignPage() {
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear timeline, and interactive Figma preview.
+              Tell us about your brand goals. We will provide a full fixed-price proposal, clear timeline, and interactive Figma preview.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>

@@ -140,7 +140,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Wealth Management, Family Offices & Executive Consulting',
     headline: 'Topical Authority & AI Citation Engineering for Tampa Financial Leaders',
     description:
-      'Water Street and Westshore wealth managers require commanding search presence to capture relocating high-net-worth families and corporate leaders. We build comprehensive topical clusters, executive credential schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
+      'Water Street and Westshore wealth managers require commanding search presence to capture relocating high-net-worth families and corporate leaders. We build full topical clusters, executive credential schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
     image: '/images/us/tampa/seo/card-client-signing-document.webp',
     alt: 'An adviser in a grey suit steadying a document on a desk while a woman in a green dress signs it in a bright office',
     points: [

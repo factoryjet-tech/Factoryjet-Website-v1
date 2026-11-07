@@ -119,7 +119,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Private Wealth Management, Family Offices & Tax Advisory',
     headline: 'Topical Authority & AI Citation Engineering for LA Financial Leaders',
     description:
-      'Century City and Westside wealth advisors require commanding search presence to capture high-net-worth entertainment executives and tech founders. We build comprehensive topical clusters, executive credential schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
+      'Century City and Westside wealth advisors require commanding search presence to capture high-net-worth entertainment executives and tech founders. We build full topical clusters, executive credential schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
     image: '/images/us/los-angeles/seo/card-tax-adviser-receipt-sorting.webp',
     alt: 'A tax adviser in a waistcoat sorting paper slips into an orange accordion file while a client in a camel coat hands him an envelope',
     points: [
@@ -275,7 +275,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What structured JSON-LD schemas do you implement on our website?',
     answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+      'We inject full server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
   },
   {
     category: 'technical',
@@ -347,7 +347,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'How do Silicon Beach SaaS platforms and venture scale-ups compete in technical search in Los Angeles?',
     answer:
-      'We build comprehensive B2B topical clusters, product capability documentation architectures, software integration schemas, and developer-oriented landing pages built to load fast on edge networks.',
+      'We build full B2B topical clusters, product capability documentation architectures, software integration schemas, and developer-oriented landing pages built to load fast on edge networks.',
   },
   {
     category: 'local',

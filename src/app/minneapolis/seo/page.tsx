@@ -276,7 +276,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What structured JSON-LD schemas do you implement on our website?',
     answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+      'We inject full server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
   },
   {
     category: 'technical',
@@ -348,7 +348,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'How do Fortune 500 corporate headquarters and enterprise SaaS scale-ups in Eden Prairie and Minnetonka structure technical SEO?',
     answer:
-      'We build comprehensive B2B topical clusters, enterprise product documentation portals, software integration schemas, and developer-oriented landing pages built to load fast on edge networks.',
+      'We build full B2B topical clusters, enterprise product documentation portals, software integration schemas, and developer-oriented landing pages built to load fast on edge networks.',
   },
   {
     category: 'local',

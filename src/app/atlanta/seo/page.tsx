@@ -106,7 +106,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'B2B SaaS, Fintech & Enterprise IT Solutions',
     headline: 'Topical Authority & AI Citation Engineering for Atlanta Tech Leaders',
     description:
-      'Midtown and Alpharetta enterprise technology buyers use generative AI engines and Google Search to discover software vendors. We build comprehensive topical clusters, technical whitepaper funnels, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
+      'Midtown and Alpharetta enterprise technology buyers use generative AI engines and Google Search to discover software vendors. We build full topical clusters, technical whitepaper funnels, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
     image: '/images/us/atlanta/seo/card-software-engineers-desk.webp',
     alt: 'Two software engineers at a white desk looking at a monitor of coloured blocks, one pointing at the screen and the other holding a mug',
     points: [
@@ -275,7 +275,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What structured JSON-LD schemas do you implement on our website?',
     answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+      'We inject full server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
   },
   {
     category: 'technical',

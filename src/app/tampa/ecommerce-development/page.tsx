@@ -17,14 +17,14 @@ const PAGE_MODIFIED = '2026-10-04';
 const CANONICAL = 'https://factoryjet.com/tampa/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Best Tampa E-Commerce Agency | Top Shopify Plus & Next.js | FactoryJet',
+  title: 'Best Tampa E-Commerce Agency | Shopify Plus | FactoryJet',
   description:
     'Best Tampa e-commerce development agency. Top headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Florida enterprise brands.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Tampa E-Commerce Agency | Top Shopify Plus & Next.js | FactoryJet',
+    title: 'Best Tampa E-Commerce Agency | Shopify Plus | FactoryJet',
     description:
       'Premier Tampa e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Florida enterprise brands.',
     url: CANONICAL,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Tampa E-Commerce Agency | Top Shopify Plus & Next.js | FactoryJet',
+    title: 'Best Tampa E-Commerce Agency | Shopify Plus | FactoryJet',
     description: 'Custom headless e-commerce engineering in Tampa FL. Sub-second checkouts, ERP integrations, and full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -281,13 +281,13 @@ const FAQ_ITEMS = [
     category: 'replatforming',
     question: 'How do you ensure zero downtime and preserved SEO rankings during migration?',
     answer:
-      'We execute comprehensive pre-launch data migrations in staging environments, build complete 1-to-1 301 redirect maps for every legacy URL, preserve URL slugs where possible, and execute DNS cutover during off-peak hours with zero downtime for existing shoppers.',
+      'We execute full pre-launch data migrations in staging environments, build complete 1-to-1 301 redirect maps for every legacy URL, preserve URL slugs where possible, and execute DNS cutover during off-peak hours with zero downtime for existing shoppers.',
   },
   {
     category: 'replatforming',
     question: 'Can you migrate customer accounts, order history, and reviews from Magento or WooCommerce?',
     answer:
-      'Yes. We migrate your complete historical catalog, customer records, order histories, and verified product reviews seamlessly, ensuring long-term customer lifetime value data remains intact.',
+      'Yes. We migrate your complete historical catalog, customer records, order histories, and verified product reviews cleanly, ensuring long-term customer lifetime value data remains intact.',
   },
   {
     category: 'replatforming',
@@ -299,7 +299,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'Why choose Headless Next.js over standard monolithic Shopify themes?',
     answer:
-      'Headless architectures decouple the presentation layer from backend logic, allowing pages to load in under 600ms on mobile devices, eliminating third-party app script bloat, and unlocking complete design flexibility for custom product configurators and high-converting checkout flows.',
+      'Headless architectures decouple the presentation layer from backend logic, allowing pages to load in under 600ms on mobile devices, eliminating third-party app script bloat, and giving complete design flexibility for custom product configurators and high-converting checkout flows.',
   },
   {
     category: 'technical',
@@ -323,7 +323,7 @@ const FAQ_ITEMS = [
     category: 'b2b',
     question: 'Can you build custom B2B wholesale portals with tiered customer pricing?',
     answer:
-      'Yes. We build comprehensive B2B features including customer-specific price lists, volume break tables, tax exemption handling, custom payment terms (Net 30/60), and corporate account hierarchy management.',
+      'Yes. We build full B2B features including customer-specific price lists, volume break tables, tax exemption handling, custom payment terms (Net 30/60), and corporate account hierarchy management.',
   },
   {
     category: 'b2b',
@@ -353,7 +353,7 @@ const FAQ_ITEMS = [
     category: 'support',
     question: 'What warranty and post-launch support do you provide?',
     answer:
-      'Every project includes a 30-day comprehensive post-launch warranty covering bug fixes, performance tuning, and recorded video training to ensure your operational team is completely confident managing the platform.',
+      'Every project includes a 30-day post-launch warranty covering bug fixes, performance tuning, and recorded video training to ensure your operational team is completely confident managing the platform.',
   },
   {
     category: 'support',
@@ -821,7 +821,7 @@ export default function TampaEcommercePage() {
           <EnterpriseArchitectureBlueprint
             badge="// TAMPA ENTERPRISE E-COMMERCE BLUEPRINT"
             title="High-Scale Commerce: Next.js Storefront to Real-Time ERP"
-            subtitle="Explore how custom Next.js storefronts, headless Shopify Plus &amp; BigCommerce engines, NetSuite ERP middleware, and sub-second checkout pipelines operate together seamlessly."
+            subtitle="Explore how custom Next.js storefronts, headless Shopify Plus &amp; BigCommerce engines, NetSuite ERP middleware, and sub-second checkout pipelines operate together smoothly."
             legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
             targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
             ctaLabel="Get an E-Commerce Architecture Quote"

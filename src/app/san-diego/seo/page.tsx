@@ -275,7 +275,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What structured JSON-LD schemas do you implement on our website?',
     answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+      'We inject full server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
   },
   {
     category: 'technical',
@@ -353,7 +353,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'How do you structure SEO for cross-border logistics, customs brokers, and maquiladora trade in Otay Mesa?',
     answer:
-      'The Otay Mesa border crossing is a crucial international manufacturing and freight hub. We build bilingual Spanish and English landing pages, customs brokerage capability matrices, and rapid RFQ quotation forms to capture cross-border B2B contracts.',
+      'The Otay Mesa border crossing is a major international manufacturing and freight hub. We build bilingual Spanish and English landing pages, customs brokerage capability matrices, and rapid RFQ quotation forms to capture cross-border B2B contracts.',
   },
   {
     category: 'technical',

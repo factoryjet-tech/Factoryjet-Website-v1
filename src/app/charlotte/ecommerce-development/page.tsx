@@ -16,14 +16,14 @@ const PAGE_MODIFIED = '2026-10-04';
 const CANONICAL = 'https://factoryjet.com/charlotte/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Best Charlotte E-Commerce Agency | Top Shopify Plus | FactoryJet',
+  title: 'Best Charlotte E-Commerce Agency | Shopify Plus | FactoryJet',
   description:
     'Best Charlotte ecommerce development agency. Top custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Charlotte E-Commerce Agency | Top Shopify Plus | FactoryJet',
+    title: 'Best Charlotte E-Commerce Agency | Shopify Plus | FactoryJet',
     description:
       'Charlotte ecommerce development agency. Custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion.',
     url: CANONICAL,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Charlotte E-Commerce Agency | Top Shopify Plus | FactoryJet',
+    title: 'Best Charlotte E-Commerce Agency | Shopify Plus | FactoryJet',
     description: 'Custom Shopify Plus and wholesale ecommerce development in Charlotte NC. High conversion and zero lock-in.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -204,7 +204,7 @@ const ROADMAP_STEPS = [
     title: 'Catalog Architecture, ERP Scoping & Figma UI/UX Design',
     desc: 'We map your complete product data schema, variant options, customer group pricing tiers, and warehouse fulfillment logic. We deliver interactive Figma prototypes for all key customer journeys for your direct review.',
     deliverables: [
-      'Comprehensive product catalog matrix and tax and shipping logic map',
+      'Full product catalog matrix and tax and shipping logic map',
       'High-fidelity Figma prototypes for desktop and mobile commerce flows',
       'ERP and 3PL warehouse integration architecture specification',
       'Legacy store SEO redirect and data preservation roadmap',
@@ -356,7 +356,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'Do you offer a post-launch warranty on your code?',
     answer:
-      'Every FactoryJet build includes a comprehensive 30-day post-launch warranty covering any technical adjustments, bug fixes, and recorded video handover sessions for your internal marketing team.',
+      'Every FactoryJet build includes a 30-day post-launch warranty covering any technical adjustments, bug fixes, and recorded video handover sessions for your internal marketing team.',
   },
   {
     category: 'migration',

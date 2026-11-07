@@ -17,14 +17,14 @@ const PAGE_MODIFIED = '2026-10-04';
 const CANONICAL = 'https://factoryjet.com/denver/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Best Denver E-Commerce Agency | Top Shopify Plus | FactoryJet',
+  title: 'Best Denver E-Commerce Agency | Shopify Plus | FactoryJet',
   description:
     'Best Denver ecommerce agency. Top custom Shopify Plus, headless Next.js architectures, and ERP integrations for Colorado brands.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Denver E-Commerce Agency | Top Shopify Plus | FactoryJet',
+    title: 'Best Denver E-Commerce Agency | Shopify Plus | FactoryJet',
     description:
       'Denver ecommerce agency. High-converting Shopify Plus, headless Next.js architectures, and ERP integrations for Colorado brands.',
     url: CANONICAL,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Denver E-Commerce Agency | Top Shopify Plus | FactoryJet',
+    title: 'Best Denver E-Commerce Agency | Shopify Plus | FactoryJet',
     description: 'Custom Shopify Plus and Headless Next.js ecommerce engineering for Colorado brands. Sub-second performance and ERP integration.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -216,7 +216,7 @@ const ROADMAP_STEPS = [
     phase: 'Phase 03',
     title: 'Headless Next.js 15 & Shopify Plus Engineering',
     desc: 'We build your custom commerce application using Next.js 15, TypeScript, Tailwind CSS, and high-performance headless APIs for sub-second performance.',
-    deliverables: ['Custom Next.js 15 App Router storefront', 'Shopify Storefront API and GraphQL integration', 'Automated ERP and inventory synchronization pipelines', 'Comprehensive end-to-end checkout testing'],
+    deliverables: ['Custom Next.js 15 App Router storefront', 'Shopify Storefront API and GraphQL integration', 'Automated ERP and inventory synchronization pipelines', 'Full end-to-end checkout testing'],
   },
   {
     phase: 'Phase 04',
@@ -292,7 +292,7 @@ const FAQ_ITEMS = [
     category: 'tech',
     question: 'How do you handle zero-downtime store migration from Magento or WooCommerce?',
     answer:
-      'We build comprehensive data migration pipelines for customers, order history, and product catalogs, implement strict 1-to-1 301 URL redirect maps, and conduct parallel sandbox testing before flipping DNS records.',
+      'We build full data migration pipelines for customers, order history, and product catalogs, implement strict 1-to-1 301 URL redirect maps, and conduct parallel sandbox testing before flipping DNS records.',
   },
   {
     category: 'tech',
@@ -352,7 +352,7 @@ const FAQ_ITEMS = [
     category: 'handoff',
     question: 'What warranty and post-launch support do you provide?',
     answer:
-      'Every project includes a 30-day comprehensive post-launch warranty covering bug fixes, performance tuning, and recorded video training for your internal operations staff.',
+      'Every project includes a 30-day post-launch warranty covering bug fixes, performance tuning, and recorded video training for your internal operations staff.',
   },
   {
     category: 'handoff',
@@ -382,7 +382,7 @@ const FAQ_ITEMS = [
     category: 'seo',
     question: 'How do you implement Schema.org JSON-LD structured data for Google Shopping, Merchant Center, and AI Overviews?',
     answer:
-      'We inject comprehensive Product, Offer, AggregateRating, Organization, and FAQPage JSON-LD schemas directly into each template, providing search engines and AI agents with precise price, inventory, and review metadata.',
+      'We inject full Product, Offer, AggregateRating, Organization, and FAQPage JSON-LD schemas directly into each template, providing search engines and AI agents with precise price, inventory, and review metadata.',
   },
   {
     category: 'cpg',
@@ -828,7 +828,7 @@ export default function DenverEcommercePage() {
         <EnterpriseArchitectureBlueprint
             badge="// DENVER ECOMMERCE &amp; ERP BLUEPRINT"
             title="Headless Next.js 15 &amp; Shopify Plus Architecture"
-            subtitle="Explore how headless Next.js, Shopify Storefront API, NetSuite ERP synchronization, and Cloudflare edge caching operate together seamlessly."
+            subtitle="Explore how headless Next.js, Shopify Storefront API, NetSuite ERP synchronization, and Cloudflare edge caching operate together smoothly."
             legacySource="Legacy Magento, WooCommerce & Custom PHP"
             targetStack="Headless Shopify Plus, BigCommerce B2B & Next.js 15"
             ctaLabel="Get a Fixed-Price Quote"

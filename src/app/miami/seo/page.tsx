@@ -107,7 +107,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Cross-Border Wealth Management, Family Offices & Fintech',
     headline: 'Topical Authority & AI Citation Engineering for Miami Financial Leaders',
     description:
-      'Brickell financial advisors and family offices require commanding search presence to capture relocating wealth and international capital. We build comprehensive topical clusters, executive credential schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
+      'Brickell financial advisors and family offices require commanding search presence to capture relocating wealth and international capital. We build full topical clusters, executive credential schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
     image: '/images/us/miami/seo/card-advisers-chart-screen-review.webp',
     alt: 'Two wealth advisers at a tall desk, a woman pointing at a monitor of simple bar shapes and an older man holding a closed leather folder',
     points: [
@@ -276,7 +276,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What structured JSON-LD schemas do you implement on our website?',
     answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+      'We inject full server-rendered schemas including LocalBusiness, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
   },
   {
     category: 'technical',
@@ -294,7 +294,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Do you optimize for bilingual English and Spanish searches in Miami?',
     answer:
-      'Yes. We architect bilingual landing pages, localized metadata, and Spanish-language GBP service descriptions to capture high-intent inquiries across South Florida’s vibrant bilingual commercial landscape.',
+      'Yes. We architect bilingual landing pages, localized metadata, and Spanish-language GBP service descriptions to capture high-intent inquiries across South Florida’s vibrant bilingual commercial market.',
   },
   {
     category: 'local',
@@ -354,7 +354,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'How do Doral import/export freight forwarders and logistics hubs capture national and LATAM B2B queries?',
     answer:
-      'We build comprehensive B2B capability clusters, customs brokerage schemas, international cold-chain freight hubs, and instant RFQ quotation funnels that convert corporate procurement directors.',
+      'We build full B2B capability clusters, customs brokerage schemas, international cold-chain freight hubs, and instant RFQ quotation funnels that convert corporate procurement directors.',
   },
   {
     category: 'local',
