@@ -23,13 +23,13 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 
 export const metadata: Metadata = {
-  title: 'Professional Web Design Company in Madurai | FactoryJet',
-  description: 'Web design company in Madurai for textile, engineering & retail businesses. Affordable, performance-focused websites. Serving Anna Nagar & KK Nagar. 7-day delivery.',
+  title: 'Web Design Company in Madurai | FactoryJet',
+  description: 'Web design company in Madurai for textile, engineering and retail businesses. Fast websites, 7-day delivery. Serving Anna Nagar and KK Nagar.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Madurai | Professional Website Design Services',
-    description: 'Award-winning Web Design Company in Madurai. Fast, conversion-focused websites for textile, engineering & healthcare businesses. 7-day delivery, INR pricing.',
+    title: 'Web Design Company in Madurai | FactoryJet',
+    description: 'Web design company in Madurai for textile, engineering and healthcare businesses. Fast, conversion-focused websites. 7-day delivery, INR pricing.',
     url: 'https://factoryjet.com/web-design/madurai',
     images: [
       {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design Company in Madurai | FactoryJet',
-    description: 'Award-winning Web Design Company in Madurai. Beautiful, conversion-focused websites with modern UI/UX.',
+    description: 'Web design company in Madurai. Fast websites for textile, engineering and healthcare firms. 7-day delivery.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -323,7 +323,7 @@ const MDU_FAQ_ITEMS = [
   { category: 'ecommerce', question: 'Can you build an online booking system for my hotel or tour operator?', answer: 'Yes. We integrate booking forms, availability calendars, and WhatsApp booking flows for Madurai hospitality and tourism businesses.' },
   { category: 'ecommerce', question: 'Can you build a patient appointment booking system for a hospital?', answer: 'Yes. We build hospital websites with online appointment booking, department pages, doctor profiles, and patient enquiry forms: all optimized for local Madurai search.' },
   { category: 'local', question: 'Do you build websites for textile exporters in Madurai?', answer: "Yes. We build export-facing product catalogues, company profile sites, and B2B inquiry portals for Madurai's textile, garment, and dyeing industry, targeting domestic buyers and international importers." },
-  { category: 'local', question: 'Can you build a website for a Madurai hospital or medical college?', answer: "Yes. We build comprehensive hospital websites with specialty department pages, doctor profiles, appointment booking, and local SEO optimized for searches across Madurai, Dindigul, and Virudhunagar districts." },
+  { category: 'local', question: 'Can you build a website for a Madurai hospital or medical college?', answer: "Yes. We build full hospital websites with specialty department pages, doctor profiles, appointment booking, and local SEO optimized for searches across Madurai, Dindigul, and Virudhunagar districts." },
   { category: 'local', question: 'Do you support Tamil-language websites for local customers?', answer: "Yes. We build Tamil + English bilingual websites for businesses targeting local Madurai consumers. Our Enterprise tier includes full bilingual content support with proper Tamil script rendering." },
   { category: 'local', question: 'Can you help a Madurai business attract customers from other Tamil Nadu cities?', answer: "Absolutely. Many Madurai clients, especially hospitals, colleges, and manufacturers, use their websites to attract patients, students, and buyers from Tirunelveli, Dindigul, Ramanathapuram, and beyond. We design and optimize for that reach." },
 

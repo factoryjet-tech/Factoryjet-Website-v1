@@ -27,15 +27,14 @@ import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Indore | Website Development Indore | FactoryJet',
+  title: 'Web Design Company in Indore | FactoryJet',
   description:
-    'Best web design company in Indore. Professional, custom websites with 7-day delivery, 500+ businesses served. Serving Vijay Nagar, AB Road, Palasia, Scheme 54, Rau & all of Indore.',
+    'Web design company in Indore. Custom websites with 7-day delivery, 500+ businesses served. Serving Vijay Nagar, AB Road, Palasia, Scheme 54 and Rau.',
   keywords: [
     'web design company in Indore',
     'website design Indore',
     'web development company Indore',
     'website design company Indore',
-    'affordable web design Indore',
     'professional website design Indore',
     'web design Vijay Nagar Indore',
     'web design Scheme 78 Indore',
@@ -554,7 +553,7 @@ export default function IndoreWebDesignPage() {
           eyebrow="INDORE MARKET"
           headline="Why Your Indore Web Presence Is a Business Asset, Not a Line Item"
           leadParagraphs={[
-            "Indore is not just Madhya Pradesh's largest city, it is Central India's fastest-growing commercial hub. With 65,000+ registered SMEs, an IT sector generating ₹4,038 crore in software exports in FY 2024–25, and a startup ecosystem anchored by IIM Indore and IIT Indore, the city punches well above its population weight. Scheme 78 IT Park and Bengali Square are drawing investment from mid-sized tech firms and startups that previously only considered Pune or Hyderabad. The city has won the Swachh Survekshan award for the cleanest city in India seven consecutive times: a detail that speaks to the organised, business-friendly civic environment that attracts serious entrepreneurs.",
+            "Indore is Madhya Pradesh's largest city and Central India's fastest-growing commercial hub. With 65,000+ registered SMEs, an IT sector generating ₹4,038 crore in software exports in FY 2024–25, and a startup ecosystem anchored by IIM Indore and IIT Indore, the city punches well above its population weight. Scheme 78 IT Park and Bengali Square are drawing investment from mid-sized tech firms and startups that previously only considered Pune or Hyderabad. The city has won the Swachh Survekshan award for the cleanest city in India seven consecutive times: a detail that speaks to the organised, business-friendly civic environment that attracts serious entrepreneurs.",
             "Indore's business diversity creates a wide range of digital requirements: a Vijay Nagar coaching institute competes for NEET and IIT-JEE students on Google with the same urgency as a Bandra D2C brand competes for Shopify orders. An AB Road textile exporter needs a B2B website that projects quality and certifications to international buyers; a Palasia restaurant chain needs a mobile-first site that loads in under two seconds during peak dinner-time traffic. A Scheme 78 SaaS startup needs a conversion-optimised marketing site that matches the credibility of their Bengaluru or Delhi peers. FactoryJet builds for all of these profiles, because we start with the buyer in mind, not the template.",
             "The businesses winning in Indore's search results are not necessarily the largest, they are the ones with the fastest, best-structured web presence. A 1-second improvement in page load time increases conversions by 7%. A properly built FAQ section indexed by Google can double inbound enquiry volume. These are not abstract metrics, they are the difference between a website that earns its cost in 30 days and one that sits unused on a business card.",
           ]}

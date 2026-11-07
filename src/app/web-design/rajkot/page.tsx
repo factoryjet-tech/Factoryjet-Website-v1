@@ -28,14 +28,13 @@ import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 export const metadata: Metadata = {
   title: 'Web Design Company in Rajkot | FactoryJet',
   description:
-    'Web design company in Rajkot for auto component exporters, engineering manufacturers & MSME businesses. Fast, custom websites with 7-day delivery. Serving GIDC Metoda, Shapar-Veraval & Aji.',
+    'Web design company in Rajkot for engineering, pump, casting and auto part makers. RFQ-ready Next.js sites, fixed quote, 7-day delivery.',
   keywords: [
     'web design company in Rajkot',
     'website design Rajkot',
     'web development Rajkot',
     'Rajkot website designer',
     'ecommerce website Rajkot',
-    'affordable web design Rajkot',
     'web design for auto parts companies Rajkot',
     'MSME website design Rajkot',
     'engineering company website Rajkot',
@@ -50,14 +49,14 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Rajkot | FactoryJet',
     description:
-      "Professional website design company in Rajkot: Next.js, SEO, and GA4 included. 7-day delivery. Serving GIDC Metoda, Shapar-Veraval, Aji, and Rajkot's auto component & engineering clusters.",
+      "Web design company in Rajkot for Metoda, Shapar-Veraval and Aji manufacturers. Product catalogues, RFQ forms, GA4 and SEO set up. 7-day delivery.",
     url: 'https://factoryjet.com/web-design/rajkot',
     images: [
       {
         url: 'https://factoryjet.com/images/services/web-design.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet Web Design Services in Rajkot',
+        alt: 'Website design for Rajkot engineering firms by FactoryJet',
       },
     ],
     locale: 'en_IN',
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in Rajkot | FactoryJet',
     description:
-      "Website design company in Rajkot for auto component exporters & engineering MSMEs. 7-day delivery.",
+      "Web design in Rajkot for engineering and auto part exporters. Live in 7 days.",
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -96,7 +95,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -116,33 +115,33 @@ const localBusinessSchema = { '@context': 'https://schema.org', '@type': 'Organi
 const RJT_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Strategy',
+    title: 'Who buys your parts',
     description:
-      "We map your ideal customer profile against Rajkot's market, whether that's a German or Japanese OEM buyer sourcing auto components from GIDC Metoda, a domestic B2B buyer procuring pumps and valves, or a jeweller in Rajkot's gold market targeting retail consumers. We audit your top competitors and agree the sitemap and content plan.: Days 1–2",
+      "We start with the buyer. An overseas OEM sourcing forgings, an Indian distributor buying submersible pumps and a family shopping for gold on Soni Bazaar each want different pages. We look at rival Rajkot units online and agree the page list.: Days 1–2",
   },
   {
     number: '02',
-    title: 'Design & Prototyping',
+    title: 'Phone-first layouts',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, RFQ form, product inquiry field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
+      'Figma layouts begin at phone size, then widen to desktop. The RFQ form, the drawing upload field and the product grid get placed and reviewed first. You approve before we write code.: Days 3–4',
   },
   {
     number: '03',
-    title: 'Development',
+    title: 'Build',
     description:
-      "Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, export inquiry portals, and any third-party APIs your engineering or manufacturing business uses. Performance budgets enforced from the first commit.: Days 5–6",
+      "We code the site in Next.js and host it on Cloudflare. WhatsApp, enquiry forms, PDF catalogue downloads and any ERP or CRM link you need are wired in, with page weight checked on every change.: Days 5–6",
   },
   {
     number: '04',
-    title: 'Content & SEO',
+    title: 'Search setup',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Rajkot-specific local SEO and export-market keyword targeting built in.: Day 6–7',
+      'Copy edited for export buyers, images converted to WebP, schema for your company and FAQs added, sitemap filed in Search Console. Pages are mapped to the part names and grades buyers type into Google.: Day 6–7',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
+      'Domain moved to Cloudflare, GA4 and Tag Manager running, Search Console checked. We record a walkthrough so your office staff can update products, and fix anything that breaks for 30 days.: Day 7+',
   },
 ];
 
@@ -150,7 +149,7 @@ const RJT_FAQ_CATEGORIES = [
   { key: 'pricing',   label: 'Pricing & Timeline' },
   { key: 'included',  label: "What's Included" },
   { key: 'technical', label: 'Technical & SEO' },
-  { key: 'local',     label: 'Rajkot Local' },
+  { key: 'local',     label: 'Rajkot Industry' },
   { key: 'support',   label: 'Support & Ownership' },
 ];
 
@@ -159,131 +158,131 @@ const RJT_FAQ_ITEMS = [
   /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How much does a website cost for a business in Rajkot?',
+    question: 'How is a website priced for a Rajkot manufacturer?',
     answer:
-      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
+      "By scope. A capability site with twenty product pages costs less than one with a dealer portal or online ordering. We hold a free call, then send one fixed number for the agreed work. You own the code once it is paid for.",
   },
   {
     category: 'pricing',
-    question: 'How long does it take to build a website?',
+    question: 'How fast can my site go live?',
     answer:
-      'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development days three through six, and content, SEO, and launch on day seven. The 7-day clock starts when your brand assets and content are in our shared workspace.',
+      'Seven days from kickoff. The clock starts once we have your logo, product photos, catalogue and certificates. Planning and layout take two days, design sign-off and coding take four, and launch happens on day seven.',
   },
   {
     category: 'pricing',
-    question: 'What makes FactoryJet better value than a Rajkot web agency?',
+    question: 'Why choose FactoryJet over a web agency in Rajkot?',
     answer:
-      "We are a specialised web engineering team, not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at a fixed price confirmed upfront. You pay for the build, not our admin structure.",
+      "You deal directly with the designers and engineers building your site. There is no account manager layer, the quote is fixed before work starts, and the same design, code and Lighthouse checks apply to every project size.",
   },
   {
     category: 'pricing',
-    question: 'What does 7-day delivery include?',
+    question: 'What is covered by the 7-day delivery?',
     answer:
-      'The 7-day timeline covers the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'Everything we control: design, coding, copy edits and going live. If content from your side arrives late, the date moves by the same number of days. On all our projects so far, 97% were delivered on time.',
   },
 
   /* ── What's Included ── */
   {
     category: 'included',
-    question: "What's included in a web design project?",
+    question: "What comes with every build?",
     answer:
-      'Every FactoryJet project includes strategy, Figma design, Next.js development, basic copywriting, technical SEO setup (schema, meta, sitemap), GA4 analytics, and a 30-day post-launch support window. You receive the full codebase in your GitHub on launch day.',
+      'Planning, a Figma design, the Next.js build, short copy, schema, meta tags and sitemap, GA4 tracking and 30 days of fixes. On launch day the source code goes into a GitHub repository that you own.',
   },
   {
     category: 'included',
-    question: 'Do you write the content for my website?',
+    question: 'Can you write product copy for engineering parts?',
     answer:
-      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content and export-facing product copy for auto components or engineering products is available as an add-on. We send a content brief before development starts so you know exactly what to provide.',
+      'Headlines, intros and short product blurbs are included. Detailed export copy for castings, bearings, pumps or machine parts is an add-on. Before building we send a list of what we need from you, such as drawings, grades and test certificates.',
   },
   {
     category: 'included',
-    question: 'Do you provide website hosting?',
+    question: 'Where will the website be hosted?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
+      "On Cloudflare Pages, in an account registered to you. Most company sites fit the free plan. We handle the setup and charge no monthly hosting fee.",
   },
   {
     category: 'included',
-    question: 'Can I update the website myself after launch?',
+    question: 'Can my team add new products later?',
     answer:
-      'Yes. Every Growth and Custom tier project includes a headless CMS integration (Sanity or Contentful) so your team can update product listings, certifications, and content without touching code.',
+      'Yes. Growth and Custom tier builds include Sanity or Contentful, so staff can add products, upload certificates and edit text from a browser.',
   },
 
   /* ── Technical & SEO ── */
   {
     category: 'technical',
-    question: 'Will my website rank on Google India and international search?',
+    question: 'Will overseas buyers find my Rajkot company on Google?',
     answer:
-      'Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Branded searches typically rank within 1–2 weeks. For auto component exporters, we target English-language searches from buyers in the US, Germany, and Japan.',
+      'The build covers the technical base: schema markup, clean titles and meta tags, passing Core Web Vitals on mobile, a sitemap in Search Console and light images. Your company name usually shows in results within one to two weeks. For export terms we write English pages around the part names buyers in the US, Europe and Japan search for.',
   },
   {
     category: 'technical',
-    question: 'What tech stack do you build on?',
+    question: 'What are the sites built with?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Rajkot engineering and manufacturing businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings and international buyer impressions.",
+      "Next.js, served from Cloudflare's global network. Prebuilt pages load much faster than a typical WordPress site, which helps both Google's Core Web Vitals score and the first impression on a buyer opening your site abroad.",
   },
   {
     category: 'technical',
-    question: 'How does the site perform on mobile?',
+    question: 'Does the site work well on mobile?',
     answer:
-      'Mobile-first is the default. Every build targets Lighthouse 90+ and green Core Web Vitals on mobile before launch. We design at 375px before desktop, serve WebP images via Cloudflare CDN with lazy loading.',
+      'The phone layout is designed first. No build launches below Lighthouse 90 on mobile or with failing Core Web Vitals. Images are WebP, lazy-loaded and served from Cloudflare.',
   },
   {
     category: 'technical',
-    question: 'Do you set up Google Analytics and Search Console?',
+    question: 'Can I track RFQs and catalogue downloads?',
     answer:
-      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (RFQ form submissions, WhatsApp clicks, product enquiry clicks, catalog download clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes. GA4 and Tag Manager are set up before launch, with events for RFQ sends, WhatsApp taps, product enquiries and catalogue downloads. Search Console is verified and your sitemap submitted.',
   },
 
   /* ── Rajkot Local ── */
   {
     category: 'local',
-    question: 'Do you build websites for auto component exporters in Rajkot?',
+    question: 'Do you build websites for auto part exporters in Rajkot?',
     answer:
-      "Yes, auto component exporters are a core client profile for us in Rajkot. The city is India's #1 cluster for auto parts including bearings, castings, and forgings, exporting to OEMs in the USA, Germany, and Japan. We build export-facing websites with product catalog systems, quality certification display (IATF, ISO), and B2B inquiry flows designed for international automotive procurement teams.",
+      "Yes. Rajkot makes bearings, castings, forgings, gears and engine parts that go to vehicle makers in India and abroad. These buyers want IATF 16949 and ISO certificates, machine lists, inspection facilities, materials handled and a clear RFQ path. We build catalogue sites around those checks.",
   },
   {
     category: 'local',
-    question: 'Can you build websites for engineering manufacturers in GIDC Metoda or Shapar-Veraval?',
+    question: 'Can you build a site for a unit in Metoda or Shapar-Veraval GIDC?',
     answer:
-      "Yes. GIDC Metoda and Shapar-Veraval are home to thousands of engineering MSMEs, machine tool manufacturers, die and mould makers, pump and valve companies, and precision casting units. We build B2B company profile sites with product range display, manufacturing capability pages, and inquiry forms designed for industrial procurement buyers.",
+      "Yes. These estates hold many engineering MSMEs: machine shops, die and mould makers, pump and valve makers and casting units. We build capability pages, machinery lists, product ranges and enquiry forms for industrial buyers.",
   },
   {
     category: 'local',
-    question: "Do you know Rajkot's industrial clusters well enough to write relevant copy?",
+    question: "Do you understand Rajkot's industrial areas?",
     answer:
-      "Yes. We research Rajkot's business geography as part of discovery, from GIDC Aji (the oldest industrial estate), GIDC Metoda (auto components), and GIDC Shapar-Veraval (one of Asia's largest industrial estates by area), to Rajkot's gold jewellery market and the city's trading community. Local specificity in copy and LocalBusiness schema improves relevance for industry-level and neighbourhood-level searches.",
+      "We map them during planning. Aji is the older GIDC estate, Metoda and Shapar-Veraval hold most of the newer engineering units, and the city's Soni Bazaar is the gold and jewellery trade centre. Area names go into copy and schema where buyers or local customers search by them.",
   },
   {
     category: 'local',
-    question: 'How does FactoryJet compare to Rajkot web agencies?',
+    question: 'How does FactoryJet differ from Rajkot web agencies?',
     answer:
-      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
+      "Many local agencies price only after meetings and take weeks to deliver. We send a fixed quote, put the 7-day date in the agreement and build in Next.js. You get a faster site and keep every line of code.",
   },
 
   /* ── Support & Ownership ── */
   {
     category: 'support',
-    question: 'Do I own the website after it is built?',
+    question: 'Is the website mine after launch?',
     answer:
-      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'Yes. The source code is pushed to your GitHub on launch day. Figma files and every account login are handed over too. Nothing depends on a retainer or a closed platform.',
   },
   {
     category: 'support',
-    question: 'What support do you provide after launch?',
+    question: 'What support is there after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase. Maintenance clients also get quarterly performance audits and Core Web Vitals checks.',
+      'Thirty days of free bug fixes and small changes come with every project. After that, a monthly plan covers new work, same-day bug response, quarterly speed and Core Web Vitals checks, and an engineer who knows your code.',
   },
   {
     category: 'support',
-    question: 'What happens if something breaks after launch?',
+    question: 'What if something stops working?',
     answer:
-      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. Because your site is on Cloudflare Pages (static files, global CDN), common causes of downtime simply do not apply.',
+      'In the first 30 days we fix bugs free, normally within 24 hours. The site runs as static files on Cloudflare, so there is no server or plugin to fail.',
   },
   {
     category: 'support',
-    question: 'Do you offer ongoing retainer services for Rajkot businesses?',
+    question: 'Can a Rajkot company keep you on a monthly retainer?',
     answer:
-      'Yes. Monthly retainers cover ongoing development work, content updates, new product pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
+      'Yes. A retainer covers new product pages, pages for trade shows, SEO work, content edits and upkeep. Retainer clients get first place in our queue and one named engineer.',
   },
 
   // Money-query coverage, added 2026-06-11
@@ -291,13 +290,13 @@ const RJT_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Who is the best web design agency in Rajkot?',
     answer:
-      'For small businesses, FactoryJet makes a strong case as the best web design company in Rajkot: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Rajkot you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Rajkot.',
+      'Test every Rajkot option, including us, the same way. Open their live sites on your phone. Run them through PageSpeed Insights yourself. Ask for a written price that will not rise mid-project. FactoryJet builds custom sites in 7 days at a fixed price and welcomes that test.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire web designer in Rajkot or use an agency?',
+    question: 'Should I hire web designer in Rajkot on my own or use a team?',
     answer:
-      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Rajkot directly, agree the scope and price in writing first.',
+      'A freelancer suits a one-page site. A manufacturer\'s catalogue site needs design, code, tracking and later support from people who will answer the phone in a year. If you hire web designer in Rajkot directly, fix the page list and price in writing first.',
   },
 ];
 
@@ -313,18 +312,18 @@ const faqSchema = {
 
 const RJT_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'Rajkot Agency' },
+  { label: 'Rajkot agency' },
   { label: 'Freelancer' },
-  { label: 'Template (Wix/Squarespace)' },
+  { label: 'Builder template (Wix/Squarespace)' },
 ] as const;
 
 const RJT_COMPARISON_ROWS = [
   {
-    feature: 'Delivery timeline',
+    feature: 'Weeks to go live',
     values: ['7 days', '6–16 weeks', '3–12 weeks (unreliable)', '1–2 weeks (you build it)'],
   },
   {
-    feature: 'Custom Figma design',
+    feature: 'Original Figma design',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ra" kind="yes" />,
@@ -333,7 +332,7 @@ const RJT_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Next.js (not WordPress)',
+    feature: 'Next.js codebase',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ra" kind="partial" />,
@@ -342,7 +341,7 @@ const RJT_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Technical SEO built in',
+    feature: 'Search basics set up at launch',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ra" kind="partial" />,
@@ -351,7 +350,7 @@ const RJT_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Lighthouse 90+ on mobile',
+    feature: '90+ Lighthouse on phones',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ra" kind="partial" />,
@@ -360,7 +359,7 @@ const RJT_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'GA4 + GTM wired up',
+    feature: 'Analytics and tag tracking',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ra" kind="partial" />,
@@ -369,7 +368,7 @@ const RJT_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Transparent, fixed pricing',
+    feature: 'Quote fixed in writing',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ra" kind="no" />,
@@ -378,7 +377,7 @@ const RJT_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Full codebase to your GitHub',
+    feature: 'Code handed over on GitHub',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ra" kind="partial" />,
@@ -387,7 +386,7 @@ const RJT_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '7-day delivery',
+    feature: 'Live in 7 days',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ra" kind="no" />,
@@ -401,39 +400,39 @@ const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   '@id': `https://factoryjet.com/web-design/rajkot#howto`,
-  name: `How FactoryJet builds your Rajkot website in 7 days`,
-  description: `Our 7-day process for delivering a professional, export-ready website for Rajkot engineering and manufacturing businesses.`,
+  name: `Seven-day website build for a Rajkot manufacturer`,
+  description: `How FactoryJet plans, designs and launches an export-ready site for a Rajkot engineering or jewellery business.`,
   totalTime: 'P7D',
   step: [
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 | Discovery Call',
-      text: `We learn your business, your Rajkot market, your goals, and what you need the website to do, whether you are targeting OEM buyers in Germany, distributors in the US, or domestic B2B procurement teams.`,
+      name: 'Day 1: Buyer call',
+      text: `We learn what you make and who buys it, from vehicle makers abroad to pump dealers across India, and what each visitor should do on the site.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 | Strategy & Structure',
-      text: `We map your site architecture, research your Rajkot and sector competitors, identify your top export and local keywords, and write the first draft of your page copy.`,
+      name: 'Day 2: Page plan',
+      text: `We set the page list, check competing Rajkot units online, choose part-name keywords and write draft copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
-      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4: Design',
+      text: 'Home and product page designs arrive on a preview link. Changes you ask for are made within 24 hours.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
-      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Rajkot local schema markup added. Product catalog, RFQ form, and export inquiry systems built. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6: Code and tracking',
+      text: `The design is coded mobile-first. Catalogue, RFQ form, Rajkot business schema, GA4 and Search Console are all connected.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 | Launch',
-      text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
+      name: 'Day 7: Launch',
+      text: 'Checks on five devices, then go-live. You get handover notes and a 30-minute training call.',
     },
   ],
 };
@@ -499,8 +498,8 @@ export default function RajkotWebDesignPage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_rajkot_hero" />}
           eyebrow="WEB DESIGN · RAJKOT"
-          headline="Website Design in Rajkot for Auto Component Exporters, Engineering Manufacturers, and MSME Businesses"
-          lead="Rajkot is Gujarat's engineering powerhouse, home to 250,000+ MSMEs, India's #1 auto parts cluster, and GIDC Shapar-Veraval, one of Asia's largest industrial estates. From machine tool makers in GIDC Metoda to gold jewellers in the city centre, Rajkot businesses compete for international buyers and domestic contracts every day. FactoryJet builds Figma-designed, Next.js-built websites with 7-day delivery, your codebase delivered in full."
+          headline="Website Design in Rajkot for Engineering Units, Auto Part Exporters and Jewellers"
+          lead="Rajkot machines, casts and forges parts that end up in vehicles, pumps and engines around the world. Buyers check a supplier's website before they send drawings. FactoryJet designs that site in Figma, codes it in Next.js and launches it in 7 days, with every file handed to you."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -510,40 +509,40 @@ export default function RajkotWebDesignPage() {
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
+        <LogoBar tagline="Sites built for 500+ businesses across India, the US, the UK and the UAE" />
 
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ websites built. 12 years of web engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="From Shopify stores to B2B catalogues and DTC brand sites, we have built for companies in India, the US, the UK and the UAE. Every project had a fixed price, a 7-day launch date and full code handover."
         />
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="RAJKOT MARKET"
-          headline="Why Your Rajkot Web Presence Is an Export Asset"
+          headline="Why a Rajkot Supplier Needs a Website Buyers Trust"
           leadParagraphs={[
-            "Rajkot is called the Manchester of Saurashtra, and for good reason. The city is India's undisputed capital for auto component manufacturing, home to more than 3,500 engineering units producing bearings, castings, forgings, dies and molds, pumps, valves, and machine tools that export to OEMs in the USA, Germany, and Japan. With 250,000+ registered MSMEs: the highest MSME density per capita in India, Rajkot's industrial spine runs through GIDC Aji (the oldest), GIDC Metoda (auto components), and GIDC Shapar-Veraval, one of the largest industrial estates in Asia by land area. Gold jewellery is the city's second major export pillar, Rajkot is Gujarat's second-largest gold jewellery market after Surat.",
-            "This manufacturing depth creates a specific web design problem: most Rajkot MSMEs still rely on WhatsApp, trade directories, and word-of-mouth to reach buyers. International procurement teams from Bosch, Toyota, Cummins, and Caterpillar search Google before they ever send an RFQ. A foundry or precision machining unit with no website, or a slow, outdated one, is invisible to those buyers. The businesses that invest in a credible, fast, export-ready website today are capturing the first-page real estate their competitors are conceding.",
-            "The opportunity is significant and the competitive bar in Rajkot is still low. Most engineering and manufacturing businesses in the city either have no website or one built on a dated template. FactoryJet builds export-ready, technically sound websites for exactly this market, with authority-first architecture, product catalog systems, and international buyer SEO built in.",
+            "Rajkot is one of Gujarat's main engineering centres. Its units make bearings, castings, forgings, diesel engines, pumps, valves, machine tools and auto parts, and many of them export. Most of this work happens in the Aji, Metoda and Shapar-Veraval industrial estates. The city also runs a large gold and imitation jewellery trade, and the Morbi ceramics belt sits close by.",
+            "Many Rajkot units still find work through trade directories, agents and WhatsApp groups. A procurement engineer abroad works differently. They search Google, shortlist suppliers whose sites show machines, certificates and parts made, and only then send an RFQ. A unit with no site, or a slow one, often drops off that list before anyone calls.",
+            "That gap is a chance. Plenty of competing units still run old template sites or none at all. A fast catalogue site with clear capability pages and a working RFQ form can put a mid-sized Rajkot unit ahead of larger rivals in a buyer's first search.",
           ]}
           stats={[
             {
               value: '250K+',
-              label: 'Registered MSMEs in Rajkot district, highest MSME density per capita in India',
+              label: 'Registered MSMEs in Rajkot district, as counted by the Ministry of MSME',
               sourceUrl: 'https://msme.gov.in/',
               sourceLabel: 'Ministry of MSME',
             },
             {
               value: '3,500+',
-              label: "Engineering units in Rajkot: India's #1 auto parts manufacturing cluster",
+              label: "Engineering units in Rajkot, many supplying auto parts",
               sourceUrl: 'https://rajkot.nic.in/',
               sourceLabel: 'Rajkot District NIC',
             },
             {
               value: 'Asia #1',
-              label: 'GIDC Shapar-Veraval: one of Asia\'s largest industrial estates by land area',
+              label: 'Shapar-Veraval GIDC, among Asia\'s largest industrial estates by land area',
               sourceUrl: 'https://gidc.gujarat.gov.in/',
               sourceLabel: 'GIDC Gujarat',
             },
@@ -552,35 +551,22 @@ export default function RajkotWebDesignPage() {
 
         {/* ── 5. SERVICE EXPLANATION ───────────────────────────────────────── */}
         <ServiceExplanation
-          eyebrow="WEB DESIGN · RAJKOT"
-          headline="What 'Web Design' Actually Means for a Rajkot Manufacturing or Engineering Business"
-          lead="Rajkot's economy runs on two very different buyer types, international OEM and B2B procurement teams doing weeks of vendor research, and domestic traders and distributors deciding faster. Both need very different web strategies. FactoryJet builds for both."
+          eyebrow="WEBSITE DESIGN · RAJKOT"
+          headline="What a Website Must Do for a Rajkot Manufacturer"
+          lead="Rajkot businesses sell to two groups. Procurement teams at OEMs and large firms take weeks to pick a supplier. Traders, dealers and shoppers decide in minutes. Each group needs its own kind of page."
           body={
             <>
               <p>
-                For Rajkot&apos;s auto component exporters, foundry and casting units, pump and
-                valve manufacturers, and precision engineering MSMEs: the website needs to project
-                manufacturing capability, quality certifications (IATF 16949, ISO 9001, TS),
-                export credentials, and product range to international procurement teams in the US,
-                Germany, and Japan. These buyers research vendors for weeks before making contact.
-                The site needs to answer their due-diligence questions: production capacity, past
-                clients, quality standards, and a frictionless RFQ form. We build these sites with
-                authority-first architecture, product catalog systems, and lead-capture flows
-                designed for long B2B sales cycles.
+                
+                Auto part makers, foundries, forging shops, pump and valve makers and precision machining units need a site that answers a buyer&apos;s audit questions before the first call. Which certifications do you hold, such as IATF 16949 or ISO 9001? Which machines and test equipment do you run? What materials and sizes can you make? Who do you already supply? We build machinery pages, product catalogues with specs and an RFQ form that accepts drawings.
               </p>
               <p>
-                For Rajkot&apos;s gold jewellers, traders, retail businesses, and service
-                companies: the challenge is different. Consumer and domestic B2B buyers need
-                mobile-first speed, clear product or service presentation, and instant contact
-                options. WhatsApp integration, clean product showcase, and conversion-optimised
-                inquiry forms are the priority. We build for both buyer types because we start
-                every project with the buyer journey in mind, not the template.
+                
+                Jewellers, traders, dealers and service firms need speed and a quick way to reach you. Shoppers want collection photos, hallmark details and a WhatsApp button. Dealers want product lists, prices on request and a branch locator. We plan those pages around how each buyer actually contacts you.
               </p>
               <p>
-                Every FactoryJet Rajkot project covers discovery, Figma prototyping, Next.js
-                development, SEO, GA4, and a 30-day support window. You leave with a codebase you
-                own, a design system you keep, and a site built to rank and convert, whether your
-                buyer is in Rajkot, Mumbai, or Düsseldorf.
+                
+                Each Rajkot project includes planning, Figma design, Next.js code, search setup, GA4 and 30 days of fixes. The code, design files and logins are yours, whether your buyer sits in Gondal, Pune or Stuttgart.
               </p>
             </>
           }
@@ -591,21 +577,22 @@ export default function RajkotWebDesignPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  Two buyer types. One framework.
+                  
+                  Two buyer types, two page plans.
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
                   {
                     type: 'B2B / Export & Industrial',
-                    need: 'Credentials + catalog + RFQ',
-                    area: 'GIDC Metoda · GIDC Shapar-Veraval · GIDC Aji',
+                    need: 'Certificates, machine list, RFQ with drawing upload',
+                    area: 'Metoda GIDC · Shapar-Veraval · Aji GIDC',
                     colour: '#F05A28',
                   },
                   {
                     type: 'D2C / Consumer & Retail',
-                    need: 'Speed + mobile + instant CTA',
-                    area: 'Rajkot City Centre · Gondal Road · Kalawad Road',
+                    need: 'Fast pages, WhatsApp button, store details',
+                    area: 'Soni Bazaar · Gondal Road · Kalawad Road',
                     colour: '#0F0F12',
                   },
                 ].map((row) => (
@@ -644,7 +631,8 @@ export default function RajkotWebDesignPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  Same engineering quality. Strategy tailored to your buyer.
+                  
+                  Same build quality for both, planned around your buyer.
                 </p>
               </div>
             </div>
@@ -654,23 +642,23 @@ export default function RajkotWebDesignPage() {
         {/* ── 6. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Rajkot Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
+          headline="What Rajkot Manufacturers Get From FactoryJet"
+          lead="A fixed quote before you commit, a 7-day launch date written into the agreement, and a Next.js site with no plugin bills. On launch day you receive the full code."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: "Rajkot's engineering and manufacturing businesses operate on tight delivery schedules: the website should be no different. Waiting 12 weeks for a site briefed in March is not acceptable when the export season is already underway. FactoryJet delivers in 7 days, with the delivery date written into the project agreement. We have delivered on time on 97% of all projects.",
+              title: 'Delivery date in the contract.',
+              body: "Your customers hold you to dispatch dates, so we hold ourselves to one too. A website that drags on for months can miss the trade fair or buyer visit it was built for. We write 7 days into the agreement, and 97% of our projects have shipped on time.",
             },
             {
               icon: '🏗️',
-              title: 'Next.js, not WordPress. The performance gap is real.',
-              body: "WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Rajkot manufacturers competing for international buyers on Google, that performance gap directly affects rankings and first impressions.",
+              title: 'Next.js pages that load fast abroad.',
+              body: "A typical WordPress page runs PHP and many database queries before it appears. Next.js sends prebuilt files from Cloudflare's network close to the visitor. A buyer in Detroit or Nagoya sees your capability page quickly, and Google's Core Web Vitals score improves too.",
             },
             {
               icon: '📋',
-              title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch.",
+              title: 'Price fixed on day one.',
+              body: "We agree scope, write the price down and stick to it. There is no paid discovery stage, no open estimate and no extra bill once the site is live.",
             },
           ]}
         />
@@ -678,22 +666,22 @@ export default function RajkotWebDesignPage() {
         {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="How We Build Your Rajkot Website in 7 Days"
-          lead="Buyer strategy agreed before design. Mobile approval before development. SEO and analytics wired before launch."
+          headline="Seven Days From Brief to a Live Rajkot Website"
+          lead="We agree who the buyer is before designing, sign off the phone layout before coding, and switch on tracking before launch."
           stages={RJT_JOURNEY_STAGES}
-          closingNote="5 STAGES · 7 DAYS · NEXT.JS + CLOUDFLARE · GA4 STANDARD · ZERO DOWNTIME LAUNCH"
+          closingNote="BRIEF · LAYOUT · CODE · TRACKING · GO LIVE · 7 DAYS"
         />
 
         {/* ── 8. PORTFOLIO ─────────────────────────────────────────────────── */}
         <PortfolioShowcase
           eyebrow="RECENT WORK"
-          headline="What India's businesses look like after FactoryJet."
+          headline="B2B sites we have built recently"
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
               title: 'Belle Maison | Mumbai',
               description:
-                "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
+                "We built a B2B store on Commerceflo for Belle Maison, a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor and LED lighting. Trade buyers get tiered pricing, quotes that convert to orders, and ordering through their own account.",
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
               stat2: 'Commerceflo · B2B',
@@ -702,7 +690,7 @@ export default function RajkotWebDesignPage() {
               industry: 'MEP / BIM Consulting · SEO',
               title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on WordPress with authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
+                'For Formative Concepts, an MEP drafting and BIM consulting firm, we rebuilt the website on WordPress. It now leads with credentials and a project portfolio, backed by technical SEO aimed at B2B project enquiries.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -715,65 +703,65 @@ export default function RajkotWebDesignPage() {
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Rajkot Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Rajkot deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
+          headline="FactoryJet vs. a Rajkot Agency, a Freelancer and a Website Builder"
+          lead="Four routes to a website for a Rajkot business, set side by side on launch time, what gets built and what you keep."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from kickoff to a live site, including Figma design, Next.js code, search setup and a Lighthouse check before launch.',
           }}
           columns={RJT_COMPARISON_COLUMNS}
           rows={RJT_COMPARISON_ROWS}
-          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
+          footer="Fixed-price contracts cover every FactoryJet scope. You get the quote after a free call."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="RAJKOT × WEB DESIGN"
-          headline="Web Design for Rajkot's Key Industries"
-          lead="From auto component exporters and precision engineering manufacturers to gold jewellers, traders, and professional services, Rajkot's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          headline="Websites for Rajkot's Main Industries"
+          lead="Auto parts, castings, pumps, jewellery, tooling and trading each sell to a different buyer. These are the site types we plan for Rajkot businesses."
           sectors={[
             {
-              name: 'Auto Components & Engineering',
+              name: 'Auto Parts & Precision Engineering',
               description:
-                "Rajkot is India's #1 auto component cluster, home to 3,500+ units manufacturing bearings, castings, forgings, dies, molds, and precision parts for OEMs in the USA, Germany, and Japan. These exporters need websites that project manufacturing capability, quality certifications (IATF, ISO), production capacity, and a frictionless RFQ flow. We build export-ready sites with product catalog systems and international buyer SEO.",
+                "Rajkot units machine and forge bearings, gears, shafts and engine parts for vehicle makers in India and abroad. Their buyers audit suppliers before visiting. The site should list certifications, machines, inspection equipment, materials and part families, with an RFQ form that takes drawings.",
               example:
-                'Auto component manufacturers and exporters in GIDC Metoda, Aji, and Shapar-Veraval targeting OEM buyers in the US, Germany, and Japan.',
+                'Auto part and precision machining units in Metoda, Aji and Shapar-Veraval selling to OEMs and tier-one suppliers.',
             },
             {
               name: 'Foundry, Casting & Forging',
               description:
-                "Rajkot's foundry and casting sector is one of the largest in India, producing grey iron, ductile iron, and alloy steel castings for automotive, agricultural, and industrial applications. These businesses compete for domestic and export contracts where a professional website with process capability display, tolerance specifications, and metallurgy certifications is a key qualification signal.",
+                "Rajkot foundries pour grey iron, SG iron and steel castings for vehicles, farm equipment and industry. Buyers compare process capability, weight ranges, tolerances and metallurgy lab facilities. We build process pages and a capability sheet download that answer those questions.",
               example:
-                'Foundry units, casting manufacturers, and forging companies in GIDC Metoda and Shapar-Veraval targeting B2B procurement across India and overseas.',
+                'Foundries, casting units and forging shops in Metoda and Shapar-Veraval selling to buyers in India and overseas.',
             },
             {
-              name: 'Pumps, Valves & Fluid Equipment',
+              name: 'Pumps, Engines & Valves',
               description:
-                "Rajkot is a major manufacturing hub for industrial pumps, valves, and fluid handling equipment, supplying the oil & gas, chemical, water treatment, and agriculture sectors. These businesses need websites that communicate product range, pressure and flow specifications, industry certifications, and dealer network coverage. B2B product catalog systems and inquiry portals are standard.",
+                "Rajkot is known for agricultural and submersible pumps, diesel engines and industrial valves. These firms sell through dealers and to project buyers in farming, water and process industries. Sites need product ranges with head and flow data, certifications, dealer locators and spare part enquiries.",
               example:
-                'Pump manufacturers, valve producers, and fluid equipment suppliers targeting process industry buyers across India and international markets.',
+                'Pump, engine and valve makers selling to dealers and project buyers across India and abroad.',
             },
             {
-              name: 'Gold Jewellery & Retail',
+              name: 'Gold & Imitation Jewellery',
               description:
-                "Rajkot is Gujarat's second-largest gold jewellery market, with a dense concentration of jewellers, bullion traders, and fine jewellery manufacturers in the city centre. Retail jewellers need websites that showcase product collections with quality photography, communicate purity and hallmarking credentials, and drive store footfall and WhatsApp inquiries. Consumer-first design with mobile speed is the priority.",
+                "Soni Bazaar and the surrounding lanes hold jewellers, bullion traders and workshops, and Rajkot also supplies imitation jewellery to sellers across India. Shoppers want collection photos, hallmark and purity details and a WhatsApp link. Wholesale buyers want catalogues and minimum order details.",
               example:
-                'Gold jewellers, bullion traders, and fine jewellery manufacturers in Rajkot city centre targeting retail and wholesale buyers.',
+                'Jewellers, bullion traders and imitation jewellery makers selling retail and wholesale from Rajkot.',
             },
             {
-              name: 'Machine Tools & Dies',
+              name: 'Machine Tools, Dies & Moulds',
               description:
-                "Rajkot has a strong machine tool and die & mould manufacturing cluster supplying the auto and engineering industries. These businesses need B2B authority sites that showcase tooling capability, precision tolerances, material compatibility, and project experience to industrial procurement teams. Technical product specifications and capability documentation are key website assets.",
+                "Rajkot tool rooms build lathes, dies, moulds and fixtures for the engineering trade. Buyers want to see machines, tolerances held, materials worked and past tooling jobs. We build capability and project pages that a purchase engineer can check in a few minutes.",
               example:
-                'Machine tool manufacturers, die and mould makers, and precision engineering units in Rajkot GIDC industrial zones.',
+                'Machine tool builders, die and mould makers and tool rooms in Rajkot\'s GIDC estates.',
             },
             {
-              name: 'Trading & Professional Services',
+              name: 'Trading & Professional Firms',
               description:
-                "Rajkot's commercial base includes FMCG distributors, commodity traders, and a strong CA, legal, and consulting community serving Gujarat's large MSME sector. For trading businesses, the website projects scale and reliability. For professional services, it is the first qualification filter. We build authority-first sites with clear service pages and lead-capture flows.",
+                "Distributors, commodity traders, CA firms and consultants serve Saurashtra's many MSMEs. Traders need brand and range pages that show reach. CA and legal firms need service pages and a booking form, because clients check the site before calling.",
               example:
-                "Traders, distributors, CA firms, legal practices, and management consultants serving Rajkot's business community.",
+                "Distributors, traders, CA practices, lawyers and consultants working with Rajkot businesses.",
             },
           ]}
         />
@@ -782,14 +770,14 @@ export default function RajkotWebDesignPage() {
         {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What India's founders say after we build their site"
+          headline="Hear from founders whose sites we built"
         />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Common Questions from Rajkot Businesses"
-          lead="The questions we answer on every Rajkot discovery call, answered here, without the runaround."
+          headline="Rajkot Website Questions, Answered"
+          lead="Cost, timing, export SEO and ownership. These are the points Rajkot manufacturers raise on almost every call."
           categories={RJT_FAQ_CATEGORIES}
           items={RJT_FAQ_ITEMS}
         />
@@ -798,11 +786,11 @@ export default function RajkotWebDesignPage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Ready to Build Your Rajkot Website?"
-          sub="Rajkot's 250,000+ MSMEs, India's #1 auto component cluster, and GIDC Shapar-Veraval's industrial scale mean serious businesses are competing for the same international buyer impressions and the same Google rankings every day. Every week without a high-performing website is ground you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
+          headline="Get Your Rajkot Website Live in Seven Days"
+          sub="Procurement teams shortlist suppliers from a Google search, often before any phone call. Share your catalogue and certificates with us today. You will see a sitemap within 72 hours and a live site seven days after kickoff."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed quote. 7-day launch. Next.js build. Full code in your hands on day seven."
         />
 
         {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}

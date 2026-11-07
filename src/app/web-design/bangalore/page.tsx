@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     'website design Bangalore',
     'web development company Bangalore',
     'website design company Bangalore',
-    'affordable web design Bangalore',
     'startup website design Bangalore',
     'web design Koramangala',
     'web design Whitefield',

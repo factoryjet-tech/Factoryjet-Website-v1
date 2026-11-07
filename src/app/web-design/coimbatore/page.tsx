@@ -29,13 +29,12 @@ import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 export const metadata: Metadata = {
   title: 'Web Design Company in Coimbatore | FactoryJet',
   description:
-    'Web design company in Coimbatore for textile manufacturers, pump & engineering firms, and IT businesses. 7-day delivery. Serving Avinashi Road, Peelamedu & RS Puram.',
+    'Web design company in Coimbatore for pump and motor makers, spinning mills, Tirupur garment exporters and Avinashi Road IT firms. Live in 7 days.',
   keywords: [
     'web design company in Coimbatore',
     'website design Coimbatore',
     'web development company Coimbatore',
     'website design company Coimbatore',
-    'affordable web design Coimbatore',
     'professional website design Coimbatore',
     'web design Avinashi Road',
     'web design Peelamedu',
@@ -51,14 +50,14 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Coimbatore | FactoryJet',
     description:
-      'Professional website design company in Coimbatore: Next.js, SEO, and GA4 included. 7-day delivery. Serving Avinashi Road, Peelamedu, RS Puram, Gandhipuram.',
+      'Web design company in Coimbatore building Next.js sites for engineering exporters, textile mills and IT teams, with search setup and GA4. 7-day delivery.',
     url: 'https://factoryjet.com/web-design/coimbatore',
     images: [
       {
         url: 'https://factoryjet.com/images/services/web-design.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet Web Design Services in Coimbatore',
+        alt: 'FactoryJet website design for Coimbatore businesses',
       },
     ],
     locale: 'en_IN',
@@ -67,7 +66,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in Coimbatore | FactoryJet',
     description:
-      'Website design company in Coimbatore. 7-day delivery. Next.js, SEO, GA4 included.',
+      'Web design company in Coimbatore. Next.js sites for pump, textile and IT firms, live in 7 days.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -94,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -114,33 +113,33 @@ const localBusinessSchema = { '@context': 'https://schema.org', '@type': 'Organi
 const CBE_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Strategy',
+    title: 'Buyer research',
     description:
-      "We map your ideal customer profile against Coimbatore's market, whether that's an international buyer sourcing pumps or textiles, an IT services company targeting enterprise clients, a healthcare provider reaching local patients, or a D2C brand selling across India. We audit your top competitors and agree the sitemap and content plan.: Days 1–2",
+      "A Coimbatore site might need to convince a Gulf contractor buying monoblock pumps, a European brand sourcing knitwear, a Chennai company hiring an IT vendor or a family choosing a hospital. We name your main buyer, list what they check, compare the sites you compete with and settle the page plan.: Days 1–2",
   },
   {
     number: '02',
-    title: 'Design & Prototyping',
+    title: 'Page layouts',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
+      'Pages are drawn at phone width and then at desktop width in Figma. We place product specs, certificates and the enquiry button where a buyer expects them. Coding waits until you approve.: Days 3–4',
   },
   {
     number: '03',
-    title: 'Development',
+    title: 'Engineering',
     description:
-      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, and any third-party APIs your business uses. Performance budgets enforced from the first commit.: Days 5–6',
+      'Next.js code served through Cloudflare, so a buyer in Dubai or a dealer in Erode on mobile data gets a fast page. We add product catalogues with spec sheets, quote forms, WhatsApp chat and links to any software you run.: Days 5–6',
   },
   {
     number: '04',
-    title: 'Content & SEO',
+    title: 'Search and copy',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Coimbatore-specific local SEO targeting built in.: Day 6–7',
+      'Titles, meta text, WebP images, schema for your business, products and FAQs, and internal links. The sitemap is submitted to Search Console, and the copy targets the searches buyers use for Coimbatore suppliers.: Day 6–7',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Handover',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
+      'Domain on Cloudflare, GA4 and Tag Manager live, Search Console confirmed. A recorded walkthrough shows your team how to run the site. Fixes are free for 30 days.: Day 7+',
   },
 ];
 
@@ -148,7 +147,7 @@ const CBE_FAQ_CATEGORIES = [
   { key: 'pricing',   label: 'Pricing & Timeline' },
   { key: 'included',  label: "What's Included" },
   { key: 'technical', label: 'Technical & SEO' },
-  { key: 'local',     label: 'Coimbatore Local' },
+  { key: 'local',     label: 'Coimbatore Questions' },
   { key: 'support',   label: 'Support & Ownership' },
 ];
 
@@ -157,143 +156,143 @@ const CBE_FAQ_ITEMS = [
   /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How much does a website cost for a business in Coimbatore?',
+    question: 'What does a website cost for a Coimbatore business?',
     answer:
-      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
+      "Price tracks the work. A pump maker with forty product models and spec sheets needs more than a clinic with six pages. After a free call we send one fixed written quote. It stays fixed, and you keep the code.",
   },
   {
     category: 'pricing',
-    question: 'How long does it take to build a website?',
+    question: 'How fast can a Coimbatore website launch?',
     answer:
-      'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development days three through six, and content, SEO, and launch on day seven. The 7-day clock starts when your brand assets and content are in our shared workspace.',
+      'In 7 days once your logo, photos, product data and core text reach us. Days one and two are research and planning, three and four are layouts, five and six are the build, and day seven is launch.',
   },
   {
     category: 'pricing',
-    question: 'What makes FactoryJet better value than a Coimbatore web agency?',
+    question: 'Why FactoryJet instead of a larger Coimbatore agency?',
     answer:
-      "We are a specialised web engineering team, not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. You pay for the build, not our admin structure.",
+      "Your budget pays for design and engineering. No account managers or sales layer sit between you and the builders. You still get Figma layouts, a Next.js build and a Lighthouse audit before launch, under one fixed price.",
   },
   {
     category: 'pricing',
-    question: 'What does 7-day delivery include?',
+    question: 'What is covered by the 7-day timeline?',
     answer:
-      'The 7-day timeline covers the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'Design, coding, content placement and launch, the parts we run ourselves. Days spent waiting for your approvals or product data do not count. Our record so far: 97% of projects launched on the agreed date.',
   },
 
   /* ── What's Included ── */
   {
     category: 'included',
-    question: "What's included in a web design project?",
+    question: "What does a Coimbatore web design project include?",
     answer:
-      'Every FactoryJet project includes strategy, Figma design, Next.js development, basic copywriting, technical SEO setup (schema, meta, sitemap), GA4 analytics, and a 30-day post-launch support window. You receive the full codebase in your GitHub on launch day.',
+      'Page planning, Figma layouts, the Next.js build, starter copy, schema and a sitemap, GA4 tracking and 30 days of free fixes. On launch day the complete source code is pushed to a GitHub account you own.',
   },
   {
     category: 'included',
-    question: 'Do you write the content for my website?',
+    question: 'Will you write the copy?',
     answer:
-      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content is available as an add-on. We send a content brief before development starts so you know exactly what to provide.',
+      'We write headlines, the hero section and short product or service text. Long search articles are extra. Before the build we send a list of what we need from you, such as model numbers, test certificates and plant photos.',
   },
   {
     category: 'included',
-    question: 'Do you provide website hosting?',
+    question: 'Who hosts the website?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
+      "Cloudflare Pages, on an account in your company name. Most sites fit the free tier. We set it up and charge no monthly hosting.",
   },
   {
     category: 'included',
-    question: 'Can I update the website myself after launch?',
+    question: 'Can we add products or pages ourselves?',
     answer:
-      'Yes. Every Growth and Custom tier project includes a headless CMS integration (Sanity or Contentful) so your team can update content without touching code.',
+      'Yes. Growth and Custom tier sites include a Sanity or Contentful editor, so your sales team can add a new pump model or a new fabric range without a developer.',
   },
 
   /* ── Technical & SEO ── */
   {
     category: 'technical',
-    question: 'Will my website rank on Google India?',
+    question: 'Will the site appear on Google?',
     answer:
-      'Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Branded searches typically rank within 1–2 weeks.',
+      'Every build ships with schema, clean titles and meta, passing mobile Core Web Vitals, internal links, a submitted sitemap and WebP images. Searches for your company name usually find the site within one to two weeks. Ranking for product terms such as submersible pump manufacturer takes ongoing content.',
   },
   {
     category: 'technical',
-    question: 'What tech stack do you build on?',
+    question: 'What technology do you build with?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Coimbatore businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
+      "Next.js on Cloudflare's network. Pages usually load in under 1.5 seconds on Indian 4G, against 4–6 seconds for a typical WordPress site. Google measures that speed through Core Web Vitals.",
   },
   {
     category: 'technical',
-    question: 'How does the site perform on mobile?',
+    question: 'Will it work well on phones?',
     answer:
-      'Mobile-first is the default. Every build targets Lighthouse 90+ and green Core Web Vitals on mobile before launch. We design at 375px before desktop, serve WebP images via Cloudflare CDN with lazy loading.',
+      'Yes. Layouts start at 375px wide and every build has to pass Lighthouse 90+ on mobile with green Core Web Vitals before launch. Images load as WebP from Cloudflare when a visitor scrolls to them.',
   },
   {
     category: 'technical',
-    question: 'Do you set up Google Analytics and Search Console?',
+    question: 'Do you set up tracking?',
     answer:
-      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes. GA4 and Tag Manager go live with the site, with quote requests, WhatsApp taps and catalogue downloads tracked as events from day one. Search Console is verified and the sitemap submitted.',
   },
 
   /* ── Coimbatore Local ── */
   {
     category: 'local',
-    question: 'Do you build websites for textile manufacturers and pump companies in Coimbatore?',
+    question: 'Do you build websites for Coimbatore pump makers and textile mills?',
     answer:
-      "Yes, textile manufacturers, pump and engineering firms, and MSME exporters are a core client profile for us in Coimbatore. Coimbatore is the world's largest pump manufacturing cluster and Tamil Nadu's textile capital. We build websites optimised for international B2B buyer research: export credentials, product catalog with inquiry forms, ISO/BIS certification pages, and technical SEO targeting English-language searches from buyers in the US, EU, and Middle East.",
+      "Yes. These are the firms Coimbatore is known for. Pump and motor makers need model pages with spec sheets, ISI and ISO marks, dealer enquiry routes and export pages. Spinning mills and Tirupur knitwear exporters need product ranges, GOTS or OEKO-TEX certificates, capacity details and quote forms written for buyers in the US, EU and the Middle East.",
   },
   {
     category: 'local',
-    question: 'Can you build websites for IT companies on Avinashi Road and Peelamedu?',
+    question: 'Can you build websites for IT companies on Avinashi Road and in Peelamedu?',
     answer:
-      "Yes. Avinashi Road and Peelamedu are Coimbatore's IT corridor, home to software companies, IT parks, and tech services firms targeting enterprise clients in India and abroad. We build IT services websites with product-led architecture, case study portfolios, and lead flows designed for B2B software sales cycles.",
+      "Yes. Software and IT services firms cluster along Avinashi Road, in Peelamedu and around the TIDEL Park and other IT parks. Their clients are often in other cities or abroad. We build service pages, case studies and enquiry routes that suit a B2B buying process.",
   },
   {
     category: 'local',
-    question: "Do you know Coimbatore's business districts well enough to write relevant copy?",
+    question: "Do you know Coimbatore well enough to write local copy?",
     answer:
-      "Yes. We research Coimbatore's business geography as part of discovery, from Avinashi Road's IT corridor and Peelamedu's tech parks near the airport, to RS Puram's premium retail and commercial strip, Gandhipuram's high-street commercial hub, SIPCOT's industrial estates, and the Tirupur textile corridor just 55km away. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
+      "We map your area during discovery: Avinashi Road and Peelamedu for IT, Ganapathy and Singanallur for engineering workshops, SIDCO and SIPCOT estates for factories, RS Puram and Gandhipuram for retail, and the road to Tirupur for knitwear. That local detail goes into the copy and your LocalBusiness schema.",
   },
   {
     category: 'local',
-    question: 'How does FactoryJet compare to Coimbatore web agencies?',
+    question: 'How is FactoryJet different from other Coimbatore web agencies?',
     answer:
-      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
+      "Many local agencies quote late and deliver over several weeks. We fix the price before you commit, write the 7-day launch date into the agreement and hand over Next.js code that belongs to you.",
   },
 
   /* ── Support & Ownership ── */
   {
     category: 'support',
-    question: 'Do I own the website after it is built?',
+    question: 'Do we own the site after launch?',
     answer:
-      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'Yes, completely. The Next.js code goes into your GitHub on launch day with the Figma files and every login. There is no retainer to sign and no closed platform holding your site.',
   },
   {
     category: 'support',
-    question: 'What support do you provide after launch?',
+    question: 'What support do we get after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase.',
+      'Free fixes and small changes for 30 days. After that, a monthly maintenance plan is available with same-day bug response and one engineer who already knows your code.',
   },
   {
     category: 'support',
-    question: 'What happens if something breaks after launch?',
+    question: 'What if the site breaks?',
     answer:
-      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. Because your site is on Cloudflare Pages (static files, global CDN), common causes of downtime simply do not apply.',
+      'Within the first 30 days we fix it free, usually inside a day. The site runs as static files on Cloudflare, which removes most causes of downtime such as overloaded servers and plugin conflicts.',
   },
   {
     category: 'support',
-    question: 'Do you offer ongoing retainer services for Coimbatore businesses?',
+    question: 'Can a Coimbatore firm keep FactoryJet on a monthly retainer?',
     answer:
-      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
+      'Yes. A retainer covers new product pages, trade fair landing pages, content updates, search fixes and upkeep. Retainer clients get first place in the schedule and the same engineer each month.',
   },
   {
     category: 'support',
-    question: 'Can you help migrate my existing Coimbatore business website to Next.js?',
+    question: 'Can you move our current Coimbatore website to Next.js?',
     answer:
-      'Yes. We handle full migrations from WordPress, Wix, Squarespace, or custom-coded sites to Next.js on Cloudflare. The migration includes a technical SEO audit, 301 redirect mapping for all existing URLs, and performance optimisation so you do not lose any ranking equity in the transition.',
+      'Yes. We move sites from WordPress, Wix, Squarespace or custom code to Next.js on Cloudflare. Each move includes a search audit, 301 redirects for every old URL and speed work, so existing rankings carry over.',
   },
   {
     category: 'local',
-    question: 'Do you build e-commerce websites for Coimbatore businesses?',
+    question: 'Do you build online stores for Coimbatore businesses?',
     answer:
-      "Yes. For Coimbatore businesses selling online, whether it's industrial pumps B2B or garments D2C, we build e-commerce on Shopify or Next.js with Razorpay and Shiprocket integrated. The Growth tier includes a basic product catalog; Custom tier covers full transactional e-commerce with inventory management.",
+      "Yes. A pump maker selling spares to dealers and a garment brand selling to consumers both need a store. We build on Shopify or Next.js with Razorpay and Shiprocket connected. The Growth tier includes a basic product catalogue, and the Custom tier covers full checkout with stock management.",
   },
 
   // Money-query coverage, added 2026-06-11
@@ -301,13 +300,13 @@ const CBE_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Who is the best web design agency in Coimbatore?',
     answer:
-      'For small businesses, FactoryJet makes a strong case as the best web design company in Coimbatore: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Coimbatore you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Coimbatore.',
+      'Test any shortlist on proof. For a small or mid-sized firm, FactoryJet is a strong option for the best web design company in Coimbatore: a custom site in 7 days at one written price. Ask each agency for live sites to open, speed scores to check yourself and a quote that will not grow mid-project.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire web designer in Coimbatore or use an agency?',
+    question: 'Should I hire a freelance web designer in Coimbatore or an agency?',
     answer:
-      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Coimbatore directly, agree the scope and price in writing first.',
+      'A freelancer can handle a one-page site. A company site needs design, coding, search setup and support, and a small team can cover all four at a fixed price. If you choose a freelancer, agree scope and fee in writing first.',
   },
 ];
 
@@ -330,11 +329,11 @@ const CBE_COMPARISON_COLUMNS = [
 
 const CBE_COMPARISON_ROWS = [
   {
-    feature: 'Delivery timeline',
+    feature: 'Time to go live',
     values: ['7 days', '4–12 weeks', '3–10 weeks (unreliable)', '1–2 weeks (you build it)'],
   },
   {
-    feature: 'Custom Figma design',
+    feature: 'Custom Figma layouts',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ca" kind="yes" />,
@@ -343,7 +342,7 @@ const CBE_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Next.js (not WordPress)',
+    feature: 'Coded in Next.js',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ca" kind="partial" />,
@@ -352,7 +351,7 @@ const CBE_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Technical SEO built in',
+    feature: 'Search setup at launch',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ca" kind="partial" />,
@@ -361,7 +360,7 @@ const CBE_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Lighthouse 90+ on mobile',
+    feature: 'Lighthouse 90+ on mobile phones',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ca" kind="partial" />,
@@ -370,7 +369,7 @@ const CBE_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'GA4 + GTM wired up',
+    feature: 'GA4 and Tag Manager configured',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ca" kind="partial" />,
@@ -379,7 +378,7 @@ const CBE_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Transparent, fixed pricing',
+    feature: 'Written fixed price',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ca" kind="no" />,
@@ -388,7 +387,7 @@ const CBE_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Full codebase to your GitHub',
+    feature: 'Code delivered to your GitHub',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ca" kind="partial" />,
@@ -397,7 +396,7 @@ const CBE_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '7-day delivery',
+    feature: 'Seven-day launch',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ca" kind="no" />,
@@ -411,39 +410,39 @@ const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   '@id': `https://factoryjet.com/web-design/coimbatore#howto`,
-  name: `How FactoryJet builds your Coimbatore website in 7 days`,
-  description: `Our 7-day process for delivering a professional, high-performance website for Coimbatore businesses.`,
+  name: `From first call to a live Coimbatore website in 7 days`,
+  description: `The seven-day FactoryJet build for Coimbatore engineering, textile, IT and healthcare businesses.`,
   totalTime: 'P7D',
   step: [
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 | Discovery Call',
-      text: `We learn your business, your Coimbatore market, your goals, and what you need the website to do.`,
+      name: 'Day 1 | Intro call',
+      text: `We learn what you make or offer, who buys it and what the site must get those buyers to do.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 | Strategy & Structure',
-      text: `We map your site architecture, research your Coimbatore competitors, identify your top keywords, and write the first draft of your page copy.`,
+      name: 'Day 2 | Site plan',
+      text: `We fix the page list, check Coimbatore competitors, choose keywords and write draft copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
-      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Layouts',
+      text: 'A preview link shows the home page and inner pages. We return your changes within 24 hours.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
-      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Coimbatore local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Build and search setup',
+      text: `Approved layouts are coded as a fast, phone-first site. Coimbatore business schema is added, and GA4 and Search Console are connected.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
       name: 'Day 7 | Launch',
-      text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
+      text: 'We test on five devices, publish the site and hand over written notes with a 30-minute training call.',
     },
   ],
 };
@@ -509,8 +508,8 @@ export default function CoimbatoreWebDesignPage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_coimbatore_hero" />}
           eyebrow="WEB DESIGN · COIMBATORE"
-          headline="Website Design in Coimbatore for Pump Manufacturers, Textile Firms, and Fast-Growing IT Companies"
-          lead="Coimbatore is Tamil Nadu's industrial powerhouse: the world's largest pump manufacturing cluster, a major textile and garments hub, and a rising IT corridor along Avinashi Road. With 262+ startups and over 25,000 MSMEs, it is one of India's most under-served major cities for quality web design. FactoryJet builds Figma-designed, Next.js-built websites with 7-day delivery, your codebase delivered in full."
+          headline="Website Design in Coimbatore for Pump Makers, Textile Mills and Growing IT Firms"
+          lead="Coimbatore builds pumps, motors and wet grinders, spins yarn for Tirupur's knitwear trade and runs a growing IT belt along Avinashi Road. The district has 25,000+ registered MSMEs and 262+ startups, and many still sell from an old or thin website. FactoryJet designs in Figma, builds in Next.js and launches in 7 days. You own the code."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -520,40 +519,40 @@ export default function CoimbatoreWebDesignPage() {
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
+        <LogoBar tagline="Sites built for 500+ businesses across India, the US, the UK and the UAE" />
 
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ websites built. 12 years of web engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Our work covers Shopify sellers, B2B manufacturers and direct-to-consumer brands in four countries. Each project has a fixed price agreed upfront, full code handover and 7-day delivery."
         />
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="COIMBATORE MARKET"
-          headline="Why Your Coimbatore Web Presence Is a Business Asset"
+          headline="What Coimbatore Buyers Check Before They Enquire"
           leadParagraphs={[
-            "Coimbatore is not a secondary city, it is a global manufacturing capital hiding in plain sight. The city and its surrounding district account for more than 30% of India's total pump production and a significant share of the world's wet grinder and textile machinery output. The Tirupur corridor just 55km away adds textile and garment export volumes that rival entire states. Coimbatore's MSME density is among the highest in Tamil Nadu, with over 25,000 registered units spanning engineering, textiles, food processing, healthcare, and IT. Yet the city's digital agency landscape remains far thinner than Chennai or Bangalore, meaning the quality gap between a professionally built website and what most Coimbatore businesses currently have is enormous.",
-            "This creates a web design opportunity unique to Coimbatore. A pump manufacturer in Singanallur needs a fundamentally different site architecture from an IT company on Avinashi Road, a garment exporter in Tirupur corridor, or a hospital in RS Puram. International B2B buyers from the US, EU, and Middle East research Indian pump and engineering vendors for weeks before making contact. Export-oriented textile firms need product catalogs, mill credentials, and RFQ forms optimised for fabric buyers in Japan, Europe, and the US. IT companies targeting enterprise clients need authority-first positioning and case study architecture. FactoryJet builds for all of them, because we start with the buyer journey, not the template.",
-            "Coimbatore businesses that invest in a high-performing website now are capturing search rankings, buyer first impressions, and the digital credibility that their slower competitors are conceding every week. The gap between having a quality site and not having one is widening, and in a city where the competition for international buyers is intensifying, the cost of waiting is real.",
+            "Coimbatore is an engineering town first. Pump and motor makers in Ganapathy and Singanallur supply buyers across India and overseas, and the city's wet grinders carry a GI tag. Spinning mills feed the knitwear units of Tirupur next door. Thousands of small units make castings, parts and textile machinery. Most of their buyers find and compare suppliers online before they pick up the phone.",
+            "Each of these buyers wants different proof. A Gulf contractor buying pumps wants model specs, test certificates and dealer support. A European apparel brand wants yarn counts, certifications and capacity. A Bengaluru client hiring an Avinashi Road IT firm wants case studies. A patient choosing a hospital in RS Puram wants doctors and timings. We plan each site around one of these buyers.",
+            "Few local firms present themselves well online, so a clear, fast site still stands out in Coimbatore. The firms that fix their websites now will be the ones buyers find first when they search for a supplier.",
           ]}
           stats={[
             {
               value: '25,000+',
-              label: "Registered MSMEs in Coimbatore district: Tamil Nadu's second-largest MSME hub",
+              label: "Registered MSMEs in Coimbatore district, one of the largest MSME bases in Tamil Nadu",
               sourceUrl: 'https://msme.gov.in/',
               sourceLabel: 'Ministry of MSME',
             },
             {
               value: 'Pump Capital',
-              label: "Coimbatore produces over 30% of India's pumps: the world's largest pump manufacturing cluster",
+              label: "Coimbatore makes over 30% of India's pumps, the largest pump manufacturing cluster in the world",
               sourceUrl: 'https://www.coimbatorepumps.com/',
               sourceLabel: 'Coimbatore Pumps & Motors Manufacturers Association',
             },
             {
               value: '262+',
-              label: "Active startups in Coimbatore's growing entrepreneurship ecosystem",
+              label: "Active startups in Coimbatore, part of a fast-growing founder community",
               sourceUrl: 'https://startuptn.in/',
               sourceLabel: 'StartupTN',
             },
@@ -563,31 +562,21 @@ export default function CoimbatoreWebDesignPage() {
         {/* ── 5. SERVICE EXPLANATION ───────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="WEB DESIGN · COIMBATORE"
-          headline="What 'Web Design' Actually Means for a Coimbatore Business"
-          lead="Coimbatore's economy runs on three very different buyer behaviours, international B2B buyers doing weeks of vendor research, domestic enterprise clients evaluating IT and services firms, and local consumers making fast decisions on mobile. Each needs a different web strategy. FactoryJet builds for all three."
+          headline="What a Coimbatore Website Has to Do"
+          lead="Three kinds of buyer drive most enquiries here: overseas and domestic B2B buyers comparing manufacturers, companies choosing an IT or service partner, and local customers deciding on a phone. We choose the buyer first and design for them."
           body={
             <>
               <p>
-                For Coimbatore&apos;s pump manufacturers, textile exporters, engineering firms, and
-                MSME businesses: the website needs to project manufacturing credentials, product
-                range, and export capability to international B2B buyers in the US, EU, and Middle
-                East. These buyers research vendors for weeks before making contact. The site needs
-                to answer their due-diligence questions: certifications, production capacity, past
-                export clients, and a frictionless RFQ form. We build these sites with
-                authority-first architecture, product catalog systems, and lead-capture flows
-                designed for B2B export sales cycles.
+                
+                Pump makers, textile exporters, foundries and component units sell to buyers who check a supplier for weeks. The site has to show product range, specifications, certificates, plant capacity and export experience, then make a quote request easy. We build catalogue pages, spec sheet downloads and RFQ forms that suit long B2B buying cycles.
               </p>
               <p>
-                For IT companies on Avinashi Road and Peelamedu, education institutions, and
-                professional services firms: the challenge is establishing digital credibility at
-                scale. These businesses compete nationally and internationally for clients who will
-                research them thoroughly before engaging. Authority-first positioning, strong case
-                study architecture, and conversion-optimised enquiry flows are non-negotiable.
+                
+                IT companies on Avinashi Road and in Peelamedu, colleges and professional firms compete for clients and students who research before they commit. Their sites need clear service or course pages, case studies or results, and an enquiry form that is easy to finish.
               </p>
               <p>
-                Every FactoryJet Coimbatore project covers discovery, Figma prototyping, Next.js
-                development, SEO, GA4, and a 30-day support window. You leave with a codebase you
-                own, a design system you keep, and a site built to rank and convert.
+                
+                Every Coimbatore project includes discovery, Figma layouts, the Next.js build, search setup, GA4 and 30 days of free fixes. You walk away with code you own, a design file you keep and a site ready to rank.
               </p>
             </>
           }
@@ -598,26 +587,27 @@ export default function CoimbatoreWebDesignPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  Three buyer types. One framework.
+                  
+                  Three Coimbatore buyers. Three plans.
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
                   {
                     type: 'B2B / Export & Manufacturing',
-                    need: 'Credentials + catalog + RFQ',
+                    need: 'Specs + certificates + quote form',
                     area: 'Singanallur · SIPCOT · Peelamedu · Tirupur corridor',
                     colour: '#F05A28',
                   },
                   {
                     type: 'IT & Professional Services',
-                    need: 'Authority + case studies + enquiry',
+                    need: 'Case studies + services + enquiry route',
                     area: 'Avinashi Road · Peelamedu IT Park · Saibaba Colony',
                     colour: '#0F0F12',
                   },
                   {
                     type: 'D2C / Consumer & Retail',
-                    need: 'Speed + mobile + instant CTA',
+                    need: 'Fast pages + phone layout + one-tap contact',
                     area: 'RS Puram · Gandhipuram · Saibaba Colony · Race Course',
                     colour: '#6B7280',
                   },
@@ -657,7 +647,8 @@ export default function CoimbatoreWebDesignPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  Same engineering quality. Strategy tailored to your buyer.
+                  
+                  One build standard. A plan set by your buyer.
                 </p>
               </div>
             </div>
@@ -667,23 +658,23 @@ export default function CoimbatoreWebDesignPage() {
         {/* ── 6. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Coimbatore Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
+          headline="What Coimbatore Businesses Get From FactoryJet"
+          lead="Many local agencies take weeks to quote and longer to launch. We price the job before you commit, put the 7-day date in the contract and build in Next.js, so pages load faster, there are no plugin bills and the code is yours."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: "Coimbatore's manufacturing and export community moves on timelines and results. Waiting 10 weeks for a website while your competitor captures the international buyer in their search results is not a viable strategy. FactoryJet delivers in 7 days, with the delivery date written into the project agreement. We have delivered on time on 97% of all projects.",
+              title: 'Seven days, signed in the contract.',
+              body: "Coimbatore factories run to delivery dates, and your website should too. A ten-week web project means a trade fair or export season passes with an old site. We launch in 7 days and write the date into the agreement. Across our projects, 97% have shipped on the agreed date.",
             },
             {
               icon: '🏗️',
-              title: 'Next.js, not WordPress. The performance gap is real.',
-              body: 'WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Coimbatore businesses competing on Google\'s Core Web Vitals, that gap directly affects rankings.',
+              title: 'Next.js speed for overseas buyers.',
+              body: 'A WordPress page runs PHP and dozens of database queries each time someone opens it. Next.js sends ready-built files from Cloudflare, which usually means under 1.5 seconds on Indian 4G against 4–6 seconds for WordPress. A buyer in Dubai or Hamburg gets the same quick page, and Google rewards it in Core Web Vitals.',
             },
             {
               icon: '📋',
-              title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch.",
+              title: 'Price agreed before work starts.',
+              body: "You see a written quote before you commit. There is no discovery fee and no surprise invoice after launch. Scope and cost are settled once.",
             },
           ]}
         />
@@ -691,22 +682,22 @@ export default function CoimbatoreWebDesignPage() {
         {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="How We Build Your Coimbatore Website in 7 Days"
-          lead="Buyer strategy agreed before design. Mobile approval before development. SEO and analytics wired before launch."
+          headline="How Your Coimbatore Website Gets Built in 7 Days"
+          lead="Buyer first, phone layouts second, code third. Tracking and search setup are ready before launch."
           stages={CBE_JOURNEY_STAGES}
-          closingNote="5 STAGES · 7 DAYS · NEXT.JS + CLOUDFLARE · GA4 STANDARD · ZERO DOWNTIME LAUNCH"
+          closingNote="FIVE STEPS · SEVEN DAYS · NEXT.JS ON CLOUDFLARE · GA4 BUILT IN · LAUNCH WITHOUT DOWNTIME"
         />
 
         {/* ── 8. PORTFOLIO ─────────────────────────────────────────────────── */}
         <PortfolioShowcase
           eyebrow="RECENT WORK"
-          headline="What India's businesses look like after FactoryJet."
+          headline="Two recent builds for Indian clients."
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
               title: 'Belle Maison | Mumbai',
               description:
-                "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
+                "Belle Maison supplies artificial plants, flowers, flower runners, home décor and LED lighting to the trade from Mumbai. We built its B2B quote-to-cash store on Commerceflo, with trade price tiers, quote-to-order steps and ordering by account.",
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
               stat2: 'Commerceflo · B2B',
@@ -715,7 +706,7 @@ export default function CoimbatoreWebDesignPage() {
               industry: 'MEP / BIM Consulting · SEO',
               title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on WordPress with authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
+                'An MEP drafting and BIM consulting business. We rebuilt its WordPress site for B2B project enquiries, with a credentials section, a project portfolio and technical SEO.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -728,65 +719,65 @@ export default function CoimbatoreWebDesignPage() {
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Coimbatore Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Coimbatore deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
+          headline="FactoryJet, a Coimbatore Agency, a Freelancer or a Template Builder"
+          lead="These are the four usual routes to a new website in Coimbatore. The table compares timeline, build method, search setup and what you own when the site goes live."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from first call to a live site, including Figma layouts, Next.js code, search setup and a Lighthouse audit.',
           }}
           columns={CBE_COMPARISON_COLUMNS}
           rows={CBE_COMPARISON_ROWS}
-          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
+          footer="Any scope can run on a fixed-price contract. We begin with a free consultation and follow with a written quote."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="COIMBATORE × WEB DESIGN"
-          headline="Web Design for Coimbatore's Key Industries"
-          lead="From pump manufacturers and textile exporters to IT companies and healthcare providers, Coimbatore's economy spans industries with very different digital requirements. FactoryJet has the architecture for each."
+          headline="Websites for the Industries That Run Coimbatore"
+          lead="Engineering, textiles, IT, education, healthcare and agri-processing each bring a different buyer to your site. These six sectors make up most of our Coimbatore planning work."
           sectors={[
             {
-              name: 'Engineering & Pumps',
+              name: 'Pumps, Motors & Engineering',
               description:
-                "Coimbatore is the world's largest pump manufacturing cluster, home to hundreds of pump, motor, and engineering equipment manufacturers exporting globally. These businesses need websites that project manufacturing capability, ISO/BIS certifications, product specifications, and export credentials to international industrial buyers in the US, Europe, Middle East, and Southeast Asia. Product catalog systems, technical specification sheets, and B2B inquiry flows are standard.",
+                "Coimbatore's pump and motor makers sell to farmers, builders, dealers and overseas contractors. Foundries and machine shops around them supply castings and parts to OEMs. Their sites need model pages, spec sheets, ISI, BIS and ISO marks, dealer and export enquiry routes and downloadable catalogues.",
               example:
-                'Pump and motor manufacturers, engineering equipment exporters, and precision engineering firms targeting international OEMs and industrial buyers.',
+                'Pump and motor makers, foundries, precision machine shops and engineering exporters selling to OEMs, dealers and contractors.',
             },
             {
-              name: 'Textile & Garments',
+              name: 'Yarn, Knitwear & Fabric',
               description:
-                "Coimbatore and the nearby Tirupur corridor form Tamil Nadu's textile backbone, producing cotton yarn, knitted garments, hosiery, and woven fabrics for global fashion brands and retailers. Textile businesses need websites that display product range, fabric specifications, certifications (GOTS, OEKO-TEX), and production capacity to international B2B buyers. Export-ready catalog architecture and RFQ forms are essential.",
+                "Spinning mills around Coimbatore supply yarn to Tirupur, where knitwear is made for global brands. Fabric and garment exporters need sites that show yarn counts, fabric specs, GOTS or OEKO-TEX certificates, capacity and compliance, with a quote form a sourcing team can use.",
               example:
-                'Yarn spinners, knitted garment exporters, hosiery manufacturers, and fabric mills in Coimbatore and the Tirupur corridor targeting global fashion and retail buyers.',
+                'Spinning mills, knitwear exporters, hosiery units and fabric makers in Coimbatore and Tirupur selling to overseas brands and retailers.',
             },
             {
-              name: 'IT & Software Services',
+              name: 'IT & Software',
               description:
-                "Coimbatore's IT sector is growing fast along Avinashi Road and in Peelamedu, home to software companies, SaaS startups, IT services firms, and tech product companies targeting enterprise clients across India and abroad. IT services websites need product-led architecture, case study portfolios, service capability pages, and lead flows designed for B2B software and services sales cycles.",
+                "Software firms, SaaS startups and IT service companies have grown along Avinashi Road and in Peelamedu and Saravanampatti. They sell to clients across India and abroad. Their sites need service pages, case studies, team and stack details and an enquiry route that fits a B2B purchase.",
               example:
-                'Software development companies, IT services firms, SaaS startups, and tech product companies based in Avinashi Road IT corridor and Peelamedu IT parks.',
+                'Product companies, IT service firms, SaaS startups and tech studios in the Avinashi Road, Peelamedu and Saravanampatti IT belt.',
             },
             {
-              name: 'Education & Ed-Tech',
+              name: 'Colleges & Ed-Tech',
               description:
-                "Coimbatore is home to over 100 engineering colleges, arts and science colleges, and business schools, and a growing ed-tech startup scene. Educational institutions need websites that communicate course credibility, placement records, faculty credentials, and admission processes to prospective students and parents. Ed-tech companies need product-led architecture with demo request flows and online enrollment capability.",
+                "Coimbatore has a large number of engineering, arts and science and management colleges, plus a growing set of ed-tech startups. Colleges need clear course pages, faculty profiles, placement information and an admission enquiry flow for students and parents. Ed-tech firms need product pages, demo booking and online sign-up.",
               example:
-                'Engineering colleges, arts and science institutions, professional training institutes, and ed-tech startups in Coimbatore targeting students and working professionals.',
+                'Engineering colleges, arts and science colleges, training institutes and ed-tech startups serving students and working professionals.',
             },
             {
-              name: 'Healthcare & Hospitals',
+              name: 'Hospitals & Clinics',
               description:
-                "Coimbatore has a strong healthcare ecosystem, from large multi-specialty hospitals and specialty clinics to diagnostic centres and Ayurvedic wellness centres. Healthcare businesses need websites that project clinical credibility, specialist credentials, department capability, and streamlined appointment booking, designed to convert local patient searches and attract medical tourism from smaller towns in Tamil Nadu and Kerala.",
+                "Coimbatore hospitals draw patients from across western Tamil Nadu and nearby Kerala. Hospitals, clinics, labs and Ayurveda centres need doctor profiles, department pages, timings and quick appointment booking, written for patients searching on a phone.",
               example:
-                'Multi-specialty hospitals, specialty clinics, diagnostic centres, dental practices, and Ayurvedic wellness centres serving Coimbatore and the broader Western Tamil Nadu and Kerala border region.',
+                'Multi-specialty hospitals, specialty clinics, diagnostic labs, dental practices and Ayurveda centres serving the Kongu region and the Kerala border.',
             },
             {
-              name: 'Agri-Business & Food Processing',
+              name: 'Agri & Food Processing',
               description:
-                "Coimbatore district's agricultural hinterland produces coconuts, turmeric, cotton, and vegetables, and the city has a significant food processing and agri-commodity trading sector. Food processing businesses and agri-exporters need websites that display product range, certifications (FSSAI, APEDA, organic), export credentials, and inquiry forms optimised for institutional and international buyers.",
+                "The district grows coconut, turmeric and cotton, and the city trades and processes much of it. Coconut oil makers, spice packers and agri exporters need product pages, FSSAI, APEDA or organic certificates, export details and enquiry forms for wholesale and overseas buyers.",
               example:
-                'Coconut oil producers, spice exporters, food processing companies, agri-commodity traders, and APEDA-registered exporters targeting domestic and international food buyers.',
+                'Coconut oil makers, spice packers, food processors, agri traders and APEDA-registered exporters selling at home and abroad.',
             },
           ]}
         />
@@ -795,14 +786,14 @@ export default function CoimbatoreWebDesignPage() {
         {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What India's founders say after we build their site"
+          headline="Founders across India on working with FactoryJet"
         />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Common Questions from Coimbatore Businesses"
-          lead="The questions we answer on every Coimbatore discovery call, answered here, without the runaround."
+          headline="What Coimbatore Businesses Ask Us"
+          lead="Clear answers to the questions Coimbatore owners raise on a first call."
           categories={CBE_FAQ_CATEGORIES}
           items={CBE_FAQ_ITEMS}
         />
@@ -811,11 +802,11 @@ export default function CoimbatoreWebDesignPage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Ready to Build Your Coimbatore Website?"
-          sub="Coimbatore's pump exports, textile production, and growing IT sector mean serious businesses are competing for the same international buyer impressions and the same Google rankings. Every week without a high-performing website is ground you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
+          headline="Start Your Coimbatore Website This Week"
+          sub="Your next distributor, sourcing manager or patient will look you up before they call. In Coimbatore, where many suppliers make similar products, the one with the clearer site often gets the enquiry. Send us a brief today and get a page plan within 72 hours."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price. Live in 7 days. Built in Next.js. The code is yours on launch day."
         />
 
         {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}
