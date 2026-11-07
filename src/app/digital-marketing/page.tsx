@@ -90,56 +90,56 @@ const CHANNELS: IndustryCard[] = [
   {
     name: 'SEO (get found on Google)',
     description:
-      'SEO means search engine optimisation. In plain words: showing up on Google when someone searches to buy, without paying for each click.',
+      'Search engine optimisation gets your pages ranked for the words Indian buyers type, with no fee per click.',
     linkLabel: 'Explore SEO',
     linkHref: '/seo',
   },
   {
     name: 'Websites that sell',
     description:
-      'A fast, mobile-first website that loads quickly and turns visitors into calls and enquiries, instead of just looking nice.',
+      'Most Indian buyers see your site on a mid-range Android phone. We build pages that load fast on one and lead straight to a call, form or WhatsApp chat.',
     linkLabel: 'See web design',
     linkHref: '/web-design',
   },
   {
     name: 'Online stores',
     description:
-      'Ecommerce means selling online. We build stores that are easy for customers to buy from and easy for you to run.',
+      'Online stores with UPI and card checkout, cash-on-delivery rules, GST invoices and courier links, set up so a small team can run them.',
     linkLabel: 'See ecommerce',
     linkHref: '/services/ecommerce-development',
   },
   {
     name: 'AI search (get picked by ChatGPT)',
     description:
-      'When people ask ChatGPT, Gemini or Google’s AI for a recommendation, we help your business be one of the answers. This newer skill is called GEO.',
+      'GEO, or generative engine optimisation, is the work that gets your brand named when a buyer asks ChatGPT, Gemini or Google’s AI Overview for options.',
     linkLabel: 'Explore AI SEO',
     linkHref: '/ai-seo',
   },
   {
     name: 'Chatbots and automation',
     description:
-      'Smart helpers that reply to customers day and night and do repeat tasks for you, so you save hours every week.',
+      'AI agents that answer enquiries after hours, qualify leads, book calls and update your CRM, so staff time goes to closing sales.',
     linkLabel: 'See AI agents',
     linkHref: '/services/ai-agent-development',
   },
   {
     name: 'WhatsApp for business',
     description:
-      'Answer customers and collect leads automatically on WhatsApp, the app most Indians already use every day.',
+      'Indian customers ask questions on WhatsApp first. We set up auto-replies, catalogues and lead capture there, linked to your sales team.',
     linkLabel: 'See WhatsApp chatbot',
     linkHref: '/whatsapp-chatbot',
   },
   {
     name: 'Shopify stores',
     description:
-      'Shopify is a popular tool for online shops. We build custom Shopify stores that look great and load fast.',
+      'Custom Shopify stores for D2C brands moving off marketplaces, with Indian payment gateways, shipping apps and fast product pages.',
     linkLabel: 'See Shopify',
     linkHref: '/shopify-development',
   },
   {
     name: 'WordPress websites',
     description:
-      'WordPress is the world’s most-used website tool. We build flexible sites on it that you fully own and control.',
+      'WordPress sites for service firms, schools and manufacturers that want to edit pages in-house and own the code outright.',
     linkLabel: 'See WordPress',
     linkHref: '/wordpress-development',
   },
@@ -181,7 +181,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Gets you into AI search (ChatGPT, Gemini, Google AI)',
+    feature: 'Tracks and improves how AI assistants describe you',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="no" />,
@@ -214,19 +214,19 @@ const PILLARS: Pillar[] = [
     icon: '\u{1F9E9}',
     title: 'One channel alone is not a plan',
     body:
-      'Doing only SEO, or only ads, or only social media leaves gaps. Customers hop between Google, Instagram and WhatsApp before they buy. We join the channels so nothing leaks between them.',
+      'An Indian buyer may see an Instagram post, search your name on Google, read reviews on Justdial and then message on WhatsApp. If four vendors run those four steps, nobody sees the whole path. We run them as one plan.',
   },
   {
     icon: '\u{1F464}',
     title: 'Freshers learning on your business',
     body:
-      'Many agencies win you over with senior people, then quietly hand your work to trainees. You pay for experience you never actually get. At FactoryJet, experienced people do the real work.',
+      'A senior strategist pitches, then a trainee runs the account. It is a common complaint about agencies of every size. At FactoryJet the people who plan your work also carry it out.',
   },
   {
     icon: '\u{1F916}',
     title: 'Ignoring AI search is a costly mistake',
     body:
-      'Over 100 million Indians ask ChatGPT something every week, often "which company should I pick". Agencies stuck on old-style SEO miss this completely. We get you found on Google and inside AI answers.',
+      'India has over 100 million weekly ChatGPT users, and buyers ask it for vendor shortlists. An agency that only tracks Google rankings cannot see whether you appear there. We track and improve both.',
   },
 ];
 
@@ -239,7 +239,7 @@ const AGENCIES = [
   {
     name: 'FactoryJet',
     bestFor:
-      'Small and mid-size businesses that want one senior team across website, Google, ads and AI search, with plain-English reports. (Yes, that is us. We include ourselves openly and let the comparison speak for itself.)',
+      'Indian SMBs and mid-size firms that want site, search, ads and AI answers handled by one senior team, with reports in plain English. (This entry is FactoryJet. We list ourselves so you can compare us with the other nine.)',
     isUs: true,
   },
   {
@@ -252,7 +252,7 @@ const AGENCIES = [
   },
   {
     name: 'Matebiz',
-    bestFor: 'Businesses whose main need is strong, steady SEO (Google rankings).',
+    bestFor: 'Firms that want long-running Google ranking work above all else.',
   },
   {
     name: 'OrangeMantra',
@@ -285,27 +285,27 @@ const JOURNEY: ServiceJourneyStage[] = [
   {
     number: '01',
     title: 'A free, no-pressure chat',
-    description: 'We learn about your business, your customers and your goals. No jargon, no hard sell.',
+    description: 'You tell us what you sell, who buys it and what a good month looks like. We ask questions and listen.',
   },
   {
     number: '02',
     title: 'A clear, simple plan',
-    description: 'We show you exactly what we will do and why, in words you can understand and approve.',
+    description: 'A written plan lists the channels, the order we start them in and the result each should produce.',
   },
   {
     number: '03',
     title: 'We build and run it',
-    description: 'Website, Google, ads, AI search, whatever you picked. Our senior team does the actual work.',
+    description: 'Senior staff build and run the site, listings, campaigns and tracking you signed off. No hand-off to juniors.',
   },
   {
     number: '04',
     title: 'You see the results',
-    description: 'A simple monthly report: visitors, enquiries and what we did. Real numbers, plainly shown.',
+    description: 'A one-page report each month shows leads by source, cost per lead and the work completed.',
   },
   {
     number: '05',
     title: 'We keep improving',
-    description: 'We do more of what brings you leads and drop what does not. Month after month.',
+    description: 'Spend shifts toward whatever produced leads. Channels that did not perform are paused.',
   },
 ];
 
@@ -323,13 +323,13 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'choosing',
     question: 'Which is the best digital marketing agency in India?',
     answer:
-      'There is no single "best" one for everyone. The best agency for you is the one that fits your size, your goals and your budget. A giant brand and a small local shop need very different help. Lower on this page we compare the top agencies honestly, including ourselves, so you can pick the right fit instead of the loudest name.',
+      'It depends on your size and goal. A national FMCG brand needs media buying at scale. A clinic in Indore needs Google Maps calls. A B2B exporter needs search and LinkedIn. The table on this page lists ten agencies that rank or get named by AI tools for India searches, ourselves included, and says which kind of business each suits.',
   },
   {
     category: 'choosing',
     question: 'How do I choose the right digital marketing agency?',
     answer:
-      'Ask three simple questions before you sign anything. One: who will actually do my work, a senior person or a fresher? Two: what exactly will I get each month, in plain words? Three: can you show me real results for a business like mine? An agency that answers all three clearly is usually a safe choice.',
+      'Get three answers in writing before you sign. Who runs your account each day, and their experience. The deliverables for the first month. Two results for businesses like yours, with numbers you can check. Vague answers to any of them mean keep looking.',
   },
   {
     category: 'choosing',
@@ -341,7 +341,7 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'choosing',
     question: 'Agency vs freelancer vs your own team: which is right for me?',
     answer:
-      'A freelancer is one person. They are handy for a single small task, but one person cannot cover SEO, ads, design and content all at once. Building your own team gives you full control but takes months to hire and train. An agency gives you a whole team instantly, across every skill. For most growing businesses, an agency is the fastest way to cover everything without the hiring headache.',
+      'Freelancers work well for one defined job, like a logo or a set of ads. An in-house team gives control but needs months of hiring, plus tools and training. An agency brings search, ads, design and content skills on day one. Many Indian businesses start with an agency and hire in-house later for the channel that works best.',
   },
   {
     category: 'choosing',
@@ -353,31 +353,31 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'choosing',
     question: 'Which agency is best for a small business in India?',
     answer:
-      'Small businesses do best with an agency that puts a real senior person on their account and covers several channels together. You want one team that can build your website, get you found on Google and run your ads, instead of hiring five separate people. Look for clear monthly reports so you always know what you are getting.',
+      'A small business needs a senior person on the account and a short list of channels, usually Google Maps, a fast site and WhatsApp follow-up. One team running all three costs less coordination than three vendors. Ask for a monthly lead report from the first month.',
   },
   {
     category: 'services',
     question: 'What does a digital marketing agency actually do?',
     answer:
-      'In simple words, it helps more of the right people find your business online and turn into customers. That means building or fixing your website, getting you to show up on Google (this is called SEO, short for search engine optimisation), running ads, posting on social media, and staying in touch by email or WhatsApp. The goal is always the same: more calls, more enquiries, more sales.',
+      'It gets buyers to find you online and then turns them into leads and sales. The work covers your website, Google rankings (search engine optimisation, or SEO), paid ads on Google and Meta, social posts, and email or WhatsApp follow-up. Success is measured in calls, enquiries and orders.',
   },
   {
     category: 'services',
     question: 'What are the main types of digital marketing?',
     answer:
-      'The main ones are: SEO (showing up on Google for free), paid ads (paying Google or Instagram to show your business), social media (posting on Instagram, Facebook and LinkedIn), content (blogs and videos that pull people in), email and WhatsApp (staying in touch with customers), and now AI search (getting recommended by tools like ChatGPT). A good agency mixes the few that fit your business best, not all of them at once.',
+      'Search rankings (SEO), paid ads on Google and Meta, social media posting, content such as blogs and YouTube videos, email and WhatsApp messaging, and AI search, where tools like ChatGPT recommend you. Most businesses need two to four of these. Picking the right ones matters more than doing all six.',
   },
   {
     category: 'services',
     question: 'Which channels actually bring leads for Indian businesses?',
     answer:
-      'It depends on your business, and any agency that says "do everything" is guessing. For most Indian small businesses, showing up on Google when someone is searching to buy, plus a fast mobile website and quick WhatsApp follow-up, brings the most enquiries. Social media builds trust but works more slowly. We pick channels based on where your customers already are, not on what is trendy.',
+      'Local services get most calls from Google Maps and reviews. B2B firms and exporters get enquiries from search rankings and LinkedIn. D2C brands get first orders from Meta ads and repeat orders from WhatsApp and email. We choose channels by where your buyers already look.',
   },
   {
     category: 'services',
     question: 'Do I need SEO, ads, or social media first?',
     answer:
-      'If you need customers this week, start with ads, because they bring visitors the day you switch them on. If you want steady free traffic that grows over months, start with SEO. Most businesses do best with a small mix: ads for quick results while SEO builds up quietly in the background.',
+      'Ads produce leads within days and stop when you stop paying. SEO takes months, then keeps bringing traffic. A common start is a modest ad budget for early leads while rankings build. Social media comes after, to build trust with people who already found you.',
   },
   {
     category: 'services',
@@ -389,7 +389,7 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'local',
     question: 'Do I need a local agency in my city, or can I work with one remotely?',
     answer:
-      'You do not need an agency in your own city. Almost all digital marketing work happens online, so a good team can help your business from anywhere in India. What matters more is whether they understand your customers and reply quickly. We work with businesses across India, the US, the UK and the UAE, all remotely.',
+      'No. Search, ads and AI work are all done online, and reviews happen on video calls. Check instead that the agency knows how your buyers search, including in local languages, and replies within a working day. We work with businesses across India, the US, the UK and the UAE, all remotely.',
   },
   {
     category: 'local',
@@ -401,19 +401,19 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'results',
     question: 'How long does digital marketing take to show results?',
     answer:
-      'Ads can bring enquiries within days. SEO (free Google traffic) usually takes three to six months to build up, and longer for very competitive markets. Social media and content also need a few months to earn trust. Anyone who promises big results in a week is not being honest with you.',
+      'Paid ads can bring leads in the first week. Google rankings usually take three to six months, more in crowded categories like real estate or education. Content and social need a few months before they earn trust. A promise of top rankings in days is a warning sign.',
   },
   {
     category: 'results',
     question: 'How is performance measured, and what reports should I expect?',
     answer:
-      'You should get a simple monthly report that a normal person can read, not a page full of confusing charts. It should answer three things: how many people visited, how many enquiries or calls came in, and what we did that month. If an agency cannot show you leads in plain numbers, treat it as a warning sign.',
+      'Expect one readable page a month: visits, leads by channel, cost per lead and the work done. Dashboards full of impressions and reach without lead counts tell you little. Ask for leads in plain numbers.',
   },
   {
     category: 'results',
     question: 'How do you measure whether digital marketing is actually working?',
     answer:
-      'The only numbers that truly matter are enquiries and sales, not likes or views. We track how many real leads (calls, form fills, WhatsApp messages) your marketing brings in, and where they came from. If the work is not bringing you more customers over time, it is not working, no matter how pretty the report looks.',
+      'We tag every call, form, WhatsApp chat and order to the channel that produced it. Likes and views are recorded but are not the goal. If leads and sales do not grow over a quarter, we change the plan.',
   },
   {
     category: 'results',
@@ -425,25 +425,25 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'trust',
     question: 'Who will actually do my work, seniors or juniors?',
     answer:
-      'This is the most important question most people forget to ask. Many agencies win you over with senior people, then hand your work to freshers. Always ask who will run your account day to day. At FactoryJet, experienced people do the work, not trainees practising on your business.',
+      'Ask for the name of the person who will run your account day to day and how long they have done the job. Many businesses meet a senior lead at the pitch and a junior afterwards. At FactoryJet the experienced people you meet do the work.',
   },
   {
     category: 'trust',
     question: 'What are the red flags of a bad digital marketing agency?',
     answer:
-      'Watch out for these: a "guaranteed" number-one spot on Google, offers that seem too good to be true, big confusing words instead of clear answers, no real examples of past work, and being locked into a long contract before anything is proven. Any single one of these is a good reason to be careful.',
+      'Five warning signs: a guaranteed first rank on Google, a price far below every other quote, jargon instead of answers, no past work you can verify, and a long lock-in before results. Any one of them is reason enough to pause.',
   },
   {
     category: 'trust',
     question: 'Do agencies lock you into long contracts?',
     answer:
-      'Some do, and it is often to protect themselves rather than you. A confident agency is happy to prove its value month by month. Always ask how easy it is to leave if you are not happy. If leaving is made difficult, ask yourself why they built it that way.',
+      'Some ask for six or twelve months up front, which protects the agency more than you. Ask what notice period applies if you want to leave. An agency that earns its fee each month does not need a hard exit clause.',
   },
   {
     category: 'trust',
     question: 'Is it safe to outsource my digital marketing?',
     answer:
-      'Yes, when you pick the right partner. Most successful businesses outsource marketing because building a full in-house team is slow. To stay safe, keep ownership of your own accounts (website, Google, social media and ads), get clear monthly reports, and start with a small scope before expanding. A trustworthy agency will happily agree to all of this.',
+      'Yes, with a few safeguards. Keep your website, Google, social and ad accounts registered in your own name. Ask for monthly reports. Start with one or two channels and expand once you see leads. A trustworthy agency agrees to all three without argument.',
   },
   {
     category: 'ai',
@@ -455,13 +455,13 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'ai',
     question: 'Should my business show up in AI search like ChatGPT and Google AI Overviews?',
     answer:
-      'Yes, and most agencies are not doing this yet, which is your opening. When people ask ChatGPT, Gemini or Google’s AI for a recommendation, you want your business to be one of the answers. Getting mentioned by AI tools is a newer skill called GEO (short for generative engine optimisation). We build it into our work, so you are found on Google and inside AI answers.',
+      'Yes. Buyers now ask ChatGPT, Gemini and Google’s AI Overview for shortlists, and the businesses named there get the first call. The work of getting named is called GEO, generative engine optimisation. Few Indian agencies offer it yet. We include it with Google ranking work.',
   },
   {
     category: 'ai',
     question: 'What is answer engine optimisation, and does my business need it?',
     answer:
-      'Answer engine optimisation, or AEO, simply means shaping your website so AI tools and Google’s instant answers pick your business as the reply. It is closely related to GEO. If your customers are the kind of people who ask ChatGPT or Google a question before buying, then yes, you need it. If you are not sure, we can check for free whether AI tools already mention you.',
+      'AEO, answer engine optimisation, means structuring your pages so Google’s quick answers and AI assistants quote you directly. It overlaps with GEO. If your buyers ask questions before they buy, it is worth doing. Our free checker shows whether AI tools mention your business today.',
   },
 
   /* Added from live People-Also-Ask on Google India, 31 July 2026.
@@ -482,7 +482,7 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'trust',
     question: 'How does a digital marketing agency make money?',
     answer:
-      'Most agencies charge a monthly retainer, a percentage of your ad spend, a project fee, or some mix of the three. The percentage model is the one to watch, because it quietly rewards the agency for spending more of your money rather than spending it well. Ask which model you are on and what happens to the fee if your ad budget drops.',
+      'Agencies earn through a monthly retainer, a cut of your ad spend, a one-off project fee, or a mix. Watch the ad-spend cut: the agency earns more when you spend more, whether or not the spend works. Ask which model applies and how the fee changes if your ad budget falls.',
   },
   {
     category: 'trust',
@@ -538,7 +538,7 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'India' },
   serviceType: 'Digital Marketing',
   description:
-    'Integrated digital marketing for Indian businesses: SEO, paid ads, social media, websites, WhatsApp and AI search, handled by one senior in-house team.',
+    'Digital marketing for Indian SMBs and mid-size firms: search rankings, Google and Meta ads, social media, websites, WhatsApp and AI answers, run by one senior team.',
 };
 
 const agenciesSchema = {
@@ -609,7 +609,7 @@ export default function DigitalMarketingPage() {
         <Hero
           eyebrow="DIGITAL MARKETING AGENCY · INDIA"
           headline="A Digital Marketing Agency in India That Brings You Real Customers"
-          lead="We help Indian businesses get found on Google and AI tools like ChatGPT, and turn visitors into real enquiries. One senior in-house team, plain-English reports, no jargon."
+          lead="Compare ten agencies that rank or get named by AI tools for India searches. Then see how one senior team gets Indian businesses onto Google and into ChatGPT answers, and turns that into enquiries."
           formSlot={<HeroInlineForm region="in" source="in_digital_marketing_hero" />}
           secondaryCta={{ label: 'Get a Free Growth Plan', modal: true as const, region: 'in' as const }}
           trustItems={HERO_TRUST}
@@ -657,7 +657,7 @@ export default function DigitalMarketingPage() {
           </div>
         </section>
 
-        <LogoBar tagline="Trusted by 500+ businesses across India, the US, the UK and the UAE" />
+        <LogoBar tagline="500+ businesses helped in India, the US, the UK and the UAE" />
 
         {/* Proof band: 4 across on desktop, 2x2 on mobile, hairline dividers */}
         <section className="bg-white px-6 py-12 md:px-8 md:py-16">
@@ -678,8 +678,8 @@ export default function DigitalMarketingPage() {
 
         <ServiceExplanation
           eyebrow="WHAT WE DO, IN PLAIN WORDS"
-          headline="What a digital marketing agency actually does for you"
-          lead="Strip away the buzzwords and it comes down to one thing: helping more of the right people find your business and become customers."
+          headline="What an Indian business gets from a digital marketing agency"
+          lead="Buyers in India search on phones, compare on Google, ask on WhatsApp and now check AI tools. The agency’s job is to put you in front of them at each step."
           body={
             <>
               <p>
@@ -714,15 +714,15 @@ export default function DigitalMarketingPage() {
         <IndustriesGrid
           variant="cards"
           eyebrow="EVERYTHING IN ONE PLACE"
-          headline="One team for every part of your online growth"
-          lead="Instead of hiring five different people, you get one senior team that covers the whole picture. Each of these links to how we do it."
+          headline="Eight services, one senior team"
+          lead="Search, sites, stores, AI agents, WhatsApp, Shopify and WordPress. Each card opens the page that explains how we do that work."
           sectors={CHANNELS}
         />
 
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs a traditional agency vs a freelancer vs your own team"
-          lead="There is no single right answer for every business. Here is an honest look at how the options differ, so you can pick what fits you."
+          headline="Agency, freelancer or in-house: how the options compare"
+          lead="Each option suits a different stage of growth. The table shows where each one is strong and where it falls short."
           columns={COMPARE_COLUMNS}
           rows={COMPARE_ROWS}
         />
@@ -730,7 +730,7 @@ export default function DigitalMarketingPage() {
         <StrategicDarkSection
           eyebrow="WHY MONEY GETS WASTED"
           headline="Three reasons most digital marketing spend disappears"
-          lead="If past marketing did not work, it is usually one of these, and all three are avoidable."
+          lead="When past marketing failed, one of these three causes is usually behind it."
           pillars={PILLARS}
         />
 
@@ -797,10 +797,10 @@ export default function DigitalMarketingPage() {
 
         <ServiceJourneyRow
           eyebrow="HOW WORKING WITH US FEELS"
-          headline="From first chat to real results, in five simple steps"
-          lead="No confusing process, no surprises. Here is exactly what happens when you work with us."
+          headline="What happens after you contact us"
+          lead="Five stages. You see and approve the output of each one before the next begins."
           stages={JOURNEY}
-          closingNote="5 SIMPLE STEPS · SENIOR TEAM · HONEST MONTHLY REPORTS"
+          closingNote="TALK · PLAN · BUILD · REPORT · ADJUST"
         />
 
         {/* Reach across India (plain language + safe internal links to hubs). */}
@@ -859,7 +859,7 @@ export default function DigitalMarketingPage() {
         <FAQ
           eyebrow="QUESTIONS PEOPLE ACTUALLY ASK"
           headline="Digital marketing in India, answered in plain words"
-          lead="Real questions from real searches, answered simply, with no jargon and no sales spin."
+          lead="Questions Indian business owners search before hiring an agency, answered in plain words."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
@@ -868,10 +868,10 @@ export default function DigitalMarketingPage() {
           variant="light"
           eyebrow="READY WHEN YOU ARE"
           headline="Want to see how many customers you are missing?"
-          sub="Book a free, no-pressure chat. We will look at your website and where your customers are, and tell you honestly what will bring you more enquiries, even if we never work together."
+          sub="Book a free call. We check your website, Google listing and AI search visibility, then send a short list of fixes you can use with or without us."
           primaryCta={{ label: 'Get My Free Growth Plan', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Check if AI tools recommend you', href: '/ai-visibility-checker' }}
-          objectionHandler="No jargon. No long contract. Just an honest plan you can use straight away."
+          objectionHandler="Free review. Plain English. The plan is yours to keep."
         />
       </main>
 

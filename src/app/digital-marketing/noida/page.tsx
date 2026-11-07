@@ -22,15 +22,15 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 const CANONICAL = 'https://factoryjet.com/digital-marketing/noida';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Agency in Noida | SEO + AI Search | FactoryJet',
+  title: 'Digital Marketing Agency in Noida | SEO + AI | FactoryJet',
   description:
-    'Looking for a digital marketing agency or SEO company in Noida? FactoryJet helps Noida businesses get found on Google and AI tools like ChatGPT, and turn clicks into real enquiries. One senior in-house team for SEO, social media, Google Ads, websites and more.',
+    'Digital marketing agency in Noida for IT firms, builders, coaching centres and exporters. SEO, Google Ads, social and AI search from one senior team.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Digital Marketing Agency in Noida | SEO + AI Search | FactoryJet',
+    title: 'Digital Marketing Agency in Noida | SEO + AI | FactoryJet',
     description:
-      'One senior in-house team that gets Noida businesses found on Google and AI search, and turns visitors into enquiries. SEO, ads, websites, social and more.',
+      'Digital marketing agency in Noida for IT firms, builders, coaching centres and exporters. SEO, Google Ads, social and AI search from one senior team.',
     url: CANONICAL,
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Digital Marketing Agency in Noida | FactoryJet',
     description:
-      'Get found on Google and AI search, and turn Noida visitors into customers. One senior in-house team.',
+      'SEO, Google Ads, social and AI search for Noida IT firms, builders, coaching centres and exporters, run by one senior team.',
     images: ['https://factoryjet.com/images/services/digital-marketing/noida/hero.webp'],
   },
   alternates: {
@@ -80,15 +80,15 @@ export const metadata: Metadata = {
 const HERO_TRUST = [
   '500+ businesses helped',
   '12 years of experience',
-  'One senior in-house team',
-  'Found on Google and AI search',
+  'Senior people on every account',
+  'Google, Maps and AI answers',
 ];
 
 const STATS = [
-  { value: '500+', label: 'Businesses helped', note: 'Across India, US, UK and UAE' },
-  { value: '12 yrs', label: 'Years doing this', note: 'Not a new agency practising on you' },
-  { value: 'In-house', label: 'Senior team', note: 'No work handed to freshers' },
-  { value: '4', label: 'Countries served', note: 'India, US, UK and UAE' },
+  { value: '500+', label: 'Businesses helped', note: 'Clients in India, the US, the UK and the UAE' },
+  { value: '12 yrs', label: 'Years doing this', note: 'Long enough to have seen Google change many times' },
+  { value: 'In-house', label: 'Senior team', note: 'Your account stays with experienced hands' },
+  { value: '4', label: 'Countries served', note: 'India, the US, the UK and the UAE' },
 ];
 
 // Channel grid = the internal-link authority hub. Each card links into an
@@ -97,56 +97,56 @@ const CHANNELS: IndustryCard[] = [
   {
     name: 'SEO (get found on Google)',
     description:
-      'SEO means search engine optimisation. In plain words: showing up on Google when a Noida customer searches to buy, without paying for every click.',
+      'Search engine optimisation puts your Sector 62 software firm or Expressway project on page one for the terms buyers type, with no fee per click.',
     linkLabel: 'Explore SEO',
     linkHref: '/seo',
   },
   {
     name: 'Websites that sell',
     description:
-      'A fast, mobile-first website that loads quickly on any phone and turns visitors into calls and enquiries, instead of just looking nice.',
+      'Pages built to load fast on a phone and ask for the call, the demo or the site visit. A builder or a SaaS team gets a site shaped around that one action.',
     linkLabel: 'See web design',
     linkHref: '/web-design',
   },
   {
     name: 'Online stores',
     description:
-      'Ecommerce means selling online. We build stores that are easy for Noida shoppers to buy from and easy for you to run and pack.',
+      'Garment makers and small electronics brands in Noida can sell direct. We set up stores with clear product pages, simple checkout and easy order handling.',
     linkLabel: 'See ecommerce',
     linkHref: '/services/ecommerce-development',
   },
   {
     name: 'AI search (get picked by ChatGPT)',
     description:
-      'When people ask ChatGPT, Gemini or Google’s AI "which agency in Noida should I pick", we help your business be one of the answers. This newer skill is called GEO.',
+      'A CTO shortlisting vendors may ask ChatGPT for options before calling anyone. GEO is the work of getting your name into those AI replies.',
     linkLabel: 'Explore AI SEO',
     linkHref: '/ai-seo',
   },
   {
     name: 'Chatbots and automation',
     description:
-      'Smart helpers that reply to customers day and night, useful when your Noida shop or clinic is shut, so you never lose a late-night enquiry.',
+      'A bot that answers course fee questions for a coaching centre at midnight, or books a site visit for a flat buyer on Sunday, then hands the lead to you.',
     linkLabel: 'See AI agents',
     linkHref: '/services/ai-agent-development',
   },
   {
     name: 'WhatsApp for business',
     description:
-      'Answer customers and collect leads automatically on WhatsApp, the app nearly every Noida buyer already uses every single day.',
+      'Parents, flat buyers and shop owners in Noida reply faster on WhatsApp than by email. We set up auto replies, lead capture and quick handover to your staff.',
     linkLabel: 'See WhatsApp chatbot',
     linkHref: '/whatsapp-chatbot',
   },
   {
     name: 'Shopify stores',
     description:
-      'Shopify is a popular tool for online shops. We build custom Shopify stores for Noida D2C brands that look great and load fast.',
+      'For apparel and accessory labels that want a store running quickly, Shopify handles payments and stock. We design and set it up for your range.',
     linkLabel: 'See Shopify',
     linkHref: '/shopify-development',
   },
   {
     name: 'WordPress websites',
     description:
-      'WordPress is the world’s most-used website tool. We build flexible sites on it that you fully own and control, no lock-in.',
+      'Good for schools, clinics and B2B firms that publish often. You keep full ownership of the site and can switch providers whenever you like.',
     linkLabel: 'See WordPress',
     linkHref: '/wordpress-development',
   },
@@ -161,7 +161,7 @@ const COMPARE_COLUMNS = [
 
 const COMPARE_ROWS = [
   {
-    feature: 'Who actually does your work',
+    feature: 'Who handles your account each day',
     values: [
       'Senior, in-house',
       'Often freshers',
@@ -170,7 +170,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'All channels handled in one place',
+    feature: 'Search, ads, social and WhatsApp under one roof',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -179,7 +179,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Simple monthly report you can actually read',
+    feature: 'A monthly summary any owner can follow',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -188,7 +188,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Gets you into AI search (ChatGPT, Gemini, Google AI)',
+    feature: 'Work on ChatGPT, Gemini and Google AI answers',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="no" />,
@@ -197,7 +197,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Understands Noida buyers and local search',
+    feature: 'Knows how Noida and NCR buyers compare vendors',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -206,7 +206,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Start quickly, no long lock-in',
+    feature: 'Quick start with no year-long contract',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="no" />,
@@ -215,7 +215,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Sets up local Noida search (Google Maps and the local pack)',
+    feature: 'Google Maps listings set up for each Noida sector you serve',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -224,7 +224,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Fast WhatsApp follow-up so no enquiry is missed',
+    feature: 'WhatsApp replies within minutes of an enquiry',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -233,7 +233,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Explains the work in plain words, no jargon',
+    feature: 'Each step explained without jargon',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -242,7 +242,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'One clear plan agreed before any work starts',
+    feature: 'Written plan signed off before spending begins',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -251,7 +251,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Can show real results for a business like yours',
+    feature: 'Past work in a field close to yours',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="yes" />,
@@ -264,21 +264,21 @@ const COMPARE_ROWS = [
 const PILLARS: Pillar[] = [
   {
     icon: '\u{1F9E9}',
-    title: 'One channel alone is not a plan',
+    title: 'Running one channel in isolation',
     body:
-      'Doing only SEO, or only Instagram, or only Google ads leaves gaps. A Noida buyer might find you on Google, check your Instagram, then message on WhatsApp before deciding. We join the channels so nothing leaks between them.',
+      'A parent picking a coaching centre in Noida reads Google reviews, checks the Instagram page, then sends a WhatsApp message. If any one of those is weak, the enquiry goes to the next centre. We run all three as one path.',
   },
   {
     icon: '\u{1F464}',
-    title: 'Freshers learning on your business',
+    title: 'Juniors running a senior pitch',
     body:
-      'Plenty of agencies win you over with senior people, then quietly hand your account to trainees. In a fast-growing NCR market like Noida, that lost time is expensive. At FactoryJet, experienced people do the real work.',
+      'The pitch meeting has a director in it. The monthly work gets passed to an intern. Noida buyers can pick from vendors across Delhi, Gurgaon and Ghaziabad, so a slow quarter costs you real deals. Our experienced staff stay on your account.',
   },
   {
     icon: '\u{1F916}',
-    title: 'Ignoring AI search is a costly mistake',
+    title: 'Leaving AI answers to rivals',
     body:
-      'More and more Noida buyers now ask ChatGPT or Google’s AI "which company should I pick" before they call anyone. Agencies stuck on old-style SEO miss this completely. We get you found on Google and inside AI answers.',
+      'IT buyers and students in Noida use ChatGPT and Google AI Overviews to build shortlists. A firm that only chases blue links never appears in those replies. We plan for both the classic results and the AI summary above them.',
   },
 ];
 
@@ -290,60 +290,60 @@ const AGENCIES = [
   {
     name: 'FactoryJet',
     bestFor:
-      'Noida small and mid-size businesses that want one senior team across website, Google, ads and AI search, with plain-English monthly reports. (Yes, that is us. We include ourselves openly and let the comparison speak for itself.)',
+      'Noida SMEs, IT firms, builders and institutes that want one experienced team running site, search, ads and AI answers, with a short monthly summary. (This entry is us. We list ourselves so you can weigh us against the rest.)',
     isUs: true,
   },
   {
     name: 'Wildnet Technologies',
-    bestFor: 'Businesses that want a large, established Sector 63 team for SEO and paid ads run at scale, with a long track record across thousands of clients.',
+    bestFor: 'Firms wanting a big Sector 63 shop with a long client history, running SEO and paid campaigns in volume.',
   },
   {
     name: 'PageTraffic',
-    bestFor: 'Companies whose main need is deep, technical SEO to climb Google over the long run, from a long-running Noida and Delhi search team.',
+    bestFor: 'Sites with heavy technical search problems that need a long-standing Noida and Delhi SEO specialist.',
   },
   {
     name: 'BrandBurp Digital',
-    bestFor: 'Brands that want web and app marketing handled together, aimed at reaching customers well beyond Noida too.',
+    bestFor: 'App and web brands chasing buyers across India who want both promoted by the same team.',
   },
   {
     name: 'Cinzel India',
-    bestFor: 'Businesses that want creative, content-led marketing paired with steady SEO from a Sector 65 team.',
+    bestFor: 'Brands that care most about creative content, backed by ongoing SEO, from Sector 65.',
   },
   {
     name: 'Digital Notebook',
-    bestFor: 'Smaller Noida businesses that want SEO, social media and paid ads handled by one hands-on Sector 63 team.',
+    bestFor: 'Small local firms wanting search, social posts and ads from a hands-on Sector 63 group.',
   },
   {
     name: 'Inquisitive Digital',
-    bestFor: 'Startups and SMEs that want measurable, revenue-focused growth and clear reporting from a Sector 63 team.',
+    bestFor: 'Startups that judge marketing by revenue and want tight reporting, also based in Sector 63.',
   },
 ];
 
 const JOURNEY: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'A free, no-pressure chat',
-    description: 'We learn about your Noida business, your customers and your goals. No jargon, no hard sell.',
+    title: 'A short first call',
+    description: 'Tell us what you sell, who buys it in Noida and NCR, and what a good month looks like for you.',
   },
   {
     number: '02',
-    title: 'A clear, simple plan',
-    description: 'We show you exactly what we will do and why, in words you can understand and approve.',
+    title: 'A written plan',
+    description: 'You get the channels we picked, the reason for each, and what we will skip. You approve it first.',
   },
   {
     number: '03',
-    title: 'We build and run it',
-    description: 'Website, Google, ads, AI search, whatever you picked. Our senior team does the actual work.',
+    title: 'Set-up and launch',
+    description: 'Site fixes, Maps listing, ad accounts and AI search groundwork go live, handled by experienced staff.',
   },
   {
     number: '04',
-    title: 'You see the results',
-    description: 'A simple monthly report: visitors, enquiries and what we did. Real numbers, plainly shown.',
+    title: 'Monthly numbers',
+    description: 'Leads, calls, WhatsApp chats and the tasks done that month, on one short page.',
   },
   {
     number: '05',
-    title: 'We keep improving',
-    description: 'We do more of what brings you leads and drop what does not. Month after month.',
+    title: 'Adjust and repeat',
+    description: 'Budget moves toward what produced enquiries. Anything that did not gets cut.',
   },
 ];
 
@@ -354,14 +354,14 @@ const MARKET_STATS = [
   {
     value: '1.03 billion',
     label:
-      'people in India now use the internet, about 70 in every 100 Indians. Your Noida customers are already online, searching before they buy.',
+      'internet users across India, roughly 70 of every 100 people. A Noida buyer checks you on a phone long before the first call.',
     sourceUrl: 'https://datareportal.com/reports/digital-2026-india',
     sourceLabel: 'DataReportal Digital 2026',
   },
   {
     value: '100 million+',
     label:
-      'weekly ChatGPT users are in India, its second-largest market after the US. More Noida buyers now ask AI tools who to pick before they call anyone.',
+      'people in India open ChatGPT each week, more than any country except the US. Vendor shortlists in Noida now start there too.',
     sourceUrl:
       'https://techcrunch.com/2026/02/15/india-has-100m-weekly-active-chatgpt-users-sam-altman-says/',
     sourceLabel: 'TechCrunch, Feb 2026',
@@ -369,7 +369,7 @@ const MARKET_STATS = [
   {
     value: '14,000+',
     label:
-      'government-recognised startups are now in Uttar Pradesh, the state Noida anchors, and Noida leads them all with over 3,400. In a crowd like that, attention is hard-won.',
+      'startups recognised by the government sit in Uttar Pradesh, and over 3,400 of them are in Noida, the most of any UP city. That is a lot of firms chasing the same buyers.',
     sourceUrl: 'https://www.drishtiias.com/state-pcs-current-affairs/startup-ecosystem-report-2025',
     sourceLabel: 'Startup Ecosystem Report 2025',
   },
@@ -380,40 +380,40 @@ const MARKET_STATS = [
 // Real high-volume Noida search terms are woven in naturally.
 const CHANNELS_RANKED = [
   {
-    name: 'Showing up on Google when people search to buy (SEO)',
-    who: 'Almost every Noida business, and even an SEO company in Noida chasing its own clients.',
+    name: 'Ranking on Google for buying searches (SEO)',
+    who: 'IT service firms, builders, institutes and almost any Noida company with a website, SEO agencies in Noida included.',
     body:
-      'SEO means search engine optimisation, which is just getting your business to show on Google without paying for each click. When someone types "salon near me" or "coaching classes in Sector 62", you want to be there. It takes a few months to build, but once it works it brings enquiries month after month for free. For most Noida businesses this is the steadiest channel.',
+      'SEO, or search engine optimisation, earns you a place in the unpaid Google results. Think of searches like "IIT JEE coaching Sector 62", "3 BHK Noida Extension" or "software testing company Noida". Rankings take a few months to build. Once they hold, they keep sending enquiries without a bill for each visit, which is why we put this first for most firms here.',
   },
   {
-    name: 'Local search and Google Maps (local SEO)',
-    who: 'Shops, clinics, salons, restaurants and any business a customer can walk into.',
+    name: 'Google Maps and nearby searches (local SEO)',
+    who: 'Clinics, cafes in Sector 18, gyms, salons, schools and showrooms that people visit in person.',
     body:
-      'Local SEO is the part of SEO that puts you on the map, literally. When a Noida buyer searches on their phone, Google shows a small map with three nearby businesses first. Getting into that box, and onto Google Maps, brings walk-ins and calls from people who are ready to buy right now. Setting up your Google Business Profile properly is the first step.',
+      'Type "dentist near me" in Sector 50 and Google shows a map with three businesses above everything else. Local SEO is the work of getting into that box. It starts with a complete Google Business Profile, the right category, real photos and steady reviews. Noida has many sectors, so a listing that names your exact sector and landmarks wins nearby searches more often.',
   },
   {
-    name: 'Google Ads for quick enquiries',
-    who: 'Businesses that need calls this week, or that are just starting out on Google.',
+    name: 'Google Ads when you need leads now',
+    who: 'New projects, admission season for institutes, product launches and any firm that needs calls this month.',
     body:
-      'Google Ads means paying to appear at the very top when someone searches. The moment you switch them on, you can get enquiries; the moment you switch them off, they stop. Ads are the fastest way to test what your Noida customers respond to, while your free Google rankings build up quietly in the background. This paid side is often called performance marketing.',
+      'With Google Ads you pay to sit at the top of the page for chosen searches. Leads can start on day one and stop the day the budget ends. Builders launching a tower and coaching centres before admissions use ads to fill a short window. We also use ads to learn which searches convert before investing months in SEO for them. Some agencies call this performance marketing.',
   },
   {
-    name: 'Social media marketing (Instagram, Facebook, LinkedIn)',
-    who: 'Restaurants, salons, D2C brands and anyone whose customers buy on looks and trust.',
+    name: 'Instagram, Facebook and LinkedIn',
+    who: 'Restaurants, fashion labels, edtech brands, and B2B firms in Sector 62 and 63 that sell through LinkedIn.',
     body:
-      'Social media builds familiarity so that when a buyer is ready, they already know your name. A social media marketing agency in Noida will post, run offers and reply to comments. It works more slowly than search, and it is better at building trust than at bringing instant enquiries, so we pair it with Google rather than leaning on it alone.',
+      'Social platforms make people recognise your name before they need you. Consumer brands do well on Instagram. IT and SaaS companies in Noida usually get more from LinkedIn posts by founders and staff. Social is slower to produce enquiries than search, so we run it next to Google work and judge it by the leads it helps close.',
   },
   {
-    name: 'WhatsApp follow-up',
-    who: 'Every Noida business, because nearly every buyer here uses WhatsApp daily.',
+    name: 'Quick replies on WhatsApp',
+    who: 'Any Noida business that gets enquiries from forms, ads or calls.',
     body:
-      'Getting the enquiry is only half the job. Replying fast is the other half. A click-to-WhatsApp button and quick, friendly follow-up turn far more enquiries into paying customers. Many businesses lose leads simply by answering a day too late. WhatsApp closes that gap.',
+      'A lead that waits until tomorrow often signs with someone else today. A WhatsApp button on every page, an instant auto reply and a short script for your staff fix most of that. Property and education buyers in particular expect a reply on WhatsApp within the hour, so this step often lifts results more than extra ad spend.',
   },
   {
-    name: 'Getting picked by AI search (ChatGPT, Gemini, Google AI)',
-    who: 'Forward-looking Noida businesses whose buyers ask AI tools for recommendations.',
+    name: 'Being named by AI assistants (ChatGPT, Gemini, Google AI)',
+    who: 'SaaS firms, IT exporters, edtech brands and any Noida business whose buyers research with AI tools.',
     body:
-      'This is the newest channel and most agencies ignore it, which is your opening. When someone asks ChatGPT or Google’s AI "which agency in Noida should I pick", you want your business named in the answer. Shaping your website so AI tools recommend you is a newer skill called GEO, short for generative engine optimisation. We build it in from the start.',
+      'Ask ChatGPT for "a reliable app development company in Noida" and it names a handful of firms. Most local agencies have not started working on this, so the field is open. The method is called GEO, short for generative engine optimisation. It means clear service pages, facts AI tools can quote, and mentions on sites those tools already trust. We include it from the first month.',
   },
 ];
 
@@ -436,223 +436,223 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'choosing',
     question: 'Which is the best digital marketing agency in Noida?',
     answer:
-      'There is no single "best" agency for everyone in a market this busy. The best one for you depends on your size, your goals and who actually does your work. A software company in Sector 62 and a small boutique in Sector 18 need very different help. Lower on this page we compare the top Noida agencies honestly, including ourselves, so you can pick the right fit instead of the loudest name.',
+      'It depends on what you sell. A SaaS company in Sector 62 needs LinkedIn, technical SEO and AI search. A builder on the Expressway needs Google Ads and fast WhatsApp follow-up. A cafe in Sector 18 needs Google Maps. Pick the agency whose past work matches your type of buyer, and check who will run your account. Further down this page we list several Noida agencies, ourselves included, with who each one suits.',
   },
   {
     category: 'choosing',
-    question: 'Which agency is best for digital marketing?',
+    question: 'Which kind of agency is best for digital marketing?',
     answer:
-      'Ask "best for what", not just "best". Some agencies are strongest at SEO (free Google traffic), some at social media, some at paid ads. The best pick for your Noida business is the team whose strengths match what you actually need, that puts a senior person on your account, and that reports results in plain numbers you can read.',
+      'The one whose strongest skill matches your biggest gap. If buyers cannot find you on Google, hire for SEO. If you need leads before a launch, hire for paid ads. If your brand sells on looks, hire for social content. After that, check two things: an experienced person handles your work, and the monthly report shows leads, not likes.',
   },
   {
     category: 'choosing',
-    question: 'How do I pick from all the "top 10 digital marketing agencies in Noida" lists?',
+    question: 'Can I trust the "top 10 digital marketing agencies in Noida" lists?',
     answer:
-      'Most of those "top 10" and "top 20 digital marketing agencies in Noida" lists are either paid placements or the writer’s own opinion, so treat them as a starting point, not gospel. Shortlist three or four names, then judge each one on three things: who will run your account, what you get each month in plain words, and whether they can show real results for a business like yours. The list gets you names; those three questions get you the truth.',
+      'Use them for names only. Many of those lists, including the "top 20 digital marketing agencies in Noida" versions, are paid listings or one writer’s view. Take three or four names and ask each the same questions: who works on my account, what do I get every month, and what have you done for a firm like mine? Compare the answers side by side.',
   },
   {
     category: 'choosing',
-    question: 'How do I choose the right digital marketing agency in Noida?',
+    question: 'How should I choose a digital marketing agency in Noida?',
     answer:
-      'Ask three simple questions before you sign anything. One: who will actually do my work, a senior person or a fresher? Two: what exactly will I get each month, in plain words? Three: can you show me real results for a business like mine? A Noida agency that answers all three clearly is usually a safe choice.',
+      'Start with a short brief: what you sell, who buys it, and how many leads you want. Send it to a few agencies and see who asks sharp questions back. Then ask each to name the person who will run your account and to show work for a similar business. In Noida you can also meet agencies across NCR, so judge them on fit, not distance.',
   },
   {
     category: 'choosing',
-    question: 'Is it worth paying a digital marketing agency in Noida?',
+    question: 'Is hiring a digital marketing agency in Noida worth the money?',
     answer:
-      'It is worth it when the agency brings you more enquiries than you would get on your own, and can show you where those enquiries came from. The honest answer to "is it worth it" is that it depends on what you need and whether the work is done by experienced people. Judge value by the leads and sales it brings over a few months, not by who talks the best in the first meeting.',
+      'It pays off when it brings more qualified enquiries than you could get alone, and you can trace each one to a source. Give it three to six months, then compare leads and sales against what you spent. If the agency cannot show where enquiries came from, you cannot judge it, and that alone is a warning.',
   },
   {
     category: 'choosing',
-    question: 'Agency vs freelancer vs building my own team in Noida: which is right?',
+    question: 'Should a Noida business hire an agency, a freelancer or an in-house team?',
     answer:
-      'A freelancer is one person. They are handy for a single small task, but one person cannot cover SEO, ads, design and content all at once. Building your own team gives you full control but takes months to hire and train, and good Noida marketers are hard to keep. An agency gives you a whole team instantly, across every skill. For most growing businesses, an agency is the fastest way to cover everything without the hiring headache.',
+      'A freelancer suits one clear job, such as a website rebuild. An in-house team gives control but takes months to hire, and good marketers in NCR switch jobs often. An agency gives you SEO, ads, design and content skills from day one. Many Noida firms use an agency first, then hire one in-house marketer to manage it once the channels are working.',
   },
   {
     category: 'services',
-    question: 'What does a digital marketing agency in Noida actually do?',
+    question: 'What does a digital marketing agency in Noida do day to day?',
     answer:
-      'In simple words, it helps more of the right people find your business online and turn into customers. That means building or fixing your website, getting you to show up on Google (this is called SEO, short for search engine optimisation), running ads, posting on social media, and staying in touch by email or WhatsApp. The goal is always the same: more calls, more enquiries, more sales.',
+      'It makes sure the people who need your product can find you and contact you. In practice that means fixing your website, improving your Google rankings, running ads, posting on social platforms, setting up WhatsApp replies and tracking every enquiry. For a Noida IT firm the focus may be LinkedIn and search. For a clinic it may be Google Maps and reviews.',
   },
   {
     category: 'services',
     question: 'What are the 7 types of digital marketing?',
     answer:
-      'The seven most common types are: SEO (showing up on Google for free), paid ads (paying Google or Instagram to show your business), social media marketing (Instagram, Facebook, LinkedIn), content marketing (blogs and videos that pull people in), email and WhatsApp marketing (staying in touch with customers), influencer marketing (creators recommending you), and the newest one, AI search or GEO (getting recommended by tools like ChatGPT). A good agency mixes the few that fit your business best, not all seven at once.',
+      'They are usually listed as: SEO for unpaid Google results, paid ads on Google, Meta or LinkedIn, social media, content such as blogs and videos, email and WhatsApp messages, influencer tie-ups, and GEO for AI assistants like ChatGPT. Few businesses need all seven. A Noida builder might use four of them, while a B2B software firm might lean on three.',
   },
   {
     category: 'services',
-    question: 'Which channels bring the most enquiries for Noida businesses?',
+    question: 'Which channels get Noida businesses the most enquiries?',
     answer:
-      'It depends on your business, and any agency that says "do everything" is guessing. For most Noida businesses, showing up on Google when someone is searching to buy, plus a fast mobile website and quick WhatsApp follow-up, brings the most enquiries. Social media builds trust and works well for restaurants, salons and D2C brands, but usually more slowly. We pick channels based on where your customers already are, not on what is trendy.',
+      'For most firms here it is Google search, a quick mobile website and fast WhatsApp replies working together. Coaching centres and clinics add Google Maps. IT and SaaS companies add LinkedIn. Restaurants and fashion labels add Instagram. We look at where your buyers already spend time and start there, rather than spreading budget across every platform.',
   },
   {
     category: 'services',
-    question: 'Do I need SEO, ads or social media first?',
+    question: 'Should I start with SEO, ads or social media?',
     answer:
-      'If you need customers this week, start with ads, because they bring visitors the day you switch them on. If you want steady free traffic that grows over months, start with SEO. Most Noida businesses do best with a small mix: ads for quick results while SEO builds up quietly in the background.',
+      'Start with ads if you need leads within weeks, for example before a project launch or admission season. Start with SEO if you can wait a few months for leads that keep coming without paying per click. Many Noida businesses run a small ad budget while SEO grows, then cut ads back once rankings hold.',
   },
   {
     category: 'services',
-    question: 'What is the difference between digital marketing and just running ads?',
+    question: 'How is digital marketing different from running ads?',
     answer:
-      'Ads are only one part. Running ads means paying to show your business at the top of Google or Instagram, and it stops the moment you stop paying. Digital marketing is the full picture: your website, showing up on Google for free, social media, content and ads working together. Ads alone are like renting attention; the rest is like building something you own.',
+      'Ads are one tool inside digital marketing. They buy you a spot at the top of Google or Instagram, and the spot disappears when the budget ends. Digital marketing also covers your website, unpaid rankings, content, social pages and follow-up. Those parts keep working after an ad stops, which lowers what each lead costs you over time.',
   },
   {
     category: 'seo',
     question: 'Which is the best SEO agency in Noida?',
     answer:
-      'Just like with digital marketing, there is no single best SEO agency for every business. Some Noida SEO teams are great for small local shops that want to show up on Google Maps, others are built for big companies with thousands of pages. The right one for you is honest about timelines, explains its work in plain words, and never "guarantees" the number-one spot. Anyone who guarantees rankings is not being straight with you.',
+      'The best fit depends on your site. A local clinic needs someone strong at Google Maps. An ecommerce exporter with thousands of product pages needs technical SEO skill. A SaaS firm needs content that ranks for what IT buyers search. Choose an agency that gives honest timelines and explains its work. Walk away from anyone who promises the top spot, because nobody controls Google.',
   },
   {
     category: 'seo',
-    question: 'What does an SEO agency in Noida actually do, in plain words?',
+    question: 'What does an SEO agency in Noida actually do?',
     answer:
-      'SEO means search engine optimisation, which is just getting your business to show up on Google when people search, without paying for each click. A good SEO agency fixes the technical side of your website so Google can read it, writes helpful pages around what your customers search for, sets up your Google Business Profile for local searches, and earns links from other trusted sites. Done well, it brings you visitors month after month for free.',
+      'Search engine optimisation means earning unpaid Google visibility. The agency fixes site problems that stop Google reading your pages, writes pages around the words your buyers use, sets up your Google Business Profile and earns links from respected sites. For a Noida business that might mean a page for each sector or service you cover, each written for real searches.',
   },
   {
     category: 'seo',
-    question: 'Do I need an SEO expert based in Noida specifically?',
+    question: 'Does my SEO expert need to be based in Noida?',
     answer:
-      'Not really. SEO work happens online, so a skilled team can rank your Noida business from anywhere in India. What actually helps is an agency that understands local Noida searches, sets up your Google Maps listing properly, and knows how your customers phrase things. Judge an SEO expert by their results and how clearly they explain things, not by whether their office is in your sector.',
+      'No. SEO is done online, so location matters less than skill. What does matter is knowing how Noida buyers search, for example by sector number, by "Noida Extension" or by "near metro". A good expert sets up your Maps listing with those details and writes pages that match them. Judge them by results and clear explanations.',
   },
   {
     category: 'seo',
-    question: 'Is the best SEO agency always the biggest one?',
+    question: 'Is the biggest SEO agency always the best choice?',
     answer:
-      'No. The biggest, most famous SEO agencies are usually built for large enterprises with huge websites, and a small Noida business can easily get lost as a minor account there. A smaller senior team often gives your work more care and attention. Size is not the same as fit. Pick the team that treats your business as important, whatever its size.',
+      'Not for most Noida SMEs. Large agencies are built around enterprise accounts, and a smaller budget can end up at the bottom of their list. A smaller experienced team usually gives your site more attention each month. Ask how many accounts each person handles. That number tells you more than the size of the office.',
   },
   {
     category: 'local',
-    question: 'Do you only work with businesses in Noida, or across Greater Noida and Ghaziabad too?',
+    question: 'Do you also work with businesses in Greater Noida and Ghaziabad?',
     answer:
-      'We help businesses across all of Noida, plus Greater Noida, Ghaziabad and the wider Delhi NCR region. Because the work happens online, we are not limited to one area. Whether you are in Sector 18, the IT belt around Sector 62 and 63, along the Noida Expressway or in Greater Noida, the same senior team handles your account.',
+      'Yes. We work with businesses across Noida, Greater Noida, Noida Extension, Ghaziabad and the rest of Delhi NCR. The work is done online, so the same experienced team handles a shop in Sector 18, an IT firm near Sector 62, a builder along the Expressway or a manufacturer in Greater Noida. Plans for Greater Noida firms can also reflect interest around the upcoming Jewar airport.',
   },
   {
     category: 'local',
-    question: 'Do you cover business areas like Sector 18, Sector 62 and Film City?',
+    question: 'Do you cover Sector 18, Sector 62 and Film City?',
     answer:
-      'Yes. We work with businesses in Noida’s main commercial areas, including Sector 18, Sector 62, Sector 63, Sector 132 on the Expressway, and the Film City media cluster in Sector 16A. A restaurant in Sector 18 and a software firm in Sector 62 need different plans, and we tailor the work to your area and your kind of customer rather than using one template for everyone.',
+      'Yes. Sector 18 is mostly retail, food and walk-in trade, so Maps and reviews matter most. Sector 62 and 63 are full of IT, ITES and SaaS firms, where LinkedIn and B2B search pages work better. Film City in Sector 16A is home to media houses that need show and brand promotion. Sector 132 on the Expressway hosts corporate offices. Each area gets a plan suited to its buyers.',
   },
   {
     category: 'local',
-    question: 'Do I need a Noida agency, or can one from Delhi or Gurgaon do the job?',
+    question: 'Should I hire a Noida agency or one from Delhi or Gurgaon?',
     answer:
-      'You do not strictly need a Noida-based agency, because almost all the work happens online and a good team can help you from anywhere in India, including Delhi or Gurgaon. What matters more is whether they understand your customers, reply quickly, and set up local search properly. That said, a team that knows Noida buyers, its sectors and the wider NCR can get to the point faster. We work with businesses across India, the US, the UK and the UAE, all remotely.',
+      'Location is less important than fit. Agencies in Delhi, Gurgaon and Noida all work online and can serve you equally well. Look for one that knows Noida sectors, replies quickly and sets up local listings correctly. We work with clients across India, the US, the UK and the UAE remotely, and judge ourselves on enquiries, not office address.',
   },
   {
     category: 'local',
-    question: 'Which types of Noida businesses do you help?',
+    question: 'What kinds of Noida businesses do you work with?',
     answer:
-      'A wide mix: IT and software companies, real estate builders and brokers, coaching institutes and schools, clinics and hospitals, restaurants and cafes, salons, D2C brands (companies that sell their own products online), and B2B service firms (businesses that sell to other businesses). Noida also has a big media and film cluster around Film City. If your customers search on Google, scroll Instagram or ask ChatGPT before they buy, we can help you reach them.',
+      'IT and SaaS firms, ITES providers, real estate developers and brokers, coaching institutes and schools, edtech brands, hospitals and clinics, restaurants, salons, garment exporters, electronics and component suppliers, and media firms around Film City. If your buyers search Google, scroll Instagram, read LinkedIn or ask ChatGPT before choosing, we can help them find you.',
   },
   {
     category: 'results',
-    question: 'How long does digital marketing take to show results in a fast-growing market like Noida?',
+    question: 'How soon will I see results from digital marketing in Noida?',
     answer:
-      'Ads can bring enquiries within days. SEO (free Google traffic) usually takes three to six months to build up, and Noida is a competitive NCR market, so some categories take a little longer. Social media and content also need a few months to earn trust. Anyone who promises big results in a week is not being honest with you.',
+      'Paid ads can bring enquiries in the first week. SEO usually needs three to six months, and crowded Noida categories such as real estate and coaching can take longer. Social media takes a few months to build trust. If someone promises big results in a week, ask how, because the honest timeline is months.',
   },
   {
     category: 'results',
-    question: 'What reports will I get, and how do you measure success?',
+    question: 'What will your reports show, and how do you judge success?',
     answer:
-      'You get a simple monthly report a normal person can read, not a page full of confusing charts. It answers three things: how many people visited, how many enquiries or calls came in, and what we did that month. The only numbers that truly matter are enquiries and sales, not likes or views. If the work is not bringing you more customers over time, it is not working, no matter how pretty the report looks.',
+      'Each month you get one short summary: visitors, enquiries by source, calls and WhatsApp chats, and the tasks we finished. Success means more qualified leads and sales over time. Likes and impressions appear only if they help explain a lead. If enquiries are not rising after a fair period, we tell you and change the plan.',
   },
   {
     category: 'trust',
-    question: 'Who will actually do my work, seniors or freshers?',
+    question: 'Will seniors or freshers handle my account?',
     answer:
-      'This is the most important question people forget to ask. Many agencies win you over with senior people, then hand your account to freshers, and in a competitive market that lost time costs you. Always ask who will run your account day to day. At FactoryJet, experienced people do the work, not trainees practising on your business.',
+      'Ask every agency this before signing. A common pattern is a senior pitch followed by a junior who learns on your budget. Ask for the name of the person who will run your account each week and what else they handle. At FactoryJet, experienced staff do the work, and you know who they are from the start.',
   },
   {
     category: 'trust',
-    question: 'What are the red flags of a bad digital marketing agency in Noida?',
+    question: 'What warning signs suggest a bad digital marketing agency in Noida?',
     answer:
-      'Watch out for these: a "guaranteed" number-one spot on Google, offers that seem too good to be true, big confusing words instead of clear answers, no real examples of past work, and being locked into a long contract before anything is proven. Any single one of these is a good reason to be careful and keep looking.',
+      'Be careful of promised first-page rankings, prices far below everyone else, answers full of jargon, no samples of past work, and long contracts before any result. Also check whether you will own your website, ad accounts and Google listing. If the agency keeps those in its own name, leaving later becomes hard.',
   },
   {
     category: 'ai',
-    question: 'Should my Noida business show up in AI search like ChatGPT and Google’s AI answers?',
+    question: 'Should my Noida business appear in ChatGPT and Google AI answers?',
     answer:
-      'Yes, and most agencies are not doing this yet, which is your opening. When people ask ChatGPT, Gemini or Google’s AI for a recommendation, you want your business to be one of the answers. Getting mentioned by AI tools is a newer skill called GEO (short for generative engine optimisation). We build it into our work, so you are found on Google and inside AI answers.',
+      'Yes, especially if your buyers research before calling. IT managers, parents comparing institutes and flat buyers now ask AI tools for shortlists. Few Noida agencies work on this yet, so early movers gain ground. The method is called GEO, short for generative engine optimisation, and we include it alongside regular SEO work.',
   },
   {
     category: 'ai',
-    question: 'What are GEO and AEO, and does my business need them?',
+    question: 'What do GEO and AEO mean for my business?',
     answer:
-      'GEO means getting recommended by AI tools like ChatGPT and Gemini. AEO, or answer engine optimisation, means getting picked for the instant answer that Google and AI tools show at the top. Both simply mean shaping your website so AI picks your business as the reply. If your customers are the kind of people who ask ChatGPT or Google a question before buying, then yes, you need them. If you are not sure, we can check for free whether AI tools already mention you.',
+      'GEO is about getting named by AI assistants such as ChatGPT and Gemini. AEO, answer engine optimisation, is about being the source for the short answer Google shows above the results. Both rely on clear pages, quotable facts and trusted mentions. If your buyers ask questions before they buy, both matter. Our free checker shows whether AI tools mention you today.',
   },
   {
     category: 'choosing',
-    question: 'What is the difference between a digital marketing agency and a digital marketing company in Noida?',
+    question: 'Is a digital marketing company in Noida different from a digital marketing agency?',
     answer:
-      'In everyday use, none. People search for both "digital marketing agency in Noida" and "digital marketing company in Noida", and they mean the same thing: a team that helps you get customers online. "Agency" sometimes hints at creative and campaign work, and "company" sometimes hints at a larger setup, but there is no fixed rule. Judge any of them by who does your work and what results they can show, not by the word on their door.',
+      'In practice, no. People search both phrases and mean the same service. Some firms call themselves an agency to suggest creative work and others a company to suggest scale, but nothing fixed separates them. Judge either one by who runs your account and the results they can show for a business like yours.',
   },
   {
     category: 'choosing',
-    question: 'What are the big 4 companies in digital marketing, and do I need one for my Noida business?',
+    question: 'Who are the big 4 in digital marketing, and does a Noida business need them?',
     answer:
-      'When people say the "big 4", they usually mean the giant global advertising groups, the ones that handle huge multinational brands. They are built for very large budgets and very large companies. For a small or mid-size Noida business, that scale is the wrong fit: you would be a tiny account and pay for layers you do not need. A focused senior team that treats your business as important will almost always serve you better.',
+      'The "big 4" usually means the global advertising holding groups that handle multinational brands. They are built for very large budgets. A Noida SME or startup would be a minor account there and would pay for layers it does not use. An experienced smaller team that knows NCR buyers is a better match for most local firms.',
   },
   {
     category: 'choosing',
-    question: 'Who are the top 5 marketing agencies, and are the biggest names right for a small Noida business?',
+    question: 'Are the top 5 marketing agencies right for a small Noida firm?',
     answer:
-      'Any "top 5" or "top 10" list you find is a starting point, not the final word, because most are opinions or paid placements. The biggest, most famous names are usually set up for large brands with large budgets. A smaller, senior team often gives your work far more care and attention. Shortlist a few names, then judge each on who runs your account and what results they can show for a business like yours.',
+      'Usually not. The most famous names are set up for large brands, and a small account gets limited attention. Rankings of the "top 5" are often opinion or paid placement anyway. Shortlist a few agencies of a size that fits you, then compare who handles the work and what they have achieved for similar firms.',
   },
   {
     category: 'services',
-    question: 'Is digital marketing only for big Noida brands, or can a small shop or startup benefit too?',
+    question: 'Can a small shop or new startup in Noida benefit from digital marketing?',
     answer:
-      'It works just as well for a small shop or a new startup, often better, because you can move faster than a big company. Uttar Pradesh now ranks among India’s top three startup states, and Noida leads the whole state with more than 3,400 recognised startups, so the city is full of small businesses competing for the same attention. Showing up on Google, a fast mobile website and quick WhatsApp follow-up can put a small business right next to much bigger names in search results.',
+      'Yes, and small firms can often move faster than large ones. Noida alone has more than 3,400 recognised startups, so many young companies compete for the same buyers. A well-built Google listing, a fast site and quick WhatsApp replies let a small firm appear next to much larger names in local results.',
   },
   {
     category: 'services',
-    question: 'Can you fix marketing that another Noida agency set up badly?',
+    question: 'Can you repair marketing that a previous Noida agency set up badly?',
     answer:
-      'Yes, and it is common. We often take over websites, Google accounts and campaigns that a previous agency left in a mess. We start by checking what is there, keep whatever is working, and fix or rebuild the rest. You will not have to start from zero, and we explain in plain words what went wrong and what we are changing, so you are never left guessing.',
+      'Yes. We often take over websites, ad accounts and Google listings left half-done. First we audit what exists, keep what works and fix the rest. Common problems include tracking that was never set up, ad accounts in the old agency’s name, and listings in the wrong category. We explain each fix as we make it.',
   },
   {
     category: 'channels',
-    question: 'Do you offer social media marketing in Noida?',
+    question: 'Do you handle social media marketing in Noida?',
     answer:
-      'Yes. Social media marketing means posting and running ads on Instagram, Facebook and LinkedIn to build trust and reach new people. It works well for restaurants, salons, clinics and D2C brands (companies that sell their own products online). It usually builds slowly, so we pair it with showing up on Google, which brings enquiries from people who are already searching to buy. We only suggest the channels your customers actually use.',
+      'Yes. We plan posts and run paid campaigns on Instagram, Facebook and LinkedIn. Restaurants, salons and fashion labels in Noida tend to use Instagram. IT firms and B2B suppliers get more from LinkedIn. Social builds familiarity slowly, so we pair it with search, where people are already looking to buy.',
   },
   {
     category: 'channels',
-    question: 'Do you run Google Ads for Noida businesses, and how fast do they work?',
+    question: 'Do you run Google Ads for Noida businesses, and how quickly do they work?',
     answer:
-      'Yes. Google Ads means paying to appear at the top of Google when someone searches. They are the fastest channel: you can start getting enquiries the same day you switch them on. The trade-off is that they stop the moment you stop paying. Most Noida businesses do best with a small mix, ads for quick enquiries now while free Google rankings build up in the background.',
+      'Yes. Ads can produce calls on the day they go live, which suits property launches, admission seasons and new product lines. The cost stops when the ads stop, and so do the leads. We usually run ads alongside SEO, then reduce ad spend as unpaid rankings start to bring in steady enquiries.',
   },
   {
     category: 'channels',
     question: 'What is performance marketing, and does my Noida business need it?',
     answer:
-      'Performance marketing is just a fancy name for paid ads that you judge by the results they bring, like calls, form fills or sales, rather than by likes or views. On Google and Instagram, you can see exactly what each rupee brought back. It is useful when you want quick, measurable enquiries. Whether you need it depends on your goals; we would rather show you honest numbers than sell you ads you do not need.',
+      'It is paid advertising measured by actions such as calls, forms and sales instead of views. On Google and Meta you can see what each rupee returned. It suits firms that need measurable leads quickly. If your margins or timelines do not support paid ads yet, we will say so and suggest a slower route.',
   },
   {
     category: 'channels',
-    question: 'What is local SEO, and how does it get my Noida shop onto Google Maps?',
+    question: 'How does local SEO put my Noida shop on Google Maps?',
     answer:
-      'Local SEO is the part of SEO that helps a nearby customer find you. When someone in Noida searches on their phone, Google shows a small map with three local businesses at the top. Local SEO works to get you into that box and onto Google Maps by setting up your Google Business Profile, keeping your name, address and phone number consistent, and earning genuine reviews. For any shop or clinic customers visit, this is one of the highest-value channels.',
+      'When someone nearby searches for your service, Google shows a map pack of three businesses first. Local SEO gets you into it through a complete Google Business Profile, the right categories, your sector and landmark in the address, matching contact details across directories, and genuine reviews. For clinics, salons and stores customers visit, this is often the best value channel.',
   },
   {
     category: 'seo',
-    question: 'Which is the best SEO company in Noida, and is that different from an SEO agency?',
+    question: 'Is an SEO company in Noida different from an SEO agency?',
     answer:
-      '"SEO company in Noida" and "SEO agency in Noida" mean the same thing: a team that gets your business to show up on Google. There is no single best one for everyone. Some are built for small local shops that want to appear on Google Maps, others for large companies with thousands of pages. The right one for you is honest about how long it takes, explains its work in plain words, and never promises the number-one spot.',
+      'No. Both phrases describe a team that improves your Google rankings, and buyers search them interchangeably. The real differences are in focus: some specialise in local Maps rankings, others in large technical sites or B2B content. Choose based on fit with your site, honest timelines and clear reporting.',
   },
   {
     category: 'seo',
-    question: 'What is an SEO consultant in Noida, and do I need one?',
+    question: 'Do I need an SEO consultant in Noida?',
     answer:
-      'An SEO consultant is usually one expert who advises on your Google strategy, rather than a full team that does all the hands-on work. A consultant is handy if you already have people who can carry out the tasks and just need direction. If you want the work actually done, from fixing your website to writing pages and setting up local search, a small senior team covers more ground than a single consultant can.',
+      'A consultant is usually one specialist who advises and leaves the execution to you. That works if you already have writers and a developer. If you need the work done end to end, from site fixes to new pages to Maps set-up, a small experienced team covers more than one adviser can.',
   },
   {
     category: 'ai',
-    question: 'How can I check whether ChatGPT or Google’s AI already mentions my Noida business?',
+    question: 'How do I find out whether ChatGPT or Google AI mentions my Noida business?',
     answer:
-      'The quickest way is to ask the AI tools yourself: open ChatGPT or Google and ask something like "best options for [your service] in Noida" and see whether your name comes up. If it does not, that is a gap worth closing, because more buyers now trust these answers. We also have a free checker that tells you whether AI tools currently recommend you, so you know exactly where you stand before deciding anything.',
+      'Open ChatGPT and Google and ask the question your buyers would ask, such as "best [your service] in Noida". Note whether your name appears and which competitors do. Try a few phrasings. You can also run our free AI visibility checker, which shows where AI tools mention you today so you have a baseline before you spend anything.',
   },
 ];
 
@@ -690,7 +690,7 @@ const serviceSchema = {
   areaServed: { '@type': 'City', name: 'Noida' },
   serviceType: 'Digital Marketing',
   description:
-    'Integrated digital marketing for Noida businesses: SEO, paid ads, social media, websites, WhatsApp and AI search, handled by one senior in-house team.',
+    'Digital marketing for Noida IT firms, builders, institutes, exporters and local shops: SEO, Google Ads, social, websites, WhatsApp and AI search from one experienced team.',
 };
 
 const agenciesSchema = {
@@ -761,8 +761,8 @@ export default function NoidaDigitalMarketingPage() {
         ]} />
         <Hero
           eyebrow="DIGITAL MARKETING AGENCY · NOIDA"
-          headline="A Digital Marketing Agency in Noida That Brings You Real Customers"
-          lead="We help Noida businesses get found on Google and AI tools like ChatGPT, and turn visitors into real enquiries. One senior in-house team, plain-English reports, no jargon."
+          headline="Digital Marketing Agency in Noida for Firms That Need More Enquiries"
+          lead="From Sector 62 software firms to Expressway builders and Greater Noida exporters, we make you easier to find on Google, Maps and ChatGPT, then help turn each visit into a call."
           formSlot={<HeroInlineForm region="in" source="in_noida_digital_marketing_hero" />}
           secondaryCta={{ label: 'Get a Free Growth Plan', modal: true as const, region: 'in' as const }}
           trustItems={HERO_TRUST}
@@ -774,7 +774,7 @@ export default function NoidaDigitalMarketingPage() {
               <div className="relative overflow-hidden rounded-2xl border border-fj-neutral-200 shadow-sm">
                 <img
                   src="/images/services/digital-marketing/noida/hero.webp"
-                  alt="A digital marketing strategist in a modern Noida office"
+                  alt="Marketing strategist planning a campaign for a Noida client"
                   width={832}
                   height={1216}
                   fetchPriority="high"
@@ -801,16 +801,16 @@ export default function NoidaDigitalMarketingPage() {
               So, which is the best digital marketing agency in Noida?
             </Heading>
             <p className="mt-4 text-lg leading-relaxed text-fj-ink/80">
-              The honest answer: there is no single best agency for every Noida business. The right one
-              for you depends on your size, your goals and, most of all, who actually does your work. For
-              small and mid-size Noida businesses that want one senior team to handle everything, from
-              your website to Google to AI search, FactoryJet is a strong choice. Below we compare the top
-              Noida agencies openly, including ourselves, so you can decide for yourself.
+              Short answer: the one that already understands your kind of buyer. An IT services firm,
+              a real estate developer and a coaching institute in Noida each win customers through
+              different channels. If you want one experienced team covering your site, Google, ads,
+              WhatsApp and AI answers, FactoryJet fits well. We compare several Noida agencies further
+              down, ourselves included, with who each one suits.
             </p>
           </div>
         </section>
 
-        <LogoBar tagline="Trusted by 500+ businesses across India, the US, the UK and the UAE" />
+        <LogoBar tagline="500+ businesses helped in India, the US, the UK and the UAE" />
 
         {/* Proof band: 4 across on desktop, 2x2 on mobile, hairline dividers */}
         <section className="bg-white px-6 py-12 md:px-8 md:py-16">
@@ -831,22 +831,22 @@ export default function NoidaDigitalMarketingPage() {
 
         <ServiceExplanation
           eyebrow="WHAT WE DO, IN PLAIN WORDS"
-          headline="What a digital marketing agency in Noida actually does for you"
-          lead="Strip away the buzzwords and it comes down to one thing: helping more of the right people in Noida find your business and become customers."
+          headline="What our Noida digital marketing work covers"
+          lead="Put simply, we get the right Noida and NCR buyers to find you, trust you and contact you."
           body={
             <>
               <p>
-                Some agencies make this sound complicated on purpose. It is not. Your customers are
-                already searching on Google, scrolling Instagram on the metro, and now asking
-                ChatGPT for recommendations. Our job is to make sure your business shows up in those
-                moments, and that the person who clicks actually turns into a call, a WhatsApp message
-                or a sale.
+                Buyers in Noida research on a phone first. An HR head compares IT vendors on LinkedIn,
+                a parent reads coaching reviews on Google, and a family looks up flats near the Aqua
+                Line between stations. More of them now ask ChatGPT for a shortlist too. We make sure
+                your name comes up at each of those points and that the visit ends in a call or a
+                WhatsApp message.
               </p>
               <p>
-                We do that by joining the pieces together: a fast website, showing up on Google (SEO),
-                ads when you need quick results, social media, WhatsApp follow-up, and getting picked
-                by AI tools. Not every Noida business needs all of it. We choose the few that will
-                bring you the most enquiries, and we tell you honestly which ones will not.
+                The toolkit covers a quick site, Google rankings, paid ads for busy seasons, social
+                pages, WhatsApp replies and AI search groundwork. Few firms need every item. A garment
+                exporter and a Sector 18 cafe need very different mixes, so we pick the channels that
+                suit your buyers and say plainly which ones to skip.
               </p>
             </>
           }
@@ -855,7 +855,7 @@ export default function NoidaDigitalMarketingPage() {
               <div aria-hidden className="absolute -bottom-4 -right-4 h-28 w-28 rounded-2xl bg-[#F05A28]/10" />
               <img
                 src="/images/services/digital-marketing/noida/team.webp"
-                alt="A digital marketing team in a Noida office reviewing a marketing strategy together"
+                alt="Team reviewing search and ad results for a Noida business"
                 width={1216}
                 height={832}
                 loading="lazy"
@@ -868,12 +868,12 @@ export default function NoidaDigitalMarketingPage() {
         {/* Noida market context: real, cited numbers that build trust with
             both AI answer engines and human readers. Outbound links resolve. */}
         <CityContextSection
-          eyebrow="THE NOIDA DIGITAL MARKET, IN REAL NUMBERS"
-          headline="Noida is a fast-growing NCR market, and its buyers are already online"
+          eyebrow="NOIDA BUYERS, BY THE NUMBERS"
+          headline="Noida mixes IT parks, factories, coaching hubs and housing projects, and each buyer group searches differently"
           leadParagraphs={[
-            'Noida is one of the busiest business hubs in Delhi NCR, home to everything from the IT parks of Sector 62 and 63 to the shops and offices of Sector 18 and the media houses in Film City. That also makes it crowded. Your next customer has plenty of choices, and they compare them all on a phone before they ever call you.',
-            'Buying habits have shifted fast. People search on Google between meetings, scroll Instagram on the metro, and now ask ChatGPT for recommendations. If your business does not show up in those moments, a competitor does. The numbers beside this show how quickly that shift is happening across India.',
-            'This is why one channel on its own rarely works in Noida. The businesses that win join the pieces together: a fast website, strong Google visibility, quick WhatsApp replies, and a presence inside AI answers, so no enquiry slips away.',
+            'Few cities pack this many kinds of business into one place. Sector 62 and 63 hold IT, ITES and SaaS companies. Large phone and electronics plants and garment exporters run in the industrial sectors. Film City houses media firms, and the Expressway and Greater Noida are lined with housing projects and corporate towers.',
+            'Each group buys in its own way. Software buyers want case studies and quick demos. Flat buyers compare projects on property portals and Google. Parents read reviews of coaching centres. Many now ask ChatGPT for a shortlist, in English or Hindi. The figures beside this show how far that habit has spread across India.',
+            'Buyers here can also pick vendors from Delhi, Gurgaon or Ghaziabad with one search. Firms that grow in Noida show up in Google results and on Maps, reply on WhatsApp within minutes, and appear in AI answers, so the enquiry does not drift to a rival across NCR.',
           ]}
           bodySlot={
             <>
@@ -882,7 +882,7 @@ export default function NoidaDigitalMarketingPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  In a market this crowded, being easy to find is half the battle won.
+                  Buyers across NCR can pick from three cities. Be the name they find first.
                 </p>
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
@@ -907,14 +907,14 @@ export default function NoidaDigitalMarketingPage() {
         <BigThreeTrustBlock
           variant="statement"
           eyebrow="ONE TEAM, EVERY CHANNEL"
-          headline="One senior in-house team in Noida for SEO, social media, Google Ads and AI search"
+          headline="SEO, Google Ads, social media and AI search for Noida firms, run by one experienced in-house team"
         />
 
         <IndustriesGrid
           variant="cards"
           eyebrow="EVERYTHING IN ONE PLACE"
-          headline="One Noida team for every part of your online growth"
-          lead="Instead of hiring five different people, you get one senior team that covers the whole picture. Each of these links to how we do it."
+          headline="The services Noida businesses ask us for"
+          lead="Each card covers one service and links to the full page on how we run it. Pick one or combine several."
           sectors={CHANNELS}
         />
 
@@ -922,25 +922,25 @@ export default function NoidaDigitalMarketingPage() {
             layout (card on the left) to break the rhythm. Light. */}
         <ServiceExplanation
           eyebrow="OUR APPROACH FOR NOIDA"
-          headline="How we grow a Noida business, step by step"
-          lead="No two Noida businesses are the same, so we do not use one template. We start with what actually brings you enquiries, then build outward from there."
+          headline="How a Noida growth plan comes together"
+          lead="We begin with the channel most likely to bring your next enquiry, then add others once it works."
           reverseOnDesktop
           body={
             <>
               <p>
-                First, we find out where your Noida customers already are. A coaching institute in
-                Sector 62 and a B2B software firm on the Noida Expressway reach buyers in very
-                different ways, so the plan starts with your customers, not with a fixed package.
+                Step one is mapping where your buyers look. A coaching institute near Sector 62
+                wins students through Maps, reviews and WhatsApp. A B2B software firm on the
+                Expressway wins deals through LinkedIn, search and AI answers. The plan follows that map.
               </p>
               <p>
-                Then a senior person, not a fresher, does the real work: fixing your website so it
-                loads fast on any phone, getting you found on Google and Google Maps, and
-                setting up quick WhatsApp follow-up so no enquiry goes cold.
+                Next, an experienced specialist handles set-up: speeding up your site, building pages
+                for the searches that matter, completing your Google Business Profile for each sector
+                you serve, and connecting WhatsApp so every lead gets a fast reply.
               </p>
               <p>
-                Finally, we report in plain words. Each month you see how many people visited, how
-                many enquiries came in, and what we did. We keep what works and drop what does not.
-                That is the whole method, no jargon, no smoke.
+                Every month you get one page: visits, leads by source and the work completed. Budget
+                shifts toward whatever brought enquiries, and weak channels get dropped. You can
+                follow every decision we make.
               </p>
             </>
           }
@@ -965,12 +965,12 @@ export default function NoidaDigitalMarketingPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
-                  { t: 'A plan built around your customers', n: 'not a copy-paste package' },
-                  { t: 'A senior person on your account', n: 'no work handed to freshers' },
-                  { t: 'Found on Google and Google Maps', n: 'local search set up properly' },
-                  { t: 'Quick WhatsApp follow-up', n: 'so no enquiry goes cold' },
-                  { t: 'Named in AI answers over time', n: 'ChatGPT, Gemini and Google AI' },
-                  { t: 'A plain-English report each month', n: 'visitors, enquiries, what we did' },
+                  { t: 'Channels picked for your buyers', n: 'based on how they search' },
+                  { t: 'One experienced lead on your account', n: 'named before you sign' },
+                  { t: 'Google and Maps for your sectors', n: 'listings with the right landmarks' },
+                  { t: 'WhatsApp replies in minutes', n: 'auto reply plus staff handover' },
+                  { t: 'Groundwork for AI answers', n: 'ChatGPT, Gemini and Google AI' },
+                  { t: 'One-page monthly summary', n: 'leads, sources, tasks done' },
                 ].map((item) => (
                   <div key={item.t} className="flex items-start gap-3 py-3.5">
                     <span
@@ -1001,7 +1001,7 @@ export default function NoidaDigitalMarketingPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  Simple plan. Senior team. Honest numbers.
+                  Clear plan. Experienced hands. Leads you can count.
                 </p>
               </div>
             </div>
@@ -1011,7 +1011,7 @@ export default function NoidaDigitalMarketingPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs a traditional agency vs a freelancer vs your own team"
-          lead="There is no single right answer for every business. Here is an honest look at how the options differ, so you can pick what fits you."
+          lead="Each option has trade-offs. This table sets them side by side so a Noida owner can decide quickly."
           columns={COMPARE_COLUMNS}
           rows={COMPARE_ROWS}
         />
@@ -1021,14 +1021,14 @@ export default function NoidaDigitalMarketingPage() {
         <section className="bg-fj-cream px-6 py-16 md:px-8 md:py-20">
           <div className="mx-auto max-w-5xl">
             <p className="mb-3 font-mono text-xs uppercase tracking-widest text-[#B23E13]">
-              WHY MARKETING OFTEN FALLS FLAT
+              WHERE NOIDA CAMPAIGNS GO WRONG
             </p>
             <Heading as="h2" size="h2" className="text-fj-ink">
-              Three reasons digital marketing quietly stops working in Noida
+              Three mistakes that waste marketing budgets in Noida
             </Heading>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-fj-ink/80">
-              If past marketing did not bring you enquiries, it is usually one of these, and all
-              three are avoidable once you can see them.
+              When earlier spend produced few leads, one of these is usually behind it. Each one has a
+              straightforward fix.
             </p>
 
             <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -1058,8 +1058,8 @@ export default function NoidaDigitalMarketingPage() {
         <FinalCTA
           variant="light"
           eyebrow="TALK TO US"
-          headline="Want a plain, honest plan for your Noida business?"
-          sub="Tell us about your business and your Noida customers. We will look at where you show up today and send back a simple plan you can act on, with no jargon and no pressure."
+          headline="Get a written marketing plan for your Noida firm"
+          sub="Share what you sell and who buys it. We review your Google, Maps and AI search presence and reply with the first steps we would take, free of charge."
           primaryCta={{ label: 'Get my free growth plan', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Check if AI tools recommend you', href: '/ai-visibility-checker' }}
         />
@@ -1072,12 +1072,12 @@ export default function NoidaDigitalMarketingPage() {
               WHAT ACTUALLY BRINGS ENQUIRIES
             </p>
             <Heading as="h2" size="h2" className="text-fj-ink">
-              The digital marketing channels that actually work for Noida businesses
+              Which marketing channels bring Noida firms the most leads
             </Heading>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-fj-ink/80">
-              Most "top 10" lists of digital marketing services in Noida push every channel at once.
-              We would rather be honest. Here are the channels ranked by how steadily each one brings
-              a typical Noida business real enquiries, and who each one suits best.
+              Lists of digital marketing services in Noida tend to sell every channel together. This
+              ranking orders them by how reliably each one produces enquiries for a typical Noida
+              firm, with the type of business each suits.
             </p>
 
             <ol className="mt-10 space-y-4">
@@ -1101,9 +1101,9 @@ export default function NoidaDigitalMarketingPage() {
             </ol>
 
             <p className="mt-6 text-sm leading-relaxed text-fj-ink/70">
-              You do not need all six. For most Noida businesses, a fast website plus strong Google
-              visibility, quick WhatsApp follow-up and a foot in AI search covers the most ground. We
-              tell you honestly which ones are worth your time and which are not.
+              Most firms here start with three: Google search, Maps or LinkedIn depending on the
+              buyer, and WhatsApp replies. AI search comes next. We will tell you which of the six to
+              leave out.
             </p>
           </div>
         </section>
@@ -1112,15 +1112,14 @@ export default function NoidaDigitalMarketingPage() {
         <section className="bg-fj-cream px-6 py-16 md:px-8 md:py-20">
           <div className="mx-auto max-w-4xl">
             <p className="mb-3 font-mono text-xs uppercase tracking-widest text-[#B23E13]">
-              THE TOP NOIDA AGENCIES, COMPARED HONESTLY
+              NOIDA AGENCIES SIDE BY SIDE
             </p>
             <Heading as="h2" size="h2" className="text-fj-ink">
-              The best digital marketing agencies in Noida, and who each one suits
+              Digital marketing agencies in Noida and the clients each suits
             </Heading>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-fj-ink/80">
-              We looked at which agencies actually operate for digital marketing and SEO in Noida,
-              checking real Noida-sector offices in July 2026, and what each is known for. We include
-              ourselves and say so openly, because hiding it would be the opposite of honest.
+              In July 2026 we checked which digital marketing and SEO agencies have real offices in
+              Noida sectors, and what each leads with. FactoryJet is on the list and marked clearly.
             </p>
 
             <ol className="mt-10 space-y-4">
@@ -1159,18 +1158,17 @@ export default function NoidaDigitalMarketingPage() {
             </ol>
 
             <p className="mt-6 text-sm leading-relaxed text-fj-ink/70">
-              A quick note on fairness: every agency here is a genuine, capable Noida team. The "best
-              for" lines are our honest read of who each one suits, based on their public work and the
-              services they lead with. The right pick is the one that matches your business, not the
-              one that shouts loudest.
+              Each agency listed is an established Noida team. The suited-for notes are our reading
+              of their public work and lead services. Match the agency to your buyer type before you
+              compare anything else.
             </p>
           </div>
         </section>
 
         <ServiceJourneyRow
           eyebrow="HOW WORKING WITH US FEELS"
-          headline="From first chat to real results, in five simple steps"
-          lead="No confusing process, no surprises. Here is exactly what happens when you work with us."
+          headline="Five steps from first call to steady leads"
+          lead="This is the order things happen once a Noida business signs on with us."
           stages={JOURNEY}
           closingNote="5 SIMPLE STEPS · SENIOR TEAM · HONEST MONTHLY REPORTS"
         />
@@ -1179,12 +1177,12 @@ export default function NoidaDigitalMarketingPage() {
         <section className="border-y border-fj-ink/10 bg-white px-6 py-14 md:px-8 md:py-16">
           <div className="mx-auto max-w-3xl">
             <Heading as="h2" size="h3" className="text-fj-ink">
-              We help businesses grow across Noida, and beyond
+              Where in Noida and NCR we work
             </Heading>
             <p className="mt-4 text-lg leading-relaxed text-fj-ink/80">
-              Because the work happens online, your sector does not limit us. We help shops,
-              restaurants, clinics, service firms and brands across Sector 18, Sector 62, Sector 63,
-              Sector 132, Film City, Greater Noida and the Noida Expressway. Whether you need to{' '}
+              Our clients range from Sector 18 retailers and cafes to IT firms in Sector 62 and 63,
+              offices in Sector 132, media houses in Film City, and manufacturers and builders in
+              Greater Noida and along the Expressway. Whether you need to{' '}
               <a href="/seo" className="font-semibold text-[#B23E13] underline underline-offset-2">
                 get found on Google
               </a>
@@ -1226,14 +1224,14 @@ export default function NoidaDigitalMarketingPage() {
 
         <TestimonialsSection
           eyebrow="REAL RESULTS"
-          headline="What business owners say after working with us"
+          headline="Feedback from owners we have worked with"
           region="in"
         />
 
         <FAQ
           eyebrow="QUESTIONS NOIDA OWNERS ACTUALLY ASK"
-          headline="Digital marketing in Noida, answered in plain words"
-          lead="Real questions from real Noida searches, answered simply, with no jargon and no sales spin."
+          headline="Noida digital marketing questions, answered"
+          lead="Questions Noida buyers type into Google and ChatGPT, with direct answers."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
@@ -1241,11 +1239,11 @@ export default function NoidaDigitalMarketingPage() {
         <FinalCTA
           variant="light"
           eyebrow="READY WHEN YOU ARE"
-          headline="Want to see how many Noida customers you are missing?"
-          sub="Book a free, no-pressure chat. We will look at your website and where your Noida customers are, and tell you honestly what will bring you more enquiries, even if we never work together."
+          headline="Find out which Noida enquiries are going to rivals"
+          sub="Book a free call. We check your site, Maps listing and AI visibility against Noida competitors and tell you the three changes most likely to bring more leads."
           primaryCta={{ label: 'Get My Free Growth Plan', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Check if AI tools recommend you', href: '/ai-visibility-checker' }}
-          objectionHandler="No jargon. No long contract. Just an honest plan you can use straight away."
+          objectionHandler="No long contract. You keep the findings either way."
         />
       </main>
 

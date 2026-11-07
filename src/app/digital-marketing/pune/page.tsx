@@ -24,13 +24,13 @@ const CANONICAL = 'https://factoryjet.com/digital-marketing/pune';
 export const metadata: Metadata = {
   title: 'Digital Marketing Agency in Pune | FactoryJet',
   description:
-    'Looking for a digital marketing agency in Pune? FactoryJet helps Pune businesses get found on Google and AI tools like ChatGPT, and turn clicks into real enquiries. One senior in-house team for SEO, ads, websites and more.',
+    'Digital marketing agency in Pune for auto component makers, IT firms, startups and clinics. SEO, Google Ads, social and AI search from one senior team.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Digital Marketing Agency in Pune | FactoryJet',
     description:
-      'One senior in-house team that gets Pune businesses found on Google and AI search, and turns visitors into enquiries. SEO, ads, websites, social and more.',
+      'Digital marketing agency in Pune for auto component makers, IT firms, startups and clinics. SEO, Google Ads, social and AI search from one senior team.',
     url: CANONICAL,
     images: [
       {
@@ -792,7 +792,7 @@ export default function DigitalMarketingPunePage() {
               <div className="relative overflow-hidden rounded-2xl border border-fj-neutral-200 shadow-sm">
                 <img
                   src="/images/services/digital-marketing/pune/hero.webp"
-                  alt="A digital marketing professional in a modern Pune office"
+                  alt="A digital marketing professional at work in a modern office"
                   width={832}
                   height={1216}
                   fetchPriority="high"
@@ -909,7 +909,7 @@ export default function DigitalMarketingPunePage() {
               <div aria-hidden className="absolute -bottom-4 -right-4 h-28 w-28 rounded-2xl bg-[#F05A28]/10" />
               <img
                 src="/images/services/digital-marketing/pune/team.webp"
-                alt="A digital marketing team in a modern Pune office collaborating around a laptop"
+                alt="A digital marketing team collaborating around a laptop"
                 width={1216}
                 height={832}
                 loading="lazy"
