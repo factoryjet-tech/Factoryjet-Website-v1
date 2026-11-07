@@ -226,7 +226,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Copy and keywords in Hindi and Hinglish as well as English',
+    feature: 'Knows how Lucknow buyers search',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -730,7 +730,7 @@ export default function LucknowDigitalMarketingPage() {
                 Plenty of good Lucknow businesses run on word of mouth and stay invisible online. The kebab house everyone in Aminabad knows may not appear when a visitor searches from a hotel in Hazratganj. The lab with the best reports may sit below a rival with more reviews.
               </p>
               <p>
-                We close that gap in three moves. First, rank you on Google, Maps and AI assistants for the searches your buyers type, in English, Hindi or Hinglish. Second, give them a page that opens fast on a cheap phone and answers fees, timings or prices up front. Third, route every enquiry to WhatsApp or a phone that someone picks up.
+                We close that gap in three moves. First, rank you on Google, Maps and AI assistants for the searches your buyers type. Second, give them a page that opens fast on a cheap phone and answers fees, timings or prices up front. Third, route every enquiry to WhatsApp or a phone that someone picks up.
               </p>
             </>
           }

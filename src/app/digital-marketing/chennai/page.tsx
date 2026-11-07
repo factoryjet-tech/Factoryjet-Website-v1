@@ -134,7 +134,7 @@ const CHANNELS: IndustryCard[] = [
   {
     name: 'WhatsApp for business',
     description:
-      'Most Chennai buyers would rather message than call. Automated WhatsApp replies in English or Tamil catch the lead while interest is warm.',
+      'Most Chennai buyers would rather message than call. Automated WhatsApp replies catch the lead while interest is warm.',
     linkLabel: 'See WhatsApp chatbot',
     linkHref: '/whatsapp-chatbot',
   },
@@ -199,7 +199,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Knows how Chennai buyers search, in English and Tamil',
+    feature: 'Knows how Chennai buyers search',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -409,7 +409,7 @@ const CHANNELS_RANKED = [
     name: 'WhatsApp replies and follow-up',
     who: 'Any Chennai business that gets enquiries, because buyers here message before they call.',
     body:
-      'An enquiry that waits overnight often goes to a rival. A click-to-WhatsApp button, an instant auto-reply in English or Tamil, and a person who follows up the same day turn more leads into orders. This one fix often lifts results more than extra ad spend.',
+      'An enquiry that waits overnight often goes to a rival. A click-to-WhatsApp button, an instant auto-reply, and a person who follows up the same day turn more leads into orders. This one fix often lifts results more than extra ad spend.',
   },
   {
     name: 'AI answers (ChatGPT, Gemini, Google AI)',

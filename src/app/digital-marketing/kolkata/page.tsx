@@ -133,7 +133,7 @@ const CHANNELS: IndustryCard[] = [
   {
     name: 'WhatsApp for business',
     description:
-      'Kolkata trade already runs on WhatsApp. We set up catalogues, auto replies and lead capture there, in Bengali or English as you prefer.',
+      'Kolkata trade already runs on WhatsApp. We set up catalogues, auto replies and lead capture there.',
     linkLabel: 'See WhatsApp chatbot',
     linkHref: '/whatsapp-chatbot',
   },
@@ -198,7 +198,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Knows how Kolkata buyers search, Bengali terms included',
+    feature: 'Knows how Kolkata buyers search',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -408,7 +408,7 @@ const CHANNELS_RANKED = [
     name: 'WhatsApp replies and follow-up',
     who: 'Every Kolkata business that takes orders or bookings.',
     body:
-      'Winning the enquiry counts for little if the reply comes the next day. A click-to-chat button, an auto reply in Bengali or English, and a person who answers within the hour turn more chats into orders. Wholesale and retail buyers here expect it.',
+      'Winning the enquiry counts for little if the reply comes the next day. A click-to-chat button, an auto reply, and a person who answers within the hour turn more chats into orders. Wholesale and retail buyers here expect it.',
   },
   {
     name: 'Being named by AI tools (ChatGPT, Gemini, Google AI)',
@@ -932,7 +932,7 @@ export default function KolkataDigitalMarketingPage() {
               </p>
               <p>
                 Step two is the build, done by senior staff: a site that opens quickly on mobile data,
-                complete Google listings for each branch, Bengali and English search terms, and a
+                complete Google listings for each branch, and a
                 WhatsApp reply flow so chats are answered within the hour.
               </p>
               <p>
@@ -965,7 +965,7 @@ export default function KolkataDigitalMarketingPage() {
                   { t: 'A plan shaped by your trade', n: 'retail, wholesale, export or services' },
                   { t: 'Senior staff on the account', n: 'the planners do the work' },
                   { t: 'Google and Maps listings', n: 'one per Kolkata branch' },
-                  { t: 'WhatsApp replies within the hour', n: 'Bengali or English' },
+                  { t: 'WhatsApp replies within the hour', n: 'so no enquiry goes cold' },
                   { t: 'Groundwork for AI answers', n: 'ChatGPT, Gemini and Google AI' },
                   { t: 'A one-page monthly report', n: 'calls, chats, orders, actions' },
                 ].map((item) => (

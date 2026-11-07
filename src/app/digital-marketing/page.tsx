@@ -90,7 +90,7 @@ const CHANNELS: IndustryCard[] = [
   {
     name: 'SEO (get found on Google)',
     description:
-      'Search engine optimisation gets your pages ranked for the words Indian buyers type, in English, Hindi or a regional language, with no fee per click.',
+      'Search engine optimisation gets your pages ranked for the words Indian buyers type, with no fee per click.',
     linkLabel: 'Explore SEO',
     linkHref: '/seo',
   },

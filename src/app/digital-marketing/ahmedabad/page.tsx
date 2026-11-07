@@ -198,7 +198,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Knows how Gujarat buyers search, in English and Gujarati',
+    feature: 'Knows how Gujarat buyers search',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
