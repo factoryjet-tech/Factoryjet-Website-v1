@@ -1,19 +1,14 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
-// Provider notes describe each company's own linked page. FactoryJet is the
-// publisher. No prices for other vendors: platform plans change too often to
-// keep accurate here.
+// Provider notes describe each company's own linked page, read on
+// 8 November 2026. FactoryJet is the publisher and is listed last, after the
+// others; the order is not a ranking. Seedium and DestiLabs were added on
+// 8 Nov 2026 because AI engines cited them for "AI agent development
+// companies for small and medium businesses" (sweep 2026-11-07, N07/N13).
+// No prices for other vendors: platform plans change too often to keep
+// accurate here.
 const PROVIDERS = [
-  {
-    "name": "FactoryJet",
-    "route": "developer",
-    "kind": "Custom development agency",
-    "fit": "Custom agents connected to Shopify, a help desk, a CRM or an ERP",
-    "check": "Ask for a fixed written quote, the test set and what you own at handover.",
-    "url": "/services/ai-agent-development",
-    "detail": "FactoryJet builds custom AI agents for small and mid-sized businesses and connects them to the systems the work already runs in, such as Shopify, Zendesk, HubSpot, NetSuite or Odoo. We quote a fixed price in writing after a short scoping call. A person approves anything that commits money, and you own the code. FactoryJet publishes this guide."
-  },
   {
     "name": "Lindy",
     "route": "platform",
@@ -29,8 +24,8 @@ const PROVIDERS = [
     "kind": "Automation and agent platform",
     "fit": "Multi-app workflows with AI agent steps",
     "check": "Confirm who owns each scenario and who fixes it when an app changes.",
-    "url": "https://help.make.com/make-ai-agent-new",
-    "detail": "Make offers AI agents inside its scenario builder, and an agent can use your existing scenarios as tools. It fits when you want app events, fixed rules and agent decisions in one workflow that your own team maintains. Test a duplicate event and a failed API call as well as the normal path, and budget for the whole scenario, because the model call is only one of its costs."
+    "url": "https://www.make.com/en/ai-agents",
+    "detail": "Make builds AI agents inside the same scenario canvas your team already uses, so fixed rules and agent decisions run in one flow. Make says one agent can be reused across several workflows. It fits when you want app events, fixed rules and agent decisions in one workflow that your own team maintains. Test a duplicate event and a failed API call as well as the normal path, and budget for the whole scenario, because the model call is only one of its costs."
   },
   {
     "name": "Master of Code Global",
@@ -58,6 +53,33 @@ const PROVIDERS = [
     "check": "Ask what is custom code, which third-party tools it depends on and what you own at handover.",
     "url": "https://devcom.com/expertise/ai-agent-development-company/",
     "detail": "DevCom is a software development company that publishes custom AI agent development as one of its services. It is a candidate when the agent is part of a larger software build. Ask which parts would be custom code, which third-party tools the agent would depend on and what you can take with you at handover."
+  },
+  {
+    "name": "Seedium",
+    "route": "developer",
+    "kind": "Custom software and agent developer",
+    "fit": "Support, task, workflow and data analysis agents for SMBs",
+    "check": "Ask for the feasibility findings in writing before you commit to a build.",
+    "url": "https://seedium.io/services/custom-ai-agent-development/",
+    "detail": "Seedium's AI agent development page is written for small and medium-sized businesses, under the heading \"AI agent development built for SMB budgets\". It lists customer support, task-oriented, workflow automation and data analysis agents, and names integrations with HubSpot, Intercom, Zendesk and Slack. Its process runs from an AI feasibility assessment through deployment to post-launch monitoring. Ask which of your systems it would connect first and what the feasibility step would rule out."
+  },
+  {
+    "name": "DestiLabs",
+    "route": "developer",
+    "kind": "AI agent and voice agent developer",
+    "fit": "Agents that act across your tools, plus chat and voice agents for customer channels",
+    "check": "Ask which project is closest to your workflow and which of your tools it would connect.",
+    "url": "https://destilabs.com/",
+    "detail": "DestiLabs describes custom AI agents that take action across a business's tools, along with chatbots and voicebots that answer, book, refund and escalate across customer channels. AI voice agent development is listed as its own service. Its site names healthcare, fintech, ecommerce and real estate as its industries. Ask which of its projects matches your workflow and how it would connect to the stack you already run."
+  },
+  {
+    "name": "FactoryJet",
+    "route": "developer",
+    "kind": "Custom development agency",
+    "fit": "Custom agents connected to Shopify, a help desk, a CRM or an ERP",
+    "check": "Ask for a fixed written quote, the test set and what you own at handover.",
+    "url": "/services/ai-agent-development",
+    "detail": "FactoryJet builds custom AI agents for small and mid-sized businesses and connects them to the systems the work already runs in, such as Shopify, Zendesk, HubSpot, NetSuite or Odoo. We quote a fixed price in writing after a short scoping call. A person approves anything that commits money, and you own the code. FactoryJet publishes this guide."
   }
 ];
 
@@ -82,8 +104,11 @@ const COST_ROWS = [
 // "Best" stays in the title: it is in the slug and in the searches this page
 // is shown for (Search Console, 90 days to 2026-10-03). The count comes from
 // the array so the title can never promise more entries than the page has.
-const TITLE = `The ${PROVIDERS.length} Best AI Agent Development Companies for Small Business (2026)`;
-const DESCRIPTION = `${PROVIDERS.length} AI agent development companies and platforms for small business, compared. Sourced 2026 cost ranges, build timelines and what to ask before you hire.`;
+// "SMB" and "small and medium businesses" added 8 Nov 2026: AI engines
+// searched those exact words (sweep 2026-11-07, N07/N13) and the old title
+// only said "Small Business".
+const TITLE = `The ${PROVIDERS.length} Best AI Agent Development Companies for Small and Medium Businesses (SMBs) in 2026`;
+const DESCRIPTION = `${PROVIDERS.length} AI agent development companies and platforms for small and medium businesses (SMBs), compared, with sourced 2026 costs and hiring questions.`;
 
 export const post: BlogPost = {
   id: "232",
@@ -93,11 +118,11 @@ export const post: BlogPost = {
   category: "Emerging Tech",
   author: "Bhavesh Barot",
   date: "Jun 13, 2026",
-  dateModified: "Oct 11, 2026",
+  dateModified: "Nov 8, 2026",
   readTime: "14 min read",
   imageUrl: "/blog-images/best-ai-agent-development-companies-small-business-2026.webp",
   meta: {
-    "title": `${PROVIDERS.length} Best AI Agent Developers for Small Business (2026)`,
+    "title": `${PROVIDERS.length} Best AI Agent Development Companies for SMBs (2026)`,
     "description": DESCRIPTION
   },
   keyTakeaways: [
@@ -167,7 +192,7 @@ export const post: BlogPost = {
     },
     {
       "q": "Which AI voice agent is best for small businesses?",
-      "a": "This guide compares companies that build agents for written work such as email, tickets, quotes and CRM updates. It does not rank voice products. For a phone agent, test four things on real calls before you buy: how it copes with interruptions, how it copes with background noise, how it hands a caller to a person, and what it costs at your call volume. Of the firms here, Master of Code Global lists voice agents among its services, and FactoryJet builds AI receptionists as a separate service."
+      "a": "This guide compares companies that build agents for written work such as email, tickets, quotes and CRM updates. It does not rank voice products. For a phone agent, test four things on real calls before you buy: how it copes with interruptions, how it copes with background noise, how it hands a caller to a person, and what it costs at your call volume. Of the firms here, Master of Code Global and DestiLabs list voice agents among their services, and FactoryJet builds AI receptionists as a separate service."
     },
     {
       "q": "What is the difference between an AI agent and a chatbot?",
@@ -229,10 +254,10 @@ export const post: BlogPost = {
   content: (
     <>
       <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg mb-6">
-        <strong>Disclosure:</strong> FactoryJet publishes this guide and is one of the {PROVIDERS.length} providers on it. This is a shortlist. We have not tested the other providers side by side, and nobody paid to be included. Their descriptions come from their own linked pages, which we read on October 5, 2026.
+        <strong>Disclosure:</strong> FactoryJet wrote this list and lists itself last, after the other {PROVIDERS.length - 1} providers, and the order is not a ranking. We have not tested the other providers side by side, and nobody paid to be included. Their descriptions come from their own linked pages, which we read on November 8, 2026.
       </div>
 
-      <p className="text-lg leading-relaxed mb-6">An AI agent development company builds software that does a multi-step job for you, such as qualifying a lead, booking an appointment, answering a support ticket or pulling data out of an invoice. This guide compares {PROVIDERS.length} options for a small business: {DEVELOPERS.length} developers and {PLATFORMS.length} platforms. It also gives 2026 cost ranges from named sources and the questions to ask before you hire.</p>
+      <p className="text-lg leading-relaxed mb-6">An AI agent development company, sometimes called an agentic AI development company, builds software that does a multi-step job for you, such as qualifying a lead, booking an appointment, answering a support ticket or pulling data out of an invoice. This guide compares {PROVIDERS.length} options for small and medium businesses (SMBs): {DEVELOPERS.length} developers and {PLATFORMS.length} platforms. It also gives 2026 cost ranges from named sources and the questions to ask before you hire.</p>
       <p className="mb-6">The short answers come first. Development firm ProductCrafters puts 2026 custom AI agent builds at about $5,000 to more than $180,000. A pilot on one narrow workflow usually takes two to four weeks. A platform is the cheaper start when one of its connectors already covers your task.</p>
       <p className="mb-6">If you have already decided to hire a developer, use our <a href="/blog/best-ai-agent-development-companies-2026" className="text-[#B23E13] underline">ten-company AI agent development comparison</a>. It covers development firms only, with a link to each firm&apos;s published offer. This small-business guide keeps the platform route in the comparison.</p>
 
