@@ -315,7 +315,7 @@ export const POSTS: BlogPost[] = [
   date: 'Mar 7, 2026',
   meta: {
     title: "The Real Cost of a Cheap Website in India: 2026 SME Guide",
-    description: "A ₹10,000 website looks affordable until it costs you leads and rankings. Learn what Indian businesses actually lose, and what a proper site costs to build in 2026."
+    description: "A ₹10,000 website looks affordable until it costs you leads and rankings. What Indian businesses lose, and what a proper site costs to build in 2026."
   },
   readTime: '12 min read',
   imageUrl: '/blog-images/hidden-cost-of-cheap-websites-india.webp',
@@ -796,6 +796,10 @@ export const POSTS: BlogPost[] = [
   slug: 'website-redesign-checklist-2026',
   title: "The 2026 Redesign Checklist: When to Replace Your Old Website",
   excerpt: "If your website is slow, hard to update, or performs poorly on mobile devices, it is no longer helping your business. This guide helps you audit when a redesign is necessary.",
+  meta: {
+    title: "2026 Website Redesign Checklist: When to Replace Your Site",
+    description: "Use this 2026 website redesign checklist to tell when a slow, hard-to-update or weak mobile site needs replacing, and what to audit first."
+  },
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'Oct 20, 2024',
@@ -927,6 +931,10 @@ export const POSTS: BlogPost[] = [
   slug: 'b2b-web-design-trust-signals',
   title: "Trust Signals: How to Design B2B Websites That Convert",
   excerpt: "In B2B, buyers take calculated risks and trust is never assumed. This guide explains how website design builds credibility for high value business decisions.",
+  meta: {
+    title: "B2B Website Trust Signals: Design That Converts | FactoryJet",
+    description: "In B2B, buyers take calculated risks and trust is never assumed. This guide explains how website design builds credibility for high value business decisions."
+  },
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'Oct 18, 2024',
@@ -1061,7 +1069,7 @@ export const POSTS: BlogPost[] = [
   title: "Mobile-Only Design vs Responsive Design: The Complete 2026 Strategy Guide",
   excerpt: "Most users never open your site on a laptop. This guide compares mobile-only design and responsive design, explains why mobile-first is no longer optional, and covers the UX patterns that convert in 2026.",
   meta: {
-    title: "Mobile-Only vs Responsive Design (2026): Which Should You Pick?",
+    title: "Mobile-Only vs Responsive Design (2026): Which to Pick?",
     description: "A plain-English 2026 comparison of mobile-only and responsive design: UX, performance, SEO, and when to pick which for your small business website.",
   },
   category: 'Web Design & Strategy',
@@ -1201,6 +1209,10 @@ export const POSTS: BlogPost[] = [
   slug: 'shopify-vs-woocommerce-india-comparison',
   title: "Shopify vs WooCommerce vs Custom: An India Focused E Commerce Guide",
   excerpt: "Choosing an ecommerce platform in India involves payment gateways, GST, logistics, and long term costs. This guide compares Shopify, WooCommerce, and custom builds from a real Indian business perspective.",
+  meta: {
+    title: "Shopify vs WooCommerce vs Custom: India Ecommerce Guide",
+    description: "Shopify, WooCommerce and custom builds compared for Indian businesses: payment gateways, GST, logistics and long-term cost."
+  },
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 12, 2024',
@@ -1360,6 +1372,10 @@ export const POSTS: BlogPost[] = [
   slug: 'reduce-cart-abandonment-ui-ux',
   title: "Reducing Cart Abandonment: The UI UX Fixes That Save Revenue",
   excerpt: "Most ecommerce stores lose a large share of customers right before payment. This guide explains practical UI and UX changes that directly improve checkout completion.",
+  meta: {
+    title: "Reduce Cart Abandonment: UI/UX Fixes That Save Revenue",
+    description: "Practical UI and UX checkout fixes that reduce cart abandonment, so more of the shoppers who reach payment finish their order."
+  },
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 10, 2024',
@@ -1525,6 +1541,10 @@ export const POSTS: BlogPost[] = [
   slug: 'scaling-ecommerce-infrastructure',
   title: "Scaling Ecommerce Infrastructure: From 10 Orders to 1,000 Orders a Day",
   excerpt: "Traffic spikes do not break websites. Weak technical foundations do. This guide explains how to prepare ecommerce infrastructure for serious growth.",
+  meta: {
+    title: "Scaling Ecommerce Infrastructure: 10 to 1,000 Orders a Day",
+    description: "Traffic spikes do not break websites. Weak technical foundations do. This guide explains how to prepare ecommerce infrastructure for serious growth."
+  },
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 08, 2024',
@@ -1698,7 +1718,7 @@ export const POSTS: BlogPost[] = [
   readTime: '7 min read',
   imageUrl: '/blog-images/quick-commerce-app-design-trends.webp',
   meta: {
-    title: "Quick Commerce App Design: UI Patterns Winning India's 10-Minute Delivery Race (2026)",
+    title: "Quick Commerce App Design 2026: India's Winning UI Patterns",
     description: "UI patterns, speed benchmarks, and design principles that convert in India's hypercompetitive quick commerce market. Blinkit, Zepto, Swiggy Instamart analysis.",
   },
   keyTakeaways: [
@@ -1875,6 +1895,10 @@ export const POSTS: BlogPost[] = [
   slug: 'best-payment-gateway-india-2026',
   title: "The Payment Gateway Matrix: Razorpay vs Stripe vs PhonePe",
   excerpt: "Every failed payment is a lost customer. This guide compares major Indian and international gateways based on reliability, cost, and real world performance.",
+  meta: {
+    title: "Payment Gateway Matrix: Razorpay vs Stripe vs PhonePe",
+    description: "Every failed payment is a lost customer. This guide compares major Indian and international gateways based on reliability, cost, and real world performance."
+  },
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 03, 2024',
@@ -1928,7 +1952,7 @@ export const POSTS: BlogPost[] = [
         In India, payment infrastructure is complex. Cards, UPI, net banking, wallets, and international payments all behave differently. Choosing the right gateway requires understanding real usage patterns.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Understanding the Indian Payment Landscape</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">Understanding the Indian Payment Market</h2>
 
       <p>
         Indian customers prefer UPI for everyday transactions. Cards are still common for higher value purchases. Net banking remains relevant for some segments.
@@ -2048,8 +2072,8 @@ export const POSTS: BlogPost[] = [
   readTime: '11 min read',
   imageUrl: '/blog-images/wordpress-security-audit-guide.webp',
   meta: {
-    title: "How WordPress Sites Get Hacked, and How to Stop It Before It Happens",
-    description: "The exact vulnerabilities hackers exploit in WordPress sites, outdated plugins, weak credentials, shared hosting, and the fixes that prevent 90% of successful attacks.",
+    title: "How WordPress Sites Get Hacked and How to Stop It",
+    description: "The WordPress weak points hackers use most (outdated plugins, weak logins, shared hosting) and the fixes that prevent 90% of successful attacks.",
   },
   keyTakeaways: [
     "Outdated plugins and themes are the most common attack vectors.",
@@ -2246,8 +2270,8 @@ export const POSTS: BlogPost[] = [
   readTime: '9 min read',
   imageUrl: '/blog-images/core-web-vitals-optimization-service.webp',
   meta: {
-    title: "Core Web Vitals 2026: The Only Metrics That Actually Affect Your Google Rankings",
-    description: "LCP, CLS, INP explained in plain English, plus the actionable fixes that actually move your Core Web Vitals score and improve your search rankings.",
+    title: "Core Web Vitals 2026: The Metrics That Affect Rankings",
+    description: "LCP, CLS and INP explained in plain English, plus the fixes that move your Core Web Vitals score and your search rankings.",
   },
   keyTakeaways: [
     "Largest Contentful Paint defines how fast your main content becomes visible.",
@@ -2458,8 +2482,8 @@ export const POSTS: BlogPost[] = [
   readTime: '7 min read',
   imageUrl: '/blog-images/cost-of-website-downtime-calculator.webp',
   meta: {
-    title: "Website Downtime Cost Calculator: What Every Hour Offline Costs Your Business",
-    description: "Calculate your real downtime cost per hour, lost revenue, customer trust damage, SEO impact, and see what a proper maintenance contract actually saves you annually.",
+    title: "Website Downtime Cost Calculator: What an Hour Offline Costs",
+    description: "Work out your downtime cost per hour: lost revenue, customer trust, SEO impact, and what a proper maintenance contract saves you each year.",
   },
   keyTakeaways: [
     "Downtime cost should be calculated per hour, not per incident.",
@@ -2643,7 +2667,7 @@ export const POSTS: BlogPost[] = [
   readTime: '8 min read',
   imageUrl: '/blog-images/wordpress-speed-optimization-plugin-audit.webp',
   meta: {
-    title: "WordPress Running Slow? How Plugin Bloat Kills Your Site Speed (And How to Fix It)",
+    title: "WordPress Running Slow? How to Fix Plugin Bloat",
     description: "The audit process to identify bloated plugins, deactivate safely, and cut your WordPress load time in half, without breaking your site.",
   },
   keyTakeaways: [
@@ -2900,8 +2924,8 @@ export const POSTS: BlogPost[] = [
   readTime: '10 min read',
   imageUrl: '/blog-images/aio-artificial-intelligence-optimization-guide.webp',
   meta: {
-    title: "AI Search Optimization (AIO): How to Rank on ChatGPT, Perplexity & Google AI in 2026",
-    description: "How to structure your content so ChatGPT, Perplexity, and Google AI Overviews cite your brand in generated answers, with practical schema and content strategies.",
+    title: "AIO Guide 2026: Rank on ChatGPT, Perplexity & Google AI",
+    description: "How to structure content so ChatGPT, Perplexity and Google AI Overviews cite your brand, with practical schema and content steps.",
   },
   keyTakeaways: [
     "Modern optimization focuses on answers instead of just rankings.",
@@ -3061,6 +3085,10 @@ export const POSTS: BlogPost[] = [
   slug: 'headless-commerce-pros-cons',
   title: "Headless Commerce Is It Worth the Complexity for Your Business",
   excerpt: "Headless commerce promises speed and flexibility, but it also adds cost and operational overhead. This guide explains when the tradeoff makes sense and when it does not.",
+  meta: {
+    title: "Headless Commerce: Is It Worth the Complexity? | FactoryJet",
+    description: "Headless commerce adds speed and flexibility, but also cost and overhead. This guide explains when the tradeoff makes sense and when it does not."
+  },
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Sep 15, 2024',
@@ -3294,7 +3322,7 @@ export const POSTS: BlogPost[] = [
       </p>
 
       <p>
-        For the right business, headless unlocks powerful capabilities. For others, it adds unnecessary complexity.
+        For the right business, headless gives you powerful capabilities. For others, it adds unnecessary complexity.
       </p>
 
       <p>
@@ -3311,6 +3339,10 @@ export const POSTS: BlogPost[] = [
   slug: 'local-seo-multi-location-business',
   title: "Local SEO for Global Brands: The Glocal Strategy",
   excerpt: "Ranking in multiple cities and countries requires structure, not shortcuts. This guide explains how global brands build strong local visibility without hurting overall traffic.",
+  meta: {
+    title: "Local SEO for Global Brands: The Glocal Strategy",
+    description: "Ranking in many cities and countries takes structure, not shortcuts. How global brands build local visibility without hurting overall traffic."
+  },
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 12, 2024',
@@ -3494,7 +3526,7 @@ export const POSTS: BlogPost[] = [
   readTime: '7 min read',
   imageUrl: '/blog-images/color-psychology-web-design-india.webp',
   meta: {
-    title: "Color Psychology in Indian E-Commerce: Which Colors Drive More Conversions",
+    title: "Color Psychology in Indian E-Commerce: Colors That Convert",
     description: "Research-backed color psychology for Indian e-commerce, what converts in fashion, FMCG, jewellery, and food. Includes Flipkart, Meesho, and Nykaa analysis.",
   },
   keyTakeaways: [
@@ -3762,7 +3794,7 @@ export const POSTS: BlogPost[] = [
   readTime: '9 min read',
   imageUrl: '/blog-images/mvp-development-strategy-startups.webp',
   meta: {
-    title: "Why Startups Should Start With Low-Code (And When to Go Custom)",
+    title: "Why Startups Should Start Low-Code (and When to Go Custom)",
     description: "When Bubble, Webflow, or Shopify beats custom code, and the 3 clear signals that tell you it's time to go full custom. With real startup examples.",
   },
   keyTakeaways: [
@@ -3988,7 +4020,7 @@ export const POSTS: BlogPost[] = [
   isFeatured: true,
   meta: {
     title: "What Is Webflow? Features, Pricing & Honest Review (2026)",
-    description: "Webflow lets you build fast, SEO-ready sites without code. This guide covers Webflow pricing (free, then $15 and $25/mo site plans), features, and when it beats WordPress or Wix in 2026."
+    description: "Webflow builds fast, SEO-ready sites without code. Pricing (free, then $15 and $25/mo site plans), features, and when it beats WordPress or Wix in 2026."
   },
   faqs: [
     { q: "What is Webflow used for?", a: "Webflow is used to design, build, and host websites without writing code. Common use cases include marketing sites, portfolios, blogs, SaaS landing pages, and e-commerce stores." },
@@ -4092,7 +4124,7 @@ export const POSTS: BlogPost[] = [
             <tr><td className="border p-3">Code quality</td><td className="border p-3">Clean, semantic</td><td className="border p-3">Can get messy</td></tr>
             <tr><td className="border p-3">Plugins/extensions</td><td className="border p-3">Growing library</td><td className="border p-3">60,000+ plugins</td></tr>
             <tr><td className="border p-3">Hosting included</td><td className="border p-3">Yes</td><td className="border p-3">Separate cost</td></tr>
-            <tr><td className="border p-3">SEO capabilities</td><td className="border p-3">Built-in, robust</td><td className="border p-3">Yoast / RankMath</td></tr>
+            <tr><td className="border p-3">SEO capabilities</td><td className="border p-3">Built-in, strong</td><td className="border p-3">Yoast / RankMath</td></tr>
             <tr><td className="border p-3">Speed</td><td className="border p-3">Fast (CDN)</td><td className="border p-3">Needs optimization</td></tr>
             <tr><td className="border p-3">Learning curve</td><td className="border p-3">Medium</td><td className="border p-3">Medium–High</td></tr>
             <tr><td className="border p-3">Starting price</td><td className="border p-3">$15/mo (Basic); CMS from $25/mo (Premium)</td><td className="border p-3">Free core, ~$10–30/mo hosting</td></tr>
@@ -4335,8 +4367,8 @@ export const POSTS: BlogPost[] = [
   imageFit: 'contain',
   isFeatured: true,
   meta: {
-    title: "Best Web Design & E-Commerce Development Companies in Mumbai 2026 | FactoryJet",
-    description: "Compare Mumbai's best web design and e-commerce development agencies. Pricing from ₹10,000. Portfolio quality, tech stack, and SEO-readiness reviewed, 2026 updated guide."
+    title: "Best Web Design & Ecommerce Companies in Mumbai 2026",
+    description: "Compare Mumbai's best web design and ecommerce development agencies for 2026: pricing from ₹10,000, portfolio quality, tech stack and SEO readiness."
   },
   faqs: [
     { q: "Which is the best web design company in Mumbai?", a: "FactoryJet ranks among the top choices for conversion-focused websites. Creaa Designs is excellent for brand-driven projects. For e-commerce, Bloom Agency and Eskon Web Solutions are strong options. The best choice depends on your business goals and budget." },
