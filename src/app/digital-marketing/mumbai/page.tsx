@@ -22,15 +22,15 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 const CANONICAL = 'https://factoryjet.com/digital-marketing/mumbai';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Agency in Mumbai | SEO + AI Search | FactoryJet',
+  title: 'Digital Marketing Agency in Mumbai | SEO + AI | FactoryJet',
   description:
-    'Looking for a digital marketing agency or SEO company in Mumbai? FactoryJet helps Mumbai businesses get found on Google and AI tools like ChatGPT, and turn clicks into real enquiries. One senior in-house team for SEO, social media, Google Ads, websites and more.',
+    'Digital marketing agency in Mumbai for SEO, Google Ads, social and AI search. One senior team that turns Mumbai searches into calls and WhatsApp enquiries.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Digital Marketing Agency in Mumbai | SEO + AI Search | FactoryJet',
+    title: 'Digital Marketing Agency in Mumbai | SEO + AI | FactoryJet',
     description:
-      'One senior in-house team that gets Mumbai businesses found on Google and AI search, and turns visitors into enquiries. SEO, ads, websites, social and more.',
+      'Digital marketing agency in Mumbai for SEO, Google Ads, social and AI search. One senior team that turns Mumbai searches into calls and WhatsApp enquiries.',
     url: CANONICAL,
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Digital Marketing Agency in Mumbai | FactoryJet',
     description:
-      'Get found on Google and AI search, and turn Mumbai visitors into customers. One senior in-house team.',
+      'SEO, Google Ads, social and AI search for Mumbai firms, from BKC finance to Zaveri Bazaar jewellers. One senior team.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -70,83 +70,83 @@ export const metadata: Metadata = {
 };
 
 /* ────────────────────────────────────────────────────────────────────────
-   Mumbai city page. Plain language, no pricing anywhere. Every jargon word is
-   explained the first time it appears. Content is written for Mumbai: local
-   areas, local business types, local buying behaviour. Competitor and FAQ
-   material is grounded in live DataForSEO data pulled July 2026 for
-   "digital marketing agency in mumbai" and "seo agency in mumbai".
+   Mumbai city page. No pricing. Jargon is explained on first use. Copy is
+   written around Mumbai's own business mix: BFSI around BKC and Nariman Point,
+   film and media, D2C and fashion labels, real estate, Zaveri Bazaar jewellers
+   and the diamond trade, textile wholesale, and port logistics near Nhava
+   Sheva. Competitor and FAQ topics come from DataForSEO data pulled July 2026.
    ──────────────────────────────────────────────────────────────────────── */
 
 const HERO_TRUST = [
   '500+ businesses helped',
   '12 years of experience',
-  'One senior in-house team',
-  'Found on Google and AI search',
+  'Senior people on every Mumbai account',
+  'Visible on Google, Maps and ChatGPT',
 ];
 
 const STATS = [
   { value: '500+', label: 'Businesses helped', note: 'Across India, US, UK and UAE' },
-  { value: '12 yrs', label: 'Years doing this', note: 'Not a new agency practising on you' },
-  { value: 'In-house', label: 'Senior team', note: 'No work handed to freshers' },
+  { value: '12 yrs', label: 'Years doing this', note: 'Not a new agency learning on your budget' },
+  { value: 'In-house', label: 'Senior team', note: 'The person you meet runs your account' },
   { value: '4', label: 'Countries served', note: 'India, US, UK and UAE' },
 ];
 
-// Channel grid = the internal-link authority hub. Each card links into an
+// Channel grid doubles as the internal-link hub. Each card points to an
 // existing FactoryJet service page so this Mumbai page passes authority down.
 const CHANNELS: IndustryCard[] = [
   {
     name: 'SEO (get found on Google)',
     description:
-      'SEO means search engine optimisation. In plain words: showing up on Google when a Mumbai customer searches to buy, without paying for every click.',
+      'Search engine optimisation puts your firm on page one when someone in Mumbai types "CA in Andheri" or "interior designer Powai". You stop paying per click once rankings hold.',
     linkLabel: 'Explore SEO',
     linkHref: '/seo',
   },
   {
     name: 'Websites that sell',
     description:
-      'A fast, mobile-first website that loads quickly on patchy local networks and turns visitors into calls and enquiries, instead of just looking nice.',
+      'Most Mumbai visitors open your site on a phone between stations. We build pages that load before the train pulls out and push people to call or WhatsApp you.',
     linkLabel: 'See web design',
     linkHref: '/web-design',
   },
   {
     name: 'Online stores',
     description:
-      'Ecommerce means selling online. We build stores that are easy for Mumbai shoppers to buy from and easy for you to run and pack.',
+      'For fashion labels, home brands and food startups that ship from Mumbai: a store that checks out fast, takes UPI and keeps your packing list tidy.',
     linkLabel: 'See ecommerce',
     linkHref: '/services/ecommerce-development',
   },
   {
     name: 'AI search (get picked by ChatGPT)',
     description:
-      'When people ask ChatGPT, Gemini or Google’s AI "which agency in Mumbai should I pick", we help your business be one of the answers. This newer skill is called GEO.',
+      'Buyers now ask ChatGPT and Gemini to shortlist a wealth advisor, a broker or a caterer in Mumbai. GEO is the work of getting your name into those shortlists.',
     linkLabel: 'Explore AI SEO',
     linkHref: '/ai-seo',
   },
   {
     name: 'Chatbots and automation',
     description:
-      'Smart helpers that reply to customers day and night, useful when your Mumbai shop or clinic is shut, so you never lose a late-night enquiry.',
+      'An assistant that answers rate, stock and booking questions after hours, so a clinic in Chembur or a showroom in Malad keeps catching late enquiries.',
     linkLabel: 'See AI agents',
     linkHref: '/services/ai-agent-development',
   },
   {
     name: 'WhatsApp for business',
     description:
-      'Answer customers and collect leads automatically on WhatsApp, the app nearly every Mumbai buyer already uses every single day.',
+      'Mumbai deals start on WhatsApp. Auto-replies, catalogues and lead capture there mean a broker or wholesaler never misses a message in a busy hour.',
     linkLabel: 'See WhatsApp chatbot',
     linkHref: '/whatsapp-chatbot',
   },
   {
     name: 'Shopify stores',
     description:
-      'Shopify is a popular tool for online shops. We build custom Shopify stores for Mumbai D2C brands that look great and load fast.',
+      'Custom Shopify builds for Mumbai D2C labels in apparel, beauty and gourmet food, set up for COD checks, fast loading and clean product pages.',
     linkLabel: 'See Shopify',
     linkHref: '/shopify-development',
   },
   {
     name: 'WordPress websites',
     description:
-      'WordPress is the world’s most-used website tool. We build flexible sites on it that you fully own and control, no lock-in.',
+      'Content-heavy sites for law firms, consultancies and real estate developers, on a platform your own staff can edit and that you keep full rights to.',
     linkLabel: 'See WordPress',
     linkHref: '/wordpress-development',
   },
@@ -154,32 +154,23 @@ const CHANNELS: IndustryCard[] = [
 
 const COMPARE_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'Traditional agency' },
-  { label: 'Freelancer' },
-  { label: 'Your own team' },
+  { label: 'Big network agency' },
+  { label: 'Solo freelancer' },
+  { label: 'Hiring in-house' },
 ] as const;
 
 const COMPARE_ROWS = [
   {
-    feature: 'Who actually does your work',
+    feature: 'Seniority of the person on your account',
     values: [
-      'Senior, in-house',
-      'Often freshers',
-      'One person',
-      'You hire and train',
+      'Experienced lead',
+      'Junior executives',
+      'Depends on the person',
+      'Whoever you can hire',
     ],
   },
   {
-    feature: 'All channels handled in one place',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ag" kind="partial" />,
-      <CompareIcon key="fr" kind="no" />,
-      <CompareIcon key="ih" kind="partial" />,
-    ],
-  },
-  {
-    feature: 'Simple monthly report you can actually read',
+    feature: 'SEO, ads, social and web under one roof',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -188,7 +179,16 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Gets you into AI search (ChatGPT, Gemini, Google AI)',
+    feature: 'Monthly numbers a busy owner can read in two minutes',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="ag" kind="partial" />,
+      <CompareIcon key="fr" kind="no" />,
+      <CompareIcon key="ih" kind="partial" />,
+    ],
+  },
+  {
+    feature: 'Work on ChatGPT, Gemini and Google AI answers',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="no" />,
@@ -197,7 +197,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Understands Mumbai buyers and local search',
+    feature: 'Knows how Mumbai buyers search, area by area',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -206,7 +206,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Start quickly, no long lock-in',
+    feature: 'Can begin within days, no year-long contract',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="no" />,
@@ -215,7 +215,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Sets up local Mumbai search (Google Maps and the local pack)',
+    feature: 'Google Business Profile and map pack for each branch',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -224,7 +224,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Fast WhatsApp follow-up so no enquiry is missed',
+    feature: 'WhatsApp replies wired to every lead source',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -233,7 +233,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Explains the work in plain words, no jargon',
+    feature: 'Talks in business terms instead of agency jargon',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -242,7 +242,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'One clear plan agreed before any work starts',
+    feature: 'Written scope signed off before spending starts',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -251,7 +251,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Can show real results for a business like yours',
+    feature: 'Past work in a category close to yours',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="yes" />,
@@ -264,103 +264,101 @@ const COMPARE_ROWS = [
 const PILLARS: Pillar[] = [
   {
     icon: '\u{1F9E9}',
-    title: 'One channel alone is not a plan',
+    title: 'Channels run by separate vendors',
     body:
-      'Doing only SEO, or only Instagram, or only Google ads leaves gaps. A Mumbai buyer might find you on Google, check your Instagram, then message on WhatsApp before deciding. We join the channels so nothing leaks between them.',
+      'A Bandra boutique often has one freelancer on Instagram, another on Google Ads and nobody watching WhatsApp. The shopper who saw your reel and then searched your name lands nowhere useful. We run the channels as one funnel.',
   },
   {
     icon: '\u{1F464}',
-    title: 'Freshers learning on your business',
+    title: 'The pitch team disappears after signing',
     body:
-      'Plenty of agencies win you over with senior people, then quietly hand your account to trainees. In a market as competitive as Mumbai, that lost time is expensive. At FactoryJet, experienced people do the real work.',
+      'In Mumbai, ad clicks in finance, property and healthcare are expensive. When a trainee learns on your account, each wasted month burns real budget. Our senior people stay on the work after the contract is signed.',
   },
   {
     icon: '\u{1F916}',
-    title: 'Ignoring AI search is a costly mistake',
+    title: 'No plan for AI answers',
     body:
-      'More and more Mumbai buyers now ask ChatGPT or Google’s AI "which company should I pick" before they call anyone. Agencies stuck on old-style SEO miss this completely. We get you found on Google and inside AI answers.',
+      'People shortlisting a home loan advisor, a wedding caterer or a co-working space in Mumbai now ask ChatGPT first. If your site gives AI tools nothing clear to quote, a rival gets named instead. We write for Google and for AI answers together.',
   },
 ];
 
-// Named-competitor comparison, built from live DataForSEO ranking data for
-// "digital marketing agency in mumbai" and "seo agency in mumbai" (July 2026).
-// Honest, positive, with open self-disclosure that FactoryJet is on the list.
+// Named agencies taken from DataForSEO ranking data for Mumbai digital
+// marketing and SEO searches (July 2026). FactoryJet is listed openly.
 const AGENCIES = [
   {
     name: 'FactoryJet',
     bestFor:
-      'Mumbai small and mid-size businesses that want one senior team across website, Google, ads and AI search, with plain-English monthly reports. (Yes, that is us. We include ourselves openly and let the comparison speak for itself.)',
+      'Mumbai owners who want one senior team for site, Google, ads and AI answers, and a short monthly report in plain English. We put ourselves on this list and say so.',
     isUs: true,
   },
   {
     name: 'DigiChefs',
-    bestFor: 'Businesses that want a well-rounded Mumbai team covering both organic Google growth and paid performance ads.',
+    bestFor: 'Firms that want a single Mumbai partner splitting effort between organic rankings and paid campaigns.',
   },
   {
     name: 'Brandwitty',
-    bestFor: 'Andheri-area brands that lean on social media and local Mumbai SEO to build a following.',
+    bestFor: 'Brands around Andheri building a following through social content backed by local search work.',
   },
   {
     name: 'Social Beat',
-    bestFor: 'Bigger brands that want data-led social media and performance marketing at scale.',
+    bestFor: 'Large consumer brands running social and performance campaigns at high volume.',
   },
   {
     name: 'Techmagnate',
-    bestFor: 'Companies whose main need is deep, technical SEO to climb Google over the long run.',
+    bestFor: 'Companies with big sites whose priority is technical SEO over several years.',
   },
   {
     name: 'Infidigit',
-    bestFor: 'Larger businesses that want a specialist, SEO-only agency and nothing else.',
+    bestFor: 'Enterprises that prefer an agency doing SEO alone, with no other channels mixed in.',
   },
   {
     name: 'FruitBowl Digital',
-    bestFor: 'Brands that want wide digital coverage with creative and public-relations style promotion.',
+    bestFor: 'Brands after broad digital work plus creative campaigns with a PR flavour.',
   },
 ];
 
 const JOURNEY: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'A free, no-pressure chat',
-    description: 'We learn about your Mumbai business, your customers and your goals. No jargon, no hard sell.',
+    title: 'A free first call',
+    description: 'Tell us what you sell, which Mumbai areas you serve and where enquiries come from today.',
   },
   {
     number: '02',
-    title: 'A clear, simple plan',
-    description: 'We show you exactly what we will do and why, in words you can understand and approve.',
+    title: 'A written plan',
+    description: 'You get the channels, the order we tackle them and the reason for each, on one page.',
   },
   {
     number: '03',
-    title: 'We build and run it',
-    description: 'Website, Google, ads, AI search, whatever you picked. Our senior team does the actual work.',
+    title: 'Senior people do the work',
+    description: 'Site fixes, Google, Maps, ads, AI answers: whatever the plan lists, built by experienced hands.',
   },
   {
     number: '04',
-    title: 'You see the results',
-    description: 'A simple monthly report: visitors, enquiries and what we did. Real numbers, plainly shown.',
+    title: 'A monthly scorecard',
+    description: 'Calls, forms and WhatsApp leads, set beside the tasks we finished that month.',
   },
   {
     number: '05',
-    title: 'We keep improving',
-    description: 'We do more of what brings you leads and drop what does not. Month after month.',
+    title: 'Budget follows results',
+    description: 'Spend shifts toward whatever produced enquiries last month. Weak channels get cut.',
   },
 ];
 
-// Mumbai market context. Every number below is real, current (July 2026), and
-// linked to a source that resolves. These back the CityContextSection so the
-// page earns trust with AI answer engines and human readers alike.
+// Mumbai market context. Values, links and sources are unchanged from the
+// July 2026 research; only the explanatory labels were rewritten.
 const MARKET_STATS = [
   {
     value: '1.03 billion',
     label:
-      'people in India now use the internet, about 70 in every 100 Indians. Your Mumbai customers are already online, searching before they buy.',
+      'Indians are online, about 70 in every 100. A Mumbai buyer checking a jeweller, a clinic or a flat compares options on a phone first.',
     sourceUrl: 'https://datareportal.com/reports/digital-2026-india',
     sourceLabel: 'DataReportal Digital 2026',
   },
   {
     value: '100 million+',
     label:
-      'weekly ChatGPT users are in India, its second-largest market after the US. More Mumbai buyers now ask AI tools who to pick before they call anyone.',
+      'people in India use ChatGPT each week, its second-biggest market after the US. Shortlists for Mumbai services now start inside AI chats.',
     sourceUrl:
       'https://techcrunch.com/2026/02/15/india-has-100m-weekly-active-chatgpt-users-sam-altman-says/',
     sourceLabel: 'TechCrunch, Feb 2026',
@@ -368,51 +366,50 @@ const MARKET_STATS = [
   {
     value: '34,444',
     label:
-      'government-recognised startups sit in Maharashtra, the state Mumbai anchors, more than any other state in India. Attention here is hard-won.',
+      'DPIIT-recognised startups are registered in Maharashtra, the most of any state. Every one of them is bidding for the same Mumbai attention you want.',
     sourceUrl: 'https://inc42.com/buzz/india-home-to-nearly-2-lakh-dpiit-recognised-startups/',
     sourceLabel: 'Inc42 / DPIIT, Oct 2025',
   },
 ];
 
-// The honest "which channels actually bring enquiries" listicle. Ordered by how
-// steadily each one brings leads for a typical Mumbai business, not by hype.
-// Real high-volume Mumbai search terms are woven in naturally.
+// Channels ranked by how steadily each one produces enquiries for a typical
+// Mumbai business. Order reflects lead flow, with search terms used naturally.
 const CHANNELS_RANKED = [
   {
     name: 'Showing up on Google when people search to buy (SEO)',
-    who: 'Almost every Mumbai business, and even an SEO company in Mumbai chasing its own clients.',
+    who: 'Nearly every Mumbai firm, from a Fort law chamber to a Thane coaching class.',
     body:
-      'SEO means search engine optimisation, which is just getting your business to show on Google without paying for each click. When someone types "salon near me" or "CA firm in Andheri", you want to be there. It takes a few months to build, but once it works it brings enquiries month after month for free. For most Mumbai businesses this is the steadiest channel.',
+      'Searches like "chartered accountant Andheri East" or "wholesale sarees Kalbadevi" come from people ready to act. SEO earns you a place on that results page without a fee per click. Expect three to six months before it pays back, then enquiries keep arriving while you sleep. Over a year, no other channel gives most Mumbai owners as many leads.',
   },
   {
     name: 'Local search and Google Maps (local SEO)',
-    who: 'Shops, clinics, salons, restaurants and any business a customer can walk into.',
+    who: 'Showrooms, clinics, salons, cafes and any counter a customer walks up to.',
     body:
-      'Local SEO is the part of SEO that puts you on the map, literally. When a Mumbai buyer searches on their phone, Google shows a small map with three nearby businesses first. Getting into that box, and onto Google Maps, brings walk-ins and calls from people who are ready to buy right now. Setting up your Google Business Profile properly is the first step.',
+      'Type "dentist near me" in Dadar and Google shows three businesses on a map before anything else. Those three slots drive most of the calls. We set up your Google Business Profile, fix the address and phone details across directories, and help you collect reviews, branch by branch if you have several outlets.',
   },
   {
     name: 'Google Ads for quick enquiries',
-    who: 'Businesses that need calls this week, or that are just starting out on Google.',
+    who: 'New launches, seasonal offers and anyone who needs calls before month end.',
     body:
-      'Google Ads means paying to appear at the very top when someone searches. The moment you switch them on, you can get enquiries; the moment you switch them off, they stop. Ads are the fastest way to test what your Mumbai customers respond to, while your free Google rankings build up quietly in the background. This paid side is often called performance marketing.',
+      'Paid search shows you at the top the day the campaign goes live and stops when the budget does. In Mumbai, categories like home loans, property and IVF carry steep clicks, so tight keywords and negative terms matter. We use ads to learn which offers convert while organic rankings grow. Agencies call this performance marketing.',
   },
   {
     name: 'Social media marketing (Instagram, Facebook, LinkedIn)',
-    who: 'Restaurants, salons, D2C brands and anyone whose customers buy on looks and trust.',
+    who: 'Fashion and beauty labels, restaurants, event venues and B2B firms selling on reputation.',
     body:
-      'Social media builds familiarity so that when a buyer is ready, they already know your name. A social media marketing agency in Mumbai will post, run offers and reply to comments. It works more slowly than search, and it is better at building trust than at bringing instant enquiries, so we pair it with Google rather than leaning on it alone.',
+      'Instagram sells looks and LinkedIn sells credibility to the BKC crowd. Reels, offers and replies to DMs keep your name familiar until the buyer is ready. Social is slower than search at producing enquiries, so we tie every campaign to a landing page, a Google listing or a WhatsApp chat.',
   },
   {
     name: 'WhatsApp follow-up',
-    who: 'Every Mumbai business, because nearly every buyer here uses WhatsApp daily.',
+    who: 'Any Mumbai business, because buyers here expect a reply on WhatsApp first.',
     body:
-      'Getting the enquiry is only half the job. Replying fast is the other half. A click-to-WhatsApp button and quick, friendly follow-up turn far more enquiries into paying customers. Many businesses lose leads simply by answering a day too late. WhatsApp closes that gap.',
+      'A lead who waits until tomorrow has usually messaged three competitors. Click-to-chat buttons, instant replies with a catalogue, and a named person following up within the hour win far more of those conversations. For brokers and wholesalers, faster replies can matter as much as a bigger ad budget.',
   },
   {
     name: 'Getting picked by AI search (ChatGPT, Gemini, Google AI)',
-    who: 'Forward-looking Mumbai businesses whose buyers ask AI tools for recommendations.',
+    who: 'Mumbai firms whose buyers research before they call: finance, health, property, B2B.',
     body:
-      'This is the newest channel and most agencies ignore it, which is your opening. When someone asks ChatGPT or Google’s AI "which agency in Mumbai should I pick", you want your business named in the answer. Shaping your website so AI tools recommend you is a newer skill called GEO, short for generative engine optimisation. We build it in from the start.',
+      'Ask ChatGPT for "a good wealth management firm in South Mumbai" and it names a handful of businesses. Being on that list depends on clear, quotable facts on your site and mentions elsewhere on the web. The discipline is called GEO, generative engine optimisation, and few local agencies offer it yet. We include it from month one.',
   },
 ];
 
@@ -427,231 +424,230 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   { key: 'ai', label: 'AI and the future' },
 ];
 
-// Every FAQ below is grounded in real "People Also Ask" and related-search
-// queries pulled from DataForSEO for Mumbai (July 2026). Career and
-// "how to earn" queries were deliberately excluded (not buyer intent).
+// FAQ topics come from People Also Ask and related searches for Mumbai
+// (DataForSEO, July 2026). Career and "how to earn" queries were left out.
 const FAQ_ITEMS: FAQItem[] = [
   {
     category: 'choosing',
     question: 'Which is the best digital marketing agency in Mumbai?',
     answer:
-      'There is no single "best" agency for everyone in a city this big. The best one for you depends on your size, your goals and who actually does your work. A large brand in BKC and a small boutique in Bandra need very different help. Lower on this page we compare the top Mumbai agencies honestly, including ourselves, so you can pick the right fit instead of the loudest name.',
+      'It depends on who you are. A listed NBFC in BKC, a jewellery house in Zaveri Bazaar and a cafe in Bandra want different things from an agency. Match the agency to your size, your category and the person who will run your account. Further down we compare well-known Mumbai agencies, FactoryJet included, so you can judge fit for yourself.',
   },
   {
     category: 'choosing',
-    question: 'Which agency is best for digital marketing?',
+    question: 'Which kind of agency is best for digital marketing?',
     answer:
-      'Ask "best for what", not just "best". Some agencies are strongest at SEO (free Google traffic), some at social media, some at paid ads. The best pick for your business is the team whose strengths match what you actually need, that puts a senior person on your account, and that reports results in plain numbers you can read.',
+      'Start with your goal. If you need walk-ins, pick a team strong in local search. If you sell online, pick one that has run ecommerce ads and stores. If buyers research for weeks, as in finance or B2B, pick one that writes well and works on AI answers. Then check that a senior person handles your work and that reports show enquiries.',
   },
   {
     category: 'choosing',
-    question: 'How do I pick from all the "top 10 digital marketing agencies in Mumbai" lists?',
+    question: 'Can I trust the "top 10 digital marketing agencies in Mumbai" lists?',
     answer:
-      'Most of those "top 10" and "top 50" lists are either paid placements or the writer’s own opinion, so treat them as a starting point, not gospel. Shortlist three or four names, then judge each one on three things: who will run your account, what you get each month in plain words, and whether they can show real results for a business like yours. The list gets you names; those three questions get you the truth.',
+      'Use them for names and little else. Many of those lists are sponsored, and some are written by an agency ranking itself first. Take three or four names, ask each for a sample monthly report, ask who will handle your account, and ask for an example from your own category. Their answers tell you more than the ranking.',
   },
   {
     category: 'choosing',
-    question: 'How do I choose the right digital marketing agency in Mumbai?',
+    question: 'How should I choose a digital marketing agency in Mumbai?',
     answer:
-      'Ask three simple questions before you sign anything. One: who will actually do my work, a senior person or a fresher? Two: what exactly will I get each month, in plain words? Three: can you show me real results for a business like mine? A Mumbai agency that answers all three clearly is usually a safe choice.',
+      'Meet two or three, then compare on facts. Who runs the account each week, and how long have they done this? What will you receive every month, item by item? What have they done for a business close to yours, say another clinic, broker or D2C label? Pick the one whose answers you could repeat to your partner without notes.',
   },
   {
     category: 'choosing',
-    question: 'Is it worth paying a digital marketing agency in Mumbai?',
+    question: 'Is hiring a digital marketing agency in Mumbai worth the money?',
     answer:
-      'It is worth it when the agency brings you more enquiries than you would get on your own, and can show you where those enquiries came from. The honest answer to "is it worth it" is that it depends on what you need and whether the work is done by experienced people. Judge value by the leads and sales it brings over a few months, not by who talks the best in the first meeting.',
+      'It pays when the extra enquiries are worth more than the fee and you can trace where each one came from. Give it three to six months, since SEO and content need time. If the agency cannot show calls, forms or WhatsApp leads by source after that, the spend is not working and you should change course.',
   },
   {
     category: 'choosing',
-    question: 'Agency vs freelancer vs building my own team in Mumbai: which is right?',
+    question: 'Should a Mumbai business hire an agency, a freelancer or its own team?',
     answer:
-      'A freelancer is one person. They are handy for a single small task, but one person cannot cover SEO, ads, design and content all at once. Building your own team gives you full control but takes months to hire and train, and good Mumbai marketers are hard to keep. An agency gives you a whole team instantly, across every skill. For most growing businesses, an agency is the fastest way to cover everything without the hiring headache.',
+      'A freelancer suits one job, such as a logo refresh or a few blog posts. An in-house team gives control, but hiring and keeping good marketers in Mumbai is slow and costly, and you still need SEO, ads, design and analytics skills together. An agency brings all those skills from week one. Many owners start with an agency and hire in-house once the playbook is proven.',
   },
   {
     category: 'services',
-    question: 'What does a digital marketing agency in Mumbai actually do?',
+    question: 'What does a digital marketing agency in Mumbai do day to day?',
     answer:
-      'In simple words, it helps more of the right people find your business online and turn into customers. That means building or fixing your website, getting you to show up on Google (this is called SEO, short for search engine optimisation), running ads, posting on social media, and staying in touch by email or WhatsApp. The goal is always the same: more calls, more enquiries, more sales.',
+      'It makes sure buyers searching for what you sell find you and contact you. In practice that means fixing the website, working on Google rankings (SEO), running Google and Meta ads, posting on social, building WhatsApp and email follow-up, and now making your business quotable for AI tools. Each task is judged by one thing: did it produce calls, forms or chats.',
   },
   {
     category: 'services',
     question: 'What are the 7 types of digital marketing?',
     answer:
-      'The seven most common types are: SEO (showing up on Google for free), paid ads (paying Google or Instagram to show your business), social media marketing (Instagram, Facebook, LinkedIn), content marketing (blogs and videos that pull people in), email and WhatsApp marketing (staying in touch with customers), influencer marketing (creators recommending you), and the newest one, AI search or GEO (getting recommended by tools like ChatGPT). A good agency mixes the few that fit your business best, not all seven at once.',
+      'The usual list is: SEO for free Google traffic, paid search and social ads, social media content, content marketing such as guides and videos, email and WhatsApp marketing, influencer and creator tie-ups, and GEO for AI tools like ChatGPT. A textile wholesaler and a skincare brand would pick different ones. Most Mumbai businesses do well with three or four, run properly.',
   },
   {
     category: 'services',
-    question: 'Which channels bring the most enquiries for Mumbai businesses?',
+    question: 'Which channels bring Mumbai businesses the most enquiries?',
     answer:
-      'It depends on your business, and any agency that says "do everything" is guessing. For most Mumbai businesses, showing up on Google when someone is searching to buy, plus a fast mobile website and quick WhatsApp follow-up, brings the most enquiries. Social media builds trust and works well for restaurants, salons and D2C brands, but usually more slowly. We pick channels based on where your customers already are, not on what is trendy.',
+      'For service firms, clinics and showrooms, Google search and Maps usually lead, followed by fast WhatsApp replies. D2C and fashion labels get more from Instagram and Meta ads feeding a quick store. B2B and finance firms tend to win on LinkedIn, long-form content and AI answers. We look at your past enquiries before recommending anything.',
   },
   {
     category: 'services',
-    question: 'Do I need SEO, ads or social media first?',
+    question: 'Should I start with SEO, ads or social media?',
     answer:
-      'If you need customers this week, start with ads, because they bring visitors the day you switch them on. If you want steady free traffic that grows over months, start with SEO. Most Mumbai businesses do best with a small mix: ads for quick results while SEO builds up quietly in the background.',
+      'Need calls this month? Start with Google Ads. Want enquiries that keep coming without paying per click? Start SEO now, because it takes months. Selling a product people buy on looks? Add Instagram. A sensible pattern for many Mumbai businesses is to run ads for the first few months and lower ad spend as organic rankings take over.',
   },
   {
     category: 'services',
-    question: 'What is the difference between digital marketing and just running ads?',
+    question: 'How is digital marketing different from simply running ads?',
     answer:
-      'Ads are only one part. Running ads means paying to show your business at the top of Google or Instagram, and it stops the moment you stop paying. Digital marketing is the full picture: your website, showing up on Google for free, social media, content and ads working together. Ads alone are like renting attention; the rest is like building something you own.',
+      'Ads rent you a spot at the top of Google or Instagram, and the spot vanishes when spending stops. Digital marketing adds the assets that keep working: a site that converts, rankings you earn, reviews on Maps, content that AI tools quote, and a WhatsApp process that closes leads. Ads work best as one part of that system.',
   },
   {
     category: 'seo',
     question: 'Which is the best SEO agency in Mumbai?',
     answer:
-      'Just like with digital marketing, there is no single best SEO agency for every business. Some Mumbai SEO teams are great for small local shops that want to show up on Google Maps, others are built for big companies with thousands of pages. The right one for you is honest about timelines, explains its work in plain words, and never "guarantees" the number-one spot. Anyone who guarantees rankings is not being straight with you.',
+      'The right SEO partner for a Ghatkopar clinic is different from the right one for a bank with a huge website. Look for clear timelines, a written list of what they will fix, and monthly proof in rankings and enquiries. Walk away from anyone promising the number one spot by a date, because no one controls Google.',
   },
   {
     category: 'seo',
-    question: 'What does an SEO agency in Mumbai actually do, in plain words?',
+    question: 'What does an SEO agency in Mumbai do for my business?',
     answer:
-      'SEO means search engine optimisation, which is just getting your business to show up on Google when people search, without paying for each click. A good SEO agency fixes the technical side of your website so Google can read it, writes helpful pages around what your customers search for, sets up your Google Business Profile for local searches, and earns links from other trusted sites. Done well, it brings you visitors month after month for free.',
+      'Four things. It fixes technical issues so Google can crawl and load your site quickly. It writes pages that match what Mumbai buyers type, such as service plus area. It sets up your Google Business Profile for map results. And it earns links and mentions from trusted sites. Together these bring unpaid visitors every month.',
   },
   {
     category: 'seo',
-    question: 'Do I need an SEO expert based in Mumbai specifically?',
+    question: 'Does my SEO expert need to sit in Mumbai?',
     answer:
-      'Not really. SEO work happens online, so a skilled team can rank your Mumbai business from anywhere in India. What actually helps is an agency that understands local Mumbai searches, sets up your Google Maps listing properly, and knows how your customers phrase things. Judge an SEO expert by their results and how clearly they explain things, not by whether their office is in your part of the city.',
+      'No. Rankings depend on your site and your listings, and that work is done online. What matters is that the team knows Mumbai search habits, such as people adding the suburb or station name to a query, and searching in Hinglish. Judge an SEO expert on results for similar businesses and how plainly they explain the plan.',
   },
   {
     category: 'seo',
-    question: 'Is the best SEO agency always the biggest one?',
+    question: 'Is a bigger SEO agency always better?',
     answer:
-      'No. The biggest, most famous SEO agencies are usually built for large enterprises with huge websites, and a small Mumbai business can easily get lost as a minor account there. A smaller senior team often gives your work more care and attention. Size is not the same as fit. Pick the team that treats your business as important, whatever its size.',
+      'Not for most Mumbai businesses. Large SEO firms are set up for enterprise sites with thousands of pages, and a mid-size account can end up with a junior executive. A smaller senior team usually spends more time on your site. Choose on attention and track record in your category, and treat headcount as a side detail.',
   },
   {
     category: 'local',
-    question: 'Do you only work with businesses in Mumbai, or across the city and Navi Mumbai and Thane?',
+    question: 'Do you work only in Mumbai city, or also in Navi Mumbai and Thane?',
     answer:
-      'We help businesses across all of Mumbai, plus Navi Mumbai, Thane and the wider MMR region. Because the work happens online, we are not limited to one area. Whether you are in South Mumbai, the western suburbs, the central line or Navi Mumbai, the same senior team handles your account.',
+      'We work across the whole MMR: South Mumbai, the western and central suburbs, Navi Mumbai, Thane, and further out to Kalyan, Vasai and Panvel. The work is done online, so location inside the region makes no difference to the team you get. We do set up local search for each area you actually serve.',
   },
   {
     category: 'local',
-    question: 'Do you cover business areas like Andheri, BKC and Lower Parel?',
+    question: 'Do you work with firms in Andheri, BKC and Lower Parel?',
     answer:
-      'Yes. We work with businesses in Mumbai’s main commercial areas, including Andheri, Bandra Kurla Complex (BKC), Lower Parel, Powai, Malad and South Mumbai. A restaurant in Bandra and a services firm in BKC need different plans, and we tailor the work to your area and your kind of customer rather than using one template for everyone.',
+      'Yes. We work with businesses in Andheri, BKC, Lower Parel, Powai, Malad and South Mumbai, among other areas. A Lower Parel media agency and an Andheri SEEPZ exporter need different keywords and channels, so the plan is written for your area and your buyer, with no shared template.',
   },
   {
     category: 'local',
-    question: 'Do I need a Mumbai agency, or can one from Bangalore or elsewhere do the job?',
+    question: 'Must I hire an agency based in Mumbai, or can an outside team do it?',
     answer:
-      'You do not strictly need a Mumbai-based agency, because almost all the work happens online and a good team can help you from anywhere in India. What matters more is whether they understand your customers, reply quickly, and set up local search properly. That said, a team that knows Mumbai buyers and areas can get to the point faster. We work with businesses across India, the US, the UK and the UAE, all remotely.',
+      'An outside team can do it well, since campaigns, sites and listings are all managed online. Check for three things instead of an address: quick replies, real understanding of Mumbai buyers, and proper local search setup. We work with clients across India, the US, the UK and the UAE, all remotely.',
   },
   {
     category: 'local',
-    question: 'Which types of Mumbai businesses do you help?',
+    question: 'What kinds of Mumbai businesses do you work with?',
     answer:
-      'A wide mix: restaurants and cafes, salons and clinics, real estate and interior firms, jewellers and boutiques, coaching classes, D2C brands (companies that sell their own products online), and B2B service firms (businesses that sell to other businesses). If your customers search on Google, scroll Instagram or ask ChatGPT before they buy, we can help you reach them.',
+      'Finance and insurance advisors, real estate developers and brokers, jewellers and diamond traders, textile and garment wholesalers, logistics and freight firms, clinics and diagnostic centres, restaurants and caterers, coaching institutes, and D2C labels in fashion, beauty and food. If your buyers search, scroll or ask AI tools before they buy, the same methods apply.',
   },
   {
     category: 'results',
-    question: 'How long does digital marketing take to show results in a city as competitive as Mumbai?',
+    question: 'How long until digital marketing shows results in a crowded market like Mumbai?',
     answer:
-      'Ads can bring enquiries within days. SEO (free Google traffic) usually takes three to six months to build up, and Mumbai is a competitive market, so some categories take a little longer. Social media and content also need a few months to earn trust. Anyone who promises big results in a week is not being honest with you.',
+      'Paid ads can produce enquiries in the first week. SEO usually needs three to six months, and longer in crowded Mumbai categories such as property, finance and healthcare. Social and content build trust over a few months. Be wary of any promise of large results within days.',
   },
   {
     category: 'results',
-    question: 'What reports will I get, and how do you measure success?',
+    question: 'What will your monthly report show, and how is success judged?',
     answer:
-      'You get a simple monthly report a normal person can read, not a page full of confusing charts. It answers three things: how many people visited, how many enquiries or calls came in, and what we did that month. The only numbers that truly matter are enquiries and sales, not likes or views. If the work is not bringing you more customers over time, it is not working, no matter how pretty the report looks.',
+      'One page each month: visits, calls, form fills and WhatsApp leads by source, and the work we completed. Followers and impressions appear only when they explain a lead trend. Success means more qualified enquiries and sales over time. If those numbers stay flat, we say so and change the plan.',
   },
   {
     category: 'trust',
-    question: 'Who will actually do my work, seniors or freshers?',
+    question: 'Will seniors or freshers handle my account?',
     answer:
-      'This is the most important question people forget to ask. Many agencies win you over with senior people, then hand your account to freshers, and in a competitive city that lost time costs you. Always ask who will run your account day to day. At FactoryJet, experienced people do the work, not trainees practising on your business.',
+      'Ask every agency this before signing. A common pattern is a senior pitch followed by a fresher running the account, and in Mumbai, with costly clicks, that learning curve costs you money. At FactoryJet, the experienced people you speak to are the people who do the work.',
   },
   {
     category: 'trust',
-    question: 'What are the red flags of a bad digital marketing agency in Mumbai?',
+    question: 'What warning signs suggest a bad digital marketing agency in Mumbai?',
     answer:
-      'Watch out for these: a "guaranteed" number-one spot on Google, offers that seem too good to be true, big confusing words instead of clear answers, no real examples of past work, and being locked into a long contract before anything is proven. Any single one of these is a good reason to be careful and keep looking.',
+      'A guaranteed number one ranking. A price far below every other quote. Answers full of jargon and no specifics. No examples you can verify. A long lock-in before any results. Seeing even one of these is a reason to slow down and ask harder questions.',
   },
   {
     category: 'ai',
-    question: 'Should my Mumbai business show up in AI search like ChatGPT and Google’s AI answers?',
+    question: 'Should my Mumbai business appear in ChatGPT and Google AI answers?',
     answer:
-      'Yes, and most agencies are not doing this yet, which is your opening. When people ask ChatGPT, Gemini or Google’s AI for a recommendation, you want your business to be one of the answers. Getting mentioned by AI tools is a newer skill called GEO (short for generative engine optimisation). We build it into our work, so you are found on Google and inside AI answers.',
+      'If your buyers research before calling, yes. People already ask ChatGPT, Gemini and Google AI Mode to recommend a CA, a wedding planner or a property consultant in Mumbai. Appearing in those replies is called GEO, generative engine optimisation. Few agencies do it yet, so early movers have room. It sits inside our standard work.',
   },
   {
     category: 'ai',
-    question: 'What are GEO and AEO, and does my business need them?',
+    question: 'What do GEO and AEO mean, and do I need them?',
     answer:
-      'GEO means getting recommended by AI tools like ChatGPT and Gemini. AEO, or answer engine optimisation, means getting picked for the instant answer that Google and AI tools show at the top. Both simply mean shaping your website so AI picks your business as the reply. If your customers are the kind of people who ask ChatGPT or Google a question before buying, then yes, you need them. If you are not sure, we can check for free whether AI tools already mention you.',
+      'GEO is work that gets AI chat tools to recommend you. AEO, answer engine optimisation, is work that gets you chosen for the direct answer box Google and AI tools show first. Both come down to clear facts, good structure and trusted mentions. Unsure whether you need it? Our free check shows whether AI tools mention you today.',
   },
   {
     category: 'choosing',
-    question: 'What is the difference between a digital marketing agency and a digital marketing company in Mumbai?',
+    question: 'Is a digital marketing company in Mumbai different from a digital marketing agency?',
     answer:
-      'In everyday use, none. People search for both "digital marketing agency in Mumbai" and "digital marketing company in Mumbai", and they mean the same thing: a team that helps you get customers online. "Agency" sometimes hints at creative and campaign work, and "company" sometimes hints at a larger setup, but there is no fixed rule. Judge any of them by who does your work and what results they can show, not by the word on their door.',
+      'In practice the two names mean the same thing, and Mumbai buyers search both. Some firms call themselves an agency to sound creative and others a company to sound larger. Ignore the label. Ask who handles your work and what results they have produced for businesses like yours.',
   },
   {
     category: 'choosing',
-    question: 'What are the big 4 companies in digital marketing, and do I need one for my Mumbai business?',
+    question: 'Who are the big 4 in digital marketing, and does a Mumbai SME need one?',
     answer:
-      'When people say the "big 4", they usually mean the giant global advertising groups, the ones that handle huge multinational brands. They are built for very large budgets and very large companies. For a small or mid-size Mumbai business, that scale is the wrong fit: you would be a tiny account and pay for layers you do not need. A focused senior team that treats your business as important will almost always serve you better.',
+      'The "big 4" usually refers to the global advertising holding groups that serve multinational brands, several of which run large Mumbai offices. Their structure suits national campaigns with big budgets. A small or mid-size Mumbai firm would be a minor account there and pay for layers it does not use. A focused senior team is usually the better match.',
   },
   {
     category: 'choosing',
-    question: 'Who are the top 5 marketing agencies, and are the biggest names right for a small Mumbai business?',
+    question: 'Are the top 5 marketing agencies the right choice for a small Mumbai business?',
     answer:
-      'Any "top 5" or "top 10" list you find is a starting point, not the final word, because most are opinions or paid placements. The biggest, most famous names are usually set up for large brands with large budgets. A smaller, senior team often gives your work far more care and attention. Shortlist a few names, then judge each on who runs your account and what results they can show for a business like yours.',
+      'Usually not. "Top 5" lists favour the largest names, and those firms price and staff for large brands. A small Mumbai business tends to get more senior time from a smaller team. Shortlist from the list if you like, then decide on who runs your account and proof from your category.',
   },
   {
     category: 'services',
-    question: 'Is digital marketing only for big Mumbai brands, or can a small shop or startup benefit too?',
+    question: 'Can a small Mumbai shop or startup gain from digital marketing, or is it for big brands?',
     answer:
-      'It works just as well for a small shop or a new startup, often better, because you can move faster than a big company. Maharashtra has more government-recognised startups than any other state in India, so Mumbai is full of small businesses competing for the same attention. Showing up on Google, a fast mobile website and quick WhatsApp follow-up can put a small business right next to much bigger names in search results.',
+      'Small firms often gain the most, because they can change things in a week where a big brand needs a month. Maharashtra has more DPIIT-recognised startups than any other state, so competition for attention in Mumbai is heavy. A strong Google listing, a quick mobile site and fast WhatsApp replies let a small shop appear beside much larger names.',
   },
   {
     category: 'services',
-    question: 'Can you fix marketing that another Mumbai agency set up badly?',
+    question: 'Can you take over and repair marketing another Mumbai agency set up?',
     answer:
-      'Yes, and it is common. We often take over websites, Google accounts and campaigns that a previous agency left in a mess. We start by checking what is there, keep whatever is working, and fix or rebuild the rest. You will not have to start from zero, and we explain in plain words what went wrong and what we are changing, so you are never left guessing.',
+      'Yes, we do this often. We audit the website, Google Ads, analytics and listings first, keep what is producing leads, and fix or rebuild the rest. You keep your history and accounts. We write down what was wrong and what we changed, so you can follow every step.',
   },
   {
     category: 'channels',
-    question: 'Do you offer social media marketing in Mumbai?',
+    question: 'Do you handle social media marketing for Mumbai businesses?',
     answer:
-      'Yes. Social media marketing means posting and running ads on Instagram, Facebook and LinkedIn to build trust and reach new people. It works well for restaurants, salons, clinics and D2C brands (companies that sell their own products online). It usually builds slowly, so we pair it with showing up on Google, which brings enquiries from people who are already searching to buy. We only suggest the channels your customers actually use.',
+      'Yes. We plan posts, reels and paid campaigns on Instagram, Facebook and LinkedIn, and handle replies. Restaurants, salons, fashion labels and venues usually see the most from it. Social builds familiarity slowly, so we connect it to Google search and WhatsApp, where buyers who are ready to purchase show up.',
   },
   {
     category: 'channels',
-    question: 'Do you run Google Ads for Mumbai businesses, and how fast do they work?',
+    question: 'Do you run Google Ads in Mumbai, and how quickly do they bring leads?',
     answer:
-      'Yes. Google Ads means paying to appear at the top of Google when someone searches. They are the fastest channel: you can start getting enquiries the same day you switch them on. The trade-off is that they stop the moment you stop paying. Most Mumbai businesses do best with a small mix, ads for quick enquiries now while free Google rankings build up in the background.',
+      'Yes. Google Ads place you at the top of search results from the first day a campaign runs, so enquiries can start within hours. Leads stop when spending stops. Mumbai clicks in finance, property and healthcare are expensive, so we keep keyword lists tight and track every call and form back to the ad that produced it.',
   },
   {
     category: 'channels',
-    question: 'What is performance marketing, and does my Mumbai business need it?',
+    question: 'What is performance marketing, and is it right for my Mumbai firm?',
     answer:
-      'Performance marketing is just a fancy name for paid ads that you judge by the results they bring, like calls, form fills or sales, rather than by likes or views. On Google and Instagram, you can see exactly what each rupee brought back. It is useful when you want quick, measurable enquiries. Whether you need it depends on your goals; we would rather show you honest numbers than sell you ads you do not need.',
+      'Performance marketing means paid campaigns judged only by measurable outcomes such as calls, leads and sales. Google and Meta show you what each rupee returned. It suits businesses that need trackable enquiries quickly. If your margins or category make paid clicks uneconomic, we will tell you and put the effort into SEO instead.',
   },
   {
     category: 'channels',
-    question: 'What is local SEO, and how does it get my Mumbai shop onto Google Maps?',
+    question: 'How does local SEO put my Mumbai shop on Google Maps?',
     answer:
-      'Local SEO is the part of SEO that helps a nearby customer find you. When someone in Mumbai searches on their phone, Google shows a small map with three local businesses at the top. Local SEO works to get you into that box and onto Google Maps by setting up your Google Business Profile, keeping your name, address and phone number consistent, and earning genuine reviews. For any shop or clinic customers visit, this is one of the highest-value channels.',
+      'When someone nearby searches on a phone, Google shows a map with three businesses on top. Local SEO aims to put you in those three. The steps: a complete Google Business Profile, the same name, address and phone number everywhere online, photos, regular posts, and steady genuine reviews. For a showroom or clinic, this often brings more calls than any other channel.',
   },
   {
     category: 'seo',
-    question: 'Which is the best SEO company in Mumbai, and is that different from an SEO agency?',
+    question: 'Which is the best SEO company in Mumbai, and is it different from an SEO agency?',
     answer:
-      '"SEO company in Mumbai" and "SEO agency in Mumbai" mean the same thing: a team that gets your business to show up on Google. There is no single best one for everyone. Some are built for small local shops that want to appear on Google Maps, others for large companies with thousands of pages. The right one for you is honest about how long it takes, explains its work in plain words, and never promises the number-one spot.',
+      'Both phrases describe a team that improves your Google rankings, and Mumbai buyers use them interchangeably. Some suit small local businesses chasing map results, others suit large sites with thousands of URLs. Pick the one that gives honest timelines, explains the work clearly and refuses to guarantee rankings.',
   },
   {
     category: 'seo',
-    question: 'What is an SEO consultant in Mumbai, and do I need one?',
+    question: 'Should I hire an SEO consultant in Mumbai?',
     answer:
-      'An SEO consultant is usually one expert who advises on your Google strategy, rather than a full team that does all the hands-on work. A consultant is handy if you already have people who can carry out the tasks and just need direction. If you want the work actually done, from fixing your website to writing pages and setting up local search, a small senior team covers more ground than a single consultant can.',
+      'A consultant is one specialist who advises on strategy while your staff carry out the tasks. That works if you have a developer and a writer in-house. If you want the site fixes, content and local listings done for you, a small senior team covers more ground than one adviser.',
   },
   {
     category: 'ai',
-    question: 'How can I check whether ChatGPT or Google’s AI already mentions my Mumbai business?',
+    question: 'How do I check if ChatGPT or Google AI already recommends my Mumbai business?',
     answer:
-      'The quickest way is to ask the AI tools yourself: open ChatGPT or Google and ask something like "best options for [your service] in Mumbai" and see whether your name comes up. If it does not, that is a gap worth closing, because more buyers now trust these answers. We also have a free checker that tells you whether AI tools currently recommend you, so you know exactly where you stand before deciding anything.',
+      'Ask the tools directly. Type something like "best [your service] in Mumbai" into ChatGPT, Gemini and Google, and note whether your name appears and which competitors do. If you are missing, that gap is worth fixing, since more buyers rely on those answers. Our free AI visibility checker runs the same test for you.',
   },
 ];
 
@@ -689,7 +685,7 @@ const serviceSchema = {
   areaServed: { '@type': 'City', name: 'Mumbai' },
   serviceType: 'Digital Marketing',
   description:
-    'Integrated digital marketing for Mumbai businesses: SEO, paid ads, social media, websites, WhatsApp and AI search, handled by one senior in-house team.',
+    'Digital marketing for Mumbai firms in finance, property, retail, media and trade: SEO, Google Ads, social, websites, WhatsApp and AI search from one senior team.',
 };
 
 const agenciesSchema = {
@@ -760,8 +756,8 @@ export default function MumbaiDigitalMarketingPage() {
         ]} />
         <Hero
           eyebrow="DIGITAL MARKETING AGENCY · MUMBAI"
-          headline="A Digital Marketing Agency in Mumbai That Brings You Real Customers"
-          lead="We help Mumbai businesses get found on Google and AI tools like ChatGPT, and turn visitors into real enquiries. One senior in-house team, plain-English reports, no jargon."
+          headline="Digital Marketing Agency in Mumbai for Firms That Need More Enquiries"
+          lead="From BKC finance houses to Zaveri Bazaar jewellers and Andheri D2C labels, we get Mumbai firms onto Google, Maps and ChatGPT, then turn those visits into calls and WhatsApp leads."
           formSlot={<HeroInlineForm region="in" source="in_mumbai_digital_marketing_hero" />}
           secondaryCta={{ label: 'Get a Free Growth Plan', modal: true as const, region: 'in' as const }}
           trustItems={HERO_TRUST}
@@ -773,7 +769,7 @@ export default function MumbaiDigitalMarketingPage() {
               <div className="relative overflow-hidden rounded-2xl border border-fj-neutral-200 shadow-sm">
                 <img
                   src="/images/services/digital-marketing/mumbai/hero.webp"
-                  alt="A digital marketing strategist in a modern Mumbai office"
+                  alt="A marketing strategist planning a campaign for a Mumbai client"
                   width={832}
                   height={1216}
                   fetchPriority="high"
@@ -781,7 +777,7 @@ export default function MumbaiDigitalMarketingPage() {
                 />
                 <div className="absolute bottom-3 left-3 rounded-xl bg-white/95 px-4 py-2.5 shadow-sm">
                   <p className="font-fj-mono text-[10px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">
-                    Serving Mumbai and all of India
+                    Mumbai, the MMR and all of India
                   </p>
                   <p className="mt-0.5 font-fj-display text-sm font-semibold text-fj-ink">
                     500+ businesses, 12 years
@@ -797,14 +793,14 @@ export default function MumbaiDigitalMarketingPage() {
         <section className="border-y border-fj-ink/10 bg-white px-6 py-14 md:px-8 md:py-16">
           <div className="mx-auto max-w-3xl">
             <Heading as="h2" size="h3" className="text-fj-ink">
-              So, which is the best digital marketing agency in Mumbai?
+              Which digital marketing agency in Mumbai should you pick?
             </Heading>
             <p className="mt-4 text-lg leading-relaxed text-fj-ink/80">
-              The honest answer: there is no single best agency for every Mumbai business. The right one
-              for you depends on your size, your goals and, most of all, who actually does your work. For
-              small and mid-size Mumbai businesses that want one senior team to handle everything, from
-              your website to Google to AI search, FactoryJet is a strong choice. Below we compare the top
-              Mumbai agencies openly, including ourselves, so you can decide for yourself.
+              Pick by fit. A Nariman Point wealth firm, a Kalbadevi textile wholesaler and a Bandra cafe
+              each need a different mix of search, ads and social. Size, category and the seniority of the
+              person running your account decide the match. If you run a small or mid-size Mumbai firm and
+              want one senior team across site, Google, ads and AI answers, FactoryJet fits. We compare
+              well-known Mumbai agencies below, ourselves included.
             </p>
           </div>
         </section>
@@ -830,22 +826,21 @@ export default function MumbaiDigitalMarketingPage() {
 
         <ServiceExplanation
           eyebrow="WHAT WE DO, IN PLAIN WORDS"
-          headline="What a digital marketing agency in Mumbai actually does for you"
-          lead="Strip away the buzzwords and it comes down to one thing: helping more of the right people in Mumbai find your business and become customers."
+          headline="The work a Mumbai digital marketing agency does for you"
+          lead="Mumbai buyers compare five options on a phone before calling one. Our job is to make you one of those five and the one they call."
           body={
             <>
               <p>
-                Some agencies make this sound complicated on purpose. It is not. Your customers are
-                already searching on Google, scrolling Instagram on the local train, and now asking
-                ChatGPT for recommendations. Our job is to make sure your business shows up in those
-                moments, and that the person who clicks actually turns into a call, a WhatsApp message
-                or a sale.
+                A flat buyer in Thane searches Google on the Central line. A bride-to-be scrolls
+                jewellery reels on Instagram. A CFO asks ChatGPT to shortlist audit firms. Each of
+                those moments is a chance to be found, and each click should end in a call, a WhatsApp
+                chat or an order.
               </p>
               <p>
-                We do that by joining the pieces together: a fast website, showing up on Google (SEO),
-                ads when you need quick results, social media, WhatsApp follow-up, and getting picked
-                by AI tools. Not every Mumbai business needs all of it. We choose the few that will
-                bring you the most enquiries, and we tell you honestly which ones will not.
+                The toolkit is a quick site, Google rankings (SEO), paid ads for speed, social
+                content, WhatsApp follow-up and AI search work. A freight forwarder near Nhava Sheva
+                needs a different subset from a salon in Khar. We pick the channels your past
+                enquiries point to and tell you which ones to skip.
               </p>
             </>
           }
@@ -854,7 +849,7 @@ export default function MumbaiDigitalMarketingPage() {
               <div aria-hidden className="absolute -bottom-4 -right-4 h-28 w-28 rounded-2xl bg-[#F05A28]/10" />
               <img
                 src="/images/services/digital-marketing/mumbai/team.webp"
-                alt="A digital marketing team in a Mumbai office reviewing a marketing strategy together"
+                alt="Marketers reviewing search and ad results for Mumbai businesses"
                 width={1216}
                 height={832}
                 loading="lazy"
@@ -867,12 +862,12 @@ export default function MumbaiDigitalMarketingPage() {
         {/* Mumbai market context: real, cited numbers that build trust with
             both AI answer engines and human readers. Outbound links resolve. */}
         <CityContextSection
-          eyebrow="THE MUMBAI DIGITAL MARKET, IN REAL NUMBERS"
-          headline="Mumbai is one of India’s toughest markets, and its buyers are already online"
+          eyebrow="MUMBAI BUYERS ONLINE, WITH SOURCES"
+          headline="Mumbai buyers shortlist on their phones, and competition for each click is fierce"
           leadParagraphs={[
-            'Mumbai is India’s business capital, home to everything from corner shops in Dadar to finance firms in BKC. That also makes it crowded. Your next customer has plenty of choices, and they compare them all on a phone before they ever call you.',
-            'Buying habits have shifted fast. People search on Google on the local train, scroll Instagram over chai, and now ask ChatGPT for recommendations. If your business does not show up in those moments, a competitor does. The numbers beside this show how quickly that shift is happening across India.',
-            'This is why one channel on its own rarely works in Mumbai. The businesses that win join the pieces together: a fast website, strong Google visibility, quick WhatsApp replies, and a presence inside AI answers, so no enquiry slips away.',
+            'Mumbai holds the head offices of banks, insurers and brokerages, the studios of Hindi film and TV, the country’s busiest diamond and jewellery trade, and thousands of D2C labels. Ad auctions here are among the costliest in India, so wasted clicks hurt.',
+            'Searches mix English, Hinglish and some Marathi, and many add a suburb or station name: "physiotherapist Borivali West", "packers and movers Kurla". Pages written for those patterns beat generic city pages.',
+            'Firms that grow here run search, Maps, WhatsApp and AI answers as one system. Each part feeds the next, and the figures beside this show how fast buyers across India are moving online and into AI tools.',
           ]}
           bodySlot={
             <>
@@ -881,7 +876,7 @@ export default function MumbaiDigitalMarketingPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  In a city this crowded, being easy to find is half the battle won.
+                  Mumbai buyers call the first credible name they find. Be that name.
                 </p>
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
@@ -906,14 +901,14 @@ export default function MumbaiDigitalMarketingPage() {
         <BigThreeTrustBlock
           variant="statement"
           eyebrow="ONE TEAM, EVERY CHANNEL"
-          headline="One senior in-house team in Mumbai for SEO, social media, Google Ads and AI search"
+          headline="SEO, social media, Google Ads and AI search for Mumbai firms, run by one senior in-house team"
         />
 
         <IndustriesGrid
           variant="cards"
           eyebrow="EVERYTHING IN ONE PLACE"
-          headline="One Mumbai team for every part of your online growth"
-          lead="Instead of hiring five different people, you get one senior team that covers the whole picture. Each of these links to how we do it."
+          headline="Every channel a Mumbai business needs, from one team"
+          lead="Skip juggling a web developer, an ads freelancer and a social agency. Each card below opens the full service page."
           sectors={CHANNELS}
         />
 
@@ -921,25 +916,24 @@ export default function MumbaiDigitalMarketingPage() {
             layout (card on the left) to break the rhythm. Light. */}
         <ServiceExplanation
           eyebrow="OUR APPROACH FOR MUMBAI"
-          headline="How we grow a Mumbai business, step by step"
-          lead="No two Mumbai businesses are the same, so we do not use one template. We start with what actually brings you enquiries, then build outward from there."
+          headline="Our method for Mumbai clients"
+          lead="We begin with the channel already sending you the most enquiries, make it stronger, then add the next one."
           reverseOnDesktop
           body={
             <>
               <p>
-                First, we find out where your Mumbai customers already are. A jeweller in Zaveri
-                Bazaar and a B2B firm in BKC reach buyers in very different ways, so the plan starts
-                with your customers, not with a fixed package.
+                Step one is a look at where your buyers come from today. A Zaveri Bazaar jeweller lives
+                on walk-ins, Instagram and Maps. A BKC fintech wins on LinkedIn, content and AI answers.
+                The plan follows your buyers.
               </p>
               <p>
-                Then a senior person, not a fresher, does the real work: fixing your website so it
-                loads fast on patchy local networks, getting you found on Google and Google Maps, and
-                setting up quick WhatsApp follow-up so no enquiry goes cold.
+                Next, an experienced specialist does the hands-on work: speeding up the site for phones
+                on crowded networks, building rankings on Google and Maps, and wiring WhatsApp so every
+                lead gets a quick reply.
               </p>
               <p>
-                Finally, we report in plain words. Each month you see how many people visited, how
-                many enquiries came in, and what we did. We keep what works and drop what does not.
-                That is the whole method, no jargon, no smoke.
+                Then we report monthly on one page: visits, enquiries by source and tasks completed.
+                Budget moves toward what produced leads. Anything that did not gets cut.
               </p>
             </>
           }
@@ -964,12 +958,12 @@ export default function MumbaiDigitalMarketingPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
-                  { t: 'A plan built around your customers', n: 'not a copy-paste package' },
-                  { t: 'A senior person on your account', n: 'no work handed to freshers' },
-                  { t: 'Found on Google and Google Maps', n: 'local search set up properly' },
-                  { t: 'Quick WhatsApp follow-up', n: 'so no enquiry goes cold' },
-                  { t: 'Named in AI answers over time', n: 'ChatGPT, Gemini and Google AI' },
-                  { t: 'A plain-English report each month', n: 'visitors, enquiries, what we did' },
+                  { t: 'A plan drawn from your own enquiry data', n: 'written for your category and area' },
+                  { t: 'An experienced lead on your account', n: 'experienced people do the work' },
+                  { t: 'Ranked on Google and Maps', n: 'profiles set up for each branch' },
+                  { t: 'WhatsApp follow-up wired in', n: 'catalogue and auto-reply ready' },
+                  { t: 'Work on AI answers', n: 'ChatGPT, Gemini and Google AI Mode' },
+                  { t: 'A one-page monthly scorecard', n: 'leads by source, tasks done' },
                 ].map((item) => (
                   <div key={item.t} className="flex items-start gap-3 py-3.5">
                     <span
@@ -1000,7 +994,7 @@ export default function MumbaiDigitalMarketingPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  Simple plan. Senior team. Honest numbers.
+                  Clear scope. Experienced hands. Leads you can count.
                 </p>
               </div>
             </div>
@@ -1009,8 +1003,8 @@ export default function MumbaiDigitalMarketingPage() {
 
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs a traditional agency vs a freelancer vs your own team"
-          lead="There is no single right answer for every business. Here is an honest look at how the options differ, so you can pick what fits you."
+          headline="FactoryJet vs a network agency, a freelancer or an in-house hire"
+          lead="Each option suits someone. This table shows where each one tends to be strong or weak for a Mumbai business."
           columns={COMPARE_COLUMNS}
           rows={COMPARE_ROWS}
         />
@@ -1020,14 +1014,14 @@ export default function MumbaiDigitalMarketingPage() {
         <section className="bg-fj-cream px-6 py-16 md:px-8 md:py-20">
           <div className="mx-auto max-w-5xl">
             <p className="mb-3 font-mono text-xs uppercase tracking-widest text-[#B23E13]">
-              WHY MARKETING OFTEN FALLS FLAT
+              WHERE MUMBAI MARKETING BUDGETS LEAK
             </p>
             <Heading as="h2" size="h2" className="text-fj-ink">
-              Three reasons digital marketing quietly stops working in Mumbai
+              Three ways Mumbai firms lose money on digital marketing
             </Heading>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-fj-ink/80">
-              If past marketing did not bring you enquiries, it is usually one of these, and all
-              three are avoidable once you can see them.
+              When an owner tells us marketing did nothing, the cause is almost always on this list.
+              Each one can be fixed.
             </p>
 
             <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -1057,8 +1051,8 @@ export default function MumbaiDigitalMarketingPage() {
         <FinalCTA
           variant="light"
           eyebrow="TALK TO US"
-          headline="Want a plain, honest plan for your Mumbai business?"
-          sub="Tell us about your business and your Mumbai customers. We will look at where you show up today and send back a simple plan you can act on, with no jargon and no pressure."
+          headline="Get a written growth plan for your Mumbai business"
+          sub="Share what you sell and which parts of Mumbai you serve. We check your Google, Maps and AI visibility and send a short plan you can use with or without us."
           primaryCta={{ label: 'Get my free growth plan', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Check if AI tools recommend you', href: '/ai-visibility-checker' }}
         />
@@ -1071,12 +1065,12 @@ export default function MumbaiDigitalMarketingPage() {
               WHAT ACTUALLY BRINGS ENQUIRIES
             </p>
             <Heading as="h2" size="h2" className="text-fj-ink">
-              The digital marketing channels that actually work for Mumbai businesses
+              Mumbai digital marketing channels, ranked by enquiries
             </Heading>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-fj-ink/80">
-              Most "top 10" lists of digital marketing services in Mumbai push every channel at once.
-              We would rather be honest. Here are the channels ranked by how steadily each one brings
-              a typical Mumbai business real enquiries, and who each one suits best.
+              Lists of digital marketing services in Mumbai tend to sell every channel as essential.
+              This ranking orders them by how reliably each produces enquiries for a typical Mumbai
+              firm, with the kind of business each one suits.
             </p>
 
             <ol className="mt-10 space-y-4">
@@ -1100,9 +1094,8 @@ export default function MumbaiDigitalMarketingPage() {
             </ol>
 
             <p className="mt-6 text-sm leading-relaxed text-fj-ink/70">
-              You do not need all six. For most Mumbai businesses, a fast website plus strong Google
-              visibility, quick WhatsApp follow-up and a foot in AI search covers the most ground. We
-              tell you honestly which ones are worth your time and which are not.
+              Few firms need all six. A quick site, Google and Maps rankings, prompt WhatsApp replies
+              and early AI search work cover most Mumbai businesses. We will name the ones to skip.
             </p>
           </div>
         </section>
@@ -1111,15 +1104,15 @@ export default function MumbaiDigitalMarketingPage() {
         <section className="bg-fj-cream px-6 py-16 md:px-8 md:py-20">
           <div className="mx-auto max-w-4xl">
             <p className="mb-3 font-mono text-xs uppercase tracking-widest text-[#B23E13]">
-              THE TOP MUMBAI AGENCIES, COMPARED HONESTLY
+              MUMBAI AGENCIES AND WHAT EACH DOES BEST
             </p>
             <Heading as="h2" size="h2" className="text-fj-ink">
-              The best digital marketing agencies in Mumbai, and who each one suits
+              Top digital marketing agencies in Mumbai, matched to the buyer they suit
             </Heading>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-fj-ink/80">
-              We looked at which agencies actually rank on Google for digital marketing and SEO in Mumbai
-              using live search data in July 2026, and what each is known for. We include ourselves and
-              say so openly, because hiding it would be the opposite of honest.
+              These names rank on Google for Mumbai digital marketing and SEO searches, based on live
+              search data from July 2026. FactoryJet appears in the list and is marked, so you know which
+              entry is ours.
             </p>
 
             <ol className="mt-10 space-y-4">
@@ -1158,32 +1151,31 @@ export default function MumbaiDigitalMarketingPage() {
             </ol>
 
             <p className="mt-6 text-sm leading-relaxed text-fj-ink/70">
-              A quick note on fairness: every agency here is a genuine, capable team. The "best for"
-              lines are our honest read of who each one suits, based on their public work and what they
-              rank for in Mumbai. The right pick is the one that matches your business, not the one that
-              shouts loudest.
+              Each agency listed is a capable team. The "best for" notes are our reading of their public
+              work and the Mumbai searches they rank for. Match the agency to your business, whatever its
+              size or fame.
             </p>
           </div>
         </section>
 
         <ServiceJourneyRow
           eyebrow="HOW WORKING WITH US FEELS"
-          headline="From first chat to real results, in five simple steps"
-          lead="No confusing process, no surprises. Here is exactly what happens when you work with us."
+          headline="Five steps from first call to monthly leads"
+          lead="This is the order things happen once a Mumbai business signs up."
           stages={JOURNEY}
-          closingNote="5 SIMPLE STEPS · SENIOR TEAM · HONEST MONTHLY REPORTS"
+          closingNote="FIVE STEPS · EXPERIENCED TEAM · ONE-PAGE MONTHLY SCORECARD"
         />
 
         {/* Reach across Mumbai (plain language + safe internal links to hubs). */}
         <section className="border-y border-fj-ink/10 bg-white px-6 py-14 md:px-8 md:py-16">
           <div className="mx-auto max-w-3xl">
             <Heading as="h2" size="h3" className="text-fj-ink">
-              We help businesses grow across Mumbai, and beyond
+              Across the MMR, from Colaba to Kalyan
             </Heading>
             <p className="mt-4 text-lg leading-relaxed text-fj-ink/80">
-              Because the work happens online, your part of the city does not limit us. We help shops,
-              restaurants, clinics, service firms and brands across Andheri, Bandra, BKC, Lower Parel,
-              Powai, South Mumbai, Navi Mumbai and Thane. Whether you need to{' '}
+              Campaigns run online, so we serve showrooms, caterers, clinics, brokers, traders and labels
+              in Andheri, Bandra, BKC, Lower Parel, Powai, South Mumbai, Navi Mumbai and Thane alike. If
+              you want to{' '}
               <a href="/seo" className="font-semibold text-[#B23E13] underline underline-offset-2">
                 get found on Google
               </a>
@@ -1209,26 +1201,26 @@ export default function MumbaiDigitalMarketingPage() {
               <a href="/ai-seo" className="font-semibold text-[#B23E13] underline underline-offset-2">
                 AI search
               </a>
-              , the same senior team handles it.{' '}
-              You can also{' '}
+              , one senior team covers it.{' '}
+              Before deciding, you can{' '}
               <a href="/digital-marketing" className="font-semibold text-[#B23E13] underline underline-offset-2">
                 compare the top 10 digital marketing agencies in India
               </a>
-              , including us, before you decide.
+              , FactoryJet among them.
             </p>
           </div>
         </section>
 
         <TestimonialsSection
           eyebrow="REAL RESULTS"
-          headline="What business owners say after working with us"
+          headline="Owners describe working with FactoryJet"
           region="in"
         />
 
         <FAQ
-          eyebrow="QUESTIONS MUMBAI OWNERS ACTUALLY ASK"
-          headline="Digital marketing in Mumbai, answered in plain words"
-          lead="Real questions from real Mumbai searches, answered simply, with no jargon and no sales spin."
+          eyebrow="MUMBAI OWNERS ASK"
+          headline="Digital marketing in Mumbai: common questions"
+          lead="Drawn from what Mumbai buyers type into Google, with short, direct answers."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
@@ -1236,11 +1228,11 @@ export default function MumbaiDigitalMarketingPage() {
         <FinalCTA
           variant="light"
           eyebrow="READY WHEN YOU ARE"
-          headline="Want to see how many Mumbai customers you are missing?"
-          sub="Book a free, no-pressure chat. We will look at your website and where your Mumbai customers are, and tell you honestly what will bring you more enquiries, even if we never work together."
+          headline="See which Mumbai searches are going to your competitors"
+          sub="Book a free call. We review your site, Maps listing and AI visibility, then tell you which fixes would bring the most Mumbai enquiries, whether or not you hire us."
           primaryCta={{ label: 'Get My Free Growth Plan', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Check if AI tools recommend you', href: '/ai-visibility-checker' }}
-          objectionHandler="No jargon. No long contract. Just an honest plan you can use straight away."
+          objectionHandler="Free call. No lock-in. A plan you keep either way."
         />
       </main>
 

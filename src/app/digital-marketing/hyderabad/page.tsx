@@ -24,13 +24,13 @@ const CANONICAL = 'https://factoryjet.com/digital-marketing/hyderabad';
 export const metadata: Metadata = {
   title: 'Digital Marketing Agency in Hyderabad | FactoryJet',
   description:
-    'Looking for a digital marketing agency in Hyderabad? FactoryJet helps Hyderabad businesses get found on Google and AI tools like ChatGPT, and turns visitors into real enquiries. One senior in-house team for SEO, ads, websites, WhatsApp and more.',
+    'Digital marketing agency in Hyderabad for pharma, IT, real estate and clinics. SEO, Google Ads, WhatsApp and AI search from one senior team.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Digital Marketing Agency in Hyderabad | FactoryJet',
     description:
-      'One senior in-house team that gets Hyderabad businesses found on Google and AI search, and turns clicks into enquiries. SEO, ads, websites, social, WhatsApp and more.',
+      'Digital marketing agency in Hyderabad for pharma, IT, real estate and clinics. SEO, Google Ads, WhatsApp and AI search from one senior team.',
     url: CANONICAL,
     images: [
       {

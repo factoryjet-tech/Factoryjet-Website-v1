@@ -24,20 +24,20 @@ const CANONICAL = 'https://factoryjet.com/digital-marketing/bangalore';
 export const metadata: Metadata = {
   title: 'Digital Marketing Agency in Bangalore | FactoryJet',
   description:
-    'Looking for a digital marketing agency in Bangalore? FactoryJet helps Bangalore businesses get found on Google and AI tools like ChatGPT, and turn clicks into real customers. One senior in-house team for SEO, ads, websites and more.',
+    'Digital marketing agency in Bangalore for startups, D2C brands, clinics and tech firms. SEO, Google Ads, social and AI search from one senior team.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Digital Marketing Agency in Bangalore | FactoryJet',
     description:
-      'One senior in-house team that gets Bangalore businesses found on Google and AI search, and turns visitors into enquiries. SEO, ads, websites, social and more.',
+      'Digital marketing agency in Bangalore for startups, D2C brands, clinics and tech firms. SEO, Google Ads, social and AI search from one senior team.',
     url: CANONICAL,
     images: [
       {
         url: 'https://factoryjet.com/images/services/digital-marketing/bangalore/team.webp',
         width: 1216,
         height: 832,
-        alt: 'FactoryJet digital marketing team in Bangalore',
+        alt: 'FactoryJet digital marketing for Bangalore businesses',
       },
     ],
     locale: 'en_IN',
@@ -96,56 +96,56 @@ const CHANNELS: IndustryCard[] = [
   {
     name: 'SEO (get found on Google)',
     description:
-      'SEO means search engine optimisation. In plain words: showing up on Google when a Bangalore customer searches to buy, without paying for every click.',
+      'Search engine optimisation puts your page in front of a Bangalore buyer typing "coworking in HSR" or "physio in Indiranagar", and you pay nothing per click.',
     linkLabel: 'Explore SEO',
     linkHref: '/seo',
   },
   {
     name: 'Websites that sell',
     description:
-      'A fast, mobile-first website that loads quickly on Bangalore data speeds and turns visitors into calls and enquiries, instead of just looking nice.',
+      'Most Bangalore buyers open your site on a phone, often stuck in Silk Board traffic. We build pages that load fast there and push them to call or book.',
     linkLabel: 'See web design',
     linkHref: '/web-design',
   },
   {
     name: 'Online stores',
     description:
-      'Ecommerce means selling online. We build stores that are easy for customers to buy from and easy for you to run, a fit for the many D2C brands born in Bangalore.',
+      'Bangalore has produced many D2C labels in coffee, skincare and apparel. We build stores with clean checkout, COD rules and courier links that a small team can run.',
     linkLabel: 'See ecommerce',
     linkHref: '/services/ecommerce-development',
   },
   {
     name: 'AI search (get picked by ChatGPT)',
     description:
-      'When people ask ChatGPT, Gemini or Google’s AI for a recommendation, we help your business be one of the answers. This newer skill is called GEO. Bangalore’s tech crowd already asks AI first.',
+      'Founders and engineers here often ask ChatGPT or Gemini for a vendor shortlist before they Google one. GEO is the work that gets your name onto that shortlist.',
     linkLabel: 'Explore AI SEO',
     linkHref: '/ai-seo',
   },
   {
     name: 'Chatbots and automation',
     description:
-      'Smart helpers that reply to customers day and night and do repeat tasks for you, so your small Bangalore team saves hours every week.',
+      'AI agents that answer leads at 2 am, book demos, qualify sign-ups and update your CRM, so a lean startup team spends its hours on customers.',
     linkLabel: 'See AI agents',
     linkHref: '/services/ai-agent-development',
   },
   {
     name: 'WhatsApp for business',
     description:
-      'Answer customers and collect leads automatically on WhatsApp, the app nearly every Bangalore customer already checks a dozen times a day.',
+      'Auto-replies, catalogue links and lead capture on WhatsApp for clinics, cafes and stores that get most questions there.',
     linkLabel: 'See WhatsApp chatbot',
     linkHref: '/whatsapp-chatbot',
   },
   {
     name: 'Shopify stores',
     description:
-      'Shopify is a popular tool for online shops. We build custom Shopify stores that look great and load fast, popular with Bangalore D2C and boutique brands.',
+      'Custom Shopify themes and apps for Bangalore brands that started on Instagram and now need a real store with subscriptions, bundles and fast pages.',
     linkLabel: 'See Shopify',
     linkHref: '/shopify-development',
   },
   {
     name: 'WordPress websites',
     description:
-      'WordPress is the world’s most-used website tool. We build flexible sites on it that you fully own and control.',
+      'WordPress sites for B2B firms, schools and clinics that want to edit their own pages, keep the code and switch vendors any time.',
     linkLabel: 'See WordPress',
     linkHref: '/wordpress-development',
   },
@@ -187,7 +187,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Gets you into AI search (ChatGPT, Gemini, Google AI)',
+    feature: 'Works on your mentions in ChatGPT, Gemini and Google AI answers',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="no" />,
@@ -350,13 +350,13 @@ const PILLARS: Pillar[] = [
     icon: '\u{1F9E9}',
     title: 'One channel alone is not a plan',
     body:
-      'Doing only SEO, or only ads, or only Instagram leaves gaps. A Bangalore customer might find you on Google, check your Instagram, read a review, then message you on WhatsApp before they decide. We join the channels so nothing leaks between them.',
+      'A Bangalore buyer may see your Instagram reel, Google your name a week later, read three reviews and then WhatsApp you. Run those as separate jobs and the trail breaks. We run them as one plan with one set of numbers.',
   },
   {
     icon: '\u{1F464}',
     title: 'Freshers learning on your business',
     body:
-      'Bangalore has thousands of agencies, and many win you over with senior people, then quietly hand your work to trainees. You pay for experience you never actually get. At FactoryJet, experienced people do the real work.',
+      'The pitch meeting has a director in it. The account then goes to someone six months out of a course. With so many agencies in Bangalore, this swap is common. At FactoryJet the senior people who plan the work also do it.',
   },
   {
     icon: '\u{1F916}',
@@ -374,7 +374,7 @@ const AGENCIES = [
   {
     name: 'FactoryJet',
     bestFor:
-      'Small and mid-size Bangalore businesses that want one senior team across website, Google, ads and AI search, with plain-English reports. (Yes, that is us. We include ourselves openly and let the comparison speak for itself.)',
+      'Bangalore startups, clinics, stores and B2B firms that want one senior team for site, search, ads and AI answers, reported in plain English. (This is our own entry. We list ourselves so you can weigh us against the rest.)',
     isUs: true,
   },
   {
@@ -391,7 +391,7 @@ const AGENCIES = [
   },
   {
     name: 'DigiMark Agency',
-    bestFor: 'Businesses whose main need is strong, steady SEO and content marketing.',
+    bestFor: 'Firms that mostly want regular blog content and Google ranking work.',
   },
   {
     name: 'BrandShark',
@@ -407,27 +407,27 @@ const JOURNEY: ServiceJourneyStage[] = [
   {
     number: '01',
     title: 'A free, no-pressure chat',
-    description: 'We learn about your Bangalore business, your customers and your goals. No jargon, no hard sell.',
+    description: 'A first call about your product, who buys it in Bangalore and what a good month looks like for you.',
   },
   {
     number: '02',
     title: 'A clear, simple plan',
-    description: 'We show you exactly what we will do and why, in words you can understand and approve.',
+    description: 'You get a written plan: which channels, in what order, what each costs you in time and what we expect back.',
   },
   {
     number: '03',
     title: 'We build and run it',
-    description: 'Website, Google, ads, AI search, whatever you picked. Our senior team does the actual work.',
+    description: 'Senior people set up the pages, campaigns, listings and tracking you approved. Nothing is handed to interns.',
   },
   {
     number: '04',
     title: 'You see the results',
-    description: 'A simple monthly report: visitors, enquiries and what we did. Real numbers, plainly shown.',
+    description: 'Each month you see leads, sign-ups or calls by source, and a short list of what changed.',
   },
   {
     number: '05',
     title: 'We keep improving',
-    description: 'We do more of what brings you leads and drop what does not. Month after month.',
+    description: 'Budget moves toward the channels that produced leads last month. Weak ones get cut.',
   },
 ];
 
@@ -450,13 +450,13 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'choosing',
     question: 'Which is the best digital marketing agency in Bangalore?',
     answer:
-      'There is no single "best" one for everyone. Bangalore has hundreds of agencies, and the best one for you is the one that fits your size, your goals and your customers. A funded startup in Koramangala and a family clinic in Jayanagar need very different help. Lower on this page we compare the agencies that actually rank for Bangalore searches, honestly and including ourselves, so you can pick the right fit instead of the loudest name.',
+      'It depends on who you sell to. A funded SaaS startup in Koramangala wants sign-ups and investor-ready numbers. A family clinic in Jayanagar wants phone calls from people within 5 km. Those are different jobs, and few agencies are good at both. Further down we compare agencies that rank for Bangalore searches, ourselves included, with what each one suits.',
   },
   {
     category: 'choosing',
     question: 'Which company is best for digital marketing?',
     answer:
-      'It depends entirely on what you are trying to do. Some agencies are strongest at paid ads, some at SEO (getting found on Google for free), some at social media or branding. The better question is: who will put a senior person on my account, and can they show me real results for a business like mine? Judge an agency by that, not by which name comes up first in a list.',
+      'Match the agency to the job. Paid ads, Google rankings, social content and branding are separate skills, and most firms are strong in one or two. Ask each shortlisted firm which senior person will run your account and to show work for a business in your category. The answers sort the list faster than any ranking site.',
   },
   {
     category: 'choosing',
@@ -468,7 +468,7 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'choosing',
     question: 'How do I choose the right digital marketing agency in Bangalore?',
     answer:
-      'Ask three simple questions before you sign anything. One: who will actually do my work, a senior person or a fresher? Two: what exactly will I get each month, in plain words? Three: can you show me real results for a business like mine? An agency that answers all three clearly, without hiding behind big words, is usually a safe choice.',
+      'Before you sign, get three things in writing. The name and experience of the person running your account. The list of deliverables for month one. Two examples of similar Bangalore businesses they grew, with the numbers. If any of the three is vague, keep looking.',
   },
   {
     category: 'choosing',
@@ -480,7 +480,7 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'choosing',
     question: 'Agency vs freelancer vs your own team: which is right for me?',
     answer:
-      'A freelancer is one person. They are handy for a single small task, but one person cannot cover SEO, ads, design and content all at once. Building your own team gives you full control but takes months to hire and train, and Bangalore hiring is competitive and slow. An agency gives you a whole team instantly, across every skill. For most growing businesses, an agency is the fastest way to cover everything without the hiring headache.',
+      'A freelancer suits one clear task, like a landing page or a month of ads. An in-house marketer gives control, but Bangalore pays tech salaries and good marketers get poached by product companies. An agency covers search, ads, design and content from day one. Many startups use an agency first and hire in-house once a channel is proven.',
   },
   {
     category: 'choosing',
@@ -498,13 +498,13 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'services',
     question: 'What does a digital marketing agency in Bangalore actually do?',
     answer:
-      'In simple words, it helps more of the right people find your business online and turn into customers. That means building or fixing your website, getting you to show up on Google (this is called SEO, short for search engine optimisation), running ads, posting on social media, and staying in touch by email or WhatsApp. The goal is always the same: more calls, more enquiries, more sales.',
+      'It brings buyers to you online and helps convert them. For a Bangalore business that usually means a faster website, Google rankings (search engine optimisation, or SEO), Google and Meta ads, social posts, and follow-up by email or WhatsApp. Each piece is measured by calls, demo bookings or orders.',
   },
   {
     category: 'services',
     question: 'What are the 7 types of digital marketing?',
     answer:
-      'People usually list them as: SEO (showing up on Google for free), paid ads (paying Google or Instagram to show your business), social media marketing (Instagram, Facebook, LinkedIn), content marketing (blogs and videos that pull people in), email marketing, affiliate or influencer marketing (others promote you), and now AI search, which means getting recommended by tools like ChatGPT. A good agency mixes the few that fit your business best, not all seven at once.',
+      'The usual seven are search rankings (SEO), paid search and social ads, social media posting, content such as blogs and video, email, affiliate or influencer deals, and AI search, where tools like ChatGPT name you. A Bangalore SaaS firm might use four of these. A bakery in Malleswaram might need two.',
   },
   {
     category: 'services',
@@ -522,13 +522,13 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'services',
     question: 'Which channels actually bring leads for Bangalore businesses?',
     answer:
-      'It depends on your business, and any agency that says "do everything" is guessing. For most Bangalore businesses, showing up on Google when someone is searching to buy, plus a fast mobile website and quick WhatsApp follow-up, brings the most enquiries. For food, retail and local services, Google Maps and reviews matter a lot too. Social media builds trust but works more slowly. We pick channels based on where your customers already are.',
+      'For local services in Bangalore, Google Maps listings and reviews bring the most calls. For B2B and SaaS, search rankings, LinkedIn and AI answers bring demo requests. For D2C, Meta ads and Instagram drive first orders and email brings repeat ones. We choose two or three channels from that list for your business.',
   },
   {
     category: 'services',
     question: 'Do I need SEO, ads, or social media first?',
     answer:
-      'If you need customers this week, start with ads, because they bring visitors the day you switch them on. If you want steady free traffic that grows over months, start with SEO. Most Bangalore businesses do best with a small mix: ads for quick results while SEO builds up quietly in the background. Social media supports both by building trust.',
+      'Ads switch on in a day and stop when the budget stops. SEO takes months and then keeps paying back. A new Bangalore business usually runs a small ad budget to get first leads while ranking work builds. Social posts help buyers trust you once they arrive.',
   },
   {
     category: 'cost',
@@ -546,7 +546,7 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'local',
     question: 'Do I need a Bangalore-based agency, or can I work with one remotely?',
     answer:
-      'You do not strictly need an agency sitting in Bangalore. Almost all digital marketing work happens online, so a good team can help your business from anywhere. What matters more is whether they understand Bangalore customers and reply quickly. We work with businesses across India and in the US, the UK and the UAE, and we know the Bangalore market well, so you get local understanding without needing someone to drive across town in the traffic.',
+      'No. Search, ads and AI work all happen online, and meetings run on video. What you need is a team that knows how Bangalore buyers search and replies the same day. We work with businesses across India and in the US, the UK and the UAE, and nobody has to cross Outer Ring Road for a meeting.',
   },
   {
     category: 'local',
@@ -558,49 +558,49 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'results',
     question: 'How long does digital marketing take to show results?',
     answer:
-      'Ads can bring enquiries within days. SEO (free Google traffic) usually takes three to six months to build up, and longer in a crowded market like Bangalore where many businesses compete for the same searches. Social media and content also need a few months to earn trust. Anyone who promises big results in a week is not being honest with you.',
+      'Paid ads can produce leads in the first week. Rankings take three to six months, and longer for crowded Bangalore searches like "SaaS marketing" or "interior designers". Content and social take a few months to build trust. Treat any promise of page-one results in a week as a warning.',
   },
   {
     category: 'results',
     question: 'How is performance measured, and what reports should I expect?',
     answer:
-      'You should get a simple monthly report that a normal person can read, not a page full of confusing charts. It should answer three things: how many people visited, how many enquiries or calls came in, and what we did that month. If an agency cannot show you leads in plain numbers, treat it as a warning sign.',
+      'One page each month: visits, leads by source, cost per lead and the work done. Founders can forward it to investors as it is. If your agency only sends impressions and follower counts, ask for leads.',
   },
   {
     category: 'results',
     question: 'How do you measure whether digital marketing is actually working?',
     answer:
-      'The only numbers that truly matter are enquiries and sales, not likes or views. We track how many real leads (calls, form fills, WhatsApp messages) your marketing brings in, and where they came from. If the work is not bringing you more customers over time, it is not working, no matter how pretty the report looks.',
+      'We count leads and sales: calls, forms, demo bookings, WhatsApp chats and orders, each tagged to the channel that sent it. Likes and views are tracked but not treated as results. If leads do not rise over a quarter, the plan changes.',
   },
   {
     category: 'trust',
     question: 'Who will actually do my work, seniors or freshers?',
     answer:
-      'This is the most important question most people forget to ask. Many agencies win you over with senior people, then hand your work to freshers straight out of a three-month course. Always ask who will run your account day to day. At FactoryJet, experienced people do the work, not trainees practising on your business.',
+      'Ask for the name of the person who will run your account each day, and how long they have done this. In Bangalore it is common to meet a director at the pitch and then get a trainee. At FactoryJet the experienced people you meet are the ones who do the work.',
   },
   {
     category: 'trust',
     question: 'What are the red flags of a bad digital marketing agency?',
     answer:
-      'Watch out for these: a "guaranteed" number-one spot on Google, offers that seem too good to be true, big confusing words instead of clear answers, no real examples of past work, and being locked into a long contract before anything is proven. Any single one of these is a good reason to be careful.',
+      'Be wary of a guaranteed first rank on Google, a monthly fee far below the market, reports full of jargon, no past work you can check, and a 12-month lock-in signed before any results. One of these is enough reason to walk away.',
   },
   {
     category: 'trust',
     question: 'Do agencies lock you into long contracts?',
     answer:
-      'Some do, and it is often to protect themselves rather than you. A confident agency is happy to prove its value month by month. Always ask how easy it is to leave if you are not happy. If leaving is made difficult, ask yourself why they built it that way.',
+      'Some Bangalore agencies ask for 6 or 12 months up front. That protects their revenue more than your results. Ask what notice you must give to leave. An agency that earns its fee each month has no reason to make exit hard.',
   },
   {
     category: 'ai',
     question: 'Should my Bangalore business show up in AI search like ChatGPT and Google AI Overviews?',
     answer:
-      'Yes, and in a tech-first city like Bangalore it matters even more, because so many people here ask ChatGPT or Gemini before they buy. When someone asks an AI tool for a recommendation, you want your business to be one of the answers. Getting mentioned by AI tools is a newer skill called GEO, short for generative engine optimisation. Most agencies are not doing this yet, which is your opening. We build it into our work, so you are found on Google and inside AI answers.',
+      'Yes. Bangalore buyers, especially in tech, often ask ChatGPT or Gemini for a shortlist before they search Google. Being named there is called GEO, or generative engine optimisation. Few local agencies do it yet. We add it to the plan alongside Google rankings.',
   },
   {
     category: 'ai',
     question: 'What is answer engine optimisation, and does my business need it?',
     answer:
-      'Answer engine optimisation, or AEO, simply means shaping your website so AI tools and Google’s instant answers pick your business as the reply. It is closely related to GEO. If your customers are the kind of people who ask ChatGPT or Google a question before buying, and in Bangalore many are, then yes, you need it. If you are not sure, we can check for free whether AI tools already mention you.',
+      'AEO, or answer engine optimisation, means writing and structuring your pages so Google’s quick answers and AI tools quote you. It sits close to GEO. If your buyers ask questions before they buy, as many Bangalore buyers do, it is worth doing. Our free checker shows whether AI tools mention you today.',
   },
 
   /* ── Added from more live Bangalore "People also ask" + related-search data
@@ -720,7 +720,7 @@ const serviceSchema = {
   areaServed: { '@type': 'City', name: 'Bangalore' },
   serviceType: 'Digital Marketing',
   description:
-    'Integrated digital marketing for Bangalore businesses: SEO, paid ads, social media, websites, WhatsApp and AI search, handled by one senior in-house team.',
+    'Digital marketing for Bangalore startups, D2C brands, clinics and B2B firms: search rankings, Google and Meta ads, social, websites, WhatsApp and AI answers from one senior team.',
 };
 
 const agenciesSchema = {
@@ -792,7 +792,7 @@ export default function BangaloreDigitalMarketingPage() {
         <Hero
           eyebrow="DIGITAL MARKETING AGENCY · BANGALORE"
           headline="A Digital Marketing Agency in Bangalore That Brings You Real Customers"
-          lead="We help Bangalore businesses get found on Google and AI tools like ChatGPT, and turn visitors into real enquiries. One senior in-house team, plain-English reports, no jargon."
+          lead="From Koramangala startups to Jayanagar clinics, we help Bangalore businesses show up on Google and in ChatGPT answers, then turn those visits into calls, demos and orders. One senior team, plain reports."
           formSlot={<HeroInlineForm region="in" source="in_digital_marketing_bangalore_hero" />}
           secondaryCta={{ label: 'Get a Free Growth Plan', modal: true as const, region: 'in' as const }}
           trustItems={HERO_TRUST}
@@ -841,7 +841,7 @@ export default function BangaloreDigitalMarketingPage() {
           </div>
         </section>
 
-        <LogoBar tagline="Trusted by 500+ businesses across India, the US, the UK and the UAE" />
+        <LogoBar tagline="500+ businesses helped in India, the US, the UK and the UAE" />
 
         <BigThreeTrustBlock
           variant="statement"
@@ -868,8 +868,8 @@ export default function BangaloreDigitalMarketingPage() {
 
         <ServiceExplanation
           eyebrow="WHAT WE DO, IN PLAIN WORDS"
-          headline="What a digital marketing agency actually does for you"
-          lead="Strip away the buzzwords and it comes down to one thing: helping more of the right people in Bangalore find your business and become customers."
+          headline="What digital marketing means for a Bangalore business"
+          lead="Bangalore buyers research on phones, compare on Google and ask AI tools. Our job is to be there at each step and turn that research into a call or an order."
           body={
             <>
               <p>
@@ -904,8 +904,8 @@ export default function BangaloreDigitalMarketingPage() {
         <IndustriesGrid
           variant="cards"
           eyebrow="EVERYTHING IN ONE PLACE"
-          headline="One team for every part of your online growth"
-          lead="Instead of hiring five different people, you get one senior team that covers the whole picture. Each of these links to how we do it."
+          headline="Every channel a Bangalore business needs, from one team"
+          lead="Search, ads, stores, AI agents and WhatsApp, run by the same senior people. Click any card to see how we handle that channel."
           sectors={CHANNELS}
         />
 
@@ -948,8 +948,8 @@ export default function BangaloreDigitalMarketingPage() {
 
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs a traditional agency vs a freelancer vs your own team"
-          lead="There is no single right answer for every business. Here is an honest look at how the options differ, so you can pick what fits you."
+          headline="Four ways to staff your marketing in Bangalore, compared"
+          lead="FactoryJet, a typical agency, a freelancer or an in-house hire. Each suits a different stage. This table shows where each one falls short."
           pullQuote={{
             stat: '12 years',
             caption:
@@ -974,7 +974,7 @@ export default function BangaloreDigitalMarketingPage() {
         <StrategicDarkSection
           eyebrow="WHY MONEY GETS WASTED"
           headline="Three reasons most digital marketing spend disappears"
-          lead="If past marketing did not work, it is usually one of these, and all three are avoidable."
+          lead="When marketing has failed for a Bangalore business, one of these three causes is usually behind it."
           pillars={PILLARS}
         />
 
@@ -1141,10 +1141,10 @@ export default function BangaloreDigitalMarketingPage() {
 
         <ServiceJourneyRow
           eyebrow="HOW WORKING WITH US FEELS"
-          headline="From first chat to real results, in five simple steps"
-          lead="No confusing process, no surprises. Here is exactly what happens when you work with us."
+          headline="How we work with Bangalore businesses, step by step"
+          lead="Five stages, each with something you can see and approve before the next one starts."
           stages={JOURNEY}
-          closingNote="5 SIMPLE STEPS · SENIOR TEAM · HONEST MONTHLY REPORTS"
+          closingNote="CALL · PLAN · BUILD · REPORT · IMPROVE"
         />
 
         {/* Bangalore business-types listicle: the segments we grow and what
@@ -1244,7 +1244,7 @@ export default function BangaloreDigitalMarketingPage() {
         <FAQ
           eyebrow="QUESTIONS PEOPLE ACTUALLY ASK"
           headline="Digital marketing in Bangalore, answered in plain words"
-          lead="Real questions from real Bangalore searches, answered simply, with no jargon and no sales spin."
+          lead="Questions Bangalore business owners type into Google before hiring an agency, with straight answers."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
@@ -1253,10 +1253,10 @@ export default function BangaloreDigitalMarketingPage() {
           variant="light"
           eyebrow="READY WHEN YOU ARE"
           headline="Want to see how many customers you are missing in Bangalore?"
-          sub="Book a free, no-pressure chat. We will look at your website and where your Bangalore customers are, and tell you honestly what will bring you more enquiries, even if we never work together."
+          sub="Book a free call. We review your site, your Google listing and your AI search presence, and send a short list of fixes you can act on with or without us."
           primaryCta={{ label: 'Get My Free Growth Plan', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Check if AI tools recommend you', href: '/ai-visibility-checker' }}
-          objectionHandler="No jargon. No long contract. Just an honest plan you can use straight away."
+          objectionHandler="Free review. Plain English. You keep the plan either way."
         />
       </main>
 

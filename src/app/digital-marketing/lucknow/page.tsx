@@ -21,15 +21,15 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 const CANONICAL = 'https://factoryjet.com/digital-marketing/lucknow';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Agency in Lucknow | SEO + Ads | FactoryJet',
+  title: 'Digital Marketing Agency in Lucknow | SEO, Ads | FactoryJet',
   description:
-    'Looking for a digital marketing agency in Lucknow? We help UP businesses get found on Google and AI search, and turn clicks into real enquiries.',
+    'Digital marketing agency in Lucknow for clinics, coaching institutes, chikankari brands and builders. SEO, Google Ads, WhatsApp and AI search, one senior team.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Digital Marketing Agency in Lucknow | SEO + Ads | FactoryJet',
+    title: 'Digital Marketing Agency in Lucknow | SEO, Ads | FactoryJet',
     description:
-      'One senior in-house team that gets Lucknow businesses found on Google and AI search, and turns visitors into enquiries. SEO, ads, websites, social and more.',
+      'Digital marketing agency in Lucknow for clinics, coaching institutes, chikankari brands and builders. SEO, Google Ads, WhatsApp and AI search, one senior team.',
     url: CANONICAL,
     images: [
       {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Digital Marketing Agency in Lucknow | FactoryJet',
     description:
-      'Get found on Google and AI search, and turn Lucknow visitors into customers. One senior in-house team.',
+      'Lucknow clinics, coaching centres, food brands and chikankari sellers: get found on Google, Maps and AI search, then answer every lead on WhatsApp.',
     images: ['https://factoryjet.com/images/services/digital-marketing/lucknow/hero.webp'],
   },
   alternates: {
@@ -77,13 +77,16 @@ export const metadata: Metadata = {
      - city4_agencies.json: top-ranking agencies with their OWN meta descriptions,
        so every "best for" line reflects how each agency describes itself.
        Nothing about a named competitor is invented.
+   Copy rewritten 7 Nov 2026 around Lucknow's own business mix (chikankari,
+   Awadhi food, coaching, hospitals, Gomti Nagar real estate, state-capital
+   suppliers) so it no longer mirrors the other city pages.
    ──────────────────────────────────────────────────────────────────────── */
 
 const HERO_TRUST = [
   '500+ businesses helped',
   '12 years of experience',
-  'One senior in-house team',
-  'Found on Google and AI search',
+  'Senior people on every account',
+  'Visible on Google, Maps and AI answers',
 ];
 
 /* Every figure below is fetch-verified against the cited source. Nothing here
@@ -92,7 +95,7 @@ const MARKET_STATS = [
   {
     value: '4.37 million',
     label:
-      'people live in the Lucknow metro area, making it one of north India’s largest urban markets. Very few local businesses are competing properly for that attention online.',
+      'people live in the Lucknow metro area. Patients, students and shoppers from smaller UP towns add to that daily, and most of them search on a phone first.',
     sourceUrl:
       'https://www.macrotrends.net/global-metrics/cities/21318/lucknow/population',
     sourceLabel: 'MacroTrends, 2026 estimate',
@@ -100,7 +103,7 @@ const MARKET_STATS = [
   {
     value: '1.03 billion',
     label:
-      'people in India now use the internet, about 70 in every 100 Indians. Your buyers are already searching before they ever call you.',
+      'Indians are online, roughly seven in ten. A parent picking a coaching centre in Aliganj or a family booking a kebab dinner in Aminabad checks Google before deciding.',
     sourceUrl:
       'https://datareportal.com/reports/digital-2026-india',
     sourceLabel: 'DataReportal Digital 2026',
@@ -108,7 +111,7 @@ const MARKET_STATS = [
   {
     value: '100 million+',
     label:
-      'weekly ChatGPT users are in India, its second-largest market after the US. More buyers now ask an AI tool who to pick before they contact anyone.',
+      'Indians use ChatGPT every week, its biggest user base outside the US. Lucknow buyers now type "kaunsa hospital achha hai" or "best chikan kurta shop" into AI tools too.',
     sourceUrl:
       'https://techcrunch.com/2026/02/15/india-has-100m-weekly-active-chatgpt-users-sam-altman-says/',
     sourceLabel: 'TechCrunch, Feb 2026',
@@ -126,58 +129,58 @@ const STATS = [
 // existing FactoryJet service page so this Lucknow page passes authority down.
 const CHANNELS: IndustryCard[] = [
   {
-    name: 'SEO (get found on Google)',
+    name: 'SEO (rank on Google for free)',
     description:
-      'SEO means search engine optimisation. In plain words: showing up on Google when a buyer searches for what you sell, without paying for every click.',
+      'Search engine optimisation gets your clinic, institute or shop onto page one for searches like "chikan suit wholesale Chowk" or "MRI centre Gomti Nagar". You pay for the work, never per click.',
     linkLabel: 'Explore SEO',
     linkHref: '/seo',
   },
   {
     name: 'Websites that sell',
     description:
-      'A fast, mobile-first website that loads quickly on any phone and turns visitors into calls and enquiries, instead of just looking nice.',
+      'A light site that opens fast on a budget Android phone, shows your fees, menu or project floor plans clearly, and puts a call and WhatsApp button on every screen.',
     linkLabel: 'See web design',
     linkHref: '/web-design',
   },
   {
     name: 'Online stores',
     description:
-      'Ecommerce means selling online. For a Lucknow chikankari or craft brand, that means a store buyers across India can order from directly instead of only through resellers.',
+      'Chikankari kurtas, sarees and home linen sell to buyers in Bengaluru, Dubai and London who will never visit Chowk. Your own store lets them order from you instead of a reseller.',
     linkLabel: 'See ecommerce',
     linkHref: '/services/ecommerce-development',
   },
   {
-    name: 'AI search (get picked by ChatGPT)',
+    name: 'AI search (get named by ChatGPT)',
     description:
-      'When a buyer asks ChatGPT, Gemini or Google’s AI "which supplier in Lucknow should I use", we help your business be one of the answers. This newer skill is called GEO.',
+      'People now ask ChatGPT or Gemini to suggest a dentist in Indira Nagar or a NEET coaching centre in Lucknow. GEO is the work that gets your name into those answers.',
     linkLabel: 'Explore AI SEO',
     linkHref: '/ai-seo',
   },
   {
     name: 'Chatbots and automation',
     description:
-      'Smart helpers that reply day and night. Useful when a buyer in another time zone messages your Lucknow office at 2am and nobody is there.',
+      'An assistant that answers fee, timing and appointment questions after hours, so a parent asking about batches at 11pm gets a reply before they message the next institute.',
     linkLabel: 'See AI agents',
     linkHref: '/services/ai-agent-development',
   },
   {
     name: 'WhatsApp for business',
     description:
-      'Most Lucknow enquiry ends up on WhatsApp. We make it collect leads, send catalogues and follow up automatically instead of by hand.',
+      'Lucknow buyers prefer to chat before they visit. We set WhatsApp to share catalogues, menus or brochures, log every lead, and send reminders without anyone typing by hand.',
     linkLabel: 'See WhatsApp chatbot',
     linkHref: '/whatsapp-chatbot',
   },
   {
     name: 'Shopify stores',
     description:
-      'Shopify is a popular tool for online shops. We build custom Shopify stores for Lucknow chikankari, craft and lifestyle brands that look great and load fast.',
+      'Shopify suits chikankari labels, attar sellers and packaged sweet or namkeen brands that ship across India. We set up payments, cash on delivery and courier links for you.',
     linkLabel: 'See Shopify',
     linkHref: '/shopify-development',
   },
   {
     name: 'WordPress websites',
     description:
-      'WordPress is the world’s most-used website tool. We build flexible sites on it that you fully own and control, no lock-in.',
+      'For hospitals, schools, law chambers and builders who publish often, WordPress lets your own staff add notices, doctors or projects. The site and its login stay in your name.',
     linkLabel: 'See WordPress',
     linkHref: '/wordpress-development',
   },
@@ -192,11 +195,11 @@ const COMPARE_COLUMNS = [
 
 const COMPARE_ROWS = [
   {
-    feature: 'Who actually does your work',
-    values: ['Senior, in-house', 'Often freshers', 'One person', 'You hire and train'],
+    feature: 'Person handling your account day to day',
+    values: ['Experienced specialist', 'Usually a junior', 'A single generalist', 'Staff you recruit'],
   },
   {
-    feature: 'All channels handled in one place',
+    feature: 'Website, SEO, ads and WhatsApp under one roof',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -205,7 +208,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Simple monthly report you can actually read',
+    feature: 'Monthly report that counts calls and walk-ins, not likes',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -214,7 +217,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Gets you into AI search (ChatGPT, Gemini, Google AI)',
+    feature: 'Work on ChatGPT, Gemini and Google AI answers',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="no" />,
@@ -223,7 +226,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Understands textile and diamond trade buyers',
+    feature: 'Copy and keywords in Hindi and Hinglish as well as English',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -232,7 +235,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Can sell to buyers outside Gujarat, not just locally',
+    feature: 'Can sell chikankari or packaged food beyond Uttar Pradesh',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -241,7 +244,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Start quickly, no long lock-in',
+    feature: 'Month-to-month terms from day one',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="no" />,
@@ -250,7 +253,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Sets up local Lucknow search (Google Maps and the local pack)',
+    feature: 'Google Business Profile and map pack for each Lucknow branch',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -259,7 +262,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Fast WhatsApp follow-up so no enquiry is missed',
+    feature: 'WhatsApp replies and reminders set up to run on their own',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -268,7 +271,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Explains the work in plain words, no jargon',
+    feature: 'Talks to you in everyday language',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -279,114 +282,114 @@ const COMPARE_ROWS = [
 ];
 
 /* Named-competitor comparison. Every agency below currently ranks on Google
-   for "digital marketing agency in surat" (checked 31 July 2026), and each
+   for "digital marketing agency in lucknow" (checked 31 July 2026), and each
    "best for" line is written from that agency's OWN description of itself.
    We do not invent team sizes, client counts or specialisms. */
 const AGENCIES = [
   {
     name: 'FactoryJet',
     bestFor:
-      'Lucknow businesses that want one senior team across website, Google, ads and AI search, with plain-English monthly reports. (Yes, that is us. We include ourselves openly and let the comparison speak for itself.)',
+      'Lucknow clinics, institutes, food brands, builders and craft sellers who want site, search, ads, WhatsApp and AI visibility run by one senior team and reported monthly in plain language. (This entry is us, listed openly.)',
     isUs: true,
   },
   {
     name: 'Digital Jugglers',
     bestFor:
-      'Businesses wanting one team across everything. They describe a unified full-service approach to digital branding and marketing in Lucknow.',
+      'Owners who want branding and marketing from a single unified team; that is how they present their Lucknow service.',
   },
   {
     name: 'Tantrash Technologies',
     bestFor:
-      'Buyers who need software development alongside marketing. They describe themselves as a software development company and digital marketing agency in one.',
+      'Firms that need custom software as well as promotion, since they call themselves both a software developer and a marketing agency.',
   },
   {
     name: 'Digital Nawab',
     bestFor:
-      'Companies focused on paid advertising. They describe themselves as a Google Partner agency covering SEO, Google Ads and Meta Ads.',
+      'Advertisers focused on paid campaigns. They present themselves as a Google Partner handling SEO, Google Ads and Meta Ads.',
   },
   {
     name: 'Digital Marketing Robo',
     bestFor:
-      'Businesses that want visibility into what is actually being done. Their own description leads with transparency and live reporting on the work.',
+      'Clients who want to watch the work happen. Their own pitch opens with transparency and live progress reporting.',
   },
   {
     name: 'Pitch Pine Media',
     bestFor:
-      'Buyers looking for a Lucknow agency positioning itself on innovation and trust in the local market.',
+      'Buyers drawn to a local agency that sells itself on innovation and trust within Lucknow.',
   },
   {
     name: 'ArikaB2B',
     bestFor:
-      'Businesses whose priority is local visibility specifically. They describe a focus on local SEO, Google Maps and location-based search.',
+      'Shops and branches chasing nearby customers. Their stated focus is local SEO, Google Maps and location searches.',
   },
 ];
 
 const JOURNEY: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'A free, no-pressure chat',
+    title: 'Free first call',
     description:
-      'We learn about your business, who buys from you, and whether they are in Lucknow, elsewhere in India, or overseas. No jargon, no hard sell.',
+      'Tell us what you sell and where your buyers sit: your own mohalla, the rest of UP, other states, or abroad. We listen before suggesting anything.',
   },
   {
     number: '02',
-    title: 'A clear, simple plan',
-    description: 'We show you exactly what we will do and why, in words you can understand and approve.',
+    title: 'Written plan',
+    description: 'You get a short note naming the two or three channels we would start with, the reason for each, and what we need from you.',
   },
   {
     number: '03',
-    title: 'We build and run it',
+    title: 'Setup and launch',
     description:
-      'Website, Google, ads, WhatsApp, AI search, whatever you picked. Our senior team does the actual work.',
+      'We fix the website, Google profile, ads, WhatsApp flows or AI search work you approved. Senior specialists do it themselves.',
   },
   {
     number: '04',
-    title: 'You see the results',
-    description: 'A simple monthly report: visitors, enquiries and what we did. Real numbers, plainly shown.',
+    title: 'Monthly numbers',
+    description: 'Each month: calls, forms, WhatsApp chats and store orders, with the source of each. One page, no padding.',
   },
   {
     number: '05',
-    title: 'We keep improving',
-    description: 'We do more of what brings you enquiries and drop what does not. Month after month.',
+    title: 'Shift the budget',
+    description: 'Channels that produce leads get more money. Channels that stall get cut. We tell you which is which.',
   },
 ];
 
 const SECTORS: IndustryCard[] = [
   {
-    name: 'Healthcare and clinics',
+    name: 'Hospitals, clinics and diagnostic labs',
     description:
-      'Lucknow is the referral centre for healthcare across a very large part of Uttar Pradesh, with patients travelling in from smaller towns. For hospitals, specialists and dental or fertility clinics this is almost entirely local search: appearing in the map pack, having reviews that read as genuine, and making booking easy on a phone.',
-    example: 'Hospitals, specialist clinics and diagnostic centres across Gomti Nagar and Hazratganj.',
+      'Families from across UP travel to Lucknow for treatment, and most pick a doctor or lab by searching on a phone. Map pack placement, honest reviews and a booking button that works decide where they go.',
+    example: 'Multispecialty hospitals, dental and IVF clinics, pathology labs and imaging centres.',
   },
   {
-    name: 'Education and coaching',
+    name: 'Coaching institutes and schools',
     description:
-      'The city draws students from across the state for competitive exam coaching, universities and professional courses. Admissions are decided on visible results, reviews and how quickly someone responds to an evening enquiry from a parent.',
-    example: 'Coaching institutes, universities and skill academies competing each admission cycle.',
+      'Students arrive from all over the state for NEET, JEE, UPSC and state exam preparation. Parents compare results pages, read reviews and send enquiries late in the evening. The institute that answers first usually wins the seat.',
+    example: 'Exam coaching centres in Aliganj and Kapoorthala, schools, and professional course providers.',
   },
   {
-    name: 'Real estate and construction',
+    name: 'Real estate in Gomti Nagar and Shaheed Path',
     description:
-      'Lucknow keeps expanding towards Sushant Golf City, Sultanpur Road and the outer ring, and buyers compare projects online long before they visit a site. Fast project pages, honest photography and a lead route that reaches a human quickly beat printed brochures.',
-    example: 'Developers, brokers and interior firms across the expanding southern and eastern suburbs.',
+      'New projects keep going up in Gomti Nagar Extension, along Shaheed Path and on Sultanpur Road. Buyers shortlist online first. Clear project pages, RERA details and a quick callback beat a stack of printed flyers.',
+    example: 'Builders, channel partners, interior designers and home loan advisers.',
   },
   {
-    name: 'Chikankari, crafts and D2C',
+    name: 'Chikankari and craft sellers',
     description:
-      'Lucknow’s chikankari and craft trade has a national and diaspora audience that mostly cannot buy locally. This is the clearest ecommerce opportunity in the city: a proper online store, product photography that does the work justice, and search visibility well outside Uttar Pradesh.',
-    example: 'Chikankari labels, craft exporters and lifestyle brands shipping nationwide.',
+      'Hand-embroidered chikan work from Chowk and Aminabad has buyers all over India and in the Gulf, UK and US. Most of them cannot visit. A well-photographed store and search visibility outside UP turn that demand into direct orders.',
+    example: 'Chikankari labels, wholesalers moving to retail, and attar and craft brands.',
   },
   {
-    name: 'Government, legal and professional services',
+    name: 'Awadhi restaurants, kebabs and sweets',
     description:
-      'As the state capital, Lucknow has a dense professional services layer around government and legal work. These buyers research discreetly and judge credibility fast. A serious website and clear expertise matter far more than social media activity.',
-    example: 'Law firms, consultancies, chartered accountants and advisory practices.',
+      'Lucknow food is a brand in itself. Diners search "best kebab near me" or "biryani Aminabad" and pick from the top three map results. Current photos, a menu on Google and steady reviews fill tables and delivery orders.',
+    example: 'Kebab and biryani houses, cafes, cloud kitchens and mithai and namkeen shops.',
   },
   {
-    name: 'Retail, restaurants and local services',
+    name: 'Government suppliers and professional firms',
     description:
-      'Hazratganj, Gomti Nagar and Aliganj are dense with restaurants, salons, gyms and repair services competing for nearby customers. Google Maps, current photographs and steady reviews decide who gets the call.',
-    example: 'Restaurants, salons and service businesses serving their own part of the city.',
+      'As the state capital, Lucknow has many contractors, suppliers, law chambers and CA firms that serve government departments. Their buyers check credibility quietly. A clear website listing work done and registrations counts for more than social posts.',
+    example: 'Contractors, equipment suppliers, advocates, chartered accountants and consultants.',
   },
 ];
 
@@ -404,145 +407,145 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'choosing',
     question: 'Which is the best digital marketing agency in Lucknow?',
     answer:
-      'There is no single best agency for every Lucknow business. Two companies on the same street can need completely different plans depending on who buys from them. Further down this page we compare the agencies that actually rank in Lucknow, including ourselves, with an honest note on who each one suits. Pick the fit, not the loudest name.',
+      'That depends on what you run. A diagnostic lab in Gomti Nagar needs map rankings and reviews. A chikankari label needs a store that sells in Mumbai and Dubai. Further down we list the agencies ranking in Lucknow today, ourselves included, with a line on who each one suits. Use it to shortlist by fit.',
   },
   {
     category: 'choosing',
     question: 'Which agency is best for digital marketing?',
     answer:
-      'The one whose usual client looks like you. An agency built for social media campaigns will not be strong at technical B2B search, and the reverse is also true. Ask any agency to name three clients in your line of work and show what happened. If they cannot, you are their experiment.',
+      'Pick the agency whose existing clients resemble your business. A team that mostly runs Instagram for cafes may struggle with a hospital or a government supplier. Ask for two or three examples from your sector and what changed for them. No examples means you would be the trial run.',
   },
   {
     category: 'choosing',
     question: 'How do I choose a digital marketing agency in Lucknow?',
     answer:
-      'Ask three questions before signing. One: who does the actual work, a senior person or a fresher? Two: what exactly do I get each month, in plain words? Three: can you show real results for a business like mine? An agency that answers all three clearly is usually safe. Vague answers to any one of them are the warning.',
+      'Before you sign, find out three things. Who exactly will handle your account? What will be delivered every month, written down? Have they grown a business like yours, and can you see it? Clear answers are a good sign. Hesitation on any of the three tells you to keep looking.',
   },
   {
     category: 'choosing',
     question: 'Should I hire a Lucknow agency or one from Mumbai or Delhi?',
     answer:
-      'It depends on who buys from you. If your customers are in Lucknow, local knowledge and quick in-person meetings help. If you sell across India or export, what matters is skill, not postcode. Most of the work happens online either way, so judge the team and the reporting rather than the address.',
+      'If your buyers are in Lucknow, an agency that knows Hazratganj from Alambagh and reads Hinglish searches well has an edge. If you ship chikankari nationwide or sell to other states, skill matters more than city. The work runs online in both cases, so compare the people and the reports.',
   },
   {
     category: 'choosing',
     question: 'What are the red flags of a bad agency?',
     answer:
-      'Guaranteed number one rankings, refusing to give you access to your own Google and Analytics accounts, monthly reports full of charts but no enquiry numbers, and long contracts with heavy exit penalties. Any single one of these is a reason to slow down and ask harder questions.',
+      'Watch for promises of a guaranteed first position, Google and Analytics accounts held in the agency name, reports with graphs but no enquiry count, and twelve-month contracts with exit penalties. One of these is enough reason to pause.',
   },
   {
     category: 'cost',
     question: 'What is the cost of digital marketing in Lucknow?',
     answer:
-      'It varies widely, and any agency quoting a firm number before understanding your business is guessing. What actually moves the figure is how many channels you run, how much ad budget sits on top of the fee, and whether senior people or trainees do the work. Ask for the fee and the ad spend to be written separately.',
+      'The figure moves with three things: the number of channels, the ad budget you add on top, and the seniority of the people doing the work. Anyone quoting before they understand your business is guessing. Ask for the agency fee and the ad spend as two separate lines.',
   },
   {
     category: 'cost',
     question: 'How much does a digital marketing agency charge?',
     answer:
-      'Most charge a monthly retainer, a percentage of ad spend, a per-project fee, or a mix. Watch the percentage model: it quietly rewards the agency for spending more of your money rather than spending it well. Ask which model you are on and what happens to the fee if you cut your ad budget.',
+      'You will see four models: a fixed monthly fee, a cut of your ad spend, a one-off project price, or a mix. A cut of ad spend pays the agency more when you spend more, whether or not it works. Ask which model applies and how the fee changes if you lower your budget.',
   },
   {
     category: 'cost',
     question: 'Do agencies lock you into long contracts?',
     answer:
-      'Many do, often twelve months, and the lock-in usually protects the agency rather than you. We work month to month with 30 days notice. If the work is good you will stay because it is working, not because a clause says you must.',
+      'Many ask for a year upfront, which protects their income more than your results. We work month to month with 30 days notice. You keep paying only while the leads keep coming.',
   },
   {
     category: 'cost',
     question: 'Is digital marketing worth it for a small Lucknow business?',
     answer:
-      'It is worth it when people already search for what you sell and you have nobody with the time or skill to capture them. It is not worth it if the product itself is unproven, because marketing only makes you lose money faster. Fix the offer first, then spend on reaching more people.',
+      'Yes, if customers already search for what you offer and nobody on your side has time to catch those searches. A sweet shop, a tuition centre or a dental clinic usually fits. If the product or service is still untested, fix that first, because ads only speed up whatever is already true.',
   },
   {
     category: 'services',
     question: 'What does a digital marketing agency actually do?',
     answer:
-      'In plain words: it helps more of the right people find your business and become customers. That usually means a website worth landing on, showing up on Google without paying for every click, running ads where they pay back, and making sure enquiries get answered fast. Everything else is detail.',
+      'It gets the right buyers to find you and then contact you. For a Lucknow business that usually means a fast website, ranking on Google and Maps, ads only where they pay back, and WhatsApp replies that go out within minutes.',
   },
   {
     category: 'services',
     question: 'What are the main types of digital marketing?',
     answer:
-      'The ones that matter for most Lucknow businesses are search (SEO), paid ads on Google and Meta, social media, email and WhatsApp, content, and now AI search. You do not need all of them. You need the two or three where your buyers actually are.',
+      'SEO, Google and Meta ads, social media, email, WhatsApp, content, and now AI search. A coaching institute might need ads and WhatsApp. A hospital might need Maps and reviews. Pick the two or three channels your buyers use and skip the rest.',
   },
   {
     category: 'services',
     question: 'Do I need SEO, ads, or social media first?',
     answer:
-      'If you need enquiries this month, start with ads, because they turn on immediately. If you want cheaper enquiries in a year, start with SEO, because it compounds. Most businesses do best with a small mix: ads for now while search builds underneath.',
+      'Need enquiries this admission season or this festive sale? Start with ads, which switch on the same day. Want cheaper leads next year? Begin SEO now, because rankings build over months. A small ad budget running while SEO grows works for most Lucknow businesses.',
   },
   {
     category: 'services',
     question: 'Can you build the website too, or only run marketing?',
     answer:
-      'Both. Marketing sending traffic to a slow or confusing website is the most common waste we see. We build the site and run the marketing, which means nobody gets to blame the other side when enquiries do not arrive.',
+      'We do both. Paying for ads that land on a slow, confusing site is the waste we see most often. When one team owns the site and the campaigns, there is nobody else to blame if leads drop, so problems get fixed faster.',
   },
   {
     category: 'services',
     question: 'Do you handle WhatsApp enquiries?',
     answer:
-      'Yes, and in most Indian markets it is where the real conversation happens. We set up WhatsApp so it captures leads, sends catalogues automatically and follows up without someone typing every message by hand. For trade businesses this often recovers more enquiries than any new ad campaign.',
+      'Yes. Most Lucknow customers would rather message than fill a form. We set up auto-replies with your catalogue, menu, fee list or brochure, tag every lead, and send follow-ups on a schedule. For many clinics and institutes this saves leads that used to go unanswered overnight.',
   },
   {
     category: 'results',
     question: 'How long does digital marketing take to show results?',
     answer:
-      'Paid ads can bring enquiries within days. SEO usually takes three to six months before it moves meaningfully, and longer in competitive categories. Anyone promising fast SEO results is either overselling or planning something that will cost you later. We tell you which lever is which before you spend.',
+      'Ads can bring calls in the first week. SEO normally needs three to six months, more in crowded categories like coaching or real estate. Be wary of anyone promising quick rankings. We tell you upfront which channel is the fast one and which is the slow one.',
   },
   {
     category: 'results',
     question: 'How will I know if it is working?',
     answer:
-      'By enquiries, not impressions. Every month you get a short report showing how many people came, how many got in touch, and which channel they came from. If a channel is not producing after a fair run, we say so and move the budget rather than dressing it up.',
+      'Count leads. Your monthly report shows visitors, calls, forms and WhatsApp chats, each tagged to its source. When a channel underperforms after a fair test, we say so and move that money elsewhere.',
   },
   {
     category: 'results',
     question: 'Will I get access to my own accounts?',
     answer:
-      'Yes, always, and in your name rather than ours. Your Google Ads, Analytics and Search Console accounts belong to you. Any agency that refuses this is making sure you cannot verify their numbers and cannot leave without starting over.',
+      'Always. Google Ads, Analytics, Search Console and your Business Profile are set up under your name and email. An agency that keeps those in its own name is stopping you from checking its numbers or leaving cleanly.',
   },
   {
     category: 'ai',
     question: 'Should my Lucknow business show up in ChatGPT and Google AI answers?',
     answer:
-      'If your buyers ask an AI assistant for a recommendation before calling anyone, then yes. This is already normal for younger B2B buyers researching suppliers. Being the business the AI names is the newer version of ranking first, and most agencies are not doing anything about it yet.',
+      'Yes, if your buyers ask AI for suggestions. Students choosing a coaching centre and families comparing hospitals already do this. Getting named in that answer is the new top ranking, and very few Lucknow businesses are working on it yet.',
   },
   {
     category: 'ai',
     question: 'How is AI changing digital marketing?',
     answer:
-      'It has taken over most of the production work: drafts, ad variations, routine reporting. What it has not taken over is judgement about which buyers matter and which numbers are worth acting on. The practical change for you is that search now has two front doors, Google and the AI assistants, and you need to be visible in both.',
+      'AI now writes first drafts, ad variations and routine reports. Deciding which customers matter and which numbers to act on is still human work. For you the change is simple: people search in two places now, Google and AI assistants, and you need to appear in both.',
   },
   {
     category: 'local',
     question: 'How is marketing a Lucknow business different from other cities?',
     answer:
-      'The unusual thing about Lucknow is the gap between how big the market is and how few businesses compete properly online. Searches that would be brutally expensive in Delhi are still winnable here. The second difference is that trust travels by reputation locally, so reviews and a credible website do more work here than clever advertising.',
+      'Many Lucknow searches are typed in Hindi or Hinglish, so keywords and page copy need to match how people actually phrase things. Competition online is also thinner than in Delhi or Mumbai for a city this size. And reputation still drives decisions here, so reviews and a solid website carry extra weight.',
   },
   {
     category: 'local',
     question: 'How do I show up on Google Maps in Lucknow?',
     answer:
-      'Claim and complete your Google Business Profile, pick the right category, add real photographs of your actual premises, and collect reviews steadily rather than all at once. Keep your name, address and phone number identical everywhere. For a Gomti Nagar clinic or Hazratganj restaurant this is usually the single highest-return thing to fix.',
+      'Claim your Google Business Profile, choose the exact category, upload real photos of your shop or clinic, and ask happy customers for reviews every week. Use the same name, address and number on every listing. For a restaurant in Aminabad or a lab in Indira Nagar, this is often the cheapest fix with the biggest return.',
   },
   {
     category: 'local',
     question: 'Do you work with businesses in Gomti Nagar, Hazratganj and Aliganj?',
     answer:
-      'Yes. Because the work happens online, your part of the city does not limit us. We work with businesses across Gomti Nagar, Hazratganj, Aliganj, Indira Nagar, Alambagh, Chowk and out towards Sushant Golf City and Amausi.',
+      'Yes. The work is done online, so your location in the city makes no difference to us. We work with businesses in Gomti Nagar, Hazratganj, Aliganj, Indira Nagar, Alambagh, Chowk, Aminabad and out to Sushant Golf City and Amausi.',
   },
   {
     category: 'local',
     question: 'Can you help us sell outside Lucknow?',
     answer:
-      'Yes, and for chikankari brands, craft exporters and professional firms that is often where the real money is. It means ranking for the searches buyers use in Delhi or Mumbai rather than only the ones used locally, plus a website and store that work for someone who has never heard of you.',
+      'Yes. For chikankari labels, packaged food brands and consultancies, buyers outside the city are often the larger market. That means targeting searches made in Delhi, Bengaluru or abroad, and building a store and site that earn trust from someone who has never been to Lucknow.',
   },
   {
     category: 'choosing',
     question: 'Which is the best digital marketing institute in Lucknow?',
     answer:
-      'We are an agency, not a training institute, so we are the wrong people to rank courses. A lot of people searching this phrase want to learn digital marketing or find a job rather than hire a team. If you want to hire an agency to do the work for your business, the comparison further down this page is the useful part.',
+      'We run marketing for businesses and do not teach courses, so we cannot rank institutes fairly. Many people typing this want to study or find a job. If you own a business and want the work done for you, the agency list on this page is the part to read.',
   },
 ];
 
@@ -551,7 +554,7 @@ const FAQ_ITEMS: FAQItem[] = [
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -580,7 +583,7 @@ const serviceSchema = {
   areaServed: { '@type': 'City', name: 'Lucknow' },
   serviceType: 'Digital Marketing',
   description:
-    'Integrated digital marketing for Lucknow businesses: SEO, paid ads, social media, websites, WhatsApp and AI search, handled by one senior in-house team.',
+    'Search, Maps, ads, WhatsApp, websites and AI visibility for Lucknow clinics, institutes, food brands, builders and chikankari sellers, run by one senior team.',
 };
 
 const agenciesSchema = {
@@ -654,7 +657,7 @@ export default function LucknowDigitalMarketingPage() {
         <Hero
           eyebrow="DIGITAL MARKETING AGENCY · LUCKNOW"
           headline="A Digital Marketing Agency in Lucknow That Brings You Real Customers"
-          lead="We help Lucknow businesses get found on Google and AI tools like ChatGPT, and turn visitors into real enquiries. One senior in-house team, plain-English reports, no jargon."
+          lead="Clinics, coaching institutes, Awadhi food brands, builders and chikankari sellers in Lucknow use us to rank on Google and Maps, appear in AI answers, and reply to every WhatsApp lead fast. Senior specialists, Hindi and English, monthly numbers you can check."
           formSlot={<HeroInlineForm region="in" source="in_lucknow_digital_marketing_hero" />}
           secondaryCta={{ label: 'Get a Free Growth Plan', modal: true as const, region: 'in' as const }}
           trustItems={HERO_TRUST}
@@ -674,7 +677,7 @@ export default function LucknowDigitalMarketingPage() {
                 />
                 <div className="absolute bottom-3 left-3 rounded-xl bg-white/95 px-4 py-2.5 shadow-sm">
                   <p className="font-fj-mono text-[10px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">
-                    Serving Lucknow and all of India
+                    Working with Lucknow and all of UP
                   </p>
                   <p className="mt-0.5 font-fj-display text-sm font-semibold text-fj-ink">
                     500+ businesses, 12 years
@@ -693,7 +696,7 @@ export default function LucknowDigitalMarketingPage() {
               So, which is the best digital marketing agency in Lucknow?
             </Heading>
             <p className="mt-4 text-lg leading-relaxed text-fj-ink/80">
-              The honest answer: there is no single best agency for every Lucknow business. A Gomti Nagar clinic filling appointment slots and a chikankari brand shipping across India need almost opposite plans. For Lucknow businesses that want one senior team handling the website, Google, ads and AI search together, FactoryJet is a strong choice. Below we compare the agencies that actually rank in Lucknow, including ourselves, so you can decide for yourself.
+              It depends on who your buyers are. An IVF clinic near Gomti Nagar wants local patients booking this week. A chikankari label in Chowk wants orders from Pune, Dubai and Toronto. Those are opposite plans. If you want one senior team running your website, Google, Maps, ads, WhatsApp and AI visibility together, FactoryJet fits. The list below covers the agencies ranking in Lucknow right now, us included, so you can compare.
             </p>
           </div>
         </section>
@@ -720,14 +723,14 @@ export default function LucknowDigitalMarketingPage() {
         <ServiceExplanation
           eyebrow="WHAT WE DO, IN PLAIN WORDS"
           headline="What a digital marketing agency in Lucknow actually does for you"
-          lead="Strip away the buzzwords and it comes down to one thing: helping more of the right people find your business and become customers."
+          lead="Our job is narrow: when a Lucknow buyer looks for what you sell, they should find you, trust you and message you."
           body={
             <>
               <p>
-                Most Lucknow businesses do not have a marketing problem. They have a visibility problem, and in this city it is unusually easy to fix. The market is large, the buyers are online, and yet far fewer local businesses compete properly for search than you would expect in a city of this size.
+                Plenty of good Lucknow businesses run on word of mouth and stay invisible online. The kebab house everyone in Aminabad knows may not appear when a visitor searches from a hotel in Hazratganj. The lab with the best reports may sit below a rival with more reviews.
               </p>
               <p>
-                That is the opportunity. We make sure you show up when someone searches for what you sell, whether that search happens on Google or inside ChatGPT. We make sure the page they land on loads fast on a phone and looks like a business worth trusting. And we make sure the enquiry reaches a human quickly, usually on WhatsApp.
+                We close that gap in three moves. First, rank you on Google, Maps and AI assistants for the searches your buyers type, in English, Hindi or Hinglish. Second, give them a page that opens fast on a cheap phone and answers fees, timings or prices up front. Third, route every enquiry to WhatsApp or a phone that someone picks up.
               </p>
             </>
           }
@@ -735,11 +738,11 @@ export default function LucknowDigitalMarketingPage() {
 
         <CityContextSection
           eyebrow="THE LUCKNOW MARKET, IN REAL NUMBERS"
-          headline="Lucknow is a huge market where surprisingly few businesses compete online"
+          headline="A state capital with deep demand and thin online competition"
           leadParagraphs={[
-            'Lucknow is the capital of Uttar Pradesh and the administrative and commercial centre for an enormous catchment. Government, healthcare, education, real estate and a long-standing craft and retail trade all sit here, and the metro area holds well over four million people.',
-            'What makes it unusual is the gap between market size and online competition. In most cities that big, the valuable searches are already fought over by well-resourced agencies. In Lucknow a lot of them are not. Several genuinely commercial searches here still have weak results, which means a well-built page can rank in months rather than years.',
-            'The other thing that matters is trust. A great deal of Lucknow business still runs on reputation and referral. Online, that translates into reviews, a website that does not look temporary, and someone answering the phone or WhatsApp quickly. Get those three right and you are ahead of most local competitors.',
+            'Lucknow runs Uttar Pradesh. Government departments, the High Court bench, large hospitals, universities and coaching hubs all sit here, and people travel in from Barabanki, Sitapur, Rae Bareli and further for them. Add the chikankari trade, Awadhi food and a busy property market, and the metro holds well over four million people.',
+            'Online, the city is under-served. Many commercial searches that would cost a fortune in Delhi still show thin, outdated results here. A well-built page for a clinic, an institute or a builder can climb in months.',
+            'Language and trust shape the rest. A lot of searches are typed in Hindi or Hinglish, and buyers lean on reviews and referrals before they call. Match their words, collect real reviews, and answer quickly, and you will be ahead of most local rivals.',
           ]}
           bodySlot={
             <>
@@ -748,7 +751,7 @@ export default function LucknowDigitalMarketingPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A market this size with competition this thin is the rarest thing in Indian search: an easy win that is also worth winning.
+                  Big catchment, few serious competitors online, and buyers who search in their own words: Lucknow rewards the businesses that show up first.
                 </p>
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
@@ -776,8 +779,8 @@ export default function LucknowDigitalMarketingPage() {
         <IndustriesGrid
           variant="cards"
           eyebrow="LUCKNOW × DIGITAL MARKETING"
-          headline="Marketing built around how Lucknow actually earns"
-          lead="The sectors that actually drive Lucknow. Each one buys differently, so each one needs a different plan."
+          headline="Plans shaped around the trades Lucknow runs on"
+          lead="Six kinds of Lucknow business, six different buying journeys. Here is what each one needs online."
           sectors={SECTORS}
         />
 
@@ -785,14 +788,14 @@ export default function LucknowDigitalMarketingPage() {
           variant="cards"
           eyebrow="WHAT WE CAN RUN FOR YOU"
           headline="Every channel, handled by the same senior team"
-          lead="You do not need all of these. You need the two or three where your buyers actually are, and we will tell you honestly which those are."
+          lead="Most Lucknow businesses need two or three of these, rarely all eight. On the first call we tell you which ones to skip."
           sectors={CHANNELS}
         />
 
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="Agency, freelancer, or your own team?"
-          lead="All three can work. Here is an honest view of what each one is genuinely good at, so you can pick the right shape for your business rather than the one that was pitched hardest."
+          lead="Each option has a place. A freelancer suits one small job, an in-house hire suits steady volume, an agency suits several channels at once. The table shows where each one holds up."
           columns={COMPARE_COLUMNS}
           rows={COMPARE_ROWS}
         />
@@ -807,10 +810,9 @@ export default function LucknowDigitalMarketingPage() {
               Digital marketing agencies in Lucknow, and who each one suits
             </Heading>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-fj-ink/80">
-              Every agency below currently ranks on Google for digital marketing in Lucknow, checked on
-              31 July 2026. Each description is written from how that agency describes itself, not
-              from our opinion of them. We include ourselves and say so openly, because hiding it
-              would be the opposite of honest.
+              We checked who ranks on Google for Lucknow digital marketing searches on
+              31 July 2026. Each line below paraphrases how that agency presents itself on its own
+              site. FactoryJet is on the list too, marked clearly, so you know where we stand.
             </p>
 
             <ol className="mt-10 space-y-4">
@@ -859,7 +861,7 @@ export default function LucknowDigitalMarketingPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Common questions from Lucknow businesses"
-          lead="The questions Lucknow business owners actually ask us, plus the ones they search for on Google, answered straight."
+          lead="What Lucknow owners ask us on calls, and what they type into Google before calling, with direct answers."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
@@ -868,18 +870,18 @@ export default function LucknowDigitalMarketingPage() {
         <section className="border-t border-fj-ink/10 bg-fj-cream px-6 py-10 md:px-8">
           <div className="mx-auto max-w-3xl">
             <p className="text-base leading-relaxed text-fj-ink/75">
-              We work well beyond Lucknow. See our{' '}
+              Selling beyond Lucknow? Read about our{' '}
               <a
                 href="/digital-marketing"
                 className="font-semibold text-[#B23E13] underline underline-offset-2"
               >
                 digital marketing agency services across India
               </a>{' '}
-              and how the top agencies compare nationally, or set up{' '}
+              and the national agency comparison, or plan{' '}
               <a href="/services/ecommerce-development/lucknow" className="font-semibold text-[#B23E13] underline underline-offset-2">
                 an online store built for Lucknow
               </a>{' '}
-              if selling online is the next step.
+              for your chikankari or food brand.
               We also work in <a href="/digital-marketing/noida" className="font-semibold text-[#B23E13] underline underline-offset-2">Noida</a> or <a href="/digital-marketing/delhi" className="font-semibold text-[#B23E13] underline underline-offset-2">Delhi</a>.
             </p>
           </div>
@@ -888,8 +890,8 @@ export default function LucknowDigitalMarketingPage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Let us find out what is actually costing you enquiries"
-          sub="A free, no-pressure conversation. We will look at how you show up on Google and in AI answers today, tell you the two or three things worth fixing first, and be straight with you if marketing is not your real problem."
+          headline="Find out where your Lucknow enquiries are leaking"
+          sub="Book a free call. We check how you appear on Google, Maps and AI answers today, name the two or three fixes worth doing first, and tell you plainly if marketing is not the real issue."
           primaryCta={{ label: 'Book a Free Growth Chat', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           objectionHandler="Month to month, 30 days notice. Senior people do the work. You own every account we set up."

@@ -22,15 +22,15 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 const CANONICAL = 'https://factoryjet.com/digital-marketing/chennai';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Agency in Chennai | SEO + AI Search | FactoryJet',
+  title: 'Digital Marketing Agency in Chennai | SEO, Ads | FactoryJet',
   description:
-    'Looking for a digital marketing agency or SEO company in Chennai? FactoryJet helps Chennai businesses get found on Google and AI tools like ChatGPT, and turn clicks into real enquiries. One senior in-house team for SEO, social media, Google Ads, websites and more.',
+    'Digital marketing agency in Chennai for auto suppliers, OMR tech firms, hospitals and T. Nagar retail. SEO, Google Ads, Maps and AI answers.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Digital Marketing Agency in Chennai | SEO + AI Search | FactoryJet',
+    title: 'Digital Marketing Agency in Chennai | SEO, Ads | FactoryJet',
     description:
-      'One senior in-house team that gets Chennai businesses found on Google and AI search, and turns visitors into enquiries. SEO, ads, websites, social and more.',
+      'Digital marketing agency in Chennai for auto suppliers, OMR tech firms, hospitals and T. Nagar retail. SEO, Google Ads, Maps and AI answers.',
     url: CANONICAL,
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Digital Marketing Agency in Chennai | FactoryJet',
     description:
-      'Get found on Google and AI search, and turn Chennai visitors into customers. One senior in-house team.',
+      'SEO, Google Ads, Maps and AI answers for Chennai factories, tech firms, hospitals and T. Nagar shops.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -70,24 +70,26 @@ export const metadata: Metadata = {
 };
 
 /* ────────────────────────────────────────────────────────────────────────
-   Chennai city page. Plain language, no pricing anywhere. Every jargon word is
-   explained the first time it appears. Content is written for Chennai: local
-   areas, local business types, local buying behaviour. Competitor and FAQ
-   material is grounded in live search data pulled July 2026 for
-   "digital marketing agency in chennai" and "seo company in chennai".
+   Chennai city page. Plain language, no pricing anywhere. Copy rewritten
+   7 Nov 2026 around Chennai's own business mix: the Sriperumbudur and
+   Oragadam auto belt, OMR tech firms, hospitals, T. Nagar silk and jewellery
+   retail, leather and textile exporters, Ambattur and Guindy engineering
+   units, and Tamil-language search. Competitor and FAQ material is grounded
+   in live search data pulled July 2026 for "digital marketing agency in
+   chennai" and "seo company in chennai".
    ──────────────────────────────────────────────────────────────────────── */
 
 const HERO_TRUST = [
   '500+ businesses helped',
   '12 years of experience',
-  'One senior in-house team',
-  'Found on Google and AI search',
+  'Senior people on every account',
+  'Google, Maps and AI answers',
 ];
 
 const STATS = [
   { value: '500+', label: 'Businesses helped', note: 'Across India, US, UK and UAE' },
-  { value: '12 yrs', label: 'Years doing this', note: 'Not a new agency practising on you' },
-  { value: 'In-house', label: 'Senior team', note: 'No work handed to freshers' },
+  { value: '12 yrs', label: 'Years doing this', note: 'Long enough to have seen most mistakes' },
+  { value: 'In-house', label: 'Senior team', note: 'Your account stays with experienced hands' },
   { value: '4', label: 'Countries served', note: 'India, US, UK and UAE' },
 ];
 
@@ -97,56 +99,56 @@ const CHANNELS: IndustryCard[] = [
   {
     name: 'SEO (get found on Google)',
     description:
-      'SEO means search engine optimisation. In plain words: showing up on Google when a Chennai customer searches to buy, without paying for every click.',
+      'Search engine optimisation puts you on page one when a buyer types "CNC machining Ambattur" or "silk sarees T. Nagar". You earn that spot instead of renting it.',
     linkLabel: 'Explore SEO',
     linkHref: '/seo',
   },
   {
     name: 'Websites that sell',
     description:
-      'A fast, mobile-first website that loads quickly on patchy local networks and turns visitors into calls and enquiries, instead of just looking nice.',
+      'Pages that open fast on a mobile in a crowded Pondy Bazaar lane, show your products clearly, and put the call and enquiry buttons where thumbs land.',
     linkLabel: 'See web design',
     linkHref: '/web-design',
   },
   {
     name: 'Online stores',
     description:
-      'Ecommerce means selling online. We build stores that are easy for Chennai shoppers to buy from and easy for you to run and pack.',
+      'Sell sarees, gold-plated jewellery, filter coffee or leather goods online, with checkout, shipping and stock that a small Chennai team can manage.',
     linkLabel: 'See ecommerce',
     linkHref: '/services/ecommerce-development',
   },
   {
     name: 'AI search (get picked by ChatGPT)',
     description:
-      'When people ask ChatGPT, Gemini or Google’s AI "which agency in Chennai should I pick", we help your business be one of the answers. This newer skill is called GEO.',
+      'Patients, plant managers and shoppers now ask ChatGPT and Gemini for a shortlist. GEO is the work of getting your Chennai business into that shortlist.',
     linkLabel: 'Explore AI SEO',
     linkHref: '/ai-seo',
   },
   {
     name: 'Chatbots and automation',
     description:
-      'Smart helpers that reply to customers day and night, useful when your Chennai shop or clinic is shut, so you never lose a late-night enquiry.',
+      'An assistant that books hospital appointments, answers RFQ basics for an auto supplier, or takes restaurant orders after closing time.',
     linkLabel: 'See AI agents',
     linkHref: '/services/ai-agent-development',
   },
   {
     name: 'WhatsApp for business',
     description:
-      'Answer customers and collect leads automatically on WhatsApp, the app nearly every Chennai buyer already uses every single day.',
+      'Most Chennai buyers would rather message than call. Automated WhatsApp replies in English or Tamil catch the lead while interest is warm.',
     linkLabel: 'See WhatsApp chatbot',
     linkHref: '/whatsapp-chatbot',
   },
   {
     name: 'Shopify stores',
     description:
-      'Shopify is a popular tool for online shops. We build custom Shopify stores for Chennai D2C brands that look great and load fast.',
+      'For Chennai brands selling handloom, snacks, skincare or home decor across India, a Shopify build gives a quick, tidy store you can grow.',
     linkLabel: 'See Shopify',
     linkHref: '/shopify-development',
   },
   {
     name: 'WordPress websites',
     description:
-      'WordPress is the world’s most-used website tool. We build flexible sites on it that you fully own and control, no lock-in.',
+      'Clinics, schools and engineering firms often want a content site their own staff can update. WordPress does that, and the site stays yours.',
     linkLabel: 'See WordPress',
     linkHref: '/wordpress-development',
   },
@@ -161,7 +163,7 @@ const COMPARE_COLUMNS = [
 
 const COMPARE_ROWS = [
   {
-    feature: 'Who actually does your work',
+    feature: 'Who runs your account day to day',
     values: [
       'Senior, in-house',
       'Often freshers',
@@ -170,7 +172,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'All channels handled in one place',
+    feature: 'SEO, ads, site and social under one roof',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -179,7 +181,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Simple monthly report you can actually read',
+    feature: 'Monthly numbers in plain English',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -188,7 +190,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Gets you into AI search (ChatGPT, Gemini, Google AI)',
+    feature: 'Work on ChatGPT, Gemini and Google AI answers',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="no" />,
@@ -197,7 +199,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Understands Chennai buyers and local search',
+    feature: 'Knows how Chennai buyers search, in English and Tamil',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -206,7 +208,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Start quickly, no long lock-in',
+    feature: 'Short start, no long contract',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="no" />,
@@ -215,7 +217,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Sets up local Chennai search (Google Maps and the local pack)',
+    feature: 'Google Business Profile and Maps listing done right',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -224,7 +226,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Fast WhatsApp follow-up so no enquiry is missed',
+    feature: 'WhatsApp replies wired to every lead source',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -233,7 +235,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Explains the work in plain words, no jargon',
+    feature: 'No jargon in meetings or reports',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -242,7 +244,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'One clear plan agreed before any work starts',
+    feature: 'Written plan signed off before work begins',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -251,7 +253,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Can show real results for a business like yours',
+    feature: 'Past results in a similar trade',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="yes" />,
@@ -264,21 +266,21 @@ const COMPARE_ROWS = [
 const PILLARS: Pillar[] = [
   {
     icon: '\u{1F9E9}',
-    title: 'One channel alone is not a plan',
+    title: 'Channels that never talk to each other',
     body:
-      'Doing only SEO, or only Instagram, or only Google ads leaves gaps. A Chennai buyer might find you on Google, check your Instagram, then message on WhatsApp before deciding. We join the channels so nothing leaks between them.',
+      'A buyer from a Sriperumbudur plant might see your Google listing, open your LinkedIn page, then send a WhatsApp. If three vendors run those three places, the lead falls through. One plan covers all of them.',
   },
   {
     icon: '\u{1F464}',
-    title: 'Freshers learning on your business',
+    title: 'The senior pitch, the junior delivery',
     body:
-      'Plenty of agencies win you over with senior people, then quietly hand your account to trainees. In a market as competitive as Chennai, that lost time is expensive. At FactoryJet, experienced people do the real work.',
+      'A familiar pattern: an experienced lead wins the deal, then a trainee runs the account. Chennai categories like hospitals, jewellery and B2B engineering punish slow learning. Our experienced people stay on the work.',
   },
   {
     icon: '\u{1F916}',
-    title: 'Ignoring AI search is a costly mistake',
+    title: 'Missing from AI shortlists',
     body:
-      'More and more Chennai buyers now ask ChatGPT or Google’s AI "which company should I pick" before they call anyone. Agencies stuck on old-style SEO miss this completely. We get you found on Google and inside AI answers.',
+      'Families comparing hospitals and procurement teams comparing suppliers now ask AI tools first. Agencies that only chase blue links leave you out of those answers. We plan for Google and for AI replies together.',
   },
 ];
 
@@ -290,60 +292,60 @@ const AGENCIES = [
   {
     name: 'FactoryJet',
     bestFor:
-      'Chennai small and mid-size businesses that want one senior team across website, Google, ads and AI search, with plain-English monthly reports. (Yes, that is us. We include ourselves openly and let the comparison speak for itself.)',
+      'Chennai firms, from T. Nagar retailers to OMR software companies and Ambattur suppliers, that want website, Google, ads and AI search run by one senior team. (This entry is us, listed openly.)',
     isUs: true,
   },
   {
     name: 'echoVME Digital',
-    bestFor: 'Brands that want strong social media, influencer marketing and content from a well-known Chennai team that also trains marketers.',
+    bestFor: 'Consumer brands that put social media, influencer campaigns and content first, from a known local name that also runs marketing training.',
   },
   {
     name: 'Social Beat',
-    bestFor: 'Bigger brands that want data-led performance marketing and video content run at scale by one of India’s larger independent agencies.',
+    bestFor: 'Large brands needing performance campaigns and video production at scale from one of the bigger independent agencies in the country.',
   },
   {
     name: 'Rankraze',
-    bestFor: 'Businesses whose main need is search visibility and steady lead generation from a performance-focused, data-driven SEO team.',
+    bestFor: 'Companies chasing organic rankings and a steady lead flow, with a team that leans hard on SEO data.',
   },
   {
     name: 'iStudio Technologies',
-    bestFor: 'Companies that want website and ecommerce development tied closely to their digital marketing under one roof.',
+    bestFor: 'Owners who want their website or online store built by the same firm that markets it.',
   },
   {
     name: 'Open Designs',
-    bestFor: 'Brands that care about design first and want UI, UX and web build handled alongside their SEO.',
+    bestFor: 'Design-led brands that want interface and web build work handled next to search work.',
   },
   {
     name: 'Adchennai',
-    bestFor: 'Local businesses that want quick enquiries from paid ads on Google, Facebook and WhatsApp.',
+    bestFor: 'Neighbourhood businesses after fast leads from Google, Facebook and WhatsApp ad campaigns.',
   },
 ];
 
 const JOURNEY: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'A free, no-pressure chat',
-    description: 'We learn about your Chennai business, your customers and your goals. No jargon, no hard sell.',
+    title: 'A free first call',
+    description: 'You tell us what you sell, who buys it and where in Chennai they come from. We listen and ask.',
   },
   {
     number: '02',
-    title: 'A clear, simple plan',
-    description: 'We show you exactly what we will do and why, in words you can understand and approve.',
+    title: 'A written plan',
+    description: 'Channels, tasks and the first ninety days, written so you can say yes or no to each line.',
   },
   {
     number: '03',
-    title: 'We build and run it',
-    description: 'Website, Google, ads, AI search, whatever you picked. Our senior team does the actual work.',
+    title: 'Senior people do the work',
+    description: 'Site fixes, Google listing, ads, local pages, AI search. Whatever you approved, built by experienced hands.',
   },
   {
     number: '04',
-    title: 'You see the results',
-    description: 'A simple monthly report: visitors, enquiries and what we did. Real numbers, plainly shown.',
+    title: 'Monthly numbers',
+    description: 'Visits, calls, forms and WhatsApp leads, plus the list of tasks done. One page, plain figures.',
   },
   {
     number: '05',
-    title: 'We keep improving',
-    description: 'We do more of what brings you leads and drop what does not. Month after month.',
+    title: 'Adjust and repeat',
+    description: 'Budget moves towards what brings leads and away from what does not, every month.',
   },
 ];
 
@@ -354,14 +356,14 @@ const MARKET_STATS = [
   {
     value: '1.03 billion',
     label:
-      'people in India now use the internet, about 70 in every 100 Indians. Your Chennai customers are already online, searching before they buy.',
+      'Indians are online, roughly 70 of every 100. Your Chennai buyers check Google and Maps before they visit a showroom or send an RFQ.',
     sourceUrl: 'https://datareportal.com/reports/digital-2026-india',
     sourceLabel: 'DataReportal Digital 2026',
   },
   {
     value: '100 million+',
     label:
-      'weekly ChatGPT users are in India, its second-largest market after the US. More Chennai buyers now ask AI tools who to pick before they call anyone.',
+      'Indians use ChatGPT each week, its biggest market after the US. Chennai patients, parents and buyers are among those asking it for names.',
     sourceUrl:
       'https://techcrunch.com/2026/02/15/india-has-100m-weekly-active-chatgpt-users-sam-altman-says/',
     sourceLabel: 'TechCrunch, Feb 2026',
@@ -369,7 +371,7 @@ const MARKET_STATS = [
   {
     value: '10,000+',
     label:
-      'government-recognised startups are now registered in Tamil Nadu, the state Chennai anchors, up from about 2,300 in 2021. Attention here is hard-won.',
+      'DPIIT-recognised startups are registered in Tamil Nadu, up from about 2,300 in 2021. Many sit in Chennai and bid for the same search clicks you do.',
     sourceUrl: 'https://startuptalky.com/news/tamil-nadu-10000-dpiit-registered-startups/',
     sourceLabel: 'StartupTalky / DPIIT, Dec 2024',
   },
@@ -380,40 +382,40 @@ const MARKET_STATS = [
 // Real high-volume Chennai search terms are woven in naturally.
 const CHANNELS_RANKED = [
   {
-    name: 'Showing up on Google when people search to buy (SEO)',
-    who: 'Almost every Chennai business, and even an SEO company in Chennai chasing its own clients.',
+    name: 'Organic Google rankings (SEO)',
+    who: 'Nearly every Chennai firm, from a Guindy fabricator to an Adyar dental clinic, and even an SEO company in Chennai hunting for clients.',
     body:
-      'SEO means search engine optimisation, which is just getting your business to show on Google without paying for each click. When someone types "salon near me" or "CA firm in T. Nagar", you want to be there. It takes a few months to build, but once it works it brings enquiries month after month for free. For most Chennai businesses this is the steadiest channel.',
+      'Search engine optimisation is the work that gets you listed on Google without a fee per click. Think of searches like "orthopaedic hospital Chennai", "auto parts supplier Oragadam" or "kanjivaram silk shop". Rankings take a few months to earn. After that they keep sending enquiries with no ad spend, which is why SEO is usually the backbone of a Chennai plan.',
   },
   {
-    name: 'Local search and Google Maps (local SEO)',
-    who: 'Shops, clinics, salons, restaurants and any business a customer can walk into.',
+    name: 'Google Maps and the local pack (local SEO)',
+    who: 'Showrooms, clinics, restaurants, sweet shops and anyone with a counter or a front door.',
     body:
-      'Local SEO is the part of SEO that puts you on the map, literally. When a Chennai buyer searches on their phone, Google shows a small map with three nearby businesses first. Getting into that box, and onto Google Maps, brings walk-ins and calls from people who are ready to buy right now. Setting up your Google Business Profile properly is the first step.',
+      'Search "jewellers near me" in T. Nagar and Google shows a map with three businesses before anything else. Local SEO aims to put you in that map box. The work is a complete Google Business Profile, correct address and phone everywhere, photos, and steady genuine reviews. Adding Tamil service names to the profile helps when buyers search in Tamil.',
   },
   {
-    name: 'Google Ads for quick enquiries',
-    who: 'Businesses that need calls this week, or that are just starting out on Google.',
+    name: 'Google Ads for leads this week',
+    who: 'New businesses, seasonal sellers before Pongal or Deepavali, and anyone who needs calls now.',
     body:
-      'Google Ads means paying to appear at the very top when someone searches. The moment you switch them on, you can get enquiries; the moment you switch them off, they stop. Ads are the fastest way to test what your Chennai customers respond to, while your free Google rankings build up quietly in the background. This paid side is often called performance marketing.',
+      'Paid search puts you at the top of Google from the day the campaign starts and stops the day you pause it. That makes it the quickest way to learn which offers and keywords bring Chennai buyers, while organic rankings grow. People also call this paid side performance marketing.',
   },
   {
-    name: 'Social media marketing (Instagram, Facebook, LinkedIn)',
-    who: 'Restaurants, salons, D2C brands and anyone whose customers buy on looks and trust.',
+    name: 'Social media (Instagram, Facebook, LinkedIn)',
+    who: 'Restaurants, saree and jewellery stores, salons, D2C brands, and B2B firms on LinkedIn.',
     body:
-      'Social media builds familiarity so that when a buyer is ready, they already know your name. A social media marketing agency in Chennai will post, run offers and reply to comments. It works more slowly than search, and it is better at building trust than at bringing instant enquiries, so we pair it with Google rather than leaning on it alone.',
+      'Instagram suits food, fashion and festive offers. LinkedIn suits OMR software firms and engineering suppliers who sell to plant heads and buyers. A social media marketing agency in Chennai will post, run promotions and answer comments. Social builds recognition slowly, so we run it beside search rather than on its own.',
   },
   {
-    name: 'WhatsApp follow-up',
-    who: 'Every Chennai business, because nearly every buyer here uses WhatsApp daily.',
+    name: 'WhatsApp replies and follow-up',
+    who: 'Any Chennai business that gets enquiries, because buyers here message before they call.',
     body:
-      'Getting the enquiry is only half the job. Replying fast is the other half. A click-to-WhatsApp button and quick, friendly follow-up turn far more enquiries into paying customers. Many businesses lose leads simply by answering a day too late. WhatsApp closes that gap.',
+      'An enquiry that waits overnight often goes to a rival. A click-to-WhatsApp button, an instant auto-reply in English or Tamil, and a person who follows up the same day turn more leads into orders. This one fix often lifts results more than extra ad spend.',
   },
   {
-    name: 'Getting picked by AI search (ChatGPT, Gemini, Google AI)',
-    who: 'Forward-looking Chennai businesses whose buyers ask AI tools for recommendations.',
+    name: 'AI answers (ChatGPT, Gemini, Google AI)',
+    who: 'Hospitals, colleges, B2B suppliers and premium retailers whose buyers research with AI tools.',
     body:
-      'This is the newest channel and most agencies ignore it, which is your opening. When someone asks ChatGPT or Google’s AI "which agency in Chennai should I pick", you want your business named in the answer. Shaping your website so AI tools recommend you is a newer skill called GEO, short for generative engine optimisation. We build it in from the start.',
+      'Ask ChatGPT "best cardiac hospital in Chennai" or "reliable sheet metal vendors near Sriperumbudur" and it names a few businesses. Getting named there is called GEO, short for generative engine optimisation. Few Chennai agencies work on it yet, so early movers have room. We include it from the first month.',
   },
 ];
 
@@ -436,223 +438,223 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'choosing',
     question: 'Which is the best digital marketing agency in Chennai?',
     answer:
-      'There is no single "best" agency for everyone in a city this big. The best one for you depends on your size, your goals and who actually does your work. A large firm on OMR and a small boutique in T. Nagar need very different help. Lower on this page we compare the top Chennai agencies honestly, including ourselves, so you can pick the right fit instead of the loudest name.',
+      'It depends on what you sell. A multi-speciality hospital, an OMR SaaS company and a T. Nagar silk store need different skills, budgets and channels. Look for an agency that has worked in your trade and puts a senior person on your account. Further down we list the Chennai agencies that rank on Google, ourselves included, with what each suits.',
   },
   {
     category: 'choosing',
     question: 'Which agency is best for digital marketing?',
     answer:
-      'Ask "best for what", not just "best". Some agencies are strongest at SEO (free Google traffic), some at social media, some at paid ads. The best pick for your business is the team whose strengths match what you actually need, that puts a senior person on your account, and that reports results in plain numbers you can read.',
+      'Match the agency to the job. If you need Google rankings, pick a team with SEO results. If you need festive season sales, pick one strong in paid ads and Instagram. If you sell to factories, pick one that understands LinkedIn and long B2B buying cycles. Then check who will run your account and how they report.',
   },
   {
     category: 'choosing',
     question: 'How do I pick from all the "top 10 digital marketing agencies in Chennai" lists?',
     answer:
-      'Most of those "top 10" and "top 50" lists are either paid placements or the writer’s own opinion, so treat them as a starting point, not gospel. Shortlist three or four names, then judge each one on three things: who will run your account, what you get each month in plain words, and whether they can show real results for a business like yours. The list gets you names; those three questions get you the truth.',
+      'Many of those lists are paid listings or one writer’s view. Use them only to gather names. Call three or four agencies and ask each the same things: who handles my account, what do I receive every month, and can I see work for a firm like mine? The answers will separate them faster than any ranking.',
   },
   {
     category: 'choosing',
     question: 'How do I choose the right digital marketing agency in Chennai?',
     answer:
-      'Ask three simple questions before you sign anything. One: who will actually do my work, a senior person or a fresher? Two: what exactly will I get each month, in plain words? Three: can you show me real results for a business like mine? A Chennai agency that answers all three clearly is usually a safe choice.',
+      'Start with your buyer. If they are retail shoppers, check the agency’s local SEO and Instagram work. If they are purchase managers at auto plants, check B2B lead generation. Then ask who does the daily work, what the monthly report contains, and whether there is a long lock-in. Clear answers on all of these are a good sign.',
   },
   {
     category: 'choosing',
     question: 'Is it worth paying a digital marketing agency in Chennai?',
     answer:
-      'It is worth it when the agency brings you more enquiries than you would get on your own, and can show you where those enquiries came from. The honest answer to "is it worth it" is that it depends on what you need and whether the work is done by experienced people. Judge value by the leads and sales it brings over a few months, not by who talks the best in the first meeting.',
+      'Yes, if the extra enquiries pay for the fee and you can trace where they came from. A good agency shows calls, forms and WhatsApp leads by source every month. Give it three to six months before judging, since SEO builds slowly. If the numbers stay flat after that, the spend is not working and you should change course.',
   },
   {
     category: 'choosing',
     question: 'Agency vs freelancer vs building my own team in Chennai: which is right?',
     answer:
-      'A freelancer is one person. They are handy for a single small task, but one person cannot cover SEO, ads, design and content all at once. Building your own team gives you full control but takes months to hire and train, and good Chennai marketers are hard to keep. An agency gives you a whole team instantly, across every skill. For most growing businesses, an agency is the fastest way to cover everything without the hiring headache.',
+      'A freelancer suits one narrow task, like a logo or a short ad campaign. An in-house team gives control, but hiring an SEO lead, an ads specialist, a designer and a writer takes months, and Chennai’s tech firms compete for the same people. An agency gives you those skills from week one. Many growing firms start with an agency and hire later.',
   },
   {
     category: 'services',
     question: 'What does a digital marketing agency in Chennai actually do?',
     answer:
-      'In simple words, it helps more of the right people find your business online and turn into customers. That means building or fixing your website, getting you to show up on Google (this is called SEO, short for search engine optimisation), running ads, posting on social media, and staying in touch by email or WhatsApp. The goal is always the same: more calls, more enquiries, more sales.',
+      'It gets the right buyers to find you online and contact you. In practice that covers your website, Google rankings (SEO), your Google Maps listing, paid ads, social posts, email or WhatsApp follow-up, and now visibility in AI tools. For a Chennai jeweller that may mean Maps and Instagram. For an auto parts maker it may mean product pages and LinkedIn.',
   },
   {
     category: 'services',
     question: 'What are the 7 types of digital marketing?',
     answer:
-      'The seven most common types are: SEO (showing up on Google for free), paid ads (paying Google or Instagram to show your business), social media marketing (Instagram, Facebook, LinkedIn), content marketing (blogs and videos that pull people in), email and WhatsApp marketing (staying in touch with customers), influencer marketing (creators recommending you), and the newest one, AI search or GEO (getting recommended by tools like ChatGPT). A good agency mixes the few that fit your business best, not all seven at once.',
+      'The usual seven are: SEO for free Google traffic, paid search and social ads, social media marketing, content such as blogs and videos, email and WhatsApp marketing, influencer marketing, and AI search, also called GEO. No business needs all seven at once. A Chennai restaurant might use three, while an industrial supplier might use a different three.',
   },
   {
     category: 'services',
     question: 'Which channels bring the most enquiries for Chennai businesses?',
     answer:
-      'It depends on your business, and any agency that says "do everything" is guessing. For most Chennai businesses, showing up on Google when someone is searching to buy, plus a fast mobile website and quick WhatsApp follow-up, brings the most enquiries. Social media builds trust and works well for restaurants, salons and D2C brands, but usually more slowly. We pick channels based on where your customers already are, not on what is trendy.',
+      'For walk-in trades in T. Nagar, Mylapore or Velachery, Google Maps and WhatsApp usually lead. For B2B suppliers on the Sriperumbudur and Oragadam belt, Google search and LinkedIn bring buyers. For hospitals and clinics, Google search, Maps reviews and AI answers matter most. Instagram helps food and fashion more than heavy industry. We choose by where your buyers already look.',
   },
   {
     category: 'services',
     question: 'Do I need SEO, ads or social media first?',
     answer:
-      'If you need customers this week, start with ads, because they bring visitors the day you switch them on. If you want steady free traffic that grows over months, start with SEO. Most Chennai businesses do best with a small mix: ads for quick results while SEO builds up quietly in the background.',
+      'Need calls this month? Start with Google Ads. Want enquiries that keep coming without paying per click? Start SEO now, since it takes months. Most Chennai firms run both at first: ads fill the gap while rankings grow, then ad spend drops. Social media comes next for consumer brands and later for B2B firms.',
   },
   {
     category: 'services',
     question: 'What is the difference between digital marketing and just running ads?',
     answer:
-      'Ads are only one part. Running ads means paying to show your business at the top of Google or Instagram, and it stops the moment you stop paying. Digital marketing is the full picture: your website, showing up on Google for free, social media, content and ads working together. Ads alone are like renting attention; the rest is like building something you own.',
+      'Ads are a tap you pay to keep open. The moment the budget ends, the leads end. Digital marketing also builds things that last: a website that converts, Google rankings, reviews on your Maps listing, and content AI tools can quote. Ads are one part of that plan, useful for speed, but weak on their own.',
   },
   {
     category: 'seo',
     question: 'Which is the best SEO agency in Chennai?',
     answer:
-      'Just like with digital marketing, there is no single best SEO agency for every business. Some Chennai SEO teams are great for small local shops that want to show up on Google Maps, others are built for big companies with thousands of pages. The right one for you is honest about timelines, explains its work in plain words, and never "guarantees" the number-one spot. Anyone who guarantees rankings is not being straight with you.',
+      'The best SEO agency for a Velachery clinic differs from the best one for an exporter with hundreds of product pages. Ask to see rankings they achieved in your type of business and how long it took. Avoid anyone who promises the first position on Google. Nobody controls that, and the promise itself is a warning sign.',
   },
   {
     category: 'seo',
     question: 'What does an SEO agency in Chennai actually do, in plain words?',
     answer:
-      'SEO means search engine optimisation, which is just getting your business to show up on Google when people search, without paying for each click. A good SEO agency fixes the technical side of your website so Google can read it, writes helpful pages around what your customers search for, sets up your Google Business Profile for local searches, and earns links from other trusted sites. Done well, it brings you visitors month after month for free.',
+      'It makes your site easy for Google to read and worth ranking. That means fixing speed and technical errors, writing pages for the exact phrases buyers type, such as "leather bag manufacturer Chennai", setting up your Google Business Profile, and earning links from trusted sites. Once those pieces work, visitors arrive every month without a fee per click.',
   },
   {
     category: 'seo',
     question: 'Do I need an SEO expert based in Chennai specifically?',
     answer:
-      'Not really. SEO work happens online, so a skilled team can rank your Chennai business from anywhere in India. What actually helps is an agency that understands local Chennai searches, sets up your Google Maps listing properly, and knows how your customers phrase things. Judge an SEO expert by their results and how clearly they explain things, not by whether their office is in your part of the city.',
+      'No. Rankings are earned online, so location of the expert does not limit results. What matters is knowledge of Chennai search habits: area names like Anna Nagar and OMR, Tamil and Tanglish phrases, and the local competitors in your trade. Judge an SEO expert by proof of results and clear explanations.',
   },
   {
     category: 'seo',
     question: 'Is the best SEO agency always the biggest one?',
     answer:
-      'No. The biggest, most famous SEO agencies are usually built for large enterprises with huge websites, and a small Chennai business can easily get lost as a minor account there. A smaller senior team often gives your work more care and attention. Size is not the same as fit. Pick the team that treats your business as important, whatever its size.',
+      'No. Large SEO firms are built for enterprise sites with big budgets. A small Chennai manufacturer or retailer can end up as a low-priority account there, handled by junior staff. A smaller senior team often gives more attention per rupee. Pick the agency that will treat your account as one that matters.',
   },
   {
     category: 'local',
     question: 'Do you only work with businesses in Chennai, or across the city and its suburbs like Tambaram and Porur?',
     answer:
-      'We help businesses across all of Chennai, plus the wider metro: Tambaram, Porur, Pallavaram, Avadi and out towards Chengalpattu and Sriperumbudur. Because the work happens online, we are not limited to one area. Whether you are in central Chennai, along the OMR IT corridor, in the western suburbs or on the outskirts, the same senior team handles your account.',
+      'We work across the whole metro: Tambaram, Porur, Pallavaram, Avadi, Ambattur, and out to Chengalpattu and the Sriperumbudur and Oragadam industrial belt. Because the work is online, distance does not matter. A shop in Mylapore and a component maker near the highway get the same senior team.',
   },
   {
     category: 'local',
     question: 'Do you cover business areas like T. Nagar, OMR and Guindy?',
     answer:
-      'Yes. We work with businesses in Chennai’s main commercial areas, including T. Nagar, Anna Nagar, the OMR IT corridor, Guindy, Nungambakkam, Adyar and Velachery. A retail shop in T. Nagar and a software firm on OMR need different plans, and we tailor the work to your area and your kind of customer rather than using one template for everyone.',
+      'Yes. We work with firms in T. Nagar, Anna Nagar, OMR, Guindy, Nungambakkam, Adyar and Velachery. Each area needs a different plan. T. Nagar retail runs on Maps, Instagram and festival timing. OMR software firms need LinkedIn and content. Guindy engineering units need product pages that procurement teams can find.',
   },
   {
     category: 'local',
     question: 'Do I need a Chennai agency, or can one from Bangalore or elsewhere do the job?',
     answer:
-      'You do not strictly need a Chennai-based agency, because almost all the work happens online and a good team can help you from anywhere in India. What matters more is whether they understand your customers, reply quickly, and set up local search properly. That said, a team that knows Chennai buyers and areas can get to the point faster. We work with businesses across India, the US, the UK and the UAE, all remotely.',
+      'Any capable team can do the work online. What you should check is whether they understand your Chennai buyers: the areas they search from, whether they search in Tamil, and which local rivals you face. Quick replies and a properly set up Maps listing matter more than the agency’s postcode. We work with businesses across India, the US, the UK and the UAE.',
   },
   {
     category: 'local',
     question: 'Which types of Chennai businesses do you help?',
     answer:
-      'A wide mix: restaurants and cafes, salons and clinics, real estate and interior firms, jewellers and textile retailers in T. Nagar, coaching classes and colleges, software and SaaS firms on OMR, D2C brands (companies that sell their own products online), and B2B service firms (businesses that sell to other businesses). If your customers search on Google, scroll Instagram or ask ChatGPT before they buy, we can help you reach them.',
+      'Auto component and engineering suppliers, hospitals and clinics, silk saree and jewellery stores, leather and textile exporters, software and SaaS firms on OMR, restaurants and sweet shops, schools and coaching centres, real estate developers, and D2C brands. If your buyers search Google, scroll Instagram or ask ChatGPT before they decide, we can help you reach them.',
   },
   {
     category: 'results',
     question: 'How long does digital marketing take to show results in a city as competitive as Chennai?',
     answer:
-      'Ads can bring enquiries within days. SEO (free Google traffic) usually takes three to six months to build up, and Chennai is a competitive market, so some categories take a little longer. Social media and content also need a few months to earn trust. Anyone who promises big results in a week is not being honest with you.',
+      'Paid ads can bring calls within the first week. SEO usually needs three to six months, longer in crowded categories like hospitals, jewellery and real estate. Social pages take a few months to build trust. If an agency promises big results in days, treat that as a warning.',
   },
   {
     category: 'results',
     question: 'What reports will I get, and how do you measure success?',
     answer:
-      'You get a simple monthly report a normal person can read, not a page full of confusing charts. It answers three things: how many people visited, how many enquiries or calls came in, and what we did that month. The only numbers that truly matter are enquiries and sales, not likes or views. If the work is not bringing you more customers over time, it is not working, no matter how pretty the report looks.',
+      'Each month you get one page: visitors, calls, form fills, WhatsApp leads, and the tasks we finished. Success is measured in enquiries and sales. Likes and impressions are side notes. If leads are not rising over a few months, we say so and change the plan.',
   },
   {
     category: 'trust',
     question: 'Who will actually do my work, seniors or freshers?',
     answer:
-      'This is the most important question people forget to ask. Many agencies win you over with senior people, then hand your account to freshers, and in a competitive city that lost time costs you. Always ask who will run your account day to day. At FactoryJet, experienced people do the work, not trainees practising on your business.',
+      'Ask every agency this before signing. A common pattern is a senior pitch followed by a trainee doing the daily work, and you only find out months later. At FactoryJet, experienced people run your account and do the work. You can ask to meet them.',
   },
   {
     category: 'trust',
     question: 'What are the red flags of a bad digital marketing agency in Chennai?',
     answer:
-      'Watch out for these: a "guaranteed" number-one spot on Google, offers that seem too good to be true, big confusing words instead of clear answers, no real examples of past work, and being locked into a long contract before anything is proven. Any single one of these is a good reason to be careful and keep looking.',
+      'Be careful with: promises of the number-one Google spot, prices that look far too low, vague answers full of buzzwords, no examples of past work, and contracts that lock you in for a year before results. One of these is enough reason to keep looking.',
   },
   {
     category: 'ai',
     question: 'Should my Chennai business show up in AI search like ChatGPT and Google’s AI answers?',
     answer:
-      'Yes, and most agencies are not doing this yet, which is your opening. When people ask ChatGPT, Gemini or Google’s AI for a recommendation, you want your business to be one of the answers. Getting mentioned by AI tools is a newer skill called GEO (short for generative engine optimisation). We build it into our work, so you are found on Google and inside AI answers.',
+      'If your buyers research before they buy, yes. People already ask ChatGPT and Gemini for the best hospital, college or supplier in Chennai. Getting named in those replies is called GEO, short for generative engine optimisation. Few local agencies work on it yet, so starting now gives you a head start.',
   },
   {
     category: 'ai',
     question: 'What are GEO and AEO, and does my business need them?',
     answer:
-      'GEO means getting recommended by AI tools like ChatGPT and Gemini. AEO, or answer engine optimisation, means getting picked for the instant answer that Google and AI tools show at the top. Both simply mean shaping your website so AI picks your business as the reply. If your customers are the kind of people who ask ChatGPT or Google a question before buying, then yes, you need them. If you are not sure, we can check for free whether AI tools already mention you.',
+      'GEO is getting recommended by AI chat tools. AEO, answer engine optimisation, is getting chosen for the short answer Google and AI tools show above the links. Both depend on clear, factual pages that a machine can quote. If your buyers ask questions before buying, you need them. Our free check shows whether AI tools mention you today.',
   },
   {
     category: 'choosing',
     question: 'What is the difference between a digital marketing agency and a digital marketing company in Chennai?',
     answer:
-      'In everyday use, none. People search for both "digital marketing agency in Chennai" and "digital marketing company in Chennai", and they mean the same thing: a team that helps you get customers online. "Agency" sometimes hints at creative and campaign work, and "company" sometimes hints at a larger setup, but there is no fixed rule. Judge any of them by who does your work and what results they can show, not by the word on their door.',
+      'Mostly the word. Buyers search "digital marketing agency in Chennai" and "digital marketing company in Chennai" for the same service. "Agency" sometimes suggests creative campaigns and "company" a bigger outfit, yet neither word guarantees anything. Ask who does the work and what results they can show.',
   },
   {
     category: 'choosing',
     question: 'What are the big 4 companies in digital marketing, and do I need one for my Chennai business?',
     answer:
-      'When people say the "big 4", they usually mean the giant global advertising groups, the ones that handle huge multinational brands. They are built for very large budgets and very large companies. For a small or mid-size Chennai business, that scale is the wrong fit: you would be a tiny account and pay for layers you do not need. A focused senior team that treats your business as important will almost always serve you better.',
+      'The "big 4" usually means the global advertising holding groups that serve multinational brands. They suit very large budgets. A Chennai SME, clinic or supplier would be a small account there, paying for layers it does not use. A focused senior team usually fits better.',
   },
   {
     category: 'choosing',
     question: 'Who are the top 5 marketing agencies, and are the biggest names right for a small Chennai business?',
     answer:
-      'Any "top 5" or "top 10" list you find is a starting point, not the final word, because most are opinions or paid placements. The biggest, most famous names are usually set up for large brands with large budgets. A smaller, senior team often gives your work far more care and attention. Shortlist a few names, then judge each on who runs your account and what results they can show for a business like yours.',
+      'Top 5 lists change by publisher, and many are sponsored. The famous names mostly serve national brands with national budgets. A small Chennai firm usually gets more from a smaller team that knows its trade. Shortlist a few, meet the people who would run your account, and ask for results in a similar business.',
   },
   {
     category: 'services',
     question: 'Is digital marketing only for big Chennai brands, or can a small shop or startup benefit too?',
     answer:
-      'It works just as well for a small shop or a new startup, often better, because you can move faster than a big company. Tamil Nadu now has more than 10,000 government-recognised startups, so Chennai is full of small businesses competing for the same attention. Showing up on Google, a fast mobile website and quick WhatsApp follow-up can put a small business right next to much bigger names in search results.',
+      'Small firms often gain the most, because they can act fast. Tamil Nadu now has more than 10,000 government-recognised startups, so plenty of small Chennai businesses compete for attention. A sharp Maps listing, a quick mobile site and fast WhatsApp replies can put a single-outlet shop beside chains in local search.',
   },
   {
     category: 'services',
     question: 'Can you fix marketing that another Chennai agency set up badly?',
     answer:
-      'Yes, and it is common. We often take over websites, Google accounts and campaigns that a previous agency left in a mess. We start by checking what is there, keep whatever is working, and fix or rebuild the rest. You will not have to start from zero, and we explain in plain words what went wrong and what we are changing, so you are never left guessing.',
+      'Yes, we take over messy setups often: broken tracking, ad accounts in someone else’s name, sites that Google cannot read. First we audit what exists, keep what works and repair the rest. You get a short written list of what was wrong and what we changed.',
   },
   {
     category: 'channels',
     question: 'Do you offer social media marketing in Chennai?',
     answer:
-      'Yes. Social media marketing means posting and running ads on Instagram, Facebook and LinkedIn to build trust and reach new people. It works well for restaurants, salons, clinics and D2C brands (companies that sell their own products online). It usually builds slowly, so we pair it with showing up on Google, which brings enquiries from people who are already searching to buy. We only suggest the channels your customers actually use.',
+      'Yes. We run Instagram and Facebook for restaurants, salons, saree and jewellery stores and D2C brands, and LinkedIn for software firms and industrial suppliers. Posts, reels, offers and paid boosts are planned around Chennai’s festival calendar. Because social grows slowly, we pair it with Google so buyers who search can also find you.',
   },
   {
     category: 'channels',
     question: 'Do you run Google Ads for Chennai businesses, and how fast do they work?',
     answer:
-      'Yes. Google Ads means paying to appear at the top of Google when someone searches. They are the fastest channel: you can start getting enquiries the same day you switch them on. The trade-off is that they stop the moment you stop paying. Most Chennai businesses do best with a small mix, ads for quick enquiries now while free Google rankings build up in the background.',
+      'Yes. Google Ads place you above the organic results for the searches you choose, and leads can start on day one. They stop when spending stops. We usually run ads alongside SEO, then trim the ad budget as organic rankings take over the steady flow.',
   },
   {
     category: 'channels',
     question: 'What is performance marketing, and does my Chennai business need it?',
     answer:
-      'Performance marketing is just a fancy name for paid ads that you judge by the results they bring, like calls, form fills or sales, rather than by likes or views. On Google and Instagram, you can see exactly what each rupee brought back. It is useful when you want quick, measurable enquiries. Whether you need it depends on your goals; we would rather show you honest numbers than sell you ads you do not need.',
+      'It is paid advertising judged only by results such as calls, form fills or sales. On Google and Meta you can see what each rupee returned. It suits businesses that want measurable leads quickly, like a new clinic or a showroom before a festival sale. If it will not pay back for you, we will tell you.',
   },
   {
     category: 'channels',
     question: 'What is local SEO, and how does it get my Chennai shop onto Google Maps?',
     answer:
-      'Local SEO is the part of SEO that helps a nearby customer find you. When someone in Chennai searches on their phone, Google shows a small map with three local businesses at the top. Local SEO works to get you into that box and onto Google Maps by setting up your Google Business Profile, keeping your name, address and phone number consistent, and earning genuine reviews. For any shop or clinic customers visit, this is one of the highest-value channels.',
+      'Local SEO helps nearby buyers find you. When someone in Chennai searches on a phone, Google shows a map with three businesses first. To get there, you need a complete Google Business Profile, the same name, address and phone on every listing, real photos and regular genuine reviews. For showrooms, clinics and eateries this often brings the most calls.',
   },
   {
     category: 'seo',
     question: 'Which is the best SEO company in Chennai, and is that different from an SEO agency?',
     answer:
-      '"SEO company in Chennai" and "SEO agency in Chennai" mean the same thing: a team that gets your business to show up on Google. There is no single best one for everyone. Some are built for small local shops that want to appear on Google Maps, others for large companies with thousands of pages. The right one for you is honest about how long it takes, explains its work in plain words, and never promises the number-one spot.',
+      'The two phrases mean the same service. What differs is fit: some SEO firms specialise in local shops on Maps, others in large catalogues or B2B sites. The right one explains its work plainly, gives realistic timelines and never guarantees the top spot. Ask for an example in a trade like yours.',
   },
   {
     category: 'seo',
     question: 'What is an SEO consultant in Chennai, and do I need one?',
     answer:
-      'An SEO consultant is usually one expert who advises on your Google strategy, rather than a full team that does all the hands-on work. A consultant is handy if you already have people who can carry out the tasks and just need direction. If you want the work actually done, from fixing your website to writing pages and setting up local search, a small senior team covers more ground than a single consultant can.',
+      'A consultant is usually one specialist who advises while your staff do the tasks. That works if you have in-house writers and developers. If you want the fixes, pages and local listings done for you, a small team gets through far more work than one advisor.',
   },
   {
     category: 'ai',
     question: 'How can I check whether ChatGPT or Google’s AI already mentions my Chennai business?',
     answer:
-      'The quickest way is to ask the AI tools yourself: open ChatGPT or Google and ask something like "best options for [your service] in Chennai" and see whether your name comes up. If it does not, that is a gap worth closing, because more buyers now trust these answers. We also have a free checker that tells you whether AI tools currently recommend you, so you know exactly where you stand before deciding anything.',
+      'Ask it. Type something like "best [your service] in Chennai" into ChatGPT, Gemini and Google, and see whose names appear. If yours is missing, that is a gap to close. Our free AI visibility checker does the same test across tools and shows where you stand today.',
   },
 ];
 
@@ -690,7 +692,7 @@ const serviceSchema = {
   areaServed: { '@type': 'City', name: 'Chennai' },
   serviceType: 'Digital Marketing',
   description:
-    'Integrated digital marketing for Chennai businesses: SEO, paid ads, social media, websites, WhatsApp and AI search, handled by one senior in-house team.',
+    'Digital marketing for Chennai businesses, from T. Nagar retail to OMR tech and auto suppliers: SEO, Google Maps, paid ads, social, websites, WhatsApp and AI search.',
 };
 
 const agenciesSchema = {
@@ -761,8 +763,8 @@ export default function ChennaiDigitalMarketingPage() {
         ]} />
         <Hero
           eyebrow="DIGITAL MARKETING AGENCY · CHENNAI"
-          headline="A Digital Marketing Agency in Chennai That Brings You Real Customers"
-          lead="We help Chennai businesses get found on Google and AI tools like ChatGPT, and turn visitors into real enquiries. One senior in-house team, plain-English reports, no jargon."
+          headline="Digital Marketing Agency in Chennai for Shops, Clinics and Suppliers"
+          lead="From T. Nagar showrooms to Oragadam component makers and OMR software firms, we get Chennai businesses onto Google, Maps and AI answers, then turn those visits into calls and WhatsApp leads."
           formSlot={<HeroInlineForm region="in" source="in_chennai_digital_marketing_hero" />}
           secondaryCta={{ label: 'Get a Free Growth Plan', modal: true as const, region: 'in' as const }}
           trustItems={HERO_TRUST}
@@ -774,7 +776,7 @@ export default function ChennaiDigitalMarketingPage() {
               <div className="relative overflow-hidden rounded-2xl border border-fj-neutral-200 shadow-sm">
                 <img
                   src="/images/services/digital-marketing/chennai/hero.webp"
-                  alt="A digital marketing strategist in a modern Chennai office"
+                  alt="A marketing strategist reviewing search results for a Chennai business"
                   width={832}
                   height={1216}
                   fetchPriority="high"
@@ -782,7 +784,7 @@ export default function ChennaiDigitalMarketingPage() {
                 />
                 <div className="absolute bottom-3 left-3 rounded-xl bg-white/95 px-4 py-2.5 shadow-sm">
                   <p className="font-fj-mono text-[10px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">
-                    Serving Chennai and all of India
+                    Working with Chennai firms
                   </p>
                   <p className="mt-0.5 font-fj-display text-sm font-semibold text-fj-ink">
                     500+ businesses, 12 years
@@ -798,14 +800,14 @@ export default function ChennaiDigitalMarketingPage() {
         <section className="border-y border-fj-ink/10 bg-white px-6 py-14 md:px-8 md:py-16">
           <div className="mx-auto max-w-3xl">
             <Heading as="h2" size="h3" className="text-fj-ink">
-              So, which is the best digital marketing agency in Chennai?
+              Short answer: which Chennai agency should you hire?
             </Heading>
             <p className="mt-4 text-lg leading-relaxed text-fj-ink/80">
-              The honest answer: there is no single best agency for every Chennai business. The right one
-              for you depends on your size, your goals and, most of all, who actually does your work. For
-              small and mid-size Chennai businesses that want one senior team to handle everything, from
-              your website to Google to AI search, FactoryJet is a strong choice. Below we compare the top
-              Chennai agencies openly, including ourselves, so you can decide for yourself.
+              Pick by trade and by who does the daily work. A hospital, an auto parts supplier and a
+              T. Nagar jeweller each need a different mix of search, Maps, ads and social. If you run a
+              small or mid-size Chennai firm and want one senior team for site, Google, ads and AI
+              answers, FactoryJet fits that brief. Further down we list the Chennai agencies that rank on
+              Google, us included, and what each one suits.
             </p>
           </div>
         </section>
@@ -831,22 +833,22 @@ export default function ChennaiDigitalMarketingPage() {
 
         <ServiceExplanation
           eyebrow="WHAT WE DO, IN PLAIN WORDS"
-          headline="What a digital marketing agency in Chennai actually does for you"
-          lead="Strip away the buzzwords and it comes down to one thing: helping more of the right people in Chennai find your business and become customers."
+          headline="What we handle for a Chennai business"
+          lead="The job is simple to state. Put your business in front of Chennai buyers at the moment they search, and make it easy for them to contact you."
           body={
             <>
               <p>
-                Some agencies make this sound complicated on purpose. It is not. Your customers are
-                already searching on Google, scrolling Instagram between meetings, and now asking
-                ChatGPT for recommendations. Our job is to make sure your business shows up in those
-                moments, and that the person who clicks actually turns into a call, a WhatsApp message
-                or a sale.
+                A family picking a hospital types symptoms and area names into Google. A purchase
+                manager at a Sriperumbudur plant searches for vendors by part and process. A bride
+                shortlists T. Nagar silk stores on Instagram. Each of them now also asks ChatGPT. We
+                make sure your name appears in those searches and that the page they land on gets
+                them to call or message.
               </p>
               <p>
-                We do that by joining the pieces together: a fast website, showing up on Google (SEO),
-                ads when you need quick results, social media, WhatsApp follow-up, and getting picked
-                by AI tools. Not every Chennai business needs all of it. We choose the few that will
-                bring you the most enquiries, and we tell you honestly which ones will not.
+                The tools are a quick site, SEO, a strong Maps listing, paid ads for speed, social
+                posts, WhatsApp replies and AI search work. A sweet shop and an engineering exporter
+                will use different parts of that list. We recommend the two or three that suit your
+                buyers and tell you which ones to skip.
               </p>
             </>
           }
@@ -855,7 +857,7 @@ export default function ChennaiDigitalMarketingPage() {
               <div aria-hidden className="absolute -bottom-4 -right-4 h-28 w-28 rounded-2xl bg-[#F05A28]/10" />
               <img
                 src="/images/services/digital-marketing/chennai/team.webp"
-                alt="A digital marketing team in a Chennai office reviewing a marketing strategy together"
+                alt="Marketers planning a search and social campaign for a Chennai client"
                 width={1216}
                 height={832}
                 loading="lazy"
@@ -868,12 +870,12 @@ export default function ChennaiDigitalMarketingPage() {
         {/* Chennai market context: real, cited numbers that build trust with
             both AI answer engines and human readers. Outbound links resolve. */}
         <CityContextSection
-          eyebrow="THE CHENNAI DIGITAL MARKET, IN REAL NUMBERS"
-          headline="Chennai is one of India’s biggest business hubs, and its buyers are already online"
+          eyebrow="CHENNAI BUYERS, BY THE NUMBERS"
+          headline="Chennai makes cars, treats patients and sells silk, and its buyers search first"
           leadParagraphs={[
-            'Chennai runs many markets at once, from the shops and jewellers of T. Nagar to the software and SaaS firms strung along the OMR IT corridor, plus a huge auto belt and some of the country’s best-known hospitals. That also makes it crowded. Your next customer has plenty of choices, and they compare them all on a phone before they ever call you.',
-            'Buying habits have shifted fast. People search on Google between meetings, scroll Instagram over filter coffee, and now ask ChatGPT for recommendations. If your business does not show up in those moments, a competitor does. The numbers beside this show how quickly that shift is happening across India.',
-            'This is why one channel on its own rarely works in Chennai. The businesses that win join the pieces together: a fast website, strong Google visibility, quick WhatsApp replies, and a presence inside AI answers, so no enquiry slips away.',
+            'Few Indian cities mix trades the way Chennai does. Car and component plants line the Sriperumbudur and Oragadam belt. Software and SaaS firms fill OMR. Hospitals draw patients from across the country and abroad. Silk and jewellery stores pack T. Nagar, while leather and textile exporters and the engineering units of Ambattur and Guindy sell to buyers worldwide.',
+            'Each of those buyers searches differently. Patients compare hospitals and doctors by reviews. Plant buyers look for capability pages and certifications. Shoppers search in English, Tamil and Tanglish, often by area name. Many now ask ChatGPT for a shortlist before calling anyone.',
+            'So a single channel rarely carries a Chennai business. The firms that grow pair a quick site with Google rankings, a well-kept Maps listing, same-day WhatsApp replies and pages AI tools can quote.',
           ]}
           bodySlot={
             <>
@@ -882,7 +884,7 @@ export default function ChennaiDigitalMarketingPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  In a city this busy, being easy to find is half the battle won.
+                  If buyers cannot find you in search, they ring the next name on the list.
                 </p>
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
@@ -907,14 +909,14 @@ export default function ChennaiDigitalMarketingPage() {
         <BigThreeTrustBlock
           variant="statement"
           eyebrow="ONE TEAM, EVERY CHANNEL"
-          headline="One senior in-house team in Chennai for SEO, social media, Google Ads and AI search"
+          headline="SEO, Google Maps, Google Ads, social and AI search for Chennai, run by one senior in-house team"
         />
 
         <IndustriesGrid
           variant="cards"
           eyebrow="EVERYTHING IN ONE PLACE"
-          headline="One Chennai team for every part of your online growth"
-          lead="Instead of hiring five different people, you get one senior team that covers the whole picture. Each of these links to how we do it."
+          headline="Every channel a Chennai business needs, under one roof"
+          lead="Hiring a separate SEO person, ad buyer, designer and developer takes months. Here is what our team covers instead, with a link to each service."
           sectors={CHANNELS}
         />
 
@@ -922,25 +924,25 @@ export default function ChennaiDigitalMarketingPage() {
             layout (card on the left) to break the rhythm. Light. */}
         <ServiceExplanation
           eyebrow="OUR APPROACH FOR CHENNAI"
-          headline="How we grow a Chennai business, step by step"
-          lead="No two Chennai businesses are the same, so we do not use one template. We start with what actually brings you enquiries, then build outward from there."
+          headline="Our method for Chennai clients"
+          lead="A Mylapore restaurant and an Ambattur fabricator share almost nothing, so the plan begins with your buyers and the searches they make."
           reverseOnDesktop
           body={
             <>
               <p>
-                First, we find out where your Chennai customers already are. A jeweller in T. Nagar
-                and a B2B firm on OMR reach buyers in very different ways, so the plan starts with
-                your customers, not with a fixed package.
+                Step one is research. We look at what your buyers type into Google, which rivals
+                show up, and whether people in your trade search in Tamil. That tells us where the
+                quickest leads are.
               </p>
               <p>
-                Then a senior person, not a fresher, does the real work: fixing your website so it
-                loads fast on patchy local networks, getting you found on Google and Google Maps, and
-                setting up quick WhatsApp follow-up so no enquiry goes cold.
+                Step two is the build, done by experienced staff. We speed up the site for mobile
+                users, write pages for your products and services, complete your Maps profile, and
+                connect every enquiry button to WhatsApp so leads get a reply the same day.
               </p>
               <p>
-                Finally, we report in plain words. Each month you see how many people visited, how
-                many enquiries came in, and what we did. We keep what works and drop what does not.
-                That is the whole method, no jargon, no smoke.
+                Step three is the monthly review. You see visits, calls, forms and WhatsApp leads,
+                with the work behind them. Spend shifts towards whatever is bringing buyers and away
+                from whatever is not.
               </p>
             </>
           }
@@ -960,17 +962,17 @@ export default function ChennaiDigitalMarketingPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  What working with us looks like
+                  What you get each month
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
-                  { t: 'A plan built around your customers', n: 'not a copy-paste package' },
-                  { t: 'A senior person on your account', n: 'no work handed to freshers' },
-                  { t: 'Found on Google and Google Maps', n: 'local search set up properly' },
-                  { t: 'Quick WhatsApp follow-up', n: 'so no enquiry goes cold' },
-                  { t: 'Named in AI answers over time', n: 'ChatGPT, Gemini and Google AI' },
-                  { t: 'A plain-English report each month', n: 'visitors, enquiries, what we did' },
+                  { t: 'A plan shaped by your trade', n: 'retail, clinic, factory or software' },
+                  { t: 'Experienced people on the work', n: 'the same faces every month' },
+                  { t: 'Google rankings and a Maps listing', n: 'profile, reviews, area pages' },
+                  { t: 'WhatsApp on every enquiry button', n: 'replies the same day' },
+                  { t: 'Work on AI answers', n: 'ChatGPT, Gemini and Google AI' },
+                  { t: 'One-page monthly report', n: 'leads by source, tasks done' },
                 ].map((item) => (
                   <div key={item.t} className="flex items-start gap-3 py-3.5">
                     <span
@@ -1001,7 +1003,7 @@ export default function ChennaiDigitalMarketingPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  Simple plan. Senior team. Honest numbers.
+                  Your buyers, your numbers, every month.
                 </p>
               </div>
             </div>
@@ -1011,7 +1013,7 @@ export default function ChennaiDigitalMarketingPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs a traditional agency vs a freelancer vs your own team"
-          lead="There is no single right answer for every business. Here is an honest look at how the options differ, so you can pick what fits you."
+          lead="Each option suits someone. This table shows where each one is strong and weak for a Chennai firm."
           columns={COMPARE_COLUMNS}
           rows={COMPARE_ROWS}
         />
@@ -1021,14 +1023,14 @@ export default function ChennaiDigitalMarketingPage() {
         <section className="bg-fj-cream px-6 py-16 md:px-8 md:py-20">
           <div className="mx-auto max-w-5xl">
             <p className="mb-3 font-mono text-xs uppercase tracking-widest text-[#B23E13]">
-              WHY MARKETING OFTEN FALLS FLAT
+              WHERE CHENNAI CAMPAIGNS GO WRONG
             </p>
             <Heading as="h2" size="h2" className="text-fj-ink">
-              Three reasons digital marketing quietly stops working in Chennai
+              Three patterns that waste Chennai marketing budgets
             </Heading>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-fj-ink/80">
-              If past marketing did not bring you enquiries, it is usually one of these, and all
-              three are avoidable once you can see them.
+              When a Chennai business tells us its last agency produced few leads, the cause is
+              usually one of the three below.
             </p>
 
             <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -1058,8 +1060,8 @@ export default function ChennaiDigitalMarketingPage() {
         <FinalCTA
           variant="light"
           eyebrow="TALK TO US"
-          headline="Want a plain, honest plan for your Chennai business?"
-          sub="Tell us about your business and your Chennai customers. We will look at where you show up today and send back a simple plan you can act on, with no jargon and no pressure."
+          headline="Get a written plan for your Chennai business"
+          sub="Share what you sell and who buys it. We check how you appear on Google, Maps and AI tools today and send a short plan with the first steps to take."
           primaryCta={{ label: 'Get my free growth plan', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Check if AI tools recommend you', href: '/ai-visibility-checker' }}
         />
@@ -1069,15 +1071,15 @@ export default function ChennaiDigitalMarketingPage() {
         <section className="bg-fj-cream px-6 py-16 md:px-8 md:py-20">
           <div className="mx-auto max-w-4xl">
             <p className="mb-3 font-mono text-xs uppercase tracking-widest text-[#B23E13]">
-              WHAT ACTUALLY BRINGS ENQUIRIES
+              CHANNELS RANKED FOR CHENNAI
             </p>
             <Heading as="h2" size="h2" className="text-fj-ink">
-              The digital marketing channels that actually work for Chennai businesses
+              Which channels bring Chennai businesses the most leads
             </Heading>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-fj-ink/80">
-              Most "top 10" lists of digital marketing services in Chennai push every channel at once.
-              We would rather be honest. Here are the channels ranked by how steadily each one brings
-              a typical Chennai business real enquiries, and who each one suits best.
+              Lists of digital marketing services in Chennai tend to sell every channel to everyone.
+              Below, six channels are ordered by how reliably they bring leads to a typical Chennai
+              firm, with the trades each one suits.
             </p>
 
             <ol className="mt-10 space-y-4">
@@ -1101,9 +1103,8 @@ export default function ChennaiDigitalMarketingPage() {
             </ol>
 
             <p className="mt-6 text-sm leading-relaxed text-fj-ink/70">
-              You do not need all six. For most Chennai businesses, a fast website plus strong Google
-              visibility, quick WhatsApp follow-up and a foot in AI search covers the most ground. We
-              tell you honestly which ones are worth your time and which are not.
+              Few firms need all six. A Chennai showroom might live on Maps and WhatsApp, while an
+              exporter leans on SEO and LinkedIn. We pick the mix from your buyers and drop the rest.
             </p>
           </div>
         </section>
@@ -1112,15 +1113,15 @@ export default function ChennaiDigitalMarketingPage() {
         <section className="bg-fj-cream px-6 py-16 md:px-8 md:py-20">
           <div className="mx-auto max-w-4xl">
             <p className="mb-3 font-mono text-xs uppercase tracking-widest text-[#B23E13]">
-              THE TOP CHENNAI AGENCIES, COMPARED HONESTLY
+              CHENNAI AGENCIES SIDE BY SIDE
             </p>
             <Heading as="h2" size="h2" className="text-fj-ink">
-              The best digital marketing agencies in Chennai, and who each one suits
+              Top digital marketing agencies in Chennai, by what each does best
             </Heading>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-fj-ink/80">
-              We looked at which agencies actually rank on Google for digital marketing and SEO in Chennai
-              using live search data in July 2026, and what each is known for. We include ourselves and
-              say so openly, because hiding it would be the opposite of honest.
+              This list comes from live Google rankings for Chennai digital marketing and SEO searches,
+              checked in July 2026, plus each firm’s public work. FactoryJet is on it, and we mark that
+              entry clearly.
             </p>
 
             <ol className="mt-10 space-y-4">
@@ -1159,18 +1160,17 @@ export default function ChennaiDigitalMarketingPage() {
             </ol>
 
             <p className="mt-6 text-sm leading-relaxed text-fj-ink/70">
-              A quick note on fairness: every agency here is a genuine, capable team. The "best for"
-              lines are our honest read of who each one suits, based on their public work and what they
-              rank for in Chennai. The right pick is the one that matches your business, not the one that
-              shouts loudest.
+              Every firm here does real work for real clients. The "best for" notes are our reading of
+              their public portfolios and Chennai rankings. Choose the one whose strengths match your
+              trade and buyers.
             </p>
           </div>
         </section>
 
         <ServiceJourneyRow
           eyebrow="HOW WORKING WITH US FEELS"
-          headline="From first chat to real results, in five simple steps"
-          lead="No confusing process, no surprises. Here is exactly what happens when you work with us."
+          headline="How an engagement runs, in five steps"
+          lead="Here is the order of work for a new Chennai client, from first call to monthly review."
           stages={JOURNEY}
           closingNote="5 SIMPLE STEPS · SENIOR TEAM · HONEST MONTHLY REPORTS"
         />
@@ -1179,12 +1179,12 @@ export default function ChennaiDigitalMarketingPage() {
         <section className="border-y border-fj-ink/10 bg-white px-6 py-14 md:px-8 md:py-16">
           <div className="mx-auto max-w-3xl">
             <Heading as="h2" size="h3" className="text-fj-ink">
-              We help businesses grow across Chennai, and beyond
+              Where in Chennai we work
             </Heading>
             <p className="mt-4 text-lg leading-relaxed text-fj-ink/80">
-              Because the work happens online, your part of the city does not limit us. We help shops,
-              restaurants, clinics, service firms and brands across T. Nagar, Anna Nagar, the OMR IT
-              corridor, Guindy, Adyar, Velachery, Nungambakkam and Porur. Whether you need to{' '}
+              Our clients sit all over the city: retailers in T. Nagar and Anna Nagar, tech firms on
+              OMR, engineering units in Guindy, clinics in Adyar and Nungambakkam, and restaurants in
+              Velachery and Porur. Whether you need to{' '}
               <a href="/seo" className="font-semibold text-[#B23E13] underline underline-offset-2">
                 get found on Google
               </a>
@@ -1222,14 +1222,14 @@ export default function ChennaiDigitalMarketingPage() {
 
         <TestimonialsSection
           eyebrow="REAL RESULTS"
-          headline="What business owners say after working with us"
+          headline="Feedback from business owners we work with"
           region="in"
         />
 
         <FAQ
-          eyebrow="QUESTIONS CHENNAI OWNERS ACTUALLY ASK"
-          headline="Digital marketing in Chennai, answered in plain words"
-          lead="Real questions from real Chennai searches, answered simply, with no jargon and no sales spin."
+          eyebrow="CHENNAI BUYER QUESTIONS"
+          headline="Questions about hiring a digital marketing agency in Chennai"
+          lead="Drawn from what Chennai owners type into Google, with direct answers."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
@@ -1237,11 +1237,11 @@ export default function ChennaiDigitalMarketingPage() {
         <FinalCTA
           variant="light"
           eyebrow="READY WHEN YOU ARE"
-          headline="Want to see how many Chennai customers you are missing?"
-          sub="Book a free, no-pressure chat. We will look at your website and where your Chennai customers are, and tell you honestly what will bring you more enquiries, even if we never work together."
+          headline="Find out where Chennai buyers are choosing a rival"
+          sub="Book a free call. We review your site, Maps listing and AI visibility against your Chennai competitors and tell you what would bring more leads. You keep the advice either way."
           primaryCta={{ label: 'Get My Free Growth Plan', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Check if AI tools recommend you', href: '/ai-visibility-checker' }}
-          objectionHandler="No jargon. No long contract. Just an honest plan you can use straight away."
+          objectionHandler="Free call. No lock-in. A plan you can use even without us."
         />
       </main>
 
