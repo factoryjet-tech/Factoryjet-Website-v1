@@ -162,7 +162,7 @@ export default function Page() {
     ],
     stats: [
       { value: "$7B+", label: "IT Exports via OMR Corridor", sourceUrl: "https://nasscom.in/", sourceLabel: "NASSCOM" },
-      { value: "India's Auto Capital", label: "Hyundai, Ford, BMW Manufacturing Hub", sourceUrl: "https://acma.in/", sourceLabel: "ACMA" },
+      { value: "India's Auto Capital", label: "Hyundai, Renault-Nissan, BMW Manufacturing Hub", sourceUrl: "https://acma.in/", sourceLabel: "ACMA" },
       { value: "₹7L Cr+", label: "Greater Chennai GDP", sourceUrl: "https://mospi.gov.in/", sourceLabel: "MoSPI" },
     ],
   }
@@ -478,7 +478,19 @@ const CHN_FAQ_ITEMS = [
             }
           />
         <StrategicDarkSection {...darkSectionProps} />
-        <ServiceJourneyRow eyebrow="OUR PROCESS" headline="How We Build Your Chennai Website in 7 Days" />
+        <ServiceJourneyRow
+          eyebrow="OUR PROCESS"
+          headline="How We Build Your Chennai Website in 7 Days"
+          lead={"An Ambattur supplier, an OMR software firm and an Adyar consumer brand need different sites. We decide which buyer matters most before design starts."}
+          stages={[
+            { number: "01", title: "Decide the buyer", description: "A vendor-development team at a car plant, a SaaS buyer abroad and a local shopper read a site differently. We pick the main buyer, check a few Chennai competitors and lock the page list." },
+            { number: "02", title: "Design for the phone", description: "Layouts are drawn at phone width first, then desktop. RFQ forms, catalogue tables and demo buttons are placed in Figma, and you approve before any code is written." },
+            { number: "03", title: "Build on Next.js", description: "We build the approved design and load your real content: part numbers, certifications, case studies or product listings." },
+            { number: "04", title: "Search setup", description: "Page titles, structured data, Google Business Profile links and analytics go in before launch, so every enquiry can be traced to its source." },
+            { number: "05", title: "Launch on day 7", description: "The site goes live within seven days. You own the code and every account, and get a recorded walkthrough for future edits." },
+          ]}
+          closingNote="BUYER · DESIGN · BUILD · SEARCH SETUP · LIVE ON DAY 7"
+        />
         <PortfolioShowcase
             eyebrow="RECENT WORK"
             headline="What India's businesses look like after FactoryJet."
@@ -515,7 +527,20 @@ const CHN_FAQ_ITEMS = [
             rows={CHN_COMPARISON_ROWS}
             footer="Comparison reflects typical Chennai market norms as of 2025. FactoryJet fixed-price contracts are available for every project."
           />
-        <IndustriesGrid />
+        <IndustriesGrid
+          variant="cards"
+          eyebrow="CHENNAI × WEB DESIGN"
+          headline="Websites for Chennai's Main Industries"
+          lead={"Chennai runs on factories, software and healthcare, plus a large consumer market. These are the site types we plan for each."}
+          sectors={[
+            { name: "Auto & Components", description: "Suppliers to the car plants around Sriperumbudur and Oragadam are judged on quality systems and capacity. Sites need certifications, machine and process details, customer sectors and an RFQ form.", example: "Tier 1 and Tier 2 suppliers in Ambattur, Guindy and Sriperumbudur." },
+            { name: "IT & SaaS", description: "Software firms on OMR sell to buyers in other countries who never meet them first. They need product pages, case studies, security and compliance details, and a demo booking flow.", example: "Product companies and IT service firms along OMR." },
+            { name: "Healthcare", description: "Chennai draws patients from across India and abroad. Hospitals and clinics need specialty pages, doctor profiles, international patient information and a clear way to request an appointment.", example: "Hospitals, diagnostic centres and clinics across the city." },
+            { name: "Manufacturing & Engineering", description: "Machine builders, fabricators and electrical firms win orders through trust and technical detail. Spec sheets, project galleries and quick quote requests matter more than slogans.", example: "Engineering units in Ambattur, Guindy and the northern industrial belt." },
+            { name: "Retail & D2C", description: "Silk, jewellery, food and lifestyle brands sell to Chennai shoppers and online. They need fast product pages, festival-season offers and easy ordering on a phone.", example: "Brands and stores in T. Nagar, Anna Nagar and Adyar." },
+            { name: "Education & Professional Services", description: "Colleges, coaching centres, law and CA firms compete on reputation. Sites need clear course or service pages, credentials, reviews and simple enquiry forms.", example: "Institutes and professional firms across Chennai." },
+          ]}
+        />
           <GetFreeQuoteCTA />
         <TestimonialsSection />
         <FAQ

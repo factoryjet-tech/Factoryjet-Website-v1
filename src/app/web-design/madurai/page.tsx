@@ -179,7 +179,7 @@ export default function Page() {
       },
       {
         title: 'SME-Friendly Fixed Pricing',
-        body: 'You get a clear, fixed quote after a free consultation, affordable for Madurai MSMEs without compromising on quality or performance.',
+        body: 'You get a clear, fixed quote after a free consultation, sized to Madurai MSME budgets, with the same build quality on every project.',
       },
       {
         title: 'Tamil Nadu Market Expertise',
@@ -479,7 +479,19 @@ const MDU_FAQ_ITEMS = [
             }
           />
         <StrategicDarkSection {...darkSectionProps} />
-        <ServiceJourneyRow eyebrow="OUR PROCESS" headline="How We Build Your Madurai Website in 7 Days" />
+        <ServiceJourneyRow
+          eyebrow="OUR PROCESS"
+          headline="How We Build Your Madurai Website in 7 Days"
+          lead={"A Kappalur manufacturer, an Anna Nagar hospital and a tour operator near the temple each need a different site. We agree who it is for on day one."}
+          stages={[
+            { number: "01", title: "Agree the audience", description: "We pin down who the site must win: an export buyer, a patient choosing a hospital, or a pilgrim planning a trip. Then we review a few local rivals and agree the pages." },
+            { number: "02", title: "Approve the layout", description: "Designs start on a phone screen, because most Madurai searches happen there. Service menus, product details and contact buttons are placed in Figma, and nothing is built until you approve." },
+            { number: "03", title: "Write and build", description: "We build the approved design in Next.js and load real content: products, doctors, packages or services, with your photos and details." },
+            { number: "04", title: "Maps and tracking", description: "Before launch we connect your Google Business Profile, set page titles for Madurai searches and switch on analytics, so you can see where enquiries come from." },
+            { number: "05", title: "Go live", description: "The site launches on day 7. The code and every login are handed to you, with a recorded guide to making changes." },
+          ]}
+          closingNote="AUDIENCE · LAYOUT · BUILD · MAPS + TRACKING · LIVE ON DAY 7"
+        />
         <PortfolioShowcase
             eyebrow="RECENT WORK"
             headline="What India's businesses look like after FactoryJet."
@@ -516,7 +528,20 @@ const MDU_FAQ_ITEMS = [
             rows={MDU_COMPARISON_ROWS}
             footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
           />
-        <IndustriesGrid />
+        <IndustriesGrid
+          variant="cards"
+          eyebrow="MADURAI × WEB DESIGN"
+          headline="Websites for Madurai's Main Business Types"
+          lead={"Madurai mixes factories, hospitals, temple tourism and local trade. Each needs a different kind of website."}
+          sectors={[
+            { name: "Textiles & Garments", description: "Garment makers and fabric traders sell to buyers in other states and abroad. Their sites need product ranges, capacity, certifications and a sample or bulk enquiry form.", example: "Garment units and fabric traders across Madurai district." },
+            { name: "Engineering & Auto Parts", description: "Component makers supply larger firms that vet vendors carefully. A capability page, machine list, quality documents and an RFQ form do more work than a brochure.", example: "Engineering and auto component units in Kappalur SIDCO." },
+            { name: "Hospitals & Clinics", description: "Patients from across southern Tamil Nadu compare hospitals online before travelling. Sites need doctor profiles, departments, timings, reviews and a simple appointment request.", example: "Hospitals and specialty clinics in Anna Nagar, KK Nagar and SS Colony." },
+            { name: "Temple Tourism & Travel", description: "Visitors to the Meenakshi Amman temple plan trips on their phones. Hotels, tour operators and travel agents need package pages, clear prices, maps and quick booking.", example: "Hotels, lodges and tour operators near the temple and Periyar bus stand." },
+            { name: "Jasmine, Food & Local Brands", description: "Madurai jasmine and local food brands now ship beyond the city. They need product pages that load fast, ordering through WhatsApp or a cart, and delivery details buyers trust.", example: "Flower traders, sweet shops and packaged food brands around Mattuthavani." },
+            { name: "Education & Training", description: "Colleges, coaching centres and schools compete for students and parents who check results and facilities first. Sites need course pages, admission steps and a form that captures the enquiry.", example: "Colleges and coaching institutes across the city." },
+          ]}
+        />
           <GetFreeQuoteCTA />
         <TestimonialsSection />
         <FAQ

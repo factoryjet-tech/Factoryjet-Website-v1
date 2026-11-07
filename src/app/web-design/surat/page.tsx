@@ -476,7 +476,19 @@ const SRT_FAQ_ITEMS = [
             }
           />
         <StrategicDarkSection {...darkSectionProps} />
-        <ServiceJourneyRow eyebrow="OUR PROCESS" headline="How We Build Your Surat Website in 7 Days" />
+        <ServiceJourneyRow
+          eyebrow="OUR PROCESS"
+          headline="How We Build Your Surat Website in 7 Days"
+          lead={"Diamond houses, textile mills and Vesu retail brands need different sites. We settle which buyer the site serves before any design work starts."}
+          stages={[
+            { number: "01", title: "Pick the buyer", description: "An overseas diamond buyer, a sari wholesaler in another state and a shopper in Adajan want different things. We choose one main buyer, study two or three Surat rivals and fix the page list." },
+            { number: "02", title: "Phone-first design", description: "Surat buyers often find you through a WhatsApp forward, so layouts start at phone width. Catalogue grids, certificate blocks and the enquiry button are placed before code, and you approve the design." },
+            { number: "03", title: "Build the pages", description: "We code the approved design in Next.js. Product ranges, fabric or stone details and export paperwork go in as real content, not filler text." },
+            { number: "04", title: "Search and WhatsApp setup", description: "Titles, Google Business Profile links, analytics and a click-to-WhatsApp button are switched on before launch, so the first enquiry is tracked." },
+            { number: "05", title: "Launch and hand over", description: "The site goes live on day 7. You get the code, the logins and a short recorded walkthrough of how to update it." },
+          ]}
+          closingNote="BUYER · DESIGN · BUILD · SEARCH + WHATSAPP · LIVE ON DAY 7"
+        />
         <PortfolioShowcase
             eyebrow="RECENT WORK"
             headline="What India's businesses look like after FactoryJet."
@@ -513,7 +525,20 @@ const SRT_FAQ_ITEMS = [
             rows={SRT_COMPARISON_ROWS}
             footer="Comparison reflects typical Surat market norms as of 2025. FactoryJet fixed-price contracts are available for every project."
           />
-        <IndustriesGrid />
+        <IndustriesGrid
+          variant="cards"
+          eyebrow="SURAT × WEB DESIGN"
+          headline="Websites for the Trades That Run Surat"
+          lead={"Surat's diamond, textile and retail businesses sell in very different ways. These are the site types we plan for them."}
+          sectors={[
+            { name: "Diamonds & Jewellery", description: "Cutting and polishing units and diamond traders sell to buyers who check grading, certification and track record before they reply. The site needs a clear range, certificate details, process photos and an enquiry form that asks the right questions.", example: "Polishing units and traders around Varachha Road and Mahidharpura." },
+            { name: "Textiles & Sarees", description: "Mills and traders on Ring Road sell fabric and sarees to wholesalers across India. Buyers want to see ranges, minimum order, fabric details and how to place a trade order, without calling first.", example: "Weavers, processors and saree traders in GIDC Sachin and the Ring Road markets." },
+            { name: "Engineering & Industrial", description: "Hazira's large plants pull in fabricators, contractors and suppliers. Their sites have to show capability, safety records, past jobs and approvals in a way a procurement team can check quickly.", example: "Fabricators and industrial suppliers serving the Hazira belt." },
+            { name: "Retail & D2C Brands", description: "Clothing, jewellery and food brands in Vesu and Adajan sell to local shoppers and online. They need fast product pages, WhatsApp ordering and a site that looks as good as their shop.", example: "Boutiques, ethnic wear labels and food brands in Vesu, Adajan and City Light." },
+            { name: "Real Estate", description: "Builders compete for site visits from families comparing several projects. Project pages need floor plans, RERA numbers, location maps and a short visit booking form.", example: "Developers and channel partners across Surat's western suburbs." },
+            { name: "Clinics & Professional Firms", description: "Doctors, CA firms and lawyers win clients through trust and Google Maps. Their sites need service pages, credentials, reviews and an easy way to book or call.", example: "Clinics, CA practices and consultancies across the city." },
+          ]}
+        />
           <GetFreeQuoteCTA />
         <TestimonialsSection />
         <FAQ
