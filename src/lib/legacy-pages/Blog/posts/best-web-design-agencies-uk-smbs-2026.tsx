@@ -13,7 +13,7 @@ export const post: BlogPost = {
   imageUrl: "/blog-images/best-web-design-agencies-uk-smbs-2026-hero.webp",
   meta: {
     title: "15 Best UK Web Design Agencies for SMBs in 2026 | Ranked",
-    description: "We ranked 15 UK web design agencies on verified client results, Lighthouse scores, pricing, and delivery speed. Find your best match for a £5K-£50K budget in 2026.",
+    description: "We ranked 15 UK web design agencies on verified client results, Lighthouse scores, pricing and delivery speed. Find your match for a £5K-£50K budget in 2026.",
   },
   keyTakeaways: [
     "UK SMBs pay £1,500–£8,000 for professional websites; remote-first agencies deliver 50–60% savings without compromising Lighthouse 92+ performance standards.",

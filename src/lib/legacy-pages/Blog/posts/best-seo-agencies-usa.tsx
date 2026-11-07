@@ -17,7 +17,7 @@ export const post: BlogPost = {
   meta: {
     title: 'The 10 Best SEO Agencies in the USA (2026), Compared',
     description:
-      'Which is the best SEO agency in the USA? We compared 10 US SEO agencies on real page-one rankings, published pricing and specialty, using live search data. Full disclosure: we are on the list.',
+      'We compared 10 US SEO agencies on real page-one rankings, published pricing and specialty, using live search data. Full disclosure: we are on the list.',
   },
   keyTakeaways: [
     'Our researched 2026 list: FactoryJet (disclosed self-inclusion), WebFX, Thrive Internet Marketing, Coalition Technologies, Ignite Visibility, First Page Sage, Searchbloom, Third Marble Marketing, SEO Sherpa, and SmartSites.',

@@ -189,7 +189,7 @@ export const post: BlogPost = {
   imageAlt:
     'At a walnut table in front of a red brick wall, a bald man with a white beard in a dark green cardigan reads a contract page while a young woman with long braids in an olive shirt sticks an orange tab on another page.',
   meta: {
-    title: 'AI Development Contract Checklist: 14 Clauses to Agree (2026)',
+    title: 'AI Development Contract Checklist: 14 Clauses (2026)',
     description:
       'What an AI agent development contract should say about data ownership, IP, model changes and ongoing support, with US, UK and Australian rules, 2026.',
   },

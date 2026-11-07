@@ -13,7 +13,7 @@ export const post: BlogPost = {
   imageUrl: "/blog-images/what-does-web-design-agency-do-2026-hero.webp",
   meta: {
     title: "What Does a Web Design Agency Actually Do in 2026?",
-    description: "Modern agencies do more than build pages. Learn what a web design agency actually delivers in 2026: Core Web Vitals, AI integration, conversion architecture, and SEO.",
+    description: "What a web design agency delivers in 2026 beyond building pages: Core Web Vitals, AI integration, conversion architecture and SEO.",
   },
   keyTakeaways: [
     "2026 agencies deliver technical infrastructure (Core Web Vitals, security, hosting) alongside design, visual work represents roughly 30% of total scope.",
@@ -22,7 +22,7 @@ export const post: BlogPost = {
     "Ongoing maintenance contracts (security patches, performance monitoring, content updates) generate 40-50% of agency revenue in mature markets.",
     "Search Engine Optimization (SEO) and AI Overviews optimization (AIO) are built into site architecture from day one, not bolted on later.",
     "Agencies handle third-party integrations: CRMs (HubSpot, Salesforce), payment processors (Stripe, PayPal), inventory systems, booking platforms, and marketing automation tools.",
-    "Compliance work (GDPR, UK PECR, accessibility standards like WCAG 2.2) is mandatory for UK and EU clients, agencies navigate legal requirements SMBs can't resource internally.",
+    "Compliance work (GDPR, UK PECR, accessibility standards like WCAG 2.2) is mandatory for UK and EU clients, agencies handle legal requirements SMBs can't resource internally.",
   ],
   faqs: [
     { q: "What's the difference between a web designer and a web design agency?", a: "A solo web designer typically handles visual layouts and front-end code. An agency provides full-stack capability: strategy, UX research, development, hosting infrastructure, security, SEO, integrations, compliance, and ongoing support. Agencies carry insurance, maintain vendor partnerships, and deliver faster through specialized teams." },

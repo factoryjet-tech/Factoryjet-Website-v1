@@ -48,7 +48,7 @@ const faqs = [
     },
     {
       q: 'Does content quality affect how long SEO takes?',
-      a: 'Substantially. Ahrefs data shows 95% of new pages never reach the top 10. The difference between the 5% that do and the 95% that do not is primarily content depth, topical coverage, and how directly the content answers the specific query. Thin content extends the timeline; comprehensive, well-structured content compresses it.',
+      a: 'Substantially. Ahrefs data shows 95% of new pages never reach the top 10. The difference between the 5% that do and the 95% that do not is primarily content depth, topical coverage, and how directly the content answers the specific query. Thin content extends the timeline; thorough, well-structured content compresses it.',
     },
     {
       q: 'How many blog posts do I need to see SEO results?',
@@ -88,7 +88,7 @@ const faqs = [
     },
     {
       q: 'What does Ahrefs data say about how long SEO takes?',
-      a: "Ahrefs' research produces two widely cited findings. First, their study of 2 million random pages found that 95% of newly published content never reaches Google's top 10 within the first year: the 5% that do typically have strong backlink profiles or target low-competition queries. Second, their analysis of pages currently ranking in the top 10 found that the average top-10 result is over 2 years old, underscoring that authority compounds over time. For timeline expectations, Ahrefs data consistently supports the 3–6 month window for initial traction and 6–12 months for sustained competitive rankings.",
+      a: "Ahrefs' research produces two widely cited findings. First, their study of 2 million random pages found that 95% of newly published content never reaches Google's top 10 within the first year: the 5% that do typically have strong backlink profiles or target low-competition queries. Second, their analysis of pages currently ranking in the top 10 found that the average top-10 result is over 2 years old, which shows that authority compounds over time. For timeline expectations, Ahrefs data consistently supports the 3–6 month window for initial traction and 6–12 months for sustained competitive rankings.",
     },
     {
       q: 'What does Semrush research say about the SEO timeline?',
@@ -113,9 +113,9 @@ export const post: BlogPost = {
   readTime: '11 min read',
   imageUrl: '/blog-images/how-long-does-seo-take-2026-month-by-month-timeline.webp',
   meta: {
-    title: 'How Long Does SEO Take in 2026? Ahrefs & Semrush Data: 3–6 Month Timeline',
+    title: 'How Long Does SEO Take in 2026? A 3–6 Month Timeline',
     description:
-      'How long does SEO take? Ahrefs and Semrush data both point to 3–6 months for initial results and 6–12 months for competitive terms. This month-by-month timeline shows exactly what happens when, and why.',
+      'Ahrefs and Semrush data point to 3–6 months for first SEO results and 6–12 months for competitive terms. A month-by-month timeline of what happens when.',
   },
   keyTakeaways: [
     'SEO takes 3–6 months to produce measurable results for most small businesses starting from scratch.',

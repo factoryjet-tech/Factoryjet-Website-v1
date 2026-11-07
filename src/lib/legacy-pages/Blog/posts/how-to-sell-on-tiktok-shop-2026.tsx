@@ -15,9 +15,9 @@ export const post: BlogPost = {
   imageUrl: '/blog-images/how-to-sell-on-tiktok-shop-2026.webp',
   imageAlt: 'A smartphone mounted on a tripod filming a product, set up to sell on TikTok Shop',
   meta: {
-    title: 'How to Sell on TikTok Shop in 2026: Step-by-Step Guide for US Sellers',
+    title: 'How to Sell on TikTok Shop in 2026: US Seller Guide',
     description:
-      'A practical 2026 guide to selling on TikTok Shop in the US: eligibility and requirements, Seller Center setup, real fees and commission, selling without inventory, and how to get your first sales.',
+      'Selling on TikTok Shop in the US in 2026: eligibility, Seller Center setup, real fees and commission, selling without inventory and getting your first sales.',
   },
   keyTakeaways: [
     'Any US-based business or individual seller with a valid EIN or SSN, a US bank account, and a US address can register. You apply through TikTok Shop Seller Center, not the consumer app.',

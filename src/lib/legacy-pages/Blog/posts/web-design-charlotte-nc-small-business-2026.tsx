@@ -13,9 +13,9 @@ export const post: BlogPost = {
   readTime: '11 min read',
   imageUrl: '/blog-images/web-design-charlotte-nc-small-business-2026-hero.webp',
   meta: {
-    title: 'Web Design Charlotte NC: Small Business Pricing & Agency Guide 2026',
+    title: 'Web Design Charlotte NC: Small Business Pricing Guide 2026',
     description:
-      'Charlotte NC small business web design in 2026, what finance and healthcare SMBs need, what local agencies charge, and how to get a Lighthouse 95+ site without local agency overhead.',
+      'Charlotte NC small business web design in 2026: what finance and healthcare SMBs need, what local agencies charge, and how to get a Lighthouse 95+ site.',
   },
   keyTakeaways: [
     "Charlotte is a top-10 fastest-growing US metro, web design competition among SMBs is intense, especially in finance, healthcare, professional services, and real estate.",
@@ -65,7 +65,7 @@ export const post: BlogPost = {
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border">
         <h2 className="text-lg font-bold mb-3">Table of Contents</h2>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
-          <li>Charlotte's SMB Web Design Landscape in 2026</li>
+          <li>Charlotte's SMB Web Design Market in 2026</li>
           <li>Finance and Professional Services Web Design</li>
           <li>Healthcare and Wellness Requirements</li>
           <li>Real Estate and Construction Web Design</li>
@@ -80,7 +80,7 @@ export const post: BlogPost = {
         Charlotte, NC added more than 100,000 new residents between 2020 and 2024, making it one of the five fastest-growing large metros in the United States. That population growth has translated directly into an explosion of small business formation, and a fiercely competitive local search environment where web design quality can determine whether your business shows up on Google's first page or disappears behind better-optimized competitors.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Charlotte's SMB Web Design Landscape in 2026</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">Charlotte's SMB Web Design Market in 2026</h2>
       <p className="mb-4">
         Charlotte's economy is anchored by finance, Bank of America and Wells Fargo both maintain significant Charlotte operations, but the SMB layer beneath the large employers includes thousands of independent financial advisors, accounting firms, insurance agencies, and professional services firms that all compete for the same local clients.
       </p>

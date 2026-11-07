@@ -463,7 +463,7 @@ export const post: BlogPost = {
   imageAlt:
     'Over-the-shoulder view of a woman at a desk in the back office of a plumbing supply business, looking at a laptop that shows eight coloured cards, three of them marked with a green dot',
   meta: {
-    title: 'Best AI Automation Agencies USA 2026: 14 Compared | FactoryJet',
+    title: 'Best AI Automation Agencies USA 2026: 14 Compared',
     description: META_DESCRIPTION,
   },
   keyTakeaways: [

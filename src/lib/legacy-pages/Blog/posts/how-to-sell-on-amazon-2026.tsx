@@ -14,9 +14,9 @@ export const post: BlogPost = {
   imageUrl: '/blog-images/how-to-sell-on-amazon-2026.webp',
   imageAlt: 'Boxes ready for shipment in a fulfillment warehouse, set up to sell on Amazon',
   meta: {
-    title: 'How to Sell on Amazon in 2026: Step-by-Step Guide for US Sellers',
+    title: 'How to Sell on Amazon in 2026: Step-by-Step for US Sellers',
     description:
-      'A practical 2026 guide to selling on Amazon in the US: Individual vs Professional plans, FBA vs FBM, the real fee breakdown, selling without inventory, and how to land your first sale.',
+      'Selling on Amazon in the US in 2026: Individual vs Professional plans, FBA vs FBM, the real fee breakdown, selling without inventory and your first sale.',
   },
   keyTakeaways: [
     'You register through Amazon Seller Central with a US bank account, a government ID, and either an SSN (Individual plan) or an EIN and business details (Professional plan). Approval is usually same-day to a few business days.',

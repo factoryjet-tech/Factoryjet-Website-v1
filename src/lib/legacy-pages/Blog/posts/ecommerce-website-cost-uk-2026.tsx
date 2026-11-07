@@ -183,7 +183,7 @@ export const post: BlogPost = {
   imageAlt:
     'A woman with auburn hair and a navy jumper places a folded cream knitted scarf into a plain brown cardboard box on a wooden packing bench, with white shelves of plain boxes behind her and an orange tape dispenser on the bench',
   meta: {
-    title: 'Ecommerce Website Cost UK 2026: Prices by Platform | FactoryJet',
+    title: 'Ecommerce Website Cost UK 2026: Prices by Platform',
     description:
       'What an ecommerce website costs to have built in the UK in 2026, in pounds: Shopify, Shopify Plus, WooCommerce, Magento and BigCommerce, with sources.',
   },

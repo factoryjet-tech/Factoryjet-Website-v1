@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'web-design-nashville-tn-small-business-2026',
   title: 'Web Design in Nashville TN: Complete Small Business Guide 2026',
   excerpt:
-    'Web design in Nashville TN for small businesses in 2026 means navigating a booming local market where hospitality, music, and healthcare SMBs compete hard online, and where local agency prices run $8,000–$20,000 for a basic site. This guide covers what Nashville businesses actually need, what it costs, and where to find the best value.',
+    'Web design in Nashville TN for small businesses in 2026 means working in a booming local market where hospitality, music, and healthcare SMBs compete hard online, and where local agency prices run $8,000–$20,000 for a basic site. This guide covers what Nashville businesses actually need, what it costs, and where to find the best value.',
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
@@ -15,7 +15,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Web Design Nashville TN: Small Business Guide & Pricing 2026',
     description:
-      'Everything Nashville TN small businesses need to know about web design in 2026, local agency costs, what to look for, and how to get a Lighthouse 95+ site without local agency overhead.',
+      'Web design for Nashville TN small businesses in 2026: local agency costs, what to look for, and how to get a Lighthouse 95+ site without local agency overhead.',
   },
   keyTakeaways: [
     "Nashville's hospitality, music, and healthcare industries are fiercely competitive online: a slow or generic website loses customers to competitors before you ever get a call.",

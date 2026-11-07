@@ -14,7 +14,7 @@ export const post: BlogPost = {
   imageAlt: "Diagram of generative engine optimization showing how ChatGPT, Google AI Overviews, Perplexity and Gemini select and cite sources in 2026",
   meta: {
     title: "Generative Engine Optimization (GEO): The 2026 Guide",
-    description: "A plain-English guide to generative engine optimization: what GEO is, how it differs from SEO and AEO, how AI engines choose what to cite, and a 7-step playbook for small businesses.",
+    description: "A plain-English guide to generative engine optimization: what GEO is, how it differs from SEO and AEO, how AI engines pick sources, and a 7-step SMB playbook.",
   },
   keyTakeaways: [
     "Generative engine optimization (GEO) gets your content cited inside AI answers from ChatGPT, Google AI Overviews, Perplexity, and Gemini. It extends SEO, it does not replace it.",

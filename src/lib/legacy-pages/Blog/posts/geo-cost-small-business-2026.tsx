@@ -16,7 +16,7 @@ const faqs = [
     },
     {
       q: 'How much does a GEO retainer cost per month for a small business?',
-      a: 'According to WebFX\'s May 2026 pricing guide, one of the most comprehensive published sources on GEO costs, agency services range from $1,500 to $50,000+ per month depending on scope and business size. Small businesses with a basic strategy typically fall in the $1,500–$5,000/month range. For context, a Backlinko survey of 300+ SEO professionals (December 2025) found the average monthly SEO retainer is $1,000–$2,500. GEO programs sit toward the higher end of that range because of the PR and brand authority work involved.',
+      a: 'According to WebFX\'s May 2026 pricing guide, one of the most detailed published sources on GEO costs, agency services range from $1,500 to $50,000+ per month depending on scope and business size. Small businesses with a basic strategy typically fall in the $1,500–$5,000/month range. For context, a Backlinko survey of 300+ SEO professionals (December 2025) found the average monthly SEO retainer is $1,000–$2,500. GEO programs sit toward the higher end of that range because of the PR and brand authority work involved.',
     },
     {
       q: 'How much does GEO cost for a mid-size company?',
@@ -133,7 +133,7 @@ export const post: BlogPost = {
   readTime: '15 min read',
   imageUrl: '/blog-images/geo-cost-small-business-2026.webp',
   meta: {
-    title: 'GEO Cost 2026: What $1,500–$5,000/Month Actually Buys',
+    title: 'GEO Budget 2026: What $1,500–$5,000/Month Buys',
     description:
       'GEO and AI SEO pricing for 2026: $1,500–$5,000 a month for small businesses, $5,000–$50,000+ for mid-size and enterprise, per WebFX. What drives the price.',
   },
@@ -156,7 +156,7 @@ export const post: BlogPost = {
       <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-8">
         <p className="text-sm font-semibold text-orange-700 uppercase tracking-wide mb-2">Quick Answer</p>
         <p className="text-gray-800 font-medium">
-          According to WebFX&apos;s May 2026 pricing guide, GEO (and AI SEO, which is priced the same way) costs $1,500–$5,000/month for most small businesses, $5,000–$25,000+ for mid-size companies and $25,000–$50,000+ for enterprises. One-off agency projects such as audits run $5,000–$50,000. Tools alone cost $10–$1,000+ a month. DIY GEO costs $0 in tools and 4–6 hours per month. Here is what each level actually delivers.
+          A small business should budget $1,500–$5,000 a month for agency GEO, according to WebFX&apos;s May 2026 pricing guide, or $0 in tools and 4–6 hours a month to do it yourself. Mid-size companies budget $5,000–$25,000+ and enterprises $25,000–$50,000+. One-off projects such as audits run $5,000–$50,000, and tools alone cost $10–$1,000+ a month. Here is what each level delivers.
         </p>
       </div>
 
@@ -213,7 +213,7 @@ export const post: BlogPost = {
         The GEO market is young, which means pricing has not standardized the way traditional SEO has. Here is what the most reliable published sources show:
       </p>
       <p>
-        WebFX, one of the US&apos;s largest performance marketing agencies, published a comprehensive GEO pricing guide (last updated May 26, 2026) based on their own service catalog and market analysis. Their finding: GEO agency services range from <strong>$1,500 to $50,000+ per month</strong>. Small businesses using a basic strategy typically fall in the <strong>$1,500–$5,000/month</strong> range, mid-size companies at <strong>$5,000–$25,000+</strong> and enterprises at <strong>$25,000–$50,000+</strong>.
+        WebFX, one of the US&apos;s largest performance marketing agencies, published a detailed GEO pricing guide (last updated May 26, 2026) based on their own service catalog and market analysis. Their finding: GEO agency services range from <strong>$1,500 to $50,000+ per month</strong>. Small businesses using a basic strategy typically fall in the <strong>$1,500–$5,000/month</strong> range, mid-size companies at <strong>$5,000–$25,000+</strong> and enterprises at <strong>$25,000–$50,000+</strong>.
       </p>
       <p>
         For context on how GEO pricing maps to the broader SEO market: Backlinko&apos;s December 2025 survey of 300+ SEO professionals found the average monthly SEO retainer is <strong>$1,000–$2,500</strong>, and that businesses in competitive industries typically pay $2,501–$5,000. SE Ranking&apos;s agency pricing survey (published December 2024) found 64% of SEO agencies charge under $1,000/month, though this skews toward freelancers and entry-level providers. GEO programs at equivalent scope tend to sit at or above traditional SEO pricing, because of the PR and brand authority work involved.

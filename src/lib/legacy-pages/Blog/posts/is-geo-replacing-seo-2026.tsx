@@ -17,7 +17,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Is GEO Replacing SEO in 2026? The Real Answer (UK)',
     description:
-      'GEO is not replacing SEO, it builds on it. Real UK data on AI Overviews, ChatGPT visits and click behaviour, plus what it actually means for your search strategy in 2026.',
+      'GEO builds on SEO rather than replacing it. UK data on AI Overviews, ChatGPT visits and click behaviour, and what it means for your search strategy in 2026.',
   },
   keyTakeaways: [
     'GEO does not replace SEO. It depends on the same crawlable, well-optimised, trustworthy web that SEO has always built, then adds a layer of answer-first structure on top of it.',

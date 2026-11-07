@@ -18,7 +18,7 @@ export const post: BlogPost = {
   meta: {
     title: 'What Does an AI Automation Agency Actually Do? (UK Guide)',
     description:
-      'What a UK AI automation agency does, what a project costs on published UK prices (from £1,500 for one simple workflow to £45,000 and more) and how long it takes.',
+      'What a UK AI automation agency does, what a project costs on published UK prices (£1,500 for one simple workflow to £45,000 and more) and how long it takes.',
   },
   keyTakeaways: [
     'An AI automation agency finds the repetitive work in your business, connects software to the tools you already use so that work runs on its own, and keeps it running after launch.',

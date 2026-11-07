@@ -13,8 +13,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: '/blog-images/shopify-vs-custom-website-us-small-business-2026-hero.webp',
   meta: {
-    title: "Shopify vs Custom Ecommerce for Wholesale & B2B US Businesses: 2026 Guide",
-    description: "Shopify vs custom ecommerce development for US small businesses: wholesale, B2B, DTC, and service business trade-offs mapped by business type, revenue stage, and 3-year cost of ownership.",
+    title: "Shopify vs Custom Ecommerce for US Wholesale & B2B (2026)",
+    description: "Shopify vs custom ecommerce for US small businesses: wholesale, B2B, DTC and service trade-offs by business type, revenue stage and 3-year cost of ownership.",
   },
   keyTakeaways: [
     'Shopify is right for 80% of US small business e-commerce, it handles PCI compliance, hosting, and scaling automatically at $79–$299/month.',
@@ -64,7 +64,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Is Shopify or a custom website better for wholesale ecommerce in the US?',
-      a: "For B2B wholesale ecommerce in the US, the right platform depends on your pricing complexity. Shopify standard plans support wholesale through third-party apps like Wholesale Suite or Wholesale Gorilla ($30–$80/month), handling customer-specific pricing and restricted storefronts for basic wholesale needs. Shopify Plus ($2,500/month) unlocks native B2B features: net payment terms, multi-location, company accounts, and draft orders. Custom websites built on WooCommerce or Next.js are the choice for complex wholesale operations, multi-tier pricing matrices, ERP integration (SAP, NetSuite), or RFQ workflows that Shopify's app ecosystem can't handle cleanly. For US wholesale businesses with straightforward pricing tiers doing under $1M/year, Shopify with a wholesale app is the faster path to market.",
+      a: "For B2B wholesale ecommerce in the US, the right platform depends on your pricing complexity. Shopify standard plans support wholesale through third-party apps like Wholesale Suite or Wholesale Gorilla ($30–$80/month), handling customer-specific pricing and restricted storefronts for basic wholesale needs. Shopify Plus ($2,500/month) adds native B2B features: net payment terms, multi-location, company accounts, and draft orders. Custom websites built on WooCommerce or Next.js are the choice for complex wholesale operations, multi-tier pricing matrices, ERP integration (SAP, NetSuite), or RFQ workflows that Shopify's app ecosystem can't handle cleanly. For US wholesale businesses with straightforward pricing tiers doing under $1M/year, Shopify with a wholesale app is the faster path to market.",
     },
     {
       q: 'What platform should a US wholesale distributor use for ecommerce in 2026?',
@@ -304,7 +304,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The Hybrid Approach: When You Need Both</h2>
       <p className="mb-4">
-        The most sophisticated US DTC brands in 2026 operate hybrid architectures: Shopify for the store (checkout, inventory, fulfillment), and a separate custom Next.js site for the content hub (blog, guides, SEO landing pages). Products are featured in content via Shopify's Storefront API, creating a seamless user experience while maintaining architectural best practices for both commerce and content.
+        The most sophisticated US DTC brands in 2026 operate hybrid architectures: Shopify for the store (checkout, inventory, fulfillment), and a separate custom Next.js site for the content hub (blog, guides, SEO landing pages). Products are featured in content via Shopify's Storefront API, creating a smooth user experience while maintaining architectural best practices for both commerce and content.
       </p>
       <p className="mb-4">
         This approach costs more to build ($8,000–$20,000 for both systems) but compounds in value. Your content SEO gets the architectural benefits of a custom site. Your checkout gets Shopify's optimized conversion infrastructure. You never compromise either capability to fit the other platform's constraints.

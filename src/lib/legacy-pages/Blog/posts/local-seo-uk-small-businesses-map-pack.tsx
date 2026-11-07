@@ -17,7 +17,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Local SEO for UK Small Businesses: What Moves the Map Pack',
     description:
-      'A no-fluff guide to what actually moves Google Map Pack rankings for a UK small business: Google Business Profile, reviews, citations, and showing up in AI assistant answers.',
+      'What moves Google Map Pack rankings for a UK small business: Google Business Profile, reviews, citations, and showing up in AI assistant answers.',
   },
   keyTakeaways: [
     "Google states local rankings are based on relevance, distance and prominence, in that order of what a business can actually influence, distance being the one factor entirely outside your control.",

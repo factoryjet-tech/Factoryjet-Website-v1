@@ -18,7 +18,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Shopify Development Cost 2026: Real Numbers | FactoryJet',
     description:
-      'Shopify development cost 2026: $468 to $1,068 DIY, $1,000 to $5,000 for a pro theme setup, $5,000 to $25,000 custom, $40K+ for Plus. Sourced ranges, plus timelines.',
+      'Shopify development cost 2026: $468 to $1,068 DIY, $1,000 to $5,000 for a pro theme setup, $5,000 to $25,000 custom, $40K+ for Plus. Sourced ranges.',
   },
   keyTakeaways: [
     'A DIY store with a free theme costs $468–$1,068 in Year 1. A professional setup on a ready-made theme costs $1,000–$5,000 and custom design with integrations $5,000–$25,000 (BigCommerce), plus $39–$105/month.',

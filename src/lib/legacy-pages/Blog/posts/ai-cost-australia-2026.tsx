@@ -194,7 +194,7 @@ export const post: BlogPost = {
   imageAlt:
     'Two people in a bright Brisbane office reviewing a laptop screen showing three grey cards and one orange card, with a calculator and printed page beside it, comparing AI cost options',
   meta: {
-    title: 'AI Consultant & Agent Cost Australia 2026 | FactoryJet',
+    title: 'AI Chatbot Cost Australia 2026: Agents and Consultants',
     description:
       'AI cost in Australia for 2026: consultant rates, AI agent builds, chatbots and AI receptionists in AUD, with sources and GST notes.',
   },
@@ -215,10 +215,10 @@ export const post: BlogPost = {
           The short answer
         </p>
         <p className="text-lg leading-relaxed text-[#1F2937] mb-0">
-          In Australia in 2026, published market ranges put <strong>AI consultants at A$150 to A$400 an hour</strong>,{' '}
-          <strong>custom AI agent builds at about A$5,000 to A$150,000 or more</strong> (most small and mid-size projects
-          A$30,000 to A$80,000), <strong>AI receptionists at A$49 to A$499 a month</strong>, and chatbot software from a
-          free plan up to tens of dollars a month. Running costs and maintenance sit on top.
+          An <strong>AI chatbot in Australia costs A$10,000 to A$30,000</strong> to build as a simple FAQ bot and{' '}
+          <strong>A$30,000 to A$80,000</strong> once it connects to your systems (All Webbed Labs, September 2026), while
+          chatbot software runs from a free plan up to tens of dollars a month. Custom AI agents run about A$5,000 to
+          A$150,000 or more, AI receptionists A$49 to A$499 a month, and running costs sit on top.
         </p>
       </div>
 

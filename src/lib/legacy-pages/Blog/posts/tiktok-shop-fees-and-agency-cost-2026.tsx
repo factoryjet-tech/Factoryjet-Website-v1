@@ -15,7 +15,7 @@ export const post: BlogPost = {
   imageAlt:
     'A phone on a tripod showing a live stream in progress, the kind of setup brands use to sell on TikTok Shop',
   meta: {
-    title: 'TikTok Shop Fees 2026: US Seller Fees and Agency Costs | FactoryJet',
+    title: 'TikTok Shop Fees 2026: US Seller Fees and Agency Costs',
     description:
       "TikTok Shop charges US sellers a 6% referral fee and no monthly fee. Every fee checked against TikTok's own pages, a $50 order worked out, and agency pricing.",
   },

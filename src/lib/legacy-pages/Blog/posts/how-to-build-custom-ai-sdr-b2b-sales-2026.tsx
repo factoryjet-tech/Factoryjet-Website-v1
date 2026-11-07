@@ -6,16 +6,16 @@ export const post: BlogPost = {
   slug: 'how-to-build-custom-ai-sdr-b2b-sales-2026',
   title: 'How to Build a Custom AI SDR for B2B Sales: Speed to Lead, Qualification & CRM Sync (2026)',
   excerpt:
-    'A comprehensive 3,500+ word engineering blueprint for building an autonomous AI Sales Development Representative (SDR): sub-60-second speed-to-lead, firmographic enrichment, ICP qualification logic, calendar booking, and CRM synchronization.',
+    'A 3,500+ word engineering blueprint for building an autonomous AI Sales Development Representative (SDR): sub-60-second speed-to-lead, firmographic enrichment, ICP qualification logic, calendar booking, and CRM synchronization.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Aug 21, 2026',
   readTime: '18 min read',
   imageUrl: '/blog-images/how-to-build-custom-ai-sdr-b2b-sales.webp',
   meta: {
-    title: 'How to Build a Custom AI SDR for B2B Sales in 2026 | Complete Guide',
+    title: 'How to Build a Custom AI SDR for B2B Sales in 2026',
     description:
-      'Step-by-step 2026 guide to building a custom AI SDR: sub-minute speed to lead, firmographic data enrichment, ICP qualification logic, calendar booking, and HubSpot/Salesforce sync.',
+      'A 2026 guide to building a custom AI SDR: sub-minute speed to lead, firmographic enrichment, ICP qualification, calendar booking and HubSpot or Salesforce sync.',
   },
   keyTakeaways: [
     'Speed to lead is decisive: Harvard Business Review research shows that contacting an inbound lead within 5 minutes yields 21x higher qualification rates than waiting 30 minutes.',

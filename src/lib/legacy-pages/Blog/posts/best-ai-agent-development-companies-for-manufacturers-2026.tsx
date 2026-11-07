@@ -459,7 +459,7 @@ export const post: BlogPost = {
   imageAlt:
     'A woman in safety glasses at a steel bench in a machine shop holds a small machined aluminium bracket up to the light, with three more brackets, a calliper and an orange mug on the bench',
   meta: {
-    title: 'AI Agent Development Companies for Manufacturers 2026 | FactoryJet',
+    title: 'AI Agent Development Companies for Manufacturers 2026',
     description: META_DESCRIPTION,
   },
   keyTakeaways: [

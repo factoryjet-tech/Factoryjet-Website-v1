@@ -136,7 +136,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Will AI Replace Web Designers? An Honest 2026 Answer',
     description:
-      'An AI-native agency answers honestly: what AI genuinely does well in web design, the six things it reliably fails at, and what the job turns into. With 28 real buyer questions answered.',
+      'An AI-native agency answers honestly: what AI does well in web design, the six things it fails at, and what the job becomes, with 28 buyer questions answered.',
   },
   keyTakeaways: [
     'No. AI is replacing tasks inside web design, not web designers. The role that disappears is the one where somebody else does the thinking and a person produces the pixels.',

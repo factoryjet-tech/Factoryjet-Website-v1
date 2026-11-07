@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'agentic-commerce-autonomous-ai-agents-ecommerce-2026',
   title: 'Agentic Commerce: How Autonomous AI Agents Are converting E-Commerce Operations in 2026',
   excerpt:
-    'A comprehensive 3,500+ word strategic blueprint on the shift from conversational chatbots to agentic commerce: autonomous multi-channel inventory rebalancing, dynamic margin-aware repricing, supplier purchasing, and safety envelopes.',
+    'A 3,500+ word strategic blueprint on the shift from conversational chatbots to agentic commerce: autonomous multi-channel inventory rebalancing, dynamic margin-aware repricing, supplier purchasing, and safety envelopes.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Aug 21, 2026',
@@ -15,7 +15,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Agentic Commerce: Autonomous AI Agents in E-Commerce (2026)',
     description:
-      'Complete 2026 guide to agentic commerce: how autonomous AI agents manage inventory, dynamic margin-aware repricing, multi-channel catalog sync, and automated customer returns.',
+      'A 2026 guide to agentic commerce: how autonomous AI agents manage inventory, margin-aware repricing, multi-channel catalog sync and customer returns.',
   },
   keyTakeaways: [
     'Conversational commerce vs Agentic commerce: Conversational commerce provides product recommendations via chat; Agentic commerce executes complete operational cycles (purchasing, stock rebalancing, vendor PO generation, and settlement) autonomously.',

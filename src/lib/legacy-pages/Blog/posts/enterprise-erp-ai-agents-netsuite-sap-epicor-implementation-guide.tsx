@@ -305,7 +305,7 @@ def generate_netsuite_tba_header(
           },
           {
             q: 'How long does an enterprise ERP AI agent implementation take to complete?',
-            a: 'A focused document-to-ERP automation pipeline (such as automated PO intake or AP invoice matching) deploys in 4 to 6 weeks. A comprehensive multi-module enterprise integration covering inventory, sales, purchasing, and production scheduling completes in 8 to 12 weeks.',
+            a: 'A focused document-to-ERP automation pipeline (such as automated PO intake or AP invoice matching) deploys in 4 to 6 weeks. A full multi-module enterprise integration covering inventory, sales, purchasing, and production scheduling completes in 8 to 12 weeks.',
           },
           {
             q: 'How do you test and validate ERP AI agents before pushing to live production?',

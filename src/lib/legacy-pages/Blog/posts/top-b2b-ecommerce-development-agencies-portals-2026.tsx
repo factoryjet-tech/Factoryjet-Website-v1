@@ -291,7 +291,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Top E-Commerce Development Agencies for B2B Portals (2026)',
     description:
-      'Which agencies actually build B2B ecommerce portals well? A fetch-verified comparison of Elogic Commerce, Atwix, Vaimo, Scandiweb, DCKAP, and more, on ERP integration, RFQ, PunchOut, cXML, EDI, and account hierarchies.',
+      'Which agencies build B2B ecommerce portals well? Elogic Commerce, Atwix, Vaimo, Scandiweb, DCKAP and more, compared on ERP integration, RFQ, PunchOut and EDI.',
   },
   keyTakeaways: [
     'There is no single dominant winner for "best B2B portal agency." Elogic Commerce, Atwix, and Vaimo come up most often in AI-generated answers, but the honest differentiator between agencies is depth on ERP integration, RFQ and quote workflows, PunchOut and cXML support, and account hierarchies, not a ranking.',

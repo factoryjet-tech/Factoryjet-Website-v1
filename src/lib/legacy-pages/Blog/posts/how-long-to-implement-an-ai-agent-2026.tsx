@@ -169,7 +169,7 @@ export const post: BlogPost = {
   imageAlt:
     'A woman with short grey hair in a rust blouse and a man with a red beard in a navy sweater stick coloured notes in columns on a long sheet of paper on an office wall',
   meta: {
-    title: 'How Long to Implement an AI Agent? 2026 | FactoryJet',
+    title: 'How Long Does a Customer Service AI Agent Take? 2026',
     description: META_DESCRIPTION,
   },
   keyTakeaways: [
@@ -207,7 +207,7 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          A pilot AI agent on one narrow job takes 2 to 6 weeks. A production agent, with permissions, logging and approval steps, takes 6 to 12 weeks. A program of agents across several departments or systems takes 3 to 18 months. Those ranges come from timelines that 11 agencies and vendors publish, which we read on 24 October 2026.
+          A customer support or email AI agent takes 6 to 10 weeks to implement, on WizeB&rsquo;s published figures. Across the timelines 11 agencies and vendors publish, which we read on 24 October 2026, a pilot on one narrow job takes 2 to 6 weeks, a production agent with permissions, logging and approval steps 6 to 12 weeks, and a multi-department program 3 to 18 months.
         </p>
         <p className="text-gray-800 leading-relaxed">
           The job decides where you land. WizeB puts a knowledge assistant at 3 to 5 weeks and an agent that moves money across systems at 10 to 16. System access is the most common delay.

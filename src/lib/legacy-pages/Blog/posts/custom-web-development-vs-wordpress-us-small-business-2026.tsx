@@ -13,9 +13,9 @@ export const post: BlogPost = {
   readTime: '13 min read',
   imageUrl: '/blog-images/custom-web-development-vs-wordpress-us-small-business-2026-hero.webp',
   meta: {
-    title: 'Custom Web Development vs WordPress for US Small Businesses (2026)',
+    title: 'Custom Web Development vs WordPress for US SMBs (2026)',
     description:
-      'WordPress at $5K–$30K or custom web development at $30K–$200K? This 2026 guide shows US small business owners exactly when each is the right call, with cost, maintenance, and scalability math.',
+      'WordPress at $5K–$30K or custom development at $30K–$200K? When each is the right call for US small businesses, with cost, maintenance and scaling math.',
   },
   keyTakeaways: [
     'WordPress is the right choice for roughly 80% of US small business websites, content-led marketing sites, service businesses, and brochure sites with a blog launch faster and cost less on WordPress than custom development.',

@@ -46,7 +46,7 @@ export const post: BlogPost = {
   readTime: "12 min read",
   imageUrl: "/blog-images/ai-agents-business-operations-uk-smbs-2026-hero.webp",
   meta: {
-  "title": "AI Agents for UK SMB Operations: Workflows, Costs and Pilot Plan",
+  "title": "AI Agents for UK SMB Operations: Workflows, Costs, Pilot",
   "description": "Which operations a UK small business should give an AI agent first, sourced 2026 cost ranges, build timelines, UK data rules and a controlled pilot plan."
 },
   keyTakeaways: [

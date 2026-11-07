@@ -12,7 +12,7 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/best-lead-generation-websites-small-business-2026-hero.webp",
   meta: {
-    title: "12 Best Lead Generation Website Platforms for Small Business 2026",
+    title: "12 Best Lead Gen Website Platforms for Small Business 2026",
     description: "Find the best lead gen website for your small business. We compare 12 platforms on real ROI data, pricing, AI chat, and CRM integrations, so you don't overpay.",
   },
   keyTakeaways: [
@@ -36,7 +36,7 @@ export const post: BlogPost = {
     { q: "What conversion rate should I expect from a lead generation website?", a: "Industry benchmarks for 2026: B2B service sites average 2.5–4.5% visitor-to-lead conversion, professional services 3–6%, SaaS 5–8%, and e-commerce lead magnets 4–7%. Sites with AI chat, clear CTAs, and fast load times achieve 1.5–2× these rates. Below 2% indicates issues with traffic quality, page speed, form friction, or unclear value proposition." },
     { q: "Can I build a lead generation website myself or should I hire an agency?", a: "DIY platforms like Wix, Squarespace, or WordPress with templates cost £10–£50/month but require 20–40 hours of learning and setup, often resulting in slow load times and poor mobile experience. Agencies deliver professional results in 2–4 weeks with optimised performance, SEO setup, and CRM integration. FactoryJet builds lead generation sites with Lighthouse scores 92+ and AI chat included, quoted as one fixed price in writing once the page count is settled." },
     { q: "How do I track lead generation website performance?", a: "Use Google Analytics 4 to track traffic sources, page views, and goal completions. Set up conversion tracking for form submissions, chat interactions, and phone clicks. Monitor Google Search Console for keyword rankings and click-through rates. Track CRM metrics like lead-to-customer conversion rate, average deal size, and sales cycle length. Review monthly: traffic growth, conversion rate, cost per lead, and ROI." },
-    { q: "What's the difference between a lead generation website and a regular business website?", a: "Lead generation sites prioritise conversion over information. They feature prominent CTAs on every page, strategic form placement, benefit-focused copy, trust signals (testimonials, case studies, certifications), and automated follow-up workflows. Regular business sites focus on brand storytelling and comprehensive information. Lead gen sites typically have 5–10 pages optimised for specific buyer journeys, while business sites may have 20+ pages covering company history, team bios, and general content." },
+    { q: "What's the difference between a lead generation website and a regular business website?", a: "Lead generation sites prioritise conversion over information. They feature prominent CTAs on every page, strategic form placement, benefit-focused copy, trust signals (testimonials, case studies, certifications), and automated follow-up workflows. Regular business sites focus on brand storytelling and detailed information. Lead gen sites typically have 5–10 pages optimised for specific buyer journeys, while business sites may have 20+ pages covering company history, team bios, and general content." },
   ],
   content: (
     <>

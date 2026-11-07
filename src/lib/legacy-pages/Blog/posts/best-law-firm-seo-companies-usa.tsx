@@ -31,9 +31,9 @@ export const post: BlogPost = {
   imageAlt:
     'Comparison of the nine best law firm SEO companies in the USA for 2026, showing specialisation, track record and contract terms',
   meta: {
-    title: 'The 9 Best Law Firm SEO Companies in the USA (2026), Compared',
+    title: 'The 9 Best Law Firm SEO Companies in the USA (2026)',
     description:
-      'Which law firm SEO company should you hire? We compared nine US attorney SEO agencies on specialisation, verified track record and contract terms. Disclosure: we are on the list at number nine.',
+      'We compared nine US attorney SEO agencies on specialisation, verified track record and contract terms. Disclosure: we are on the list at number nine.',
   },
   keyTakeaways: [
     'Our researched 2026 shortlist: Rankings.io, Hennessey Digital, Consultwebs, LawRank, BluShark Digital, Juris Digital, iLawyer Marketing, AttorneySync, and FactoryJet (disclosed self-inclusion, placed ninth).',

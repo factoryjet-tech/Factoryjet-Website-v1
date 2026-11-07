@@ -13,9 +13,9 @@ export const post: BlogPost = {
   readTime: '15 min read',
   imageUrl: '/blog-images/ai-agents-real-estate-construction-buyers-guide-2026.webp',
   meta: {
-    title: 'AI Agents for Real Estate and Construction: What They Actually Do (2026)',
+    title: 'AI Agents for Real Estate and Construction (2026 Guide)',
     description:
-      'A vendor-neutral buyer\'s guide to AI agents in real estate and construction. What they actually do, how to evaluate a vendor or tool, and an honest answer on job security.',
+      'A vendor-neutral guide to AI agents in real estate and construction: what they do, how to evaluate a vendor or tool, and an honest answer on job security.',
   },
   keyTakeaways: [
     'An AI agent is software that can take action, not just answer a question. In real estate that means answering a lead, booking a showing, or updating a CRM record on its own. In construction it means tracking an RFI (a formal question sent when something on a drawing is unclear), routing a submittal for approval, or pulling up a spec sheet, without someone doing every step by hand.',

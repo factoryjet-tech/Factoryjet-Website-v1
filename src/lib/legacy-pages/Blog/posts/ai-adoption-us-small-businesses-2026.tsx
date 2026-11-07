@@ -36,7 +36,7 @@ export const post: BlogPost = {
   meta: {
     title: 'US Small Business AI Adoption Rate 2026: 17.7% Pay for AI',
     description:
-      '17.7% of US small businesses paid for AI by Dec 2025, up from 5.2% in 2023 (JPMorgan Chase). Census: 17-20% use AI. Every stat sourced, plus what it means for you.',
+      '17.7% of US small businesses paid for AI by Dec 2025, up from 5.2% in 2023 (JPMorgan Chase). Census: 17-20% use AI. Every stat sourced, with what it means.',
   },
   keyTakeaways: [
     '17.7% of US small businesses paid for AI services in December 2025, up from 5.2% in January 2023 and 1.7% in January 2019 (JPMorgan Chase Institute, based on actual payments).',

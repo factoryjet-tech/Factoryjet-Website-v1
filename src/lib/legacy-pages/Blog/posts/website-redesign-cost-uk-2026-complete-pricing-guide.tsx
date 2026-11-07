@@ -29,7 +29,7 @@ export const post: BlogPost = {
   imageUrl: "/blog-images/website-redesign-cost-uk-2026-complete-pricing-guide-hero.webp",
   meta: {
     title: "Website Redesign Cost UK 2026: Full Pricing Guide for SMBs",
-    description: "UK website redesign costs in 2026 from two sourced price guides: £1,500 to £5,000 for a 5-page brochure site, £5,000 to £20,000+ for ecommerce, £10,000 to £80,000 for B2B.",
+    description: "UK website redesign costs in 2026 from two price guides: £1,500 to £5,000 for a 5-page site, £5,000 to £20,000+ for ecommerce, £10,000 to £80,000 for B2B.",
   },
   keyTakeaways: [
     "Most UK businesses pay £3,000 to £6,000 for a professionally built website (Whito, updated October 2026).",

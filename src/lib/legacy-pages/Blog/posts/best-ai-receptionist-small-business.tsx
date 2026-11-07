@@ -46,9 +46,9 @@ export const post: BlogPost = {
   imageAlt:
     'A small business owner takes a call on a mobile phone beside a desk phone in a bright workshop.',
   meta: {
-    title: 'Best AI Voice Agent or AI Receptionist for Business Calls (2026)',
+    title: 'Best AI Voice Agent or AI Receptionist for Business (2026)',
     description:
-      'Best AI voice agents for business phone calls in 2026, by company size, with vendor prices checked 21 Oct 2026, HIPAA and BAA notes, and the firms that build them.',
+      'Best AI voice agents for business calls in 2026, by company size, with vendor prices checked 21 Oct 2026, HIPAA and BAA notes, and the firms that build them.',
   },
   keyTakeaways: [
     'There is no single best AI voice agent for business phone calls. Three kinds of product share the name: ready-made products you set up yourself (Goodcall, RingCentral AI Receptionist), platforms a developer builds on (Retell AI, Vapi, Bland AI) and live receptionist services (Ruby, Smith.ai).',

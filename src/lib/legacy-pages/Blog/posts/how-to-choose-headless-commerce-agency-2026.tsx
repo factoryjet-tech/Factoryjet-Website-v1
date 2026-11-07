@@ -158,7 +158,7 @@ export const post: BlogPost = {
   imageAlt:
     'An abstract technical illustration of a storefront interface connected by a single line to a cluster of backend server blocks, representing headless commerce architecture',
   meta: {
-    title: 'Choosing a Headless Commerce Agency for Magento or Shopify',
+    title: 'Magento or Shopify Headless Agency: How to Choose One',
     description:
       'How to vet a headless commerce agency for Adobe Commerce (Magento) or Shopify. Architecture depth, API experience, code ownership and support.',
   },
@@ -229,16 +229,11 @@ export const post: BlogPost = {
       <div className="answer-first bg-amber-50 border border-amber-200 p-5 rounded-2xl mb-8">
         <p className="font-semibold text-amber-900 mb-1">The short answer</p>
         <p className="text-amber-900">
-          To choose an agency for headless commerce on Shopify or Magento (Adobe Commerce), go
-          beyond the general ecommerce-agency checklist and check six specific things: real
-          architecture depth (can they explain how data flows, not just show a finished result),
-          hands-on experience with the exact API you need (Shopify&apos;s Storefront API or Adobe
-          Commerce&apos;s GraphQL API, not general web development), a real headless case study
-          they can walk through in detail, written ownership of the full frontend codebase, a
-          support plan built for custom code rather than a themed site, and a fixed-price
-          milestone plan instead of one guessed number. An agency that is vague on any of these is
-          a real risk on a headless project specifically, even if their general portfolio looks
-          strong.
+          A good Magento headless agency has hands-on experience with Adobe Commerce&apos;s GraphQL
+          API and PWA Studio, beyond general web development, and can explain how data flows
+          through the build. Also check for a real headless case study they can walk through,
+          written ownership of the full frontend code, a support plan for custom code, and a
+          fixed-price milestone plan. The same checks apply to Shopify&apos;s Storefront API.
         </p>
       </div>
 

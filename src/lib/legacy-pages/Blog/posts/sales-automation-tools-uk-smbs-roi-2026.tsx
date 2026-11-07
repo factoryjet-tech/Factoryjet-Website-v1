@@ -12,7 +12,7 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/sales-automation-tools-uk-smbs-roi-2026-hero.webp",
   meta: {
-    title: "17 Sales Automation Tools UK SMBs Use in 2026 | Ranked by ROI",
+    title: "17 Sales Automation Tools UK SMBs Use, Ranked by ROI",
     description: "Which sales automation tools pay off for UK SMBs? We rank 17 platforms by real payback period and revenue lift, from HubSpot to AI voice agents. See what works.",
   },
   keyTakeaways: [

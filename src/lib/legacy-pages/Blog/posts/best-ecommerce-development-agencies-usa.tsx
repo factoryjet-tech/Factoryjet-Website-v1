@@ -38,7 +38,7 @@ export const post: BlogPost = {
   meta: {
     title: 'The 8 Best Ecommerce Development Agencies in the USA (2026)',
     description:
-      'Which ecommerce development agency should you hire? We compared eight US agencies on Shopify and BigCommerce partner tier, platform depth and published results. Disclosure: we are on the list at number eight.',
+      'We compared eight US ecommerce development agencies on Shopify and BigCommerce partner tier, platform depth and results. We are on the list at number eight.',
   },
   keyTakeaways: [
     'Platform partner tier is the fastest filter and it is publicly verifiable. Shopify Platinum, BigCommerce Elite and Klaviyo Master Elite are earned on delivered volume, so they tell you what an agency actually does rather than what it says.',

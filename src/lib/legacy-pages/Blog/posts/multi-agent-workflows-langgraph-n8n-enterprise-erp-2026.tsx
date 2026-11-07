@@ -6,14 +6,14 @@ export const post: BlogPost = {
   slug: 'multi-agent-workflows-langgraph-n8n-enterprise-erp-2026',
   title: 'Multi-Agent Workflows in Production: How to Orchestrate LangGraph and n8n with Enterprise ERPs (2026)',
   excerpt:
-    'A comprehensive 3,400-word engineering guide on orchestrating multi-agent systems in production: combining n8n deterministic webhook pipelines with LangGraph cyclical state machines, Model Context Protocol (MCP) tool calling, and NetSuite/SAP ERP integrations.',
+    'A 3,400-word engineering guide on orchestrating multi-agent systems in production: combining n8n deterministic webhook pipelines with LangGraph cyclical state machines, Model Context Protocol (MCP) tool calling, and NetSuite/SAP ERP integrations.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 1, 2026',
   readTime: '18 min read',
   imageUrl: '/og-default.png',
   meta: {
-    title: 'Multi-Agent Workflows with LangGraph & n8n in Production | Guide',
+    title: 'Multi-Agent Workflows with LangGraph & n8n in Production',
     description:
       'How to build production multi-agent systems in 2026: orchestrating LangGraph state graphs and n8n middleware with NetSuite and SAP enterprise ERPs.',
   },
@@ -23,7 +23,7 @@ export const post: BlogPost = {
     'LangGraph provides the core reasoning and state machine layer: supporting cyclical graph transitions, memory persistence via PostgreSQL checkpointers, and native human-in-the-loop interrupts.',
     'Model Context Protocol (MCP) standardizes ERP tool calling: allowing custom NetSuite and SAP connectors to be shared securely across multiple agents.',
     'Human-in-the-loop governance is non-negotiable for enterprise operations: actions exceeding dollar thresholds or ambiguity limits trigger interactive Slack approval checkpoints.',
-    'Automated regression evaluation harnesses testing 500+ historical transaction records prevent prompt regressions before deployment to production.',
+    'Automated regression evaluation suites testing 500+ historical transaction records prevent prompt regressions before deployment to production.',
     'Private cloud VPC deployment with enterprise zero-data-retention agreements protects proprietary corporate data from public model training.',
   ],
   faqs: [
@@ -88,7 +88,7 @@ export const post: BlogPost = {
           <li>5. Human-in-the-Loop Orchestration: Interactive Slack Checkpoints</li>
           <li>6. Enterprise Security Perimeter &amp; Private VPC Deployment</li>
           <li>7. A Representative Scenario: Automated B2B Order Ingestion &amp; 3-Way Matching</li>
-          <li>8. Production Evaluation Harnesses &amp; Continuous Regression Testing</li>
+          <li>8. Production Evaluation Suites &amp; Continuous Regression Testing</li>
         </ul>
       </div>
 
@@ -194,7 +194,7 @@ export const post: BlogPost = {
       </p>
 
       <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
-        8. Production Evaluation Harnesses &amp; Continuous Regression Testing
+        8. Production Evaluation Suites &amp; Continuous Regression Testing
       </h2>
       <p className="text-base leading-relaxed text-gray-700 mb-6">
         Prior to deploying prompt updates or model version upgrades, the entire graph runs through automated evaluation test suites. We measure tool accuracy, parameter precision, and tone consistency against 500+ historical edge cases, ensuring production reliability is mathematically proven before code ships.

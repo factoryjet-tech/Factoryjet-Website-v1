@@ -13,9 +13,9 @@ export const post: BlogPost = {
   readTime: '12 min read',
   imageUrl: '/blog-images/ecommerce-development-denver-co-small-business-hero.webp',
   meta: {
-    title: 'Ecommerce Development Denver CO: Small Business Guide 2026 | FactoryJet',
+    title: 'Ecommerce Development Denver CO: Small Business Guide 2026',
     description:
-      'Denver CO small businesses: Shopify and custom ecommerce development in 7 days, at a fixed price quoted in writing after scoping. Complete guide with costs, timelines, and FAQs.',
+      'Shopify and custom ecommerce development for Denver small businesses in 7 days, at a fixed price quoted in writing after scoping. Costs, timelines and FAQs.',
   },
   keyTakeaways: [
     'Denver ecommerce development agencies charge $12,000–$40,000 for Shopify or custom online stores, offshore agencies with US support can deliver identical Lighthouse 95+ results for far less.',

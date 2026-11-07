@@ -13,9 +13,9 @@ export const post: BlogPost = {
   readTime: '11 min read',
   imageUrl: '/blog-images/webflow-vs-wordpress-us-small-business-2026.webp',
   meta: {
-    title: 'Webflow vs WordPress for US Small Businesses (2026 Honest Comparison)',
+    title: 'Webflow vs WordPress for US Small Businesses (2026)',
     description:
-      'Webflow from $15/month or WordPress free plus hosting? This 2026 guide for US small businesses compares pricing, ease of use, SEO, plugins, multilingual, ecommerce, and 3-year total cost.',
+      'Webflow from $15/month or WordPress free plus hosting? For US small businesses: pricing, ease of use, SEO, plugins, multilingual, ecommerce and 3-year cost.',
   },
   keyTakeaways: [
     'Webflow wins for design-led marketing sites under 50 pages where a non-technical owner or designer maintains the site and plugin sprawl is the thing you want to avoid most.',
@@ -37,7 +37,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Is Webflow really better for SEO than WordPress in 2026?',
-      a: "Neither platform is meaningfully better, both can hit Lighthouse 95+ and rank well when built properly. Webflow's strengths: clean semantic HTML out of the box, fast global CDN included, full control over meta tags, OG tags, canonical URLs, and schema markup, and automatic SSL. Its weaknesses: limited native blog templating compared to WordPress, no Yoast/Rank Math equivalent (you wire SEO fields manually per page or per CMS collection), and a hard limit on static pages (300 on the Basic plan; CMS items don't count, but it surprises people). WordPress's strengths: Yoast and Rank Math are mature on-page SEO engines, unlimited posts and pages, and seamless integration with Google Search Console and Schema Pro. The honest summary: pick the platform that fits your content rhythm and your team, both rank when the underlying content is good.",
+      a: "Neither platform is meaningfully better, both can hit Lighthouse 95+ and rank well when built properly. Webflow's strengths: clean semantic HTML out of the box, fast global CDN included, full control over meta tags, OG tags, canonical URLs, and schema markup, and automatic SSL. Its weaknesses: limited native blog templating compared to WordPress, no Yoast/Rank Math equivalent (you wire SEO fields manually per page or per CMS collection), and a hard limit on static pages (300 on the Basic plan; CMS items don't count, but it surprises people). WordPress's strengths: Yoast and Rank Math are mature on-page SEO engines, unlimited posts and pages, and direct integration with Google Search Console and Schema Pro. The honest summary: pick the platform that fits your content rhythm and your team, both rank when the underlying content is good.",
     },
     {
       q: 'Can I do a multilingual site on Webflow like I can on WordPress?',

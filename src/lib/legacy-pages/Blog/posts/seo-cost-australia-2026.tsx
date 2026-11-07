@@ -80,7 +80,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does an SEO audit cost?',
-    a: "A standalone SEO audit in Australia costs from about $599 to $12,000. Digital Nomads HQ found two advertised audits at $599 plus GST and $1,500 plus GST. StudioHawk lists comprehensive site audits at $2,000 to $5,000, and SEOPrices.com.au gives $1,500 to $12,000. The price follows the size of the site and whether you get a ranked fix list or a raw tool export.",
+    a: "A standalone SEO audit in Australia costs from about $599 to $12,000. Digital Nomads HQ found two advertised audits at $599 plus GST and $1,500 plus GST. StudioHawk lists full site audits at $2,000 to $5,000, and SEOPrices.com.au gives $1,500 to $12,000. The price follows the size of the site and whether you get a ranked fix list or a raw tool export.",
   },
   {
     q: 'How much does it cost to hire someone to do SEO?',
@@ -395,7 +395,7 @@ export const post: BlogPost = {
             </tr>
             <tr>
               <td className="p-3.5 font-semibold text-gray-900">SEO audit (project)</td>
-              <td className="p-3.5">$1,500 to $12,000; comprehensive audits $2,000 to $5,000</td>
+              <td className="p-3.5">$1,500 to $12,000; full audits $2,000 to $5,000</td>
               <td className="p-3.5"><a href={SRC.seoprices} {...extLinkProps}>SEOPrices.com.au</a>; <a href={SRC.studiohawk} {...extLinkProps}>StudioHawk</a></td>
               <td className="p-3.5">Diagnosis and a written plan before you commit</td>
             </tr>

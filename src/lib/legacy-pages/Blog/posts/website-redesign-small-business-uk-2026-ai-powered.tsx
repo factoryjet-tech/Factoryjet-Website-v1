@@ -13,8 +13,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/website-redesign-small-business-uk-2026-ai-powered-hero.webp",
   meta: {
-    title: "Website Redesign for UK Small Business in 4 Weeks | 2026 Guide",
-    description: "UK small business website redesigns cost £1,500 to £8,000 in 2026. See how AI workflows cut delivery to 4 weeks, reach Lighthouse 92+ scores, and avoid the pitfalls that waste £8,000+ on failed projects.",
+    title: "Website Redesign for UK Small Business in 4 Weeks (2026)",
+    description: "UK small business website redesigns cost £1,500 to £8,000 in 2026. How AI workflows cut delivery to 4 weeks, reach Lighthouse 92+ and avoid £8,000+ failures.",
   },
   keyTakeaways: [
     "AI-powered redesign workflows now deliver production-ready UK small business websites in 4 weeks, down from the 12-16 week traditional agency timeline.",

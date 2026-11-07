@@ -15,9 +15,9 @@ export const post: BlogPost = {
   imageAlt:
     'A distribution warehouse aisle with tall racks of shrink-wrapped pallets and a forklift at the far end',
   meta: {
-    title: 'Best Wholesale Ecommerce Platform for Manufacturers & Distributors',
+    title: 'Best Wholesale Ecommerce Platform for Manufacturers (2026)',
     description:
-      'Comparing the best wholesale ecommerce platforms for manufacturers and distributors: OroCommerce, Shopify Plus, BigCommerce B2B, Adobe Commerce, Sana and SAP on ERP sync, quotes, punchout and net terms. Checked September 2026.',
+      'Wholesale ecommerce platforms for manufacturers and distributors compared: OroCommerce, Shopify Plus, BigCommerce B2B, Adobe Commerce, Sana and SAP. Sep 2026.',
   },
   keyTakeaways: [
     'There is no single best B2B ecommerce platform. Choose by your ERP and your hardest buying rule, such as contract prices from SAP, quotes on most orders, punchout for procurement buyers, or consumer and wholesale sales from one store.',

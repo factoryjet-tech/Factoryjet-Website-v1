@@ -14,7 +14,7 @@ export const post: BlogPost = {
   imageAlt: "Comparison of the best GEO and AI visibility tools in 2026 grouped by job: visibility tracking, content optimization, and technical SEO foundation",
   meta: {
     title: "Best GEO & AI Visibility Tools in 2026 (Tested by Job)",
-    description: "The 12 best GEO and AI visibility tools in 2026, sorted by job: AI visibility tracking, content optimization, and technical SEO. Plus the two-tool stack most small businesses need.",
+    description: "The 12 best GEO and AI visibility tools in 2026 by job: AI visibility tracking, content optimization and technical SEO, plus the two-tool stack most SMBs need.",
   },
   keyTakeaways: [
     "GEO tools do three jobs: AI visibility tracking, content optimization, and the technical SEO foundation. Most small businesses only need two of them.",

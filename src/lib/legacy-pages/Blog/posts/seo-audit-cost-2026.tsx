@@ -28,7 +28,7 @@ const faqs = [
     },
     {
       q: 'How often should I get an SEO audit?',
-      a: 'For most small businesses, a comprehensive audit every 12–18 months is sufficient if you have ongoing SEO monitoring in place. After a major site redesign or migration, an immediate post-launch audit is essential. After a Google algorithm update that caused a traffic drop, a targeted content and technical audit helps diagnose the cause.',
+      a: 'For most small businesses, a full audit every 12–18 months is sufficient if you have ongoing SEO monitoring in place. After a major site redesign or migration, an immediate post-launch audit is essential. After a Google algorithm update that caused a traffic drop, a targeted content and technical audit helps diagnose the cause.',
     },
     {
       q: 'What is a crawl audit?',
@@ -48,7 +48,7 @@ const faqs = [
     },
     {
       q: 'Does an SEO audit include keyword research?',
-      a: 'Not always, it depends on the scope. A technical-only audit does not include keyword research. A full SEO audit should include at minimum a competitive gap analysis showing which keywords competitors rank for that you do not. Comprehensive keyword research is usually scoped as a separate deliverable.',
+      a: 'Not always, it depends on the scope. A technical-only audit does not include keyword research. A full SEO audit should include at minimum a competitive gap analysis showing which keywords competitors rank for that you do not. Full keyword research is usually scoped as a separate deliverable.',
     },
     {
       q: 'What tools are used in an SEO audit?',
@@ -101,7 +101,7 @@ export const post: BlogPost = {
   readTime: '10 min read',
   imageUrl: '/blog-images/seo-audit-cost-2026.webp',
   meta: {
-    title: 'SEO Audit Cost in 2026: What Each Price Tier Covers',
+    title: 'SEO Audit Cost 2026: What Each Price Tier Covers',
     description:
       'SEO audit prices run from free to $30,000+ in 2026. See what each price tier checks, what to ask for, and when a free audit is enough.',
   },
