@@ -28,7 +28,7 @@ const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
 export const metadata: Metadata = {
   title: 'AI SDR | Custom AI SDR & BDR Agents for B2B | FactoryJet',
   description:
-    'Custom AI SDR and AI BDR agents for B2B teams. Your AI sales development rep replies to every inbound lead in under 60 seconds, qualifies it against your ICP, and books the meeting. Get a free proposal.',
+    'Custom AI SDR and BDR agents for B2B teams. They reply to every inbound lead in under 60 seconds, qualify it against your ICP and book the meeting.',
   keywords: [
     'ai sdr',
     'ai bdr',
@@ -764,7 +764,7 @@ export default function AiSdrPage() {
               </li>
 
               <li className="p-8 rounded-2xl bg-white border border-[#E7DED6]">
-                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">06 // EVALUATION HARNESS</div>
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">06 // EVALUATION SUITE</div>
                 <h3 className="text-lg font-bold text-[#14110F] mb-2">Tested Before It Talks to a Real Lead</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
                   We run the agent through hundreds of past lead conversations and objections before launch. The same test suite runs again after any prompt or connector change, to catch a regression before a real prospect ever sees it.

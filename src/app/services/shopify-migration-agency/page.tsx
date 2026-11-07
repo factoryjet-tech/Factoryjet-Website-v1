@@ -183,7 +183,7 @@ const MIGRATION_ROADMAP = [
     timeline: 'Weeks 1 - 2.',
     desc: 'We extract legacy schemas and audit third-party integrations. We map custom product types and business logic into a data matrix.',
     deliverables: [
-      'Comprehensive data dictionary and field mapping matrix. Covers products, customers, orders, and metafields.',
+      'Full data dictionary and field mapping matrix. Covers products, customers, orders, and metafields.',
       'Third-party application rationalization matrix. Full API replacement strategy.',
       'Technical SEO baseline crawl audit. Complete legacy URL indexation inventory.',
       'Security and risk assessment. Full audit for customer auth and payment data.',
@@ -264,7 +264,7 @@ const FAQS = [
   },
   {
     question: "How do you prevent 404 errors during migration?",
-    answer: "We crawl every URL indexed by search engines and historical server logs. Then we build a comprehensive 1:1 redirect map. Redirects run at the edge via Cloudflare Workers and Shopify native rules. Shoppers land directly on destination pages with zero 404 errors.",
+    answer: "We crawl every URL indexed by search engines and historical server logs. Then we build a full 1:1 redirect map. Redirects run at the edge via Cloudflare Workers and Shopify native rules. Shoppers land directly on destination pages with zero 404 errors.",
   },
   {
     question: "What happens to our historical order records and invoices?",
@@ -655,7 +655,7 @@ export default function ShopifyMigrationPage() {
           </div>
         </section>
 
-        {/* COMPREHENSIVE 20+ PAA FAQS */}
+        {/* FULL 20+ PAA FAQS */}
         <section className="pp-section">
           <div className="pp-container" style={{ maxWidth: '900px' }}>
             <FAQ

@@ -36,7 +36,7 @@ import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 const CANONICAL_URL = 'https://factoryjet.com/services';
 const PAGE_TITLE = 'Ecommerce and AI Agent Development Services | FactoryJet';
 const PAGE_DESC =
-  'FactoryJet builds online stores, B2B portals, ERP links and AI agents for US businesses. A fixed price in writing, working software on your own data before you sign, and you own the code.';
+  'FactoryJet builds online stores, B2B portals, ERP links and AI agents for US businesses. Fixed price in writing, working software before you sign, code you own.';
 const PAGE_MODIFIED = '2026-10-16';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 

@@ -172,7 +172,7 @@ const SPRINT_ROADMAP = [
     timeline: 'Weeks 1 - 2.',
     desc: 'We crawl your store using Screaming Frog and Ahrefs. We catalog all duplicate URLs, canonical errors, and indexation leaks.',
     deliverables: [
-      'Comprehensive Shopify technical audit covering all indexable templates.',
+      'Full Shopify technical audit covering all indexable templates.',
       'Inventory of duplicate collection-product URLs and parameter crawl traps.',
       'Core Web Vitals baseline report across mobile and desktop devices.',
       'Prioritized 90-day technical engineering roadmap with clear impact metrics.',
@@ -301,7 +301,7 @@ const FAQS = [
   },
   {
     question: 'Can we start with a standalone Shopify SEO audit?',
-    answer: 'Yes. We offer comprehensive one-time technical audits with 90-day engineering roadmaps. If you join a monthly retainer within 30 days, we credit your audit fee toward your first month.',
+    answer: 'Yes. We offer one-time technical audits with 90-day engineering roadmaps. If you join a monthly retainer within 30 days, we credit your audit fee toward your first month.',
   },
   {
     question: 'How do you optimize product images for Google Images search?',
@@ -719,7 +719,7 @@ export default function ShopifySeoPage() {
           </div>
         </section>
 
-        {/* COMPREHENSIVE 22 PAA FAQS */}
+        {/* FULL 22 PAA FAQS */}
         <section className="pp-section">
           <div className="pp-container" style={{ maxWidth: '900px' }}>
             <FAQ

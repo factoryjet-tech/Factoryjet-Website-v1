@@ -13,9 +13,9 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/dental-support-organization-ai-agents';
-const PAGE_TITLE = 'AI Receptionist Agents for Dental Support Organizations | FactoryJet';
+const PAGE_TITLE = 'AI Receptionist Agents for Dental DSOs | FactoryJet';
 const PAGE_DESC =
-  'Custom HIPAA-compliant AI receptionist and scheduling agents for dental support organizations (DSOs). Centralized answering across every location, synced with Denticon and Dentrix Ascend. Get an audit.';
+  'HIPAA-compliant AI receptionist and scheduling agents for dental support organizations (DSOs), covering every location, synced with Denticon and Dentrix Ascend.';
 const PAGE_MODIFIED = '2026-10-10';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible

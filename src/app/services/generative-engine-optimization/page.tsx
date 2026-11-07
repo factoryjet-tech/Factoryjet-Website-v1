@@ -50,12 +50,12 @@ import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-10-10';
 
-const PAGE_TITLE = 'GEO & AEO Agency: Generative Engine Optimization Services | FactoryJet';
+const PAGE_TITLE = 'Generative Engine Optimization: GEO & AEO | FactoryJet';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
   description:
-    'GEO and AEO agency for US brands. Our generative engine optimization services get your brand named in the answers ChatGPT, Perplexity, Claude and Google AI Overviews give buyers.',
+    'GEO and AEO agency for US brands. Our generative engine optimization gets your brand named in answers from ChatGPT, Perplexity, Claude and Google AI Overviews.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

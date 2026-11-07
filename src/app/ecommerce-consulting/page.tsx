@@ -15,7 +15,7 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 export const metadata: Metadata = {
   title: 'E-Commerce Consulting Services for DTC & B2B | FactoryJet',
   description:
-    'E-commerce consulting that ends in a build, not a slide deck. An ecommerce consulting firm for DTC and B2B brands: platform selection, migration and replatforming planning, conversion and operations audits, ecommerce strategy, and a scoped build plan we can implement. Decade-plus of commerce builds.',
+    'Ecommerce consulting for DTC and B2B brands: platform selection, migration planning, conversion and operations audits, and a scoped build plan you can act on.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

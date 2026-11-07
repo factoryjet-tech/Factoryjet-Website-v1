@@ -7,7 +7,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 export const metadata: Metadata = {
   title: 'Privacy Policy | FactoryJet Private Limited',
   description:
-    'Read the official Privacy Policy of FactoryJet Private Limited. Learn how we collect, process, and safeguard client data under Indian DPDP Act 2023 and IT Act 2000.',
+    'Privacy Policy of FactoryJet Private Limited: how we collect, process and protect client data under the Indian DPDP Act 2023 and IT Act 2000.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

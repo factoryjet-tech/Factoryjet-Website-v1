@@ -112,7 +112,7 @@ const journeyStages: ServiceJourneyStage[] = [
   {
     number: '05',
     title: 'QA, Launch & Handoff',
-    description: 'Comprehensive QA across devices and browsers. Load testing for your expected traffic. Deploy to production with monitoring, error tracking, and a full technical handoff document.',
+    description: 'Full QA across devices and browsers. Load testing for your expected traffic. Deploy to production with monitoring, error tracking, and a full technical handoff document.',
   },
 ];
 

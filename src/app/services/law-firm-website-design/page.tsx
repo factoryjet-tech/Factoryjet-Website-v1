@@ -189,7 +189,7 @@ const LEGAL_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Legal SEO & Competitor Audit',
     description:
-      'We audit your current local search performance and study competing firms. We identify practice area page gaps and uncover technical SEO barriers. You receive a comprehensive diagnosis before making any project commitment.',
+      'We audit your current local search performance and study competing firms. We identify practice area page gaps and uncover technical SEO barriers. You receive a full diagnosis before making any project commitment.',
   },
   {
     number: '02',
@@ -352,7 +352,7 @@ const PRICING_TIERS = [
     name: 'Full Law Firm Website.',
     priceRange: 'Fixed price, scoped to your build.',
     description:
-      'A comprehensive website for multi-attorney practices. Up to 30 pages with individual attorney profiles, full practice area architecture, legal blog, and intake routing. The standard choice for firms expanding local search share.',
+      'A full website for multi-attorney practices. Up to 30 pages with individual attorney profiles, full practice area architecture, legal blog, and intake routing. The standard choice for firms expanding local search share.',
     features: [
       '15-30 pages with full content architecture.',
       'Up to 8 individual practice area pages (keyword and location targeted).',
@@ -528,7 +528,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'What ongoing support does FactoryJet offer after a law firm website launches?',
     answer:
-      'Every project includes 30 days of comprehensive post-launch support. We handle bug fixes, minor content tweaks, and team onboarding. Following launch, we offer optional monthly maintenance arrangements. These plans cover core security updates, daily offsite backups, and uptime monitoring. We also track Google Search Console for crawl anomalies and provide ongoing speed audits. You retain full site ownership at all times. Retaining our ongoing maintenance is entirely optional and never required.',
+      'Every project includes 30 days of full post-launch support. We handle bug fixes, minor content tweaks, and team onboarding. Following launch, we offer optional monthly maintenance arrangements. These plans cover core security updates, daily offsite backups, and uptime monitoring. We also track Google Search Console for crawl anomalies and provide ongoing speed audits. You retain full site ownership at all times. Retaining our ongoing maintenance is entirely optional and never required.',
   },
 ];
 

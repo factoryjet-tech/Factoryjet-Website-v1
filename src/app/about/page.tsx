@@ -9,13 +9,13 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 
 export const metadata: Metadata = {
-  title: 'About FactoryJet | E-Commerce Development Agency for DTC & B2B',
+  title: 'About FactoryJet | E-Commerce Agency for DTC & B2B Brands',
   description:
-    'FactoryJet is an e-commerce development agency for DTC and B2B brands. We consult, design, build, and implement omnichannel commerce on Shopify, Magento, WooCommerce, and Commerceflo. A decade-plus building commerce, most clients US-based.',
+    'FactoryJet is an e-commerce development agency for DTC and B2B brands. We build omnichannel commerce on Shopify, Magento, WooCommerce and Commerceflo.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'About FactoryJet | E-Commerce Development Agency for DTC & B2B',
+    title: 'About FactoryJet | E-Commerce Agency for DTC & B2B Brands',
     description:
       'An e-commerce development agency that consults, designs, builds, and implements omnichannel commerce for DTC and B2B brands. Platform-agnostic. A decade-plus building commerce.',
     url: 'https://factoryjet.com/about',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About FactoryJet | E-Commerce Development Agency for DTC & B2B',
+    title: 'About FactoryJet | E-Commerce Agency for DTC & B2B Brands',
     description:
       'An e-commerce development agency for DTC and B2B brands. We build omnichannel commerce on Shopify, Magento, WooCommerce, or Commerceflo.',
     images: ['https://factoryjet.com/og-default.png'],

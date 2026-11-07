@@ -13,12 +13,12 @@ import '@/components/v2/PlatformPage.css';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 
 export const metadata: Metadata = {
-  title: 'Headless & Composable Commerce Development Agency | FactoryJet',
+  title: 'Headless & Composable Commerce Development | FactoryJet',
   description:
-    'Headless commerce development agency for DTC and B2B brands. We build fast headless and composable commerce storefronts on Shopify, BigCommerce, and Commerceflo, with sub-second load times, full design freedom, and your commerce backend intact.',
+    'Headless commerce development agency for DTC and B2B brands. Fast headless and composable storefronts on Shopify, BigCommerce and Commerceflo, backend intact.',
   openGraph: {
     type: 'website', siteName: 'FactoryJet',
-    title: 'Headless & Composable Commerce Development Agency | FactoryJet',
+    title: 'Headless & Composable Commerce Development | FactoryJet',
     description: 'Fast headless and composable commerce storefronts on Shopify, BigCommerce, and Commerceflo. Sub-second loads, full design freedom, backend intact.',
     url: 'https://factoryjet.com/headless-commerce',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet, headless commerce development' }],

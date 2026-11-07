@@ -13,7 +13,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/manufacturing-ai-agents';
-const PAGE_TITLE = 'Manufacturing AI Agents for Quoting & ERP Automation | FactoryJet';
+const PAGE_TITLE = 'Manufacturing AI Agents for Quoting & ERP | FactoryJet';
 const PAGE_DESC =
   'AI agents for US manufacturers that read RFQs and drawings, draft quotes, reconcile supplier POs and write approved drafts into NetSuite, SAP or Epicor.';
 const PAGE_MODIFIED = '2026-10-10';

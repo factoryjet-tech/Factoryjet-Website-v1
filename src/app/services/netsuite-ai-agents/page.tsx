@@ -574,7 +574,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'safety',
     question: 'Does the AI have access to all my NetSuite data?',
     answer:
-      "No. Oracle says queries through the connector respect the role's permissions, so the tools reach only what that role could see when logged in. Tools cannot run as administrators, call outside APIs or run elevated scripts. Oracle adds one warning: once data leaves NetSuite for the AI provider, NetSuite cannot control how it is handled there.",
+      "No. Oracle says queries through the connector respect the role's permissions, so the tools reach only what that role could see when logged in. Tools cannot run as administrators, call outside APIs or run admin-level scripts. Oracle adds one warning: once data leaves NetSuite for the AI provider, NetSuite cannot control how it is handled there.",
   },
   {
     category: 'safety',

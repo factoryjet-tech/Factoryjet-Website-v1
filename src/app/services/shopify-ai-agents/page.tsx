@@ -33,7 +33,7 @@ const PAGE_URL = 'https://factoryjet.com/services/shopify-ai-agents';
 const TITLE = 'Shopify AI Agent Development for US Stores | FactoryJet';
 const H1 = `${SHOPIFY_AI_H1_LEAD} ${SHOPIFY_AI_H1_EMPHASIS}`;
 const DESCRIPTION =
-  'Custom Shopify AI agents for orders, wholesale POs, returns, inventory and ERP sync. Built on the GraphQL Admin API with approvals, tested on your data, owned by you.';
+  'Custom Shopify AI agents for orders, wholesale POs, returns, inventory and ERP sync, built on the GraphQL Admin API with approvals and tested on your data.';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 
 export const metadata: Metadata = {

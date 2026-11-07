@@ -198,7 +198,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'safety',
     question: 'How do you test and evaluate support agent performance prior to launch?',
     answer:
-      'Before an agent ever talks to a real customer, it has to pass a test. We build an automated evaluation harness using 500 or more of your own closed tickets. It measures accuracy, tool-calling reliability, tone, and how well the agent knows when to escalate. The agent must clear a minimum score on this benchmark first. We also re-run the full test suite after every prompt or connector change.',
+      'Before an agent ever talks to a real customer, it has to pass a test. We build an automated evaluation suite using 500 or more of your own closed tickets. It measures accuracy, tool-calling reliability, tone, and how well the agent knows when to escalate. The agent must clear a minimum score on this benchmark first. We also re-run the full test suite after every prompt or connector change.',
   },
   {
     category: 'safety',
@@ -1285,7 +1285,7 @@ export default function AiCustomerSupportAgentsPage() {
                     <td>N/A</td>
                   </tr>
                   <tr className="tr-me">
-                    <td className="font-bold">Evaluation Harness</td>
+                    <td className="font-bold">Evaluation Suite</td>
                     <td className="font-semibold text-[#F05A28]">Pre-launch testing on 500+ real cases</td>
                     <td>Varies by vendor</td>
                     <td>Sample QA call audits</td>
@@ -1359,11 +1359,11 @@ export default function AiCustomerSupportAgentsPage() {
 
               <li className="pp-card p-6 md:p-8 bg-white">
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#F05A28] block mb-2">
-                  06 // EVALUATION HARNESS
+                  06 // EVALUATION SUITE
                 </span>
                 <h3 className="text-lg font-bold text-[#14110F] mb-3">Tested Before It Talks to a Customer</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
-                  Before launch, the agent runs against an evaluation harness built from your own historical tickets. It has to clear a minimum accuracy score first. We re-run it after every change. The same evaluation approach carries over to our{' '}
+                  Before launch, the agent runs against an evaluation suite built from your own historical tickets. It has to clear a minimum accuracy score first. We re-run it after every change. The same evaluation approach carries over to our{' '}
                   <Link href="/services/ai-sdr" className="underline hover:text-[#F05A28]">
                     AI SDR agents
                   </Link>{' '}

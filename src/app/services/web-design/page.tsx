@@ -18,7 +18,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const URL = 'https://factoryjet.com/services/web-design';
-const TITLE = 'Web Design Company | Website Design & Development | FactoryJet';
+const TITLE = 'Web Design & Development Company | FactoryJet';
 const DESCRIPTION =
   'FactoryJet is a web design company that designs, builds, and redesigns fast websites on WordPress, Webflow, Framer, and Next.js that Google and AI can read.';
 const SOCIAL_IMAGE = 'https://factoryjet.com/images/web-design-hub/web-design-definition-model.webp';

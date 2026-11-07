@@ -17,7 +17,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import './tiktok-shop-agency.css';
 
 const URL = 'https://factoryjet.com/services/tiktok-shop-agency';
-const TITLE = 'TikTok Shop Agency for US Brands: Setup & Management | FactoryJet';
+const TITLE = 'TikTok Shop Agency: US Setup & Management | FactoryJet';
 
 /* One array feeds both the visible breadcrumb trail and the BreadcrumbList schema. */
 const BREADCRUMB_ITEMS: BreadcrumbItem[] = [

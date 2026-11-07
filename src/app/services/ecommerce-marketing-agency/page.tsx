@@ -47,7 +47,7 @@ const ALTERNATES = {
 export const metadata: Metadata = {
   title: 'Ecommerce Marketing Agency for US Brands | FactoryJet',
   description:
-    'FactoryJet is an ecommerce marketing and advertising agency for US brands. We run Google Ads, Meta, TikTok, marketplace ads, shopping feeds, creative, and email and SMS as one paid acquisition program measured on profit. Book a free channel audit.',
+    'Ecommerce marketing agency for US brands: Google Ads, Meta, TikTok, marketplace ads, shopping feeds, creative, email and SMS, as one program measured on profit.',
   keywords: [
     'ecommerce marketing agency',
     'ecommerce advertising agency',

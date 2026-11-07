@@ -479,7 +479,7 @@ export default function EcommerceCroAgencyPage() {
         <section className="pp-section pp-tint">
           <div className="pp-container">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="pp-h2 text-center">Comprehensive Conversion Engineering</h2>
+              <h2 className="pp-h2 text-center">End-to-End Conversion Engineering</h2>
               <p className="text-base text-[#46403B] mt-3">
                 Full-stack CRO combining quantitative data analytics, behavioral UX design, and clean Shopify development.
               </p>
@@ -687,7 +687,7 @@ export default function EcommerceCroAgencyPage() {
                 <h3 className="text-lg font-bold text-[#14110F] mb-4">Testing &amp; Experimentation</h3>
                 <ul className="space-y-3 text-sm text-[#46403B] leading-relaxed list-none">
                   <li><span className="font-bold text-[#14110F]">Optimizely</span> and <span className="font-bold text-[#14110F]">VWO</span>: client-side and server-side A/B and multivariate tests.</li>
-                  <li><span className="font-bold text-[#14110F]">Custom Shopify Functions test harness</span>: for checkout-level experiments the other tools cannot reach.</li>
+                  <li><span className="font-bold text-[#14110F]">Custom Shopify Functions test suite</span>: for checkout-level experiments the other tools cannot reach.</li>
                   <li><span className="font-bold text-[#14110F]">PIE framework scoring</span> (Potential, Importance, Ease): ranks every test idea before it enters a sprint.</li>
                 </ul>
               </div>
